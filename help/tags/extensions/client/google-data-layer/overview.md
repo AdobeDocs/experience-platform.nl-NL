@@ -2,22 +2,18 @@
 title: Google Data Layer Extension
 description: Meer informatie over de tagextensie Google Client Data Layer in Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 9c608f69f6ba219f9cb4e938a77bd4838158d42c
+source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
 
 # Google Data Layer-extensie
 
-Met de extensie Google-gegevenslaag kunt u een Google-gegevenslaag gebruiken in de implementatie van tags. De extensie kan onafhankelijk of gelijktijdig worden gebruikt met Google-oplossingen en met open source uit Google [Helpbibliotheek gegevenslaag](https://github.com/google/data-layer-helper).
+Met de extensie Google-gegevenslaag kunt u een Google-gegevenslaag gebruiken in de implementatie van Tags. De extensie kan onafhankelijk of gelijktijdig worden gebruikt met Google-oplossingen en met open source uit Google [Helpbibliotheek gegevenslaag](https://github.com/google/data-layer-helper).
 
-De Helper Library biedt functionaliteit die door gebeurtenissen wordt aangestuurd en die vergelijkbaar is met die van de Adobe Client Data Dayer (ACDL). De gegevenselementen, regels en handelingen van de extensie Google Data Layer bieden vergelijkbare functionaliteit als in de [ACDL-extensie](../client-data-layer/overview.md).
-
-## Looptijd
-
-Versie 1.2.x is een late bètaversie die in productie wordt gebruikt.
+De Helperbibliotheek verstrekt gelijkaardige gebeurtenis-gedreven functionaliteit aan de Laag van de Gegevens van de Cliënt van de Adobe (ACDL). De gegevenselementen, regels en handelingen van de extensie Google Data Layer bieden vergelijkbare functionaliteit als in de [ACDL-extensie](../client-data-layer/overview.md).
 
 ## Installatie
 
@@ -33,24 +29,33 @@ De standaardnaam van de gegevenslaag is de Google-standaardnaam `dataLayer`.
 
 >[!NOTE]
 >
->Het maakt niet uit of Google- of Adobe-code het eerst wordt geladen en dat de gegevenslaag wordt gemaakt. Beide systemen gedragen zich het zelfde - creeer de gegevenslaag als het niet aanwezig is of gebruik de bestaande gegevenslaag.
+>Het maakt niet uit of Google- of Adobe-code het eerst wordt geladen en of de gegevenslaag wordt gemaakt. Beide systemen gedragen zich het zelfde - creeer de gegevenslaag als het niet aanwezig is of gebruik de bestaande gegevenslaag.
 
 ## Gebeurtenissen
 
 >[!NOTE]
 >
->Het woord _event_ wordt overbelast wanneer een gebeurtenisgestuurde gegevenslaag wordt gebruikt in Adobe Experience Platform-tags. _Gebeurtenissen_ kan:
+>Het woord _event_ wordt overgeladen wanneer een gebeurtenisgestuurde gegevenslaag wordt gebruikt in Adobe Experience Platform-tags. _Gebeurtenissen_ kan:
 > - Gebeurtenissen van Adobe Experience Platform-tags (Bibliotheek geladen enzovoort).
 > - JavaScript-gebeurtenissen.
 > - Gegevens die met de _event_ trefwoord.
-
 
 De extensie biedt u de mogelijkheid te luisteren naar wijzigingen in de gegevenslaag.
 
 >[!NOTE]
 >
->Het is belangrijk om het gebruik van het _event_ sleutelwoord wanneer het gegeven aan een de gegevenslaag van Google wordt geduwd, gelijkaardig aan de Laag van de Gegevens van de Cliënt van Adobe. De _event_ wijzigt het gedrag van de Google-gegevenslaag en dus ook deze extensie.\
+>Het is belangrijk om het gebruik van het _event_ sleutelwoord wanneer het gegeven aan een de gegevenslaag van Google, gelijkaardig aan de Laag van de Gegevens van de Cliënt van de Adobe wordt geduwd. De _event_ wijzigt het gedrag van de Google-gegevenslaag en dus ook deze extensie.\
 > Lees de documentatie van Google of doe onderzoek als u op dit punt onzeker bent.
+
+### Google-gebeurtenistypen
+
+Google ondersteunt twee manieren om gebeurtenissen te verdringen: Google Tag Manager, met de `push()` methode en Googles Analytics 4, waarbij de `gtag()` methode.
+
+Google Data Layer extension versies vóór 1.2.1 die alleen door gebeurtenissen worden ondersteund die zijn gemaakt door `push()`, zoals wordt weergegeven in de codevoorbeelden op deze pagina.
+
+Versies 1.2.1 en hoger ondersteunen gebeurtenissen die zijn gemaakt met `gtag()`.  Dit is optioneel en kan worden ingeschakeld in het dialoogvenster voor extensieconfiguratie.
+
+Voor meer informatie over `push()` en `gtag()` gebeurtenissen, zie [Google-documentatie](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  De informatie wordt ook verstrekt in de configuratie en regeldialogen van de uitbreiding.
 
 ### Luisteren naar alle markeringen op de gegevenslaag
 
@@ -113,19 +118,19 @@ dataLayer.push({"event":"myEvent2"})
 
 ### Naar gegevenslaag duwen {#push-to-data-layer}
 
-De extensie biedt u twee handelingen om JSON naar de gegevenslaag te duwen. een gratis tekstveld om handmatig de JSON te maken die moet worden geduwd, en vanaf versie 1.2.0 een sleutelwaardevenster met meerdere velden.
+De extensie biedt u twee acties om JSON naar de gegevenslaag te duwen, een vrij tekstveld om handmatig de JSON te maken die moet worden geduwd en een sleutelwaardevenster van versie 1.2.0.
 
 #### Vrije tekst JSON
 
-Met de actie Vrije tekst kunt u gegevenselementen rechtstreeks in de JSON gebruiken. Binnen de redacteur JSON, gegevenselementen zouden moeten worden van verwijzingen voorzien gebruikend percentenaantekening. Bijvoorbeeld, `%dataElementName%`.
+Met de actie Vrije tekst kunt u gegevenselementen rechtstreeks in de JSON gebruiken. Binnen de redacteur JSON, gegevenselementen zouden moeten worden van verwijzingen voorzien gebruikend percentenaantekening. Bijvoorbeeld: `%dataElementName%`.
 
 ```json
 {
-    "page": {
-        "url": "%url%",
-        "previous_url": "%previous_url%",
-        "concatenated_values": "static string %dataElement%"
-    }
+  "page": {
+    "url": "%url%",
+    "previous_url": "%previous_url%",
+    "concatenated_values": "static string %dataElement%"
+  }
 }
 ```
 
@@ -145,7 +150,7 @@ Een knevelschakelaar staat u toe om te selecteren of het gegevenselement waarden
 
 Het gegevenselement kan daarom worden geretourneerd:
 
-- Leeg veld: status van gegevenslaag berekend.
+- Leeg veld: toestand van gegevenslaag berekend.
 - Veld met sleutel (zoals page.previous_url in het bovenstaande voorbeeld): waarde van de sleutel in het gebeurtenisobject of de berekende status.
 
 ## Aanvullende informatie

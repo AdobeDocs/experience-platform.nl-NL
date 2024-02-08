@@ -2,14 +2,14 @@
 title: Opmerkingen bij de release Google Data Layer Extension
 description: De meest recente releaseopmerkingen voor de tagextensie Google Data Layer in Adobe Experience Platform.
 exl-id: 740b6e3a-d469-475d-9523-03b0b48b11c8
-source-git-commit: 0b9fa104777f21fc9bc893784ae3155d887a48d2
+source-git-commit: c1bad7d5414e62f4d77f7d5903f4b2bf4d9081f8
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
 
-# Opmerkingen bij de release Google Data Layer-extensie
+# Opmerkingen bij de release Google Data Layer
 
 ## Versie 1.0.4
 
@@ -37,3 +37,7 @@ Een belangrijke verbetering en oplossing voor problemen die het resultaat zijn v
 * Hiermee wordt een fout verholpen die een fout heeft veroorzaakt wanneer een gegevenselement in bepaalde omstandigheden wordt opgeslagen.
 * Voegt documentatie toe aan het gebeurtenisdialoogvenster waarin het gebruik van het gebeurtenisobject Tags wordt uitgelegd.
 * Voegt een waarschuwing over oneindige lijnen aan gebeurtenisdialoog toe.
+
+## Versie 1.2.2
+
+* Voegt ondersteuning toe voor Googles Analytics gtag()-gebeurtenissen.
