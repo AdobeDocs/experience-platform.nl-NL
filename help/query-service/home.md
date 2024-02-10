@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Query Service
 description: Leer over de rol van de Dienst van de Vraag binnen Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,16 @@ U kunt de Dienst van de Vraag gebruiken om de online-aan-off-line klantenreis aa
 
 ## Query-service gebruiken {#usage}
 
-Om uw gegevens te analyseren, kunt u de gebruikersinterface van de Dienst van de Vraag en een RESTful API gebruiken, waarvan u SQL vragen kunt tot stand brengen. Met de gebruikersinterface kunt u query&#39;s schrijven en uitvoeren, eerder uitgevoerde query&#39;s weergeven en query&#39;s openen die door gebruikers binnen uw organisatie zijn opgeslagen. U kunt de Redacteur van de Vraag als zandbak gebruiken om uw vragen uit te testen alvorens hen op uw bredere dataset uit te voeren. Zie de [Handleiding voor gebruikersinterface van Query Service](ui/overview.md) voor meer informatie over het gebruiken van UI. De RESTful-API biedt een vergelijkbare ervaring. U kunt de API van de Dienst van de Vraag gebruiken om vragen programmatically te schrijven en uit te voeren, vragen voor toekomstig gebruik en herhaling te plannen, evenals malplaatjes voor vragen te creëren u wenst te schrijven. Meer informatie over het gebruik van de API van de Query-service vindt u in de [Handleiding voor ontwikkelaars van Query Service](api/getting-started.md).
+Om uw gegevens te analyseren, creeer en voer SQL vragen met of de gebruikersinterface van de Dienst van de Vraag of RESTful API uit.
+Met de Dienst UI van de Vraag kunt u schrijven, uitvoeren, en vragen plannen, eerder uitgevoerde vragen bekijken, en toegangsvragen die door gebruikers binnen uw organisatie worden bewaard. U kunt uw vragen ook uittesten alvorens hen op uw bredere dataset met de Redacteur van de Vraag uit te voeren. Zie de [Handleiding voor Query Service](ui/overview.md) voor een overzicht van de UI-functionaliteit.
+
+De RESTful-API biedt een vergelijkbare ervaring. U kunt de API van de Dienst van de Vraag gebruiken om vragen programmatically te schrijven en uit te voeren, malplaatjes voor vragen tot stand te brengen en te bewaren die u wenst om aan te passen, of vragen voor geautomatiseerde uitvoering te plannen. Zie de [Handleiding voor ontwikkelaars van Query Service](api/getting-started.md) voor meer informatie over het gebruik van de API van de Query Service.
+
+Als u snel aan de slag wilt met de functies van Query Service, kunt u het beste de volgende documenten lezen:
+
+- [Algemene richtlijnen voor het uitvoeren van query&#39;s](./best-practices/writing-queries.md)
+- [SQL-syntaxis in Query Service](./sql/syntax.md)
+- [Afgeleide datasets maken met SQL](./data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
 ## Query-service en Experience Platform {#experience-platform-services}
 

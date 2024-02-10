@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
-source-git-commit: fbb627787580c6a4ffd1deb0009105f1ba821b6f
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '315'
 ht-degree: 13%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 13%
    - [Licentiegebruik](data-distiller/license-usage.md)
    - Afgeleide datasets {#derived-datasets}
       - [Overzicht](data-distiller/derived-datasets/overview.md)
-      - [Naadloze SQL-stroom](data-distiller/derived-datasets/seamless-sql-flow.md)
+      - [Afgeleide datasets maken met SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Op decile gebaseerde afgeleide gegevenssets maken](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Aanpasbare inzichten voor uitgebreide toepassingsrapportage {#customizable-insights}
       - [Overzicht](data-distiller/customizable-insights/overview.md)

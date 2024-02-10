@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, februari 2023
 description: In de release van februari 2023 staat Adobe Experience Platform vermeld.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 3%
@@ -102,7 +102,7 @@ Met Query Service kunt u standaard-SQL gebruiken om gegevens in Adobe Experience
 
 | Functie | Beschrijving |
 | --- | --- |
-| Gegevenssets inschakelen voor profiel met SQL | [De ETIKETTEN van het gebruik in vragen CTAS om een dataset &quot;toegelaten profiel&quot;te maken](../../query-service/sql/syntax.md#create-table-as-select)of gebruik ALTER om bestaande datasets bij te werken die voor profiel moeten worden toegelaten. U kunt dit uitgebreide SQL concept gebruiken om naadloze steun voor afgeleide datasets voor uw zaken van het bedrijfsgebruik van het Profiel van de Klant in real time te verlenen. Zie de [Naadloze SQL-stroom voor afgeleid gegevenssetdocument](../../query-service/data-distiller/derived-datasets/seamless-sql-flow.md) voor meer informatie . |
+| Gegevenssets inschakelen voor profiel met SQL | [De ETIKETTEN van het gebruik in vragen CTAS om een dataset &quot;toegelaten profiel&quot;te maken](../../query-service/sql/syntax.md#create-table-as-select)of gebruik ALTER om bestaande datasets bij te werken die voor profiel moeten worden toegelaten. U kunt dit uitgebreide SQL concept gebruiken om naadloze steun voor afgeleide datasets voor uw zaken van het bedrijfsgebruik van het Profiel van de Klant in real time te verlenen. Zie de [Naadloze SQL-stroom voor afgeleid gegevenssetdocument](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) voor meer informatie . |
 | Geplande query&#39;s controleren | Gebruik de [Tabblad Geplande query&#39;s](../../query-service/ui/monitor-queries.md) om belangrijke informatie over uw vraaglooppas te vinden en aan alarm in te schrijven. De vragen van de monitor voor planningsdetails, status, en foutenmeldingen/codes zouden moeten ontbreken. |
 | Functie voor automatisch aanvullen in-/uitschakelen | Verwijder bepaalde metagegevensopdrachten en verbeter de verwerkingstijd met [het van een knevel voorzien van de Redacteur van de Vraag auto-volledige eigenschap](../../query-service/ui/user-guide.md#auto-complete). Deze functie stelt automatisch potentiële SQL sleutelwoorden en lijstdetails voor de vraag voor aangezien u het schrijft. |
 | Gegevenssetvoorbeelden | Geef een bemonsteringsfrequentie op in uw query en [gebruik datasetsteekproeven om een eenvormige willekeurige steekproef tot stand te brengen](../../query-service/key-concepts/dataset-samples.md)of maak voorwaardelijke voorbeelden op basis van specifieke criteria. |
