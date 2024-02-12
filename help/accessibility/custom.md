@@ -4,9 +4,9 @@ title: Aangepaste toegankelijkheidsoplossingen voor Experience Platform
 type: Documentation
 description: Meer informatie over aangepaste toegankelijkheidsoplossingen in de Adobe Experience Platform-gebruikersinterface.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
 workflow-type: tm+mt
-source-wordcount: '1601'
+source-wordcount: '1649'
 ht-degree: 0%
 
 ---
@@ -41,13 +41,13 @@ Met de linkernavigatie in focus, navigeren de pijltoetsen omhoog en omlaag naar 
 
 ![De Experience Platform linkernavigatie met Geselecteerde Bronnen.](images/left-navigation-sources.png)
 
-Sommige functies in het Platform zijn niet voor alle gebruikers ingeschakeld. Deze items worden in de navigatie weergegeven, maar kunnen niet worden geselecteerd. Wanneer u met een toetsenbord navigeert, worden deze items overgeslagen tijdens de pijlnavigatie en kunnen ze niet worden geselecteerd met **Enter (Return)**.
+Sommige functies in Platform zijn niet voor alle gebruikers ingeschakeld. Deze items worden in de navigatie weergegeven, maar kunnen niet worden geselecteerd. Wanneer u met een toetsenbord navigeert, worden deze items overgeslagen tijdens de pijlnavigatie en kunnen ze niet worden geselecteerd met **Enter (Return)**.
 
 ![Secties van de navigatie links van het Experience Platform die niet voor de gebruiker zijn ingeschakeld, kunnen niet worden geselecteerd.](images/left-navigation-sections-disabled.png)
 
 ## Dialoogvenster Ingesloten video
 
-Video&#39;s kunnen binnen het Experience Platform worden weergegeven door toetsenbordnavigatie te gebruiken om een beschikbare videokoppeling te markeren en te selecteren. Hiermee wordt een ingesloten videodialoogvenster geopend in de gebruikersinterface van het Platform.
+Video&#39;s kunnen binnen het Experience Platform worden weergegeven door toetsenbordnavigatie te gebruiken om een beschikbare videokoppeling te markeren en te selecteren. Hiermee wordt een ingesloten videodialoogvenster geopend in de gebruikersinterface van het platform.
 
 ![Een blauwe rand rondom een geselecteerd element om aan te geven dat focus is toegepast.](images/profile-overview-tab.png)
 
@@ -57,11 +57,11 @@ U kunt ook via het toetsenbord navigeren in het dialoogvenster Ingesloten video.
 
 | Dialoogelement | Toegankelijkheid toetsenbord | Beschrijving |
 |---|---|---|
-| Afspelen en pauzeren | Tab<br/>Spatiebalk | Gebruiken **Tab** om de focus op de afspeelknop in te stellen. **Spatiebalk** Het afspelen van video wordt gestart en het afspelen van video wordt gepauzeerd. |
-| Scrubber | Tab<br/>Pijl-links<br/>Pijl-rechts | Gebruik **Tab** focusscrubber. Met de scrubber in focus, **pijl-links en pijl-rechts** De videoweergave wordt respectievelijk 5 seconden voor en achter overgeslagen. |
+| Afspelen en pauzeren | Tab<br/>Spatiebalk | Gebruiken **Tab** om de focus op de afspeelknop in te stellen. **Spatiebalk** Het afspelen van video wordt gestart en het afspelen van video wordt onderbroken. |
+| Scrubber | Tab<br/>Pijl-links<br/>Pijl-rechts | Gebruik bij het afspelen van video **Tab** focusscrubber. Met de scrubber in focus, **pijl-links en pijl-rechts** De videoweergave wordt respectievelijk 5 seconden voor en achter overgeslagen. |
 | Dempen | Tab<br/>Spatiebalk | Gebruiken **Tab** om het dempingsvolume-element actief te maken. Gebruiken **spatiebalk** om het afspelen van video te dempen of te dempen. |
-| Volume | Tab<br/>Pijl-links<br/>Pijl-rechts | Gebruiken **Tab** om de nadruk te leggen op het element volume. **Pijl-links en Pijl-rechts** volume respectievelijk omhoog en omlaag verplaatsen. |
-| [!UICONTROL Closed Captions] (&quot;cc&quot;) | Tab<br/>Enter<br/>Pijl-omhoog<br/>Pijl-omlaag | **Tab** tot [!UICONTROL Closed Captions] (&quot;cc&quot;) element. Gebruiken **Enter** om het menu te openen, en **pijl-omhoog en pijl-omlaag** om een taal voor bijschriften te selecteren. **Enter** bevestigt uw selectie. |
+| Volume | Tab<br/>Pijl-links<br/>Pijl-rechts | Gebruiken **Tab** om de nadruk te leggen op het element volume. **Pijltoetsen links en rechts** volume respectievelijk omhoog en omlaag verplaatsen. |
+| [!UICONTROL Closed Captions] (cc) | Tab<br/>Enter<br/>Pijl-omhoog<br/>Pijl-omlaag | **Tab** tot [!UICONTROL Closed Captions] (&quot;cc&quot;) element. Gebruiken **Enter** om het menu te openen, en **pijl-omhoog en pijl-omlaag** om een taal voor bijschriften te selecteren. **Enter** bevestigt uw selectie. |
 | [!UICONTROL Quality] | Tab<br/>Enter<br/>Pijl-omhoog<br/>Pijl-omlaag | Gebruiken **Tab** om de focus op [!UICONTROL Quality] element. Gebruiken **Enter** om het menu en de **pijl-omhoog en pijl-omlaag** om de videokwaliteit te selecteren. **Enter** bevestigt uw selectie. |
 | Volledig scherm | Tab<br/>Spatiebalk of Enter<br/>Escape | Gebruiken **Tab** om het element Volledig scherm te activeren. Gebruiken **spatiebalk of Enter** om de weergave Volledig scherm te activeren. **Escape** (&quot;esc&quot;) sluit de modus Volledig scherm af. |
 | Sluiten | Tab<br/>Spatiebalk of Enter | Gebruiken **Tab** om de knop Sluiten actief te maken. Gebruiken **spatiebalk of Enter** om het videodialoogvenster af te sluiten. |
@@ -74,7 +74,7 @@ U kunt ook via het toetsenbord navigeren in het dialoogvenster Ingesloten video.
 
 ## Bestanden slepen en neerzetten
 
-In Experience Platform zijn alle zones waar bestanden worden geselecteerd en waar ze worden gesleept, toegankelijk voor het toetsenbord. Gebruiken **Tab** om te markeren **[!UICONTROL Choose files]** en gebruiken **Enter of spatiebalk** om deze te selecteren, wordt de interface voor bestandsselectie van het besturingssysteem aangeroepen.
+In Experience Platform zijn alle zones waar bestanden worden geselecteerd en waar ze worden gesleept, toegankelijk voor het toetsenbord. Gebruiken **Tab** om **[!UICONTROL Choose files]** en gebruiken **Enter of spatiebalk** om deze te selecteren, wordt de interface voor bestandsselectie van het besturingssysteem aangeroepen.
 
 Nadat een bestand is geüpload, kunt u met het toetsenbord navigeren door een verwijderpictogram om het geselecteerde bestand te verwijderen en een nieuw bestand te uploaden. Gebruikers kunnen **Tab** focussen op het verwijderpictogram en **Enter of spatiebalk** om het te selecteren. Nadat het bestand is verwijderd, **[!UICONTROL Choose files]** wordt automatisch scherpgesteld en kan worden geselecteerd.
 
@@ -86,7 +86,7 @@ Als u een muis gebruikt om de zone voor slepen en neerzetten te selecteren, word
 
 ![Een gebied van het dossier belemmering-en-daling in nadruk aangezien een muisgebruiker een dossier in de streek sleept.](images/drag-and-drop-mouse-over.png)
 
-## Tabel bladeren
+## Tabelbladeren
 
 Alle tabellen in de gebruikersinterface van het Experience Platform zijn toegankelijk via het toetsenbord. U kunt met een aantal sneltoetsen bladeren door tabelrijen en -kolommen en er met deze rijen en kolommen mee werken:
 
@@ -94,7 +94,7 @@ Alle tabellen in de gebruikersinterface van het Experience Platform zijn toegank
 * **Pijltoetsen omhoog en omlaag** Hiermee gaat u omhoog en omlaag door de rijen in de tabel.
 * Wanneer een rij is geselecteerd of de focus heeft, gebruikt u **Enter** op de rij staan details in het rechterspoor.
 * Wanneer een rij is geselecteerd of de focus heeft, gebruikt u **pijltoetsen** om door elk punt in de rij te bewegen.
-* Gebruiken **Enter** om een item in de rij te selecteren. Gebruikers met schermlezers worden gewaarschuwd als een nieuw venster moet worden geopend.
+* Gebruiken **Enter** om een item in de rij te selecteren. Gebruikers met een schermlezer worden gewaarschuwd als een nieuw venster moet worden geopend.
 * Wanneer u tot 200% of meer zoomt, kunt u de **spoorwegcontrole** pictogram als de juiste spoorstaaf samenvouwt om meer het bekijken ruimte voor de lijst te verstrekken.
 
 ![Het pictogram van de spoorinspecteur in nadruk wanneer een gebruiker aan 200% zoomt.](images/rail-inspector.png)
@@ -105,7 +105,7 @@ Alle tabellen in de gebruikersinterface van het Experience Platform zijn toegank
 |---|---|
 | HOME (Function + pijl-links) | Wanneer de rij geconcentreerd is, neemt gebruikers naar het eerste punt in de rij |
 | END (Function + pijl-rechts) | Wanneer de rij geconcentreerd is, neemt gebruikers aan het laatste punt in de rij |
-| Pagina omhoog | Hiermee verplaatst u 10 rijen omhoog in de tabel (per pagina) |
+| Pagina omhoog | Hiermee verplaatst u tien rijen omhoog in de tabel (per pagina) |
 | Page down | Hiermee verplaatst u 10 rijen omlaag in de tabel (per pagina) |
 | Control + HOME | Hiermee gaat u naar de eerste rij in de tabel |
 | Control + END | Goes to first win table per page |
@@ -143,15 +143,19 @@ De volgende toegankelijkheidsfuncties zijn beschikbaar in de Query Service-edito
 * Het kleurcontrast in de gebruikersinterface van de Query Service voldoet aan toegankelijkheidsvereisten.
 * Toetsenbordnavigatie wordt ondersteund buiten de gebruikersinterface van de editor. De editor-gebruikersinterface is een ingesloten codespiegel.
 
+>[!NOTE]
+>
+>De redacteur van de Vraag behandelt niet **Tab** standaard. Ophalen **Tab** functionaliteit terwijl in de redacteur, u moet drukken **Escape** en druk vervolgens op **Tab** direct daarna. Druk **Tab** opnieuw, om nadruk voorbij de redacteur te bewegen.
+
 ## Het lusje van de Mening van het systeem in Bronnen en Doelen
 
 Wanneer u door de **[!UICONTROL System View]** in Bronnen en doelen verbetert de volgende functionaliteit de toegankelijkheid:
 
-* **Tab** Hiermee wordt de focus op de eerste bronverbindingskaart ingesteld
+* **Tab** stelt focus in op de eerste bronverbindingskaart
    * **Tab** opnieuw om zich op de knoop binnen de kaart te concentreren
    * Selecteren **Enter** om de vraag aan actieknoop binnen de kaart te activeren
-* Selecteren **Enter** op de aansluitkaart worden ook meer details in het rechterspoor aangehaald
+* Selecteren **Enter** op de aansluitkaart worden ook meer details in het rechterspoor aangehaald .
    * Wanneer de rechterspoorstaaf wordt geactiveerd, wordt de focus op dat gebied ingesteld. **Tab** is gericht op **Sluiten** voor de rechterspoorruit. Selecteren **Tab** weer de focus door het rechterdeelvenster van het spoor
    * Als er meer dan één bronverbindingskaart is, **Tab** doorloopt de verbindingen
-   * Gebruiken **pijltoetsen (omhoog, omlaag, links en rechts)** om door de lijst van bronnen te bewegen
+   * Gebruiken **pijltoetsen (omhoog, omlaag, links en rechts)** de lijst met bronnen doorlopen
    * Selecteren **Tab** om de focus op het rechterdeelvenster van het spoor in te stellen
