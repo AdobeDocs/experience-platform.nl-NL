@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d6b3dd7de1e8b5247bf692d1654fc4506ab4a471
+source-git-commit: 2fd721084ff8b3cf24b585a2179b1efe34de4c83
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Begrijp van de lijst hieronder welke datasettypes u afhankelijk van uw toepassin
   <tr>
     <td>Customer Journey Analytics</td>
     <td>Alle</td>
-    <td> <p> De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd. Lees meer over de vereiste machtigingen in het dialoogvenster <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/cja-access-control.html#product-admin-additional-permissions"> Documentatie Customer Journey Analytics</a>. </p> <p> <b>Opmerking over beschikbaarheid:</b> De mogelijkheid om gegevenssets naar de cloud te exporteren bevindt zich in de beperkte testfase van de release en is mogelijk nog niet beschikbaar in uw omgeving. Deze notitie wordt verwijderd wanneer de functionaliteit algemeen beschikbaar is. Voor informatie over het proces van de release van de Customer Journey Analytics raadpleegt u <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Release van de Customer Journey Analytics-functie</a>. </p> </td>
+    <td> De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd.  <br> <p> <b>Opmerking over beschikbaarheid:</b> De mogelijkheid om gegevenssets naar de cloud te exporteren bevindt zich in de beperkte testfase van de release en is mogelijk nog niet beschikbaar in uw omgeving. Deze notitie wordt verwijderd wanneer de functionaliteit algemeen beschikbaar is. Voor informatie over het proces van de release van de Customer Journey Analytics raadpleegt u <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Release van de Customer Journey Analytics-functie</a>. </p> </td>
   </tr>
   <tr>
     <td>Data Distiller</td>
