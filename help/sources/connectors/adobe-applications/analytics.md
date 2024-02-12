@@ -2,9 +2,9 @@
 title: Adobe Analytics Source Connector voor rapportsuite-gegevens
 description: Dit document biedt een overzicht van Analytics en beschrijft de gebruiksgevallen voor Analytics-gegevens.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: ae88ce6f24db669577941b59fdaf18f43e32768f
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,11 @@ De verwachte latentie voor Analytics Data on Platform wordt beschreven in de ond
 | Nieuwe gegevens naar [!DNL Real-Time Customer Profile] (A4T **niet** ingeschakeld) | &lt; 2 minuten |
 | Nieuwe gegevens naar [!DNL Real-Time Customer Profile] (A4T **is** ingeschakeld) | tot 30 minuten |
 | Nieuwe gegevens voor Data Lake | &lt; 2,25 uur |
+| Nieuwe gegevens naar CJA zonder [verstikken](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3,75 uur |
+| Nieuwe gegevens naar CJA met stitching | &lt; 7 uur |
 | Terugvulling van gebeurtenissen van minder dan 10 miljard | &lt; 4 weken |
+
+Zie voor meer informatie over CJA-latentie: [Customer Journey Analytics Guardrails](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
 
 De back-up van Analytics voor productiesandboxen wordt standaard ingesteld op 13 maanden. Voor analysegegevens in niet-productiesandboxen wordt de backfill ingesteld op drie maanden. De limiet van 10 miljard gebeurtenissen die in bovenstaande tabel worden genoemd, is strikt in verhouding tot de verwachte latentie.
 
