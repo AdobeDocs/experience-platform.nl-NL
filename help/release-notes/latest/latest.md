@@ -1,11 +1,11 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
-description: Opmerkingen bij de release van januari 2024 voor Adobe Experience Platform.
+description: Aanvullende informatie van januari 2024 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '1644'
-ht-degree: 3%
+source-wordcount: '1648'
+ht-degree: 4%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 Nieuwe functies in Adobe Experience Platform:
 
-- [Hoofdletters gebruiken](#use-case-playbooks)
+- [Playbooks voor gebruiksscenario](#use-case-playbooks)
 
 Updates voor bestaande functies in Experience Platform:
 
@@ -29,7 +29,7 @@ Updates voor bestaande functies in Experience Platform:
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
 
-## Hoofdletters gebruiken {#use-case-playbooks}
+## Playbooks voor gebruiksscenario {#use-case-playbooks}
 
 De [!UICONTROL Use Case Playbooks] Deze functionaliteit is nu algemeen beschikbaar voor alle Real-Time CDP- en Adobe Journey Optimizer-klanten. [!UICONTROL Use Case Playbooks] zijn ontworpen om gebruikers te helpen bij het overwinnen van uitdagingen wanneer ze met Real-time Customer Data Platform of Adobe Journey Optimizer beginnen. Als u niet zeker weet waar u moet beginnen of hoe u de juiste middelen voor uw gewenste gebruiksscenario&#39;s kunt maken, kunt u met Afspeelboeken voor hoofdletters en kleine letters inspiratie bieden en verschillende middelen maken die u kunt testen en importeren in productieomgevingen wanneer u klaar bent.
 
@@ -181,8 +181,8 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE Beta]{type=Informative}[!DNL Oracle NetSuite] bronnen | Gebruik de [!DNL Oracle NetSuite] integratie in de broncatalogus om gegevens van uw [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) en [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) rekeningen bij het Experience Platform. |
-| [!BADGE Beta]{type=Informative}[!DNL Braze Currents] bron | Gebruik de [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) integratie in de broncatalogus om gegevens van uw [!DNL Braze] aan Experience Platform. |
+| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] bronnen | Gebruik de [!DNL Oracle NetSuite] integratie in de broncatalogus om gegevens van uw [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) en [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) rekeningen bij het Experience Platform. |
+| [!BADGE Beta]{type=Informative} [!DNL Braze Currents] bron | Gebruik de [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) integratie in de broncatalogus om gegevens van uw [!DNL Braze] aan Experience Platform. |
 | Ondersteuning voor sleutelpaarverificatie voor [!DNL Snowflake] batchbron | U kunt zeer belangrijk-paarauthentificatie nu gebruiken wanneer het creëren van een nieuw [!DNL Snowflake] account voor batchgegevens. Lees voor meer informatie de handleiding op [een [!DNL Snowflake] account die de API gebruikt](../../sources/tutorials/api/create/databases/snowflake.md) of de handleiding [een [!DNL Snowflake] account die de gebruikersinterface gebruikt](../../sources/tutorials/ui/create/databases/snowflake.md). |
 
 {style="table-layout:auto"}
