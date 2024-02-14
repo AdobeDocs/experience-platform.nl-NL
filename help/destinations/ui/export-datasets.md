@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 2fd721084ff8b3cf24b585a2179b1efe34de4c83
+source-git-commit: 1881e66c795c548bac08e09b4ec00852fdbc51c3
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1797'
 ht-degree: 0%
 
 ---
@@ -239,3 +239,4 @@ Houd in mening de volgende beperkingen voor de algemene beschikbaarheidsversie v
 * Datasets die via API zijn gemaakt, zijn momenteel niet beschikbaar voor export.
 * UI blokkeert momenteel niet u van het schrappen van een dataset die naar een bestemming wordt uitgevoerd. Verwijder geen datasets die naar bestemmingen worden geëxporteerd. [De gegevensset verwijderen](#remove-dataset) van een doelgegevensstroom alvorens het te schrappen.
 * De metriek van de controle voor de uitvoer van datasets wordt momenteel gemengd met aantallen voor profieluitvoer zodat weerspiegelen zij niet de ware uitvoeraantallen.
+* Gegevens met een tijdstempel die ouder is dan 365 dagen, worden niet geëxporteerd voor gegevenssets. Voor meer informatie bekijkt u de [guardrails voor de uitvoer van geplande gegevenssets](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
