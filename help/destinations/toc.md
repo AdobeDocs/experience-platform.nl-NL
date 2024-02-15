@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: ed3d672c2f6c06259c341c87451d049d00a41268
+source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1196'
 ht-degree: 1%
 
 ---
@@ -107,6 +107,7 @@ ht-degree: 1%
       * [Decibel-extensie](./catalog/analytics/decibel.md)
       * [Demandbase-extensie](./catalog/analytics/demandbase.md)
       * [DialogTech-extensie](./catalog/analytics/dialogtech.md)
+      * [Gainsight PX](./catalog/analytics/gainsight-px.md)
       * [Google Global Site Tag-extensie](./catalog/analytics/gtag-analytics.md)
       * [Google Universal Analytics-extensie](./catalog/analytics/google-universal-analytics.md)
       * [JW Player Analytics-extensie (Bèta)](./catalog/analytics/jw-player-analytics.md)
