@@ -4,18 +4,22 @@ solution: Experience Platform
 title: Overzicht van SFTP-bronconnector
 description: Leer hoe u een SFTP-server verbindt met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 6c22f8243269bb304b12a4e4978ed141ed092c67
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
 
 # SFTP-aansluiting
 
+>[!IMPORTANT]
+>
+>De [!DNL SFTP] server waarmee Adobe Experience Platform verbinding maakt, moet chunking kunnen ondersteunen, wat meerdere verbindingen met één bestand betekent. Als uw [!DNL SFTP] -server ondersteunt geen chunking, dan wordt mogelijk een fout weergegeven die voorkomt dat bestanden worden ingesloten.
+
 Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform], en [!DNL Azure], zodat u uw gegevens van deze systemen kunt overbrengen.
 
-Opslagbronnen in de cloud kunnen uw eigen gegevens overbrengen naar [!DNL Platform] zonder dat het downloaden, opmaken of uploaden nodig is. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] kunt u gegevens van een FTP- of SFTP-server via batches inbrengen.
+Opslagbronnen in de cloud kunnen uw eigen gegevens in [!DNL Platform] zonder dat het downloaden, opmaken of uploaden nodig is. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] kunt u gegevens van een FTP- of SFTP-server via batches inbrengen.
 
 ## IP adres lijst van gewenste personen
 
@@ -29,16 +33,16 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer
 - Directory- en bestandsnamen mogen niet eindigen met een slash (`/`). Indien beschikbaar wordt deze automatisch verwijderd.
 - De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! ' ( ) ; @ & = + $ , % # [ ]`
 - De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?`.
-- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`zijn, hoewel geldig in NTFS-bestandsnamen, geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [RFC 2616, punt 2.2: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM4, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (..), en twee stiptekens (.).
+- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`zijn, hoewel geldig in NTFS-bestandsnamen, geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [RFC 2616, afdeling 2.2: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 
 ## Stel een Base64-gecodeerde OpenSSH-privésleutel in voor [!DNL SFTP]
 
-De [!DNL SFTP] bron steunt authentificatie gebruikend [!DNL Base64]-gecodeerde OpenSSH-persoonlijke sleutel. Zie de stappen hieronder voor informatie over hoe te om uw Base64-Gecodeerde OpenSSH privé sleutel te produceren en te verbinden [!DNL SFTP] naar Platform.
+De [!DNL SFTP] bronondersteuning voor verificatie met [!DNL Base64]-gecodeerde OpenSSH-persoonlijke sleutel. Zie de stappen hieronder voor informatie over hoe te om uw Base64-Gecodeerde OpenSSH privé sleutel te produceren en te verbinden [!DNL SFTP] naar Platform.
 
 ### [!DNL Windows] gebruikers
 
-Als u een [!DNL Windows] computer, opent u de **Start** en selecteert u vervolgens **Instellingen**.
+Als u een [!DNL Windows] computer, opent u de **Start** en selecteert u **Instellingen**.
 
 ![instellingen](../../images/tutorials/create/sftp/settings.png)
 
@@ -152,7 +156,7 @@ De onderstaande documentatie biedt informatie over hoe u een SFTP-server kunt ve
 - [De gegevensstructuur en inhoud van een cloudopslagbron verkennen met behulp van de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Een gegevensstroom maken voor een cloudopslagbron met behulp van de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-### De gebruikersinterface gebruiken
+### UI gebruiken
 
 - [Een SFTP-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/sftp.md)
 - [Een gegevensstroom maken voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
