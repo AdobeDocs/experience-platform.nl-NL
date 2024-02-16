@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: 8a9cf0547720927018d728d7cecbf377a1282f6f
+source-git-commit: 345cd259cba2faa2b2b4bafd8ef9d2691d101fd1
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1012'
 ht-degree: 6%
 
 ---
@@ -296,6 +296,7 @@ ht-degree: 6%
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - Gegevenspartner {#data-partner}
          - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+         - [Importeren van Acrobat-perspectiefgegevens](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
