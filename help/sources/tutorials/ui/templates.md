@@ -3,7 +3,7 @@ description: Leer hoe u sjablonen in de gebruikersinterface van Adobe Experience
 title: Een gegevensstroom voor bronnen maken met sjablonen in de gebruikersinterface
 badge1: "Bèta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
+source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
 workflow-type: tm+mt
 source-wordcount: '2198'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Exper
 >id="platform_sources_templates_accounttype"
 >title="Bedrijfstype selecteren"
 >abstract="Selecteer het juiste bedrijfstype voor uw gebruiksscenario. De toegang hangt af van uw Real-time Customer Data Platform-abonnementaccount."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=nl" text="Real-Time CDP-overzicht"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP-overzicht"
 
 Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in het Experience Platform.
 
