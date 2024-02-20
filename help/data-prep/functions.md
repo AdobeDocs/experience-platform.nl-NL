@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Toewijzingsfuncties voor gegevenspremies
 description: Dit document introduceert de toewijzingsfuncties die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: f250d8e6e5368a785dcb154dbe0b611baed73a4c
+source-git-commit: 5525e81afe0945716c510ff7a0b06cc7e4d5ee6c
 workflow-type: tm+mt
-source-wordcount: '5459'
+source-wordcount: '5908'
 ht-degree: 1%
 
 ---
@@ -282,6 +282,27 @@ Voor meer informatie over apparaatveldwaarden leest u de [lijst met apparaatveld
 | ua_agent_version_major | Extraheert de agentennaam en belangrijkste versie van het koord van de gebruikersagent. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_agent_version_major &#x200B;(USER_AGENT) | ua_agent_version_major &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
 | ua_agent_name | Extraheert de agentennaam uit het koord van de gebruikersagent. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_agent_name &#x200B;(USER_AGENT) | ua_agent_name &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | Extraheert de apparaatklasse uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_device_class &#x200B;(USER_AGENT) | ua_device_class &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Telefoon |
+
+{style="table-layout:auto"}
+
+### Analysefuncties {#analytics}
+
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
+
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| get_event_id | Extraheert de gebeurtenis-id uit een Analytics-gebeurtenistekenreeks. | <ul><li>EVENT_STRING: **Vereist** De door komma&#39;s gescheiden gebeurtenistekenreeks Analytics.</li><li>EVENT_NAME: **Vereist** The event name to extract and ID from.</li></ul> | get_event_id(EVENT_STRING, EVENT_NAME) | get_event_id(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 123456 |
+| get_event_value | Extraheert de gebeurteniswaarde uit een gebeurtenisreeks Analytics. Als de gebeurteniswaarde niet wordt opgegeven 1, wordt geretourneerd. | <ul><li>EVENT_STRING: **Vereist** De door komma&#39;s gescheiden gebeurtenistekenreeks Analytics.</li><li>EVENT_NAME: **Vereist** De naam van de gebeurtenis waaruit een waarde wordt geëxtraheerd.</li></ul> | get_event_value(EVENT_STRING, EVENT_NAME) | get_event_value(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 5 |
+| get_product_categories | Extraheert de productcategorie uit een productreeks van Analytics. | <ul><li>PRODUCTS_STRING: **Vereist** The Analytics products string.</li></ul> | get_product_categories(PRODUCTS_STRING) | get_product_categories(&quot;;Voorbeeld product 1;1;3.50,Voorbeeld categorie 2;Voorbeeld product 2;1;5.99&quot;) | [null,&quot;Voorbeeldcategorie 2&quot;] |
+| get_product_names | Extraheert de productnaam uit een productreeks Analytics. | <ul><li>PRODUCTS_STRING: **Vereist** The Analytics products string.</li></ul> | get_product_names(PRODUCTS_STRING) | get_product_names(&quot;;Voorbeeld product 1;1;3.50,Voorbeeld categorie 2;Voorbeeld product 2;1;5.99&quot;) | [&quot;Voorbeeld product 1&quot;,&quot;Voorbeeld product 2&quot;] |
+| get_product_quantity | Extraheert de hoeveelheden uit een productreeks van Analytics. | <ul><li>PRODUCTS_STRING: **Vereist** The Analytics products string.</li></ul> | get_product_Quantities(PRODUCTS_STRING) | get_product_Quantities(&quot;;Voorbeeld product 1;1;3.50,Voorbeeld categorie 2;Voorbeeld product 2&quot;) | [&quot;1&quot;, null] |
+| get_product_pricing | Extraheert de prijs uit een productreeks van Analytics. | <ul><li>PRODUCTS_STRING: **Vereist** The Analytics products string.</li></ul> | get_product_pricing(PRODUCTS_STRING) | get_product_pricing(&quot;;Voorbeeld product 1;1;3.50,Voorbeeld categorie 2;Voorbeeld product 2&quot;) | [&quot;3.50&quot;, null] |
+| get_product_events | Extraheert een benoemde gebeurtenis uit de productreeks als een array van objecten. | <ul><li>PRODUCTS_STRING: **Vereist** The Analytics products string.</li><li>EVENT_NAME: **Vereist** De naam van de gebeurtenis waaruit waarden moeten worden geëxtraheerd.</li></ul> | get_product_events(PRODUCTS_STRING, EVENT_NAME) | get_product_events(&quot;;Voorbeeld product 1;1;4.20;event1=2.3\|event2=5:1,;Voorbeeld product 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event2&quot;) | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
+| get_product_event_ids | Extraheert de id&#39;s voor de benoemde gebeurtenis uit de productreeks als een array van tekenreeksen. | <ul><li>PRODUCTS_STRING: **Vereist** The Analytics products string.</li><li>EVENT_NAME: **Vereist** De naam van de gebeurtenis waaruit waarden moeten worden geëxtraheerd.</li></ul> | get_product_events_ids(PRODUCTS_STRING, EVENT_NAME) | get_product_event_ids(&quot;;Voorbeeld product 1;1;4.20;event1=2.3\|event2=5:1;Voorbeeld product 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event2&quot;) | [&quot;1&quot;, &quot;2&quot;] |
+| get_product_event_values | Extraheert waarden voor de benoemde gebeurtenis van de producttekenreeks als een array van tekenreeksen. | <ul><li>PRODUCTS_STRING: **Vereist** The Analytics products string.</li><li>EVENT_NAME: **Vereist** De naam van de gebeurtenis waaruit waarden moeten worden geëxtraheerd.</li></ul> | get_product_events_values(PRODUCTS_STRING, EVENT_NAME) | get_product_event_values(&quot;;Voorbeeld product 1;1;4.20;event1=2.3\|event2=5:1;Voorbeeld product 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event1&quot;) | [&quot;2.3&quot;, &quot;3&quot;] |
+| get_product_evars | Extraheert de var waarden voor de genoemde gebeurtenis van het productkoord als serie van koorden. | <ul><li>PRODUCTS_STRING: **Vereist** The Analytics products string.</li><li>EVAR_NAME: **Vereist** De naam van de eVar die geëxtraheerd moet worden.</li></ul> | get_product_evars(PRODUCTS_STRING, EVENT_NAME) | get_product_evars(&quot;;Voorbeeld product;1;6.69;;eVar1=Merchandising value&quot;, &quot;eVar1&quot;) | [&quot;Merchandising value&quot;] |
 
 {style="table-layout:auto"}
 
