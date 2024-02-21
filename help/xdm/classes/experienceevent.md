@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent-klasse
 description: Leer meer over de klasse XDM ExperienceEvent en best practices voor het modelleren van gebeurtenisgegevens.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: f7d8cd295dd6aa11048c3cb0f9a54a3702b83473
 workflow-type: tm+mt
-source-wordcount: '2607'
+source-wordcount: '2623'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ De [!DNL XDM ExperienceEvent] De klasse zelf verstrekt verscheidene op tijd-reek
 | `eventType` | Een tekenreeks die het type of de categorie voor de gebeurtenis aangeeft. Dit gebied kan worden gebruikt als u verschillende gebeurtenistypen binnen het zelfde schema en de dataset wilt onderscheiden, zoals het onderscheiden van een gebeurtenis van de productmening van toe:voegen-aan-winkelwagentje voor een detailhandelsbedrijf.<br><br>Standaardwaarden voor deze eigenschap worden gegeven in het gedeelte [aanhangsel](#eventType), met een beschrijving van het beoogde gebruik. Dit veld is een uitbreidbare opsomming. Dit houdt in dat u ook uw eigen tekenreeksen voor gebeurtenistypen kunt gebruiken om de gebeurtenissen die u bijhoudt, te categoriseren.<br><br>`eventType` beperkt u tot het gebruik van slechts één gebeurtenis per hit op uw toepassing en daarom moet u berekende velden gebruiken om het systeem te laten weten welke gebeurtenis het belangrijkst is. Zie de sectie over [aanbevolen procedures voor berekende velden](#calculated). |
 | `producedBy` | Een tekenreekswaarde die de producent of oorsprong van de gebeurtenis beschrijft. Dit veld kan worden gebruikt om bepaalde gebeurtenisproducenten uit te filteren als dat voor segmentatiedoeleinden nodig is.<br><br>Sommige voorgestelde waarden voor deze eigenschap zijn opgenomen in het dialoogvenster [aanhangsel](#producedBy). Dit veld is een uitbreidbare opsomming. Dit houdt in dat u ook uw eigen tekenreeksen kunt gebruiken om verschillende gebeurtenisproducenten te vertegenwoordigen. |
 | `identityMap` | Een toewijzingsveld dat een set naamloze identiteiten bevat voor het individu waarop de gebeurtenis van toepassing is. Dit veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. U kunt dit veld op de juiste wijze gebruiken voor [Klantprofiel in realtime](../../profile/home.md)Probeer niet handmatig de inhoud van het veld bij te werken in uw gegevensbewerkingen.<br /><br />Zie de sectie over identiteitskaarten in het dialoogvenster [grondbeginselen van de schemacompositie](../schema/composition.md#identityMap) voor meer informatie over het gebruik ervan . |
-| `timestamp`<br>**(Vereist)** | Een ISO 8601-tijdstempel van wanneer de gebeurtenis heeft plaatsgevonden, opgemaakt volgens [RFC 3339 — Sectie 5.6](https://datatracker.ietf.org/doc/html/rfc3339). Deze tijdstempel moet in het verleden voorkomen. Zie de onderstaande sectie over [tijdstempels](#timestamps) voor beste praktijken op het gebruik van dit gebied. |
+| `timestamp`<br>**(Vereist)** | Een ISO 8601-tijdstempel van wanneer de gebeurtenis heeft plaatsgevonden, opgemaakt volgens [RFC 3339 — Sectie 5.6](https://datatracker.ietf.org/doc/html/rfc3339). Deze tijdstempel **moet** in het verleden , maar **moet** vanaf 1970. Zie de onderstaande sectie over [tijdstempels](#timestamps) voor beste praktijken op het gebruik van dit gebied. |
 
 {style="table-layout:auto"}
 
@@ -38,7 +38,7 @@ De volgende secties behandelen beste praktijken voor het ontwerpen van uw op geb
 
 ### Tijdstempels {#timestamps}
 
-De basis `timestamp` veld van een gebeurtenisschema kan **alleen** de waarneming van het evenement zelf vertegenwoordigen en in het verleden moeten plaatsvinden. Als voor uw segmentatiegebruik tijdstempels moeten worden gebruikt die in de toekomst kunnen voorkomen, moeten deze waarden elders in het schema van de Experience-gebeurtenis worden beperkt.
+De basis `timestamp` veld van een gebeurtenisschema kan **alleen** de waarneming van het evenement zelf vertegenwoordigen en in het verleden moeten plaatsvinden. De gebeurtenis **moet** vanaf 1970. Als voor uw segmentatiegebruik tijdstempels moeten worden gebruikt die in de toekomst kunnen voorkomen, moeten deze waarden elders in het schema van de Experience-gebeurtenis worden beperkt.
 
 Als een bedrijf in de reis- en gastsector bijvoorbeeld een vluchtreserveringsevenement modelleert, moet de klasse `timestamp` wordt het tijdstip weergegeven waarop de reserveringsgebeurtenis is waargenomen. Andere tijdstempels die verband houden met de gebeurtenis, zoals de begindatum van de reisreservering, moeten worden vastgelegd in afzonderlijke velden die worden verschaft door standaard- of aangepaste veldgroepen.
 

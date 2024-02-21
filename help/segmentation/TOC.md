@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Gids voor Segmentation Service
 user-guide-description: Stel doelgroepen samen op basis van uw gegevens voor realtimeklantprofielen met behulp van door Adobe Experience Platform gegenereerde segmentdefinities of externe bronnen.
 feature: Segments
-source-git-commit: 0063f08c16ca0be629684319856bb42d0dd1536d
+source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 23%
+source-wordcount: '183'
+ht-degree: 22%
 
 ---
 
@@ -40,6 +40,7 @@ ht-degree: 23%
    - [Randsegmentatie](ui/edge-segmentation.md)
    - [Streaming segmentering](ui/streaming-segmentation.md)
    - [Streaming segmentatie (video)](video/streaming-segmentation-overview.md)
+   - [Update voor jaartijdbeperking negeren](ui/ignore-year.md)
    - [Tijd beperkingen refactoring](ui/segment-refactoring.md)
    - Segmentovereenkomst {#segment-match}
       - [Overzicht van afstemming van segment](ui/segment-match/overview.md)
@@ -60,7 +61,7 @@ ht-degree: 23%
    - [Filterfuncties](pql/filter-functions.md)
    - [Logische kwantoren](pql/logical-quantifiers.md)
    - [Diverse functies](pql/misc-functions.md)
-- Lesbestanden {#tutorials}
+- Tutorials {#tutorials}
    - [Een segment maken](tutorials/create-a-segment.md)
    - [Een segment maken (video)](video/create-segment.md)
    - [Een dynamisch segment maken (video)](video/create-a-dynamic-segment.md)

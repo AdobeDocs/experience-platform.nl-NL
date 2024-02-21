@@ -2,9 +2,9 @@
 title: Een Adobe Analytics-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
+source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
 workflow-type: tm+mt
-source-wordcount: '2574'
+source-wordcount: '2631'
 ht-degree: 0%
 
 ---
@@ -168,7 +168,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
-### Filteren voor realtime-klantprofiel {#filtering-for-profile}
+## Filteren voor realtime-klantprofiel {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
@@ -196,7 +196,7 @@ Nadat u de toewijzingen voor uw [!DNL Analytics] de gegevens van de rapportreeks
 
 >[!ENDSHADEBOX]
 
-#### Filteren op rijniveau
+### Filteren op rijniveau
 
 >[!IMPORTANT]
 >
@@ -254,7 +254,7 @@ Selecteer **[!UICONTROL Next]**.
 
 ![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
 
-#### Filteren op kolomniveau
+### Filteren op kolomniveau
 
 Selecteren **[!UICONTROL Column filter]** in de koptekst om filteren op kolomniveau toe te passen.
 
@@ -267,6 +267,14 @@ Standaard, alles [!DNL Analytics] ga naar [!DNL Profile] en dit proces maakt het
 Selecteer **[!UICONTROL Next]**.
 
 ![kolommen geselecteerd](../../../../images/tutorials/create/analytics/columns-selected.png)
+
+### Secundaire identiteiten filteren
+
+Gebruik een kolomfilter om secundaire identiteiten uit te sluiten van profielopname. Als u secundaire identiteiten wilt filteren, selecteert u **[!UICONTROL Column filter]** en selecteer vervolgens **[!UICONTROL _identities]**.
+
+Het filter is alleen van toepassing wanneer een identiteit als secundair wordt gemarkeerd. Als identiteiten zijn geselecteerd, maar een gebeurtenis aankomt met een van de identiteiten die als primair zijn gemarkeerd, worden deze niet uitgefilterd.
+
+![secundaire identiteiten](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### Gegevens over gegevensstroom opgeven
 

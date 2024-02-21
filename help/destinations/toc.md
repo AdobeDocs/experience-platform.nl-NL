@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
+source-git-commit: c2e446ed89ef8a2c4496cd1d442d0204843dab2e
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1202'
 ht-degree: 1%
 
 ---
@@ -139,6 +139,8 @@ ht-degree: 1%
    * Gebieden van het Platform voor gegevensbeheer {#data-management}
       * [Overzicht van DMP-doelen (Data Management Platform)](./catalog/data-management/overview.md)
       * [Audience Manager DIL-extensie](./catalog/data-management/aam-dil-extension.md)
+   * eCommerce-bestemmingen {#ecommerce}
+      * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * E-maildoelen {#email}
       * [Bizible extension](./catalog/email/bizible.md)
       * [Marketo-extensie](./catalog/email/marketo.md)
@@ -149,6 +151,7 @@ ht-degree: 1%
       * [Adobe Campaign-verbinding](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services-verbinding](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Mailchimp-rentecategorieën](./catalog/email-marketing/mailchimp-interest-categories.md)
+      * [Mailchimp-tags](./catalog/email-marketing/mailchimp-tags.md)
       * [(API) Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(Bestanden) Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua.md)
       * [Verbinding oracle Responsys](./catalog/email-marketing/oracle-responsys.md)

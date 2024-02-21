@@ -1,19 +1,21 @@
 ---
-title: Lambda-functievoorbeeld - soortgelijke records ophalen
+title: Vergelijkbare records ophalen met functies van hogere volgorde
 description: Leer hoe te om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen die op gelijkenis metrisch en gelijkenis drempel worden gebaseerd. Deze workflow kan betekenisvolle relaties of overlappingen tussen verschillende gegevenssets benadrukken.
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
-source-git-commit: 20624b916bcb3c17e39a402d9d9df87d0585d4b8
+source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
 workflow-type: tm+mt
-source-wordcount: '4011'
+source-wordcount: '4031'
 ht-degree: 2%
 
 ---
 
-# Lambda, functievoorbeeld: soortgelijke records ophalen
+# Verdien gelijkbare verslagen met hogere orde functies
 
-Los verscheidene gemeenschappelijke gebruiksgevallen door de lambdfuncties van Distiller van Gegevens te gebruiken om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen. U kunt deze handleiding gebruiken om producten van verschillende datasets te identificeren die een significante gelijkenis in hun kenmerken of eigenschappen hebben. De methodologie in dit document biedt oplossingen voor onder andere gegevensdeduplicatie, koppeling van records, aanbevelingssystemen, het opvragen van informatie en tekstanalyse.
+Gebruik Data Distiller-functies in hogere volgorde om een aantal veelvoorkomende gebruiksgevallen op te lossen. Om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen, gebruik de filter, transformatie, en verminder functies zoals die in deze gids worden beschreven. Zie de documentatie over hoe u complexe gegevenstypen kunt verwerken voor meer informatie over functies met een hogere volgorde [array- en kaartgegevenstypen beheren](../sql/higher-order-functions.md).
 
-In het document wordt beschreven hoe een gelijkenis wordt geïmplementeerd. Vervolgens worden de lambdafuncties van Data Distiller gebruikt om de gelijkenis tussen gegevenssets te berekenen en deze op basis van geselecteerde kenmerken te filteren. SQL de codefragmenten en de verklaringen worden verstrekt voor elke stap van het proces. De workflow implementeert overeenkomsten op basis van gelijkenis met de Jaccard-maateenheid en tokenisering met behulp van Data Distiller lambda-functies. Deze methodes worden dan gebruikt om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen die op gelijkenis metrisch worden gebaseerd. De belangrijkste onderdelen van het proces zijn: [tokenisatie met lambdafuncties](#data-transformation)de [cross-join van unieke elementen](#cross-join-unique-elements)de [Berekening van gelijkenis met Java](#compute-the-jaccard-similarity-measure)en de [drempelgebaseerde filtering](#similarity-threshold-filter).
+Gebruik deze handleiding om producten van verschillende datasets te identificeren die een significante gelijkenis in hun kenmerken of eigenschappen hebben. Deze methodologie biedt oplossingen voor onder andere gegevensdeduplicatie, koppeling van records, aanbevelingssystemen, het opvragen van informatie en tekstanalyse.
+
+In het document wordt beschreven hoe u een samenvoeging op basis van overeenkomsten implementeert. Vervolgens worden de functies in de hogere volgorde van Data Distiller gebruikt om de gelijkenis tussen gegevenssets te berekenen en deze op basis van geselecteerde kenmerken te filteren. SQL de codefragmenten en de verklaringen worden verstrekt voor elke stap van het proces. De workflow implementeert overeenkomsten op basis van gelijkenis met de Jaccard-maateenheid en tokenisering met behulp van Data Distiller-functies in hogere volgorde. Deze methodes worden dan gebruikt om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen die op gelijkenis metrisch worden gebaseerd. De belangrijkste onderdelen van het proces zijn: [tokenisering met functies van hogere orde](#data-transformation)de [cross-join van unieke elementen](#cross-join-unique-elements)de [Berekening van gelijkenis met Java](#compute-the-jaccard-similarity-measure)en de [drempelgebaseerde filtering](#similarity-threshold-filter).
 
 ## Vereisten
 
@@ -24,11 +26,11 @@ Voordat u doorgaat met dit document, moet u vertrouwd zijn met de volgende conce
    - **Drempel**: Een gelijkenisdrempel wordt gebruikt om te bepalen wanneer de twee verslagen als gelijkaardig genoeg worden beschouwd om in te sluiten bij resultaat. Records met een overeenkomstenscore die hoger is dan de drempel worden beschouwd als overeenkomsten.
 - De **Jaccard-gelijkenis** De index, of de Jaccard-gelijkenis, is een statistiek die wordt gebruikt om de gelijkenis en diversiteit van steekproefreeksen te meten. Dit wordt gedefinieerd als de grootte van de doorsnede gedeeld door de grootte van de samenvoeging van de steekproefreeksen. De overeenkomende JACARD-meting loopt van 0 tot en met 1. Een Jaccard-gelijkenis van nul geeft aan dat de sets niet gelijk zijn en een Jaccard-gelijkenis van één geeft aan dat de sets identiek zijn.
   ![Een vlinderdiagram ter illustratie van de Jaccard-gelijkenis.](../images/use-cases/jaccard-similarity.png)
-- **Lambdafuncties** in Data Distiller zijn anoniem, inline functies die binnen SQL verklaringen kunnen worden bepaald en worden gebruikt. Ze worden vaak gebruikt met functies van een hogere volgorde omdat ze beknopte, on-the-fly functies kunnen maken die als gegevens kunnen worden doorgegeven. Lambdafuncties worden vaak gebruikt met functies van hogere orde zoals `transform`, `filter`, en `array_sort`. Lambdafuncties zijn vooral nuttig in situaties waar het bepalen van een volledige functie onnodig is, en een korte, eenmalig functie kan inline worden gebruikt.
+- **Functies met hogere volgorde** in Data Distiller zijn dynamische inline gereedschappen waarmee gegevens rechtstreeks in SQL-instructies worden verwerkt en getransformeerd. Deze veelzijdige functies maken het niet nodig om meerdere stappen in gegevensmanipulatie uit te voeren, met name wanneer [omgaan met complexe typen, zoals arrays en kaarten](../sql/higher-order-functions.md). Door vraagefficiency te verbeteren en transformaties te vereenvoudigen, dragen de hogere ordefuncties aan flexibelere analyses en betere besluitvorming in diverse bedrijfsscenario&#39;s bij.
 
 ## Aan de slag
 
-De gegevens Distiller SKU wordt vereist om de lambdafuncties op uw gegevens van Adobe Experience Platform uit te voeren. Als u geen gegevens Distiller SKU hebt, contacteer uw vertegenwoordiger van de klantendienst van de Adobe voor meer informatie.
+De gegevens Distiller SKU wordt vereist om de hoger-ordefuncties op uw gegevens van Adobe Experience Platform uit te voeren. Als u geen gegevens Distiller SKU hebt, contacteer uw vertegenwoordiger van de klantendienst van de Adobe voor meer informatie.
 
 ## Gelijksoortigheid vaststellen {#establish-similarity}
 
@@ -319,7 +321,7 @@ De resultaten zijn weergegeven in onderstaande tabel:
 
 +++
 
-### Instellen van tokenlengte
+### Instellen van tokenlengte {#ensure-set-token-length}
 
 Er kunnen aanvullende voorwaarden aan de instructie worden toegevoegd om ervoor te zorgen dat de gegenereerde reeksen een specifieke lengte hebben. De volgende SQL-instructie breidt de logica voor het genereren van tokens uit door het `transform` functie is complexer. De instructie gebruikt de `filter` functie binnen `transform` om ervoor te zorgen dat de gegenereerde reeksen zes tekens lang zijn. Het behandelt de gevallen waar dat niet mogelijk is door ONGELDIGE waarden aan die posities toe te wijzen.
 
@@ -355,11 +357,11 @@ De resultaten zijn weergegeven in onderstaande tabel:
 
 +++
 
-## Oplossingen verkennen met Data Distiller lambda-functies {#lambda-function-solutions}
+## Oplossingen ontdekken met Data Distiller-functies voor hogere volgorde {#higher-order-function-solutions}
 
-Lambda-functies zijn krachtige constructies waarmee u &#39;programmeren&#39; kunt implementeren, zoals syntaxis in Data Distiller. Ze kunnen worden gebruikt om een functie te herhalen over meerdere waarden in een array.
+Hogere-ordefuncties zijn krachtige constructies waarmee u &#39;programmeren&#39; kunt implementeren, zoals syntaxis in Data Distiller. Ze kunnen worden gebruikt om een functie te herhalen over meerdere waarden in een array.
 
-In de context van Data Distiller zijn lambdafuncties ideaal voor het maken van n-grammen en het herhalen over opeenvolgingen van karakters.
+In de context van Data Distiller zijn functies met een hogere volgorde ideaal voor het maken van n-grammen en het herhalen van reeksen tekens.
 
 De `reduce` functie, met name wanneer deze wordt gebruikt binnen reeksen die worden gegenereerd door `transform`, biedt een manier om cumulatieve waarden of aggregaten af te leiden, die van cruciaal belang kunnen zijn in verschillende analytische en planningsprocessen.
 
@@ -371,7 +373,7 @@ SELECT transform(
     x -> reduce(
         sequence(1, x),  
         0,  -- Initial accumulator value
-        (acc, y) -> acc + y  -- Lambda function to add numbers
+        (acc, y) -> acc + y  -- Higher-order function to add numbers
     )
 ) AS sum_result;
 ```
@@ -381,17 +383,17 @@ Hieronder volgt een analyse van de SQL-instructie:
 - Regel 1: `transform` past de functie toe `x -> reduce` op elk element dat in de reeks wordt gegenereerd.
 - Regel 2: `sequence(1, 5)` Hiermee genereert u een reeks getallen van 1 tot en met 5.
 - Regel 3: `x -> reduce(sequence(1, x), 0, (acc, y) -> acc + y)` voert een verminderingsverrichting voor elk element x in de opeenvolging (van 1 tot 5) uit.
-   - De `reduce` functie neemt een initiële accumulatorwaarde van 0, een opeenvolging van één aan de huidige waarde van `x`, en een lambdafunctie `(acc, y) -> acc + y` om de getallen toe te voegen.
-   - De lambdafunctie `acc + y` Hiermee wordt de som geaccumuleerd door de huidige waarde op te tellen `y` op de accu `acc`.
+   - De `reduce` functie neemt een initiële accumulatorwaarde van 0, een opeenvolging van één aan de huidige waarde van `x`en een hogere-ordefunctie `(acc, y) -> acc + y` om de getallen toe te voegen.
+   - De functie in de hogere volgorde `acc + y` Hiermee wordt de som geaccumuleerd door de huidige waarde op te tellen `y` op de accu `acc`.
 - Regel 8: `AS sum_result` wijzigt de naam van de resulterende kolom in sum_result.
 
-Om samen te vatten, neemt deze lambdafunctie twee parameters (`acc` en `y`) en definieert de uit te voeren bewerking, die in dit geval wordt toegevoegd `y` op de accu `acc`. Deze lambdafunctie wordt uitgevoerd voor elk element in de opeenvolging tijdens het verminderingsproces.
+Om samen te vatten, neemt deze hoger-ordefunctie twee parameters (`acc` en `y`) en definieert de uit te voeren bewerking, die in dit geval wordt toegevoegd `y` op de accu `acc`. Deze functie van hogere orde wordt uitgevoerd voor elk element in de opeenvolging tijdens het verminderingsproces.
 
 De uitvoer van deze instructie is één kolom (`sum_result`) die de cumulatieve bedragen van getallen van één tot en met vijf bevat.
 
-### De waarde van lambdafuncties {#value-of-lambda-functions}
+### De waarde van functies met een hogere volgorde {#value-of-higher-order-functions}
 
-Deze sectie analyseert een afgeslankte versie van een tri-gram SQL verklaring om de waarde van lambdafuncties in Gegevens Distiller beter te begrijpen om n-grammen efficiënter tot stand te brengen.
+Deze sectie analyseert een afgeslankte versie van een tri-gram SQL verklaring om de waarde van hoger-ordefuncties in Gegevens Distiller beter te begrijpen om n-grammen efficiënter tot stand te brengen.
 
 De onderstaande verklaring is gebaseerd op de `ProductName` kolom binnen de `featurevector1` tabel. Hiermee wordt een set subtekenreeksen van drie tekens gemaakt die zijn afgeleid van de gewijzigde productnamen in de tabel, waarbij posities worden gebruikt die zijn verkregen uit de gegenereerde reeks.
 
@@ -407,11 +409,11 @@ FROM
 
 Hieronder volgt een analyse van de SQL-instructie:
 
-- Regel 2: `transform` past een lambdafunctie op elk geheel in de opeenvolging toe.
+- Regel 2: `transform` past een hoger-ordefunctie op elk geheel in de opeenvolging toe.
 - Regel 3: `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 2)` genereert een reeks gehele getallen van `1` de lengte van de gewijzigde productnaam min twee.
    - `length(lower(replace(ProductName, ' ', '')))` berekent de lengte van `ProductName` na het maken van kleine letters en het verwijderen van spaties.
    - `- 2` trekt twee van de lengte af om ervoor te zorgen dat de opeenvolging geldige beginnende posities voor 3 karakter substrings produceert. Als u 2 aftrekt, beschikt u na elke startpositie over voldoende tekens om een subtekenreeks van 3 tekens te extraheren. De substring functie hier werkt als een lookahead operator.
-- Regel 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` is een lambdafunctie die op elk geheel werkt `i` in de gegenereerde reeks.
+- Regel 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` is een functie met een hogere volgorde die op elk geheel getal werkt `i` in de gegenereerde reeks.
    - De `substring(...)` functie extraheert een subtekenreeks van 3 tekens uit de `ProductName` kolom.
    - Voordat u de subtekenreeks extraheert, `lower(replace(ProductName, ' ', ''))` converteert de `ProductName` in kleine letters en verwijdert spaties om de consistentie te waarborgen.
 
@@ -707,6 +709,10 @@ De resultaten van deze vraag geven de kolommen voor gelijkenis zich bij, zoals h
 
 ### Volgende stappen {#next-steps}
 
-Door dit document te lezen, kunt u deze logica nu gebruiken om betekenisvolle relaties of overlappingen tussen verschillende gegevenssets te benadrukken. De capaciteit om producten van verschillende datasets te identificeren die een significante gelijkenis in hun eigenschappen of eigenschappen hebben, heeft talrijke real-world toepassingen. Deze logica zou voor scenario&#39;s zoals product aanpassing (om gelijkaardige producten aan klanten te groeperen of aan te bevelen), gegevens het zuiveren (om gegevenskwaliteit te verbeteren), en marktmand analyse (om inzicht in klantengedrag, voorkeur, en potentiële cross-selling kansen te verstrekken) kunnen worden gebruikt.
+Door dit document te lezen, kunt u deze logica nu gebruiken om betekenisvolle relaties of overlappingen tussen verschillende gegevenssets te benadrukken. De capaciteit om producten van verschillende datasets te identificeren die een significante gelijkenis in hun eigenschappen of eigenschappen hebben heeft talrijke real-world toepassingen. Deze logica kan worden gebruikt voor scenario&#39;s zoals:
+
+- Productovereenkomst: vergelijkbare producten groeperen of aanbevelen aan klanten.
+- Gegevensreiniging: verbeteren van de gegevenskwaliteit.
+- Marktmand-analyse: inzicht verschaffen in het gedrag van klanten, voorkeuren en potentiële mogelijkheden voor cross-selling.
 
 Als u dit nog niet hebt gedaan, wordt u aangeraden de [Overzicht AI/ML-functiepijplijn](../data-distiller/ml-feature-pipelines/overview.md). Met dit overzicht leert u hoe Data Distiller en het leren van uw voorkeurscomputer aangepaste gegevensmodellen kunnen maken die uw gebruiksscenario&#39;s voor marketingdoeleinden ondersteunen met behulp van Experience Platforms.

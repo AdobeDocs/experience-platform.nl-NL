@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: ad3b739f300aa51f6f12c566ab49fafedb90be23
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '317'
 ht-degree: 13%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 13%
    - [De paginaweergaven van een gebruiker weergeven](use-cases/list-visitor-sessions.md)
    - [Bezoekers weergeven op hun paginaweergaven](use-cases/visitors-by-number-of-page-views.md)
    - [Propensiteitsscore](use-cases/propensity-score.md)
-   - [Lambda, functievoorbeeld: soortgelijke records ophalen](use-cases/retrieve-similar-records.md)
+   - [Verdien gelijkbare verslagen met hogere orde functies](use-cases/retrieve-similar-records.md)
    - [Commerciële variabelen uit analysegegevens retourneren en gebruiken](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Het roll-uprapport voor een bezoeker weergeven](use-cases/roll-up-report-of-a-visitor.md)
@@ -106,6 +106,7 @@ ht-degree: 13%
    - [SQL-overzicht](sql/overview.md)
    - [SQL-syntaxis](sql/syntax.md)
    - [Adobe-gedefinieerde functies](sql/adobe-defined-functions.md)
+   - [Functies met hogere volgorde](sql/higher-order-functions.md)
    - [SQL-functies in Spark](sql/spark-sql-functions.md)
    - [Opdrachten Metagegevens](sql/metadata.md)
    - [Vooraf voorbereide instructies](sql/prepared-statements.md)
