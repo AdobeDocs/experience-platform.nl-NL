@@ -4,9 +4,9 @@ description: Leer hoe u accountpubliek kunt maken en gebruiken om accountprofiel
 badgeLimitedAvailability: label="Beperkte beschikbaarheid" type="Caution"
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 1ff4cb004b7c2f474e2d64f4bcc239c7060f9439
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -74,3 +74,101 @@ De [!UICONTROL Activate destination] wordt weergegeven. Voor meer informatie ove
 ## Volgende stappen {#next-steps}
 
 Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u uw accountpubliek kunt maken en gebruiken in Adobe Experience Platform. Als u wilt weten hoe u andere soorten publiek in Platform kunt gebruiken, leest u de [Handleiding voor segmentatieservice](./overview.md).
+
+## Bijlage {#appendix}
+
+In de volgende sectie vindt u aanvullende informatie over het accountpubliek.
+
+### Validatie van accountsegmentatie {#validation}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_eventLookbackWindow"
+>title="Maximale fout in terugzoekvenster"
+>abstract="Het maximale terugkijkvenster voor Experience Events is 30 dagen."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxDepth"
+>title="Maximale diepte van geneste container"
+>abstract="De maximale diepte van geneste containers is **5**. Dit betekent dat u **kan** wanneer u een publiek maakt, hebt u meer dan vijf geneste containers."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxBreadth"
+>title="Fout in maximumaantal regels"
+>abstract="Het maximumaantal regels in één container is **5**. Dit betekent dat u **kan** wanneer u een publiek maakt, hebt u meer dan vijf regels in één container."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_crossEntityMaxDepth"
+>title="Fout in maximumbedrag van entiteit"
+>abstract="Het maximumaantal entiteiten tussen verschillende entiteiten dat binnen één publiek kan worden gebruikt, is **5**. Een kruisentiteit is wanneer u tussen verschillende entiteiten in uw publiek verandert. Bijvoorbeeld, ga van een Rekening naar een Persoon aan een Lijst van de Marketing."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowCustomEntity"
+>title="Fout aangepaste entiteit"
+>abstract="Aangepaste entiteiten zijn **niet** toegestaan."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_b2bBuiltInEntities"
+>title="Invalid B2B entity error"
+>abstract="Alleen de volgende B2B-entiteiten mogen worden gebruikt: `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member`, en `_xdm.classes.campaign`."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_rhsMaxOptions"
+>title="Fout in maximumwaarden"
+>abstract="Het maximumaantal waarden dat voor één veld kan worden gecontroleerd, is **50**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowInSegmentByReference"
+>title="gebeurtenisfout in inSegment"
+>abstract="inSegment-gebeurtenissen zijn **niet** toegestaan."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowInSegmentByValue"
+>title="gebeurtenisfout in inSegment"
+>abstract="inSegment-gebeurtenissen zijn **niet** toegestaan."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowSequentialEvents"
+>title="Opeenvolgende gebeurtenisfout"
+>abstract="Sequentiële gebeurtenissen zijn **niet** toegestaan."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowMaps"
+>title="Eigenschappenfout toewijzen"
+>abstract="Eigenschappen van het type Map zijn **niet** toegestaan."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_maxNestedAggregationDepth"
+>title="Maximale diepte van geneste entiteit"
+>abstract="De maximale diepte van geneste arrays is **5**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_maxObjectNestingLevel"
+>title="Maximale fout in aantal geneste objecten"
+>abstract="Het maximale aantal toegestane geneste objecten is **10**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_generic"
+>title="Inbreuk op beperking"
+>abstract="Het publiek schendt een beperking. Lees het gekoppelde document voor meer informatie."
+
+Bij het gebruik van accountsoorten **moet** voldoen aan de volgende beperkingen:
+
+>[!NOTE]
+>
+>In de volgende lijst wordt de **default** beperkingen voor het publiek voor rekening. Deze waarden **kan** wijzigen, afhankelijk van de instellingen die door de beheerder van uw organisatie zijn geïmplementeerd.
+
+- Het maximale terugzoekvenster voor Experience Events is **dertig dagen**.
+- De maximale diepte van geneste containers is **5**.
+   - Dit betekent dat u **kan** wanneer u een publiek maakt, hebt u meer dan vijf geneste containers.
+- Het maximumaantal regels in één container is **5**.
+   - Dit betekent dat uw publiek **kan** hebben meer dan vijf regels die uw publiek samenstellen.
+- Het maximumaantal entiteiten tussen de verschillende entiteiten dat kan worden gebruikt is **5**.
+   - Een kruisentiteit is wanneer u tussen verschillende entiteiten in uw publiek verandert. Bijvoorbeeld, ga van een Rekening naar een Persoon aan een Lijst van de Marketing.
+- Aangepaste entiteiten **kan** worden gebruikt.
+- Het maximumaantal waarden dat voor één veld kan worden gecontroleerd, is **50**.
+   - Als u bijvoorbeeld een veld hebt met de naam &quot;City&quot;, kunt u die waarde controleren op 50 namen van steden.
+- Accountpubliek **kan** gebruiken `inSegment` gebeurtenissen.
+- Accountpubliek **kan** opeenvolgende gebeurtenissen gebruiken.
+- Accountpubliek **kan** gebruiken, kaarten.
+- De maximale diepte van geneste arrays is **5**.
+- Het maximumaantal geneste objecten is **10**.
