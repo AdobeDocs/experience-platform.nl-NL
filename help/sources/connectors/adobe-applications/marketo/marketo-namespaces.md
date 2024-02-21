@@ -2,9 +2,9 @@
 title: B2B-naamruimten en -schema's
 description: Dit document biedt een overzicht van aangepaste naamruimten die zijn vereist voor het maken van een B2B-bronconnector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5e8bb04ca18159eab98b2f7f0bba8cb1488a1f26
 workflow-type: tm+mt
-source-wordcount: '1622'
+source-wordcount: '1620'
 ht-degree: 1%
 
 ---
@@ -68,7 +68,7 @@ Een succesvol verzoek leidt tot namespaces en schema&#39;s die voor B2B worden v
 
 ## B2B-naamruimten
 
-Identiteitsnaamruimten zijn een component van [[!DNL Identity Service]](../../../../identity-service/home.md) die dienen om de context of het type van een identiteit te onderscheiden. Een volledig gekwalificeerde identiteit omvat een waarde van identiteitskaart en een namespace. Zie de [overzicht van naamruimten](../../../../identity-service/features/namespaces.md) voor meer informatie .
+Identiteitsnaamruimten zijn een component van [[!DNL Identity Service]](../../../../identity-service/home.md) die dienen om de context van een identiteit te onderscheiden. Een volledig gekwalificeerde identiteit omvat een identiteitswaarde en een namespace. Lees de [overzicht van naamruimten](../../../../identity-service/features/namespaces.md) voor meer informatie .
 
 B2B-naamruimten worden gebruikt in de primaire identiteit van de entiteit.
 
