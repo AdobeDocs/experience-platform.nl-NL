@@ -2,9 +2,9 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: dbc14c639ef02b8504cc9895c6aacb6e205549b2
+source-git-commit: b129efacb077af0148a743e43ec23f9f8b8d7d3e
 workflow-type: tm+mt
-source-wordcount: '2733'
+source-wordcount: '3109'
 ht-degree: 0%
 
 ---
@@ -246,6 +246,26 @@ Lees voor meer informatie over het blok Splitsen de [Handleiding voor compositie
 
 Ja, alle segmentatietypen ([batchsegmentatie, streamingsegmentatie en randsegmentatie](./home.md#evaluate-segments)) worden ondersteund in de workflow Audience Composition. Aangezien composities momenteel echter maar één keer per dag worden uitgevoerd, zelfs als streaming- of Edge-publiek wordt opgenomen, wordt het resultaat gebaseerd op het lidmaatschap van het publiek op het moment dat de compositie werd uitgevoerd.
 
-## Hoe kan ik het lidmaatschap van een profiel in een publiek bevestigen?
+## Publiek lidmaatschap
+
+In de volgende sectie worden vragen over het lidmaatschap voor het publiek weergegeven.
+
+### Hoe kan ik het lidmaatschap van een profiel in een publiek bevestigen?
 
 Ga naar de pagina met profieldetails van het profiel dat u wilt bevestigen om het publiekslidmaatschap van een profiel te bevestigen. Selecteren **[!UICONTROL Attributes]**, gevolgd door **[!UICONTROL View JSON]** en u kunt bevestigen dat de `segmentMembership` bevat de id van het publiek.
+
+### Hoe verhelpt batchsegmentatie profiellidmaatschap?
+
+Het publiek dat met batchsegmentatie wordt geëvalueerd, lost dagelijks op, waarbij de resultaten van het doellidmaatschap worden opgenomen in het profiel `segmentMembership` kenmerk. Profielzoekopdrachten genereren een nieuwe versie van het profiel op het moment van de zoekopdracht, maar **niet** vernieuw de resultaten van de batchsegmentatie.
+
+Als het profiel wordt gewijzigd, bijvoorbeeld door twee profielen samen te voegen, veranderen deze wijzigingen **zal** weergegeven in het profiel wanneer u het opzoekt, maar **niet** in de `segmentMembership` attribuut tot de baan van de segmentevaluatie opnieuw is gelopen.
+
+Bijvoorbeeld, laten wij zeggen u twee wederzijds uitsluitende soorten publiek hebt gecreeerd: Publiek A is voor mensen die in Washington wonen en Publiek B is voor mensen die dat doen **niet** Woon in Washington. Er zijn twee profielen: profiel 1 voor een persoon die in Washington woont en profiel 2 voor een persoon die in Oregon woont.
+
+Wanneer de looppas van de partijsegmenteringsevaluatie, zal profiel 1 naar Publiek A gaan, terwijl profiel 2 naar Publiek B. Later zal gaan, maar vóór de de looppas van de de partijsegmenteringsevaluatietaak van de volgende dag, een gebeurtenis die de twee profielen aanpast Platform ingaat. Hierdoor wordt één samengevoegd profiel gemaakt dat de profielen 1 en 2 bevat.
+
+Tot de volgende de evaluatietaak van het partijsegment wordt in werking gesteld, zal het nieuwe samengevoegde profiel publiekslidmaatschap hebben in **beide** profiel 1 en profiel 2. Dit betekent dat het lid zal zijn van **beide** Publiek A en Publiek B, ondanks het feit dat deze doelgroepen tegenstrijdige definities hebben. Voor de eindgebruiker is dit de **exact dezelfde situatie** net als voor de verbinding met de profielen, aangezien er altijd slechts één persoon bij betrokken was, en Platform net **niet** over voldoende informatie beschikken om de twee profielen met elkaar te verbinden.
+
+Als u profielraadpleging gebruikt om het onlangs gecreëerde profiel terug te winnen en zijn publiekslidmaatschap te bekijken, zal het tonen dat het een lid van is **beide** Publiek A en Publiek B, ondanks het feit dat beide soorten publiek tegenstrijdige definities hebben. Zodra de dagelijkse de evaluatietaak van de partijsegmentatie loopt, zal het publiekslidmaatschap worden bijgewerkt om op deze bijgewerkte staat van profielgegevens te wijzen.
+
+Gebruik streaming of randsegmentatie als u meer realtime publieksresolutie nodig hebt.
