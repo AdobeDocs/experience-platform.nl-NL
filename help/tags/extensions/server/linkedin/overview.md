@@ -3,9 +3,9 @@ title: LinkIn Conversions API-gebeurtenis die extensie doorsturen
 description: Deze Adobe Experience Platform gebeurtenis die uitbreiding door:sturen staat u toe om de prestaties van uw LinkedIn marketing campagne te meten.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 ## Vereisten {#prerequisites}
 
-U moet een omzettingsregel maken in uw [!DNL LinkedIn] campagneadvertentieaccount. [!DNL Adobe] adviseert met inbegrip van &quot;CAPI&quot;aan het begin van de naam van de gespreksregel om het van andere types van omzettingsregel los te plaatsen u zou kunnen gevormd hebben.
+U moet [een conversieregel maken](https://www.linkedin.com/help/lms/answer/a1657171) in uw [!DNL LinkedIn Campaign Manager] account. [!DNL Adobe] adviseert met inbegrip van &quot;CAPI&quot;aan het begin van de naam van de gespreksregel om het van andere types van omzettingsregel los te plaatsen u zou kunnen gevormd hebben.
 
 ### Een geheim en een gegevenselement maken
 
-Een nieuwe [!DNL LinkedIn] [gebeurtenis die geheim door:sturen](../../../ui/event-forwarding/secrets.md) en geef het een unieke naam die het verificerende lid aanduidt. Dit wordt gebruikt om de verbinding met uw account te verifiëren en de waarde veilig te houden.
+Een nieuwe [!DNL LinkedIn] [gebeurtenis die geheim door:sturen](../../../ui/event-forwarding/secrets.md) en geef deze een unieke naam die het authenticerende lid aangeeft. Dit wordt gebruikt om de verbinding met uw account te verifiëren en de waarde veilig te houden.
 
 Volgende, [een gegevenselement maken](../../../ui/managing-resources/data-elements.md#create-a-data-element) met de [!UICONTROL Core] en [!UICONTROL Secret] het elementtype van gegevens om naar `LinkedIn` geheim dat je zojuist hebt gemaakt.
 
@@ -40,7 +40,7 @@ Op het volgende scherm, ga het geheim van het gegevenselement in u vroeger in he
 
 Zodra al uw gegevenselementen opstelling zijn, kunt u gebeurtenis beginnen tot stand te brengen door:sturen regels die bepalen wanneer en hoe uw gebeurtenissen zullen worden verzonden naar [!DNL LinkedIn].
 
-Een nieuwe gebeurtenis maken door:sturen [regel](../../../ui/managing-resources/rules.md) in uw gebeurtenis die bezit door:sturen. Onder **[!UICONTROL Actions]** voegt u een nieuwe handeling toe en stelt u de extensie in op **[!UICONTROL LinkedIn]**. Selecteer vervolgens **[!UICONTROL Send Web Conversion]** voor de **[!UICONTROL Action Type]**.
+Een nieuwe gebeurtenis maken door:sturen [regel](../../../ui/managing-resources/rules.md) in uw gebeurtenis die bezit door:sturen. Onder **[!UICONTROL Actions]** voegt u een nieuwe handeling toe en stelt u de extensie in op **[!UICONTROL LinkedIn]**. Selecteer vervolgens **[!UICONTROL Send Conversion]** voor de **[!UICONTROL Action Type]**.
 
 ![De gebeurtenis die de mening van de Regels van het Bezit door:sturen, met de gebieden die worden vereist om een gebeurtenis toe te voegen die de benadrukte configuratie van de regelactie door:sturen.](../../../images/extensions/server/linkedin/linkedin-event-action.png)
 
@@ -62,11 +62,11 @@ Na selectie, schijnen de extra controles om de gebeurtenis verder te vormen. Sel
 
 | Invoer | Beschrijving |
 | --- | --- |
-| [!UICONTROL Conversion] | De id van de omzettingsregel die is gemaakt in [LinkedIn Campagne Manager](https://www.linkedin.com/help/lms/answer/a1657171) of via [!DNL LinkedIn Campaign Manager]. |
+| [!UICONTROL Conversion] | De id van de omzettingsregel die is gemaakt in [LinkedIn Campagne Manager](https://www.linkedin.com/help/lms/answer/a1657171). Selecteer de omzettingsregel om identiteitskaart te verkrijgen, dan kopieer identiteitskaart van browser URL (bijvoorbeeld `/campaignmanager/accounts/508111232/conversions/15588877`) als `/conversions/<id>`. |
 | [!UICONTROL Conversion Time] | Elke tijdstempel in milliseconden waarop de conversiegebeurtenis heeft plaatsgevonden. <br><br> Opmerking: als uw bron de tijdstempel van de conversie in seconden opneemt, voegt u aan het einde 000 in om deze om te zetten in milliseconden. |
 | [!UICONTROL Currency] | Valutacode in ISO-indeling. |
 | [!UICONTROL Amount] | Waarde van de conversie in decimale tekenreeks (bijvoorbeeld &quot;100.05&quot;). |
-| [!UICONTROL Event ID] | De unieke id die door adverteerders wordt gegenereerd om elke gebeurtenis aan te geven. Dit is een optioneel veld en wordt gebruikt voor deduplicatie. |
+| [!UICONTROL Event ID] | De unieke id die door adverteerders wordt gegenereerd om elke gebeurtenis aan te geven. Dit is een optioneel veld en wordt gebruikt voor [deduplicatie](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02). |
 
 {style="table-layout:auto"}
 
@@ -86,4 +86,6 @@ Na selectie, schijnen de extra controles om de gebeurtenis verder te vormen. Sel
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe gegevens worden verzonden naar [!DNL LinkedIn] met de [!DNL LinkedIn Conversions API] gebeurtenis die uitbreiding door:sturen. Voor meer informatie over gebeurtenis die mogelijkheden door:sturen in [!DNL Adobe Experience Platform], verwijst u naar de [overzicht van gebeurtenissen doorsturen](../../../ui/event-forwarding/overview.md).
+In deze handleiding wordt beschreven hoe gegevens worden verzonden naar [!DNL LinkedIn] met de [!DNL LinkedIn Conversions API] gebeurtenis die uitbreiding door:sturen. Voor meer informatie over gebeurtenis die mogelijkheden door:sturen in [!DNL Adobe Experience Platform], lees de [overzicht van gebeurtenissen doorsturen](../../../ui/event-forwarding/overview.md).
+
+Voor details over hoe te om uw implementatie te zuiveren gebruikend het hulpmiddel van de Controle van Foutopsporing van het Experience Platform en van de Gebeurtenis door:sturen, lees [Overzicht van Adobe Experience Platform Debugger](../../../../debugger/home.md) en [Activiteiten controleren bij het doorsturen van gebeurtenissen](../../../ui/event-forwarding/monitoring.md).
