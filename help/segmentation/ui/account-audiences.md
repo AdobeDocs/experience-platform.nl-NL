@@ -1,12 +1,12 @@
 ---
 title: Accountsoorten
 description: Leer hoe u accountpubliek kunt maken en gebruiken om accountprofielen in downstreamdoelen te gebruiken.
-badgeLimitedAvailability: label="Beperkte beschikbaarheid" type="Caution"
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 1ff4cb004b7c2f474e2d64f4bcc239c7060f9439
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Accountpubliek is alleen beschikbaar in het dialoogvenster [B2B Edition van Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Bovendien is de functionaliteit voor het accountpubliek momenteel in **beperkte beschikbaarheid**. Neem contact op met de klantenservice van de Adobe of uw Adobe om toegang tot deze functie te vragen.
+>Accountpubliek is alleen beschikbaar in het dialoogvenster [B2B Edition van Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) en de [B2P Edition van Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
 
 Met de segmentatie van uw account kunt u in Adobe Experience Platform de volledige versnelling en verfijning van de segmentatieervaring van marketingmedewerkers van op mensen gebaseerde doelgroepen naar op account gebaseerde doelgroepen brengen.
 

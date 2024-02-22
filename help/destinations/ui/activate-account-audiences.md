@@ -5,7 +5,7 @@ description: Leer hoe u het publiek van een account activeert voor doelen
 badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De functionaliteit om accountpubliek naar bestemmingen te activeren is beschikbaar voor bedrijven die de [Zakelijk-naar-zakelijk](/help/rtcdp/overview.md#rtcdp-b2b) en [Van bedrijf tot persoon](/help/rtcdp/overview.md#rtcdp-b2b) edities van Real-time Customer Data Platform.
+>De functionaliteit om accountpubliek naar bestemmingen te activeren is beschikbaar voor bedrijven die de [Zakelijk-naar-zakelijk](/help/rtcdp/overview.md#rtcdp-b2b) en [Van bedrijf tot persoon](/help/rtcdp/overview.md#rtcdp-b2p) edities van Real-time Customer Data Platform.
 
 In dit artikel wordt uitgelegd welke workflow nodig is om te exporteren [accountpubliek](/help/segmentation/ui/account-audiences.md) van Adobe Experience Platform naar uw voorkeursbestemming.
 

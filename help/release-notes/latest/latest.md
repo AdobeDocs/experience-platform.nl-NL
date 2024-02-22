@@ -2,7 +2,7 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: Aanvullende informatie van januari 2024 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b41a69244c7eb1111759b2af5c1ae6a0fb90be32
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 3%
@@ -17,7 +17,6 @@ Updates voor bestaande functies in Experience Platform:
 
 - [Waarschuwingen](#alerts)
 - [Gegevensverzameling](#data-collection)
-<!-- - [Data Prep](#data-prep) -->
 - [Doelen](#destinations)
 - [Sandboxes](#sandboxes)
 - [Segmenteringsservice](#segmentation)
@@ -79,7 +78,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| Accountsoorten activeren, algemeen beschikbaar | De functionaliteit om het publiek van de rekening aan bepaalde bestemmingen te activeren is nu over het algemeen beschikbaar voor bedrijven die [Zakelijk-naar-zakelijk](/help/rtcdp/overview.md#rtcdp-b2b) en [Van bedrijf tot persoon](/help/rtcdp/overview.md#rtcdp-b2b) edities van Real-time Customer Data Platform. Lees de zelfstudie aan [activeren van accountpubliek](/help/destinations/ui/activate-account-audiences.md) om volledige informatie, met inbegrip van gesteunde bestemmingen te krijgen. |
+| Accountsoorten activeren, algemeen beschikbaar | De functionaliteit om het publiek van de rekening aan bepaalde bestemmingen te activeren is nu over het algemeen beschikbaar voor bedrijven die [Zakelijk-naar-zakelijk](/help/rtcdp/overview.md#rtcdp-b2b) en [Van bedrijf tot persoon](/help/rtcdp/overview.md#rtcdp-b2p) edities van Real-time Customer Data Platform. Lees de zelfstudie aan [activeren van accountpubliek](/help/destinations/ui/activate-account-audiences.md) om volledige informatie, met inbegrip van gesteunde bestemmingen te krijgen. |
 | Digital Markets Act-instrumenten voor toestemmingshandhaving voor Google-bestemmingen | Google brengt wijzigingen in de [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Klantenovereenkomst](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)en de [Display &amp; Video 360-API](https://developers.google.com/display-video/api/guides/getting-started/overview) ter ondersteuning van de in het kader van de [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in de Europese Unie[Beleid voor EU-gebruikerstoestemming](https://www.google.com/about/company/user-consent-policy/)). Verwacht wordt dat de handhaving van deze wijzigingen in de toestemmingsvereisten met ingang van 6 maart 2024 in werking zal treden. <br/><br/> Om zich aan het EU-beleid inzake instemming van gebruikers te houden en door te gaan met het opstellen van publiekslijsten voor gebruikers in de Europese Economische Ruimte (EER), moeten adverteerders en partners ervoor zorgen dat zij toestemming van de eindgebruiker geven bij het uploaden van publieksgegevens. Als Google-partner beschikt Adobe over de benodigde instrumenten om te voldoen aan deze toestemmingsvereisten in het kader van de DMA in de Europese Unie.<br/><br/>Klanten die een privacyschild voor Adobe hebben aangeschaft en een [toestemmingsbeleid](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) om profielen zonder toestemming uit te filteren, hoeft u geen actie te ondernemen.<br/><br/>Klanten die geen privacyschild voor Adobe hebben aangeschaft, moeten de [segmentdefinitie](../../segmentation/home.md#segment-definitions) mogelijkheden binnen [Segment Builder](../../segmentation/ui/segment-builder.md) om profielen zonder toestemming uit te filteren, zodat de bestaande Real-Time CDP Google-bestemmingen zonder onderbreking kunnen worden gebruikt. |
 | [!BADGE Beta]{type=Informative} toewijzingsvelden opnieuw ordenen voor batchdoelen | U kunt nu de volgorde van de kolommen in uw CSV-export wijzigen door de toewijzingsvelden in het dialoogvenster [toewijzing](../../destinations/ui/activate-batch-profile-destinations.md#mapping) stap. De volgorde van de toegewezen velden in de gebruikersinterface is afhankelijk van de volgorde van de kolommen in het geëxporteerde CSV-bestand, van boven naar beneden, waarbij de bovenste rij de meest linkse kolom in het CSV-bestand is. <br/><br/> Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen. |
 | [!BADGE Beta]{type=Informative} Vooraf ingestelde standaard exportschema&#39;s voor batchbestemmingen | Experience Platform stelt nu automatisch een standaardschema in voor elke bestandsuitvoer. Zie de documentatie op [exporteren van publiek plannen](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) leren hoe te om het standaardprogramma te wijzigen. <br/><br/> Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen. |
