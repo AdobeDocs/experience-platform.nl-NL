@@ -2,9 +2,9 @@
 title: Sandboxen
 description: U kunt Sandboxconfiguraties naadloos exporteren en importeren tussen sandboxen.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
+source-git-commit: 888608bdf3ccdfc56edd41c164640e258a4c5dd7
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1827'
 ht-degree: 0%
 
 ---
@@ -30,10 +30,11 @@ De onderstaande tabel bevat [!DNL Adobe Real-Time Customer Data Platform] object
 | Platform | Object | Details |
 | --- | --- | --- |
 | Klantgegevensplatform | Bronnen | De referenties van de bronaccount worden om beveiligingsredenen niet gerepliceerd in de doelsandbox en moeten handmatig worden bijgewerkt. De brongegevensstroom wordt standaard gekopieerd in een conceptstatus. |
-| Klantgegevensplatform | Doelgroepen | Alleen de **[!UICONTROL Customer Audience]** type **[!UICONTROL Segmentation service]** wordt ondersteund. Bestaande labels voor toestemming en bestuur worden in dezelfde importtaak gekopieerd. |
+| Klantgegevensplatform | Doelgroepen | Alleen de **[!UICONTROL Customer Audience]** type **[!UICONTROL Segmentation service]** wordt ondersteund. Bestaande labels voor toestemming en bestuur worden in dezelfde importtaak gekopieerd. Het systeem zal automatisch het Standaard Beleid van de Fusie in doelzandbak met de zelfde klasse selecteren XDM wanneer het controleren van de gebiedsdelen van het fusiebeleid. |
 | Klantgegevensplatform | Identiteiten | Het systeem dedupliceert standaard identiteitsnaamruimten voor Adoben automatisch wanneer u deze maakt in de doelsandbox. Het publiek kan slechts worden gekopieerd wanneer alle attributen in publieksregels in het unieschema worden toegelaten. De noodzakelijke schema&#39;s moeten eerst voor verenigd profiel worden bewogen en worden toegelaten. |
-| Klantgegevensplatform | Schema&#39;s | Bestaande labels voor toestemming en bestuur worden in dezelfde importtaak gekopieerd. De schema verenigde profielstatus wordt gekopieerd zoals deze van de bronzandbak is. Als het schema voor één profiel in de bronzandbak wordt toegelaten, worden alle attributen verplaatst naar het unieschema. Het randgeval van de schema-relaties wordt niet opgenomen in het pakket. |
+| Klantgegevensplatform | Schema&#39;s | Bestaande labels voor toestemming en bestuur worden in dezelfde importtaak gekopieerd. De gebruiker heeft de flexibiliteit om schema&#39;s in te voeren zonder de Verenigde toegelaten optie van het Profiel. Het randgeval van de schema-relaties wordt niet opgenomen in het pakket. |
 | Klantgegevensplatform | Gegevenssets | Datasets worden gekopieerd met de instelling voor het uniforme profiel standaard uitgeschakeld. |
+| Klantgegevensplatform | Beleid inzake instemming en bestuur | Voeg aangepast beleid dat door een gebruiker is gemaakt, toe aan een pakket en verplaats het naar andere sandboxen. |
 
 De volgende objecten worden geïmporteerd, maar hebben een concept- of een uitgeschakelde status:
 
@@ -52,6 +53,7 @@ De onderstaande tabel bevat [!DNL Adobe Journey Optimizer] objecten die momentee
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | Doelgroep | Een publiek kan als afhankelijk voorwerp van het reisvoorwerp worden gekopieerd. U kunt een nieuw publiek maken of een bestaand publiek in de doelsandbox opnieuw gebruiken. |
 | [!DNL Adobe Journey Optimizer] | Schema | De schema&#39;s die in de reis worden gebruikt kunnen als afhankelijke voorwerpen worden gekopieerd. U kunt een nieuw schema selecteren of een bestaand schema in de doelzandbak opnieuw gebruiken. |
+| [!DNL Adobe Journey Optimizer] | Samenvoegbeleid | Het samenvoegbeleid dat in de reis wordt gebruikt, kan als afhankelijke voorwerpen worden gekopieerd. In de doelsandbox **kan** Als u een nieuw samenvoegbeleid wilt maken, kunt u alleen een bestaand beleid gebruiken. |
 | [!DNL Adobe Journey Optimizer] | Reis - canvasdetails | De representatie van de reis op het canvas omvat de objecten in de reis, zoals voorwaarden, handelingen, gebeurtenissen, leestekens, enzovoort, die worden gekopieerd. De sprongactiviteit wordt uitgesloten van het exemplaar. |
 | [!DNL Adobe Journey Optimizer] | Gebeurtenis | De gebeurtenissen en gebeurtenisdetails die in de reis worden gebruikt worden gekopieerd. Er wordt altijd een nieuwe versie gemaakt in de doelsandbox. |
 | [!DNL Adobe Journey Optimizer] | Actie | E-mail- en pushberichten die tijdens de rit worden gebruikt, kunnen als afhankelijke objecten worden gekopieerd. De activiteiten van de kanaalactie die op de reisgebieden worden gebruikt, die voor verpersoonlijking in het bericht worden gebruikt, worden niet gecontroleerd op volledigheid. Inhoudsblokken worden niet gekopieerd.<br><br>De actie van het updateprofiel die in de reis wordt gebruikt kan worden gekopieerd. De acties en de actiedetails van de douane die in de reis worden gebruikt worden ook gekopieerd. Er wordt altijd een nieuwe versie gemaakt in de doelsandbox. |
@@ -135,19 +137,23 @@ Navigeer naar de sandboxen om het pakket te importeren in een doelsandbox **[!UI
 
 ![De sandboxen **[!UICONTROL Browse]** tabblad de selectie van het importpakket markeren.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-Selecteer in het vervolgkeuzemenu de optie **[!UICONTROL Package name]** u wilt importeren in de doelsandbox. Een optioneel object toevoegen **[!UICONTROL Job name]**, die voor toekomstig toezicht zal worden gebruikt, dan selecteren **[!UICONTROL Next]**.
+Selecteer in het vervolgkeuzemenu de optie **[!UICONTROL Package name]** u wilt importeren in de doelsandbox. Een optioneel object toevoegen **[!UICONTROL Job name]**, die voor toekomstig toezicht zullen worden gebruikt. Standaard wordt het uniforme profiel uitgeschakeld wanneer de schema&#39;s van het pakket worden geïmporteerd. Schakelen **Schema&#39;s voor profiel inschakelen** om dit in te schakelen, selecteert u vervolgens **[!UICONTROL Next]**.
 
 ![De pagina met importgegevens die de [!UICONTROL Package name] vervolgkeuzelijst](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-De [!UICONTROL Package object and dependencies] Deze pagina bevat een lijst met alle elementen die in dit pakket zijn opgenomen. Het systeem detecteert automatisch afhankelijke objecten die nodig zijn om geselecteerde bovenliggende objecten te kunnen importeren.
+De [!UICONTROL Package object and dependencies] Deze pagina bevat een lijst met alle elementen die in dit pakket zijn opgenomen. Het systeem detecteert automatisch afhankelijke objecten die nodig zijn om geselecteerde bovenliggende objecten te kunnen importeren. Alle ontbrekende kenmerken worden boven aan de pagina weergegeven. Selecteren **[!UICONTROL View details]** voor een meer gedetailleerde uitsplitsing.
 
-![De [!UICONTROL Package object and dependencies] op de pagina wordt een lijst met elementen weergegeven die in het pakket zijn opgenomen.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![De [!UICONTROL Package object and dependencies] op de pagina worden ontbrekende kenmerken weergegeven.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
 >Afhankelijke objecten kunnen worden vervangen door bestaande objecten in de doelsandbox, zodat u bestaande objecten opnieuw kunt gebruiken in plaats van een nieuwe versie te maken. Wanneer u bijvoorbeeld een pakket met schema&#39;s importeert, kunt u de bestaande aangepaste veldgroep en naamruimten in de doelsandbox opnieuw gebruiken. U kunt ook bestaande segmenten in de doelsandbox opnieuw gebruiken wanneer u een pakket importeert, inclusief de stappen voor reizen.
 
-Als u een bestaand object wilt gebruiken, selecteert u het potloodpictogram naast het afhankelijke object. De opties voor het maken van nieuwe of het gebruik van bestaande bestanden worden weergegeven. Selecteer **[!UICONTROL Use existing]**.
+Als u een bestaand object wilt gebruiken, selecteert u het potloodpictogram naast het afhankelijke object.
+
+![De [!UICONTROL Package object and dependencies] op de pagina wordt een lijst met elementen weergegeven die in het pakket zijn opgenomen.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+
+De opties voor het maken van nieuwe of het gebruik van bestaande bestanden worden weergegeven. Selecteer **[!UICONTROL Use existing]**.
 
 ![De [!UICONTROL Package object and dependencies] pagina met opties voor afhankelijke objecten [!UICONTROL Create new] en [!UICONTROL Use existing].](../images/ui/sandbox-tooling/use-existing-object.png)
 
