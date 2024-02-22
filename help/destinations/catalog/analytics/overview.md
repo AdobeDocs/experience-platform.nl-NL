@@ -3,9 +3,9 @@ keywords: analytische bestemmingen;analytische bestemming
 title: Overzicht van analysedoelen
 description: De analytische bestemmingen volgen hoe de bezoekers met inhoud op uw plaats in wisselwerking staan en verzamelen gegevens om het gedrag van uw publiek te begrijpen. Deze platforms bieden unieke inzichten in de betrokkenheid en conversie van uw meest waardevolle bezoekers.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
+source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '176'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Momenteel ondersteunt Adobe Experience Platform de hieronder vermelde analytisch
 * [Decibel-extensie](decibel.md)
 * [Demandbase-extensie](demandbase.md)
 * [Dialoogtoevoeging](dialogtech.md)
-* [Gainsight PX](gainsight-px.md)
+* [PX-verbinding ophalen](gainsight-px.md)
 * [Google Global Site Tag Analytics-extensie](gtag-analytics.md)
 * [Google Universal Analytics-extensie](google-universal-analytics.md)
 * [JW Player Analytics-extensie (Bèta)](jw-player-analytics.md)
