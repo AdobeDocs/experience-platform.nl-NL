@@ -5,9 +5,9 @@ description: Leer hoe te om CSP voor het Web SDK van het Experience Platform te 
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: configureren;configuratie;SDK;edge;Web SDK;configure;context;web;apparaat;omgeving;web sdk-instellingen;content-beveiligingsbeleid;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 099f87acded9eca31c31555e63c0ea49ae2d1719
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '339'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ In het bovenstaande voorbeeld: `EDGE-DOMAIN` moet worden vervangen door het dome
 
 ### NONCE gebruiken om inlinescript en stijlelementen toe te staan
 
-[!DNL Platform Web SDK] kan pagina-inhoud wijzigen en moet worden goedgekeurd om inline script- en stijltags te maken. Om dit te bereiken, adviseert Adobe het gebruiken van één keer voor de [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) CSP-instructie. Een nonce is een cryptografisch sterk willekeurig token dat door de server wordt gegenereerd en dat één keer per unieke paginaweergave wordt gegenereerd.
+[!DNL Platform Web SDK] kan pagina-inhoud wijzigen en moet worden goedgekeurd om inline script- en stijltags te maken. Om dit te bereiken, beveelt de Adobe het gebruik van een nonce aan voor de [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) CSP-instructie. Een nonce is een cryptografisch sterk willekeurig token dat door de server wordt gegenereerd en dat één keer per unieke paginaweergave wordt gegenereerd.
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
@@ -60,3 +60,11 @@ style-src 'unsafe-inline'
 >[!NOTE]
 >
 >Adobe doet **niet** adviseren specificeren `unsafe-inline` omdat het voor om het even welk manuscript toestaat om op de pagina te lopen, die de voordelen van het CDV beperkt.
+
+## Een CSP configureren voor In-App Messaging {#in-app-messaging}
+
+Wanneer u [Webberichten in de app](../personalization/web-in-app-messaging.md), moet u de volgende richtlijn in uw CSP opnemen:
+
+```
+default-src  blob:;
+```
