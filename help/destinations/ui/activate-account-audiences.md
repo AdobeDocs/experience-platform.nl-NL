@@ -2,12 +2,12 @@
 title: Accountpubliek naar doelen activeren
 type: Tutorial
 description: Leer hoe u het publiek van een account activeert voor doelen
-badgeLimitedAvailability: label="Beperkte beschikbaarheid" type="Caution"
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De functionaliteit om accountpubliek naar doelen te activeren is alleen beschikbaar in het dialoogvenster [B2B Edition van Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Bovendien is de functionaliteit voor het accountpubliek momenteel in **beperkte beschikbaarheid**. Neem contact op met de klantenservice van de Adobe of uw Adobe om toegang tot deze functie te vragen.
+>De functionaliteit om accountpubliek naar bestemmingen te activeren is beschikbaar voor bedrijven die de [Zakelijk-naar-zakelijk](/help/rtcdp/overview.md#rtcdp-b2b) en [Van bedrijf tot persoon](/help/rtcdp/overview.md#rtcdp-b2b) edities van Real-time Customer Data Platform.
 
 In dit artikel wordt uitgelegd welke workflow nodig is om te exporteren [accountpubliek](/help/segmentation/ui/account-audiences.md) van Adobe Experience Platform naar uw voorkeursbestemming.
 
@@ -79,7 +79,7 @@ Lees de zelfstudie over het activeren van gegevens naar bestandsbestemmingen voo
 
 ## Belangrijke callouts en bekende beperkingen {#important-callouts-known-limitations}
 
-Let op de volgende belangrijke callouts en bekende beperkingen voor de beperkte beschikbaarheidsversie van de functionaliteit om accountpubliek te activeren.
+Let op de volgende belangrijke callouts en bekende beperkingen voor de algemene beschikbaarheidsversie van de functionaliteit om accountpubliek te activeren.
 
 ### Vereiste toewijzingsparen in de toewijzingsstap bij het activeren van het accountpubliek voor de **[!UICONTROL (Companies) LinkedIn Matched Audiences]** doel {#required-mappings}
 

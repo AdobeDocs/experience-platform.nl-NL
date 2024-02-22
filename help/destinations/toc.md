@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
+source-git-commit: 05ff789d71c693854fb84d1661c2bef8aba0bff8
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '1201'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 1%
       * [Het publiek activeren voor verpersoonlijkingsdoelen van randen](./ui/activate-edge-personalization-destinations.md)
       * [Het publiek activeren op gekrulde doelen op basis van LiveRamp-id&#39;s](./ui/activate-curated-destinations.md)
       * [Activeren het potentiële publiek aan bestemmingen](./ui/activate-prospect-audiences.md)
-      * [(Beperkte beschikbaarheid) Accountpubliek activeren naar doelen](./ui/activate-account-audiences.md)
+      * [Accountpubliek naar doelen activeren](./ui/activate-account-audiences.md)
       * [(Bèta) de dossiers van de uitvoer op bestelling aan partijbestemmingen gebruikend Experience Platform UI](./ui/export-file-now.md)
       * [Gegevenssets exporteren met de interface van het Experience Platform](./ui/export-datasets.md)
       * [(bèta) Gebruik de laatste kwalificatietijd XDM attribuut in de nieuwe bètawolkenopslagbestemmingen](./ui/activate-last-qualification-time.md)
