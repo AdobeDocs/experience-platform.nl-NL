@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 1881e66c795c548bac08e09b4ec00852fdbc51c3
+source-git-commit: 5d9384f57765126709f6bfcc005334ba4120595a
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1805'
 ht-degree: 0%
 
 ---
@@ -195,9 +195,9 @@ Houd rekening met het verschil in bestandsindeling tussen de twee bestandstypen 
 * Bij het exporteren van gecomprimeerde JSON-bestanden is de geëxporteerde bestandsindeling `json.gz`
 * Bij het exporteren van gecomprimeerde parketbestanden is de geëxporteerde bestandsindeling `gz.parquet`
 
-## Gegevensset verwijderen van bestemming {#remove-dataset}
+## Gegevenssets verwijderen uit doelen {#remove-dataset}
 
-Om een dataset uit een bestaande gegevensstroom te verwijderen, volg de stappen hieronder:
+Om datasets uit een bestaande gegevensstroom te verwijderen, volg de stappen hieronder:
 
 1. Aanmelden bij de [UI EXPERIENCE PLATFORM](https://experience.adobe.com/platform/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Browse]** van de hoogste kopbal om uw bestaande bestemmingsgegevens te bekijken.
 
@@ -211,14 +211,19 @@ Om een dataset uit een bestaande gegevensstroom te verwijderen, volg de stappen 
 
    ![De beschikbare gegevenssetnavigatieoptie die in de kolom van de Gegevens van de Activering wordt benadrukt.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. De **[!UICONTROL Activation data]** wordt de pagina voor het doel weergegeven. Selecteren **[!UICONTROL Remove dataset]** in het rechterspoor om het dialoogvenster voor het bevestigen van gegevenssets te openen.
+1. De **[!UICONTROL Activation data]** wordt de pagina voor het doel weergegeven. Selecteer de dataset die u wilt verwijderen, dan selecteren **[!UICONTROL Remove dataset]** in de rechterspoorstaaf om het bevestigingsdialoogvenster voor het verwijderen van gegevenssets te openen.
 
    ![Verwijder de dialoog van de dataset die de Remove datasetcontrole in de juiste spoorlijn toont.](../assets/ui/export-datasets/remove-dataset-control.png)
+
+<!-- USE THIS FOR BULK REMOVE RELEASE
+
+1. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog. 
+
+    ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png) -->
 
 1. Selecteer in het bevestigingsdialoogvenster de optie **[!UICONTROL Remove]** om de dataset van uitvoer aan de bestemming onmiddellijk te verwijderen.
 
    ![Dialoogvenster dat de bevestigingsoptie van de datasetverwijdering van dataflow toont.](../assets/ui/export-datasets/remove-dataset-confirm.png)
-
 
 ## Uitvoerrechten gegevensset {#licensing-entitlement}
 

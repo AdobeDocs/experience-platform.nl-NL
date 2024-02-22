@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
+source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
 workflow-type: tm+mt
-source-wordcount: '3636'
+source-wordcount: '3716'
 ht-degree: 0%
 
 ---
@@ -73,6 +73,10 @@ U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 >
 >Soorten publiek selecteren afkomstig van **[!UICONTROL Custom uploads]** schakelt automatisch de [Verrijkingskenmerken selecteren](#select-enrichment-attributes) stap.
 
+>[!TIP]
+>
+>U kunt een publiek verwijderen uit bestaande activeringsstromen uit de **[!UICONTROL Activation data]** pagina. Zie de [speciale documentatie](../ui/destination-details-page.md#bulk-remove) voor meer informatie.
+
 ## Het exporteren van publiek plannen {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -80,17 +84,21 @@ U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 >title="Schema"
 >abstract="Gebruik het potloodpictogram om het bestandstype (volledige bestanden of incrementele bestanden) en de exportfrequentie in te stellen."
 
-[!DNL Adobe Experience Platform] exporteert gegevens voor e-mailmarketing en cloudopslagdoelen als [verschillende bestandstypen](#supported-file-formats-export). In de **[!UICONTROL Scheduling]** pagina, kunt u het programma en de dossiernamen voor elk publiek vormen u uitvoert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
+[!DNL Adobe Experience Platform] exporteert gegevens voor e-mailmarketing en cloudopslagdoelen als [verschillende bestandstypen](#supported-file-formats-export). In de **[!UICONTROL Scheduling]** pagina, kunt u het programma en de dossiernamen voor elk publiek vormen u uitvoert.
+
+Experience Platform stelt automatisch een standaardschema in voor elke bestandsuitvoer. U kunt het standaardschema aan uw behoeften aanpassen, door het potloodpictogram naast elk programma te selecteren, en een douaneschema te bepalen.
+
+![Bewerk de besturingselementen voor schema&#39;s die in de planningsstap zijn gemarkeerd.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
+
+>[!TIP]
+>
+>U kunt de activeringsschema&#39;s voor het publiek voor bestaande activeringsstromen bewerken via de **[!UICONTROL Activation data]** pagina. Zie de documentatie op [activeringsschema&#39;s voor bulkbewerking](../ui/destination-details-page.md#bulk-edit-schedule) voor meer informatie.
 
 >[!IMPORTANT]
 >
 >[!DNL Adobe Experience Platform] Hiermee worden de exportbestanden automatisch gesplitst op 5 miljoen records (rijen) per bestand. Elke rij vertegenwoordigt één profiel.
 >
 >Namen van gesplitste bestanden worden toegevoegd met een getal dat aangeeft dat het bestand deel uitmaakt van een grotere exportbewerking, als zodanig: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
-
-Selecteer de **[!UICONTROL Create schedule]** controle die aan het publiek beantwoordt dat u naar uw bestemming wilt verzenden.
-
-![Creeer planningscontrole die in de Plannende stap wordt benadrukt.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Volledige bestanden exporteren {#export-full-files}
 
@@ -247,6 +255,14 @@ In deze stap moet u de profielkenmerken selecteren die u wilt toevoegen aan de b
 1. Het veld dat u hebt geselecteerd voor export, verschijnt nu in de toewijzingsweergave en toont de bewerkte koptekst in het geëxporteerde bestand.
 
    ![Modal venster met profielkenmerken die kunnen worden geëxporteerd naar de bestemming.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. [!BADGE Beta]{type=Informative}
+
+   >[!NOTE]
+   >
+   >Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen.
+
+   ![Opname waarbij de toewijzingsvelden opnieuw worden gerangschikt door te slepen.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
 1. (Optioneel) U kunt het geëxporteerde veld selecteren als een [verplichte sleutel](#mandatory-keys) of [deduplicatie-sleutel](#deduplication-keys).
 

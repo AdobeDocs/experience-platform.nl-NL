@@ -3,9 +3,9 @@ title: (Bèta) de dossiers van de uitvoer op bestelling aan partijbestemmingen g
 type: Tutorial
 description: Leer hoe u bestanden op aanvraag exporteert naar batchbestemmingen met behulp van de interface van het Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: 64833e29d062225bc774a14ae60b102b293bb5c4
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -48,13 +48,9 @@ Als u bestanden op aanvraag wilt exporteren naar batchbestemmingen, moet u [verb
 
    ![Afbeelding die een gefilterde gegevensstroom markeert.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Selecteer de **[!UICONTROL Activation data]** en selecteert u het publiek waarvoor u een bestand op aanvraag wilt exporteren en selecteert u het **[!UICONTROL Export file now]** besturingselement om een eenmalige export te activeren die een bestand naar uw batchbestemming zal leveren.
+3. Selecteer de **[!UICONTROL Activation data]** en selecteert u het publiek waarvoor u bestanden op aanvraag wilt exporteren en selecteert u de optie **[!UICONTROL Export file now]** besturingselement voor het triggeren van een eenmalige export die een bestand voor elk geselecteerd publiek naar uw batchbestemming levert.
 
-   >[!IMPORTANT]
-   >
-   >Het selecteren van meerdere soorten publiek voor het bulksgewijs exporteren van bestanden wordt momenteel niet ondersteund in de gebruikersinterface. Gebruik de [API voor ad-hocactivering](/help/destinations/api/ad-hoc-activation-api.md) daartoe.
-
-   ![Afbeelding die het exportbestand markeert, nu knop.](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
+   ![Afbeelding die het exportbestand markeert, nu knop.](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
 4. Selecteren **[!UICONTROL Yes]** om het exporteren van het bestand te bevestigen en te activeren.
 

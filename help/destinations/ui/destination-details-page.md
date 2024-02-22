@@ -3,9 +3,9 @@ keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
 description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, publiek in kaart gebracht aan de bestemming, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '1049'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,32 @@ De [!UICONTROL Activation data] wordt een lijst weergegeven van soorten publiek 
 
 ![Streaming doel van gegevensweergave activeren](../assets/ui/details-page/activation-data-streaming.png)
 
+<!-- ### Remove multiple audiences from activation flows {#bulk-remove}
+
+To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
+
+![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png) -->
+
+### [!BADGE Beta]{type=Informative} Meerdere bestanden op aanvraag exporteren naar batchbestemmingen {#bulk-export}
+
 >[!NOTE]
 >
->Raadpleeg voor meer informatie over het verkennen van de detailpagina van een publiek de [Overzicht van de segmenteringsinterface](../../segmentation/ui/overview.md#segment-details).
+Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen.
+
+U kunt [meerdere bestanden op aanvraag exporteren](../ui/export-file-now.md) van de **[!UICONTROL Activation data]** pagina. Hiervoor selecteert u het publiek waarvoor u bestanden op aanvraag wilt exporteren en selecteert u de optie **[!UICONTROL Export file now]** besturingselement voor het triggeren van een eenmalige export die een bestand voor elk geselecteerd publiek naar uw batchbestemming levert.
+
+![Afbeelding die het exportbestand markeert, nu knop.](../assets/ui/details-page/bulk-export-file-now.png)
+
+### [!BADGE Beta]{type=Informative} Activeringsschema&#39;s bewerken voor meerdere soorten publiek die naar batchbestemmingen worden geëxporteerd {#bulk-edit-schedule}
+
+>[!NOTE]
+>
+Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen.
+
+Als u het bestaande activeringsschema van meerdere soorten publiek tegelijk wilt bewerken, selecteert u het gewenste publiek en selecteert u vervolgens **[!UICONTROL Edit schedule]**. Voor gedetailleerde informatie over het definiëren of bewerken van een exportschema leest u de [doelgroep exporteren](../ui/activate-batch-profile-destinations.md#scheduling) sectie.
+
+![Het scherm met activeringsgegevens markeert de optie om activeringsschema&#39;s voor meerdere soorten publiek te bewerken.](../assets/ui/details-page/bulk-edit-schedule.png)
+
+>[!NOTE]
+>
+Raadpleeg voor meer informatie over het verkennen van de detailpagina van een publiek de [Overzicht van de segmenteringsinterface](../../segmentation/ui/overview.md#segment-details).
