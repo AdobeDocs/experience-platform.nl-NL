@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Naamruimte in XDM (Experience Data Model)
 description: Leer hoe het namespacing in het Model van de Gegevens van de Ervaring (XDM) u toestaat om uw schema's uit te breiden en gebiedsbotsingen te verhinderen aangezien de verschillende schemacomponenten samen worden gebracht.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
+source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '665'
 ht-degree: 0%
 
 ---
 
 # Naamruimte in XDM (Experience Data Model)
+
+>[!IMPORTANT]
+>
+>In XDM, wordt namespace (het onderwerp van deze pagina) gebruikt om gebieden in een schema te onderscheiden. Dit is verschillend aan het concept identiteitsnamespace in de Dienst van de Identiteit, waar namespace wordt gebruikt om identiteitswaarden te onderscheiden. Lees de documentatie op [naamruimte in Identiteitsservice](../../identity-service/features/namespaces.md) voor meer informatie .
 
 Aan alle velden in XDM-schema&#39;s (Experience Data Model) is een naamruimte gekoppeld. Deze namespaces staan u toe om uw schema&#39;s uit te breiden en gebiedsbotsingen te verhinderen aangezien de verschillende schemacomponenten samen worden gebracht. Dit document biedt een overzicht van naamruimten in XDM en hoe deze worden weergegeven in het dialoogvenster [Schema-register-API](../api/overview.md).
 
@@ -85,7 +89,7 @@ Hier volgt een voorbeeldschema voor een product in de standaard XDM-syntaxis. Me
 
 ### Compatibiliteitsmodus {#compatibility}
 
-In Adobe Experience Platform worden XDM-schema&#39;s weergegeven in [Compatibiliteitsmodus](../api/appendix.md#compatibility) syntaxis, waarbij de JSON-LD-syntaxis niet wordt gebruikt om naamruimten te vertegenwoordigen. In plaats daarvan wordt de naamruimte door het Platform omgezet in een bovenliggend veld (te beginnen met een onderstrepingsteken) en worden de onderliggende velden genest.
+In Adobe Experience Platform worden XDM-schema&#39;s weergegeven in [Compatibiliteitsmodus](../api/appendix.md#compatibility) syntaxis, waarbij de JSON-LD-syntaxis niet wordt gebruikt om naamruimten te vertegenwoordigen. In plaats daarvan converteert Platform de naamruimte naar een bovenliggend veld (te beginnen met een onderstrepingsteken) en nest het de onderliggende velden.
 
 De standaard-XDM `repo:createdDate` wordt omgezet in `_repo.createdDate` en wordt weergegeven in de volgende structuur in de compatibiliteitsmodus:
 
