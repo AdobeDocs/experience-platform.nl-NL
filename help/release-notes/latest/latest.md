@@ -28,7 +28,7 @@ Met Experience Platform kunt u zich abonneren op gebeurtenisgebaseerde waarschuw
 **Nieuwe of bijgewerkte functies**
 | Functie | Beschrijving | | — | — | | Tabblad Waarschuwingsgeschiedenis | Als beheerder van een Experience Platform kunt u met de functie Waarschuwingsabonnees beheren een waarschuwing toewijzen aan een gebruikers-id voor een Adobe, een extern e-mailadres of een lijst met e-mailgroepen. Zie de klasse [UI-documentatie met waarschuwingen](../../observability/alerts/ui.md) voor meer informatie over het geschiedenislusje. |
 
-{style="table-layout:auto"}
+
 
 Voor meer informatie over waarschuwingen leest u de [[!DNL Observability Insights] overzicht](../../observability/home.md).
 
