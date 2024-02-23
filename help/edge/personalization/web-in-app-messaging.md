@@ -1,7 +1,7 @@
 ---
 title: Ondersteuning voor Web In-app Messaging in Web SDK configureren
 description: Leer hoe te om de de markeringsuitbreiding van SDK van het Web te vormen om het Overseinen van het Web in-app te steunen.
-source-git-commit: 82eede9e59338e8438c361d58b476960b7faa5cb
+source-git-commit: a020f880be2606024c6a986dc468d70a2fbdc30f
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 0%
