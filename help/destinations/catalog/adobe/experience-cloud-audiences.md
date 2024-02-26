@@ -3,9 +3,9 @@ title: Experience Cloud-doelgroepen
 description: Leer hoe u publiek kunt delen van Real-time Customer Data Platform naar verschillende Experience Cloud-apps.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 188398e3483541ca482f5c1cfdce307160ada2da
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1669'
 ht-degree: 0%
 
 ---
@@ -95,6 +95,7 @@ Merk op de volgende bekende beperkingen en belangrijke callouts terwijl het gebr
 * Momenteel, wordt één enkele bestemming van het publiek van het Experience Cloud gesteund. Als u probeert een tweede doelverbinding te configureren, treedt er een fout op.
 * Wanneer u verbinding maakt met het doel, kunt u een optie weergeven op [gegevensstroomwaarschuwingen inschakelen](../../ui/alerts.md). Hoewel het zichtbaar is in de UI, **optie voor inschakelen van waarschuwingen wordt momenteel niet ondersteund**.
 * **Ondersteuning voor backfill voor het publiek**: De eerste export naar Audience Manager of andere oplossingen voor Experiencen Cloud omvat een historische bevolkingsgroep van het publiek. Gebruikers van de [integratie met het delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) die deze bestemming vormen zou een backfill verschil van ongeveer zes uur moeten verwachten.
+* Soorten publiek afkomstig van [Samenstelling publiek](../../../segmentation/ui/audience-composition.md) worden niet rechtstreeks ondersteund. Als u een samengesteld publiek naar deze bestemming wilt activeren, moet u een publieksdefinitie maken via [Segment Builder](../../../segmentation/ui/segment-builder.md) op basis van uw samengestelde publiek en activeer het nieuwe publiek.
 
 ### Latentie bij activering van publiek {#audience-activation-latency}
 
@@ -199,4 +200,4 @@ Soorten publiek en sporen in de Audience Manager zijn onderworpen aan [Op rollen
 
 Uit Real-Time CDP geëxporteerde soorten publiek worden toegewezen aan een specifieke gegevensbron in de Audience Manager **[!UICONTROL Experience Platform Segments]**.
 
-Om slechts bepaalde gebruikers toegang tot het publiek toe te staan, kunt u toegangscontroles op het publiek toepassen dat tot de gegevensbron behoort. Plaats nieuwe toegangsbeheertoestemmingen in Audience Manager voor deze publiek en sporen die van de segmenten van Real-Time CDP worden gecreeerd.
+Als u alleen bepaalde gebruikers toegang tot het publiek wilt geven, gebruikt u [Op rollen gebaseerde toegangscontroles](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) om gebruikerstoegang tot het publiek en de sporen te vormen die van het publiek van Real-Time CDP worden gecreeerd.
