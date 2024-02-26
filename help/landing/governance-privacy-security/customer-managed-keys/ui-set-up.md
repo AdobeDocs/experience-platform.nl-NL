@@ -2,9 +2,9 @@
 title: Door de klant beheerde toetsen instellen en configureren met behulp van de interface van het platform
 description: Leer hoe u uw CMK-app instelt met uw Azure-medewerker en uw coderingssleutel-id verzendt naar Adobe Experience Platform.
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,10 @@ Navigeer na het voltooien van het verificatieproces terug naar uw [!DNL Azure] K
 ![De [!DNL Microsoft Azure] dashboard met [!DNL Add] en [!DNL Add role assignment] gemarkeerd.](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 In het volgende scherm wordt u gevraagd een rol voor deze toewijzing te kiezen. Selecteren **[!DNL Key Vault Crypto Service Encryption User]** voordat u selecteert **[!DNL Next]** om door te gaan.
+
+>[!NOTE]
+>
+>Als u de [!DNL Managed-HSM Key Vault] laag, dan moet u selecteren **[!DNL Managed HSM Crypto Service Encryption User]** gebruikersrol.
 
 ![De [!DNL Microsoft Azure] dashboard met de [!DNL Key Vault Crypto Service Encryption User] gemarkeerd.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 

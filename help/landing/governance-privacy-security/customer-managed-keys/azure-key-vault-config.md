@@ -2,9 +2,9 @@
 title: Een Azure Key Vault configureren
 description: Leer hoe u een nieuwe bedrijfsaccount maakt met Azure of een bestaande bedrijfsaccount gebruikt en de Key Vault maakt.
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Door de klant beheerde toetsen (CMK) ondersteunen alleen toetsen van een [!DNL M
 
 >[!IMPORTANT]
 >
->Alleen de serviceniveaus Premium en Standaard voor [!DNL Azure] Key Vault wordt ondersteund. [!DNL Azure Managed HSM], [!DNL Azure Dedicated HSM] en [!DNL Azure Payments HSM] worden niet ondersteund. Zie de [[!DNL Azure] documentatie](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) voor meer informatie over de aangeboden services voor sleutelbeheer.
+>Alleen de Standard-, Premium- en Managed HSM-lagen voor [!DNL Azure] Key Vault wordt ondersteund. [!DNL Azure Dedicated HSM] en [!DNL Azure Payments HSM] worden niet ondersteund. Zie de [[!DNL Azure] documentatie](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) voor meer informatie over de aangeboden services voor sleutelbeheer.
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ Nadat u een Key Vault hebt gemaakt, kunt u een nieuwe sleutel genereren. Ga naar
 
 ![De [!DNL Keys] tabblad van [!DNL Azure] with [!DNL Generate import] gemarkeerd.](../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Gebruik het meegeleverde formulier om een naam voor de sleutel op te geven en selecteer **RSA** voor het toetstype. De **[!DNL RSA key size]** moet ten minste **3072** bits zoals vereist door [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] is ook compatibel met RSA 3027.
+Gebruik het opgegeven formulier om een naam voor de sleutel op te geven en selecteer een van de volgende **RSA** of **RSA-HSM** voor het toetstype. De **[!DNL RSA key size]** moet ten minste **3072** bits zoals vereist door [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] is ook compatibel met RSA 3027.
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Gebruik het meegeleverde formulier om een naam voor de sleutel op te geven en se
 
 Gebruik de resterende besturingselementen om de sleutel te configureren die u naar wens wilt genereren of importeren. Selecteer **[!DNL Create]**.
 
-![Maak een sleuteldashboard met [!DNL 3072] bits gemarkeerd.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
+![De [!DNL Create a key] dashboard met [!DNL 3072] bits gemarkeerd.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
 De geconfigureerde sleutel wordt weergegeven in de lijst met toetsen voor de vault.
 
