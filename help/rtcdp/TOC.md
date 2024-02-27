@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
 user-guide-description: Breng bekende en anonieme gegevens van meerdere ondernemingsbronnen samen om klantenprofielen te creëren, doelgroepsegmenten van die profielen te maken, en die segmenten aan bestemmingen van derden te activeren.
-source-git-commit: f342020a0e821172a7ceca95265a9d71f64f5347
+source-git-commit: eaa71bb93a08e8f0a9afe7f6b05929dae93cb670
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 14%
+source-wordcount: '293'
+ht-degree: 13%
 
 ---
 
@@ -77,6 +77,7 @@ ht-degree: 14%
    * [Overzicht van voorbeelden](/help/rtcdp/use-case-guides/overview.md)
    * Personalisatie, inzichten en betrokkenheid {#personalization-insights-engagement}
       * [Neem op intelligente wijze uw klanten opnieuw aan](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+      * [Neem op intelligente wijze contact op met uw klanten: Luma-voorbeelden](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
    * Klantenovername {#customer-acquisition}
       * [Nieuwe klanten aantrekken en aanschaffen zonder afhankelijk te zijn van cookies van derden](/help/rtcdp/partner-data/prospecting.md)
       * [Onsite ervaringen voor onbekende bezoekers personaliseren met de erkenning van bezoekers met hulp van partners](/help/rtcdp/partner-data/onsite-personalization.md)
