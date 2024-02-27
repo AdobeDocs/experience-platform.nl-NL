@@ -3,7 +3,7 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
+source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
 workflow-type: tm+mt
 source-wordcount: '1732'
 ht-degree: 0%
@@ -220,9 +220,9 @@ Er wordt een lijst met profielkenmerken weergegeven. Op deze popover, kunt u het
 
 Na het selecteren van de attributen, kunt u de orde selecteren om het door te rangschikken. Dit gebeurt in oplopende (van laagste naar hoogste) of aflopende (van hoogste naar laagste) volgorde.
 
-Bovendien, kunt u het aantal teruggekeerde publiek beperken door toe te laten **[!UICONTROL Add profile limit]** schakelen. Wanneer deze schakeloptie is ingeschakeld, kunt u het maximale aantal keren instellen dat wordt geretourneerd in het dialoogvenster **[!UICONTROL Included profiles]** veld.
+Bovendien kunt u het aantal geretourneerde profielen beperken door de optie **[!UICONTROL Add profile limit]** schakelen. Wanneer deze schakeloptie is ingeschakeld, kunt u het maximumaantal profielen instellen dat wordt geretourneerd in het dialoogvenster **[!UICONTROL Included profiles]** veld.
 
-![De schakeloptie voor het toevoegen van profiellimieten wordt gemarkeerd. Hiermee kunt u het aantal geretourneerde soorten publiek beperken.](../images/ui/audience-composition/add-profile-limit.png)
+![De schakeloptie voor het toevoegen van profiellimieten wordt gemarkeerd. Hiermee kunt u het aantal geretourneerde profielen beperken.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Split] {#split-block}
 
