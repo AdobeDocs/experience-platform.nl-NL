@@ -1,8 +1,8 @@
 ---
-title: Intelligent Luma-voorbeeld voor opnieuw engagement
+title: Intelligente Luma-voorbeelden voor opnieuw engagement
 description: Voorbeelden van video's voor het gebruik van Intelligent Re-engagement.
 feature: Use Cases
-source-git-commit: eaa71bb93a08e8f0a9afe7f6b05929dae93cb670
+source-git-commit: ffa049f1650e9592bda934822cce8565db40c013
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 1%
