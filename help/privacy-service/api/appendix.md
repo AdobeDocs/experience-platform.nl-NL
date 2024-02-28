@@ -3,8 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Bijlage Privacy Service API-handleiding
 description: Dit document bevat aanvullende informatie voor het werken met de Privacy Service-API.
+role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 5%

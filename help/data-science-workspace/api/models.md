@@ -3,8 +3,9 @@ keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Wor
 solution: Experience Platform
 title: Modellen-API-eindpunt
 description: Een model is een geval van een machine het leren recept dat gebruikend historische gegevens en configuraties wordt opgeleid om voor een bedrijfs geval op te lossen.
+role: Developer
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 1%
@@ -115,7 +116,7 @@ GET /models/?property=experimentRunID=={EXPERIMENT_RUN_ID}
 
 **Verzoek**
 
-Het volgende verzoek bevat een vraag en wint een lijst van opgeleide Modellen terug die zelfde experimentRunID ({EXPERIMENT_RUN_ID}) delen.
+Het volgende verzoek bevat een vraag en wint een lijst van opgeleide Modellen terug die zelfde experimentRunID delen ({EXPERIMENT_RUN_ID}).
 
 ```shell
 curl -X GET \
@@ -221,7 +222,7 @@ U kunt een bestaand Model bijwerken door zijn eigenschappen door een verzoek van
 
 >[!TIP]
 >
->Om ervoor te zorgen dat deze PUT-aanvraag succesvol is, wordt u aangeraden eerst een GET-aanvraag uit te voeren om het model op ID op te halen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>Om ervoor te zorgen dat deze PUT-aanvraag succesvol is, wordt u aangeraden eerst een GET-aanvraag uit te voeren om het model op id op te halen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 **API-indeling**
 

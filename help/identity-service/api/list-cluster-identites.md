@@ -3,10 +3,11 @@ keywords: Experience Platform;home;populaire onderwerpen;lijstidentiteiten;lijst
 solution: Experience Platform
 title: Alle identiteiten in een cluster weergeven
 description: Identiteiten die verwant zijn in een identiteitsgrafiek, ongeacht naamruimte, worden beschouwd als onderdeel van dezelfde "cluster" in die identiteitsgrafiek. De opties hieronder verstrekken de middelen om tot alle clusterleden toegang te hebben.
+role: Developer
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ Identiteiten die verwant zijn in een identiteitsgrafiek, ongeacht naamruimte, wo
 
 Haal alle clusterleden op voor één identiteit.
 
-U kunt de optionele `graph-type` parameter om de identiteitsgrafiek aan te geven waaruit de cluster moet worden opgehaald. De opties zijn:
+U kunt de optionele `graph-type` parameter om de identiteitsgrafiek aan te geven waaruit de cluster moet komen. De opties zijn:
 
 - Geen - voer geen identiteitsstitching uit.
 - Privégrafiek - Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek. Indien niet `graph-type` is opgegeven, is dit de standaardinstelling.
@@ -32,7 +33,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **Verzoek**
 
-Optie 1: De identiteit opgeven als naamruimte (`nsId`, op ID) en ID-waarde (`id`).
+Optie 1: Geef de identiteit op als naamruimte (`nsId`, op ID) en ID-waarde (`id`).
 
 ```shell
 curl -X GET \
@@ -43,7 +44,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 2: De identiteit opgeven als naamruimte (`ns`, op naam) en ID-waarde (`id`).
+Optie 2: Geef de identiteit op als naamruimte (`ns`, op naam) en ID-waarde (`id`).
 
 ```shell
 curl -X GET \
@@ -54,7 +55,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 3: De identiteit opgeven als XID (`xid`). Zie de sectie over dit document voor meer informatie over het verkrijgen van de XID van een identiteit [XID ophalen voor een identiteit](./list-native-id.md).
+Optie 3: Geef de identiteit op als XID (`xid`). Zie de sectie over dit document voor meer informatie over het verkrijgen van de XID van een identiteit [XID ophalen voor een identiteit](./list-native-id.md).
 
 ```shell
 curl -X GET \

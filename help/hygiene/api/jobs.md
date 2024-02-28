@@ -1,10 +1,11 @@
 ---
 title: Records verwijderen met de API voor gegevenshygiëne
 description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch kunt corrigeren of verwijderen.
+role: Developer
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 0%

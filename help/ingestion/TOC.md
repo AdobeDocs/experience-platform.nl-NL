@@ -4,10 +4,11 @@ user-guide-title: Hulp bij Adobe Experience Platform-gegevensopname
 breadcrumb-title: Gids voor gegevensopname
 user-guide-description: Breng uw gegevens naar Experience Platform via batch- of streamingopname.
 feature: Data Ingestion
-source-git-commit: 6110bf51cbd0005428e7dab4552944c5c9b54d03
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 16%
+source-wordcount: '145'
+ht-degree: 17%
 
 ---
 
@@ -25,7 +26,7 @@ ht-degree: 16%
    - [API-ontwikkelaarsgids](batch-ingestion/api-overview.md)
    - [Gedeeltelijke batch ingestie](batch-ingestion/partial.md)
    - [Problemen oplossen](batch-ingestion/troubleshooting.md)
-- Lesbestanden {#tutorials}
+- Tutorials {#tutorials}
    - Een CSV-bestand toewijzen aan XDM {#map-csv}
       - [Overzicht](./tutorials/map-csv/overview.md)
       - [Een CSV-bestand toewijzen aan een bestaand schema](./tutorials/map-csv/existing-schema.md)

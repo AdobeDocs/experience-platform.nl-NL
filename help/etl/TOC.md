@@ -3,9 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform ETL Guide
 breadcrumb-title: ETL-gids
 user-guide-description: Leer de algemene stappen voor het creëren van veilige, krachtige schakelaars voor het opnemen van gegevens in Platform.
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '43'
+source-wordcount: '40'
 ht-degree: 0%
 
 ---
@@ -16,4 +17,4 @@ ht-degree: 0%
 - [Ontwikkeling van ETL-integratie](home.md)
 - [ETL-transformatie](transformations.md)
 - [ETL-workflow](workflow.md)
-- [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)

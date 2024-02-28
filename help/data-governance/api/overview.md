@@ -3,10 +3,11 @@ keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: API-handleiding voor beleidsservice
 description: Met de Beleidsservice-API kunnen ontwikkelaars labels en beleidsregels voor gegevensgebruik in Experience Platform beheren. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
+role: Developer
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 0c09db51d97bc0cf321c5d2fd57c42d194b25d5f
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '543'
 ht-degree: 3%
 
 ---

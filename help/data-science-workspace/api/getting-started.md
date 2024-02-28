@@ -3,10 +3,11 @@ keywords: Experience Platform;ontwikkelaarsgids;eindpunt;de Werkruimte van de We
 solution: Experience Platform
 title: API-handleiding voor Sensei Machine Learning
 description: Met de API voor leren van Sensei-machines kunnen ontwikkelaars CRUD-bewerkingen uitvoeren op verschillende bronnen van Data Science Workspace. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
+role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '232'
 ht-degree: 7%
 
 ---
@@ -19,9 +20,9 @@ Deze handleiding voor ontwikkelaars bevat stappen waarmee u de functie [API voor
 
 ## Aan de slag
 
-U moet de [verificatie](https://www.adobe.com/go/platform-api-authentication-en) zelfstudie om toegang tot de volgende verzoekkopballen te hebben om vraag te maken aan [!DNL Adobe Experience Platform] API&#39;s:
+U moet de opdracht [verificatie](https://www.adobe.com/go/platform-api-authentication-en) zelfstudie om toegang tot de volgende verzoekkopballen te hebben om vraag te maken aan [!DNL Adobe Experience Platform] API&#39;s:
 
-* Autorisatie: Drager `{ACCESS_TOKEN}`
+* Toestemming: houder `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
@@ -45,4 +46,4 @@ Zodra u de vereiste authentificatiegeloofsbrieven hebt verzameld, kunt u aan de 
 * [MLInstances (Recipes)](./mlinstances.md)
 * [MLServices](./mlservices.md)
 * [Modellen](./models.md)
-* [Aanhangsel](./appendix.md)
+* [Bijlage](./appendix.md)

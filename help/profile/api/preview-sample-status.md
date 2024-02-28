@@ -2,8 +2,9 @@
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API;voorvertoning;voorbeeld
 title: Voorbeeld van voorbeeldstatus (profiel voorvertoning) API-eindpunt
 description: Het eindpunt van de voorproefvoorbeeldstatus van het Real-Time Profiel van de Klant API staat u toe om de recentste succesvolle steekproef van uw gegevens van het Profiel, de distributie van het lijstprofiel door dataset en door identiteit, voor te vertonen en rapporten te produceren die datasetoverlapping, identiteitsoverlap, en ongestipte profielen tonen.
+role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '2901'
 ht-degree: 0%

@@ -3,10 +3,11 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: API-eindpunt voor beleid samenvoegen
 type: Documentation
 description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
+role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '2467'
+source-wordcount: '2465'
 ht-degree: 0%
 
 ---

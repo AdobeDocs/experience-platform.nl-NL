@@ -3,10 +3,11 @@ keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: API-eindpunt voor toestemming
 description: Leer hoe u verzoeken om toestemming van klanten voor Experience Cloud-toepassingen beheert met de Privacy Service-API.
+role: Developer
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -60,7 +61,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `optOutOfSale` | Indien ingesteld op true, geeft dit aan dat de gebruikers onder `entities` de wens te kennen te geven zich niet aan de verkoop of het delen van hun persoonsgegevens te houden. |
+| `optOutOfSale` | Indien ingesteld op true, geeft dit aan dat de gebruikers onder `entities` de wens te kennen te geven zich niet aan te sluiten bij de verkoop of het delen van hun persoonsgegevens. |
 | `entities` | Een array met objecten die aangeven op welke gebruikers de aanvraag voor toestemming van toepassing is. Elk object bevat een `namespace` en een array van `values` om afzonderlijke gebruikers met die naamruimte te laten overeenkomen. |
 | `nameSpace` | Elk object in het dialoogvenster `entities` array moet een van de [standaardnaamruimten](./appendix.md#standard-namespaces) wordt herkend door de Privacy Service-API. |
 | `values` | Een array van waarden voor elke gebruiker, die overeenkomt met de opgegeven waarden `nameSpace`. |

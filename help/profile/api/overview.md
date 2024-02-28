@@ -2,8 +2,9 @@
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;verenigd profiel;verenigd profiel;verenigd profiel;profiel;rtcp;inschakelen profiel;profiel inschakelen
 title: Real-Time API-handleiding voor klantprofiel
 description: Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, waaronder weergaveprofielen, beleid voor samenvoegen maken en bijwerken, profielgegevens exporteren of samplen en profielgegevens verwijderen die niet langer vereist zijn of die door een fout zijn toegevoegd. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
+role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 1%

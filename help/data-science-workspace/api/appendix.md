@@ -3,8 +3,9 @@ keywords: Experience Platform;ontwikkelaarsgids;eindpunt;de Werkruimte van de We
 solution: Experience Platform
 title: Bijlage API-handleiding voor leren van Sensei
 description: In de volgende secties vindt u informatie over verschillende functies van de API voor leren van Sensei Machine.
+role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -75,7 +76,7 @@ Hieronder volgt een voorbeeldconfiguratie die het gebruik van een CPU voor train
 
 De Motoren van de Vonk hebben de capaciteit om computermiddelen voor opleiding en het scoren te wijzigen. Deze bronnen worden in de volgende tabel beschreven:
 
-| Resource | Beschrijving | Type |
+| Bron | Beschrijving | Type |
 | -------- | ----------- | ---- |
 | driverMemory | Geheugen voor stuurprogramma in megabytes | int |
 | driverCores | Aantal door de bestuurder gebruikte kernen | int |

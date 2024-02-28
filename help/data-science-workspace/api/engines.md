@@ -3,8 +3,9 @@ keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Wor
 solution: Experience Platform
 title: Engine API-eindpunt
 description: Motoren vormen de basis voor het leren van machines Modellen in de werkruimte van de wetenschap van gegevens. Zij bevatten machinaal leeralgoritmen die specifieke problemen oplossen, eigenschappijpleidingen om eigenschapengineering uit te voeren, of allebei.
+role: Developer
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 0%

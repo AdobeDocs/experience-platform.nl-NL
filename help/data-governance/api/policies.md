@@ -3,10 +3,11 @@ keywords: Experience Platform;home;populaire onderwerpen;Beleidshandhaving;API-g
 solution: Experience Platform
 title: API-eindpunt voor beleidsregels voor gegevensbeheer
 description: Beleid voor gegevensbeheer is regels die door uw organisatie worden toegepast en die een beschrijving geven van de soorten marketingacties die u mag uitvoeren op gegevens binnen het Experience Platform of waarvan u een beperking hebt ingesteld. Het /policies eindpunt wordt gebruikt voor alle API vraag met betrekking tot het bekijken van, het creëren van, het bijwerken van, of het schrappen van het beleid van het gegevensbeheer.
+role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1863'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ Beleid voor gegevensbeheer is regels die het soort marketingacties beschrijven d
 
 >[!IMPORTANT]
 >
->Het beleid van het bestuur moet niet met toegangsbeheerbeleid worden verward, dat de specifieke gegevensattributen bepaalt die door bepaalde gebruikers van de Platform in uw organisatie kunnen worden betreden. Zie de `/policies` eindpuntgids voor [API voor toegangsbeheer](../../access-control/abac/api/policies.md) voor details op hoe te om toegangsbeheerbeleid programmatically te beheren.
+>Het beleid van het bestuur moet niet met toegangsbeheerbeleid worden verward, dat de specifieke gegevensattributen bepaalt die door bepaalde gebruikers van het Platform in uw organisatie kunnen worden betreden. Zie de `/policies` eindpuntgids voor de [Toegangsbeheer-API](../../access-control/abac/api/policies.md) voor details op hoe te om toegangsbeheerbeleid programmatically te beheren.
 
 ## Aan de slag
 
@@ -145,13 +146,13 @@ Een geslaagde reactie omvat een `children` array met de details van elk opgehaal
 | `_page.count` | Het totale aantal opgehaalde beleidsregels. |
 | `name` | De weergavenaam voor een beleid. |
 | `status` | De huidige status van een beleid. Er zijn drie mogelijke statussen: `DRAFT`, `ENABLED`, of `DISABLED`. Standaard alleen `ENABLED` het beleid neemt deel aan de evaluatie . Zie het overzicht op [beleidsevaluatie](../enforcement/overview.md) voor meer informatie . |
-| `marketingActionRefs` | Een array die de URI&#39;s van alle toepasselijke marketingacties voor een beleid opsomt. |
+| `marketingActionRefs` | Een array met de URI&#39;s van alle toepasselijke marketingacties voor een beleid. |
 | `description` | Een optionele beschrijving die een verdere context biedt voor het gebruiksgeval van het beleid. |
 | `deny` | Een voorwerp dat de specifieke etiketten van het gegevensgebruik beschrijft dat de bijbehorende het op de markt brengen actie van een beleid wordt beperkt van wordt uitgevoerd op. Zie de sectie over [beleid](#create-policy) voor meer informatie over deze eigenschap. |
 
 ## Een beleid opzoeken {#look-up}
 
-U kunt een specifiek beleid opzoeken door dat beleid op te nemen `id` eigenschap in het pad van een GET-aanvraag.
+U kunt een specifiek beleid opzoeken door dat beleid te omvatten `id` eigenschap in het pad van een GET-aanvraag.
 
 **API-indeling**
 
@@ -226,7 +227,7 @@ Een succesvol antwoord geeft de details van het beleid terug.
 | --- | --- |
 | `name` | De weergavenaam voor het beleid. |
 | `status` | De huidige status van het beleid. Er zijn drie mogelijke statussen: `DRAFT`, `ENABLED`, of `DISABLED`. Standaard alleen `ENABLED` het beleid neemt deel aan de evaluatie . Zie het overzicht op [beleidsevaluatie](../enforcement/overview.md) voor meer informatie . |
-| `marketingActionRefs` | Een array die de URI&#39;s van alle toepasselijke marketingacties voor het beleid opsomt. |
+| `marketingActionRefs` | Een array met de URI&#39;s van alle toepasselijke marketingacties voor het beleid. |
 | `description` | Een optionele beschrijving die een verdere context biedt voor het gebruiksgeval van het beleid. |
 | `deny` | Een voorwerp dat de specifieke etiketten van het gegevensgebruik beschrijft dat de bijbehorende het op de markt brengen actie van het beleid wordt beperkt van wordt uitgevoerd op. Zie de sectie over [beleid](#create-policy) voor meer informatie over deze eigenschap. |
 
@@ -320,7 +321,7 @@ curl -X POST \
 | --- | --- |
 | `name` | De weergavenaam voor het beleid. |
 | `status` | De huidige status van het beleid. Er zijn drie mogelijke statussen: `DRAFT`, `ENABLED`, of `DISABLED`. Standaard alleen `ENABLED` het beleid neemt deel aan de evaluatie . Zie het overzicht op [beleidsevaluatie](../enforcement/overview.md) voor meer informatie . |
-| `marketingActionRefs` | Een array die de URI&#39;s van alle toepasselijke marketingacties voor het beleid opsomt. De URI voor een marketingactie is beschikbaar onder `_links.self.href` in de reactie op [marketingactie zoeken](./marketing-actions.md#look-up). |
+| `marketingActionRefs` | Een array met de URI&#39;s van alle toepasselijke marketingacties voor het beleid. De URI voor een marketingactie is beschikbaar onder `_links.self.href` in de reactie op [marketingactie zoeken](./marketing-actions.md#look-up). |
 | `description` | Een optionele beschrijving die een verdere context biedt voor het gebruiksgeval van het beleid. |
 | `deny` | De beleidsuitdrukking die de specifieke etiketten van het gegevensgebruik beschrijft de bijbehorende het op de markt brengen actie van het beleid wordt beperkt van wordt uitgevoerd op. |
 
@@ -428,7 +429,7 @@ curl -X PUT \
 | --- | --- |
 | `name` | De weergavenaam voor het beleid. |
 | `status` | De huidige status van het beleid. Er zijn drie mogelijke statussen: `DRAFT`, `ENABLED`, of `DISABLED`. Standaard alleen `ENABLED` het beleid neemt deel aan de evaluatie . Zie het overzicht op [beleidsevaluatie](../enforcement/overview.md) voor meer informatie . |
-| `marketingActionRefs` | Een array die de URI&#39;s van alle toepasselijke marketingacties voor het beleid opsomt. De URI voor een marketingactie is beschikbaar onder `_links.self.href` in de reactie op [marketingactie zoeken](./marketing-actions.md#look-up). |
+| `marketingActionRefs` | Een array met de URI&#39;s van alle toepasselijke marketingacties voor het beleid. De URI voor een marketingactie is beschikbaar onder `_links.self.href` in de reactie op [marketingactie zoeken](./marketing-actions.md#look-up). |
 | `description` | Een optionele beschrijving die een verdere context biedt voor het gebruiksgeval van het beleid. |
 | `deny` | De beleidsuitdrukking die de specifieke etiketten van het gegevensgebruik beschrijft de bijbehorende het op de markt brengen actie van het beleid wordt beperkt van wordt uitgevoerd op. Zie de sectie over [beleid](#create-policy) voor meer informatie over deze eigenschap. |
 
@@ -497,7 +498,7 @@ PATCH /policies/custom/{POLICY_ID}
 
 **Verzoek**
 
-Het volgende verzoek gebruikt twee `replace` bewerkingen om de beleidsstatus te wijzigen van `DRAFT` tot `ENABLED`en de `description` veld met een nieuwe beschrijving.
+Het volgende verzoek gebruikt twee `replace` bewerkingen om de beleidsstatus te wijzigen van `DRAFT` tot `ENABLED`en om de `description` veld met een nieuwe beschrijving.
 
 >[!IMPORTANT]
 >
@@ -610,7 +611,7 @@ U kunt de verwijdering bevestigen door te proberen het beleid opnieuw op te zoek
 
 ## Een lijst met ingeschakelde kernbeleidsregels ophalen {#list-enabled-core}
 
-Standaard wordt alleen beleid voor gegevensbeheer aan de evaluatie toegevoegd. U kunt een lijst van kernbeleid terugwinnen dat momenteel door uw organisatie door een verzoek van de GET aan wordt toegelaten `/enabledCorePolicies` eindpunt.
+Standaard wordt alleen een beleid voor gegevensbeheer aan de evaluatie toegevoegd. U kunt een lijst van kernbeleid terugwinnen dat momenteel door uw organisatie door een verzoek van de GET aan wordt toegelaten `/enabledCorePolicies` eindpunt.
 
 **API-indeling**
 
@@ -662,7 +663,7 @@ Een succesvolle reactie keert de lijst van toegelaten kernbeleid onder terug `po
 
 ## De lijst met ingeschakelde kernbeleidsregels bijwerken {#update-enabled-core}
 
-Standaard wordt alleen beleid voor gegevensbeheer aan de evaluatie toegevoegd. Door een PUT aan de `/enabledCorePolicies` eindpunt, kunt u de lijst van toegelaten kernbeleid voor uw organisatie bijwerken gebruikend één enkele vraag.
+Standaard wordt alleen een beleid voor gegevensbeheer aan de evaluatie toegevoegd. Door een PUT aan de `/enabledCorePolicies` eindpunt, kunt u de lijst van toegelaten kernbeleid voor uw organisatie bijwerken gebruikend één enkele vraag.
 
 >[!NOTE]
 >

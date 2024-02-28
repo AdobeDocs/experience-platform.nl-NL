@@ -3,8 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;lijst beschikbare sandb
 solution: Experience Platform
 title: Beschikbaar API-eindpunt sandboxen
 description: U kunt een lijst maken van de sandboxen die beschikbaar zijn voor de huidige gebruiker door een GET-aanvraag in te dienen bij het beschikbare sandboxeindpunt.
+role: Developer
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: 130f3a9b65befc1cc8cf400b8ca8ca4d6e7f71e4
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%

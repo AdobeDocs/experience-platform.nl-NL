@@ -3,10 +3,11 @@ keywords: Experience Platform;home;populaire onderwerpen;sandbox-ontwikkelaarsgi
 solution: Experience Platform
 title: Aan de slag met de sandbox-API
 description: Met de sandbox-API kunnen ontwikkelaars sandboxen in Adobe Experience Platform programmatisch beheren. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
+role: Developer
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '372'
 ht-degree: 4%
 
 ---
@@ -19,7 +20,7 @@ Deze handleiding voor ontwikkelaars bevat stappen waarmee u sandbox-API kunt geb
 
 ## Vereisten
 
-Voor het beheren van sandboxen voor uw organisatie hebt u beheerdersrechten nodig voor sandboxen. Gebruikers zonder toegangsrechten kunnen alleen de [beschikbaar sandboxeindpunt](./available.md) om actieve sandboxen voor de huidige gebruiker weer te geven. Zie de [toegangsbeheeroverzicht](../../access-control/home.md) voor meer informatie over het toewijzen van sandboxmachtigingen voor Experience Platform.
+Voor het beheren van sandboxen voor uw organisatie hebt u beheerdersrechten nodig voor sandboxen. Gebruikers zonder toegangsrechten kunnen alleen de [beschikbaar sandboxeindpunt](./available.md) actieve sandboxen voor de huidige gebruiker weergeven. Zie de [toegangsbeheeroverzicht](../../access-control/home.md) voor meer informatie over het toewijzen van sandboxmachtigingen voor Experience Platform.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -29,7 +30,7 @@ Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken t
 
 Voor deze handleiding is het vereist dat u de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) om met succes vraag aan Platform APIs te maken. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
-* Autorisatie: Drager `{ACCESS_TOKEN}`
+* Toestemming: houder `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 

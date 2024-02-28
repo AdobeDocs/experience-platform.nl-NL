@@ -5,7 +5,8 @@ user-guide-title: Dataverzameling
 breadcrumb-title: Dataverzameling
 user-guide-description: Leer meer over dataverzameling aan klantzijde voor het Adobe Experience Platform Edge-netwerk en ontdek meer over de technologieën die worden gebruikt voor dataverzameling.
 feature: Data Collection
-source-git-commit: b6230760c1e25a3ef0901d80160fb0992578c41e
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 63%

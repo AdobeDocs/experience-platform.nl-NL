@@ -3,17 +3,18 @@ keywords: Experience Platform;home;populaire onderwerpen;sandbox-ontwikkelaarsgi
 solution: Experience Platform
 title: API-eindpunt voor sandboxbeheer
 description: Met het eindpunt /sandboxen in de sandbox-API kunt u sandboxen in Adobe Experience Platform programmatisch beheren.
+role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1488'
-ht-degree: 2%
+source-wordcount: '1474'
+ht-degree: 1%
 
 ---
 
 # Sandbox-beheereindpunt
 
-Sandboxen in Adobe Experience Platform bieden geïsoleerde ontwikkelomgevingen waarmee u functies kunt testen, experimenten kunt uitvoeren en aangepaste configuraties kunt maken zonder dat dit gevolgen heeft voor uw productieomgeving. De `/sandboxes` in de [!DNL Sandbox] Met API kunt u sandboxen in Platform programmatisch beheren.
+Sandboxen in Adobe Experience Platform bieden geïsoleerde ontwikkelomgevingen waarmee u functies kunt testen, experimenten kunt uitvoeren en aangepaste configuraties kunt maken zonder dat dit gevolgen heeft voor uw productieomgeving. De `/sandboxes` in de [!DNL Sandbox] Met API kunt u sandboxen in het platform programmatisch beheren.
 
 ## Aan de slag
 
@@ -21,7 +22,7 @@ Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het 
 
 ## Een lijst met sandboxen ophalen {#list}
 
-U kunt alle sandboxen weergeven die tot uw organisatie behoren (actief of anderszins) door een aanvraag voor een GET in te dienen bij de `/sandboxes` eindpunt.
+U kunt alle sandboxen weergeven die tot uw organisatie behoren (actief of anderszins) door een verzoek tot GET te richten aan de `/sandboxes` eindpunt.
 
 **API-indeling**
 
@@ -129,7 +130,7 @@ Een succesvol antwoord retourneert een lijst met sandboxen die tot uw organisati
 | --- | --- |
 | `name` | De naam van de sandbox. Deze eigenschap wordt gebruikt voor opzoekdoeleinden in API-aanroepen. |
 | `title` | De weergavenaam voor de sandbox. |
-| `state` | De huidige verwerkingsstatus van de sandbox. De status van een sandbox kan een van de volgende zijn: <br/><ul><li>`creating`: De sandbox is gemaakt, maar wordt nog steeds door het systeem ingericht.</li><li>`active`: De sandbox wordt gemaakt en actief.</li><li>`failed`: Door een fout kon de sandbox niet door het systeem worden ingericht en is deze uitgeschakeld.</li><li>`deleted`: De sandbox is handmatig uitgeschakeld.</li></ul> |
+| `state` | De huidige verwerkingsstatus van de sandbox. De status van een sandbox kan een van de volgende zijn: <br/><ul><li>`creating`: De sandbox is gemaakt, maar wordt nog steeds door het systeem ingericht.</li><li>`active`: De sandbox wordt gemaakt en actief.</li><li>`failed`: Vanwege een fout kon de sandbox niet worden ingericht door het systeem en is deze uitgeschakeld.</li><li>`deleted`: De sandbox is handmatig uitgeschakeld.</li></ul> |
 | `type` | Het type sandbox. Tot de momenteel ondersteunde sandboxtypen behoren: `development` en `production`. |
 | `isDefault` | Een Booleaanse eigenschap die aangeeft of deze sandbox de standaardproductiesandbox voor de organisatie is. |
 | `eTag` | Een id voor een specifieke versie van de sandbox. Deze waarde wordt gebruikt voor versiebeheer en caching-efficiëntie en wordt telkens bijgewerkt wanneer een wijziging in de sandbox wordt aangebracht. |
@@ -184,7 +185,7 @@ Als de reactie is gelukt, worden de details van de sandbox, inclusief de sandbox
 | --- | --- |
 | `name` | De naam van de sandbox. Deze eigenschap wordt gebruikt voor opzoekdoeleinden in API-aanroepen. |
 | `title` | De weergavenaam voor de sandbox. |
-| `state` | De huidige verwerkingsstatus van de sandbox. De status van een sandbox kan een van de volgende zijn: <ul><li>**maken**: De sandbox is gemaakt, maar wordt nog steeds door het systeem ingericht.</li><li>**actief**: De sandbox wordt gemaakt en actief.</li><li>**mislukt**: Door een fout kon de sandbox niet door het systeem worden ingericht en is deze uitgeschakeld.</li><li>**verwijderd**: De sandbox is handmatig uitgeschakeld.</li></ul> |
+| `state` | De huidige verwerkingsstatus van de sandbox. De status van een sandbox kan een van de volgende zijn: <ul><li>**maken**: De sandbox is gemaakt, maar wordt nog steeds door het systeem ingericht.</li><li>**actief**: De sandbox wordt gemaakt en actief.</li><li>**mislukt**: Vanwege een fout kon de sandbox niet worden ingericht door het systeem en is deze uitgeschakeld.</li><li>**verwijderd**: De sandbox is handmatig uitgeschakeld.</li></ul> |
 | `type` | Het type sandbox. Tot de huidige ondersteunde sandboxtypen behoren: `development` en `production`. |
 | `isDefault` | Een Booleaanse eigenschap die aangeeft of deze sandbox de standaardsandbox voor de organisatie is. Dit is doorgaans de productiesandbox. |
 | `eTag` | Een id voor een specifieke versie van de sandbox. Deze waarde wordt gebruikt voor versiebeheer en caching-efficiëntie en wordt telkens bijgewerkt wanneer een wijziging in de sandbox wordt aangebracht. |
@@ -228,7 +229,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | De id die wordt gebruikt voor toegang tot de sandbox in toekomstige aanvragen. Deze waarde moet uniek zijn, en de beste praktijken moeten het zo beschrijvend mogelijk maken. Deze waarde mag geen spaties of speciale tekens bevatten. |
-| `title` | Een leesbare naam die voor weergavedoeleinden in de gebruikersinterface van het Platform wordt gebruikt. |
+| `title` | Een leesbare naam die voor weergavedoeleinden in de gebruikersinterface van het platform wordt gebruikt. |
 | `type` | Het type sandbox dat moet worden gemaakt. Voor een niet-productiesandbox moet deze waarde `development`. |
 
 **Antwoord**
@@ -281,7 +282,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | De id die wordt gebruikt voor toegang tot de sandbox in toekomstige aanvragen. Deze waarde moet uniek zijn, en de beste praktijken moeten het zo beschrijvend mogelijk maken. Deze waarde mag geen spaties of speciale tekens bevatten. |
-| `title` | Een leesbare naam die voor weergavedoeleinden in de gebruikersinterface van het Platform wordt gebruikt. |
+| `title` | Een leesbare naam die voor weergavedoeleinden in de gebruikersinterface van het platform wordt gebruikt. |
 | `type` | Het type sandbox dat moet worden gemaakt. Voor een productiesandbox moet deze waarde `production`. |
 
 **Antwoord**

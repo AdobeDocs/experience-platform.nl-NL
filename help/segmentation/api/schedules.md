@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: API-eindpunt voor planningen
 description: Planningen zijn een hulpmiddel dat kan worden gebruikt om batch-segmentatietaken één keer per dag automatisch uit te voeren.
+role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '2040'
 ht-degree: 1%
 
 ---
@@ -370,9 +371,9 @@ In een expressie-tekenreeks voor een bijsnijden vertegenwoordigt het eerste veld
 | Minuten | Ja | 0-59 | `, - * /` |
 | Uren | Ja | 0-23 | `, - * /` |
 | Dag van de maand | Ja | 1-31 | `, - * ? / L W` |
-| Month | Ja | 1-12, JAN-DEC | `, - * /` |
+| Maand | Ja | 1-12, JAN-DEC | `, - * /` |
 | Dag van de week | Ja | 1-7, SUN-SAT | `, - * ? / L #` |
-| Year | Nee | Leeg, 1970-2099 | `, - * /` |
+| Jaar | Nee | Leeg, 1970-2099 | `, - * /` |
 
 >[!NOTE]
 >

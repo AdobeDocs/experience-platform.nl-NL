@@ -4,8 +4,9 @@ solution: Data Collection
 user-guide-title: Edge Network Server API-documentatie
 breadcrumb-title: Edge Network Server API-documentatie
 user-guide-description: Gebruik de Edge Network Server-API voor gegevensverzameling, personalisatie, advertenties en het maken van gebruiksscenario's met Experience Cloud of Experience Platform Edge-services.
-feature: Data Collection
-source-git-commit: f7b6154166ccd7989c563115e99717937cfe9a5d
+feature: Server API
+role: Developer
+source-git-commit: 49adc892e19a4e781272db35d35616bf3c50b985
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 55%

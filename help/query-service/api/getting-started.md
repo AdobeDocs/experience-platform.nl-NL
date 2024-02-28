@@ -3,10 +3,11 @@ keywords: Experience Platform;thuis;populaire onderwerpen;de vraagdienst;de dien
 solution: Experience Platform
 title: API-handleiding voor query-service
 description: Met de API van de Query Service kunnen ontwikkelaars hun Adobe Experience Platform-gegevens opvragen met behulp van standaard SQL. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
+role: Developer
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '396'
 ht-degree: 4%
 
 ---
@@ -17,10 +18,10 @@ Deze handleiding voor ontwikkelaars bevat stappen voor het uitvoeren van verschi
 
 ## Aan de slag
 
-Deze handleiding vereist een goed begrip van de verschillende Adobe Experience Platform-services die betrokken zijn bij het gebruik van [!DNL Query Service].
+Deze handleiding vereist een goed begrip van de verschillende Adobe Experience Platform-services die bij het gebruik van [!DNL Query Service].
 
 - [[!DNL Query Service]](../home.md): Verstrekt de capaciteit om datasets te vragen en de resulterende vragen als nieuwe datasets in te vangen [!DNL Experience Platform].
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
 - [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u moet weten om deze te kunnen gebruiken [!DNL Query Service] met de API.
@@ -43,7 +44,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Voor meer informatie over het werken met sandboxen in [!DNL Experience Platform], zie de [sandboxen, overzichtsdocumentatie](../../sandboxes/home.md).
+>Voor meer informatie over het werken met sandboxen in [!DNL Experience Platform], zie de [sandboxen - documentatie](../../sandboxes/home.md).
 
 ## Voorbeeld-API-aanroepen
 
@@ -59,4 +60,4 @@ Nu u begrijpt welke kopballen aan gebruik zijn, bent u bereid beginnen het richt
 
 ## Volgende stappen
 
-Nu hebt u geleerd hoe te om vraag te maken gebruikend [!DNL Query Service] API, kunt u uw eigen niet-interactieve vragen tot stand brengen. Lees voor meer informatie over het maken van query&#39;s de [SQL-naslaggids](../sql/overview.md).
+Nu hebt u geleerd hoe te om vraag te maken gebruikend [!DNL Query Service] API, kunt u uw eigen niet-interactieve vragen maken. Lees voor meer informatie over het maken van query&#39;s de [SQL-naslaggids](../sql/overview.md).

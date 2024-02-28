@@ -3,15 +3,16 @@ keywords: Experience Platform;home;populaire onderwerpen;Beleidshandhaving;marke
 solution: Experience Platform
 title: API-eindpunt voor marketinghandelingen
 description: Een marketingactie in het kader van de Adobe Experience Platform Data Governance is een actie die een consument van gegevens uit een Experience Platform neemt en waarvoor moet worden gecontroleerd op schendingen van het beleid inzake gegevensgebruik.
+role: Developer
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '734'
 ht-degree: 0%
 
 ---
 
-# Eindpunt marketingacties
+# Eindpunt van marketingacties
 
 Een marketingactie in het kader van de Adobe Experience Platform Data Governance is een actie die [!DNL Experience Platform] gegevens die de consument nodig heeft en waarvoor moet worden gecontroleerd op overtredingen van het beleid inzake gegevensgebruik.
 
@@ -47,7 +48,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie retourneert de details voor elke opgehaalde marketingactie, inclusief de bijbehorende `name` en `href`. De `href` waarde wordt gebruikt om de marketingactie te identificeren wanneer [gegevensgebruiksbeleid maken](policies.md#create-policy).
+Een geslaagde reactie retourneert de details voor elke opgehaalde marketingactie, inclusief de bijbehorende `name` en `href`. De `href` waarde wordt gebruikt om de marketingactie te identificeren wanneer [gegevensgebruiksbeleid maken](policies.md#create-policy).
 
 ```json
 {
@@ -121,7 +122,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een aangepaste marketingactie opgehaald met de naam `combineData`.
+Met het volgende verzoek wordt een aangepaste marketingactie met de naam `combineData`.
 
 ```shell
 curl -X GET \
@@ -134,7 +135,7 @@ curl -X GET \
 
 **Antwoord**
 
-Het reactieobject bevat de details voor de marketingactie, inclusief het pad (`_links.self.href`) nodig zijn om te verwijzen naar de marketingactie wanneer [gegevensgebruiksbeleid definiëren](policies.md#create-policy) (`marketingActionsRefs`).
+Het reactieobject bevat de details voor de marketingactie, inclusief het pad (`_links.self.href`) nodig zijn om te verwijzen naar de marketingactie wanneer [een beleid voor gegevensgebruik definiëren](policies.md#create-policy) (`marketingActionsRefs`).
 
 ```JSON
 {
@@ -194,7 +195,7 @@ curl -X PUT \
 
 **Antwoord**
 
-Als de reactie succesvol was, worden de details van de marketingactie geretourneerd. Als een bestaande marketing actie werd bijgewerkt, keert de reactie HTTP status 200 (O.K.) terug. Als een nieuwe marketing actie werd gecreeerd, keert de reactie HTTP status 201 (Gemaakt) terug.
+Als de reactie succesvol was, worden de details van de marketingactie geretourneerd. Als een bestaande marketingactie is bijgewerkt, retourneert de reactie HTTP-status 200 (OK). Als een nieuwe marketing actie werd gecreeerd, keert de reactie HTTP status 201 (Gemaakt) terug.
 
 ```JSON
 {

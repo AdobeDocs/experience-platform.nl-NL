@@ -3,10 +3,11 @@ keywords: Experience Platform;huis;populaire onderwerpen;api;Op attributen-Gebas
 solution: Experience Platform
 title: API-eindpunt voor producten
 description: Het /products eindpunt in op attributen-Gebaseerde Controle API van de Toegang staat u toe om producten in Adobe Experience Platform programmatically te beheren.
+role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '513'
 ht-degree: 1%
 
 ---
@@ -64,7 +65,7 @@ Een succesvolle reactie keert een lijst van gerechtigde producten terug die tot 
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `id` | De bijbehorende id van het betrokken product. |
-| `name` | De naam van het betrokken product. |
+| `name` | De naam van het product waarop de vraag betrekking heeft. |
 | `serviceCode` | De overeenkomstige dienstcode van het onderzochte product. |
 
 ## Machtigingscategorieën opzoeken op product-id

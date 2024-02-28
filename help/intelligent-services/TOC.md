@@ -4,9 +4,10 @@ audience: user
 user-guide-title: Hulp bij Intelligent Services
 breadcrumb-title: Handleiding voor Intelligent Services
 user-guide-description: Gebruik intelligente AI-services om scores te genereren, inzichten te ontdekken en segmenten te maken op basis van uw marketinggebeurtenisgegevens.
-source-git-commit: a8a721cde2ebd68e72a1ee36b6d9274792474b3d
+role: User
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '136'
 ht-degree: 23%
 
 ---
@@ -23,7 +24,7 @@ ht-degree: 23%
    - [Handleiding gebruikersinterface](attribution-ai/user-guide.md)
    - [Inzichten ontdekken](attribution-ai/discover-insights.md)
    - [Muziek downloaden](attribution-ai/download-scores.md)
-   - Gegevensbeheer {#aai-data-governance}
+   - Data Governance {#aai-data-governance}
       - [Toegangsbesturingselementen](attribution-ai/aai-data-governance/access-controls.md)
       - [Controlelogboeken](attribution-ai/aai-data-governance/audit-logs.md)
       - [Door de klant beheerde sleutels](attribution-ai/aai-data-governance/customer-managed-keys.md)
@@ -48,7 +49,7 @@ ht-degree: 23%
       - [Segmenten maken met behulp van AI-scores van de klant](customer-ai/user-guide/create-segment.md)
       - [Muziek downloaden](customer-ai/user-guide/download-scores.md)
    - [Problemen oplossen](customer-ai/troubleshooting.md)
-   - Gegevensbeheer {#cai-data-governance}
+   - Data Governance {#cai-data-governance}
       - [Toegangsbesturingselementen](customer-ai/cai-data-governance/access-controls.md)
       - [Controlelogboeken](customer-ai/cai-data-governance/audit-logs.md)
       - [Door de klant beheerde sleutels](customer-ai/cai-data-governance/customer-managed-keys.md)

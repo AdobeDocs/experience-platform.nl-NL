@@ -3,8 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;naamruimte;Naamruimte;n
 solution: Experience Platform
 title: Een aangepaste naamruimte maken in de API voor de identiteitsservice
 description: Met de API Naamruimte-id kunt u een naamruimte voor een aangepaste identiteit maken die alleen voor uw organisatie beschikbaar is.
+role: Developer
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 1%

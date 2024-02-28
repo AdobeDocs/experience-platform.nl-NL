@@ -4,7 +4,8 @@ user-guide-title: Hulp bij Adobe Experience Platform Privacy Service
 breadcrumb-title: Handleiding voor Privacy Service
 user-guide-description: Beheer verzoeken om klantgegevens om te voldoen aan wettelijke privacyregelgeving zoals AVG en CCPA.
 feature: Privacy
-source-git-commit: 7f2f1f9669d4f750baf6992ed5686fb622e2bb65
+role: User,Admin
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 36%

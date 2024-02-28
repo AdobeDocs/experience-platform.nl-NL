@@ -3,10 +3,11 @@ keywords: Experience Platform;thuis;populaire onderwerpen;identiteit;Identiteit
 solution: Experience Platform
 title: Identiteitskoppelingen weergeven
 description: Een toewijzing is een verzameling van alle identiteiten in een cluster, voor een opgegeven naamruimte.
+role: Developer
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **Verzoek**
 
-Optie 1: De identiteit opgeven als naamruimte (`nsId`, op ID) en ID-waarde (`id`).
+Optie 1: Geef de identiteit op als naamruimte (`nsId`, op ID) en ID-waarde (`id`).
 
 ```shell
 curl -X GET \
@@ -38,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 2: De identiteit opgeven als naamruimte (`ns`, op naam) en ID-waarde (`id`).
+Optie 2: Geef de identiteit op als naamruimte (`ns`, op naam) en ID-waarde (`id`).
 
 ```shell
 curl -X GET \
@@ -49,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 3: De identiteit opgeven als XID (`xid`). Zie de sectie over dit document voor meer informatie over het verkrijgen van de XID van een identiteit [XID ophalen voor een identiteit](./list-native-id.md).
+Optie 3: Geef de identiteit op als XID (`xid`). Zie de sectie over dit document voor meer informatie over het verkrijgen van de XID van een identiteit [XID ophalen voor een identiteit](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -76,7 +77,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 
 **Aanvragingsinstantie**
 
-Optie 1: Geef een lijst op met XID&#39;s waarvoor toewijzingen moeten worden opgehaald.
+Optie 1: Geef een lijst op met XID&#39;s waarvoor u toewijzingen wilt ophalen.
 
 ```shell
 {
@@ -85,7 +86,7 @@ Optie 1: Geef een lijst op met XID&#39;s waarvoor toewijzingen moeten worden opg
 }
 ```
 
-Optie 2: Geef een lijst met identiteiten op als samengestelde id&#39;s, waarbij elke naam de id-waarde en naamruimte bevat via naamruimte-id. In dit voorbeeld wordt het gebruik van deze methode getoond terwijl de standaardinstelling wordt overschreven `graph-type` van &quot;Private Graph&quot;.
+Optie 2: Geef een lijst met identiteiten op als samengestelde id&#39;s, waarbij elke naam de ID-waarde en naamruimte bevat via naamruimte-id. In dit voorbeeld wordt het gebruik van deze methode getoond terwijl de standaardwaarde wordt overschreven `graph-type` van &quot;Private Graph&quot;.
 
 ```shell
 {
@@ -183,7 +184,7 @@ Als er geen verwante identiteiten zijn gevonden met de opgegeven invoer, en `HTT
 ```
 
 - `lastAssociationTime`: De tijdstempel wanneer de invoeridentiteit voor het laatst aan deze identiteit is gekoppeld.
-- `regions`: Verstrekt `regionId` en `lastAssociationTime` waar de identiteit werd gezien.
+- `regions`: levert de `regionId` en `lastAssociationTime` waar de identiteit werd gezien.
 
 ## Volgende stappen
 

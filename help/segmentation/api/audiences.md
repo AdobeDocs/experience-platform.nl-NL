@@ -1,8 +1,9 @@
 ---
 title: API-eindpunt voor soorten publiek
 description: Gebruik het publiek eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform om, publiek voor uw organisatie programmatically tot stand te brengen te beheren en bij te werken.
+role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1879'
 ht-degree: 0%

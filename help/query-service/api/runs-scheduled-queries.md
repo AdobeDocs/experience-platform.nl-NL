@@ -3,10 +3,11 @@ keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;stel gep
 solution: Experience Platform
 title: Het geplande Eindpunt van de Vraag loopt API
 description: De volgende secties lopen door de diverse API vraag u voor het runnen van geplande vragen met de Dienst API van de Vraag kunt maken.
+role: Developer
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: e9639cb90a561adc59388ac77984edaf90f4bfdd
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---

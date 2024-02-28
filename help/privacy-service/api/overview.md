@@ -1,10 +1,11 @@
 ---
 title: Handleiding voor Privacy Service-API
 description: Leer hoe u de Privacy Service-API kunt gebruiken voor het programmatisch beheren van privacytaken voor ondersteunde Adobe Experience Cloud-toepassingen.
+role: Developer
 exl-id: 665466ac-2447-4a9d-a8cf-62092c09e431
-source-git-commit: bda8d0ee1db4b58b4b856a23a8790cd7f76c0656
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ De Privacy Service-API bevat verschillende eindpunten waarmee u via programmacod
 >
 >In deze handleiding wordt uitgelegd hoe u de [!DNL Privacy Service] API. Voor meer informatie over het gebruik van de gebruikersinterface raadpleegt u de [Overzicht van de gebruikersinterface voor Privacys Service](../ui/overview.md).
 
-Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naar de [Privacy Service API-naslaggids](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
+Ga naar de [Privacy Service API-naslaggids](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
 
 ## Privacytaken
 
@@ -31,4 +32,4 @@ Bepaalde voorschriften vereisen uitdrukkelijke toestemming van de klant voordat 
 
 ## Volgende stappen
 
-Om te beginnen het maken van vraag gebruikend Privacy Service API, lees [gids Aan de slag](./getting-started.md) Selecteer vervolgens een van de eindpunthulplijnen om te leren hoe u specifieke eindpunten kunt gebruiken.
+Als u begint met het maken van aanroepen met de Privacy Service-API, leest u de [gids Aan de slag](./getting-started.md) Selecteer vervolgens een van de eindpunthulplijnen om te leren hoe u specifieke eindpunten kunt gebruiken.

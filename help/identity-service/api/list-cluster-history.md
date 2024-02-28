@@ -3,10 +3,11 @@ keywords: Experience Platform;thuis;populaire onderwerpen;identiteiten;clusterge
 solution: Experience Platform
 title: Cluster-geschiedenis van een identiteit ophalen
 description: Identiteiten kunnen clusters bewegen tijdens de uitvoering van verschillende apparaatgrafieken. De Dienst van de identiteit verstrekt zicht in de clusterverenigingen van een bepaalde identiteit in tijd.
+role: Developer
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -30,7 +31,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 
 **Verzoek**
 
-Optie 1: De identiteit opgeven als naamruimte (`nsId`, op ID) en ID-waarde (`id`).
+Optie 1: Geef de identiteit op als naamruimte (`nsId`, op ID) en ID-waarde (`id`).
 
 ```shell
 curl -X GET \
@@ -41,7 +42,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 2: De identiteit opgeven als naamruimte (`ns`, op naam) en ID-waarde (`id`).
+Optie 2: Geef de identiteit op als naamruimte (`ns`, op naam) en ID-waarde (`id`).
 
 ```shell
 curl -X GET \
@@ -52,7 +53,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 3: De identiteit opgeven als XID (`xid`). Zie de sectie over dit document voor meer informatie over het verkrijgen van de XID van een identiteit [XID ophalen voor een identiteit](./list-native-id.md).
+Optie 3: Geef de identiteit op als XID (`xid`). Zie de sectie over dit document voor meer informatie over het verkrijgen van de XID van een identiteit [XID ophalen voor een identiteit](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -79,7 +80,7 @@ POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 
 **Aanvragingsinstantie**
 
-Optie 1: Geef een lijst op met XID&#39;s waarvoor clusterleden moeten worden opgehaald.
+Optie 1: Geef een lijst op met XID&#39;s waarvoor u clusterleden wilt ophalen.
 
 ```shell
 {

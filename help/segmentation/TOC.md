@@ -4,7 +4,8 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Gids voor Segmentation Service
 user-guide-description: Stel doelgroepen samen op basis van uw gegevens voor realtimeklantprofielen met behulp van door Adobe Experience Platform gegenereerde segmentdefinities of externe bronnen.
 feature: Segments
-source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
+role: User
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 22%

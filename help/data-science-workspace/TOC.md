@@ -5,10 +5,11 @@ breadcrumb-title: Handleiding Data Science Workspace
 user-guide-description: Gebruik machine learning om modellen en recepten te ontwikkelen, trainen en scoren met Adobe Sensei- en JupyterLab-laptops.
 feature: Data Science Workspace
 solution: Experience Platform
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+role: User, Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 14%
+source-wordcount: '225'
+ht-degree: 15%
 
 ---
 

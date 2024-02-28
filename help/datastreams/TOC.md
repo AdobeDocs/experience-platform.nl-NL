@@ -5,7 +5,8 @@ user-guide-title: Hulp bij gegevensstromen van Adobe Experience Platform
 breadcrumb-title: Handleiding voor gegevensstromen
 user-guide-description: Leer hoe u gegevensstromen configureert in Adobe Experience Platform.
 feature: Datastreams
-source-git-commit: 6423b6a85873c9c767264ca0e29fbebb62a14b34
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 32%

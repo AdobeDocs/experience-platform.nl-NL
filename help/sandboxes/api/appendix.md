@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;api;API;sandbox;Sandbox;sandbox;sandboxen;Sandboxen
 solution: Experience Platform
-title: Bijlage sandbox API-handleiding
+title: Bijlage API-naslaggids voor sandbox
 description: Dit document bevat aanvullende informatie over het werken met de sandbox-API.
+role: Developer
 exl-id: 48ffea01-f1b4-48c6-a6f5-c321074023d3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---

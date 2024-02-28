@@ -2,9 +2,10 @@
 keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;experimenten;sensei machine learningapi
 solution: Experience Platform
 title: API-eindpunt voor experimenten
-description: Modelontwikkeling en -training vinden plaats op het niveau van de experimenten, waarbij een experiment bestaat uit een MLInstance, trainingsrun en scoring run.
+description: Modelontwikkeling en -training vinden plaats op het niveau van het experiment, waarbij een experiment bestaat uit een MLInstance, training en scoring-run.
+role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 1%
@@ -13,7 +14,7 @@ ht-degree: 1%
 
 # Eind van het experiment
 
-Modelontwikkeling en -training vinden plaats op het niveau van de experimenten, waarbij een experiment bestaat uit een MLInstance, trainingsrun en scoring run.
+Modelontwikkeling en -training vinden plaats op het niveau van het experiment, waarbij een experiment bestaat uit een MLInstance, training en scoring-run.
 
 ## Een experiment maken {#create-an-experiment}
 
@@ -306,7 +307,7 @@ U kunt een bestaande Experiment bijwerken door zijn eigenschappen door een verzo
 
 >[!TIP]
 >
->Om het succes van dit verzoek van de PUT te verzekeren, wordt geadviseerd eerst een verzoek van de GET uit te voeren aan [Het experiment ophalen op id](#retrieve-specific). Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>Om het succes van dit verzoek van de PUT te verzekeren, wordt geadviseerd eerst een verzoek van de GET uit te voeren aan [Het experimenteerprogramma ophalen op id](#retrieve-specific). Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 De volgende voorbeeld-API-aanroep werkt de naam van een expert bij terwijl deze in eerste instantie deze eigenschappen heeft:
 

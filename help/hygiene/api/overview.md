@@ -1,8 +1,9 @@
 ---
 title: API-handleiding voor gegevenshygiëne
 description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch kunt corrigeren of verwijderen.
+role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 0%

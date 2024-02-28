@@ -3,10 +3,11 @@ keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de diens
 solution: Experience Platform
 title: Planningeindpunt
 description: De volgende secties lopen door de diverse API vraag u voor geplande vragen met de Dienst API van de Vraag kunt maken.
+role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1214'
 ht-degree: 0%
 
 ---

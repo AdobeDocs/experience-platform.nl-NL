@@ -3,8 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;api;op attributen-gebas
 solution: Experience Platform
 title: API-handleiding voor toegangsbeheer op basis van kenmerken
 description: Met de API voor toegangsbeheer op basis van kenmerken kunt u rollen en toegangsbeleid in Adobe Experience Platform programmatisch beheren. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
+role: Developer
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 4%
@@ -19,7 +20,7 @@ De op attribuut-gebaseerde toegangsbeheer API wordt gebruikt om tot rollen, prod
 
 >[!IMPORTANT]
 >
->Op attributen-gebaseerde toegangsbeheer moet niet met de mogelijkheden van het gegevensbeheer van het Experience Platform worden verward, die u toestaan om etiketten en beleid te gebruiken om te controleren hoe het gegeven in Platform wordt gebruikt eerder dan welke gebruikers in uw organisatie toegang tot het hebben. Zie de [Handleiding Beleidsservice-API](../../../data-governance/api/overview.md) voor stappen over hoe te om programmatically hefboomwerking deze mogelijkheden te gebruiken.
+>Op attributen-gebaseerde toegangscontrole moet niet met de mogelijkheden van het gegevensbeheer van het Experience Platform worden verward, die u toestaan om etiketten en beleid te gebruiken om te controleren hoe het gegeven in Platform eerder wordt gebruikt dan welke gebruikers in uw organisatie toegang tot het hebben. Zie de [Handleiding Beleidsservice-API](../../../data-governance/api/overview.md) voor stappen over hoe te om programmatically hefboomwerking deze mogelijkheden te gebruiken.
 
 Deze eindpunten worden hieronder beschreven. Ga naar de afzonderlijke eindpunthulplijnen voor meer informatie en raadpleeg de [gids Aan de slag](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lees steekproefAPI vraag, en meer.
 

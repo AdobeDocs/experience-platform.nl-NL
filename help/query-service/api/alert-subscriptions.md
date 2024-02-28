@@ -2,17 +2,18 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;vraagdienst;de dienst van de vraag;alarm;
 title: Alert Subscriptions Endpoint
 description: Deze gids verstrekt steekproefHTTP- verzoeken en reacties voor diverse API vraag u aan het waakzame abonnementseindpunt met de Dienst API van de Vraag kunt maken.
+role: Developer
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '2661'
+source-wordcount: '2666'
 ht-degree: 0%
 
 ---
 
 # Alert Abonnementen, eindpunt
 
-Met Adobe Experience Platform Query Service kunt u zich abonneren op waarschuwingen voor zowel ad-hocquery&#39;s als geplande query&#39;s. Waarschuwingen kunnen via e-mail worden ontvangen, binnen de gebruikersinterface van het Platform of beide. De inhoud van het bericht is hetzelfde voor waarschuwingen in het Platform en e-mailwaarschuwingen. Op dit moment kunnen querywaarschuwingen alleen worden geabonneerd op [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/).
+Met Adobe Experience Platform Query Service kunt u zich abonneren op waarschuwingen voor zowel ad-hocquery&#39;s als geplande query&#39;s. Waarschuwingen kunnen via e-mail worden ontvangen, binnen de gebruikersinterface van het platform of beide. De inhoud van de melding is gelijk voor waarschuwingen binnen het platform en e-mailwaarschuwingen. Op dit moment kunnen querywaarschuwingen alleen worden geabonneerd op [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/).
 
 >[!IMPORTANT]
 >
@@ -57,7 +58,7 @@ GET /alert-subscriptions?{QUERY_PARAMETERS}
 | --------- | ----------- |
 | `{QUERY_PARAMETERS}` | (Facultatief) Parameters die aan de verzoekweg worden toegevoegd die de resultaten vormen in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (&amp;). De beschikbare parameters worden hieronder weergegeven. |
 
-**Parameters query**
+**Query-parameters**
 
 Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van query&#39;s. Al deze parameters zijn optioneel. Het maken van een vraag aan dit eindpunt zonder parameters zal alle vragen terugwinnen beschikbaar voor uw organisatie.
 
@@ -86,7 +87,7 @@ Een geslaagde reactie retourneert een HTTP 200-status en de `alerts` array met p
 
 >[!NOTE]
 >
->De `alerts._links` object in het `alerts` array is afgekapt voor beknoptheid. Een volledig voorbeeld van het `alerts._links` kan worden gevonden in het dialoogvenster [antwoord op het verzoek van de POST](#subscribe-users).
+>De `alerts._links` object in het `alerts` array is afgekapt voor beknoptheid. Een volledig voorbeeld van het `alerts._links` kan worden gevonden in het dialoogvenster [antwoord van de POST](#subscribe-users).
 
 ```json
 {
@@ -152,9 +153,9 @@ Een geslaagde reactie retourneert een HTTP 200-status en de `alerts` array met p
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `alerts.assetId` | De vraag-id die aan de waarschuwing met een bepaalde query is gekoppeld. |
-| `alerts.id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing is opgeslagen, de `alertType`en de flow-id. Informatie over de beschikbare waarschuwingen vindt u in de [Documentatie van het dashboard met waarschuwingen voor Platforms](../../observability/alerts/ui.md). |
+| `alerts.id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing is opgeslagen, de `alertType`en de flow-id. Informatie over de beschikbare waarschuwingen vindt u in het gedeelte [Documentatie van het dashboard voor platformwaarschuwingen](../../observability/alerts/ui.md). |
 | `alerts.status` | De waarschuwing heeft vier statuswaarden: `enabled`, `enabling`, `disabled`, en `disabling`. Een waarschuwing luistert actief naar de gebeurtenissen, gepauzeerd voor toekomstig gebruik terwijl het behouden van alle relevante abonnees en montages, of het overgaan tussen deze staten. |
-| `alerts.alertType` | Het type waarschuwing. Er zijn drie mogelijke waarden voor een waarschuwing: <ul><li>`start`: Hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: Meldt de gebruiker wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
+| `alerts.alertType` | Het type waarschuwing. Er zijn drie mogelijke waarden voor een waarschuwing: <ul><li>`start`: Hiermee wordt een gebruiker op de hoogte gesteld wanneer de uitvoering van de query is gestart.</li><li>`success`: Hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
 | `alerts._links` | Verstrekt informatie over de beschikbare methodes en de eindpunten die kunnen worden gebruikt om, informatie terug te winnen bij te werken uit te geven of te schrappen met betrekking tot deze waakzame identiteitskaart |
 | `_page` | Het object bevat eigenschappen die de volgorde, grootte, het totale aantal pagina&#39;s en de huidige pagina beschrijven. |
 | `_links` | Het object bevat URI-verwijzingen waarmee de volgende of vorige pagina met bronnen kan worden opgehaald. |
@@ -281,11 +282,11 @@ Een geslaagde reactie retourneert de HTTP-status 200 en de `alerts` array die ab
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `assetId` | De waarschuwing is gekoppeld aan deze id. De id kan een query-id of een planning-id zijn. |
-| `id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing is opgeslagen, de `alertType`en de flow-id. Informatie over de beschikbare waarschuwingen vindt u in de [Documentatie van het dashboard met waarschuwingen voor Platforms](../../observability/alerts/ui.md). |
+| `id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing is opgeslagen, de `alertType`en de flow-id. Informatie over de beschikbare waarschuwingen vindt u in het gedeelte [Documentatie van het dashboard voor platformwaarschuwingen](../../observability/alerts/ui.md). |
 | `status` | De waarschuwing heeft vier statuswaarden: `enabled`, `enabling`, `disabled`, en `disabling`. Een waarschuwing luistert actief naar de gebeurtenissen, gepauzeerd voor toekomstig gebruik terwijl het behouden van alle relevante abonnees en montages, of het overgaan tussen deze staten. |
-| `alertType` | Elke waarschuwing kan drie verschillende waarschuwingstypen hebben. Het zijn: <ul><li>`start`: Hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: Meldt de gebruiker wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
+| `alertType` | Elke waarschuwing kan drie verschillende waarschuwingstypen hebben. Het zijn: <ul><li>`start`: Hiermee wordt een gebruiker op de hoogte gesteld wanneer de uitvoering van de query is gestart.</li><li>`success`: Hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
 | `subscriptions.emailNotifications` | Een array met Adobe geregistreerde e-mailadressen voor gebruikers die zich hebben geabonneerd om e-mails voor de waarschuwing te ontvangen. |
-| `subscriptions.inContextNotifications` | Een array met Adobe geregistreerde e-mailadressen voor gebruikers die zich hebben geabonneerd op UI-meldingen voor de waarschuwing. |
+| `subscriptions.inContextNotifications` | Een array met Adobe geregistreerde e-mailadressen voor gebruikers die zijn geabonneerd op UI-meldingen voor de waarschuwing. |
 
 ## Hiermee worden abonnementsgegevens voor een bepaalde query of planning-id en een waarschuwingstype opgehaald {#get-alert-info-by-id-and-alert-type}
 
@@ -300,7 +301,7 @@ GET /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parameters | Beschrijving |
 | -------- | ----------- |
-| `ALERT_TYPE` | This property describes the state of query implementation that triggers an alert. Het antwoord bevat alleen waarschuwingsabonnementsgegevens voor dit type waarschuwingen. Elke waarschuwing kan drie verschillende waarschuwingstypen hebben. Het zijn: <ul><li>`start`: Hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: Meldt de gebruiker wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
+| `ALERT_TYPE` | This property describes the state of query implementation that triggers an alert. Het antwoord bevat alleen waarschuwingsabonnementsgegevens voor dit type waarschuwingen. Elke waarschuwing kan drie verschillende waarschuwingstypen hebben. Het zijn: <ul><li>`start`: Hiermee wordt een gebruiker op de hoogte gesteld wanneer de uitvoering van de query is gestart.</li><li>`success`: Hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
 | `QUERY_ID` | De unieke id voor de query die moet worden bijgewerkt. |
 | `SCHEDULE_ID` | De unieke id voor de geplande query die moet worden bijgewerkt. |
 
@@ -318,7 +319,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Antwoord**
 
-Een succesvolle reactie keert een status van HTTP van 200 en alle alarm terug die aan worden geabonneerd. Dit omvat de waarschuwings-id, het type waarschuwing, de Adobe geregistreerde e-mailadressen van de abonnee en het bijbehorende berichtkanaal.
+Een succesvolle reactie keert een status van HTTP van 200 en alle alarm terug die aan worden geabonneerd. Dit omvat de waarschuwings-id, het type waarschuwing, de Adobe van de abonnee geregistreerde e-mailadressen en het bijbehorende berichtkanaal.
 
 ```json
 {
@@ -369,9 +370,9 @@ Een succesvolle reactie keert een status van HTTP van 200 en alle alarm terug di
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `assetId` | De vraag-id die aan de waarschuwing met een bepaalde query is gekoppeld. |
-| `alertType` | Het type waarschuwing. Er zijn drie mogelijke waarden voor een waarschuwing: <ul><li>`start`: Hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: Meldt de gebruiker wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
-| `subscriptions` | Een object dat wordt gebruikt om de Adobe geregistreerde e-mailadressen door te geven die aan de waarschuwingen zijn gekoppeld, en de kanalen waarin de gebruikers de waarschuwingen zullen ontvangen. |
-| `subscriptions.inContextNotifications` | Een array met Adobe geregistreerde e-mailadressen voor gebruikers die zich hebben geabonneerd op UI-meldingen voor de waarschuwing. |
+| `alertType` | Het type waarschuwing. Er zijn drie mogelijke waarden voor een waarschuwing: <ul><li>`start`: Hiermee wordt een gebruiker op de hoogte gesteld wanneer de uitvoering van de query is gestart.</li><li>`success`: Hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
+| `subscriptions` | Een object dat wordt gebruikt voor het doorgeven van de Adobe van geregistreerde e-mailadressen die aan de waarschuwingen zijn gekoppeld, en de kanalen waarin de gebruikers de waarschuwingen zullen ontvangen. |
+| `subscriptions.inContextNotifications` | Een array met Adobe geregistreerde e-mailadressen voor gebruikers die zijn geabonneerd op UI-meldingen voor de waarschuwing. |
 | `subscriptions.emailNotifications` | Een array met Adobe geregistreerde e-mailadressen voor gebruikers die zich hebben geabonneerd om e-mails voor de waarschuwing te ontvangen. |
 
 ## Hiermee wordt een lijst opgehaald met alle waarschuwingen waarop een gebruiker is geabonneerd {#get-alert-subscription-list}
@@ -386,7 +387,7 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 
 | Parameters | Beschrijving |
 | -------- | ----------- |
-| `{EMAIL_ID}` | Een e-mailadres dat is geregistreerd voor een Adobe-account, wordt gebruikt om de gebruikers te identificeren die zijn geabonneerd op waarschuwingen. |
+| `{EMAIL_ID}` | Een e-mailadres dat is geregistreerd bij een Adobe-account, wordt gebruikt om de gebruikers te identificeren die zijn geabonneerd op waarschuwingen. |
 | `orderby` | Het veld dat de volgorde van de resultaten aangeeft. De ondersteunde velden zijn `created` en `updated`. De eigenschapsnaam vooraf samenvoegen met `+` voor oplopende en `-` voor aflopende volgorde. De standaardwaarde is `-created`. Het plusteken (`+`) moet worden afgeschaft `%2B`. Bijvoorbeeld `%2Bcreated` is de waarde voor een oplopende gemaakte volgorde. |
 | `pagesize` | Gebruik deze parameter om het aantal verslagen te controleren u van de API vraag per pagina wilt halen. De standaardlimiet is ingesteld op een maximum van 50 records per pagina. |
 | `page` | Geef het paginanummer op van de geretourneerde resultaten waarvoor u de records wilt zien. |
@@ -499,11 +500,11 @@ Een geslaagde reactie retourneert HTTP-status 200 en de `items` array met bijzon
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `name` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing is opgeslagen, de `alertType`en de flow-id. Informatie over de beschikbare waarschuwingen vindt u in de [Documentatie van het dashboard met waarschuwingen voor Platforms](../../observability/alerts/ui.md). |
+| `name` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing is opgeslagen, de `alertType`en de flow-id. Informatie over de beschikbare waarschuwingen vindt u in het gedeelte [Documentatie van het dashboard voor platformwaarschuwingen](../../observability/alerts/ui.md). |
 | `assetId` | De vraag-id die aan de waarschuwing met een bepaalde query is gekoppeld. |
 | `status` | De waarschuwing heeft vier statuswaarden: `enabled`, `enabling`, `disabled`, en `disabling`. Een waarschuwing luistert actief naar de gebeurtenissen, gepauzeerd voor toekomstig gebruik terwijl het behouden van alle relevante abonnees en montages, of het overgaan tussen deze staten. |
-| `alertType` | Het type waarschuwing. Er zijn drie mogelijke waarden voor een waarschuwing: <ul><li>`start`: Hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: Meldt de gebruiker wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
-| `subscriptions` | Een object dat wordt gebruikt om de Adobe geregistreerde e-mailadressen door te geven die aan de waarschuwingen zijn gekoppeld, en de kanalen waarin de gebruikers de waarschuwingen zullen ontvangen. |
+| `alertType` | Het type waarschuwing. Er zijn drie mogelijke waarden voor een waarschuwing: <ul><li>`start`: Hiermee wordt een gebruiker op de hoogte gesteld wanneer de uitvoering van de query is gestart.</li><li>`success`: Hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
+| `subscriptions` | Een object dat wordt gebruikt voor het doorgeven van de Adobe van geregistreerde e-mailadressen die aan de waarschuwingen zijn gekoppeld, en de kanalen waarin de gebruikers de waarschuwingen zullen ontvangen. |
 | `subscriptions.inContextNotifications` | Een Booleaanse waarde die bepaalt hoe gebruikers waarschuwingsmeldingen ontvangen. A `true` waarde bevestigt dat waarschuwingen via de gebruikersinterface moeten worden verstrekt. A `false` zorgt ervoor dat de gebruikers niet via dat kanaal op de hoogte worden gesteld. |
 | `subscriptions.emailNotifications` | Een Booleaanse waarde die bepaalt hoe gebruikers waarschuwingsmeldingen ontvangen. A `true` value bevestigt dat waarschuwingen via e-mail moeten worden verzonden . A `false` zorgt ervoor dat de gebruikers niet via dat kanaal op de hoogte worden gesteld. |
 
@@ -547,9 +548,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `assetId` | De waarschuwing is gekoppeld aan deze id. De id kan een query-id of een planning-id zijn. |
-| `alertType` | Het type waarschuwing. Er zijn drie mogelijke waarden voor een waarschuwing: <ul><li>`start`: Hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: Meldt de gebruiker wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
-| `subscriptions` | Een object dat wordt gebruikt om de Adobe geregistreerde e-mailadressen door te geven die aan de waarschuwingen zijn gekoppeld, en de kanalen waarin de gebruikers de waarschuwingen zullen ontvangen. |
-| `subscriptions.emailIds` | Een array met e-mailadressen om de gebruikers te identificeren die de waarschuwingen moeten ontvangen. De e-mailadressen **moet** worden geregistreerd bij een Adobe-account. |
+| `alertType` | Het type waarschuwing. Er zijn drie mogelijke waarden voor een waarschuwing: <ul><li>`start`: Hiermee wordt een gebruiker op de hoogte gesteld wanneer de uitvoering van de query is gestart.</li><li>`success`: Hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
+| `subscriptions` | Een object dat wordt gebruikt voor het doorgeven van de Adobe van geregistreerde e-mailadressen die aan de waarschuwingen zijn gekoppeld, en de kanalen waarin de gebruikers de waarschuwingen zullen ontvangen. |
+| `subscriptions.emailIds` | Een array met e-mailadressen om de gebruikers te identificeren die de waarschuwingen moeten ontvangen. De e-mailadressen **moet** worden geregistreerd op een Adobe-account. |
 | `subscriptions.inContextNotifications` | Een Booleaanse waarde die bepaalt hoe gebruikers waarschuwingsmeldingen ontvangen. A `true` waarde bevestigt dat waarschuwingen via de gebruikersinterface moeten worden verstrekt. A `false` zorgt ervoor dat de gebruikers niet via dat kanaal op de hoogte worden gesteld. |
 | `subscriptions.emailNotifications` | Een Booleaanse waarde die bepaalt hoe gebruikers waarschuwingsmeldingen ontvangen. A `true` value bevestigt dat waarschuwingen via e-mail moeten worden verzonden . A `false` zorgt ervoor dat de gebruikers niet via dat kanaal op de hoogte worden gesteld. |
 
@@ -600,7 +601,7 @@ Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met details v
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing is opgeslagen, de `alertType`en de flow-id. Informatie over de beschikbare waarschuwingen vindt u in de [Documentatie van het dashboard met waarschuwingen voor Platforms](../../observability/alerts/ui.md). |
+| `id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing is opgeslagen, de `alertType`en de flow-id. Informatie over de beschikbare waarschuwingen vindt u in het gedeelte [Documentatie van het dashboard voor platformwaarschuwingen](../../observability/alerts/ui.md). |
 | `_links` | Verstrekt informatie over de beschikbare methodes en de eindpunten die kunnen worden gebruikt om, informatie terug te winnen bij te werken uit te geven of te schrappen met betrekking tot deze waakzame identiteitskaart |
 
 ## Een waarschuwing in- of uitschakelen {#enable-or-disable-alert}
@@ -616,7 +617,7 @@ PATCH /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parameters | Beschrijving |
 | -------- | ----------- |
-| `ALERT_TYPE` | Het type waarschuwing. Er zijn drie mogelijke waarden voor een waarschuwing: <ul><li>`start`: Hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: Meldt de gebruiker wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul>U moet het huidige waakzame type in eindpuntnamespace specificeren om het te veranderen. |
+| `ALERT_TYPE` | Het type waarschuwing. Er zijn drie mogelijke waarden voor een waarschuwing: <ul><li>`start`: Hiermee wordt een gebruiker op de hoogte gesteld wanneer de uitvoering van de query is gestart.</li><li>`success`: Hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul>U moet het huidige waakzame type in eindpuntnamespace specificeren om het te veranderen. |
 | `QUERY_ID` | De unieke id voor de query die moet worden bijgewerkt. |
 | `SCHEDULE_ID` | De unieke id voor de geplande query die moet worden bijgewerkt. |
 
@@ -660,9 +661,9 @@ Een succesvolle reactie keert status 200 van HTTP met details van de waakzame st
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing is opgeslagen, de `alertType`en de flow-id. Informatie over de beschikbare waarschuwingen vindt u in de [Documentatie van het dashboard met waarschuwingen voor Platforms](../../observability/alerts/ui.md). |
+| `id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing is opgeslagen, de `alertType`en de flow-id. Informatie over de beschikbare waarschuwingen vindt u in het gedeelte [Documentatie van het dashboard voor platformwaarschuwingen](../../observability/alerts/ui.md). |
 | `assetId` | De waarschuwing is gekoppeld aan deze id. De id kan een query-id of een planning-id zijn. |
-| `alertType` | Elke waarschuwing kan drie verschillende waarschuwingstypen hebben. Het zijn: <ul><li>`start`: Hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: Meldt de gebruiker wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
+| `alertType` | Elke waarschuwing kan drie verschillende waarschuwingstypen hebben. Het zijn: <ul><li>`start`: Hiermee wordt een gebruiker op de hoogte gesteld wanneer de uitvoering van de query is gestart.</li><li>`success`: Hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
 | `status` | De waarschuwing heeft vier statuswaarden: `enabled`, `enabling`, `disabled`, en `disabling`. Een waarschuwing luistert actief naar de gebeurtenissen, gepauzeerd voor toekomstig gebruik terwijl het behouden van alle relevante abonnees en montages, of het overgaan tussen deze staten. |
 
 ## De waarschuwing voor een bepaald type query en waarschuwing verwijderen {#delete-alert-info-by-id-and-alert-type}
@@ -676,7 +677,7 @@ DELETE /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parameters | Beschrijving |
 | -------- | ----------- |
-| `ALERT_TYPE` | Het type waarschuwing. Er zijn drie mogelijke waarden voor een waarschuwing: <ul><li>`start`: Hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: Meldt de gebruiker wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> De DELETE-aanvraag geldt alleen voor het specifieke type waarschuwing dat wordt gegeven. |
+| `ALERT_TYPE` | Het type waarschuwing. Er zijn drie mogelijke waarden voor een waarschuwing: <ul><li>`start`: Hiermee wordt een gebruiker op de hoogte gesteld wanneer de uitvoering van de query is gestart.</li><li>`success`: Hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> De DELETE-aanvraag geldt alleen voor het specifieke type waarschuwing dat wordt gegeven. |
 | `QUERY_ID` | De unieke id voor de query die moet worden bijgewerkt. |
 | `SCHEDULE_ID` | De unieke id voor de geplande query die moet worden bijgewerkt. |
 

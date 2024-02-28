@@ -1,23 +1,24 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
-title: API-eindpunt voor profielsysteemtaken
+title: API-eindpunt voor systeemtaken profiel
 type: Documentation
 description: Met Adobe Experience Platform kunt u een gegevensset of batch verwijderen uit de profielopslag om gegevens van het realtime-klantprofiel te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de profiel-API gebruiken om een profielsysteemtaak te maken of een aanvraag te verwijderen.
+role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1316'
+source-wordcount: '1313'
 ht-degree: 1%
 
 ---
 
-# Het taakeindpunt van het profielsysteem (verzoeken van de Schrapping)
+# Het taakeindpunt van het profielsysteem (verzoeken schrappen)
 
 Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor individuele klanten maken. Gegevens ingevoerd in [!DNL Platform] wordt opgeslagen in het dialoogvenster [!DNL Data Lake]en als de gegevenssets zijn ingeschakeld voor Profiel, worden die gegevens opgeslagen in de [!DNL Real-Time Customer Profile] ook gegevens opslaan. Soms kan het nodig zijn om een gegevensset of batch uit de profielopslag te verwijderen om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de [!DNL Real-Time Customer Profile] API om een [!DNL Profile] systeemtaak, of `delete request`, die indien nodig ook kunnen worden gewijzigd, bewaakt of verwijderd.
 
 >[!NOTE]
 >
->Als u gegevenssets of batches wilt verwijderen uit het dialoogvenster [!DNL Data Lake], bezoek de [Overzicht van Catalog Service](../../catalog/home.md) voor meer informatie .
+>Als u gegevenssets of batches wilt verwijderen uit het dialoogvenster [!DNL Data Lake], ga naar de [Overzicht van Catalog Service](../../catalog/home.md) voor meer informatie .
 
 ## Aan de slag
 
@@ -95,7 +96,7 @@ De reactie bevat een array &#39;children&#39; met een object voor elke verwijder
 | `_page.next` | Als er nog een pagina met resultaten is, bekijkt u de volgende pagina met resultaten door de id-waarde te vervangen in een [opzoekverzoek](#view-a-specific-delete-request) met de `"next"` opgegeven waarde. |
 | `jobType` | Het type taak dat wordt gemaakt. In dit geval wordt altijd geretourneerd `"DELETE"`. |
 | `status` | De status van de verwijderaanvraag. Mogelijke waarden zijn `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | Een object dat het aantal records bevat dat is verwerkt (`"recordsProcessed"`) en de tijd in seconden dat de aanvraag is verwerkt of hoe lang de aanvraag is voltooid (`"timeTakenInSec"`). |
+| `metrics` | Een object dat het aantal records bevat dat is verwerkt (`"recordsProcessed"`) en de tijd in seconden dat de aanvraag is verwerkt of hoe lang de aanvraag heeft geduurd om te voltooien (`"timeTakenInSec"`). |
 
 ## Een verwijderaanvraag maken {#create-a-delete-request}
 
@@ -269,7 +270,7 @@ In het antwoord worden de details van het verwijderingsverzoek weergegeven, incl
 |---|---|
 | `jobType` | Het type baan dat wordt gecreeerd, in dit geval zal het altijd terugkeren `"DELETE"`. |
 | `status` | De status van de verwijderaanvraag. Mogelijke waarden: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | Een array die het aantal records bevat dat is verwerkt (`"recordsProcessed"`) en de tijd in seconden dat de aanvraag is verwerkt of hoe lang de aanvraag is voltooid (`"timeTakenInSec"`). |
+| `metrics` | Een array die het aantal records bevat dat is verwerkt (`"recordsProcessed"`) en de tijd in seconden dat de aanvraag is verwerkt of hoe lang de aanvraag heeft geduurd om te voltooien (`"timeTakenInSec"`). |
 
 Zodra de status van het verwijderingsverzoek is `"COMPLETED"` U kunt bevestigen dat de gegevens zijn verwijderd door toegang te krijgen tot de verwijderde gegevens via de API voor gegevenstoegang. Voor instructies over hoe te om de Toegang API van Gegevens te gebruiken om tot datasets en partijen toegang te hebben, te herzien gelieve [Documentatie over gegevenstoegang](../../data-access/home.md).
 

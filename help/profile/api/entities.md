@@ -2,11 +2,12 @@
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
 title: Entiteiten (Profile Access) API-eindpunt
 type: Documentation
-description: Met Adobe Experience Platform hebt u toegang tot realtime gegevens van het klantprofiel met behulp van RESTful-API's of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met behulp van de profiel-API toegang krijgt tot entiteiten, beter bekend als "profielen".
+description: Met Adobe Experience Platform hebt u toegang tot realtime gegevens van het klantprofiel met RESTful-API's of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met behulp van de profiel-API toegang krijgt tot entiteiten, beter bekend als "profielen".
+role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het 
 
 ## Profielgegevens benaderen op identiteit
 
-U hebt toegang tot een [!DNL Profile] door een verzoek tot GET aan de `/access/entities` eindpunt en het verstrekken van de identiteit van de entiteit als reeks vraagparameters. Deze identiteit bestaat uit een ID-waarde (`entityId`) en de naamruimte van de identiteit (`entityIdNS`).
+U kunt een [!DNL Profile] door een verzoek tot GET aan `/access/entities` eindpunt en het verstrekken van de identiteit van de entiteit als reeks vraagparameters. Deze identiteit bestaat uit een ID-waarde (`entityId`) en naamruimte voor identiteit (`entityIdNS`).
 
 De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;). Een volledige lijst van geldige parameters wordt verstrekt in [queryparameters](#query-parameters) het aanhangsel.
 
@@ -117,7 +118,7 @@ curl -X GET \
 >
 >Als een verwante grafiek meer dan 50 identiteiten verbindt, zal deze dienst status 422 van HTTP en het bericht &quot;Te veel verwante identiteiten&quot;terugkeren. Als deze fout optreedt, kunt u wellicht meer queryparameters toevoegen om uw zoekopdracht te beperken.
 
-## Profielgegevens benaderen op basis van lijst met identiteiten
+## Profielgegevens benaderen op basis van een lijst met identiteiten
 
 U kunt meerdere profielentiteiten benaderen door een POST aan te vragen bij de `/access/entities` en het verstrekken van de identiteiten in de lading. Deze identiteiten bestaan uit een ID-waarde (`entityId`) en een naamruimte voor identiteit (`entityIdNS`).
 
@@ -184,7 +185,7 @@ curl -X POST \
 | `fields` | De XDM-velden die moeten worden geretourneerd, als een array van tekenreeksen. Standaard worden alle velden geretourneerd. |
 | `identities` | ***(Vereist)*** Een array met een lijst met identiteiten voor de entiteiten waartoe u toegang wilt hebben. |
 | `identities.entityId` | De id van een entiteit waartoe u toegang wilt hebben. |
-| `identities.entityIdNS.code` | De naamruimte van een entiteit-id waartoe u toegang wilt hebben. |
+| `identities.entityIdNS.code` | De naamruimte van een entiteit-id waartoe u toegang wilt. |
 | `timeFilter.startTime` | Begintijd van het tijdbereikfilter, inclusief. Moet op milliseconde granularity zijn. De standaardinstelling is, indien deze niet wordt opgegeven, het begin van de beschikbare tijd. |
 | `timeFilter.endTime` | Eindtijd van tijdbereikfilter, uitgesloten. Moet op milliseconde granularity zijn. De standaardinstelling (indien niet opgegeven) is het einde van de beschikbare tijd. |
 | `limit` | Aantal records dat moet worden geretourneerd. Alleen van toepassing op het aantal geretourneerde ervaringsgebeurtenissen. Standaard: 1.000. |
@@ -444,7 +445,7 @@ curl -X GET \
 
 **Antwoord**
 
-De volgende pagina met resultaten wordt als resultaat gegeven. Dit antwoord bevat geen volgende pagina&#39;s met resultaten, zoals wordt aangegeven door de lege tekenreekswaarden van `_page.next` en `_links.next.href`.
+Als de reactie is gelukt, wordt de volgende pagina met resultaten geretourneerd. Dit antwoord bevat geen volgende pagina&#39;s met resultaten, zoals wordt aangegeven door de lege tekenreekswaarden van `_page.next` en `_links.next.href`.
 
 ```json
 {
@@ -548,8 +549,8 @@ curl -X POST \
 |---|---|
 | `schema.name` | **(VEREIST)** Het XDM-schema van de op te halen entiteit |
 | `relatedSchema.name` | Indien `schema.name` is `_xdm.context.experienceevent` deze waarde moet het schema opgeven voor de profielentiteit waarop de tijdreeksgebeurtenissen betrekking hebben. |
-| `identities` | **(VEREIST)** Een array met profielen waaruit de bijbehorende tijdreeksgebeurtenissen moeten worden opgehaald. Elke ingang in de serie wordt geplaatst op één van twee manieren: 1) gebruiken van een volledig gekwalificeerde identiteit die uit de waarde van identiteitskaart en namespace of 2) het verstrekken van een XID bestaat. |
-| `fields` | Hiermee worden de gegevens die naar een opgegeven set velden worden geretourneerd, geïsoleerd. Hiermee kunt u filteren welke schemavelden worden opgenomen in opgehaalde gegevens. Voorbeeld: persoonlijke e-mail,persoon.naam,persoon.geslacht |
+| `identities` | **(VEREIST)** Een array met profielen waaruit de bijbehorende tijdreeksgebeurtenissen moeten worden opgehaald. Elk item in de array wordt op twee manieren ingesteld: 1) met een volledig gekwalificeerde identiteit die bestaat uit een id-waarde en naamruimte of 2) met een XID. |
+| `fields` | Hiermee worden de gegevens die naar een opgegeven set velden worden geretourneerd, geïsoleerd. Hiermee kunt u filteren welke schemavelden worden opgenomen in opgehaalde gegevens. Voorbeeld: PersonalEmail,person.name,person.gender |
 | `mergePolicyId` | Hiermee wordt het samenvoegingsbeleid aangegeven waarmee de geretourneerde gegevens moeten worden beheerd. Als niet in de de dienstvraag wordt gespecificeerd, zal het gebrek van uw organisatie voor dat schema worden gebruikt. Als er geen standaardbeleid voor samenvoegen is geconfigureerd, bestaat de standaardinstelling uit geen profielsamenvoeging en geen identiteitsstitching. |
 | `orderby` | De sorteervolgorde van opgehaalde ervaringsgebeurtenissen op tijdstempel, geschreven als `(+/-)timestamp` waarbij de standaardwaarde wordt `+timestamp`. |
 | `timeFilter.startTime` | Geef de begintijd op voor het filteren van tijdreeksobjecten (in milliseconden). |
@@ -777,7 +778,7 @@ Gebruikend deze nuttige lading in het verzoeklichaam, kunt u een extra verzoek v
 
 ## De gebeurtenissen van de tijdreeks van de toegang in veelvoudige schemaentiteiten
 
-U kunt toegang krijgen tot meerdere entiteiten die via een relatiebeschrijving zijn verbonden. De volgende voorbeeld API vraag veronderstelt een verhouding reeds tussen twee schema&#39;s is bepaald. Voor meer informatie over relatiebeschrijvers, gelieve te lezen [!DNL Schema Registry] Handleiding voor API-ontwikkelaars [eindhulplijn descriptorpunt](../../xdm/api/descriptors.md).
+U kunt toegang krijgen tot meerdere entiteiten die via een relatiebeschrijving zijn verbonden. De volgende voorbeeld API vraag veronderstelt een verhouding reeds tussen twee schema&#39;s is bepaald. Lees voor meer informatie over relatiebeschrijvingen de [!DNL Schema Registry] Handleiding voor API-ontwikkelaars [eindhulplijn descriptorpunt](../../xdm/api/descriptors.md).
 
 U kunt queryparameters opnemen in het aanvraagpad om op te geven tot welke gegevens u toegang wilt krijgen. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;). Een volledige lijst van geldige parameters wordt verstrekt in [queryparameters](#query-parameters) het aanhangsel.
 
@@ -889,11 +890,11 @@ Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als e
 
 Door deze handleiding te volgen, hebt u toegang tot [!DNL Real-Time Customer Profile] gegevensvelden, profielen en tijdreeksgegevens. Leren hoe u toegang krijgt tot andere gegevensbronnen die zijn opgeslagen in [!DNL Platform], zie de [Overzicht van gegevenstoegang](../../data-access/home.md).
 
-## Aanhangsel {#appendix}
+## Bijlage {#appendix}
 
-De volgende sectie verstrekt aanvullende informatie betreffende de toegang tot van [!DNL Profile] gegevens die de API gebruiken.
+De volgende sectie verstrekt aanvullende informatie betreffende toegang [!DNL Profile] gegevens die de API gebruiken.
 
-### Parameters query {#query-parameters}
+### Query-parameters {#query-parameters}
 
 De volgende parameters worden gebruikt in het pad voor verzoeken van de GET aan de `/access/entities` eindpunt. Ze dienen om de profielentiteit te identificeren die u wilt benaderen en de gegevens te filteren die in de reactie worden geretourneerd. De vereiste parameters worden geëtiketteerd, terwijl de rest facultatief is.
 
@@ -905,7 +906,7 @@ De volgende parameters worden gebruikt in het pad voor verzoeken van de GET aan 
 | `entityIdNS` | Indien `entityId` wordt niet opgegeven als een XID, moet in dit veld de naamruimte van de identiteit worden opgegeven. | `entityIdNE=email` |
 | `relatedEntityId` | Indien `schema.name` is &quot;_xdm.context.ExperienceEvent&quot;, moet deze waarde de naamruimte van de gerelateerde profielentiteit opgeven. Deze waarde volgt dezelfde regels als `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | Indien `schema.name` is &quot;_xdm.context.experienceEvent&quot;, moet deze waarde de naamruimte van de identiteit opgeven voor de entiteit die is opgegeven in `relatedEntityId`. | `relatedEntityIdNS=CRMID` |
-| `fields` | Filtert de gegevens die in de reactie worden geretourneerd. Gebruik dit om te specificeren welke schemagebiedwaarden in opgehaalde gegevens moeten omvatten. Voor meerdere velden scheidt u waarden met een komma zonder spaties tussen | `fields=personalEmail,person.name,person.gender` |
+| `fields` | Hiermee filtert u de gegevens die in de reactie worden geretourneerd. Gebruik dit om te specificeren welke waarden van het schemagebied in opgehaalde gegevens moeten omvatten. Voor meerdere velden scheidt u waarden met een komma zonder spaties tussen | `fields=personalEmail,person.name,person.gender` |
 | `mergePolicyId` | Hiermee wordt het samenvoegingsbeleid aangegeven waarmee de geretourneerde gegevens moeten worden beheerd. Als niet in de vraag wordt gespecificeerd, zal het gebrek van uw organisatie voor dat schema worden gebruikt. Als er geen standaardbeleid voor samenvoegen is geconfigureerd, bestaat de standaardinstelling uit geen profielsamenvoeging en geen identiteitsstitching. | `mergePoilcyId=5aa6885fcf70a301dabdfa4a` |
 | `orderBy` | De sorteervolgorde van opgehaalde ervaringsgebeurtenissen op tijdstempel, geschreven als `(+/-)timestamp` waarbij de standaardwaarde wordt `+timestamp`. | `orderby=-timestamp` |
 | `startTime` | Geef de begintijd op voor het filteren van tijdreeksobjecten (in milliseconden). | `startTime=1539838505` |

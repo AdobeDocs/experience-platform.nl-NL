@@ -1,10 +1,11 @@
 ---
 title: API-eindpunt gegevensset vervaldatum
 description: Het /ttl eindpunt in de Hygiene API van Gegevens staat u toe om datasettermijnen in Adobe Experience Platform programmatically te plannen.
+role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: a954059155857e6dde7884cf413561cd5214d9bb
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1726'
 ht-degree: 0%
 
 ---

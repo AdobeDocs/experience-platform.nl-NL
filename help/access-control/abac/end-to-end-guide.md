@@ -2,10 +2,11 @@
 keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attribuut-gebaseerde toegangscontrole;
 title: Op attributen-Gebaseerde Gids van de Controle van de Toegang van begin tot eind
 description: Dit document verstrekt een gids van begin tot eind op op attribuut-gebaseerde toegangsbeheer in Adobe Experience Platform
+role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 2b3c4a7aed804a1059708a698f3ba5edfb007926
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1642'
 ht-degree: 0%
 
 ---
@@ -47,7 +48,7 @@ U zult:
 * 
    * [Activeer het beleid dat hen verbindt:](#policy): Laat het standaardbeleid toe om toegang tot schemagebieden en segmenten te verhinderen door de etiketten op uw middelen aan de etiketten in uw rol te verbinden. Gebruikers met overeenkomende labels krijgen dan toegang tot het schemaveld en segmenten in alle sandboxen.
 
-## Toestemmingen
+## Machtigingen
 
 [!UICONTROL Permissions] is het gebied van Experience Cloud waar de beheerders gebruikersrollen en beleid kunnen bepalen om toestemmingen voor eigenschappen en voorwerpen binnen een producttoepassing te beheren.
 

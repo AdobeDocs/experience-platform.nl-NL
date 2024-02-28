@@ -3,8 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen;effectief beleid;toega
 solution: Experience Platform
 title: Efficiënt beleid API-eindpunt
 description: Leer hoe u effectief toegangsbeleid kunt weergeven met de API voor toegangsbeheer voor Adobe Experience Platform.
+role: Developer
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
@@ -70,7 +71,7 @@ Een succesvolle reactie keert informatie over de toestemmingen en middeltypes te
 
 In dit document wordt beschreven hoe u de [!DNL Access Control] API om informatie over actieve toestemmingen en verwant toegangsbeleid voor middeltypes terug te keren. Voor meer informatie over toegangsbeheer voor [!DNL Experience Platform], zie de [toegangsbeheeroverzicht](../home.md).
 
-## Aanhangsel
+## Bijlage
 
 Deze sectie verstrekt aanvullende informatie voor het gebruiken van [!DNL Access Control] API.
 
@@ -78,7 +79,7 @@ Deze sectie verstrekt aanvullende informatie voor het gebruiken van [!DNL Access
 
 Hier volgt een lijst met machtigingen en typen bronnen die u kunt opnemen in de lading van een verzoek van een POST aan de `/acl/active-permissions` eindpunt.
 
-**Toestemmingen**
+**Machtigingen**
 
 ```plaintext
 permissions/activate-destinations

@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;api gids;de dienst van de vraag;de rekeningen van de vraagdienst;rekeningen van de rekeningen van de;vraag;
+keywords: Experience Platform;thuis;populaire onderwerpen;de vraagdienst;api gids;de dienst van de vraag;de rekeningen van de vraagdienst;rekeningen van de rekeningen van de;vraag;
 solution: Experience Platform
 title: Accounts-API-eindpunt
 description: U kunt een account voor Query Service maken voor een blijvende verbinding.
+role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---

@@ -3,10 +3,11 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: API-eindpunt voor exporteren van profielen
 type: Documentation
 description: In real-time klantprofiel kunt u één weergave van individuele klanten in Adobe Experience Platform samenstellen door gegevens uit meerdere bronnen samen te voegen, inclusief kenmerkgegevens en gedragsgegevens. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd.
+role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1512'
 ht-degree: 0%
 
 ---

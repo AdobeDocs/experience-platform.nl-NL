@@ -4,7 +4,8 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 05ff789d71c693854fb84d1661c2bef8aba0bff8
+role: Admin,User
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 1%

@@ -2,11 +2,12 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;toegangsbeheer;api;aan de slag
 solution: Experience Platform
 title: API-handleiding voor toegangsbeheer
-description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. De volgende secties verstrekken extra informatie die de ontwikkelaars zullen moeten weten om met succes vraag aan de Registratie API van het Schema te maken.
+description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende platformmogelijkheden beheren met behulp van de Adobe Admin Console. De volgende secties verstrekken extra informatie die de ontwikkelaars zullen moeten weten om met succes vraag aan de Registratie API van het Schema te maken.
+role: Developer
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '378'
 ht-degree: 1%
 
 ---
@@ -32,7 +33,7 @@ Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken t
 
 Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
-- Autorisatie: Drager `{ACCESS_TOKEN}`
+- Toestemming: houder `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 

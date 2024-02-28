@@ -3,10 +3,11 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: Aan de slag met de Real-Time Customer Profile API
 type: Documentation
 description: De gids van het begin van het Profiel API schetst de belangrijkste concepten en de basisfunctionaliteit die u moet kennen om eindpunten van API van het Profiel van de Klant in real time te gebruiken om basisbewerkingen van CRUD tegen de gegevens van het Profiel uit te voeren.
+role: Developer
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---

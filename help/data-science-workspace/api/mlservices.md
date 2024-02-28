@@ -3,10 +3,11 @@ keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Wor
 solution: Experience Platform
 title: XMLServices API-eindpunt
 description: Een dienst MLService is een gepubliceerd opgeleid model dat uw organisatie van de capaciteit voorziet om tot eerder ontwikkelde modellen toegang te hebben en te hergebruiken. Een belangrijk kenmerk van MLServices is de mogelijkheid om training en scoring op een geplande basis te automatiseren. De geplande trainingslooppas kan helpen de efficiency en nauwkeurigheid van een model handhaven, terwijl de geplande scoring looppas kan ervoor zorgen dat de nieuwe inzichten constant worden geproduceerd.
+role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 Een dienst MLService is een gepubliceerd opgeleid model dat uw organisatie van de capaciteit voorziet om tot eerder ontwikkelde modellen toegang te hebben en te hergebruiken. Een belangrijk kenmerk van MLServices is de mogelijkheid om training en scoring op een geplande basis te automatiseren. De geplande trainingslooppas kan helpen de efficiency en nauwkeurigheid van een model handhaven, terwijl de geplande scoring looppas kan ervoor zorgen dat de nieuwe inzichten constant worden geproduceerd.
 
-Geautomatiseerde trainings- en scoreschema&#39;s worden gedefinieerd met een begintijdstempel, een eindtijdstempel en een frequentie die wordt weergegeven als een [uitsnijdexpressie](https://en.wikipedia.org/wiki/Cron). Planningen kunnen worden gedefinieerd wanneer [het creëren van een dienst MLService](#create-an-mlservice) of toegepast door [het bijwerken van een bestaande MLService](#update-an-mlservice).
+Geautomatiseerde trainings- en scoreschema&#39;s worden gedefinieerd met een begintijdstempel, een eindtijdstempel en een frequentie die wordt weergegeven als een [uitsnijdexpressie](https://en.wikipedia.org/wiki/Cron). Planningen kunnen worden gedefinieerd wanneer [creëren van een dienst MLService](#create-an-mlservice) of toegepast door [bestaande MLService bijwerken](#update-an-mlservice).
 
 ## Een MLService maken {#create-an-mlservice}
 
@@ -68,7 +69,7 @@ curl -X POST \
 | `trainingSchedule` | Een schema voor geautomatiseerde trainingen. Als dit bezit wordt bepaald, dan zal MLService automatisch trainingslooppas op een geplande basis uitvoeren. |
 | `trainingSchedule.startTime` | Een tijdstempel waarvoor de geplande training wordt gestart. |
 | `trainingSchedule.endTime` | Een tijdstempel waarvoor de geplande training wordt beëindigd. |
-| `trainingSchedule.cron` | Een uitsnijdexpressie die de frequentie van automatische trainingen definieert. |
+| `trainingSchedule.cron` | Een uitsnede die de frequentie van automatische trainingen bepaalt. |
 | `scoringSchedule` | Een schema voor automatische scoring. Als dit bezit wordt bepaald, dan zal MLService automatisch het scoren looppas op een geplande basis uitvoeren. |
 | `scoringSchedule.startTime` | Een tijdstempel waarvoor de geplande scoring wordt uitgevoerd. |
 | `scoringSchedule.endTime` | Een tijdstempel waarvoor de geplande scoring-runtime wordt beëindigd. |
@@ -76,7 +77,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde dienst MLService met inbegrip van zijn uniek herkenningsteken bevat (`id`), experimentele id voor training (`trainingExperimentId`), Experimentele id voor scoring (`scoringExperimentId`) en de gegevensset-id voor de inputopleiding (`trainingDataSetId`).
+Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde dienst MLService met inbegrip van zijn uniek herkenningsteken (`id`), Experimentele id voor training (`trainingExperimentId`), Experimentele id voor scoring (`scoringExperimentId`) en de gegevensset-id voor de inputopleiding (`trainingDataSetId`).
 
 ```json
 {
@@ -137,7 +138,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert een lijst van diensten MLS en hun details met inbegrip van hun MLService ID terug (`{MLSERVICE_ID}`), experimentele id voor training (`{TRAINING_ID}`), Experimentele id voor scoring (`{SCORING_ID}`) en de gegevensset-id voor de inputopleiding (`{DATASET_ID}`).
+Een succesvolle reactie keert een lijst van diensten MLS en hun details met inbegrip van hun MLService ID terug (`{MLSERVICE_ID}`), Experimentele id voor training (`{TRAINING_ID}`), Experimentele id voor scoring (`{SCORING_ID}`) en de gegevensset-id voor de inputopleiding (`{DATASET_ID}`).
 
 ```json
 {

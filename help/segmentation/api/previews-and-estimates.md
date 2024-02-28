@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Voorvertoningen en schattingen van API-eindpunten
 description: Terwijl segmentdefinitie wordt ontwikkeld, kunt u met de rastergereedschappen en voorvertoningsgereedschappen in Adobe Experience Platform informatie op overzichtsniveau weergeven, zodat u zeker weet dat u het verwachte publiek isoleert.
+role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '971'
 ht-degree: 1%
 
 ---

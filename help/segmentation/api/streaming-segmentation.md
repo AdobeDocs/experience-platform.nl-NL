@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Evalueer Gebeurtenissen in Bijna Echt - tijd met het stromen Segmentatie
 description: Dit document bevat voorbeelden over het gebruik van streamingsegmentatie met de Adobe Experience Platform Segmentation Service-API.
+role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
@@ -351,7 +352,7 @@ curl -X POST \
 | `properties` | **(Vereist)** Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
 | `properties.segments` | **(Vereist als `type` equals `batch_segmentation`)** Gebruiken `["*"]` zorgt ervoor dat alle segmentdefinities worden opgenomen. |
 | `schedule` | **(Vereist)** Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Het getoonde voorbeeld (`0 0 1 * * ?`) betekent dat de baan elke dag om 1 wordt geactiveerd:00:00 UTC. Voor meer informatie raadpleegt u de bijlage bij de [expressie-indeling voor uitsnijden](./schedules.md#appendix) binnen de documentatie over de programma&#39;s binnen de segmentatie. |
-| `state` | *(Optioneel)* Tekenreeks die de planningsstatus bevat. Beschikbare waarden: `active` en `inactive`. De standaardwaarde is `inactive`. Een organisatie kan slechts één programma maken. De stappen voor het bijwerken van het programma zijn beschikbaar later in dit leerprogramma. |
+| `state` | *(Optioneel)* Tekenreeks die de planningsstatus bevat. Beschikbare waarden: `active` en `inactive`. Standaardwaarde is `inactive`. Een organisatie kan slechts één programma maken. De stappen voor het bijwerken van het programma zijn beschikbaar later in dit leerprogramma. |
 
 **Antwoord**
 
