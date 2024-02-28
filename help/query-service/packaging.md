@@ -2,10 +2,10 @@
 title: Packaging van Query Service
 description: Het volgende document schetst de verpakking van mogelijkheden en producten beschikbaar voor de Dienst van de Vraag en benadrukt de verschillen tussen ad hoc en partijvragen.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 2bea95d855d24aa9d5763ab541ec282f0d8d1d56
+source-git-commit: 0f55a836321e974b3f29d2285c38cc8461636f39
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 0%
+source-wordcount: '963'
+ht-degree: 1%
 
 ---
 
@@ -39,7 +39,7 @@ De volgende lijst schetst de belangrijkste die de dienstrechten van de Vraag op 
 | Exportrecht voor gegevens | Uw totale exportmachtiging is afhankelijk van uw platformgebaseerde toepassingslicenties. Bijvoorbeeld Real-Time CDP, AJO, CJA enzovoort. | Ja - Er is een extra exportrecht om de uitvoer van afgeleide gegevenssets die zijn gemaakt met Data Distiller mogelijk te maken.<br>Uw jaarlijkse toelage voor het exporteren van gegevens wordt gemeten in terabytes (TB) en hangt af van de hoeveelheid Rekenuren die u hebt gekocht. Zie de productbeschrijving voor meer informatie. |
 | Interface voor query-uitvoering | <ul><li>Gebruikersinterface Query Service</li><li>Gebruikersinterface van externe clients</li><li>[!DNL PostgresSQL] clientinterface</li></ul> | <ul><li>Gebruikersinterface Query Service </li><li>Gebruikersinterface van externe clients</li><li>[!DNL PostgresSQL] clientinterface</li><li>REST API&#39;s</li></ul> |
 | Zoekresultaten geretourneerd via | Gebruikersinterface client | Afgeleide dataset die in het gegevensmeer wordt opgeslagen |
-| Resulterende limiet | <ul><li>De Dienst UI van de vraag - het aantal outputrijen kan zijn [geconfigureerd met een interface-instelling](./ui/user-guide.md#result-count) tot tussen 50-500 rijen.</li><li>Externe klanten - 50.000</li><li>[!DNL PostgresSQL] client - 50.000</li></ul> | <ul><li>De Dienst UI van de vraag - het aantal outputrijen kan zijn [geconfigureerd met een interface-instelling](./ui/user-guide.md#result-count) tot tussen 50-500 rijen.<br>Nota: CTAS en ITAS de vragen produceren slechts succesberichten aangezien de vraagoutput in afgeleide datasets wordt opgeslagen.</li><li>Externe clients (geen bovengrens voor rijen)</li><li>[!DNL PostgresSQL] client (geen bovenlimiet voor rijen)</li><li>REST API&#39;s (geen bovengrens voor rijen)</li></ul> |
+| Resulterende limiet | <ul><li>De Dienst UI van de vraag - het aantal outputrijen kan zijn [geconfigureerd met een interface-instelling](./ui/user-guide.md#result-count) tot tussen 50-500 rijen.</li><li>Externe klanten - 50.000</li><li>[!DNL PostgresSQL] client - 50.000</li></ul> | CTAS en ITAS de vragen produceren slechts succesberichten aangezien de vraagoutput in afgeleide datasets wordt opgeslagen. |
 | Dataset-capaciteit lezen | Ja | Ja |
 | Gegevenscapaciteit schrijven | Nee | Ja |
 | Planningscapaciteit | Nee | Ja |
