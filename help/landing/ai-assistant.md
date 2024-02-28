@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 5bdfc5282e71d05ff0db39c32fc02c60fd8d1c34
+source-git-commit: aba148f4155ff5403e89039a9c59acd4d450539e
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2333'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ U kunt de Medewerker vragen voor informatie zoals:
 
 * Richtlijnen voor het uitvoeren van taken die verband houden met gegevens en publiek.
 * Statussen en metriek van de bestaande gegevensobjecten in uw organisatie.
-* Gebruik voorbeelden en nuances van het geval om uw gegevensvoorwerpen, met inbegrip van attributen, datasets, bestemmingen, schema&#39;s, segmenten, en bronnen beter te begrijpen.
+* Gebruik voorbeelden en nuances van het geval om uw gegevensvoorwerpen, met inbegrip van attributen, dataflows, datasets, bestemmingen, schema&#39;s, segmenten, en bronnen beter te begrijpen.
 
 Lees de onderstaande handleiding voor meer informatie over het gebruik van Assistant voor het navigeren naar en begrijpen van uw Experience Platform- en Real-Time CDP-workflows.
 
@@ -131,17 +131,25 @@ Als u citaties wilt weergeven en de reactie van de assistent wilt valideren, sel
 
 +++Selecteren om een voorbeeld weer te geven van vragen over gegevensgebruik en gegevensvisualisatie
 
-U kunt contact opnemen met Assistent over uw gegevensgebruik. Assistent moet zich in een actieve sandbox bevinden om een vraag over gegevensgebruik te kunnen beantwoorden met betrekking tot gegevens in uw organisatie.
+Assistent kan alleen reageren op een query over gegevensgebruik binnen uw organisatie als u zich in een actieve sandbox bevindt.
+
+In het onderstaande voorbeeld krijgt Assistant de volgende query: **&quot;Geef me segmentdefinities weer met meer dan 1000 profielen en neem de activeringsstatus op.&quot;** De medewerker antwoordt dan met een grafiek die uw segment en profielgegevens visualiseert.
 
 ![Opvolgingsvraag over gegevensgebruik.](./images/ai-assistant/data-usage-question.png)
 
-Als de assistent een vraag over gegevensgebruik weergeeft, geeft hij ook een uitleg van de manier waarop hij het antwoord heeft berekend. In het onderstaande voorbeeld beschrijft Assistant de stappen die zijn uitgevoerd om segmenten met meer dan 1000 profielen en hun respectieve activeringsstatus weer te geven.
+U kunt de muisaanwijzer op een afzonderlijke balk plaatsen om specifieke gegevens weer te geven. U kunt ook het pictogram voor vergroten selecteren voor een grotere weergave van het diagram.
+
+![Follow-upvraag ter illustratie van gegevensvisualisatie.](./images/ai-assistant/data-visualization.png)
+
+Er wordt een uitgebreide weergave van de visualisatie weergegeven. U kunt de uitgevouwen modaal gebruiken om uw gegevens verder te inspecteren en is vooral nuttig wanneer visualisatie met een groot aantal kolommen terugkeert.
+
+![Uitgebreid diagram.](./images/ai-assistant/chart-expanded.png)
+
+Als de assistent een vraag over gegevensgebruik weergeeft, legt hij uit hoe het antwoord is berekend. In het onderstaande voorbeeld beschrijft Assistant de stappen die zijn genomen om segmentdefinities weer te geven met meer dan 1000 profielen en hun respectieve activeringsstatus.
 
 ![Follow-upvraag over segmenten die illustreren hoe Assistant het antwoord heeft berekend.](./images/ai-assistant/results-explained.png)
 
-Bovendien geeft Assistant grafieken weer om uw gegevens te visualiseren. U kunt filters en wijzigingen aan uw vragen ook verstrekken, en u kunt Medewerker instrueren om zijn bevindingen terug te geven die op de filters worden gebaseerd die u omvat. Bijvoorbeeld, kunt u Medewerker vragen om u een trend van de telsegmenten in de orde van hun gecreeerde datum te tonen, segmenten met nul totale profielen te verwijderen, en maandnamen in plaats van gehelen te gebruiken wanneer het tonen van de gegevens.
-
-![Follow-upvraag ter illustratie van gegevensvisualisatie.](./images/ai-assistant/data-visualization.png)
+U kunt filters en wijzigingen aan uw vragen ook verstrekken, en u kunt Medewerker instrueren om zijn bevindingen terug te geven die op de filters worden gebaseerd die u omvat. Bijvoorbeeld, kunt u Medewerker vragen om u een trend van de definities van tellingssegmenten in de orde van hun gecreeerde datum te tonen, segmentdefinities met nul totale profielen te verwijderen, en maandnamen in plaats van gehelen te gebruiken wanneer het tonen van de gegevens.
 
 +++
 
@@ -177,27 +185,18 @@ Vervolgens ontvangt Assistant een ander vervolgverzoek. Deze keer reageert de as
 
 +++
 
-## Bereik {#scope}
-
-De assistent kan vragen beantwoorden over de concepten Real-Time CDP en Experience Platform, maar ook over het specifieke gegevensgebruik voor je gebruikersaccount. De medewerker kan context ook afleiden die op de UI-pagina wordt gebaseerd die u binnen bent. Het kan identificeren:
-
-* De gebruikersaccount die u gebruikt.
-* De organisatie waartoe u behoort.
-* De pagina die u op het scherm bekijkt.
-* De bron (inclusief type en id) die u op uw scherm bekijkt.
-* Aangezien u bezig bent met een bepaald Experience Platform of Real-Time CDP-workflow, kan Assistant uw intentie afleiden.
-
-### Documentatie {#documentation}
+## Documentatie {#documentation}
 
 Momenteel geldt de documentatie-index voor Adobe Experience Platform (Real-Time CDP en Soorten publiek). De index wordt periodiek bijgewerkt.
 
 Het documentatiemodel wordt opgeleid op Experience Platform (Real-Time CDP en Soorten publiek). Vragen die buiten Adobe Experience Platform vallen, zoals vragen over andere producten van de Adobe, zoals Adobe Target en de Creative Cloud-suite, kunnen niet worden beantwoord.
 
-### Gegevensgebruik {#data-usage}
+## Gegevensgebruik {#data-usage}
 
 U kunt Assistent-vragen stellen over uw gegevensgebruik in de volgende domeinen:
 
 * Attributen
+* Gegevensstromen
 * Gegevenssets
 * Doelen _(Vragen over accounts en sommige vragen over gegevensstroom kunnen op dit moment niet worden beantwoord.)_
 * Schemas _(Op dit moment kunnen vragen met betrekking tot veldgroepen niet worden beantwoord.)_
