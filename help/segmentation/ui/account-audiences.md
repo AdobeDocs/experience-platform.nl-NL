@@ -4,9 +4,9 @@ description: Leer hoe u accountpubliek kunt maken en gebruiken om accountprofiel
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1110'
 ht-degree: 0%
 
 ---
@@ -41,19 +41,29 @@ De [!UICONTROL Browse] wordt weergegeven en geeft een lijst weer van alle accoun
 
 Deze weergave bevat informatie over het publiek, zoals de naam, het aantal profielen, de oorsprong, de levenscyclusstatus, de datum waarop deze is gemaakt en de datum waarop deze voor het laatst is bijgewerkt.
 
+U kunt ook de functie voor zoeken en filteren gebruiken om snel naar specifieke accountsoorten te zoeken en deze te sorteren. Meer informatie over deze functie vindt u in het gedeelte [segmenteringsUI-hulplijn](./overview.md#manage-audiences).
+
 ## publiek maken {#create}
+
+>[!NOTE]
+>
+>Accountpubliek wordt geëvalueerd met **partij** segmentatie, en wordt om de 24 uur geëvalueerd.
 
 Als u een accountpubliek wilt maken, selecteert u **[!UICONTROL Create audience]** op de [!UICONTROL Browse] pagina.
 
 ![De [!UICONTROL Create audience] wordt gemarkeerd op de pagina waarop het publiek van de account bladert.](../images/ui/account-audiences/select-create-audience.png)
 
-De Segment Builder wordt weergegeven. De accountkenmerken worden weergegeven op de linkernavigatiebalk.
+De Segment Builder wordt weergegeven. De accountkenmerken en het publiek worden weergegeven op de linkernavigatiebalk. Onder de [!UICONTROL Attributes] kunt u zowel door het platform gemaakte als aangepaste kenmerken toevoegen.
 
-![De Segment Builder wordt weergegeven. Merk op dat slechts de attributen worden getoond.](../images/ui/account-audiences/segment-builder.png)
+![De Segment Builder wordt weergegeven. Merk op dat slechts de attributen en het publiek worden getoond.](../images/ui/account-audiences/segment-builder.png)
 
 Houd er rekening mee dat gebeurtenissen onder **[!UICONTROL People]**, in plaats van hun eigen tabblad te zijn, aangezien deze kenmerken aan personen zijn gekoppeld.
 
 ![De locatie waar naar gebeurtenissen moet worden gezocht, die zich binnen het [!UICONTROL People] wordt gemarkeerd.](../images/ui/account-audiences/attributes.png)
+
+Onder de [!UICONTROL Audiences] kunt u eerder gemaakte, op personen gebaseerde soorten publiek toevoegen om van af te bouwen bij het maken van uw eigen accountpubliek.
+
+![Het tabblad Soorten publiek in de Segmentbouwer wordt gemarkeerd.](../images/ui/account-audiences/audiences.png)
 
 Voor meer informatie over het gebruik van de Segment Builder leest u de [Handleiding voor de gebruikersinterface van Segment Builder](./segment-builder.md).
 
