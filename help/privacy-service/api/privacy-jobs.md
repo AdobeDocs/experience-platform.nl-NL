@@ -5,9 +5,9 @@ title: API-eindpunt voor privacytaken
 description: Leer hoe u privacytaken voor Experiencen Cloud-toepassingen beheert met de Privacy Service-API.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0ffc9648fbc6e6aa3c43a7125f25a98452e8af9a
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1857'
 ht-degree: 0%
 
 ---
@@ -26,25 +26,34 @@ U kunt een lijst weergeven met alle beschikbare privacytaken binnen uw organisat
 
 **API-indeling**
 
-Deze aanvraagindeling gebruikt een `regulation` queryparameter voor de `/jobs` eindpunt, daarom begint het met een vraagteken (`?`) zoals hieronder weergegeven. De reactie wordt gepagineerd, toestaand u andere vraagparameters (`page` en `size`) om de reactie te filteren. U kunt meerdere parameters scheiden met ampersands (`&`).
+Deze aanvraagindeling gebruikt een `regulation` queryparameter voor de `/jobs` eindpunt, daarom begint het met een vraagteken (`?`) zoals hieronder weergegeven. Wanneer het vermelden van middelen, keert Privacy Service API tot 1000 banen terug en pagineert de reactie. Andere queryparameters gebruiken (`page`, `size`en datumfilters) om de reactie te filteren. U kunt meerdere parameters scheiden met ampersands (`&`).
+
+>[!TIP]
+>
+>Gebruik extra vraagparameters aan verdere filterresultaten voor specifieke vragen. U kunt bijvoorbeeld zien hoeveel privacytaken gedurende een bepaalde periode zijn ingediend en wat hun status is in de `status`, `fromDate`, en `toDate` queryparameters.
 
 ```http
 GET /jobs?regulation={REGULATION}
 GET /jobs?regulation={REGULATION}&page={PAGE}
 GET /jobs?regulation={REGULATION}&size={SIZE}
 GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={STATUS}
 ```
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Zie het overzicht op [ondersteunde verordeningen](../regulations/overview.md) voor meer informatie over de privacyregels die de bovenstaande waarden vertegenwoordigen . |
+| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Zie het overzicht op [ondersteunde verordeningen](../regulations/overview.md) voor meer informatie over de privacyregels die de bovenstaande waarden vertegenwoordigen . |
 | `{PAGE}` | De pagina met gegevens die moet worden weergegeven met een op 0 gebaseerde nummering. De standaardwaarde is `0`. |
-| `{SIZE}` | Het aantal resultaten dat op elke pagina moet worden weergegeven. De standaardwaarde is `1` en het maximum `100`. Als het maximum wordt overschreden, retourneert de API een fout van 400 code. |
+| `{SIZE}` | Het aantal resultaten dat op elke pagina moet worden weergegeven. De standaardwaarde is `100` en het maximum `1000`. Als het maximum wordt overschreden, retourneert de API een fout van 400 code. |
+| `{status}` | Standaard worden alle statussen opgenomen. Als u een statustype opgeeft, worden alleen privacytaken geretourneerd die overeenkomen met dat statustype. De toegestane waarden zijn onder meer: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
+| `{toDate}` | Deze parameter beperkt de resultaten tot de resultaten die vóór een opgegeven datum zijn verwerkt. Vanaf de datum van het verzoek kan het systeem 45 dagen terugkijken. Het bereik mag echter niet langer dan 30 dagen zijn.<br>De notatie YYYY-MM-DD wordt geaccepteerd. De datum die u opgeeft, wordt geïnterpreteerd als de beëindigingsdatum uitgedrukt in Greenwich Mean Time (GMT).<br>Als u deze parameter (en een bijbehorende `fromDate`), retourneert het standaardgedrag taken die de afgelopen zeven dagen zijn teruggestuurd. Als u `toDate`moet u ook de `fromDate` queryparameter. Als u niet allebei gebruikt, keert de vraag een fout 400 terug. |
+| `{fromDate}` | Deze parameter beperkt de resultaten tot de resultaten die na een opgegeven datum worden verwerkt. Vanaf de datum van het verzoek kan het systeem 45 dagen terugkijken. Het bereik mag echter niet langer dan 30 dagen zijn.<br>De notatie YYYY-MM-DD wordt geaccepteerd. De datum die u opgeeft, wordt geïnterpreteerd als de datum van oorsprong van het verzoek, uitgedrukt in Greenwich Mean Time (GMT).<br>Als u deze parameter (en een bijbehorende `toDate`), retourneert het standaardgedrag taken die de afgelopen zeven dagen zijn teruggestuurd. Als u `fromDate`moet u ook de `toDate` queryparameter. Als u niet allebei gebruikt, keert de vraag een fout 400 terug. |
+| `{filterDate}` | Deze parameter beperkt de resultaten tot de resultaten die op een bepaalde datum worden verwerkt. De notatie YYYY-MM-DD wordt geaccepteerd. Het systeem kan de afgelopen 45 dagen terugkijken. |
 
 {style="table-layout:auto"}
 
 <!-- Not released yet:
-<li>`pdpd_vnm`</li>
+<li>`pdpd_vnm`</li> 
  -->
 
 **Verzoek**

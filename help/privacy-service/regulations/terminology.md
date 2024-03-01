@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Terminologie van de privacyregels
 description: Dit document bevat definities voor belangrijke termen met betrekking tot privacyregels die worden ondersteund door Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '1796'
-ht-degree: 3%
+source-wordcount: '1842'
+ht-degree: 2%
 
 ---
 
@@ -100,6 +100,8 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 ## M
 
 **Hoofdvestiging**: De plaats binnen de Unie waar de belangrijkste beslissingen met betrekking tot de gegevensverwerking worden genomen, met betrekking tot de verwerker.
+
+**MHMDAa**: De [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) de privacyrechten van consumenten met betrekking tot hun gezondheidsgegevens verbeteren . Het verplicht de informatieverschaffing, de instemming van de consument en het recht om gezondheidsgegevens te verwijderen, en verbiedt de verkoop van gezondheidsgegevens zonder toestemming. Bovendien maakt de wet het onwettig om gebruik te maken van geofencing rond gezondheidszorgfaciliteiten.
 
 ## N
 

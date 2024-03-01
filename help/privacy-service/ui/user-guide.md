@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy-taken beheren in de gebruikersinterface van de Privacy Service
 description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experiencen Cloud te coördineren en te controleren.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1414'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,7 @@ Het dashboard voor de [!DNL Privacy Service] De gebruikersinterface bevat twee w
 | [!UICONTROL GDPR] | De [!DNL General Data Protection Regulation] |
 | [!UICONTROL HIPAA_AUS] | De [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | Brazilië [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MHMDA] | De [!DNL Washington My Health My Data Act] |
 | [!UICONTROL NZPA_NZL] | Nieuw-Zeeland [!DNL Privacy Act] |
 | [!UICONTROL PDPA_THA] | Thailand [!DNL Personal Data Protection Act] |
 | [!UICONTROL UCPA] | De [!DNL Utah Consumer Privacy Act] |

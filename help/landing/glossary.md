@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Verklarende woordenlijst
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '7973'
+source-wordcount: '7990'
 ht-degree: 0%
 
 ---
@@ -344,6 +344,8 @@ ht-degree: 0%
 **Samenvoegen, methode**: Wanneer u een samenvoegbeleid definieert met de UI Platform, geeft de samenvoegmethode aan hoe gegevensfragmenten voorrang moeten krijgen wanneer er een conflict optreedt. Wanneer het gebruiken van het Echte-tijdProfiel van de Klant API om een fusiebeleid te bepalen, wordt de fusiemethode bepaald gebruikend `attributeMerge` object.
 
 **Samenvoegbeleid**: Het beleid van de fusie is regels die het Experience Platform gebruikt om te bepalen hoe de fragmenten van klantengegevens van veelvoudige bronnen zullen worden gecombineerd om een individueel profiel tot stand te brengen. Wanneer een gegevensconflict voorkomt, bepaalt het fusiebeleid welke gegevens voor opneming in het profiel zouden moeten worden voorrang gegeven.
+
+**MHMDAa**: De [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) de privacyrechten van consumenten met betrekking tot hun gezondheidsgegevens verbeteren . Het verplicht de informatieverschaffing, de instemming van de consument en het recht om gezondheidsgegevens te verwijderen, en verbiedt de verkoop van gezondheidsgegevens zonder toestemming. Bovendien maakt de wet het onwettig om gebruik te maken van geofencing rond gezondheidszorgfaciliteiten.
 
 **Mixin**: Zie &quot;Schema field group&quot;.
 
