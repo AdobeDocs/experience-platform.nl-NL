@@ -3,9 +3,9 @@ keywords: bestemmingen; vragen; veelgestelde vragen; vk; bestemmingen vk
 title: Veelgestelde vragen
 description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1670'
 ht-degree: 2%
 
 ---
@@ -48,6 +48,15 @@ U activeert het bijgewerkte publiek opnieuw naar dezelfde bestemming, maar aange
 Om ervoor te zorgen dat alle profielen naar uw bestemming worden verzonden, moet u een nieuw publiek met de nieuwe configuratie tot stand brengen, en dan het activeren aan uw bestemming.
 
 +++
+
+### Wanneer een publiek van een bestemming wordt verwijderd, is er om het even welk signaal dat naar de bestemming wordt verzonden erop wijst die dat het publiek wordt verwijderd?
+
++++Antwoord
+
+Nr, is er geen gebiedsdeel tussen de bestemming van het Experience Platform en de klanteninstantie van het doelsysteem. Aan de ontvangende kant, is de enige aanwijzing dat het doelsysteem zou zien dat het ophield die publieksgegevens te ontvangen.
+
++++
+
 <!--
 ## [!DNL Experience Cloud Audiences] {#eca-faq}
 

@@ -1,7 +1,8 @@
 ---
 title: Mailchimp-tags
 description: De bestemming van de Markeringen van Mailchimp staat u toe om uw rekeningsgegevens uit te voeren en het binnen Mailchimp te activeren om met contacten in wisselwerking te staan.
-source-git-commit: b32d619b78502e38e98a410bd14379992543c63c
+last-substantial-update: 2024-02-20T00:00:00Z
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
 source-wordcount: '1590'
 ht-degree: 0%

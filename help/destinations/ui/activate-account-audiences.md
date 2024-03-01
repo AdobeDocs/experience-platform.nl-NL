@@ -5,9 +5,9 @@ description: Leer hoe u het publiek van een account activeert voor doelen
 badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,12 @@ In dit artikel wordt uitgelegd welke workflow nodig is om te exporteren [account
 Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteert u de **[!UICONTROL Catalog]** tab. Gebruik de **[!UICONTROL Data types]** filter en selecteer **[!UICONTROL Accounts]** de bestemmingen te zien die de activering van het accountantspubliek ondersteunen. Momenteel is het exporteren van accountsoorten alleen beschikbaar voor bepaalde cloudopslagdoelen ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Gegevenslandingszone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), en [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) en de [(Bedrijven) LinkedIn Gelijktijdig publiek](/help/destinations/catalog/social/linkedin.md) bestemming.
 
 ![Doelen die het publiek van de rekening steunen.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
+
+## Video-overzicht
+
+Bekijk de onderstaande video voor een overzicht van het maken en activeren van accountsoorten en de ondersteunde gebruiksgevallen bij het activeren van accountsoorten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/338252/?learn=on)
 
 ## Vereisten {#prerequisites}
 
