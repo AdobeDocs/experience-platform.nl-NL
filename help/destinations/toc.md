@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 73785443a9d07dfde3ef1060f7886dfed484925b
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1209'
 ht-degree: 1%
 
 ---
@@ -247,6 +247,7 @@ ht-degree: 1%
          * [Een Azure Data Lake Storage-bestemming configureren met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnamen](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [Vorm een bestemming van de Landing van Gegevens (DLZ) met de opties van de douanedossier het formatteren en de configuratie van de douanenaam van het dossier](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [Een SFTP-bestemming configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [Vorm een op dossier-gebaseerde bestemming om perspectiefpubliek uit te voeren](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * Referentie voor API voor doelontwerp {#authoring-api}
       * [Referentie voor de Destination SDK-API (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Bestemmingsserverbewerkingen {#server-operations}
