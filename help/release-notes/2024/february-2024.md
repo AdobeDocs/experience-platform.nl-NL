@@ -25,7 +25,9 @@ Updates voor bestaande functies in Experience Platform:
 
 Met Experience Platform kunt u zich abonneren op gebeurtenisgebaseerde waarschuwingen voor verschillende platformactiviteiten. U kunt zich abonneren op verschillende waarschuwingsregels via de [!UICONTROL Alerts] in de gebruikersinterface van het Platform en kan ervoor kiezen waarschuwingsberichten te ontvangen binnen de gebruikersinterface zelf of via e-mailmeldingen.
 **Nieuwe of bijgewerkte functies**
-| Functie | Beschrijving | | — | — | | Tabblad Waarschuwingsgeschiedenis | Als beheerder van een Experience Platform kunt u met de functie Waarschuwingsabonnees beheren een waarschuwing toewijzen aan een gebruikers-id voor een Adobe, een extern e-mailadres of een lijst met e-mailgroepen. Zie de klasse [UI-documentatie met waarschuwingen](../../observability/alerts/ui.md) voor meer informatie over het geschiedenislusje. |
+| Functie | Beschrijving | 
+| --- | --- | 
+| Tabblad Waarschuwingsgeschiedenis | Als beheerder van een Experience Platform kunt u met de functie Waarschuwingsabonnees beheren een waarschuwing toewijzen aan een gebruikers-id voor een Adobe, een extern e-mailadres of een lijst met e-mailgroepen. Zie de klasse [UI-documentatie met waarschuwingen](../../observability/alerts/ui.md) voor meer informatie over het geschiedenislusje. |
 
 {style="table-layout:auto"}
 
