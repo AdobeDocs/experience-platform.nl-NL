@@ -2,16 +2,16 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2887'
+source-wordcount: '2711'
 ht-degree: 2%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 28 september 2022**
+**Releasedatum: donderdag 28 september 2022**
 
 Nieuwe functies in Adobe Experience Platform:
 
@@ -42,7 +42,7 @@ Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisat
 | Functie | Beschrijving |
 | --- | --- |
 | Toegangsbeheer op basis van kenmerken | Op attribuut-gebaseerde toegangscontrole staat u toe om het schemagebieden en de segmenten van het Model van de Gegevens van de Ervaring (XDM) met etiketten te etiketteren die organisatorische of gegevensgebruikswerkingsgebied bepalen. Parallel hieraan kunnen beheerders de gebruiker en de interface van het rolbeleid gebruiken om toegangsbeleid te bepalen dat XDM schemagebieden en segmenten behandelt om de toegang beter te beheren die aan gebruikers of groepen gebruikers (interne, externe, of derdegebruikers) wordt gegeven. Zie de klasse [op attributen-gebaseerd toegangsbeheeroverzicht](../../access-control/abac/overview.md). |
-| Toestemmingen | De toestemmingen zijn het gebied van Experience Cloud waar de beheerders gebruikersrollen en toegangsbeleid kunnen bepalen om toegangstoestemmingen voor eigenschappen en voorwerpen binnen een producttoepassing te beheren. Door Toestemmingen, kunt u rollen tot stand brengen en beheren, de gewenste middeltoestemmingen voor deze rollen toewijzen, en beleid bouwen aan hefboomwerkings etiketten en bepalen welke gebruikersrollen toegang tot specifieke middelen van het Platform hebben. Met machtigingen kunt u ook de labels, sandboxen en gebruikers beheren die aan een specifieke rol zijn gekoppeld. Zie de klasse [Instructiehandleiding](../../access-control/abac/ui/browse.md). |
+| Machtigingen | De toestemmingen zijn het gebied van Experience Cloud waar de beheerders gebruikersrollen en toegangsbeleid kunnen bepalen om toegangstoestemmingen voor eigenschappen en voorwerpen binnen een producttoepassing te beheren. Door Toestemmingen, kunt u rollen tot stand brengen en beheren, de gewenste middeltoestemmingen voor deze rollen toewijzen, en beleid bouwen aan hefboomwerkings etiketten en bepalen welke gebruikersrollen toegang tot specifieke middelen van het Platform hebben. Met machtigingen kunt u ook de labels, sandboxen en gebruikers beheren die aan een specifieke rol zijn gekoppeld. Zie de klasse [Instructiehandleiding](../../access-control/abac/ui/browse.md). |
 
 Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, zie [op attributen-gebaseerd toegangsbeheeroverzicht](../../access-control/abac/overview.md). Voor een uitvoerige gids over het op attributen-gebaseerde toegangsbeheerwerkschema, lees [attribuut-based toegangsbeheergids van begin tot eind](../../access-control/abac/end-to-end-guide.md).
 
@@ -110,8 +110,8 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | Integratie van linkernavigatie in de gebruikersinterface van het platform | Alle mogelijkheden die eerder exclusief waren aan de UI van de Inzameling van Gegevens (met inbegrip van markeringen, gebeurtenis door:sturen, en gegevensstromen) zijn nu ook beschikbaar door de linkernavigatie in Experience Platform, onder de categorie **[!UICONTROL Data Collection]**. Dit elimineert de behoefte om tussen UIs te schakelen wanneer het werken met de mogelijkheden van de gegevensinzameling in Platform. |
 | Toewijzing door gebruiker in tags en gebeurtenis doorsturen | Als aanbieding beschikbaar is [!UICONTROL Properties] in markeringen en gebeurtenis door:sturen, toont elk vermeld bezit nu wanneer het het laatst werd bijgewerkt, en welke gebruiker de update maakte. |
 | [[!DNL Snap Conversions API] extension](https://exchange.adobe.com/apps/ec/108550) voor gebeurtenis doorsturen | U kunt nu gegevens verzenden naar de [!DNL Snapchat Conversions API] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Voor meer informatie over het verifiëren en gebruiken van API, verwijs naar [[!DNL Snapchat Marketing API] documentatie](https://marketingapi.snapchat.com/docs/conversion.html). |
-| [[!DNL User-Agent Client Hints] in Web SDK](../../edge/fundamentals/user-agent-client-hints.md) | De SDK van het Web ondersteunt nu [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Met clienttips hebben websiteeigenaars toegang tot veel van de informatie die in het dialoogvenster [!DNL User-Agent] -tekenreeks, maar op een meer privacyvriendelijke manier. |
-| [Web SDK pagina-voor-pagina migratie](../../edge/home.md#migrating-to-web-sdk) | U kunt nu bestaande wegeigenschappen migreren uit andere Experiencen Cloud bibliotheken, zoals [!DNL at.js], naar Web SDK, één pagina tegelijk. Dit laat een gefaseerde benadering van de migratie van SDK van het Web toe, zonder de behoefte om al uw pagina&#39;s in één keer te migreren. |
+| [Gebruiker-agent de Hints van de Cliënt in Web SDK](/help/web-sdk/use-cases/client-hints.md) | De SDK van het Web ondersteunt nu [Client-tips voor gebruikersagent](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Met clienttips hebben websiteeigenaars toegang tot veel van de informatie die in het dialoogvenster [!DNL User-Agent] -tekenreeks, maar op een meer privacyvriendelijke manier. |
+| [Web SDK pagina-voor-pagina migratie](../../web-sdk/home.md#migrating-to-web-sdk) | U kunt nu bestaande wegeigenschappen migreren uit andere Experiencen Cloud bibliotheken, zoals [!DNL at.js], naar Web SDK, één pagina tegelijk. Dit laat een gefaseerde benadering van de migratie van SDK van het Web toe, zonder de behoefte om al uw pagina&#39;s in één keer te migreren. |
 | [[!DNL Adobe Journey Optimizer] ondersteuning voor gegevensstreams](../../datastreams/overview.md#aep) | De Adobe Experience Platform-service voor gegevensstromen ondersteunt nu [!DNL Adobe Journey Optimizer]. Met deze optie kunt u inkomende kanalen via het web en op apps gebaseerde kanalen gebruiken in [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
@@ -132,7 +132,7 @@ Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overz
 
 **Nieuwe of bijgewerkte doelen**
 
-| Bestemming | Beschrijving |
+| Doel | Beschrijving |
 | ----------- | ----------- |
 | [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services biedt een platform voor het ontwerpen van de ervaringen van klanten over meerdere kanalen en een omgeving voor visuele campagneorchestratie, real-time interactiebeheer en uitvoering via meerdere kanalen. [Aan de slag met campagne](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Deze integratie werkt met [Adobe Campaign versie 8.4 of hoger](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | De [!DNL Salesforce CRM] de bestemming is bijgewerkt om zowel contacten en leidt updates, als prestatiesverbeteringen voor snellere updates te steunen. |
@@ -172,7 +172,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 | Componenttype | Naam | Beschrijving |
 | --- | --- | --- |
-| Gedraging | [[!UICONTROL Time series]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>Toegevoegde waarden voor `eventType`:<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>Verwijderde waarden voor `eventType`:<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
+| Gedrag | [[!UICONTROL Time series]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>Toegevoegde waarden voor `eventType`:<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>Verwijderde waarden voor `eventType`:<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
 | Veldgroep | (Meerdere) | [Verschillende veldbeschrijvingen zijn bijgewerkt](https://github.com/adobe/xdm/pull/1628/files) voor alle Journeys Orchestration. |
 | Veldgroep | (Meerdere) | [De titels voor verschillende Adobe Workfront-componenten zijn bijgewerkt](https://github.com/adobe/xdm/pull/1634/files) ter wille van de consistentie. |
 | Veldgroep | [[!UICONTROL AJO Classification Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | De naamruimten van verschillende velden zijn bijgewerkt naar `xdm`. |

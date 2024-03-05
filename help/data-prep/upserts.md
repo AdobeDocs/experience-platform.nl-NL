@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;voorvoegsel van gegeven
 title: Gedeeltelijke rijupdates naar realtime klantprofiel verzenden met Data Prep
 description: Leer hoe u updates van gedeeltelijke rijen naar Real-Time klantprofiel verzendt met Data Prep.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: db6a0b45d600d16b24f7f749e414dfd0998fbf5e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1241'
 ht-degree: 0%
 
 ---
@@ -265,7 +265,7 @@ In het volgende voorbeeld wordt een lijst met bekende beperkingen beschreven die
 
 * De streaming upserts methode zou slechts moeten worden gebruikt wanneer het verzenden van gedeeltelijke rijupdates naar [!DNL Real-Time Customer Profile]. Gedeeltelijke rij-updates zijn **niet** verbruikt door data Lake.
 * De streaming upserts-methode ondersteunt het bijwerken, vervangen en verwijderen van identiteiten niet. Er worden nieuwe identiteiten gemaakt als deze niet bestaan. Vandaar dat `identity` bewerking moet altijd zijn ingesteld op maken. Als er al een identiteit bestaat, is de bewerking een no-op.
-* De streaming upserts-methode ondersteunt momenteel niet [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html) en [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* De streaming upserts-methode ondersteunt momenteel niet [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) en [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Volgende stappen
 

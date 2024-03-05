@@ -7,10 +7,10 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1287'
-ht-degree: 2%
+source-wordcount: '1251'
+ht-degree: 0%
 
 ---
 
@@ -105,7 +105,7 @@ De extensie is nu geïnstalleerd en geconfigureerd voor gebruik in uw eigenschap
 
 Wanneer u deze extensie in een [regel](../../../ui/managing-resources/rules.md), zijn er verscheidene gegevenswaarden die de uitbreiding naar Mailchimp met elke gebeurtenis verzendt. Voor een typische implementatie, kunt u vormen [Adobe Experience Platform Web SDK-extensie](../../client/web-sdk/overview.md) om die gegevens te verzenden naar [!DNL Platform Edge Network] voor gebruik door de uitbreiding in de gebeurtenis die bezit door:sturen.
 
-De gegevens die door deze uitbreiding worden vereist kunnen van Web SDK als of gegevens worden verzonden XDM of niet-XDM. Raadpleeg de documentatie voor meer informatie over [XDM-gegevens verzenden](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
+De gegevens die door deze uitbreiding worden vereist kunnen van SDK van het Web als of gegevens XDM (het gebruiken van [`xdm`](/help/web-sdk/commands/sendevent/xdm.md) object) of niet-XDM-gegevens (met de [`data`](/help/web-sdk/commands/sendevent/data.md) object).
 
 Als een klant bijvoorbeeld een aankoop doet of zich registreert voor een gebeurtenis op uw site, kunt u een bevestigingsbericht verzenden via Mailchimp met deze extensie. Zodra u de vereiste informatie van SDK van het Web naar het Netwerk van de Rand verzendt, teweegbrengt de uitbreiding e-mail met Mailchimp.
 
@@ -119,12 +119,12 @@ In de onderstaande tabel vindt u meer details voor elke mogelijke waarde.
 
 | Naam | Voorbeeldpad | Type | Beschrijving | Vereist | Limieten |
 |:---|:---:|:---:|:---|:---:|:---|
-| `email` | `arc.event.xdm._tenant.emailId`<br /> of<br /> `arc.event.data._tenant.emailId` | Tekenreeks | Het adres dat de e-mail ontvangt | **Ja** | Moet in het Publiek Mailchimp bestaan |
-| `listId` | `arc.event.xdm._tenant.listId`<br /> of<br /> `arc.event.data._tenant.listid` | Tekenreeks | Id van publiek | **Ja** | Moet overeenkomen met een bestaande publiek-id |
-| `name` | `arc.event.xdm._tenant.name`<br /> of<br /> `arc.event.data._tenant.name` | Tekenreeks | De naam van de gebeurtenis | **Ja** | 2-30 tekens lang |
+| `email` | `arc.event.xdm._tenant.emailId`<br /> of<br /> `arc.event.data._tenant.emailId` | String | Het adres dat de e-mail ontvangt | **Ja** | Moet in het Publiek Mailchimp bestaan |
+| `listId` | `arc.event.xdm._tenant.listId`<br /> of<br /> `arc.event.data._tenant.listid` | String | Id van publiek | **Ja** | Moet overeenkomen met een bestaande publiek-id |
+| `name` | `arc.event.xdm._tenant.name`<br /> of<br /> `arc.event.data._tenant.name` | String | De naam van de gebeurtenis | **Ja** | 2-30 tekens lang |
 | `properties` | `arc.event.xdm._tenant.properties`<br /> of<br /> `arc.event.data._tenant.properties` | Object | Een optionele lijst met eigenschappen in JSON-indeling met informatie over de gebeurtenis | Nee |  |
 | `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> of<br /> `arc.event.data._tenant.isSyncing` | boolean | Gebeurtenissen gemaakt met `is_syncing` instellen op `true` **niet** triggerautomatisering | Nee |  |
-| `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> of `arc.event.data._tenant.occuredAt` | Tekenreeks | Een ISO 8601-tijdstempel van wanneer de gebeurtenis heeft plaatsgevonden | Nee |  |
+| `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> of `arc.event.data._tenant.occuredAt` | String | Een ISO 8601-tijdstempel van wanneer de gebeurtenis heeft plaatsgevonden | Nee |  |
 
 {style="table-layout:auto"}
 

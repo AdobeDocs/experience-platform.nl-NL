@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van de Source Connector voor klantkenmerken
 description: Leer hoe u klantkenmerken met behulp van API's of de gebruikersinterface kunt verbinden met Adobe Experience Platform
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ U kunt geen bestaande naamruimte voor de identiteit selecteren wanneer u [!DNL C
 
 Voor [!DNL Customer Attributes] gegevens die aan andere [!DNL Profile] gegevenssets, de gegevens en identiteiten ervan moeten kunnen worden gekoppeld aan een Experience Cloud-id.
 
-U kunt de `CORE` naamruimte door de Experience Cloud-id voor de bezoeker in te stellen met [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)of de [API voor Experience Cloud-id](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html).
+U kunt de `CORE` naamruimte door de Experience Cloud-id voor de bezoeker in te stellen met [Web SDK](/help/web-sdk/identity/overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)of de [API voor Experience Cloud-id](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html).
 
 De [!DNL Customer Attributes] andere identiteitsrelaties niet meer vullen. Als een [!DNL Customer Attributes] brondataset bevat een **E-mail** en **Loyalty-id** veld, moeten deze velden worden gelabeld als identiteitsvelden in het schema om te kunnen worden verwerkt tot [!DNL Identity Service].
 

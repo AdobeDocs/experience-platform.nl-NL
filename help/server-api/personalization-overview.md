@@ -2,10 +2,10 @@
 title: Overzicht van personalisatie
 description: Leer hoe u de Adobe Experience Platform Edge Network Server-API gebruikt om persoonlijke inhoud op te halen uit de oplossingen voor het aanpassen van Adoben.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 8%
+source-wordcount: '729'
+ht-degree: 4%
 
 ---
 
@@ -15,7 +15,7 @@ Met de [!DNL Server API]kunt u persoonlijke inhoud ophalen van Adobe-personalisa
 
 Daarnaast worden de [!DNL Server API] bevoegdheden personaliseringsmogelijkheden van zelfde pagina en van volgende pagina door de verpersoonlijkingsbestemmingen van Adobe Experience Platform, zoals [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) en de [aangepaste verpersoonlijkingsverbinding](../destinations/catalog/personalization/custom-personalization.md). Om te leren hoe te om Experience Platform voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen, zie [speciale gids](../destinations/ui/activate-edge-personalization-destinations.md).
 
-Wanneer het gebruiken van de Server API, moet u de reactie integreren die door de verpersoonlijkingsmotor met de logica wordt verstrekt die wordt gebruikt om inhoud op uw plaats terug te geven. In tegenstelling tot [Web SDK](../edge/home.md)de [!DNL Server API] heeft geen mechanisme om automatisch inhoud toe te passen die is geretourneerd door [!DNL Adobe Target] en [!DNL Offer Decisioning].
+Wanneer het gebruiken van de Server API, moet u de reactie integreren die door de verpersoonlijkingsmotor met de logica wordt verstrekt die wordt gebruikt om inhoud op uw plaats terug te geven. In tegenstelling tot [Web SDK](../web-sdk/home.md)de [!DNL Server API] heeft geen mechanisme om automatisch inhoud toe te passen die is geretourneerd door [!DNL Adobe Target] en [!DNL Offer Decisioning].
 
 ## Terminologie {#terminology}
 
@@ -113,21 +113,21 @@ De gepersonaliseerde inhoud die van verpersoonlijkingsoplossingen wordt teruggew
 
 | Kenmerk | Type | Beschrijving |
 | --- | --- | --- |
-| `payload.id` | Tekenreeks | De beslissing-id. |
-| `payload.scope` | Tekenreeks | De reikwijdte van de beslissing die tot de voorgestelde aanbiedingen heeft geleid. |
-| `payload.scopeDetails.decisionProvider` | Tekenreeks | Instellen op `TGT` bij gebruik van Adobe Target. |
-| `payload.scopeDetails.activity.id` | Tekenreeks | De unieke id van de aanbiedingsactiviteit. |
-| `payload.scopeDetails.experience.id` | Tekenreeks | De unieke id van de plaatsing van de aanbieding. |
-| `items[].id` | Tekenreeks | De unieke id van de plaatsing van de aanbieding. |
-| `items[].data.id` | Tekenreeks | De id van de voorgestelde aanbieding. |
-| `items[].data.schema` | Tekenreeks | Het schema van de inhoud verbonden aan de voorgestelde aanbieding. |
-| `items[].data.format` | Tekenreeks | Het formaat van de inhoud die aan de voorgestelde aanbieding is gekoppeld. |
-| `items[].data.language` | Tekenreeks | Een array met talen die zijn gekoppeld aan de inhoud van het voorgestelde aanbod. |
-| `items[].data.content` | Tekenreeks | De inhoud die aan de voorgestelde aanbieding in het formaat van een koord wordt geassocieerd. |
-| `items[].data.selector` | Tekenreeks | HTML-kiezer die wordt gebruikt om het DOM-doelelement voor een DOM-actieaanbieding te identificeren. |
-| `items[].data.prehidingSelector` | Tekenreeks | HTML-kiezer die wordt gebruikt om het DOM-element te identificeren dat moet worden verborgen tijdens het afhandelen van een DOM-actieaanbieding. |
-| `items[].data.deliveryUrl` | Tekenreeks | De afbeeldingsinhoud die aan de voorgestelde aanbieding is gekoppeld, wordt weergegeven in de vorm van een URL. |
-| `items[].data.characteristics` | Tekenreeks | Kenmerken van de voorgestelde aanbieding in de vorm van een JSON-object. |
+| `payload.id` | String | De beslissing-id. |
+| `payload.scope` | String | De reikwijdte van de beslissing die tot de voorgestelde aanbiedingen heeft geleid. |
+| `payload.scopeDetails.decisionProvider` | String | Instellen op `TGT` bij gebruik van Adobe Target. |
+| `payload.scopeDetails.activity.id` | String | De unieke id van de aanbiedingsactiviteit. |
+| `payload.scopeDetails.experience.id` | String | De unieke id van de plaatsing van de aanbieding. |
+| `items[].id` | String | De unieke id van de plaatsing van de aanbieding. |
+| `items[].data.id` | String | De id van de voorgestelde aanbieding. |
+| `items[].data.schema` | String | Het schema van de inhoud verbonden aan de voorgestelde aanbieding. |
+| `items[].data.format` | String | Het formaat van de inhoud die aan de voorgestelde aanbieding is gekoppeld. |
+| `items[].data.language` | String | Een array met talen die zijn gekoppeld aan de inhoud van het voorgestelde aanbod. |
+| `items[].data.content` | String | De inhoud die aan de voorgestelde aanbieding in het formaat van een koord wordt geassocieerd. |
+| `items[].data.selector` | String | HTML-kiezer die wordt gebruikt om het DOM-doelelement voor een DOM-actieaanbieding te identificeren. |
+| `items[].data.prehidingSelector` | String | HTML-kiezer die wordt gebruikt om het DOM-element te identificeren dat moet worden verborgen tijdens het afhandelen van een DOM-actieaanbieding. |
+| `items[].data.deliveryUrl` | String | De afbeeldingsinhoud die aan de voorgestelde aanbieding is gekoppeld, wordt weergegeven in de vorm van een URL. |
+| `items[].data.characteristics` | String | Kenmerken van de voorgestelde aanbieding in de vorm van een JSON-object. |
 
 ## Voorbeeld-API-aanroep {#sample-call}
 
@@ -185,8 +185,8 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 | Parameter | Type | Vereist | Beschrijving |
 | --- | --- | --- | --- |
-| `configId` | Tekenreeks | Ja | De gegevensstroom-id. |
-| `requestId` | Tekenreeks | Nee | Geef een externe overtrekID voor aanvragen op. Als niets wordt verstrekt, zal het Netwerk van de Rand één voor u produceren en zal het terug in de reactielichaam/kopballen terugkeren. |
+| `configId` | String | Ja | De gegevensstroom-id. |
+| `requestId` | String | Nee | Geef een externe overtrekID voor aanvragen op. Als niets wordt verstrekt, zal het Netwerk van de Rand één voor u produceren en zal het terug in de reactielichaam/kopballen terugkeren. |
 
 ### Antwoord {#response}
 

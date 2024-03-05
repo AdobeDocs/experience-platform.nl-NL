@@ -1,17 +1,17 @@
 ---
 title: Overzicht gegevensstromen
 description: Leer hoe de gegevensstromen u helpen uw cliënt-zijintegratie van Experience Platform SDK met de producten van de Adobe en derdebestemmingen verbinden.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '724'
 ht-degree: 0%
 
 ---
 
-
 # Overzicht gegevensstromen
 
-Een gegevensstroom vertegenwoordigt de server-zijconfiguratie wanneer het uitvoeren van het Web van Adobe Experience Platform en Mobiele SDKs. Terwijl de [vormen](../edge/fundamentals/configuring-the-sdk.md) bevel in SDK controleert dingen die op de cliënt (zoals moeten worden behandeld `edgeDomain`), kunnen gegevensstromen alle andere configuraties voor SDK behandelen. Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, `edgeConfigId` wordt gebruikt om naar de gegevensstroom te verwijzen. Hierdoor kunt u de serverconfiguratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
+Een gegevensstroom vertegenwoordigt de server-zijconfiguratie wanneer het uitvoeren van het Web van Adobe Experience Platform en Mobiele SDKs. Terwijl de [`configure`](/help/web-sdk/commands/configure/overview.md) bevel in SDK controleert dingen die op de cliënt (zoals moeten worden behandeld `edgeDomain`), kunnen gegevensstromen alle andere configuraties voor SDK behandelen. Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, `edgeConfigId` wordt gebruikt om naar de gegevensstroom te verwijzen. Hierdoor kunt u de serverconfiguratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
 
 U kunt gegevensstromen tot stand brengen en beheren door te selecteren **[!UICONTROL Datastreams]** in de linkernavigatie binnen de UI van Adobe Experience Platform of UI van de Inzameling van Gegevens.
 

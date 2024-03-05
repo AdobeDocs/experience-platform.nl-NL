@@ -2,10 +2,10 @@
 title: Evolutie van Audience Manager naar Real-Time CDP
 description: Begrijp de overwegingen alvorens uw migratie van Audience Manager aan Real-Time CDP te plannen.
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 2%
+source-wordcount: '474'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe raadt u aan de segmenten als volgt te categoriseren:
 
 ## 2. Welke segmenten zijn essentieel om door te sturen via [!UICONTROL Audience Manager Source Connector]?
 
-Gebaseerd op hun evaluatiecriteria, kunnen de segmenten die geen gegevensgebiedsdelen, geen bestemming of activeringsuitdagingen hebben, en hun segmenteringsregels door de gegevensinzameling van Real-Time CDP zoals worden gecreeerd [Adobe Experience Platform Web SDK](/help/edge/web-sdk-faq.md) op een recentere datum zou door de Bron van de Audience Manager Schakelaar moeten worden verzonden.
+Gebaseerd op hun evaluatiecriteria, kunnen de segmenten die geen gegevensgebiedsdelen, geen bestemming of activeringsuitdagingen hebben, en hun segmenteringsregels door de gegevensinzameling van Real-Time CDP zoals worden gecreeerd [Adobe Experience Platform Web SDK](/help/web-sdk/faq.md) op een recentere datum zou door de Bron van de Audience Manager Schakelaar moeten worden verzonden.
 
 ## 3. Gebruikt u de [!UICONTROL Experience Cloud Audiences] bestemming om gegevens terug naar Audience Manager te brengen?
 

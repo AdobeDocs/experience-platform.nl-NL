@@ -3,9 +3,9 @@ keywords: aangepaste personalisatie; bestemming; ervaring met aangepaste bestemm
 title: Aangepaste verpersoonlijkingsverbinding
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats lopen een manier om publieksinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het gebruikersprofiellidmaatschap wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '868'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Stel deze bestemming in om externe personalisatieplatforms, contentbeheersysteme
 
 ## Vereisten {#prerequisites}
 
-Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](../../../edge/home.md) of de [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). U moet één van deze SDKs gebruiken om deze bestemming te gebruiken.
+Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) of de [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). U moet één van deze SDKs gebruiken om deze bestemming te gebruiken.
 
 >[!IMPORTANT]
 >
@@ -120,7 +120,7 @@ Hier volgt een voorbeeldwaarde voor het dialoogvenster `event.destinations` vari
 ]
 ```
 
-Als u dit niet gebruikt [Tags](../../../tags/home.md) om SDK van het Web van het Experience Platform op te stellen, gebruik [reacties van gebeurtenissen afhandelen](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) om de geëxporteerde gegevens weer te geven.
+Als u dit niet gebruikt [Tags](/help/tags/home.md) om het Web SDK van het Experience Platform op te stellen, gebruik [opdrachtreacties](/help/web-sdk/commands/command-responses.md) om de geëxporteerde gegevens weer te geven.
 
 Het JSON-antwoord van Adobe Experience Platform kan worden geparseerd om de bijbehorende integratiealias te zoeken van de toepassing die u integreert met Adobe Experience Platform. De gebruikers-id&#39;s kunnen als doelparameters worden doorgegeven aan de code van de toepassing. Hieronder ziet u een voorbeeld van hoe dit er specifiek uitziet voor de doelrespons.
 

@@ -1,21 +1,21 @@
 ---
 title: Tabblad Samenvatting
-description: Leer hoe u het tabblad Overzicht kunt gebruiken in Adobe Experience Platform Debugger.
-keywords: debugger;ervaring Platform Debugger uitbreiding;chroom;uitbreiding;samenvatting;duidelijk;verzoeken;samenvattingsscherm;oplossing;informatie;analyse;doel;dtm;publieksmanager;start;id de dienst
+description: Leer hoe u het tabblad Overzicht in het Adobe Experience Platform Debugger kunt gebruiken.
+keywords: foutopsporing;beleving van de extensie Platform Foutopsporing;chroom;extensie;samenvatting;wissen;verzoeken;samenvattingsscherm;oplossing;informatie;analyse;doel;dtm;publieksbeheer;starten;id-service
 seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
 uuid: 46b17eaa-b611-43cf-8c6a-67b2e9b9d940
 exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
-source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '711'
 ht-degree: 1%
 
 ---
 
 # Tabblad Samenvatting
 
-Als u Adobe Experience Platform Debugger wilt uitvoeren, opent u de pagina die u wilt controleren in de browser en selecteert u het pictogram (![](images/start-icon.jpg)) op de browserbalk. De extensie wordt geopend op de **Samenvatting** tab.
+Als u het Adobe Experience Platform Debugger wilt uitvoeren, opent u de pagina die u wilt controleren in de browser en selecteert u het pictogram (![](images/start-icon.jpg)) op de browserbalk. De extensie wordt geopend op de **Samenvatting** tab.
 
 ![](images/summary.jpg)
 
@@ -89,7 +89,7 @@ Foutopsporing van het Experience Platform toont de volgende informatie voor elke
   </tr> 
   <tr> 
    <td colname="col1"> <p>Omgeving </p> </td> 
-   <td colname="col2"> <p>De <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> milieu</a> gebruikt door de tagbibliotheek </p> </td> 
+   <td colname="col2"> <p>De <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> milieu</a> wordt gebruikt door de tagbibliotheek </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Extensies </p> </td> 
@@ -104,7 +104,7 @@ Foutopsporing van het Experience Platform toont de volgende informatie voor elke
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Bibliotheekversie </p> </td> 
-   <td colname="col2"> <p>Het nummer van de Adobe Experience Platform Web SDK <a href="https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-ext-release-notes.html" format="html" scope="external">bibliotheekversie</a> </p> </td> 
+   <td colname="col2"> <p>Het nummer van de Adobe Experience Platform Web SDK <a href="https://experienceleague.adobe.com/docs/experience-platform/web-sdk/extension/web-sdk-ext-release-notes.html" format="html" scope="external">bibliotheekversie</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Naamruimte</p> </td> 
@@ -120,7 +120,7 @@ Foutopsporing van het Experience Platform toont de volgende informatie voor elke
   </tr> 
   <tr> 
    <td colname="col1"> <p>IMS-organisatie-ID </p> </td> 
-   <td colname="col2"> <p>De organisatie waarnaar u de gegevens wilt verzenden die bij Adobe worden verzonden, zoals opgegeven in de extensie </p> </td> 
+   <td colname="col2"> <p>De organisatie waarnaar u de gegevens wilt verzenden bij Adobe, zoals opgegeven in de extensie </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Aanmelding ingeschakeld </p> </td> 
@@ -134,7 +134,7 @@ Foutopsporing van het Experience Platform toont de volgende informatie voor elke
 <table id="table_274CFCEFA8F34D16BB546B4669EC0209"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <p>Experience Cloud Org ID </p> </td> 
+   <td colname="col1"> <p>Org ID Experience Cloud </p> </td> 
    <td colname="col2"> <p>Uw <a href="https://experiencecloud.adobe.com/resources/help/en_US/mcvid/" format="https" scope="external"> Organisatie-id</a> </p> </td> 
   </tr> 
   <tr> 

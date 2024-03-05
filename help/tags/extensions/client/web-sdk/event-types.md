@@ -3,16 +3,16 @@ title: Gebeurtenistypen in de Adobe Experience Platform Web SDK-extensie
 description: Leer hoe u gebeurtenistypen gebruikt die door de Adobe Experience Platform Web SDK-extensie in Adobe Experience Platform Launch worden geleverd.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
 
 # Gebeurtenistypen
 
-Op deze pagina worden de Adobe Experience Platform-gebeurtenistypen beschreven die worden geleverd door de tagextensie Adobe Experience Platform Web SDK. Deze worden gebruikt om [bouwregels](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) en mag niet worden verward met de [`eventType` veld in XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html).
+Op deze pagina worden de Adobe Experience Platform-gebeurtenistypen beschreven die worden geleverd door de tagextensie Adobe Experience Platform Web SDK. Deze worden gebruikt om [bouwregels](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) en mag niet worden verward met de `eventType` in het veld [`xdm` object](/help/web-sdk/commands/sendevent/xdm.md).
 
 ## [!UICONTROL Send event complete]
 
@@ -26,7 +26,7 @@ Uw regel voor de behandeling van gegevens die van het Netwerk van de Rand zijn t
 
 ![](assets/send-event-complete.png)
 
-Hieronder volgen enkele voorbeelden van het uitvoeren van bepaalde taken met behulp van de [!UICONTROL Custom code] in deze regel.
+Hieronder volgen enkele voorbeelden van het uitvoeren van bepaalde taken met behulp van de [!UICONTROL Custom code] actie in deze regel.
 
 ### Persoonlijke inhoud handmatig renderen
 
@@ -38,7 +38,7 @@ var propositions = event.propositions;
 
 Indien `event.propositions` bestaat, is het een serie die de voorwerpen van het verpersoonlijkingsvoorstel bevat. De voorstellingen die in de array zijn opgenomen, worden grotendeels bepaald door de manier waarop de gebeurtenis naar de server is verzonden.
 
-Voor dit eerste scenario, veronderstel u niet hebt gecontroleerd [!UICONTROL Render decisions] Selectievakje en geen gegevens opgegeven [!UICONTROL decision scopes] binnen [!UICONTROL Send event] handeling die verantwoordelijk is voor het verzenden van de gebeurtenis.
+Voor dit eerste scenario, veronderstel u niet hebt gecontroleerd [!UICONTROL Render decisions] Selectievakje en geen gegevens opgegeven [!UICONTROL decision scopes] in de [!UICONTROL Send event] handeling die verantwoordelijk is voor het verzenden van de gebeurtenis.
 
 ![img.png](assets/send-event-render-unchecked-without-scopes.png)
 
@@ -89,7 +89,7 @@ Wanneer u de gebeurtenis verzendt, wordt [!UICONTROL Render decisions] selectiev
 
 Als u in plaats daarvan de [!UICONTROL Render decisions] Schakel het selectievakje in wanneer de gebeurtenis wordt verzonden. De SDK heeft dan geprobeerd alle profielen te renderen die in aanmerking komen voor automatische rendering. Dientengevolge zou elk van de propositievoorwerpen zijn hebben `renderAttempted` eigenschap ingesteld op `true`. In dit geval is het niet nodig deze voorstellen handmatig weer te geven.
 
-Tot nu toe, hebt u slechts verpersoonlijkingsinhoud bekeken die voor automatische teruggeven (bijvoorbeeld, om het even welke inhoud die in Adobe Target Visual Experience Composer wordt gecreeerd) verkiest. Om het even welke verpersoonlijkingsinhoud terug te winnen _niet_ die in aanmerking komen voor automatische rendering, de inhoud aanvragen door het besluitvormingsbereik te bepalen met behulp van de [!UICONTROL Decision scopes] in het [!UICONTROL Send event] handeling. Een werkingsgebied is een koord dat een bepaald voorstel identificeert u van de server zou willen terugwinnen.
+Tot dusver, hebt u slechts tot verpersoonlijkingsinhoud gekeken die voor automatische teruggeven (bijvoorbeeld, om het even welke inhoud die in Adobe Target Visual Experience Composer wordt gecreeerd) verkiest. Om het even welke verpersoonlijkingsinhoud terug te winnen _niet_ die in aanmerking komen voor automatische rendering, de inhoud aanvragen door het besluitvormingsbereik te bepalen met behulp van de [!UICONTROL Decision scopes] in het veld [!UICONTROL Send event] handeling. Een werkingsgebied is een koord dat een bepaald voorstel identificeert u van de server zou willen terugwinnen.
 
 De [!UICONTROL Send event] de actie ziet er als volgt uit :
 
@@ -217,9 +217,9 @@ if (discountHtml) {
 
 ### Adobe Target-respontokens openen
 
-Tot de personalisatie-inhoud die door Adobe Target wordt geretourneerd, behoren [reactietokens](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), die details over de activiteit, de aanbieding, de ervaring, het gebruikersprofiel, geo informatie, en meer zijn. Deze details kunnen met derdehulpmiddelen worden gedeeld of voor het zuiveren worden gebruikt. De tokens van de reactie kunnen in het gebruikersinterface van Adobe Target worden gevormd.
+Persoonlijke inhoud die door Adobe Target wordt geretourneerd, omvat [reactietokens](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), die details over de activiteit, de aanbieding, de ervaring, het gebruikersprofiel, geo informatie, en meer zijn. Deze details kunnen met derdehulpmiddelen worden gedeeld of voor het zuiveren worden gebruikt. De tokens van de reactie kunnen in het gebruikersinterface van Adobe Target worden gevormd.
 
-In de actie van de Code van de Douane, die in de regel voor de behandeling van reactiegegevens is, kunt u tot verpersoonlijkingsvoorstellen toegang hebben die van de server zijn teruggekeerd. Typ hiertoe de volgende aangepaste code:
+In de actie van de Code van de Douane, die in de regel voor de behandeling van reactiegegevens is, kunt u tot verpersoonlijkingsvoorstellen toegang hebben die van de server zijn teruggekeerd. Voer hiertoe de volgende aangepaste code in:
 
 ```javascript
 var propositions = event.propositions;
@@ -230,7 +230,7 @@ Indien `event.propositions` bestaat, is het een serie die de voorwerpen van het 
 Stel dat u alle activiteitennamen wilt verzamelen van alle voorstellingen die automatisch door de web-SDK zijn gerenderd en deze in één array wilt plaatsen. Vervolgens kunt u de ene array naar een derde verzenden. In dit geval schrijft u aangepaste code in het dialoogvenster [!UICONTROL Custom code] actie voor:
 
 1. Proposities verwijderen uit de `event` object.
-1. Doorloop elk voorstel.
+1. Lijn door elk voorstel.
 1. Bepaal of de SDK het voorstel heeft weergegeven.
 1. Als zo, lijn door elk punt in het voorstel.
 1. De naam van de activiteit ophalen uit het dialoogvenster `meta` eigenschap, dat een object is dat responstokens bevat.

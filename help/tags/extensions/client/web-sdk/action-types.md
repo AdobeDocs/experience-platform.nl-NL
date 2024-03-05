@@ -3,9 +3,9 @@ title: Handelingstypen in de Adobe Experience Platform Web SDK Extension
 description: Leer meer over de verschillende actietypen die door de de marktextensie van SDK van het Web van Adobe Experience Platform worden verstrekt.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '725'
 ht-degree: 0%
 
 ---
@@ -23,15 +23,15 @@ Hiermee wordt een gebeurtenis naar de Adobe verzonden [!DNL Experience Platform]
 
 Er zijn een paar andere gebieden in het Send actietype van de Gebeurtenis die ook afhankelijk van uw implementatie nuttig zouden kunnen zijn. Deze velden zijn allemaal optioneel.
 
-- **Type:** In dit veld kunt u een gebeurtenistype opgeven dat in uw XDM-schema wordt opgenomen. Zie de [documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) voor meer informatie over de standaardgebeurtenistypen.
-- **Gegevens:** Gegevens die niet overeenkomen met een XDM-schema kunnen met dit veld worden verzonden. Dit veld is handig als u probeert een Adobe Target-profiel bij te werken of Recommendations-kenmerken van het doel te verzenden. Voor voorbeelden bekijkt u onze [documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html).<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
+- **Type:** In dit veld kunt u een gebeurtenistype opgeven dat in uw XDM-schema wordt opgenomen. Zie [`type`](/help/web-sdk/commands/sendevent/type.md) in de `sendEvent` voor meer informatie.
+- **Gegevens:** Gegevens die niet overeenkomen met een XDM-schema kunnen met dit veld worden verzonden. Dit veld is handig als u probeert een Adobe Target-profiel bij te werken of Recommendations-kenmerken van het doel te verzenden. Zie [`data`](/help/web-sdk/commands/sendevent/data.md) in de `sendEvent` voor meer informatie.<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
 - **Gegevensset-id:** Als u gegevens naar een dataset buiten moet verzenden u in uw gegevensstroom specificeerde, kunt u die dataset identiteitskaart hier specificeren.
 - **Document wordt verwijderd:** Als u ervoor wilt zorgen dat de gebeurtenissen de server bereiken zelfs als de gebruiker vanaf de pagina navigeert, controleert u de **[!UICONTROL Document will unload]** selectievakje. Hierdoor kunnen gebeurtenissen de server bereiken, maar reacties worden genegeerd.
-- **Render visuele verpersoonlijkingsbesluiten:** Als u gepersonaliseerde inhoud op uw pagina wilt teruggeven, controleer **[!UICONTROL Render visual personalization decisions]** selectievakje. Indien nodig kunt u ook het beslissingsbereik en/of de oppervlakken opgeven. Zie de [verpersoonlijkingsdocumentatie](../../../../edge/personalization/rendering-personalization-content.md#automatically-rendering-content) voor meer informatie over het renderen van gepersonaliseerde inhoud.
+- **Render visuele verpersoonlijkingsbesluiten:** Als u gepersonaliseerde inhoud op uw pagina wilt teruggeven, controleer **[!UICONTROL Render visual personalization decisions]** selectievakje. Indien nodig kunt u ook het beslissingsbereik en/of de oppervlakken opgeven. Zie de [verpersoonlijkingsdocumentatie](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) voor meer informatie over het renderen van gepersonaliseerde inhoud.
 
 ## Goedkeuring instellen {#set-consent}
 
-Nadat u toestemming van uw gebruiker hebt ontvangen, moet deze toestemming aan het Web SDK van Adobe Experience Platform worden meegedeeld door het &quot;Vastgestelde type van de Actie van de Toestemming te gebruiken&quot;. Momenteel worden twee typen standaarden ondersteund: &quot;Adobe&quot; en &quot;IAB TCF.&quot; Zie [Voorkeuren voor goedkeuring door klant ondersteunen](../../../../edge/consent/supporting-consent.md). Bij gebruik van Adobe versie 2.0 wordt alleen een waarde voor een gegevenselement ondersteund. U moet een gegevenselement maken dat wordt omgezet in het toestemmingsobject.
+Nadat u toestemming van uw gebruiker hebt ontvangen, moet deze toestemming aan het Web SDK van Adobe Experience Platform worden meegedeeld door het &quot;Vastgestelde type van de Actie van de Toestemming te gebruiken&quot;. Momenteel worden twee typen standaarden ondersteund: &quot;Adobe&quot; en &quot;IAB TCF.&quot; Zie [Voorkeuren voor goedkeuring door klant ondersteunen](/help/web-sdk/consent/supporting-consent.md). Bij gebruik van Adobe versie 2.0 wordt alleen een waarde voor een gegevenselement ondersteund. U moet een gegevenselement maken dat wordt omgezet in het toestemmingsobject.
 
 In deze handeling krijgt u ook een optioneel veld met een identiteitskaarten, zodat identiteiten kunnen worden gesynchroniseerd zodra de toestemming is ontvangen. Het synchroniseren is nuttig wanneer de toestemming als &quot;In behandeling&quot;of &quot;uit&quot;wordt gevormd omdat de toestemmingsvraag waarschijnlijk de eerste vraag aan brand is.
 

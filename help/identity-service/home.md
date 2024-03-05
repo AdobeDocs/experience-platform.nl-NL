@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van identiteitsservice
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 0%
@@ -109,7 +109,7 @@ Identiteitsdienst speelt een cruciale rol in Experience Platform. Enkele van dez
 
 * [Schemas](../xdm/home.md): Binnen een bepaald schema, staan de schemagebieden die als identiteit duidelijk zijn voor identiteitsgrafieken toe om worden gebouwd.
 * [Gegevenssets](../catalog/datasets/overview.md): Wanneer een dataset voor opname in het Profiel van de Klant in real time wordt toegelaten, worden de identiteitsgrafieken geproduceerd van de dataset, gegeven dat de dataset als minstens twee gebieden duidelijk als identiteit is.
-* [Web SDK](../edge/home.md): Web SDK verzendt ervaringsgebeurtenissen naar Adobe Experience Platform en Identity Service genereert een grafiek wanneer twee of meer identiteiten in de gebeurtenis bestaan.
+* [Web SDK](../web-sdk/home.md): Web SDK verzendt ervaringsgebeurtenissen naar Adobe Experience Platform en Identity Service genereert een grafiek wanneer twee of meer identiteiten in de gebeurtenis bestaan.
 * [Klantprofiel in realtime](../profile/home.md): Voordat kenmerken en gebeurtenissen voor een bepaald profiel worden samengevoegd, kan het Real-Time klantprofiel verwijzen naar de identiteitsgrafiek. Lees voor meer informatie de handleiding op [inzicht krijgen in de relatie tussen Identiteitsservice en Real-Time Klantprofiel](./identity-and-profile.md).
 * [Doelen](../destinations/home.md): Doelen kunnen profielgegevens naar andere systemen verzenden op basis van een naamruimte van een identiteit, zoals gehashte e-mail.
 * [Segmentovereenkomst](../segmentation/ui/segment-match/overview.md): Segmentovereenkomst komt overeen met twee profielen in twee verschillende sandboxen met dezelfde naamruimte en identiteitswaarde.

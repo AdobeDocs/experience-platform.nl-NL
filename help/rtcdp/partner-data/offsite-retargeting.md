@@ -3,7 +3,7 @@ title: Offsite opnieuw oprichten van niet-geverifieerde bezoekers
 description: Leer hoe te om niet voor authentiek verklaarde gebruikers opnieuw te richten door perspectief te gebruiken IDs om een gegevens verwerkt attribuut tot stand te brengen dat kan worden gebruikt om een publiek van niet voor authentiek verklaarde gebruikers tot stand te brengen.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1358'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Bovendien, om het gebruiksgeval uit te voeren, zult u van de volgende functional
 - [Doelgroepen](../../segmentation/home.md)
 - [Berekende kenmerken](../../profile/computed-attributes/overview.md)
 - [Doelen](../../destinations/home.md)
-- [Web SDK](../../edge/home.md)
+- [Web SDK](../../web-sdk/home.md)
 
 ## Partnergegevens in Real-Time CDP ophalen {#get-data-in}
 

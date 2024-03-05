@@ -3,7 +3,7 @@ keywords: bestemmingen; vragen; veelgestelde vragen; vk; bestemmingen vk
 title: Veelgestelde vragen
 description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1670'
 ht-degree: 2%
@@ -185,11 +185,11 @@ Zie voor gedetailleerde uitleg over de vereisten voor ID-matching [Vereisten voo
 
 ### Moet ik het Web SDK van het Experience Platform gebruiken om publiek en attributen naar Adobe Target te verzenden?
 
-++ + antwoordnr., [Web SDK](../edge/home.md) is niet vereist om het publiek te activeren op [Adobe Target](catalog/personalization/adobe-target-connection.md).
+++ + antwoordnr., [Web SDK](../web-sdk/home.md) is niet vereist om het publiek te activeren op [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
 Als echter [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) wordt gebruikt in plaats van Web SDK, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
 
-Voor [personalisatie op dezelfde pagina en op de volgende pagina](ui/activate-edge-personalization-destinations.md) gebruik gevallen, moet u of gebruiken [Web SDK](../edge/home.md) of de [Edge Network Server-API](../server-api/overview.md). Zie de documentatie op [activeren van publiek naar randbestemmingen](ui/activate-edge-personalization-destinations.md) voor meer details over de implementatie.
+Voor [personalisatie op dezelfde pagina en op de volgende pagina](ui/activate-edge-personalization-destinations.md) gebruik gevallen, moet u of gebruiken [Web SDK](../web-sdk/home.md) of de [Edge Network Server-API](../server-api/overview.md). Zie de documentatie op [activeren van publiek naar randbestemmingen](ui/activate-edge-personalization-destinations.md) voor meer details over de implementatie.
 +++
 
 ### Is er een limiet voor het aantal kenmerken dat ik kan verzenden van Real-time Customer Data Platform naar Adobe Target of een aangepaste persoonlijke bestemming?
@@ -208,7 +208,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### Nadat ik een publiek in Experience Platform creeer, hoe lang zal het voor dat publiek beschikbaar zijn om van de randsegmentatie te gebruiken gevallen?
 
-+++De definities van het Publiek van het Antwoord worden verspreid aan [Edge Network](../edge/home.md) binnen een uur. Als een publiek echter binnen dit eerste uur wordt geactiveerd, kunnen sommige bezoekers die voor het publiek in aanmerking zouden zijn gekomen, worden overgeslagen.
++++De definities van het Publiek van het Antwoord worden verspreid aan [Edge Network](../web-sdk/home.md) binnen een uur. Als een publiek echter binnen dit eerste uur wordt geactiveerd, kunnen sommige bezoekers die voor het publiek in aanmerking zouden zijn gekomen, worden overgeslagen.
 +++
 
 ### Waar zie ik de geactiveerde kenmerken in Adobe Target?

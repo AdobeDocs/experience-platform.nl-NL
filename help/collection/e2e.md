@@ -2,9 +2,9 @@
 title: Einde-tot-eindoverzicht gegevensverzameling
 description: Een overzicht op hoog niveau van hoe u gebeurtenisgegevens naar Adobe Experience Cloud-oplossingen kunt verzenden met behulp van Adobe Experience Platform-mogelijkheden voor gegevensverzameling.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2539'
+source-wordcount: '2534'
 ht-degree: 0%
 
 ---
@@ -113,8 +113,8 @@ Zodra u een schema en een gegevensstroom hebt gecreeerd, moet de volgende stap h
 >
 >Deze sectie gebruikt UI van de Inzameling van Gegevens om de de markeringsuitbreiding van SDK van het Web te vormen, maar u kunt het ook installeren en vormen gebruikend ruwe code in plaats daarvan. Raadpleeg de volgende hulplijnen voor meer informatie:
 >
->* [De SDK installeren](../edge/fundamentals/installing-the-sdk.md)
->* [De SDK configureren](../edge/fundamentals/configuring-the-sdk.md)
+>* [De SDK installeren](/help/web-sdk/install/overview.md)
+>* [De SDK configureren](/help/web-sdk/commands/configure/overview.md)
 >
 >Merk ook op dat zelfs als u slechts gebeurtenis wilt gebruiken die door:sturen, u SDK moet nog installeren en vormen zoals die vóór het vormen gebeurtenis die bij a door:sturen wordt beschreven [latere stap](#event-forwarding).
 
@@ -129,7 +129,7 @@ Het proces kan als volgt worden samengevat:
 
 Selecteren **[!UICONTROL Tags]** in de linkernavigatie om een lijst van markeringseigenschappen te tonen. U kunt desgewenst een bestaande eigenschap kiezen die u wilt bewerken, of u kunt **[!UICONTROL New Property]** in plaats daarvan.
 
-![Properties](./images/e2e/properties.png)
+![Eigenschappen](./images/e2e/properties.png)
 
 Geef bij het maken van een nieuwe eigenschap een beschrijvende naam op en stel de [!UICONTROL Platform] tot **[!UICONTROL Web]**. Geef het volledige domein voor de webeigenschap op en selecteer **[!UICONTROL Save]**.
 
@@ -216,7 +216,7 @@ De pagina voor gebeurtenisconfiguratie wordt weergegeven. Als u een gebeurtenis 
 
 Met de gebeurtenis voor het verzenden van formulieren kunt u een [CSS-kiezer](https://www.w3schools.com/css/css_selectors.asp) om naar een specifiek element te verwijzen waarop de regel moet worden geactiveerd. In het onderstaande voorbeeld wordt de id `add-to-cart-form` wordt gebruikt, zodat deze regel alleen wordt geactiveerd voor het formulier &quot;Toevoegen aan winkelwagentje&quot;. Selecteren **[!UICONTROL Keep Changes]** om de gebeurtenis aan de regel toe te voegen.
 
-![Configuratie van gebeurtenissen](./images/e2e/event-config.png)
+![Gebeurtenisconfiguratie](./images/e2e/event-config.png)
 
 De pagina voor regelconfiguratie wordt opnieuw weergegeven en toont dat de gebeurtenis is toegevoegd. U kunt de &quot;[!UICONTROL If]&quot; door aan de regel aanvullende voorwaarden toe te voegen.
 

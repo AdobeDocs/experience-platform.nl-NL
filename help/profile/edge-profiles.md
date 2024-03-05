@@ -2,9 +2,9 @@
 title: Edge-profielen
 description: Meer informatie over Edge-profielen en de bijbehorende terminologie, beschikbare gebieden voor randprofielen en de beschikbare services voor randprofielen.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Met de Express Profile Service (XPS) worden de profielen aan de verschillende ra
 
 ## Volgende stappen
 
-Nadat u deze handleiding hebt gelezen, hebt u een basiskennis van de randprofielen, waaronder informatie over de beschikbare gebieden en services voor randprofielen. Lees voor meer informatie over Adobe Experience Edge de [Overzicht van rand](../edge/home.md).
+Nadat u deze handleiding hebt gelezen, hebt u een basiskennis van de randprofielen, waaronder informatie over de beschikbare gebieden en services voor randprofielen. Lees voor meer informatie over Adobe Experience Edge de [Overzicht van Edge Network](../web-sdk/home.md).
 
 ## Bijlage
 

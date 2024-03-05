@@ -2,9 +2,9 @@
 title: Gegevensvoorvoegsel voor gegevensverzameling
 description: Leer hoe u uw gegevens aan een XDM-gebeurtenisschema (Experience Data Model) toewijst bij het configureren van een gegevensstroom voor Adobe Experience Platform Web en Mobile SDK's.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,9 @@ Er zijn twee gebruiksgevallen waarin Data Prep voor gegevensverzameling nuttig i
 
 ## Verzend een bestaande gegevenslaag naar het Netwerk van de Rand via WebSDK {#send-datalayer-via-websdk}
 
-De bestaande gegevenslaag moet worden verzonden met de `data` van de `sendEvent` gebruiken zoals beschreven in het dialoogvenster [Web SDK-documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+De bestaande gegevenslaag moet worden verzonden met de [`data`](/help/web-sdk/commands/sendevent/data.md) object binnen `sendEvent` gebruiken.
 
-Als u Tags gebruikt, moet u de opdracht **[!UICONTROL Data]** van het **[!UICONTROL Send Event]** actietype, zoals beschreven in het dialoogvenster [Web SDK-tagextensiedocumentatie](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+Als u Tags gebruikt, moet u de opdracht **[!UICONTROL Data]** van het **[!UICONTROL Send Event]** actietype, zoals beschreven in het dialoogvenster [Web SDK-tagextensiedocumentatie](/help/tags/extensions/client/web-sdk/action-types.md).
 
 De rest van deze gids zal zich op hoe te om de gegevenslaag aan normen in kaart te brengen XDM nadat het door WebSDK is verzonden.
 

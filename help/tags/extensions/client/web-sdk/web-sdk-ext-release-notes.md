@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: fb2cf23f4762eec4bcab1126bdfb1aaa4144e777
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '1971'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
-In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release Platform Web SDK](/help/web-sdk/release-notes.md).
 
 ## Versie 2.21.4 - 10 januari 2024
 
@@ -81,7 +81,7 @@ Bevat versie 2.19.1 van het Web SDK van Adobe Experience Platform.
 **Nieuwe functies**
 
 * Bevat versie 2.16.0 van het Web SDK van Adobe Experience Platform.
-* Extra ondersteuning voor [gegevensstroomconfiguratie overschrijft](../../../../datastreams/overrides.md).
+* Extra ondersteuning voor [gegevensstroomconfiguratie overschrijft](/help/datastreams/overrides.md).
 * Afvalmelding toevoegen aan de `datasetId` de optie `sendEvent` gebruiken.
 
 
@@ -98,7 +98,7 @@ Bevat versie 2.19.1 van het Web SDK van Adobe Experience Platform.
 **Nieuwe functies**
 
 * (bètaversie) toegevoegd **[!UICONTROL Update variable]** actie en **[!UICONTROL Variable]** gegevenselement.
-* Toegevoegde configuratie voor [`onBeforeLinkClickSend`](../../../../edge/fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback-functie.
+* Toegevoegde configuratie voor [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) callback-functie.
 
 **Oplossingen en verbeteringen**
 
@@ -176,7 +176,7 @@ Bevat versie 2.8.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 
 Bevat versie 2.7.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
-* Aanvullende informatie van het Edge Network is beschikbaar in de gebeurtenis Send Event Complete (Voltooien van gebeurtenis), waaronder `inferences` en `destinations`. Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Bèta rollen. Zie voor meer informatie [Gebeurtenissen bijhouden.](../../../../edge/fundamentals/tracking-events.md)
+* Aanvullende informatie van het Edge Network is beschikbaar in de gebeurtenis Send Event Complete (Voltooien van gebeurtenis), waaronder `inferences` en `destinations`. Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Bèta rollen.
 
 ## Versie 2.7.3 - 7 september 2021
 
@@ -223,10 +223,10 @@ Bevat versie 2.5.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 
 Bevat versie 2.4.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
-* Toegevoegd [&quot;document wordt verwijderd&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) Schakel het selectievakje Send Event action UI in.
-* Extra ondersteuning voor een `out` optie wanneer [standaardgoedkeuring configureren](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) die alle gebeurtenissen stopzet totdat toestemming is ontvangen (de bestaande `pending` de optie vormt gebeurtenissen een rij en verzendt hen zodra de toestemming wordt ontvangen).
+* Toegevoegd [&quot;Document wordt verwijderd&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) Schakel het selectievakje Send Event action UI in.
+* Extra ondersteuning voor een `out` optie wanneer [standaardgoedkeuring configureren](/help/web-sdk/commands/configure/defaultconsent.md) die alle gebeurtenissen stopzet totdat toestemming is ontvangen (de bestaande `pending` de optie vormt gebeurtenissen een rij en verzendt hen zodra de toestemming wordt ontvangen).
 * Knopinfo is toegevoegd aan het veld Standaardtoestemming.
-* Extra ondersteuning voor [Adobe 2.0 standaard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* Toegevoegde ondersteuning voor de norm Goedkeuring 2.0 van Adobe bij het gebruik van de [`setConsent`](/help/web-sdk/commands/setconsent.md) gebruiken.
 * Er wordt nu een betere fout weergegeven in de gebruikersinterface van het XDM Object-gegevenselement als het toegangstoken van de gebruiker ongeldig is of niet correct is ingericht.
 * Probleem verholpen waarbij een kruisoorsprongfout (die geen invloed heeft op de werking van de extensie) is verholpen die tijdens het weergeven van een XDM Object-gegevenselement in de browserontwikkelingsconsole werd weergegeven.
 
@@ -251,7 +251,7 @@ Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 ## Versie 2.1.0 - 5 augustus 2020
 
 * Wijziging doorbreken: de `syncIdentity` actie en ondersteuning voor het doorgeven van die id&#39;s in de `sendEvent` in plaats daarvan. Schakel bestaande regels met deze handeling uit voordat u de extensie upgradet.
-* Bijwerken naar versie 2.1.0 ([Opmerkingen bij de release](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html))
+* Bijwerken naar versie 2.1.0 ([Opmerkingen bij de release](/help/web-sdk/release-notes.md))
 * Ondersteuning voor IAB 2.0 Conform in het dialoogvenster `setConsent` handeling.
 * Ondersteuning voor het overschrijven van de id van de gegevensset in het dialoogvenster `sendEvent` handeling.
 * Een nieuw gegevenselement van het type toevoegen `IdentityMap` die kunnen worden gebruikt om de `identityMap` -item in het XDM Object Data Element dat nu is ingeschakeld, en in het dialoogvenster `setConsent` handeling.

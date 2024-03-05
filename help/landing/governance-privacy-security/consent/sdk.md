@@ -2,9 +2,9 @@
 title: Gegevens met toestemming van de klant verwerken met de Adobe Experience Platform Web SDK
 description: Leer hoe u de SDK van Adobe Experience Platform Web integreert om gegevens over toestemming van klanten te verwerken in Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1282'
 ht-degree: 0%
 
 ---
@@ -24,15 +24,15 @@ In deze zelfstudie wordt ervan uitgegaan dat u al hebt bepaald hoe u gegevens ov
 
 Deze handleiding volgt de workflow voor het instellen van de SDK met de tagextensie in de gebruikersinterface. Raadpleeg de volgende documenten in plaats van deze handleiding als u de extensie niet wilt gebruiken en de zelfstandige versie van de SDK rechtstreeks op uw site wilt insluiten:
 
-* [Een gegevensstroom configureren](../../../datastreams/overview.md)
-* [De SDK installeren](../../../edge/fundamentals/installing-the-sdk.md)
-* [De SDK configureren voor toestemmingsopdrachten](../../../edge/consent/supporting-consent.md)
+* [Een gegevensstroom configureren](/help/datastreams/overview.md)
+* [De SDK installeren](/help/web-sdk/install/overview.md)
+* [De SDK configureren voor toestemmingsopdrachten](/help/web-sdk/commands/configure/defaultconsent.md)
 
 De installatiestappen in deze handleiding vereisen een goed begrip van de uitbreidingen van tags en hoe deze in webtoepassingen worden geïnstalleerd. Raadpleeg de volgende documentatie voor meer informatie:
 
-* [Overzicht van codes](../../../tags/home.md)
-* [Snelstartgids](../../../tags/quick-start/quick-start.md)
-* [Overzicht van publicatie](../../../tags/ui/publishing/overview.md)
+* [Overzicht van codes](/help/tags/home.md)
+* [Snelstartgids](/help/tags/quick-start/quick-start.md)
+* [Overzicht van publicatie](/help/tags/ui/publishing/overview.md)
 
 ## Een gegevensstroom instellen
 
@@ -110,14 +110,7 @@ Er zijn twee scenario&#39;s waarin `setConsent` moet op uw site worden aangeroep
 
 ### `setConsent` syntaxis
 
->[!NOTE]
->
->Voor een inleiding aan de gemeenschappelijke syntaxis voor de bevelen van SDK van het Platform, zie het document op [uitvoeren, opdrachten](../../../edge/fundamentals/executing-commands.md).
-
-De `setConsent` bevel verwacht twee argumenten:
-
-1. Een tekenreeks die het opdrachttype aangeeft (in dit geval `"setConsent"`)
-1. Een object payload dat één eigenschap van het type array bevat: `consent`. De `consent` array moet ten minste één object bevatten dat de vereiste toestemmingsvelden voor de standaard Adobe bevat.
+De [`setConsent`](/help/web-sdk/commands/setconsent.md) command verwacht een payload-object dat één array-type eigenschap bevat: `consent`. De `consent` array moet ten minste één object bevatten dat de vereiste toestemmingsvelden voor de standaard Adobe bevat.
 
 De vereiste toestemmingsgebieden voor de norm van de Adobe worden getoond in het volgende voorbeeld `setConsent` oproep:
 
@@ -139,7 +132,7 @@ alloy("setConsent", {
         }
       },
       metadata: {
-        time: "2020-10-12T15:52:25+00:00"
+        time: "YYYY-10-12T15:52:25+00:00"
       }
     }
   }]
@@ -200,7 +193,7 @@ var setConsent = function () {
 
 ## Reacties in SDK verwerken
 
-Alles [!DNL Platform SDK] de bevelen keren beloftes terug die erop wijzen of de vraag slaagde of ontbrak. U kunt deze reacties vervolgens gebruiken voor extra logica, zoals het weergeven van bevestigingsberichten aan de klant. Zie de sectie over [afhandeling gelukt of mislukt](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in de handleiding voor het uitvoeren van SDK-opdrachten voor specifieke voorbeelden.
+Alles [!DNL Platform SDK] de bevelen keren beloftes terug die erop wijzen of de vraag slaagde of ontbrak. U kunt deze reacties vervolgens gebruiken voor extra logica, zoals het weergeven van bevestigingsberichten aan de klant. Zie [Opdrachtreacties](/help/web-sdk/commands/command-responses.md) voor meer informatie .
 
 Zodra u met succes hebt gemaakt `setConsent` Met de SDK kunt u via de profielviewer in de interface van het platform controleren of gegevens in de opslag Profiel worden gedownload. Zie de sectie over [bladeren door profielen op identiteit](../../../profile/ui/user-guide.md#browse-identity) voor meer informatie .
 

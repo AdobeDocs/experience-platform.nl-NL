@@ -3,7 +3,7 @@ keywords: Experience Platform;identiteit;identiteitsdienst;het oplossen van prob
 title: Guardrails voor identiteitsservice
 description: Dit document bevat informatie over het gebruik en de tarieflimieten voor identiteitsservicegegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 1576405e6f1d674a75446f887c2912c4480d0e28
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1526'
 ht-degree: 0%
@@ -101,7 +101,7 @@ Verwijderen gebeurt alleen met gegevens in de Identiteitsservice en niet in real
 Als u uw voor authentiek verklaarde gebeurtenissen tegen identiteitskaart van CRM wilt bewaren, dan wordt geadviseerd dat u uw primaire IDs van ECID in identiteitskaart van CRM verandert. Lees de volgende documenten voor stappen over hoe te om deze verandering uit te voeren:
 
 * [Identiteitskaart voor Experience Platform-tags configureren](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Identiteitsgegevens in het Web SDK van het Experience Platform](../edge/identity/overview.md#using-identitymap)
+* [Identiteitsgegevens in het Web SDK van het Experience Platform](../web-sdk/identity/overview.md#using-identitymap)
 
 ### Voorbeeldscenario&#39;s
 

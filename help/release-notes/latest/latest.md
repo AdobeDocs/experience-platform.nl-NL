@@ -2,7 +2,7 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: Aanvullende informatie van januari 2024 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 3%
@@ -28,7 +28,7 @@ Met Experience Platform kunt u zich abonneren op gebeurtenisgebaseerde waarschuw
 **Nieuwe of bijgewerkte functies**
 | Functie | Beschrijving | | — | — | | Tabblad Waarschuwingsgeschiedenis | Als beheerder van een Experience Platform kunt u met de functie Waarschuwingsabonnees beheren een waarschuwing toewijzen aan een gebruikers-id voor een Adobe, een extern e-mailadres of een lijst met e-mailgroepen. Zie de klasse [UI-documentatie met waarschuwingen](../../observability/alerts/ui.md) voor meer informatie over het geschiedenislusje. |
 
-
+{style="table-layout:auto"}
 
 Voor meer informatie over waarschuwingen leest u de [[!DNL Observability Insights] overzicht](../../observability/home.md).
 
@@ -40,7 +40,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 | Functie | Beschrijving |
 | --- | --- |
-| [Web In-App Overseinen steun in Web SDK](../../edge/personalization/web-in-app-messaging.md) | De Adobe Experience Platform Web SDK biedt nu ondersteuning voor Web In-App Messaging-configuratie voor Adobe Journey Optimizer-campagnes. |
+| [Web In-App Overseinen steun in Web SDK](../../web-sdk/personalization/web-in-app-messaging.md) | De Adobe Experience Platform Web SDK biedt nu ondersteuning voor Web In-App Messaging-configuratie voor Adobe Journey Optimizer-campagnes. |
 
 {style="table-layout:auto"}
 

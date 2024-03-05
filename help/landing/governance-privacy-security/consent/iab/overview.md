@@ -4,9 +4,9 @@ solution: Experience Platform
 title: IAB TCF 2.0-ondersteuning in Experience Platform
 description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 43b3b79a4d24fd92c7afbf9ca9c83b0cbf80e2c2
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2505'
+source-wordcount: '2477'
 ht-degree: 0%
 
 ---
@@ -37,14 +37,14 @@ Om deze gids te volgen, moet u CMP, of commercieel of uw gebruiken, die geïnteg
 
 Deze gids vereist ook een werkend inzicht in de volgende diensten van het Platform:
 
-* [Experience Data Model (XDM)](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-* [Adobe Experience Platform Identity Service](../../../../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
-* [Klantprofiel in realtime](../../../../profile/home.md): Gebruikt [!DNL Identity Service] om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. [!DNL Real-Time Customer Profile] trekt gegevens van het meer van Gegevens en handhaaft klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
-* [Adobe Experience Platform Web SDK](../../../../edge/home.md): Een JavaScript-bibliotheek aan de clientzijde waarmee u verschillende platformservices kunt integreren in uw klantgerichte website.
-   * [Opdrachten voor SDK-toestemming](../../../../edge/consent/supporting-consent.md): Een gebruiksscenario-overzicht van de toestemmingsgerelateerde SDK-opdrachten die in deze handleiding worden getoond.
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Hiermee kunt u delen [!DNL Real-Time Customer Profile] gegevens in groepen personen die vergelijkbare kenmerken delen en op vergelijkbare wijze reageren op marketingstrategieën.
+* [Experience Data Model (XDM)](/help/xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+* [Adobe Experience Platform Identity Service](/help/identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
+* [Klantprofiel in realtime](/help/profile/home.md): Gebruikt [!DNL Identity Service] om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. [!DNL Real-Time Customer Profile] trekt gegevens van het meer van Gegevens en handhaaft klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
+* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): Een JavaScript-bibliotheek aan de clientzijde waarmee u verschillende platformservices kunt integreren in uw klantgerichte website.
+   * [Opdrachten voor SDK-toestemming](/help/web-sdk/consent/supporting-consent.md): Een gebruiksscenario-overzicht van de toestemmingsgerelateerde SDK-opdrachten die in deze handleiding worden getoond.
+* [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md): Hiermee kunt u delen [!DNL Real-Time Customer Profile] gegevens in groepen personen die vergelijkbare kenmerken delen en op vergelijkbare wijze reageren op marketingstrategieën.
 
-Naast de hierboven vermelde diensten van het Platform, zou u ook vertrouwd moeten zijn met [bestemmingen](../../../../data-governance/home.md) en hun rol in het ecosysteem van het platform.
+Naast de hierboven vermelde diensten van het Platform, zou u ook vertrouwd moeten zijn met [bestemmingen](/help/data-governance/home.md) en hun rol in het ecosysteem van het platform.
 
 ## Overzicht van de toestemmingsstroom voor klanten {#summary}
 
@@ -102,7 +102,7 @@ De gegevens van de toestemming van de klant moeten naar datasets worden verzonde
 
 Als u eenmaal een [!DNL Profile]- de toegelaten dataset voor het verzamelen van toestemmingsgegevens, moet u ervoor zorgen dat uw fusiebeleid is gevormd om TCF toestemmingsgebieden in uw klantenprofielen altijd te omvatten. Dit impliceert het plaatsen van datasetbelangrijkheid zodat uw toestemmingsdataset boven andere potentieel conflicterende datasets voorrang krijgt.
 
-Raadpleeg voor meer informatie over het werken met samenvoegbeleid de [overzicht van samenvoegbeleid](../../../../profile/merge-policies/overview.md). Wanneer u het samenvoegbeleid instelt, moet u ervoor zorgen dat alle segmenten alle vereiste toestemmingskenmerken bevatten die door de [XDM-veldgroep met privacyschema](./dataset.md#privacy-field-group), zoals uiteengezet in de handleiding voor de opstelling van gegevensverzamelingen.
+Raadpleeg voor meer informatie over het werken met samenvoegbeleid de [overzicht van samenvoegbeleid](/help/profile/merge-policies/overview.md). Wanneer u het samenvoegbeleid instelt, moet u ervoor zorgen dat alle segmenten alle vereiste toestemmingskenmerken bevatten die door de [XDM-veldgroep met privacyschema](./dataset.md#privacy-field-group), zoals uiteengezet in de handleiding voor de opstelling van gegevensverzamelingen.
 
 ## Integreer de SDK van het Web van het Experience Platform om gegevens van de klantentoestemming te verzamelen {#sdk}
 
@@ -118,15 +118,15 @@ Zodra u uw CMP hebt gevormd om toestemmingskoorden te produceren, moet u het Web
 
 ### Een gegevensstroom maken
 
-SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een gegevensstroom voor Platform maakt. De specifieke stappen voor hoe te om een gegevensstroom tot stand te brengen worden verstrekt in [SDK-documentatie](../../../../datastreams/overview.md).
+SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een gegevensstroom voor Platform maakt. De specifieke stappen voor hoe te om een gegevensstroom tot stand te brengen worden verstrekt in [SDK-documentatie](/help/datastreams/overview.md).
 
 Nadat u een unieke naam voor de gegevensstroom hebt opgegeven, selecteert u de schakelknop naast **[!UICONTROL Adobe Experience Platform]**. Gebruik vervolgens de volgende waarden om de rest van het formulier in te vullen:
 
 | Veld DataStream | Waarde |
 | --- | --- |
-| [!UICONTROL Sandbox] | De naam van het platform [sandbox](../../../../sandboxes/home.md) die de vereiste het stromen verbinding en datasets aan opstelling de gegevensstroom bevat. |
-| [!UICONTROL Streaming Inlet] | Een geldige streamingverbinding voor Experience Platform. Zie de zelfstudie aan [streaming verbinding maken](../../../../ingestion/tutorials/create-streaming-connection-ui.md) als u geen bestaande streaminginlaat hebt. |
-| [!UICONTROL Event Dataset] | Selecteer de [!DNL XDM ExperienceEvent] dataset die in [vorige stap](#datasets). Als u het [[!UICONTROL IAB TCF 2.0 Consent] veldgroep](../../../../xdm/field-groups/event/iab.md) in het schema van deze dataset, kunt u toestemming-verandering gebeurtenissen in tijd volgen gebruikend [`sendEvent`](#sendEvent) bevel, die dat gegevens in deze dataset opslaat. Houd er rekening mee dat de in deze gegevensset opgeslagen toestemmingswaarden **niet** gebruikt in automatische handhavingswerkstromen. |
+| [!UICONTROL Sandbox] | De naam van het platform [sandbox](/help/sandboxes/home.md) die de vereiste het stromen verbinding en datasets aan opstelling de gegevensstroom bevat. |
+| [!UICONTROL Streaming Inlet] | Een geldige streamingverbinding voor Experience Platform. Zie de zelfstudie aan [streaming verbinding maken](/help/ingestion/tutorials/create-streaming-connection-ui.md) als u geen bestaande streaminginlaat hebt. |
+| [!UICONTROL Event Dataset] | Selecteer de [!DNL XDM ExperienceEvent] dataset die in [vorige stap](#datasets). Als u het [[!UICONTROL IAB TCF 2.0 Consent] veldgroep](/help/xdm/field-groups/event/iab.md) in het schema van deze dataset, kunt u toestemming-verandering gebeurtenissen in tijd volgen gebruikend [`sendEvent`](#sendEvent) bevel, die dat gegevens in deze dataset opslaat. Houd er rekening mee dat de in deze gegevensset opgeslagen toestemmingswaarden **niet** gebruikt in automatische handhavingswerkstromen. |
 | [!UICONTROL Profile Dataset] | Selecteer de [!DNL XDM Individual Profile] dataset die in [vorige stap](#datasets). Wanneer wordt gereageerd op CMP visiewisselhaken met de functie [`setConsent`](#setConsent) bevel, worden de verzamelde gegevens opgeslagen in deze dataset. Aangezien deze dataset profiel-toegelaten is, worden de toestemmingswaarden die in deze dataset worden opgeslagen gehouden tijdens automatische handhavingswerkschema&#39;s. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
@@ -137,13 +137,9 @@ Selecteer **[!UICONTROL Save]** onder aan het scherm en doorgaan met het volgen 
 
 Nadat u de in de vorige sectie beschreven gegevensstroom hebt gemaakt, kunt u beginnen met het gebruik van SDK-opdrachten voor het verzenden van toestemmingsgegevens naar Platform. De volgende secties verstrekken voorbeelden van hoe elk bevel van SDK in verschillende scenario&#39;s kan worden gebruikt.
 
->[!NOTE]
->
->Voor een inleiding aan de gemeenschappelijke syntaxis voor alle bevelen van SDK van het Platform, zie het document op [uitvoeren, opdrachten](../../../../edge/fundamentals/executing-commands.md).
-
 #### Kantaarnhaken voor wijziging van CMP-toestemming gebruiken {#setConsent}
 
-Vele CMPs verstrekt uit-van-de-doos haken die aan toestemmings-verandering gebeurtenissen luisteren. Wanneer deze gebeurtenissen zich voordoen, kunt u de opdracht `setConsent` gebruiken om de gegevens van de toestemming van die klant bij te werken.
+Vele CMPs verstrekt uit-van-de-doos haken die aan toestemmings-verandering gebeurtenissen luisteren. Wanneer deze gebeurtenissen zich voordoen, kunt u de opdracht [`setConsent`](/help/web-sdk/commands/setconsent.md) gebruiken om de gegevens van de toestemming van die klant bij te werken.
 
 De `setConsent` bevel verwacht twee argumenten:
 
@@ -226,7 +222,7 @@ alloy("sendEvent", {
 
 ### Reacties in SDK verwerken
 
-Alles [!DNL Platform SDK] de bevelen keren beloftes terug die erop wijzen of de vraag slaagde of ontbrak. U kunt deze reacties vervolgens gebruiken voor extra logica, zoals het weergeven van bevestigingsberichten aan de klant. Zie de sectie over [afhandeling gelukt of mislukt](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in de handleiding voor het uitvoeren van SDK-opdrachten voor specifieke voorbeelden.
+Vele bevelen van SDK van het Web keren beloftes terug die erop wijzen of de vraag slaagde of ontbrak. U kunt deze reacties vervolgens gebruiken voor extra logica, zoals het weergeven van bevestigingsberichten aan de klant. Zie [Opdrachtreacties](/help/web-sdk/commands/command-responses.md) voor meer informatie .
 
 ## Segmenten exporteren {#export}
 

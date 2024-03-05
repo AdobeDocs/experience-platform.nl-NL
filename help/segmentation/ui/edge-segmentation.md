@@ -3,7 +3,7 @@ solution: Experience Platform
 title: gebruikersgids voor Edge Segmentation
 description: Leer hoe te om randsegmentatie te gebruiken om segmentdefinities in Platform onmiddellijk op de rand te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: d3c0e5ed596661f11191bbcd8d51c888bbd4c1d2
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >De segmentatie van de rand is nu over het algemeen beschikbaar aan alle gebruikers van het Platform. Als u de definities van het randsegment tijdens bèta creeerde, zullen deze segmentdefinities operationeel blijven.
 
-Randsegmentatie is de mogelijkheid om segmenten in Adobe Experience Platform ogenblikkelijk te evalueren [op de rand](../../edge/home.md)en de volgende pagina&#39;s aanpassen.
+Randsegmentatie is de mogelijkheid om segmenten in Adobe Experience Platform ogenblikkelijk te evalueren [op de rand](../../web-sdk/home.md)en de volgende pagina&#39;s aanpassen.
 
 >[!IMPORTANT]
 >

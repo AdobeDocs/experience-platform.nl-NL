@@ -3,7 +3,7 @@ keywords: doelpersonalisatie; bestemming; ervaring doelbestemming platform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 397a88caaf7762dfa9b64aaa472910c6a34e7778
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Bekijk de onderstaande video voor een kort overzicht van het configureren van de
 
 ### DataStream-id {#datastream-id}
 
-Bij het configureren van de Adobe Target-verbinding naar [een gegevensstroom-id gebruiken](#parameters), moet u beschikken over de [Adobe Experience Platform Web SDK](../../../edge/home.md) geïmplementeerd.
+Bij het configureren van de Adobe Target-verbinding naar [een gegevensstroom-id gebruiken](#parameters), moet u beschikken over de [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) geïmplementeerd.
 
 Als u de Adobe Target-verbinding configureert zonder een gegevensstroom-id te gebruiken, hoeft u de Web SDK niet te implementeren.
 
@@ -106,7 +106,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 * **Naam**: Vul de voorkeursnaam voor dit doel in.
 * **Beschrijving**: Voer een beschrijving in voor uw doel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
 * **DataStream-id**: Dit bepaalt in welke gegevensstroom gegevensverzameling het publiek wordt opgenomen. In het keuzemenu worden alleen gegevensstromen weergegeven waarvoor de services Doel en Adobe Experience Platform zijn ingeschakeld. Zie [configureren van een gegevensstroom](../../../datastreams/configure.md#aep) voor meer informatie over het configureren van een gegevensstroom voor Adobe Experience Platform en Adobe Target.
-   * **[!UICONTROL None]**: Selecteer deze optie als u de personalisatie van Adobe Target moet configureren, maar u kunt het dialoogvenster [Experience Platform Web SDK](../../../edge/home.md). Wanneer u deze optie gebruikt, worden soorten publiek die van Experience Platform naar Doel zijn geëxporteerd, alleen ondersteuning voor verpersoonlijking in de volgende sessie en wordt randsegmentatie uitgeschakeld. Zie de onderstaande tabel voor meer informatie.
+   * **[!UICONTROL None]**: Selecteer deze optie als u de personalisatie van Adobe Target moet configureren, maar u kunt het dialoogvenster [Experience Platform Web SDK](/help/web-sdk/home.md). Wanneer u deze optie gebruikt, worden soorten publiek die van Experience Platform naar Doel zijn geëxporteerd, alleen ondersteuning voor verpersoonlijking in de volgende sessie en wordt randsegmentatie uitgeschakeld. Zie de onderstaande tabel voor meer informatie.
 
   | Adobe Target-implementatie (zonder Web SDK) | Web SDK-implementatie |
   |---|---|

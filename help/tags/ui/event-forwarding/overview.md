@@ -3,7 +3,7 @@ title: Overzicht van doorzending van gebeurtenissen
 description: Ontdek meer over het doorsturen van gebeurtenissen in Adobe Experience Platform, waarmee u het Platform Edge Network kunt gebruiken om taken uit te voeren zonder uw tag-implementatie te wijzigen.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 2%
@@ -30,7 +30,7 @@ Dit document biedt een overzicht op hoog niveau van het doorsturen van gebeurten
 >
 >Voor informatie over hoe gebeurtenis het door:sturen binnen het ecosysteem van de gegevensinzameling in Platform past, zie [overzicht van gegevensverzameling](../../../collection/home.md).
 
-Het door:sturen van de gebeurtenis gecombineerd met Adobe Experience Platform [Web SDK](../../../edge/home.md) en [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) biedt de volgende voordelen:
+Het door:sturen van de gebeurtenis gecombineerd met Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) en [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) biedt de volgende voordelen:
 
 **Prestaties**:
 

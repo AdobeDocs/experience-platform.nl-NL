@@ -2,9 +2,9 @@
 title: Interactie met Adobe Analytics
 description: Leer hoe u de Edge Network Server-API gebruikt om te communiceren met Adobe Analytics.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Adobe Analytics-gegevensverzameling werkt door XDM-gegevens te vertalen naar een indeling die Adobe Analytics kan begrijpen. Verschillende XDM-velden zijn [automatisch toegewezen](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) naar variabelen Analytics.
-
-U kunt [XDM-waarden handmatig toewijzen](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) naar verouderde analytische variabelen.
+Adobe Analytics-gegevensverzameling werkt door XDM-gegevens te vertalen naar een indeling die Adobe Analytics kan begrijpen. Verschillende XDM-velden zijn [automatisch toegewezen](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html) naar variabelen Analytics. U kunt ook handmatig XDM-waarden toewijzen aan verouderde analytische variabelen.
 
 Om Adobe Analytics in staat te stellen gegevens van server API te ontvangen, moet u [configureren, gegevensstroom](../datastreams/overview.md#adobe-analytics-settings) om gebeurtenissen naar Adobe Analytics door te sturen, door de rapportsuite-id in te voeren in de configuratiepagina van de gegevensstroom.
 

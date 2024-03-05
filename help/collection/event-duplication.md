@@ -1,7 +1,7 @@
 ---
 title: Omgaan met duplicatie van gebeurtenissen in Experience Platform
 description: Leer hoe Adobe Experience Platform dubbel werk bij gebeurtenissen verwerkt
-source-git-commit: 89cdb0832009bcee31b4339f021bc5a0ce254752
+source-git-commit: bc3ae849bd7fd8a9f50ba98528adc43d7282df90
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform is een sterk gedistribueerd systeem dat is ontworpen om de betrouwbaarheid te maximaliseren en tegelijk te schalen naar steeds grotere hoeveelheden gegevens.
 
-Voor gegevensverzameling in real time, [Experience Events](../xdm/classes/experienceevent.md) worden verzameld via [Edge Network](../edge/home.md#edge-network)van clientbronnen, zoals [Web SDK](../edge/home.md) of [Mobile SDK](https://developer.adobe.com/client-sdks/home/)en worden geleverd aan Experience Platform verwerkings- en opslaglagen. Deze lagen stellen oplossingen zoals Experience Platform samen, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html), en [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html).
+Voor gegevensverzameling in real time, [Experience Events](../xdm/classes/experienceevent.md) worden verzameld via [Edge Network](../web-sdk/home.md#edge-network)van clientbronnen, zoals [Web SDK](../web-sdk/home.md) of [Mobile SDK](https://developer.adobe.com/client-sdks/home/)en worden geleverd aan Experience Platform verwerkings- en opslaglagen. Deze lagen stellen oplossingen zoals Experience Platform samen, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html), en [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html).
 
 Om het verlies van de Gebeurtenis van de Ervaring te minimaliseren, verwachten de cliënt-kant SDKs en de interne dienst van de levering van het Experience Platform een bevestiging dat een gebeurtenis met succes werd verzameld.
 
