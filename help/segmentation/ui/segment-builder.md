@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
 workflow-type: tm+mt
-source-wordcount: '3484'
+source-wordcount: '3550'
 ht-degree: 0%
 
 ---
@@ -282,6 +282,8 @@ Terwijl u de segmentdefinitie blijft maken, kunt u een gepagineerde voorvertonin
 U kunt ook uw evaluatiemethode selecteren. Als u weet welke evaluatiemethode u wilt gebruiken, kunt u de gewenste evaluatiemethode selecteren of gebruikend dropdown lijst. Als u wilt weten welke evaluatietypen deze segmentdefinitie voor kwalificeert, kunt u het doorbladerpictogram selecteren ![mappictogram met een vergrootglas](../images/ui/segment-builder/segment-evaluation-select-icon.png) om een lijst van de beschikbare evaluatiemethodes van de segmentdefinitie te zien.
 
 De [!UICONTROL Evaluation method eligibility] wordt weergegeven. Deze popover toont de beschikbare evaluatiemethodes, die partij, het stromen, en rand zijn. Uit de pop-up blijkt welke evaluatiemethoden subsidiabel en niet-subsidiabel zijn. Afhankelijk van de parameters u in uw segmentdefinitie gebruikte, kan het niet voor bepaalde evaluatiemethodes kwalificeren. Voor meer informatie over de vereisten voor elke evaluatiemethode, gelieve te lezen [streamingsegmentatie](./streaming-segmentation.md#query-types) of de [randsegmentatie](./edge-segmentation.md#query-types) overzichten.
+
+U kunt de evaluatiemethode van de segmentdefinitie ook veranderen nadat u klaar bent met het creëren van het. Als u de evaluatiemethode wijzigt van Edge of Streaming in Batch, **niet** in staat zijn om deze weer te wijzigen in Edge of Streaming. De wijziging van de evaluatiemethode zal **alleen** van kracht worden zodra u **[!UICONTROL Save]** in de popover. Het dialoogvenster wordt geannuleerd **handhaven** de oorspronkelijke evaluatiemethode.
 
 ![Het pop-upvenster Selectie voor de evaluatiemethode wordt weergegeven. Hieruit blijkt welke evaluatiemethoden in aanmerking komen en niet in aanmerking komen voor de segmentdefinitie.](../images/ui/segment-builder/select-evaluation-method.png)
 
