@@ -3,18 +3,18 @@ title: Een gegevensstroom maken voor Braze-gegevens in de gebruikersinterface
 description: Leer hoe u een gegevensstroom maakt voor uw Braze-account met de gebruikersinterface van Adobe Experience Platform.
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
-source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
+source-git-commit: bfcea2a30a0ecadcafaddf7660eef90952dcade6
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Braze] bronverbinding in de gebruikersinterface
+# Een [!DNL Braze Currents] bronverbinding in de gebruikersinterface
 
 >[!NOTE]
 >
->De [!DNL Braze] De bron is in bèta. Lees de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+>De [!DNL Braze Currents] De bron is in bèta. Lees de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
 [!DNL Braze] maakt klantgerichte interacties tussen consumenten en merken in real time mogelijk. [!DNL Braze Currents] is een real-time gegevensstroom van betrokkenheidsgebeurtenissen van het platform van Braze dat de robuustste maar korrelige uitvoer uit het [!DNL Braze] platform.
 
@@ -44,7 +44,7 @@ Als u al een [!DNL Braze] verbinding hebt, kunt u de rest van dit document overs
 
 Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de *Marketing Automation* categorie, selecteert u **[!UICONTROL Braze]** en selecteer vervolgens **[!UICONTROL Add data]**.
+Onder de *Marketing Automation* categorie, selecteert u **[!UICONTROL Braze Currents]** en selecteer vervolgens **[!UICONTROL Add data]**.
 
 ![De broncatalogus op het Experience Platform UI met de Bron van de Huidige Bestanden van de Bouw geselecteerd.](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -67,16 +67,16 @@ Dan, vorm afbeelding voor uw gegevens gebruikend de toewijzingsinterface.
 
 ### Vereiste referenties verzamelen
 
-Zodra uw verbinding wordt gecreeerd, moet u de volgende credentiewaarden verzamelen, die u dan in het Dashboard van het Bol zult verstrekken om gegevens naar te verzenden [!DNL Platform]. Lees voor meer informatie de [!DNL Braze] [handleiding voor navigeren naar huidige bestanden](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Zodra uw verbinding wordt gecreeerd, moet u de volgende credentiewaarden verzamelen, die u dan in het Braze Dashboard zult verstrekken om gegevens naar Experience Platform te verzenden. Lees voor meer informatie de [!DNL Braze] [handleiding voor navigeren naar huidige bestanden](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Veld | Beschrijving |
-| ---------- | ----------- |
-| `Client ID` | De client-id die aan uw [!DNL Platform] bron. |
-| `Client Secret` | Het clientgeheim dat aan uw [!DNL Platform] bron. |
-| `Tenant ID` | De huurder-id die aan uw [!DNL Platform] bron. |
-| `Sandbox Name` | De sandbox die aan uw [!DNL Platform] bron. |
-| `Dataflow ID` | De gegevensstroom-id die aan uw [!DNL Platform] bron. |
-| `Streaming Endpoint` | Het streamingeindpunt dat aan uw [!DNL Platform] bron. Merk op dat het Breken dit automatisch in de partij het stromen eindpunt zal omzetten. |
+| --- | --- |
+| Client-id | De client-id die aan de bron van het Experience Platform is gekoppeld. |
+| Clientgeheim | Het clientgeheim dat aan de bron van het Experience Platform is gekoppeld. |
+| Tenant-id | De huurder-id die aan uw bron van het Experience Platform is gekoppeld. |
+| Naam sandbox | De sandbox die aan de bron van het Experience Platform is gekoppeld. |
+| Dataflow-id | De gegevensstroom-id die aan de bron van het Experience Platform is gekoppeld. |
+| Streaming eindpunt | Het streamingeindpunt dat aan de bron van het Experience Platform is gekoppeld. **Opmerking**: [!DNL Braze] zet dit automatisch om in het batch streaming eindpunt. |
 
 ### Configureren [!DNL Braze Currents] om gegevens naar uw gegevensbron te stromen
 

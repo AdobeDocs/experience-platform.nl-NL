@@ -1,9 +1,9 @@
 ---
 title: Overzicht van de Merkury Enterprise Identity Resolution Source
 description: Leer hoe u Merkury Enterprise Identity Resolution via de gebruikersinterface kunt verbinden met Adobe Experience Platform.
-last-substantial-update: 2023-12=12
+last-substantial-update: 2023-12-12T00:00:00Z
 badge: Beta
-source-git-commit: d862a53c7a8880e86648c05cf94e37e1a1779c9e
+source-git-commit: 2f277e835333343ea22e52e05aa84a63f1d3d8ec
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%

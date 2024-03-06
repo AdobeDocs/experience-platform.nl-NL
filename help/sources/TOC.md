@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1021'
 ht-degree: 6%
 
 ---
@@ -92,7 +92,8 @@ ht-degree: 6%
       - [Snowflake Streaming-aansluiting](connectors/databases/snowflake-streaming.md)
       - [Snowflake-aansluiting](connectors/databases/snowflake.md)
       - [Teradata Vantage-connector](connectors/databases/teradata-vantage.md)
-   - Gegevenspartner {#data-partner}
+   - Gegevens- en identiteitspartner {#data-partner}
+      - [Importeren van Acrobat-perspectiefgegevens](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
@@ -101,6 +102,7 @@ ht-degree: 6%
    - Lokaal systeem {#local-system}
       - [Aansluiting voor lokale bestandsupload](connectors/local-system/local-file-upload.md)
    - Marketing automatiseren {#marketing-automation}
+      - [Braze huidige](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [HubSpot-connector](connectors/marketing-automation/hubspot.md)
@@ -295,7 +297,7 @@ ht-degree: 6%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-      - Gegevenspartner {#data-partner}
+      - Gegevens- en identiteitspartner {#data-partner}
          - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
          - [Importeren van Acrobat-perspectiefgegevens](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - eCommerce {#ecommerce}
@@ -305,7 +307,7 @@ ht-degree: 6%
       - Lokaal systeem {#local-system}
          - [Lokale bestanden uploaden](tutorials/ui/create/local-system/local-file-upload.md)
       - Marketing automatiseren {#marketing-automation}
-         - [Braze](tutorials/ui/create/marketing-automation/braze.md)
+         - [Braze huidige](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
