@@ -2,9 +2,9 @@
 title: Gegevensstromen maken en configureren
 description: Leer hoe te om uw cliënt-zijintegratie van SDK van het Web met andere producten van de Adobe en derdebestemmingen te verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e82da728c86225ccb089ca5a2506d7c24f18b8f8
 workflow-type: tm+mt
-source-wordcount: '2519'
+source-wordcount: '2553'
 ht-degree: 0%
 
 ---
@@ -142,6 +142,7 @@ Deze service bepaalt of en hoe gegevens naar Adobe Analytics worden verzonden. Z
 | Instelling | Beschrijving |
 | --- | --- |
 | [!UICONTROL Report Suite ID] | **(Vereist)** De id van de Analytics-rapportsuite waarnaar u gegevens wilt verzenden. Deze id is te vinden in de gebruikersinterface van Adobe Analytics onder [!UICONTROL Admin] > [!UICONTROL ReportSuites]. Als de veelvoudige rapportreeksen worden gespecificeerd, dan worden de gegevens gekopieerd aan elke rapportreeks. |
+| [!UICONTROL Visitor ID namespace] | (Optioneel) De naamruimte die u wilt gebruiken voor de Adobe Analytics [bezoekerID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html). Wanneer u een gebeurtenis verzendt met een waarde die voor deze naamruimte is opgegeven, wordt deze automatisch gebruikt als de `visitorID` in Analytics. |
 | [!UICONTROL Report Suite Overrides] | In deze sectie, kunt u extra rapportreeks IDs toevoegen die u kunt gebruiken om het gebrek met voeten te treden. |
 
 ### Adobe Audience Manager-instellingen {#audience-manager}
