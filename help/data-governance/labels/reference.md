@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Woordenlijst met gegevensverbruikslabels
 description: Dit document bevat een overzicht van alle labels voor gegevensgebruik die momenteel door Adobe Experience Platform worden ondersteund.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c55ad6c592be95b01cf7fe0b39635b478bc98be6
+source-git-commit: 6f3f08203242843ce703de5e4546a537dff82270
 workflow-type: tm+mt
-source-wordcount: '2250'
-ht-degree: 1%
+source-wordcount: '2254'
+ht-degree: 0%
 
 ---
 
@@ -37,10 +37,10 @@ De etiketten van het contract &quot;C&quot;worden gebruikt om gegevens te catego
 | [C6](#c6) | Gegevens kunnen niet worden gebruikt voor on-site advertenties. |
 | [C7](#c7) | Gegevens kunnen niet worden gebruikt voor het on-site maken van inhoud. |
 | [C8](#c8) | Gegevens kunnen niet worden gebruikt voor het meten van de websites of apps van uw organisatie. |
-| [C9](#c9) | Gegevens kunnen niet worden gebruikt in Data Science-workflows. |
+| [C9](#c9) | Gegevens kunnen niet worden gebruikt in workflows voor gegevenswetenschap. |
 | [C10](#c10) | Gegevens kunnen niet worden gebruikt voor activering van een gestikte identiteit. |
 | [C11](#c11) | De gegevens kunnen niet met de partners van de Aanpassing van het Segment worden gedeeld. |
-| [C12](#c12) | Gegevens kunnen op geen enkele manier worden geëxporteerd. |
+| [12](#c12) | Gegevens kunnen op geen enkele manier worden geëxporteerd. |
 
 ## Identiteitslabels {#identity}
 
@@ -152,6 +152,6 @@ Sommige beleidsregels voor gegevensbeheer beperken het gebruik van verankerde id
 
 Met Adobe Experience Platform Segment Match kunt u door Platform gegenereerde doelgroepen afstemmen op privacy- en toestemmingsvoorkeuren, waardoor verrijkte profilering en downstreaminzichten mogelijk worden. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in [!DNL Segment Match] processen. Nadat u hebt bepaald welke datasets en/of gebieden u van de Gelijke van het Segment wilt uitsluiten en dienovereenkomstig het etiket C11 toevoegt, wordt het etiket automatisch afgedwongen door het werkschema van de Gelijke van het Segment.
 
-#### C12 {#c12}
+#### 12 {#c12}
 
 Gegevens met dit label kunnen op geen enkele manier worden geëxporteerd van Platform. Velden met het label C12 zijn uitgesloten van CSV-downloads, API-verbruik en activeringsworkflows.
