@@ -2,9 +2,9 @@
 title: Overzicht van id-naamruimte
 description: Meer informatie over naamruimten in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 6ae3626c2e0f7e58968b5582ca1895bd03ab1c32
 workflow-type: tm+mt
-source-wordcount: '1854'
+source-wordcount: '1908'
 ht-degree: 0%
 
 ---
@@ -134,6 +134,10 @@ Er wordt een map met naamruimten in uw organisatie weergegeven met informatie ov
 Afhankelijk van uw organisatorische gegevens en gebruiksgevallen hebt u mogelijk aangepaste naamruimten nodig. U kunt aangepaste naamruimten maken met de opdracht [[!DNL Identity Service]](../api/create-custom-namespace.md) API of via de interface.
 
 Als u een aangepaste naamruimte wilt maken, selecteert u **[!UICONTROL Create identity namespace]**.
+
+>[!TIP]
+>
+>Integratie-id&#39;s zijn naamruimten die worden gebruikt om verbinding te maken met andere systemen. Ze worden niet gebruikt in identiteitsresolutie en worden ook niet gebruikt om identiteiten aan te hechten. Selecteren **[!UICONTROL View integration identities]** om de lijst bij te werken en integratie-id&#39;s op te nemen. Integratie-id&#39;s zijn echter standaard verborgen omdat ze alleen-weergeven zijn en u ze niet hoeft te configureren.
 
 ![De knop Naamruimte maken in de werkruimte Identiteiten.](../images/namespace/create-identity-namespace.png)
 
