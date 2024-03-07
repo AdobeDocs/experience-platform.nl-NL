@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Klassen maken en bewerken in de gebruikersinterface
 description: Leer hoe u klassen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 640d3ca0d3c227306436f2e653ef66fdc8ebd31c
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 0%
@@ -24,13 +24,13 @@ Adobe biedt verschillende standaard (&quot;core&quot;) XDM-klassen (Experience D
 
 Dit document biedt een overzicht van het maken, bewerken en beheren van aangepaste klassen in de gebruikersinterface van het Experience Platform.
 
-## Vereisten
+## Vereisten {#prerequisites}
 
 Deze handleiding vereist een goed begrip van XDM System. Zie de [XDM-overzicht](../../home.md) voor een inleiding op de rol van XDM binnen het ecosysteem van het Experience Platform, en [grondbeginselen van de schemacompositie](../../schema/composition.md) om te leren hoe de klassen tot schema&#39;s XDM bijdragen.
 
 Hoewel dit niet nodig is voor deze handleiding, wordt u aangeraden de zelfstudie ook op te volgen [samenstellen van een schema in UI](../../tutorials/create-schema-ui.md) om zich met de diverse mogelijkheden van de Redacteur van het Schema vertrouwd te maken.
 
-## Aan de slag
+## Aan de slag {#getting-started}
 
 Selecteer in de interface Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de [!UICONTROL Schemas] werkruimte selecteert u vervolgens de **[!UICONTROL Classes]** tab. Er wordt een lijst met beschikbare klassen weergegeven.
 
@@ -121,7 +121,7 @@ Als u eerder schema&#39;s hebt gecreeerd die deze klasse gebruiken, zullen de on
 U kunt de klasse van het schema op elk gewenst moment tijdens het eerste ontwerpproces wijzigen voordat het is opgeslagen. Dit moet echter met voorzichtigheid gebeuren, aangezien veldgroepen alleen met bepaalde klassen compatibel zijn. Als u de klasse wijzigt, worden het canvas en alle toegevoegde velden opnieuw ingesteld.
 Zie de handleiding op [schema&#39;s maken en bewerken](./schemas.md#change-class) voor meer informatie .
 
-## Volgende stappen
+## Volgende stappen {#next-steps}
 
 In dit document wordt beschreven hoe u klassen kunt maken en bewerken met de gebruikersinterface van het platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie de [[!UICONTROL Schemas] werkruimte - overzicht](../overview.md).
 

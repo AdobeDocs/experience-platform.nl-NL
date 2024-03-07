@@ -5,7 +5,7 @@ title: Gegevenstypen maken en bewerken met de gebruikersinterface
 type: Tutorial
 description: Leer hoe u gegevenstypen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1330'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Adobe Experience Platform biedt vele standaardgegevenstypen die kunnen worden ge
 
 Deze zelfstudie behandelt de stappen voor het maken en bewerken van aangepaste gegevenstypen in de gebruikersinterface van Platform.
 
-## Vereisten
+## Vereisten {#prerequisites}
 
 Deze handleiding vereist een goed begrip van XDM System. Zie de [XDM-overzicht](../../home.md) voor een inleiding op de rol van XDM binnen het ecosysteem van het Experience Platform, en [grondbeginselen van de schemacompositie](../../schema/composition.md) voor hoe de gegevenstypes tot schema XDM bijdragen.
 
@@ -105,7 +105,7 @@ Dit toont aan hoe de flexibele gegevenstypes in termen van het beschrijven van u
 
 Nadat u alle velden aan het gegevenstype hebt toegevoegd, selecteert u **[!UICONTROL Save]** om uw wijzigingen op te slaan en het gegevenstype aan de [!DNL Schema Library].
 
-## Het gegevenstype toevoegen aan een schema
+## Het gegevenstype toevoegen aan een schema {#add-data-type}
 
 Nadat u een gegevenstype hebt gemaakt, kunt u het in uw schema&#39;s gebruiken. Aangezien XDM-schema&#39;s bestaan uit een klasse en nul of meer veldgroepen, kunnen velden die door een gegevenstype worden verschaft, niet rechtstreeks aan een schema worden toegevoegd. In plaats daarvan moeten ze worden opgenomen in een klasse of een veldgroep.
 
@@ -123,7 +123,7 @@ Het canvas werkt het gegevenstype van het veld bij van &quot;[!UICONTROL Object]
 
 ![](../../images/ui/resources/data-types/converted.png)
 
-## Volgende stappen
+## Volgende stappen {#next-steps}
 
 In deze handleiding wordt beschreven hoe u gegevenstypen kunt maken en bewerken met behulp van de interface van het platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie de [[!UICONTROL Schemas] werkruimte - overzicht](../overview.md).
 

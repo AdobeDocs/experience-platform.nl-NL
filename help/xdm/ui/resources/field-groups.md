@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Groep met schemavelden maken en bewerken in de gebruikersinterface
 description: Leer hoe u groepen met schemavelden maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 0375ddcb7d06208199bf1172b157aa6eb28811f6
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Een veldgroep definieert met welke klasse(n) het compatibel is, op basis van het
 
 Adobe Experience Platform biedt een groot aantal standaardveldgroepen die een groot aantal gevallen van marketinggebruik bestrijken. U kunt echter ook uw eigen aangepaste veldgroepen maken en bewerken om aanvullende concepten voor uw bedrijf in uw XDM-schema&#39;s te definiëren. Deze handleiding biedt een overzicht van het maken, bewerken en beheren van aangepaste veldgroepen voor uw organisatie in de interface van het platform.
 
-## Vereisten
+## Vereisten {#prerequisites}
 
 Deze handleiding vereist een goed begrip van XDM System. Zie de [XDM-overzicht](../../home.md) voor een inleiding op de rol van XDM binnen het ecosysteem van het Experience Platform, en [grondbeginselen van de schemacompositie](../../schema/composition.md) voor hoe de gebiedsgroepen aan schema&#39;s XDM bijdragen.
 
@@ -90,7 +90,7 @@ Nadat het veld aan het schema is toegevoegd, wordt het toegewezen aan de geselec
 
 Als dezelfde veldgroep al in andere schema&#39;s wordt gebruikt, worden de toegevoegde velden automatisch in die schema&#39;s weergegeven.
 
-## Volgende stappen
+## Volgende stappen {#next-steps}
 
 In deze handleiding wordt beschreven hoe u veldgroepen kunt maken en bewerken met behulp van de interface van het platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie de [[!UICONTROL Schemas] werkruimte - overzicht](../overview.md).
 

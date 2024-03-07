@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
+source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
 workflow-type: tm+mt
 source-wordcount: '3523'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Deze handleiding biedt een overzicht van het maken, bewerken en beheren van XDM-
 >
 >Voor een volledige overzicht van het proces van het schemaontwerp, volg samen met [zelfstudie Schema maken](../../tutorials/create-schema-ui.md) om een volledig voorbeeldschema tot stand te brengen en met de vele mogelijkheden vertrouwd te maken van [!DNL Schema Editor].
 
-## Vereisten
+## Vereisten {#prerequisites}
 
 Deze handleiding vereist een goed begrip van XDM System. Zie de [XDM-overzicht](../../home.md) voor een inleiding op de rol van XDM binnen het ecosysteem van het Experience Platform, en [grondbeginselen van de schemacompositie](../../schema/composition.md) voor een overzicht van hoe schema&#39;s worden gebouwd.
 
@@ -350,7 +350,7 @@ Er wordt een nieuw dialoogvenster geopend waarin u wordt gevraagd te bevestigen 
 
 Nadat de klassewijziging is bevestigd, wordt het canvas opnieuw ingesteld en gaat alle compositievoortgang verloren.
 
-## Volgende stappen
+## Volgende stappen {#next-steps}
 
 In dit document worden de basisbeginselen besproken van het maken en bewerken van schema&#39;s in de gebruikersinterface van het platform. U wordt ten zeerste aangeraden de [zelfstudie Schema maken](../../tutorials/create-schema-ui.md) voor een uitvoerige werkschema voor het bouwen van een volledig schema in UI, met inbegrip van het creëren van de groepen van het douanegebied en gegevenstypes voor unieke gebruiksgevallen.
 

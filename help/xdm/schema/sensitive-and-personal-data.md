@@ -2,9 +2,9 @@
 title: Gevoelige en Persoonlijke Informatie in XDM
 description: Leer over zeer belangrijke overwegingen betreffende gevoelige persoonlijke informatie (SPI) en persoonlijk identificeerbare informatie (PII) in het Model van de Gegevens van de Ervaring (XDM).
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: 9785b252b7c9cb3513858476753b6b4f71277ed7
+source-git-commit: 302dca9a9f834dba1fd3fdac15284ea4e2fba282
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Raadpleeg uw juridische team om te bepalen hoe vertrouwelijke en persoonlijke ge
 
 XDM verstrekt een verscheidenheid van standaardgebiedsgroepen en gegevenstypes om relevante, algemeen gebruikte gegevensstructuren te beschrijven om klantenervaringen te aandrijven. Als een geadviseerde standaardmiddel beperkte gebieden bevat die u niet in uw schema&#39;s wilt omvatten, nochtans, moet u dat middel niet gebruiken.
 
-Met Platform kunt u uw eigen aangepaste veldgroepen en gegevenstypen definiëren, zodat u volledig zelf kunt bepalen hoe uw gegevens zijn gestructureerd als beschikbare standaardbronnen niet aan uw behoeften voldoen. Raadpleeg de volgende documentatie voor meer informatie over het definiëren van deze aangepaste bronnen:
+Het platform staat u toe om uw eigen groepen van het douanegebied en gegevenstypes te bepalen, die u volledige controle over geven hoe uw gegevens wordt gestructureerd als om het even welke beschikbare standaardmiddelen niet aan uw behoeften voldoen. Raadpleeg de volgende documentatie voor meer informatie over het definiëren van deze aangepaste bronnen:
 
 * [Een aangepaste veldgroep maken](../ui/resources/field-groups.md#create)
 * [Een aangepast gegevenstype maken](../ui/resources/data-types.md#create)
@@ -45,6 +45,10 @@ Met Platform kunt u uw eigen aangepaste veldgroepen en gegevenstypen definiëren
 * Remove fields from standard field groups pre-ingestion
 * Deprecate fields post-ingestion
 -->
+
+>[!IMPORTANT]
+>
+>SPI en PII mogen alleen worden opgeslagen in de [Afzonderlijk XDM-profiel](../classes/individual-profile.md) en [XDM ExperienceEvent](../classes/experienceevent.md) klassen. Sla SPI en PII niet op in een andere aangepaste of standaard XDM-klasse, zoals aanbevolen procedures voor het verwijderen van gegevens en voor privacy- en beheerdoeleinden.
 
 ## Volgende stappen
 

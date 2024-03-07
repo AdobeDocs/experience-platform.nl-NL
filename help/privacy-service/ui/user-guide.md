@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy-taken beheren in de gebruikersinterface van de Privacy Service
 description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experiencen Cloud te coördineren en te controleren.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: 93d9e5965e0f5556ff2b584c8b66bd7a7be15d23
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1465'
 ht-degree: 0%
 
 ---
@@ -143,6 +143,8 @@ De **[!UICONTROL Create Request]** wordt geopend, met daarin de beschikbare opti
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
 Selecteer de **[!UICONTROL Job Type]** van de aanvraag (&quot;Delete&quot; of &quot;Access&quot;) en een of meer beschikbare producten uit de lijst.
+
+Privacy Service ondersteunt twee soorten verzoeken om persoonlijke gegevens: [!UICONTROL Access] (lezen) en/of [!UICONTROL Delete]. U kunt een verzoek indienen om alle informatie in het product te ontvangen die betrekking heeft op het onderwerp van het onderzoek, of u kunt verzoeken om alle informatie te schrappen die betrekking heeft op het onderwerp van het onderzoek.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
