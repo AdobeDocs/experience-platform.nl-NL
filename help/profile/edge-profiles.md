@@ -2,9 +2,9 @@
 title: Edge-profielen
 description: Meer informatie over Edge-profielen en de bijbehorende terminologie, beschikbare gebieden voor randprofielen en de beschikbare services voor randprofielen.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Met de Express Profile Service (XPS) worden de profielen aan de verschillende ra
 
 ## Volgende stappen
 
-Nadat u deze handleiding hebt gelezen, hebt u een basiskennis van de randprofielen, waaronder informatie over de beschikbare gebieden en services voor randprofielen. Lees voor meer informatie over Adobe Experience Edge de [Overzicht van Edge Network](../web-sdk/home.md).
+Nadat u deze handleiding hebt gelezen, hebt u een basiskennis van de randprofielen, waaronder informatie over de beschikbare gebieden en services voor randprofielen. Lees voor meer informatie over Adobe Experience Edge de [Overzicht van Edge Network](../web-sdk/home.md#edge-network).
 
 ## Bijlage
 
@@ -78,3 +78,7 @@ Bovendien heeft elk Edge-profiel een schemakenmerk dat het UAR-gebied (User Acti
 ### Hoe werkt gegevensvervaltijden met randprofielen?
 
 Voor randprofielen bepaalt de vervaldatum van de gegevens hoe lang het profiel op de rand blijft voordat het wordt verwijderd. Vervaldatum gegevens **rollen**, wat betekent dat telkens als het profiel op rand wordt betreden, de tijd van de gegevensvervaldatum terugstelt. De gegevensvervaldatum duurt standaard 14 dagen.
+
+### Welke gegevens zijn opgeslagen in het randprofiel?
+
+Het Edge-profiel slaat de profielkenmerken, profiel-id&#39;s en gekwalificeerde gebruikers-id&#39;s op. De gegevensvervaldatum duurt standaard 14 dagen.

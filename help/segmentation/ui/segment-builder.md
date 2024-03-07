@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
+source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
 workflow-type: tm+mt
-source-wordcount: '3550'
+source-wordcount: '3554'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ Zodra de rapportsuites in kaart zijn gebracht, kunt u deze onlangs in kaart gebr
 >
 >Voor publiek dat is gemaakt in Platform, alleen publiek dat de **zelfde** het samenvoegbeleid wordt weergegeven.
 
-De **[!UICONTROL Audiences]** worden alle soorten publiek weergegeven die zijn geïmporteerd uit externe bronnen, zoals Adobe Audience Manager, en alle soorten publiek die zijn gemaakt in [!DNL Experience Platform].
+De **[!UICONTROL Audiences]** worden alle soorten publiek weergegeven die zijn geïmporteerd uit externe bronnen, zoals Adobe Audience Manager of Customer Journey Analytics, en alle soorten publiek die zijn gemaakt in [!DNL Experience Platform].
 
 Op de **[!UICONTROL Audiences]** kunt u alle beschikbare bronnen weergeven als een groep mappen. Terwijl u de mappen selecteert, zijn de beschikbare submappen en doelgroepen zichtbaar. Bovendien kunt u het mappictogram (zoals weergegeven in de afbeelding uiterst rechts) selecteren om de mapstructuur weer te geven (een vinkje geeft de map aan die u momenteel in hebt) en eenvoudig terug te navigeren door de mappen door de naam van een map in de boomstructuur te selecteren.
 
