@@ -3,9 +3,9 @@ title: Overzicht van Core Event Forwarding Extension
 description: Leer over de gebeurtenis van de Kern door:sturen uitbreiding in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '1707'
 ht-degree: 0%
 
 ---
@@ -20,13 +20,13 @@ De de gebeurtenis-door:sturen uitbreiding van de Kern verstrekt de standaardgebe
 
 Gebruik deze verwijzing voor informatie over de beschikbare opties wanneer het gebruiken van deze uitbreiding om een regel te bouwen.
 
-## Type voorwaarde voor kernextensie
+## Voorkeurstypen van kernextensie
 
 In deze sectie worden de voorwaardetypen beschreven die beschikbaar zijn in de extensie Core.  Deze voorwaardetypes kunnen met of het regelmatige of type van uitzonderingslogica worden gebruikt.
 
 ### Aangepaste code
 
-Geef aangepaste code op die als voorwaarde voor de gebeurtenis moet bestaan. Gebruik de ingebouwde code-editor om de aangepaste code in te voeren. Het doorsturen van gebeurtenissen in Adobe Experience Platform ondersteunt ES6.
+Geef aangepaste code op die als voorwaarde voor de gebeurtenis moet bestaan. Gebruik de ingebouwde code-editor om de aangepaste code in te voeren. Het door:sturen van gebeurtenissen in Adobe Experience Platform steunt ES13.
 
 1. Selecteer **[!UICONTROL Open Editor]**.
 1. Typ de aangepaste code.
@@ -48,7 +48,7 @@ utils.logger.log(context.arc.ruleStash);
 
 `ruleStash` is een object dat elk resultaat van actiemodules verzamelt.
 
-Elke extensie heeft een eigen naamruimte. Als uw extensie bijvoorbeeld de naam heeft `send-beacon`alle resultaten van de `send-beacon` acties worden opgeslagen op de `ruleStash['send-beacon']` naamruimte.
+Elke extensie heeft een eigen naamruimte. Als uw extensie bijvoorbeeld de naam heeft `send-beacon`, alle resultaten van de `send-beacon` acties worden opgeslagen op de `ruleStash['send-beacon']` naamruimte.
 
 ```javascript
 utils.logger.log(context.arc.ruleStash['adobe-cloud-connector']);
@@ -76,7 +76,7 @@ Indien het resultaat van de `generate-address` handeling is `3900 Adobe Way`Verv
 
 Let op: `Firstname Lastname` bestaat niet meer binnen de regelstreepje. Dit komt omdat de `generate-address` de actie overtrok het met het adres.
 
-Als u de resultaten van beide handelingen wilt opslaan in het dialoogvenster `transform` naamruimte in het dialoogvenster `ruleStash`U kunt uw actiemodule schrijven, vergelijkbaar met het volgende voorbeeld:
+Als u de resultaten van beide handelingen wilt opslaan in het dialoogvenster `transform` naamruimte in de `ruleStash`U kunt uw actiemodule schrijven, vergelijkbaar met het volgende voorbeeld:
 
 ```javascript
 module.exports = (context) => {
@@ -137,7 +137,7 @@ De volgende vergelijkingsoperatoren voor waarden zijn beschikbaar:
 
 **Is groter dan:** De voorwaarde retourneert true als de eerste waarde groter is dan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**groter dan of gelijk aan:** De voorwaarde retourneert true als de eerste waarde groter dan of gelijk is aan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
+**is groter dan of gelijk aan:** De voorwaarde retourneert true als de eerste waarde groter dan of gelijk is aan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
 
 **Is waar:** De voorwaarde retourneert true als de waarde een booleaanse waarde is met de waarde true. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde true resulteert in de voorwaarde die false retourneert.
 
@@ -155,7 +155,7 @@ Deze sectie beschrijft de actietypes beschikbaar in de uitbreiding van de Kern.
 
 ### Aangepaste code
 
-Geef de code op die wordt uitgevoerd nadat de gebeurtenis is geactiveerd en de voorwaarden zijn geëvalueerd. Het doorsturen van gebeurtenissen in Adobe Experience Platform ondersteunt ES6.
+Geef de code op die wordt uitgevoerd nadat de gebeurtenis is geactiveerd en de voorwaarden zijn geëvalueerd. Het door:sturen van gebeurtenissen in Adobe Experience Platform steunt ES13.
 
 1. Geef de actiecode een naam.
 1. Selecteer **[!UICONTROL Open Editor]**.
@@ -203,7 +203,7 @@ return getDataElementValue('section').concat(getDataElementValue('pName'));
 
 Er kan naar een pad naar een sleutelwaardepaar op een gebeurtenis die naar Adobe Experience Platform Edge Network wordt verzonden, worden verwezen met het gegevenstype Path.
 
-Als u naar het volledige object van een gebeurtenis wilt verwijzen, voert u `arc` als het pad. Het acroniem `arc` staat voor de Context van het Middel van Adobe en is de top-level weg voor een gebeurtenis die naar Adobe Experience Platform Edge Network wordt verzonden.
+Als u naar het volledige object van een gebeurtenis wilt verwijzen, voert u `arc` als het pad. Het acroniem `arc` staat voor de Context van het Middel van de Adobe en is de top-level weg voor een gebeurtenis die naar Adobe Experience Platform Edge Network wordt verzonden.
 
 Als u bijvoorbeeld de `interact` De vraag van de cliënt aan het Netwerk van Edge heeft het volgende verzoek zoals die van de browser console wordt gezien:
 
