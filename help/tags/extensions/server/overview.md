@@ -2,9 +2,9 @@
 title: Verwijzing naar extensies doorsturen van gebeurtenissen
 description: Documentatie zoeken voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: af3353000e5545e6d2dc729d6f0bb91a00683b04
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Hieronder volgt een lijst met documentatie voor het doorsturen van extensies aan
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
 * [Cloud Connector voor Googles Analytics](https://exchange.adobe.com/apps/ec/106542)*
-* [Cloud Connector voor Googles Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
+<!-- * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)* -->
 * [Kern](./core/overview.md)
 * [Epsilon-gebeurtenis-API](https://exchange.adobe.com/apps/ec/109127)*
 * [Verbeterde Google-conversies voor advertenties](./google-ads-enhanced-conversions/overview.md)

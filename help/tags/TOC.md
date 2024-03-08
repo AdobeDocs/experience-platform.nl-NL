@@ -6,9 +6,9 @@ user-guide-description: Leer analyses, marketing en advertenties te implementere
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '761'
 ht-degree: 15%
 
 ---
@@ -196,7 +196,6 @@ ht-degree: 15%
       * [SDI-enquête](https://exchange.adobe.com/apps/ec/102991)
       * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
       * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
-      * [SPA Weergave wijzigen](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
       * [Opslagspanner](https://exchange.adobe.com/apps/ec/102990)
       * [TAGS van Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
       * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
@@ -222,7 +221,6 @@ ht-degree: 15%
       * [!DNL Braze] {#braze}
          * [Overzicht](./extensions/server/braze/overview.md)
       * [Cloud Connector voor Googles Analytics](https://exchange.adobe.com/apps/ec/106542)
-      * [Cloud Connector voor Googles Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
       * Kern {#core}
          * [Overzicht](./extensions/server/core/overview.md)
       * [Epsilon-gebeurtenis-API](https://exchange.adobe.com/apps/ec/109127)
