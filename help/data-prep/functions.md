@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Toewijzingsfuncties voor gegevenspremies
 description: Dit document introduceert de toewijzingsfuncties die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: c7d6ef441f97cbc318bb2dd5c2f1daa08a6db197
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '5794'
+source-wordcount: '5789'
 ht-degree: 1%
 
 ---
@@ -119,8 +119,8 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Hiermee wordt de huidige tijd opgehaald. | | now() | now() | `2021-10-26T10:10:24Z` |
 | tijdstempel | Hiermee wordt de huidige Unix-tijd opgehaald. | | timestamp() | timestamp() | 1571850624571 |
-| format | Hiermee wordt de invoerdatum opgemaakt volgens een opgegeven notatie. | <ul><li>DATUM: **Vereist** De invoerdatum die u wilt opmaken als een ZonedDateTime-object.</li><li>INDELING: **Vereist** De notatie waarin de datum moet worden gewijzigd.</li></ul> | format(DATE, FORMAT) | formaat (2019-10-23T11):24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
-| dformat | Converteert een tijdstempel naar een datumtekenreeks volgens een opgegeven notatie. | <ul><li>TIJDSTEMPEL: **Vereist** Het tijdstempel dat u wilt opmaken. Dit wordt geschreven in milliseconden.</li><li>INDELING: **Vereist** De indeling die u wilt instellen als tijdstempel.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
+| format | Hiermee wordt de invoerdatum opgemaakt volgens een opgegeven notatie. | <ul><li>DATUM: **Vereist** De invoerdatum die u wilt opmaken als een ZonedDateTime-object.</li><li>INDELING: **Vereist** De notatie waarin de datum moet worden gewijzigd.</li></ul> | format(DATE, FORMAT) | formaat (2019-10-23T11):24:00+00:00, &quot;`yyyy-MM-dd HH:mm:ss`&quot;) | `2019-10-23 11:24:35` |
+| dformat | Converteert een tijdstempel naar een datumtekenreeks volgens een opgegeven notatie. | <ul><li>TIJDSTEMPEL: **Vereist** Het tijdstempel dat u wilt opmaken. Dit wordt geschreven in milliseconden.</li><li>INDELING: **Vereist** De indeling die u wilt instellen als tijdstempel.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;`yyyy-MM-dd'T'HH:mm:ss.SSSX`&quot;) | `2019-10-23T11:24:35.000Z` |
 | date | Converteert een datumtekenreeks naar een ZonedDateTime-object (ISO 8601-indeling). | <ul><li>DATUM: **Vereist** De tekenreeks die de datum vertegenwoordigt.</li><li>INDELING: **Vereist** De tekenreeks die staat voor de indeling van de brondatum.**Opmerking:** Dit doet **niet** vertegenwoordigen de notatie waarin u de datumtekenreeks wilt omzetten. </li><li>DEFAULT_DATE: **Vereist** De geretourneerde standaarddatum als de opgegeven datum null is.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
 | date | Converteert een datumtekenreeks naar een ZonedDateTime-object (ISO 8601-indeling). | <ul><li>DATUM: **Vereist** De tekenreeks die de datum vertegenwoordigt.</li><li>INDELING: **Vereist** De tekenreeks die staat voor de indeling van de brondatum.**Opmerking:** Dit doet **niet** vertegenwoordigen de notatie waarin u de datumtekenreeks wilt omzetten. </li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | `2019-10-23T11:24:00Z` |
 | date | Converteert een datumtekenreeks naar een ZonedDateTime-object (ISO 8601-indeling). | <ul><li>DATUM: **Vereist** De tekenreeks die de datum vertegenwoordigt.</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24:00Z&quot; |

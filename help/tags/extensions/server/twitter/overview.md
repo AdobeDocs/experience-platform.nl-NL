@@ -4,10 +4,10 @@ title: Twitter-gebeurtenis, extensie doorsturen
 description: Deze Adobe Experience Platform gebeurtenis die uitbreiding door:sturen staat u toe om gebeurtenissen in Twitter voor uw bedrijfsvereisten in te voeren.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '1099'
-ht-degree: 2%
+source-wordcount: '1006'
+ht-degree: 1%
 
 ---
 
@@ -97,11 +97,11 @@ Na selectie, schijnen de extra controles om de gebeurtenis verder te vormen. U m
 
 | Veldnaam | Beschrijving | Voorbeeld | Vereist |
 | --- | --- | --- | --- |
-| [!UICONTROL Conversion Time] | Datum-tijd als tekenreeks in ISO 8601 of in jjjj-MM-dd&#39;T&#39;HH:mm:ss:SSSZ-indeling. | 2022-02-18T01:14:00,603Z | Ja |
+| [!UICONTROL Conversion Time] | Datum/tijd als tekenreeks in ISO 8601 of in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` gebruiken. | 2022-02-18T01:14:00,603Z | Ja |
 | [!UICONTROL Event Id] | De basis-36-id van een specifieke gebeurtenis. Deze id moet overeenkomen met een vooraf geconfigureerde gebeurtenis in uw [!DNL Twitter] advertentieaccount. Dit wordt de id voor de bijbehorende gebeurtenis in Events Manager genoemd. | o87ne of tw-o8z6j-o87ne (tw-pixel_id-event-id) | Ja |
 | [!UICONTROL Number of Items] | Het aantal items dat in de gebeurtenis wordt aangeschaft. Dit moet een positief getal zijn dat groter is dan 0. | 4 | Nee |
 | [!UICONTROL Currency] | De valuta van de items die in de gebeurtenis worden gekocht. Dit wordt uitgedrukt in ISO-4217 en indien niet verstrekt, zal de standaardwaarde USD zijn. | USD | Nee |
-| [!UICONTROL Value] | De prijswaarde van de items die in het geval worden aangeschaft. | 100.00 | Nee |
+| [!UICONTROL Value] | De prijswaarde van de items die in het geval worden aangeschaft. | 100,00 | Nee |
 | [!UICONTROL Conversion ID] | Een id voor een conversiegebeurtenis die kan worden gebruikt voor deduplicatie tussen webpixels en conversie-API-conversies in dezelfde gebeurtenistag. | 23294827 | Nee |
 | [!UICONTROL Description] | Een beschrijving met aanvullende informatie over de omzettingen. | Conversie testen | Nee |
 

@@ -2,10 +2,11 @@
 title: Adobe TikTok webgebeurtenissen API-extensie Integratie
 description: Met deze Adobe Experience Platform-API voor webgebeurtenissen kunt u interacties van websites rechtstreeks delen met TikTok.
 last-substantial-update: 2023-09-26T00:00:00Z
-source-git-commit: d8b7006ade1dc82fdd79b7ed744c021bc304bca7
+exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 2%
+source-wordcount: '1048'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +20,7 @@ Om te vormen [!DNL TikTok] webgebeurtenissen met de API [!DNL TikTok] gebeurteni
 
 U moet een geldige [!DNL TikTok] voor zakelijke account om een [!DNL TikTok] pixel die de partneropstelling gebruiken. Ga naar de [[!DNL TikTok] voor de registratiepagina voor bedrijven](https://www.tiktok.com/business/en-US/solutions/business-account) als u nog geen account hebt, kunt u zich registreren en een account maken.
 
-U moet zijn aangemeld bij uw zakelijke account om te kunnen worden ingesteld [!DNL TikTok] Pixel die partneropstelling gebruikt. Volg de onderstaande stappen om dit te doen:
+U moet zijn aangemeld bij uw zakelijke account om te kunnen worden ingesteld [!DNL TikTok] Pixel die partneropstelling gebruikt. Hiervoor voert u de volgende stappen uit:
 
 1. Ga naar de **[!UICONTROL Assets]** en selecteert u **[!UICONTROL Event]**.
 2. Selecteer onder Webgebeurtenissen de optie **[!UICONTROL Manage]**.
@@ -64,7 +65,7 @@ Webgebeurtenissen en -parameters bevatten algemene informatie over de gebeurteni
 | Invoer | Beschrijving |
 | --- | --- |
 | Gebeurtenisnaam | De naam van de gebeurtenis. Dit zijn handelingen met vooraf gedefinieerde namen die zijn gemaakt door [!DNL TikTok] en is een verplicht veld. Zie de [[!DNL TikTok] Marketing-API](https://business-api.tiktok.com/portal/docs?id=1741601162187777) documentatie voor meer informatie over ondersteunde gebeurtenissen. |
-| Gebeurtenistijd | Datum-tijd als tekenreeks in ISO 8601 of in jjjj-MM-dd&#39;T&#39;HH:mm:ss:SSSZ-indeling. Dit is een verplicht veld. |
+| Gebeurtenistijd | Datum/tijd als tekenreeks in ISO 8601 of in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` gebruiken. Dit is een verplicht veld. |
 | Gebeurtenis-id | De unieke id die door adverteerders wordt gegenereerd om elke gebeurtenis aan te geven. Dit is een optioneel veld en wordt gebruikt voor deduplicatie. |
 
 {style="table-layout:auto"}
