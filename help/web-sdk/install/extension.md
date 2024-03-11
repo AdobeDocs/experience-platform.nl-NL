@@ -1,13 +1,13 @@
 ---
 title: De SDK van het web installeren met de tagextensie
 description: Verwijs naar de bibliotheek van SDK van het Web gebruikend de Inzameling van Gegevens van Adobe Experience Cloud.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: ba8348c9-f642-4230-9f7f-4496d4154d83
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
-
 
 # De SDK van het web installeren met de tagextensie
 
@@ -23,6 +23,8 @@ Wanneer u voldoet aan de [voorwaarden](overview.md), kunt u de de markeringsuitb
 1. Navigeren naar **[!UICONTROL Extensions]** en selecteert u vervolgens de **[!UICONTROL Catalog]** tab.
 1. Zoek en installeer de **[!UICONTROL Adobe Experience Platform Web SDK]** extensie.
 1. Selecteer de juiste sandbox en datastream voor elke omgeving en klik vervolgens op **[!UICONTROL Save]**.
+
+Zie de documentatie over hoe u [configureren van de Web SDK-tagextensie](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) voor meer informatie .
 
 ## De code van de tag publiceren voor ontwikkeling
 

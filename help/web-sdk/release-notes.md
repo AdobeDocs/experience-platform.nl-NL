@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: cf6df4d005486aa297dcced7c8811f87f5e988c2
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1725'
 ht-degree: 0%
 
 ---
@@ -213,8 +213,8 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 ## Versie 2.2.0 - oktober 2020
 
-* Bug Fix: Het Opt-in-object blokkeerde Alloy tijdens het oproepen van `idMigrationEnabled` is `true`.
-* Bug Fix: Alloy bewust maken van verzoeken die verpersoonlijkingsaanbiedingen zouden moeten terugkeren om een flikkerende kwestie te verhinderen.
+* Bug Fix: Het Opt-in voorwerp blokkeerde Web SDK om vraag te maken wanneer `idMigrationEnabled` is `true`.
+* Bug Fix: Maak Web SDK zich van verzoeken bewust die verpersoonlijkingsaanbiedingen zouden moeten terugkeren om een het flikkeren kwestie te verhinderen.
 
 ## Versie 2.1.0 - augustus 2020
 
@@ -222,5 +222,5 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 * Ondersteuning voor IAB 2.0 Consent Standard.
 * Ondersteuning voor het doorgeven van aanvullende id&#39;s in het dialoogvenster `setConsent` gebruiken.
 * Ondersteuning voor het overschrijven van de `datasetId` in de `sendEvent` gebruiken.
-* Ondersteuningslantmonitoren ([Meer informatie](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
+* Support Monitoring Hooks ([Meer informatie](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
 * Voldoende `environment: browser` in de implementatie de contextgegevens.

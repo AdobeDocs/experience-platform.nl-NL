@@ -1,17 +1,17 @@
 ---
 title: De SDK van het Web installeren met de JavaScript-bibliotheek
 description: Verwijs naar de bibliotheek van SDK van het Web gebruikend een standalone CDN dossier.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
 
-
 # De SDK van het Web installeren met de JavaScript-bibliotheek
 
-Één optie om SDK van het Web te installeren is door naar de bibliotheek te verwijzen JavaScript die op een CDN wordt ontvangen. U kunt rechtstreeks naar de bibliotheek verwijzen of deze downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in geminiatuurde en volledige formaten.
+Een alternatief voor het installeren van de Web SDK zonder [met de tagextensie](extension.md) verwijst naar de JavaScript-bibliotheek die op een CDN wordt gehost. U kunt rechtstreeks naar de bibliotheek verwijzen of deze downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in geminiatuurde en volledige formaten.
 
 De SDK-bibliotheek van Web is beschikbaar via de volgende URL-structuur:
 
