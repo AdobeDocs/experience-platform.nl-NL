@@ -2,9 +2,9 @@
 title: Amazon S3-verbinding
 description: Creeer een levende uitgaande verbinding aan uw opslag van Amazon Web Services (AWS) S3 om CSV- gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,19 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 {style="table-layout:auto"}
 
 ![Op Amazon S3-profielen gebaseerd exporttype gemarkeerd in de UU.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+
+## Gegevensbestanden exporteren {#export-datasets}
+
+Deze bestemming steunt dataset de uitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
+
+* Procedure [de uitvoer datasets gebruikend het gebruikersinterface van het Platform](/help/destinations/ui/export-datasets.md).
+* Procedure [de uitvoer datasets programmatically gebruikend de Dienst API van de Stroom](/help/destinations/api/export-datasets.md).
+
+## Bestandsindeling van de geëxporteerde gegevens {#file-format}
+
+Bij exporteren *publieksgegevens*, Platform maakt een `.csv`, `parquet`, of `.json` in de opslaglocatie die u hebt opgegeven. Zie voor meer informatie over de bestanden de [ondersteunde bestandsindelingen voor export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) in de zelfstudie voor publieksactivering.
+
+Bij exporteren *gegevenssets*, Platform maakt een `.parquet` of `.json` in de opslaglocatie die u hebt opgegeven. Zie voor meer informatie over de bestanden de [succesvolle uitvoer van gegevenssets controleren](../../ui/export-datasets.md#verify) in de zelfstudie over exportgegevensbestanden.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -169,13 +182,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
-## Gegevensbestanden exporteren {#export-datasets}
+## Geëxporteerde gegevens valideren {#exported-data}
 
-Deze bestemming steunt dataset de uitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
+Controleer uw [!DNL Amazon S3] opslaan en ervoor zorgen dat de geëxporteerde bestanden de verwachte profielpopulaties bevatten.
 
-* Procedure [de uitvoer datasets gebruikend het gebruikersinterface van het Platform](/help/destinations/ui/export-datasets.md).
-* Procedure [de uitvoer datasets programmatically gebruikend de Dienst API van de Stroom](/help/destinations/api/export-datasets.md).
+## IP adres lijst van gewenste personen {#ip-address-allow-list}
 
-## Geëxporteerde gegevens {#exported-data}
-
-Voor [!DNL Amazon S3] bestemmingen, [!DNL Platform] maakt een gegevensbestand op de opslaglocatie die u hebt opgegeven. Zie voor meer informatie over de bestanden [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor publieksactivering.
+Zie de [IP adres lijst van gewenste personen](ip-address-allow-list.md) artikel als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.

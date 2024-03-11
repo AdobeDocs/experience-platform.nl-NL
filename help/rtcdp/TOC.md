@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
 user-guide-description: Breng bekende en anonieme gegevens van meerdere ondernemingsbronnen samen om klantenprofielen te creëren, doelgroepsegmenten van die profielen te maken, en die segmenten aan bestemmingen van derden te activeren.
 role: Admin
-source-git-commit: 267857cfdcc75310c7e490fdbae3494ecd5a8fb7
+source-git-commit: 472852b383f117281fd235ad39dedba401df7679
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 13%
@@ -76,14 +76,14 @@ ht-degree: 13%
    * [Bronnen in Real-Time CDP B2B Edition](sources/b2b.md)
 * Gebruiksscenario’s {#use-cases}
    * [Overzicht van voorbeelden](/help/rtcdp/use-case-guides/overview.md)
-   * Personalisatie, inzichten en betrokkenheid {#personalization-insights-engagement}
-      * [Neem op intelligente wijze uw klanten opnieuw aan](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-      * [Neem op intelligente wijze contact op met uw klanten: Luma-voorbeelden](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
    * Klantenovername {#customer-acquisition}
       * [Nieuwe klanten aantrekken en aanschaffen zonder afhankelijk te zijn van cookies van derden](/help/rtcdp/partner-data/prospecting.md)
       * [Onsite ervaringen voor onbekende bezoekers personaliseren met de erkenning van bezoekers met hulp van partners](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Offsite herbestemming van niet-geverifieerde gebruikers](./partner-data/offsite-retargeting.md)
    * Profielverrijking {#profile-enrichment}
       * [Voeg eerste-partijprofielen met partner-verstrekte attributen toe](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+   * Personalisatie, inzichten en betrokkenheid {#personalization-insights-engagement}
+      * [Neem op intelligente wijze uw klanten opnieuw aan](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+      * [Neem op intelligente wijze contact op met uw klanten: Luma-voorbeelden](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Opmerkingen bij de release Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
 * [Woordenlijst Experience Platform](https://www.adobe.com/go/platform-glossary-en)

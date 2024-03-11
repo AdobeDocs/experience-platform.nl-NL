@@ -3,9 +3,9 @@ title: Azure Data Lake Storage Gen2-verbinding
 description: Leer hoe u verbinding maakt met Azure Data Lake Storage Gen2 om het publiek te activeren en gegevenssets te exporteren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,18 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 {style="table-layout:auto"}
 
-## Vereisten {#prerequisites}
+## Gegevensbestanden exporteren {#export-datasets}
+
+Deze bestemming steunt dataset de uitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
+
+* Procedure [de uitvoer datasets gebruikend het gebruikersinterface van het Platform](/help/destinations/ui/export-datasets.md).
+* Procedure [de uitvoer datasets programmatically gebruikend de Dienst API van de Stroom](/help/destinations/api/export-datasets.md).
+
+## Bestandsindeling van de geëxporteerde gegevens {#file-format}
+
+Bij exporteren *publieksgegevens*, Platform maakt een `.csv`, `parquet`, of `.json` in de opslaglocatie die u hebt opgegeven. Zie voor meer informatie over de bestanden de [ondersteunde bestandsindelingen voor export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) in de zelfstudie voor publieksactivering.
+
+Bij exporteren *gegevenssets*, Platform maakt een `.parquet` of `.json` in de opslaglocatie die u hebt opgegeven. Zie voor meer informatie over de bestanden de [succesvolle uitvoer van gegevenssets controleren](../../ui/export-datasets.md#verify) in de zelfstudie over exportgegevensbestanden.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -103,13 +114,6 @@ In de **[!UICONTROL Scheduling]** stap, u kunt [het exportschema instellen](/hel
 ### Kenmerken en identiteiten toewijzen {#map}
 
 In de **[!UICONTROL Mapping]** U kunt kiezen welke kenmerken en identiteitsvelden u wilt exporteren voor uw profielen. U kunt ook selecteren om de kopteksten in het geëxporteerde bestand te wijzigen in een gewenste vriendelijke naam. Voor meer informatie bekijkt u de [toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in activeer partijbestemmingen UI zelfstudie.
-
-## Gegevensbestanden exporteren {#export-datasets}
-
-Deze bestemming steunt dataset de uitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
-
-* Procedure [de uitvoer datasets gebruikend het gebruikersinterface van het Platform](/help/destinations/ui/export-datasets.md).
-* Procedure [de uitvoer datasets programmatically gebruikend de Dienst API van de Stroom](/help/destinations/api/export-datasets.md).
 
 ## Geëxporteerde gegevens valideren {#exported-data}
 

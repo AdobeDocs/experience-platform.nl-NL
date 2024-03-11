@@ -2,9 +2,9 @@
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '1042'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,19 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 {style="table-layout:auto"}
 
 ![Op SFTP-profiel gebaseerd exporttype dat is gemarkeerd in de catalogus met doelen.](../../assets/catalog/cloud-storage/sftp/catalog.png)
+
+## Gegevensbestanden exporteren {#export-datasets}
+
+Deze bestemming steunt dataset de uitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
+
+* Procedure [de uitvoer datasets gebruikend het gebruikersinterface van het Platform](/help/destinations/ui/export-datasets.md).
+* Procedure [de uitvoer datasets programmatically gebruikend de Dienst API van de Stroom](/help/destinations/api/export-datasets.md).
+
+## Bestandsindeling van de geëxporteerde gegevens {#file-format}
+
+Bij exporteren *publieksgegevens*, Platform maakt een `.csv`, `parquet`, of `.json` in de opslaglocatie die u hebt opgegeven. Zie voor meer informatie over de bestanden de [ondersteunde bestandsindelingen voor export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) in de zelfstudie voor publieksactivering.
+
+Bij exporteren *gegevenssets*, Platform maakt een `.parquet` of `.json` in de opslaglocatie die u hebt opgegeven. Zie voor meer informatie over de bestanden de [succesvolle uitvoer van gegevenssets controleren](../../ui/export-datasets.md#verify) in de zelfstudie over exportgegevensbestanden.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -129,17 +142,10 @@ Na het vestigen van de authentificatieverbinding aan de plaats SFTP, verstrek de
 
 Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
-## Gegevensbestanden exporteren {#export-datasets}
+## Geëxporteerde gegevens valideren {#exported-data}
 
-Deze bestemming steunt dataset de uitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
-
-* Procedure [de uitvoer datasets gebruikend het gebruikersinterface van het Platform](/help/destinations/ui/export-datasets.md).
-* Procedure [de uitvoer datasets programmatically gebruikend de Dienst API van de Stroom](/help/destinations/api/export-datasets.md).
-
-## Geëxporteerde gegevens {#exported-data}
-
-Voor [!DNL SFTP] doelen, Platform maakt een `.csv` in de opslaglocatie die u hebt opgegeven. Zie voor meer informatie over de bestanden [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor publieksactivering.
+Om te controleren of gegevens zijn geëxporteerd, controleert u de SFTP-opslag en controleert u of de geëxporteerde bestanden de verwachte profielpopulaties bevatten.
 
 ## IP adres lijst van gewenste personen {#ip-address-allow-list}
 
-Zie [IP adres lijst van gewenste personen voor bestemmingen SFTP](ip-address-allow-list.md) als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.
+Zie de [IP adres lijst van gewenste personen](ip-address-allow-list.md) artikel als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.
