@@ -5,9 +5,9 @@ title: De Middelen van het Schema in UI onderzoeken
 description: Leer hoe te om bestaande schema's, klassen, de groepen van het schemagebied, en gegevenstypes in het gebruikersinterface van de Experience Platform te onderzoeken.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,14 @@ Wanneer u een bron hebt geselecteerd, wordt de structuur ervan geopend in het ca
 Alle objecten-type gebieden die sub-eigenschappen bevatten worden doen ineenstorten door gebrek wanneer zij eerst in het canvas verschijnen. Als u de subeigenschappen van een veld wilt weergeven, selecteert u het pictogram naast de naam.
 
 ![](../images/ui/explore/field-expand.png)
+
+### Standaardklasse- en veldgroepindicator {#standard-class-and-field-group-indicator}
+
+In de Schema-editor worden standaard (door Adobe gegenereerde) klassen en veldgroepen aangeduid met het hangslotpictogram (![Een hangslotpictogram.](../images/ui/explore/padlock-icon.png). Het hangslot verschijnt in de linkerspoorstaaf naast de klasse of de naam van de gebiedsgroep, evenals naast om het even welk gebied in het schemadiagram dat een deel van een systeem-geproduceerde middel is.
+
+![De Schema-editor met het hangslotpictogram gemarkeerd](../images/ui/explore/schema-editor-padlock-icon.png)
+
+Zie de [Aangepaste velden toevoegen aan standaardveldgroepen](./resources/schemas.md) documentatie voor richtsnoeren. U kunt een standaardklasse niet bewerken.
 
 ### Door het systeem gegenereerde velden {#system-fields}
 

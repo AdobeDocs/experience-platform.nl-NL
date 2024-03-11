@@ -5,9 +5,9 @@ title: Een schema maken met de Schema-editor
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met behulp van de Schema-editor in het Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '4391'
+source-wordcount: '4454'
 ht-degree: 0%
 
 ---
@@ -116,6 +116,12 @@ Selecteer voor deze zelfstudie de optie **[!UICONTROL Demographic Details]** vel
 Het schemacanvas verschijnt opnieuw. De **[!UICONTROL Field groups]** sectie nu lijsten &quot;[!UICONTROL Demographic Details]&quot; en de **[!UICONTROL Structure]** bevat de velden die worden toegevoegd door de veldgroep. U kunt de naam van de veldgroep selecteren onder de naam **[!UICONTROL Field groups]** om de specifieke velden te markeren die worden weergegeven op het canvas.
 
 ![De Schema-editor met de groepen in het veld Demografische details gemarkeerd.](../images/tutorials/create-schema/demographic-details-structure.png)
+
+>[!NOTE]
+>
+>In de Schema-editor worden standaard (door Adobe gegenereerde) klassen en veldgroepen aangeduid met het hangslotpictogram (![Een hangslotpictogram.](../images/ui/explore/padlock-icon.png). Het hangslot verschijnt in de linkerspoorstaaf naast de klasse of de naam van de gebiedsgroep, evenals naast om het even welk gebied in het schemadiagram dat een deel van een systeem-geproduceerde middel is.
+>
+>![De Schema-editor met het hangslotpictogram gemarkeerd](../images/ui/explore/padlock-icon-highlight.png)
 
 Deze veldgroep levert verschillende velden onder de naam van het hoogste niveau op `person` met het gegevenstype &quot;[!UICONTROL Person]&quot;. In deze groep velden wordt informatie over een individu beschreven, zoals naam, geboortedatum en geslacht.
 

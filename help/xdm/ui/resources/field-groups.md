@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Groep met schemavelden maken en bewerken in de gebruikersinterface
 description: Leer hoe u groepen met schemavelden maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ De lijst met beschikbare veldgroepen wordt vooraf gefilterd op basis van de mani
 
 >[!NOTE]
 >
->Alleen aangepaste veldgroepen die door uw organisatie zijn gedefinieerd, kunnen volledig worden bewerkt en aangepast. Voor de belangrijkste veldgroepen die door Adobe worden gedefinieerd, kunnen alleen de weergavenamen voor de bijbehorende velden worden bewerkt binnen de context van de afzonderlijke schema&#39;s. Zie de sectie over [weergavenamen voor schemavelden bewerken](./schemas.md#display-names) voor meer informatie.
+>Alleen aangepaste veldgroepen die door uw organisatie zijn gedefinieerd, kunnen volledig worden bewerkt en aangepast. Voor de belangrijkste veldgroepen die door Adobe worden gedefinieerd, kunnen alleen de weergavenamen voor de bijbehorende velden worden bewerkt binnen de context van de afzonderlijke schema&#39;s. Ze worden in de Schema-editor aangeduid met een hangslotpictogram (![Een hangslotpictogram.](../../images/ui/explore/padlock-icon.png)). Zie de sectie over [weergavenamen voor schemavelden bewerken](./schemas.md#display-names) voor meer informatie.
 >
 >Nadat een aangepaste veldgroep is opgeslagen en in een schema voor gegevensinvoer is gebruikt, kunnen daarna alleen additieve wijzigingen in de veldgroep worden aangebracht. Zie de [regels voor schemaontwikkeling](../../schema/composition.md#evolution) voor meer informatie .
 

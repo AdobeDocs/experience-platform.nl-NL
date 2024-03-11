@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 29a33dd5823ac425cc567e948a5def948aedb44e
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '2488'
+source-wordcount: '2559'
 ht-degree: 0%
 
 ---
@@ -255,6 +255,10 @@ De console biedt informatie over de status en werking van [!DNL Query Service]. 
 Nadat een vraag is voltooid, worden de resultaten getoond in **[!UICONTROL Results]** tab, naast de **[!UICONTROL Console]** tab. In deze weergave wordt de tabeluitvoer van de query weergegeven. Afhankelijk van uw keuze worden tussen 50 en 500 rijen met resultaten weergegeven [aantal resultaten](#result-count). In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met in werking `CREATE TABLE tablename AS SELECT` om een dataset met de output te produceren. Zie de [het produceren van datasetleerprogramma](./create-datasets.md) voor instructies op hoe te om een dataset van vraagresultaten te produceren in [!DNL Query Editor].
 
 ![Het lusje van Resultaten van de console van de Redacteur van de Vraag die de resultaten van een vraaglooppas toont.](../images/ui/query-editor/query-results.png)
+
+## Gebruiksscenario’s {#use-cases}
+
+De Dienst van de vraag verstrekt oplossingen aan een verscheidenheid van gebruiksgevallen over industrieën en bedrijfsscenario&#39;s. Deze praktische voorbeelden tonen de flexibiliteit en het effect van de dienst in het aanpakken van diverse behoeften aan. Naar [ontdekken hoe de Dienst van de Vraag waarde aan uw specifieke bedrijfsbehoeften kan brengen](../use-cases/overview.md), de uitgebreide verzameling van gebruiksdossiers te onderzoeken. Leer hoe te om de Dienst van de Vraag te gebruiken om inzichten en oplossingen voor verbeterde operationele efficiency en bedrijfssucces te verstrekken.
 
 ## Query uitvoeren met [!DNL Query Service] zelfstudievideo {#query-tutorial-video}
 

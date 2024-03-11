@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '3523'
+source-wordcount: '3584'
 ht-degree: 0%
 
 ---
@@ -126,6 +126,12 @@ Nadat u de veldgroepen hebt gekozen, selecteert u **[!UICONTROL Add field groups
 De [!DNL Schema Editor] verschijnt weer terwijl de velden die door de veldgroep worden opgegeven, op het canvas worden weergegeven.
 
 ![De [!DNL Schema Editor] met een voorbeeldschema weergegeven.](../../images/ui/resources/schemas/field-groups-added.png)
+
+>[!NOTE]
+>
+>In de Schema-editor worden standaard (door Adobe gegenereerde) klassen en veldgroepen aangeduid met het hangslotpictogram (![Een hangslotpictogram.](../../images/ui/explore/padlock-icon.png). Het hangslot verschijnt in de linkerspoorstaaf naast de klasse of de naam van de gebiedsgroep, evenals naast om het even welk gebied in het schemadiagram dat een deel van een systeem-geproduceerde middel is.
+>
+>![De Schema-editor met het hangslotpictogram gemarkeerd](../../images/ui/explore/schema-editor-padlock-icon.png)
 
 Nadat u een veldgroep aan een schema hebt toegevoegd, kunt u optioneel [bestaande velden verwijderen](#remove-fields) of [Nieuwe aangepaste velden toevoegen](#add-fields) naar deze groepen, afhankelijk van uw behoeften.
 

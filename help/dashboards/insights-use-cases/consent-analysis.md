@@ -2,9 +2,9 @@
 title: Constante analyse en tracering
 description: Leer hoe u een dashboard voor de toestemmingsanalyse kunt maken om te controleren hoe de toestemming van de gebruiker in de loop der tijd is verlopen.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1804'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,9 @@ De in deze handleiding behandelde gevallen van gebruik zijn het trenderen van de
 - **Constante trending** volgt hoe de gebruikerstoestemming in tijd is geëvolueerd. Het analyseren van toestemmingsvoorkeursveranderingen helpt marketers campagnes te plannen en campagnes uit te voeren die zich aan die veranderingen van de gebruikersvoorkeur aanpassen. U kunt bijvoorbeeld gerichte educatieve campagnes, transparantie- en vertrouwenscampagnes of stimulerende campagnes voor het aansturen van toestemmingskeuzes voeren. U zou ook campagnes kunnen correleren die negatieve gevolgen kunnen hebben gehad voor de toestemming om de frequentie van die campagnes proactief te verminderen.
 - **Overlap van toestemming** gebruikt de overlapping tussen toestemmingskanalen om verenigbare gepersonaliseerde overseinen op veelvoudige kanalen voor uw klanten te leveren die aan veelvoudige kanalen hebben goedgekeurd. De verkopers kunnen aan bepaalde kanalen voorrang geven en middelen toewijzen waar een hogere graad van toestemming en gepersonaliseerd overseinen met klanten zou kunnen resoneren en hogere reactieaantallen produceren.
 
-<!-- ## Build a consent dashboard {#build-a-consent-dashboard} -->
-
 ## Goedgekeurd publiek maken {#create-consent-audiences}
 
 Om een toestemmingsdashboard te bouwen, moet u eerst een publiek van alle profielen tot stand brengen die aan contact hebben goedgekeurd. Als u naar de Real-time Customer Data Platform Segment Builder wilt navigeren, selecteert u **[!UICONTROL Audiences]** in de linkernavigatie van Platform UI. Van de [!UICONTROL Customer] tabblad van het [!UICONTROL Audiences] dashboard, selecteren **[!UICONTROL Create audience]** in de rechterbovenhoek van de weergave, en vervolgens **[!UICONTROL Build rules]**.
-
-<!-- Update screenshot below to include Create audience -->s
 
 ![De [!UICONTROL Audiences] dashboard met [!UICONTROL Customer], [!UICONTROL Audiences], en [!UICONTROL Create segment] gemarkeerd.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
