@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Overzicht van Adobe Experience Platform
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Ontdek hoe u met Experience Platform uw klanten in real time persoonlijke ervaringen kunt bieden met handleidingen, documentatie en zelfstudies.
-source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
+source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '282'
 ht-degree: 18%
 
 ---
@@ -47,6 +47,7 @@ ht-degree: 18%
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
    * [Platformintegratie met Experience Cloud (video)](video/experience-cloud-integrations.md)
 * Bestuur, privacy en beveiliging {#governance-privacy-security}
    * [Overzicht](./governance-privacy-security/overview.md)

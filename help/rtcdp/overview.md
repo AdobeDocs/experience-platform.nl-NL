@@ -4,9 +4,9 @@ title: Real-time Customer Data Platform - Overzicht
 description: Overzicht van Adobe Real-time Customer Data Platform
 feature: Get Started
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: f89665837b75dc4305073d675c4c05b04302c85e
+source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '682'
 ht-degree: 0%
 
 ---
@@ -79,3 +79,7 @@ De volgende documentatie wordt aanbevolen om u te helpen aan de slag te gaan met
 * [Hoe te om publiek te bouwen](segmentation/segmentation-overview.md)
 * [Het publiek naar bestemmingen activeren](destinations/overview.md)
 * [Beleid voor gegevensbeheer definiëren en afdwingen](privacy/data-governance-overview.md)
+
+## Woordenlijst
+
+Gebruik de [**Verklarende woordenlijst**](/help/landing/glossary.md) pagina om de Real-Time CDP- en Adobe Experience Platform-terminologie te bekijken.
