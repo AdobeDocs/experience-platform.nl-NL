@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruiksaanwijzing voor sandbox
 description: Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met betrekking tot sandboxen in de Adobe Experience Platform-gebruikersinterface.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
+source-git-commit: 0db23e475d6546ebb886a56d5915d023ea215125
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Als een sandbox is geselecteerd, wordt het scherm vernieuwd en wordt de door u g
 
 >[!NOTE]
 >
->Wanneer een nieuwe sandbox wordt gemaakt, moet u die nieuwe sandbox eerst aan uw productprofiel toevoegen in [Adobe Admin Console](https://adminconsole.adobe.com/) voordat u de nieuwe sandbox kunt gaan gebruiken. Zie de documentatie op [het beheren van toestemmingen voor een productprofiel](../../access-control/ui/permissions.md) voor informatie over hoe u een sandbox kunt toevoegen aan een productprofiel.
+>Voor het maken van een nieuwe sandbox moet u de sandbox toevoegen aan een rol in [[!UICONTROL Permissions]](../../access-control/abac/ui/permissions.md) voordat u het kunt gaan gebruiken. Als u wilt weten hoe u een sandbox voor een rol instelt, raadpleegt u de [sandboxen beheren voor een rol](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) documentatie.
 
 Gebruik de volgende video voor een snel overzicht van het gebruik van sandboxen in Experience Platform.
 
