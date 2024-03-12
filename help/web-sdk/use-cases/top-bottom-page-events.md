@@ -2,7 +2,7 @@
 title: Vorm bovenkant en bodem van paginagebeurtenissen in Web SDK
 description: Dit artikel verklaart hoe te om bovenkant en bodem van paginagebeurtenissen in Web SDK te gebruiken.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: 4d0895c6ad38523f5527c9630931c3c0b8ef83c0
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 0%
@@ -222,4 +222,4 @@ alloy("sendEvent", {
 
 ## GitHub-voorbeeld {#github-sample}
 
-Het voorbeeld is gevonden op [dit adres](https://github.com/adobe/alloy-samples/tree/main/top-and-bottom) toont aan hoe te om Experience Platform en Web SDK te gebruiken om verpersoonlijking bij de bovenkant van de pagina te verzoeken, en analysemetriek bij de bodem te verzenden. U kunt het voorbeeld downloaden en lokaal uitvoeren om te begrijpen hoe boven- en onderaan pagina-gebeurtenissen werken.
+Het voorbeeld is gevonden op [dit adres](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) toont aan hoe te om Experience Platform en Web SDK te gebruiken om verpersoonlijking bij de bovenkant van de pagina te verzoeken, en analysemetriek bij de bodem te verzenden. U kunt het voorbeeld downloaden en lokaal uitvoeren om te begrijpen hoe boven- en onderaan pagina-gebeurtenissen werken.
