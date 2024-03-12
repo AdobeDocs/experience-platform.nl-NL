@@ -2,12 +2,13 @@
 title: Eerste-partij apparaat IDs in Web SDK
 description: Leer hoe u FPID's (First-party device ID's) voor de Adobe Experience Platform Web SDK configureert.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 9f10d48357b7fb28dc54375a4d077d0a1961a746
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1986'
 ht-degree: 0%
 
 ---
+
 
 # Eerste-partij apparaat IDs in Web SDK
 
@@ -47,6 +48,28 @@ Als u een FPID voor een websitebezoeker naar het Platform Edge Network wilt verz
 Het Netwerk van de Rand van het Platform keurt slechts identiteitskaart&#39;s goed die aan het voldoen [UUIDv4-indeling](https://datatracker.ietf.org/doc/html/rfc4122). Apparaat-id&#39;s die niet de UUIDv4-indeling hebben, worden geweigerd.
 
 Het genereren van een UUID zal bijna altijd resulteren in een unieke, willekeurige id, waarbij de kans dat een botsing optreedt verwaarloosbaar is. UUIDv4 kan niet worden verzonden gebruikend IP adressen of een andere persoonlijke identificeerbare informatie (PII). UUID&#39;s zijn alomtegenwoordig en bibliotheken kunnen voor vrijwel elke programmeertaal worden gevonden om ze te genereren.
+
+## Het plaatsen van een koekje van eerste partijidentiteitskaart in de UI van Gegevensstromen {#setting-cookie-datastreams}
+
+U kunt een cookienaam in de UI van Gegevensstromen specificeren, waar [!DNL FPID] U kunt in plaats van de cookiewaarde te moeten lezen de FPID in de identiteitslijst opnemen.
+
+>[!IMPORTANT]
+>
+>Deze functie vereist dat u beschikt over [Gegevensverzameling van eerste partijen](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) ingeschakeld.
+
+Zie de [datastreams documentatie](../../datastreams/configure.md) voor gedetailleerde informatie over hoe te om een gegevensstroom te vormen.
+
+Wanneer het vormen van uw gegevensstroom, laat toe **[!UICONTROL First Party ID Cookie]** -optie. Met deze instelling wordt aan het Edge-netwerk doorgegeven dat naar een opgegeven cookie moet worden verwezen wanneer een apparaat-id van de eerste fabrikant wordt opgezocht, in plaats van deze waarde op te zoeken in het dialoogvenster [Identiteitskaart](#identityMap).
+
+Zie de documentatie op [cookies van de eerste partij](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html) voor meer informatie over hoe ze met Adobe Experience Cloud werken.
+
+![De beeld van UI van het platform die de gegevensstroomconfiguratie toont die de Eerste het Koekje van identiteitskaart van de Partij plaatst benadrukt](../assets/first-party-id-datastreams.png)
+
+Als u deze instelling inschakelt, moet u de naam opgeven van het cookie waarop de id moet worden opgeslagen.
+
+Als u ID&#39;s van eerste partijen gebruikt, kunt u geen synchronisatie van id&#39;s van derden uitvoeren. Identiteitssyntheses van derden vertrouwen op de [!DNL Visitor ID] en de `UUID` die door die dienst worden gegenereerd. Wanneer u de functie voor de eerste id gebruikt, wordt de ECID gegenereerd zonder het gebruik van de [!DNL Visitor ID] service, waardoor syncs met id&#39;s van derden niet mogelijk is.
+
+Wanneer u eerste partij IDs gebruikt, worden de mogelijkheden van de Audience Manager die op activering in partnerplatforms worden gericht niet gesteund, gegeven dat de syncs van identiteitskaart van de Partner van de Audience Manager meestal gebaseerd zijn op `UUIDs` of `DIDs`. De ECID die van een eerste-id is afgeleid, is niet gekoppeld aan een `UUID`, waardoor het niet-adresseerbaar wordt.
 
 ## Een cookie instellen met uw eigen server
 
