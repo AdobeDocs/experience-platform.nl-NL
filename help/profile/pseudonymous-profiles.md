@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vervaldatum van gegevens van pseudoniem profiel
 description: Dit document biedt algemene richtlijnen voor het configureren van gegevensvervaldatum voor Pseudoniem-profielen in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: b6a79952d616a6f8e6ea4b2341c24d74c482c4b8
+source-git-commit: 63ea5f112a304259cbf2aee1cc8e4ae01f002a17
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '1004'
 ht-degree: 0%
 
 ---
@@ -77,9 +77,10 @@ In een typisch geval kunt u de gegevensvervaldatum van de Experience-gebeurtenis
 
 - Vervaldatum van pseudoniem profielgegevens wordt uitgevoerd op een **sandbox** niveau. U kunt kiezen voor verschillende configuraties voor productie- en ontwikkelingssandboxen.
 - Als u deze functie hebt geactiveerd, wordt het verwijderen van profielen **permanent**. Er is **nee** een manier om de verwijderde profielen terug te draaien of te herstellen.
-- Dit is **niet** een eenmalige opschoningstaak. De vervaldatum van Pseudoniem-profielgegevens wordt voortdurend één keer per dag uitgevoerd en er worden profielen verwijderd die overeenkomen met de invoer van de klant.
+- Dit is **niet** een eenmalige opschoningstaak. De vervaldatum van Pseudoniem-profielgegevens wordt eenmaal per dag uitgevoerd en er worden profielen verwijderd die overeenkomen met de invoer van de klant.
 - **Alles** De vervaldatum van de Pseudoniem-profielgegevens heeft invloed op profielen die zijn gedefinieerd als Pseudoniem. Het doet het **niet** Het maakt niet uit of het profiel alleen Experience Event is of alleen profielkenmerken bevat.
 - Deze opruiming zal **alleen** komt voor in Profiel. De identiteitsdienst kan de verwijderde identiteiten in de grafiek na de opruiming blijven weergeven in gevallen waarin het profiel twee of meer geassocieerde pseudoniem-identiteiten heeft (zoals `AAID` en `ECID`). Deze discrepantie zal in de nabije toekomst worden aangepakt.
+- Vervaldatum van pseudoniem profielgegevens **niet** onmiddellijk worden uitgevoerd en kan maximaal drie dagen in beslag nemen.
 
 ### Hoe wisselt de vervaldatum van Pseudoniem-profielgegevens met de instructies voor de identiteitsdienstgegevens?
 
