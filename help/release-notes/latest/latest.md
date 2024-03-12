@@ -2,7 +2,7 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: Aanvullende informatie van januari 2024 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 3%
@@ -25,9 +25,11 @@ Updates voor bestaande functies in Experience Platform:
 ## Waarschuwingen {#alerts}
 
 Met Experience Platform kunt u zich abonneren op gebeurtenisgebaseerde waarschuwingen voor verschillende platformactiviteiten. U kunt zich abonneren op verschillende waarschuwingsregels via de [!UICONTROL Alerts] in de gebruikersinterface van het Platform en kan ervoor kiezen waarschuwingsberichten te ontvangen binnen de gebruikersinterface zelf of via e-mailmeldingen.
+
 **Nieuwe of bijgewerkte functies**
-| Functie | Beschrijving | 
-| --- | --- | 
+
+| Functie | Beschrijving |
+| --- | --- |
 | Tabblad Waarschuwingsgeschiedenis | Als beheerder van een Experience Platform kunt u met de functie Waarschuwingsabonnees beheren een waarschuwing toewijzen aan een gebruikers-id voor een Adobe, een extern e-mailadres of een lijst met e-mailgroepen. Zie de klasse [UI-documentatie met waarschuwingen](../../observability/alerts/ui.md) voor meer informatie over het geschiedenislusje. |
 
 {style="table-layout:auto"}
