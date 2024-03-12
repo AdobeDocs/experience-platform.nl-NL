@@ -4,9 +4,9 @@ description: Leer hoe te om botopsporing voor gegevensstromen te vormen, om mens
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ Deze beide het scoren helpt de oplossingen die het verzoek ontvangen het beide v
 >[!IMPORTANT]
 >
 >Boot detection slaat beide aanvragen niet neer. Het werkt slechts het XDM schema met beide het scoren bij en door:sturen de gebeurtenis aan [datastream service](configure.md) die u hebt geconfigureerd.
+>
+>Adobe oplossingen kunnen beide scoren op verschillende manieren verwerken. Adobe Analytics gebruikt bijvoorbeeld zijn eigen [bot filtering](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) en gebruikt niet de score die door het Netwerk van de Rand wordt geplaatst. De twee diensten gebruiken het zelfde [IAB-bot](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)De beide scoring is dus identiek.
 
 De beide opsporingsregels kunnen tot 15 minuten vergen om zich over het Netwerk van de Rand te verspreiden nadat zij worden gecreeerd.
 
