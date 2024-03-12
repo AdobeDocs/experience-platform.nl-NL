@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
+source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1777'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 0%
 
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie [Opmerkingen bij de release Web SDK-tag](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+>[!IMPORTANT]
+>
+>Google [heeft aangekondigd](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) is van plan de Chrome-ondersteuning voor cookies van derden in de tweede helft van 2024 te beëindigen. Daarom worden cookies van derden niet meer ondersteund in de belangrijkste browsers.
+>
+>Wanneer deze wijziging wordt doorgevoerd, zal de Adobe de steun voor de `demdex` cookie die momenteel wordt ondersteund in de Web SDK.
 
 ## Versie 2.19.2 - 10 januari 2024
 

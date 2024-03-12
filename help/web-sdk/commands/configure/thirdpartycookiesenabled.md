@@ -1,14 +1,23 @@
 ---
 title: thirdPartyCookiesEnabled
 description: Het gebruik van cookies van derden toestaan om bezoekers te identificeren.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
+source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
 
+
 # `thirdPartyCookiesEnabled`
+
+>[!IMPORTANT]
+>
+>Google [heeft aangekondigd](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) is van plan de Chrome-ondersteuning voor cookies van derden in de tweede helft van 2024 te beëindigen. Daarom worden cookies van derden niet meer ondersteund in de belangrijkste browsers.
+>
+>Wanneer deze wijziging wordt doorgevoerd, zal de Adobe de steun voor de `demdex` cookie die momenteel wordt ondersteund in de Web SDK.
+
 
 De `thirdPartyCookiesEnabled` eigenschap is een Booleaanse waarde die bepaalt of de Web SDK cookies instelt in een context van derden. Het inschakelen van deze optie is handig als u bezoekers wilt identificeren tussen subdomeinen of domeinen die eigendom zijn van uw organisatie. Veel moderne browsers beperken echter de instelling en vervaldatum van cookies van derden.
 
