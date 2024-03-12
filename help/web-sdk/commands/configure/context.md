@@ -1,9 +1,10 @@
 ---
 title: context
 description: Automatisch apparaat-, omgeving- of locatiegegevens verzamelen.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 911cabec-2afb-4216-b413-80533f826b0e
+source-git-commit: dc2a2ecf7b602d2fcfd3b6c93cecdb6f3368a3f9
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '877'
 ht-degree: 1%
 
 ---
@@ -59,8 +60,34 @@ De `"placeContext"` het sleutelwoord verzamelt informatie over de plaats van de 
 | --- | --- | --- | --- |
 | Lokale tijd | Lokale tijdstempel voor de eindgebruiker in vereenvoudigde uitgebreide versie [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) gebruiken. | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
 | Verschuiving lokale tijdzone | Het aantal minuten dat de gebruiker wordt verschoven ten opzichte van GMT. | `xdm.placeContext.localTimezoneOffset` | `360` |
+| Landcode | De landcode van de eindgebruiker. | `xdm.placeContext.geo.countryCode` | `US` |
+| Provincie | De provinciecode van de eindgebruiker. | `xdm.placeContext.geo.stateProvince` | `CA` |
+| Breedte | De breedte van de locatie van de eindgebruiker. | `xdm.placeContext.geo._schema.latitude` | `37.3307447` |
+| Lengtegraad | De lengtegraad van de eindgebruikerlocatie. | `xdm.placeContext.geo._schema.longitude` | `-121.8945965` |
 
 {style="table-layout:auto"}
+
+
+### Tijdstempel
+
+De `timestamp` trefwoord verzamelt informatie over de tijdstempel van de gebeurtenis. Dit gedeelte van context kan niet worden verwijderd.
+
+| Dimension | Beschrijving | XDM-pad | Voorbeeldwaarde |
+| --- | --- | --- | --- |
+| Tijdstempel van de gebeurtenis | UTC-tijdstempel voor de eindgebruiker in vereenvoudigde uitgebreide versie [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) gebruiken. | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
+
+{style="table-layout:auto"}
+
+### Implementatiedetails
+
+De `implementationDetails` het sleutelwoord verzamelt informatie over de versie SDK die wordt gebruikt om de gebeurtenis te verzamelen.
+
+| Dimension | Beschrijving | XDM-pad | Voorbeeldwaarde |
+| --- | --- | --- | --- |
+| Naam | De id van de Software Development Kit (SDK). In dit veld wordt een URI gebruikt om de unieke id&#39;s van verschillende softwarebibliotheken te verbeteren. | `xdm.implementationDetails.name` | Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde `https://ns.adobe.com/experience/alloy`. Wanneer de bibliotheek wordt gebruikt als onderdeel van de tagextensie, is de waarde `https://ns.adobe.com/experience/alloy+reactor`. |
+| Versie | De versie van de Software Development Kit (SDK). | `xdm.implementationDetails.version` | Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde de bibliotheekversie. Wanneer de bibliotheek wordt gebruikt als onderdeel van de tagextensie, is de waarde de bibliotheekversie en wordt de versie van de tagextensie gekoppeld aan een `+`. Als de bibliotheekversie bijvoorbeeld `2.1.0` en de versie van de tagextensie is `2.1.3`de waarde `2.1.0+2.1.3`. |
+| Omgeving | De omgeving waarin de gegevens zijn verzameld. Dit is altijd ingesteld op `browser`. | `xdm.implementationDetails.environment` | `browser` |
+
 
 ### Hoog entropieclienthints
 
