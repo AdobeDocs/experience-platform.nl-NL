@@ -3,7 +3,7 @@ title: Intelligente re-engagement
 description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste conversiemomenten om op een intelligente manier opnieuw in contact te komen met onregelmatige klanten.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
 workflow-type: tm+mt
 source-wordcount: '3747'
 ht-degree: 1%
@@ -60,7 +60,7 @@ Hieronder vindt u een overzicht op hoog niveau van de drie voorbeelden van scena
 Het verlaten productbladerscenario richt verlaten product het doorbladeren op zowel de website als mobiele app. Dit scenario wordt geactiveerd wanneer een product is bekeken maar niet is aangeschaft of aan de winkelwagen is toegevoegd. In dit voorbeeld wordt de betrokkenheid van het merk geactiveerd na drie dagen als er geen toevoegingen aan de lijst zijn binnen de laatste 24 uur.<p>![Het intelligente verlaten product van de klant doorbladert scenario op hoog niveau visueel overzicht.](../intelligent-re-engagement/images/re-engagement-journey.png "Het intelligente verlaten product van de klant doorbladert scenario op hoog niveau visueel overzicht."){width="1920" zoomable="yes"}</p>
 
 1. U creeert schema&#39;s en datasets, dan laat voor toe [!UICONTROL Profile].
-2. U voert gegevens in Experience Platform in via Web SDK, Mobile SDK of API. Ook kan de gegevensverbinding van Analytics worden gebruikt, maar kan in reisvertraging resulteren.
+2. U voert gegevens in Experience Platform in via Web SDK, Mobile SDK of API. De verbinding van de Bron van Analytics kan ook worden gebruikt, maar kan in reisvertraging resulteren.
 3. U voegt extra profielgegevens in, die via identiteitsgrafieken kunnen worden gekoppeld aan de geverifieerde webgebruiker en de mobiele-app-bezoeker.
 4. U maakt doelgroepen in de lijst met profielen om te controleren of een **klant** heeft in de laatste drie dagen een betrokkenheid gemaakt.
 5. U creeert een verlaten product doorbladert reis binnen [!DNL Adobe Journey Optimizer].
@@ -72,7 +72,7 @@ Het verlaten productbladerscenario richt verlaten product het doorbladeren op zo
 Het verlaten kartscenario is van toepassing wanneer de producten in het karretje zijn geplaatst maar nog niet op zowel de website als de mobiele app zijn gekocht. Bovendien worden campagnes voor betaalde media gestart en gestopt met deze methode.<p>![Door de klant verlaten kaartscenario op hoog niveau visueel overzicht.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Door de klant verlaten kaartscenario op hoog niveau visueel overzicht."){width="1920" zoomable="yes"}</p>
 
 1. U creeert schema&#39;s en datasets, toelaat voor [!UICONTROL Profile].
-2. U voert gegevens in Experience Platform in via Web SDK, Mobile SDK of API. Ook kan de gegevensverbinding van Analytics worden gebruikt, maar kan in reisvertraging resulteren.
+2. U voert gegevens in Experience Platform in via Web SDK, Mobile SDK of API. De verbinding van de Bron van Analytics kan ook worden gebruikt, maar kan in reisvertraging resulteren.
 3. U voegt extra profielgegevens in, die via identiteitsgrafieken kunnen worden gekoppeld aan de geverifieerde webgebruiker en de mobiele-app-bezoeker.
 4. U maakt doelgroepen in de lijst met profielen om te controleren of een **klant** heeft een artikel in hun winkelwagentje geplaatst, maar heeft de aankoop niet voltooid. De **[!UICONTROL Add to cart]** de gebeurtenis tikt van een tijdopnemer die 30 minuten wacht, dan controleert aankoop. Als er geen aankoop is gedaan, wordt de **klant** wordt toegevoegd aan de **[!UICONTROL Abandon Cart]** publiek.
 5. Je maakt een verlaten cartooptocht in [!DNL Adobe Journey Optimizer].
@@ -84,7 +84,7 @@ Het verlaten kartscenario is van toepassing wanneer de producten in het karretje
 Het bevestigingsscenario voor bestellingen is vooral gericht op productaankopen via de website en de mobiele app.<p>![Bevestigingsscenario op hoog niveau voor bestellingen van klanten: visueel overzicht.](../intelligent-re-engagement/images/order-confirmation-journey.png "Bevestigingsscenario op hoog niveau voor bestellingen van klanten: visueel overzicht."){width="1920" zoomable="yes"}</p>
 
 1. U creeert schema&#39;s en datasets, dan laat voor toe [!UICONTROL Profile].
-2. U voert gegevens in Experience Platform in via Web SDK, Mobile SDK of API. Ook kan de gegevensverbinding van Analytics worden gebruikt, maar kan in reisvertraging resulteren.
+2. U voert gegevens in Experience Platform in via Web SDK, Mobile SDK of API. De verbinding van de Bron van Analytics kan ook worden gebruikt, maar kan in reisvertraging resulteren.
 3. U voegt extra profielgegevens in, die via identiteitsgrafieken kunnen worden gekoppeld aan de geverifieerde webgebruiker en de mobiele-app-bezoeker.
 4. U maakt een bevestigingstraject in [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] verzendt een bericht van de ordesbevestiging gebruikend het aangewezen kanaal.
