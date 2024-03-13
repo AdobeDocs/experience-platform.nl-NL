@@ -2,9 +2,9 @@
 title: Uw Salesforce-account aansluiten via de gebruikersinterface van het Experience Platform
 description: Leer hoe u uw Salesforce-account koppelt en uw CRM-gegevens via de gebruikersinterface naar het Experience Platform brengt.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
+source-git-commit: a5ecd4ab1c543805870b846cfe0fccc5474333d4
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Om uw [!DNL Salesforce] account voor Experience Platform, moet u waarden opgeven
 | `username` | De gebruikersnaam voor de [!DNL Salesforce] gebruikersaccount. |
 | `password` | Het wachtwoord voor de [!DNL Salesforce] gebruikersaccount. |
 | `securityToken` | De beveiligingstoken voor de [!DNL Salesforce] gebruikersaccount. |
-| `apiVersion` | (Optioneel) De REST API-versie van de [!DNL Salesforce] -instantie die u gebruikt. Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
+| `apiVersion` | (Optioneel) De REST API-versie van de [!DNL Salesforce] -instantie die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie gebruikt `52`vervolgens moet u de waarde invoeren als `52.0` Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
 
 Raadpleeg voor meer informatie over verificatie de [dit [!DNL Salesforce] verificatiehandleiding](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
