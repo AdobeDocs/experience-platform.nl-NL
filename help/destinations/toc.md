@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 73785443a9d07dfde3ef1060f7886dfed484925b
+source-git-commit: 5db7e1a88373dcc5dd266f6c082985f4055a1b0f
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1215'
 ht-degree: 1%
 
 ---
@@ -140,6 +140,8 @@ ht-degree: 1%
    * Gebieden van het Platform voor gegevensbeheer {#data-management}
       * [Overzicht van DMP-doelen (Data Management Platform)](./catalog/data-management/overview.md)
       * [Audience Manager DIL-extensie](./catalog/data-management/aam-dil-extension.md)
+   * Partner gegevens en identiteit {#data-partner}
+      * [Acxiom-perspectiefonderdrukking](./catalog/data-partner/acxiom-prospect-suppression.md)
    * eCommerce-bestemmingen {#ecommerce}
       * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * E-maildoelen {#email}
