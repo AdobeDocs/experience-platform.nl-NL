@@ -1,34 +1,29 @@
 ---
-title: Importeren van Acrobat-perspectiefgegevens
-description: Leer hoe u via de gebruikersinterface verbinding maakt met Acrobat Prospecting Data naar Adobe Experience Platform en Adobe Real-time Customer Data Platform.
+title: Acxiale gegevensinname
+description: Leer hoe u kunt innemen [!DNL Acxiom] gegevens naar Real-time Customer Data Platform, verrijken profielen van eerste partijen, verbeteren het publiek en activeren via marketingkanalen.
 badge: Beta
-exl-id: 6df674d9-c14b-42ea-a287-5377484e567d
 source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
 
-# [!DNL Acxiom Prospecting Data Import]
+# [!DNL Acxiom Data Ingestion]
 
 >[!NOTE]
 >
 >De [!DNL Acxiom Prospecting Data Import] De bron is in bèta. Lees de [overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
-Adobe Experience Platform biedt ondersteuning voor het opnemen van gegevens van een toepassing voor gegevenspartners. De steun van gegevens en identiteitspartners omvat [!DNL Acxiom Prospecting Data Import].
+Gebruik de [!DNL Acxiom Data Ingestion] bron voor invoer [!DNL Acxiom] gegevens naar Real-time Customer Data Platform en verrijken profielen van eerste partijen. Vervolgens kunt u uw [!DNL Acxiom]- verrijkte first-party profielen om publiek te verbeteren en over marketing kanalen te activeren.
 
-[!DNL Acxiom]De &#39;Prospecting Data Import for Adobe Real-time Customer Data Platform&#39; is een proces om het meest productieve mogelijke publiek te bieden. [!DNL Acxiom] neemt de gegevens van de eerste partij van Real-Time CDP via een veilige uitvoer en voert die gegevens door een bekroond systeem van hygiëne en identiteitsresolutie uit. Een gegevensbestand dat als onderdrukkingslijst kan worden gebruikt wordt geproduceerd. Dit gegevensbestand komt dan overeen met [!DNL Acxiom Global] gegevensbestand, dat toelaat dat de perspectieflijsten voor de invoer worden aangepast.
+![acxiom-data-ingestion-workflow](../../images/tutorials/create/acxiom-data-enhancement-import/acxiom-data-ingestion.png)
 
-U kunt de [!DNL Acxiom] bron om reacties van de [!DNL Acxiom] de dienst van het vooruitzicht gebruikend [!DNL Amazon S3] als een neerzetpunt.
+Lees het onderstaande document voor meer informatie over het instellen van uw [!DNL Acxiom Data Ingestion] bronaccount.
 
-![acxiom-prospecting-workflow](../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/acxiom-prospecting.png)
+## Vereisten {#prerequisites}
 
-Lees het onderstaande document voor meer informatie over het instellen van uw [!DNL Acxiom Prospecting Data Import] bronaccount.
-
-## Vereisten
-
-Om tot uw emmer op Experience Platform toegang te hebben, moet u geldige waarden voor de volgende geloofsbrieven verstrekken:
+Als u verbinding wilt maken met uw [!DNL Acxiom Data Ingestion] account aan Experience Platform, moet u waarden opgeven voor de volgende verificatiereferenties:
 
 | Credentials | Beschrijving |
 | --- | --- |
@@ -43,9 +38,9 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 
 ### Machtigingen configureren voor Experience Platform
 
-U moet beide hebben **[!UICONTROL View Sources]** en **[!UICONTROL Manage Sources]** machtigingen die zijn ingeschakeld voor uw account om verbinding te maken met uw [!DNL Acxiom Prospecting Data Import] aan Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Lees voor meer informatie de [gebruikershandleiding voor toegangsbeheer](../../../access-control/abac/ui/permissions.md).
+U moet beide hebben **[!UICONTROL View Sources]** en **[!UICONTROL Manage Sources]** machtigingen die zijn ingeschakeld voor uw account om verbinding te maken met uw [!DNL Acxiom Data Ingestion] aan Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Lees voor meer informatie de [gebruikershandleiding voor toegangsbeheer](../../../access-control/ui/overview.md).
 
-## Naamgevingsbeperkingen voor bestanden en mappen
+### Naamgevingsbeperkingen voor bestanden en mappen
 
 Met de onderstaande beperkingen moet rekening worden gehouden bij de naamgeving van uw cloudopslagbestand of -map:
 
@@ -58,4 +53,4 @@ Met de onderstaande beperkingen moet rekening worden gehouden bij de naamgeving 
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u de vereiste setup voltooid die nodig is om gegevens van uw [!DNL Acxiom] aan Experience Platform. U kunt nu doorgaan naar de handleiding op [verbinden [!DNL Acxiom Prospecting Data Import] naar Experience Platform via de gebruikersinterface](../../tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md).
+Door dit document te lezen, hebt u de vereiste setup voltooid die nodig is om gegevens van uw [!DNL Acxiom] aan Experience Platform. U kunt nu doorgaan naar de handleiding op [verbinden [!DNL Acxiom Data Ingestion] naar Experience Platform via de gebruikersinterface](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).

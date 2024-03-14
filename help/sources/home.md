@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van bronconnectors
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bf7e2e08d54f113c6e2cc5060f51725555c2c049
+source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1499'
 ht-degree: 0%
 
 ---
@@ -141,7 +141,8 @@ Experience Platform verleent steun voor het opnemen van gegevens van een derdege
 
 Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL Acxiom Prospecting Data Import]](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE Batch]{type=Informative}
 
 ### eCommerce {#ecommerce}
@@ -162,7 +163,7 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van uw lok
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een derde marketingautomatiseringssysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL Braze]](tutorials/ui/create/marketing-automation/braze.md) [!BADGE Streaming]{type=Positive}
+- [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE Batch]{type=Informative}

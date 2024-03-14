@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
+source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1027'
 ht-degree: 6%
 
 ---
@@ -93,6 +93,7 @@ ht-degree: 6%
       - [Snowflake-aansluiting](connectors/databases/snowflake.md)
       - [Teradata Vantage-connector](connectors/databases/teradata-vantage.md)
    - Gegevens- en identiteitspartner {#data-partner}
+      - [Acxiale gegevensinname](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importeren van Acrobat-perspectiefgegevens](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
@@ -298,8 +299,9 @@ ht-degree: 6%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - Gegevens- en identiteitspartner {#data-partner}
-         - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+         - [Acxiale gegevensinname](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Importeren van Acrobat-perspectiefgegevens](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
