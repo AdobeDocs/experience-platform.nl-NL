@@ -5,7 +5,7 @@ breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 13%
@@ -115,4 +115,4 @@ ht-degree: 13%
 - [Veelgestelde vragen](troubleshooting-guide.md)
 - [IP adres lijst van gewenste personen](ip-address-allowlist.md)
 - [API-referentie](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

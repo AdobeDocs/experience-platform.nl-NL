@@ -5,7 +5,7 @@ breadcrumb-title: Handleiding voor toegangsbeheer
 user-guide-description: Gebruik productprofielen in Adobe Admin Console om gebruikersmachtigingen te beheren. Leer hoe u gebruikers kunt toewijzen aan producten en sandboxes.
 feature: Access Control
 role: Admin
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 40%
@@ -46,4 +46,4 @@ ht-degree: 40%
    * [Effectief beleid weergeven](api/effective-policies.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [API-referentie](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

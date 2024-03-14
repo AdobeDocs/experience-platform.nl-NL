@@ -5,7 +5,7 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 5db7e1a88373dcc5dd266f6c082985f4055a1b0f
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 1%
@@ -296,4 +296,4 @@ ht-degree: 1%
       * [Zelfbedieningssjabloon voor documentatie](./destination-sdk/docs-framework/self-service-template.md)
       * [Aanbevolen werkwijzen ontwerpen](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Veelgestelde vragen](./destinations-faq.md)
-* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

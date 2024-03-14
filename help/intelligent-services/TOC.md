@@ -5,7 +5,7 @@ user-guide-title: Hulp bij Intelligent Services
 breadcrumb-title: Handleiding voor Intelligent Services
 user-guide-description: Gebruik intelligente AI-services om scores te genereren, inzichten te ontdekken en segmenten te maken op basis van uw marketinggebeurtenisgegevens.
 role: User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 23%
@@ -55,4 +55,4 @@ ht-degree: 23%
       - [Door de klant beheerde sleutels](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Gegevensbeheer](customer-ai/cai-data-governance/data-governance.md)
       - [Beleid inzake governance](customer-ai/cai-data-governance/governance-policies.md)
-- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

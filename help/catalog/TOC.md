@@ -4,7 +4,7 @@ user-guide-title: Handleiding voor catalogi en gegevenssets
 user-guide-description: Onderzoek oorsprong van data, metadata, bestandsbeschrijvingen, mappen en datasets binnen het Data Lake en leer meer over het Catalog Service-systeem.
 feature: Catalog
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 24%
@@ -36,4 +36,4 @@ ht-degree: 24%
    * [Een gegevensset inschakelen voor profielupdates (upsert)](datasets/enable-upsert.md)
 * [Behandeling van een privacyverzoek in het Data Lake](privacy.md)
 * [API-referentie](https://www.adobe.io/experience-platform-apis/references/catalog/)
-* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Overzicht van Adobe Experience Platform
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Ontdek hoe u met Experience Platform uw klanten in real time persoonlijke ervaringen kunt bieden met handleidingen, documentatie en zelfstudies.
-source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 18%
@@ -81,4 +81,4 @@ ht-degree: 18%
 * [Handleiding voor probleemoplossing](troubleshooting.md)
 * [Gen2-gegevensmeermigratie](adls2-gen2-migration.md)
 * [Woordenlijst](glossary.md)
-* [Aanvullende informatie](https://www.adobe.com/go/platform-release-notes-en)
+* [Aanvullende informatie](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

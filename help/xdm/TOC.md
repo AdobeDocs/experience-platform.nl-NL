@@ -5,7 +5,7 @@ breadcrumb-title: Handleiding voor Experience Data Model (XDM)
 user-guide-description: Verken een overzicht van het systeem van Experience Data Model (XDM) binnen het Experience Platform en leer hoe u klassen en schemaveldgroepen kunt gebruiken om ervaringsgegevens te standaardiseren.
 feature: Schemas
 role: Developer
-source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '588'
 ht-degree: 9%
@@ -228,4 +228,4 @@ ht-degree: 9%
    * [Een ad-hocschema maken](tutorials/ad-hoc.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [API-referentie](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -6,7 +6,7 @@ user-guide-description: Leer analyses, marketing en advertenties te implementere
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 15%
@@ -321,5 +321,5 @@ ht-degree: 15%
 * [Veelgestelde vragen](./faq.md)
 * [Terminologie-updates](./term-updates.md)
 * [Ondersteuning voor Internet Explorer 10 en 11 wordt afgeschaft](./ie-deprecation.md)
-* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

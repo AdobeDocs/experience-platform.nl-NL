@@ -5,7 +5,7 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
+source-git-commit: 780d1ad0886d474d2584050ab763259ba8fb8a83
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 6%
@@ -386,4 +386,4 @@ ht-degree: 6%
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
 - [API-referentie](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

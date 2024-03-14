@@ -2,10 +2,10 @@
 audience: user
 user-guide-title: Toegankelijkheid van Adobe Experience Platform
 user-guide-description: Meer informatie over de toezegging van het Experience Platform om alle individuen toegankelijke en inclusieve functies te bieden.
-source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 50%
+source-wordcount: '41'
+ht-degree: 60%
 
 ---
 
@@ -17,4 +17,4 @@ ht-degree: 50%
 * [Aangepaste toegankelijkheid voor platform](custom.md)
 * [Platformdocumentatie](https://experienceleague.adobe.com/docs/experience-platform.html)
 * [Overzicht van platform](https://www.adobe.com/go/platform-overview-en)
-* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
