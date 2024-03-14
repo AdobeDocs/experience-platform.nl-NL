@@ -3,9 +3,9 @@ title: Intelligente re-engagement
 description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste conversiemomenten om op een intelligente manier opnieuw in contact te komen met onregelmatige klanten.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
+source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
 workflow-type: tm+mt
-source-wordcount: '3747'
+source-wordcount: '3869'
 ht-degree: 1%
 
 ---
@@ -147,7 +147,7 @@ Met deze veldgroep kunt u uw reis testen voordat deze wordt gepubliceerd met tes
 
 #### Schema voor digitale transacties van klanten
 
-Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op uw website of bijbehorende digitale platforms voorkomt. Deze gegevens worden doorgaans opgenomen in [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) en is noodzakelijk om de diverse doorbladeren en omzettingsgebeurtenissen te verwijzen die voor het teweegbrengen van reizen, gedetailleerde online klantenanalyse, en verbeterde publieksmogelijkheden worden gebruikt.
+Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op uw website of bijbehorende digitale platforms voorkomt. Deze gegevens worden doorgaans opgenomen in [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) en is noodzakelijk om de diverse doorbladeren en omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, gedetailleerde online klantenanalyse, verbeterde publieksmogelijkheden, en gepersonaliseerd overseinen worden gebruikt.
 
 Het schema voor digitale transacties van de klant wordt vertegenwoordigd door een [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klasse.
 
@@ -178,6 +178,25 @@ De [Gegevens van eindgebruiker](/help/xdm/field-groups/event/enduserids.md) de v
 
 +++
 
++++Details van de Handel (de Groep van het Gebied)
+
+De [Handelsgegevens](/help/xdm/field-groups/event/commerce-details.md) de veldgroep wordt gebruikt om handelsgegevens zoals productinformatie (SKU, naam, hoeveelheid), en standaardkartverrichtingen (orde, checkout, verlaten) te beschrijven.
+
+| Velden | Beschrijving |
+| --- | --- |
+| `commerce.cart.cartID` | Een id voor het winkelwagentje. |
+| `commerce.order.orderType` | Een object dat het type productvolgorde beschrijft. |
+| `commerce.order.payments.paymentAmount` | Een object dat het bedrag van de productbestelling beschrijft. |
+| `commerce.order.payments.paymentType` | Een object dat een beschrijving geeft van het type productorderbetaling. |
+| `commerce.order.payments.transactionID` | Een transactie-id voor een objectproduct. |
+| `commerce.order.purchaseID` | Een aankoop-id voor de objectorder. |
+| `productListItems.name` | Een lijst met itemnamen die het product of de producten vertegenwoordigen die door een klant zijn geselecteerd. |
+| `productListItems.priceTotal` | De totale prijs van de lijst met objecten die het product of de producten vertegenwoordigen die door een klant zijn geselecteerd. |
+| `productListItems.product` | Het geselecteerde product of de producten. |
+| `productListItems.quantity` | De hoeveelheid lijst met objecten die het product of de producten vertegenwoordigt die door een klant is/zijn geselecteerd. |
+
++++
+
 +++Externe gegevens van de Controle van het Bronsysteem (de Groep van het Gebied)
 
 De externe Attributen van de Controle van het Systeem van de Bron is een standaardgegevenstype van de Gegevens van de Ervaring (XDM) dat controledetails over een extern bronsysteem vangt.
@@ -186,7 +205,7 @@ De externe Attributen van de Controle van het Systeem van de Bron is een standaa
 
 #### Offline transactieschema van de klant
 
-Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op platforms buiten uw website voorkomt. Deze gegevens worden doorgaans opgenomen in [!DNL Adobe Experience Platform] van een POS (of vergelijkbaar systeem) en meestal gestreamd naar Platform via een API-verbinding. Zijn doel is de diverse off-line omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, diepe online en off-line klantenanalyse, en verbeterde publieksmogelijkheden worden gebruikt.
+Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op platforms buiten uw website voorkomt. Deze gegevens worden doorgaans opgenomen in [!DNL Adobe Experience Platform] van een POS (of vergelijkbaar systeem) en meestal gestreamd naar Platform via een API-verbinding. Zijn doel is de diverse off-line omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, diepe online en off-line klantenanalyse, verbeterde publieksmogelijkheden en gepersonaliseerd overseinen worden gebruikt.
 
 Het schema voor offline transacties van de klant wordt vertegenwoordigd door een [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klasse.
 
@@ -346,7 +365,7 @@ De volgende gebeurtenis wordt gebruikt voor het verlaten productbladerscenario w
 Voor het instellen van dit publiek zijn de volgende velden en voorwaarden vereist:
 
 * `eventType: commerce.productViews`
-* en `THEN` (opeenvolgende gebeurtenis) exclude `eventType: commerce.productListAdds` of `application.launch` of `web.webpagedetails.pageViews` of `commerce.purchases` (inclusief online en offline)
+* en `THEN` (opeenvolgende gebeurtenis) exclude `eventType: commerce.productListAdds` EN `application.launch` EN `web.webpagedetails.pageViews` EN `commerce.purchases` (inclusief online en offline)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 
@@ -359,7 +378,7 @@ De volgende gebeurtenis wordt gebruikt voor het verlaten productbladerscenario w
 Voor het instellen van dit publiek zijn de volgende velden en voorwaarden vereist:
 
 * `eventType: commerce.productViews`
-* en `THEN` (sequentiële gebeurtenis) include `eventType: commerce.productListAdds` of `application.launch` of `web.webpagedetails.pageViews` of `commerce.purchases` (inclusief online en offline)
+* en `THEN` (sequentiële gebeurtenis) include `eventType: commerce.productListAdds` OF `application.launch` OF `web.webpagedetails.pageViews` OF `commerce.purchases` (inclusief online en offline)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 +++
@@ -370,7 +389,7 @@ De volgende gebeurtenis wordt gebruikt voor het verlaten productbladerscenario w
 
 Voor het instellen van dit publiek zijn de volgende velden en voorwaarden vereist:
 
-* `eventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `eventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 1 day` (Streaming)
 
 +++
@@ -381,7 +400,7 @@ De volgende gebeurtenis wordt gebruikt voor het verlaten productbladerscenario w
 
 Voor het instellen van dit publiek zijn de volgende velden en voorwaarden vereist:
 
-* `EventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `EventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 3 days` (Batch)
 
 +++
@@ -395,7 +414,7 @@ De volgende gebeurtenissen worden gebruikt voor het verlaten kartscenario waar d
 Voor het instellen van dit publiek zijn de volgende velden en voorwaarden vereist:
 
 * `eventType: commerce.productListAdds`
-   * `Timestamp: >= 1 days before now and <= 4 days before now `
+   * `Timestamp: >= 1 days before now AND <= 4 days before now `
 * `eventType: commerce.purchases`
    * `Timestamp: <= 4 days before now`
 * `eventType: commerce.productListRemovals`
