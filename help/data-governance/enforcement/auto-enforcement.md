@@ -4,24 +4,24 @@ solution: Experience Platform
 title: Automatische beleidscontrole
 description: In dit document wordt beschreven hoe beleidsregels voor gegevensgebruik automatisch worden toegepast wanneer gebruikers naar bestemmingen in Experience Platform worden geactiveerd.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
-source-wordcount: '1885'
+source-wordcount: '1998'
 ht-degree: 0%
 
 ---
 
 # Automatische beleidshandhaving
 
+Labels en beleidsregels voor gegevensgebruik zijn beschikbaar voor alle Adobe Experience Platform-gebruikers. Bepaal het beleid van het gegevensgebruik en pas de etiketten van het gegevensgebruik toe om ervoor te zorgen dat om het even welke gevoelige, identificeerbare, of contractuele gegevens correct worden behandeld. Deze maatregelen helpen de regels voor gegevensbeheer van uw organisatie af te dwingen voor de manier waarop gegevens kunnen worden benaderd, verwerkt, opgeslagen en gedeeld.
+
+Om uw organisatie tegen potentiële risico&#39;s en verplichtingen te helpen beschermen, handhaaft het Platform automatisch gebruiksbeleid als om het even welke schendingen voorkomen wanneer het activeren van publiek aan bestemmingen.
+
 >[!IMPORTANT]
 >
->Automatische beleidshandhaving is alleen beschikbaar voor organisaties die deze hebben aangeschaft **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe**.
+>Het beleid van de toestemming en de automatische handhaving van het toestemmingsbeleid zijn slechts beschikbaar voor organisaties die hebben gekocht **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe**.
 
-Zodra het gegeven wordt geëtiketteerd en het beleid van het gegevensgebruik wordt bepaald, kunt u de naleving van het gegevensgebruik met beleid afdwingen. Wanneer het activeren van publiek aan bestemmingen, dwingt Adobe Experience Platform automatisch gebruiksbeleid af als om het even welke schendingen voorkomen.
-
->[!NOTE]
->
->Dit document richt zich op de handhaving van het beleid inzake gegevensbeheer en instemming. Raadpleeg de documentatie over [attribuut-based toegangsbeheer](../../access-control/abac/overview.md).
+Dit document richt zich op de handhaving van het beleid inzake gegevensbeheer en instemming. Raadpleeg de documentatie over [attribuut-based toegangsbeheer](../../access-control/abac/overview.md).
 
 ## Vereisten
 
@@ -70,8 +70,8 @@ Elke fase in de bovenstaande tijdlijn vertegenwoordigt een entiteit die kan bijd
 | --- | --- |
 | Gegevensset | Datasets bevatten gegevensgebruikslabels (toegepast op het niveau van het schemagebied of het volledige datasetniveau) die bepalen welke gebruiksgevallen de volledige dataset of specifieke gebieden kunnen worden gebruikt voor. Beleidsovertredingen treden op als een dataset of veld met bepaalde labels wordt gebruikt voor een doel dat door een beleid wordt beperkt.<br><br>Eventuele toestemmingskenmerken die van uw klanten worden verzameld, worden ook in gegevenssets opgeslagen. Als u toegang tot toestemmingsbeleid hebt, zullen om het even welke profielen die niet aan de vereisten van de toestemmingsattributen van uw beleid voldoen van publiek worden uitgesloten die aan een bestemming worden geactiveerd. |
 | Samenvoegbeleid | Het beleid van de fusie is de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven wanneer het samenvoegen van fragmenten van veelvoudige datasets. De schendingen van het beleid zullen voorkomen als uw samenvoegbeleid wordt gevormd zodat de datasets met beperkte etiketten aan een bestemming worden geactiveerd. Zie de [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md) voor meer informatie . |
-| Audience | De regels van de segmentatie bepalen welke attributen van klantenprofielen zouden moeten worden omvat. Afhankelijk van de velden die een segmentdefinitie bevat, neemt het publiek alle toegepaste gebruikslabels voor die velden over. Beleidsovertredingen treden op als u een publiek activeert waarvan de geërfte labels worden beperkt door het toepasselijke beleid van de doelbestemming, op basis van het geval van marketinggebruik. |
-| Bestemming | Bij het instellen van een bestemming kan een marketingactie (ook wel een marketingcase genoemd) worden gedefinieerd. Dit gebruiksgeval correleert met een marketingactie zoals gedefinieerd in een beleid. Met andere woorden, de marketingactie die u voor een bestemming definieert, bepaalt welk beleid voor gegevensgebruik en toestemmingsbeleid van toepassing zijn op die bestemming.<br><br>Het beleid van het gegevensgebruik komt schendingen voor als u een publiek activeert de waarvan gebruiksetiketten voor de marketing actie van de doelbestemming beperkt zijn.<br><br>(Beta) Wanneer een publiek wordt geactiveerd, worden profielen die niet de vereiste toestemmingskenmerken voor de marketingactie bevatten (zoals gedefinieerd in uw toestemmingsbeleid), uitgesloten van het geactiveerde publiek. |
+| Doelgroep | De regels van de segmentatie bepalen welke attributen van klantenprofielen zouden moeten worden omvat. Afhankelijk van de velden die een segmentdefinitie bevat, neemt het publiek alle toegepaste gebruikslabels voor die velden over. Beleidsovertredingen treden op als u een publiek activeert waarvan de geërfte labels worden beperkt door het toepasselijke beleid van de doelbestemming, op basis van het geval van marketinggebruik. |
+| Doel | Bij het instellen van een bestemming kan een marketingactie (ook wel een marketingcase genoemd) worden gedefinieerd. Dit gebruiksgeval correleert met een marketingactie zoals gedefinieerd in een beleid. Met andere woorden, de marketingactie die u voor een bestemming definieert, bepaalt welk beleid voor gegevensgebruik en toestemmingsbeleid van toepassing zijn op die bestemming.<br><br>Het beleid van het gegevensgebruik komt schendingen voor als u een publiek activeert de waarvan gebruiksetiketten voor de marketing actie van de doelbestemming beperkt zijn.<br><br>(Beta) Wanneer een publiek wordt geactiveerd, worden profielen die niet de vereiste toestemmingskenmerken voor de marketingactie bevatten (zoals gedefinieerd in uw toestemmingsbeleid), uitgesloten van het geactiveerde publiek. |
 
 >[!IMPORTANT]
 >
@@ -94,27 +94,31 @@ Als een beleidsovertreding optreedt tijdens een poging een publiek te activeren 
 
 Selecteer een beleidsovertreding in de linkerkolom van de pop-up om details voor die schending te tonen.
 
-![](../images/enforcement/violation-policy-select.png)
+![Een dialoogvenster waarin wordt aangegeven dat er een beleidsovertreding is opgetreden en de naam van het beleid is gemarkeerd.](../images/enforcement/violation-policy-select.png)
 
 Het schendingsbericht geeft een overzicht van het beleid dat is overtreden, met inbegrip van de voorwaarden het beleid wordt gevormd om te controleren, de specifieke actie die de schending teweegbracht, en een lijst van mogelijke resoluties voor de kwestie.
 
-![](../images/enforcement/violation-summary.png)
+![Een dialoogvenster voor beleidsovertredingen waarin het overzicht van de schending is gemarkeerd.](../images/enforcement/violation-summary.png)
 
 Een grafiek van de gegevenslijn wordt getoond onder de schendingssamenvatting, toestaand u om te visualiseren welke datasets, fusiebeleid, publiek, en bestemmingen betrokken bij de beleidsschending waren. De entiteit die u momenteel wijzigt, wordt in de grafiek gemarkeerd en geeft aan welk punt in de flow de schending veroorzaakt. U kunt een entiteitsnaam in de grafiek selecteren om de detailpagina voor de entiteit in kwestie te openen.
 
-![](../images/enforcement/data-lineage.png)
+![Een dialoogvenster voor beleidsovertredingen waarin de grafiek van de datalijn is gemarkeerd.](../images/enforcement/data-lineage.png)
 
 U kunt ook de opdracht **[!UICONTROL Filter]** icon (![](../images/enforcement/filter.png)) om de weergegeven entiteiten op categorie te filteren. U moet ten minste twee categorieën selecteren om de gegevens weer te geven.
 
-![](../images/enforcement/lineage-filter.png)
+![Een dialoogvenster voor beleidsovertredingen met het filter en de vervolgkeuzelijst voor gegevenslagen gemarkeerd.](../images/enforcement/lineage-filter.png)
 
 Selecteren **[!UICONTROL List view]** om de gegevenskoppeling als een lijst weer te geven. Als u wilt terugschakelen naar de visuele grafiek, selecteert u **[!UICONTROL Path view]**.
 
-![](../images/enforcement/list-view.png)
+![Een dialoogvenster voor beleidsovertredingen met de padweergave voor gegevenslijn gemarkeerd.](../images/enforcement/list-view.png)
 
 ### Goedkeuring van het beleid {#consent-policy-evaluation}
 
-Als u [gemaakt toestemmingsbeleid](../policies/user-guide.md#consent-policy) en u activeert een publiek naar een bestemming, kunt u zien hoe uw toestemmingsbeleid het percentage profielen beïnvloedt die in de activering inbegrepen zijn.
+Wanneer u een publiek activeert naar een doel, kunt u zien hoe [toestemmingsbeleid](../policies/user-guide.md#consent-policy) van invloed zijn op verschillende percentages van profielen die in de activering zijn opgenomen.
+
+>[!NOTE]
+>
+>Het beleid van de toestemming is slechts beschikbaar voor organisaties die het Schild van de Gezondheidszorg van de Adobe of Adobe Privacy &amp; het Schild van de Veiligheid hebben gekocht.
 
 #### Verbetering van het beleid voor goedkeuring voor betaalde media {#consent-policy-enhancement}
 

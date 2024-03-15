@@ -3,7 +3,7 @@ title: Eindpunt van API voor werkvolgorde
 description: Het /workorder eindpunt in de Hygiene API van Gegevens staat u toe om schrappingstaken voor identiteiten programmatically te beheren.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 0%
@@ -126,9 +126,9 @@ Als de reactie succesvol was, worden de details van de record delete geretournee
 
 {style="table-layout:auto"}
 
-## De status van een record verwijderen (#lookup)
+## De status van een record verwijderen {#lookup}
 
-Na [een verzoek tot verwijdering van records maken](#create), kunt u de status controleren met een GET-aanvraag.
+Na u [een verzoek tot verwijdering van records maken](#create), kunt u de status controleren met een GET-aanvraag.
 
 **API-indeling**
 

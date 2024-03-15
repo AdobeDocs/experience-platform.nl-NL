@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 61b20f2a618ed4305351b2fe6ff771a45d759de1
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '318'
 ht-degree: 13%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 13%
       - [Gegevens exporteren naar XML-omgevingen](data-distiller/ml-feature-pipelines/export-data.md)
       - [Verrijking van end-to-end workflow voor de AI/ML-gegevenspijpleiding](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Gebruiksscenario’s {#use-cases}
-   - [Ondersteunde gebruiksgevallen](use-cases/overview.md)
+   - [Overzicht](use-cases/overview.md)
    - [Verlaten browsers](use-cases/abandoned-browse.md)
    - [Attributieanalyse](use-cases/attribution-analysis.md)
    - [Bot filteren](use-cases/bot-filtering.md)

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht gebruikersinterface Privacy Service
 description: Ga aan de slag met de gebruikersinterface van de Privacy Service om privacyverzoeken in verschillende Experiencen Cloud te coördineren en te controleren.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
+source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 >title="Verzoeken om informatie"
 >abstract="Deze widget geeft het aantal verzonden en voltooide verzoeken voor het gegevenssubject weer dat gedurende een bepaalde dag door de Privacy Service is verwerkt. Voor meer informatie over uw processen van de Privacy Service, selecteer **Verzoeken** in de linkernavigatie."
 
-De gebruikersinterface van de Privacy Service [!DNL Privacy Service] kunt u privacy- en compatibiliteitsverzoeken coördineren in verschillende Adobe Experience Cloud-toepassingen.
+Met de gebruikersinterface van de Privacy Service kunt u privacy- en compatibiliteitsverzoeken in verschillende Adobe Experience Cloud-toepassingen coördineren.
 
 >[!NOTE]
 >
