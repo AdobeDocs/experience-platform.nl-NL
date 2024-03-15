@@ -1,11 +1,11 @@
 ---
 title: Verbetering van acxiom-gegevens
-description: Gebruik deze connector om profielen van eersteklas Adoben in Real-Time CDP te activeren voor verrijking en gebruik via marketingkanalen.
+description: Gebruik deze connector om profielen van eersteklas Adoben in Real-Time CDP te activeren voor gegevensverrijking en gebruik via marketingkanalen. Vervolgens kunt u de Acxiom-bron gebruiken om de profielen met verbeterde gegevens te importeren en ermee te werken in Real-Time CDP.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: 6f272ce0ad619f835920ab9d25d0946d7709d7cb
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1307'
 ht-degree: 1%
 
 ---
@@ -18,30 +18,29 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-Gebruik de schakelaar van de Verbetering van Gegevens van Acxiom om extra beschrijvende gegevens aan uw profielen van de Adobe, voor gebruik in analytische, segmentatie, en het richten toepassingen te leveren. Met honderden beschikbare elementen kunnen gebruikers gegevens beter segmenteren en modelleren, wat resulteert in een nauwkeurigere gerichtheid en voorspellende modellering.
+Gebruik de [!DNL Acxiom Data Enhancement] om extra beschrijvende gegevens aan uw klantenprofielen, voor gebruik in analytische, segmentatie, en gerichte toepassingen te leveren. Met honderden beschikbare elementen, staat dit u toe om gegevens te segmenteren en te modelleren, resulterend in nauwkeuriger het richten en voorspellende modellering.
 
 ![Marketing-diagram voor het exporteren van gegevens van eerste partijen naar Acxiom, en het importeren van verrijkte gegevens terug naar Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow-data-enhancement.png)
 
-Deze zelfstudie bevat stappen om een [!DNL Acxiom Data Enhancement] doelverbinding en gegevensstroom via de Adobe Experience Platform-gebruikersinterface.  Deze connector wordt gebruikt om gegevens te leveren aan de Acxiom-verbeteringsservice met Amazon S3 als droppunt.
+Deze zelfstudie bevat stappen om een [!DNL Acxiom Data Enhancement] doelverbinding en gegevensstroom via de Adobe Experience Platform-gebruikersinterface. Deze connector wordt gebruikt om gegevens te leveren aan de Acxiom-verbeteringsservice met Amazon S3 als droppunt.
 
 ![De doelcatalogus met het geselecteerde doel van Acxiom.](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-catalog.png)
 
 ## Gebruiksscenario’s {#use-cases}
 
-Om u beter te helpen begrijpen hoe en wanneer u de bestemming van de Verbetering van Gegevens van Acxiom zou moeten gebruiken, zijn hier de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
+Om u te helpen beter begrijpen hoe en wanneer u het [!DNL Acxiom Data Enhancement] doel, hier zijn de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
 ### Klantgegevens verbeteren {#enhance-customer-data}
 
-Deze aansluiting moet worden gebruikt door marketingprofessionals die de doeltreffendheid van hun voorlichtingsstrategieën willen verbeteren door bepaalde beschrijvende elementen toe te voegen aan hun Adobe-profielen en deze te gebruiken om beter doelgerichte campagnes te voeren.
+Deze connector moet worden gebruikt door marketingprofessionals die de doeltreffendheid van hun outreach-strategieën willen verbeteren door geselecteerde beschrijvende elementen toe te voegen aan hun klantprofielen en deze te gebruiken om beter doelgerichte campagnes te voeren.
 
 Als een markeerteken wilt u bijvoorbeeld uw inzicht in bestaande doelgroepen verdiepen door hun profielen te verrijken met aanvullende gegevens. Zo verbetert u de segmentatie en doelgerichte strategieën, wat leidt tot een grotere personalisatie en conversie van de campagne.
 
 Het gebruiksgeval wordt uitgevoerd door een combinatie van zowel bestemmings als bronschakelaars.
 
-
 U zou beginnen door uw bestaande klantenverslagen voor verrijking te exporteren gebruikend deze bestemmingsschakelaar. De service van Acxiom zoekt naar het bestand, haalt het op, verrijkt het met de gegevens van Acxiom en genereert een bestand.
 
-De klant zou dan de corresponderende Acxiom Data Ingestie-bronkaart gebruiken om de gehydrateerde klantprofielen weer in Adobe Real-Time CDP in te voeren.
+De klant zou dan de overeenkomstige [Acxiale gegevensinname](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) de bronkaart om de gehydrateerde klantenprofielen terug in Adobe Real-Time CDP op te nemen.
 
 ## Vereisten {#prerequisites}
 
@@ -79,6 +78,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 >
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage and Activate Dataset Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
+
 ### Verifiëren voor bestemming {#authenticate}
 
 Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
@@ -99,7 +100,7 @@ Een nieuwe door Acxiom beheerde S3-locatie definiëren:
 
 ### Bestaande account
 
-Accounts die al zijn gedefinieerd met de Acxiom Data Enhancement-kaart, worden weergegeven in een pop-up lijst. Als deze optie is geselecteerd, worden gegevens over de account weergegeven.  Dit wordt hieronder getoond in het voorbeeld van UI, wanneer u navigeert naar **Doelen** > **Accounts**;
+Accounts zijn al gedefinieerd met het [!DNL Acxiom Data Enhancement] doel wordt weergegeven in een pop-uplijst. Als u deze optie selecteert, kunt u details van de account bekijken in de rechtertrack. Bekijk het voorbeeld van UI, wanneer u navigeert aan **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**;
 
 ![Bestaande account](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-account.png)
 
@@ -144,14 +145,14 @@ Toewijzingssuggesties vindt u in de onderstaande tabel met de kenmerken aan uw d
 
 | Doelveld | Bronbeschrijving |
 |--------------|-------------------------------------------------------------|
-| name | De waarde person.name.fullName in Experience Platform. |
-| firstName | De waarde person.name.firstName in Experience Platform. |
-| lastName | De waarde person.name.lastName in Experience Platform. |
-| address1 | De waarde mailingAddress.street1 in Experience Platform. |
-| address2 | De waarde mailingAddress.street2 in Experience Platform. |
-| stad | De mailingAddress.city-waarde in Experience Platform. |
-| state | De mailingAddress.state-waarde in Experience Platform. |
-| zip | De waarde mailingAddress.postalCode in Experience Platform. |
+| name | De `person.name.fullName` waarde in Experience Platform. |
+| firstName | De `person.name.firstName` waarde in Experience Platform. |
+| lastName | De `person.name.lastName` waarde in Experience Platform. |
+| address1 | De `mailingAddress.street1` waarde in Experience Platform. |
+| address2 | De `mailingAddress.street2` waarde in Experience Platform. |
+| stad | De `mailingAddress.city` waarde in Experience Platform. |
+| state | De `mailingAddress.state` waarde in Experience Platform. |
+| zip | De `mailingAddress.postalCode` waarde in Experience Platform. |
 
 >[!NOTE]
 >

@@ -3,9 +3,9 @@ title: Acxiom-perspectiefonderdrukking
 description: Exporteer uw eersteklas publiek naar de Acxiom-bestemming, zodat Acxiom bekende of omgezette klanten kan onderdrukken. Dan gebruik de Acxiom bronschakelaar om perspectieflijsten van Acxiom in te voeren en te activeren, met uw bekende of omgezette klanten verwijderd.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c881f8375bc0eccb8e64666a888735c03018421c
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1430'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ Een nieuwe door Acxiom beheerde S3-locatie definiëren:
 
 ### Bestaande account
 
-Accounts die al zijn gedefinieerd met de Acxiom Prospect-Suppression-kaart, worden weergegeven in een pop-up lijst. Als deze optie is geselecteerd, worden gegevens over het account weergegeven.  Dit wordt hieronder getoond in het voorbeeld van UI, wanneer u navigeert naar **Doelen** > **Accounts**;
+Accounts zijn al gedefinieerd met het [!DNL Acxiom Prospect Suppression] doel wordt weergegeven in een pop-uplijst. Als u deze optie selecteert, kunt u details van de account bekijken in de rechtertrack. Bekijk het voorbeeld van UI, wanneer u navigeert aan **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**:
 
 ![Bestaande account](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
 
@@ -145,14 +145,14 @@ De verwerking vereist naam en adreselementen, terwijl niet alle elementen worden
 
 | Doelveld | Bronbeschrijving |
 |--------------|-------------------------------------------------------------|
-| name | De waarde person.name.fullName in Experience Platform. |
-| firstName | De waarde person.name.firstName in Experience Platform. |
-| lastName | De waarde person.name.lastName in Experience Platform. |
-| address1 | De waarde mailingAddress.street1 in Experience Platform. |
-| address2 | De waarde mailingAddress.street2 in Experience Platform. |
-| stad | De mailingAddress.city-waarde in Experience Platform. |
-| state | De mailingAddress.state-waarde in Experience Platform. |
-| zip | De waarde mailingAddress.postalCode in Experience Platform. |
+| name | De `person.name.fullName` waarde in Experience Platform. |
+| firstName | De `person.name.firstName` waarde in Experience Platform. |
+| lastName | De `person.name.lastName` waarde in Experience Platform. |
+| address1 | De `mailingAddress.street1` waarde in Experience Platform. |
+| address2 | De `mailingAddress.street2` waarde in Experience Platform. |
+| stad | De `mailingAddress.city` waarde in Experience Platform. |
+| state | De `mailingAddress.state` waarde in Experience Platform. |
+| zip | De `mailingAddress.postalCode` waarde in Experience Platform. |
 
 {style="table-layout:auto"}
 
