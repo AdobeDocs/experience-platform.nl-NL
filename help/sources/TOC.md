@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: 780d1ad0886d474d2584050ab763259ba8fb8a83
+source-git-commit: f10716ea10c4e3962cb2d4be70c34ca048d3a869
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1031'
 ht-degree: 6%
 
 ---
@@ -115,6 +115,7 @@ ht-degree: 6%
    - Betalingen {#payments}
       - [PayPal-connector](connectors/payments/paypal.md)
       - [Vierkante connector](connectors/payments/square.md)
+      - [Stripe-aansluiting](connectors/payments/stripe.md)
    - Protocollen {#protocols}
       - [Generic OData-connector](connectors/protocols/odata.md)
       - [Algemene REST API-aansluiting](connectors/protocols/generic-rest.md)
@@ -195,6 +196,7 @@ ht-degree: 6%
       - Betalingen {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
          - [Vierkant](tutorials/api/create/payments/square.md)
+         - [Stripe](tutorials/api/create/payments/stripe.md)
       - Protocollen {#protocols}
          - [Generic OData](tutorials/api/create/protocols/odata.md)
          - [Algemene REST-API](tutorials/api/create/protocols/generic-rest.md)
@@ -323,6 +325,7 @@ ht-degree: 6%
       - Betalingen {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
          - [Vierkant](tutorials/ui/create/payments/square.md)
+         - [Stripe](tutorials/ui/create/payments/stripe.md)
       - Protocollen {#protocols}
          - [Generic OData](tutorials/ui/create/protocols/odata.md)
       - Streaming {#streaming}
