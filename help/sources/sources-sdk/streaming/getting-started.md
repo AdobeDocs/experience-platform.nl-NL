@@ -1,12 +1,10 @@
 ---
 title: Aan de slag met Self-Serve Bronnen (Streaming SDK)
 description: Dit document biedt een inleiding op de vereiste informatie die u moet weten voordat u een nieuwe bron probeert te maken met Self-Serve Sources (Streaming SDK).
-hide: true
-hidefromtoc: true
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
@@ -21,7 +19,7 @@ Het stapsgewijze proces voor het configureren van uw bron in Experience Platform
 
 ### Integratie
 
-* [Nieuwe verbindingsspecificatie maken voor Streaming SDK](create.md).
+* [Een nieuwe verbindingsspecificatie maken voor de Streaming SDK](create.md).
 * [Werk de streamingstroomspecificatie bij met uw nieuwe verbindingsspecificatie-id](update-flow-specs.md).
 * [De streamingbron testen en verzenden](submit.md).
 
@@ -48,8 +46,8 @@ Als u Self-Serve Sources (Streaming SDK) wilt gebruiken, moet u ervoor zorgen da
 
 Deze handleiding vereist ook een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
+* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ## API-voorbeeldaanroepen lezen
 
@@ -57,13 +55,13 @@ De Self-Serve Bronnen (Streaming SDK) en [!DNL Flow Service] API-documentatie bi
 
 ## Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar Platform-API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar platform-API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle middelen in Platform, met inbegrip van die welke toebehoren aan [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle middelen in Platform, met inbegrip van die toebehoren aan [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 

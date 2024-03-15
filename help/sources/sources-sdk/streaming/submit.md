@@ -1,27 +1,25 @@
 ---
 title: De bron testen en verzenden
 description: Het volgende document bevat stappen voor het testen en verifiëren van een nieuwe bron met behulp van de Flow Service API en het integreren van een nieuwe bron via Self-Serve Sources (Streaming SDK).
-hide: true
-hidefromtoc: true
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1216'
 ht-degree: 0%
 
 ---
 
 # De bron testen en verzenden
 
-De laatste stappen voor het integreren van uw nieuwe bron in Adobe Experience Platform met behulp van Self-Serve Sources (Streaming SDK) zijn het testen en verzenden van uw nieuwe bron. Nadat u de verbindingsspecificatie hebt voltooid en de streamingstroomspecificatie hebt bijgewerkt, kunt u de functionaliteit van uw bron testen via de API of de gebruikersinterface. Als dit lukt, kunt u de nieuwe bron verzenden door contact op te nemen met uw Adobe-vertegenwoordiger.
+De laatste stappen voor het integreren van uw nieuwe bron in Adobe Experience Platform met behulp van Self-Serve Sources (Streaming SDK) zijn het testen en verzenden van uw nieuwe bron. Nadat u de verbindingsspecificatie hebt voltooid en de streamingstroomspecificatie hebt bijgewerkt, kunt u de functionaliteit van uw bron testen via de API of de gebruikersinterface. Als dit lukt, kunt u de nieuwe bron verzenden door contact op te nemen met uw Adobe.
 
 In het volgende document worden stappen beschreven voor het testen van en het opsporen van fouten in uw bron met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
-* Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../landing/api-guide.md).
-* Raadpleeg de zelfstudie voor informatie over het genereren van referenties voor Platform-API&#39;s [Experience Platform-API&#39;s verifiëren en openen](../../../landing/api-authentication.md).
-* Voor informatie over het instellen [!DNL Postman] voor Platform-API&#39;s raadpleegt u de zelfstudie [ontwikkelaarsconsole instellen en [!DNL Postman]](../../../landing/postman.md).
+* Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../landing/api-guide.md).
+* Raadpleeg de zelfstudie voor informatie over het genereren van uw referenties voor platform-API&#39;s [Experience Platform-API&#39;s verifiëren en openen](../../../landing/api-authentication.md).
+* Voor informatie over het instellen [!DNL Postman] voor platform-API&#39;s raadpleegt u de zelfstudie [ontwikkelaarsconsole instellen en [!DNL Postman]](../../../landing/postman.md).
 * Download de [Verzameling en omgeving van zelfbedieningsbronnen hier](../assets/sdk-verification.zip) en volgt u de hieronder beschreven stappen.
 
 ## De bron testen met de API
@@ -42,13 +40,13 @@ Als u wilt beginnen met testen, moet u eerst de verzameling en omgeving instelle
 | `schemaId` | Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | De unieke versie die overeenkomt met uw schema. | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | De `meta:altId` dat wordt teruggegeven naast de  `schemaId` wanneer u een nieuw schema maakt. | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
-| `dataSetId` | Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met behulp van de API](../../../catalog/api/create-dataset.md). | `5f3c3cedb2805c194ff0b69a` |
+| `dataSetId` | Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met de API](../../../catalog/api/create-dataset.md). | `5f3c3cedb2805c194ff0b69a` |
 | `mappings` | Toewijzingssets kunnen worden gebruikt om te definiëren hoe gegevens in een bronschema worden toegewezen aan dat van een doelschema. Raadpleeg de zelfstudie voor gedetailleerde stappen over het maken van een toewijzing [een toewijzingsset maken met de API](../../../data-prep/api/mapping-set.md). | `[{"destinationXdmPath":"person.name.firstName","sourceAttribute":"email.email_id","identity":false,"version":0},{"destinationXdmPath":"person.name.lastName","sourceAttribute":"email.activity.action","identity":false,"version":0}]` |
 | `mappingId` | De unieke id die overeenkomt met uw toewijzingsset. | `bf5286a9c1ad4266baca76ba3adc9366` |
 | `connectionSpecId` | De verbindingsspecificatie-id die overeenkomt met uw bron. Dit is de id die u hebt gegenereerd na [een nieuwe verbindingsspecificatie maken](./create.md). | `2e8580db-6489-4726-96de-e33f5f60295f` |
 | `flowSpecificationId` | De stroomspecificatie-id van `GenericStreamingAEP`. **Dit is een vaste waarde**. | `e77fde5a-22a8-11ed-861d-0242ac120002` |
 | `targetConnectionSpecId` | De doel verbindingsID van het gegevens meer waar ingeslikte gegevens in landen. **Dit is een vaste waarde**. | `c604ff05-7f1a-43c0-8e18-33bf874cb11c` |
-| `verifyWatTimeInSecond` | Het opgegeven tijdsinterval dat moet volgen wanneer wordt gecontroleerd of een flow is voltooid. | `40` |
+| `verifyWatTimeInSecond` | Het opgegeven tijdsinterval dat moet worden gevolgd wanneer wordt gecontroleerd of een flow is voltooid. | `40` |
 | `startTime` | De aangewezen begintijd voor uw gegevensstroom. De begintijd moet worden opgemaakt in unieke tijd. | `1597784298` |
 
 Als u alle omgevingsvariabelen hebt opgegeven, kunt u de verzameling starten met de [!DNL Postman] interface. In de [!DNL Postman] interface, selecteer de ellipsen (**...**) naast [!DNL Sources SSSs Verification Collection] en selecteer vervolgens **Verzameling uitvoeren**.
@@ -59,13 +57,13 @@ De [!DNL Runner] interface verschijnt, toestaand u om de looppasorde van uw data
 
 >[!NOTE]
 >
->U kunt **Stroom verwijderen** in de checklist van de uitvoeringsorde als u verkiest om bronnen te gebruiken die dashboard in Platform UI controleren. Als u echter klaar bent met testen, moet u ervoor zorgen dat de teststromen worden verwijderd.
+>U kunt **Stroom verwijderen** van de checklist van de looppasorde als u verkiest om bronnen te gebruiken die dashboard in Platform UI controleren. Als u echter klaar bent met testen, moet u ervoor zorgen dat de teststromen worden verwijderd.
 
 ![uitvoeringsverzameling](../assets/run-collection.png)
 
 ## De bron testen met de gebruikersinterface
 
-Als u de bron in de gebruikersinterface wilt testen, gaat u naar de broncatalogus van de sandbox van uw organisatie in de gebruikersinterface van het Platform. Vanaf hier ziet u de nieuwe bron onder de *Streaming* categorie.
+Als u de bron in de gebruikersinterface wilt testen, gaat u naar de broncatalogus van de sandbox van uw organisatie in de gebruikersinterface van het platform. Vanaf hier ziet u dat de nieuwe bron onder de *Streaming* categorie.
 
 Nu uw nieuwe bron nu beschikbaar is in uw sandbox, moet u de workflow voor bronnen volgen om de functionaliteit te testen. Selecteer **[!UICONTROL Set up]**.
 
@@ -75,11 +73,11 @@ De [!UICONTROL Add data] wordt weergegeven. Om te testen dat uw bron gegevens ka
 
 ![De stap Gegevens toevoegen in de bronwerkstroom waar u uw gegevens kunt uploaden en voorvertonen voordat u ze opneemt.](../assets/testing/add-data-test.png)
 
-De [!UICONTROL Dataflow detail] De pagina staat u toe om te selecteren of u een bestaande dataset of een nieuwe dataset wilt gebruiken. Tijdens dit proces kunt u ook uw gegevens configureren om in te voegen in profiel en instellingen inschakelen zoals [!UICONTROL Error diagnostics] en [!UICONTROL Partial ingestion].
+De [!UICONTROL Dataflow detail] De pagina staat u toe om te selecteren of u een bestaande dataset of een nieuwe dataset wilt gebruiken. Tijdens dit proces kunt u ook uw gegevens configureren om in te voegen in Profiel en instellingen inschakelen zoals [!UICONTROL Error diagnostics] en [!UICONTROL Partial ingestion].
 
 Selecteer **[!UICONTROL New dataset]** en geef een naam op voor de uitvoergegevensset. Tijdens deze stap, kunt u een facultatieve beschrijving ook verstrekken om verdere informatie aan uw dataset toe te voegen. Selecteer vervolgens het schema waaraan u wilt toewijzen [!UICONTROL Advanced search] of door door de lijst van bestaande schema&#39;s in het dropdown menu te scrollen. Nadat u een schema hebt geselecteerd, geeft u een naam en een beschrijving voor de gegevensstroom op.
 
-Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Next]**.
 
 ![De stap met details voor gegevensstroom in de bronworkflow.](../assets/testing/dataflow-details-test.png)
 
@@ -87,14 +85,14 @@ De [!UICONTROL Mapping] de stap verschijnt, die u van een interface voorziet om 
 
 Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie [UI-hulplijn voor gegevensvoorinstelling](../../../data-prep/ui/mapping.md)
 
-Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Next]**.
+Als de brongegevens zijn toegewezen, selecteert u **[!UICONTROL Next]**.
 
 ![De toewijzingsstap van de workflow voor bronnen.](../assets/testing/mapping-test.png)
 
 De **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-* **[!UICONTROL Connection]**: Hiermee geeft u de naam van uw account, het type bron en andere informatie weer die specifiek is voor de streamingbron voor cloudopslag die u gebruikt.
-* **[!UICONTROL Assign dataset and map fields]**: Toont de doeldataset en het schema u voor uw gegevensstroom gebruikt.
+* **[!UICONTROL Connection]**: geeft de naam van uw account, het type bron en andere informatie weer die specifiek is voor de streamingbron voor cloudopslag die u gebruikt.
+* **[!UICONTROL Assign dataset and map fields]**: Toont de doeldataset en het schema u voor uw dataflow gebruikt.
 
 Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Finish]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
 

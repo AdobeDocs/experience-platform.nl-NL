@@ -1,10 +1,8 @@
 ---
 title: Stroomspecificaties bijwerken voor Streaming SDK met behulp van de Flow Service API
 description: Het volgende document bevat stappen voor het ophalen en bijwerken van stroomspecificaties met behulp van de Flow Service API voor Self-Serve Sources (Streaming SDK).
-hide: true
-hidefromtoc: true
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
@@ -25,7 +23,7 @@ Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor 
 
 ## Een stroomspecificatie opzoeken {#lookup}
 
-Bronnen die zijn gemaakt met de `generic-streaming` de sjabloon gebruiken `GenericStreamingAEP` stroomspecificatie. Deze stroomspecificatie kan worden teruggewonnen door een verzoek van de GET aan `/flowSpecs/` en de `flowSpec.id` van `e77fde5a-22a8-11ed-861d-0242ac120002`.
+Bronnen die zijn gemaakt met de `generic-streaming` de sjabloon gebruiken `GenericStreamingAEP` stroomspecificatie. Deze stroomspecificatie kan worden teruggewonnen door een verzoek van de GET aan `/flowSpecs/` en het verstrekken van `flowSpec.id` van `e77fde5a-22a8-11ed-861d-0242ac120002`.
 
 **API-indeling**
 
