@@ -2,7 +2,7 @@
 title: Acxiale gegevensinname
 description: Leer hoe u kunt innemen [!DNL Acxiom] gegevens naar Real-time Customer Data Platform, verrijken profielen van eerste partijen, verbeteren het publiek en activeren via marketingkanalen.
 badge: Beta
-source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
+source-git-commit: d841975249262fa5908a408e4c27c5f76b92d96e
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%
@@ -54,3 +54,4 @@ Met de onderstaande beperkingen moet rekening worden gehouden bij de naamgeving 
 ## Volgende stappen
 
 Door dit document te lezen, hebt u de vereiste setup voltooid die nodig is om gegevens van uw [!DNL Acxiom] aan Experience Platform. U kunt nu doorgaan naar de handleiding op [verbinden [!DNL Acxiom Data Ingestion] naar Experience Platform via de gebruikersinterface](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+
