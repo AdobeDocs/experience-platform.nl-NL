@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: 0e8147a9e4589747b212ce1dd0f0bc215f3bab4c
 workflow-type: tm+mt
-source-wordcount: '3723'
+source-wordcount: '3808'
 ht-degree: 0%
 
 ---
@@ -212,6 +212,18 @@ De lijst met beschikbare filters wordt weergegeven.
 | [!UICONTROL Modified date] | Hiermee kunt u filteren op basis van de laatste gewijzigde datum van het publiek. U kunt een datumbereik kiezen waarop u wilt filteren wanneer het publiek voor het laatst is gewijzigd. |
 
 ![De beschikbare filters worden weergegeven en gemarkeerd op de pagina Browserpubliek.](../images/ui/overview/filter-audiences.png)
+
+**Bulkacties** {#bulk-actions}
+
+Bovendien kunt u maximaal 25 verschillende soorten publiek selecteren en verschillende handelingen op deze doelgroepen uitvoeren. Deze acties omvatten [verplaatsen naar een map](#folders), [een tag bewerken of toepassen](#tags), [toegangslabels toepassen](../../access-control/abac/ui/labels.md), en [verwijderen](#browse).
+
+![De beschikbare opties voor bulkacties worden gemarkeerd.](../images/ui/overview/bulk-actions.png)
+
+Wanneer u bulkacties toepast op deze doelgroepen, gelden de volgende voorwaarden:
+
+- U **kan** selecteer soorten publiek op verschillende pagina&#39;s.
+- U **kan** een publiek verwijderen dat in een doelactivering wordt gebruikt.
+- Als u een filter selecteert, wordt het geselecteerde publiek **zal** opnieuw instellen.
 
 ### Details publiek {#audience-details}
 

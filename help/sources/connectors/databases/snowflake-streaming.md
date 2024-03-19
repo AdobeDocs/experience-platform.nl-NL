@@ -5,10 +5,10 @@ badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultieme" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
 workflow-type: tm+mt
 source-wordcount: '710'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -39,7 +39,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Snowflake]moet u de volgende ei
 
 | Credentials | Beschrijving |
 | --- | --- |
-| `account` | De volledige accountnaam die aan uw [!DNL Snowflake] account. Volledig gekwalificeerd [!DNL Snowflake] de naam van uw account bevat uw accountnaam, regio en cloudplatform. Bijvoorbeeld, `cj12345.east-us-2.azure`. Raadpleeg deze voor meer informatie over accountnamen [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
+| `account` | De volledige accountnaam die aan uw [!DNL Snowflake] account. Volledig gekwalificeerd [!DNL Snowflake] de naam van uw account bevat uw accountnaam, regio en cloudplatform. Bijvoorbeeld: `cj12345.east-us-2.azure`. Raadpleeg deze voor meer informatie over accountnamen [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
 | `warehouse` | De [!DNL Snowflake] Het pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] Het pakhuis is onafhankelijk van elkaar en moet individueel worden betreden wanneer het brengen van gegevens naar Platform. |
 | `database` | De [!DNL Snowflake] Het gegevensbestand bevat de gegevens u het Platform wilt brengen. |
 | `username` | De gebruikersnaam voor de [!DNL Snowflake] account. |
@@ -47,7 +47,6 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Snowflake]moet u de volgende ei
 | `role` | (Optioneel) Een op maat gedefinieerde rol die voor een gebruiker, voor een bepaalde verbinding kan worden opgegeven. Indien niet opgegeven, wordt deze waarde standaard ingesteld op `public`. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Snowflake] is `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
-Voor meer informatie over authentificatie, verwijs naar dit [[!DNL Snowflake] document](<https://docs.snowflake.com/en/user-guide/key-pair-auth.html>).
 
 ### Rolinstellingen configureren {#configure-role-settings}
 
@@ -83,3 +82,4 @@ Voor meer informatie over rol en voorrechtbeheer raadpleegt u de [[!DNL Snowflak
 De volgende zelfstudie bevat stappen voor het tot stand brengen van een verbinding met uw [!DNL Snowflake] streamingbron naar Experience Platform met behulp van de API:
 
 * [Gegevens streamen van een [!DNL Snowflake] database naar Experience Platform met behulp van de Flow Service API](../../tutorials/api/create/databases/snowflake-streaming.md)
+* [Gegevens streamen van een [!DNL Snowflake] gegevensbestand aan Experience Platform gebruikend de bronwerkruimte in het gebruikersinterface van het Experience Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
+source-git-commit: aee82356f1f519398f381e161be14789532561f1
 workflow-type: tm+mt
-source-wordcount: '2605'
+source-wordcount: '2748'
 ht-degree: 0%
 
 ---
@@ -41,12 +41,36 @@ Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen va
 
 In de [!DNL Experience Platform] UI, selecteer **[!UICONTROL Datasets]** in de linkernavigatie om het dialoogvenster **[!UICONTROL Datasets]** dashboard. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en status van de meest recente versiereeks houdt.
 
-![Een afbeelding waarmee het item Gegevenssets binnen de linkernavigatiebalk wordt gemarkeerd.](../images/datasets/user-guide/browse-datasets.png)
+![De interface Platform met het item Datasets gemarkeerd in de linkernavigatiebalk.](../images/datasets/user-guide/browse-datasets.png)
 
 Selecteer de naam van een gegevensset in het menu [!UICONTROL Browse] tabblad voor toegang tot **[!UICONTROL Dataset activity]** scherm en zie details van de dataset u selecteerde. Het activiteitenlusje omvat een grafiek die het tarief visualiseert van berichten die worden verbruikt evenals een lijst van succesvolle en ontbroken partijen.
 
-![De details van uw geselecteerde dataset worden benadrukt.](../images/datasets/user-guide/dataset-activity-1.png)
-![De partijen van de steekproef die tot uw geselecteerde dataset behoren worden benadrukt.](../images/datasets/user-guide/dataset-activity-2.png)
+![De metriek en de visualisaties van uw geselecteerde dataset worden benadrukt.](../images/datasets/user-guide/dataset-activity-1.png)
+![De steekproefpartijen die op uw geselecteerde dataset betrekking hebben worden benadrukt.](../images/datasets/user-guide/dataset-activity-2.png)
+
+## Meer handelingen {#more-actions}
+
+U kunt [!UICONTROL Delete] of [!UICONTROL Enable a dataset for Profile] van de [!UICONTROL Dataset] gedetailleerde weergave. Selecteer **[!UICONTROL ... More]** in de rechterbovenhoek van de gebruikersinterface. Het vervolgkeuzemenu wordt weergegeven.
+
+![De werkruimte Datasets met de [!UICONTROL ... More] vervolgkeuzemenu gemarkeerd.](../images/datasets/user-guide/more-actions.png)
+
+Als u **[!UICONTROL Enable a dataset for Profile]** verschijnt er een bevestigingsvenster. Selecteren **[!UICONTROL Enable]** om uw keuze te bevestigen.
+
+>[!NOTE]
+>
+>Om een dataset voor Profiel toe te laten, moet het schema dat de dataset zich aan voor gebruik in het Profiel van de Klant in real time aansluit compatibel zijn. Zie de [Een gegevensset voor profiel inschakelen](#enable-profile) voor meer informatie.
+
+![Het bevestigingsdialoogvenster Gegevensset inschakelen.](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
+
+Als u **[!UICONTROL Delete]** de [!UICONTROL Delete dataset] bevestigingsvenster verschijnt. Selecteren **[!UICONTROL Delete]** om uw keuze te bevestigen.
+
+>[!NOTE]
+>
+>U kunt geen systeemdatasets schrappen.
+
+U kunt een dataset of een dataset voor gebruik met het Profiel van de Klant in real time van de gealigneerde acties ook schrappen die op worden gevonden [!UICONTROL Browse] tab. Zie de [sectie inline-handelingen](#inline-actions) voor meer informatie .
+
+![Het dialoogvenster Gegevensset verwijderen.](../images/datasets/user-guide/delete-confirmation-dialog.png)
 
 ## Handelingen voor inline-gegevenssets {#inline-actions}
 
