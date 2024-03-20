@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, maart 2024
 description: In de release van maart 2024 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: 709bb15f75bfee5380b779d595b3487080cbb97a
+source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
 workflow-type: tm+mt
-source-wordcount: '1062'
-ht-degree: 3%
+source-wordcount: '1176'
+ht-degree: 2%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 3%
 Updates voor bestaande functies in Experience Platform:
 
 - [Catalogusservice](#catalog-service)
+- [Gegevensverzameling](#data-collection)
 - [Gegevensvoorbereiding](#data-prep)
 - [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
@@ -40,6 +41,20 @@ Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens 
 {style="table-layout:auto"}
 
 Raadpleeg voor meer informatie over Catalog Service de [Overzicht van Catalog Service](../../catalog/home.md).
+
+## Gegevensverzameling {#data-collection}
+
+Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden, waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe doelen.
+
+**Nieuwe functies**
+
+| Type | Functie | Beschrijving |
+| --- | --- | --- |
+| Extensies | [!DNL Merkury] Tagextensie | De [[!DNL Merkury] tagextensie](https://exchange.adobe.com/apps/ec/600027/merkury-tag) biedt toonaangevende prijzen voor anonieme websitebezoekers aan een [!DNL Merkury] ID. Merken kunnen de kracht van de [!DNL Merkury] tag en Adobe om persoonlijke website-ervaringen in real-time te bieden. Daarnaast worden de [!DNL Merkury] -tag maakt de groei van digitale gegevens van eerste bedrijven mogelijk, samen met gekoppelde online en offline klantprofielen. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over gegevensverzameling leest u de [overzicht van gegevensverzameling](../../tags/home.md).
 
 ## Gegevensvoorbereiding {#data-prep}
 

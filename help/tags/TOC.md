@@ -6,9 +6,9 @@ user-guide-description: Leer analyses, marketing en advertenties te implementere
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: ddf7eb620f36b6e18d7e3949e5339062edf9f9a6
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '765'
 ht-degree: 15%
 
 ---
@@ -180,6 +180,7 @@ ht-degree: 15%
          * [Overzicht](./extensions/client/marketo/overview.md)
          * [Aanvullende informatie](./extensions/client/marketo/release-notes.md)
       * [Hoofd-eigenschappenbeheer](https://exchange.adobe.com/apps/ec/102992)
+      * [Merkury Tags Extensions](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
       * [!DNL Meta Pixel] {#meta}
          * [Overzicht](./extensions/client/meta/overview.md)
       * [Monitor](https://exchange.adobe.com/apps/ec/106544)
