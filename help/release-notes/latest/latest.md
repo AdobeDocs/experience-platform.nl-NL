@@ -1,11 +1,11 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
-description: Aanvullende informatie van januari 2024 voor Adobe Experience Platform.
+description: In de release van maart 2024 staat een opmerking voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 53424842fb93315ed71f4245f04141bccfb2a8ac
+source-git-commit: 709bb15f75bfee5380b779d595b3487080cbb97a
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 4%
+source-wordcount: '1060'
+ht-degree: 3%
 
 ---
 
@@ -29,6 +29,10 @@ Updates voor bestaande functies in Experience Platform:
 ## Catalogusservice {#catalog-service}
 
 Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens en de gegevensverbinding in Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het gegevensmeer als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
+
+>[!NOTE]
+>
+>We zijn ons ervan bewust dat er een weergaveprobleem is opgelost waarbij er onnodige syntaxis wordt gegenereerd naast afbeeldingen in tabellen.
 
 | Functie | Beschrijving |
 | --- | --- |
