@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van maart 2024 staat een opmerking voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
+source-git-commit: 33952028a4323b2292cdd313da290a5dd079c93f
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1208'
 ht-degree: 3%
 
 ---
@@ -82,6 +82,7 @@ Voor meer informatie over gegevensverzameling leest u de [overzicht van gegevens
 | [(bèta) Verbinding Acxiom-gegevens verbeteren](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Nieuw | Gebruik deze connector om first-party profielen van Real-Time CDP naar Acxiom te activeren voor gegevensverrijking en gebruik via marketingkanalen. Vervolgens kunt u de Acxiom-bron gebruiken om de profielen met verbeterde gegevens te importeren en ermee te werken in Real-Time CDP. |
 | [(bèta) Acxiom-perspectiefonderdrukkingsverbinding](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Nieuw | Exporteer uw eersteklas publiek naar de Acxiom-bestemming, zodat Acxiom bekende of omgezette klanten kan onderdrukken. Gebruik vervolgens de [Acxiom gegevens te exporteren](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) bronaansluiting voor het opnemen en activeren van perspectieflijsten van Acxiom, waarbij uw bekende of omgezette klanten zijn verwijderd. |
 | [Amazon Ads-verbinding](../../destinations/catalog/advertising/amazon-ads.md) | Bijwerken | Bij het exporteren van gegevens naar de bestemming Amazon Ads kunt u de gegevens nu doorsturen naar de Amazon-DSP of de Amazon-Marketing Cloud (nieuw). |
+| [Verbinding LiveRamp aan boord](../../destinations/catalog/advertising/liveramp-onboarding.md) | Bijwerken | De bestemming LiveRamp aan boord heeft nu ondersteuning voor leveringen aan Europa en Australië [!DNL LiveRamp] [!DNL SFTP] instanties. De maximale geëxporteerde bestandsgrootte is ook verhoogd tot 10 miljoen rijen (van 5 miljoen, eerder). |
 
 {style="table-layout:auto"}
 

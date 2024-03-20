@@ -3,9 +3,9 @@ title: LiveRamp - Verbinding aan boord
 description: Leer hoe u de LiveRamp-aansluiting kunt gebruiken voor het on-board publiek van Adobe Real-time Customer Data Platform naar LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1846'
 ht-degree: 0%
 
 ---
@@ -70,6 +70,9 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 
 ![Voorbeeldschermafbeelding die laat zien hoe u de bestemming verifieert met gebruik van SFTP met wachtwoord](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
+* **[!UICONTROL Port]**: De poort die voor uw [!DNL LiveRamp - Onboarding] opslaglocatie.  Gebruik de poort die overeenkomt met uw geografische locatie, zoals hieronder wordt beschreven:
+   * **[!UICONTROL NA]**: poort gebruiken `22`
+   * **[!UICONTROL AU]**: poort gebruiken `2222`
 * **[!UICONTROL Username]**: De gebruikersnaam voor uw [!DNL LiveRamp - Onboarding] opslaglocatie.
 * **[!UICONTROL Password]**: Het wachtwoord voor uw [!DNL LiveRamp - Onboarding] opslaglocatie.
 * **[!UICONTROL PGP/GPG encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
@@ -80,6 +83,8 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 
 ![Voorbeeldschermafbeelding die aangeeft hoe u de bestemming kunt verifiëren met behulp van de SSH-toets](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
+* **[!UICONTROL Port]**: De poort die voor uw [!DNL LiveRamp - Onboarding] opslaglocatie.  Gebruik de poort die overeenkomt met uw geografische locatie, zoals hieronder wordt beschreven:
+   * **[!UICONTROL EU]**: poort gebruiken `4222`
 * **[!UICONTROL Username]**: De gebruikersnaam voor uw [!DNL LiveRamp - Onboarding] opslaglocatie.
 * **[!UICONTROL SSH Key]** Betreft: Particulier [!DNL SSH] sleutel die wordt gebruikt om aan te melden bij uw [!DNL LiveRamp - Onboarding] opslaglocatie. De persoonlijke sleutel moet als een [!DNL Base64]-coded string en mag niet met een wachtwoord beveiligd zijn.
 
@@ -99,10 +104,11 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![Schermopname van de UI van het platform die tonen hoe te om details voor uw bestemming in te vullen](../../assets/catalog/advertising/liveramp-onboarding/liveramp-connection-details.png)
+![Schermopname van de UI van het platform die tonen hoe te om details voor uw bestemming in te vullen](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
+* **[!UICONTROL Region]**: Geografisch gebied voor uw instantie van de LiveRamp SFTP-opslag.
 * **[!UICONTROL Folder path]**: Het pad naar de [!DNL LiveRamp] `uploads` submap die de geëxporteerde bestanden host. De `uploads` wordt automatisch toegevoegd aan het mappad. [!DNL LiveRamp] Het verdient aanbeveling een speciale submap voor leveringen van Adobe Real-Time CDP te maken om de bestanden gescheiden te houden van andere bestaande feeds en om ervoor te zorgen dat alle automatisering probleemloos wordt uitgevoerd.
    * Als u bijvoorbeeld uw bestanden wilt exporteren naar `uploads/my_export_folder`, typt u `my_export_folder` in de **[!UICONTROL Folder path]** veld.
 * **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden. Beschikbare opties zijn **[!UICONTROL GZIP]** of **[!UICONTROL None]**.
@@ -179,6 +185,8 @@ Als u al uw gewenste toewijzingen hebt toegevoegd, selecteert u **[!UICONTROL Ne
 
 Uw gegevens worden naar de [!DNL LiveRamp - Onboarding] opslaglocatie die u hebt geconfigureerd, als CSV-bestanden.
 
+Geëxporteerde bestanden hebben een maximale grootte van 10 miljoen rijen. Experience Platform genereert meerdere bestanden per levering als het geselecteerde publiek groter is dan 10 miljoen rijen. Neem contact op met uw [!DNL LiveRamp] en vragen om batch-opname voor u te configureren.
+
 Wanneer u bestanden exporteert naar de [!DNL LiveRamp - Onboarding] doel, Platform genereert één CSV-bestand voor elk [beleids-id samenvoegen](../../../profile/merge-policies/overview.md).
 
 Neem bijvoorbeeld het volgende publiek:
@@ -238,3 +246,18 @@ Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het bel
 ## Aanvullende bronnen {#additional-resources}
 
 Voor meer details over hoe te om uw te vormen [!DNL LiveRamp - Onboarding] opslaan, zie de [officiële documentatie](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+
+## Changelog {#changelog}
+
+Deze sectie vangt de functionaliteit en de significante documentatieupdates aan deze bestemmingsschakelaar worden aangebracht die.
+
++++ Wijzigingen weergeven
+
+| Releasedatum | Type bijwerken | Beschrijving |
+|---|---|---|
+| Maart 2024 | Bijwerken van functionaliteit en documentatie | <ul><li>Toegevoegde steun voor leveringen aan Europa en Australië [!DNL LiveRamp] [!DNL SFTP] instanties.</li><li>Bijgewerkte documentatie om specifieke configuraties voor onlangs gesteunde gebieden te beschrijven.</li><li>Maximale bestandsgrootte is verhoogd tot 10 miljoen rijen (van 5 miljoen, eerder).</li><li>Bijgewerkte documentatie die op verhoogde dossiergrootte wijst.</li></ul> |
+| Juli 2023 | Eerste release | Eerste doelversie en documentatie gepubliceerd. |
+
+{style="table-layout:auto"}
+
++++
