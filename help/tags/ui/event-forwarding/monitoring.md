@@ -3,9 +3,9 @@ title: Activiteiten controleren bij doorsturen van gebeurtenissen
 description: Leer hoe te om gebruik, fouten te controleren, en tijd in uw gebeurtenis gegevens te verwerken door:sturen eigenschappen.
 feature: Event Forwarding
 exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
-source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
+source-git-commit: f8988d08e7009cc613a00f34e8151e8560c479d4
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
@@ -40,11 +40,15 @@ Als u metrische gegevens voor één eigenschap wilt weergeven, selecteert u het 
 
 ## [!UICONTROL Usage]
 
+>[!NOTE]
+>
+>De gegevens van het gebruik worden elke maand vernieuwd nadat de vorige maand beëindigt.
+
 De **[!UICONTROL Usage]** het rapport toont inkomende en uitgaande vraag voor een bepaalde tijdspanne. De inkomende vraag vertegenwoordigt gegevens die naar gebeurtenis door:sturen worden verzonden. De uitgaande vraag vertegenwoordigt gegevens die van gebeurtenis door:sturen worden verzonden. De **[!UICONTROL Total events]** Het aantal in de linkerruit is de som inkomende en uitgaande vraag voor de bepaalde tijdspanne.
 
 ## [!UICONTROL Error Events]
 
-De **[!UICONTROL Error Events]** het rapport toont fouten in geaggregeerd, en uitgesplitst door de reactiecode van HTTP wanneer u uw curseur over de lijngrafiek beweegt. De getoonde fouten zijn van uitgaande vraag en de antwoordcodes zijn van het eindpunt dat gebeurtenis door:sturen met interactie heeft.
+De **[!UICONTROL Error Events]** het rapport toont fouten in geaggregeerd, en uitgesplitst door de reactiecode van HTTP wanneer u uw curseur over de lijngrafiek beweegt. De getoonde fouten zijn van uitgaande vraag en de reactiecodes zijn van het eindpunt dat gebeurtenis door:sturen met interactie heeft.
 
 De fouten worden weergegeven voor een bepaalde periode, die kan worden aangepast in het beschikbare vervolgkeuzemenu.
 
