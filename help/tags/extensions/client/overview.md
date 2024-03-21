@@ -2,9 +2,9 @@
 title: Verwijzing naar extensies voor tags
 description: Documentatie voor extensies voor tags zoeken in Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '472'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Hieronder volgt een lijst met documentatie voor tags van clientzijde. Voor een l
 * [Websites bijhouden aanpassen](https://exchange.adobe.com/apps/ec/103195)*
 * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
-* [Adobe Analytics en Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)
+* [Adobe Analytics en Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
 * [Adobe Analytics &amp; Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
 * [Adobe Analytics &amp; Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [Adobe Analytics-producttekenreeks](./product-string/overview.md)
@@ -68,7 +68,7 @@ Hieronder volgt een lijst met documentatie voor tags van clientzijde. Voor een l
 * [Algemene insteekmodules voor Web SDK](./web-sdk/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
-* [Cookie-beheer voor toestemming door gebruikers CMP v2](https://exchange.adobe.com/apps/ec/*107037)
+* [Cookie-beheer voor toestemming door gebruikers CMP v2](https://exchange.adobe.com/apps/ec/*107037)*
 * [Kern](./core/overview.md)
 * [Aangepaste foutopsporingslogger](https://exchange.adobe.com/apps/ec/104698)*
 * [Klantenherkenning](https://exchange.adobe.com/apps/ec/100688)*
@@ -84,12 +84,13 @@ Hieronder volgt een lijst met documentatie voor tags van clientzijde. Voor een l
 * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)*
 * [Voorspelfunctie van Genesys](https://exchange.adobe.com/apps/ec/106148)*
 * [Google-gegevenslaag](./google-data-layer/overview.md)
-* [Google Global Site Tag (tag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)
+* [Google Global Site Tag (tag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)*
 * [InMoment](https://exchange.adobe.com/apps/ec/100847)*
 * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)*
-* [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)
+* [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)*
 * [KickFire](https://exchange.adobe.com/apps/ec/101621)*
 * [Toewijzingstabel](https://exchange.adobe.com/apps/ec/103136)*
+* [Merkury Tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag)*
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
 * [Hoofd-eigenschappenbeheer](https://exchange.adobe.com/apps/ec/102992)*
 * [Monitor](https://exchange.adobe.com/apps/ec/106544)*
