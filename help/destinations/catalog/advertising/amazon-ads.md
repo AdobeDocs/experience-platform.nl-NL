@@ -3,7 +3,7 @@ title: Amazon Adds
 description: Amazon Ads biedt verschillende opties om geregistreerde verkopers, verkopers, verkopers van boeken, Kindle Direct Publishing-auteurs (KDP), ontwikkelaars van apps en/of bureaus te helpen uw reclamedoelstellingen te bereiken. De integratie van Amazon Ads met Adobe Experience Platform biedt kant-en-klare integratie voor Amazon Ads-producten, waaronder de Amazon DSP (ADSP). Met de Amazon Ads-bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor doelwitten en activering op de Amazon-DSP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 24f7463f7005f77f8d93e7cb2c04efc0fb4e3a0b
+source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
 workflow-type: tm+mt
 source-wordcount: '1603'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [!DNL Amazon Ads] biedt een aantal opties om u te helpen uw reclamedoelstellingen te bereiken aan geregistreerde verkopers, verkopers, boekverkopers, auteurs van Kindle Direct Publishing (KDP), toepassingsontwikkelaars, en/of agentschappen.
 
-De [!DNL Amazon Ads] integratie met Adobe Experience Platform biedt een sleutelintegratie voor [!DNL Amazon Ads] producten, waaronder de Amazon DSP (ADSP) en Amazon Marekting Cloud (AMC).
+De [!DNL Amazon Ads] integratie met Adobe Experience Platform biedt een sleutelintegratie voor [!DNL Amazon Ads] producten, waaronder de Amazon DSP (ADSP) en Amazon Marketing Cloud (AMC).
 
 Met de [!DNL Amazon Ads] in Adobe Experience Platform kunnen gebruikers adverteerderspubliek definiëren voor activering en doelwittering op de Amazon-DSP.  Bovendien kunnen gebruikers hun gegevens uploaden naar [!DNL Amazon Marketing Cloud] om de prestaties van het publiek te begrijpen, heeft adverteerder afmetingen, lidmaatschap in Amazon-segmenten of andere signalen in AMC verstrekt. Na het uploaden van adverteerders naar AMC kunnen gebruikers [!DNL Amazon Marketing Cloud] om te wijzigen, te verbeteren, of toe te voegen aan publieksleden die de signalen van Amazon van binnen gebruiken [!DNL Amazon Marketing Cloud].
 
@@ -171,7 +171,7 @@ Deze sectie vangt de functionaliteit en de significante documentatieupdates aan 
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
-| Februari 2024 | Bijwerken van functionaliteit en documentatie | De optie voor het exporteren van soorten publiek toegevoegd voor gebruik in [!DNL Amazon Marketing Cloud] (AMC). |
+| Maart 2024 | Bijwerken van functionaliteit en documentatie | De optie voor het exporteren van soorten publiek toegevoegd voor gebruik in [!DNL Amazon Marketing Cloud] (AMC). |
 | Mei 2023 | Bijwerken van functionaliteit en documentatie | <ul><li>Toegevoegde ondersteuning voor selectie van advertentiegebied in het dialoogvenster [workflow voor doelverbinding](#destination-details).</li><li>Bijgewerkte documentatie waarin de toevoeging van de selectie van het advertentiegebied wordt weergegeven. Raadpleeg voor meer informatie over het selecteren van het juiste gebied Advertiser de [Amazon-documentatie](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | Maart 2023 | Eerste release | Eerste doelversie en documentatie gepubliceerd. |
 
