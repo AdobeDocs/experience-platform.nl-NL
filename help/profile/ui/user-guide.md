@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;veren
 title: Gebruikersgids voor realtime gebruikersprofiel
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-Time Klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
 workflow-type: tm+mt
-source-wordcount: '1929'
+source-wordcount: '2022'
 ht-degree: 0%
 
 ---
@@ -144,6 +144,12 @@ Deze kenmerken kunnen ook als een JSON-object worden weergegeven door **[!UICONT
 
 ![Het tabblad Kenmerken is gemarkeerd. De profielkenmerken worden weergegeven.](../images/user-guide/attributes.png)
 
+Selecteer **[!UICONTROL Edge]** op de gegevenslocatieselector.
+
+![De gegevenslocatieselector op het tabblad Kenmerken wordt gemarkeerd.](../images/user-guide/attributes-select.png)
+
+Lees voor meer informatie over randprofielen de [documentatie over Edge-profielen](../edge-profiles.md).
+
 ### Het tabblad Gebeurtenissen
 
 De **[!UICONTROL Events]** bevat gegevens van de 100 meest recente ExperienceEvents die aan de klant zijn gekoppeld. Deze gegevens kunnen het openen van e-mail, winkelwagentjes en paginaweergaven omvatten. Selecteren **[!UICONTROL View all]** voor elke afzonderlijke gebeurtenis worden aanvullende velden en waarden vastgelegd als onderdeel van de gebeurtenis.
@@ -158,7 +164,11 @@ De **[!UICONTROL Audience membership]** wordt een lijst weergegeven met de naam 
 
 Raadpleeg voor meer informatie over segmentering in Experience Platform de [Documentatie Adoben Experience Platform Segmentation Service](../../segmentation/home.md).
 
-![Het tabblad Poortlidmaatschap is gemarkeerd. De lidmaatschapsdetails voor het publiek van het profiel worden weergegeven.](../images/user-guide/segment-membership.png)
+![Het tabblad Poortlidmaatschap is gemarkeerd. De lidmaatschapsdetails voor het publiek van het profiel worden weergegeven.](../images/user-guide/audience-membership.png)
+
+Selecteer **[!UICONTROL Edge]** in de gegevenslocatieselector. Meer informatie over de segmentatie van de randen vindt u in de [hulplijn voor randsegmentatie](../../segmentation/ui/edge-segmentation.md).
+
+![De kiezer voor de gegevenslocatie op het tabblad voor het publiekslidmaatschap wordt gemarkeerd.](../images/user-guide/audience-membership-select.png)
 
 ## Beleid samenvoegen
 
