@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: df24799e4644a98941b707bb216a4ad434f5ebf9
 workflow-type: tm+mt
-source-wordcount: '1536'
+source-wordcount: '1537'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Een werkschema op hoog niveau voor het verkrijgen en toewijzen van toegangsmacht
 
 - Nadat u een licentie hebt verleend aan Adobe Experience Platform of een toepassings-/toepassingsservice die Experience Platform gebruikt, wordt een e-mail verzonden naar de beheerder die tijdens de licentie is opgegeven.
 - De beheerder meldt zich aan aan [Adobe Admin Console](#adobe-admin-console) en selecteert **Adobe Experience Platform** in de lijst met producten op de overzichtspagina.
-- Om toegang tot Experience Platform te verlenen, zal de beheerder gebruikers aan het standaardproductprofiel moeten toevoegen: `AEP-Default-All-Users`.
+- Om toegang tot Experience Platform te verlenen, adviseert men dat de beheerder gebruikers aan het standaardproductprofiel toevoegt: `AEP-Default-All-Users`.
 - In de Toestemmingen van het Experience Platform, kan de beheerder nieuwe rollen tot stand brengen of de toestemmingen en de gebruikers voor om het even welke bestaande rollen uitgeven.
 - Bij het maken of bewerken van een rol voegt de beheerder gebruikers aan de rol toe met behulp van de **[!UICONTROL users]** en verleent machtigingen aan deze gebruikers (zoals &quot;[!UICONTROL Read Datasets]&quot; of &quot;[!UICONTROL Manage Schemas]&quot;) door de machtigingen voor de rol te bewerken. Op dezelfde manier kan de beheerder toegang tot sandboxen toewijzen met dezelfde bewerkingsoptie.
 - Wanneer de gebruikers login aan het gebruikersinterface van het Experience Platform, hun toegang tot de mogelijkheden van het Experience Platform door de toestemmingen worden gedreven die aan hen van de vorige stap zijn verleend. Als een gebruiker bijvoorbeeld niet beschikt over de [!UICONTROL View Datasets] toestemming, de **[!UICONTROL Datasets]** in het zijmenu is niet zichtbaar voor die gebruiker.
