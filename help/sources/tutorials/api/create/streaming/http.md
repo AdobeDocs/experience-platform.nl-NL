@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;streamingverbinding;maa
 title: Een HTTP API voor streaming verbinding maken met de Flow Service API
 description: Deze zelfstudie bevat stappen voor het maken van een streamingverbinding met de HTTP API-bron voor Raw- en XDM-gegevens met de Flow Service API.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: fe2e93b9595d9df9a088d627d696b559f259e80d
+source-git-commit: afe632181295cc1460b3489d9b0306ef9342abfe
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1658'
 ht-degree: 0%
 
 ---
@@ -456,9 +456,6 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 }
 ```
 
-| Eigenschap | Beschrijving |
-| --- | --- |
-
 ## Een gegevensstroom maken
 
 Wanneer uw bron- en doelverbindingen zijn gemaakt, kunt u nu een gegevensstroom maken. De dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST aan `/flows` eindpunt.
@@ -579,16 +576,16 @@ POST /collection/{INLET_URL}
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{INLET_URL}` | De URL van het streamingeindpunt. U kunt deze URL ophalen door een GET-aanvraag in te dienen bij de `/connections` eindpunt terwijl het verstrekken van uw identiteitskaart van de basisverbinding. |
-| `{FLOW_ID}` | De id van de HTTP API-streaminggegevens. |
+| `{FLOW_ID}` | De id van de HTTP API-streaminggegevens. Deze id is vereist voor zowel XDM- als RAW-gegevens. |
 
 **Verzoek**
 
 >[!BEGINTABS]
 
->[!TAB XDM]
+>[!TAB XDM-gegevens verzenden]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
   -H 'Content-Type: application/json' \
   -d '{
         "header": {
@@ -625,10 +622,36 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
       }'
 ```
 
->[!TAB Onbewerkte gegevens]
+>[!TAB Raw-gegevens verzenden met flow-id als HTTP-header]
+
+Wanneer u onbewerkte gegevens verzendt, kunt u de flow-id opgeven als een queryparameter of als onderdeel van de HTTP-header. In het volgende voorbeeld wordt de flow-id opgegeven als een HTTP-header.
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' 
+  -H 'x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB Raw-gegevens met stroom-id verzenden als een queryparameter]
+
+Wanneer u onbewerkte gegevens verzendt, kunt u de flow-id opgeven als een queryparameter of als een HTTP-header. In het volgende voorbeeld wordt de flow-id opgegeven als een queryparameter.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2 \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "Johnson Smith",
