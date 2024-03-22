@@ -3,7 +3,7 @@ title: Amazon Adds
 description: Amazon Ads biedt verschillende opties om geregistreerde verkopers, verkopers, verkopers van boeken, Kindle Direct Publishing-auteurs (KDP), ontwikkelaars van apps en/of bureaus te helpen uw reclamedoelstellingen te bereiken. De integratie van Amazon Ads met Adobe Experience Platform biedt kant-en-klare integratie voor Amazon Ads-producten, waaronder de Amazon DSP (ADSP). Met de Amazon Ads-bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor doelwitten en activering op de Amazon-DSP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
+source-git-commit: 8e34e5488ab80cd1f3c8086bf7c16d3f22527540
 workflow-type: tm+mt
 source-wordcount: '1603'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Dankzij deze integratie met Amazon DSP [!DNL Amazon Ads] adverteerders die CDP-a
 
 Deze integratie met [!DNL Amazon Marketing Cloud] (AMC) staat [!DNL Amazon Ads] adverteerders om CDP-segmenten door te geven van Adobe Experience Platform-formulier naar AMC. Adverteerders kunnen zich dan bij de CDP-invoer aansluiten met [!DNL Amazon Ads] signalen, en voer douaneanalyses op onderwerpen zoals media effect, publiekssegmenten, en klantenreizen in privacy volgzaam formaat uit. Een adverteerder kan bijvoorbeeld een lijst met zijn bestaande klanten uploaden om inzicht te krijgen in de geaggregeerde prestaties van advertentiecampagnes, of geaggregeerde statistieken van conversiegebeurtenissen in Amazon, zoals het weergeven van een productdetailpagina, het toevoegen van een product aan een winkelwagentje of de aankoop van een product.
 
-### Optimalisatie van reclame:
+### Optimalisatie van reclame
 
 Deze integratie met [!DNL Amazon Marketing Cloud] (AMC) stelt adverteerders in staat hun eigen klantlijsten te uploaden en [!DNL Amazon Marketing Cloud] SQL, voer overlappende analyse, onderdrukking, toevoegingen, of optimalisering aan publiek in een terugkomende basis uit alvorens een activering-klaar publiek in de DSP van Amazon voor het richten te creëren.
 
