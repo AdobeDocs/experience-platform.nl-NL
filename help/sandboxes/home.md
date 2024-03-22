@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;sandbox;sandbox;testen;testen
 solution: Experience Platform
-title: Overzicht van sandboxen
+title: Sandboxoverzicht
 description: Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 06f1b64d5c4dfa6e0ca1f6da171ece8e9db9e693
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '990'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen.
 
-Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 Dit document biedt een overzicht op hoog niveau van sandboxen in Experience Platform.
 
@@ -23,7 +23,7 @@ Dit document biedt een overzicht op hoog niveau van sandboxen in Experience Plat
 
 Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Er worden twee soorten sandboxen ondersteund op het Experience Platform:
 
-* **Productiesandbox**: Een productiesandbox is bedoeld voor gebruik met profielen in uw productieomgeving. Met Platform kunt u meerdere productie-sandboxen maken om de juiste functionaliteit voor gegevens te bieden terwijl de operationele isolatie behouden blijft. Met deze functie kunt u specifieke productiesandboxen toewijzen aan verschillende bedrijfsonderdelen, merken, projecten of regio&#39;s. Productiesandboxen ondersteunen een volume productieprofielen tot aan uw licentie [!DNL Profile] verbintenis (cumulatief gemeten over al uw geautoriseerde productiesandboxen). U hebt het recht om een gemiddeld profiel met licentie te gebruiken per geautoriseerde [!DNL Profile] (cumulatief gemeten over al uw geoorloofde productie sandboxen).
+* **Productiesandbox**: Een productiesandbox moet worden gebruikt met profielen in uw productieomgeving. Met Platform kunt u meerdere productiesandboxen maken om de juiste functionaliteit voor gegevens te bieden terwijl de operationele isolatie behouden blijft. Met deze functie kunt u specifieke productiesandboxen toewijzen aan verschillende bedrijfsonderdelen, merken, projecten of regio&#39;s. Productiesandboxen ondersteunen een volume productieprofielen tot aan uw licentie [!DNL Profile] verbintenis (cumulatief gemeten over al uw geautoriseerde productiesandboxen). U hebt het recht om een gemiddeld profiel met licentie te gebruiken per geautoriseerde [!DNL Profile] (cumulatief gemeten over al uw geoorloofde productie sandboxen).
 * **Ontwikkelingssandbox**: Een ontwikkelingssandbox is een sandbox die uitsluitend kan worden gebruikt voor ontwikkeling en testen met niet-productieprofielen. De zandbakken van de ontwikkeling steunen een hoeveelheid non-production profielen tot 10% van uw vergunning [!DNL Profile] verbintenis (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen). U hebt recht op maximaal:
    * een gemiddelde rijkheid van het non-production profiel van 75 kilobytes per geautoriseerd niet-productieprofiel (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen);
    * één batchsegmentatietaak per dag, per ontwikkelingssandbox;
@@ -31,9 +31,9 @@ Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Plat
 
 Een instantie van het Experience Platform steunt veelvoudige productie en ontwikkelingszandbakken, met elke zandbak die zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.) handhaaft. Bovendien hebben zowel productie als ontwikkelingszandbakken een terugstellende eigenschap die alle klant-gecreeerde middelen uit de zandbak verwijdert. Ontwikkelingssandboxen kunnen niet worden geconverteerd naar productiesandboxen.
 
-Een standaardlicentie voor Experience Platforms kent u in totaal vijf sandboxen toe, die u kunt classificeren als productie of ontwikkeling. U kunt extra pakketten van 10 sandboxen een licentie geven tot een maximum van 75 sandboxen in totaal. Deze extra sandboxen kunnen worden gebruikt om zowel productie- als ontwikkelingssandboxen te maken. Neem voor meer informatie contact op met de systeembeheerder van de organisatie of uw Adobe-vertegenwoordiger.
+Een standaardlicentie voor Experience Platforms kent u in totaal vijf sandboxen toe, die u kunt classificeren als productie of ontwikkeling. U kunt extra pakketten van 10 sandboxen een licentie geven tot een maximum van 75 sandboxen in totaal. Deze extra sandboxen kunnen worden gebruikt om zowel productie- als ontwikkelingssandboxen te maken. Neem voor meer informatie contact op met de systeembeheerder van de organisatie of uw Adobe.
 
-Tot slot is de standaardproductiesandbox de eerste productiesandbox die wordt gecreeerd wanneer een organisatie eerst wordt gecreeerd. Met de standaardproductiesandbox kunt u gegevens van het Platform invoeren of gebruiken en kunt u aanvragen accepteren die geen waarden voor de naam van een sandbox of een sandbox-id bevatten.
+Tot slot is de standaardproductiesandbox de eerste productiesandbox die wordt gecreeerd wanneer een organisatie eerst wordt gecreeerd. Met de standaardproductiesandbox kunt u gegevens van het platform invoeren of gebruiken en kunt u aanvragen accepteren die geen waarden voor de naam van een sandbox of een sandbox-id bevatten.
 
 >[!NOTE]
 >
@@ -42,8 +42,8 @@ Tot slot is de standaardproductiesandbox de eerste productiesandbox die wordt ge
 Samengevat bieden sandboxen de volgende voordelen:
 
 * **Levenscyclusbeheer van toepassingen**: Maak afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
-* **Project- en merkbeheer**: Toestaan dat meerdere projecten parallel binnen dezelfde organisatie worden uitgevoerd, terwijl isolatie en toegangsbeheer worden geboden. De toekomstige versies zullen steun voor het opstellen in veelvoudige regio&#39;s verstrekken.
-* **Flexibele ontwikkeling-ecosysteem**: Biedt sandboxen op een naadloze, schaalbare en voordelige manier voor exploratie, activering en demonstratie.
+* **Project- en merkbeheer**: Sta veelvoudige projecten toe om in parallel binnen de zelfde organisatie te lopen, terwijl het verstrekken van isolatie en toegangscontrole.
+* **Flexibele ontwikkeling-ecosysteem**: Bied sandboxen op een naadloze, schaalbare en voordelige manier aan voor exploratie-, activeer- en demonstratiedoeleinden.
 
 ## Toegangsbeheer voor sandboxen
 
@@ -70,7 +70,7 @@ curl -X GET \
   -H 'x-sandbox-name: prod'
 ```
 
-Indien `x-sandbox-name` is niet opgenomen in een API-aanroep, gebruikt het systeem in plaats daarvan een standaardsandbox. De beste manier is echter om deze header altijd op te nemen in alle API-aanroepen, zelfs wanneer de standaardsandbox wordt gebruikt. Daarom wordt in de API-documentatie voor Experience Platforms omgegaan met `x-sandbox-name` als een vereiste koptekst.
+Indien `x-sandbox-name` is niet opgenomen in een API-aanroep, gebruikt het systeem in plaats daarvan een standaardsandbox. De beste manier is echter om deze header altijd op te nemen in alle API-aanroepen, zelfs wanneer de standaardsandbox wordt gebruikt. Daarom wordt in de API-documentatie voor Experience Platforms met `x-sandbox-name` als een vereiste koptekst.
 
 ### Sandbox-API
 
@@ -80,4 +80,4 @@ Met de sandbox-API kunt u sandboxen beheren met behulp van RESTful-API-bewerking
 
 Door dit document te lezen, hebt u kennis genomen van de belangrijkste concepten met betrekking tot sandboxen in Experience Platform. Zie voor gedetailleerde stappen over het beheren van sandboxen de [gebruikershandleiding](ui/overview.md) voor de gebruikersinterface of de [ontwikkelaarsgids](./api/getting-started.md) voor de API.
 
-Terwijl zandbakken als waardevol hulpmiddel dienen om de milieu&#39;s van het Platform voor uw ontwikkelingsteam te isoleren, kunt u meer korrelige toegangscontrole ook beheren door Adobe Admin Console te gebruiken. Zie de [toegangsbeheeroverzicht](../access-control/home.md) voor meer informatie .
+Hoewel sandboxen een waardevol hulpmiddel zijn om platformomgevingen voor uw ontwikkelingsteam te isoleren, kunt u ook meer korrelige toegangscontrole beheren met de Adobe Admin Console. Zie de [toegangsbeheeroverzicht](../access-control/home.md) voor meer informatie .
