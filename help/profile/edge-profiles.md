@@ -2,9 +2,9 @@
 title: Edge-profielen
 description: Meer informatie over Edge-profielen en de bijbehorende terminologie, beschikbare gebieden voor randprofielen en de beschikbare services voor randprofielen.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
+source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -13,17 +13,16 @@ ht-degree: 0%
 
 In Adobe Experience Platform is Real-Time Customer Profile de enige waarheidsbron voor entiteitsgegevens. Deze profielgegevens bevinden zich in een centraal knooppunt en kunnen gevallen gebruiken die afhankelijk zijn van de volledigheid en volledigheid van uw gegevens. In meer real-time gebruiksgevallen, waarbij tijdgevoeligheid belangrijker is, hebben randprofielen echter de voorkeur. Edge-profielen zijn lichtgewicht profielen die zich aan de randen bevinden en u helpen bij het gebruik van realtime-personalisatie.
 
-Bijvoorbeeld, gebruiken de toepassingen van de Adobe zoals Adobe Target, de Bestemming van de Aanpassing, en Adobe Campaign randen om gepersonaliseerde klantenervaringen in real time te verstrekken. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt.
+Bijvoorbeeld, gebruiken de toepassingen van de Adobe zoals Adobe Target, de Bestemming van de Aanpassing, en Adobe Campaign randen om gepersonaliseerde klantenervaringen in real time te verstrekken. Gegevens worden met een projectie naar een rand omgeleid, waarbij een projectiebestemming de rand definieert waarnaar gegevens worden verzonden.
 
 ## Terminologie {#terminology}
 
 Zorg ervoor dat u de volgende concepten begrijpt wanneer u met randen werkt:
 
 - **Rand**: Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen.
-- **Projectconfiguratie**: Een projectieconfiguratie beschrijft hoe een bepaalde entiteit aan de randen voor een bepaalde klant zou moeten worden herhaald en onder welke voorwaarden. Bijvoorbeeld, voor Luma (een steekproefklant), slechts zouden de gebieden leeftijd en het geslacht van de dataset na het schema van het Profiel aan de randen moeten verspreiden.
-- **Randprojectie**: Een randprojectie is de toepassing van een projectieconfiguratie op een specifieke rand op één stuk gegevens met unieke identiteitskaart die aan een bepaald schema voor een bepaalde klant in overeenstemming is. Bijvoorbeeld een entiteit die het schema Profiel met identiteitskaart respecteert `CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8`, bezoeker van de Luma-website, gerepliceerd naar het VA6-datacenter, dat de velden bevat `age = 35` en `gender = male`.
+- **Randprojectie**: Een randprojectie is de projectieweergave van het systeem van een profiel op een specifieke rand om profielgegevens te vertegenwoordigen met een unieke id die overeenkomt met een bepaald schema voor een bepaalde klant. Bijvoorbeeld een entiteit die het schema Profiel met identiteitskaart respecteert `CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8`, bezoeker van de Luma-website, gerepliceerd naar het VA6-datacenter, dat de velden bevat `age = 35` en `gender = male`.
 
-Met andere woorden, gegevens worden door een projectie naar een rand geleid, met de **projectiebestemming** definiëren **die** rand waarnaar de gegevens worden verzonden en de **projectieconfiguratie** definiëren **wat** gegevens worden naar de opgegeven rand verzonden.
+Met andere woorden, gegevens worden door een projectie naar een rand geleid, met de **projectiebestemming** definiëren **die** rand waarnaar de gegevens worden verzonden.
 
 ## Beschikbare gebieden {#regions}
 
@@ -43,13 +42,8 @@ Al deze gebieden zijn geldige opties voor profielen om binnen te landen.
 
 De volgende services zijn ingeschakeld voor het opzoeken van profielen aan de rand:
 
-- [Edge Profile Configuration Service](#edge-profile-configuration-service)
 - [Projectiewerkerservice](#mepw)
 - [Express Profile Service](#xps)
-
-### Edge Profile Configuration Service {#edge-profile-configuration-service}
-
-De Edge Profile Configuration Service stelt API&#39;s voor downstreamoplossingen en toepassingen beschikbaar om projectieconfiguraties te maken. U kunt deze API&#39;s gebruiken om de kenmerken en het publiek op te geven van een profiel dat naar de randen moet worden verzonden, en de randgebieden waar de projectie moet worden verzonden. U kunt nu **alle** van de randgebieden voor projecties.
 
 ### Projectiewerkerservice {#mepw}
 
@@ -70,8 +64,6 @@ In de volgende sectie worden veelgestelde vragen over randprofielen weergegeven:
 ### In welke gebieden kunnen randprofielen worden geland?
 
 Randprofielen kunnen in verschillende regio&#39;s landen, afhankelijk van de huidige situatie.
-
-Voor projectieconfiguraties worden alle wijzigingen in het profiel doorgegeven aan alle gebieden die in de profielconfiguratie worden vermeld.
 
 Bovendien heeft elk Edge-profiel een schemakenmerk dat het UAR-gebied (User Activity Region) wordt genoemd. Alle randen die dit profiel de afgelopen 14 dagen heeft bezocht, worden vermeld in dit profielkenmerk. Als dit kenmerk aanwezig is in een profiel, worden wijzigingen in het profiel daarom ook verzonden naar alle gebieden die in de UAR worden vermeld.
 

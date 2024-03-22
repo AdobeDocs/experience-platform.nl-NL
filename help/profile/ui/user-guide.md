@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;veren
 title: Gebruikersgids voor realtime gebruikersprofiel
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-Time Klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
+source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2027'
 ht-degree: 0%
 
 ---
@@ -190,9 +190,9 @@ Ga voor meer informatie over vakbondsschema&#39;s naar de [UI-hulplijn verenigin
 
 Van de belangrijkste **[!UICONTROL Profiles]** , selecteert u de **[!UICONTROL Computed attributes]** om een lijst weer te geven met berekende kenmerken die bij uw organisatie horen.
 
-Lees voor meer informatie over berekende kenmerken de [overzicht van berekende kenmerken](../computed-attributes/overview.md). Lees voor meer informatie over het gebruik van berekende kenmerken in de interface van het platform de [UI-gids voor berekende kenmerken](../computed-attributes/ui.md).
+![Het tabblad Berekende kenmerken is gemarkeerd.](../images/user-guide/computed-attributes.png)
 
-AFBEELDING
+Lees voor meer informatie over berekende kenmerken de [overzicht van berekende kenmerken](../computed-attributes/overview.md). Lees voor meer informatie over het gebruik van berekende kenmerken in de interface van het platform de [UI-gids voor berekende kenmerken](../computed-attributes/ui.md).
 
 ## Volgende stappen
 
