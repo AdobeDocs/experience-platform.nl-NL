@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Labels voor gegevensgebruik beheren in de gebruikersinterface
 description: In deze handleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1481'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,14 @@ Zie de handleiding over hoe u [machtigingen configureren](https://experienceleag
 ## Labels op schemaniveau beheren
 
 U kunt labels rechtstreeks toevoegen aan een schema of aan velden binnen dat schema. Om het even welke gebieden die op het schemaniveau worden toegepast zullen aan alle datasets verspreiden die op dat schema worden gebaseerd.
+
+>[!NOTE]
+>
+>Als uw beleid van het gegevensgebruik werd gecreeerd alvorens u uw gebied etiketteerde, kunt u een dialoog ontmoeten van de schending van het beleid van het bestuur wanneer u etiketten op uw nieuw schema toepast. Dit dialoogvenster geeft aan dat bij toepassing van dit label een bestaand gebruiksbeleid wordt geschonden. Gebruik het diagram van de gegevenslijn om te begrijpen welke andere configuratieveranderingen moeten worden aangebracht alvorens u het etiket aan uw schemagebied kunt toevoegen.
+>
+>![De schending van het beleid van het gegevensbeheer ontdekte dialoog met de samenvatting van de schending en het diagram van de gegevenslijn benadrukte.](../images/labels/policy-violation-dialog.png)
+>
+>Zie de [documentatie over schending van het gegevensgebruiksbeleid](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) voor meer informatie over gedeeltelijke beleidsovertredingen .
 
 Als u labels voor gegevensgebruik op schemaniveau wilt beheren, moet u een bestaand schema selecteren of een nieuw schema maken. Selecteer nadat u zich hebt aangemeld bij Adobe Experience Platform **[!UICONTROL Schemas]** op de linkernavigatie om de **[!UICONTROL Schemas]** werkruimte. Deze pagina bevat een overzicht van alle gemaakte schema&#39;s die tot uw organisatie behoren, samen met nuttige details over elk schema.
 

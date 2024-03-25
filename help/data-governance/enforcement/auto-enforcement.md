@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Automatische beleidscontrole
 description: In dit document wordt beschreven hoe beleidsregels voor gegevensgebruik automatisch worden toegepast wanneer gebruikers naar bestemmingen in Experience Platform worden geactiveerd.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '1998'
+source-wordcount: '2089'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ In de volgende secties worden de verschillende beleidshandhavingsberichten besch
 
 Als een beleidsovertreding optreedt tijdens een poging een publiek te activeren (of [het aanbrengen van uitgeeft aan een reeds geactiveerd publiek](#policy-enforcement-for-activated-audiences)) de actie wordt voorkomen en een pop-up lijkt erop te wijzen dat een of meer beleidsmaatregelen zijn overtreden. Als een schending is opgetreden, wordt de **[!UICONTROL Save]** De knop is uitgeschakeld voor de entiteit die u wijzigt totdat de juiste componenten worden bijgewerkt om te voldoen aan het beleid voor gegevensgebruik.
 
-Selecteer een beleidsovertreding in de linkerkolom van de pop-up om details voor die schending te tonen.
+Selecteer een beleidsnaam om details voor die schending te tonen.
 
 ![Een dialoogvenster waarin wordt aangegeven dat er een beleidsovertreding is opgetreden en de naam van het beleid is gemarkeerd.](../images/enforcement/violation-policy-select.png)
 
@@ -104,13 +104,21 @@ Een grafiek van de gegevenslijn wordt getoond onder de schendingssamenvatting, t
 
 ![Een dialoogvenster voor beleidsovertredingen waarin de grafiek van de datalijn is gemarkeerd.](../images/enforcement/data-lineage.png)
 
-U kunt ook de opdracht **[!UICONTROL Filter]** icon (![](../images/enforcement/filter.png)) om de weergegeven entiteiten op categorie te filteren. U moet ten minste twee categorieën selecteren om de gegevens weer te geven.
+U kunt ook de opdracht **[!UICONTROL Filter]** icon (![Een filterpictogram.](../images/enforcement/filter.png)) om de weergegeven entiteiten op categorie te filteren. U moet ten minste twee categorieën selecteren om de gegevens weer te geven.
 
 ![Een dialoogvenster voor beleidsovertredingen met het filter en de vervolgkeuzelijst voor gegevenslagen gemarkeerd.](../images/enforcement/lineage-filter.png)
 
 Selecteren **[!UICONTROL List view]** om de gegevenskoppeling als een lijst weer te geven. Als u wilt terugschakelen naar de visuele grafiek, selecteert u **[!UICONTROL Path view]**.
 
 ![Een dialoogvenster voor beleidsovertredingen met de padweergave voor gegevenslijn gemarkeerd.](../images/enforcement/list-view.png)
+
+#### Labels zijn toegepast {#labels-successfully-applied}
+
+Als u het beleid van het gegevensgebruik creeert alvorens u uw schemagebieden etiketteert, kunt u een dialoog van de schending van het governancebeleid ontmoeten zodra u etiketten op uw schema toepast. In dit geval kunt u een deel van uw schema labelen. De [!UICONTROL Labels successfully applied] geeft aan welke labels zijn toegepast, aangezien er voor dat veld geen beleidsbeperkingen gelden.
+
+Gebruik het diagram van de gegevenslijn om te begrijpen welke andere configuratieveranderingen moeten worden aangebracht alvorens u het etiket aan uw schemagebied kunt toevoegen.
+
+![Een dialoogvenster voor beleidsovertredingen met de [!UICONTROL Labels successfully applied] gemarkeerd.](../images/enforcement/labels-successfully-applied.png)
 
 ### Goedkeuring van het beleid {#consent-policy-evaluation}
 
