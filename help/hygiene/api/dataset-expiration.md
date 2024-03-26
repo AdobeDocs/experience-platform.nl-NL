@@ -3,7 +3,7 @@ title: API-eindpunt gegevensset vervaldatum
 description: Het /ttl eindpunt in de Hygiene API van Gegevens staat u toe om datasettermijnen in Adobe Experience Platform programmatically te plannen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
+source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
 workflow-type: tm+mt
 source-wordcount: '2083'
 ht-degree: 0%
@@ -489,3 +489,4 @@ De volgende tabel geeft een overzicht van de beschikbare queryparameters wanneer
 | `updatedDate` / `updatedToDate` / `updatedFromDate` | leuk `createdDate` / `createdFromDate` / `createdToDate`, maar komt overeen met de updatetijd van een gegevensset die vervalt in plaats van de aanmaaktijd.<br><br>Een vervaldatum wordt beschouwd als bijgewerkt op elke bewerking, ook wanneer deze wordt gemaakt, geannuleerd of uitgevoerd. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
+
