@@ -3,9 +3,9 @@ title: API-eindpunt gegevensset vervaldatum
 description: Het /ttl eindpunt in de Hygiene API van Gegevens staat u toe om datasettermijnen in Adobe Experience Platform programmatically te plannen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '2083'
 ht-degree: 0%
 
 ---
@@ -130,8 +130,6 @@ curl -X GET \
 
 Een succesvolle reactie keert de details van de datasetvervaldatum terug.
 
-<!-- Is there a different response from making a GET request to either '/ttl/{DATASET_ID}?include=history' or '/ttl/{TTL_ID}'? If so please can you provide the response for both (or just the ttl endpoint itf it differs from teh example) -->
-
 ```json
 {
     "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
@@ -186,29 +184,105 @@ De volgende JSON vertegenwoordigt een afgekapte reactie voor de details van een 
 }
 ```
 
-## Een gegevensset maken of bijwerken {#create-or-update}
+## Een gegevensset maken die vervalt {#create}
 
-Creeer of werk een vervaldatum voor een dataset door een verzoek van de PUT bij. Het verzoek van de PUT gebruikt of `datasetId` of de `ttlId`.
+Om ervoor te zorgen dat gegevens na een bepaalde periode uit het systeem worden verwijderd, plant u een vervaldatum voor een specifieke dataset door de gegevensset-id en de vervaldatum en -tijd op te geven in ISO 8601-indeling.
+
+Om een datasetvervaldatum tot stand te brengen, voer een verzoek van de POST uit zoals hieronder getoond en verstrek de hieronder vermelde waarden binnen de nuttige lading.
 
 **API-indeling**
 
 ```http
-PUT /ttl/{DATASET_ID}
-PUT /ttl/{TTL_ID}
+POST /ttl
 ```
-
-| Parameter | Beschrijving |
-| --- | --- |
-| `{DATASET_ID}` | Identiteitskaart van de dataset die u een vervaldatum wilt plannen. |
-| `{TTL_ID}` | De id van de vervaldatum van de gegevensset. |
 
 **Verzoek**
 
-Het volgende verzoek plant een dataset `5b020a27e7040801dedbf46e` voor verwijdering eind 2022 (Greenwich Mean Time). Als er geen bestaande vervaldatum voor de gegevensset wordt gevonden, wordt een nieuwe vervaldatum gemaakt. Als de gegevensset al een in behandeling zijnde vervaldatum heeft, wordt die vervaldatum bijgewerkt met de nieuwe `expiry` waarde.
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/hygiene/ttl \
+  -H `Authorization: Bearer {ACCESS_TOKEN}`
+  -H `x-gw-ims-org-id: {ORG_ID}`
+  -H `x-api-key: {API_KEY}`
+  -H `Accept: application/json`
+  -d {
+      "datasetId": "5b020a27e7040801dedbf46e",
+      "expiry": "2030-12-31T23:59:59Z"
+      "displayName": "Delete Acme Data before 2025",
+      "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+      }
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `datasetId` | **Vereist** Identiteitskaart van de doeldataset die u een vervaldatum wilt plannen. |
+| `expiry` | **Vereist** Een datum en tijd in ISO 8601-indeling. Als de tekenreeks geen expliciete tijdzoneverschuiving heeft, wordt aangenomen dat de tijdzone UTC is. De levensduur van de gegevens binnen het systeem wordt ingesteld op basis van de opgegeven vervalwaarde.<br>Opmerking:<ul><li>Het verzoek zal ontbreken als een datasetvervaldatum reeds voor de dataset bestaat.</li><li>Deze datum en tijd moeten ten minste **24 uur in de toekomst**.</li></ul> |
+| `displayName` | Een facultatieve vertoningsnaam voor het verzoek van de datasetvervaldatum. |
+| `description` | Een optionele beschrijving voor de vervalaanvraag. |
+
+**Antwoord**
+
+Een succesvolle reactie keert een (Gecreeerde) status van HTTP 201 en de nieuwe staat van de datasetvervaldatum terug, als er geen reeds bestaande datasetvervaldatum was.
+
+```json
+{
+  "ttlId":       "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
+  "datasetId":   "5b020a27e7040801dedbf46e",
+  "datasetName": "Acme licensed data",
+  "sandboxName": "prod",
+  "imsOrg":      "{ORG_ID}",
+  "status":      "pending",
+  "expiry":      "2030-12-31T23:59:59Z",
+  "updatedAt":   "2021-08-19T11:14:16Z",
+  "updatedBy":   "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
+  "displayName": "Delete Acme Data before 2031",
+  "description": "The Acme information in this dataset is licensed for our use through the end of 2030."
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `ttlId` | De id van de vervaldatum van de gegevensset. |
+| `datasetId` | De id van de gegevensset waarop deze vervaldatum van toepassing is. |
+| `datasetName` | De vertoningsnaam voor de dataset is deze vervaldatum van toepassing op. |
+| `sandboxName` | De naam van de sandbox waarin de doelgegevensset zich bevindt. |
+| `imsOrg` | De id van uw organisatie. |
+| `status` | De huidige status van de gegevenssetvervaldatum. |
+| `expiry` | De geplande datum en tijd waarop de dataset zal worden geschrapt. |
+| `updatedAt` | Een tijdstempel van wanneer de vervaldatum voor het laatst is bijgewerkt. |
+| `updatedBy` | De gebruiker die de vervaldatum voor het laatst heeft bijgewerkt. |
+| `displayName` | Een weergavenaam voor de vervalaanvraag. |
+| `description` | Een beschrijving voor de vervalaanvraag. |
+
+De HTTP-status 400 (Onjuist verzoek) treedt op als er al een gegevenssetvervaldatum bestaat voor de gegevensset. Een mislukte reactie keert een 404 (niet Gevonden) status van HTTP terug als geen dergelijke datasetvervaldatum bestaat (of u hebt geen toegang tot het).
+
+## Vervaldatum gegevensset bijwerken {#update}
+
+Om een vervaldatum voor een dataset bij te werken, gebruik een verzoek van de PUT en `ttlId`. U kunt de `displayName`, `description`, en/of `expiry` informatie.
+
+>[!NOTE]
+>
+>Als u de vervaldatum en -tijd wijzigt, moet deze in de toekomst minstens 24 uur duren. Deze gedwongen vertraging biedt u de mogelijkheid om de vervaldatum te annuleren of opnieuw te plannen en elk onbedoeld verlies van gegevens te voorkomen.
+
+**API-indeling**
+
+```http
+PUT /ttl/{TTL_ID}
+```
+
+<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `{TTL_ID}` | Identiteitskaart van de datasetvervaldatum die u wilt veranderen. |
+
+**Verzoek**
+
+Het volgende verzoek herplannt een datasetvervaldatum `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` eind 2024 (Greenwich Mean Time). Als de bestaande gegevenssetvervaldatum wordt gevonden, wordt die vervaldatum bijgewerkt met nieuwe `expiry` waarde.
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -223,7 +297,7 @@ curl -X PUT \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `expiry` | Een datum en tijd in ISO 8601-indeling. Als de tekenreeks geen expliciete tijdzoneverschuiving heeft, wordt aangenomen dat de tijdzone UTC is. De levensduur van de gegevens binnen het systeem wordt ingesteld op basis van de opgegeven vervalwaarde. Om het even welke vorige verlooptimestamp voor de zelfde dataset wordt vervangen door de nieuwe vervalwaarde u hebt verstrekt. |
+| `expiry` | **Vereist** Een datum en tijd in ISO 8601-indeling. Als de tekenreeks geen expliciete tijdzoneverschuiving heeft, wordt aangenomen dat de tijdzone UTC is. De levensduur van de gegevens binnen het systeem wordt ingesteld op basis van de opgegeven vervalwaarde. Om het even welke vorige verlooptimestamp voor de zelfde dataset wordt vervangen door de nieuwe vervalwaarde u hebt verstrekt. Deze datum en tijd moeten ten minste **24 uur in de toekomst**. |
 | `displayName` | Een weergavenaam voor de vervalaanvraag. |
 | `description` | Een optionele beschrijving voor de vervalaanvraag. |
 
@@ -231,7 +305,7 @@ curl -X PUT \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de details van de gegevenssetvervaldatum, met HTTP status 200 (OK) als een bestaande vervaldatum is bijgewerkt, of 201 (Gemaakt) als er geen bestaande vervaldatum was.
+Een succesvolle reactie keert de nieuwe staat van de datasetvervalsing en een status 200 van HTTP terug (O.K.) als een reeds bestaande vervaldatum werd bijgewerkt.
 
 ```json
 {
@@ -258,6 +332,8 @@ Een geslaagde reactie retourneert de details van de gegevenssetvervaldatum, met 
 | `updatedBy` | De gebruiker die de vervaldatum voor het laatst heeft bijgewerkt. |
 
 {style="table-layout:auto"}
+
+Een mislukte reactie retourneert een HTTP-status van 404 (Niet gevonden) als een dergelijke vervaldatum van de gegevensset niet bestaat.
 
 ## Vervaldatum gegevensset annuleren {#delete}
 
