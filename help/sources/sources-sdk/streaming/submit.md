@@ -2,14 +2,19 @@
 title: De bron testen en verzenden
 description: Het volgende document bevat stappen voor het testen en verifiëren van een nieuwe bron met behulp van de Flow Service API en het integreren van een nieuwe bron via Self-Serve Sources (Streaming SDK).
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1236'
 ht-degree: 0%
 
 ---
 
 # De bron testen en verzenden
+
+>[!NOTE]
+>
+>Self-Serve Sources Streaming SDK bevindt zich in bèta. Lees de [overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
 De laatste stappen voor het integreren van uw nieuwe bron in Adobe Experience Platform met behulp van Self-Serve Sources (Streaming SDK) zijn het testen en verzenden van uw nieuwe bron. Nadat u de verbindingsspecificatie hebt voltooid en de streamingstroomspecificatie hebt bijgewerkt, kunt u de functionaliteit van uw bron testen via de API of de gebruikersinterface. Als dit lukt, kunt u de nieuwe bron verzenden door contact op te nemen met uw Adobe.
 

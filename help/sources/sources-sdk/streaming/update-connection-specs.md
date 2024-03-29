@@ -2,14 +2,19 @@
 title: Een verbindingsspecificatie voor Streaming SDK bijwerken met de Flow Service API
 description: In het volgende document wordt beschreven hoe u een verbindingsspecificatie kunt opgeven met behulp van de Flow Service API voor Self-Serve Sources (Streaming SDK).
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '163'
 ht-degree: 1%
 
 ---
 
 # Een verbindingsspecificatie bijwerken met de Flow Service API
+
+>[!NOTE]
+>
+>Self-Serve Sources Streaming SDK bevindt zich in bèta. Lees de [overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
 U kunt de eigenschappen van een verbindingsspecificatie bijwerken via een PUT-bewerking. Wanneer het bijwerken van een verbindingsspecificatie door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer het creëren van een nieuwe verbindingsspecificatie in een verzoek van de POST.
 

@@ -2,14 +2,19 @@
 title: Stroomspecificaties bijwerken voor Streaming SDK met behulp van de Flow Service API
 description: Het volgende document bevat stappen voor het ophalen en bijwerken van stroomspecificaties met behulp van de Flow Service API voor Self-Serve Sources (Streaming SDK).
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
 
 # Stroomspecificaties bijwerken met de opdracht [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>Self-Serve Sources Streaming SDK bevindt zich in bèta. Lees de [overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
 Als u een nieuwe id voor de verbindingsspecificatie hebt gegenereerd, moet u deze id toevoegen aan een stroomspecificatie om een gegevensstroom te kunnen maken.
 

@@ -2,14 +2,19 @@
 title: Uw bron documenteren (Streaming SDK)
 description: De laatste stap voordat je nieuwe bron live kan worden gemaakt in Adobe Experience Platform is het documenteren van je nieuwe bron.
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
 
 # Uw bron documenteren (Streaming SDK)
+
+>[!NOTE]
+>
+>Self-Serve Sources Streaming SDK bevindt zich in bèta. Lees de [overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
 De laatste stap voordat uw nieuwe bron live in Adobe Experience Platform kan worden ingesteld, is het documenteren van uw nieuwe bron.
 
