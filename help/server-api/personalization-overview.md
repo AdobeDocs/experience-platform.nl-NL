@@ -2,20 +2,20 @@
 title: Overzicht van personalisatie
 description: Leer hoe u de Adobe Experience Platform Edge Network Server-API gebruikt om persoonlijke inhoud op te halen uit de oplossingen voor het aanpassen van Adoben.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '735'
 ht-degree: 4%
 
 ---
 
 # Overzicht van personalisatie
 
-Met de [!DNL Server API]kunt u persoonlijke inhoud ophalen van Adobe-personalisatieoplossingen, waaronder [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) en [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=nl).
+Met de [!DNL Server API]kunt u persoonlijke inhoud ophalen van Adobe-personalisatieoplossingen, waaronder [Adobe Target](https://business.adobe.com/products/target/adobe-target.html), [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home), en [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=nl).
 
 Daarnaast worden de [!DNL Server API] bevoegdheden personaliseringsmogelijkheden van zelfde pagina en van volgende pagina door de verpersoonlijkingsbestemmingen van Adobe Experience Platform, zoals [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) en de [aangepaste verpersoonlijkingsverbinding](../destinations/catalog/personalization/custom-personalization.md). Om te leren hoe te om Experience Platform voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen, zie [speciale gids](../destinations/ui/activate-edge-personalization-destinations.md).
 
-Wanneer het gebruiken van de Server API, moet u de reactie integreren die door de verpersoonlijkingsmotor met de logica wordt verstrekt die wordt gebruikt om inhoud op uw plaats terug te geven. In tegenstelling tot [Web SDK](../web-sdk/home.md)de [!DNL Server API] heeft geen mechanisme om automatisch inhoud toe te passen die is geretourneerd door [!DNL Adobe Target] en [!DNL Offer Decisioning].
+Wanneer het gebruiken van de Server API, moet u de reactie integreren die door de verpersoonlijkingsmotor met de logica wordt verstrekt die wordt gebruikt om inhoud op uw plaats terug te geven. In tegenstelling tot [Web SDK](../web-sdk/home.md)de [!DNL Server API] heeft geen mechanisme om inhoud automatisch toe te passen die door de oplossingen van de Adobe van de verpersoonlijking is teruggekeerd.
 
 ## Terminologie {#terminology}
 
@@ -34,24 +34,30 @@ Voor het ophalen van gepersonaliseerde inhoud is een expliciet aanvraagqueryobje
 
 ```json
 {
-   "query":{
-      "personalization":{
-         "schemas":[
-            "https://ns.adobe.com/personalization/html-content-item",
-            "https://ns.adobe.com/personalization/json-content-item",
-            "https://ns.adobe.com/personalization/redirect-item",
-            "https://ns.adobe.com/personalization/dom-action"
-         ],
-         "decisionScopes":[
-            "alloyStore",
-            "siteWide",
-            "__view__",
-            "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ"
-         ]
-      }
-   }
+  "query": {
+    "personalization": {
+      "schemas": [
+        "https://ns.adobe.com/personalization/html-content-item",
+        "https://ns.adobe.com/personalization/json-content-item",
+        "https://ns.adobe.com/personalization/redirect-item",
+        "https://ns.adobe.com/personalization/dom-action"
+      ],
+      "decisionScopes": [
+        "alloyStore",
+        "siteWide",
+        "__view__",
+        "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ"
+      ],
+      "surfaces": [
+        "web://mywebpage.html/",
+        "web://mywebpage.html/#sample-json-content"
+      ]
+    }
+  }
 }
 ```
+
+
 
 | Kenmerk | Type | Vereist/optioneel | Beschrijving |
 | --- | --- | --- | ---|

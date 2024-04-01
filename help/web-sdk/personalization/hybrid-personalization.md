@@ -3,9 +3,9 @@ title: Hybride verpersoonlijking die Web SDK en de Server API van het Netwerk va
 description: Dit artikel toont aan hoe u SDK van het Web samen met de Server API kunt gebruiken om hybride verpersoonlijking op uw Webeigenschappen op te stellen.
 keywords: personalisatie; hybride; server-API; server-side; hybride implementatie;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '853'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 De verpersoonlijking van Hybdrid beschrijft het proces om verpersoonlijkingsinhoud server-kant terug te winnen, die [Edge Network Server-API](../../server-api/overview.md)en renderen op de client, met de [Web SDK](../home.md).
 
-U kunt hybride personalisatie met verpersoonlijkingsoplossingen zoals Adobe Target of Offer decisioning gebruiken, het verschil is de inhoud van [!UICONTROL Server API] lading.
+U kunt hybride personalisatie met verpersoonlijkingsoplossingen zoals Adobe Target, Adobe Journey Optimizer, of Offer decisioning gebruiken, het verschil is de inhoud van [!UICONTROL Server API] lading.
 
 ## Vereisten {#prerequisites}
 
@@ -39,9 +39,9 @@ In het onderstaande stroomdiagram wordt de volgorde beschreven van de stappen di
 1. De server-API retourneert de verpersoonlijkingsinhoud naar uw toepassingsserver.
 1. De toepassingsserver retourneert een HTML-reactie op de clientbrowser die de [identiteits- en clustercookies](#cookies).
 1. Op de clientpagina [!DNL Web SDK] `applyResponse` wordt aangeroepen, waarbij de koppen en de hoofdtekst van het [!UICONTROL Server API] antwoord van de vorige stap.
-1. De [!DNL Web SDK] Hiermee wordt de pagina geladen [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) voorstellen automatisch, omdat de `renderDecisions` markering is ingesteld op `true`.
-1. Op formulier gebaseerd [!DNL JSON] aanbiedingen worden handmatig toegepast via de `applyPersonalization` methode, om de [!DNL DOM] op basis van het aanbod voor personalisatie.
-1. Voor op formulieren gebaseerde activiteiten moeten weergavegebeurtenissen handmatig worden verzonden om aan te geven wanneer de aanbieding is weergegeven. Dit gebeurt via de `sendEvent` gebruiken.
+1. De [!DNL Web SDK] geeft Doel weer [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) biedt en Journey Optimizer Web Channel-items automatisch aan, omdat de `renderDecisions` markering is ingesteld op `true`.
+1. Doel op basis van formulier [!DNL HTML]/[!DNL JSON] aanbiedingen en op code gebaseerde ervaringen van Journey Optimizer worden handmatig toegepast via de `applyProposition` methode, om de [!DNL DOM] op basis van de personalisatie-inhoud in het voorstel.
+1. Voor formuliergebaseerd doel [!DNL HTML]/[!DNL JSON] weergavegebeurtenissen moeten handmatig worden verzonden om aan te geven wanneer de geretourneerde inhoud is weergegeven. Dit geldt ook voor aanbiedingen en ervaringen op basis van Journey Optimizer-code. Dit gebeurt via de `sendEvent` gebruiken.
 
 ## Cookies {#cookies}
 

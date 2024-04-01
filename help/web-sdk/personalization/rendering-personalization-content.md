@@ -3,9 +3,9 @@ title: Persoonlijke inhoud renderen met de SDK van het Adobe Experience Platform
 description: Leer hoe u gepersonaliseerde inhoud kunt renderen met de SDK van Adobe Experience Platform Web.
 keywords: personalisatie;renderDecisions;sendEvent;DecisionScopes;proposities;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 6841a6f777d18845ce36e3503fbdb9698ece84bb
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Adobe Experience Platform Web SDK steunt het terugwinnen van gepersonaliseerde i
 
 Bovendien, de SDK van het Web bevoegdheden de zelfde-pagina en volgende-pagina verpersoonlijkingsmogelijkheden door de verpersoonlijkingsbestemmingen van Adobe Experience Platform, zoals [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) en de [aangepaste verpersoonlijkingsverbinding](../../destinations/catalog/personalization/custom-personalization.md). Om te leren hoe te om Experience Platform voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen, zie [speciale gids](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-Inhoud die is gemaakt in Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) en Adobe Journey Optimizer [Gebruikersinterface webcampagne](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) kan automatisch door SDK worden opgehaald en teruggegeven. Inhoud die is gemaakt in Adobe Target [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) of Offer decisioning kan niet automatisch door SDK worden teruggegeven. In plaats daarvan moet u deze inhoud aanvragen met de SDK en de inhoud vervolgens zelf handmatig renderen.
+Inhoud die is gemaakt in Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) en Adobe Journey Optimizer [Gebruikersinterface webcampagne](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) kan automatisch door SDK worden opgehaald en teruggegeven. Inhoud die is gemaakt in Adobe Target [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), ADOBE JOURNEY OPTIMIZER [Experience Channel op basis van code](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) of Offer decisioning kan niet automatisch door SDK worden teruggegeven. In plaats daarvan moet u deze inhoud aanvragen met de SDK en de inhoud vervolgens zelf handmatig renderen.
 
 ## Inhoud automatisch renderen {#automatic}
 
@@ -299,7 +299,7 @@ De SDK biedt faciliteiten aan [flikkering beheren](../personalization/manage-fli
 
 ## Profielen renderen in toepassingen van één pagina zonder metrische gegevens te verhogen {#applypropositions}
 
-De `applyPropositions` met de opdracht kunt u een array met voorstellingen renderen of uitvoeren vanuit [!DNL Target] in toepassingen van één pagina, zonder het verhogen van [!DNL Analytics] en [!DNL Target] metriek. Dit verhoogt de nauwkeurigheid van de rapportage.
+De `applyPropositions` met de opdracht kunt u een array met voorstellingen renderen of uitvoeren vanuit [!DNL Target] of Adobe Journey Optimizer in toepassingen van één pagina, zonder het verhogen van [!DNL Analytics] en [!DNL Target] metriek. Dit verhoogt de nauwkeurigheid van de rapportage.
 
 >[!IMPORTANT]
 >
@@ -338,7 +338,7 @@ alloy("applyPropositions", {
 
 ### Hoofdlettergebruik 2: voorvertoningen renderen die geen kiezer hebben
 
-Dit gebruiksgeval is van toepassing op activiteitenaanbiedingen die zijn gemaakt met de [!DNL Target Form-based Experience Composer].
+Dit gebruiksgeval is van toepassing op ervaringen die zijn geschreven met de [!DNL Target Form-based Experience Composer] of Adobe Journey Optimizer [Experience Channel op basis van code](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
 
 U moet de kiezer, de handeling en het bereik opgeven in het dialoogvenster `applyPropositions` vraag.
 
@@ -372,16 +372,31 @@ alloy("sendEvent", {
         var renderedPropositions = applyPropositionsResult.propositions;
 
         // Send the display notifications via sendEvent command
-        alloy("sendEvent", {
-            "xdm": {
-                "eventType": "decisioning.propositionDisplay",
-                "_experience": {
-                    "decisioning": {
-                        "propositions": renderedPropositions
-                    }
-                }
-            }
-        });
+        function sendDisplayEvent(proposition) {
+            const {
+                id,
+                scope,
+                scopeDetails = {}
+            } = proposition;
+
+            alloy("sendEvent", {
+                xdm: {
+                    eventType: "decisioning.propositionDisplay",
+                    _experience: {
+                        decisioning: {
+                            propositions: [{
+                                id: id,
+                                scope: scope,
+                                scopeDetails: scopeDetails,
+                            }, ],
+                            propositionEventType: {
+                                display: 1
+                            },
+                        },
+                    },
+                },
+            });
+        }
     });
 });
 ```

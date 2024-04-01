@@ -3,16 +3,16 @@ title: Adobe Journey Optimizer gebruiken met de Platform Web SDK
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Journey Optimizer
 keywords: ajo;ajo web;adobe road optimizer;renderDecisions;surfaces;decisions;proposities;scope;schema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
 
 # Gebruiken [!DNL Adobe Journey Optimizer] met de [!DNL Platform Web SDK]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] kan persoonlijke ervaringen leveren en weergeven die worden beheerd in [!DNL Adobe Journey Optimizer] naar het webkanaal. U kunt een redacteur gebruiken WYSIWYG, [!DNL Adobe Journey Optimizer] [Gebruikersinterface webcampagne](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), om uw [!DNL Journey Optimizer Web] campagnes en personalisatie ervaringen.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] kan persoonlijke ervaringen leveren en weergeven die worden beheerd in [!DNL Adobe Journey Optimizer] naar het webkanaal. U kunt een redacteur gebruiken WYSIWYG, [!DNL Adobe Journey Optimizer] [Webkanaal](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)of een niet-visuele interface, de [Experience Channel op basis van code](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) om uw [!DNL Journey Optimizer Web] campagnes en personalisatie ervaringen.
 
 >[!IMPORTANT]
 >
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Terminologie {#terminology}
 
-**[!UICONTROL Surface]**: Een weboppervlak is een webeigenschap die wordt geïdentificeerd door een URL waarbij de [!DNL Adobe Journey Optimizer] ervaringsinhoud wordt geleverd.
+**[!UICONTROL Surface]**: Een weboppervlak is een webpagina of -locatie op een pagina die wordt aangeduid met een URI waarin de [!DNL Adobe Journey Optimizer] ervaringsinhoud wordt geleverd.
 
 **[!UICONTROL Propositions]**: In [!DNL Adobe Journey Optimizer], correleren voorstellen met de ervaring die is gekozen op basis van een [!DNL Journey Optimizer Campaign].
 
