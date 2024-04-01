@@ -3,9 +3,9 @@ keywords: platform;bestemmingen;bestemmingswerkruimte;werkruimte;ui;bestemmingen
 title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vijf secties, Overzicht, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: dad07add8c5f9cc98a187c2e2222a51611dbd1a2
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ De **[!UICONTROL Browse]** toont de bestemmingen waarmee u een verbinding hebt g
 | [!UICONTROL Created] | De datum en UTC-tijd waarop de activeringsstroom naar het doel is gemaakt. Selecteer het pijl-omhoog/pijl-omlaag om de activeringsstromen eerst op de nieuwste of eerst op de oudste te sorteren. |
 | [!UICONTROL Status] | `Enabled` of `Disabled`. Geeft aan of gegevens op dit doel worden geactiveerd. |
 
-Klik op een doelrij om meer informatie over de bestemming in de juiste spoorstaaf te tonen.
+Klik op een doelrij om meer informatie over de bestemming in de juiste spoorstaaf, zoals bestemmings identiteitskaart, beschrijving, het aantal geactiveerde doelsoorten, en meer te tonen.
 
 ![Doelrij klikken](../assets/ui/workspace/click-destination-row.png)
 
@@ -120,8 +120,8 @@ Selecteer de doelnaam om informatie over het publiek te zien dat aan deze bestem
 
 De **[!UICONTROL System View]** wordt een grafische weergave weergegeven van de activeringsstromen die u hebt ingesteld in de Adobe Experience Platform.
 
-![Data-flows1](../assets/ui/workspace/data-flows1.png)
+![Gegevensstromen1](../assets/ui/workspace/data-flows1.png)
 
 Selecteer om het even welke bestemmingen die op de pagina worden getoond en klik **[!UICONTROL View dataflows]** om informatie over alle verbindingen te zien u opstelling voor elke bestemming hebt.
 
-![Data-flows2](../assets/ui/workspace/data-flows2.png)
+![Gegevensstromen2](../assets/ui/workspace/data-flows2.png)
