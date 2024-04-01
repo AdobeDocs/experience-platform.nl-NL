@@ -1,9 +1,10 @@
 ---
 title: Kaartvelden definiëren in de gebruikersinterface
 description: Leer hoe u een kaartveld definieert in de gebruikersinterface van het Experience Platform.
-source-git-commit: 8eea73c91d0671b1ddaeb8da0dc18b3e5e306f57
+exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
+source-git-commit: 57a0381401c6084513ce7413b66dec56044b4492
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
@@ -25,6 +26,19 @@ A [!UICONTROL Map value type] wordt weergegeven. Deze waarde is vereist voor [!U
 Nadat u het subveld hebt geconfigureerd, moet u het aan een veldgroep toewijzen. Gebruik de **[!UICONTROL Field Group]** vervolgkeuzemenu, of zoekveld, en selecteer **[!UICONTROL Apply]**. U kunt velden aan het object blijven toevoegen met hetzelfde proces of **[!UICONTROL Save]** om uw instellingen te bevestigen.
 
 ![Een opname van de selectie van de veldgroep en de instellingen die worden toegepast.](../../images/ui/fields/special/assign-to-field-group.gif)
+
+## Gebruiksbeperkingen {#restrictions}
+
+XDM plaatst de volgende beperkingen op het gebruik van dit gegevenstype:
+
+* Type kaart MOET van het type zijn `object`.
+* Voor typen toewijzingen MOET GEEN eigenschap zijn gedefinieerd (met andere woorden, ze definiëren &quot;lege&quot; objecten).
+* Kaarttypen MOETEN een `additionalProperties.type` veld dat de waarden beschrijft die binnen de kaart kunnen worden geplaatst, of `string` of `integer`.
+
+Zorg ervoor dat u kaart-type gebieden wanneer absoluut noodzakelijk slechts gebruikt, aangezien zij de volgende prestatiesnadelen dragen:
+
+* Responstijd van [Adobe Experience Platform Query Service](../../../query-service/home.md) degradeert van drie seconden tot tien seconden voor 100 miljoen verslagen.
+* Kaarten moeten minder dan 16 sleutels hebben of anders risico op verdere afbraak.
 
 >[!NOTE]
 >
