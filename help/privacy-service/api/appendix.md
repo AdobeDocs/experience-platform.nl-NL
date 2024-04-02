@@ -5,9 +5,9 @@ title: Bijlage Privacy Service API-handleiding
 description: Dit document bevat aanvullende informatie voor het werken met de Privacy Service-API.
 role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 644e85fe5c9b1a37f69c75755713e929736c2e89
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '496'
 ht-degree: 5%
 
 ---
@@ -62,18 +62,24 @@ Wanneer u een `namespace` waarde in de [!DNL Privacy Service] API, a **naamruimt
 
 In de volgende tabel worden de toegestane waarden voor het opgeven van een Adobe-product in de `include` kenmerk van een aanvraag voor het maken van een baan.
 
+>[!NOTE]
+>
+>De waarden voor de lijst met producten zijn niet hoofdlettergevoelig. Camel-case wordt aanbevolen, maar niet afgedwongen.
+
 | Product | Waarde voor gebruik in de `include` attribute |
 | --- | --- |
 | Adobe Advertising Cloud | `adCloud` |
 | Adobe Analytics | `analytics` |
-| Adobe Audience Manager | `AudienceManager` |
+| Adobe Audience Manager | `audienceManager` |
 | Adobe Campaign | `campaign` |
-| Adobe Experience Platform (Data Lake) | `aepDataLake` |
+| Adobe Experience Platform (data Lake) | `aepDataLake` |
 | Adobe Experience Platform (Real-Time Klantprofiel) | `profileService` |
 | Adobe Pass-verificatie | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Klantkenmerken (CRS) | `CRS` |
+| Reisbeheer van klanten | `cjm` |
 | Identiteitsservice | `identity` |
 | Marketo Engage | `marketo` |
+| Marketo Measure | `marketomeasure` |
 
 {style="table-layout:auto"}
