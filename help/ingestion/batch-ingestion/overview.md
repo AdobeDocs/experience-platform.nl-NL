@@ -2,20 +2,20 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevensopname;partij;Partij;Gegevensset inschakelen;Overzicht van inname van batch;overzicht;overzicht;overzicht van inname van batch
 solution: Experience Platform
 title: Overzicht van de API voor batchverwerking
-description: Met de Adobe Experience Platform Batch Ingestie-API kunt u gegevens als batchbestanden in het Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een dossier van het Pakket), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
+description: Met de Adobe Experience Platform Batch Ingestie-API kunt u gegevens als batchbestanden in Platform opnemen. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een dossier van het Pakket), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
 workflow-type: tm+mt
-source-wordcount: '1387'
+source-wordcount: '1388'
 ht-degree: 4%
 
 ---
 
 # Overzicht van de API voor inname van batch
 
-Met de Adobe Experience Platform Batch Ingestie-API kunt u gegevens als batchbestanden in het Platform invoeren. Gegevens die worden ingevoerd, kunnen profielgegevens zijn van een vlak bestand (zoals een Parquet-bestand) of gegevens die overeenkomen met een bekend schema in het [!DNL Experience Data Model] (XDM) register.
+Met de Adobe Experience Platform Batch Ingestie-API kunt u gegevens als batchbestanden in Platform opnemen. Gegevens die worden ingevoerd, kunnen profielgegevens zijn van een vlak bestand (zoals een Parquet-bestand) of gegevens die overeenkomen met een bekend schema in het [!DNL Experience Data Model] (XDM) register.
 
-De [Referentie voor API voor batchverwerking](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) bevat aanvullende informatie over deze API-aanroepen.
+De [Referentie voor API voor batchverwerking](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) aanvullende informatie over deze API-aanroepen.
 
 Het volgende diagram schetst het proces van partijingestie:
 
@@ -44,7 +44,7 @@ De gegevensinvoer in de batch heeft enkele beperkingen:
 - Maximumaantal bestanden per batch: 1500
 - Maximale batchgrootte: 100 GB
 - Maximumaantal eigenschappen of velden per rij: 10000
-- Maximumaantal batches per minuut per gebruiker: 138
+- Maximumaantal batches per minuut op het datumpeer per gebruiker: 138
 
 >[!NOTE]
 >
@@ -54,28 +54,28 @@ De gegevensinvoer in de batch heeft enkele beperkingen:
 
 Bij het invoeren van gegevens is het belangrijk om te begrijpen hoe [!DNL Experience Data Model] (XDM) schema&#39;s werken. Voor meer informatie over hoe XDM gebiedstypes aan verschillende formaten in kaart brengen, gelieve te lezen [Handleiding voor ontwikkelaars van het schema Register](../../xdm/api/getting-started.md).
 
-Er is enige flexibiliteit bij het opnemen van gegevens - als een type niet aanpast wat in het doelschema is, zullen de gegevens in het uitgedrukt doeltype worden omgezet. Als dit niet het geval is, zal de batchverwerking mislukken met een `TypeCompatibilityException`.
+Er is enige flexibiliteit wanneer het opnemen van gegevens - als een type niet aanpast wat in het doelschema is, zullen de gegevens in het uitgedrukt doeltype worden omgezet. Als dit niet het geval is, zal de batchverwerking mislukken met een `TypeCompatibilityException`.
 
-JSON en CSV hebben bijvoorbeeld geen `date` of `date-time` type. Deze waarden worden dus uitgedrukt met [Tekenreeksen met ISO 8061-indeling](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15&quot;):05:59,000-08:00&quot;) of Unix Tijd die in milliseconden (1531263959000) wordt geformatteerd en bij inname in het doelXDM type wordt omgezet.
+JSON en CSV hebben bijvoorbeeld geen `date` of `date-time` type. Als gevolg hiervan worden deze waarden uitgedrukt met [Tekenreeksen met ISO 8061-indeling](https://www.iso.org/iso-8601-date-and-time-format.html) (2018-07-10T15):05:59,000-08:00&quot;) of Unix Tijd die in milliseconden (1531263959000) wordt geformatteerd en bij inname in het doelXDM type wordt omgezet.
 
 In de onderstaande tabel worden de conversies weergegeven die worden ondersteund bij het invoeren van gegevens.
 
-| Binnenkomend (rij) vs. Doel (kolom) | Tekenreeks | Byte | Kort | Geheel | Lang | Dubbel | Datum | Datum/tijd | Object | Kaart |
+| Binnenkomend (rij) vs. Doel (kolom) | String | Byte | Kort | Geheel | Lang | Dubbel | Datum | Datum/tijd | Object | Kaart |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tekenreeks | X | X | X | X | X | X | X | X |  |  |
-| Byte | X | X | X | X | X | X |  |  |  |  |
-| Kort | X | X | X | X | X | X |  |  |  |  |
-| Geheel | X | X | X | X | X | X |  |  |  |  |
-| Lang | X | X | X | X | X | X | X | X |  |  |
-| Dubbel | X | X | X | X | X | X |  |  |  |  |
-| Datum |  |  |  |  |  |  | X |  |  |  |
-| Datum/tijd |  |  |  |  |  |  |  | X |  |  |
-| Object |  |  |  |  |  |  |  |  | X | X |
-| Kaart |  |  |  |  |  |  |  |  | X | X |
+| String | X | X | X | X | X | X | X | X |   |   |
+| Byte | X | X | X | X | X | X |   |   |   |   |
+| Kort | X | X | X | X | X | X |   |   |   |   |
+| Geheel | X | X | X | X | X | X |   |   |   |   |
+| Lang | X | X | X | X | X | X | X | X |   |   |
+| Dubbel | X | X | X | X | X | X |   |   |   |   |
+| Datum |   |   |   |   |   |   | X |   |   |   |
+| Datum/tijd |   |   |   |   |   |   |   | X |   |   |
+| Object |   |   |   |   |   |   |   |   | X | X |
+| Kaart |   |   |   |   |   |   |   |   | X | X |
 
 >[!NOTE]
 >
->Booleaanse waarden en arrays kunnen niet naar andere typen worden geconverteerd.
+>Booleaanse waarden en arrays kunnen niet worden omgezet in andere typen.
 
 ## De API gebruiken
 
@@ -408,7 +408,7 @@ De `"status"` is wat de huidige status van de gevraagde partij toont. De batches
 | Status | Beschrijving |
 | ------ | ----------- |
 | Verlaten | De batch is niet binnen de verwachte tijd voltooid. |
-| Afgebroken | Een afbreekbewerking heeft **expliciet** is aangeroepen (via Batch Ingest-API) voor de opgegeven batch. Wanneer de batch in de status &quot;Geladen&quot; is, kan deze niet worden afgebroken. |
+| Afgebroken | Een afbreekbewerking heeft **expliciet** is aangeroepen (via de tag Batch Ingest API) voor de opgegeven batch. Wanneer de batch in de status &quot;Geladen&quot; is, kan deze niet worden afgebroken. |
 | Actief | De partij is met succes bevorderd en is beschikbaar voor downstreamconsumptie. Deze status kan door elkaar worden gebruikt met &quot;Succes&quot;. |
 | Verwijderd | De gegevens voor de batch zijn volledig verwijderd. |
 | Mislukt | Een eindstaat die uit of slechte configuratie en/of slechte gegevens voortvloeit. Gegevens voor een mislukte batch worden **niet** opdagen. Deze status kan door elkaar worden gebruikt met &quot;Mislukking&quot;. |

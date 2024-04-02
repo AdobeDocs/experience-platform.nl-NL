@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 0e8147a9e4589747b212ce1dd0f0bc215f3bab4c
+source-git-commit: dc899a4aa64b6e734322020e4c10aee687c6d8c5
 workflow-type: tm+mt
-source-wordcount: '3808'
+source-wordcount: '3804'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Naast elk publiek bevindt zich een ellipspictogram. Als u deze optie selecteert,
 | [!UICONTROL Share with partners] | Auditie, Aangepaste upload, Segmentatieservice | Deelt uw publiek met andere gebruikers van het Platform. Lees voor meer informatie over deze functie de [Overzicht van afstemming van segment](./segment-match/overview.md). |
 | [!UICONTROL Manage tags] | Auditie, Aangepaste upload, Segmentatieservice | Beheert de door de gebruiker gedefinieerde tags die bij het publiek horen. Lees voor meer informatie over deze functie de sectie over [filteren en labelen](#manage-audiences). |
 | [!UICONTROL Move to folder] | Auditie, Aangepaste upload, Segmentatieservice | Beheert tot welke map het publiek behoort. Lees voor meer informatie over deze functie de sectie over [filteren en labelen](#manage-audiences). |
-| [!UICONTROL Copy] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee dupliceert u het geselecteerde publiek. |
+| [!UICONTROL Copy] | Segmenteringsservice | Hiermee dupliceert u het geselecteerde publiek. |
 | [!UICONTROL Apply access labels] | Auditie, Aangepaste upload, Segmentatieservice | Beheert de toegangslabels die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [beheren, labels](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Archive] | Aangepaste upload | Hiermee archiveert u het geselecteerde publiek. |
 | [!UICONTROL Delete] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verwijdert u het geselecteerde publiek. |
