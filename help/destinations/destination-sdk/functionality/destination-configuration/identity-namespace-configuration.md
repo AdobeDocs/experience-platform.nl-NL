@@ -2,9 +2,9 @@
 description: Leer hoe te om de gesteunde doelidentiteiten voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie naamruimte voor identiteit
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 0%
 
 Experience Platform gebruikt naamruimten om het type van specifieke identiteiten te beschrijven. Bijvoorbeeld, een identiteitsnaamruimte genoemd `Email` geeft een vergelijkbare waarde aan `name@email.com` als e-mailadres.
 
-Bij het maken van een bestemming via Destination SDK, naast [het vormen van een partnerschema](schema-configuration.md) dat de gebruikers profielattributen en identiteiten aan kunnen in kaart brengen, kunt u identiteitsnamespaces ook bepalen die door uw bestemmingsplatform worden gesteund.
+Wanneer het creëren van (het stromen) bestemmingen in real time door Destination SDK, naast [het vormen van een partnerschema](schema-configuration.md) dat de gebruikers profielattributen en identiteiten aan kunnen in kaart brengen, moet u identiteitsnamespaces ook bepalen die door uw bestemmingsplatform worden gesteund. Als uw doelplatform bijvoorbeeld gehashte e-mails en [!DNL IDFA]moet u deze twee identiteiten definiëren als [nader beschreven in dit document](#supported-parameters).
 
-Wanneer u dit doet, kunnen gebruikers naast de kenmerken van het doelprofiel ook doelidentiteiten selecteren.
+Wanneer gebruikers doelgroepen naar streamingdoelen activeren, moeten ze ook doelidentiteiten toewijzen, naast de kenmerken van het doelprofiel. Anders wordt het publiek niet geactiveerd naar het doelplatform.
+
+Wanneer u een op een bestand gebaseerd doel via Destination SDK maakt, is de configuratie van naamruimten optioneel.
 
 Voor meer informatie over naamruimten in Experience Platform raadpleegt u de [documentatie over naamruimten](../../../../identity-service/features/namespaces.md).
 
@@ -44,8 +46,8 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 
 | Type integratie | Ondersteunt functionaliteit |
 |---|---|
-| Integraties in realtime (streaming) | Ja |
-| Op bestanden gebaseerde (batch) integratie | Ja |
+| Integraties in realtime (streaming) | Ja (vereist) |
+| Op bestanden gebaseerde (batch) integratie | Ja (optioneel) |
 
 ## Ondersteunde parameters {#supported-parameters}
 
