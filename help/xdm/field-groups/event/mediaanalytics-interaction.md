@@ -1,9 +1,10 @@
 ---
 title: MediaAnalytics Interaction Details Schema Field Group
 description: Leer over de MediaAnalytics het schemagroep van Details van de Interactie.
-source-git-commit: 65f3dcf1cacfbc4e8a598244810d238bd88f64bd
+exl-id: 1096d28a-5796-49cc-bd45-b3f5188f699e
+source-git-commit: b81afb8f6c4eaedb19a58b6fe3896286f1486804
 workflow-type: tm+mt
-source-wordcount: '107'
+source-wordcount: '200'
 ht-degree: 0%
 
 ---
@@ -16,10 +17,18 @@ ht-degree: 0%
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |---| --- | --- | --- |
-| [!UICONTROL Media Collection Details] | `mediaCollection` | [[!UICONTROL Media details information]](../../data-types/media-details-information.md) | Attributen die betrekking hebben op een verzameling media-items. |
-| [!UICONTROL Media Reporting Details] | `mediaReporting` | [[!UICONTROL Media details information]](../../data-types/media-details-information.md) | Gegevens en metriek rapporteren die aan de media-inhoud zijn gekoppeld. |
+| [!UICONTROL Media Collection Details] | `mediaCollection` | [[!UICONTROL Media Collection details]](../../data-types/media-collection-details.md) | Attributen die betrekking hebben op een verzameling media-items. Met de velden Media Collection kunt u gegevens vastleggen en naar andere Adobe-services verzenden voor verdere verwerking. |
+| [!UICONTROL Media Reporting Details] | `mediaReporting` | [[!UICONTROL Media Reporting details]](../../data-types/media-reporting-details.md) | Gegevens en metriek rapporteren die aan de media-inhoud zijn gekoppeld. * Media Reporting-velden worden door Adobe-services gebruikt voor het analyseren van de velden Media Collection die door gebruikers worden verzonden. Deze gegevens worden, samen met andere specifieke maatstaven voor gebruikers, berekend en gerapporteerd. |
 | [!UICONTROL List Of Media Collection Downloaded Content Events] | `mediaDownloadedEvents` | [!UICONTROL Array] van [[!UICONTROL mediaEvent]](../../data-types/media-event-information.md) | Gebeurtenissen die het downloaden van inhoud in de media-verzameling bijhouden. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json)
+>[!TIP]
+>
+>U kunt velden verbergen die niet worden gebruikt door de Media Edge-API. Het verbergen van deze gebieden maakt het schema gemakkelijker te lezen en te begrijpen, maar het wordt niet vereist. Deze velden verwijzen alleen naar de velden in de [!UICONTROL MediaAnalytics Interaction Details] veldgroep. Volg de instructies in het dialoogvenster [Documentatie van Media Analytics over het verbergen van ongebruikte velden](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
+
+<!-- 
+>[!NOTE]
+>
+>Schemas contain fields that are not used in every context or situation. They provide a potential blueprint to map an object. Schemas displayed for the Media Edge API Collection or Reporting data types only portray the relevant fields. You can manually select and deselect the fields that you want to use if you intend to use a schema for the Media Edge API interaction. You can find instructions on [hiding unnecessary fields](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform) in the guide to install Media Analytics with Experience Platform Edge.
+ -->
