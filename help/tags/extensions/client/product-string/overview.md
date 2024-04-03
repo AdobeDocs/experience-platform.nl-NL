@@ -2,9 +2,9 @@
 title: Overzicht van extensie Adobe Analytics-producttekenreeks
 description: Meer informatie over de extensie van de Adobe Analytics Product String-tag in Adobe Experience Platform.
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 36ca1e63c043baa776f27b627cdbe493b2ced674
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-De `products` Met variabele wordt bijgehouden hoe gebruikers werken met producten op uw site. De `products` met deze variabele kunt u bijhouden hoe vaak een product wordt weergegeven, aan het winkelwagentje wordt toegevoegd, uitgecheckt en aangeschaft. U kunt ook de relatieve effectiviteit van de handelscategorieën op uw site volgen.
+De `products` Met variabele wordt bijgehouden hoe gebruikers werken met producten op uw site. Bijvoorbeeld de `products` met deze variabele kunt u bijhouden hoe vaak een product wordt weergegeven, aan het winkelwagentje wordt toegevoegd, uitgecheckt en aangeschaft. U kunt ook de relatieve effectiviteit van de handelscategorieën op uw site volgen.
 
 De `products` variabele moet altijd samen met een succesgebeurtenis worden ingesteld.
 
@@ -82,16 +82,16 @@ De `price` in de [!DNL Adobe Analytics] de productreeks moet de totale prijs voo
 Voer de volgende stappen uit als uw implementatie aangepaste gebeurtenissen gebruikt of eVars verkoopt:
 
 1. Gekoppelde selecteren **[!UICONTROL Add]** knop.
-1. Kies in het vervolgkeuzemenu de gebeurtenis die of de eVar die u wilt instellen.
+1. Kies in het vervolgkeuzemenu de gebeurtenis of eVar die u wilt instellen.
 1. Voer het pad naar de desbetreffende variabele voor de gegevenslaag in met dezelfde syntaxis als hierboven beschreven.
 
 ### Handelingenreeks
 
 Deze actie moet vergezeld gaan van een actie &quot;Adobe Analytics - Set Variables&quot; die de corresponderende succesgebeurtenissen instelt, en van een actie &quot;Adobe Analytics - Send Beacon&quot;. De juiste volgorde van handelingen wordt hieronder weergegeven.
 
-![Standaardvelden](./images/screenshot-price-type.png)
+![Standaardvelden](./images/screenshot-action-type.png)
 
 ### Vereisten
 
 * Op een object gebaseerd [gegevenslaag](https://theblog.adobe.com/data-layers-buzzword-best-practice/) met variabelen voor alle productgerelateerde gegevens (zoals product-id, hoeveelheid, prijs). Deze extensie werkt niet met op arrays gebaseerde gegevenslagen.
-* De [Adobe Analytics](../analytics/overview.md) extensie moet zijn geïnstalleerd.
+* De [Adobe Analytics](../analytics/overview.md) moet worden geïnstalleerd.
