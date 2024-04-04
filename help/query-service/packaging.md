@@ -2,9 +2,9 @@
 title: Packaging van Query Service
 description: Het volgende document schetst de verpakking van mogelijkheden en producten beschikbaar voor de Dienst van de Vraag en benadrukt de verschillen tussen ad hoc en partijvragen.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 0f55a836321e974b3f29d2285c38cc8461636f39
+source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '980'
 ht-degree: 1%
 
 ---
@@ -52,9 +52,11 @@ De volgende lijst schetst de belangrijkste die de dienstrechten van de Vraag op 
 
 Toegangscontrole voor Experience Platform wordt beheerd via [Adobe Admin Console](https://adminconsole.adobe.com/) waarin productprofielen gebruikers met machtigingen en sandboxen koppelen. Zie de [toegangsbeheeroverzicht](../access-control/home.md) voor meer informatie .
 
-Voor het gebruik van Query Service [!DNL Manage Queries] De toestemming moet binnen Admin Console worden toegelaten. Met deze machtiging kunnen gebruikers ad-hoc- en batchquery&#39;s uitvoeren. Gedetailleerde instructies voor het aanvragen van toegang tot het productprofiel [!DNL Manage Queries] Deze machtiging is beschreven in het gedeelte [machtigingen voor een productprofiel beheren](../access-control/ui/permissions.md) en [gebruikers beheren voor een productprofiel](../access-control/ui/users.md) documenten.
+Zie de [Rechten voor een productprofiel beheren](../access-control/ui/permissions.md) en [Gebruikers beheren voor een productprofiel](../access-control/ui/users.md) documenten voor gedetailleerde instructies voor het aanvragen van toegang tot de bevoegdheden van het productprofiel
 
-Nadat u de [!DNL Data Distiller] toe:voegen-aan, [!DNL Write Dataset] toestemming moet worden verleend. Deze machtiging staat [!DNL Data Distiller] gebruikers om partijvragen uit te voeren.
+### De relevante toestemmingen van de Dienst van de Vraag {#query-service-permissions}
+
+Als u Query Service wilt gebruiken, **[!DNL Manage Queries]** De toestemming moet binnen Admin Console worden toegelaten. Met deze machtiging kunnen gebruikers ad-hoc- en batchquery&#39;s uitvoeren.
 
 In de volgende tabel worden de effecten van de [!DNL Manage Queries] machtiging:
 
@@ -62,6 +64,17 @@ In de volgende tabel worden de effecten van de [!DNL Manage Queries] machtiging:
 |---|---|
 | [!DNL Manage Queries] (zonder toestemming voor schrijven van gegevens) | Biedt toegang tot ad-hocquery&#39;s |
 | [!DNL Manage Queries] (met schrijfmachtiging) | Biedt toegang tot het uitvoeren van batchquery&#39;s |
+
+{style="table-layout:auto"}
+
+### Relevante klantgerichte toestemmingen van Inzichten {#customizable-insights-permissions}
+
+Distiller voor gegevens maken [Aanpasbare inzichten](./data-distiller/customizable-insights/overview.md) binnen dashboards, de volgende toestemmingen **moet** worden ingeschakeld binnen de Admin Console.
+
+| Machtiging | Functie |
+|---|---|
+| [!DNL View Custom Dashboard] | Biedt toegang tot door de gebruiker gedefinieerde dashboards |
+| [!DNL Manage Custom Dashboard] | Biedt beheertoegang voor door de gebruiker gedefinieerde dashboards |
 
 {style="table-layout:auto"}
 
