@@ -4,9 +4,9 @@ title: Een segmentdefinitie maken met de segmentatieservice-API
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u een segmentdefinitie kunt ontwikkelen, testen, voorvertonen en opslaan met de Adobe Experience Platform Segmentation Service API.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9966385968540701f66acbb70c0810906650b7e1
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '1066'
 ht-degree: 0%
 
 ---
@@ -72,11 +72,16 @@ Er zijn twee vereiste stappen om een voorvertoning van uw segmentdefinitie weer 
 
 ### Hoe schattingen worden gegenereerd
 
-Gegevenssteekproeven worden gebruikt om segmentdefinities te evalueren en het aantal kwalificerende profielen te schatten. De nieuwe gegevens worden geladen in geheugen elke ochtend (tussen 12AM-2AM PT, die 7-9AM UTC is), en alle segmenteringsvragen worden geschat gebruikend de steekproefgegevens van die dag. Dientengevolge zullen nieuwe toegevoegde velden of extra verzamelde gegevens de volgende dag in schattingen worden weerspiegeld.
+Aangezien gegevens die voor het Profiel van de Klant in real time worden toegelaten in Platform worden opgenomen, wordt het opgeslagen binnen de gegevensopslag van het Profiel. Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 5% verhoogt of verlaagt, wordt een samplingtaak geactiveerd om het aantal bij te werken. Als het aantal profielen niet met meer dan 5% verandert, wordt de samplingtaak automatisch wekelijks uitgevoerd.
 
-De voorbeeldgrootte is afhankelijk van het totale aantal entiteiten in het profielarchief. Deze steekproefgrootte wordt vertegenwoordigd in de volgende lijst:
+De wijze waarop het monster wordt geactiveerd, hangt af van het type inname dat wordt gebruikt:
 
-| Entiteiten in profielopslag | Voorbeeldformaat |
+- Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als aan deze drempel is voldaan, wordt automatisch een voorbeeldtaak geactiveerd om de telling bij te werken.
+- Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal bij te werken als aan de drempel van 5% voor verhogen of verlagen is voldaan. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte op naam.
+
+De voorbeeldgrootte is afhankelijk van het totale aantal entiteiten in de profielopslag. Deze steekproefgrootte wordt vertegenwoordigd in de volgende lijst:
+
+| Entiteiten in de profielopslag | Voorbeeldformaat |
 | ------------------------- | ----------- |
 | Minder dan 1 miljoen | Volledige gegevensset |
 | 1 tot 20 miljoen | 1 miljoen |
