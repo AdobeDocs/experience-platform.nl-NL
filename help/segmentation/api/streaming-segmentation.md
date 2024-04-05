@@ -4,9 +4,9 @@ title: Evalueer Gebeurtenissen in Bijna Echt - tijd met het stromen Segmentatie
 description: Dit document bevat voorbeelden over het gebruik van streamingsegmentatie met de Adobe Experience Platform Segmentation Service-API.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '2038'
 ht-degree: 0%
 
 ---
@@ -454,3 +454,7 @@ Als u dus ziet dat het getal onder &quot;Laatste X dagen&quot; nul is en dat de 
 ### Hoe lang duurt het voordat een segmentdefinitie beschikbaar is?
 
 Het duurt tot één uur voordat een segmentdefinitie beschikbaar is.
+
+### Zijn er beperkingen aan de gegevens waarin wordt gestreamd?
+
+Voor het gebruik van gestreamde gegevens in streamingsegmentatie is er **moet** moet ruimte zijn tussen de gebeurtenissen die worden gestreamd. Als er te veel gebeurtenissen binnen dezelfde seconde worden gestreamd, behandelt Platform deze gebeurtenissen als door beide gegenereerde gegevens en worden ze genegeerd. Als beste praktijken, zou u moeten hebben **ten minste** vijf seconden tussen gebeurtenisgegevens om ervoor te zorgen dat de gegevens correct worden gebruikt.

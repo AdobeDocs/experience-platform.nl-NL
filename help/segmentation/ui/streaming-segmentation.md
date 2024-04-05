@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor streamingsegmentatie
 description: Dankzij streamingsegmentatie op Adobe Experience Platform kunt u segmentering uitvoeren in bijna real-time terwijl u zich richt op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in Platform landen, die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens in Platform worden overgegaan, betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
+source-git-commit: 88f2c8723ef16ff5601dc7e45a9f77b25f45acfd
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1522'
 ht-degree: 0%
 
 ---
@@ -119,3 +119,7 @@ Als u dus ziet dat het getal onder &quot;Laatste X dagen&quot; nul is en dat de 
 ### Hoe lang duurt het voordat een segmentdefinitie beschikbaar is?
 
 Het duurt tot één uur voordat een segmentdefinitie beschikbaar is.
+
+### Zijn er beperkingen aan de gegevens waarin wordt gestreamd?
+
+Voor het gebruik van gestreamde gegevens in streamingsegmentatie is er **moet** moet ruimte zijn tussen de gebeurtenissen die worden gestreamd. Als er te veel gebeurtenissen binnen dezelfde seconde worden gestreamd, behandelt Platform deze gebeurtenissen als door beide gegenereerde gegevens en worden ze genegeerd. Als beste praktijken, zou u moeten hebben **ten minste** vijf seconden tussen gebeurtenisgegevens om ervoor te zorgen dat de gegevens correct worden gebruikt.

@@ -2,9 +2,9 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b129efacb077af0148a743e43ec23f9f8b8d7d3e
+source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
 workflow-type: tm+mt
-source-wordcount: '3109'
+source-wordcount: '3176'
 ht-degree: 0%
 
 ---
@@ -269,3 +269,10 @@ Tot de volgende de evaluatietaak van het partijsegment wordt in werking gesteld,
 Als u profielraadpleging gebruikt om het onlangs gecreëerde profiel terug te winnen en zijn publiekslidmaatschap te bekijken, zal het tonen dat het een lid van is **beide** Publiek A en Publiek B, ondanks het feit dat beide soorten publiek tegenstrijdige definities hebben. Zodra de dagelijkse de evaluatietaak van de partijsegmentatie loopt, zal het publiekslidmaatschap worden bijgewerkt om op deze bijgewerkte staat van profielgegevens te wijzen.
 
 Gebruik streaming of randsegmentatie als u meer realtime publieksresolutie nodig hebt.
+
+### Hoe lang duurt het voordat streaminggegevens beschikbaar zijn in workflows met batchsegmentatie?
+
+Het kan maximaal drie uur duren voordat streaminggegevens beschikbaar zijn in workflows met batchsegmentatie.
+
+Als een batchsegmentatietaak bijvoorbeeld om 9.00 uur wordt uitgevoerd, is het gegarandeerd dat deze gestreamde gegevens bevat **maximaal** 18:00 Gestroomlijnde ingesloten gegevens die na 6 uur maar vóór 21:00 uur werden ingeslikt **kan** worden opgenomen.
+
