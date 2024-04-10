@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy-taken beheren in de gebruikersinterface van de Privacy Service
 description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experiencen Cloud te coördineren en te controleren.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 93d9e5965e0f5556ff2b584c8b66bd7a7be15d23
+source-git-commit: 8ba06a5d572310e2822a5b3c9f82ff0721540f69
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -90,17 +90,25 @@ Als u meer details over een bepaald gegevenspunt wilt weergeven, selecteert u he
 >
 >Wanneer een filter is toegepast op de widget Taakverzoeken, kunt u het filter verwijderen door het **X** op de filterpil. De Verzoeken van de baan keren dan aan de standaard het volgen lijst terug.
 
-### Taakverzoeken
+### Taakverzoeken {#job-requests}
 
-De widget Taakverzoeken bevat een lijst met alle beschikbare taakaanvragen in uw organisatie, inclusief gegevens zoals het type aanvraag, de huidige status, de vervaldatum en het e-mailadres van de aanvrager.
+De [!UICONTROL Job Requests] in de werkruimte vindt u details over de recente taakaanvragen in uw organisatie. De details omvatten het verzoektype, de huidige status, de vervaldatum, de aanvrager e-mail, etc. Sets van 100 records worden tegelijk geladen. Standaard worden de laatst gemaakte taken bovenaan weergegeven met meer records die zijn geladen wanneer u omlaag schuift om te bladeren.
 
 >[!NOTE]
 >
 >De gegevens voor eerder gecreëerde banen zijn slechts 30 dagen na de voltooiingsdatum toegankelijk.
 
-U kunt de lijst filteren door trefwoorden in de zoekbalk onder de titel Taakverzoeken te typen. De lijst filtert automatisch terwijl u typt, tonend verzoeken die waarden bevatten die uw onderzoekstermijnen aanpassen. U kunt ook de opdracht **[!UICONTROL Requested on]** vervolgkeuzelijst om een tijdbereik te selecteren voor de weergegeven taken.
+U kunt de lijst filteren door trefwoorden in de zoekbalk onder de knop [!UICONTROL Job Requests] titel. De lijst filtert automatisch terwijl u typt, tonend verzoeken die waarden bevatten die uw onderzoekstermijnen aanpassen. Het zoekveld voert een &#39;snelle&#39; zoekopdracht uit die overeenkomt met de privacytaak-id&#39;s van de taken die momenteel zijn gerenderd of geladen in de gebruikersinterface. Het is geen uitgebreide zoekopdracht naar al uw ingediende taken. Het is eerder een filter dat op de geladen resultaten wordt toegepast. Gebruik de Privacy Service-API om [retourbanen op basis van een specifieke verordening, een datumbereik of een enkele baan](../api/privacy-jobs.md#list).
 
-![Zoekopties voor taakaanvraag](../images/user-guide/job-search.png)
+>[!TIP]
+>
+>Als u records vanaf de afgelopen 30 dagen in de gebruikersinterface wilt laden, moet u naar beneden schuiven en meer batches records laden.
+
+![Het gedeelte Aanvraag voor privacyconsole met het zoekveld gemarkeerd.](../images/user-guide/job-search.png)
+
+U kunt ook de zoekknop gebruiken om een query voor een privacytaak uit te voeren die een bepaald datumbereik omvat. Deze actie retourneert alle privacytaken die door uw organisatie tijdens de opgegeven tijdsperiode zijn ingediend. Selecteer de **[!UICONTROL Requested on]** vervolgkeuzemenu om een begin- en einddatum voor de query te kiezen. Tot de beschikbare opties behoren [!UICONTROL Today], [!UICONTROL Last 7 Days], [!UICONTROL Last 2 Weeks], [!UICONTROL Last 30 Days], of [!UICONTROL Custom]. Indien gebruikt met de [!UICONTROL Requested on] in de zoekfunctie worden alleen taakaanvragen weergegeven die tussen de door u gekozen datumbereiken zijn verzonden.
+
+![De sectie Taakverzoek met het zoekveld, Gevraagd in het vervolgkeuzemenu en de knop Zoeken gemarkeerd.](../images/user-guide/requested-on-dropdown-menu.png)
 
 Als u de details van een bepaalde taakaanvraag wilt bekijken, selecteert u de taak-id van de aanvraag in de lijst om de opdracht **[!UICONTROL Job Details]** pagina.
 
