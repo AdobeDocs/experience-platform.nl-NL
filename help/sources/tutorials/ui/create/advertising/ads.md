@@ -2,14 +2,18 @@
 title: Een Google Ads Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Google Ads-bronverbinding maakt met de Adobe Experience Platform-interface.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
+source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
 
 # Een Google Ads-bronverbinding maken in de gebruikersinterface
+
+>[!WARNING]
+>
+>De [!DNL Google Ads] bron is tijdelijk niet beschikbaar. Adobe werkt aan het oplossen van problemen met deze bron.
 
 >[!NOTE]
 >

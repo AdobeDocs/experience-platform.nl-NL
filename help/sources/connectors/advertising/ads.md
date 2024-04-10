@@ -3,14 +3,18 @@ keywords: Experience Platform;home;populaire onderwerpen;Google-advertenties;Goo
 title: Overzicht van Google Adds-bronnen
 description: Leer hoe u Google Ads met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
 
 # [!DNL Google Ads] bron
+
+>[!WARNING]
+>
+>De [!DNL Google Ads] bron is tijdelijk niet beschikbaar. Adobe werkt aan het oplossen van problemen met deze bron.
 
 >[!NOTE]
 >
