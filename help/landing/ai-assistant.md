@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: b1f2d85f5a1cf6bb38344c87496488a919800029
+source-git-commit: f38f528c421c7cbf7116cc0ee323e8e7dcde6292
 workflow-type: tm+mt
-source-wordcount: '2567'
+source-wordcount: '2693'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ U kunt AI Assistant opvragen voor informatie zoals:
 
 * Richtlijnen voor het uitvoeren van taken die verband houden met gegevens en publiek.
 * Statussen en metriek van de bestaande gegevensobjecten in uw organisatie.
-* Gebruik voorbeelden en nuances van het geval om uw gegevensvoorwerpen, met inbegrip van attributen, dataflows, datasets, bestemmingen, schema&#39;s, segmenten, en bronnen beter te begrijpen.
+* Gebruik voorbeelden van hoofdletters en nuances om uw gegevensobjecten beter te begrijpen, zoals kenmerken, publiek, dataflows, datasets, bestemmingen, schema&#39;s en bronnen.
 
 Lees de onderstaande handleiding voor meer informatie over het gebruik van AI Assistant voor het navigeren naar en begrijpen van uw Experience Platform- en Real-Time CDP-workflows.
 
@@ -51,7 +51,7 @@ Er zijn twee klassen vragen om te overwegen alvorens AI Medewerker te vragen:
 * **Gebruiksvragen**: De vragen van het gebruik zijn over de gegevensvoorwerpen binnen uw organisatie. Enkele voorbeelden van gebruiksvragen zijn:
    * Hoeveel datasets heb ik?
    * Hoeveel schemakenmerken zijn nooit gebruikt?
-   * Welke segmenten zijn geactiveerd?
+   * Welk publiek is geactiveerd?
 
 >[!ENDSHADEBOX]
 
@@ -59,13 +59,14 @@ Er zijn twee klassen vragen om te overwegen alvorens AI Medewerker te vragen:
 
 U kunt AI Assistant gebruiken voor doelstellingen zoals:
 
-| Doelstelling | Beschrijving |
-| --- | --- |
-| Experience Platform leren en Real-Time CDP-concepten | U kunt de conceptuele vragen van AI Medewerker stellen zodat u zich op Experience Platform en Real-Time CDP kunt aan boord nemen. U kunt AI Assistant ook gebruiken om meer te leren over objecten en gedragingen die u niet kent. |
-| Beveiligde gegevenskwaliteit in uw sandboxen | U kunt AI Assistant gebruiken om eventuele duplicaten of ongebruikte objecten te identificeren, zodat u de helderheid van de sandbox op efficiënte wijze kunt behouden. |
-| Waardeanalyse ordenen | U kunt de AI Medewerker gebruiken om uw meest gebruikte voorwerpen te identificeren en om het even welke prestatiesindicatoren te beoordelen of de waardevolste gegevens te vinden. |
-| Effectanalyse | U kunt AI Assistant gebruiken om objecten te identificeren die in bepaalde workflows zijn gebruikt, zodat u het effect van wijzigingen kunt beoordelen. |
-| Uw gegevens controleren | U kunt de Medewerker van AI gebruiken om het even welke gegevensstroom, opname, of evaluatietaken te controleren zodat u om het even welke discrepanties kunt bekijken of over vooruitgang rapporteren. |
+| Doelstelling | Beschrijving | Voorbeeld |
+| --- | --- | --- |
+| Leerconcepten en doorlopende workflows | <ul><li>Als beginnende gebruiker, kunt u AI Medewerker gebruiken om de concepten van Real-Time CDP en van Adobe Journey Optimizer te leren en aan boord aan producten en eigenschappen te zijn die u niet vertrouwd met bent.</li><li>Als ervaren gebruiker, kunt u AI Medewerker gebruiken om een randgeval op te lossen dat uw werkschema kan blokkeren. | <ul><li>Hoe kan ik een dashboard instellen in Journey Analytics?</li><li>Vertel me wat gebruiksgevallen voor Real-Time CDP.</li></ul> |
+| Problemen oplossen | Met AI Assistant leert u hoe u fouten in de basisbeginselen die u in uw workflow tegenkomt, kunt opsporen. | <ul><li>Wat is deze fout? {ERROR_MESSAGE} bedoel?</li><li>Waarom kan ik het publiek met de naam &quot;Luma: Email Audience&quot; niet verwijderen?</li></ul> |
+| Zandbakhygiëne | Met AI Assistant kunt u eventuele duplicaten of ongebruikte objecten identificeren, zodat u de sandbox op efficiënte wijze kunt onderhouden. | <ul><li>Kan je me een publiek laten zien dat vergelijkbaar is?</li><li>Zijn er regelingen die geen bijbehorende dataset hebben?</li></ul> |
+| Waardeanalyse | Met AI Assistant kunt u de meest gebruikte gegevensobjecten identificeren en prestatie-indicatoren beoordelen of de meest waardevolle gegevensobjecten vinden. | <ul><li>Hoeveel profielen bevinden zich in de segmentdefinitie &quot;Luma: Email Audience&quot;?</li><li>Wanneer werd het publiek geactiveerd aan de bestemming van het publiek van het Experience Cloud?</li></ul> |
+| Zoeken | De Medewerker van AI van het gebruik om gesteunde voorwerpen van het Experience Platform zoals publiek, datasets, bestemmingen, schema&#39;s, en bronnen te vinden. | <ul><li>Maak een lijst van de soorten publiek die &quot;Luma&quot;in de naam bevatten die in het laatste kwartaal werden gecreeerd.</li><li>Welke kenmerken bevinden zich in het XDM-schema &quot;Luma: Custom Actions&quot;?</li></ul> |
+| Effectanalyse | Met AI Assistant kunt u gegevensobjecten identificeren die in bepaalde workflows zijn gebruikt, zodat u het effect van wijzigingen kunt beoordelen. | <ul><li>Welk publiek gebruikt `homeAddress.city` in het schema &quot;Luma: PersonProfiles&quot;?</li><li>Welke datasets zijn `consents.marketing.push.val` profielkenmerk opgeslagen in?</li></ul> |
 
 ## De Hulp van AI van de toegang in de UI van het Experience Platform
 
@@ -75,7 +76,7 @@ Als u AI Assistant wilt starten, selecteert u de optie **[!UICONTROL AI Assistan
 
 De interface AI Assistant wordt weergegeven en bevat direct informatie die u nodig hebt om aan de slag te gaan. U kunt de opties gebruiken die onder [!UICONTROL Ideas to get started] om vragen en bevelen zoals te beantwoorden:
 
-* [!UICONTROL Which of my segments are activated?]
+* [!UICONTROL Which of my audiences are activated?]
 * [!UICONTROL What is a schema?]
 * [!UICONTROL Tell me some common use cases for Real-Time CDP]
 
@@ -157,11 +158,11 @@ Er wordt een uitgebreide weergave van de visualisatie weergegeven. U kunt de uit
 
 ![Uitgebreid diagram.](./images/ai-assistant/chart-expanded.png)
 
-Als een vraag over gegevensgebruik wordt gesteld, geeft AI Assistant een uitleg van de manier waarop het antwoord is berekend. In het onderstaande voorbeeld geeft AI Assistant een overzicht van de stappen die zijn genomen om segmentdefinities weer te geven met meer dan 1000 profielen en de bijbehorende activeringsstatus.
+Als een vraag over gegevensgebruik wordt gesteld, geeft AI Assistant een uitleg van de manier waarop het antwoord is berekend. In het onderstaande voorbeeld geeft AI Assistant een overzicht van de stappen die zijn genomen om segmentdefinities weer te geven met meer dan 1000 profielen en hun respectieve activeringsstatus.
 
-![Vervolgvraag over segmenten die illustreren hoe AI Assistant het antwoord heeft berekend.](./images/ai-assistant/results-explained.png)
+![Vervolgvraag over segmentdefinities die illustreren hoe AI Assistant het antwoord heeft berekend.](./images/ai-assistant/results-explained.png)
 
-U kunt filters en wijzigingen aan uw vragen ook verstrekken, en u kunt AI Medewerker opdragen om zijn bevindingen terug te geven die op de filters worden gebaseerd die u omvat. Bijvoorbeeld, kunt u AI Medewerker vragen om u een trend van de definities van tellingssegmenten in de orde van hun gecreeerde datum te tonen, segmentdefinities met nul totale profielen te verwijderen, en maandnamen in plaats van gehelen te gebruiken wanneer het tonen van de gegevens.
+U kunt filters en wijzigingen aan uw vragen ook verstrekken, en u kunt AI Medewerker opdragen om zijn bevindingen terug te geven die op de filters worden gebaseerd die u omvat. Bijvoorbeeld, kunt u AI Medewerker vragen om u een trend van de definities van het tellingssegment in de orde van hun gecreeerde datum te tonen, segmentdefinities met nul totale profielen te verwijderen, en maandnamen in plaats van gehelen te gebruiken wanneer het tonen van de gegevens.
 
 +++
 
@@ -169,7 +170,7 @@ U kunt filters en wijzigingen aan uw vragen ook verstrekken, en u kunt AI Medewe
 
 +++Select om een voorbeeld van automatisch aanvullen te bekijken
 
-Met de functie Automatisch aanvullen kunt u een lijst met gegevensobjecten ontvangen die in uw sandbox staan. De aanbevelingen van Autocomplete zijn beschikbaar voor de volgende domeinen: segmenten, schema&#39;s, datasets, bronnen, en bestemmingen.
+Met de functie Automatisch aanvullen kunt u een lijst met gegevensobjecten ontvangen die in uw sandbox staan. De aanbevelingen van Autocomplete zijn beschikbaar voor de volgende domeinen: publiek, schema&#39;s, datasets, bronnen, en bestemmingen.
 
 U kunt de functie voor automatisch aanvullen gebruiken door het plusteken (**`+`**) in uw zoekopdracht. U kunt ook het plusteken (**`+`**) onder aan het tekstinvoervak. Er wordt een venster weergegeven met een lijst met aanbevolen gegevensobjecten uit uw sandbox.
 
@@ -208,16 +209,16 @@ Het documentatiemodel wordt opgeleid op Experience Platform (Real-Time CDP en So
 U kunt ook vragen stellen aan AI Assistant over uw gegevensgebruik in de volgende domeinen:
 
 * Attributen
+* Doelgroepen
 * Gegevensstromen
 * Gegevenssets
 * Doelen _(Vragen over accounts en sommige vragen over gegevensstroom kunnen op dit moment niet worden beantwoord.)_
 * Schemas _(Op dit moment kunnen vragen met betrekking tot veldgroepen niet worden beantwoord.)_
-* Segmenten
 * Bronnen _(Op dit moment kunnen vragen over de rekeningen niet worden beantwoord.)_
 
-Voor vragen van gebruiksgegevens, kunnen de antwoorden niet op de huidige staat van UI wijzen. De gegevens die deze vragen ondersteunen, worden om de 24 uur bijgewerkt. Zo worden wijzigingen die gebruikers overdag aanbrengen in Real-Time CDP gesynchroniseerd met de gegevensopslag &#39;s nachts, waarna ze &#39;s ochtends beschikbaar komen voor vragen van gebruikers. Mogelijk moet u de vragen opmaken als: &quot;Wanneer was het segment met de titel {TITLE} gemaakt?&quot; in plaats van &quot;Wanneer was het {TITLE} segment gemaakt?&quot;
+Voor vragen van gebruiksgegevens, kunnen de antwoorden niet op de huidige staat van UI wijzen. De gegevens die deze vragen ondersteunen, worden om de 24 uur bijgewerkt. Zo worden wijzigingen die gebruikers overdag aanbrengen in Real-Time CDP gesynchroniseerd met de gegevensopslag &#39;s nachts, waarna ze &#39;s ochtends beschikbaar komen voor vragen van gebruikers. Mogelijk moet u uw vragen opmaken als: &quot;Wanneer was het publiek met de titel {TITLE} gemaakt?&quot; in plaats van &quot;Wanneer was het {TITLE} publiek gemaakt?&quot;
 
-U moet zich aanmelden bij een sandbox om informatie te krijgen over specifieke gegevens die betrekking hebben op objecten, zoals schema&#39;s, datasets, kenmerken, doelen en segmenten.
+U moet zich aanmelden bij een sandbox om informatie te krijgen over specifieke gegevens die betrekking hebben op objecten, zoals soorten publiek, schema&#39;s, datasets, kenmerken en doelen.
 
 ### Voorbeeldvragen over gegevensgebruik {#example-data-usage-questions}
 
@@ -225,9 +226,9 @@ U moet zich aanmelden bij een sandbox om informatie te krijgen over specifieke g
 
 | Type vraag | Beschrijving | Voorbeelden |
 | --- | --- | --- | 
-| Gegevensverbinding | Gebruik van een of meerdere objecten bijhouden over andere Experience Platforms | <ul><li>Welke gegevensset(s) gebruiken {SCHEMA_NAME} schema?</li><li>Hoeveel datasets zijn opgenomen gebruikend het zelfde schema?</li><li>Welke datasets zijn gebruikt in geactiveerde segmenten?</li><li>Maak een lijst van de schema&#39;s die attributen hebben die in geactiveerde segmenten worden gebruikt.</li><li>Toon me de segmenten die worden geactiveerd om {DESTINATION_ACCOUNT_NAME} en hebben meer dan 1000 profielen.</li><li>Toon me de attributen die in de geactiveerde segmenten worden gebruikt die na jan 2023 zijn gewijzigd.</li><li>Wat zijn de datasets die via worden opgenomen {SOURCE_NAME}?</li><li>Aan welke gegevensstromen is gekoppeld {DATAFLOW_NAME}</li><li>Maak een lijst van de schema&#39;s die met geactiveerde segmenten verwant zijn en in vorig 1 jaar gecreeerd.</li></ul> |
-| Distributie en aggregaties | Op samenvattingen gebaseerde vragen over het gebruik van Experience Platforms-objecten | <ul><li>Wat is het percentage van geactiveerde segmenten?</li><li>Hoeveel velden worden in segmentatie gebruikt?</li><li>Welke segmenten worden geactiveerd aan het meeste aantal bestemmingen?</li><li>Duplicaatsegmenten weergeven.</li><li>Toon me de segmenten die aan worden geactiveerd {DESTINATION_ACCOUNT_NAME} en rangschikken op profielgrootte.</li><li>Wat is het percentage van de segmenten die niet zijn geactiveerd maar meer dan 100 profielen hebben. Laat me hun namen zien.</li><li>Maak een lijst van de 3 bronschakelaars die gegevens in mijn datasets opnemen.</li><li>Geef me de bovenste 5 kenmerken weer die in geactiveerde segmenten worden gebruikt op basis van hun voorval.</li></ul> |
-| Object opzoeken | Haal een Experience Platform-object of de eigenschappen ervan op of open het object. | <ul><li>Welke datasets hebben geen schema verbonden aan hen</li><li>De kenmerken weergeven die worden gebruikt voor {SEGMENT_NAME}?</li><li>Geef me de lijst van schema&#39;s die profiel toegelaten zijn maar niet sinds hun verwezenlijking zijn gewijzigd.</li><li>Welke segmenten zijn de afgelopen week gewijzigd?</li><li>Maak een lijst van de segmenten die de zelfde segmentdefinities samen met hun verwezenlijking datum hebben.</li><li>Welke datasets toegelaten profiel zijn en ook omvatten hoeveel segmenten van elke dataset zijn gecreeerd.</li><li>Welke bronrekeningen worden geassocieerd met dataset XYZ?</li><li>De segmentdefinitie en wijzigingsdatum weergeven van {SEGMENT_NAME}.</li></ul> |
+| Gegevensverbinding | Gebruik van een of meerdere objecten bijhouden over andere Experience Platforms | <ul><li>Welke gegevensset(s) gebruiken {SCHEMA_NAME} schema?</li><li>Hoeveel datasets zijn opgenomen gebruikend het zelfde schema?</li><li>Welke datasets zijn gebruikt in geactiveerd publiek?</li><li>Maak een lijst van de schema&#39;s die attributen hebben die in geactiveerd publiek worden gebruikt.</li><li>Toon me het publiek dat wordt geactiveerd aan {DESTINATION_ACCOUNT_NAME} en hebben meer dan 1000 profielen.</li><li>Toon me de attributen die in de geactiveerde doelgroepen worden gebruikt die na jan 2023 zijn gewijzigd.</li><li>Wat zijn de datasets die via worden opgenomen {SOURCE_NAME}?</li><li>Aan welke gegevensstromen is gekoppeld {DATAFLOW_NAME}</li><li>Geef een overzicht van de schema&#39;s die betrekking hebben op geactiveerd publiek en die in het afgelopen jaar zijn gemaakt.</li></ul> |
+| Distributie en aggregaties | Op samenvattingen gebaseerde vragen over het gebruik van Experience Platforms-objecten | <ul><li>Wat is het percentage van het actieve publiek?</li><li>Hoeveel velden worden in segmentatie gebruikt?</li><li>Welk publiek wordt geactiveerd aan het meeste aantal bestemmingen?</li><li>Duplicaat publiek weergeven.</li><li>Toon me het publiek geactiveerd aan {DESTINATION_ACCOUNT_NAME} en rangschikken op profielgrootte.</li><li>Wat is het percentage van het publiek dat niet is geactiveerd, maar meer dan 100 profielen heeft. Laat me hun namen zien.</li><li>Maak een lijst van de 3 bronschakelaars die gegevens in mijn datasets opnemen.</li><li>Geef me de bovenste 5 kenmerken weer die bij actiepunten worden gebruikt, afhankelijk van het aantal dat ze voorkomen.</li></ul> |
+| Object opzoeken | Haal een Experience Platform-object of de eigenschappen ervan op of open het object. | <ul><li>Welke datasets hebben geen schema verbonden aan hen</li><li>De kenmerken weergeven die worden gebruikt voor {AUDIENCE_NAME}?</li><li>Geef me de lijst van schema&#39;s die profiel toegelaten zijn maar niet sinds hun verwezenlijking zijn gewijzigd.</li><li>Welk publiek is de afgelopen week gewijzigd?</li><li>Geef mij een overzicht van de doelgroepen die dezelfde segmentdefinities hebben en de datum waarop ze zijn gemaakt.</li><li>Welke datasets toegelaten profiel zijn en ook omvatten hoeveel publiek van elke dataset is gecreeerd.</li><li>Welke bronrekeningen worden geassocieerd met dataset XYZ?</li><li>De segmentdefinitie en wijzigingsdatum weergeven van {AUDIENCE_NAME}.</li></ul> |
 
 +++
 
@@ -276,56 +277,6 @@ Raadpleeg deze sectie voor meer informatie over de AI Assistant voor Experience 
 ### Voorzorgsmaatregelen en beperkingen {#caveats-and-limitations}
 
 In de volgende sectie worden de huidige bedenkingen en beperkingen beschreven die moeten worden meegenomen bij het gebruik van AI Assistant.
-<!-- 
-#### Conversational experience
-
-You must consider several nuances regarding the conversational experience when querying the AI Assistant.
-
->[!NOTE]
->
->These limitations are temporary and are being improved upon throughout the course of the alpha.
-
->[!BEGINTABS]
-
->[!TAB Unable to infer context from prior discussion]
-
-The AI Assistant currently cannot reference prior discussions as context for a given question. See the table below for examples:
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of them?"</li></ul>| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of **segments**?"</li></ul> | The AI Assistant cannot infer what "them" means. |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you elaborate more?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Explain what a segment is in depth"</li></ul> | The AI Assistant cannot intelligently reference documentation based on "more". |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of one?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of a segment?"</li></ul> | The AI Assistant cannot infer what you want an example of.|
-| <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "How does it compare to a streaming segment?"</li></ul> | <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "Can you compare a streaming segment to a batch segment?"</li></ul> | The AI Assistant cannot infer what "it" is referring to and thus cannot compare the streaming segment. |
-| <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of them use Facebook as a destination?"</li></ul> | <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of the segments that I have are using Facebook as a destination?"</li></ul> | The AI Assistant is cannot infer what "them" is referring to. |
-
-{style="table-layout:auto"}
-
->[!TAB Unable to infer context from a page]
-
-When asking the AI Assistant about a particular element of the Experience Platform UI page that you are on, you must clearly define the specific element within your question. 
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| "What does this do?" | "What does {PAGE_NAME} do? | The AI Assistant cannot infer what "this" is referring to. You must provide the specific page element that you are querying about. |
-| "Why won't it save?" | "Why can't I save a new sandbox called {NAME}?" | The AI Assistant cannot infer what "it" is referring to and cannot know that you are having issues with an entity. |
-
-{style="table-layout:auto"}
-
-Furthermore, the AI Assistant can only answer questions regarding error messages, given that the error is documented in Experience League.
-
->[!TAB Ambiguity]
-
-You must phrase your questions clearly and scope them within a product, application, or domain, as the AI Assistant currently cannot disambiguate questions.
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| "How do I create a filter? | How do I create a filter in Profile Query Language? | You must specify the feature that which you are filtering for because a variety of Experience Platform features support filtering. |
-| "How do I get started? | How do I get started using destinations? | You must provide clarity on your goals and use case because overly broad concepts may result in generic or unnecessarily specific answers. |
-
-{style="table-layout:auto"}
-
->[!ENDTABS] -->
 
 #### Beperkte kleine praatjes
 
@@ -356,6 +307,6 @@ Lees de onderstaande tabel voor voorbeelden:
 
 | Onjuiste vraag | Goede vraag | Notities |
 | --- | --- | --- |
-| Wat is mijn grootste segment? | Wat is mijn grootste segment? Gegevens gebruiken. | Vertel de AI Assistant expliciet dat het antwoord moet zijn gebaseerd op gegevens. |
-| Wat is mijn grootste segment? | Maak een lijst van mijn grootste segment. | Er zijn gevallen waarin een &quot;wat...&quot;-vraag kan worden verward met een documentatiegebaseerde vraag. Het gebruik van een opdracht als &quot;list&quot; is een sterkere indicator die u een vraag stelt met gegevens in context. |
-| Hoeveel datasets heb ik? | Tel mijn datasets. | De oorspronkelijke vraag werkt voor segmenten, maar werkt mogelijk niet met gegevenssets. |
+| Wat is mijn grootste publiek? | Wat is mijn grootste publiek? Gegevens gebruiken. | Vertel de AI Assistant expliciet dat het antwoord moet zijn gebaseerd op gegevens. |
+| Wat is mijn grootste publiek? | Maak een lijst van mijn grootste publiek. | Er zijn gevallen waarin een &quot;wat...&quot;-vraag kan worden verward met een documentatiegebaseerde vraag. Het gebruik van een opdracht als &quot;list&quot; is een sterkere indicator die u een vraag stelt met gegevens in context. |
+| Hoeveel datasets heb ik? | Tel mijn datasets. | De oorspronkelijke vraag werkt voor het publiek, maar werkt mogelijk niet met gegevenssets. |
