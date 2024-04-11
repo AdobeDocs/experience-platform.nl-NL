@@ -2,9 +2,9 @@
 title: Overzicht van YouTube Video Tracking Extension
 description: Meer informatie over de YouTube Video Tracking-tagextensie in Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '895'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 Elke markeringseigenschap in Adobe Experience Platform vereist dat de volgende extensies worden geïnstalleerd en geconfigureerd via het scherm Extensies:
 
 * Adobe Analytics
-* Experience Cloud Bezoeker-id-service
+* Experience Cloud Visitor ID Service
 * Kernextensie
 
 Gebruik de [&quot;Een speler insluiten met een \&lt;iframe> tag&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) codefragment van de ontwikkelaar van Google documenteert in de HTML van elke Web-pagina waar een videospeler moet teruggeven.
@@ -29,7 +29,7 @@ Deze extensie, versie 2.0.1, ondersteunt het insluiten van een of meer YouTube-v
 
 `<iframe id="player1" width="560" height="315" src="https://www.youtube.com/embed/xpatB77BzYE?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 
-Deze extensie is ook ontworpen om dynamisch te controleren op een unieke ID-kenmerkwaarde, zoals `player1`, ongeacht of de `enablejsapi` en `rel` de parameters van het vraagkoord bestaan en als hun verwachte waarden correct zijn. Als gevolg hiervan kan de YouTube-scripttag aan een webpagina worden toegevoegd met of zonder de `id` en of de `enablejsapi` en `rel` de parameters van het vraagkoord zijn inbegrepen of niet.
+Deze extensie is ook ontworpen om dynamisch te controleren op een unieke ID-kenmerkwaarde, zoals `player1`, ongeacht of de `enablejsapi` en `rel` de parameters van het vraagkoord bestaan en als hun verwachte waarden correct zijn. Als gevolg hiervan kan de YouTube-scripttag met of zonder de `id` en of de `enablejsapi` en `rel` parameters van queryreeksen worden wel of niet opgenomen.
 
 >[!NOTE]
 >
@@ -50,8 +50,8 @@ Er zijn zes gegevenselementen beschikbaar binnen de uitbreiding, geen waarvan co
 
 * **Positie afspeelkop:** Registreert de plaats, in seconden, van de playhead positie op de videochronologie, wanneer het binnen een markeringsregel wordt geroepen.
 * **Video-id:** Hiermee wordt de YouTube-id opgegeven die aan de video is gekoppeld.
-* **Naam video:** Hiermee geeft u de beschrijvende of vriendelijke naam van de video op.
-* **Video-URL:** Retourneert de YouTube.com-URL voor de video die momenteel is geladen/afgespeeld.
+* **Videonaam:** Hiermee geeft u de beschrijvende of vriendelijke naam van de video op.
+* **Video-URL:** Retourneert de YouTube.com URL voor de video die momenteel is geladen/afgespeeld.
 * **Videoduur:** Registreert de totale duur, in seconden, van de videoinhoud.
 * **Extensieversie:** In dit gegevenselement wordt bijvoorbeeld de versie van YouTube Tracking Extension vastgelegd, zoals &quot;Video Tracking_YouTube_2.0.0&quot;.
 
@@ -75,7 +75,7 @@ Er kan één tagregel worden ingesteld voor elke videogebeurtenis (de zeven hier
 Regels hebben drie acties:
 
 * **Variabelen instellen:** Stel de Adobe Analytics-variabelen in (kaart met alle of sommige opgenomen gegevenselementen).
-* **Baken verzenden:** Verzend het baken van Adobe Analytics als een douane verbinding het volgen vraag, en verstrek een &quot;Naam van de Verbinding&quot;waarde.
+* **Baken verzenden:** Verzend het baken van Adobe Analytics als een douane verbinding het volgen vraag, en verstrek een waarde &quot;van de Naam van de Verbinding&quot;.
 * **Variabelen wissen:** Wis de Adobe Analytics-variabelen.
 
 ## Voorbeeld van labelregel voor &quot;Video Start&quot;
@@ -91,14 +91,14 @@ De volgende video-extensieobjecten moeten worden opgenomen.
    * De gebeurtenis voor het starten van de video,
    * Een eigenschap/eVar voor het gegevenselement Videoduur
    * Een eigenschap/eVar voor het gegevenselement Video-id
-   * Een eigenschap/eVar voor het gegevenselement Videonaam
+   * A prop/eVar for the Video Name data element
    * Een eigenschap/eVar voor het URL-gegevenselement Video
 
-   Dan omvat de &quot;Send Beacon&quot;actie (`s.tl`) met koppelingsnaam &quot;video start&quot;, gevolgd door de handeling &quot;Variabelen wissen&quot;.
+  Dan omvat de &quot;Send Beacon&quot;actie (`s.tl`) met de naam &quot;video start&quot;, gevolgd door de actie &quot;Variabelen wissen&quot;.
 
 >[!TIP]
 > 
->Voor implementaties waarbij meerdere eVars of props voor elk video-element niet kunnen worden gebruikt, kunnen gegevenselementwaarden binnen het Platform worden samengevoegd, geparseerd in classificatierapporten met behulp van het gereedschap Classificatieregel Builder, zoals wordt uitgelegd in [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)en vervolgens toegepast als een segment in Analysis Workspace.
+>Voor implementaties waarbij meerdere eVars of props voor elk video-element niet kunnen worden gebruikt, kunnen gegevenselementwaarden binnen Platform worden samengevoegd, geparseerd in classificatierapporten met behulp van het gereedschap Classificatieregel Builder, zoals wordt uitgelegd in [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)en vervolgens toegepast als een segment in Analysis Workspace.
 
 Als u videogegevenswaarden wilt samenvoegen, maakt u een nieuw gegevenselement met de naam &quot;Videometagegevens&quot; en programmeert u dit om alle videogegevenselementen (hierboven vermeld) te verzamelen en samen te voegen. Bijvoorbeeld:
 
@@ -113,3 +113,5 @@ r.push(_satellite.getVar('Extension Version'));
 
 return r.join('|');
 ```
+
+Lees voor meer informatie over het maken en benutten van gegevenselementen in Platform de [gegevenselementen](../../../ui/managing-resources/data-elements.md) documentatie.
