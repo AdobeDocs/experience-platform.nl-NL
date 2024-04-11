@@ -3,9 +3,9 @@ title: API-eindpunt gegevensset vervaldatum
 description: Het /ttl eindpunt in de Hygiene API van Gegevens staat u toe om datasettermijnen in Adobe Experience Platform programmatically te plannen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
+source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2141'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Een gegevenssetvervaldatum is slechts een getimed-vertraagde schrappingsverricht
 
 Op elk ogenblik alvorens dataset-schrapping eigenlijk in werking wordt gesteld, kunt u het verlopen annuleren of zijn trekkertijd wijzigen. Na het annuleren van een datasetvervaldatum, kunt u het opnieuw openen door een nieuwe vervaldatum te plaatsen.
 
-Zodra de datasetschrapping in werking wordt gesteld, zal zijn vervalsingstaak worden gemerkt zoals `executing`en mag niet verder worden gewijzigd. De gegevensset zelf kan maximaal zeven dagen worden hersteld, maar alleen via een handmatig proces dat via een Adobe-serviceaanvraag wordt geïnitieerd. Aangezien het verzoek uitvoert, beginnen de gegevens meer, de Dienst van de Identiteit, en het Profiel van de Klant in real time afzonderlijke processen om de inhoud van de dataset uit hun respectieve diensten te verwijderen. Zodra de gegevens van alle drie de diensten worden geschrapt, wordt de vervaldatum duidelijk zoals `executed`.
+Zodra de datasetschrapping in werking wordt gesteld, zal zijn vervalsingstaak worden gemerkt zoals `executing`en mag niet verder worden gewijzigd. De gegevensset zelf kan maximaal zeven dagen worden hersteld, maar alleen via een handmatig proces dat via een Adobe-serviceaanvraag wordt geïnitieerd. Aangezien het verzoek uitvoert, beginnen de gegevens meer, de Dienst van de Identiteit, en het Profiel van de Klant in real time afzonderlijke processen om de inhoud van de dataset uit hun respectieve diensten te verwijderen. Zodra de gegevens van alle drie de diensten worden geschrapt, wordt de vervaldatum duidelijk zoals `completed`.
 
 >[!WARNING]
 >
@@ -56,7 +56,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%Jane Doe%25 \
+  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%20%25Jane%20Doe%25 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -66,6 +66,10 @@ curl -X GET \
 **Antwoord**
 
 Een succesvolle reactie maakt een lijst van de resulterende datasetvervaldata. Het volgende voorbeeld is afgekapt voor ruimte.
+
+>[!IMPORTANT]
+>
+>De `ttlId` in het antwoord wordt ook de `{DATASET_EXPIRATION_ID}`. Zij allebei verwijzen naar het unieke herkenningsteken voor de datasetvervaldatum.
 
 ```json
 {
@@ -90,26 +94,30 @@ Een succesvolle reactie maakt een lijst van de resulterende datasetvervaldata. H
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `totalRecords` | De telling van gegevenssetvervaltermijnen die de parameters van de lijstvraag aanstemden. |
-| `ttlDetails` | Bevat de details van de teruggekeerde datasettermijnen. Voor meer details over de eigenschappen van een datasetafloop, zie de reactiesectie voor het maken van a [opzoekvraag](#lookup). |
+| `total_count` | De telling van gegevenssetvervaltermijnen die de parameters van de lijstvraag aanstemden. |
+| `results` | Bevat de details van de teruggekeerde datasettermijnen. Voor meer details over de eigenschappen van een datasetafloop, zie de reactiesectie voor het maken van a [opzoekvraag](#lookup). |
 
 {style="table-layout:auto"}
 
 ## Een gegevensset opzoeken die vervalt {#lookup}
 
-Als u een gegevenssetvervaldatum wilt opzoeken, vraagt u een GET met een van de `datasetId` of de `ttlId`.
+Als u een gegevenssetvervaldatum wilt opzoeken, vraagt u een GET met een van de `{DATASET_ID}` of de `{DATASET_EXPIRATION_ID}`.
+
+>[!IMPORTANT]
+>
+>De `{DATASET_EXPIRATION_ID}` wordt bedoeld als `ttlId` in de reactie. Zij allebei verwijzen naar het unieke herkenningsteken voor de datasetvervaldatum.
 
 **API-indeling**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}
 ```
 
 | Parameter | Beschrijving |
 | --- | --- |
 | `{DATASET_ID}` | De id van de gegevensset waarvan u de vervaldatum wilt opzoeken. |
-| `{TTL_ID}` | De id van de vervaldatum van de gegevensset. |
+| `{DATASET_EXPIRATION_ID}` | De id van de vervaldatum van de gegevensset. |
 
 {style="table-layout:auto"}
 
@@ -222,7 +230,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert een (Gecreeerde) status van HTTP 201 en de nieuwe staat van de datasetvervaldatum terug, als er geen reeds bestaande datasetvervaldatum was.
+Een succesvolle reactie keert een (Gecreeerde) status van HTTP 201 en de nieuwe staat van de datasetvervaldatum terug.
 
 ```json
 {
@@ -254,7 +262,7 @@ Een succesvolle reactie keert een (Gecreeerde) status van HTTP 201 en de nieuwe 
 | `displayName` | Een weergavenaam voor de vervalaanvraag. |
 | `description` | Een beschrijving voor de vervalaanvraag. |
 
-De HTTP-status 400 (Onjuist verzoek) treedt op als er al een gegevenssetvervaldatum bestaat voor de gegevensset. Een mislukte reactie keert een 404 (niet Gevonden) status van HTTP terug als geen dergelijke datasetvervaldatum bestaat (of u hebt geen toegang tot het).
+De HTTP-status 400 (Onjuist verzoek) treedt op als er al een gegevenssetvervaldatum bestaat voor de gegevensset. Een mislukte reactie keert een 404 (niet Gevonden) status van HTTP terug als geen dergelijke datasetvervaldatum bestaat (of u hebt geen toegang tot de dataset).
 
 ## Vervaldatum gegevensset bijwerken {#update}
 
@@ -267,14 +275,12 @@ Om een vervaldatum voor een dataset bij te werken, gebruik een verzoek van de PU
 **API-indeling**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_EXPIRATION_ID}
 ```
-
-<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{TTL_ID}` | Identiteitskaart van de datasetvervaldatum die u wilt veranderen. |
+| `{DATASET_EXPIRATION_ID}` | Identiteitskaart van de datasetvervaldatum die u wilt veranderen. Opmerking: dit wordt de `ttlId` in de reactie. |
 
 **Verzoek**
 
@@ -297,7 +303,7 @@ curl -X PUT \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `expiry` | **Vereist** Een datum en tijd in ISO 8601-indeling. Als de tekenreeks geen expliciete tijdzoneverschuiving heeft, wordt aangenomen dat de tijdzone UTC is. De levensduur van de gegevens binnen het systeem wordt ingesteld op basis van de opgegeven vervalwaarde. Om het even welke vorige verlooptimestamp voor de zelfde dataset wordt vervangen door de nieuwe vervalwaarde u hebt verstrekt. Deze datum en tijd moeten ten minste **24 uur in de toekomst**. |
+| `expiry` | **Vereist** Een datum en tijd in ISO 8601-indeling. Als de tekenreeks geen expliciete tijdzoneverschuiving heeft, wordt aangenomen dat de tijdzone UTC is. De levensduur van de gegevens binnen het systeem wordt ingesteld op basis van de opgegeven vervalwaarde. Om het even welke vorige verlooptimestamp voor de zelfde dataset moet door de nieuwe vervalwaarde worden vervangen u hebt verstrekt. Deze datum en tijd moeten ten minste **24 uur in de toekomst**. |
 | `displayName` | Een weergavenaam voor de vervalaanvraag. |
 | `description` | Een optionele beschrijving voor de vervalaanvraag. |
 
@@ -374,19 +380,19 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en de vervaldatu
 
 ## Haal de geschiedenis van de vervalstatus van een dataset terug {#retrieve-expiration-history}
 
-U kunt de geschiedenis van de vervalstatus van een specifieke dataset opzoeken door de vraagparameter te gebruiken `include=history` in een opzoekverzoek. Het resultaat omvat informatie over de verwezenlijking van de dataset vervaldatum, om het even welke updates die zijn toegepast, en zijn annulering of uitvoering (indien van toepassing). U kunt ook de opdracht `ttlId` van het verstrijken van de gegevensset.
+Om de geschiedenis van de vervalstatus van een specifieke dataset omhoog te kijken, gebruik `{DATASET_ID}` en `include=history` queryparameter in een opzoekverzoek. Het resultaat omvat informatie over de verwezenlijking van de dataset vervaldatum, om het even welke updates die zijn toegepast, en zijn annulering of uitvoering (indien van toepassing). U kunt ook de opdracht `{DATASET_EXPIRATION_ID}` om de geschiedenis van de datasetvervalstatus terug te winnen.
 
 **API-indeling**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}?include=history
 ```
 
 | Parameter | Beschrijving |
 | --- | --- |
 | `{DATASET_ID}` | Identiteitskaart van de dataset de waarvan vervalgeschiedenis u omhoog wilt zoeken. |
-| `{TTL_ID}` | De id van de vervaldatum van de gegevensset. |
+| `{DATASET_EXPIRATION_ID}` | De id van de vervaldatum van de gegevensset. Opmerking: dit wordt de `ttlId` in de reactie. |
 
 {style="table-layout:auto"}
 
