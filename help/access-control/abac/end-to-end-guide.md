@@ -4,9 +4,9 @@ title: Op attributen-Gebaseerde Gids van de Controle van de Toegang van begin to
 description: Dit document verstrekt een gids van begin tot eind op op attribuut-gebaseerde toegangsbeheer in Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c89ae9befa3befbffab9d6468f3c207ab8e7b74f
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -132,6 +132,10 @@ De **[!UICONTROL Edit labels]** wordt weergegeven, zodat u de labels kunt kiezen
 >Wanneer een label aan een veld wordt toegevoegd, wordt dat label toegepast op de bovenliggende bron van dat veld (een klasse of een veldgroep). Als de ouderklasse of de gebiedsgroep door andere schema&#39;s wordt gebruikt, zullen die schema&#39;s het zelfde etiket erven.
 
 ## Labels toepassen op segmenten
+
+>[!NOTE]
+>
+>Om het even welk segment dat een geëtiketteerd attribuut gebruikt moet eveneens worden geëtiketteerd als u de zelfde toegangsbeperkingen op het wilt toepassen.
 
 Nadat u de schemavelden hebt gelabeld, kunt u nu beginnen met het labelen van de segmenten.
 
