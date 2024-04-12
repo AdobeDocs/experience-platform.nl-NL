@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van september 2023 staat Adobe Experience Platform vermeld.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '2232'
+source-wordcount: '2238'
 ht-degree: 2%
 
 ---
@@ -70,7 +70,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
 | Gegevensstromen | Ondersteuning voor opzoeken van apparaten | Wanneer het vormen van een gegevensstroom, kunt u het niveau van apparaat raadplegingsinformatie nu selecteren die moet worden verzameld. De opzoekinformatie van het apparaat omvat gegevens over het apparaat, de hardware, het besturingssysteem en de browser die worden gebruikt om met uw pagina te communiceren. <br>  Opzoekgegevens van het apparaat kunnen niet samen met de gebruikersagent en de clienthints worden verzameld. Als u ervoor kiest apparaatinformatie te verzamelen, wordt de verzameling van gebruikersagent- en clienthints uitgeschakeld en andersom. Alle gegevens van de apparatenraadpleging worden opgeslagen in `xdm:device` veldgroep. Meer informatie vindt u in de documentatie op [configureren, gegevensstromen](../../datastreams/configure.md#geolocation-device-lookup). |
-| Extensies | [!DNL TikTok] API-extensie voor webgebeurtenissen | De [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) kunt u gegevens die zijn vastgelegd in het Adobe Experience Platform Edge Network gebruiken en verzenden naar [!DNL TikTok] in de vorm van server-side-gebeurtenissen die de [!DNL TikTok] Web Events API. |
+| Extensies | [!DNL TikTok] API-extensie voor webgebeurtenissen | De [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) Met de extensie kunt u gegevens die zijn vastgelegd in de Adobe Experience Platform Edge Network, gebruiken en verzenden naar [!DNL TikTok] in de vorm van server-side-gebeurtenissen die de [!DNL TikTok] Web Events API. |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Experience Platform biedt een reeks mogelijkheden voor gegevenshygiëne waarmee 
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} | Beheer uw levenscyclus van gegevens in alle gegevensopslagruimten om te voldoen aan de verplichtingen van de klant en licentieovereenkomsten met de geavanceerde functies voor levenscyclusbeheer van gegevens in Adobe Experience Platform: automatische gegevenssetvervaldatum en verwijdering van records.<br>Met geautomatiseerde datasetafloop, kunt u volledige datasets schrappen en een datum en een tijd voor de dataset plaatsen om worden geschrapt.<br>Met Record verwijderen kunt u afzonderlijke consumentenprofielen verwijderen door zich te richten op hun primaire identiteit. U kunt de primaire identiteiten individueel door UI of via CSV/JSON- dossierupload verstrekken. Zie de [Documentatie verwijderen opnemen](../../hygiene/ui/record-delete.md) voor meer informatie |
+| [!BADGE Beta]{type=Informative} Record verwijderen (beperkte versie) | Beheer uw levenscyclus van gegevens in alle gegevensopslagruimten om te voldoen aan de verplichtingen van de klant en licentieovereenkomsten met de geavanceerde functies voor levenscyclusbeheer van gegevens in Adobe Experience Platform: automatische gegevenssetvervaldatum en verwijdering van records.<br>Met geautomatiseerde datasetafloop, kunt u volledige datasets schrappen en een datum en een tijd voor de dataset plaatsen om worden geschrapt.<br>Met Record verwijderen kunt u afzonderlijke consumentenprofielen verwijderen door zich te richten op hun primaire identiteit. U kunt de primaire identiteiten individueel door UI of via CSV/JSON- dossierupload verstrekken. Zie de [Documentatie verwijderen opnemen](../../hygiene/ui/record-delete.md) voor meer informatie |
 | Verlopen gegevensset | Beperk uw gegevens tot een minimum en houd de controle over uw licentieovereenkomsten met de automatische gegevenssetvervaldatum. Verminder gegevensvolumes door volledige datasets te schrappen en plaats een datum en een tijd voor de dataset om worden geschrapt. Zie de [documentatie betreffende de vervaldatum van gegevenssets](../../hygiene/ui/dataset-expiration.md) voor meer informatie . |
 
 {style="table-layout:auto"}

@@ -3,9 +3,9 @@ title: API-eindpunt gegevensset vervaldatum
 description: Het /ttl eindpunt in de Hygiene API van Gegevens staat u toe om datasettermijnen in Adobe Experience Platform programmatically te plannen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
+source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2166'
 ht-degree: 0%
 
 ---
@@ -197,6 +197,10 @@ De volgende JSON vertegenwoordigt een afgekapte reactie voor de details van een 
 Om ervoor te zorgen dat gegevens na een bepaalde periode uit het systeem worden verwijderd, plant u een vervaldatum voor een specifieke dataset door de gegevensset-id en de vervaldatum en -tijd op te geven in ISO 8601-indeling.
 
 Om een datasetvervaldatum tot stand te brengen, voer een verzoek van de POST uit zoals hieronder getoond en verstrek de hieronder vermelde waarden binnen de nuttige lading.
+
+>[!NOTE]
+>
+>Als u een fout van 404 ontvangt, zorg ervoor dat het verzoek geen extra voorwaartse schuine strepen heeft. Een sluitslash kan ertoe leiden dat een verzoek om een POST mislukt.
 
 **API-indeling**
 

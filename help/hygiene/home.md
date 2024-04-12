@@ -1,15 +1,15 @@
 ---
 title: Overzicht van geavanceerd gegevenslevenscyclusbeheer
-description: Met geavanceerd beheer van de levenscyclus van gegevens kunt u de levenscyclus van uw gegevens beheren door verouderde of onjuiste gegevens bij te werken of te wissen.
+description: Met Advanced Data Lifecycle Management kunt u de levenscyclus van uw gegevens beheren door verouderde of onjuiste gegevens bij te werken of te wissen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 0%
+source-wordcount: '572'
+ht-degree: 1%
 
 ---
 
-# Geavanceerd beheer van de gegevenslevenscyclus in Adobe Experience Platform
+# Advanced Data Lifecycle Management in Adobe Experience Platform
 
 Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer van grote, gecompliceerde gegevensbewerkingen om de ervaringen van de consument te kunnen indelen. Aangezien het gegeven in tijd in het systeem wordt opgenomen, wordt het steeds belangrijker om uw gegevensopslag te beheren zodat de gegevens zoals verwacht worden gebruikt, wordt bijgewerkt wanneer de onjuiste gegevens moeten verbeteren, en wordt geschrapt wanneer het organisatorische beleid het noodzakelijk acht.
 
@@ -70,4 +70,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Volgende stappen
 
-Dit document biedt een overzicht van de mogelijkheden van het platform voor de levenscyclus van gegevens. Ga naar de pagina [UI-hulplijn](./ui/overview.md). Als u wilt leren hoe u via programmacode taken in de gegevenslevenscyclus kunt maken, raadpleegt u de [Handleiding voor API voor gegevenshygiëne](./api/overview.md)
+In dit document wordt een overzicht gegeven van de mogelijkheden van het platform voor de levenscyclus van gegevens. Ga naar de pagina [UI-hulplijn](./ui/overview.md). Als u wilt leren hoe u via programmacode taken in de levenscyclus van gegevens maakt, raadpleegt u de [Handleiding voor API voor gegevenshygiëne](./api/overview.md)
