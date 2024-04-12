@@ -5,9 +5,9 @@ title: Creeer een Dataflow Gebruikend een Bron van Protocollen in UI
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van het Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen op hoe te om een dataflow voor een protocolbron tot stand te brengen gebruikend Platform UI.
 exl-id: 94631a78-14ea-41d7-876c-468634dfc6c1
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1404'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Een dataflow is een geplande taak die gegevens van een bron aan een dataset in A
 
 >[!NOTE]
 >
->Om een gegevensstroom tot stand te brengen, moet u reeds een voor authentiek verklaarde rekening met een protocolbron hebben. Een lijst van leerprogramma&#39;s voor het creëren van verschillende protocollen bronrekeningen in UI kan in worden gevonden [overzicht van bronnen](../../../home.md#protocols).
+>* Om een gegevensstroom tot stand te brengen, moet u reeds een voor authentiek verklaarde rekening met een protocolbron hebben. Een lijst van leerprogramma&#39;s voor het creëren van verschillende protocollen bronrekeningen in UI kan in worden gevonden [overzicht van bronnen](../../../home.md#protocols).
+>* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd.
 
 ## Aan de slag
 

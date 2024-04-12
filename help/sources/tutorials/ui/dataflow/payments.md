@@ -5,9 +5,9 @@ title: Een gegevensstroom maken met een betalingsbron in de gebruikersinterface
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van het Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een betalingsbron met behulp van de interface van het platform.
 exl-id: 7355435b-c038-4310-b04a-8ac6b6723b9b
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1404'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Een dataflow is een geplande taak die gegevens van een bron aan een dataset in A
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al over een geverifieerde account met een betalingsbron beschikken. Een lijst met zelfstudies voor het maken van verschillende betaalbronaccounts in de gebruikersinterface vindt u in de [overzicht van bronnen](../../../home.md#payments).
+>* Als u een gegevensstroom wilt maken, moet u al over een geverifieerde account met een betalingsbron beschikken. Een lijst met zelfstudies voor het maken van verschillende betaalbronaccounts in de gebruikersinterface vindt u in de [overzicht van bronnen](../../../home.md#payments).
+>* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd.
 
 ## Aan de slag
 

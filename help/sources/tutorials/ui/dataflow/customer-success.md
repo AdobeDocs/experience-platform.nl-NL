@@ -5,9 +5,9 @@ title: Een gegevensstroom maken met een succesbron van de klant in de gebruikers
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van het Platform terugwint en opneemt. Deze zelfstudie biedt stappen voor het maken van een gegevensstroom voor een bron voor klantsucces met behulp van de interface van het platform.
 exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Een dataflow is een geplande taak die gegevens van een bron aan een dataset in A
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al over een geverifieerd account met een bron voor klantensucces beschikken. Een lijst van leerprogramma&#39;s voor het creëren van verschillende van het klantensucces bronrekeningen in UI kan in worden gevonden [overzicht van bronnen](../../../home.md#customer-success).
+>* Als u een gegevensstroom wilt maken, moet u al over een geverifieerd account met een bron voor klantensucces beschikken. Een lijst van leerprogramma&#39;s voor het creëren van verschillende van het klantensucces bronrekeningen in UI kan in worden gevonden [overzicht van bronnen](../../../home.md#customer-success).
+>* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd.
 
 ## Aan de slag
 

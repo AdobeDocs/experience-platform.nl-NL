@@ -5,9 +5,9 @@ title: Een gegevensstroom maken met een publicatiebron in de gebruikersinterface
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van het Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een advertentiebron met behulp van de interface van het platform.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1386'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Een dataflow is een geplande taak die gegevens van een bron aan een dataset in A
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al over een geverifieerd account bij een advertentiebron beschikken. Een lijst met zelfstudies voor het maken van verschillende advertentiebronaccounts in de gebruikersinterface vindt u in de [overzicht van bronnen](../../../home.md#advertising).
+>* Als u een gegevensstroom wilt maken, moet u al over een geverifieerd account bij een advertentiebron beschikken. Een lijst met zelfstudies voor het maken van verschillende advertentiebronaccounts in de gebruikersinterface vindt u in de [overzicht van bronnen](../../../home.md#advertising).
+>* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd.
 
 ## Aan de slag
 

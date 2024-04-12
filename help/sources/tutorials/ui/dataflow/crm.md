@@ -3,33 +3,34 @@ keywords: Experience Platform;home;populaire onderwerpen;crm-schema;crm;CRM;data
 solution: Experience Platform
 title: Creeer een Dataflow Gebruikend een Bron van CRM in UI
 type: Tutorial
-description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen op hoe te om een dataflow voor een bron van CRM tot stand te brengen gebruikend Platform UI.
+description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van het Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen op hoe te om een dataflow voor een bron van CRM tot stand te brengen gebruikend Platform UI.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1403'
 ht-degree: 0%
 
 ---
 
 # Creeer een gegevensstroom gebruikend een bron van CRM in UI
 
-Een dataflow is een geplande taak die gegevens van een bron aan een dataset in Adobe Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een CRM-bron (Customer Relationship Management) met behulp van de gebruikersinterface van het Platform.
+Een dataflow is een geplande taak die gegevens van een bron aan een dataset in Adobe Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een CRM-bron (Customer Relationship Management) met behulp van de platforminterface.
 
 >[!NOTE]
 >
->Om een gegevensstroom tot stand te brengen, moet u reeds een voor authentiek verklaarde rekening met een bron van CRM hebben. Een lijst met zelfstudies voor het maken van verschillende CRM-bronaccounts in de gebruikersinterface vindt u in het dialoogvenster [overzicht van bronnen](../../../home.md#crm).
+>* Om een gegevensstroom tot stand te brengen, moet u reeds een voor authentiek verklaarde rekening met een bron van CRM hebben. Een lijst met zelfstudies voor het maken van verschillende CRM-bronaccounts in de gebruikersinterface vindt u in het dialoogvenster [overzicht van bronnen](../../../home.md#crm).
+>* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Platform:
+Deze zelfstudie vereist een goed begrip van de volgende componenten van Platform:
 
 * [Bronnen](../../../home.md): Met Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met [!DNL Platform] diensten.
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [[!DNL Data Prep]](../../../../data-prep/home.md): Staat gegevensingenieurs toe om, gegevens aan en van het Model van de Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
+   * [Zelfstudie Schema-editor](../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+* [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+* [[!DNL Data Prep]](../../../../data-prep/home.md): Hiermee staat u gegevensengineers toe om gegevens toe te wijzen, te transformeren en te valideren van en naar het XDM-model (Experience Data Model).
 
 ## Gegevens toevoegen
 
@@ -64,17 +65,17 @@ Om in een nieuwe dataset in te gaan, selecteer **[!UICONTROL New dataset]** en g
 
 ![new-dataset](../../../images/tutorials/dataflow/table-based/new-dataset.png)
 
-### Inschakelen [!DNL Profile] en foutdiagnostiek
+### Inschakelen [!DNL Profile] en foutdiagnose
 
 Selecteer vervolgens de **[!UICONTROL Profile dataset]** schakelen om uw gegevensset in te schakelen voor [!DNL Profile]. Hierdoor kunt u een holistische weergave maken van de kenmerken en het gedrag van een entiteit. Gegevens van alle [!DNL Profile]- de toegelaten datasets zullen in worden omvat [!DNL Profile] en wijzigingen worden toegepast wanneer u de gegevensstroom opslaat.
 
 [!UICONTROL Error diagnostics] laat gedetailleerde foutenmelding generatie voor om het even welke onjuiste verslagen toe die in uw dataflow voorkomen, terwijl [!UICONTROL Partial ingestion] kunt u gegevens met fouten opnemen tot een bepaalde drempel die u handmatig definieert. Zie de [gedeeltelijke batch-opname, overzicht](../../../../ingestion/batch-ingestion/partial.md) voor meer informatie .
 
-![met profiel en fouten](../../../images/tutorials/dataflow/table-based/profile-and-errors.png)
+![profiel-en-fouten](../../../images/tutorials/dataflow/table-based/profile-and-errors.png)
 
 ### Waarschuwingen inschakelen
 
-U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van uw gegevensstroom. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [abonneren op berichten voor bronnen met behulp van de gebruikersinterface](../alerts.md).
+U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van uw gegevensstroom. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op berichten voor bronnen met behulp van de gebruikersinterface](../alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw gegevensstroom, selecteert u **[!UICONTROL Next]**.
 
@@ -90,7 +91,7 @@ Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op 
 >
 >Als u [!DNL Salesforce] als onderdeel van Adobe Real-time Customer Data Platform B2B Edition, raadpleegt u de [[!DNL Salesforce] veldtoewijzingsdocument](../../../connectors/adobe-applications/mapping/salesforce.md) voor richtsnoeren voor het in kaart brengen [!DNL Salesforce] bronvelden naar de desbetreffende XDM-doelvelden.
 
-Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Next]**.
+Als de brongegevens zijn toegewezen, selecteert u **[!UICONTROL Next]**.
 
 ![toewijzing](../../../images/tutorials/dataflow/table-based/mapping.png)
 
@@ -113,7 +114,7 @@ Zie de lijst hieronder voor meer informatie over het plannen van configuraties.
 | Veld | Beschrijving |
 | --- | --- |
 | Frequentie | De frequentie waarin inname plaatsvindt. Selecteerbare frequenties omvatten `Once`, `Minute`, `Hour`, `Day`, en `Week`. |
-| Interval | Een geheel getal dat het interval voor de geselecteerde frequentie instelt. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul en moet worden ingesteld op groter dan of gelijk aan 15. |
+| Interval | Een geheel getal dat het interval voor de geselecteerde frequentie instelt. De waarde van het interval moet een geheel getal anders dan nul zijn en moet worden ingesteld op groter dan of gelijk aan 15. |
 | Begintijd | Een UTC-tijdstempel die aangeeft wanneer de eerste opname wordt uitgevoerd. De begintijd moet groter zijn dan of gelijk zijn aan de huidige UTC-tijd. |
 | Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als backfill is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande inname opgenomen. Als terugvullen is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de begintijd worden geladen. Bestanden die vóór de begintijd zijn geladen, worden niet opgenomen. |
 | Incrementele gegevens laden met | Een optie met een gefilterde reeks gebieden van het bronschema van type, datum, of tijd. Dit veld wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
@@ -124,9 +125,9 @@ Zie de lijst hieronder voor meer informatie over het plannen van configuraties.
 
 De **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-* **[!UICONTROL Connection]**: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
-* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
-* **[!UICONTROL Scheduling]**: Toont de actieve periode, de frequentie, en het interval van het innameprogramma.
+* **[!UICONTROL Connection]**: Hiermee geeft u het brontype, het relevante pad van het gekozen bronbestand en de hoeveelheid kolommen in dat bronbestand weer.
+* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset volgt.
+* **[!UICONTROL Scheduling]**: Hiermee geeft u de actieve periode, frequentie en interval van het innameschema weer.
 
 Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Finish]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
 
@@ -138,11 +139,11 @@ Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door he
 
 ## Uw gegevensstroom verwijderen
 
-U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeerd gebruikend zijn **[!UICONTROL Delete]** functie beschikbaar in de **[!UICONTROL Dataflows]** werkruimte. Raadpleeg de zelfstudie voor meer informatie over het verwijderen van gegevensstromen [verwijderen, gegevensstromen in de gebruikersinterface](../delete.md).
+U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeerd gebruikend zijn **[!UICONTROL Delete]** functie beschikbaar in de **[!UICONTROL Dataflows]** werkruimte. Raadpleeg de zelfstudie voor meer informatie over het verwijderen van gegevensstromen [gegevens verwijderen in de gebruikersinterface](../delete.md).
 
 ## Volgende stappen
 
-Door dit leerprogramma te volgen, hebt u met succes een dataflow gecreeerd om gegevens van uw bron van CRM aan Platform te brengen. Binnenkomende gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u met succes een gegevensstroom gecreeerd om gegevens van uw bron van CRM aan Platform te brengen. Binnenkomende gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
 * [[!DNL Real-Time Customer Profile]-overzicht](../../../../profile/home.md)
 * [[!DNL Data Science Workspace]-overzicht](../../../../data-science-workspace/home.md)

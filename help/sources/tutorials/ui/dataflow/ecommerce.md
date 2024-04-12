@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;eCommerce-connector;eCommerce
 solution: Experience Platform
-title: Creeer een Dataflow Gebruikend een Bron van de e-Handel in UI
+title: Een gegevensstroom maken met een E-Commerce-bron in de gebruikersinterface
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van het Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen op hoe te om een dataflow voor een e-commercebron tot stand te brengen gebruikend Platform UI.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1385'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Een dataflow is een geplande taak die gegevens van een bron aan een dataset in A
 
 >[!NOTE]
 >
->Om een gegevensstroom tot stand te brengen, moet u reeds een voor authentiek verklaarde rekening met een e-commercebron hebben. Een lijst van leerprogramma&#39;s voor het creëren van verschillende e-commercebronrekeningen in UI kan in worden gevonden [overzicht van bronnen](../../../home.md#ecommerce).
+>* Om een gegevensstroom tot stand te brengen, moet u reeds een voor authentiek verklaarde rekening met een e-commercebron hebben. Een lijst van leerprogramma&#39;s voor het creëren van verschillende e-commercebronrekeningen in UI kan in worden gevonden [overzicht van bronnen](../../../home.md#ecommerce).
+>* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd.
 
 ## Aan de slag
 

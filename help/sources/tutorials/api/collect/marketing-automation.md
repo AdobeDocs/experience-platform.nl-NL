@@ -5,9 +5,9 @@ title: Creeer een Dataflow voor de Bronnen van de Automatisering van de Marketin
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een marketingautomatiseringssysteem en het overbrengen van gegevens naar Adobe Experience Platform met behulp van bronconnectors en API's.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1349'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een marke
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id hebben met een marketingautomatiseringsbron. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#marketing-automation) voor een lijst met marketingautomatiseringsbronnen waarmee u een basisverbinding kunt maken.
+>* Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id hebben met een marketingautomatiseringsbron. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#marketing-automation) voor een lijst met marketingautomatiseringsbronnen waarmee u een basisverbinding kunt maken.
+>* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd.
 
 ## Aan de slag
 

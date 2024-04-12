@@ -5,9 +5,9 @@ title: Creeer een Dataflow voor de Bronnen van het Gegevensbestand Gebruikend de
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens uit een database en het opnemen ervan in Platform met behulp van bronconnectors en API's.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een datab
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een databasebron hebben. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#database) voor een lijst met databasebronnen waarmee u een basisverbinding kunt maken.
+>* Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een databasebron hebben. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#database) voor een lijst met databasebronnen waarmee u een basisverbinding kunt maken.
+>* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd. De enige tijdstempel die wordt ondersteund voor de [[!DNL Snowflake] bron](../../../connectors/databases/snowflake.md) is TIMESTAMP_NTZ met UTC-tijd.
 
 ## Aan de slag
 

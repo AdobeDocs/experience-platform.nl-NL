@@ -5,9 +5,9 @@ title: Creeer een Dataflow Gebruikend een Bron van het Gegevensbestand in UI
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van het Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een databasebron met behulp van de interface van het platform.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1396'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,9 @@ Een dataflow is een geplande taak die gegevens van een bron aan een dataset in A
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al over een geverifieerd account met een databasebron beschikken. Een lijst met zelfstudies voor het maken van verschillende databasebronaccounts in de gebruikersinterface vindt u in het dialoogvenster [overzicht van bronnen](../../../home.md#database).
+>* Als u een gegevensstroom wilt maken, moet u al over een geverifieerd account met een databasebron beschikken. Een lijst met zelfstudies voor het maken van verschillende databasebronaccounts in de gebruikersinterface vindt u in het dialoogvenster [overzicht van bronnen](../../../home.md#database).
+>
+>* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd. De enige tijdstempel die wordt ondersteund voor de [[!DNL Snowflake] bron](../../../connectors/databases/snowflake.md) is TIMESTAMP_NTZ met UTC-tijd.
 
 ## Aan de slag
 

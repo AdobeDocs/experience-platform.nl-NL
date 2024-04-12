@@ -5,9 +5,9 @@ title: Een gegevensstroom maken voor de succesbronnen van de Klant met behulp va
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een systeem van klantensucces en het opnemen van gegevens in Platform met behulp van bronconnectors en API's.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een bron 
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id hebben met een bron voor klantensucces. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#customer-success) voor een lijst van de bronnen van het klantensucces die u een basisverbinding kunt tot stand brengen met.
+>* Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id hebben met een bron voor klantensucces. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#customer-success) voor een lijst van de bronnen van het klantensucces die u een basisverbinding kunt tot stand brengen met.
+>* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd.
 
 ## Aan de slag
 

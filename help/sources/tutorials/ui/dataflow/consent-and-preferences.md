@@ -5,9 +5,9 @@ title: Creeer een Dataflow gebruikend een Versie van de Toestemming en van de Vo
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van het Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een toestemmings- en voorkeursbron met behulp van de interface van het platform.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1444'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Een dataflow is een geplande taak die gegevens van een bron aan een dataset in A
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al beschikken over een geverifieerde account bij de [!DNL OneTrust Integration] bron. Zie de zelfstudie aan [een [!DNL OneTrust Integration] bronverbinding in de gebruikersinterface](../../ui/create/consent-and-preferences/onetrust.md) voor meer informatie .
+>* Als u een gegevensstroom wilt maken, moet u al beschikken over een geverifieerde account bij de [!DNL OneTrust Integration] bron. Zie de zelfstudie aan [een [!DNL OneTrust Integration] bronverbinding in de gebruikersinterface](../../ui/create/consent-and-preferences/onetrust.md) voor meer informatie .
+>* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd.
 
 ## Aan de slag
 

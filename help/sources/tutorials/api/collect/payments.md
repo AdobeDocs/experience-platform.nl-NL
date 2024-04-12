@@ -5,9 +5,9 @@ title: Een gegevensstroom maken voor betalingsbronnen met behulp van de Flow Ser
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een betalingstoepassing en het opnemen van gegevens in Platform met behulp van bronconnectors en API's.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1363'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens va
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een betalingsbron hebben. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#payments) voor een lijst met betalingsbronnen waarmee u een basisverbinding kunt maken.
+>* Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een betalingsbron hebben. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#payments) voor een lijst met betalingsbronnen waarmee u een basisverbinding kunt maken.
+>* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd.
 
 ## Aan de slag
 

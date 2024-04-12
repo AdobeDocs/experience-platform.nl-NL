@@ -5,9 +5,9 @@ title: Creeer een Dataflow voor de Bronnen van Protocollen Gebruikend de Dienst 
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een protocoltoepassing en het opnemen van gegevens in Platform met behulp van bronconnectors en API's.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1314'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een proto
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id hebben met een protocolbron. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#protocols) voor een lijst met protocolbronnen waarmee u een basisverbinding kunt maken.
+>* Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id hebben met een protocolbron. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#protocols) voor een lijst met protocolbronnen waarmee u een basisverbinding kunt maken.
 
 ## Aan de slag
 

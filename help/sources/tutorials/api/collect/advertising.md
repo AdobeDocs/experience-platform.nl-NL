@@ -5,9 +5,9 @@ title: Een gegevensstroom maken voor publicatiebronnen met behulp van de Flow Se
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een externe advertentietoepassing en het opnemen ervan in Platform met behulp van bronconnectors en de Flow Service API.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1340'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens va
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een advertentiebron hebben. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#advertising) voor een lijst met advertentiebronnen waarmee u een basisverbinding kunt maken.
+>* Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een advertentiebron hebben. Als u deze id niet hebt, raadpleegt u de [overzicht van bronnen](../../../home.md#advertising) voor een lijst met advertentiebronnen waarmee u een basisverbinding kunt maken.
+>* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd.
 
 ## Aan de slag
 
