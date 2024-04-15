@@ -4,9 +4,9 @@ description: Een overzicht van de verschillende beschikbare Adobe Real-time Cust
 feature: Get Started, Audiences, Segments, B2B
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '1346'
+source-wordcount: '1330'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Dit document bevat voorbeelden van segmentdefinities in Adobe Real-time Customer
 Voordat u de segmentatiekenmerken voor B2B-klassen kunt gebruiken, moet u de volgende stappen uitvoeren:
 
 1. Maak schema&#39;s waarin de B2B-klassen worden gebruikt. De klassen B2B Edition omvatten Account, Campagne, Opportunity, Marketing List en meer. Voor informatie over [hoe u schema&#39;s instelt voor gebruik met B2B-klassen](../schemas/b2b.md) raadpleeg de schemadocumentatie.
-1. Maak relaties tussen uw XDM- (Experience Data Model) B2B-schema&#39;s. Segmenten die zijn gebaseerd op B2B Edition-kenmerken vereisen relaties tussen de klassen om de uitgebreide B2B-segmentatiefunctie volledig te kunnen gebruiken. Zie de documentatie op [hoe te om een verband tussen twee B2B- schema&#39;s te bepalen](../../xdm/tutorials/relationship-b2b.md) voor meer informatie .
-1. Samenvatting gegevens gebruikend datasets die op uw B2B- schema&#39;s worden gebaseerd. Raadpleeg de documentatie bij bronnen voor [informatie over hoe gegevens kunnen worden ingevoerd](../../sources/connectors/adobe-applications/marketo/marketo.md).
-1. Lees de [Gebruikershandleiding voor het maken van segmenten](../../segmentation/ui/segment-builder.md) voor een gedetailleerdere leidraad voor het opbouwen van het publiek.
+2. Maak relaties tussen uw XDM- (Experience Data Model) B2B-schema&#39;s. Het publiek dat op de attributen van de Uitgave B2B wordt gebaseerd vereist verband tussen de klassen om de uitgebreide functionaliteit van de Segmentatie B2B volledig te gebruiken. Zie de documentatie op [hoe te om een verband tussen twee B2B- schema&#39;s te bepalen](../../xdm/tutorials/relationship-b2b.md) voor meer informatie .
+3. Samenvatting gegevens gebruikend datasets die op uw B2B- schema&#39;s worden gebaseerd. Raadpleeg de documentatie bij bronnen voor [informatie over hoe gegevens kunnen worden ingevoerd](../../sources/connectors/adobe-applications/marketo/marketo.md).
+4. Lees de [Gebruikershandleiding voor Segment Builder](../../segmentation/ui/segment-builder.md) voor een gedetailleerdere leidraad voor het opbouwen van het publiek.
 
 Als aan deze vereisten is voldaan, kunt u deze kenmerken combineren voor algemene B2B-gebruiksgevallen.
 
@@ -54,7 +54,7 @@ Deze verhouding wordt weerspiegeld binnen de Bouwer van het Segment door het geb
 
 Raadpleeg de [schema&#39;s in Real-time Customer Data Platform B2B Edition-documentatie](../schemas/b2b.md) voor meer informatie over de beschikbare B2B-klassen.
 
-De onderstaande gebruiksgevallen bevatten informatie over de klassen die worden gebruikt om relaties tussen de verschillende schema&#39;s tot stand te brengen om deze resultaten te bereiken. Deze voorbeelden kunnen worden gebruikt om u te helpen uw eigen segmenten creëren.
+De onderstaande gebruiksgevallen bevatten informatie over de klassen die worden gebruikt om relaties tussen de verschillende schema&#39;s tot stand te brengen om deze resultaten te bereiken. Deze voorbeelden kunnen u helpen uw eigen publiek tot stand brengen.
 
 ## Voorbeelden van gebruiksgevallen van verschillende segmentaties {#use-cases}
 

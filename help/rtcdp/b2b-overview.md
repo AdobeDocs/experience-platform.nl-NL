@@ -5,9 +5,9 @@ description: Overzicht van Real-time Customer Data Platform B2B Edition-account
 feature: Get Started, B2B
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1050'
 ht-degree: 1%
 
 ---
@@ -86,6 +86,6 @@ Als u wilt begrijpen hoe Real-Time CDP B2B Edition uw business-to-business servi
 * [Hoe kan ik gegevens invoeren](./sources/b2b.md)
 * [Profielen openen](./profile/profile-overview.md)
 * [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
-* [Hoe te om segmenten te bouwen](./segmentation/b2b.md)
-* [Hoe te om segmenten aan bestemmingen te activeren](./destinations/b2b.md)
+* [Hoe te om publiek te bouwen](./segmentation/b2b.md)
+* [Het publiek naar bestemmingen activeren](./destinations/b2b.md)
 * [Beleid voor gegevensbeheer definiëren en afdwingen](./privacy/data-governance-overview.md)

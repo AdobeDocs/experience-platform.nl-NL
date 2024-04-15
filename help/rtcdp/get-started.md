@@ -4,9 +4,9 @@ title: Aan de slag met Real-time Customer Data Platform
 description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Adobe Real-Time Customer Data Platform.
 feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '2328'
+source-wordcount: '2320'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ Deze zelfstudie bevat de volgende stappen:
 1. Gebruiken [meerdere gegevensbronnen](#using-multiple-data-sources).
 1. [Een gegevensbron configureren](#configuring-a-data-source).
 1. [De gegevens verzamelen](#bringing-the-data-together-for-a-specific-customer) voor een specifieke klant.
-1. Instellen [segmenten](#segments).
+1. Instellen [publiek](#audiences).
 1. Instellen [bestemmingen](#destinations).
 1. [Het profiel op verschillende apparaten plaatsen](#cross-device-identity-stitching).
 1. [Het profiel analyseren](#analyzing-the-profile).
@@ -140,7 +140,7 @@ Ze kunnen gegevens uit alle volgende bronnen invoeren:
 
 Al deze gegevens uit verschillende bronnen worden samengevoegd in één enkel uniform klantprofiel.
 
-## Databron configureren
+## Een gegevensbron configureren
 
 Gebruiken [!DNL Real-Time Customer Data Platform] om nieuwe gegevensbronnen in Platform te introduceren. Real-Time CDP bevat een catalogus met gegevensbronnen die snel en eenvoudig aan het profiel kunnen worden toegevoegd.
 
@@ -158,7 +158,7 @@ Als u bijvoorbeeld de CRM-gegevens van Luma wilt invoeren, filtert u de catalogu
 
    Selecteer bijvoorbeeld **[!UICONTROL Contacts]**. Er wordt automatisch een voorvertoning van de contactgegevens geladen, zodat u zeker weet dat alles er naar behoren uitziet.
 
-   Het platform van de Ervaring van de Adobe neemt veel handwerk uit dit proces door standaardgebieden aan auto toe te wijzen [!DNL Experience Data Model] (XDM)-profielschema.
+   Real-Time CDP haalt veel handmatige werk uit dit proces door standaardvelden automatisch toe te wijzen aan de [!DNL Experience Data Model] (XDM)-profielschema.
 
 1. Controleer de veldtoewijzingen.
 
@@ -181,13 +181,15 @@ Luma heeft een groot aantal interne beleidslijnen die het gebruik van bepaalde s
 
 Nadat labels voor gegevensgebruik zijn toegepast, kan Luma vervolgens gegevensbeheer gebruiken om beleidsregels voor gegevensgebruik te maken. Het beleid van het gebruik van gegevens is regels die de soorten acties beschrijven die u op gegevens mag uitvoeren die bepaalde etiketten bevatten. Wanneer wordt geprobeerd een handeling in Real-Time CDP uit te voeren die een beleidsschending vormt, wordt de handeling voorkomen en wordt een waarschuwing gegeven om aan te tonen welk beleid is geschonden en waarom.
 
+Bovendien, Real-Time CDP
+
 ## Het samenbrengen van de gegevens voor een specifieke klant
 
 In dit scenario, onderzoeksprofielen voor Sarah Rose. Haar profiel wordt weergegeven met de e-mail die ze gebruikte om zich aan te melden.
 
 <!-- ![image](assets/luma-find-profile.png) -->
 
-Alle profielinformatie Luma heeft over Sarah displays. Dit omvat haar persoonlijke informatie zoals adres en telefoonaantal, communicatie voorkeur, en de segmenten zij voor kwalificeert.
+Alle profielinformatie Luma heeft over Sarah displays. Dit omvat haar persoonlijke informatie zoals adres en telefoonaantal, communicatie voorkeur, en het publiek dat zij voor kwalificeert.
 
 | Categorie | Beschrijving |
 |---|---|
@@ -198,9 +200,9 @@ Het Real-Time CDP-profiel reduceert de workflow van het marketingteam van Luma v
 
 Het marketingteam kan deze verbeterde functie gebruiken. [!DNL Real-Time Customer Profile] om Sarah&#39;s ervaring beter te personaliseren en haar merkloyaliteit met Luma te vergroten.
 
-## Segmenten
+## Doelgroepen
 
-Dankzij de krachtige Adobe Experience Platform-segmentatiemogelijkheden kunnen marketers kenmerken, gebeurtenissen en bestaande segmenten combineren op basis van gegevens die zijn vastgelegd in de [!DNL Real-Time Customer Profile].
+Dankzij de krachtige Adobe Experience Platform-segmentatiemogelijkheden kunnen marketers kenmerken, gebeurtenissen en bestaand publiek combineren op basis van gegevens die zijn vastgelegd in de [!DNL Real-Time Customer Profile].
 
 <!-- ![image](assets/luma-segments.png) -->
 
@@ -210,9 +212,9 @@ Het gegevenswetenschappelijk team van Luma heeft modellen gemaakt rond de koopkr
 
 <!-- ![image](assets/luma-gift.png) -->
 
-### Een segment definiëren
+### Een publiek definiëren
 
-Wijzig of creeer een segment dat karretoucheerders vertegenwoordigt die lijken bezig te zijn om een cadeau te kopen:
+Gebruik de verschillende opties voor visuele compositie of expressies op basis van code in de werkruimte van het publiek om een publiek te wijzigen of te maken dat cart-gebruikers vertegenwoordigt die een geschenk lijken te kopen:
 
 ```sql
 Profile: Category != Preferred Category 
@@ -231,11 +233,11 @@ Omdat Sarah een geschenk in het winkelwagentje heeft toegevoegd en het heeft ver
 
 ## Doelen
 
-Als je het segment &quot;Gift Giving Cart Abandoner&quot; hebt toegevoegd, kun je ruwweg zien hoeveel mensen deel uitmaken van dit segment. U kunt actie ondernemen en het beschikbaar maken voor verpersoonlijking over kanalen.
+Als je het publiek &quot;Gift Giving Cart Abandoner&quot; hebt toegevoegd, kun je ruwweg zien hoeveel mensen deel uitmaken van dit publiek. U kunt actie ondernemen en het beschikbaar maken voor verpersoonlijking over kanalen.
 
 Selecteer **[!UICONTROL Send to destinations]**.
 
-In Real-Time CDP kan Luma naadloos optreden op de doelsegmenten voor personalisatie.\
+In Real-Time CDP kan Luma naadloos op hun publiek optreden voor personalisatie.\
 Hier zien wij alle bestemmingen beschikbaar voor Luma om deze bestemming naar, zowel Adobe als niet Adobe oplossingen te verzenden:
 
 ![afbeelding](assets/luma-dest.png)
@@ -252,7 +254,7 @@ In dit scenario, wil Luma dit publiek met verpersoonlijking over deze bestemming
 
 ### Bestemmingen plannen
 
-U kunt het segment ook plannen om op een bepaald tijdstip te beginnen of te eindigen. Het segment wordt gepost en automatisch bijgewerkt in de geconfigureerde platforms op de geplande datums.
+U kunt de publieksuitvoer ook plannen om op een bepaald tijdstip te beginnen of te beëindigen. Het publiek wordt op de geplande datums gepost en automatisch bijgewerkt in de geconfigureerde platforms.
 
 >[!NOTE]
 >
@@ -266,17 +268,21 @@ Hierdoor bespaart de directeur van het medieteam van Luma honderdduizenden dolla
 
 ### Beleid voor gegevensgebruik voor doelen afdwingen
 
-Adobe Experience Platform omvat privacy en veiligheidscontroles om te bepalen of een segment beschikbaar is om aan een bepaalde bestemming te worden geactiveerd. Activering wordt ingeschakeld of beperkt op basis van de marketingdoeleinden die aan de bestemming zijn toegewezen toen deze werd gemaakt, en het beleid voor gegevensgebruik dat door uw organisatie is gedefinieerd.
+Adobe Experience Platform bevat privacy- en beveiligingsinstellingen om te bepalen of een publiek beschikbaar is om te worden geactiveerd voor een bepaald doel. Activering wordt ingeschakeld of beperkt op basis van de marketingdoeleinden die aan de bestemming zijn toegewezen toen deze werd gemaakt, en het beleid voor gegevensgebruik dat door uw organisatie is gedefinieerd.
 
 Als uw activiteit beleid schendt, verschijnt een waarschuwing. Deze waarschuwing bevat informatie over de gegevenslijn die u kan helpen identificeren waarom het beleid werd overtreden, en wat u kunt doen om de schending op te lossen.
 
 Met deze bedieningsorganen [!DNL Experience Platform] Luma helpt om zich aan de regels en de markt verantwoordelijk te houden. Deze controles zijn flexibel en kunnen worden gewijzigd om aan de vereisten van de veiligheids en governanceteams van de Luma te voldoen, die hen toestaan om regionale en organisatorische vereisten voor het beheren van bekende en onbekende klantengegevens vertrouwelijk te behandelen.
 
-### Gegevensflowcanvas
+<!--
 
-Wanneer u opslaat, wordt het segment dat is toegewezen van het verenigde profiel aan de drie doelen die u hebt geselecteerd, weergegeven op een visueel canvas met gegevensstroom.
+### Data flow canvas
 
-![afbeelding](assets/luma-flow.png)
+When you save, a visual data flow canvas shows the segment mapped from the unified profile to the three destinations you selected.
+
+![image](assets/luma-flow.png)
+
+-->
 
 ## Identiteitsstitching tussen apparaten
 
@@ -297,8 +303,8 @@ Dankzij de mogelijkheden van publieksonderdrukking zal Sarah niet gericht zijn o
 
 ## Het profiel analyseren
 
-Luminantiemarkeringen gebruiken Adobe Experience Platform om het schenkingsensegment op het Real-Time CDP-dashboard te bekijken. Ze bekijken de resultaten van dit initiatief in de loop der tijd en zien dat het groeit. Klanten reageren op aanbiedingen en geven meer geld uit.
+Luminantiemarkeringen gebruiken Adobe Experience Platform om te kijken naar het cadeaupubliek op het Real-Time CDP-dashboard. Ze bekijken de resultaten van dit initiatief in de loop der tijd en zien dat het groeit. Klanten reageren op aanbiedingen en geven meer geld uit.
 
-Deze inzichten stellen de marketers in staat actie te ondernemen op dit signaal, dat werd gevoed door deze gegevens beschikbaar te hebben in CDP en klanten als Sarah aan het segment te laten vastzitten.
+Deze inzichten stellen de marketers in staat actie te ondernemen op dit signaal, dat werd gevoed door deze gegevens beschikbaar te hebben in CDP en klanten als Sarah aan het publiek te laten vastzitten.
 
 Luma gebruikt deze CDP gegevens om verhoogde loyaliteit en klantentevredenheid te drijven.

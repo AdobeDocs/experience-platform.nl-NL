@@ -4,9 +4,9 @@ title: Overzicht van gegevensbeheer
 description: Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd.
 feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '687'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ U kunt beperkingen voor het gegevensgebruik op een bestemming instellen door mar
 >
 >Voor meer informatie over marketingacties en het gebruik ervan in het beleid voor gegevensgebruik raadpleegt u de [overzicht van beleidsregels voor gegevensgebruik](../../data-governance/policies/overview.md) in de [!DNL Experience Platform] documentatie.
 
-Het bepalen van marketing acties op bestemmingen staat u toe om ervoor te zorgen dat om het even welke profielen of segmenten die naar die bestemmingen worden verzonden volgzaam met het beleid van het gegevensgebruik zijn. Daarom zou u aangewezen marketing acties aan uw bestemmingen moeten toevoegen die op de behoeften van uw organisatie worden gebaseerd om beleidsbeperkingen op activering af te dwingen.
+Door marketingacties op doelen te definiëren, kunt u ervoor zorgen dat profielen of doelgroepen die naar die doelen worden verzonden, voldoen aan het beleid voor gegevensgebruik. Daarom zou u aangewezen marketing acties aan uw bestemmingen moeten toevoegen die op de behoeften van uw organisatie worden gebaseerd om beleidsbeperkingen op activering af te dwingen.
 
 Marketingacties kunnen alleen worden geselecteerd wanneer u een bestemming voor het eerst instelt. Afhankelijk van het type van bestemming u met werkt, zal de kans om marketing acties te vormen op verschillende punten in het opstellingswerkschema verschijnen. Zie de [documentatie voor doelen](../destinations/overview.md) voor stappen op hoe te om uw bijzondere bestemming te vormen.
 
@@ -49,7 +49,7 @@ Adobe Experience Platform biedt verschillende basisbeleidsregels voor veelvoorko
 
 ## Compatibiliteit met gegevensgebruik afdwingen {#enforce}
 
-Zodra de gegevens worden geëtiketteerd en het gebruiksbeleid wordt bepaald, kunt u de naleving van het gegevensgebruik met beleid afdwingen. Wanneer het activeren van publiekssegmenten aan bestemmingen in Real-Time CDP, dwingt het Beleid van Gegevens automatisch gebruiksbeleid af als om het even welke schendingen voorkomen.
+Zodra de gegevens worden geëtiketteerd en het gebruiksbeleid wordt bepaald, kunt u de naleving van het gegevensgebruik met beleid afdwingen. Wanneer het activeren van publiek aan bestemmingen in Real-Time CDP, dwingt het Beleid van Gegevens automatisch gebruiksbeleid af als om het even welke schendingen voorkomen.
 
 Document weergeven op [automatische beleidshandhaving](../../data-governance/enforcement/auto-enforcement.md) voor meer informatie .
 

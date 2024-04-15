@@ -5,9 +5,9 @@ description: Dit voorbeeldscenario biedt een voorbeeld voor de configuratie van 
 feature: Get Started, Use Cases, B2B
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1151'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 Real-time Customer Data Platform B2B Edition breidt het bestaande Real-Time CDP- en Adobe Experience Platform-aanbod uit ter ondersteuning van B2B-gegevens en -workflows. Dit document biedt een voorbeeld van een gebruiksgeval dat de extra voordelen aantoont die door de B2B Edition worden geboden. Deze omvatten:
 
 - Combineer persoon- en accountgegevens uit verschillende gegevensbronnen op dezelfde locatie om een uitgebreide weergave te maken die een beter inzicht in de klanten en een nauwkeuriger segmentering mogelijk maakt. Zie de documentatie op [XDM-schemarelaties maken](./schemas/b2b.md) voor gebruik met verschillende B2B-bronnen voor meer informatie.
-- Segmenteer een publiek op basis van kenmerken van verwante entiteiten. Dit omvat Rekeningen, Kansen, Campagnes, en de Lijst van de Marketing. Segmenten blijven niet langer beperkt tot alleen personekenmerken en Experience Events. Zie de [B2B-segmentatiedocumentatie](./segmentation/b2b.md) voor meer voorbeelden van B2B-specifieke doelgroepen.
+- Segmenteer een publiek op basis van kenmerken van verwante entiteiten. Dit omvat Rekeningen, Kansen, Campagnes, en de Lijst van de Marketing. Het publiek is niet meer beperkt tot alleen Personen-kenmerken en Experience Events. Zie de [B2B-segmentatiedocumentatie](./segmentation/b2b.md) voor meer voorbeelden van B2B-specifieke doelgroepen.
 - Native ondersteuning bieden voor het gebruik van één persoon met betrekking tot meerdere rekeningen.
 
 ## Gebruiksscenario
@@ -50,9 +50,9 @@ Aangezien de relevante informatie over de stad wordt geregistreerd als account 1
 
 Dit verbiedt het marketingteam van Bodea om op efficiënte wijze specifieke zakelijke contacten met deze nieuwe kans aan te knopen bij deze bedrijven.
 
-Tot op heden heeft Townsend meer dan een miljoen dollar cumulatief uitgegeven aan Bodea producten over al hun rekeningen. Een segment dat met behulp van het oude systeem is gemaakt, zou echter niemand van Townsend omvatten, tenzij het totaal dat binnen één verkoopsysteem is uitgegeven meer dan 1 miljoen dollar bedroeg. Dit komt doordat de inkomstengegevens in rekeningen onder verschillende verkoopsystemen worden opgeslagen.
+Tot op heden heeft Townsend meer dan een miljoen dollar cumulatief uitgegeven aan Bodea producten over al hun rekeningen. Een publiek dat met behulp van zijn oude systeem is gemaakt, zou echter niemand van Townsend omvatten, tenzij het totaal dat binnen één verkoopsysteem is uitgegeven meer dan 1 miljoen dollar bedroeg. Dit komt doordat de inkomstengegevens in rekeningen onder verschillende verkoopsystemen worden opgeslagen.
 
-Aangezien de uitgaven van Townsend over verschillende verkoopsystemen worden verdeeld en individueel niet meer dan een miljoen bedragen, zou het segment niemand vinden die in Marketo 1 of Marketo 2 gekwalificeerd is.
+Aangezien de uitgaven van Townsend over verschillende verkoopsystemen worden verdeeld en individueel niet meer dan één miljoen bedragen, zou de segmentdefinitie niemand in Marketo 1 of Marketo 2 kwalificeren.
 
 ### Hoe Real-Time CDP B2B Edition het probleem oplost
 
@@ -77,10 +77,10 @@ In het belang van de eenvoud en het doel van dit voorbeeld worden mensen geïden
 | Opportunity 1, $200 k |
 | Opportunity 2, $900 k |
 
-- Maak unieke segmenten met deze geaggregeerde gegevens voor verschillende marketinginitiatieven. In dit voorbeeld vindt het segment alle mensen die:
+- Maak een uniek publiek met deze geaggregeerde gegevens voor verschillende marketinginitiatieven. In dit voorbeeld vindt de segmentdefinitie alle mensen die:
 
    - Heb bijbehorende kansen (over ALLE rekeningen) $1 miljoen in waarde overschrijden
-   - AND
+   - EN
    - De productpagina in de afgelopen maand hebben bezocht
 
 - Creëer een publiek dat de meest efficiënte ontvangers van de nieuwe marketingcampagne van Bodea is. In dit voorbeeld helpt RT-CDP, B2B Edition de markeerteken identificeren `p2@townsend.com` als het juiste doel voor deze marketingcampagne.

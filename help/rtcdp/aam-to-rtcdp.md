@@ -1,10 +1,10 @@
 ---
 title: Evolutie van Audience Manager naar Real-Time CDP
-description: Begrijp de overwegingen alvorens uw migratie van Audience Manager aan Real-Time CDP te plannen.
+description: Begrijp de overwegingen alvorens uw migratie van Audience Manager aan Adobe Real-Time CDP te plannen.
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---

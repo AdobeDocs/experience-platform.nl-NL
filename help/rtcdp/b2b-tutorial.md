@@ -6,9 +6,9 @@ description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van u
 feature: Get Started, B2B
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1164'
 ht-degree: 0%
 
 ---
@@ -76,33 +76,33 @@ De bronschakelaar van het Marketo Engage verstrekt een auto-toewijzingseigenscha
 
 De telleraar Bodea controleert dat alle gebiedsgroepen geschikt in kaart worden gebracht en vervolgt het proces van de bronopstelling door een dataflow te initialiseren. Door een gegevensstroom te creëren om de gegevens van Marketo in te brengen, kunnen de inkomende gegevens door de stroomafwaartse diensten van het Platform worden gebruikt. Tijdens de eerste inname worden gegevens als batch in het Experience Platform gebracht. Hierna worden de volgende opgenomen gegevens gestreamd naar Profiel met vrijwel realtime updates.
 
-## Een segment maken om uw gegevens te evalueren
+## Een publiek maken om uw gegevens te evalueren
 
 De volgende taak is om een publiek voor de nieuwe e-mailmarketing campagne van Bodea te creëren die op specifieke attributen van verwante entiteiten in de brongegevens wordt gebaseerd. Binnen Platform UI, selecteert de telleraar Bodea eerst **[!UICONTROL Segments]** in de linkernavigatie, dan **[!UICONTROL Create segment]**.
 
-In dit voorbeeld vindt het segment alle mensen die in de verkoopafdeling werken en zijn gerelateerd aan elke account die ten minste één open mogelijkheid heeft. Voor dit segment is een koppeling vereist tussen de klasse Individual Profile van XDM, de klasse Business Account van XDM en de klasse Business Opportunity van XDM.
+In dit voorbeeld vindt het publiek alle mensen die in de verkoopafdeling werken en zijn verwant aan om het even welke rekening die minstens één open kans heeft. Voor dit soort publiek is een koppeling vereist tussen de XDM-klasse Individual Profile, de XDM-klasse Business Account en de XDM-klasse Business Opportunity.
 
 ![Hoofdlettersegment gebruiken](./assets/b2b-tutorial/use-case-segment.png)
 
 >[!NOTE]
 > 
->Voor instructies over hoe te om segmenten tot stand te brengen om uw gegevens te evalueren zie [Handleiding voor de gebruikersinterface van Segment Builder](../segmentation/ui/segment-builder.md). Raadpleeg voor specifiekere gevallen van B2B-segmentatiegebruik de [segmentatieoverzicht voor Real-Time CDP B2B Edition](./segmentation/b2b.md).
+>Voor instructies over hoe u een publiek kunt maken om uw gegevens te evalueren raadpleegt u de [Handleiding voor de gebruikersinterface van Segment Builder](../segmentation/ui/segment-builder.md). Raadpleeg voor specifiekere gevallen van B2B-segmentatiegebruik de [segmentatieoverzicht voor Real-Time CDP B2B Edition](./segmentation/b2b.md).
 
 De Bouwer van het Segment staat u toe om een verhandelbaar publiek van de gegevens van het Profiel van de Klant in real time tot stand te brengen en ramingen van uw prospectief publiek te bekijken die op de combinatie attributen, gebeurtenissen, en bestaand publiek worden gebaseerd u bepaalde.
 
 ## Uw geëvalueerde gegevens naar een doel activeren
 
-Nadat het segment met succes wordt gecreeerd, wordt een samenvatting verstrekt in [!UICONTROL Details] van de werkruimte. Aangezien momenteel geen bestemmingen voor het segment worden geactiveerd, moet de prijsmeter Bodea het publiek naar een dataset uitvoeren waar het kan worden betreden en worden gehandeld.
+Nadat het publiek is gemaakt, wordt een samenvatting weergegeven in het dialoogvenster [!UICONTROL Details] van de werkruimte. Aangezien geen bestemmingen momenteel voor de segmentdefinitie worden geactiveerd, moet de prijsmeter Bodea het publiek naar een dataset uitvoeren waar het kan worden betreden en worden gehandeld.
 
 Binnen de [!UICONTROL Segments] in de werkruimte van de interface van het platform selecteert de Bodea-markering **[!UICONTROL Activate to destination]**.
 
-![Activeer het segment aan een bestemming](./assets/b2b-tutorial/activate-to-destination.png)
+![Het publiek naar een doel activeren](./assets/b2b-tutorial/activate-to-destination.png)
 
 >[!NOTE]
 > 
->Zie de zelfstudie aan [het activeren van een segment aan een bestemming](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) voor uitvoerige stappen over hoe te om dit te verwezenlijken.
+>Zie de zelfstudie aan [het activeren van een publiek aan een bestemming](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) voor uitvoerige stappen over hoe te om dit te verwezenlijken.
 
-De Bodea-markeerteken activeert het segment naar de Marketo-bestemming, waardoor ze segmentgegevens van Platform naar Marketo Engage kunnen duwen in de vorm van een statische lijst. Zie de handleiding op de [Marketo-bestemming](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) voor meer informatie .
+De Bodea-markeerteken activeert het publiek naar de Marketo-bestemming, zodat het publiek gegevens van Platform naar Marketo Engage kan verzenden in de vorm van een statische lijst. Zie de handleiding op de [Marketo-bestemming](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) voor meer informatie .
 
 ## Volgende stappen
 

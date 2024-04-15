@@ -3,12 +3,12 @@ product: adobe experience platform
 solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
-user-guide-description: Breng bekende en anonieme gegevens van meerdere ondernemingsbronnen samen om klantenprofielen te creëren, doelgroepsegmenten van die profielen te maken, en die segmenten aan bestemmingen van derden te activeren.
+user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiek van die profielen tot stand te brengen, en die toehoorders aan derdebestemmingen te activeren.
 role: Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 13%
+source-wordcount: '294'
+ht-degree: 4%
 
 ---
 
@@ -33,6 +33,11 @@ ht-degree: 13%
    * [Gebruikersgids voor accountprofielen](accounts/account-profile-ui-guide.md)
 * Beheer {#admin}
    * [Overzicht van beheer](administration/admin-overview.md)
+* Splitsen en segmenteren {#segmentation}
+   * [Overzicht van segmentatie](segmentation/segmentation-overview.md)
+   * [Handleiding Segment Builder](segmentation/segment-builder-guide.md)
+   * [Segmentering in Real-Time CDP B2B Edition](segmentation/b2b.md)
+   * [Customer AI](segmentation/customer-ai.md)
 * Gegevenssets {#datasets}
    * [Gegevenssets](datasets/dataset.md)
    * [Gegevenskwaliteit op platform](datasets/data-quality.md)
@@ -66,11 +71,6 @@ ht-degree: 13%
 * Schemas {#schemas}
    * [Overzicht van schema&#39;s](schemas/overview.md)
    * [Schemas in Real-Time CDP B2B Edition](schemas/b2b.md)
-* Segmenten {#segmentation}
-   * [Overzicht van segmentatie](segmentation/segmentation-overview.md)
-   * [Handleiding voor het maken van segmenten](segmentation/segment-builder-guide.md)
-   * [Segmentering in Real-Time CDP B2B Edition](segmentation/b2b.md)
-   * [Customer AI](segmentation/customer-ai.md)
 * Bronnen {#sources}
    * [Overzicht van bronnen](sources/sources-overview.md)
    * [Bronnen in Real-Time CDP B2B Edition](sources/b2b.md)

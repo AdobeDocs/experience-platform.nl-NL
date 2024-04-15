@@ -5,10 +5,10 @@ description: In Experience Platform Real-Time CDP B2B wordt een overzicht en mee
 feature: Get Started, Profiles, B2B
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 3%
+source-wordcount: '429'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 B2B-ondernemingen hebben vaak hun klantgegevens opgeslagen in meerdere systemen, elk met inbegrip van slechts gedeeltelijke of zelfs conflicterende gegevens voor dezelfde reële bedrijfsentiteit. Dit zorgt voor een enorme uitdaging om tot een accuraat beeld van hun klanten te komen, waardoor de efficiëntie en effectiviteit van hun B2B-marketing- en -verkoopinspanningen afnemen.
 
-| Id | Naam | Website | Industrie | Staat | Telefoon | Heeft open kans met bedrag > `$1 million` |
+| ID | Naam | Website | Industrie | Staat | Telefoon | Heeft open kans met bedrag > `$1 million` |
 |---|---|---|---|---|---|---|
 | 1 | Acme | acme.com | Software | CA | (408)536-6000 |   |
 | 2 | Acme | acm.com | Software | CA | 4085366000 | x |
@@ -32,7 +32,7 @@ Met bijbehorende rekeningen, [!DNL Real-Time CDP B2B] Hier ziet u een lijst met 
 
 ![Scherm met verwante accounts in de gebruikersinterface van het Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
-Gebruik deze functie om verwante accountprofielen voor een accountprofiel weer te geven in de gebruikersinterface van het Experience Platform en neem de verwante accounts op in uw segmentdefinities om uw bereik te vergroten of om bredere criteria toe te passen in uw segmenten.
+Met deze functie kunt u verwante accountprofielen voor een accountprofiel weergeven in de gebruikersinterface van het Experience Platform. Vervolgens neemt u de verwante accounts op in uw segmentdefinities om uw bereik te vergroten of om bredere criteria toe te passen bij uw publiek.
 
 ## De verwante accountservice inschakelen {#enable}
 

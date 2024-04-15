@@ -1,12 +1,12 @@
 ---
 keywords: segmentatie; segmentatie rtcdp;realtime segmentering van klantgegevens
 title: Segmenteringsservice in Real-time Customer Data Platform
-description: Adobe Real-Time Customer Data Platformå is gebouwd boven op Adobe Experience Platform en gebruikt veel van de services en functionaliteit van het Experience Platform. Gebruikend de Dienst van de Segmentatie, kunt u op maat-gemaakte marketing verstrekken door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen.
+description: Adobe Real-time Customer Data Platform is gebouwd op Adobe Experience Platform en maakt gebruik van veel services en functionaliteit voor Experience Platforms. Gebruikend de Dienst van de Segmentatie, kunt u op maat-gemaakte marketing verstrekken door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Real-Time CDP is gebouwd op Adobe Experience Platform en gebruikt veel van de [!
 
 ## Segmentatie
 
-De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw profielopslag worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan. Met behulp van verschillende segmenten kunt u zich richten op uw verschillende doelgroepen en een meer aangepaste marketingervaring bieden.
+De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw profielopslag worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan. Met behulp van verschillende segmentdefinities kunt u uw aandacht richten op uw verschillende doelgroepen en een meer aangepaste marketingervaring bieden.
 
 ## [!DNL Segment Builder]
 
-[!DNL Platform] kunt u gemakkelijk tot segmenten leiden en toegang hebben, evenals verschillende bouwstenen gebruiken om uw segmenten verder te karakteriseren. Lees voor meer informatie over het gebruik van de Segment Builder de [Handleiding Segment Builder](./segment-builder-guide.md).
+[!DNL Platform] Hiermee kunt u eenvoudig segmentdefinities maken en openen en verschillende bouwstenen gebruiken om uw publiek verder te karakteriseren. Lees voor meer informatie over het gebruik van de Segment Builder de [Handleiding Segment Builder](./segment-builder-guide.md).
 
 ## Customer AI
 
@@ -36,7 +36,7 @@ Met behulp van invloedrijke factoren kan de AI van de Klant u vertellen wat een 
 * Het bieden van klantgerichte opties voor de unieke gebruiksgevallen en de gegevens van uw bedrijf.
 * Verbetering van het Real-Time Klantprofiel met klantennestscores zoals kurn en conversie.
 * Klantenprofielen verbeteren met invloedrijke factoren voor populatiescore.
-* Het creëren van segmenten van klanten die op invloedrijke factoren en aandrijvingsscores worden gebaseerd.
+* Het creëren van een publiek van klanten op basis van invloedrijke factoren en nevenscores.
 
 AI van de klant bevindt zich in de **[!UICONTROL Services]** tab onder **[!UICONTROL Adobe services]**.
 
@@ -44,7 +44,7 @@ AI van de klant bevindt zich in de **[!UICONTROL Services]** tab onder **[!UICON
 
 ### Aan de slag met Customer AI
 
-Om aan de slag te gaan met Customer AI moet u de [zelfstudie over gegevensprestatie](../../intelligent-services/data-preparation.md) en vorm het inputschema dat op uw gebruiksgeval wordt gebaseerd. Nu moet u [een AI-instantie van een klant configureren](../../intelligent-services/customer-ai/user-guide/configure.md). Na het vormen van een instantie, wordt een model geproduceerd waar u kunt [uw inzichten en scores bekijken](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Met de gegevens die op basis van uw model worden gegenereerd, kunt u segmenten maken voor gegevensactivering.
+Om aan de slag te gaan met Customer AI moet u de [zelfstudie over gegevensprestatie](../../intelligent-services/data-preparation.md) en vorm het inputschema dat op uw gebruiksgeval wordt gebaseerd. Nu moet u [een AI-instantie van een klant configureren](../../intelligent-services/customer-ai/user-guide/configure.md). Na het vormen van een instantie, wordt een model geproduceerd waar u kunt [uw inzichten en scores bekijken](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Met behulp van de gegevens die op basis van uw model worden gegenereerd, kunt u een publiek maken dat gegevens activeert.
 
 Als u meer wilt weten over AI van klanten, kunt u beginnen met een bezoek aan de [AI-overzicht van klant](../../intelligent-services/customer-ai/overview.md). Bovendien toont de volgende video hoe de AI van de Klant klantenprofielen met op AI-Gebaseerde eigenschappen verrijkt en klantensegmentatie en gerichte inspanningen toelaat.
 

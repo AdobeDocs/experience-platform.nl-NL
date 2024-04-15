@@ -4,10 +4,10 @@ title: Real-time Customer Data Platform-beheeroverzicht
 description: Dit document biedt een overzicht van de beheermogelijkheden van Adobe Real-time Customer Data Platform, aangedreven door Adobe Experience Platform.
 feature: Access Control, Get Started, Sandboxes
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: a8c9543bb003a99dcd85712d202482511c0a5608
 workflow-type: tm+mt
-source-wordcount: '283'
-ht-degree: 1%
+source-wordcount: '316'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +21,9 @@ In de volgende secties vindt u een inleiding op de centrale componenten van [!DN
 
 ## Toegangsbeheer
 
-Toegangscontrole wordt via de [Adobe Admin Console](https://adminconsole.adobe.com). Deze functionaliteit gebruikt productprofielen in [!DNL Admin Console], waarmee u gebruikers kunt koppelen aan machtigingen en sandboxen. Met deze functie kunnen beheerders toegang tot specifieke Real-Time CDP-mogelijkheden verlenen of beperken voor gedefinieerde sets gebruikers.
+Op attributen-gebaseerde toegangsbeheer wordt beheerd door de Toestemmingen UI. Deze functionaliteit maakt gebruik van rollen in de gebruikersinterface voor machtigingen, zodat u gebruikers kunt koppelen aan machtigingen en sandboxen. Met deze functie kunnen beheerders toegang tot specifieke Real-Time CDP-mogelijkheden verlenen of beperken voor gedefinieerde sets gebruikers.
 
-Voor meer informatie over toegangsbeheer, zie [toegangsbeheeroverzicht](../../access-control/home.md) in de [!DNL Experience Platform] documentatie.
+Voor meer informatie over toegangsbeheer, zie [op attributen-gebaseerd toegangsbeheeroverzicht](/help/access-control/abac/overview.md) in de [!DNL Experience Platform] documentatie.
 
 >[!IMPORTANT]
 >
@@ -33,6 +33,6 @@ Voor meer informatie over toegangsbeheer, zie [toegangsbeheeroverzicht](../../ac
 
 Adobe Experience Platform (en Real-Time CDP via de extensie) is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen.
 
-Om aan deze behoefte tegemoet te komen, biedt Adobe Experience Platform &quot;sandboxen&quot;, waarmee u één sandbox kunt partitioneren [!DNL Platform] in afzonderlijke virtuele omgevingen die kunnen worden gebruikt om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+Adobe Experience Platform biedt *sandboxen*, waarmee u één partitie kunt maken [!DNL Platform] in afzonderlijke virtuele omgevingen die kunnen worden gebruikt om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen. U kunt de functie voor het gereedmaken van sandboxen gebruiken om de configuratienauwkeurigheid in verschillende sandboxen te verbeteren en om sandboxconfiguraties naadloos te exporteren en importeren tussen sandboxen. Voer de stappen uit in het dialoogvenster [UI-hulplijn voor gereedschap sandbox](../../sandboxes/ui/sandbox-tooling.md).
 
 Zie voor meer informatie over sandboxen de [sandboxen, overzicht](../../sandboxes/home.md) in de [!DNL Experience Platform] documentatie.

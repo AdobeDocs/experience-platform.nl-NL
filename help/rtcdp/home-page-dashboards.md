@@ -1,13 +1,13 @@
 ---
 keywords: metriek - overzicht; rtcdp metriek
 title: Homepage van Real-time Customer Data Platform en dashboards
-description: Dashboards, startpagina en eerste gebruikerservaring van Adobe Experience Platform
+description: Maak kennis met verschillende dashboards, de homepage en de eerste gebruikerservaring van Adobe Real-Time CDP.
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: d052f307d91890f89d6cb3f18525fe395c116f95
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 1%
+source-wordcount: '889'
+ht-degree: 0%
 
 ---
 
@@ -27,8 +27,8 @@ De [!UICONTROL Getting started with Real-Time Customer Profile] widget bestaat u
 
 * **Gegevens opnemen in platform**: Deze widget stuurt u naar de broncatalogus. Gebruik de broncatalogus om een bron te selecteren en uw gegevens in te voeren in het Experience Platform. Selecteren **[Bronnen configureren]** om naar de broncatalogus te navigeren. Lees voor meer informatie de [overzicht van bronnen](../sources/home.md).
 * **Modelgegevensstructuren**: Deze widget leidt u naar het schema&#39;s-overzicht. Gebruik het schemaoverzicht om naar bestaande schema&#39;s te doorbladeren of een blauwdruk tot stand te brengen die de structuur van uw gegevens beschrijven. Selecteren **[!UICONTROL Create schema]** om naar de interface van de schemaverwezenlijking te navigeren. Lees voor meer informatie de [overzicht van schema&#39;s](../xdm/home.md).
-* **Stimulerend publiek**: Deze widget stuurt u naar de egment Builder in de UI. Gebruik de Bouwer van het Segment om met de gegevenselementen van het Profiel in wisselwerking te staan en de criteria voor uw segmentdefinitie te bepalen. Selecteren **[!UICONTROL Create audience]** om naar de Segment Builder te navigeren. Lees voor meer informatie de [Overzicht van segmentatieservice](../segmentation/home.md).
-* **Gegevens verzenden naar doelen**: Deze widget stuurt u naar de doelcatalogus. Gebruik de bestemmingscatalogus om een bestemming te selecteren die u dan met kunt verbinden en segmenten verzenden naar. Selecteren **[!UICONTROL Set up destinations]** om naar de doelcatalogus te navigeren. Lees voor meer informatie de [Overzicht van doelen](../destinations/home.md).
+* **Stimulerend publiek**: Deze widget stuurt u naar de Segment Builder in de UI. Gebruik de Bouwer van het Segment om met de gegevenselementen van het Profiel in wisselwerking te staan en de criteria voor uw segmentdefinitie te bepalen. Selecteren **[!UICONTROL Create audience]** om naar de Segment Builder te navigeren. Lees voor meer informatie de [Overzicht van segmentatieservice](../segmentation/home.md).
+* **Gegevens verzenden naar doelen**: Deze widget stuurt u naar de doelcatalogus. Gebruik de bestemmingscatalogus om een bestemming te selecteren die u dan met kunt verbinden en publiek naar verzenden. Selecteren **[!UICONTROL Set up destinations]** om naar de doelcatalogus te navigeren. Lees voor meer informatie de [Overzicht van doelen](../destinations/home.md).
 
 ![De startpagina van de platformgebruikersinterface met de widget Aan de slag](assets/platform-home/getting-started-widget.png)
 
@@ -44,7 +44,7 @@ Op het dashboard Metrics wordt actuele informatie over de gegevens van het Exper
 
 ### Het leaderboard
 
-Het leaderboard toont het huidige totale aantal schema&#39;s, datasets, profielen en segmenten in uw organisatie en hun meest recente updatedatum.
+Het leaderboard toont het huidige totale aantal schema&#39;s, datasets, profielen en soorten publiek in uw organisatie en de meest recente updatedatum.
 
 ![De leaderboard-sectie in de UI-startpagina van het platform.](assets/platform-home/leaderboard.png)
 
@@ -55,13 +55,13 @@ Het leaderboard toont het huidige totale aantal schema&#39;s, datasets, profiele
 
 ### Recente objecten
 
-Recente items geven een overzicht van de meest recente wijzigingen in uw organisatie. In het onderstaande voorbeeld hebben de meest recente wijzigingen betrekking op gegevenssets, bronnen, segmenten en bestemmingen.
+Recente items geven een overzicht van de meest recente wijzigingen in uw organisatie. In het onderstaande voorbeeld hebben de meest recente wijzigingen betrekking op gegevenssets, bronnen, doelgroepen en bestemmingen.
 
 ![De recente puntensectie in de homepage van UI van het Platform.](assets/platform-home/recent-items.png)
 
 * **Recente gegevensbestanden**: De **[!UICONTROL Recent datasets]** De kaart toont de vijf meest recente datasets die binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe dataset wordt gecreeerd. Selecteer een dataset om de details voor dat punt te bekijken, of selecteer **[!UICONTROL View all]** voor een lijst van gegevensbestanden. Van daar, kunt u een specifieke bron voor details selecteren. Voor meer informatie over datasets, zie [Overzicht van gegevenssets](../catalog/datasets/overview.md).
 * **Recente bronnen**: De **[!UICONTROL Recent sources]** De metrische kaart toont de vijf meest recente die bronnen binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe bron wordt gemaakt. Selecteer een bron om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst van bronnen. Van daar, kunt u een specifieke bron voor details selecteren. Zie voor meer informatie over bronnen [Overzicht van bronnen](../sources/home.md).
-* **Recente segmenten**: De **[!UICONTROL Recent segments]** De metrische kaart toont de vijf meest recente die segmenten binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuw segment wordt gecreeerd. Selecteer een segment om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst met segmenten. Zie voor meer informatie over segmenten [Overzicht van segmentatieservice](../segmentation/home.md).
+* **Recent publiek**: De **[!UICONTROL Recent audiences]** De metrische kaart toont de vijf meest recente die publiek binnen de organisatie wordt gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuw publiek wordt gemaakt. Selecteer een publiek om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst van doelgroepen. Zie voor meer informatie over publiek [Overzicht van segmentatieservice](../segmentation/home.md).
 * **Recente bestemmingen**: De **[!UICONTROL Recent destinations]** De metrische kaart toont de vijf meest recente bestemmingen binnen de organisatie worden gecreeerd die. Deze lijst wordt bijgewerkt wanneer een nieuwe bestemming wordt gecreeerd. Selecteer een bestemming om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst van bestemmingen. Lees voor meer informatie de [Overzicht van doelen](../destinations/home.md).
 
 ## Bronnen
