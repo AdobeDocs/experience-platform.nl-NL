@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ab2ebc5e2ba63d415ef39feba0392d08026050ba
+source-git-commit: ce937f1335283382189fa40f65aa268735c02715
 workflow-type: tm+mt
-source-wordcount: '2559'
+source-wordcount: '2573'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Gebruiken [!DNL Query Editor], kunt u schrijven, uitvoeren, en sparen vragen voo
 
 >[!IMPORTANT]
 >
->De oude editor wordt op 30 april-2024 met pensioen gegaan en is niet langer beschikbaar voor gebruik.
+>Op 30-april-2024 zal de Verbeterde Redacteur van de Vraag de standaardredacteur voor alle gebruikers zijn. De erfenisredacteur zal op 30-mei-2024 worden afgekeurd en niet meer voor gebruik beschikbaar zijn.
 
 ## Uitgebreide functie voor Query-editor {#enhanced-editor-toggle}
 

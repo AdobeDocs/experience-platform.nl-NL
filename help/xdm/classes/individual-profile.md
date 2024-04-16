@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Afzonderlijke XDM-profielklasse
 description: Meer informatie over de klasse XDM Individual Profile.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ce937f1335283382189fa40f65aa268735c02715
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,7 @@ ht-degree: 0%
 
 Profielen kunnen variëren van anonieme gedragssignalen (zoals browsercookies) tot sterk geïdentificeerde profielen met gedetailleerde informatie zoals naam, geboortedatum, locatie en e-mailadres. Naarmate een profiel groeit, wordt het een robuuste opslagplaats voor persoonlijke gegevens, identiteiten, contactgegevens en communicatievoorkeuren voor een individu. Raadpleeg voor meer informatie op hoog niveau over het gebruik van deze klasse in het ecosysteem van het platform de [XDM-overzicht](../home.md#data-behaviors).
 
-De [!DNL XDM Individual Profile] -klasse zelf biedt meerdere door het systeem gegenereerde waarden die automatisch worden ingevuld wanneer gegevens worden ingevoerd, terwijl alle andere velden moeten worden toegevoegd door het gebruik van [compatibele groepen schemavelden](#field-groups):
-
-![](../images/classes/individual-profile.png)
+![Een schemadiagram van de klasse van het Profiel van Individuele XDM.](../images/classes/individual-profile.png)
 
 | Eigenschap | Beschrijving |
 | --- | --- |
