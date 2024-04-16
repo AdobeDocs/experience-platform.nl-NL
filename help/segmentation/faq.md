@@ -2,9 +2,9 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
+source-git-commit: f9235763746e12bd62f19094372dcff41cb41d65
 workflow-type: tm+mt
-source-wordcount: '3176'
+source-wordcount: '3148'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ Als de gegevens worden geactiveerd voor een batchbestemming, worden de gegevens 
 
 ### Kan ik een extern gegenereerd publiek verwijderen?
 
-Op dit moment kunt u alleen een extern gegenereerd publiek deactiveren. In deze status worden profielen **zal** actief blijven voor gebruik in downstreamtoepassingen. Ondersteuning voor het verwijderen van extern gegenereerde soorten publiek wordt toegevoegd aan een volgende release.
+Ja! Extern gegenereerde doelgroepen kunnen worden verwijderd uit Audience Portal.
 
 ### Wat moet ik doen als ik per ongeluk een extern gegenereerd publiek heb geüpload?
 
