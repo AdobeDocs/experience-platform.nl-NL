@@ -4,9 +4,9 @@ title: Evalueer Gebeurtenissen in Bijna Echt - tijd met het stromen Segmentatie
 description: Dit document bevat voorbeelden over het gebruik van streamingsegmentatie met de Adobe Experience Platform Segmentation Service-API.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2050'
 ht-degree: 0%
 
 ---
@@ -87,6 +87,7 @@ Een segmentdefinitie zal **niet** voor het stromen segmentatie in de volgende sc
 - De segmentdefinitie omvat meerdere entiteiten (vragen van meerdere entiteiten).
 - De segmentdefinitie omvat een combinatie van één gebeurtenis en een `inSegment` gebeurtenis.
    - Als het segment echter in de `inSegment` gebeurtenis is alleen profiel, de segmentdefinitie **zal** is ingeschakeld voor streamingsegmentatie.
+- In de segmentdefinitie wordt &quot;Jaar negeren&quot; gebruikt als onderdeel van de tijdbeperkingen.
 
 Houd rekening met de volgende richtlijnen bij het uitvoeren van streaming segmentatie:
 

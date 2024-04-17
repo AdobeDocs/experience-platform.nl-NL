@@ -3,9 +3,9 @@ solution: Experience Platform
 title: gebruikersgids voor Edge Segmentation
 description: Leer hoe te om randsegmentatie te gebruiken om segmentdefinities in Platform onmiddellijk op de rand te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Een segmentdefinitie zal **niet** voor randsegmentatie in het volgende scenario 
 
 - De segmentdefinitie omvat een combinatie van één gebeurtenis en een `inSegment` gebeurtenis.
    - Als de segmentdefinitie in de `inSegment` gebeurtenis is alleen profiel, de segmentdefinitie **zal** worden ingeschakeld voor randsegmentatie.
+- In de segmentdefinitie wordt &quot;Jaar negeren&quot; gebruikt als onderdeel van de tijdbeperkingen.
 
 ## Volgende stappen
 
@@ -64,6 +65,6 @@ In deze handleiding wordt uitgelegd hoe u segmentatiedefinities met randsegmenta
 
 In de volgende sectie worden veelgestelde vragen over de segmentatie van randen weergegeven:
 
-### Hoe lang duurt het voor een segmentdefinitie beschikbaar is op het Netwerk van de Rand?
+### Hoe lang duurt het voordat een segmentdefinitie beschikbaar is op de Edge Network?
 
-Het duurt tot één uur voor een segmentdefinitie beschikbaar is in het Edge-netwerk.
+Het duurt tot één uur voor een segmentdefinitie beschikbaar is op de Edge Network.

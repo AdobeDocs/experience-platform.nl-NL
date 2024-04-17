@@ -4,9 +4,9 @@ title: Edge Segmentation met de API
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -64,6 +64,7 @@ Een segmentdefinitie zal **niet** voor randsegmentatie in de volgende scenario&#
 
 - De segmentdefinitie omvat een combinatie van één gebeurtenis en een `inSegment` gebeurtenis.
    - Als het segment echter in de `inSegment` gebeurtenis is alleen profiel, de segmentdefinitie **zal** worden ingeschakeld voor randsegmentatie.
+- In de segmentdefinitie wordt &quot;Jaar negeren&quot; gebruikt als onderdeel van de tijdbeperkingen.
 
 ## Alle segmenten ophalen die zijn ingeschakeld voor segmentatie van randen
 
@@ -279,6 +280,6 @@ Ga voor meer informatie over het uitvoeren van vergelijkbare acties en het werke
 
 In de volgende sectie worden veelgestelde vragen over de segmentatie van randen weergegeven:
 
-### Hoe lang duurt het voor een segment beschikbaar is op het Edge-netwerk?
+### Hoe lang duurt het voordat een segment beschikbaar is op de Edge Network?
 
-Het duurt tot één uur voor een segment beschikbaar is in het Edge-netwerk.
+Het duurt tot één uur voor een segment beschikbaar is op de Edge Network.

@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: Update voor jaartijdbeperking negeren
 description: Leer hoe u een probleem kunt oplossen met de tijdsbeperking voor het negeren van het jaar.
-source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
+exl-id: 44bb8817-e32d-4806-ad4e-b1840313e768
+source-git-commit: 006950092f69d378b064c795b117166343e5d8f2
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---
-
 
 # Update voor jaartijdbeperking negeren {#ignore-year}
 
@@ -16,6 +16,10 @@ ht-degree: 0%
 >id="platform_audiences_segmentBuilder_ignoreYear"
 >title="Jaarupdate negeren"
 >abstract="De tijdsbeperking voor het negeren van het jaar is bijgewerkt. Sla uw publiek opnieuw op."
+
+>[!IMPORTANT]
+>
+>U kunt de tijdbeperking &#39;jaar negeren&#39; alleen gebruiken in een segmentdefinitie die is geëvalueerd met **batchsegmentatie**. Als u de tijdbeperking &#39;jaar negeren&#39; toevoegt aan de segmentdefinitie, wordt het resulterende publiek **niet-subsidiabel** voor streaming of randsegmentatie.
 
 In de release van februari 2024 voor Adobe Experience Platform zijn wijzigingen aangebracht in de Adobe Experience Platform Segmentation Service, die een probleem verhelpt met de optie &#39;jaar negeren&#39; bij het creëren en evalueren van het publiek.
 
