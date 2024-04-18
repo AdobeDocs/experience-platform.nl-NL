@@ -3,9 +3,9 @@ keywords: doelpersonalisatie; bestemming; ervaring doelbestemming platform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 92238ee94149b3cb4293d726d08dc4927e2dedb5
 workflow-type: tm+mt
-source-wordcount: '1125'
+source-wordcount: '1165'
 ht-degree: 1%
 
 ---
@@ -106,6 +106,11 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 * **Naam**: Vul de voorkeursnaam voor dit doel in.
 * **Beschrijving**: Voer een beschrijving in voor uw doel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
 * **DataStream-id**: Dit bepaalt in welke gegevensstroom gegevensverzameling het publiek wordt opgenomen. In het keuzemenu worden alleen gegevensstromen weergegeven waarvoor de services Doel en Adobe Experience Platform zijn ingeschakeld. Zie [configureren van een gegevensstroom](../../../datastreams/configure.md#aep) voor meer informatie over het configureren van een gegevensstroom voor Adobe Experience Platform en Adobe Target.
+
+  >[!IMPORTANT]
+  >
+  >De gegevensstroom-id is uniek voor elke Adobe Target-doelverbinding. Als u hetzelfde publiek aan meerdere gegevensstromen moet toewijzen, moet u [een nieuwe doelverbinding maken](../../ui/connect-destination.md) voor elke gegevensstroom-id en doorloopt de [activeringsstroom voor publiek](#activate).
+
    * **[!UICONTROL None]**: Selecteer deze optie als u de personalisatie van Adobe Target moet configureren, maar u kunt het dialoogvenster [Experience Platform Web SDK](/help/web-sdk/home.md). Wanneer u deze optie gebruikt, worden soorten publiek die van Experience Platform naar Doel zijn geëxporteerd, alleen ondersteuning voor verpersoonlijking in de volgende sessie en wordt randsegmentatie uitgeschakeld. Zie de onderstaande tabel voor meer informatie.
 
   | Adobe Target-implementatie (zonder Web SDK) | Web SDK-implementatie |
@@ -136,7 +141,7 @@ Lezen [Het publiek activeren voor verpersoonlijkingsdoelen van randen](../../ui/
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Adobe Target *leest* profielgegevens van het Adobe Experience Platform Edge-netwerk, zodat er geen gegevens worden geëxporteerd.
+Adobe Target *leest* profielgegevens uit de Adobe Experience Platform-Edge Network, zodat er geen gegevens worden geëxporteerd.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
