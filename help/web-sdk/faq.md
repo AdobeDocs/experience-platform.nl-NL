@@ -2,7 +2,7 @@
 title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Hiermee krijgt u antwoorden op veelgestelde vragen over de Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
+source-git-commit: 002a57d1d5cfb2e7bdbd9b587e77ca4487a28f65
 workflow-type: tm+mt
 source-wordcount: '2268'
 ht-degree: 1%
@@ -18,7 +18,7 @@ Deze handleiding geeft antwoorden op vragen die vaak worden gesteld over de SDK 
 
 Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzijde waarmee u kunt communiceren met de verschillende services in Adobe Experience Cloud.
 
-SDK van het Web verzendt gegevens op een oplossing-agnostische manier (XDM) naar het Netwerk van de Rand van het Experience Platform, dat dan de gegevens aan oplossing-specifieke formaten en bestemmingen in real time in kaart brengt en het verzendt.
+SDK van het Web verzendt gegevens op een oplossing-agnostische manier (XDM) naar de Edge Network van het Experience Platform, die dan de gegevens aan oplossing-specifieke formaten en bestemmingen in real time in kaart brengt en het verzendt.
 
 Zie de volgende video voor meer informatie over Web SDK: [Ontmoet Alloy.js en nooit markering voor een eVar of Mbox opnieuw](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html).
 
@@ -46,7 +46,7 @@ Er is momenteel ook geen JavaScript-bibliotheek die gegevens rechtstreeks naar A
 
 ### Met Experience Platform Web SDK
 
-De nieuwe SDK van het Web verzendt gegevens voor de volgende oplossingen naar één enkele bestemming (het Netwerk van de Rand van het Experience Platform) en lost voor de gemeenschappelijkste bovengenoemde gevallen van het oplossingsgebruik op.
+De nieuwe SDK van het Web verzendt gegevens voor de volgende oplossingen naar één enkele bestemming (de Edge Network van het Experience Platform) en lost voor de gemeenschappelijkste bovengenoemde gevallen van het oplossingsgebruik op.
 
 * Adobe Analytics
 * Adobe Audience Manager
@@ -65,14 +65,14 @@ Adobe Experience Platform Web SDK kan gegevens ook rechtstreeks naar Adobe Exper
 **Eenvoud:** De combinatie van XDM, Web SDK, markeringen, het Netwerk van de Rand, de oplossingen van Adobe Experience Cloud, en Adobe Experience Platform leidt tot een makkelijk te begrijpen en eenvoudig-aan-volgt verhaal van de gegevensinzameling.
 
 * **XDM:** Het oplossing-agnostische schema u gebruikt om gegevens naar Adobe te verzenden. Geen codes meer voor verkenners of vakjes.
-* **Web SDK:** Hiermee kunt u gegevens eenvoudig verzenden naar en ontvangen van Adobe Experience Platform Edge Network.
+* **Web SDK:** Maakt het gemakkelijk om gegevens naar de Edge Network van Adobe Experience Platform te verzenden en te ontvangen.
 * **Tags:** Vereenvoudigt plaatsing en configuratie van Web SDK (en om het even welke andere markeringen JavaScript) op een plaats.
 * **Edge Network:** Verstuur de gegevens gemakkelijk naar Adobe Experience Platform en de oplossingen in het formaat dat zij nodig hebben.
 * **Adobe Experience Platform en Adobe:** Schakel hun waardevoorstel in.
 
 **Besturing:** Omdat alle gegevens één enkele en verbonden stroom van gegevens gebruiken, kunt u logisch gezien volgen en controleren hoe de gegevens bij elke milliseconde van zijn reis, aan en van toepassingen kijken.
 
-**Modern en klaar voor de toekomst:** De SDK van het Web en zijn verbinding aan het Netwerk van de Rand hebben Adobe toegelaten om beduidend te moderniseren hoe de Adobe gegevensinzameling, verpersoonlijking, toestemming en de toekomst van derdekoekjes behandelt. (Het laat een eerste partijdomein toe, dat door Adobe wordt beheerd.)
+**Modern en klaar voor de toekomst:** De SDK van het Web en zijn verbinding aan de Edge Network hebben Adobe toegelaten om beduidend te moderniseren hoe de Adobe met gegevensinzameling, verpersoonlijking, toestemming en de toekomst van derdekoekjes behandelt. (Het laat een eerste partijdomein toe, dat door Adobe wordt beheerd.)
 
 **Tijd-aan-waarde:** De Adobe heeft hard gewerkt (en zal) het zo gemakkelijk mogelijk maken om het Web SDK via markeringen op te stellen en cliënt-zijgegevens aan XDM in kaart te brengen. Nadat dat werk wordt gedaan, kunnen alle andere oplossingen van de Adobe en de diensten van Adobe Experience Platform worden aangezet of van server-kant. Bijvoorbeeld, als u dit voor Adobe Analytics gebruikt en u Doel of Experience Platform wilt aanzetten, kunt u eenvoudig een knevel op de configuratie van DataStream draaien en die gebruiksgevallen oplichten.
 
@@ -114,7 +114,7 @@ De SDK van het Web evolueert snel. Er wordt gewerkt aan meer gebruiksgevallen. U
 
 Dat hangt ervan af. Adobe Experience Platform Web SDK kan in twee verschillende stijlen worden opgesteld. Een toekomstig migratiedocument zal extra details verstrekken.
 
-* **Nog een tag:** Als de site al is gecodeerd voor oplossingen en u kunt deze niet opnieuw labelen, maar u wilt gegevens naar Adobe Experience Platform Edge Network verzenden voor gebruik van Experience Platforms of naar de volgende functies voor het doorsturen van gebeurtenissen (zie hieronder), kunt u de optie `alloy.js` tag naar de site, waar het werkt als &quot;gewoon een andere tag&quot;.
+* **Nog een tag:** Als de site al is gecodeerd voor oplossingen en u kunt deze niet opnieuw labelen, maar u wilt gegevens naar Adobe Experience Platform Edge Network verzenden voor gebruik van Experience Platforms of naar de volgende functies voor het doorsturen van gebeurtenissen (zie hieronder), kunt u de functie `alloy.js` tag naar de site, waar het werkt als &quot;gewoon een andere tag&quot;.
 
 * **Het enige label:** Als u SDK van het Web voor een oplossing van het Experience Cloud wilt gebruiken, moet u het voor gebruiken _alles_ van de oplossingen op die pagina. Als uw site bijvoorbeeld al gelabeld is voor Adobe Analytics en u deze wilt gebruiken voor Target, moet u deze zowel voor als voor andere sites in de toekomst gebruiken.
 
@@ -146,7 +146,7 @@ Echter:
 
 ## Wat is gebeurtenis door:sturen?
 
-Als u onze SDKs gebruikt en XDM naar het Netwerk van de Rand verzendt, staat deze nieuwe eigenschapgebeurtenis het door:sturen u toe om nieuwe server-zijuitbreidingen te installeren en die gegevens in kaart te brengen aan om het even wat-en het te verzenden overal-van ons randnetwerk. Beschouw het als &quot;gegevensverzameling als een service&quot;. Dit zal beschikbaar zijn voor kosten, en als deel van Adobe Experience Platform worden gebundeld.
+Als u onze SDKs gebruikt en XDM naar de Edge Network verzendt, staat deze nieuwe eigenschapgebeurtenis door:sturen u toe om nieuwe server-zijuitbreidingen te installeren en die gegevens in kaart te brengen aan om het even wat-en het te verzenden overal-van ons randnetwerk. Beschouw het als &quot;gegevensverzameling als een service&quot;. Dit zal beschikbaar zijn voor kosten, en als deel van Adobe Experience Platform worden gebundeld.
 
 ## Wat is een CNAME of een Domein van de Eerste Partij en waarom maakt het van belang?
 
@@ -159,16 +159,16 @@ Ja, gebruikt momenteel SDK van het Web overal tussen één tot zeven koekjes afh
 | **Naam** | **maxAge** | **Vriendelijke leeftijd** | **Beschrijving** |
 |---|---|---|---|
 | **kndct_orgid_identity** | 34128000 | 395 | In het identiteitscookie wordt de ECID opgeslagen, evenals andere informatie over de ECID. |
-| **kndctr_orgid_permission_check** | 7200 | 2 uur | In dit cookie wordt de voorkeur van de gebruiker voor toestemming voor de website opgeslagen. |
-| **kndctr_orgid_permission** | 15552000 | 180 dagen | Deze op zitting-gebaseerde koekje geeft de server aan om de server van de toestemmingsvoorkeur omhoog te kijken. |
-| **kndctr_orgid_cluster** | 1800 | 30 minuten | Dit koekje slaat het gebied van het Netwerk van de Rand op dat de verzoeken van de huidige gebruiker dient. Het gebied wordt gebruikt in de weg URL zodat het Netwerk van de Rand het verzoek aan het correcte gebied kan leiden. Dit koekje heeft een leven van 30 minuten, zodat als een gebruiker met een verschillend IP adres verbindt, het verzoek aan het dichtste gebied kan worden verpletterd. |
+| **kndctr_orgid_permission_check** | 7200 | 2 uur | Deze op zitting-gebaseerde koekje geeft de server aan om de server van de toestemmingsvoorkeur omhoog te kijken. |
+| **kndctr_orgid_permission** | 15552000 | 180 dagen | In dit cookie wordt de voorkeur van de gebruiker voor toestemming voor de website opgeslagen. |
+| **kndctr_orgid_cluster** | 1800 | 30 minuten | In dit cookie wordt het gebied met de Edge Network opgeslagen dat de verzoeken van de huidige gebruiker weergeeft. Het gebied wordt gebruikt in de weg URL zodat de Edge Network het verzoek aan het correcte gebied kan leiden. Dit koekje heeft een leven van 30 minuten, zodat als een gebruiker met een verschillend IP adres verbindt, het verzoek aan het dichtste gebied kan worden verpletterd. |
 | **mbox** | 63072000 | 2 jaar | Dit cookie wordt weergegeven wanneer de migratie-instelling Doel is ingesteld op true. Hierdoor wordt het doel [mbox cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) in te stellen door de Web SDK. |
 | **mboxEdgeCluster** | 1800 | 30 minuten | Dit cookie wordt weergegeven wanneer de migratie-instelling Doel is ingesteld op true. Met dit cookie kan de SDK van het Web de juiste Edge-cluster meedelen aan at.js, zodat de doelprofielen synchroon kunnen blijven terwijl gebruikers door een site navigeren. |
 | **AMCV_##@AdobeOrg** | 34128000 | 395 | Dit cookie wordt alleen weergegeven wanneer ID-migratie op de Adobe Experience Platform Web SDK is ingeschakeld. Dit koekje helpt wanneer het overgaan naar Web SDK terwijl sommige delen van de plaats nog bezoekor.js gebruiken. Zie [`idMigrationEnabled`](/help/web-sdk/commands/configure/idmigrationenabled.md) voor meer informatie . |
 
-Wanneer het gebruiken van SDK van het Web, plaatst het Netwerk van de Rand één of meerdere hierboven koekjes. Het netwerk van de Rand plaatst alle koekjes met `secure` en `sameSite="none"` kenmerken.
+Wanneer het gebruiken van SDK van het Web, plaatst de Edge Network één of meerdere hierboven koekjes. De Edge Network stelt alle cookies in met de `secure` en `sameSite="none"` kenmerken.
 
-Als u momenteel zowel beveiligde als niet-beveiligde secties op uw website hebt, kan dit problemen opleveren met de gebruikersidentificatie. Wanneer een gebruiker van een veilige sectie van de plaats aan een onveilige sectie navigeert, produceert het Netwerk van de Rand een nieuw `ECID` met het verzoek.
+Als u momenteel zowel beveiligde als niet-beveiligde secties op uw website hebt, kan dit problemen opleveren met de gebruikersidentificatie. Wanneer een gebruiker van een veilige sectie van de plaats aan een onveilige sectie navigeert, produceert de Edge Network een nieuw `ECID` met het verzoek.
 
 ## Welke browsers steunt het Web SDK van Adobe Experience Platform?
 
