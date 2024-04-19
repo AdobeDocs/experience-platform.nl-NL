@@ -4,9 +4,9 @@ title: Real-Time API-handleiding voor klantprofiel
 description: Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, waaronder weergaveprofielen, beleid voor samenvoegen maken en bijwerken, profielgegevens exporteren of samplen en profielgegevens verwijderen die niet langer vereist zijn of die door een fout zijn toegevoegd. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '883'
 ht-degree: 1%
 
 ---
@@ -53,7 +53,7 @@ Aangezien de gegevens in Platform worden opgenomen, wordt een steekproefbaan in 
 
 ## Systeemtaken profiel {#profile-system-jobs}
 
-Profiel-toegelaten gegevens die in worden opgenomen [!DNL Platform] wordt opgeslagen in het dialoogvenster [!DNL Data Lake] en de [!DNL Real-Time Customer Profile] gegevensopslag. Soms kan het nodig zijn een gegevensset of batch uit de [!DNL Profile] opslaan om gegevens te verwijderen die u niet meer nodig hebt of die bij vergissing zijn toegevoegd. Hiervoor moet u de API gebruiken om een [!DNL Profile System Job], ook bekend als &quot;[!DNL delete request]&quot;, die indien nodig kunnen worden gewijzigd, bewaakt of verwijderd. Leer hoe u met verwijderingsverzoeken werkt met de opdracht `/system/jobs` in de [!DNL Real-Time Customer Profile] API, voert u de stappen uit die in de [eindgids voor profielsysteemtaken](profile-system-jobs.md).
+Profiel-toegelaten gegevens die in worden opgenomen [!DNL Platform] wordt opgeslagen in het dialoogvenster [!DNL Data Lake] en de [!DNL Real-Time Customer Profile] gegevensopslag. Soms kan het nodig zijn om profielgegevens die zijn gekoppeld aan een gegevensset te verwijderen uit de profielenopslag om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de API gebruiken om een [!DNL Profile System Job], ook bekend als &quot;[!DNL delete request]&quot;, die indien nodig kunnen worden gewijzigd, bewaakt of verwijderd. Leer hoe u met verwijderingsverzoeken werkt met de opdracht `/system/jobs` in de [!DNL Real-Time Customer Profile] API, voert u de stappen uit die in de [eindgids voor profielsysteemtaken](profile-system-jobs.md).
 
 ## Profielkenmerken bijwerken {#update-profile}
 

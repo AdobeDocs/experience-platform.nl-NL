@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: aee82356f1f519398f381e161be14789532561f1
+source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
 workflow-type: tm+mt
-source-wordcount: '2748'
+source-wordcount: '2759'
 ht-degree: 0%
 
 ---
@@ -273,9 +273,9 @@ Er verschijnt een bevestigingsvak. Selecteren **[!UICONTROL Delete]** om de schr
 
 ## Een voor profiel ingeschakelde gegevensset verwijderen
 
-Als een dataset voor Profiel wordt toegelaten, zal het schrappen van die dataset door UI het van gegevens meer, de Dienst van de Identiteit, en de opslag van het Profiel binnen Platform schrappen.
+Als een dataset voor Profiel wordt toegelaten, zal het schrappen van die dataset door UI het van het gegevensmeer, de Dienst van de Identiteit, en ook om het even welke profielgegevens verbonden aan die dataset in de opslag van het Profiel schrappen.
 
-U kunt een dataset van [!DNL Profile] Alleen opslaan (waarbij de gegevens in het Data Lake blijven) met behulp van de Real-Time Customer Profile API. Zie de klasse [API-eindgids voor profielsysteemtaken](../../profile/api/profile-system-jobs.md).
+U kunt profielgegevens die aan een dataset zijn gekoppeld, verwijderen uit de [!DNL Profile] de opslag (het verlaten van de gegevens in het gegevensmeer) gebruikend Real-Time API van het Profiel van de Klant. Zie de klasse [API-eindgids voor profielsysteemtaken](../../profile/api/profile-system-jobs.md).
 
 ## Gegevens bijhouden
 

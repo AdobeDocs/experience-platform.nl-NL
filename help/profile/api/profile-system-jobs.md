@@ -5,16 +5,16 @@ type: Documentation
 description: Met Adobe Experience Platform kunt u een gegevensset of batch verwijderen uit de profielopslag om gegevens van het realtime-klantprofiel te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de profiel-API gebruiken om een profielsysteemtaak te maken of een aanvraag te verwijderen.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1327'
 ht-degree: 1%
 
 ---
 
 # Het taakeindpunt van het profielsysteem (verzoeken schrappen)
 
-Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor individuele klanten maken. Gegevens ingevoerd in [!DNL Platform] wordt opgeslagen in het dialoogvenster [!DNL Data Lake]en als de gegevenssets zijn ingeschakeld voor Profiel, worden die gegevens opgeslagen in de [!DNL Real-Time Customer Profile] ook gegevens opslaan. Soms kan het nodig zijn om een gegevensset of batch uit de profielopslag te verwijderen om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de [!DNL Real-Time Customer Profile] API om een [!DNL Profile] systeemtaak, of `delete request`, die indien nodig ook kunnen worden gewijzigd, bewaakt of verwijderd.
+Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor individuele klanten maken. Gegevens ingevoerd in [!DNL Platform] wordt opgeslagen in het dialoogvenster [!DNL Data Lake]en als de gegevenssets zijn ingeschakeld voor Profiel, worden die gegevens opgeslagen in de [!DNL Real-Time Customer Profile] ook gegevens opslaan. Soms kan het nodig zijn om profielgegevens die zijn gekoppeld aan een gegevensset te verwijderen uit de profielenopslag om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de [!DNL Real-Time Customer Profile] API om een [!DNL Profile] systeemtaak, of `delete request`, die indien nodig ook kunnen worden gewijzigd, bewaakt of verwijderd.
 
 >[!NOTE]
 >
@@ -102,9 +102,9 @@ De reactie bevat een array &#39;children&#39; met een object voor elke verwijder
 
 Het in werking stellen van een nieuw schrappingsverzoek wordt gedaan door een verzoek van de POST aan `/systems/jobs` eindpunt, waar de identiteitskaart van de te schrappen dataset of partij in het lichaam van het verzoek wordt verstrekt.
 
-### Een gegevensset verwijderen
+### Een gegevensset en de bijbehorende profielgegevens verwijderen
 
-Om een dataset van de opslag van het Profiel te schrappen, moet dataset identiteitskaart in het lichaam van het verzoek van de POST worden omvat. Deze actie zal ALLE gegevens voor een bepaalde dataset schrappen. [!DNL Experience Platform] staat u toe om datasets te schrappen die op zowel verslag als tijdreeksschema&#39;s worden gebaseerd.
+Om een dataset en alle profielgegevens verbonden aan de dataset van de opslag van het Profiel te schrappen, moet dataset identiteitskaart in het lichaam van het verzoek van de POST worden omvat. Deze actie zal ALLE gegevens voor een bepaalde dataset schrappen. [!DNL Experience Platform] staat u toe om datasets te schrappen die op zowel verslag als tijdreeksschema&#39;s worden gebaseerd.
 
 **API-indeling**
 
