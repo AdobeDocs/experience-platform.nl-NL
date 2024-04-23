@@ -4,9 +4,9 @@ description: Leer hoe te om botopsporing voor gegevensstromen te vormen, om mens
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
+source-git-commit: c7853855ade1867cf33ea935a8a776080be2e5ab
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1331'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 Verkeer afkomstig van niet-menselijke entiteiten, zoals geautomatiseerde programma&#39;s, webschrapers, spinnen, scanners met scripts, kan het moeilijker maken om gebeurtenissen die plaatsvinden bij bezoekers van het menselijk publiek te identificeren. Dit type van verkeer kan belangrijke bedrijfsmetriek negatief beïnvloeden, die tot onjuist verkeer leiden meldend.
 
-Met beide detectie kunt u gebeurtenissen identificeren die door de[Web SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) en [[!DNL Server API]](../server-api/overview.md) als gegenereerd door bekende spinnen en bots.
+Met beide detectie kunt u gebeurtenissen identificeren die door de [Web SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) en [[!DNL Server API]](../server-api/overview.md) als gegenereerd door bekende spinnen en bots.
 
 Door beide detectie voor uw gegevensstromen te configureren, kunt u specifieke IP-adressen, IP-bereiken en aanvraagheaders identificeren die u als beide gebeurtenissen wilt classificeren.
 
 De identificatie van beide verkeer kan u een nauwkeurigere meting van gebruikersactiviteit op uw plaats of mobiele toepassing verstrekken.
 
-Wanneer een verzoek aan het Netwerk van de Rand om het even welke beide ontdekkingsregels aanpast, wordt het schema XDM bijgewerkt met beide het scoren (altijd geplaatst aan 1), zoals hieronder getoond.
+Wanneer een verzoek aan de Edge Network om het even welke beide opsporingsregels aanpast, wordt het schema XDM bijgewerkt met beide het scoren (altijd geplaatst aan 1), zoals hieronder getoond.
 
 ```json
 {
@@ -37,9 +37,9 @@ Deze beide het scoren helpt de oplossingen die het verzoek ontvangen het beide v
 >
 >Boot detection slaat beide aanvragen niet neer. Het werkt slechts het XDM schema met beide het scoren bij en door:sturen de gebeurtenis aan [datastream service](configure.md) die u hebt geconfigureerd.
 >
->Adobe oplossingen kunnen beide scoren op verschillende manieren verwerken. Adobe Analytics gebruikt bijvoorbeeld zijn eigen [bot filtering](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) en gebruikt niet de score die door het Netwerk van de Rand wordt geplaatst. De twee diensten gebruiken het zelfde [IAB-bot](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)De beide scoring is dus identiek.
+>Adobe oplossingen kunnen beide scoren op verschillende manieren verwerken. Adobe Analytics gebruikt bijvoorbeeld zijn eigen [bot filtering](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) en maakt geen gebruik van de score die door de Edge Network is ingesteld. De twee diensten gebruiken het zelfde [IAB-bot](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)De beide scoring is dus identiek.
 
-De beide opsporingsregels kunnen tot 15 minuten vergen om zich over het Netwerk van de Rand te verspreiden nadat zij worden gecreeerd.
+Bot-detectieregels kunnen tot 15 minuten duren voordat ze door de Edge Network worden verspreid.
 
 ## Vereisten {#prerequisites}
 
