@@ -2,9 +2,9 @@
 title: Adobe Target gebruiken met Web SDK voor personalisatie
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 0b662b4c1801a6d6f6fc2c6ade92d259b821ab23
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1166'
 ht-degree: 2%
 
 ---
@@ -35,17 +35,18 @@ De volgende functies zijn getest en worden momenteel ondersteund in [!DNL Target
 
 Het volgende diagram helpt u het werkschema van begrijpen [!DNL Target] en [!DNL Web SDK] randbeslissing.
 
-![Diagram van de randbeslissing van Adobe Target met het Web SDK van het Platform](./assets/target-platform-web-sdk.png)
+![Diagram van de randbeslissing van Adobe Target met het Web SDK van het Platform](assets/target-platform-web-sdk-new.png)
 
 | Bellen | Details |
 | --- | --- |
-| 1 | Het apparaat laadt de [!DNL Web SDK]. De [!DNL Web SDK] verzendt een verzoek naar het randnetwerk met XDM- gegevens, identiteitskaart van het Milieu van Datastreams, overgegaan parameters, en identiteitskaart van de Klant (facultatief). De pagina (of containers) is vooraf verborgen. |
-| 2 | Het Edge-netwerk verzendt de aanvraag naar de Edge-services om deze te verrijken met de informatie over de bezoeker-id, toestemming en andere bezoekerscontext, zoals geolocatie en apparaatvriendelijke namen. |
-| 3 | Het randnetwerk verzendt het verrijkte verpersoonlijkingsverzoek naar [!DNL Target] rand met de parameters Visitor ID en passed-in. |
+| 1 | Het apparaat laadt de [!DNL Web SDK]. De [!DNL Web SDK] verzendt een verzoek naar de Edge Network met XDM- gegevens, milieu-id van Datastreams, overgegaan parameters, en (facultatieve) identiteitskaart van de Klant. De pagina (of containers) is vooraf verborgen. |
+| 2 | De Edge Network stuurt het verzoek naar de Edge-services om deze te verrijken met de informatie over de bezoeker-id, toestemming en andere bezoekerscontext, zoals geolocatie en apparaatvriendelijke namen. |
+| 3 | De Edge Network verzendt het verrijkte verpersoonlijkingsverzoek naar de [!DNL Target] rand met de parameters Visitor ID en passed-in. |
 | 4 | Profielscripts worden uitgevoerd en vervolgens toegevoegd aan [!DNL Target] profielopslag. De opslag van het profiel haalt segmenten van uit [!UICONTROL Audience Library] (bijvoorbeeld segmenten die worden gedeeld vanuit [!DNL Adobe Analytics], [!DNL Adobe Audience Manager]de [!DNL Adobe Experience Platform]). |
-| 5 | Gebaseerd op parameters en profielgegevens van het URL-verzoek, [!DNL Target] bepaalt welke activiteiten en ervaringen voor de bezoeker voor de huidige paginamening en voor toekomstige vooraf ingestelde meningen moeten tonen. [!DNL Target] stuurt dit vervolgens terug naar het Edge-netwerk. |
-| 6 | a. Het Edge-netwerk stuurt de verpersoonlijkingsreactie terug naar de pagina, eventueel inclusief profielwaarden voor extra personalisatie. Gepersonaliseerde inhoud op de huidige pagina wordt zo snel mogelijk weergegeven zonder flikkering van de standaardinhoud.<br>b. De gepersonaliseerde inhoud voor meningen die als resultaat van gebruikersacties in een Enige Toepassing van de Pagina (SPA) worden getoond wordt caching zodat kan het onmiddellijk zonder een extra servervraag worden toegepast wanneer de meningen worden teweeggebracht. <br>. Het Edge-netwerk verzendt de bezoeker-id en andere waarden in cookies, zoals toestemming, sessie-id, identiteit, cookie-controle, personalisatie. |
-| 7 | Het Edge-netwerk voorwaarts [!UICONTROL Analytics for Target] (A4T) Gegevens (metagegevens over activiteit, ervaring en conversie) naar de [!DNL Analytics] rand. |
+| 5 | Gebaseerd op parameters en profielgegevens van het URL-verzoek, [!DNL Target] bepaalt welke activiteiten en ervaringen voor de bezoeker voor de huidige paginamening en voor toekomstige vooraf ingestelde meningen moeten tonen. [!DNL Target] stuurt dit vervolgens terug naar de Edge Network. |
+| 6 | a. De Edge Network stuurt de verpersoonlijkingsreactie terug naar de pagina, eventueel met inbegrip van profielwaarden voor extra verpersoonlijking. Gepersonaliseerde inhoud op de huidige pagina wordt zo snel mogelijk weergegeven zonder flikkering van de standaardinhoud.<br>b. De gepersonaliseerde inhoud voor meningen die als resultaat van gebruikersacties in een Enige Toepassing van de Pagina (SPA) worden getoond wordt caching zodat kan het onmiddellijk zonder een extra servervraag worden toegepast wanneer de meningen worden teweeggebracht. <br>c. De Edge Network verzendt de bezoeker-id en andere waarden in cookies, zoals toestemming, sessie-id, identiteit, cookie-controle, personalisatie. |
+| 7 | De SDK van het Web verzendt het bericht van het apparaat naar de Edge Network. |
+| 8 | De Edge Network [!UICONTROL Analytics for Target] (A4T) Gegevens (metagegevens over activiteit, ervaring en conversie) naar de [!DNL Analytics] rand. |
 
 ## Inschakelen [!DNL Adobe Target]
 
