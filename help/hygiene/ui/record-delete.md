@@ -3,7 +3,7 @@ title: Records verwijderen
 description: Leer hoe u records verwijdert in de gebruikersinterface van Adobe Experience Platform.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 86cf250b2915a49d994fee0ab9d9ddbf65f6f836
+source-git-commit: d9d2ab2da87adce45242cbb0c4132a4d17fcc4a6
 workflow-type: tm+mt
 source-wordcount: '1500'
 ht-degree: 0%
@@ -140,7 +140,7 @@ Als u klaar bent met het toevoegen van identiteiten aan het verzoek, onder **[!U
 
 >[!IMPORTANT]
 > 
->Er zijn verschillende limieten voor het totale aantal unieke identiteitsrecords dat elke maand kan worden verzonden. Deze limieten zijn gebaseerd op uw licentieovereenkomst. Organisaties die alle edities van Adobe Real-time Customer Data Platform en Adobe Journey Optimizer hebben aangeschaft, kunnen maximaal 100.000 identiteitsgegevens verzenden en elke maand verwijderen. Organisaties die een aankoop hebben gedaan **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe** kan maximaal 600.000 identiteitsverslagen indienen schrapt elke maand.<br>Met één aanvraag voor het verwijderen van records via de gebruikersinterface kunt u 10.000 id&#39;s tegelijk verzenden. De [API-methode voor het verwijderen van records](../api/workorder.md#create) kan 100.000 ID&#39;s tegelijk worden ingediend.<br>Het is aan te raden zoveel mogelijk id&#39;s per aanvraag in te dienen, tot aan je ID-limiet. Wanneer u een hoog volume id&#39;s wilt verwijderen, moet u een laag volume of één id per record verwijderen.
+>Er zijn verschillende limieten voor het totale aantal unieke identiteitsrecords dat elke maand kan worden verzonden. Deze limieten zijn gebaseerd op uw licentieovereenkomst. Organisaties die alle edities van Adobe Real-time Customer Data Platform of Adobe Journey Optimizer hebben aangeschaft, kunnen maximaal 100.000 identiteitsgegevens verzenden en elke maand verwijderen. Organisaties die een aankoop hebben gedaan **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe** kan maximaal 600.000 identiteitsverslagen indienen schrapt elke maand.<br>Met één aanvraag voor het verwijderen van records via de gebruikersinterface kunt u 10.000 id&#39;s tegelijk verzenden. De [API-methode voor het verwijderen van records](../api/workorder.md#create) kan 100.000 ID&#39;s tegelijk worden ingediend.<br>Het is aan te raden zoveel mogelijk id&#39;s per aanvraag in te dienen, tot aan je ID-limiet. Wanneer u een hoog volume id&#39;s wilt verwijderen, moet u een laag volume of één id per record verwijderen.
 
 ![De instelling voor aanvragen [!UICONTROL Name] en [!UICONTROL Description] velden met [!UICONTROL Submit] gemarkeerd.](../images/ui/record-delete/submit.png)
 
