@@ -1,13 +1,13 @@
 ---
 keywords: metriek - overzicht; rtcdp metriek
 title: Homepage van Real-time Customer Data Platform en dashboards
-description: Maak kennis met verschillende dashboards, de homepage en de eerste gebruikerservaring van Adobe Real-Time CDP.
+description: Krijg inzicht in diverse dashboards, de startpagina en de eerste gebruikerservaring van Adobe Real-Time CDP.
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '889'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
