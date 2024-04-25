@@ -2,10 +2,10 @@
 title: Interactieve gegevensverzameling
 description: Leer hoe de Adobe Experience Platform Edge Network Server API interactieve gegevensverzameling uitvoert.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f8434746c4a023ec895d23a59e04fca4baecfc36
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 3%
+source-wordcount: '179'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +13,11 @@ ht-degree: 3%
 
 ## Overzicht {#overview}
 
-De interactieve eindpunten van de gegevensinzameling ontvangen één enkele gebeurtenis en worden gebruikt wanneer de cliënt een antwoord verwacht dat door de server van het Netwerk van de Rand van Adobe Experience Platform zal zijn teruggekeerd. Deze eindpunten kunnen inhoud van andere diensten van het Netwerk van de Rand ook terugkeren, terwijl het uitvoeren van gegevensinzameling.
+De interactieve eindpunten van de gegevensinzameling ontvangen één enkele gebeurtenis en worden gebruikt wanneer de cliënt een antwoord verwacht dat door de server van de Edge Network van Adobe Experience Platform wordt teruggekeerd. Deze eindpunten kunnen inhoud van andere diensten van de Edge Network ook terugkeren, terwijl het uitvoeren van gegevensinzameling.
+
+>[!IMPORTANT]
+>
+>De `/interact` het eindpunt wordt hoofdzakelijk ontworpen om door de Experience Platform SDKs te worden gebruikt. Dit eindpunt is onderhevig aan additieve veranderingen en zijn gedrag kan zonder bericht evolueren. Nieuwe items kunnen bijvoorbeeld in de toekomst worden toegevoegd aan de antwoordlading.
 
 De serverreactie omvat een of meer `Handle` objecten, zoals hieronder weergegeven.
 
