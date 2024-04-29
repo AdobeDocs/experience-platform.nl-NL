@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
+source-git-commit: 58239a1d2db7be48cedd4467cb2f94913e387031
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1039'
 ht-degree: 6%
 
 ---
@@ -348,6 +348,7 @@ ht-degree: 6%
       - [Gegevensstroom betalingsverbinding](tutorials/ui/dataflow/payments.md)
       - [Dataflow van protocolverbinding](tutorials/ui/dataflow/protocols.md)
    - [Een gegevensstroom voor bronnen maken met sjablonen in de gebruikersinterface](tutorials/ui/templates.md)
+   - [Bronobjecten filteren](tutorials/ui/filter.md)
    - [Op aanvraag inslikken](tutorials/ui/on-demand-ingestion.md)
    - [Batchgegevens controleren](tutorials/ui/monitor.md)
    - [Streaming gegevens bijhouden](tutorials/ui/monitor-streaming.md)
