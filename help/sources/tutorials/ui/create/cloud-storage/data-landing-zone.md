@@ -3,9 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen;Data Landing Zone;data
 title: Gegevenslandingszone verbinden met platform via de gebruikersinterface
 description: Leer hoe te om een van de Bron van de Gebied van Gegevens te creëren die de gebruikersinterface van het Platform gebruiken.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 9cffd508c1bff7ce133f84ca686c414e997343b8
+source-git-commit: 9372e6f961015c989bfcb0d1e2b0129da965c522
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -60,23 +60,41 @@ Selecteer **[!UICONTROL Next]**.
 
 Raadpleeg de zelfstudie voor een gedetailleerde, stapsgewijze handleiding voor het maken van een gegevensstroom voor een bron voor cloudopslag. [een gegevensstroom voor cloudopslag maken om gegevens naar het platform te brengen](../../dataflow/batch/cloud-storage.md).
 
-## Ophalen en uw [!DNL Data Landing Zone] geloofsbrieven
+## Uw gegevens ophalen [!DNL Data Landing Zone] geloofsbrieven
 
-[!DNL Data Landing Zone] is een out-of-the-box bron die wordt geleverd bij uw Adobe Experience Platform Sources-licentie. [!DNL Data Landing Zone] gebruikt een SAS URI- en SAS-tokenverificatie. U kunt uw verificatiegegevens ophalen en vernieuwen via het dialoogvenster [!UICONTROL Sources catalog] pagina.
+[!DNL Data Landing Zone] is een bron die wordt geleverd bij uw Adobe Experience Platform Sources-licentie. [!DNL Data Landing Zone] gebruikt een SAS URI- en SAS-tokenverificatie. U kunt uw verificatiegegevens ophalen via het dialoogvenster [!UICONTROL Sources catalog] pagina.
 
-In de [!UICONTROL Sources catalog], onder de [!UICONTROL Cloud storage] categorie, selecteer de ellipsen (**...**) van de **[!UICONTROL Data Landing Zone]** kaart. Selecteer in het vervolgkeuzemenu dat wordt weergegeven **[!UICONTROL View credentials]**.
+Als u uw referenties wilt ophalen, selecteert u de **[!UICONTROL Data Landing Zone]** en kopieer vervolgens uw referenties van de rechterrail die wordt weergegeven.
 
-![Een lijst met weergaveopties voor de landingszone voor gegevens.](../../../../images/tutorials/create/dlz/options.png)
+![Een lijst met weergaveopties voor de landingszone voor gegevens.](../../../../images/tutorials/create/dlz/view-credentials.png)
 
 Er wordt een pop-up weergegeven met de naam van de container, de SAS-token, de naam van de opslagaccount, de SAS-URI en de vervaldatum.
 
-Selecteren **[!UICONTROL Refresh credentials]** en kan het enkele seconden duren voordat uw bijgewerkte referenties worden verwerkt.
+## Vernieuw uw [!DNL Data Landing Zone] geloofsbrieven
 
->[!TIP]
->
->Uw [!DNL Data Landing Zone] gebruikersgegevens verlopen automatisch na 90 dagen en u moet nieuwe gegevens gebruiken om opnieuw verbinding te maken met [!DNL Data Landing Zone] na afloop. Uw gegevensstromen in Platform worden niet beïnvloed door het verlopen van geloofsbrieven en u kunt nog met nieuwe en bestaande gegevensstromen met uw nieuwe geloofsbrieven blijven werken.
+Uw [!DNL Data Landing Zone] gebruikersgegevens verlopen automatisch na 90 dagen en u moet nieuwe gegevens gebruiken om opnieuw verbinding te maken met [!DNL Data Landing Zone] na afloop. Uw gegevensstromen in Experience Platform worden niet beïnvloed door het verlopen van geloofsbrieven en u kunt nog met nieuwe en bestaande gegevensstromen met uw nieuwe geloofsbrieven blijven werken.
 
-![De geloofsbrieven verbonden aan een bepaalde rekening van de Gebied van Gegevens.](../../../../images/tutorials/create/dlz/view-credentials.png)
+Er zijn twee manieren om uw [!DNL Data Landing Zone] referenties:
+
+>[!BEGINTABS]
+
+>[!TAB De bronkaart gebruiken]
+
+Als u uw referenties wilt vernieuwen vanaf de pagina met de broncatalogus, selecteert u de ellipsen (**`...`**) in de [!DNL Data Landing Zone] en selecteer vervolgens **[!UICONTROL Refresh credentials]**.
+
+![Referenties vernieuwen met de bronkaart.](../../../../images/tutorials/create/dlz/refresh-with-card.png)
+
+Er verschijnt een pop-upvenster waarin u om bevestiging wordt gevraagd voordat u verdergaat. Wanneer u klaar bent, selecteert u **[!UICONTROL Refresh credentials]**.
+
+![Het bevestigingsvenster voor vernieuwde referenties.](../../../../images/tutorials/create/dlz/confirm.png)
+
+>[!TAB Rechterraster gebruiken]
+
+Als u uw referenties wilt vernieuwen met behulp van het rechterspoor, selecteert u de optie **[!UICONTROL Data Landing Zone]** bronkaart en selecteer vervolgens **[!UICONTROL More actions]**. Selecteer vervolgens **[!UICONTROL Refresh Credentials]** en bevestig vervolgens het gebruik van het pop-upvenster dat wordt weergegeven.
+
+![Vernieuw referenties met de rechterrail.](../../../../images/tutorials/create/dlz/refresh-with-right-rail.png)
+
+>[!ENDTABS]
 
 ## Volgende stappen
 
