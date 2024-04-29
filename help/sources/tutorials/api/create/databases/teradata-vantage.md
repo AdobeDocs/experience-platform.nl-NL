@@ -3,18 +3,14 @@ keywords: Experience Platform;thuis;populaire onderwerpen;Teradata Vantage
 title: Een Teradata Vantage Base Connection maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met Teradata Vantage met behulp van de Flow Service API.
 exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '450'
 ht-degree: 0%
 
 ---
 
-# (Beta) Maak een [!DNL Teradata Vantage] basisverbinding met de [!DNL Flow Service] API
-
->[!NOTE]
->
->De [!DNL Teradata Vantage] De bron is in bèta. Zie de [Overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+# Een [!DNL Teradata Vantage] basisverbinding met de [!DNL Flow Service] API
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 

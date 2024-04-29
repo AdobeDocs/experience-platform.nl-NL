@@ -3,18 +3,14 @@ keywords: Experience Platform;thuis;populaire onderwerpen;teradata;het voordeel 
 title: Overzicht van teradata Vantage Source Connector
 description: Leer hoe u Teradata Vantage met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: f498a704-437a-4fc6-b50d-b6a1ce7ab264
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '238'
 ht-degree: 0%
 
 ---
 
-# (bèta) [!DNL Teradata Vantage] bron
-
->[!NOTE]
->
->De [!DNL Teradata Vantage] De bron is in bèta. Zie de [Overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+# [!DNL Teradata Vantage] bron
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 

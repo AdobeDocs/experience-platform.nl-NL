@@ -3,18 +3,14 @@ keywords: Experience Platform;thuis;populaire onderwerpen;Teradata Vantage
 title: Een Teradata Vantage Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Teradata Vantage-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '394'
 ht-degree: 1%
 
 ---
 
-# (Beta) Maak een [!DNL Teradata Vantage] bronverbinding in de gebruikersinterface
-
->[!NOTE]
->
-> De [!DNL Teradata Vantage] De bron is in bèta. Zie de [Overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+# Een [!DNL Teradata Vantage] bronverbinding in de gebruikersinterface
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Teradata Vantage] bronaansluiting die de Adobe Experience Platform-gebruikersinterface gebruikt.
 
@@ -37,13 +33,15 @@ Raadpleeg voor meer informatie over aan de slag gaan [[!DNL Teradata Vantage] do
 
 ## Verbind uw [!DNL Teradata Vantage] account
 
-Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
+Onder de [!UICONTROL Databases] categorie, selecteert u **[!UICONTROL Teradata Vantage]** en selecteer vervolgens **[!UICONTROL Set up]**.
 
-Onder de [!UICONTROL Databases] categorie, selecteert u **[!UICONTROL Teradata Vantage]** en selecteer vervolgens **[!UICONTROL Add data]**.
+>[!TIP]
+>
+>De bronnen in de broncatalogus geven de **[!UICONTROL Set up]** als een bepaalde bron nog geen geverifieerde account heeft. Als er eenmaal een geverifieerd account is, wordt deze optie gewijzigd in **[!UICONTROL Add data]**.
 
-![](../../../../images/tutorials/create/teradata/catalog.png)
+![De broncatalogus met de geselecteerde Teradata Vantage-bron.](../../../../images/tutorials/create/teradata/catalog.png)
 
 De **[!UICONTROL Connect to Teradata Vantage]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -51,13 +49,13 @@ De **[!UICONTROL Connect to Teradata Vantage]** wordt weergegeven. Op deze pagin
 
 Als u een bestaande account wilt verbinden, selecteert u de optie [!DNL Teradata Vantage] account waarmee u verbinding wilt maken, selecteert u **[!UICONTROL Next]** om verder te gaan.
 
-![](../../../../images/tutorials/create/teradata/existing.png)
+![De pagina Bestaande accounts in de werkruimte Bronnen.](../../../../images/tutorials/create/teradata/existing.png)
 
 ### Nieuwe account
 
 Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Teradata Vantage] referenties. Selecteer **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
-![](../../../../images/tutorials/create/teradata/new.png)
+![De nieuwe interface voor het maken van accounts in de werkruimte Bronnen.](../../../../images/tutorials/create/teradata/new.png)
 
 ## Volgende stappen
 
