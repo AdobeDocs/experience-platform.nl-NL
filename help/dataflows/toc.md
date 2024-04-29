@@ -4,10 +4,10 @@ user-guide-title: Handleiding voor gegevensstromen
 user-guide-description: Leer meer over gegevensstromen en hoe u deze kunt configureren voor verschillende services.
 feature: Dataflows
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 21c69ff834dbd0e32831c5c9071e4255fd8258e1
 workflow-type: tm+mt
-source-wordcount: '57'
-ht-degree: 24%
+source-wordcount: '60'
+ht-degree: 23%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 24%
    - [Dataflows bewaken](./api/monitor.md)
    - [API-reacties sorteren en filteren](./api/sort-and-filter.md)
 - UI-hulplijnen {#ui}
+   - [Overzicht van het dashboard controleren](./ui/monitor.md)
    - [Gegevensstromen in bronnen controleren](./ui/monitor-sources.md)
    - [Gegevens in identiteiten controleren](./ui/monitor-identities.md)
    - [Gegevensstromen in profielen controleren](./ui/monitor-profiles.md)
