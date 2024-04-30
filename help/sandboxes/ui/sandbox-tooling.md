@@ -2,9 +2,9 @@
 title: Sandboxen
 description: U kunt Sandboxconfiguraties naadloos exporteren en importeren tussen sandboxen.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 888608bdf3ccdfc56edd41c164640e258a4c5dd7
+source-git-commit: 1a474fa0947cb930bad95f94c1901fffb7e23e7b
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '2074'
 ht-degree: 0%
 
 ---
@@ -165,6 +165,52 @@ U bent teruggekeerd aan [!UICONTROL Package object and dependencies] pagina. Van
 
 ![De [!UICONTROL Package object and dependencies] op de pagina wordt een lijst met elementen weergegeven die in het pakket zijn opgenomen. Deze lijst wordt gemarkeerd [!UICONTROL Finish].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
+## Een volledige sandbox exporteren en importeren
+
+>[!NOTE]
+>
+>Alleen realtime klantgegevensplatformobjecten worden ondersteund voor het exporteren/importeren van een volledige sandbox. Reisobjecten worden niet opgenomen.
+
+### Een volledige sandbox exporteren {#export-entire-sandbox}
+
+Navigeer naar de [!UICONTROL Sandboxes] **[!UICONTROL Packages]** en selecteert u **[!UICONTROL Create package]**.
+
+![De [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tabmarkering [!UICONTROL Create package].](../images/ui/sandbox-tooling/create-sandbox-package.png)
+
+Selecteren **[!UICONTROL Entire sandbox]** voor de [!UICONTROL Type of package] in de [!UICONTROL Create package] in. Geef een [!UICONTROL Package name] voor uw nieuwe pakket en selecteer **[!UICONTROL Sandbox]** in de vervolgkeuzelijst. Tot slot selecteert u **[!UICONTROL Create]** om je inzendingen te bevestigen.
+
+![De [!UICONTROL Create package] dialoogvenster met voltooide velden en markering [!UICONTROL Create].](../images/ui/sandbox-tooling/create-package-dialog.png)
+
+Het pakket is gemaakt en selecteer **[!UICONTROL Publish]** het pakket publiceren.
+
+![Lijst met sandboxpakketten die het nieuwe gepubliceerde pakket markeren.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
+
+U bent teruggekeerd aan **[!UICONTROL Packages]** in de [!UICONTROL Sandboxes] omgeving, waar u het nieuwe gepubliceerde pakket kunt zien.
+
+### Het volledige sandboxpakket importeren {#import-entire-sandbox-package}
+
+>[!NOTE]
+>
+>Alle objecten worden als nieuwe objecten geïmporteerd in de doelsandbox. Het wordt aanbevolen een volledig sandboxpakket te importeren in een lege sandbox.
+
+Als u het pakket in een doelsandbox wilt importeren, navigeert u naar de [!UICONTROL Sandboxes] **[!UICONTROL Browse]** en selecteert u de plusoptie (+) naast de naam van de sandbox.
+
+![De sandboxen **[!UICONTROL Browse]** tabblad de selectie van het importpakket markeren.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+
+Selecteer met het vervolgkeuzemenu de volledige sandbox in het dialoogvenster **[!UICONTROL Package name]** vervolgkeuzelijst. Voeg een **[!UICONTROL Job name]**, die in de toekomst zal worden gebruikt voor monitoring en een facultatieve **[!UICONTROL Job description]** selecteert u vervolgens **[!UICONTROL Next]**.
+
+![De pagina met importgegevens die de [!UICONTROL Package name] vervolgkeuzelijst](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+
+>[!NOTE]
+>
+>U moet volledige machtigingen hebben voor alle objecten die in het pakket zijn opgenomen. Als u geen machtigingen hebt, mislukt het importeren en verschijnen er foutberichten.
+
+U wordt naar de [!UICONTROL Package object and dependencies] pagina waarop u het aantal objecten en afhankelijkheden kunt zien die zijn geïmporteerd en uitgesloten. Van hier, selecteer **[!UICONTROL Import]** om de pakketimport te voltooien.
+
+![De [!UICONTROL Package object and dependencies] op de pagina wordt het inline bericht weergegeven van objecttypen die niet worden ondersteund, markeren [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+
+Zorg ervoor dat de importbewerking enige tijd duurt. De tijd die nodig is om te voltooien, is afhankelijk van het aantal objecten in het pakket. U kunt de importtaak controleren vanuit de [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** tab.
+
 <!--
 ## Export and import an entire sandbox 
 
@@ -207,37 +253,37 @@ You are taken to the [!UICONTROL Package object and dependencies] page where you
  ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 -->
 
-## Importtaken controleren en importobjecten weergeven
+## Importdetails controleren {#view-import-details}
 
-Als u de geïmporteerde objecten en de geïmporteerde details wilt bekijken, navigeert u naar de [!UICONTROL Sandboxes] **[!UICONTROL Imports]** en selecteert u het pakket in de lijst. U kunt ook de zoekbalk gebruiken om naar het pakket te zoeken.
+Als u de geïmporteerde details wilt bekijken, navigeert u naar het tabblad [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** en selecteert u het pakket in de lijst. U kunt ook de zoekbalk gebruiken om naar het pakket te zoeken.
 
-![De sandboxen [!UICONTROL Imports] markeert de selectie van het importpakket.](../images/ui/sandbox-tooling/imports-tab.png)
+![De sandboxen [!UICONTROL Jobs] markeert de selectie van het importpakket.](../images/ui/sandbox-tooling/imports-tab.png)
 
-### Geïmporteerde objecten weergeven {#view-imported-objects}
+<!--### View imported objects {#view-imported-objects}
 
-Op de **[!UICONTROL Imports]** in de [!UICONTROL Sandboxes] omgeving, selecteren **[!UICONTROL View imported objects]** in het rechterdetailvenster.
+On the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment, select **[!UICONTROL View imported objects]** from the right details pane.
 
-Selecteren **[!UICONTROL View imported objects]** in het rechtervenster met details op het tabblad **[!UICONTROL Imports]** in de [!UICONTROL Sandboxes] milieu.
+Select **[!UICONTROL View imported objects]** from the right details pane on the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment.
 
-![De sandboxen [!UICONTROL Imports] tab markeert de [!UICONTROL View imported objects] in het rechterdeelvenster.](../images/ui/sandbox-tooling/view-imported-objects.png)
+![The sandboxes [!UICONTROL Imports] tab highlights the [!UICONTROL View imported objects] selection in the right pane.](../images/ui/sandbox-tooling/view-imported-objects.png)
 
-Gebruik de pijlen om objecten uit te vouwen om de volledige lijst met velden weer te geven die in het pakket zijn geïmporteerd.
+Use the arrows to expand objects to view the full list of fields that have been imported into the package.
 
-![De sandboxen [!UICONTROL Imported objects] een lijst weergeven met objecten die in het pakket zijn geïmporteerd.](../images/ui/sandbox-tooling/expand-imported-objects.png)
+![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
 
-### Importdetails weergeven {#view-import-details}
-
-Selecteren **[!UICONTROL View import details]** in het rechtervenster met details in het dialoogvenster **[!UICONTROL Imports]** in de Sandboxomgeving.
+Selecteren **[!UICONTROL View import summary]** in het rechtervenster met details in het dialoogvenster **[!UICONTROL Jobs]** in de Sandboxomgeving.
 
 ![De sandboxen [!UICONTROL Imports] tab markeert de [!UICONTROL View import details] in het rechterdeelvenster.](../images/ui/sandbox-tooling/view-import-details.png)
 
-De **[!UICONTROL Import details]** een gedetailleerde uitsplitsing van de invoer .
-
-![De [!UICONTROL Import details] dialoog met een gedetailleerde uitsplitsing van de invoer.](../images/ui/sandbox-tooling/import-details.png)
+De **[!UICONTROL Import summary]** de dialoog geeft een uitsplitsing van de invoer in procenten .
 
 >[!NOTE]
 >
->Wanneer het importeren is voltooid, ontvangt u meldingen in de gebruikersinterface van het platform. U kunt deze meldingen openen via het waarschuwingspictogram. U kunt hier naar probleemoplossing navigeren als een taak mislukt.
+>U kunt een lijst met objecten weergeven door naar specifieke overzichtspagina&#39;s te navigeren.
+
+![De [!UICONTROL Import details] dialoog met een gedetailleerde uitsplitsing van de invoer.](../images/ui/sandbox-tooling/import-details.png)
+
+Wanneer de importbewerking is voltooid, ontvangt u een melding in de gebruikersinterface van het platform. U kunt deze meldingen openen via het waarschuwingspictogram. U kunt hier naar probleemoplossing navigeren als een taak mislukt.
 
 ## Videotutorial
 
