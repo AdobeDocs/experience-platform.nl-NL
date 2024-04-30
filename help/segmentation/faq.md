@@ -2,9 +2,9 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: f9235763746e12bd62f19094372dcff41cb41d65
+source-git-commit: 27571f3ed57399eb588865e1a52e7569957ffbff
 workflow-type: tm+mt
-source-wordcount: '3148'
+source-wordcount: '3956'
 ht-degree: 0%
 
 ---
@@ -98,18 +98,6 @@ De huidige gegevensvervaldatum voor extern gegenereerd publiek is **dertig dagen
 
 Nadat de gegevensvervalperiode overgaat, zal de bijbehorende dataset nog zichtbaar binnen de datasetinventaris zijn, maar u zult **niet** kan het publiek activeren en het aantal profielen wordt weergegeven als nul.
 
-### Wat vertegenwoordigen de verschillende levenscyclusstaten?
-
-In het volgende diagram worden de verschillende levenscyclusstatussen beschreven, wat ze vertegenwoordigen, waar publiek met die status kan worden gebruikt, en het effect op segmentatiegeleidingen.
-
-| Staat | Definitie | Zichtbaar in Audience Portal? | Zichtbaar in Doelen? | Heeft invloed op segmentatielimieten? | Gevolgen voor het publiek | Gevolgen voor de publieksevaluatie | Kan worden gebruikt bij andere doelgroepen? |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Concept | Een publiek in de **Concept** de staat is een publiek dat nog in ontwikkeling is en nog niet klaar is om in andere diensten te worden gebruikt . | Ja, maar kan verborgen zijn. | Nee | Ja | Kan tijdens het verfproces worden geïmporteerd of bijgewerkt. | Kan worden geëvalueerd voor een nauwkeurige telling van het aantal uitgeverijen. | Ja, maar het wordt niet aanbevolen dit te gebruiken. |
-| Gepubliceerd | Een publiek in de **Gepubliceerd** staat is een publiek dat klaar voor gebruik over alle stroomafwaartse diensten is. | Ja | Ja | Ja | Kan worden geïmporteerd of bijgewerkt. | Evalueerd met batch-, streaming- of randsegmentatie. | Ja |
-| Inactief | Een publiek in de **Inactief** state is een publiek dat momenteel niet in gebruik is. Het bestaat nog steeds binnen Platform, maar het zal **niet** kan worden gebruikt totdat het als concept wordt gemarkeerd of gepubliceerd. | Nee, maar kan wel worden weergegeven. | Nee | Nee | Niet meer bijgewerkt. | Niet meer geëvalueerd of bijgewerkt door Platform. | Ja |
-| Verwijderd | Een publiek in de **Verwijderd** status is een publiek dat is verwijderd. Het kan enkele minuten duren voordat de gegevens daadwerkelijk zijn verwijderd. | Nee | Nee | Nee | Onderliggende gegevens worden verwijderd. | Er vindt geen gegevensevaluatie of -uitvoering plaats nadat de verwijdering is voltooid. | Nee |
-| Actief | Deze status is **verouderd** en wordt vervangen door **Gepubliceerd** status. | N.v.t. | N.v.t. | N.v.t. | N.v.t. | N.v.t. | N.v.t. |
-
 ### Hoe zal het Portaal van het Publiek en de Samenstelling van het Publiek met de versie van de Gegevens van de Partner van Real-Time CDP in wisselwerking staan?
 
 Het Portaal van het publiek en de Samenstelling van het Publiek zullen met de Gegevens van de Partner op twee manieren in wisselwerking staan:
@@ -130,9 +118,108 @@ De attributen van de verrijking zijn attributen die uit een dataset komen en met
 | Real-Time CDP-doelen | U kunt zowel de payload-kenmerken als het publiek activeren. | Alleen het publiek kan worden geactiveerd. Verrijkingskenmerken **kan** worden geactiveerd. |
 | Adobe Journey Optimizer Campaigns | U kunt het publiek en de payload-kenmerken niet activeren. | U kunt zowel het publiek als de verrijkingskenmerken activeren. |
 
+## Levenscyclusstatussen {#lifecycle-states}
+
+In de volgende sectie worden vragen over de levenscyclusstatus en het beheer van de levenscyclusstatus in de portal Publiek weergegeven.
+
+### Wat vertegenwoordigen de verschillende levenscyclusstaten?
+
+In het volgende diagram worden de verschillende levenscyclusstatussen beschreven, wat ze vertegenwoordigen, waar publiek met die status kan worden gebruikt, en het effect op segmentatiegeleidingen.
+
+| Staat | Definitie | Zichtbaar in Audience Portal? | Zichtbaar in Doelen? | Heeft invloed op segmentatielimieten? | Gevolgen voor het publiek | Gevolgen voor de publieksevaluatie | Kan worden gebruikt bij andere doelgroepen? | Bewerkbaar |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Concept | Een publiek in de **Concept** de staat is een publiek dat nog in ontwikkeling is en nog niet klaar is om in andere diensten te worden gebruikt . | Ja, maar kan verborgen zijn. | Nee | Ja | Kan tijdens het verfproces worden geïmporteerd of bijgewerkt. | Kan worden geëvalueerd voor een nauwkeurige telling van het aantal uitgeverijen. | Ja, maar het wordt niet aanbevolen dit te gebruiken. | Ja |
+| Gepubliceerd | Een publiek in de **Gepubliceerd** staat is een publiek dat klaar voor gebruik over alle stroomafwaartse diensten is. | Ja | Ja | Ja | Kan worden geïmporteerd of bijgewerkt. | Evalueerd met batch-, streaming- of randsegmentatie. | Ja | Ja |
+| Inactief | Een publiek in de **Inactief** state is een publiek dat momenteel niet in gebruik is. Het bestaat nog steeds binnen Platform, maar het zal **niet** kan worden gebruikt totdat het als concept wordt gemarkeerd of gepubliceerd. | Nee, maar kan wel worden weergegeven. | Nee | Nee | Niet meer bijgewerkt. | Niet meer geëvalueerd of bijgewerkt door Platform. | Ja | Ja |
+| Verwijderd | Een publiek in de **Verwijderd** status is een publiek dat is verwijderd. Het kan enkele minuten duren voordat de gegevens daadwerkelijk zijn verwijderd. | Nee | Nee | Nee | Onderliggende gegevens worden verwijderd. | Er vindt geen gegevensevaluatie of -uitvoering plaats nadat de verwijdering is voltooid. | Nee | Nee |
+
+### In welke staten kan ik mijn publiek bewerken?
+
+Soorten publiek kan in de volgende levenscyclusstaten worden bewerkt:
+
+- **Concept**: Als een publiek in de ontwerpstaat wordt bewerkt, blijft het in de ontwerpstaat, tenzij het expliciet wordt gepubliceerd.
+- **Gepubliceerd**: Als een publiek in de gepubliceerde staat wordt bewerkt, blijft het gepubliceerd en wordt het publiek automatisch bijgewerkt.
+- **Inactief**: Als een publiek wordt bewerkt in de inactieve status, blijft het niet actief. Dit betekent dat het niet zal worden geëvalueerd of bijgewerkt. Als u het publiek moet bijwerken, moet u het publiek publiceren.
+
+Wanneer een publiek is verwijderd, wordt het verwijderd **kan** worden bewerkt.
+
+### Naar welke levenscyclusstaten kan ik een publiek verplaatsen?
+
+De mogelijke levenscyclus bepaalt dat een publiek kan worden verplaatst, afhankelijk van de huidige status van het publiek.
+
+![Een diagram dat de mogelijke overgangen van de levenscyclusstaat beschrijft die voor publiek beschikbaar zijn.](./images/faq/lifecycle-state-transition.png)
+
+Als de doelgroep zich in de conceptstatus bevindt, kunt u de doelgroep publiceren of verwijderen als de doelgroep geen afhankelijke personen heeft.
+
+Als het publiek zich in de gepubliceerde status bevindt, kunt u het item deactiveren of verwijderen als het publiek geen afhankelijke personen heeft.
+
+Als uw publiek zich in de inactieve staat bevindt, kunt u het opnieuw publiceren of schrappen als het publiek geen gebiedsdelen heeft.
+
+### Zijn er voorbehouden voor het publiek in bepaalde levenscyclusstaten?
+
+Soorten publiek in de gepubliceerde status kunnen alleen naar een andere status worden verplaatst als het publiek dit doet **niet** zij zijn afhankelijk van het product. Dit betekent dat als uw publiek in een stroomafwaartse dienst wordt gebruikt, het niet kan worden gedeactiveerd of worden geschrapt.
+
+Als een publiek dat met batchsegmentatie wordt geëvalueerd opnieuw wordt gepubliceerd, namelijk wanneer een publiek van inactief naar gepubliceerd gaat, zal het publiek zich verfrissen **na** de dagelijkse batchtaak. Wanneer het voor het eerst opnieuw wordt gepubliceerd, worden de profielen en gegevens **zelfde** zoals toen het publiek inactief werd gemaakt.
+
+### Hoe zet ik een publiek in de ontwerpstaat?
+
+De methode om een publiek in de ontwerpstaat te zetten hangt van de oorsprong van het publiek af.
+
+Voor publiek dat met de Bouwer van het Segment wordt gecreeerd, kunt u het publiek aan de ontwerpstaat plaatsen door &quot;[!UICONTROL Save as draft]&quot; in Segment Builder.
+
+Voor publiek dat in de Samenstelling van het Publiek wordt gecreeerd, worden het publiek automatisch opgeslagen als ontwerp tot gepubliceerd.
+
+Voor publiek dat extern wordt gemaakt, wordt het publiek automatisch gepubliceerd.
+
+Wanneer een publiek zich in de gepubliceerde staat bevindt, kunt u **kan** verander het originele publiek terug in de ontwerpstaat. Als u echter het publiek kopieert, bevindt het nieuwe publiek zich in de conceptstatus.
+
+### Hoe zet ik een publiek in de gepubliceerde staat?
+
+Voor publiek dat wordt gecreeerd gebruikend de Bouwer van de Segment of de Samenstelling van het Publiek, kunt u het publiek aan de gepubliceerde staat plaatsen door &quot;[!UICONTROL Publish]&quot; in hun respectieve gebruikersinterface.
+
+De soorten publiek die extern worden gecreeerd worden automatisch geplaatst aan gepubliceerd.
+
+### Hoe zet ik een publiek in de inactieve staat?
+
+U kunt een gepubliceerd publiek in de inactieve staat zetten door het snelle actiemenu in de Portaal van het Publiek te openen en &quot;[!UICONTROL Deactivate]&quot;.
+
+### Hoe kan ik een publiek opnieuw publiceren?
+
+>[!NOTE]
+>
+>De staat &quot;opnieuw gepubliceerd&quot;is het zelfde als de gepubliceerde staat voor publieksgedrag.
+
+U kunt een publiek opnieuw publiceren door een publiek te selecteren dat in de inactieve staat is, het snelle actiemenu op de Portaal van de Publiek te openen en te selecteren [!UICONTROL Publish].
+
+### Hoe zet ik een publiek in de verwijderde staat?
+
+>[!IMPORTANT]
+>
+>U kunt alleen soorten publiek verwijderen die **niet** worden gebruikt in downstreamactiveringen. Bovendien, kunt u geen publiek schrappen dat in een ander publiek van verwijzingen wordt voorzien. Als u uw publiek niet kunt verwijderen, zorg dan dat u **niet** het gebruiken in om het even welke downstreamdiensten of als bouwsteen van een ander publiek.
+
+U kunt een publiek in de schrappingsstaat zetten door het snelle actiemenu in de Portaal van de Publiek te openen en te selecteren [!UICONTROL Delete].
+
+### Heeft het gebruik van een publiek als een onderliggend publiek invloed op overgangen in de levenscyclusstatus?
+
+>[!NOTE]
+>
+>Een ouder publiek is een publiek dat **gebruik** een ander publiek als afhankelijkheid van het publiek.
+>
+>Een kindpubliek is een publiek dat **gebruikt als** een afhankelijkheid voor het publiek.
+
+Ja, het gebruik van een publiek als een onderliggend publiek beïnvloedt wel welke levenscyclusstaten het kind en het bovenliggende publiek kunnen doorvoeren.
+
+Als u wilt dat een onderliggend publiek naar de gepubliceerde staat wordt verplaatst, moet u alle bovenliggende doelgroepen instellen **moet** zich in de gepubliceerde staat bevinden. Het bovenliggende publiek kan worden gepubliceerd voordat het onderliggende publiek wordt gepubliceerd of, als de gebruiker dit bevestigt, automatisch worden gepubliceerd wanneer het onderliggende publiek wordt gepubliceerd.
+
+Alle onderliggende doelgroepen worden verplaatst naar de status Niet actief of Verwijderd **moet** worden gedeactiveerd of verwijderd.
+
+### Kan ik verwijzen naar een publiek dat zich in een andere levenscyclusstaat bevindt?
+
+Ja! Als uw publiek zich momenteel in de ontwerpstaat bevindt, kunt u naar publiek in of de gepubliceerde of inactieve staat verwijzen. Als u dit publiek echter wilt publiceren, **moet** publiceert het andere bovenliggende publiek.
+
 ## Overzicht van het publiek
 
-De volgende secties maken een lijst van vragen met betrekking tot publieksinventaris binnen het Portaal van de Publiek.
+De volgende sectie geeft een overzicht van vragen die betrekking hebben op de publieksinventarisatie in het Poort publiek.
 
 ### Heb ik extra toestemmingen nodig om de eigenschappen van de publieksinventaris te gebruiken?
 

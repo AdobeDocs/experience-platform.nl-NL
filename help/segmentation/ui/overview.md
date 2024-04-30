@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: dc899a4aa64b6e734322020e4c10aee687c6d8c5
+source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
 workflow-type: tm+mt
-source-wordcount: '3804'
+source-wordcount: '3896'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,8 @@ Naast elk publiek bevindt zich een ellipspictogram. Als u deze optie selecteert,
 | [!UICONTROL Move to folder] | Auditie, Aangepaste upload, Segmentatieservice | Beheert tot welke map het publiek behoort. Lees voor meer informatie over deze functie de sectie over [filteren en labelen](#manage-audiences). |
 | [!UICONTROL Copy] | Segmenteringsservice | Hiermee dupliceert u het geselecteerde publiek. |
 | [!UICONTROL Apply access labels] | Auditie, Aangepaste upload, Segmentatieservice | Beheert de toegangslabels die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [beheren, labels](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Archive] | Aangepaste upload | Hiermee archiveert u het geselecteerde publiek. |
+| [!UICONTROL Publish] | Aangepaste upload, segmentatieservice | Hiermee publiceert u het geselecteerde publiek. Lees voor meer informatie over het statusbeheer van de levenscyclus de [Levenscyclusstatussectie van de veelgestelde vragen over segmentatie](../faq.md#lifecycle-states). |
+| [!UICONTROL Deactivate] | Aangepaste upload, segmentatieservice | Hiermee deactiveert u het geselecteerde publiek. Lees voor meer informatie over het statusbeheer van de levenscyclus de [Levenscyclusstatussectie van de veelgestelde vragen over segmentatie](../faq.md#lifecycle-states). |
 | [!UICONTROL Delete] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verwijdert u het geselecteerde publiek. |
 | [!UICONTROL Add to package] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verplaatst u het publiek tussen sandboxen. Lees voor meer informatie over deze functie de [gereedschapshandleiding voor sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
@@ -102,9 +103,9 @@ U kunt **[!UICONTROL Update frequency summary]** om een cirkeldiagram te tonen d
 
 ![De knop Frequentieoverzicht bijwerken is gemarkeerd.](../images/ui/overview/browse-audience-update-frequency-summary.png)
 
-Het cirkeldiagram wordt weergegeven met een uitsplitsing van het publiek naar updatefrequentie. In het diagram wordt het totale aantal doelgroepen in het midden weergegeven. Als u de muisaanwijzer boven de verschillende delen van het publiek houdt, wordt het aantal soorten publiek weergegeven dat tot elk type updatefrequentie behoort.
+Het cirkeldiagram wordt weergegeven met een uitsplitsing van het publiek naar updatefrequentie. De grafiek toont het totale aantal publiek in het midden, en de dagelijkse tijd van de partijevaluatie in UTC bij de bodem. Als u de muisaanwijzer boven de verschillende delen van het publiek houdt, wordt het aantal soorten publiek weergegeven dat tot elk type updatefrequentie behoort.
 
-![Het cirkeldiagram met de updatefrequentie wordt weergegeven.](../images/ui/overview/update-frequency-chart.png)
+![Het cirkeldiagram van de updatefrequentie wordt benadrukt, met de de evaluatietijd van de partijsegmentatie ook getoond.](../images/ui/overview/update-frequency-chart.png)
 
 ### Aanpassen {#customize}
 
@@ -115,7 +116,7 @@ U kunt extra velden toevoegen aan de [!UICONTROL Browse] pagina door ![het picto
 | [!UICONTROL Name] | De naam van het publiek. |
 | [!UICONTROL Profile count] | Het totale aantal profielen dat voor het publiek in aanmerking komt. |
 | [!UICONTROL Origin] | De oorsprong van het publiek. Dit geeft aan waar het publiek vandaan komt. Mogelijke waarden zijn Segmentatieservice, Aangepast uploaden, Audience-compositie en Audience Manager. |
-| [!UICONTROL Lifecycle status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft`, `Published`, en `Archived`. |
+| [!UICONTROL Lifecycle status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft`, `Inactive`, `Published`, en `Archived`. Lees voor meer informatie over levenscyclusstatussen, zoals wat de verschillende statussen betekenen en hoe u het publiek naar verschillende levenscyclustoestanden kunt verplaatsen [levenscyclusstatussectie van de veelgestelde vragen over segmentatie](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | Een waarde die aangeeft hoe vaak de gegevens van het publiek worden bijgewerkt. Mogelijke waarden voor dit veld zijn [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], en [!UICONTROL Not Scheduled]. |
 | [!UICONTROL Last updated by] | De naam van de persoon die het publiek het laatst heeft bijgewerkt. |
 | [!UICONTROL Created] | De datum en tijd, in UTC, dat het publiek werd gecreeerd. |
@@ -205,7 +206,7 @@ De lijst met beschikbare filters wordt weergegeven.
 | ------ | ----------- |
 | [!UICONTROL Origin] | Hiermee kunt u filteren op basis van de oorsprong van het publiek. Beschikbare opties zijn onder andere Segmentatieservice, Aangepast uploaden, Audience-compositie en Audience Manager. |
 | [!UICONTROL Has any tag] | Hiermee kunt u filteren op tags. U kunt kiezen tussen **[!UICONTROL Has any tag]** en **[!UICONTROL Has all tags]**. Wanneer **[!UICONTROL Has any tag]** geselecteerd is, omvat het gefilterde publiek **alle** van de tags die u hebt toegevoegd. Wanneer **[!UICONTROL Has all tags]** geselecteerd is, moet het gefilterde publiek **alles** van de tags die u hebt toegevoegd. |
-| [!UICONTROL Lifecycle status] | Hiermee kunt u filteren op basis van de levenscyclusstatus van de doelgroep. Beschikbare opties zijn [!UICONTROL Active], [!UICONTROL Archived], [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive], en [!UICONTROL Published]. |
+| [!UICONTROL Lifecycle status] | Hiermee kunt u filteren op basis van de levenscyclusstatus van de doelgroep. Beschikbare opties zijn [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive], en [!UICONTROL Published]. |
 | [!UICONTROL Update frequency] | Hiermee kunt u filteren op basis van de updatefrequentie van de doelgroep. Beschikbare opties zijn [!UICONTROL Scheduled], [!UICONTROL Continuous], en [!UICONTROL On Demand]. |
 | [!UICONTROL Created by] | Hiermee kunt u filteren op basis van de persoon die het publiek heeft gemaakt. |
 | [!UICONTROL Creation date] | Hiermee kunt u filteren op basis van de aanmaakdatum van het publiek. U kunt een datumbereik kiezen dat u wilt filteren wanneer het publiek is gemaakt. |
@@ -408,7 +409,7 @@ Er wordt een pop-up weergegeven met alle velden die in de tabel kunnen worden we
 | Veld | Beschrijving |
 | ----- | ----------- | 
 | [!UICONTROL Name] | De naam van het publiek. |
-| [!UICONTROL Status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft`, `Published`, en `Archived`. |
+| [!UICONTROL Status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft`, `Inactive`, `Published`, en `Archived`. |
 | [!UICONTROL Created] | De tijd en datum waarop het publiek is gemaakt. |
 | [!UICONTROL Created by] | De naam van de persoon die het publiek heeft gemaakt. |
 | [!UICONTROL Updated] | De tijd en datum waarop het publiek voor het laatst is bijgewerkt. |
