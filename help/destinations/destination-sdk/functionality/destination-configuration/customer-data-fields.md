@@ -2,10 +2,10 @@
 description: Leer hoe u invoervelden maakt in de gebruikersinterface van het Experience Platform waarmee uw gebruikers verschillende informatie kunnen opgeven die relevant is voor het maken van een verbinding en het exporteren van gegevens naar uw bestemming.
 title: Gegevensvelden van de klant
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 1%
+source-wordcount: '1722'
+ht-degree: 0%
 
 ---
 
@@ -53,14 +53,14 @@ Wanneer u uw eigen gegevensvelden voor klanten maakt, kunt u de parameters in de
 
 | Parameter | Type | Vereist/optioneel | Beschrijving |
 |---------|----------|------|---|
-| `name` | Tekenreeks | Vereist | Geef een naam op voor het aangepaste veld dat u introduceert. Deze naam is niet zichtbaar in de interface van het Platform, tenzij `title` veld is leeg of ontbreekt. |
-| `type` | Tekenreeks | Vereist | Hiermee geeft u het type van het aangepaste veld aan dat u wilt gebruiken. Geaccepteerde waarden: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-| `title` | Tekenreeks | Optioneel | Hiermee wordt de naam van het veld aangegeven, zoals deze wordt weergegeven door klanten in de gebruikersinterface van het platform. Als dit veld leeg is of ontbreekt, neemt de gebruikersinterface de veldnaam over van de `name` waarde. |
-| `description` | Tekenreeks | Optioneel | Geef een beschrijving op voor het aangepaste veld. Deze beschrijving is niet zichtbaar in de interface van het Platform. |
+| `name` | String | Vereist | Geef een naam op voor het aangepaste veld dat u introduceert. Deze naam is niet zichtbaar in de interface van het Platform, tenzij `title` veld is leeg of ontbreekt. |
+| `type` | String | Vereist | Hiermee geeft u het type van het aangepaste veld aan dat u wilt gebruiken. Geaccepteerde waarden: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
+| `title` | String | Optioneel | Hiermee wordt de naam van het veld aangegeven, zoals deze wordt weergegeven door klanten in de gebruikersinterface van het platform. Als dit veld leeg is of ontbreekt, neemt de gebruikersinterface de veldnaam over van de `name` waarde. |
+| `description` | String | Optioneel | Geef een beschrijving op voor het aangepaste veld. Deze beschrijving is niet zichtbaar in de interface van het Platform. |
 | `isRequired` | Boolean | Optioneel | Geeft aan of gebruikers een waarde voor dit veld moeten opgeven in de workflow voor de doelconfiguratie. |
-| `pattern` | Tekenreeks | Optioneel | Hiermee wordt, indien nodig, een patroon voor het aangepaste veld afgedwongen. Gebruik reguliere expressies om een patroon af te dwingen. Als uw klant-id&#39;s bijvoorbeeld geen cijfers of onderstrepingstekens bevatten, voert u `^[A-Za-z]+$` op dit gebied. |
-| `enum` | Tekenreeks | Optioneel | Hiermee geeft u het aangepaste veld weer als een vervolgkeuzemenu en geeft u de opties weer die beschikbaar zijn voor de gebruiker. |
-| `default` | Tekenreeks | Optioneel | Hiermee wordt de standaardwaarde van een `enum` lijst. |
+| `pattern` | String | Optioneel | Hiermee wordt, indien nodig, een patroon voor het aangepaste veld afgedwongen. Gebruik reguliere expressies om een patroon af te dwingen. Als uw klant-id&#39;s bijvoorbeeld geen cijfers of onderstrepingstekens bevatten, voert u `^[A-Za-z]+$` op dit gebied. |
+| `enum` | String | Optioneel | Hiermee geeft u het aangepaste veld weer als een vervolgkeuzemenu en geeft u de opties weer die beschikbaar zijn voor de gebruiker. |
+| `default` | String | Optioneel | Hiermee wordt de standaardwaarde van een `enum` lijst. |
 | `hidden` | Boolean | Optioneel | Geeft aan of het gegevensveld van de klant al dan niet in de gebruikersinterface wordt weergegeven. |
 | `unique` | Boolean | Optioneel | Gebruik deze parameter wanneer u een gebied van klantengegevens moet creëren de waarvan waarde over alle bestemmingsdataflows opstelling door de organisatie van een gebruiker uniek moet zijn. Bijvoorbeeld de **[!UICONTROL Integration alias]** in het veld [Aangepaste personalisatie](../../../catalog/personalization/custom-personalization.md) doel moet uniek zijn, wat betekent dat twee afzonderlijke dataflows aan deze bestemming niet de zelfde waarde voor dit gebied kunnen hebben. |
 | `readOnly` | Boolean | Optioneel | Geeft aan of de klant de waarde van het veld kan wijzigen of niet. |
@@ -340,6 +340,56 @@ Als u een dynamische vervolgkeuzekiezer wilt maken, moet u twee componenten conf
 
 Stel de `destinationServerId` parameter aan identiteitskaart van de bestemmingsserver die u bij stap 1 creeerde. U kunt de bestemmingsidentiteitskaart in de reactie van zien [een doelserverconfiguratie ophalen](../../authoring-api/destination-server/retrieve-destination-server.md) API-aanroep.
 
+## Geneste gegevensvelden voor klanten maken {#nested-fields}
+
+U kunt geneste gegevensvelden voor klanten maken voor complexe integratiepatronen. Hierdoor kunt u een reeks selecties voor de klant koppelen.
+
+U kunt bijvoorbeeld geneste gegevensvelden voor klanten toevoegen, zodat klanten een integratietype met uw bestemming moeten selecteren, gevolgd door onmiddellijk een andere selectie. De tweede selectie is een genest veld binnen het integratietype.
+
+Als u een genest veld wilt toevoegen, gebruikt u de opdracht `properties` parameter zoals hieronder getoond. In het onderstaande configuratievoorbeeld ziet u drie afzonderlijke geneste velden in het dialoogvenster **Uw doel - Integratie-specifieke instellingen** gegevensveld van klant.
+
+>[!TIP]
+>
+>Vanaf de release van april 2024 kunt u een `isRequired` parameter op geneste velden. In het onderstaande configuratiefragment worden bijvoorbeeld de eerste twee geneste velden gemarkeerd als verplicht (gemarkeerde regel xxx) en kunnen klanten alleen verdergaan als ze een waarde voor het veld selecteren. Meer informatie over de vereiste velden in het dialoogvenster [ondersteunde parameters](#supported-parameters) sectie.
+
+```json {line-numbers="true" highlight="10,19"}
+    {
+      "name": "yourdestination",
+      "title": "Yourdestination - Integration Specific Settings",
+      "type": "object",
+      "properties": [
+        {
+          "name": "agreement",
+          "title": "Advertiser data destination terms agreement. Enter I AGREE.",
+          "type": "string",
+          "isRequired": true,
+          "pattern": "I AGREE",
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "account-name",
+          "title": "Account name",
+          "type": "string",
+          "isRequired": true,
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "email",
+          "title": "Email address",
+          "type": "string",
+          "isRequired": false,
+          "pattern": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+          "readOnly": false,
+          "hidden": false
+        }
+      ],
+      "isRequired": false,
+      "readOnly": false,
+      "hidden": false,
+```
+
 ## Voorwaardelijke gegevensvelden voor klanten maken {#conditional-options}
 
 U kunt voorwaardelijke gegevensvelden voor klanten maken die alleen in de activeringsworkflow worden weergegeven wanneer gebruikers een bepaalde optie selecteren.
@@ -358,7 +408,7 @@ Als u een veld als voorwaardelijk wilt instellen, gebruikt u de optie `condition
 }
 ```
 
-In een bredere context kunt u de `conditional` veld dat wordt gebruikt in de onderstaande doelconfiguratie, naast de `fileType` en de `csvOptions` object waarin het is gedefinieerd.
+In een bredere context kunt u de `conditional` veld dat wordt gebruikt in de onderstaande doelconfiguratie, naast de `fileType` en de `csvOptions` object waarin het is gedefinieerd. De voorwaardelijke velden worden gedefinieerd in het dialoogvenster `properties` parameter.
 
 ```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[
