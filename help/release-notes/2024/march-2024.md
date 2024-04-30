@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, maart 2024
 description: Aanvullende informatie van maart 2024 voor Adobe Experience Platform.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: d698bf0b8b0dbdb85909008bb3b60efb0575accc
+source-git-commit: 708bb791ad85b6ee8f3671ffc574e4f27fdddd0a
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 3%
@@ -39,20 +39,6 @@ Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens 
 
 Raadpleeg voor meer informatie over Catalog Service de [Overzicht van Catalog Service](../../catalog/home.md).
 
-## Gegevensverzameling {#data-collection}
-
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden, waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe doelen.
-
-**Nieuwe functies**
-
-| Type | Functie | Beschrijving |
-| --- | --- | --- |
-| Extensies | [!DNL Merkury] Tagextensie | De [[!DNL Merkury] tagextensie](https://exchange.adobe.com/apps/ec/600027/merkury-tag) biedt toonaangevende prijzen voor anonieme websitebezoekers aan een [!DNL Merkury] ID. Merken kunnen de kracht van de [!DNL Merkury] tag en Adobe om persoonlijke website-ervaringen in real-time te bieden. Daarnaast worden de [!DNL Merkury] -tag maakt de groei van digitale gegevens van eerste bedrijven mogelijk, samen met gekoppelde online en offline klantprofielen. |
-
-{style="table-layout:auto"}
-
-Voor meer informatie over gegevensverzameling leest u de [overzicht van gegevensverzameling](../../tags/home.md).
-
 ## Gegevensvoorbereiding {#data-prep}
 
 Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience Data Model).
@@ -66,6 +52,20 @@ Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en vali
 {style="table-layout:auto"}
 
 Voor meer informatie over de Prep van Gegevens, lees [Overzicht van Data Prep](../../data-prep/home.md).
+
+## Gegevensverzameling {#data-collection}
+
+Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden, waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe doelen.
+
+**Nieuwe functies**
+
+| Type | Functie | Beschrijving |
+| --- | --- | --- |
+| Extensies | [!DNL Merkury] Tagextensie | De [[!DNL Merkury] tagextensie](https://exchange.adobe.com/apps/ec/600027/merkury-tag) biedt toonaangevende prijzen voor anonieme websitebezoekers aan een [!DNL Merkury] ID. Merken kunnen de kracht van de [!DNL Merkury] tag en Adobe om persoonlijke website-ervaringen in real-time te bieden. Daarnaast worden de [!DNL Merkury] -tag maakt de groei van digitale gegevens van eerste bedrijven mogelijk, samen met gekoppelde online en offline klantprofielen. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over gegevensverzameling leest u de [overzicht van gegevensverzameling](../../tags/home.md).
 
 ## Doelen {#destinations}
 
