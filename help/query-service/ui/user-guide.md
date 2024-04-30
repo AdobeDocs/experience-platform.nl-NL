@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ce937f1335283382189fa40f65aa268735c02715
+source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
 workflow-type: tm+mt
-source-wordcount: '2573'
+source-wordcount: '2700'
 ht-degree: 0%
 
 ---
@@ -88,6 +88,16 @@ Als u meerdere query&#39;s hebt geschreven maar slechts één query moet uitvoer
 [!UICONTROL Run selected query] pictogram. Dit pictogram wordt standaard uitgeschakeld totdat u de querysyntaxis in de editor selecteert.
 
 ![De Query-editor met de [!UICONTROL Run selected query] gemarkeerd.](../images/ui/query-editor/run-selected-query.png)
+
+### Query Editor-sessie annuleren {#cancel-query}
+
+Neem controle van vraaguitvoering en verbeter uw productiviteit door langdurige vragen te annuleren. Deze actie ontruimt de Redacteur van de Vraag tijdens een vraaglooppas. De query wordt op de achtergrond uitgevoerd. Als het een vraag CTAS is zal het nog een outputdataset produceren. Als u de uitvoering in de editor wilt annuleren en een SQL-instructie wilt blijven samenstellen, selecteert u **[!UICONTROL Cancel query]** nadat een query is uitgevoerd.
+
+![De Query-editor met [!UICONTROL Cancel query] gemarkeerd.](../images/ui/query-editor/cancel-query-run.png)
+
+Er wordt een bevestigingsvenster weergegeven. Selecteren **[!UICONTROL Confirm]** om de queryuitvoering te annuleren.
+
+![Het bevestigingsvenster voor de query annuleren met Bevestigen gemarkeerd.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
 
 ### Resultaattelling {#result-count}
 
@@ -219,7 +229,11 @@ Als u een query opslaat in de Query Editor, verschijnt er een bevestigingsberich
 
 De vragen die als malplaatje zijn bewaard kunnen van de Redacteur van de Vraag worden gepland. Het plannen van vragen staat u toe om vraaglooppas op een douanecadence te automatiseren. U kunt vragen plannen die op frequentie, datum, en tijd worden gebaseerd, en ook een outputdataset voor uw resultaten kiezen indien nodig. De programma&#39;s van de vraag kunnen ook door UI worden onbruikbaar gemaakt of worden geschrapt.
 
-Planningen worden ingesteld in de Query-editor. Wanneer het gebruiken van de Redacteur van de Vraag, kunt u een programma aan een vraag slechts toevoegen die reeds is gecreeerd, opgeslagen, en looppas. Dezelfde beperking geldt niet voor [!DNL Query Service] API:
+Planningen worden ingesteld in de Query-editor. Wanneer het gebruiken van de Redacteur van de Vraag, kunt u een programma aan een vraag slechts toevoegen die reeds is gecreeerd, opgeslagen, en looppas. Dezelfde beperking geldt niet voor [!DNL Query Service] API.
+
+>[!NOTE]
+>
+>Geplande vragen die tien opeenvolgende looppas ontbreken worden automatisch gezet in a [!UICONTROL Quarantined] status. Voor een query met deze status is uw interventie vereist voordat verdere uitvoeringen kunnen plaatsvinden. Zie de [quarantines](./monitor-queries.md#quarantined-queries) voor meer informatie.
 
 Zie de documentatie van vraagprogramma&#39;s leren hoe te [vraagprogramma&#39;s in UI creëren](./query-schedules.md). U kunt ook leren hoe u schema&#39;s kunt toevoegen met de API, door de [de geplande gids van het vraageindpunt](../api/scheduled-queries.md).
 
