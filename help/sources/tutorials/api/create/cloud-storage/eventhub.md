@@ -3,9 +3,9 @@ title: Een Azure Event Hubs Source Connection maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met een Azure Event Hubs-account met behulp van de Flow Service API.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1473'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,29 @@ Om [!DNL Flow Service] om verbinding te maken met uw [!DNL Event Hubs] account, 
 | `namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. An [!DNL Event Hubs] namespace verstrekt een unieke bereikcontainer, waarin u één of meerdere kunt creëren [!DNL Event Hubs]. |
 | `eventHubName` | De naam voor uw [!DNL Event Hubs] bron. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De [!DNL Event Hubs] Verbindingsspecificatie-id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+
+Voor meer informatie over verificatie met gedeelde toegang (SAS) voor [!DNL Event Hubs], lees de [[!DNL Azure] handleiding voor het gebruik van SAS](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+
+>[!TAB Event Hub Azure Active Directory Auth]
+
+| Credentials | Beschrijving |
+| --- | --- |
+| `tenantId` | De huurder-id waarvan u toestemming wilt vragen. Uw huurder identiteitskaart kan als GUID of als vriendschappelijke naam worden geformatteerd. **Opmerking**: De huurdersidentiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in [!DNL Microsoft Azure] interface. |
+| `clientId` | De toepassings-id die aan uw app is toegewezen. U kunt deze id ophalen vanuit het dialoogvenster [!DNL Microsoft Entra ID] portal waar u uw [!DNL Azure Active Directory]. |
+| `clientSecretValue` | Het clientgeheim dat naast de client-id wordt gebruikt om uw app te verifiëren. U kunt uw clientgeheim ophalen via het dialoogvenster [!DNL Microsoft Entra ID] portal waar u uw [!DNL Azure Active Directory]. |
+| `namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. An [!DNL Event Hubs] namespace verstrekt een unieke bereikcontainer, waarin u één of meerdere kunt creëren [!DNL Event Hubs]. |
+
+Voor meer informatie over [!DNL Azure Active Directory], lees de [Azure-gids bij het gebruik van Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!TAB De Hub Scoped Azure Active Directory Auth van de gebeurtenis]
+
+| Credentials | Beschrijving |
+| --- | --- |
+| `tenantId` | De huurder-id waarvan u toestemming wilt vragen. Uw huurder identiteitskaart kan als GUID of als vriendschappelijke naam worden geformatteerd. **Opmerking**: De huurdersidentiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in [!DNL Microsoft Azure] interface. |
+| `clientId` | De toepassings-id die aan uw app is toegewezen. U kunt deze id ophalen vanuit het dialoogvenster [!DNL Microsoft Entra ID] portal waar u uw [!DNL Azure Active Directory]. |
+| `clientSecretValue` | Het clientgeheim dat naast de client-id wordt gebruikt om uw app te verifiëren. U kunt uw clientgeheim ophalen via het dialoogvenster [!DNL Microsoft Entra ID] portal waar u uw [!DNL Azure Active Directory]. |
+| `namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. An [!DNL Event Hubs] namespace verstrekt een unieke bereikcontainer, waarin u één of meerdere kunt creëren [!DNL Event Hubs]. |
+| `eventHubName` | De naam voor uw [!DNL Event Hubs] bron. |
 
 >[!ENDTABS]
 
@@ -171,6 +194,120 @@ curl -X POST \
 | `auth.params.sasKey` | De gegenereerde handtekening voor gedeelde toegang. |
 | `auth.params.namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. |
 | `params.eventHubName` | De naam voor uw [!DNL Event Hubs] bron. |
+| `connectionSpec.id` | De [!DNL Event Hubs] Verbindingsspecificatie-id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+
++++
+
++++Response
+
+Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze verbinding-id is vereist in de volgende stap om een bronverbinding te maken.
+
+```json
+{
+    "id": "4cdbb15c-fb1e-46ee-8049-0f55b53378fe",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
++++
+
+>[!TAB Event Hub Azure Active Directory Auth]
+
+Om een rekening tot stand te brengen gebruikend de Auth van de Folder van de Azure Actieve, doe een POST verzoek aan `/connections` eindpunt terwijl het verstrekken van waarden voor uw `tenantId`, `clientId`,`clientSecretValue`, en `namespace`.
+
++++verzoek
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Event Hubs connection",
+      "description": "Connector for Azure Event Hubs",
+      "auth": {
+          "specName": "Event Hub Azure Active Directory Auth",
+          "params": {
+              "tenantId": "{TENANT_ID}",
+              "clientId": "{CLIENT_ID}",
+              "clientSecretValue": "{CLIENT_SECRET_VALUE}",
+              "namespace": "{NAMESPACE}" 
+          }
+      },
+      "connectionSpec": {
+          "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `auth.params.tenantId` | De huurder-id van uw toepassing. **Opmerking**: De huurdersidentiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in [!DNL Microsoft Azure] interface. |
+| `auth.params.clientId` | De client-id van uw organisatie. |
+| `auth.params.clientSecretValue` | De geheime waarde van de cliënt van uw organisatie. |
+| `auth.params.namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. |
+| `connectionSpec.id` | De [!DNL Event Hubs] Verbindingsspecificatie-id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+
++++
+
++++Response
+
+Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze verbinding-id is vereist in de volgende stap om een bronverbinding te maken.
+
+```json
+{
+    "id": "4cdbb15c-fb1e-46ee-8049-0f55b53378fe",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
++++
+
+>[!TAB De Hub Scoped Azure Active Directory Auth van de gebeurtenis]
+
+Om een rekening tot stand te brengen gebruikend de Auth van de Folder van de Azure Actieve, doe een POST verzoek aan `/connections` eindpunt terwijl het verstrekken van waarden voor uw `tenantId`, `clientId`,`clientSecretValue`, `namespace`, en `eventHubName`.
+
++++verzoek
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Event Hubs connection",
+      "description": "Connector for Azure Event Hubs",
+      "auth": {
+          "specName": "Event Hub Scoped Azure Active Directory Auth",
+          "params": {
+              "tenantId": "{TENANT_ID}",
+              "clientId": "{CLIENT_ID}",
+              "clientSecretValue": "{CLIENT_SECRET_VALUE}",
+              "namespace": "{NAMESPACE}",
+              "eventHubName": "{EVENT_HUB_NAME}" 
+          }
+      },
+      "connectionSpec": {
+          "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `auth.params.tenantId` | De huurder-id van uw toepassing. **Opmerking**: De huurdersidentiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in [!DNL Microsoft Azure] interface. |
+| `auth.params.clientId` | De client-id van uw organisatie. |
+| `auth.params.clientSecretValue` | De geheime waarde van de cliënt van uw organisatie. |
+| `auth.params.namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. |
+| `auth.params.eventHubName` | De naam voor uw [!DNL Event Hubs] bron. |
 | `connectionSpec.id` | De [!DNL Event Hubs] Verbindingsspecificatie-id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
