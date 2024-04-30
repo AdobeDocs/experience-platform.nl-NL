@@ -2,9 +2,9 @@
 title: Regels
 description: Leer hoe tagextensies werken in Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 77190e4acf7aad448bbfdebd8ada4dbe9a55f8e0
 workflow-type: tm+mt
-source-wordcount: '1952'
+source-wordcount: '2007'
 ht-degree: 0%
 
 ---
@@ -35,11 +35,11 @@ U kunt meer gebeurtenistypen toevoegen. De veelvoudige gebeurtenissen worden aan
 
 Gebeurtenissen met alle voorwaarden zijn de *Indien* deel van een regel.
 
-Als een opgegeven gebeurtenis plaatsvindt, worden de voorwaarden geëvalueerd, worden de opgegeven handelingen zo nodig uitgevoerd.
+Als een opgegeven gebeurtenis plaatsvindt, worden de voorwaarden geëvalueerd en vinden de opgegeven handelingen plaats, indien nodig.
 
 * **Gebeurtenissen**: Geef een of meer gebeurtenissen op die moeten plaatsvinden om de regel te activeren. Bij meerdere gebeurtenissen hoort een OR. Om het even welke gespecificeerde gebeurtenissen zullen de regel teweegbrengen.
 
-* **Voorwaarden**: Verfijn de gebeurtenis door om het even welke voorwaarden te vormen die voor een gebeurtenis waar moeten zijn om de regel teweeg te brengen. Een uitzondering wordt gedefinieerd als een NOT-voorwaarde. De veelvoudige voorwaarden worden aangesloten bij door EN.
+* **Voorwaarden**: Versmal de gebeurtenis door om het even welke voorwaarden te vormen die voor een gebeurtenis waar moeten zijn om de regel teweeg te brengen. Een uitzondering wordt gedefinieerd als een NOT-voorwaarde. De veelvoudige voorwaarden worden aangesloten bij door EN.
 
 Welke gebeurtenissen beschikbaar zijn, is afhankelijk van de extensies die zijn geïnstalleerd. Voor informatie over de gebeurtenissen in de extensie Core raadpleegt u [Gebeurtenistypen van de kernextensie](../../extensions/client/core/overview.md#core-extension-event-types).
 
@@ -51,21 +51,25 @@ Acties zijn *Vervolgens* deel van een regel. Zij bepalen wat u wilt gebeuren wan
 
 Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een voorwaarde wordt voldaan.
 
+>[!TIP]
+>
+>U kunt aanvullende bronnen weergeven die beschikbaar zijn voor meer informatie over deze functie door ![info](../../images/ui/event-forwarding/overview/about.png) in het rechterdeelvenster.
+
 1. Open de [!UICONTROL Rules] tab, dan selecteren **[!UICONTROL Create New Rule]**.
 
-   ![](../../images/launch-rule-builder.jpg)
+   ![Het tabblad Regels markeert het naamveld.](../../images/launch-rule-builder.png)
 
 1. Geef de regel een naam.
 1. Gebeurtenissen selecteren **[!UICONTROL Add]** pictogram.
-1. Kies uw extensie en een van de gebeurtenistypen die beschikbaar zijn voor die extensie en configureer vervolgens de instellingen voor de gebeurtenis.
+1. Selecteer uw extensie en een van de gebeurtenistypen die beschikbaar zijn voor die extensie en configureer vervolgens de instellingen voor de gebeurtenis.
 
-   ![](../../images/rule-event-config.png)
+   ![De pagina van de de gebeurtenisconfiguratie van regels.](../../images/rule-event-config.png)
 
    Welke gebeurtenistypen beschikbaar zijn, is afhankelijk van de extensie die u hebt geselecteerd. Gebeurtenisinstellingen verschillen afhankelijk van het gebeurtenistype. Sommige gebeurtenissen hebben geen instellingen die moeten worden geconfigureerd.
 
    >[!IMPORTANT]
    >
-   >In een client-side regel worden gegevenselementen samengevoegd met een `%` aan het begin en einde van de naam van het gegevenselement. Bijvoorbeeld, `%viewportHeight%`. In een gebeurtenis-door:sturen regel, worden de gegevenselementen samengevoegd met `{{` aan het begin en `}}` aan het einde van de naam van het gegevenselement. Bijvoorbeeld, `{{viewportHeight}}`.
+   >In een client-side regel worden gegevenselementen samengevoegd met een `%` aan het begin en einde van de naam van het gegevenselement. Bijvoorbeeld: `%viewportHeight%`. In een gebeurtenis-door:sturen regel, worden de gegevenselementen samengevoegd met `{{` aan het begin en `}}` aan het einde van de naam van het gegevenselement. Bijvoorbeeld: `{{viewportHeight}}`.
 
    Als u wilt verwijzen naar gegevens van het Edge-netwerk, moet het pad naar het gegevenselement `arc.event._<element>_`.
 
@@ -77,7 +81,7 @@ Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een 
    >
    >Als dit pad onjuist is opgegeven, worden geen gegevens verzameld.
 
-1. Stel de parameter Volgorde in en selecteer vervolgens **[!UICONTROL Keep Changes]**.
+1. Stel de parameter Order in en selecteer vervolgens **[!UICONTROL Keep Changes]**.
 
    De standaardvolgorde voor alle regelcomponenten is 50. Als u wilt dat er een sneller verloop is, geef dan een getal van minder dan 50.
 
@@ -85,35 +89,35 @@ Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een 
    * Regels die dezelfde volgorde hebben, worden in geen enkele volgorde uitgevoerd.
    * Regels worden op volgorde afgegaan, maar hoeven niet noodzakelijkerwijs in dezelfde volgorde af te lopen. Als Regel A en Regel B een gebeurtenis delen, en u orde toewijst zodat Regel A eerst komt, dan als Regel A iets asynchroon doet, is er geen garantie dat Regel A eindigt alvorens Regel B begint.
 
-      Als u het later wilt uitvoeren, geef het een aantal hoger dan 50. Voor meer informatie over het opdracht geven tot, zie [Regelvolgorde](rules.md#rule-ordering).
+     Als u het later wilt uitvoeren, geef het een aantal hoger dan 50. Zie voor meer informatie over bestellen [Regelvolgorde](rules.md#rule-ordering).
 
-1. Selecteer de voorwaarden **[!UICONTROL Add]** en kiest u vervolgens een logicatype, extensie, type voorwaarde en configureert u de instellingen voor uw voorwaarde. Selecteer vervolgens **[!UICONTROL Keep Changes]**.
+1. Selecteer de voorwaarden **[!UICONTROL Add]** en selecteert u vervolgens een logicatype, extensie, type voorwaarde en configureert u de instellingen voor uw voorwaarde. Selecteer vervolgens **[!UICONTROL Keep Changes]**.
 
-   ![](../../images/condition-settings.png)
+   ![Configuratie-pagina voor regelvoorwaarden.](../../images/condition-settings.png)
 
-   De beschikbare voorwaardetypen hangen van de uitbreiding af u hebt geselecteerd. Voorwaarde-instellingen verschillen afhankelijk van het type voorwaarde.
+   De beschikbare voorwaardetypen hangen van de uitbreiding af u hebt geselecteerd. Voorwaarde-instellingen verschillen op basis van het type voorwaarde.
 
    Type logica:
 
    * Met het gewone logische type kunnen handelingen worden uitgevoerd als aan de voorwaarde is voldaan
    * Het type van de logica van de uitzondering verhindert acties worden uitgevoerd als aan de voorwaarde wordt voldaan
 
-   (Geavanceerd) Time-out: Deze optie is beschikbaar wanneer het rangschikken van de regelcomponent op uw bezit wordt toegelaten. Dit kenmerk definieert de maximale hoeveelheid tijd die de voorwaarde mag uitvoeren. Als de onderbreking wordt bereikt, ontbreekt de voorwaarde en de rest voorwaarden en de acties van de regel zullen uit de verwerkingsrij worden verwijderd. De standaardwaarde is 2000 ms.
+   (Geavanceerd) Onderbreking: deze optie is beschikbaar wanneer de regelcomponent het rangschikken op uw bezit wordt toegelaten. Dit kenmerk definieert de maximale hoeveelheid tijd die de voorwaarde mag uitvoeren. Als de onderbreking wordt bereikt, ontbreekt de voorwaarde en de rest voorwaarden en de acties van de regel zullen uit de verwerkingsrij worden verwijderd. De standaardwaarde is 2000 ms.
 
    U kunt zoveel voorwaarden toevoegen als u wilt. De veelvoudige voorwaarden binnen de zelfde regel worden aangesloten bij EN.
 
-1. Handelingen selecteren **[!UICONTROL Add]** het pictogram, dan kies uw uitbreiding en één van de actietypes beschikbaar voor die uitbreiding, vorm de montages voor de actie, dan selecteren **[!UICONTROL Keep Changes]**.
+1. Handelingen selecteren **[!UICONTROL Add]** en selecteert u vervolgens uw extensie en een van de actietypen die beschikbaar zijn voor die extensie, configureert u de instellingen voor de actie en selecteert u **[!UICONTROL Keep Changes]**.
 
-   ![](../../images/action-settings.png)
+   ![Configuratie-pagina voor handelingen van regels.](../../images/action-settings.png)
 
    Welke handelingstypen beschikbaar zijn, is afhankelijk van de extensie die u hebt geselecteerd. De instellingen voor handelingen verschillen afhankelijk van het type handeling.
 
-   (Geavanceerd) Wacht tot volgende handeling wordt uitgevoerd: Deze optie is beschikbaar wanneer het rangschikken van de regelcomponent op uw bezit wordt toegelaten. Als deze optie is ingeschakeld, worden de volgende handelingen pas door de labels aangeroepen wanneer deze zijn voltooid. Als deze optie is uitgeschakeld, wordt de volgende actie direct uitgevoerd. De standaardwaarde is **[!UICONTROL Checked]**.
+   (Geavanceerd) Wacht om volgende actie in werking te stellen: Deze optie is beschikbaar wanneer de regelcomponent het rangschikken op uw bezit wordt toegelaten. Als deze optie is ingeschakeld, worden de volgende handelingen pas door de labels aangeroepen wanneer deze zijn voltooid. Als deze optie is uitgeschakeld, wordt de volgende actie direct uitgevoerd. De standaardwaarde is **[!UICONTROL Checked]**.
 
-   (Geavanceerd) Time-out: Deze optie is beschikbaar wanneer het rangschikken van de regelcomponent op uw bezit wordt toegelaten. Hiermee wordt de maximale hoeveelheid tijd gedefinieerd die de handeling mag voltooien. Als de onderbreking wordt bereikt, ontbreekt de actie en om het even welke verdere acties voor deze regel zullen worden verwijderd uit de verwerkingsrij. De standaardwaarde is 2000 ms.
+   (Geavanceerd) Onderbreking: deze optie is beschikbaar wanneer de regelcomponent het rangschikken op uw bezit wordt toegelaten. Hiermee wordt de maximale hoeveelheid tijd gedefinieerd die de handeling mag voltooien. Als de onderbreking wordt bereikt, ontbreekt de actie en om het even welke verdere acties voor deze regel zullen worden verwijderd uit de verwerkingsrij. De standaardwaarde is 2000 ms.
 
 
-1. Controleer uw regel en selecteer **[!UICONTROL Save Rule]**.
+1. Controleer uw regel en selecteer vervolgens **[!UICONTROL Save Rule]**.
 
    Later, wanneer u [publish](../publishing/overview.md), zult u deze regel aan een bibliotheek toevoegen en het opstellen.
 
@@ -130,7 +134,7 @@ Overweeg een reeks van vijf regels die allen een gebeurtenis delen en allen stan
 
 >[!NOTE]
 >
->Uiteindelijk ligt de verantwoordelijkheid voor het uitvoeren van handelingen in volgorde bij de extensieontwikkelaar van het gebeurtenistype dat u gebruikt. Adobe-extensieontwikkelaars zorgen ervoor dat hun extensies werken zoals u wilt. Adobe biedt ontwikkelaars van extensies van derden aanwijzingen om dit naar behoren te doen, maar kan niet garanderen hoe deze richtlijnen worden gevolgd.
+>Uiteindelijk ligt de verantwoordelijkheid voor het uitvoeren van handelingen in volgorde bij de extensieontwikkelaar van het gebeurtenistype dat u gebruikt. Ontwikkelaars van extensies voor Adoben zorgen ervoor dat hun extensies werken zoals bedoeld. Adobe biedt ontwikkelaars van extensies van derden aanwijzingen om dit naar behoren te doen, maar kan niet garanderen hoe deze richtsnoeren worden gevolgd.
 
 Het wordt ten zeerste aanbevolen om uw regels te bestellen met positieve getallen tussen 1 en 100 (de standaardwaarde is 50). Aangezien de regelorde manueel moet worden gehandhaafd, is het beste praktijken om uw het bestel zo eenvoudig mogelijk te houden. Als er randgevallen zijn waarin deze beperking te beperkt is, ondersteunen de labels volgordenummers +/- 2,147,483,648.
 
@@ -156,7 +160,7 @@ Deze gebeurtenissen moeten bijna altijd worden uitgevoerd (tenzij de omstandighe
 
 ### Regels met andere gebeurtenissen
 
-Adobe kan niet garanderen dat andere regels daadwerkelijk in werking zullen treden en dat hun actiecode nodig zal zijn. Daarom worden de acties voor alle gebeurtenistypen die hierboven niet worden vermeld, niet in de hoofdbibliotheek verpakt. In plaats daarvan worden ze opgeslagen als subbronnen en wordt zo nodig verwezen door de hoofdbibliotheek.
+Adobe kan niet garanderen dat er daadwerkelijk andere regels in werking zullen treden en dat hun actiecode nodig zal zijn. Daarom worden de acties voor alle gebeurtenistypen die hierboven niet worden vermeld, niet in de hoofdbibliotheek verpakt. In plaats daarvan worden ze opgeslagen als subbronnen en wordt zo nodig verwezen door de hoofdbibliotheek.
 
 * **JavaScript:** Het JavaScript wordt vanaf de server als normale tekst geladen, in een scripttag opgenomen en met Postscript aan het document toegevoegd. Als de regel meerdere aangepaste JavaScript-scripts heeft, worden deze parallel van de server geladen, maar in dezelfde volgorde uitgevoerd als in de regel.
 * **HTML:** De HTML wordt vanaf de server geladen en met Postscript aan het document toegevoegd. Als de regel veelvoudige manuscripten van douaneHTML heeft, worden zij geladen parallel van de server, maar in de zelfde orde uitgevoerd die in de regel werd gevormd.

@@ -2,9 +2,9 @@
 title: Overzicht van tags
 description: Tags in Adobe Experience Platform zijn de volgende generatie mogelijkheden voor tagbeheer van Adobe. Met labels kunnen klanten eenvoudig alle analytische, marketing- en advertentietags implementeren en beheren die nodig zijn om relevante klantervaringen te stimuleren.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '588'
 ht-degree: 1%
 
 ---
@@ -28,6 +28,10 @@ Tags worden aangeboden aan [!DNL Adobe Experience Cloud] klanten als een opgenom
 * Dringende ervaringen door de integratie van gegevens en marketing technologie die regel bouwt.
 
 ## Belangrijkste kenmerken {#key-features}
+
+Gebruik de Help in het product in het rechterdeelvenster voor meer informatie over tags en om aanvullende beschikbare bronnen weer te geven.
+
+![Hiermee worden eigenschappen in de gebruikersinterface voor gegevensverzameling gecodeerd.](./images/ui/tags-overview/tags-properties.png)
 
 ### Extensies {#extensions}
 

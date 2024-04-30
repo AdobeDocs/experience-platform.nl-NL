@@ -2,9 +2,9 @@
 title: Extensies
 description: Leer hoe tagextensies werken in Adobe Experience Platform.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -43,26 +43,30 @@ De pagina Extensies biedt drie weergaven:
 
 * Geïnstalleerd
 
-   Hiermee worden alle geïnstalleerde extensies weergegeven.
+  Hiermee worden alle geïnstalleerde extensies weergegeven.
 
 * Catalogus
 * Alle beschikbare extensies weergeven
 * Updates
 
-   Hiermee geeft u updates voor geïnstalleerde extensies weer.
+  Hiermee geeft u updates voor geïnstalleerde extensies weer.
 
 Selecteren **[!UICONTROL Extensions]** om alle geïnstalleerde extensies weer te geven. U kunt de catalogus ook gebruiken om een lijst weer te geven met alle beschikbare extensies en extensies waarvoor updates beschikbaar zijn.
 
-Zie [Verwijzing extensies](../../../extensions/client/overview.md) voor meer informatie over de extensies die eigendom zijn van Adobe.
+Zie [Verwijzing extensies](../../../extensions/client/overview.md) voor meer informatie over de uitbreidingen die eigendom zijn van de Adobe.
 
 ## Een nieuwe extensie toevoegen {#add-a-new-extension}
 
 Tags zijn zeer uitbreidbaar. Extensies voegen kernfunctionaliteit toe aan tags. Extensies worden veel gebruikt om integraties met andere toepassingen te maken.
 
+>[!TIP]
+>
+>Gebruik de Help bij het product In in het rechterdeelvenster voor meer informatie over extensies en voor meer informatie over beschikbare bronnen.
+
 1. Open vanuit de overzichtspagina van een eigenschap de **[!UICONTROL Extensions]** tab.
 1. Selecteer een extensie.
 
-   ![Core Extension](../../../images/extensions.png)
+   ![Tabblad Catalogus met de belangrijkste extensies op het tabblad Extensies.](../../../images/extensions.png)
 
    * Als de extensie bestaat, selecteert u deze in de extensiecatalogus.
    * Plaats de muis boven een extensie in de lijst om deze te configureren of uit te schakelen.
@@ -76,7 +80,7 @@ Tags zijn zeer uitbreidbaar. Extensies voegen kernfunctionaliteit toe aan tags. 
 
    Deze gebreken zijn de basis voor de douaneregels u zult bouwen om uw uitbreiding tot stand te brengen.
 
-Wanneer u elementen maakt of bewerkt, kunt u deze opslaan en samenstellen op uw [actieve bibliotheek](../../publishing/libraries.md#active-library). Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven. U kunt ook een nieuwe bibliotheek maken via het keuzemenu Actieve bibliotheek.
+Wanneer u elementen maakt of bewerkt, kunt u deze opslaan en samenstellen [actieve bibliotheek](../../publishing/libraries.md#active-library). Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven. U kunt ook een nieuwe bibliotheek maken via het keuzemenu Actieve bibliotheek.
 
 ## Een extensie configureren
 
@@ -86,4 +90,4 @@ Plaats de muis boven een geïnstalleerde extensie en selecteer **[!UICONTROL Con
 >
 >Sommige extensies vereisen geen configuratie en bieden geen configuratieopties.
 
-Elke configureerbare extensie heeft unieke opties. Zie [Verwijzing extensies](../../../extensions/client/overview.md) voor informatie over de opties beschikbaar voor elke extensie Adobe.
+Elke configureerbare extensie heeft unieke opties. Zie [Verwijzing extensies](../../../extensions/client/overview.md) voor informatie over de opties beschikbaar voor elke Adobe uitbreiding.
