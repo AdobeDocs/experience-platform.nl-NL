@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;Data Landing Zone;data landingszone
 title: Gegevenslandingszone verbinden met platform via de gebruikersinterface
 description: Leer hoe te om een van de Bron van de Gebied van Gegevens te creëren die de gebruikersinterface van het Platform gebruiken.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 9372e6f961015c989bfcb0d1e2b0129da965c522
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '710'
 ht-degree: 0%
 
 ---

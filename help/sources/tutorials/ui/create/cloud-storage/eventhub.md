@@ -3,9 +3,9 @@ title: Creeer een Azure van de BronVerbinding van de Gebeurtenis Hubs in UI
 description: Leer hoe u een Azure Event Hubs-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1015'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >De [!DNL Azure Event Hubs] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
-Deze zelfstudie bevat stappen om een [!DNL Azure Event Hubs] -account die de gebruikersinterface van Adobe Experience Platform gebruikt.
+Lees deze zelfstudie om te leren hoe u een [!DNL Azure Event Hubs] -account die de gebruikersinterface van Adobe Experience Platform gebruikt.
 
 ## Aan de slag
 
