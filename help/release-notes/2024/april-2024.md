@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform Release Notes April 2024
 description: In de release van april 2024 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: 6ad7d55ca0a544879db9738c0a4ab914fdc363bd
+exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
+source-git-commit: 4ec4335d19695e8d6e26390358356dedd048594e
 workflow-type: tm+mt
-source-wordcount: '1728'
-ht-degree: 3%
+source-wordcount: '1851'
+ht-degree: 2%
 
 ---
 
@@ -73,12 +74,12 @@ Voor meer informatie over gegevensverzamelingen leest u de [overzicht van gegeve
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
 | `isRequired` parameter nu beschikbaar voor geneste gegevensvelden van klanten in Destination SDK | Wanneer het vormen van een bestemming in Destination SDK, kunt u nu [geneste gegevensvelden voor klanten instellen als dat vereist is](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). Op deze manier kunnen gebruikers die uw bestemming instellen, pas verdergaan met hun activeringsstroom als ze een waarde voor dat veld selecteren. |
+| De segmentatie van de rand is niet meer verplicht wanneer het opzetten van een bestemming van Adobe Target met Web SDK | Eerder bij het configureren van een [Adobe Target-bestemming](/help/destinations/catalog/personalization/adobe-target-connection.md) met Web SDK, moest de gegevensstroom voor verpersoonlijking en randsegmentatie worden toegelaten. De eis dat de gegevensstroom voor randsegmentatie wordt toegelaten [is nu verwijderd](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Met dit integratiepatroon kunt u alleen profiteren van een subset van gevallen waarin u gebruikmaakt van personalisatie wanneer u Adobe Target met Real-Time CDP gebruikt. Meer informatie over de [gebruik gevallen die door integratietype worden toegelaten](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters). |
+| [!BADGE Beta]{type=Informative} Meerdere soorten publiek en gegevenssets verwijderen uit activeringsstromen | U kunt nu meerdere soorten publiek en gegevenssets selecteren en verwijderen uit doelactiveringsstromen. Zie de [bestemmingsdetails](../../destinations/ui/destination-details-page.md#bulk-remove) en [gegevensset exporteren](../../destinations/ui/export-datasets.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
 Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
-
-<!--| [!BADGE Beta]{type=Informative} Remove multiple audiences and datasets from activation flows | You can now select and remove multiple audiences and datasets from destination activation flows. See the [destination details](../../destinations/ui/destination-details-page.md#bulk-remove) and [dataset export](../../destinations/ui/export-datasets.md) documentation for more details. |-->
 
 ## Identiteitsservice {#identity-service}
 

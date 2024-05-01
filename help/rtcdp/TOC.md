@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
 user-guide-description: Breng bekende en anonieme gegevens van meerdere bronnen van bedrijven bij elkaar om klantprofielen te maken, doelgroepsegmenten van die profielen te maken, en die segmenten voor externe doelen te activeren.
 role: Admin
-source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
+source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 13%
@@ -82,7 +82,7 @@ ht-degree: 13%
       * [Offsite herbestemming van niet-geverifieerde gebruikers](./partner-data/offsite-retargeting.md)
    * Profielverrijking {#profile-enrichment}
       * [Voeg eerste-partijprofielen met partner-verstrekte attributen toe](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-   * Personalisatie, inzichten en betrokkenheid {#personalization-insights-engagement}
+   * Persoonlijke inzichten en betrokkenheid {#personalization-insights-engagement}
       * [Neem op intelligente wijze uw klanten opnieuw aan](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Neem op intelligente wijze contact op met uw klanten: Luma-voorbeelden](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Opmerkingen bij de release Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

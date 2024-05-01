@@ -2,7 +2,7 @@
 description: Leer hoe u invoervelden maakt in de gebruikersinterface van het Experience Platform waarmee uw gebruikers verschillende informatie kunnen opgeven die relevant is voor het maken van een verbinding en het exporteren van gegevens naar uw bestemming.
 title: Gegevensvelden van de klant
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
+source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
 workflow-type: tm+mt
 source-wordcount: '1722'
 ht-degree: 0%
@@ -352,7 +352,7 @@ Als u een genest veld wilt toevoegen, gebruikt u de opdracht `properties` parame
 >
 >Vanaf de release van april 2024 kunt u een `isRequired` parameter op geneste velden. In het onderstaande configuratiefragment worden bijvoorbeeld de eerste twee geneste velden gemarkeerd als verplicht (gemarkeerde regel xxx) en kunnen klanten alleen verdergaan als ze een waarde voor het veld selecteren. Meer informatie over de vereiste velden in het dialoogvenster [ondersteunde parameters](#supported-parameters) sectie.
 
-```json {line-numbers="true" highlight="10,19"}
+```json {line-numbers="true" highlight="11,20"}
     {
       "name": "yourdestination",
       "title": "Yourdestination - Integration Specific Settings",
