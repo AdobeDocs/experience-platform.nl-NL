@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Release Notes April 2024
 description: In de release van april 2024 staat een opmerking voor Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 4ec4335d19695e8d6e26390358356dedd048594e
+source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
 workflow-type: tm+mt
-source-wordcount: '1851'
+source-wordcount: '1843'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
-| Inzichten | [!DNL Acxiom] Anoniem bezoekersvenster | Ontdek waar uw websitebezoekers vandaan komen [!DNL Acxiom's] Bezoekersinzichten. Door geo IP raadplegingstechnologie te gebruiken, wijzen wij de plaats van anonieme browsers aan. Zodra geïdentificeerd, geeft een snel onderzoek in onze georganiseerde gegevensbestand extra inzichten die naar browser worden teruggestuurd. Voor makers van inhoud betekent dit een gouden kans om hun inhoud af te stemmen op deze datapunten en bezoekers een meer persoonlijke en boeiende ervaring te bieden, ook al begonnen ze als vreemden. |
+| Extensies | [!DNL Acxiom Anonymous Visitor Insights] Extensie tags | Ontdek waar uw websitebezoekers vandaan komen [!DNL Acxiom's Visitor Insights]. Door geoIP raadplegingstechnologie te gebruiken, kan Acxiom de plaats van anonieme browsers identificeren. Zodra geïdentificeerd, geeft een onderzoek in hun georganiseerd gegevensbestand extra inzichten die naar browser worden teruggestuurd. De makers van inhoud kunnen zo hun inhoud aanpassen aan deze gegevenspunten en bezoekers een meer persoonlijke en boeiende ervaring bieden, zelfs als ze als vreemden zijn gestart. |
 | Gegevensstromen | [detectie van Edge Network bot](../../datastreams/bot-detection.md) | Verkeer afkomstig van niet-menselijke entiteiten, zoals geautomatiseerde programma&#39;s, webschrapers, spinnen, scanners met scripts, kan het moeilijker maken om gebeurtenissen die plaatsvinden bij bezoekers van het menselijk publiek te identificeren. Dit type van verkeer kan belangrijke bedrijfsmetriek negatief beïnvloeden, die tot onjuist verkeer leiden meldend. <br>Met beide detectie kunt u gebeurtenissen identificeren die door de [Web SDK](../../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) en [[!DNL Server API]](../../server-api/overview.md) als gegenereerd door bekende spinnen en bots. Door beide detectie voor uw gegevensstromen te configureren, kunt u specifieke IP-adressen, IP-bereiken en aanvraagheaders identificeren die u als beide gebeurtenissen wilt classificeren. <br> De identificatie van beide verkeer kan u een nauwkeurigere meting van gebruikersactiviteit op uw plaats of mobiele toepassing verstrekken. |
 | Mobiele SDK | Primaire release | Nieuwe grote versies van de Mobile SDK zijn uitgebracht voor de volgende platforms: iOS Mobile Core 5.x en compatibele iOS-extensies, Android Mobile Core 3.x en compatibele Android-extensies, React Native Core 6.x en compatibele React Native-extensies, Flutter Core 4.x en compatibele Flutter-extensies. Deze release biedt verschillende nieuwe functies en verbeteringen, waaronder ondersteuning in de Android SDK voor Jetpack Compose, ondersteuning voor op Adobe Journey Optimizer gebaseerde ervaringen en algemene beschikbaarheid van de Adobe Journey Optimizer Messaging-extensie voor Flutter. Zie voor meer gedetailleerde opmerkingen bij de release [Opmerkingen bij de release van Mobile SDK](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | Mobiele SDK | Privacy | Vanwege de beleidsupdate van Apple, die op 1 mei 2024 begint, moeten ontwikkelaars nieuwe privacyfuncties implementeren om zich bij de App Store in te dienen. Alle klanten van de Adobe die de Mobile SDK gebruiken, moeten een upgrade uitvoeren naar versie 5.x van de SDK als ze na 1 mei App Store-goedkeuring willen ontvangen. |
