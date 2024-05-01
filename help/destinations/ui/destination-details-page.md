@@ -3,9 +3,9 @@ keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
 description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, publiek in kaart gebracht aan de bestemming, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
+source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1101'
 ht-degree: 0%
 
 ---
@@ -115,11 +115,15 @@ De [!UICONTROL Activation data] wordt een lijst weergegeven van soorten publiek 
 
 ![Streaming doel van gegevensweergave activeren](../assets/ui/details-page/activation-data-streaming.png)
 
-<!-- ### Remove multiple audiences from activation flows {#bulk-remove}
+### [!BADGE Beta]{type=Informative} Meerdere soorten publiek verwijderen uit activeringsstromen {#bulk-remove}
 
-To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
+>[!NOTE]
+>
+Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen.
 
-![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png) -->
+Als u meerdere soorten publiek wilt verwijderen uit bestaande activeringsstromen, selecteert u het gewenste publiek en selecteert u vervolgens **[!UICONTROL Remove audiences]**.
+
+![Scherm met activeringsgegevens dat de optie Soorten publiek verwijderen markeert.](../assets/ui/details-page/bulk-remove-audiences.png)
 
 ### [!BADGE Beta]{type=Informative} Meerdere bestanden op aanvraag exporteren naar batchbestemmingen {#bulk-export}
 
