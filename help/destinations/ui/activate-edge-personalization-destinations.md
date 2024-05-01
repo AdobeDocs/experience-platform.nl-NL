@@ -3,9 +3,9 @@ title: Het publiek activeren voor verpersoonlijkingsdoelen van randen
 description: Leer hoe u het publiek activeert van Adobe Experience Platform naar Edge-verpersoonlijkingsbestemmingen voor gebruiksgevallen van verpersoonlijking op dezelfde pagina en op de volgende pagina.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: c113d9615a276af67714f38b8325e69737b23964
 workflow-type: tm+mt
-source-wordcount: '1843'
+source-wordcount: '1878'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Bekijk de onderstaande video voor een kort overzicht van hoe u doelgroepen en pr
 
 ## Gebruiksscenario’s {#use-cases}
 
-De oplossingen van de verpersoonlijking van de Adobe, zoals Adobe Target, of uw eigen platforms van de verpersoonlijkingspartner van het gebruik (bijvoorbeeld [!DNL Optimizely], [!DNL Pega]), en bedrijfseigen systemen (bijvoorbeeld in-house CMS) om een diepere klanterlokalisatie via de [Aangepaste personalisatie](../catalog/personalization/custom-personalization.md) bestemming. Dit alles terwijl het ook leveraging van de gegevensinzameling van het Netwerk van de Rand van het Experience Platform &amp; segmenteringsmogelijkheden.
+De oplossingen van de verpersoonlijking van de Adobe, zoals Adobe Target, of uw eigen platforms van de verpersoonlijkingspartner van het gebruik (bijvoorbeeld [!DNL Optimizely], [!DNL Pega]), en bedrijfseigen systemen (bijvoorbeeld in-house CMS) om een diepere klanterlokalisatie via de [Aangepaste personalisatie](../catalog/personalization/custom-personalization.md) bestemming. Dit alles terwijl ook de gegevensverzameling en segmenteringsmogelijkheden van de Edge Network van het Experience Platform worden gebruikt.
 
 De hieronder beschreven gebruiksgevallen omvatten zowel personalisatie van de site als gerichte on-site reclame.
 
@@ -78,6 +78,10 @@ Een huisverhuurbedrijf en verkoopbedrijf willen hun homepage met een banner pers
 De eerste stap in vestiging moet uw verpersoonlijkingsbestemming een gegevensstroom voor het Web SDK van het Experience Platform vormen. Dit wordt gedaan in de Inzameling UI van Gegevens.
 
 Bij het configureren van de gegevensstroom, onder **[!UICONTROL Adobe Experience Platform]** ervoor zorgen dat beide **[!UICONTROL Edge Segmentation]** en **[!UICONTROL Personalization Destinations]** zijn geselecteerd.
+
+>[!TIP]
+>
+>Vanaf de release van april 2024 hoeft u het selectievakje Edge Segmentation niet in te schakelen als [configureren van verbinding met Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). In dit geval: [verpersoonlijking volgende sessie](#next-session) is het enige beschikbare geval van het verpersoonlijkingsgebruik.
 
 ![De configuratie van de datastream met de Onderverdeling van de Rand en Gemarkeerde Doelen van de Aanpassing!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
