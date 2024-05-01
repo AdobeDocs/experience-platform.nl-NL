@@ -2,9 +2,9 @@
 title: Kaartvelden definiëren in de gebruikersinterface
 description: Leer hoe u een kaartveld definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: 57a0381401c6084513ce7413b66dec56044b4492
+source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform staat u toe om de structuur van uw klassen van het Model van de Gegevens van de Ervaring (XDM), schema gebiedsgroepen, en gegevenstypes volledig aan te passen.
 
-U kunt kaartgebieden in de Redacteur van het Schema ook bepalen om flexibele en dynamische gegevensstructuren te modelleren of een inzameling van sleutel-waardeparen op te slaan. De structuur van kaartgegevens staat voor efficiënte en snelle raadplegingen toe, voegt, en schrapt waar de informatie wordt georganiseerd en betreden gebaseerd op unieke herkenningstekens op.
+U kunt kaartgebieden in de Redacteur van het Schema ook bepalen om flexibele en dynamische gegevensstructuren te modelleren of een inzameling van sleutel-waardeparen op te slaan.
 
 Wanneer u een nieuw veld in de gebruikersinterface van het platform (UI) definieert, gebruikt u de **[!UICONTROL Type]** vervolgkeuzelijst en selecteer &quot;**[!UICONTROL Map]**&quot; in de lijst.
 
@@ -34,6 +34,8 @@ XDM plaatst de volgende beperkingen op het gebruik van dit gegevenstype:
 * Type kaart MOET van het type zijn `object`.
 * Voor typen toewijzingen MOET GEEN eigenschap zijn gedefinieerd (met andere woorden, ze definiëren &quot;lege&quot; objecten).
 * Kaarttypen MOETEN een `additionalProperties.type` veld dat de waarden beschrijft die binnen de kaart kunnen worden geplaatst, of `string` of `integer`.
+* Segmentatie tussen meerdere entiteiten kan alleen worden gedefinieerd op basis van de kaarttoetsen en niet op basis van de waarden.
+* Kaarten worden niet ondersteund voor accountpubliek.
 
 Zorg ervoor dat u kaart-type gebieden wanneer absoluut noodzakelijk slechts gebruikt, aangezien zij de volgende prestatiesnadelen dragen:
 
