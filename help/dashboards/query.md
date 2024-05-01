@@ -4,9 +4,9 @@ title: Datasets van het dashboard verkennen, verifiëren en verwerken met de Que
 type: Documentation
 description: Leer hoe te om de Dienst van de Vraag te gebruiken om ruwe datasets te onderzoeken en te verwerken die profiel, publiek, en bestemmingsdashboards in Experience Platform aandrijven.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: e808af41b0df7603ce6f44464d1e6e883d3f6208
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ Om het volledige schema van de DIM bestemmingsdataset te begrijpen, kunt u voorp
 
 De eigenschap van de Modellen van Gegevens van Gegevens CDP van Inzichten stelt SQL bloot die de inzichten voor diverse profiel, bestemming en segmentatiewidgets drijft. U kunt deze SQl vraagmalplaatjes aanpassen om CDP- rapporten voor uw marketing en KPI gebruiksgevallen tot stand te brengen.
 
-CDP het melden verstrekt inzichten in uw profielgegevens en zijn verhouding met publiek en bestemmingen. Zie de CDP documentatie van het Gegevensmodel van Inzichten voor gedetailleerde informatie over hoe te [Pas de CDP Modellen van Gegevens van Inzichten op uw specifieke KPI gebruiksgevallen toe](./cdp-insights-data-model.md).
+CDP het melden verstrekt inzichten in uw profielgegevens en zijn verhouding met publiek en bestemmingen. Zie de CDP documentatie van het Gegevensmodel van Inzichten voor gedetailleerde informatie over hoe te [Pas de CDP Modellen van Gegevens van Inzichten op uw specifieke KPI gebruiksgevallen toe](./data-models/cdp-insights-data-model-b2c.md).
 
 ## Voorbeeldquery
 

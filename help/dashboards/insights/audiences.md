@@ -1,9 +1,10 @@
 ---
 title: Soorten kijkers
 description: Ontdek SQL die uw publiek inzicht en gebruik deze vragen aanstuurt om douaneinzichten te produceren om publieksgegevens van Adobe Experience Platform verder te onderzoeken.
-source-git-commit: ee9ef2cf777c72fbd19cfccd80a37ea66591216d
+exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
+source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1118'
 ht-degree: 0%
 
 ---
@@ -14,8 +15,7 @@ De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adob
 
 Begrijp uw publieksinzichten door tot SQL toegang te hebben die hen macht, dan uw eigen inzichten produceert om de identiteiten en de profielen verder te onderzoeken die uw publiek maken. Transformeer uw onbewerkte gegevens in nieuwe inzichten die kunnen worden gebruikt door het bestaande Real-Time CDP-gegevensmodel SQL als inspiratie te gebruiken voor het maken van query&#39;s voor uw unieke bedrijfsbehoeften.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+Zie de [SQL-documentatie weergeven](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct via PLatform UI aan te passen.
 
 U kunt de volgende inzichten allemaal gebruiken als onderdeel van de [Sitepagina](../guides/audiences.md) of een aangepaste [door gebruiker gedefinieerd dashboard](../user-defined-dashboards.md). Zie de [aanpassingsoverzicht](../customize/overview.md) voor instructies over het aanpassen van het dashboard of [nieuwe widgets maken en bewerken](../customize/custom-widgets.md) in de widgetbibliotheek en [door gebruiker gedefinieerd dashboard](../user-defined-dashboards.md#create-widget).
 
@@ -583,7 +583,6 @@ Zie de [Geplande documentatie van de widget voor activeringen](../guides/audienc
 
 Door dit document te lezen, begrijpt u nu de SQL die dashboardinzichten produceert en welke gemeenschappelijke vragen deze analyse oplost. U kunt nu de SQL bewerken en doorlopen om uw eigen inzichten te genereren.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+Zie de [SQL-documentatie weergeven](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct via PLatform UI aan te passen.
 
-U kunt ook de SQL lezen en begrijpen die inzichten voor [Profielen](./profiles.md) en [Doelen](./destinations.md) dashboards.
+U kunt ook de SQL lezen en begrijpen die inzichten voor [Profielen](./profiles.md), [Accountprofielen](./account-profiles.md) en [Doelen](./destinations.md) dashboards.

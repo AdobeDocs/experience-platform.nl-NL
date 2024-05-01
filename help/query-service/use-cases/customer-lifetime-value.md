@@ -2,7 +2,7 @@
 title: Gegevenssignalen bijhouden om de levenswaarde van uw klant te genereren
 description: Deze gids verstrekt een demonstratie van begin tot eind op hoe te om Gegevens Distiller en user-defined dashboards met Real-time Customer Data Platform te gebruiken om de waarde van het klantenleven te meten en te visualiseren.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Vervolgens moet u een aangepast gegevensmodel maken of een bestaand Adobe Real-T
 * Maak dimensietabellen om uw rapporteringsinzichten-model uit te breiden.
 * Vraag uw uitgebreide versnelde opslagrapportering van inzichten gegevensmodel
 
-Raadpleeg de documentatie bij het Real-time Customer Data Platform Insights-gegevensmodel voor meer informatie over [Pas uw SQL vraagmalplaatjes aan om de rapporten van Real-Time CDP voor uw marketing en zeer belangrijke gebruiksgevallen van de prestatiesindicator (KPI) te creëren](../../dashboards/cdp-insights-data-model.md).
+Raadpleeg de documentatie bij het Real-time Customer Data Platform Insights-gegevensmodel voor meer informatie over [Pas uw SQL vraagmalplaatjes aan om de rapporten van Real-Time CDP voor uw marketing en zeer belangrijke gebruiksgevallen van de prestatiesindicator (KPI) te creëren](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 Zorg ervoor om een programma te plaatsen om uw model van douanegegevens op een regelmatige kadentie te verfrissen. Dit zorgt ervoor dat de gegevens terug binnen als deel van uw innamepijplijn zoals nodig komen, en bevolkt uw user-defined dashboards. Zie de [naslaggids](../ui/query-schedules.md#create-schedule) om te leren hoe u uw schema instelt.
 

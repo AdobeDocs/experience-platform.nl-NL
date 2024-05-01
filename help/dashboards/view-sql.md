@@ -1,7 +1,8 @@
 ---
 title: SQL Insight weergeven
 description: Bekijk SQL achter uw Profiel, Publiek, Doel, en aangepaste inzichten en voer de vraag op bestelling door de Redacteur van de Vraag uit.
-source-git-commit: be90cf38970a54431f48799bf506fb0a20ec0166
+exl-id: fd728926-c113-4593-92b1-916a02d09d41
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 0%
@@ -58,4 +59,4 @@ De Query-editor wordt weergegeven. U kunt de instructie nu bewerken en vragen na
 
 ## Volgende stappen
 
-Na het lezen van dit document, begrijpt u nu hoe te om tot SQL voor om het even welk inzicht binnen of de standaard dashboards of een user-defined dashboard toegang te hebben. Als u dit nog niet hebt gedaan, wordt u aangeraden de [Real-time Customer Data Platform Insights-gegevensmodeldocument](./cdp-insights-data-model.md). Dat document bevat inzichten over het aanpassen van SQL malplaatjes voor de rapporten van Real-Time CDP die aan uw marketing en KPI behoeften worden aangepast.
+Na het lezen van dit document, begrijpt u nu hoe te om tot SQL voor om het even welk inzicht binnen of de standaard dashboards of een user-defined dashboard toegang te hebben. Als u dit nog niet hebt gedaan, wordt u aangeraden de [Real-time Customer Data Platform Insights-gegevensmodeldocument](./data-models/cdp-insights-data-model-b2c.md). Dat document bevat inzichten over het aanpassen van SQL malplaatjes voor de rapporten van Real-Time CDP die aan uw marketing en KPI behoeften worden aangepast.

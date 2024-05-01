@@ -2,7 +2,7 @@
 title: Versnelde query's verzenden
 description: Een inleiding aan versnelde vragen API.
 exl-id: c6cd1182-d3a9-457f-81d5-18027e47c3f9
-source-git-commit: fbb627787580c6a4ffd1deb0009105f1ba821b6f
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 0%
@@ -15,5 +15,5 @@ Als onderdeel van de Data Distiller SKU [Query Service-API](https://developer.ad
 
 Zie de [Het versnelde eindpunt van Vragen](../../api/accelerated-queries.md) documentatie voor instructies op hoe te om de versnelde opslag te vragen.
 
-Met de opslag met query-versnelling kunt u een aangepast gegevensmodel maken en/of een bestaand Adobe Real-time Customer Data Platform-gegevensmodel uitbreiden. Als u uw rapportageinzichten wilt gebruiken in of insluiten in een rapportage-/visualisatieframework, raadpleegt u de [de vraag versnelde gids van de opslagrapportering van Inzichten](./reporting-insights-data-model.md). U kunt ook de documentatie van het Real-time Customer Data Platform Insights-gegevensmodel lezen om te leren hoe u [Pas uw SQL vraagmalplaatjes aan om de rapporten van Real-Time CDP voor uw marketing en zeer belangrijke gebruiksgevallen van de prestatiesindicator (KPI) te creëren](../../../dashboards/cdp-insights-data-model.md). U kunt de [attribuut-based toegangsbeheervermogen](../../../access-control/abac/overview.md), om het niveau van de beperkingen op gegevenssets in de versnelde opslag te controleren. Zie de [gegevensbeheer in Query-service](../../data-governance/overview.md#create-field-based-access-restrictions-on-accelerated-datasets)
+Met de opslag met query-versnelling kunt u een aangepast gegevensmodel maken en/of een bestaand Adobe Real-time Customer Data Platform-gegevensmodel uitbreiden. Als u uw rapportageinzichten wilt gebruiken in of insluiten in een rapportage-/visualisatieframework, raadpleegt u de [de vraag versnelde gids van de opslagrapportering van Inzichten](./reporting-insights-data-model.md). U kunt ook de documentatie van het Real-time Customer Data Platform Insights-gegevensmodel lezen om te leren hoe u [Pas uw SQL vraagmalplaatjes aan om de rapporten van Real-Time CDP voor uw marketing en zeer belangrijke gebruiksgevallen van de prestatiesindicator (KPI) te creëren](../../../dashboards/data-models/cdp-insights-data-model-b2c.md). U kunt de [attribuut-based toegangsbeheervermogen](../../../access-control/abac/overview.md), om het niveau van de beperkingen op gegevenssets in de versnelde opslag te controleren. Zie de [gegevensbeheer in Query-service](../../data-governance/overview.md#create-field-based-access-restrictions-on-accelerated-datasets)
 voor meer informatie.

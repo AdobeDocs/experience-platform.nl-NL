@@ -2,7 +2,7 @@
 title: Vraag versnelde handleiding voor het rapporteren van inzichten in winkels
 description: Leer hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards te bouwen.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 De vraag versnelde opslag staat u toe om de tijd en de verwerkingscapaciteit te verminderen die wordt vereist om kritieke inzichten van uw gegevens te bereiken. Doorgaans worden gegevens regelmatig verwerkt (bijvoorbeeld op uurbasis of dagelijks), waar geaggregeerde weergaven worden gemaakt en gerapporteerd. De analyse van deze verslagen, die op basis van geaggregeerde gegevens zijn opgesteld, leidt tot inzichten die tot doel hebben de bedrijfsresultaten te verbeteren. De opslag met query-versnelling biedt een cacheservice, gelijktijdige uitvoering, een interactieve ervaring en een stateless API. Er wordt echter aangenomen dat de gegevens vooraf worden verwerkt en geoptimaliseerd voor geaggregeerd opvragen en niet voor onbewerkte opvragen van gegevens.
 
-Met de opslag met query-versnelling kunt u een aangepast gegevensmodel maken en/of een bestaand Adobe Real-time Customer Data Platform-gegevensmodel uitbreiden. Vervolgens kunt u naar keuze uw rapportinzichten gebruiken of insluiten in een rapportage-/visualisatieframework van uw keuze. Raadpleeg de documentatie bij het Real-time Customer Data Platform Insights-gegevensmodel voor meer informatie over [Pas uw SQL vraagmalplaatjes aan om de rapporten van Real-Time CDP voor uw marketing en zeer belangrijke gebruiksgevallen van de prestatiesindicator (KPI) te creëren](../../../dashboards/cdp-insights-data-model.md).
+Met de opslag met query-versnelling kunt u een aangepast gegevensmodel maken en/of een bestaand Adobe Real-time Customer Data Platform-gegevensmodel uitbreiden. Vervolgens kunt u naar keuze uw rapportinzichten gebruiken of insluiten in een rapportage-/visualisatieframework van uw keuze. Raadpleeg de documentatie bij het Real-time Customer Data Platform Insights-gegevensmodel voor meer informatie over [Pas uw SQL vraagmalplaatjes aan om de rapporten van Real-Time CDP voor uw marketing en zeer belangrijke gebruiksgevallen van de prestatiesindicator (KPI) te creëren](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 Het Real-Time CDP-gegevensmodel van Adobe Experience Platform biedt inzicht in profielen, soorten publiek en bestemmingen en biedt de Real-Time CDP-dashboards inzicht. Dit document begeleidt u door het proces van het creëren van uw het gegevensmodel van het Rapport van Inzichten en ook hoe te om de gegevensmodellen van Real-Time CDP uit te breiden zoals nodig.
 

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profiel;publiek;publiek;publiek;segmentatie;gebruikersinterface;UI;aanpassing;publieksdashboard;dashboard
-title: Handleiding voor publiek dashboard
+title: Sitepagina
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het publiek dat uw organisatie heeft gemaakt.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
+source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
 workflow-type: tm+mt
-source-wordcount: '2952'
+source-wordcount: '2951'
 ht-degree: 0%
 
 ---

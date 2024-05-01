@@ -1,9 +1,10 @@
 ---
 title: Profielinzichten
 description: Ontdek SQL dat uw profielinzichten en gebruik deze vragen aandrijft om douaneinzichten te produceren die uw klanten en hun ervaringen van de consument verder onderzoeken.
-source-git-commit: ee9ef2cf777c72fbd19cfccd80a37ea66591216d
+exl-id: f3792076-3e01-4e26-8788-32927202a2e5
+source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1655'
 ht-degree: 0%
 
 ---
@@ -14,12 +15,9 @@ De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adob
 
 Begrijp uw profielinzichten door tot SQL toegang te hebben die hen macht, dan uw eigen inzichten produceert om uw klanten en hun ervaringen van de consument verder te onderzoeken die omhoog uw profielen maken. Transformeer uw onbewerkte gegevens in nieuwe inzichten die kunnen worden gebruikt door het bestaande Real-Time CDP-gegevensmodel SQL als inspiratie te gebruiken voor het maken van query&#39;s voor uw unieke bedrijfsbehoeften.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+Zie de [SQL-documentatie weergeven](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door de UI van het Platform aan te passen.
 
 U kunt de volgende inzichten allemaal gebruiken als onderdeel van de [Profieldashboard](../guides/profiles.md) of een aangepaste [door gebruiker gedefinieerd dashboard](../user-defined-dashboards.md). Zie de [aanpassingsoverzicht](../customize/overview.md) voor instructies over het aanpassen van het dashboard of [nieuwe widgets maken en bewerken](../customize/custom-widgets.md) in de widgetbibliotheek en [door gebruiker gedefinieerd dashboard](../user-defined-dashboards.md#create-widget).
-
-U kunt de volgende inzichten allemaal gebruiken als onderdeel van de [Profieldashboard](../guides/profiles.md) of een aangepast dashboard.
 
 ## Publiek overlapt door samenvoegbeleid {#audience-overlap-by-merge-policy}
 
@@ -781,7 +779,6 @@ Zie de [Documentatie van widget losgekoppelde profielen](../guides/profiles.md#u
 
 Door dit document te lezen, begrijpt u nu de SQL die dashboardinzichten produceert en welke gemeenschappelijke vragen deze analyse oplost. U kunt nu de SQL bewerken en doorlopen om uw eigen inzichten te genereren.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+Zie de [SQL-documentatie weergeven](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct via PLatform UI aan te passen.
 
-U kunt ook de SQL lezen en begrijpen die inzichten voor [Soorten publiek](./audiences.md) en [Doelen](./destinations.md) dashboards.
+U kunt ook de SQL lezen en begrijpen die inzichten voor [Soorten publiek](./audiences.md), [Accountprofielen](./account-profiles.md), en [Doelen](./destinations.md) dashboards.

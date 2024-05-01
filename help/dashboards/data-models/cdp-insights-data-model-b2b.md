@@ -1,0 +1,134 @@
+---
+title: Real-time Customer Data Platform Insights Data Model B2B Edition
+description: Leer hoe u SQL-query's kunt gebruiken met de Real-time Customer Data Platform Insights Data Models (B2B Edition) om uw eigen Real-Time CDP-rapporten aan te passen voor uw marketing- en KPI-gebruiksgevallen.
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+source-git-commit: 52f67037756af97bac97908d4736a3cbafce6844
+workflow-type: tm+mt
+source-wordcount: '450'
+ht-degree: 0%
+
+---
+
+# Real-time Customer Data Platform Insights-gegevensmodel B2B Edition
+
+Het Real-time Customer Data Platform Insights-gegevensmodel voor de B2B Edition stelt de gegevensmodellen en SQL beschikbaar die de inzichten van [accountprofielen](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw B2B marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw dashboards worden gebruikt.
+
+>[!AVAILABILITY]
+>
+>Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP-pakket Premier en Ultimate hebben aangeschaft. Zie de documentatie over de beschikbare [Real-Time CDP-edities](../../rtcdp/overview.md#rtcdp-editions) voor meer informatie, of contacteer uw Adobe vertegenwoordiger.
+
+<!-- 
+See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
+ -->
+
+## Vereisten
+
+Deze handleiding vereist een goed begrip van aangepaste dashboards. Lees de documentatie op [een aangepast dashboard maken](../user-defined-dashboards.md) voordat u doorgaat met deze handleiding.
+
+## Real-Time CDP B2B-inzichtsrapporten en gebruiksgevallen {#B2B-insight-reports-and-use-cases}
+
+Real-Time CDP B2B-rapporten bieden inzichten in de gegevens van uw accountprofielen en de relatie tussen accounts en mogelijkheden. De volgende sterschemamodellen werden ontwikkeld om een verscheidenheid van gemeenschappelijk marketing gebruiksgevallen te antwoorden en elk gegevensmodel kan verscheidene gebruiksgevallen steunen.
+
+>[!IMPORTANT]
+>
+>De gegevens die voor Real-Time CDP B2B-rapportage worden gebruikt, zijn nauwkeurig voor een gekozen samenvoegingsbeleid en op basis van de meest recente dagelijkse momentopname.
+
+### Accountprofielmodel {#account-profile-model}
+
+Het model van het Profiel van de Rekening bestaat uit acht datasets:
+
+- `adwh_dim_industry`
+- `adwh_dim_account_name`
+- `adwh_dim_geo`
+- `adwh_dim_account_type`
+- `adwh_fact_account`
+- `account_revenue_employee`
+
+In het onderstaande diagram worden de relevante gegevensvelden in elke gegevensset weergegeven, evenals het gegevenstype ervan en de externe sleutels die de gegevenssets aan elkaar koppelen.
+
+![Het relationele diagram van de entiteit voor het accountprofielmodel.](../images/data-models/account-profile-model.png)
+
+#### Voor de boekhouding per bedrijfstak wordt gebruikgemaakt {#accounts-by-industry}
+
+De logica die wordt gebruikt voor de [!UICONTROL Accounts By Industry] inzicht geeft de top vijf industrieën terug volgens hun aantal rekeningsprofielen en hun relatieve grootte aan elkaar. Zie de [[!UICONTROL Accounts By Industry] widget-documentatie](../guides/account-profiles.md#accounts-by-industry) voor meer informatie .
+
+>[!TIP]
+>
+>U kunt deze SQL-query aanpassen om meer of minder dan de vijf belangrijkste bedrijfstakken te retourneren.
+
+De SQL die de [!UICONTROL Accounts By Industry] inzicht is te zien in de onderste sectie die kan worden samengevouwen .
+
++++SQL-query
+
+```sql
+WITH RankedIndustries AS (
+    SELECT
+        i.industry,
+        SUM(f.counts) AS total_accounts,
+        ROW_NUMBER() OVER (ORDER BY SUM(f.counts) DESC) AS industry_rank
+    FROM
+        adwh_fact_account f
+    INNER JOIN adwh_dim_industry i ON f.industry_id = i.industry_id
+    WHERE f.accounts_created_date between UPPER(COALESCE('$START_DATE', '')) and UPPER(COALESCE('$END_DATE', ''))
+    GROUP BY
+        i.industry
+)
+SELECT
+    CASE
+        WHEN industry_rank <= 5 THEN industry
+        ELSE 'Others'
+    END AS industry_group,
+    SUM(total_accounts) AS total_accounts
+FROM
+    RankedIndustries
+GROUP BY
+    CASE
+        WHEN industry_rank <= 5 THEN industry
+        ELSE 'Others'
+    END
+ORDER BY
+    total_accounts DESC
+LIMIT 5000;
+```
+
++++
+
+#### Het gebruik van de optie Rekeningen op type {#accounts-by-type}
+
+De logica die wordt gebruikt voor de [!UICONTROL Accounts By Type] inzicht geeft de numerieke uitsplitsing van de rekeningen naar hun type weer. Dit inzicht kan helpen om bedrijfsstrategie en verrichtingen, met inbegrip van middeltoewijzing of marketing strategieën te begeleiden. Zie de [[!UICONTROL Accounts By Type] widget-documentatie](../guides/account-profiles.md#accounts-by-type) voor meer informatie .
+
+De SQL die de [!UICONTROL Accounts By Type] inzicht is te zien in de onderste sectie die kan worden samengevouwen .
+
++++SQL-query
+
+```sql
+SELECT t.account_type,
+       Sum(f.counts) AS account_count
+FROM   adwh_fact_account f
+       JOIN adwh_dim_account_type t
+         ON f.account_type_id = t.account_type_id
+WHERE  accounts_created_date BETWEEN Upper(Coalesce('$START_DATE', '')) AND
+                                     Upper(
+                                     Coalesce('$END_DATE', ''))
+GROUP  BY t.account_type
+LIMIT  5000; 
+```
+
++++
+
+### Opportuniteitsmodel {#opportunity-model}
+
+Het model van de Kans bestaat uit zeven datasets:
+
+- `adwh_dim_opportunity_stage`
+- `adwh_dim_person_role`
+- `adwh_dim_opportunity_source_type`
+- `adwh_dim_opportunity_name`
+- `adwh_fact_opportunity`
+- `adwh_opportunity_amount`
+- `adwh_fact_opportunity_person`
+
+In het onderstaande diagram worden de relevante gegevensvelden in elke gegevensset weergegeven.
+
+![Het entiteitrelationele diagram voor het model van de Kans.](../images/data-models/opportunity-model.png)
