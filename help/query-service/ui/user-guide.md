@@ -4,14 +4,18 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '2700'
+source-wordcount: '2731'
 ht-degree: 0%
 
 ---
 
 # [!DNL Query Editor] UI-hulplijn
+
+>[!NOTE]
+>
+>Vanaf 30 april 2024 [Uitgebreide query-editor](#enhanced-editor-toggle) is de standaardeditor voor alle gebruikers geworden. De erfenisredacteur zal op 30-mei-2024 worden afgekeurd en niet meer voor gebruik beschikbaar zijn.
 
 [!DNL Query Editor] is een interactief hulpmiddel dat door Adobe Experience Platform wordt verstrekt [!DNL Query Service], die u toestaat schrijven, bevestigen, en vragen voor de gegevens van de klantenervaring binnen [!DNL Experience Platform] gebruikersinterface. [!DNL Query Editor] steunt het ontwikkelen van vragen voor analyse en gegevensonderzoek, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in te vullen [!DNL Experience Platform].
 
@@ -229,7 +233,7 @@ Als u een query opslaat in de Query Editor, verschijnt er een bevestigingsberich
 
 De vragen die als malplaatje zijn bewaard kunnen van de Redacteur van de Vraag worden gepland. Het plannen van vragen staat u toe om vraaglooppas op een douanecadence te automatiseren. U kunt vragen plannen die op frequentie, datum, en tijd worden gebaseerd, en ook een outputdataset voor uw resultaten kiezen indien nodig. De programma&#39;s van de vraag kunnen ook door UI worden onbruikbaar gemaakt of worden geschrapt.
 
-Planningen worden ingesteld in de Query-editor. Wanneer het gebruiken van de Redacteur van de Vraag, kunt u een programma aan een vraag slechts toevoegen die reeds is gecreeerd, opgeslagen, en looppas. Dezelfde beperking geldt niet voor [!DNL Query Service] API.
+Planningen worden ingesteld in de Query-editor. Wanneer het gebruiken van de Redacteur van de Vraag, kunt u een programma aan een vraag slechts toevoegen die reeds is gecreeerd, en bewaard. Dezelfde beperking geldt niet voor [!DNL Query Service] API.
 
 >[!NOTE]
 >

@@ -2,9 +2,9 @@
 title: Het dashboard Accountprofielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de B2B-accountprofielen van uw organisatie kunt bekijken.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -67,16 +67,20 @@ De accountprofielgegevens die worden weergegeven op het tabblad [!UICONTROL Deta
 
 Adobe biedt standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op uw accountprofielen.
 
+>[!IMPORTANT]
+>
+>Als u geen datumfilter aanbiedt, analyseert het standaardgedrag van inzichten de gegevens die van het vorige jaar tot vandaag zijn toegevoegd.
+
 Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
 * [Accountprofielen toegevoegd](#account-profiles-added)
-* [Rekeningen per bedrijfstak](#accounts-by-industry)
-* [Rekeningen per type](#accounts-by-type)
+* [Nieuwe rekeningen van de industrie](#accounts-by-industry)
+* [Nieuwe accounts per type](#accounts-by-type)
 * [Opportuniteiten toegevoegd](#opportunities-added)
-* [Kansen per personele rol](#opportunities-by-person-role)
-* [Kansen op inkomsten](#opportunities-by-revenue)
-* [Kansen per status en werkgebied](#opportunities-by-status-&-stage)
-* [Kans gewonnen](#opportunities-won)
+* [Nieuwe mogelijkheden per persoonlijke rol](#opportunities-by-person-role)
+* [Nieuwe mogelijkheden door inkomsten](#opportunities-by-revenue)
+* [Nieuwe mogelijkheden per status en podium](#opportunities-by-status-&-stage)
+* [Nieuwe kansen gewonnen](#opportunities-won)
 * [Predictieve spreiding van scores](#predictive-scoring-distribution)
 * [Predictieve scoring van invloedrijke factoren](#predictive-scoring-top-influential-factors)
 * [Totaal rekeningen per bedrijfstak](#total-accounts-by-industry)
@@ -87,17 +91,17 @@ De [!UICONTROL Account profiles added] widget gebruikt een lijngrafiek om het aa
 
 ![De widget Accountprofielen toegevoegd.](../images/account-profiles/account-profiles-added.png)
 
-### Rekeningen per bedrijfstak {#accounts-by-industry}
+### Nieuwe rekeningen van de industrie {#accounts-by-industry}
 
-De [!UICONTROL Accounts by industry] widget geeft het totale aantal accounts in één meting in een donutgrafiek weer. Het donutdiagram illustreert de relatieve samenstelling van verschillende industrieën waaruit dit totaal bestaat. Een kleurgecodeerde sleutel geeft een indeling van alle opgenomen industrieën. Individuele tellingen voor elke industrie worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
+De [!UICONTROL New accounts by industry] widget geeft het totale aantal accounts in één meting in een donutgrafiek weer. Het donutdiagram illustreert de relatieve samenstelling van verschillende industrieën waaruit dit totaal bestaat. Een kleurgecodeerde sleutel geeft een indeling van alle opgenomen industrieën. Individuele tellingen voor elke industrie worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
 
-![De widget Accounts per branche.](../images/account-profiles/accounts-by-industry.png)
+![De widget Nieuwe accounts per branche.](../images/account-profiles/new-accounts-by-industry.png)
 
-### Rekeningen per type {#accounts-by-type}
+### Nieuwe accounts per type {#accounts-by-type}
 
-De [!UICONTROL Accounts by type] widget geeft het totale aantal accounts in één meting in een donutgrafiek weer. Het donutdiagram illustreert de relatieve samenstelling van verschillende accounttypen waaruit dit totaal bestaat. Een kleurgecodeerde sleutel geeft een indeling van alle opgenomen accounttypen. Individuele tellingen voor elk type van rekening worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
+De [!UICONTROL New accounts by type] widget geeft het totale aantal accounts in één meting in een donutgrafiek weer. Het donutdiagram illustreert de relatieve samenstelling van verschillende accounttypen waaruit dit totaal bestaat. Een kleurgecodeerde sleutel geeft een indeling van alle opgenomen accounttypen. Individuele tellingen voor elk type van rekening worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
 
-![De accounts op type-widget.](../images/account-profiles/accounts-by-type.png)
+![De nieuwe accounts op type-widget.](../images/account-profiles/new-accounts-by-type.png)
 
 ### Opportuniteiten toegevoegd {#opportunities-added}
 
@@ -107,35 +111,35 @@ De [!UICONTROL Opportunities added] widget gebruikt een lijngrafiek om het aanta
 
 ![De widget Opportunity toegevoegd.](../images/account-profiles/opportunities-added.png)
 
-### Kansen per personele rol {#opportunities-by-person-role}
+### Nieuwe mogelijkheden per persoonlijke rol {#opportunities-by-person-role}
 
-De [!UICONTROL Opportunities by person role] widget geeft het totale aantal van uw mogelijkheden in één meting binnen een donutgrafiek weer. Het donutdiagram illustreert de relatieve samenstelling van rollen die uit dit totale aantal kansen bestaan. Een kleurgecodeerde sleutel geeft een indeling van alle opgenomen rollen. Individuele tellingen voor elke rol worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
+De [!UICONTROL New opportunities by person role] widget geeft het totale aantal van uw mogelijkheden in één meting binnen een donutgrafiek weer. Het donutdiagram illustreert de relatieve samenstelling van rollen die uit dit totale aantal kansen bestaan. Een kleurgecodeerde sleutel geeft een indeling van alle opgenomen rollen. Individuele tellingen voor elke rol worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
 
 >[!NOTE]
 >
 >De [!UICONTROL No data found] of [!UICONTROL Unable to load] De fout wordt veroorzaakt wanneer &quot;opportunity-Persoon&quot;brug-lijst niet in uw schema wordt gebruikt. Als uw inzicht één van deze fouten toont, controleer uw verenigingsschema en zorg ervoor dat de &quot;opportuniteit-Persoon&quot;gebiedsgroep gegevens opneemt.
 
-![De opportuniteiten per personenrolwidget.](../images/account-profiles/opportunities-by-person-role.png)
+![De nieuwe mogelijkheden per widget voor persoonlijke rol.](../images/account-profiles/new-opportunities-by-person-role.png)
 
-### Kansen op inkomsten {#opportunities-by-revenue}
+### Nieuwe mogelijkheden door inkomsten {#opportunities-by-revenue}
 
-De [!UICONTROL Opportunities by revenue] widget gebruikt een staafdiagram om het totale geschatte bedrag van opbrengst te illustreren die door uw kansen wordt geproduceerd. De widget biedt ondersteuning voor maximaal zes mogelijkheden.
+De [!UICONTROL New opportunities by revenue] widget gebruikt een staafdiagram om het totale geschatte bedrag van opbrengst te illustreren die door uw kansen wordt geproduceerd. De widget biedt ondersteuning voor maximaal zes mogelijkheden.
 
 Om een dialoog te zien die het specifieke opbrengsttotaal voor een kans bevat, gebruik de curseur om over individuele bars te bewegen.
 
-![De opportuniteiten per inkomstenwidget.](../images/account-profiles/opportunities-by-revenue.png)
+![De nieuwe kansen door opbrengstwidget.](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### Kansen per status en werkgebied {#opportunities-by-status-&-stage}
+### Nieuwe mogelijkheden per status en podium {#opportunities-by-status-&-stage}
 
 Deze widget gebruikt een staafdiagram om het aantal kansen te illustreren die of open of gesloten zijn in alle stadia van de marketing/verkooptrechter. De widget gebruikt kleuren om het werkgebied van de mogelijkheden te onderscheiden. Een kleurcoderingssleutel geeft de beschikbare stadia voor mogelijkheden aan.
 
-![De kansen per status en werkgebiedwidget.](../images/account-profiles/opportunities-by-status-&-stage.png)
+![De nieuwe kansen per status &amp; stadium widget.](../images/account-profiles/new-opportunities-by-status-&-stage.png)
 
-### Kans gewonnen {#opportunities-won}
+### Nieuwe kansen gewonnen {#opportunities-won}
 
-De [!UICONTROL Opportunities won] widget geeft het totale aantal kansen weer dat u met succes hebt voltooid in één meting in een donutgrafiek. Het donutdiagram illustreert de relatieve samenstelling van kansen die of worden gewonnen of niet. Bij een kleurcoderingssleutel wordt onderscheid gemaakt tussen de wel en niet-gewonnen mogelijkheden. Individuele tellingen voor elke rol worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
+De [!UICONTROL New opportunities won] widget geeft het totale aantal kansen weer dat u met succes hebt voltooid in één meting in een donutgrafiek. Het donutdiagram illustreert de relatieve samenstelling van kansen die of worden gewonnen of niet. Bij een kleurcoderingssleutel wordt onderscheid gemaakt tussen de wel en niet-gewonnen mogelijkheden. Individuele tellingen voor elke rol worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
 
-![De widget Opportunity gewonnen.](../images/account-profiles/opportunities-won.png)
+![De widget Nieuwe kansen heeft gewonnen.](../images/account-profiles/new-opportunities-won.png)
 
 ### Predictieve spreiding van scores {#predictive-scoring-distribution}
 
@@ -170,6 +174,10 @@ Met het vervolgkeuzemenu in de widget kunt u het accountscoremodel selecteren.
 ### Totaal rekeningen per bedrijfstak {#total-accounts-by-industry}
 
 Deze widget geeft het totale aantal accounts in één meting weer en gebruikt een donutgrafiek om de proportionele aantallen te illustreren voor de bedrijfstakken die het totale aantal vormen. De sleutel verstrekt de informatie van de kleurencodering voor de verschillende industrieën die omhoog de donutgrafiek maken.
+
+>[!NOTE]
+>
+>De informatie die door dit inzicht wordt getoond is afhankelijk van de datumwaaier die door u wordt gespecificeerd. Als u geen datumfilter biedt, analyseert het standaardgedrag van de inzichten de gegevens die van het vorige jaar tot vandaag zijn toegevoegd.
 
 Individuele tellingen voor de verschillende industrieën worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek hangt.
 

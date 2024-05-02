@@ -3,9 +3,10 @@ title: Accountprofielgegevens
 description: Ontdek SQL die uw inzicht van het Profiel van de Rekening en gebruik deze vragen aandrijft om douaneinzichten te produceren die uw klanten en hun ervaringen van de consument verder onderzoeken.
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ ORDER BY date_key limit 5000;
 
 +++
 
-## Rekeningen per bedrijfstak {#accounts-by-industry}
+## Nieuwe rekeningen van de industrie {#accounts-by-industry}
 
 Vragen beantwoord door dit inzicht:
 
@@ -82,7 +83,7 @@ ORDER BY total_accounts DESC limit 5000;
 
 +++
 
-## Rekeningen per type {#accounts-by-type}
+## Nieuwe accounts per type {#accounts-by-type}
 
 Vragen beantwoord door dit inzicht:
 
@@ -128,7 +129,7 @@ LIMIT  5000;
 
 +++
 
-## Kansen per personele rol {#opportunities-by-person-role}
+## Nieuwe mogelijkheden per persoonlijke rol {#opportunities-by-person-role}
 
 Vragen beantwoord door dit inzicht:
 
@@ -150,7 +151,7 @@ LIMIT  5000;
 
 +++
 
-## Kansen op inkomsten {#opportunities-by-revenue}
+## Nieuwe mogelijkheden door inkomsten {#opportunities-by-revenue}
 
 Vragen beantwoord door dit inzicht:
 
@@ -190,7 +191,7 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 +++
 
-## Kansen per status en werkgebied {#opportunities-by-status-and-stage}
+## Nieuwe mogelijkheden per status en podium {#opportunities-by-status-and-stage}
 
 Vragen beantwoord door dit inzicht:
 
@@ -223,7 +224,7 @@ FROM   opportunities_by_isclosed limit 5000;
 
 +++
 
-## Kans gewonnen {#opportunities-won}
+## Nieuwe kansen gewonnen {#opportunities-won}
 
 Vragen beantwoord door dit inzicht:
 

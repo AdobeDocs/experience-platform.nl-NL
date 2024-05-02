@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Veelgestelde vragen
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot de Query-service. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '4432'
-ht-degree: 1%
+source-wordcount: '4407'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +18,7 @@ Dit document verstrekt antwoorden op vaak gestelde vragen over de Dienst van de 
 De volgende lijst met antwoorden op veelgestelde vragen is onderverdeeld in de volgende categorieën:
 
 - [Algemeen](#general)
-- [Data exporteren](#exporting-data)
+- [Gegevens exporteren](#exporting-data)
 - [Gereedschappen van derden](#third-party-tools)
 - [PostSQL API-fouten](#postgresql-api-errors)
 - [REST API-fouten](#rest-api-errors)
@@ -277,7 +277,7 @@ SELECT count(1) FROM myTableName
 
 U moet ook de documentatie controleren voor richtlijnen over het uitvoeren van [geplande vragen in UI](./ui/user-guide.md#scheduled-queries) en via [de API](./api/scheduled-queries.md).
 
-Let op: wanneer u de [!DNL Query Editor] u kunt alleen een schema toevoegen aan een query die al is gemaakt, opgeslagen en uitgevoerd. Dit geldt niet voor de [!DNL Query Service] API.
+Let op: wanneer u de [!DNL Query Editor] u kunt alleen een schema toevoegen aan een query die al is gemaakt en opgeslagen. Dit geldt niet voor de [!DNL Query Service] API.
 +++
 
 ### Wat betekent de fout &quot;Sessiebeperking bereikt&quot;?
@@ -552,7 +552,7 @@ WHERE T2.ID IS NULL
 ++ + Antwoord Ja. Hoewel, bepaalde derdecliënten, zoals DbVisualizer, een afzonderlijke herkenningsteken voor en na een SQL blok kunnen vereisen om erop te wijzen dat een deel van een manuscript als één enkele verklaring zou moeten worden behandeld. Meer informatie vindt u in het gedeelte [anonieme blokdocumentatie](./key-concepts/anonymous-block.md) of in [de officiële documentatie van DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
-## Data exporteren {#exporting-data}
+## Gegevens exporteren {#exporting-data}
 
 Deze sectie bevat informatie over het exporteren van gegevens en beperkingen.
 

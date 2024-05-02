@@ -3,9 +3,10 @@ title: Real-time Customer Data Platform Insights Data Model B2B Edition
 description: Leer hoe u SQL-query's kunt gebruiken met de Real-time Customer Data Platform Insights Data Models (B2B Edition) om uw eigen Real-Time CDP-rapporten aan te passen voor uw marketing- en KPI-gebruiksgevallen.
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: 52f67037756af97bac97908d4736a3cbafce6844
+exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
@@ -49,15 +50,15 @@ In het onderstaande diagram worden de relevante gegevensvelden in elke gegevenss
 
 ![Het relationele diagram van de entiteit voor het accountprofielmodel.](../images/data-models/account-profile-model.png)
 
-#### Voor de boekhouding per bedrijfstak wordt gebruikgemaakt {#accounts-by-industry}
+#### De nieuwe rekeningen per bedrijfstak gebruiken de zaak {#accounts-by-industry}
 
-De logica die wordt gebruikt voor de [!UICONTROL Accounts By Industry] inzicht geeft de top vijf industrieën terug volgens hun aantal rekeningsprofielen en hun relatieve grootte aan elkaar. Zie de [[!UICONTROL Accounts By Industry] widget-documentatie](../guides/account-profiles.md#accounts-by-industry) voor meer informatie .
+De logica die wordt gebruikt voor de [!UICONTROL New accounts by industry] inzicht geeft de top vijf industrieën terug volgens hun aantal rekeningsprofielen en hun relatieve grootte aan elkaar. Zie de [[!UICONTROL Accounts By Industry] widget-documentatie](../guides/account-profiles.md#accounts-by-industry) voor meer informatie .
 
 >[!TIP]
 >
 >U kunt deze SQL-query aanpassen om meer of minder dan de vijf belangrijkste bedrijfstakken te retourneren.
 
-De SQL die de [!UICONTROL Accounts By Industry] inzicht is te zien in de onderste sectie die kan worden samengevouwen .
+De SQL die de [!UICONTROL New accounts by industry] inzicht is te zien in de onderste sectie die kan worden samengevouwen .
 
 +++SQL-query
 
@@ -94,11 +95,11 @@ LIMIT 5000;
 
 +++
 
-#### Het gebruik van de optie Rekeningen op type {#accounts-by-type}
+#### Nieuwe accounts per type use case {#accounts-by-type}
 
-De logica die wordt gebruikt voor de [!UICONTROL Accounts By Type] inzicht geeft de numerieke uitsplitsing van de rekeningen naar hun type weer. Dit inzicht kan helpen om bedrijfsstrategie en verrichtingen, met inbegrip van middeltoewijzing of marketing strategieën te begeleiden. Zie de [[!UICONTROL Accounts By Type] widget-documentatie](../guides/account-profiles.md#accounts-by-type) voor meer informatie .
+De logica die wordt gebruikt voor de [!UICONTROL New accounts by type] inzicht geeft de numerieke uitsplitsing van de rekeningen naar hun type weer. Dit inzicht kan helpen om bedrijfsstrategie en verrichtingen, met inbegrip van middeltoewijzing of marketing strategieën te begeleiden. Zie de [[!UICONTROL New accounts by type] widget-documentatie](../guides/account-profiles.md#accounts-by-type) voor meer informatie .
 
-De SQL die de [!UICONTROL Accounts By Type] inzicht is te zien in de onderste sectie die kan worden samengevouwen .
+De SQL die de [!UICONTROL New accounts by type] inzicht is te zien in de onderste sectie die kan worden samengevouwen .
 
 +++SQL-query
 

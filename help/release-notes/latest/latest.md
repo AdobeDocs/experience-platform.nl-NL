@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van april 2024 staat een opmerking voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1841'
+source-wordcount: '1895'
 ht-degree: 3%
 
 ---
@@ -37,9 +37,9 @@ Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzich
 
 | Functie | Beschrijving |
 | --- | --- |
-| Real-time Customer Data Platform B2B-inzichten | Bekijk vooraf geconfigureerde Real-Time CDP B2B-gegevensinzichten van accounts en mogelijkheden om u te helpen uw gegevens te begrijpen en uw bedrijfsbeslissingen te informeren. U kunt ook uw eigen inzichten maken met het Real-Time CDP B2B-gegevensmodel om uw gegevens te visualiseren en te verkennen en uw aangepaste visualisaties in het dashboard op te slaan. |
+| Real-time Customer Data Platform B2B-inzichten | Vooraf geconfigureerd verkennen [Real-Time CDP B2B-gegevensinzicht in accounts en mogelijkheden](../../dashboards/insights/account-profiles.md) om u te helpen uw gegevens begrijpen en uw bedrijfsbesluiten informeren. U kunt [zelf inzichten maken met het Real-Time CDP B2B-gegevensmodel](../../dashboards/data-models/cdp-insights-data-model-b2c.md) om uw gegevens te visualiseren en te verkennen en uw aangepaste visualisaties in uw dashboard op te slaan. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestemmingen te verlenen en douanewidgets tot stand te brengen, begin door te lezen [overzicht van dashboards](../../dashboards/home.md).
 
@@ -117,14 +117,14 @@ Met Query Service kunt u standaard-SQL gebruiken om gegevens in Adobe Experience
 
 | Functie | Beschrijving |
 | --- | --- |
-| Query Quarantine | Sluit mislukte query-uitvoeringen automatisch af om onderbrekingen te voorkomen en consistente prestaties te behouden. |
-| Query annuleren | Neem controle van vraaguitvoering en verbeter uw productiviteit door langdurige vragen te annuleren. |
-| Geplande querywaarschuwingen | Blijf op de hoogte van proactieve meldingen tijdens het plannen van query&#39;s, zodat u over een efficiënt en tijdig taakbeheer beschikt. U kunt aan alarm of intekenen wanneer het creëren van een vraag of het gebruiken van de gealigneerde acties voor bestaande geplande vragen. |
-| Verbeterde geplande querynavigatie | Navigeer gemakkelijk tussen vraagmalplaatjes en geplande looppas voor verhoogde productiviteit. |
-| Uitgebreide query-uitvoer | Toegang tot tot maximaal 500 rijen vraagresultaten binnen de console voor diepere analyse van uw gegevens. |
-| Oudere versie van Query Editor | Vanaf 30-april-2024 is de Verbeterde Redacteur van de Vraag de standaardeditor voor alle gebruikers geworden. De erfenisredacteur zal op 30-mei-2024 worden afgekeurd en niet meer voor gebruik beschikbaar zijn. |
+| Query Quarantine | Sluit mislukte query-uitvoeringen automatisch af om onderbrekingen te voorkomen en consistente prestaties te behouden. Zie de [query-quarantaine](../../query-service/ui/query-schedules.md#quarantine) documentatie voor meer informatie. |
+| Query annuleren | Neem controle van vraaguitvoering en verbeter uw productiviteit door langdurige vragen te annuleren.Zie [query annuleren](../../query-service/ui/user-guide.md#cancel-query) documentatie voor meer informatie. |
+| Geplande querywaarschuwingen | Blijf op de hoogte van proactieve meldingen tijdens het plannen van query&#39;s, zodat u over een efficiënt en tijdig taakbeheer beschikt. U kunt [abonneren op waarschuwingen bij het maken van een query](../../query-service/ui/query-schedules.md#alerts-for-query-status) of het gebruiken van de gealigneerde acties voor bestaande geplande vragen. Zie de [abonneren op waarschuwingen met inline-acties](../../query-service/ui/monitor-queries.md#alert-subscription) documentatie voor meer informatie. |
+| Verbeterde geplande querynavigatie | Navigeer gemakkelijk tussen vraagmalplaatjes en geplande looppas voor verhoogde productiviteit. Zie de documentatie op [het bekijken geplande vraaglooppas](../../query-service/ui/query-schedules.md#scheduled-query-runs) voor meer informatie . |
+| Uitgebreide query-uitvoer | Toegang tot tot maximaal 500 rijen vraagresultaten binnen de console voor diepere analyse van uw gegevens.Zie [aantal resultaten](../../query-service/ui/user-guide.md#result-count) documentatie voor meer informatie. |
+| Oudere versie van Query Editor | Vanaf 30-april-2024 is de Verbeterde Redacteur van de Vraag de standaardeditor voor alle gebruikers geworden. De erfenisredacteur zal op 30-mei-2024 worden afgekeurd en niet meer voor gebruik beschikbaar zijn. Zie de [Gebruikershandleiding voor de Query Editor](../../query-service/ui/user-guide.md) voor meer informatie . |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 Raadpleeg voor meer informatie over Query Services de [Overzicht van Query Service](../../query-service/home.md).
 
