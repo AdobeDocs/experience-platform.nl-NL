@@ -215,7 +215,7 @@ Om datasets uit een bestaande gegevensstroom te verwijderen, volg de stappen hie
 
    >[!NOTE]
    >
-Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen.
+   >Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen.
 
    ![Verwijder de dialoog van de dataset die de Remove datasetcontrole in de juiste spoorlijn toont.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
