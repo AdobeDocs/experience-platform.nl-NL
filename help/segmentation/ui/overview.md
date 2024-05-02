@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
+source-git-commit: 795b76465c59fc375542b92cdd3deefce8c000ca
 workflow-type: tm+mt
-source-wordcount: '3896'
+source-wordcount: '4065'
 ht-degree: 0%
 
 ---
@@ -82,12 +82,8 @@ Naast elk publiek bevindt zich een ellipspictogram. Als u deze optie selecteert,
 | [!UICONTROL Apply access labels] | Auditie, Aangepaste upload, Segmentatieservice | Beheert de toegangslabels die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [beheren, labels](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Publish] | Aangepaste upload, segmentatieservice | Hiermee publiceert u het geselecteerde publiek. Lees voor meer informatie over het statusbeheer van de levenscyclus de [Levenscyclusstatussectie van de veelgestelde vragen over segmentatie](../faq.md#lifecycle-states). |
 | [!UICONTROL Deactivate] | Aangepaste upload, segmentatieservice | Hiermee deactiveert u het geselecteerde publiek. Lees voor meer informatie over het statusbeheer van de levenscyclus de [Levenscyclusstatussectie van de veelgestelde vragen over segmentatie](../faq.md#lifecycle-states). |
-| [!UICONTROL Delete] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verwijdert u het geselecteerde publiek. |
+| [!UICONTROL Delete] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verwijdert u het geselecteerde publiek. Soorten publiek dat wordt gebruikt in downstreambestemmingen of dat afhankelijk is van ander publiek **kan** worden geschrapt. Lees voor meer informatie over het verwijderen van het publiek de [Veelgestelde vragen over segmentatie](../faq.md#lifecycle-states). |
 | [!UICONTROL Add to package] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verplaatst u het publiek tussen sandboxen. Lees voor meer informatie over deze functie de [gereedschapshandleiding voor sandbox](../../sandboxes/ui/sandbox-tooling.md). |
-
->[!NOTE]
->
-> U zult **niet** een publiek kunnen schrappen dat in een bestemmingsactivering wordt gebruikt.
 
 Boven aan de pagina vindt u opties voor het toevoegen van alle soorten publiek aan een schema, het importeren van een publiek, het maken van een nieuw publiek en het weergeven van een uitsplitsing van de updatefrequentie.
 
@@ -356,6 +352,15 @@ Wanneer u het extern gegenereerde publiek importeert, moet u een van de kolommen
 
 ![De [!UICONTROL Audience details] wordt weergegeven.](../images/ui/overview/import-audience-audience-details.png)
 
+U kunt ook desgewenst extra details toevoegen aan uw extern gegenereerde publiek, zoals een id, het samenvoegbeleid of het gegevenstype van de kolom.
+
+>[!NOTE]
+>
+>Als u een aangepaste externe publieks-id gebruikt, moet deze aan de volgende richtlijnen voldoen:
+>
+> - IT **moet** beginnen met een letter (a-z of A-Z), onderstrepingsteken (_) of een dollarteken ($).
+> - Alle volgende tekens kunnen alfanumeriek zijn (a-z, A-Z, 0-9), onderstrepingstekens (_) of dollartekens ($).
+
 Nadat u de publieksdetails hebt ingevuld, selecteert u **[!UICONTROL Next]**.
 
 ![De [!UICONTROL Next] wordt gemarkeerd op de knop [!UICONTROL Audience details] pagina.](../images/ui/overview/import-audience-filled-details.png)
@@ -397,6 +402,14 @@ Selecteer de **[!UICONTROL Compositions]** om een lijst van alle publiek te zien
 ![Een lijst van publiek dat in de Samenstelling van het Publiek voor uw organisatie wordt gecreeerd.](../images/ui/overview/compositions.png)
 
 Standaard wordt in deze weergave informatie weergegeven over het publiek, zoals de naam, status, gemaakte datum, gemaakt op, laatst bijgewerkte datum en laatst bijgewerkt op.
+
+Naast elk publiek bevindt zich een ellipspictogram. Als u deze optie selecteert, wordt een lijst weergegeven met beschikbare snelle acties voor de doelgroep.
+
+| Actie | Beschrijving |
+| ------ | ----------- |
+| Dupliceren | Kopieert het geselecteerde publiek. |
+| Toegang beheren | Beheert de toegangslabels die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [beheren, labels](../../access-control/abac/ui/labels.md). |
+| Verwijderen | Hiermee verwijdert u het geselecteerde publiek. Soorten publiek dat wordt gebruikt in downstreambestemmingen of dat afhankelijk is van ander publiek **kan** worden geschrapt. Lees voor meer informatie over het verwijderen van het publiek de [Veelgestelde vragen over segmentatie](../faq.md#lifecycle-states). |
 
 U kunt de ![Tabel aanpassen](../images/ui/overview/customize-table.png) om te wijzigen welke velden worden weergegeven.
 

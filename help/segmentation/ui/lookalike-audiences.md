@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Soortgelijke soorten publiek
 description: Leer hoe u nieuwe hoogwaardige doelgroepen in Adobe Experience Platform kunt kiezen met behulp van look-alike-soorten publiek.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: fe2bb709a7ee56323492fed381c447e6a79fd5f8
+source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
 workflow-type: tm+mt
-source-wordcount: '2177'
+source-wordcount: '2158'
 ht-degree: 0%
 
 ---
@@ -197,7 +197,7 @@ De blik-gelijkaardig publiek kan worden gevormd om gegevensgebieden uit te sluit
 
 Het standaard &quot;C9&quot;etiket kan worden gebruikt om gegevens te etiketteren die niet voor gegevenswetenschap zouden moeten worden gebruikt en kunnen worden afgedwongen door het standaardbeleid &quot;van de Gegevens van de Beperking&quot;toe te laten. U kunt ook aanvullende beleidsregels maken om gegevens te beperken met andere labels, waaronder gevoelige labels, voor gebruik in gegevenswetenschap. Lees voor meer informatie over het beheer van het beleid voor gegevensgebruik de [UI-gids voor gegevensgebruiksbeleid](../../data-governance/policies/user-guide.md). Lees voor meer informatie over het beheren van labels voor gegevensgebruik de [UI-handleiding voor gegevensgebruikslabels](../../data-governance/labels/user-guide.md).
 
-Standaard wordt bij het modelleringsproces voor look-alike-soorten publiek geen rekening gehouden met **alle** gebied, dataset, of publiek dat op het toegelaten privacybeleid voor uw organisatie wordt gebaseerd. Als het basispubliek geen contractetiketten heeft, zal het modelleringsproces uitsluiten **alle** gebied, dataset, of publiek dat op het toegelaten privacybeleid voor uw organisatie wordt gebaseerd.
+Als een basispubliek standaard geen contractlabels heeft, wordt het modelleringsproces voor look-alike-soorten publiek uitgesloten **alle** gebied, dataset, of publiek dat op het toegelaten privacybeleid voor uw organisatie wordt gebaseerd.
 
 ## Volgende stappen
 
