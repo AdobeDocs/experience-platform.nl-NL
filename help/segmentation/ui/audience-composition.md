@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
+source-git-commit: d22f8b4a39cb76dab4c976d8ea883d5170ee34e4
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1777'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,8 @@ Om publiek aan het blok van het Publiek toe te voegen. selecteren **[!UICONTROL 
 >[!IMPORTANT]
 >
 >Houd er rekening mee dat **alleen** publiek dat met het standaardsamenvoegbeleid is gedefinieerd, wordt weergegeven.
+>
+>Alleen **gepubliceerd** publiek dat met de Bouwer van het Segment wordt gecreeerd kan worden gebruikt. Soorten publiek dat is gemaakt met Audience Composition en extern gegenereerde doelgroepen zijn **niet** beschikbaar.
 
 Er wordt een lijst met doelgroepen weergegeven. Selecteer het publiek dat u wilt opnemen, gevolgd door **[!UICONTROL Add]** om ze toe te voegen aan uw publieksblok.
 
@@ -101,6 +103,10 @@ De **[!UICONTROL Exclude]** wordt toegevoegd. Wanneer dit blok wordt geselecteer
 Als u uitsluiting door het publiek toepast, kunt u selecteren welk publiek u wilt uitsluiten door **[!UICONTROL Add Audience]**.
 
 ![De [!UICONTROL Add audience] is geselecteerd, waarmee u kunt kiezen welk publiek u wilt uitsluiten.](../images/ui/audience-composition/add-excluded-audience.png)
+
+>[!IMPORTANT]
+>
+>Alleen **gepubliceerd** publiek dat met de Bouwer van het Segment wordt gecreeerd kan worden gebruikt. Soorten publiek dat is gemaakt met Audience Composition en extern gegenereerde doelgroepen zijn **niet** beschikbaar.
 
 Er wordt een lijst met doelgroepen weergegeven. Selecteren **[!UICONTROL Add]** om het publiek toe te voegen u aan uw exclusief blok wilt uitsluiten.
 
