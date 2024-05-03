@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: ea3df4f05850547c75358fb15bf7a1e6a1d19dbf
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '2012'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,15 @@ ht-degree: 0%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versie 2.2.2.0 - 3 mei 2024
+
+**Nieuwe functies**
+
+* Breid veranderlijk gegevenselement uit om gegevensvoorwerpen te steunen.
+* De actie voor het bijwerken van variabelen ondersteunt nu het wijzigen van doorloopgegevens van Adobe Analytics, Adobe Audience Manager en Adobe Target.
+
+Bevat versie 2.19.2 van het Web SDK van Adobe Experience Platform.
 
 ## Versie 2.21.4 - 10 januari 2024
 
@@ -176,7 +185,7 @@ Bevat versie 2.8.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 
 Bevat versie 2.7.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
-* Aanvullende informatie van het Edge Network is beschikbaar in de gebeurtenis Send Event Complete (Voltooien van gebeurtenis), waaronder `inferences` en `destinations`. Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Bèta rollen.
+* Aanvullende informatie van de Edge Network is beschikbaar in de gebeurtenis Send Event Complete, waaronder `inferences` en `destinations`. Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Bèta rollen.
 
 ## Versie 2.7.3 - 7 september 2021
 
