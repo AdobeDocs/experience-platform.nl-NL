@@ -2,9 +2,9 @@
 title: Adobe Target gebruiken met Web SDK voor personalisatie
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: a34204eb58ed935831d26caf062ebb486039669f
+source-git-commit: 69406293dce5fdfc832adff801f1991626dafae0
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1338'
 ht-degree: 2%
 
 ---
@@ -183,7 +183,7 @@ Als u een [!DNL Target] , zorgt u ervoor dat de profielgegevens worden doorgegev
 | `xdm` | Object | Gegevens geformatteerd in XDM die in Web SDK als ervaringsgebeurtenis landen |
 | `data` | Object | Arbitraire sleutel/waardeparen verzonden naar [!DNL Target] oplossingen onder de doelklasse. |
 
-Normaal [!DNL Web SDK] code die deze opdracht gebruikt ziet er als volgt uit:
+<!--Typical [!DNL Web SDK] code using this command looks like the following:-->
 
 **Opslagprofiel of entiteitsparameters vertragen totdat de inhoud aan de eindgebruiker is weergegeven**
 
