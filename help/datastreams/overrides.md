@@ -1,17 +1,17 @@
 ---
 title: Gegevensstroomoverschrijvingen configureren
-description: Leer hoe te om gegevensstroom met voeten te treden in de UI van Datastreams en hen via het Web SDK te activeren.
+description: Leer hoe te om gegevensstroom met voeten te treden in de UI van Datastreams en hen via het Web SDK of Mobiele SDK te activeren.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: b9b6320b15ee93807ebf8b48f31be7386a6f4a19
+source-git-commit: 17ed5f3c14d4787352f72d3d7721cbb6416d533e
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
 
 # Gegevensstroomoverschrijvingen configureren
 
-Met overschrijvingen van gegevensstroom kunt u aanvullende configuraties voor uw gegevensstreams definiëren. Deze configuraties worden via de SDK van het web doorgegeven aan de Edge Network.
+Met overschrijvingen van gegevensstroom kunt u aanvullende configuraties voor uw gegevensstromen definiëren. Deze configuraties worden via de SDK van het Web of de mobiele SDK aan de Edge Network doorgegeven.
 
 Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbrengen, zonder een gegevensstroom te creëren of uw bestaande montages te wijzigen.
 
@@ -68,7 +68,7 @@ Als u de gegevensstroom hebt gemaakt, bewerkt u de [Adobe Target](configure.md#t
 
 Nadat u de gewenste overschrijvingen hebt toegevoegd, slaat u de gegevensstroominstellingen op.
 
-De Adobe Target-gegevensstroomoverschrijvingen moeten nu zijn geconfigureerd. Nu kunt u [verzend de met voeten treedt naar de Edge Network via het Web SDK](#send-overrides).
+De Adobe Target-gegevensstroomoverschrijvingen moeten nu zijn geconfigureerd. Nu kunt u [verzend de met voeten treedt naar de Edge Network via het Web SDK of Mobiele SDK](#send-overrides).
 
 ### DataStream-overschrijvingen voor Adobe Analytics {#analytics-overrides}
 
@@ -82,7 +82,7 @@ Selecteren **[!UICONTROL Show Batch Mode]** om batch-bewerking van de rapportsui
 
 Nadat u de gewenste overschrijvingen hebt toegevoegd, slaat u de gegevensstroominstellingen op.
 
-De Adobe Analytics-gegevensstroomoverschrijvingen moeten nu zijn geconfigureerd. Nu kunt u [verzend de met voeten treedt naar de Edge Network via het Web SDK](#send-overrides).
+De Adobe Analytics-gegevensstroomoverschrijvingen moeten nu zijn geconfigureerd. Nu kunt u [verzend de met voeten treedt naar de Edge Network via het Web SDK of Mobiele SDK](#send-overrides).
 
 ### DataStream-overschrijvingen voor gegevenssets met gebeurtenissen Experience Platform {#event-dataset-overrides}
 
@@ -94,7 +94,7 @@ Als u de gegevensstroom hebt gemaakt, bewerkt u de [Adobe Experience Platform](c
 
 Nadat u de gewenste overschrijvingen hebt toegevoegd, slaat u de gegevensstroominstellingen op.
 
-De Adobe Experience Platform-gegevensstroomoverschrijvingen moeten nu zijn geconfigureerd. Nu kunt u [verzend de met voeten treedt naar de Edge Network via het Web SDK](#send-overrides).
+De Adobe Experience Platform-gegevensstroomoverschrijvingen moeten nu zijn geconfigureerd. Nu kunt u [verzend de met voeten treedt naar de Edge Network via het Web SDK of Mobiele SDK](#send-overrides).
 
 ### DataStream overschrijft de synchronisatie-containers van externe id&#39;s {#container-overrides}
 
@@ -112,9 +112,9 @@ Gebruik vervolgens de **[!UICONTROL Container ID Overrides]** om de container-id
 
 Nadat u de gewenste overschrijvingen hebt toegevoegd, slaat u de gegevensstroominstellingen op.
 
-U moet nu de containeroverschrijvingen voor id-synchronisatie hebben geconfigureerd. Nu kunt u [verzend de met voeten treedt naar de Edge Network via het Web SDK](#send-overrides).
+U moet nu de containeroverschrijvingen voor id-synchronisatie hebben geconfigureerd. Nu kunt u [verzend de met voeten treedt naar de Edge Network via het Web SDK of Mobiele SDK](#send-overrides).
 
-## Verzend de overschrijvingen naar de Edge Network via Web SDK {#send-overrides}
+## De overschrijvingen naar de Edge Network verzenden {#send-overrides}
 
 Na het vormen van gegevensstroom treedt in de Inzameling UI van Gegevens met voeten, kunt u de met voeten treedt naar de Edge Network door het Web SDK of Mobiele SDK verzenden.
 
