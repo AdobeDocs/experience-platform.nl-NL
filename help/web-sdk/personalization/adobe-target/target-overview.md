@@ -2,9 +2,9 @@
 title: Adobe Target gebruiken met Web SDK voor personalisatie
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 0b662b4c1801a6d6f6fc2c6ade92d259b821ab23
+source-git-commit: a34204eb58ed935831d26caf062ebb486039669f
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1347'
 ht-degree: 2%
 
 ---
@@ -184,6 +184,58 @@ Als u een [!DNL Target] , zorgt u ervoor dat de profielgegevens worden doorgegev
 | `data` | Object | Arbitraire sleutel/waardeparen verzonden naar [!DNL Target] oplossingen onder de doelklasse. |
 
 Normaal [!DNL Web SDK] code die deze opdracht gebruikt ziet er als volgt uit:
+
+**Opslagprofiel of entiteitsparameters vertragen totdat de inhoud aan de eindgebruiker is weergegeven**
+
+Als u de opnamekenmerken in het profiel wilt vertragen totdat de inhoud is weergegeven, stelt u `data.adobe.target._save=false` in uw verzoek.
+
+Uw website bevat bijvoorbeeld drie beslissingsbereiken die overeenkomen met drie categorielink op de website (Men, Vrouwen en Kinderen) en u wilt de categorie bijhouden die de gebruiker uiteindelijk heeft bezocht. Deze aanvragen verzenden met de `__save` markering ingesteld op `false` om te voorkomen dat de categorie blijft bestaan op het moment dat de inhoud wordt opgevraagd. Nadat de inhoud is weergegeven, verzendt u de juiste lading (inclusief de `eventToken` en `stateToken`) voor de desbetreffende kenmerken die moeten worden opgenomen.
+
+<!--Save profile or entity attributes by default with:
+
+```js
+alloy ( "sendEvent" , {
+  renderDecisions : true,
+  data : {
+    __adobe : {
+      target : {
+        "__save" : true // Optional. __save=true is the default 
+        "profile.gender" : "female",
+        "profile.age" : 30,
+        "entity.name" : "T-shirt",
+        "entity.id" : "1234",
+      }
+    }
+  }
+} ) ; 
+```
+-->
+
+In het onderstaande voorbeeld wordt een bericht in de stijl trackEvent verzonden, worden profielscripts uitgevoerd, worden kenmerken opgeslagen en wordt de gebeurtenis direct vastgelegd.
+
+```js
+alloy ( "sendEvent" , {
+  renderDecisions : true,
+  data : {
+    __adobe : {
+      target : {
+        "profile.gender" : "female",
+        "profile.age" : 30,
+        "entity.name" : "T-shirt" ,
+        "entity.id" : "1234" ,
+        "track": {
+          "scopes": [ "mbox1", "mbox2"],
+          "type": "display|click|..."
+        }
+      }
+    }
+  }
+} ) ;
+```
+
+>[!NOTE]
+>
+>Als de `__save` instructie wordt weggelaten , zodat het opslaan van de profiel - en entiteitskenmerken onmiddellijk plaatsvindt , alsof het verzoek is uitgevoerd , zelfs als de rest van het verzoek een prefetch van personalisatie is . De `__save` aanwijzing is alleen relevant voor profiel - en entiteitskenmerken . Als het spoorvoorwerp aanwezig is, `__save` de richtlijn wordt genegeerd . De gegevens worden onmiddellijk opgeslagen en het bericht wordt geregistreerd.
 
 **`sendEvent`met profielgegevens**
 
