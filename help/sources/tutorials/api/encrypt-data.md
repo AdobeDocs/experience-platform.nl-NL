@@ -2,16 +2,16 @@
 title: Versleutelde gegevensinsluiting
 description: Leer hoe u gecodeerde bestanden via batchbronnen voor cloudopslag kunt opnemen met de API.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: a92a3d4ce16e50d9eec97448e677ca603931fa44
+source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1736'
 ht-degree: 0%
 
 ---
 
 # Versleutelde gegevensinvoer
 
-Met Adobe Experience Platform kunt u gecodeerde bestanden opnemen via batchbronnen voor cloudopslag. Met gecodeerde gegevensinvoer kunt u gebruikmaken van asymmetrische coderingsmechanismen om batchgegevens veilig naar het Experience Platform over te brengen. Momenteel, zijn de gesteunde asymmetrische encryptiemechanismen PGP en GPG.
+U kunt gecodeerde gegevensbestanden via batchbronnen voor cloudopslag opnemen in Adobe Experience Platform. Met gecodeerde gegevensinvoer kunt u gebruikmaken van asymmetrische coderingsmechanismen om batchgegevens veilig naar het Experience Platform over te brengen. Momenteel, zijn de gesteunde asymmetrische encryptiemechanismen PGP en GPG.
 
 De gecodeerde gegevensinvoer verloopt als volgt:
 
@@ -27,7 +27,7 @@ De gecodeerde gegevensinvoer verloopt als volgt:
 
 Dit document bevat stappen voor het genereren van een sleutelpaar voor versleuteling van gegevens en het invoeren van gecodeerde gegevens naar het Experience Platform met behulp van bronnen voor cloudopslag.
 
-## Aan de slag
+## Aan de slag {#get-started}
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
@@ -39,9 +39,9 @@ Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van
 
 Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../landing/api-guide.md).
 
-### Ondersteunde bestandsextensies voor gecodeerde bestanden
+### Ondersteunde bestandsextensies voor gecodeerde bestanden {#supported-file-extensions-for-encrypted-files}
 
-De lijst met ondersteunde bestandsextensies voor gecodeerde bestanden ziet er als volgt uit:
+De lijst met ondersteunde bestandsextensies voor gecodeerde bestanden is:
 
 * .csv
 * .tsv
@@ -74,6 +74,8 @@ POST /data/foundation/connectors/encryption/keys
 
 **Verzoek**
 
++++Voorbeeldverzoek weergeven
+
 Het volgende verzoek produceert een encryptiesleutel gebruikend het PGP encryptiealgoritme.
 
 ```shell
@@ -97,7 +99,11 @@ curl -X POST \
 | `encryptionAlgorithm` | Het type van encryptiealgoritme dat u gebruikt. De ondersteunde coderingstypen zijn `PGP` en `GPG`. |
 | `params.passPhrase` | Passphrase verstrekt een extra laag van bescherming voor uw encryptiesleutels. Op verwezenlijking, slaat het Experience Platform passphrase in een verschillend veilige kluis van de openbare sleutel op. U moet een niet-lege tekenreeks opgeven als een wachtwoordzin. |
 
++++
+
 **Antwoord**
+
++++Voorbeeldreactie van weergave
 
 Een succesvolle reactie keert uw Base64-Gecodeerde openbare sleutel, openbare zeer belangrijke identiteitskaart, en de vervaltijd van uw sleutels terug. De verlooptijd wordt automatisch ingesteld op 180 dagen na de datum waarop de sleutel wordt gegenereerd. Vervaltijd kan momenteel niet worden geconfigureerd.
 
@@ -115,9 +121,93 @@ Een succesvolle reactie keert uw Base64-Gecodeerde openbare sleutel, openbare ze
 | `publicKeyId` | De openbare sleutel-id wordt gebruikt om een gegevensstroom te maken en uw gecodeerde gegevens voor cloudopslag in te voeren in het Experience Platform. |
 | `expiryTime` | De vervaltijd bepaalt de vervaldatum van uw encryptie zeer belangrijke paar. Deze datum wordt automatisch ingesteld op 180 dagen na de datum waarop de sleutel is gegenereerd en wordt weergegeven in een unieke tijdstempelindeling. |
 
-+++ (Optioneel) Een paar verificatietoetsen voor ondertekening maken voor ondertekende gegevens
++++
 
-### Door klant beheerd sleutelpaar maken
+### Coderingssleutels ophalen {#retrieve-encryption-keys}
+
+Om alle encryptiesleutels in uw organisatie terug te winnen, doe een GET verzoek aan `/encryption/keys` endpoit=nt.
+
+**API-indeling**
+
+```http
+GET /data/foundation/connectors/encryption/keys
+```
+
+**Verzoek**
+
++++Voorbeeldverzoek weergeven
+
+Het volgende verzoek wint alle encryptiesleutels in uw organisatie terug.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Antwoord**
+
++++Voorbeeldreactie van weergave
+
+Een geslaagde reactie retourneert uw versleutelingsalgoritme, openbare sleutel, id van de openbare sleutel en de bijbehorende vervaltijd van de sleutels.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### Coderingssleutels ophalen met id {#retrieve-encryption-keys-by-id}
+
+Om een specifieke reeks encryptiesleutels terug te winnen, doe een verzoek van de GET aan `/encryption/keys` eindpunt en verstrek uw openbare zeer belangrijke identiteitskaart als kopbalparameter.
+
+**API-indeling**
+
+```http
+GET /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**Verzoek**
+
++++Voorbeeldverzoek weergeven
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Antwoord**
+
++++Voorbeeldreactie van weergave
+
+Een geslaagde reactie retourneert uw versleutelingsalgoritme, openbare sleutel, id van de openbare sleutel en de bijbehorende vervaltijd van de sleutels.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### Door klant beheerd sleutelpaar maken {#create-customer-managed-key-pair}
 
 U kunt desgewenst een sleutelpaar voor handtekeningverificatie maken om uw gecodeerde gegevens te ondertekenen en in te voeren.
 
@@ -134,6 +224,8 @@ POST /data/foundation/connectors/encryption/customer-keys
 ```
 
 **Verzoek**
+
++++Voorbeeldverzoek weergeven
 
 ```shell
 curl -X POST \
@@ -154,7 +246,11 @@ curl -X POST \
 | `encryptionAlgorithm` | Het type van encryptiealgoritme dat u gebruikt. De ondersteunde coderingstypen zijn `PGP` en `GPG`. |
 | `publicKey` | De openbare sleutel die aan uw klant beheerde sleutels beantwoordt die voor het ondertekenen van uw gecodeerd worden gebruikt. Deze sleutel moet Base64-Gecodeerd zijn. |
 
++++
+
 **Antwoord**
+
++++Voorbeeldreactie van weergave
 
 ```json
 {    
@@ -206,11 +302,13 @@ Om een gegevensstroom tot stand te brengen, doe een verzoek van de POST aan `/fl
 POST /flows
 ```
 
-**Verzoek**
-
 >[!BEGINTABS]
 
 >[!TAB Een gegevensstroom maken voor gecodeerde gegevensinvoer]
+
+**Verzoek**
+
++++Voorbeeldverzoek weergeven
 
 Met de volgende aanvraag wordt een gegevensstroom gemaakt voor het invoeren van gecodeerde gegevens voor een bron voor cloudopslag.
 
@@ -268,8 +366,28 @@ curl -X POST \
 | `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day`, of `week`. |
 | `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie wordt ingesteld als `once` en moet groter zijn dan of gelijk zijn aan `15` voor andere frequentiewaarden. |
 
++++
+
+**Antwoord**
+
++++Voorbeeldreactie van weergave
+
+Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom voor uw gecodeerde gegevens.
+
+```json
+{
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
++++
 
 >[!TAB Een gegevensstroom maken om gecodeerde en ondertekende gegevens in te voeren]
+
+**Verzoek**
+
++++Voorbeeldverzoek weergeven
 
 ```shell
 curl -X POST \
@@ -318,9 +436,11 @@ curl -X POST \
 | --- | --- |
 | `params.signVerificationKeyId` | De sleutel-id voor tekenverificatie is hetzelfde als de openbare-sleutelid die is opgehaald na het delen van de openbare sleutel met Base64-codering met Experience Platform. |
 
->[!ENDTABS]
++++
 
 **Antwoord**
+
++++Voorbeeldreactie van weergave
 
 Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom voor uw gecodeerde gegevens.
 
@@ -331,10 +451,92 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom voor
 }
 ```
 
++++
 
->[!BEGINSHADEBOX]
+>[!ENDTABS]
 
-**Beperkingen op terugkerende inname**
+### Versleutelingssleutels verwijderen {#delete-encryption-keys}
+
+Als u de coderingssleutels wilt verwijderen, vraagt u een DELETE aan de `/encryption/keys` eindpunt en verstrek uw openbare zeer belangrijke identiteitskaart als kopbalparameter.
+
+**API-indeling**
+
+```http
+DELETE /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**Verzoek**
+
++++Voorbeeldverzoek weergeven
+
+```shell
+curl -X DELETE \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Antwoord**
+
+Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
+
+### Coderingssleutels valideren {#validate-encryption-keys}
+
+Om uw encryptiesleutels te bevestigen, doe een verzoek van de GET aan `/encryption/keys/validate/` eindpunt en verstrek openbare zeer belangrijke identiteitskaart die u als kopbalparameter wilt bevestigen.
+
+```http
+GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
+```
+
+**Verzoek**
+
++++Voorbeeldverzoek weergeven
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/validate/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Antwoord**
+
+Een succesvol antwoord geeft een bevestiging dat je id&#39;s geldig of ongeldig zijn.
+
+>[!BEGINTABS]
+
+>[!TAB Geldig]
+
+Een geldige openbare sleutel-id retourneert een status van `Active` samen met uw openbare sleutel-id.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Active"
+}
+```
+
+>[!TAB Ongeldig]
+
+Een ongeldige openbare sleutel-id retourneert een status van `Expired` samen met uw openbare sleutel-id.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Expired"
+}
+```
+
+>[!ENDTABS]
+
+
+## Beperkingen op terugkerende inname {#restrictions-on-recurring-ingestion}
 
 Inname van gecodeerde gegevens ondersteunt geen inname van terugkerende of meervoudige mappen in bronnen. Alle gecodeerde bestanden moeten in één map staan. Jokertekens met meerdere mappen in één bronpad worden ook niet ondersteund.
 
@@ -356,14 +558,13 @@ In dit scenario, zal de stroomlooppas ontbreken en een foutenmelding terugkeren 
 * ACME-klanten
    * File1.csv.gpg
    * File2.json.gpg
-   * Subfolder1
+   * Submap1
       * File3.csv.gpg
       * File4.json.gpg
       * File5.csv.gpg
 * ACME-loyaliteit
    * File6.csv.gpg
 
->[!ENDSHADEBOX]
 
 ## Volgende stappen
 
