@@ -4,16 +4,21 @@ solution: Experience Platform
 title: Overzicht van intelligente services
 description: Intelligente services stellen marketinganalisten en praktijkmensen in staat om gebruik te maken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen van de klantervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap. Daarnaast kunnen marketingspecialisten voorspellingen activeren in Adobe Experience Cloud, Adobe Experience Platform en toepassingen van derden.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: edc812c2725f92d71af30a3107de067f85ca1235
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
 
-# Overzicht van intelligente services
+# Overzicht van intelligente services {#intelligent-services-overview}
 
-Intelligente services stellen marketinganalisten en praktijkmensen in staat om gebruik te maken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen van de klantervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap. Daarnaast kunnen marketingmedewerkers voorspellingen activeren in [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform]en toepassingen van derden.
+>[!CONTEXTUALHELP]
+>id="platform_intelligent-services_home"
+>title="Overzicht van intelligente services"
+>abstract=""
+
+Intelligente services stellen marketinganalisten en praktijkmensen in staat om gebruik te maken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen van de klantervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap. Daarnaast kunnen marketingspecialisten voorspellingen activeren in [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform]en toepassingen van derden.
 
 De volgende video is ontworpen om uw begrip van de Intelligente Diensten te steunen. In deze video wordt met voorbeelden van gevallen van zakelijk gebruik een workflow op hoog niveau uitgelegd en worden de mogelijkheden van zowel Attribution AI als Customer AI beschreven.
 
@@ -25,11 +30,11 @@ Intelligente services, gebaseerd op [!DNL Adobe Experience Platform]biedt market
 
 ### Kostenefficiënte snelheid van de markt
 
-Adobe beschikt over AI/ML-expertise in combinatie met uitgebreide CXM-ervaring, en Intelligente services zijn speciaal ontworpen voor marketeers om AI/ML onmiddellijk van de grond te krijgen voor gangbare gevallen van marketinggebruik zonder dat schaarse en dure gegevenswetenschappers hoeven aan te werven, waardoor de snelheid van de markt en actionabiliteit worden versneld.
+Adobe beschikt over AI/ML-expertise in combinatie met uitgebreide CXM-ervaring, en Intelligente services zijn speciaal ontworpen voor marketeers om AI/ML onmiddellijk van de grond te krijgen voor gangbare gevallen van marketinggebruik zonder dat schaarse en dure gegevenswetenschappers hoeven te verhuren, waardoor de snelheid van de markt en actionabiliteit worden versneld.
 
 ### Hogere nauwkeurigheid in voorspellende inzichten
 
-ontwikkeld met het hoogste nauwkeurigheidsniveau dat voortvloeit uit de toepassing van geavanceerde algoritmische AI/ML-modellen; de mogelijkheid om AI/ML op een gemeenschappelijke gegevensset met de diepte en granulariteit uit te voeren om het segmenteren en dicteren van voorspellingen mogelijk te maken; en intelligentie om te verstrekken wat en waarom achter voorspelbare klanteninzichten.
+Ontwikkeld met het hoogste niveau van nauwkeurigheid dat resulteert uit de vaststelling van geavanceerde algoritmische AI/ML-modellen; de mogelijkheid om AI/ML uit te voeren op een gemeenschappelijke dataset met de diepte en granulariteit om het snijden en dicing van voorspellingen toe te laten; en intelligentie om te verstrekken wat en waarom achter voorspellende klanteninzichten.
 
 ### Snelle tijd aan inzicht en ROI
 
@@ -47,7 +52,7 @@ De marketinganalist configureert de gewenste voorspellingen door bedrijfsregels 
 
 ### Voorspelend
 
-Nadat de modellen klaar zijn met training en scoren, worden de scores weer in het Platform geschreven.
+Nadat de modellen klaar zijn met training en scoring, worden de scores teruggeschreven naar Platform.
 
 ### Handeling
 

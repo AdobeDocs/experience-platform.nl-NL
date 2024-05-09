@@ -5,14 +5,19 @@ title: Publiceer een Model als Dienst in de Werkruimte van de Wetenschap van Geg
 type: Tutorial
 description: Met de Adobe Experience Platform Data Science Workspace kunt u uw getrainde en geëvalueerde Model als service publiceren, zodat gebruikers binnen uw organisatie gegevens kunnen scoren zonder dat ze zelf modellen hoeven te maken.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 74dd4cb786cb96c04d15005fe869ff861093edc3
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
-# Publiceer een model als dienst in de Werkruimte van de Wetenschap van Gegevens UI
+# Publiceer een model als dienst in de Werkruimte van de Wetenschap van Gegevens UI {#publish-a-model-as-a-service}
+
+>[!CONTEXTUALHELP]
+>id="platform_intelligent-services_publishmodel"
+>title="Een model publiceren als service"
+>abstract=""
 
 Met de Adobe Experience Platform Data Science Workspace kunt u uw getrainde en geëvalueerde Model als service publiceren, zodat gebruikers binnen uw organisatie gegevens kunnen scoren zonder dat ze zelf modellen hoeven te maken.
 
@@ -46,9 +51,9 @@ Selecteren **[!UICONTROL Finish]** om de dienst tot stand te brengen en aan **[!
 
 ![](../images/models-recipes/publish-model/service_gallery.png)
 
-## Score met een service {#access-a-service}
+## Score met gebruik van een service {#access-a-service}
 
-Selecteer in Adobe Experience Platform de optie **[!UICONTROL Services]** tabblad in de linkernavigatiekolom voor toegang tot de **[!UICONTROL Service Gallery]**. Zoek de service die u wilt gebruiken en selecteer **[!UICONTROL Open]**.
+Selecteer in Adobe Experience Platform de optie **[!UICONTROL Services]** tabblad in de linkernavigatiekolom voor toegang tot het dialoogvenster **[!UICONTROL Service Gallery]**. Zoek de service die u wilt gebruiken en selecteer **[!UICONTROL Open]**.
 
 ![](../images/models-recipes/publish-model/open_service.png)
 
