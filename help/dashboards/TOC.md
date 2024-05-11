@@ -5,10 +5,10 @@ breadcrumb-title: Handleiding voor dashboards
 user-guide-description: Leer hoe u gegevens in Experience Platform kunt visualiseren via aanpasbare dashboards.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 8daa1c190f4c868fc12a46c66f6970704c8de8fa
+source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 24%
+source-wordcount: '132'
+ht-degree: 21%
 
 ---
 
@@ -18,8 +18,19 @@ ht-degree: 24%
 * [Overzicht van dashboards](home.md)
 * [Toegangsrechten voor dashboard](permissions.md)
 * [Overzicht van dashboards](inventory.md)
-* [Door gebruiker gedefinieerde dashboards](user-defined-dashboards.md)
+* [Dashboards](user-defined-dashboards.md)
 * [Dashboards downloaden naar PDF](download.md)
+* Data Distiller {#data-distiller}
+   * [Overzicht](data-distiller/overview.md)
+   * Aanpasbare inzichten voor uitgebreide toepassingsrapportage {#customizable-insights}
+      * [Overzicht](data-distiller/customizable-insights/overview.md)
+      * [De modus Query Pro (SQL-diagram maken)](data-distiller/customizable-insights/query-pro-mode.md)
+      * Filters {#filters}
+         * [Datumfilter](data-distiller/customizable-insights/filters/date-filter.md)
+         * [Globaal, filter](data-distiller/customizable-insights/filters/global-filter.md)
+      * [Meer weergeven](data-distiller/customizable-insights/view-more.md)
+      * [SQL weergeven](data-distiller/customizable-insights/view-sql.md)
+      * [Downloaden als CSV](data-distiller/customizable-insights/download-csv.md)
 * Beschikbare dashboards {#guides}
    * [Profielen](guides/profiles.md)
    * [Accountprofielen](guides/account-profiles.md)

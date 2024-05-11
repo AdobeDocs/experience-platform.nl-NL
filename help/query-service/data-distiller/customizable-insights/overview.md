@@ -1,9 +1,10 @@
 ---
 title: Aanpasbare inzichten
 description: Leer meer over de gebruiksgevallen, essentiële mogelijkheden en vereiste stappen voor het ontwikkelen van een aanpasbaar dashboard voor inzichten met Data Distiller. Ontdek hoe de aanpasbare mogelijkheden voor inzichten binnen Data Distiller de transparantie kunnen verbeteren en operationele inzichten kunnen verkrijgen in verschillende dimensies, zoals profielen, publiek, campagnes, reizen, rechten en toestemming.
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -11,6 +12,8 @@ ht-degree: 0%
 # Aanpasbare inzichten
 
 Creeer op maat gebaseerde rapporteringsgegevensmodellen om diepgaande inzichten te halen, strategieën te optimaliseren, en analyses aan te passen aan specifieke bedrijfsbehoeften met Gegevens Distiller Aanpasbare Inzichten. Gebruik de Customizable Insights-mogelijkheid om de transparantie te verbeteren en operationele inzichten van uw Adobe Experience Platform-gegevens te verkrijgen in verschillende dimensies, zoals profielen, publiek, campagnes, reizen, rechten en toestemming. Deze mogelijkheid biedt een veelzijdige, adaptieve oplossing om de rapporteringsgegevensmodellen van uw organisatie aan te passen aan uw specifieke bedrijfsbehoeften.
+
+Naar [uw aanpasbare inzichten zichtbaar maken](../../../dashboards/data-distiller/overview.md) u kunt [query pro, modus](../../../dashboards/data-distiller/customizable-insights/query-pro-mode.md) om complexe analyse met douaneSQL vragen te leiden en uw gegevens in gemakkelijk te interpreteren grafieken om te zetten. Gebruik query pro-modus om op maat gemaakte inzichten en inzichten op uw dashboards te maken en rekening te houden met zowel technisch als niet-technisch publiek door uw inzichten als CSV-bestanden te downloaden.
 
 In dit document worden gebruiksgevallen, essentiële functies en vereiste stappen beschreven voor het ontwikkelen van een aanpasbaar inzichtsdashboard met Data Distiller.
 

@@ -1,17 +1,18 @@
 ---
-title: Door gebruiker gedefinieerde dashboards
+title: Aangepaste dashboards
 description: Leer hoe u aangepaste dashboards kunt maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metriek zichtbaar te maken.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1552'
 ht-degree: 0%
 
 ---
 
-# Door gebruiker gedefinieerde dashboards
+# Aangepaste dashboards
 
-Met Adobe Experience Platform-dashboards kunt u snel inzicht krijgen en de visualisatie aanpassen via de door de gebruiker gedefinieerde dashboards-functie. Met deze functie kunt u aangepaste dashboards maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metrische gegevens die relevant zijn voor uw organisatie te visualiseren.
+Gebruik Adobe Experience Platform-dashboards om inzichten te versnellen en visualisatie aan te passen via de functie Dashboards. Met deze functie kunt u aangepaste dashboards maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metriek die relevant is voor uw organisatie te visualiseren.
+
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
@@ -25,15 +26,18 @@ Als u eerst een aangepast dashboard wilt maken, navigeert u naar het dashboardov
 
 ![Het dashboardoverzicht met dashboards in de linkernavigatie en &quot;creëren dashboard&quot;benadrukte.](./images/user-defined-dashboards/create-dashboard.png)
 
-Voordat u een aangepast dashboard toevoegt, is de dashboardvoorraad leeg en wordt &#39;&#39;Geen dashboards gevonden&#39;&#39; weergegeven. bericht. Zodra u hebt gemaakt, worden alle door de gebruiker gedefinieerde dashboards vermeld in de dashboardvoorraad.
+Voordat u een aangepast dashboard toevoegt, is de dashboardvoorraad leeg en wordt &#39;&#39;Geen dashboards gevonden&#39;&#39; weergegeven. bericht. Nadat u de dashboards hebt gemaakt, worden al uw dashboards weergegeven in de dashboardvoorraad.
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->Als u een bestaand dashboard wilt bewerken, selecteert u de naam van het dashboard in de inventarislijst gevolgd door het potloodpictogram (![Een potloodpictogram.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 De [!UICONTROL Create dashboard] wordt weergegeven. Voer een beschrijvende naam in voor de verzameling widgets die u wilt maken en selecteer **[!UICONTROL Save]**.
 
 ![Het dialoogvenster Het dashboard maken.](./images/user-defined-dashboards/create-dashboard-dialog.png)
+
+Gebruikers die de Data Distiller SKU hebben aangeschaft, kunnen aangepaste SQL-query&#39;s gebruiken om hun inzichten te maken. Zie de [Aanpasbare handleiding voor het maken van inzichten](./data-distiller/customizable-insights/overview.md) voor instructies over deze workflow.
 
 Het nieuwe lege dashboard wordt met de door u gekozen naam weergegeven in de linkerbovenhoek van de weergave.
 
@@ -42,13 +46,13 @@ Het nieuwe lege dashboard wordt met de door u gekozen naam weergegeven in de lin
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="Maximum aantal widgets"
->abstract="Door de gebruiker gedefinieerde dashboards ondersteunen maximaal tien widgets. Nadat u tien widgets aan uw dashboard hebt toegevoegd, [!UICONTROL Add new widget] is uitgeschakeld en wordt grijs weergegeven."
+>abstract="De Dashboard-service ondersteunt maximaal tien widgets. Nadat u tien widgets aan uw dashboard hebt toegevoegd, [!UICONTROL Add new widget] is uitgeschakeld en wordt grijs weergegeven."
 
 Selecteer in de nieuwe dashboardweergave de optie **[!UICONTROL Add new widget]** om het maken van de widget te starten.
 
 >[!IMPORTANT]
 >
->Door de gebruiker gedefinieerde dashboards ondersteunen maximaal tien widgets. Nadat u tien widgets aan uw dashboard hebt toegevoegd, [!UICONTROL Add new widget] is uitgeschakeld en wordt grijs weergegeven.
+>Elk dashboard ondersteunt maximaal tien widgets. Nadat u tien widgets aan uw dashboard hebt toegevoegd, [!UICONTROL Add new widget] is uitgeschakeld en wordt grijs weergegeven.
 
 ![Het nieuwe lege dashboard met de markering Nieuwe widget toevoegen.](./images/user-defined-dashboards/add-new-widget.png)
 
@@ -150,21 +154,25 @@ U kunt widgets opnieuw rangschikken en de grootte ervan wijzigen in deze werkrui
 
 Om ervoor te zorgen dat elke vraag voor een Adobe Real-time Customer Data Platform inzichten dashboard genoeg middelen heeft om efficiënt uit te voeren, volgt API middelgebruik door gelijkheidsgroeven aan elke vraag toe te wijzen. Het systeem kan tot vier gezamenlijke vragen verwerken, en daarom zijn vier gezamenlijke vraaggroeven beschikbaar op elk bepaald ogenblik. Vragen worden in een wachtrij geplaatst op basis van sleuven voor gelijktijdige uitvoering en wachten vervolgens in de wachtrij totdat voldoende sleuven voor gelijktijdige uitvoering beschikbaar zijn.
 
-### Een widget dupliceren
+### Een widget bewerken, dupliceren of verwijderen {#duplicate}
 
-Nadat u een widget hebt gemaakt, kunt u de gehele widget dupliceren en de kenmerken ervan aanpassen om een unieke widget te maken zonder dat u helemaal opnieuw hoeft te beginnen. Als u een widget wilt dupliceren, navigeert u eerst naar het dashboardoverzicht. Selecteer vervolgens de naam van het dashboard in de inventarislijst. Het aangepaste dashboard wordt weergegeven.
+Nadat u een widget hebt gemaakt, kunt u volledige widgets uit uw aangepaste dashboard bewerken, dupliceren of verwijderen.
 
-![De interface van het platform met dashboards en een benadrukte naam van het douanedashboard.](./images/user-defined-dashboards/dashbaord-inventory.png)
+>[!TIP]
+>
+>Als u wilt schakelen tussen een van uw bestaande aangepaste dashboards, selecteert u Dashboards in de linkernavigatiebalk en selecteert u vervolgens de dashboardnaam in de inventarislijst.
 
 Selecteer het potloodpictogram (![Een potloodpictogram.](./images/user-defined-dashboards/edit-icon.png)) rechtsboven in het aangepaste dashboard om naar de bewerkingsmodus te gaan.
 
 ![Een aangepast dashboard met het potloodpictogram gemarkeerd.](./images/user-defined-dashboards/edit-mode.png)
 
-Selecteer vervolgens de ellipsen in de rechterbovenhoek van de widget die u wilt kopiëren, gevolgd door **[!UICONTROL Duplicate]** in de lijst met beschikbare opties.
+Selecteer vervolgens de ovalen in de rechterbovenhoek van de widget die u wilt bewerken, kopiëren of verwijderen. Selecteer de gewenste actie in het vervolgkeuzemenu.
 
-![Een widget in een door de gebruiker gedefinieerd dashboard met de ellipsen en de widget Dupliceren gemarkeerd.](./images/user-defined-dashboards/duplicate.png)
+![Een widget in een aangepast dashboard met de ellipsen en de widget Dupliceren gemarkeerd.](./images/user-defined-dashboards/duplicate.png)
 
-Er wordt een dubbele widget weergegeven in het door de gebruiker gedefinieerde dashboard. Selecteer de ovalen van de nieuwe widget, gevolgd door **[!UICONTROL Edit]**, om uw nieuwe widget aan te passen.
+>[!NOTE]
+>
+>Met duplicatie kunt u de kenmerken van een inzicht aanpassen om een unieke widget te maken zonder dat u helemaal opnieuw hoeft te beginnen. Als u een widget dupliceert, wordt deze weergegeven in het aangepaste dashboard. Vervolgens kunt u de ovalen van de nieuwe widget selecteren, gevolgd door **[!UICONTROL Edit]**, om uw inzicht aan te passen.
 
 ## Volgende stappen en extra bronnen
 
@@ -172,6 +180,6 @@ Door dit document te lezen, hebt u een beter inzicht in hoe u een aangepast dash
 
 Om de beschikbare pre-gevormde metriek en visualisaties voor te ontdekken [profielen](./guides/profiles.md#standard-widgets), [segmenten](./guides/audiences.md#standard-widgets), en [bestemmingen](./guides/destinations.md#standard-widgets) dashboards, zie de lijst van standaardwidgets in hun respectieve documentatie.
 
-Bekijk de volgende video om uw inzicht in door de gebruiker gedefinieerde dashboards in Experience Platform te versterken:
+Bekijk de volgende video om uw inzicht in dashboards in Experience Platform te versterken:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
