@@ -2,7 +2,8 @@
 title: Evolueer eenmalig klantenwaarde aan levenwaarde
 description: Leer hoe u persoonlijke campagnes kunt maken om de beste complementaire producten of services te bieden op basis van de kenmerken, het gedrag en eerdere aankopen van een specifieke klant.
 feature: Use Cases
-source-git-commit: 1134ca4d8a5901b8fe125578ad7f0bc81f6a320f
+exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
+source-git-commit: 2f1008791a35f33a0379cba14b90334aebf83187
 workflow-type: tm+mt
 source-wordcount: '3154'
 ht-degree: 0%
@@ -53,7 +54,7 @@ Om dit te bereiken, bestaat de vereiste technologie uit de twee Experience Platf
 
 Hieronder volgt een architectuurweergave op hoog niveau van de verschillende componenten van Real-Time CDP en Journey Optimizer. In dit diagram ziet u hoe gegevens door de twee Experience Platform-apps lopen van gegevensverzameling tot het punt waar deze wordt geactiveerd via reizen of campagnes naar bestemmingen, om het gebruiksgeval te bereiken dat op deze pagina wordt beschreven.
 
-![Architectuur op hoog niveau visueel overzicht.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="1000" zoomable="yes"}
+![Architectuur op hoog niveau visueel overzicht.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="600" zoomable="yes"}
 
 ## Hoe het gebruiksgeval te bereiken: overzicht op hoog niveau {#achieve-the-use-case-high-level}
 
@@ -69,7 +70,7 @@ U begint door uw publiek van hoog-getaxeerde en laag-frequente klanten een beric
 
 >[!BEGINSHADEBOX]
 
-![Stap voor stap Evolueer eenmalig waarde aan levenwaarde hoog niveau visueel overzicht.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="1000" zoomable="yes"}
+![Stap voor stap Evolueer eenmalig waarde aan levenwaarde hoog niveau visueel overzicht.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="600" zoomable="yes"}
 
 1. U creeert schema&#39;s en datasets, dan merk deze voor [!UICONTROL Profile].
 2. Gegevens worden verzameld en in Experience Platform geïntegreerd via Web SDK, Mobile Edge SDK of API. Ook kan de gegevensverbinding van Analytics worden gebruikt, maar kan in reisvertraging resulteren.
@@ -303,7 +304,7 @@ Voor dit gebruiksgeval moet u twee soorten publiek maken om specifieke kenmerken
 
 Met name moet u twee soorten publiek maken en gebruiken in verschillende stappen van het gebruiksscenario, zoals in de onderstaande afbeelding wordt getoond.
 
-![Gemarkeerde doelgroepen.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="1000" zoomable="yes"}
+![Gemarkeerde doelgroepen.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="600" zoomable="yes"}
 
 >[!BEGINTABS]
 
@@ -350,7 +351,7 @@ Voor dit gebruiksgeval moet u twee aparte ritten maken:
 * De levensreis, die het bericht omvat dat u naar uw hoge waarde, lage frequentieklanten verzendt
 * De reis van de de bevestiging van de orde voor de gebruikers die op uw vraag antwoorden en een abonnement kopen.
 
-![Reizen gemarkeerd.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="1000" zoomable="yes"}
+![Reizen gemarkeerd.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="600" zoomable="yes"}
 
 Hieronder worden de precieze gegevens vermeld die voor elke tak van de Reis nodig zijn.
 
@@ -360,7 +361,7 @@ Hieronder worden de precieze gegevens vermeld die voor elke tak van de Reis nodi
 
 De levenslange reis richt het publiek van high-value en laag-frequente klanten die niet binnen de laatste 30 dagen werden gericht. Er wordt een bericht weergegeven aan deze klanten en als ze na 7 dagen nog steeds geen advertenties aanschaffen, kunt u de niet-kopers opnemen in een publiek waarnaar u betaalde mediaberichten kunt weergeven. Als ze wel een aankoop doen, kunt u de kopers instellen op een bestelbevestigingstraject, dat wordt beschreven in het afzonderlijke tabblad.
 
-![De reis van het leven high-level visueel overzicht.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Eenmalige waarde voor de reis op hoog niveau visueel overzicht."){width="2560" zoomable="yes"}
+![De reis van het leven high-level visueel overzicht.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Eenmalige waarde voor de reis op hoog niveau visueel overzicht."){width="600" zoomable="yes"}
 
 +++Gedetailleerde logica voor reizen
 
@@ -382,7 +383,7 @@ De hierboven getoonde reis volgt de volgende logica.
 
 De reis om uw bestelling te bevestigen richt zich op de vraag of een aankoop via de website of mobiele app is gedaan. Nadat een klant de aankoop van bijvoorbeeld een abonnement bij uw bedrijf heeft voltooid, kunt u deze op een bestelbevestigingstraject instellen.
 
-![Bevestiging van de reis van de bestelbevestiging van de klant op hoog niveau visueel overzicht.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Bevestiging van de reis van de bestelbevestiging van de klant op hoog niveau visueel overzicht."){width="2560" zoomable="yes"}
+![Bevestiging van de reis van de bestelbevestiging van de klant op hoog niveau visueel overzicht.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Bevestiging van de reis van de bestelbevestiging van de klant op hoog niveau visueel overzicht."){width="600" zoomable="yes"}
 
 +++Reislogica
 
