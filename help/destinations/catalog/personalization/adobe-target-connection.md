@@ -3,9 +3,9 @@ keywords: doelpersonalisatie; bestemming; ervaring doelbestemming platform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: e9777960f347e32ff6288227ef95cec9cc4c55e7
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1433'
 ht-degree: 1%
 
 ---
@@ -139,6 +139,16 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Lezen [Het publiek activeren voor verpersoonlijkingsdoelen van randen](../../ui/activate-edge-personalization-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+
+## Soorten publiek verwijderen uit een doeldoel {#remove}
+
+Er zijn extra stappen vereist om een publiek te verwijderen uit een bestaande Adobe Target-verbinding wanneer dat publiek al in een Adobe Target wordt gebruikt [activiteit](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Wanneer u een publiek probeert te verwijderen uit een Adobe Target-verbinding, treedt een fout op als het publiek wordt gebruikt door een Adobe Target-activiteit.
+
+![De beeld van UI van het platform die een fout toont die door het proberen wordt veroorzaakt om een publiek te verwijderen dat door een activiteit van het Doel wordt gebruikt.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+
+Om een publiek uit een bestemming van het Doel te verwijderen wanneer het publiek in een activiteit wordt gebruikt, moet u of het publiek uit de activiteit van het Doel eerst verwijderen die het gebruikt, of de activiteit volledig schrappen. Vervolgens kunt u het publiek verwijderen uit de doelverbinding.
+
+Als het publiek niet in een activiteit wordt gebruikt, ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** > **[!UICONTROL Select destination dataflow]** > **[!UICONTROL Activation data]** selecteert u het publiek dat u wilt verwijderen en selecteert u vervolgens **[!UICONTROL Remove audiences]**.
 
 ## Geëxporteerde gegevens {#exported-data}
 
