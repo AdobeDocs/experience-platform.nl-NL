@@ -2,9 +2,9 @@
 title: Typen gegevenselementen in de Adobe Experience Platform Web SDK Extension
 description: Leer over de verschillende types van gegevenselement die door de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform worden verstrekt.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 44fac57a30295b476910c0b37314eaebba175157
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ In de [!UICONTROL Identity map] data element, zult u de volgende stukken informa
 
 >[!TIP]
 >
->Adobe raadt aan identiteiten te verzenden die een persoon vertegenwoordigen, zoals `Luma CRM Id` als primaire identiteit.
+>Adobe beveelt aan identiteiten te verzenden die een persoon vertegenwoordigen, zoals `Luma CRM Id` als primaire identiteit.
 >
 >Als het identiteitsbewijs de personsidentificatie bevat (bijvoorbeeld `Luma CRM Id`), wordt de persoon-id de primaire id. Anders, `ECID` wordt de primaire identiteit.
 
@@ -52,11 +52,14 @@ Wanneer u bepaalde velden van uw schema opent, zoals `web.webPageDetails.URL`, w
 
 ## Variabele {#variable}
 
-Een andere manier om XDM-objecten te maken, is het gebruik van de **[!UICONTROL Variable]** gegevenselement. Terwijl het XDM-objectelement wordt gemaakt wanneer ernaar wordt verwezen, bijvoorbeeld binnen een `sendEvent` de **[!UICONTROL Variable]** gegevenselement kan worden bijgewerkt via [!UICONTROL Update variable] handelingen. Als u het gegevenselement wilt gebruiken, selecteert u de juiste Adobe Experience Platform-sandbox en -schema.
+U kunt payload-objecten maken met de opdracht **[!UICONTROL Variable]** gegevenselement. Beide [!UICONTROL XDM] en [!UICONTROL Data] objecten worden ondersteund.
 
-![UI-afbeelding die het scherm Gegevenselement maken weergeeft.](assets/variable-data-element.png)
+* Wanneer u [!UICONTROL XDM]selecteert u de gewenste [!UICONTROL Sandbox] en [!UICONTROL Schema].
+* Wanneer u [!UICONTROL Data]selecteert u de gewenste oplossingen. Beschikbare oplossingen omvatten [!UICONTROL Adobe Analytics] en [!UICONTROL Adobe Target].
 
-Zodra u dit gegevenselement hebt gecreeerd kunt u gebruiken [Variabele bijwerken](./action-types.md#update-variable) handelingen om het gegevenselement te wijzigen. Gebruik vervolgens binnen de send-gebeurtenisacties het element met variabele gegevens voor de XDM-optie.
+![Afbeelding van de interface Codes waarin de opties voor gegevenselementen worden weergegeven.](assets/variable-data-element.png)
+
+Nadat u dit gegevenselement hebt gemaakt, kunt u de opdracht [Variabele bijwerken](./action-types.md#update-variable) handeling om deze te wijzigen. Indien gereed, kunt u dit gegevenselement opnemen in het dialoogvenster [Gebeurtenis Send](./action-types.md#send-event) handeling om gegevens naar een gegevensstroom te verzenden.
 
 ## Volgende stappen {#next-steps}
 

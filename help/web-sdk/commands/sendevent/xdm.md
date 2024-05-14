@@ -1,9 +1,10 @@
 ---
 title: xdm
-description: Het schema-uitgelijnde object dat naar de Adobe is verzonden.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Leer hoe u gegevens naar Adobe verzendt via het XDM-schema-uitgelijnde object.
+exl-id: 1d8ef191-aed6-4c8b-a1fd-614bd8ed73da
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -14,11 +15,11 @@ De `xdm` -object bevat de gegevenslading die naar de Adobe is verzonden. Velden 
 
 Adobe Experience Platform gebruikt schema&#39;s om de gegevensstructuur op een consistente en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en dus waarde te verkrijgen van gegevens.
 
-Dit veld heeft een maximum van 32 kB.
+Dit object heeft een maximumlimiet van 32 kB.
 
 ## Vorm het voorwerp XDM gebruikend de uitbreiding van SDK van het Web
 
-Stel de **[!UICONTROL XDM]** binnen de acties van een labelregel. De [XDM-object](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) biedt een intuïtieve interface voor het toewijzen van andere gegevenselementen aan hun respectievelijke XDM-velden.
+Stel de **[!UICONTROL XDM]** -object binnen de handelingen van een labelregel. De [XDM-object](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) biedt een intuïtieve interface voor het toewijzen van andere gegevenselementen aan hun respectievelijke XDM-velden.
 
 1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
@@ -39,7 +40,7 @@ alloy("sendEvent", {
 });
 ```
 
-In het volgende voorbeeld wordt het [Formuliergroep Commerce Details](/help/xdm/field-groups/event/commerce-details.md):
+In het volgende voorbeeld wordt het [Commerce-detailschema, veldgroep](/help/xdm/field-groups/event/commerce-details.md):
 
 ```javascript
 alloy("sendEvent",{

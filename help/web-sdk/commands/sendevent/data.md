@@ -1,27 +1,29 @@
 ---
 title: data
-description: Leer hoe u niet-XDM-gegevens naar de Adobe verzendt.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Leer hoe te om niet-XDM gegevens naar Adobe, door het gegevensvoorwerp te verzenden.
+exl-id: 537fc34e-3cda-4aa7-ae0d-0d3ef4b89848
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
 
-# data
 
-De `data` staat u toe om gegevens naar Adobe te verzenden die geen XDM schema aanpast. Het is nuttig in niet-XDM scenario&#39;s, zoals het bijwerken van en [Adobe Target-profiel](/help/web-sdk/personalization/adobe-target/target-overview.md). Wanneer gegevens bij Adobe aankomen, kunt u het hulpmiddel van de gegevenstoewijzing gebruiken om XDM gebieden aan elk gebied in toe te wijzen `data` eigenschap.
+# `data`
+
+De `data` kunt u een payload naar een Adobe verzenden die niet overeenkomt met een XDM-schema. Het is handig in niet-XDM-scenario&#39;s, zoals het rechtstreeks verzenden van gegevens naar Adobe Analytics, Adobe Target of Adobe Audience Manager. Wanneer gegevens bij de gegevensstroom aankomen, kunt u [Toewijzing van gegevensvoorvoegsel](/help/data-prep/ui/mapping.md) XDM-velden toewijzen aan elk veld in het dialoogvenster `data` object.
 
 >[!IMPORTANT]
 >
->Gegevens binnen deze eigenschap moeten ten minste een van de volgende handelingen hebben:
+>Gegevens binnen dit object moeten ten minste een van de volgende handelingen hebben:
 >
->* De dienst in de gegevensstroom moet worden gevormd om gegevens van een specifiek bezit in terug te winnen `data` object
->* Elke eigenschap moet worden toegewezen aan een XDM-veld
+>* De dienst in de gegevensstroom moet worden gevormd om gegevens van een bepaald bezit in terug te winnen `data` object.
+>* De opgegeven eigenschap moet aan een XDM-veld worden toegewezen met behulp van data prep.
 >
->Als een bepaald gebied niet aan een XDM gebied in kaart wordt gebracht of door de gevormde dienst wordt gebruikt, wordt dat gegeven permanent verloren.
+>Als een bepaald bezit niet aan een XDM gebied in kaart wordt gebracht of door de gevormde dienst wordt gebruikt, wordt dat gegeven permanent verloren.
 
-## Gebruik het gegevensbezit gebruikend de de markeringsuitbreiding van SDK van het Web
+## Gebruik de `data` object via de Web SDK-tagextensie {#tag-extension}
 
 Geef een gegevenselement op in het dialoogvenster **[!UICONTROL Data]** binnen de acties van een labelregel.
 
@@ -34,12 +36,16 @@ Geef een gegevenselement op in het dialoogvenster **[!UICONTROL Data]** binnen d
 1. Geef het gegevenselement op dat het gewenste object bevat in het dialoogvenster **[!UICONTROL Data]** veld.
 1. Klikken **[!UICONTROL Keep Changes]** en voer vervolgens uw publicatieworkflow uit.
 
-## De eigenschap data gebruiken met de Web SDK JavaScript-bibliotheek
+## Gebruik de `data` object via de Web SDK JavaScript-bibliotheek {#library}
 
-Stel de `data` eigenschap als onderdeel van het JSON-object binnen de parameter van het object `sendEvent` gebruiken. Voor gegevens die u in de gegevensstroom wilt toewijzen, kunt u deze eigenschap structureren op een manier die u wilt. Voor gegevens die door bepaalde diensten worden gebruikt, zorg ervoor dat de objecten hiërarchie aanpast wat de dienst verwacht. U kunt beide opties opnemen `data` en de [`xdm`](xdm.md) object in hetzelfde `sendEvent` gebruiken.
+Stel de `data` object als onderdeel van het JSON-object binnen de parameter van het object `sendEvent` gebruiken. Voor gegevens die u wilt toewijzen in de gegevensstroom, kunt u dit object structureren op de manier die u wilt. Voor gegevens die door bepaalde diensten worden gebruikt, zorg ervoor dat de objecten hiërarchie aanpast wat de dienst verwacht. U kunt beide opties opnemen `data` en de [`xdm`](xdm.md) object in hetzelfde `sendEvent` gebruiken.
 
 ```javascript
 alloy("sendEvent", {
   "data": dataObject
 });
 ```
+
+## Gebruik de `data` object met Adobe Analytics {#analytics}
+
+U kunt de `data` -object met Adobe Analytics om gegevens naar een rapportsuite zonder een XDM-schema te verzenden. Variabelen zijn geconfigureerd om dezelfde syntaxis te gebruiken als [!DNL AppMeasurement] variabelen, die het verbeteringsproces aan het Web SDK vereenvoudigen. Zie [Gegevensobjectvariabele toewijzen aan Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) in de Adobe Analytics-implementatiegids voor meer informatie.
