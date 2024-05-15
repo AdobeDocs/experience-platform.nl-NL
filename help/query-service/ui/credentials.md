@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding Query Service Credentials
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt om query's te schrijven en uit te voeren, eerder uitgevoerde query's weer te geven en query's te openen die zijn opgeslagen door gebruikers binnen uw organisatie.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
+source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1759'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,28 @@ De **[!UICONTROL Expiring credentials]** Deze sectie bevat de volgende informati
 >![Het lusje van de montages van de Admin Console met Privacy en Veiligheid, de montages van de Authentificatie, en het Max zittingsleven benadrukte.](../images/ui/credentials/max-session-life.png)
 >
 >Raadpleeg de Help bij de Adobe voor meer informatie over de [Geavanceerde instellingen](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) aangeboden door Admin Console.
+
+### Verbinding maken met Customer Journey Analytics-gegevens binnen querysessies {#connect-to-customer-journey-analytics}
+
+Gebruik de Customer Journey Analytics BI uitbreiding met Power BI of Tableau om tot uw Customer Journey Analytics toegang te hebben [gegevensweergaven](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) met SQL. Door de Dienst van de Vraag met de uitbreiding te integreren BI, kunt u tot uw gegevensmeningen direct binnen de zittingen van de Dienst van de Vraag toegang hebben. Deze integratie stroomlijnt functionaliteit voor hulpmiddelen BI die de Dienst van de Vraag als hun interface PostgreSQL gebruiken. Deze functionaliteit elimineert de behoefte om gegevensmeningen in hulpmiddelen van BI te dupliceren, verzekert verenigbare rapportering over platforms, en vereenvoudigt de integratie van de gegevens van de Customer Journey Analytics met andere bronnen in platforms van BI.
+
+Raadpleeg de documentatie voor meer informatie over [Verbind de Dienst van de Vraag met een verscheidenheid van Desktopcliënttoepassingen](../clients/overview.md) zoals [Power BI](../clients/power-bi.md) of [Tableau](../clients/tableau.md)
+
+>[!IMPORTANT]
+>
+>Voor het gebruik van deze functionaliteit zijn een Customer Journey Analytics-werkruimteproject en een gegevensweergave vereist.
+
+Als u toegang wilt krijgen tot de gegevens van uw Customer Journey Analytics in Power BI of Tableau, selecteert u de optie [!UICONTROL Database] vervolgkeuzelijst, selecteert u vervolgens `prod:cja` uit de beschikbare opties. Kopieer vervolgens uw [!DNL Postgres] geloofsbrieven parameters (Gastheer, Haven, Gegevensbestand, Gebruikersnaam, en anderen) voor gebruik in uw Power BI of configuratie Tableau.
+
+![Het lusje van de geloofsbrieven van de Dienst van de Vraag met benadrukt gegevensbestanddropdown.](../images/ui/credentials/database-dropdown.png)
+
+>[!NOTE]
+>
+>Wanneer u Power BI of Tableau met Customer Journey Analytics verbindt, wordt de &quot;gezamenlijke zittingen&quot;van de Dienst van de Vraag het recht verbruikt. Als extra sessies en query&#39;s vereist zijn, kan een extra add-on voor het pakket voor gebruikers van ad-hocquery&#39;s worden aangeschaft om vijf extra gelijktijdige sessies en één extra gelijktijdige query te verkrijgen.
+
+U kunt tot uw gegevens van de Customer Journey Analytics rechtstreeks van de Redacteur van de Vraag of CLI van Postgres toegang hebben. Om dit te doen, verwijs naar `cja` database wanneer u uw query schrijft. Zie de Query-editor [queryhandleiding](./user-guide.md#query-authoring) voor meer informatie over het schrijven, uitvoeren en opslaan van vragen.
+
+Zie de [BI-extensiegids](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) voor volledige instructies over de toegang tot van uw de gegevensmeningen van de Customer Journey Analytics met SQL.
 
 ## Niet-verlopen referenties {#non-expiring-credentials}
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verbinding maken met Power BI-zoekservice
 description: Dit document doorloopt de stappen voor het verbinden van Power BI met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 1%
+source-wordcount: '1070'
+ht-degree: 0%
 
 ---
 
@@ -43,11 +43,15 @@ De [!DNL PostgreSQL] databasedialoogvenster wordt weergegeven waarin waarden voo
 
 Deze vereiste waarden zijn afkomstig van je Adobe Experience Platform-gebruikersgegevens. Meld u aan bij de gebruikersinterface van het platform en selecteer **[!UICONTROL Queries]** van de linkernavigatie, gevolgd door **[!UICONTROL Credentials]**. Voor meer informatie over het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, gelieve te lezen [handleiding voor referenties](../ui/credentials.md).
 
+>[!IMPORTANT]
+>
+>Als gebruiker van Power BI of van Tableau, kunt u Customer Journey Analytics met uw hulpmiddelen van BI van de geloofsbrieven tabel van de Dienst van de Vraag verbinden. Zie de documentatie bij de referenties voor instructies over hoe u [Sluit uw hulpmiddelen van BI aan Customer Journey Analytics aan](../ui/credentials.md#connect-to-customer-journey-analytics).
+
 ![De werkruimte van de Vragen van het Experience Platform met het lusje van Referenties en het Verlopen van geloofsbrieven benadrukte.](../images/clients/power-bi/query-service-credentials-page.png)
 
-In de **[!DNL Server]** van het [!DNL PostgreSQL database] in, voert u de waarde in voor de host die wordt gevonden in de Query Service [!UICONTROL Credentials] sectie. Voor productie, voeg haven toe `:80` tot het einde van de hosttekenreeks. Bijvoorbeeld, `made-up.platform-query.adobe.io:80`.
+In de **[!DNL Server]** van het [!DNL PostgreSQL database] in, voert u de waarde in voor de host die wordt gevonden in de Query Service [!UICONTROL Credentials] sectie. Voor productie, voeg haven toe `:80` tot het einde van de hosttekenreeks. Bijvoorbeeld: `made-up.platform-query.adobe.io:80`.
 
-De **[!DNL Database]** het veld kan &quot;all&quot; of een tabelnaam van een gegevensset zijn. Bijvoorbeeld, `prod:all`.
+De **[!DNL Database]** het veld kan &quot;all&quot; of een tabelnaam van een gegevensset zijn. Bijvoorbeeld: `prod:all`.
 
 >[!IMPORTANT]
 >
