@@ -1,7 +1,8 @@
 ---
 title: Overzicht van het dashboard controleren
 description: Leer hoe u het dashboard voor bewaking gebruikt in de gebruikersinterface van Adobe Experience Platform
-source-git-commit: 21c69ff834dbd0e32831c5c9071e4255fd8258e1
+exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 0%
@@ -100,7 +101,7 @@ Selecteren **[!UICONTROL Profiles]** om de snelheid van het verwerken van uw pro
 
 >[!TAB Doelgroepen]
 
-Selecteren **[!UICONTROL Audiences]** om metriek op uw publiek en segmentatietaken te bekijken. Lees de handleiding op [gegevens voor het publiek controleren](monitor-segments.md) voor meer informatie .
+Selecteren **[!UICONTROL Audiences]** om metriek op uw publiek en segmentatietaken te bekijken. Lees de handleiding op [gegevens voor het publiek controleren](monitor-audiences.md) voor meer informatie .
 
 ![Het dashboard voor bewaking in de gebruikersinterface met de geselecteerde geluidskaart.](../assets/ui/monitor-overview/audiences.png)
 
@@ -135,5 +136,5 @@ Door dit document te lezen, kunt u nu door het controledashboard in UI navigeren
 * [Brongegevens controleren](monitor-sources.md).
 * [Identiteitsgegevens controleren](monitor-identities.md).
 * [Profielgegevens controleren](monitor-profiles.md).
-* [publieksgegevens controleren](monitor-segments.md).
+* [publieksgegevens controleren](monitor-audiences.md).
 * [Gegevens van doelen controleren](monitor-destinations.md).

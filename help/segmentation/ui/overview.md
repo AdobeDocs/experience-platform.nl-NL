@@ -3,7 +3,7 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: bc501b96a9ec6b723f4598d048b399fef82d54b2
+source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
 workflow-type: tm+mt
 source-wordcount: '4065'
 ht-degree: 0%
@@ -112,7 +112,7 @@ U kunt extra velden toevoegen aan de [!UICONTROL Browse] pagina door ![het picto
 | [!UICONTROL Name] | De naam van het publiek. |
 | [!UICONTROL Profile count] | Het totale aantal profielen dat voor het publiek in aanmerking komt. |
 | [!UICONTROL Origin] | De oorsprong van het publiek. Dit geeft aan waar het publiek vandaan komt. Mogelijke waarden zijn Segmentatieservice, Aangepast uploaden, Audience-compositie en Audience Manager. |
-| [!UICONTROL Lifecycle status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft`, `Inactive`, `Published`, en `Archived`. Lees voor meer informatie over levenscyclusstatussen, zoals wat de verschillende statussen betekenen en hoe u het publiek naar verschillende levenscyclustoestanden kunt verplaatsen [levenscyclusstatussectie van de veelgestelde vragen over segmentatie](../faq.md#lifecycle-status). |
+| [!UICONTROL Lifecycle status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft`, `Inactive`, en `Published`. Lees voor meer informatie over levenscyclusstatussen, zoals wat de verschillende statussen betekenen en hoe u het publiek naar verschillende levenscyclustoestanden kunt verplaatsen [levenscyclusstatussectie van de veelgestelde vragen over segmentatie](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | Een waarde die aangeeft hoe vaak de gegevens van het publiek worden bijgewerkt. Mogelijke waarden voor dit veld zijn [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], en [!UICONTROL Not Scheduled]. |
 | [!UICONTROL Last updated by] | De naam van de persoon die het publiek het laatst heeft bijgewerkt. |
 | [!UICONTROL Created] | De datum en tijd, in UTC, dat het publiek werd gecreeerd. |
@@ -422,7 +422,7 @@ Er wordt een pop-up weergegeven met alle velden die in de tabel kunnen worden we
 | Veld | Beschrijving |
 | ----- | ----------- | 
 | [!UICONTROL Name] | De naam van het publiek. |
-| [!UICONTROL Status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft`, `Inactive`, `Published`, en `Archived`. |
+| [!UICONTROL Status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft`, `Inactive`, en `Published`. |
 | [!UICONTROL Created] | De tijd en datum waarop het publiek is gemaakt. |
 | [!UICONTROL Created by] | De naam van de persoon die het publiek heeft gemaakt. |
 | [!UICONTROL Updated] | De tijd en datum waarop het publiek voor het laatst is bijgewerkt. |

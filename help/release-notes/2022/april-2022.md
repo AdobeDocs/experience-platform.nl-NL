@@ -2,16 +2,16 @@
 title: Adobe Experience Platform Release Notes April 2022
 description: In de release van april 2022 staat een opmerking voor Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
-source-wordcount: '2781'
+source-wordcount: '2547'
 ht-degree: 4%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 27 april 2022**
+**Releasedatum: donderdag 27 april 2022**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
@@ -69,7 +69,7 @@ Dataflows zijn een weergave van taken die gegevens over het hele platform verpla
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Segmentdashboard | U kunt het controledashboard nu gebruiken om de gegevensstromen voor segmenten te controleren. Lees de handleiding voor meer informatie op [het controleren van segmenten in UI](../../dataflows/ui/monitor-segments.md) |
+| Segmentdashboard | U kunt het controledashboard nu gebruiken om de gegevensstromen voor segmenten te controleren. Lees de handleiding voor meer informatie op [het controleren van segmenten in UI](../../dataflows/ui/monitor-audiences.md) |
 
 Voor meer algemene informatie over gegevensstromen raadpleegt u de [gegevensstroomoverzicht](../../dataflows/home.md). Als u meer wilt weten over segmentatie, raadpleegt u de [segmentatieoverzicht](../../segmentation/home.md).
 
@@ -109,7 +109,7 @@ Als u deze bestemmingen in de fase van Bèta hebt gebruikt, gelieve nota te neme
 
 **Nieuwe bestemmingen**
 
-| Bestemming | Beschrijving |
+| Doel | Beschrijving |
 | ----------- | ----------- |
 | [!DNL Criteo] | Gegevens verbinden met en activeren op de [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) reclameplatform. |
 | [!DNL Sendgrid] | Gegevens verbinden met en activeren op de [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) platform voor e-mails over transacties en marketing. |
