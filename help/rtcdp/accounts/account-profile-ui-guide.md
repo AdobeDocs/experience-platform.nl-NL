@@ -5,9 +5,9 @@ description: Door het gebruik van accountprofielen kunt u met Adobe Real-time Cu
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1593'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Selecteren **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in de linke
 
 ![Tabblad Overzicht waarin widgets worden weergegeven](images/b2b-account-profile-overview.png)
 
-Zie de documentatie op de [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard voor meer informatie.
+Zie de documentatie op de [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard voor meer informatie. Zie de documentatie op [Real-time Customer Data Platform Insights-gegevensmodel B2B Edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) voor meer informatie over hoe uw modellen van inzichten gegevensmodellen kunnen worden gebruikt om douanekaarten voor uw dashboards tot stand te brengen.
 
 ## Configureer lead in account matching {#configure-lead-to-account-matching}
 
