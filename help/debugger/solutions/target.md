@@ -2,9 +2,9 @@
 title: Adobe Target-implementatie met Adobe Experience Platform Debugger testen
 description: Leer hoe u Adobe Experience Platform Debugger kunt gebruiken om een website die met Adobe Target is ingeschakeld, te testen en er fouten in op te sporen.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: bc6069f2cfa4459860fe98588b293ffeed7fb1f1
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1035'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ Selecteren **[!DNL Configuration]** om een selectie van extra het zuiveren hulpm
 | Het gereedschap Foutopsporing | Beschrijving |
 | --- | --- |
 | [!DNL Target Console Logging] | Wanneer toegelaten, staat u tot de logboeken van at.js in de browser consoletabblad toegang. Deze functie kan ook worden ingeschakeld door een `mboxDebug` vraag (met om het even welke waarde) aan browser URL. |
-| [!DNL Target Diable] | Als deze optie is ingeschakeld, worden alle functies van het doel op de pagina uitgeschakeld. Dit kan worden gebruikt om te bepalen als een specifiek aanbod van het Doel is wat de kwestie op de pagina veroorzaakt. |
+| [!DNL Target Disable] | Als deze optie is ingeschakeld, worden alle functies van het doel op de pagina uitgeschakeld. Dit kan worden gebruikt om te bepalen als een specifiek aanbod van het Doel is wat de kwestie op de pagina veroorzaakt. |
 | [!DNL Target Trace] | **Opmerking**: U moet zijn aangemeld om deze functie in te schakelen.<br><br>Als deze optie is ingeschakeld, worden trackingtokens verzonden bij elke query en wordt in elke reactie een trace-object geretourneerd. `at.js` parseert de reactie `window.__targetTraces`. Elk trace-object bevat dezelfde informatie als [[!DNL Network Requests] tab], met de volgende toevoegingen:<ul><li>Een profielmomentopname, die u toestaat om attributen vóór en na verzoeken te zien.</li><li>Gelijktijdig en niet-gematcht [activiteiten](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html), waaruit blijkt waarom het huidige profiel al dan niet in aanmerking kwam voor specifieke activiteiten.<ul><li>Dit kan helpen identificeren voor welk publiek een profiel op een bepaald punt in aanmerking komt, en waarom.</li><li>Doeldocumenten bevatten meer informatie over verschillende activiteitstypen</li></ul></li></ul> |
 
 {style="table-layout:auto"}
