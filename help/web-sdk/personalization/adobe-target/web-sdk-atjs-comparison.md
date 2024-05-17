@@ -3,10 +3,10 @@ title: Het vergelijken bij.js met het Web SDK van het Experience Platform
 description: Leer hoe de at.js eigenschappen met Experience Platform Web SDK vergelijken
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;system diagram;diagram
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: ca1574f3f95840fce246fb4ed8845583fa0ff093
 workflow-type: tm+mt
-source-wordcount: '2136'
-ht-degree: 1%
+source-wordcount: '2175'
+ht-degree: 2%
 
 ---
 
@@ -608,6 +608,27 @@ alloy("sendEvent", {
 
 [Meer informatie](../rendering-personalization-content.md#manually-rendering-content)
 
+**Voorbeeld 3 - Een gebeurtenis bijhouden die is geactiveerd na het uitvoeren van een handeling**
+
+In dit voorbeeld wordt een gebeurtenis bijgehouden die is geactiveerd nadat een bepaalde handeling is uitgevoerd, zoals het klikken op een knop.
+U kunt aanvullende aangepaste parameters toevoegen via de `__adobe.target` gegevensobject.
+
+```js
+//replicates an at.js trackEvent call
+alloy("sendEvent", {
+    "type": "decisioning.propositionDisplay",
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
+                }]
+            }
+        }
+    }
+});
+```
+
 ## Een weergavewijziging activeren in een toepassing voor één pagina
 
 ### At.js gebruiken
@@ -893,7 +914,7 @@ Logboekregistratie aan de serverkant van Analytics wordt ingeschakeld wanneer An
 
 ![De UI van gegevensstromen die de montages van Analytics toont.](assets/analytics-enabled-datastream-config.png)
 
-Wanneer het Registreren van de Logboekregistraties van de Analyse van de Server de nuttige lading A4T wordt toegelaten die met Analytics moet worden gedeeld zodat Analytics rapporteert correcte beelden tonen en de omzettingen op het niveau van het Netwerk van de Rand worden gedeeld, zodat de klant geen extra verwerking hoeft te doen.
+Wanneer het Registreren van de Logboekregistraties van de Analyse van de Server de nuttige lading A4T wordt toegelaten die met Analytics moet worden gedeeld zodat Analytics rapporteert correcte beelden en omzettingen tonen op het niveau van de Edge Network wordt gedeeld, zodat de klant geen extra verwerking hoeft te doen.
 
 Hieronder wordt beschreven hoe gegevens in onze systemen stromen wanneer de Logboekregistratie van de Analytics van de Server wordt toegelaten:
 
