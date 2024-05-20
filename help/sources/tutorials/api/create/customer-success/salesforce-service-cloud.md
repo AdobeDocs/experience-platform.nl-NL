@@ -5,9 +5,9 @@ title: Een Cloud Source Connection van de Salesforce-service maken met behulp va
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met de Flow Service API kunt verbinden met Salesforce Service Cloud.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
+source-git-commit: 1f13b5fcad683b4c0ede96654e35d6f0c64d9eb7
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
@@ -32,12 +32,13 @@ De volgende secties bevatten aanvullende informatie die u nodig hebt om verbindi
 Om [!DNL Flow Service] om te verbinden met [!DNL Salesforce Service Cloud]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
 
 | Credentials | Beschrijving |
-| ---------- | ----------- |
+| --- | ---|
+| `environmentUrl` | De URL van de [!DNL Salesforce] broninstantie. |
 | `username` | De gebruikersnaam voor uw [!DNL Salesforce Service Cloud] gebruikersaccount. |
 | `password` | Het wachtwoord voor uw [!DNL Salesforce Service Cloud] account. |
 | `securityToken` | Het beveiligingstoken voor uw [!DNL Salesforce Service Cloud] account. |
 | `apiVersion` | (Optioneel) De REST API-versie van de [!DNL Salesforce Service Cloud] -instantie die u gebruikt. Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce Service Cloud] is: `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce Service Cloud] is: `cb66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
 Zie voor meer informatie over het aan de slag gaan [dit document voor de Salesforce Service Cloud](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
 
@@ -75,24 +76,26 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "username": "{USERNAME}",
+              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+              "username": "acme-salesforce-service-cloud",
               "password": "{PASSWORD}",
               "securityToken": "{SECURITY_TOKEN}"
           }
       },
       "connectionSpec": {
-          "id": "b66ab34-8619-49cb-96d1-39b37ede86ea",
+          "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
           "version": "1.0"
       }
   }'
 ```
 
 | Parameter | Beschrijving |
-| --------- | ----------- |
+| ---| --- |
+| `auth.params.environmentUrl` | De URL van uw [!DNL Salesforce Service Cloud] -instantie. |
 | `auth.params.username` | De gebruikersnaam die aan uw [!DNL Salesforce Service Cloud] account. |
 | `auth.params.password` | Het wachtwoord dat aan uw [!DNL Salesforce Service Cloud] account. |
 | `auth.params.securityToken` | Het veiligheidstoken verbonden aan uw [!DNL Salesforce Service Cloud] account. |
-| `connectionSpec.id` | De [!DNL Salesforce Service Cloud] Verbindingsspecificatie-id: `b66ab34-8619-49cb-96d1-39b37ede86ea` |
+| `connectionSpec.id` | De [!DNL Salesforce Service Cloud] Verbindingsspecificatie-id: `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
 
 **Antwoord**
 

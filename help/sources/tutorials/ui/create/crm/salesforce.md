@@ -2,9 +2,9 @@
 title: Uw Salesforce-account aansluiten via de gebruikersinterface van het Experience Platform
 description: Leer hoe u uw Salesforce-account koppelt en uw CRM-gegevens via de gebruikersinterface naar het Experience Platform brengt.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: c543590ef1806e5259da2ffb6833cd030d573ca7
+source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ U moet waarden opgeven voor de volgende referenties om verbinding te maken met u
 | Gebruikersnaam | De gebruikersnaam voor de [!DNL Salesforce] gebruikersaccount. |
 | Wachtwoord | Het wachtwoord voor de [!DNL Salesforce] gebruikersaccount. |
 | Beveiligingstoken | De beveiligingstoken voor de [!DNL Salesforce] gebruikersaccount. |
-| API-versie | (Optioneel) De REST API-versie van de [!DNL Salesforce] -instantie die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie gebruikt `52`vervolgens moet u de waarde invoeren als `52.0` Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
+| API-versie | (Optioneel) De REST API-versie van de [!DNL Salesforce] -instantie die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie gebruikt `52`vervolgens moet u de waarde invoeren als `52.0`. Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
 
 Raadpleeg voor meer informatie over verificatie de [dit [!DNL Salesforce] verificatiehandleiding](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
@@ -53,7 +53,7 @@ U moet waarden opgeven voor de volgende referenties om verbinding te maken met u
 | URL van omgeving | De URL van de [!DNL Salesforce] broninstantie. |
 | Client-id | De client-id wordt gebruikt in combinatie met het clientgeheim als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen voor uw account werken door uw toepassing te identificeren voor [!DNL Salesforce]. |
 | Clientgeheim | Het clientgeheim wordt gebruikt in combinatie met de client-id als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen voor uw account werken door uw toepassing te identificeren voor [!DNL Salesforce]. |
-| API-versie | (Optioneel) De REST API-versie van de [!DNL Salesforce] -instantie die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie gebruikt `52`vervolgens moet u de waarde invoeren als `52.0` Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
+| API-versie | De REST API-versie van de [!DNL Salesforce] -instantie die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie gebruikt `52`vervolgens moet u de waarde invoeren als `52.0`. Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
 
 Voor meer informatie over het gebruik van OAuth voor [!DNL Salesforce], lees de [[!DNL Salesforce] handleiding over OAuth Authorization Flows](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
 
@@ -63,29 +63,59 @@ Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit
 
 ## Verbind uw [!DNL Salesforce] account
 
-Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot de bronwerkruimte toegang te hebben. De *[!UICONTROL Catalog]* het scherm toont een verscheidenheid van bronnen beschikbaar in de catalogus van bronnen van het Experience Platform.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook een specifieke bron zoeken met de zoekoptie.
+Onder de *CRM* categorie, selecteert u **[!DNL Salesforce]** en selecteer vervolgens **[!UICONTROL Add data]**.
 
-Selecteren **[!UICONTROL CRM]** in de lijst met categorieën bronnen en selecteer vervolgens **[!UICONTROL Add data]** van de [!DNL Salesforce] kaart.
+>[!TIP]
+>
+>De bronnen in de broncatalogus geven de **[!UICONTROL Set up]** als een bepaalde bron nog geen geverifieerde account heeft. Als er eenmaal een geverifieerd account is, wordt deze optie gewijzigd in **[!UICONTROL Add data]**.
 
 ![De broncatalogus op het Experience Platform UI met de Salesforce-bronkaart geselecteerd.](../../../../images/tutorials/create/salesforce/catalog.png)
 
 De **[!UICONTROL Connect to Salesforce]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
->[!BEGINTABS]
-
->[!TAB Bestaande Salesforce-account gebruiken]
+### Een bestaande account gebruiken
 
 Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en selecteer vervolgens de account die u wilt gebruiken in de lijst die wordt weergegeven. Selecteer **[!UICONTROL Next]** om verder te gaan.
 
 ![Een lijst met geverifieerde Salesforce-accounts die al in uw organisatie bestaan.](../../../../images/tutorials/create/salesforce/existing.png)
 
->[!TAB Een nieuw Salesforce-account maken]
+### Een nieuwe account maken
 
-Als u een nieuwe account wilt gebruiken, selecteert u **[!UICONTROL New account]** en geef een naam, beschrijving en uw [!DNL Salesforce] verificatiegegevens. Selecteer **[!UICONTROL Connect to source]** en wacht een paar seconden tot de nieuwe verbinding tot stand is gebracht.
+Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geef een naam en een beschrijving voor uw nieuwe [!DNL Salesforce] account.
 
 ![De interface waarin u een nieuwe rekening kunt tot stand brengen Salesforce door de aangewezen authentificatiegeloofsbrieven te verstrekken.](../../../../images/tutorials/create/salesforce/new.png)
+
+Selecteer vervolgens het verificatietype dat u voor uw nieuwe account wilt gebruiken.
+
+>[!BEGINTABS]
+
+>[!TAB Basisverificatie]
+
+Selecteer voor basisverificatie de optie **[!UICONTROL Basic authentication]** en geef vervolgens waarden op voor de volgende referenties:
+
+* URL van omgeving
+* Gebruikersnaam
+* Wachtwoord
+* API-versie (optioneel)
+
+Selecteer **[!UICONTROL Connect to source]**.
+
+![De basisauthentificatieinterface voor Salesforce rekeningsverwezenlijking.](../../../../images/tutorials/create/salesforce/basic.png)
+
+>[!TAB OAuth2 Client Credential]
+
+Voor OAuth 2 Client Credential selecteert u **[!UICONTROL OAuth2 Client Credential]** en geef vervolgens waarden op voor de volgende referenties:
+
+* URL van omgeving
+* Client-id
+* Clientgeheim
+* API-versie
+
+Selecteer **[!UICONTROL Connect to source]**.
+
+![De OAuth interface voor Salesforce account creation.](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
 

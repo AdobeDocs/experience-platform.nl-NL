@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;Salesforce;salesforce
-solution: Experience Platform
 title: Een Salesforce Base-verbinding maken met de Flow Service API
-type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met een Salesforce-account met behulp van de Flow Service API.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 27ad8812137502d0a636345852f0cae5d01c7b23
+source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '785'
 ht-degree: 1%
 
 ---
@@ -29,18 +26,40 @@ De volgende secties bevatten aanvullende informatie die u nodig hebt om verbindi
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] verbinding maken met [!DNL Salesforce]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
+De [!DNL Salesforce] De bron steunt basisauthentificatie en de Credentials van de Cliënt OAuth2.
+
+>[!BEGINTABS]
+
+>[!TAB Basisverificatie]
+
+Als u verbinding wilt maken met uw [!DNL Salesforce] account aan [!DNL Flow Service] het gebruiken van basisauthentificatie, verstrek waarden voor de volgende geloofsbrieven:
 
 | Credentials | Beschrijving |
-| ---------- | ----------- |
+| --- | --- |
 | `environmentUrl` | De URL van de [!DNL Salesforce] broninstantie. |
 | `username` | De gebruikersnaam voor de [!DNL Salesforce] gebruikersaccount. |
 | `password` | Het wachtwoord voor de [!DNL Salesforce] gebruikersaccount. |
 | `securityToken` | De beveiligingstoken voor de [!DNL Salesforce] gebruikersaccount. |
-| `apiVersion` | Optioneel) De REST API-versie van de [!DNL Salesforce] -instantie die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie gebruikt `52`vervolgens moet u de waarde invoeren als `52.0` Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
+| `apiVersion` | Optioneel) De REST API-versie van de [!DNL Salesforce] -instantie die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie gebruikt `52`vervolgens moet u de waarde invoeren als `52.0`. Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Ga voor meer informatie over aan de slag gaan [dit Salesforce-document](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
+
+>[!TAB OAuth 2 Client Credential]
+
+Als u verbinding wilt maken met uw [!DNL Salesforce] account aan [!DNL Flow Service] Gebruik OAuth 2 Client Credential en geef waarden op voor de volgende referenties:
+
+| Credentials | Beschrijving |
+| --- | --- |
+| `environmentUrl` | De URL van de [!DNL Salesforce] broninstantie. |
+| `clientId` | De client-id wordt gebruikt in combinatie met het clientgeheim als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen voor uw account werken door uw toepassing te identificeren voor [!DNL Salesforce]. |
+| `clientSecret` | Het clientgeheim wordt gebruikt in combinatie met de client-id als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen voor uw account werken door uw toepassing te identificeren voor [!DNL Salesforce]. |
+| `apiVersion` | De REST API-versie van de [!DNL Salesforce] -instantie die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie gebruikt `52`vervolgens moet u de waarde invoeren als `52.0`. Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. Deze waarde is verplicht voor OAuth2 Client Credential-verificatie. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+
+Voor meer informatie over het gebruik van OAuth voor [!DNL Salesforce], lees de [[!DNL Salesforce] handleiding over OAuth Authorization Flows](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+
+>[!ENDTABS]
 
 ### Platform-API&#39;s gebruiken
 
@@ -60,7 +79,11 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Salesforce]:
+>[!BEGINTABS]
+
+>[!TAB Basisverificatie]
+
+Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Salesforce] basisverificatie gebruiken:
 
 ```shell
 curl -X POST \
@@ -71,14 +94,15 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Salesforce Connection",
-      "description": "Connection for Salesforce account",
+      "name": "ACME Salesforce account",
+      "description": "Salesforce account using basic authentication",
       "auth": {
           "specName": "Basic Authentication",
-          "params": {****
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "securityToken": "{SECURITY_TOKEN}"
+          "params":
+              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+              "username": "acme-salesforce",
+              "password": "xxxx",
+              "securityToken": "xxxx"
           }
       },
       "connectionSpec": {
@@ -89,11 +113,53 @@ curl -X POST \
 ```
 
 | Eigenschap | Beschrijving |
-| -------- | ----------- |
+| --- | --- |
+| `auth.params.environmentUrl` | De URL van uw [!DNL Salesforce] -instantie. |
 | `auth.params.username` | De gebruikersnaam die aan uw [!DNL Salesforce] account. |
 | `auth.params.password` | Het wachtwoord dat aan uw [!DNL Salesforce] account. |
 | `auth.params.securityToken` | Het veiligheidstoken verbonden aan uw [!DNL Salesforce] account. |
 | `connectionSpec.id` | De [!DNL Salesforce] Verbindingsspecificatie-id: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+
+>[!TAB OAuth 2 Client Credential]
+
+Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Salesforce] gebruik van OAuth 2 Client Credential:
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "ACME Salesforce account",
+      "description": "Salesforce account using OAuth 2",
+      "auth": {
+          "specName": "OAuth2 Client Credential",
+          "params":
+            "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+            "clientId": "xxxx",
+            "clientSecret": "xxxx",
+            "apiVersion": "60.0"
+        }
+      },
+      "connectionSpec": {
+          "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `auth.params.environmentUrl` | De URL van uw [!DNL Salesforce] -instantie. |
+| `auth.params.clientId` | De client-id die aan uw [!DNL Salesforce] account. |
+| `auth.params.clientSecret` | Het clientgeheim dat aan uw [!DNL Salesforce] account. |
+| `auth.params.apiVersion` | De REST API-versie van de [!DNL Salesforce] -instantie die u gebruikt. |
+| `connectionSpec.id` | De [!DNL Salesforce] Verbindingsspecificatie-id: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+
+>[!ENDTABS]
 
 **Antwoord**
 
