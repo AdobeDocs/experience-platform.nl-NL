@@ -2,9 +2,9 @@
 title: Uw Salesforce-account aansluiten via de gebruikersinterface van het Experience Platform
 description: Leer hoe u uw Salesforce-account koppelt en uw CRM-gegevens via de gebruikersinterface naar het Experience Platform brengt.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: a5ecd4ab1c543805870b846cfe0fccc5474333d4
+source-git-commit: c543590ef1806e5259da2ffb6833cd030d573ca7
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -26,17 +26,38 @@ Als u al een geverifieerde [!DNL Salesforce] account, kunt u de rest van dit doc
 
 ### Vereiste referenties verzamelen {#gather-required-credentials}
 
-Om uw [!DNL Salesforce] account voor Experience Platform, moet u waarden opgeven die overeenkomen met het volgende [!DNL Salesforce] referenties:
+De [!DNL Salesforce] De bron steunt basisauthentificatie en de Credentials van de Cliënt OAuth2.
+
+>[!BEGINTABS]
+
+>[!TAB Basisverificatie]
+
+U moet waarden opgeven voor de volgende referenties om verbinding te maken met uw [!DNL Salesforce] account met basisverificatie.
 
 | Credentials | Beschrijving |
 | --- | --- |
-| `environmentUrl` | De URL van de [!DNL Salesforce] broninstantie. |
-| `username` | De gebruikersnaam voor de [!DNL Salesforce] gebruikersaccount. |
-| `password` | Het wachtwoord voor de [!DNL Salesforce] gebruikersaccount. |
-| `securityToken` | De beveiligingstoken voor de [!DNL Salesforce] gebruikersaccount. |
-| `apiVersion` | (Optioneel) De REST API-versie van de [!DNL Salesforce] -instantie die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie gebruikt `52`vervolgens moet u de waarde invoeren als `52.0` Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
+| URL van omgeving | De URL van de [!DNL Salesforce] broninstantie. |
+| Gebruikersnaam | De gebruikersnaam voor de [!DNL Salesforce] gebruikersaccount. |
+| Wachtwoord | Het wachtwoord voor de [!DNL Salesforce] gebruikersaccount. |
+| Beveiligingstoken | De beveiligingstoken voor de [!DNL Salesforce] gebruikersaccount. |
+| API-versie | (Optioneel) De REST API-versie van de [!DNL Salesforce] -instantie die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie gebruikt `52`vervolgens moet u de waarde invoeren als `52.0` Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
 
 Raadpleeg voor meer informatie over verificatie de [dit [!DNL Salesforce] verificatiehandleiding](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+
+>[!TAB OAuth2 Client Credential]
+
+U moet waarden opgeven voor de volgende referenties om verbinding te maken met uw [!DNL Salesforce] account met OAuth2 Client Credential.
+
+| Credentials | Beschrijving |
+| --- | --- |
+| URL van omgeving | De URL van de [!DNL Salesforce] broninstantie. |
+| Client-id | De client-id wordt gebruikt in combinatie met het clientgeheim als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen voor uw account werken door uw toepassing te identificeren voor [!DNL Salesforce]. |
+| Clientgeheim | Het clientgeheim wordt gebruikt in combinatie met de client-id als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen voor uw account werken door uw toepassing te identificeren voor [!DNL Salesforce]. |
+| API-versie | (Optioneel) De REST API-versie van de [!DNL Salesforce] -instantie die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie gebruikt `52`vervolgens moet u de waarde invoeren als `52.0` Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
+
+Voor meer informatie over het gebruik van OAuth voor [!DNL Salesforce], lees de [[!DNL Salesforce] handleiding over OAuth Authorization Flows](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+
+>[!ENDTABS]
 
 Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om verbinding te maken met uw [!DNL Salesforce] aan Experience Platform.
 
