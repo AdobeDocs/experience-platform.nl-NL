@@ -1,6 +1,6 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
-description: In de release van april 2024 staat een opmerking voor Adobe Experience Platform.
+description: Aanvullende informatie van april 2024 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
