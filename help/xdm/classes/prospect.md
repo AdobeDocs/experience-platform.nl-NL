@@ -2,9 +2,9 @@
 title: Afzonderlijke XDM-perspectiefprofielklasse
 description: Leer meer over de klasse van het Profiel van het Individuele Vooruitzicht XDM in het Model van de Gegevens van de Ervaring (XDM).
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f4ddcf14de7a5cec42b5ebc521203cfdd1498a9f
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # [!UICONTROL XDM Individual Prospect Profile] class
 
 In Experience Data Model (XDM), [!UICONTROL XDM Individual Prospect Profile] de klasse vangt perspectiefprofielen typisch die van gegevenspartners voor top-of-de-kanaalklant gebruiksgevallen worden gedownload.
+
+>[!NOTE]
+>
+>Om een gebied in het Individuele Profiel van het Vooruitzicht XDM als entiteit te plaatsen, moet u minstens één identiteitskaart van de Partner eerst creëren namespace. Meer informatie over naamruimten voor partnerid vindt u in het dialoogvenster [sectie met identiteitstypen](../../identity-service/features/namespaces.md).
 
 ![Het schemadiagram van de klasse XDM Prospect.](../images/classes/individual-prospect-profile.png)
 

@@ -1,27 +1,23 @@
 ---
-title: Op velden gebaseerde workflows in de Schema-editor (bèta)
+title: Op velden gebaseerde workflows in de Schema-editor
 description: Leer hoe u velden van bestaande veldgroepen afzonderlijk kunt toevoegen aan uw XDM-schema's (Experience Data Model).
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 07faf4dd749219a955df720a8c740427113a5de2
+source-git-commit: b224783922c3b6c5e2045134be2512748ca2575b
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1135'
 ht-degree: 0%
 
 ---
 
-# Op velden gebaseerde workflows in de Schema-editor (bèta)
-
->[!IMPORTANT]
->
->De workflows die in dit bètadocument worden beschreven, zijn nu over het algemeen beschikbaar in Adobe Experience Platform. Raadpleeg voor de meest recente richtlijnen over werkstromen in het veld in de Schema-editor de [UI-hulplijn voor schema&#39;s](./resources/schemas.md) in plaats daarvan. Deze gids wordt binnenkort verwijderd.
+# Op velden gebaseerde workflows in de Schema-editor
 
 Adobe Experience Platform biedt een robuuste set gestandaardiseerde [veldgroepen](../schema/composition.md#field-group) voor gebruik in schema&#39;s van het Model van de Gegevens van de Ervaring (XDM). De structuur en de semantiek achter deze veldgroepen zijn zorgvuldig afgestemd op een grote verscheidenheid aan segmentatiegebruikstoepassingen en andere downstreamtoepassingen in Platform. U kunt ook uw eigen aangepaste veldgroepen definiëren voor unieke bedrijfsbehoeften.
 
 Wanneer u een veldgroep aan een schema toevoegt, erft dat schema alle gebieden in die groep. U kunt nu echter afzonderlijke velden toevoegen aan uw schema zonder dat u andere velden uit de bijbehorende veldgroep hoeft op te nemen die u niet altijd hoeft te gebruiken.
 
-Deze handleiding behandelt de verschillende methoden voor het toevoegen van afzonderlijke velden aan een schema in de gebruikersinterface van het Platform.
+Deze handleiding behandelt de verschillende methoden voor het toevoegen van afzonderlijke velden aan een schema in de gebruikersinterface van het platform.
 
 ## Vereisten
 
@@ -57,7 +53,7 @@ U kunt velden van standaardveldgroepen rechtstreeks aan een schema toevoegen zon
 
 ![Tijdelijke aanduiding voor veld](../images/ui/field-based-workflows/root-custom-field.png)
 
-Onder **[!UICONTROL Field name]** typt u de naam van het veld dat u wilt toevoegen. Het systeem zoekt automatisch naar standaardvelden die overeenkomen met de query en geeft deze onder weer **[!UICONTROL Recommended Standard Fields]**, inclusief de veldgroepen waartoe ze behoren.
+Onder **[!UICONTROL Field name]** typt u de naam van het veld dat u wilt toevoegen. Het systeem zoekt automatisch naar standaardvelden die overeenkomen met de query en geeft deze onder weer **[!UICONTROL Recommended Standard Fields]**, met inbegrip van de veldgroepen waartoe zij behoren.
 
 ![Aanbevolen standaardvelden](../images/ui/field-based-workflows/standard-field-search.png)
 
@@ -67,7 +63,7 @@ Selecteer het voorvertoningspictogram (![Pictogram Voorvertoning](../images/ui/f
 
 ![Standaardveld toevoegen](../images/ui/field-based-workflows/add-standard-field.png)
 
-Het canvas wordt bijgewerkt om het standaardveld weer te geven dat aan het schema is toegevoegd, inclusief bovenliggende velden die het is genest onder de veldgroepsstructuur. De naam van de veldgroep wordt ook onder **[!UICONTROL Field groups]** in het linkerspoor. Als u meer velden uit dezelfde veldgroep wilt toevoegen, selecteert u **[!UICONTROL Manage related fields]** in het rechterspoor.
+Het canvas wordt bijgewerkt om het standaardveld weer te geven dat aan het schema is toegevoegd, inclusief bovenliggende velden die het is genest onder de structuur van de veldgroep. De naam van de veldgroep wordt ook onder **[!UICONTROL Field groups]** in het linkerspoor. Als u meer velden uit dezelfde veldgroep wilt toevoegen, selecteert u **[!UICONTROL Manage related fields]** in het rechterspoor.
 
 ![Standaardveld toegevoegd](../images/ui/field-based-workflows/standard-field-added.png)
 
@@ -75,7 +71,7 @@ Het canvas wordt bijgewerkt om het standaardveld weer te geven dat aan het schem
 
 Net als bij de workflow voor standaardvelden kunt u ook uw eigen aangepaste velden rechtstreeks aan een schema toevoegen.
 
-Als u velden wilt toevoegen aan het hoofdniveau van een schema, selecteert u de plusknop (**+**) naast de naam van het schema in het canvas. An **[!UICONTROL Untitled Field]** tijdelijke aanduiding wordt weergegeven in de schemastructuur en de juiste spoorwegupdates om besturingselementen voor de configuratie van het veld zichtbaar te maken.
+Als u velden wilt toevoegen aan het hoofdniveau van een schema, selecteert u de plus (**+**) naast de naam van het schema in het canvas. An **[!UICONTROL Untitled Field]** tijdelijke aanduiding wordt weergegeven in de schemastructuur en de juiste spoorwegupdates om besturingselementen voor de configuratie van het veld zichtbaar te maken.
 
 ![Aangepast basisveld](../images/ui/field-based-workflows/root-custom-field.png)
 
@@ -89,13 +85,13 @@ Hier geeft u een weergavenaam en gegevenstype op voor het veld. Onder **[!UICONT
 
 >[!WARNING]
 >
->Als u een bestaande aangepaste veldgroep selecteert, nemen alle andere schema&#39;s die die veldgroep gebruiken ook het nieuwe toegevoegde veld over nadat u de wijzigingen hebt opgeslagen. Om deze reden, slechts selecteer een bestaande gebiedsgroep als u dit type van propagatie wilt. Anders kunt u beter een nieuwe aangepaste veldgroep maken.
+>Als u een bestaande aangepaste veldgroep selecteert, nemen alle andere schema&#39;s die die veldgroep gebruiken ook het nieuwe toegevoegde veld over nadat u de wijzigingen hebt opgeslagen. Selecteer daarom alleen een bestaande veldgroep als u dit type propagatie wilt gebruiken. Anders kunt u beter een nieuwe aangepaste veldgroep maken.
 
-Als u klaar bent, selecteert u **[!UICONTROL Apply]**.
+Selecteer **[!UICONTROL Apply]**.
 
 ![Veld toepassen](../images/ui/field-based-workflows/apply-field.png)
 
-Het nieuwe veld wordt toegevoegd aan het canvas en krijgt een naamruimte onder het canvas [huurder-id](../api/getting-started.md#know-your-tenant_id) om conflicten met standaard XDM gebieden te vermijden. De veldgroep waaraan u het nieuwe veld hebt gekoppeld, wordt ook weergegeven onder **[!UICONTROL Field groups]** in het linkerspoor.
+Het nieuwe veld wordt toegevoegd aan het canvas en krijgt een naamruimte onder uw [huurder-id](../api/getting-started.md#know-your-tenant_id) om conflicten met standaard XDM gebieden te vermijden. De veldgroep waaraan u het nieuwe veld hebt gekoppeld, wordt ook weergegeven onder **[!UICONTROL Field groups]** in het linkerspoor.
 
 ![Tenant-id](../images/ui/field-based-workflows/tenantId.png)
 
@@ -115,4 +111,4 @@ Nadat u de wijzigingen hebt toegepast, wordt het nieuwe veld onder de naamruimte
 
 ## Volgende stappen
 
-Deze gids behandelde de nieuwe op gebied-gebaseerde werkschema&#39;s voor de Redacteur van het Schema in de UI van het Platform. Voor meer informatie over het beheren van schema&#39;s in UI, zie [Overzicht van gebruikersinterface](./overview.md).
+Deze gids behandelde de nieuwe op gebied-gebaseerde werkschema&#39;s voor de Redacteur van het Schema in Platform UI. Voor meer informatie over het beheren van schema&#39;s in UI, zie [Overzicht van gebruikersinterface](./overview.md).
