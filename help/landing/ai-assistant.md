@@ -5,9 +5,9 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: 6beaefb23f4deb382b7844fcf58efbd72b1da2ec
 workflow-type: tm+mt
-source-wordcount: '2693'
+source-wordcount: '3085'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Er zijn twee klassen vragen om te overwegen alvorens AI Medewerker te vragen:
 
 >[!ENDSHADEBOX]
 
-## Doelstellingen die u kunt verwezenlijken met AI Assistant
+## Doelstellingen die u kunt verwezenlijken met AI Assistant {#objectives}
 
 U kunt AI Assistant gebruiken voor doelstellingen zoals:
 
@@ -140,15 +140,15 @@ Als u citaties wilt weergeven en de reactie van AI Assistant wilt valideren, sel
 
 +++
 
-### Gegevensgebruik en visualisatie {#data-usage-and-visualization}
+### Gebruiksgegevens en visualisatie {#usage-data-and-visualization}
 
-+++Selecteren om een voorbeeld weer te geven van vragen over gegevensgebruik en gegevensvisualisatie
++++Selecteer om een voorbeeld van vragen van gebruiksgegevens en gegevensvisualisatie te bekijken
 
-AI Assistant kan alleen reageren op een query over gegevensgebruik binnen uw organisatie als u zich in een actieve sandbox bevindt.
+AI Assistant kan alleen reageren op een query over gebruiksgegevens binnen uw organisatie als u zich in een actieve sandbox bevindt.
 
 In het onderstaande voorbeeld krijgt AI Assistant de volgende query: **&quot;Geef me segmentdefinities weer met meer dan 1000 profielen en neem de activeringsstatus op.&quot;** De Medewerker van AI antwoordt dan met een grafiek die uw segment en profielgegevens visualiseert.
 
-![Opvolgingsvraag over gegevensgebruik.](./images/ai-assistant/data-usage-question.png)
+![Vervolgvraag over gebruiksgegevens.](./images/ai-assistant/data-usage-question.png)
 
 U kunt de muisaanwijzer op een afzonderlijke balk plaatsen om specifieke gegevens weer te geven. U kunt ook het pictogram voor vergroten selecteren voor een grotere weergave van het diagram.
 
@@ -158,7 +158,7 @@ Er wordt een uitgebreide weergave van de visualisatie weergegeven. U kunt de uit
 
 ![Uitgebreid diagram.](./images/ai-assistant/chart-expanded.png)
 
-Als een vraag over gegevensgebruik wordt gesteld, geeft AI Assistant een uitleg van de manier waarop het antwoord is berekend. In het onderstaande voorbeeld geeft AI Assistant een overzicht van de stappen die zijn genomen om segmentdefinities weer te geven met meer dan 1000 profielen en hun respectieve activeringsstatus.
+Als een vraag over gebruiksgegevens wordt weergegeven, geeft AI Assistant een uitleg van de manier waarop het antwoord is berekend. In het onderstaande voorbeeld geeft AI Assistant een overzicht van de stappen die zijn genomen om segmentdefinities weer te geven met meer dan 1000 profielen en hun respectieve activeringsstatus.
 
 ![Vervolgvraag over segmentdefinities die illustreren hoe AI Assistant het antwoord heeft berekend.](./images/ai-assistant/results-explained.png)
 
@@ -204,9 +204,9 @@ Momenteel geldt de documentatie-index voor Adobe Experience Platform (Real-Time 
 
 Het documentatiemodel wordt opgeleid op Experience Platform (Real-Time CDP en Soorten publiek). Vragen die buiten Adobe Experience Platform vallen, zoals vragen over andere producten van de Adobe, zoals Adobe Target en de Creative Cloud-suite, kunnen niet worden beantwoord.
 
-## Gegevensgebruik {#data-usage}
+## Gebruiksgegevens {#usage-date}
 
-U kunt ook vragen stellen aan AI Assistant over uw gegevensgebruik in de volgende domeinen:
+U kunt ook vragen stellen aan AI Assistant over uw gebruiksgegevens in de volgende domeinen:
 
 * Attributen
 * Doelgroepen
@@ -216,21 +216,50 @@ U kunt ook vragen stellen aan AI Assistant over uw gegevensgebruik in de volgend
 * Schemas _(Op dit moment kunnen vragen met betrekking tot veldgroepen niet worden beantwoord.)_
 * Bronnen _(Op dit moment kunnen vragen over de rekeningen niet worden beantwoord.)_
 
-Voor vragen van gebruiksgegevens, kunnen de antwoorden niet op de huidige staat van UI wijzen. De gegevens die deze vragen ondersteunen, worden om de 24 uur bijgewerkt. Zo worden wijzigingen die gebruikers overdag aanbrengen in Real-Time CDP gesynchroniseerd met de gegevensopslag &#39;s nachts, waarna ze &#39;s ochtends beschikbaar komen voor vragen van gebruikers. Mogelijk moet u uw vragen opmaken als: &quot;Wanneer was het publiek met de titel {TITLE} gemaakt?&quot; in plaats van &quot;Wanneer was het {TITLE} publiek gemaakt?&quot;
+Voor vragen van gebruiksgegevens, kunnen de antwoorden niet op de huidige staat van UI wijzen. De gegevens die deze vragen ondersteunen, worden om de 24 uur bijgewerkt. Zo worden wijzigingen die gebruikers overdag aanbrengen in Real-Time CDP gesynchroniseerd met de gegevensopslag &#39;s nachts, waarna ze &#39;s ochtends beschikbaar komen voor vragen van gebruikers. Daarnaast moet u zich aanmelden bij een sandbox voor informatie over specifieke gegevens die betrekking hebben op objecten, zoals soorten publiek, schema&#39;s, datasets, kenmerken en doelen.
 
-U moet zich aanmelden bij een sandbox om informatie te krijgen over specifieke gegevens die betrekking hebben op objecten, zoals soorten publiek, schema&#39;s, datasets, kenmerken en doelen.
+### Voorbeeldvragen over gebruiksgegevens {#example-usage-data-questions}
 
-### Voorbeeldvragen over gegevensgebruik {#example-data-usage-questions}
++++Selecteren om een lijst met vragen over gebruiksgegevens te bekijken
 
-+++Selecteren om een lijst met voorbeelden van vragen over gegevensgebruik weer te geven
+Lees de onderstaande tabel voor voorbeelden van vragen over gebruiksgegevens en de bijbehorende gebruiksgevallen:
 
-| Type vraag | Beschrijving | Voorbeelden |
+| Type vraag | Gebruiksscenario | Voorbeelden |
 | --- | --- | --- | 
-| Gegevensverbinding | Gebruik van een of meerdere objecten bijhouden over andere Experience Platforms | <ul><li>Welke gegevensset(s) gebruiken {SCHEMA_NAME} schema?</li><li>Hoeveel datasets zijn opgenomen gebruikend het zelfde schema?</li><li>Welke datasets zijn gebruikt in geactiveerd publiek?</li><li>Maak een lijst van de schema&#39;s die attributen hebben die in geactiveerd publiek worden gebruikt.</li><li>Toon me het publiek dat wordt geactiveerd aan {DESTINATION_ACCOUNT_NAME} en hebben meer dan 1000 profielen.</li><li>Toon me de attributen die in de geactiveerde doelgroepen worden gebruikt die na jan 2023 zijn gewijzigd.</li><li>Wat zijn de datasets die via worden opgenomen {SOURCE_NAME}?</li><li>Aan welke gegevensstromen is gekoppeld {DATAFLOW_NAME}</li><li>Geef een overzicht van de schema&#39;s die betrekking hebben op geactiveerd publiek en die in het afgelopen jaar zijn gemaakt.</li></ul> |
-| Distributie en aggregaties | Op samenvattingen gebaseerde vragen over het gebruik van Experience Platforms-objecten | <ul><li>Wat is het percentage van het actieve publiek?</li><li>Hoeveel velden worden in segmentatie gebruikt?</li><li>Welk publiek wordt geactiveerd aan het meeste aantal bestemmingen?</li><li>Duplicaat publiek weergeven.</li><li>Toon me het publiek geactiveerd aan {DESTINATION_ACCOUNT_NAME} en rangschikken op profielgrootte.</li><li>Wat is het percentage van het publiek dat niet is geactiveerd, maar meer dan 100 profielen heeft. Laat me hun namen zien.</li><li>Maak een lijst van de 3 bronschakelaars die gegevens in mijn datasets opnemen.</li><li>Geef me de bovenste 5 kenmerken weer die bij actiepunten worden gebruikt, afhankelijk van het aantal dat ze voorkomen.</li></ul> |
-| Object opzoeken | Haal een Experience Platform-object of de eigenschappen ervan op of open het object. | <ul><li>Welke datasets hebben geen schema verbonden aan hen</li><li>De kenmerken weergeven die worden gebruikt voor {AUDIENCE_NAME}?</li><li>Geef me de lijst van schema&#39;s die profiel toegelaten zijn maar niet sinds hun verwezenlijking zijn gewijzigd.</li><li>Welk publiek is de afgelopen week gewijzigd?</li><li>Geef mij een overzicht van de doelgroepen die dezelfde segmentdefinities hebben en de datum waarop ze zijn gemaakt.</li><li>Welke datasets toegelaten profiel zijn en ook omvatten hoeveel publiek van elke dataset is gecreeerd.</li><li>Welke bronrekeningen worden geassocieerd met dataset XYZ?</li><li>De segmentdefinitie en wijzigingsdatum weergeven van {AUDIENCE_NAME}.</li></ul> |
+| Gegevensverbinding | Gebruik van een of meerdere objecten bijhouden over andere Experience Platforms | <ul><li>Welke datasets gebruiken het schema &quot;ACME&quot;?</li><li>Hoeveel datasets zijn opgenomen gebruikend het zelfde schema?</li><li>Welke datasets zijn gebruikt in geactiveerd publiek?</li><li>Maak een lijst van de schema&#39;s die attributen hebben die in geactiveerd publiek worden gebruikt.</li><li>Toon me het publiek dat aan &quot;Doel ACME&quot;wordt geactiveerd en meer dan 1000 profielen heeft.</li><li>Toon me de attributen die in de geactiveerde doelgroepen worden gebruikt die na jan 2023 zijn gewijzigd.</li><li>Wat worden de datasets via &quot;ACME Amazon S3&quot;bron opgenomen?</li><li>Welke gegevensstromen worden geassocieerd met &quot;ACME Loyalty Dataflow&quot;?</li><li>Geef een overzicht van de schema&#39;s die betrekking hebben op geactiveerd publiek en die in het afgelopen jaar zijn gemaakt.</li></ul> |
+| Distributie en aggregaties | Op samenvattingen gebaseerde vragen over het gebruik van Experience Platforms-objecten | <ul><li>Wat is het percentage van het actieve publiek?</li><li>Hoeveel velden worden in segmentatie gebruikt?</li><li>Welk publiek wordt geactiveerd aan het meeste aantal bestemmingen?</li><li>Duplicaat publiek weergeven.</li><li>Toon me het publiek dat aan &quot;Doel ACME&quot;wordt geactiveerd en rangschikt hen door profielgrootte.</li><li>Wat is het percentage van het publiek dat niet is geactiveerd, maar meer dan 100 profielen heeft. Laat me hun namen zien.</li><li>Maak een lijst van de 3 bronschakelaars die gegevens in mijn datasets opnemen.</li><li>Geef me de bovenste 5 kenmerken weer die bij actiepunten worden gebruikt, afhankelijk van het aantal dat ze voorkomen.</li></ul> |
+| Object opzoeken | Haal een Experience Platform-object of de eigenschappen ervan op of open het object. | <ul><li>Welke datasets hebben geen schema verbonden aan hen</li><li>De kenmerken weergeven die worden gebruikt voor &quot;ACME Audience&quot;?</li><li>Geef me de lijst van schema&#39;s die profiel toegelaten zijn maar niet sinds hun verwezenlijking zijn gewijzigd.</li><li>Welk publiek is de afgelopen week gewijzigd?</li><li>Geef mij een overzicht van de doelgroepen die dezelfde segmentdefinities hebben en de datum waarop ze zijn gemaakt.</li><li>Welke datasets toegelaten profiel zijn en ook omvatten hoeveel publiek van elke dataset is gecreeerd.</li><li>Welke bronrekeningen worden geassocieerd met dataset XYZ?</li><li>Toon me de segmentdefinitie en wijzigingsdatum van &quot;ACME Publiek&quot;.</li></ul> |
+| Objectvergelijking | Dubbele doelgroepen identificeren. | <ul><li>Vermeld op basis van hun segmentdefinitie de soorten publiek die duplicaten zijn.</li><li>Welke dubbele soorten publiek worden geactiveerd aan &quot;ACME Doelen&quot;.</li></ul> |
 
 +++
+
+## Uw vragen formuleren {#phrasing-your-questions}
+
+U moet uw vragen duidelijk en in de context tot AI Assistant richten om zo accuraat mogelijk te kunnen antwoorden. Raadpleeg de volgende tips voor het stellen van een duidelijke vraag met betrekking tot de context:
+
+* Geef uw taak en/of vraag beknopt weer.
+* Vermijd dubbelzinnige taal of te complexe syntaxis om het begrip te vergemakkelijken.
+* Een relevante context bieden met betrekking tot uw taak en/of vraag als context kan AI Assistant helpen meer relevante reacties te genereren.
+
+Lees de onderstaande tabel voor meer informatie over aanbevolen procedures bij het stellen van vragen aan AI Assistant:
+
+| Do | Voorbeeld |
+| --- | --- |
+| <ul><li>Wees specifiek voor het object of de informatie die u wilt ophalen of analyseren.</li><li>Plaats uw gegevensobjectnamen tussen aanhalingstekens. Als u slechts een deel van de objecten naam kent, kunt u dat ook specificeren in de vraag.</li><li>Gebruiken [object automatisch aanvullen](./ui-guide.md#use-auto-complete) om AI Assistant te helpen de context van uw query beter te begrijpen.</li></ul> | <ul><li>Welke datasets gebruiken het &quot;Luma - Loyalty&quot;schema?</li><li>Toon me de geactiveerde segmenten die &quot;Luma&quot;in hun naam hebben. Rang ze op het aantal profielen.</li></ul> |
+| <ul><li>Vermijd dubbelzinnigheid en gebruik duidelijke taal</li><li>Gebruik nauwkeurige terminologie om betere duidelijkheid in uw vraag te verzekeren.</li><li>Wanneer u vragen stelt over Adobe Experience Platform, probeert u specifieke terminologie voor Experience Platform te gebruiken om de relevantie van antwoorden te verbeteren.</li></ul> | <ul><li>Hoeveel profielen heb ik in &quot;ACME Audience&quot;.</li><li>Toon me de hoogste 5 attributen XDM die in geactiveerd publiek worden gebruikt.</li></ul> |
+| <ul><li>Geef context op of geef criteria op om de resultaten te filteren.</li><li>Gebruik filtercriteria in de vragen om het volume van gegevens in de reactie te beperken.</li></ul> | <ul><li>Toon me publiek dat niet geactiveerd is en meer dan zes maanden geleden is gecreëerd en nooit gewijzigd is.</li><li>Toon me publiek geactiveerd aan &quot;Doel ACME&quot;en heeft meer dan 10000 profielen.</li></ul> |
+
+{style="table-layout:auto"}
+
+| Niet doen | Voorbeeld |
+| --- | --- |
+| Gebruik een vage of dubbelzinnige taal. | <ul><li>Geef me informatie over datasets.</li><li>Hoeveel gebruikers heb ik in &quot;ACME Audience&quot;?</li><li>Segmenten tonen.</li><li>Lijstkenmerken.</li></ul> |
+| Voer onvolledige verzoeken in. | &quot;Luma - Loyalty Dataset&quot; |
+| Kennis aannemen zonder context. | <ul><li>Soorten publiek in de laatste zes maanden.</li><li>Bouw een vraag voor me.</li></ul> |
+| U kunt te complexe query&#39;s opmaken. | Verstrek een uitvoerige analyse van gegevenslijn over alle voorwerpen en hun gebiedsdelen. |
+| Criteria of parameters weglaten. | Toon me gegevenssets. |
+
+{style="table-layout:auto"}
 
 ## Feedback geven {#feedback}
 
