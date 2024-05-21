@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: df24799e4644a98941b707bb216a4ad434f5ebf9
+source-git-commit: 16313e2109152329a427be9f13fcbd6382353797
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1546'
 ht-degree: 1%
 
 ---
@@ -100,6 +100,7 @@ De volgende lijst schetst de beschikbare toestemmingen voor Experience Platform 
 | [!DNL Profile Management] | [!UICONTROL View Segments] | Alleen-lezen toegang tot beschikbare segmenten. |
 | [!DNL Profile Management] | [!UICONTROL Manage Merge Policies] | Toegang tot het lezen, maken, bewerken en verwijderen van samenvoegbeleidsregels. |
 | [!DNL Profile Management] | [!UICONTROL View Merge Policies] | Alleen-lezen toegang tot beschikbaar samenvoegbeleid. |
+| [!DNL Profile Management] | [!UICONTROL Import Audiences] | Toegang tot het lezen, maken, bewerken en verwijderen van geïmporteerde soorten publiek. |
 | [!DNL Profile Management] | [!UICONTROL Export Audience for Segment] | Capaciteit om een geëvalueerd publiekssegment naar een dataset uit te voeren. |
 | [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | De capaciteit om profielen voor een publiek te produceren door een segmentdefinitie te evalueren. |
 | [!DNL Profile Management] | [!UICONTROL View B2B AI] | Alleen-lezen toegang tot instellingen en configuraties voor alle B2B AI/ML-services. |
