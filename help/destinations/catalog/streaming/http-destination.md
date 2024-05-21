@@ -4,9 +4,9 @@ title: HTTP API-verbinding
 description: Gebruik de HTTP API bestemming in Adobe Experience Platform om profielgegevens naar derdeeindpunt van HTTP te verzenden om uw eigen analyses in werking te stellen of andere verrichtingen uit te voeren u op profielgegevens kunt nodig hebben die uit Experience Platform worden uitgevoerd.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e9ed96a15d6bba16165c67e53467b7f51a866014
 workflow-type: tm+mt
-source-wordcount: '2399'
+source-wordcount: '2555'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ De HTTP API-bestemming is een [!DNL Adobe Experience Platform] streamingbestemmi
 
 Als u profielgegevens naar HTTP-eindpunten wilt verzenden, moet u eerst [verbinden met de bestemming](#connect-destination) in [!DNL Adobe Experience Platform].
 
-## Gebruiksscenario’s {#use-cases}
+## Gebruik hoofdletters {#use-cases}
 
 Met de HTTP API-bestemming kunt u XDM-profielgegevens en -publiek exporteren naar algemene HTTP-eindpunten. Daar kunt u uw eigen analyses uitvoeren of andere bewerkingen uitvoeren die u nodig hebt voor profielgegevens die uit het Experience Platform zijn geëxporteerd.
 
@@ -62,6 +62,20 @@ Als u de HTTP API-bestemming wilt gebruiken om gegevens uit Experience Platform 
 >[!TIP]
 >
 > U kunt ook [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) aan opstelling een integratie en verzendt de profielgegevens van het Experience Platform naar een eindpunt van HTTP.
+
+## mTLS-protocolondersteuning en -certificaat {#mtls-protocol-support}
+
+U kunt [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) voor verbeterde beveiliging in uitgaande verbindingen met uw HTTP API-doelverbindingen.
+
+[!DNL mTLS] is een van begin tot eind veiligheidsmethode voor wederzijdse authentificatie die ervoor zorgt dat beide partijen die informatie delen wie zij beweren te zijn alvorens de gegevens worden gedeeld. [!DNL mTLS] bevat een extra stap in vergelijking met [!DNL TLS], waarin de server ook om het certificaat van de client vraagt en dit aan het einde verifieert.
+
+Als u wilt gebruiken [!DNL mTLS] with [!DNL HTTP API] doelen, het serveradres dat u in de [bestemmingsdetails](#destination-details) pagina moet [!DNL TLS] protocollen uitgeschakeld en alleen [!DNL mTLS] ingeschakeld. Als de [!DNL TLS] 1.2 protocol wordt nog toegelaten op het eindpunt, wordt geen certificaat verzonden voor de cliëntauthentificatie. Dit betekent dat [!DNL mTLS] met uw [!DNL HTTP API] doel, moet uw &quot;ontvangende&quot;servereindpunt een zijn [!DNL mTLS]- slechts toegelaten verbindingspunt.
+
+### Certificaat downloaden {#certificate}
+
+Als u de [!DNL Common Name] (CN) en [!DNL Subject Alternative Names] (SAN) voor aanvullende validatie door derden kunt u het onderstaande certificaat downloaden:
+
+* [HTTP API mTLS, openbaar certificaat](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
 
 ## IP adres lijst van gewenste personen {#ip-address-allowlist}
 
