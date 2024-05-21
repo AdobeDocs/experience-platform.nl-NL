@@ -2,42 +2,65 @@
 title: Gegevensversleuteling in Adobe Experience Platform
 description: Leer hoe gegevens worden gecodeerd tijdens de doorvoer en in rust in Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: fd31d54339b8d87b80799a9c0fa167cc9a07a33f
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
 
 # Gegevenscodering in Adobe Experience Platform
 
-Adobe Experience Platform is een krachtig en uitbreidbaar systeem dat gegevens over de klantervaring centraliseert en standaardisert voor alle bedrijfsoplossingen. Alle gegevens die door Platform worden gebruikt, worden tijdens de doorvoer en in rust gecodeerd om uw gegevens veilig te houden. In dit document worden de versleutelingsprocessen van Platform op een hoog niveau beschreven.
+Adobe Experience Platform is een krachtig en uitbreidbaar systeem dat gegevens over de klantervaring centraliseert en standaardisert voor alle bedrijfsoplossingen. Alle gegevens die door Platform worden gebruikt, worden in doorvoer en in rust gecodeerd om uw gegevens veilig te houden. In dit document worden de versleutelingsprocessen van Platform op een hoog niveau beschreven.
 
-In het volgende stroomdiagram wordt getoond hoe gegevens worden opgenomen, gecodeerd en door [!DNL Experience Platform]:
+Het volgende diagram van de processtroom illustreert hoe het Experience Platform inneemt, codeert, en gegevens voortduurt:
 
-![](../images/governance-privacy-security/encryption/flow.png)
+![Een diagram dat illustreert hoe het gegeven wordt opgenomen, gecodeerd en door Experience Platform voortgeduurd.](../images/governance-privacy-security/encryption/flow.png)
 
 ## Gegevens in doorvoer {#in-transit}
 
-Alle gegevens die tussen Platform en om het even welke externe component worden doorgevoerd over veilige, gecodeerde verbindingen die HTTPS gebruiken [TLS v1.2](https://datatracker.ietf.org/doc/html/rfc5246).
+Alle gegevens in doorvoer tussen Platform en elke externe component worden via beveiligde, gecodeerde verbindingen met HTTPS uitgevoerd [TLS v1.2](https://datatracker.ietf.org/doc/html/rfc5246).
 
-In het algemeen worden gegevens op drie manieren in Platform gebracht:
+In het algemeen worden gegevens op drie manieren in Platform overgebracht:
 
-* [Gegevensverzameling](../../collection/home.md) met de mogelijkheden kunnen websites en mobiele toepassingen gegevens naar het Edge Network van het Platform verzenden voor ophaling en voorbereiding voor opname.
-* [Bronaansluitingen](../../sources/home.md) stroomgegevens rechtstreeks naar Platform vanuit Adobe Experience Cloud-toepassingen en andere bedrijfsgegevensbronnen.
-* Met niet-Adobe ETL-gereedschappen (extractie, transformatie, laden) worden gegevens verzonden naar de [batch-invoer-API](../../ingestion/batch-ingestion/overview.md) voor consumptie.
+- [Gegevensverzameling](../../collection/home.md) Met de mogelijkheden kunnen websites en mobiele toepassingen gegevens naar de Edge Network Platform verzenden voor ophaling en voorbereiding voor opname.
+- [Bronaansluitingen](../../sources/home.md) stroomgegevens rechtstreeks naar Platform vanuit Adobe Experience Cloud-toepassingen en andere bedrijfsgegevensbronnen.
+- Met de niet-Adobe ETL-gereedschappen (extractie, transformatie, laden) worden gegevens verzonden naar de [batch-invoer-API](../../ingestion/batch-ingestion/overview.md) voor consumptie.
 
-Nadat gegevens in het systeem zijn ingevoerd en [gecodeerd in rust](#at-rest), kan het vervolgens door de diensten van de Platform worden verrijkt en op de volgende manieren uit het systeem worden gehaald:
+Nadat gegevens in het systeem zijn ingevoerd en [gecodeerd in rust](#at-rest), de diensten van het Platform verrijken en de gegevens uitvoeren op de volgende manieren:
 
-* [Doelen](../../destinations/home.md) staat u toe om gegevens aan Adobe toepassingen en partnertoepassingen te activeren.
-* Native Platform-toepassingen zoals [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html) en [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) kan ook gebruikmaken van de gegevens.
+- [Doelen](../../destinations/home.md) staat u toe om gegevens aan Adobe toepassingen en partnertoepassingen te activeren.
+- Systeemeigen platformtoepassingen, zoals [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html) en [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home) kan ook gebruikmaken van de gegevens.
+
+### mTLS-protocolondersteuning {#mtls-protocol-support}
+
+U kunt de Wederzijdse Veiligheid van de Laag van het Vervoer (mTLS) nu gebruiken om verbeterde veiligheid in uitgaande verbindingen aan de bestemmingen van HTTP API en de douaneacties van Adobe Journey Optimizer te verzekeren. mTLS is een end-to-end veiligheidsmethode voor wederzijdse authentificatie die ervoor zorgt dat beide partijen die informatie delen wie zij beweren te zijn alvorens de gegevens worden gedeeld. mTLS bevat een extra stap in vergelijking met TLS, waarin de server ook om het certificaat van de client vraagt en dit aan het einde verifieert.
+
+#### mTLS in Adobe Journey Optimizer {#mtls-in-adobe-journey-optimizer}
+
+In Adobe Journey Optimizer wordt mTLS gebruikt in combinatie met [aangepaste handelingen](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). Geen extra [configuratie voor aangepaste Adobe Journey Optimizer-acties](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) is van uw kant vereist om mTLS in te schakelen. Wanneer het eindpunt voor een douaneactie mTLS-Toegelaten is, haalt het systeem het certificaat van keystore van Adobe Experience Platform en verstrekt het automatisch aan het eindpunt (zoals wordt vereist voor mTLS verbindingen).
+
+Als u mTLS met deze de bestemmingswerkschema&#39;s van Adobe Journey Optimizer en van HTTP van het Experience Platform wilt gebruiken API, moet het serveradres u in de UI van de de klantenactie van Adobe Journey Optimizer of UI van Doelen plaatsen protocollen van TLS hebben onbruikbaar gemaakt en slechts mTLS toegelaten. Als het TLS 1.2 protocol nog op dat eindpunt wordt toegelaten, wordt geen certificaat verzonden voor de cliëntauthentificatie. Dit betekent dat om mTLS met deze werkschema&#39;s te gebruiken, uw &quot;ontvangende&quot;servereindpunt mTLS moet zijn **alleen** Toegelaten verbindingspunt.
+
+>[!IMPORTANT]
+>
+>Er is geen aanvullende configuratie vereist in uw aangepaste Adobe Journey Optimizer-actie of -reis om mTLS te activeren. Dit proces wordt automatisch uitgevoerd wanneer een met mTLS geschikt eindpunt wordt gedetecteerd. De Common Name (CN) en de Alternative Names van het Onderwerp (San) voor elk certificaat zijn beschikbaar in de documentatie als deel van het certificaat en kunnen als extra laag van bezitsbevestiging worden gebruikt als u dit wenst.
+>
+>RFC 2818, gepubliceerd in mei 2000, vervangt het gebruik van het gebied van de Gemeenschappelijke Naam (CN) in HTTPS certificaten voor onderwerpnaamcontrole. In plaats daarvan wordt aangeraden de extensie &quot;Alternatieve naam onderwerp&quot; (SAN) van het type &quot;naam dns&quot; te gebruiken.
+
+### Certificaten downloaden {#download-certificates}
+
+Als u de CN of SAN wilt controleren voor aanvullende validatie door derden, kunt u de relevante certificaten hier downloaden:
+
+- [Adobe Journey Optimizer-certificaat](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
+- [Openbaar certificaat van de Dienst van Doelen](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
 
 ## Gegevens in rust {#at-rest}
 
-Gegevens die door Platform worden opgenomen en gebruikt, worden opgeslagen in het datumpeer, een hoogst korrelige gegevensopslag die alle gegevens bevat die door het systeem, ongeacht oorsprong of dossierformaat worden beheerd. Alle gegevens die in het gegevensmeer worden voortgeduurd, worden gecodeerd, opgeslagen en in geïsoleerd [[!DNL Microsoft Azure Data Lake] Opslag](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) -instantie die uniek is voor uw organisatie.
+De gegevens die door Platform worden opgenomen en worden gebruikt worden opgeslagen in het gegevensmeer, een hoogst korrelige gegevensopslag die alle gegevens bevat die door het systeem, ongeacht oorsprong of dossierformaat worden beheerd. Alle gegevens die in het gegevensmeer worden voortgeduurd, worden gecodeerd, opgeslagen en in geïsoleerd [[!DNL Microsoft Azure Data Lake] Opslag](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) -instantie die uniek is voor uw organisatie.
 
 Zie voor meer informatie over hoe gegevens in rust in Azure Data Lake Storage gecodeerd zijn [officiële Azure-documentatie](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
 
 ## Volgende stappen
 
-Dit document biedt een uitgebreid overzicht van de manier waarop gegevens in Platform worden gecodeerd. Voor meer informatie over veiligheidsprocedures in Platform, zie het overzicht over [bestuur, privacy en veiligheid](./overview.md) op Experience League, of neem een blik bij [whitepaper over beveiliging van Platform](https://www.adobe.com/content/dam/cc/en/security/pdfs/AEP_SecurityOverview.pdf).
+Dit document biedt een overzicht op hoog niveau van de manier waarop gegevens worden gecodeerd in Platform. Voor meer informatie over veiligheidsprocedures in Platform, zie het overzicht over [bestuur, privacy en veiligheid](./overview.md) op Experience League, of neem een blik bij [Platform security whitepaper](https://www.adobe.com/content/dam/cc/en/security/pdfs/AEP_SecurityOverview.pdf).
