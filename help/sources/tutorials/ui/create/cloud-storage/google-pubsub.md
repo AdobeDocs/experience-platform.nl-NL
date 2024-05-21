@@ -3,9 +3,9 @@ title: Een Google PubSub-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een Google PubSub-bronconnector maakt via de gebruikersinterface van Platform.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
+source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1061'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,8 @@ Als u al een geldige [!DNL PubSub] verbinding hebt, kunt u de rest van dit docum
 
 ### Vereiste referenties verzamelen
 
-Om verbinding te maken [!DNL PubSub] aan Platform, moet u een geldige waarde voor de volgende geloofsbrieven verstrekken:
+U moet waarden opgeven voor de verbindingseigenschappen die hieronder worden beschreven om uw [!DNL PubSub] aan Experience Platform. Voor meer informatie over verificatie en installatie in de eerste plaats leest u de [[!DNL PubSub source] overzicht](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+
 
 >[!BEGINTABS]
 

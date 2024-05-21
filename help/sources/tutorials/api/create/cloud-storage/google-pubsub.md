@@ -3,9 +3,9 @@ title: Een Google PubSub-bronverbinding maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google PubSub-account met behulp van de Flow Service API.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
+source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ De volgende secties bevatten aanvullende informatie die u nodig hebt om verbindi
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] verbinding maken met [!DNL PubSub]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
+U moet waarden opgeven voor de verbindingseigenschappen die hieronder worden beschreven om uw [!DNL PubSub] account aan [!DNL Flow Service]. Voor meer informatie over verificatie en installatie in de eerste plaats leest u de [[!DNL PubSub source] overzicht](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ Om [!DNL Flow Service] verbinding maken met [!DNL PubSub]moet u waarden opgeven 
 
 >[!ENDTABS]
 
-Zie deze voor meer informatie over deze waarden [[!DNL PubSub] verificatie](https://cloud.google.com/pubsub/docs/authentication) document. Om de op rekening-gebaseerde authentificatie van de dienst te gebruiken, zie dit [[!DNL PubSub] handleiding voor het maken van serviceaccounts](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen over hoe te om uw geloofsbrieven te produceren.
+Lees deze voor meer informatie over deze waarden [[!DNL PubSub] verificatie](https://cloud.google.com/pubsub/docs/authentication) document. Om de op rekening-gebaseerde authentificatie van de dienst te gebruiken, lees dit [[!DNL PubSub] handleiding voor het maken van serviceaccounts](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen over hoe te om uw geloofsbrieven te produceren.
 
 >[!TIP]
 >
