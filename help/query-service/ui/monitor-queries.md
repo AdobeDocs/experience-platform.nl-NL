@@ -2,9 +2,9 @@
 title: Geplande query's controleren
 description: Leer hoe te om vragen door de Dienst UI van de Vraag te controleren.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: e63e3344dd530fc9111f29948f2dfbd4daedf28c
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '1916'
+source-wordcount: '2333'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ In de onderstaande tabel wordt elke beschikbare kolom beschreven.
 
 >[!NOTE]
 >
->Het waarschuwingspictogram voor abonnementen staat in elke rij in een kolom zonder naam. Zie de [waarschuwingsabonnementen](#alert-subscription) voor meer informatie.
+>Het waarschuwingspictogram voor abonnementen (![Een waarschuwingspictogram.](../images/ui/monitor-queries/alert-subscription-icon.png)) bevindt zich in elke rij in een kolom zonder titel. Zie de [waarschuwingsabonnementen](#alert-subscription) voor meer informatie.
 
 | Kolom | Beschrijving |
 |---|---|
@@ -69,7 +69,7 @@ De [!UICONTROL Scheduled Queries] de mening biedt diverse gealigneerde acties aa
 
 ### Een geplande query in- of uitschakelen {#disable}
 
-Om een geplande vraag onbruikbaar te maken, selecteer de ellips van een geplande vraag u wilt leiden, dan selecteren **[!UICONTROL Disable schedule]** van de opties in het pop-upmenu. Er wordt een dialoogvenster weergegeven waarin uw handeling wordt bevestigd. Selecteren **[!UICONTROL Disable]** om uw instelling te bevestigen.
+Om een geplande vraag onbruikbaar te maken, selecteer de ellips voor de geplande vraag u wilt leiden, dan selecteren **[!UICONTROL Disable schedule]** van de opties in het pop-upmenu. Er wordt een dialoogvenster weergegeven waarin uw handeling wordt bevestigd. Selecteren **[!UICONTROL Disable]** om uw instelling te bevestigen.
 
 Zodra een geplande vraag gehandicapt is, kunt u het programma door het zelfde proces toelaten. Selecteer de ellips en selecteer vervolgens **[!UICONTROL Enable schedule]** uit de beschikbare opties.
 
@@ -79,21 +79,33 @@ Zodra een geplande vraag gehandicapt is, kunt u het programma door het zelfde pr
 
 ### Een geplande query verwijderen {#delete}
 
-Om een geplande vraag te schrappen, selecteer de ellips van een geplande vraag u wilt leiden, dan selecteren **[!UICONTROL Delete schedule]** van de opties in het pop-upmenu. Er wordt een dialoogvenster weergegeven waarin uw handeling wordt bevestigd. Selecteren **[!UICONTROL Delete]** om uw instelling te bevestigen.
+Om een geplande vraag te schrappen, selecteer de ellips voor de geplande vraag u wilt leiden, dan selecteren **[!UICONTROL Delete schedule]** van de opties in het pop-upmenu. Er wordt een dialoogvenster weergegeven waarin uw handeling wordt bevestigd. Selecteren **[!UICONTROL Delete]** om uw instelling te bevestigen.
 
-Zodra een geplande vraag wordt geschrapt, is het **niet** verwijderd uit de lijst met geplande query&#39;s. De inline-acties die door de ovalen worden geboden, worden verwijderd en vervangen door het pictogram voor het toevoegen van waarschuwingen met grijstinten. U kunt zich niet abonneren op waarschuwingen voor het verwijderde schema. De rij blijft in UI om informatie over looppas te verstrekken die als deel van de geplande vraag wordt geleid.
+Zodra een geplande vraag wordt geschrapt, is het **niet** verwijderd uit de lijst met geplande query&#39;s. De inline-acties van de ovalen worden verwijderd en vervangen door het pictogram voor het toevoegen van een waarschuwing met grijs weergegeven. U kunt zich niet abonneren op waarschuwingen voor het verwijderde schema. De rij blijft in UI om informatie over looppas te verstrekken die als deel van de geplande vraag wordt geleid.
 
-![Het Geplande lusje van Vragen met een geschrapte geplande vraag en grayed uit benadrukt waarschuwingspictogram.](../images/ui/monitor-queries/post-delete.png)
+![Het Geplande lusje van Vragen met een geschrapte geplande vraag en grayed uit het waarschuwingspictogram van het Abonnement benadrukt.](../images/ui/monitor-queries/post-delete.png)
 
 Als u looppas voor dat vraagmalplaatje wilt plannen, selecteer de malplaatjenaam van de aangewezen rij om aan de Redacteur van de Vraag te navigeren, dan volg [instructies om een programma aan een vraag toe te voegen](./query-schedules.md#create-schedule) zoals beschreven in de documentatie.
 
 ### Abonneren op waarschuwingen {#alert-subscription}
 
-Om aan alarm voor geplande vraaglooppas in te tekenen, selecteer de ellips van een geplande vraag u wilt leiden, dan selecteren **[!UICONTROL Subscribe]** van de opties in het pop-upmenu.
+Om aan alarm voor geplande vraaglooppas in te schrijven, selecteer of `...` (weglatingsteken) of waarschuwingspictogram (![Een waarschuwingspictogram voor abonnementen.](../images/ui/monitor-queries/alert-subscription-icon.png)) voor de geplande query die u wilt beheren. Het vervolgkeuzemenu Handelingen inline wordt weergegeven. Selecteer vervolgens **[!UICONTROL Subscribe]** uit de beschikbare opties.
 
-De [!UICONTROL Alerts] wordt geopend. De [!UICONTROL Alerts] Hiermee meldt u zich aan zowel UI-meldingen als e-mailwaarschuwingen. Waarschuwingen zijn gebaseerd op de status van de query. Er zijn drie opties beschikbaar: `start`, `success`, en `failure`. Vak of vakken invullen en **[!UICONTROL Save]** om in te schrijven. Je kunt je abonneren op berichten zolang ze geen [!UICONTROL Last Run Timestamp] waarde.
+![De werkruimte voor geplande query&#39;s bevat een ovaal, een waarschuwingspictogram voor een abonnement en het vervolgkeuzemenu voor inlinehandelingen gemarkeerd.](../images/ui/monitor-queries/subscribe.png)
+
+De [!UICONTROL Alerts] wordt geopend. De [!UICONTROL Alerts] Hiermee meldt u zich aan zowel UI-meldingen als e-mailwaarschuwingen. Er zijn verschillende abonnementsopties voor berichten beschikbaar: `start`, `success`, `failure`, `quarantine`, en `delay`. Vak of vakken invullen en **[!UICONTROL Save]** om in te schrijven.
 
 ![Het dialoogvenster voor abonnementen.](../images/ui/monitor-queries/alert-subscription-dialog.png)
+
+In de onderstaande tabel worden de ondersteunde typen querywaarschuwingen beschreven:
+
+| Type waarschuwing | Beschrijving |
+|---|---|
+| `start` | Deze waarschuwing brengt u op de hoogte wanneer een geplande vraaglooppas in werking wordt gesteld of begint te verwerken. |
+| `success` | Deze waarschuwing geeft aan wanneer een geplande query correct is uitgevoerd en geeft aan dat de query zonder fouten is uitgevoerd. |
+| `failed` | Deze waarschuwing treedt op wanneer een geplande query een fout aantreft of niet met succes wordt uitgevoerd. Hiermee kunt u problemen snel identificeren en verhelpen. |
+| `quarantine` | Dit alarm wordt geactiveerd wanneer een geplande vraaglooppas in quarantined staat wordt gezet. Wanneer query&#39;s zijn ingeschreven in het dialoogvenster [quarantainevoorziening](#quarantined-queries), om het even welke geplande vraag die tien opeenvolgende looppas ontbreekt wordt automatisch gezet in een [!UICONTROL Quarantined] status. Vervolgens hebben zij uw tussenkomst nodig voordat verdere executies kunnen plaatsvinden. |
+| `delay` | Deze waarschuwing geeft een melding als er een [vertraging in het resultaat van een query-uitvoering](#query-run-delay) boven een bepaalde drempel. U kunt een douanetijd plaatsen die de waakzaamheid teweegbrengen wanneer de vraaglooppas voor die duur zonder of het voltooien of het ontbreken. |
 
 >[!NOTE]
 >
@@ -107,7 +119,11 @@ Selecteer het informatiepictogram (![Een informatiepictogram.](../images/ui/moni
 
 ![Het tabblad Geplande query&#39;s met het informatiepictogram en het deelvenster Details gemarkeerd.](../images/ui/monitor-queries/details-panel.png)
 
-### Quarantated query&#39;s {#quarantined-queries}
+## Quarantated query&#39;s {#quarantined-queries}
+
+>[!NOTE]
+>
+>De quarantainewaarschuwing is niet beschikbaar voor &#39;run-once&#39;-vragen. De quarantainewaarschuwing is alleen van toepassing op vragen in het kader van een geplande batch (CTAS en ITAS).
 
 Wanneer ingeschreven in de quarantainevoorziening, wordt om het even welke geplande vraag die tien opeenvolgende looppas ontbreekt automatisch gezet in een [!UICONTROL Quarantined] status. Een query met deze status wordt inactief en wordt niet uitgevoerd op de geplande frequentie. Daarna is uw tussenkomst vereist voordat er nog executies kunnen plaatsvinden. Dit beschermt systeemmiddelen aangezien u de kwesties met uw SQL moet herzien en verbeteren alvorens de verdere uitvoeringen voorkomen.
 
@@ -116,6 +132,22 @@ Om een geplande vraag voor de quarantaineeigenschap toe te laten, selecteer de e
 ![Het geplande lusje van vragen met de ellipsen en laat quarantaine toe die van het gealigneerde actiemenu wordt benadrukt.](../images/ui/monitor-queries/inline-enable.png)
 
 De vragen kunnen ook in de quarantaineeigenschap tijdens het proces van de programmaverwezenlijking worden ingeschreven. Zie de [documentatie met queryplanningen](./query-schedules.md#quarantine) voor meer informatie .
+
+## Uitstel van query-uitvoering {#query-run-delay}
+
+Houd de controle over uw computeruren door alarm voor vraagvertragingen te plaatsen. U kunt vraagprestaties controleren en berichten ontvangen als de status van een vraag onveranderd na een specifieke periode blijft. Gebruik de &#39;[!UICONTROL Query Run Delay]&#39; waakzaam om op de hoogte te worden gebracht als een vraag na een specifieke periode blijft verwerken zonder te voltooien.
+
+Wanneer u [abonneren op waarschuwingen](#alert-subscription) voor geplande vraaglooppas, één van het beschikbare alarm is [!UICONTROL Query Run Delay]. Voor deze waarschuwing moet u een drempelwaarde instellen voor de tijd die nodig is om de bewerking uit te voeren, waarna u op de hoogte wordt gesteld van de vertraging bij de verwerking.
+
+Als u een drempelduur wilt kiezen die de melding activeert, voert u een getal in het tekstinvoerveld in of gebruikt u de pijl-omhoog en -omlaag om de stappen met één minuut te verhogen. Aangezien de drempel in notulen wordt geplaatst, is de maximumduur om een vertraging van de vraaglooppas te waarnemen 1440 minuten (24 uren). De standaardtijdsperiode voor een runtime-vertraging is 150 minuten.
+
+>[!NOTE]
+>
+>Een queryuitvoering kan slechts één runtime hebben. Als u de vertragingsdrempel verandert, wordt het veranderd voor gebruiker die aan het alarm en voor uw volledige organisatie wordt geabonneerd.
+
+![Het dialoogvenster Waarschuwingen op het tabblad geplande query&#39;s met het invoerveld voor vertraging van de query gemarkeerd.](../images/ui/monitor-queries/query-run-delay-input.png)
+
+Zie de sectie Abonneren op waarschuwingen voor meer informatie over [abonneren op [!UICONTROL Query Run Delay] waarschuwingen](#alert-subscription).
 
 ## Filterquery&#39;s {#filter}
 

@@ -2,9 +2,9 @@
 title: Query-logbestanden
 description: Logboeken van de vraag worden automatisch geproduceerd telkens als een vraag wordt uitgevoerd en beschikbaar door UI om met het oplossen van problemen te helpen. Dit document schetst hoe te om de sectie van de Logboeken van de Dienst van de Vraag van UI te gebruiken en te navigeren.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '962'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,13 @@ Adobe Experience Platform houdt een logboek bij van alle vraaggebeurtenissen die
 
 De logboekdossiers worden geproduceerd automatisch door om het even welke vraaggebeurtenis en bevatten informatie met inbegrip van gebruikte SQL, de status van de vraag, hoe lang het duurde, en laatste runtime. U kunt de gegevens van het vraaglogboek als krachtig hulpmiddel voor het oplossen van problemeninefficiënt of probleemvragen gebruiken. Meer uitvoerige logboekinformatie wordt gehouden als deel van de eigenschap van het controlelogboek en kan in worden gevonden [documentatie van auditlogboek](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Zoeklogs controleren
+## Zoeklogs controleren {#check-query-logs}
 
 Selecteer [!UICONTROL Queries] om naar de werkruimte van de Dienst van de Vraag te navigeren en te selecteren [!UICONTROL Log] uit de beschikbare opties.
+
+>[!NOTE]
+>
+>Zowel worden de systeemvragen als de dashboardvragen uitgesloten door gebrek. Zie de [filters](#filter-logs) voor informatie over hoe u de weergegeven logboeken kunt verfijnen op basis van uw instellingen.
 
 ![De platforminterface met query&#39;s en log gemarkeerd.](../images/ui/query-log/logs.png)
 
@@ -77,11 +81,12 @@ De lijst met beschikbare filters wordt weergegeven.
 
 ![De werkruimte van het Logboek van Vragen met de getoonde en benadrukte filteropties.](../images/ui/query-log/log-filter-settings.png)
 
-In de volgende tabel is een beschrijving van elk filter weergegeven.
+In de volgende tabel vindt u een beschrijving van elk filter.
 
 | Filter | Beschrijving |
 | ------ | ----------- |
 | [!UICONTROL Exclude dashboard queries] | Dit checkbox wordt toegelaten door gebrek en sluit logboeken uit die door de vragen worden geproduceerd die voor het produceren van inzichten worden gebruikt. Deze vragen zijn systeem geproduceerd en bedekken de verslagen van gebruiker geproduceerde logboeken noodzakelijk voor controle, het beheer en het oplossen van problemen. Schakel het selectievakje uit als u door het systeem gegenereerde logbestanden wilt weergeven. |
+| [!UICONTROL Exclude system queries] | Dit selectievakje is standaard ingeschakeld en sluit logbestanden uit die door het systeem zijn gegenereerd. Door het systeem gegenereerde query&#39;s omvatten vaak achtergrondtaken of onderhoudsbewerkingen die niet relevant kunnen zijn voor gebruikersbewaking, beheer of probleemoplossing. Als u door het systeem gegenereerde logboeken moet inspecteren, schakelt u dit selectievakje uit om deze in de logweergave op te nemen. |
 | [!UICONTROL Start date] | Om de logboeken voor vragen te filtreren die tijdens een specifieke periode werden gecreeerd, plaats [!UICONTROL Start] en [!UICONTROL End] in de [!UICONTROL Start date] sectie. |
 | [!UICONTROL Completed date] | Om de logboeken voor vragen te filtreren die tijdens een specifieke periode werden voltooid, plaats [!UICONTROL Start] en [!UICONTROL End] in de [!UICONTROL Completed date] sectie. |
 | [!UICONTROL Status] | Filterlogboeken op basis van de [!UICONTROL Status] Selecteer het juiste keuzerondje in de query. Tot de beschikbare opties behoren [!UICONTROL Submitted], [!UICONTROL In progress], [!UICONTROL Success], en [!UICONTROL Failed]. U kunt logbestanden alleen filteren op basis van één statusvoorwaarde tegelijk. |

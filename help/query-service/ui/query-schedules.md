@@ -2,9 +2,9 @@
 title: Zoekplanningen
 description: Leer hoe te om geplande vraaglooppas te automatiseren, een vraagprogramma te schrappen of onbruikbaar te maken, en de beschikbare het plannen opties door de UI van Adobe Experience Platform te gebruiken.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1741'
 ht-degree: 0%
 
 ---
@@ -93,9 +93,23 @@ U kunt een geplande vraag in de quarantaineeigenschap van de gealigneerde acties
 
 ### Waarschuwingen instellen voor de status van een geplande query {#alerts-for-query-status}
 
-U kunt zich ook abonneren op querywaarschuwingen als onderdeel van uw geplande queryinstellingen. Dit betekent dat u meldingen ontvangt als de status van uw query is gewijzigd. Waarschuwingen kunnen worden ontvangen als pop-upberichten of e-mailberichten. De beschikbare vraag-staat waakzame opties omvatten begin, succes, en mislukking. Schakel het selectievakje in om u te abonneren op waarschuwingen voor die status van de geplande query.
+U kunt zich ook abonneren op querywaarschuwingen als onderdeel van uw geplande queryinstellingen. U kunt uw instellingen zodanig configureren dat meldingen voor verschillende situaties worden ontvangen. Het alarm kan voor een quarantined staat, vertragingen in vraagverwerking, of een verandering in status van uw vraag worden geplaatst. De beschikbare vraag-staat waakzame opties omvatten begin, succes, en mislukking. Waarschuwingen kunnen als pop-upberichten of e-mails worden ontvangen. Schakel het selectievakje in om u te abonneren op waarschuwingen voor die status van de geplande query.
 
 ![Het deelvenster Planningsdetails met de waarschuwingsopties gemarkeerd.](../images/ui/query-editor/alerts.png)
+
+In de onderstaande tabel worden de ondersteunde typen querywaarschuwingen beschreven:
+
+| Type waarschuwing | Beschrijving |
+|---|---|
+| `start` | Deze waarschuwing brengt u op de hoogte wanneer een geplande vraaglooppas in werking wordt gesteld of begint te verwerken. |
+| `success` | Deze waarschuwing geeft aan wanneer een geplande query correct is uitgevoerd en geeft aan dat de query zonder fouten is uitgevoerd. |
+| `failed` | Deze waarschuwing treedt op wanneer een geplande query een fout aantreft of niet met succes wordt uitgevoerd. Hiermee kunt u problemen snel identificeren en verhelpen. |
+| `quarantine` | Dit alarm wordt geactiveerd wanneer een geplande vraaglooppas in quarantined staat wordt gezet. Zodra een vraag is [ingeschreven bij het quarantaineonderdeel](#quarantine), om het even welke geplande vraag die tien opeenvolgende looppas ontbreekt wordt automatisch gezet in een [!UICONTROL Quarantined] status. Een quarantined vraag vereist dan uw interventie alvorens om het even welke verdere uitvoeringen kunnen plaatsvinden. Opmerking: de quarantainevoorziening kan alleen worden geactiveerd als de query&#39;s zijn ingeschreven voor een abonnement op quarantainewaarschuwingen. |
+| `delay` | Deze waarschuwing geeft een melding als er een [vertraging in het resultaat van een geplande query-uitvoering](./monitor-queries.md#query-run-delay) boven een bepaalde drempel. U kunt een douanetijd plaatsen die de alarm teweegbrengt wanneer de vraag voor die duur zonder of het voltooien of het ontbreken loopt. Het standaardgedrag plaatst een alarm voor 150 min nadat de vraag begint verwerking. |
+
+>[!NOTE]
+>
+>Als u een [!UICONTROL Query Run Delay] waarschuwing, moet u uw gewenste vertragingstijd in notulen in de UI van het Platform plaatsen. Voer de duur in minuten in. De maximale vertraging is 24 uur (1440 minuten).
 
 Voor een overzicht van waarschuwingen in Adobe Experience Platform, waaronder de structuur van de wijze waarop waarschuwingsregels worden gedefinieerd, raadpleegt u de [waarschuwingsoverzicht](../../observability/alerts/overview.md). Raadpleeg voor hulp bij het beheren van waarschuwingen en waarschuwingsregels in de gebruikersinterface van Adobe Experience Platform de [Handleiding Waarschuwingsinterface](../../observability/alerts/ui.md).
 
