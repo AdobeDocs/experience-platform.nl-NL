@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
+source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
 workflow-type: tm+mt
-source-wordcount: '4065'
+source-wordcount: '4120'
 ht-degree: 0%
 
 ---
@@ -85,7 +85,11 @@ Naast elk publiek bevindt zich een ellipspictogram. Als u deze optie selecteert,
 | [!UICONTROL Delete] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verwijdert u het geselecteerde publiek. Soorten publiek dat wordt gebruikt in downstreambestemmingen of dat afhankelijk is van ander publiek **kan** worden geschrapt. Lees voor meer informatie over het verwijderen van het publiek de [Veelgestelde vragen over segmentatie](../faq.md#lifecycle-states). |
 | [!UICONTROL Add to package] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verplaatst u het publiek tussen sandboxen. Lees voor meer informatie over deze functie de [gereedschapshandleiding voor sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
-Boven aan de pagina vindt u opties voor het toevoegen van alle soorten publiek aan een schema, het importeren van een publiek, het maken van een nieuw publiek en het weergeven van een uitsplitsing van de updatefrequentie.
+>[!IMPORTANT]
+>
+>Voordat u het publiek verwijdert, moet u ervoor zorgen dat het publiek **niet** gebruikt als een component in een op account gebaseerd publiek of gebruikt in Adobe Journey Optimizer.
+
+Boven aan de pagina staan opties voor het toevoegen van alle soorten publiek aan een programma, het importeren van een publiek, het maken van een nieuw publiek en het weergeven van een samenvatting van de publieksevaluatie.
 
 Toggling **[!UICONTROL Schedule all audiences]** zal geplande segmentatie toelaten. Meer informatie over geplande segmentatie vindt u in de [geplande segmentatiesectie van deze gebruikershandleiding](#scheduled-segmentation).
 
@@ -95,13 +99,13 @@ Selecteren **[!UICONTROL Create audience]** Hiermee kunt u een publiek maken. Me
 
 ![De bovenste navigatiebalk op de pagina waarin het publiek bladert, wordt gemarkeerd. Deze balk bevat een knop waarmee u een publiek kunt maken en een knop waarmee u een publiek kunt importeren.](../images/ui/overview/browse-audiences-top.png)
 
-U kunt **[!UICONTROL Update frequency summary]** om een cirkeldiagram te tonen dat de updatefrequentie toont.
+U kunt **[!UICONTROL Evaluation summary]** om een cirkeldiagram te tonen dat een samenvatting van de publieksevaluaties toont.
 
-![De knop Frequentieoverzicht bijwerken is gemarkeerd.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+![De overzichtsknoop van de Evaluatie wordt benadrukt.](../images/ui/overview/browse-audience-evaluation-summary.png)
 
-Het cirkeldiagram wordt weergegeven met een uitsplitsing van het publiek naar updatefrequentie. De grafiek toont het totale aantal publiek in het midden, en de dagelijkse tijd van de partijevaluatie in UTC bij de bodem. Als u de muisaanwijzer boven de verschillende delen van het publiek houdt, wordt het aantal soorten publiek weergegeven dat tot elk type updatefrequentie behoort.
+Het cirkeldiagram wordt weergegeven met een uitsplitsing van het publiek naar publieksevaluatie. De grafiek toont het totale aantal publiek in het midden, en de dagelijkse tijd van de partijevaluatie in UTC bij de bodem. Als u de muisaanwijzer boven de verschillende delen van het publiek houdt, wordt het aantal soorten publiek weergegeven dat tot elk type updatefrequentie behoort.
 
-![Het cirkeldiagram van de updatefrequentie wordt benadrukt, met de de evaluatietijd van de partijsegmentatie ook getoond.](../images/ui/overview/update-frequency-chart.png)
+![Het cirkeldiagram van de publieksevaluatie wordt benadrukt, met de de evaluatietijd van de partijsegmentatie ook getoond.](../images/ui/overview/evaluation-summary.png)
 
 ### Aanpassen {#customize}
 
@@ -203,7 +207,7 @@ De lijst met beschikbare filters wordt weergegeven.
 | [!UICONTROL Origin] | Hiermee kunt u filteren op basis van de oorsprong van het publiek. Beschikbare opties zijn onder andere Segmentatieservice, Aangepast uploaden, Audience-compositie en Audience Manager. |
 | [!UICONTROL Has any tag] | Hiermee kunt u filteren op tags. U kunt kiezen tussen **[!UICONTROL Has any tag]** en **[!UICONTROL Has all tags]**. Wanneer **[!UICONTROL Has any tag]** geselecteerd is, omvat het gefilterde publiek **alle** van de tags die u hebt toegevoegd. Wanneer **[!UICONTROL Has all tags]** geselecteerd is, moet het gefilterde publiek **alles** van de tags die u hebt toegevoegd. |
 | [!UICONTROL Lifecycle status] | Hiermee kunt u filteren op basis van de levenscyclusstatus van de doelgroep. Beschikbare opties zijn [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive], en [!UICONTROL Published]. |
-| [!UICONTROL Update frequency] | Hiermee kunt u filteren op basis van de updatefrequentie van de doelgroep. Beschikbare opties zijn [!UICONTROL Scheduled], [!UICONTROL Continuous], en [!UICONTROL On Demand]. |
+| [!UICONTROL Update frequency] | Hiermee kunt u filteren op basis van de updatefrequentie van het publiek (evaluatiemethode). Beschikbare opties zijn [!UICONTROL Scheduled], [!UICONTROL Continuous], en [!UICONTROL On Demand]. |
 | [!UICONTROL Created by] | Hiermee kunt u filteren op basis van de persoon die het publiek heeft gemaakt. |
 | [!UICONTROL Creation date] | Hiermee kunt u filteren op basis van de aanmaakdatum van het publiek. U kunt een datumbereik kiezen dat u wilt filteren wanneer het publiek is gemaakt. |
 | [!UICONTROL Modified date] | Hiermee kunt u filteren op basis van de laatste gewijzigde datum van het publiek. U kunt een datumbereik kiezen waarop u wilt filteren wanneer het publiek voor het laatst is gewijzigd. |
@@ -329,6 +333,10 @@ Selecteren **[!UICONTROL Build rule]** gaat u naar de Segment Builder. Deze werk
 ![De werkruimte van de Bouwer van het Segment wordt getoond.](../images/ui/overview/segment-builder.png)
 
 ### Een publiek importeren {#import-audience}
+
+>[!IMPORTANT]
+>
+>Als u een extern gegenereerd publiek wilt importeren, kunt u **moet** beschikken over de volgende machtigingen: [!UICONTROL View segments], [!UICONTROL Manage segments], en [!UICONTROL Import audience]. Voor meer informatie over deze toestemming, lees [toegangsbeheeroverzicht](../../access-control/home.md#permissions).
 
 U kunt **[!UICONTROL Import audience]** een extern gegenereerd publiek importeren.
 

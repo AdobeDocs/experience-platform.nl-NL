@@ -2,9 +2,9 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: d4fc95532a82fe32b4172870a5521e41ce313bab
+source-git-commit: 6088dc06af6db2ce1a86a9638df23453184864b2
 workflow-type: tm+mt
-source-wordcount: '3956'
+source-wordcount: '4036'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Ja, extern gegenereerde, vooraf gebouwde doelgroepen worden ondersteund met Poor
 
 ### Welke toestemmingen moet ik hebben om extern geproduceerd publiek te uploaden?
 
-Als u extern gegenereerde soorten publiek wilt uploaden, moet u beschikken over de machtigingen &quot;Soorten publiek/segmenten weergeven&quot;, &quot;Soorten publiek/segmenten beheren&quot;, &quot;Gegevenssets weergeven&quot;, &quot;Gegevenssets beheren&quot;, &quot;Bronnen weergeven&quot; en &quot;Bronnen beheren&quot;. Er zijn geen specifieke op rol-gebaseerde controles vereist om extern geproduceerd publiek te uploaden.
+Als u extern gegenereerde soorten publiek wilt uploaden, hebt u de machtigingen Weergavesegmenten, Segmenten beheren en Soorten publiek importeren nodig. Er zijn geen specifieke op rol-gebaseerde controles vereist om extern geproduceerd publiek te uploaden.
 
 ### Wat gebeurt er als ik een extern gegenereerd publiek upload?
 
@@ -198,6 +198,14 @@ U kunt een publiek opnieuw publiceren door een publiek te selecteren dat in de i
 >U kunt alleen soorten publiek verwijderen die **niet** worden gebruikt in downstreamactiveringen. Bovendien, kunt u geen publiek schrappen dat in een ander publiek van verwijzingen wordt voorzien. Als u uw publiek niet kunt verwijderen, zorg dan dat u **niet** het gebruiken in om het even welke downstreamdiensten of als bouwsteen van een ander publiek.
 
 U kunt een publiek in de schrappingsstaat zetten door het snelle actiemenu in de Portaal van de Publiek te openen en te selecteren [!UICONTROL Delete].
+
+### Zijn er voorbehouden voor de overgangen van de levenscyclusstatus?
+
+Ja, er zijn sommige bedenkingen om zich van bewust te zijn wanneer u publiek in de stroomafwaartse diensten zoals Adobe Journey Optimizer of niet-klant-gebaseerd publiek zoals op rekening-gebaseerd publiek gebruikt.
+
+Op dit moment **moet** controleert u handmatig of het publiek in Adobe Journey Optimizer stroomafwaarts wordt gebruikt, aangezien deze status momenteel niet automatisch wordt gecontroleerd.
+
+Bovendien kunt u **moet** Controleer handmatig of het publiek wordt gebruikt als een component van een publiek in een account, aangezien deze status momenteel niet automatisch wordt gecontroleerd.
 
 ### Heeft het gebruik van een publiek als een onderliggend publiek invloed op overgangen in de levenscyclusstatus?
 
