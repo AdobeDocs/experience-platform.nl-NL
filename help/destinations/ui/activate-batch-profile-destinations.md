@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
+source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
 workflow-type: tm+mt
-source-wordcount: '3716'
+source-wordcount: '3774'
 ht-degree: 0%
 
 ---
@@ -256,7 +256,7 @@ In deze stap moet u de profielkenmerken selecteren die u wilt toevoegen aan de b
 
    ![Modal venster met profielkenmerken die kunnen worden geëxporteerd naar de bestemming.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
 
-1. [!BADGE Beta]{type=Informative}
+1. (Optioneel) De volgorde van de toegewezen velden in de gebruikersinterface is afhankelijk van de volgorde van de kolommen in het geëxporteerde CSV-bestand, van boven naar beneden, waarbij de bovenste rij de meest linkse kolom in het CSV-bestand is. U kunt de volgorde van de toegewezen velden op elke gewenste manier wijzigen door de toewijzingsrijen te slepen en neer te zetten, zoals hieronder wordt weergegeven.
 
    >[!NOTE]
    >
@@ -519,7 +519,7 @@ Verrijkingskenmerken komen overeen met het aangepaste geüploade publiek dat in 
 Voer de onderstaande stappen uit om verrijkingskenmerken voor elk extern publiek te selecteren:
 
 1. In de **[!UICONTROL Enrichment attributes]** kolom, selecteert u de ![Bewerken, knop](../assets/ui/activate-batch-profile-destinations/edit-button.svg) (Bewerken).
-2. Selecteer **[!UICONTROL Add enrichment attribute]**. Er wordt een nieuw leeg schemaveld weergegeven.
+2. Selecteren **[!UICONTROL Add enrichment attribute]**. Er wordt een nieuw leeg schemaveld weergegeven.
    ![UI-afbeelding die het modale scherm weergeeft met de verrijkingskenmerken.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
 3. Selecteer de knop rechts van het lege veld om het selectiescherm van het veld te openen.
 4. Selecteer de kenmerken die u voor het publiek wilt exporteren.
