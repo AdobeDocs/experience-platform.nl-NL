@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, mei 2024
 description: De release van mei 2024 bevat opmerkingen voor Adobe Experience Platform.
-source-git-commit: 85acffec03986cf56aeba6b8973ac1edf56a9cd6
+source-git-commit: 58de22b51bc721ec584b11e3f87c0ee210c0add5
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1594'
 ht-degree: 2%
 
 ---
@@ -71,9 +71,9 @@ Adobe Experience Platform Data Governance is een reeks strategieën en technolog
 
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| Toewijzingsvelden opnieuw ordenen voor batchdoelen | U kunt nu de volgorde van de kolommen in uw CSV-export wijzigen door de toewijzingsvelden in het dialoogvenster [toewijzingsstap](../../destinations/ui/activate-batch-profile-destinations.md#mapping). De volgorde van de toegewezen velden in de gebruikersinterface is afhankelijk van de volgorde van de kolommen in het geëxporteerde CSV-bestand, van boven naar beneden, waarbij de bovenste rij de meest linkse kolom in het CSV-bestand is. |
+| Toewijzingsvelden opnieuw ordenen voor batchdoelen | U kunt nu de volgorde van de kolommen in uw CSV-export wijzigen door de toewijzingsvelden in het dialoogvenster [toewijzingsstap](../../destinations/ui/activate-batch-profile-destinations.md#mapping). De volgorde van de toegewezen velden in de gebruikersinterface is afhankelijk van de volgorde van de kolommen in het geëxporteerde CSV-bestand, van boven naar beneden, waarbij de bovenste rij de meest linkse kolom in het CSV-bestand is. <br> ![Weergave van hoe toewijzingen opnieuw kunnen worden geordend.](../2024/assets/may/reorder-mappings.gif "Weergave van hoe toewijzingen opnieuw kunnen worden geordend."){width="100" zoomable="yes"} |
 | Vooraf geselecteerde standaard exportschema&#39;s voor batchbestemmingen | Experience Platform stelt nu automatisch een standaardschema in voor elke bestandsuitvoer. Zie de documentatie op [exporteren van publiek plannen](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) leren hoe te om het standaardprogramma te wijzigen. |
-| Meerdere publieksactiveringsschema&#39;s voor batchdoelen bewerken | U kunt het activeringsschema voor meerdere soorten publiek nu bewerken via het menu [pagina met doelgegevens](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). |
+| Meerdere publieksactiveringsschema&#39;s voor batchdoelen bewerken | U kunt nu het activeringsschema voor meerdere soorten publiek die naar een batchbestemming (op basis van een bestand) zijn geëxporteerd, bewerken vanuit het menu **[!UICONTROL Activation data]** tabblad van het [pagina met doelgegevens](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br> ![Bekijk hoe u meerdere soorten publiek kunt selecteren en het schema voor het exporteren van bestanden kunt bewerken.](../2024/assets/may/bulk-edit-schedule.gif "Bekijk hoe u meerdere soorten publiek kunt selecteren en het schema voor het exporteren van bestanden kunt bewerken."){width="100" zoomable="yes"} |
 | Meerdere doelgroepen op aanvraag exporteren naar batchbestemmingen | U kunt nu meerdere soorten publiek selecteren en exporteren naar batchbestemmingen, via het dialoogvenster [bestanden op aanvraag exporteren](../../destinations/ui/export-file-now.md) functionaliteit. |
 
 {style="table-layout:auto"}
