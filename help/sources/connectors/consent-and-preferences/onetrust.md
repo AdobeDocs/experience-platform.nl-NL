@@ -5,9 +5,9 @@ title: OneTrust Integration Source Connector - Overzicht
 description: Leer hoe u OneTrust Integration kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+source-git-commit: 71b64894f6a08941b62bf8c6990d6bf0295afdd0
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De [!DNL OneTrust Integration] bron ondersteunt alleen het opnemen van toestemmings- en voorkeursgegevens en niet cookies.
+>De [!DNL OneTrust Integration] bron ondersteunt alleen het opnemen van toestemmings- en voorkeursgegevens en niet cookies. Voor problemen met de bronaansluiting kunt u contact opnemen met OneTrust-ondersteuning op https://support.onetrust.com
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
