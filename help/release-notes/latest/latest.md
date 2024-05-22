@@ -1,10 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, mei 2024
 description: De release van mei 2024 bevat opmerkingen voor Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2bdac588114236c6f314217112b9afa805c1f58c
+source-git-commit: 85acffec03986cf56aeba6b8973ac1edf56a9cd6
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1546'
 ht-degree: 2%
 
 ---
@@ -22,6 +21,7 @@ Updates voor bestaande functies in Experience Platform:
 - [Catalogusservice](#catalog-service)
 - [Dashboards](#dashboards)
 - [Gegevensbeheer](#governance)
+- [Doelen](#destinations)
 - [Query-service](#query-service)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
@@ -40,7 +40,7 @@ Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens 
 | --- | --- |
 | Bulkacties | De inventarisatie van de gegevensset ondersteunt nu acties in grote hoeveelheden. Stroomlijn uw processen van het gegevensbeheer en zorg voor het efficiënte beheer van uw datasets met bulkacties. De bulkacties van het gebruik om tijd te besparen door veelvoudige acties op talrijke datasets gelijktijdig uit te voeren.  Bulkacties omvatten [Verplaatsen naar map](../../catalog/datasets/user-guide.md#move-to-folders), [Codes bewerken](../../catalog/datasets/user-guide.md#manage-tags), en [Verwijderen](../../catalog/datasets/user-guide.md#delete) datasets. <br> ![Bulkacties in de werkruimte van de UI van Datasets.](../2024/assets/may/bulk-actions.png "Bulkacties in de werkruimte van de UI van Datasets."){width="100" zoomable="yes"} <br> Voor meer informatie over deze functie leest u de [UI-gids voor gegevensbestanden](../../catalog/datasets/user-guide.md#bulk-actions). |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 ## Dashboards {#dashboards}
 
@@ -49,7 +49,7 @@ Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzich
 **Nieuwe of bijgewerkte functies**
 | Functie | Beschrijving | | — | — | | Aanpasbare inzichten voor uitgebreide toepassingsrapportage | Naadloos [overgang de output van SQL analyse in begrijpelijke, bedrijfsvriendelijke visuele formaten](../../dashboards/data-distiller/customizable-insights/overview.md). Gebruik aangepaste SQL-query&#39;s voor nauwkeurige gegevensmanipulatie en het maken van dynamische grafieken op basis van diverse gestructureerde datasets. U kunt vraag pro wijze gebruiken om complexe analyse met SQL uit te voeren en dan deze analyse met niet-technische gebruikers door grafieken op uw douanedashboard te delen of hen uit te voeren in Csv- dossiers. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 ## Gegevensbeheer {#governance}
 
@@ -61,7 +61,24 @@ Adobe Experience Platform Data Governance is een reeks strategieën en technolog
 | --- | --- |
 | mTLS-ondersteuning voor HTTP API-doelen en aangepaste Adobe Journey Optimizer-acties | Bouw klantenvertrouwen met de versterkte veiligheidsmaatregelen van het Wederzijdse Protocol van de Veiligheid van de Laag van het Vervoer (mTLS). De [HTTP-API-doel Experience Platform](../../destinations/catalog/streaming/http-destination.md#mtls-protocol-support) en [Aangepaste Adobe Journey Optimizer-acties](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions) biedt nu ondersteuning voor het mTLS-protocol bij het verzenden van gegevens naar geconfigureerde eindpunten. Er is geen aanvullende configuratie vereist in uw aangepaste handeling of HTTP API-bestemming om mTLS te activeren. Dit proces treedt automatisch op wanneer een mTLS-ingeschakeld eindpunt wordt gedetecteerd. U kunt [Download hier het Adobe Journey Optimizer-openbare certificaat](../../landing/governance-privacy-security/encryption.md#download-certificates) en de [Openbaar certificaat van de Dienst van bestemmingen hier](../../landing/governance-privacy-security/encryption.md#download-certificates).<br>Zie de [Documentatie voor gegevenscodering van Experience Platforms](../../landing/governance-privacy-security/encryption.md#mtls-protocol-support) voor meer informatie over de protocollen van de netwerkverbinding wanneer het uitvoeren van gegevens naar derdesystemen. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
+
+## Doelen {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
+
+| Functionaliteit | Beschrijving |
+| ----------- | ----------- |
+| Toewijzingsvelden opnieuw ordenen voor batchdoelen | U kunt nu de volgorde van de kolommen in uw CSV-export wijzigen door de toewijzingsvelden in het dialoogvenster [toewijzingsstap](../../destinations/ui/activate-batch-profile-destinations.md#mapping). De volgorde van de toegewezen velden in de gebruikersinterface is afhankelijk van de volgorde van de kolommen in het geëxporteerde CSV-bestand, van boven naar beneden, waarbij de bovenste rij de meest linkse kolom in het CSV-bestand is. |
+| Vooraf geselecteerde standaard exportschema&#39;s voor batchbestemmingen | Experience Platform stelt nu automatisch een standaardschema in voor elke bestandsuitvoer. Zie de documentatie op [exporteren van publiek plannen](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) leren hoe te om het standaardprogramma te wijzigen. |
+| Meerdere publieksactiveringsschema&#39;s voor batchdoelen bewerken | U kunt het activeringsschema voor meerdere soorten publiek nu bewerken via het menu [pagina met doelgegevens](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). |
+| Meerdere doelgroepen op aanvraag exporteren naar batchbestemmingen | U kunt nu meerdere soorten publiek selecteren en exporteren naar batchbestemmingen, via het dialoogvenster [bestanden op aanvraag exporteren](../../destinations/ui/export-file-now.md) functionaliteit. |
+
+{style="table-layout:auto"}
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Query-service {#query-service}
 
@@ -76,7 +93,7 @@ Met Query Service kunt u standaard-SQL gebruiken om gegevens in Adobe Experience
 | Gestroomlijnde inventarisatie van querylogbestanden | U kunt nu een verbeterde efficiëntie voor probleemoplossing en taakbewaking gebruiken met een [gebruikersinterface voor gestroomlijnde querylogbestanden](../../query-service/ui/query-logs.md#filter-logs): <ul><li> De gebruikersinterface van het platform sluit nu standaard alle &quot;Systeemquery&#39;s&quot; uit van het tabblad Logboeken. </li><li> Systeemquery&#39;s weergeven door de controle ongedaan te maken **Systeemquery&#39;s uitsluiten**. </li></ul> <br> ![Het lusje van logboeken in de werkruimte UI van Vragen.](../2024/assets/may/query-log.png "Het lusje van logboeken in de werkruimte UI van Vragen."){width="100" zoomable="yes"} <br> Gebruik de gestroomlijnde gebruikersinterface voor querylogbestanden voor een meer focusweergave waarmee u de relevante logbestanden snel kunt identificeren en analyseren. |
 | Databasekiezer | Gebruik het vervolgkeuzemenu van de nieuwe databaseselector om [hebben gemakkelijk toegang tot de gegevensmeningen van de Customer Journey Analytics van Power BI of Tableau](../../query-service/ui/credentials.md#connect-to-customer-journey-analytics). U kunt nu uw gewenste database rechtstreeks selecteren via de platforminterface voor een naadloze integratie van uw BI-gereedschappen. <br> ![Tabblad Referenties in de gebruikersinterface van query&#39;s.](../2024/assets/may/database-selector.png "Tabblad Referenties in de gebruikersinterface van query&#39;s."){width="100" zoomable="yes"} <br> |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 ## Segmenteringsservice {#segmentation}
 
@@ -88,7 +105,7 @@ Met Query Service kunt u standaard-SQL gebruiken om gegevens in Adobe Experience
 | --- | --- |
 | Extern gegenereerde soorten publiek importeren | Voor het importeren van extern gegenereerde soorten publiek is nu de machtiging &#39;Deelvenster importeren&#39; vereist. Voor meer informatie over machtigingen leest u de [gebruikershandleiding voor machtigingen](../../access-control/home.md#permissions). |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 ## Bronnen {#sources}
 
@@ -104,7 +121,7 @@ Gebruik bronnen in Experience Platform om gegevens van een Adobe of een gegevens
 | Ondersteuning voor voorbeeldgegevensstroom voor de [!DNL Marketo Engage] bron | De [!DNL Marketo Engage] De bron ondersteunt nu voorbeeldgegevens. Laat de configuratie van de steekproefgegevens toe om uw innamesnelheid te beperken en uit de eigenschappen van het Experience Platform zonder het moeten grote hoeveelheden gegevens innemen. Lees voor meer informatie de handleiding op [een gegevensstroom maken voor [!DNL Marketo Engage] in de gebruikersinterface](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 | Updates voor IP-adreslijst van gewenste personen | Afhankelijk van uw locatie moet u een set nieuwe IP-adressen aan de lijst van gewenste personen toevoegen om streaming bronnen te kunnen gebruiken. Voor een uitvoerige lijst van de nieuwe IP adressen, lees [IP de gids van de lijst van gewenste personen van het adres](../../sources/ip-address-allow-list.md). |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 **Nieuwe of bijgewerkte documentatie**
 
@@ -112,7 +129,7 @@ Gebruik bronnen in Experience Platform om gegevens van een Adobe of een gegevens
 | --- | --- |
 | Documentatie-updates voor [!DNL Google PubSub] | De [!DNL Google PubSub] de brondocumentatie is bijgewerkt met een uitvoerige in de eerste plaats vereiste gids. Gebruik de nieuwe eerste vereisten sectie om te leren hoe te om uw de dienstrekening tot stand te brengen, toestemmingen op het onderwerp of abonnementsniveau te verlenen, en configuraties te plaatsen om uw gebruik van te optimaliseren [!DNL Google PubSub] bron. Lees de [[!DNL Google PubSub] overzicht](../../sources/connectors/cloud-storage/google-pubsub.md) voor meer informatie . |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 Lees voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).
 
