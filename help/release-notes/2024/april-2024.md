@@ -1,10 +1,9 @@
 ---
-title: Adobe Experience Platform Release Notes April 2024
+title: Opmerkingen bij de release van Adobe Experience Platform
 description: In de release van april 2024 staat een opmerking voor Adobe Experience Platform.
-exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1895'
 ht-degree: 2%
 
 ---

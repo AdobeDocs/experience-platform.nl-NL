@@ -1,113 +1,67 @@
 ---
-title: Aanvullende informatie over Adobe Experience Platform
-description: Aanvullende informatie van april 2024 voor Adobe Experience Platform.
+title: Opmerkingen bij de release van Adobe Experience Platform, mei 2024
+description: De release van mei 2024 bevat opmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 2bdac588114236c6f314217112b9afa805c1f58c
 workflow-type: tm+mt
-source-wordcount: '1895'
-ht-degree: 3%
+source-wordcount: '1337'
+ht-degree: 2%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: woensdag 30 april 2024**
+**Releasedatum: woensdag 21 mei 2024**
 
 >[!TIP]
 >
->Gebruik de [Adobe Experience Platform glossary](/help/landing/glossary.md) om vertrouwd te raken met de terminologie die in Real-time Customer Data Platform en Adobe Experience Platform wordt gebruikt. Als u een bepaalde term die u zoekt niet kunt vinden, gebruikt u de feedbackopties op de pagina om te vragen dat nieuwe termen aan de verklarende woordenlijst worden toegevoegd.
+>De [Experience Platform API-documentatie](https://developer.adobe.com/experience-platform-apis/) is nu interactief. Verken de API eindpunten rechtstreeks van de documentatiepagina&#39;s om directe feedback te krijgen en uw technische implementatie te versnellen. [Meer informatie](#interactive-api-documentation) over de nieuwe functionaliteit.
 
 Updates voor bestaande functies in Experience Platform:
 
+- [Catalogusservice](#catalog-service)
 - [Dashboards](#dashboards)
-- [Gegevensverzameling](#data-collection)
-- [Doelen](#destinations)
-- [Identiteitsservice](#identity-service)
-- [Bewaking](#monitoring)
+- [Gegevensbeheer](#governance)
 - [Query-service](#query-service)
-- [Sandboxes](#sandboxes)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
+
+Overige updates in Adobe Experience Platform:
+
+- [Documentatie-updates](#documentation-updates)
+
+## Catalogusservice {#catalog-service}
+
+Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens en de gegevensverbinding in Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het gegevensmeer als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Bulkacties | De inventarisatie van de gegevensset ondersteunt nu acties in grote hoeveelheden. Stroomlijn uw processen van het gegevensbeheer en zorg voor het efficiënte beheer van uw datasets met bulkacties. De bulkacties van het gebruik om tijd te besparen door veelvoudige acties op talrijke datasets gelijktijdig uit te voeren.  Bulkacties omvatten [Verplaatsen naar map](../../catalog/datasets/user-guide.md#move-to-folders), [Codes bewerken](../../catalog/datasets/user-guide.md#manage-tags), en [Verwijderen](../../catalog/datasets/user-guide.md#delete) datasets. <br> ![Bulkacties in de werkruimte van de UI van Datasets.](../2024/assets/may/bulk-actions.png "Bulkacties in de werkruimte van de UI van Datasets."){width="100" zoomable="yes"} <br> Voor meer informatie over deze functie leest u de [UI-gids voor gegevensbestanden](../../catalog/datasets/user-guide.md#bulk-actions). |
+
+{style=“table-layout:auto”}
 
 ## Dashboards {#dashboards}
 
 Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
 
 **Nieuwe of bijgewerkte functies**
+| Functie | Beschrijving | | — | — | | Aanpasbare inzichten voor uitgebreide toepassingsrapportage | Naadloos [overgang de output van SQL analyse in begrijpelijke, bedrijfsvriendelijke visuele formaten](../../dashboards/data-distiller/customizable-insights/overview.md). Gebruik aangepaste SQL-query&#39;s voor nauwkeurige gegevensmanipulatie en het maken van dynamische grafieken op basis van diverse gestructureerde datasets. U kunt vraag pro wijze gebruiken om complexe analyse met SQL uit te voeren en dan deze analyse met niet-technische gebruikers door grafieken op uw douanedashboard te delen of hen uit te voeren in Csv- dossiers. |
+
+{style=“table-layout:auto”}
+
+## Gegevensbeheer {#governance}
+
+Adobe Experience Platform Data Governance is een reeks strategieën en technologieën die worden gebruikt om klantgegevens te beheren en naleving van regelgeving, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik te waarborgen. Het speelt een sleutelrol binnen [!DNL Experience Platform] op verschillende niveaus, waaronder catalogisering, gegevenskoppeling, etikettering van het gegevensgebruik, beleid inzake gegevenstoegang en toegangscontrole voor marketingacties.
+
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Real-time Customer Data Platform B2B-inzichten | Vooraf geconfigureerd verkennen [Real-Time CDP B2B-gegevensinzicht in accounts en mogelijkheden](../../dashboards/insights/account-profiles.md) om u te helpen uw gegevens begrijpen en uw bedrijfsbesluiten informeren. U kunt [zelf inzichten maken met het Real-Time CDP B2B-gegevensmodel](../../dashboards/data-models/cdp-insights-data-model-b2c.md) om uw gegevens te visualiseren en te verkennen en uw aangepaste visualisaties in uw dashboard op te slaan. |
+| mTLS-ondersteuning voor HTTP API-doelen en aangepaste Adobe Journey Optimizer-acties | Bouw klantenvertrouwen met de versterkte veiligheidsmaatregelen van het Wederzijdse Protocol van de Veiligheid van de Laag van het Vervoer (mTLS). De [HTTP-API-doel Experience Platform](../../destinations/catalog/streaming/http-destination.md#mtls-protocol-support) en [Aangepaste Adobe Journey Optimizer-acties](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions) biedt nu ondersteuning voor het mTLS-protocol bij het verzenden van gegevens naar geconfigureerde eindpunten. Er is geen aanvullende configuratie vereist in uw aangepaste handeling of HTTP API-bestemming om mTLS te activeren. Dit proces treedt automatisch op wanneer een mTLS-ingeschakeld eindpunt wordt gedetecteerd. U kunt [Download hier het Adobe Journey Optimizer-openbare certificaat](../../landing/governance-privacy-security/encryption.md#download-certificates) en de [Openbaar certificaat van de Dienst van bestemmingen hier](../../landing/governance-privacy-security/encryption.md#download-certificates).<br>Zie de [Documentatie voor gegevenscodering van Experience Platforms](../../landing/governance-privacy-security/encryption.md#mtls-protocol-support) voor meer informatie over de protocollen van de netwerkverbinding wanneer het uitvoeren van gegevens naar derdesystemen. |
 
-{style="table-layout:auto"}
-
-Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestemmingen te verlenen en douanewidgets tot stand te brengen, begin door te lezen [overzicht van dashboards](../../dashboards/home.md).
-
-## Gegevensverzameling {#data-collection}
-
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar de Edge Network van het Experience Platform kunt verzenden waar het kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
-
-**Nieuwe of bijgewerkte functies**
-
-| Type | Functie | Beschrijving |
-| --- | --- | --- |
-| Extensies | [!DNL Acxiom Anonymous Visitor Insights] Extensie tags | Ontdek waar uw websitebezoekers vandaan komen [!DNL Acxiom's Visitor Insights]. Door geoIP raadplegingstechnologie te gebruiken, kan Acxiom de plaats van anonieme browsers identificeren. Zodra geïdentificeerd, geeft een onderzoek in hun georganiseerd gegevensbestand extra inzichten die naar browser worden teruggestuurd. De makers van inhoud kunnen zo hun inhoud aanpassen aan deze gegevenspunten en bezoekers een meer persoonlijke en boeiende ervaring bieden, zelfs als ze als vreemden zijn gestart. |
-| Gegevensstromen | [detectie van Edge Network bot](../../datastreams/bot-detection.md) | Verkeer afkomstig van niet-menselijke entiteiten, zoals geautomatiseerde programma&#39;s, webschrapers, spinnen, scanners met scripts, kan het moeilijker maken om gebeurtenissen die plaatsvinden bij bezoekers van het menselijk publiek te identificeren. Dit type van verkeer kan belangrijke bedrijfsmetriek negatief beïnvloeden, die tot onjuist verkeer leiden meldend. <br>Met beide detectie kunt u gebeurtenissen identificeren die door de [Web SDK](../../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) en [[!DNL Server API]](../../server-api/overview.md) als gegenereerd door bekende spinnen en bots. Door beide detectie voor uw gegevensstromen te configureren, kunt u specifieke IP-adressen, IP-bereiken en aanvraagheaders identificeren die u als beide gebeurtenissen wilt classificeren. <br> De identificatie van beide verkeer kan u een nauwkeurigere meting van gebruikersactiviteit op uw plaats of mobiele toepassing verstrekken. |
-| Mobiele SDK | Primaire release | Nieuwe grote versies van de Mobile SDK zijn uitgebracht voor de volgende platforms: iOS Mobile Core 5.x en compatibele iOS-extensies, Android Mobile Core 3.x en compatibele Android-extensies, React Native Core 6.x en compatibele React Native-extensies, Flutter Core 4.x en compatibele Flutter-extensies. Deze release biedt verschillende nieuwe functies en verbeteringen, waaronder ondersteuning in de Android SDK voor Jetpack Compose, ondersteuning voor op Adobe Journey Optimizer gebaseerde ervaringen en algemene beschikbaarheid van de Adobe Journey Optimizer Messaging-extensie voor Flutter. Zie voor meer gedetailleerde opmerkingen bij de release [Opmerkingen bij de release van Mobile SDK](https://developer.adobe.com/client-sdks/home/release-notes/). |
-| Mobiele SDK | Privacy | Vanwege de beleidsupdate van Apple, die op 1 mei 2024 begint, moeten ontwikkelaars nieuwe privacyfuncties implementeren om zich bij de App Store in te dienen. Alle klanten van de Adobe die de Mobile SDK gebruiken, moeten een upgrade uitvoeren naar versie 5.x van de SDK als ze na 1 mei App Store-goedkeuring willen ontvangen. |
-| Roku SDK | Roku SDK | De eerste grote versie van de Roku SDK is vrijgegeven met ondersteuning voor de Streaming Media voor de Platform Edge Network. |
-| Tags en doorsturen van gebeurtenissen | Richtlijnen voor producten | Experience Platform [Tags](../../tags/home.md) en [Gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) bieden een nieuwe reeks ervaringen die u kunnen helpen snel aan de slag te gaan en een snelle prijs-kwaliteitstijd te realiseren. Deze ervaringen omvatten nieuwe instapschermen, zelfstudies in producten en knopinfo. <br>![Gebeurtenis doorsturen met de aanwijzingen voor in-product gemarkeerd.](../2024/assets/april/event-forwarding.png "De Schema-editor met de velden Type- en Kaartwaardetype gemarkeerd."){width="100" zoomable="yes"}<br> |
-| Web SDK | Vereenvoudigde toepassing van SDK van het Web voor klanten van de Audience Manager | De veelvoudige updates van SDK van het Web vereenvoudigen nu goedkeuring van Web SDK zonder het Model van de Gegevens van de Ervaring (XDM) voor de Oplossingen van het Experience Cloud, zoals Audience Manager, Analytics en Doel te gebruiken. Meer over de goedkeuring van SDK van het Web van de Audience Manager van de volgende gidsen: <ul><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">Werk uw bibliotheek van de gegevensinzameling voor Audience Manager van de de markeringsuitbreiding van de Audience Manager aan de de markeringsuitbreiding van SDK van het Web bij</li><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">Werk uw bibliotheek van de gegevensinzameling voor Audience Manager van de bibliotheek van AppMeasurement JavaScript aan de bibliotheek van SDK JavaScript van het Web bij</li></ul> |
-
-{style="table-layout:auto"}
-
-<!--| Web SDK | [Streaming Media Collection support in Web SDK](../../web-sdk/commands/configure/streamingmedia.md) | You can now use Experience Platform Web SDK to collect data related to media sessions on your website. The collected data can include information about media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform and/or Adobe Analytics, to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website. <br>See the [Web SDK](../../web-sdk/commands/configure/streamingmedia.md) documentation to learn how to configure the `streamingMedia` component. <br>See the guide on [migrating your Analytics for Streaming Media implementation from Media JS to Web SDK](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/edge-web-sdk) for more details.|-->
-
-Voor meer informatie over gegevensverzamelingen leest u de [overzicht van gegevensverzameling](../../collection/home.md).
-
-## Doelen {#destinations}
-
-[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-
-**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
-
-| Functionaliteit | Beschrijving |
-| ----------- | ----------- |
-| `isRequired` parameter nu beschikbaar voor geneste gegevensvelden van klanten in Destination SDK | Wanneer het vormen van een bestemming in Destination SDK, kunt u nu [geneste gegevensvelden voor klanten instellen als dat vereist is](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). Op deze manier kunnen gebruikers die uw bestemming instellen, pas verdergaan met hun activeringsstroom als ze een waarde voor dat veld selecteren. |
-| De segmentatie van de rand is niet meer verplicht wanneer het opzetten van een bestemming van Adobe Target met Web SDK | Eerder bij het configureren van een [Adobe Target-bestemming](/help/destinations/catalog/personalization/adobe-target-connection.md) met Web SDK, moest de gegevensstroom voor verpersoonlijking en randsegmentatie worden toegelaten. De eis dat de gegevensstroom voor randsegmentatie wordt toegelaten [is nu verwijderd](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Met dit integratiepatroon kunt u alleen profiteren van een subset van gevallen waarin u gebruikmaakt van personalisatie wanneer u Adobe Target met Real-Time CDP gebruikt. Meer informatie over de [gebruik gevallen die door integratietype worden toegelaten](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters). |
-| [!BADGE Beta]{type=Informative} Meerdere soorten publiek en gegevenssets verwijderen uit activeringsstromen | U kunt nu meerdere soorten publiek en gegevenssets selecteren en verwijderen uit doelactiveringsstromen. Zie de [bestemmingsdetails](../../destinations/ui/destination-details-page.md#bulk-remove) en [gegevensset exporteren](../../destinations/ui/export-datasets.md) voor meer informatie. |
-
-{style="table-layout:auto"}
-
-Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
-
-## Identiteitsservice {#identity-service}
-
-Gebruik Adobe Experience Platform Identity Service om een uitgebreide weergave van uw klanten en hun gedrag te maken door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
-
-**Bijgewerkte functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Verdringing van de `/orgs/{ORG}/` eindpunten in de API | De volgende eindpunten in de [[!DNL Identity Service] API](https://developer.adobe.com/experience-platform-apis/references/identity-service/) zijn afgekeurd:<ul><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities`</li><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities/{ID}`</li></ul> U kunt de `/idnamespace/identities` en de `/idnamespace/identities/{ID}` eindpunten om de zelfde taken te verwezenlijken en of alle namespaces in een organisatie, of een specifieke namespace in een organisatie terug te winnen. |
-
-{style="table-layout:auto"}
-
-Voor meer informatie over Identiteitsservice leest u de [Overzicht van identiteitsservice](../../identity-service/home.md).
-
-## Bewaking {#monitoring}
-
-Gebruik het controledashboard in de UI van het Experience Platform om de reis van uw gegevens van Bronnen, de Dienst van de Identiteit, het Profiel van de Klant in real time, Soorten, en Doelen te controleren.
-
-**Bijgewerkte functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Uitbreiding van dashboard controleren | U kunt nu het controledashboard voor verschillende gegevenstypes gebruiken die op uw bedrijfs gebruikscase worden gebaseerd. Gebruik het controledashboard om persoon, rekening, en de activiteiten van het vooruitgangsgegevenstype in bronnen, publiek, en bestemmingen te controleren. |
-
-{style="table-layout:auto"}
-
-Lees voor meer informatie de handleiding op [het gebruiken van het controledashboard](../../dataflows/ui/monitor.md).
+{style=“table-layout:auto”}
 
 ## Query-service {#query-service}
 
@@ -117,30 +71,12 @@ Met Query Service kunt u standaard-SQL gebruiken om gegevens in Adobe Experience
 
 | Functie | Beschrijving |
 | --- | --- |
-| Query Quarantine | Sluit mislukte query-uitvoeringen automatisch af om onderbrekingen te voorkomen en consistente prestaties te behouden. Zie de [query-quarantaine](../../query-service/ui/query-schedules.md#quarantine) documentatie voor meer informatie. |
-| Query annuleren | Neem controle van vraaguitvoering en verbeter uw productiviteit door langdurige vragen te annuleren.Zie [query annuleren](../../query-service/ui/user-guide.md#cancel-query) documentatie voor meer informatie. |
-| Geplande querywaarschuwingen | Blijf op de hoogte van proactieve meldingen tijdens het plannen van query&#39;s, zodat u over een efficiënt en tijdig taakbeheer beschikt. U kunt [abonneren op waarschuwingen bij het maken van een query](../../query-service/ui/query-schedules.md#alerts-for-query-status) of het gebruiken van de gealigneerde acties voor bestaande geplande vragen. Zie de [abonneren op waarschuwingen met inline-acties](../../query-service/ui/monitor-queries.md#alert-subscription) documentatie voor meer informatie. |
-| Verbeterde geplande querynavigatie | Navigeer gemakkelijk tussen vraagmalplaatjes en geplande looppas voor verhoogde productiviteit. Zie de documentatie op [het bekijken geplande vraaglooppas](../../query-service/ui/query-schedules.md#scheduled-query-runs) voor meer informatie . |
-| Uitgebreide query-uitvoer | Toegang tot tot maximaal 500 rijen vraagresultaten binnen de console voor diepere analyse van uw gegevens.Zie [aantal resultaten](../../query-service/ui/user-guide.md#result-count) documentatie voor meer informatie. |
-| Oudere versie van Query Editor | Vanaf 30-april-2024 is de Verbeterde Redacteur van de Vraag de standaardeditor voor alle gebruikers geworden. De erfenisredacteur zal op 30-mei-2024 worden afgekeurd en niet meer voor gebruik beschikbaar zijn. Zie de [Gebruikershandleiding voor de Query Editor](../../query-service/ui/user-guide.md) voor meer informatie . |
+| Legacy Editor is vervangen | De verouderde editor is vervangen en is niet meer beschikbaar voor gebruik. U kunt de opdracht [verbeterde functies van de Query Editor](../../query-service/ui/user-guide.md#query-authoring) om uw vragen te schrijven, te bevestigen en in werking te stellen. |
+| Vertraging bij uitvoeren query | Houd de controle over uw computeruren door alarm voor vertragingen aan uw vraaglooppas te plaatsen. U kunt ervoor kiezen waarschuwingen te ontvangen als de status van een query na een bepaalde periode niet verandert. Plaats enkel uw gewenste vertragingstijd in de UI van het Platform om op de hoogte te blijven van uw vraagvooruitgang. Als u wilt weten hoe u deze waarschuwing instelt in de gebruikersinterface, raadpleegt u de [documentatie met queryplanningen](../../query-service/ui/query-schedules.md#alerts-for-query-status) of de [hulplijn voor inline queryhandelingen](../../query-service/ui/monitor-queries.md#query-run-delay). |
+| Gestroomlijnde inventarisatie van querylogbestanden | U kunt nu een verbeterde efficiëntie voor probleemoplossing en taakbewaking gebruiken met een [gebruikersinterface voor gestroomlijnde querylogbestanden](../../query-service/ui/query-logs.md#filter-logs): <ul><li> De gebruikersinterface van het platform sluit nu standaard alle &quot;Systeemquery&#39;s&quot; uit van het tabblad Logboeken. </li><li> Systeemquery&#39;s weergeven door de controle ongedaan te maken **Systeemquery&#39;s uitsluiten**. </li></ul> <br> ![Het lusje van logboeken in de werkruimte UI van Vragen.](../2024/assets/may/query-log.png "Het lusje van logboeken in de werkruimte UI van Vragen."){width="100" zoomable="yes"} <br> Gebruik de gestroomlijnde gebruikersinterface voor querylogbestanden voor een meer focusweergave waarmee u de relevante logbestanden snel kunt identificeren en analyseren. |
+| Databasekiezer | Gebruik het vervolgkeuzemenu van de nieuwe databaseselector om [hebben gemakkelijk toegang tot de gegevensmeningen van de Customer Journey Analytics van Power BI of Tableau](../../query-service/ui/credentials.md#connect-to-customer-journey-analytics). U kunt nu uw gewenste database rechtstreeks selecteren via de platforminterface voor een naadloze integratie van uw BI-gereedschappen. <br> ![Tabblad Referenties in de gebruikersinterface van query&#39;s.](../2024/assets/may/database-selector.png "Tabblad Referenties in de gebruikersinterface van query&#39;s."){width="100" zoomable="yes"} <br> |
 
-{style="table-layout:auto"}
-
-Raadpleeg voor meer informatie over Query Services de [Overzicht van Query Service](../../query-service/home.md).
-
-## Sandboxes {#sandboxes}
-
-Adobe Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen. Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
-
-**Nieuwe of bijgewerkte functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| [Gereedschap Sandbox](../../sandboxes/ui/sandbox-tooling.md) | Gereedschap sandbox gebruiken voor [export](../../sandboxes/ui/sandbox-tooling.md#export-entire-sandbox) alle ondersteunde objecttypen in een volledig sandboxpakket, en vervolgens [import](../../sandboxes/ui/sandbox-tooling.md#import-entire-sandbox) het pakket in verschillende sandboxen om objectconfiguraties te repliceren. |
-
-{style="table-layout:auto"}
-
-Voor meer informatie over sandboxen leest u de [sandboxen, overzicht](../../sandboxes/home.md).
+{style=“table-layout:auto”}
 
 ## Segmenteringsservice {#segmentation}
 
@@ -149,12 +85,10 @@ Voor meer informatie over sandboxen leest u de [sandboxen, overzicht](../../sand
 **Bijgewerkte functie**
 
 | Functie | Beschrijving |
-| ------- | ----------- |
-| Status van levenscyclus van het publiek | De levenscyclusstaten van de doelgroep zijn gestroomlijnd om het levenscyclusbeheer te vereenvoudigen. Voor meer informatie over deze levenscyclusstaten leest u de [Veelgestelde vragen over segmentatieservice](../../segmentation/faq.md#lifecycle-states). |
+| --- | --- |
+| Extern gegenereerde soorten publiek importeren | Voor het importeren van extern gegenereerde soorten publiek is nu de machtiging &#39;Deelvenster importeren&#39; vereist. Voor meer informatie over machtigingen leest u de [gebruikershandleiding voor machtigingen](../../access-control/home.md#permissions). |
 
-{style="table-layout:auto"}
-
-Voor meer informatie over [!DNL Segmentation Service], zie de [Overzicht van segmentatie](../../segmentation/home.md).
+{style=“table-layout:auto”}
 
 ## Bronnen {#sources}
 
@@ -162,25 +96,40 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 Gebruik bronnen in Experience Platform om gegevens van een Adobe of een gegevensbron van derden in te voeren.
 
-**Nieuwe bronnen**
-
-| Nieuwe bronnen | Beschrijving |
-| --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL PathFactory] | Gebruik de [[!DNL PathFactory] bron](../../sources/tutorials/ui/create/marketing-automation/pathfactory.md) om de gegevens van uw bezoeker, sessie en paginaweergave te integreren vanuit [!DNL PathFactory] naar Experience Platform. Lees de [[!DNL PathFactory] overzicht](../../sources/connectors/marketing-automation/pathfactory.md) voor informatie over hoe te beginnen. |
-| [!DNL Teradata Vantage] | Gebruik de [[!DNL Teradata Vantage] bron](../../sources/tutorials/ui/create/databases/teradata-vantage.md) om gegevens van hybride multi-wolkmilieu&#39;s aan Experience Platform in te voeren. Lees de [[!DNL Teradata Vantage] overzicht](../../sources/connectors/databases/teradata-vantage.md) voor informatie over hoe te beginnen. |
-
-{style="table-layout:auto"}
-
-**Nieuwe en bijgewerkte functies**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Updates voor IP-adressen voor het toestaan van lijsten in VA7 | De volgende IP adressen zijn toegevoegd aan de lijst van IP adressen om aan uw lijst van gewenste personen voor VA7 (Noord-Amerika) toe te voegen: <ul><li>`20.98.198.224/29`</li><li>`20.119.28.57/32`</li><li>`20.232.89.104/29`</li><li>`20.98.195.172/32`</li><li>`172.210.218.144/28`</li></ul> Voor een uitvoerige lijst van IP adressen om aan uw lijst van gewenste personen toe te voegen, lees [IP Document van de lijst van gewenste personen van het Adres](../../sources/ip-address-allow-list.md). |
-| Ondersteuning voor nieuwe verificatietypen met de [!DNL Azure Event Hubs] bron | U kunt nu verbinding maken met uw [!DNL Event Hubs] bron naar Experience Platform met behulp van [!DNL Azure Active Directory Authentication] of [!DNL Scoped Azure Active Directory Authentication]. Lees de handleiding op [verbinden [!DNL Event Hubs] naar Experience Platform](../../sources/tutorials/ui/create/cloud-storage/eventhub.md) voor meer informatie . |
-| Updates voor [!DNL Data Landing Zone] terugwinning van referenties | U kunt nu de juiste rail in de bronwerkruimte gebruiken om uw [!DNL Data Landing Zone] referenties. U kunt nu ook de juiste rail gebruiken om uw referenties te vernieuwen. Lees de [[!DNL Data Landing Zone] UI-hulplijn](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) voor meer informatie . |
+| OAuth2-clientreferentie voor [!DNL Salesforce] bron | U kunt nu OAuth2 Client Credential gebruiken om uw [!DNL Salesforce] account op Experience Platform. Lees de [!DNL Salesforce] bron [API-handleiding](../../sources/tutorials/api/create/crm/salesforce.md) en [UI-hulplijn](../../sources/tutorials/ui/create/crm/salesforce.md) voor meer informatie . |
+| Ondersteuning voor voorbeeldgegevensstroom voor de [!DNL Marketo Engage] bron | De [!DNL Marketo Engage] De bron ondersteunt nu voorbeeldgegevens. Laat de configuratie van de steekproefgegevens toe om uw innamesnelheid te beperken en uit de eigenschappen van het Experience Platform zonder het moeten grote hoeveelheden gegevens innemen. Lees voor meer informatie de handleiding op [een gegevensstroom maken voor [!DNL Marketo Engage] in de gebruikersinterface](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
+| Updates voor IP-adreslijst van gewenste personen | Afhankelijk van uw locatie moet u een set nieuwe IP-adressen aan de lijst van gewenste personen toevoegen om streaming bronnen te kunnen gebruiken. Voor een uitvoerige lijst van de nieuwe IP adressen, lees [IP de gids van de lijst van gewenste personen van het adres](../../sources/ip-address-allow-list.md). |
 
-{style="table-layout:auto"}
+{style=“table-layout:auto”}
 
-<!--| Enhanced filtering and navigation in the sources UI workspace | Use the enhanced filtering, search, and inline action tools in the sources UI workspace to streamline your workflow. <ul><li>Use filtering and search capabilities to navigate your way through sources accounts and dataflows in your organization.</li><li>Use inline actions to modify configuration settings applied to your dataflows and improve organizational workflows. You can use inline actions to apply tags, set up alerts, or create ingestion jobs on demand.</li></ul> For more information, read the guide on [filtering sources objects in the UI](../../sources/tutorials/ui/filter.md).|-->
+**Nieuwe of bijgewerkte documentatie**
+
+| Bijgewerkte documentatie | Beschrijving |
+| --- | --- |
+| Documentatie-updates voor [!DNL Google PubSub] | De [!DNL Google PubSub] de brondocumentatie is bijgewerkt met een uitvoerige in de eerste plaats vereiste gids. Gebruik de nieuwe eerste vereisten sectie om te leren hoe te om uw de dienstrekening tot stand te brengen, toestemmingen op het onderwerp of abonnementsniveau te verlenen, en configuraties te plaatsen om uw gebruik van te optimaliseren [!DNL Google PubSub] bron. Lees de [[!DNL Google PubSub] overzicht](../../sources/connectors/cloud-storage/google-pubsub.md) voor meer informatie . |
+
+{style=“table-layout:auto”}
 
 Lees voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).
+
+## Documentatie-updates {#documentation-updates}
+
+### Interactieve API-documentatie voor Experience Platforms {#interactive-api-documentation}
+
+De [Experience Platform API-documentatie](https://developer.adobe.com/experience-platform-apis/) is nu interactief. Alle API-referentiepagina&#39;s hebben nu een **Probeer het** .functionaliteit die u kunt gebruiken om API vraag rechtstreeks op de documentpagina van de website te testen. [Verkrijg de vereiste authentificatiegeloofsbrieven](/help/landing/api-authentication.md) en de functionaliteit te gebruiken om de API-eindpunten te verkennen.
+
+Gebruik deze nieuwe functionaliteit om de verzoeken aan en de reacties van API eindpunten te onderzoeken, om directe feedback te krijgen en uw technische implementatie te versnellen. Ga bijvoorbeeld naar de [Identity Service API](https://developer.adobe.com/experience-platform-apis/references/identity-service/) of de [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) eindpunten om de nieuwe **Probeer het** functionaliteit in de rechtertrein.
+
+![Schermopname die een API-aanroep weergeeft die rechtstreeks vanaf de documentatiewebsite is gemaakt.](../2024/assets/may/api-playground-demo.gif)
+
+>[!CAUTION]
+>
+>Houd er rekening mee dat u met de interactieve API-functionaliteit op de documentatiepagina&#39;s echte API-aanroepen uitvoert naar de eindpunten. Houd dit in gedachten wanneer u experimenteert met productiesandboxen.
+
+### Persoonlijke inzichten en betrokkenheid {#personalized-insights-engagement}
+
+Een nieuwe gebruiksdocumentatiepagina van begin tot eind voor [evoluerend éénmalige waarde aan levenwaarde](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md) is nu live. Lees deze documentatie om te begrijpen hoe u Real-Time CDP en Adobe Journey Optimizer kunt gebruiken om sporadische bezoekers om te zetten in uw wegeigenschappen naar loyale klanten.
