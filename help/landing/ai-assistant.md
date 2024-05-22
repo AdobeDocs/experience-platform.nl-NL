@@ -5,9 +5,9 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 6beaefb23f4deb382b7844fcf58efbd72b1da2ec
+source-git-commit: 65714e2b18dc787abe074e8448aa1d640c867338
 workflow-type: tm+mt
-source-wordcount: '3085'
+source-wordcount: '3009'
 ht-degree: 0%
 
 ---
@@ -80,13 +80,7 @@ De interface AI Assistant wordt weergegeven en bevat direct informatie die u nod
 * [!UICONTROL What is a schema?]
 * [!UICONTROL Tell me some common use cases for Real-Time CDP]
 
-![De sectie &quot;Te beginnen ideeën&quot; van AI Assistant.](./images/ai-assistant/ideas-to-get-started.png)
-
-Als u met AI Assistant wilt werken, gebruikt u het invoervak om query&#39;s of opdrachten te typen. U kunt ook de opdracht (**`+`**) gebruiken om de functie Automatisch aanvullen en het bladwijzerpictogram te gebruiken voor toegang tot uw query&#39;s en opdrachten met bladwijzer.
-
-![Het invoervak AI Assistant is gemarkeerd.](./images/ai-assistant/interact.png)
-
-## Voorbeeld van hoofdletters/kleine letters gebruiken: gebruik AI Assistant om het maken van het schema te versnellen
+## Handleiding voor AI Assistant-gebruikersinterface
 
 >[!NOTE]
 >
@@ -104,97 +98,137 @@ AI Assistant zoekt vervolgens naar zijn kennisbasis en berekent een antwoord. AI
 
 Nadat u een reactie hebt ontvangen van AI Assistant, kunt u een aantal opties selecteren om te bepalen hoe u wilt doorgaan.
 
-### Uw query opslaan {#save-your-query}
+### AI Assistant-functies {#features}
 
-+++Selecteren om een voorbeeld te bekijken van hoe u een query opslaat
+In deze sectie worden de verschillende functies van AI Assistant beschreven die u kunt gebruiken tijdens uw workflows op het Experience Platform.
 
-Als u de query wilt opslaan, selecteert u het bladwijzerpictogram naast uw vraag.
+<!-- 
+### Save your query {#save-your-query}
 
-![Screenshot van een geselecteerde bladwijzer.](./images/ai-assistant/save-your-query.png)
++++Select to view an example of how to save a query
 
-Als u de opgeslagen query wilt openen, selecteert u het bladwijzerpictogram onder het invoervak en selecteert u de query die u wilt uitvoeren.
+To save your query, select the bookmark icon beside your question.
 
-![Screenshot van bladwijzerpictogram en een lijst met opgeslagen query&#39;s.](./images/ai-assistant/bookmarks.png)
+![Screenshot of a selected bookmark.](./images/ai-assistant/save-your-query.png)
 
-+++
+To access your saved queries, select the bookmark icon below the input box, then select the query you would like to run.
+
+![Screenshot of bookmark icon and a list of saved queries.](./images/ai-assistant/bookmarks.png)
+
++++ -->
 
 ### Gegevens in uw sandbox weergeven {#view-data-in-your-sandbox}
 
+Afhankelijk van uw query biedt AI Assistant aanvullende informatie over de gegevens in uw sandbox. Als u wilt zien hoe de reactie op uw query op uw specifieke sandbox wordt toegepast, selecteert u **[!UICONTROL In your sandbox].**
+
+Wanneer u gegevens met betrekking tot uw sandbox weergeeft, kan AI Assistant directe koppelingen bevatten naar specifieke UI-pagina&#39;s waarop de gevraagde gegevens worden weergegeven.
+
 +++Selecteren om voorbeeld weer te geven
 
-Afhankelijk van uw query biedt AI Assistant aanvullende informatie over de gegevens in uw sandbox. Als u wilt zien hoe de reactie op uw query op uw sandbox wordt toegepast, selecteert u **[!UICONTROL In your sandbox].**
+In dit voorbeeld retourneert AI Assistant aanvullende informatie over de bestaande XDM-schema&#39;s in uw sandbox, inclusief het totale aantal en de vijf meest gebruikte velden.
 
-Tijdens deze stap kan AI Assistant rechtstreekse koppelingen naar de UI-pagina&#39;s van bepaalde objecten in kwestie maken. In het onderstaande voorbeeld biedt AI Assistant directe koppelingen naar de [!UICONTROL Schemas] en [!UICONTROL Segments] UI-pagina&#39;s.
-
-![Screenshot van de optie &quot;In uw sandbox&quot;.](./images/ai-assistant/in-your-sandbox.png)
+![Het vervolgkeuzevenster &quot;in uw sandbox&quot; wordt geopend en bevat aanvullende informatie over uw schema&#39;s.](./images/ai-assistant/in-your-sandbox.png)
 
 +++
 
-### Het antwoord controleren {#verify-the-response}
+### citaten weergeven {#view-citations}
+
+U kunt antwoorden verifiëren die door AI Assistant aan u zijn geretourneerd door citaten te bekijken die beschikbaar zijn bij elk antwoord.
 
 ++ + selecteren om een voorbeeld te bekijken van hoe te om bronnen te tonen
 
-Als u citaties wilt weergeven en de reactie van AI Assistant wilt valideren, selecteert u **[!UICONTROL Show sources]**. AI Assistant biedt koppelingen naar documentatie die het antwoord van de assistent bevestigt. U kunt ook de query&#39;s gebruiken die in AI Assistant zijn opgenomen [!UICONTROL Related suggestions] om onderwerpen met betrekking tot uw originele vraag verder te onderzoeken.
+Als u citaties wilt weergeven en de reactie van AI Assistant wilt valideren, selecteert u **[!UICONTROL Show sources]**.
 
-![Screenshot van &quot;Show sources&quot;.](./images/ai-assistant/show-sources.png)
+![De AI-assistent-reactie waarbij &quot;Bronnen tonen&quot; is geselecteerd.](./images/ai-assistant/show-sources.png)
+
+AI Assistant werkt de interface bij en biedt koppelingen naar documentatie die de eerste reactie bevestigen. Wanneer citaties zijn ingeschakeld, werkt AI Assistant het antwoord bij en worden voetnoten opgenomen om de specifieke delen van het antwoord aan te geven die naar de opgegeven documentatie verwijzen.
+
+![Een vervolgkeuzemenu met de citaten die in AI Assistant worden gegeven voor conceptvragen.](./images/ai-assistant/citations.png)
+
+U kunt ook de query&#39;s gebruiken die in AI Assistant zijn opgenomen **[!UICONTROL Related suggestions]** om onderwerpen met betrekking tot uw originele vraag verder te onderzoeken.
+
+![Een lijst met query&#39;s die door AI Assistant zijn verstrekt als verwante suggesties.](./images/ai-assistant/related-suggestions.png)
 
 +++
 
 ### Gebruiksgegevens en visualisatie {#usage-data-and-visualization}
 
+AI Assistant moet zich in een actieve sandbox bevinden om voldoende te kunnen reageren op een vraag over uw gebruiksgegevens.
+
 +++Selecteer om een voorbeeld van vragen van gebruiksgegevens en gegevensvisualisatie te bekijken
 
-AI Assistant kan alleen reageren op een query over gebruiksgegevens binnen uw organisatie als u zich in een actieve sandbox bevindt.
+In het onderstaande voorbeeld wordt aan AI Assistant de volgende query gevraagd: **&quot;Geef me de gegevensstromen weer die zijn gemaakt met de Amazon S3-bron&quot;** AI Assistant reageert vervolgens met een tabel waarin uw gegevens en de bijbehorende id&#39;s worden vermeld. Als u de hele tabel met gegevens wilt weergeven, selecteert u het pictogram voor uitvouwen rechtsboven.
 
-In het onderstaande voorbeeld krijgt AI Assistant de volgende query: **&quot;Geef me segmentdefinities weer met meer dan 1000 profielen en neem de activeringsstatus op.&quot;** De Medewerker van AI antwoordt dan met een grafiek die uw segment en profielgegevens visualiseert.
+![Vervolgvraag over gebruiksgegevens.](./images/ai-assistant/usage-data-question.png)
 
-![Vervolgvraag over gebruiksgegevens.](./images/ai-assistant/data-usage-question.png)
+Er wordt een uitgebreide weergave van de tabel weergegeven, zodat u een uitgebreidere lijst met gegevensstromen krijgt op basis van de parameters van de query.
 
-U kunt de muisaanwijzer op een afzonderlijke balk plaatsen om specifieke gegevens weer te geven. U kunt ook het pictogram voor vergroten selecteren voor een grotere weergave van het diagram.
+![Een weergave van de uitgebreide tabel.](./images/ai-assistant/table.png)
 
-![Follow-upvraag ter illustratie van gegevensvisualisatie.](./images/ai-assistant/data-visualization.png)
+Als een vraag over gebruiksgegevens wordt weergegeven, geeft AI Assistant een uitleg van de manier waarop het antwoord is berekend. In het onderstaande voorbeeld beschrijft AI Assistant de stappen die zijn uitgevoerd om de gegevensstromen te identificeren die zijn gemaakt met de [!DNL Amazon S3] bron.
 
-Er wordt een uitgebreide weergave van de visualisatie weergegeven. U kunt de uitgevouwen modaal gebruiken om uw gegevens verder te inspecteren en is vooral nuttig wanneer visualisatie met een groot aantal kolommen terugkeert.
+![Vervolgvraag over segmentdefinities die illustreren hoe AI Assistant het antwoord heeft berekend.](./images/ai-assistant/answer-explained.png)
 
-![Uitgebreid diagram.](./images/ai-assistant/chart-expanded.png)
-
-Als een vraag over gebruiksgegevens wordt weergegeven, geeft AI Assistant een uitleg van de manier waarop het antwoord is berekend. In het onderstaande voorbeeld geeft AI Assistant een overzicht van de stappen die zijn genomen om segmentdefinities weer te geven met meer dan 1000 profielen en hun respectieve activeringsstatus.
-
-![Vervolgvraag over segmentdefinities die illustreren hoe AI Assistant het antwoord heeft berekend.](./images/ai-assistant/results-explained.png)
-
-U kunt filters en wijzigingen aan uw vragen ook verstrekken, en u kunt AI Medewerker opdragen om zijn bevindingen terug te geven die op de filters worden gebaseerd die u omvat. Bijvoorbeeld, kunt u AI Medewerker vragen om u een trend van de definities van het tellingssegment in de orde van hun gecreeerde datum te tonen, segmentdefinities met nul totale profielen te verwijderen, en maandnamen in plaats van gehelen te gebruiken wanneer het tonen van de gegevens.
+U kunt filters en wijzigingen aan uw vragen ook verstrekken, en u kunt AI Medewerker opdragen om zijn bevindingen terug te geven die op de filters worden gebaseerd die u omvat. Bijvoorbeeld, kunt u AI Medewerker vragen om u een trend van de telling van segmentdefinities in de orde van hun gecreeerde datum te tonen, segmentdefinities met nul totale profielen te verwijderen, en maandnamen in plaats van gehelen te gebruiken wanneer het tonen van de gegevens.
 
 +++
 
 ### Automatisch aanvullen gebruiken {#use-auto-complete}
 
-+++Select om een voorbeeld van automatisch aanvullen te bekijken
-
 Met de functie Automatisch aanvullen kunt u een lijst met gegevensobjecten ontvangen die in uw sandbox staan. De aanbevelingen van Autocomplete zijn beschikbaar voor de volgende domeinen: publiek, schema&#39;s, datasets, bronnen, en bestemmingen.
+
++++Select om een voorbeeld van automatisch aanvullen te bekijken
 
 U kunt de functie voor automatisch aanvullen gebruiken door het plusteken (**`+`**) in uw zoekopdracht. U kunt ook het plusteken (**`+`**) onder aan het tekstinvoervak. Er wordt een venster weergegeven met een lijst met aanbevolen gegevensobjecten uit uw sandbox.
 
-![Voorbeeld van automatisch aanvullen](./images/ai-assistant/auto-complete-one.png)
-
-Selecteer vervolgens het gegevensobject waarop u een query wilt uitvoeren om uw vraag te voltooien en verzend uw vraag.
-
-![Voorbeeld van automatisch aanvullen met vraag en antwoord](./images/ai-assistant/auto-complete-two.png)
+![Voorbeeld van automatisch aanvullen](./images/ai-assistant/autocomplete.png)
 
 +++
 
 ### Meerdere keren gebruiken {#use-multi-turn}
 
-+++Selecteren om een voorbeeld van meerdere keren te bekijken
-
 U kunt de multi-boommogelijkheden van AI Medewerker gebruiken om een natuurlijker gesprek tijdens uw ervaring te hebben. AI Assistant kan vervolgvragen beantwoorden. die context kan worden afgeleid uit een eerdere interactie.
 
-In het onderstaande voorbeeld wordt AI Assistant gevraagd naar het totale aantal gegevensstromen in de huidige organisatie.
++++Selecteren om een voorbeeld van meerdere keren te bekijken
 
-![Voorbeeld van meerdere bochten](./images/ai-assistant/multi-turn-one.png)
+In het onderstaande voorbeeld wordt AI Assistant eerst gevraagd naar het totale aantal gegevensstromen en wordt vervolgens gevraagd de 10 meest recente gegevensstromen weer te geven.
 
-Vervolgens ontvangt AI Assistant een ander vervolgverzoek. Deze keer reageert AI Assistant door de gegevensstromen weer te geven die momenteel in uw organisatie bestaan.
+![Voorbeeld van meerdere bochten](./images/ai-assistant/multi-turn.png)
 
-![Voorbeeld van meerdere keren draaien met vraag en antwoord](./images/ai-assistant/multi-turn-two.png)
++++
+
+## Feedback geven {#feedback}
+
+U kunt feedback over uw ervaringen met AI Assistant opgeven met de opties die bij het antwoord worden geleverd.
+
+Als u feedback wilt opgeven, selecteert u duimen omhoog, duimen omlaag of een markering nadat u een reactie van de AI-assistent hebt ontvangen. Vervolgens voert u uw feedback in het opgegeven tekstvak in.
+
+![De feedbackoptie in AI Assistant.](./images/ai-assistant/provide-feedback.png)
+
+
++++Selecteren om meer voorbeelden weer te geven
+
+>[!BEGINTABS]
+
+>[!TAB Stompelen omhoog]
+
+Selecteer het pictogram van duim op om feedback te geven over wat goed met uw ervaring met de AI Assistant is gegaan.
+
+![Het positieve feedbackvenster.](./images/ai-assistant/thumbs-up.png)
+
+>[!TAB Miniatuur omlaag]
+
+Selecteer het pictogram met de miniaturen omlaag om feedback te geven over de verbeteringen die u kunt aanbrengen op basis van uw ervaring met de AI Assistant. Tijdens deze stap kunt u ook specifieke opmerkingen maken over uw ervaring. De feedback in de opmerkingen wordt dagelijks bekeken.
+
+![Het negatieve feedbackvenster.](./images/ai-assistant/thumbs-down.png)
+
+>[!TAB Markering]
+
+Selecteer het vlagpictogram om verdere rapporten over uw ervaring te verstrekken gebruikend de Medewerker AI.
+
+![Het venster met rapportresultaten.](./images/ai-assistant/flag.png)
+
+>[!ENDTABS]
 
 +++
 
@@ -209,7 +243,7 @@ Het documentatiemodel wordt opgeleid op Experience Platform (Real-Time CDP en So
 U kunt ook vragen stellen aan AI Assistant over uw gebruiksgegevens in de volgende domeinen:
 
 * Attributen
-* Doelgroepen
+* Soorten publiek
 * Gegevensstromen
 * Gegevenssets
 * Doelen _(Vragen over accounts en sommige vragen over gegevensstroom kunnen op dit moment niet worden beantwoord.)_
@@ -224,7 +258,7 @@ Voor vragen van gebruiksgegevens, kunnen de antwoorden niet op de huidige staat 
 
 Lees de onderstaande tabel voor voorbeelden van vragen over gebruiksgegevens en de bijbehorende gebruiksgevallen:
 
-| Type vraag | Gebruiksscenario | Voorbeelden |
+| Type vraag | Hoofdletters gebruiken | Voorbeelden |
 | --- | --- | --- | 
 | Gegevensverbinding | Gebruik van een of meerdere objecten bijhouden over andere Experience Platforms | <ul><li>Welke datasets gebruiken het schema &quot;ACME&quot;?</li><li>Hoeveel datasets zijn opgenomen gebruikend het zelfde schema?</li><li>Welke datasets zijn gebruikt in geactiveerd publiek?</li><li>Maak een lijst van de schema&#39;s die attributen hebben die in geactiveerd publiek worden gebruikt.</li><li>Toon me het publiek dat aan &quot;Doel ACME&quot;wordt geactiveerd en meer dan 1000 profielen heeft.</li><li>Toon me de attributen die in de geactiveerde doelgroepen worden gebruikt die na jan 2023 zijn gewijzigd.</li><li>Wat worden de datasets via &quot;ACME Amazon S3&quot;bron opgenomen?</li><li>Welke gegevensstromen worden geassocieerd met &quot;ACME Loyalty Dataflow&quot;?</li><li>Geef een overzicht van de schema&#39;s die betrekking hebben op geactiveerd publiek en die in het afgelopen jaar zijn gemaakt.</li></ul> |
 | Distributie en aggregaties | Op samenvattingen gebaseerde vragen over het gebruik van Experience Platforms-objecten | <ul><li>Wat is het percentage van het actieve publiek?</li><li>Hoeveel velden worden in segmentatie gebruikt?</li><li>Welk publiek wordt geactiveerd aan het meeste aantal bestemmingen?</li><li>Duplicaat publiek weergeven.</li><li>Toon me het publiek dat aan &quot;Doel ACME&quot;wordt geactiveerd en rangschikt hen door profielgrootte.</li><li>Wat is het percentage van het publiek dat niet is geactiveerd, maar meer dan 100 profielen heeft. Laat me hun namen zien.</li><li>Maak een lijst van de 3 bronschakelaars die gegevens in mijn datasets opnemen.</li><li>Geef me de bovenste 5 kenmerken weer die bij actiepunten worden gebruikt, afhankelijk van het aantal dat ze voorkomen.</li></ul> |
@@ -261,44 +295,6 @@ Lees de onderstaande tabel voor meer informatie over aanbevolen procedures bij h
 
 {style="table-layout:auto"}
 
-## Feedback geven {#feedback}
-
->[!BEGINSHADEBOX]
-
-**Je feedback is aangevraagd**
-
-Tijdens deze Alpha wordt u gevraagd feedback te geven over de reacties die u ontvangt van de AI Assistant. Alle reacties en ingediende feedback worden gecontroleerd om de AI Assistant-ervaring te blijven verbeteren.
-
-Als u feedback wilt geven, selecteert u duimen omhoog of duimen omlaag na ontvangst van een reactie van de AI Assistant en voert u uw feedback in het tekstvak in. Selecteer vervolgens **[!UICONTROL Submit feedback]** om te verzenden.
-
->[!ENDSHADEBOX]
-
-+++Feedback geven
-
->[!BEGINTABS]
-
->[!TAB Stompelen omhoog]
-
-Selecteer het pictogram van duim op om feedback te geven over wat goed met uw ervaring met de AI Assistant is gegaan.
-
-![Het positieve feedbackvenster.](./images/ai-assistant/thumbs-up.png)
-
->[!TAB Miniatuur omlaag]
-
-Selecteer het pictogram met de miniaturen omlaag om feedback te geven over de verbeteringen die u kunt aanbrengen op basis van uw ervaring met de AI Assistant. Tijdens deze stap kunt u ook specifieke opmerkingen maken over uw ervaring. De feedback in de opmerkingen wordt dagelijks bekeken.
-
-![Het negatieve feedbackvenster.](./images/ai-assistant/thumbs-down.png)
-
->[!TAB Markering]
-
-Selecteer het vlagpictogram om verdere rapporten over uw ervaring te verstrekken gebruikend de Medewerker AI.
-
-![Het venster met rapportresultaten.](./images/ai-assistant/flag.png)
-
->[!ENDTABS]
-
-+++
-
 ## Aanvullende informatie {#additional-information}
 
 Raadpleeg deze sectie voor meer informatie over de AI Assistant voor Experience Platform.
@@ -321,21 +317,26 @@ De AI-assistent kan een onjuiste indruk geven van wat hij kan doen. De volgende 
 | &quot;Weet je **x** taal?&quot; | De AI Assistant ondersteunt momenteel alleen Engels, maar kan &quot;ja&quot; antwoorden omdat het onderliggende model het ondersteunt. |
 | &quot;Kan je...?&quot; | De AI-assistent kan ja antwoorden, ook al is dat niet het geval. |
 
-### Tips {#tips}
+## Veelgestelde vragen {#faq}
 
-In de volgende sectie worden enkele tips en tijdelijke oplossingen beschreven waarmee u rekening kunt houden wanneer u AI Assistant gebruikt.
+Hieronder volgt een lijst met antwoorden op veelgestelde vragen over AI Assistant.
 
-#### De vragen kunnen met de verkeerde informatiebron worden beantwoord
+### Wordt de informatie van AI Assistant in real-time verstrekt?
 
-Soms kan een vraag over uw gebruiksgegevens resulteren in een antwoord op basis van de documentatie. Dit komt omdat de AI-assistent uw vraag verkeerd kan doorsturen naar de verkeerde informatiebron. U kunt dit voorkomen door:
+De gegevens in de antwoorden van AI Assistant worden dagelijks bijgewerkt. Dit betekent dat de gegevens in reacties tot 24 uur ouder kunnen zijn dan de gegevens die u op het gebruikersinterface van het Experience Platform, op het tijdstip van de reactie kunt zien.
 
-* Herhaal uw vraag om meer SQL-achtige taal te gebruiken
-* Expliciet het roepen van de informatiebron aan gebruik.
+### Welke toepassingen van de Adobe steunt AI Hulp?
 
-Lees de onderstaande tabel voor voorbeelden:
+AI Assistant biedt ondersteuning voor vragen over Adobe Experience Platform-, Real-time Customer Data Platform- en Adobe Journey Optimizer-concepten. Voor vragen over gegevensgebruik ondersteunt AI Assistant momenteel alleen Real-Time CDP-gegevensobjecten.
 
-| Onjuiste vraag | Goede vraag | Notities |
-| --- | --- | --- |
-| Wat is mijn grootste publiek? | Wat is mijn grootste publiek? Gegevens gebruiken. | Vertel de AI Assistant expliciet dat het antwoord moet zijn gebaseerd op gegevens. |
-| Wat is mijn grootste publiek? | Maak een lijst van mijn grootste publiek. | Er zijn gevallen waarin een &quot;wat...&quot;-vraag kan worden verward met een documentatiegebaseerde vraag. Het gebruik van een opdracht als &quot;list&quot; is een sterkere indicator die u een vraag stelt met gegevens in context. |
-| Hoeveel datasets heb ik? | Tel mijn datasets. | De oorspronkelijke vraag werkt voor het publiek, maar werkt mogelijk niet met gegevenssets. |
+### Wat zijn de mogelijkheden van AI Assistant?
+
+De Medewerker van AI kan vragen van het begrip van de Adobe behandelen en kan vragen met betrekking tot het gebruik van de voorwerpen van het Experience Platform beantwoorden. (Bijvoorbeeld, &quot;Hoeveel publiek wordt geactiveerd?&quot;).
+
+### Kan AI Assistant informatie geven over profielgegevens?
+
+Nee. AI Assistant heeft geen toegang tot gegevens op profielniveau.
+
+### Worden mijn persoonlijke gegevens gebruikt in de trainingsgegevens van AI Assistant?
+
+AI Assistant gebruikt geen persoonlijke gegevens voor opleidingsdoeleinden. Geef geen persoonlijke gegevens over uzelf (inclusief uw naam of contactgegevens) of andere partijen bij AI Assistant op.
