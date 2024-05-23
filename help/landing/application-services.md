@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de analyse van de klantenreis;campagneorchestratie;orchestratie;klantenreis;reis;reis orchestratie;vermogen;werkschema
-title: Documentatie toepassingsservices
-description: De documentatie van Adobe Experience Platform wordt verstrekt in veelvoudige formaten, met inbegrip van overzichten, leerprogramma's, en gidsen voor zowel de gebruikersinterface als API. Hier is een korte beschrijving van de gemeenschappelijkste documentatietypen die voor de diensten van het Experience Platform beschikbaar zijn.
+title: Documentatie voor toepassingen
+description: De documentatie van Adobe Experience Platform wordt verstrekt in veelvoudige formaten, met inbegrip van overzichten, leerprogramma's, en gidsen voor zowel de gebruikersinterface als API. Hier is een korte beschrijving van de gemeenschappelijkste documentatietypen die voor de toepassingen van het Experience Platform beschikbaar zijn.
 exl-id: 24fdb183-f75b-40e0-828e-9dd49422a7b1
-source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
 
-# Documentatie voor toepassingsservices
+# Documentatie voor toepassingen
 
-Adobe heeft verscheidene toepassingsdiensten bovenop Experience Platform gebouwd. Documentatie voor deze services vindt u via de onderstaande koppelingen:
+Adobe heeft verschillende toepassingen bovenop Experience Platform gebouwd. Documentatie voor deze toepassingen vindt u met de onderstaande koppelingen:
 
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
@@ -20,6 +20,6 @@ Adobe heeft verscheidene toepassingsdiensten bovenop Experience Platform gebouwd
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
 
-In de onderstaande video worden de gebruiksgevallen beschreven van elke toepassingsservice die boven op het Experience Platform is gebouwd.
+In de onderstaande video worden de gebruiksgevallen beschreven van elke toepassing die boven op het Experience Platform is gebouwd.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)

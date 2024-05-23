@@ -1,12 +1,12 @@
 ---
 audience: user
-user-guide-title: Overzicht van Adobe Experience Platform
+user-guide-title: Adobe Experience Platform - Overzicht
 breadcrumb-title: Overzicht van Experience Platform
-user-guide-description: Ontdek hoe u met Experience Platform uw klanten in real time persoonlijke ervaringen kunt bieden met handleidingen, documentatie en zelfstudies.
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+user-guide-description: Leer hoe Experience Platform het mogelijk maakt om uw klanten in real-time persoonlijke ervaringen te bieden met gidsen, documentatie en zelfstudies.
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 18%
+source-wordcount: '281'
+ht-degree: 6%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 18%
 * Platformdocumentatie {#documentation}
    * [Overzicht](documentation/overview.md)
    * [Taalondersteuning](documentation/language-support.md)
-* Toepassingsservices die zijn gebaseerd op platform {#ecosystem}
+* Toepassingen die op platform zijn gebaseerd {#ecosystem}
    * [Overzicht](application-services.md)
    * [Adobe Real-time Customer Data Platform (alle versies)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Application and Intelligent Services (video)](video/application-intelligent-services.md)
@@ -51,7 +51,7 @@ ht-degree: 18%
    * [Platformintegratie met Experience Cloud (video)](video/experience-cloud-integrations.md)
 * Bestuur, privacy en beveiliging {#governance-privacy-security}
    * [Overzicht](./governance-privacy-security/overview.md)
-   * Toestemmingsbeheer {#consent}
+   * Toegangsbeheer {#consent}
       * Adobe {#adobe}
          * [Overzicht](./governance-privacy-security/consent/adobe/overview.md)
          * [Een gegevensset configureren om toestemmings- en voorkeursgegevens vast te leggen](./governance-privacy-security/consent/adobe/dataset.md)

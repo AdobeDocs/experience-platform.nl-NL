@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de analyse van de klantenreis;campagneorchestratie;orchestratie;klantenreis;reis;reis orchestratie;vermogen;regio
 solution: Experience Platform
-title: Overzicht van Adobe Experience Platform
+title: Adobe Experience Platform - Overzicht
 description: Adobe Experience Platform stelt organisaties in staat klantgegevens te centraliseren en te standaardiseren voordat ze dataletterdheid en computerleren toepassen, zodat ze het ontwerp en de levering van rijke, persoonlijke ervaringen aanzienlijk kunnen verbeteren.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: ca38a2d72681e4a69304cc765ab6b95d3527d336
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 1%
+source-wordcount: '431'
+ht-degree: 0%
 
 ---
 
@@ -28,13 +28,13 @@ Gebaseerd op RESTful API&#39;s, [!DNL Experience Platform] stelt de volledige fu
 
 ## [!DNL Experience Platform] documentatie
 
-[!DNL Experience Platform] documentatie wordt verstrekt in veelvoudige formaten voor een verscheidenheid van eigenschappen en de diensten. Ga voor meer informatie over de typen documentatie die beschikbaar zijn naar [Overzicht van platformdocumentatie](documentation/overview.md).
+[!DNL Experience Platform] documentatie wordt verstrekt in veelvoudige formaten voor een verscheidenheid van eigenschappen en toepassingen. Ga voor meer informatie over de typen documentatie die beschikbaar zijn naar [Overzicht van platformdocumentatie](documentation/overview.md).
 
 Meer informatie over een specifieke [!DNL Platform] service, terugkeren naar de [openingspagina van documentatie](https://experienceleague.adobe.com/docs/experience-platform.html) en selecteert u de gewenste hulplijn.
 
-### Documentatie voor toepassingsservices gebaseerd op [!DNL Experience Platform]
+### Documentatie voor toepassingen die zijn gebaseerd op [!DNL Experience Platform]
 
-Adobe heeft veelvoudige toepassingsdiensten bovenop Experience Platform gebouwd. De documentatie voor deze toepassingen vindt u in de onderstaande handleidingen:
+Adobe heeft meerdere toepassingen bovenop Experience Platform gebouwd. De documentatie voor deze toepassingen vindt u in de onderstaande handleidingen:
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
@@ -43,11 +43,11 @@ Adobe heeft veelvoudige toepassingsdiensten bovenop Experience Platform gebouwd.
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
 
-In de onderstaande video worden de gebruiksgevallen beschreven van elke toepassingsservice die boven op het Experience Platform is gebouwd.
+In de onderstaande video worden de gebruiksgevallen beschreven van elke toepassing die boven op het Experience Platform is gebouwd.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 
-## [!DNL Experience Platform]-tutorials
+## [!DNL Experience Platform] zelfstudies
 
 U kunt beginnen met [!DNL Platform] snel en gemakkelijk door samen met geleidelijke leerprogramma&#39;s te volgen die alles van het voorbereiden van uw gegevens voor opname aan geavanceerde machine-leren algoritmen behandelen. Deze zelfstudies zijn ontworpen als aanvulling op de informatie in het dialoogvenster [!DNL Experience Platform] voor de beste resultaten de documentatie bij de voltooiing van de zelfstudies ter beschikking te houden.
 
