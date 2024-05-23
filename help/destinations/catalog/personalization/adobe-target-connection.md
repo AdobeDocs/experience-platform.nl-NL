@@ -3,10 +3,10 @@ keywords: doelpersonalisatie; bestemming; ervaring doelbestemming platform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: e9777960f347e32ff6288227ef95cec9cc4c55e7
+source-git-commit: ddc15a36e83ebe059f3b4f81f3feccb2d3a4a4f0
 workflow-type: tm+mt
-source-wordcount: '1433'
-ht-degree: 1%
+source-wordcount: '1502'
+ht-degree: 0%
 
 ---
 
@@ -60,8 +60,15 @@ Meer informatie over het verlenen van machtigingen voor [Doelpremie](https://exp
 
 In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
+>[!IMPORTANT]
+>
+>De soorten publiek die u naar deze bestemming activeert, moeten de [Samenvoegingsbeleid actief op rand](../../../segmentation/ui/segment-builder.md#merge-policies). De [!DNL Active-On-Edge] samenvoegingsbeleid zorgt ervoor dat het publiek constant wordt geëvalueerd [op de rand](../../../segmentation/ui/edge-segmentation.md) en zijn beschikbaar voor het gebruiksgeval van de verpersoonlijking in real time en volgende pagina.
+> Als u publiek in kaart brengt die een verschillend samenvoegbeleid aan randbestemmingen gebruiken, zullen die publiek niet worden geëvalueerd.
+> Volg de instructies op [samenvoegingsbeleid maken](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)en zorgt ervoor dat de **[!UICONTROL Active-On-Edge Merge Policy]** schakelen.
+
+
 | Oorsprong publiek | Ondersteund | Beschrijving |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
 | Aangepaste uploads | X | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
@@ -72,7 +79,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
----------|----------|---------|
+|---------|----------|---------|
 | Exporttype | **[!DNL Profile request]** | U vraagt om alle soorten publiek die in de Adobe Target-bestemming zijn toegewezen voor één profiel. |
 | Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
