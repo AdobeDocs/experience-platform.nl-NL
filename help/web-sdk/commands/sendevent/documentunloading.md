@@ -1,9 +1,10 @@
 ---
 title: documentUnloading
 description: Gebruik de JavaScript sendBeacon-API om gegevens naar de Adobe te verzenden.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 7683c0c4-ae2e-46ec-8471-628a10e17afc
+source-git-commit: f12d222e81a39a26bd71ab4bede05aa992889605
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ Verschillende browsers stellen een limiet van 64 kB in voor de hoeveelheid gegev
 De optie **[!UICONTROL Document will unload]** Schakel het selectievakje in binnen de handelingen van een labelregel.
 
 1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
-1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Navigeren naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeren naar **[!UICONTROL Rules]** Selecteer vervolgens de gewenste regel.
 1. Onder [!UICONTROL Actions], selecteert u een bestaande actie of maakt u een actie.
@@ -30,6 +31,10 @@ De optie **[!UICONTROL Document will unload]** Schakel het selectievakje in binn
 ## Document verwijderen configureren met de Web SDK JavaScript-bibliotheek
 
 Stel de `documentUnloading` boolean wanneer de `sendEvent` gebruiken. De standaardwaarde is `false`. Deze eigenschap instellen op `true` als u de opdracht `sendBeacon` methode om gegevens naar Adobe te verzenden.
+
+>[!IMPORTANT]
+>
+>De `documentUnloading` eigenschap is onverenigbaar met de [`renderDecisions`](renderdecisions.md) eigenschap. U moet beide eigenschappen niet instellen op `true` tegelijkertijd.
 
 ```js
 alloy("sendEvent", {
