@@ -47,7 +47,10 @@ Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens 
 Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
 
 **Nieuwe of bijgewerkte functies**
-| Functie | Beschrijving | | — | — | | Aanpasbare inzichten voor uitgebreide toepassingsrapportage | Naadloos [overgang de output van SQL analyse in begrijpelijke, bedrijfsvriendelijke visuele formaten](../../dashboards/data-distiller/customizable-insights/overview.md). Gebruik aangepaste SQL-query&#39;s voor nauwkeurige gegevensmanipulatie en het maken van dynamische grafieken op basis van diverse gestructureerde datasets. U kunt vraag pro wijze gebruiken om complexe analyse met SQL uit te voeren en dan deze analyse met niet-technische gebruikers door grafieken op uw douanedashboard te delen of hen uit te voeren in Csv- dossiers. |
+
+| Functie | Beschrijving |
+| --- | --- |
+| Aanpasbare inzichten voor uitgebreide toepassingsrapportage | Naadloos [overgang de output van SQL analyse in begrijpelijke, bedrijfsvriendelijke visuele formaten](../../dashboards/data-distiller/customizable-insights/overview.md). Gebruik aangepaste SQL-query&#39;s voor nauwkeurige gegevensmanipulatie en het maken van dynamische grafieken op basis van diverse gestructureerde datasets. U kunt vraag pro wijze gebruiken om complexe analyse met SQL uit te voeren en dan deze analyse met niet-technische gebruikers door grafieken op uw douanedashboard te delen of hen uit te voeren in Csv- dossiers. |
 
 {style="table-layout:auto"}
 
