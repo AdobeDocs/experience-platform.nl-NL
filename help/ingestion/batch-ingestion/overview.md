@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Overzicht van de API voor batchverwerking
 description: Met de Adobe Experience Platform Batch Ingestie-API kunt u gegevens als batchbestanden in Platform opnemen. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een dossier van het Pakket), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
+source-git-commit: 6cd4bff07d042401d4ebc90d6fc2e70a1f8a7cb0
 workflow-type: tm+mt
 source-wordcount: '1388'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
@@ -56,7 +56,7 @@ Bij het invoeren van gegevens is het belangrijk om te begrijpen hoe [!DNL Experi
 
 Er is enige flexibiliteit wanneer het opnemen van gegevens - als een type niet aanpast wat in het doelschema is, zullen de gegevens in het uitgedrukt doeltype worden omgezet. Als dit niet het geval is, zal de batchverwerking mislukken met een `TypeCompatibilityException`.
 
-JSON en CSV hebben bijvoorbeeld geen `date` of `date-time` type. Als gevolg hiervan worden deze waarden uitgedrukt met [Tekenreeksen met ISO 8061-indeling](https://www.iso.org/iso-8601-date-and-time-format.html) (2018-07-10T15):05:59,000-08:00&quot;) of Unix Tijd die in milliseconden (1531263959000) wordt geformatteerd en bij inname in het doelXDM type wordt omgezet.
+JSON en CSV hebben bijvoorbeeld geen `date` of `date-time` type. Als gevolg hiervan worden deze waarden uitgedrukt met [Tekenreeksen met ISO 8601-indeling](https://www.iso.org/iso-8601-date-and-time-format.html) (2018-07-10T15):05:59,000-08:00&quot;) of Unix Tijd die in milliseconden (1531263959000) wordt geformatteerd en bij inname in het doelXDM type wordt omgezet.
 
 In de onderstaande tabel worden de conversies weergegeven die worden ondersteund bij het invoeren van gegevens.
 
