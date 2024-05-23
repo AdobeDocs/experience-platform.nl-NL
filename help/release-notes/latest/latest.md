@@ -1,7 +1,7 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, mei 2024
 description: De release van mei 2024 bevat opmerkingen voor Adobe Experience Platform.
-source-git-commit: 58de22b51bc721ec584b11e3f87c0ee210c0add5
+source-git-commit: e02892a2cbf5f65a1b9a0eec49722896bd061084
 workflow-type: tm+mt
 source-wordcount: '1594'
 ht-degree: 2%
