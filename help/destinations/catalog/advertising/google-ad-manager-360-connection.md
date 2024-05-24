@@ -2,9 +2,9 @@
 title: (bèta) [!DNL Google Ad Manager 360] verbinding
 description: Google Ad Manager 360 is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 0db22ba2993012357cf65daaeffb5676193fba23
+source-git-commit: 153b827d385b4a3f86a2432bf533ec543f12ea4e
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1149'
 ht-degree: 0%
 
 ---
@@ -105,7 +105,7 @@ Voor meer informatie over deze waarden raadpleegt u de [HMAC-sleutels voor Googl
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
 >title="Id van publiek toevoegen aan publieksnaam"
->abstract="Selecteer deze optie als u de publieksnaam in Google Ad Manager 360 de gebruikers-id uit het Experience Platform wilt laten opnemen, zoals in dit voorbeeld: `Audience Name (Audience ID)`"
+>abstract="Selecteer deze optie als u de publieksnaam in deze bestemming wilt laten opnemen in de gebruikers-id van het Experience Platform, als volgt: `Audience Name (Audience ID)`"
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 

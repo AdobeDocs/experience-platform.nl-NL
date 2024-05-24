@@ -1,14 +1,14 @@
 ---
 audience: user
-user-guide-title: Handleiding voor bestemmingen
-user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
+user-guide-title: Doelgids
+user-guide-description: Activeer uw bekende en onbekende gegevens voor publicatiecampagnes voor meerdere kanalen, e-mailcampagnes, gerichte advertenties en nog veel meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 1%
+source-wordcount: '1224'
+ht-degree: 0%
 
 ---
 
@@ -83,6 +83,7 @@ ht-degree: 1%
       * [Google Ad Manager-verbinding](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Google Ad Manager 360-verbinding](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match-verbinding](./catalog/advertising/google-customer-match.md)
+      * [(Beta) Google Customer Match + DV360-verbinding](./catalog/advertising/google-customer-match-dv360.md)
       * [Google Display &amp; Video 360-verbinding](./catalog/advertising/google-dv360.md)
       * [Google-tag-extensie](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn Insight Tag-extensie](./catalog/advertising/linkedin.md)
@@ -144,7 +145,7 @@ ht-degree: 1%
       * [Acxiom-perspectiefonderdrukking](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Verbetering van acxiom-gegevens](./catalog/data-partner/acxiom-data-enhancement.md)
    * eCommerce-bestemmingen {#ecommerce}
-      * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
+      * [SAP COMMERCE](./catalog/ecommerce/sap-commerce.md)
    * E-maildoelen {#email}
       * [Bizible extension](./catalog/email/bizible.md)
       * [Marketo-extensie](./catalog/email/marketo.md)
