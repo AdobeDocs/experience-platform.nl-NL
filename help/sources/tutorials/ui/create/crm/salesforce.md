@@ -2,9 +2,9 @@
 title: Uw Salesforce-account aansluiten via de gebruikersinterface van het Experience Platform
 description: Leer hoe u uw Salesforce-account koppelt en uw CRM-gegevens via de gebruikersinterface naar het Experience Platform brengt.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
+source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '801'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit
 
 Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de *CRM* categorie, selecteert u **[!DNL Salesforce]** en selecteer vervolgens **[!UICONTROL Add data]**.
+Selecteren **[!DNL Salesforce]** onder de *[!UICONTROL CRM]* categorie en selecteer vervolgens **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
