@@ -1,7 +1,7 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: In de release van april 2024 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 2%
@@ -121,7 +121,7 @@ Met Query Service kunt u standaard-SQL gebruiken om gegevens in Adobe Experience
 | Geplande querywaarschuwingen | Blijf op de hoogte van proactieve meldingen tijdens het plannen van query&#39;s, zodat u over een efficiënt en tijdig taakbeheer beschikt. U kunt [abonneren op waarschuwingen bij het maken van een query](../../query-service/ui/query-schedules.md#alerts-for-query-status) of het gebruiken van de gealigneerde acties voor bestaande geplande vragen. Zie de [abonneren op waarschuwingen met inline-acties](../../query-service/ui/monitor-queries.md#alert-subscription) documentatie voor meer informatie. |
 | Verbeterde geplande querynavigatie | Navigeer gemakkelijk tussen vraagmalplaatjes en geplande looppas voor verhoogde productiviteit. Zie de documentatie op [het bekijken geplande vraaglooppas](../../query-service/ui/query-schedules.md#scheduled-query-runs) voor meer informatie . |
 | Uitgebreide query-uitvoer | Toegang tot tot maximaal 500 rijen vraagresultaten binnen de console voor diepere analyse van uw gegevens.Zie [aantal resultaten](../../query-service/ui/user-guide.md#result-count) documentatie voor meer informatie. |
-| Oudere versie van Query Editor | Vanaf 30-april-2024 is de Verbeterde Redacteur van de Vraag de standaardeditor voor alle gebruikers geworden. De erfenisredacteur zal op 30-mei-2024 worden afgekeurd en niet meer voor gebruik beschikbaar zijn. Zie de [Gebruikershandleiding voor de Query Editor](../../query-service/ui/user-guide.md) voor meer informatie . |
+| Oudere versie van Query Editor | Vanaf 30-april-2024 is de Verbeterde Redacteur van de Vraag de standaardeditor voor alle gebruikers geworden. De verouderde editor wordt op 24 mei 2024 afgekeurd en is niet meer beschikbaar voor gebruik. Zie de [Gebruikershandleiding voor de Query Editor](../../query-service/ui/user-guide.md) voor meer informatie . |
 
 {style="table-layout:auto"}
 

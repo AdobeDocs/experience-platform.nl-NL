@@ -2,9 +2,9 @@
 title: Gegevensversleuteling in Adobe Experience Platform
 description: Leer hoe gegevens worden gecodeerd tijdens de doorvoer en in rust in Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: fd31d54339b8d87b80799a9c0fa167cc9a07a33f
+source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '712'
 ht-degree: 0%
 
 ---
@@ -34,21 +34,21 @@ Nadat gegevens in het systeem zijn ingevoerd en [gecodeerd in rust](#at-rest), d
 
 ### mTLS-protocolondersteuning {#mtls-protocol-support}
 
-U kunt de Wederzijdse Veiligheid van de Laag van het Vervoer (mTLS) nu gebruiken om verbeterde veiligheid in uitgaande verbindingen aan de bestemmingen van HTTP API en de douaneacties van Adobe Journey Optimizer te verzekeren. mTLS is een end-to-end veiligheidsmethode voor wederzijdse authentificatie die ervoor zorgt dat beide partijen die informatie delen wie zij beweren te zijn alvorens de gegevens worden gedeeld. mTLS bevat een extra stap in vergelijking met TLS, waarin de server ook om het certificaat van de client vraagt en dit aan het einde verifieert.
+U kunt de Wederzijdse Veiligheid van de Laag van het Vervoer (mTLS) nu gebruiken om verbeterde veiligheid in uitgaande verbindingen aan te verzekeren [HTTP API-bestemming](../../destinations/catalog/streaming/http-destination.md) en Adobe Journey Optimizer [aangepaste handelingen](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). mTLS is een end-to-end veiligheidsmethode voor wederzijdse authentificatie die ervoor zorgt dat beide partijen die informatie delen wie zij beweren te zijn alvorens de gegevens worden gedeeld. mTLS bevat een extra stap in vergelijking met TLS, waarin de server ook om het certificaat van de client vraagt en dit aan het einde verifieert.
 
-#### mTLS in Adobe Journey Optimizer {#mtls-in-adobe-journey-optimizer}
-
-In Adobe Journey Optimizer wordt mTLS gebruikt in combinatie met [aangepaste handelingen](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). Geen extra [configuratie voor aangepaste Adobe Journey Optimizer-acties](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) is van uw kant vereist om mTLS in te schakelen. Wanneer het eindpunt voor een douaneactie mTLS-Toegelaten is, haalt het systeem het certificaat van keystore van Adobe Experience Platform en verstrekt het automatisch aan het eindpunt (zoals wordt vereist voor mTLS verbindingen).
-
-Als u mTLS met deze de bestemmingswerkschema&#39;s van Adobe Journey Optimizer en van HTTP van het Experience Platform wilt gebruiken API, moet het serveradres u in de UI van de de klantenactie van Adobe Journey Optimizer of UI van Doelen plaatsen protocollen van TLS hebben onbruikbaar gemaakt en slechts mTLS toegelaten. Als het TLS 1.2 protocol nog op dat eindpunt wordt toegelaten, wordt geen certificaat verzonden voor de cliëntauthentificatie. Dit betekent dat om mTLS met deze werkschema&#39;s te gebruiken, uw &quot;ontvangende&quot;servereindpunt mTLS moet zijn **alleen** Toegelaten verbindingspunt.
+Als u wilt [mTLS gebruiken met aangepaste Adobe Journey Optimizer-handelingen](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) en HTTP API bestemmingswerkschema&#39;s van het Experience Platform, moet het serveradres u in de UI van de klantenactie van Adobe Journey Optimizer of de interface van Doelen plaatst protocollen van TLS hebben onbruikbaar gemaakt en slechts mTLS toegelaten. Als het TLS 1.2 protocol nog op dat eindpunt wordt toegelaten, wordt geen certificaat verzonden voor de cliëntauthentificatie. Dit betekent dat om mTLS met deze werkschema&#39;s te gebruiken, uw &quot;ontvangende&quot;servereindpunt mTLS moet zijn **alleen** Toegelaten verbindingspunt.
 
 >[!IMPORTANT]
 >
->Er is geen aanvullende configuratie vereist in uw aangepaste Adobe Journey Optimizer-actie of -reis om mTLS te activeren. Dit proces wordt automatisch uitgevoerd wanneer een met mTLS geschikt eindpunt wordt gedetecteerd. De Common Name (CN) en de Alternative Names van het Onderwerp (San) voor elk certificaat zijn beschikbaar in de documentatie als deel van het certificaat en kunnen als extra laag van bezitsbevestiging worden gebruikt als u dit wenst.
+>Er is geen aanvullende configuratie vereist in uw aangepaste Adobe Journey Optimizer-actie of HTTP API-bestemming om mTLS te activeren. Dit proces wordt automatisch uitgevoerd wanneer een mTLS-ingeschakeld eindpunt wordt gedetecteerd. De Common Name (CN) en de Alternative Names van het Onderwerp (San) voor elk certificaat zijn beschikbaar in de documentatie als deel van het certificaat en kunnen als extra laag van bezitsbevestiging worden gebruikt als u dit wenst.
 >
 >RFC 2818, gepubliceerd in mei 2000, vervangt het gebruik van het gebied van de Gemeenschappelijke Naam (CN) in HTTPS certificaten voor onderwerpnaamcontrole. In plaats daarvan wordt aangeraden de extensie &quot;Alternatieve naam onderwerp&quot; (SAN) van het type &quot;naam dns&quot; te gebruiken.
 
 ### Certificaten downloaden {#download-certificates}
+
+>[!NOTE]
+>
+>Het is uw verantwoordelijkheid om het openbare certificaat up-to-date te houden. Controleer of u het certificaat regelmatig controleert, vooral wanneer de vervaldatum nadert. U moet een bladwijzer maken van deze pagina om de laatste kopie in uw omgeving te behouden.
 
 Als u de CN of SAN wilt controleren voor aanvullende validatie door derden, kunt u de relevante certificaten hier downloaden:
 

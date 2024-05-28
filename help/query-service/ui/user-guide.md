@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 5189e8bbe4cd93c4e1f355f09da9667f5eb5708d
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '2351'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De erfenisredacteur is op 30 mei 2024 afgekeurd. Het is niet meer toegankelijk voor gebruik. U kunt nu de opdracht [Uitgebreide query-editor](#enhanced-editor-toggle) om uw vragen te schrijven, te bevestigen en te leiden
+>Op 24 mei 2024 is de erfenisredacteur afgekeurd. Het is niet meer toegankelijk voor gebruik. U kunt nu de opdracht [Uitgebreide query-editor](#enhanced-editor-toggle) om uw vragen te schrijven, te bevestigen en te leiden
 
 De Redacteur van de vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat schrijven, bevestigen, en vragen voor de gegevens van de klantenervaring in werking te stellen binnen [!DNL Experience Platform] gebruikersinterface. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in te vullen [!DNL Experience Platform].
 
@@ -45,7 +45,7 @@ De vragen die van de Redacteur van de Vraag worden uitgevoerd stellen interactie
 
 >[!NOTE]
 >
->De erfenisredacteur is op 30 mei 2024 afgekeurd. Het is niet meer toegankelijk voor gebruik. U kunt de Uitgebreide Redacteur van de Vraag nu gebruiken om, uw vragen te schrijven te bevestigen en in werking te stellen.
+>Op 24 mei 2024 is de erfenisredacteur afgekeurd. Het is niet meer toegankelijk voor gebruik. U kunt de Uitgebreide Redacteur van de Vraag nu gebruiken om, uw vragen te schrijven te bevestigen en in werking te stellen.
 
 Gebruikend de Redacteur van de Vraag, kunt u schrijven, uitvoeren en sparen vragen voor de gegevens van de klantenervaring. Alle uitgevoerde vragen, of opgeslagen in de Redacteur van de Vraag zijn beschikbaar aan alle gebruikers in uw organisatie met toegang tot de Dienst van de Vraag.
 

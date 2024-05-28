@@ -2,9 +2,9 @@
 title: Het dashboard Accountprofielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de B2B-accountprofielen van uw organisatie kunt bekijken.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1602'
 ht-degree: 0%
 
 ---
@@ -76,14 +76,13 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 * [Accountprofielen toegevoegd](#account-profiles-added)
 * [Nieuwe rekeningen van de industrie](#accounts-by-industry)
 * [Nieuwe accounts per type](#accounts-by-type)
-* [Opportuniteiten toegevoegd](#opportunities-added)
 * [Nieuwe mogelijkheden per persoonlijke rol](#opportunities-by-person-role)
 * [Nieuwe mogelijkheden door inkomsten](#opportunities-by-revenue)
 * [Nieuwe mogelijkheden per status en podium](#opportunities-by-status-&-stage)
 * [Nieuwe kansen gewonnen](#opportunities-won)
+* [Opportuniteiten toegevoegd](#opportunities-added)
 * [Predictieve spreiding van scores](#predictive-scoring-distribution)
 * [Predictieve scoring van invloedrijke factoren](#predictive-scoring-top-influential-factors)
-* [Totaal rekeningen per bedrijfstak](#total-accounts-by-industry)
 
 ### Accountprofielen toegevoegd {#account-profiles-added}
 
@@ -102,14 +101,6 @@ De [!UICONTROL New accounts by industry] widget geeft het totale aantal accounts
 De [!UICONTROL New accounts by type] widget geeft het totale aantal accounts in één meting in een donutgrafiek weer. Het donutdiagram illustreert de relatieve samenstelling van verschillende accounttypen waaruit dit totaal bestaat. Een kleurgecodeerde sleutel geeft een indeling van alle opgenomen accounttypen. Individuele tellingen voor elk type van rekening worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
 
 ![De nieuwe accounts op type-widget.](../images/account-profiles/new-accounts-by-type.png)
-
-### Opportuniteiten toegevoegd {#opportunities-added}
-
-De [!UICONTROL Opportunities added] widget gebruikt een lijngrafiek om het aantal kansen te tonen die elke dag over een periode worden toegevoegd. Gebruik het globale datumfilter dat zich boven aan het dashboard bevindt om de analyseperiode te bepalen. Als geen datumfilter wordt verstrekt, maakt een lijst het standaardgedrag van de kansen die voor het jaar voorafgaand aan vandaag worden toegevoegd. De resultaten kunnen worden gebruikt om een trend in het aantal toegevoegde kansen af te leiden.
-
-<!-- Link to date filter documentation from Annamalai -->
-
-![De widget Opportunity toegevoegd.](../images/account-profiles/opportunities-added.png)
 
 ### Nieuwe mogelijkheden per persoonlijke rol {#opportunities-by-person-role}
 
@@ -141,6 +132,14 @@ De [!UICONTROL New opportunities won] widget geeft het totale aantal kansen weer
 
 ![De widget Nieuwe kansen heeft gewonnen.](../images/account-profiles/new-opportunities-won.png)
 
+### Opportuniteiten toegevoegd {#opportunities-added}
+
+De [!UICONTROL Opportunities added] widget gebruikt een lijngrafiek om het aantal kansen te tonen die elke dag over een periode worden toegevoegd. Gebruik het globale datumfilter dat zich boven aan het dashboard bevindt om de analyseperiode te bepalen. Als geen datumfilter wordt verstrekt, maakt een lijst het standaardgedrag van de kansen die voor het jaar voorafgaand aan vandaag worden toegevoegd. De resultaten kunnen worden gebruikt om een trend in het aantal toegevoegde kansen af te leiden.
+
+<!-- Link to date filter documentation from Annamalai -->
+
+![De widget Opportunity toegevoegd.](../images/account-profiles/opportunities-added.png)
+
 ### Predictieve spreiding van scores {#predictive-scoring-distribution}
 
 De [!UICONTROL Predictive scoring distribution] widget geeft de verdeling van de score van alle accountprofielen weer om u te helpen de gezondheid van uw verkooppijplijn in één oogopslag te begrijpen . De het scoren gegevens worden overgebracht door een donutgrafiek en een kolomgrafiek.
@@ -170,18 +169,6 @@ Met het vervolgkeuzemenu in de widget kunt u het accountscoremodel selecteren.
 >Filters voor het algemene datumbereik zijn niet van toepassing op voorspellende scoring-inzichten. Met widgets voor voorspellende scoring worden gegevens geanalyseerd op basis van het accountscoremodel dat is geselecteerd in de vervolgkeuzelijst.
 
 ![De widget Voorspelende score met invloedrijke factoren.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
-
-### Totaal rekeningen per bedrijfstak {#total-accounts-by-industry}
-
-Deze widget geeft het totale aantal accounts in één meting weer en gebruikt een donutgrafiek om de proportionele aantallen te illustreren voor de bedrijfstakken die het totale aantal vormen. De sleutel verstrekt de informatie van de kleurencodering voor de verschillende industrieën die omhoog de donutgrafiek maken.
-
->[!NOTE]
->
->De informatie die door dit inzicht wordt getoond is afhankelijk van de datumwaaier die door u wordt gespecificeerd. Als u geen datumfilter biedt, analyseert het standaardgedrag van de inzichten de gegevens die van het vorige jaar tot vandaag zijn toegevoegd.
-
-Individuele tellingen voor de verschillende industrieën worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek hangt.
-
-![De totale accounts per bedrijfswidget.](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ## Volgende stappen
 
