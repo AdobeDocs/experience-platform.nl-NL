@@ -2,9 +2,9 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 6088dc06af6db2ce1a86a9638df23453184864b2
+source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
 workflow-type: tm+mt
-source-wordcount: '4036'
+source-wordcount: '4044'
 ht-degree: 0%
 
 ---
@@ -333,7 +333,11 @@ Door het publiek te splitsen kunt u het publiek verder onderbrengen in kleinere 
 
 Bij splitsing naar kenmerk is er sprake van wederzijdse exclusiviteit tussen de groepen. Dit betekent dat als een record voldoet aan de criteria van meerdere gesplitste paden, de record de opdracht **first** pad van links en **niet** toegewezen aan een van de andere paden.
 
-Bij splitsen op percentage zijn splitsingen **willekeurig** gereed. Dit betekent dat de profielen willekeurig worden toegewezen aan elk pad. De splitsing is **niet** blijvend, zodat zou het profiel in een verschillende sub-publiek op elke evaluatie kunnen zijn.
+Bij splitsen op percentage zijn splitsingen **willekeurig** gereed. Dit betekent dat de profielen willekeurig worden toegewezen aan elk pad. De splitsing **is** blijvend, wat betekent dat het profiel bij elke evaluatie in dezelfde subgroep zal zijn.
+
+>[!NOTE]
+>
+>Eerder waren splitsingen in Audience Composition **niet** blijvend.
 
 Lees voor meer informatie over het blok Splitsen de [Handleiding voor compositie van publiek](./ui/audience-composition.md#split).
 
