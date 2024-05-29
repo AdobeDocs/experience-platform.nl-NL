@@ -1,11 +1,11 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
-description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
+description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
+source-git-commit: 060f6bb0ff6f57a84698a27bd9f640c0178e5b51
 workflow-type: tm+mt
-source-wordcount: '1777'
+source-wordcount: '1811'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,16 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 >Google [heeft aangekondigd](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) is van plan de Chrome-ondersteuning voor cookies van derden in de tweede helft van 2024 te beëindigen. Daarom worden cookies van derden niet meer ondersteund in de belangrijkste browsers.
 >
 >Wanneer deze wijziging wordt doorgevoerd, zal de Adobe de steun voor de `demdex` cookie die momenteel wordt ondersteund in de Web SDK.
+
+## Versie 2.20.0 - 21 mei 2024
+
+**Nieuwe functies**
+
+* Extra ondersteuning voor [Streaming media-verzameling](../web-sdk/commands/configure/streamingmedia.md).
+
+**Oplossingen en verbeteringen**
+
+* Het probleem waarbij de standaardinhoud werd verborgen door het voorverborgen fragment, is opgelost door een fout te voorkomen toen de toestemming werd geweigerd.
 
 ## Versie 2.19.2 - 10 januari 2024
 
@@ -92,7 +102,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 **Oplossingen en verbeteringen**
 
 * Probleem verholpen met aangepaste code-acties voor Adobe Target VEC waarbij de code op een andere locatie werd geïnjecteerd dan met [!DNL at.js].
-* Probleem verholpen waarbij de koptekst van de &quot;referentie&quot; in sommige randgevallen niet correct was ingesteld bij aanvragen bij het Edge-netwerk.
+* Probleem verholpen waarbij de koptekst van de &quot;referentie&quot; in sommige randgevallen niet correct was ingesteld op aanvragen bij de Edge Network.
 * Probleem verholpen waarbij [client-tip voor gebruikersagent](/help/web-sdk/use-cases/client-hints.md) eigenschappen kunnen op een onjuist type worden ingesteld.
 * Probleem verholpen waarbij `placeContext.localTime` komt niet overeen met het schema.
 
@@ -120,7 +130,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 ## Versie 2.12.0 - 29 juni 2022
 
-* Verander de verzoeken aan het Netwerk van de Rand om het `cluster` de locatie van de cookie als onderdeel van de URL. Dit zorgt ervoor dat gebruikers die hun locatie wijzigen (bijvoorbeeld via een VPN of rijden met mobiele apparaten, enz.), halverwege de sessie dezelfde kant op gaan en hetzelfde personalisatieprofiel hebben.
+* Verander de verzoeken aan de Edge Network om te gebruiken `cluster` de locatie van de cookie als onderdeel van de URL. Dit zorgt ervoor dat gebruikers die hun locatie wijzigen (bijvoorbeeld via een VPN of rijden met mobiele apparaten, enz.), halverwege de sessie dezelfde kant op gaan en hetzelfde personalisatieprofiel hebben.
 * Hiermee worden de geconfigureerde functies in de opdrachtreactie van getLibraryInfo gerenderd.
 
 ## Versie 2.11.0 - 13 juni 2022
@@ -152,7 +162,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 * De gebeurtenis view-change is geoptimaliseerd voor toepassingen op één pagina. Het weergavebericht wordt nu opgenomen in de gebeurtenis view-change wanneer persoonlijke ervaringen worden weergegeven.
 * Waarschuwing van console is verwijderd als dit niet het geval is `eventType` aanwezig is.
 * Het probleem waarbij de `propositions` eigenschap is alleen geretourneerd door een `sendEvent` gebruiken wanneer ervaringen zijn opgevraagd of opgehaald uit de cache. De `propositions` eigenschap wordt nu altijd gedefinieerd als een array.
-* Probleem verholpen waarbij verborgen containers niet werden weergegeven als er een fout was geretourneerd van het Edge-netwerk.
+* Probleem verholpen waarbij verborgen containers niet werden weergegeven als er een fout was geretourneerd van de Edge Network.
 * Probleem verholpen waarbij de interactieve gebeurtenissen niet in Adobe Target werden meegeteld. Dit probleem is opgelost door de weergavenaam toe te voegen aan de XDM op web.webPageDetails.viewName.
 * Los gebroken documentatiekoppelingen in consoleberichten op.
 
@@ -164,7 +174,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 ## Versie 2.7.0 - 26 oktober 2021
 
-* Maak extra informatie van het Netwerk van de Rand in de terugkeerwaarde van bloot `sendEvent`, inclusief `inferences` en `destinations`. Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Bèta rollen.
+* Maak extra informatie van de Edge Network in de terugkeerwaarde van bloot `sendEvent`, inclusief `inferences` en `destinations`. Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Bèta rollen.
 
 ## Versie 2.6.4 - 7 september 2021
 
@@ -202,7 +212,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 * De [`getIdentity`](/help/web-sdk/commands/getidentity.md) retourneert nu de id van het randgebied naast de identiteit.
 * Waarschuwingen en fouten die van de server zijn ontvangen, zijn verbeterd en worden op een geschiktere manier afgehandeld.
 * Toegevoegde ondersteuning voor de norm Goedkeuring 2.0 van de Adobe voor de [`setConsent`](/help/web-sdk/commands/setconsent.md) gebruiken.
-* De voorkeur van de toestemming, wanneer ontvangen, wordt gehakt en in lokale opslag voor een geoptimaliseerde integratie onder CMPs, het Web SDK van het Platform, en het Netwerk van de Rand van het Platform opgeslagen. Als u toestemmingsvoorkeur verzamelt, moedigen wij u nu aan om te roepen `setConsent` op elke pagina die wordt geladen.
+* De voorkeur van de toestemming, wanneer ontvangen, wordt gehakt en in lokale opslag voor een geoptimaliseerde integratie onder CMPs, het Web SDK van het Platform, en de Edge Network van het Platform opgeslagen. Als u toestemmingsvoorkeur verzamelt, moedigen wij u nu aan om te roepen `setConsent` op elke pagina die wordt geladen.
 * Twee [toezicht op haken](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` en `onCommandRejected`, zijn toegevoegd.
 * Bug Fix: de gebeurtenissen van het de interactiebericht van de Personalisatie zouden dubbele informatie over de zelfde activiteit bevatten wanneer een gebruiker aan een nieuwe single-page toepassingsmening, terug naar de originele mening navigeerde, en een element in aanmerking voor omzetting klikte.
 * Bug Fix: als de eerste gebeurtenis die door de SDK is verzonden `documentUnloading` instellen op `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) wordt gebruikt om de gebeurtenis te verzenden, wat resulteert in een fout betreffende een identiteit die niet wordt vastgesteld.

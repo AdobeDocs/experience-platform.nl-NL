@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ea3df4f05850547c75358fb15bf7a1e6a1d19dbf
+source-git-commit: 2e1ea70496b8e379d5a9be0f2f321b21da86cf4d
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2083'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,21 @@ ht-degree: 0%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versie 2.23.1 - 28 mei 2024
+
+**Nieuwe functies**
+
+* Extra ondersteuning voor de [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) in de extensieconfiguratie.
+* De [`Send Media Event`](action-types.md#send-media-event) actie voor de [!DNL Streaming Media Collection] functionaliteit.
+* De [`Media: Quality of Experience`](data-element-types.md#quality-experience) gegevenselement voor de [!DNL Streaming Media Collection] functionaliteit.
+
+Bevat versie 2.20.0 van het Web SDK van Adobe Experience Platform.
+
+**Oplossingen en verbeteringen**
+
+* Oplossing voor een fout tijdens het zoeken naar gegevenselementen in het dialoogvenster [Variabele bijwerken](action-types.md#update-variable) handeling.
+* Verwijderd [!UICONTROL Media] gebeurtenistypen van de gebeurtenistypen die worden voorgesteld voor gebruik in de `sendEvent` handeling.
 
 ## Versie 2.2.2.0 - 3 mei 2024
 
