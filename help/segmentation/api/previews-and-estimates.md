@@ -4,10 +4,10 @@ title: Voorvertoningen en schattingen van API-eindpunten
 description: Terwijl segmentdefinitie wordt ontwikkeld, kunt u met de rastergereedschappen en voorvertoningsgereedschappen in Adobe Experience Platform informatie op overzichtsniveau weergeven, zodat u zeker weet dat u het verwachte publiek isoleert.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '971'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -36,7 +36,7 @@ Wanneer de opname van records in het archief Profiel het totale aantal profielen
 
 De voorbeeldgrootte van de scan is afhankelijk van het totale aantal entiteiten in de profielopslag. Deze steekproefgrootte wordt vertegenwoordigd in de volgende lijst:
 
-| Entiteiten in profielopslag | Voorbeeldformaat |
+| Entiteiten in de profielopslag | Voorbeeldformaat |
 | ------------------------- | ----------- |
 | Minder dan 1 miljoen | Volledige gegevensset |
 | 1 tot 20 miljoen | 1 miljoen |

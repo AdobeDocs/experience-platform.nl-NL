@@ -4,7 +4,7 @@ title: Gegevens toevoegen aan realtime klantprofiel
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven die nodig zijn om gegevens toe te voegen aan het realtime profiel van de klant.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Gegevens toevoegen aan [!DNL Real-Time Customer Profile]
 
-In deze zelfstudie worden de stappen beschreven die nodig zijn om gegevens toe te voegen aan [!DNL Real-Time Customer Profile].
+Deze zelfstudie beschrijft de stappen die nodig zijn om gegevens toe te voegen aan [!DNL Real-Time Customer Profile].
 
 ## Een schema inschakelen voor [!DNL Real-Time Customer Profile]
 
-Gegevens die worden ingevoerd in [!DNL Experience Platform] voor gebruik door [!DNL Real-Time Customer Profile] voldoen aan een [!DNL Experience Data Model] (XDM) schema dat wordt toegelaten voor [!DNL Profile]. Als u een schema wilt inschakelen voor Profiel, moet u ofwel de opdracht [!DNL XDM Individual Profile] of [!DNL XDM ExperienceEvent] klasse.
+Gegevens die worden ingevoerd in [!DNL Experience Platform] voor gebruik door [!DNL Real-Time Customer Profile] moet voldoen aan een [!DNL Experience Data Model] (XDM) schema dat wordt toegelaten voor [!DNL Profile]. Als u een schema wilt inschakelen voor Profiel, moet u ofwel de opdracht [!DNL XDM Individual Profile] of [!DNL XDM ExperienceEvent] klasse.
 
-U kunt een schema inschakelen voor gebruik in [!DNL Real-Time Customer Profile] met de [!DNL Schema Registry] API of de [!DNL Schema Editor] gebruikersinterface. Volg de zelfstudies voor [een schema maken met behulp van API&#39;s](../../xdm/tutorials/create-schema-api.md) of [het creëren van een schema gebruikend de Redacteur UI van het Schema](../../xdm/tutorials/create-schema-ui.md).
+U kunt een schema inschakelen voor gebruik in [!DNL Real-Time Customer Profile] met de [!DNL Schema Registry] API of de [!DNL Schema Editor] gebruikersinterface. Volg de zelfstudies voor [schema&#39;s maken met behulp van API&#39;s](../../xdm/tutorials/create-schema-api.md) of [een schema maken met de interface van de Schema-editor](../../xdm/tutorials/create-schema-ui.md).
 
-## Gegevens toevoegen met batch-opname
+## Gegevens toevoegen met behulp van batch-opname
 
 Alle gegevens geüpload naar [!DNL Platform] het gebruiken van partijingestie wordt geupload aan individuele datasets. Voordat deze gegevens kunnen worden gebruikt door [!DNL Real-Time Customer Profile], moet de betrokken gegevensset specifiek worden geconfigureerd. Voor volledige instructies raadpleegt u de zelfstudie op [configureren van een gegevensset voor profiel- en identiteitsservice](dataset-configuration.md).
 
@@ -40,6 +40,6 @@ Met de [!DNL Real-Time Customer Profile] Toegang API, kunt u partijgegevens teru
 
 Voor gedetailleerde instructies over hoe te om tot entiteiten toegang te hebben gebruikend [!DNL Real-Time Customer Profile] API, gelieve te verwijzen naar [eindgebruikershandleiding voor entiteiten](../api/entities.md), ook wel bekend als &quot;[!DNL Profile Access] API&quot;.
 
-## Profielopslaggegevens bijwerken
+## Gegevens in profielarchief bijwerken
 
-Soms kan het nodig zijn gegevens bij te werken in de profielopslag van uw organisatie. U moet bijvoorbeeld records corrigeren of een kenmerkwaarde wijzigen. Dit kan door partijopname worden gedaan en vereist een profiel-Toegelaten dataset die met een upsert markering wordt gevormd. Voor meer informatie over hoe te om een dataset voor attributenupdates te vormen, gelieve te verwijzen naar het leerprogramma voor [het toelaten van een dataset voor Profiel en upsert](../../catalog/datasets/enable-upsert.md).
+Soms kan het nodig zijn gegevens bij te werken in het profielarchief van uw organisatie. U moet bijvoorbeeld records corrigeren of een kenmerkwaarde wijzigen. Dit kan door partijopname worden gedaan en vereist een profiel-Toegelaten dataset die met een upsert markering wordt gevormd. Voor meer informatie over hoe te om een dataset voor attributenupdates te vormen, gelieve te verwijzen naar het leerprogramma voor [het toelaten van een dataset voor Profiel en upsert](../../catalog/datasets/enable-upsert.md).

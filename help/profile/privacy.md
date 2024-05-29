@@ -5,7 +5,7 @@ title: Privacy-aanvraagverwerking in realtime-klantprofiel
 type: Documentation
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor Real-Time Klantprofiel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1732'
 ht-degree: 0%
@@ -52,7 +52,7 @@ In de volgende secties wordt beschreven hoe u privacyverzoeken kunt indienen voo
 >
 >Privacy Service kan alleen verwerken [!DNL Profile] gegevens die een samenvoegbeleid gebruiken dat geen identiteitsstitching uitvoert. Zie de sectie over [beleidsbeperkingen samenvoegen](#merge-policy-limitations) voor meer informatie .
 >
->Merk op dat de privacyverzoeken asynchroon binnen de regelgevende vereisten worden verwerkt, en de hoeveelheid tijd die zij om nemen te voltooien kan variëren. Als er wijzigingen optreden in uw [!DNL Profile] gegevens terwijl een verzoek nog wordt verwerkt, is het niet gegarandeerd dat die inkomende verslagen ook in dat verzoek zullen worden verwerkt. Alleen profielen die zich op het moment dat de privacytaak wordt aangevraagd in het datumpomeer of de profielopslag bevinden, kunnen worden verwijderd. Als u profielgegevens opgeeft die betrekking hebben op het onderwerp van een verwijderingsverzoek tijdens de verwijdertaak, is het niet gegarandeerd dat alle profielfragmenten worden verwijderd.
+>Merk op dat de privacyverzoeken asynchroon binnen de regelgevende vereisten worden verwerkt, en de hoeveelheid tijd die zij om nemen te voltooien kan variëren. Als er wijzigingen optreden in uw [!DNL Profile] gegevens terwijl een verzoek nog wordt verwerkt, is het niet gegarandeerd dat die inkomende verslagen ook in dat verzoek zullen worden verwerkt. Alleen profielen die zich op het moment dat de privacytaak wordt aangevraagd in het archief met gegevens of profielen bevinden, kunnen worden verwijderd. Als u profielgegevens opgeeft die betrekking hebben op het onderwerp van een verwijderingsverzoek tijdens de verwijdertaak, is het niet gegarandeerd dat alle profielfragmenten worden verwijderd.
 >Het is uw verantwoordelijkheid om op de hoogte te zijn van binnenkomende gegevens in Platform of de Dienst van het Profiel op het tijdstip van een verwijderingsverzoek, aangezien die gegevens in uw verslagopslag zullen worden opgenomen. U moet voorzichtig zijn met het opnemen van gegevens die zijn verwijderd of worden verwijderd.
 
 ### De API gebruiken

@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen;voorvoegsel van gegeven
 title: Gedeeltelijke rijupdates naar realtime klantprofiel verzenden met Data Prep
 description: Leer hoe u updates van gedeeltelijke rijen naar Real-Time klantprofiel verzendt met Data Prep.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 0%
@@ -130,7 +130,7 @@ De volgende bewerkingen worden ondersteund door [!DNL Real-Time Customer Profile
 | --- | --- | 
 | `create` | De standaardbewerking. Dit produceert een entiteit XDM creeert methode voor [!DNL Real-Time Customer Profile]. |
 | `merge` | Hiermee wordt een updatemethode voor XDM-entiteiten gegenereerd [!DNL Real-Time Customer Profile]. |
-| `delete` | Dit produceert een XDM entiteit schrappingsmethode voor [!DNL Real-Time Customer Profile] en verwijdert de gegevens permanent uit de [!DNL Profile Store]. |
+| `delete` | Dit produceert een XDM entiteit schrappingsmethode voor [!DNL Real-Time Customer Profile] en verwijdert de gegevens permanent uit de [!DNL Profile store]. |
 
 De volgende bewerkingen worden ondersteund door [!DNL Identity Service]:
 

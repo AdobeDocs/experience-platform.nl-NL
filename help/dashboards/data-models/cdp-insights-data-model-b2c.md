@@ -4,7 +4,7 @@ description: Leer hoe u SQL-query's kunt gebruiken met de Real-time Customer Dat
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1061'
 ht-degree: 0%
@@ -45,7 +45,7 @@ De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
 #### Het gebruikte hoofdlettergebruik voor het aantal profielen {#profile-count}
 
-De logica die wordt gebruikt voor de [!UICONTROL Profile count] widget retourneert het totale aantal samengevoegde profielen in de profielopslag op het moment dat de momentopname werd gemaakt. Zie de [[!UICONTROL Profile count] widget-documentatie](../guides/profiles.md#profile-count) voor meer informatie .
+De logica die wordt gebruikt voor de [!UICONTROL Profile count] widget retourneert het totale aantal samengevoegde profielen in de profielenopslag op het moment dat de momentopname werd gemaakt. Zie de [[!UICONTROL Profile count] widget-documentatie](../guides/profiles.md#profile-count) voor meer informatie .
 
 De SQL die de [!UICONTROL Profile count] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
 
@@ -98,7 +98,7 @@ De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
 #### Profielen op basis van hoofdlettergebruik {#profiles-by-identity}
 
-De [!UICONTROL Profiles by identity] widget geeft de indeling van de identiteiten in alle samengevoegde profielen in uw profielarchief weer. Zie de [[!UICONTROL Profiles by identity] widget-documentatie](../guides/profiles.md#profiles-by-identity) voor meer informatie .
+De [!UICONTROL Profiles by identity] De widget geeft de indeling van de identiteiten weer in alle samengevoegde profielen in de winkel Profiel. Zie de [[!UICONTROL Profiles by identity] widget-documentatie](../guides/profiles.md#profiles-by-identity) voor meer informatie .
 
 De SQL die de [!UICONTROL Profiles by identity] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
 
@@ -291,7 +291,7 @@ De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
 #### Profielen op identiteit voor gebruik van hoofdletters voor een publiek {#audience-profiles-by-identity}
 
-De logica die wordt gebruikt in de [!UICONTROL Profiles by identity] widget geeft een overzicht van de identiteiten in alle samengevoegde profielen in uw profielenarchief voor een bepaald publiek. Zie de [[!UICONTROL Profiles by identity] widget-documentatie](../guides/audiences.md#profiles-by-identity) voor meer informatie .
+De logica die wordt gebruikt in de [!UICONTROL Profiles by identity] widget geeft een overzicht van de identiteiten in alle samengevoegde profielen in het archief met profielen voor een bepaald publiek. Zie de [[!UICONTROL Profiles by identity] widget-documentatie](../guides/audiences.md#profiles-by-identity) voor meer informatie .
 
 De SQL die de [!UICONTROL Profiles by identity] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
 
@@ -327,7 +327,7 @@ De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
 #### Identiteitsoverlapping (profielen) gebruikt hoofdletters/kleine letters {#profiles-identity-overlap}
 
-De logica die wordt gebruikt in de [!UICONTROL Identity overlap] widget geeft de overlapping van profielen in uw **Profielopslag** die de twee geselecteerde identiteiten bevatten. Zie de klasse [[!UICONTROL Identity overlap] widgetsectie van het dialoogvenster [!UICONTROL Profiles] dashboarddocumentatie](../guides/profiles.md#identity-overlap).
+De logica die wordt gebruikt in de [!UICONTROL Identity overlap] widget geeft de overlapping van profielen in uw **Profielenarchief** die de twee geselecteerde identiteiten bevatten. Zie de klasse [[!UICONTROL Identity overlap] widgetsectie van het dialoogvenster [!UICONTROL Profiles] dashboarddocumentatie](../guides/profiles.md#identity-overlap).
 
 De SQL die de [!UICONTROL Identity overlap] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
 

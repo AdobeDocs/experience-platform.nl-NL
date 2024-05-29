@@ -2,16 +2,16 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, maart 2022
 description: In de release van maart 2022 staat een opmerking voor Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1171'
 ht-degree: 2%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 30 maart 2022**
+**Releasedatum: donderdag 30 maart 2022**
 
 Nieuwe functies in Adobe Experience Platform:
 
@@ -108,14 +108,14 @@ Raadpleeg voor meer informatie over doeldashboards in Platform de [Overzicht van
 
 ## Gegevensverzameling {#data-collection}
 
-Platform biedt een reeks technologieën waarmee u gegevens van de klant aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge-netwerk kunt verzenden waar het kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe doelen.
+Het platform biedt een reeks technologieën die u toestaan om cliënt-zijgegevens van de klantenervaring te verzamelen en het te verzenden naar de Edge Network van Adobe Experience Platform waar het kan worden verrijkt, worden getransformeerd, en aan Adobe of niet-Adobe bestemmingen worden gedistribueerd.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
 | Algemene gegevensstroominstellingen | U kunt nu verschillende nieuwe algemene instellingen configureren tijdens het configureren van een gegevensstroom: geo-locatie, cookie van eerste-partijid en synchronisatie van externe id&#39;s. Zie de sectie over [configureren van een gegevensstroom](../../datastreams/overview.md#create) in de UI-gids voor gegevensstromen voor meer informatie. |
-| [Edge Network Server API](../../server-api/overview.md) | De server API staat klanten toe om met het Netwerk van de Rand van het Experience Platform in wisselwerking te staan gebruikend een nieuw, voor authentiek verklaard eindpunt, om een verscheidenheid van gegevensinzameling, verpersoonlijking, reclame en marketing gebruiksgevallen te aandrijven. |
+| [Edge Network Server-API](../../server-api/overview.md) | De server API staat klanten toe om met de Edge Network van het Experience Platform in wisselwerking te staan gebruikend een nieuw, voor authentiek verklaard eindpunt, om een verscheidenheid van gegevensinzameling, verpersoonlijking, reclame en marketing gebruiksgevallen te aandrijven. |
 
 Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
 

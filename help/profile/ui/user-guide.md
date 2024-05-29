@@ -3,7 +3,7 @@ keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;veren
 title: Gebruikersgids voor realtime gebruikersprofiel
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-Time Klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2027'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Ga voor meer informatie naar de [Handleiding voor profieldashboard](../../dashbo
 
 ## [!UICONTROL Browse] tabmetriek
 
-Selecteer de **[!UICONTROL Browse]** om verschillende metriek weer te geven die betrekking hebben op de profielgegevens van uw organisatie. U kunt dit tabblad ook gebruiken om door de profielopslag te bladeren met behulp van een samenvoegbeleid of een identiteit, zoals beschreven in de volgende sectie van deze handleiding.
+Selecteer de **[!UICONTROL Browse]** om verschillende metriek weer te geven die betrekking hebben op de profielgegevens van uw organisatie. U kunt dit lusje ook gebruiken om de opslag van het Profiel te doorbladeren gebruikend een samenvoegbeleid of een identiteit, zoals geschetst in de volgende sectie van deze gids.
 
 Aan de rechterkant van het **[!UICONTROL Browse]** tab is [aantal profielen](#profile-count) alsmede een lijst van [profielen op naamruimte](#profiles-by-namespace).
 
@@ -64,7 +64,7 @@ Wanneer de opname van records in de [!DNL Profile] de opslag verhoogt of vermind
 
 ### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
 
-De **[!UICONTROL Profiles by namespace]** Met Metrisch worden het totale aantal naamruimten en de totale verdeling daarvan over alle samengevoegde profielen in uw profielarchief weergegeven. Het totale aantal profielen per naamruimte (d.w.z. het optellen van de waarden voor elke naamruimte) zal altijd hoger zijn dan de metrische waarde van het aantal profielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
+De **[!UICONTROL Profiles by namespace]** metrisch toont het totale aantal en de verdeling van namespaces over alle samengevoegde profielen in uw opslag van het Profiel. Het totale aantal profielen per naamruimte (d.w.z. het optellen van de waarden voor elke naamruimte) zal altijd hoger zijn dan de metrische waarde van het aantal profielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
 
 #### De [!UICONTROL Profiles by namespace] metrisch
 
@@ -90,7 +90,7 @@ Als u een samenvoegbeleid wilt kiezen in het menu **[!UICONTROL Select merge pol
 
 ![Er wordt een dialoogvenster weergegeven waarin u het samenvoegbeleid kunt selecteren waarop u wilt filteren.](../images/user-guide/select-merge-policy.png)
 
-De profielen die worden getoond vertegenwoordigen een steekproef van maximaal 20 profielen van de het profielopslag van uw organisatie, nadat het geselecteerde samenvoegbeleid is toegepast. De voorbeeldprofielen voor het geselecteerde samenvoegbeleid worden vernieuwd wanneer nieuwe gegevens worden toegevoegd aan de profielopslag van uw organisatie.
+De profielen die worden getoond vertegenwoordigen een steekproef van maximaal 20 profielen van de opslag van het Profiel van uw organisatie, nadat het geselecteerde samenvoegbeleid is toegepast. De voorbeeldprofielen voor het geselecteerde samenvoegbeleid worden vernieuwd wanneer nieuwe gegevens worden toegevoegd aan de profielopslag van uw organisatie.
 
 Als u de details van een van de voorbeeldprofielen wilt weergeven, selecteert u de optie **[!UICONTROL Profile ID]**. Zie de sectie verderop in deze handleiding voor meer informatie [profieldetails weergeven](#profile-detail).
 

@@ -4,7 +4,7 @@ title: Voorbeeld van voorbeeldstatus (profiel voorvertoning) API-eindpunt
 description: Het eindpunt van de voorproefvoorbeeldstatus van het Real-Time Profiel van de Klant API staat u toe om de recentste succesvolle steekproef van uw gegevens van het Profiel, de distributie van het lijstprofiel door dataset en door identiteit, voor te vertonen en rapporten te produceren die datasetoverlapping, identiteitsoverlap, en ongestipte profielen tonen.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2901'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Met Adobe Experience Platform kunt u klantgegevens uit meerdere bronnen invoeren om een robuust, uniform profiel voor elk van uw individuele klanten te maken. Aangezien de gegevens in Platform worden opgenomen, wordt een steekproefbaan in werking gesteld om de profieltelling en andere gegevens-verwante metriek van het Profiel van de Klant in real time bij te werken.
 
-De resultaten van deze voorbeeldtaak kunnen worden weergegeven met de opdracht `/previewsamplestatus` eindpunt, deel van Real-Time API van het Profiel van de Klant. Dit eindpunt kan ook worden gebruikt om van profieldistributies door zowel dataset als identiteit namespace een lijst te maken, evenals veelvoudige rapporten te produceren om zicht in de samenstelling van de Opslag van het Profiel van uw organisatie te bereiken. Deze gids doorloopt de stappen die worden vereist om deze metriek te bekijken gebruikend `/previewsamplestatus` API-eindpunt.
+De resultaten van deze voorbeeldtaak kunnen worden weergegeven met de opdracht `/previewsamplestatus` eindpunt, deel van Real-Time API van het Profiel van de Klant. Dit eindpunt kan ook worden gebruikt om van profieldistributies door zowel dataset als identiteit namespace een lijst te maken, evenals veelvoudige rapporten te produceren om zicht in de samenstelling van de opslag van het Profiel van uw organisatie te bereiken. Deze gids doorloopt de stappen die worden vereist om deze metriek te bekijken gebruikend `/previewsamplestatus` API-eindpunt.
 
 >[!NOTE]
 >
@@ -37,10 +37,10 @@ Als u meer wilt weten over profielen en hun rol in het Experience Platform, lees
 
 ## Hoe de voorbeeldtaak wordt geactiveerd
 
-Als gegevens die voor het Profiel van de Klant in real time worden toegelaten worden opgenomen in [!DNL Platform], wordt het opgeslagen in de de gegevensopslag van het Profiel. Wanneer de opname van records in de profielwinkel het totale aantal profielen met meer dan 5% verhoogt of verlaagt, wordt een samplingtaak geactiveerd om het aantal bij te werken. De wijze waarop het monster wordt geactiveerd, hangt af van het type inname dat wordt gebruikt:
+Als gegevens die voor het Profiel van de Klant in real time worden toegelaten worden opgenomen in [!DNL Platform], wordt het opgeslagen in de de gegevensopslag van het Profiel. Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 5% verhoogt of verlaagt, wordt een samplingtaak geactiveerd om het aantal bij te werken. De wijze waarop het monster wordt geactiveerd, hangt af van het type inname dat wordt gebruikt:
 
 * Voor **workflows voor streaming gegevens**, wordt per uur gecontroleerd of de verhoging of verlaging van 5% is bereikt. Als dit het geval is, wordt er automatisch een voorbeeldtaak geactiveerd om de telling bij te werken.
-* Voor **batch-inname** Als aan de drempel van 5% voor verhogen of verlagen is voldaan, wordt binnen 15 minuten nadat een batch is ingevoerd in de profielopslag een taak uitgevoerd om het aantal bij te werken. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte op naam.
+* Voor **batch-inname**, binnen 15 minuten na het met succes opnemen van een batch in de profielopslag, wordt een taak uitgevoerd om het aantal bij te werken als aan de drempel van 5% voor verhogen of verlagen is voldaan. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte op naam.
 
 Het aantal profielen en de profielen op basis van naamruimtemetriek zijn ook beschikbaar in het dialoogvenster [!UICONTROL Profiles] van de gebruikersinterface van het Experience Platform. Ga voor informatie over hoe u toegang krijgt tot profielgegevens via de gebruikersinterface naar de [[!DNL Profile] UI-hulplijn](../ui/user-guide.md).
 
@@ -100,9 +100,9 @@ De reactie bevat de details voor de laatste geslaagde voorbeeldtaak die voor de 
 | Eigenschap | Beschrijving |
 |---|---|
 | `numRowsToRead` | Het totale aantal samengevoegde profielen in de steekproef. |
-| `sampleJobRunning` | Een Booleaanse waarde die wordt geretourneerd `true` wanneer een voorbeeldtaak wordt uitgevoerd. Biedt transparantie in de latentie die optreedt wanneer een batchbestand wordt geüpload naar het moment dat het daadwerkelijk wordt toegevoegd aan de profielopslag. |
+| `sampleJobRunning` | Een Booleaanse waarde die wordt geretourneerd `true` wanneer een voorbeeldtaak wordt uitgevoerd. Hiermee krijgt u transparantie in de latentie die optreedt wanneer een batchbestand wordt geüpload naar het moment dat het daadwerkelijk wordt toegevoegd aan de profielopslag. |
 | `cosmosDocCount` | Het totale aantal documenten in Cosmos. |
-| `totalFragmentCount` | Het totale aantal profielfragmenten in het profielarchief. |
+| `totalFragmentCount` | Het totale aantal profielfragmenten in het archief met profielen. |
 | `lastSuccessfulBatchTimestamp` | Tijdstempel voor laatste succes bij het invoeren van batch. |
 | `streamingDriven` | *Dit veld is afgekeurd en heeft geen betekenis voor de reactie.* |
 | `totalRows` | Het totale aantal samengevoegde profielen in Experience Platform, ook wel &#39;profieltelling&#39; genoemd. |
@@ -207,7 +207,7 @@ De reactie omvat een `data` array, die een lijst met gegevenssetobjecten bevat. 
 
 ## Profieldistributie weergeven op naamruimte van identiteit
 
-U kunt een verzoek van de GET tot uitvoeren `/previewsamplestatus/report/namespace` eindpunt om de uitsplitsing naar naamruimte van de identiteit in alle samengevoegde profielen in uw profielarchief weer te geven. Dit omvat zowel de standaardidentiteiten die door Adobe worden verstrekt, als de douaneidentiteiten die door uw organisatie worden bepaald.
+U kunt een verzoek van de GET tot uitvoeren `/previewsamplestatus/report/namespace` eindpunt om de uitsplitsing naar naamruimte van de identiteit te bekijken over alle samengevoegde profielen in uw archief Profiel. Dit omvat zowel de standaardidentiteiten die door Adobe worden verstrekt, als de douaneidentiteiten die door uw organisatie worden bepaald.
 
 Identiteitsnaamruimten zijn een belangrijk onderdeel van de Adobe Experience Platform Identity Service dat als indicatoren dient voor de context waarop de klantgegevens betrekking hebben. Om meer te leren, begin door te lezen [Overzicht van naamruimte in identiteit](../../identity-service/features/namespaces.md).
 
@@ -304,7 +304,7 @@ De reactie omvat een `data` array, met afzonderlijke objecten die de details voo
 
 ## Genereer het overlappingsrapport voor de gegevensset
 
-Het rapport van de overlapping van datasets verstrekt zicht in de samenstelling van de Opslag van het Profiel van uw organisatie door de datasets bloot te stellen die het meest aan uw adresseerbare publiek (samengevoegde profielen) bijdragen. Naast het verstrekken van inzichten in uw gegevens, kan dit rapport u acties helpen om vergunningsgebruik te optimaliseren, zoals het plaatsen van vervalsingen voor bepaalde datasets.
+Het rapport van de datasetoverlapping verstrekt zicht in de samenstelling van de opslag van het Profiel van uw organisatie door de datasets bloot te stellen die het meest aan uw adresseerbare publiek (samengevoegde profielen) bijdragen. Naast het verstrekken van inzichten in uw gegevens, kan dit rapport u acties helpen om vergunningsgebruik te optimaliseren, zoals het plaatsen van vervalsingen voor bepaalde datasets.
 
 U kunt het rapport van de datasetoverlapping produceren door een verzoek van de GET aan te voeren `/previewsamplestatus/report/dataset/overlap` eindpunt.
 
@@ -372,7 +372,7 @@ Dit rapport bevat de volgende informatie:
 
 ## Rapport voor overlappende naamruimte genereren {#identity-overlap-report}
 
-De identiteitsnaamruimte overlapt rapport geeft inzicht in de samenstelling van de profielopslag van uw organisatie door de naamruimten die het meest bijdragen aan uw adresseerbare publiek (samengevoegde profielen) toegankelijk te maken. Dit omvat zowel de standaard identiteitsnaamruimten die door Adobe worden verstrekt, als de naamruimten van de douaneidentiteit die door uw organisatie worden bepaald.
+De identiteitsnaamruimte overlapt rapport geeft inzicht in de samenstelling van de opslag van het Profiel van uw organisatie door de naamruimten toegankelijk te maken die het meest bijdragen aan uw adresseerbare publiek (samengevoegde profielen). Dit omvat zowel de standaard identiteitsnaamruimten die door Adobe worden verstrekt, als de naamruimten van de douaneidentiteit die door uw organisatie worden bepaald.
 
 U kunt het overlappende rapport voor naamruimte genereren door een verzoek van de GET naar de `/previewsamplestatus/report/namespace/overlap` eindpunt.
 
@@ -468,7 +468,7 @@ Dit rapport bevat de volgende informatie:
 
 ## Rapport voor niet-geselecteerde profielen genereren
 
-U kunt de samenstelling van de Opslag van het Profiel van uw organisatie door het niet-gesloten profielrapport meer zichtbaar worden. Een &quot;niet-gekoppeld&quot; profiel is een profiel dat slechts één profielfragment bevat. Een &quot;onbekend&quot; profiel is een profiel dat is gekoppeld aan pseudoniem naamruimten, zoals `ECID` en `AAID`. Onbekende profielen zijn inactief, wat betekent dat er geen nieuwe gebeurtenissen zijn toegevoegd voor de opgegeven periode. Het rapport met niet-opgeslagen profielen bevat een indeling van profielen voor een periode van 7, 30, 60, 90 en 120 dagen.
+U kunt de samenstelling van de opslag van het Profiel van uw organisatie door het niet-gesloten profielrapport meer zichtbaar maken. Een &quot;niet-gekoppeld&quot; profiel is een profiel dat slechts één profielfragment bevat. Een &quot;onbekend&quot; profiel is een profiel dat is gekoppeld aan pseudoniem naamruimten, zoals `ECID` en `AAID`. Onbekende profielen zijn inactief, wat betekent dat er geen nieuwe gebeurtenissen zijn toegevoegd voor de opgegeven periode. Het rapport met niet-opgeslagen profielen bevat een indeling van profielen voor een periode van 7, 30, 60, 90 en 120 dagen.
 
 U kunt het rapport met niet-gekoppelde profielen genereren door een verzoek tot GET aan de `/previewsamplestatus/report/unstitchedProfiles` eindpunt.
 
@@ -549,8 +549,8 @@ Een succesvolle aanvraag retourneert HTTP Status 200 (OK) en het rapport met nie
 | Eigenschap | Beschrijving |
 |---|---|
 | `data` | De `data` bevat de informatie die wordt geretourneerd voor het rapport met niet-ingestelde profielen. |
-| `totalNumberOfProfiles` | Het totale aantal unieke profielen in het profielarchief. Dit is gelijk aan het adresseerbare aantal. Het bevat zowel bekende als niet-gebonden profielen. |
-| `totalNumberOfEvents` | The total number of ExperienceEvents in the Profile Store. |
+| `totalNumberOfProfiles` | Het totale aantal unieke profielen in het archief Profiel. Dit is gelijk aan het adresseerbare aantal. Het bevat zowel bekende als niet-gebonden profielen. |
+| `totalNumberOfEvents` | Het totale aantal ExperienceEvents in het archief met profielen. |
 | `unstitchedProfiles` | Een object met een uitsplitsing van niet-opgegeven profielen naar tijdsperiode. Het rapport met niet-opgeslagen profielen bevat een uitsplitsing van profielen voor tijdvakken van 7, 30, 60, 90 en 120 dagen. |
 | `countOfProfiles` | Het aantal niet-gekoppelde profielen voor de tijdsperiode of het aantal niet-gebonden profielen voor de naamruimte. |
 | `eventsAssociated` | Het aantal ExperienceEvents voor het tijdbereik of het aantal gebeurtenissen voor de naamruimte. |
@@ -559,7 +559,7 @@ Een succesvolle aanvraag retourneert HTTP Status 200 (OK) en het rapport met nie
 
 ### Het rapport met niet-opgeslagen profielen interpreteren
 
-De resultaten van het rapport kunnen inzicht geven in hoeveel ongeordende en inactieve profielen uw organisatie binnen haar Opslag van het Profiel heeft.
+De resultaten van het rapport kunnen inzicht in hoeveel ongestichte en inactieve profielen uw organisatie binnen zijn opslag van het Profiel heeft.
 
 Neem het volgende fragment uit het `data` object:
 
@@ -593,5 +593,5 @@ Dit rapport bevat de volgende informatie:
 
 ## Volgende stappen
 
-Nu u weet hoe te om steekproefgegevens in de Opslag van het Profiel voor te vertonen en veelvoudige rapporten over de gegevens in werking te stellen, kunt u de schatting en voorproef eindpunten van de Dienst API van de Segmentatie ook gebruiken om summiere-vlakke informatie betreffende uw segmentdefinities te bekijken. Deze informatie helpt u ervoor te zorgen dat u uw verwachte publiek isoleert. Ga voor meer informatie over het werken met voorvertoningen en schattingen met de segmentatie-API naar de [eindpuntgids voor voorvertoningen en schattingen](../../segmentation/api/previews-and-estimates.md).
+Nu u weet hoe te om steekproefgegevens in de opslag van het Profiel voor te vertonen en veelvoudige rapporten over de gegevens in werking te stellen, kunt u de schatting en voorproefpunten van de Dienst API van de Segmentatie ook gebruiken om summiere-vlakke informatie betreffende uw segmentdefinities te bekijken. Deze informatie helpt u ervoor te zorgen dat u uw verwachte publiek isoleert. Ga voor meer informatie over het werken met voorvertoningen en schattingen met de segmentatie-API naar de [eindpuntgids voor voorvertoningen en schattingen](../../segmentation/api/previews-and-estimates.md).
 

@@ -1,12 +1,12 @@
 ---
 title: Intelligente re-engagement
-description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste conversiemomenten om op een intelligente manier opnieuw in contact te komen met onregelmatige klanten.
+description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste omzettingsmomenten om intelligent onregelmatige klanten opnieuw aan te sluiten.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3869'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -40,7 +40,7 @@ Wanneer u de stappen voor het implementeren van het hoofdlettergebruik uitvoert,
    * [Schema&#39;s](/help/xdm/home.md)
    * [Profielen](/help/profile/home.md)
    * [Gegevenssets](/help/catalog/datasets/overview.md)
-   * [Doelgroepen](/help/segmentation/home.md)
+   * [Soorten publiek](/help/segmentation/home.md)
    * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
    * [Doelen](/help/destinations/home.md)
 
@@ -178,9 +178,9 @@ De [Gegevens van eindgebruiker](/help/xdm/field-groups/event/enduserids.md) de v
 
 +++
 
-+++Details van de Handel (de Groep van het Gebied)
++++Commerce-details (veldgroep)
 
-De [Handelsgegevens](/help/xdm/field-groups/event/commerce-details.md) de veldgroep wordt gebruikt om handelsgegevens zoals productinformatie (SKU, naam, hoeveelheid), en standaardkartverrichtingen (orde, checkout, verlaten) te beschrijven.
+De [Commerce-gegevens](/help/xdm/field-groups/event/commerce-details.md) de veldgroep wordt gebruikt om handelsgegevens zoals productinformatie (SKU, naam, hoeveelheid), en standaardkartverrichtingen (orde, checkout, verlaten) te beschrijven.
 
 | Velden | Beschrijving |
 | --- | --- |
@@ -221,9 +221,9 @@ De [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klas
 
 +++
 
-+++Details van de Handel (de Groep van het Gebied)
++++Commerce-details (veldgroep)
 
-De [Handelsgegevens](/help/xdm/field-groups/event/commerce-details.md) de veldgroep wordt gebruikt om handelsgegevens zoals productinformatie (SKU, naam, hoeveelheid), en standaardkartverrichtingen (orde, checkout, verlaten) te beschrijven.
+De [Commerce-gegevens](/help/xdm/field-groups/event/commerce-details.md) de veldgroep wordt gebruikt om handelsgegevens zoals productinformatie (SKU, naam, hoeveelheid), en standaardkartverrichtingen (orde, checkout, verlaten) te beschrijven.
 
 | Velden | Beschrijving |
 | --- | --- |
@@ -344,7 +344,7 @@ Er zijn geen [beleid voor gegevensgebruik](/help/data-governance/policies/overvi
 
 ### Soorten publiek maken {#create-audience}
 
-In de scenario&#39;s voor herbetrokkenheid wordt gebruikgemaakt van publiek om specifieke kenmerken of gedragingen te definiëren die worden gedeeld door een subset van profielen in uw profielarchief om een verhandelbare groep personen van uw klantenbasis te onderscheiden. Soorten publiek kan op meerdere manieren worden gemaakt [!DNL Adobe Experience Platform].
+In de scenario&#39;s voor herbetrokkenheid wordt gebruikgemaakt van publiek om specifieke kenmerken of gedragingen te definiëren die worden gedeeld door een subset van profielen in uw profielarchief om een verhandelbare groep personen te onderscheiden van uw klantenbasis. Soorten publiek kan op meerdere manieren worden gemaakt [!DNL Adobe Experience Platform].
 
 Voor meer informatie over het maken van een publiek leest u de [gebruikersinterface-handleiding voor publieksservices](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
@@ -553,11 +553,11 @@ De belangrijkste logica van het reiscanvas vereist u om specifieke gebeurtenisse
       * `timestamp > timestamp of product last viewed`
 
    * Voorwaarden - Selecteer het doelkanaal
-      * Email
+      * E-mail
          * `consents.marketing.email.val = y`
       * Push
          * `consents.marketing.push.val=y`
-      * Sms
+      * SMS
          * `consents.marketing.sms.val = y`
 
    * Kanaalpersonalisatie
@@ -687,11 +687,11 @@ De belangrijkste logica van het reiscanvas vereist u om specifieke gebeurtenisse
    * `timestamp > timestamp of cart was last abandoned`
 
 * Doelkanaal selecteren (één of meerdere kanalen selecteren voor breder bereik)
-   * Email
+   * E-mail
       * `consents.marketing.email.val = y`
    * Push
       * `consents.marketing.push.val = y`
-   * Sms
+   * SMS
       * `consents.marketing.sms.val = y`
    * Kanaalpersonalisatie
       * Geef informatie over de details van het winkelwagentje weer en kan meerdere producten in een tabelindeling weergeven.
@@ -744,9 +744,9 @@ De belangrijkste logica van het reiscanvas vereist u om specifieke gebeurtenisse
 * Voorwaarden
    * Selecteer Doelkanaal (selecteer een of meerdere kanalen voor een groter bereik).
       * Bevestiging van bestellingen wordt beschouwd als dienstbaar in de natuur, dus controle van de toestemming is meestal niet nodig.
-      * Email
+      * E-mail
       * Push
-      * Sms
+      * SMS
 
    * Aanpassing kanaalinhoud
       * Hiermee geeft u informatie over de volgordedetails weer en kunt u een lijst met producten weergeven met een tabelindeling.
@@ -773,7 +773,7 @@ U kunt verlaten productdoorbladeren activeren en het kartpubliek verlaten aan be
 
 * Stream/activering
    * [Reclame](/help/destinations/catalog/advertising/overview.md)/[Betaalde media en sociale media](/help/destinations/catalog/social/overview.md)
-   * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
+   * [Mobiel](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Streaming doel](/help/destinations/catalog/streaming/http-destination.md)
    * [Aangepast doel gemaakt met Destination SDK.](/help/destinations/destination-sdk/overview.md). Als u een Real-Time CDP Ultimate-klant bent, kunt u ook een persoonlijke [aangepast doel met Destination SDK](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
 

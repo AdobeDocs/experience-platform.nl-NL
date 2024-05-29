@@ -4,7 +4,7 @@ title: Segmenteringsservice in Real-time Customer Data Platform
 description: Adobe Real-time Customer Data Platform is gebouwd op Adobe Experience Platform en maakt gebruik van veel services en functionaliteit voor Experience Platforms. Gebruikend de Dienst van de Segmentatie, kunt u op maat-gemaakte marketing verstrekken door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 0%
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 Real-Time CDP is gebouwd op Adobe Experience Platform en gebruikt veel van de [!DNL Experience Platform] diensten en functionaliteit. Met de [!DNL Segmentation Service]kunt u op maat gemaakte marketing bieden door uw klanten te verdelen in kleinere groepen met vergelijkbare kenmerken.
 
-## Segmentatie
+## Segmentering
 
-De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw profielopslag worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan. Met behulp van verschillende segmentdefinities kunt u uw aandacht richten op uw verschillende doelgroepen en een meer aangepaste marketingervaring bieden.
+De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw opslag van het Profiel worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan. Met behulp van verschillende segmentdefinities kunt u uw aandacht richten op uw verschillende doelgroepen en een meer aangepaste marketingervaring bieden.
 
 ## [!DNL Segment Builder]
 

@@ -5,10 +5,10 @@ type: Documentation
 description: Met Adobe Experience Platform kunt u een gegevensset of batch verwijderen uit de profielopslag om gegevens van het realtime-klantprofiel te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de profiel-API gebruiken om een profielsysteemtaak te maken of een aanvraag te verwijderen.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1327'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -266,7 +266,7 @@ In het antwoord worden de details van het verwijderingsverzoek weergegeven, incl
 }
 ```
 
-| Properties | Beschrijving |
+| Eigenschappen | Beschrijving |
 |---|---|
 | `jobType` | Het type baan dat wordt gecreeerd, in dit geval zal het altijd terugkeren `"DELETE"`. |
 | `status` | De status van de verwijderaanvraag. Mogelijke waarden: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
@@ -305,4 +305,4 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege 
 
 ## Volgende stappen
 
-Nu u de stappen kent betrokken bij het schrappen van datasets en partijen van [!DNL Profile Store] binnen [!DNL Experience Platform]kunt u veilig gegevens verwijderen die ten onrechte zijn toegevoegd of die uw organisatie niet meer nodig heeft. Houd er rekening mee dat een verwijderingsaanvraag niet ongedaan kan worden gemaakt. Verwijder daarom alleen gegevens die u zeker weet dat u deze nu niet nodig hebt en in de toekomst niet meer nodig hebt.
+Nu u de stappen kent betrokken bij het schrappen van datasets en partijen van [!DNL Profile store] binnen [!DNL Experience Platform]kunt u veilig gegevens verwijderen die ten onrechte zijn toegevoegd of die uw organisatie niet meer nodig heeft. Houd er rekening mee dat een verwijderingsaanvraag niet ongedaan kan worden gemaakt. Verwijder daarom alleen gegevens die u zeker weet dat u deze nu niet nodig hebt en in de toekomst niet meer nodig hebt.

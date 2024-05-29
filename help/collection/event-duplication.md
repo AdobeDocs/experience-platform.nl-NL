@@ -1,13 +1,13 @@
 ---
 title: Omgaan met duplicatie van gebeurtenissen in Experience Platform
 description: Leer hoe Adobe Experience Platform dubbel werk bij gebeurtenissen verwerkt
-source-git-commit: bc3ae849bd7fd8a9f50ba98528adc43d7282df90
+exl-id: ac8c3ee8-52cf-459c-b283-16ed32d2976d
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
 
 ---
-
 
 # Overschrijving van gebeurtenissen afhandelen in Adobe Experience Platform
 
@@ -27,7 +27,7 @@ Voor een beter begrip van de beste praktijken voor de behandeling van voorbijgaa
 
 Dubbele gebeurtenissen kunnen in verschillende scenario&#39;s voorkomen, zoals, maar niet beperkt tot:
 
-* Netwerkgerelateerde problemen tussen client-side SDK&#39;s en de [!DNL Edge Network]. Deze kwesties kunnen uit de mislukkingen van Internet Service Provider, mobiel signaalverlies, of andere netwerkmislukkingen voortkomen, aangezien de connectiviteit tussen de klant en het Netwerk van de Rand door openbaar Internet wordt gedaan.
+* Netwerkgerelateerde problemen tussen client-side SDK&#39;s en de [!DNL Edge Network]. Deze kwesties kunnen uit de mislukkingen van Internet Service Provider, mobiel signaalverlies, of andere netwerkmislukkingen voortkomen, aangezien de connectiviteit tussen de klant en de Edge Network door openbaar Internet wordt gedaan.
 * Gebeurtenissen voor automatisch schalen van interne Experience Platforms. Soms kunnen gegevens opnieuw in evenwicht worden gebracht vanwege de volatiliteit van de cloudinfrastructuur.
 
 De Adobe Experience Platform-gegevensverzamelingslaag is ontworpen ter ondersteuning van verwerking &quot;minstens één keer&quot;. Daarom kan dubbel optreden in beperkte, zeldzame situaties.
@@ -38,7 +38,7 @@ Voor meer informatie over de verwerking van minstens één keer raadpleegt u dit
 
 Voor bedrijfsscenario&#39;s die gevoelig zijn voor dubbele gebeurtenissen, gebruikt Experience Platform veelvoudige methodes van gebeurtenisdeduplicatie in zijn stroomafwaartse opslagsystemen, zoals hieronder beschreven.
 
-* Real-Time CDP Profile Store laat gebeurtenissen vallen als een gebeurtenis met hetzelfde `_id` bestaat al in de [!DNL Profile Store]. Zie de documentatie op [XDM ExperienceEvent, klasse](../xdm/classes/experienceevent.md) voor meer informatie .
+* Gebeurtenissen in het Real-Time CDP Profile store worden genegeerd als een gebeurtenis met dezelfde `_id` bestaat al in de [!DNL Profile store]. Zie de documentatie op [XDM ExperienceEvent, klasse](../xdm/classes/experienceevent.md) voor meer informatie .
 * Customer Journey Analytics staat gebruikers toe om metrisch te vormen om waarden niet-herhalend slechts te tellen. Raadpleeg de documentatie bij [Instellingen voor componenten voor metrische deduplicatie](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/component-settings/metric-deduplication.html?lang=en).
 * De Dienst van de Vraag van het Experience Platform steunt gegevensdeduplicatie wanneer het wordt vereist om een volledige rij uit een berekening te verwijderen of een specifieke reeks gebieden te negeren omdat slechts een deel van de gegevens in de rij dubbele informatie is. Zie de documentatie rondom [gegevensdeduplicatie in Query-service](../query-service/key-concepts/deduplication.md) voor meer informatie .
 

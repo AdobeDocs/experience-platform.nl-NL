@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Overzicht van segmentatieservice
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1627'
 ht-degree: 0%
@@ -26,7 +26,7 @@ U moet de volgende belangrijke termen begrijpen die in dit document worden gebru
 
 ## Hoe segmentatie werkt
 
-De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw profielopslag worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan.
+De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw opslag van het Profiel worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan.
 
 Zodra een publiek conceptueel is gedefinieerd, wordt het ingebouwd [!DNL Experience Platform]. Doorgaans worden soorten publiek opgebouwd door de marketeter of publieksspecialist, hoewel sommige organisaties de voorkeur geven aan het maken ervan door hun marketingafdeling, in samenwerking met hun gegevensanalisten. Bij het bekijken van de gegevens die worden verzonden naar [!DNL Platform], kan de gegevensanalist het publiek op twee manieren tot stand brengen - of door een segmentdefinitie te creëren door te selecteren welke gebieden en waarden zullen worden gebruikt om de regels of de voorwaarden van het publiek te bouwen, of door een publiek samen te stellen gebruikend de Samenstelling van de Publiek.
 
@@ -92,7 +92,7 @@ Het batchpubliek wordt automatisch elke 24 uur geëvalueerd. Als u een partijpub
 >abstract="De segmentatie van de rand is de capaciteit om segmenten in Platform op het Netwerk van de Rand onmiddellijk te evalueren, toelatend de kwesties van het de verpersoonlijkingsgebruik van zelfde-pagina en volgende-pagina."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Edge segmentation UI-hulplijn"
 
-De segmentatie van de rand is de capaciteit om segmenten in Platform onmiddellijk te evalueren [op het Edge-netwerk](../web-sdk/home.md)en maakt het gebruik van hoofdletters en kleine letters mogelijk voor het aanpassen van pagina&#39;s.
+De segmentatie van de rand is de capaciteit om segmenten in Platform onmiddellijk te evalueren [op de Edge Network](../web-sdk/home.md)en maakt het gebruik van hoofdletters en kleine letters mogelijk voor het aanpassen van pagina&#39;s.
 
 Voor meer informatie over randsegmentatie leest u de optie [API-documentatie](./api/edge-segmentation.md) of de [UI-documentatie](./ui/edge-segmentation.md).
 

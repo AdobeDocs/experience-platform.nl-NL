@@ -2,7 +2,7 @@
 title: Edge-profielen
 description: Meer informatie over Edge-profielen en de bijbehorende terminologie, beschikbare gebieden voor randprofielen en de beschikbare services voor randprofielen.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -73,4 +73,4 @@ Voor randprofielen bepaalt de vervaldatum van de gegevens hoe lang het profiel o
 
 ### Welke gegevens zijn opgeslagen in het randprofiel?
 
-Het Edge-profiel slaat de profielkenmerken, profiel-id&#39;s en gekwalificeerde gebruikers-id&#39;s op. De gegevensvervaldatum duurt standaard 14 dagen.
+In Edge Profile worden de profielkenmerken, profiel-id&#39;s en gekwalificeerde gebruikers-id&#39;s opgeslagen. De gegevensvervaldatum duurt standaard 14 dagen.

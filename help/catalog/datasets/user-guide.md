@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: ed0a259c72832e4fb219855e2a2fc49b3381b85d
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2896'
 ht-degree: 0%
@@ -313,7 +313,7 @@ Als u de batch wilt verwijderen, selecteert u **[!UICONTROL Delete batch]** rech
 
 >[!NOTE]
 >
->Als de ingesloten gegevens zijn ingeschakeld voor Profiel en zijn verwerkt, worden deze gegevens niet verwijderd wanneer u een batch verwijdert uit de profielopslag.
+>Als de ingesloten gegevens zijn ingeschakeld voor Profiel en zijn verwerkt, worden deze gegevens niet verwijderd wanneer u een batch verwijdert uit het archief Profiel.
 
 ![De de partijknoop van de Schrapping wordt benadrukt op de datasetdetails pagina.](../images/datasets/user-guide/delete-batch.png)
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de ana
 title: Adobe Experience Platform End-to-end voorbeeldworkflow
 description: Leer op hoog niveau de standaard end-to-end workflow voor Adobe Experience Platform.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1831'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Wanneer het uploaden van gegevens aan een nieuwe dataset voor het eerst, of wann
 
 ## Uw gegevens evalueren
 
-Nadat de gegenereerde profielen zijn gegenereerd op basis van de gegevens die u hebt ingevoerd, kunt u de gegevens evalueren met behulp van segmentatie. De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van individuen van uw profielopslag worden gedeeld, om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. Voor meer informatie over segmentatie leest u de [overzicht van segmentatieservice](../segmentation/home.md).
+Nadat de gegenereerde profielen zijn gegenereerd op basis van de gegevens die u hebt ingevoerd, kunt u de gegevens evalueren met behulp van segmentatie. De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van individuen van uw opslag van het Profiel worden gedeeld, om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. Voor meer informatie over segmentatie leest u de [overzicht van segmentatieservice](../segmentation/home.md).
 
 ### Een segmentdefinitie maken
 

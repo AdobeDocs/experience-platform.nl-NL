@@ -3,7 +3,7 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '4120'
 ht-degree: 0%
@@ -70,7 +70,7 @@ Naast elk publiek bevindt zich een ellipspictogram. Als u deze optie selecteert,
 
 ![De lijst met snelle acties wordt weergegeven voor gebruikers met de oorsprong van [!UICONTROL Audience composition].](../images/ui/overview/browse-audience-composition-details.png)
 
-| Actie | Oorsprong | Beschrijving |
+| Handeling | Oorsprong | Beschrijving |
 | ------ | ------- | ----------- |
 | [!UICONTROL Edit] | Segmenteringsservice | Opent de Bouwer van het Segment om uw publiek uit te geven. Houd er rekening mee dat als uw publiek via de API is gemaakt **niet** kan het uitgeven gebruikend de Bouwer van het Segment. Voor meer informatie over het gebruik van de Segment Builder leest u de [Handleiding voor de gebruikersinterface van Segment Builder](./segment-builder.md). |
 | [!UICONTROL Open composition] | Samenstelling publiek | Opent de samenstelling van het Publiek om uw publiek te zien. Lees voor meer informatie over de samenstelling van het publiek de [gebruikerscompositie-gebruikersgids](./audience-composition.md). |
@@ -294,13 +294,13 @@ Hieronder ziet u een voorbeeld van profielen die in aanmerking komen voor het se
 
 De manier waarop gegevensbemonstering wordt geactiveerd, is afhankelijk van de innamemethode.
 
-Voor batch-opname wordt de profielopslag automatisch elke 15 minuten gescand om te zien of een nieuwe batch is opgenomen sinds de laatste samplingtaak is uitgevoerd. Als dat het geval is, wordt de profielopslag gescand om te zien of is er minstens een 5% verandering in het aantal verslagen. Als aan deze voorwaarden wordt voldaan, wordt een nieuwe steekproefbaan teweeggebracht.
+Voor batch-opname wordt de Profile Store automatisch elke 15 minuten gescand om te zien of een nieuwe batch is opgenomen sinds de laatste samplingtaak is uitgevoerd. Als dat het geval is, wordt de opslag van het Profiel gescand om te zien of is er minstens een 5% verandering in het aantal verslagen geweest. Als aan deze voorwaarden wordt voldaan, wordt een nieuwe steekproefbaan teweeggebracht.
 
-Voor het stromen opname, wordt de profielopslag automatisch gescand elk uur om te zien of is er minstens een 5% verandering in het aantal verslagen geweest. Als aan deze voorwaarde wordt voldaan, wordt een nieuwe steekproefbaan teweeggebracht.
+Voor het stromen opname, wordt de opslag van het Profiel automatisch gescand elk uur om te zien of is er minstens een 5% verandering in het aantal verslagen geweest. Als aan deze voorwaarde wordt voldaan, wordt een nieuwe steekproefbaan teweeggebracht.
 
 De voorbeeldgrootte van de scan is afhankelijk van het totale aantal entiteiten in de profielopslag. Deze steekproefgrootte wordt vertegenwoordigd in de volgende lijst:
 
-| Entiteiten in profielopslag | Voorbeeldformaat |
+| Entiteiten in de profielopslag | Voorbeeldformaat |
 | ------------------------- | ----------- |
 | Minder dan 1 miljoen | Volledige gegevensset |
 | 1 tot 20 miljoen | 1 miljoen |
@@ -413,7 +413,7 @@ Standaard wordt in deze weergave informatie weergegeven over het publiek, zoals 
 
 Naast elk publiek bevindt zich een ellipspictogram. Als u deze optie selecteert, wordt een lijst weergegeven met beschikbare snelle acties voor de doelgroep.
 
-| Actie | Beschrijving |
+| Handeling | Beschrijving |
 | ------ | ----------- |
 | Dupliceren | Kopieert het geselecteerde publiek. |
 | Toegang beheren | Beheert de toegangslabels die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [beheren, labels](../../access-control/abac/ui/labels.md). |

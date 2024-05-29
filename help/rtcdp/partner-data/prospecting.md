@@ -1,12 +1,12 @@
 ---
 title: Nieuwe klanten aantrekken en aanschaffen zonder afhankelijk te zijn van cookies van derden
-description: Leer hoe u nieuwe klanten kunt aantrekken en aanwerven via het zoeken naar gebruiksgevallen, zonder te vertrouwen op cookies van derden.
+description: Leer hoe u nieuwe klanten kunt aantrekken en aanschaffen via het zoeken naar gebruiksgevallen, zonder te vertrouwen op cookies van derden.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2027'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -110,7 +110,7 @@ De **[!UICONTROL XDM Individual Prospect Profile]** De klasse wordt vooraf gecon
 
 ![Vooraf geconfigureerde velden voor de XDM-klasse Individual Prospect Profile.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
-Daarna, moet u de partnerID identiteit selecteren die u vroeger als primaire identiteit voor het schema creeerde. Profielrecords moeten een primaire id bevatten. Deze stap wordt vereist om ervoor te zorgen dat de perspectiefgegevens in de profielopslag kunnen worden geladen en voor segmentatie en activering beschikbaar worden gesteld.
+Daarna, moet u de partnerID identiteit selecteren die u vroeger als primaire identiteit voor het schema creeerde. Profielrecords moeten een primaire id bevatten. Deze stap wordt vereist om ervoor te zorgen dat de perspectiefgegevens in de opslag van het Profiel kunnen worden geladen en voor segmentatie en activering ter beschikking worden gesteld.
 
 >[!AVAILABILITY]
 >
@@ -156,7 +156,7 @@ Om sommige steekproefgegevens te laden en perspectiefprofielen te bevolken, cree
 2. Gegevensset maken van schema
 3. Selecteer het schema dat u in een vorige stap hebt gemaakt
 4. Geef uw dataset een naam en naar keuze een beschrijving.
-5. Selecteer **[!UICONTROL Finish]**.
+5. Selecteren **[!UICONTROL Finish]**.
 
 ![Een opname van de stappen om een dataset voor perspectiefprofielen tot stand te brengen.](/help/rtcdp/assets/partner-data/prospecting/create-dataset-for-prospect-profiles.gif)
 

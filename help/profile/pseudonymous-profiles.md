@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Vervaldatum van gegevens van pseudoniem profiel
 description: Dit document biedt algemene richtlijnen voor het configureren van gegevensvervaldatum voor Pseudoniem-profielen in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 63ea5f112a304259cbf2aee1cc8e4ae01f002a17
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1004'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Verlopen gegevens van pseudoniem-profielen
 
-In Adobe Experience Platform kunt u vervaltijden voor Pseudoniem-profielen configureren, zodat u automatisch gegevens kunt verwijderen uit de profielopslag die niet meer geldig of nuttig zijn voor uw gebruiksgevallen.
+In Adobe Experience Platform kunt u vervaltijden voor Pseudoniem-profielen configureren, zodat u automatisch gegevens uit het profielarchief kunt verwijderen die niet meer geldig of nuttig zijn voor uw gebruiksgevallen.
 
 ## Pseudoniem profiel {#pseudonymous-profile}
 
@@ -40,7 +40,7 @@ In de volgende sectie worden vaak gestelde vragen over de vervaldatum van gegeve
 
 Vervaldatum van Pseudoniem Profielgegevens en Vervaldatum van ervaringsgegevens zijn complementaire functies.
 
-#### Granulariteit
+#### Korreligheid
 
 De vervaldatum van gegevens van het Pseudoniem Profiel werkt op een **sandbox** niveau. Als gevolg hiervan is het verlopen van de gegevens van invloed op alle profielen in de sandbox.
 
@@ -85,4 +85,4 @@ In een typisch geval kunt u de gegevensvervaldatum van de Experience-gebeurtenis
 ### Hoe wisselt de vervaldatum van Pseudoniem-profielgegevens met de instructies voor de identiteitsdienstgegevens?
 
 - De identiteitsdienst [&quot;first-in, first-out&quot;-verwijderingssysteem](../identity-service/guardrails.md) ECID&#39;s uit de identiteitsgrafiek kunnen verwijderen. Deze zijn opgeslagen in Identity Service.
-- Als dit verwijderingsgedrag ertoe leidt dat een ECID-profiel wordt opgeslagen in het Real-Time Klantprofiel (Profielarchief), verwijdert de vervaldatum van de Pseudoniem-profielgegevens dit profiel uit de profielopslag.
+- Als dit verwijderingsgedrag ertoe leidt dat een ECID-profiel wordt opgeslagen in het Real-Time Klantprofiel (Profielarchief), verwijdert de vervaldatum van de Pseudoniem-profielgegevens dit profiel uit het profielarchief.

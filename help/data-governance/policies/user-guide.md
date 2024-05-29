@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Beleid voor gegevensgebruik beheren in de gebruikersinterface
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleidsregels voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1704'
 ht-degree: 0%
 
 ---
@@ -151,7 +151,7 @@ Wanneer het selecteren van de toestemmingsattributen, kies de waarden voor de at
 
 ![](../images/policies/select-schema-field.png)
 
-Nadat u minstens één toestemmingsattribuut hebt geselecteerd, **[!UICONTROL Policy properties]** worden bijgewerkt om het geschatte aantal profielen weer te geven dat in het kader van dit beleid is toegestaan, inclusief het percentage van de totale profielopslag. Deze schatting wordt automatisch bijgewerkt wanneer u de beleidsconfiguratie aanpast.
+Nadat u minstens één toestemmingsattribuut hebt geselecteerd, **[!UICONTROL Policy properties]** worden bijgewerkt om het geschatte aantal profielen weer te geven dat onder dit beleid is toegestaan, inclusief het percentage van de totale profielopslag. Deze schatting wordt automatisch bijgewerkt wanneer u de beleidsconfiguratie aanpast.
 
 ![](../images/policies/audience-preview.png)
 

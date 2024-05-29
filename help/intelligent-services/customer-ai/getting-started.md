@@ -5,9 +5,9 @@ feature: Customer AI
 title: Aan de slag met Customer AI
 description: Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ De gidsen voor AI van de Klant vereisen een werkend inzicht in de diverse dienst
 - [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Dit document verstrekt een inleiding aan de schema&#39;s van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en de beste praktijken voor het samenstellen van schema&#39;s die in moeten worden gebruikt [!DNL Adobe Experience Platform].
 - [Bouwschema&#39;s](../../xdm/tutorials/create-schema-ui.md): Deze zelfstudie behandelt de stappen voor het maken van een schema met behulp van de Schema-editor in het Experience Platform.
 - [Overzicht van het realtime klantprofiel](../../rtcdp/overview.md): Gebaseerd op [!DNL Adobe Experience Platform]Adobe Real-time Customer Data Platform (Real-Time CDP) helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren met intelligente beslissingen gedurende de hele reis van de klant. Real-Time CDP combineert meerdere bedrijfsgegevensbronnen om uniforme profielen in real-time te maken die kunnen worden gebruikt om een-op-een gepersonaliseerde klantenervaring op alle kanalen en apparaten te bieden.
-- [Overzicht van segmentatieservice](../../segmentation/home.md): Segmentatie is het proces waarbij specifieke kenmerken of gedragingen worden gedefinieerd die worden gedeeld door een subset van profielen in uw profielarchief om een verhandelbare groep personen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan. Met behulp van verschillende segmenten kunt u zich richten op uw verschillende doelgroepen en een meer aangepaste marketingervaring bieden.
+- [Overzicht van segmentatieservice](../../segmentation/home.md): Segmentatie is het proces waarbij specifieke kenmerken of gedragingen worden gedefinieerd die worden gedeeld door een subset van profielen in uw profielarchief om een verhandelbare groep personen te onderscheiden van uw klantenbasis. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan. Met behulp van verschillende segmenten kunt u zich richten op uw verschillende doelgroepen en een meer aangepaste marketingervaring bieden.
 - [Gebruikershandleiding voor Segment Builder](../../segmentation/tutorials/create-a-segment.md): Met Platform kunt u eenvoudig segmenten maken en openen en kunt u verschillende bouwstenen gebruiken om uw segmenten verder te karakteriseren.
 
 ## AI-scores van klanten downloaden

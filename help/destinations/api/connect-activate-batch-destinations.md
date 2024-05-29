@@ -5,7 +5,7 @@ title: Verbinden met batchbestemmingen en gegevens activeren met de Flow Service
 description: Stapsgewijze instructies voor het gebruik van de Flow Service API voor het maken van een batch-cloudopslag of e-mailmarketingbestemming in het Experience Platform en het activeren van gegevens
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3396'
 ht-degree: 0%
@@ -173,9 +173,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `name` | Geef een naam op voor de basisverbinding met het Experience Platform [!DNL Profile Store]. |
+| `name` | Geef een naam op voor de basisverbinding met het Experience Platform [!DNL Profile store]. |
 | `description` | U kunt desgewenst een beschrijving voor de basisverbinding opgeven. |
-| `connectionSpec.id` | Gebruik de verbindingsspecificatie-id voor de [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+| `connectionSpec.id` | Gebruik de verbindingsspecificatie-id voor de [Opslag van Experience Platform-profiel](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 
 {style="table-layout:auto"}
 
@@ -207,7 +207,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Profile Store",
+            "name": "Connecting to Profile store",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -224,9 +224,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `name` | Geef een naam op voor de bronverbinding met het Experience Platform [!DNL Profile Store]. |
+| `name` | Geef een naam op voor de bronverbinding met het Experience Platform [!DNL Profile store]. |
 | `description` | U kunt desgewenst een beschrijving voor de bronverbinding opgeven. |
-| `connectionSpec.id` | Gebruik de verbindingsspecificatie-id voor de [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+| `connectionSpec.id` | Gebruik de verbindingsspecificatie-id voor de [Opslag van Experience Platform-profiel](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 | `baseConnectionId` | Gebruik de basisverbindings-id die u in de vorige stap hebt verkregen. |
 | `data.format` | `CSV` is momenteel de enige ondersteunde indeling voor het exporteren van bestanden. |
 
@@ -234,7 +234,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de unieke id (`id`) voor de nieuwe bronverbinding met [!DNL Profile Store]. Dit bevestigt dat u verbinding hebt gemaakt met uw [!DNL Experience Platform] gegevens. Sla deze waarde op zoals deze in een latere stap wordt vereist.
+Een geslaagde reactie retourneert de unieke id (`id`) voor de nieuwe bronverbinding met [!DNL Profile store]. Dit bevestigt dat u verbinding hebt gemaakt met uw [!DNL Experience Platform] gegevens. Sla deze waarde op zoals deze in een latere stap wordt vereist.
 
 ```json
 {

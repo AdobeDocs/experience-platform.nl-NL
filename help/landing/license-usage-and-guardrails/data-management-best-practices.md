@@ -1,11 +1,11 @@
 ---
 title: Aanbevolen werkwijzen voor gegevensbeheerlicenties
-description: Meer informatie over best practices en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
+description: Meer informatie over de beste praktijken en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2237'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -139,7 +139,7 @@ Er zijn een aantal rapporten beschikbaar om u te helpen de samenstelling van de 
 
 #### Verlopen van gegevens van pseudoniem profiel {#pseudonymous-profile-expirations}
 
-Op deze manier kunt u automatisch schijnbare profielen uit het profielarchief verwijderen. Lees voor meer informatie over deze functie de [Overzicht van de vervaldatum van Pseudoniem-profielgegevens](../../profile/pseudonymous-profiles.md).
+Met deze functie kunt u automatisch schijnbare profielen uit het profielarchief verwijderen. Lees voor meer informatie over deze functie de [Overzicht van de vervaldatum van Pseudoniem-profielgegevens](../../profile/pseudonymous-profiles.md).
 
 #### Verlopen van gebeurtenissen beleven {#event-expirations}
 

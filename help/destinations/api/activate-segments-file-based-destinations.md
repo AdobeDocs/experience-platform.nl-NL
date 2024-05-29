@@ -4,7 +4,7 @@ title: Activeer publiek aan op dossier-gebaseerde bestemmingen door de Dienst AP
 description: Leer hoe u de Flow Service API gebruikt om bestanden met gekwalificeerde profielen te exporteren naar cloudopslagbestemmingen.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '4393'
 ht-degree: 0%
@@ -326,7 +326,7 @@ Voer de onderstaande stappen uit om een doelpubliek voor het exporteren van gege
 
 ![Stappen om het publiek te activeren en de huidige stap die de gebruiker heeft ingeschakeld, te markeren](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-Nadat u hebt bepaald naar welk doel u het publiek exporteert, moet u een bronverbinding maken. De [bronverbinding](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) vertegenwoordigt de verbinding met het interne [Experience Platform Profile Store](/help/profile/home.md#profile-data-store).
+Nadat u hebt bepaald naar welk doel u het publiek exporteert, moet u een bronverbinding maken. De [bronverbinding](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) vertegenwoordigt de verbinding met het interne [Opslag van Experience Platform-profiel](/help/profile/home.md#profile-data-store).
 
 >[!BEGINSHADEBOX]
 
@@ -344,7 +344,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-   "name":"Connect to Profile Store",
+   "name":"Connect to Profile store",
    "description":"Optional",
    "connectionSpec":{
       "id":"8a9c3494-9708-43d7-ae3f-cda01e5030e1", // this connection spec ID is always the same for Source Connections

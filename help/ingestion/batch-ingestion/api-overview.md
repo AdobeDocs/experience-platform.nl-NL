@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor de API voor batchverwerking
 description: Dit document bevat een uitgebreide handleiding voor ontwikkelaars die werken met batch-opname-API's voor Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '2411'
+source-wordcount: '2383'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de nieuwe batch. |
-| `{DATASET_ID}` | De id van de gegevensset waarnaar wordt verwezen. |
+| `{DATASET_ID}` | The ID of the referenced dataset. |
 
 ### Bestanden uploaden
 
@@ -227,12 +227,12 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de nieuwe batch. |
-| `{DATASET_ID}` | De id van de gegevensset waarnaar wordt verwezen. |
+| `{DATASET_ID}` | The ID of the referenced dataset. |
 | `{USER_ID}` | De id van de gebruiker die de batch heeft gemaakt. |
 
 ### Bestanden uploaden
 
-Nu u een batch hebt gemaakt, kunt u de opdracht `batchId` van tevoren om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
+Nu u een batch hebt gemaakt, kunt u de opdracht `batchId` van voor naar het uploaden van bestanden naar de batch. U kunt meerdere bestanden uploaden naar de batch.
 
 **API-indeling**
 
@@ -284,7 +284,7 @@ POST /batches/{BATCH_ID}?action=complete
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{BATCH_ID}` | De id van de batch die u wilt signaleren, is klaar voor voltooiing. |
+| `{BATCH_ID}` | De id van de batch die u wilt signaleren, is gereed voor voltooiing. |
 
 **Verzoek**
 
@@ -368,7 +368,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de nieuwe batch. |
-| `{DATASET_ID}` | De id van de gegevensset waarnaar wordt verwezen. |
+| `{DATASET_ID}` | The ID of the referenced dataset. |
 | `{USER_ID}` | De id van de gebruiker die de batch heeft gemaakt. |
 
 ### Groot bestand initialiseren
@@ -384,7 +384,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de nieuwe batch. |
-| `{DATASET_ID}` | De id van de gegevensset waarnaar wordt verwezen. |
+| `{DATASET_ID}` | The ID of the referenced dataset. |
 | `{FILE_NAME}` | De naam van het bestand dat wordt geïnitialiseerd. |
 
 **Verzoek**
@@ -450,7 +450,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Volledig groot bestand
 
-Nu u een batch hebt gemaakt, kunt u de opdracht `batchId` van tevoren om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
+Nu u een batch hebt gemaakt, kunt u de opdracht `batchId` van voor naar het uploaden van bestanden naar de batch. U kunt meerdere bestanden uploaden naar de batch.
 
 **API-indeling**
 
@@ -612,12 +612,12 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de nieuwe batch. |
-| `{DATASET_ID}` | De id van de gegevensset waarnaar wordt verwezen. |
+| `{DATASET_ID}` | The ID of the referenced dataset. |
 | `{USER_ID}` | De id van de gebruiker die de batch heeft gemaakt. |
 
 ### Bestanden uploaden
 
-Nu u een batch hebt gemaakt, kunt u de opdracht `batchId` van tevoren om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
+Nu u een batch hebt gemaakt, kunt u de opdracht `batchId` van voor naar het uploaden van bestanden naar de batch. U kunt meerdere bestanden uploaden naar de batch.
 
 >[!NOTE]
 >
@@ -750,7 +750,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Een batch repareren
 
-Soms kan het nodig zijn gegevens bij te werken in de profielopslag van uw organisatie. U moet bijvoorbeeld records corrigeren of een kenmerkwaarde wijzigen. Adobe Experience Platform ondersteunt de update of patch van Profile Store-gegevens via een upsert-actie of &#39;patching a batch&#39;.
+Soms kan het nodig zijn gegevens bij te werken in het profielarchief van uw organisatie. U moet bijvoorbeeld records corrigeren of een kenmerkwaarde wijzigen. Adobe Experience Platform ondersteunt de update of patch van de profielopslaggegevens via een upsert action of &quot;patching a batch&quot;.
 
 >[!NOTE]
 >
@@ -758,8 +758,8 @@ Soms kan het nodig zijn gegevens bij te werken in de profielopslag van uw organi
 
 Het volgende is vereist om een batch te kunnen repareren:
 
-- **Een dataset die voor de updates van het Profiel en van attributen wordt toegelaten.** Dit wordt gedaan door datasetmarkeringen en vereist een specifieke `isUpsert:true` -tag wordt toegevoegd aan de `unifiedProfile` array. Voor detailstappen die tonen hoe te om een dataset tot stand te brengen of een bestaande dataset voor upsert te vormen, volg het leerprogramma voor [het toelaten van een dataset voor de updates van het Profiel](../../catalog/datasets/enable-upsert.md).
-- **Een Parket-bestand met de velden die moeten worden gerepareerd en identiteitsvelden voor het profiel.** De gegevensindeling voor het patchen van een batch is vergelijkbaar met het normale inslikproces voor batches. De vereiste invoer is een Parquet-bestand. Naast de velden die moeten worden bijgewerkt, moeten de geüploade gegevens de identiteitsvelden bevatten, zodat ze overeenkomen met de gegevens in het Profile Store.
+- **Een dataset die voor de updates van het Profiel en van attributen wordt toegelaten.** Dit wordt gedaan door datasetmarkeringen en vereist een specifieke `isUpsert:true` -tag wordt toegevoegd aan de `unifiedProfile` array. Voor detailstappen die tonen hoe te om een dataset te creëren of een bestaande dataset voor upsert te vormen, volg het leerprogramma voor [het toelaten van een dataset voor de updates van het Profiel](../../catalog/datasets/enable-upsert.md).
+- **Een Parket-bestand met de velden die moeten worden gerepareerd en identiteitsvelden voor het profiel.** De gegevensindeling voor het patchen van een batch is vergelijkbaar met het normale inslikproces voor batches. De vereiste invoer is een Parquet-bestand. Naast de velden die moeten worden bijgewerkt, moeten de geüploade gegevens de identiteitsvelden bevatten om overeen te komen met de gegevens in het Profile Store.
 
 Als u een gegevensset hebt die is ingeschakeld voor Profiel en Bijvoegen, en een Parquet-bestand dat de velden bevat die u wilt repareren en de benodigde identiteitsvelden, kunt u de stappen volgen voor [Parket-bestanden invoegen](#ingest-parquet-files) om de pleister te voltooien door middel van batch-inname.
 
@@ -837,13 +837,13 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de nieuwe batch. |
-| `{DATASET_ID}` | De id van de gegevensset waarnaar wordt verwezen. |
+| `{DATASET_ID}` | The ID of the referenced dataset. |
 | `{USER_ID}` | De id van de gebruiker die de batch heeft gemaakt. |
 
 
 ### Bestanden uploaden
 
-Nu u een batch hebt gemaakt, kunt u de opdracht `batchId` van tevoren om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
+Nu u een batch hebt gemaakt, kunt u de opdracht `batchId` van voor naar het uploaden van bestanden naar de batch. U kunt meerdere bestanden uploaden naar de batch.
 
 **API-indeling**
 
@@ -913,7 +913,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Aanhangsel
+## Bijlage
 
 De volgende sectie bevat aanvullende informatie voor het innemen van gegevens in Experience Platforms door middel van batch-inname.
 
@@ -921,7 +921,7 @@ De volgende sectie bevat aanvullende informatie voor het innemen van gegevens in
 
 Om een gegevensbestand in te voeren [!DNL Experience Platform]moet de hiërarchische structuur van het bestand voldoen aan de [Experience Data Model (XDM)](../../xdm/home.md) schema verbonden aan de dataset die wordt geupload aan.
 
-Informatie over hoe u een CSV-bestand kunt toewijzen om te voldoen aan een XDM-schema vindt u in het dialoogvenster [voorbeeldtransformaties](../../etl/transformations.md) samen met een voorbeeld van een JSON-gegevensbestand met de juiste indeling. Hier vindt u voorbeeldbestanden in het document:
+Informatie over het toewijzen van een CSV-bestand aan een XDM-schema vindt u in het dialoogvenster [voorbeeldtransformaties](../../etl/transformations.md) samen met een voorbeeld van een JSON-gegevensbestand met de juiste indeling. Hier vindt u voorbeeldbestanden in het document:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)

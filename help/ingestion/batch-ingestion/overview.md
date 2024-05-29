@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van de API voor batchverwerking
 description: Met de Adobe Experience Platform Batch Ingestie-API kunt u gegevens als batchbestanden in Platform opnemen. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een dossier van het Pakket), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 6cd4bff07d042401d4ebc90d6fc2e70a1f8a7cb0
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 0%
@@ -146,7 +146,7 @@ U kunt bestanden uploaden met de API voor kleine bestanden uploaden. Als uw best
 
 >[!NOTE]
 >
->De inname van de partij kan worden gebruikt om gegevens in de Opslag van het Profiel stapsgewijs bij te werken. Zie de sectie over [een batch bijwerken](#patch-a-batch) in de [handleiding voor het ontwikkelen van batch-inhoud](api-overview.md).
+>De opname van de partij kan worden gebruikt om gegevens in de opslag van het Profiel stapsgewijs bij te werken. Zie de sectie over [een batch bijwerken](#patch-a-batch) in de [handleiding voor het ontwikkelen van batch-inhoud](api-overview.md).
 
 >[!INFO]
 >

@@ -3,7 +3,7 @@ title: Evolueer eenmalig klantenwaarde aan levenwaarde
 description: Leer hoe u persoonlijke campagnes kunt maken om de beste complementaire producten of services te bieden op basis van de kenmerken, het gedrag en eerdere aankopen van een specifieke klant.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3154'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Overweeg deze klanten die uw eigenschappen bezoeken en sporadisch de producten o
 
 Rekening houdend met het feit dat u intern een bedrijfsdoel en een doelstelling hebt bepaald om merkloyaliteit te verhogen. Dit kan in het uitvoeren van een gebruiksgeval vertalen om klantenovereenkomst en loyaliteit te drijven.
 
-Om dit te bereiken, bestaat de vereiste technologie uit de twee Experience Platform apps [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=nl) en [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=nl). Hieronder ziet u verschillende functionaliteit- en UI-elementen van de twee apps die u gebruikt bij de implementatie van het gebruiksscenario.
+Om dit te bereiken, bestaat de vereiste technologie uit de twee Experience Platform apps [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html) en [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=nl). Hieronder ziet u verschillende functionaliteit- en UI-elementen van de twee apps die u gebruikt bij de implementatie van het gebruiksscenario.
 
 >[!TIP]
 >
@@ -43,7 +43,7 @@ Om dit te bereiken, bestaat de vereiste technologie uit de twee Experience Platf
    * [Schema&#39;s](/help/xdm/home.md)
    * [Profielen](/help/profile/home.md)
    * [Gegevenssets](/help/catalog/datasets/overview.md)
-   * [Doelgroepen](/help/segmentation/home.md)
+   * [Soorten publiek](/help/segmentation/home.md)
    * [Doelen](/help/destinations/home.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): De ritten van het ontwerp, opstellingstrekkers, en creëren het juiste overseinen om uw bezoekers te richten.
    * [Trigger voor gebeurtenis of publiek](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
@@ -296,7 +296,7 @@ Er zijn geen [marketingbeleid](/help/data-governance/policies/overview.md) verei
 
 ### Soorten publiek maken {#create-audiences}
 
-Voor dit gebruiksgeval moet u twee soorten publiek maken om specifieke kenmerken of gedragingen te definiëren die worden gedeeld door een subset van profielen in het profielarchief, zodat u een verhandelbare groep personen kunt onderscheiden. In Adobe Experience Platform kunnen soorten publiek op meerdere manieren worden gemaakt:
+Voor dit gebruiksgeval moet u twee soorten publiek maken om specifieke kenmerken of gedragingen te definiëren die worden gedeeld door een subset van profielen in het archief Profiel om een verhandelbare groep personen te onderscheiden. In Adobe Experience Platform kunnen soorten publiek op meerdere manieren worden gemaakt:
 
 * Voor informatie over hoe u een publiek kunt maken, leest u de [UI-gids voor de service Publiek](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 * Voor informatie over de samenstelling [publiek](/help/segmentation/home.md), lees de [Handleiding voor compositie van publiek](/help/segmentation/ui/audience-composition.md).
@@ -425,9 +425,9 @@ Gebruik de voorgestelde gebeurtenissen, gebieden, en acties hieronder in uw beve
 * Voorwaarden
    * Selecteer Doelkanaal (u kunt een of meerdere kanalen selecteren voor een groter bereik).
       * Bevestiging van bestellingen wordt beschouwd als dienstbaar in de natuur, dus controle van de toestemming is meestal niet nodig.
-      * Email
+      * E-mail
       * Push
-      * Sms
+      * SMS
 
    * Aanpassing kanaalinhoud
       * Hiermee geeft u informatie over de volgordedetails weer en kunt u een lijst met producten weergeven met een tabelindeling.
