@@ -1,15 +1,15 @@
 ---
 solution: Data Collection
 audience: user
-user-guide-title: Adobe Experience Platform Web SDK Help
-breadcrumb-title: Handleiding voor Web SDK
-user-guide-description: Interactie met Experience Cloud-services via het Edge-netwerk.
+user-guide-title: Help bij Adobe Experience Platform Web SDK
+breadcrumb-title: Web SDK Guide
+user-guide-description: Interactie met de diensten van het Experience Cloud door het netwerk van de Rand.
 feature: Web SDK
 role: Developer
-source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
+source-git-commit: ec801c550740c4cba3481a961599f548518bb032
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 19%
+source-wordcount: '226'
+ht-degree: 9%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 19%
       * [edgeConfigId](commands/configure/edgeconfigid.md)
       * [edgeDomain](commands/configure/edgedomain.md)
       * [idMigrationEnabled](commands/configure/idmigrationenabled.md)
+      * [streamingMedia](commands/configure/streamingmedia.md)
       * [onBeforeEventSend](commands/configure/onbeforeeventsend.md)
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
@@ -52,12 +53,15 @@ ht-degree: 19%
    * [appendIdentityToUrl](commands/appendidentitytourl.md)
    * [applyProposities](commands/applypropositions.md)
    * [applyResponse](commands/applyresponse.md)
+   * [createMediaSession](commands/createmediasession.md)
    * [getIdentity](commands/getidentity.md)
    * [getLibraryInfo](commands/getlibraryinfo.md)
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
+   * [sendMediaEvent](commands/sendmediaevent.md)
    * [Gegevensstroomoverschrijvingen configureren](commands/datastream-overrides.md)
    * [Opdrachtreacties](commands/command-responses.md)
+   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
 
 * Identiteit {#identity}
    * [Overzicht](identity/overview.md)
@@ -93,7 +97,7 @@ ht-degree: 19%
       * [Integreren met tags](consent/iab-tcf/with-tags.md)
       * [Integreren zonder tags](consent/iab-tcf/without-tags.md)
 
-* Gebruiksscenario’s {#use-cases}
+* Gebruik hoofdletters {#use-cases}
    * [Overzicht](use-cases/overview.md)
    * [Gegevens naar Adobe Analytics verzenden met de Web SDK](use-cases/adobe-analytics.md)
    * [Client-tips voor gebruikersagent](use-cases/client-hints.md)

@@ -2,16 +2,16 @@
 title: De web SDK-tagextensie configureren
 description: Leer hoe te om de de markeringsuitbreiding van SDK van het Web van het Experience Platform in de UI van Markeringen te vormen.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1665'
 ht-degree: 0%
 
 ---
 
 # De webSDK-tagextensie configureren
 
-De [!DNL Web SDK] de markeringsuitbreiding verzendt gegevens naar Adobe Experience Cloud van Web-eigenschappen door het Netwerk van de Rand van het Experience Platform.
+De [!DNL Web SDK] de markeringsuitbreiding verzendt gegevens naar Adobe Experience Cloud van Web-eigenschappen door de Edge Network van het Experience Platform.
 
 Met de extensie kunt u gegevens streamen naar Platform, identiteiten synchroniseren, de toestemmingssignalen van de klant verwerken en automatisch contextgegevens verzamelen.
 
@@ -23,7 +23,7 @@ De de markeringsuitbreiding van SDK van het Web moet een bezit worden geïnstall
 
 Nadat u een eigenschap hebt gemaakt, opent u de eigenschap en selecteert u de **[!UICONTROL Extensions]** op de linkerzijbalk.
 
-Selecteer het tabblad **[!UICONTROL Catalog]**. Zoek in de lijst met beschikbare extensies naar de [!DNL Web SDK] en selecteert u **[!UICONTROL Install]**.
+Selecteer de **[!UICONTROL Catalog]** tab. Zoek in de lijst met beschikbare extensies naar de [!DNL Web SDK] en selecteert u **[!UICONTROL Install]**.
 
 ![Afbeelding die de interface Tags weergeeft terwijl de Web SDK-extensie is geselecteerd](assets/web-sdk-install.png)
 
@@ -47,7 +47,7 @@ De configuratieopties boven aan de pagina vertellen Adobe Experience Platform wa
 
 Deze sectie staat u toe om de gegevensstromen te selecteren die voor elk van de drie beschikbare milieu&#39;s (productie, het opvoeren, en ontwikkeling) zouden moeten worden gebruikt.
 
-Wanneer een verzoek naar het Netwerk van de Rand wordt verzonden, wordt een gegevensstroom identiteitskaart gebruikt om de server-zijconfiguratie van verwijzingen te voorzien. U kunt de configuratie bijwerken zonder dat u codewijzigingen op uw website hoeft aan te brengen.
+Wanneer een verzoek naar de Edge Network wordt verzonden, wordt een gegevensstroom ID gebruikt om naar de server-zijconfiguratie te verwijzen. U kunt de configuratie bijwerken zonder dat u codewijzigingen op uw website hoeft aan te brengen.
 
 Zie de handleiding op [datastreams](../../../../datastreams/overview.md) leren hoe u een gegevensstroom kunt configureren.
 
@@ -113,20 +113,35 @@ Als u het voorverborgen fragment gebruikt, wordt u aangeraden het zelfde fragmen
 
 ![Afbeelding met de instellingen voor gegevensverzameling voor de extensie van de Web SDK-tag in de gebruikersinterface Codes](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Callback function]**: De callback-functie die in de extensie wordt opgegeven, wordt ook wel de [`onBeforeEventSend` function](/help/web-sdk/commands/configure/onbeforeeventsend.md) in de bibliotheek. Deze functie staat u toe om gebeurtenissen globaal te wijzigen alvorens zij naar het Netwerk van de Rand worden verzonden.
+* **[!UICONTROL Callback function]**: De callback-functie die in de extensie wordt opgegeven, wordt ook wel de [`onBeforeEventSend` function](/help/web-sdk/commands/configure/onbeforeeventsend.md) in de bibliotheek. Met deze functie kunt u gebeurtenissen globaal wijzigen voordat ze naar de Edge Network worden verzonden.
 * **[!UICONTROL Enable click data collection]**: De SDK van het Web kan verbindingsklikinformatie voor u automatisch verzamelen. Deze functie is standaard ingeschakeld, maar kan met deze optie worden uitgeschakeld. Koppelingen worden ook gemarkeerd als downloadkoppelingen als ze een van de downloadexpressies bevatten die in het dialoogvenster [!UICONTROL Download Link Qualifier] textbox. Adobe voorziet u van sommige standaardbepalende eigenschappen van de downloadverbinding. U kunt deze naar wens bewerken.
 * **[!UICONTROL Automatically collected context data]**: Door gebrek, verzamelt het Web SDK bepaalde contextgegevens betreffende apparaat, Web, milieu, en plaatcontext. Als u deze gegevens niet wilt verzamelen of alleen bepaalde categorieën gegevens wilt verzamelen, selecteert u **[!UICONTROL Specific context information]** en selecteer de gegevens die u wilt verzamelen. Zie [`context`](/help/web-sdk/commands/configure/context.md) voor meer informatie .
 
+## Instellingen voor mediaverzamelingen configureren {#media-collection}
+
+Met de functie voor het verzamelen van media kunt u gegevens verzamelen die betrekking hebben op mediasessies op uw website.
+
+De verzamelde gegevens kunnen informatie over media playbacks, pauzes, voltooiing, en andere verwante gebeurtenissen omvatten. Nadat deze gegevens zijn verzameld, kunt u deze naar Adobe Experience Platform en/of Adobe Analytics verzenden om rapporten te genereren. Deze functie biedt een uitgebreide oplossing voor het bijhouden en begrijpen van het gedrag van het mediaconsumptie op uw website.
+
+![Afbeelding die de instellingen van de mediagroep van de Web SDK-tagextensie in de gebruikersinterface Tags weergeeft](assets/media-collection.png)
+
+
+* **[!UICONTROL Channel]**: De naam van het kanaal waar de media inzameling voorkomt. Voorbeeld: `Video channel`.
+* **[!UICONTROL Player Name]**: De naam van de mediaspeler.
+* **[!UICONTROL Application Version]**: De versie van de toepassing Media Player.
+* **[!UICONTROL Main ping interval]**: Frequentie van pingelt voor hoofdinhoud, in seconden. De standaardwaarde is `10`. Waarden kunnen variëren van `10` tot `50` seconden.  Als er geen waarde is opgegeven, wordt de standaardwaarde gebruikt bij het gebruik [automatisch bijgehouden sessies](../../../../web-sdk/commands/createmediasession.md#automatic).
+* **[!UICONTROL Ad ping interval]**: Frequentie van pingelt voor advertentie-inhoud, in seconden. De standaardwaarde is `10`. Waarden kunnen variëren van `1` tot `10` seconden. Als er geen waarde is opgegeven, wordt de standaardwaarde gebruikt bij het gebruik [automatisch bijgehouden sessies](../../../../web-sdk/commands/createmediasession.md#automatic)
+
 ## Gegevensstroomoverschrijvingen configureren {#datastream-overrides}
 
-Met de gegevensstroom overschrijft kunt u aanvullende configuraties voor uw gegevensstromen definiëren. Deze configuraties worden via de SDK van het Web doorgegeven aan het Edge-netwerk.
+Met overschrijvingen van gegevensstroom kunt u aanvullende configuraties voor uw gegevensstreams definiëren. Deze configuraties worden via de SDK van het web doorgegeven aan de Edge Network.
 
 Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbrengen, zonder het creëren van een nieuwe gegevensstroom of het wijzigen van uw bestaande montages.
 
 De configuratieopheffing van gegevensstroom is een proces in twee stappen:
 
 1. Eerst moet u de configuratie van uw gegevensstroom overschrijven in het dialoogvenster [configuratiepagina gegevensstroom](/help/datastreams/configure.md).
-2. Dan, moet u de met voeten treden naar het Netwerk van de Rand of via een bevel van SDK van het Web, of door de de markeringsuitbreiding van SDK van het Web te gebruiken.
+2. Dan, moet u de met voeten treden naar de Edge Network of via een bevel van SDK van het Web, of door de de markeringsuitbreiding van SDK van het Web te gebruiken.
 
 Zie de gegevensstroom [documentatie bij overschrijvingen van configuratie](/help/datastreams/overrides.md) voor gedetailleerde instructies op hoe te om configuraties met betrekking tot gegevensstroom met voeten te treden.
 
@@ -140,6 +155,6 @@ DataStream-overschrijvingen moeten per omgeving worden geconfigureerd. De ontwik
 
 ## Geavanceerde instellingen configureren
 
-Gebruik de **[!UICONTROL Edge base path]** veld als u het basispad moet wijzigen dat wordt gebruikt voor interactie met het Edge-netwerk. Dit zou niet het bijwerken moeten vereisen, maar in het geval dat u aan bèta of alpha deelneemt, zou de Adobe u kunnen vragen om dit gebied te veranderen.
+Gebruik de **[!UICONTROL Edge base path]** veld als u het basispad moet wijzigen dat wordt gebruikt voor interactie met de Edge Network. Dit zou niet het bijwerken moeten vereisen, maar in het geval dat u aan bèta of alpha deelneemt, zou de Adobe u kunnen vragen om dit gebied te veranderen.
 
 ![Afbeelding die de geavanceerde instellingen weergeeft met de webpagina voor de tagextensie SDK.](assets/advanced-settings.png)

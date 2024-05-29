@@ -2,9 +2,9 @@
 title: Typen gegevenselementen in de Adobe Experience Platform Web SDK Extension
 description: Leer over de verschillende types van gegevenselement die door de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform worden verstrekt.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
+source-git-commit: fbca8a47c500e89d82cf636e8cb639f2bb59c2e6
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '625'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,12 @@ U kunt payload-objecten maken met de opdracht **[!UICONTROL Variable]** gegevens
 ![Afbeelding van de interface Codes waarin de opties voor gegevenselementen worden weergegeven.](assets/variable-data-element.png)
 
 Nadat u dit gegevenselement hebt gemaakt, kunt u de opdracht [Variabele bijwerken](./action-types.md#update-variable) handeling om deze te wijzigen. Indien gereed, kunt u dit gegevenselement opnemen in het dialoogvenster [Gebeurtenis Send](./action-types.md#send-event) handeling om gegevens naar een gegevensstroom te verzenden.
+
+## Media: kwaliteit van ervaring {#quality-experience}
+
+A **[!UICONTROL Quality of Experience]** data element is nuttig wanneer het verzenden van het stromen media gebeurtenissen naar Adobe Experience Platform. U kunt dit element toevoegen tijdens het maken van een mediasessie. De volgende media-gebeurtenissen bevatten bijgewerkte gegevens over de kwaliteit van de ervaring.
+
+![UI-afbeelding met het scherm Create Quality of Experience Data Element.](assets/qoe-data-element.png)
 
 ## Volgende stappen {#next-steps}
 

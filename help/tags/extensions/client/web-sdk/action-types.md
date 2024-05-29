@@ -3,9 +3,9 @@ title: Handelingstypen in de Adobe Experience Platform Web SDK Extension
 description: Leer meer over de verschillende actietypen die door de de marktextensie van SDK van het Web van Adobe Experience Platform worden verstrekt.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 377be6d97e6da9b4aaacfa23a188131bd38e66f4
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,33 @@ Het XDM-schema dat voor de editor wordt gebruikt, is het schema dat op het [!UIC
 ![](assets/update-variable-set-property.png)
 
 Er zijn sommige verschillen tussen de redacteur in de update veranderlijke actie tegenover de redacteur in het XDM objecten gegevenselement. Eerst heeft de actie van de updatevariabele een punt op wortelniveau genoemd &quot;xdm.&quot; Als u op dit item klikt, kunt u een gegevenselement opgeven dat moet worden gebruikt om het gehele object in te stellen. Ten tweede bevat de actie voor de updatevariabele selectievakjes om de gegevens van het xdm-object te wissen. Klik op een van de eigenschappen aan de linkerkant en schakel het selectievakje aan de rechterkant in om de waarde te wissen. Hierdoor wordt de huidige waarde gewist voordat waarden op de variabele worden ingesteld.
+
+## Media-gebeurtenis verzenden {#send-media-event}
+
+Hiermee verzendt u een mediagebeurtenis naar Adobe Experience Platform en/of Adobe Analytics. Deze handeling is handig wanneer u mediafouten op uw website bijhoudt. Selecteer een instantie (als u meerdere exemplaren hebt). De handeling vereist een `playerId` die een unieke id vertegenwoordigt voor een bijgehouden mediasessie. Het vereist ook een **[!UICONTROL Quality of Experience]** en `playhead` data element when starting a media session.
+
+![Platform UI-afbeelding die het scherm voor het verzenden van media-gebeurtenissen weergeeft.](assets/send-media-event.png)
+
+De **[!UICONTROL Send media event]** Het handelingstype ondersteunt de volgende eigenschappen:
+
+- **[!UICONTROL Instance]**: De Web SDK-instantie die wordt gebruikt.
+- **[!UICONTROL Media Event Type]**: Het type media-gebeurtenis dat wordt bijgehouden.
+- **[!UICONTROL Player ID]**: De unieke id van de mediasessie.
+- **[!UICONTROL Playhead]**: De huidige positie van het afspelen van media, in seconden.
+- **[!UICONTROL Media session details]**: Bij het verzenden van een media start-gebeurtenis moeten de vereiste mediasessiedetails worden opgegeven.
+- **[!UICONTROL Chapter details]**: In deze sectie kunt u de hoofdstukdetails opgeven wanneer u een hoofdstukstartmedia-gebeurtenis verzendt.
+- **[!UICONTROL Advertising details]**: Wanneer u een `AdBreakStart` moet u de vereiste advertentiegegevens opgeven.
+- **[!UICONTROL Advertising pod details]**: Details over de advertentiepod bij het verzenden van een `AdStart` gebeurtenis.
+- **[!UICONTROL Error details]**: Details over de afspeelfout die wordt bijgehouden.
+- **[!UICONTROL State Update Details]**: De toestand van de speler die wordt bijgewerkt.
+- **[!UICONTROL Custom Metadata]**: De aangepaste metagegevens over de mediagebeurtenis die wordt bijgehouden.
+- **[!UICONTROL Quality of Experience]**: De mediakwaliteit van ervaringsgegevens die worden bijgehouden.
+
+## Media Analytics-beheer ophalen {#get-media-analytics-tracker}
+
+Deze handeling wordt gebruikt om de verouderde Media Analytics API op te halen. Wanneer de handeling wordt geconfigureerd en een objectnaam wordt opgegeven, wordt de verouderde Media Analytics-API geëxporteerd naar dat vensterobject. Als er niets is opgegeven, wordt deze geëxporteerd naar `window.Media` zoals in de huidige Media JS-bibliotheek.
+
+![Platform UI-afbeelding die het actietype Get Media Analytics Tracker weergeeft.](assets/get-media-analytics-tracker.png)
 
 ## Volgende stappen {#next-steps}
 
