@@ -2,9 +2,9 @@
 title: Identiteitsgegevens in Web SDK
 description: Leer hoe u Adobe Experience Cloud-id's (ECID's) kunt ophalen en beheren met de Adobe Experience Platform Web SDK.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 6b58d72628b58b75a950892e7c16d397e3c107e2
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1480'
 ht-degree: 0%
 
 ---
@@ -19,20 +19,20 @@ Dit document biedt een overzicht van hoe u ECID&#39;s kunt beheren met de Platfo
 
 De SDK van het Web van het Platform wijst ECIDs toe en volgt door koekjes te gebruiken, met veelvoudige beschikbare methodes om te vormen hoe deze koekjes worden geproduceerd.
 
-Wanneer een nieuwe gebruiker op uw website arriveert, probeert de Adobe Experience Cloud Identity Service een apparaatidentificatiecookie voor die gebruiker in te stellen. Voor nieuwe bezoekers wordt een ECID gegenereerd en geretourneerd in de eerste reactie van het Adobe Experience Platform Edge Network. Voor herhaalde bezoekers wordt de ECID opgehaald uit de `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` koekje en toegevoegd aan de lading door het Netwerk van de Rand.
+Wanneer een nieuwe gebruiker op uw website arriveert, probeert de Adobe Experience Cloud Identity Service een apparaatidentificatiecookie voor die gebruiker in te stellen. Voor nieuwe bezoekers wordt een ECID gegenereerd en geretourneerd in de eerste reactie van de Adobe Experience Platform-Edge Network. Voor herhaalde bezoekers wordt de ECID opgehaald uit de `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie en toegevoegd aan de payload door de Edge Network.
 
 Nadat het cookie met de ECID is ingesteld, bevat elk volgend verzoek dat door de Web SDK wordt gegenereerd, een gecodeerde ECID in het dialoogvenster `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie.
 
-Wanneer het gebruiken van koekjes voor apparatenidentificatie, hebt u twee opties om met het Netwerk van de Rand in wisselwerking te staan:
+Wanneer u cookies gebruikt voor apparaatidentificatie, hebt u twee opties voor interactie met de Edge Network:
 
-1. Gegevens rechtstreeks verzenden naar het Edge Network-domein `adobedc.net`. Deze methode wordt [gegevensverzameling van derden](#third-party).
+1. Gegevens rechtstreeks naar het domein Edge Network verzenden `adobedc.net`. Deze methode wordt [gegevensverzameling van derden](#third-party).
 1. Creeer een NAAM op uw eigen domein dat richt aan `adobedc.net`. Deze methode wordt [eerste-partijgegevens verzamelen](#first-party).
 
 Zoals in de onderstaande secties wordt uitgelegd, heeft de methode voor gegevensverzameling die u kiest, een directe invloed op de levensduur van cookies in verschillende browsers.
 
 ### Gegevensverzameling van derden {#third-party}
 
-De gegevensinzameling van de derde impliceert het verzenden van gegevens rechtstreeks naar het domein van het Netwerk van de Rand `adobedc.net`.
+De gegevensinzameling van de derde impliceert het verzenden van gegevens rechtstreeks naar het domein van de Edge Network `adobedc.net`.
 
 De afgelopen jaren zijn webbrowsers steeds restrictiever geworden bij het verwerken van door derden ingestelde cookies. Sommige browsers blokkeren cookies van derden standaard. Als u cookies van derden gebruikt om sitebezoekers te identificeren, is de levensduur van deze cookies vrijwel altijd korter dan wat anders beschikbaar zou zijn in plaats daarvan met cookies van de eerste fabrikant. Soms verloopt een cookie van een andere fabrikant binnen maar liefst zeven dagen.
 
@@ -56,9 +56,36 @@ Als een eindgebruiker drie keer per week bezoekt en vervolgens zeven dagen niet 
 
 Om rekening te houden met de effecten van de bovenstaande cookie levensduur, kunt u ervoor kiezen om uw eigen apparaat-id&#39;s in te stellen en te beheren. Zie de handleiding op [apparaat-id&#39;s van eerste partij](./first-party-device-ids.md) voor meer informatie .
 
-## De ECID en het gebied voor de huidige gebruiker ophalen
+## De ECID en het gebied voor de huidige gebruiker ophalen {#retrieve-ecid}
 
-Om unieke ECID voor de huidige bezoeker terug te winnen, gebruik `getIdentity` gebruiken. Voor nieuwe bezoekers die nog geen ECID hebben, genereert deze opdracht een nieuwe ECID. `getIdentity` retourneert ook de regio-id voor de bezoeker.
+Afhankelijk van uw gebruiksgeval, zijn er twee manieren waarin u tot [!DNL ECID]:
+
+* [De [!DNL ECID] via Data Prep voor gegevensverzameling](#retrieve-ecid-data-prep): Dit is de aanbevolen methode die u moet gebruiken.
+* [De [!DNL ECID] via de `getIdentity()` command](#retrieve-ecid-getidentity): Gebruik deze methode alleen als u de opdracht [!DNL ECID] informatie op de client.
+
+### De [!DNL ECID] via Data Prep voor gegevensverzameling {#retrieve-ecid-data-prep}
+
+Gebruiken [Gegevensvoorvoegsel voor gegevensverzameling](../../datastreams/data-prep.md) om de [!DNL ECID] aan een [!DNL XDM] veld. Dit is de aanbevolen manier om [!DNL ECID].
+
+U doet dit door het bronveld in te stellen op het volgende pad:
+
+```js
+xdm.identityMap.ECID[0].id
+```
+
+Stel vervolgens het doelveld in op een XDM-pad waar het veld van het type is `string`.
+
+![](../../tags/extensions/client/web-sdk/assets/access-ecid-data-prep.png)
+
+
+### De [!DNL ECID] via de `getIdentity()` command {#retrieve-ecid-getidentity}
+
+
+>[!IMPORTANT]
+>
+>U mag de ECID alleen ophalen via de `getIdentity()` als u de opdracht [!DNL ECID] aan de clientzijde. Als u de ECID alleen aan een XDM-veld wilt toewijzen, gebruikt u [Gegevensvoorvoegsel voor gegevensverzameling](#retrieve-ecid-data-prep) in plaats daarvan.
+
+Om unieke ECID voor de huidige bezoeker terug te winnen, gebruik `getIdentity` gebruiken. Voor nieuwe bezoekers die geen [!DNL ECID] toch genereert deze opdracht een nieuwe [!DNL ECID]. `getIdentity` retourneert ook de regio-id voor de bezoeker.
 
 >[!NOTE]
 >
