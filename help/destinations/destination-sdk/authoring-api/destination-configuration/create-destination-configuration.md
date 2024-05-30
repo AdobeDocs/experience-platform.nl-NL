@@ -2,7 +2,7 @@
 description: Leer hoe te om een API vraag te structureren om een bestemmingsconfiguratie door Adobe Experience Platform Destination SDK tot stand te brengen.
 title: Een doelconfiguratie maken
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 0%
@@ -217,7 +217,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `segmentMappingConfig.mapUserInput` | Boolean | Controls whether the publiek mapping ID in the destination activation workflow is input by user. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentId` | Boolean | Bepaalt of de publiekstoewijzings-id in de workflow voor doelactivering de Experience Platform-gebruikers-id is. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolean | Bepaalt of de publiekstoewijzings-id in de workflow voor doelactivering de publieksnaam van het Experience Platform is. |
-| `segmentMappingConfig.audienceTemplateId` | Boolean | De `instanceId` van de [sjabloon voor doelmetagegevens](../../metadata-api/create-audience-template.md) gebruikt voor deze bestemming. |
+| `segmentMappingConfig.audienceTemplateId` | String | De `instanceId` van de [sjabloon voor doelmetagegevens](../../metadata-api/create-audience-template.md) gebruikt voor deze bestemming. |
 | `schemaConfig.profileFields` | Array | Wanneer u vooraf gedefinieerde `profileFields` zoals aangetoond in de configuratie hierboven, zullen de gebruikers de optie hebben om de attributen van het Experience Platform aan de vooraf bepaalde attributen op de kant van uw bestemming in kaart te brengen. |
 | `schemaConfig.profileRequired` | Boolean | Gebruiken `true` als de gebruikers profielattributen van Experience Platform aan douanekenmerken op de kant van uw bestemming zouden moeten kunnen in kaart brengen, zoals aangetoond in de voorbeeldconfiguratie hierboven. |
 | `schemaConfig.segmentRequired` | Boolean | Altijd gebruiken `segmentRequired:true`. |

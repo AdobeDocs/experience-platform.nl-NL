@@ -2,10 +2,10 @@
 description: Leer hoe te om de montages van publiekmeta-gegevens voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie van metagegevens voor publiek
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
 workflow-type: tm+mt
 source-wordcount: '399'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -57,7 +57,7 @@ Wanneer het creëren van uw configuratie van publieksmeta-gegevens, kunt u de pa
 | `mapExperiencePlatformSegmentName` | Boolean | Geeft aan of de [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) De waarde in de workflow voor doelactivering moet de publieksnaam van het Experience Platform zijn. |
 | `mapExperiencePlatformSegmentId` | Boolean | Geeft aan of de [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) De waarde in de workflow voor doelactivering moet de gebruikers-id van het Experience Platform zijn. |
 | `mapUserInput` | Boolean | Hiermee wordt gebruikersinvoer voor de [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) waarde in de workflow voor doelactivering. Indien ingesteld op `true`, `audienceTemplateId` kan niet aanwezig zijn. |
-| `audienceTemplateId` | Boolean | De `instanceId` van de [sjabloon voor doelmetagegevens](../../metadata-api/create-audience-template.md) gebruikt voor uw doel. |
+| `audienceTemplateId` | String | De `instanceId` van de [sjabloon voor doelmetagegevens](../../metadata-api/create-audience-template.md) gebruikt voor uw doel. |
 
 {style="table-layout:auto"}
 
