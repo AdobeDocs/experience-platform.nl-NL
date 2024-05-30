@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor publicati
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
+source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1223'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
    * [Activeer gegevens aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API](./api/streaming-destinations.md)
    * [Verbind met op dossier-gebaseerde e-mailmarketing bestemmingen en activeer gegevens gebruikend de Dienst API van de Stroom](./api/connect-activate-batch-destinations.md)
-   * [(Bèta) Activeer publiek naar batchbestemmingen via de API voor ad-hocactivering](./api/ad-hoc-activation-api.md)
+   * [Het publiek activeren naar batchbestemmingen via de API voor ad-hocactivering](./api/ad-hoc-activation-api.md)
    * [Doel bewerken](./api/edit-destination.md)
    * [Doelgegevens bijwerken](./api/update-destination-dataflows.md)
    * [Doelaccounts verwijderen](./api/delete-destination-account.md)
