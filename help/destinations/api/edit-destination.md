@@ -4,9 +4,9 @@ title: Doelverbindingen bewerken met de Flow Service API
 type: Tutorial
 description: Leer hoe u verschillende componenten van een doelverbinding kunt bewerken met de Flow Service API.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 2a72f6886f7a100d0a1bf963eedaed8823a7b313
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1597'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Alle middelen in Experience Platform, met inbegrip van die welke toebehoren aan 
 >
 >Als de `x-sandbox-name` header is niet opgegeven, aanvragen worden opgelost onder de `prod` sandbox.
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
+Alle verzoeken die een lading bevatten (`POST`, `PUT`, `PATCH`) vereist een extra koptekst voor mediatype:
 
 * `Content-Type: application/json`
 
@@ -177,17 +177,19 @@ Een succesvol antwoord retourneert de huidige details van uw gegevensstroom incl
 
 De componenten van een doelverbinding verschillen door bestemming. Bijvoorbeeld: [!DNL Amazon S3] doelen, kunt u het emmertje en pad bijwerken waar bestanden worden geëxporteerd. Voor [!DNL Pinterest] doelen, kunt u uw [!DNL Pinterest Advertiser ID] en voor [!DNL Google Customer Match] u kunt uw [!DNL Pinterest Account ID].
 
-Als u componenten van een doelverbinding wilt bijwerken, voert u een PATCH-verzoek uit naar de `/targetConnections/{TARGET_CONNECTION_ID}` eindpunt terwijl het verstrekken van uw identiteitskaart van de doelverbinding, versie, en de nieuwe waarden u wilt gebruiken. Herinner me, kreeg u uw identiteitskaart van de doelverbinding in de vorige stap, toen u een bestaande gegevensstroom aan uw gewenste bestemming inspecteerde.
+Als u componenten van een doelverbinding wilt bijwerken, voert u een `PATCH` verzoek aan de `/targetConnections/{TARGET_CONNECTION_ID}` eindpunt terwijl het verstrekken van uw identiteitskaart van de doelverbinding, versie, en de nieuwe waarden u wilt gebruiken. Herinner me, kreeg u uw identiteitskaart van de doelverbinding in de vorige stap, toen u een bestaande gegevensstroom aan uw gewenste bestemming inspecteerde.
 
 >[!IMPORTANT]
 >
->De `If-Match` header is required when making a PATCH request. De waarde voor deze header is de unieke versie van de doelverbinding die u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, doelverbinding, en anderen bij.
+>De `If-Match` header is vereist wanneer een `PATCH` verzoek. De waarde voor deze header is de unieke versie van de doelverbinding die u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, doelverbinding, en anderen bij.
 >
 > Als u de meest recente versie van de etag-waarde wilt ophalen, moet u een verzoek van de GET indienen bij de `/targetConnections/{TARGET_CONNECTION_ID}` eindpunt, waarbij `{TARGET_CONNECTION_ID}` Dit is de doel-verbindings-id die u wilt bijwerken.
+>
+> Zorg ervoor dat u de waarde van de optie `If-Match` dubbele aanhalingstekens, zoals in de onderstaande voorbeelden bij het maken van `PATCH` verzoeken.
 
 Hieronder staan enkele voorbeelden van het bijwerken van parameters in de specificaties van de doelverbinding voor verschillende typen doelen. Maar de algemene regel om parameters voor om het even welke bestemming bij te werken is als volgt:
 
-Haal de gegevensstroom-id op van de verbinding > verkrijg de doel-verbindings-id > PATCH de doelverbinding met bijgewerkte waarden voor de gewenste parameters.
+Download de gegevensstroom-id van de verbinding > verkrijg de doel verbindings-id > `PATCH` de doelverbinding met bijgewerkte waarden voor de gewenste parameters.
 
 >[!BEGINSHADEBOX]
 
@@ -332,19 +334,21 @@ Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkt label
 
 Bewerk de basisverbinding wanneer u de referenties van een doel wilt bijwerken. De componenten van een basisverbinding verschillen door bestemming. Bijvoorbeeld: [!DNL Amazon S3] bestemmingen, kunt u de toegangssleutel en geheime sleutel aan uw bijwerken [!DNL Amazon S3] locatie.
 
-Als u componenten van een basisverbinding wilt bijwerken, voert u een PATCH-verzoek uit aan de `/connections` eindpunt terwijl het verstrekken van uw identiteitskaart van de basisverbinding, versie, en de nieuwe waarden u wilt gebruiken.
+Als u componenten van een basisverbinding wilt bijwerken, voert u een `PATCH` verzoek aan de `/connections` eindpunt terwijl het verstrekken van uw identiteitskaart van de basisverbinding, versie, en de nieuwe waarden u wilt gebruiken.
 
 Je hebt je basis verbinding-id in een [vorige stap](#look-up-dataflow-details), wanneer u een bestaande gegevensstroom aan uw gewenste bestemming voor de parameter inspecteerde `baseConnection`.
 
 >[!IMPORTANT]
 >
->De `If-Match` header is required when making a PATCH request. De waarde voor deze header is de unieke versie van de basisverbinding die u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, basisverbinding, en anderen bij.
+>De `If-Match` header is vereist wanneer een `PATCH` verzoek. De waarde voor deze header is de unieke versie van de basisverbinding die u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, basisverbinding, en anderen bij.
 >
 > Als u de meest recente versie van de Etag-waarde wilt ophalen, dient u een GET-aanvraag uit te voeren bij de `/connections/{BASE_CONNECTION_ID}` eindpunt, waarbij `{BASE_CONNECTION_ID}` Dit is de basisverbindings-id die u wilt bijwerken.
+>
+> Zorg ervoor dat u de waarde van de optie `If-Match` dubbele aanhalingstekens, zoals in de onderstaande voorbeelden bij het maken van `PATCH` verzoeken.
 
 Hieronder staan enkele voorbeelden van het bijwerken van parameters in de specificatie van de basisverbinding voor verschillende soorten doelen. Maar de algemene regel om parameters voor om het even welke bestemming bij te werken is als volgt:
 
-Krijg dataflow identiteitskaart van de verbinding > verkrijg identiteitskaart van de basisverbinding > PATCH de basisverbinding met bijgewerkte waarden voor de gewenste parameters.
+Download de gegevensstroom-id van de verbinding > verkrijg de id van de basisverbinding > `PATCH` de basisverbinding met bijgewerkte waarden voor de gewenste parameters.
 
 >[!BEGINSHADEBOX]
 

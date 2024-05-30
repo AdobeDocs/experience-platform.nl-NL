@@ -4,9 +4,9 @@ title: Activeer publiek aan op dossier-gebaseerde bestemmingen door de Dienst AP
 description: Leer hoe u de Flow Service API gebruikt om bestanden met gekwalificeerde profielen te exporteren naar cloudopslagbestemmingen.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: df7b9bb0c5dc4348e8be7a0ea93296e24bc0fb1d
 workflow-type: tm+mt
-source-wordcount: '4393'
+source-wordcount: '4749'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Bronnen in [!DNL Experience Platform] kan worden geïsoleerd naar specifieke vir
 >
 >Voor meer informatie over sandboxen in [!DNL Experience Platform], zie de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
+Alle verzoeken die een lading bevatten (`POST`, `PUT`, `PATCH`) vereist een extra koptekst voor mediatype:
 
 * Inhoudstype: `application/json`
 
@@ -4454,7 +4454,7 @@ Zie [de details van een doelgegevensstroom ophalen](https://developer.adobe.com/
 
 >[!ENDSHADEBOX]
 
-Tot slot moet u de gegevensstroom met de informatie van de kaartreeks PATCH die u enkel creeerde.
+Tot slot moet u `PATCH` de gegevensstroom met de informatie van de toewijzingsreeks die u enkel creeerde.
 
 >[!BEGINSHADEBOX]
 
@@ -4504,11 +4504,88 @@ De reactie van de Dienst API van de Stroom keert identiteitskaart van bijgewerkt
 
 ![Stappen om het publiek te activeren en de huidige stap die de gebruiker heeft ingeschakeld, te markeren](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-Als u updates wilt uitvoeren naar uw gegevensstroom, gebruikt u de opdracht `PATCH` operation.U kunt bijvoorbeeld uw gegevensstromen bijwerken om velden als verplichte toetsen of deduplicatietoetsen te selecteren.
+Als u updates wilt uitvoeren naar uw gegevensstroom, gebruikt u de opdracht `PATCH` -bewerking. U kunt bijvoorbeeld een marketingactie toevoegen aan uw gegevensstroom. U kunt uw gegevensstromen ook bijwerken en velden selecteren als verplichte toetsen of als deduplicatietoetsen.
+
+### Een marketingactie toevoegen {#add-marketing-action}
+
+Als u een [marketingactie](/help/data-governance/api/marketing-actions.md)Zie de onderstaande voorbeelden van verzoeken en antwoorden.
+
+>[!IMPORTANT]
+>
+>De `If-Match` header is vereist wanneer een `PATCH` verzoek. De waarde voor deze kopbal is de unieke versie van dataflow u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, doelverbinding, en anderen bij.
+>
+> Als u de meest recente versie van de etag-waarde wilt ophalen, moet u een verzoek van de GET indienen bij de `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` eindpunt, waarbij `{ID}` Dit is de gegevensstroom-id die u wilt bijwerken.
+>
+> Zorg ervoor dat u de waarde van de optie `If-Match` dubbele aanhalingstekens, zoals in de onderstaande voorbeelden bij het maken van `PATCH` verzoeken.
+
+>[!BEGINSHADEBOX]
+
+**Verzoek**
+
+>[!TIP]
+>
+>Voordat u een marketingactie toevoegt aan een gegevensstroom, kunt u de bestaande core- en aangepaste marketingacties opzoeken. Weergave [hoe u een lijst met bestaande marketingacties ophaalt](/help/data-governance/api/marketing-actions.md#list).
+
++++Voeg een marketing actie aan een bestemmingsdataflow toe - Verzoek
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+   {
+      "op":"add",
+      "path":"/policy",
+      "value":{
+         "enforcementRefs":[
+            
+         ]
+      }
+   },
+   {
+      "op":"add",
+      "path":"/policy/enforcementRefs/-",
+      "value":"/dulepolicy/marketingActions/custom/6b935bc8-bb9e-451b-a327-0ffddfb91e66/constraints"
+   }
+]'
+```
+
++++
+
+
+**Antwoord**
+
+++ + Voeg een marketingactie toe - Reactie
+
+Een geslaagde reactie retourneert een antwoordcode `200` samen met de id van de bijgewerkte gegevensstroom en de bijgewerkte eTag.
+
+```json
+{
+    "id": "eb54b3b3-3949-4f12-89c8-64eafaba858f",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
 
 ### Een verplichte toets toevoegen {#add-mandatory-key}
 
-Als u een [verplichte sleutel](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes)Zie de onderstaande voorbeelden van verzoeken en antwoorden
+Als u een [verplichte sleutel](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes)Zie de onderstaande voorbeelden van verzoeken en antwoorden.
+
+>[!IMPORTANT]
+>
+>De `If-Match` header is vereist wanneer een `PATCH` verzoek. De waarde voor deze kopbal is de unieke versie van dataflow u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, doelverbinding, en anderen bij.
+>
+> Als u de meest recente versie van de etag-waarde wilt ophalen, moet u een verzoek van de GET indienen bij de `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` eindpunt, waarbij `{ID}` Dit is de gegevensstroom-id die u wilt bijwerken.
+>
+> Zorg ervoor dat u de waarde van de optie `If-Match` dubbele aanhalingstekens, zoals in de onderstaande voorbeelden bij het maken van `PATCH` verzoeken.
 
 >[!BEGINSHADEBOX]
 
@@ -4517,12 +4594,13 @@ Als u een [verplichte sleutel](/help/destinations/ui/activate-batch-profile-dest
 +++Voeg een identiteit toe als verplicht veld - Verzoek
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4540,12 +4618,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ++ + Voeg een XDM-kenmerk toe als verplicht veld - Verzoek
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4579,6 +4658,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 Als u een [deduplicatie-sleutel](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys)Zie de onderstaande voorbeelden van verzoeken en antwoorden
 
+>[!IMPORTANT]
+>
+>De `If-Match` header is vereist wanneer een `PATCH` verzoek. De waarde voor deze kopbal is de unieke versie van dataflow u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, doelverbinding, en anderen bij.
+>
+> Als u de meest recente versie van de etag-waarde wilt ophalen, moet u een verzoek van de GET indienen bij de `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` eindpunt, waarbij `{ID}` Dit is de gegevensstroom-id die u wilt bijwerken.
+>
+> Zorg ervoor dat u de waarde van de optie `If-Match` dubbele aanhalingstekens, zoals in de onderstaande voorbeelden bij het maken van `PATCH` verzoeken.
+
 >[!BEGINSHADEBOX]
 
 **Verzoek**
@@ -4586,12 +4673,13 @@ Als u een [deduplicatie-sleutel](/help/destinations/ui/activate-batch-profile-de
 +++Een id toevoegen als deduplicatietoets - Verzoek
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4612,12 +4700,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++Voeg een XDM-kenmerk toe als deduplicatietoets - Verzoek
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
