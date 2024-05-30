@@ -2,9 +2,9 @@
 title: Gegevensstromen maken en configureren
 description: Leer hoe te om uw cliënt-zijintegratie van SDK van het Web met andere producten van de Adobe en derdebestemmingen te verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 370ab0b2a575cc2b5d17f3ae2b3b0b6a6999c462
+source-git-commit: 43d97ea4d850a36d350894d70a082464a21e449d
 workflow-type: tm+mt
-source-wordcount: '2554'
+source-wordcount: '2569'
 ht-degree: 0%
 
 ---
@@ -175,7 +175,7 @@ Deze service bepaalt of en hoe gegevens naar Adobe Experience Platform worden ve
 | [!UICONTROL Event Dataset] | **(Vereist)** Selecteer de dataset van het Platform dat de gegevens van de klantengebeurtenis zullen worden gestroomd aan. Dit schema moet de [XDM ExperienceEvent, klasse](../xdm/classes/experienceevent.md). Als u aanvullende gegevenssets wilt toevoegen, selecteert u **[!UICONTROL Add Event Dataset]**. |
 | [!UICONTROL Profile Dataset] | Selecteer de dataset van het Platform dat de gegevens van de klantenattributen zullen worden verzonden naar. Dit schema moet de [Afzonderlijke XDM-profielklasse](../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Laat Offer decisioning voor de implementaties van SDK van het Web toe. Zie de handleiding op [het gebruiken van Offer decisioning met Web SDK](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md) voor meer details over de implementatie.<br><br>Raadpleeg voor meer informatie over de mogelijkheden van Offer decisioning de [Adobe Journey Optimizer-documentatie](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html). |
-| [!UICONTROL Edge Segmentation] | Inschakelen [randsegmentatie](../segmentation/ui/edge-segmentation.md) voor deze gegevensstroom. Wanneer de SDK gegevens via een voor edge-segmentatie ingeschakelde gegevensstroom verzendt, worden bijgewerkte segmentlidmaatschappen voor het profiel in kwestie teruggestuurd in de reactie.<br><br>Deze optie kan in combinatie met [!UICONTROL Personalization Destinations] for [gebruiksgevallen voor personalisatie op de volgende pagina](../destinations/ui/activate-edge-personalization-destinations.md). |
+| [!UICONTROL Edge Segmentation] | Inschakelen [randsegmentatie](../segmentation/ui/edge-segmentation.md) voor deze gegevensstroom. Wanneer de [Web SDK](../web-sdk/home.md) of [Edge Network Server-API](../server-api/overview.md) verzendt gegevens door een gegevensstroom met toegelaten randsegmentatie, om het even welke bijgewerkte publiekslidmaatschappen voor het profiel in kwestie worden teruggestuurd in de reactie.<br><br>U kunt deze optie in combinatie met **[!UICONTROL Personalization Destinations]** voor personalisatie van dezelfde pagina en van volgende pagina, gebruiks gevallen door [Edge-doelen](../destinations/ui/activate-edge-personalization-destinations.md) of [!DNL Offer Decisioning]. |
 | [!UICONTROL Personalization Destinations] | Wanneer u deze optie inschakelt nadat u het [!UICONTROL Edge Segmentation] checkbox, staat deze optie de datastream toe om met verpersoonlijkingsbestemmingen, zoals te verbinden [Aangepaste personalisatie](../destinations/catalog/personalization/custom-personalization.md).<br><br>Raadpleeg de documentatie bij bestemmingen voor specifieke stappen over [het vormen verpersoonlijkingsbestemmingen](../destinations/ui/activate-edge-personalization-destinations.md). |
 | [!UICONTROL Adobe Journey Optimizer] | Inschakelen [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) voor deze gegevensstroom. <br><br> Als u deze optie inschakelt, kan de gegevensstroom gepersonaliseerde inhoud van binnenkomende webcampagnes en op apps gebaseerde campagnes retourneren in [!DNL Adobe Journey Optimizer]. Deze optie is vereist [!UICONTROL Edge Segmentation] om actief te zijn. Indien [!UICONTROL Edge Segmentation] is uitgeschakeld, wordt deze optie grijs weergegeven. |
 
