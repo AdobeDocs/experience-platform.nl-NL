@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van streaming inscriptie
 description: Streaming opname voor Adobe Experience Platform biedt gebruikers een methode om gegevens van client- en serverapparaten in real-time naar het Experience Platform te verzenden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: c6cff4d30815d3f7bfb61d1672a5d0228a0da60d
+source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,11 @@ Zodra u zeker bent dat uw gegevens schoon zijn, kunt u uw datasets toelaten voor
 
 Voor meer informatie over het toelaten van een dataset voor [!DNL Profile] en [!DNL Identity Service], lees de [vormen een datasetgids](../../profile/tutorials/dataset-configuration.md).
 
-## Wat is de verwachte latentie voor het stromen van opname op [!DNL Platform]?
+## Wat is de verwachte latentie voor het stromen van opname op Experience Platform?
+
+>[!IMPORTANT]
+>
+>Hulplijnen voor het opnemen van streaming worden berekend op organisatieniveau en niet op sandboxniveau. Dit betekent dat uw gegevensgebruik per sandbox is gebonden aan de totale gebruiksrechten voor licenties die overeenkomen met uw volledige organisatie. Daarnaast is het gebruik van gegevens in ontwikkelingssandboxen beperkt tot 10% van uw totale profielen. Lees voor meer informatie over gebruiksrechten voor licenties de [Best practices-handleiding voor gegevensbeheer](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 | Doel | Verwachte vertraging |
 | --------- | ---------------- |

@@ -3,14 +3,18 @@ keywords: Experience Platform;problemen oplossen;instructies;richtlijnen;
 title: Guardrails voor gegevensinname
 description: Meer informatie over instructies voor gegevensinvoer in Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
+source-git-commit: cdc5bb01ef6de8134c6ad4ef6601a748571bf86f
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
 
 # Guardrails voor gegevensinname
+
+>[!IMPORTANT]
+>
+>De begeleiding voor partij en het stromen wordt ingestie berekend op het organisatieniveau en niet op het zandbakniveau. Dit betekent dat uw gegevensgebruik per sandbox is gebonden aan de totale gebruiksrechten voor licenties die overeenkomen met uw volledige organisatie. Daarnaast is het gebruik van gegevens in ontwikkelingssandboxen beperkt tot 10% van uw totale profielen. Lees voor meer informatie over gebruiksrechten voor licenties de [Best practices-handleiding voor gegevensbeheer](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 De begeleiding is drempels die begeleiding voor gegevens en systeemgebruik, prestatiesoptimalisering, en vermijding van fouten of onverwachte resultaten in Adobe Experience Platform verstrekken. De begeleiding kan naar uw gebruik of gebruik van gegevens en verwerking met betrekking tot uw vergunningsrechten verwijzen.
 
