@@ -5,9 +5,9 @@ title: Een schema maken met de Schema-editor
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met behulp van de Schema-editor in het Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
 workflow-type: tm+mt
-source-wordcount: '4454'
+source-wordcount: '4567'
 ht-degree: 0%
 
 ---
@@ -353,11 +353,36 @@ Selecteren **[!UICONTROL Enable]** om uw keuze te bevestigen. U kunt de **[!UICO
 
 ## Meer handelingen {#more}
 
-Binnen de Redacteur van het Schema kunt u snelle acties ook voeren om de structuur JSON van het schema te kopiëren of het schema te schrappen als het niet voor het Profiel van de Klant in real time of bijbehorende datasets is toegelaten. Selecteren [!UICONTROL More] boven aan de weergave om een vervolgkeuzelijst met snelle acties weer te geven.
-
-Met de functie voor JSON-structuur kopiëren kunt u zien hoe een voorbeeldlading eruit zou zien terwijl u nog steeds het schema en uw gegevenspipetten maakt. Dit is vooral handig voor situaties waarin het schema complexe structuren voor objecttoewijzingen bevat, zoals een identiteitskaart.
+In de Schema-editor kunt u ook snel handelingen uitvoeren om de JSON-structuur van het schema te kopiëren of het schema te verwijderen. Selecteren [!UICONTROL More] boven aan de weergave om een vervolgkeuzelijst met snelle acties weer te geven.
 
 ![De Schema-editor met de knop Meer gemarkeerd en de vervolgkeuzemogelijkheden weergegeven.](../images/tutorials/create-schema/more-actions.png)
+
+### Schema verwijderen {#delete-a-schema}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenabledwithdatasets"
+>title="Kan schema niet verwijderen"
+>abstract="Het schema kan niet worden geschrapt omdat het voor Profiel is toegelaten en bijbehorende datasets heeft."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenablednodatasets"
+>title="Kan schema niet verwijderen"
+>abstract="Het schema kan niet worden verwijderd omdat het is ingeschakeld voor Profiel."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_withdatasetsnotprofileenabled"
+>title="Kan schema niet verwijderen"
+>abstract="Het schema kan niet worden geschrapt omdat het bijbehorende datasets heeft."
+
+Een schema kan binnen UI van de Redacteur van het Schema worden geschrapt gebruikend [!UICONTROL More] acties en ook van de schemadetails in [!UICONTROL Browse] tab. Er zijn bepaalde voorwaarden die voorkomen dat een schema wordt verwijderd. Een schema kan niet worden verwijderd als:
+
+* Het schema is ingeschakeld voor Profiel.
+* Het schema wordt toegelaten voor Profiel en heeft bijbehorende datasets.
+* Het schema heeft bijbehorende datasets maar is niet toegelaten voor Profiel.
+
+### JSON-structuur kopiëren {#copy-json-structure}
+
+Selecteren **[!UICONTROL Copy JSON structure]** om een uitvoerlading voor om het even welk schema in de Bibliotheek van het Schema te produceren. Met deze handeling wordt de JSON-structuur naar het klembord gekopieerd. Uw geëxporteerde JSON kan vervolgens worden gebruikt om het schema en eventuele gerelateerde bronnen te importeren in een andere sandbox of organisatie. Dit maakt het delen en hergebruiken van schema&#39;s tussen verschillende milieu&#39;s eenvoudig en efficiënt.
 
 ## Volgende stappen en extra bronnen
 

@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
 workflow-type: tm+mt
 source-wordcount: '3584'
 ht-degree: 0%
 
 ---
 
-# Schema&#39;s maken en bewerken in de gebruikersinterface
+# Schema&#39;s maken en bewerken in de gebruikersinterface {#create-edit-schemas-in-ui}
 
 Deze handleiding biedt een overzicht van het maken, bewerken en beheren van XDM-schema&#39;s (Experience Data Model) voor uw organisatie in de gebruikersinterface van Adobe Experience Platform.
 
@@ -217,7 +217,7 @@ Na het verstrekken van een vertoningsnaam en gegevenstype voor het gebied, is de
 >
 >In deze sectie wordt alleen beschreven hoe u het veld toewijst aan een aangepaste veldgroep. Als u in plaats daarvan een standaardveldgroep met het nieuwe aangepaste veld wilt uitbreiden, raadpleegt u de sectie over [aangepaste velden toevoegen aan standaardveldgroepen](#custom-fields-for-standard-groups).
 
-Selecteer onder **[!UICONTROL Assign to]** de optie **[!UICONTROL Field Group]**. Als uw schema een standaardklasse gebruikt, is dit de enige beschikbare optie en door gebrek geselecteerd.
+Onder **[!UICONTROL Assign to]**, selecteert u **[!UICONTROL Field Group]**. Als uw schema een standaardklasse gebruikt, is dit de enige beschikbare optie en door gebrek geselecteerd.
 
 Vervolgens moet u een veldgroep selecteren waaraan het nieuwe veld moet worden gekoppeld. Typ de naam van de veldgroep in de opgegeven tekstinvoer. Als u bestaande aangepaste veldgroepen hebt die overeenkomen met de invoer, worden deze weergegeven in de vervolgkeuzelijst. U kunt ook een unieke naam typen om een nieuwe veldgroep te maken.
 
@@ -241,7 +241,7 @@ Het nieuwe veld wordt toegevoegd aan het canvas en krijgt een naamruimte onder u
 
 #### Het veld toewijzen aan een aangepaste klasse {#add-to-class}
 
-Selecteer onder **[!UICONTROL Assign to]** de optie **[!UICONTROL Class]**. Het invoerveld hieronder wordt vervangen door de naam van de aangepaste klasse van het huidige schema om aan te geven dat het nieuwe veld wordt toegewezen aan deze klasse.
+Onder **[!UICONTROL Assign to]**, selecteert u **[!UICONTROL Class]**. Het invoerveld hieronder wordt vervangen door de naam van de aangepaste klasse van het huidige schema om aan te geven dat het nieuwe veld wordt toegewezen aan deze klasse.
 
 ![De [!UICONTROL Class] optie die wordt geselecteerd voor de nieuwe gebiedstoewijzing.](../../images/ui/resources/schemas/assign-field-to-class.png)
 

@@ -2,7 +2,7 @@
 title: Adobe Analytics ExperienceEvent Full Extension Schema Field Group
 description: Leer meer over de Adobe Analytics ExperienceEvent Full Extension schema-veldgroep.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 5eb15a7dfff7e6d8ba815ae4f89142ba50166620
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%
@@ -101,6 +101,6 @@ Elk even object gebruikt de [[!UICONTROL Measure]](../../data-types/measure.md) 
 
 ## Volgende stappen
 
-In dit document wordt de structuur en het gebruik van hoofdletters en kleine letters besproken voor de extensieveldgroep Analytics. Raadpleeg voor meer informatie over de veldgroep zelf de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
+In dit document wordt de structuur en het gebruik van hoofdletters en kleine letters besproken voor de veldgroep Analytics-extensie. Raadpleeg voor meer informatie over de veldgroep zelf de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
 Als u deze veldgroep gebruikt om analysegegevens te verzamelen met de SDK van het Web van Adobe Experience Platform, raadpleegt u de handleiding [configureren van een gegevensstroom](../../../datastreams/overview.md) om te leren hoe te om gegevens aan XDM op de server in kaart te brengen.

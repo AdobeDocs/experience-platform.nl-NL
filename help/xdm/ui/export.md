@@ -4,14 +4,19 @@ title: XDM-schema's exporteren in de gebruikersinterface
 description: Leer hoe u een bestaand schema exporteert naar een andere sandbox of organisatie in de Adobe Experience Platform-gebruikersinterface.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: d25042e80ca5f655a50deac6a65ce9168225d6e6
+source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '634'
 ht-degree: 0%
 
 ---
 
-# XDM-schema&#39;s exporteren in de gebruikersinterface
+# XDM-schema&#39;s exporteren in de gebruikersinterface {#export-xdm-schemas-in-the-UI}
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_copyjsonstructure"
+>title="JSON-structuur kopiëren"
+>abstract="Produceer een de uitvoerlading voor uw gekozen schema door de structuur JSON aan uw klembord te kopiëren. Gebruik deze functie om de details van een schema in de Schemabibliotheek te exporteren. Deze geëxporteerde JSON kan vervolgens worden gebruikt om het schema en alle gerelateerde bronnen te importeren in een andere sandbox of organisatie. Dit maakt het delen en hergebruiken van schema&#39;s tussen verschillende milieu&#39;s eenvoudig en efficiënt."
 
 Alle bronnen in de Schemabibliotheek bevinden zich in een specifieke sandbox binnen een organisatie. In sommige gevallen wilt u wellicht XDM-bronnen (Experience Data Model) delen tussen sandboxen en organisaties.
 
@@ -40,6 +45,8 @@ Selecteer vervolgens de **[!UICONTROL Copy JSON]** icon (![Pictogram kopiëren](
 ![De werkruimte Schema&#39;s met een schemarij en [!UICONTROL Copy to JSON] gemarkeerd.](../images/ui/export/copy-json.png)
 
 Hiermee wordt een JSON-lading naar het klembord gekopieerd, die op basis van de schemastructuur wordt gegenereerd. Voor &quot;[!DNL Loyalty Members]&quot; hierboven weergegeven schema, wordt de volgende JSON gegenereerd:
+
++++Selecteren om een voorbeeld-JSON-payload uit te vouwen
 
 ```json
 [
@@ -203,6 +210,8 @@ Hiermee wordt een JSON-lading naar het klembord gekopieerd, die op basis van de 
 ]
 ```
 
++++
+
 U kunt de Payload ook kopiëren door [!UICONTROL More] rechtsboven in de Schema-editor. Een vervolgkeuzemenu bevat twee opties. [!UICONTROL Copy JSON structure] en [!UICONTROL Delete schema].
 
 >[!NOTE]
@@ -215,7 +224,7 @@ De payload heeft de vorm van een array, waarbij elk arrayitem een object is dat 
 
 Merk op dat elk geval van de huurder ID van uw organisatie verschijnt zoals `<XDM_TENANTID_PLACEHOLDER>` in de lading. Deze placeholders zullen automatisch met de aangewezen waarde van huurdersidentiteitskaart afhankelijk van worden vervangen waar u het schema in de volgende stap invoert.
 
-## De bron importeren met de API
+## De bron importeren met de API {#import-resource-with-api}
 
 Nadat u de JSON-exportbewerking voor het schema hebt gekopieerd, kunt u deze gebruiken als de payload voor een aanvraag van een POST naar de `/rpc/import` eindpunt in de schemaregistratie-API. Zie de [hulplijn voor importeindpunt](../api/import.md) voor details op hoe te om de vraag te vormen om het schema naar de gewenste organisatie en zandbak te verzenden.
 
