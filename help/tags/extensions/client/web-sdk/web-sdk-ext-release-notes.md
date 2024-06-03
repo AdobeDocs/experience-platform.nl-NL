@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 2e1ea70496b8e379d5a9be0f2f321b21da86cf4d
+source-git-commit: e96477882beceb6e370d53df3cc65e8dfb28745f
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2145'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,17 @@ ht-degree: 0%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versie 2.23.2 - 3 juni 2024
+
+**Oplossingen en verbeteringen**
+
+* Oplossing voor een fout die optrad bij het wijzigen van de extensieconfiguratie toen config-overschrijvingen werden gedefinieerd.
+* Lege waarden voor mediagroep mogen worden ingesteld met pingsintervallen.
+* Oplossing voor een fout die optrad bij het wijzigen van een actie voor een updatevariabele.
+* Herstellen van container voor id-synchronisatie toestaan in config-overschrijvingen.
+
+Bevat versie 2.20.0 van het Web SDK van Adobe Experience Platform.
 
 ## Versie 2.23.1 - 28 mei 2024
 
