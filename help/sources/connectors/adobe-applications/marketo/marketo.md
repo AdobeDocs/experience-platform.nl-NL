@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Marketo Engage-aansluiting
 description: Dit document biedt een overzicht van de bronconnector van het Marketo Engage, inclusief informatie over verificatie, toewijzing en gegevenslatentie.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 50b97ebb8496636a0fccd64d57d7829b1342f87c
+source-git-commit: 0c695e11e7d7c14ef7e047cd007668e1099bf127
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Zie het volgende voor gedetailleerde informatie over de regels voor het in kaart
 
 In de volgende tabel wordt de verwachte vertraging voor het overbrengen van [!DNL Marketo Engage] gegevens in Platform, die op de aard van opname en de gewenste bestemming worden gebaseerd:
 
-| Bestemming | Verwachte vertraging |
+| Doel | Verwachte vertraging |
 | ----------- | ---------------- |
 | [!DNL Real-Time Customer Profile] | &lt; 10 minuten |
 | Gegevensmeer | &lt; 60 minuten |
@@ -83,6 +83,7 @@ In de volgende documentatie vindt u meer informatie over het maken van een [!DNL
 
 * Voor informatie over hoe u verbinding kunt maken met uw [!DNL Marketo Engage] gegevens naar platform, lees de zelfstudie op [een [!DNL Marketo Engage] bronverbinding in de gebruikersinterface](../../../tutorials/ui/create/adobe-applications/marketo.md).
    * Lees de zelfstudie voor informatie over hoe u schema&#39;s kunt instellen en aangepaste activiteitgegevens kunt invoeren [een bronverbinding en gegevensstroom maken voor [!DNL Marketo Engage] aangepaste activiteitsgegevens](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+   * Voor informatie over het migreren van uw ECID-toewijzing vanuit de [!DNL Person] gegevensset aan de [!DNL Activity] dataset, lees de [Gids voor migratie van ECID-toewijzing](./migration.md).
 * Voor informatie over de onderliggende opstelling voor B2B namespaces en schema&#39;s die met worden gebruikt [!DNL Marketo Engage], lees de documentatie voor [B2B-naamruimten en -schema&#39;s](./marketo-namespaces.md).
 * Voor informatie over het zoeken naar uw [!DNL Marketo Engage] munchkin-id en het genereren van uw referenties lezen de [[!DNL Marketo Engage] verificatiehandleiding](./marketo-auth.md).
 * Voor informatie over de specifieke toewijzingsregels die gelden voor [!DNL Marketo Engage] datasets, lees de documentatie over [[!DNL Marketo Engage] veldtoewijzingen](../mapping/marketo.md).

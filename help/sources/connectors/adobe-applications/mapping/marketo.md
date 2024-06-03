@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Velden toewijzen aan de bron van het Marketo Engage
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
+source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,11 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als u standaardactiviteiten wilt gebruiken, moet u het schema bijwerken met de [schema automatisch genereren, hulpprogramma](../marketo/marketo-namespaces.md) omdat u nieuwe `activities` de gegevensstroom zonder uw schema bij te werken, zal de toewijzingsmalplaatjes ontbreken aangezien de nieuwe doelgebieden niet in uw schema aanwezig zullen zijn. Als u ervoor kiest uw schema niet bij te werken, kunt u nog steeds een nieuwe gegevensstroom maken en eventuele fouten negeren. Nochtans, zullen om het even welke nieuwe of bijgewerkte gebieden niet in Platform worden opgenomen.
 
-Zie de documentatie op [XDM Experience Event-klasse](../../../../xdm/classes/experienceevent.md) voor meer informatie over de klasse XDM en XDM gebiedsgroep(en).
+Lees de documentatie op [XDM Experience Event-klasse](../../../../xdm/classes/experienceevent.md) voor meer informatie over de klasse XDM en XDM gebiedsgroep(en).
+
+>[!NOTE]
+>
+>De `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` bronveld is een berekend veld dat met het **[!UICONTROL Add calculated field]** in de gebruikersinterface van het Experience Platform. Lees de zelfstudie aan [berekende velden toevoegen](../../../../data-prep/ui/mapping.md#calculated-fields) voor meer informatie .
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
@@ -127,6 +131,7 @@ Zie de documentatie op [XDM Experience Event-klasse](../../../../xdm/classes/exp
 | `directMarketing.emailSent.testVariantID` | `directMarketing.emailSent.testVariantID` |
 | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |
 | `directMarketing.emailSent.automationRunID` | `directMarketing.emailSent.automationRunID` |
+| `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` | `identityMap` | Dit is een berekend veld. |
 
 {style="table-layout:auto"}
 
@@ -402,16 +407,11 @@ Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individu
 | `iif(id != null && id != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", id, "sourceKey", concat(id,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourcePersonKey` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
-| `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | Dit is een berekend veld. |
 | `marketoIsDeleted` | `isDeleted` |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `b2b.convertedContactKey` | Dit is een berekend veld. |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `personComponents.sourceConvertedContactKey` | Dit is een berekend veld. |
 
 {style="table-layout:auto"}
-
->[!NOTE]
->
->De `to_object('ECID',arrays_to_objects('id',explode(ecids)))` bronveld is een berekend veld dat met het [!UICONTROL Add calculated field] in de gebruikersinterface van het platform. Zie de zelfstudie aan [berekende velden toevoegen](../../../../data-prep/ui/mapping.md#calculated-fields) voor meer informatie .
 
 ## Volgende stappen
 

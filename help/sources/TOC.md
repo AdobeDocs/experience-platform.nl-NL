@@ -1,14 +1,14 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform Source Connectors Help
-breadcrumb-title: Gids voor Source Connectors
-user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
+user-guide-title: Help bij Adobe Experience Platform Source Connectors
+breadcrumb-title: Handleiding voor bronaansluitingen
+user-guide-description: Gegevens uit diverse bronnen verzamelen. Leer hoe u reeds opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: 58239a1d2db7be48cedd4467cb2f94913e387031
+source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
 workflow-type: tm+mt
-source-wordcount: '1039'
-ht-degree: 6%
+source-wordcount: '1043'
+ht-degree: 0%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 6%
          - [Marketo Engage-aansluiting](connectors/adobe-applications/marketo/marketo.md)
          - [Handleiding voor verificatie van Marketo&#39;s Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B-naamruimten en -schema&#39;s](connectors/adobe-applications/marketo/marketo-namespaces.md)
+         - [Gids voor migratie van ECID-toewijzing](connectors/adobe-applications/marketo/migration.md)
    - Reclame {#advertising}
       - [Google Ads-connector](connectors/advertising/ads.md)
       - [Pinterest Adds](connectors/advertising/pinterest-ads.md)
