@@ -1,9 +1,10 @@
 ---
 title: Privacy, beveiliging en bestuur in AI Assistant
 description: Meer informatie over privacy, beveiliging en governance-praktijken voor AI Assistant.
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 371e065d-c2dd-4233-b78e-a42757fce853
+source-git-commit: 1762fcbcc730ccb08340a71383c90404c3fea614
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,6 @@ Lees dit document voor meer informatie over de vertrouwensgerichte mogelijkheden
 * De AI Assistant gebruikt momenteel geen persoonsgegevens, zelfs niet voor opleidingsdoeleinden.
 * AI Assistant is niet op de hoogte van consumentengegevens.
 * Alle bestaande [toegangsbeheer](../access-control/home.md) Het beleid wordt nageleefd door AI Assistant.
-   * Toegangsbeheer op objectniveau wordt ondersteund voor objecten. Ondersteuning voor toegangsbeheer op objectniveau voor kenmerken komt binnenkort beschikbaar.
    * Om het even welk nieuw op attributen-gebaseerd toegangsbeheerbeleid wordt weerspiegeld in AI Medewerker na een maximum van 24 uren*
 * U moet expliciete toestemming worden verleend om met AI Medewerker in wisselwerking te staan.
    * U kunt machtigingen voor Experience Platform en Journey Optimizer op een andere manier instellen met de [Gebruikersinterface voor machtigingen](../access-control/abac/ui/permissions.md) en u kunt de [Admin Console](../access-control/ui/browse.md) om machtigingen voor Customer Journey Analytics toe te wijzen.
