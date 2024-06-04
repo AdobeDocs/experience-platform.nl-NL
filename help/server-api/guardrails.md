@@ -1,16 +1,16 @@
 ---
-title: Prestatiehandleidingen voor Edge Network Server API
+title: Prestatieinstructies voor Edge Network Server API
 description: Leer hoe u de server-API kunt gebruiken binnen optimale prestatiegaranties.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 2%
+source-wordcount: '531'
+ht-degree: 1%
 
 ---
 
 
-# Prestatiehandleidingen voor Edge Network Server API
+# Prestatieinstructies voor Edge Network Server API
 
 ## Overzicht {#overview}
 
@@ -18,14 +18,18 @@ Met prestatiehandleidingen worden gebruiksgrenzen gedefinieerd voor de serverAPI
 
 Adobe is niet verantwoordelijk voor prestatievermindering die wordt veroorzaakt door te hoge gebruikslimieten. Klanten die de prestatiegaranties consequent overschrijden, kunnen om extra verwerkingscapaciteit vragen om prestatievermindering te voorkomen.
 
+>[!IMPORTANT]
+>
+>Controleer uw licentierechten in uw verkooporder en de bijbehorende rechten [Productbeschrijving](https://helpx.adobe.com/legal/product-descriptions.html) op de werkelijke gebruikslimieten naast deze pagina met instructies.
+
 ## Definities
 
-* **Beschikbaarheid** wordt berekend voor elk vijf-minieme interval als percentage van verzoeken die door het Netwerk van de Rand van het Experience Platform worden verwerkt die niet met fouten ontbreken en slechts op de provisioned het Netwerk APIs van de Rand betrekking hebben. Als een huurder geen verzoeken in een bepaald vijf-minieme interval maakte, wordt dat interval beschouwd als beschikbaar 100%.
+* **Beschikbaarheid** wordt berekend voor elk vijf-minieme interval als percentage van verzoeken die door de Edge Network van het Experience Platform worden verwerkt die niet met fouten ontbreken en slechts op provisioned Edge Network APIs betrekking hebben. Als een huurder geen verzoeken in een bepaald vijf-minieme interval maakte, wordt dat interval beschouwd als beschikbaar 100%.
 * **Maandelijks uptime percentage** voor een bepaald gebied wordt berekend als het gemiddelde van de beschikbaarheid voor alle intervallen van vijf minuten in een maand.
-* An **upstream** is de dienst achter het Netwerk van de Rand, dat voor een specifieke gegevensstroom, zoals de Zijde Door:sturen van de Server van de Adobe, de Segmentatie van Adobe Edge, of Adobe Target wordt toegelaten.
+* An **upstream** is de dienst achter de Edge Network, die voor een specifieke gegevensstroom, zoals de Zijde Door:sturen van de Server van de Adobe, de Segmentatie van Adobe Edge, of Adobe Target wordt toegelaten.
 * A **aanvraageenheid** komt overeen met een fragment van 8 kB van een verzoek en één upstream geconfigureerd voor een gegevensstroom.
 * A **verzoek** is één bericht dat door een toepassing in eigendom van een klant naar de [!DNL Server API]. Een aanvraag kan een of meer aanvraageenheden bevatten.
-* An **fout** is om het even welke verzoek die wegens een Netwerk van de Rand ontbreekt [interne servicefout](error-handling.md).
+* An **fout** is om het even welk verzoek dat wegens een Edge Network ontbreekt [interne servicefout](error-handling.md).
 
 ## Servicelimieten
 

@@ -3,18 +3,21 @@ keywords: Experience Platform;query;query-service;problemen oplossen;instructies
 title: Guardrails voor Query-service
 description: Dit document bevat informatie over gebruiksbeperkingen voor gegevens van Query Service om u te helpen uw querygebruik te optimaliseren.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 1%
+source-wordcount: '1181'
+ht-degree: 0%
 
 ---
 
 # Guardrails voor Query-service
 
 De begeleiding is drempels die gegevens en systeemgebruik, prestatiesoptimalisering, en vermijding van fouten of onverwachte resultaten in Adobe Experience Platform begeleiden.
-
 Dit document biedt standaardgebruikslimieten voor gegevens van Query Service om u te helpen de systeemprestaties te optimaliseren wanneer u gegevens opvraagt met betrekking tot uw licentierechten.
+
+>[!IMPORTANT]
+>
+>Controleer uw licentierechten in uw verkooporder en de bijbehorende rechten [Productbeschrijving](https://helpx.adobe.com/legal/product-descriptions.html) op de werkelijke gebruikslimieten naast deze pagina met instructies.
 
 ## Vereisten
 
@@ -61,7 +64,7 @@ De lijsten hieronder verstrekken de geadviseerde guardrailgrenzen en beschrijvin
 | Gelijktijdige gebruikers van Query Service | <ul><li>Zoals gespecificeerd in de productbeschrijving van de toepassing.</li><li>+5 (met elke extra Ad-hocpakket voor gebruikers van add-on aangeschaft)</li></ul> | Door het systeem afgedwongen geleiding | Hiermee bepaalt u hoeveel gebruikers sessies tegelijk voor een bepaalde organisatie kunnen maken. Als de gelijktijdige limiet wordt overschreden, ontvangt de gebruiker een `Session Limit Reached` fout. |
 | Gelijktijdige zoekopdracht | <ul><li>Zoals gespecificeerd in de productbeschrijving van de toepassing.</li><li>+1 (met elke extra aangeschafte SKU-pack voor Ad hoc-querygebruikers)</li></ul> | Door het systeem afgedwongen geleiding | Dit bepaalt hoeveel vragen gelijktijdig voor een bepaalde organisatie kunnen worden uitgevoerd. Als de gelijktijdige limiet wordt overschreden, worden de query&#39;s in een wachtrij geplaatst. |
 | Client-connector en resultaatuitvoerlimiet | Clientconnector<ul><li>Query-gebruikersinterface (100 rijen)</li><li>Client van derden (50.000)</li><li>[!DNL PostgresSQL] client (50.000)</li></ul> | Door het systeem afgedwongen geleiding | Het resultaat van een vraag kan door de volgende middelen worden ontvangen:<ul><li>Gebruikersinterface Query Service</li><li>Client van derden</li><li>[!DNL PostgresSQL] client</li></ul>Opmerking: het toevoegen van een beperking aan het uitvoeraantal kan sneller resultaten opleveren. Bijvoorbeeld: `LIMIT 5`, `LIMIT 10`, enzovoort. |
-| Resultaten geretourneerd via | Gebruikersinterface client | N.v.t. | Hiermee bepaalt u hoe de resultaten ter beschikking worden gesteld van de gebruikers. |
+| Resultaten geretourneerd via | Gebruikersinterface client | NVT | Hiermee bepaalt u hoe de resultaten ter beschikking worden gesteld van de gebruikers. |
 
 {style="table-layout:auto"}
 
@@ -71,11 +74,11 @@ De lijsten hieronder verstrekken de geadviseerde guardrailgrenzen en beschrijvin
 |---|---|---|---|
 | Maximale uitvoeringstijd | 24 uur | Door het systeem afgedwongen geleiding | Dit bepaalt de maximumuitvoeringstijd voor een partijSQL vraag.<br>De verwerkingstijd van een vraag is afhankelijk van het volume van te verwerken gegevens en vraagingewikkeldheid. |
 | Gelijktijdige gebruikers van Query-service voor niet-geplande batch | <ul><li>Zoals gespecificeerd in de productbeschrijving van de toepassing.</li><li>+5 (met elke extra Ad-hocpakket voor gebruikers van add-on aangeschaft)</li></ul> | Door het systeem afgedwongen geleiding | Voor ongeplande partijvragen (bijvoorbeeld vragen CTAS/ITAS op interactieve wijze), bepaalt dit hoeveel gebruikers zittingen voor een bepaalde organisatie gelijktijdig kunnen tot stand brengen. Als de gelijktijdige limiet wordt overschreden, ontvangt de gebruiker een `Session Limit Reached` fout. |
-| Gelijktijdige gebruikers van Query-service voor geplande batch | Geen gebruikersbeperking | N.v.t. | Gepland partijvragen zijn asynchrone banen zodat is er geen gebruikersbeperking. |
+| Gelijktijdige gebruikers van Query-service voor geplande batch | Geen gebruikersbeperking | NVT | Gepland partijvragen zijn asynchrone banen zodat is er geen gebruikersbeperking. |
 | Rekenuren voor batchverwerking | Zoals gespecificeerd in de Adobe Experience Platform Intelligence Query Custom SKU-verkooporder van de klant | Prestatiegerichting | Dit bepaalt de scoped hoeveelheid verwerkingstijd per jaar een klant voor het uitvoeren van partijvragen wordt toegestaan om, gegevens terug in het gegevens meer af te tasten te verwerken en te schrijven. |
-| Gelijktijdige zoekopdracht | Ondersteund | N.v.t. | Gepland partijvragen zijn asynchrone banen, daarom worden de gezamenlijke vragen gesteund. |
+| Gelijktijdige zoekopdracht | Ondersteund | NVT | Gepland partijvragen zijn asynchrone banen, daarom worden de gezamenlijke vragen gesteund. |
 | Clientconnector en uitvoerlimiet van resultaat | Clientconnector<ul><li>Query-gebruikersinterface (geen bovenlimiet voor rijen)</li><li>Client van derden (geen bovenlimiet voor rijen)</li><li>[!DNL PostgresSQL] client (geen bovenlimiet voor rijen)</li><li>REST API&#39;s (geen bovengrens voor rijen)</li></ul> | Door het systeem afgedwongen geleiding | Het resultaat van een query kan op de volgende manieren beschikbaar worden gemaakt:<ul><li>Kan worden opgeslagen als afgeleide gegevenssets</li><li>Kan in de bestaande afgeleide gegevenssets worden opgenomen</li></ul>Nota: Er is geen bovengrens aan het aantal van het verslagaantal van het vraagresultaat. |
-| Resultaten geretourneerd via | Gegevensset | N.v.t. | Hiermee bepaalt u hoe de resultaten ter beschikking worden gesteld van de gebruikers. |
+| Resultaten geretourneerd via | Gegevensset | NVT | Hiermee bepaalt u hoe de resultaten ter beschikking worden gesteld van de gebruikers. |
 
 {style="table-layout:auto"}
 

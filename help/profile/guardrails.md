@@ -3,11 +3,11 @@ title: Standaardhulplijnen voor realtime gegevens en segmentatie van klantprofie
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Leer over prestaties en door systemen afgedwongen richtlijnen voor profielgegevens en segmentatie. Zo zorgt u voor optimaal gebruik van de functie Real-Time CDP.
+description: Leer over prestaties en systeem-gedwongen gidsen voor profielgegevens en segmentatie om een optimaal gebruik van de functionaliteit van Real-Time CDP te verzekeren.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 0542e618dfb6e5571845387fed9eced4200179b6
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '2432'
+source-wordcount: '2455'
 ht-degree: 1%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 1%
 # Standaardhulplijnen voor [!DNL Real-Time Customer Profile] gegevens en segmentatie
 
 Met Adobe Experience Platform kunt u persoonlijke interkanaalervaringen bieden op basis van gedragsinzichten en klantkenmerken in de vorm van realtime klantprofielen. Om deze nieuwe benadering van profielen te steunen, gebruikt Experience Platform een hoogst gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt.
+
+>[!IMPORTANT]
+>
+>Controleer uw licentierechten in uw verkooporder en de bijbehorende rechten [Productbeschrijving](https://helpx.adobe.com/legal/product-descriptions.html) op de werkelijke gebruikslimieten naast deze pagina met instructies.
 
 Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw profielgegevens te modelleren voor optimale systeemprestaties. Bij het bekijken van de volgende instructies wordt aangenomen dat u de gegevens correct hebt gemodelleerd. Als u vragen hebt over het modelleren van uw gegevens, neemt u contact op met uw medewerker van de klantenservice.
 
@@ -116,7 +120,7 @@ De instructies in deze sectie hebben betrekking op het aantal en de aard van de 
 | --------- | ----- | ---------- | ----------- |
 | Soorten publiek per sandbox | 4000 | Prestatiegerichting | Een organisatie kan in totaal meer dan 4000 soorten publiek hebben, zolang er in elke sandbox minder dan 4000 soorten publiek aanwezig zijn. Dit is inclusief publiek in batch, streaming en edge. Pogingen om extra publiek te creëren kunnen systeemprestaties beïnvloeden. Meer informatie over [publiek maken](/help/segmentation/ui/segment-builder.md) door de segmentbouwer. |
 | Publiek randen per sandbox | 150 | Prestatiegerichting | Een organisatie kan in totaal meer dan 150 randsoorten publiek hebben, zolang er in elke afzonderlijke sandbox minder dan 150 randsoorten publiek zijn. Poging om extra randpubliek te maken kan van invloed zijn op de systeemprestaties. Meer informatie over [randpubliek](/help/segmentation/ui/edge-segmentation.md). |
-| Edge-doorvoer door alle sandboxen | 1500 RPS | Prestatiegerichting | De segmentatie van de rand steunt een piekwaarde van 1500 binnenkomende gebeurtenissen per seconde die het Netwerk van de Rand van Adobe Experience Platform ingaan. De segmentatie van de rand kan tot 350 milliseconden vergen om een binnenkomende gebeurtenis te verwerken nadat het het Netwerk van de Rand van Adobe Experience Platform ingaat. Meer informatie over [randpubliek](/help/segmentation/ui/edge-segmentation.md). |
+| Edge-doorvoer door alle sandboxen | 1500 RPS | Prestatiegerichting | De segmentatie van de rand steunt een piekwaarde van 1500 binnenkomende gebeurtenissen per seconde die de Edge Network van Adobe Experience Platform ingaan. De segmentatie van de rand kan tot 350 milliseconden vergen om een binnenkomende gebeurtenis te verwerken nadat het de Edge Network van Adobe Experience Platform ingaat. Meer informatie over [randpubliek](/help/segmentation/ui/edge-segmentation.md). |
 | Streaming publiek per sandbox | 500 | Prestatiegerichting | Een organisatie kan in totaal meer dan 500 streamingdeelnemers hebben, zolang er in elke sandbox minder dan 500 streamingdeelnemers zijn. Dit geldt zowel voor streaming als voor randpubliek. Het maken van extra streaming publiek kan van invloed zijn op de systeemprestaties. Meer informatie over [streaming publiek](/help/segmentation/ui/streaming-segmentation.md). |
 | Doorvoer streamen voor alle sandboxen | 1500 RPS | Prestatiegerichting | Streaming segmentatie ondersteunt een piekwaarde van 1500 inkomende gebeurtenissen per seconde. Het kan tot 5 minuten duren voordat streamingsegmentatie in aanmerking komt voor een profiel voor segmentlidmaatschap. Meer informatie over [streaming publiek](/help/segmentation/ui/streaming-segmentation.md). |
 | Batchpubliek per sandbox | 4000 | Prestatiegerichting | Een organisatie kan in totaal meer dan 4000 batchdoelgroepen hebben, zolang er in elke sandbox minder dan 4000 doelgroepen aanwezig zijn. Het maken van extra batchdoelgroepen kan van invloed zijn op de systeemprestaties. |

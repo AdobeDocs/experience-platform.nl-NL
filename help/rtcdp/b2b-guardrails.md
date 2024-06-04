@@ -2,14 +2,14 @@
 keywords: profiel;real-time profiel van de klant;het oplossen van problemen;gidsen;grens;entiteit;primaire entiteit;dimensie-entiteit;RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real-time platform van de klantengegevens;real-time cdp;b2b;cdp;
 title: Standaardhulplijnen voor Real-time Customer Data Platform B2B Edition
 type: Documentation
-description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat verschilt van het traditionele relationele gegevensmodel. Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw gegevens te modelleren voor optimale systeemprestaties met Adobe Real-time Customer Data Platform B2B Edition.
+description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt. Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw gegevens te modelleren voor optimale systeemprestaties met Adobe Real-time Customer Data Platform B2B Edition.
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 2%
+source-wordcount: '1817'
+ht-degree: 0%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 2%
 >De limieten die in dit document worden beschreven, vertegenwoordigen de wijzigingen die door Real-time Customer Data Platform B2B Edition worden ingeschakeld. Voor een volledige lijst met standaardlimieten voor Real-Time CDP B2B Edition, combineert u deze limieten met de algemene Adobe Experience Platform limieten die in de [handleidingen voor de gegevensdocumentatie van het Profiel van de Klant in real time](../profile/guardrails.md).
 
 Met Real-time Customer Data Platform B2B Edition kunt u persoonlijke kanaalervaringen op basis van gedragsinzichten en klantkenmerken aanbieden in de vorm van realtime profielen van klanten en accountprofielen. Om deze nieuwe benadering van profielen te steunen, gebruikt Experience Platform een hoogst gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt.
+
+>[!IMPORTANT]
+>
+>Controleer uw licentierechten in uw verkooporder en de bijbehorende rechten [Productbeschrijving](https://helpx.adobe.com/legal/product-descriptions.html) op de werkelijke gebruikslimieten naast deze pagina met instructies.
 
 Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw gegevens te modelleren voor optimale systeemprestaties. Bij het bekijken van de volgende instructies wordt aangenomen dat u de gegevens correct hebt gemodelleerd. Als u vragen hebt over het modelleren van uw gegevens, neemt u contact op met uw medewerker van de klantenservice.
 
