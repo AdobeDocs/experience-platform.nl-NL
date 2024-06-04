@@ -1,9 +1,7 @@
 ---
 title: AI Assistant in Adobe Experience Platform
 description: Leer hoe u met AI Assistant door Experience Platform- en Real-time Customer Data Platform-concepten kunt navigeren en deze kunt begrijpen, en hoe u informatie over uw objecten kunt gebruiken.
-hide: true
-hidefromtoc: true
-source-git-commit: 723638fcd580c81a84ffe6bf38c197c62fabc1f3
+source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
 workflow-type: tm+mt
 source-wordcount: '1187'
 ht-degree: 0%

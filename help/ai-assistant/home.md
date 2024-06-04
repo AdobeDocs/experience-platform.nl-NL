@@ -1,11 +1,9 @@
 ---
 title: Overzicht van AI Assistant
 description: Leer meer over AI Assistant, de nuances en gebruiksgevallen en hoe u deze kunt gebruiken om uw workflow met Adobe Experience Platform en Real-time Customer Data Platform te versnellen.
-hide: true
-hidefromtoc: true
-source-git-commit: fe87a487079f5154f238b2d425cdd249a4724762
+source-git-commit: dd3a7d07c0c78d76c552affef892d5e5c0f0bfb5
 workflow-type: tm+mt
-source-wordcount: '2294'
+source-wordcount: '2371'
 ht-degree: 0%
 
 ---
@@ -72,6 +70,13 @@ U kunt AI Assistant-vragen stellen over uw operationele inzichten in de volgende
 * Bronnen _(Op dit moment kunnen vragen over de rekeningen niet worden beantwoord.)_
 
 Voor vragen over operationele inzichten weerspiegelen de antwoorden mogelijk niet de huidige status van de gebruikersinterface. De gegevens die deze vragen ondersteunen, worden om de 24 uur bijgewerkt. Zo worden wijzigingen die gebruikers overdag aanbrengen in Real-Time CDP gesynchroniseerd met de gegevensopslag &#39;s nachts, waarna ze &#39;s ochtends beschikbaar komen voor vragen van gebruikers. U moet zich aanmelden bij een sandbox voor informatie over specifieke gegevens die betrekking hebben op objecten.
+
+### Functiebereik {#feature-scope}
+
+Momenteel is het bereik van AI Assistant als volgt:
+
+* [Productkennis](./home.md#product-knowledge): AI Assistant kan vragen over productkennis voor Experience Platform, Real-time Customer Data Platform en Adobe Journey Optimizer beantwoorden. U kunt ook in de onderwerpen van de productkennis voor Customer Journey Analytics, maar slechts door de Customer Journey Analytics UI delven.
+* [Operationele inzichten](./home.md#operational-insights): U kunt AI Assistant vragen stellen over operationele inzichten met betrekking tot de volgende gegevensobjecten: attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s en bronnen.
 
 ## Toegang tot functies {#feature-access}
 
