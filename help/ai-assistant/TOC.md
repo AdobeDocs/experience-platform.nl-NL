@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: AI Assistant in Adobe Experience Platform Guide
-user-guide-description: Leer meer over AI Assistant, de nuances en gebruiksgevallen en hoe u deze kunt gebruiken om uw workflow met Adobe Experience Platform en Real-time Customer Data Platform te versnellen.
+user-guide-description: Leer hoe u AI Assistant gebruikt om uw workflow met Adobe Experience Platform en Real-time Customer Data Platform te versnellen.
 description: In dit document wordt de inhoudsopgave voor AI Assistant in Adobe Experience Platform weergegeven.
 role: Admin,User,Developer,Leader
-source-git-commit: 9b8d2422d3b5e13b980002a21f02dbbb6de8c6c6
+source-git-commit: 228c4a8882503912634b515be55d1ed726be756c
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '65'
 ht-degree: 1%
 
 ---
