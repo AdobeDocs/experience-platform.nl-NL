@@ -4,7 +4,7 @@ description: Leer hoe u SQL-query's kunt gebruiken met de Real-time Customer Dat
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: e94343e61e98f69fa28ecd61aec9267460a7f616
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%
@@ -52,7 +52,7 @@ In het onderstaande diagram worden de relevante gegevensvelden in elke gegevenss
 
 #### De nieuwe rekeningen per bedrijfstak gebruiken de zaak {#accounts-by-industry}
 
-De logica die wordt gebruikt voor de [!UICONTROL New accounts by industry] inzicht geeft de top vijf industrieën terug volgens hun aantal rekeningsprofielen en hun relatieve grootte aan elkaar. Zie de [[!UICONTROL Accounts By Industry] widget-documentatie](../guides/account-profiles.md#accounts-by-industry) voor meer informatie .
+De logica die wordt gebruikt voor de [!UICONTROL New accounts by industry] inzicht geeft de top vijf industrieën terug volgens hun aantal rekeningsprofielen en hun relatieve grootte aan elkaar. Zie de [[!UICONTROL New accounts By Industry] widget-documentatie](../guides/account-profiles.md#accounts-by-industry) voor meer informatie .
 
 >[!TIP]
 >

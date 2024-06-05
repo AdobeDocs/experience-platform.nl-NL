@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0613a0c713ea3559e03d2228e2b9e6be7232a1f0
+source-git-commit: b1fac3d523ebdf765bec038cde6a667d9af71243
 workflow-type: tm+mt
-source-wordcount: '2007'
+source-wordcount: '2041'
 ht-degree: 0%
 
 ---
@@ -158,6 +158,10 @@ Het dashboard van het vergunningsgebruik rapporteert over verscheidene unieke me
 | [!UICONTROL Streaming Segmentation No of Packs] | De pakketten werken segmentlidmaatschap voor een persoonprofiel bij aangezien de nieuwe gegevens de Dienst van de Segmentatie door een het stromen stroom ingaan. Het lidmaatschap van een segment wordt beoordeeld op basis van de kenmerken van het huidige personenprofiel en de waarde van de huidige gebeurtenis, zonder rekening te houden met het historische gedrag. Streaming segmentatie is een gedeelde functie. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
+
+>[!TIP]
+>
+>U kunt uw licentierechten in uw verkooporder controleren om meetgegevens te berekenen, zoals uw &#39;opslagvergoeding&#39;.<br>Bijvoorbeeld:<ul><li>Opslagruimte = het aantal &quot;geoorloofde profielen&quot; in uw contract X Gemiddelde rijkheid van profiel</li></ul>
 
 De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze cijfers variëren afhankelijk van de licenties die uw organisatie heeft aangeschaft. Raadpleeg de desbetreffende documentatie bij de productbeschrijving voor gedetailleerde definities van elke metrische waarde:
 
