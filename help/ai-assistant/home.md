@@ -2,9 +2,9 @@
 title: Overzicht van AI Assistant
 description: Leer meer over AI Assistant, de nuances en gebruiksgevallen en hoe u deze kunt gebruiken om uw workflow met Adobe Experience Platform en Real-time Customer Data Platform te versnellen.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+source-git-commit: b51291e6c3663c6d6e6d416f0d2c37563c852155
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '679'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ AI Assistant in Adobe Experience Platform is een conversatie-ervaring die u kunt
 
 >[!IMPORTANT]
 >
->U moet akkoord gaan met een gebruikersovereenkomst voordat u AI Assistant kunt gebruiken. De gebruikersovereenkomst bevat ook de openbare bètaovereenkomst. Dit is zodat u extra eigenschappen van AI Medewerker kunt gebruiken aangezien zij in een bètacapaciteit uitrollen.
+>U moet akkoord gaan met een [gebruikersovereenkomst](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) voordat u AI Assistant kunt gebruiken. De gebruikersovereenkomst bevat ook de openbare bètaovereenkomst. Dit is zodat u extra eigenschappen van AI Medewerker kunt gebruiken aangezien zij in een bètacapaciteit uitrollen.
 
 +++Selecteren om gebruikersovereenkomstinterface weer te geven
 
