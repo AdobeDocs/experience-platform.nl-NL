@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 16313e2109152329a427be9f13fcbd6382353797
+source-git-commit: 734a34e9acf80300c28ca14587198fb7eaf83c17
 workflow-type: tm+mt
-source-wordcount: '1546'
-ht-degree: 1%
+source-wordcount: '1553'
+ht-degree: 0%
 
 ---
 
@@ -51,7 +51,7 @@ Experience Platform komt met twee pre-gevormde standaardrollen. De volgende tabe
 | Rol | Toegang tot sandbox | Machtigingen |
 | --- | --- | --- |
 | Standaardproductie, alle toegang | Productie | Alle toestemmingen van toepassing op Experience Platform, behalve de toestemmingen van het Beleid Sandbox. |
-| Sandbox-beheerders | N.v.t. | Verleent toegang slechts tot de toestemmingen van het Beleid Sandbox. |
+| Sandbox-beheerders | NVT | Verleent toegang slechts tot de toestemmingen van het Beleid Sandbox. |
 
 ## Sandboxen en machtigingen
 
@@ -79,12 +79,24 @@ De volgende lijst schetst de beschikbare toestemmingen voor Experience Platform 
 
 | Categorie | Machtiging | Beschrijving |
 | --- | --- | --- |
+| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Mogelijkheid om de [AI-assistent](../ai-assistant/access.md) vragen. |
+| [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | Toegang tot reacties op [operationele inzichten](../ai-assistant/home.md##operational-insights) vragen. |
 | [!DNL Alerts] | [!UICONTROL View Alerts History] | Alleen-lezen toegang voor waarschuwingsgeschiedenis. |
 | [!DNL Alerts] | [!UICONTROL Resolve Alerts] | Toegang tot waarschuwingen lezen, bewerken en verwijderen. |
 | [!DNL Alerts] | [!UICONTROL View Alerts] | Alleen-lezen toegang voor waarschuwingen. |
 | [!DNL Alerts] | [!UICONTROL Manage Alerts] | Toegang tot het lezen, maken, bewerken en verwijderen van waarschuwingsgeschiedenis. |
 | [!DNL Computed Attributes] | [!UICONTROL View Computed attributes] | Alleen-lezen toegang voor het tabblad, overzicht en details van berekende kenmerken. |
 | [!DNL Computed Attributes] | [!UICONTROL Manage Computed attributes] | Toegang tot het lezen, maken, verwijderen van concepten en het deactiveren van berekende kenmerken. |
+| [!DNL Dashboards] | [!UICONTROL View License Usage Dashboard] | Alleen-lezen toegang om het dashboard voor het licentiegebruik weer te geven. |
+| [!DNL Dashboards] | [!UICONTROL Manage Standard Dashboards] | Voeg douanekenmerken toe die nog niet in het gegevenspakhuis zijn. |
+| [!DNL Data Governance] | [!UICONTROL Manage Usage Labels] | Toegang tot het lezen, maken en verwijderen van gebruikslabels. |
+| [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Toegang tot het lezen, maken, bewerken en verwijderen van beleidsregels voor gegevensgebruik. |
+| [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Alleen-lezen toegang voor beleidsregels voor gegevensgebruik die tot uw organisatie behoren. |
+| [!DNL Data Governance] | [!UICONTROL View User Activity Log] | Alleen-lezen toegang tot opgenomen weergave [auditlogboeken](../landing/governance-privacy-security/audit-logs/overview.md) van platformactiviteiten. |
+| [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Toegang tot bronnen lezen, maken, bewerken en uitschakelen. |
+| [!DNL Data Ingestion] | [!UICONTROL View Sources] | Alleen-lezen toegang tot beschikbare bronnen in het dialoogvenster **[!UICONTROL Catalog]** tabblad en geverifieerde bronnen in het dialoogvenster **[!UICONTROL Browse]** tab. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Toegang tot creëren, goedkeuren, en de handvatten van de partner verwerpen om twee organisaties te verbinden en toe te laten [!DNL Segment Match] stromen. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Toegang tot lezen, maken, bewerken en publiceren [!DNL Segment Match] voert met actieve partners uit. |
 | [!DNL Data Lifecycle] | [!UICONTROL View Data Lifecycle] | Alleen-lezen toegang voor de levenscyclus van gegevens. |
 | [!DNL Data Lifecycle] | [!UICONTROL Manage Data Lifecycle] | Toegang tot de levenscyclus van gegevens lezen, maken, bewerken en verwijderen. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Toegang tot het lezen, maken, bewerken en verwijderen van schema&#39;s en gerelateerde bronnen. |
@@ -94,6 +106,16 @@ De volgende lijst schetst de beschikbare toestemmingen voor Experience Platform 
 | [!DNL Data Management] | [!UICONTROL Manage Datasets] | Toegang tot het lezen, creëren, uitgeven, en schrappen datasets. Alleen-lezen toegang voor schema&#39;s. |
 | [!DNL Data Management] | [!UICONTROL View Datasets] | Alleen-lezen toegang voor gegevenssets en schema&#39;s. |
 | [!DNL Data Management] | [!UICONTROL Data Monitoring] | Alleen-lezen toegang tot gegevenssets en streams controleren. |
+| [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Toegang tot lezen, maken, bewerken en verwijderen in [!DNL Data Science Workspace]. |
+| [!DNL Destinations] | [!UICONTROL View Destinations] | Alleen-lezen toegang tot beschikbare weergavedoelen in de **[!UICONTROL Catalog]** tab en geverifieerde doelen in het dialoogvenster **[!UICONTROL Browse]** tab. |
+| [!DNL Destinations] | [!UICONTROL Manage Destinations] | Toegang tot het lezen, creëren, en schrappen van bestemmingsverbindingen en bestemmingsrekeningen. |
+| [!DNL Destinations] | [!UICONTROL Activate Destinations] | Biedt gebruikers de capaciteit om segmenten aan bestaande bestemmingen te activeren. Hiermee schakelt u de toewijzingsstap in de activeringsworkflow in. Deze toestemming vereist ook [!UICONTROL View Destinations] Toestemming om aan de gebruiker te worden verleend die gegevens aan bestemmingen zal activeren. |
+| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | Biedt gebruikers de capaciteit om segmenten aan bestaande bestemmingen te activeren, zonder het tonen van [toewijzingsstap](../destinations/ui/activate-batch-profile-destinations.md#mapping). Gebruikers kunnen segmenten toevoegen en verwijderen in activeringsworkflows, maar kunnen toegewezen kenmerken of identiteiten niet toevoegen of verwijderen. Deze toestemming vereist ook [!UICONTROL View Destinations] Toestemming om aan de gebruiker te worden verleend die gegevens aan bestemmingen zal activeren. |
+| [!DNL Destinations] | [!UICONTROL Manage and Activate Dataset Destinations] | Mogelijkheid om gegevenssets te lezen, te maken, te bewerken en uit te schakelen. Mogelijkheid om gegevens ook te activeren naar actieve datasets die zijn gemaakt. Deze toestemming vereist ook [!UICONTROL View Destinations] Toestemming om aan de gebruiker te worden verleend die gegevens aan bestemmingen zal activeren. |
+| [!DNL Destinations] | [!UICONTROL Destination Authoring] | Mogelijkheid om doelen te ontwerpen met [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
+| [!DNL Identity Management] | [!UICONTROL Manage Identity Namespaces] | Toegang tot het lezen, maken, bewerken en verwijderen van naamruimten. |
+| [!DNL Identity Management] | [!UICONTROL View Identity Namespaces] | Alleen-lezen toegang voor naamruimten. |
+| [!DNL Identity Management] | [!UICONTROL View Identity Graph] | Alleen-lezen toegang voor identiteitsgrafieken. |
 | [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Toegang tot gelezen, creeer, geef, en schrap datasets uit die voor klantenprofielen worden gebruikt. Alleen-lezen toegang tot beschikbare profielen. |
 | [!DNL Profile Management] | [!UICONTROL View Profiles] | Alleen-lezen toegang tot beschikbare profielen. |
 | [!DNL Profile Management] | [!UICONTROL Manage Segments] | Toegang tot het lezen, maken, bewerken en verwijderen van segmenten. |
@@ -107,31 +129,11 @@ De volgende lijst schetst de beschikbare toestemmingen voor Experience Platform 
 | [!DNL Profile Management] | [!UICONTROL Manage B2B AI] | Toegang tot het lezen, creëren, uitgeven, en schrappen montages en configuraties voor alle diensten B2B AI/ML. |
 | [!DNL Profile Management] | [!UICONTROL View B2B Profile] | Alleen-lezen toegang tot B2B-entiteitsprofielen (zoals Account, Opportunity, enzovoort), instellingen en configuraties voor alle B2B AI/ML-services en B2B-dashboardwidgets. |
 | [!DNL Profile Management] | [!UICONTROL Manage B2B Profile] | Toegang tot het lezen, maken, bewerken en verwijderen van B2B-entiteitsprofielen (zoals Account, Opportunity, enzovoort). Alleen-lezen toegang voor instellingen en configuraties voor alle B2B AI/ML-services en B2B-dashboardwidgets. |
-| [!DNL Identity Management] | [!UICONTROL Manage Identity Namespaces] | Toegang tot het lezen, maken, bewerken en verwijderen van naamruimten. |
-| [!DNL Identity Management] | [!UICONTROL View Identity Namespaces] | Alleen-lezen toegang voor naamruimten. |
-| [!DNL Identity Management] | [!UICONTROL View Identity Graph] | Alleen-lezen toegang voor identiteitsgrafieken. |
+| [!DNL Query Service] | [!UICONTROL Manage Queries] | Toegang tot het lezen, creëren, uitgeven, en schrappen van gestructureerde SQL vragen voor de gegevens van het Platform. |
+| [!DNL Query Service] | [!UICONTROL Manage Query Service Integration] | Toegang tot het creëren, bijwerken, en schrappen van niet-vervallende geloofsbrieven voor de toegang van de Dienst van de Vraag. |
 | [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Toegang tot het lezen, maken, bewerken en verwijderen van sandboxen. |
 | [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes] | Alleen-lezen toegang voor sandboxen die tot uw organisatie behoren. |
 | [!DNL Sandbox Administration] | [!UICONTROL Reset a Sandbox] | Mogelijkheid om een sandbox opnieuw in te stellen. |
-| [!DNL Destinations] | [!UICONTROL View Destinations] | Alleen-lezen toegang tot beschikbare weergavedoelen in de **[!UICONTROL Catalog]** tab en geverifieerde doelen in het dialoogvenster **[!UICONTROL Browse]** tab. |
-| [!DNL Destinations] | [!UICONTROL Manage Destinations] | Toegang tot het lezen, creëren, en schrappen van bestemmingsverbindingen en bestemmingsrekeningen. |
-| [!DNL Destinations] | [!UICONTROL Activate Destinations] | Biedt gebruikers de capaciteit om segmenten aan bestaande bestemmingen te activeren. Hiermee schakelt u de toewijzingsstap in de activeringsworkflow in. Deze toestemming vereist ook [!UICONTROL View Destinations] Toestemming om aan de gebruiker te worden verleend die gegevens aan bestemmingen zal activeren. |
-| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | Biedt gebruikers de capaciteit om segmenten aan bestaande bestemmingen te activeren, zonder het tonen van [toewijzingsstap](../destinations/ui/activate-batch-profile-destinations.md#mapping). Gebruikers kunnen segmenten toevoegen en verwijderen in activeringsworkflows, maar kunnen toegewezen kenmerken of identiteiten niet toevoegen of verwijderen. Deze toestemming vereist ook [!UICONTROL View Destinations] Toestemming om aan de gebruiker te worden verleend die gegevens aan bestemmingen zal activeren. |
-| [!DNL Destinations] | [!UICONTROL Manage and Activate Dataset Destinations] | Mogelijkheid om gegevenssets te lezen, te maken, te bewerken en uit te schakelen. Mogelijkheid om gegevens ook te activeren naar actieve datasets die zijn gemaakt. Deze toestemming vereist ook [!UICONTROL View Destinations] Toestemming om aan de gebruiker te worden verleend die gegevens aan bestemmingen zal activeren. |
-| [!DNL Destinations] | [!UICONTROL Destination Authoring] | Mogelijkheid om doelen te ontwerpen met [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
-| [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Toegang tot bronnen lezen, maken, bewerken en uitschakelen. |
-| [!DNL Data Ingestion] | [!UICONTROL View Sources] | Alleen-lezen toegang tot beschikbare bronnen in het dialoogvenster **[!UICONTROL Catalog]** tabblad en geverifieerde bronnen in het dialoogvenster **[!UICONTROL Browse]** tab. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Toegang tot creëren, goedkeuren, en de handvatten van de partner verwerpen om twee organisaties te verbinden en toe te laten [!DNL Segment Match] stromen. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Toegang tot lezen, maken, bewerken en publiceren [!DNL Segment Match] voert met actieve partners uit. |
-| [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Toegang tot lezen, maken, bewerken en verwijderen in [!DNL Data Science Workspace]. |
-| Gegevensbeheer | [!UICONTROL Manage Usage Labels] | Toegang tot het lezen, maken en verwijderen van gebruikslabels. |
-| Gegevensbeheer | [!UICONTROL Manage Data Usage Policies] | Toegang tot het lezen, maken, bewerken en verwijderen van beleidsregels voor gegevensgebruik. |
-| Gegevensbeheer | [!UICONTROL View Data Usage Policies] | Alleen-lezen toegang voor beleidsregels voor gegevensgebruik die tot uw organisatie behoren. |
-| Gegevensbeheer | [!UICONTROL View User Activity Log] | Alleen-lezen toegang tot opgenomen weergave [auditlogboeken](../landing/governance-privacy-security/audit-logs/overview.md) van platformactiviteiten. |
-| [!DNL Dashboards] | [!UICONTROL View License Usage Dashboard] | Alleen-lezen toegang om het dashboard voor het licentiegebruik weer te geven. |
-| [!DNL Dashboards] | [!UICONTROL Manage Standard Dashboards] | Voeg douanekenmerken toe die nog niet in het gegevenspakhuis zijn. |
-| [!DNL Query Service] | [!UICONTROL Manage Queries] | Toegang tot het lezen, creëren, uitgeven, en schrappen van gestructureerde SQL vragen voor de gegevens van het Platform. |
-| [!DNL Query Service] | [!UICONTROL Manage Query Service Integration] | Toegang tot het creëren, bijwerken, en schrappen van niet-vervallende geloofsbrieven voor de toegang van de Dienst van de Vraag. |
 
 ## Volgende stappen
 
