@@ -2,9 +2,9 @@
 title: Overzicht van de extensie Meta Conversions API
 description: Meer informatie over de API-extensie Meta Conversions voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: f7fdfbf9afcecb255668d5d6393b87918114b067
+source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
 workflow-type: tm+mt
-source-wordcount: '2432'
+source-wordcount: '2437'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 De [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) staat u toe om uw server-kant marketing gegevens aan te sluiten [!DNL Meta] -technologieën om uw advertentie te optimaliseren, de kosten per actie te verlagen en de resultaten te meten. Gebeurtenissen zijn gekoppeld aan een [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) ID en worden op dezelfde manier verwerkt als gebeurtenissen aan de clientzijde.
 
-Met de [!DNL Meta Conversions API] kunt u de API-mogelijkheden in uw [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) regels voor het verzenden van gegevens naar [!DNL Meta] van het Adobe Experience Platform Edge Network. In dit document wordt beschreven hoe u de extensie installeert en de mogelijkheden van de extensie gebruikt bij het doorsturen van gebeurtenissen [regel](../../../ui/managing-resources/rules.md).
+Met de [!DNL Meta Conversions API] kunt u de API-mogelijkheden in uw [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) regels voor het verzenden van gegevens naar [!DNL Meta] van de Adobe Experience Platform Edge Network. In dit document wordt beschreven hoe u de extensie installeert en de mogelijkheden van de extensie gebruikt bij het doorsturen van gebeurtenissen [regel](../../../ui/managing-resources/rules.md).
 
 ## Demo
 
@@ -53,15 +53,15 @@ Selecteer **[!UICONTROL Save]**
 
 De uitbreiding is geïnstalleerd en u kunt zijn mogelijkheden in uw gebeurtenis nu gebruiken die regels door:sturen.
 
-## Integratie met Meta Business Extension (MBE) {#mbe}
+## Integratie met de extensie Facebook en Instagram {#facebook}
 
-Dankzij de integratie met MBE-uitbreiding (Meta Business Extensions) kunt u uw account snel verifiëren in uw zakelijke account van Meta. Dit vult dan automatisch uw [!UICONTROL Pixel ID] en de Meta Conversions API [!UICONTROL Access Token], waardoor de API voor metaconversies eenvoudiger kan worden geïnstalleerd en geconfigureerd.
+Dankzij de integratie met de extensie Facebook en Instagram kunt u uw account snel verifiëren bij uw Meta Business-account. Dit vult dan automatisch uw [!UICONTROL Pixel ID] en de Meta Conversions API [!UICONTROL Access Token], waardoor de API voor metaconversies eenvoudiger kan worden geïnstalleerd en geconfigureerd.
 
-Er wordt een dialoogvenster weergegeven met de vraag of verificatie in MBE moet worden uitgevoerd wanneer u de installatie van de [!UICONTROL Meta Conversions API] extensie.
+Er wordt een dialoogvenster weergegeven met de vraag of u de verificatie in Facebook en Instagram wilt uitvoeren. [!UICONTROL Meta Conversions API] extensie.
 
 ![De [!UICONTROL Meta Conversions API Extension] markering installatiepagina [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
 
-Een dialoogherinnering om in MBE voor authentiek te verklaren verschijnt ook in het snelle begin werkschema UI binnen gebeurtenis het door:sturen.
+Een dialoogvraag om in Facebook en Instagram voor authentiek te verklaren verschijnt ook in de snel startwerkschemaUI binnen gebeurtenis het door:sturen.
 
 ![UI-markering voor snelstartworkflow [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
 
@@ -129,7 +129,7 @@ Wanneer u gedeelde gebeurtenissen verzendt, moet u een gebeurtenis-id en een naa
 
 Met de functie Snel starten kunt u eenvoudig en efficiënt werken met de API voor metaconversie en de Pixel-extensies Meta. Dit hulpmiddel automatiseert veelvoudige stappen die in Adobe markeringen en gebeurtenis door:sturen worden uitgevoerd, beduidend verminderend de opstellingstijd.
 
-Deze functie installeert en configureert automatisch de API voor metaconversie en de Pixel-extensies van Meta op nieuwe automatisch gegenereerde tags en de eigenschap voor het doorsturen van gebeurtenissen met de vereiste regels en gegevenselementen. Bovendien, installeert het ook auto en vormt het Web SDK van het Experience Platform en de Datstream. Ten slotte publiceert de functie Snel starten de bibliotheek automatisch naar de aangewezen URL in een ontwikkelomgeving, die gegevensverzameling aan de clientzijde en gebeurtenisdoorsturen aan de serverzijde in real time via Event Forwarding en Experience Platform Edge Network mogelijk maakt.
+Deze functie installeert en configureert automatisch de API voor metaconversie en de Pixel-extensies van Meta op nieuwe automatisch gegenereerde tags en de eigenschap voor het doorsturen van gebeurtenissen met de vereiste regels en gegevenselementen. Bovendien, installeert het ook auto en vormt het Web SDK van het Experience Platform en de Datstream. Ten slotte publiceert de functie Snel starten de bibliotheek automatisch naar de opgegeven URL in een ontwikkelomgeving, zodat gegevensverzameling aan de clientzijde en gebeurtenisdoorsturen aan de serverzijde in real time mogelijk zijn via Event Forwarding en Experience Platform Edge Network.
 
 In de volgende video wordt een inleiding gegeven op de functie Snel starten.
 
@@ -164,7 +164,7 @@ Van de **[!UICONTROL Add Code on Your Site]** dialoogvenster de code kopiëren d
 
 ![Code toevoegen aan het dialoogvenster van uw site](../../../images/extensions/server/meta/add-code-on-your-site.png)
 
-De [!UICONTROL Validation Results] geeft de resultaten van de implementatie van de extensie Meta weer. Selecteer **[!UICONTROL Next]**. U kunt ook aanvullende validatieresultaten zien door de optie **[!UICONTROL Assurance]** koppeling.
+De [!UICONTROL Validation Results] geeft de resultaten van de implementatie van de extensie Meta weer. Selecteren **[!UICONTROL Next]**. U kunt ook aanvullende validatieresultaten zien door de optie **[!UICONTROL Assurance]** koppeling.
 
 ![Dialoogvenster met testresultaten met de resultaten van de implementatie](../../../images/extensions/server/meta/test-results.png)
 
@@ -190,7 +190,7 @@ Om een gebeurtenis toe te voegen selecteer **[!UICONTROL Add]** onder de [!UICON
 
 ![Pagina met eigenschappen van tag die geen gebeurtenissen weergeven](../../../images/extensions/server/meta/edit-rule.png)
 
-Selecteer het [!UICONTROL Event Type]. In dit voorbeeld hebben we de [!UICONTROL Click] gebeurtenis en geconfigureerd om te activeren wanneer de **.add-to-cart-button** is geselecteerd. Selecteer **[!UICONTROL Keep Changes]**.
+Selecteer de [!UICONTROL Event Type]. In dit voorbeeld hebben we de [!UICONTROL Click] gebeurtenis en geconfigureerd om te activeren wanneer de **.add-to-cart-button** is geselecteerd. Selecteren **[!UICONTROL Keep Changes]**.
 
 ![Gebeurtenisconfiguratiescherm met klikgebeurtenis](../../../images/extensions/server/meta/event-configuration.png)
 
