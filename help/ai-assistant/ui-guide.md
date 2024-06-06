@@ -1,9 +1,10 @@
 ---
 title: AI Assistant in Adobe Experience Platform
 description: Leer hoe u met AI Assistant door Experience Platform- en Real-time Customer Data Platform-concepten kunt navigeren en deze kunt begrijpen, en hoe u informatie over uw objecten kunt gebruiken.
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
+source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1343'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ Lees deze handleiding voor meer informatie over het gebruik van AI Assistant in 
 
 Als u AI Assistant wilt starten, selecteert u de optie **[!UICONTROL AI Assistant icon]** in de bovenste koptekst van de gebruikersinterface van het Experience Platform.
 
-![De homepage van het Experience Platform, met het AI Hulp geselecteerde pictogram en de interface van AI Hulp open.](./images/ai-assistant.png)
+![De homepage van het Experience Platform, met het AI Hulp geselecteerde pictogram en de interface van AI Hulp open.](./images/ai-assistant-full-icon.png)
 
 De interface AI Assistant wordt weergegeven en bevat direct informatie die u nodig hebt om aan de slag te gaan. U kunt de opties gebruiken die onder [!UICONTROL Ideas to get started] om vragen en bevelen zoals te beantwoorden:
 
@@ -86,9 +87,13 @@ AI Assistant moet zich in een actieve sandbox bevinden om voldoende te kunnen re
 
 +++Selecteer om een voorbeeld van een vraag over operationele inzichten te bekijken
 
-In het onderstaande voorbeeld wordt aan AI Assistant de volgende query gevraagd: **&quot;Geef me de gegevensstromen weer die zijn gemaakt met de Amazon S3-bron&quot;** AI Assistant reageert vervolgens met een tabel waarin uw gegevens en de bijbehorende id&#39;s worden vermeld. Als u de hele tabel met gegevens wilt weergeven, selecteert u het pictogram voor uitvouwen rechtsboven.
+In het onderstaande voorbeeld wordt aan AI Assistant de volgende query gevraagd: **&quot;Geef me de gegevensstromen weer die zijn gemaakt met de Amazon S3-bron&quot;**.
 
-![Vervolgvraag over operationele inzichten.](./images/usage-data-question.png)
+![Een vraag over operationele inzichten.](./images/op-insights-question.png)
+
+AI Assistant reageert vervolgens met een tabel waarin uw gegevens en de bijbehorende id&#39;s worden vermeld. Als u de hele tabel met gegevens wilt weergeven, selecteert u het pictogram voor uitvouwen rechtsboven.
+
+![Een antwoord op operationele inzichten](./images/op-insights-answer.png)
 
 Er wordt een uitgebreide weergave van de tabel weergegeven, zodat u een uitgebreidere lijst met gegevensstromen krijgt op basis van de parameters van de query.
 
@@ -96,9 +101,13 @@ Er wordt een uitgebreide weergave van de tabel weergegeven, zodat u een uitgebre
 
 Als deze wordt gevraagd om een vraag over operationele inzichten, geeft AI Assistant een uitleg van de manier waarop het antwoord is berekend. In het onderstaande voorbeeld beschrijft AI Assistant de stappen die zijn uitgevoerd om de gegevensstromen te identificeren die zijn gemaakt met de [!DNL Amazon S3] bron.
 
-![Vervolgvraag over segmentdefinities die illustreren hoe AI Assistant het antwoord heeft berekend.](./images/answer-explained.png)
+![AI Assistant geeft uitleg over de manier waarop het antwoord is berekend.](./images/answer-explained.png)
 
 U kunt ook filters en wijzigingen in uw vragen opgeven en u kunt de AI Assistant de opdracht geven zijn bevindingen te genereren op basis van de filters die u opneemt. Bijvoorbeeld, kunt u AI Medewerker vragen om u een trend van de telling van segmentdefinities in de orde van hun gecreeerde datum te tonen, segmentdefinities met nul totale profielen te verwijderen, en maandnamen in plaats van gehelen te gebruiken wanneer het tonen van de gegevens.
+
+**Opmerking:** De antwoorden van de operationele inzichten zijn momenteel in bèta. Selecteer het knopinfo-pictogram in de gebruikersinterface van de AI Assistant om de bètamelding weer te geven en voor een koppeling naar de documentatie.
+
+![Knopinfo voor AI-assistent is geselecteerd.](./images/op-insights-beta-note.png)
 
 +++
 
@@ -122,7 +131,27 @@ U kunt de multi-boommogelijkheden van AI Medewerker gebruiken om een natuurlijke
 
 In het onderstaande voorbeeld wordt AI Assistant eerst gevraagd naar het totale aantal gegevensstromen en wordt vervolgens gevraagd de 10 meest recente gegevensstromen weer te geven.
 
-![Voorbeeld van meerdere bochten](./images/multi-turn.png)
+![Voorbeeld van meerdere bochten](./images/multiturn.png)
+
+Selecteer de ellipsen (**`...`**) in de interface van AI Assistant en selecteer vervolgens **[!UICONTROL Start new conversation]**. Dit informeert AI Medewerker dat u op veranderende onderwerpen van plan bent en kan bijzonder nuttig zijn wanneer het oplossen van problemenvragen die of ontbreken of van verwijzingen voorzien onjuiste informatie.
+
+![De ellipsen selecteerden en de begin nieuwe geselecteerde gespreksoptie.](./images/reset.png)
+
++++
+
+### Detectie gebruiken {#use-discoverability}
+
+U kunt de ontdekkingsfunctie van AI Assistant gebruiken om een lijst weer te geven met algemene onderwerpen, gegroepeerd in entiteiten, die door AI Assistant worden ondersteund.
+
++++Selecteren om voorbeelden van ontdekkingsmogelijkheden weer te geven
+
+Selecteer het pictogram met de gloeilamp in de bovenste koptekst van de AI Assistant-interface om de ontdekkingsmogelijkheden weer te geven.
+
+![De functie voor het opsporen van AI Assistant.](./images/lightbulb.png)
+
+Selecteer vervolgens een categorie en selecteer vervolgens een vraag in de opgegeven lijst. U kunt deze functie gebruiken om een beter idee te krijgen van de typen vragen die AI Assistant kan beantwoorden. U kunt de bestaande aanwijzingen ook bijwerken met specifieke gegevens die betrekking hebben op uw sandbox met behulp van vrije tekst of [automatisch aanvullen](#use-auto-complete).
+
+![De AI Assistant geeft aanleiding tot ontdekkingsmogelijkheden.](./images/prompt.png)
 
 +++
 
@@ -133,8 +162,6 @@ U kunt feedback over uw ervaringen met AI Assistant opgeven met de opties die bi
 Als u feedback wilt opgeven, selecteert u duimen omhoog, duimen omlaag of een markering nadat u een reactie van de AI-assistent hebt ontvangen. Vervolgens voert u uw feedback in het opgegeven tekstvak in.
 
 ![De feedbackoptie in AI Assistant.](./images/provide-feedback.png)
-
-Selecteer de ellipsen (**`...`**) in de interface van AI Assistant en selecteer vervolgens **[!UICONTROL Start new conversation]**. Dit informeert AI Medewerker dat u op veranderende onderwerpen van plan bent en kan bijzonder nuttig zijn wanneer het oplossen van problemenvragen die of ontbreken of van verwijzingen voorzien onjuiste informatie.
 
 +++Selecteren om meer voorbeelden weer te geven
 
