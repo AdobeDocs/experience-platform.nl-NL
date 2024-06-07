@@ -5,9 +5,9 @@ breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Gegevens uit diverse bronnen verzamelen. Leer hoe u reeds opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
+source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1046'
 ht-degree: 0%
 
 ---
@@ -350,6 +350,7 @@ ht-degree: 0%
       - [Dataflow van protocolverbinding](tutorials/ui/dataflow/protocols.md)
    - [Een gegevensstroom voor bronnen maken met sjablonen in de gebruikersinterface](tutorials/ui/templates.md)
    - [Bronobjecten filteren](tutorials/ui/filter.md)
+   - [Gecodeerde gegevens verzamelen](tutorials/ui/encryped-ingestion.md)
    - [Op aanvraag inslikken](tutorials/ui/on-demand-ingestion.md)
    - [Batchgegevens controleren](tutorials/ui/monitor.md)
    - [Streaming gegevens bijhouden](tutorials/ui/monitor-streaming.md)
