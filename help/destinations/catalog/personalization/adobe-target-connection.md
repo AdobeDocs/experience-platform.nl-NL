@@ -3,9 +3,9 @@ keywords: doelpersonalisatie; bestemming; ervaring doelbestemming platform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: ddc15a36e83ebe059f3b4f81f3feccb2d3a4a4f0
+source-git-commit: e5c34ffb9b27ddad0c6523a7279fdf712c84f3ff
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1526'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
-| April 2024 | Bijwerken van functionaliteit en documentatie | Wanneer u verbinding maakt met het doel Doel met behulp van een gegevensstroom-id, kunt u nu *niet nodig* om noodzakelijk de gegevensstroom voor randsegmentatie toe te laten. Dit betekent dat de bestemming van het Doel met partij en het stromen publiek zal werken, hoewel de gebruiksgevallen die u kunt verwezenlijken verschillen. De tabel weergeven in het dialoogvenster [verbindingsparameters](#parameters) voor meer informatie. |
+| April 2024 | Bijwerken van functionaliteit en documentatie | Wanneer u verbinding maakt met het doel Doel en een gegevensstroom-id gebruikt, kunt u nu *niet nodig* om noodzakelijk de gegevensstroom voor randsegmentatie toe te laten. Dit betekent dat de bestemming van het Doel met partij en het stromen publiek zal werken, hoewel de gebruiksgevallen die u kunt verwezenlijken verschillen. De tabel weergeven in het dialoogvenster [verbindingsparameters](#parameters) voor meer informatie. |
 | Januari 2024 | Bijwerken van functionaliteit en documentatie | U kunt nu soorten publiek- en profielkenmerken delen met de Adobe Target-verbinding voor de standaardproductiesandbox en andere niet-standaardsandboxen. |
 | Juni 2023 | Bijwerken van functionaliteit en documentatie | Vanaf juni 2023 kunt u bij het configureren van een nieuwe Adobe Target-doelverbinding de Adobe Target-werkruimte selecteren waarnaar u het publiek wilt delen. Zie de [verbindingsparameters](#parameters) voor meer informatie. Raadpleeg de zelfstudie over [werkruimten configureren](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) in Adobe Target voor meer informatie over werkruimten. |
 | Mei 2023 | Bijwerken van functionaliteit en documentatie | Vanaf mei 2023 **[!UICONTROL Adobe Target]** verbinding wordt ondersteund [kenmerkgebaseerde personalisatie](../../ui/activate-edge-personalization-destinations.md#map-attributes) en is algemeen beschikbaar voor alle klanten. |
@@ -62,9 +62,9 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 >[!IMPORTANT]
 >
->De soorten publiek die u naar deze bestemming activeert, moeten de [Samenvoegingsbeleid actief op rand](../../../segmentation/ui/segment-builder.md#merge-policies). De [!DNL Active-On-Edge] samenvoegingsbeleid zorgt ervoor dat het publiek constant wordt geëvalueerd [op de rand](../../../segmentation/ui/edge-segmentation.md) en zijn beschikbaar voor het gebruiksgeval van de verpersoonlijking in real time en volgende pagina.
-> Als u publiek in kaart brengt die een verschillend samenvoegbeleid aan randbestemmingen gebruiken, zullen die publiek niet worden geëvalueerd.
-> Volg de instructies op [samenvoegingsbeleid maken](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)en zorgt ervoor dat de **[!UICONTROL Active-On-Edge Merge Policy]** schakelen.
+>Bij activering *randpubliek voor gebruiksgevallen voor personalisatie op dezelfde pagina en op de volgende pagina*, het publiek *moet* een [actief-op-rand samenvoegbeleid](../../../segmentation/ui/segment-builder.md#merge-policies). De [!DNL active-on-edge] samenvoegingsbeleid zorgt ervoor dat het publiek constant wordt geëvalueerd [op de rand](../../../segmentation/ui/edge-segmentation.md) en zijn beschikbaar voor gebruiksgevallen voor realtime en paginagrootte personalisatie.  Meer informatie [alle beschikbare gebruiksgevallen](#parameter), op basis van het implementatietype.
+>Als u randpubliek toewijst dat een verschillend fusiebeleid aan de bestemmingen van Adobe Target gebruikt, zullen die publiek niet voor real time en volgende-paginagebeurtenissen worden geëvalueerd.
+>Volg de instructies op [samenvoegingsbeleid maken](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)en zorgt ervoor dat de **[!UICONTROL Active-On-Edge Merge Policy]** schakelen.
 
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
