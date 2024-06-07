@@ -1,12 +1,12 @@
 ---
 title: Overzicht van doorzending van gebeurtenissen
-description: Ontdek meer over het doorsturen van gebeurtenissen in Adobe Experience Platform, waarmee u het Platform Edge Network kunt gebruiken om taken uit te voeren zonder uw tag-implementatie te wijzigen.
+description: Leer over gebeurtenis door:sturen in Adobe Experience Platform, die u toestaat om de Edge Network van het Platform te gebruiken om taken uit te voeren zonder uw markeringsimplementatie te veranderen.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 16f9ee9d14326f857b444c2361b894aca06b04d6
 workflow-type: tm+mt
-source-wordcount: '1151'
-ht-degree: 2%
+source-wordcount: '1169'
+ht-degree: 0%
 
 ---
 
@@ -51,7 +51,7 @@ In termen van configuratie, gebruikt het door:sturen van gebeurtenissen veel van
 
 Terwijl de markeringen gebeurtenisgegevens direct van uw plaats of inheemse mobiele toepassing gebruikend het Web van het Platform en Mobiele SDKs verzamelt, vereist gebeurtenis het door:sturen gebeurtenisgegevens om reeds door de Edge Network van het Platform worden verzonden om het aan bestemmingen door te sturen. Met andere woorden, moet u het Web van het Platform of Mobiele SDK van het Platform op uw digitale bezit (of door markeringen of het gebruiken van ruwe code) uitvoeren om gebeurtenis te gebruiken door:sturen.
 
-### Properties {#properties}
+### Eigenschappen {#properties}
 
 Het door:sturen van de gebeurtenis handhaaft zijn eigen opslag van eigenschappen los van markeringen, die u in de UI van het Experience Platform of UI van de Inzameling van Gegevens kunt bekijken door te selecteren **[!UICONTROL Event Forwarding]** in de linkernavigatie.
 
@@ -112,6 +112,12 @@ De [!UICONTROL Actions] sectie van een gebeurtenis die regel door:sturen wordt a
 ## Geheimen {#secrets}
 
 Gebeurtenis door:sturen staat u toe om, geheimen tot stand te brengen te leiden en op te slaan die kunnen worden gebruikt om aan de servers voor authentiek te verklaren die u gegevens verzendt naar. Zie de handleiding op [geheimen](./secrets.md) over de verschillende soorten beschikbare geheime types en hoe zij in UI worden uitgevoerd.
+
+## Video-overzicht {#video}
+
+De volgende video is bedoeld om u te helpen Gebeurtenis door:sturen en de verbindingen van Real-Time CDP beter begrijpen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429308)
 
 ## Volgende stappen
 
