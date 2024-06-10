@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Toewijzingsfuncties voor gegevenspremies
 description: Dit document introduceert de toewijzingsfuncties die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: ac90dc055a1e4d1d8127899f668e619deab2d19e
+source-git-commit: 6509447ff2e67eac7b6b41754981cd18eb52562e
 workflow-type: tm+mt
-source-wordcount: '5792'
-ht-degree: 1%
+source-wordcount: '5805'
+ht-degree: 0%
 
 ---
 
@@ -25,11 +25,13 @@ Als deze conventie niet wordt gevolgd door een veldnaam, moet de veldnaam worden
 >
 >Wanneer het in wisselwerking staan met hiërarchieën, als een kindattribuut een periode (`.`), moet u een backslash gebruiken (`\`) gebruiken om speciale tekens te verwijderen. Lees voor meer informatie de handleiding op [speciale tekens verwijderen](home.md#escape-special-characters).
 
-Als een veldnaam ook **alle** van de volgende gereserveerde trefwoorden: `${}`:
+Als een veldnaam **alle** van de volgende gereserveerde trefwoorden: `${}{}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors, do, function, empty, size
 ```
+
+Daarnaast bevatten gereserveerde trefwoorden ook alle mapfuncties die op deze pagina worden vermeld.
 
 Gegevens binnen subvelden zijn toegankelijk met behulp van de puntnotatie. Als er bijvoorbeeld een `name` -object, om toegang te krijgen tot `firstName` veld, gebruiken `name.firstName`.
 
@@ -52,7 +54,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | substr | Retourneert een subtekenreeks van een bepaalde lengte. | <ul><li>INVOER: **Vereist** De invoertekenreeks.</li><li>START_INDEX: **Vereist** De index van de invoertekenreeks waar de subtekenreeks begint.</li><li>LENGTE: **Vereist** De lengte van de subtekenreeks.</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr(&quot;This is a substring test&quot;, 7, 8) | &quot; a subst&quot; |
 | lager /<br>lcase | Zet een tekenreeks om in kleine letters. | <ul><li>INVOER: **Vereist** De tekenreeks die wordt omgezet in kleine letters.</li></ul> | lower (INPUT) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hallo&quot; |
 | upper /<br>kauwen | Zet een tekenreeks om in hoofdletters. | <ul><li>INVOER: **Vereist** De tekenreeks die wordt omgezet in hoofdletters.</li></ul> | upper(INPUT) | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | HELLO |
-| split | Splitst een invoertekenreeks op een scheidingsteken. Het volgende scheidingsteken **behoeften** te ontsnappen `\`: `\`. Als u meerdere scheidingstekens opneemt, wordt de tekenreeks gesplitst **alle** van de scheidingstekens in de tekenreeks. **Opmerking:** Deze functie retourneert alleen indexen die niet &#39;null&#39; zijn van de tekenreeks, ongeacht de aanwezigheid van het scheidingsteken. Wanneer alle indexen, inclusief null, in de resulterende array zijn vereist, gebruikt u in plaats daarvan de functie &quot;explode&quot;. | <ul><li>INVOER: **Vereist** De invoertekenreeks die wordt gesplitst.</li><li>SCHEIDINGSTEKEN: **Vereist** De tekenreeks die wordt gebruikt om de invoer te splitsen.</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
+| splitsen | Splitst een invoertekenreeks op een scheidingsteken. Het volgende scheidingsteken **behoeften** te ontsnappen `\`: `\`. Als u meerdere scheidingstekens opneemt, wordt de tekenreeks gesplitst **alle** van de scheidingstekens in de tekenreeks. **Opmerking:** Deze functie retourneert alleen indexen die niet &#39;null&#39; zijn van de tekenreeks, ongeacht de aanwezigheid van het scheidingsteken. Wanneer alle indexen, inclusief null, in de resulterende array zijn vereist, gebruikt u in plaats daarvan de functie &quot;explode&quot;. | <ul><li>INVOER: **Vereist** De invoertekenreeks die wordt gesplitst.</li><li>SCHEIDINGSTEKEN: **Vereist** De tekenreeks die wordt gebruikt om de invoer te splitsen.</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
 | join | Hiermee wordt een lijst met objecten samengevoegd met het scheidingsteken. | <ul><li>SCHEIDINGSTEKEN: **Vereist** De tekenreeks die wordt gebruikt om de objecten te verbinden.</li><li>OBJECTEN: **Vereist** Een array van tekenreeksen die worden gekoppeld.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Hello world&quot; |
 | lpad | Hiermee wordt de linkerzijde van een tekenreeks met de andere opgegeven tekenreeks geplakt. | <ul><li>INVOER: **Vereist** De tekenreeks die wordt opgevuld. Deze tekenreeks kan null zijn.</li><li>TELLING: **Vereist** De grootte van de tekenreeks die moet worden opgevuld.</li><li>TOEVOEGEN: **Vereist** De tekenreeks waarmee de invoer moet worden geplakt. Als deze null of leeg is, wordt deze behandeld als één spatie.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzyzybat&quot; |
 | rpad | Hiermee wordt de rechterzijde van een tekenreeks overgeladen met de andere opgegeven tekenreeks. | <ul><li>INVOER: **Vereist** De tekenreeks die wordt opgevuld. Deze tekenreeks kan null zijn.</li><li>TELLING: **Vereist** De grootte van de tekenreeks die moet worden opgevuld.</li><li>TOEVOEGEN: **Vereist** De tekenreeks waarmee de invoer moet worden geplakt. Als deze null of leeg is, wordt deze behandeld als één spatie.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
@@ -60,7 +62,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | right | Haalt de laatste &#39;n&#39;-tekens van de opgegeven tekenreeks op. | <ul><li>STRING: **Vereist** De tekenreeks waarvoor u de laatste &#39;n&#39;-tekens ontvangt.</li><li>TELLING: **Vereist** De &#39;n&#39; tekens die u uit de tekenreeks wilt halen.</li></ul> | right (STRING, COUNT) | right(&quot;abcde&quot;, 2) | &quot;de&quot; |
 | ltrim | Verwijdert de witruimte aan het begin van de tekenreeks. | <ul><li>STRING: **Vereist** De tekenreeks waaruit u de witruimte wilt verwijderen.</li></ul> | ltrim(STRING) | ltrim(&quot; hello&quot;) | &quot;hallo&quot; |
 | rtrim | Verwijdert de witruimte aan het einde van de tekenreeks. | <ul><li>STRING: **Vereist** De tekenreeks waaruit u de witruimte wilt verwijderen.</li></ul> | rtrim(STRING) | rtrim(&quot;hello &quot;) | &quot;hallo&quot; |
-| trim | Verwijdert de witruimte van het begin en het einde van de tekenreeks. | <ul><li>STRING: **Vereist** De tekenreeks waaruit u de witruimte wilt verwijderen.</li></ul> | trim (STRING) | trim(&quot; hello &quot;) | &quot;hallo&quot; |
+| bijsnijden | Verwijdert de witruimte van het begin en het einde van de tekenreeks. | <ul><li>STRING: **Vereist** De tekenreeks waaruit u de witruimte wilt verwijderen.</li></ul> | trim (STRING) | trim(&quot; hello &quot;) | &quot;hallo&quot; |
 | equals | Vergelijkt twee tekenreeksen om te bevestigen of deze gelijk zijn. Deze functie is hoofdlettergevoelig. | <ul><li>STRING1: **Vereist** De eerste tekenreeks die u wilt vergelijken.</li><li>STRING2: **Vereist** De tweede tekenreeks die u wilt vergelijken.</li></ul> | TEKENREEKS1. &#x200B;equals( &#x200B; STRING2) | &quot;string1&quot;. &#x200B;equals &#x200B;(&quot;STRING1&quot;) | false |
 | equalsIgnoreCase | Vergelijkt twee tekenreeksen om te bevestigen of deze gelijk zijn. Deze functie is **niet** hoofdlettergevoelig. | <ul><li>STRING1: **Vereist** De eerste tekenreeks die u wilt vergelijken.</li><li>STRING2: **Vereist** De tweede tekenreeks die u wilt vergelijken.</li></ul> | TEKENREEKS1. &#x200B;equalsIgnoreCase &#x200B;(STRING2) | &quot;string1&quot;. &#x200B;equalsIgnoreCase &#x200B;(&quot;STRING1) | true |
 
@@ -275,7 +277,7 @@ Voor meer informatie over apparaatveldwaarden leest u de [lijst met apparaatveld
 | Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | Extraheert de naam van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_name &#x200B;(USER_AGENT) | ua_os_name &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
-| ua_os_version_major | Extraheert de belangrijkste versie van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_version_major &#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
+| ua_os_version_major | Extraheert de belangrijkste versie van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_version_major &#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | IOS 5 |
 | ua_os_version | Extraheert de versie van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_version &#x200B;(USER_AGENT) | ua_os_version &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1. |
 | ua_os_name_version | Extraheert de naam en de versie van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_name_version &#x200B;(USER_AGENT) | ua_os_name_version &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
 | ua_agent_version | Extraheert de agentenversie uit het koord van de gebruikersagent. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_agent_version &#x200B;(USER_AGENT) | ua_agent_version &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5,1 |
@@ -362,7 +364,7 @@ In de onderstaande tabel ziet u een lijst met gereserveerde tekens en de bijbeho
 | --- | --- |
 | spatie | %20 |
 | ! | %21 |
-| ’ | %2 |
+| &quot; | %2 |
 | Aantal | %23 |
 | $ | %24 |
 | % | %25 |
@@ -399,7 +401,7 @@ In de onderstaande tabel wordt een lijst met apparaatveldwaarden en de bijbehore
 | Desktop | Een desktop of laptop. |
 | Anonymiet | Een anoniem apparaat. In sommige gevallen gaat het om `useragents` die zijn gewijzigd door een anonimisatiesoftware. |
 | Onbekend | Een onbekend apparaat. Dit zijn meestal `useragents` die geen informatie over het apparaat bevatten. |
-| Mobile | Een mobiel apparaat dat nog moet worden geïdentificeerd. Dit mobiele apparaat kan een eReader, een tablet, een telefoon, een horloge, enz. zijn. |
+| Mobiel | Een mobiel apparaat dat nog moet worden geïdentificeerd. Dit mobiele apparaat kan een eReader, een tablet, een telefoon, een horloge, enz. zijn. |
 | Tablet | Een mobiel apparaat met een groot scherm (gewoonlijk > 7 inch). |
 | Telefoon | Een mobiel apparaat met een klein scherm (doorgaans &lt; 7 inch). |
 | Controle | Een mobiel apparaat met een klein scherm (normaal &lt; 2 inch). Deze apparaten werken normaal als extra scherm voor een telefoon/tablettype van apparaat. |
