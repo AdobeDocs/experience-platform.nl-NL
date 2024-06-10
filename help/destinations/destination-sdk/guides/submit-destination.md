@@ -2,9 +2,9 @@
 description: Deze pagina verstrekt alle informatie u voor overzicht een geproduceerde bestemming moet voorleggen die gebruikend Destination SDK wordt authored.
 title: Ter controle een productiebestemming verzenden die is geschreven in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,17 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* Het hier gedocumenteerde proces wordt slechts vereist voor partners die geproduceerde (openbare) bestemmingen voorleggen. Als u een privé bestemming voor uw eigen gebruik creeert, te hoeven u niet om deze materialen te produceren en te delen met Adobe.
+>* Het hier gedocumenteerde proces wordt slechts vereist voor partners die geproduceerde (openbare) bestemmingen voorleggen. Als u een privé bestemming voor uw eigen gebruik creeert, te hoeven u niet om deze materialen met Adobe te produceren en te delen.
 >
->* Publicatietijd Adobe is vijf werkdagen.
+>* De standaardresponstijd van de Adobe voor het controleren van publicatieverzoeken voor doelen is vijf werkdagen.
 >
 >* Als het team van de Adobe u vraagt om het even welke updates aan uw configuraties na uw aanvankelijke voorlegging aan te brengen, moet u een ander bestemmingspublicatieverzoek voorleggen nadat u de updates aanbrengt.
 >
 >* Zelfs nadat uw bestemming in de catalogus van het Experience Platform levend is, als u om het even welke updates aan uw configuraties moet maken, moet u een nieuw doel voorleggen publicatieverzoek voor de updates die in de configuraties moeten worden weerspiegeld.
+>
+>* De tijdlijn van de revisie en de vereiste artefacten zijn het zelfde voor nieuwe bestemmingen en bestaande bestemmingen die u bijwerkt.
 
-Voordat uw bestemming kan worden gepubliceerd naar de [Catalogus Experience Platform-doelen](/help/destinations/catalog/overview.md), moet u Adobe bepaalde informatie geven over de bestemming en de uitgevoerde tests om ervoor te zorgen dat gebruikers de best mogelijke ervaring hebben met het activeren van gegevens op uw platform.
+Voordat uw bestemming kan worden gepubliceerd naar de [Catalogus Experience Platform-doelen](/help/destinations/catalog/overview.md), moet u de Adobe bepaalde informatie geven over de bestemming en de uitgevoerde tests om ervoor te zorgen dat gebruikers de best mogelijke ervaring hebben bij het activeren van gegevens op uw platform.
 
 Deze pagina bevat alle informatie die u moet opgeven wanneer u een bestemming verzendt of bijwerkt die u met Adobe Experience Platform Destination SDK hebt gemaakt. Als u een bestemming in Adobe Experience Platform wilt verzenden, stuurt u een e-mail naar <aepdestsdk@adobe.com> waaronder:
 
@@ -243,11 +245,11 @@ Tot slot moet u een of andere vorm van bewijs verstrekken dat de gegevens met su
 
 * Screenshots of een korte video van het schermvangst waar u het dossier manueel van de opslagplaats neemt en het in uw systeem opneemt.
 * Screenshots of een korte video van het schermvangst waar UI van uw systeem bevestigt dat filename die door Experience Platform wordt geproduceerd met succes in uw systeem werd opgenomen.
-* Loglijnen van uw systeem die Adobe met of filename of met de gegevens kan correleren die van Experience Platform worden geproduceerd.
+* Loglijnen van uw systeem die de Adobe met of filename of met de gegevens kan correleren die van Experience Platform worden geproduceerd.
 
 ## Bewijs dat u een bestemmings het publiceren verzoek hebt ingediend {#destination-publishing-request-proof}
 
-Nadat u de bestemming hebt getest, moet u [doel-publicatie-API](../publishing-api/create-publishing-request.md) om de bestemming voor overzicht en publicatie naar Adobe te verzenden.
+Nadat u de bestemming hebt getest, moet u [doel-publicatie-API](../publishing-api/create-publishing-request.md) om de bestemming voor overzicht en publicatie naar de Adobe te verzenden.
 
 Geef de id van de publicatieaanvraag voor uw doel op. Voor informatie over het ophalen van de id van de publicatieaanvraag leest u hoe u [doel-publicatieverzoeken ophalen](../publishing-api/retrieve-publishing-request.md).
 
@@ -265,4 +267,4 @@ De afbeeldingsvereisten zijn:
 
 ## Voorbeelde-mail downloaden {#download-sample-email}
 
-[Downloaden](../assets/guides/sample-email-submit-destination.rtf) een voorbeeld-e-mail met alle informatie die u aan Adobe moet verstrekken.
+[Downloaden](../assets/guides/sample-email-submit-destination.rtf) een voorbeeld-e-mail met alle informatie die u aan de Adobe moet verstrekken.
