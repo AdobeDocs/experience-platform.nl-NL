@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt of opslagplaats te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: 9c59f6edd51c61c1fe2ff69e0adea49e6efb8745
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,88 @@ Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u t
 De documentatie van de Destination SDK verstrekt instructies voor u om het Adobe Experience Platform Destination SDK te gebruiken om een productievere bestemmingsintegratie met Adobe Experience Platform te vormen, te testen en vrij te geven, en uw bestemming te hebben deel van de steeds groeiende bestemmingscatalogus worden. Door Destination SDK te gebruiken, kunt u uw eigen douane privé bestemming ook tot stand brengen om gegevens uit te voeren die aan uw behoeften worden aangepast.
 
 ![Schermafbeelding van de gebruikersinterface van het Experience Platform en de doelcatalogus.](assets/destinations-catalog-overview.png)
+
+## Snel starten - essentiële informatie verkennen {#quick-start}
+
+Controleer de documentatie in de onderstaande koppelingen om snel aan de slag te gaan met het configureren en verzenden van uw bestemming via Destination SDK.
+
+>[!BEGINSHADEBOX]
+
+<table style="border: 0;">
+  <tbody>
+    <tr>
+        <td>
+            <p><b>Configuratiepagina</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">Alle configuratieopties worden beschreven</a></li>
+                <li> Configuratie doelserver - <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">serverspecificaties</a> en <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">sjabloonspecificaties</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">Gegevensvelden van de klant en andere onderdelen van de doelconfiguratie</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Sjablonen en macro's</a></li>
+            </ul>
+        </td>
+        <td>
+            <p><b>Handleidingen</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/overview.md#process">Integratieproces op hoog niveau</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">Een streamingbestemming configureren</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-file-based-destination-instructions.md">Een op een bestand gebaseerde bestemming configureren</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md">Vorm een bestemming om perspectiefprofielen uit te voeren</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/submit-destination.md">Doel verzenden voor publicatie</a></li>
+            </ul>
+        </td>
+                <td>
+            <p><b>API-verwijzingen</b></p>
+            <ul>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-servers-and-templates">API-referentie voor eindpunt doelserver</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-configurations">Referentie voor eindpunt-API van bestemming</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Audience-metadata-templates">Referentie voor API van audiometagegevens</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-testing">Referentie voor API testen</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-publishing">Referentie voor publicatie-API van bestemming</a></li>
+            </ul>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="border: 0;">
+  <tbody>
+    <tr>
+        <td>
+            <p><b>Een streamingdoel configureren - een bedriegblad</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">Vorm een het stromen bestemmingsgids van begin tot eind</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">Gegevenstransformatie begrijpen met Pebble-sjablonen</a> en <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">ondersteunde sjabloonfuncties weergeven</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">Beleid voor gegevenssamenvoeging begrijpen</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Voorbeeld van actieve configuratie</a></li>
+                <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">Streaming doel testen</a></li>
+            </ul>
+        </td>
+        <td>
+            <p><b>Een op een bestand gebaseerde bestemming configureren - voorblad</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-file-based-destination-instructions.md">Vorm een op dossier-gebaseerde bestemmingsgids van begin tot eind</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md">Bestandsindelingen configureren voor de geëxporteerde bestanden</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md">Live-configuratievoorbeeld voor een Amazon S3-bestemming</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md">Batchconfiguratie</a> voor schema voor het exporteren van bestanden en bestandsnaamgeving</li>
+                <li><a href="/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md">Bestandsgebaseerde bestemming testen</a></li>
+            </ul>
+        </td>
+        <td>
+            <p><b>Overige essentiële informatie</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/getting-started.md#obtain-authentication-credentials">Verkrijg vereiste authentificatiegeloofsbrieven om API te gebruiken</a></li>
+                <li><a href="/help/destinations/destination-sdk/integration-prerequisites.md">Integratievereisten</a></li>
+                <li><a href="/help/destinations/destination-sdk/glossary.md">Woordenlijst met termen van Destination SDK</a></li>                
+                <li><a href="/help/destinations/destination-sdk/functionality/rate-limiting-retry-policy.md">Tarieflimieten en beleid voor opnieuw uitproberen</a></li>
+                <li><a href="/help/destinations/destination-sdk/docs-framework/self-service-template.md">Zelfbedieningssjabloon om uw doel te documenteren</a></li>
+            </ul>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+
+>[!ENDSHADEBOX]
 
 ## Productie- en aangepaste integratie {#productized-custom-integrations}
 
@@ -83,6 +165,6 @@ Het proces om uw bestemming in Experience Platform te vormen wordt hieronder ges
 
 Adobe raadt u aan de volgende documentatie van het Experience Platform te lezen en te begrijpen:
 
-* [Overzicht Adobe Experience Platform-bestemmingen](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=nl)
+* [Overzicht Adobe Experience Platform-bestemmingen](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html)
 * [Basis van XDM-schemacompositie](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html)
-* [Overzicht naamruimte identiteit](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl)
+* [Overzicht naamruimte identiteit](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html)

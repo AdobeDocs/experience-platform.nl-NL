@@ -2,9 +2,9 @@
 description: Gebruik publieksmetagegevenssjablonen om publiek in uw bestemming programmatisch te maken, bij te werken of te verwijderen. Adobe verstrekt een verlengbaar malplaatje van publieksmeta-gegevens, dat u kunt vormen gebaseerd op de specificaties van uw marketing API. Nadat u het malplaatje bepaalt, test en voorlegt, zal het door Adobe worden gebruikt om de API vraag aan uw bestemming te structureren.
 title: Metagegevensbeheer voor het publiek
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -523,7 +523,7 @@ Merk op dat in sommige voorbeelden macrogebieden zoals `{{authData.accessToken}}
 
 Beschrijvingen van alle parameters in de sjabloon zoeken in het dialoogvenster [Een publiekssjabloon maken](../metadata-api/create-audience-template.md) API-referentie.
 
-## Macro&#39;s die in publieksmeta-gegevensmalplaatjes worden gebruikt
+## Macro&#39;s die in publieksmeta-gegevensmalplaatjes worden gebruikt {#macros}
 
 Om informatie zoals publiek IDs, toegangstoken, foutenmeldingen, en meer tussen Experience Platform en uw API over te gaan, omvatten de publiekssjablonen macro&#39;s die u kunt gebruiken. Hieronder vindt u een beschrijving van de macro&#39;s die worden gebruikt in de drie configuratievoorbeelden op deze pagina:
 

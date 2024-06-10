@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor publicati
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
+source-git-commit: e0f4ee0ae0f14df43bfe36375d8fe8e9eac79369
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1224'
 ht-degree: 0%
 
 ---
@@ -216,6 +216,7 @@ ht-degree: 0%
    * [Overzicht](./destination-sdk/overview.md)
    * [Integratievereisten](./destination-sdk/integration-prerequisites.md)
    * [Aan de slag met Destination SDK](./destination-sdk/getting-started.md)
+   * [Woordenlijst](/help/destinations/destination-sdk/glossary.md)
    * Functionaliteit {#functionality}
       * [Configuratieopties](./destination-sdk/functionality/configuration-options.md)
       * Bestemmingsservercomponenten {#destination-server}
