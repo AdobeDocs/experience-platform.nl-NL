@@ -3,11 +3,10 @@ title: API-eindpunt voor inhoud
 description: Leer hoe u uw toegangsgegevens kunt ophalen met de Privacy Service-API.
 role: Developer
 badgePrivateBeta: label="Private Bèta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: c527771e051d39032642afae33945a45e5183a5f
+exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
+source-git-commit: e3a453ad166fe244b82bd1f90e669579fcf09d17
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -18,15 +17,13 @@ ht-degree: 0%
 >
 >De `/content` het eindpunt is momenteel in bèta en uw organisatie heeft tot nog toe geen toegang tot het. De functionaliteit en documentatie kunnen worden gewijzigd.
 
-<!-- Q) Should this be called 'access information' or 'customer content'? -->
-
-Geniet van uitgebreide beveiliging bij het ophalen van &#39;toegangsgegevens&#39; (de informatie die een privacybetrokkene terecht kan opvragen). De download-URL in het antwoord op een `/jobs/{JOB_ID}` Het verzoek van GET verwijst nu naar een de diensteindpunt van Adobe. U kunt dan een verzoek tot GET indienen aan `/jobs/:JOB_ID/content` om uw klantgegevens in JSON-indeling te retourneren. Deze toegangsmethode voert veelvoudige lagen van authentificatie en toegangsbeheer uit om veiligheid te verbeteren.
+Gebruik de `/content` eindpunt om veilig terug te winnen *toegangsinformatie* (de informatie die een privacyonderwerp terecht kan aanvragen om toegang) voor uw klanten. De download-URL in het antwoord op een `/jobs/{JOB_ID}` Het verzoek van GET verwijst naar een de diensteindpunt van Adobe. U kunt dan een verzoek tot GET indienen aan `/jobs/:JOB_ID/content` om uw klantgegevens in JSON-indeling te retourneren. Deze toegangsmethode voert veelvoudige lagen van authentificatie en toegangsbeheer uit om veiligheid te verbeteren.
 
 Voordat u deze handleiding kunt gebruiken, raadpleegt u de [gids Aan de slag](./getting-started.md) voor informatie over de vereiste authentificatiekoppen die in de voorbeeld API vraag hieronder worden voorgesteld.
 
 >[!TIP]
 >
->Als u momenteel niet baanidentiteitskaart voor de toegangsinformatie kent u vereist, doe een vraag aan `/jobs`eindpunt en gebruik extra vraagparameters om de resultaten te filtreren. Een volledige lijst van de beschikbare vraagparameters kan in worden gevonden [eindgebruikershandleiding voor privacytaken](./privacy-jobs.md).
+>Als u momenteel niet baanidentiteitskaart voor de toegangsinformatie kent u vereist, doe een vraag aan `/jobs` eindpunt en gebruik extra vraagparameters om de resultaten te filtreren. Een volledige lijst van de beschikbare vraagparameters kan in worden gevonden [eindgebruikershandleiding voor privacytaken](./privacy-jobs.md).
 
 ## Taakgegevens over privacy ophalen
 
@@ -81,7 +78,7 @@ Een geslaagde reactie retourneert de details van de opgegeven taak.
         "processedDate":"04/12/2024 04:08 PM GMT",
         "productStatusResponse":{"status":"submitted"
         }}],
-    "downloadUrl":"https://platform-stage.adobe.io/data/core/privacy/jobs/dbe3a6a6-f8e6-11ee-a365-8d1d6df81cc5/content",
+    "downloadUrl":"https://platform.adobe.io/data/core/privacy/jobs/dbe3a6a6-f8e6-11ee-a365-8d1d6df81cc5/content",
     "regulation":"gdpr"
 }
 ```
@@ -144,10 +141,3 @@ curl -X GET \
 
 De reactie is een ZIP-bestand (*.zip). De informatie wordt doorgaans geretourneerd in JSON-indeling, maar dat kan niet worden gegarandeerd. Geëxtraheerde gegevens kunnen in elke indeling worden geretourneerd.
 
-<!-- ## Constraints {#constraints}
-
-During this private beta, the following constraints apply when using the `/content` endpoint:
-
-- The new `/content` download URL is only available in STAGE environments. It is not yet available in PROD environments
-- The `downloadUrl` should not be present in the JSON response unless the job has a `complete` status. Within the beta, the `downloadUrl` appears before a privacy job is complete.
-- The `downloadUrl` is also currently provided for `delete` jobs (which should never have a download URL). -->
