@@ -3,7 +3,7 @@ title: Records verwijderen
 description: Leer hoe u records verwijdert in de gebruikersinterface van Adobe Experience Platform.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: d9d2ab2da87adce45242cbb0c4132a4d17fcc4a6
+source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
 workflow-type: tm+mt
 source-wordcount: '1500'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Gebruik de [[!UICONTROL Data Lifecycle] werkruimte](./overview.md) om records in
 
 ## Vereisten {#prerequisites}
 
-Voor het verwijderen van records moet u goed begrijpen hoe identiteitsvelden in Experience Platform werken. Specifiek, moet u de primaire identiteitswaarden van de entiteiten kennen waarvan verslagen u wilt schrappen, afhankelijk van de dataset (of datasets) u hen van schrapt.
+Voor het verwijderen van records moet u goed begrijpen hoe identiteitsvelden in Experience Platform werken. Specifiek, moet u de waarden van identiteitsnamespace van de entiteiten kennen waarvan verslagen u wilt schrappen, afhankelijk van de dataset (of datasets) u hen van schrapt.
 
 Raadpleeg de volgende documentatie voor meer informatie over identiteiten in Platform:
 
@@ -43,13 +43,13 @@ De workflow voor het maken van aanvragen wordt weergegeven. Standaard worden de 
 
 >[!IMPORTANT]
 > 
->Als onderdeel van doorlopende wijzigingen om de efficiëntie te verbeteren en gegevenssetbewerkingen minder duur te maken, kunnen organisaties die naar de Delta-indeling zijn verplaatst, gegevens verwijderen uit de Identity Service, Real-Time Customer Profile en het data Lake. Dit type gebruiker wordt aangeduid als delta-migrated. De gebruikers van organisaties die delta-gemigreerd zijn geweest kunnen verkiezen om verslagen van of één of alle datasets te schrappen. Gebruikers van organisaties die niet zijn gemigreerd met delta, kunnen niet besluiten om records uit één gegevensset of uit alle gegevenssets te verwijderen, zoals in de onderstaande afbeelding wordt getoond. Ga in dit geval door met de [identiteiten opgeven](#provide-identities) van de handleiding.
+>Om de efficiency te verbeteren en datasetverrichtingen minder duur te maken, kunnen de organisaties die naar het formaat van Delta zijn verplaatst gegevens van de Dienst van de Identiteit, het Profiel van de Klant in real time, en het gegevenspeer schrappen. Dit type gebruiker wordt aangeduid als delta-migrated. De gebruikers van organisaties die delta-gemigreerd zijn geweest kunnen verkiezen om verslagen van of één of alle datasets te schrappen. Gebruikers van organisaties die geen delta-migratie hebben ondergaan, kunnen niet selectief records uit één gegevensset of alle gegevenssets verwijderen, zoals in de onderstaande afbeelding wordt getoond. Ga in dit geval door met de [Identiteiten opgeven](#provide-identities) van de handleiding.
 
 ![De workflow voor het maken van aanvragen met de [!UICONTROL Delete record] geselecteerd en gemarkeerd.](../images/ui/record-delete/delete-record.png)
 
 ## Gegevenssets selecteren {#select-dataset}
 
-De volgende stap is te bepalen of u verslagen van één enkele dataset of alle datasets wilt schrappen. Als deze optie niet beschikbaar is, gaat u naar [identiteiten opgeven](#provide-identities) van de handleiding.
+De volgende stap is te bepalen of u verslagen van één enkele dataset of alle datasets wilt schrappen. Als deze optie niet beschikbaar is, gaat u naar [Identiteiten opgeven](#provide-identities) van de handleiding.
 
 Onder de **[!UICONTROL Record Details]** gebruiken, gebruikt u het keuzerondje om te selecteren tussen een specifieke gegevensset en alle gegevenssets. Als u **[!UICONTROL Select dataset]**, selecteert u het databasepictogram (![Het databasepictogram](../images/ui/record-delete/database-icon.png)) om een dialoog te openen die een lijst van beschikbare datasets verstrekt. Selecteer de gewenste dataset in de lijst gevolgd door **[!UICONTROL Done]**.
 
@@ -67,30 +67,30 @@ Als u verslagen van alle datasets wilt schrappen, selecteer **[!UICONTROL All da
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Primaire identiteit"
->abstract="Een primaire identiteit is een kenmerk dat een record koppelt aan het profiel van een consument in Experience Platform. Het primaire identiteitsgebied voor een dataset wordt bepaald door het schema dat de dataset op gebaseerd is. In deze kolom moet u het type (of de naamruimte) opgeven voor de primaire identiteit van de record, zoals `email` voor e-mailadressen en `ecid` voor Experience Cloud-id&#39;s. Raadpleeg de gebruikershandleiding bij de levenscyclus van gegevens voor meer informatie."
+>title="Naamruimte identiteit"
+>abstract="Een naamruimte voor identiteiten is een attribuut dat een record koppelt aan het profiel van een consument in Experience Platform. Het naamruimtegebied van de identiteit voor een dataset wordt bepaald door het schema dat de dataset op gebaseerd is. In deze kolom moet u het type (of de naamruimte) opgeven voor de naamruimte van de record, zoals `email` voor e-mailadressen en `ecid` voor Experience Cloud-id&#39;s. Raadpleeg de gebruikershandleiding bij de levenscyclus van gegevens voor meer informatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
->title="Identiteitswaarde"
->abstract="In deze kolom, moet u de waarde voor de primaire identiteit van het verslag verstrekken, die met het identiteitstype moet beantwoorden dat in de linkerkolom wordt verstrekt. Als het primaire identiteitstype `email`, moet de waarde het e-mailadres van de record zijn. Raadpleeg de gebruikershandleiding bij de gegevenslevenscyclus voor meer informatie."
+>title="Primaire identiteitswaarde"
+>abstract="In deze kolom, moet u de waarde voor de identiteitsnamespace van het verslag verstrekken, die met het identiteitstype moet beantwoorden dat in de linkerkolom wordt verstrekt. Als het naamruimtetype identiteit `email`, moet de waarde het e-mailadres van de record zijn. Raadpleeg de gebruikershandleiding bij de gegevenslevenscyclus voor meer informatie."
 
-Wanneer het schrappen van verslagen, moet u identiteitsinformatie verstrekken zodat kan het systeem bepalen welke verslagen moeten worden geschrapt. Voor om het even welke dataset in Platform, worden de verslagen geschrapt gebaseerd op **primaire identiteit** gebied dat door het schema van de dataset wordt bepaald.
+Wanneer het schrappen van verslagen, moet u identiteitsinformatie verstrekken zodat kan het systeem bepalen welke verslagen moeten worden geschrapt. Voor om het even welke dataset in Platform, worden de verslagen geschrapt gebaseerd op **naamruimte identity** gebied dat door het schema van de dataset wordt bepaald.
 
-Net als alle identiteitsvelden in Platform bestaat een primaire identiteit uit twee dingen: een **type** (wordt soms ook wel naamruimte voor identiteit genoemd) en een **value**. Het identiteitstype biedt context voor de manier waarop het veld een record identificeert (zoals een e-mailadres) en de waarde vertegenwoordigt de specifieke identiteit van een record voor dat type (bijvoorbeeld `jdoe@example.com` voor de `email` type identiteit). Veelvoorkomende velden die als identiteiten worden gebruikt, zijn accountgegevens, apparaat-id&#39;s en cookie-id&#39;s.
+Net als alle identiteitsvelden in Platform bestaat een naamruimte voor identiteit uit twee dingen: een **type** (wordt soms ook wel naamruimte voor identiteit genoemd) en een **value**. Het identiteitstype biedt context voor de manier waarop een record in het veld wordt geïdentificeerd (bijvoorbeeld een e-mailadres). De waarde vertegenwoordigt de specifieke identiteit van een record voor dat type (bijvoorbeeld `jdoe@example.com` voor de `email` type identiteit). Veelvoorkomende velden die als identiteiten worden gebruikt, zijn accountgegevens, apparaat-id&#39;s en cookie-id&#39;s.
 
 >[!TIP]
 >
->Als u niet de primaire identiteit voor een bepaalde dataset kent, kunt u het in Platform UI vinden. In de **[!UICONTROL Datasets]** in de werkruimte, selecteert u de desbetreffende gegevensset in de lijst. Op de detailspagina voor de dataset, houd over de naam van het schema van de dataset in het juiste spoor. De primaire identiteit wordt samen met de schemanaam en beschrijving getoond.
+>Als u niet de identiteit namespace voor een bepaalde dataset kent, kunt u het in Platform UI vinden. In de **[!UICONTROL Datasets]** in de werkruimte, selecteert u de desbetreffende gegevensset in de lijst. Op de detailspagina voor de dataset, houd over de naam van het schema van de dataset in het juiste spoor. De naamruimte voor identiteit wordt samen met de naam en beschrijving van het schema weergegeven.
 >
 >![Het dashboard Datasets met een geselecteerde dataset, en een schemadialoog die van het paneel van de Details van de dataset wordt geopend. De primaire id van de gegevensset wordt gemarkeerd.](../images/ui/record-delete/dataset-primary-identity.png)
 
-Als u verslagen van één enkele dataset schrapt, moeten alle identiteiten u verstrekt het zelfde type hebben, aangezien een dataset slechts één primaire identiteit kan hebben. Als u van alle datasets schrapt, kunt u veelvoudige identiteitstypes omvatten aangezien de verschillende datasets verschillende primaire identiteiten kunnen hebben.
+Als u verslagen van één enkele dataset schrapt, moeten alle identiteiten u verstrekt het zelfde type hebben, aangezien een dataset slechts één identiteit namespace kan hebben. Als u van alle datasets schrapt, kunt u veelvoudige identiteitstypes omvatten aangezien de verschillende datasets verschillende primaire identiteiten kunnen hebben.
 
 Er zijn twee opties om id&#39;s op te geven wanneer u records verwijdert:
 
 * [Een JSON-bestand uploaden](#upload-json)
-* [Identiteitswaarden handmatig invoeren](#manual-identity)
+* [Voer handmatig primaire identiteitswaarden in](#manual-identity)
 
 ### Een JSON-bestand uploaden {#upload-json}
 
@@ -116,7 +116,7 @@ Het JSON-bestand moet zijn opgemaakt als een array van objecten, elk object dat 
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `namespaceCode` | Het identiteitstype. |
-| `value` | De identiteitswaarde zoals aangegeven door het type. |
+| `value` | De primaire identiteitswaarde zoals die door het type wordt aangegeven. |
 
 Nadat het bestand is geüpload, kunt u doorgaan [het verzoek indienen](#submit).
 
@@ -126,7 +126,7 @@ Als u identiteiten handmatig wilt invoeren, selecteert u **[!UICONTROL Add ident
 
 ![De workflow voor het maken van aanvragen met de [!UICONTROL Add identity] gemarkeerd.](../images/ui/record-delete/add-identity.png)
 
-Er worden besturingselementen weergegeven waarmee u de identiteiten een voor een kunt invoeren. Onder **[!UICONTROL Primary Identity]** selecteert u het identiteitstype in het vervolgkeuzemenu. Onder **[!UICONTROL Identity Value]** geeft u de primaire identiteitswaarde voor de record op.
+Er worden besturingselementen weergegeven waarmee u de identiteiten een voor een kunt invoeren. Onder **[!UICONTROL identity namespace]** selecteert u het identiteitstype in het vervolgkeuzemenu. Onder **[!UICONTROL Primary Identity Value]**, geeft u de naamruimtewaarde van de identiteit op voor de record.
 
 ![De workflow voor het maken van een aanvraag waaraan handmatig een identiteitsveld is toegevoegd.](../images/ui/record-delete/identity-added.png)
 
