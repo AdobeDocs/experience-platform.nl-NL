@@ -3,9 +3,9 @@ title: (API) Oracle Eloqua-verbinding
 description: Met de Eloqua-bestemming (API) van het Oracle kunt u uw accountgegevens exporteren en activeren binnen Oracle Eloqua voor uw bedrijfsbehoeften.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: cf7ad18fa3d8f074371a0f03e09e218d37be5e01
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '1956'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt
 
 [!DNL Oracle Eloqua] gebruik [Basisverificatie](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) om te communiceren met [!DNL Oracle Eloqua] REST API. Instructies voor verificatie aan uw [!DNL Oracle Eloqua] de instantie is verder onderaan, in de [Verifiëren voor bestemming](#authenticate) sectie.
 
-## Gebruiksscenario’s {#use-cases}
+## Gebruik hoofdletters {#use-cases}
 
 De marketingafdeling van een onlineplatform wil een marketingcampagne op basis van e-mail uitzenden naar een publiek met nieuwsberichten. Het marketingteam van het platform kan bestaande informatie over leads bijwerken via Adobe Experience Platform, een publiek opbouwen op basis van hun eigen offline gegevens en deze doelgroep naar sturen [!DNL Oracle Eloqua], die vervolgens kan worden gebruikt om de marketingcampagne per e-mail te verzenden.
 
@@ -114,7 +114,8 @@ Als de verstrekte gegevens geldig zijn, geeft de interface een **[!UICONTROL Con
 >id="platform_destinations_apioracleeloqua_pod"
 >title="Pod"
 >abstract="Meld u aan bij Eloqua Oracle om uw podnummer te vinden. Noteer de URL in uw browser nadat u zich hebt aangemeld. "
->additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge Base - ontdek uw podnummer"
+
+<!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 ![Platform UI het schermschot die de bestemmingsdetails tonen.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
