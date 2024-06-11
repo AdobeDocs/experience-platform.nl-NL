@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform - Overzicht
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Leer hoe Experience Platform het mogelijk maakt om uw klanten in real-time persoonlijke ervaringen te bieden met gidsen, documentatie en zelfstudies.
-source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
+source-git-commit: a926560f3c5f765090046313ec7a7431b5ce69c6
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '279'
 ht-degree: 6%
 
 ---
@@ -30,7 +30,6 @@ ht-degree: 6%
    * [Handleiding Workflows-gebruikersinterface](workflows.md)
    * [Browserondersteuning en taalondersteuning](browser-language-support.md)
    * [Zelfidentificatie-enquête](self-identification.md)
-   * [AI-assistent](ai-assistant.md)
 * Experience Platform-API&#39;s {#platform-apis}
    * [Aan de slag met platform-API&#39;s](api-guide.md)
    * [Platform-API&#39;s verifiëren en openen](api-authentication.md)

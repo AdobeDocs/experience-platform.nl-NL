@@ -1,9 +1,10 @@
 ---
 title: Vraag voor AI-assistent
 description: Lees dit document om voorbeeldvragen te leren die u kunt gebruiken wanneer het vragen van AI Medewerker.
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
+source-git-commit: 26e27e7a62731fe43ef203741121b22226078b28
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1206'
 ht-degree: 0%
 
 ---
@@ -33,20 +34,56 @@ De volgende voorbeeldvragen worden gegroepeerd op doelstellingen die u kunt verw
 
 De volgende vragen worden gegroepeerd op gegevensobjecten en worden als een van beide geclassificeerd [operationele inzichten](./home.md#operational-insights) of [productkennis](./home.md#product-knowledge).
 
-| Object | Beschrijving |
-| --- | --- |
-| Publiek - Operationele inzichten | <ul><li>Welk publiek gebruikt ander publiek?</li><li>Wat is de verdeling van het aantal profielen over het publiek?</li><li>Toon me het publiek dat het laatst werd gewijzigd eerder {RELATIVE_DATE}.</li><li>Welk publiek heeft 0 profielen?</li><li>Is {USE_AUTOCOMPLETE_TO_FILL_AUDIENCE_NAME} bij andere doelgroepen worden gebruikt?</li></ul> |
-| Attributen - Operationele inzichten | <ul><li>Welk publiek heeft XDM-kenmerk {ATTRIBUTE_PATH} in hun segmentdefinitie?</li><li>Hoeveel XDM schemakenmerken worden niet gebruikt in om het even welk publiek?</li><li>Welke schema&#39;s hebben XDM attribuut {ATTRIBUTE_PATH} in hen?</li><li>Welke attributen XDM worden geactiveerd?</li><li>Welke XDM-kenmerken worden gebruikt bij het publiek met meer dan 10 profielen</li></ul> |
-| Gegevensstromen - Operationele inzichten | <ul><li>Welke gegevensstromen bijdragen tot {DATASET_NAME} gegevensset?</li><li>Welke brongegevens worden niet gebruikt of hebben geen gegevens die binnen komen?</li><li> |
-| Datasets - Operationele inzichten | <ul><li>Hoeveel datasets zijn opgenomen gebruikend het zelfde schema?</li><li>Welke bronschakelaar wordt geassocieerd met {DATASET_NAME} dataset></li><li>Welke datasets worden gebruikt in elk publiek?</li><li>Welke schema&#39;s worden niet gebruikt in om het even welke datasets?</li><li>Hoeveel datasets heb ik?</li></ul> |
-| Doelen - Operationele inzichten | <ul><li>Welke bestemmingen zijn in een actieve staat?</li><li>Welke bestemmingsrekeningen hebben 0 publiek geactiveerd?</li><li> |
-| Transparantie - Operationele inzichten | <ul><li>Hoeveel reizen heb ik?</li><li>Welke reizen zijn er gemaakt {RELATIVE_DATE} (bijvoorbeeld vorige week) of {RELATIVE_DATE} (bijvoorbeeld voor/na/op een bepaalde datum)?</li><li>Toon me de lijst van reizen die binnen werden gewijzigd {RELATIVE_DATE} (bijvoorbeeld vorige week) of {RELATIVE_DATE} (bijvoorbeeld voor/na/op een bepaalde datum)?</li><li>Geef een lijst van de reizen die ik heb.</li><li>Geef een overzicht van de soorten publiek die worden gebruikt voor rechtstreekse reizen.</li></ul> |
-| Schema&#39;s - Operationele inzichten | <ul><li>Welke gebieden van het schema hebben tot het meest publiek bijgedragen?</li><li>Hoeveel schema&#39;s worden profiel toegelaten?</li><li>Alle schema&#39;s weergeven die in de laatste week zijn gewijzigd.</li><li>Welke schema&#39;s worden niet gebruikt in om het even welke datasets?</li><li>Alle schema&#39;s weergeven die in de laatste week zijn gemaakt.</li></ul> |
-| Bronnen - Operationele inzichten | <ul><li>Welke bronnen zijn actief?</li><li>Welke bronschakelaar met dataset wordt geassocieerd {DATASET_NAME}?</li><li>Welke bronschakelaar heeft het hoogste aantal bijbehorende rekeningen?</li><li>Toon me de gegevensstromen en hun bijbehorende bronschakelaars.</li></ul> |
-| Puntleren - Productkennis (Real-Time CDP en Journey Optimizer) | <ul><li>Waarmee kan AI Assistant helpen?</li><li>Wat zijn gewone kijkers?</li><li>Hoe zijn Gebruikersgroepen verwant aan Rollen?</li><li>Wanneer moet ik een gegevenstype versus een veldgroep gebruiken?</li><li>Wat is het verschil tussen een identiteit en een primaire of buitenlandse sleutel?</li><li>Hoe wordt profielrijkheid berekend?</li></ul> |
-| Problemen oplossen - Productkennis (Real-Time CDP en Journey Optimizer) | <ul><li>Waarmee kan AI Assistant helpen?</li><li>Kan ik een profiel-toegelaten schema schrappen nadat de gegevens worden opgenomen?</li><li>Waarom kan ik geen publiek verwijderen?</li><li>Hoe lang duurt het voordat het publiek wordt geëvalueerd en de resultaten beschikbaar zijn voor doelgericht onderzoek?</li></ul> |
-
-{style="table-layout:auto"}
+* **Publiek - Operationele inzichten**
+   * Welk publiek gebruikt ander publiek?
+   * Wat is de verdeling van het aantal profielen over het publiek?
+   * Toon me publiek dat het laatst werd gewijzigd eerder {RELATIVE_DATE}.
+   * Welk publiek heeft 0 profielen?
+   * Is {USE_AUTO_COMPLETE_TO_FILL_AUDIENCE_NAME} bij andere doelgroepen worden gebruikt?
+* **Attributen - Operationele inzichten**
+   * Welk publiek heeft xdm-kenmerk {ATTRIBUTE_PATH} in hun segmentdefinitie?
+   * Hoeveel XDM schemakenmerken worden niet gebruikt in om het even welk publiek?
+   * Welke schema&#39;s hebben xdm-kenmerk {ATTRIBUTE_PATH} in hen?
+   * Welke attributen XDM worden geactiveerd?
+   * Welke attributen XDM worden gebruikt in publiek met meer dan 10 profielen?
+* **Gegevensstromen - Operationele inzichten**
+   * Welke gegevensstromen bijdragen tot {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} gegevensset?
+   * Welke brongegevens worden niet gebruikt of hebben geen gegevens die binnen komen?
+   * Maak een lijst van de brongegevensstromen die ik heb.
+   * Welke dataflows worden gevormd voor elke bronschakelaar?
+* **Datasets - Operationele inzichten**
+   * Hoeveel datasets zijn opgenomen gebruikend het zelfde schema?
+   * Welke bronschakelaar wordt geassocieerd met {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} gegevensset?
+   * Welke datasets worden gebruikt in elk publiek?
+   * Welke schema&#39;s worden niet gebruikt in om het even welke datasets?
+   * Hoeveel datasets heb ik?
+* **Doelen - Operationele inzichten**
+   * Welke bestemmingen zijn in een actieve staat?
+   * Welke bestemmingsrekeningen hebben 0 publiek geactiveerd?
+   * Hoeveel publiek wordt geactiveerd voor elke bestemming?
+   * Welke bestemmingen hebben het hoogste aantal geactiveerde doelgroepen?
+* **Transparantie - Operationele inzichten**
+   * Hoeveel reizen heb ik?
+   * Welke reizen zijn er gemaakt {RELATIVE_DATE} (bijvoorbeeld de laatste week) of {RELATIVE_DATE} (bijvoorbeeld voor/na/op een bepaalde datum)?
+   * Toon me de lijst van reizen die binnen werden gewijzigd {RELATIVE_DATE} (bijvoorbeeld de laatste week) of {RELATIVE_DATE} (bijvoorbeeld voor/na/op een bepaalde datum)?
+   * Maak een lijst van de levende reizen die ik heb.
+   * Geef een overzicht van de soorten publiek die worden gebruikt voor rechtstreekse reizen.
+* **Bronnen - Operationele inzichten**
+   * Welke bronnen zijn actief?
+   * Welke bronschakelaar met dataset wordt geassocieerd {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME}.
+   * Welke bronschakelaar heeft het hoogste aantal bijbehorende rekeningen?
+   * Toon me de gegevensstromen en hun bijbehorende bronschakelaars.
+* **Puntleren - Productkennis (Real-Time CDP en Journey Optimizer)**
+   * Wat zijn gewone kijkers?
+   * Hoe zijn Gebruikersgroepen verwant aan Rollen?
+   * Wanneer moet ik een gegevenstype versus een veldgroep gebruiken?
+   * Wat is het verschil tussen een identiteit en een primaire of buitenlandse sleutel?
+   * Hoe wordt de rijkerheid van het Profiel berekend?
+* **Problemen oplossen - Productkennis (Real-Time CDP en Journey Optimizer)**
+   * Waarmee kan AI Assistant helpen?
+   * Kan ik een profiel schrappen toegelaten schema nadat de gegevens worden opgenomen?
+   * Waarom kan ik geen publiek verwijderen?
+   * Hoe lang duurt het voordat het publiek wordt geëvalueerd en de resultaten beschikbaar zijn om doelgericht te zijn?
 
 ## Uw vragen formuleren {#phrasing-your-questions}
 
