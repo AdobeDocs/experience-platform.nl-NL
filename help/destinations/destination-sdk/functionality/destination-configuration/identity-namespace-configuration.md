@@ -2,9 +2,9 @@
 description: Leer hoe te om de gesteunde doelidentiteiten voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie naamruimte voor identiteit
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
+source-git-commit: 606685c1f0b607ca586e477cb9825ec551d537cc
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,15 @@ ht-degree: 0%
 
 Experience Platform gebruikt naamruimten om het type van specifieke identiteiten te beschrijven. Bijvoorbeeld, een identiteitsnaamruimte genoemd `Email` geeft een vergelijkbare waarde aan `name@email.com` als e-mailadres.
 
-Wanneer het creëren van (het stromen) bestemmingen in real time door Destination SDK, naast [het vormen van een partnerschema](schema-configuration.md) dat de gebruikers profielattributen en identiteiten aan kunnen in kaart brengen, moet u identiteitsnamespaces ook bepalen die door uw bestemmingsplatform worden gesteund. Als uw doelplatform bijvoorbeeld gehashte e-mails en [!DNL IDFA]moet u deze twee identiteiten definiëren als [nader beschreven in dit document](#supported-parameters).
+Houd, afhankelijk van het type doel dat u maakt (streaming of op bestand gebaseerd), rekening met de volgende vereisten voor naamruimte voor identiteiten:
 
-Wanneer gebruikers doelgroepen naar streamingdoelen activeren, moeten ze ook doelidentiteiten toewijzen, naast de kenmerken van het doelprofiel. Anders wordt het publiek niet geactiveerd naar het doelplatform.
+* Wanneer het creëren van (het stromen) bestemmingen in real time door Destination SDK, naast [het vormen van een partnerschema](schema-configuration.md) waaraan gebruikers profielkenmerken en identiteiten kunnen toewijzen, moet u ook definiëren *ten minste één* naamruimten die worden ondersteund door het doelplatform. Als uw doelplatform bijvoorbeeld gehashte e-mails en [!DNL IDFA]moet u deze twee identiteiten definiëren als [nader beschreven in dit document](#supported-parameters).
 
-Wanneer u een op een bestand gebaseerd doel via Destination SDK maakt, is de configuratie van naamruimten optioneel.
+  >[!IMPORTANT]
+  >
+  >Wanneer het activeren van publiek aan het stromen bestemmingen, moeten de gebruikers ook in kaart brengen _ten minste één doelidentiteit_, naast de kenmerken van het doelprofiel. Anders wordt het publiek niet geactiveerd naar het doelplatform.
+
+* Wanneer het creëren van op dossier-gebaseerde bestemmingen door Destination SDK, is de configuratie van identiteitsnamespaces _optioneel_.
 
 Voor meer informatie over naamruimten in Experience Platform raadpleegt u de [documentatie over naamruimten](../../../../identity-service/features/namespaces.md).
 

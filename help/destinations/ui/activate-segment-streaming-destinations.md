@@ -3,9 +3,9 @@ title: De publieksgegevens van de activering aan het stromen bestemmingen
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het toe te wijzen aan streamingdoelen.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f741e62b3340b743e465edf3f7a007580b3f61be
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1079'
 ht-degree: 0%
 
 ---
@@ -62,6 +62,10 @@ U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 >[!IMPORTANT]
 >
 >Deze stap is alleen van toepassing op bepaalde streamingdoelen voor het publiek. Als uw doel geen **[!UICONTROL Mapping]** stap, overslaan naar [publieksplanning](#scheduling).
+>
+>Wanneer u een publiek activeert naar streaming doelen, moet u ook een toewijzing maken *ten minste één naamruimte voor doelidentiteit*, naast de kenmerken van het doelprofiel. Anders wordt het publiek niet geactiveerd naar het doelplatform.
+> ![Afbeelding van toewijzingsstap met een verplichte naamruimtetoewijzing.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+
 
 Voor sommige doelstreamingdoelen voor het publiek moet u bronkenmerken of naamruimten selecteren om toe te wijzen als doelidentiteiten in de bestemming.
 
