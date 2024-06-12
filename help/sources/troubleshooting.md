@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Bronoplossing
 description: Dit document bevat antwoorden op veelgestelde vragen over bronnen op Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Bronhulp voor probleemoplossing
 
-Dit document bevat antwoorden op veelgestelde vragen over bronnen op Adobe Experience Platform. Voor vragen en problemen met betrekking tot andere problemen [!DNL Platform] services, inclusief services die overal worden aangetroffen [!DNL Platform] API&#39;s, raadpleeg de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
+Dit document bevat antwoorden op veelgestelde vragen over bronnen op Adobe Experience Platform. Voor vragen en problemen met betrekking tot andere [!DNL Platform] services, inclusief services die overal worden aangetroffen [!DNL Platform] API&#39;s, raadpleeg de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
 
 ## Veelgestelde vragen
 
@@ -43,11 +43,11 @@ Hieronder volgt een lijst met beperkingen die u voor bestanden in bronnen moet o
 - Directory- en bestandsnamen mogen niet eindigen met een slash (`/`). Indien beschikbaar wordt deze automatisch verwijderd.
 - De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! ' ( ) ; @ & = + $ , % # [ ]`
 - De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?`.
-- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`zijn, hoewel geldig in NTFS-bestandsnamen, geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [RFC 2616, punt 2.2: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM4, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (..), en twee stiptekens (.).
+- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`zijn, hoewel geldig in NTFS-bestandsnamen, geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [RFC 2616, afdeling 2.2: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 - Het maximumaantal bestanden per batch is 1500, met een maximale batch-grootte van 100 GB.
 - Het maximumaantal eigenschappen of velden per rij is 10.000.
-- Het maximumaantal batches dat per gebruiker kan worden verzonden, per minuut is 138.
+- Het maximumaantal batches dat per gebruiker kan worden verzonden, per minuut is 2000.
 
 ### Welke gegevenstypen worden ondersteund?
 
@@ -67,7 +67,7 @@ Alle bronnen van inname in de batch ondersteunen gedeeltelijke inname. Bij strea
 
 ### Wanneer moet ik gedeeltelijke inname gebruiken?
 
-Gedeeltelijke inname dient te worden gebruikt als u **niet** U hebt beperkingen, zoals het opnemen van het gehele bestand in het Platform. U kunt ook gedeeltelijke inname gebruiken als u er geen moeite mee hebt gegevens in te voeren die fouten erin kunnen bevatten.
+Gedeeltelijke inname dient te worden gebruikt als u **niet** hebben beperkingen, zoals het hebben van het volledige dossier dat in Platform wordt opgenomen. U kunt ook gedeeltelijke inname gebruiken als u er geen moeite mee hebt gegevens in te voeren die fouten erin kunnen bevatten.
 
 ### Wat is de typische drempel voor gedeeltelijke inname?
 
@@ -75,4 +75,4 @@ Er is geen &quot;typische foutendrempel&quot;voor gedeeltelijke inname. In plaat
 
 ### Hoe lang duurt het voordat een status van een flowuitvoering wordt bijgewerkt nadat een nieuwe gegevensstroom is gemaakt?
 
-Er worden geen stroomuitvoeringen onmiddellijk gegenereerd en het kan ongeveer twee tot drie minuten duren voordat de gegevens zijn bijgewerkt. `startTime`. Als u de status van een flow-run controleert, wordt direct na het maken van een nieuwe dataflow geen informatie over de flow-run geretourneerd `lastRunDetails` aangezien dit nog niet is gebeurd . Het wordt aanbevolen de gegevensstroom een paar minuten te laten genereren voordat de status van de flow wordt gecontroleerd.
+Er worden geen stroomuitvoeringen onmiddellijk gegenereerd en het kan ongeveer twee tot drie minuten duren voordat de gegevens zijn bijgewerkt. `startTime`. Wanneer de status van een flow wordt gecontroleerd, wordt onmiddellijk na het maken van een nieuwe dataflow geen informatie geretourneerd over de flow run `lastRunDetails` aangezien dit nog niet is gebeurd . Het wordt aanbevolen de gegevensstroom een paar minuten te laten genereren voordat de status van de flow wordt gecontroleerd.
