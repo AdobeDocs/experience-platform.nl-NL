@@ -1,22 +1,20 @@
 ---
 title: Voorbeeldscenario's voor het configureren van identiteitsinstellingen
 description: Leer over voorbeeldscenario's voor het vormen van de Montages van de Identiteit.
-hide: true
-hidefromtoc: true
-badge: Alpha
+badge: Beta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: f1779ee75c877649a69f9fa99f3872aea861beca
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
 
 # Voorbeeldscenario&#39;s voor het configureren van identiteitsgrafiek-koppelingsregels
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Identiteitsgrafiekkoppelingsregels zijn momenteel in Alpha. De functie en documentatie kunnen worden gewijzigd.
+>Deze functie is nog niet beschikbaar. Het bètaprogramma voor koppelingsregels voor identiteitsgrafieken zal naar verwachting in juli van start gaan voor ontwikkelingssandboxen. Neem contact op met het accountteam van de Adobe voor meer informatie over de deelnemingscriteria.
 
 Dit document schetst voorbeeldscenario&#39;s die u kunt overwegen wanneer het vormen van identiteitsgrafiek die regels verbindt.
 
