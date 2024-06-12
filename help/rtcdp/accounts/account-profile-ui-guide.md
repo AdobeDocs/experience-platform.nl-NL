@@ -5,9 +5,9 @@ description: Door het gebruik van accountprofielen kunt u met Adobe Real-time Cu
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
+source-git-commit: 96f29d5c64bb29125d8a63dd3ddb3bdedb5ebd52
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1609'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Als u meer wilt weten over de manier waarop accountprofielen worden gemaakt als 
 
 Selecteren **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in de linkernavigatie om het overzicht van accountprofielen weer te geven. Onder de [!UICONTROL Overview] op het dashboard wordt een afbeelding of diagram weergegeven waarin widgets in één ingangspunt worden weergegeven.
 
-![Tabblad Overzicht waarin widgets worden weergegeven](images/b2b-account-profile-overview.png)
+![Het tabblad Overzicht van accountprofielen met profielen in de linkernavigatie en overzicht gemarkeerd.](images/b2b-account-profile-overview.png)
 
 Zie de documentatie op de [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard voor meer informatie. Zie de documentatie op [Real-time Customer Data Platform Insights-gegevensmodel B2B Edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) voor meer informatie over hoe uw modellen van inzichten gegevensmodellen kunnen worden gebruikt om douanekaarten voor uw dashboards tot stand te brengen.
 
@@ -38,7 +38,7 @@ Zie de documentatie op de [[!UICONTROL Account Profiles]](../../dashboards/guide
 
 Selecteer **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in de linkernavigatie. Op de **[!UICONTROL Overview]** tab, selecteert u **[!UICONTROL Settings]** rechtsboven.
 
-![Instellingen selecteren](images/b2b-configuring-accounts-profile.png)
+![Het tabblad Overzicht van accountprofielen met Instelling gemarkeerd.](images/b2b-configuring-accounts-profile.png)
 
 De **[!UICONTROL Account settings]** wordt geopend. Selecteer hier de **[!UICONTROL Enable lead-to-account-matching]** schakelen om de functie in te schakelen. Gebruik het vervolgkeuzemenu om **[!UICONTROL Daily]** voor de **[!UICONTROL Matching cadence]** instellen. Selecteer ten slotte de relevante **[!UICONTROL Matching criteria]** opties gevolgd door **[!UICONTROL Save]** om uw instellingen te bevestigen en terug te keren naar de **[!UICONTROL Account Profiles]** scherm.
 

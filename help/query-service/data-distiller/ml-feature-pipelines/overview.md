@@ -2,10 +2,10 @@
 title: Pijpleidingen met I/ML-functies
 description: Leer hoe u Data Distiller kunt gebruiken om uw computerleerleidingen te verrijken met functies die zijn afgeleid van Adobe Experience Platform-gegevens. Transformeer onbewerkte gegevens in functies en lever de functiegegevens om een model op te leiden of te scoren dat uw marketinggebruik ondersteunt.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 641f507210071ee8efeb3562eec78afd0468d4f2
+source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -14,8 +14,6 @@ ht-degree: 1%
 <!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
-
-<!--  -->
 
 Data Distiller stelt wetenschappers en engineers in staat om hun machines leerpijpleidingen te verrijken met hoogwaardige gegevens over klantervaring die in Adobe Experience Platform zijn verzameld en gekromd. Van een [!DNL Python] -laptop in elke omgeving, kunt u op interactieve wijze klantgegevens in het Experience Platform verkennen, functies van de gegevens definiëren en berekenen en de computerfuncties in uw computerleeromgeving lezen voor modellering.
 

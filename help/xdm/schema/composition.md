@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Basisbeginselen van de schemacompositie
 description: Leer over de schema's van de Gegevens van de Ervaring van het Model (XDM) en de bouwstenen, principes, en beste praktijken voor het samenstellen van schema's in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 1b3d20610a48fc48c84dc4901d7b09db4bb8fa1f
+source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
 workflow-type: tm+mt
-source-wordcount: '4194'
+source-wordcount: '4251'
 ht-degree: 0%
 
 ---
@@ -172,6 +172,11 @@ De schema&#39;s worden samengesteld gebruikend de volgende formule:
 >title="Klasse"
 >abstract="Elk schema is gebaseerd op één klasse. De klasse definieert het gedrag van het schema en de algemene eigenschappen die alle schema&#39;s die op die klasse zijn gebaseerd, moeten bevatten. Zie de documentatie om meer over te leren hoe de klassen in schemacompositie betrokken zijn."
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class_industries"
+>title="Industrietype"
+>abstract="Als u een relevante industrie voor uw zaken selecteert, kan het machine het leren model betere gegevensorganisatie verstrekken door de brongebieden met standaardgebiedsgroepen nauwkeuriger in kaart te brengen die zich aan industriestandaarden richten. Dit zorgt ervoor dat de gegevensintegratie is afgestemd op uw specifieke behoeften in de branche en resulteert in nauwkeurigere en relevante gegevensinzichten."
+
 Het samenstellen van een schema begint door een klasse toe te wijzen. De klassen bepalen de gedragsaspecten van de gegevens die het schema (verslag of tijdreeks) zal bevatten. Bovendien beschrijven de klassen het kleinste aantal gemeenschappelijke eigenschappen die alle die schema&#39;s op die klasse worden gebaseerd zouden moeten omvatten en een manier verstrekken om veelvoudige compatibele datasets worden samengevoegd.
 
 De klasse van een schema bepaalt welke gebiedsgroepen voor gebruik in dat schema in aanmerking komen. Dit wordt meer in detail besproken in de [volgende sectie](#field-group).
@@ -275,7 +280,7 @@ In het onderstaande diagram worden deze schema&#39;s en de velden weergegeven di
 
 ![Een stroomdiagram van vier schema&#39;s en de gebiedsgroepen die tot hen bijdragen.](../images/schema-composition/composition.png)
 
-### Samenvoegen {#union}
+### Unie {#union}
 
 Terwijl het Experience Platform u toestaat om schema&#39;s voor bepaalde gebruiksgevallen samen te stellen, staat het u ook toe om een &quot;unie&quot;van schema&#39;s voor een specifiek klassentype te zien. Het vorige diagram toont twee schema&#39;s die op de klasse XDM ExperienceEvent en twee schema&#39;s worden gebaseerd op [!DNL XDM Individual Profile] klasse. De samenvoeging, die hieronder wordt weergegeven, aggregeert de velden van alle schema&#39;s die dezelfde klasse delen ([!DNL XDM ExperienceEvent] en [!DNL XDM Individual Profile], respectievelijk).
 

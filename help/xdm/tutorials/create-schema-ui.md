@@ -5,7 +5,7 @@ title: Een schema maken met de Schema-editor
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met behulp van de Schema-editor in het Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
+source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
 workflow-type: tm+mt
 source-wordcount: '4567'
 ht-degree: 0%
@@ -49,10 +49,6 @@ Selecteer **[!UICONTROL Create schema]** in de rechterbovenhoek van het **[!UICO
 De [!UICONTROL Create schema] wordt weergegeven. Kies vervolgens een basisklasse voor het schema. U kunt kiezen uit de kernklassen van [!UICONTROL XDM Individual Profile] en [!UICONTROL XDM ExperienceEvent], of [!UICONTROL Other] als deze klassen niet geschikt zijn voor uw doeleinden. De [!UICONTROL Other] Met de optie voor klassen kunt u [een nieuwe klasse maken](#create-new-class) of kies uit andere reeds bestaande klassen.
 
 Zie de [Afzonderlijk XDM-profiel](../classes/individual-profile.md) en [XDM ExperienceEvent](../classes/experienceevent.md) documentatie voor meer informatie over deze klassen. In deze zelfstudie selecteert u **[!UICONTROL XDM Individual Profile]** gevolgd door **[!UICONTROL Next]**.
-
-
-
-<!--  -->
 
 <!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
 
