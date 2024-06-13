@@ -3,19 +3,24 @@ solution: Experience Platform
 title: Beschikbare Use Case Playbooks voor Real-time Customer Data Platform en Adobe Journey Optimizer.
 description: Een lijst met alle afspeelboeken in Real-time Customer Data Platform en Adobe Journey Optimizer.
 role: User
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
+source-git-commit: 6573fdede3bd25bac556531e45f8abefc576f857
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
-
 
 # Beschikbaar voor gebruik als hoofdletters
 
 Lees deze pagina voor een overzicht van alle beschikbare afspeelboeken die u kunt ontdekken en gebruiken in Real-time Customer Data Platform en Adobe Journey Optimizer.
 
 ## Hoofdletters gebruiken in Journey Optimizer {#optimizer-playbooks}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_list"
+>title="Beschikbare afspeelboeken"
+>abstract="Een lijst met alle afspeelboeken in Real-time Customer Data Platform en Adobe Journey Optimizer."
 
 | Naam van afspeelboek | Beschrijving |
 | ------------- |  ----------- |
