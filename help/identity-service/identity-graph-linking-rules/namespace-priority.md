@@ -2,9 +2,10 @@
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 badge: Beta
-source-git-commit: 85da193f422a1708999fb59b7ea095f4447d6bdf
+exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
+source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1515'
 ht-degree: 1%
 
 ---
@@ -50,9 +51,9 @@ Naamruimten voor personen zijn relatief onveranderlijk in vergelijking met hardw
 
 Een andere manier om dit onderwerp te benaderen is door kardinaliteit. Hoeveel identiteiten worden er voor een bepaalde personenentiteit gecreëerd? In de meeste gevallen zal een persoon één CRM-id hebben, een handvol hardware-id&#39;s (IDFA/GAID-voorinstellingen mogen niet vaak voorkomen) en nog meer cookies (een individu zou zich op meerdere apparaten kunnen begeven, de incognitomodus kunnen gebruiken of cookies op een bepaald moment kunnen herstellen). In het algemeen **lower cardinality geeft een naamruimte met een hogere waarde aan**.
 
-<!-- ## Step 2: Validate your namespace priority settings
+## Valideer uw instellingen voor naamruimteprioriteit
 
-Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md). -->
+Zodra u een idee van hebt hoe u aan uw namespaces voorrang zult geven, kunt u het hulpmiddel van de Simulatie van de Grafiek gebruiken om diverse scenario&#39;s van de grafiekondergang uit te testen en ervoor te zorgen dat uw prioritaire configuraties de verwachte grafiekresultaten terugkeren. Lees voor meer informatie de handleiding over het gebruik van de [Het gereedschap Grafieksimulatie](./graph-simulation.md).
 
 ## Naamruimteprioriteit configureren
 

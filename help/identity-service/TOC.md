@@ -5,9 +5,9 @@ breadcrumb-title: Platform Identity Service Guide
 user-guide-description: De klantenidentiteiten van de brug over apparaten en systemen om gepersonaliseerde digitale ervaringen te leveren.
 feature: Identities
 role: Admin,Developer
-source-git-commit: f04587fe325c1515545e4067845976aafc7d68ed
+source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '129'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 1%
       - [Algoritme voor identiteitsoptimalisatie](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Prioriteit naamruimte](./identity-graph-linking-rules/namespace-priority.md)
       - [Voorbeeldscenario&#39;s](./identity-graph-linking-rules/example-scenarios.md)
+      - [UI grafieksimulatie](./identity-graph-linking-rules/graph-simulation.md)
    - [ECID-overzicht](./features/ecid.md)
 - [Implementatiehandleiding](implementation.md)
 - [Guardrails voor identiteitsgegevens](guardrails.md)
