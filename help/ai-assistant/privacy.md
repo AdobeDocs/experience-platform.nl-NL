@@ -2,9 +2,9 @@
 title: Privacy, beveiliging en bestuur in AI Assistant
 description: Meer informatie over privacy, beveiliging en governance-praktijken voor AI Assistant.
 exl-id: 371e065d-c2dd-4233-b78e-a42757fce853
-source-git-commit: 1762fcbcc730ccb08340a71383c90404c3fea614
+source-git-commit: e14bf4191319d646c6c4bfd55656fc6de141e9ca
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,9 @@ Lees dit document voor meer informatie over de vertrouwensgerichte mogelijkheden
 * U moet expliciete toestemming worden verleend om met AI Medewerker in wisselwerking te staan.
    * U kunt machtigingen voor Experience Platform en Journey Optimizer op een andere manier instellen met de [Gebruikersinterface voor machtigingen](../access-control/abac/ui/permissions.md) en u kunt de [Admin Console](../access-control/ui/browse.md) om machtigingen voor Customer Journey Analytics toe te wijzen.
    * De toestemmingen zijn korrelig en uw zandbakbeheerder kan vormen welke van uw gebruikers verschillende vraagcategorieën (product kennisgebaseerde vragen met AI Medewerker of vragen over operationele inzichten) kunnen stellen.
-* AI Assistant is een functie die klaar is voor HIPAA en voldoet aan HIPAA-vereisten met betrekking tot de verwerking en het gebruik van Protected Health Information (PHI).
+* AI Assistant is een functie die gereed is voor HIPAA in combinatie met het Adobe Experience Platform Healthcare Shield.
 * U kunt een logboek van uw vorige interactie met AI Medewerker met een beleid van het 30 dagbehoud bekijken.
 * AI Assistant wordt geaard in sandboxspecifieke gegevens en documentatie over openbare Adoben wanneer wordt geantwoord op vragen van gebruikers. Gegevens worden niet gedeeld door sandboxen.
 * Prompts die u aan AI Assistant verstrekt, worden niet gedeeld met andere klanten.
-
 
 **Dit houdt in dat als er nieuwe labels worden toegevoegd aan velden en objecten of als er nieuwe beleidsregels worden gemaakt, het maximaal 24 uur duurt voordat de AI Assistant wordt uitgevoerd. Tijdens die 24 uren, kunnen de gebruikers met onlangs beperkte toegang tot die gebieden en voorwerpen nog toegang hebben.*
