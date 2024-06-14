@@ -2,9 +2,9 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b41a60942460e22556714699975f9eb281d76335
+source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
 workflow-type: tm+mt
-source-wordcount: '4040'
+source-wordcount: '4076'
 ht-degree: 0%
 
 ---
@@ -206,6 +206,10 @@ Ja, er zijn sommige bedenkingen om zich van bewust te zijn wanneer u publiek in 
 Op dit moment **moet** controleert u handmatig of het publiek in Adobe Journey Optimizer stroomafwaarts wordt gebruikt, aangezien deze status momenteel niet automatisch wordt gecontroleerd.
 
 Bovendien kunt u **moet** Controleer handmatig of het publiek wordt gebruikt als een component van een publiek in een account, aangezien deze status momenteel niet automatisch wordt gecontroleerd.
+
+### Wat gebeurt er als ik een publiek kopieer? {#copy}
+
+Wanneer u een publiek kopieert, bevindt het nieuwe publiek zich in de conceptstatus en behoudt het dezelfde mappen, tags en labels die op het oorspronkelijke publiek zijn toegepast.
 
 ### Heeft het gebruik van een publiek als een onderliggend publiek invloed op overgangen in de levenscyclusstatus?
 
