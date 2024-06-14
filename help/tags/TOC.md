@@ -1,15 +1,15 @@
 ---
 audience: user
-user-guide-title: Tags Help
+user-guide-title: Help bij tags
 breadcrumb-title: Tags
-user-guide-description: Leer analyses, marketing en advertenties te implementeren en beheren om de klantervaring te verbeteren.
+user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
+source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 15%
+source-wordcount: '765'
+ht-degree: 12%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 15%
    * [Aan de slag](./ui/event-forwarding/getting-started.md)
    * [Onbewerkte gegevens configureren](./ui/event-forwarding/secrets.md)
    * [Controle (bèta)](./ui/event-forwarding/monitoring.md)
-* Beheer {#admin}
+* Administratie {#admin}
    * [Overzicht](./ui/administration/overview.md)
    * [Bedrijven en eigendommen](./ui/administration/companies-and-properties.md)
    * [Gebruikersmachtigingen](./ui/administration/user-permissions.md)
@@ -251,6 +251,8 @@ ht-degree: 15%
          * [Overzicht](./extensions/server/twitter/overview.md)
       * [!DNL Tiktok] Web Events API {#tiktok}
          * [Overzicht](./extensions/server/tiktok/overview.md)
+      * [!DNL The Trade Desk] {#thetradedesk}
+         * [Overzicht](./extensions/server/tradedesk/overview.md)
       * [!DNL Zendesk] API voor gebeurtenissen {#zendesk}
          * [Overzicht](./extensions/server/zendesk/overview.md)
 * Uitbreiding {#extension-dev}
@@ -292,7 +294,7 @@ ht-degree: 15%
    * [De Reactor-API verifiëren en openen](./api/getting-started.md)
    * Eindpunten {#endpoints}
       * [Bedrijven](./api/endpoints/companies.md)
-      * [Properties](./api/endpoints/properties.md)
+      * [Eigenschappen](./api/endpoints/properties.md)
       * [Gegevenselementen](./api/endpoints/data-elements.md)
       * [Regels](./api/endpoints/rules.md)
       * [Regelcomponenten](./api/endpoints/rule-components.md)
