@@ -1,7 +1,8 @@
 ---
 title: appendIdentityToUrl
 description: Lever persoonlijke ervaringen nauwkeuriger tussen apps, het Web, en over domeinen.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
+source-git-commit: 153c5bae42c027c25a38a8b63070249d1b1a8f01
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 1%
@@ -18,7 +19,7 @@ De querytekenreeks die wordt gegenereerd en aan de URL wordt toegevoegd, is `ado
 >
 >Als er geen toestemming is gegeven, wordt de URL van deze methode ongewijzigd geretourneerd. Deze opdracht wordt onmiddellijk uitgevoerd; er wordt niet gewacht op een toestemmingsupdate.
 
-## Identiteit aan URL toevoegen met de extensie Web SDK
+## Identiteit aan URL toevoegen met de extensie Web SDK {#extension}
 
 Het toevoegen van een identiteit aan een URL wordt uitgevoerd als een actie binnen een regel in de interface van de markeringen van de Inzameling van Gegevens van Adobe Experience Platform.
 
