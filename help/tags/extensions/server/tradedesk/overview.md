@@ -3,18 +3,16 @@ title: Het overzicht van de API-extensie voor realtime conversies van het handel
 description: Leer over de Realtime Conversies API uitbreiding van het Handelsbureau voor gebeurtenis door:sturen in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: d9d185685106ac160dcbefc5e9567a85c8302a73
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
 
 # [!DNL The Trade Desk Real-Time Conversions API] extensieoverzicht
 
-[[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) kunt u gebeurtenissen verzenden naar [!DNL The Trade Desk] om heroriëntering en attributie van hefboomfinanciering mogelijk te maken.
-
-U kunt de [!DNL The Trade Desk Real-Time Conversions API] extensie voor het verzenden van gegevens van de Adobe Experience Platform-Edge Network naar [!DNL The Trade Desk] door de mogelijkheden van de API in uw [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) regels.
+U kunt de [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) extensie voor het verzenden van gegevens van de Adobe Experience Platform-Edge Network naar [!DNL The Trade Desk] door de mogelijkheden van de API in uw [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) regels.
 
 Gebruiken [!DNL The Trade Desk Real-Time Conversions API] kunt u de API-mogelijkheden in uw [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) regels voor het verzenden van gegevens naar [!DNL The Trade Desk] van de Adobe Experience Platform Edge Network.
 
@@ -91,7 +89,8 @@ Zie de [!DNL The Trade Desk] ontwikkelaarsdocumentatie voor meer informatie over
 
 **[!UICONTROL Object Request Parameters]**
 
-Lees de volgende sectie om over de JSON-Geformatteerde verzoekparameters zoals Punten, Privacy, en de Verwerking van Gegevens te leren.
+Een JSON-object dat meer informatie bevat. U kunt kiezen of u een beperkte set toetsinvoer wilt gebruiken of onbewerkte JSON wilt leveren. Bovendien kunt u dynamische gegevens ophalen uit een gegevenselement door de schijven te selecteren (![Schijfpictogram](../../../images/extensions/server/tradedesk/disk-icon.png)) aan de rechterkant.
+
 
 ![De [!DNL Object Request Parameters] sectie met beschikbare velden.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
@@ -99,14 +98,14 @@ Zie de [Real-Time Conversions Event](https://partner.thetradedesk.com/v3/portal/
 
 **[!UICONTROL Configuration Overrides]**
 
->OPMERKING
+>[!NOTE]
 >
 >De [!UICONTROL Configuration Overrides] met velden kunt u een andere instelling instellen [!DNL Advertiser ID] en/of [!DNL Merchant ID] op elke regel.
 
 | Invoer | Beschrijving |
 | --- | --- |
-| Adverteerder-id | De Advertiser-id die u wilt overschrijven met de Advertiser-id die is opgegeven in de extensieconfiguratie. |
-| Merchant ID | De Merchant-id die u wilt overschrijven met de Merchant-id die in de extensieconfiguratie is opgegeven. |
+| Adverteerder-id | Unieke id voor de adverteerder waaraan deze gebeurtenis is gekoppeld. U kunt een andere Advertiser-id opgeven om de id te overschrijven die u in de extensieconfiguratie hebt opgegeven. |
+| Merchant ID | De unieke identificatiecode die elke handelaar heeft gegeven [!DNL The Trade Desk] gedurende de instapprocedure. Een verschillende Merchant ID kan worden verstrekt om identiteitskaart met voeten te treden u in de uitbreidingsconfiguratie verstrekte. |
 
 ![De [!DNL Configuration Overrides] sectie met beschikbare velden.](../../../images/extensions/server/tradedesk/configure-overrides.png)
 
