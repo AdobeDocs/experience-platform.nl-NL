@@ -2,14 +2,19 @@
 title: UI-gids voor grafieksimulatie
 description: Leer hoe te om de Simulatie van de Grafiek in de Dienst UI van de Identiteit te gebruiken.
 badge: Beta
-source-git-commit: 21436bc051510729fa14b759f562b0bca7a5abba
+exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
+source-git-commit: 4c49bec7974dafe18d18deded6ddc936ece47dc3
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1401'
 ht-degree: 0%
 
 ---
 
 # [!DNL Graph Simulation] UI-hulplijn
+
+>[!AVAILABILITY]
+>
+>Deze functie is nog niet beschikbaar. Het bètaprogramma voor koppelingsregels voor identiteitsgrafieken zal naar verwachting in juli van start gaan voor ontwikkelingssandboxen. Neem contact op met het accountteam van de Adobe voor meer informatie over de deelnemingscriteria.
 
 [!DNL Graph Simulation] is een hulpmiddel in de Dienst UI van de Identiteit dat u kunt gebruiken om te simuleren hoe een identiteitsgrafiek zich op een bepaalde combinatie identiteiten gedraagt en hoe u vormt [algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md).
 
