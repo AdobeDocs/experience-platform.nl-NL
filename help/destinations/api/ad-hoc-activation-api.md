@@ -5,9 +5,9 @@ title: Het publiek activeren naar batchbestemmingen via de API voor ad-hocactive
 description: Dit artikel illustreert de end-to-end workflow voor het activeren van het publiek via de API voor ad-hocactivering, inclusief de segmentatietaken die plaatsvinden vóór activering.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 6304dabb6125b7eddcac16bcbf8abcc36a4c9dc2
+source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1606'
 ht-degree: 0%
 
 ---
@@ -167,15 +167,19 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | De id&#39;s van de doelinstanties waarop u het publiek wilt activeren. U kunt deze id&#39;s ophalen vanuit de interface van het platform door naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en klik op de gewenste doelrij om de doel-id in de rechtertrack te verhogen. Lees voor meer informatie de [documentatie van de werkruimte van doelen](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | De id&#39;s van het publiek dat u wilt activeren naar het geselecteerde doel. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | De id&#39;s van het publiek dat u wilt activeren naar het geselecteerde doel. U kunt de ad-hoc API gebruiken om platform-geproduceerd publiek evenals externe (douane upload) publiek uit te voeren. Wanneer u een extern publiek activeert, gebruikt u de door het systeem gegenereerde id in plaats van de gebruikers-id. U kunt de door het systeem gegenereerde id vinden in de overzichtsweergave voor het publiek in de gebruikersinterface. <br> ![Weergave van de gebruikers-id die niet moet worden geselecteerd.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Weergave van de gebruikers-id die niet moet worden geselecteerd."){width="100" zoomable="yes"} <br> ![Weergave van de publiek-id die door het systeem wordt gegenereerd en die moet worden gebruikt.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Weergave van de publiek-id die door het systeem wordt gegenereerd en die moet worden gebruikt."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-### Verzoek met export-id&#39;s (af te gekeurd) {#request-deprecated}
+### Aanvragen met export-id&#39;s {#request-export-ids}
+
+<!--
 
 >[!IMPORTANT]
 >
->**Vervangen aanvraagtype**. Dit voorbeeldtype beschrijft het aanvraagtype voor API versie 1. In versie 2 van de API voor ad-hocactivering hoeft u niet de meest recente uitvoertaak-id voor het publiek op te nemen.
+>**Deprecated request type**. This example type describes the request type for the API version 1. In the v2 of the ad-hoc activation API, you do not need to include the latest audience export job ID.
+
+-->
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
