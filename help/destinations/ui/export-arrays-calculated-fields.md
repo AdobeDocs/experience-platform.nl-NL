@@ -4,9 +4,9 @@ type: Tutorial
 description: Leer hoe u berekende velden kunt gebruiken om arrays in platte schemabestanden van Real-Time CDP naar cloudopslagbestemmingen te exporteren.
 badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
+source-git-commit: 787aaef26fab5ca3acff8303f928efa299cafa93
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1468'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,13 @@ Krijg uitgebreide informatie over berekende gebieden - wat deze zijn en waarom z
 * [UI-gids en -overzicht](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Functies Data Prep](/help/data-prep/functions.md)
 
+<!--
+
 >[!IMPORTANT]
 >
->Niet alle hierboven vermelde functies worden ondersteund *bij het exporteren van velden naar cloudopslagdoelen* de berekende veldfunctionaliteit gebruiken. Zie de [sectie voor ondersteunde functies](#supported-functions) zie hieronder voor meer informatie .
+>Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
+
+-->
 
 ## Arrays en andere objecttypen in Platform {#arrays-strings-other-objects}
 
@@ -86,7 +90,9 @@ Indien klaar, selecteert u **[!UICONTROL Next]** om door te gaan naar de volgend
 
 ## Ondersteunde functies {#supported-functions}
 
-Merk op dat slechts de volgende functies in de bètaversie van berekende gebieden en seriesteun voor bestemmingen worden gesteund:
+Alle gedocumenteerde [Functies Data Prep](/help/data-prep/functions.md) worden ondersteund bij het activeren van gegevens naar bestandsbestemmingen.
+
+Merk op, echter, dat de uitgebreide beschrijvingen van de gebruikscase en de informatie van de steekproefoutput momenteel voor de volgende functies slechts in de bètaversie van berekende gebieden en seriesteun voor bestemmingen worden verstrekt:
 
 * `join`
 * `coalesce`
@@ -224,7 +230,7 @@ U kunt tekenreekswaarden bijvoorbeeld rechtstreeks hashen `md5(personalEmail.add
 
 De ondersteunde hashingfuncties zijn:
 
-| -functie | Voorbeeldexpressie |
+| Functie | Voorbeeldexpressie |
 |---------|----------|
 | `sha1` | `sha1(organizations[0])` |
 | `sha256` | `sha256(organizations[0])` |
