@@ -4,10 +4,10 @@ title: API's van Experience Platforms verifiëren en benaderen
 type: Tutorial
 description: Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API's.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
+source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
 workflow-type: tm+mt
-source-wordcount: '2124'
-ht-degree: 2%
+source-wordcount: '2063'
+ht-degree: 1%
 
 ---
 
@@ -41,7 +41,7 @@ Om met succes vraag aan Experience Platform APIs te maken, moet u het volgende h
 U moet ook over een Adobe ID beschikken om deze zelfstudie te voltooien. Als u geen Adobe ID hebt, kunt u er een maken door de volgende stappen uit te voeren:
 
 1. Ga naar [Adobe Developer Console](https://console.adobe.io).
-2. Selecteer **[!UICONTROL Create a new account]**.
+2. Selecteren **[!UICONTROL Create a new account]**.
 3. Voltooi het aanmeldingsproces.
 
 ## De ontwikkelaar van de winst en gebruikerstoegang voor Experience Platform {#gain-developer-user-access}
@@ -88,15 +88,15 @@ De **[!UICONTROL Add an API]** wordt weergegeven. Selecteer het productpictogram
 >
 >Selecteer de **[!UICONTROL View docs]** om in een afzonderlijk browservenster naar het volledige venster te navigeren [API-naslagdocumentatie voor Experience Platform](https://developer.adobe.com/experience-platform-apis/).
 
-### Selecteer het verificatietype OAuth Server-to-Server {#select-oauth-server-to-server}
+### Selecteer de [!UICONTROL OAuth Server-to-Server] verificatietype {#select-oauth-server-to-server}
 
-Selecteer vervolgens het verificatietype dat u wilt maken voor het genereren van toegangstokens en voor toegang tot de Experience Platform-API.
+Selecteer vervolgens de [!UICONTROL OAuth Server-to-Server] verificatietype om toegangstokens te genereren en de Experience Platform-API te openen.
 
 >[!IMPORTANT]
 >
->Selecteer de **[!UICONTROL OAuth Server-to-Server]** de enige methode die wordt ondersteund om verder te gaan. De **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert de Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Meer informatie ophalen in de sectie [!BADGE Vervangen]{type=negative}[Een JSON-webtoken (JWT) genereren](#jwt).
+>De **[!UICONTROL OAuth Server-to-Server]** alleen de methode voor het genereren van tokens wordt ondersteund. De eerder ondersteunde **[!UICONTROL Service Account (JWT)]** Deze methode is vervangen en kan niet worden geselecteerd voor nieuwe integraties. Terwijl de bestaande integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert de Adobe sterk dat u bestaande integratie aan de nieuwe zult migreren [!UICONTROL OAuth Server-to-Server] vóór die datum. Meer informatie ophalen in de sectie [!BADGE Vervangen]{type=negative}[Een JSON-webtoken (JWT) genereren](#jwt).
 
-![Selecteer Experience Platform-API.](./images/api-authentication/oauth-authentication-method.png)
+![Selecteer de OAuth Server-aan-Server authentificatiemethode voor het Experience Platform API.](./images/api-authentication/oauth-authentication-method.png)
 
 ### Selecteer de productprofielen voor uw integratie {#select-product-profiles}
 
@@ -154,7 +154,7 @@ U kunt ook een Postman-omgeving en -verzameling gebruiken om toegangstokens te g
 
 >[!WARNING]
 >
-De JWT-methode voor het genereren van toegangstokens is afgekeurd. Alle nieuwe integraties moeten worden gecreëerd met de [OAuth Server-aan-Server authentificatiemethode](#select-oauth-server-to-server). De Adobe adviseert ook dat u uw bestaande integraties aan de methode OAuth migreert. Lees de volgende belangrijke documentatie:
+De JWT-methode voor het genereren van toegangstokens is afgekeurd. Alle nieuwe integraties moeten worden gecreëerd met de [OAuth Server-aan-Server authentificatiemethode](#select-oauth-server-to-server). Adobe vereist ook dat u uw bestaande integraties aan de methode OAuth vóór 1 Januari, 2025 voor uw integraties om verder te werken migreert. Lees de volgende belangrijke documentatie:
 > 
 * [Migratiehandleiding voor uw toepassingen van JWT naar OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 * [Implementatiehandleiding voor nieuwe en oude toepassingen met OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
@@ -319,7 +319,7 @@ Selecteren **[!UICONTROL Products]** selecteert u vervolgens **[!UICONTROL Adobe
 
 ![Lijst met producten op Admin Console](././images/api-authentication/products.png)
 
-Selecteer op het tabblad **[!UICONTROL Product Profiles]** de optie **[!UICONTROL AEP-Default-All-Users]**. U kunt ook de zoekbalk gebruiken om het productprofiel te zoeken door de naam in te voeren.
+Van de **[!UICONTROL Product Profiles]** tab, selecteert u **[!UICONTROL AEP-Default-All-Users]**. U kunt ook de zoekbalk gebruiken om het productprofiel te zoeken door de naam in te voeren.
 
 ![Zoeken naar het productprofiel](././images/api-authentication/select-product-profile.png)
 
@@ -327,7 +327,7 @@ Selecteer de **[!UICONTROL Developers]** tab, dan selecteren **[!UICONTROL Add D
 
 ![Ontwikkelaar toevoegen via het tabblad Ontwikkelaars](././images/api-authentication/add-developer1.png)
 
-Voer de **[!UICONTROL Email or username]**. Een geldige [!UICONTROL Email or username] geeft de ontwikkelaardetails weer. Selecteer **[!UICONTROL Save]**.
+Voer de **[!UICONTROL Email or username]**. Een geldige [!UICONTROL Email or username] geeft de ontwikkelaardetails weer. Selecteren **[!UICONTROL Save]**.
 
 ![Ontwikkelaars toevoegen met hun e-mail- of gebruikersnaam](././images/api-authentication/add-developer-email.png)
 
