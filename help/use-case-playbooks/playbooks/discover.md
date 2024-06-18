@@ -1,85 +1,74 @@
 ---
 solution: Experience Platform
-title: De juiste afspeelboek ontdekken
-description: Leer hoe u de juiste playbook kunt vinden voor uw gebruikscase en hoe u afspeelboeken kunt inschakelen.
+title: Afspeelboeken ontdekken
+description: Leer hoe u een galerie met afspeelboeken ontdekt en aan de slag gaat met een inspirerende sandbox.
 role: User
-exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: ad3f746580f85e77cba390208d147b35b6854e10
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
 
-# De juiste afspeelboek ontdekken
+# Afspeelboeken ontdekken
 
-Als u een afspeelboek wilt gebruiken, navigeert u naar **[!UICONTROL Use Case Playbooks]>[!UICONTROL Playbooks]**. Blader en gebruik de verschillende zoek- en filteropties op de pagina om een bepaald afspeelboek te selecteren en aan de slag te gaan.
+Afspeelboeken met hoofdletters en kleine letters zijn zonder extra kosten beschikbaar voor alle Adobe Experience Platform-klanten. Om tot een rijke galerij van gebruiksgeval te toegang te hebben playbooks in Experience Platform UI, selecteer **[!UICONTROL Playbooks]** in de linkernavigatie.
 
-## Zoeken en filteren {#search-and-filter}
+![Galerie met afspeelboeken gebruiken.](/help/use-case-playbooks/assets/playbooks/discover/playbooks-gallery.png)
 
-Gebruik het zoekvenster en de filters op de pagina om de juiste afspeellijst voor uw gebruik te vinden.
+![Directe toegang tot het gebruik van afspeelboeken met hoofdletters en kleine letters op de linkernavigatiebalk.](/help/use-case-playbooks/assets/playbooks/discover/left-nav-playbooks.png)
 
-U kunt bijvoorbeeld afspeelboeken filteren die u kunt gebruiken op basis van het werkgebied in de marketingtrechter waarop u zich wilt richten: conversie, betrokkenheid of retentie. U kunt de weergegeven afspeelboeken ook filteren op basis van de sector waarin u zich bevindt of op basis van de productrechten waartoe u toegang hebt: Adobe Journey Optimizer of Real-Time CDP.
+Selecteer een afspeelboek om naar de detailpagina te gaan en selecteer **[!UICONTROL Go to an inspirational sandbox]**. Er wordt een bevestigingsmodaal weergegeven. Selecteren **Bevestigen** om naar de inspirerende zandbak te gaan waar u met de verschillende gebruiksgevallen kunt onderzoeken en experimenteren.
 
-![Afspeelboeken filteren op marketingtrechter, industrie of product](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
+Als u geen machtiging hebt om sandboxen te maken, neemt u contact op met uw beheerder voor hulp bij het maken van een inspirerende sandbox.
 
-U kunt de zoekfunctionaliteit ook gebruiken om het juiste afspeelboek voor u te vinden. Hieronder ziet u een voorbeeld van hoe u een afspeelboek kunt vinden waarmee u zich kunt bezighouden met gebruikers die mogelijk hun winkelwagentje hebben verlaten.
+>[!TIP]
+>
+>Een inspirerende sandbox is een ontwikkelingssandbox in Adobe Experience Platform waar u verschillende gebruiksgevallen kunt maken, testen en experimenteren voordat u deze implementeert in een live productieomgeving.
 
-![Neem contact op met gebruikers die mogelijk hun winkelwagentje hebben verlaten.](/help/use-case-playbooks/assets/playbooks/ui-guide/engage-abandoned-cart.gif)
+![Ga naar inspirerende sandbox.](/help/use-case-playbooks/assets/playbooks/discover/inspirational-sandbox.png)
 
-Of, kunt u beschikbare playbooks door de kanalen filtreren die u van plan bent te gebruiken om uw klanten te bereiken, zoals u hieronder kunt zien:
+Als u nog geen inspirerende sandboxes hebt ingesteld, selecteert u **[!UICONTROL Create an inspirational Sandbox]**. Er wordt een modaal weergegeven. Voer de **Naam** en **Titel** in de vereiste vakjes en selecteer **Maken**. Wanneer u de inspirerende sandbox hebt gemaakt, moet u ervoor zorgen dat [machtigingen definiëren](/help/access-control/home.md) voordat u teruggaat naar de pagina met details over afspeelboeken gebruiken om een instantie te maken.
 
-![Filteren op kanaal](/help/use-case-playbooks/assets/playbooks/ui-guide/channel-select-filter.gif)
+![Maak een inspirerende sandbox.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox.png)
 
-Experimenteer met de filters en zoekoptie en zoek het juiste afspeelboek voor u.
+![Voer een naam en titel in om een inspirerende sandbox te maken.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox-modal.png)
 
-## Afspeelboek weergeven en elementen genereren {#view-playbook-generate-assets}
+Als u een afspeelboek met een gebruikscase selecteert van buiten een inspirerende sandbox, kunt u geen instantie maken. Selecteer op de pagina Details de optie **Naar inspirerende sandbox** om naar een bestaande inspirerende sandbox te gaan en vervolgens **[!UICONTROL Create instance]**.
 
-Voordat u een afspeelboek maakt en er exemplaren van maakt, moet u het controleren om er zeker van te zijn dat het in uw behoeften past. Alle afspeelboeken bevatten de onderstaande secties, zodat u beter inzicht krijgt in de gebruiksgevallen die ze behandelen. Wanneer u klaar bent om verder te gaan en elementen te genereren, selecteert u **[!UICONTROL Create Instance]**.
+Als u geen machtiging hebt om sandboxen te maken, neemt u contact op met uw beheerder voor hulp bij het maken van een inspirerende sandbox.
 
-### Mindmap {#mindmap}
+![Geen machtigingen om sandbox te maken.](/help/use-case-playbooks/assets/playbooks/discover/no-permissions-to-create-sandbox.png)
 
-Gebruik de sectie mindmap in een afspeelboek om te begrijpen welke stappen van de workflow u met de afspeellijst kunt oplossen. Visualiseer de stroom van hoe alle geproduceerde voorwerpen u het gebruiksgeval kunnen helpen bereiken, vanuit het perspectief van de persoon die in het gebruiksgeval wordt gericht.
+Als u de limiet voor het aantal sandboxen hebt bereikt dat aan u is toegewezen, verschijnt er een bericht waarin u wordt gevraagd contact op te nemen met uw systeembeheerder om de limiet te verhogen of actieve sandboxen te deactiveren of te verwijderen. Nadat de sandboxlimiet is aangepast of het aantal actieve sandboxen is verminderd, kunt u doorgaan met het maken van de inspirerende sandbox.
 
-De mindmap begint met een definitie van wie in de gebruikersreis wordt bereikt en beschrijft bij elke stap als iets door Adobe, zoals een nieuw bericht of een herinnering wordt geleverd, of als het iets is dat de gerichte persoon deed dat het volgende bericht of de gebeurtenis teweegbracht.
+![Sandboxlimiet bereikt.](/help/use-case-playbooks/assets/playbooks/discover/sandbox-limit-reached.png)
 
-![De afspeelmindmap is gemarkeerd.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
+Wanneer u een inspirerende sandbox maakt, worden kanaaloppervlakken voor e-mail-, push- en SMS-berichten niet automatisch ingesteld. Neem contact op met uw IT-beheerder om deze handmatig te configureren of het maken van de instantie kan mislukken.
 
-### Samenvatting {#summary}
+![Kanaalvoorinstellingen configureren.](/help/use-case-playbooks/assets/playbooks/discover/configure-channel-presets.png)
 
->[!CONTEXTUALHELP]
->id="platform_playbooks_assets"
->title="Assets"
->abstract="Dit zijn de elementen die worden gegenereerd door dit afspeelboek. Nadat u een instantie van het afspeelboek hebt gemaakt, kunt u de elementen in de inspirerende sandbox bekijken en deze desgewenst naar andere sandboxen promoten."
+## Sandbox- en kanaaloppervlakken configureren in Journey Optimizer {#configure-channel-surfaces}
 
-Inspect de overzichtssectie om te begrijpen welke activa worden geproduceerd zodra u instanties van playbook creeert. De elementen die voor elk afspeelboek worden gegenereerd, worden aangepast aan het gebruiksscenario dat in het afspeelboek wordt ingeschakeld. Meer informatie over alle items in de overzichtssectie vindt u hieronder.
+Als uw organisatie een licentie heeft voor [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html)En u wilt de voor Journey Optimizer ontworpen afspeelboeken gebruiken, dan moet u de kanaalvoorinstellingen in uw sandbox configureren, die de technische parameters definiëren die vereist zijn voor uw berichten. [Leer hoe u kanaaloppervlakken instelt in Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
 
-| Item | Beschrijving |
----------|----------|
-| **[!UICONTROL Target audience]** | Beschrijft de karakters die u door dit gebruiksgeval playbook wilt bereiken. |
-| **[!UICONTROL Marketing Channels]** | Beschrijft de kanalen die worden gebruikt om de karakters te bereiken die in playbook worden gericht. |
-| **[!UICONTROL Technical assets]** | Een lijst met de technische elementen die worden gegenereerd nadat u instanties van het afspeelboek hebt gemaakt. De gegenereerde elementen verschillen per afspeelboek, afhankelijk van het gebruiksscenario. Sommige playbooks kunnen schema&#39;s, segmenten, en reizen produceren. Anderen kunnen doelen genereren. Zie de [De gegenereerde elementen begrijpen](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) in de handleiding over het maken en opnieuw gebruiken van instanties vindt u meer informatie over het gebruik en het hergebruik van de gegenereerde elementen. |
+Als u instanties van afspeelboeken wilt maken in Journey Optimizer, moet u kanaaloppervlakken configureren voor e-mail-, push- en SMS-berichten.
 
-{style="table-layout:auto"}
+### Oppervlak e-mailkanaal
 
-![Overzicht van playbook gemarkeerd](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-summary.png)
+Ga naar `Channels` in de Journey Optimizer-interface. Vorm afzonderlijke subdomeinen en IP pools voor marketing e-mail en transactioneel overseinen, als niet reeds gevormd. Dit zijn beste praktijken om ervoor te zorgen dat de transactieberichten zoals de bevestigingse-mail van de orde, door aan uw klanten krijgen. Voer namen, e-mailadressen en aanvullende instellingen in. Selecteren **Verzenden** rechtsboven op de pagina om het oppervlak van het marketingkanaal te maken. Lees de documentatie op [hoe u de oppervlakken van e-mailkanalen instelt](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
-### Instanties {#instances}
+### SMS-kanaal
 
-Schuif omlaag naar de sectie instances voor een overzicht van de instanties van dit afspeelboek die u of leden van uw team al hebben gemaakt. U kunt verschillende besturingselementen gebruiken om de weergegeven instanties te sorteren en te filteren, bijvoorbeeld om alleen de door u gemaakte instanties te zien. U kunt ook verschillende informatie over elk exemplaar zien, zoals hieronder vermeld.
+Om een het kanaaloppervlakte van SMS tot stand te brengen, creeer eerst een referentie van SMS API, en selecteer de aangewezen verkoper (bijvoorbeeld, Sinch). Geef het oppervlak van het SMS-kanaal een naam (bijvoorbeeld SMS Marketing), selecteer de configuratie en voer een nummer voor de afzender in. Selecteren **Verzenden** rechts boven aan de pagina om het oppervlak van het SMS-kanaal op te slaan. Lees de documentatie op [hoe u de oppervlakken van SMS-kanalen instelt](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=en#message-preset-sms).
 
-| Item | Beschrijving |
-|---------|----------|
-| **[!UICONTROL Name]** | De naam van de instantie op basis van het afspeelboek. U kunt de naam en beschrijving van een instantie aanpassen. De sectie lezen op [instantiemetagegevens bewerken](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata) voor meer informatie . |
-| **[!UICONTROL Status]** | Geeft de status van de instantie aan. A **[!UICONTROL submitted]** -instantie is klaar voor gebruik. |
-| **[!UICONTROL Created]** | Geeft aan wanneer de instantie is gemaakt. |
-| **[!UICONTROL Created By]** | Geeft aan wie de instantie heeft gemaakt. |
-| **[!UICONTROL Last Modified]** | Geeft aan wanneer de instantie voor het laatst is gewijzigd. |
+Configureer ook kanalen voor afspeelboeken die transactieberichten bevatten, zoals orderbevestigingen.
 
-{style="table-layout:auto"}
+### Push-kanaaloppervlak
 
-![Instantie van afspeelboek is gemarkeerd.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-instances.png)
+Controleer of de toepassingsoppervlakken zijn geconfigureerd via het Experience Platform of de interface Gegevensverzamelingen. Zo zien toepassingsoppervlakken er uit in de gegevensverzamelingsomgeving.
 
-## Volgende stappen - Een afspeelboekinstantie maken {#next-steps-create-instance}
+## Volgende stappen {#next-steps}
 
-Wanneer u gereed bent om verder te gaan met een afspeelboek en een instantie te maken, selecteert u **[!UICONTROL Create Instance]** om verder te gaan met het afspeelboek en technische middelen te genereren. Lees de handleiding op [afspeelboekinstanties maken, delen en opnieuw gebruiken](/help/use-case-playbooks/playbooks/create-share-reuse.md) voor nadere informatie.
+Nu u dit document hebt gelezen, zou u moeten weten hoe te opstelling een inspirerende zandbak en vertrouwd met verschillende manieren om tot gebruikscaseplaybooks binnen Platform toegang te hebben. Lees als volgende stap hoe u [zoeken](/help/use-case-playbooks/playbooks/find.md) het juiste afspeelboek.
+

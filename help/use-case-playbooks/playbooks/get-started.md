@@ -4,9 +4,9 @@ title: Ga aan de slag met Hoofdletters gebruiken
 description: Leer hoe u aan de slag gaat met de functie Hoofdletters gebruiken.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: fe87b8cdeaca5e4e852a8819534f4a5c4023ca52
+source-git-commit: dfb4549a09628f2fed947ddf76167db28354eb92
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Aan de slag
 
-Leer hoe u uw account instelt voor Use Case Playbooks, speciaal ontworpen voor Real-time Customer Data Platform en Adobe Journey Optimizer. De drie belangrijkste configuratiestappen zijn:
+Leer hoe u uw account instelt voor Use Case Playbooks, die zijn ontworpen voor Real-time Customer Data Platform en Adobe Journey Optimizer als dit niet automatisch is ingesteld. De drie belangrijkste configuratiestappen zijn:
 
 * Een sandbox maken
 * Gebruikersmachtigingen configureren
