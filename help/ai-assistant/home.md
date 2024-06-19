@@ -2,10 +2,10 @@
 title: Overzicht van AI Assistant
 description: Leer meer over AI Assistant, de nuances en gebruiksgevallen en hoe u deze kunt gebruiken om uw workflow met Adobe Experience Platform en Real-time Customer Data Platform te versnellen.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9ee39ee1f877fa13acdca8a1d8549cf4692b39aa
+source-git-commit: e8939132c1508e1dfc4028e6c8ff23662d6c2b2b
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 0%
+source-wordcount: '820'
+ht-degree: 1%
 
 ---
 
@@ -69,14 +69,18 @@ De operationele inzichten verwijzen naar antwoorden AI Medewerker produceert ove
 
 U kunt AI Assistant-vragen stellen over uw operationele inzichten in de volgende domeinen:
 
-* Attributen
-* Soorten publiek
-* Gegevensstromen
-* Gegevenssets
-* Doelen _(Vragen over accounts en sommige vragen over gegevensstroom kunnen op dit moment niet worden beantwoord.)_
-* Journeys
-* Schemas _(Op dit moment kunnen vragen met betrekking tot veldgroepen niet worden beantwoord.)_
-* Bronnen _(Op dit moment kunnen vragen over de rekeningen niet worden beantwoord.)_
+| Domein | Ondersteunde metagegevens |
+| --- | --- |
+| Attributen | <ul><li>Kenmerknaam kijkt omhoog</li><li>Kenmerk - schemaverhouding</li><li>Kenmerk - gegevenssetrelatie</li><li>Kenmerk - publieksrelatie</li><li>Kenmerk - bestemmingsverhouding</li><li>Ongebruikte kenmerken</li></ul> |
+| Doelgroepen | <ul><li>Aantal deelnemers</li><li>Type publiek (streaming of batch)</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Activeringsstatus</li><li>Aantal profielen</li><li>Soorten publiek dupliceren</li><li>Beoordelingsopnamen voor doeldefinitie</li><li>Publiek - kenmerkrelatie</li><li>Publiek - gegevenssetrelatie</li><li>Publiek - bestemmingsverhouding</li><li>InSegment-regels</li><li>Namen van opzoeken</li><li>Naam- en id-opnamen |
+| Gegevensstromen | <ul><li>Aantal gegevensstromen</li><li>Status DataFlow</li><li>Dataflow - relatie gegevensset</li><li>Dataflow - bronrelatie</li></ul> |
+| Gegevenssets | <ul><li>Aantal gegevenssets</li><li>Status profiel inschakelen</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Gegevensset - schema-relatie</li><li>Gegevensset - publieksrelatie</li><li>Gegevensset - kenmerkrelatie</li><li>Dataset - gegevensstroomrelatie</li><li>Namen van opzoeken </li><li>Naam- en id-opnamen</li></ul> |
+| Doelen | <ul><li>Gevormde doelaantallen</li><li>Doel - publieksrelatie</li><li>Relatie doelkenmerk</li></ul> |
+| Journeys | <ul><li>Aantal</li><li>Namen van opzoeken</li><li>Naam- en id-opnamen</li><li>Reisstatus</li><li>Status activering (publiek versus gebeurtenissen)</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Herhalingsfrequentie</li></ul> |
+| Schema&#39;s | <ul><li>Schema aantallen</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Schema, klassetype</li><li>Schema - kenmerkrelatie</li><li>Schema - gegevenssetrelatie</li><li>Schema - publieksrelatie</li><li>Status profiel inschakelen</li><li>Namen van opzoeken</li><li>Naam- en id-opnamen</li></ul> |
+| Bronnen | <ul><li>Rekentelling</li><li>Accountstatus</li><li>Actieve/inactieve gegevensstromen voor elke rekening</li><li>Bronconnector - gegevensstroomrelatie</li><li>Bronaccount - gegevensstroomrelatie</li></ul> |
+
+{style="table-layout:auto"}
 
 Voor vragen over operationele inzichten weerspiegelen de antwoorden mogelijk niet de huidige status van de gebruikersinterface. De gegevens die deze vragen ondersteunen, worden om de 24 uur bijgewerkt. Zo worden wijzigingen die gebruikers overdag aanbrengen in Real-Time CDP gesynchroniseerd met de gegevensopslag &#39;s nachts, waarna ze &#39;s ochtends beschikbaar komen voor vragen van gebruikers. U moet zich aanmelden bij een sandbox voor informatie over specifieke gegevens die betrekking hebben op objecten.
 

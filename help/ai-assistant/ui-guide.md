@@ -2,9 +2,9 @@
 title: AI Assistant in Adobe Experience Platform
 description: Leer hoe u met AI Assistant door Experience Platform- en Real-time Customer Data Platform-concepten kunt navigeren en deze kunt begrijpen, en hoe u informatie over uw objecten kunt gebruiken.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
+source-git-commit: 94245fe25828025b60ea57ddebede2b3ccf890eb
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1476'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # UI-gids voor AI-assistent
 
 Lees deze handleiding voor meer informatie over het gebruik van AI Assistant in de gebruikersinterface van Adobe Experience Platform.
+
+De volgende video is bedoeld als ondersteuning voor uw begrip van AI Assistant.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 ## De Hulp van AI van de toegang in de UI van het Experience Platform
 
@@ -111,6 +115,22 @@ U kunt ook filters en wijzigingen in uw vragen opgeven en u kunt de AI Assistant
 
 +++
 
+### Reacties met operationele inzichten controleren {#verify-responses}
+
+U kunt elke reactie met betrekking tot operationele vragen van inzichten verifiëren gebruikend een SQL vraag die AI Medewerker verstrekt.
+
++++Selecteren om een voorbeeld weer te geven van het controleren van reacties op operationele inzichten
+
+Nadat u een antwoord voor een vraag over operationele inzichten hebt ontvangen, selecteert u **[!UICONTROL Show sources]** en selecteer vervolgens **[!UICONTROL View source query]**.
+
+![bronquery weergeven](./images/view-source-query.png)
+
+Wanneer gevraagd met een operationele inzichten vraag, verstrekt AI Assistant een SQL vraag die u kunt gebruiken om het proces te verifiëren dat het nam om zijn antwoord te berekenen. Deze bronvraag is slechts voor verificatiedoeleinden en wordt niet gesteund op de Dienst van de Vraag.
+
+![voorbeeld van bronquery](./images/source-query.png)
+
++++
+
 ### Automatisch aanvullen gebruiken {#use-auto-complete}
 
 Met de functie Automatisch aanvullen kunt u een lijst met gegevensobjecten ontvangen die in uw sandbox staan. De aanbevelingen van Autocomplete zijn beschikbaar voor de volgende domeinen: publiek, schema&#39;s, datasets, bronnen, en bestemmingen.
@@ -132,6 +152,14 @@ U kunt de multi-boommogelijkheden van AI Medewerker gebruiken om een natuurlijke
 In het onderstaande voorbeeld wordt AI Assistant eerst gevraagd naar het totale aantal gegevensstromen en wordt vervolgens gevraagd de 10 meest recente gegevensstromen weer te geven.
 
 ![Voorbeeld van meerdere bochten](./images/multiturn.png)
+
++++
+
+### Een nieuw gesprek starten
+
+U kunt onderwerpen met AI Medewerker veranderen door opnieuw in te stellen en een nieuw gesprek te beginnen.
+
++++Select om een voorbeeld te bekijken van het terugstellen van uw gesprek
 
 Selecteer de ellipsen (**`...`**) in de interface van AI Assistant en selecteer vervolgens **[!UICONTROL Start new conversation]**. Dit informeert AI Medewerker dat u op veranderende onderwerpen van plan bent en kan bijzonder nuttig zijn wanneer het oplossen van problemenvragen die of ontbreken of van verwijzingen voorzien onjuiste informatie.
 
