@@ -1,15 +1,15 @@
 ---
 solution: Data Collection
 audience: user
-user-guide-title: Help bij Adobe Experience Platform Web SDK
-breadcrumb-title: Web SDK Guide
-user-guide-description: Interactie met de diensten van het Experience Cloud door het netwerk van de Rand.
+user-guide-title: Adobe Experience Platform Web SDK Help
+breadcrumb-title: Handleiding voor Web SDK
+user-guide-description: Interactie met Experience Cloud-services via het Edge-netwerk.
 feature: Web SDK
 role: Developer
-source-git-commit: ec801c550740c4cba3481a961599f548518bb032
+source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 9%
+source-wordcount: '224'
+ht-degree: 19%
 
 ---
 
@@ -91,13 +91,12 @@ ht-degree: 9%
       * [Ondersteuning voor Web In-app Messaging in Web SDK configureren](personalization/web-in-app-messaging.md)
 
 * Toestemming {#consent}
-   * [Ondersteunende toestemming](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
       * [Overzicht](consent/iab-tcf/overview.md)
       * [Integreren met tags](consent/iab-tcf/with-tags.md)
       * [Integreren zonder tags](consent/iab-tcf/without-tags.md)
 
-* Gebruik hoofdletters {#use-cases}
+* Gebruiksscenario’s {#use-cases}
    * [Overzicht](use-cases/overview.md)
    * [Gegevens naar Adobe Analytics verzenden met de Web SDK](use-cases/adobe-analytics.md)
    * [Client-tips voor gebruikersagent](use-cases/client-hints.md)

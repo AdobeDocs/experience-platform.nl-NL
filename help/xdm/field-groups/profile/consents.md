@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Inhoud en Voorkeuren voor schemaveldgroep
 description: Meer informatie over de veldgroep Inhoud en Voorkeuren.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 0%
@@ -185,7 +185,7 @@ Zie de zelfstudie aan [het creëren van een schema in UI](https://www.adobe.com/
 
 ## Verwerking van toestemmings- en preferenties
 
-Wanneer een klant zijn toestemming of voorkeuren op uw website wijzigt, moeten deze wijzigingen worden verzameld en onmiddellijk worden doorgevoerd met de [Adobe Experience Platform Web SDK](/help/web-sdk/consent/supporting-consent.md). Als een klant ervoor kiest geen gegevens meer te verzamelen, moet de gegevensverzameling onmiddellijk worden beëindigd. Als een klant ervoor kiest geen personalisatie meer te gebruiken, dan is er geen personalisatie aanwezig op de volgende pagina die zij bezoeken.
+Wanneer een klant zijn toestemming of voorkeuren op uw website wijzigt, moeten deze wijzigingen worden verzameld en onmiddellijk worden doorgevoerd met de [Adobe Experience Platform Web SDK](../../../web-sdk/commands/setconsent.md). Als een klant ervoor kiest geen gegevens meer te verzamelen, moet de gegevensverzameling onmiddellijk worden beëindigd. Als een klant ervoor kiest geen personalisatie meer te gebruiken, dan is er geen personalisatie aanwezig op de volgende pagina die zij bezoeken.
 
 ## Volgende stappen
 

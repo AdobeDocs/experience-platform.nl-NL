@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verwerking van toestemming in Adobe Experience Platform
 description: Leer hoe u in Adobe Experience Platform goedkeuringssignalen voor klanten verwerkt met de Adobe 2.0-standaard.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '1546'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Deze handleiding vereist een goed begrip van de verschillende diensten van de Ex
 * [Adobe Experience Platform Identity Service](/help/identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
 * [Klantprofiel in realtime](/help/profile/home.md): Gebruikt [!DNL Identity Service] mogelijkheden om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. Het profiel van de Klant in real time trekt gegevens van het meer van Gegevens en handhaaft klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
 * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): Een JavaScript-bibliotheek aan de clientzijde waarmee u verschillende platformservices kunt integreren in uw klantgerichte website.
-   * [Opdrachten voor SDK-toestemming](/help/web-sdk/consent/supporting-consent.md): Een gebruiksscenario-overzicht van de toestemmingsgerelateerde SDK-opdrachten die in deze handleiding worden getoond.
+   * [Opdrachten voor SDK-toestemming](../../../../web-sdk/commands/setconsent.md): Een gebruiksscenario-overzicht van de toestemmingsgerelateerde SDK-opdrachten die in deze handleiding worden getoond.
 * [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md): Hiermee kunt u gegevens in het realtime-klantprofiel opsplitsen in groepen personen die vergelijkbare kenmerken delen en op vergelijkbare wijze reageren op marketingstrategieën.
 
 ## Samenvatting van de verwerkingsstroom van de toestemming {#summary}
@@ -51,7 +51,7 @@ In de huidige versie van de steun van de toestemmingsverwerking in Platform, sle
 >
 >Raadpleeg voor meer informatie over de structuur van de hierboven vermelde XDM toestemmingsvelden de handleiding op de pagina [[!UICONTROL Consents and Preferences] gegevenstype](/help/xdm/data-types/consents.md).
 
-Zodra het systeem is gevormd, interpreteert het Web SDK van het Platform de waarde van de gegevensinzamelingstoestemming voor de huidige gebruiker om te bepalen als de gegevens naar het Netwerk van de Rand van Adobe Experience Platform zouden moeten worden verzonden, van de cliënt, zouden moeten worden gelaten vallen, of tot de toestemming van de gegevensinzameling aan of ja of nr wordt geplaatst.
+Zodra het systeem is gevormd, interpreteert het Web SDK van het Platform de waarde van de gegevensinzamelingstoestemming voor de huidige gebruiker om te bepalen als het gegeven naar de Edge Network van Adobe Experience Platform zou moeten worden verzonden, van de cliënt, zou moeten worden gelaten vallen of tot de toestemming van de gegevensinzameling aan of ja of nr wordt geplaatst.
 
 ## Bepalen hoe gegevens over klanttoestemming binnen uw CMP worden gegenereerd {#consent-data}
 

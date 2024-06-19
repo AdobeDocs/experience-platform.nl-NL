@@ -3,16 +3,16 @@ title: IAB TCF 2.0 Steun in de SDK van het Web van Adobe Experience Platform
 description: Leer hoe u IAB TCF 2.0-voorkeuren voor toestemming ondersteunt met de Adobe Experience Platform Web SDK
 keywords: toestemming;setConsent;Profile Privacy Field group;Experience Event Privacy Field group;Privacy Field group;IAB TCF 2.0;Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
 
 # IAB TCF 2.0 steun in de SDK van het Web van Adobe Experience Platform
 
-De Adobe Experience Platform Web SDK ondersteunt het Interactive Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0). Deze gids toont de vereisten voor het steunen van IAB TCF 2.0 door het Web SDK van Adobe Experience Platform integreren met Adobe Real-time Customer Data Platform, Audience Manager, de Gebeurtenissen van de Ervaring, Adobe Analytics, en het Netwerk van de Rand.
+De Adobe Experience Platform Web SDK ondersteunt het Interactive Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0). Deze gids toont de vereisten voor het steunen van IAB TCF 2.0 door het Web SDK van Adobe Experience Platform integreren met Adobe Real-time Customer Data Platform, Audience Manager, de Gebeurtenissen van de Ervaring, Adobe Analytics, en Edge Network.
 
 Bovendien zijn de volgende gidsen beschikbaar om in het leren te helpen hoe te om IAB TCF 2.0 met en zonder markeringen te integreren.
 
@@ -69,16 +69,16 @@ Als u bijvoorbeeld een klant hebt die niet onder de algemene gegevensbescherming
 
 ### Toestemming instellen wanneer deze wordt gewijzigd
 
-Adobe Experience Platform Web SDK heeft een `setConsent` , waarmee de voorkeuren van uw klant voor toestemming aan alle Adobe-services worden doorgegeven met IAB TCF 2.0. Als u integreert met Real-Time CDP, wordt hiermee het profiel van uw klant bijgewerkt. Als u met Audience Manager integreert, werkt dit de informatie van uw klant bij. Als u dit aanroept, wordt ook een cookie ingesteld met de voorkeur voor &#39;alles of niets&#39;-toestemming die bepaalt of toekomstige ervaringsgebeurtenissen mogen worden verzonden. Het is de bedoeling dat deze actie wordt opgeroepen wanneer de toestemming verandert. Bij toekomstige paginaladingen wordt het Edge Network-toestemmingscookie gelezen om te bepalen of Experience Events kan worden verzonden en of een identiteitscookie kan worden ingesteld.
+Adobe Experience Platform Web SDK heeft een `setConsent` , waarmee de voorkeuren van uw klant voor toestemming aan alle Adobe-services worden doorgegeven met IAB TCF 2.0. Als u integreert met Real-Time CDP, wordt hiermee het profiel van uw klant bijgewerkt. Als u met Audience Manager integreert, werkt dit de informatie van uw klant bij. Als u dit aanroept, wordt ook een cookie ingesteld met de voorkeur voor &#39;alles of niets&#39;-toestemming die bepaalt of toekomstige ervaringsgebeurtenissen mogen worden verzonden. Het is de bedoeling dat deze actie wordt opgeroepen wanneer de toestemming verandert. Wanneer de pagina later wordt geladen, wordt het instemmingscookie van de Edge Network gelezen om te bepalen of Experience Events kan worden verzonden en of een identiteitscookie kan worden ingesteld.
 
-Net als bij de IAB TCF 2.0-integratie van Audience Manager geeft het Edge Network toestemming wanneer een klant expliciet zijn toestemming heeft gegeven voor de volgende doeleinden:
+Net als bij de IAB TCF 2.0-integratie van Audience Managers geeft de Edge Network toestemming wanneer een klant uitdrukkelijk zijn toestemming heeft gegeven voor de volgende doeleinden:
 
 - **Doel 1:** Informatie opslaan en/of openen op een apparaat
 - **Doelstelling 10:** Producten ontwikkelen en verbeteren
 - **Speciaal doel 1:** Zorgen voor beveiliging, fraude voorkomen en fouten opsporen. (Per IAB TCF verordeningen, wordt dit altijd goedgekeurd aan)
 - **Machtiging leverancier Adobe:** Goedkeuring voor Adobe (leverancier 565)
 
-Voor meer informatie over de `setConsent` de documentatie lezen op [Ondersteunende toestemming](../../consent/supporting-consent.md).
+Voor meer informatie over de `setConsent` bevel, lees de specifieke documentatie van SDK van het Web op [setConsent](../../../web-sdk/commands/setconsent.md).
 
 ### Toestemming toevoegen aan Experience Events
 

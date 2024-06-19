@@ -4,7 +4,7 @@ solution: Experience Platform
 title: IAB TCF 2.0-ondersteuning in Experience Platform
 description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '2477'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Deze gids vereist ook een werkend inzicht in de volgende diensten van het Platfo
 * [Adobe Experience Platform Identity Service](/help/identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
 * [Klantprofiel in realtime](/help/profile/home.md): Gebruikt [!DNL Identity Service] om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. [!DNL Real-Time Customer Profile] trekt gegevens van het meer van Gegevens en handhaaft klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
 * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): Een JavaScript-bibliotheek aan de clientzijde waarmee u verschillende platformservices kunt integreren in uw klantgerichte website.
-   * [Opdrachten voor SDK-toestemming](/help/web-sdk/consent/supporting-consent.md): Een gebruiksscenario-overzicht van de toestemmingsgerelateerde SDK-opdrachten die in deze handleiding worden getoond.
+   * [Opdrachten voor SDK-toestemming](../../../../web-sdk/commands/setconsent.md): Een gebruiksscenario-overzicht van de toestemmingsgerelateerde SDK-opdrachten die in deze handleiding worden getoond.
 * [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md): Hiermee kunt u delen [!DNL Real-Time Customer Profile] gegevens in groepen personen die vergelijkbare kenmerken delen en op vergelijkbare wijze reageren op marketingstrategieën.
 
 Naast de hierboven vermelde diensten van het Platform, zou u ook vertrouwd moeten zijn met [bestemmingen](/help/data-governance/home.md) en hun rol in het ecosysteem van het platform.
