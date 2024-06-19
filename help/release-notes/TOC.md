@@ -1,12 +1,12 @@
 ---
 audience: user
-user-guide-title: Opmerkingen bij de release van Adobe Experience Platform
-breadcrumb-title: Opmerkingen bij de release van Platform
-user-guide-description: Hier vindt u maandelijks opmerkingen over Adobe Experience Platform.
-source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
+user-guide-title: Aanvullende informatie over Adobe Experience Platform
+breadcrumb-title: Aanvullende informatie over Platform
+user-guide-description: Hier vindt u maandelijks aanvullende informatie over Adobe Experience Platform.
+source-git-commit: 338fb0720cda1f5d67b0fbf7701caa87b585053b
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 73%
+source-wordcount: '143'
+ht-degree: 90%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 73%
 
 * [Opmerkingen bij de release van het huidige platform](latest/latest.md)
 * 2024 {#2024}
+   * [Juni 2024](2024/june-2024.md)
    * [Mei 2024](2024/may-2024.md)
    * [April 2024](2024/april-2024.md)
    * [Maart 2024](2024/march-2024.md)
@@ -32,7 +33,7 @@ ht-degree: 73%
    * [Februari 2023](2023/february-2023.md)
    * [Januari 2023](2023/january-2023.md)
 * 2022 {#2022}
-   * [november 2022](2022/november-2022.md)
+   * [November 2022](2022/november-2022.md)
    * [Oktober 2022](2022/october-2022.md)
    * [September 2022](2022/september-2022.md)
    * [Augustus 2022](2022/august-2022.md)
@@ -44,7 +45,7 @@ ht-degree: 73%
    * [Februari 2022](2022/february-2022.md)
    * [Januari 2022](2022/january-2022.md)
 * 2021 {#2021}
-   * [november 2021](2021/november-2021.md)
+   * [November 2021](2021/november-2021.md)
    * [Oktober 2021](2021/october-2021.md)
    * [September 2021](2021/september-2021.md)
    * [Augustus 2021](2021/august-2021.md)
@@ -57,7 +58,7 @@ ht-degree: 73%
    * [Januari 2021](2021/january-2021.md)
 * 2020 {#2020}
    * [December 2020](2020/december-2020.md)
-   * [november 2020](2020/november-2020.md)
+   * [November 2020](2020/november-2020.md)
    * [Oktober 2020](2020/october-2020.md)
    * [September 2020](2020/september-2020.md)
    * [Augustus 2020](2020/august-2020.md)
@@ -70,7 +71,7 @@ ht-degree: 73%
    * [Januari 2020](2020/january-2020.md)
 * 2019 {#2019}
    * [December 2019](2019/december-2019.md)
-   * [november 2019](2019/november-2019.md)
+   * [November 2019](2019/november-2019.md)
    * [September 2019](2019/september-2019.md)
    * [Juli 2019](2019/july-2019.md)
    * [Juni 2019](2019/june-2019.md)
