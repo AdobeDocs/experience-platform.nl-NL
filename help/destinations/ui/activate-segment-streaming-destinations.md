@@ -3,9 +3,9 @@ title: De publieksgegevens van de activering aan het stromen bestemmingen
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het toe te wijzen aan streamingdoelen.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: f741e62b3340b743e465edf3f7a007580b3f61be
+source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1098'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,9 @@ Voor sommige doelstreamingdoelen voor het publiek moet u bronkenmerken of naamru
 
 1. In de **[!UICONTROL Select source field]** pagina gebruiken **[!UICONTROL Select attributes]** of de **[!UICONTROL Select identity namespace]** opties voor het schakelen tussen de twee categorieën beschikbare bronvelden. Via de beschikbare [!DNL XDM] profielkenmerken en naamruimten, selecteer de kenmerken die u wilt toewijzen aan het doel en kies vervolgens **[!UICONTROL Select]**.
 
-   ![Selecteer de pagina met bronvelden waarop verschillende beschikbare bronvelden worden weergegeven.](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+   Gebruik de **[!UICONTROL Show only fields with data]** schakelen om alleen schemavelden weer te geven die zijn gevuld met waarden. Standaard worden alleen gevulde schemavelden weergegeven.
+
+   ![Selecteer de pagina met bronvelden waarop verschillende beschikbare bronvelden worden weergegeven.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
 
 1. Selecteer de knop rechts van de knop **[!UICONTROL Target field]** vermelding.
 

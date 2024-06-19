@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
+source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
 workflow-type: tm+mt
-source-wordcount: '3774'
+source-wordcount: '3793'
 ht-degree: 0%
 
 ---
@@ -240,6 +240,8 @@ In deze stap moet u de profielkenmerken selecteren die u wilt toevoegen aan de b
    >[!TIP]
    > 
    >U kunt het zoekveld gebruiken om de selectie te verkleinen, zoals in de onderstaande afbeelding wordt getoond.
+
+   Gebruik de **[!UICONTROL Show only fields with data]** schakelen om alleen schemavelden weer te geven die zijn gevuld met waarden. Standaard worden alleen gevulde schemavelden weergegeven.
 
    ![Modal venster met profielkenmerken die kunnen worden geëxporteerd naar de bestemming.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
 
@@ -519,7 +521,7 @@ Verrijkingskenmerken komen overeen met het aangepaste geüploade publiek dat in 
 Voer de onderstaande stappen uit om verrijkingskenmerken voor elk extern publiek te selecteren:
 
 1. In de **[!UICONTROL Enrichment attributes]** kolom, selecteert u de ![Bewerken, knop](../assets/ui/activate-batch-profile-destinations/edit-button.svg) (Bewerken).
-2. Selecteren **[!UICONTROL Add enrichment attribute]**. Er wordt een nieuw leeg schemaveld weergegeven.
+2. Selecteer **[!UICONTROL Add enrichment attribute]**. Er wordt een nieuw leeg schemaveld weergegeven.
    ![UI-afbeelding die het modale scherm weergeeft met de verrijkingskenmerken.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
 3. Selecteer de knop rechts van het lege veld om het selectiescherm van het veld te openen.
 4. Selecteer de kenmerken die u voor het publiek wilt exporteren.
