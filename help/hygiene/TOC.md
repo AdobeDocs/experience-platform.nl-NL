@@ -5,10 +5,10 @@ breadcrumb-title: Geavanceerde handleiding voor levenscyclusbeheer van gegevens
 user-guide-description: Verwijder individuele verslagen en plan vervalmomenten van datasets in Experience Platform voor het opschonen van gegevens, het verwijderen van anonieme gegevens en gegevensminimalisering.
 feature: Data Hygiene
 role: User, Developer, Admin
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: 9885c0d75ac28cfd73179b63b3d54da9b0ccf967
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 47%
+source-wordcount: '67'
+ht-degree: 49%
 
 ---
 
@@ -27,3 +27,4 @@ ht-degree: 47%
    * [Opnemen wordt verwijderd](./api/jobs.md)
    * [(bèta) Record wordt verwijderd](./api/workorder.md)
    * [Quota](./api/quota.md)
+* [Best practices](./best-practices.md)
