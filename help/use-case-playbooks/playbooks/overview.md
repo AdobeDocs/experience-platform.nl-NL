@@ -4,10 +4,10 @@ title: Overzicht van afspeelboeken gebruiken
 description: Ontdek hoe u de functie Playbooks voor gebruiksscenario in Experience Platform kunt gebruiken om aan de slag te gaan met verschillende situaties voor marketingdoeleinden
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 4%
+source-wordcount: '527'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ Wat u in deze documentatiehandleiding zult vinden:
 * **[Overzicht van afspeelboeken met gebruiksscenario&#39;s](#overview)**
 * [Ga aan de slag met de vereiste configuraties en machtigingen](/help/use-case-playbooks/playbooks/get-started.md)
 * [Beschikbaar voor gebruik als hoofdletters](/help/use-case-playbooks/playbooks/playbooks-list.md)
-* [De juiste afspeelboek ontdekken](/help/use-case-playbooks/playbooks/discover.md)
+* [Kiezen uit een selectie afspeelboeken](/help/use-case-playbooks/playbooks/choose.md)
 * [Afspeelboekinstanties maken, delen en opnieuw gebruiken](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Door afspeelboeken gegenereerde elementen kopiëren naar andere omgevingen met gebruik van functionaliteit voor gegevensbewustzijn](/help/use-case-playbooks/playbooks/data-awareness.md)
 * [Problemen oplossen en bekende beperkingen](troubleshooting.md)
@@ -54,7 +54,7 @@ Sommige [!UICONTROL Use Case Playbooks] zijn toegesneden op Real-Time CDP-gebrui
 
 ## UI-hulplijnen {#ui-guides}
 
-Nadat u de gewenste versie van het afspeelboek hebt gekozen, selecteert u deze in de gebruikersinterface en gaat u ermee aan de slag. De UI-hulplijnen lezen op [hoe te om juiste playbook te ontdekken](/help/use-case-playbooks/playbooks/discover.md) voor u en [afspeelboekinstanties maken, delen en opnieuw gebruiken](/help/use-case-playbooks/playbooks/create-share-reuse.md) voor volledige informatie over het maken van instanties en het optimaal benutten van een afspeelboek. Lees de documentatie over [gegevensbewustzijn](/help/use-case-playbooks/playbooks/data-awareness.md).
+Nadat u de gewenste versie van het afspeelboek hebt gekozen, selecteert u deze in de gebruikersinterface en gaat u ermee aan de slag. De UI-hulplijnen lezen op [hoe u de juiste afspeellijst in een selectie kunt kiezen](/help/use-case-playbooks/playbooks/choose.md) voor u en [afspeelboekinstanties maken, delen en opnieuw gebruiken](/help/use-case-playbooks/playbooks/create-share-reuse.md) voor volledige informatie over het maken van instanties en het optimaal benutten van een afspeelboek. Lees de documentatie over [gegevensbewustzijn](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Problemen oplossen en bekende beperkingen {#trouble-shooting-known-limitations}
 

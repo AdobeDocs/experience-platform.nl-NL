@@ -4,14 +4,14 @@ title: Overzicht van gegevensbewustzijn in Use Case Playbooks
 description: Leer hoe u tijd sneller kunt waarderen door de elementen te kopiëren die in de uiteindelijke inspirerende sandbox zijn gegenereerd naar andere sandboxen.
 role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 0%
 
 ---
 
-# Door afspeelboeken gegenereerde elementen publiceren naar andere sandboxen {#publish-to-other-sandboxes}
+# Door Publish gegenereerde afspeelboeken naar andere sandboxen {#publish-to-other-sandboxes}
 
 Afspeelboeken met hoofdletters/kleine letters zijn marketingsjablonen die zijn ontworpen om elementen te genereren, zoals publiek, schema&#39;s of ritten voor veelvoorkomende gevallen van marketinggebruik. U kunt de elementen die door afspeelboeken zijn gemaakt, testen in de inspirerende sandbox en als u klaar bent, kunt u de elementen importeren in andere ontwikkelingssandboxen voor verdere tests met de gegevens die beschikbaar zijn in die sandboxen. Als u tevreden bent met het testen, kunt u de elementen van ontwikkelingssandboxen verplaatsen naar productiesandboxen.
 
@@ -19,7 +19,7 @@ In bepaalde gevallen hebt u echter al uw eigen schema&#39;s, velden en veldgroep
 
 ## Vereisten {#prerequisites}
 
-Blader voordat u deze zelfstudie leest naar de [beschikbare use case playbook-sjablonen](/help/use-case-playbooks/playbooks/discover.md#search-and-filter) en [een instantie maken](/help/use-case-playbooks/playbooks/create-share-reuse.md) van een voorkeursboek.
+Blader voordat u deze zelfstudie leest naar de [beschikbare use case playbook-sjablonen](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) en [een instantie maken](/help/use-case-playbooks/playbooks/create-share-reuse.md) van een voorkeursboek.
 
 Wanneer u een instantie maakt, genereert u een set elementen, zoals ritten, segmenten, schema&#39;s en berichten in de inspirerende sandbox. Lees verder voor meer informatie over het kopiëren van deze elementen naar andere sandboxen.
 

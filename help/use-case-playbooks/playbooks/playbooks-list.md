@@ -4,9 +4,9 @@ title: Beschikbare Use Case Playbooks voor Real-time Customer Data Platform en A
 description: Een lijst met alle afspeelboeken in Real-time Customer Data Platform en Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 6573fdede3bd25bac556531e45f8abefc576f857
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -77,4 +77,4 @@ Lees deze pagina voor een overzicht van alle beschikbare afspeelboeken die u kun
 
 ## Volgende stappen
 
-Nu u op de hoogte bent van de beschikbare afspeelboeken, leest u de [handleiding detecteren](/help/use-case-playbooks/playbooks/discover.md) om te begrijpen hoe u aan de slag gaat met de afspeelboeken in de gebruikersinterface.
+Nu u de beschikbare playbooks kent, lees dit [hulplijn](/help/use-case-playbooks/playbooks/choose.md) om te begrijpen hoe u aan de slag gaat met de afspeelboeken en de juiste voor u te kiezen in de gebruikersinterface.

@@ -4,7 +4,7 @@ title: Ga aan de slag met Hoofdletters gebruiken
 description: Leer hoe u aan de slag gaat met de functie Hoofdletters gebruiken.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: dfb4549a09628f2fed947ddf76167db28354eb92
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 0%
@@ -113,4 +113,4 @@ Lees de documentatie op [hoe u oppervlakken van drukkanalen instelt](https://exp
 
 ## Volgende stappen {#next-steps}
 
-Nu u alle stappen in dit document hebt gevolgd, had u een ontwikkelingssandbox moeten maken met Use Case Playbooks die beschikbaar is in de linkernavigatie. U weet nu ook hoe u uw teamleden de vereiste machtigingen kunt geven om afspeelboeken te bekijken en te beheren en elementen te genereren. Lees als volgende stap hoe u [de juiste afspeellijst ontdekken](/help/use-case-playbooks/playbooks/discover.md) voor u en dan [hiervan instanties maken](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Nu u alle stappen in dit document hebt gevolgd, had u een ontwikkelingssandbox moeten maken met Use Case Playbooks die beschikbaar is in de linkernavigatie. U weet nu ook hoe u uw teamleden de vereiste machtigingen kunt geven om afspeelboeken te bekijken en te beheren en elementen te genereren. Lees als volgende stap hoe u [kiezen voor het juiste afspeelboek](/help/use-case-playbooks/playbooks/choose.md) voor u en dan [hiervan instanties maken](/help/use-case-playbooks/playbooks/create-share-reuse.md).

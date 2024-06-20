@@ -4,9 +4,9 @@ title: Afspeelboekinstanties maken, delen en opnieuw gebruiken
 description: Leer hoe u playbook-instanties kunt maken, delen en opnieuw gebruiken om uw marketinggebruikskwestie te voltooien.
 role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Als u een afspeelboek wilt gebruiken, navigeert u naar **[!UICONTROL Use Case Pl
 >title="Instantie maken"
 >abstract="Genereer een lijst met middelen zoals reizen, publiek, schema&#39;s of bestemmingen die in reis- of activeringsscenario&#39;s kunnen worden gebruikt."
 
-Voordat u een instantie van een afspeelboek maakt, kunt u de beschikbare afspeelboeken raadplegen op [u kunt het juiste afspeelboek voor u vinden](/help/use-case-playbooks/playbooks/discover.md). Wanneer u gereed bent om verder te gaan met een afspeelboek en een instantie te maken, selecteert u **[!UICONTROL Create Instance]** om verder te gaan met het afspeelboek en technische middelen te genereren.
+Voordat u een instantie van een afspeelboek maakt, kunt u de beschikbare afspeelboeken raadplegen op [kiezen voor het juiste afspeelboek](/help/use-case-playbooks/playbooks/choose.md). Wanneer u gereed bent om verder te gaan met een afspeelboek en een instantie te maken, selecteert u **[!UICONTROL Create Instance]** om verder te gaan met het afspeelboek en technische middelen te genereren.
 
 ![Maak een instantie van een afspeelboek.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
