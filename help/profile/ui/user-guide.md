@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;veren
 title: Gebruikersgids voor realtime gebruikersprofiel
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-Time Klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2071'
 ht-degree: 0%
 
 ---
@@ -132,9 +132,13 @@ Nadat u een **[!UICONTROL Profile ID]** de **[!UICONTROL Detail]** wordt geopend
 
 De weergegeven standaardvelden kunnen ook op organisatorisch niveau worden gewijzigd om de voorkeursprofielkenmerken weer te geven. Als u meer wilt weten over het aanpassen van deze velden, inclusief stapsgewijze instructies voor het toevoegen en verwijderen van kenmerken en het wijzigen van het formaat van dashboarddeelvensters, leest u de [handleiding voor het aanpassen van profieldetails](profile-customization.md).
 
-![Het tabblad Details is gemarkeerd. De profieldetails worden getoond.](../images/user-guide/profile-detail.png)
+![Het tabblad Details is gemarkeerd. De profieldetails worden getoond.](../images/user-guide/profile-detail-row-name.png)
 
-U kunt aanvullende informatie met betrekking tot het individuele klantenprofiel bekijken door een andere beschikbare lusjes te selecteren. Deze lusjes omvatten attributen, gebeurtenissen, en het lusje van het publiekslidmaatschap dat het publiek toont waarvoor het profiel momenteel gekwalificeerd is.
+U kunt ook schakelen tussen het weergeven van de kenmerknamen als hun weergavenamen en hun padnamen voor velden. Als u wilt schakelen tussen deze twee beeldschermen, selecteert u de optie **[!UICONTROL Show display names]** schakelen.
+
+![De schakeloptie Weergavenamen tonen wordt gemarkeerd en de weergavenamen worden onder de kenmerken weergegeven.](../images/user-guide/profile-detail.png)
+
+Selecteer een van de andere beschikbare tabbladen om aanvullende informatie over het profiel van de individuele klant weer te geven. Deze lusjes omvatten attributen, gebeurtenissen, en het lusje van het publiekslidmaatschap dat het publiek toont waarvoor het profiel momenteel gekwalificeerd is.
 
 ### Tabblad Kenmerken
 
