@@ -2,9 +2,9 @@
 title: Adobe Analytics Source Connector voor rapportsuite-gegevens
 description: Dit document biedt een overzicht van Analytics en beschrijft de gebruiksgevallen voor Analytics-gegevens.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 7812cfa44e1fcbe71d7b6231dc0b31c727c93a31
+source-git-commit: d56a37c5b1c5768b3f6811be9d30d45628fdabca
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
@@ -89,11 +89,17 @@ De [!DNL Analytics] De bron geeft deze identiteiten aan Experience Platform in v
 * `endUserIDs._experience.mcid.id`
 * `endUserIDs._experience.aacustomid.id`
 
-Deze velden zijn niet gemarkeerd als identiteiten. In plaats daarvan worden dezelfde identiteiten gekopieerd naar XDM&#39;s `identityMap` als sleutel-waardeparen:
+Deze velden zijn niet gemarkeerd als identiteiten. In plaats daarvan worden dezelfde identiteiten (indien aanwezig in de gebeurtenis) gekopieerd naar XDM&#39;s `identityMap` als sleutel-waardeparen:
 
 * `{ "key": "AAID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
 * `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
 * `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
+
+Wanneer de identiteit of identiteiten worden gekopieerd naar `identityMap`, `endUserIDs._experience.mcid.namespace.code` wordt ook ingesteld op dezelfde gebeurtenis:
+
+* Indien er sprake is van steun, `endUserIDs._experience.aaid.namespace.code` is ingesteld op &quot;AID&quot;.
+* Indien ECID aanwezig is, `endUserIDs._experience.mcid.namespace.code` is ingesteld op &quot;ECID&quot;.
+* Indien AACUSTOMID aanwezig is, `endUserIDs._experience.aacustomid.namespace.code` is ingesteld op &quot;AACUSTOMID&quot;.
 
 Als ECID aanwezig is in het identiteitsoverzicht, wordt dit gemarkeerd als de primaire identiteit voor de gebeurtenis. In dat geval kan de steun op ECID gebaseerd zijn vanwege de [Abonnementsserviceperiode](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Anders wordt STEUN gemarkeerd als de primaire identiteit voor de gebeurtenis. AACUSTOMID is nooit gemarkeerd als primaire id voor de gebeurtenis. Als AACUSTOMID echter aanwezig is, is de STEUN gebaseerd op AACUSTOMID vanwege de volgorde van de Experiencen Cloud.
 
