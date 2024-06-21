@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt de SQL-syntaxis beschreven die wordt ondersteund door de Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 4b1d17afa3d9c7aac81ae869e2743a5def81cf83
+source-git-commit: d2cb7c3d1968a33300d480e63c4cb007df3cce7b
 workflow-type: tm+mt
-source-wordcount: '4256'
+source-wordcount: '4305'
 ht-degree: 1%
 
 ---
@@ -312,7 +312,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 | `RESTRICT` | De standaardwaarde voor de modus. Indien opgegeven, wordt het schema alleen verwijderd als dit het geval is **niet** bevatten tabellen. |
 | `CASCADE` | Indien opgegeven, wordt het schema neergezet samen met alle tabellen in het schema. |
 
-## WEERGAVE MAKEN
+## WEERGAVE MAKEN {#create-view}
+
+Een SQL-weergave is een virtuele tabel die is gebaseerd op de resultaatset van een SQL-instructie. Een weergave maken met de opdracht `CREATE VIEW` en geef deze een naam. U kunt die naam dan gebruiken om naar de resultaten van de vraag terug te verwijzen. Hierdoor is het gemakkelijker om complexe query&#39;s opnieuw te gebruiken.
 
 De volgende syntaxis definieert een `CREATE VIEW` vraag voor een dataset. Deze dataset kan een ADLS of versnelde opslagdataset zijn.
 

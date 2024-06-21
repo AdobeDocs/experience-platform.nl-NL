@@ -2,7 +2,7 @@
 title: Het dashboard Accountprofielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de B2B-accountprofielen van uw organisatie kunt bekijken.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8e05b0ae06250f8cd55b361a8176963e0dce8e92
+source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
 workflow-type: tm+mt
 source-wordcount: '1675'
 ht-degree: 0%
@@ -170,7 +170,7 @@ Met het vervolgkeuzemenu in de widget kunt u het accountscoremodel selecteren.
 
 ![De widget Voorspelende score met invloedrijke factoren.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
-### Kan gegevensfout niet laden {#errors}
+## Kan gegevensfout niet laden {#errors}
 
 Als een widget wordt weergegeven *[!UICONTROL Unable to load. Try again.]* omdat er voor de B2B-entiteit geen gegevens beschikbaar zijn. De widget die bijvoorbeeld hieronder wordt weergegeven [!UICONTROL New opportunities by person role]toont het bericht &quot;[!UICONTROL Unable to load. Try again.]&quot; omdat deze sandbox geen opportuniteitsgegevens heeft.
 
