@@ -1,14 +1,14 @@
 ---
 audience: user
-user-guide-title: Doelgids
-user-guide-description: Activeer uw bekende en onbekende gegevens voor publicatiecampagnes voor meerdere kanalen, e-mailcampagnes, gerichte advertenties en nog veel meer.
+user-guide-title: Handleiding voor bestemmingen
+user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: e0f4ee0ae0f14df43bfe36375d8fe8e9eac79369
+source-git-commit: 791d854599cf1476f1ebb9584198433c91765efa
 workflow-type: tm+mt
-source-wordcount: '1224'
-ht-degree: 0%
+source-wordcount: '1227'
+ht-degree: 1%
 
 ---
 
@@ -141,6 +141,7 @@ ht-degree: 0%
    * Gebieden van het Platform voor gegevensbeheer {#data-management}
       * [Overzicht van DMP-doelen (Data Management Platform)](./catalog/data-management/overview.md)
       * [Audience Manager DIL-extensie](./catalog/data-management/aam-dil-extension.md)
+      * [Zeta Marketing Platform](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
    * Partner gegevens en identiteit {#data-partner}
       * [Acxiom-perspectiefonderdrukking](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Verbetering van acxiom-gegevens](./catalog/data-partner/acxiom-data-enhancement.md)
