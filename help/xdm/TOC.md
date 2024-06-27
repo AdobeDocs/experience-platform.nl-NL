@@ -5,10 +5,10 @@ breadcrumb-title: Handleiding voor Experience Data Model (XDM)
 user-guide-description: Verken een overzicht van het systeem van Experience Data Model (XDM) binnen het Experience Platform en leer hoe u klassen en schemaveldgroepen kunt gebruiken om ervaringsgegevens te standaardiseren.
 feature: Schemas
 role: Developer
-source-git-commit: fe239bee3c853d43c04200092f59537dfeb00c87
+source-git-commit: 948a86f78ca6a6305adaf3232ca98a5437d701a6
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 9%
+source-wordcount: '632'
+ht-degree: 8%
 
 ---
 
@@ -69,14 +69,14 @@ ht-degree: 9%
       * [Details partnerperspectief (voorbeeld)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
-      * [Reclamegegevens](./field-groups/event/advertising-details.md)
+      * [Advertising-gegevens](./field-groups/event/advertising-details.md)
       * [Toepassingsdetails](./field-groups/event/application-details.md)
       * [Balansoverdrachten](./field-groups/event/balance-transfers.md)
       * [Boot Detection](./field-groups/event/bot-detection-information.md)
       * [Campagne marketing details](./field-groups/event/campaign-marketing-details.md)
       * [Kaarthandelingen](./field-groups/event/card-actions.md)
       * [Kanaaldetails](./field-groups/event/channel-details.md)
-      * [Handelsgegevens](./field-groups/event/commerce-details.md)
+      * [Commerce-gegevens](./field-groups/event/commerce-details.md)
       * [Aanbetalingsgegevens](./field-groups/event/deposit-details.md)
       * [Device Trade-In-details](./field-groups/event/device-trade-in-details.md)
       * [Mijnreservering](./field-groups/event/dining-reservation.md)
@@ -106,24 +106,26 @@ ht-degree: 9%
       * [Productcategorie](./field-groups/product/product-category.md)
    * Provider {#provider}
       * [Gezondheidszorgverlener](./field-groups/provider/healthcare-provider.md)
+   * Gedeeld {#shared}
+      * [Details externe Source System Audit](./field-groups/shared/external-source-system-audit-details.md)
    * [Updates van veldgroepnamen](./field-groups/name-updates.md)
 * Gegevenstypen {#data-types}
    * [Accountgegevens](./data-types/account-details.md)
    * [Ad Break](./data-types/ad-break.md)
    * [Adres](./data-types/address.md)
-   * [Verzameling advertentiedetails](./data-types/advertising-details-collection.md)
-   * [Rapportage van advertentiedetails](./data-types/advertising-details-reporting.md)
-   * [Verzameling advertentiepod Details](./data-types/advertising-pod-details-collection.md)
-   * [Rapportage over advertentiepod](./data-types/advertising-pod-details-reporting.md)
+   * [Advertising-detailverzameling](./data-types/advertising-details-collection.md)
+   * [Advertising Details Reporting](./data-types/advertising-details-reporting.md)
+   * [Advertising Pod Details Collection](./data-types/advertising-pod-details-collection.md)
+   * [Advertising Pod Details Reporting](./data-types/advertising-pod-details-reporting.md)
    * [Toepassing](./data-types/application.md)
-   * [B2B-bron](./data-types/b2b-source.md)
+   * [B2B Source](./data-types/b2b-source.md)
    * [Beacon](./data-types/beacon.md)
    * [Browserdetails](./data-types/browser-details.md)
    * [Kar](./data-types/cart.md)
    * [Categoriegegevens](./data-types/category-data.md)
    * [Verzameling hoofdstukdetails](./data-types/chapter-details-collection.md)
    * [Rapportage over details van hoofdstuk](./data-types/chapter-details-reporting.md)
-   * [Handelstoepassingsgebied](./data-types/commerce-scope.md)
+   * [Commerce-bereik](./data-types/commerce-scope.md)
    * [Commerce](./data-types/commerce.md)
    * [Constante tekenreeks](./data-types/consent-string.md)
    * [Inhoud en voorkeuren](./data-types/consents.md)
@@ -135,12 +137,12 @@ ht-degree: 9%
    * [Omgeving](./data-types/environment.md)
    * [Verzameling met foutdetails](./data-types/error-details-collection.md)
    * [Experience Channel](./data-types/experience-channel.md)
-   * [Kenmerken externe bronsysteemcontrole](./data-types/external-source-system-audit-attributes.md)
+   * [Kenmerken externe Source System Audit](./data-types/external-source-system-audit-attributes.md)
    * [Financiële rekening](./data-types/financial-account.md)
    * [Veld voor algemene toestemming](./data-types/consent-field.md)
    * [Algemeen veld Voorkeuren voor marketing met abonnementen](./data-types/marketing-field-subscriptions.md)
    * [Algemeen veld Voorkeuren voor marketing](./data-types/marketing-field.md)
-   * [Algemeen veld Voorkeuren voor aanpassen](./data-types/personalization-field.md)
+   * [Algemeen Personalization-voorkeurenveld](./data-types/personalization-field.md)
    * [Geo Circle](./data-types/geo-circle.md)
    * [Geo-coördinaten](./data-types/geo-coordinates.md)
    * [Geo-vorm](./data-types/geo-shape.md)
