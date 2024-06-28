@@ -1,15 +1,15 @@
 ---
 audience: user
-user-guide-title: Help bij tags
+user-guide-title: Tags Help
 breadcrumb-title: Tags
-user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
+user-guide-description: Leer analyses, marketing en advertenties te implementeren en beheren om de klantervaring te verbeteren.
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 12%
+source-wordcount: '769'
+ht-degree: 15%
 
 ---
 
@@ -59,8 +59,8 @@ ht-degree: 12%
    * [Overzicht](./ui/event-forwarding/overview.md)
    * [Aan de slag](./ui/event-forwarding/getting-started.md)
    * [Onbewerkte gegevens configureren](./ui/event-forwarding/secrets.md)
-   * [Controle (bèta)](./ui/event-forwarding/monitoring.md)
-* Administratie {#admin}
+   * [Controle (Beta)](./ui/event-forwarding/monitoring.md)
+* Beheer {#admin}
    * [Overzicht](./ui/administration/overview.md)
    * [Bedrijven en eigendommen](./ui/administration/companies-and-properties.md)
    * [Gebruikersmachtigingen](./ui/administration/user-permissions.md)
@@ -142,7 +142,7 @@ ht-degree: 12%
          * [Overzicht](./extensions/client/brightcove/overview.md)
          * [Aanvullende informatie](./extensions/client/brightcove/release-notes.md)
       * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
-      * [Kanaalbron-id](https://exchange.adobe.com/apps/ec/101412)
+      * [Channel Source Identifier](https://exchange.adobe.com/apps/ec/101412)
       * [Cheetah Ervaringen](https://exchange.adobe.com/apps/ec/102759)
       * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
       * Gebruikelijke plug-ins voor Analytics {#plugins}
@@ -231,7 +231,7 @@ ht-degree: 12%
          * [Overzicht](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
          * [Overzicht](./extensions/server/linkedin/overview.md)
-      * [!DNL Mailchimp] Rand {#mailchimp}
+      * [!DNL Mailchimp] Edge {#mailchimp}
          * [Overzicht](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
          * [Overzicht](./extensions/server/meta/overview.md)
@@ -294,11 +294,12 @@ ht-degree: 12%
    * [De Reactor-API verifiëren en openen](./api/getting-started.md)
    * Eindpunten {#endpoints}
       * [Bedrijven](./api/endpoints/companies.md)
-      * [Eigenschappen](./api/endpoints/properties.md)
+      * [Properties](./api/endpoints/properties.md)
       * [Gegevenselementen](./api/endpoints/data-elements.md)
       * [Regels](./api/endpoints/rules.md)
       * [Regelcomponenten](./api/endpoints/rule-components.md)
       * [Extensiepakketten](./api/endpoints/extension-packages.md)
+      * [Autorisaties voor extensiepakketten](./api/endpoints/extension-package-usage-authorizations.md)
       * [Extensies](./api/endpoints/extensions.md)
       * [Bibliotheken](./api/endpoints/libraries.md)
       * [Builds](./api/endpoints/builds.md)
