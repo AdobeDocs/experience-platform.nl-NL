@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
+source-git-commit: 82e9263293462a223b635e828b95cb2b098886c7
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1241'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,8 @@ ht-degree: 1%
       * [LinkedIn Insight Tag-extensie](./catalog/advertising/linkedin.md)
       * [LiveRamp - Verbinding aan boord](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Distribution-verbinding](./catalog/advertising/liveramp-distribution.md)
-      * [Magnite Streaming Real-time verbinding](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [(Beta) Magnite Batch](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [(Beta) Magnite Streaming Real-time verbinding](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing-verbinding](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking-extensie](./catalog/advertising/pinterest-extension.md)
       * [Verbinding met pinterest Customer List](./catalog/advertising/pinterest.md)
