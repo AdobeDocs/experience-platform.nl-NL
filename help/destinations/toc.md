@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
+source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1237'
 ht-degree: 1%
 
 ---
@@ -45,10 +45,10 @@ ht-degree: 1%
       * [Het publiek activeren op gekrulde doelen op basis van LiveRamp-id&#39;s](./ui/activate-curated-destinations.md)
       * [Activeren het potentiële publiek aan bestemmingen](./ui/activate-prospect-audiences.md)
       * [Accountpubliek naar doelen activeren](./ui/activate-account-audiences.md)
-      * [(Bèta) de dossiers van de uitvoer op bestelling aan partijbestemmingen gebruikend Experience Platform UI](./ui/export-file-now.md)
+      * [(Beta) Bestanden op aanvraag exporteren naar batchbestemmingen met behulp van de interface van het Experience Platform](./ui/export-file-now.md)
       * [Gegevenssets exporteren met de interface van het Experience Platform](./ui/export-datasets.md)
-      * [(bèta) Gebruik de laatste kwalificatietijd XDM attribuut in de nieuwe bètawolkenopslagbestemmingen](./ui/activate-last-qualification-time.md)
-      * [(bèta) Gebruik berekende velden om arrays te exporteren in platte schemabestanden](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [(Beta) Gebruik het laatste XDM-attribuut voor kwalificatietijd in de nieuwe bètawolkenopslagdoelen](./ui/activate-last-qualification-time.md)
+      * [(Beta) Berekende velden gebruiken om arrays te exporteren in platte schemabestanden](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Doelgegevens weergeven](./ui/destination-details-page.md)
    * [Doelaccounts bijwerken](./ui/update-accounts.md)
    * [Doelaccounts verwijderen](./ui/delete-destination-account.md)
@@ -65,17 +65,17 @@ ht-degree: 1%
       * [Verbinding met Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate-verbinding](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform publiek delen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
-   * Reclamebestemmingen{#advertising}
-      * [Overzicht van advertentiebestemmingen](./catalog/advertising/overview.md)
+   * Advertising-bestemmingen{#advertising}
+      * [Overzicht Advertising-bestemmingen](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-verbinding](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud-extensie](./catalog/advertising/adobe-advertising-cloud.md)
-      * [(bèta) Amazon Ads-verbinding](./catalog/advertising/amazon-ads.md)
+      * [(Beta) Amazon Ads-verbinding](./catalog/advertising/amazon-ads.md)
       * [Awin Advertiser Conversion Tag-extensie](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag extension](./catalog/advertising/awin-mastertag.md)
       * [De extensie Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
       * [Vertakkingsextensie](./catalog/advertising/branch.md)
-      * [(bèta) Criteo-verbinding](./catalog/advertising/criteo.md)
-      * [DoubleClick Floodlight (bèta)-extensie](./catalog/advertising/doubleclick-floodlight.md)
+      * [(Beta) Creditverbinding](./catalog/advertising/criteo.md)
+      * [DoubleClick Floodlight-extensie (Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook Pixel-extensie](./catalog/advertising/facebook-pixel.md)
       * [OneTag-extensie knipperen](./catalog/advertising/flashtalking.md)
       * [Google Ads-verbinding](./catalog/advertising/google-ads-destination.md)
@@ -89,6 +89,7 @@ ht-degree: 1%
       * [LinkedIn Insight Tag-extensie](./catalog/advertising/linkedin.md)
       * [LiveRamp - Verbinding aan boord](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Distribution-verbinding](./catalog/advertising/liveramp-distribution.md)
+      * [Magnite Streaming Real-time verbinding](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing-verbinding](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking-extensie](./catalog/advertising/pinterest-extension.md)
       * [Verbinding met pinterest Customer List](./catalog/advertising/pinterest.md)
@@ -96,7 +97,7 @@ ht-degree: 1%
       * [PubMatic Connect-verbinding](./catalog/advertising/pubmatic.md)
       * [Verbinding Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [De verbinding van de handelsbureau](./catalog/advertising/tradedesk.md)
-      * [(bèta) De verbinding van de handelsbank CRM](./catalog/advertising/tradedesk-emails.md)
+      * [(Beta) De Trade Desk CRM-verbinding](./catalog/advertising/tradedesk-emails.md)
       * [Twitter van Universal Website Tag-extensie](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX-verbinding](./catalog/advertising/datax.md)
    * Analysedoelen {#analytics}
@@ -112,7 +113,7 @@ ht-degree: 1%
       * [PX-verbinding ophalen](./catalog/analytics/gainsight-px.md)
       * [Google Global Site Tag-extensie](./catalog/analytics/gtag-analytics.md)
       * [Google Universal Analytics-extensie](./catalog/analytics/google-universal-analytics.md)
-      * [JW Player Analytics-extensie (Bèta)](./catalog/analytics/jw-player-analytics.md)
+      * [JW Player Analytics-extensie (Beta)](./catalog/analytics/jw-player-analytics.md)
       * [Nielsen BSDK-extensie](./catalog/analytics/nielsen-bsdk.md)
       * [Nielsen IMA Handler extension](./catalog/analytics/nielsen-ima.md)
       * [Nielsen VideoJS Player Handler extension](./catalog/analytics/nielsen-videojs.md)
@@ -176,8 +177,8 @@ ht-degree: 1%
       * [Braze verbinding](./catalog/mobile-engagement/braze.md)
       * [Lijnverbinding](./catalog/mobile-engagement/line.md)
       * [Verbinding maken](./catalog/mobile-engagement/moengage.md)
-   * Aanpassingsdoelen {#personalization}
-      * [Overzicht van personalisatiedoelen](./catalog/personalization/overview.md)
+   * Personalization-bestemmingen {#personalization}
+      * [Overzicht Personalization-bestemmingen](./catalog/personalization/overview.md)
       * [(Beperkte beschikbaarheid) Analyse publiek](./catalog/personalization/audience-analysis.md)
       * [Adobe Commerce-verbinding](./catalog/personalization/adobe-commerce.md)
       * [Adobe Target-verbinding](./catalog/personalization/adobe-target-connection.md)
@@ -189,7 +190,7 @@ ht-degree: 1%
       * [Experience Cloud ID Service-extensie](./catalog/personalization/adobe-ecid.md)
       * [Verkenningsextensie](./catalog/personalization/gainsight.md)
       * [KickFire-extensie](./catalog/personalization/kickfire.md)
-      * [Marketo Web Personalization extension](./catalog/personalization/marketo-web-personalization.md)
+      * [Marketo Web Personalization-extensie](./catalog/personalization/marketo-web-personalization.md)
       * [Verbinding met PEGA-client-beslissingshub](./catalog/personalization/pega.md)
       * [Verbinding met Pega-profiel](./catalog/personalization/pega-profile.md)
    * Sociale bestemmingen{#social}
