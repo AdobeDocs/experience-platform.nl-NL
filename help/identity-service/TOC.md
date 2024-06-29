@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Identity Service
-breadcrumb-title: Platform Identity Service Guide
-user-guide-description: De klantenidentiteiten van de brug over apparaten en systemen om gepersonaliseerde digitale ervaringen te leveren.
+breadcrumb-title: Gids Platform Identity Service
+user-guide-description: Overbrug klantidentiteiten op verschillende apparaten en systemen om gepersonaliseerde digitale ervaringen te bieden.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
+source-git-commit: 30e19f53bb29977cf4255cb2dba688d8bbbf6b2b
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 1%
+source-wordcount: '137'
+ht-degree: 20%
 
 ---
 
@@ -28,6 +28,8 @@ ht-degree: 1%
       - [Prioriteit naamruimte](./identity-graph-linking-rules/namespace-priority.md)
       - [Voorbeeldscenario&#39;s](./identity-graph-linking-rules/example-scenarios.md)
       - [UI grafieksimulatie](./identity-graph-linking-rules/graph-simulation.md)
+      - [Configuratie-hulplijn voor identiteitsgrafiek met koppelingsregels](./identity-graph-linking-rules/configuration.md)
+      - [Identiteitsinstellingen](./identity-graph-linking-rules/identity-settings-ui.md)
    - [ECID-overzicht](./features/ecid.md)
 - [Implementatiehandleiding](implementation.md)
 - [Guardrails voor identiteitsgegevens](guardrails.md)
