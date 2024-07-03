@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: f0f66146bc65a9c5a1bcfee21aba44546cda6900
 workflow-type: tm+mt
-source-wordcount: '3793'
+source-wordcount: '3807'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ Selecteren **[!UICONTROL Export full files]** om het exporteren van een bestand 
 
    >[!NOTE]
    >
-   >De **[!UICONTROL After segment evaluation]** hieronder beschreven optie is alleen beschikbaar voor het selecteren van bèta-klanten.
+   >De **[!UICONTROL After segment evaluation]** hieronder beschreven optie is alleen beschikbaar voor het selecteren van Beta-klanten.
 
    Gebruik de **[!UICONTROL After segment evaluation]** optie om de activeringstaak onmiddellijk uit te voeren nadat de dagelijkse batchsegmentatietaak van het Platform is voltooid. Met deze optie zorgt u ervoor dat de meest actuele profielen naar uw bestemming worden geëxporteerd wanneer de activeringstaak wordt uitgevoerd.
 
@@ -442,13 +442,22 @@ De nieuwe **[!UICONTROL Mapping]** De pagina heeft de volgende bekende beperking
 
 #### Het kenmerk Publiek-lidmaatschap kan niet worden geselecteerd via de toewijzingsworkflow
 
-Vanwege een bekende beperking kun je momenteel de **[!UICONTROL Select field]** toe te voegen venster `segmentMembership.status` naar uw bestand exporteren. In plaats daarvan moet u de waarde handmatig plakken `xdm: segmentMembership.status` in het schemagebied, zoals hieronder getoond.
+Vanwege een bekende beperking kun je momenteel de **[!UICONTROL Select field]** toe te voegen venster `segmentMembership.seg_namespace.seg_id.status` naar uw bestand exporteren. In plaats daarvan moet u de waarde handmatig plakken `xdm: segmentMembership.seg_namespace.seg_id.status` in het schemagebied, zoals hieronder getoond.
 
 ![De opname van het scherm die de werkruimte van het publiekslidmaatschap in de afbeeldingsstap van het activeringswerkschema toont.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
-Het exporteren van bestanden kan als volgt variëren, afhankelijk van of `segmentMembership.status` is geselecteerd:
-* Als de `segmentMembership.status` veld is geselecteerd, geëxporteerde bestanden bevatten **[!UICONTROL Active]** leden in de eerste volledige momentopname en nieuw **[!UICONTROL Active]** en **[!UICONTROL Expired]** leden in latere incrementele uitvoer.
-* Als de `segmentMembership.status` veld is niet geselecteerd, geëxporteerde bestanden bevatten alleen **[!UICONTROL Active]** leden in de eerste volledige momentopname en in de daaropvolgende incrementele uitvoer.
+
+>[!NOTE]
+>
+Voor de bestemmingen van de wolkenopslag, worden de volgende attributen toegevoegd aan de afbeelding door gebrek:
+>
+* `segmentMembership.seg_namespace.seg_id.status`
+* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+
+Het exporteren van bestanden kan als volgt variëren, afhankelijk van of `segmentMembership.seg_namespace.seg_id.status` is geselecteerd:
+
+* Als de `segmentMembership.seg_namespace.seg_id.status` veld is geselecteerd, geëxporteerde bestanden bevatten **[!UICONTROL Active]** leden in de eerste volledige momentopname en nieuw **[!UICONTROL Active]** en **[!UICONTROL Expired]** leden in latere incrementele uitvoer.
+* Als de `segmentMembership.seg_namespace.seg_id.status` veld is niet geselecteerd, geëxporteerde bestanden bevatten alleen **[!UICONTROL Active]** leden in de eerste volledige momentopname en in de daaropvolgende incrementele uitvoer.
 
 Meer informatie over [exportgedrag profiel voor op bestanden gebaseerde doelen](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
@@ -488,19 +497,19 @@ Voor op profiel gebaseerde bestemmingen, moet u de profielattributen selecteren 
 
 >[!NOTE]
 >
-Adobe Experience Platform vult uw selectie vooraf in met vier aanbevolen, veelgebruikte kenmerken uit uw schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+Adobe Experience Platform vult uw selectie vooraf in met vier aanbevolen, veelgebruikte kenmerken uit uw schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Afbeelding met vooraf ingevulde aanbevolen kenmerken in de toewijzingsstap van de activeringsworkflow voor het publiek.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-Vanwege een bekende beperking kun je momenteel de **[!UICONTROL Select field]** toe te voegen venster `segmentMembership.status` naar uw bestand exporteren. In plaats daarvan moet u de waarde handmatig plakken `xdm: segmentMembership.status` in het schemagebied, zoals hieronder getoond.
+Vanwege een bekende beperking kun je momenteel de **[!UICONTROL Select field]** toe te voegen venster `segmentMembership.seg_namespace.seg_id.status` naar uw bestand exporteren. In plaats daarvan moet u de waarde handmatig plakken `xdm: segmentMembership.seg_namespace.seg_id.status` in het schemagebied, zoals hieronder getoond.
 >
 ![De opname van het scherm die de werkruimte van het publiekslidmaatschap in de afbeeldingsstap van het activeringswerkschema toont.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
-Het exporteren van bestanden kan op de volgende manieren verschillen, afhankelijk van of `segmentMembership.status` is geselecteerd:
-* Als de `segmentMembership.status` veld is geselecteerd, geëxporteerde bestanden bevatten **[!UICONTROL Active]** leden in de eerste volledige momentopname en **[!UICONTROL Active]** en **[!UICONTROL Expired]** leden in latere incrementele uitvoer.
-* Als de `segmentMembership.status` veld is niet geselecteerd, geëxporteerde bestanden bevatten alleen **[!UICONTROL Active]** leden in de eerste volledige momentopname en in de daaropvolgende incrementele uitvoer.
+Het exporteren van bestanden kan op de volgende manieren verschillen, afhankelijk van of `segmentMembership.seg_namespace.seg_id.status` is geselecteerd:
+* Als de `segmentMembership.seg_namespace.seg_id.status` veld is geselecteerd, geëxporteerde bestanden bevatten **[!UICONTROL Active]** leden in de eerste volledige momentopname en **[!UICONTROL Active]** en **[!UICONTROL Expired]** leden in latere incrementele uitvoer.
+* Als de `segmentMembership.seg_namespace.seg_id.status` veld is niet geselecteerd, geëxporteerde bestanden bevatten alleen **[!UICONTROL Active]** leden in de eerste volledige momentopname en in de daaropvolgende incrementele uitvoer.
 
 ## Verrijkingskenmerken selecteren {#select-enrichment-attributes}
 
