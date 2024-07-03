@@ -2,9 +2,9 @@
 title: Adobe Campaign Managed Cloud Services-verbinding
 description: Adobe Campaign Managed Cloud Services biedt een platform voor het ontwerpen van de ervaringen van klanten over meerdere kanalen en een omgeving voor visuele campagneorchestratie, real-time interactiebeheer en uitvoering via meerdere kanalen.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: 9757931f03f57b722c47955d83cb074629d9a883
+source-git-commit: 299868e5ca1b8fde667c4c0ec9a7435634a1717d
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1571'
 ht-degree: 0%
 
 ---
@@ -25,15 +25,21 @@ Campagne gebruiken om:
 * E-mail, mobiel, online en offline kanalen integreren in de reis van de klant,
 * Automatiseer de levering van betekenisvolle en geschikte berichten en aanbiedingen.
 
->[!IMPORTANT]
->
->Houd rekening met de volgende instructies wanneer u de Adobe Campaign Managed Cloud Services-verbinding gebruikt:
->
->* Er kunnen maximaal 50 segmenten zijn [geactiveerd](#activate) voor de bestemming,
->* Voor elk segment kunt u maximaal twintig velden toevoegen aan [map](#map) naar Adobe Campaign,
->* Gegevensbewaring op Azure Blob Storage Data Landing Zone (DLZ): 7 dag,
->* De activeringsfrequentie bedraagt minimaal 3 uur.
->* De maximale lengte van de bestandsnaam die door deze verbinding wordt ondersteund, is 255 tekens. Wanneer u [de naam van het geëxporteerde bestand configureren](../../ui/activate-batch-profile-destinations.md#configure-file-names)moet u ervoor zorgen dat de bestandsnaam niet langer is dan 255 tekens. Als u de maximale lengte van de bestandsnaam overschrijdt, treden activeringsfouten op.
+## Guardrails {#guardrails}
+
+Houd rekening met de volgende instructies wanneer u de Adobe Campaign Managed Cloud Services-verbinding gebruikt:
+
+* U kunt [activate](#activate) maximaal 25 doelgroepen.
+
+  U kunt deze limiet wijzigen door de waarde van de optie **NmsCdp_Aep_Audience_List_Limit** in de **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** map van Campaign Explorer.
+
+* U kunt maximaal 20 velden toevoegen aan [map](#map) naar Adobe Campaign.
+
+  U kunt deze limiet wijzigen door de waarde van de optie **NmsCdp_Aep_Destures_Max_Columns** in de **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** map van Campaign Explorer.
+
+* Gegevensbewaring op Azure Blob Storage Data Landing Zone (DLZ): 7 dag.
+* De activeringsfrequentie bedraagt minimaal 3 uur.
+* De maximale lengte van de bestandsnaam die door deze verbinding wordt ondersteund, is 255 tekens. Wanneer u [de naam van het geëxporteerde bestand configureren](../../ui/activate-batch-profile-destinations.md#configure-file-names)moet u ervoor zorgen dat de bestandsnaam niet langer is dan 255 tekens. Als u de maximale lengte van de bestandsnaam overschrijdt, treden activeringsfouten op.
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -41,12 +47,12 @@ Om u beter te helpen begrijpen hoe en wanneer u de bestemming van de Dienst van 
 
 * Adobe Experience Platform maakt een klantprofiel dat informatie bevat zoals de identiteitsgrafiek, gedragsgegevens van analyses, het samenvoegen van offline- en onlinegegevens, enzovoort. Dankzij deze integratie kunt u de segmentatiemogelijkheden die al in Adobe Campaign bestaan, uitbreiden met die door Adobe Experience Platform aangedreven doelgroepen. U kunt die gegevens dus activeren in Campaign.
 
-  Een sportattierbedrijf wil bijvoorbeeld de door Adobe Experience Platform aangedreven slimme segmenten benutten en deze activeren door Adobe Campaign te gebruiken om naar de klantenbasis te reiken via de verschillende kanalen die door Adobe Campaign worden ondersteund. Zodra de berichten worden verzonden, willen zij het klantenprofiel in het platform van de Ervaring van de Adobe met ervaringsgegevens van Adobe Campaign zoals verzenden, openen en klikken verbeteren.
+  Een sportattierbedrijf wil bijvoorbeeld het door Adobe Experience Platform aangedreven publiek aantrekken en activeren met Adobe Campaign om op de verschillende door Adobe Campaign ondersteunde kanalen naar de klantenbasis te reiken. Zodra de berichten worden verzonden, willen zij het klantenprofiel in het platform van de Ervaring van de Adobe met ervaringsgegevens van Adobe Campaign zoals verzenden, openen en klikken verbeteren.
 
   Het resultaat is kanaalcampagnes die consistenter zijn in het cloudecosysteem van de Ervaring van de Adobe en een rijk klantprofiel dat zich snel aanpast en leert.
 
 
-* Naast segmentactivering in Campagne kunt u de Adobe Campaign Managed Services-bestemming gebruiken om extra profielkenmerken in te voeren die zijn gekoppeld aan een profiel in Adobe Experience Platform en een synchronisatieproces hebben zodat deze worden bijgewerkt in de Adobe Campaign-database.
+* Naast activering van het publiek in Campagne, kunt u de bestemming van Adobe Campaign Managed Services gebruiken om extra profielattributen in te brengen die aan een profiel op Adobe Experience Platform worden gebonden en een synchronisatieproces op zijn plaats hebben zodat zij in het gegevensbestand van Adobe Campaign worden bijgewerkt.
 
   Stel bijvoorbeeld dat u waarden voor opt-in en opt-out vastlegt in Adobe Experience Platform. Met deze verbinding kunt u deze waarden overbrengen naar Adobe Campaign en een synchronisatieproces uitvoeren zodat ze regelmatig worden bijgewerkt.
 
@@ -66,7 +72,7 @@ Om u beter te helpen begrijpen hoe en wanneer u de bestemming van de Dienst van 
 | ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](/help/identity-service/features/ecid.md) voor meer informatie . |
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen. |
 | phone_sha256 | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen. |
-| GAID | Google-advertentie-id | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
+| GAID | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
 
 {style="table-layout:auto"}
@@ -77,7 +83,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met de kenmerken voor het geselecteerde profiel van het dialoogvenster [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een publiek samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met de kenmerken voor het geselecteerde profiel van het dialoogvenster [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -117,7 +123,7 @@ Selecteer de marketingacties die van toepassing zijn op de gegevens die u naar d
 
 Zie voor meer informatie over marketingacties de [overzicht van beleidsregels voor gegevensgebruik](/help/data-governance/policies/overview.md) pagina.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
@@ -172,7 +178,7 @@ Voor **[!UICONTROL Audience sync]** kunt u het geëxporteerde publiek controlere
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
-Voor **[!UICONTROL Profile sync (Update only)]**, worden de gegevens automatisch bijgewerkt in het gegevensbestand van de Campagne voor elk profiel dat door het segment wordt gericht dat in de bestemming wordt geactiveerd.
+Voor **[!UICONTROL Profile sync (Update only)]**, worden de gegevens automatisch bijgewerkt in het gegevensbestand van de Campagne voor elk profiel dat door het publiek wordt gericht dat in de bestemming wordt geactiveerd.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
