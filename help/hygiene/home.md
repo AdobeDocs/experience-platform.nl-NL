@@ -2,10 +2,10 @@
 title: Overzicht van geavanceerd gegevenslevenscyclusbeheer
 description: Met Advanced Data Lifecycle Management kunt u de levenscyclus van uw gegevens beheren door verouderde of onjuiste gegevens bij te werken of te wissen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: 1f82403d4f8f5639f6a9181a7ea98bd27af54904
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 1%
+source-wordcount: '625'
+ht-degree: 0%
 
 ---
 
@@ -23,6 +23,10 @@ Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer va
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
 Deze activiteiten kunnen worden uitgevoerd met behulp van [[!UICONTROL Data Lifecycle] UI-werkruimte](#ui) of de [API voor gegevenshygiëne](#api). Wanneer een gegevenslevenscyclusbaan uitvoert, verstrekt het systeem transparantie updates bij elke stap van proces. Zie de sectie over [tijdlijnen en transparantie](#timelines-and-transparency) voor meer informatie over hoe elk baantype in het systeem wordt vertegenwoordigd.
+
+>[!NOTE]
+>
+>Het geavanceerde Beheer van de Levenscyclus van Gegevens steunt dataset schrappingen door [eindpunt gegevensset vervaldatum](./api/dataset-expiration.md) en id-verwijderingen (gegevens op rijniveau) met behulp van de primaire identiteiten via de [werkordereindpunt](./api/workorder.md). U kunt ook [gegevenssetvervaldatums](./ui/dataset-expiration.md) en [verwijderde records](./ui/record-delete.md) via de interface van het platform. Raadpleeg de gekoppelde documentatie voor meer informatie. Merk op dat de Levenscyclus van Gegevens geen partijschrapping steunt.
 
 ## [!UICONTROL Data Lifecycle] UI-werkruimte {#ui}
 
@@ -49,7 +53,7 @@ Het volgende vindt plaats wanneer een [Vervalaanvraag gegevensset](./ui/dataset-
 | Aantal profielen bijgewerkt | 30 uur | Afhankelijk van de inhoud van de dataset die wordt geschrapt, kunnen sommige profielen uit het systeem worden verwijderd als alle hun componentenattributen aan die dataset worden gebonden. 30 uur nadat de dataset wordt geschrapt, worden om het even welke resulterende veranderingen in algemene profieltellingen weerspiegeld in [dashboardwidgets](../dashboards/guides/profiles.md#profile-count-trend) en andere verslagen. |
 | Soorten publiek bijgewerkt | 48 uur | Wanneer alle betrokken profielen zijn bijgewerkt, worden alle gerelateerde [publiek](../segmentation/home.md) worden aangepast aan de nieuwe grootte. Afhankelijk van de gegevensset die is verwijderd en de kenmerken waarop u segmenteert, kan de grootte van elk publiek toenemen of afnemen als gevolg van de verwijdering. |
 | Reizen en bestemmingen bijgewerkt | 50 uur | [Reizen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), en [bestemmingen](../destinations/home.md) worden bijgewerkt op basis van wijzigingen in gerelateerde segmenten. |
-| Harde verwijdering voltooid | 15 | Alle gegevens met betrekking tot de gegevensset zijn hard verwijderd uit het datumpeer. De [status van de levenscyclus van de gegevens](./ui/browse.md#view-details) die de gegevensset heeft verwijderd, wordt bijgewerkt om deze gegevens weer te geven. |
+| Harde verwijdering voltooid | 15 dagen | Alle gegevens met betrekking tot de gegevensset zijn hard verwijderd uit het datumpeer. De [status van de levenscyclus van de gegevens](./ui/browse.md#view-details) die de gegevensset heeft verwijderd, wordt bijgewerkt om deze gegevens weer te geven. |
 
 {style="table-layout:auto"}
 

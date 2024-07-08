@@ -3,9 +3,9 @@ title: API-eindpunt gegevensset vervaldatum
 description: Het /ttl eindpunt in de Hygiene API van Gegevens staat u toe om datasettermijnen in Adobe Experience Platform programmatically te plannen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
+source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
 workflow-type: tm+mt
-source-wordcount: '2166'
+source-wordcount: '2217'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,12 @@ Zodra de datasetschrapping in werking wordt gesteld, zal zijn vervalsingstaak wo
 >[!WARNING]
 >
 >Als een dataset wordt geplaatst om te verlopen, moet u om het even welke gegevensstromen manueel veranderen die gegevens in die dataset kunnen opnemen zodat uw stroomafwaartse werkschema&#39;s niet negatief worden beïnvloed.
+
+Het geavanceerde Beheer van de Levenscyclus van Gegevens steunt datasetschrappingen door het eindpunt van de gegevenssetvervalsing en identiteitskaart schrappingen (rij-vlakke gegevens) gebruikend primaire identiteiten via [werkordereindpunt](./workorder.md). U kunt ook [gegevenssetvervaldatums](../ui/dataset-expiration.md) en [verwijderde records](../ui/record-delete.md) via de interface van het platform. Raadpleeg de gekoppelde documentatie voor meer informatie.
+
+>[!NOTE]
+>
+>Gegevenslevenscyclus ondersteunt het verwijderen van batches niet.
 
 ## Aan de slag
 

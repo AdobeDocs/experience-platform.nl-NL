@@ -1,9 +1,10 @@
 ---
 title: Beste praktijken voor het Geavanceerde Beheer van de Levenscyclus van Gegevens
 description: Leer hoe u verzoeken voor gegevenshygiëne efficiënt kunt beheren in Adobe Experience Platform met de API voor geavanceerd gegevenslevenscyclusbeheer en gegevenshygiëne. Deze gids behandelt beste praktijken zoals het maximaliseren van identiteiten per verzoek, het specificeren van individuele datasets, en het bewust zijn van API het vertragen om vertragingen te verhinderen. Het document bevat richtlijnen voor het instellen van automatische gegevensset-opschoonbewerkingen, het controleren van de werkorderstatus en gedetailleerde methoden voor het ophalen van reacties. Volg deze procedures om de verwerking van uw verzoek te stroomlijnen en de reactietijden te optimaliseren.
-source-git-commit: 92667fd4da093e56dcf06ae1696484671d9fdd38
+exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
+source-git-commit: 5174529d606ac0186ff3193790ada70a46c7e274
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -26,10 +27,9 @@ U kunt de `/workorder` eindpunt in de Hygiene API van Gegevens om verslagen te b
 
 Volg de onderstaande richtlijnen om uw opmerkingen voor opschoonverzoeken te optimaliseren:
 
-1. **Identiteiten maximaliseren per aanvraag:** Omvat tot 100.000 identiteiten per schoonmaakbeurtverzoek om efficiency te verbeteren. Door meerdere identiteiten in één aanvraag op te nemen, vermindert u de frequentie van API-aanroepen en minimaliseert u het risico op prestatieproblemen als gevolg van buitensporige Single-identity-aanvragen.
+1. **Identiteiten maximaliseren per aanvraag:** Omvat tot 100.000 identiteiten per schoonmaakbeurtverzoek om efficiency te verbeteren. Door meerdere identiteiten in één aanvraag op te nemen, vermindert u de frequentie van API-aanroepen en minimaliseert u het risico op prestatieproblemen als gevolg van buitensporige Single-identity-aanvragen. Verzend aanvragen met maximale aantallen identiteitsgegevens voor een snellere verwerking, aangezien werkorders batchgewijs worden verwerkt.
 2. **Afzonderlijke gegevenssets opgeven:** Geef voor maximale efficiëntie de afzonderlijke gegevensset op die moet worden verwerkt.
-3. **Meerdere aanvragen verzenden:** Verzend meerdere verzoeken met maximale aantallen identiteiten om sneller te kunnen verwerken, aangezien werkorders vanwege de efficiëntie in een batch worden geplaatst.
-4. **Overwegingen bij het vertragen van API&#39;s:** Houd rekening met de snelheid van de API om te voorkomen dat de toepassing langzaam afneemt. Kleinere aanvragen (&lt; 100 IDs) bij hogere frequenties kunnen resulteren in 429 reacties en moeten opnieuw worden ingediend met aanvaardbare snelheden.
+3. **Overwegingen bij het vertragen van API&#39;s:** Houd rekening met de snelheid van de API om te voorkomen dat de toepassing langzaam afneemt. Kleinere aanvragen (&lt; 100 IDs) bij hogere frequenties kunnen resulteren in 429 reacties en moeten opnieuw worden ingediend met aanvaardbare snelheden.
 
 ### 429 fouten beheren {#manage-429-errors}
 
@@ -41,13 +41,13 @@ Als u een fout van 429 ontvangt, wijst het erop dat u het toegestane aantal verz
 
 ## Vervaldatum gegevensset {#dataset-expiration}
 
-Stel automatische gegevensset opschonen in voor gegevens van korte duur. Gebruik de `/ttl` eindpunt op de API van de Hygiëne van Gegevens om vervaldata voor datasets te plannen. Gebruik de `/ttl` eindpunt om een datasetschoonmaakbeurt teweeg te brengen die op een gespecificeerde tijd of een datum wordt gebaseerd. Zie de het eindpuntgids van de Vervaldatum van de Dataset leren hoe te [een gegevensset maken die vervalt](./api/dataset-expiration.md) en de [geaccepteerde queryparameters](./api/dataset-expiration.md#query-params).
+Stel automatische gegevensset opschonen in voor gegevens van korte duur. Gebruik de `/ttl` eindpunt op de API van de Hygiëne van Gegevens om vervaldata voor datasets voor schoonmaak te plannen die op een gespecificeerde tijd of een datum wordt gebaseerd. Zie de het eindpuntgids van de Vervaldatum van de Dataset leren hoe te [een gegevensset maken die vervalt](./api/dataset-expiration.md) en de [geaccepteerde queryparameters](./api/dataset-expiration.md#query-params).
 
 ## Bewaking van werkorder en vervalstatus van gegevensset {#monitor}
 
 U kunt de voortgang van uw gegevenslevenscyclusbeheer efficiënt controleren door **I/O-gebeurtenissen**. Een I/O-gebeurtenis is een mechanisme voor het ontvangen van realtime meldingen over wijzigingen of updates in verschillende services binnen het platform.
 
-I/O-gebeurteniswaarschuwingen kunnen naar een geconfigureerde webhaak worden verzonden om de automatisering van activiteitencontrole mogelijk te maken. Als u waarschuwingen wilt ontvangen via een webhaak, moet u uw webhaak registreren voor Platformwaarschuwingen in de Adobe Developer-console. Zie de handleiding op [abonneren op Adobe I/O Event-berichten](../observability/alerts/subscribe.md) voor de gedetailleerde instructies.
+I/O-gebeurteniswaarschuwingen kunnen naar een geconfigureerde webhaak worden verzonden om de automatisering van activiteitencontrole mogelijk te maken. Als u waarschuwingen wilt ontvangen via een webhaak, moet u uw webhaak registreren voor Platformwaarschuwingen in de Adobe Developer Console. Zie de handleiding op [abonneren op Adobe I/O Event-berichten](../observability/alerts/subscribe.md) voor de gedetailleerde instructies.
 
 Gebruik de volgende methoden en richtlijnen voor de levenscyclus van gegevens om taakstatussen effectief op te halen en te controleren:
 
@@ -63,7 +63,7 @@ U kunt de voortgang van uw taken tijdens de levenscyclus van gegevens op effici�
 
 Voor diepgaande informatie over individuele werkorders, gebruik de volgende benadering:
 
-- Breng een verzoek van een GET aan de `/workorder{work_order_id}` eindpunt voor gedetailleerde reactiegegevens.
+- Breng een verzoek van een GET aan de `/workorder/{work_order_id}` eindpunt voor gedetailleerde reactiegegevens.
 - Haal productspecifieke reacties en succesberichten op.
 - Vermijd het gebruik van deze methode voor regelmatige opiniepeilingsactiviteiten.
 

@@ -2,9 +2,9 @@
 title: Geautomatiseerde gegevensset verlopen
 description: Leer hoe te om een datasetvervaldatum in Adobe Experience Platform UI te plannen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,13 @@ In dit document wordt beschreven hoe u gegevenssetvervaldatums in de gebruikersi
 
 >[!NOTE]
 >
->Gegevens worden momenteel niet verwijderd uit het Adobe Experience Platform Edge Network vanwege de vervaldatum van de gegevensset. Nochtans, is er geen mogelijkheid dat de gegevens binnen het Netwerk van de Rand blijven nadat de dataset wordt geplaatst om te verlopen. Dit komt doordat de 15-daagse licentieovereenkomst voor Dataset Expiration overlapt met de periode van 14 dagen waarin gegevens in het Edge Network aanwezig zijn voordat deze worden verwijderd.
+>Gegevens worden momenteel niet verwijderd uit de Adobe Experience Platform-Edge Network. Er is echter geen mogelijkheid dat gegevens binnen de Edge Network blijven nadat de gegevensset is ingesteld op verlopen. Dit komt doordat de 15-daagse licentieovereenkomst voor Dataset Expiration overlapt met de periode van 14 dagen waarin gegevens binnen de Edge Network bestaan voordat ze worden verwijderd.
+
+Het geavanceerde Beheer van de Levenscyclus van Gegevens steunt dataset schrappingen door [eindpunt gegevensset vervaldatum](../api/dataset-expiration.md) en id-verwijderingen (gegevens op rijniveau) met behulp van de primaire identiteiten via de [werkordereindpunt](../api/workorder.md). U kunt ook gegevenssetvervaldatums beheren en [verwijderde records](./record-delete.md) via de interface van het platform. Raadpleeg de gekoppelde documentatie voor meer informatie.
+
+>[!NOTE]
+>
+>Gegevenslevenscyclus ondersteunt het verwijderen van batches niet.
 
 ## Een gegevensset plannen die vervalt {#schedule-dataset-expiration}
 
@@ -39,7 +45,7 @@ Als u een aanvraag wilt maken, selecteert u **[!UICONTROL Create request]** van 
 
 >[!IMPORTANT]
 >
-Real-Time CDP, Adobe Journey Optimizer, en de gebruikers van de Customer Journey Analytics hebben 20 in afwachting van geplande dataset het werkorden van de vervaldatum. Gebruikers van het gezondheidsschild en het privacyschild hebben 50 geplande werkorders voor het aflopen van gegevenssets in behandeling. Dit betekent dat u 20 of 50 datasets kunt hebben die om op elk ogenblik worden gepland worden geschrapt.<br>Bijvoorbeeld, als u 20 geplande datasettermijnen hebt en één dataset morgen zal worden geschrapt, kunt u geen meer vervalsingen plaatsen tot nadat die dataset is geschrapt.
+>Real-Time CDP, Adobe Journey Optimizer, en de gebruikers van de Customer Journey Analytics hebben 20 in afwachting van geplande dataset het werkorden van de vervaldatum. Gebruikers van het gezondheidsschild en het privacyschild hebben 50 geplande werkorders voor het aflopen van gegevenssets in behandeling. Dit betekent dat u 20 of 50 datasets kunt hebben die om op elk ogenblik worden gepland worden geschrapt.<br>Bijvoorbeeld, als u 20 geplande datasettermijnen hebt en één dataset morgen zal worden geschrapt, kunt u geen meer vervalsingen plaatsen tot nadat die dataset is geschrapt.
 
 ![De [!UICONTROL Data Lifecycle] werkruimte met [!UICONTROL Create request] gemarkeerd.](../images/ui/ttl/create-request-button.png)
 
@@ -59,7 +65,7 @@ Volgende, onder **[!UICONTROL Dataset Details]**, selecteert u het databasepicto
 
 >[!NOTE]
 >
-Alleen gegevenssets die tot de huidige sandbox behoren, worden weergegeven.
+>Alleen gegevenssets die tot de huidige sandbox behoren, worden weergegeven.
 
 ### De aanvraag verzenden {#submit-request}
 
@@ -73,7 +79,7 @@ Nadat het verzoek is verzonden, wordt een werkorder gemaakt en wordt deze weerge
 
 >[!NOTE]
 >
-Zie de overzichtssectie over [tijdlijnen en transparantie](../home.md#dataset-expiration-transparency) voor details over hoe de gegevensreeksen verlopen worden verwerkt zodra zij worden uitgevoerd.
+>Zie de overzichtssectie over [tijdlijnen en transparantie](../home.md#dataset-expiration-transparency) voor details over hoe de gegevensreeksen verlopen worden verwerkt zodra zij worden uitgevoerd.
 
 ## Een gegevensset bewerken of annuleren {#edit-or-cancel}
 
