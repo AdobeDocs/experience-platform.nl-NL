@@ -1,39 +1,38 @@
 ---
 title: Merkury Enterprise Connections-bestemming
 description: Leer hoe u een Merkury Enterprise Connections-doelverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
-hide: true
-hidefromtoc: true
-source-git-commit: 66a0a085e696dbe13d0368da395f655c7ca01a97
+source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
 workflow-type: tm+mt
-source-wordcount: '1393'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
+
 
 # Merkury Enterprise Connections-bestemming
 
 >[!NOTE]
 >
->De bestemmingsschakelaar en documentatiepagina worden gecreeerd en door het team van de Merkury gehandhaafd. Neem voor vragen of verzoeken om updates contact op met uw vertegenwoordiger van de Merkury-account.
+>De bestemmingsschakelaar en documentatiepagina worden gecreeerd en door [!DNL Merkury] team. Neem contact op met uw [!DNL Merkury] accountvertegenwoordiger.
 
 ## Overzicht
 
-Gebruik de bestemming van de Verbindingen van de Onderneming van de Merkury om publiek aan Merkury veilig te leveren. Merkury biedt marketers eenvoudig overeenkomsten en levering van op personen gebaseerd publiek aan Merkury&#39;s 80+ premium adresseerbare tv/CTV, uitgever en ad-tech verbindingen. Merkury wordt aangedreven door een uitgebreide identiteitsgrafiek voor volwassenen in de VS van 268+ miljoen mensen.
+Gebruik de [!DNL Merkury Enterprise Connections] bestemming om publiek veilig te leveren aan [!DNL Merkury]. [!DNL Merkury] biedt marketeers gemakkelijke matching en levering van persoonlijk publiek aan [!DNL Merkury]De 80+ premiumappable TV/CTV, uitgever, en ad-tech verbindingen. [!DNL Merkury] is aangedreven door een uitgebreide identiteitsgrafiek van 268+ miljoen mensen voor volwassen consumenten in de VS.
 
 ![Een diagram met de koppeling tussen Merkury en Experience Platform, inclusief inslikken en activering](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
 
-Voer de stappen in deze documentatiepagina uit om een Merkury Connections-doelverbinding te maken en een publiek te activeren via de Adobe Experience Platform-gebruikersinterface.
+Voer de stappen in deze documentatiepagina uit om een [!DNL Merkury Connections] doelverbinding gebruiken en publiek activeren via de Adobe Experience Platform-gebruikersinterface.
 
 >[!NOTE]
 >
->Als u het publiek naar mediadoelen wilt activeren met uw Merkury Connect-account, gebruikt u in plaats daarvan onze Merkury Connections-bestemming.
+>Als u het publiek wilt activeren naar de mediadoelen met uw [!DNL Merkury Connect] account, gebruik de [!DNL Merkury Connections] doel.
 
 ![De Merkury Enterprise Conections-doelkaart die is gemarkeerd in de catalogus met Experience Platforms doelen.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
 
 ## Gebruiksscenario’s
 
-* **Digitale media activeren**: Eenvoudige matching en levering van uw publieksprofielen aan Merkury&#39;s 50+ premium adresseerbare uitgevers en ad-tech verbindingen.
-* **Efficiëntie verbeteren**: Verbeter het bereik van uw voor cookies minder geschikte media, verbeter de doelgerichte efficiëntie en verhoog de ROAS (Return on Advertising Spend).
+* **Digitale media activeren**: Eenvoudige aanpassing en levering van profielen voor uw publiek aan [!DNL Merkury]De meer dan 50 eersteklas uitgevers en ad-tech verbindingen.
+* **Efficiëntie verbeteren**: Verbeter het bereik van uw voor cookies minder geschikte media, verbeter de doelgerichte efficiëntie en retournering op Advertising Spend (ROAS).
 
 ## Vereisten
 
@@ -46,7 +45,7 @@ Voer de stappen in deze documentatiepagina uit om een Merkury Connections-doelve
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| GAID | Google-advertentie-id | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
+| GAID | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
 | ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](/help/identity-service/features/ecid.md) voor meer informatie . |
 | phone_sha256 | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen. |
@@ -116,15 +115,15 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 >[!NOTE]
 >
->Wanneer u de optie CSV, Scheidingsteken, Citateken, Escape-teken, Lege waarde, Null-waarde, Compressie-indeling en Inclusief manifestbestandsopties selecteert, neemt u contact op met uw Merkury-team voor de juiste instellingen voor uw account.
+>Als u de optie CSV, Scheidingsteken, Citaat, Escape-teken, Lege waarde, Null-waarde, Compressie-indeling en Inclusief manifestbestandsopties selecteert, neemt u contact op met uw Merkury-team voor de juiste instellingen voor uw account.
 
 ![afbeelding van csv - opties](../../assets/catalog/data-partners/merkury-connections/media/image8.png)
 
 ### Bestaande account
 
-Accounts die al zijn gedefinieerd met de Merkury Enterprise Connections-bestemming, worden weergegeven in een pop-up lijst. Als u deze optie selecteert, kunt u details van de account bekijken in de rechtertrack. Bekijk het voorbeeld van UI, wanneer u navigeert aan **Doelen** > **Accounts**;
+Accounts die al zijn gedefinieerd met de Merkury Enterprise Connections-bestemming, worden weergegeven in een pop-up lijst. Als u deze optie selecteert, kunt u details van de account bekijken in de rechtertrack. Bekijk het voorbeeld van UI, wanneer u navigeert aan **Doelen** > **Accounts**:
 
-![Een screenshot van bestemmingsaccount op pagina met bestemmingsaccounts](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
+![Een screenshot van bestemmingsaccount in pagina met bestemmingsaccounts.](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
 
 ## Waarschuwingen inschakelen
 
@@ -136,21 +135,21 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 >
->* Als u gegevens wilt activeren, hebt u de toegangsbeheermachtigingen voor Bestemmingen weergeven, Doelen activeren, Profielen weergeven en Segmenten weergeven nodig. Lees het toegangsbeheeroverzicht of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om identiteiten uit te voeren, hebt u de de toegangsbeheertoestemming van de Grafiek van de Identiteit van de Mening nodig.
+>* Als u gegevens wilt activeren, hebt u de opdracht **Doelen weergeven**, **Doelen activeren**, **Profielen weergeven**, en **Segmenten weergeven** toegangsbeheermachtigingen. Lees het toegangsbeheeroverzicht of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Als u identiteiten wilt exporteren, hebt u de **Identiteitsgrafiek weergeven** toegangsbeheermachtiging.
 
 
 Lezen [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ## Toewijzingssuggesties
 
-Voor een correcte verwerking van bestanden aan de zijde van Merkury zijn naam- en adreselementen vereist. Hoewel niet alle elementen vereist zijn, zal het zo veel mogelijk helpen om tot een succesvolle overeenkomst te komen.
+De juiste verwerking van bestanden op de [!DNL Merkury] de zijde vereist naam en adreselementen. Hoewel niet alle elementen vereist zijn, zal het zo veel mogelijk helpen om tot een succesvolle overeenkomst te komen.
 
-Toewijzingssuggesties worden gegeven in de onderstaande tabel met lijstkenmerken aan uw bestemmingszijde die worden gebruikt door Merkury-verwerking waaraan klanten profielkenmerken kunnen toewijzen. Behandel deze elementen als suggesties aangezien niet alle elementen worden vereist, en de bronwaarden zullen van de behoeften van de rekening afhangen.
+Toewijzingssuggesties worden gegeven in de onderstaande tabel met de kenmerken aan de bestemmingszijde die worden gebruikt door [!DNL Merkury] verwerking waaraan klanten profielkenmerken kunnen toewijzen. Behandel deze elementen als suggesties aangezien niet alle elementen worden vereist, en de bronwaarden zullen van de behoeften van de rekening afhangen.
 
-| Doelveld | Bronbeschrijving |
+| Doelveld | Source-beschrijving |
 |---|---|
-| id | Identiteitsveld dat moet worden gebruikt om merkury-gegevens aan Experience Platform toe te wijzen via de Merkury Enterprise Identity Resolution Source-connector |
+| id | Identiteitsveld dat moet worden gebruikt voor toewijzing [!DNL Merkury] gegevens naar Experience Platform door de [!DNL Merkury Enterprise Identity] Source-connector |
 | Input_First_Name | De `person.name.firstName` waarde in Experience Platform. |
 | Input_Last_Name | De `person.name.lastName` waarde in Experience Platform. |
 | Input_Address_Line_1 | De `mailingAddress.street` waarde in Experience Platform. |
@@ -173,4 +172,4 @@ Alle Adobe Experience Platform-doelen zijn bij het verwerken van uw gegevens com
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een dataflow gecreeerd om profielgegevens van Experience Platform naar uw Merkury beheerde S3 plaats uit te voeren. Vervolgens moet u contact opnemen met uw vertegenwoordiger van Merkury met de naam van de account, bestandsnamen en het emmerpad, zodat de verwerking kan worden ingesteld.
+Door deze zelfstudie te volgen, hebt u een gegevensstroom gemaakt om profielgegevens van Experience Platform naar uw [!DNL Merkury] beheerde S3-locatie. Vervolgens moet u contact opnemen met uw [!DNL Merkury] wordt weergegeven met de naam van de account, de bestandsnamen en het emmerpad, zodat de verwerking kan worden ingesteld.
