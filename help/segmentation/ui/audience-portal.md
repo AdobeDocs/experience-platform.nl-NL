@@ -1,9 +1,9 @@
 ---
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
-source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
+source-git-commit: 531bee643c14ad407a1207cca9093e210e5227a5
 workflow-type: tm+mt
-source-wordcount: '3450'
+source-wordcount: '3478'
 ht-degree: 0%
 
 ---
@@ -387,7 +387,7 @@ Nadat u hebt bevestigd dat de details juist zijn, selecteert u **[!UICONTROL Fin
 >
 >Extern gegenereerde doelgroepen hebben standaard een gegevensvervaldatum van 30 dagen. De gegevensvervaldatum wordt opnieuw ingesteld als het publiek op om het even welke manier wordt bijgewerkt of gewijzigd.
 >
->Als uw extern gegenereerde publiek bovendien gevoelige en/of aan de gezondheidszorg gerelateerde informatie bevat, **moet** pas de noodzakelijke etiketten van het gegevensgebruik toe alvorens het op om het even welke bestemming te activeren. Voor meer informatie over het toepassen van labels voor gegevensgebruik leest u de documentatie op [beheren, labels](../../access-control/abac/ui/labels.md).
+>Als uw extern gegenereerde publiek bovendien gevoelige en/of aan de gezondheidszorg gerelateerde informatie bevat, **moet** pas de noodzakelijke etiketten van het gegevensgebruik toe alvorens het op om het even welke bestemming te activeren. Aangezien variabelen van extern gegenereerde soorten publiek in het datumpomeer worden opgeslagen in plaats van in het Real-time profiel van de Klant, moet u **niet** gegevens over toestemming opnemen in uw CSV-bestand. Voor meer informatie over het toepassen van labels voor gegevensgebruik leest u de documentatie op [beheren, labels](../../access-control/abac/ui/labels.md).
 
 ## Volgende stappen
 
