@@ -4,7 +4,7 @@ title: Een segmentdefinitie maken met de segmentatieservice-API
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u een segmentdefinitie kunt ontwikkelen, testen, voorvertonen en opslaan met de Adobe Experience Platform Segmentation Service API.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 9966385968540701f66acbb70c0810906650b7e1
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1066'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Dit document bevat een zelfstudie voor het ontwikkelen, testen, voorvertonen en opslaan van een segmentdefinitie met behulp van de [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-Voor informatie over hoe te om segmentdefinities te bouwen gebruikend het gebruikersinterface, gelieve te zien [Handleiding Segment Builder](../ui/overview.md).
+Voor informatie over hoe te om segmentdefinities te bouwen gebruikend het gebruikersinterface, gelieve te zien [Handleiding Segment Builder](../ui/segment-builder.md).
 
 ## Aan de slag
 
@@ -53,7 +53,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Een segmentdefinitie ontwikkelen
 
-De eerste stap in segmentatie is een segmentdefinitie te bepalen. Een segmentdefinitie is een object waarin een query is opgenomen [!DNL Profile Query Language] (PQL). Dit object wordt ook wel een PQL-voorspelling genoemd. PQL bepaalt de regels voor de segmentdefinitie die op voorwaarden met betrekking tot om het even welke verslag of tijdreeksgegevens wordt gebaseerd u verstrekt aan [!DNL Real-Time Customer Profile]. Zie de [PQL-hulplijn](../pql/overview.md) voor meer informatie over het schrijven van vragen PQL.
+De eerste stap in segmentatie is een segmentdefinitie te bepalen. Een segmentdefinitie is een object waarin een query is opgenomen [!DNL Profile Query Language] (PQL) Dit object wordt ook wel een PQL-voorspelling genoemd. PQL voorspelt de regels voor de segmentdefinitie die zijn gebaseerd op voorwaarden met betrekking tot alle record- of tijdreeksgegevens die u opgeeft aan [!DNL Real-Time Customer Profile]. Zie de [PQL-gids](../pql/overview.md) voor meer informatie over het schrijven van PQL query&#39;s.
 
 U kunt een nieuwe segmentdefinitie tot stand brengen door een verzoek van de POST aan `/segment/definitions` in de [!DNL Segmentation] API. Het volgende voorbeeld schetst hoe te om een definitieverzoek te formatteren, die welke informatie wordt vereist opdat een segmentdefinitie met succes wordt bepaald.
 
@@ -63,7 +63,7 @@ Voor een gedetailleerde uitleg van het definiëren van een segmentdefinitie lees
 
 Terwijl u de segmentdefinitie ontwikkelt, kunt u de schatting- en voorvertoningsgereedschappen gebruiken binnen [!DNL Real-Time Customer Profile] om informatie op overzichtsniveau weer te geven om ervoor te zorgen dat u het verwachte publiek isoleert. Schattingen verschaffen statistische informatie over een segmentdefinitie, zoals de geprojecteerde publieksgrootte en het betrouwbaarheidsinterval. De voorproeven verstrekken gepagineerde lijsten van kwalificerende profielen voor een segmentdefinitie, die u toestaat om de resultaten tegen te vergelijken wat u verwacht.
 
-Door uw publiek te schatten en te previewing, kunt u uw predikaten testen en optimaliseren PQL tot zij een wenselijk resultaat veroorzaken, waar zij dan in een bijgewerkte segmentdefinitie kunnen worden gebruikt.
+Door een schatting en voorvertoning van uw publiek te maken, kunt u uw PQL-voorspellingen testen en optimaliseren totdat ze een gewenste uitkomst opleveren. Vervolgens kunt u deze gebruiken in een bijgewerkte segmentdefinitie.
 
 Er zijn twee vereiste stappen om een voorvertoning van uw segmentdefinitie weer te geven of een schatting van uw segmentdefinitie te krijgen:
 

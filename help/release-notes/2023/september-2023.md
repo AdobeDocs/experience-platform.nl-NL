@@ -2,7 +2,7 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van september 2023 staat Adobe Experience Platform vermeld.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '2238'
 ht-degree: 2%
@@ -63,7 +63,7 @@ Raadpleeg voor meer informatie over het dashboard voor licentiegebruik de [Overz
 
 ## Gegevensverzameling {#data-collection}
 
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden, waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe doelen.
+Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar de Adobe Experience Platform-Edge Network kunt sturen waar deze verrijkt, getransformeerd en gedistribueerd kan worden naar Adobe- of niet-Adobe-bestemmingen.
 
 **Nieuwe of bijgewerkte functies**
 
@@ -134,7 +134,7 @@ Add these to release notes as they go out
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
 | Uitvoer van gegevens in Real-Time CDP | De [gegevensset exporteren](../../destinations/ui/export-datasets.md) functionaliteit is nu algemeen beschikbaar. Zie [welke gegevenssets u kunt exporteren op basis van de app Experience Platform](../../destinations/ui/export-datasets.md#datasets-to-export) u hebt aangeschaft en de [instructies voor de uitvoer van gegevenssets](/help/destinations/guardrails.md#dataset-exports). |
-| (bèta) Ondersteuning voor het exporteren van arraytype-objecten | Exporteer arrays met primitieve waarden (tekenreeks, int of booleaanse waarden) als platte schemabestanden naar de opslagdoelen van de cloud. Meer informatie over de functionaliteit in het dialoogvenster [documentatie](../../destinations/ui/export-arrays-calculated-fields.md). |
+| (Beta) Ondersteuning voor het exporteren van arraytype-objecten | Exporteer arrays met primitieve waarden (tekenreeks, int of booleaanse waarden) als platte schemabestanden naar de opslagdoelen van de cloud. Meer informatie over de functionaliteit in het dialoogvenster [documentatie](../../destinations/ui/export-arrays-calculated-fields.md). |
 | Dynamische dropdown-kiezers in Destination SDK | Wanneer u een doel maakt met Destination SDK, kunt u nu [dynamische vervolgkeuzekiezers](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) om de velden van een vervolgkeuzekiezer te vullen met waarden die zijn opgehaald uit een API. |
 
 **Oplossingen en verbeteringen** {#destinations-fixes-and-enhancements}
@@ -199,7 +199,7 @@ Voor meer informatie over Identiteitsservice leest u de [Overzicht van identitei
 
 ## Query-service {#query-service}
 
-Met Query Service kunt u standaard-SQL gebruiken om gegevens in Adobe Experience Platform op te vragen [!DNL Data Lake]. U kunt zich bij om het even welke datasets van aansluiten [!DNL Data Lake] en leg de vraagresultaten als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time vast.
+Met Query Service kunt u standaard-SQL gebruiken om gegevens in Adobe Experience Platform op te vragen [!DNL Data Lake]. U kunt zich bij om het even welke datasets van aansluiten [!DNL Data Lake] en leg de vraagresultaten als nieuwe dataset voor gebruik in rapportering, de Wetenschap van Gegevens Workspace, of voor opname in het Profiel van de Klant in real time vast.
 
 **Bijgewerkte functies**
 
@@ -220,7 +220,7 @@ Raadpleeg voor meer informatie over Query Services de [Overzicht van Query Servi
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Aanpasbare kolommen | U kunt de lay-out van het Portaal van de Publiek met re-sizable kolommen nu aanpassen. Lees voor meer informatie over deze functie de [segmenteringsUI-hulplijn](../../segmentation/ui/overview.md#customize). |
+| Aanpasbare kolommen | U kunt de lay-out van het Portaal van de Publiek met re-sizable kolommen nu aanpassen. Lees voor meer informatie over deze functie de [Overzicht van het portal Publiek](../../segmentation/ui/audience-portal.md#customize). |
 | Uitsplitsing naar frequentie bijwerken | U kunt nu een verdeling van de updatefrequenties van het publiek in uw organisatie bekijken. Lees voor meer informatie over deze functie de [segmenteringsUI-hulplijn](../../segmentation/ui/overview.md#browse). |
 
 Voor meer informatie over Segmentatieservice leest u de [Overzicht van segmentatieservice](../../segmentation/home.md).

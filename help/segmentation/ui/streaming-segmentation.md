@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor streamingsegmentatie
 description: Dankzij streamingsegmentatie op Adobe Experience Platform kunt u segmentering uitvoeren in bijna real-time terwijl u zich richt op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in Platform landen, die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens in Platform worden overgegaan, betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1530'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Segmentering streamen op [!DNL Adobe Experience Platform] staat klanten toe om s
 
 >[!NOTE]
 >
->Opdat het stromen segmentatie aan het werk is, zult u geplande segmentatie voor de organisatie moeten toelaten. Raadpleeg voor meer informatie over het inschakelen van geplande segmentatie [de het stromen segmenteringssectie in de de gebruikersgids van de Segmentatie](./overview.md#scheduled-segmentation).
+>Opdat het stromen segmentatie aan het werk is, zult u geplande segmentatie voor de organisatie moeten toelaten. Raadpleeg voor meer informatie over het inschakelen van geplande segmentatie [het overzicht van het publiek portaal](./audience-portal.md#scheduled-segmentation).
 
 Een query wordt automatisch geëvalueerd met streaming segmentatie als deze aan een van de volgende criteria voldoet:
 
@@ -75,7 +75,7 @@ Onderliggende lijn is een lijngrafiek die het aantal nieuwe doelgroepen toont di
 >
 >Een segmentdefinitie wordt als gekwalificeerd beschouwd wanneer deze van een status zonder status naar gerealiseerd gaat of wanneer deze van een verlaten naar een gerealiseerde definitie gaat. Een segmentdefinitie wordt als niet-gekwalificeerd beschouwd als deze van gerealiseerde naar verlaten gaat.
 >
->Meer informatie over deze statussen vindt u in de statustabel in het dialoogvenster [segmentatieoverzicht](./overview.md#browse).
+>Meer informatie over deze statussen vindt u in de statustabel in het dialoogvenster [Overzicht van het portal Publiek](./audience-portal.md#customize).
 
 ![De profielen worden gemarkeerd met een lijngrafiek van de profielen in de loop der tijd.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 

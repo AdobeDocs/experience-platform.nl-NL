@@ -3,10 +3,10 @@ title: HubSpot-verbinding
 description: De bestemming HubSpot staat u toe om contactverslagen in uw rekening te beheren HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1485'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -79,8 +79,8 @@ Deze bestemming steunt de activering van alle publiek dat door het Experience Pl
 Deze bestemming ondersteunt ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
 
 | Type publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+|---------|----------|
+| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -153,7 +153,7 @@ De `Email` identiteit is een verplichte toewijzing voor deze bestemming. Voer de
 1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select attributes]** en selecteert u `email`.
    ![Schermopname van de gebruikersinterface van het platform die e-mail als doelattribuut selecteert om als identiteit in kaart te brengen.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
-| Bronveld | Doelveld | Verplicht |
+| Source-veld | Doelveld | Verplicht |
 | --- | --- | --- |
 | `IdentityMap: Email` | `Identity: email` | Ja |
 
@@ -172,7 +172,7 @@ Andere kenmerken toevoegen die u wilt bijwerken tussen het XDM-profielschema en 
 
 Enkele beschikbare toewijzingen tussen uw XDM-profielschema en [!DNL Hubspot] worden hieronder weergegeven:
 
-| Bronveld | Doelveld |
+| Source-veld | Doelveld |
 | --- | --- |
 | `xdm: person.name.firstName` | `Attribute: firstname` |
 | `xdm: person.name.lastName` | `Attribute: lastname` |

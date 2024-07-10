@@ -2,7 +2,7 @@
 description: Deze pagina maakt een lijst en beschrijft de stappen om een het stromen bestemming te vormen gebruikend Destination SDK.
 title: Gebruik Destination SDK om een streamingbestemming te configureren
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 52be44ece950ee57a66a13ab7962907b2b7c0fb1
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 0%
@@ -279,10 +279,10 @@ Nadat u de bestemming hebt ingesteld met de eindpunten van de configuratie in de
 
 Als deel van het proces om uw bestemming te testen, moet u het Experience Platform UI gebruiken om segmenten tot stand te brengen, die u aan uw bestemming zult activeren. Raadpleeg de twee onderstaande bronnen voor instructies voor het maken van publiek in Experience Platform:
 
-* [Een pagina met publieksdocumentatie maken](/help/segmentation/ui/overview.md#create-segment)
+* [Een pagina met publieksdocumentatie maken](/help/segmentation/ui/audience-portal.md#create-audience)
 * [Een doorlichting van een publieksvideo maken](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
-## Stap 7: Uw doel publiceren {#publish-destination}
+## Stap 7: Publish uw bestemming {#publish-destination}
 
 >[!NOTE]
 >

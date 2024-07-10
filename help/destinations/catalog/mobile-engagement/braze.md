@@ -3,7 +3,7 @@ keywords: mobiel; bruin; berichten;
 title: Braze verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 0%
@@ -49,9 +49,9 @@ Als markator wil ik gebruikers in een mobiele betrokkenheidsbestemming als doel 
 In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -117,16 +117,16 @@ In de [!UICONTROL Mapping] stap, klik op **[!UICONTROL Add new mapping]**.
 
 In de [!UICONTROL Source Field] klikt u op de pijlknop naast het lege veld.
 
-![Bronttoewijzing op doel onderbreken](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
+![Braze bestemming Source-toewijzing](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
 In de [!UICONTROL Select source field] kunt u kiezen uit twee categorieën XDM-velden:
 * [!UICONTROL Select attributes]: gebruik deze optie om een specifiek veld van uw XDM-schema toe te wijzen aan een [!DNL Braze] kenmerk.
 
-![Brontekeningskenmerk Braze-bestemming](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
+![Toewijzing Source-kenmerk voor Braze-bestemming](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
 * [!UICONTROL Select identity namespace]: Gebruik deze optie om een [!DNL Platform] naamruimte identiteit [!DNL Braze] naamruimte.
 
-![Bronnaamruimte voor Braze-doeltoewijzing](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
+![Source-naamruimte voor Braze-bestemming](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
 Kies uw bronveld en klik op **[!UICONTROL Select]**.
 

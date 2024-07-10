@@ -3,7 +3,7 @@ title: Het publiek activeren voor verpersoonlijkingsdoelen van randen
 description: Leer hoe u het publiek activeert van Adobe Experience Platform naar Edge-verpersoonlijkingsbestemmingen voor gebruiksgevallen van verpersoonlijking op dezelfde pagina en op de volgende pagina.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 0%
@@ -47,11 +47,11 @@ Bekijk de onderstaande video voor een kort overzicht van hoe u doelgroepen en pr
 
 ## Gebruiksscenario’s {#use-cases}
 
-De oplossingen van de verpersoonlijking van de Adobe, zoals Adobe Target, of uw eigen platforms van de verpersoonlijkingspartner van het gebruik (bijvoorbeeld [!DNL Optimizely], [!DNL Pega]), en bedrijfseigen systemen (bijvoorbeeld in-house CMS) om een diepere klanterlokalisatie via de [Aangepaste personalisatie](../catalog/personalization/custom-personalization.md) bestemming. Dit alles terwijl ook de gegevensverzameling en segmenteringsmogelijkheden van de Edge Network van het Experience Platform worden gebruikt.
+De oplossingen van de verpersoonlijking van de Adobe, zoals Adobe Target, of uw eigen platforms van de verpersoonlijkingspartner van het gebruik (bijvoorbeeld [!DNL Optimizely], [!DNL Pega]), en bedrijfseigen systemen (bijvoorbeeld in-house CMS) om een diepere klanterlokalisatie via de [Aangepaste Personalization](../catalog/personalization/custom-personalization.md) bestemming. Dit alles terwijl ook de gegevensverzameling en segmenteringsmogelijkheden van de Edge Network van het Experience Platform worden gebruikt.
 
 De hieronder beschreven gebruiksgevallen omvatten zowel personalisatie van de site als gerichte on-site reclame.
 
-Om deze gebruiksgevallen mogelijk te maken, hebben klanten een snelle, gestroomlijnde manier nodig om zowel het publiek als de profielkenmerkinformatie van het Experience Platform op te halen, en deze informatie naar of [Adobe Target](../catalog/personalization/adobe-target-connection.md) of de [Aangepaste personalisatie](../catalog/personalization/custom-personalization.md) in de gebruikersinterface van het Experience Platform.
+Om deze gebruiksgevallen mogelijk te maken, hebben klanten een snelle, gestroomlijnde manier nodig om zowel het publiek als de profielkenmerkinformatie van het Experience Platform op te halen, en deze informatie naar of [Adobe Target](../catalog/personalization/adobe-target-connection.md) of de [Aangepaste Personalization](../catalog/personalization/custom-personalization.md) in de gebruikersinterface van het Experience Platform.
 
 ### Zelfde paginagrootte {#same-page}
 
@@ -83,7 +83,7 @@ Bij het configureren van de gegevensstroom, onder **[!UICONTROL Adobe Experience
 >
 >Vanaf de release van april 2024 hoeft u het selectievakje Edge Segmentation niet in te schakelen als [configureren van verbinding met Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). In dit geval: [verpersoonlijking volgende sessie](#next-session) is het enige beschikbare geval van het verpersoonlijkingsgebruik.
 
-![De configuratie van de datastream met de Onderverdeling van de Rand en Gemarkeerde Doelen van de Aanpassing!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
+![De configuratie van DataStream met de Segmentatie van Edge en de Doelen van Personalization benadrukte!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
 Voor meer informatie over hoe u een gegevensstroom instelt, volgt u de instructies in het dialoogvenster [Platform Web SDK-documentatie](../../datastreams/configure.md#aep).
 
@@ -93,7 +93,7 @@ Nadat u de doelverbinding hebt gemaakt, moet u een [!DNL Active-On-Edge] samenvo
 
 >[!IMPORTANT]
 >
->Op dit moment ondersteunen Edge-doelen alleen de activering van soorten publiek die gebruikmaken van de [Samenvoegingsbeleid actief op rand](../../segmentation/ui/segment-builder.md#merge-policies) ingesteld als standaard. Als u publiek in kaart brengt die een verschillend samenvoegbeleid aan randbestemmingen gebruiken, zullen die publiek niet worden geëvalueerd.
+>Op dit moment ondersteunen Edge-doelen alleen de activering van soorten publiek die gebruikmaken van de [Samenvoegingsbeleid van Active on Edge](../../segmentation/ui/segment-builder.md#merge-policies) ingesteld als standaard. Als u publiek in kaart brengt die een verschillend samenvoegbeleid aan randbestemmingen gebruiken, zullen die publiek niet worden geëvalueerd.
 
 Volg de instructies op [samenvoegingsbeleid maken](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)en zorgt ervoor dat de **[!UICONTROL Active-On-Edge Merge Policy]** schakelen.
 
@@ -141,7 +141,7 @@ Als u het publiek dat u wilt activeren naar het doel wilt selecteren, schakelt u
 U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 
 * **[!UICONTROL Segmentation Service]**: publiek dat binnen Experience Platform door de Dienst van de Segmentatie wordt geproduceerd. Zie de [segmentatiedocumentatie](../../segmentation/ui/overview.md) voor meer informatie .
-* **[!UICONTROL Custom upload]**: Soorten publiek dat buiten het Experience Platform is gegenereerd en als CSV-bestanden naar Platform is geüpload. Raadpleeg de documentatie over [een publiek importeren](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Custom upload]**: Soorten publiek dat buiten het Experience Platform is gegenereerd en als CSV-bestanden naar Platform is geüpload. Raadpleeg de documentatie over [een publiek importeren](../../segmentation/ui/audience-portal.md#import-audience).
 * Andere soorten soorten publiek, afkomstig van andere oplossingen voor Adobe, zoals [!DNL Audience Manager].
 
 ![Selecteer de stap voor het publiek van de activeringsworkflow met een aantal gemarkeerde soorten publiek.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -174,7 +174,7 @@ Als u doelkenmerken wilt toevoegen, selecteert u de **[!UICONTROL Add new field]
 
 >[!NOTE]
 >
->De selectie van doelkenmerken is alleen van toepassing op [Aangepaste personalisatie](../catalog/personalization/custom-personalization.md) activeringswerkstroom, voor ondersteuning van veldtoewijzing met vriendelijke namen op het doelplatform.
+>De selectie van doelkenmerken is alleen van toepassing op [Aangepaste Personalization](../catalog/personalization/custom-personalization.md) activeringswerkstroom, voor ondersteuning van veldtoewijzing met vriendelijke namen op het doelplatform.
 
 ![Schermopname die laat zien hoe een XDM-kenmerk in de toewijzingsstap moet worden geselecteerd](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 

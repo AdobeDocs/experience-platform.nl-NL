@@ -2,13 +2,13 @@
 title: PX-verbinding ophalen
 description: Gebruik de PX-bestemming van Gainsight om segmentatiegegevens naar het PX-platform van Gainsight te verzenden.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 1%
 
 ---
-
 
 # PX-verbinding ophalen {#gainsight-px}
 
@@ -51,7 +51,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---|---|---|
 | [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | X | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Aangepaste uploads | X | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 

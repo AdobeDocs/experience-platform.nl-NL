@@ -1,15 +1,15 @@
 ---
-title: (bèta) [!DNL Google Ad Manager 360] verbinding
+title: (Beta) [!DNL Google Ad Manager 360] verbinding
 description: Google Ad Manager 360 is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 153b827d385b4a3f86a2432bf533ec543f12ea4e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1149'
 ht-degree: 0%
 
 ---
 
-# (bèta) [!DNL Google Ad Manager 360] verbinding
+# (Beta) [!DNL Google Ad Manager 360] verbinding
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ Voor meer informatie over hoe de uitgever verstrekte herkenningstekens in Google
 
 >[!IMPORTANT]
 >
->Deze bestemming is momenteel in Bèta en is slechts beschikbaar aan een beperkt aantal klanten. Om toegang tot [!DNL Google Ad Manager 360] , neemt u contact op met uw Adobe en verstrekt u uw [!DNL organization ID].
+>Deze bestemming is momenteel in Beta en is slechts beschikbaar voor een beperkt aantal klanten. Om toegang tot [!DNL Google Ad Manager 360] , neemt u contact op met uw Adobe en verstrekt u uw [!DNL organization ID].
 
 De [!DNL Google Ad Manager 360] doelexport [!DNL CSV] bestanden naar uw [!DNL Google Cloud Storage] emmertje. Als u de [!DNL CSV] bestanden, moet u deze importeren in uw [!DNL Google Ad Manager 360] account.
 
@@ -52,9 +52,9 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ad Manager 360] 
 In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 

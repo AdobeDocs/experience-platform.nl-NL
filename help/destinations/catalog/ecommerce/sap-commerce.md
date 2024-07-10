@@ -1,10 +1,11 @@
 ---
 title: SAP Commerce-verbinding
-description: Gebruik de de bestemmingsschakelaar van de Handel van SAP om klantenverslagen in uw rekening van SAP bij te werken.
+description: Gebruik de SAP Commerce-doelconnector om de klantgegevens in uw SAP-account bij te werken.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: 9bb2cf5adcd48f9d111ba04b8c93129367dd12f8
+exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '2154'
+source-wordcount: '2155'
 ht-degree: 0%
 
 ---
@@ -118,10 +119,10 @@ Deze bestemming steunt de activering van alle publiek dat door het Experience Pl
 
 Deze bestemming ondersteunt ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
 
-| Type publiek | Beschrijving |
----------|----------|
+| Type publiek | Ondersteund | Beschrijving |
+| ------------- | --------- | ----------- |
 | [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -200,7 +201,7 @@ De `customerNumberSAP` identiteit is een verplichte toewijzing voor deze bestemm
 1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteert u de `customerNumber` identiteit.
    ![Schermopname van de gebruikersinterface van het platform die e-mail als doelattribuut selecteert om als identiteit in kaart te brengen.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
 
-| Bronveld | Doelveld | Verplicht |
+| Source-veld | Doelveld | Verplicht |
 | --- | --- | --- |
 | `IdentityMap: customerNumberSAP` | `Identity: customerNumber` | Ja |
 
@@ -229,14 +230,14 @@ De verplichte kenmerktoewijzingen zijn afhankelijk van de **[!UICONTROL Type of 
 
 >[!TAB Individuele klant]
 
-| Bronveld | Doelveld | Verplicht |
+| Source-veld | Doelveld | Verplicht |
 | --- | --- | --- |
 | `xdm: person.lastName` | `Attribute: lastName` | Ja |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Ja |
 
 >[!TAB Zakelijke klant]
 
-| Bronveld | Doelveld | Verplicht |
+| Source-veld | Doelveld | Verplicht |
 | --- | --- | --- |
 | `xdm: b2b.companyName` | `Attribute: company` | Ja |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Ja |
@@ -251,7 +252,7 @@ Vervolgens kunt u aanvullende toewijzingen toevoegen tussen uw XDM-profielschema
 
 >[!TAB Individuele klant]
 
-| Bronveld | Doelveld | Verplicht |
+| Source-veld | Doelveld | Verplicht |
 | --- | --- | --- |
 | `xdm: person.name.firstName` | `Attribute: firstName` | Nee |
 | `xdm: workAddress.street1` | `Attribute: street` | Nee |
@@ -262,7 +263,7 @@ Een voorbeeld met zowel verplichte als optionele kenmerktoewijzingen waarbij de 
 
 >[!TAB Zakelijke klant]
 
-| Bronveld | Doelveld | Verplicht |
+| Source-veld | Doelveld | Verplicht |
 | --- | --- | --- |
 | `xdm: workAddress.street1` | `Attribute: street` | Nee |
 | `xdm: workAddress.city` | `Attribute: city` | Nee |

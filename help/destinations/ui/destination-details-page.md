@@ -3,7 +3,7 @@ keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
 description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, publiek in kaart gebracht aan de bestemming, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1053'
 ht-degree: 0%
@@ -139,4 +139,4 @@ Als u het bestaande activeringsschema van meerdere soorten publiek tegelijk wilt
 
 >[!NOTE]
 >
-Raadpleeg voor meer informatie over het verkennen van de detailpagina van een publiek de [Overzicht van de segmenteringsinterface](../../segmentation/ui/overview.md#segment-details).
+Raadpleeg voor meer informatie over het verkennen van de detailpagina van een publiek de [Overzicht van het portal Publiek](../../segmentation/ui/audience-portal.md#segment-details).

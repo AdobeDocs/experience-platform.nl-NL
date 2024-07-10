@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Soortgelijke soorten publiek
 description: Leer hoe u nieuwe hoogwaardige doelgroepen in Adobe Experience Platform kunt kiezen met behulp van look-alike-soorten publiek.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '2158'
+source-wordcount: '2157'
 ht-degree: 0%
 
 ---
@@ -179,7 +179,7 @@ Als u de details van een publiek met een look-alike wilt weergeven, selecteert u
 
 ![De sectie Zichtbaar publiek wordt gemarkeerd.](../images/ui/lookalike-audiences/select-laa.png)
 
-De pagina met publieksdetails wordt weergegeven. Lees voor meer informatie over deze pagina de [sectie met publieksdetails van de gebruikersinterface voor segmentatieservice](./overview.md#audience-details).
+De pagina met publieksdetails wordt weergegeven. Lees voor meer informatie over deze pagina de [sectie met publieksdetails van het overzicht van het portal Poorten publiek](./audience-portal.md#audience-details).
 
 ![De details van het kijkachtige publiek worden getoond.](../images/ui/lookalike-audiences/laa-details.png)
 

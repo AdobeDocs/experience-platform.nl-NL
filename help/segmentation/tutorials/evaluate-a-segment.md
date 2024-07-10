@@ -4,9 +4,9 @@ title: Evalueer en de Resultaten van het Segment van de Toegang
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u segmentatiedefinities en toegangssegmenteringsresultaten kunt evalueren met de Adobe Experience Platform Segmentation Service API.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1594'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Zodra u hebt ontwikkeld, getest en uw segmentdefinitie bewaard, kunt u de segmen
 
 [Geplande evaluatie](#scheduled-evaluation) (ook wel &#39;geplande segmentatie&#39; genoemd) kunt u een terugkerend schema maken voor het uitvoeren van een exporttaak op een bepaald moment, terwijl [evaluatie op aanvraag](#on-demand-evaluation) betekent dat u een segmenttaak maakt om het publiek direct op te bouwen. De stappen voor elk worden hieronder geschetst.
 
-Als u nog niet de [een segmentdefinitie maken met de segmentatie-API](./create-a-segment.md) zelfstudie of definitie van segment maken met [Segment Builder](../ui/overview.md), doe dit voordat u verdergaat met deze zelfstudie.
+Als u nog niet de [een segmentdefinitie maken met de segmentatie-API](./create-a-segment.md) zelfstudie of definitie van segment maken met [Segment Builder](../ui/segment-builder.md), doe dit voordat u verdergaat met deze zelfstudie.
 
 ## Geplande evaluatie {#scheduled-evaluation}
 

@@ -3,7 +3,7 @@ title: LiveRamp - Verbinding aan boord
 description: Leer hoe u de LiveRamp-aansluiting kunt gebruiken voor het on-board publiek van Adobe Real-time Customer Data Platform naar LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1846'
 ht-degree: 0%
@@ -37,9 +37,9 @@ In de [toewijzingsstap](#map) van de activeringsworkflow moet u de doeltoewijzin
 In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -211,7 +211,7 @@ De profielen in de geëxporteerde bestanden kunnen overeenkomen met een van de v
 * `Expired`: Het profiel is niet langer gekwalificeerd voor het publiek, maar is in het verleden wel gekwalificeerd.
 * `""`(lege tekenreeks): Het profiel wordt nooit in aanmerking genomen voor het publiek.
 
-Bijvoorbeeld een geëxporteerd CSV-bestand met één `email` kenmerk, twee soorten publiek afkomstig uit de Experience Platform [Segmenteringsservice](../../../segmentation/home.md), en één [geïmporteerd](../../../segmentation/ui/overview.md#importing-an-audience) extern publiek, zou als volgt kunnen kijken:
+Bijvoorbeeld een geëxporteerd CSV-bestand met één `email` kenmerk, twee soorten publiek afkomstig uit de Experience Platform [Segmenteringsservice](../../../segmentation/home.md), en één [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) extern publiek, zou als volgt kunnen kijken:
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,7 +223,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-In het bovenstaande voorbeeld wordt `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` en `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` de secties beschrijven publiek dat uit de Dienst van de Segmentatie voortkomt, terwijl `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` beschrijft een publiek dat in Platform is geïmporteerd als een [aangepaste upload](../../../segmentation/ui/overview.md#importing-an-audience).
+In het bovenstaande voorbeeld wordt `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` en `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` de secties beschrijven publiek dat uit de Dienst van de Segmentatie voortkomt, terwijl `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` beschrijft een publiek dat in Platform is geïmporteerd als een [aangepaste upload](../../../segmentation/ui/audience-portal.md#import-audience).
 
 Aangezien Platform één CSV-bestand genereert voor elk bestand [beleids-id samenvoegen](../../../profile/merge-policies/overview.md), produceert het ook een afzonderlijke dataflow looppas voor elke identiteitskaart van het fusiebeleid.
 

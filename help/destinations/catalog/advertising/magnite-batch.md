@@ -4,7 +4,7 @@ description: Gebruik deze bestemming om Adobe CDP publiek aan het platform van d
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 0e6d95e2f68d97805af439d91b4a53230eaf773f
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1653'
 ht-degree: 0%
@@ -77,7 +77,7 @@ De toeristenstroom: de batchbestemming kan worden ontvangen *alle* identiteitsbr
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 

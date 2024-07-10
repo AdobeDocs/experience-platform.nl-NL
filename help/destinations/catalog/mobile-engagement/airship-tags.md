@@ -3,7 +3,7 @@ keywords: luchtschepen, codes;bestemming van het luchtschip
 title: Koppeling met vliegtuigcodes
 description: Naadloos gegevens van het publiek van de Adobe doorgeven aan het luchtschip als Poortcodes voor doelgroepen binnen het luchtschip.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 0%
@@ -41,9 +41,9 @@ Voordat je een Adobe Experience Platform-publiek kunt sturen naar [!DNL Airship]
 In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -136,7 +136,7 @@ Zie [De publieksgegevens van de activering aan het stromen publiek de uitvoerbes
 
 ![Toewijzing van benoemde gebruikers](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
-Voor herkenningstekens die aan een kanaal, d.w.z., een apparaat moeten worden in kaart gebracht, kaart aan het aangewezen kanaal dat op de bron wordt gebaseerd. In de volgende afbeeldingen ziet u hoe u een advertentie-id van Google toewijst aan een [!DNL Airship] Android-kanaal.
+Voor herkenningstekens die aan een kanaal, d.w.z., een apparaat moeten worden in kaart gebracht, kaart aan het aangewezen kanaal dat op de bron wordt gebaseerd. In de volgende afbeeldingen ziet u hoe u een Google Advertising-id kunt toewijzen aan een [!DNL Airship] Android.
 
 ![Verbinden met luchtvaartcodes](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
 ![Verbinden met luchtvaartcodes](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)

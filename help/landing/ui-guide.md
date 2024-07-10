@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht gebruikersinterface Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1735'
 ht-degree: 0%
@@ -129,7 +129,7 @@ De **[!UICONTROL Destinations]** In de sectie kunt u doelen maken, bijwerken en 
 
 De **[!UICONTROL Profiles]** in deze sectie kunt u door klantprofielen bladeren, profielmetriek bekijken, samenvoegbeleid maken en beheren en vakbondsschema&#39;s weergeven. Meer informatie over het gebruik van de [!UICONTROL Profiles] te lezen [[!DNL Profile] gebruikershandleiding](../profile/ui/user-guide.md). Meer informatie over het Real-Time Klantprofiel vindt u in het gedeelte [Overzicht van het realtime klantprofiel](../profile/home.md).
 
-De **[!UICONTROL Segments]** in deze sectie kunt u segmentdefinities maken en beheren. Meer informatie over het gebruik van de [!UICONTROL Segments] te lezen [gebruikershandleiding voor segmentatie](../segmentation/ui/overview.md). Meer informatie over de Dienst van de Segmentatie kan in worden gevonden [Overzicht van segmentatieservice](../segmentation/home.md).
+De **[!UICONTROL Audiences]** in deze sectie kunt u segmentdefinities maken en beheren. Meer informatie over het gebruik van de [!UICONTROL Audiences] te lezen [gebruikershandleiding voor segmentatie](../segmentation/ui/overview.md). Meer informatie over de Dienst van de Segmentatie kan in worden gevonden [Overzicht van segmentatieservice](../segmentation/home.md).
 
 De **[!UICONTROL Identities]** kunt u naamruimten maken en beheren. Voor meer informatie over de [!UICONTROL Identities] , met informatie over naamruimten en het gebruik van identiteiten in de interface van het platform, raadpleegt u de [Overzicht van naamruimte in identiteit](../identity-service/features/namespaces.md).
 
@@ -141,7 +141,7 @@ De **[!UICONTROL Requests]** kunt u privacyverzoeken maken en beheren. U moet zi
 
 ### [!UICONTROL Data Science]
 
-De **[!UICONTROL Notebooks]** biedt toegang tot JupyterLab, een interactieve ontwikkelomgeving waarmee u uw gegevens kunt verkennen, analyseren en modelleren. Lees voor meer informatie over het gebruik van de sectie Laptops de [Gebruikershandleiding voor JupyterLab](../data-science-workspace/jupyterlab/overview.md). Meer informatie over de Werkruimte van de Wetenschap van Gegevens vindt u in [Overzicht van de Data Science-werkruimte](../data-science-workspace/home.md)
+De **[!UICONTROL Notebooks]** biedt toegang tot JupyterLab, een interactieve ontwikkelomgeving waarmee u uw gegevens kunt verkennen, analyseren en modelleren. Lees voor meer informatie over het gebruik van de sectie Laptops de [Gebruikershandleiding voor JupyterLab](../data-science-workspace/jupyterlab/overview.md). Meer informatie over Data Science Workspace vindt u in de [Overzicht van Data Science Workspace](../data-science-workspace/home.md)
 
 De **[!UICONTROL Models]** in deze sectie kunt u computerleren en kunstmatige intelligentie gebruiken om modellen te maken, te ontwikkelen, te trainen en af te stemmen om voorspellingen te maken. Meer informatie over de sectie Modellen vindt u in de zelfstudie over [training en evaluatie van een model](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 

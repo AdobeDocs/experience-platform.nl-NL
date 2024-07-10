@@ -2,13 +2,13 @@
 title: Google Customer Match + Display & Video 360-verbinding
 description: Met de Google Customer Match + Display & Video 360-doelconnector kunt u uw online- en offline gegevens van Experience Platform gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere, door Google bediende en bediende eigenschappen, zoals Zoeken, Winkelen, Gmail en YouTube.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 7a9312a3722e205de3d11e17f6f079709b20237c
+exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1896'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Google Customer Match + Display & Video 360] verbinding
 
@@ -44,7 +44,7 @@ Verschillende integraties met Google zijn beschikbaar in de lijst met bestemming
 |---------|----------|---------|
 | Exporteer uw op PII gebaseerde publiek en ga naar de voorraad die beschikbaar is in [!DNL Google Customer Match]. | Bereik een publiek dat op cookies is gebaseerd, in de hele voorraad beschikbaar via [!DNL Google Display & Video 360], over eigendommen van Google zoals Youtube en [!DNL Search], en daarna. | PII-gebruikers maken in [!DNL Google Customer Match] en bereiken ze op de inventarislijst die beschikbaar is in [!DNL Google Display & Video 360], uitsluitend op eigendommen die eigendom zijn van en geëxploiteerd worden door Google. |
 
-## Gebruik hoofdletters {#use-cases}
+## Gebruiksscenario’s {#use-cases}
 
 Om u beter te helpen begrijpen hoe en wanneer om deze bestemming te gebruiken, zijn hier voorbeelden van gebruiksgevallen die de klanten van Adobe Experience Platform door deze eigenschap kunnen oplossen.
 
@@ -82,9 +82,9 @@ Om de versie te promoten, uploaden zij e-mailadressen van hun gegevensbestand va
 In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 

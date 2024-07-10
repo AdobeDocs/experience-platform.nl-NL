@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Segmentation Service
 user-guide-description: Stel doelgroepen samen op basis van uw gegevens voor realtimeklantprofielen met behulp van door Adobe Experience Platform gegenereerde segmentdefinities of externe bronnen.
 feature: Segments
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 62a174e6f3b1bd1b0bc518ff7e5f236893e9e5d3
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '185'
 ht-degree: 22%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 22%
    - [Overzicht](api/overview.md)
    - [Aan de slag](api/getting-started.md)
    - [Doelgroepen](api/audiences.md)
-   - [Randsegmentatie](api/edge-segmentation.md)
+   - [Edge-segmentatie](api/edge-segmentation.md)
    - [Exporttaken](api/export-jobs.md)
    - [Voorvertoningen en ramingen](api/previews-and-estimates.md)
    - [Planningen](api/schedules.md)
@@ -33,12 +33,13 @@ ht-degree: 22%
 - Segmenteringsinterface {#ui}
    - [Overzicht](ui/overview.md)
    - [Publiek-dashboard](ui/audience-dashboard.md)
+   - [Poort publiek](ui/audience-portal.md)
    - [Samenstelling publiek](ui/audience-composition.md)
    - [Segment Builder](ui/segment-builder.md)
    - [Accountpubliek](ui/account-audiences.md)
    - [Soortgelijk publiek](ui/lookalike-audiences.md)
    - [Doelgroepen](ui/prospect-audience.md)
-   - [Randsegmentatie](ui/edge-segmentation.md)
+   - [Edge-segmentatie](ui/edge-segmentation.md)
    - [Streaming segmentering](ui/streaming-segmentation.md)
    - [Streaming segmentatie (video)](video/streaming-segmentation-overview.md)
    - [Update voor jaartijdbeperking negeren](ui/ignore-year.md)
@@ -48,7 +49,7 @@ ht-degree: 22%
       - [Problemen oplossen](ui/segment-match/troubleshooting.md)
 - [Erkenning](consents.md)
 - [Segmentatie van meerdere entiteiten](multi-entity-segmentation.md)
-- Taal voor profielquery {#pql}
+- Profile Query Language {#pql}
    - [Overzicht](pql/overview.md)
    - [Booleaanse functies](pql/boolean-functions.md)
    - [Vergelijkingsfuncties](pql/comparison-functions.md)

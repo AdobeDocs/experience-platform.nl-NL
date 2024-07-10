@@ -1,15 +1,15 @@
 ---
-title: Uitgebreide Audience Manager activering
+title: Uitgebreide activering van Audience Manager
 description: Leer hoe u het publiek van de Audience Manager activeert naar sociale en advertentiebestemmingen, via Uitgebreide activering van de Audience Manager.
-source-git-commit: 5bc8d6c7173f221c2830a9b15c8ec6241e8bc59d
+exl-id: 1f209578-a688-40b8-8f13-dab0d4380b3b
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-
-# Uitgebreide Audience Manager activering
+# Uitgebreide activering van Audience Manager 
 
 Uitgebreide Audience Manager is gebaseerd op Adobe Experience Platform en helpt bestaande [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home) gebruikers activeren hun publiek naar [sociaal](../destinations/catalog/social/overview.md) en [reclame](../destinations/catalog/advertising/overview.md) doelplatforms uit Real-Time CDP, zoals [Facebook](../destinations/catalog/social/facebook.md), [Google Adds](../destinations/catalog/advertising/google-ads-destination.md)en meer.
 
@@ -21,8 +21,8 @@ Uitgebreide Audience Manager is gebaseerd op Adobe Experience Platform en helpt 
 
 De Audience Manager Uitgebreide Activering gebruikt concepten en componenten van Adobe Experience Platform. Om de uitgebreide workflow voor activering en de componenten die u gebruikt beter te begrijpen, moet u een basiskennis van de volgende concepten hebben:
 
-* [Soorten publiek](../segmentation/ui/overview.md): Soorten publiek zijn groepen mensen met een vergelijkbaar gedrag en/of vergelijkbare kenmerken. Deze verzameling personen kan door Adobe Experience Platform worden gegenereerd met behulp van segmentdefinities of publiekscompositie (publiek dat door het platform wordt gegenereerd) of met behulp van externe bronnen, zoals aangepaste uploads (extern gegenereerd publiek). Bij Uitgebreide activering worden de segmenten van uw Audience Manager (soorten publiek) geïmporteerd als [aangepaste uploads](../segmentation/ui/overview.md#import-audience).
-* [Bronaansluitingen](../sources/home.md): Bronconnectors (ook wel bronnen genoemd) helpen gebruikers in de Experience Platform gemakkelijk gegevens uit meerdere bronnen in te voeren, zodat ze gegevens kunnen structureren, labelen en verbeteren met behulp van de diensten van het Experience Platform. Gegevens kunnen worden ingevoerd uit verschillende bronnen, zoals cloudgebaseerde opslag, software van derden en CRM-systemen.
+* [Soorten publiek](../segmentation/ui/overview.md): Soorten publiek zijn groepen mensen met een vergelijkbaar gedrag en/of vergelijkbare kenmerken. Deze verzameling personen kan door Adobe Experience Platform worden gegenereerd met behulp van segmentdefinities of publiekscompositie (publiek dat door het platform wordt gegenereerd) of met behulp van externe bronnen, zoals aangepaste uploads (extern gegenereerd publiek). Bij Uitgebreide activering worden de segmenten van uw Audience Manager (soorten publiek) geïmporteerd als [aangepaste uploads](../segmentation/ui/audience-portal.md#import-audience).
+* [Source-connectors](../sources/home.md): Source-connectors (ook wel bronnen genoemd) helpen gebruikers van Experience Platforms om gemakkelijk gegevens uit meerdere bronnen in te voeren, zodat ze gegevens kunnen structureren, labelen en verbeteren met behulp van Experience Platforms. Gegevens kunnen worden ingevoerd uit verschillende bronnen, zoals cloudgebaseerde opslag, software van derden en CRM-systemen.
 * [Aansluitingen bestemming](../destinations/home.md): De bestemmingen beschrijven om het even welk eindpunt, zoals een toepassing van de Adobe, een reclameplatform, de dienst van de cloudopslag, of de marketing dienst, waar een publiek wordt geactiveerd en geleverd. [!DNL Expanded Activation] ondersteunt de activering van het publiek naar [reclame](../destinations/catalog/advertising/overview.md) en [sociaal](../destinations/catalog/social/overview.md) doelconnectors.
 
 ## Vereisten {#prerequisites}
@@ -43,4 +43,3 @@ Het publiek activeren via [!DNL Expanded Activation], zorg ervoor dat uw publiek
 ## Volgende stappen {#next-steps}
 
 Nu u een beter inzicht hebt in de gebruiksgevallen en -voordelen van het gebruik [!DNL Expanded Activation], start [configureren, account](administration.md) en vervolgens [uw publiek activeren](activate-audiences.md).
-

@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Kenmerk-Gebaseerd Overzicht van het Toegangsbeheer
 description: Dit document bevat informatie over op kenmerken gebaseerd toegangsbeheer in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 900e0dc323e9055a92313788a4a191c615d0b8cd
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1864'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ Als beheerder, kunt u op attribuut-gebaseerde toegangsbeheerfunctionaliteit gebr
 >
 >Samenvattend, houd in mening de volgende implicaties wanneer het werken met bestemmingen en op attribuut-gebaseerde toegangsbeheer:
 >
->* U kunt alleen segmenten activeren die u hebt gemachtigd om te openen en te bekijken in het dialoogvenster [segmentbladerweergave](/help/segmentation/ui/overview.md#browse) en [stap voor segment selecteren](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) van de activeringsworkflow.
+>* U kunt alleen het publiek activeren dat u gemachtigd bent te openen en te bekijken in [Poort publiek](/help/segmentation/ui/audience-portal.md#browse) en [stap voor segment selecteren](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) van de activeringsworkflow.
 >* In de [toewijzingsstap van de activeringsworkflow](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), kunt u alleen de velden weergeven en selecteren voor activering waarvoor u toegangsrechten hebt.
 >* Wanneer u extra segmenten wilt activeren naar een bestaand doel waar u geen toegang hebt tot alle velden die zijn toegewezen voor export, wordt de activeringsworkflow voor u geblokkeerd.
 

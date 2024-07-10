@@ -2,7 +2,8 @@
 title: Mailchimp-tags
 description: De bestemming van de Markeringen van Mailchimp staat u toe om uw rekeningsgegevens uit te voeren en het binnen Mailchimp te activeren om met contacten in wisselwerking te staan.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1590'
 ht-degree: 0%
@@ -86,9 +87,9 @@ Zie de [!DNL Mailchimp] [tarieflimieten](https://mailchimp.com/developer/marketi
 In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -167,13 +168,13 @@ Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL Mailchimp Tags] doelveld
 1. In de **[!UICONTROL Mapping]** stap, selecteren **[!UICONTROL Add new mapping]**. Er verschijnt een nieuwe toewijzingsrij op het scherm.
 1. In de **[!UICONTROL Select source field]** venster, kiest u **[!UICONTROL Select identity namespace]** en selecteert u de `Email` naamruimte identiteit.
 
-   ![Schermopname van platformgebruikersinterface met bronveld als e-mail vanuit naamruimte van identiteit.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+   ![Schermopname van platformgebruikersinterface met Source-veld als e-mail vanuit naamruimte identity.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
 1. In de **[!UICONTROL Select target field]** venster, kiest u **[!UICONTROL Select identity namespace]** en selecteert u de `Email` naamruimte identiteit.
 
    ![Schermopname van platformgebruikersinterface met doelveld als e-mail vanuit naamruimte Identiteit.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
-   De toewijzingen tussen uw XDM-profielschema en [!DNL Mailchimp Tags] is als volgt: | Bronveld | Doelveld | Verplicht | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| Ja |
+   De toewijzingen tussen uw XDM-profielschema en [!DNL Mailchimp Tags] is als volgt: | Source-veld | Doelveld | Verplicht | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| Ja |
 
    Hieronder ziet u een voorbeeld met de voltooide toewijzingen:
    ![Voorbeeld van platformgebruikersinterface met schermafbeeldingen die veldtoewijzingen weergeven.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)

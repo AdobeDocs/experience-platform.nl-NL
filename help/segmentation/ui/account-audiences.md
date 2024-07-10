@@ -4,7 +4,7 @@ description: Leer hoe u accountpubliek kunt maken en gebruiken om accountprofiel
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 7d630c3673304060ad26375955602440a495f354
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
 source-wordcount: '1110'
 ht-degree: 0%
@@ -41,7 +41,7 @@ De [!UICONTROL Browse] wordt weergegeven en geeft een lijst weer van alle accoun
 
 Deze weergave bevat informatie over het publiek, zoals de naam, het aantal profielen, de oorsprong, de levenscyclusstatus, de datum waarop deze is gemaakt en de datum waarop deze voor het laatst is bijgewerkt.
 
-U kunt ook de functie voor zoeken en filteren gebruiken om snel naar specifieke accountsoorten te zoeken en deze te sorteren. Meer informatie over deze functie vindt u in het gedeelte [segmenteringsUI-hulplijn](./overview.md#manage-audiences).
+U kunt ook de functie voor zoeken en filteren gebruiken om snel naar specifieke accountsoorten te zoeken en deze te sorteren. Meer informatie over deze functie vindt u in het gedeelte [Overzicht van het portal Publiek](./audience-portal.md#manage-audiences).
 
 ## publiek maken {#create}
 

@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, maart 2024
 description: Aanvullende informatie van maart 2024 voor Adobe Experience Platform.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: 708bb791ad85b6ee8f3671ffc574e4f27fdddd0a
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1189'
 ht-degree: 3%
 
 ---
@@ -55,7 +55,7 @@ Voor meer informatie over de Prep van Gegevens, lees [Overzicht van Data Prep](.
 
 ## Gegevensverzameling {#data-collection}
 
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden, waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe doelen.
+Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar de Adobe Experience Platform-Edge Network kunt sturen waar deze verrijkt, getransformeerd en gedistribueerd kan worden naar Adobe- of niet-Adobe-bestemmingen.
 
 **Nieuwe functies**
 
@@ -75,8 +75,8 @@ Voor meer informatie over gegevensverzameling leest u de [overzicht van gegevens
 
 | Doel | Type | Beschrijving |
 | ----------- | --------- | ----------- |
-| [(bèta) Verbinding Acxiom-gegevens verbeteren](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Nieuw | Gebruik deze connector om first-party profielen van Real-Time CDP naar Acxiom te activeren voor gegevensverrijking en gebruik via marketingkanalen. Vervolgens kunt u de Acxiom-bron gebruiken om de profielen met verbeterde gegevens te importeren en ermee te werken in Real-Time CDP. |
-| [(bèta) Acxiom-perspectiefonderdrukkingsverbinding](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Nieuw | Exporteer uw eersteklas publiek naar de Acxiom-bestemming, zodat Acxiom bekende of omgezette klanten kan onderdrukken. Gebruik vervolgens de [Acxiom gegevens te exporteren](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) bronaansluiting voor het opnemen en activeren van perspectieflijsten van Acxiom, waarbij uw bekende of omgezette klanten zijn verwijderd. |
+| [(Beta) Verbinding Acxiom Data Enhancement](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Nieuw | Gebruik deze connector om first-party profielen van Real-Time CDP naar Acxiom te activeren voor gegevensverrijking en gebruik via marketingkanalen. Vervolgens kunt u de Acxiom-bron gebruiken om de profielen met verbeterde gegevens te importeren en ermee te werken in Real-Time CDP. |
+| [(Beta) Acxiom-verbinding voor perspectiefonderdrukking](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Nieuw | Exporteer uw eersteklas publiek naar de Acxiom-bestemming, zodat Acxiom bekende of omgezette klanten kan onderdrukken. Gebruik vervolgens de [Acxiom gegevens te exporteren](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) bronaansluiting voor het opnemen en activeren van perspectieflijsten van Acxiom, waarbij uw bekende of omgezette klanten zijn verwijderd. |
 | [Amazon Ads-verbinding](../../destinations/catalog/advertising/amazon-ads.md) | Bijwerken | Bij het exporteren van gegevens naar de bestemming Amazon Ads kunt u de gegevens nu doorsturen naar de Amazon-DSP of de Amazon-Marketing Cloud (nieuw). |
 | [Verbinding LiveRamp aan boord](../../destinations/catalog/advertising/liveramp-onboarding.md) | Bijwerken | De bestemming LiveRamp aan boord heeft nu ondersteuning voor leveringen aan Europa en Australië [!DNL LiveRamp] [!DNL SFTP] instanties. De maximale geëxporteerde bestandsgrootte is ook verhoogd tot 10 miljoen rijen (van 5 miljoen, eerder). |
 
@@ -112,7 +112,7 @@ Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Bulkacties | De publieksinventarisatie ondersteunt nu acties in grote hoeveelheden. Met bulkacties kunt u snel meerdere soorten publiek selecteren om deze naar een map te verplaatsen, tags toe te passen, toegangslabels toe te passen of te verwijderen. <br> ![Bulkhandelingen in de gebruikersinterface van soorten publiek.](../2024/assets/march/bulk-actions.png "Bulkhandelingen in de gebruikersinterface van soorten publiek."){width="100" zoomable="yes"} <br>Voor meer informatie over deze functie leest u de [Handleiding voor segmentatieservice](../../segmentation/ui/overview.md#bulk-actions). |
+| Bulkacties | De publieksinventarisatie ondersteunt nu acties in grote hoeveelheden. Met bulkacties kunt u snel meerdere soorten publiek selecteren om deze naar een map te verplaatsen, tags toe te passen, toegangslabels toe te passen of te verwijderen. <br> ![Bulkhandelingen in de gebruikersinterface van soorten publiek.](../2024/assets/march/bulk-actions.png "Bulkhandelingen in de gebruikersinterface van soorten publiek."){width="100" zoomable="yes"} <br>Voor meer informatie over deze functie leest u de [Overzicht van het portal Publiek](../../segmentation/ui/audience-portal.md#bulk-actions). |
 
 {style="table-layout:auto"}
 

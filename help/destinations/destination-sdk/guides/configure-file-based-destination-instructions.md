@@ -2,7 +2,7 @@
 description: Deze pagina maakt een lijst en beschrijft de stappen om een op dossier-gebaseerde bestemming te vormen gebruikend Destination SDK.
 title: Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 0%
@@ -420,10 +420,10 @@ Nadat u de bestemming hebt ingesteld met de eindpunten van de configuratie in de
 
 Als deel van het proces om uw bestemming te testen, moet u het Experience Platform UI gebruiken om publiek tot stand te brengen, dat u aan uw bestemming zult activeren. Raadpleeg de twee onderstaande bronnen voor instructies voor het maken van publiek in Experience Platform:
 
-* [Een publiek maken - documentatiepagina](/help/segmentation/ui/overview.md#create-segment)
+* [Een publiek maken - documentatiepagina](/help/segmentation/ui/audience-portal.md#create-audience)
 * [Een publiek maken - videodoorloop](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
-## Stap 6: Uw doel publiceren {#publish-destination}
+## Stap 6: Publish uw bestemming {#publish-destination}
 
 >[!NOTE]
 >

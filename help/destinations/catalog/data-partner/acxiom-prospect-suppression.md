@@ -3,7 +3,8 @@ title: Acxiom-perspectiefonderdrukking
 description: Exporteer uw eersteklas publiek naar de Acxiom-bestemming, zodat Acxiom bekende of omgezette klanten kan onderdrukken. Dan gebruik de Acxiom bronschakelaar om perspectieflijsten van Acxiom in te voeren en te activeren, met uw bekende of omgezette klanten verwijderd.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -58,7 +59,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | x | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Aangepaste uploads | x | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -143,7 +144,7 @@ Lezen [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
 
 De verwerking vereist naam en adreselementen, terwijl niet alle elementen worden vereist die zo veel mogelijk helpen in succesvolle aanpassing.  Toewijzingssuggesties vindt u in de onderstaande tabel met de kenmerken aan uw doelzijde die worden gebruikt door de verwerking van Acxiom waaraan klanten profielkenmerken kunnen toewijzen.  Dit moet worden beschouwd als suggesties omdat niet alle elementen vereist zijn en de bronwaarden afhankelijk zijn van de behoeften van de account.
 
-| Doelveld | Bronbeschrijving |
+| Doelveld | Source-beschrijving |
 |--------------|-------------------------------------------------------------|
 | name | De `person.name.fullName` waarde in Experience Platform. |
 | firstName | De `person.name.firstName` waarde in Experience Platform. |

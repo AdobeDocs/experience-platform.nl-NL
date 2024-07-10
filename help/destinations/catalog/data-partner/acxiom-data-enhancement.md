@@ -3,10 +3,11 @@ title: Verbetering van acxiom-gegevens
 description: Gebruik deze connector om profielen van eersteklas Adoben in Real-Time CDP te activeren voor gegevensverrijking en gebruik via marketingkanalen. Vervolgens kunt u de Acxiom-bron gebruiken om de profielen met verbeterde gegevens te importeren en ermee te werken in Real-Time CDP.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1307'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -56,7 +57,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | x | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Aangepaste uploads | x | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -143,7 +144,7 @@ Voor een correcte verwerking van bestanden aan de Acxiom-zijde zijn naam- en adr
 
 Toewijzingssuggesties vindt u in de onderstaande tabel met de kenmerken aan uw doelzijde die worden gebruikt door de verwerking van Acxiom waaraan klanten profielkenmerken kunnen toewijzen. Behandel deze elementen als suggesties aangezien niet alle elementen worden vereist en de bronwaarden zullen afhangen van de behoeften van de rekening.
 
-| Doelveld | Bronbeschrijving |
+| Doelveld | Source-beschrijving |
 |--------------|-------------------------------------------------------------|
 | name | De `person.name.fullName` waarde in Experience Platform. |
 | firstName | De `person.name.firstName` waarde in Experience Platform. |

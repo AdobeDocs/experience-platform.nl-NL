@@ -2,7 +2,7 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '4076'
 ht-degree: 0%
@@ -239,11 +239,11 @@ Nee, dat doe je niet. Als u over bewerkingsmachtigingen voor het publiek beschik
 
 ### Is er een limiet voor het aantal mappen dat ik kan maken?
 
-Nee, er is geen limiet voor het aantal mappen dat u kunt maken. Lees voor meer informatie over mappen de [overzichtssectie voor publiek](./ui/overview.md#folders) van het overzicht van de gebruikersinterface van de segmentatieservice.
+Nee, er is geen limiet voor het aantal mappen dat u kunt maken. Lees voor meer informatie over mappen de [overzichtssectie voor publiek](./ui/audience-portal.md#folders) van het overzicht van de gebruikersinterface van de segmentatieservice.
 
 ### Is er een limiet voor het aantal tags dat aan een publiek kan worden toegevoegd?
 
-Nee, er is geen limiet voor het aantal tags dat aan een publiek kan worden toegevoegd. Lees voor meer informatie over tags de [overzichtssectie voor publiek](./ui/overview.md#tags) van het overzicht van de gebruikersinterface van de segmentatieservice.
+Nee, er is geen limiet voor het aantal tags dat aan een publiek kan worden toegevoegd. Lees voor meer informatie over tags de [overzichtssectie voor publiek](./ui/audience-portal.md#tags) van het overzicht van de gebruikersinterface van de segmentatieservice.
 
 ### Is er een limiet aan het aantal tags dat ik kan maken?
 
@@ -251,7 +251,7 @@ Nee, er is geen limiet aan het aantal tags dat u kunt maken. U kunt echter maxim
 
 ### Wanneer ik naar een publiek door naam of markering in een ouderomslag zoek, kan ik door de verwante kindomslagen ook zoeken?
 
-Nee, dit gedrag wordt niet ondersteund. U kunt echter de overzichtsweergave van het publiek wijzigen om naar **Alle soorten publiek** en doorzoek vervolgens alle mappen. Lees voor meer informatie over het gebruik van zoekopdrachten in publieksoverzicht de [zoeksectie](./ui/overview.md#search) van het overzicht van de gebruikersinterface van de segmentatieservice.
+Nee, dit gedrag wordt niet ondersteund. U kunt echter de overzichtsweergave van het publiek wijzigen om naar **Alle soorten publiek** en doorzoek vervolgens alle mappen. Lees voor meer informatie over het gebruik van zoekopdrachten in publieksoverzicht de [zoeksectie](./ui/audience-portal.md#search) van het overzicht van de gebruikersinterface van de segmentatieservice.
 
 ### Kan ik een publiek automatisch toewijzen aan een map op het moment van het maken?
 

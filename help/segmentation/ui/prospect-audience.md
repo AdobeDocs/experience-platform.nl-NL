@@ -3,9 +3,9 @@ title: Soorten publiek
 description: Leer hoe te om perspectiefpubliek tot stand te brengen en te gebruiken om onbekende klanten te richten gebruikend derdeinformatie.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Deze weergave bevat informatie over het publiek, zoals de naam, het aantal profi
 
 U kunt extra velden aan deze weergave toevoegen door ![het pictogram van het filterkenmerk](../images/ui/prospect-audience/filter-attribute.png). Deze extra velden bevatten de updatefrequentie en de laatste update door.
 
-Meer informatie over de pagina Bladeren, inclusief gedetailleerde informatie over de weergegeven velden, vindt u in de [doorbladeren sectie van de gids van de Segmentatie UI](./overview.md#browse).
+Meer informatie over de pagina Bladeren, inclusief gedetailleerde informatie over de weergegeven velden, vindt u in de [Overzicht van het portal Publiek](./audience-portal.md#list).
 
 ## Details publiek {#details}
 
@@ -40,7 +40,7 @@ De pagina met informatie over het beoogde publiek wordt weergegeven. De informat
 
 ![De pagina met informatie over het beoogde publiek wordt weergegeven.](../images/ui/prospect-audience/audience-details.png)
 
-Lees voor meer informatie over de pagina met publieksdetails de [sectie met publieksdetails van de gebruikersinterface voor segmentatie](./overview.md).
+Lees voor meer informatie over de pagina met publieksdetails de [sectie met publieksdetails van het overzicht van het portal Poorten publiek](./audience-portal.md#audience-details).
 
 ## publiek maken {#create}
 
