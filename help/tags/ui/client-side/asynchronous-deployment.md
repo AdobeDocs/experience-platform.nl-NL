@@ -14,13 +14,13 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_tags_asynchronous_deployment"
 >title="Asynchrone implementatie"
->abstract="Als deze optie is ingeschakeld en de browser het JavaScript-bestand laadt wanneer deze scripttag wordt geparseerd, maar niet wacht tot de bibliotheek is geladen en uitgevoerd, blijft de rest van het document parseren en renderen. Dit kan de prestaties van webpagina&#39;s verbeteren, maar heeft belangrijke gevolgen voor de manier waarop bepaalde regels worden uitgevoerd. Raadpleeg de documentatie voor meer informatie."
+>abstract="Als deze optie is ingeschakeld, zal de browser bij het parseren van deze scripttag beginnen met het laden van het JavaScript-bestand, maar in plaats van te wachten tot de bibliotheek is geladen en uitgevoerd, de rest van het document blijven parseren en renderen. Dit kan de prestaties van webpagina&#39;s verbeteren, maar heeft belangrijke gevolgen voor de manier waarop bepaalde regels worden uitgevoerd. Raadpleeg de documentatie voor meer informatie."
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Prestaties en niet-blokkerende implementatie van de JavaScript-bibliotheken die vereist zijn voor onze producten zijn steeds belangrijker voor Adobe Experience Cloud-gebruikers. Gereedschappen zoals [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) adviseren dat de gebruikers veranderen zij hoe zij de bibliotheken van de Adobe op hun plaats opstellen. In dit artikel wordt uitgelegd hoe u de JavaScript-bibliotheken voor Adoben asynchroon kunt gebruiken.
+Prestaties en het niet blokkeren van de implementatie van de JavaScript-bibliotheken die onze producten vereisen, worden steeds belangrijker voor Adobe Experience Cloud-gebruikers. Gereedschappen zoals [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) adviseren dat de gebruikers veranderen zij hoe zij de bibliotheken van de Adobe op hun plaats opstellen. In dit artikel wordt uitgelegd hoe u de Adobe JavaScript-bibliotheken asynchroon kunt gebruiken.
 
 ## Synchroon versus asynchroon
 

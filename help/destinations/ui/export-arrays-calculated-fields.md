@@ -1,5 +1,5 @@
 ---
-title: (bèta) Gebruik berekende velden om arrays te exporteren in platte schemabestanden
+title: (Beta) Berekende velden gebruiken om arrays te exporteren in platte schemabestanden
 type: Tutorial
 description: Leer hoe u berekende velden kunt gebruiken om arrays in platte schemabestanden van Real-Time CDP naar cloudopslagbestemmingen te exporteren.
 badge: Beta
@@ -11,18 +11,18 @@ ht-degree: 0%
 
 ---
 
-# (bèta) Gebruik berekende velden om arrays te exporteren in platte schemabestanden {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
+# (Beta) Berekende velden gebruiken om arrays te exporteren in platte schemabestanden {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="(bèta) Ondersteuning voor exportarrays"
+>title="(Beta) Ondersteuning voor exportarrays"
 >abstract="Gebruik de **Berekend veld toevoegen** besturingselement voor het exporteren van eenvoudige arrays met int-, string- of Booleaanse waarden van Experience Platform naar de gewenste locatie voor cloudopslag. Er gelden enkele beperkingen. Raadpleeg de documentatie voor uitgebreide voorbeelden en ondersteunde functies."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Voorbeelden"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Bekende beperkingen"
 
 >[!AVAILABILITY]
 >
->* De functionaliteit om arrays via berekende velden te exporteren bevindt zich momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
+>* De functionaliteit voor het exporteren van arrays via berekende velden is momenteel in Beta. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 Leer hoe u arrays via berekende velden van Real-Time CDP in platte schemabestanden exporteert naar [cloudopslagbestemmingen](/help/destinations/catalog/cloud-storage/overview.md). Lees dit document om te begrijpen welke gebruiksgevallen door deze functie worden ingeschakeld.
 

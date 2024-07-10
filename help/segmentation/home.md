@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Overzicht van segmentatieservice
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1627'
+source-wordcount: '1607'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ Dit document biedt een overzicht van [!DNL Segmentation Service] en de rol die h
 
 U moet de volgende belangrijke termen begrijpen die in dit document worden gebruikt:
 
-- **Segmentering**: Het verdelen van een grote groep individuen (zoals klanten, vooruitzichten, gebruikers, of organisaties) in kleinere groepen die gelijkaardige eigenschappen delen en op gelijkaardige wijze aan marketing strategieën zullen antwoorden.
 - **Publiek**: Een verzameling personen die vergelijkbare gedragingen en/of kenmerken delen. Deze verzameling personen kan worden gegenereerd door Adobe Experience Platform met behulp van segmentdefinities (publiek dat door het platform wordt gegenereerd) of op basis van externe bronnen (publiek dat extern wordt gegenereerd).
 - **Segmentdefinitie**: De regelreeks Adobe Experience Platform gebruikt om zeer belangrijke kenmerken of gedrag van een doelpubliek te beschrijven.
+- **Segment**: Het scheiden van profielen in publiek.
 
 ## Hoe segmentatie werkt
 
@@ -40,9 +40,9 @@ Wanneer u een publiek rechtstreeks samenstelt op Platform, kunt u de Samenstelli
 
 ### Segmentdefinities
 
-Of ze zijn gemaakt met de API of met de [!DNL Segment Builder]segmentdefinities worden uiteindelijk gedefinieerd met [!DNL Profile Query Language] (PQL). Dit is waar de conceptuele segmentdefinitie in de gebouwde taal wordt beschreven om profielen terug te winnen die aan de criteria voldoen. Zie de klasse [PQL-overzicht](./pql/overview.md).
+Of ze zijn gemaakt met de API of met de [!DNL Segment Builder]segmentdefinities worden uiteindelijk gedefinieerd met [!DNL Profile Query Language] (PQL) Dit is waar de conceptuele segmentdefinitie in de gebouwde taal wordt beschreven om profielen terug te winnen die aan de criteria voldoen. Zie de klasse [PQL-overzicht](./pql/overview.md).
 
-Leren hoe u segmenten kunt maken en gebruiken in het dialoogvenster [!DNL Segment Builder] (de UI-implementatie van [!DNL Segmentation Service]), zie de [Handleiding Segment Builder](./ui/overview.md).
+Leren hoe u segmenten kunt maken en gebruiken in het dialoogvenster [!DNL Segment Builder] (de UI-implementatie van [!DNL Segmentation Service]), zie de [Handleiding Segment Builder](./ui/segment-builder.md).
 
 Raadpleeg de zelfstudie voor informatie over het samenstellen van segmentdefinities met behulp van de API [segmentdefinities maken met de API](./tutorials/create-a-segment.md).
 
@@ -84,15 +84,15 @@ Als alternatief voor een lopend proces van de gegevensselectie, verplaatst de pa
 
 Het batchpubliek wordt automatisch elke 24 uur geëvalueerd. Als u een partijpubliek op bestelling wilt evalueren, kunt u een segmentbaan gebruiken. Lees voor meer informatie over segmenttaken de [segmenttaakdocumentatie](./api/segment-jobs.md).
 
-### Randsegmentatie {#edge}
+### Edge-segmentatie {#edge}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Edge-evaluatie"
->abstract="De segmentatie van de rand is de capaciteit om segmenten in Platform op het Netwerk van de Rand onmiddellijk te evalueren, toelatend de kwesties van het de verpersoonlijkingsgebruik van zelfde-pagina en volgende-pagina."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Edge segmentation UI-hulplijn"
+>abstract="De segmentatie van Edge is de capaciteit om segmenten in Platform onmiddellijk op de Edge Network te evalueren, toelatend zelfde-pagina en volgende-pagina het gebruikscase van de verpersoonlijking."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Handleiding Edge-segmenteringsinterface"
 
-De segmentatie van de rand is de capaciteit om segmenten in Platform onmiddellijk te evalueren [op de Edge Network](../web-sdk/home.md)en maakt het gebruik van hoofdletters en kleine letters mogelijk voor het aanpassen van pagina&#39;s.
+Edge-segmentatie is de mogelijkheid om segmenten in Platform ogenblikkelijk te evalueren [op de Edge Network](../web-sdk/home.md)en maakt het gebruik van hoofdletters en kleine letters mogelijk voor het aanpassen van pagina&#39;s.
 
 Voor meer informatie over randsegmentatie leest u de optie [API-documentatie](./api/edge-segmentation.md) of de [UI-documentatie](./ui/edge-segmentation.md).
 

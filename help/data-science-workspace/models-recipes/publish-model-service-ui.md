@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;publiceer een model;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;score een dienst
+keywords: Experience Platform;publiceer een model;De Wetenschap van Gegevens Workspace;populaire onderwerpen;score een dienst
 solution: Experience Platform
-title: Publiceer een Model als Dienst in de Werkruimte van de Wetenschap van Gegevens UI
+title: Publish a Model as a Service in the Data Science Workspace UI
 type: Tutorial
-description: Met de Adobe Experience Platform Data Science Workspace kunt u uw getrainde en geëvalueerde Model als service publiceren, zodat gebruikers binnen uw organisatie gegevens kunnen scoren zonder dat ze zelf modellen hoeven te maken.
+description: Met Adobe Experience Platform Data Science Workspace kunt u uw getrainde en geëvalueerde Model als service publiceren, zodat gebruikers binnen uw organisatie gegevens kunnen scoren zonder dat ze zelf modellen hoeven te maken.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
 workflow-type: tm+mt
@@ -12,14 +12,14 @@ ht-degree: 0%
 
 ---
 
-# Publiceer een model als dienst in de Werkruimte van de Wetenschap van Gegevens UI {#publish-a-model-as-a-service}
+# Publish a model as a service in the Data Science Workspace UI {#publish-a-model-as-a-service}
 
 >[!CONTEXTUALHELP]
 >id="platform_intelligentservices_publishmodel"
->title="Een model publiceren als service"
+>title="Publish a Model as a Service"
 >abstract=""
 
-Met de Adobe Experience Platform Data Science Workspace kunt u uw getrainde en geëvalueerde Model als service publiceren, zodat gebruikers binnen uw organisatie gegevens kunnen scoren zonder dat ze zelf modellen hoeven te maken.
+Met Adobe Experience Platform Data Science Workspace kunt u uw getrainde en geëvalueerde Model als service publiceren, zodat gebruikers binnen uw organisatie gegevens kunnen scoren zonder dat ze zelf modellen hoeven te maken.
 
 ## Aan de slag
 
@@ -29,7 +29,7 @@ Voor deze zelfstudie is een bestaand model met een geslaagde trainingsuitvoering
 
 Als u een model liever wilt publiceren met de API&#39;s voor leren door Sensei Machine Learning, raadpleegt u de [API-zelfstudie](./publish-model-service-api.md).
 
-## Een model publiceren {#publish-a-model}
+## Publish a Model {#publish-a-model}
 
 Selecteer in Adobe Experience Platform **[!UICONTROL Models]** bevindt zich in de linkernavigatiekolom en selecteert u vervolgens de optie **[!UICONTROL Browse]** om alle bestaande modellen weer te geven. Selecteer de naam van het model dat u als service wilt publiceren.
 

@@ -4,9 +4,9 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het realtime klantprofiel van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '4665'
+source-wordcount: '4669'
 ht-degree: 0%
 
 ---
@@ -195,7 +195,7 @@ Voor alle nieuwe Adobe Experience Platform-instanties wordt een standaardwidgetb
 
 ## AI-widgets van klant {#customer-ai-profiles-widgets}
 
-AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren. De AI van de klant doet dit door bestaande gegevens van de Gebeurtenis van de Consumentenervaring te analyseren om te voorspellen **scores voor churn- of conversiedichtheid**. Deze zeer nauwkeurige modellen van de klantenneiging staan voor nauwkeurigere segmentatie en het richten toe. De [verdeling van scores](#customer-ai-distribution-of-scores) en [overzicht van scores](#customer-ai-scoring-summary) inzichten tonen de verdeeldheid in uw publiek aan . Ze benadrukken welke profielen de hoge/lage/gemiddelde dichtheid zijn en hoe deze over het aantal profielen worden verdeeld.
+Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie voor individuele profielen op schaal te genereren. De AI van de klant doet dit door bestaande gegevens van de Gebeurtenis van de Consumentenervaring te analyseren om te voorspellen **scores voor churn- of conversiedichtheid**. Deze zeer nauwkeurige modellen van de klantenneiging staan voor nauwkeurigere segmentatie en het richten toe. De [verdeling van scores](#customer-ai-distribution-of-scores) en [overzicht van scores](#customer-ai-scoring-summary) inzichten tonen de verdeeldheid in uw publiek aan . Ze benadrukken welke profielen de hoge/lage/gemiddelde dichtheid zijn en hoe deze over het aantal profielen worden verdeeld.
 
 * [[!UICONTROL Customer AI scoring summary]](#customer-ai-scoring-summary)
 * [[!UICONTROL Customer AI distribution of scores]](#customer-ai-distribution-of-scores)
@@ -506,7 +506,7 @@ Als u uitgebreide informatie over een publiek wilt weergeven, selecteert u een p
 
 ![De widget voor soorten publiek met een publieksnaam en de tekst voor alle soorten publiek weergeven zijn gemarkeerd.](../images/profiles/audiences-size-view-all-audiences.png)
 
-Zie de documentatie voor meer informatie over de [[!UICONTROL Audiences] [!UICONTROL  Browse] tab](../../segmentation/ui/overview.md#browse).
+Meer informatie over publieksdetails vindt u in het gedeelte [Poortdocumentatie voor publiek](../../segmentation/ui/audience-portal.md).
 
 ### [!UICONTROL Audience overlap by merge policy] {#audience-overlap-by-merge-policy}
 
