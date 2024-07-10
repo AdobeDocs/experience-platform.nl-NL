@@ -75,9 +75,11 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 ## Type en frequentie exporteren
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
-|**Publiek**|**Ondersteund**|**Oorsprong van beschrijving**|\
-|—|—|—|\
-|Segmenteringsdienst|✓|Soorten publiek gegenereerd door het Experience Platform [[Segmentatieservice]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).| Aangepaste uploads|X|Soorten publiek [[geïmporteerd]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform van CSV-bestanden.
+
+|**Publiek**|**Ondersteund**|**Oorsprong van beschrijving**|
+|---|---|---|
+|Segmenteringsdienst|✓|Soorten publiek gegenereerd door het Experience Platform [[Segmentatieservice]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
+|Aangepaste uploads|X|Soorten publiek [[geïmporteerd]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform van CSV-bestanden.|
 
 {style="table-layout:auto"}
 
