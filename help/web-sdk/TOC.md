@@ -6,9 +6,9 @@ breadcrumb-title: Handleiding voor Web SDK
 user-guide-description: Interactie met Experience Cloud-services via het Edge-netwerk.
 feature: Web SDK
 role: Developer
-source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
+source-git-commit: 14f9c2240d1a650cc267bd997ea35d7923f71b2b
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '225'
 ht-degree: 19%
 
 ---
@@ -21,12 +21,13 @@ ht-degree: 19%
 * Web SDK-installatie {#install}
    * [Overzicht](install/overview.md)
    * [De SDK van het web installeren met de tagextensie](install/extension.md)
-   * [De SDK van het Web installeren met de JavaScript-bibliotheek](install/library.md)
+   * [De SDK van het web installeren met de JavaScript-bibliotheek](install/library.md)
    * [De SDK van het web installeren met behulp van het NPM-pakket](install/npm.md)
 * Opdrachten {#commands}
    * vormen {#configure}
       * [Overzicht](commands/configure/overview.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
+      * [clickCollection](commands/configure/clickcollection.md)
       * [context](commands/configure/context.md)
       * [debugEnabled](commands/configure/debugenabled.md)
       * [defaultConsent](commands/configure/defaultconsent.md)
@@ -56,12 +57,12 @@ ht-degree: 19%
    * [createMediaSession](commands/createmediasession.md)
    * [getIdentity](commands/getidentity.md)
    * [getLibraryInfo](commands/getlibraryinfo.md)
+   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
    * [Gegevensstroomoverschrijvingen configureren](commands/datastream-overrides.md)
    * [Opdrachtreacties](commands/command-responses.md)
-   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
 
 * Identiteit {#identity}
    * [Overzicht](identity/overview.md)
@@ -71,7 +72,7 @@ ht-degree: 19%
 * Personalisatie {#personalization}
    * [Weergavegebeurtenissen beheren](personalization/display-events.md)
    * [Aangepaste inhoud renderen](personalization/rendering-personalization-content.md)
-   * [Personalisatie via hybride implementatie](personalization/hybrid-personalization.md)
+   * [Personalization via hybride implementatie](personalization/hybrid-personalization.md)
    * [flikkering beheren](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [Overzicht](personalization/adobe-target/target-overview.md)

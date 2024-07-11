@@ -2,9 +2,9 @@
 title: De web SDK-tagextensie configureren
 description: Leer hoe te om de de markeringsuitbreiding van SDK van het Web van het Experience Platform in de UI van Markeringen te vormen.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1878'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ De de markeringsuitbreiding van SDK van het Web moet een bezit worden geïnstall
 
 Nadat u een eigenschap hebt gemaakt, opent u de eigenschap en selecteert u de **[!UICONTROL Extensions]** op de linkerzijbalk.
 
-Selecteer de **[!UICONTROL Catalog]** tab. Zoek in de lijst met beschikbare extensies naar de [!DNL Web SDK] en selecteert u **[!UICONTROL Install]**.
+Selecteer het tabblad **[!UICONTROL Catalog]**. Zoek in de lijst met beschikbare extensies naar de [!DNL Web SDK] en selecteert u **[!UICONTROL Install]**.
 
 ![Afbeelding die de interface Tags weergeeft terwijl de Web SDK-extensie is geselecteerd](assets/web-sdk-install.png)
 
@@ -39,7 +39,7 @@ De configuratieopties boven aan de pagina vertellen Adobe Experience Platform wa
 
 ![Afbeelding die de algemene instellingen van de extensie van de Web SDK-tag in de gebruikersinterface voor tags weergeeft](assets/web-sdk-ext-general.png)
 
-* **[!UICONTROL Name]**: De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. De naam wordt gebruikt om gegevens naar veelvoudige organisaties met een markeringsconfiguratie te verzenden. De instantienaam is standaard ingesteld op `alloy`. U kunt de instantienaam echter wijzigen in elke geldige naam voor een JavaScript-object.
+* **[!UICONTROL Name]**: De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. De naam wordt gebruikt om gegevens naar veelvoudige organisaties met een markeringsconfiguratie te verzenden. De instantienaam is standaard ingesteld op `alloy`. U kunt de instantienaam echter wijzigen in elke geldige JavaScript-objectnaam.
 * **[!UICONTROL IMS organization ID]**: De id van de organisatie waarnaar u de gegevens bij Adobe wilt verzenden. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
 * **[!UICONTROL Edge domain]**: Het domein waarvan de extensie gegevens verzendt en ontvangt. De Adobe adviseert gebruikend een 1st-partijdomein (CNAME) voor deze uitbreiding. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. Instructies over hoe te opstelling een eerste-partij CNAME zijn vermeld [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
 
@@ -111,11 +111,29 @@ Als u het voorverborgen fragment gebruikt, wordt u aangeraden het zelfde fragmen
 
 ## Instellingen voor gegevensverzameling configureren {#data-collection}
 
-![Afbeelding met de instellingen voor gegevensverzameling voor de extensie van de Web SDK-tag in de gebruikersinterface Codes](assets/web-sdk-ext-collection.png)
+Configuratieinstellingen voor gegevensverzameling beheren. Vergelijkbare instellingen in de JavaScript-bibliotheek zijn beschikbaar via de [`configure`](/help/web-sdk/commands/configure/overview.md) gebruiken.
 
-* **[!UICONTROL Callback function]**: De callback-functie die in de extensie wordt opgegeven, wordt ook wel de [`onBeforeEventSend` function](/help/web-sdk/commands/configure/onbeforeeventsend.md) in de bibliotheek. Met deze functie kunt u gebeurtenissen globaal wijzigen voordat ze naar de Edge Network worden verzonden.
-* **[!UICONTROL Enable click data collection]**: De SDK van het Web kan verbindingsklikinformatie voor u automatisch verzamelen. Deze functie is standaard ingeschakeld, maar kan met deze optie worden uitgeschakeld. Koppelingen worden ook gemarkeerd als downloadkoppelingen als ze een van de downloadexpressies bevatten die in het dialoogvenster [!UICONTROL Download Link Qualifier] textbox. Adobe voorziet u van sommige standaardbepalende eigenschappen van de downloadverbinding. U kunt deze naar wens bewerken.
-* **[!UICONTROL Automatically collected context data]**: Door gebrek, verzamelt het Web SDK bepaalde contextgegevens betreffende apparaat, Web, milieu, en plaatcontext. Als u deze gegevens niet wilt verzamelen of alleen bepaalde categorieën gegevens wilt verzamelen, selecteert u **[!UICONTROL Specific context information]** en selecteer de gegevens die u wilt verzamelen. Zie [`context`](/help/web-sdk/commands/configure/context.md) voor meer informatie .
+![Afbeelding met de instellingen voor gegevensverzameling van de extensie van de Web SDK-tag in de gebruikersinterface voor tags.](assets/web-sdk-ext-collection.png)
+
+* **[!UICONTROL On before event send callback]**: Een callback-functie voor het evalueren en wijzigen van de lading die naar de Adobe wordt verzonden. Gebruik de `content` variabele binnen de callback functie om de nuttige lading te wijzigen. Deze callback is gelijk aan de tag [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) in de JavaScript-bibliotheek.
+* **[!UICONTROL Collect internal link clicks]**: Een selectievakje dat de verzameling van gegevens voor het bijhouden van koppelingen intern aan uw site of eigenschap inschakelt. Wanneer u dit selectievakje inschakelt, worden opties voor gebeurtenisgroepering weergegeven:
+   * **[!UICONTROL No event grouping]**: Gegevens voor het bijhouden van koppelingen worden in afzonderlijke gebeurtenissen naar de Adobe verzonden. Koppelingsklikken die in afzonderlijke gebeurtenissen worden verzonden, kunnen het contractuele gebruik van gegevens die naar Adobe Experience Platform worden verzonden verhogen.
+   * **[!UICONTROL Event grouping using session storage]**: Sla koppelingsvolggegevens op in sessieopslag tot de volgende paginagebeurtenis. Op de volgende pagina worden de opgeslagen gegevens voor het bijhouden van koppelingen en de paginaweergave tegelijkertijd naar de Adobe verzonden. Adobe raadt aan deze instelling in te schakelen bij het bijhouden van interne koppelingen.
+   * **[!UICONTROL Event grouping using local object]**: Sla koppelingsvolggegevens in een lokaal object op tot de volgende paginagebeurtenis. Als een bezoeker naar een nieuwe pagina navigeert, gaan de gegevens voor het bijhouden van koppelingen verloren. Deze instelling is het meest geschikt voor toepassingen van één pagina.
+* **[!UICONTROL Collect external link clicks]**: Een selectievakje waarmee externe koppelingen kunnen worden verzameld.
+* **[!UICONTROL Collect download link clicks]**: Een selectievakje waarmee downloadkoppelingen kunnen worden verzameld.
+* **[!UICONTROL Download link qualifier]**: Een reguliere expressie die een link-URL kwalificeert als een downloadkoppeling.
+* **[!UICONTROL Filter click properties]**: Een callback-functie voor het evalueren en wijzigen van klikgerelateerde eigenschappen vóór de verzameling. Deze functie wordt uitgevoerd vóór de [!UICONTROL On before event send callback].
+* **Contextinstellingen**: Verzamel automatisch bezoekersinformatie, die specifieke XDM gebieden voor u bevolkt. U kunt **[!UICONTROL All default context information]** of **[!UICONTROL Specific context information]**. De tag komt overeen met [`context`](/help/web-sdk/commands/configure/context.md) in de JavaScript-bibliotheek.
+   * **[!UICONTROL Web]**: Verzamelt informatie over de huidige pagina.
+   * **[!UICONTROL Device]**: Verzamelt informatie over het apparaat van de gebruiker.
+   * **[!UICONTROL Environment]**: Verzamelt informatie over de browser van de gebruiker.
+   * **[!UICONTROL Place context]**: Verzamelt informatie over de locatie van de gebruiker.
+   * **[!UICONTROL High entropy user-agent hints]**: Verzamelt meer gedetailleerde informatie over het apparaat van de gebruiker.
+
+>[!TIP]
+>
+De **[!UICONTROL On before link click send]** field is een afgekeurde callback die slechts voor eigenschappen zichtbaar is die het reeds gevormd hebben. De tag komt overeen met [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) in de JavaScript-bibliotheek. Gebruik de **[!UICONTROL Filter click properties]** callback om klikgegevens te filtreren of aan te passen, of gebruik **[!UICONTROL On before event send callback]** om de totale lading te filteren of aan te passen die naar Adobe wordt verzonden. Als beide **[!UICONTROL Filter click properties]** callback en de **[!UICONTROL On before link click send]** callback wordt ingesteld, alleen de **[!UICONTROL Filter click properties]** callback-uitvoering.
 
 ## Instellingen voor mediaverzamelingen configureren {#media-collection}
 

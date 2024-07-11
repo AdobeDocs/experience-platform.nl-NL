@@ -1,22 +1,23 @@
 ---
 title: onBeforeEventSend
-description: Callback die precies loopt alvorens het gegeven wordt verzonden.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+description: Leer hoe te om SDK van het Web te vormen om een functie van JavaScript te registreren die de gegevens kunt veranderen u net vóór dat gegeven wordt verzonden naar Adobe.
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
 
+
 # `onBeforeEventSend`
 
-De `onBeforeEventSend` Met callback kunt u een JavaScript-functie registreren die de gegevens kan wijzigen die u verzendt vlak voordat die gegevens naar de Adobe worden verzonden. Met deze callback kunt u de `xdm` of `data` -object, inclusief de mogelijkheid om elementen toe te voegen, te bewerken of te verwijderen. U kunt het verzenden van gegevens ook voorwaardelijk annuleren, zoals met ontdekt cliënt-zijbot verkeer.
+De `onBeforeEventSend` Met callback kunt u een JavaScript-functie registreren die de gegevens kan wijzigen die u verzendt vlak voordat de gegevens naar de Adobe worden verzonden. Met deze callback kunt u de `xdm` of `data` -object, inclusief de mogelijkheid om elementen toe te voegen, te bewerken of te verwijderen. U kunt het verzenden van gegevens ook voorwaardelijk annuleren, zoals met ontdekt cliënt-zijbot verkeer.
 
 >[!WARNING]
 >
 >Deze callback staat het gebruik van douanecode toe. Als een code die u in de callback opneemt, een niet-afgevangen uitzondering genereert, wordt de verwerking voor de gebeurtenis gestopt. Gegevens worden niet naar de Adobe verzonden.
 
-## Voor de gebeurtenis verzendt u callback met de Web SDK-tagextensie
+## Vorm vóór gebeurtenis verzend callback gebruikend de de markeringsuitbreiding van SDK van het Web {#tag-extension}
 
 Selecteer de **[!UICONTROL Provide on before event send callback code]** knop wanneer [configureren van de tagextensie](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Met deze knop opent u een modaal venster waarin u de gewenste code kunt invoegen.
 
@@ -28,21 +29,14 @@ Selecteer de **[!UICONTROL Provide on before event send callback code]** knop wa
 1. Met deze knop opent u een modaal venster met een code-editor. Voeg de gewenste code in en klik vervolgens op **[!UICONTROL Save]** om het modale venster te sluiten.
 1. Klikken **[!UICONTROL Save]** publiceert u de wijzigingen onder extensie-instellingen.
 
-Binnen de code-editor kunt u elementen toevoegen, bewerken of verwijderen in de `content` object. Dit object bevat de lading die naar de Adobe is verzonden. U hoeft de `content` code binnen een functie plaatsen. Willekeurige variabelen die buiten `content` kunnen worden gebruikt, maar worden niet opgenomen in de lading die naar de Adobe wordt verzonden.
+In de code-editor hebt u toegang tot de volgende variabelen:
 
->[!TIP]
->
->De objecten `content.xdm` en `content.data` worden altijd in deze context gedefinieerd, zodat u niet hoeft te controleren of ze bestaan. Sommige variabelen binnen deze voorwerpen hangen van uw implementatie en gegevenslaag af. Adobe raadt aan om ongedefinieerde waarden in deze objecten te controleren om JavaScript-fouten te voorkomen.
+* **`content.xdm`**: De [XDM](../sendevent/xdm.md) payload voor de gebeurtenis.
+* **`content.data`**: De [data](../sendevent/data.md) objectlading voor de gebeurtenis.
+* **`return true`**: Sluit de callback onmiddellijk af en verstuur gegevens naar de Adobe met de huidige waarden in het dialoogvenster `content` object.
+* **`return false`**: Sluit de callback onmiddellijk af en sluit het verzenden van gegevens naar de Adobe af.
 
-Als u bijvoorbeeld wilt:
-
-* Het XDM-element toevoegen `xdm.commerce.order.purchaseID`
-* Alle tekens afdwingen in `xdm.marketing.trackingCode` in kleine letters
-* Verwijderen `xdm.environment.operatingSystemVersion`
-* Als een gebeurtenistype een koppelingsklik is, verzendt onmiddellijk gegevens ongeacht de code hieronder
-* Het verzenden van gegevens naar de Adobe annuleren als een bot wordt aangetroffen
-
-De equivalente code binnen het modale venster is als volgt:
+Willekeurige variabelen die buiten `content` kunnen worden gebruikt, maar worden niet opgenomen in de lading die naar de Adobe wordt verzonden.
 
 ```js
 // Use nullish coalescing assignments to add objects if they don't yet exist
@@ -69,19 +63,18 @@ if (myBotDetector.isABot()) {
 }
 ```
 
->[!NOTE]
->
+>[!TIP]
 >Vermijd het terugkeren `false` op de eerste gebeurtenis op een pagina. Terugkeren `false` op de eerste gebeurtenis kan de personalisatie negatief beïnvloeden.
 
-## Voor de gebeurtenis moet u callback verzenden met de Web SDK JavaScript-bibliotheek
+## Vorm vóór gebeurtenis verzendt callback gebruikend de bibliotheek van JavaScript van SDK van het Web {#library}
 
 Registreer de `onBeforeEventSend` callback wanneer de `configure` gebruiken. U kunt de `content` de naam van een variabele in een willekeurige waarde door de parametervariabele binnen de inline functie te wijzigen.
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(content) {
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeEventSend: function(content) {
     // Use nullish coalescing assignments to add a new value
     content.xdm._experience ??= {};
     content.xdm._experience.analytics ??= {};
@@ -121,8 +114,8 @@ function lastChanceLogic(content) {
 }
 
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": lastChanceLogic
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeEventSend: lastChanceLogic
 });    
 ```
