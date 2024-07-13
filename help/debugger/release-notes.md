@@ -4,21 +4,34 @@ description: De nieuwste aanvullende informatie voor Adobe Experience Platform D
 keywords: foutopsporing;ervaring met de extensie Foutopsporing in platform;chroom;extensie;releaseopmerkingen
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a381760d3f19e04a70581d4adbb8095c92fb2e56
+source-git-commit: c99234cf3f5af9abe590c90fbdefc7d50c1539da
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '758'
 ht-degree: 1%
 
 ---
 
 # Opmerkingen bij de release Adobe Experience Platform Debugger
 
+## Versie 1.6.0 - 11 juli 2024
+
+### Nieuwe functies
+
+* Gebruikers de mogelijkheid bieden om zich aan te melden of te weigeren bij het verzamelen van technische en persoonlijke gegevens.
+
+### Oplossingen en verbeteringen
+
+* Firefox-scriptinjectie en link naar privacybeleid herstellen.
+* Ontbrekende analytische aanvragen vastleggen.
+* Vastlopen op pagina&#39;s met veel complexe consoleberichten corrigeren.
+* Werk het Adobe Experience Platform Debugger bij naar een Manifest v3-extensie.
+
 ## Versie 1.5.4 - 19 december 2023
 
 ### Oplossingen en verbeteringen
 
 * Probleem verholpen waarbij instellingen niet werden behouden.
-* Probleem verholpen waarbij Foutopsporing vastliep tijdens het bekijken van Analytics Nabewerkte hits.
+* Probleem verholpen waarbij Foutopsporing vastliep tijdens het bekijken van door Analytics Post verwerkte hits.
 
 ## Versie 1.5.3 - 6 december 2023
 
@@ -100,7 +113,7 @@ ht-degree: 1%
 * Koppeling Informatie toegevoegd om huidige releaseversie en notities weer te geven.
 * Toegevoegde schakeloptie voor het weergeven van uitgevoerde resultaten voor analytische aanvragen. De schakeloptie is beschikbaar in de sectie Analytics.
 * Probleem met externe foutopsporingssessie verholpen toen de sessie buiten foutopsporing werd gesloten.
-* Het foutbericht dat werd weergegeven op het tabblad Edge Transactions van de Web SDK.
+* Melding van fout is gecorrigeerd die werd weergegeven op het tabblad Transacties van de Web SDK Edge.
 * Tags voor vaste Adobe op de pagina-afbrekingswaarschuwing wanneer de foutopsporing het object _satelliet heeft geopend.
 * Probleem verholpen waarbij een AppMeasurement-instantie niet op de pagina werd gevonden.
 * Probleem met paginaverbinding verholpen die optrad bij de eerste opening van het foutopsporingsvenster.
@@ -112,7 +125,7 @@ ht-degree: 1%
 
 ## Versie 1.1.0 - 5 oktober 2021
 
-* Visualisatie van foutopsporing op afstand - Organiseer de gebeurtenissen voor foutopsporing op afstand in een visueel stroomdiagram in de sectie Adobe Experience Platform Web SDK > Edge Transactions.
+* Visualisatie van foutopsporing op afstand - Organiseer de gebeurtenissen voor foutopsporing op afstand in een visueel stroomdiagram in het gedeelte Adobe Experience Platform Web SDK > Edge Transactions.
 * Vereisen de organisatie van SDK van het Web van Adobe Experience Platform die op de pagina wordt gebruikt de het programma geopende org wanneer het beginnen van een nieuwe verre het zuiveren zitting aanpast.
 * Alleen de randtransacties voor het verbonden tabblad weergeven. Logbestanden met doelsporen zijn nog steeds beschikbaar in de sectie Logs > Edge.
 * Sta afzonderlijke de configuratieopheffing van identiteitskaart van de gegevensstroom voor elke instantie van het Web SDK van Adobe Experience Platform op de pagina toe. Schakel foutopsporing in.
