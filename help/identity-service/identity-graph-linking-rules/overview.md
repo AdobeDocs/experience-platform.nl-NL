@@ -3,9 +3,9 @@ title: Overzicht van regels voor identiteitsgrafiek
 description: Leer over de Regels van de Vereniging van de Grafiek van Identiteit in de Dienst van de Identiteit.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 67b08acaecb4adf4d30d6d4aa7b8c24b30dfac2e
+source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1173'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ Met Adobe Experience Platform Identity Service en Real-Time Customer Profile is 
 
 ## Voorbeeldscenario&#39;s waarbij een grafiek kan samenvouwen
 
-* **Gedeeld apparaat**: Gedeeld apparaat verwijst naar apparaten die door meer dan één individu worden gebruikt. Voorbeelden van een gedeeld apparaat zijn tablets, bibliotheekcomputers en kiosken.
-* **Onjuiste e-mail- en telefoonnummers**: Onjuiste e-mail- en telefoonnummers verwijzen naar eindgebruikers die ongeldige contactgegevens registreren, zoals &quot;test<span>@test.com&quot; voor e-mail en &quot;+1-111-111-1111&quot; voor telefoonnummer.
-* **Onjuiste of onjuiste identiteitswaarden**: Onjuiste of onjuiste identiteitswaarden verwijzen naar niet-unieke identiteitswaarden die CRM-id&#39;s kunnen samenvoegen. Terwijl IDFA&#39;s bijvoorbeeld 36 tekens moeten hebben (32 alfanumerieke tekens en vier afbreekstreepjes), zijn er scenario&#39;s waarin een IDFA met de identiteitswaarde &quot;user_null&quot; kan worden opgenomen. Op dezelfde manier steunen de telefoonaantallen slechts numerieke karakters, maar een telefoonnamespace met een identiteitswaarde van &quot;niet-gespecificeerd&quot;kan worden opgenomen.
+* **Gedeeld apparaat**: Het gedeelde apparaat verwijst naar apparaten die door meer dan één individu worden gebruikt. Voorbeelden van een gedeeld apparaat zijn tablets, bibliotheekcomputers en kiosken.
+* **Onjuiste e-mail en telefoonaantallen**: De slechte e-mail en telefoonaantallen verwijzen naar eind - gebruikers die ongeldige contactinformatie registreren, zoals &quot;test <span>@test.com&quot;voor e-mail, en &quot;+1-111-111-111&quot;voor telefoonaantal.
+* **Onjuiste of slechte identiteitswaarden**: De onjuiste of slechte identiteitswaarden verwijzen naar niet-unieke identiteitswaarden die CRM IDs konden samenvoegen. Terwijl IDFA&#39;s bijvoorbeeld 36 tekens moeten hebben (32 alfanumerieke tekens en vier afbreekstreepjes), zijn er scenario&#39;s waarin een IDFA met de identiteitswaarde &quot;user_null&quot; kan worden opgenomen. Op dezelfde manier steunen de telefoonaantallen slechts numerieke karakters, maar een telefoonnamespace met een identiteitswaarde van &quot;niet-gespecificeerd&quot;kan worden opgenomen.
 
-Lees het document over meer informatie over gebruiksscenario&#39;s voor koppelingsregels voor identiteitsgrafieken [voorbeeldscenario&#39;s](./example-scenarios.md).
+Voor meer informatie over gebruiksgevalscenario&#39;s voor identiteitsgrafiek die regels verbindt, lees het document op [ voorbeeldscenario&#39;s ](./example-scenarios.md).
 
 ## Koppelingsregels voor identiteitsgrafiek {#identity-graph-linking-rules}
 
@@ -53,11 +53,11 @@ U kunt een naamruimte zo configureren dat deze uniek is met behulp van de gebrui
 
 Overweeg het volgende scenario:
 
-* Scott gebruikt een tablet en opent zijn Google Chrome-browser om naar nike te gaan<span>.com, waar hij intekent en naar nieuwe basketbalschoenen bladert.
+* Scott gebruikt een tablet en opent zijn browser van Google Chrome om naar nike <span>.com te gaan, waar hij binnen ondertekent en voor nieuwe basketbalschoenen doorbladert.
    * In dit scenario worden achter de schermen de volgende identiteiten geregistreerd:
       * Een ECID-naamruimte en -waarde die het gebruik van de browser vertegenwoordigen
       * Een CRM ID namespace en waarde om de voor authentiek verklaarde gebruiker te vertegenwoordigen (Scott die binnen met zijn gebruikersbenaming en wachtwoordcombinatie wordt ondertekend).
-* Zijn zoon Peter gebruikt dan hetzelfde tablet en gebruikt ook Google Chrome om naar nike te gaan<span>.com, waar hij zich met zijn eigen rekening aanmeldt om naar voetbaluitrusting te zoeken.
+* Zijn zoon Peter gebruikt dan hetzelfde tablet en gebruikt Google Chrome ook om naar nike <span>.com te gaan, waar hij zich aanmeldt voor zijn eigen rekening om naar voetbalapparatuur te zoeken.
    * In dit scenario worden achter de schermen de volgende identiteiten geregistreerd:
       * Dezelfde ECID-naamruimte en -waarde die de browser vertegenwoordigen.
       * Een nieuwe CRM-id-naamruimte en -waarde die de geverifieerde gebruiker vertegenwoordigen.
@@ -72,7 +72,7 @@ U moet een unieke naamruimte configureren om het algoritme voor identiteitsoptim
 
 De prioriteit Namespace verwijst naar het relatieve belang van namespaces in vergelijking met elkaar. De prioriteit Namespace is configureerbaar door UI en u kunt namespaces in een bepaalde identiteitsgrafiek rangschikken.
 
-Één manier waarin namespace prioriteit wordt gebruikt is het bepalen van de primaire identiteit van de fragmenten van de ervaringsgebeurtenis (gebruikersgedrag) op het Profiel van de Klant In real time. Als de prioritaire montages worden gevormd, dan zal het primaire identiteit plaatsen op Web SDK niet meer worden gebruikt om te bepalen welke profielfragmenten worden opgeslagen.
+Één manier waarin namespace prioriteit wordt gebruikt is in het bepalen van de primaire identiteit van de fragmenten van de ervaringsgebeurtenis (gebruikersgedrag) in het Profiel van de Klant in real time. Als de prioritaire montages worden gevormd, dan zal het primaire identiteit plaatsen op Web SDK niet meer worden gebruikt om te bepalen welke profielfragmenten worden opgeslagen.
 
 Unieke naamruimten en naamruimteprioriteiten kunnen beide worden geconfigureerd in de gebruikersinterface voor identiteitsinstellingen. De effecten van hun configuraties zijn echter anders:
 
@@ -82,17 +82,18 @@ Unieke naamruimten en naamruimteprioriteiten kunnen beide worden geconfigureerd 
 | Prioriteit naamruimte | In de Dienst van de Identiteit, voor grafieken die veelvoudige lagen hebben, zal namespace prioriteit bepalen dat de aangewezen verbindingen worden verwijderd. | Wanneer een ervaringsgebeurtenis in Profiel wordt opgenomen, wordt namespace met de hoogste prioriteit de primaire identiteit van het profielfragment. |
 
 * De prioriteit Namespace heeft geen invloed op het grafiekgedrag wanneer de limiet van 50 identiteiten per grafiek wordt bereikt.
-* **De prioriteit van Namespace is een numerieke waarde** toegewezen aan een naamruimte die het relatieve belang ervan aangeeft. Dit is een eigenschap van een naamruimte.
-* **Primaire identiteit is de identiteit waarin een profielfragment wordt opgeslagen**. Een profielfragment is een record met gegevens waarin informatie over een bepaalde gebruiker wordt opgeslagen: kenmerken (gewoonlijk opgenomen via CRM-records) of gebeurtenissen (gewoonlijk opgenomen via ervaringsgebeurtenissen of online gegevens).
+* **de prioriteit van Namespace is een numerieke waarde** die aan namespace wordt toegewezen die op zijn relatieve belang wijst. Dit is een eigenschap van een naamruimte.
+* **Primaire identiteit is de identiteit waarin een profielfragment tegen** wordt opgeslagen. Een profielfragment is een record met gegevens waarin informatie over een bepaalde gebruiker wordt opgeslagen: kenmerken (gewoonlijk opgenomen via CRM-records) of gebeurtenissen (gewoonlijk opgenomen via ervaringsgebeurtenissen of online gegevens).
 * De prioriteit Namespace bepaalt de primaire identiteit voor de fragmenten van de ervaringsgebeurtenis.
-   * Voor profielverslagen, kunt u de schemawerkruimte in de UI van het Experience Platform gebruiken om identiteitsgebieden, met inbegrip van de primaire identiteit te bepalen. Lees de handleiding op [identiteitsvelden definiëren in de gebruikersinterface](../../xdm/ui/fields/identity.md) voor meer informatie .
+   * Voor profielverslagen, kunt u de schemawerkruimte in de UI van het Experience Platform gebruiken om identiteitsgebieden, met inbegrip van de primaire identiteit te bepalen. Lees de gids op [ bepalend identiteitsgebieden in UI ](../../xdm/ui/fields/identity.md) voor meer informatie.
+* Als een ervaringsgebeurtenis twee of meer identiteiten van de hoogste namespace prioriteit in identityMap heeft, zal het van opname worden verworpen omdat het als &quot;slechte gegevens&quot;zal worden beschouwd. Als identityMap bijvoorbeeld `{ECID: 111, CRMID: John, CRMID: Jane}` bevat, wordt de gehele gebeurtenis als ongeldige gegevens afgewezen, omdat dit betekent dat de gebeurtenis tegelijkertijd aan zowel `CRMID: John` als `CRMID: Jane` wordt gekoppeld.
 
-Lees voor meer informatie de handleiding op [naamruimtetoewijzing](./namespace-priority.md).
+Voor meer informatie, lees de gids over [ namespace prioriteit ](./namespace-priority.md).
 
 ## Volgende stappen
 
 Lees de volgende documentatie voor meer informatie over koppelingsregels voor identiteitsgrafieken:
 
-* [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md).
-* [Prioriteit naamruimte](./namespace-priority.md).
-* [Voorbeeldscenario&#39;s voor het configureren van identiteitsgrafiek-koppelingsregels](./example-scenarios.md).
+* [ het optimalisatiealgoritme van de Identiteit ](./identity-optimization-algorithm.md).
+* [ prioriteit Namespace ](./namespace-priority.md).
+* [ de scenario&#39;s van het Voorbeeld om identiteitsgrafiek te vormen die regels ](./example-scenarios.md) verbindt.

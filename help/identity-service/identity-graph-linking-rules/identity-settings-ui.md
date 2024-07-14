@@ -1,12 +1,10 @@
 ---
 title: Gebruikersinterface Identiteitsinstellingen
 description: Leer hoe u de gebruikersinterface voor identiteitsinstellingen gebruikt.
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 605aa5ed2db2bfd7f787f2dff9fa00cee2afbce6
+source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
@@ -19,44 +17,47 @@ ht-degree: 0%
 
 Identiteitsinstellingen zijn een functie in de gebruikersinterface van de Adobe Experience Platform Identity Service die u kunt gebruiken om unieke naamruimten aan te wijzen en naamruimteprioriteit te configureren.
 
-Lees deze handleiding voor meer informatie over het gebruik van het gereedschap Identiteitsinstellingen.
+Lees deze gids om te leren hoe te om uw identiteitsmontages in UI te vormen.
 
-## Voorwaarde
+## Vereisten
 
 Lees de volgende documenten voordat u begint te werken met identiteitsinstellingen:
 
+* [Configuratie-hulplijn voor identiteitsgrafiek met koppelingsregels](./configuration.md)
 * [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
 * [Prioriteit naamruimte](./namespace-priority.md)
 * [Grafieksimulatie](./graph-simulation.md)
 
 ## Uw identiteitsinstellingen configureren
 
-Als u identiteitsinstellingen wilt openen, navigeert u naar de werkruimte Identiteitsservice in de gebruikersinterface van Adobe Experience Platform en selecteert u **[!UICONTROL Settings]**.
+Als u identiteitsinstellingen wilt openen, navigeert u naar de werkruimte Identiteitsservice in de gebruikersinterface van Adobe Experience Platform en selecteert u **[!UICONTROL Settings]** .
 
-![De knop Identiteitsinstellingen is geselecteerd.](../images/rules/identity-ui.png)
+![ de knoop van identiteitsmontages selecteerde.](../images/rules/identities-ui.png)
 
-De pagina met identiteitsinstellingen wordt weergegeven en u wordt begroet met een bevestigingsbericht om u eraan te herinneren uw identiteitsinstellingen in een ontwikkelingssandbox eerst te testen en te valideren voordat u de configuraties in een productiesandbox voltooit.
-
-![De pagina met identiteitsinstellingen.](../images/rules/identity-settings.png)
-
-De pagina met identiteitsinstellingen bestaat uit twee gedeelten: [!UICONTROL Person namespaces] en [!UICONTROL Device or cookie namespaces]. Personnaamruimten zijn id&#39;s voor afzonderlijke personen. Dit kunnen apparaat-id&#39;s, e-mailadressen en telefoonnummers zijn. Apparaat- of cookie-naamruimten zijn id&#39;s voor apparaten en webbrowsers en kunnen geen hogere prioriteit krijgen dan naamruimten van personen. U kunt een apparaat- of cookie-naamruimte ook niet toewijzen als een unieke naamruimte.
-
-### Geef uw unieke naamruimte op
-
-Als u een unieke naamruimte wilt toewijzen, selecteert u de optie [!UICONTROL Unique per graph] selectievakje dat overeenkomt met die naamruimte. U kunt meer dan één unieke naamruimte selecteren voor de configuratie van uw identiteitsinstellingen.
-
-![Er zijn twee unieke naamruimten geselecteerd.](../images/rules/unique-namespaces.png)
-
-Wanneer uw unieke naamruimten zijn ingesteld, kunnen grafieken niet langer meerdere identiteiten hebben die een unieke naamruimte bevatten. Als u bijvoorbeeld Aangepaste id voor Analytics hebt aangewezen als een unieke naamruimte, kan een grafiek slechts één identiteit hebben met de naamruimte Aangepaste id voor Analytics. Lees voor meer informatie de [Overzicht van algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md#unique-namespace).
+De pagina met identiteitsinstellingen bestaat uit twee gedeelten: [!UICONTROL Person namespaces] en [!UICONTROL Device or cookie namespaces] . Personnaamruimten zijn id&#39;s voor afzonderlijke personen. Dit kunnen apparaat-id&#39;s, e-mailadressen en telefoonnummers zijn. Apparaat- of cookie-naamruimten zijn id&#39;s voor apparaten en webbrowsers en kunnen geen hogere prioriteit krijgen dan naamruimten van personen. U kunt een apparaat- of cookie-naamruimte ook niet toewijzen als een unieke naamruimte.
 
 ### Naamruimteprioriteit configureren
 
 Om namespace prioriteit te vormen, selecteer een namespace in het menu van identiteitsinstellingen en sleep dan en laat vallen die namespace aan de orde van uw houden. Plaats een naamruimte hoger in de lijst om deze een hogere prioriteit te geven en plaats een naamruimte lager in de lijst om deze een lagere prioriteit te geven. De naamruimte met de hoogste prioriteit moet ook als een unieke naamruimte worden opgegeven.
 
-Wanneer u klaar bent met uw configuraties, selecteert u **[!UICONTROL Next]**. Er wordt een bevestigingsbericht weergegeven. Gebruik deze gelegenheid om te controleren of uw configuraties correct zijn en selecteer vervolgens **[!UICONTROL Finish]**.
+![ de werkruimte van identiteitsmontages met een benadrukte persoon namespace.](../images/rules/namespace-priority.png)
 
-![De validatiepagina.](../images/rules/validate.png)
+### Geef uw unieke naamruimte op
 
-Er wordt een waarschuwing weergegeven dat uw nieuwe instellingen geen gevolgen hebben voor bestaande koppelingen in een identiteitsgrafiek en dat er gebeurtenisprofielfragmenten optreden die al zijn opgenomen. Voer uw naam van de sandbox in en selecteer **[!UICONTROL Confirm]**.
+Als u een unieke naamruimte wilt toewijzen, schakelt u het selectievakje [!UICONTROL Unique per graph] in dat overeenkomt met die naamruimte. U kunt meer dan één unieke naamruimte selecteren voor de configuratie van uw identiteitsinstellingen.
 
-![Het bevestigingsvenster.](../images/rules/confirm.png)
+![ twee die namespaces worden geselecteerd en als uniek worden bepaald.](../images/rules/unique-namespace.png)
+
+Wanneer uw unieke naamruimten zijn ingesteld, kunnen grafieken niet langer meerdere identiteiten hebben die een unieke naamruimte bevatten. Als u bijvoorbeeld CRM-id hebt aangewezen als een unieke naamruimte, kan een grafiek slechts één identiteit hebben met de naamruimte CRM-id. Voor meer informatie, lees het [ overzicht van het algoritme van de identiteitsoptimalisering ](./identity-optimization-algorithm.md#unique-namespace).
+
+Wanneer u klaar bent met uw configuraties, selecteert u **[!UICONTROL Next]** . Er wordt een bevestigingsbericht weergegeven. Gebruik deze gelegenheid om te controleren of uw configuraties correct zijn en selecteer vervolgens **[!UICONTROL Finish]** .
+
+![ de bevestigingspagina met benadrukte Einde.](../images/rules/finish.png)
+
+Er wordt een waarschuwing weergegeven dat uw nieuwe instellingen geen gevolgen hebben voor bestaande koppelingen in een identiteitsgrafiek en dat er gebeurtenisprofielfragmenten optreden die al zijn opgenomen. Bovendien, wordt u meegedeeld dat het tot zes uren zal duren voor uw nieuwe montages in het systeem worden weerspiegeld. Voer de naam van de sandbox in en selecteer vervolgens **[!UICONTROL Confirm]** om dit te bevestigen.
+
+![ het bevestigingsvenster dat een waarschuwing over een vertraging van zes uur toont alvorens de configuraties worden verwerkt.](../images/rules/confirm-settings.png)
+
+## Volgende stappen
+
+U hebt nu de naamruimteprioriteiten geconfigureerd en uw unieke naamruimten toegewezen met behulp van de gebruikersinterface voor identiteitsinstellingen. Voor meer informatie, lees de [ identiteitsgrafiek die regels verbindt overzicht ](./overview.md).
