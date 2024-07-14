@@ -1,7 +1,7 @@
 ---
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
-source-git-commit: 531bee643c14ad407a1207cca9093e210e5227a5
+source-git-commit: c724baba6972e1a033c18b63ab824149567d20fb
 workflow-type: tm+mt
 source-wordcount: '3478'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Binnen het Portaal van de Publiek, kunt u de volgende taken verwezenlijken:
    - [Gebruik Audience Composition om een publiek te maken](#audience-composition)
 - [Extern gegenereerde soorten publiek importeren](#import-audience)
 
-Als u Poort publiek wilt openen, selecteert u de optie **[!UICONTROL Browse]** in de sectie Segmentatie.
+Als u Poort publiek wilt openen, selecteert u het tabblad **[!UICONTROL Browse]** in de sectie Segmentatie.
 
 ## Poortlijst {#list}
 
@@ -43,82 +43,82 @@ Als u Poort publiek wilt openen, selecteert u de optie **[!UICONTROL Browse]** i
 
 Standaard wordt in het Poort Publiek een lijst weergegeven met alle soorten publiek in uw organisatie en sandbox, inclusief het aantal profielen, de oorsprong, de gemaakte datum, de laatst gewijzigde datum, de codes en de indeling.
 
-![Het bladerscherm wordt weergegeven. Er wordt een lijst weergegeven van alle publiek dat tot de organisatie behoort.](../images/ui/audience-portal/audience-browse.png)
+![ doorbladert het scherm wordt getoond. Een lijst van alle publiek dat tot de organisatie behoort wordt getoond.](../images/ui/audience-portal/audience-browse.png)
 
 ### Snelle acties {#quick-actions}
 
 Naast elk publiek bevindt zich een ellipspictogram. Als u deze optie selecteert, wordt een lijst weergegeven met beschikbare snelle acties voor de doelgroep. Deze lijst met acties verschilt, afhankelijk van de oorsprong van het publiek.
 
-![De lijst met snelle acties wordt weergegeven voor gebruikers met de oorsprong van [!UICONTROL Audience composition].](../images/ui/audience-portal/browse-audience-composition-details.png)
+![ de snelle actielijst wordt getoond voor publiek met de oorsprong van [!UICONTROL Audience composition].](../images/ui/audience-portal/browse-audience-composition-details.png)
 
 | Actie | Oorsprong | Beschrijving |
 | ------ | ------- | ----------- |
-| [!UICONTROL Edit] | Segmenteringsservice | Opent de Bouwer van het Segment om uw publiek uit te geven. Houd er rekening mee dat als uw publiek via de API is gemaakt **niet** kan het uitgeven gebruikend de Bouwer van het Segment. Voor meer informatie over het gebruik van de Segment Builder leest u de [Handleiding voor de gebruikersinterface van Segment Builder](./segment-builder.md). |
-| [!UICONTROL Open composition] | Samenstelling publiek | Opent de samenstelling van het Publiek om uw publiek te zien. Lees voor meer informatie over de samenstelling van het publiek de [gebruikerscompositie-gebruikersgids](./audience-composition.md). |
-| [!UICONTROL Activate to destination] | Segmenteringsservice | Hiermee activeert u het publiek naar een doel. Voor meer gedetailleerde informatie over het activeren van een publiek naar een bestemming, gelieve te lezen [activeringsoverzicht](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Share with partners] | Auditie, Aangepaste upload, Segmentatieservice | Deelt uw publiek met andere gebruikers van het Platform. Lees voor meer informatie over deze functie de [Overzicht van afstemming van segment](./segment-match/overview.md). |
-| [!UICONTROL Manage tags] | Auditie, Aangepaste upload, Segmentatieservice | Beheert de door de gebruiker gedefinieerde tags die bij het publiek horen. Lees voor meer informatie over deze functie de sectie over [filteren en labelen](#manage-audiences). |
-| [!UICONTROL Move to folder] | Auditie, Aangepaste upload, Segmentatieservice | Beheert tot welke map het publiek behoort. Lees voor meer informatie over deze functie de sectie over [filteren en labelen](#manage-audiences). |
-| [!UICONTROL Copy] | Segmenteringsservice | Hiermee dupliceert u het geselecteerde publiek. Meer informatie over deze functie vindt u in het gedeelte [Veelgestelde vragen over segmentatie](../faq.md#copy). |
-| [!UICONTROL Apply access labels] | Auditie, Aangepaste upload, Segmentatieservice | Beheert de toegangslabels die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [beheren, labels](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Publish] | Aangepaste upload, segmentatieservice | Hiermee publiceert u het geselecteerde publiek. Lees voor meer informatie over het statusbeheer van de levenscyclus de [Levenscyclusstatussectie van de veelgestelde vragen over segmentatie](../faq.md#lifecycle-states). |
-| [!UICONTROL Deactivate] | Aangepaste upload, segmentatieservice | Hiermee deactiveert u het geselecteerde publiek. Lees voor meer informatie over het statusbeheer van de levenscyclus de [Levenscyclusstatussectie van de veelgestelde vragen over segmentatie](../faq.md#lifecycle-states). |
-| [!UICONTROL Delete] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verwijdert u het geselecteerde publiek. Soorten publiek dat wordt gebruikt in downstreambestemmingen of dat afhankelijk is van ander publiek **kan** worden geschrapt. Lees voor meer informatie over het verwijderen van het publiek de [Veelgestelde vragen over segmentatie](../faq.md#lifecycle-states). |
-| [!UICONTROL Add to package] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verplaatst u het publiek tussen sandboxen. Lees voor meer informatie over deze functie de [gereedschapshandleiding voor sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Edit] | Segmenteringsservice | Opent de Bouwer van het Segment om uw publiek uit te geven. Gelieve te merken op dat als uw publiek door API werd gecreeerd, u **niet** het zal kunnen uitgeven gebruikend de Bouwer van het Segment. Voor meer informatie bij het gebruiken van de Bouwer van het Segment, te lezen gelieve de [ gids UI van de Bouwer van het Segment ](./segment-builder.md). |
+| [!UICONTROL Open composition] | Samenstelling publiek | Opent de samenstelling van het Publiek om uw publiek te zien. Voor meer informatie over de samenstelling van het Publiek, te lezen gelieve de [ gids UI van de publiekssamenstelling ](./audience-composition.md). |
+| [!UICONTROL Activate to destination] | Segmenteringsservice | Hiermee activeert u het publiek naar een doel. Voor meer gedetailleerde informatie bij het activeren van een publiek aan een bestemming, gelieve het [ activeringsoverzicht ](../../destinations/ui/activation-overview.md) te lezen. |
+| [!UICONTROL Share with partners] | Auditie, Aangepaste upload, Segmentatieservice | Deelt uw publiek met andere gebruikers van het Platform. Voor meer informatie over deze eigenschap, te lezen gelieve het [ overzicht van de Gelijke van het Segment ](./segment-match/overview.md). |
+| [!UICONTROL Manage tags] | Auditie, Aangepaste upload, Segmentatieservice | Beheert de door de gebruiker gedefinieerde tags die bij het publiek horen. Voor meer informatie over deze eigenschap, te lezen gelieve de sectie over [ het filtreren en het etiketteren ](#manage-audiences). |
+| [!UICONTROL Move to folder] | Auditie, Aangepaste upload, Segmentatieservice | Beheert tot welke map het publiek behoort. Voor meer informatie over deze eigenschap, te lezen gelieve de sectie over [ het filtreren en het etiketteren ](#manage-audiences). |
+| [!UICONTROL Copy] | Segmenteringsservice | Hiermee dupliceert u het geselecteerde publiek. Meer informatie over deze functie kan in [ Veelgestelde vragen van de Segmentatie worden gevonden ](../faq.md#copy). |
+| [!UICONTROL Apply access labels] | Auditie, Aangepaste upload, Segmentatieservice | Beheert de toegangslabels die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [ het leiden etiketten ](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Publish] | Aangepaste upload, segmentatieservice | Hiermee publiceert u het geselecteerde publiek. Voor meer informatie over het beheer van de levenscyclusstatus, te lezen gelieve de [ sectie van de levenscyclusstaat van FAQ van de Segmentatie ](../faq.md#lifecycle-states). |
+| [!UICONTROL Deactivate] | Aangepaste upload, segmentatieservice | Hiermee deactiveert u het geselecteerde publiek. Voor meer informatie over het beheer van de levenscyclusstatus, te lezen gelieve de [ sectie van de levenscyclusstaat van FAQ van de Segmentatie ](../faq.md#lifecycle-states). |
+| [!UICONTROL Delete] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verwijdert u het geselecteerde publiek. Het publiek dat in stroomafwaartse bestemmingen wordt gebruikt of gebiedsdelen in andere soorten publiek **zijn kan** niet worden geschrapt. Voor meer informatie over publieksschrapping, te lezen gelieve [ segmentatie FAQ ](../faq.md#lifecycle-states). |
+| [!UICONTROL Add to package] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verplaatst u het publiek tussen sandboxen. Voor meer informatie over deze eigenschap, te lezen gelieve de [ zandbak het tooling gids ](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!IMPORTANT]
 >
->Voordat u het publiek verwijdert, moet u ervoor zorgen dat het publiek **niet** gebruikt als een component in een op account gebaseerd publiek of gebruikt in Adobe Journey Optimizer.
+>Alvorens uw publiek te schrappen, gelieve ervoor te zorgen dat het publiek **niet** als component in een op rekening-gebaseerd publiek wordt gebruikt of in Adobe Journey Optimizer wordt gebruikt.
 
 Boven aan de pagina staan opties voor het toevoegen van alle soorten publiek aan een programma, het importeren van een publiek, het maken van een nieuw publiek en het weergeven van een samenvatting van de publieksevaluatie.
 
-Toggling **[!UICONTROL Schedule all audiences]** zal geplande segmentatie toelaten. Meer informatie over geplande segmentatie vindt u in de [geplande segmentatiesectie van deze gebruikershandleiding](#scheduled-segmentation).
+Door **[!UICONTROL Schedule all audiences]** in-/uitschakelen wordt geplande segmentatie ingeschakeld. Meer informatie over geplande segmentatie kan in de [ geplande segmentatiesectie van deze gebruikersgids ](#scheduled-segmentation) worden gevonden.
 
-Selecteren **[!UICONTROL Import audience]** Hiermee kunt u een extern gegenereerd publiek importeren. Meer informatie over het importeren van soorten publiek vindt u in de sectie over [een publiek importeren in de gebruikershandleiding](#import-audience).
+Als u **[!UICONTROL Import audience]** selecteert, kunt u een extern gegenereerd publiek importeren. Om meer over het invoeren van publiek te leren, te lezen gelieve de sectie over [ het invoeren van een publiek in de gebruikersgids ](#import-audience).
 
-Selecteren **[!UICONTROL Create audience]** Hiermee kunt u een publiek maken. Meer informatie over het maken van soorten publiek vindt u in de sectie [een publiek maken in de gebruikershandleiding](#create-audience).
+Als u **[!UICONTROL Create audience]** selecteert, kunt u een publiek maken. Om meer over het creëren van publiek te leren, te lezen gelieve de sectie op [ creërend een publiek in de gebruikersgids ](#create-audience).
 
-![De bovenste navigatiebalk op de pagina waarin het publiek bladert, wordt gemarkeerd. Deze balk bevat een knop waarmee u een publiek kunt maken en een knop waarmee u een publiek kunt importeren.](../images/ui/audience-portal/browse-audiences-top.png)
+![ de hoogste navigatiebar op het publiek doorbladert pagina wordt benadrukt. Deze bar bevat een knoop om een publiek en een knoop tot stand te brengen om een publiek in te voeren.](../images/ui/audience-portal/browse-audiences-top.png)
 
-U kunt **[!UICONTROL Evaluation summary]** om een cirkeldiagram te tonen dat een samenvatting van de publieksevaluaties toont.
+U kunt **[!UICONTROL Evaluation summary]** selecteren om een cirkeldiagram te tonen dat een samenvatting van de publieksevaluaties toont.
 
-![De overzichtsknoop van de Evaluatie wordt benadrukt.](../images/ui/audience-portal/browse-audience-evaluation-summary.png)
+![ de summiere knoop van de Evaluatie wordt benadrukt.](../images/ui/audience-portal/browse-audience-evaluation-summary.png)
 
 Het cirkeldiagram wordt weergegeven met een uitsplitsing van het publiek naar publieksevaluatie. De grafiek toont het totale aantal publiek in het midden, en de dagelijkse tijd van de partijevaluatie in UTC bij de bodem. Als u de muisaanwijzer boven de verschillende delen van het publiek houdt, wordt het aantal soorten publiek weergegeven dat tot elk type updatefrequentie behoort.
 
-![Het cirkeldiagram van de publieksevaluatie wordt benadrukt, met de de evaluatietijd van de partijsegmentatie ook getoond.](../images/ui/audience-portal/evaluation-summary.png)
+![ het cirkeldiagram van de publieksevaluatie wordt benadrukt, met de tijd van de partijsegmentatieevaluatie ook getoond.](../images/ui/audience-portal/evaluation-summary.png)
 
 ### Aanpassen {#customize}
 
-U kunt extra gebieden aan de Portaal van het Publiek toevoegen door te selecteren ![het pictogram van het filterkenmerk](../images/ui/audience-portal/filter-attribute.png). Deze extra velden bevatten de levenscyclusstatus, updatefrequentie, laatst bijgewerkt door, beschrijving, gemaakt door en toegangslabels.
+U kunt extra gebieden aan het Portaal van het Publiek toevoegen door ![ het pictogram van de filterattributen ](../images/ui/audience-portal/filter-attribute.png) te selecteren. Deze extra velden bevatten de levenscyclusstatus, updatefrequentie, laatst bijgewerkt door, beschrijving, gemaakt door en toegangslabels.
 
 | Veld | Beschrijving |
 | ----- | ----------- |
 | [!UICONTROL Name] | De naam van het publiek. |
 | [!UICONTROL Profile count] | Het totale aantal profielen dat voor het publiek in aanmerking komt. |
 | [!UICONTROL Origin] | De oorsprong van het publiek. Dit geeft aan waar het publiek vandaan komt. Mogelijke waarden zijn Segmentatieservice, Aangepast uploaden, Audience-compositie en Audience Manager. |
-| [!UICONTROL Lifecycle status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft`, `Inactive`, en `Published`. Lees voor meer informatie over levenscyclusstatussen, zoals wat de verschillende statussen betekenen en hoe u het publiek naar verschillende levenscyclustoestanden kunt verplaatsen [levenscyclusstatussectie van de veelgestelde vragen over segmentatie](../faq.md#lifecycle-status). |
-| [!UICONTROL Update frequency] | Een waarde die aangeeft hoe vaak de gegevens van het publiek worden bijgewerkt. Mogelijke waarden voor dit veld zijn [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], en [!UICONTROL Not Scheduled]. |
+| [!UICONTROL Lifecycle status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft` , `Inactive` en `Published` . Meer informatie over levenscyclusstatussen, met inbegrip van wat de verschillende staten betekenen en hoe te om publiek naar verschillende levenscyclusstaten te bewegen, lees de [ sectie van de levenscyclusstatus van de Segmentatie FAQ ](../faq.md#lifecycle-status). |
+| [!UICONTROL Update frequency] | Een waarde die aangeeft hoe vaak de gegevens van het publiek worden bijgewerkt. Mogelijke waarden voor dit veld zijn [!UICONTROL Batch] , [!UICONTROL Streaming] , [!UICONTROL Edge] en [!UICONTROL Not Scheduled] . |
 | [!UICONTROL Last updated by] | De naam van de persoon die het publiek het laatst heeft bijgewerkt. |
 | [!UICONTROL Created] | De datum en tijd, in UTC, dat het publiek werd gecreeerd. |
 | [!UICONTROL Last updated] | De datum en tijd, in UTC, waarop het publiek voor het laatst is bijgewerkt. |
-| [!UICONTROL Tags] | De door de gebruiker gedefinieerde labels die bij het publiek horen. Meer informatie over deze tags vindt u in het gedeelte [sectie over tags](#tags). |
+| [!UICONTROL Tags] | De door de gebruiker gedefinieerde labels die bij het publiek horen. Meer informatie over deze markeringen kan in de [ sectie op markeringen ](#tags) worden gevonden. |
 | [!UICONTROL Description] | De beschrijving van het publiek. |
 | [!UICONTROL Created by] | De naam van de persoon die het publiek heeft gemaakt. |
-| [!UICONTROL Access labels] | De toegangslabels voor het publiek. De etiketten van de toegang staan u toe om datasets en gebieden volgens gebruiksbeleid te categoriseren dat op die gegevens van toepassing is. Deze labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [beheren, labels](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Access labels] | De toegangslabels voor het publiek. De etiketten van de toegang staan u toe om datasets en gebieden volgens gebruiksbeleid te categoriseren dat op die gegevens van toepassing is. Deze labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [ het leiden etiketten ](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Breakdown] | De indeling van de profielstatus voor het publiek. Hieronder vindt u een gedetailleerdere beschrijving van deze uitsplitsing naar profielstatus. |
 
-Als de indeling is geselecteerd, wordt in het scherm een staafgrafiek weergegeven met het percentage profielen dat tot elk van de volgende berekende profielstatussen behoort: [!UICONTROL Realized], [!UICONTROL Existing], en [!UICONTROL Exiting]. Daarnaast wordt de uitsplitsing in de [!UICONTROL Browse] tab is de nauwkeurigste uitsplitsing van de status van de segmentdefinitie. Als dit getal afwijkt van wat staat vermeld op de knop [!UICONTROL Overview] gebruikt u de nummers op het tabblad [!UICONTROL Browse] als de juiste bron van informatie, aangezien [!UICONTROL Overview] tabnummers worden slechts eenmaal per dag bijgewerkt.
+Als er een splitsing is geselecteerd, wordt in de weergave een staafgrafiek weergegeven waarin het percentage van de profielen wordt weergegeven dat tot elk van de volgende berekende profielstatussen behoort: [!UICONTROL Realized], [!UICONTROL Existing] en [!UICONTROL Exiting] . Bovendien is de uitsplitsing die wordt weergegeven op het tabblad [!UICONTROL Browse] de nauwkeurigste uitsplitsing van de status van de segmentdefinitie. Als dit getal verschilt van wat wordt vermeld op het tabblad [!UICONTROL Overview] , moet u de nummers op het tabblad [!UICONTROL Browse] gebruiken als de juiste bron van informatie, aangezien de tabnummers van [!UICONTROL Overview] slechts eenmaal per dag worden bijgewerkt.
 
 | Status | Beschrijving |
 | ------ | ----------- |
-| [!UICONTROL Realized] | Het aantal profielen dat **gekwalificeerd** voor het segment in de laatste 24 uur sinds de laatste batchsegmentbaan liep. |
-| [!UICONTROL Existing] | Het aantal profielen dat **bleven** in het segment in de laatste 24 uur sinds de laatste batchsegmentbaan liep. |
-| [!UICONTROL Exiting] | Het aantal profielen dat **verlaten** het segment in de laatste 24 uur sinds de laatste batchsegmentbaan liep. |
+| [!UICONTROL Realized] | De telling van profielen die **** voor het segment in de laatste 24 uren kwalificeerde sinds de laatste baan van het partijsegment liep. |
+| [!UICONTROL Existing] | De telling van profielen die **** in het segment in de laatste 24 uren sinds de laatste baan van het partijsegment bleven lopen. |
+| [!UICONTROL Exiting] | De telling van profielen die **** het segment in de laatste 24 uren sindsdien de laatste baan van het partijsegment verliet. |
 
-Nadat u de velden hebt geselecteerd die u wilt weergeven, kunt u ook de breedte van de weergegeven kolommen vergroten of verkleinen. U kunt dit doen door het gebied tussen de kolommen te slepen of door het ![pijlpictogram](../images/ui/audience-portal/arrow-icon.png) van de kolom waarvan u het formaat wilt wijzigen, gevolgd door **[!UICONTROL Resize column]**.
+Nadat u de velden hebt geselecteerd die u wilt weergeven, kunt u ook de breedte van de weergegeven kolommen vergroten of verkleinen. U kunt of dit doen door het gebied tussen de kolommen te slepen of door het ![ pijlpictogram ](../images/ui/audience-portal/arrow-icon.png) van de kolom te selecteren u wilt re-size, die door **[!UICONTROL Resize column]** wordt gevolgd.
 
-![De knop Grootte kolom wijzigen is gemarkeerd.](../images/ui/audience-portal/browse-audience-resize-column.png)
+![ de Resize kolomknoop wordt benadrukt.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
 ### Filteren, mappen en coderen {#manage-audiences}
 
@@ -126,36 +126,36 @@ Om uw werkefficiëntie te verbeteren, kunt u zoeken naar bestaand publiek, door 
 
 #### Zoeken {#search}
 
-U kunt uw bestaande publiek in maximaal 9 verschillende talen zoeken met [!DNL Unified Search].
+U kunt uw bestaande publiek in maximaal 9 verschillende talen zoeken met [!DNL Unified Search] .
 
-Te gebruiken [!DNL Unified Search]voegt u de term die u wilt zoeken toe aan de gemarkeerde zoekbalk.
+Als u [!DNL Unified Search] wilt gebruiken, voegt u de term die u wilt zoeken toe aan de gemarkeerde zoekbalk.
 
-![De zoekbalk wordt gemarkeerd.](../images/ui/audience-portal/browse-audience-search.png)
+![ de onderzoeksbar wordt benadrukt.](../images/ui/audience-portal/browse-audience-search.png)
 
-Voor meer informatie over [!DNL Unified Search], inclusief ondersteunde functies, kunt u de [Unified Search-documentatie](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
+Voor meer informatie over [!DNL Unified Search], met inbegrip van gesteunde eigenschappen, te lezen gelieve de [ Verenigde documentatie van het Onderzoek ](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
 #### Tags {#tags}
 
 U kunt door de gebruiker gedefinieerde tags toevoegen om uw publiek beter te beschrijven, te zoeken en te beheren.
 
-Als u een tag wilt toevoegen, selecteert u **[!UICONTROL Manage tags]** voor het publiek dat u wilt labelen.
+Als u een tag wilt toevoegen, selecteert u **[!UICONTROL Manage tags]** voor het publiek waarop u een tag wilt toepassen.
 
-![De [!UICONTROL Manage tags] wordt geselecteerd voor een bepaald publiek.](../images/ui/audience-portal/browse-manage-tags.png)
+![ de [!UICONTROL Manage tags] knoop wordt geselecteerd voor een gespecificeerd publiek.](../images/ui/audience-portal/browse-manage-tags.png)
 
-De **[!UICONTROL Manage tags]** wordt weergegeven. In deze pop-up kunt u een gecategoriseerde tag of een niet-gecategoriseerde tag selecteren.
+De pop-up **[!UICONTROL Manage tags]** wordt weergegeven. In deze pop-up kunt u een gecategoriseerde tag of een niet-gecategoriseerde tag selecteren.
 
 | Type code | Beschrijving |
 | -------- | ----------- |
 | Gecategoriseerd | Een tag die wordt gemaakt en beheerd door de beheerders van uw organisatie. |
-| Niet gecategoriseerd | Een tag die binnen het [!UICONTROL Manage tags] popover. Iedereen kan deze typen tags maken of beheren. |
+| Niet gecategoriseerd | Een tag die wordt gemaakt in de pop-up [!UICONTROL Manage tags] . Iedereen kan deze typen tags maken of beheren. |
 
-![De [!UICONTROL Manage tags] popover wordt weergegeven. De opties voor het kiezen van een gecategoriseerde of niet-gecategoriseerde indeling worden gemarkeerd.](../images/ui/audience-portal/create-tag.png)
+![ popover [!UICONTROL Manage tags] wordt getoond. De opties om gecategoriseerde of uncategorized te kiezen worden benadrukt.](../images/ui/audience-portal/create-tag.png)
 
-Nadat u alle tags hebt toegevoegd die u aan het publiek wilt koppelen, selecteert u **[!UICONTROL Save]**.
+Selecteer **[!UICONTROL Save]** nadat u alle tags hebt toegevoegd die u aan het publiek wilt koppelen.
 
-![Op de [!UICONTROL Manage tags] popover, worden de toegevoegde markeringen benadrukt.](../images/ui/audience-portal/created-tags.png)
+![ op [!UICONTROL Manage tags] popover, worden de toegevoegde markeringen benadrukt.](../images/ui/audience-portal/created-tags.png)
 
-Lees voor meer informatie over het maken en beheren van tags de [Handleiding voor tags beheren](../../administrative-tags/ui/managing-tags.md).
+Voor meer informatie bij het creëren van en het leiden van markeringen, te lezen gelieve de [ Leidende gids van Markeringen ](../../administrative-tags/ui/managing-tags.md).
 
 #### Mappen {#folders}
 
@@ -163,115 +163,115 @@ U kunt een publiek in mappen plaatsen voor een beter publieksbeheer.
 
 Als u een publiek naar een map wilt verplaatsen, selecteert u **[!UICONTROL Move to folder]** voor het publiek dat u wilt verplaatsen.
 
-![De [!UICONTROL Move to folder] wordt geselecteerd voor een specifiek publiek.](../images/ui/audience-portal/browse-move-to-folder.png)
+![ de [!UICONTROL Move to folder] knoop wordt geselecteerd voor een specifiek publiek.](../images/ui/audience-portal/browse-move-to-folder.png)
 
-De **Publiek naar map verplaatsen** wordt weergegeven. Selecteer de map waarnaar u het publiek wilt verplaatsen en selecteer **[!UICONTROL Save]**.
+Het **publiek van de Beweging aan omslag** popover verschijnt. Selecteer de map waarnaar u het publiek wilt verplaatsen en selecteer vervolgens **[!UICONTROL Save]** .
 
-![Het publiek verplaatsen naar de mappopover wordt weergegeven. De map waarnaar het publiek wordt verplaatst, wordt gemarkeerd.](../images/ui/audience-portal/move-to-folder.png)
+![ het publiek van de Beweging aan omslagpopover wordt getoond. De map waarnaar het publiek wordt verplaatst, wordt gemarkeerd.](../images/ui/audience-portal/move-to-folder.png)
 
 Als het publiek zich in een map bevindt, kunt u ervoor kiezen alleen het publiek weer te geven dat tot een specifieke map behoort.
 
-![Soorten publiek dat tot een specifieke map behoort, worden weergegeven.](../images/ui/audience-portal/browse-folders.png)
+![ Soorten publiek die tot een specifieke omslag behoren worden getoond.](../images/ui/audience-portal/browse-folders.png)
 
 #### Filter {#filter}
 
 U kunt uw publiek ook filteren op basis van verschillende instellingen.
 
-Als u het beschikbare publiek wilt filteren, selecteert u de ![filterpictogram](../images/ui/audience-portal/filter-icon.png).
+Om het beschikbare publiek te filtreren, selecteer het ![ filterpictogram ](../images/ui/audience-portal/filter-icon.png).
 
-![De pagina Bladeren publiek wordt weergegeven met het filterpictogram gemarkeerd.](../images/ui/audience-portal/browse-select-filter.png)
+![ doorbladert de pagina van het publiek wordt getoond, met het benadrukte filterpictogram.](../images/ui/audience-portal/browse-select-filter.png)
 
 De lijst met beschikbare filters wordt weergegeven.
 
 | Filter | Beschrijving |
 | ------ | ----------- |
 | [!UICONTROL Origin] | Hiermee kunt u filteren op basis van de oorsprong van het publiek. Beschikbare opties zijn onder andere Segmentatieservice, Aangepast uploaden, Audience-compositie en Audience Manager. |
-| [!UICONTROL Has any tag] | Hiermee kunt u filteren op tags. U kunt kiezen tussen **[!UICONTROL Has any tag]** en **[!UICONTROL Has all tags]**. Wanneer **[!UICONTROL Has any tag]** geselecteerd is, omvat het gefilterde publiek **alle** van de tags die u hebt toegevoegd. Wanneer **[!UICONTROL Has all tags]** geselecteerd is, moet het gefilterde publiek **alles** van de tags die u hebt toegevoegd. |
-| [!UICONTROL Lifecycle status] | Hiermee kunt u filteren op basis van de levenscyclusstatus van de doelgroep. Beschikbare opties zijn [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive], en [!UICONTROL Published]. |
-| [!UICONTROL Update frequency] | Hiermee kunt u filteren op basis van de updatefrequentie van het publiek (evaluatiemethode). Beschikbare opties zijn [!UICONTROL Scheduled], [!UICONTROL Continuous], en [!UICONTROL On Demand]. |
+| [!UICONTROL Has any tag] | Hiermee kunt u filteren op tags. U kunt kiezen tussen **[!UICONTROL Has any tag]** en **[!UICONTROL Has all tags]** . Wanneer **[!UICONTROL Has any tag]** wordt geselecteerd, zal het gefiltreerde publiek **om het even welk** van de markeringen omvatten u hebt toegevoegd. Wanneer **[!UICONTROL Has all tags]** wordt geselecteerd, moet het gefiltreerde publiek **alle** van de markeringen omvatten u hebt toegevoegd. |
+| [!UICONTROL Lifecycle status] | Hiermee kunt u filteren op basis van de levenscyclusstatus van de doelgroep. Beschikbare opties zijn [!UICONTROL Deleted] , [!UICONTROL Draft] , [!UICONTROL Inactive] en [!UICONTROL Published] . |
+| [!UICONTROL Update frequency] | Hiermee kunt u filteren op basis van de updatefrequentie van het publiek (evaluatiemethode). Beschikbare opties zijn [!UICONTROL Batch] , [!UICONTROL Streaming] en [!UICONTROL Edge] |
 | [!UICONTROL Created by] | Hiermee kunt u filteren op basis van de persoon die het publiek heeft gemaakt. |
 | [!UICONTROL Creation date] | Hiermee kunt u filteren op basis van de aanmaakdatum van het publiek. U kunt een datumbereik kiezen dat u wilt filteren wanneer het publiek is gemaakt. |
 | [!UICONTROL Modified date] | Hiermee kunt u filteren op basis van de laatste gewijzigde datum van het publiek. U kunt een datumbereik kiezen waarop u wilt filteren wanneer het publiek voor het laatst is gewijzigd. |
 
-![De beschikbare filters worden weergegeven en gemarkeerd op de pagina Browserpubliek.](../images/ui/audience-portal/filter-audiences.png)
+![ de beschikbare filters worden getoond en op de browse publiekspagina benadrukt.](../images/ui/audience-portal/filter-audiences.png)
 
 #### Bulkacties {#bulk-actions}
 
-Bovendien kunt u maximaal 25 verschillende soorten publiek selecteren en verschillende handelingen op deze doelgroepen uitvoeren. Deze acties omvatten [verplaatsen naar een map](#folders), [een tag bewerken of toepassen](#tags), [toegangslabels toepassen](../../access-control/abac/ui/labels.md), en [verwijderen](#browse).
+Bovendien kunt u maximaal 25 verschillende soorten publiek selecteren en verschillende handelingen op deze doelgroepen uitvoeren. Deze acties omvatten [ het bewegen aan een omslag ](#folders), [ het uitgeven of het toepassen van een markering ](#tags), [ het toepassen van toegangslabels ](../../access-control/abac/ui/labels.md), en [ het schrappen ](#browse).
 
-![De beschikbare opties voor bulkacties worden gemarkeerd.](../images/ui/audience-portal/bulk-actions.png)
+![ de beschikbare opties voor bulkacties worden benadrukt.](../images/ui/audience-portal/bulk-actions.png)
 
 Wanneer u bulkacties toepast op deze doelgroepen, gelden de volgende voorwaarden:
 
-- U **kan** selecteer soorten publiek op verschillende pagina&#39;s.
-- U **kan** een publiek verwijderen dat in een doelactivering wordt gebruikt.
-- Als u een filter selecteert, wordt het geselecteerde publiek **zal** opnieuw instellen.
+- U **kunt** publiek van verschillende pagina&#39;s selecteren.
+- U **kunt niet** een publiek schrappen dat in een bestemmingsactivering wordt gebruikt.
+- Als u een filter selecteert, zal het geselecteerde publiek **** terugstellen.
 
 ## Details publiek {#audience-details}
 
-Als u meer details over een specifiek publiek wilt zien, selecteert u de naam van een publiek in het dialoogvenster **[!UICONTROL Browse]** tab.
+Als u meer details over een specifiek publiek wilt zien, selecteert u de naam van een publiek in het tabblad **[!UICONTROL Browse]** .
 
 De pagina met publieksdetails wordt weergegeven. Bovenaan, is er een samenvatting van het publiek, informatie over de gekwalificeerde publieksgrootte, evenals bestemmingen het segment wordt geactiveerd voor.
 
-![De pagina met publieksdetails wordt weergegeven. De publiekssamenvatting, het publiekstotaal, en de geactiveerde bestemmingskaarten worden benadrukt.](../images/ui/audience-portal/audience-details-summary.png)
+![ de pagina van publieksdetails wordt getoond. De publiekssamenvatting, het publiekstotaal, en de geactiveerde bestemmingskaarten worden benadrukt.](../images/ui/audience-portal/audience-details-summary.png)
 
 ### Overzicht van publiek {#audience-summary}
 
-De **[!UICONTROL Audience summary]** bevat informatie zoals de id, naam, beschrijving, oorsprong en details van de kenmerken.
+De sectie **[!UICONTROL Audience summary]** bevat informatie zoals de id, naam, beschrijving, oorsprong en details van de kenmerken.
 
 Daarnaast kunt u het publiek activeren, toegangslabels toepassen of het publiek bewerken/bijwerken.
 
-Selecteren **[!UICONTROL Activate to destination]** Hiermee activeert u het publiek naar een bestemming. Voor meer gedetailleerde informatie over het activeren van een publiek naar een bestemming, gelieve te lezen [activeringsoverzicht](../../destinations/ui/activation-overview.md).
+Als u **[!UICONTROL Activate to destination]** selecteert, kunt u het publiek activeren naar een doel. Voor meer gedetailleerde informatie bij het activeren van een publiek aan een bestemming, gelieve het [ activeringsoverzicht ](../../destinations/ui/activation-overview.md) te lezen.
 
-![De knop Activeren naar doel is gemarkeerd.](../images/ui/audience-portal/audience-details-activate.png)
+![ activeer aan bestemmingsknoop wordt benadrukt.](../images/ui/audience-portal/audience-details-activate.png)
 
-Selecteren **[!UICONTROL Apply access labels]** Hiermee kunt u de toegangslabels beheren die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [beheren, labels](../../access-control/abac/ui/labels.md).
+Als u **[!UICONTROL Apply access labels]** selecteert, kunt u de toegangslabels beheren die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [ het leiden etiketten ](../../access-control/abac/ui/labels.md).
 
-![De knop Toegangslabels toepassen is gemarkeerd.](../images/ui/audience-portal/audience-details-access-labels.png)
+![ Toepassen wordt de toegangsetiketten knoop benadrukt.](../images/ui/audience-portal/audience-details-access-labels.png)
 
 >[!BEGINTABS]
 
->[!TAB Samenstelling publiek]
+>[!TAB  de samenstelling van het publiek ]
 
-![De pagina met publieksdetails wordt weergegeven met de [!UICONTROL Open composition] gemarkeerd.](../images/ui/audience-portal/audience-details-open-composition.png)
+![ de pagina van publieksdetails wordt getoond, met de [!UICONTROL Open composition] benadrukte knoop.](../images/ui/audience-portal/audience-details-open-composition.png)
 
-Selecteren **[!UICONTROL Open composition]** Hiermee kunt u uw publiek weergeven in Audience Composition. Lees voor meer informatie over Audience Composition de [Handleiding voor compositie van publiek](./audience-composition.md).
+Als u **[!UICONTROL Open composition]** selecteert, kunt u uw publiek weergeven in Audience Composition. Voor meer informatie over de Samenstelling van het Publiek, te lezen gelieve de [ gids UI van de Samenstelling van het Publiek ](./audience-composition.md).
 
->[!TAB Aangepaste upload]
+>[!TAB  Douane uploadt ]
 
-![De pagina met publieksdetails wordt weergegeven met de [!UICONTROL Update audience] gemarkeerd.](../images/ui/audience-portal/audience-details-update-audience.png)
+![ de pagina van publieksdetails wordt getoond, met de [!UICONTROL Update audience] benadrukte knoop.](../images/ui/audience-portal/audience-details-update-audience.png)
 
-Selecteren **[!UICONTROL Update audience]** Hiermee kunt u een extern gegenereerd publiek opnieuw uploaden. Lees de sectie over het importeren van een extern gegenereerd publiek voor meer informatie over het importeren van [een publiek importeren](#import-audience).
+Als u **[!UICONTROL Update audience]** selecteert, kunt u een extern gegenereerd publiek opnieuw uploaden. Voor meer informatie bij het invoeren van een extern geproduceerd publiek, te lezen gelieve de sectie over [ het invoeren van een publiek ](#import-audience).
 
->[!TAB Segmenteringsservice]
+>[!TAB  de Dienst van de Segmentatie ]
 
-![De pagina met publieksdetails wordt weergegeven met de [!UICONTROL Edit audience] gemarkeerd.](../images/ui/audience-portal/audience-details-edit-audience.png)
+![ de pagina van publieksdetails wordt getoond, met de [!UICONTROL Edit audience] benadrukte knoop.](../images/ui/audience-portal/audience-details-edit-audience.png)
 
-Selecteren **[!UICONTROL Edit audience]** Hiermee kunt u uw publiek bewerken in de Segment Builder. Voor meer informatie over het gebruik van de [!DNL Segment Builder] werkruimte, lees de [[!DNL Segment Builder] gebruikershandleiding](./segment-builder.md).
+Als u **[!UICONTROL Edit audience]** selecteert, kunt u uw publiek bewerken in de Segment Builder. Voor meer gedetailleerde informatie over het gebruiken van de [!DNL Segment Builder] werkruimte, gelieve de [[!DNL Segment Builder]  gebruikersgids ](./segment-builder.md) te lezen.
 
 >[!ENDTABS]
 
-Selecteren **[!UICONTROL Edit properties]** Hiermee kunt u de basisgegevens van het publiek bewerken, zoals de naam, beschrijving en tags.
+Als u **[!UICONTROL Edit properties]** selecteert, kunt u de basisgegevens van het publiek bewerken, zoals de naam, beschrijving en tags.
 
 ![](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### Totaal publiek {#audience-total}
 
-De **[!UICONTROL Audience total]** wordt het totale aantal profielen weergegeven dat voor het publiek in aanmerking komt.
+In de sectie **[!UICONTROL Audience total]** wordt het totale aantal profielen weergegeven dat in aanmerking komt voor het publiek.
 
-Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de samplegegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt; voor 1 tot 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5% van de totale entiteiten gebruikt. Meer informatie over het genereren van schattingen vindt u in de [schatting van generatiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van de zelfstudie over het maken van een publiek.
+Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de samplegegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt; voor 1 tot 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5% van de totale entiteiten gebruikt. Meer informatie over het produceren van ramingen kan in de [ sectie van de schatingengeneratie ](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van het leerprogramma van de publieksverwezenlijking worden gevonden.
 
 ### Geactiveerde doelen {#activated-destinations}
 
-De **[!UICONTROL Activated destinations]** toont de bestemmingen waarvoor dit publiek wordt geactiveerd.
+In de sectie **[!UICONTROL Activated destinations]** ziet u de doelen waarvoor dit publiek is geactiveerd.
 
 >[!NOTE]
 >
-> Doelen zijn een functie die beschikbaar is bij [!DNL Adobe Real-Time Customer Data Platform]en kunt u gegevens exporteren naar externe platforms. Lees voor meer informatie over bestemmingen de [Overzicht van doelen](../../destinations/home.md). Leren hoe te om een segment aan een bestemming te activeren, zie [activeringsoverzicht](../../destinations/ui/activation-overview.md).
+> Doelen zijn een functie die beschikbaar is in [!DNL Adobe Real-Time Customer Data Platform] en waarmee u gegevens kunt exporteren naar externe platforms. Voor meer informatie over bestemmingen, te lezen gelieve het [ overzicht van bestemmingen ](../../destinations/home.md). Leren hoe te om een segment aan een bestemming te activeren, zie [ activeringsoverzicht ](../../destinations/ui/activation-overview.md).
 
 ### Profielvoorbeelden {#profile-samples}
 
-Hieronder ziet u een voorbeeld van profielen die in aanmerking komen voor het segment, met gedetailleerde informatie zoals de [!DNL Profile] ID, voornaam, achternaam en persoonlijke e-mail.
+Hieronder ziet u een voorbeeld van profielen die in aanmerking komen voor het segment. Hier ziet u gedetailleerde informatie over de [!DNL Profile] -id, voornaam, achternaam en persoonlijke e-mail.
 
 De manier waarop gegevensbemonstering wordt geactiveerd, is afhankelijk van de innamemethode.
 
@@ -287,9 +287,9 @@ De voorbeeldgrootte van de scan is afhankelijk van het totale aantal entiteiten 
 | 1 tot 20 miljoen | 1 miljoen |
 | Meer dan 20 miljoen | 5% van het totaal |
 
-Meer gedetailleerde informatie over elk [!DNL Profile] kunt u zien door de [!DNL Profile] ID. Als u meer wilt weten over de details van een profiel, leest u de [[!DNL Real-Time Customer Profile] gebruikershandleiding](../../profile/ui/user-guide.md#profile-detail).
+Meer gedetailleerde informatie over elke [!DNL Profile] kunt u zien door de [!DNL Profile] -id te selecteren. Om meer over de details van een profiel te leren, te lezen gelieve de [[!DNL Real-Time Customer Profile]  gebruikersgids ](../../profile/ui/user-guide.md#profile-detail).
 
-![De voorbeeldprofielen voor het publiek worden gemarkeerd. Voorbeelden van profielgegevens zijn de profiel-id, de voornaam, de achternaam en het e-mailadres van de persoon.](../images/ui/audience-portal/audience-details-profiles.png)
+![ de steekproefprofielen voor het publiek worden benadrukt. Voorbeeld van profielgegevens zijn onder andere de profiel-id, de voornaam, de achternaam en het e-mailadres van de persoon.](../images/ui/audience-portal/audience-details-profiles.png)
 
 ## Geplande segmentatie {#scheduled-segmentation}
 
@@ -298,71 +298,71 @@ Meer gedetailleerde informatie over elk [!DNL Profile] kunt u zien door de [!DNL
 >title="Alle soorten publiek aan planning toevoegen"
 >abstract="Schakel deze optie in om alle beoordeelde soorten publiek op te nemen met behulp van batchsegmentatie in de geplande dagelijkse update. Uitschakelen om alle soorten publiek uit de geplande update te verwijderen."
 
-Zodra het publiek is gecreeerd, kunt u hen dan evalueren door op bestelling of geplande (ononderbroken) evaluatie. Evaluatie betekent verplaatsen [!DNL Real-Time Customer Profile] gegevens door segmentbanen om overeenkomstige publiek te produceren. Nadat het publiek is gemaakt, wordt het opgeslagen en opgeslagen zodat het de doelgroep kan exporteren [!DNL Experience Platform] API&#39;s.
+Zodra het publiek is gecreeerd, kunt u hen dan evalueren door op bestelling of geplande (ononderbroken) evaluatie. Evaluatie houdt in dat [!DNL Real-Time Customer Profile] -gegevens worden verplaatst door segmenttaken om het overeenkomstige publiek te produceren. Nadat het publiek is gemaakt, wordt het opgeslagen en opgeslagen zodat het kan worden geëxporteerd met API&#39;s van het type [!DNL Experience Platform] .
 
 De evaluatie op bestelling impliceert het gebruiken van API om evaluatie uit te voeren en publiek te bouwen zoals nodig, terwijl de geplande evaluatie (die ook als &quot;geplande segmentatie&quot;wordt bekend) u toestaat om een terugkerend programma tot stand te brengen om publiek op een specifiek tijdstip (bij een maximum, eenmaal per dag) te evalueren.
 
 ### Geplande segmentatie inschakelen {#enable-scheduled-segmentation}
 
-Het toelaten van uw publiek voor geplande evaluatie kan worden gedaan gebruikend UI of API. Ga in de gebruikersinterface terug naar de **[!UICONTROL Browse]** tab within **[!UICONTROL Audiences]** en inschakelen **[!UICONTROL Schedule all audiences]**. Hierdoor worden alle soorten publiek geëvalueerd op basis van het schema dat door uw organisatie is ingesteld.
+Het toelaten van uw publiek voor geplande evaluatie kan worden gedaan gebruikend UI of API. Ga in de gebruikersinterface terug naar de tab **[!UICONTROL Browse]** in **[!UICONTROL Audiences]** en schakel in **[!UICONTROL Schedule all audiences]** . Hierdoor worden alle soorten publiek geëvalueerd op basis van het schema dat door uw organisatie is ingesteld.
 
 >[!NOTE]
 >
->De geplande evaluatie kan voor zandbakken met een maximum van vijf (5) fusiebeleid voor worden toegelaten [!DNL XDM Individual Profile]. Als uw organisatie meer dan vijf samenvoegbeleidsregels heeft voor [!DNL XDM Individual Profile] binnen één sandboxomgeving kunt u geen geplande evaluatie gebruiken.
+>Een geplande evaluatie kan worden ingeschakeld voor sandboxen met maximaal vijf (5) samenvoegbeleidsregels voor [!DNL XDM Individual Profile] . Als uw organisatie meer dan vijf samenvoegbeleidsregels voor [!DNL XDM Individual Profile] heeft binnen één sandbox-omgeving, kunt u geen geplande evaluatie gebruiken.
 
-Planningen kunnen momenteel alleen worden gemaakt met de API. Voor gedetailleerde stappen bij het maken, bewerken en werken met planningen met behulp van de API, volgt u de zelfstudie voor het evalueren van en het openen van segmentatieresultaten, met name de sectie over [geplande evaluatie met behulp van de API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
+Planningen kunnen momenteel alleen worden gemaakt met de API. Voor gedetailleerde stappen bij het creëren van, het uitgeven van, en het werken met programma&#39;s die API gebruiken, te volgen gelieve het leerprogramma voor het evalueren van en de toegang tot van segmenteringsresultaten, specifiek de sectie op [ geplande evaluatie gebruikend API ](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![De knevel aan Plan alle publiek wordt benadrukt op de Portaal van het Publiek.](../images/ui/audience-portal/browse-audiences-scheduled.png)
+![ knevel om alle publiek te plannen wordt benadrukt op het Portaal van het Publiek.](../images/ui/audience-portal/browse-audiences-scheduled.png)
 
 ## Een publiek maken {#create-audience}
 
-U kunt **[!UICONTROL Create audience]** om een publiek te maken.
+U kunt **[!UICONTROL Create audience]** selecteren om een publiek te maken.
 
-![Op de pagina van de Audience doorbladert, wordt de Create publieksknoop benadrukt.](../images/ui/audience-portal/browse-create-audience.png)
+![ op het publiek doorbladert pagina, wordt de Create publieksknoop benadrukt.](../images/ui/audience-portal/browse-create-audience.png)
 
 Er wordt een pop-up weergegeven, zodat u kunt kiezen tussen het samenstellen van een publiek of het samenstellen van regels.
 
-![Een popover die de twee soorten publiek toont u kunt tot stand brengen.](../images/ui/audience-portal/create-audience-type.png)
+![ popover A die de twee soorten publiek toont u kunt tot stand brengen.](../images/ui/audience-portal/create-audience-type.png)
 
 ### Samenstelling publiek {#audience-composition}
 
-Selecteren **[!UICONTROL Compose audiences]** Hiermee gaat u naar Audience Composition. Deze werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek, zoals tegels voor slepen en neerzetten die worden gebruikt om verschillende handelingen weer te geven. Lees voor meer informatie over het maken van soorten publiek de [Hulplijn Audience Composition](./audience-composition.md).
+Als u **[!UICONTROL Compose audiences]** selecteert, gaat u naar Audience Composition. Deze werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek, zoals tegels voor slepen en neerzetten die worden gebruikt om verschillende handelingen weer te geven. Om meer over het creëren van publiek te leren, te lezen gelieve de [ gids van de Samenstelling van het publiek ](./audience-composition.md).
 
-![De werkruimte Audience Composition wordt weergegeven.](../images/ui/audience-portal/audience-composition.png)
+![ de werkruimte van de Samenstelling van de Publiek wordt getoond.](../images/ui/audience-portal/audience-composition.png)
 
 ### Segment Builder {#segment-builder}
 
-Selecteren **[!UICONTROL Build rule]** gaat u naar de Segment Builder. Deze werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van segmentdefinities, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen. Lees voor meer informatie over het maken van segmentdefinities de [Handleiding Segment Builder](./segment-builder.md)
+Als u **[!UICONTROL Build rule]** selecteert, gaat u naar de Segment Builder. Deze werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van segmentdefinities, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen. Om meer over het creëren van segmentdefinities te leren, te lezen gelieve de [ gids van de Bouwer van het Segment ](./segment-builder.md)
 
-![De werkruimte van de Bouwer van het Segment wordt getoond.](../images/ui/audience-portal/segment-builder.png)
+![ de werkruimte van de Bouwer van het Segment wordt getoond.](../images/ui/audience-portal/segment-builder.png)
 
 ## Een publiek importeren {#import-audience}
 
 >[!IMPORTANT]
 >
->Als u een extern gegenereerd publiek wilt importeren, kunt u **moet** beschikken over de volgende machtigingen: [!UICONTROL View segments], [!UICONTROL Manage segments], en [!UICONTROL Import audience]. Voor meer informatie over deze toestemming, lees [toegangsbeheeroverzicht](../../access-control/home.md#permissions).
+>Om een extern geproduceerd publiek in te voeren, moet u **** de volgende toestemmingen hebben: [!UICONTROL View segments], [!UICONTROL Manage segments], en [!UICONTROL Import audience]. Voor meer informatie over deze toestemming, lees het [ overzicht van de toegangscontrole ](../../access-control/home.md#permissions).
 
-U kunt **[!UICONTROL Import audience]** een extern gegenereerd publiek importeren.
+U kunt **[!UICONTROL Import audience]** selecteren om een extern gegenereerd publiek te importeren.
 
-![Op de pagina van het publiek van het Publiek doorbladert, wordt de de publieksknoop van de Invoer benadrukt.](../images/ui/audience-portal/browse-import-audience.png)
+![ op het publiek doorbladert pagina, wordt de het publieksknoop van de Invoer benadrukt.](../images/ui/audience-portal/browse-import-audience.png)
 
-De **[!UICONTROL Import audience CSV]** wordt weergegeven. U kunt een CSV-bestand selecteren om te importeren als een extern gegenereerd publiek.
+De **[!UICONTROL Import audience CSV]** -workflow wordt weergegeven. U kunt een CSV-bestand selecteren om te importeren als een extern gegenereerd publiek.
 
-![In de [!UICONTROL Import audience CSV] werkschema, de [!UICONTROL Drag and drop files] wordt gemarkeerd en toont waar u uw extern gegenereerde publiek kunt uploaden.](../images/ui/audience-portal/import-audience-csv.png)
+![ in het [!UICONTROL Import audience CSV] werkschema, wordt de [!UICONTROL Drag and drop files] doos benadrukt, die toont waar u uw extern geproduceerd publiek kunt uploaden.](../images/ui/audience-portal/import-audience-csv.png)
 
 >[!NOTE]
 >
->Het externe gegenereerde publiek **moet** zijn in CSV-indeling, hebben een **maximum** van 25 kolommen en kleiner dan 1 GB.
+>Het externe geproduceerde publiek **moet** in formaat CSV zijn, a **maximum** van 25 kolommen hebben, en zijn minder dan 1GB.
 
-Nadat u het CSV-bestand hebt geselecteerd dat u wilt importeren, wordt een lijst met voorbeeldgegevens weergegeven voor dit extern gegenereerde publiek. Nadat u hebt bevestigd dat de voorbeeldgegevens juist zijn, selecteert u **[!UICONTROL Next]**.
+Nadat u het CSV-bestand hebt geselecteerd dat u wilt importeren, wordt een lijst met voorbeeldgegevens weergegeven voor dit extern gegenereerde publiek. Selecteer **[!UICONTROL Next]** nadat u hebt bevestigd dat de voorbeeldgegevens juist zijn.
 
-![Voorbeeldgegevens voor het extern gegenereerde publiek worden weergegeven.](../images/ui/audience-portal/import-audience-sample-data.png)
+![ gegevens van de Steekproef voor het extern geproduceerde publiek wordt getoond.](../images/ui/audience-portal/import-audience-sample-data.png)
 
-De **[!UICONTROL Audience details]** wordt weergegeven. U kunt informatie over uw publiek, met inbegrip van zijn naam, beschrijving, primaire identiteit, en de waarde van identiteitskaart toevoegen namespace.
+De pagina **[!UICONTROL Audience details]** wordt weergegeven. U kunt informatie over uw publiek, met inbegrip van zijn naam, beschrijving, primaire identiteit, en de waarde van identiteitskaart toevoegen namespace.
 
-Wanneer u het extern gegenereerde publiek importeert, moet u een van de kolommen selecteren als primair identiteitsveld en de naamruimtewaarde opgeven. Houd er rekening mee dat alle overige velden in aanmerking worden genomen **payload-kenmerken**. Deze kenmerken worden in overweging genomen **niet duurzaam**, aangezien zij alleen voor personalisatie met dit publiek in verband worden gebracht, en **niet** is verbonden met het profiel.
+Wanneer u het extern gegenereerde publiek importeert, moet u een van de kolommen selecteren als primair identiteitsveld en de naamruimtewaarde opgeven. Gelieve te merken op dat alle resterende gebieden als **ladingsattributen** zullen worden beschouwd. Deze attributen worden beschouwd als **niet-duurzaam**, aangezien zij slechts met dit publiek voor verpersoonlijking zullen worden geassocieerd, en **** niet {met het profiel verbonden zijn.
 
-![De [!UICONTROL Audience details] wordt weergegeven.](../images/ui/audience-portal/import-audience-audience-details.png)
+![ de [!UICONTROL Audience details] pagina wordt getoond.](../images/ui/audience-portal/import-audience-audience-details.png)
 
 U kunt ook desgewenst extra details toevoegen aan uw extern gegenereerde publiek, zoals een id, het samenvoegbeleid of het gegevenstype van de kolom.
 
@@ -370,29 +370,29 @@ U kunt ook desgewenst extra details toevoegen aan uw extern gegenereerde publiek
 >
 >Als u een aangepaste externe publieks-id gebruikt, moet deze aan de volgende richtlijnen voldoen:
 >
-> - IT **moet** beginnen met een letter (a-z of A-Z), onderstrepingsteken (_) of een dollarteken ($).
+> - Het **moet** met een brief (a-z of a-z), onderstrepingsteken (_), of een dollarteken ($) beginnen.
 > - Alle volgende tekens kunnen alfanumeriek zijn (a-z, A-Z, 0-9), onderstrepingstekens (_) of dollartekens ($).
 
-Nadat u de publieksdetails hebt ingevuld, selecteert u **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Next]** nadat u de publieksdetails hebt ingevuld.
 
-![De [!UICONTROL Next] wordt gemarkeerd op de knop [!UICONTROL Audience details] pagina.](../images/ui/audience-portal/import-audience-filled-details.png)
+![ de [!UICONTROL Next] knoop wordt benadrukt op de [!UICONTROL Audience details] pagina.](../images/ui/audience-portal/import-audience-filled-details.png)
 
-De **[!UICONTROL Review]** wordt weergegeven. U kunt de details van uw onlangs ingevoerde extern geproduceerde publiek herzien.
+De pagina **[!UICONTROL Review]** wordt weergegeven. U kunt de details van uw onlangs ingevoerde extern geproduceerde publiek herzien.
 
-![De [!UICONTROL Review] wordt weergegeven, met daarin details over het nieuwe, extern gegenereerde publiek.](../images/ui/audience-portal/import-audience-review-details.png)
+![ de [!UICONTROL Review] pagina wordt getoond, tonend details van uw onlangs ingevoerd extern geproduceerd publiek.](../images/ui/audience-portal/import-audience-review-details.png)
 
-Nadat u hebt bevestigd dat de details juist zijn, selecteert u **[!UICONTROL Finish]** om uw extern gegenereerde publiek te importeren in Adobe Experience Platform.
+Nadat u hebt bevestigd dat de gegevens juist zijn, selecteert u **[!UICONTROL Finish]** om uw extern gegenereerde publiek te importeren in Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
 >Extern gegenereerde doelgroepen hebben standaard een gegevensvervaldatum van 30 dagen. De gegevensvervaldatum wordt opnieuw ingesteld als het publiek op om het even welke manier wordt bijgewerkt of gewijzigd.
 >
->Als uw extern gegenereerde publiek bovendien gevoelige en/of aan de gezondheidszorg gerelateerde informatie bevat, **moet** pas de noodzakelijke etiketten van het gegevensgebruik toe alvorens het op om het even welke bestemming te activeren. Aangezien variabelen van extern gegenereerde soorten publiek in het datumpomeer worden opgeslagen in plaats van in het Real-time profiel van de Klant, moet u **niet** gegevens over toestemming opnemen in uw CSV-bestand. Voor meer informatie over het toepassen van labels voor gegevensgebruik leest u de documentatie op [beheren, labels](../../access-control/abac/ui/labels.md).
+>Bovendien, als uw extern geproduceerd publiek gevoelige en/of op gezondheidszorg betrekking hebbende informatie bevat, moet u **** de noodzakelijke etiketten van het gegevensgebruik toepassen alvorens het aan om het even welke bestemming te activeren. Aangezien de variabelen van extern geproduceerd publiek in het gegevensmeer eerder dan binnen het Profiel van de Klant in real time worden opgeslagen, zou u **niet** toestemmingsgegevens binnen uw Csv- dossier moeten omvatten. Voor meer informatie bij het toepassen van de etiketten van het gegevensgebruik, te lezen gelieve de documentatie over [ het leiden etiketten ](../../access-control/abac/ui/labels.md).
 
 ## Volgende stappen
 
 Na het lezen van dit overzicht, zou u het Portaal van het Publiek moeten kunnen gebruiken om, publiek in Adobe Experience Platform effectief te beheren tot stand te brengen en in te voeren.
 
-Voor meer informatie bij het gebruiken van de Dienst UI van de Segmentatie, gelieve te lezen [Overzicht van de gebruikersinterface van Segmentatieservice](./overview.md).
+Voor meer informatie bij het gebruiken van de Dienst UI van de Segmentatie, te lezen gelieve het [ overzicht UI van de Dienst van de Segmentatie ](./overview.md).
 
-Als u veelgestelde vragen over Audience Portal wilt weten, leest u de [vaak gestelde vragen](../faq.md).
+Om veelgestelde vragen over het Portaal van de Poorten van het Publiek te weten te komen, gelieve [ vaak gestelde vragen ](../faq.md) te lezen.
