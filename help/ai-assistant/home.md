@@ -2,9 +2,9 @@
 title: Overzicht van AI Assistant
 description: Leer meer over AI Assistant, de nuances en gebruiksgevallen en hoe u deze kunt gebruiken om uw workflow met Adobe Experience Platform en Real-time Customer Data Platform te versnellen.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: e8939132c1508e1dfc4028e6c8ff23662d6c2b2b
+source-git-commit: 2bafd80771dc76384d380100f10216853278da2e
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '928'
 ht-degree: 1%
 
 ---
@@ -15,17 +15,17 @@ Lees dit document voor meer informatie over AI Assistant in Adobe Experience Pla
 
 AI Assistant in Adobe Experience Platform is een conversatie-ervaring die u kunt gebruiken om uw workflows in Adobe-toepassingen te versnellen. U kunt AI Medewerker gebruiken om productkennis beter te begrijpen, problemen problemen op te lossen, of door informatie te zoeken en operationele inzichten te vinden. AI Assistant biedt ondersteuning voor Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics.
 
-![De AI Assistant-interface waarbij de eerste gebruikerservaring wordt geactiveerd.](./images/ai-assistant-full.png)
+![ de AI Hulp interface met de eerste getriggerde gebruikerservaring.](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >
->U moet akkoord gaan met een [gebruikersovereenkomst](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) voordat u AI Assistant kunt gebruiken. De gebruikersovereenkomst bevat ook de openbare bètaovereenkomst. Dit is zodat u extra eigenschappen van AI Medewerker kunt gebruiken aangezien zij in een bètacapaciteit uitrollen.
+>U moet met a [ gebruikersovereenkomst ](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) akkoord gaan alvorens u AI Medewerker kunt gebruiken. De gebruikersovereenkomst bevat ook de openbare bètaovereenkomst. Dit is zodat u extra eigenschappen van AI Medewerker kunt gebruiken aangezien zij in een bètacapaciteit uitrollen.
 
 +++Selecteren om gebruikersovereenkomstinterface weer te geven
 
-![De eerste pagina van de gebruikersovereenkomst.](./images/user-agreement-1.png)
+![ de eerste pagina van de gebruikersovereenkomst.](./images/user-agreement-1.png)
 
-![De laatste pagina van de gebruikersovereenkomst.](./images/user-agreement-2.png)
+![ De laatste pagina van de gebruikersovereenkomst.](./images/user-agreement-2.png)
 
 +++
 
@@ -33,9 +33,9 @@ AI Assistant in Adobe Experience Platform is een conversatie-ervaring die u kunt
 
 De Medewerker van AI antwoordt op uw voorgelegde vragen door een gegevensbestand te vragen en dan gegevens van het gegevensbestand in een leesbaar antwoord te vertalen.
 
-Deze interne representatie van onderliggende gegevens wordt ook wel de **[!DNL Knowledge Graph]** - een uitgebreid web van concepten, gegevens en metagegevens voor een bepaald antwoord.
+Deze interne representatie van onderliggende gegevens wordt ook wel **[!DNL Knowledge Graph]** genoemd. Dit is een uitgebreid web van concepten, gegevens en metagegevens voor een bepaald antwoord.
 
-De [!DNL Knowledge Graph] bestaat uit subgrafieken waarnaar wordt verwezen wanneer query&#39;s worden ingediend:
+De [!DNL Knowledge Graph] bestaat uit subgrafieken waarnaar wordt verwezen wanneer query&#39;s worden verzonden:
 
 * Operationele inzichten van de klant.
 * Operationele inzichten van de klant in verschillende meta-winkels.
@@ -59,7 +59,7 @@ De kennis van het product verwijst naar concepten en onderwerpen die in de docum
 
 >[!IMPORTANT]
 >
->De antwoorden van de operationele inzichten zijn in bèta. Iedereen die toegang heeft tot de **Operationele inzichten weergeven** toestemming zal toegang hebben tot antwoorden op operationele inzichten .
+>De antwoorden van de operationele inzichten zijn in bèta. Iedereen die toegang tot de **toestemming heeft van de Mening Operationele Inzichten** {zal toegang tot operationele inzichten antwoorden hebben.
 
 De operationele inzichten verwijzen naar antwoorden AI Medewerker produceert over uw voorwerpen van meta- gegevens (attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s, en bronnen), met inbegrip van tellingen, raadplegingen, en lijneffect. Er worden geen gegevens in de sandbox weergegeven.
 
@@ -69,16 +69,16 @@ De operationele inzichten verwijzen naar antwoorden AI Medewerker produceert ove
 
 U kunt AI Assistant-vragen stellen over uw operationele inzichten in de volgende domeinen:
 
-| Domein | Ondersteunde metagegevens |
-| --- | --- |
-| Attributen | <ul><li>Kenmerknaam kijkt omhoog</li><li>Kenmerk - schemaverhouding</li><li>Kenmerk - gegevenssetrelatie</li><li>Kenmerk - publieksrelatie</li><li>Kenmerk - bestemmingsverhouding</li><li>Ongebruikte kenmerken</li></ul> |
-| Doelgroepen | <ul><li>Aantal deelnemers</li><li>Type publiek (streaming of batch)</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Activeringsstatus</li><li>Aantal profielen</li><li>Soorten publiek dupliceren</li><li>Beoordelingsopnamen voor doeldefinitie</li><li>Publiek - kenmerkrelatie</li><li>Publiek - gegevenssetrelatie</li><li>Publiek - bestemmingsverhouding</li><li>InSegment-regels</li><li>Namen van opzoeken</li><li>Naam- en id-opnamen |
-| Gegevensstromen | <ul><li>Aantal gegevensstromen</li><li>Status DataFlow</li><li>Dataflow - relatie gegevensset</li><li>Dataflow - bronrelatie</li></ul> |
-| Gegevenssets | <ul><li>Aantal gegevenssets</li><li>Status profiel inschakelen</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Gegevensset - schema-relatie</li><li>Gegevensset - publieksrelatie</li><li>Gegevensset - kenmerkrelatie</li><li>Dataset - gegevensstroomrelatie</li><li>Namen van opzoeken </li><li>Naam- en id-opnamen</li></ul> |
-| Doelen | <ul><li>Gevormde doelaantallen</li><li>Doel - publieksrelatie</li><li>Relatie doelkenmerk</li></ul> |
-| Journeys | <ul><li>Aantal</li><li>Namen van opzoeken</li><li>Naam- en id-opnamen</li><li>Reisstatus</li><li>Status activering (publiek versus gebeurtenissen)</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Herhalingsfrequentie</li></ul> |
-| Schema&#39;s | <ul><li>Schema aantallen</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Schema, klassetype</li><li>Schema - kenmerkrelatie</li><li>Schema - gegevenssetrelatie</li><li>Schema - publieksrelatie</li><li>Status profiel inschakelen</li><li>Namen van opzoeken</li><li>Naam- en id-opnamen</li></ul> |
-| Bronnen | <ul><li>Rekentelling</li><li>Accountstatus</li><li>Actieve/inactieve gegevensstromen voor elke rekening</li><li>Bronconnector - gegevensstroomrelatie</li><li>Bronaccount - gegevensstroomrelatie</li></ul> |
+| Domein | Ondersteunde metagegevens | Niet-ondersteunde metagegevens |
+| --- | --- | --- |
+| Attributen | <ul><li>Kenmerknaam kijkt omhoog</li><li>Kenmerk - schemaverhouding</li><li>Kenmerk - gegevenssetrelatie</li><li>Kenmerk - publieksrelatie</li><li>Kenmerk - bestemmingsverhouding</li></ul> | <ul><li>Kenmerkklasse</li><li>Audit</li><li>Vervalstatus</li><li>Labels</li><li>Waarde opgeslagen in kenmerken</li></ul> |
+| Doelgroepen | <ul><li>Aantal deelnemers</li><li>Type publiek (streaming of batch)</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Activeringsstatus</li><li>Aantal profielen</li><li>Soorten publiek dupliceren</li><li>Beoordelingsopnamen voor doeldefinitie</li><li>Publiek - kenmerkrelatie</li><li>Publiek - gegevenssetrelatie</li><li>Publiek - bestemmingsverhouding</li><li>InSegment-regels</li><li>Namen van opzoeken</li><li>Naam- en id-opnamen | <ul><li>Overlap door publiek</li><li>Activering publiek</li><li>Publiek - campagnerelaties</li><li>Audit</li><li>Maken/wijzigen</li><li>Labels</li><li>Profielkwalificatietendensen</li></ul> |
+| Gegevensstromen | <ul><li>Aantal gegevensstromen</li><li>Status DataFlow</li><li>Dataflow - relatie gegevensset</li><li>Dataflow - bronrelatie</li></ul> | <ul><li>Maken/wijzigen</li><li>Dataflow-batch-relaties</li><li>Aantal hoogste profielen</li></ul> |
+| Gegevenssets | <ul><li>Aantal gegevenssets</li><li>Status profiel inschakelen</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Gegevensset - schema-relatie</li><li>Gegevensset - publieksrelatie</li><li>Gegevensset - kenmerkrelatie</li><li>Dataset - gegevensstroomrelatie</li><li>Namen van opzoeken </li><li>Naam- en id-opnamen</li></ul> | <ul><li>Audit</li><li>Gemaakt door</li><li>Gegevensset - batch-relatie</li><li>Maken en wijzigen van gegevensset</li><li>Gegevensgrootte</li><li>Aantal profielen</li><li>Aantal rijen</li><li>Waardeopzoekingen</li></ul> |
+| Doelen | <ul><li>Gevormde doelaantallen</li><li>Doel - publieksrelatie</li><li>Relatie doelkenmerk</li></ul> | <ul><li>Account ingesteld</li><li>Accountreferentie-informatie</li><li>Unieke profielen geactiveerd</li></ul> |
+| Journeys | <ul><li>Aantal</li><li>Namen van opzoeken</li><li>Naam- en id-opnamen</li><li>Reisstatus</li><li>Status activering (publiek versus gebeurtenissen)</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Herhalingsfrequentie</li></ul> | <ul><li>Attributen - reisrelaties</li><li>Audit</li><li>Maken/wijzigen</li><li>Gemaakt door</li><li>Gebeurtenissen</li><li>Reis - dataset</li><li>Reis - schema</li><li>Aanbiedingen</li><li>Profielkwalificatietendensen</li><li>Stapgebeurtenissen</li></ul> |
+| Schema&#39;s | <ul><li>Schema aantallen</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Schema, klassetype</li><li>Schema - kenmerkrelatie</li><li>Schema - gegevenssetrelatie</li><li>Schema - publieksrelatie</li><li>Status profiel inschakelen</li><li>Namen van opzoeken</li><li>Naam- en id-opnamen</li></ul> | <ul><li>Audit</li><li>Maken/wijzigen</li><li>Gemaakt door</li><li>Veldgroepen</li><li>Identiteiten</li><li>Identiteitsnaamruimten</li><li>Labels</li><li>Aantal profielen</li></ul> |
+| Bronnen | <ul><li>Rekentelling</li><li>Accountstatus</li><li>Actieve/inactieve gegevensstromen voor elke rekening</li><li>Source-connector - gegevensstroomrelatie</li><li>Source-account - gegevensstroomrelatie</li></ul> | <ul><li>Accountverificatiegegevens</li><li>Account ingesteld</li><li>Metrische gegevens over gegevensinvoer</li><li>Aantal profielen</li><li>Source - batch-relaties</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -88,8 +88,8 @@ Voor vragen over operationele inzichten weerspiegelen de antwoorden mogelijk nie
 
 Momenteel is het bereik van AI Assistant als volgt:
 
-* [Productkennis](./home.md#product-knowledge): AI Assistant kan vragen over productkennis voor Experience Platform, Real-time Customer Data Platform en Adobe Journey Optimizer beantwoorden. U kunt ook in de onderwerpen van de productkennis voor Customer Journey Analytics, maar slechts door de Customer Journey Analytics UI delven.
-* [Operationele inzichten](./home.md#operational-insights): U kunt AI Assistant vragen stellen over operationele inzichten met betrekking tot de volgende gegevensobjecten: attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s en bronnen.
+* [ de kennis van het Product ](./home.md#product-knowledge): De Medewerker van AI kan de vragen van de productkennis voor Experience Platform, Real-time Customer Data Platform en Adobe Journey Optimizer beantwoorden. U kunt ook in de onderwerpen van de productkennis voor Customer Journey Analytics, maar slechts door de Customer Journey Analytics UI delven.
+* [ Operationele inzichten ](./home.md#operational-insights): U kunt AI Medewerker met vragen over operationele inzichten op de volgende gegevensvoorwerpen vragen: attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s, en bronnen.
 
 ## Volgende stappen
 
