@@ -2,9 +2,9 @@
 title: Vraag voor AI-assistent
 description: Lees dit document om voorbeeldvragen te leren die u kunt gebruiken wanneer het vragen van AI Medewerker.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 6860e1dc03920feaf0dfa83d09c4fca8f85a2ac2
+source-git-commit: 196a39edd493dcc8296f4b6d2904393dd6f6cdd4
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1524'
 ht-degree: 0%
 
 ---
@@ -85,30 +85,6 @@ De volgende vragen worden gegroepeerd door gegevensvoorwerpen en als of [ operat
    * Waarom kan ik geen publiek verwijderen?
    * Hoe lang duurt het voordat het publiek wordt geëvalueerd en de resultaten beschikbaar zijn om doelgericht te zijn?
 
-+++Selecteren om een extra lijst met voorgestelde aanwijzingen weer te geven
-
-* Kan ik een profiel schrappen toegelaten schema nadat de gegevens worden opgenomen?
-* Hoe zijn Gebruikersgroepen verwant aan Rollen?
-* Wanneer moet ik een gegevenstype versus een veldgroep gebruiken?&#39;
-* Wat is het verschil tussen een identiteit en een primaire of buitenlandse sleutel?&quot;
-* Hoe lang duurt het voordat Segmenten worden geëvalueerd en de resultaten beschikbaar zijn voor doelwitten?
-* Hoe wordt de rijkerheid van het Profiel berekend?&quot;
-* Vertel me wat vaak gebruikte gevallen voor Real-Time CDP.
-* Waarom kan ik een segment niet verwijderen?
-* Welk type van veranderingen kan ik maken nadat een schema voor profiel is toegelaten?
-* Waarom heb ik geen toegang tot dashboards in AEP?
-* Hoeveel segmenten gebruiken xdm-kenmerk {FIELD_PATH}
-* Heb ik om het even welke segmenten die in andere segmenten worden gebruikt?
-* Welke velden in het {SCHEMA_NAME} schema bevatten {STRING} ?
-* Welk publiek heeft xdm attribuut {FULL_ATTRIBUTE_PATH} in hun segmentdefinitie?
-* Welke schema&#39;s hebben xdm attribuut {FULL_ATTRIBUTE_PATH} in hen?
-* Welke brongegevens worden niet gebruikt of hebben geen gegevens die binnen komen?
-* Maak een lijst van de levende reizen die ik heb.
-* Geef een overzicht van de soorten publiek die worden gebruikt voor rechtstreekse reizen.
-* Welke bronnen zijn actief?
-
-+++
-
 ## Uw vragen formuleren {#phrasing-your-questions}
 
 U moet uw vragen duidelijk en in de context tot AI Assistant richten om zo accuraat mogelijk te kunnen antwoorden. Raadpleeg de volgende tips voor het stellen van een duidelijke vraag met betrekking tot de context:
@@ -147,7 +123,7 @@ Hieronder volgt een lijst met voorbeelden van vragen die momenteel niet worden o
 
 ### Operationele inzichten
 
-* Hoeveel profielen in deze zandbak [ voldoen aan een specifieke criteria, bijvoorbeeld, &quot;leven in Californië&quot;]?
+* Hoeveel profielen in deze zandbak leven in Californië? (**Nota**: voor gelijkaardige vragen, moet u een specifieke criteria verstrekken om genoeg context voor uw verzoek te geven, in dit geval, zijn de specifieke criteria &quot;levend in Californië&quot;).
 * In welke segmenten bevindt dit profiel zich {PROFILE_INFO/ATTRIBUTE_VALUE}?
 * Hoeveel profielen in de dataset hebben een e-mail?
 * Welke dataset bestaat uit maximaal aantal profielen in deze sandbox?

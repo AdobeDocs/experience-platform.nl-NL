@@ -2,9 +2,9 @@
 title: Overzicht van AI Assistant
 description: Leer meer over AI Assistant, de nuances en gebruiksgevallen en hoe u deze kunt gebruiken om uw workflow met Adobe Experience Platform en Real-time Customer Data Platform te versnellen.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 2bafd80771dc76384d380100f10216853278da2e
+source-git-commit: d950e7ef524dfb487176e51ef25e98c0b5fe8b6c
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '925'
 ht-degree: 1%
 
 ---
@@ -77,7 +77,7 @@ U kunt AI Assistant-vragen stellen over uw operationele inzichten in de volgende
 | Gegevenssets | <ul><li>Aantal gegevenssets</li><li>Status profiel inschakelen</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Gegevensset - schema-relatie</li><li>Gegevensset - publieksrelatie</li><li>Gegevensset - kenmerkrelatie</li><li>Dataset - gegevensstroomrelatie</li><li>Namen van opzoeken </li><li>Naam- en id-opnamen</li></ul> | <ul><li>Audit</li><li>Gemaakt door</li><li>Gegevensset - batch-relatie</li><li>Maken en wijzigen van gegevensset</li><li>Gegevensgrootte</li><li>Aantal profielen</li><li>Aantal rijen</li><li>Waardeopzoekingen</li></ul> |
 | Doelen | <ul><li>Gevormde doelaantallen</li><li>Doel - publieksrelatie</li><li>Relatie doelkenmerk</li></ul> | <ul><li>Account ingesteld</li><li>Accountreferentie-informatie</li><li>Unieke profielen geactiveerd</li></ul> |
 | Journeys | <ul><li>Aantal</li><li>Namen van opzoeken</li><li>Naam- en id-opnamen</li><li>Reisstatus</li><li>Status activering (publiek versus gebeurtenissen)</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Herhalingsfrequentie</li></ul> | <ul><li>Attributen - reisrelaties</li><li>Audit</li><li>Maken/wijzigen</li><li>Gemaakt door</li><li>Gebeurtenissen</li><li>Reis - dataset</li><li>Reis - schema</li><li>Aanbiedingen</li><li>Profielkwalificatietendensen</li><li>Stapgebeurtenissen</li></ul> |
-| Schema&#39;s | <ul><li>Schema aantallen</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Schema, klassetype</li><li>Schema - kenmerkrelatie</li><li>Schema - gegevenssetrelatie</li><li>Schema - publieksrelatie</li><li>Status profiel inschakelen</li><li>Namen van opzoeken</li><li>Naam- en id-opnamen</li></ul> | <ul><li>Audit</li><li>Maken/wijzigen</li><li>Gemaakt door</li><li>Veldgroepen</li><li>Identiteiten</li><li>Identiteitsnaamruimten</li><li>Labels</li><li>Aantal profielen</li></ul> |
+| Schema&#39;s | <ul><li>Schema aantallen</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Schema - kenmerkrelatie</li><li>Schema - gegevenssetrelatie</li><li>Schema - publieksrelatie</li><li>Status profiel inschakelen</li><li>Namen van opzoeken</li><li>Naam- en id-opnamen</li></ul> | <ul><li>Audit</li><li>Maken/wijzigen</li><li>Gemaakt door</li><li>Veldgroepen</li><li>Identiteiten</li><li>Identiteitsnaamruimten</li><li>Labels</li><li>Aantal profielen</li></ul> |
 | Bronnen | <ul><li>Rekentelling</li><li>Accountstatus</li><li>Actieve/inactieve gegevensstromen voor elke rekening</li><li>Source-connector - gegevensstroomrelatie</li><li>Source-account - gegevensstroomrelatie</li></ul> | <ul><li>Accountverificatiegegevens</li><li>Account ingesteld</li><li>Metrische gegevens over gegevensinvoer</li><li>Aantal profielen</li><li>Source - batch-relaties</li></ul> |
 
 {style="table-layout:auto"}
