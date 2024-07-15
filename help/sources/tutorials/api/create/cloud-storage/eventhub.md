@@ -3,97 +3,97 @@ title: Een Azure Event Hubs Source Connection maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met een Azure Event Hubs-account met behulp van de Flow Service API.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1492'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Azure Event Hubs] bronverbinding met de [!DNL Flow Service] API
+# Een [!DNL Azure Event Hubs] bronverbinding maken met de [!DNL Flow Service] API
 
 >[!IMPORTANT]
 >
->De [!DNL Azure Event Hubs] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+>De [!DNL Azure Event Hubs] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
-Lees deze zelfstudie om te leren hoe u verbinding kunt maken [!DNL Azure Event Hubs] (hierna &quot;[!DNL Event Hubs]&quot;) naar Experience Platform, met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees dit leerprogramma leren hoe te om [!DNL Azure Event Hubs] (verder te verbinden die als &quot; [!DNL Event Hubs]&quot;) aan Experience Platform wordt bedoeld, gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-- [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+- [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken [!DNL Event Hubs] naar Platform met de [!DNL Flow Service] API.
+In de volgende secties vindt u aanvullende informatie die u nodig hebt om [!DNL Event Hubs] met de API van [!DNL Flow Service] te kunnen verbinden met Platform.
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] om verbinding te maken met uw [!DNL Event Hubs] account, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+[!DNL Flow Service] kan alleen verbinding maken met uw [!DNL Event Hubs] -account als u waarden opgeeft voor de volgende verbindingseigenschappen:
 
 >[!BEGINTABS]
 
->[!TAB Standaardverificatie]
+>[!TAB  Standaard authentificatie ]
 
 | Credentials | Beschrijving |
 | --- | --- |
 | `sasKeyName` | De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd. |
-| `sasKey` | De primaire sleutel van de [!DNL Event Hubs] naamruimte. De `sasPolicy` dat de `sasKey` komt overeen met `manage` rechten geconfigureerd voor de [!DNL Event Hubs] in te vullen lijst. |
-| `namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. An [!DNL Event Hubs] namespace verstrekt een unieke bereikcontainer, waarin u één of meerdere kunt creëren [!DNL Event Hubs]. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De [!DNL Event Hubs] Verbindingsspecificatie-id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `sasKey` | De primaire sleutel van de naamruimte [!DNL Event Hubs] . De `sasPolicy` die `sasKey` aansluit bij `manage` , moet rechten hebben geconfigureerd om de [!DNL Event Hubs] -lijst te vullen. |
+| `namespace` | De naamruimte van de [!DNL Event Hub] die u opent. Een naamruimte [!DNL Event Hub] biedt een unieke container voor het bereik, waarin u een of meer naamruimten kunt maken [!DNL Event Hubs] . |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De [!DNL Event Hubs] -id van de verbindingsspecificatie is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` . |
 
->[!TAB SAS-verificatie]
+>[!TAB  SAS authentificatie ]
 
 | Credentials | Beschrijving |
 | --- | --- |
 | `sasKeyName` | De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd. |
-| `sasKey` | De primaire sleutel van de [!DNL Event Hubs] naamruimte. De `sasPolicy` dat de `sasKey` komt overeen met `manage` rechten geconfigureerd voor de [!DNL Event Hubs] in te vullen lijst. |
-| `namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. An [!DNL Event Hubs] namespace verstrekt een unieke bereikcontainer, waarin u één of meerdere kunt creëren [!DNL Event Hubs]. |
-| `eventHubName` | De naam voor uw [!DNL Event Hubs] bron. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De [!DNL Event Hubs] Verbindingsspecificatie-id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `sasKey` | De primaire sleutel van de naamruimte [!DNL Event Hubs] . De `sasPolicy` die `sasKey` aansluit bij `manage` , moet rechten hebben geconfigureerd om de [!DNL Event Hubs] -lijst te vullen. |
+| `namespace` | De naamruimte van de [!DNL Event Hub] die u opent. Een naamruimte [!DNL Event Hub] biedt een unieke container voor het bereik, waarin u een of meer naamruimten kunt maken [!DNL Event Hubs] . |
+| `eventHubName` | Vul de naam [!DNL Azure Event Hub] in. Lees de [ documentatie van Microsoft ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) voor meer informatie over [!DNL Event Hub] namen. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De [!DNL Event Hubs] -id van de verbindingsspecificatie is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` . |
 
-Voor meer informatie over verificatie met gedeelde toegang (SAS) voor [!DNL Event Hubs], lees de [[!DNL Azure] handleiding voor het gebruik van SAS](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+Voor meer informatie over de authentificatie van gedeelde toegangshandtekeningen (SAS) voor [!DNL Event Hubs], lees de [[!DNL Azure]  gids bij het gebruiken van SAS ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
->[!TAB Event Hub Azure Active Directory Auth]
-
-| Credentials | Beschrijving |
-| --- | --- |
-| `tenantId` | De huurder-id waarvan u toestemming wilt vragen. Uw huurder identiteitskaart kan als GUID of als vriendschappelijke naam worden geformatteerd. **Opmerking**: De huurdersidentiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in [!DNL Microsoft Azure] interface. |
-| `clientId` | De toepassings-id die aan uw app is toegewezen. U kunt deze id ophalen vanuit het dialoogvenster [!DNL Microsoft Entra ID] portal waar u uw [!DNL Azure Active Directory]. |
-| `clientSecretValue` | Het clientgeheim dat naast de client-id wordt gebruikt om uw app te verifiëren. U kunt uw clientgeheim ophalen via het dialoogvenster [!DNL Microsoft Entra ID] portal waar u uw [!DNL Azure Active Directory]. |
-| `namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. An [!DNL Event Hubs] namespace verstrekt een unieke bereikcontainer, waarin u één of meerdere kunt creëren [!DNL Event Hubs]. |
-
-Voor meer informatie over [!DNL Azure Active Directory], lees de [Azure-gids bij het gebruik van Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
-
->[!TAB De Hub Scoped Azure Active Directory Auth van de gebeurtenis]
+>[!TAB  Hub van de Gebeurtenis Azure Actieve Auth van de Folder ]
 
 | Credentials | Beschrijving |
 | --- | --- |
-| `tenantId` | De huurder-id waarvan u toestemming wilt vragen. Uw huurder identiteitskaart kan als GUID of als vriendschappelijke naam worden geformatteerd. **Opmerking**: De huurdersidentiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in [!DNL Microsoft Azure] interface. |
-| `clientId` | De toepassings-id die aan uw app is toegewezen. U kunt deze id ophalen vanuit het dialoogvenster [!DNL Microsoft Entra ID] portal waar u uw [!DNL Azure Active Directory]. |
-| `clientSecretValue` | Het clientgeheim dat naast de client-id wordt gebruikt om uw app te verifiëren. U kunt uw clientgeheim ophalen via het dialoogvenster [!DNL Microsoft Entra ID] portal waar u uw [!DNL Azure Active Directory]. |
-| `namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. An [!DNL Event Hubs] namespace verstrekt een unieke bereikcontainer, waarin u één of meerdere kunt creëren [!DNL Event Hubs]. |
-| `eventHubName` | De naam voor uw [!DNL Event Hubs] bron. |
+| `tenantId` | De huurder-id waarvan u toestemming wilt vragen. Uw huurder identiteitskaart kan als GUID of als vriendschappelijke naam worden geformatteerd. **Nota**: De huurder identiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in de [!DNL Microsoft Azure] interface. |
+| `clientId` | De toepassings-id die aan uw app is toegewezen. U kunt deze id ophalen via de portal [!DNL Microsoft Entra ID] waar u uw [!DNL Azure Active Directory] hebt geregistreerd. |
+| `clientSecretValue` | Het clientgeheim dat naast de client-id wordt gebruikt om uw app te verifiëren. U kunt uw clientgeheim ophalen via de [!DNL Microsoft Entra ID] -portal waar u uw [!DNL Azure Active Directory] hebt geregistreerd. |
+| `namespace` | De naamruimte van de [!DNL Event Hub] die u opent. Een naamruimte [!DNL Event Hub] biedt een unieke container voor het bereik, waarin u een of meer naamruimten kunt maken [!DNL Event Hubs] . |
+
+Voor meer informatie over [!DNL Azure Active Directory], lees de [ Azure gids bij het gebruiken van identiteitskaart van Microsoft Entra ](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!TAB  Hub Scoped Azure Actieve Auth van de Folder van de Gebeurtenis ]
+
+| Credentials | Beschrijving |
+| --- | --- |
+| `tenantId` | De huurder-id waarvan u toestemming wilt vragen. Uw huurder identiteitskaart kan als GUID of als vriendschappelijke naam worden geformatteerd. **Nota**: De huurder identiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in de [!DNL Microsoft Azure] interface. |
+| `clientId` | De toepassings-id die aan uw app is toegewezen. U kunt deze id ophalen via de portal [!DNL Microsoft Entra ID] waar u uw [!DNL Azure Active Directory] hebt geregistreerd. |
+| `clientSecretValue` | Het clientgeheim dat naast de client-id wordt gebruikt om uw app te verifiëren. U kunt uw clientgeheim ophalen via de [!DNL Microsoft Entra ID] -portal waar u uw [!DNL Azure Active Directory] hebt geregistreerd. |
+| `namespace` | De naamruimte van de [!DNL Event Hub] die u opent. Een naamruimte [!DNL Event Hub] biedt een unieke container voor het bereik, waarin u een of meer naamruimten kunt maken [!DNL Event Hubs] . |
+| `eventHubName` | Vul de naam [!DNL Azure Event Hub] in. Lees de [ documentatie van Microsoft ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) voor meer informatie over [!DNL Event Hub] namen. |
 
 >[!ENDTABS]
 
-Zie voor meer informatie over deze waarden [this Event Hubs document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+Voor meer informatie over deze waarden, verwijs naar [ dit document van de Hubs van deze Gebeurtenis ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 >[!TIP]
 >
->Nadat u een verificatietype hebt gemaakt, kunt u dit type van een [!DNL Event Hubs] basisverbinding. Als u het verificatietype wilt wijzigen, moet u een nieuwe basisverbinding maken.
+>Nadat u een [!DNL Event Hubs] basisverbinding hebt gemaakt, kunt u het verificatietype niet wijzigen. Als u het verificatietype wilt wijzigen, moet u een nieuwe basisverbinding maken.
 
-De eerste stap bij het maken van een bronverbinding is het verifiëren van uw [!DNL Event Hubs] bron en genereer een basis-verbindings-id. Met een basis-verbindings-id kunt u bestanden verkennen en door de bestanden navigeren vanuit de bron en specifieke items identificeren die u wilt invoeren, zoals informatie over de gegevenstypen en indelingen.
+De eerste stap bij het maken van een bronverbinding is het verifiëren van de [!DNL Event Hubs] -bron en het genereren van een basis-verbindings-id. Met een basis-verbindings-id kunt u bestanden verkennen en door de bestanden navigeren vanuit de bron en specifieke items identificeren die u wilt invoeren, zoals informatie over de gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL Event Hubs] verificatiereferenties als onderdeel van de aanvraagparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL Event Hubs] -verificatiegegevens op als onderdeel van de aanvraagparameters.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /connections
@@ -101,9 +101,9 @@ POST /connections
 
 >[!BEGINTABS]
 
->[!TAB Standaardverificatie]
+>[!TAB  Standaard authentificatie ]
 
-Als u een account wilt maken met standaardverificatie, vraagt u een POST naar de `/connections` eindpunt terwijl het verstrekken van waarden voor uw `sasKeyName`, `sasKey`, en `namespace`.
+Als u een account wilt maken met behulp van standaardverificatie, vraagt u een POST naar het `/connections` -eindpunt en geeft u waarden op voor de `sasKeyName` , `sasKey` en `namespace` .
 
 +++verzoek
 
@@ -137,14 +137,14 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd. |
 | `auth.params.sasKey` | De gegenereerde handtekening voor gedeelde toegang. |
-| `auth.params.namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. |
-| `connectionSpec.id` | De [!DNL Event Hubs] Verbindingsspecificatie-id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | De naamruimte van de [!DNL Event Hubs] die u opent. |
+| `connectionSpec.id` | De [!DNL Event Hubs] connection specification ID is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
 
 +++Response
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze verbinding-id is vereist in de volgende stap om een bronverbinding te maken.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze verbinding-id is vereist in de volgende stap om een bronverbinding te maken.
 
 ```json
 {
@@ -155,9 +155,9 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 
 +++
 
->[!TAB SAS-verificatie]
+>[!TAB  SAS authentificatie ]
 
-Als u een account wilt maken met SAS-verificatie, vraagt u een POST naar de `/connections` eindpunt terwijl het verstrekken van waarden voor uw `sasKeyName`, `sasKey`,`namespace`, en `eventHubName`.
+Als u een account wilt maken met behulp van SAS-verificatie, vraagt u een POST naar het `/connections` -eindpunt en geeft u waarden op voor de `sasKeyName` , `sasKey` , `namespace` en `eventHubName` .
 
 +++verzoek
 
@@ -192,15 +192,15 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd. |
 | `auth.params.sasKey` | De gegenereerde handtekening voor gedeelde toegang. |
-| `auth.params.namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. |
-| `params.eventHubName` | De naam voor uw [!DNL Event Hubs] bron. |
-| `connectionSpec.id` | De [!DNL Event Hubs] Verbindingsspecificatie-id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | De naamruimte van de [!DNL Event Hubs] die u opent. |
+| `params.eventHubName` | De naam voor de [!DNL Event Hubs] -bron. |
+| `connectionSpec.id` | De [!DNL Event Hubs] connection specification ID is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
 
 +++Response
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze verbinding-id is vereist in de volgende stap om een bronverbinding te maken.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze verbinding-id is vereist in de volgende stap om een bronverbinding te maken.
 
 ```json
 {
@@ -211,9 +211,9 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 
 +++
 
->[!TAB Event Hub Azure Active Directory Auth]
+>[!TAB  Hub van de Gebeurtenis Azure Actieve Auth van de Folder ]
 
-Om een rekening tot stand te brengen gebruikend de Auth van de Folder van de Azure Actieve, doe een POST verzoek aan `/connections` eindpunt terwijl het verstrekken van waarden voor uw `tenantId`, `clientId`,`clientSecretValue`, en `namespace`.
+Als u een account wilt maken met Azure Active Directory Auth, vraagt u een POST naar het `/connections` -eindpunt terwijl u waarden opgeeft voor uw `tenantId` , `clientId` , `clientSecretValue` en `namespace` .
 
 +++verzoek
 
@@ -246,17 +246,17 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `auth.params.tenantId` | De huurder-id van uw toepassing. **Opmerking**: De huurdersidentiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in [!DNL Microsoft Azure] interface. |
+| `auth.params.tenantId` | De huurder-id van uw toepassing. **Nota**: De huurder identiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in de [!DNL Microsoft Azure] interface. |
 | `auth.params.clientId` | De client-id van uw organisatie. |
 | `auth.params.clientSecretValue` | De geheime waarde van de cliënt van uw organisatie. |
-| `auth.params.namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. |
-| `connectionSpec.id` | De [!DNL Event Hubs] Verbindingsspecificatie-id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | De naamruimte van de [!DNL Event Hubs] die u opent. |
+| `connectionSpec.id` | De [!DNL Event Hubs] connection specification ID is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
 
 +++Response
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze verbinding-id is vereist in de volgende stap om een bronverbinding te maken.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze verbinding-id is vereist in de volgende stap om een bronverbinding te maken.
 
 ```json
 {
@@ -267,9 +267,9 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 
 +++
 
->[!TAB De Hub Scoped Azure Active Directory Auth van de gebeurtenis]
+>[!TAB  Hub Scoped Azure Actieve Auth van de Folder van de Gebeurtenis ]
 
-Om een rekening tot stand te brengen gebruikend de Auth van de Folder van de Azure Actieve, doe een POST verzoek aan `/connections` eindpunt terwijl het verstrekken van waarden voor uw `tenantId`, `clientId`,`clientSecretValue`, `namespace`, en `eventHubName`.
+Als u een account wilt maken met Azure Active Directory Auth, vraagt u een POST naar het `/connections` -eindpunt en geeft u waarden op voor uw `tenantId` , `clientId` , `clientSecretValue` , `namespace` en `eventHubName` .
 
 +++verzoek
 
@@ -303,18 +303,18 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `auth.params.tenantId` | De huurder-id van uw toepassing. **Opmerking**: De huurdersidentiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in [!DNL Microsoft Azure] interface. |
+| `auth.params.tenantId` | De huurder-id van uw toepassing. **Nota**: De huurder identiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in de [!DNL Microsoft Azure] interface. |
 | `auth.params.clientId` | De client-id van uw organisatie. |
 | `auth.params.clientSecretValue` | De geheime waarde van de cliënt van uw organisatie. |
-| `auth.params.namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. |
-| `auth.params.eventHubName` | De naam voor uw [!DNL Event Hubs] bron. |
-| `connectionSpec.id` | De [!DNL Event Hubs] Verbindingsspecificatie-id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | De naamruimte van de [!DNL Event Hubs] die u opent. |
+| `auth.params.eventHubName` | De naam voor de [!DNL Event Hubs] -bron. |
+| `connectionSpec.id` | De [!DNL Event Hubs] connection specification ID is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
 
 +++Response
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze verbinding-id is vereist in de volgende stap om een bronverbinding te maken.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze verbinding-id is vereist in de volgende stap om een bronverbinding te maken.
 
 ```json
 {
@@ -331,13 +331,13 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 
 >[!TIP]
 >
->An [!DNL Event Hubs] de consumentengroep kan slechts voor één enkele stroom op een bepaald ogenblik worden gebruikt.
+>Een consumentengroep van [!DNL Event Hubs] kan slechts voor één enkele stroom in een bepaald tijd worden gebruikt.
 
 Een bronverbinding maakt en beheert de verbinding met de externe bron vanwaar gegevens worden ingevoerd. Een bronverbinding bestaat uit informatie zoals gegevensbron, gegevensformaat, en een identiteitskaart van de bronverbinding nodig om een gegevensstroom tot stand te brengen. Een bronverbindingsinstantie is specifiek voor een huurder en organisatie.
 
-Om een bronverbinding tot stand te brengen, doe een verzoek van de POST aan `/sourceConnections` het eindpunt van de [!DNL Flow Service] API.
+Als u een bronverbinding wilt maken, vraagt u een POST naar het `/sourceConnections` -eindpunt van de [!DNL Flow Service] API.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /sourceConnections
@@ -377,14 +377,14 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van de bronverbinding. Zorg ervoor dat de naam van uw bronverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw bronverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opgeven voor meer informatie over uw bronverbinding. |
-| `baseConnectionId` | De verbinding-id van uw [!DNL Event Hubs] bron die in de vorige stap is gegenereerd. |
-| `connectionSpec.id` | De vaste-verbindingsspecificatie-id voor [!DNL Event Hubs]. Deze id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
-| `data.format` | Het formaat van de [!DNL Event Hubs] gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json`. |
-| `params.eventHubName` | De naam voor uw [!DNL Event Hubs] bron. |
-| `params.dataType` | Deze parameter bepaalt het type van de gegevens die worden opgenomen. Tot de ondersteunde gegevenstypen behoren: `raw` en `xdm`. |
-| `params.reset` | Deze parameter bepaalt hoe de gegevens worden gelezen. Gebruiken `latest` beginnen met lezen van de meest recente gegevens en gebruiken `earliest` om te beginnen met lezen van de eerste beschikbare gegevens in de stream. Deze parameter is optioneel en wordt standaard ingesteld op `earliest` indien niet verstrekt. |
-| `params.consumerGroup` | Het publicatie- of abonnementsmechanisme voor [!DNL Event Hubs]. Deze parameter is optioneel en wordt standaard ingesteld op `$Default` indien niet verstrekt. Zie dit [[!DNL Event Hubs] gids over evenementen voor consumenten](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) voor meer informatie . **Opmerking**: An [!DNL Event Hubs] de consumentengroep kan slechts voor één enkele stroom op een bepaald ogenblik worden gebruikt. |
+| `baseConnectionId` | De verbindings-id van de [!DNL Event Hubs] -bron die in de vorige stap is gegenereerd. |
+| `connectionSpec.id` | The fixed connection specification ID for [!DNL Event Hubs]. Deze id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` . |
+| `data.format` | De indeling van de [!DNL Event Hubs] -gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json` . |
+| `params.eventHubName` | De naam voor de [!DNL Event Hubs] -bron. |
+| `params.dataType` | Deze parameter bepaalt het type van de gegevens die worden opgenomen. Tot de ondersteunde gegevenstypen behoren: `raw` en `xdm` . |
+| `params.reset` | Deze parameter bepaalt hoe de gegevens worden gelezen. Gebruik `latest` om te beginnen met het lezen van de meest recente gegevens en gebruik `earliest` om te beginnen met het lezen van de eerste beschikbare gegevens in de stream. Deze parameter is optioneel en wordt standaard ingesteld op `earliest` als deze niet wordt opgegeven. |
+| `params.consumerGroup` | Het publicatie- of abonnementsmechanisme dat voor [!DNL Event Hubs] moet worden gebruikt. Deze parameter is optioneel en wordt standaard ingesteld op `$Default` als deze niet wordt opgegeven. Verwijs naar deze [[!DNL Event Hubs]  gids op gebeurtenisconsumenten ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) voor meer informatie. **Nota**: Een [!DNL Event Hubs] consumentengroep kan slechts voor één enkele stroom in een bepaalde tijd worden gebruikt. |
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL Event Hubs] bronverbinding met de [!DNL Flow Service] API. U kunt deze bron-verbindings-id gebruiken in de volgende zelfstudie: [een streaming gegevensstroom maken met de opdracht [!DNL Flow Service] API](../../collect/streaming.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL Event Hubs] -bronverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze bron verbindingsidentiteitskaart in het volgende leerprogramma gebruiken om [ een het stromen dataflow tot stand te brengen gebruikend  [!DNL Flow Service]  API ](../../collect/streaming.md).

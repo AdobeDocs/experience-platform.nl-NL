@@ -1,147 +1,145 @@
 ---
-title: Creeer een Azure van de BronVerbinding van de Gebeurtenis Hubs in UI
+title: Een Azure Event Hubs Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Azure Event Hubs-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Azure Event Hubs] bronverbinding in de gebruikersinterface
+# Een [!DNL Azure Event Hubs] bronverbinding maken in de gebruikersinterface
 
 >[!IMPORTANT]
 >
->De [!DNL Azure Event Hubs] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+>De [!DNL Azure Event Hubs] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
-Lees deze zelfstudie om te leren hoe u een [!DNL Azure Event Hubs] -account die de gebruikersinterface van Adobe Experience Platform gebruikt.
+Lees deze zelfstudie om te leren hoe u een [!DNL Azure Event Hubs] -account kunt maken via de Adobe Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
-   * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u al een geldige [!DNL Event Hubs] verbinding hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [configureren, gegevensstroom](../../dataflow/streaming/cloud-storage-streaming.md).
+Als u reeds een geldige [!DNL Event Hubs] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/streaming/cloud-storage-streaming.md).
 
 ### Vereiste referenties verzamelen
 
-Om uw [!DNL Event Hubs] bronaansluiting, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Als u de [!DNL Event Hubs] bronconnector wilt verifiëren, moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 >[!BEGINTABS]
 
->[!TAB Standaardverificatie]
+>[!TAB  Standaard authentificatie ]
 
 | Credentials | Beschrijving |
 | --- | --- |
 | SAS-sleutelnaam | De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd. |
-| SAS-sleutel | De primaire sleutel van de [!DNL Event Hubs] naamruimte. De `sasPolicy` dat de `sasKey` komt overeen met `manage` rechten geconfigureerd voor de [!DNL Event Hubs] in te vullen lijst. |
-| Naamruimte | De naamruimte van de [!DNL Event Hubs] u hebt toegang. An [!DNL Event Hubs] namespace verstrekt een unieke bereikcontainer, waarin u één of meerdere kunt creëren [!DNL Event Hubs]. |
+| SAS-sleutel | De primaire sleutel van de naamruimte [!DNL Event Hubs] . De `sasPolicy` die `sasKey` aansluit bij `manage` , moet rechten hebben geconfigureerd om de [!DNL Event Hubs] -lijst te vullen. |
+| Naamruimte | De naamruimte van de [!DNL Event Hub] die u opent. Een naamruimte [!DNL Event Hub] biedt een unieke container voor het bereik, waarin u een of meer naamruimten kunt maken [!DNL Event Hubs] . |
 
->[!TAB SAS-verificatie]
+>[!TAB  SAS authentificatie ]
 
 | Credentials | Beschrijving |
 | --- | --- |
 | SAS-sleutelnaam | De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd. |
-| SAS-sleutel | De primaire sleutel van de [!DNL Event Hubs] naamruimte. De `sasPolicy` dat de `sasKey` komt overeen met `manage` rechten geconfigureerd voor de [!DNL Event Hubs] in te vullen lijst. |
-| Naamruimte | De naamruimte van de [!DNL Event Hubs] u hebt toegang. An [!DNL Event Hubs] namespace verstrekt een unieke bereikcontainer, waarin u één of meerdere kunt creëren [!DNL Event Hubs]. |
-| Naam van gebeurtenishub | De naam voor uw [!DNL Event Hubs] bron. |
+| SAS-sleutel | De primaire sleutel van de naamruimte [!DNL Event Hub] . De `sasPolicy` die `sasKey` aansluit bij `manage` , moet rechten hebben geconfigureerd om de [!DNL Event Hubs] -lijst te vullen. |
+| Naamruimte | De naamruimte van de [!DNL Event Hub] die u opent. Een naamruimte [!DNL Event Hub] biedt een unieke container voor het bereik, waarin u een of meer naamruimten kunt maken [!DNL Event Hubs] . |
+| Naam van gebeurtenishub | Vul de naam [!DNL Azure Event Hub] in. Lees de [ documentatie van Microsoft ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) voor meer informatie over [!DNL Event Hub] namen. |
 
-Voor meer informatie over verificatie met gedeelde toegang (SAS) voor [!DNL Event Hubs], lees de [[!DNL Azure] handleiding voor het gebruik van SAS](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-
->[!TAB Event Hub Azure Active Directory Auth]
+>[!TAB  Hub van de Gebeurtenis Azure Actieve Auth van de Folder ]
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Tenant-id | De huurder-id waarvan u toestemming wilt vragen. Uw huurder identiteitskaart kan als GUID of als vriendschappelijke naam worden geformatteerd. **Opmerking**: De huurdersidentiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in [!DNL Microsoft Azure] interface. |
-| Client-id | De toepassings-id die aan uw app is toegewezen. U kunt deze id ophalen vanuit het dialoogvenster [!DNL Microsoft Entra ID] portal waar u uw [!DNL Azure Active Directory]. |
-| Geheime waarde client | Het clientgeheim dat naast de client-id wordt gebruikt om uw app te verifiëren. U kunt uw clientgeheim ophalen via het dialoogvenster [!DNL Microsoft Entra ID] portal waar u uw [!DNL Azure Active Directory]. |
-| Naamruimte | De naamruimte van de [!DNL Event Hubs] u hebt toegang. An [!DNL Event Hubs] namespace verstrekt een unieke bereikcontainer, waarin u één of meerdere kunt creëren [!DNL Event Hubs]. |
+| Tenant-id | De huurder-id waarvan u toestemming wilt vragen. Uw huurder identiteitskaart kan als GUID of als vriendschappelijke naam worden geformatteerd. **Nota**: De huurder identiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in de [!DNL Microsoft Azure] interface. |
+| Client-id | De toepassings-id die aan uw app is toegewezen. U kunt deze id ophalen via de portal [!DNL Microsoft Entra ID] waar u uw [!DNL Azure Active Directory] hebt geregistreerd. |
+| Geheime waarde client | Het clientgeheim dat naast de client-id wordt gebruikt om uw app te verifiëren. U kunt uw clientgeheim ophalen via de [!DNL Microsoft Entra ID] -portal waar u uw [!DNL Azure Active Directory] hebt geregistreerd. |
+| Naamruimte | De naamruimte van de [!DNL Event Hub] die u opent. Een naamruimte [!DNL Event Hub] biedt een unieke container voor het bereik, waarin u een of meer naamruimten kunt maken [!DNL Event Hubs] . |
 
-Voor meer informatie over [!DNL Azure Active Directory], lees de [Azure-gids bij het gebruik van Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+Voor meer informatie over [!DNL Azure Active Directory], lees de [ Azure gids bij het gebruiken van identiteitskaart van Microsoft Entra ](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
 
->[!TAB De Hub Scoped Azure Active Directory Auth van de gebeurtenis]
+>[!TAB  Hub Scoped Azure Actieve Auth van de Folder van de Gebeurtenis ]
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Tenant-id | De huurder-id waarvan u toestemming wilt vragen. Uw huurder identiteitskaart kan als GUID of als vriendschappelijke naam worden geformatteerd. **Opmerking**: De huurdersidentiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in [!DNL Microsoft Azure] interface. |
-| Client-id | De toepassings-id die aan uw app is toegewezen. U kunt deze id ophalen vanuit het dialoogvenster [!DNL Microsoft Entra ID] portal waar u uw [!DNL Azure Active Directory]. |
-| Geheime waarde client | Het clientgeheim dat naast de client-id wordt gebruikt om uw app te verifiëren. U kunt uw clientgeheim ophalen via het dialoogvenster [!DNL Microsoft Entra ID] portal waar u uw [!DNL Azure Active Directory]. |
-| Naamruimte | De naamruimte van de [!DNL Event Hubs] u hebt toegang. An [!DNL Event Hubs] namespace verstrekt een unieke bereikcontainer, waarin u één of meerdere kunt creëren [!DNL Event Hubs]. |
-| Naam van gebeurtenishub | De naam voor uw [!DNL Event Hubs] bron. |
+| Tenant-id | De huurder-id waarvan u toestemming wilt vragen. Uw huurder identiteitskaart kan als GUID of als vriendschappelijke naam worden geformatteerd. **Nota**: De huurder identiteitskaart wordt bedoeld als &quot;identiteitskaart van de Folder&quot;in de [!DNL Microsoft Azure] interface. |
+| Client-id | De toepassings-id die aan uw app is toegewezen. U kunt deze id ophalen via de portal [!DNL Microsoft Entra ID] waar u uw [!DNL Azure Active Directory] hebt geregistreerd. |
+| Geheime waarde client | Het clientgeheim dat naast de client-id wordt gebruikt om uw app te verifiëren. U kunt uw clientgeheim ophalen via de [!DNL Microsoft Entra ID] -portal waar u uw [!DNL Azure Active Directory] hebt geregistreerd. |
+| Naamruimte | De naamruimte van de [!DNL Event Hub] die u opent. Een naamruimte [!DNL Event Hub] biedt een unieke container voor het bereik, waarin u een of meer naamruimten kunt maken [!DNL Event Hubs] . |
+| Naam van gebeurtenishub | Vul de naam [!DNL Azure Event Hub] in. Lees de [ documentatie van Microsoft ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) voor meer informatie over [!DNL Event Hub] namen. |
 
-Voor meer informatie over [!DNL Azure Active Directory], lees de [Azure-gids bij het gebruik van Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+Voor meer informatie over [!DNL Azure Active Directory], lees de [ Azure gids bij het gebruiken van identiteitskaart van Microsoft Entra ](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
 
 >[!ENDTABS]
 
-Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Event Hubs] aan Experience Platform.
+Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Event Hubs] -account te koppelen aan het Experience Platform.
 
-## Verbind uw [!DNL Event Hubs] account
+## Sluit uw [!DNL Event Hubs] -account aan
 
-Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden verschillende bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de [!UICONTROL Cloud storage] categorie, selecteert u **[!UICONTROL Azure Event Hubs]** en selecteer vervolgens **[!UICONTROL Add data]**.
+Selecteer onder de categorie [!UICONTROL Cloud storage] de optie **[!UICONTROL Azure Event Hubs]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![De broncatalogus met Azure Event Hubs geselecteerd.](../../../../images/tutorials/create/eventhub/catalog.png)
+![ de broncatalogus met de Azure Geselecteerde Hubs van de Gebeurtenis.](../../../../images/tutorials/create/eventhub/catalog.png)
 
-De **[!UICONTROL Connect to Azure Event Hubs]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+Het dialoogvenster **[!UICONTROL Connect to Azure Event Hubs]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Bestaande account
 
-Als u een bestaande account wilt gebruiken, selecteert u de optie [!DNL Event Hubs] account dat u wilt gebruiken, selecteert u **[!UICONTROL Next]** om verder te gaan.
+Als u een bestaande account wilt gebruiken, selecteert u de [!DNL Event Hubs] -account die u wilt gebruiken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![Een lijst met bestaande Azure Event Hubs-bronaccounts.](../../../../images/tutorials/create/eventhub/existing.png)
+![ een lijst van bestaande Azure van de Bron van de Gebeurtenis Hubs rekeningen.](../../../../images/tutorials/create/eventhub/existing.png)
 
 ### Nieuwe account
 
 >[!TIP]
 >
->Nadat u een verificatietype hebt gemaakt, kunt u dit type van een [!DNL Event Hubs] basisverbinding. Als u het verificatietype wilt wijzigen, moet u een nieuwe basisverbinding maken.
+>Nadat u een [!DNL Event Hubs] basisverbinding hebt gemaakt, kunt u het verificatietype niet wijzigen. Als u het verificatietype wilt wijzigen, moet u een nieuwe basisverbinding maken.
 
-Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam en een optionele beschrijving voor uw nieuwe [!DNL Event Hubs] account.
+Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam en een optionele beschrijving voor uw nieuwe [!DNL Event Hubs] -account.
 
-![De nieuwe interface van de rekeningsverwezenlijking voor Azure Event Hubs.](../../../../images/tutorials/create/eventhub/new.png)
+![ de nieuwe interface van de rekeningsverwezenlijking voor de Hubs van de Gebeurtenis van Azure.](../../../../images/tutorials/create/eventhub/new.png)
 
 >[!BEGINTABS]
 
->[!TAB Standaardverificatie]
+>[!TAB  Standaard authentificatie ]
 
-Om een [!DNL Event Hubs] -account met standaardverificatie, gebruik de [!UICONTROL Account authentication] vervolgkeuzemenu en selecteer vervolgens **[!UICONTROL Standard authentication]**. Geef vervolgens waarden op voor uw [!UICONTROL SAS key name], [!UICONTROL SAS key], en [!UICONTROL Namespace].
+Als u een [!DNL Event Hubs] -account met standaardverificatie wilt maken, gebruikt u het vervolgkeuzemenu [!UICONTROL Account authentication] en selecteert u **[!UICONTROL Standard authentication]** . Geef vervolgens waarden op voor de [!UICONTROL SAS key name] , [!UICONTROL SAS key] en [!UICONTROL Namespace] .
 
-Nadat u de verificatiegegevens hebt ingevoerd, selecteert u **[!UICONTROL Connect to source]**.
+Nadat u de verificatiegegevens hebt ingevoerd, selecteert u **[!UICONTROL Connect to source]** .
 
-![De standaardverificatieinterface voor Azure Event Hubs.](../../../../images/tutorials/create/eventhub/standard.png)
+![ de standaardauthentificatieinterface voor Azure Event Hubs.](../../../../images/tutorials/create/eventhub/standard.png)
 
->[!TAB SAS-verificatie]
+>[!TAB  SAS authentificatie ]
 
-Om een [!DNL Event Hubs] account met SAS-verificatie, gebruik de [!UICONTROL Account authentication] vervolgkeuzemenu en selecteer vervolgens **[!UICONTROL SAS authentication]**. Geef vervolgens waarden op voor uw [!UICONTROL SAS key name], [!UICONTROL SAS key], [!UICONTROL Namespace], en [!UICONTROL Event Hubs name].
+Als u een [!DNL Event Hubs] -account met SAS-verificatie wilt maken, gebruikt u het vervolgkeuzemenu [!UICONTROL Account authentication] en selecteert u vervolgens **[!UICONTROL SAS authentication]** . Geef vervolgens waarden op voor de [!UICONTROL SAS key name] , [!UICONTROL SAS key] , [!UICONTROL Namespace] en [!UICONTROL Event Hubs name] .
 
-Nadat u de verificatiegegevens hebt ingevoerd, selecteert u **[!UICONTROL Connect to source]**.
+Nadat u de verificatiegegevens hebt ingevoerd, selecteert u **[!UICONTROL Connect to source]** .
 
-![De SAS-verificatieinterface voor Azure Event Hubs.](../../../../images/tutorials/create/eventhub/sas.png)
+![ de SAS authentificatieinterface voor Azure Event Hubs.](../../../../images/tutorials/create/eventhub/sas.png)
 
->[!TAB Event Hub Azure Active Directory Auth]
+>[!TAB  Hub van de Gebeurtenis Azure Actieve Auth van de Folder ]
 
-Om een [!DNL Event Hubs] de rekening met de authentificatie van de Folder van de Hub van de Gebeurtenis Azure Actieve [!UICONTROL Account authentication] vervolgkeuzemenu en selecteer vervolgens **[!UICONTROL Event Hub Azure Active Directory]**. Geef vervolgens waarden op voor uw [!UICONTROL Tenant ID], [!UICONTROL Client ID], [!UICONTROL Client Secret Value], en [!UICONTROL Namespace].
+Als u een [!DNL Event Hubs] -account wilt maken met Active Directory-verificatie van de gebeurtenishub Azure, gebruikt u het vervolgkeuzemenu [!UICONTROL Account authentication] en selecteert u **[!UICONTROL Event Hub Azure Active Directory]** . Geef vervolgens waarden op voor de [!UICONTROL Tenant ID] , [!UICONTROL Client ID] , [!UICONTROL Client Secret Value] en [!UICONTROL Namespace] .
 
-![Azure Event Hub Azure Active Directory Authentication](../../../../images/tutorials/create/eventhub/active-directory.png)
+![ Azure de Hub van de Gebeurtenis Azure Actieve Authentificatie van de Folder ](../../../../images/tutorials/create/eventhub/active-directory.png)
 
->[!TAB De Hub Scoped Azure Active Directory Auth van de gebeurtenis]
+>[!TAB  Hub Scoped Azure Actieve Auth van de Folder van de Gebeurtenis ]
 
-Om een [!DNL Event Hubs] account met verificatie van Active Directory van gebeurtenishub Scoped Azure Active Directory, gebruik de [!UICONTROL Account authentication] vervolgkeuzemenu en selecteer vervolgens **[!UICONTROL Event Hub Scoped Azure Active Directory]**. Geef vervolgens waarden op voor uw [!UICONTROL Tenant ID], [!UICONTROL Client ID], [!UICONTROL Client Secret Value], [!UICONTROL Namespace], en [!UICONTROL Event Hub Name].
+Als u een [!DNL Event Hubs] -account wilt maken met de verificatie van Active Directory van de gebeurtenishub Scoped Azure, gebruikt u het vervolgkeuzemenu [!UICONTROL Account authentication] en selecteert u **[!UICONTROL Event Hub Scoped Azure Active Directory]** . Geef vervolgens waarden op voor de [!UICONTROL Tenant ID] , [!UICONTROL Client ID] , [!UICONTROL Client Secret Value] , [!UICONTROL Namespace] en [!UICONTROL Event Hub Name] .
 
-![Azure Event Hub Scoped Azure Activity Directory Authentication](../../../../images/tutorials/create/eventhub/scoped.png)
+![ Azure de Hub Scoped Azure van de Gebeurtenis de Authentificatie van de Folder van de Activiteit ](../../../../images/tutorials/create/eventhub/scoped.png)
 
 >[!ENDTABS]
 
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u verbinding gemaakt met uw [!DNL Event Hubs] aan Experience Platform. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens van uw cloudopslag naar Experience Platform te brengen](../../dataflow/streaming/cloud-storage-streaming.md).
+Door deze zelfstudie te volgen, hebt u uw [!DNL Event Hubs] -account verbonden met Experience Platform. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens van uw wolkenopslag in Experience Platform ](../../dataflow/streaming/cloud-storage-streaming.md) te brengen.
