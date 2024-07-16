@@ -3,9 +3,9 @@ title: Bestemming landingszone gegevens
 description: Leer hoe u verbinding maakt met Data Landing Zone om het publiek te activeren en gegevenssets te exporteren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: ce78e320e78a67cd744fdf1c49b34f6fcddf4f15
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1551'
 ht-degree: 0%
 
 ---
@@ -14,21 +14,23 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Deze documentatiepagina verwijst naar de [!DNL Data Landing Zone] *doel*. Er is ook een [!DNL Data Landing Zone] *bron* in de broncatalogus. Lees voor meer informatie de [[!DNL Data Landing Zone] bron](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentatie.
+>Deze documentatiepagina verwijst naar [!DNL Data Landing Zone] *bestemming*. Er is ook a [!DNL Data Landing Zone] *bron* in de broncatalogus. Voor meer informatie, lees de [[!DNL Data Landing Zone]  bron ](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentatie.
 
 
 ## Overzicht {#overview}
 
-[!DNL Data Landing Zone] is een [!DNL Azure Blob] -opslaginterface die door Adobe Experience Platform is ingericht, zodat u toegang hebt tot een veilige, op de cloud gebaseerde opslagvoorziening voor bestanden die u kunt exporteren vanuit Platform. U hebt toegang tot [!DNL Data Landing Zone] container per sandbox, en het totale gegevensvolume over alle containers is beperkt tot de totale gegevens die worden geleverd bij uw licentie voor platformproducten en -services. Alle klanten van Platform en zijn toepassingen zoals [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], en [!DNL Real-Time Customer Data Platform] zijn voorzien van één [!DNL Data Landing Zone] container per sandbox. U kunt bestanden lezen en schrijven naar uw container via [!DNL Azure Storage Explorer] of uw opdrachtregelinterface.
+[!DNL Data Landing Zone] is een [!DNL Azure Blob] -opslaginterface die door Adobe Experience Platform is ingericht en u toegang biedt tot een veilige, op de cloud gebaseerde opslagfaciliteit voor het opslaan van bestanden om bestanden van het platform te exporteren. U hebt toegang tot één [!DNL Data Landing Zone] container per sandbox en het totale gegevensvolume voor alle containers is beperkt tot de totale gegevens die worden geleverd bij uw Platform Products and Services-licentie. Alle klanten van Platform en de bijbehorende toepassingen, zoals [!DNL Customer Journey Analytics] , [!DNL Journey Orchestration] , [!DNL Intelligent Services] en [!DNL Real-Time Customer Data Platform] , beschikken over één [!DNL Data Landing Zone] container per sandbox. U kunt bestanden lezen en schrijven naar uw container via [!DNL Azure Storage Explorer] of de opdrachtregelinterface.
 
-[!DNL Data Landing Zone] biedt ondersteuning voor verificatie op basis van SAS en de bijbehorende gegevens zijn beveiligd met standaard [!DNL Azure Blob] beveiligingsmechanismen voor de opslag in rust en in doorvoer. Met SAS-verificatie hebt u veilig toegang tot uw [!DNL Data Landing Zone] via een openbare internetverbinding. Er zijn geen netwerkwijzigingen vereist voor toegang tot uw [!DNL Data Landing Zone] container, wat betekent u geen lijsten van gewenste personen of dwars-regio montages voor uw netwerk moet vormen.
+[!DNL Data Landing Zone] biedt ondersteuning voor verificatie op basis van SAS en de bijbehorende gegevens zijn in rust en onderweg beveiligd met standaard [!DNL Azure Blob] -opslagbeveiligingsmechanismen. SAS staat voor [ gedeelde toegangshandtekening ](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
 
-Het platform dwingt strikte tijd-aan-levende (TTL) zeven dagen op alle dossiers af die aan worden geupload [!DNL Data Landing Zone] container. Alle bestanden worden na zeven dagen verwijderd.
+Met verificatie op basis van SAS hebt u via een openbare internetverbinding veilig toegang tot uw [!DNL Data Landing Zone] -container. Er zijn geen netwerkwijzigingen vereist voor toegang tot uw [!DNL Data Landing Zone] -container. Dit betekent dat u geen lijsten van gewenste personen of instellingen voor meerdere regio&#39;s voor uw netwerk hoeft te configureren.
 
-## Verbinding maken met uw [!UICONTROL Data Landing Zone] opslag via API of UI {#connect-api-or-ui}
+Het platform dwingt een strikte tijd-aan-levende (TTL) zeven dagen op alle dossiers af die aan een [!DNL Data Landing Zone] container worden geupload. Alle bestanden worden na zeven dagen verwijderd.
 
-* Als u verbinding wilt maken met uw [!UICONTROL Data Landing Zone] opslaglocatie via de gebruikersinterface van het platform, lees de secties [Verbinden met de bestemming](#connect) en [Soorten publiek naar dit doel activeren](#activate) hieronder.
-* Als u verbinding wilt maken met uw [!UICONTROL Data Landing Zone] opslagplaats programmatically, lees de [Activeer publiek aan op dossier-gebaseerde bestemmingen door de Zelfstudie van de Dienst van de Stroom te gebruiken API](../../api/activate-segments-file-based-destinations.md).
+## Verbinding maken met uw [!UICONTROL Data Landing Zone] -opslag via API of UI {#connect-api-or-ui}
+
+* Om met uw [!UICONTROL Data Landing Zone] opslagplaats te verbinden gebruikend het gebruikersinterface van het Platform, lees de secties [ verbinden met de bestemming ](#connect) en [ actief publiek aan deze bestemming ](#activate) hieronder.
+* Om met uw [!UICONTROL Data Landing Zone] opslagplaats programmatically te verbinden, lees [ actief publiek aan op dossier-gebaseerde bestemmingen door de dienst API van de Stroom te gebruiken leerprogramma ](../../api/activate-segments-file-based-destinations.md).
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -36,8 +38,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -47,8 +49,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de toepasselijke schemavelden (bijvoorbeeld uw PPID), zoals u hebt gekozen in het scherm met de kenmerken voor het geselecteerde profiel van het dialoogvenster [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment, samen met de toepasselijke schemagebieden (bijvoorbeeld uw PPID), zoals gekozen in het scherm van de uitgezochte profielkenmerken van het [ werkschema van de bestemmingsactivering ](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [ partij op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -56,40 +58,40 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 Deze bestemming steunt dataset de uitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
 
-* Procedure [de uitvoer datasets gebruikend het gebruikersinterface van het Platform](/help/destinations/ui/export-datasets.md).
-* Procedure [de uitvoer datasets programmatically gebruikend de Dienst API van de Stroom](/help/destinations/api/export-datasets.md).
+* Hoe te [ datasets uitvoeren gebruikend het gebruikersinterface van het Platform ](/help/destinations/ui/export-datasets.md).
+* Hoe te [ datasets programmatically uitvoeren gebruikend de Dienst API van de Stroom ](/help/destinations/api/export-datasets.md).
 
 ## Bestandsindeling van de geëxporteerde gegevens {#file-format}
 
-Bij exporteren *publieksgegevens*, Platform maakt een `.csv`, `parquet`, of `.json` in de opslaglocatie die u hebt opgegeven. Zie voor meer informatie over de bestanden de [ondersteunde bestandsindelingen voor export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) in de zelfstudie voor publieksactivering.
+Wanneer het uitvoeren van *publieksgegevens*, leidt het Platform tot een `.csv`, `parquet`, of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ gesteunde dossierformaten voor de uitvoer ](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) sectie in het leerprogramma van de publiekactivering.
 
-Bij exporteren *gegevenssets*, Platform maakt een `.parquet` of `.json` in de opslaglocatie die u hebt opgegeven. Zie voor meer informatie over de bestanden de [succesvolle uitvoer van gegevenssets controleren](../../ui/export-datasets.md#verify) in de zelfstudie over exportgegevensbestanden.
+Wanneer het uitvoeren van *datasets*, leidt het Platform tot een `.parquet` of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ succesvolle datasetuitvoer ](../../ui/export-datasets.md#verify) sectie in het de uitvoerdatasetleerprogramma verifiëren.
 
 ## Vereisten {#prerequisites}
 
-Houd rekening met de volgende voorwaarden waaraan moet worden voldaan voordat u de opdracht [!DNL Data Landing Zone] bestemming.
+Aan de volgende voorwaarden moet worden voldaan voordat u het doel van [!DNL Data Landing Zone] kunt gebruiken.
 
-### Verbind uw [!DNL Data Landing Zone] container naar [!DNL Azure Storage Explorer]
+### Sluit de [!DNL Data Landing Zone] -container aan op [!DNL Azure Storage Explorer]
 
-U kunt [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) om de inhoud van uw [!DNL Data Landing Zone] container. Als u wilt beginnen met [!DNL Data Landing Zone], moet u eerst uw referenties ophalen en deze invoeren in [!DNL Azure Storage Explorer]en sluit uw [!DNL Data Landing Zone] container naar [!DNL Azure Storage Explorer].
+U kunt [[!DNL Azure Storage Explorer] gebruiken ](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) om de inhoud van uw [!DNL Data Landing Zone] container te beheren. Als u [!DNL Data Landing Zone] wilt gaan gebruiken, moet u eerst uw referenties ophalen, deze invoeren in [!DNL Azure Storage Explorer] en de [!DNL Data Landing Zone] -container verbinden met [!DNL Azure Storage Explorer] .
 
-In de [!DNL Azure Storage Explorer] UI, selecteer het verbindingspictogram in de linkernavigatiebar. De **Bron selecteren** wordt weergegeven, zodat u beschikt over opties voor het maken van een verbinding. Selecteren **[!DNL Blob container]** om verbinding te maken met uw [!DNL Data Landing Zone] opslag.
+Selecteer in de gebruikersinterface van [!DNL Azure Storage Explorer] het verbindingspictogram op de linkernavigatiebalk. Het **Uitgezochte venster van het Middel** verschijnt, die u van opties voorzien om met te verbinden. Selecteer **[!DNL Blob container]** om verbinding te maken met uw [!DNL Data Landing Zone] -opslag.
 
-![Selecteer bron die is gemarkeerd in de Azure UI.](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![ Uitgezochte middel dat in Azure UI wordt benadrukt.](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
-Selecteer vervolgens **URL voor gedeelde toegangshandtekening (SAS)** als uw verbindingsmethode, en selecteer dan **Volgende**.
+Daarna, selecteer **Gedeelde toegangshandtekening URL (SAS)** als uw verbindingsmethode, en selecteer dan **daarna**.
 
-![Selecteer verbindingsmethode die in de Azure UI wordt gemarkeerd.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![ Uitgezochte verbindingsmethode die in Azure UI wordt benadrukt.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
-Nadat u de verbindingsmethode hebt geselecteerd, moet u een **weergavenaam** en de **[!DNL Blob]SAS-URL van container** dat overeenkomt met uw [!DNL Data Landing Zone] container.
+Na het selecteren van uw verbindingsmethode, moet u a **vertoningsnaam** en **[!DNL Blob]container SAS URL** verstrekken die met uw [!DNL Data Landing Zone] container beantwoordt.
 
 >[!BEGINSHADEBOX]
 
-### Haal de referenties voor uw [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
+### De referenties voor uw [!DNL Data Landing Zone] ophalen {#retrieve-dlz-credentials}
 
-U moet de platform-API&#39;s gebruiken om uw [!DNL Data Landing Zone] referenties. De API-aanroep om uw referenties op te halen wordt hieronder beschreven. Voor informatie over het krijgen van de vereiste waarden voor uw kopballen, verwijs naar [Aan de slag met Adobe Experience Platform API&#39;s](/help/landing/api-guide.md) hulplijn.
+U moet de platform-API&#39;s gebruiken om uw [!DNL Data Landing Zone] -referenties op te halen. De API-aanroep om uw referenties op te halen wordt hieronder beschreven. Voor informatie over het krijgen van de vereiste waarden voor uw kopballen, verwijs [ Begonnen het worden met Adobe Experience Platform APIs ](/help/landing/api-guide.md) gids.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
@@ -97,7 +99,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 
 | Query-parameters | Beschrijving |
 | --- | --- |
-| `dlz_destination` | De `dlz_destination` type staat API toe om een container van de landingszonebestemming van de andere types van containers te onderscheiden die voor u beschikbaar zijn. |
+| `dlz_destination` | Met het type `dlz_destination` kan de API een doelcontainer van de landingszone onderscheiden van de andere typen containers die voor u beschikbaar zijn. |
 
 {style="table-layout:auto"}
 
@@ -115,9 +117,9 @@ curl -X GET \
   -H 'Content-Type: application/json' \
 ```
 
-**Antwoord**
+**Reactie**
 
-De volgende reactie retourneert de referentie-informatie voor uw landingszone, inclusief uw huidige `SASToken` en `SASUri`en de `storageAccountName` die overeenkomt met uw landingszonecontainer.
+De volgende reactie retourneert de referentie-informatie voor de landingszone, inclusief de huidige `SASToken` en `SASUri` , en de `storageAccountName` die overeenkomen met de container van de landingszone.
 
 ```json
 {
@@ -136,11 +138,11 @@ De volgende reactie retourneert de referentie-informatie voor uw landingszone, i
 
 {style="table-layout:auto"}
 
-### Bijwerken [!DNL Data Landing Zone] geloofsbrieven {#update-dlz-credentials}
+### [!DNL Data Landing Zone] gebruikersgegevens bijwerken {#update-dlz-credentials}
 
-U kunt uw gegevens desgewenst ook vernieuwen. U kunt uw `SASToken` door een POST aan de `/credentials` het eindpunt van de [!DNL Connectors] API.
+U kunt uw gegevens desgewenst ook vernieuwen. U kunt uw `SASToken` bijwerken door een aanvraag voor een POST in te dienen bij het `/credentials` eindpunt van de [!DNL Connectors] API.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
@@ -148,8 +150,8 @@ POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&ac
 
 | Query-parameters | Beschrijving |
 | --- | --- |
-| `dlz_destination` | De `dlz_destination` type staat API toe om een container van de landingszonebestemming van de andere types van containers te onderscheiden die voor u beschikbaar zijn. |
-| `refresh` | De `refresh` actie staat u toe om uw landingszonegeloofsbrieven terug te stellen en automatisch een nieuwe te produceren `SASToken`. |
+| `dlz_destination` | Met het type `dlz_destination` kan de API een doelcontainer van de landingszone onderscheiden van de andere typen containers die voor u beschikbaar zijn. |
+| `refresh` | Met de handeling `refresh` kunt u de gegevens van de landingszone opnieuw instellen en automatisch een nieuwe `SASToken` genereren. |
 
 {style="table-layout:auto"}
 
@@ -167,9 +169,9 @@ curl -X POST \
   -H 'Content-Type: application/json' \
 ```
 
-**Antwoord**
+**Reactie**
 
-In het volgende antwoord worden bijgewerkte waarden voor uw `SASToken` en `SASUri`.
+In het volgende antwoord worden bijgewerkte waarden voor de `SASToken` en `SASUri` geretourneerd.
 
 ```json
 {
@@ -182,71 +184,71 @@ In het volgende antwoord worden bijgewerkte waarden voor uw `SASToken` en `SASUr
 
 >[!ENDSHADEBOX]
 
-Geef uw weergavenaam op (`containerName`) en [!DNL Data Landing Zone] SAS URL, zoals die in de hierboven beschreven API vraag is teruggekeerd, en dan selecteren **Volgende**.
+Verstrek uw vertoningsnaam (`containerName`) en [!DNL Data Landing Zone] SAS URL, zoals die in de hierboven beschreven API vraag is teruggekeerd, en selecteer dan **Volgende**.
 
-![Voer verbindingsgegevens in die zijn gemarkeerd in de Azure UI.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![ ga verbindingsinfo in die in Azure UI wordt benadrukt.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
-De **Samenvatting** wordt weergegeven en krijgt u een overzicht van uw instellingen, inclusief informatie over uw [!DNL Blob] eindpunt en toestemmingen. Indien klaar, selecteert u **Verbinden**.
+Het **Summiere** venster verschijnt, die u van een overzicht van uw montages, met inbegrip van informatie over uw [!DNL Blob] eindpunt en toestemmingen voorzien. Wanneer klaar, uitgezochte **verbindt**.
 
-![Overzicht van instellingen die worden weergegeven in de Azure UI.](/help/sources/images/tutorials/create/dlz/summary.png)
+![ Samenvatting van montages die in Azure UI worden getoond.](/help/sources/images/tutorials/create/dlz/summary.png)
 
-Een geslaagde verbinding werkt uw [!DNL Azure Storage Explorer] UI met uw [!DNL Data Landing Zone] container.
+Een geslaagde verbinding werkt de gebruikersinterface van [!DNL Azure Storage Explorer] bij met uw [!DNL Data Landing Zone] -container.
 
-![Overzicht van de DLZ gebruikerscontainer die in Azure UI wordt benadrukt.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+![ Samenvatting van de DLZ gebruikerscontainer die in Azure UI wordt benadrukt.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
-Met uw [!DNL Data Landing Zone] container verbonden met [!DNL Azure Storage Explorer]kunt u nu bestanden van het Experience Platform naar uw [!DNL Data Landing Zone] container. Als u bestanden wilt exporteren, moet u een verbinding tot stand brengen met de [!DNL Data Landing Zone] doel in de interface van het Experience Platform, zoals beschreven in de sectie hieronder.
+Als de [!DNL Data Landing Zone] -container is aangesloten op [!DNL Azure Storage Explorer] , kunt u nu bestanden van het Experience Platform naar de [!DNL Data Landing Zone] -container exporteren. Als u bestanden wilt exporteren, moet u een verbinding tot stand brengen met de [!DNL Data Landing Zone] -bestemming in de gebruikersinterface van het Experience Platform, zoals beschreven in de onderstaande sectie.
 
 ## Verbinden met de bestemming {#connect}
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) worden beschreven. Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Zorg ervoor dat u verbinding hebt gemaakt met uw [!DNL Data Landing Zone] container naar [!DNL Azure Storage Explorer] zoals beschreven in de [voorwaarden](#prerequisites) sectie. Omdat [!DNL Data Landing Zone] is een Adobe-provisioned opslag, te hoeven u geen verdere stappen in het Experience Platform UI uit te voeren om aan de bestemming voor authentiek te verklaren.
+Zorg ervoor dat u uw [!DNL Data Landing Zone] container aan [!DNL Azure Storage Explorer] zoals die in de [ wordt beschreven eerste vereisten ](#prerequisites) sectie hebt verbonden. Omdat [!DNL Data Landing Zone] een Adobe-provisioned opslag is, te hoeven u geen verdere stappen in het Experience Platform UI uit te voeren om aan de bestemming voor authentiek te verklaren.
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-* **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
-* **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
-* **[!UICONTROL Folder path]**: Voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
-* **[!UICONTROL File type]**: Selecteer het Experience Platform voor de indeling die u voor de geëxporteerde bestanden wilt gebruiken. Wanneer u de [!UICONTROL CSV] kunt u [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Name]**: vul de voorkeursnaam voor dit doel in.
+* **[!UICONTROL Description]**: optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
+* **[!UICONTROL Folder path]**: voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
+* **[!UICONTROL File type]**: selecteer het Experience Platform voor de indeling die u voor de geëxporteerde bestanden wilt gebruiken. Wanneer het selecteren van de [!UICONTROL CSV] optie, kunt u ook [ de dossier het formatteren opties ](../../ui/batch-destinations-file-formatting-options.md) vormen.
 * **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden.
-* **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer. Het manifest wordt genoemd gebruikend het formaat `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Een [voorbeeldmanifestbestand](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Het manifestbestand bevat de volgende velden:
-   * `flowRunId`: De [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) waarmee het geëxporteerde bestand is gegenereerd.
+* **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer. Het manifest wordt genoemd gebruikend het formaat `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Bekijk a [ steekproef manifestdossier ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Het manifestbestand bevat de volgende velden:
+   * `flowRunId`: De [ dataflow looppas ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die het uitgevoerde dossier produceerde.
    * `scheduledTime`: De tijd in UTC toen het bestand werd geëxporteerd.
-   * `exportResults.sinkPath`: Het pad in de opslaglocatie waar het geëxporteerde bestand is opgeslagen.
+   * `exportResults.sinkPath`: Het pad in uw opslaglocatie waar het geëxporteerde bestand is opgeslagen.
    * `exportResults.name`: De naam van het geëxporteerde bestand.
    * `size`: De grootte van het geëxporteerde bestand, in bytes.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Zie [ publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](../../ui/activate-batch-profile-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
 ### Planning
 
-In de **[!UICONTROL Scheduling]** stap, u kunt [het exportschema instellen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) voor uw [!DNL Data Landing Zone] doel en u kunt ook [de naam van uw geëxporteerde bestanden configureren](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+In de **[!UICONTROL Scheduling]** stap, kunt u [ opstelling het uitvoerprogramma ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) voor uw [!DNL Data Landing Zone] bestemming en u kunt ook [ de naam van uw uitgevoerde dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) vormen.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
-In de **[!UICONTROL Mapping]** U kunt kiezen welke kenmerken en identiteitsvelden u wilt exporteren voor uw profielen. U kunt ook selecteren om de kopteksten in het geëxporteerde bestand te wijzigen in een gewenste vriendelijke naam. Voor meer informatie bekijkt u de [toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in activeer partijbestemmingen UI zelfstudie.
+In de stap **[!UICONTROL Mapping]** kunt u selecteren welke kenmerk- en identiteitsvelden u wilt exporteren voor uw profielen. U kunt ook selecteren om de kopteksten in het geëxporteerde bestand te wijzigen in een gewenste vriendelijke naam. Voor meer informatie, bekijk de [ toewijzingsstap ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in de activerende partijbestemmingen UI leerprogramma.
 
 ## Geëxporteerde gegevens valideren {#exported-data}
 
-Controleer uw [!DNL Data Landing Zone] opslaan en ervoor zorgen dat de geëxporteerde bestanden de verwachte profielpopulaties bevatten.
+Om te controleren of gegevens zijn geëxporteerd, controleert u de [!DNL Data Landing Zone] -opslag en controleert u of de geëxporteerde bestanden de verwachte profielpopulaties bevatten.
