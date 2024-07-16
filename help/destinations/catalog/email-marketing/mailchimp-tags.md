@@ -12,69 +12,69 @@ ht-degree: 0%
 
 # [!DNL Mailchimp Tags] verbinding
 
-[[!DNL Mailchimp]](https://mailchimp.com) *(ook bekend als [!DNL Intuit Mailchimp])* is een populair platform voor marketingautomatisering en e-mailmarketingservice dat door bedrijven wordt gebruikt om contacten te beheren en te onderhouden *(klanten, klanten of andere belanghebbenden)* het gebruiken van mailing lijsten en e-mailmarketing campagnes.
+[[!DNL Mailchimp] ](https://mailchimp.com) *(ook gekend als [!DNL Intuit Mailchimp])* is een populair platform van de marketingautomatisering en e-mailmarketing de dienst die door ondernemingen wordt gebruikt om met contacten *(cliënten, klanten, of andere geïnteresseerde partijen) te beheren* gebruikend het posteren lijsten en e-mailmarketing campagnes.
 
-[!DNL Mailchimp Tags] gebruik [publiek](https://mailchimp.com/help/getting-started-audience/) en [tags](https://mailchimp.com/help/getting-started-tags/) om uw contactgegevens te beheren. De markeringen zijn etiketten gebruiken waarmee u uw contacten kunt organiseren en hen voor uw interne categorisering binnen etiketteren [!DNL Mailchimp].
+[!DNL Mailchimp Tags] gebruikt [ publiek ](https://mailchimp.com/help/getting-started-audience/) en [ markeringen ](https://mailchimp.com/help/getting-started-tags/) om uw contactinformatie te beheren. Tags zijn labels waarmee u uw contactpersonen kunt ordenen en labels kunt toewijzen aan uw interne categorisering binnen [!DNL Mailchimp] .
 
-Vergeleken met [!DNL Mailchimp Interest Categories] die u zou gebruiken om uw contacten te sorteren op hun belangen en voorkeur, [!DNL Mailchimp Tags] is bedoeld om abonnementen aan onderwerpen van belang te beheren die uw contacten zouden kunnen geinteresseerd zijn. *Opmerking: Experience Platform heeft ook een verbinding voor [!DNL Mailchimp Interest Categories], kunt u het uitchecken op het tabblad [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md) pagina.*
+Vergeleken met [!DNL Mailchimp Interest Categories] waarmee u contactpersonen kunt sorteren op basis van hun interesses en voorkeuren, is [!DNL Mailchimp Tags] bedoeld voor het beheren van abonnementen op onderwerpen die u mogelijk interesseert. *Nota, heeft het Experience Platform ook een verbinding voor [!DNL Mailchimp Interest Categories], kunt u het uit op de [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md) pagina controleren.*
 
-Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) eindpunt. U kunt **nieuwe contactpersonen toevoegen** of **bijwerken, tags van bestaande [!DNL Mailchimp] contactpersonen** binnen een bestaande [!DNL Mailchimp] het publiek na het activeren in een nieuw publiek. [!DNL Mailchimp Tags] gebruikt de geselecteerde publieksnamen van Platform als tagnamen binnen [!DNL Mailchimp].
+Dit [!DNL Adobe Experience Platform] [ doel ](/help/destinations/home.md) hefboomwerkingen het [[!DNL Mailchimp batch subscribe or unsubscribe API] ](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) eindpunt. U kunt **nieuwe contacten** of **updatemarkeringen van bestaande [!DNL Mailchimp] contacten** binnen een bestaand [!DNL Mailchimp] publiek toevoegen na het activeren van hen binnen een nieuw publiek. [!DNL Mailchimp Tags] gebruikt de geselecteerde publieksnamen van Platform als de tagnamen binnen [!DNL Mailchimp] .
 
 ## Gebruiksscenario’s {#use-cases}
 
-Om u te helpen beter begrijpen hoe en wanneer u het [!DNL Mailchimp Tags] doel, hier is een geval van steekproefgebruik dat de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
+Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Mailchimp Tags] bestemming zou moeten gebruiken, is hier een geval van het steekproefgebruik dat de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
 ### E-mails verzenden naar contactpersonen voor marketingcampagnes {#use-case-send-emails}
 
-De verkoopafdeling van een organisatie wil een op e-mail gebaseerde marketing campagne aan een gebogen lijst van contacten uitzenden. De contactlijsten worden ontvangen in partijen uit verschillende off-line bronnen en moeten daarom worden gevolgd. Het team identificeert een bestaand [!DNL Mailchimp] publiek en begint het publiek van het Experience Platform te bouwen waarin de contacten van elke lijst worden toegevoegd. Na verzending van deze soorten publiek naar [!DNL Mailchimp Tags], als er geen contactpersonen aanwezig zijn in de geselecteerde [!DNL Mailchimp] voor het publiek worden ze toegevoegd met een bijbehorende tag, die de naam van het publiek bevat waartoe de contactpersoon behoort. Als om het even welke contacten reeds in [!DNL Mailchimp] publiek wordt een nieuwe tag met de naam van het publiek toegevoegd. Als de labels zichtbaar zijn in [!DNL Mailchimp] de offlinebronnen gemakkelijk kunnen worden geïdentificeerd. Nadat de gegevens zijn verzonden naar [!DNL Mailchimp] zij sturen de campagne voor marketing e - mail naar het publiek .
+De verkoopafdeling van een organisatie wil een op e-mail gebaseerde marketing campagne aan een gebogen lijst van contacten uitzenden. De contactlijsten worden ontvangen in partijen uit verschillende off-line bronnen en moeten daarom worden gevolgd. Het team identificeert een bestaand [!DNL Mailchimp] publiek en begint het publiek van het Experience Platform te bouwen waarin de contacten van elke lijst worden toegevoegd. Nadat u deze soorten publiek naar [!DNL Mailchimp Tags] hebt verzonden en er geen contactpersonen aanwezig zijn in het geselecteerde [!DNL Mailchimp] -publiek, worden ze toegevoegd met een bijbehorende tag die de naam van het publiek bevat waartoe de contactpersoon behoort. Als er al contactpersonen aanwezig zijn in het publiek van [!DNL Mailchimp] , wordt een nieuwe tag met de naam van het publiek toegevoegd. Aangezien de labels zichtbaar zijn in [!DNL Mailchimp] , zijn de offlinebronnen gemakkelijk herkenbaar. Nadat de gegevens naar [!DNL Mailchimp] zijn verzonden, sturen ze de campagne voor marketing via e-mail naar het publiek.
 
 ## Vereisten {#prerequisites}
 
-Raadpleeg de onderstaande secties voor alle voorwaarden die u in Experience Platform moet instellen en [!DNL Mailchimp] en voor informatie die u moet verzamelen voordat u met de [!DNL Mailchimp Tags] bestemming.
+Raadpleeg de onderstaande secties voor alle voorwaarden die u in Experience Platform en [!DNL Mailchimp] moet instellen en voor informatie die u moet verzamelen voordat u met het [!DNL Mailchimp Tags] -doel kunt werken.
 
 ### Vereisten in Experience Platform {#prerequisites-in-experience-platform}
 
-Voordat u gegevens activeert naar de [!DNL Mailchimp Tags] doel, u moet een [schema](/help/xdm/schema/composition.md), [gegevensset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), en [publiek](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) gemaakt in [!DNL Experience Platform].
+Alvorens gegevens aan de [!DNL Mailchimp Tags] bestemming te activeren, moet u a [ schema ](/help/xdm/schema/composition.md), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en) hebben, en [ publiek ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) dat in [!DNL Experience Platform] wordt gecreeerd.
 
-### Vereisten voor de [!DNL Mailchimp Tags] doel {#prerequisites-destination}
+### Vereisten voor het doel [!DNL Mailchimp Tags] {#prerequisites-destination}
 
-Houd rekening met de volgende voorwaarden om gegevens van Platform naar uw [!DNL Mailchimp Tags] account:
+Houd rekening met de volgende voorwaarden om gegevens van Platform naar uw [!DNL Mailchimp Tags] -account te exporteren:
 
-#### U hebt een [!DNL Mailchimp] account {#prerequisites-account}
+#### U moet een [!DNL Mailchimp] -account hebben {#prerequisites-account}
 
-Voordat u een [!DNL Mailchimp Tags] doel, moet u eerst ervoor zorgen dat u een [!DNL Mailchimp] account. Als u er nog geen hebt, gaat u naar [[!DNL Mailchimp] aanmeldpagina](https://login.mailchimp.com/signup/) om uw account te registreren en te maken.
+Voordat u een [!DNL Mailchimp Tags] -doel kunt maken, moet u eerst controleren of u een [!DNL Mailchimp] -account hebt. Als u niet één hebt reeds bezoek de [[!DNL Mailchimp]  aanmeldingspagina ](https://login.mailchimp.com/signup/) om uw rekening te registreren en tot stand te brengen.
 
-#### Gather [!DNL Mailchimp] API-sleutel {#gather-credentials}
+#### API-sleutel van [!DNL Mailchimp] verzamelen {#gather-credentials}
 
-U hebt uw [!DNL Mailchimp] **API-sleutel** om de [!DNL Mailchimp Interest Categories] bestemming tegen uw [!DNL Mailchimp] account. De **API-sleutel** dient als **Wachtwoord** wanneer u [authenticeer de bestemming](#authenticate).
+U hebt uw [!DNL Mailchimp] **API sleutel** nodig om de [!DNL Mailchimp Interest Categories] bestemming tegen uw [!DNL Mailchimp] rekening voor authentiek te verklaren. De **API sleutel** dient als **Wachtwoord** wanneer u [ de bestemming ](#authenticate) voor authentiek verklaart.
 
-Als u geen **API-sleutel**, meld u aan bij uw [!DNL Mailchimp] en verwijst naar de [!DNL Mailchimp] documentatie over [hoe te om uw API sleutel te produceren](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
+Als u uw **API sleutel** niet hebt, teken binnen aan uw [!DNL Mailchimp] rekening en verwijs naar de [!DNL Mailchimp] documentatie op [ hoe te om uw API sleutel ](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) te produceren.
 
-Een voorbeeld van een API-sleutel is `0123456789abcdef0123456789abcde-us14`.
+Een voorbeeld van een API-sleutel is `0123456789abcdef0123456789abcde-us14` .
 
 >[!IMPORTANT]
 >
->Als u de **API-sleutel**, noteer het omdat u het na generatie niet meer kunt openen.
+>Als u de **API sleutel** produceert, schrijf het neer aangezien u niet tot het na generatie zult kunnen toegang hebben.
 
-#### Identificeer uw [!DNL Mailchimp] datacenter {#identify-data-center}
+#### Uw [!DNL Mailchimp] datacenter identificeren {#identify-data-center}
 
-Vervolgens moet u uw [!DNL Mailchimp] datacenter. Meld u hiertoe aan bij uw [!DNL Mailchimp] en navigeer naar de **Sectie API-sleutels** van uw account.
+Vervolgens moet u het datacenter van [!DNL Mailchimp] identificeren. Dit doen, login aan uw [!DNL Mailchimp] rekening en navigeer aan de **API sleutelensectie** van uw rekening.
 
-De datacenter-id is de eerste sectie van de URL die u in uw browser ziet. Als de URL *https://`us14`.mailchimp.com/account/api/*, dan is het datacenter `us14`.
+De datacenter-id is de eerste sectie van de URL die u in uw browser ziet. Als URL *https:// `us14` .mailchimp.com/account/api/* is, dan is het gegevenscentrum `us14`.
 
-De datacenter-id wordt ook toegevoegd aan de API-sleutel in het formulier *key-dc*; bijvoorbeeld als uw API-sleutel `0123456789abcdef0123456789abcde-us14`, dan is het datacenter `us14`.
+Identiteitskaart van het gegevenscentrum wordt ook toegevoegd aan uw API sleutel in de vorm *key-dc*; bijvoorbeeld, als uw API sleutel `0123456789abcdef0123456789abcde-us14` is, dan is het gegevenscentrum `us14`.
 
-De waarde van het datacenter noteren *(`us14` in dit voorbeeld)*. U hebt deze waarde nodig wanneer u [de bestemmingsdetails invullen](#destination-details).
+Schrijf de waarde van het gegevenscentrum *(`us14` in dit voorbeeld) neer*. U zult deze waarde nodig hebben wanneer u [ de bestemmingsdetails ](#destination-details) vult.
 
-Raadpleeg voor meer informatie de bijsluiter. [[!DNL Mailchimp] Grondbeginselen van documentatie](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
+Als u verdere begeleiding vereist, verwijs naar de [[!DNL Mailchimp]  documentatie van Grondbeginselen ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
 
 ### Guardrails {#guardrails}
 
-Zie de [!DNL Mailchimp] [tarieflimieten](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) voor nadere informatie over de door de [!DNL Mailchimp] API.
+Verwijs naar [!DNL Mailchimp] [ tariefgrenzen ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) voor gedetailleerde informatie over de grenzen die door [!DNL Mailchimp] API worden opgelegd.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Mailchimp] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
+[!DNL Mailchimp] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -88,8 +88,8 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -99,8 +99,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een publiek samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Voor elk publiek dat is geselecteerd in Platform, wordt de bijbehorende [!DNL Mailchimp Tags] de segmentstatus wordt bijgewerkt met de publieksstatus van Platform.</li></ul> |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een publiek samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)* volgens uw veldtoewijzing.</li><li> Voor elk publiek dat is geselecteerd in Platform, wordt de bijbehorende [!DNL Mailchimp Tags] segmentstatus bijgewerkt met de publieksstatus van Platform.</li></ul> |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -108,99 +108,102 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u de **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
-Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, zoeken naar [!DNL Mailchimp Tags]. U kunt de locatie ook onder de **[!UICONTROL Email marketing]** categorie.
+Zoek in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** naar [!DNL Mailchimp Tags] . U kunt de locatie ook in de categorie **[!UICONTROL Email marketing]** vinden.
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden hieronder in en selecteert u **[!UICONTROL Connect to destination]**.
+Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden hieronder in en selecteert u **[!UICONTROL Connect to destination]** .
 
 | Veld | Beschrijving |
 | --- | --- |
 | **[!UICONTROL Username]** | Uw [!DNL Mailchimp] gebruikersnaam. |
-| **[!UICONTROL Password]** | Uw [!DNL Mailchimp] **API-sleutel**, die u in het [Gather [!DNL Mailchimp] geloofsbrieven](#gather-credentials) sectie.<br> Uw API-sleutel bestaat uit `{KEY}-{DC}`, waarbij de `{KEY}` gedeelte verwijst naar de waarde die in de [[!DNL Mailchimp] API-sleutel](#gather-credentials) en de `{DC}` portie verwijst naar de [[!DNL Mailchimp] datacenter](#identify-data-center). <br>U kunt de `{KEY}` of het hele formulier.<br> Als uw API-sleutel bijvoorbeeld <br>*`0123456789abcdef0123456789abcde-us14`*,<br> u kunt *`0123456789abcdef0123456789abcde`*of *`0123456789abcdef0123456789abcde-us14`*als de waarde. |
+| **[!UICONTROL Password]** | Uw [!DNL Mailchimp] **API sleutel**, die u neer in de [ Gather  [!DNL Mailchimp]  geloofsbrieven ](#gather-credentials) sectie had genoteerd.<br> Uw API sleutel neemt de vorm van `{KEY}-{DC}`, waar het `{KEY}` gedeelte naar de waarde verwijst neer in de [[!DNL Mailchimp]  API belangrijkste ](#gather-credentials) sectie en het `{DC}` gedeelte verwijst naar het [[!DNL Mailchimp]  gegevenscentrum ](#identify-data-center). <br> U kunt of het `{KEY}` gedeelte of het volledige vorm verstrekken.<br> Als uw API-sleutel bijvoorbeeld <br>*`0123456789abcdef0123456789abcde-us14`*is, <br> kunt u *`0123456789abcdef0123456789abcde`*of *`0123456789abcdef0123456789abcde-us14`*als waarde opgeven. |
 
 {style="table-layout:auto"}
 
-![Schermopname van de gebruikersinterface van het platform waarin wordt getoond hoe te voor authentiek te verklaren.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
+{het schermschot van het platform UI die tonen hoe te voor authentiek te verklaren.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)![
 
-Als de verstrekte gegevens geldig zijn, geeft de interface een **[!UICONTROL Connected]** status met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
+Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **[!UICONTROL Connected]** weer met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![Platform UI het schermschot die de bestemmingsdetails tonen.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
+{het schermschot van het platform UI die de bestemmingsdetails toont.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)![
 
 | Veld | Beschrijving |
 | --- | --- |
 | **[!UICONTROL Name]** | Een naam waarmee u deze bestemming in de toekomst zult erkennen. |
 | **[!UICONTROL Description]** | Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren. |
-| **[!UICONTROL Data center]** | Uw [!DNL Mailchimp] account `data center`. Zie de [Identificeren [!DNL Mailchimp] datacenter](#identify-data-center) voor eventuele richtsnoeren. |
-| **[!UICONTROL Audience Name (Please enter Data center first)]** | Nadat u uw **[!UICONTROL Data center]**, wordt deze vervolgkeuzelijst automatisch gevuld met de publieksnamen van uw [!DNL Mailchimp] account. Selecteer het publiek dat u wilt bijwerken met gegevens van Platform. |
+| **[!UICONTROL Data center]** | Uw [!DNL Mailchimp] account `data center` . Verwijs naar [ identificeer  [!DNL Mailchimp]  gegevenscentrum ](#identify-data-center) sectie voor om het even welke begeleiding. |
+| **[!UICONTROL Audience Name (Please enter Data center first)]** | Nadat u uw **[!UICONTROL Data center]** hebt ingevoerd, wordt deze vervolgkeuzelijst automatisch gevuld met de publieksnamen van uw [!DNL Mailchimp] -account. Selecteer het publiek dat u wilt bijwerken met gegevens van Platform. |
 
 {style="table-layout:auto"}
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lezen [Stimulansen voor het publiek naar streamingdoelen activeren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Lees [ actief publiek aan het stromen bestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
-Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL Mailchimp Tags] doel, moet u door de stap van de gebiedstoewijzing gaan. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming.
+Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL Mailchimp Tags] -bestemming wilt verzenden, moet u de stap voor veldtoewijzing doorlopen. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming.
 
-Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL Mailchimp Tags] doelvelden, voert u de volgende stappen uit:
+Voer de onderstaande stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL Mailchimp Tags] -doelvelden:
 
-1. In de **[!UICONTROL Mapping]** stap, selecteren **[!UICONTROL Add new mapping]**. Er verschijnt een nieuwe toewijzingsrij op het scherm.
-1. In de **[!UICONTROL Select source field]** venster, kiest u **[!UICONTROL Select identity namespace]** en selecteert u de `Email` naamruimte identiteit.
+1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . Er verschijnt een nieuwe toewijzingsrij op het scherm.
+1. Kies **[!UICONTROL Select identity namespace]** in het `Email` -venster en selecteer de naamruimte van de identiteit.**[!UICONTROL Select source field]**
 
-   ![Schermopname van platformgebruikersinterface met Source-veld als e-mail vanuit naamruimte identity.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+   {het schermschot van het platform UI met het gebied van Source als E-mail van identiteitsnamespace.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)![
 
-1. In de **[!UICONTROL Select target field]** venster, kiest u **[!UICONTROL Select identity namespace]** en selecteert u de `Email` naamruimte identiteit.
+1. Kies **[!UICONTROL Select identity namespace]** in het `Email` -venster en selecteer de naamruimte van de identiteit.**[!UICONTROL Select target field]**
 
-   ![Schermopname van platformgebruikersinterface met doelveld als e-mail vanuit naamruimte Identiteit.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
+   {het schermschot van het platform UI met het gebied van het Doel als E-mail van identiteitsnamespace.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)![
 
-   De toewijzingen tussen uw XDM-profielschema en [!DNL Mailchimp Tags] is als volgt: | Source-veld | Doelveld | Verplicht | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| Ja |
+   De toewijzingen tussen uw XDM-profielschema en [!DNL Mailchimp Tags] zijn als volgt:
+| Source-veld | Doelveld | Verplicht |
+| — | — | — |
+|`IdentityMap: Email`|`Identity: Email`| Ja |
 
    Hieronder ziet u een voorbeeld met de voltooide toewijzingen:
-   ![Voorbeeld van platformgebruikersinterface met schermafbeeldingen die veldtoewijzingen weergeven.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
+   ![ het schermschot van het Platform UI die gebiedsafbeeldingen toont.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
 
-Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Gegevens exporteren valideren {#exported-data}
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
-1. Aanmelden bij uw [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Navigeer vervolgens naar de **[!DNL Audience]** > **[!DNL All Contacts]** pagina en controleer of de contacten van het publiek zijn toegevoegd en de contacten binnen het publiek zijn bijgewerkt met de publieksnaam.
-   ![Brievenchimp UI het schermschot die de pagina van het Publiek toont.](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
+1. Meld u aan bij uw [[!DNL Mailchimp] ](https://login.mailchimp.com/) -account. Navigeer vervolgens naar de pagina **[!DNL Audience]** > **[!DNL All Contacts]** en controleer of de contacten van het publiek zijn toegevoegd en of de contacten binnen het publiek zijn bijgewerkt met de naam van het publiek.
+   {het schermschot van 0} Mailchimp UI die de pagina van het Publiek toont.](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)![
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
 
 ## Fouten en problemen oplossen {#errors-and-troubleshooting}
 
-Zie de [[!DNL Mailchimp] foutpagina](https://mailchimp.com/developer/marketing/docs/errors/) voor een uitgebreide lijst van status- en foutcodes met uitleg.
+Verwijs naar de [[!DNL Mailchimp]  pagina van fouten ](https://mailchimp.com/developer/marketing/docs/errors/) voor een uitvoerige lijst van status en foutencodes met verklaringen.
 
 ## Aanvullende bronnen {#additional-resources}
 
-Aanvullende nuttige informatie uit de [!DNL Mailchimp] de documentatie is hieronder:
-* [Aan de slag met [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
-* [Aan de slag met Soorten publiek](https://mailchimp.com/help/getting-started-audience/)
-* [Een publiek maken](https://mailchimp.com/help/create-audience/)
-* [Aan de slag met tags](https://mailchimp.com/help/getting-started-tags/)
-* [Marketing-API](https://mailchimp.com/developer/marketing/api/)
+Hieronder vindt u aanvullende nuttige informatie uit de documentatie van [!DNL Mailchimp] :
+* [ Begonnen het worden met  [!DNL Mailchimp] ](https://mailchimp.com/help/getting-started-with-mailchimp/)
+* [ Begonnen het worden met Soorten publiek ](https://mailchimp.com/help/getting-started-audience/)
+* [ creeer een Publiek ](https://mailchimp.com/help/create-audience/)
+* [ Begonnen het worden met Markeringen ](https://mailchimp.com/help/getting-started-tags/)
+* [ Marketing API ](https://mailchimp.com/developer/marketing/api/)

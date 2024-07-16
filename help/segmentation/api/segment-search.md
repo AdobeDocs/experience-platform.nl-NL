@@ -6,7 +6,7 @@ exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1189'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -18,7 +18,7 @@ Deze gids verstrekt informatie om u te helpen het Onderzoek van het Segment bete
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 Naast de vereiste kopballen die in de begonnen sectie worden geschetst, vereisen alle verzoeken aan het eindpunt van het Onderzoek van het Segment de volgende extra kopbal:
 
@@ -28,7 +28,7 @@ Naast de vereiste kopballen die in de begonnen sectie worden geschetst, vereisen
 
 Dit onderzoekseindpunt kan worden gebruikt om over diverse namespaces te zoeken, die een lijst van de resultaten van het onderzoeksaantal terugkeren. U kunt meerdere parameters gebruiken, gescheiden door ampersands (&amp;).
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /search/namespaces?schema.name={SCHEMA}
@@ -37,8 +37,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | Parameters | Beschrijving |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Vereist)** Wanneer {SCHEMA} vertegenwoordigt de waarde van de schemaklasse verbonden aan de onderzoeksvoorwerpen. Alleen `_xdm.context.segmentdefinition` wordt ondersteund. |
-| `s={SEARCH_TERM}` | *(Optioneel)* Wanneer {SEARCH_TERM} vertegenwoordigt een vraag die aan de implementatie van Microsoft in overeenstemming is [Zoeksyntaxis van Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Als er geen zoekterm is opgegeven, worden alle records gekoppeld aan `schema.name` wordt geretourneerd. Een meer gedetailleerde uitleg vindt u in het gedeelte [aanhangsel](#appendix) van dit document. |
+| `schema.name={SCHEMA}` | **(Vereist)** Where {SCHEMA} vertegenwoordigt de schemaklasse die aan de onderzoeksvoorwerpen wordt geassocieerd. Momenteel wordt alleen `_xdm.context.segmentdefinition` ondersteund. |
+| `s={SEARCH_TERM}` | *(Facultatief)* waar {SEARCH_TERM} een vraag vertegenwoordigt die aan de implementatie van Microsoft van [ het onderzoekssyntaxis van Lucene ](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax) in overeenstemming is. Als er geen zoekterm is opgegeven, worden alle records geretourneerd die aan `schema.name` zijn gekoppeld. Een meer gedetailleerde verklaring kan in [ bijlage ](#appendix) van dit document worden gevonden. |
 
 **Verzoek**
 
@@ -53,7 +53,7 @@ curl -X GET \
     -H 'x-ups-search-version: 1.0' 
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert HTTP status 200 met de volgende informatie.
 
@@ -87,7 +87,7 @@ Een succesvolle reactie retourneert HTTP status 200 met de volgende informatie.
 
 Dit zoekeindpunt kan worden gebruikt om een lijst van alle volledige tekst geïndexeerde voorwerpen binnen gespecificeerde namespace terug te winnen. U kunt meerdere parameters gebruiken, gescheiden door ampersands (&amp;).
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}
@@ -97,12 +97,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameters | Beschrijving |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Vereist)** Wanneer {SCHEMA} bevat de schemaklasse die aan de onderzoeksvoorwerpen wordt geassocieerd. Alleen `_xdm.context.segmentdefinition` wordt ondersteund. |
-| `namespace={NAMESPACE}` | **(Vereist)** Wanneer {NAMESPACE} bevat de naamruimte die u wilt doorzoeken. |
-| `s={SEARCH_TERM}` | *(Optioneel)* Wanneer {SEARCH_TERM} bevat een query die voldoet aan de Microsoft-implementatie van [Zoeksyntaxis van Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Als er geen zoekterm is opgegeven, worden alle records gekoppeld aan `schema.name` wordt geretourneerd. Een meer gedetailleerde uitleg vindt u in het gedeelte [aanhangsel](#appendix) van dit document. |
-| `entityId={ENTITY_ID}` | *(Optioneel)* Beperkt uw zoekopdracht tot in de toegewezen map, opgegeven met {ENTITY_ID}. |
-| `limit={LIMIT}` | *(Optioneel)* Wanneer {LIMIT} geeft het aantal zoekresultaten aan dat moet worden geretourneerd. De standaardwaarde is 50. |
-| `page={PAGE}` | *(Optioneel)* Wanneer {PAGE} staat voor het paginanummer dat wordt gebruikt voor pagineringsresultaten van de doorzochte query. Het paginanummer begint bij **0**. |
+| `schema.name={SCHEMA}` | **(Vereist)** Where {SCHEMA} bevat de schemaklasse die aan de onderzoeksvoorwerpen wordt geassocieerd. Momenteel wordt alleen `_xdm.context.segmentdefinition` ondersteund. |
+| `namespace={NAMESPACE}` | **(Vereist)** Where {NAMESPACE} bevat de naamruimte waarin u wilt zoeken. |
+| `s={SEARCH_TERM}` | *(Facultatief)* waar {SEARCH_TERM} een vraag bevat die aan de implementatie van Microsoft van [ het onderzoekssyntaxis van Lucene ](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax) in overeenstemming is. Als er geen zoekterm is opgegeven, worden alle records geretourneerd die aan `schema.name` zijn gekoppeld. Een meer gedetailleerde verklaring kan in [ bijlage ](#appendix) van dit document worden gevonden. |
+| `entityId={ENTITY_ID}` | *(Facultatief)* beperkt uw onderzoek tot binnen de aangewezen omslag, die met {ENTITY_ID} wordt gespecificeerd. |
+| `limit={LIMIT}` | *(Optioneel)* Waar {LIMIT} staat voor het aantal zoekresultaten dat moet worden geretourneerd. De standaardwaarde is 50. |
+| `page={PAGE}` | *(Optioneel)* Where {PAGE} staat voor het paginanummer dat wordt gebruikt voor pagineringsresultaten van de doorzochte query. Gelieve te merken op dat het paginaaantal bij **0** begint. |
 
 
 **Verzoek**
@@ -118,7 +118,7 @@ curl -X GET \
     -H 'x-ups-search-version: 1.0' 
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met resultaten die overeenkomen met de zoekquery.
 
@@ -160,7 +160,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met resultaten die overeenkome
 
 Dit zoekeindpunt kan worden gebruikt om de structurele informatie over het gevraagde onderzoeksvoorwerp te krijgen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY_ID}
@@ -168,9 +168,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameters | Beschrijving |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Vereist)** Wanneer {SCHEMA} bevat de schemaklasse die aan de onderzoeksvoorwerpen wordt geassocieerd. Alleen `_xdm.context.segmentdefinition` wordt ondersteund. |
-| `namespace={NAMESPACE}` | **(Vereist)** Wanneer {NAMESPACE} bevat de naamruimte die u wilt doorzoeken. |
-| `entityId={ENTITY_ID}` | **(Vereist)** De id van het zoekobject waarover u de structuurgegevens wilt ophalen, opgegeven met {ENTITY_ID}. |
+| `schema.name={SCHEMA}` | **(Vereist)** Where {SCHEMA} bevat de schemaklasse die aan de onderzoeksvoorwerpen wordt geassocieerd. Momenteel wordt alleen `_xdm.context.segmentdefinition` ondersteund. |
+| `namespace={NAMESPACE}` | **(Vereist)** Where {NAMESPACE} bevat de naamruimte waarin u wilt zoeken. |
+| `entityId={ENTITY_ID}` | **(Vereist)** identiteitskaart van het onderzoeksvoorwerp u de structurele informatie over wilt krijgen, die met {ENTITY_ID} wordt gespecificeerd. |
 
 **Verzoek**
 
@@ -185,7 +185,7 @@ curl -X GET \
     -H 'x-ups-search-version: 1.0' 
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde structurele informatie over het gevraagde zoekobject.
 
@@ -223,9 +223,9 @@ Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe Segment Sea
 
 ## Bijlage {#appendix}
 
-In de volgende secties vindt u aanvullende informatie over de werking van zoektermen. Zoekopdrachten worden als volgt geschreven: `s={FieldName}:{SearchExpression}`. Als u bijvoorbeeld wilt zoeken naar een segmentdefinitie met de naam AAM of [!DNL Platform]gebruikt u de volgende zoekquery: `s=segmentName:AAM%20OR%20Platform`.
+In de volgende secties vindt u aanvullende informatie over de werking van zoektermen. Zoekopdrachten worden als volgt geschreven: `s={FieldName}:{SearchExpression}` . Als u bijvoorbeeld zoekt naar een segmentdefinitie met de naam AAM of [!DNL Platform] , gebruikt u de volgende zoekquery: `s=segmentName:AAM%20OR%20Platform` .
 
->  Voor beste praktijken, zou de onderzoeksuitdrukking HTML gecodeerd moeten zijn, zoals het hierboven getoonde voorbeeld.
+>  Voor de beste werkwijzen moet de zoekopdracht worden gecodeerd met HTML, net als in het bovenstaande voorbeeld.
 
 ### Zoeken in velden {#search-fields}
 
@@ -249,15 +249,15 @@ De volgende lijst maakt een lijst een lijst van specifieke van hoe de onderzoeks
 | Voorbeeld van zoekopdracht | Beschrijving |
 | ------------------------- | ----------- |
 | foo | Zoeken naar een willekeurig woord. Dit resulteert in resultaten als het woord &quot;foo&quot; wordt gevonden in een van de doorzoekbare velden. |
-| foo AND bar | Een Booleaanse zoekopdracht. Dit resulteert in resultaten als **beide** de woorden &quot;foo&quot; en &quot;bar&quot; staan in de doorzoekbare velden. |
-| foo OR bar | Een Booleaanse zoekopdracht. Dit resulteert in resultaten als **ofwel** het woord &quot;foo&quot; of het woord &quot;bar&quot; staan in de doorzoekbare velden. |
+| foo AND bar | Een Booleaanse zoekopdracht. Dit zal resultaten terugkeren als **zowel** de woorden &quot;foo&quot;en &quot;bar&quot;in om het even welke doorzoekbare gebieden worden gevonden. |
+| foo OR bar | Een Booleaanse zoekopdracht. Dit zal resultaten terugkeren als **of** het woord &quot;foo&quot;of het woord &quot;bar&quot;in om het even welke doorzoekbare gebieden worden gevonden. |
 | foo NOT bar | Een Booleaanse zoekopdracht. Dit resulteert in resultaten als het woord &quot;foo&quot; wordt gevonden maar het woord &quot;bar&quot; in geen van de doorzoekbare velden wordt gevonden. |
-| naam: foo AND bar | Een Booleaanse zoekopdracht. Dit resulteert in resultaten als **beide** de woorden &quot;foo&quot; en &quot;bar&quot; staan in het veld &quot;name&quot;. |
+| naam: foo AND bar | Een Booleaanse zoekopdracht. Dit zal resultaten terugkeren als **zowel** de woorden &quot;foo&quot;en &quot;bar&quot;op het &quot;naam&quot;gebied worden gevonden. |
 | run* | Een jokerteken zoeken. Als u een sterretje (*) gebruikt, komt dit overeen met 0 of meer tekens. Dit betekent dat het resultaat wordt geretourneerd als de inhoud van een doorzoekbaar veld een woord bevat dat begint met &#39;run&#39;. Dit resulteert bijvoorbeeld in resultaten als de woorden &quot;run&quot;, &quot;run&quot;, &quot;runner&quot; of &quot;runt&quot; worden weergegeven. |
 | cam? | Een jokerteken zoeken. Een vraagteken (?) gebruiken komt overeen met slechts één teken. Dit betekent dat de resultaten worden geretourneerd als de inhoud van een doorzoekbaar veld begint met &#39;cam&#39; en een extra letter. Dit resulteert bijvoorbeeld in resultaten als de woorden &quot;kamp&quot; of &quot;cams&quot; worden weergegeven, maar retourneert geen resultaten als de woorden &quot;camera&quot; of &quot;campfire&quot; worden weergegeven. |
 | &quot;blue umbrella&quot; | Een woordzoekopdracht. Dit levert resultaten op als de inhoud van een doorzoekbaar veld de volledige uitdrukking &quot;blauwe paraplu&quot; bevat. |
-| blauw\~ | Een vage zoekopdracht. U kunt desgewenst een getal tussen 0 en 2 achter de tilde (~) plaatsen om de bewerkingsafstand op te geven. &quot;blue\~1&quot; zou bijvoorbeeld &quot;blue&quot;, &quot;blues&quot; of &quot;lijm&quot; zijn. Vage zoekopdracht kan **alleen** worden toegepast op termen, niet op woordgroepen. U kunt echter wel tildes toevoegen aan het einde van elk woord in een woordgroep. Dus &#39;camping\~ in\~ the\~ zomer\~&#39; komt overeen met &#39;kamping in de zomer&#39;. |
-| &quot;hotel Airport&quot;\~5 | Een nabijheidszoekopdracht. Dit type zoekopdracht wordt gebruikt om termen te zoeken die in een document dicht bij elkaar liggen. De woordgroep `"hotel airport"~5` de termen &quot; hotel &quot; en &quot; luchthaven &quot; zullen in een document in 5 woorden van elkaar voorkomen . |
-| `/a[0-9]+b$/` | Een zoekopdracht met een reguliere expressie. Dit type van onderzoek vindt een gelijke die op de inhoud tussen voorwaartse schuine strepen &quot;/&quot;wordt gebaseerd, zoals die in de klasse RegExp wordt gedocumenteerd. Als u bijvoorbeeld documenten wilt zoeken die &quot;motel&quot; of &quot;hotel&quot; bevatten, geeft u `/[mh]otel/`. Zoekopdrachten met reguliere expressies worden vergeleken met afzonderlijke woorden. |
+| blauw\~ | Een vage zoekopdracht. U kunt desgewenst een getal tussen 0 en 2 achter de tilde (~) plaatsen om de bewerkingsafstand op te geven. &quot;blue\~1&quot; zou bijvoorbeeld &quot;blue&quot;, &quot;blues&quot; of &quot;lijm&quot; zijn. Het vage onderzoek kan **slechts** worden toegepast op termijnen, niet uitdrukkingen. U kunt echter wel tildes toevoegen aan het einde van elk woord in een woordgroep. Dus &#39;camping\~ in\~ the\~ zomer\~&#39; komt overeen met &#39;kamping in de zomer&#39;. |
+| &quot;hotel Airport&quot;\~5 | Een nabijheidszoekopdracht. Dit type zoekopdracht wordt gebruikt om termen te zoeken die in een document dicht bij elkaar liggen. Met de uitdrukking `"hotel airport"~5` vindt u bijvoorbeeld de termen &quot;hotel&quot; en &quot;luchthaven&quot; binnen 5 woorden van elkaar in een document. |
+| `/a[0-9]+b$/` | Een zoekopdracht met een reguliere expressie. Dit type van onderzoek vindt een gelijke die op de inhoud tussen voorwaartse schuine strepen &quot;/&quot;wordt gebaseerd, zoals die in de klasse RegExp wordt gedocumenteerd. Als u bijvoorbeeld documenten met &quot;motel&quot; of &quot;hotel&quot; wilt zoeken, geeft u `/[mh]otel/` op. Zoekopdrachten met reguliere expressies worden vergeleken met afzonderlijke woorden. |
 
-Voor meer gedetailleerde documentatie over de vraagsyntaxis, gelieve te lezen [Syntaxisdocumentatie Lucene-query](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).
+Voor meer gedetailleerde documentatie over de vraagsyntaxis, te lezen gelieve de [ documentatie van de de vraagsyntaxis van Lucene ](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).

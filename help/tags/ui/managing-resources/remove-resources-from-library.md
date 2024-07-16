@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Wanneer u niet meer een middel een effect binnen een bouwstijl wilt hebben, moet u het uit de bibliotheek verwijderen die dat middel bevat en een nieuwe bouwstijl creëren.
 
@@ -49,7 +49,7 @@ In plaats daarvan moet u de resource uitschakelen. Dit het onbruikbaar maken is 
    1. Selecteer de bron in de lijstweergave.
    1. Selecteer **[!UICONTROL Disable]**.
 1. Maak een nieuwe ontwikkelingsbibliotheek.
-1. Voeg de `latest` versie van de uitgeschakelde bron.
+1. Voeg de `latest` -versie van de uitgeschakelde bron toe.
 1. Opslaan en samenstellen.
 1. Volg uw normale proces voor het promoten van bibliotheken naar Productie.
-1. Publiceren naar productie om de bron te verwijderen.
+1. Publish to Production om de resource te verwijderen.

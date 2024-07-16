@@ -13,21 +13,21 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-[!DNL DataX] is een aggregaat [!DNL Verizon Media/Yahoo] infrastructuur die gastheren diverse componenten die toelaten [!DNL Verizon Media/Yahoo] gegevens op een veilige, geautomatiseerde en schaalbare manier met haar externe partners uit te wisselen.
+[!DNL DataX] is een geaggregeerde [!DNL Verizon Media/Yahoo] -infrastructuur die fungeert als host voor verschillende componenten, die [!DNL Verizon Media/Yahoo] in staat stellen gegevens op een veilige, geautomatiseerde en schaalbare manier uit te wisselen met externe partners.
 
 >[!IMPORTANT]
 >
->Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en gehandhaafd door [!DNL Verizon Media/Yahoo]s [!DNL DataX] team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
+>Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het [!DNL DataX] -team van [!DNL Verizon Media/Yahoo] . Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct in [ dataops@verizonmedia.com](mailto:dataops@verizonmedia.com) te contacteren
 
 ## Vereisten {#prerequisites}
 
-**MDM-id**
+**identiteitskaart MDM**
 
-Dit is een unieke id in [!DNL Yahoo DataX] en het is een verplicht veld voor het instellen van gegevensexport naar deze bestemming . Neem contact op met uw [!DNL Yahoo DataX] accountmanager.
+Dit is een unieke id in [!DNL Yahoo DataX] en het is een verplicht veld voor het instellen van gegevensexport naar dit doel. Neem contact op met uw accountmanager van [!DNL Yahoo DataX] als u deze id niet kent.
 
-**Metagegevens over taxonomie**
+**meta-gegevens van de Taxonomie**
 
-Het middel Taxonomy bepaalt een uitbreiding over de Basis [!DNL DataX] Metagegevensstructuur
+De bron Taxonomy definieert een extensie via de structuur Metagegevens basis [!DNL DataX]
 
 ```
 {
@@ -48,15 +48,15 @@ Het middel Taxonomy bepaalt een uitbreiding over de Basis [!DNL DataX] Metagegev
 }
 ```
 
-Meer informatie over [Metagegevens over taxonomie](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) in de [!DNL DataX] ontwikkelaarsdocumentatie.
+Lees meer over [ Metagegevens van de Taxonomie ](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) in de [!DNL DataX] ontwikkelaarsdocumentatie.
 
 ## Snelheidslimieten en guardrails {#rate-limits-guardrails}
 
 >[!IMPORTANT]
 >
->Bij activering van meer dan 100 soorten publiek naar [!DNL Verizon Media/Yahoo DataX], zou u tarief beperkende fouten van de bestemming kunnen ontvangen. Wanneer u het publiek activeert op deze bestemming, probeert u minder dan 100 soorten publiek te activeren in één activeringsgegevensstroom. Als u meer segmenten moet activeren, maakt u een nieuw doel op hetzelfde account.
+>Als u meer dan 100 soorten publiek activeert naar [!DNL Verizon Media/Yahoo DataX] , krijgt u mogelijk een foutmelding met betrekking tot de snelheid van het doel. Wanneer u het publiek activeert op deze bestemming, probeert u minder dan 100 soorten publiek te activeren in één activeringsgegevensstroom. Als u meer segmenten moet activeren, maakt u een nieuw doel op hetzelfde account.
 
-[!DNL DataX] is tariefbeperkt binnen de limieten voor taxonomie en publieksposten die in de [DataX-documentatie](https://developer.verizonmedia.com/datax/guide/rate-limits/).
+[!DNL DataX] is tarief-beperkt per de quotagrenzen voor taxonomie en publieksposten die in de [ documentatie DataX ](https://developer.verizonmedia.com/datax/guide/rate-limits/) worden geschetst.
 
 
 | Foutcode | Foutbericht | Beschrijving |
@@ -67,12 +67,12 @@ Meer informatie over [Metagegevens over taxonomie](https://developer.verizonmedi
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Verizon Media] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+[!DNL Verizon Media] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen. |
-| GAID | Google-advertentie-id | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
+| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Platform] . |
+| GAID | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
 
 {style="table-layout:auto"}
@@ -84,51 +84,51 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (E-mail, GAID, IDFA) die worden gebruikt in de bestemming Verizon Media. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Gebruiksscenario’s {#use-cases}
 
-[!DNL DataX] API&#39;s zijn beschikbaar voor adverteerders die zich willen richten op een specifieke doelgroep die e-mailadressen heeft verwijderd in [!DNL Verizon Media] (VMG) kan snel een nieuw publiek creëren en de gewenste publieksgroep duwen gebruikend de bijna-real-time API van VMG.
+[!DNL DataX] API&#39;s zijn beschikbaar voor adverteerders die een specifieke doelgroep willen activeren die e-mailadressen heeft uitgeschakeld in [!DNL Verizon Media] (VMG), zodat ze snel een nieuw publiek kunnen maken en de gewenste doelgroep kunnen duwen met de vrijwel realtime API van VMG.
 
 ## Verbinden met doel {#connect}
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-![Yahoo DataX-doelkaart in platforminterface](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
+![ Yahoo DataX bestemmingskaart in Platform UI ](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven.
 
 ### Verbindingsparameters {#parameters}
 
-while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
+Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
-* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL MDM ID]**: Dit is een unieke id in [!DNL Yahoo DataX] en het is een verplicht veld voor het instellen van gegevensexport naar deze bestemming . Neem contact op met uw [!DNL Yahoo DataX] accountmanager.  Met MDM IDs, kunnen de gegevens voor gebruik slechts met een bepaalde reeks exclusieve gebruikers (zoals eerste partijgegevens voor adverteerders) worden beperkt.
+* **[!UICONTROL MDM ID]**: dit is een unieke id in [!DNL Yahoo DataX] en het is een verplicht veld voor het instellen van gegevens die naar dit doel worden geëxporteerd. Neem contact op met uw accountmanager van [!DNL Yahoo DataX] als u deze id niet kent.  Met MDM IDs, kunnen de gegevens voor gebruik slechts met een bepaalde reeks exclusieve gebruikers (zoals eerste partijgegevens voor adverteerders) worden beperkt.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lezen [Profielen en doelgroepen activeren](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar bestemmingen.
+Lees [ activeer profielen en publiek aan een bestemming ](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan bestemmingen.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Aanvullende bronnen {#additional-resources}
 
-Lees voor meer informatie de [!DNL Yahoo/Verizon Media] [documentatie over [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/).
+Voor meer informatie, lees de [!DNL Yahoo/Verizon Media] [ documentatie over  [!DNL DataX] ](https://developer.verizonmedia.com/datax/guide/).

@@ -13,13 +13,13 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](./term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](./term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Tags in Adobe Experience Platform zijn de volgende generatie mogelijkheden voor tagbeheer van Adobe. Met labels kunnen klanten eenvoudig alle analytische, marketing- en advertentietags implementeren en beheren die nodig zijn om relevante klantervaringen te stimuleren.
 
-Tags stellen iedereen in staat om zijn eigen integratie te bouwen en te onderhouden, zogenaamde *extensions*. Deze extensies zijn beschikbaar voor [!DNL Adobe Experience Cloud] klanten in een app-store-ervaring zodat ze hun tags snel kunnen installeren, configureren en implementeren.
+De markeringen machtigen iedereen om hun eigen integratie te bouwen en te handhaven, genoemd *uitbreidingen*. Deze extensies zijn beschikbaar voor [!DNL Adobe Experience Cloud] -klanten in een app-store-ervaring, zodat ze hun tags snel kunnen installeren, configureren en implementeren.
 
-Tags worden aangeboden aan [!DNL Adobe Experience Cloud] klanten als een opgenomen functie voor het toevoegen van waarden.
+Tags worden aan [!DNL Adobe Experience Cloud] klanten aangeboden als een opgenomen functie voor het toevoegen van waarden.
 
 ## Belangrijkste voordelen {#key-benefits}
 
@@ -31,7 +31,7 @@ Tags worden aangeboden aan [!DNL Adobe Experience Cloud] klanten als een opgenom
 
 Gebruik de Help in het product in het rechterdeelvenster voor meer informatie over tags en om aanvullende beschikbare bronnen weer te geven.
 
-![Hiermee worden eigenschappen in de gebruikersinterface voor gegevensverzameling gecodeerd.](./images/ui/tags-overview/tags-properties.png)
+![ de eigenschappen van Markeringen in de Inzameling UI van Gegevens.](./images/ui/tags-overview/tags-properties.png)
 
 ### Extensies {#extensions}
 
@@ -79,13 +79,13 @@ Automatiseer implementaties van individuele technologieën of een groep technolo
 
 ### Lichte, modulaire containertag {#modular-tag}
 
-De inhoud van de container wordt geminiatuurd, inclusief de aangepaste code. Alles is modulair. Als u geen punt nodig hebt, is het niet inbegrepen in uw bibliotheek. Het resultaat is een snelle en compacte implementatie. Zie [Miniatuur](./ui/publishing/builds.md).
+De inhoud van de container wordt geminiatuurd, inclusief de aangepaste code. Alles is modulair. Als u geen punt nodig hebt, is het niet inbegrepen in uw bibliotheek. Het resultaat is een snelle en compacte implementatie. Zie [ Minificatie ](./ui/publishing/builds.md).
 
 ## Overige hooglichten {#other-highlights}
 
 Tags bieden diverse verbeteringen ten opzichte van vergelijkbare systemen, zoals:
 
-* Geen gebruik van `document.write ()` waar Chrome het niet toestaat.
+* Geen gebruik van `document.write ()` waar Chrome dit niet toestaat.
 * De regels van de Boven Pagina en van de Onderkant van de Pagina zijn gebundeld in de belangrijkste bibliotheek om onnodige vraag van HTTP te minimaliseren.
 * Scripts voor aangepaste handelingen binnen een regel kunnen parallel worden geladen, maar worden opeenvolgend uitgevoerd.
 * Als u de regels Boven en Onder aan pagina vermijdt, is de code meestal asynchroon, met een pad naar volledig asynchroon worden.

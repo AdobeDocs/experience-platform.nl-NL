@@ -10,19 +10,19 @@ ht-degree: 0%
 
 ---
 
-# Bewaking van activiteiten bij het doorsturen van gebeurtenissen (bèta)
+# Bewaking van activiteiten bij het doorsturen van gebeurtenissen (Beta)
 
 >[!IMPORTANT]
 >
 >Deze functie bevindt zich momenteel in bèta en uw organisatie heeft er wellicht nog geen toegang toe. De functionaliteit en documentatie kunnen worden gewijzigd.
 
-De **[!UICONTROL Monitoring]** in de UI van de Inzameling van Gegevens staat u toe om gebruikspatronen, fouten te controleren, en tijd van uw gebeurtenis te berekenen door:sturen eigenschappen. Deze gids verstrekt een overzicht op hoog niveau van hoe te om de rapporten te bekijken en te begrijpen die in het lusje worden getoond.
+Het **[!UICONTROL Monitoring]** lusje in de UI van de Inzameling van Gegevens staat u toe om gebruikspatronen, fouten te controleren, en tijd van uw gebeurtenis te berekenen door:sturen eigenschappen. Deze gids verstrekt een overzicht op hoog niveau van hoe te om de rapporten te bekijken en te begrijpen die in het lusje worden getoond.
 
-![Afbeelding met het tabblad Controle in de gebruikersinterface voor gegevensverzameling](../../images/ui/event-forwarding/monitoring/monitoring-tab.png)
+![ Beeld dat het controlelusje in de Inzameling UI van Gegevens toont ](../../images/ui/event-forwarding/monitoring/monitoring-tab.png)
 
 ## Vereisten
 
-Deze gids veronderstelt dat u gebeurtenis hebt gekocht door:sturen en dat u een werkend inzicht in hebt hoe gebeurtenis het door:sturen werkt. Zie de [overzicht van gebeurtenissen doorsturen](./overview.md) voor meer informatie .
+Deze gids veronderstelt dat u gebeurtenis hebt gekocht door:sturen en dat u een werkend inzicht in hebt hoe gebeurtenis het door:sturen werkt. Zie de [ gebeurtenis door:sturen overzicht ](./overview.md) voor meer informatie.
 
 ## Video-overzicht
 
@@ -36,7 +36,7 @@ U kunt metriek binnen een individuele milieu en een bezit, of over alle eigensch
 
 Als u metrische gegevens voor één eigenschap wilt weergeven, selecteert u het vervolgkeuzemenu voor de eigenschap en kiest u de eigenschap of interest in de lijst. Nadat u een eigenschap hebt gekozen, kunt u ook het vervolgkeuzemenu voor de omgeving gebruiken om een belangwekkende omgeving te selecteren.
 
-![Afbeelding met de dropdown-menu&#39;s van de eigenschapomgeving in de gebruikersinterface](../../images/ui/event-forwarding/monitoring/property-environment.png)
+![ Beeld dat de menu&#39;s van het bezitsmilieu dropdown in UI toont ](../../images/ui/event-forwarding/monitoring/property-environment.png)
 
 ## [!UICONTROL Usage]
 
@@ -44,21 +44,21 @@ Als u metrische gegevens voor één eigenschap wilt weergeven, selecteert u het 
 >
 >De gegevens van het gebruik worden elke maand vernieuwd nadat de vorige maand beëindigt.
 
-De **[!UICONTROL Usage]** het rapport toont inkomende en uitgaande vraag voor een bepaalde tijdspanne. De inkomende vraag vertegenwoordigt gegevens die naar gebeurtenis door:sturen worden verzonden. De uitgaande vraag vertegenwoordigt gegevens die van gebeurtenis door:sturen worden verzonden. De **[!UICONTROL Total events]** Het aantal in de linkerruit is de som inkomende en uitgaande vraag voor de bepaalde tijdspanne.
+Het **[!UICONTROL Usage]** rapport toont inkomende en uitgaande vraag voor een bepaalde tijdspanne. De inkomende vraag vertegenwoordigt gegevens die naar gebeurtenis door:sturen worden verzonden. De uitgaande vraag vertegenwoordigt gegevens die van gebeurtenis door:sturen worden verzonden. Het **[!UICONTROL Total events]** aantal in de linkerruit is de som inkomende en uitgaande vraag voor de bepaalde tijdspanne.
 
 ## [!UICONTROL Error Events]
 
-De **[!UICONTROL Error Events]** het rapport toont fouten in geaggregeerd, en uitgesplitst door de reactiecode van HTTP wanneer u uw curseur over de lijngrafiek beweegt. De getoonde fouten zijn van uitgaande vraag en de reactiecodes zijn van het eindpunt dat gebeurtenis door:sturen met interactie heeft.
+Het **[!UICONTROL Error Events]** rapport toont fouten in aggregaat, en uitgesplitst door de reactiecode van HTTP wanneer u uw curseur over het lijndiagram beweegt. De getoonde fouten zijn van uitgaande vraag en de reactiecodes zijn van het eindpunt dat gebeurtenis door:sturen met interactie heeft.
 
 De fouten worden weergegeven voor een bepaalde periode, die kan worden aangepast in het beschikbare vervolgkeuzemenu.
 
-![Afbeelding die het vervolgkeuzemenu van de tijdsperiode voor het rapport Foutgebeurtenissen weergeeft](../../images/ui/event-forwarding/monitoring/error-time.png)
+![ Beeld dat het tijdperiode dropdown menu voor het rapport van de Gebeurtenissen van de Fout toont ](../../images/ui/event-forwarding/monitoring/error-time.png)
 
-Het onderzoeksvakje voor de foutengebeurtenis staat u toe om gebeurtenis te vragen door:sturen om fouten voor een bepaald eindpuntdomein te begrijpen. U moet het exacte domein invoeren, omdat de zoekfunctie geen benaderingen of &quot;vage&quot; overeenkomsten accepteert. Zodra u een nauwkeurig domein verstrekt waarvoor er uitgaande foutengegevens zijn, druk binnengaan en het rapport verfrist zich om uitgaande fouten voor dat domein te tonen. Als u bijvoorbeeld fouten wilt zien van het eindpunt van de Facebook Conversions API, moet het domein worden geschreven zoals `https://graph.facebook.com`.
+Het onderzoeksvakje voor de foutengebeurtenis staat u toe om gebeurtenis te vragen door:sturen om fouten voor een bepaald eindpuntdomein te begrijpen. U moet het exacte domein invoeren, omdat de zoekfunctie geen benaderingen of &quot;vage&quot; overeenkomsten accepteert. Zodra u een nauwkeurig domein verstrekt waarvoor er uitgaande foutengegevens zijn, druk binnengaan en het rapport verfrist zich om uitgaande fouten voor dat domein te tonen. Als u bijvoorbeeld fouten wilt zien bij het eindpunt van de Facebook Conversions API, moet het domein worden geschreven als `https://graph.facebook.com` .
 
 ## [!UICONTROL Compute Time]
 
-De **[!UICONTROL Compute Time]** het rapport toont de compute tijd van alle regels over gebeurtenis die servers door:sturen.
+Het **[!UICONTROL Compute Time]** rapport toont de compute tijd van alle regels over gebeurtenis die servers door:sturen.
 
 >[!NOTE]
 >
@@ -67,6 +67,6 @@ De **[!UICONTROL Compute Time]** het rapport toont de compute tijd van alle rege
 De volgende factoren beïnvloeden de computertijd:
 
 1. Het aantal regels
-2. De complexiteit van de regels, die doorgaans wordt bepaald door de hoeveelheid aangepaste JavaScript die wordt uitgevoerd
+2. De complexiteit van de regels, meestal afhankelijk van de hoeveelheid aangepaste JavaScript die wordt uitgevoerd
 
 Bijvoorbeeld, als een actie in gebeurtenis het door:sturen een eindpunt raakt en dat eindpunt twee seconden vergt om te antwoorden, zal deze twee-tweede latentie niet tegen gegevens berekenen tijd tellen omdat de gebeurtenis het door:sturen enkel wacht en niet actief om het even wat verwerkt. De reactietijd kan niet langer zijn dan 30 seconden, anders zullen de gegevens worden gelaten vallen.

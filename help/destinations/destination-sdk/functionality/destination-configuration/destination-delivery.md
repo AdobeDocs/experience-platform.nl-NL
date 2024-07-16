@@ -5,7 +5,7 @@ exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '563'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -17,12 +17,12 @@ De sectie van de bestemmingslevering wijst op waar de uitgevoerde gegevens gaan 
 
 <!-- When configuring a destination, you must specify an authentication rule and one or more `destinationServerId` parameters, corresponding to the destination servers that define where the data will be delivered to. In most cases, the authentication rule that you should use is `CUSTOMER_AUTHENTICATION`.  -->
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in [configuratieopties](../configuration-options.md) documentatie of zie de volgende pagina&#39;s van het overzicht van bestemmingsconfiguratie:
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ documentatie van configuratieopties ](../configuration-options.md) of zie de volgende pagina&#39;s van het overzicht van bestemmingsconfiguratie:
 
 * [Gebruik Destination SDK om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-U kunt de instellingen voor de levering van de bestemming configureren via `/authoring/destinations` eindpunt. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
+U kunt de montages van de bestemmingslevering via het `/authoring/destinations` eindpunt vormen. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
 * [Een doelconfiguratie maken](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Een doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md)
@@ -31,7 +31,7 @@ In dit artikel worden alle ondersteunde leveringsopties voor de bestemming besch
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Ondersteunde integratietypen {#supported-integration-types}
 
@@ -48,16 +48,16 @@ Wanneer het vormen van uw montages van de bestemmingslevering, kunt u de paramet
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `authenticationRule` | Tekenreeks | Geeft aan hoe [!DNL Platform] moet verbinding maken met uw doel. Ondersteunde waarden:<ul><li>`CUSTOMER_AUTHENTICATION`: Gebruik deze optie als de klanten van het Platform zich bij uw systeem via om het even welke beschreven authentificatiemethodes aanmelden [hier](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: Gebruik deze optie als er een algemeen verificatiesysteem is tussen Adobe en uw doel en de [!DNL Platform] de klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een object credentials maken met de opdracht [aanmeldAPI](../../credentials-api/create-credential-configuration.md) configuratie. </li><li>`NONE`: Gebruik deze optie als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
-| `destinationServerId` | Tekenreeks | De `instanceId` van de [doelserver](../../authoring-api/destination-server/create-destination-server.md) waarnaar u gegevens wilt exporteren. |
-| `deliveryMatchers.type` | Tekenreeks | <ul><li>Wanneer het vormen van bestemmingslevering voor op dossier-gebaseerde bestemmingen, plaats altijd dit aan `SOURCE`.</li><li>Wanneer het vormen van bestemmingslevering voor een het stromen bestemming, `deliveryMatchers` is niet vereist.</li></ul> |
-| `deliveryMatchers.value` | Tekenreeks | <ul><li>Wanneer het vormen van bestemmingslevering voor op dossier-gebaseerde bestemmingen, plaats altijd dit aan `batch`.</li><li>Wanneer het vormen van bestemmingslevering voor een het stromen bestemming, `deliveryMatchers` is niet vereist.</li></ul> |
+| `authenticationRule` | String | Geeft aan hoe [!DNL Platform] verbinding moet maken met uw doel. Ondersteunde waarden:<ul><li>`CUSTOMER_AUTHENTICATION`: Gebruik deze optie als de klanten van het Platform aan uw systeem via om het even welke die authentificatiemethodes [ hier ](customer-authentication.md) worden beschreven login.</li><li>`PLATFORM_AUTHENTICATION`: Gebruik deze optie als er een algemeen verificatiesysteem is tussen Adobe en uw doel en de [!DNL Platform] -klant geen verificatiereferenties hoeft op te geven om verbinding te maken met uw doel. In dit geval, moet u een geloofsbrieven tot stand brengen voorwerp gebruikend de [ geloofsbrieven API ](../../credentials-api/create-credential-configuration.md) configuratie. </li><li>`NONE`: gebruik deze optie als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
+| `destinationServerId` | String | `instanceId` van de [ bestemmingsserver ](../../authoring-api/destination-server/create-destination-server.md) die u gegevens naar wilt uitvoeren. |
+| `deliveryMatchers.type` | String | <ul><li>Wanneer het vormen van bestemmingslevering voor op dossier-gebaseerde bestemmingen, plaats altijd dit aan `SOURCE`.</li><li>Wanneer het vormen van bestemmingslevering voor een het stromen bestemming, wordt de `deliveryMatchers` sectie niet vereist.</li></ul> |
+| `deliveryMatchers.value` | String | <ul><li>Wanneer het vormen van bestemmingslevering voor op dossier-gebaseerde bestemmingen, plaats altijd dit aan `batch`.</li><li>Wanneer het vormen van bestemmingslevering voor een het stromen bestemming, wordt de `deliveryMatchers` sectie niet vereist.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Instellingen voor levering van bestemming voor streamingdoelen {#destination-delivery-streaming}
 
-In het onderstaande voorbeeld ziet u hoe de instellingen voor de doellevering moeten worden geconfigureerd voor een streamingbestemming. Let erop dat de `deliveryMatchers` sectie is niet vereist voor streamingdoelen.
+In het onderstaande voorbeeld ziet u hoe de instellingen voor de doellevering moeten worden geconfigureerd voor een streamingbestemming. De sectie `deliveryMatchers` is niet vereist voor streamingdoelen.
 
 >[!BEGINSHADEBOX]
 
@@ -76,7 +76,7 @@ In het onderstaande voorbeeld ziet u hoe de instellingen voor de doellevering mo
 
 ## De leveringsmontages van de bestemming voor op dossier-gebaseerde bestemmingen {#destination-delivery-file-based}
 
-In het onderstaande voorbeeld ziet u hoe de instellingen voor de doellevering moeten worden geconfigureerd voor een op een bestand gebaseerde bestemming. Let erop dat de `deliveryMatchers` sectie is vereist voor op bestanden gebaseerde doelen.
+In het onderstaande voorbeeld ziet u hoe de instellingen voor de doellevering moeten worden geconfigureerd voor een op een bestand gebaseerde bestemming. De sectie `deliveryMatchers` is vereist voor op bestanden gebaseerde doelen.
 
 >[!BEGINSHADEBOX]
 

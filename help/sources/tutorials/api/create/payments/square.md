@@ -5,52 +5,52 @@ description: Leer hoe u Square met Adobe Experience Platform kunt verbinden met 
 exl-id: 82c1d513-3b06-4ce9-b637-2c5a268da506
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 1%
+source-wordcount: '536'
+ht-degree: 0%
 
 ---
 
-# Een [!DNL Square] basisverbinding met de [!DNL Flow Service] API
+# Een [!DNL Square] basisverbinding maken met de [!DNL Flow Service] API
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL Square] met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Square] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele instantie van het Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxes ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL Square] met de [!DNL Flow Service] API.
+In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL Square] via de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] om te verbinden met [!DNL Square]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
+[!DNL Flow Service] kan alleen verbinding maken met [!DNL Square] als u waarden opgeeft voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | --- | --- |
-| `host` | De URL van de [!DNL Square] -instantie. |
-| `clientId` | De client-id die aan uw [!DNL Square] account. |
-| `clientSecret` | Het clientgeheim dat aan uw [!DNL Square] account. |
-| `accessToken` | Het toegangstoken wordt gebruikt om uw voor authentiek te verklaren [!DNL Square] account met OAuth 2.0-verificatie. Het toegangstoken kan worden verkregen van [!DNL Square]. |
-| `refreshToken` | Vernieuw teken wordt gebruikt om nieuwe toegangstoken te produceren zodra uw huidige toegangstoken verloopt. Het vernieuwingstoken kan worden verkregen van [!DNL Square]. |
+| `host` | De URL van de instantie [!DNL Square] . |
+| `clientId` | De client-id die aan uw [!DNL Square] -account is gekoppeld. |
+| `clientSecret` | Het clientgeheim dat aan uw [!DNL Square] -account is gekoppeld. |
+| `accessToken` | Het toegangstoken wordt gebruikt om uw [!DNL Square] rekening met authentificatie te verifiëren OAuth 2.0. Het toegangstoken kan uit [!DNL Square] worden verkregen. |
+| `refreshToken` | Vernieuw teken wordt gebruikt om nieuwe toegangstoken te produceren zodra uw huidige toegangstoken verloopt. Het token voor vernieuwen kan worden opgehaald uit [!DNL Square] . |
 | `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Square] is: `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5` |
 
-Voor meer informatie over deze geloofsbrieven en hoe te om hen te verkrijgen, zie [[!DNL Square] documentatie over OAuth](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens).
+Voor meer informatie over deze geloofsbrieven en hoe te om hen te verkrijgen, zie de [[!DNL Square]  documentatie over OAuth ](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens).
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Square] verificatiereferenties als onderdeel van de aanvraagparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL Square] -verificatiegegevens op als onderdeel van de aanvraagparameters.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /connections
@@ -58,7 +58,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Square]:
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL Square] gemaakt:
 
 ```shell
 curl -X POST \
@@ -90,16 +90,16 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `auth.params.host` | De URL van de [!DNL Square] -instantie. |
-| `auth.params.clientId` | De client-id die aan uw [!DNL Square] account. |
-| `auth.params.clientSecret` | Het clientgeheim dat aan uw [!DNL Square] account. |
-| `auth.params.accessToken` | Het toegangstoken wordt gebruikt om uw voor authentiek te verklaren [!DNL Square] account met OAuth 2.0-verificatie. Het toegangstoken kan worden verkregen van [!DNL Square]. |
-| `auth.params.refreshToken` | Vernieuw teken wordt gebruikt om nieuwe toegangstoken te produceren zodra uw huidige toegangstoken verloopt. Het vernieuwingstoken kan worden verkregen van [!DNL Square]. |
-| `connectionSpec.id` | De [!DNL Square] Verbindingsspecificatie-id: `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5`. |
+| `auth.params.host` | De URL van de instantie [!DNL Square] . |
+| `auth.params.clientId` | De client-id die aan uw [!DNL Square] -account is gekoppeld. |
+| `auth.params.clientSecret` | Het clientgeheim dat aan uw [!DNL Square] -account is gekoppeld. |
+| `auth.params.accessToken` | Het toegangstoken wordt gebruikt om uw [!DNL Square] rekening met authentificatie te verifiëren OAuth 2.0. Het toegangstoken kan uit [!DNL Square] worden verkregen. |
+| `auth.params.refreshToken` | Vernieuw teken wordt gebruikt om nieuwe toegangstoken te produceren zodra uw huidige toegangstoken verloopt. Het token voor vernieuwen kan worden opgehaald uit [!DNL Square] . |
+| `connectionSpec.id` | The [!DNL Square] connection specification ID: `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5` . |
 
-**Antwoord**
+**Reactie**
 
-Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de unieke verbindings-id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zijn unieke verbindings herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
 ```json
 {
@@ -110,4 +110,4 @@ Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL Square] verbinding met de [!DNL Flow Service] API en hebben de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u [betalingstoepassing verkennen met de Flow Service API](../../explore/payments.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL Square] -verbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze identiteitskaart in het volgende leerprogramma gebruiken aangezien u leert hoe te [ betalingstoepassing onderzoeken gebruikend de Dienst API van de Stroom ](../../explore/payments.md).

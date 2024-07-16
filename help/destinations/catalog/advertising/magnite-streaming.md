@@ -16,26 +16,26 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-De [!DNL Magnite Streaming: Real-Time] en de Magnite Streaming: Batch-bestemmingen in Adobe Experience Platform helpen u bij het toewijzen en exporteren van doelgroepen en activering op het Magnite Streaming-platform.
+Met de [!DNL Magnite Streaming: Real-Time] en de Magnite Streaming: Batch-doelen in Adobe Experience Platform kunt u doelgroepen toewijzen en exporteren en activeren op het Magnite Streaming-platform.
 
-Het publiek activeren voor de [!DNL Magnite Streaming] -platform is een proces in twee stappen waarbij u zowel de Magnite Streaming: Real-Time als de Magnite Streaming: Batch-doelen moet gebruiken.
+Het activeren van het publiek voor het [!DNL Magnite Streaming] -platform is een proces in twee stappen waarbij u zowel de Magnite Streaming: Real-Time als de Magnite Streaming: Batch-doelen moet gebruiken.
 
-Uw publiek activeren op [!DNL Magnite Streaming], moet u:
+Als u uw publiek wilt activeren naar [!DNL Magnite Streaming] , moet u:
 
-* Het publiek op de knop [!DNL Magnite Streaming: Real-Time] doel, zoals weergegeven op deze pagina.
-* Activeer hetzelfde publiek bij Magnite Streaming: Batch-bestemming. De [!DNL Magnite Streaming: Batch] doel is een verplicht onderdeel. Kan het publiek niet activeren op het [!DNL Magnite Streaming] Batchbestemming resulteert in een mislukte integratie en uw publiek wordt niet geactiveerd.
+* Activeer het publiek op de bestemming [!DNL Magnite Streaming: Real-Time], zoals weergegeven op deze pagina.
+* Activeer hetzelfde publiek bij Magnite Streaming: Batch-bestemming. Het doel van [!DNL Magnite Streaming: Batch] is een verplichte component. Als u het publiek niet activeert op de batchbestemming [!DNL Magnite Streaming] , resulteert dit in een mislukte integratie en wordt het publiek niet geactiveerd.
 
-Nota: Wanneer het gebruiken van de bestemming Echt - tijd, [!DNL Magnite: Streaming] In real-time zullen we een publiek ontvangen, maar we kunnen alleen in real-time publiek tijdelijk opslaan op ons platform, en ze zullen binnen een paar dagen uit ons systeem worden verwijderd. Om deze reden, als u Magnite wilt gebruiken: Het stromen bestemming in real time, zult u *ook* moet de functie Magnite Streaming: Batch-bestemming gebruiken - elk publiek dat u activeert naar de Real-Time bestemming, moet u ook activeren naar de Batch-bestemming.
+Opmerking: als u de Real-Time bestemming gebruikt, ontvangt [!DNL Magnite: Streaming] een publiek in real-time, maar we kunnen het publiek in real-time alleen tijdelijk in ons platform opslaan. Binnen enkele dagen worden ze van ons systeem verwijderd. Om deze reden, als u Magnite wilt gebruiken: Het stromen bestemming in real time, zult u *ook* moeten gebruiken het Stromen van de Magnite: de bestemming van de Partij - elk publiek dat u aan de bestemming in real time activeert, moet u ook aan de bestemming van de Partij activeren.
 
 >[!IMPORTANT]
 >
 >Deze bestemmingsschakelaar is in bèta en slechts beschikbaar om klanten te selecteren. Neem contact op met uw Adobe als u toegang wilt aanvragen.
 >
->De bestemmingsschakelaar en documentatiepagina worden gecreeerd en door [!DNL Magnite] team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via `adobe-tech@magnite.com`.
+>De doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Magnite] . Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via `adobe-tech@magnite.com` .
 
 ## Gebruiksscenario’s {#use-cases}
 
-Om u te helpen beter begrijpen hoe en wanneer u het [!DNL Magnite Streaming: Real-Time] doel, hier is een geval van steekproefgebruik dat de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
+Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Magnite Streaming: Real-Time] bestemming zou moeten gebruiken, is hier een geval van het steekproefgebruik dat de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
 ### Activering en doelversie {#activation-and-targeting}
 
@@ -43,12 +43,12 @@ Dankzij deze integratie met Magnite kunnen klanten hun CDP-publiek doorgeven van
 
 ## Vereisten {#prerequisites}
 
-Als u de opdracht [!DNL Magnite] bestemmingen in Adobe Experience Platform, moet u eerst een [!DNL Magnite Streaming] account. Als u een [!DNL Magnite Streaming] account, neem contact op met je [!DNL Magnite] accountmanager moet gegevens krijgen voor toegang tot [!DNL Magnite's] bestemmingen.
-Als u geen [!DNL Magnite Streaming] account, surf naar adobe-tech@magnite.com
+Als u de [!DNL Magnite] -doelen in Adobe Experience Platform wilt gebruiken, moet u eerst een [!DNL Magnite Streaming] -account hebben. Als u een [!DNL Magnite Streaming] -account hebt, vraagt u uw [!DNL Magnite] accountmanager om referenties voor toegang tot [!DNL Magnite's] -doelen.
+Als u geen [!DNL Magnite Streaming] -account hebt, kunt u contact opnemen met adobe-tech@magnite.com
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-De [!DNL Magnite Streaming: Real-Time] doel ondersteunt de activering van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
+Het doel van [!DNL Magnite Streaming: Real-Time] ondersteunt de activering van de identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |-------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -62,8 +62,8 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -73,8 +73,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 |------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster [!DNL Magnite Streaming: Real-Time] bestemming. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die in de [!DNL Magnite Streaming: Real-Time] -bestemming worden gebruikt. |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -82,47 +82,47 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL View destinations]** en **[!UICONTROL Manage destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View destinations]** en **[!UICONTROL Manage destinations]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
+Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
-![doelconfiguratie, automatische velden niet ingevuld](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
+![ ongevulde gebieden van de bestemmingsconfiguratie ](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
 
-* **[!UICONTROL Username]**: De gebruikersnaam die door [!DNL Magnite].
-* **[!UICONTROL Password]**: Het wachtwoord dat u van [!DNL Magnite].
+* **[!UICONTROL Username]**: De gebruikersnaam die door [!DNL Magnite] aan u wordt verstrekt.
+* **[!UICONTROL Password]**: Het wachtwoord dat door [!DNL Magnite] aan u wordt verstrekt.
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Name of your source partner]**: De naam van uw klant/bedrijf. Alleen ondersteund [!DNL Magnite Streaming] clients kunnen worden geselecteerd.
+* **[!UICONTROL Name of your source partner]**: De naam van uw klant/bedrijf. Alleen ondersteunde [!DNL Magnite Streaming] clients zijn beschikbaar voor selectie.
 
-![aangepaste doelconfiguratievelden ingevuld](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
+![ gevulde gebieden van de bestemmingsconfiguratie ](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 
-Selecteer de optie **[!UICONTROL Create]** knop.
+Selecteer vervolgens de knop **[!UICONTROL Create]** .
 
-![Optioneel governancebeleid en handhavingsmaatregelen](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
+![ Facultatief beleid van het bestuur en handhavingsacties ](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Segmenten naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 >
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View destinations]**, **[!UICONTROL Activate destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View destinations]**, **[!UICONTROL Activate destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lees [ activeer profielen en segmenten aan het stromen segment de uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 Zodra de bestemmingsverbinding is gecreeerd, kunt u aan de stroom van de publiekactivering te werk gaan. De volgende sectie loopt door hoe te om publiek te activeren gebruikend de bestemming in real time.
 
@@ -130,27 +130,27 @@ Zodra de bestemmingsverbinding is gecreeerd, kunt u aan de stroom van de publiek
 
 De volgende stap is bronherkenningstekens in kaart te brengen aan het apparaat_id herkenningsteken van de Magnite.
 
-* U kunt zoveel toewijzingen toevoegen als u nodig hebt door **[!UICONTROL Add new mapping]**.
+* U kunt zoveel toewijzingen toevoegen als u nodig hebt door **[!UICONTROL Add new mapping]** te selecteren.
 
-Dit voorbeeld dat de bestemming in real time gebruikt toont een rij die een generische apparaatId bronherkenningsteken bevat die aan het het doelgebied van Magnite device_id wordt in kaart gebracht. Als u bij de toewijzingen bent, selecteert u [!UICONTROL Next].
+Dit voorbeeld dat de bestemming in real time gebruikt toont een rij die een generische apparaatId bronherkenningsteken bevat die aan het het doelgebied van Magnite device_id wordt in kaart gebracht. Wanneer u bij de afbeeldingen bent, selecteert u [!UICONTROL Next] .
 
-![Wijs de gewenste gegevensvelden toe aan het veld device_ID](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
+![ Kaart gewenste gegevensgebieden aan het apparaat_ID gebied ](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
 
 Vergeet niet Mapping ID&#39;s in te stellen op alle geactiveerde soorten publiek of NONE in te stellen als er geen toewijzing-id aanwezig is.
 
-![Vergeet niet Mapping-id&#39;s in te stellen op alle geactiveerde soorten publiek, of NONE in te stellen als er geen toewijzing-id aanwezig is](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)
+![ ben zeker om het Toewijzen IDs aan alle geactiveerde publiek te plaatsen, of NONE te plaatsen als geen Toewijzings identiteitskaart ](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png) aanwezig is
 
 U moet nu een begindatum (verplicht), een einddatum (optioneel) en een toewijzingsid voor elk publiek configureren.
 
-**Toewijzing-id**
+**Uitwisselingsidentiteitskaart**
 
-* Gebruik de **[!UICONTROL Mapping ID]** veld wanneer een publiek een reeds bestaande segment-id heeft die eerder aan Magnite bekend was.
+* Gebruik het veld **[!UICONTROL Mapping ID]** wanneer een publiek een reeds bestaande segment-id heeft die eerder bekend is bij Magnite.
 
-* Als u een **[!UICONTROL Mapping ID]** aan een publiek, selecteer elke publiekstrij individueel, en ga gegevens in de juiste kolom (zie beeld hierboven) in. Als u geen toewijzings-id wilt toevoegen, voert u GEEN in het veld Toewijzings-id in.
+* Als u een **[!UICONTROL Mapping ID]** aan een publiek wilt toevoegen, selecteert u elke publiekstrij afzonderlijk en voert u gegevens in de rechterkolom in (zie bovenstaande afbeelding). Als u geen toewijzings-id wilt toevoegen, voert u GEEN in het veld Toewijzings-id in.
 
-Selecteren **[!UICONTROL Next]** en voltooit u de activeringsstroom.
+Selecteer **[!UICONTROL Next]** en voltooi de activeringsstroom.
 
-![Selecteer Volgende en voltooi de activeringsstroom.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
+![ selecteer daarna en voltooi activeringsstroom.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
@@ -162,18 +162,18 @@ Nadat uw publiek is geüpload, kunt u met de volgende stappen controleren of uw 
 
 -->
 
-* Post-ingest, publiek wordt verwacht te verschijnen in [!DNL Magnite Streaming] binnen een paar minuten en kan op een overeenkomst worden toegepast. U kunt dit bevestigen door de segment-id op te zoeken die tijdens de activeringsstappen in de Adobe Experience Platform is gedeeld.
+* Post-ingest, publiek zal naar verwachting binnen een paar minuten verschijnen in [!DNL Magnite Streaming] en kan op een overeenkomst worden toegepast. U kunt dit bevestigen door de segment-id op te zoeken die tijdens de activeringsstappen in de Adobe Experience Platform is gedeeld.
 
-## Hetzelfde publiek activeren via het dialoogvenster [!DNL Magnite Streaming: Batch]doel
+## Activeer het zelfde publiek door de [!DNL Magnite Streaming: Batch] bestemming
 
-Soorten publiek gedeeld met [!DNL Magnite Streaming] het gebruiken van de bestemming in real time zal ook moeten worden gedeeld gebruikend de Magnite Streaming: de bestemming van de Partij. Indien correct gevormd, segmentnamen in [!DNL Magnite Streaming] De gebruikersinterface wordt bijgewerkt met de gebruikersinterface die wordt gebruikt in de post-dagelijkse Adobe Experience Platform-update.
+Soorten publiek dat met [!DNL Magnite Streaming] wordt gedeeld met gebruik van de Real-Time bestemming moet ook worden gedeeld met gebruik van de Magnite Streaming: Batch-bestemming. Als de segmentnamen correct zijn geconfigureerd in de gebruikersinterface van [!DNL Magnite Streaming] , worden deze bijgewerkt met de segmentnamen die worden gebruikt in de Adobe Experience Platform-update na de dag.
 
 Tot slot als een bestemming van de Partij niet voor uw integratie is gevormd, opstelling het nu via de Magnite Streaming: het bestemmingsdocument van de Partij.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] dwingt gegevensbeheer af, lees de [Overzicht van gegevensbeheer](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
-Ga voor aanvullende Help-documentatie naar de [Magnite Help Center](https://help.magnite.com/help).
+Voor extra hulpdocumentatie, bezoek het [ Centrum van de Hulp van de Magniet ](https://help.magnite.com/help).

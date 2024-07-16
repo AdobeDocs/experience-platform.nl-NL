@@ -7,35 +7,35 @@ description: In deze zelfstudie worden de stappen beschreven voor het controlere
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 1%
+source-wordcount: '408'
+ht-degree: 0%
 
 ---
 
 # Bronnen controleren met behulp van de Flow Service API
 
-In deze zelfstudie worden de stappen beschreven voor het controleren van gegevens voor stroomuitvoering op volledigheid, fouten en metriek met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma behandelt de stappen voor de gegevens van de controlestroom in werking stellen voor volledigheid, fouten, en metriek gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->Voor deze zelfstudie moet u beschikken over de id-waarde van een geldige gegevensstroom. Als u geen geldige dataflow-id hebt, selecteert u de gewenste connector in het menu [overzicht van bronnen](../../home.md) en voert u de stappen uit die worden beschreven om een gegevensstroom te maken voordat u deze zelfstudie probeert.
+>Voor deze zelfstudie moet u beschikken over de id-waarde van een geldige gegevensstroom. Als u geen geldige dataflow identiteitskaart hebt, selecteer uw schakelaar van keus van het [ overzicht van bronnen ](../../home.md) en volg de stappen die worden geschetst om een dataflow tot stand te brengen alvorens dit leerprogramma te proberen.
 
 ## Aan de slag
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
 
 ## Dataflows bewaken
 
-Als u de status van uw gegevensstroom wilt zien, vraagt u een GET aan de [!DNL Flow Service] API, terwijl het verstrekken van overeenkomstige stroom ID van uw gegevensstroom.
+Als u de status van uw gegevensstroom wilt zien, vraagt u een GET aan de [!DNL Flow Service] API en geeft u de overeenkomstige stroom-id van uw gegevensstroom op.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /runs?property=flowId=={FLOW_ID}
@@ -43,7 +43,7 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FLOW_ID}` | De unieke `id` waarde voor de gegevensstroom u wilt controleren. |
+| `{FLOW_ID}` | De unieke `id` -waarde voor de gegevensstroom die u wilt controleren. |
 
 **Verzoek**
 
@@ -58,9 +58,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip van informatie over zijn aanmaakdatum, bron en doelverbindingen, evenals uniek herkenningsteken van de stroomlooppas (`id`).
+Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip van informatie over zijn aanmaakdatum, bron en doelverbindingen, evenals uniek herkenningsteken van de stroomlooppas (`id`) terug.
 
 ```json
 {
@@ -226,7 +226,7 @@ Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip
 | -------- | ----------- |
 | `items` | Bevat één enkele lading meta-gegevens verbonden aan uw specifieke stroomlooppas. |
 | `metrics` | Bepaalt kenmerken van de gegevens in de stroomlooppas. |
-| `activities` | Hiermee bepaalt u hoe de gegevens worden getransformeerd. |
+| `activities` | Hiermee definieert u hoe de gegevens worden getransformeerd. |
 | `durationSummary` | Definieert de begin- en eindtijd van de flowuitvoering. |
 | `sizeSummary` | Definieert het volume van de gegevens in bytes. |
 | `recordSummary` | Hiermee definieert u het recordaantal van de gegevens. |
@@ -235,4 +235,4 @@ Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u metriek en fouteninformatie over uw gegevensstroom teruggewonnen gebruikend [!DNL Flow Service] API. U kunt nu uw gegevensstroom blijven controleren, afhankelijk van uw innameschema, om zijn status en innamesnelheden te volgen. Voor informatie over hoe te om de zelfde taken uit te voeren gebruikend het gebruikersinterface, zie de zelfstudie op [gegevens controleren met behulp van de gebruikersinterface](../ui/monitor.md)
+Aan de hand van deze zelfstudie hebt u metrische gegevens en foutgegevens over uw gegevensstroom opgehaald met de API [!DNL Flow Service] . U kunt nu uw gegevensstroom blijven controleren, afhankelijk van uw innameschema, om zijn status en innamesnelheden te volgen. Voor informatie over hoe te om de zelfde taken uit te voeren gebruikend het gebruikersinterface, zie het leerprogramma op [ controledata gebruikend het gebruikersinterface ](../ui/monitor.md)

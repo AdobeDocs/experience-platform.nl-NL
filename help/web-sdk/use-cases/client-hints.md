@@ -6,7 +6,7 @@ exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '1152'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Telkens wanneer een webbrowser een aanvraag indient bij een webserver, bevat de header van de aanvraag informatie over de browser en de omgeving waarop de browser wordt uitgevoerd. Al deze gegevens worden samengevoegd in een koord, genoemd het koord van de gebruikersagent.
 
-Hier is een voorbeeld van hoe een koord van de gebruikersagent op een verzoek kijkt dat uit browser van Chrome komt die op browser loopt [!DNL Mac OS] apparaat.
+Hier is een voorbeeld van hoe een userAgent-tekenreeks eruitziet op een aanvraag die afkomstig is van een Chrome-browser die op een [!DNL Mac OS] -apparaat wordt uitgevoerd.
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 
 | Veld | Waarde |
 |---|---|
-| Naam software | Chroom |
+| Naam software | Chrome |
 | Softwareversie | 105 |
 | Volledige softwareversie | 105.0.0.0 |
 | Naam van lay-outengine | AppleWebKit |
@@ -56,7 +56,7 @@ In de afgelopen jaren hebben eigenaars van sites en leveranciers van marketingse
 
 Ondanks het belangrijke doel dat gebruikersagentenkoorden voor plaatseigenaars dienen, hebben de browser ontwikkelaars besloten om te veranderen hoe de koorden van de gebruikersagent werken, om potentiële privacykwesties voor eind te beperken - gebruikers.
 
-De oplossing die zij hebben ontwikkeld, wordt [clienttips van gebruikersagent](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Met behulp van clienttips kunnen websites nog steeds de benodigde informatie over de browser, het besturingssysteem en het apparaat verzamelen, terwijl ze tegelijkertijd een betere bescherming bieden tegen methoden voor geheime tracering, zoals vingerafdrukken.
+De oplossing zij ontwikkelden wordt genoemd [ de wenken van de gebruikersagent ](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Met behulp van clienttips kunnen websites nog steeds de benodigde informatie over de browser, het besturingssysteem en het apparaat verzamelen, terwijl ze tegelijkertijd een betere bescherming bieden tegen methoden voor geheime tracering, zoals vingerafdrukken.
 
 Met clienttips hebben eigenaars van websites toegang tot veel van dezelfde gegevens die beschikbaar zijn in de userAgent-tekenreeks, maar op een meer privacyvriendelijke manier.
 
@@ -64,7 +64,7 @@ Wanneer moderne browsers een gebruiker naar een webserver sturen, wordt de volle
 
 ## Browserondersteuning {#browser-support}
 
-[Client-tips voor gebruikersagent](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) zijn ingevoerd met [!DNL Google Chrome]versie 89.
+{de wenken van de de agentencliënt van de Gebruiker 1} werden geïntroduceerd met [!DNL Google Chrome] versie 89.[](https://developer.chrome.com/docs/privacy-sandbox/user-agent/)
 
 Aanvullende op chroom gebaseerde browsers ondersteunen de client Hints-API, zoals:
 
@@ -116,17 +116,17 @@ Als u geen hoge entropieclientiptips inschakelt in uw omgeving, werken de Adobe 
 
 ### Adobe Analytics rapporteert op basis van hoge entropclient-hints {#analytics}
 
-De [Besturingssysteem](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) dimensie omvat de versie van het besturingssysteem die is opgeslagen als een hoge entropieclient-hint. Als de hoge wenken van entropiecliënten niet wordt toegelaten, kan de versie van het werkende systeem voor klappen die van browsers Chromium worden verzameld onnauwkeurig zijn.
+De [ dimensie van het Werkende systeem ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) omvat werkende systeemversie die als hoge entropiecliëntwenk wordt opgeslagen. Als de hoge wenken van entropiecliënten niet wordt toegelaten, kan de versie van het werkende systeem voor klappen die van browsers Chromium worden verzameld onnauwkeurig zijn.
 
 ### Audience Manager-eigenschappen die afhankelijk zijn van hoge entropieclientiptips {#aam}
 
-[!DNL Google] heeft de [!DNL Chrome] browserfunctionaliteit om de informatie die via de `User-Agent` header. Als gevolg hiervan gebruiken klanten van de Audience Manager [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html) geen betrouwbare informatie meer ontvangen op basis van [toetsen op platformniveau](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
+[!DNL Google] heeft de browserfunctionaliteit van [!DNL Chrome] bijgewerkt om de informatie die via de header van `User-Agent` wordt verzameld, tot een minimum te beperken. Dientengevolge, zullen de klanten die van de Audience Manager [ DIL ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html) gebruiken geen betrouwbare die informatie voor eigenschappen meer ontvangen op [ platform-vlakke sleutels ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html) worden gebaseerd.
 
-De klanten van de Audience Manager die platform-vlakke sleutels voor het richten gebruiken moeten schakelen naar [Experience Platform Web SDK](/help/web-sdk/home.md) in plaats van [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html)en [Tips voor High Entropy-clients](#enabling-high-entropy-client-hints) betrouwbare gegevens over de eigenschap te blijven ontvangen.
+De klanten van de Audience Manager die platform-vlakke sleutels voor het richten gebruiken moeten op ](/help/web-sdk/home.md) in plaats van [ Experience Platform van SDK van het Web ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html) schakelen, en [ Hoge Hints van de Cliënt Entropy ](#enabling-high-entropy-client-hints) toelaten om betrouwbare gegevens van de eigenschap te blijven ontvangen.[
 
 ## Hoog entropclient-hints inschakelen {#enabling-high-entropy-client-hints}
 
-Om hoge entropy cliëntwenken op uw plaatsing van SDK van het Web toe te laten, moet u extra omvatten `highEntropyUserAgentHints` contextoptie in de [`context`](/help/web-sdk/commands/configure/context.md) veld.
+Als u hoge entropy client hints wilt inschakelen voor uw Web SDK-implementatie, moet u de extra `highEntropyUserAgentHints` contextoptie opnemen in het veld [`context`](/help/web-sdk/commands/configure/context.md) .
 
 Als u bijvoorbeeld hoge entropientroy-clienthints wilt ophalen van westeigenschappen, ziet uw configuratie er als volgt uit:
 
@@ -144,7 +144,7 @@ Sec-CH-UA-Mobile: ?0
 Sec-CH-UA-Platform: "macOS
 ```
 
-Het equivalent [!DNL User-Agent] header voor dezelfde browser zou er als volgt uitzien:
+De equivalente header [!DNL User-Agent] voor dezelfde browser ziet er als volgt uit:
 
 ```shell
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
@@ -152,9 +152,9 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 
 Terwijl de informatie gelijkaardig is, bevat het eerste verzoek aan de server cliëntwenken. Deze omvatten slechts een ondergroep van wat in het koord van de gebruikersagent beschikbaar is. Het verzoek heeft geen betrekking op de architectuur van het besturingssysteem, de volledige versie van het besturingssysteem, de naam van de lay-outengine, de versie van de lay-outengine en de volledige browserversie.
 
-Op latere verzoeken echter [!DNL Client Hints API] Hiermee kunnen webservers om aanvullende informatie over het apparaat vragen. Wanneer deze waarden worden gevraagd, afhankelijk van browserbeleid of gebruikersinstellingen, kan de browserreactie die informatie bevatten.
+Bij volgende aanvragen kunnen webservers echter om aanvullende informatie over het apparaat vragen. [!DNL Client Hints API] Wanneer deze waarden worden gevraagd, afhankelijk van browserbeleid of gebruikersinstellingen, kan de browserreactie die informatie bevatten.
 
-Hieronder ziet u een voorbeeld van het JSON-object dat door de [!DNL Client Hints API] wanneer hoge entropiewaarden worden gevraagd:
+Hieronder ziet u een voorbeeld van het JSON-object dat door de [!DNL Client Hints API] wordt geretourneerd wanneer hoge entropiewaarden worden aangevraagd:
 
 
 ```json

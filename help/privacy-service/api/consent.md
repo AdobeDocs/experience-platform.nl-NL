@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Constante eindpunt
 
-Bepaalde voorschriften vereisen uitdrukkelijke toestemming van de klant voordat de persoonsgegevens kunnen worden verzameld. De `/consent` in de [!DNL Privacy Service] Met API kunt u verzoeken om toestemming van klanten verwerken en deze integreren in uw privacyworkflow.
+Bepaalde voorschriften vereisen uitdrukkelijke toestemming van de klant voordat de persoonsgegevens kunnen worden verzameld. Met het `/consent` -eindpunt in de [!DNL Privacy Service] API kunt u verzoeken om toestemming van klanten verwerken en deze integreren in uw privacyworkflow.
 
-Voordat u deze handleiding kunt gebruiken, raadpleegt u de [aan de slag](./getting-started.md) gids voor informatie over de vereiste authentificatiekopballen die in de voorbeeld API vraag hieronder worden voorgesteld.
+Alvorens deze gids te gebruiken, gelieve te verwijzen naar [ begonnen ](./getting-started.md) gids voor informatie over de vereiste authentificatiekopballen die in de voorbeeld API hieronder vraag worden voorgesteld.
 
 ## Een verzoek om toestemming van een klant verwerken
 
-Aanvragen om toestemming worden verwerkt door een POST aan de `/consent` eindpunt.
+Verzoeken om toestemming worden verwerkt door een POST aan te vragen bij het `/consent` eindpunt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /consent
@@ -30,7 +30,7 @@ POST /consent
 
 **Verzoek**
 
-Met het volgende verzoek wordt een nieuwe goedkeuringstaak gemaakt voor de gebruikers-id&#39;s die worden geleverd in het dialoogvenster `entities` array.
+Met de volgende aanvraag wordt een nieuwe toestemmingstaak gemaakt voor de gebruikers-id&#39;s die in de array `entities` worden opgegeven.
 
 ```shell
 curl -X POST \
@@ -61,17 +61,17 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `optOutOfSale` | Indien ingesteld op true, geeft dit aan dat de gebruikers onder `entities` de wens te kennen te geven zich niet aan te sluiten bij de verkoop of het delen van hun persoonsgegevens. |
-| `entities` | Een array met objecten die aangeven op welke gebruikers de aanvraag voor toestemming van toepassing is. Elk object bevat een `namespace` en een array van `values` om afzonderlijke gebruikers met die naamruimte te laten overeenkomen. |
-| `nameSpace` | Elk object in het dialoogvenster `entities` array moet een van de [standaardnaamruimten](./appendix.md#standard-namespaces) wordt herkend door de Privacy Service-API. |
-| `values` | Een array van waarden voor elke gebruiker, die overeenkomt met de opgegeven waarden `nameSpace`. |
+| `optOutOfSale` | Wanneer deze waarde is ingesteld op true, geven de gebruikers die onder `entities` worden aangeboden, aan dat ze de verkoop of het delen van hun persoonlijke gegevens willen weigeren. |
+| `entities` | Een array met objecten die aangeven op welke gebruikers de aanvraag voor toestemming van toepassing is. Elk object bevat een `namespace` en een array van `values` die overeenkomen met afzonderlijke gebruikers met die naamruimte. |
+| `nameSpace` | Elk voorwerp in de `entities` serie moet één van [ standaard identiteitsnamespaces ](./appendix.md#standard-namespaces) bevatten die door Privacy Service API wordt erkend. |
+| `values` | Een array van waarden voor elke gebruiker, die overeenkomt met de opgegeven `nameSpace` . |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Voor meer informatie over hoe te bepalen welke waarden van de klantenidentiteit om te verzenden naar [!DNL Privacy Service], zie de handleiding op [identiteitsgegevens verstrekken](../identity-data.md).
+>Voor meer informatie over hoe te om te bepalen welke waarden van de klantenidentiteit om naar [!DNL Privacy Service] te verzenden, zie de gids over [ het verstrekken van identiteitsgegevens ](../identity-data.md).
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) zonder payload om aan te geven dat de aanvraag is geaccepteerd door [!DNL Privacy Service] en wordt verwerkt.

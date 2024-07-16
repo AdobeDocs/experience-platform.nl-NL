@@ -19,4 +19,4 @@ ht-degree: 60%
 - [API voor gegevenstoegang](api.md)
 - Tutorials {#tutorials}
    - [Gegevenssetgegevens weergeven](tutorials/dataset-data.md)
-- [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

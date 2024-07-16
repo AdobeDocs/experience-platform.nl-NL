@@ -12,19 +12,19 @@ ht-degree: 0%
 
 # Gebruikers beheren
 
-Als u gebruikersdetails en rollen wilt bekijken zij aan worden toegewezen, selecteer **[!UICONTROL Users]** tab.
+Als u gebruikersdetails en rollen wilt bekijken zij aan worden toegewezen, selecteer **[!UICONTROL Users]** tabel.
 
-![De pagina van gebruikers die met wordt getoond [!UICONTROL Users] gemarkeerd.](../../images/flac-ui/flac-users-tab.png)
+![ pagina van Gebruikers die met het [!UICONTROL Users] wordt getoond lusje wordt benadrukt.](../../images/flac-ui/flac-users-tab.png)
 
 Er wordt een lijst met gebruikers weergegeven. Selecteer in de lijst de gebruiker die u wilt weergeven. U kunt ook de zoekbalk gebruiken om naar de gebruiker te zoeken door de naam of het e-mailadres in te voeren.
 
 Het tabblad Details geeft een overzicht van de gebruiker. In het overzicht worden de gebruikersnaam, het accounttype, de e-mail, de verificatie-id, de contactgegevens en de locatiegegevens weergegeven.
 
-![Pagina met gebruikersgegevens met [!UICONTROL Details] en het gebruikersprofiel gemarkeerd.](../../images/flac-ui/flac-users-details.png)
+![ pagina van de Details van de Gebruiker met [!UICONTROL Details] tabel en het benadrukte gebruikersprofiel.](../../images/flac-ui/flac-users-details.png)
 
-Selecteer de **[!UICONTROL Roles]** tabblad om de rollen weer te geven waaraan de gebruiker is toegewezen.
+Selecteer het tabblad **[!UICONTROL Roles]** om de rollen weer te geven waaraan de gebruiker is toegewezen.
 
-![De pagina Rollen die wordt weergegeven met de [!UICONTROL Roles] tab en rol gemarkeerd.](../../images/flac-ui/flac-users-roles.png)
+![ pagina van Rollen die met de [!UICONTROL Roles] wordt getoond lusje en rol benadrukte.](../../images/flac-ui/flac-users-roles.png)
 
 ## Toegangsbeheer voor ontwikkelaars en API&#39;s met Experience Platform-machtigingen
 
@@ -32,7 +32,7 @@ Selecteer de **[!UICONTROL Roles]** tabblad om de rollen weer te geven waaraan d
 >
 >Alleen systeembeheerders kunnen API-referenties weergeven en beheren in Machtigingen.
 
-De overgang naar Adobe Experience Platform-machtigingen bevat aanvullende stappen die moeten worden uitgevoerd voor de API-workflow voor ontwikkelaars die voorheen afhankelijk was van rollen. Zie de handleiding op [API-verificatie](../../../landing/api-authentication.md) voor meer informatie .
+De overgang naar Adobe Experience Platform-machtigingen bevat aanvullende stappen die moeten worden uitgevoerd voor de API-workflow voor ontwikkelaars die voorheen afhankelijk was van rollen. Zie de gids op [ API authentificatie ](../../../landing/api-authentication.md) voor meer informatie.
 
 De volgende video is bedoeld om uw inzicht in ontwikkelaars en API geloofsbrieven te steunen.
 
@@ -40,4 +40,4 @@ De volgende video is bedoeld om uw inzicht in ontwikkelaars en API geloofsbrieve
 
 ## Volgende stappen
 
-U hebt nu geleerd hoe u gebruikersgegevens en de rollen waaraan ze momenteel zijn toegevoegd, kunt weergeven. Meer over op attribuut-gebaseerde toegangsbeheer leren, zie [op attributen-gebaseerd toegangsbeheeroverzicht](../overview.md).
+U hebt nu geleerd hoe u gebruikersgegevens en de rollen waaraan ze momenteel zijn toegevoegd, kunt weergeven. Meer over op attribuut-gebaseerde toegangscontrole leren, zie het [ op attributen-gebaseerde toegangsbeheeroverzicht ](../overview.md).

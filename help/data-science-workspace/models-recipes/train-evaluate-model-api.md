@@ -7,27 +7,27 @@ description: In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trai
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1217'
 ht-degree: 0%
 
 ---
 
-# Een model trainen en evalueren met behulp van de [!DNL Sensei Machine Learning] API
+# Een model trainen en evalueren met de API [!DNL Sensei Machine Learning]
 
 
-In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalueren met behulp van API-aanroepen. Zie [dit document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) voor een gedetailleerde lijst van API documentatie.
+In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalueren met behulp van API-aanroepen. Verwijs naar [ dit document ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) voor een gedetailleerde lijst van API documentatie.
 
 ## Vereisten
 
-Volg de [Een gecomprimeerde ontvanger importeren met de API](./import-packaged-recipe-api.md) voor het maken van een engine, die nodig is om een model op te leiden en te evalueren met behulp van de API.
+Volg de [ Invoer een verpakte Ontvanger gebruikend API ](./import-packaged-recipe-api.md) voor het creëren van een Motor, die wordt vereist om een Model te trainen en te evalueren gebruikend API.
 
-Volg de [Zelfstudie over Experience Platform API-verificatie](https://www.adobe.com/go/platform-api-authentication-en) om API-aanroepen te starten.
+Volg het [ Experience Platform API authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) beginnen API vraag te maken.
 
 In de zelfstudie hebt u nu de volgende waarden:
 
-- `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.
-- `{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.
-- `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.
+- `{ACCESS_TOKEN}`: De specifieke tokenwaarde voor toonder die na verificatie wordt opgegeven.
+- `{ORG_ID}`: Uw organisatiereferenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+- `{API_KEY}`: uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.
 
 - Koppeling naar een Docker-afbeelding van een intelligente service
 
@@ -50,7 +50,7 @@ We gebruiken de API&#39;s om een Experiment Run voor training te maken. Voor dez
 
 ### Een MLInstance maken
 
-Het creëren van een MLInstance kan worden gedaan gebruikend het volgende verzoek. U gebruikt de `{ENGINE_ID}` dat is geretourneerd bij het maken van een engine van de [Een gecomprimeerde ontvanger importeren met de API](./import-packaged-recipe-ui.md) zelfstudie.
+Het creëren van een MLInstance kan worden gedaan gebruikend het volgende verzoek. U zult `{ENGINE_ID}` gebruiken die toen het creëren van een Motor van [ was teruggekeerd invoert een verpakte Ontvanger gebruikend de API ](./import-packaged-recipe-ui.md) leerprogramma.
 
 **Verzoek**
 
@@ -64,9 +64,9 @@ curl -X POST \
   -d `{JSON_PAYLOAD}`
 ```
 
-`{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
-`{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
+`{ACCESS_TOKEN}`: De specifieke tokenwaarde voor toonder die na verificatie wordt opgegeven.\
+`{ORG_ID}`: Uw organisatiereferenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{API_KEY}`: uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: De configuratie van onze MLInstance. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
 
 ```JSON
@@ -122,11 +122,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->In de `{JSON_PAYLOAD}`, definiëren we parameters die gebruikt worden voor training en scores in de `tasks` array. De `{ENGINE_ID}` is de id van de engine die u wilt gebruiken en de `tag` field is een facultatieve parameter die wordt gebruikt om de Instantie te identificeren.
+>In `{JSON_PAYLOAD}` definiëren we parameters die worden gebruikt voor training en scoring in de array `tasks` . `{ENGINE_ID}` is de id van de engine die u wilt gebruiken en het veld `tag` is een optionele parameter die wordt gebruikt om de instantie te identificeren.
 
-Het antwoord bevat de `{INSTANCE_ID}` die staat voor de MLInstance die wordt gecreëerd. Er kunnen meerdere model-MLInstances met verschillende configuraties worden gemaakt.
+De reactie bevat `{INSTANCE_ID}` die de gemaakte MLInstance vertegenwoordigt. Er kunnen meerdere model-MLInstances met verschillende configuraties worden gemaakt.
 
-**Antwoord**
+**Reactie**
 
 ```JSON
 {
@@ -157,7 +157,7 @@ Het antwoord bevat de `{INSTANCE_ID}` die staat voor de MLInstance die wordt gec
 }
 ```
 
-`{ENGINE_ID}`: Deze ID die de Motor vertegenwoordigt wordt MLInstance gecreeerd onder.\
+`{ENGINE_ID}`: Deze id die de engine vertegenwoordigt waarop de MLInstance wordt gemaakt.\
 `{INSTANCE_ID}`: De id die de MLInstance vertegenwoordigt.
 
 ### Een experiment maken
@@ -176,10 +176,10 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
-`{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
-`{JSON_PAYLOAD}`: Het gemaakte experimentele object. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
+`{ORG_ID}`: Uw organisatiereferenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ACCESS_TOKEN}`: De specifieke tokenwaarde voor toonder die na verificatie wordt opgegeven.\
+`{API_KEY}`: uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
+`{JSON_PAYLOAD}` : een experimenteel object dat is gemaakt. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
 
 ```JSON
 {
@@ -195,7 +195,7 @@ curl -X POST \
 
 De reactie van het project Experiment ziet er zo uit.
 
-**Antwoord**
+**Reactie**
 
 ```JSON
 {
@@ -218,7 +218,7 @@ De reactie van het project Experiment ziet er zo uit.
 
 Gepland Experimenten worden gebruikt zodat wij niet te hoeven om elke enkele Runs van de Experiment via een API vraag tot stand te brengen. In plaats daarvan, verstrekken wij alle noodzakelijke parameters tijdens de verwezenlijking van de Experiment en elke looppas zal periodiek worden gecreeerd.
 
-Om de oprichting van een gepland experiment aan te geven, moeten we een `template` in de tekst van het verzoek. In `template`, alle noodzakelijke parameters voor het plannen van looppas inbegrepen zoals `tasks`, waarin wordt aangegeven welke actie wordt ondernomen, en `schedule`, die op de timing van de geplande looppas wijst.
+Als u wilt aangeven dat er een gepland experiment moet worden gemaakt, moet u een `template` -sectie toevoegen aan de hoofdtekst van het verzoek. In `template` zijn alle noodzakelijke parameters voor het plannen van runtime opgenomen, zoals `tasks` , die aangeeft welke actie wordt uitgevoerd, en `schedule` , die de timing van de geplande uitvoering aangeeft.
 
 **Verzoek**
 
@@ -232,10 +232,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
-`{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
-`{JSON_PAYLOAD}`: Te posten gegevensset. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
+`{ORG_ID}`: Uw organisatiereferenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ACCESS_TOKEN}`: De specifieke tokenwaarde voor toonder die na verificatie wordt opgegeven.\
+`{API_KEY}`: uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
+`{JSON_PAYLOAD}`: gegevensset die moet worden gepost. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
 
 ```JSON
 {
@@ -265,9 +265,9 @@ curl -X POST \
 }
 ```
 
-Als we een experiment maken, het lichaam, `{JSON_PAYLOAD}`bevat `mlInstanceId` of de `mlInstanceQuery` parameter. In dit voorbeeld wordt elke 20 minuten een uitvoering aangeroepen die is ingesteld in het dialoogvenster `cron` parameter, beginnend bij `startTime` tot de `endTime`.
+Wanneer we een experiment maken, moet de hoofdtekst, `{JSON_PAYLOAD}` , de parameter `mlInstanceId` of `mlInstanceQuery` bevatten. In dit voorbeeld wordt elke 20 minuten, ingesteld in de parameter `cron`, door een geplande Experiment een uitvoering aangeroepen die begint op `startTime` tot en met `endTime` .
 
-**Antwoord**
+**Reactie**
 
 ```JSON
 {
@@ -305,7 +305,7 @@ Als we een experiment maken, het lichaam, `{JSON_PAYLOAD}`bevat `mlInstanceId` o
 
 ### Een experimentele training maken
 
-Als er een entiteit Experiment is gemaakt, kan een trainingrun worden gemaakt en uitgevoerd met de onderstaande oproep. U hebt de `{EXPERIMENT_ID}` en geeft aan wat `mode` u wilt in de aanvraaginstantie teweegbrengen.
+Als er een entiteit Experiment is gemaakt, kan een trainingrun worden gemaakt en uitgevoerd met de onderstaande oproep. U hebt de instructie `{EXPERIMENT_ID}` nodig en geeft aan wat `mode` u wilt activeren in de hoofdtekst van de aanvraag.
 
 **Verzoek**
 
@@ -320,10 +320,10 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`: De id die overeenkomt met het experiment dat u als doel wilt instellen. Dit vindt u in het antwoord bij het maken van uw experiment.\
-`{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
-`{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
-`{JSON_PAYLOAD}`: Als u een trainingsrun wilt maken, moet u het volgende opnemen in het hoofdgedeelte:
+`{ORG_ID}`: Uw organisatiereferenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ACCESS_TOKEN}`: De specifieke tokenwaarde voor toonder die na verificatie wordt opgegeven.\
+`{API_KEY}`: uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
+`{JSON_PAYLOAD}`: als u een trainingsrun wilt maken, moet u het volgende opnemen in de hoofdtekst:
 
 ```JSON
 {
@@ -331,7 +331,7 @@ curl -X POST \
 }
 ```
 
-U kunt de configuratieparameters ook overschrijven door een `tasks` array:
+U kunt de configuratieparameters ook overschrijven door een array `tasks` op te nemen:
 
 ```JSON
 {
@@ -350,9 +350,9 @@ U kunt de configuratieparameters ook overschrijven door een `tasks` array:
 }
 ```
 
-U krijgt het volgende antwoord dat u op de hoogte brengt van `{EXPERIMENT_RUN_ID}` en de configuratie onder `tasks`.
+U krijgt de volgende reactie die u de `{EXPERIMENT_RUN_ID}` en de configuratie onder `tasks` laat weten.
 
-**Antwoord**
+**Reactie**
 
 ```JSON
 {
@@ -371,12 +371,12 @@ U krijgt het volgende antwoord dat u op de hoogte brengt van `{EXPERIMENT_RUN_ID
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: De id die staat voor de proefrun.\
-`{EXPERIMENT_ID}`: De id die staat voor het experiment dat onder de Experimentenrun valt.
+`{EXPERIMENT_RUN_ID}`: De id die de experimentele uitvoering vertegenwoordigt.\
+`{EXPERIMENT_ID}`: De id die staat voor het experiment dat onder de Experimentatieronde valt.
 
 ### De status Experimentair uitvoeren ophalen
 
-U kunt de status van de Experimentrun opvragen bij de `{EXPERIMENT_RUN_ID}`.
+De status van de uitvoering van het experiment kan worden opgevraagd bij de `{EXPERIMENT_RUN_ID}` .
 
 **Verzoek**
 
@@ -389,14 +389,14 @@ curl -X GET \
 ```
 
 `{EXPERIMENT_ID}`: De id die het experiment vertegenwoordigt.\
-`{EXPERIMENT_RUN_ID}`: De id die staat voor de proefrun.\
-`{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
-`{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.
+`{EXPERIMENT_RUN_ID}`: De id die de experimentele uitvoering vertegenwoordigt.\
+`{ACCESS_TOKEN}`: De specifieke tokenwaarde voor toonder die na verificatie wordt opgegeven.\
+`{ORG_ID}`: Uw organisatiereferenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{API_KEY}`: uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.
 
-**Antwoord**
+**Reactie**
 
-De vraag van de GET zal de status in `state` parameter zoals hieronder getoond:
+De aanroep van de GET geeft de status in de parameter `state` op, zoals hieronder wordt weergegeven:
 
 ```JSON
 {
@@ -429,15 +429,15 @@ De vraag van de GET zal de status in `state` parameter zoals hieronder getoond:
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: De id die staat voor de proefrun.\
-`{EXPERIMENT_ID}`: De id die staat voor het experiment dat onder de Experimentenrun valt.
+`{EXPERIMENT_RUN_ID}`: De id die de experimentele uitvoering vertegenwoordigt.\
+`{EXPERIMENT_ID}`: De id die staat voor het experiment dat onder de Experimentatieronde valt.
 
-Naast de `DONE` staat , andere staten zijn :
+Naast de status `DONE` zijn er andere statussen:
 - `PENDING`
 - `RUNNING`
 - `FAILED`
 
-Als u meer informatie wilt, vindt u de gedetailleerde logboekbestanden in het gedeelte `tasklogs` parameter.
+Voor meer informatie kunt u gedetailleerde logboekbestanden vinden onder de parameter `tasklogs` .
 
 ### Het getrainde model ophalen
 
@@ -453,12 +453,12 @@ curl -X GET \
 ```
 
 `{EXPERIMENT_RUN_ID}`: De id die overeenkomt met de uitvoering van het experiment waarop u zich wilt richten. Dit vindt u in het antwoord bij het maken van uw experimentele versie.\
-`{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+`{ACCESS_TOKEN}`: De specifieke tokenwaarde voor toonder die na verificatie wordt opgegeven.\
+`{ORG_ID}`: Uw organisatiereferenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 
 De reactie vertegenwoordigt het opgeleide Model dat werd gecreeerd.
 
-**Antwoord**
+**Reactie**
 
 ```JSON
 {
@@ -484,11 +484,11 @@ De reactie vertegenwoordigt het opgeleide Model dat werd gecreeerd.
 
 `{MODEL_ID}`: De id die overeenkomt met het model.\
 `{EXPERIMENT_ID}`: De id die correspondeert met de Experiment Run is lager.\
-`{EXPERIMENT_RUN_ID}`: De id die overeenkomt met de uitvoering van het experiment.
+`{EXPERIMENT_RUN_ID}`: De id die overeenkomt met de proefversie.
 
 ### Een geplande expert stoppen en verwijderen
 
-Als u de uitvoering van een gepland experiment wilt stoppen vóór de uitvoering ervan `endTime`, kan dit worden gedaan door een verzoek van DELETE aan `{EXPERIMENT_ID}`
+Als u de uitvoering van een gepland experiment vóór de `endTime` ervan wilt stoppen, kunt u dit doen door een verzoek van de DELETE naar de `{EXPERIMENT_ID}` te vragen
 
 **Verzoek**
 
@@ -500,8 +500,8 @@ curl -X DELETE \
 ```
 
 `{EXPERIMENT_ID}`: De id die overeenkomt met het experiment.\
-`{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+`{ACCESS_TOKEN}`: De specifieke tokenwaarde voor toonder die na verificatie wordt opgegeven.\
+`{ORG_ID}`: Uw organisatiereferenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 
 >[!NOTE]
 >
@@ -509,7 +509,7 @@ curl -X DELETE \
 
 Hier volgt de reactie waarbij wordt gemeld dat het experiment is verwijderd.
 
-**Antwoord**
+**Reactie**
 
 ```JSON
 {
@@ -521,4 +521,4 @@ Hier volgt de reactie waarbij wordt gemeld dat het experiment is verwijderd.
 
 ## Volgende stappen
 
-In deze zelfstudie wordt uitgelegd hoe u de API&#39;s kunt gebruiken voor het maken van een engine, een Experiment, geplande experimentatieroutes en getrainde modellen. In de [volgende oefening](./score-model-api.md), zult u voorspellingen maken door een nieuwe dataset te scoren gebruikend het hoogste presterende getrainde model.
+In deze zelfstudie wordt uitgelegd hoe u de API&#39;s kunt gebruiken voor het maken van een engine, een Experiment, geplande experimentele runtime en getrainde modellen. In de [ volgende oefening ](./score-model-api.md), zult u voorspellingen maken door een nieuwe dataset te scoren gebruikend het hoogste uitvoerend getrainde model.

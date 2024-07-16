@@ -4,14 +4,14 @@ title: De configuratie van een doelserver ophalen
 exl-id: 1b375343-e793-4c91-856f-af66fe71822e
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 1%
+source-wordcount: '466'
+ht-degree: 0%
 
 ---
 
 # De configuratie van een doelserver ophalen
 
-Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om informatie over een bestaande configuratie van de bestemmingsserver terug te winnen gebruikend `/authoring/destination-servers` API-eindpunt.
+Deze pagina illustreert de API-aanvraag en -lading die u kunt gebruiken om informatie over een bestaande configuratie van de doelserver op te halen met behulp van het API-eindpunt `/authoring/destination-servers` .
 
 Lees de volgende artikelen voor een gedetailleerde beschrijving van de mogelijkheden die bestemmingsservers gebruiken:
 
@@ -22,21 +22,21 @@ Lees de volgende artikelen voor een gedetailleerde beschrijving van de mogelijkh
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Aan de slag met API-bewerkingen voor doelserver {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## De configuratie van een doelserver ophalen {#retrieve}
 
-U kunt een bestaande configuratie van de bestemmingsserver terugwinnen door te maken `GET` verzoek aan de `/authoring/destination-servers` eindpunt.
+U kunt een bestaande configuratie van de bestemmingsserver terugwinnen door `GET` verzoek aan het `/authoring/destination-servers` eindpunt te doen.
 
 >[!TIP]
 >
->**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
+>**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-**API-indeling**
+**API formaat**
 
 Gebruik de volgende API-indeling om alle configuraties van de doelserver voor uw account op te halen.
 
@@ -44,21 +44,21 @@ Gebruik de volgende API-indeling om alle configuraties van de doelserver voor uw
 GET /authoring/destination-servers
 ```
 
-Gebruik de volgende API-indeling om een specifieke doelserverconfiguratie op te halen, gedefinieerd door de `{INSTANCE_ID}` parameter.
+Gebruik de volgende API-indeling om een specifieke doelserverconfiguratie op te halen, gedefinieerd door de parameter `{INSTANCE_ID}` .
 
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
 
-De volgende twee verzoeken winnen alle configuraties van de bestemmingsserver voor uw IMS Organisatie, of een specifieke configuratie van de bestemmingsserver terug, afhankelijk van of u overgaan `INSTANCE_ID` in de aanvraag.
+De volgende twee verzoeken winnen alle configuraties van de bestemmingsserver voor uw IMS Organisatie, of een specifieke configuratie van de bestemmingsserver terug, afhankelijk van of u de `INSTANCE_ID` parameter in het verzoek overgaat.
 
 Selecteer hieronder elk tabblad om de bijbehorende lading en de reacties weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB Alle configuraties van de doelserver ophalen]
+>[!TAB  wint alle configuraties van de bestemmingsserver ] terug
 
-Het volgende verzoek zal de lijst van configuraties van de bestemmingsserver terugwinnen die u toegang tot hebt, gebaseerd op [!DNL IMS Org ID] en sandboxconfiguratie.
+Met de volgende aanvraag wordt de lijst opgehaald met doelserverconfiguraties waartoe u toegang hebt, op basis van [!DNL IMS Org ID] en sandboxconfiguratie.
 
 +++verzoek
 
@@ -74,7 +74,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Response
 
-Een succesvolle reactie keert status 200 van HTTP met een lijst van configuraties van de bestemmingsserver terug die u toegang tot hebt, die op wordt gebaseerd [!DNL IMS Org ID] en naam van sandbox die u hebt gebruikt. Eén `instanceId` komt overeen met één doelserver. De voorbeeldreactie hieronder bevat twee configuraties van de doelserver.
+Een succesvol antwoord retourneert HTTP-status 200 met een lijst van doelserverconfiguraties waartoe u toegang hebt, op basis van de naam van de [!DNL IMS Org ID] en de sandbox die u hebt gebruikt. Eén `instanceId` komt overeen met één doelserver. De voorbeeldreactie hieronder bevat twee configuraties van de doelserver.
 
 ```json
 {
@@ -151,9 +151,9 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van configuratie
 
 +++
 
->[!TAB Een specifieke configuratie van de doelserver ophalen]
+>[!TAB  wint een specifieke configuratie van de bestemmingsserver ] terug
 
-Het volgende verzoek zal een specifieke die configuraties terugwinnen van de bestemmingsserver door worden bepaald `{INSTANCE_ID}` parameter.
+Het volgende verzoek zal een specifieke configuraties van de bestemmingsserver terugwinnen die door de `{INSTANCE_ID}` parameter worden bepaald.
 
 +++verzoek
 
@@ -173,7 +173,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Response
 
-Een succesvolle reactie keert status 200 van HTTP met de configuratie van de bestemmingsserver terug die aan beantwoordt `{INSTANCE_ID}` u hebt opgegeven.
+Een geslaagde reactie retourneert HTTP-status 200 met de configuratie van de doelserver die overeenkomt met de `{INSTANCE_ID}` die u hebt opgegeven.
 
 ```json
 {
@@ -221,11 +221,11 @@ Een succesvolle reactie keert status 200 van HTTP met de configuratie van de bes
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u een configuratie van de doelserver via de Destination SDK kunt ophalen `/authoring/destination-servers` API-eindpunt.
+Nadat u dit document hebt gelezen, weet u nu hoe u een configuratie van de doelserver kunt ophalen via het API-eindpunt Destination SDK `/authoring/destination-servers` .
 
 Raadpleeg de volgende artikelen voor meer informatie over wat u met dit eindpunt kunt doen:
 

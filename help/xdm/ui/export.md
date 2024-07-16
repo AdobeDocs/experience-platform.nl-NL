@@ -20,31 +20,31 @@ ht-degree: 0%
 
 Alle bronnen in de Schemabibliotheek bevinden zich in een specifieke sandbox binnen een organisatie. In sommige gevallen wilt u wellicht XDM-bronnen (Experience Data Model) delen tussen sandboxen en organisaties.
 
-Om aan deze behoefte tegemoet te komen, [!UICONTROL Schemas] in de Adobe Experience Platform-gebruikersinterface kunt u een exportlading genereren voor elk schema in de Schemabibliotheek. Deze nuttige lading kan dan in een vraag aan de Registratie API van het Schema worden gebruikt om het schema (en alle afhankelijke middelen) in een doelzandbak en een organisatie in te voeren.
+Om aan deze behoefte te voldoen, staat de [!UICONTROL Schemas] werkruimte in Adobe Experience Platform UI u toe om een de uitvoerlading voor om het even welk schema binnen in de Bibliotheek van het Schema te produceren. Deze nuttige lading kan dan in een vraag aan de Registratie API van het Schema worden gebruikt om het schema (en alle afhankelijke middelen) in een doelzandbak en een organisatie in te voeren.
 
 >[!NOTE]
 >
->U kunt de Registratie API van het Schema ook gebruiken om andere middelen naast schema&#39;s, met inbegrip van klassen, de groepen van het schemagebied, en gegevenstypes uit te voeren. Zie de [eindgebruikershandleiding exporteren](../api/export.md) voor meer informatie .
+>U kunt de Registratie API van het Schema ook gebruiken om andere middelen naast schema&#39;s, met inbegrip van klassen, de groepen van het schemagebied, en gegevenstypes uit te voeren. Zie de [ gids van het uitvoereindpunt ](../api/export.md) voor meer informatie.
 
 ## Vereisten
 
-Terwijl de UI van het Platform u toelaat de middelen van XDM uitvoeren, moet u de Registratie API van het Schema gebruiken om die middelen in andere zandbakken of organisaties in te voeren om het werkschema te voltooien. Zie voor handleiding [aan de slag gaan met de Schema Registry-API](../api/getting-started.md) voor belangrijke informatie betreffende vereiste authentificatiekopballen alvorens deze gids te volgen.
+Terwijl de UI van het Platform u toelaat de middelen van XDM uitvoeren, moet u de Registratie API van het Schema gebruiken om die middelen in andere zandbakken of organisaties in te voeren om het werkschema te voltooien. Verwijs naar gids op [ begonnen worden met de Registratie API van het Schema ](../api/getting-started.md) voor belangrijke informatie betreffende vereiste authentificatiekopballen alvorens deze gids te volgen.
 
 ## Een payload voor exporteren genereren {#generate-export-payload}
 
-U kunt in de gebruikersinterface van het platform ladlasten voor exporteren genereren via het deelvenster Details in het dialoogvenster [!UICONTROL Browse] of rechtstreeks vanaf het canvas van het schema in de Schema-editor.
+Exportladingen kunnen in de gebruikersinterface van het platform worden gegenereerd vanuit het deelvenster Details op het tabblad [!UICONTROL Browse] of rechtstreeks vanaf het canvas van het schema in de Schema-editor.
 
-Selecteer **[!UICONTROL Schemas]** in de linkernavigatie. Binnen de [!UICONTROL Schemas] in de werkruimte selecteert u de rij voor het schema dat u wilt exporteren naar de schemagegevens in de rechterzijbalk.
+Selecteer **[!UICONTROL Schemas]** in de linkernavigatie om een payload voor export te genereren. Selecteer in de werkruimte van [!UICONTROL Schemas] de rij voor het schema dat u wilt exporteren naar de schemadetails in de rechterzijbalk.
 
 >[!TIP]
 >
->Zie de handleiding op [XDM-bronnen verkennen](./explore.md) voor details op hoe te om het middel te vinden XDM u zoekt.
+>Zie de gids op [ het onderzoeken van middelen XDM ](./explore.md) voor details op hoe te om het middel te vinden XDM u zoekt.
 
-Selecteer vervolgens de **[!UICONTROL Copy JSON]** icon (![Pictogram kopiëren](../images/ui/export/icon.png)) van de beschikbare opties.
+Daarna, selecteer het **[!UICONTROL Copy JSON]** pictogram (![ Pictogram van het Exemplaar ](../images/ui/export/icon.png)) van de beschikbare opties.
 
-![De werkruimte Schema&#39;s met een schemarij en [!UICONTROL Copy to JSON] gemarkeerd.](../images/ui/export/copy-json.png)
+![ de werkruimte van Schema&#39;s met een schemarij en [!UICONTROL Copy to JSON] benadrukte.](../images/ui/export/copy-json.png)
 
-Hiermee wordt een JSON-lading naar het klembord gekopieerd, die op basis van de schemastructuur wordt gegenereerd. Voor &quot;[!DNL Loyalty Members]&quot; hierboven weergegeven schema, wordt de volgende JSON gegenereerd:
+Hiermee wordt een JSON-lading naar het klembord gekopieerd, die op basis van de schemastructuur wordt gegenereerd. Voor het hierboven weergegeven schema &quot;[!DNL Loyalty Members]&quot; wordt de volgende JSON gegenereerd:
 
 +++Selecteren om een voorbeeld-JSON-payload uit te vouwen
 
@@ -212,22 +212,22 @@ Hiermee wordt een JSON-lading naar het klembord gekopieerd, die op basis van de 
 
 +++
 
-U kunt de Payload ook kopiëren door [!UICONTROL More] rechtsboven in de Schema-editor. Een vervolgkeuzemenu bevat twee opties. [!UICONTROL Copy JSON structure] en [!UICONTROL Delete schema].
+U kunt de Payload ook kopiëren door [!UICONTROL More] in de rechterbovenhoek van de Schema-editor te selecteren. Een vervolgkeuzemenu bevat twee opties: [!UICONTROL Copy JSON structure] en [!UICONTROL Delete schema] .
 
 >[!NOTE]
 >
 >Een schema kan niet worden geschrapt wanneer het voor Profiel wordt toegelaten of bijbehorende datasets heeft.
 
-![De Schemas Editor met [!UICONTROL More] en [!UICONTROL Copy to JSON] gemarkeerd.](../images/ui/export/schema-editor-copy-json.png)
+![ de Redacteur van Schema met [!UICONTROL More] en [!UICONTROL Copy to JSON] benadrukte.](../images/ui/export/schema-editor-copy-json.png)
 
-De payload heeft de vorm van een array, waarbij elk arrayitem een object is dat een aangepaste XDM-bron vertegenwoordigt die geëxporteerd moet worden. In het bovenstaande voorbeeld wordt &quot;[!DNL Loyalty details]&quot; aangepaste veldgroep en &quot;[!DNL Loyalty Members]&quot; schema is opgenomen. Alle kernbronnen die door het schema worden gebruikt, worden niet opgenomen in de exportbewerking, aangezien deze bronnen beschikbaar zijn in alle sandboxen en organisaties.
+De payload heeft de vorm van een array, waarbij elk arrayitem een object is dat een aangepaste XDM-bron vertegenwoordigt die geëxporteerd moet worden. In het voorbeeld hierboven, zijn &quot;[!DNL Loyalty details]&quot;de groep van het douanegebied en &quot;[!DNL Loyalty Members]&quot;schema inbegrepen. Alle kernbronnen die door het schema worden gebruikt, worden niet opgenomen in de exportbewerking, aangezien deze bronnen beschikbaar zijn in alle sandboxen en organisaties.
 
-Merk op dat elk geval van de huurder ID van uw organisatie verschijnt zoals `<XDM_TENANTID_PLACEHOLDER>` in de lading. Deze placeholders zullen automatisch met de aangewezen waarde van huurdersidentiteitskaart afhankelijk van worden vervangen waar u het schema in de volgende stap invoert.
+Merk op dat elk geval van huurder ID van uw organisatie als `<XDM_TENANTID_PLACEHOLDER>` in de lading verschijnt. Deze placeholders zullen automatisch met de aangewezen waarde van huurdersidentiteitskaart afhankelijk van worden vervangen waar u het schema in de volgende stap invoert.
 
 ## De bron importeren met de API {#import-resource-with-api}
 
-Nadat u de JSON-exportbewerking voor het schema hebt gekopieerd, kunt u deze gebruiken als de payload voor een aanvraag van een POST naar de `/rpc/import` eindpunt in de schemaregistratie-API. Zie de [hulplijn voor importeindpunt](../api/import.md) voor details op hoe te om de vraag te vormen om het schema naar de gewenste organisatie en zandbak te verzenden.
+Zodra u de uitvoer JSON voor het schema hebt gekopieerd, kunt u het als nuttige lading voor een POST verzoek aan het `/rpc/import` eindpunt in de Registratie API van het Schema gebruiken. Zie de [ invoereindpuntgids ](../api/import.md) voor details op hoe te om de vraag te vormen om het schema naar de gewenste organisatie en zandbak te verzenden.
 
 ## Volgende stappen
 
-In deze handleiding hebt u een XDM-schema geëxporteerd naar een andere organisatie of sandbox. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] UI, verwijs naar [[!UICONTROL Schemas] Overzicht van gebruikersinterface](./overview.md).
+In deze handleiding hebt u een XDM-schema geëxporteerd naar een andere organisatie of sandbox. Voor meer informatie over de mogelijkheden van [!UICONTROL Schemas] UI, verwijs naar het [[!UICONTROL Schemas] overzicht UI ](./overview.md).

@@ -12,27 +12,27 @@ ht-degree: 0%
 
 # Voorbeeld van gebruik van hoofdletters/kleine letters voor Adobe Experience Platform [!DNL Query Service]
 
-Dit document en de bijbehorende videopresentatie bieden een end-to-end workflow op hoog niveau waarop wordt getoond hoe Adobe Experience Platform [!DNL Query Service] profiteert van de strategische zakelijke inzichten van uw organisatie. Gebruikend een doorbladerend gebruiksgeval als voorbeeld, illustreert deze gids de volgende belangrijkste concepten:
+Dit document en de bijbehorende videopresentatie bieden een end-to-end workflow op hoog niveau waarin wordt aangetoond hoe Adobe Experience Platform [!DNL Query Service] de strategische zakelijke inzichten van uw organisatie ten goede komt. Gebruikend een doorbladerend gebruiksgeval als voorbeeld, illustreert deze gids de volgende belangrijkste concepten:
 
 * Het belangrijkste belang van gegevensverwerking om het potentieel van Adobe Experience Platform te maximaliseren.
 * Manieren om de vraag te bouwen die op uw bestaande gegevensarchitectuur wordt gebaseerd.
 * Zorg voor gegevenskwaliteit die aan uw behoeften voldoet, en methoden om eventuele tekortkomingen te beperken.
 * Het proces om een vraag te plannen om bij een vastgestelde frequentie voor gebruik stroomafwaarts in segmentatie en bestemmingen voor verpersoonlijking te lopen.
-* Het gemak voor marketers om afgeleide datasets in hun publiek door de macht van te omvatten [!DNL Query Service].
+* Het gemak voor marketers om afgeleide datasets in hun publiek door de macht van [!DNL Query Service] op te nemen.
 
 ## Doelstellingen {#objectives}
 
 Deze workflowdemonstratie is gebaseerd op verschillende Adobe Experience Platform-services. Als u de stappen wilt volgen, is het raadzaam de volgende functies en services goed te begrijpen:
 
-* De [basisbeginselen van XDM-schemacompositie (Experience Data Model)](../../xdm/schema/composition.md)
-* Procedure [gegevenssets maken en gegevens opnemen](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
-* Procedure [Gegevens opnemen via de Adobe Analytics-bronaansluiting](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
+* De [ grondbeginselen van het Model van de Gegevens van de Ervaring (XDM) schemacompositie ](../../xdm/schema/composition.md)
+* Hoe te [ datasets tot stand brengen en gegevens opnemen ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
+* Hoe te om [ gegevens in te voeren gebruikend de Adobe Analytics bronschakelaar ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
 * [Segmentatie](../../segmentation/home.md)
 * [Doelen](../../destinations/home.md)
 
-Het voorbeeld voor het verlaten van een browser draait om het gebruik van Adobe [!DNL Analytics] gegevens om een bepaald actief publiek te creëren. Het publiek is verfijnd en omvat alle klanten die de afgelopen vier dagen door de website hebben gebladerd, maar geen aankoop hebben gedaan. Elk profiel in het publiek wordt dan gericht met het hoogst-prijs SKU dat uit het gedragspatroon van de klant resulteerde.
+In het voorbeeld voor het verlaten van een browser wordt het gebruik van Adobe [!DNL Analytics] -gegevens centraal gesteld bij het maken van een bepaald actionabel publiek. Het publiek is verfijnd en omvat alle klanten die de afgelopen vier dagen door de website hebben gebladerd, maar geen aankoop hebben gedaan. Elk profiel in het publiek wordt dan gericht met het hoogst-prijs SKU dat uit het gedragspatroon van de klant resulteerde.
 
-De vraag zelf is zeer recept en omvat slechts gegevens die aan de criteria van het gebruiksgeval voor de segmentdefinitie voldoen. Hierdoor worden de prestaties verbeterd doordat de hoeveelheid [!DNL Analytics] gegevens die worden verwerkt. De gegevens worden ook op prijs gesorteerd van het hoogst naar het laagst en de hoogst geprijsde SKU gekozen die de gebruiker aan het doorbladeren was.
+De vraag zelf is zeer recept en omvat slechts gegevens die aan de criteria van het gebruiksgeval voor de segmentdefinitie voldoen. Hierdoor worden de prestaties verbeterd doordat de hoeveelheid [!DNL Analytics] gegevens die wordt verwerkt, tot een minimum wordt beperkt. De gegevens worden ook op prijs gesorteerd van het hoogst naar het laagst en de hoogst geprijsde SKU gekozen die de gebruiker aan het doorbladeren was.
 
 De query die in de presentatie wordt gebruikt, is hieronder te zien:
 
@@ -55,31 +55,31 @@ GROUP BY customerId,sku
 order by price desc)D;
 ```
 
-## [!DNL Query Service] Voorbeeld van verlaten bestanden door bladeren met adobe Analytics {#video-example}
+## [!DNL Query Service] voorbeeld met bladerstopzetting met gebruik van adobe analytics {#video-example}
 
-De onderstaande videopresentatie biedt een holistische, realistische gebruiksmogelijkheid voor uw Experience Platform-gegevens die zijn gericht op [!DNL Query Service] en Adobe analytics integrations.
+De onderstaande videopresentatie biedt een holistische, realistische gebruiksmogelijkheid voor uw Experience Platform-gegevens die zijn toegespitst op [!DNL Query Service] en integratie van Adobe-analysemogelijkheden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
 
 ## Voordelen van [!DNL Query Service] {#benefits}
 
-De functies van [!DNL Query Service] voor veel doeleinden. U kunt het gebruiken om complexe logica voor segmentatie, voor het berekenen van diverse gepersonaliseerde attributen voor gebruik stroomafwaarts aan te passen, of zeer te vereenvoudigen hoe u uw publiek bouwt.
+De functies die [!DNL Query Service] biedt, zijn voor vele doeleinden. U kunt het gebruiken om complexe logica voor segmentatie, voor het berekenen van diverse gepersonaliseerde attributen voor gebruik stroomafwaarts aan te passen, of zeer te vereenvoudigen hoe u uw publiek bouwt.
 
-[!DNL Query Service] laat u toe om beperkingen in uw vragen op te nemen om uw publiek het opbouwen proces te vereenvoudigen. Dit verbetert de gegevenskwaliteit door ervoor te zorgen dat de juiste gegevens geschikt zijn voor uw publiek. Het handhaven van de kwaliteit van uw vraag resulteert in een nauwkeurig publiek en helpt met gegevensbetrouwbaarheid. U kunt uw publiek ook opslaan door schema&#39;s en douanetabellen te creëren die op attributen worden gebaseerd die uit uw vraag worden afgeleid. Een douanetabel kan voor Profiel worden toegelaten en u kunt deze gegevenspunten voor segmentatie en verpersoonlijking gebruiken. Deze functie helpt marketers die een duidelijk publiek van mensen willen creëren.
+Met [!DNL Query Service] kunt u beperkingen in uw query&#39;s opnemen om het proces voor publieksopbouw te vereenvoudigen. Dit verbetert de gegevenskwaliteit door ervoor te zorgen dat de juiste gegevens geschikt zijn voor uw publiek. Het handhaven van de kwaliteit van uw vraag resulteert in een nauwkeurig publiek en helpt met gegevensbetrouwbaarheid. U kunt uw publiek ook opslaan door schema&#39;s en douanetabellen te creëren die op attributen worden gebaseerd die uit uw vraag worden afgeleid. Een douanetabel kan voor Profiel worden toegelaten en u kunt deze gegevenspunten voor segmentatie en verpersoonlijking gebruiken. Deze functie helpt marketers die een duidelijk publiek van mensen willen creëren.
 
-Ook, door logica in uw vraag te omvatten die om het even welke terugkomende of statische voorwaarden tevredenstelt, [!DNL Query Service] extraheert de last van uitgebreide segmentatie.
+Door logica in uw query op te nemen die voldoet aan terugkerende of statische voorwaarden, extraheert [!DNL Query Service] ook de last van uitgebreide segmentatie.
 
 Adobe Experience Platform biedt een gegevensopslagplaats en de benodigde hulpmiddelen om uw gegevens op een efficiënte en betrouwbare manier te activeren. Door gegevens binnen Platform te houden, staat het u toe om attributen af te leiden terwijl het runnen van andere processen en verwijdert de behoefte om gegevens naar derdehulpmiddelen voor manipulatie en verwerking uit te voeren. Dergelijke verwerkingsoverheadkosten kunnen een projectchronologie zeer beïnvloeden wanneer het behandelen van honderden attributen of campagnes. Dit geeft marketers één enkele plaats om tot hun gegevens toegang te hebben en campagnes te bouwen evenals een zeer dynamische manier om hun berichten te segmenteren en te personaliseren.
 
 ## Volgende stappen
 
-Door dit document te lezen, moet u nu begrijpen hoe [!DNL Query Service] beïnvloedt niet alleen de kwaliteit van uw gegevens en het gemak van segmentatie maar ook zijn belang binnen uw gegevensarchitectuur voor het volledige werkschema van begin tot eind. Voor meer toepasbare SQL-voorbeelden die Adobe Analytics gebruiken met [!DNL Query Service], zie de [Voor Adobe Analytics-handelsvariabelen wordt hoofdlettergebruik gebruikt](./merchandising-variables.md).
+Door dit document te lezen, moet u nu begrijpen hoe [!DNL Query Service] niet alleen de kwaliteit van uw gegevens en het gemak van segmentatie beïnvloedt, maar ook het belang ervan binnen uw gegevensarchitectuur voor de volledige end-to-end workflow. Voor meer toepasselijke SQL voorbeelden die Adobe Analytics met [!DNL Query Service] gebruiken, zie het [ Adobe Analytics het handelende gebruik van variabelen case ](./merchandising-variables.md).
 
-Andere documenten die de voordelen van [!DNL Query Service] voor de strategische bedrijfsinzichten van uw organisatie: [beide filters gebruiken](./bot-filtering.md) voorbeeld.
+Andere documenten die de voordelen van [!DNL Query Service] aan de strategische bedrijfsinzichten van uw organisatie aantonen zijn [ allebei het gebruiken van geval ](./bot-filtering.md) voorbeeld filtreren.
 
-U kunt deze documenten ook gebruiken als [!DNL Query Service] functies:
+U kunt deze documenten ook gebruiken voor een beter begrip van de functies van [!DNL Query Service] :
 
 * [Richtlijnen voor het uitvoeren van query&#39;s](../best-practices/writing-queries.md)
-* [Richtlijnen voor de organisatie van gegevenselementen](../best-practices/organize-data-assets.md).
+* [ Begeleiding voor de organisatie van gegevensactiva ](../best-practices/organize-data-assets.md).
 
 

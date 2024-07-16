@@ -15,7 +15,7 @@ ht-degree: 0%
 
 U kunt een lijst van alle beschikbare voorwerpen van een specifiek type door één enkele API vraag terugwinnen, met beste praktijken die filters omvatten die de grootte van de reactie beperken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{OBJECT_TYPE}
@@ -24,12 +24,12 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te vermelden object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
-| `{FILTER}` | Een queryparameter die wordt gebruikt om de resultaten te filteren die in de reactie worden geretourneerd. Meerdere parameters worden gescheiden door ampersands (`&`). Zie de handleiding op [catalogusgegevens filteren](filter-data.md) voor meer informatie . |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] -object dat moet worden vermeld. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{FILTER}` | Een queryparameter die wordt gebruikt om de resultaten te filteren die in de reactie worden geretourneerd. De veelvoudige parameters worden gescheiden door ampersands (`&`). Zie de gids bij [ het filtreren gegevens van de Catalogus ](filter-data.md) voor meer informatie. |
 
 **Verzoek**
 
-Het steekproefverzoek wint hieronder een lijst van datasets, met terug `limit` filter de respons op vijf resultaten verminderen, en `properties` filter dat de eigenschappen beperkt die voor elke dataset worden getoond.
+In de voorbeeldaanvraag hieronder wordt een lijst met gegevenssets opgehaald, met een filter `limit` waarmee de respons op vijf resultaten wordt verminderd, en een filter `properties` waarmee de eigenschappen die voor elke gegevensset worden weergegeven, worden beperkt.
 
 ```shell
 curl -X GET \
@@ -40,13 +40,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een lijst met [!DNL Catalog] objecten in de vorm van sleutel-waardeparen, gefilterd door de vraagparameters die in het verzoek worden verstrekt. Voor elk sleutel-waardepaar vertegenwoordigt de sleutel een unieke herkenningsteken voor [!DNL Catalog] voorwerp in kwestie, dat dan in een andere vraag kan worden gebruikt aan [bekijken dat een specifiek object](look-up-object.md) voor meer informatie .
+Een geslaagde reactie retourneert een lijst met [!DNL Catalog] -objecten in de vorm van sleutel-waardeparen, gefilterd op basis van de queryparameters die in de aanvraag zijn opgegeven. Voor elk zeer belangrijk-waardepaar, vertegenwoordigt de sleutel een uniek herkenningsteken voor het [!DNL Catalog] voorwerp in kwestie, dat dan in een andere vraag aan [ kan worden gebruikt mening dat specifiek voorwerp ](look-up-object.md) voor meer details.
 
 >[!NOTE]
 >
->Als een geretourneerd object geen van de gevraagde eigenschappen bevat die door de `properties` vraag, keert de reactie slechts de gevraagde eigenschappen terug die het omvat, zoals aangetoond in ***`Sample Dataset 3`*** en ***`Sample Dataset 4`*** hieronder.
+>Als een geretourneerd object geen van de gevraagde eigenschappen bevat die door de `properties` -query worden aangegeven, retourneert het antwoord alleen de gevraagde eigenschappen die het wel bevat, zoals hieronder in ***`Sample Dataset 3`*** en ***`Sample Dataset 4`*** wordt getoond.
 
 ```json
 {

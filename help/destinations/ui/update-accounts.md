@@ -6,7 +6,7 @@ description: Deze zelfstudie bevat een overzicht van de stappen voor het bijwerk
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-De **[!UICONTROL Accounts]** het lusje toont u details over de verbindingen die u met diverse bestemmingen hebt gevestigd. Zie de [Overzicht van accounts](../ui/destinations-workspace.md#accounts) voor alle informatie u op elke bestemmingsrekening kunt krijgen.
+Op het tabblad **[!UICONTROL Accounts]** ziet u details over de verbindingen die u hebt gemaakt met verschillende doelen. Verwijs naar het [ overzicht van Rekeningen ](../ui/destinations-workspace.md#accounts) voor alle informatie u op elke bestemmingsrekening kunt krijgen.
 
 Deze zelfstudie behandelt de stappen om de details van de bestemmingsrekening bij te werken door het Experience Platform UI te gebruiken.
 
@@ -23,46 +23,46 @@ U kunt de details van de bestemmingsrekening bijwerken om geloofsbrieven voor uw
 
 Voor batchbestemmingen kunt u de toegang of de geheime sleutel bijwerken als een van deze wijzigingen is gewijzigd. Als u uw bestanden verder wilt coderen, kunt u bovendien een openbare RSA-sleutel invoegen en worden uw geëxporteerde bestanden vervolgens versleuteld.
 
-![Het tabblad Accounts](../assets/ui/update-accounts/destination-accounts.png)
+![ Rekeningen tabel ](../assets/ui/update-accounts/destination-accounts.png)
 
 ## Accounts bijwerken {#update}
 
 Voer de onderstaande stappen uit om verbindingsgegevens bij te werken naar bestaande doelen.
 
-1. Aanmelden bij de [UI EXPERIENCE PLATFORM](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Accounts]** in de bovenste koptekst om uw bestaande accounts weer te geven.
+1. Login aan het [ Experience Platform UI ](https://platform.adobe.com/) en selecteert **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Accounts]** in de bovenste koptekst om uw bestaande accounts weer te geven.
 
-   ![Het tabblad Accounts](../assets/ui/update-accounts/accounts-tab.png)
+   ![ Rekeningen tabel ](../assets/ui/update-accounts/accounts-tab.png)
 
-2. Filterpictogram selecteren ![Filter-pictogram](../assets/ui/update-accounts/filter.png) bovenaan links om het deelvenster Sorteren te starten. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van rekeningen te zien verbonden aan de geselecteerde bestemmingen.
+2. Selecteer het filterpictogram ![ filter-pictogram ](../assets/ui/update-accounts/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van rekeningen te zien verbonden aan de geselecteerde bestemmingen.
 
-   ![Bestemmingsaccounts filteren](../assets/ui/update-accounts/filter-accounts.png)
+   ![ de bestemmingsrekeningen van de Filter ](../assets/ui/update-accounts/filter-accounts.png)
 
-3. De ovalen selecteren (`...`) naast de naam van de account die u wilt bijwerken. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]**, en **[!UICONTROL Delete]** de rekening. Selecteer de ![Knop Details bewerken](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Edit details]** om de accountgegevens te bewerken.
+3. Selecteer de ovalen (`...`) naast de naam van de account die u wilt bijwerken. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate audiences]** , **[!UICONTROL Edit details]** en **[!UICONTROL Delete]** de account. Selecteer ![ uitgeven detailknoop ](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Edit details]** knoop om de rekeningsinformatie uit te geven.
 
-   ![Account bewerken](../assets/ui/update-accounts/accounts-edit.png)
+   ![ geef rekening ](../assets/ui/update-accounts/accounts-edit.png) uit
 
 4. Voer uw bijgewerkte accountgegevens in.
 
-   * Voor accounts die een `OAuth1` of `OAuth2` verbindingstype, selecteren **[!UICONTROL Reconnect OAuth]** om uw accountgegevens te vernieuwen. U kunt ook de naam en beschrijving van uw account bijwerken.
+   * Voor accounts die een `OAuth1` - of `OAuth2` verbindingstype gebruiken, selecteert u **[!UICONTROL Reconnect OAuth]** om uw accountgegevens te vernieuwen. U kunt ook de naam en beschrijving van uw account bijwerken.
 
-   ![Details OAuth bewerken](../assets/ui/update-accounts/edit-details-oauth.png)
+   ![ geef details OAuth ](../assets/ui/update-accounts/edit-details-oauth.png) uit
 
-   * Voor accounts die een `Access Key` of `ConnectionString` van het verbindingstype, kunt u uw informatie van de rekeningsauthentificatie, met inbegrip van informatie zoals toegangs identiteitskaart, geheime sleutels, of verbindingskoorden uitgeven. U kunt ook de naam en beschrijving van uw account bijwerken.
+   * Voor accounts die een verbindingstype `Access Key` of `ConnectionString` gebruiken, kunt u de verificatiegegevens van uw account bewerken, zoals toegang-id, geheime sleutels of verbindingstekenreeksen. U kunt ook de naam en beschrijving van uw account bijwerken.
 
-   ![Toegangstoets details bewerken](../assets/ui/update-accounts/edit-details-key.png)
+   ![ geef de Sleutel van de Toegang van details uit ](../assets/ui/update-accounts/edit-details-key.png)
 
-   * Voor accounts die gebruikmaken van een `Bearer token` verbindingstype, kunt u een nieuw dragertoken invoeren, indien nodig. U kunt ook de naam en beschrijving van uw account bijwerken.
+   * Voor accounts die een verbindingstype `Bearer token` gebruiken, kunt u indien nodig een nieuw token voor toonder invoeren. U kunt ook de naam en beschrijving van uw account bijwerken.
 
-   ![Token details van drager bewerken](../assets/ui/update-accounts/edit-details-bearer.png)
+   ![ geeft het teken van de Details Drager uit ](../assets/ui/update-accounts/edit-details-bearer.png)
 
-   * Voor accounts die gebruikmaken van een `Server to server` verbindingstype kunt u de naam en beschrijving van uw account bijwerken.
+   * Voor accounts die een verbindingstype `Server to server` gebruiken, kunt u de naam en beschrijving van uw account bijwerken.
 
-   ![Details van server naar server bewerken](../assets/ui/update-accounts/edit-details-s2s.png)
+   ![ geeft details Server-aan-server ](../assets/ui/update-accounts/edit-details-s2s.png) uit
 
-5. Selecteren **[!UICONTROL Save]** om de update van de accountdetails te voltooien.
+5. Selecteer **[!UICONTROL Save]** om de update van de accountdetails te voltooien.
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u de opdracht **[!UICONTROL destinations]** werkruimte om bestaande accounts bij te werken.
+Door deze zelfstudie te volgen, hebt u de werkruimte van **[!UICONTROL destinations]** gebruikt om bestaande accounts bij te werken.
 
-Voor meer informatie over bestemmingen, verwijs naar [Overzicht van doelen](../catalog/overview.md).
+Voor meer informatie over bestemmingen, verwijs naar het [ overzicht van bestemmingen ](../catalog/overview.md).

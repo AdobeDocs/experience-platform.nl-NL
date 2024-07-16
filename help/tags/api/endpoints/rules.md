@@ -4,30 +4,30 @@ description: Leer hoe te om vraag aan het /rules eindpunt in Reactor API te make
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '893'
 ht-degree: 1%
 
 ---
 
 # Het eindpunt van regels
 
-In de context van de markeringen van de gegevensinzameling, controleren de regels het gedrag van de middelen in een opgestelde bibliotheek. Een regel bestaat uit een of meer [regelcomponenten](./rule-components.md), bestaat om de regelcomponenten op een logische manier aan elkaar te koppelen. De `/rules` Het eindpunt in Reactor API staat u toe om markeringsregels programmatically te beheren.
+In de context van de markeringen van de gegevensinzameling, controleren de regels het gedrag van de middelen in een opgestelde bibliotheek. Een regel wordt samengesteld uit één of meerdere [ regelcomponenten ](./rule-components.md), bestaat om de regelcomponenten samen op een logische manier te binden. Met het `/rules` -eindpunt in de Reactor-API kunt u labelregels programmatisch beheren.
 
 >[!NOTE]
 >
->In dit document wordt beschreven hoe u de regels in de Reactor-API beheert. Voor informatie over hoe te met regels in UI in wisselwerking te staan, verwijs naar [UI-hulplijn](../../ui/managing-resources/rules.md).
+>In dit document wordt beschreven hoe u de regels in de Reactor-API beheert. Voor informatie over hoe te met regels in UI in wisselwerking te staan, verwijs naar de [ gids UI ](../../ui/managing-resources/rules.md).
 
-Een regel behoort tot exact één regel [eigenschap](./properties.md). Een eigenschap kan vele regels bevatten.
+Een regel behoort tot precies één [ bezit ](./properties.md). Een eigenschap kan vele regels bevatten.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met regels ophalen {#list}
 
 U kunt een lijst van regels terugwinnen die tot een bezit behoren door te omvatten door een verzoek van de GET te doen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /properties/{PROPERTY_ID}/rules
@@ -41,7 +41,7 @@ GET /properties/{PROPERTY_ID}/rules
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde regels worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
+>Gebruikend vraagparameters, kunnen de vermelde regels worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -55,7 +55,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lijst met regels voor de opgegeven eigenschap.
 
@@ -146,9 +146,9 @@ U kunt een regel opzoeken door zijn identiteitskaart in de weg van een verzoek v
 
 >[!NOTE]
 >
->Wanneer regels worden verwijderd, worden ze gemarkeerd als verwijderd, maar worden ze niet daadwerkelijk uit het systeem verwijderd. Daarom is het mogelijk om een geschrapte regel terug te winnen. Verwijderde regels kunnen worden geïdentificeerd door een `meta.deleted_at` eigenschap.
+>Wanneer regels worden verwijderd, worden ze gemarkeerd als verwijderd, maar worden ze niet daadwerkelijk uit het systeem verwijderd. Daarom is het mogelijk om een geschrapte regel terug te winnen. Verwijderde regels kunnen worden geïdentificeerd door de aanwezigheid van een eigenschap `meta.deleted_at` .
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /rules/{RULE_ID}
@@ -172,7 +172,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van de regel terug.
 
@@ -250,7 +250,7 @@ Een succesvolle reactie keert de details van de regel terug.
 
 U kunt een nieuwe regel tot stand brengen door een verzoek van de POST te doen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /properties/{PROPERTY_ID}/rules
@@ -258,7 +258,7 @@ POST /properties/{PROPERTY_ID}/rules
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van de eigenschap waarop u een regel definieert. |
+| `PROPERTY_ID` | The `id` of the property that you are define a rule under. |
 
 {style="table-layout:auto"}
 
@@ -284,13 +284,13 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes.name` | **(Vereist)** Een voor mensen leesbare naam voor de regel. |
+| `attributes.name` | **(Vereist)** Een voor de mens leesbare naam voor de regel. |
 | `attributes.enabled` | Een booleaanse waarde die aangeeft of de regel is ingeschakeld. |
-| `type` | Het type resource dat wordt gemaakt. Voor dit eindpunt, moet de waarde `rules`. |
+| `type` | Het type resource dat wordt gemaakt. Voor dit eindpunt moet de waarde `rules` zijn. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van de pas gecreëerde regel terug.
 
@@ -366,13 +366,13 @@ Een succesvolle reactie keert de details van de pas gecreëerde regel terug.
 
 ## Gebeurtenissen, voorwaarden en handelingen aan een regel toevoegen {#components}
 
-Eenmaal [een regel gemaakt](#create), kunt u beginnen zijn logica uit te bouwen door gebeurtenissen, voorwaarden, en acties toe te voegen (die collectief als regelcomponenten worden bedoeld). Zie de sectie over [een component rule maken](./rule-components.md#create) in de `/rule_components` eindpuntgids om te leren hoe te om dit in Reactor API te doen.
+Zodra u [ een regel ](#create) hebt gecreeerd, kunt u beginnen zijn logica uit te bouwen door gebeurtenissen, voorwaarden, en acties toe te voegen (collectief verwezen naar als regelcomponenten). Verwijs naar de sectie op [ creërend een regelcomponent ](./rule-components.md#create) in de `/rule_components` eindpuntgids om te leren hoe te om dit in Reactor API te doen.
 
 ## Een regel bijwerken {#update}
 
 U kunt de attributen van een regel bijwerken door zijn identiteitskaart in de weg van een verzoek van de PATCH te omvatten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /rules/{RULE_ID}
@@ -386,7 +386,7 @@ PATCH /rules/{RULE_ID}
 
 **Verzoek**
 
-De volgende aanvraag werkt de `name` van een bestaande regel.
+Met de volgende aanvraag wordt de `name` van een bestaande regel bijgewerkt.
 
 ```shell
 curl -X PATCH \
@@ -409,12 +409,12 @@ curl -X PATCH \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `attributes` | Een object waarvan de regels de kenmerken vertegenwoordigen die voor de regel moeten worden bijgewerkt. De volgende kenmerken kunnen voor een regel worden bijgewerkt: <ul><li>`name`</li><li>`enabled`</li></ul> |
-| `id` | De `id` van de regel die u wilt bijwerken. Dit moet overeenkomen met de `{RULE_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `rules`. |
+| `id` | De `id` van de regel die u wilt bijwerken. Dit moet overeenkomen met de `{RULE_ID}` -waarde in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `rules` zijn. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van de bijgewerkte regel terug.
 
@@ -492,7 +492,7 @@ Een succesvolle reactie keert de details van de bijgewerkte regel terug.
 
 U kunt een regel verwijderen door zijn identiteitskaart in de weg van een verzoek van de DELETE op te nemen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /rules/{RULE_ID}
@@ -514,25 +514,25 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert HTTP status 204 (Geen Inhoud) zonder reactiekarakter terug, erop wijzend dat de regel is geschrapt.
 
 ## Notities voor een regel beheren {#notes}
 
-Regels zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [leidraad voor notitiepunten](./notes.md) voor meer informatie over hoe te om nota&#39;s voor regels en andere compatibele middelen te beheren.
+Regels zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [ gids van het Notitieeindpunt ](./notes.md) voor meer informatie over hoe te nota&#39;s voor regels en andere compatibele middelen beheren.
 
 ## Verwante middelen voor een regel ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een regel terug te winnen. Wanneer [regel opzoeken](#lookup), worden deze relaties vermeld in het `relationships` regel.
+De volgende vraag toont aan hoe te om de verwante middelen voor een regel terug te winnen. Wanneer [ omhoog een regel ](#lookup) kijkt, zijn deze verhoudingen vermeld onder de `relationships` regel.
 
-Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante bibliotheken weergeven voor een regel {#libraries}
 
-U kunt een lijst maken van de bibliotheken die een bepaalde regel gebruiken door toe te voegen `/libraries` naar het pad van een opzoekverzoek.
+U kunt een lijst maken van de bibliotheken die een bepaalde regel gebruiken door `/libraries` aan de weg van een raadplegingsverzoek toe te voegen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /rules/{RULE_ID}/libraries
@@ -540,7 +540,7 @@ GET  /rules/{RULE_ID}/libraries
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RULE_ID}` | De `id` van de regel waarvan u bibliotheken wilt weergeven. |
+| `{RULE_ID}` | De `id` van de regel waarvan u de bibliotheken wilt weergeven. |
 
 {style="table-layout:auto"}
 
@@ -556,7 +556,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van bibliotheken terug die de gespecificeerde regel gebruiken.
 
@@ -652,9 +652,9 @@ Een succesvolle reactie keert een lijst van bibliotheken terug die de gespecific
 
 ### Verwante revisies voor een regel weergeven {#revisions}
 
-U kunt de revisies voor een regel weergeven door deze toe te voegen `/revisions` naar het pad van een opzoekverzoek.
+U kunt de revisies voor een regel weergeven door `/revisions` toe te voegen aan het pad van een opzoekaanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /rules/{RULE_ID}/revisions
@@ -662,7 +662,7 @@ GET  /rules/{RULE_ID}/revisions
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RULE_ID}` | De `id` van de regel waarvan u de revisies wilt weergeven. |
+| `{RULE_ID}` | De `id` van de regel waarvan u revisies wilt weergeven. |
 
 {style="table-layout:auto"}
 
@@ -678,7 +678,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van revisies terug die de gespecificeerde regel gebruiken.
 
@@ -830,9 +830,9 @@ Een succesvolle reactie keert een lijst van revisies terug die de gespecificeerd
 
 ### De gerelateerde oorsprong opzoeken voor een regel {#origin}
 
-U kunt de oorsprong (vorige versie) van een regel opzoeken door deze toe te voegen `/origin` naar het pad van een opzoekverzoek.
+U kunt de oorsprong (vorige versie) van een regel opzoeken door `/origin` aan het pad van een opzoekverzoek toe te voegen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /rules/{RULE_ID}/origin
@@ -840,7 +840,7 @@ GET /rules/{RULE_ID}/origin
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RULE_ID}` | De `id` van de regel waarvan u de oorsprong wilt opzoeken. |
+| `{RULE_ID}` | De `id` van de regel waarvan de oorsprong u wilt opzoeken. |
 
 {style="table-layout:auto"}
 
@@ -856,7 +856,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van de gespecificeerde uitbreiding van de regel terug.
 
@@ -932,9 +932,9 @@ Een succesvolle reactie keert de details van de gespecificeerde uitbreiding van 
 
 ### De verwante eigenschap voor een regel opzoeken {#property}
 
-U kunt het bezit opzoeken dat een regel bezit door toe te voegen `/property` naar het pad van een opzoekverzoek.
+U kunt de eigenschap die eigenaar is van een regel opzoeken door `/property` toe te voegen aan het pad van een opzoekverzoek.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /rules/{RULE_ID}/property
@@ -942,7 +942,7 @@ GET /rules/{RULE_ID}/property
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RULE_ID}` | De `id` van de regel waarvan bezit u omhoog wilt kijken. |
+| `{RULE_ID}` | De `id` van de regel waarvan het bezit u omhoog wilt kijken. |
 
 {style="table-layout:auto"}
 
@@ -958,7 +958,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van het gespecificeerde bezit van de regel terug.
 

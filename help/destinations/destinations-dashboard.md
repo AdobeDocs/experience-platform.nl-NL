@@ -15,8 +15,8 @@ ht-degree: 0%
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over de actieve bestemmingen van uw organisatie kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen.
 
-Voor gedetailleerde instructies op hoe te om tot en met het bestemmingendashboard in UI toegang te hebben, evenals meer over de beschikbare metriek te leren die in het dashboard wordt getoond, gelieve te bezoeken [Dashboardgids voor doelen](../dashboards/guides/destinations.md).
+Voor gedetailleerde instructies op hoe te om tot en met het bestemmingsdashboard in UI toegang te hebben en in wisselwerking te staan, evenals meer over de beschikbare metriek te leren die in het dashboard wordt getoond, gelieve de [ gids van het bestemmingsdashboard ](../dashboards/guides/destinations.md) te bezoeken.
 
-Voor een overzicht van alle dashboardfuncties in het Experience Platform, begint u met het lezen van de [overzicht van dashboards](../../dashboards/home.md).
+Voor een overzicht van alle dashboardeigenschappen binnen Experience Platform, gelieve te beginnen door het [ overzicht van dashboards ](../../dashboards/home.md) te lezen.
 
 ![](images/destinations-dashboard/dashboard-overview.png)

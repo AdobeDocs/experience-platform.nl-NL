@@ -1,7 +1,8 @@
 ---
 title: prehideStyle
 description: Maak een CSS-definitie waarmee gepersonaliseerde inhoud zonder flikkeringen kan worden geladen.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 3693542a-69d3-4ad8-bea4-4cabf7d80563
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 0%
@@ -10,27 +11,27 @@ ht-degree: 0%
 
 # `prehidingStyle`
 
-De `prehidingStyle` kunt u een CSS-kiezer definiëren om gepersonaliseerde inhoud te verbergen totdat deze wordt geladen. Dit bezit is waardevol in synchrone implementaties van SDK van het Web om het flikkeren te vermijden. Adobe raadt u aan de [fragment vooraf verbergen](../../personalization/manage-flicker.md) voor asynchrone implementaties van SDK van het Web.
+Met de eigenschap `prehidingStyle` kunt u een CSS-kiezer definiëren om gepersonaliseerde inhoud te verbergen totdat deze wordt geladen. Dit bezit is waardevol in synchrone implementaties van SDK van het Web om het flikkeren te vermijden. De Adobe adviseert het gebruiken van [ prehide fragment ](../../personalization/manage-flicker.md) voor asynchrone implementaties van SDK van het Web.
 
-De CSS-kiezers die u in deze eigenschap definieert, beginnen de inhoud te verbergen wanneer u de eerste [`sendEvent`](../sendevent/overview.md) op een pagina. De inhoud is niet verborgen wanneer een reactie van de Adobe wordt ontvangen, die doorgaans gepersonaliseerde inhoud bevat. De inhoud is ook niet verborgen als de `sendEvent` mislukt of time-out.
+De CSS-kiezers die u in deze eigenschap definieert, beginnen inhoud te verbergen wanneer u de eerste opdracht [`sendEvent`](../sendevent/overview.md) op een pagina uitvoert. De inhoud is niet verborgen wanneer een reactie van de Adobe wordt ontvangen, die doorgaans gepersonaliseerde inhoud bevat. De inhoud wordt ook niet verborgen als de opdracht `sendEvent` mislukt of als de opdracht een keer wordt uitgevoerd.
 
-Als u beide `prehidingStyle` en het bovenliggende codefragment in uw implementatie, heeft het bovenliggende codefragment voorrang op deze configuratie-eigenschap.
+Als u zowel `prehidingStyle` als het bovenliggende fragment in uw implementatie opneemt, heeft het bovenliggende fragment voorrang op deze configuratie-eigenschap.
 
 ## Stijl vooraf verbergen met de webSDK-tagextensie
 
-Selecteer de **[!UICONTROL Provide prehiding style]** knop wanneer [configureren van de tagextensie](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Selecteer de **[!UICONTROL Provide prehiding style]** knoop wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
-1. Navigeren naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] kaart.
-1. Omlaag schuiven naar de [!UICONTROL Personalization] en selecteert u vervolgens de knop **[!UICONTROL Provide prehiding style]**.
+1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
+1. Blader omlaag naar de sectie [!UICONTROL Personalization] en selecteer vervolgens de knop **[!UICONTROL Provide prehiding style]** .
 1. Met deze knop opent u een modaal venster met een CSS-editor. Voeg de gewenste CSS-kiezer en het declaratieblok in en klik vervolgens op **[!UICONTROL Save]** om het modale venster te sluiten.
-1. Klikken **[!UICONTROL Save]** publiceert u de wijzigingen onder extensie-instellingen.
+1. Klik op **[!UICONTROL Save]** onder extensie-instellingen en publiceer uw wijzigingen.
 
 ## Stijl vooraf verbergen met de Web SDK JavaScript-bibliotheek
 
-Stel de `prehidingStyle` tekenreeks bij het uitvoeren van de `configure` gebruiken. Als u dit bezit weglaat wanneer het vormen van het Web SDK, is niets verborgen wanneer het runnen van eerste `sendEvent` op een pagina. Stel deze waarde in op de gewenste CSS-kiezer en het declaratieblok voor synchroon geladen bibliotheken.
+Stel de tekenreeks `prehidingStyle` in wanneer u de opdracht `configure` uitvoert. Als u deze eigenschap weglaat bij het configureren van de Web SDK, wordt niets verborgen wanneer de eerste `sendEvent` -opdracht op een pagina wordt uitgevoerd. Stel deze waarde in op de gewenste CSS-kiezer en het declaratieblok voor synchroon geladen bibliotheken.
 
 ```js
 alloy("configure", {

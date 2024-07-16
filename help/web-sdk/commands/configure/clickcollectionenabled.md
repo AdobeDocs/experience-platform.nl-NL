@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `clickCollectionEnabled`
 
-De `clickCollectionEnabled` bezit is een booleaanse waarde die bepaalt als het Web SDK automatisch verbindingsgegevens verzamelt. Als u deze variabele niet instelt, is de standaardwaarde `true` Dit betekent dat de gegevens voor het bijhouden van koppelingen standaard automatisch worden verzameld. Deze eigenschap instellen op `false` Dit is handig als u koppelingsgegevens handmatig wilt bijhouden.
+De eigenschap `clickCollectionEnabled` is een Booleaanse waarde die bepaalt of de SDK van het Web automatisch koppelingsgegevens verzamelt. Als u deze variabele niet instelt, is de standaardwaarde `true` . Dit houdt in dat de gegevens voor het bijhouden van koppelingen standaard automatisch worden verzameld. Het instellen van deze eigenschap op `false` is nuttig wanneer u koppelingsgegevens handmatig wilt bijhouden.
 
 Wanneer `clickCollectionEnabled` is ingeschakeld, vullen de volgende XDM-elementen automatisch met gegevens:
 
@@ -19,32 +19,32 @@ Wanneer `clickCollectionEnabled` is ingeschakeld, vullen de volgende XDM-element
 * `xdm.web.webInteraction.type`
 * `xdm.web.webInteraction.URL`
 
-Interne koppelingen, downloadkoppelingen en afsluitkoppelingen worden standaard automatisch bijgehouden wanneer deze Boolean is ingeschakeld. Als u meer controle wilt hebben over het automatisch bijhouden van koppelingen, raadt de Adobe u aan de optie [`clickCollection`](clickcollection.md) object.
+Interne koppelingen, downloadkoppelingen en afsluitkoppelingen worden standaard automatisch bijgehouden wanneer deze Boolean is ingeschakeld. Als u meer controle wilt hebben over het automatisch bijhouden van koppelingen, raadt Adobe u aan het object [`clickCollection`](clickcollection.md) te gebruiken.
 
 ## Logica voor automatisch bijhouden van koppelingen
 
-De SDK van het Web volgt allen klikken op `<a>` en `<area>` HTML-elementen als deze geen `onClick` kenmerk. Klikken worden vastgelegd met een [vastleggen](https://www.w3.org/TR/uievents/#capture-phase) Klik op de gebeurtenislistener die aan het document is gekoppeld. Wanneer op een geldige koppeling wordt geklikt, wordt de volgende logica in de juiste volgorde uitgevoerd:
+De SDK van het Web volgt alle klikken op `<a>` en `<area>` HTML elementen als het geen `onClick` attribuut heeft. De klikken worden gevangen met a [ vangt ](https://www.w3.org/TR/uievents/#capture-phase) klik gebeurtenisluisteraar die aan het document in bijlage is. Wanneer op een geldige koppeling wordt geklikt, wordt de volgende logica in de juiste volgorde uitgevoerd:
 
-1. Als de koppeling overeenkomt met criteria op basis van waarden in [`downloadLinkQualifier`](downloadlinkqualifier.md)of als de koppeling een `download` HTML, kenmerk, `xdm.web.webInteraction.type` is ingesteld op `"download"` (if `clickCollection.downloadLinkEnabled` is ingeschakeld).
-1. Als het koppelingsdoeldomein afwijkt van het huidige `window.location.hostname`, `xdm.web.webInteraction.type` is ingesteld op `"exit"` (if `clickCollection.exitLinkEnabled` is ingeschakeld).
-1. Als de koppeling niet in aanmerking komt voor `"download"` of `"exit"`, `xdm.web.webInteraction.type` is ingesteld op `"other"`.
+1. Als de koppeling overeenkomt met criteria op basis van waarden in [`downloadLinkQualifier`](downloadlinkqualifier.md) of als de koppeling een `download` HTML-kenmerk bevat, wordt `xdm.web.webInteraction.type` ingesteld op `"download"` (als `clickCollection.downloadLinkEnabled` is ingeschakeld).
+1. Als het koppelingsdoeldomein verschilt van het huidige `window.location.hostname` , wordt `xdm.web.webInteraction.type` ingesteld op `"exit"` (als `clickCollection.exitLinkEnabled` is ingeschakeld).
+1. Als de koppeling niet in aanmerking komt voor `"download"` of `"exit"` , wordt `xdm.web.webInteraction.type` ingesteld op `"other"` .
 
-In alle gevallen `xdm.web.webInteraction.name` is ingesteld op het label van de koppelingstekst en `xdm.web.webInteraction.URL` wordt ingesteld op de URL van het koppelingsdoel. Als u ook de naam van de koppeling wilt instellen op de URL, kunt u dit XDM-veld overschrijven met de opdracht `filterClickDetails` callback in de `clickCollection` object.
+In alle gevallen wordt `xdm.web.webInteraction.name` ingesteld op het label van de koppelingstekst en wordt `xdm.web.webInteraction.URL` ingesteld op de URL van het doel van de koppeling. Als u ook de naam van de koppeling wilt instellen op de URL, kunt u dit XDM-veld overschrijven met de callback `filterClickDetails` in het `clickCollection` -object.
 
 ## Automatisch koppelingen bijhouden inschakelen met de webSDK-tagextensie {#tag-extension}
 
-Selecteer de **[!UICONTROL Enable click data collection]** selectievakje wanneer [configureren van de tagextensie](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Selecteer **[!UICONTROL Enable click data collection]** checkbox wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
-1. Navigeren naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] kaart.
-1. Omlaag schuiven naar de [!UICONTROL Data Collection] en selecteert u vervolgens het selectievakje **[!UICONTROL Enable click data collection]**.
-1. Klikken **[!UICONTROL Save]** publiceert u vervolgens uw wijzigingen.
+1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
+1. Schuif omlaag naar de sectie [!UICONTROL Data Collection] en schakel vervolgens het selectievakje **[!UICONTROL Enable click data collection]** in.
+1. Klik op **[!UICONTROL Save]** en publiceer de wijzigingen.
 
 ## Automatisch koppelingen bijhouden inschakelen met de Web SDK JavaScript-bibliotheek {#library}
 
-Stel de `clickCollectionEnabled` boolean wanneer de `configure` gebruiken. Als u dit bezit weglaat wanneer het vormen van het Web SDK, blijft het in gebreke aan `true`. Deze waarde instellen op `false` als u liever instelt `xdm.web.webInteraction.type` en `xdm.web.webInteraction.value` handmatig.
+Stel de Booleaanse waarde `clickCollectionEnabled` in wanneer u de opdracht `configure` uitvoert. Als u deze eigenschap weglaat bij het configureren van de Web SDK, wordt standaard `true` gebruikt. Stel deze waarde in op `false` als u `xdm.web.webInteraction.type` en `xdm.web.webInteraction.value` handmatig wilt instellen.
 
 ```js
 alloy(configure, {

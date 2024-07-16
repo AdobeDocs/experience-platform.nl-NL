@@ -18,4 +18,4 @@ Registratie voor streamingverbindingen is vereist om te beginnen met het streame
 
 Na het registreren van een het stromen verbinding, zult u, als gegevensproducent, een unieke URL hebben die kan worden gebruikt om gegevens aan Platform te stromen.
 
-Als u wilt weten hoe u een geverifieerde streamingverbinding maakt, leest u de [API-bronhandleiding voor HTTP](../../sources/tutorials/api/create/streaming/http.md).
+Leren hoe te om een voor authentiek verklaarde het stromen verbinding tot stand te brengen, te lezen gelieve de [ bron API van HTTP gids ](../../sources/tutorials/api/create/streaming/http.md).

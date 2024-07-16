@@ -6,7 +6,7 @@ exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
 source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
 source-wordcount: '1181'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -17,23 +17,23 @@ Dit document biedt standaardgebruikslimieten voor gegevens van Query Service om 
 
 >[!IMPORTANT]
 >
->Controleer uw licentierechten in uw verkooporder en de bijbehorende rechten [Productbeschrijving](https://helpx.adobe.com/legal/product-descriptions.html) op de werkelijke gebruikslimieten naast deze pagina met instructies.
+>Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [ Beschrijving van het Product ](https://helpx.adobe.com/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
 
 ## Vereisten
 
 Alvorens met dit document verder te gaan, zou u een goed inzicht in de belangrijkste definities en de mogelijkheden van de Dienst van de Vraag moeten hebben. Deze worden hieronder beschreven:
 
-* **Ad-hocquery&#39;s**: Voor uitvoering `SELECT` vragen om, gegevens te onderzoeken, te experimenteren en te bevestigen waar de resultaten van de vragen **zijn niet opgeslagen** op het data Lake.
+* **Ad hoc vragen**: Voor het uitvoeren van `SELECT` vragen om te onderzoeken, te experimenteren, en gegevens te bevestigen waar de resultaten van de vragen **niet** op het gegevensmeer worden opgeslagen.
 
-* **Batchquery&#39;s**: Voor uitvoering `INSERT TABLE AS SELECT` en `CREATE TABLE AS SELECT` query&#39;s voor het opschonen, vormgeven, manipuleren en verrijken van gegevens. De resultaten van deze query&#39;s **worden opgeslagen** op het data Lake. De maatstaf voor het meten van het verbruik van deze functionaliteit is computeruren.
+* **de vragen van de Partij**: Voor het uitvoeren `INSERT TABLE AS SELECT` en `CREATE TABLE AS SELECT` vragen om, gegevens schoon te maken vorm te manipuleren en te verrijken. De resultaten van deze vragen **worden opgeslagen** op het gegevensmeer. De maatstaf voor het meten van het verbruik van deze functionaliteit is computeruren.
 
-* **Gebruikers van Query Service**: De gebruikers van de Dienst van de vraag die binnen uw huidige vergunning voor Customer Journey Analytics, Adobe Real-time Customer Data Platform, en/of Adobe Journey Optimizer worden verstrekt kunnen ook met Gegevens Distiller worden gebruikt. De gebruikers van de Dienst van de vraag worden gedeeld tussen eigenschappen.
+* **de gebruikers van de Dienst van de Vraag**: De gebruikers van de Dienst van de vraag die binnen uw huidige vergunning voor Customer Journey Analytics, Adobe Real-time Customer Data Platform, en/of Adobe Journey Optimizer worden verstrekt kunnen ook met Gegevens Distiller worden gebruikt. De gebruikers van de Dienst van de vraag worden gedeeld tussen eigenschappen.
 
-* **Ad-hocgebruikers**: Ad hoc gebruikers zijn degenen die ad hoc vragen uitvoeren.
+* **Ad hoc gebruikers**: Ad hoc gebruikers zijn degenen die ad hoc vragen uitvoeren.
 
-* **Batchgebruikers**: Batchgebruikers zijn de gebruikers die batchquery&#39;s uitvoeren.
+* **de gebruikers van de Partij**: De gebruikers van de partij zijn degenen die partijvragen uitvoeren.
 
-* **API voor rapportage**: Een API voor het maken van aanroepen voor het ophalen van gegevens (intern of extern). Uitgebreide rapporteringsgegevensmodellen worden afgeleid van de native rapporteringsgegevensmodellen in Adobe Experience Platform, zoals het Real-Time CDP-dashboardgegevensmodel.
+* **Meldend API**: API voor het maken van gegevens haalt vraag (intern of extern). Uitgebreide rapporteringsgegevensmodellen worden afgeleid van de native rapporteringsgegevensmodellen in Adobe Experience Platform, zoals het Real-Time CDP-dashboardgegevensmodel.
 
 In de onderstaande afbeelding ziet u hoe de mogelijkheden van Query Service momenteel zijn verpakt en in licentie worden gegeven:
 
@@ -43,8 +43,8 @@ Dit document bevat twee typen standaardlimieten:
 
 | Het type Guardrail | Beschrijving |
 |----------|---------|
-| **Prestatiegarantie (Zachte limiet)** | Prestatiegaranties zijn gebruikslimieten die betrekking hebben op het bereik van uw gebruiksgevallen. Als u de prestatiegaranties overschrijdt, kan de prestaties achteruitgaan en de latentie vertragen. Adobe is niet verantwoordelijk voor een dergelijke verslechtering van de prestaties. Klanten die een prestatiegarantie consequent overschrijden, kunnen ervoor kiezen om extra capaciteit te licentiëren om prestatievermindering te voorkomen. |
-| **Door het systeem afgedwongen geleiding (harde limiet)** | De door het systeem afgedwongen instructies worden afgedwongen door de gebruikersinterface of API van Real-Time CDP. Dit zijn grenzen die u niet kunt overschrijden aangezien UI en API u zal tegenhouden dit te doen of een fout zal terugkeren. |
+| **Gegarandeerde van Prestaties (Zachte grens)** | Prestatiegaranties zijn gebruikslimieten die betrekking hebben op het bereik van uw gebruiksgevallen. Als u de prestatiegaranties overschrijdt, kan de prestaties achteruitgaan en de latentie vertragen. Adobe is niet verantwoordelijk voor een dergelijke verslechtering van de prestaties. Klanten die een prestatiegarantie consequent overschrijden, kunnen ervoor kiezen om extra capaciteit te licentiëren om prestatievermindering te voorkomen. |
+| **systeem-afgedwongen grails (Harde grens)** | De door het systeem afgedwongen instructies worden afgedwongen door de gebruikersinterface of API van Real-Time CDP. Dit zijn grenzen die u niet kunt overschrijden aangezien UI en API u zal tegenhouden dit te doen of een fout zal terugkeren. |
 
 {style="table-layout:auto"}
 
@@ -56,29 +56,29 @@ Dit document bevat twee typen standaardlimieten:
 
 De lijsten hieronder verstrekken de geadviseerde guardrailgrenzen en beschrijvingen voor vraaguitvoering wanneer het gebruiken van een bepaald vraagpatroon.
 
-**Ad-hocquery&#39;s**
+**Ad hoc vragen**
 
 | Guardrail | Limiet | Type limiet | Beschrijving |
 |---|---|---|---|
 | Maximale uitvoeringstijd | 10 minuten | Door het systeem afgedwongen geleiding | Hiermee wordt de maximale uitvoertijd voor een ad-hoc SQL-query gedefinieerd. Als u de tijdslimiet voor het retourneren van een resultaat overschrijdt, wordt de foutcode 53400 gegenereerd. |
-| Gelijktijdige gebruikers van Query Service | <ul><li>Zoals gespecificeerd in de productbeschrijving van de toepassing.</li><li>+5 (met elke extra Ad-hocpakket voor gebruikers van add-on aangeschaft)</li></ul> | Door het systeem afgedwongen geleiding | Hiermee bepaalt u hoeveel gebruikers sessies tegelijk voor een bepaalde organisatie kunnen maken. Als de gelijktijdige limiet wordt overschreden, ontvangt de gebruiker een `Session Limit Reached` fout. |
+| Gelijktijdige gebruikers van Query Service | <ul><li>Zoals gespecificeerd in de productbeschrijving van de toepassing.</li><li>+5 (met elke extra Ad-hocpakket voor gebruikers van add-on aangeschaft)</li></ul> | Door het systeem afgedwongen geleiding | Hiermee bepaalt u hoeveel gebruikers sessies tegelijk voor een bepaalde organisatie kunnen maken. Als de gelijktijdige limiet wordt overschreden, ontvangt de gebruiker een `Session Limit Reached` -fout. |
 | Gelijktijdige zoekopdracht | <ul><li>Zoals gespecificeerd in de productbeschrijving van de toepassing.</li><li>+1 (met elke extra aangeschafte SKU-pack voor Ad hoc-querygebruikers)</li></ul> | Door het systeem afgedwongen geleiding | Dit bepaalt hoeveel vragen gelijktijdig voor een bepaalde organisatie kunnen worden uitgevoerd. Als de gelijktijdige limiet wordt overschreden, worden de query&#39;s in een wachtrij geplaatst. |
-| Client-connector en resultaatuitvoerlimiet | Clientconnector<ul><li>Query-gebruikersinterface (100 rijen)</li><li>Client van derden (50.000)</li><li>[!DNL PostgresSQL] client (50.000)</li></ul> | Door het systeem afgedwongen geleiding | Het resultaat van een vraag kan door de volgende middelen worden ontvangen:<ul><li>Gebruikersinterface Query Service</li><li>Client van derden</li><li>[!DNL PostgresSQL] client</li></ul>Opmerking: het toevoegen van een beperking aan het uitvoeraantal kan sneller resultaten opleveren. Bijvoorbeeld: `LIMIT 5`, `LIMIT 10`, enzovoort. |
-| Resultaten geretourneerd via | Gebruikersinterface client | NVT | Hiermee bepaalt u hoe de resultaten ter beschikking worden gesteld van de gebruikers. |
+| Client-connector en resultaatuitvoerlimiet | Clientconnector<ul><li>Query-gebruikersinterface (100 rijen)</li><li>Client van derden (50.000)</li><li>[!DNL PostgresSQL] client (50.000)</li></ul> | Door het systeem afgedwongen geleiding | Het resultaat van een vraag kan door de volgende middelen worden ontvangen:<ul><li>Gebruikersinterface Query Service</li><li>Client van derden</li><li>[!DNL PostgresSQL] client</li></ul>Opmerking: het toevoegen van een beperking aan het uitvoeraantal kan sneller resultaten opleveren. Bijvoorbeeld `LIMIT 5` , `LIMIT 10` , enzovoort. |
+| Resultaten geretourneerd via | Gebruikersinterface client | N.v.t. | Hiermee bepaalt u hoe de resultaten ter beschikking worden gesteld van de gebruikers. |
 
 {style="table-layout:auto"}
 
-**Batchquery&#39;s**
+**de vragen van de Partij**
 
-| **Guardrail** | **Limiet** | **Type limiet** | **Beschrijving** |
+| **Guardrail** | **Grens** | **Type van Grens** | **Beschrijving** |
 |---|---|---|---|
-| Maximale uitvoeringstijd | 24 uur | Door het systeem afgedwongen geleiding | Dit bepaalt de maximumuitvoeringstijd voor een partijSQL vraag.<br>De verwerkingstijd van een vraag is afhankelijk van het volume van te verwerken gegevens en vraagingewikkeldheid. |
-| Gelijktijdige gebruikers van Query-service voor niet-geplande batch | <ul><li>Zoals gespecificeerd in de productbeschrijving van de toepassing.</li><li>+5 (met elke extra Ad-hocpakket voor gebruikers van add-on aangeschaft)</li></ul> | Door het systeem afgedwongen geleiding | Voor ongeplande partijvragen (bijvoorbeeld vragen CTAS/ITAS op interactieve wijze), bepaalt dit hoeveel gebruikers zittingen voor een bepaalde organisatie gelijktijdig kunnen tot stand brengen. Als de gelijktijdige limiet wordt overschreden, ontvangt de gebruiker een `Session Limit Reached` fout. |
-| Gelijktijdige gebruikers van Query-service voor geplande batch | Geen gebruikersbeperking | NVT | Gepland partijvragen zijn asynchrone banen zodat is er geen gebruikersbeperking. |
+| Maximale uitvoeringstijd | 24 uur | Door het systeem afgedwongen geleiding | Dit bepaalt de maximumuitvoeringstijd voor een partijSQL vraag.<br> de verwerkingstijd van een vraag is afhankelijk van het volume van te verwerken gegevens en vraagingewikkeldheid. |
+| Gelijktijdige gebruikers van Query-service voor niet-geplande batch | <ul><li>Zoals gespecificeerd in de productbeschrijving van de toepassing.</li><li>+5 (met elke extra Ad-hocpakket voor gebruikers van add-on aangeschaft)</li></ul> | Door het systeem afgedwongen geleiding | Voor ongeplande partijvragen (bijvoorbeeld vragen CTAS/ITAS op interactieve wijze), bepaalt dit hoeveel gebruikers zittingen voor een bepaalde organisatie gelijktijdig kunnen tot stand brengen. Als de gelijktijdige limiet wordt overschreden, ontvangt de gebruiker een `Session Limit Reached` -fout. |
+| Gelijktijdige gebruikers van Query-service voor geplande batch | Geen gebruikersbeperking | N.v.t. | Gepland partijvragen zijn asynchrone banen zodat is er geen gebruikersbeperking. |
 | Rekenuren voor batchverwerking | Zoals gespecificeerd in de Adobe Experience Platform Intelligence Query Custom SKU-verkooporder van de klant | Prestatiegerichting | Dit bepaalt de scoped hoeveelheid verwerkingstijd per jaar een klant voor het uitvoeren van partijvragen wordt toegestaan om, gegevens terug in het gegevens meer af te tasten te verwerken en te schrijven. |
-| Gelijktijdige zoekopdracht | Ondersteund | NVT | Gepland partijvragen zijn asynchrone banen, daarom worden de gezamenlijke vragen gesteund. |
+| Gelijktijdige zoekopdracht | Ondersteund | N.v.t. | Gepland partijvragen zijn asynchrone banen, daarom worden de gezamenlijke vragen gesteund. |
 | Clientconnector en uitvoerlimiet van resultaat | Clientconnector<ul><li>Query-gebruikersinterface (geen bovenlimiet voor rijen)</li><li>Client van derden (geen bovenlimiet voor rijen)</li><li>[!DNL PostgresSQL] client (geen bovenlimiet voor rijen)</li><li>REST API&#39;s (geen bovengrens voor rijen)</li></ul> | Door het systeem afgedwongen geleiding | Het resultaat van een query kan op de volgende manieren beschikbaar worden gemaakt:<ul><li>Kan worden opgeslagen als afgeleide gegevenssets</li><li>Kan in de bestaande afgeleide gegevenssets worden opgenomen</li></ul>Nota: Er is geen bovengrens aan het aantal van het verslagaantal van het vraagresultaat. |
-| Resultaten geretourneerd via | Gegevensset | NVT | Hiermee bepaalt u hoe de resultaten ter beschikking worden gesteld van de gebruikers. |
+| Resultaten geretourneerd via | Gegevensset | N.v.t. | Hiermee bepaalt u hoe de resultaten ter beschikking worden gesteld van de gebruikers. |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ De lijst hieronder verstrekt de geadviseerde guardrailgrenzen en beschrijving vo
 
 | Guardrail | Limiet | Type limiet | Beschrijving |
 |---|---|---|---|
-| Gelijktijdige zoekopdracht | 4 | Door het systeem afgedwongen geleiding | Om ervoor te zorgen dat de vragen over samengevoegde gegevens via rapporteringsAPI (met inbegrip van vragen die gegevensmodellen zoals de gegevensmodellen van Real-Time CDP verbeteren) de middelen hebben om efficiënt uit te voeren, houdt het rapporterende API middelgebruik door de opeenvolgingen van de wisselingscapaciteit aan elke vraag toe te wijzen. Het systeem zet vragen in een rij en wacht tot de opeenslagen van de gelijktijdige dienst beschikbaar worden of zij van het geheime voorgeheugen kunnen worden gediend. Een maximum van vier gezamenlijke vraaggroeven is beschikbaar op elk bepaald ogenblik.<br>Als u toegang hebt tot de API voor rapportage via een BI-programma en meer gelijktijdige uitvoering nodig hebt, is een BI-server vereist. |
+| Gelijktijdige zoekopdracht | 4 | Door het systeem afgedwongen geleiding | Om ervoor te zorgen dat de vragen over samengevoegde gegevens via rapporteringsAPI (met inbegrip van vragen die gegevensmodellen zoals de gegevensmodellen van Real-Time CDP verbeteren) de middelen hebben om efficiënt uit te voeren, houdt het rapporterende API middelgebruik door de opeenvolgingen van de wisselingscapaciteit aan elke vraag toe te wijzen. Het systeem zet vragen in een rij en wacht tot de opeenslagen van de gelijktijdige dienst beschikbaar worden of zij van het geheime voorgeheugen kunnen worden gediend. Een maximum van vier gezamenlijke vraaggroeven is beschikbaar op elk bepaald ogenblik.<br> als u tot het melden API door een hulpmiddel van BI toegang hebt en meer gelijktijdige uitvoering vereist, wordt een server van BI vereist. |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ Zie de volgende documentatie voor meer informatie over de Dienst van de Vraag:
 Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platforms services guardrails, over end-to-end latentie-informatie en licentiegegevens uit Real-Time CDP Product Description-documenten:
 
 * [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
-* [Diagrammen met latentie van begin tot eind](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor verschillende diensten van de Experience Platform.
-* [Real-time Customer Data Platform (B2C Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [ De diagrammen van de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van het Experience Platform.
+* [ Real-time Customer Data Platform (B2C Uitgave - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [ Real-time Customer Data Platform (B2P - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [ Real-time Customer Data Platform (B2B - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

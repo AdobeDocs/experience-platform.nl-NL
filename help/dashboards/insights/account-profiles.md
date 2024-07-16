@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Accountprofielinzichten
 
-[Accountprofielen](../../rtcdp/accounts/account-profile-overview.md) worden gebruikt voor de consolidatie van rekeninginformatie uit verschillende bronnen, waaronder meerdere afzetkanalen en organisatorische systemen. Deze verenigde mening laat een uitvoerig inzicht in klantenrekeningen toe, die B2B marketing campagnes verbeteren. De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adobe Real-time Customer Data Platform B2B-gegevens toegankelijker, begrijpelijker en effectiever voor de besluitvorming.
+[ de profielen van de Rekening ](../../rtcdp/accounts/account-profile-overview.md) worden gebruikt om rekeningsinformatie uit diverse bronnen, met inbegrip van veelvoudige marketing kanalen en organisatorische systemen te consolideren. Deze verenigde mening laat een uitvoerig inzicht in klantenrekeningen toe, die B2B marketing campagnes verbeteren. De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adobe Real-time Customer Data Platform B2B-gegevens toegankelijker, begrijpelijker en effectiever voor de besluitvorming.
 
 Met toegang tot SQL die uw inzichten drijft, kunt u beter uw B2B gegevens begrijpen en uw eigen hoogst aangepaste herbruikbare inzichten produceren om uw informatie van de klantenrekening verder te onderzoeken. Transformeer uw onbewerkte gegevens in nieuwe inzichten die kunnen worden gebruikt door het bestaande Real-Time CDP-gegevensmodel SQL als inspiratie te gebruiken voor het maken van query&#39;s voor uw unieke bedrijfsbehoeften.
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-U kunt de volgende inzichten allemaal gebruiken als onderdeel van de [Het dashboard Accountprofielen](../guides/account-profiles.md) of [aangepast dashboard](../user-defined-dashboards.md). Zie de [aanpassingsoverzicht](../customize/overview.md) voor instructies over het aanpassen van het dashboard of [nieuwe widgets maken en bewerken](../customize/custom-widgets.md) in de widgetbibliotheek en [door gebruiker gedefinieerd dashboard](../user-defined-dashboards.md#create-widget).
+De volgende inzichten zijn allen beschikbaar voor u als deel van het [ dashboard van Profielen van de Rekening ](../guides/account-profiles.md) of a [ douanedashboard ](../user-defined-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../user-defined-dashboards.md#create-widget) uit.
 
 ## Accountprofielen toegevoegd {#account-profiles-added}
 
@@ -287,4 +287,4 @@ Door dit document te lezen, begrijpt u nu de SQL die dashboardinzichten van het 
 
 <!-- Add link above Learn how to [generate insights with SQL](). after April release -->
 
-U kunt ook de SQL lezen en begrijpen die inzichten voor [Profielen](./profiles.md), [Soorten publiek](./audiences.md), en [Doelen](./destinations.md) dashboards.
+U kunt SQL ook lezen en begrijpen die inzichten voor de [ Profielen ](./profiles.md), [ Soorten publiek ](./audiences.md), en [ Doelen ](./destinations.md) dashboards van Doelen produceert.

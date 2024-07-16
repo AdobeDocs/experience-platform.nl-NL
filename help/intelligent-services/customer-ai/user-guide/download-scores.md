@@ -7,7 +7,7 @@ description: Met AI van de klant kunt u scores downloaden in de Parquet-bestands
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
@@ -18,30 +18,30 @@ Dit document fungeert als richtlijn voor het downloaden van scores voor AI-besta
 
 ## Aan de slag
 
-Met AI van de klant kunt u scores downloaden in de Parquet-bestandsindeling. Deze zelfstudie vereist dat u de sectie voor het downloaden van Klant AI-scores in het dialoogvenster [aan de slag](../getting-started.md) hulplijn.
+Met AI van de klant kunt u scores downloaden in de Parquet-bestandsindeling. Dit leerprogramma vereist dat u hebt gelezen en geëindigd het downloaden de scores van de Klant AI sectie in [ begonnen wordt ](../getting-started.md) gids.
 
-Daarnaast moet u een service-instantie met een geslaagde status hebben om toegang te krijgen tot scores voor de AIR-service. Om een nieuwe de dienstinstantie te creëren, bezoek [Een AI-instantie van de klant configureren](./configure.md). Als u onlangs een de dienstinstantie creeerde en het nog opleidt en het scoring, gelieve 24 uren voor het te beëindigen loopt.
+Daarnaast moet u een service-instantie met een geslaagde status hebben om toegang te krijgen tot scores voor de AIR-service. Om een nieuwe de dienstinstantie tot stand te brengen, bezoek [ Vormend een instantie van de Klant AI ](./configure.md). Als u onlangs een de dienstinstantie creeerde en het nog opleidt en het scoring, gelieve 24 uren voor het te beëindigen loopt.
 
 Er zijn momenteel twee manieren om AI-scores van klanten te downloaden:
 
-1. Als u de scores op het individuele niveau wilt downloaden en/of geen Real-Time Klantprofiel hebt toegelaten, begin door te navigeren aan [zoeken naar uw gegevensset-id](#dataset-id).
-2. Als u Profiel hebt ingeschakeld en segmenten wilt downloaden die u hebt geconfigureerd met Customer AI, navigeert u naar [een segment downloaden dat is geconfigureerd met Customer AI](#segment).
+1. Als u de scores op het individuele niveau wilt downloaden en/of geen toegelaten Profiel van de Klant in real time hebben, begin door aan [ te navigeren die uw dataset identiteitskaart ](#dataset-id) vinden.
+2. Als u toegelaten Profiel hebt en segmenten wilt downloaden die u gebruikend Klant AI hebt gevormd, gelieve te navigeren aan [ download een segment dat met Klant AI ](#segment) wordt gevormd.
 
 ## Uw gegevensset-id zoeken {#dataset-id}
 
-Klik in uw serviceexemplaar voor AI-inzichten van Klant op de knop *Meer handelingen* vervolgkeuzelijst in de navigatie rechtsboven en selecteer **[!UICONTROL Access scores]**.
+Binnen uw de dienstinstantie voor Inzichten van de Klant AI, klik *Meer acties* dropdown in de top-juiste navigatie dan selecteren **[!UICONTROL Access scores]**.
 
-![meer acties](../images/insights/more-actions.png)
+![ meer acties ](../images/insights/more-actions.png)
 
 Er wordt een nieuw dialoogvenster weergegeven met een koppeling naar de documentatie van downloadscores en de id van de gegevensset voor uw huidige instantie. Kopieer de id van de gegevensset naar het klembord en ga verder met de volgende stap.
 
-![Dataset-id](../images/download-scores/access-scores.png)
+![ identiteitskaart van de Dataset ](../images/download-scores/access-scores.png)
 
 ## Batch-id ophalen {#retrieve-your-batch-id}
 
-Gebruikend uw dataset identiteitskaart van de vorige stap, moet u een vraag aan de Catalogus API maken om een partijidentiteitskaart terug te winnen. Voor deze API-aanroep worden aanvullende queryparameters gebruikt om de laatste succesvolle batch te retourneren in plaats van een lijst met batches die bij uw organisatie horen. Om extra partijen terug te keren, verhoog het aantal voor de parameter van de grensvraag tot de gewenste hoeveelheid u wenst om te zijn teruggekeerd. Voor meer informatie over de types van vraagparameters beschikbaar, bezoek de gids op [catalogusgegevens filteren met behulp van queryparameters](../../../catalog/api/filter-data.md).
+Gebruikend uw dataset identiteitskaart van de vorige stap, moet u een vraag aan de Catalogus API maken om een partijidentiteitskaart terug te winnen. Voor deze API-aanroep worden aanvullende queryparameters gebruikt om de laatste succesvolle batch te retourneren in plaats van een lijst met batches die bij uw organisatie horen. Om extra partijen terug te keren, verhoog het aantal voor de parameter van de grensvraag tot de gewenste hoeveelheid u wenst om te zijn teruggekeerd. Voor meer informatie over de types van beschikbare vraagparameters, bezoek de gids bij [ het filtreren gegevens van de Catalogus gebruikend vraagparameters ](../../../catalog/api/filter-data.md).
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /batches?&dataSet={DATASET_ID}&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1
@@ -61,9 +61,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een lading die een batch-id-object bevat. In dit voorbeeld is de sleutelwaarde voor het geretourneerde object de batch-id `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieer uw batch-id voor gebruik in de volgende API-aanroep.
+Een geslaagde reactie retourneert een lading die een batch-id-object bevat. In dit voorbeeld is de sleutelwaarde voor het geretourneerde object de batch-id `01E5QSWCAASFQ054FNBKYV6TIQ` . Kopieer uw batch-id voor gebruik in de volgende API-aanroep.
 
 ```json
 {
@@ -114,9 +114,9 @@ Een geslaagde reactie retourneert een lading die een batch-id-object bevat. In d
 
 ## De volgende API-aanroep ophalen met uw batch-id {#retrieve-the-next-api-call-with-your-batch-id}
 
-Als je eenmaal een batch-id hebt, kun je een nieuwe aanvraag indienen bij `/batches`. De aanvraag retourneert een koppeling die wordt gebruikt als de volgende API-aanvraag.
+Als u eenmaal een batch-id hebt, kunt u een nieuwe aanvraag indienen bij `/batches` . De aanvraag retourneert een koppeling die wordt gebruikt als de volgende API-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET batches/{BATCH_ID}/files
@@ -124,7 +124,7 @@ GET batches/{BATCH_ID}/files
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{BATCH_ID}` | De batch-id die is opgehaald in de vorige stap [batch-id ophalen](#retrieve-your-batch-id). |
+| `{BATCH_ID}` | De partijidentiteitskaart die in de vorige stap [ werd teruggewonnen wint uw partijidentiteitskaart ](#retrieve-your-batch-id) terug. |
 
 **Verzoek**
 
@@ -138,9 +138,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een payload die een `_links` object. Binnen de `_links` object is een `href` met een nieuwe API-aanroep als waarde. Kopieer deze waarde om door te gaan naar de volgende stap.
+Een geslaagde reactie retourneert een payload die een `_links` -object bevat. Binnen het `_links` -object bevindt zich een `href` met een nieuwe API-aanroep als waarde. Kopieer deze waarde om door te gaan naar de volgende stap.
 
 ```json
 {
@@ -168,9 +168,9 @@ Een geslaagde reactie retourneert een payload die een `_links` object. Binnen de
 
 ## Bestanden ophalen {#retrieving-your-files}
 
-Met de `href` Voer een nieuwe aanvraag in om de bestandsmap op te halen.
+Maak een nieuwe aanvraag voor het ophalen van de bestandsmap met de `href` -waarde die u in de vorige stap als API-aanroep hebt gekregen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET files/{DATASETFILE_ID}
@@ -178,7 +178,7 @@ GET files/{DATASETFILE_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | De id dataSetFile wordt geretourneerd in het dialoogvenster `href` waarde van de [vorige stap](#retrieve-the-next-api-call-with-your-batch-id). Het is ook toegankelijk in `data` array onder het objecttype `dataSetFileId`. |
+| `{DATASETFILE_ID}` | ID dataSetFile is teruggekeerd in de `href` waarde van de [ vorige stap ](#retrieve-the-next-api-call-with-your-batch-id). De eigenschap is ook toegankelijk in de array `data` onder het objecttype `dataSetFileId` . |
 
 **Verzoek**
 
@@ -190,7 +190,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 De reactie bevat een gegevensarray die één item kan hebben, of een lijst met bestanden die tot die map behoren. Het onderstaande voorbeeld bevat een lijst met bestanden en is gecondenseerd voor leesbaarheid. In dit scenario moet u de URL van elk bestand volgen om toegang te krijgen tot het bestand.
 
@@ -237,17 +237,17 @@ De reactie bevat een gegevensarray die één item kan hebben, of een lijst met b
 | `_links.self.href` | De aanvraag-URL van de GET die wordt gebruikt om een bestand in uw map te downloaden. |
 
 
-De `href` waarde voor elk bestandsobject in het dialoogvenster `data` -array en ga vervolgens verder met de volgende stap.
+Kopieer de `href` -waarde voor een willekeurig bestandsobject in de `data` -array en ga vervolgens verder met de volgende stap.
 
 ## Bestandsgegevens downloaden
 
-Als u uw bestandsgegevens wilt downloaden, vraagt u een GET naar de `"href"` waarde die u in de vorige stap hebt gekopieerd [ophalen, bestanden](#retrieving-your-files).
+Om uw dossiergegevens te downloaden, doe een verzoek van de GET aan de `"href"` waarde u in de vorige stap [ het terugwinnen van uw dossiers ](#retrieving-your-files) kopieerde.
 
 >[!NOTE]
 >
->Als u dit verzoek direct in bevellijn doet, zou u kunnen worden ertoe aangezet om een output na uw verzoekkopballen toe te voegen. Het volgende aanvraagvoorbeeld gebruikt `--output {FILENAME.FILETYPE}`.
+>Als u dit verzoek direct in bevellijn doet, zou u kunnen worden ertoe aangezet om een output na uw verzoekkopballen toe te voegen. In het volgende aanvraagvoorbeeld wordt `--output {FILENAME.FILETYPE}` gebruikt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET files/{DATASETFILE_ID}?path={FILE_NAME}
@@ -255,7 +255,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | De id dataSetFile wordt geretourneerd in het dialoogvenster `href` waarde van een [vorige stap](#retrieve-the-next-api-call-with-your-batch-id). |
+| `{DATASETFILE_ID}` | ID dataSetFile is teruggekeerd in de `href` waarde van a [ vorige stap ](#retrieve-the-next-api-call-with-your-batch-id). |
 | `{FILE_NAME}` | De naam van het bestand. |
 
 **Verzoek**
@@ -273,27 +273,27 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 >
 >Zorg ervoor dat u zich in de juiste map of map bevindt waarnaar u het bestand wilt opslaan voordat u de GET-aanvraag indient.
 
-**Antwoord**
+**Reactie**
 
 Het antwoord downloadt het bestand dat u in de huidige map hebt aangevraagd. In dit voorbeeld is de bestandsnaam &quot;filename.parquet&quot;.
 
-![Terminal](../images/download-scores/response.png)
+![ Eind ](../images/download-scores/response.png)
 
 ## Een segment downloaden dat is geconfigureerd met Customer AI {#segment}
 
-Een andere manier om uw score te downloaden is door uw publiek naar een dataset te exporteren. Nadat een segmentatietaak is voltooid (de waarde van de opdracht `status` attribuut is &quot;SUCCEEDED&quot;), kunt u uw publiek naar een dataset uitvoeren waar het kan worden betreden en op gehandeld. Ga voor meer informatie over segmentatie naar de [segmentatieoverzicht](../../../segmentation/home.md).
+Een andere manier om uw score te downloaden is door uw publiek naar een dataset te exporteren. Nadat een segmentatietaak is voltooid (de waarde van het kenmerk `status` is &quot;SUCCEEDED&quot;), kunt u uw publiek exporteren naar een dataset waar toegang tot de taak mogelijk is en waarop u kunt reageren. Meer over segmentatie leren, bezoek het [ segmentatieoverzicht ](../../../segmentation/home.md).
 
 >[!IMPORTANT]
 >
 >Om deze methode van het uitvoeren te gebruiken, moet het Profiel van de Klant in real time voor de dataset worden toegelaten.
 
-De [een segment exporteren](../../../segmentation/tutorials/evaluate-a-segment.md) de sectie in de gids van de segmentevaluatie behandelt de vereiste stappen om een publieksdataset uit te voeren. In de handleiding worden de volgende voorbeelden geschetst en gegeven:
+De [ uitvoer een segment ](../../../segmentation/tutorials/evaluate-a-segment.md) sectie in de gids van de segmentevaluatie behandelt de vereiste stappen om een publieksdataset uit te voeren. In de handleiding worden de volgende voorbeelden geschetst en gegeven:
 
-- **Een doelgegevensset maken:** Creeer de dataset om publieksleden te houden.
-- **Profielen voor het publiek genereren in de gegevensset:** Vul de dataset met Individuele Profielen XDM die op de resultaten van een segmentbaan worden gebaseerd.
-- **Voortgang export controleren:** Controleer de huidige voortgang van het exportproces.
-- **Lees de publieksgegevens:** Haal de resulterende afzonderlijke XDM-profielen op die de leden van uw publiek vertegenwoordigen.
+- **creeer een doeldataset:** creeer de dataset om publieksleden te houden.
+- **produceer publieksprofielen in de dataset:** bevolkt de dataset met Individuele Profielen XDM die op de resultaten van een segmentbaan worden gebaseerd.
+- **de uitvoervooruitgang van de Monitor:** controleer de huidige vooruitgang van het uitvoerproces.
+- **Lees publieksgegevens:** wint de resulterende Individuele Profielen XDM die de leden van uw publiek vertegenwoordigen terug.
 
 ## Volgende stappen
 
-In dit document worden de stappen beschreven die zijn vereist voor het downloaden van AI-scores van de klant. U kunt nu door de andere bladeren [Intelligente services](../../home.md) en gidsen die worden aangeboden.
+In dit document worden de stappen beschreven die zijn vereist voor het downloaden van AI-scores van de klant. U kunt nu blijven doorbladeren de andere [ Intelligente Diensten ](../../home.md) en gidsen die worden aangeboden.

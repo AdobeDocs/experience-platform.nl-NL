@@ -14,36 +14,36 @@ ht-degree: 0%
 
 # Aan de slag met de [!DNL Policy Service] API
 
-De [!DNL Policy Service] Met API kunt u verschillende bronnen maken en beheren die te maken hebben met Adobe Experience Platform Data Governance. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen vraag aan te maken [!DNL Policy Service] API.
+Met de API van [!DNL Policy Service] kunt u verschillende bronnen maken en beheren die te maken hebben met Adobe Experience Platform-gegevensbeheer. Dit document bevat een inleiding op de kernconcepten die u moet kennen voordat u de API van [!DNL Policy Service] aanroept.
 
 ## Vereisten
 
-Voor het gebruik van de handleiding voor ontwikkelaars is een goed begrip van de verschillende [!DNL Experience Platform] diensten die betrokken zijn bij het werken met mogelijkheden voor gegevensbeheer. Voordat u met de [!DNL Policy Service API], raadpleeg de documentatie voor de volgende services:
+Het gebruik van de ontwikkelaarshandleiding vereist een goed begrip van de verschillende [!DNL Experience Platform] -services die betrokken zijn bij het werken met mogelijkheden voor gegevensbeheer. Voordat u met de [!DNL Policy Service API] begint te werken, raadpleegt u de documentatie voor de volgende services:
 
-* [Gegevensbeheer](../home.md): Het kader waarbinnen [!DNL Experience Platform] dwingt gegevensgebruiksnaleving af.
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
-* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-* [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Beheer van Gegevens ](../home.md): Het kader waardoor [!DNL Experience Platform] naleving van het gegevensgebruik afdwingt.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+* [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## API-voorbeeldaanroepen lezen
 
-De [!DNL Policy Service] API-documentatie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
+De API-documentatie van [!DNL Policy Service] biedt voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ## Vereiste koppen
 
-De API-documentatie vereist ook dat u de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) om met succes vraag te maken aan [!DNL Platform] eindpunten. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
+De API documentatie vereist u ook om het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) te voltooien om vraag aan [!DNL Platform] eindpunten met succes te maken. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform], met inbegrip van de sandboxen die tot gegevensbeheer behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot gegevensbeheer behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Voor meer informatie over sandboxen in [!DNL Platform], zie de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -51,9 +51,9 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Core vs aangepaste bronnen
 
-Binnen de [!DNL Policy Service] API, alle beleid en marketingacties worden aangeduid als `core` of `custom` middelen.
+Binnen de API van [!DNL Policy Service] worden alle beleidsregels en marketingacties `core` of `custom` bronnen genoemd.
 
-`core` de middelen zijn die welke door de Adobe worden gedefinieerd en gehandhaafd, terwijl `custom` bronnen zijn bronnen die door uw organisatie worden gemaakt en onderhouden en zijn daarom uniek en alleen zichtbaar voor uw organisatie. Als dusdanig, lijst en raadplegingsverrichtingen (`GET`) zijn de enige bewerkingen die zijn toegestaan op `core` bronnen, terwijl bewerkingen voor het weergeven, opzoeken en bijwerken (`POST`, `PUT`, `PATCH`, en `DELETE`) is beschikbaar voor `custom` middelen.
+`core` -bronnen zijn de bronnen die door Adobe worden gedefinieerd en onderhouden, terwijl `custom` -bronnen de bronnen zijn die door uw organisatie worden gemaakt en onderhouden en daarom uniek en alleen zichtbaar zijn voor uw organisatie. Het weergeven van lijsten en opzoekbewerkingen (`GET`) zijn daarom de enige bewerkingen die zijn toegestaan in `core` -bronnen, terwijl het weergeven, opzoeken en bijwerken van bewerkingen (`POST` , `PUT`, `PATCH` en `DELETE`) beschikbaar is voor `custom` -bronnen.
 
 ## Volgende stappen
 

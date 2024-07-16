@@ -19,15 +19,15 @@ Dit document bevat een aantal instructies voor het maken van een ontwerppatroon 
 
 ## Aan de slag
 
-De SQL-voorbeelden in dit document vereisen dat u een goed inzicht hebt in de anonieme mogelijkheden voor blokken en momentopnamen. Het wordt aanbevolen om de [voorbeeld anonieme blokvragen](./anonymous-block.md) en de [opname, component](../sql/syntax.md#snapshot-clause) documentatie.
+De SQL-voorbeelden in dit document vereisen dat u een goed inzicht hebt in de anonieme mogelijkheden voor blokken en momentopnamen. Het wordt geadviseerd dat u de [ steekproef anonieme blokvragen ](./anonymous-block.md) documentatie en ook de [ momentopnameclausule ](../sql/syntax.md#snapshot-clause) documentatie leest.
 
-Zie voor een overzicht van alle terminologie die in deze handleiding wordt gebruikt de [SQL-syntaxishandleiding](../sql/syntax.md).
+Voor begeleiding op om het even welke die terminologie binnen deze gids wordt gebruikt, verwijs naar de [ SQL syntaxisgids ](../sql/syntax.md).
 
 ## Gegevens stapsgewijs laden
 
 In de onderstaande stappen wordt getoond hoe u gegevens kunt maken en incrementeel kunt laden met behulp van momentopnamen en de anonieme blokfunctie. Het ontwerppatroon kan als malplaatje voor uw eigen opeenvolging van vragen worden gebruikt.
 
-1. Een `checkpoint_log` tabel voor het bijhouden van de meest recente momentopname die is gebruikt om gegevens te verwerken. De tabel voor reeksspatiëring (`checkpoint_log` in dit voorbeeld) moet eerst worden geïnitialiseerd naar `null` om een dataset stapsgewijs te verwerken.
+1. Maak een `checkpoint_log` -tabel waarin de meest recente opname wordt bijgehouden die is gebruikt om gegevens te verwerken. De volgende lijst (`checkpoint_log` in dit voorbeeld) moet eerst aan `null` worden geïnitialiseerd om een dataset stapsgewijs te verwerken.
 
    ```SQL
    DROP TABLE IF EXISTS checkpoint_log;
@@ -40,7 +40,7 @@ In de onderstaande stappen wordt getoond hoe u gegevens kunt maken en incremente
       WHERE false;
    ```
 
-1. Vul de `checkpoint_log` tabel met één lege record voor de gegevensset die incrementele verwerking nodig heeft. `DIM_TABLE_ABC` is de gegevensset die in het onderstaande voorbeeld moet worden verwerkt. Bij de eerste verwerkingstijd `DIM_TABLE_ABC`de `last_snapshot_id` is geïnitialiseerd als `null`. Dit staat u toe om de volledige dataset bij de eerste gelegenheid en incrementeel daarna te verwerken.
+1. Vul de `checkpoint_log` lijst met één leeg verslag voor de dataset die stijgende verwerking vereist. `DIM_TABLE_ABC` is de gegevensset die in het onderstaande voorbeeld moet worden verwerkt. Bij de eerste keer dat `DIM_TABLE_ABC` wordt verwerkt, wordt `last_snapshot_id` geïnitialiseerd als `null` . Dit staat u toe om de volledige dataset bij de eerste gelegenheid en incrementeel daarna te verwerken.
 
    ```SQL
    INSERT INTO
@@ -52,17 +52,17 @@ In de onderstaande stappen wordt getoond hoe u gegevens kunt maken en incremente
          CURRENT_TIMESTAMP process_timestamp;
    ```
 
-1. Volgende, initialiseren `DIM_TABLE_ABC_Incremental` om verwerkte output van te bevatten `DIM_TABLE_ABC`. Het anonieme blok in de **vereist** de uitvoeringssectie van het hieronder beschreven SQL-voorbeeld, zoals beschreven in stap 1 tot en met 4, wordt opeenvolgend uitgevoerd om gegevens incrementeel te verwerken.
+1. Start vervolgens `DIM_TABLE_ABC_Incremental` om verwerkte uitvoer van `DIM_TABLE_ABC` te bevatten. Het anonieme blok in de **vereiste** uitvoeringssectie van het SQL hieronder voorbeeld, zoals die in stap één tot vier wordt beschreven, wordt opeenvolgend uitgevoerd om gegevens incrementeel te verwerken.
 
-   1. Stel de `from_snapshot_id` Dit geeft aan waar de verwerking begint. De `from_snapshot_id` in het voorbeeld wordt gevraagd vanuit de `checkpoint_log` tabel voor gebruik met `DIM_TABLE_ABC`. Bij de eerste uitvoering wordt de opname-id `null` dat wil zeggen dat de gehele gegevensset zal worden verwerkt.
-   1. Stel de `to_snapshot_id` als huidige momentopname-id van de brontabel (`DIM_TABLE_ABC`). In het voorbeeld wordt dit gevraagd vanuit de metagegevenstabel van de brontabel.
-   1. Gebruik de `CREATE` trefwoord om te maken `DIM_TABLE_ABC_Incremenal` als de doeltabel. De bestemmingslijst voortduurt de verwerkte gegevens van de brondataset (`DIM_TABLE_ABC`). Hierdoor kunnen de verwerkte gegevens van de brontabel tussen `from_snapshot_id` en `to_snapshot_id`, die incrementeel aan de doeltabel moet worden toegevoegd.
-   1. Werk de `checkpoint_log` met de `to_snapshot_id` voor de brongegevens die `DIM_TABLE_ABC` is verwerkt.
-   1. Als om het even welke opeenvolgend uitgevoerde vragen van het anonieme blok ontbreken, **optioneel** uitzonderingssectie wordt uitgevoerd. Dit retourneert een fout en beëindigt het proces.
+   1. Stel de `from_snapshot_id` in die aangeeft vanaf welk punt de verwerking begint. De `from_snapshot_id` in het voorbeeld wordt vanuit de `checkpoint_log` -tabel opgevraagd voor gebruik met `DIM_TABLE_ABC` . Bij de eerste uitvoering zal de opname-id `null` zijn, wat betekent dat de volledige gegevensset wordt verwerkt.
+   1. Stel de `to_snapshot_id` in als de huidige opname-id van de brontabel (`DIM_TABLE_ABC` ). In het voorbeeld wordt dit gevraagd vanuit de metagegevenstabel van de brontabel.
+   1. Gebruik het trefwoord `CREATE` om `DIM_TABLE_ABC_Incremenal` te maken als de doeltabel. De bestemmingslijst voortduurt de verwerkte gegevens van de brondataset (`DIM_TABLE_ABC`). Hierdoor kunnen de verwerkte gegevens van de brontabel tussen `from_snapshot_id` en `to_snapshot_id` incrementeel aan de doeltabel worden toegevoegd.
+   1. Werk de `checkpoint_log` tabel bij met de `to_snapshot_id` voor de brongegevens die `DIM_TABLE_ABC` correct heeft verwerkt.
+   1. Als om het even welke opeenvolgend uitgevoerde vragen van het anonieme blok ontbreken, wordt de **facultatieve** uitzonderingssectie uitgevoerd. Dit retourneert een fout en beëindigt het proces.
 
    >[!NOTE]
    >
-   >De `history_meta('source table name')` is een geschikte methode die wordt gebruikt om toegang tot beschikbare momentopname in een dataset te verkrijgen.
+   >`history_meta('source table name')` is een geschikte methode die wordt gebruikt om toegang tot beschikbare momentopname in een dataset te krijgen.
 
    ```SQL
    $$ BEGIN
@@ -90,11 +90,11 @@ In de onderstaande stappen wordt getoond hoe u gegevens kunt maken en incremente
    $$;
    ```
 
-1. Gebruik de stijgende logica van de gegevenslading in het anonieme blokvoorbeeld hieronder om het even welke nieuwe gegevens van de brondataset (sinds meest recente timestamp) toe te staan om aan de bestemmingstabel bij een regelmatige kadentie worden verwerkt en worden toegevoegd. In het voorbeeld worden gegevens gewijzigd in `DIM_TABLE_ABC` wordt verwerkt en toegevoegd aan `DIM_TABLE_ABC_incremental`.
+1. Gebruik de stijgende logica van de gegevenslading in het anonieme blokvoorbeeld hieronder om het even welke nieuwe gegevens van de brondataset (sinds meest recente timestamp) toe te staan om aan de bestemmingstabel bij een regelmatige kadentie worden verwerkt en worden toegevoegd. In het voorbeeld worden gegevenswijzigingen in `DIM_TABLE_ABC` verwerkt en toegevoegd aan `DIM_TABLE_ABC_incremental` .
 
    >[!NOTE]
    >
-   > `_ID` is de primaire sleutel in beide `DIM_TABLE_ABC_Incremental` en `SELECT history_meta('DIM_TABLE_ABC')`.
+   > `_ID` is de primaire sleutel in zowel `DIM_TABLE_ABC_Incremental` als `SELECT history_meta('DIM_TABLE_ABC')` .
 
    ```SQL
    $$ BEGIN
@@ -128,9 +128,9 @@ Deze logica kan op om het even welke lijst worden toegepast om stijgende lasten 
 
 >[!IMPORTANT]
 >
->Metagegevens voor momentopnamen verlopen na **twee** dagen. Een verlopen momentopname maakt de logica van het hierboven verstrekte manuscript ongeldig.
+>De meta-gegevens van de momentopname verlopen na **twee** dagen. Een verlopen momentopname maakt de logica van het hierboven verstrekte manuscript ongeldig.
 
-Om de kwestie van een verlopen momentopname identiteitskaart op te lossen, neem het volgende bevel aan het begin van het anonieme blok op. De volgende coderegel overschrijft de `@from_snapshot_id` met de laagste beschikbare `snapshot_id` uit metagegevens.
+Om de kwestie van een verlopen momentopname identiteitskaart op te lossen, neem het volgende bevel aan het begin van het anonieme blok op. De volgende coderegel overschrijft de `@from_snapshot_id` met de oudste beschikbare `snapshot_id` op basis van metagegevens.
 
 ```SQL
 SET resolve_fallback_snapshot_on_failure=true;
@@ -166,4 +166,4 @@ $$;
 
 ## Volgende stappen
 
-Door dit document te lezen, zou u een beter inzicht in moeten hebben hoe te om anonieme blok en momentopnamefuncties te gebruiken om stijgende ladingen uit te voeren en kan deze logica op uw eigen specifieke vragen toepassen. Lees voor algemene richtlijnen over het uitvoeren van query&#39;s de [gids over vraaguitvoering in de Dienst van de Vraag](../best-practices/writing-queries.md).
+Door dit document te lezen, zou u een beter inzicht in moeten hebben hoe te om anonieme blok en momentopnamefuncties te gebruiken om stijgende ladingen uit te voeren en kan deze logica op uw eigen specifieke vragen toepassen. Voor algemene begeleiding bij vraaguitvoering, te lezen gelieve de [ gids op vraaguitvoering in de Dienst van de Vraag ](../best-practices/writing-queries.md).

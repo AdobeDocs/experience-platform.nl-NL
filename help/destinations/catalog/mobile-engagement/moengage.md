@@ -20,17 +20,17 @@ Met Adobe is de integratie heel eenvoudig en intuïtief. Neem eenvoudig om het e
 
 >[!IMPORTANT]
 >
->Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en gehandhaafd door *Moskou* team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *`https://help.moengage.com/hc/en-us`.*
+>Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en door het *verbind* team gehandhaafd. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *`https://help.moengage.com/hc/en-us`.*
 
 ## Gebruiksscenario’s {#use-cases}
 
-Een markeerteken wil een gebruikerssegment (ingebouwd in Adobe Experience Platform) activeren via [!DNL Moengage] campagnes. Bovendien willen ze de inhoud van de campagne aanpassen op basis van kenmerken uit Adobe Experience Platform-profielen. Met deze integratie worden gebruikers en kenmerken in MoEngage bijgewerkt zodra segmenten en profielen in Adobe Experience Platform worden bijgewerkt.
+Een markeerder wil een gebruikerssegment (ingebouwd in Adobe Experience Platform) als doel hebben via [!DNL Moengage] -campagnes. Bovendien willen ze de inhoud van de campagne aanpassen op basis van kenmerken uit Adobe Experience Platform-profielen. Met deze integratie worden gebruikers en kenmerken in MoEngage bijgewerkt zodra segmenten en profielen in Adobe Experience Platform worden bijgewerkt.
 
 ## Vereisten {#prerequisites}
 
-Voordat je Adobe Experience Platform-gegevens kunt verzenden naar [!DNL Moengage], let op de volgende voorwaarden:
+Voordat u uw Adobe Experience Platform-gegevens naar [!DNL Moengage] kunt verzenden, moet u rekening houden met de volgende voorwaarden:
 
-* Om de bestemming MoEngage met Adobe Experience Platform te gebruiken, moeten de gebruikers eerst toegang tot hun hebben [!DNL Moengage] Account. Ga naar de volgende pagina om u aan te melden bij of aan te melden bij uw MoEngage-account: https://app.moengage.com
+* Als u de MoEngage-bestemming met Adobe Experience Platform wilt gebruiken, moeten gebruikers eerst toegang hebben tot hun [!DNL Moengage] -account. Ga naar de volgende pagina om u aan te melden bij of aan te melden bij uw MoEngage-account: https://app.moengage.com
 
 
 ## Ondersteunde identiteiten {#supported-identities}
@@ -39,7 +39,7 @@ Voordat je Adobe Experience Platform-gegevens kunt verzenden naar [!DNL Moengage
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| user_id | Unieke id die een gebruikersprofiel in de [!DNL Moengage] systeem. | Deze id ondersteunt het type tekenreeks. Een van de volgende waarden is vereist: user_id of anoniem_id |
+| user_id | Unieke id die een gebruikersprofiel in het [!DNL Moengage] -systeem op unieke wijze identificeert. | Deze id ondersteunt het type tekenreeks. Een van de volgende waarden is vereist: user_id of anoniem_id |
 | anoniem_id | Een andere id voor een onbekend gebruikersprofiel: een profiel dat niet in het systeem bestaat. | Deze id ondersteunt het type tekenreeks. Een van de volgende waarden is vereist: user_id of anoniem_id |
 
 {style="table-layout:auto"}
@@ -50,8 +50,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (user_id, anonieme_id) samen met de aangepaste kenmerken die door u zijn geëxporteerd naar [!DNL Moengage]. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (user_id, anonieme_id) en de aangepaste kenmerken die u hebt geëxporteerd naar [!DNL Moengage] . |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -59,94 +59,94 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
+Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
-![Verificatie bestemming activeren](../../assets/catalog/mobile-engagement/moengage/authentication.png)
+![ de Authentificatie van de Bestemming van de MoVraag ](../../assets/catalog/mobile-engagement/moengage/authentication.png)
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-![Verificatie bestemming activeren](../../assets/catalog/mobile-engagement/moengage/settings.png)
-* **[!UICONTROL USERNAME]**: APP ID DATA van instellingen pagina met instellingen [!DNL Moengage] dashboard.
-* **[!UICONTROL PASSWORD]**: DATA APP KEY van instellingenpagina van [!DNL Moengage] dashboard.
+![ de Authentificatie van de Bestemming van de MoVraag ](../../assets/catalog/mobile-engagement/moengage/settings.png)
+* **[!UICONTROL USERNAME]**: APP ID DATA van instellingenpagina van het [!DNL Moengage] -dashboard.
+* **[!UICONTROL PASSWORD]**: DATA APP KEY van instellingenpagina van het [!DNL Moengage] -dashboard.
 
-![Verificatie bestemming activeren](../../assets/catalog/mobile-engagement/moengage/destination_details.png)
+![ de Authentificatie van de Bestemming van de MoVraag ](../../assets/catalog/mobile-engagement/moengage/destination_details.png)
 
-* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Region]**: Uw app *datacenter*.
+* **[!UICONTROL Region]**: Uw app *gegevenscentrum*.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Segmenten naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [ publieksgegevens aan het stromen segment uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiekssegmenten aan deze bestemming activeren.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
-Om uw publieksgegevens correct te verzenden van [!DNL Adobe Experience Platform] aan de [!DNL Moengage] doel, moet u door de stap van de gebiedstoewijzing gaan.
+Als u de publieksgegevens correct vanuit [!DNL Adobe Experience Platform] naar het [!DNL Moengage] -doel wilt verzenden, moet u de stap voor veldtoewijzing doorlopen.
 
-Toewijzing bestaat uit het maken van een koppeling tussen uw [!DNL Experience Data Model] (XDM) schemavelden in uw [!DNL Platform] en de overeenkomstige equivalenten van de doelbestemming.
+Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden [!DNL Experience Data Model] (XDM) in uw [!DNL Platform] -account en de bijbehorende equivalenten van de doelbestemming.
 
-Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL Moengage] doelvelden, voer de volgende stappen uit:
+Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL Moengage] -doelvelden:
 
-In de [!UICONTROL Mapping] stap, selecteren **[!UICONTROL Checkbox]**.
+Selecteer **[!UICONTROL Checkbox]** in de stap [!UICONTROL Mapping] .
 
-![Toewijzing bestemming toevoegen verplaatsen](../../assets/catalog/mobile-engagement/moengage/segments.png)
+![ de Bestemming van de Gecentreerd Moweer voegt Afbeelding ](../../assets/catalog/mobile-engagement/moengage/segments.png) toe
 
-In de [!UICONTROL Mapping] stap, selecteren **[!UICONTROL Add new mapping]**.
+Selecteer **[!UICONTROL Add new mapping]** in de stap [!UICONTROL Mapping] .
 
-![Toewijzing bestemming toevoegen verplaatsen](../../assets/catalog/mobile-engagement/moengage/mapping.png)
+![ de Bestemming van de Gecentreerd Moweer voegt Afbeelding ](../../assets/catalog/mobile-engagement/moengage/mapping.png) toe
 
-In de [!UICONTROL Source Field] selecteert u de pijlknop naast het lege veld.
+Selecteer in de sectie [!UICONTROL Source Field] de pijlknop naast het lege veld.
 
-![Toewijzing doelbron verplaatsen](../../assets/catalog/mobile-engagement/moengage/mapping-source.png)
+![ de Toewijzing van Source van de Bestemming van de Mohenal ](../../assets/catalog/mobile-engagement/moengage/mapping-source.png)
 
-In de [!UICONTROL Select source field] kunt u kiezen uit twee categorieën XDM-velden:
-* [!UICONTROL Select attributes]: gebruik deze optie om een specifiek veld van uw XDM-schema toe te wijzen aan [!DNL Moengage] kenmerk.
+In het venster [!UICONTROL Select source field] kunt u kiezen uit twee categorieën XDM-velden:
+* [!UICONTROL Select attributes]: gebruik deze optie om een specifiek veld van uw XDM-schema naar [!DNL Moengage] -kenmerk toe te wijzen.
 
-![Bronkenmerk voor doeltoewijzing verplaatsen](../../assets/catalog/mobile-engagement/moengage/mapping-attributes.png)
+![ de Toewijzing van de Bestemming van de Macht het Attribuut van Source ](../../assets/catalog/mobile-engagement/moengage/mapping-attributes.png)
 
-Kies uw bronveld en selecteer **[!UICONTROL Select]**.
+Kies het bronveld en selecteer vervolgens **[!UICONTROL Select]** .
 
-In de [!UICONTROL Target Field] selecteert u het toewijzingspictogram rechts van het veld.
+Selecteer in de sectie [!UICONTROL Target Field] het toewijzingspictogram rechts van het veld.
 
-![Doeltoewijzing verplaatsen](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
+![ verbind de Toewijzing van het Doel van de Bestemming ](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
-In de [!UICONTROL Select target field] kunt u kiezen uit twee categorieën doelvelden:
-* [!UICONTROL Select identity namespace]: Gebruik deze optie om toe te wijzen [!DNL Platform] naamruimten naar [!DNL Moengage] naamruimten.
-* [!UICONTROL Select custom attributes]: Gebruik deze optie om XDM-kenmerken toe te wijzen aan aangepaste kenmerken [!DNL Moengage] kenmerken die u in uw [!DNL Moengage] account. <br> U kunt deze optie ook gebruiken om bestaande XDM-kenmerken te hernoemen in [!DNL Moengage]. Bijvoorbeeld het toewijzen van een `lastName` XDM-kenmerk aan een aangepast element `Last_Name` kenmerk in [!DNL Moengage], worden de `Last_Name` kenmerk in [!DNL Moengage], als het nog niet bestaat, en kaart de `lastName` XDM-kenmerk eraan gekoppeld.
+In het venster [!UICONTROL Select target field] kunt u kiezen uit twee categorieën doelvelden:
+* [!UICONTROL Select identity namespace]: Gebruik deze optie om [!DNL Platform] naamruimten toe te wijzen aan [!DNL Moengage] naamruimten.
+* [!UICONTROL Select custom attributes]: Gebruik deze optie om XDM-kenmerken toe te wijzen aan aangepaste [!DNL Moengage] -kenmerken die u in uw [!DNL Moengage] -account hebt gedefinieerd. <br> U kunt deze optie ook gebruiken om de naam van bestaande XDM-kenmerken te wijzigen in [!DNL Moengage] . Als u bijvoorbeeld een `lastName` XDM-kenmerk toewijst aan een aangepast `Last_Name` -kenmerk in [!DNL Moengage] , wordt het `Last_Name` -kenmerk in [!DNL Moengage] gemaakt, als dat nog niet het geval is, en wordt het `lastName` XDM-kenmerk eraan toegewezen.
 
-![Doeltoewijzingsvelden activeren](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
+![ verbind Gebieden van de Toewijzing van het Doel van de Bestemming ](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
 
-Kies uw doelveld en selecteer **[!UICONTROL Select]**.
+Kies het doelveld en selecteer vervolgens **[!UICONTROL Select]** .
 
 Nu wordt de veldtoewijzing weergegeven in de lijst.
 
-![Toewijzing bestemming verplaatsen voltooid](../../assets/catalog/mobile-engagement/moengage/mapping-complete.png)
+![ de Volledige Afbeelding van de Bestemming van de Mohenal ](../../assets/catalog/mobile-engagement/moengage/mapping-complete.png)
 
 Herhaal de vorige stappen om meer toewijzingen toe te voegen.
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
-Controleren of gegevens zijn geëxporteerd naar de [!DNL Moengage] doel, ga naar het gebruikersprofiel op uw [!DNL Moengage] account. Er wordt een gebruikerskenmerk met de naam AEP Segment weergegeven.
+Ga naar het gebruikersprofiel op uw [!DNL Moengage] -account om te controleren of gegevens zijn geëxporteerd naar de [!DNL Moengage] -bestemming. Er wordt een gebruikerskenmerk met de naam AEP Segment weergegeven.
 
-![Toewijzing bestemming verplaatsen voltooid](../../assets/catalog/mobile-engagement/moengage/validation.png)
+![ de Volledige Afbeelding van de Bestemming van de Mohenal ](../../assets/catalog/mobile-engagement/moengage/validation.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] dwingt gegevensbeheer af, lees de [Overzicht van gegevensbeheer](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).

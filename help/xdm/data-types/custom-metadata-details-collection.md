@@ -1,7 +1,8 @@
 ---
 title: Gegevenstype verzameling aangepaste metagegevens
 description: Meer informatie over het gegevenstype Custom Metadata Details Collection Data Model (XDM).
-source-git-commit: e9107092b60361216744e154752f48546b5bad73
+exl-id: e2fa65ea-b738-43c6-90f1-1968dd83b963
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 1%
@@ -10,9 +11,9 @@ ht-degree: 1%
 
 # [!UICONTROL Custom Metadata Details] Gegevenstype verzameling
 
-[!UICONTROL Custom Metadata Details] Verzameling is een standaard XDM-gegevenstype (Experience Data Model) dat een structuur definieert voor het opslaan van aangepaste metagegevens. Gebruik de [!UICONTROL Custom Metadata Details] Het gegevenstype van de inzameling om details zoals de naam en de waarde van douanemetagegevens te vangen verbonden aan inhoud of interactie.
+[!UICONTROL Custom Metadata Details] Verzameling is een standaard XDM-gegevenstype (Experience Data Model) dat een structuur definieert voor het opslaan van aangepaste metagegevens. Gebruik het gegevenstype [!UICONTROL Custom Metadata Details] Verzameling om details vast te leggen, zoals de naam en waarde van aangepaste metagegevens die zijn gekoppeld aan inhoud of interacties.
 
-![Een diagram van het gegevenstype Custom Metadata Details Collection.](../images/data-types/the-custom-metadata-collection.png)
+![ A diagram van het gegevenstype van de Inzameling van de Details van Meta van de Douane.](../images/data-types/the-custom-metadata-collection.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Vereist | Beschrijving |
 |--------------------------------------------|------------------|-----------|----------|-------------------------------|

@@ -14,8 +14,8 @@ ht-degree: 0%
 
 # Een streamingverbinding maken met de gebruikersinterface
 
-Als u wilt beginnen met streamen van gegevens naar [!DNL Experience Platform]moet u eerst een streaming HTTP-verbinding maken. Wanneer u een streamingverbinding maakt, moet u belangrijke details opgeven, zoals de bron van streaminggegevens, en of u gegevens wilt verzenden van een vertrouwde (geverifieerde) of niet-vertrouwde (niet-geverifieerde) bron.
+Als u wilt beginnen met het streamen van gegevens naar [!DNL Experience Platform] , moet u eerst een streaming HTTP-verbinding maken. Wanneer u een streamingverbinding maakt, moet u belangrijke details opgeven, zoals de bron van streaminggegevens, en of u gegevens wilt verzenden van een vertrouwde (geverifieerde) of niet-vertrouwde (niet-geverifieerde) bron.
 
-Nadat u een streamingverbinding hebt geregistreerd, beschikt u over een unieke URL waarmee u gegevens kunt streamen naar [!DNL Platform].
+Nadat u een streamingverbinding hebt geregistreerd, hebt u een unieke URL die kan worden gebruikt om gegevens te streamen naar [!DNL Platform] .
 
-Als u wilt weten hoe u een streamingverbinding maakt, leest u de [UI-handleiding HTTP API-bron](../../sources/tutorials/ui/create/streaming/http.md).
+Leren hoe te om een het stromen verbinding tot stand te brengen, te lezen gelieve de [ bronUI gids van HTTP API ](../../sources/tutorials/ui/create/streaming/http.md).

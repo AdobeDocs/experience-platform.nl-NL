@@ -2,7 +2,8 @@
 title: Stripe
 description: Leer hoe u betalingsgegevens van uw Stripe-account kunt opnemen in Adobe Experience Platform
 badge: Beta
-source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
+exl-id: 191d217e-036d-491a-b7dd-abcad74625ba
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 0%
@@ -13,69 +14,69 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De [!DNL Stripe] De bron is in bèta. Lees de [overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+>De bron [!DNL Stripe] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-Duizenden bedrijven van elke omvang gebruiken [!DNL Stripe] zowel online als persoonlijk om betalingen te accepteren, nieuwe inkomstenbronnen te genereren en wereldwijd uit te breiden met behulp van Adobe Experience Platform, Adobe Commerce en [!DNL Magento Open Source].
+Duizenden bedrijven van elke omvang gebruiken [!DNL Stripe] zowel online als persoonlijk om betalingen te accepteren, nieuwe inkomstenbronnen te genereren en wereldwijd uit te breiden met behulp van Adobe Experience Platform, Adobe Commerce en [!DNL Magento Open Source] .
 
-Gebruik de [!DNL Stripe] bron in Experience Platform voor het opnemen van gegevens die tijdens de aanschafstroom door uw klanten zijn vastgelegd. Zodra geconsumeerd, gebruik deze gegevens om gepersonaliseerde aanbiedingen tot stand te brengen en rijkere bedrijfsinzichten te ontgrendelen.
+Gebruik de [!DNL Stripe] -bron in Experience Platform om gegevens in te voeren die tijdens de aanschafstroom door uw klanten zijn vastgelegd. Zodra geconsumeerd, gebruik deze gegevens om gepersonaliseerde aanbiedingen tot stand te brengen en rijkere bedrijfsinzichten te ontgrendelen.
 
 >[!TIP]
 >
->Voor vragen over de [!DNL Stripe] bron op Experience Platform, contact [!DNL Stripe] in adobe-partnership<span>@stripe.com.
+>Voor vragen over de [!DNL Stripe] bron op Experience Platform neemt u contact op met [!DNL Stripe] op adobe-partnership <span>@stripe.com.
 
 >[!BEGINSHADEBOX]
 
-**Voorbeeld van het gebruik van hoofdletters en kleine letters voor de [!DNL Stripe] bron**
+**het gebruiksgeval van de Steekproef voor de [!DNL Stripe] bron**
 
-Uw bedrijf staat klanten toe om artikelen in uw online winkel te kopen met de optie om **Nu kopen** en **later betalen** (gebruiken [!DNL Klarna], [!DNL Afterpay], [!DNL Affirm], of [!DNL Zip]).
+Uw zaken staat klanten toe om punten op uw online opslag met de optie te kopen **nu** en **te betalen later** (gebruikend [!DNL Klarna], [!DNL Afterpay], [!DNL Affirm], of [!DNL Zip]).
 
-Gebruik de [!DNL Stripe] gegevensbron om het gebruik van **Nu kopen** en **later betalen** en experimenteer met persoonlijke aanbiedingen aan deze klanten. Denk bijvoorbeeld aan het aanbevelen van add-on-items om het aantal artikelen in hun winkelwagentje uit te breiden voordat je het winkelwagentje afhandelt.
+Gebruik de [!DNL Stripe] gegevensbron om het gebruik van **te analyseren kopen nu** en **betaal later** opties en met gepersonaliseerde aanbiedingen aan deze klanten experimenteren. Denk bijvoorbeeld aan het aanbevelen van add-on-items om het aantal artikelen in hun winkelwagentje uit te breiden voordat je het winkelwagentje afhandelt.
 
 >[!ENDSHADEBOX]
 
-Lees het onderstaande document voor meer informatie over het instellen van uw [!DNL Stripe] bronrekening, wint de noodzakelijke geloofsbrieven terug, en creeer uw schema&#39;s.
+Lees het onderstaande document voor informatie over hoe u uw [!DNL Stripe] bronaccount kunt instellen, de vereiste gegevens kunt ophalen en uw schema&#39;s kunt maken.
 
 ## Vereisten {#prerequisites}
 
-In de volgende secties vindt u informatie over de vereiste instellingen die u moet voltooien voordat u de verbinding tot stand brengt [!DNL Stripe] aan Experience Platform.
+In de volgende secties vindt u informatie over de vereiste instellingen die u moet voltooien voordat u uw [!DNL Stripe] -account kunt verbinden met het Experience Platform.
 
 ### Uw toegangstoken ophalen
 
-* Aanmelden bij de [[!DNL Stripe] dashboard](https://dashboard.stripe.com/login) met uw [!DNL Stripe] e-mailadres en wachtwoord.
-* In de [!DNL Developers] dashboard, selecteren **[!DNL API keys for developers]**.
-* Onder de **API-sleutels** tab, selecteert u **[!DNL Reveal test key]** om uw toegangstoken te onthullen.
-* U kunt dit token nu gebruiken als toegangstoken wanneer u uw [!DNL Stripe] account aan Experience Platform, met behulp van [!DNL Flow Service] API of de interface van het Experience Platform.
+* Login aan het [[!DNL Stripe]  dashboard ](https://dashboard.stripe.com/login) gebruikend uw [!DNL Stripe] e-mailadres en wachtwoord.
+* Selecteer **[!DNL API keys for developers]** in het dashboard van [!DNL Developers] .
+* Onder de **API sleutels** tabel, uitgezochte **[!DNL Reveal test key]** om uw toegangstoken te openbaren.
+* U kunt dit token nu gebruiken als toegangstoken wanneer u uw [!DNL Stripe] -account aansluit op een Experience Platform met behulp van de [!DNL Flow Service] API of de gebruikersinterface van het Experience Platform.
 
 ### Vereiste referenties verzamelen
 
-Als u verbinding wilt maken met uw [!DNL Stripe] account aan Experience Platform, moet u waarden opgeven voor de volgende verificatiereferenties:
+Als u uw [!DNL Stripe] -account wilt verbinden met een Experience Platform, moet u waarden opgeven voor de volgende verificatiereferenties:
 
 >[!BEGINTABS]
 
->[!TAB API]
+>[!TAB  API ]
 
-U moet de volgende referenties opgeven wanneer u verbinding maakt met uw [!DNL Stripe] account gebruiken [!DNL Flow Service] API.
-
-| Credentials | Beschrijving |
-| --- | --- |
-| `accessToken` | Uw [!DNL Stripe] OAuth 2 het teken van de authentificatie van de Code vernieuwt. |
-| `connectionSpec.id` | De verbindingsspecificatie-id van de [!DNL Stripe] bron. Deze id is vast als: `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3`. |
-
->[!TAB UI]
-
-U moet de volgende referenties opgeven wanneer u verbinding maakt met uw [!DNL Stripe] -account die de gebruikersinterface van het Experience Platform gebruikt.
+U moet de volgende referenties opgeven wanneer u een verbinding maakt met uw [!DNL Stripe] -account met de [!DNL Flow Service] API.
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Toegangstoken | Uw [!DNL Stripe] OAuth 2 het teken van de authentificatie van de Code vernieuwt. |
+| `accessToken` | Uw token voor [!DNL Stripe] OAuth 2-verificatie van code vernieuwen. |
+| `connectionSpec.id` | De verbindingsspecificatie-id van de [!DNL Stripe] -bron. Deze id is vast als: `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3`. |
+
+>[!TAB  UI ]
+
+U moet de volgende referenties opgeven wanneer u een verbinding maakt met uw [!DNL Stripe] -account via de gebruikersinterface van het Experience Platform.
+
+| Credentials | Beschrijving |
+| --- | --- |
+| Toegangstoken | Uw token voor [!DNL Stripe] OAuth 2-verificatie van code vernieuwen. |
 
 >[!ENDTABS]
 
-Voor meer informatie over het gebruik [!DNL Stripe] API&#39;s, lees de [[!DNL Stripe] documentatie over API-sleutels](https://docs.stripe.com/keys).
+Voor meer informatie bij het gebruiken van [!DNL Stripe] APIs, lees de [[!DNL Stripe]  documentatie over API sleutels ](https://docs.stripe.com/keys).
 
 ### Een XDM-schema (Experience Data Model) maken
 
-De [!DNL Stripe] de bron steunt opname van gegevens van de volgende middelwegen:
+De [!DNL Stripe] -bron ondersteunt het opnemen van gegevens van de volgende bronpaden:
 
 * Heffingen
 * Lidmaatschappen
@@ -84,13 +85,13 @@ De [!DNL Stripe] de bron steunt opname van gegevens van de volgende middelwegen:
 * Klanten
 * Prijzen
 
-U moet een schema XDM creëren om een dataset te beschrijven, die de gebieden en gegevenstypes kan opslaan die van zullen worden verzonden [!DNL Stripe] naar Experience Platform.
+U moet een XDM-schema maken om een dataset te beschrijven, die de velden en gegevenstypen kan opslaan die van [!DNL Stripe] naar Experience Platform worden verzonden.
 
 >[!BEGINTABS]
 
->[!TAB Heffingen]
+>[!TAB  Heffingen ]
 
-In [!DNL Stripe], **kosten** pogingen vertegenwoordigen om geld naar uw [!DNL Stripe]. Lees de [[!DNL Stripe] API-handleiding voor kosten](https://docs.stripe.com/api/charges) voor meer informatie over specifieke ladingskenmerken.
+In [!DNL Stripe], **laden** vertegenwoordigen pogingen om geld in uw [!DNL Stripe] te bewegen. Lees de [[!DNL Stripe]  API gids op lasten ](https://docs.stripe.com/api/charges) voor meer informatie over specifieke ladingsattributen.
 
 +++Selecteren om het object Stripe laden weer te geven
 
@@ -183,9 +184,9 @@ In [!DNL Stripe], **kosten** pogingen vertegenwoordigen om geld naar uw [!DNL St
 
 +++
 
->[!TAB Abonnementen]
+>[!TAB  Abonnementen ]
 
-In [!DNL Stripe]kunt u **abonnementen** een klant op terugkerende basis in rekening brengen. Lees de [[!DNL Stripe] API-handleiding voor abonnementen](https://docs.stripe.com/api/subscriptions) voor meer informatie over specifieke abonnementskenmerken.
+In [!DNL Stripe], kunt u **abonnementen** gebruiken om een klant op een terugkomende basis te laden. Lees de [[!DNL Stripe]  API gids op abonnementen ](https://docs.stripe.com/api/subscriptions) voor meer informatie over specifieke abonnementattributen.
 
 +++Selecteren om het Stripe Subscription-object weer te geven
 
@@ -325,9 +326,9 @@ In [!DNL Stripe]kunt u **abonnementen** een klant op terugkerende basis in reken
 
 +++
 
->[!TAB Restituties]
+>[!TAB  Terugbetalingen ]
 
-In [!DNL Stripe]kunt u **restituties** om eerder gemaakte kosten te betalen. Lees de [[!DNL Stripe] API-handleiding voor terugbetalingen](https://docs.stripe.com/api/refunds) voor meer informatie over specifieke terugbetalingskenmerken.
+In [!DNL Stripe], kunt u **terugbetalingen** gebruiken om een eerder gecreeerde last terug te betalen. Lees de [[!DNL Stripe]  API gids over terugbetalingen ](https://docs.stripe.com/api/refunds) voor meer informatie over specifieke terugbetalingsattributen.
 
 +++Selecteren om het object Stripe terugbetalen weer te geven
 
@@ -361,9 +362,9 @@ In [!DNL Stripe]kunt u **restituties** om eerder gemaakte kosten te betalen. Lee
 
 +++
 
->[!TAB Transacties balanceren]
+>[!TAB  Transacties van het Saldo ]
 
-In [!DNL Stripe], **saldotransacties** vertegenwoordigen de bewegingen van middelen tussen uw [!DNL Stripe] rekeningen. Lees de [[!DNL Stripe] API-handleiding voor balanstransacties](https://docs.stripe.com/api/balance_transactions) voor meer informatie over specifieke kenmerken van balanstransacties.
+In [!DNL Stripe], **balanstransacties** vertegenwoordigen de beweging van middelen tussen uw [!DNL Stripe] rekeningen. Lees de [[!DNL Stripe]  API gids op saldotransacties ](https://docs.stripe.com/api/balance_transactions) voor meer informatie over specifieke attributen van de saldotransactie.
 
 +++Selecteren om het Transactie-object Stripe balanceren weer te geven
 
@@ -389,9 +390,9 @@ In [!DNL Stripe], **saldotransacties** vertegenwoordigen de bewegingen van midde
 
 +++
 
->[!TAB Klanten]
+>[!TAB  Klanten ]
 
-In [!DNL Stripe], **klanten** vertegenwoordigen een bepaalde klant van uw zaken. Voor meer informatie over specifieke klantkenmerken leest u de [[!DNL Stripe] API-handleiding voor klanten](https://docs.stripe.com/api/customers) voor meer informatie over specifieke klantkenmerken.
+In [!DNL Stripe], **klanten** vertegenwoordigen een bepaalde klant van uw zaken. Voor informatie over specifieke klantenattributen, lees de [[!DNL Stripe]  API gids over klanten ](https://docs.stripe.com/api/customers) voor meer informatie over specifieke klantenattributen.
 
 +++Selecteren om het Stripe Customer object te bekijken
 
@@ -429,9 +430,9 @@ In [!DNL Stripe], **klanten** vertegenwoordigen een bepaalde klant van uw zaken.
 
 +++
 
->[!TAB Prijzen]
+>[!TAB  Prijzen ]
 
-In [!DNL Stripe], **prijzen** vertegenwoordigen de kosten per eenheid, de valuta en de optionele factureringscyclus voor zowel terugkerende als eenmalige aanschaf van producten. Lees de [[!DNL Stripe] API-handleiding voor prijzen](https://docs.stripe.com/api/prices) voor meer informatie over specifieke prijskenmerken.
+In [!DNL Stripe], **prijzen** vertegenwoordigen de eenheidskosten, de munt, en de facultatieve factureringscyclus voor zowel terugkomende als eenmalige aankoop van producten. Lees de [[!DNL Stripe]  API gids op prijzen ](https://docs.stripe.com/api/prices) voor meer informatie over specifieke prijsattributen.
 
 +++Selecteren om het Stripe Price-object weer te geven
 
@@ -472,15 +473,15 @@ In [!DNL Stripe], **prijzen** vertegenwoordigen de kosten per eenheid, de valuta
 
 ### IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
 
 ### Machtigingen configureren voor Experience Platform
 
-U moet beide hebben **[!UICONTROL View Sources]** en **[!UICONTROL Manage Sources]** machtigingen die zijn ingeschakeld voor uw account om verbinding te maken met uw [!DNL Stripe] aan Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Lees voor meer informatie de [gebruikershandleiding voor toegangsbeheer](../../../access-control/ui/overview.md).
+U moet zowel **[!UICONTROL View Sources]** als **[!UICONTROL Manage Sources]** machtigingen hebben ingeschakeld voor uw account om uw [!DNL Stripe] -account aan Experience Platform te kunnen koppelen. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../access-control/ui/overview.md).
 
 ## Volgende stappen
 
-Nadat u de vereiste instellingen hebt voltooid, kunt u verdergaan met de verbinding en uw [!DNL Stripe] gegevens naar Experience Platform. Lees de volgende hulplijnen voor meer informatie over innemen [!DNL Stripe] betalingsgegevens naar Experience Platform via API&#39;s of de gebruikersinterface:
+Nadat u aan de voorwaarde hebt voldaan, kunt u doorgaan met het maken van een verbinding en het invoeren van de [!DNL Stripe] -gegevens naar het Experience Platform. Lees de volgende handleidingen om te leren hoe u [!DNL Stripe] -betalingsgegevens aan Experience Platform kunt toevoegen met behulp van API&#39;s of de gebruikersinterface:
 
-* [Betalingsgegevens vanuit uw Stripe-account aan Experience Platform toevoegen met behulp van de Flow Service API](../../tutorials/api/create/payments/stripe.md).
-* [Betalingsgegevens van uw Stripe naar Experience Platform verzenden via de gebruikersinterface](../../tutorials/ui/create/payments/stripe.md).
+* [ Ingest betalingsgegevens van uw rekening van het Stripe aan Experience Platform gebruikend de Dienst API van de Stroom ](../../tutorials/api/create/payments/stripe.md).
+* [ Ingest betalingsgegevens van uw rekening van het Stripe aan Experience Platform gebruikend het gebruikersinterface ](../../tutorials/ui/create/payments/stripe.md).

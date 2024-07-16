@@ -11,86 +11,86 @@ ht-degree: 0%
 
 ---
 
-# Ontdek, verifieer en proces dashboarddatasets gebruikend [!DNL Query Service]
+# Gegevenssets van dashboard verkennen, verifiëren en verwerken met [!DNL Query Service]
 
-Adobe Experience Platform verstrekt belangrijke informatie over het profiel van uw organisatie, publiek, en bestemmingsgegevens door dashboards beschikbaar binnen de UI van het Experience Platform. U kunt dan Adobe Experience Platform gebruiken [!DNL Query Service] om, de ruwe datasets te onderzoeken te verifiëren en te verwerken die deze dashboards in het gegevensmeer aandrijven.
+Adobe Experience Platform verstrekt belangrijke informatie over het profiel van uw organisatie, publiek, en bestemmingsgegevens door dashboards beschikbaar binnen de UI van het Experience Platform. Vervolgens kunt u Adobe Experience Platform [!DNL Query Service] gebruiken om de onbewerkte gegevenssets te verkennen, te verifiëren en te verwerken, waarmee deze dashboards in het datumpeer worden geactiveerd.
 
 ## Aan de slag met [!DNL Query Service]
 
-Adobe Experience Platform [!DNL Query Service] steunt marketers in het verkrijgen van inzichten van hun gegevens door het gebruik van standaardSQL toe te laten om gegevens in het gegevensmeer te vragen. [!DNL Query Service] biedt een gebruikersinterface en API aan die kunnen worden gebruikt om zich bij om het even welke dataset in het gegevensmeer aan te sluiten en de vraagresultaten als nieuwe datasets voor gebruik in rapportering, machine het leren, of voor opname in het Profiel van de Klant in real time te vangen.
+Adobe Experience Platform [!DNL Query Service] ondersteunt marketers bij het verkrijgen van inzicht uit hun gegevens door het gebruik van standaard SQL voor het zoeken naar gegevens in het datumpeer mogelijk te maken. [!DNL Query Service] biedt een gebruikersinterface en een API aan die kunnen worden gebruikt om zich bij om het even welke dataset in het gegevensmeer aan te sluiten en de vraagresultaten als nieuwe datasets voor gebruik in rapportering, machine het leren, of voor opname in het Profiel van de Klant in real time vast te leggen.
 
-Meer informatie over [!DNL Query Service] en zijn rol binnen het Experience Platform , gelieve eerst te lezen [[!DNL Query Service] overzicht](../query-service/home.md).
+Meer over [!DNL Query Service] en zijn rol binnen Experience Platform leren, gelieve te beginnen door het [[!DNL Query Service]  overzicht ](../query-service/home.md) te lezen.
 
 ## Toegang tot beschikbare gegevenssets
 
-U kunt [!DNL Query Service] om ruwe datasets voor profiel, publiek, en bestemmingsdashboards te vragen. Om uw beschikbare datasets, in het Experience Platform UI te bekijken, selecteer **Gegevenssets** in de linkernavigatie om het dashboard van Datasets te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en het statuut van de meest recente opnamelooppas aansluit.
+U kunt [!DNL Query Service] gebruiken om onbewerkte datasets voor profiel, publiek, en bestemmingsdashboards te vragen. Om uw beschikbare datasets, in het Experience Platform UI te bekijken, selecteer **Datasets** in de linkernavigatie om het dashboard van Datasets te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en het statuut van de meest recente opnamelooppas aansluit.
 
-![De Dataset doorbladert dashboard met het lusje van Datasets die in de linkernavigatie wordt benadrukt.](./images/query/browse-datasets.png)
+![ Dataset doorbladert dashboard met het lusje van Datasets dat in de linkernavigatie wordt benadrukt.](./images/query/browse-datasets.png)
 
 ### Door het systeem gegenereerde gegevenssets {#system-generated-datasets}
 
 >[!IMPORTANT]
 >
->Door het systeem gegenereerde gegevenssets worden standaard verborgen. Standaard worden de [!UICONTROL Browse] het lusje toont slechts datasets die u gegevens in hebt opgenomen.
+>Door het systeem gegenereerde gegevenssets worden standaard verborgen. Standaard bevat het tabblad [!UICONTROL Browse] alleen gegevenssets waarin u gegevens hebt ingevoerd.
 
-Om systeem-geproduceerde datasets te bekijken, selecteer het filterpictogram (![Een filterpictogram.](./images/query/filter.png)) links van de zoekbalk.
+Om systeem-geproduceerde datasets te bekijken, selecteer het filterpictogram (![ A filterpictogram.](./images/query/filter.png) ) links van de zoekbalk.
 
-![Het tabblad Datasets Bladeren met het filterpictogram gemarkeerd.](./images/query/filter-datasets.png)
+![ de Datasets doorbladeren lusje met het benadrukte filterpictogram.](./images/query/filter-datasets.png)
 
-Er verschijnt een zijbalk met twee schakelingen. [!UICONTROL Included in Profile] en [!UICONTROL Show system datasets]. De schakeloptie selecteren voor [!UICONTROL Show system datasets] om systeem-geproduceerde datasets binnen de doorbladerbare lijst van datasets te omvatten.
+Er wordt een zijbalk weergegeven met twee schakelingen, [!UICONTROL Included in Profile] en [!UICONTROL Show system datasets] . Selecteer de knevel voor [!UICONTROL Show system datasets] om systeem-geproduceerde datasets binnen de doorbladerbare lijst van datasets te omvatten.
 
-![De Datasets doorbladeren tabel met de gemarkeerde schakeloptie voor systeemdatasets weergeven.](./images/query/show-system-datasets.png)
+![ de Datasets doorbladeren lusje met de van de systeemdatasets van de Show benadrukte knevel.](./images/query/show-system-datasets.png)
 
 ### Gegevensbestanden van profielkenmerken {#profile-attribute-datasets}
 
 De dashboardinzichten van het profiel zijn gebonden aan fusiebeleid dat door uw organisatie is bepaald. Voor elk actief fusiebeleid, is er een dataset van profielattributen beschikbaar in het gegevenspeer.
 
-De naamgevingsconventie van deze gegevenssets is **Profile-Snapshot-export** gevolgd door een door het systeem gegenereerde, willekeurige alpha-numerieke waarde. Bijvoorbeeld: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+De noemende overeenkomst van deze datasets is **profiel-Snapshot-Uitvoer** die door een systeem-geproduceerde, willekeurige alpha numerieke waarde wordt gevolgd. Bijvoorbeeld: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f` .
 
-Om het volledige schema van elke de uitvoerdataset van de profielmomentopname te begrijpen, kunt u voorproef en de datasets onderzoeken [het gebruiken van de datasetkijker](../catalog/datasets/user-guide.md) in de gebruikersinterface van het Experience Platform.
+Om het volledige schema van elke de uitvoerdataset van de profielmomentopname te begrijpen, kunt u voorproef en de datasets [ onderzoeken gebruikend de datasetkijker ](../catalog/datasets/user-guide.md) in Experience Platform UI.
 
-![Een voorvertoning van de gegevensset Profielmomentopname-Exporteren.](images/query/profile-attribute.png)
+![ een voorproef van de profiel-Momentopname-Uitvoer dataset.](images/query/profile-attribute.png)
 
 #### Gegevenssets van profielkenmerken toewijzen om beleid-id&#39;s samen te voegen
 
-De alfanumerieke waarde die wordt toegewezen aan elke door het systeem gegenereerde profielkenmerkgegevensset is een willekeurige tekenreeks die wordt toegewezen aan een samenvoegbeleid-id van een van de samenvoegbeleidsregels die door uw organisatie worden gemaakt. De afbeelding van elke identiteitskaart van het fusiebeleid aan zijn verwante koord van de de gegevensreeks van profielattributen wordt gehandhaafd in `adwh_dim_merge_policies` dataset.
+De alfanumerieke waarde die wordt toegewezen aan elke door het systeem gegenereerde profielkenmerkgegevensset is een willekeurige tekenreeks die wordt toegewezen aan een samenvoegbeleid-id van een van de samenvoegbeleidsregels die door uw organisatie worden gemaakt. De toewijzing van elke identiteitskaart van het fusiebeleid aan zijn verwante reeks van de profielkenmerkdataset wordt gehandhaafd in de `adwh_dim_merge_policies` dataset.
 
-De `adwh_dim_merge_policies` dataset bevat de volgende velden:
+De gegevensset `adwh_dim_merge_policies` bevat de volgende velden:
 
 * `merge_policy_name`
 * `merge_policy_id`
 * `merge_policy`
 * `dataset_id`
 
-Deze dataset kan worden onderzocht gebruikend de Redacteur UI van de Vraag in Experience Platform. Als u meer wilt weten over het gebruik van de Query Editor, raadpleegt u de [Handleiding voor de Query Editor](../query-service/ui/user-guide.md).
+Deze dataset kan worden onderzocht gebruikend de Redacteur UI van de Vraag in Experience Platform. Meer leren over het gebruiken van de Redacteur van de Vraag, verwijs naar de [ gids UI van de Redacteur van de Vraag ](../query-service/ui/user-guide.md).
 
 ### Gegevensset met metagegevens van publiek
 
 Er is een dataset van publieksmeta-gegevens beschikbaar in het gegevensmeer die meta-gegevens voor elk van uw publiek van organisatie bevatten.
 
-De naamgevingsconventie van deze gegevensset is **Segmentdefinition-Snapshot-export** gevolgd door een alpha-numerieke waarde. Bijvoorbeeld: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
+De noemende overeenkomst van deze dataset is **Segmentdefinition-momentopname-Uitvoer** die door een alpha numerieke waarde wordt gevolgd. Bijvoorbeeld: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-Om het volledige schema van elke de uitvoerdataset van de segmentdefinitiemomentopname te begrijpen, kunt u voorproef en de datasets onderzoeken [het gebruiken van de datasetkijker](../catalog/datasets/user-guide.md) in de gebruikersinterface van het Experience Platform.
+Om het volledige schema van elke de uitvoerdataset van de segmentdefinitiemomentopname te begrijpen, kunt u voorproef en de datasets [ onderzoeken gebruikend de datasetkijker ](../catalog/datasets/user-guide.md) in Experience Platform UI.
 
 ### Gegevensset met doelmetagegevens
 
 De meta-gegevens voor elk van de geactiveerde bestemmingen van uw organisatie is beschikbaar als ruwe dataset in het gegevensmeer.
 
-De naamgevingsconventie van deze gegevensset is **DIM_Doel**.
+De noemende overeenkomst van deze dataset is **DIM_Destination**.
 
-Om het volledige schema van de DIM bestemmingsdataset te begrijpen, kunt u voorproef en de dataset onderzoeken [het gebruiken van de datasetkijker](../catalog/datasets/user-guide.md) in de gebruikersinterface van het Experience Platform.
+Om het volledige schema van de DIM bestemmingsdataset te begrijpen, kunt u voorproef en de dataset [ onderzoeken gebruikend de datasetkijker ](../catalog/datasets/user-guide.md) in Experience Platform UI.
 
-![Een voorvertoning van de gegevensset DIM_Destination.](images/query/destinations-metadata.png)
+![ een voorproef van de dataset DIM_Destination.](images/query/destinations-metadata.png)
 
 ## CDP-inzichtsrapporten (Customer Data Platform)
 
 De eigenschap van de Modellen van Gegevens van Gegevens CDP van Inzichten stelt SQL bloot die de inzichten voor diverse profiel, bestemming en segmentatiewidgets drijft. U kunt deze SQl vraagmalplaatjes aanpassen om CDP- rapporten voor uw marketing en KPI gebruiksgevallen tot stand te brengen.
 
-CDP het melden verstrekt inzichten in uw profielgegevens en zijn verhouding met publiek en bestemmingen. Zie de CDP documentatie van het Gegevensmodel van Inzichten voor gedetailleerde informatie over hoe te [Pas de CDP Modellen van Gegevens van Inzichten op uw specifieke KPI gebruiksgevallen toe](./data-models/cdp-insights-data-model-b2c.md).
+CDP het melden verstrekt inzichten in uw profielgegevens en zijn verhouding met publiek en bestemmingen. Zie de CDP documentatie van het Model van Gegevens van Inzichten voor gedetailleerde informatie over hoe te [ de Modellen van Gegevens CDP van Inzichten op uw bijzondere KPI gebruiksgevallen ](./data-models/cdp-insights-data-model-b2c.md) toepassen.
 
 ## Voorbeeldquery
 
-De volgende voorbeeldvragen omvatten voorbeeld SQL dat in kan worden gebruikt [!DNL Query Service] om, de ruwe datasets te onderzoeken te verifiëren en te verwerken die uw dashboards aandrijven.
+De volgende voorbeeldquery&#39;s bevatten voorbeeld-SQL die in [!DNL Query Service] kan worden gebruikt om de onbewerkte datasets die uw dashboards bedienen, te verkennen, te verifiëren en te verwerken.
 
 ### Aantal profielen op identiteit
 
@@ -144,6 +144,6 @@ Select
 
 ## Volgende stappen
 
-Door deze handleiding te lezen, kunt u nu [!DNL Query Service] om verscheidene vragen uit te voeren om de ruwe datasets te onderzoeken en te verwerken die uw profiel, publiek, en bestemmingsdashboards aandrijven.
+Door deze gids te lezen, kunt u [!DNL Query Service] nu gebruiken om verscheidene vragen uit te voeren om de ruwe datasets te onderzoeken en te verwerken die uw profiel, publiek, en bestemmingsdashboards aandrijven.
 
 Als u meer wilt weten over elk dashboard en de bijbehorende metriek, selecteert u een dashboard in de lijst met beschikbare dashboards in de documentatienavigatie.

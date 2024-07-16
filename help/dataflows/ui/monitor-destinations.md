@@ -23,16 +23,16 @@ Dit leerprogramma verstrekt instructies op hoe u of dataflows direct in de beste
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [Gegevensstromen](../home.md): Gegevensstromen zijn een weergave van gegevenstaken die gegevens verplaatsen over het hele platform. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile], en [!DNL Destinations].
-   - [Dataflow-uitvoering](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
-- [Doelen](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Platform voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen toestaan.
-- [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [ Dataflows ](../home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
+   - [ looppas Dataflow ](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
+- [ Doelen ](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Platform voor dwars-kanaal marketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen toestaan.
+- [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Gegevens controleren in de werkruimte Doelen {#monitor-dataflows-in-the-destinations-workspace}
 
-In de **[!UICONTROL Destinations]** binnen de gebruikersinterface van het platform navigeert u naar de **[!UICONTROL Browse]** en selecteert u de naam van een doel dat u wilt weergeven.
+Navigeer in de **[!UICONTROL Destinations]** -werkruimte in de gebruikersinterface van het platform naar het tabblad **[!UICONTROL Browse]** en selecteer de naam van een doel dat u wilt weergeven.
 
-![Doelweergave selecteren met gemarkeerde doelverbinding](../assets/ui/monitor-destinations/select-destination.png)
+![ Uitgezochte bestemmingsmening met een benadrukte bestemmingsverbinding ](../assets/ui/monitor-destinations/select-destination.png)
 
 Er wordt een lijst met bestaande gegevensstromen weergegeven. Op deze pagina vindt u een lijst met zichtbare gegevensstromen, waaronder informatie over het doel, de gebruikersnaam, het aantal gegevensstromen en de status.
 
@@ -40,10 +40,10 @@ Zie de volgende tabel voor meer informatie over statussen:
 
 | Status | Beschrijving |
 | ------ | ----------- |
-| Ingeschakeld | De `Enabled` status geeft aan dat een gegevensstroom actief is en gegevens exporteert volgens het schema dat is opgegeven. |
-| Uitgeschakeld | De `Disabled` status geeft aan dat een gegevensstroom inactief is en geen gegevens exporteert. |
-| Verwerking | De `Processing` status geeft aan dat een gegevensstroom nog niet actief is. Deze status wordt vaak direct na het maken van een nieuwe gegevensstroom aangetroffen. |
-| Fout | De `Error` status geeft aan dat het activeringsproces van een gegevensstroom is onderbroken. |
+| Ingeschakeld | De status `Enabled` geeft aan dat een gegevensstroom actief is en gegevens exporteert volgens het schema dat is opgegeven. |
+| Uitgeschakeld | De status `Disabled` geeft aan dat een gegevensstroom inactief is en geen gegevens exporteert. |
+| Verwerking | De status `Processing` geeft aan dat een gegevensstroom nog niet actief is. Deze status wordt vaak direct na het maken van een nieuwe gegevensstroom aangetroffen. |
+| Fout | De `Error` -status geeft aan dat het activeringsproces van een gegevensstroom is onderbroken. |
 
 ### Dataflow wordt uitgevoerd voor streamingdoelen {#dataflow-runs-for-streaming-destinations}
 
@@ -72,41 +72,41 @@ Zie de volgende tabel voor meer informatie over statussen:
 >title="Identiteiten mislukt"
 >abstract="Het aantal individuele profielidentiteiten die voor de geselecteerde bestemming ontbraken. Controleer de foutdiagnostiek voor meer informatie."
 
-Voor streamingdoelen geldt het [!UICONTROL Dataflow runs] bevat een update per uur voor metrische gegevens in uw dataflow-runtime. De meest prominente statistieken met het label zijn voor identiteiten.
+Voor streamingdoelen biedt het tabblad [!UICONTROL Dataflow runs] een update per uur voor metrische gegevens over uw dataflow-runtime. De meest prominente statistieken met het label zijn voor identiteiten.
 
 De identiteiten vertegenwoordigen de verschillende facetten van een profiel. Als een profiel bijvoorbeeld zowel een telefoonnummer als een e-mailadres bevat, heeft dat profiel twee identiteiten.
 
 Er wordt een lijst met afzonderlijke reeksen en de bijbehorende maatstaven weergegeven, samen met de volgende totalen voor identiteiten:
 
-- **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat is geactiveerd voor de geselecteerde bestemming. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde doelgroepen.
+- **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat is geactiveerd voor het geselecteerde doel. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde doelgroepen.
 - **[!UICONTROL Identities excluded]**: Het totale aantal profiel-id&#39;s dat voor activering wordt overgeslagen op basis van ontbrekende kenmerken en schending van de toestemming.
 - **[!UICONTROL Identities failed]**: Het totale aantal profielidentiteiten dat niet aan de bestemming wegens fouten wordt geactiveerd.
 
-![Dataflow voert details voor het stromen bestemmingen uit.](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
+![ Dataflow stelt details voor het stromen bestemmingen in werking.](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
 Elke individuele dataflow run toont de volgende details:
 
-- **[!UICONTROL Dataflow run start]**: De tijd waarop de dataflow is gestart. Voor het stromen dataflow looppas, vangt het Experience Platform metriek op het begin van dataflow looppas, in de vorm van uurmetriek wordt gebaseerd. Voor het stromen dataflow looppas, als een dataflow looppas, bijvoorbeeld, bij 10:30PM begon, metrisch toont de begintijd zoals 10:00 PM in UI.
-- **[!UICONTROL Processing time]**: De hoeveelheid tijd die het voor dataflow nam in werking te stellen proces.
-   - Voor **[!UICONTROL completed]** De metrische verwerkingstijd toont altijd één uur.
-   - Voor dataflow-run die zich nog steeds in een **[!UICONTROL processing]** staat, het venster om alle metriek te vangen open meer dan een uur, om alle metriek te verwerken die aan de dataflow looppas beantwoorden. Bijvoorbeeld, zou een dataflow looppas die bij 9:30 AM begon in een verwerkingsstaat één uur en dertig minuten kunnen blijven om alle metriek te vangen en te verwerken. Vervolgens wordt het verwerkingsvenster gesloten en wordt de status van de dataflow-run bijgewerkt naar **voltooid**, wordt de weergegeven verwerkingstijd gewijzigd in één uur.
+- **[!UICONTROL Dataflow run start]**: De tijd waarop de gegevensstroom is gestart. Voor het stromen dataflow looppas, vangt het Experience Platform metriek op het begin van dataflow looppas, in de vorm van uurmetriek wordt gebaseerd. Voor het stromen dataflow looppas, als een dataflow looppas, bijvoorbeeld, bij 10:30PM begon, metrisch toont de begintijd zoals 10:00 PM in UI.
+- **[!UICONTROL Processing time]**: De hoeveelheid tijd die nodig was voor het uitvoeren van de gegevensstroom om te verwerken.
+   - Bij **[!UICONTROL completed]** -uitvoering wordt bij de verwerkingstijd altijd een uur gemeten.
+   - Voor dataflow-run die nog steeds de status **[!UICONTROL processing]** heeft, blijft het venster om alle metriek vast te leggen langer dan een uur open om alle metriek te verwerken die overeenkomen met de dataflow-run. Bijvoorbeeld, zou een dataflow looppas die bij 9:30 AM begon in een verwerkingsstaat één uur en dertig minuten kunnen blijven om alle metriek te vangen en te verwerken. Dan, zodra het verwerkingsvenster sluit en het statuut van de dataflow looppas updates aan **voltooide**, wordt de getoonde verwerkingstijd veranderd in één uur.
 - **[!UICONTROL Profiles received]**: Het totale aantal profielen dat is ontvangen in de gegevensstroom.
-- **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat met succes aan de geselecteerde bestemming als deel van dataflow looppas werd geactiveerd. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde doelgroepen.
-- **[!UICONTROL Identities excluded]**: Het totale aantal profiel-id&#39;s dat van activering is uitgesloten op basis van ontbrekende kenmerken en schending van de toestemming.
+- **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat met succes aan de geselecteerde bestemming als deel van de dataflow looppas werd geactiveerd. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde doelgroepen.
+- **[!UICONTROL Identities excluded]**: Het totale aantal profiel-id&#39;s dat van activering is uitgesloten op basis van ontbrekende kenmerken en schending van toestemming.
 - **[!UICONTROL Identities failed]** Het totale aantal profielidentiteiten dat niet aan de bestemming wegens fouten wordt geactiveerd.
 - **[!UICONTROL Activation rate]**: Het percentage ontvangen identiteiten dat is geactiveerd of overgeslagen. De volgende formule laat zien hoe deze waarde wordt berekend:
-  ![Activeringssnelheidsformule.](../assets/ui/monitor-destinations/activation-rate-formula.png)
-- **[!UICONTROL Status]**: Geeft de status aan waarin de dataflow zich bevindt: een van de volgende [!UICONTROL Completed] of [!UICONTROL Processing]. [!UICONTROL Completed] betekent dat alle identiteiten voor de overeenkomstige dataflow run binnen de periode van één uur werden uitgevoerd. [!UICONTROL Processing] betekent dat de dataflow run nog niet is voltooid.
+  ![ formule van het het tarief van de Activering.](../assets/ui/monitor-destinations/activation-rate-formula.png)
+- **[!UICONTROL Status]**: geeft de status aan waarin de gegevensstroom zich bevindt: [!UICONTROL Completed] of [!UICONTROL Processing] . [!UICONTROL Completed] betekent dat alle identiteiten voor de overeenkomstige dataflow-run binnen de periode van één uur zijn geëxporteerd. [!UICONTROL Processing] betekent dat de uitvoering van de gegevensstroom nog niet is voltooid.
 
 Om de details van een bepaalde dataflow looppas te bekijken, selecteer de begintijd van de looppas van de lijst.
 
 De detailpagina voor een dataflow-run bevat aanvullende informatie zoals het aantal ontvangen profielen, het aantal geactiveerde identiteiten, het aantal mislukte identiteiten en het aantal uitgesloten identiteiten.
 
-![Gegevens over gegevensstroom voor streamingdoelen.](../assets/ui/monitor-destinations/dataflow-details-stream.png)
+![ details Dataflow voor het stromen bestemmingen.](../assets/ui/monitor-destinations/dataflow-details-stream.png)
 
-Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten weergegeven die zijn uitgesloten. De informatie voor zowel de mislukte als uitgesloten identiteiten wordt getoond, met inbegrip van de foutencode, het aantal van de identiteit, en beschrijving. Standaard worden in de lijst de mislukte identiteiten weergegeven. Als u overgeslagen identiteiten wilt weergeven, selecteert u de optie **[!UICONTROL Identities excluded]** schakelen.
+Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten weergegeven die zijn uitgesloten. De informatie voor zowel de mislukte als uitgesloten identiteiten wordt getoond, met inbegrip van de foutencode, het aantal van de identiteit, en beschrijving. Standaard worden in de lijst de mislukte identiteiten weergegeven. Selecteer de schakeloptie **[!UICONTROL Identities excluded]** om overgeslagen identiteiten weer te geven.
 
-![Dataflow-records voor streamingdoelen met een foutbericht gemarkeerd.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
+![ verslagen Dataflow voor het stromen bestemmingen met een benadrukt foutenmelding.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
 ### Dataflow wordt uitgevoerd voor batchdoelen {#dataflow-runs-for-batch-destinations}
 
@@ -131,84 +131,84 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 >title="Uitgesloten identiteiten"
 >abstract="Het aantal afzonderlijke profielrecords dat is uitgesloten van activering voor de geselecteerde bestemming op basis van ontbrekende kenmerken en schending van de toestemming."
 
-Voor batchbestemmingen wordt de [!UICONTROL Dataflow runs] bevat metrische gegevens over de gegevensstroomuitvoering. Er wordt een lijst met afzonderlijke reeksen en de bijbehorende maatstaven weergegeven, samen met de volgende totalen voor identiteiten:
+Voor batchbestemmingen biedt het tabblad [!UICONTROL Dataflow runs] metrische gegevens over uw dataflow-runtime. Er wordt een lijst met afzonderlijke reeksen en de bijbehorende maatstaven weergegeven, samen met de volgende totalen voor identiteiten:
 
-- **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat is geactiveerd voor de geselecteerde bestemming. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde doelgroepen.
-- **[!UICONTROL Identities excluded]**: Het aantal individuele profielidentiteiten die zijn uitgesloten van activering voor de geselecteerde bestemming, op basis van ontbrekende kenmerken en schending van toestemming.
+- **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat is geactiveerd voor het geselecteerde doel. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde doelgroepen.
+- **[!UICONTROL Identities excluded]**: Het aantal individuele profiel-id&#39;s dat is uitgesloten van activering voor de geselecteerde bestemming, op basis van ontbrekende kenmerken en schending van toestemming.
 
-![Dataflow voert mening voor partijbestemmingen uit.](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
+![ Dataflow looppas mening voor partijbestemmingen.](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
 
 Elke individuele dataflow run toont de volgende details:
 
-- **[!UICONTROL Dataflow run start]**: De tijd waarop de dataflow is gestart.
+- **[!UICONTROL Dataflow run start]**: De tijd waarop de gegevensstroom is gestart.
 - **[!UICONTROL Audience]**: De naam van het publiek dat aan elke dataflow-run is gekoppeld.
-- **[!UICONTROL Processing time]**: De hoeveelheid tijd die het voor de dataflow in beslag nam om te worden verwerkt.
+- **[!UICONTROL Processing time]**: De hoeveelheid tijd die nodig was om de dataflow uit te voeren om te worden verwerkt.
 - **[!UICONTROL Profiles received]**: Het totale aantal profielen dat is ontvangen in de gegevensstroom. Deze waarde wordt elke 60 minuten bijgewerkt.
-- **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat met succes aan de geselecteerde bestemming als deel van dataflow looppas werd geactiveerd. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde doelgroepen.
-- **[!UICONTROL Identities excluded]**: Het totale aantal profiel-id&#39;s dat van activering is uitgesloten op basis van ontbrekende kenmerken en schending van de toestemming.
-- **[!UICONTROL Status]**: Geeft de status aan waarin de gegevensstroom zich bevindt. Dit kan een van drie staten zijn: [!UICONTROL Success], [!UICONTROL Failed], en [!UICONTROL Processing]. [!UICONTROL Success] betekent dat de gegevensstroom actief is en gegevens volgens zijn verstrekt programma uitvoert. [!UICONTROL Failed] betekent dat de activering van gegevens is opgeschort als gevolg van fouten. [!UICONTROL Processing] betekent dat de gegevensstroom nog niet actief is en over het algemeen wordt ontmoet wanneer een nieuwe gegevensstroom wordt gecreeerd.
+- **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat met succes aan de geselecteerde bestemming als deel van de dataflow looppas werd geactiveerd. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde doelgroepen.
+- **[!UICONTROL Identities excluded]**: Het totale aantal profiel-id&#39;s dat van activering is uitgesloten op basis van ontbrekende kenmerken en schending van toestemming.
+- **[!UICONTROL Status]**: geeft de status aan waarin de gegevensstroom zich bevindt. Dit kan een van de volgende drie statussen hebben: [!UICONTROL Success], [!UICONTROL Failed] en [!UICONTROL Processing] . [!UICONTROL Success] betekent dat de gegevensstroom actief is en gegevens exporteert volgens het opgegeven schema. [!UICONTROL Failed] betekent dat de activering van gegevens is opgeschort als gevolg van fouten. [!UICONTROL Processing] betekent dat de gegevensstroom nog niet actief is en over het algemeen wordt ontmoet wanneer een nieuwe gegevensstroom wordt gecreeerd.
 
 Om details van een specifieke dataflow looppas te bekijken, selecteer de begintijd van de looppas van de lijst.
 
 >[!NOTE]
 >
->De looppas van Dataflow wordt geproduceerd gebaseerd op de planningsfrequentie van bestemmingsdataflow. Er wordt een aparte dataflow-run uitgevoerd voor elk [samenvoegingsbeleid](../../profile/merge-policies/overview.md) toegepast op een publiek.
+>De looppas van Dataflow wordt geproduceerd gebaseerd op de planningsfrequentie van bestemmingsdataflow. Een afzonderlijke dataflow looppas wordt gemaakt voor elk [ samenvoegbeleid ](../../profile/merge-policies/overview.md) toegepast op een publiek.
 
 De detailspagina voor een dataflow, naast de details die op de dataflows lijst worden getoond, toont specifiekere informatie over dataflow:
 
 - **[!UICONTROL Size of data]**: De grootte van de gegevensstroom die wordt geëxporteerd.
 - **[!UICONTROL Total files]**: Het totale aantal bestanden dat in de gegevensstroom is geëxporteerd.
-- **[!UICONTROL Last updated]**: De tijd de dataflow looppas werd laatst bijgewerkt.
+- **[!UICONTROL Last updated]**: De tijd waarop de dataflow-uitvoering voor het laatst is bijgewerkt.
 
-![Dataflow-run-details voor batchdoelen.](../assets/ui/monitor-destinations/dataflow-batch.png)
+![ Dataflow looppas details voor partijbestemmingen.](../assets/ui/monitor-destinations/dataflow-batch.png)
 
-Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten weergegeven die zijn uitgesloten. Er wordt informatie voor zowel de mislukte als de uitgesloten identiteiten weergegeven, inclusief de foutcode en beschrijving. Standaard worden in de lijst de mislukte identiteiten weergegeven. Als u uitgesloten identiteiten wilt weergeven, selecteert u de **[!UICONTROL Identities excluded]** schakelen.
+Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten weergegeven die zijn uitgesloten. Er wordt informatie voor zowel de mislukte als de uitgesloten identiteiten weergegeven, inclusief de foutcode en beschrijving. Standaard worden in de lijst de mislukte identiteiten weergegeven. Selecteer de schakeloptie **[!UICONTROL Identities excluded]** om uitgesloten identiteiten weer te geven.
 
-![Dataflow-records voor batchbestemmingen met een foutbericht gemarkeerd.](../assets/ui/monitor-destinations/dataflow-records-batch.png)
+![ verslagen Dataflow voor partijbestemmingen met een benadrukt foutenmelding.](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
 ## Het dashboard Bestemmingen controleren {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
->- Functionaliteit voor het controleren van doelen wordt momenteel ondersteund voor alle doelen in Experience Platform *behalve* de [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) en [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) bestemmingen.
->- Voor de [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), en [HTTP-API](/help/destinations/catalog/streaming/http-destination.md) doelen, de metriek met betrekking tot uitgesloten, mislukte en geactiveerde identiteiten worden geschat. Hogere volumes activeringsgegevens leiden tot een hogere nauwkeurigheid van de meetwaarden.
+>- Doelen die functionaliteit controleren wordt momenteel gesteund voor alle bestemmingen in Experience Platform *behalve* [ Adobe Target ](/help/destinations/catalog/personalization/adobe-target-connection.md) en [ de verpersoonlijking van de Douane ](/help/destinations/catalog/personalization/custom-personalization.md) bestemmingen.
+>- Voor [ Kinesis van Amazon ](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [ Azure Gebeurtenis Hubs ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), en [ HTTP API ](/help/destinations/catalog/streaming/http-destination.md) bestemmingen, worden de metriek met betrekking tot identiteiten uitgesloten, ontbroken, en geactiveerd geschat. Hogere volumes activeringsgegevens leiden tot een hogere nauwkeurigheid van de meetwaarden.
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activering"
 >abstract="De weergave voor doelactivering bevat informatie over de activeringsstatus van een publiek en maatstaven die vanuit het realtime-klantprofiel zijn genomen om unieke identiteiten te genereren."
 
-Als u toegang wilt krijgen tot [!UICONTROL Monitoring] dashboard, selecteren **[!UICONTROL Monitoring]** (![bewakingspictogram](../assets/ui/monitor-destinations/monitoring-icon.png)) in de linkernavigatie. Eén keer op de knop [!UICONTROL Monitoring] pagina, selecteert u [!UICONTROL Destinations]. De [!UICONTROL Monitoring] het dashboard bevat metriek en informatie over de banen van de bestemmingslooppas.
+Om tot het [!UICONTROL Monitoring] dashboard toegang te hebben, selecteer **[!UICONTROL Monitoring]** (![ controlepictogram ](../assets/ui/monitor-destinations/monitoring-icon.png)) in de linkernavigatie. Selecteer [!UICONTROL Destinations] eenmaal op de [!UICONTROL Monitoring] -pagina. Het dashboard van [!UICONTROL Monitoring] bevat metriek en informatie over de banen van de bestemmingslooppas.
 
-Gebruik de [!UICONTROL Destinations] dashboard voor een algemeen idee van de gezondheid van uw activeringsstromen. Begin door inzichten op een bijeengevoegd niveau voor alle partij en het stromen bestemmingen te krijgen en dan neer in gedetailleerde meningen voor dataflows, dataflow looppas, en geactiveerd publiek voor een diepgaande blik op uw activeringsgegevens te boren. De schermen in de [!UICONTROL Monitoring] het dashboard verstrekt actionable inzichten door metriek en foutenbeschrijvingen om u te helpen om het even welke problemen oplossen die zich in uw activeringsscenario&#39;s zouden kunnen voordoen.
+Gebruik het dashboard van [!UICONTROL Destinations] om een algemeen idee van de gezondheid van uw activeringsstromen te krijgen. Begin door inzichten op een bijeengevoegd niveau voor alle partij en het stromen bestemmingen te krijgen en dan neer in gedetailleerde meningen voor dataflows, dataflow looppas, en geactiveerd publiek voor een diepgaande blik op uw activeringsgegevens te boren. De schermen in het dashboard van [!UICONTROL Monitoring] verstrekken actionable inzichten door metriek en foutenbeschrijvingen om u te helpen om het even welke problemen oplossen die zich in uw activeringsscenario&#39;s zouden kunnen voordoen.
 
-U kunt de weergegeven informatie filteren op gegevenstype - klanten, accounts (alleen voor de Adobe Real-Time CDP B2B-editie), vooruitzichten en verrijking van accounts. Meer informatie over deze opties vindt u in het dialoogvenster [Dashboardgids controleren](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
+U kunt de weergegeven informatie filteren op gegevenstype - klanten, accounts (alleen voor de Adobe Real-Time CDP B2B-editie), vooruitzichten en verrijking van accounts. Lees meer over deze opties in de [ controledashboardgids ](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
 
-![Het filter van het gegevenstype dat in de controle dashboardmening wordt benadrukt.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
+![ het typefilter van Gegevens die in de controle dashboardmening wordt benadrukt.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
-In het midden van het dashboard bevindt zich de [!UICONTROL Activation] , die metriek en grafieken bevat die gegevens over het activeringstarief van de gegevens tonen die naar het stromen bestemmingen worden uitgevoerd, evenals op de ontbroken partij dataflow looppas aan partijbestemmingen.
+In het midden van het dashboard bevindt zich het [!UICONTROL Activation] -deelvenster, dat metriek en grafieken bevat die gegevens weergeven over de activeringsfrequentie van de gegevens die naar streamingdoelen worden geëxporteerd, en over de mislukte batchgegevensstroom naar batchdoelen.
 
-![Grafieken voor streaming en batchactivering worden gemarkeerd in de monitoringweergave.](../assets/ui/monitor-destinations/dashboard-graph.png)
+![ het stromen en de grafieken van de partijactivering die in de controlemening worden benadrukt.](../assets/ui/monitor-destinations/dashboard-graph.png)
 
 
-Standaard bevatten de weergegeven gegevens de activeringsgegevens van de laatste 24 uur. Selecteren **[!UICONTROL Last 24 hours]** om het tijdkader van getoonde verslagen aan te passen. Beschikbare opties zijn **[!UICONTROL Last 24 hours]**, **[!UICONTROL Last 7 days]**, en **[!UICONTROL Last 30 days]**. U kunt ook de datums in het pop-upvenster Kalender selecteren dat wordt weergegeven. Als u datums hebt geselecteerd, selecteert u **[!UICONTROL Apply]** om het tijdkader van de getoonde informatie aan te passen.
+Standaard bevatten de weergegeven gegevens de activeringsgegevens van de laatste 24 uur. Selecteer **[!UICONTROL Last 24 hours]** om het tijdkader van getoonde verslagen aan te passen. Beschikbare opties zijn **[!UICONTROL Last 24 hours]** , **[!UICONTROL Last 7 days]** en **[!UICONTROL Last 30 days]** . U kunt ook de datums in het pop-upvenster Kalender selecteren dat wordt weergegeven. Als u de datums hebt geselecteerd, selecteert u **[!UICONTROL Apply]** om het tijdframe van de weergegeven informatie aan te passen.
 
 >[!NOTE]
 >
->De volgende schermafbeelding toont de activeringsfrequentie en batch-gegevensstroom gedurende de laatste 30 dagen in plaats van de laatste 24 uur. U kunt het tijdkader aanpassen door **[!UICONTROL Last 30 days]**.
+>De volgende schermafbeelding toont de activeringsfrequentie en batch-gegevensstroom gedurende de laatste 30 dagen in plaats van de laatste 24 uur. U kunt het tijdframe aanpassen door **[!UICONTROL Last 30 days]** te selecteren.
 
-![De controle van de terugkijkdatumwaaier van de verandering benadrukte voor geactiveerde bestemmingen](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
+![ de controle van de terugkijkdatumwaaier van de Verandering voor geactiveerde bestemmingen ](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png) wordt benadrukt
 
-Het pijlpictogram gebruiken (![pijlpictogram](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) om de kaarten boven aan het scherm uit te vouwen of te negeren, waarop in één oogopslag informatie over de activeringsdetails wordt weergegeven op basis van het doeltype, streaming of batch:
+Gebruik het pijlpictogram (![ pijlpictogram ](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) om de kaarten bij de bovenkant van het scherm uit te breiden of te verwerpen, die bij-a-blik informatie over de activeringsdetails tonen, die op het bestemmingstype - het stromen of partij wordt gebaseerd:
 
-- **[!UICONTROL Streaming activation rate]**: Vertegenwoordigt het percentage ontvangen identiteiten dat met succes is geactiveerd of overgeslagen. De formule die voor de berekening van dit percentage wordt gebruikt, wordt hierboven op deze pagina nader beschreven in de [Dataflow wordt uitgevoerd voor streamingdoelen](#dataflow-runs-for-streaming-destinations) sectie.
-- **[!UICONTROL Batch failed dataflow runs]**: Vertegenwoordigt het aantal mislukte dataflow looppas in het geselecteerde tijdinterval.
+- **[!UICONTROL Streaming activation rate]**: geeft het percentage aan van de ontvangen identiteiten die zijn geactiveerd of overgeslagen. De formule die wordt gebruikt om dit percentage te berekenen wordt hierboven beschreven verder op deze pagina, in de [ looppas Dataflow voor het stromen bestemmingen ](#dataflow-runs-for-streaming-destinations) sectie.
+- **[!UICONTROL Batch failed dataflow runs]**: vertegenwoordigt het aantal mislukte dataflow looppas in het geselecteerde tijdinterval.
 
-![Kaarten boven aan pagina weergeven of negeren.](../assets/ui/monitor-destinations/monitoring-destinations-toggle-arrow.gif)
+![ toon of verwerp kaarten bij bovenkant van pagina.](../assets/ui/monitor-destinations/monitoring-destinations-toggle-arrow.gif)
 
-De **[!UICONTROL Activation]** de grafiek wordt standaard weergegeven en u kunt deze uitschakelen om de onderstaande lijst met doelen uit te vouwen. Selecteer de **[!UICONTROL Metrics and graphs]** schakelen om de grafieken uit te schakelen.
+De grafiek **[!UICONTROL Activation]** wordt standaard weergegeven en u kunt deze uitschakelen om de lijst met onderstaande doelen uit te vouwen. Selecteer de schakeloptie **[!UICONTROL Metrics and graphs]** om de grafieken uit te schakelen.
 
-De **[!UICONTROL Activation]** toont een lijst van bestemmingen die minstens één bestaand rekening bevatten. Deze lijst bevat ook informatie over de ontvangen profielen, de geactiveerde identiteiten, de mislukte identiteiten, uitgesloten identiteiten, het activeringspercentage, de totale mislukte gegevensstromen, en de laatste bijgewerkte datum voor deze bestemmingen. Niet zijn alle metriek beschikbaar voor alle bestemmingstypes. In de onderstaande tabel worden de beschikbare gegevens per doeltype, streaming of batch weergegeven.
+In het deelvenster **[!UICONTROL Activation]** wordt een lijst weergegeven met doelen die ten minste één bestaande account bevatten. Deze lijst bevat ook informatie over de ontvangen profielen, de geactiveerde identiteiten, de mislukte identiteiten, uitgesloten identiteiten, het activeringspercentage, de totale mislukte gegevensstromen, en de laatste bijgewerkte datum voor deze bestemmingen. Niet zijn alle metriek beschikbaar voor alle bestemmingstypes. In de onderstaande tabel worden de beschikbare gegevens per doeltype, streaming of batch weergegeven.
 
 | Metrisch | Doeltype |
 ---------|----------|
@@ -220,27 +220,27 @@ De **[!UICONTROL Activation]** toont een lijst van bestemmingen die minstens é�
 | **[!UICONTROL Total failed dataflows]** | Batch |
 | **[!UICONTROL Last updated]** | Streaming en batch |
 
-![Monitoren van dashboard met alle geactiveerde doelen gemarkeerd.](../assets/ui/monitor-destinations/dashboard-destinations.png)
+![ het dashboard van de Controle met alle geactiveerde benadrukte bestemmingen.](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
-U kunt uw lijst van bestemmingen ook filtreren om slechts de geselecteerde categorie van bestemmingen te tonen. Selecteer de **[!UICONTROL My destinations]** en selecteert u de [doelcategorie](/help/destinations/destination-types.md#categories) waarop u wilt filteren.
+U kunt uw lijst van bestemmingen ook filtreren om slechts de geselecteerde categorie van bestemmingen te tonen. Selecteer **[!UICONTROL My destinations]** dropdown, en selecteer de [ bestemmingscategorie ](/help/destinations/destination-types.md#categories) die u wilt filtreren aan.
 
-![Doelen filteren met vervolgkeuzekiezer](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
+![ bestemmingen van de Filter gebruikend dropdown selecteur ](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-Bovendien kunt u een bestemming in de onderzoeksbar ingaan om aan één enkele bestemming te isoleren. Als u de gegevens van de bestemming wilt zien, kunt u het filter selecteren ![filter](../assets/ui/monitor-destinations/filter-add.png) naast het om een lijst van zijn actieve dataflows te zien.
+Bovendien kunt u een bestemming in de onderzoeksbar ingaan om aan één enkele bestemming te isoleren. Als u de dataflows van de bestemming wilt zien kunt u de filter ![ filter ](../assets/ui/monitor-destinations/filter-add.png) naast het selecteren om een lijst van zijn actieve dataflows te zien.
 
-![De bestemmingen van de filter gebruikend de onderzoeksbar die in de controlemening wordt benadrukt.](../assets/ui/monitor-destinations/filtered-destinations.png)
+![ bestemmingen die van de Filter de onderzoeksbar gebruiken in de controlemening wordt benadrukt.](../assets/ui/monitor-destinations/filtered-destinations.png)
 
-Als u alle bestaande gegevensstromen over alle bestemmingen wilt bekijken, uitgezocht **[!UICONTROL Dataflows]**.
+Selecteer **[!UICONTROL Dataflows]** als u alle bestaande gegevensstromen voor alle doelen wilt weergeven.
 
-Er wordt een lijst met gegevensstromen weergegeven, gesorteerd op de laatste dataflow-run. U kunt extra details voor een specifieke gegevensstroom zien door de plaats van de bestemming te bepalen u wilt controleren, die de filter selecteren ![filter](../assets/ui/monitor-destinations/filter-add.png) naast het, en dan het selecteren van de filter ![filter](../assets/ui/monitor-destinations/filter-add.png) naast de gegevensstroom wilt u meer informatie over.
+Er wordt een lijst met gegevensstromen weergegeven, gesorteerd op de laatste dataflow-run. U kunt extra details voor een specifieke dataflow zien door van de bestemming de plaats te bepalen wilt u controleren, die de filter ![ filter ](../assets/ui/monitor-destinations/filter-add.png) naast het selecteren, en dan het filter ![ filter ](../assets/ui/monitor-destinations/filter-add.png) naast dataflow selecteren u meer informatie over wilt.
 
-![Alle gegevensstromen die in het controledashboard worden benadrukt.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
+![ Alle die dataflows in het controledashboard worden benadrukt.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
 Zodra u een gegevensstroom voor verdere inspectie selecteert, bevat de dataflow detailspagina een knevel die u toestaat om de geactiveerde gegevens in dataflow te zien, die door dataflow looppas of publiek wordt verdeeld.
 
 ### Dataflow-run-weergave {#dataflow-runs-view}
 
-Wanneer **[!UICONTROL Dataflow runs]** is geselecteerd, kunt u een lijst van dataflow looppas voor geselecteerde dataflow en verdere informatie over elke looppas zien.
+Wanneer **[!UICONTROL Dataflow runs]** is geselecteerd, ziet u een lijst met gegevensstroombewerkingen voor de geselecteerde gegevensstroom en meer informatie over elke uitvoering.
 
 >[!INFO]
 >
@@ -248,17 +248,17 @@ Wanneer **[!UICONTROL Dataflow runs]** is geselecteerd, kunt u een lijst van dat
 >
 >Voor dataflows aan partijbestemmingen, heeft elk publiek een overeenkomstige dataflow die looppas wordt geproduceerd, op de publiekactivering geplande frequentie wordt gebaseerd. Bijvoorbeeld, als u opstelling een dagelijkse geplande activering voor vijf publiek in de zelfde bestemmingsdataflow, er vijf afzonderlijke dataflow looppas zal zijn die elke dag wordt geproduceerd.
 
-![Het deelvenster Dataflow wordt uitgevoerd en er zijn verschillende runtimes gemarkeerd.](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
+![ Dataflow stelt paneel met verscheidene benadrukte looppas in werking.](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
 
-Gebruik de **[!UICONTROL Show failures only]** schakelen om alleen de mislukte uitvoering voor een gegevensstroom weer te geven.
+Met de schakeloptie **[!UICONTROL Show failures only]** kunt u alleen de mislukte uitvoering voor een gegevensstroom weergeven.
 
-![Dataflow voert mening met slechts benadrukt tonen mislukte knevel uit](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
+![ Dataflow looppas mening met de slechts benadrukt knevel van showmislukkingen ](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
 
 ### Weergave op publiek niveau {#segment-level-view}
 
-Wanneer **[!UICONTROL Audiences]** is geselecteerd, wordt er een lijst weergegeven met de soorten publiek die binnen het geselecteerde tijdbereik zijn geactiveerd voor de geselecteerde gegevensstroom. Dit scherm bevat publieksinformatie over de geactiveerde identiteiten, uitgesloten identiteiten, evenals de status en de tijd van de laatste dataflow-run. Door de metriek voor uitgesloten en geactiveerde identiteiten te bekijken, kunt u verifiëren of een publiek met succes is geactiveerd of niet.
+Wanneer **[!UICONTROL Audiences]** is geselecteerd, wordt een lijst weergegeven met de soorten publiek die binnen het geselecteerde tijdbereik zijn geactiveerd voor de geselecteerde gegevensstroom. Dit scherm bevat publieksinformatie over de geactiveerde identiteiten, uitgesloten identiteiten, evenals de status en de tijd van de laatste dataflow-run. Door de metriek voor uitgesloten en geactiveerde identiteiten te bekijken, kunt u verifiëren of een publiek met succes is geactiveerd of niet.
 
-U activeert bijvoorbeeld een publiek met de naam &#39;Loyalty Member States in California&#39; naar een Amazon S3-bestemming &#39;Loyalty Member California December&#39;. Laten we aannemen dat er 100 profielen in het geselecteerde publiek zijn, maar dat slechts 80 van de 100 profielen Loyalty-id-kenmerken bevatten en u de regels voor exporttoewijzingen hebt gedefinieerd als `loyalty.id` is vereist. In dit geval wordt voor het publiek 80 identiteiten geactiveerd en 20 identiteiten uitgesloten.
+U activeert bijvoorbeeld een publiek met de naam &#39;Loyalty Member States in California&#39; naar een Amazon S3-bestemming &#39;Loyalty Member California December&#39;. Laten we ervan uitgaan dat het geselecteerde publiek 100 profielen bevat, maar dat slechts 80 van de 100 profielen Loyalty-id-kenmerken bevatten en u de regels voor exporttoewijzingen hebt gedefinieerd als `loyalty.id` vereist is. In dit geval wordt voor het publiek 80 identiteiten geactiveerd en 20 identiteiten uitgesloten.
 
 >[!IMPORTANT]
 >
@@ -266,26 +266,26 @@ U activeert bijvoorbeeld een publiek met de naam &#39;Loyalty Member States in C
 >- De publiek-vlakke mening is momenteel slechts beschikbaar voor partijbestemmingen.
 >- De publiek-vlakke metriek wordt momenteel geregistreerd voor succesvolle dataflow looppas slechts. Zij worden niet geregistreerd voor ontbroken dataflow looppas en uitgesloten verslagen.
 
-![Soorten publiek gemarkeerd in het deelvenster Gegevensstroom.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
+![ publiek dat in het dataflow paneel wordt benadrukt.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 In de publiek-vlakke mening, worden de metriek bijeengevoegd over veelvoudige dataflow looppas binnen de geselecteerde tijdwaaier. Als er veelvoudige dataflow looppas zijn, kunt u neer van het publieksniveau boren om de uitsplitsing voor elke dataflow looppas te zien, die door het geselecteerde publiek wordt gefiltreerd.
-De filterknop gebruiken ![filter](../assets/ui/monitor-destinations/filter-add.png) om naar beneden in de dataflow looppas mening voor elk publiek in dataflow te boren.
+Gebruik de filterknoop ![ filter ](../assets/ui/monitor-destinations/filter-add.png) om neer in de dataflow looppas mening voor elk publiek in dataflow te boren.
 
 ### DataFlow-uitvoerpagina {#dataflow-runs-page}
 
 De pagina met gegevensstroomuitvoering bevat informatie over de gegevensstroomuitvoering, zoals de begintijd van de gegevensstroom, de verwerkingstijd, ontvangen profielen, geactiveerde identiteiten, uitgesloten identiteiten, mislukte identiteiten, activeringsfrequentie en status.
 
-Wanneer u naar beneden boort in dataflow stelt pagina van [weergave op publieksniveau](#segment-level-view), hebt u de optie om de dataflow looppas door de volgende opties te filtreren:
+Wanneer u neer in de dataflow looppas pagina van de [ publiek-vlakke mening ](#segment-level-view) boor, hebt u de optie om de dataflow looppas door de volgende opties te filtreren:
 
-- **[!UICONTROL Dataflow runs with failed identities]**: Voor het geselecteerde publiek worden met deze optie alle gegevensstroombewerkingen weergegeven die zijn mislukt voor activering. Om te inspecteren waarom identiteiten in een bepaalde dataflow run ontbraken, zie [detailpagina voor gegevensstroom](#dataflow-run-details-page) voor die dataflow run.
-- **[!UICONTROL Dataflow runs with skipped identities]**: Voor het geselecteerde publiek worden met deze optie alle dataflow-run weergegeven waarvoor sommige identiteiten niet volledig zijn geactiveerd en bepaalde profielen zijn overgeslagen. Om te inspecteren waarom identiteiten in een bepaalde dataflow looppas werden overgeslagen, zie [detailpagina voor gegevensstroom](#dataflow-run-details-page) voor die dataflow run.
-- **[!UICONTROL Dataflow runs with activated identities]**: Voor het geselecteerde publiek worden met deze optie alle dataflow-uitvoering weergegeven die identiteiten hebben die zijn geactiveerd.
+- **[!UICONTROL Dataflow runs with failed identities]**: Voor het geselecteerde publiek worden met deze optie alle gegevensstroombewerkingen weergegeven die zijn mislukt voor activering. Om te inspecteren waarom de identiteiten in bepaalde dataflow in werking gesteld ontbrak, zie de [ dataflow looppas detailpagina ](#dataflow-run-details-page) voor die dataflow looppas.
+- **[!UICONTROL Dataflow runs with skipped identities]**: Voor het geselecteerde publiek worden met deze optie alle dataflow-run weergegeven waarvoor sommige identiteiten niet volledig zijn geactiveerd en sommige profielen zijn overgeslagen. Om te inspecteren waarom de identiteiten in bepaalde dataflow looppas werden overgeslagen, zie de [ dataflow looppas detailpagina ](#dataflow-run-details-page) voor die dataflow looppas.
+- **[!UICONTROL Dataflow runs with activated identities]**: Voor het geselecteerde publiek worden met deze optie alle gegevensstroombewerkingen weergegeven die id&#39;s hebben die correct zijn geactiveerd.
 
-![Keuzerondjes die tonen hoe te om dataflow looppas voor publiek te filtreren.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
+![ Keuzerondjes die tonen hoe te om dataflow looppas voor publiek te filtreren.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
-Als u meer details wilt zien over een specifieke gegevensstroomuitvoering, selecteert u het filter ![filter](../assets/ui/monitor-destinations/filter-add.png) naast de dataflow run start time om de dataflow run details page te zien.
+Om meer details over een specifieke dataflow looppas te zien, selecteer de filter ![ filter ](../assets/ui/monitor-destinations/filter-add.png) naast de dataflow runtime begintijd om de dataflow looppas detailpagina te zien.
 
-![Dataflow voert filter in controle dashboard uit om in meer informatie voor een bepaalde dataflow looppas te boor.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
+![ Dataflow stelt filter in controle dashboard in werking om in meer informatie voor bepaalde dataflow in werking te stellen.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 
 ### Detailpagina voor gegevensstroom {#dataflow-run-details-page}
 
@@ -293,18 +293,18 @@ De dataflow looppas detailpagina, naast de details die op de dataflow looppas li
 
 - **[!UICONTROL Dataflow run ID]**: De id van de gegevensstroom.
 - **[!UICONTROL IMS org ID]**: De organisatie waartoe de gegevensstroom behoort.
-- **[!UICONTROL Last updated]**: De tijd de dataflow looppas werd laatst bijgewerkt.
+- **[!UICONTROL Last updated]**: De tijd waarop de dataflow-uitvoering voor het laatst is bijgewerkt.
 
 De detailspagina heeft ook een knevel om tussen dataflow loopfouten en publiek te schakelen. Deze optie is slechts beschikbaar voor dataflow looppas in partijbestemmingen.
 
-In de weergave met uitvoerfouten in de gegevensstroom wordt een lijst weergegeven met mislukte identiteiten en identiteiten die zijn uitgesloten. De informatie voor zowel de mislukte als uitgesloten identiteiten wordt getoond, met inbegrip van de foutencode, het aantal van de identiteit, en beschrijving. Standaard worden in de lijst de mislukte identiteiten weergegeven. Als u overgeslagen identiteiten wilt weergeven, selecteert u de optie **[!UICONTROL Identities excluded]** schakelen.
+In de weergave met uitvoerfouten in de gegevensstroom wordt een lijst weergegeven met mislukte identiteiten en identiteiten die zijn uitgesloten. De informatie voor zowel de mislukte als uitgesloten identiteiten wordt getoond, met inbegrip van de foutencode, het aantal van de identiteit, en beschrijving. Standaard worden in de lijst de mislukte identiteiten weergegeven. Selecteer de schakeloptie **[!UICONTROL Identities excluded]** om overgeslagen identiteiten weer te geven.
 
-![In de monitoringweergave gemarkeerde identiteiten uitgesloten van schakeloptie](../assets/ui/monitor-destinations/identities-excluded.png)
+![ Uitgesloten van de Identiteiten knevel die in de controlemening wordt benadrukt ](../assets/ui/monitor-destinations/identities-excluded.png)
 
-Wanneer **[!UICONTROL Audiences]** wordt geselecteerd, ziet u een lijst van de soorten publiek die in de geselecteerde dataflow looppas werden geactiveerd. Dit scherm bevat publieksinformatie over de geactiveerde identiteiten, uitgesloten identiteiten, evenals de status en de tijd van de laatste dataflow-run.
+Als **[!UICONTROL Audiences]** is geselecteerd, wordt een lijst weergegeven met de soorten publiek die zijn geactiveerd in de geselecteerde gegevensstroomuitvoering. Dit scherm bevat publieksinformatie over de geactiveerde identiteiten, uitgesloten identiteiten, evenals de status en de tijd van de laatste dataflow-run.
 
-![De mening van het publiek in het dataflow looppas detailscherm.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
+![ mening van het publiek in het dataflow looppas detailscherm.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
 ## Volgende stappen {#next-steps}
 
-Door deze gids te volgen, weet u nu hoe te om dataflows voor zowel partij als het stromen bestemmingen, met inbegrip van alle relevante informatie zoals verwerkingstijd, activeringstarief, en status te controleren. Als u meer wilt weten over gegevensstromen in Platform, leest u de [gegevensstroomoverzicht](../home.md). Voor meer informatie over bestemmingen leest u de [Overzicht van doelen](../../destinations/home.md).
+Door deze gids te volgen, weet u nu hoe te om dataflows voor zowel partij als het stromen bestemmingen, met inbegrip van alle relevante informatie zoals verwerkingstijd, activeringstarief, en status te controleren. Meer over gegevens leren in Platform, lees het [ dataflows overzicht ](../home.md). Meer over bestemmingen leren, lees het [ overzicht van bestemmingen ](../../destinations/home.md).

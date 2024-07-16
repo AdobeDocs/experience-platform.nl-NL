@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!UICONTROL Web interaction] gegevenstype
 
-[!UICONTROL Web interaction] is een standaard gegevenstype van het Gegevensmodel van de Ervaring (XDM) dat informatie over interactie beschrijft die op een Web-pagina gebeurde nadat het aanvankelijke paginading werd voltooid. Het is bedoeld voor het opnemen van interacties in veelzijdige webtoepassingen die geen nieuwe pagina&#39;s laden, zoals webapps van één pagina (SPA).
+[!UICONTROL Web interaction] is een standaard XDM-gegevenstype (Experience Data Model) dat informatie beschrijft over interacties die op een webpagina zijn uitgevoerd nadat het laden van de eerste pagina was voltooid. Het is bedoeld voor het opnemen van interacties in veelzijdige webtoepassingen die geen nieuwe pagina&#39;s laden, zoals webapps van één pagina (SPA).
 
 <img src="../images/data-types/web-interaction.PNG" width="500" /><br />
 
@@ -28,5 +28,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.schema.json)

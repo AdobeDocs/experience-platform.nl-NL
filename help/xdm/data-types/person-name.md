@@ -21,16 +21,16 @@ Daarnaast biedt het gegevenstype een aantal optionele eigenschappen die kunnen w
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `courtesyTitle` | Een afkorting van de titel, de eerlijkheid of de aanhef van een persoon (zoals `Mr.`, `Miss.`, of `Dr.`). |
+| `courtesyTitle` | Een afkorting van de titel, de eerlijkheid of de aanhef van een persoon (zoals `Mr.` , `Miss.` of `Dr.` ). |
 | `firstName` | Het eerste segment van de naam in de schrijfvolgorde wordt meestal geaccepteerd in de taal van de naam. |
 | `fullName` | De volledige naam van de persoon, in de schrijfvolgorde die het meest wordt aanvaard in de taal van de naam. |
 | `lastName` | Het laatste segment van de naam in de schrijfvolgorde dat het meest wordt geaccepteerd in de taal van de naam. |
 | `middleName` | Midden-, alternatieve of aanvullende namen opgegeven tussen de voornaam en achternaam. |
-| `suffix` | Een groep letters die na de naam van een persoon wordt verstrekt om aanvullende informatie te verstrekken (zoals `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`, enzovoort). |
+| `suffix` | Een groep letters die na de naam van een persoon wordt opgegeven voor aanvullende informatie (zoals `Jr.` , `Sr.` , `M.D.` , `PhD` , `I` , `II` , `III` , enzovoort). |
 
 {style="table-layout:auto"}
 
 Voor meer details over het gegevenstype van de persoonnaam, verwijs naar de openbare bewaarplaats XDM:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.schema.json)

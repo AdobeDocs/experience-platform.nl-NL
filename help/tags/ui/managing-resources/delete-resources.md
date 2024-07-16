@@ -13,9 +13,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
-Als u een bron verwijdert, wordt die bron permanent uit Adobe Experience Platform verwijderd. Als u een bron uit een specifieke tagbibliotheek wilt verwijderen maar nog steeds wilt dat die bron beschikbaar is voor gebruik in andere bibliotheken, raadpleegt u de handleiding [verwijderen, bronnen uit een bibliotheek](remove-resources-from-library.md).
+Als u een bron verwijdert, wordt die bron permanent uit Adobe Experience Platform verwijderd. Als u een middel uit een specifieke markeringsbibliotheek wilt verwijderen, maar nog dat middel beschikbaar voor gebruik in andere bibliotheken wilt zijn, zie de gids op [ verwijderend middelen uit een bibliotheek ](remove-resources-from-library.md).
 
 U kunt gegevenselementen, regels, extensies, hosts, omgevingen en eigenschappen verwijderen. Zodra geschrapt, zijn deze middelen niet terugvorderbaar.
 
@@ -42,7 +42,7 @@ De regels hangen van andere middelen (uitbreidingen en gegevenselementen) af, ma
 
 De elementen van gegevens hangen van uitbreidingen af, maar in tegenstelling tot regels, kunnen de gegevenselementen regels en uitbreidingen hebben die van hen afhangen. Als u een gegevenselement verwijdert, worden alle regels of extensies die van dit gegevenselement afhankelijk zijn, beïnvloed.
 
-Nadat het gegevenselement is verwijderd, wordt niet langer de juiste waarde tijdens runtime geretourneerd. Er wordt een lege tekenreeks geretourneerd of de naam van het verwijderde gegevenselement wordt omsloten in %% (voorbeeld: `%data-element-name%`). Dit gedrag kan worden geconfigureerd in Eigenschapinstellingen.
+Nadat het gegevenselement is verwijderd, wordt niet langer de juiste waarde tijdens runtime geretourneerd. Er wordt een lege tekenreeks geretourneerd of de naam van het verwijderde gegevenselement wordt omsloten in %% (bijvoorbeeld: `%data-element-name%`). Dit gedrag kan worden geconfigureerd in Eigenschapinstellingen.
 
 U kunt deze gebiedsdelen oplossen vóór of nadat u het gegevenselement schrapt.
 
@@ -52,7 +52,7 @@ Alle andere middelen (regels, regelcomponenten, en gegevenselementen) worden ver
 
 De componenten van de regel en gegevenselementen hangen van uitbreidingen voor hun gedrag af, maar ook enkel om in het gebruikersinterface van de Inzameling van Gegevens worden getoond. Als u de extensie verwijdert voordat u afhankelijkheden oplost, kunt u deze zwevende bronnen niet meer weergeven. Deze zwevende bronnen worden weergegeven in de lijstweergaven, maar er wordt een fout weergegeven wanneer u de detailweergave probeert te openen.
 
-Om deze reden, zou u zeer zorgvuldig moeten zijn wanneer het schrappen van uitbreidingen en u gebiedsdelen zou moeten oplossen alvorens u hen schrapt.
+Daarom moet u zeer voorzichtig zijn wanneer u extensies verwijdert en afhankelijkheden moet oplossen voordat u ze verwijdert.
 
 ### Verwijderen uit bibliotheken
 
@@ -73,9 +73,9 @@ Voordat u een bron kunt verwijderen, moet u deze verwijderen uit alle bibliothek
 #### Productie
 
 1. Schakel de resource uit.
-1. Publiceer de uitgeschakelde bron tot aan Production.
+1. Publish the disabled resource through to Production.
 1. Verwijder de bron.
 
 ## Een bron verwijderen
 
-Selecteer in de toepasselijke lijstweergave de bron die u wilt verwijderen en selecteer vervolgens **[!UICONTROL Delete]**.
+Selecteer in de toepasselijke lijstweergave de bron die u wilt verwijderen en selecteer vervolgens **[!UICONTROL Delete]** .

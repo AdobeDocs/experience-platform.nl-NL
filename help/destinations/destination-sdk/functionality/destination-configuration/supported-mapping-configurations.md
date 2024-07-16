@@ -23,13 +23,13 @@ Wanneer het bouwen van uw bestemming, vorm uw schema en identiteitsnamespaces vo
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Ondersteunde toewijzingen voor streamingdoelen {#streaming-mappings}
 
 Real-time (het stromen) bestemmingen die met Destination SDK worden gebouwd steunen de mappingconfiguraties die in de lijst hieronder worden beschreven.
 
-| Bronveld | Doelveld |
+| Source-veld | Doelveld |
 | --- | --- |
 | XDM, kenmerk | Aangepast, kenmerk |
 | Naamruimte identiteit | Naamruimte identiteit |
@@ -64,11 +64,11 @@ Gebruikers kunnen kenmerken van hun XDM-bronprofiel toewijzen aan aangepaste ken
 
 Gebruikers moeten de naam van het aangepaste doelkenmerk handmatig invoeren wanneer zij de doelveldtoewijzing selecteren.
 
-![Platform UI-screenshot met aangepaste kenmerkselectie.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
+{het schermschot van het platform UI die aangepaste kenmerkenselectie toont.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)![
 
 De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onderstaande afbeelding.
 
-![Platform UI-screenshot met XDM-kenmerktoewijzing aan aangepaste kenmerken voor streamingdoelen.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
+{het schermschot van het Platform UI die XDM kenmerkenafbeelding aan douanekenmerken voor het stromen bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)![
 
 ### Identiteitsnaamruimten toewijzen aan naamruimten van partners {#streaming-identity-to-identity}
 
@@ -76,13 +76,13 @@ Gebruikers kunnen aangepaste of algemene naamruimten toewijzen van Platform aan 
 
 De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onderstaande afbeelding.
 
-![Platform UI het schermschot die identiteitstoewijzing aan identiteit voor het stromen bestemmingen tonen.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
+{het schermschot van het platform UI die identiteitstoewijzing aan identiteit voor het stromen bestemmingen tonen.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)![
 
 ## Ondersteunde toewijzingen voor op bestanden gebaseerde doelen {#batch-mappings}
 
 Bestandsgebaseerde doelen die zijn gebouwd met Destination SDK ondersteunen de toewijzingsconfiguraties die worden beschreven in de onderstaande tabel. Zie de volgende secties voor gedetailleerde toewijzingsvoorbeelden.
 
-| Bronveld | Doelveld |
+| Source-veld | Doelveld |
 | --- | --- |
 | XDM, kenmerk | Kenmerk/aangepast kenmerk |
 | Naamruimte identiteit | Kenmerk/aangepast kenmerk |
@@ -118,11 +118,11 @@ Voor op een bestand gebaseerde doelen wordt het doelveld automatisch gevuld met 
 
 De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onderstaande afbeelding.
 
-![Platform UI screenshot die XDM afbeelding aan douanekenmerken voor op dossier-gebaseerde bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
+{het schermschot van het Platform UI die XDM afbeelding aan douanekenmerken voor op dossier-gebaseerde bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)![
 
 Gebruikers kunnen de standaardnaam op hun plaats laten of een aangepaste kenmerknaam invoeren in het selectiescherm van het doelveld.
 
-![Schermopname van de gebruikersinterface van het platform die de selectie van de douanedoelattributen voor op dossier-gebaseerde bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+{het schermschot van het platform UI die de selectie van het douanedoelattribuut voor op dossier-gebaseerde bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)![
 
 ### Naamruimten toewijzen aan aangepaste kenmerken {#batch-identity-to-custom}
 
@@ -130,11 +130,11 @@ Gebruikers kunnen aangepaste of globale naamruimten toewijzen van Platform aan a
 
 Wanneer u een naamruimte van een identiteit als een bronveld selecteert, wordt het doelveld automatisch gevuld met een equivalente naamruimte. Als u het doelveld wilt vervangen door een aangepast kenmerk, moeten gebruikers een aangepaste kenmerknaam invoeren in het selectiescherm van het doelveld.
 
-![Schermopname van de gebruikersinterface van het platform die de selectie van de douanedoelattributen voor op dossier-gebaseerde bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+{het schermschot van het platform UI die de selectie van het douanedoelattribuut voor op dossier-gebaseerde bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)![
 
 De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onderstaande afbeelding.
 
-![Schermopname van de gebruikersinterface van het platform die identiteitstoewijzing aan douanekenmerken voor op dossier-gebaseerde bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
+{het schermschot van het platform UI die identiteitstoewijzing aan douanekenmerken voor op dossier-gebaseerde bestemmingen tonen.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)![
 
 ### Identiteitsnaamruimten toewijzen aan naamruimten van partners {#batch-identity-to-identity}
 
@@ -144,7 +144,7 @@ Wanneer u een naamruimte van een identiteit als een bronveld selecteert, wordt h
 
 De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onderstaande afbeelding.
 
-![Schermopname UI van het platform die identiteitstoewijzing aan identiteit voor op dossier-gebaseerde bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
+{het schermschot van het platform UI die identiteitstoewijzing aan identiteit voor op dossier-gebaseerde bestemmingen tonen.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)![
 
 
 ## Volgende stappen {#next-steps}

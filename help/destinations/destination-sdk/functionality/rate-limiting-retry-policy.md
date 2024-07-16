@@ -4,7 +4,7 @@ title: Het beperken van snelheid en herprobeert beleid voor het stromen bestemmi
 exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 De partner-gebouwde bestemmingen kunnen diverse fouten terugkeren en verschillend tarief beperkend beleid hebben. Deze pagina verklaart hoe het Experience Platform verschillende soorten fouten behandelt die door het stromen bestemmingen zijn teruggekeerd.
 
-Wanneer het vormen van een bestemming die Destination SDK gebruikt, kunt u tussen twee samenvoegingstypes selecteren - [beste inspanningsaggregatie](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) en [configureerbare samenvoeging](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation). Afhankelijk van het aggregatietype dat u selecteert, leest u hieronder hoe Experience Platform fouten en tariefbeperkingen behandelt.
+Wanneer het vormen van een bestemming die Destination SDK gebruikt, kunt u tussen twee samenvoegingstypes selecteren - [ beste inspanningssamenvoeging ](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) en [ configureerbare samenvoeging ](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation). Afhankelijk van het aggregatietype dat u selecteert, leest u hieronder hoe Experience Platform fouten en tariefbeperkingen behandelt.
 
 ## Beste inspanningsaggregatie {#best-effort-aggregation}
 
@@ -26,7 +26,7 @@ In het geval van bestemmingsplatforms opstelling met configureerbare samenvoegin
 * Fouten waarbij het Experience Platform de gegevens opnieuw naar het platform probeert te verzenden:
    * HTTP-responscodes 420 en 429
    * HTTP-responscodes groter dan 500
-* Fouten bij Experience Platform *niet* probeer de gegevens opnieuw naar uw platform te verzenden: alle andere gegevens die door uw platform worden geretourneerd
+* Fouten waar het Experience Platform *niet* opnieuw probeert om de gegevens naar uw platform te verzenden: alle andere die door uw platform zijn teruggekeerd
 
 ### beschreven procedure voor opnieuw proberen {#retry-approach}
 

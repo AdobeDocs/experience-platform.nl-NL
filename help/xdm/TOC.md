@@ -97,9 +97,9 @@ ht-degree: 8%
       * [XDM Business Campaign - details](./field-groups/b2b-campaign/details.md)
    * XDM Business Campaign-leden {#b2b-campaign-members}
       * [XDM Business Campaign-leden - Gegevens](./field-groups/b2b-campaign-members/details.md)
-   * Geneesmiddelen {#medication}
+   * Medicatie {#medication}
       * [Geneesmiddelen voor gezondheidszorg](./field-groups/medication/healthcare-medication.md)
-   * Plan {#plan}
+   * Overzicht {#plan}
       * [Details van het zorgplan](./field-groups/plan/healthcare-plan-details.md)
    * Product {#product}
       * [Productcatalogus](./field-groups/product/product-catalog.md)
@@ -207,7 +207,7 @@ ht-degree: 8%
    * [Workflows op basis van velden](./ui/field-based-workflows.md)
    * [Voorbeeld-XDM-gegevens genereren](./ui/sample.md)
    * [XDM-schema&#39;s exporteren](./ui/export.md)
-* Schema-register-API {#api}
+* Schemaregister-API {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
    * [Schema&#39;s](api/schemas.md)
@@ -239,5 +239,5 @@ ht-degree: 8%
    * [De labels voor gegevensgebruik voor een schema beheren](tutorials/labels.md)
    * [Een ad-hocschema maken](tutorials/ad-hoc.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-* [API-referentie](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
+* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

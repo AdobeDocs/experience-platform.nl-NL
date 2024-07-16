@@ -1,7 +1,8 @@
 ---
 title: Gegevenstype item terugbetalen
 description: Meer informatie over het gegevenstype Data Model (XDM) van het gegevensmodel Beleving van item herstellen.
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: 9968d314-c6f3-49d9-b860-709d7478c43a
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%
@@ -10,9 +11,9 @@ ht-degree: 0%
 
 # [!UICONTROL Refund Item] gegevenstype
 
-[!UICONTROL Refund Item] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat informatie met betrekking tot een restitutie verbonden aan een orde beschrijft.
+[!UICONTROL Refund Item] is een standaard XDM-gegevenstype (Experience Data Model) waarmee wordt beschreven welke gegevens betrekking hebben op een restitutie voor een bestelling.
 
-![Een diagram van het gegevenstype Item terugbetalen.](../images/data-types/refund-item.png)
+![ een diagram van het gegevenstype van het Punt van de Terugbetaling.](../images/data-types/refund-item.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |--------------------|-----------------------|-----------|---------------------------------------------------------------------------------------------------|
@@ -26,5 +27,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/refunditem.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/refunditem.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/refunditem.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/refunditem.schema.json)

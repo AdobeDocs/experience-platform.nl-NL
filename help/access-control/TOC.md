@@ -8,7 +8,7 @@ role: Admin
 source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
 workflow-type: tm+mt
 source-wordcount: '127'
-ht-degree: 37%
+ht-degree: 34%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 37%
    * [Overzicht](abac/overview.md)
    * [End-to-end hulplijn](abac/end-to-end-guide.md)
    * [De toegangslabels van het gebruik om gebruikerstoegang tot bestemmingsdataflows te beheren](/help/access-control/abac/apply-access-labels-destinations.md)
-   * Toestemmingen {#permissions-ui}
+   * Machtigingen {#permissions-ui}
       * [Bladeren](abac/ui/browse.md)
       * [Labels](abac/ui/labels.md)
       * [Machtigingen](abac/ui/permissions.md)
@@ -28,7 +28,7 @@ ht-degree: 37%
       * [Rollen](abac/ui/roles.md)
       * [Sandboxes](abac/ui/sandboxes.md)
       * [Gebruikers](abac/ui/users.md)
-   * API voor toegangsbeheer op basis van kenmerken {#abac-api}
+   * Toegangsbeheer-API op basis van kenmerken {#abac-api}
       * [Overzicht](abac/api/overview.md)
       * [Aan de slag](abac/api/getting-started.md)
       * [Rollen](abac/api/roles.md)
@@ -41,10 +41,10 @@ ht-degree: 37%
    * [Details en aanvullende services voor een productprofiel beheren](ui/details-and-services.md)
    * [Een nieuw productprofiel maken](ui/create-profile.md)
    * [Gebruikers beheren voor een productprofiel](ui/users.md)
-* API voor toegangsbeheer {#api}
+* Toegangsbeheer-API {#api}
    * [Aan de slag](api/getting-started.md)
    * [De namen van de lijst van toestemmingen en middeltypes](api/permissions-and-resource-types.md)
    * [Effectief beleid weergeven](api/effective-policies.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-* [API-referentie](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/access-control/)
+* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

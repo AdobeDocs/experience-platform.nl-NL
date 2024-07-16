@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >Toegangsbeheer op basis van kenmerken is momenteel alleen beschikbaar in een beperkte versie.
 
-[Toegangsbeheer op basis van kenmerken](../../../access-control/abac/overview.md) is een mogelijkheid van Adobe Experience Platform die beheerders in staat stelt de toegang tot specifieke objecten en/of mogelijkheden te beheren op basis van kenmerken. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een schemaveld of -segment wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren.
+[ op attributen-gebaseerde toegangscontrole ](../../../access-control/abac/overview.md) is een vermogen van Adobe Experience Platform dat beheerders toelaat om toegang tot specifieke voorwerpen en/of mogelijkheden te controleren die op attributen worden gebaseerd. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een schemaveld of -segment wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren.
 
 Met deze functionaliteit kunt u XDM-schemavelden (Experience Data Model) labelen met labels die bereik voor organisatie of gegevensgebruik definiëren. Parallel hieraan kunnen beheerders de gebruikers- en rolbeheerinterface gebruiken om toegangsbeleid te definiëren rondom XDM-schemavelden en de toegang die gebruikers of groepen gebruikers (interne, externe of externe gebruikers) krijgen beter te beheren. Bovendien, op attribuut-gebaseerde toegangsbeheer staat beheerders toe om toegang tot specifieke segmenten te beheren.
 
@@ -26,24 +26,24 @@ Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisat
 
 Als gevolg van attribuut-gebaseerde toegangscontrole, zouden sommige gebieden en functionaliteiten toegang beperkt hebben en voor bepaalde de dienstmodellen van de AI van de Klant onbeschikbaar zijn. Voorbeelden zijn Identiteit, Score Definition en Klonen.
 
-![De AI-werkruimte van de Klant met de beperkte velden van de resultaten van het servicemodel gemarkeerd.](../images/user-guide/unavailable-functionalities.png)
+![ de werkruimte van de Klant AI met de beperkte gebieden van de benadrukte resultaten van het de dienstmodel.](../images/user-guide/unavailable-functionalities.png)
 
-Bovenaan in de AI-werkruimte van de klant **pagina met inzichten**, merk op dat de details in de zijbalk, de score, de identiteit, en de profielattributen allen &quot;Toegang Beperkt tonen.&quot;
+Bij de bovenkant van de de werkruimte van de Klant AI **inzichten pagina**, merk op dat de details in sidebar, de scoredefinitie, de identiteit, en profielattributen allen &quot;Toegang beperkt tonen.&quot;
 
-![De AI-werkruimte van de Klant met de beperkte velden van het schema gemarkeerd.](../images/user-guide/access-restricted.png)
+![ de werkruimte van de Klant AI met de beperkte gebieden van het benadrukte schema.](../images/user-guide/access-restricted.png)
 
-Wanneer u datasets met beperkt schema op voorproef **[!UICONTROL Create model workflow]** pagina, lijkt een waarschuwing u te laten weten dat [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
+Wanneer u een voorvertoning weergeeft van gegevenssets met een beperkt schema op de pagina **[!UICONTROL Create model workflow]** , verschijnt er een waarschuwing om u te laten weten dat [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
 
-![De AI-werkruimte van de Klant met de beperkte velden van de voorvertoningsdatasets met de beperkte schemaresultaten gemarkeerd.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
+![ de werkruimte van de Klant AI met de beperkte gebieden van de voorproefdatasets met beperkte die schemaresultaten worden benadrukt.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
 
-Nadat u een model met beperkte informatie creeert en te werk gaat **[!UICONTROL Define goal]** stap, wordt een waarschuwing getoond bij de bovenkant: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
+Nadat u een model met beperkte informatie hebt gemaakt en de stap **[!UICONTROL Define goal]** hebt uitgevoerd, wordt boven aan het model een waarschuwing weergegeven: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
 
-![De AI-werkruimte van de Klant met de beperkte velden van de resultaten van het servicemodel gemarkeerd.](../images/user-guide/information-not-displayed-save-and-exit.png)
+![ de werkruimte van de Klant AI met de beperkte gebieden van de benadrukte resultaten van het de dienstmodel.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
-Wanneer u toegangsbeheer gebruikt, **AI van klant weergeven** en **AI van klant beheren** toegangsrechten verlenen toegang tot verschillende functies van de AI van de Klant. De **AI van klant beheren** met bevoegdheid **maken**,**update**, **delete**, **enable**, of **disable** een model terwijl **AI van klant weergeven** Hiermee kunt u het document lezen of weergeven. De **maken**, **update** en **delete** acties worden vastgelegd in auditlogboeken.
+Wanneer het gebruiken van toegangsbeheer, verlenen de **Klant AI van de Mening** en **AI van de Klant** voorrechten toegang tot verschillende functionaliteiten van Klant AI. De **beheert AI van de Klant** toestemming laat u **** creëren, **update**, **schrapt**, **toelaten**, of **onbruikbaar maken** een model terwijl **Klant AI van de Mening** u het laat lezen of bekijken. **creeer**, **update** en **schrapt** acties worden geregistreerd door controlelogboeken.
 
-Raadpleeg de documentatie voor meer informatie [toewijzen van machtigingen voor toegangsbeheer](../../../access-control/home.md) of hoe [gebruik controlelogboeken om toegang en activiteit te controleren](../../../landing/governance-privacy-security/audit-logs/overview.md).
+Zie de documentatie om [ te leren toewijzend toestemmingen voor toegangscontrole ](../../../access-control/home.md) of hoe te [ controlelogboeken gebruiken om toegang en activiteit ](../../../landing/governance-privacy-security/audit-logs/overview.md) te controleren.
 
 ## Volgende stappen
 
-Door deze gids te lezen, bent u geïntroduceerd aan de belangrijkste principes van toegangscontrole in [!DNL Experience Platform]. U kunt nu doorgaan naar het dialoogvenster [gebruikershandleiding voor toegangsbeheer](../overview.md) voor gedetailleerde stappen over het gebruik van de [!DNL Admin Console] om productprofielen te maken en machtigingen toe te wijzen voor [!DNL Platform].
+Door deze gids te lezen, bent u geïntroduceerd aan de belangrijkste principes van toegangsbeheer in [!DNL Experience Platform]. U kunt nu aan de [ gebruikershandleiding van de toegangscontrole ](../overview.md) voor gedetailleerde stappen op blijven hoe gebruiken [!DNL Admin Console] om productprofielen tot stand te brengen en toestemmingen voor [!DNL Platform] toe te wijzen.

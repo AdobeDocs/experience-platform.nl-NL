@@ -19,12 +19,12 @@ ht-degree: 0%
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `id` | String | De unieke id van deze maatregel. In geval van gegevensverzameling met communicatiekanalen met verlies, zoals mobiele apps of websites met offlinefunctionaliteit waarbij de verzending van maatregelen niet kan worden gegarandeerd, bevat deze eigenschap een door de klant gegenereerde, unieke id van de genomen maatregel. Het is de beste praktijk om dit voldoende lang te maken om voldoende willekeur te waarborgen. <br><br> Als gegevens zoals tijdstempel, apparaat-id, IP, MAC-adres of andere mogelijk door de gebruiker herkende waarden zijn opgenomen in het genereren van het dialoogvenster `id`, moet het resultaat worden gehasht. Dit zorgt ervoor dat geen PII in de waarde wordt gecodeerd, aangezien het doel niet is om een gebruiker of een apparaat te identificeren, maar de specifieke maatregel in tijd. |
+| `id` | String | De unieke id van deze maatregel. In geval van gegevensverzameling met communicatiekanalen met verlies, zoals mobiele apps of websites met offlinefunctionaliteit waarbij de verzending van maatregelen niet kan worden gegarandeerd, bevat deze eigenschap een door de klant gegenereerde, unieke id van de genomen maatregel. Het is de beste praktijk om dit voldoende lang te maken om voldoende willekeur te waarborgen. <br><br> Als informatie zoals tijdstempel, apparaat-id, IP, MAC-adres of andere mogelijk door de gebruiker te identificeren waarden is opgenomen in het genereren van de `id` , moet het resultaat worden gehasht. Dit zorgt ervoor dat geen PII in de waarde wordt gecodeerd, aangezien het doel niet is om een gebruiker of een apparaat te identificeren, maar de specifieke maatregel in tijd. |
 | `value` | Dubbel | De kwantificeerbare waarde van deze maatregel. |
 
 {style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.schema.json)

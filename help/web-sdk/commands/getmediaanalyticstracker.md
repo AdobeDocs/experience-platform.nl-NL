@@ -1,19 +1,19 @@
 ---
 title: getMediaAnalyticsTracker
 description: Leer hoe u een Media Analytics Tracker-object maakt en dit gebruikt om mediagebeurtenissen bij te houden.
-source-git-commit: 9384c1cc15441199e898d6cc0850e5422253f106
+exl-id: ae968da8-7763-4b2a-a716-3014ba0d270d
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '302'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-
 # `getMediaAnalyticsTracker`
 
-Met deze opdracht van Web SDK wordt een Media Analytics-beheer opgehaald. U kunt deze opdracht gebruiken om een objectinstantie te maken en vervolgens dezelfde API&#39;s te gebruiken als de API&#39;s die door de [Media JS-bibliotheek](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html), media-gebeurtenissen volgen.
+Met deze opdracht van Web SDK wordt een Media Analytics-beheer opgehaald. U kunt dit bevel gebruiken om een objecten instantie tot stand te brengen en dan, gebruikend zelfde APIs zoals die door de [ bibliotheek JS van Media ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html) worden verstrekt, de gebeurtenissen van de spoormedia.
 
-De `getMediaAnalyticsTracker` retourneert de API voor verouderde media-analyse.
+De opdracht `getMediaAnalyticsTracker` retourneert de API voor oude media-analyse.
 
 
 | Naam van methode | Beschrijving | Syntaxis |

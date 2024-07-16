@@ -14,29 +14,29 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Google [heeft aangekondigd](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) is van plan de Chrome-ondersteuning voor cookies van derden in de tweede helft van 2024 te beëindigen. Daarom worden cookies van derden niet meer ondersteund in de belangrijkste browsers.
+>Google [ heeft ](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) plannen aangekondigd om de steun van Chrome voor derdekoekjes in de tweede helft van 2024 te beëindigen. Daarom worden cookies van derden niet meer ondersteund in de belangrijkste browsers.
 >
->Wanneer deze wijziging wordt doorgevoerd, zal de Adobe de steun voor de `demdex` cookie die momenteel wordt ondersteund in de Web SDK.
+>Wanneer deze wijziging is geïmplementeerd, stopt de Adobe de ondersteuning voor het cookie `demdex` dat momenteel wordt ondersteund in de SDK van het web.
 
 
-De `thirdPartyCookiesEnabled` eigenschap is een Booleaanse waarde die bepaalt of de Web SDK cookies instelt in een context van derden. Het inschakelen van deze optie is handig als u bezoekers wilt identificeren tussen subdomeinen of domeinen die eigendom zijn van uw organisatie. Veel moderne browsers beperken echter de instelling en vervaldatum van cookies van derden.
+De eigenschap `thirdPartyCookiesEnabled` is een Booleaanse waarde die bepaalt of de Web SDK cookies instelt in een context van derden. Het inschakelen van deze optie is handig als u bezoekers wilt identificeren tussen subdomeinen of domeinen die eigendom zijn van uw organisatie. Veel moderne browsers beperken echter de instelling en vervaldatum van cookies van derden.
 
-Als deze optie is ingeschakeld, gebruikt de Web SDK Adobe Audience Manager om een bezoeker te identificeren. Wanneer deze optie is uitgeschakeld, wordt de aanroep naar de Audience Manager uitgeschakeld. Zie [Het begrip vraag aan het domein van de Index](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html) in de gebruikershandleiding van de Audience Manager voor meer informatie.
+Als deze optie is ingeschakeld, gebruikt de Web SDK Adobe Audience Manager om een bezoeker te identificeren. Wanneer deze optie is uitgeschakeld, wordt de aanroep naar de Audience Manager uitgeschakeld. Zie [ Begrip vraag aan het domein van de Index ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html) in de gebruikersgids van de Audience Manager voor meer informatie.
 
 ## Cookies van andere bedrijven inschakelen met de webSDK-tagextensie
 
-Selecteer de **[!UICONTROL Use third-party cookies]** selectievakje wanneer [configureren van de tagextensie](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Selecteer **[!UICONTROL Use third-party cookies]** checkbox wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
-1. Navigeren naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] kaart.
-1. Omlaag schuiven naar de [!UICONTROL Identity] en selecteert u vervolgens het selectievakje **[!UICONTROL Use third-party cookies]**.
-1. Klikken **[!UICONTROL Save]** publiceert u vervolgens uw wijzigingen.
+1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
+1. Schuif omlaag naar de sectie [!UICONTROL Identity] en schakel vervolgens het selectievakje **[!UICONTROL Use third-party cookies]** in.
+1. Klik op **[!UICONTROL Save]** en publiceer de wijzigingen.
 
 ## Cookies van derden inschakelen met de Web SDK JavaScript-bibliotheek
 
-Stel de `thirdPartyCookiesEnabled` boolean wanneer de `configure` gebruiken. Als u dit bezit weglaat wanneer het vormen van het Web SDK, blijft het in gebreke aan `true`. Deze waarde instellen op `false` als u niet de SDK van het Web Audience Manager wilt gebruiken helpen bezoekers identificeren.
+Stel de Booleaanse waarde `thirdPartyCookiesEnabled` in wanneer u de opdracht `configure` uitvoert. Als u deze eigenschap weglaat bij het configureren van de Web SDK, wordt standaard `true` gebruikt. Stel deze waarde in op `false` als u niet wilt dat de Web SDK Audience Manager gebruikt om bezoekers te identificeren.
 
 ```js
 alloy("configure", {

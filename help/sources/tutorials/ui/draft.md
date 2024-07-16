@@ -19,68 +19,68 @@ Dit document bevat stappen voor het opslaan van uw gegevensstromen wanneer u de 
 
 Voor dit document is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
-* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
 
 ## Een gegevensstroom opslaan als concept
 
 U kunt de voortgang van het maken van de gegevensstroom op elk gewenst moment pauzeren nadat u de gegevens hebt geselecteerd die u wilt overbrengen naar het platform.
 
-Als u bijvoorbeeld de voortgang wilt opslaan tijdens de stap met de details voor de gegevensstroom, selecteert u **[!UICONTROL Save as draft]**.
+Selecteer bijvoorbeeld **[!UICONTROL Save as draft]** als u de voortgang wilt opslaan tijdens de detailstap voor de gegevensstroom.
 
-![De stap met details over gegevensstroom van de bronworkflow met Opslaan als geselecteerd concept.](../../images/tutorials/draft/save-as-draft.png)
+![ de dataflow detailstap van het bronwerkschema met sparen als geselecteerd ontwerp.](../../images/tutorials/draft/save-as-draft.png)
 
 Nadat u uw concept hebt opgeslagen, gaat u naar de pagina van uw account, waar u een lijst kunt zien met uw bestaande gegevensstromen, inclusief uw concepten.
 
-![Een lijst met gegevensstromen voor een bepaalde account.](../../images/tutorials/draft/draft-dataflow.png)
+![ een lijst van gegevens voor een bepaalde rekening.](../../images/tutorials/draft/draft-dataflow.png)
 
 >[!TIP]
 >
->De status van de getekende gegevensstromen wordt niet ingeschakeld en ingesteld op `draft`.
+>Getekende gegevens worden niet ingeschakeld en de status wordt ingesteld op `draft` .
 
-Als u wilt doorgaan met uw concept, selecteert u de ellipsen (`...`) naast de naam van de gegevensstroom en selecteer **[!UICONTROL Update dataflow]**.
+Als u wilt doorgaan op uw concept, selecteert u de ovalen (`...`) naast de naam van de gegevensstroom en selecteert u vervolgens **[!UICONTROL Update dataflow]** .
 
 >[!NOTE]
 >
->Als uw concept planningsinformatie bevat, kunt u in het vervolgkeuzevenster ook het volgende kiezen: **[!UICONTROL Edit schedule]**.
+>Als uw concept planningsinformatie bevat, geeft het vervolgkeuzevenster u ook de optie **[!UICONTROL Edit schedule]** .
 
-![Een vervolgkeuzevenster met de updatedatum geselecteerd.](../../images/tutorials/draft/update-dataflow.png)
+![ dropdown venster van A met geselecteerde updategegevens.](../../images/tutorials/draft/update-dataflow.png)
 
 ### Toegang tot uw concepten uit de broncatalogus
 
-Via de dataflows-catalogus hebt u ook toegang tot uw conceptgegevens. Selecteren **[!UICONTROL Dataflows]** in de bovenste koptekst om toegang te krijgen tot de dataflow-catalogus. Van hier, vind uw ontwerp van de lijst van bestaande dataflows in uw organisatie, selecteer de ellipsen (`...`) naast de naam en selecteer vervolgens **[!UICONTROL Update dataflow]**.
+Via de dataflows-catalogus hebt u ook toegang tot uw conceptgegevens. Selecteer **[!UICONTROL Dataflows]** in de bovenste koptekst om de dataflows-catalogus te openen. Van hier, vind uw ontwerp van de lijst van bestaande dataflows in uw organisatie, selecteer de ellipsen (`...`) naast zijn naam, en selecteer dan **[!UICONTROL Update dataflow]**.
 
-![Een lijst met gegevensstromen voor een bepaalde organisatie.](../../images/tutorials/draft/catalog-access.png)
+![ een lijst van gegevens voor een bepaalde organisatie.](../../images/tutorials/draft/catalog-access.png)
 
-## Uw conceptgegevensstroom publiceren
+## Publish uw conceptgegevensstroom
 
-U bent teruggekeerd aan [!UICONTROL Add data] stap van de workflow voor bronnen, waarin u de indeling van uw gegevens opnieuw kunt bevestigen en verder kunt gaan met het verwerken van uw gegevensstroom.
+U keert terug naar de [!UICONTROL Add data] stap van de bronwerkstroom, waar u het formaat van uw gegevens kunt opnieuw bevestigen en op uw gegevensstroom verder kunt gaan.
 
-Nadat u de opmaak, het scheidingsteken en het compressietype van de gegevens hebt bevestigd, selecteert u **[!UICONTROL Next]** om verder te gaan.
+Selecteer **[!UICONTROL Next]** als u de opmaak, het scheidingsteken en het compressietype van de gegevens hebt bevestigd.
 
-![De gegevensstap toevoegen van de workflow voor bronnen.](../../images/tutorials/draft/select-data.png)
+![ voegt gegevensstap van bronwerkschema toe.](../../images/tutorials/draft/select-data.png)
 
 Bevestig vervolgens uw gegevens over de gegevensstroom. Met de dataflow-detailinterface kunt u configuraties bijwerken rondom de naam, beschrijving, gedeeltelijke opname, instellingen voor foutdiagnose en voorkeuren voor waarschuwingen.
 
-Nadat u de configuraties hebt voltooid, selecteert u **[!UICONTROL Next]** om verder te gaan.
+Nadat u de configuraties hebt voltooid, selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![De stap met details van de gegevensstroom van de bronworkflow.](../../images/tutorials/draft/dataflow-detail.png)
+![ de dataflow detailstap van het bronwerkschema.](../../images/tutorials/draft/dataflow-detail.png)
 
-De [!UICONTROL Mapping] wordt weergegeven. Tijdens deze stap, kunt u de kaartconfiguraties van uw dataflow aanpassen. Voor een uitgebreide gids over de gegevens prep functies die voor afbeelding worden gebruikt, bezoek [UI-hulplijn voor gegevenprep](../../../data-prep/ui/mapping.md).
+De stap [!UICONTROL Mapping] wordt weergegeven. Tijdens deze stap, kunt u de kaartconfiguraties van uw dataflow aanpassen. Voor een uitvoerige gids over de gegevens prep functies die voor afbeelding worden gebruikt, bezoek de [ gegevens prep UI gids ](../../../data-prep/ui/mapping.md).
 
-Als u de configuratie van de toewijzing hebt voltooid, selecteert u **[!UICONTROL Next]** om verder te gaan.
+Als u de configuratie van de toewijzing hebt voltooid, selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![De toewijzingsstap van de workflow voor bronnen.](../../images/tutorials/draft/mapping.png)
+![ de afbeeldingsstap van het bronwerkschema.](../../images/tutorials/draft/mapping.png)
 
-Gebruik de [!UICONTROL Scheduling] stap om een innameprogramma voor uw gegevensstroom te vestigen. U kunt de innamefrequentie instellen op `once`, `minute`, `hour`, `day`, of `week`. Selecteer **[!UICONTROL Next]** om verder te gaan.
+Gebruik de stap [!UICONTROL Scheduling] om een innameprogramma voor uw gegevensstroom te bepalen. U kunt de innamefrequentie instellen op `once` , `minute` , `hour` , `day` of `week` . Als u klaar bent, selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![De planningsstap van de bronworkflow.](../../images/tutorials/draft/scheduling.png)
+![ de het plannen stap van het bronwerkschema.](../../images/tutorials/draft/scheduling.png)
 
-Controleer ten slotte de details van uw gegevensstroom en selecteer **[!UICONTROL Finish]** uw concept publiceren.
+Controleer ten slotte de details van uw gegevensstroom en selecteer **[!UICONTROL Finish]** om uw concept te publiceren.
 
-![De revisiestap van de workflow voor bronnen.](../../images/tutorials/draft/review.png)
+![ de overzichtsstap van het bronwerkschema.](../../images/tutorials/draft/review.png)
 
 Nadat u een concept hebt opgeslagen en gepubliceerd, wordt de gegevensstroom ingeschakeld en kunt u deze niet meer opnieuw instellen als een concept.
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u geleerd hoe u uw voortgang kunt opslaan en een gegevensstroom als concept kunt instellen. Ga voor meer informatie over bronnen naar de [overzicht van bronnen](../../home.md).
+Door deze zelfstudie te volgen, hebt u geleerd hoe u uw voortgang kunt opslaan en een gegevensstroom als concept kunt instellen. Voor meer informatie over bronnen, bezoek het [ overzicht van bronnen ](../../home.md).

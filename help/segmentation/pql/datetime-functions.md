@@ -1,24 +1,24 @@
 ---
 solution: Experience Platform
-title: PQL Datum- en tijdfuncties
-description: Datum- en tijdfuncties worden gebruikt om datum- en tijdbewerkingen uit te voeren op waarden in de taal van de profielquery (PQL).
+title: Datum- en tijdfuncties van PQL
+description: Datum- en tijdfuncties worden gebruikt om datum- en tijdbewerkingen uit te voeren op waarden in Profile Query Language (PQL).
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 2%
+source-wordcount: '493'
+ht-degree: 0%
 
 ---
 
 # Datum- en tijdfuncties
 
-Datum- en tijdfuncties worden gebruikt voor het uitvoeren van datum- en tijdbewerkingen op waarden binnen [!DNL Profile Query Language] (PQL). Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
+Datum- en tijdfuncties worden gebruikt om datum- en tijdbewerkingen uit te voeren op waarden binnen [!DNL Profile Query Language] (PQL). Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht ](./overview.md) worden gevonden.
 
 ## Huidige maand
 
-De `currentMonth` Deze functie retourneert de huidige maand als een geheel getal.
+De functie `currentMonth` retourneert de huidige maand als een geheel getal.
 
-**Indeling**
+**Formaat**
 
 ```sql
 currentMonth()
@@ -26,7 +26,7 @@ currentMonth()
 
 **Voorbeeld**
 
-De volgende vraag PQL controleert als de geboortemaand van de persoon de huidige maand is.
+De volgende PQL-query controleert of de geboortemaand van de persoon de huidige maand is.
 
 ```sql
 person.birthMonth = currentMonth()
@@ -34,9 +34,9 @@ person.birthMonth = currentMonth()
 
 ## Maand ophalen
 
-De `getMonth` Deze functie retourneert de maand als een geheel getal op basis van een opgegeven tijdstempel.
+De functie `getMonth` retourneert de maand als een geheel getal op basis van een opgegeven tijdstempel.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {TIMESTAMP}.getMonth()
@@ -44,7 +44,7 @@ De `getMonth` Deze functie retourneert de maand als een geheel getal op basis va
 
 **Voorbeeld**
 
-De volgende vraag PQL controleert als de geboortemaand van de persoon in Juni is.
+De volgende PQL-query controleert of de geboortemaand van de persoon in juni is.
 
 ```sql
 person.birthdate.getMonth() = 6
@@ -52,9 +52,9 @@ person.birthdate.getMonth() = 6
 
 ## Huidig jaar
 
-De `currentYear` Deze functie retourneert het huidige jaar als een geheel getal.
+De functie `currentYear` retourneert het huidige jaar als een geheel getal.
 
-**Indeling**
+**Formaat**
 
 ```sql
 currentYear()
@@ -70,9 +70,9 @@ product.saleYear = currentYear()
 
 ## Jaar ophalen
 
-De `getYear` Deze functie retourneert het jaar als een geheel getal, gebaseerd op een opgegeven tijdstempel.
+De functie `getYear` retourneert het jaar, als een geheel getal, op basis van een opgegeven tijdstempel.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {TIMESTAMP}.getYear()
@@ -80,7 +80,7 @@ De `getYear` Deze functie retourneert het jaar als een geheel getal, gebaseerd o
 
 **Voorbeeld**
 
-De volgende PQL-query controleert of het geboortejaar van de persoon in 1991, 1992, 1993, 1994 of 1995 valt.
+De volgende PQL controleert of het geboortejaar van de persoon in 1991, 1992, 1993, 1994 of 1995 valt.
 
 ```sql
 person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
@@ -88,9 +88,9 @@ person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
 
 ## Huidige dag van maand
 
-De `currentDayOfMonth` Deze functie retourneert de huidige dag van de maand als een geheel getal.
+De functie `currentDayOfMonth` retourneert de huidige dag van de maand als een geheel getal.
 
-**Indeling**
+**Formaat**
 
 ```sql
 currentDayOfMonth()
@@ -106,9 +106,9 @@ person.birthDay = currentDayOfMonth()
 
 ## Dag van de maand ophalen
 
-De `getDayOfMonth` Deze functie retourneert de dag als een geheel getal op basis van een opgegeven tijdstempel.
+De functie `getDayOfMonth` retourneert de dag als een geheel getal op basis van een opgegeven tijdstempel.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {TIMESTAMP}.getDayOfMonth()
@@ -124,11 +124,11 @@ product.sale.getDayOfMonth() <= 15
 
 ## Occurs
 
-De `occurs` Deze functie vergelijkt de opgegeven tijdstempelfunctie met een vaste tijdsperiode.
+De functie `occurs` vergelijkt de opgegeven tijdstempelfunctie met een vaste tijdsperiode.
 
-**Indeling**
+**Formaat**
 
-De `occurs` Deze functie kan in een van de volgende indelingen worden geschreven:
+De functie `occurs` kan met een van de volgende indelingen worden geschreven:
 
 ```sql
 {TIMESTAMP} occurs {COMPARISON} {INTEGER} {TIME_UNIT} {DIRECTION} {TIME}
@@ -139,25 +139,25 @@ De `occurs` Deze functie kan in een van de volgende indelingen worden geschreven
 
 | Argument | Beschrijving |
 | --------- | ----------- |
-| `{COMPARISON}` | Een vergelijkingsoperator. Kan een van de volgende operatoren zijn: `>`, `>=`, `<`, `<=`, `=`, `!=`. Meer informatie over de vergelijkingsfuncties vindt u in het gedeelte [document met vergelijkingsfuncties](./comparison-functions.md). |
+| `{COMPARISON}` | Een vergelijkingsoperator. Kan een van de volgende operatoren zijn: `>`, `>=`, `<`, `<=`, `=`, `!=` . Meer informatie over de vergelijkingsfuncties kan in het [ document van vergelijkingsfuncties worden gevonden ](./comparison-functions.md). |
 | `{INTEGER}` | Een positief geheel getal. |
-| `{TIME_UNIT}` | Een tijdseenheid. Kan een van de volgende woorden zijn: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries`, `millennium`, `millennia`. |
-| `{DIRECTION}` | Een voorstelling waarin wordt beschreven wanneer de datum moet worden vergeleken met. Kan een van de volgende woorden zijn: `before`, `after`, `from`. |
-| `{TIME}` | Kan een letterlijke tijdstempel zijn (`today`, `now`, `yesterday`, `tomorrow`), een relatieve tijdeenheid (een van de `this`, `last`, of `next` gevolgd door een tijdeenheid) of een tijdstempelkenmerk. |
+| `{TIME_UNIT}` | Een tijdseenheid. Kan een van de volgende woorden zijn: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries`, `millennium`, `millennia` . |
+| `{DIRECTION}` | Een voorstelling waarin wordt beschreven wanneer de datum moet worden vergeleken met. Kan een van de volgende woorden zijn: `before`, `after`, `from` . |
+| `{TIME}` | Dit kan een letterlijke tijdstempel (`today`, `now`, `yesterday`, `tomorrow`), een relatieve tijdeenheid (een van `this`, `last` of `next` gevolgd door een tijdstempelkenmerk) of een tijdstempelkenmerk zijn. |
 
 >[!NOTE]
 >
->Gebruik van het woord `on` is optioneel. Het is mogelijk de leesbaarheid van bepaalde combinaties te verbeteren, zoals `timestamp occurs on date(2019,12,31)`.
+>Het gebruik van het woord `on` is optioneel. Er is een functie waarmee bepaalde combinaties, zoals `timestamp occurs on date(2019,12,31)`, beter leesbaar kunnen worden gemaakt.
 
 **Voorbeeld**
 
-De volgende PQL-query controleert of het item vorige week is verkocht.
+De volgende PQL-query controleert of het object vorige week is verkocht.
 
 ```sql
 product.saleDate occurs last week
 ```
 
-De volgende PQL-query controleert of een item is verkocht tussen 8 januari 2015 en 1 juli 2017.
+De volgende PQL-query controleert of een object is verkocht tussen 8 januari 2015 en 1 juli 2017.
 
 ```sql
 product.saleDate occurs between date(2015, 1, 8) and date(2017, 7, 1)
@@ -165,11 +165,11 @@ product.saleDate occurs between date(2015, 1, 8) and date(2017, 7, 1)
 
 ## Nu
 
-`now` is een gereserveerd woord dat het tijdstempel van de uitvoering van de PQL vertegenwoordigt.
+`now` is een gereserveerd woord dat het tijdstempel van de PQL-uitvoering vertegenwoordigt.
 
 **Voorbeeld**
 
-De volgende PQL-query controleert of een item precies drie uur eerder is verkocht.
+De volgende PQL-query controleert of een object precies drie uur eerder is verkocht.
 
 ```sql
 product.saleDate occurs = 3 hours before now
@@ -177,11 +177,11 @@ product.saleDate occurs = 3 hours before now
 
 ## Vandaag
 
-`today` is een gereserveerd woord dat de tijdstempel vertegenwoordigt van het begin van de dag van de PQL-uitvoering.
+`today` is een gereserveerd woord dat staat voor het tijdstempel van het begin van de dag waarop de PQL wordt uitgevoerd.
 
 **Voorbeeld**
 
-De volgende PQL-query controleert of een persoon drie dagen geleden jarig was.
+De volgende PQL-query controleert of iemand drie dagen geleden jarig was.
 
 ```sql
 person.birthday occurs = 3 days before today
@@ -189,4 +189,4 @@ person.birthday occurs = 3 days before today
 
 ## Volgende stappen
 
-Nu u over datum en tijdfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).
+Nu u over datum en tijdfuncties hebt geleerd, kunt u deze gebruiken in uw PQL-query&#39;s. Voor meer informatie over andere functies van PQL, te lezen gelieve het [ overzicht van Profile Query Language ](./overview.md).

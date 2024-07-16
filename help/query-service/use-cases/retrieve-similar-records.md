@@ -11,22 +11,22 @@ ht-degree: 2%
 
 # Verdien gelijkbare verslagen met hogere orde functies
 
-Gebruik Data Distiller-functies in hogere volgorde om een aantal veelvoorkomende gebruiksgevallen op te lossen. Om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen, gebruik de filter, transformatie, en verminder functies zoals die in deze gids worden beschreven. Zie de documentatie over hoe u complexe gegevenstypen kunt verwerken voor meer informatie over functies met een hogere volgorde [array- en kaartgegevenstypen beheren](../sql/higher-order-functions.md).
+Gebruik Data Distiller-functies in hogere volgorde om een aantal veelvoorkomende gebruiksgevallen op te lossen. Om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen, gebruik de filter, transformatie, en verminder functies zoals die in deze gids worden beschreven. Leren hoe de hoog-ordefuncties kunnen worden gebruikt om complexe gegevenstypes te verwerken, zie de documentatie over hoe te [ serie en kaartgegevenstypes beheren ](../sql/higher-order-functions.md).
 
 Gebruik deze handleiding om producten van verschillende datasets te identificeren die een significante gelijkenis in hun kenmerken of eigenschappen hebben. Deze methodologie biedt oplossingen voor onder andere gegevensdeduplicatie, koppeling van records, aanbevelingssystemen, het opvragen van informatie en tekstanalyse.
 
-In het document wordt beschreven hoe u een samenvoeging op basis van overeenkomsten implementeert. Vervolgens worden de functies in de hogere volgorde van Data Distiller gebruikt om de gelijkenis tussen gegevenssets te berekenen en deze op basis van geselecteerde kenmerken te filteren. SQL de codefragmenten en de verklaringen worden verstrekt voor elke stap van het proces. De workflow implementeert overeenkomsten op basis van gelijkenis met de Jaccard-maateenheid en tokenisering met behulp van Data Distiller-functies in hogere volgorde. Deze methodes worden dan gebruikt om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen die op gelijkenis metrisch worden gebaseerd. De belangrijkste onderdelen van het proces zijn: [tokenisering met functies van hogere orde](#data-transformation)de [cross-join van unieke elementen](#cross-join-unique-elements)de [Berekening van gelijkenis met Java](#compute-the-jaccard-similarity-measure)en de [drempelgebaseerde filtering](#similarity-threshold-filter).
+In het document wordt beschreven hoe u een samenvoeging op basis van overeenkomsten implementeert. Vervolgens worden de functies in de hogere volgorde van Data Distiller gebruikt om de gelijkenis tussen gegevenssets te berekenen en deze op basis van geselecteerde kenmerken te filteren. SQL de codefragmenten en de verklaringen worden verstrekt voor elke stap van het proces. De workflow implementeert overeenkomsten op basis van gelijkenis met de Jaccard-maateenheid en tokenisering met behulp van Data Distiller-functies in hogere volgorde. Deze methodes worden dan gebruikt om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen die op gelijkenis metrisch worden gebaseerd. De zeer belangrijke secties van het proces omvatten: [ kenization die hoog-orde functies ](#data-transformation) gebruikt, [ dwars-toetreedt van unieke elementen ](#cross-join-unique-elements), de [ Jaccard gelijkenisberekening ](#compute-the-jaccard-similarity-measure), en het [ op drempel-gebaseerde filtreren ](#similarity-threshold-filter).
 
 ## Vereisten
 
 Voordat u doorgaat met dit document, moet u vertrouwd zijn met de volgende concepten:
 
-- A **gelijksoortige samenvoeging** is een verrichting die paren verslagen van één of meerdere lijsten identificeert en terugwint die op een maat van gelijkenis tussen de verslagen worden gebaseerd. De belangrijkste vereisten voor een gelijkenis verbinden zijn als volgt:
-   - **Metrisch met gelijkenis**: Een verbinding met een gelijkenis is afhankelijk van een vooraf gedefinieerde metrische of maateenheid voor gelijkenis. Dit zijn onder andere: de gelijkenis van het werkgebied, de cosingelijkenis, de bewerkingsafstand, enzovoort. De metrische waarde is afhankelijk van de aard van de gegevens en het gebruiksgeval. Deze metrische waarde kwantificeert hoe gelijkaardig of ongelijkaardig twee verslagen zijn.
+- A **gelijkenis sluit zich aan** is een verrichting die paren verslagen van één of meerdere lijsten identificeert en terugwint die op een maatregel van gelijkenis tussen de verslagen worden gebaseerd. De belangrijkste vereisten voor een gelijkenis verbinden zijn als volgt:
+   - **metrische Gelijksoortigheid van 0}**: Een gelijkenis sluit zich aan bij baseert zich op vooraf bepaalde metrische gelijkenis of een maatregel. Dit zijn onder andere: de gelijkenis van het werkgebied, de cosingelijkenis, de bewerkingsafstand, enzovoort. De metrische waarde is afhankelijk van de aard van de gegevens en het gebruiksgeval. Deze metrische waarde kwantificeert hoe gelijkaardig of ongelijkaardig twee verslagen zijn.
    - **Drempel**: Een gelijkenisdrempel wordt gebruikt om te bepalen wanneer de twee verslagen als gelijkaardig genoeg worden beschouwd om in te sluiten bij resultaat. Records met een overeenkomstenscore die hoger is dan de drempel worden beschouwd als overeenkomsten.
-- De **Jaccard-gelijkenis** De index, of de Jaccard-gelijkenis, is een statistiek die wordt gebruikt om de gelijkenis en diversiteit van steekproefreeksen te meten. Dit wordt gedefinieerd als de grootte van de doorsnede gedeeld door de grootte van de samenvoeging van de steekproefreeksen. De overeenkomende JACARD-meting loopt van 0 tot en met 1. Een Jaccard-gelijkenis van nul geeft aan dat de sets niet gelijk zijn en een Jaccard-gelijkenis van één geeft aan dat de sets identiek zijn.
-  ![Een vlinderdiagram ter illustratie van de Jaccard-gelijkenis.](../images/use-cases/jaccard-similarity.png)
-- **Functies met hogere volgorde** in Data Distiller zijn dynamische inline gereedschappen waarmee gegevens rechtstreeks in SQL-instructies worden verwerkt en getransformeerd. Deze veelzijdige functies maken het niet nodig om meerdere stappen in gegevensmanipulatie uit te voeren, met name wanneer [omgaan met complexe typen, zoals arrays en kaarten](../sql/higher-order-functions.md). Door vraagefficiency te verbeteren en transformaties te vereenvoudigen, dragen de hogere ordefuncties aan flexibelere analyses en betere besluitvorming in diverse bedrijfsscenario&#39;s bij.
+- De **gelijkenis van het Jaccard** index, of de gelijkenis van het Jaccard meting, is een statistiek die wordt gebruikt om de gelijkenis en de diversiteit van steekproefreeksen te meten. Dit wordt gedefinieerd als de grootte van de doorsnede gedeeld door de grootte van de samenvoeging van de steekproefreeksen. De overeenkomende JACARD-meting loopt van 0 tot en met 1. Een Jaccard-gelijkenis van nul geeft aan dat de sets niet gelijk zijn en een Jaccard-gelijkenis van één geeft aan dat de sets identiek zijn.
+  ![ A venn- diagram om de gelijkenismeting van het Jacard te illustreren.](../images/use-cases/jaccard-similarity.png)
+- **hoog-ordefuncties** in Gegevens Distiller zijn dynamische, gealigneerde hulpmiddelen die gegevens direct binnen SQL verklaringen verwerken en omzetten. Deze veelzijdige functies elimineren de behoefte aan veelvoudige stappen in gegevensmanipulatie, vooral wanneer [ het behandelen van complexe types zoals series en kaarten ](../sql/higher-order-functions.md). Door vraagefficiency te verbeteren en transformaties te vereenvoudigen, dragen de hogere ordefuncties aan flexibelere analyses en betere besluitvorming in diverse bedrijfsscenario&#39;s bij.
 
 ## Aan de slag
 
@@ -43,11 +43,13 @@ Productset A en Set B bevatten de testgegevens voor deze workflow.
 - Productset A: `{iPhone, iPad, iWatch, iPad Mini}`
 - Productset B: `{iPhone, iPad, Macbook Pro}`
 
-Als u de Jaccard-overeenkomst tussen de productsets A en B wilt berekenen, moet u eerst de **intersection** (gemeenschappelijke elementen) van de productgroepen. In dit geval: `{iPhone, iPad}`. Zoek vervolgens de **union** (alle unieke elementen) van beide productsets. In dit voorbeeld: `{iPhone, iPad, iWatch, iPad Mini, Macbook Pro}`.
+Om de gelijkenis van Jaccard tussen productreeksen A en B te berekenen, vind eerst de **doorsnede** (gemeenschappelijke elementen) van de productreeksen. In dit geval, `{iPhone, iPad}`. Daarna, vind de **unie** (alle unieke elementen) van beide productreeksen. In dit voorbeeld, `{iPhone, iPad, iWatch, iPad Mini, Macbook Pro}`.
 
-Gebruik ten slotte de vergelijkingsformule voor Jaccard: `J(A,B) = A∪B / A∩B` om de gelijkenis te berekenen.
+Gebruik ten slotte de vergelijkingsformule Jaccard: `J(A,B) = A∪B / A∩B` om de gelijkenis te berekenen.
 
-J = Jaccard-afstand A = set 1 B = set 2
+J = Jaccard-afstand
+A = set 1
+B = set 2
 
 De Jaccard-gelijkenis tussen productsets A en B is 0,4. Dit wijst op een matige mate van gelijkenis tussen de woorden die in de twee documenten worden gebruikt. Deze overeenkomst tussen de twee sets definieert de kolommen in de samenvoeging. Deze kolommen vertegenwoordigen stukken informatie, of kenmerken verbonden aan de gegevens, die in een lijst worden opgeslagen en voor het uitvoeren van de gelijkenisberekeningen worden gebruikt.
 
@@ -103,11 +105,11 @@ SELECT * FROM featurevector1;
 
 De volgende beschrijvingen bevatten een uitsplitsing van het SQL-codeblok hierboven:
 
-- Regel 1: `CREATE TEMP TABLE featurevector1 AS`: Met deze instructie wordt een tijdelijke tabel met de naam : `featurevector1`. Tijdelijke tabellen zijn doorgaans alleen toegankelijk binnen de huidige sessie en worden automatisch aan het einde van de sessie verwijderd.
-- Regel 1 en 2: `SELECT * FROM (...)`: Dit gedeelte van de code is een subquery die wordt gebruikt om de gegevens te genereren die in het dialoogvenster `featurevector1` tabel.
-Binnen subquery, meerdere `SELECT` instructies worden gecombineerd met de `UNION ALL` gebruiken. Elk `SELECT` de instructie genereert één rij gegevens met de opgegeven waarden voor de `ProductName` kolom.
-- Regel 3: `SELECT 'iPad' AS ProductName`: Hiermee wordt een rij met de waarde gegenereerd `iPad` in de `ProductName` kolom.
-- Regel 5: `SELECT 'iPhone'`: Hiermee wordt een rij met de waarde gegenereerd `iPhone` in de `ProductName` kolom.
+- Regel 1: `CREATE TEMP TABLE featurevector1 AS`: deze instructie maakt een tijdelijke tabel met de naam `featurevector1` . Tijdelijke tabellen zijn doorgaans alleen toegankelijk binnen de huidige sessie en worden automatisch aan het einde van de sessie verwijderd.
+- Regel 1 en 2: `SELECT * FROM (...)`: Dit gedeelte van de code is een subquery die wordt gebruikt om de gegevens te genereren die in de `featurevector1` -tabel worden ingevoegd.
+Binnen de subquery worden meerdere `SELECT` -instructies gecombineerd met de opdracht `UNION ALL` . Elke instructie `SELECT` genereert één rij gegevens met de opgegeven waarden voor de kolom `ProductName` .
+- Regel 3: `SELECT 'iPad' AS ProductName` : hiermee wordt een rij gegenereerd met de waarde `iPad` in de kolom `ProductName` .
+- Regel 5: `SELECT 'iPhone'` : hiermee wordt een rij gegenereerd met de waarde `iPhone` in de kolom `ProductName` .
 
 De SQL-instructie maakt een tabel zoals hieronder wordt weergegeven:
 
@@ -146,7 +148,7 @@ De volgende secties illustreren de vereiste gegevenstransformaties zoals dedupli
 
 ### Deduplicatie {#deduplication}
 
-Gebruik vervolgens de `DISTINCT` component om duplicaten te verwijderen. Er zijn geen duplicaten in dit voorbeeld, maar het is een belangrijke stap om de nauwkeurigheid van om het even welke vergelijking te verbeteren. De benodigde SQL wordt hieronder weergegeven:
+Gebruik vervolgens de component `DISTINCT` om duplicaten te verwijderen. Er zijn geen duplicaten in dit voorbeeld, maar het is een belangrijke stap om de nauwkeurigheid van om het even welke vergelijking te verbeteren. De benodigde SQL wordt hieronder weergegeven:
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct FROM featurevector1
@@ -155,7 +157,7 @@ SELECT DISTINCT(ProductName) AS featurevector2_distinct FROM featurevector2
 
 ### Witruimte verwijderen {#whitespace-removal}
 
-In de volgende SQL-instructie worden de witruimten verwijderd uit de eigenschapvectoren. De `replace(ProductName, ' ', '') AS featurevector1_nospaces` een deel van de vraag neemt `ProductName` kolom van de `featurevector1` en gebruikt de `replace()` functie. De `REPLACE` Deze functie vervangt alle instanties van een spatie (&#39; &#39;) door een lege tekenreeks (&#39;&#39;). Hierdoor worden alle spaties verwijderd uit de `ProductName` waarden. Het resultaat wordt als `featurevector1_nospaces`.
+In de volgende SQL-instructie worden de witruimten verwijderd uit de eigenschapvectoren. Het `replace(ProductName, ' ', '') AS featurevector1_nospaces` -gedeelte van de query neemt de `ProductName` -kolom van de `featurevector1` -tabel en gebruikt de `replace()` -functie. De functie `REPLACE` vervangt alle instanties van een spatie (&#39; &#39;) door een lege tekenreeks (&#39;&#39;). Hierdoor worden alle spaties verwijderd van de `ProductName` -waarden. Het resultaat krijgt de aliasing `featurevector1_nospaces` .
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, replace(ProductName, ' ', '') AS featurevector1_nospaces FROM featurevector1
@@ -194,7 +196,7 @@ De resultaten zijn als volgt:
 
 ### Omzetten in kleine letters {#lowercase-conversion}
 
-Vervolgens is de SQL verbeterd en zijn de productnamen omgezet in kleine letters en worden de spaties verwijderd. De onderste functie (`lower(...)`) wordt toegepast op het resultaat van de `replace()` functie. De onderste functie converteert alle tekens in de gewijzigde versie `ProductName` waarden in kleine letters. Dit zorgt ervoor dat de waarden in kleine letters zijn, ongeacht het originele geval.
+Vervolgens is de SQL verbeterd en zijn de productnamen omgezet in kleine letters en worden de spaties verwijderd. De onderste functie (`lower(...)`) wordt toegepast op het resultaat van de functie `replace()` . Met de onderste functie worden alle tekens in de gewijzigde `ProductName` -waarden omgezet in kleine letters. Dit zorgt ervoor dat de waarden in kleine letters zijn, ongeacht het originele geval.
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, lower(replace(ProductName, ' ', '')) AS featurevector1_transform FROM featurevector1;
@@ -233,9 +235,9 @@ De resultaten zijn als volgt:
 
 ### Tokens extraheren met SQL {#tokenization}
 
-De volgende stap is tokenization, of text splitting. Vergelijking is het proces waarbij tekst in afzonderlijke termen wordt opgedeeld. Doorgaans gaat het om het splitsen van zinnen in woorden. In dit voorbeeld worden tekenreeksen opgesplitst in twee grammen (en in hogere volgorde n-grammen) door tokens te extraheren met SQL-functies zoals `regexp_extract_all`. Voor een effectieve kenisering moeten overlappende bigrammen worden gegenereerd.
+De volgende stap is tokenization, of text splitting. Vergelijking is het proces waarbij tekst in afzonderlijke termen wordt opgedeeld. Doorgaans gaat het om het splitsen van zinnen in woorden. In dit voorbeeld worden tekenreeksen opgesplitst in twee grammen (en in hogere volgorde n-grammen) door tokens te extraheren met SQL-functies zoals `regexp_extract_all` . Voor een effectieve kenisering moeten overlappende bigrammen worden gegenereerd.
 
-De SQL is verder verbeterd voor gebruik `regexp_extract_all`. `regexp_extract_all(lower(replace(ProductName, ' ', '')), '.{2}', 0) AS tokens:` Dit deel van de vraag verwerkt verder gewijzigde `ProductName` in de vorige stap gemaakte waarden. Het gebruikt de `regexp_extract_all()` functie om alle niet-overlappende subtekenreeksen van één tot twee tekens uit de gewijzigde en kleine letter te extraheren `ProductName` waarden. De `.{2}` reguliere-expressiepatroon komt overeen met subtekenreeksen van twee tekens lang. De `regexp_extract_all(..., '.{2}', 0)` een deel van de functie extraheert vervolgens alle overeenkomende subtekenreeksen uit de invoertekst.
+Het gebruik van `regexp_extract_all` is verder verbeterd voor de SQL-versie. `regexp_extract_all(lower(replace(ProductName, ' ', '')), '.{2}', 0) AS tokens:` In dit gedeelte van de query worden de gewijzigde `ProductName` -waarden verwerkt die in de vorige stap zijn gemaakt. De functie `regexp_extract_all()` wordt gebruikt om alle niet-overlappende subtekenreeksen van een tot twee tekens te extraheren uit de gewijzigde waarden en de waarden in kleine letters `ProductName` . Het reguliere-expressiepatroon van `.{2}` komt overeen met subtekenreeksen van twee tekens lang. Het `regexp_extract_all(..., '.{2}', 0)` -gedeelte van de functie extraheert vervolgens alle overeenkomende subtekenreeksen uit de invoertekst.
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, lower(replace(ProductName, ' ', '')) AS featurevector1_transform, 
@@ -258,9 +260,9 @@ De resultaten zijn weergegeven in onderstaande tabel:
 
 +++
 
-Om de nauwkeurigheid verder te verbeteren, moet SQL worden gebruikt om overlappende tokens tot stand te brengen. In de bovenstaande tekenreeks &quot;iPad&quot; ontbreekt bijvoorbeeld het token &quot;pa&quot;. Verplaats de lookahead-operator (met `substring`) in één stap en de twee grammen te genereren.
+Om de nauwkeurigheid verder te verbeteren, moet SQL worden gebruikt om overlappende tokens tot stand te brengen. In de bovenstaande tekenreeks &quot;iPad&quot; ontbreekt bijvoorbeeld het token &quot;pa&quot;. U kunt dit corrigeren door de lookahead-operator (met `substring` ) één stap te verschuiven en de twee-grammen te genereren.
 
-Gelijkaardig aan de vorige stap, `regexp_extract_all(lower(replace(substring(ProductName, 2), ' ', '')), '.{2}', 0):` Hiermee worden reeksen van twee tekens geëxtraheerd uit de gewijzigde productnaam, maar het tweede teken begint met het `substring` methode om overlappende tokens te maken. Volgende, in de regels 3-7 (`array_union(...) AS tokens`), `array_union()` Deze functie combineert de arrays van reeksen van twee tekens die worden verkregen door de twee reguliere expressies. Dit zorgt ervoor dat het resultaat unieke tokens van zowel niet-overlappende als overlappende reeksen bevat.
+Net als in de vorige stap extraheert `regexp_extract_all(lower(replace(substring(ProductName, 2), ' ', '')), '.{2}', 0):` tweetakenreeksen uit de gewijzigde productnaam, maar begint het tweede teken met de methode `substring` om overlappende tokens te maken. Vervolgens combineert de functie `array_union()` in regels 3-7 (`array_union(...) AS tokens`) de arrays van reeksen van twee tekens die worden verkregen door de twee reguliere expressies. Dit zorgt ervoor dat het resultaat unieke tokens van zowel niet-overlappende als overlappende reeksen bevat.
 
 ```SQL {line-numbers="true"}
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, 
@@ -287,11 +289,11 @@ De resultaten zijn weergegeven in onderstaande tabel:
 
 +++
 
-Het gebruik van `substring` als oplossing voor het probleem zijn er beperkingen . Als u tokens zou maken uit de tekst die op tri-grammen (drie karakters) wordt gebaseerd, zou het het gebruik van twee vereisen `substrings` twee keer naar lookahead om de vereiste verschuivingen te krijgen. Om 10-gram te maken, zou je negen nodig hebben `substring` expressies. Hierdoor zou de code bloat worden en onhoudbaar worden. Het gebruik van eenvoudige reguliere expressies is ongeschikt. Er is een nieuwe aanpak nodig.
+Het gebruik van `substring` als oplossing voor het probleem heeft echter beperkingen. Als u tokens van de tekst zou maken die op tri-grammen (drie karakters) worden gebaseerd, zou het gebruik van twee `substrings` aan lookahead tweemaal vereisen om de vereiste verschuivingen te krijgen. Als u 10-gram wilt maken, hebt u negen `substring` -expressies nodig. Hierdoor zou de code bloat worden en onhoudbaar worden. Het gebruik van eenvoudige reguliere expressies is ongeschikt. Er is een nieuwe aanpak nodig.
 
 ### De lengte van de productnaam wijzigen {#length-adjustment}
 
-De SQl kan met de opeenvolging en lengtefuncties worden verbeterd. In het volgende voorbeeld: `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 3)` Hiermee genereert u een reeks getallen van één tot de lengte van de gewijzigde productnaam min drie. Als de gewijzigde productnaam bijvoorbeeld &quot;ipadmini&quot; is met een tekenlengte van acht, worden getallen van één tot vijf (acht-drie) gegenereerd.
+De SQl kan met de opeenvolging en lengtefuncties worden verbeterd. In het volgende voorbeeld genereert `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 3)` een reeks getallen van één tot de lengte van de gewijzigde productnaam min drie. Als de gewijzigde productnaam bijvoorbeeld &quot;ipadmini&quot; is met een tekenlengte van acht, worden getallen van één tot vijf (acht-drie) gegenereerd.
 
 De onderstaande instructie extraheert unieke productnamen en verdeelt elke naam in reeksen tekens (tokens) met een lengte van vier tekens, exclusief spaties, en geeft deze als twee kolommen weer. Eén kolom toont de unieke productnamen en de andere kolom toont de gegenereerde tokens.
 
@@ -323,7 +325,7 @@ De resultaten zijn weergegeven in onderstaande tabel:
 
 ### Instellen van tokenlengte {#ensure-set-token-length}
 
-Er kunnen aanvullende voorwaarden aan de instructie worden toegevoegd om ervoor te zorgen dat de gegenereerde reeksen een specifieke lengte hebben. De volgende SQL-instructie breidt de logica voor het genereren van tokens uit door het `transform` functie is complexer. De instructie gebruikt de `filter` functie binnen `transform` om ervoor te zorgen dat de gegenereerde reeksen zes tekens lang zijn. Het behandelt de gevallen waar dat niet mogelijk is door ONGELDIGE waarden aan die posities toe te wijzen.
+Er kunnen aanvullende voorwaarden aan de instructie worden toegevoegd om ervoor te zorgen dat de gegenereerde reeksen een specifieke lengte hebben. De volgende SQL-instructie breidt de logica voor het genereren van tokens uit door de functie `transform` complexer te maken. De instructie gebruikt de `filter` functie binnen `transform` om ervoor te zorgen dat de gegenereerde reeksen zes tekens lang zijn. Het behandelt de gevallen waar dat niet mogelijk is door ONGELDIGE waarden aan die posities toe te wijzen.
 
 ```SQL
 SELECT
@@ -363,9 +365,9 @@ Hogere-ordefuncties zijn krachtige constructies waarmee u &#39;programmeren&#39;
 
 In de context van Data Distiller zijn functies met een hogere volgorde ideaal voor het maken van n-grammen en het herhalen van reeksen tekens.
 
-De `reduce` functie, met name wanneer deze wordt gebruikt binnen reeksen die worden gegenereerd door `transform`, biedt een manier om cumulatieve waarden of aggregaten af te leiden, die van cruciaal belang kunnen zijn in verschillende analytische en planningsprocessen.
+De functie `reduce` , met name wanneer deze wordt gebruikt binnen reeksen die door `transform` worden gegenereerd, biedt een manier om cumulatieve waarden of aggregaten af te leiden, die van cruciaal belang kunnen zijn in verschillende analyse- en planningsprocessen.
 
-In de onderstaande SQl-instructie worden bijvoorbeeld de `reduce()` functie aggregeert elementen in een array met behulp van een aangepaste aggregator. Het simuleert een lus for naar **de cumulatieve sommen van alle gehele getallen maken** van 1 tot 5. `1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4`.
+In de onderstaande SQl-instructie aggregeert de functie `reduce()` bijvoorbeeld elementen in een array met behulp van een aangepaste aggregator. Het simuleert a voor lijn aan **creeert de cumulatieve sommen van alle gehelen** van één tot vijf. `1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4` .
 
 ```SQL {line-numbers="true"}
 SELECT transform(
@@ -380,22 +382,22 @@ SELECT transform(
 
 Hieronder volgt een analyse van de SQL-instructie:
 
-- Regel 1: `transform` past de functie toe `x -> reduce` op elk element dat in de reeks wordt gegenereerd.
-- Regel 2: `sequence(1, 5)` Hiermee genereert u een reeks getallen van 1 tot en met 5.
+- Regel 1: `transform` past de functie `x -> reduce` toe op elk element dat in de reeks wordt gegenereerd.
+- Regel 2: `sequence(1, 5)` genereert een reeks getallen van 1 tot en met 5.
 - Regel 3: `x -> reduce(sequence(1, x), 0, (acc, y) -> acc + y)` voert een verminderingsverrichting voor elk element x in de opeenvolging (van 1 tot 5) uit.
-   - De `reduce` functie neemt een initiële accumulatorwaarde van 0, een opeenvolging van één aan de huidige waarde van `x`en een hogere-ordefunctie `(acc, y) -> acc + y` om de getallen toe te voegen.
-   - De functie in de hogere volgorde `acc + y` Hiermee wordt de som geaccumuleerd door de huidige waarde op te tellen `y` op de accu `acc`.
+   - De functie `reduce` gebruikt een initiële accumulatorwaarde van 0, een opeenvolging van één aan de huidige waarde van `x`, en een hoger-ordefunctie `(acc, y) -> acc + y` om de aantallen toe te voegen.
+   - De functie met een hogere volgorde `acc + y` accumuleert de som door de huidige waarde `y` toe te voegen aan de accu `acc` .
 - Regel 8: `AS sum_result` wijzigt de naam van de resulterende kolom in sum_result.
 
-Om samen te vatten, neemt deze hoger-ordefunctie twee parameters (`acc` en `y`) en definieert de uit te voeren bewerking, die in dit geval wordt toegevoegd `y` op de accu `acc`. Deze functie van hogere orde wordt uitgevoerd voor elk element in de opeenvolging tijdens het verminderingsproces.
+Samenvattend, neemt deze hoger-ordefunctie twee parameters (`acc` en `y`) en bepaalt de uit te voeren verrichting, die in dit geval `y` aan de accumulator `acc` toevoegt. Deze functie van hogere orde wordt uitgevoerd voor elk element in de opeenvolging tijdens het verminderingsproces.
 
-De uitvoer van deze instructie is één kolom (`sum_result`) die de cumulatieve bedragen van getallen van één tot en met vijf bevat.
+De output van deze verklaring is één enkele kolom (`sum_result`) die de cumulatieve bedragen van aantallen van één tot vijf bevat.
 
 ### De waarde van functies met een hogere volgorde {#value-of-higher-order-functions}
 
 Deze sectie analyseert een afgeslankte versie van een tri-gram SQL verklaring om de waarde van hoger-ordefuncties in Gegevens Distiller beter te begrijpen om n-grammen efficiënter tot stand te brengen.
 
-De onderstaande verklaring is gebaseerd op de `ProductName` kolom binnen de `featurevector1` tabel. Hiermee wordt een set subtekenreeksen van drie tekens gemaakt die zijn afgeleid van de gewijzigde productnamen in de tabel, waarbij posities worden gebruikt die zijn verkregen uit de gegenereerde reeks.
+De onderstaande instructie werkt op de kolom `ProductName` in de tabel `featurevector1` . Hiermee wordt een set subtekenreeksen van drie tekens gemaakt die zijn afgeleid van de gewijzigde productnamen in de tabel, waarbij posities worden gebruikt die zijn verkregen uit de gegenereerde reeks.
 
 ```SQL {line-numbers="true"}
 SELECT
@@ -410,20 +412,20 @@ FROM
 Hieronder volgt een analyse van de SQL-instructie:
 
 - Regel 2: `transform` past een hoger-ordefunctie op elk geheel in de opeenvolging toe.
-- Regel 3: `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 2)` genereert een reeks gehele getallen van `1` de lengte van de gewijzigde productnaam min twee.
-   - `length(lower(replace(ProductName, ' ', '')))` berekent de lengte van `ProductName` na het maken van kleine letters en het verwijderen van spaties.
-   - `- 2` trekt twee van de lengte af om ervoor te zorgen dat de opeenvolging geldige beginnende posities voor 3 karakter substrings produceert. Als u 2 aftrekt, beschikt u na elke startpositie over voldoende tekens om een subtekenreeks van 3 tekens te extraheren. De substring functie hier werkt als een lookahead operator.
-- Regel 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` is een functie met een hogere volgorde die op elk geheel getal werkt `i` in de gegenereerde reeks.
-   - De `substring(...)` functie extraheert een subtekenreeks van 3 tekens uit de `ProductName` kolom.
-   - Voordat u de subtekenreeks extraheert, `lower(replace(ProductName, ' ', ''))` converteert de `ProductName` in kleine letters en verwijdert spaties om de consistentie te waarborgen.
+- Regel 3: `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 2)` produceert een opeenvolging van gehelen van `1` aan de lengte van de gewijzigde productnaam minus twee.
+   - `length(lower(replace(ProductName, ' ', '')))` berekent de lengte van de `ProductName` nadat deze in kleine letters is gemaakt en spaties zijn verwijderd.
+   - `- 2` trekt twee van de lengte af om ervoor te zorgen dat de opeenvolging geldige beginnende posities voor 3 karaktersubstrings produceert. Als u 2 aftrekt, beschikt u na elke startpositie over voldoende tekens om een subtekenreeks van 3 tekens te extraheren. De substring functie hier werkt als een lookahead operator.
+- Regel 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` is een hoger-ordefunctie die op elk geheel `i` in de geproduceerde opeenvolging werkt.
+   - De functie `substring(...)` extraheert een subtekenreeks van 3 tekens uit de kolom `ProductName` .
+   - Voordat de subtekenreeks wordt geëxtraheerd, zet `lower(replace(ProductName, ' ', ''))` de `ProductName` om in kleine letters en worden spaties verwijderd om de consistentie te garanderen.
 
 De uitvoer bestaat uit een lijst subtekenreeksen van drie tekens lang, die worden geëxtraheerd uit de gewijzigde productnamen, op basis van de posities die in de reeks zijn opgegeven.
 
 ## De resultaten filteren {#filter-results}
 
-De `filter` functie, met volgende [gegevenstransformaties](#data-transformation), kan relevante informatie nauwkeuriger en nauwkeuriger uit tekstgegevens worden opgehaald. Hierdoor kunt u inzichten afleiden, de gegevenskwaliteit verbeteren en betere besluitvormingsprocessen vergemakkelijken.
+De `filter` functie, met verdere [ gegevenstransformaties ](#data-transformation), staat voor een meer verfijnde en nauwkeurige extractie van relevante informatie van tekstgegevens toe. Hierdoor kunt u inzichten afleiden, de gegevenskwaliteit verbeteren en betere besluitvormingsprocessen vergemakkelijken.
 
-De `filter` in de volgende SQL-instructie wordt gebruikt om de volgorde van posities binnen de tekenreeks waaruit subtekenreeksen worden geëxtraheerd, te verfijnen en te beperken met behulp van de daaropvolgende transformatiefunctie.
+De functie `filter` in de volgende SQL-instructie dient om de volgorde van posities binnen de tekenreeks waaruit subtekenreeksen worden geëxtraheerd, te verfijnen en te beperken met behulp van de daaropvolgende transformatiefunctie.
 
 ```SQL
 SELECT
@@ -441,21 +443,21 @@ FROM
   featurevector1;
 ```
 
-De `filter` functie genereert een reeks geldige startposities binnen de gewijzigde `ProductName` en extraheert subtekenreeksen van een specifieke lengte. Alleen beginposities die het extraheren van een subtekenreeks van zeven tekens mogelijk maken, zijn toegestaan.
+De functie `filter` genereert een reeks geldige startposities binnen de gewijzigde `ProductName` en extraheert subtekenreeksen van een specifieke lengte. Alleen beginposities die het extraheren van een subtekenreeks van zeven tekens mogelijk maken, zijn toegestaan.
 
-De voorwaarde `i -> i + 6 <= length(lower(replace(ProductName, ' ', '')))` ervoor zorgt dat de startpositie `i` plus `6` (de lengte van de gewenste subtekenreeks van zeven tekens min één) overschrijdt de lengte van de gewijzigde tekenreeks niet `ProductName`.
+De voorwaarde `i -> i + 6 <= length(lower(replace(ProductName, ' ', '')))` zorgt ervoor dat de startpositie `i` plus `6` (de lengte van de gewenste subtekenreeks van zeven tekens min één) de lengte van de gewijzigde `ProductName` niet overschrijdt.
 
-De `CASE` wordt gebruikt om subtekenreeksen op basis van hun lengte voorwaardelijk op te nemen of uit te sluiten. Alleen subtekenreeksen van zeven tekens worden opgenomen; andere worden vervangen door NULL. Deze subtekenreeksen worden vervolgens gebruikt door de `transform` functie om een reeks subtekenreeksen te maken van de `ProductName` in de `featurevector1` tabel.
+De instructie `CASE` wordt gebruikt om subtekenreeksen op basis van hun lengte voorwaardelijk op te nemen of uit te sluiten. Alleen subtekenreeksen van zeven tekens worden opgenomen; andere worden vervangen door NULL. Deze subtekenreeksen worden vervolgens door de functie `transform` gebruikt om een reeks subtekenreeksen te maken van de kolom `ProductName` in de tabel `featurevector1` .
 
 >[!TIP]
 >
->U kunt de [geparameteriseerde sjablonen](../ui/parameterized-queries.md) eigenschap om logica binnen uw vragen opnieuw te gebruiken en te onttrekken. Wanneer u bijvoorbeeld hulpprogrammafuncties voor algemene doeleinden maakt (zoals de hierboven weergegeven functie voor het tokeniseren van tekenreeksen), kunt u met Data Distiller geparameteriiseerde sjablonen gebruiken waarbij het aantal tekens een parameter zou zijn.
+>U kunt de [ bepaalde van parameters voorzien malplaatjes ](../ui/parameterized-queries.md) eigenschap gebruiken om logica binnen uw vragen opnieuw te gebruiken en te onttrekken. Wanneer u bijvoorbeeld hulpprogrammafuncties voor algemene doeleinden maakt (zoals de hierboven weergegeven functie voor het tokeniseren van tekenreeksen), kunt u met Data Distiller geparameteriiseerde sjablonen gebruiken waarbij het aantal tekens een parameter zou zijn.
 
 ## De cross-join van unieke elementen berekenen met twee functievectoren {#cross-join-unique-elements}
 
 Het opsporen van verschillen of discrepanties tussen de twee datasets op basis van een specifieke transformatie van de gegevens is een gemeenschappelijk proces om de gegevensnauwkeurigheid te behouden, de gegevenskwaliteit te verbeteren en consistentie tussen de gegevensreeksen te waarborgen.
 
-Deze SQL-instructie hieronder extraheert de unieke productnamen die aanwezig zijn in `featurevector2` maar niet in `featurevector1` na het toepassen van de transformaties.
+Deze SQL-instructie hieronder extraheert de unieke productnamen die aanwezig zijn in `featurevector2` maar niet in `featurevector1` nadat de transformaties zijn toegepast.
 
 ```SQL
 SELECT lower(replace(ProductName, ' ', '')) FROM featurevector2
@@ -465,7 +467,7 @@ SELECT lower(replace(ProductName, ' ', '')) FROM featurevector1;
 
 >[!TIP]
 >
->Naast `EXCEPT`kunt u ook `UNION` en `INTERSECT` afhankelijk van uw gebruiksgeval. U kunt ook experimenteren met `ALL` of `DISTINCT` clausules om het verschil te zien tussen het omvatten van alle waarden en het terugkeren van slechts de unieke waarden voor de gespecificeerde kolommen.
+>Naast `EXCEPT` kunt u ook `UNION` en `INTERSECT` gebruiken, afhankelijk van het gebruik. U kunt ook experimenteren met `ALL` - of `DISTINCT` -componenten om het verschil te zien tussen het opnemen van alle waarden en het retourneren van alleen de unieke waarden voor de opgegeven kolommen.
 
 De resultaten zijn weergegeven in onderstaande tabel:
 
@@ -505,7 +507,7 @@ SELECT * FROM featurevector1tokenized;
 
 >[!NOTE]
 >
->Als u [!DNL DbVisualizer]Nadat u een tabel hebt gemaakt of verwijderd, vernieuwt u de databaseverbinding zodat de cache met metagegevens van de tabel wordt vernieuwd. Data Distiller biedt geen updates van metagegevens.
+>Als u [!DNL DbVisualizer] gebruikt, vernieuwt u, nadat u een tabel hebt gemaakt of verwijderd, de databaseverbinding zodat de metagegevenscache van de tabel wordt vernieuwd. Data Distiller biedt geen updates van metagegevens.
 
 De resultaten zijn weergegeven in onderstaande tabel:
 
@@ -522,7 +524,7 @@ De resultaten zijn weergegeven in onderstaande tabel:
 
 +++
 
-Herhaal vervolgens het proces voor `featurevector2`:
+Herhaal vervolgens het proces voor `featurevector2` :
 
 ```SQL
 CREATE TABLE featurevector2tokenized AS 
@@ -574,9 +576,9 @@ CROSS JOIN
 
 Hier volgt een overzicht van de SQl die is gebruikt om de cross join te maken:
 
-- Regel 2: `A.featurevector1_distinct AS SetA_ProductNames` selecteert de `featurevector1_distinct` kolom uit de tabel `A` en wijst er een alias aan toe `SetA_ProductNames`. Deze sectie van SQL resulteert in een lijst van verschillende productnamen van de eerste dataset.
-- Regel 4: `A.tokens AS SetA_tokens1` selecteert de `tokens` kolom van de lijst of subquery `A` en wijst er een alias aan toe `SetA_tokens1`. Deze sectie van SQL resulteert in een lijst van verdeelde waarden verbonden aan de productnamen van de eerste dataset.
-- Regel 8: De `CROSS JOIN` de verrichting combineert alle mogelijke combinaties rijen van de twee datasets. Met andere woorden, het parseert elke productnaam en zijn bijbehorende tokens van de eerste lijst (`A`) met elke productnaam en de bijbehorende tokens uit de tweede tabel (`B`). Dit resulteert in een Cartesisch product van de twee datasets, waar elke rij in de output een combinatie van een productnaam en zijn bijbehorende tokens van beide datasets vertegenwoordigt.
+- Regel 2: `A.featurevector1_distinct AS SetA_ProductNames` selecteert de `featurevector1_distinct` kolom in de tabel `A` en wijst er een alias aan toe `SetA_ProductNames` . Deze sectie van SQL resulteert in een lijst van verschillende productnamen van de eerste dataset.
+- Regel 4: `A.tokens AS SetA_tokens1` selecteert de `tokens` kolom in de tabel of subquery `A` en wijst er een alias aan toe `SetA_tokens1` . Deze sectie van SQL resulteert in een lijst van verdeelde waarden verbonden aan de productnamen van de eerste dataset.
+- Regel 8: De `CROSS JOIN` verrichting combineert alle mogelijke combinaties rijen van de twee datasets. Met andere woorden, paren het elk productnaam en zijn bijbehorende tokens van de eerste lijst (`A`) met elke productnaam en zijn bijbehorende tokens van de tweede lijst (`B`). Dit resulteert in een Cartesisch product van de twee datasets, waar elke rij in de output een combinatie van een productnaam en zijn bijbehorende tokens van beide datasets vertegenwoordigt.
 
 De resultaten zijn weergegeven in onderstaande tabel:
 
@@ -631,9 +633,9 @@ FROM
 
 Hieronder volgt een overzicht van de SQL die wordt gebruikt om de Jaccard-coëfficiënt voor gelijkenis te berekenen:
 
-- Regel 6: `size(array_intersect(SetA_tokens1, SetB_tokens2)) AS token_intersect_count` berekent het aantal tokens die voor beide gemeenschappelijk zijn `SetA_tokens1` en `SetB_tokens2`. Deze berekening wordt bereikt door de grootte van de doorsnede van de twee series van tokens te berekenen.
-- Regel 7: `size(array_union(SetA_tokens1, SetB_tokens2)) AS token_union_count` berekent het totale aantal unieke tokens over beide `SetA_tokens1` en `SetB_tokens2`. Deze regel berekent de grootte van de samenvoeging van de twee arrays tokens.
-- Lijn 8-10: `ROUND(CAST(size(array_intersect(SetA_tokens1, SetB_tokens2)) AS DOUBLE) / size(array_union(SetA_tokens1, SetB_tokens2)), 2) AS jaccard_similarity` berekent de JACard gelijkenis tussen de tokenreeksen. Deze regels verdelen de grootte van de tokendoorsnede door de grootte van de tokenvereniging en ronden het resultaat in twee decimale posities. Het resultaat is een waarde tussen nul en één, waarbij een volledige gelijkenis aangeeft.
+- Regel 6: `size(array_intersect(SetA_tokens1, SetB_tokens2)) AS token_intersect_count` berekent het aantal tokens dat zowel voor `SetA_tokens1` als `SetB_tokens2` wordt gebruikt. Deze berekening wordt bereikt door de grootte van de doorsnede van de twee series van tokens te berekenen.
+- Regel 7: `size(array_union(SetA_tokens1, SetB_tokens2)) AS token_union_count` berekent het totale aantal unieke tokens voor zowel `SetA_tokens1` als `SetB_tokens2` . Deze regel berekent de grootte van de samenvoeging van de twee arrays tokens.
+- Lijn 8-10: `ROUND(CAST(size(array_intersect(SetA_tokens1, SetB_tokens2)) AS DOUBLE) / size(array_union(SetA_tokens1, SetB_tokens2)), 2) AS jaccard_similarity` berekent de gelijkenis van het Jacard tussen de tokenreeksen. Deze regels verdelen de grootte van de tokendoorsnede door de grootte van de tokenvereniging en ronden het resultaat in twee decimale posities. Het resultaat is een waarde tussen nul en één, waarbij een volledige gelijkenis aangeeft.
 
 De resultaten zijn weergegeven in onderstaande tabel:
 
@@ -715,4 +717,4 @@ Door dit document te lezen, kunt u deze logica nu gebruiken om betekenisvolle re
 - Gegevensreiniging: verbeteren van de gegevenskwaliteit.
 - Marktmand-analyse: inzicht verschaffen in het gedrag van klanten, voorkeuren en potentiële mogelijkheden voor cross-selling.
 
-Als u dit nog niet hebt gedaan, wordt u aangeraden de [Overzicht AI/ML-functiepijplijn](../data-distiller/ml-feature-pipelines/overview.md). Met dit overzicht leert u hoe Data Distiller en het leren van uw voorkeurscomputer aangepaste gegevensmodellen kunnen maken die uw gebruiksscenario&#39;s voor marketingdoeleinden ondersteunen met behulp van Experience Platforms.
+Als u dit nog niet hebt gedaan, wordt u geadviseerd om het [ AI/ML overzicht van de eigenschappijpleiding ](../data-distiller/ml-feature-pipelines/overview.md) te lezen. Met dit overzicht leert u hoe Data Distiller en het leren van uw voorkeurscomputer aangepaste gegevensmodellen kunnen maken die uw gebruiksscenario&#39;s voor marketingdoeleinden ondersteunen met behulp van Experience Platforms.

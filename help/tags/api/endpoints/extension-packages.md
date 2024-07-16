@@ -4,7 +4,7 @@ description: Leer hoe te om vraag aan het /extension_packages eindpunt in Reacto
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '930'
 ht-degree: 1%
 
 ---
@@ -13,49 +13,49 @@ ht-degree: 1%
 
 >[!WARNING]
 >
->De uitvoering van de `/extension_packages` Het eindpunt is in flits aangezien de eigenschappen worden toegevoegd, verwijderd, en herwerkt.
+>De implementatie van het `/extension_packages` eindpunt is in flits aangezien de eigenschappen worden toegevoegd, verwijderd, en herwerkt.
 
-Een extensiepakket vertegenwoordigt een [extension](./extensions.md) zoals geschreven door een extensieontwikkelaar. Een extensiepakket definieert aanvullende mogelijkheden die beschikbaar kunnen worden gemaakt voor gebruikers van tags. Meestal worden deze mogelijkheden in de vorm van [regelcomponenten](./rule-components.md) (gebeurtenissen, voorwaarden en acties) en [gegevenselementen](./data-elements.md), maar kan ook hoofdmodules en gedeelde modules omvatten.
+Een uitbreidingspakket vertegenwoordigt een [ uitbreiding ](./extensions.md) zoals authored door een uitbreidingsontwikkelaar. Een extensiepakket definieert aanvullende mogelijkheden die beschikbaar kunnen worden gemaakt voor gebruikers van tags. Meestal komen deze mogelijkheden in de vorm van [ regelcomponenten ](./rule-components.md) (gebeurtenissen, voorwaarden, en acties) en [ gegevenselementen ](./data-elements.md), maar kunnen belangrijkste modules en gedeelde modules ook omvatten.
 
 Extensiepakketten worden weergegeven in de extensiecatalogus in de gebruikersinterface van de gegevensverzameling en in de gebruikersinterface van Adobe Experience Platform. Het toevoegen van een extensiepakket aan een eigenschap wordt uitgevoerd door een extensie te maken met een koppeling naar het extensiepakket.
 
-Een extensiepakket behoort tot de [bedrijf](./companies.md) van de ontwikkelaar die het heeft gemaakt.
+Een uitbreidingspakket behoort tot het [ bedrijf ](./companies.md) van de ontwikkelaar die het creeerde.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
-Het is niet alleen belangrijk te begrijpen hoe de Reactor-API kan worden aangeroepen, maar ook te begrijpen hoe de `status` en `availability` kenmerken zijn van invloed op de handelingen die u erop kunt uitvoeren. Deze worden in de onderstaande secties uitgelegd.
+Het is niet alleen van belang te begrijpen hoe u aanroepen van de Reactor-API kunt uitvoeren, maar ook te begrijpen hoe de kenmerken `status` en `availability` van een extensiepakket van invloed zijn op de handelingen die u erop kunt uitvoeren. Deze worden in de onderstaande secties uitgelegd.
 
 ### Status
 
-Extensiepakketten hebben drie mogelijke statussen: `pending`, `succeeded`, en `failed`.
+Extensiepakketten hebben drie mogelijke statussen: `pending` , `succeeded` en `failed` .
 
 | Status | Beschrijving |
 | --- | --- |
-| `pending` | Wanneer een extensiepakket wordt gemaakt, wordt het `status` is ingesteld op `pending`. Dit geeft aan dat het systeem de informatie voor het extensiepakket heeft ontvangen en met de verwerking zal beginnen. Uitbreidingspakketten met de status `pending` niet beschikbaar voor gebruik. |
+| `pending` | Wanneer een extensiepakket wordt gemaakt, wordt `status` ervan ingesteld op `pending` . Dit geeft aan dat het systeem de informatie voor het extensiepakket heeft ontvangen en met de verwerking zal beginnen. Extensiepakketten met de status `pending` zijn niet beschikbaar voor gebruik. |
 | `succeeded` | De status van een extensiepakket wordt bijgewerkt naar `succeeded` als de verwerking is voltooid. |
-| `failed` | De status van een extensiepakket wordt bijgewerkt naar `failed` als de verwerking is voltooid. Een extensiepakket met de status `failed` kan worden bijgewerkt totdat de verwerking is gelukt. Uitbreidingspakketten met de status `failed` niet beschikbaar voor gebruik. |
+| `failed` | De status van een extensiepakket wordt bijgewerkt naar `failed` als de verwerking is voltooid. Een extensiepakket met de status `failed` kan worden bijgewerkt totdat de verwerking is voltooid. Extensiepakketten met de status `failed` zijn niet beschikbaar voor gebruik. |
 
 ### Beschikbaarheid
 
-Er zijn niveaus van beschikbaarheid voor een uitbreidingspakket: `development`, `private`, en `public`.
+Er zijn niveaus van beschikbaarheid voor een extensiepakket: `development`, `private` en `public` .
 
 | Beschikbaarheid | Beschrijving |
 | --- | --- |
-| `development` | Een extensiepakket in `development` is alleen zichtbaar voor en beschikbaar binnen het bedrijf dat eigenaar is van het bedrijf. Bovendien kan het slechts op eigenschappen worden gebruikt die voor uitbreidingsontwikkeling worden gevormd. |
-| `private` | A `private` extensiepakket is alleen zichtbaar voor het bedrijf dat de extensie in eigendom heeft en kan alleen worden geïnstalleerd op eigenschappen die het bedrijf in eigendom heeft. |
-| `public` | A `public` extensiepakket is zichtbaar en beschikbaar voor alle bedrijven en eigenschappen . |
+| `development` | Een extensiepakket in `development` is alleen zichtbaar voor en beschikbaar binnen het bedrijf dat de extensie in eigendom heeft. Bovendien kan het slechts op eigenschappen worden gebruikt die voor uitbreidingsontwikkeling worden gevormd. |
+| `private` | Een extensiepakket `private` is alleen zichtbaar voor het bedrijf dat de extensie in eigendom heeft en kan alleen worden geïnstalleerd op eigenschappen die het bedrijf in eigendom heeft. |
+| `public` | Een extensiepakket `public` is zichtbaar en beschikbaar voor alle bedrijven en eigenschappen. |
 
 >[!NOTE]
 >
->Wanneer een extensiepakket wordt gemaakt, `availability` is ingesteld op `development`. Nadat het testen is voltooid, kunt u het extensiepakket overbrengen naar `private` of `public`.
+>Wanneer een extensiepakket wordt gemaakt, wordt `availability` ingesteld op `development` . Nadat het testen is voltooid, kunt u het extensiepakket overbrengen naar `private` of `public` .
 
 ## Een lijst met extensiepakketten ophalen {#list}
 
-U kunt een lijst met extensiepakketten ophalen door een GET-aanvraag in te dienen bij `/extension_packages`.
+U kunt een lijst met extensiepakketten ophalen door een aanvraag voor een GET in te dienen bij `/extension_packages` .
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /extension_packages
@@ -63,7 +63,7 @@ GET /extension_packages
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde uitbreidingspakketten worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
+>Gebruikend vraagparameters, kunnen de vermelde uitbreidingspakketten worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -77,7 +77,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van uitbreidingspakketten terug.
 
@@ -239,7 +239,7 @@ Een succesvolle reactie keert een lijst van uitbreidingspakketten terug.
 
 U kunt een extensiepakket opzoeken door de id ervan op te geven in het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /extension_packages/{EXTENSION_PACKAGE_ID}
@@ -263,9 +263,9 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert de details van het uitbreidingspakket, met inbegrip van zijn gedelegeerde middelen zoals terug `actions`, `conditions`, `data_elements`en meer. De voorbeeldreactie hieronder is afgebroken voor de ruimte.
+Een succesvol antwoord retourneert de details van het extensiepakket, inclusief de gedelegeerde bronnen zoals `actions` , `conditions` , `data_elements` en meer. De voorbeeldreactie hieronder is afgebroken voor de ruimte.
 
 ```json
 {
@@ -472,11 +472,11 @@ Een succesvolle reactie keert de details van het uitbreidingspakket, met inbegri
 
 ## Een extensiepakket maken {#create}
 
-Extensiepakketten worden gemaakt met een basisgereedschap Node.js en opgeslagen op uw lokale computer voordat ze worden verzonden naar de Reactor-API. Raadpleeg de handleiding voor meer informatie over het configureren van een extensiepakket op [aan de slag gaan met extensieontwikkeling](../../extension-dev/getting-started.md).
+Extensiepakketten worden gemaakt met een basisgereedschap Node.js en opgeslagen op uw lokale computer voordat ze worden verzonden naar de Reactor-API. Voor meer informatie bij het vormen van een uitbreidingspakket, verwijs naar de gids bij [ begonnen wordt met uitbreidingsontwikkeling ](../../extension-dev/getting-started.md).
 
 Nadat u het bestand met het extensiepakket hebt gemaakt, kunt u het verzenden naar de Reactor-API via een verzoek om POST.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /extension_packages
@@ -484,7 +484,7 @@ POST /extension_packages
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een nieuw extensiepakket gemaakt. Het lokale pad naar het pakketbestand dat wordt geüpload, wordt formuliergegevens genoemd (`package`), en daarom vereist dit eindpunt `Content-Type` header van `multipart/form-data`.
+Met de volgende aanvraag wordt een nieuw extensiepakket gemaakt. Het lokale pad naar het pakketbestand dat wordt geüpload, wordt formuliergegevens genoemd (`package`). Voor dit eindpunt is daarom een `Content-Type` header van `multipart/form-data` vereist.
 
 ```shell
 curl -X POST \
@@ -496,7 +496,7 @@ curl -X POST \
   -F 'package=@"/Users/temp/extension-package.zip"'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van het nieuwe uitbreidingspakket.
 
@@ -707,7 +707,7 @@ Een geslaagde reactie retourneert de details van het nieuwe uitbreidingspakket.
 
 U kunt een extensiepakket bijwerken door de id ervan op te nemen in het pad van een PATCH-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
@@ -721,7 +721,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 **Verzoek**
 
-Zoals met [een extensiepakket maken](#create), moet een lokale versie van het bijgewerkte pakket worden geüpload via formuliergegevens.
+Zoals met [ het creëren van een uitbreidingspakket ](#create), moet een lokale versie van het bijgewerkte pakket via vormgegevens worden geupload.
 
 ```shell
 curl -X PATCH \
@@ -733,7 +733,7 @@ curl -X PATCH \
   -F 'package=@"/Users/temp/extension-package.zip"'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van het bijgewerkte extensiepakket.
 
@@ -944,9 +944,9 @@ Een geslaagde reactie retourneert de details van het bijgewerkte extensiepakket.
 
 Nadat u het extensiepakket hebt getest, kunt u het persoonlijk loslaten. Dit maakt het beschikbaar aan om het even welk bezit binnen uw bedrijf.
 
-Nadat u privé hebt vrijgegeven, kunt u met het openbare vrijgaveproces beginnen door uit te vullen [aanvraagformulier voor openbare release](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest).
+Nadat u privé hebt vrijgegeven, kunt u met het openbare vrijgaveproces beginnen door de [ vorm van het openbare vrijgaveverzoek ](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest) te vullen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
@@ -960,7 +960,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 **Verzoek**
 
-Een privérelease wordt bereikt door een `action` met een waarde van `release_private` in de `meta` van de aanvraaggegevens.
+Een privérelease wordt bereikt door een `action` te voorzien van de waarde `release_private` in de `meta` van de aanvraaggegevens.
 
 ```shell
 curl -X PATCH \
@@ -980,7 +980,7 @@ curl -X PATCH \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert de details van het extensiepakket.
 
@@ -1189,9 +1189,9 @@ Een succesvol antwoord retourneert de details van het extensiepakket.
 
 ## Een extensiepakket stoppen {#discontinue}
 
-U kunt een extensiepakket beëindigen door het bijbehorende `discontinued` kenmerk naar `true` via een PATCH-verzoek.
+U kunt een extensiepakket beëindigen door het kenmerk `discontinued` ervan op `true` in te stellen via een PATCH-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
@@ -1205,7 +1205,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 **Verzoek**
 
-Een privérelease wordt bereikt door een `action` met een waarde van `release_private` in de `meta` van de aanvraaggegevens.
+Een privérelease wordt bereikt door een `action` te voorzien van de waarde `release_private` in de `meta` van de aanvraaggegevens.
 
 ```shell
 curl -X PATCH \
@@ -1225,7 +1225,7 @@ curl -X PATCH \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert de details van het extensiepakket.
 
@@ -1282,9 +1282,9 @@ Een succesvol antwoord retourneert de details van het extensiepakket.
 
 ## De versies voor een extensiepakket weergeven
 
-U kunt de versies van een extensiepakket weergeven door het toe te voegen `/versions` naar het pad van een opzoekverzoek.
+U kunt de versies van een extensiepakket weergeven door `/versions` toe te voegen aan het pad van een opzoekaanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
@@ -1308,6 +1308,6 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een array met eerdere versies van het extensiepakket. Een voorbeeldreactie is weggelaten voor ruimte.

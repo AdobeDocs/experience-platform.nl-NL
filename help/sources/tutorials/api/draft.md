@@ -4,29 +4,29 @@ description: Leer hoe u concepten van uw basisverbinding, bronverbinding, doelve
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
 source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 1%
+source-wordcount: '1188'
+ht-degree: 0%
 
 ---
 
-# Concepten van uw [!DNL Flow Service] entiteiten die de API gebruiken
+# Concepten van uw [!DNL Flow Service] -entiteiten maken met de API
 
-U kunt de `mode=draft` queryparameter in het dialoogvenster [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) om uw [!DNL Flow Service] entiteiten zoals uw basisverbindingen, bronverbindingen, doelverbindingen en dataflows naar een conceptstatus.
+U kunt de `mode=draft` vraagparameter in [[!DNL Flow Service]  API ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) gebruiken om uw [!DNL Flow Service] entiteiten zoals uw basisverbindingen, bronverbindingen, doelverbindingen, en dataflows aan een ontwerpstaat te plaatsen.
 
-Concepten kunnen later worden bijgewerkt met nieuwe informatie en vervolgens worden gepubliceerd zodra ze gereed zijn, met behulp van de `op=publish` queryparameter.
+Concepten kunnen later met nieuwe informatie worden bijgewerkt en vervolgens worden gepubliceerd zodra ze gereed zijn, met de parameter `op=publish` query.
 
-Deze zelfstudie bevat stappen voor het instellen van uw [!DNL Flow Service] Hiermee voegt u een status toe aan een concept en kunt u uw workflows pauzeren en opslaan om op een later tijdstip te worden voltooid.
+Deze zelfstudie bevat stappen voor het instellen van [!DNL Flow Service] -entiteiten op een conceptstatus en biedt u de mogelijkheid om uw workflows te pauzeren en op te slaan zodat deze later kunnen worden voltooid.
 
 ## Aan de slag
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
-* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
 
 ### Controleren op ondersteuning voor conceptmodus
 
@@ -34,9 +34,10 @@ U moet ook controleren of de verbinding-specificatie-id en de bijbehorende flow-
 
 >[!BEGINTABS]
 
->[!TAB Details van verbindingsspecificaties opzoeken]
+>[!TAB  bekijk de details van de verbindingsspecificatie ]
 
-+++Aanvragen De volgende aanvraag haalt de informatie over de verbindingsspecificatie op voor [!DNL Azure File Storage]:
++++verzoek
+Met de volgende aanvraag wordt de informatie over de verbindingsspecificatie voor [!DNL Azure File Storage] opgehaald:
 
 ```shell
 curl -X GET \
@@ -52,7 +53,7 @@ curl -X GET \
 
 +++Response
 
-Een succesvolle reactie keert de informatie van de verbindingsspecificatie voor uw bron terug. Als u wilt controleren of de conceptmodus voor uw bron wordt ondersteund, controleert u of de optie `items[0].attributes.isDraftModeSupported` heeft een waarde van `true`.
+Een succesvolle reactie keert de informatie van de verbindingsspecificatie voor uw bron terug. Controleer of de waarde van `items[0].attributes.isDraftModeSupported` is ingesteld op `true` om te controleren of de conceptmodus voor uw bron wordt ondersteund.
 
 ```json {line-numbers="true" start-line="1" highlight="252"}
 {
@@ -340,9 +341,10 @@ Een succesvolle reactie keert de informatie van de verbindingsspecificatie voor 
 
 +++
 
->[!TAB Details van stroomspecificaties opzoeken]
+>[!TAB  de specificatiedetails van de opzoekstroom ]
 
-+++Aanvragen De volgende aanvraag haalt de gegevens van de flowspecificatie voor een bron voor cloudopslag op:
++++verzoek
+Met het volgende verzoek worden de gegevens over de stroomspecificaties voor een bron voor cloudopslag opgehaald:
 
 ```shell
 curl -X GET \
@@ -358,7 +360,7 @@ curl -X GET \
 
 +++Response
 
-Een succesvolle reactie keert de stroom specifieke informatie voor uw bron terug. Als u wilt controleren of de conceptmodus voor uw bron wordt ondersteund, controleert u of de optie `items[0].attributes.isDraftModeSupported` heeft een waarde van `true`.
+Een succesvolle reactie keert de stroom specifieke informatie voor uw bron terug. Controleer of de waarde van `items[0].attributes.isDraftModeSupported` is ingesteld op `true` om te controleren of de conceptmodus voor uw bron wordt ondersteund.
 
 ```json {line-numbers="true" start-line="1" highlight="167"}
 {
@@ -569,9 +571,9 @@ Een succesvolle reactie keert de stroom specifieke informatie voor uw bron terug
 
 ## Concepten van basisverbindingen maken {#create-a-draft-base-connection}
 
-Als u een conceptbasisverbinding wilt maken, vraagt u een POST aan de `/connections` het eindpunt van de [!DNL Flow Service] API en `mode=draft` als een queryparameter.
+Als u een conceptbasisverbinding wilt maken, vraagt u een POST naar het `/connections` -eindpunt van de [!DNL Flow Service] API en geeft u `mode=draft` op als een queryparameter.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /connections?mode=draft
@@ -579,11 +581,11 @@ POST /connections?mode=draft
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `mode` | Een door de gebruiker opgegeven queryparameter die de status van de basisverbinding bepaalt. Als u een basisverbinding als concept wilt instellen, stelt u `mode` tot `draft`. |
+| `mode` | Een door de gebruiker opgegeven queryparameter die de status van de basisverbinding bepaalt. Als u een basisverbinding wilt instellen als concept, stelt u `mode` in op `draft` . |
 
 **Verzoek**
 
-Met het volgende verzoek maakt u een conceptbasisverbinding voor de [!DNL Azure File Storage] bron:
+Met het volgende verzoek wordt een conceptbasisverbinding voor de [!DNL Azure File Storage] -bron gemaakt:
 
 ```shell
 curl -X POST \
@@ -611,7 +613,7 @@ curl -X POST \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de basis-verbindings-id en het bijbehorende label voor de conceptbasisverbinding. U kunt deze id later gebruiken om uw basisverbinding bij te werken en te publiceren.
 
@@ -622,11 +624,11 @@ Een geslaagde reactie retourneert de basis-verbindings-id en het bijbehorende la
 }
 ```
 
-## Uw basisverbinding voor concepten publiceren {#publish-your-draft-base-connection}
+## Publish uw conceptbasisverbinding {#publish-your-draft-base-connection}
 
-Wanneer uw concept klaar is om te worden gepubliceerd, kunt u de POST `/connections` eindpunt en verstrek identiteitskaart van de verbinding van de ontwerpbasis die u, evenals actieverrichting voor het publiceren wilt publiceren.
+Zodra uw concept klaar is om te worden gepubliceerd, dient u een verzoek van de POST in bij het `/connections` -eindpunt en verstrekt u de id van de conceptbasisverbinding die u wilt publiceren, alsmede een handeling voor het publiceren.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /connections/{BASE_CONNECTION_ID}/action?op=publish
@@ -634,11 +636,11 @@ POST /connections/{BASE_CONNECTION_ID}/action?op=publish
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `op` | Een handelingsverrichting die de staat van de gevraagde basisverbinding bijwerkt. Als u een conceptbasisverbinding wilt publiceren, stelt u `op` tot `publish`. |
+| `op` | Een handelingsverrichting die de staat van de gevraagde basisverbinding bijwerkt. Stel `op` in op `publish` als u een conceptbasisverbinding wilt publiceren. |
 
 **Verzoek**
 
-In het volgende verzoek wordt de conceptbasisverbinding gepubliceerd voor [!DNL Azure File Storage] die in een eerdere stap is gemaakt.
+In het volgende verzoek wordt de conceptbasisverbinding voor [!DNL Azure File Storage] gepubliceerd die in een eerdere stap is gemaakt.
 
 ```shell
 curl -X POST \
@@ -650,7 +652,7 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voor uw gepubliceerde basisverbinding terug.
 
@@ -663,9 +665,9 @@ Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voo
 
 ## Concepten van bronverbindingen maken {#create-a-draft-source-connection}
 
-Als u een conceptbronverbinding wilt maken, vraagt u een POST aan de `/sourceConnections` het eindpunt van de [!DNL Flow Service] API en `mode=draft` als een queryparameter.
+Als u een conceptbronverbinding wilt maken, vraagt u een POST naar het `/sourceConnections` -eindpunt van de [!DNL Flow Service] API en geeft u `mode=draft` op als een queryparameter.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /sourceConnections?mode=draft
@@ -673,7 +675,7 @@ POST /sourceConnections?mode=draft
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `mode` | Een door de gebruiker opgegeven queryparameter die de status van de bronverbinding bepaalt. Als u een bronverbinding als concept wilt instellen, stelt u `mode` tot `draft`. |
+| `mode` | Een door de gebruiker opgegeven queryparameter die de status van de bronverbinding bepaalt. Als u een bronverbinding wilt instellen als concept, stelt u `mode` in op `draft` . |
 
 **Verzoek**
 
@@ -703,7 +705,7 @@ curl -X POST \
   }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de bron-verbindings-id en de bijbehorende tag voor de conceptbronverbinding. U kunt deze id later gebruiken om uw bronverbinding bij te werken en te publiceren.
 
@@ -714,15 +716,15 @@ Een geslaagde reactie retourneert de bron-verbindings-id en de bijbehorende tag 
 }
 ```
 
-## Uw conceptbronverbinding publiceren {#publish-your-draft-source-connection}
+## Publish uw conceptbronverbinding {#publish-your-draft-source-connection}
 
 >[!NOTE]
 >
 >U kunt geen bronverbinding publiceren als de bijbehorende basisverbinding zich nog in het concept bevindt. Controleer of uw basisverbinding eerst is gepubliceerd voordat u uw bronverbinding publiceert.
 
-Wanneer uw concept klaar is om te worden gepubliceerd, kunt u de POST `/sourceConnections` eindpunt en verstrek identiteitskaart van de ontwerp bronverbinding die u, evenals actieverrichting voor het publiceren wilt publiceren.
+Zodra uw concept klaar is om te worden gepubliceerd, dient u een verzoek van de POST in bij het `/sourceConnections` eindpunt en verstrekt u de id van de conceptbronverbinding die u wilt publiceren, evenals een actiebewerking voor het publiceren.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
@@ -730,11 +732,11 @@ POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `op` | Een handelingsverrichting die de staat van de gevraagde bronverbinding bijwerkt. Als u een conceptbronverbinding wilt publiceren, stelt u `op` tot `publish`. |
+| `op` | Een handelingsverrichting die de staat van de gevraagde bronverbinding bijwerkt. Als u een conceptbronverbinding wilt publiceren, stelt u `op` in op `publish` . |
 
 **Verzoek**
 
-In het volgende verzoek wordt de conceptbronverbinding gepubliceerd voor [!DNL Azure File Storage] die in een eerdere stap is gemaakt.
+In het volgende verzoek wordt de conceptbronverbinding voor [!DNL Azure File Storage] gepubliceerd die in een eerdere stap is gemaakt.
 
 ```shell
 curl -X POST \
@@ -746,7 +748,7 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voor uw gepubliceerde bronverbinding terug.
 
@@ -759,9 +761,9 @@ Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voo
 
 ## Concepten van doelverbinding maken {#create-a-draft-target-connection}
 
-Als u een conceptdoelverbinding wilt maken, vraagt u een POST aan de `/targetConnections` het eindpunt van de [!DNL Flow Service] API en `mode=draft` als een queryparameter.
+Als u een conceptdoelverbinding wilt maken, vraagt u een POST naar het `/targetConnections` -eindpunt van de [!DNL Flow Service] API en geeft u `mode=draft` op als een queryparameter.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /targetConnections?mode=draft
@@ -769,7 +771,7 @@ POST /targetConnections?mode=draft
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `mode` | Een door de gebruiker opgegeven queryparameter die de status van de doelverbinding bepaalt. Als u een doelverbinding wilt instellen als concept, stelt u `mode` tot `draft`. |
+| `mode` | Een door de gebruiker opgegeven queryparameter die de status van de doelverbinding bepaalt. Als u een doelverbinding wilt instellen als concept, stelt u `mode` in op `draft` . |
 
 **Verzoek**
 
@@ -800,7 +802,7 @@ curl -X POST \
   }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de doel-verbindings-id en de bijbehorende tag voor de conceptdoelverbinding. U kunt deze id later gebruiken om uw doelverbinding bij te werken en te publiceren.
 
@@ -811,15 +813,15 @@ Een geslaagde reactie retourneert de doel-verbindings-id en de bijbehorende tag 
 }
 ```
 
-## Conceptdoelverbinding publiceren {#publish-your-draft-target-connection}
+## Publish uw conceptdoelverbinding {#publish-your-draft-target-connection}
 
 >[!NOTE]
 >
 >U kunt geen doelverbinding publiceren als de bijbehorende basisverbinding zich nog in de conceptstatus bevindt. Controleer of uw basisverbinding eerst is gepubliceerd voordat u de doelverbinding publiceert.
 
-Wanneer uw concept klaar is om te worden gepubliceerd, kunt u de POST `/targetConnections` eindpunt en verstrek identiteitskaart van de ontwerp doelverbinding die u, evenals een actieverrichting voor het publiceren wilt publiceren.
+Zodra uw concept klaar is om te worden gepubliceerd, dient u een verzoek van de POST in bij het `/targetConnections` -eindpunt en verstrekt u de id van de conceptdoelverbinding die u wilt publiceren, alsmede een handeling voor het publiceren.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
@@ -827,11 +829,11 @@ POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `op` | Een handelingsverrichting die de staat van de gevraagde doelverbinding bijwerkt. Als u een conceptdoelverbinding wilt publiceren, stelt u `op` tot `publish`. |
+| `op` | Een handelingsverrichting die de staat van de gevraagde doelverbinding bijwerkt. Als u een conceptdoelverbinding wilt publiceren, stelt u `op` in op `publish` . |
 
 **Verzoek**
 
-In het volgende verzoek wordt de conceptdoelverbinding gepubliceerd voor [!DNL Azure File Storage] die in een eerdere stap is gemaakt.
+In het volgende verzoek wordt de conceptdoelverbinding voor [!DNL Azure File Storage] gepubliceerd die in een eerdere stap is gemaakt.
 
 ```shell
 curl -X POST \
@@ -843,7 +845,7 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voor uw gepubliceerde doelverbinding terug.
 
@@ -856,9 +858,9 @@ Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voo
 
 ## Concepten van gegevensstroom maken {#create-a-draft-dataflow}
 
-Als u een gegevensstroom wilt instellen als concept, vraagt u een POST naar de `/flows` eindpunt terwijl het toevoegen van `mode=draft` als een queryparameter. Op deze manier kunt u een gegevensstroom maken en deze opslaan als concept.
+Als u een gegevensstroom wilt instellen als concept, vraagt u een POST naar het `/flows` -eindpunt terwijl u de `mode=draft` als queryparameter toevoegt. Op deze manier kunt u een gegevensstroom maken en deze opslaan als concept.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /flows?mode=draft
@@ -866,7 +868,7 @@ POST /flows?mode=draft
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `mode` | Een door de gebruiker opgegeven queryparameter die de status van de gegevensstroom bepaalt. Als u een gegevensstroom wilt instellen als concept, stelt u `mode` tot `draft`. |
+| `mode` | Een door de gebruiker opgegeven queryparameter die de status van de gegevensstroom bepaalt. Als u een gegevensstroom wilt instellen als concept, stelt u `mode` in op `draft` . |
 
 **Verzoek**
 
@@ -895,7 +897,7 @@ Met het volgende verzoek wordt een concept-gegevensstroom gemaakt.
   }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de stroom-id en de bijbehorende tag voor de conceptgegevensstroom. U kunt deze id later gebruiken om uw gegevensstroom bij te werken en te publiceren.
 
@@ -906,15 +908,15 @@ Een geslaagde reactie retourneert de stroom-id en de bijbehorende tag voor de co
 }
 ```
 
-## Uw conceptgegevensstroom publiceren {#publish-your-draft-dataflow}
+## Publish uw conceptgegevensstroom {#publish-your-draft-dataflow}
 
 >[!NOTE]
 >
 >U kunt geen gegevensstroom publiceren als zijn bijbehorende bron en doelverbindingen nog in ontwerpstaat zijn. Zorg ervoor dat uw bron- en doelverbindingen eerst worden gepubliceerd voordat u uw gegevensstroom publiceert.
 
-Wanneer uw concept klaar is om te worden gepubliceerd, kunt u de POST `/flows` eindpunt terwijl het verstrekken van identiteitskaart van het ontwerp dataflow die u wilt publiceren, evenals een actieverrichting voor het publiceren.
+Zodra uw concept klaar is om te worden gepubliceerd, doe een verzoek van de POST aan het `/flows` eindpunt terwijl het verstrekken van identiteitskaart van de ontwerp dataflow die u wilt publiceren, evenals een actieverrichting voor het publiceren.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /flows/{FLOW_ID}/action?op=publish
@@ -922,7 +924,7 @@ POST /flows/{FLOW_ID}/action?op=publish
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `op` | Een handelingsverrichting die de staat van de gevraagde dataflow bijwerkt. Als u een conceptgegevensstroom wilt publiceren, stelt u `op` tot `publish`. |
+| `op` | Een handelingsverrichting die de staat van de gevraagde dataflow bijwerkt. Als u een conceptgegevensstroom wilt publiceren, stelt u `op` in op `publish` . |
 
 **Verzoek**
 
@@ -938,9 +940,9 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de id en de bijbehorende `etag` van uw gegevensstroom.
+Een geslaagde reactie retourneert de id en de bijbehorende `etag` gegevensstroom.
 
 ```json
 {
@@ -951,4 +953,4 @@ Een geslaagde reactie retourneert de id en de bijbehorende `etag` van uw gegeven
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u geleerd hoe u concepten van uw [!DNL Flow Service] entiteiten en deze concepten publiceren. Lees voor meer informatie over bronnen de [overzicht van bronnen](../../home.md).
+Aan de hand van deze zelfstudie hebt u geleerd hoe u concepten van uw [!DNL Flow Service] -entiteiten kunt maken en deze concepten kunt publiceren. Voor meer informatie over bronnen, te lezen gelieve het [ overzicht van bronnen ](../../home.md).

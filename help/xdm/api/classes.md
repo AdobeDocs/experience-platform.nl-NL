@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem;ervaringsgegevensmodel;Experience Data Model;Experience Data Model;Data Model;Klasse Register;Schema Register;klasse;Klasse;klassen;Classes;create
 solution: Experience Platform
-title: Klassen API-eindpunt
+title: Klassen-API-eindpunt
 description: Het /classes eindpunt in de Registratie API van het Schema staat u toe om klassen programmatically te beheren XDM binnen uw ervaringstoepassing.
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1503'
 ht-degree: 0%
 
 ---
@@ -15,28 +15,28 @@ ht-degree: 0%
 
 Alle schema&#39;s van het Gegevensmodel van de Ervaring (XDM) moeten op een klasse worden gebaseerd. Een klasse bepaalt de basisstructuur van gemeenschappelijke eigenschappen die alle die schema&#39;s op die klasse worden gebaseerd moeten bevatten, evenals welke groepen van het schemagebied voor gebruik in die schema&#39;s geschikt zijn. Bovendien bepaalt de klasse van een schema de gedragsaspecten van de gegevens die een schema zal bevatten, waarvan er twee types zijn:
 
-* **[!UICONTROL Record]**: Verstrekt informatie over de attributen van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
-* **[!UICONTROL Time-series]**: Biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
+* **[!UICONTROL Record]**: biedt informatie over de kenmerken van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
+* **[!UICONTROL Time-series]**: biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
 
 >[!NOTE]
 >
->Voor meer informatieklassen over gegevensgedrag in termen van hoe zij schemacompositie beïnvloeden, verwijs naar [grondbeginselen van de schemacompositie](../schema/composition.md).
+>Voor meer informatieklassen over gegevensgedrag in termen van hoe zij schemacompositie beïnvloeden, verwijs naar de [ grondbeginselen van schemacompositie ](../schema/composition.md).
 
-De `/classes` in de [!DNL Schema Registry] Met API kunt u klassen programmatisch beheren binnen uw ervaringstoepassing.
+Met het eindpunt `/classes` in de [!DNL Schema Registry] API kunt u klassen programmatisch beheren binnen uw ervaringstoepassing.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met klassen ophalen {#list}
 
-U kunt alle klassen weergeven onder de klasse `global` of `tenant` container door een GET-aanvraag in te dienen bij `/global/classes` of `/tenant/classes`, respectievelijk.
+U kunt alle klassen onder de container `global` of `tenant` weergeven door een aanvraag voor een GET in te dienen bij respectievelijk `/global/classes` of `/tenant/classes` .
 
 >[!NOTE]
 >
->Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [queryparameters](./appendix.md#query) voor meer informatie.
+>Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [ vraagparameters ](./appendix.md#query) in het bijlage document voor meer informatie.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
@@ -44,14 +44,14 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container waarvan u klassen wilt ophalen: `global` voor klassen die door Adobe zijn gemaakt of `tenant` voor klassen die eigendom zijn van uw organisatie. |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de [bijgevoegd document](./appendix.md#query) voor een lijst met beschikbare parameters. |
+| `{CONTAINER_ID}` | De container waarvan u klassen wilt ophalen: `global` voor klassen die zijn gemaakt met een Adobe of `tenant` voor klassen die eigendom zijn van uw organisatie. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [ bijlage document ](./appendix.md#query) voor een lijst van beschikbare parameters. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een lijst met klassen opgehaald uit de `tenant` container gebruiken `orderby` query-parameter om de klassen op basis van hun te sorteren `title` kenmerk.
+Met de volgende aanvraag wordt een lijst met klassen opgehaald uit de container `tenant` . Hierbij wordt een `orderby` query-parameter gebruikt om de klassen op hun `title` -kenmerk te sorteren.
 
 ```shell
 curl -X GET \
@@ -63,18 +63,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Het volgende `Accept` Kopteksten zijn beschikbaar voor aanbiedingsklassen:
+De antwoordindeling is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. De volgende `Accept` headers zijn beschikbaar voor aanbiedingsklassen:
 
 | `Accept` header | Beschrijving |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
-| `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-klasse voor elke bron, met origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
+| `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-klasse voor elke bron, met origineel `$ref` en `allOf` inbegrepen. (Limiet: 300) |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-In bovengenoemd verzoek werd gebruikgemaakt van de `application/vnd.adobe.xed-id+json` `Accept` header, daarom bevat de reactie alleen de `title`, `$id`, `meta:altId`, en `version` kenmerken voor elke klasse. Het andere gebruiken `Accept` header (`application/vnd.adobe.xed+json`) retourneert alle kenmerken van elke klasse. Selecteer de juiste `Accept` afhankelijk van de informatie die u in uw reactie nodig hebt.
+In de bovenstaande aanvraag is de header `application/vnd.adobe.xed-id+json` `Accept` gebruikt en daarom bevat de reactie alleen de kenmerken `title` , `$id` , `meta:altId` en `version` voor elke klasse. Wanneer u de andere `Accept` header (`application/vnd.adobe.xed+json` ) gebruikt, worden alle kenmerken van elke klasse geretourneerd. Selecteer de juiste `Accept` header, afhankelijk van de informatie die u in uw reactie nodig hebt.
 
 ```json
 {
@@ -116,7 +116,7 @@ In bovengenoemd verzoek werd gebruikgemaakt van de `application/vnd.adobe.xed-id
 
 U kunt een specifieke klasse opzoeken door de id van de klasse op te nemen in het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{CONTAINER_ID}/classes/{CLASS_ID}
@@ -124,14 +124,14 @@ GET /{CONTAINER_ID}/classes/{CLASS_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container die de klasse bevat die u wilt ophalen: `global` voor een door Adobe gemaakte klasse of `tenant` voor een klasse die eigendom is van uw organisatie. |
-| `{CLASS_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de klasse die u wilt opzoeken. |
+| `{CONTAINER_ID}` | De container die de klasse bevat die u wilt ophalen: `global` voor een klasse die is gemaakt met een Adobe of `tenant` voor een klasse die eigendom is van uw organisatie. |
+| `{CLASS_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de klasse die u wilt opzoeken. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een klasse opgehaald op basis van `meta:altId` waarde opgegeven in het pad.
+Met de volgende aanvraag wordt een klasse opgehaald op basis van de `meta:altId` -waarde die in het pad is opgegeven.
 
 ```shell
 curl -X GET \
@@ -143,21 +143,21 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Alle opzoekverzoeken vereisen een `version` worden opgenomen in de `Accept` header. Het volgende `Accept` Kopteksten zijn beschikbaar:
+De antwoordindeling is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. Voor alle opzoekverzoeken moet een `version` worden opgenomen in de `Accept` -koptekst. De volgende `Accept` headers zijn beschikbaar:
 
 | `Accept` header | Beschrijving |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version=1` | Onbewerkt met `$ref` en `allOf`, heeft titels en beschrijvingen. |
-| `application/vnd.adobe.xed-full+json; version=1` | `$ref` en `allOf` heeft titels en beschrijvingen. |
-| `application/vnd.adobe.xed-notext+json; version=1` | Onbewerkt met `$ref` en `allOf`, geen titels of beschrijvingen. |
+| `application/vnd.adobe.xed+json; version=1` | Met `$ref` en `allOf` heeft Raw titels en beschrijvingen. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` en `allOf` resolve, heeft titels en beschrijvingen. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Onbewerkt met `$ref` en `allOf` , geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` en `allOf` opgelost, geen titels of beschrijvingen. |
-| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en `allOf` opgelost, beschrijving inbegrepen. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en `allOf` opgelost, inclusief beschrijvingen. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de details van de klasse. De geretourneerde velden zijn afhankelijk van de `Accept` in de aanvraag verzonden. Experimenteer met andere `Accept` Kopteksten om de reacties te vergelijken en te bepalen welke kopbal het beste voor uw gebruiksgeval is.
+Een geslaagde reactie retourneert de details van de klasse. Welke velden worden geretourneerd, is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. Experimenteer met verschillende kopteksten van `Accept` om de reacties te vergelijken en te bepalen welke kopbal het beste voor uw gebruiksgeval is.
 
 ```json
 {
@@ -248,15 +248,15 @@ Een geslaagde reactie retourneert de details van de klasse. De geretourneerde ve
 
 ## Een klasse maken {#create}
 
-U kunt een aangepaste klasse definiëren onder de categorie `tenant` door een POST aan te vragen.
+U kunt een aangepaste klasse definiëren onder de `tenant` -container door een POST aan te vragen.
 
 >[!IMPORTANT]
 >
->Wanneer u een schema samenstelt dat is gebaseerd op een aangepaste klasse die u definieert, kunt u geen standaardveldgroepen gebruiken. Elke veldgroep definieert met welke klassen ze compatibel zijn `meta:intendedToExtend` kenmerk. Wanneer u begint met het definiëren van veldgroepen die compatibel zijn met uw nieuwe klasse (door het gereedschap `$id` van uw nieuwe klasse in `meta:intendedToExtend` (veld van de veldgroep), kunt u deze veldgroepen telkens opnieuw gebruiken wanneer u een schema definieert dat de door u gedefinieerde klasse implementeert. Zie de secties op [maken, veldgroepen](./field-groups.md#create) en [schema&#39;s maken](./schemas.md#create) in hun respectieve eindpuntgidsen voor meer informatie.
+>Wanneer u een schema samenstelt dat is gebaseerd op een aangepaste klasse die u definieert, kunt u geen standaardveldgroepen gebruiken. Elke veldgroep definieert de klassen waarmee ze compatibel zijn in het kenmerk `meta:intendedToExtend` . Wanneer u begint met het definiëren van veldgroepen die compatibel zijn met uw nieuwe klasse (met behulp van `$id` van de nieuwe klasse in het veld `meta:intendedToExtend` van de veldgroep), kunt u deze veldgroepen telkens opnieuw gebruiken wanneer u een schema definieert dat de door u gedefinieerde klasse implementeert. Zie de secties op [ creërend gebiedsgroepen ](./field-groups.md#create) en [ creërend schema&#39;s ](./schemas.md#create) in hun respectieve eindpuntgidsen voor meer informatie.
 >
->Als u schema&#39;s wilt gebruiken die op douaneklassen in het Profiel van de Klant in real time worden gebaseerd, is het ook belangrijk om in mening te houden dat de verenigingsschema&#39;s slechts gebaseerd op schema&#39;s zijn die de zelfde klasse delen. Als u een schema van de douane-klasse in de unie voor een andere klasse wilt omvatten zoals [!UICONTROL XDM Individual Profile] of [!UICONTROL XDM ExperienceEvent], moet u een verband met een ander schema vestigen dat die klasse aanwendt. Zie de zelfstudie aan [het tot stand brengen van een verband tussen twee schema&#39;s in API](../tutorials/relationship-api.md) voor meer informatie .
+>Als u schema&#39;s wilt gebruiken die op douaneklassen in het Profiel van de Klant in real time worden gebaseerd, is het ook belangrijk om in mening te houden dat de verenigingsschema&#39;s slechts gebaseerd op schema&#39;s zijn die de zelfde klasse delen. Als u een schema van de douane-klasse in de unie voor een andere klasse zoals [!UICONTROL XDM Individual Profile] of [!UICONTROL XDM ExperienceEvent] wilt omvatten, moet u een verband met een ander schema vestigen dat die klasse gebruikt. Zie het leerprogramma op [ het vestigen van een verband tussen twee schema&#39;s in API ](../tutorials/relationship-api.md) voor meer informatie.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /tenant/classes
@@ -264,9 +264,9 @@ POST /tenant/classes
 
 **Verzoek**
 
-De aanvraag om een klasse te maken (POST) moet een klasse bevatten met een `allOf` kenmerk met een `$ref` tot één van twee waarden: `https://ns.adobe.com/xdm/data/record` of `https://ns.adobe.com/xdm/data/time-series`. Deze waarden vertegenwoordigen het gedrag waarop de klasse is gebaseerd (record- of tijdreeks, respectievelijk). Zie de sectie over gedragstypen in de [grondbeginselen van de schemacompositie](../schema/composition.md).
+De aanvraag om een klasse te maken (POST) moet een `allOf` -kenmerk bevatten met een `$ref` naar een van de volgende twee waarden: `https://ns.adobe.com/xdm/data/record` of `https://ns.adobe.com/xdm/data/time-series` . Deze waarden vertegenwoordigen het gedrag waarop de klasse is gebaseerd (record- of tijdreeks, respectievelijk). Voor meer informatie over de verschillen tussen verslaggegevens en tijdreeksgegevens, zie de sectie over gedragstypes binnen de [ grondbeginselen van schemacompositie ](../schema/composition.md).
 
-Wanneer u een klasse definieert, kunt u ook veldgroepen of aangepaste velden opnemen in de klassendefinitie. Hierdoor worden de toegevoegde veldgroepen en velden opgenomen in alle schema&#39;s die de klasse implementeren. In het volgende voorbeeldverzoek wordt een klasse met de naam &quot;Eigenschap&quot; gedefinieerd, die informatie vastlegt over verschillende eigenschappen die eigendom zijn van en worden beheerd door een bedrijf. Het omvat een `propertyId` veld dat moet worden opgenomen telkens wanneer de klasse wordt gebruikt.
+Wanneer u een klasse definieert, kunt u ook veldgroepen of aangepaste velden opnemen in de klassendefinitie. Hierdoor worden de toegevoegde veldgroepen en velden opgenomen in alle schema&#39;s die de klasse implementeren. In het volgende voorbeeldverzoek wordt een klasse met de naam &quot;Eigenschap&quot; gedefinieerd, die informatie vastlegt over verschillende eigenschappen die eigendom zijn van en worden beheerd door een bedrijf. De klasse bevat een `propertyId` -veld dat moet worden opgenomen telkens wanneer de klasse wordt gebruikt.
 
 ```SHELL
 curl -X POST \
@@ -317,14 +317,14 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `_{TENANT_ID}` | De `TENANT_ID` naamruimte voor uw organisatie. Alle die middelen door uw organisatie worden gecreeerd moeten dit bezit omvatten om botsingen met andere middelen in te vermijden [!DNL Schema Registry]. |
-| `allOf` | Een lijst met bronnen waarvan de eigenschappen door de nieuwe klasse moeten worden overgeërfd. Een van de `$ref` objecten binnen de array definiëren het gedrag van de klasse. In dit voorbeeld overerft de klasse het gedrag &#39;record&#39;. |
+| `_{TENANT_ID}` | De naamruimte `TENANT_ID` voor uw organisatie. Alle bronnen die door uw organisatie worden gemaakt, moeten deze eigenschap bevatten om conflicten met andere bronnen in de [!DNL Schema Registry] te voorkomen. |
+| `allOf` | Een lijst met bronnen waarvan de eigenschappen door de nieuwe klasse moeten worden overgeërfd. Een van de `$ref` -objecten in de array definieert het gedrag van de klasse. In dit voorbeeld overerft de klasse het gedrag &#39;record&#39;. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van de zojuist gemaakte klasse, inclusief de `$id`, `meta:altId`, en `version`. Deze drie waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry].
+Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van de nieuwe klasse, inclusief de `$id` , `meta:altId` en `version` . Deze drie waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry] .
 
 ```JSON
 {
@@ -388,17 +388,17 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die d
 }
 ```
 
-Een GET-aanvraag uitvoeren op [lijst alle klassen](#list) in de `tenant` container zou nu de klasse Property bevatten. U kunt ook [een opzoekverzoek (GET) uitvoeren](#lookup) URL-gecodeerd gebruiken `$id` om de nieuwe klasse rechtstreeks weer te geven.
+Het uitvoeren van een verzoek van de GET aan [ lijst alle klassen ](#list) in de `tenant` container zou nu de klasse van het Bezit omvatten. U kunt ook [ een raadpleging (GET) verzoek ](#lookup) uitvoeren gebruikend URL-Gecodeerd `$id` om de nieuwe klasse direct te bekijken.
 
 ## Een klasse bijwerken {#put}
 
-U kunt een volledige klasse door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een klasse door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die wanneer zouden worden vereist [een nieuwe klasse maken](#create) in een verzoek van de POST.
+U kunt een volledige klasse door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een klasse door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [ creërend een nieuwe klasse ](#create) in een verzoek van de POST.
 
 >[!NOTE]
 >
->Als u slechts een deel van een klasse wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [het bijwerken van een gedeelte van een klasse](#patch).
+>Als u slechts een deel van een klasse wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [ het bijwerken van een gedeelte van een klasse ](#patch).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /tenant/classes/{CLASS_ID}
@@ -406,13 +406,13 @@ PUT /tenant/classes/{CLASS_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CLASS_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de klasse die u opnieuw wilt schrijven. |
+| `{CLASS_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de klasse die u opnieuw wilt schrijven. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een bestaande klasse opnieuw geschreven, waarbij de klasse wordt gewijzigd `description` en de `title` van een van de velden.
+Met de volgende aanvraag wordt een bestaande klasse opnieuw geschreven, waarbij de waarden `description` en `title` van een van de velden worden gewijzigd.
 
 ```SHELL
 curl -X PUT \
@@ -461,7 +461,7 @@ curl -X PUT \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de bijgewerkte klasse.
 
@@ -529,13 +529,13 @@ Een geslaagde reactie retourneert de details van de bijgewerkte klasse.
 
 ## Een gedeelte van een klasse bijwerken {#patch}
 
-U kunt een deel van een klasse bijwerken door een verzoek van PATCH te gebruiken. De [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add`, `remove`, en `replace`. Voor meer informatie over JSON Patch raadpleegt u de [Handleiding voor API-basisbeginselen](../../landing/api-fundamentals.md#json-patch).
+U kunt een deel van een klasse bijwerken door een verzoek van PATCH te gebruiken. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Als u een volledige bron wilt vervangen door nieuwe waarden in plaats van afzonderlijke velden bij te werken, raadpleegt u de sectie over [het vervangen van een klasse die een verrichting van de PUT gebruikt](#put).
+>Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [ het vervangen van een klasse gebruikend een verrichting van de PUT ](#put).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /tenant/class/{CLASS_ID} 
@@ -543,15 +543,15 @@ PATCH /tenant/class/{CLASS_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CLASS_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van de klasse die u wilt bijwerken. |
+| `{CLASS_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de klasse die u wilt bijwerken. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met de onderstaande voorbeeldaanvraag wordt het `description` van een bestaande klasse, en `title` van een van de velden.
+In de onderstaande voorbeeldaanvraag worden de `description` van een bestaande klasse en de `title` van een van de velden bijgewerkt.
 
-De aanvraaginstantie heeft de vorm van een array, waarbij elk vermeld object een specifieke wijziging in een afzonderlijk veld vertegenwoordigt. Elk object bevat de uit te voeren bewerking (`op`), welk veld de bewerking moet worden uitgevoerd (`path`) en welke informatie in die operatie moet worden opgenomen (`value`).
+De aanvraaginstantie heeft de vorm van een array, waarbij elk vermeld object een specifieke wijziging in een afzonderlijk veld vertegenwoordigt. Elk voorwerp omvat uit te voeren verrichting (`op`), welk gebied de verrichting zou moeten worden uitgevoerd (`path`), en welke informatie in die verrichting (`value`) zou moeten worden omvat.
 
 ```SHELL
 curl -X PATCH \
@@ -567,9 +567,9 @@ curl -X PATCH \
       ]'
 ```
 
-**Antwoord**
+**Reactie**
 
-De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De `description` samen met de `title` van de `propertyId` veld.
+De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De `description` is samen met de `title` van het `propertyId` veld bijgewerkt.
 
 ```JSON
 {
@@ -637,7 +637,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De `descr
 
 Het kan soms nodig zijn om een klasse uit de Registratie van het Schema te verwijderen. Dit wordt gedaan door een verzoek van de DELETE met klassenidentiteitskaart uit te voeren die in de weg wordt verstrekt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /tenant/classes/{CLASS_ID}
@@ -645,7 +645,7 @@ DELETE /tenant/classes/{CLASS_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CLASS_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van de klasse die u wilt verwijderen. |
+| `{CLASS_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de klasse die u wilt verwijderen. |
 
 {style="table-layout:auto"}
 
@@ -660,8 +660,8 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
-U kunt de verwijdering bevestigen door een [opzoekverzoek (GET)](#lookup) voor de klasse. U moet een `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the class has been removed from the Schema Registry.
+U kunt de schrapping bevestigen door a [ raadpleging (GET) verzoek ](#lookup) voor de klasse te proberen. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat de klasse uit de schemaregistratie is verwijderd.

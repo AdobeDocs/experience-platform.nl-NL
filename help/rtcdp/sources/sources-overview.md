@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Bronnen in Real-time Customer Data Platform
 
-[!DNL Adobe Real-Time Customer Data Platform] staat u toe om gegevens uit externe bronnen in te voeren terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten. U kunt gegevens opnemen van verschillende bronnen, zoals Adobe-apps, cloudgebaseerde opslag, software van derden, uw CRM-systeem en meer.
+Met [!DNL Adobe Real-Time Customer Data Platform] kunt u gegevens uit externe bronnen invoeren en binnenkomende gegevens structureren, labelen en verbeteren met [!DNL Platform] -services. U kunt gegevens opnemen van verschillende bronnen, zoals Adobe-apps, cloudgebaseerde opslag, software van derden, uw CRM-systeem en meer.
 
-Lees voor een gedetailleerder overzicht van bronnen, waaronder een lijst met beschikbare bronnen en koppelingen naar zelfstudies de [documentatie bronnen](../../sources/home.md).
+Voor een meer gedetailleerd overzicht van bronnen, met inbegrip van een lijst van beschikbare bronnen en verbindingen aan leerprogramma&#39;s, gelieve de [ documentatie van bronnen ](../../sources/home.md) te lezen.

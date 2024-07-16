@@ -51,9 +51,9 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-Alternatief, kunnen de datasets ook voor profiel door Platform UI worden toegelaten. Voor meer informatie over het merken van een dataset zoals toegelaten voor profiel, zie [laat een dataset voor de documentatie van het Profiel van de Klant in real time toe](../../../catalog/datasets/user-guide.md#enable-profile).
+Alternatief, kunnen de datasets ook voor profiel door Platform UI worden toegelaten. Voor meer informatie bij het merken van een dataset zoals toegelaten voor profiel, zie [ een dataset voor de documentatie van het Profiel van de Klant in real time ](../../../catalog/datasets/user-guide.md#enable-profile) toelaten.
 
-In de onderstaande voorbeeldquery worden de `decile_table` dataset wordt gecreeerd met `id` als primaire identiteitskolom en heeft de naamruimte `IDFA`. Het heeft ook een veld met de naam `decile1Month` van het gegevenstype Map. De gemaakte tabel (`decile_table`) is ingeschakeld voor profiel.
+In de onderstaande voorbeeldquery wordt de `decile_table` dataset gemaakt met `id` als de primaire identiteitskolom en heeft deze de naamruimte `IDFA` . Het heeft ook een gebied genoemd `decile1Month` van het gegevenstype van de kaart. De gemaakte tabel (`decile_table`) is ingeschakeld voor het profiel.
 
 ```sql
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
@@ -69,13 +69,13 @@ Created Table DataSet Id
 (1 row)
 ```
 
-Gebruiken `label='PROFILE'` op `CREATE TABLE` bevel om een profiel-toegelaten dataset tot stand te brengen. De `upsert` mogelijkheid is standaard ingeschakeld. De `upsert` kan worden overschreven met behulp van de `ALTER` gebruiken, zoals in het onderstaande voorbeeld wordt getoond.
+Gebruik `label='PROFILE'` voor een `CREATE TABLE` -opdracht om een voor profielen geschikte gegevensset te maken. De functie `upsert` is standaard ingeschakeld. De functie `upsert` kan worden overschreven met de opdracht `ALTER` , zoals in het onderstaande voorbeeld wordt getoond.
 
 ```sql
 ALTER TABLE <your_table_name> DROP label upsert;
 ```
 
-Zie de syntaxisdocumentatie van SQl voor meer informatie over het gebruik van [ALTER TABLE](../../sql/syntax.md#alter-table) en [label als onderdeel van een CTAS-query](../../sql/syntax.md#create-table-as-select).
+Zie de SQl syntaxisdocumentatie voor meer informatie over het gebruik van [ VERANDERT het bevel van de LIJST ](../../sql/syntax.md#alter-table) en [ etiket als deel van een vraag CTAS ](../../sql/syntax.md#create-table-as-select).
 
 ## Construeert om met het beheren van afgeleide datasets door SQL te helpen
 
@@ -91,7 +91,7 @@ ALTER TABLE your_decile_table ADD label 'PROFILE';
 
 >[!NOTE]
 >
->Bij een geslaagde uitvoering van de `ALTER TABLE` bevel, keert de console terug `ALTER SUCCESS`.
+>Wanneer de opdracht `ALTER TABLE` met succes is uitgevoerd, retourneert de console `ALTER SUCCESS` .
 
 ### Een primaire identiteit toevoegen aan een bestaande gegevensset {#add-primary-identity}
 
@@ -107,11 +107,11 @@ Bijvoorbeeld:
 ALTER TABLE test1_dataset ADD CONSTRAINT PRIMARY KEY(id2) NAMESPACE 'IDFA';
 ```
 
-In het gegeven voorbeeld: `id2` is een bestaande kolom in `test1_dataset`.
+In het opgegeven voorbeeld is `id2` een bestaande kolom in `test1_dataset` .
 
 ### Een gegevensset voor profiel uitschakelen {#disable-dataset-for-profile}
 
-Als u uw lijst voor profielgebruik wilt onbruikbaar maken, moet u het bevel DROP gebruiken. Een voorbeeld-SQL-instructie die GEBRUIKT `DROP` is hieronder weergegeven.
+Als u uw lijst voor profielgebruik wilt onbruikbaar maken, moet u het bevel DROP gebruiken. Een voorbeeld van een SQL-instructie die USES `DROP` gebruikt, wordt hieronder weergegeven.
 
 ```sql
 ALTER TABLE table_name DROP LABEL 'PROFILE';
@@ -123,7 +123,7 @@ Bijvoorbeeld:
 ALTER TABLE decile_table DROP label 'PROFILE';
 ```
 
-Deze SQL-instructie biedt een efficiënte alternatieve methode voor het gebruik van een API-aanroep. Zie de documentatie over het [een dataset voor gebruik met Real-Time CDP onbruikbaar maken gebruikend datasets API](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
+Deze SQL-instructie biedt een efficiënte alternatieve methode voor het gebruik van een API-aanroep. Voor meer informatie, zie de documentatie over hoe te [ een dataset voor gebruik met Real-Time CDP onbruikbaar maken gebruikend datasets API ](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
 
 ### De functionaliteit voor bijwerken en invoegen van uw gegevensset toestaan {#enable-upsert-functionality-for-dataset}
 
@@ -141,7 +141,7 @@ Bijvoorbeeld:
 ALTER TABLE table_with_a_decile ADD label 'UPSERT';
 ```
 
-Deze SQL-instructie biedt een efficiënte alternatieve methode voor het gebruik van een API-aanroep. Zie de documentatie over het [een gegevensset inschakelen voor gebruik met Real-Time CDP en UPSERT met behulp van de API voor gegevenssets](../../../catalog/datasets/enable-upsert.md#enable-the-dataset).
+Deze SQL-instructie biedt een efficiënte alternatieve methode voor het gebruik van een API-aanroep. Voor meer informatie, zie de documentatie over hoe te [ een dataset voor gebruik met Real-Time CDP en UPSERT toelaten gebruikend datasets API ](../../../catalog/datasets/enable-upsert.md#enable-the-dataset).
 
 ### De update- en invoegfunctionaliteit voor uw gegevensset uitschakelen {#disable-upsert-functionality-for-dataset}
 
@@ -161,7 +161,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 
 ### Aanvullende tabelinformatie voor elke tabel tonen {#show-labels-for-tables}
 
-Aanvullende metagegevens worden bewaard voor gegevenssets waarvoor profielen zijn ingeschakeld. Gebruik de `SHOW TABLES` opdracht om een extra `labels` kolom die informatie over om het even welke etiketten verstrekt verbonden aan lijsten.
+Aanvullende metagegevens worden bewaard voor gegevenssets waarvoor profielen zijn ingeschakeld. Gebruik de opdracht `SHOW TABLES` om een extra `labels` -kolom weer te geven die informatie bevat over eventuele labels die aan tabellen zijn gekoppeld.
 
 Een voorbeeld van de output van dit bevel kan hieronder worden gezien:
 
@@ -174,7 +174,7 @@ Een voorbeeld van de output van dit bevel kan hieronder worden gezien:
 (3 rows)
 ```
 
-Uit het voorbeeld blijkt dat `table_with_a_decile` is ingeschakeld voor profiel en toegepast met labels zoals [&#39;UPSERT&#39;](#enable-upsert-functionality-for-dataset), [&quot;PROFIEL&quot;](#enable-existing-dataset-for-profile) zoals eerder beschreven.
+U kunt van het voorbeeld zien dat `table_with_a_decile` voor profiel is toegelaten en met etiketten zoals [ &quot;UPSERT&quot;](#enable-upsert-functionality-for-dataset), [ &quot;PROFILE&quot;](#enable-existing-dataset-for-profile) zoals vroeger beschreven.
 
 ### Een veldgroep met SQL maken
 
@@ -188,8 +188,8 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 
 >[!IMPORTANT]
 >
->Het maken van veldgroepen via SQL mislukt als de `label` markering wordt niet opgegeven in de instructie of als de veldgroep al bestaat.
->Zorg ervoor dat de query een `IF NOT EXISTS` component om te voorkomen dat de query mislukt omdat de veldgroep al bestaat.
+>Het maken van veldgroepen via SQL mislukt als de markering `label` niet wordt opgegeven in de instructie of als de veldgroep al bestaat.
+>Zorg ervoor dat de query een `IF NOT EXISTS` -component bevat om te voorkomen dat de query mislukt omdat de veldgroep al bestaat.
 
 Een echt voorbeeld lijkt misschien op het onderstaande voorbeeld.
 
@@ -197,13 +197,13 @@ Een echt voorbeeld lijkt misschien op het onderstaande voorbeeld.
 CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, decile3Month map<text, integer>, decile6Month map<text, integer>, decile9Month map<text, integer>, decile12Month map<text, integer>, decilelietime map<text, integer>) WITH (LABEL-'PROFILE');
 ```
 
-Als deze instructie met succes wordt uitgevoerd, wordt de gemaakte veldgroep-id geretourneerd. Bijvoorbeeld `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
+Als deze instructie met succes wordt uitgevoerd, wordt de gemaakte veldgroep-id geretourneerd. Bijvoorbeeld `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525` .
 
-Zie de documentatie over hoe u [een nieuwe veldgroep maken in de Schema-editor](../../../xdm/ui/resources/field-groups.md#create) of door [schema-register-API](../../../xdm/api/field-groups.md#create) voor meer informatie over alternatieve methoden.
+Zie de documentatie op hoe te [ een nieuwe gebiedsgroep in de Redacteur van het Schema ](../../../xdm/ui/resources/field-groups.md#create) tot stand brengen of het gebruiken van de [ schemaregistratie API ](../../../xdm/api/field-groups.md#create) voor meer informatie over alternatieve methodes.
 
 ### Een veldgroep neerzetten
 
-Soms is het nodig een veldgroep uit het schemaregister te verwijderen. Dit wordt gedaan door uit te voeren `DROP FIELDGROUP` gebruiken met de veldgroep-id.
+Soms is het nodig een veldgroep uit het schemaregister te verwijderen. Dit wordt gedaan door het bevel `DROP FIELDGROUP` met gebiedsgroep identiteitskaart uit te voeren
 
 ```sql
 DROP FIELDGROUP [IF EXISTS] <your_field_group_id>;
@@ -217,11 +217,11 @@ DROP FIELDGROUP field_group_for_test123;
 
 >[!IMPORTANT]
 >
->Het verwijderen van een veldgroep via SQL mislukt als de veldgroep niet bestaat. Zorg ervoor dat de instructie een `IF EXISTS` clausule om de vraag te vermijden ontbreekt.
+>Het verwijderen van een veldgroep via SQL mislukt als de veldgroep niet bestaat. Zorg ervoor dat de instructie een `IF EXISTS` -component bevat om mislukken van de query te voorkomen.
 
 ### Alle veldgroepnamen en id&#39;s voor uw tabellen weergeven
 
-De `SHOW FIELDGROUPS` het bevel keert een lijst terug die de naam, fieldGroupId, en eigenaar van de lijsten bevat.
+De opdracht `SHOW FIELDGROUPS` retourneert een tabel die de naam, veldgroupId en eigenaar van de tabellen bevat.
 
 Een voorbeeld van de output van dit bevel kan hieronder worden gezien:
 
@@ -237,4 +237,4 @@ Een voorbeeld van de output van dit bevel kan hieronder worden gezien:
 
 ## Volgende stappen
 
-Na het lezen van dit document, hebt u een beter inzicht in hoe te om SQL te gebruiken om een profiel en upsert-Toegelaten dataset tot stand te brengen die op afgeleide datasets wordt gebaseerd. U bent nu klaar om deze dataset met de werkschema&#39;s van de partijopname te gebruiken om updates aan uw profielgegevens te maken. Als u meer wilt weten over het opnemen van gegevens in Adobe Experience Platform, leest u eerst de [gegevensinvoer - overzicht](../../../ingestion/home.md).
+Na het lezen van dit document, hebt u een beter inzicht in hoe te om SQL te gebruiken om een profiel en upsert-Toegelaten dataset tot stand te brengen die op afgeleide datasets wordt gebaseerd. U bent nu klaar om deze dataset met de werkschema&#39;s van de partijopname te gebruiken om updates aan uw profielgegevens te maken. Om meer over het opnemen van gegevens in Adobe Experience Platform te leren, gelieve te beginnen door het [ overzicht van de gegevensinvoer te lezen ](../../../ingestion/home.md).

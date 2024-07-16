@@ -6,7 +6,7 @@ description: In dit document worden antwoorden gegeven op veelgestelde vragen ov
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1631'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ In dit document worden antwoorden gegeven op veelgestelde vragen over ondersteun
 
 >[!NOTE]
 >
->Definities voor de verschillende termen die in dit document worden gebruikt, zijn te vinden in de [terminologie van de privacyverordening](terminology.md) hulplijn.
+>De definities voor de diverse termijnen die in dit document worden gebruikt kunnen in de [ terminologie van de privacyverordening ](terminology.md) gids worden gevonden.
 
 ## Algemene vragen
 
@@ -25,7 +25,7 @@ De volgende vragen hebben betrekking op alle privacyregels die door het Experien
 
 ### Welke gevolgen hebben de ondersteunde privacyregels?
 
-De [privacyregels ondersteund door Experience Cloud](./overview.md) van toepassing zijn op alle organisaties die de persoonsgegevens van burgers opslaan en verwerken binnen de respectieve rechtsgebieden van de verordeningen, ongeacht de geografische locatie van de organisatie.
+De [ privacyverordeningen die door Experience Cloud ](./overview.md) worden gesteund zijn op alle organisaties van toepassing die de persoonsgegevens van burgers opslaan en verwerken binnen de respectieve jurisdicties van verordeningen, ongeacht de geografische plaats van de organisatie.
 
 ### Wat zijn persoonlijke gegevens?
 
@@ -51,15 +51,15 @@ Hoewel de privacyregels een groot aantal persoonlijke gegevens bestrijken, wordt
 
 ### Wat is het verschil tussen een gegevenscontroller en een gegevensverwerker?
 
-A **gegevenscontroller** de entiteit is die het doel, de voorwaarden en de middelen voor de verwerking van persoonsgegevens bepaalt, terwijl de **gegevensverwerker** een entiteit is die namens de voor de verwerking verantwoordelijke persoonsgegevens verwerkt.
+A **gegevenscontrolemechanisme** is de entiteit die de doeleinden, de voorwaarden en de middelen bepaalt om persoonsgegevens te verwerken, terwijl de **gegevensverwerker** een entiteit is die persoonlijke gegevens namens het gegevenscontrolemechanisme verwerkt.
 
-A **gegevenscontroller** de persoon of organisatie is die de bevoegdheid en verantwoordelijkheid heeft om besluiten te nemen met betrekking tot het verzamelen, gebruiken of openbaar maken van persoonsgegevens. A **gegevensverwerker** de persoon of organisatie is die werkzaam is met betrekking tot het verzamelen, gebruiken of openbaar maken van de persoonsgegevens en de leiding van de verantwoordelijke voor de verwerking.
+A **gegevenscontrolemechanisme** is de persoon of de organisatie die de macht en de verantwoordelijkheid heeft om besluiten betreffende de inzameling, het gebruik, of de bekendmaking van persoonsgegevens te nemen. A **gegevensverwerker** is de persoon of de organisatie die met betrekking tot de inzameling, het gebruik, of de bekendmaking van de persoonlijke gegevens en de richting van het gegevenscontrolemechanisme werkt.
 
 ### Wat is het verschil tussen expliciete en ondubbelzinnige toestemming van de betrokkene?
 
-**Expliciete toestemming** verwijst naar een toestemmingsnorm die een specifieke, geïnformeerde en ondubbelzinnige aanduiding van de wensen van de betrokkene in mondelinge of schriftelijke vorm inhoudt. Eenvoudig gezegd, de betrokkene moet letterlijk en expliciet &quot;Ik geef toestemming&quot; of &quot;Ik ga ermee akkoord&quot; zeggen om de toestemming als expliciet te beschouwen. Bovendien moet het zo gemakkelijk zijn om de toestemming in te trekken als om ze te geven.
+**Expliciete toestemming** verwijst naar een norm van toestemming die een specifieke, geïnformeerde en ondubbelzinnige aanduiding van de wensen van de betrokkene in mondelinge of geschreven vorm impliceert. Eenvoudig gezegd, de betrokkene moet letterlijk en expliciet &quot;Ik geef toestemming&quot; of &quot;Ik ga ermee akkoord&quot; zeggen om de toestemming als expliciet te beschouwen. Bovendien moet het zo gemakkelijk zijn om de toestemming in te trekken als om ze te geven.
 
-**ondubbelzinnige (impliciete) toestemming** verwijst naar toestemming die niet expliciet door de betrokkene is gegeven, maar niettemin ondubbelzinnig van aard is. Tijdens het aanmeldingsproces voor een website van een bedrijf wordt bijvoorbeeld gemeld dat de betrokkene, door een e-mailadres op te geven, instemt met het ontvangen van e-mails over speciale aanbiedingen. Indien de betrokkene de kennisgeving leest, is de positieve handeling van het invoeren van zijn e-mail voldoende om als ondubbelzinnige toestemming te worden beschouwd.
+**ondubbelzinnige (geïmpliceerde) toestemming** verwijst naar toestemming die niet uitdrukkelijk door de gegevenssubject werd gegeven, maar niettemin ondubbelzinnig van aard is. Tijdens het aanmeldingsproces voor een website van een bedrijf wordt bijvoorbeeld gemeld dat de betrokkene, door een e-mailadres op te geven, instemt met het ontvangen van e-mails over speciale aanbiedingen. Indien de betrokkene de kennisgeving leest, is de positieve handeling van het invoeren van zijn e-mail voldoende om als ondubbelzinnige toestemming te worden beschouwd.
 
 Voor veel verordeningen zoals de GDPR is uitdrukkelijke toestemming vereist voor de verwerking van gevoelige persoonsgegevens, waarbij niets anders dan &quot;opt in&quot; voldoende is. Voor niet-gevoelige gegevens is echter ondubbelzinnige (impliciete) toestemming aanvaardbaar.
 
@@ -87,9 +87,9 @@ Ervan uitgaande dat het bedrijf persoonlijke informatie heeft verzameld en dat h
 | Verordening | Te reageren tijdsbestek | Notities |
 | --- | --- | --- |
 | CCPA (Californië) | 45 dagen | |
-| GDPR (EU) | dertig dagen | Indien het verzoek ingewikkeld is of meerdere verzoeken van dezelfde betrokkene zijn ingediend, kan het verzoek worden verlengd tot 60 dagen. |
-| LGPD (Brazilië) | 15 | |
-| PDPA (Thailand) | dertig dagen | Als een onderneming niet binnen het nalevingsvenster op het verzoek van een betrokkene kan reageren, krijgt de onderneming een extra termijn van 30 dagen vanaf de datum waarop zij het verzoek om schriftelijk aan de betrokkene te antwoorden niet kon inwilligen. |
+| GDPR (EU) | 30 dagen | Indien het verzoek ingewikkeld is of meerdere verzoeken van dezelfde betrokkene zijn ingediend, kan het verzoek worden verlengd tot 60 dagen. |
+| LGPD (Brazilië) | 15 dagen | |
+| PDPA (Thailand) | 30 dagen | Als een onderneming niet binnen het nalevingsvenster op het verzoek van een betrokkene kan reageren, krijgt de onderneming een extra termijn van 30 dagen vanaf de datum waarop zij het verzoek om schriftelijk aan de betrokkene te antwoorden niet kon inwilligen. |
 
 <!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->
 
@@ -107,7 +107,7 @@ Als de gegevensbewerkingen van uw organisatie onder de rechtsbevoegdheid van de 
 
 ### Hoe kan ik verzoeken om privacy van consumenten ondersteunen als ik gegevens bijhoud die onder privacyregels vallen?
 
-Zodra u de noodzakelijke stappen hebt genomen om consumenten te verifiëren die binnen de toepasselijke wettelijke jurisdicties vallen, staat Adobe Experience Platform Privacy Service u toe om verzoeken van de consument om de privacy van de consument aan compatibele toepassingen van de Experience Cloud te voorleggen. Zie de [[!DNL Privacy Service] overzicht](../home.md) voor meer informatie . Voor informatie over hoe uw specifieke Experience Cloud toepassingen privacyverzoeken kunnen naleven, raadpleegt u de handleiding op [Privacy Service- en Experience Cloud-toepassingen](../experience-cloud-apps.md).
+Zodra u de noodzakelijke stappen hebt genomen om consumenten te verifiëren die binnen de toepasselijke wettelijke jurisdicties vallen, staat Adobe Experience Platform Privacy Service u toe om verzoeken van de consument om de privacy van de consument aan compatibele toepassingen van de Experience Cloud te voorleggen. Zie het [[!DNL Privacy Service]  overzicht ](../home.md) voor meer informatie. Voor informatie over hoe uw bijzondere toepassingen van het Experience Cloud privacyverzoeken kunnen respecteren, gelieve te verwijzen naar de gids op [ Privacy Service en de toepassingen van het Experience Cloud ](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
@@ -121,8 +121,8 @@ De volgende vragen hebben specifiek betrekking op de CCPA.
 
 Zoals bepaald door CCPA, zijn de volgende rollen op Adobe en zijn klanten van toepassing:
 
-* De klanten van de Adobe (de partij die om de inzameling en het gebruik van persoonlijke informatie van de ingezetenen van Californië verzoekt) zouden als een **Zakelijk**.
-* Adobe zou in zijn rol van dienstverrichting als een **Serviceprovider**.
+* De klanten van de Adobe (de partij die om de inzameling en het gebruik van persoonlijke informatie van de ingezetenen van Californië verzoekt) zouden als a **Bedrijfs** worden beschouwd.
+* Adobe, in zijn rol om de dienst te verlenen, zou als a **Dienstverlener** worden beschouwd.
 
 Als dienstverlener, verzamelt en verwerkt de Adobe persoonlijke informatie namens de Zaken en is contractueel gebonden om die informatie slechts voor de specifieke doeleinden te gebruiken die in de overeenkomst worden vermeld.
 
@@ -142,7 +142,7 @@ De volgende vragen hebben specifiek betrekking op de GDPR.
 
 ### Wat is het verschil tussen een verordening en een richtlijn?
 
-A **verordening** is een bindend wetgevingsbesluit en moet in de gehele EU worden toegepast. A **richtlijn** Het is een wetgevingshandeling waarin een doel wordt vastgesteld dat alle EU-landen moeten bereiken, maar het is aan de afzonderlijke landen om zelf te beslissen hoe ze dat willen.
+A **regeling** is een bindende wetgevingshandeling en moet in zijn geheel in de EU worden toegepast. A **richtlijn** is een wetgevend besluit dat een doel bepaalt dat alle EU landen moeten bereiken, maar het is aan de individuele landen om te beslissen hoe.
 
 Het is belangrijk om op te merken dat de GDPR een verordening is, in tegenstelling tot de eerdere wetgeving (de richtlijn gegevensbescherming), die een richtlijn is.
 

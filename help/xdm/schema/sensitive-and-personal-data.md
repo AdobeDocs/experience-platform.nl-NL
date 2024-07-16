@@ -48,10 +48,10 @@ Het platform staat u toe om uw eigen groepen van het douanegebied en gegevenstyp
 
 >[!IMPORTANT]
 >
->SPI en PII mogen alleen worden opgeslagen in de [Afzonderlijk XDM-profiel](../classes/individual-profile.md) en [XDM ExperienceEvent](../classes/experienceevent.md) klassen. Sla SPI en PII niet op in een andere aangepaste of standaard XDM-klasse, zoals aanbevolen procedures voor het verwijderen van gegevens en voor privacy- en beheerdoeleinden.
+>SPI en PII zouden slechts in de [ individuele Profiel XDM ](../classes/individual-profile.md) en [ XDM ExperienceEvent ](../classes/experienceevent.md) klassen moeten worden bewaard. Sla SPI en PII niet op in een andere aangepaste of standaard XDM-klasse, zoals aanbevolen procedures voor het verwijderen van gegevens en voor privacy- en beheerdoeleinden.
 
 ## Volgende stappen
 
-Dit document behandelde zeer belangrijke overwegingen betreffende gevoelige en persoonlijke gegevens in XDM. Voor meer informatie over hoe te om uw schema&#39;s te modelleren om uw zaken van het bedrijfsgebruik het best te ontmoeten, verwijs naar de gids op [best practices voor gegevensmodellering](./best-practices.md).
+Dit document behandelde zeer belangrijke overwegingen betreffende gevoelige en persoonlijke gegevens in XDM. Voor meer informatie over hoe te om uw schema&#39;s te modelleren om uw zaken van het bedrijfsgebruik het best te ontmoeten, verwijs naar de gids op [ beste praktijken voor gegevens modellering ](./best-practices.md).
 
-Voor meer informatie, gegevensbeheer en privacy mogelijkheden in Experience Platform, zie het overzicht over [bestuur, privacy en veiligheid](../../landing/governance-privacy-security/overview.md).
+Voor meer informatiegegevensbeheer en privacymogelijkheden in Experience Platform, zie het overzicht over [ bestuur, privacy, en veiligheid ](../../landing/governance-privacy-security/overview.md).

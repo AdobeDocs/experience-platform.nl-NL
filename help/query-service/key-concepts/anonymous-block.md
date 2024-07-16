@@ -15,12 +15,12 @@ Adobe Experience Platform Query Service ondersteunt anonieme blokken. Met de fun
 
 De anonieme blokeigenschap is een efficiënte manier om een opeenvolging van verrichtingen of vragen uit te voeren. De keten van vragen binnen het blok kan als malplaatje worden bewaard en gepland om bij een bepaald tijd of interval te lopen. Deze vragen kunnen worden gebruikt om gegevens te schrijven en toe te voegen om een nieuwe gegevensreeks tot stand te brengen en typisch gebruikt waar u een gebiedsdeel hebt.
 
-De tabel bevat een uitsplitsing van de belangrijkste secties van het blok: uitvoering en afhandeling van uitzonderingen. De secties worden gedefinieerd door de trefwoorden `BEGIN`, `END`, en `EXCEPTION`.
+De tabel bevat een uitsplitsing van de belangrijkste secties van het blok: uitvoering en afhandeling van uitzonderingen. De secties worden gedefinieerd door de trefwoorden `BEGIN` , `END` en `EXCEPTION` .
 
 | sectie | beschrijving |
 |---|---|
-| executie | Een uitvoerbare sectie begint met het sleutelwoord `BEGIN` en eindigt met het trefwoord `END`. Elke set instructies die in het `BEGIN` en `END` de sleutelwoorden zullen in opeenvolging worden uitgevoerd en ervoor zorgen dat de verdere vragen niet zullen uitvoeren tot de vorige vraag in de opeenvolging is voltooid. |
-| uitzonderingsbehandeling | De optionele sectie voor het afhandelen van uitzonderingen begint met het trefwoord `EXCEPTION`. Het bevat de code om uitzonderingen af te vangen en te behandelen als om het even welke SQL verklaringen in de uitvoeringssectie ontbreken. Als om het even welke vragen ontbreken, wordt het volledige blok tegengehouden. |
+| executie | Een uitvoerbare sectie begint met het trefwoord `BEGIN` en eindigt met het trefwoord `END` . Elke set instructies die in de trefwoorden `BEGIN` en `END` zijn opgenomen, wordt op volgorde uitgevoerd en zorgt ervoor dat volgende query&#39;s pas worden uitgevoerd nadat de vorige query in de reeks is voltooid. |
+| uitzonderingsbehandeling | De optionele sectie voor het afhandelen van uitzonderingen begint met het trefwoord `EXCEPTION` . Het bevat de code om uitzonderingen af te vangen en te behandelen als om het even welke SQL verklaringen in de uitvoeringssectie ontbreken. Als om het even welke vragen ontbreken, wordt het volledige blok tegengehouden. |
 
 Er moet op worden gewezen dat een blok een uitvoerbare verklaring is en daarom binnen andere blokken kan worden genesteld.
 
@@ -30,7 +30,7 @@ Er moet op worden gewezen dat een blok een uitvoerbare verklaring is en daarom b
 
 ## Voorbeeld van anonieme vragen over blokken
 
-De volgende query toont een voorbeeld van het koppelen van SQL-instructies. Zie de [SQL-syntaxis in Query Service](../sql/syntax.md) voor meer informatie over de gebruikte SQL-syntaxis.
+De volgende query toont een voorbeeld van het koppelen van SQL-instructies. Zie de [ SQL syntaxis in het document van de Dienst van de Vraag ](../sql/syntax.md) voor meer informatie over om het even welke SQL gebruikte syntaxis.
 
 ```SQL
 $$ BEGIN
@@ -42,11 +42,11 @@ END
 $$;
 ```
 
-In het onderstaande voorbeeld: `SET` blijft het resultaat van een `SELECT` query in de opgegeven lokale variabele. De variabele is scoped aan het anonieme blok.
+In het onderstaande voorbeeld blijft `SET` het resultaat van een `SELECT` -query in de opgegeven lokale variabele behouden. De variabele is scoped aan het anonieme blok.
 
 De momentopname-id wordt opgeslagen als een lokale variabele (`@current_sid`). Het wordt dan gebruikt in de volgende vraag om resultaten terug te keren die op SNAPSHOT van de zelfde dataset/de lijst worden gebaseerd.
 
-Een gegevensbestandmomentopname is een read-only, statische mening van een SQL gegevensbestand van de Server. Voor meer [informatie over de opname-clausule](../sql/syntax.md#SNAPSHOT-clause) zie de SQL syntaxisdocumentatie.
+Een gegevensbestandmomentopname is een read-only, statische mening van een SQL gegevensbestand van de Server. Voor meer [ informatie over de momentopnameclausule ](../sql/syntax.md#SNAPSHOT-clause) zie de SQL syntaxisdocumentatie.
 
 ```SQL
 $$ BEGIN                                             
@@ -60,7 +60,7 @@ $$;
 
 Bepaalde derdecliënten kunnen een afzonderlijke herkenningsteken vóór en na een SQL blok vereisen om erop te wijzen dat een deel van het manuscript als één enkele verklaring zou moeten worden behandeld. Als u een foutenmelding ontvangt wanneer het gebruiken van de Dienst van de Vraag met een derdecliënt, zou u naar de documentatie van de derdecliënt betreffende het gebruik van een SQL blok moeten verwijzen.
 
-Bijvoorbeeld: **DbVisualizer** vereist dat het scheidingsteken de enige tekst op de regel moet zijn. In DbVisualizer, is de standaardwaarde voor Begin Identifier `--/` en voor de End Identifier is het `/`. Een voorbeeld van een anoniem blok in DbVisualizer is hieronder te zien:
+Bijvoorbeeld, **DbVisualizer** vereist dat het scheidingsteken de enige tekst op de lijn moet zijn. In DbVisualizer, is de standaardwaarde voor Begin Identifier `--/` en voor het Eind - Herkenningsteken is het `/`. Een voorbeeld van een anoniem blok in DbVisualizer is hieronder te zien:
 
 ```SQL
 --/
@@ -74,10 +74,10 @@ $$;
 /
 ```
 
-Voor DbVisualizer in het bijzonder, is er ook een optie in UI aan &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Zie de [DbVisualizer-documentatie](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) voor meer informatie .
+Voor DbVisualizer in het bijzonder, is er ook een optie in UI aan &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Zie de [ documentatie DbVisualizer ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) voor meer informatie.
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu een duidelijk inzicht in anonieme blokken en hoe ze gestructureerd zijn. Lees de [handleiding voor query-uitvoering](../best-practices/writing-queries.md) voor meer informatie over het schrijven van vragen.
+Door dit document te lezen, hebt u nu een duidelijk inzicht in anonieme blokken en hoe ze gestructureerd zijn. Gelieve te lezen de [ gids van de vraaguitvoering ](../best-practices/writing-queries.md) voor meer informatie bij het schrijven van vragen.
 
-U moet ook lezen over [hoe anonieme blokken met het patroon van het stijgende ladingsontwerp worden gebruikt](./incremental-load.md) om query-efficiëntie te verhogen.
+U zou ook over [ moeten lezen hoe de anonieme blokken met het stijgende patroon van het ladingsontwerp ](./incremental-load.md) worden gebruikt om vraagefficiency te verhogen.

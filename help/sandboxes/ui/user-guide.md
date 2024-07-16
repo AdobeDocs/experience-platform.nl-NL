@@ -17,23 +17,23 @@ Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met 
 
 ## Sandboxen weergeven
 
-Selecteer in de interface Platform de optie **[!UICONTROL Sandboxes]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Browse]** om de [!UICONTROL Sandboxes] dashboard. In het dashboard worden alle beschikbare sandboxen voor uw organisatie vermeld, inclusief de respectievelijke typen (productie of ontwikkeling).
+Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sandboxes]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Browse]** om het dashboard [!UICONTROL Sandboxes] te openen. In het dashboard worden alle beschikbare sandboxen voor uw organisatie vermeld, inclusief de respectievelijke typen (productie of ontwikkeling).
 
-![weergave-sandboxen](../images/ui/view-sandboxes.png)
+![ mening-zandbakken ](../images/ui/view-sandboxes.png)
 
 ## Schakelen tussen sandboxen
 
 De sandboxindicator bevindt zich in de bovenste header van de platforminterface en geeft de titel van de sandbox weer waarin u zich momenteel bevindt, het gebied en het type van de sandbox.
 
-![sandbox-indicator](../images/ui/sandbox-indicator.png)
+![ zandbak-indicator ](../images/ui/sandbox-indicator.png)
 
 Als u wilt schakelen tussen sandboxen, selecteert u de sandboxindicator en selecteert u de gewenste sandbox in de vervolgkeuzelijst.
 
-![switch-interface](../images/ui/switcher-interface.png)
+![ schakelaar-interface ](../images/ui/switcher-interface.png)
 
 Als een sandbox is geselecteerd, wordt het scherm vernieuwd en wordt de door u geselecteerde sandbox bijgewerkt.
 
-![sandbox-changed](../images/ui/sandbox-switched.png)
+![ zandbak-geschakelde ](../images/ui/sandbox-switched.png)
 
 ## Een nieuwe sandbox maken {#create}
 
@@ -49,37 +49,37 @@ Als een sandbox is geselecteerd, wordt het scherm vernieuwd en wordt de door u g
 
 >[!NOTE]
 >
->Voor het maken van een nieuwe sandbox moet u de sandbox toevoegen aan een rol in [[!UICONTROL Permissions]](../../access-control/abac/ui/permissions.md) voordat u het kunt gaan gebruiken. Als u wilt weten hoe u een sandbox voor een rol instelt, raadpleegt u de [sandboxen beheren voor een rol](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) documentatie.
+>Wanneer u een nieuwe sandbox wilt maken, moet u deze toevoegen aan een rol in [[!UICONTROL Permissions]](../../access-control/abac/ui/permissions.md) voordat u deze kunt gebruiken. Leren hoe te om een zandbak voor een rol te verstrekken, verwijs naar [ het leiden zandbakken voor een rol ](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) documentatie.
 
 Gebruik de volgende video voor een snel overzicht van het gebruik van sandboxen in Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-Als u een nieuwe sandbox wilt maken, selecteert u **[!UICONTROL Create sandbox]** rechtsboven in het scherm.
+Als u een nieuwe sandbox wilt maken, selecteert u **[!UICONTROL Create sandbox]** in de rechterbovenhoek van het scherm.
 
-![aanmaken-sandbox](../images/ui/create-sandbox.png)
+![ creeer-zandbak ](../images/ui/create-sandbox.png)
 
-De **[!UICONTROL Create sandbox]** wordt weergegeven. Als u een ontwikkelingssandbox maakt, selecteert u **[!UICONTROL Development]** in het vervolgkeuzevenster. Als u een nieuwe productiesandbox wilt maken, selecteert u **[!UICONTROL Production]**.
+Het dialoogvenster **[!UICONTROL Create sandbox]** wordt weergegeven. Als u een ontwikkelingssandbox maakt, selecteert u **[!UICONTROL Development]** in het vervolgkeuzevenster. Selecteer **[!UICONTROL Production]** als u een nieuwe productiesandbox wilt maken.
 
-![sandbox-type](../images/ui/sandbox-type.png)
+![ zandbak-type ](../images/ui/sandbox-type.png)
 
 Nadat u het type hebt geselecteerd, geeft u de sandbox een naam en een titel. De titel moet leesbaar zijn en moet beschrijvend genoeg zijn om gemakkelijk te kunnen worden herkend. De naam van de sandbox is een id in kleine letters voor gebruik in API-aanroepen en moet daarom uniek en beknopt zijn. De naam van de sandbox moet beginnen met een letter, maximaal 256 tekens bevatten en mag alleen bestaan uit alfanumerieke tekens en afbreekstreepjes (-).
 
-Selecteer **[!UICONTROL Create]**.
+Selecteer **[!UICONTROL Create]** als u klaar bent.
 
-![sandbox-info](../images/ui/sandbox-info.png)
+![ zandbak-info ](../images/ui/sandbox-info.png)
 
-Als u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe sandbox in het dialoogvenster **[!UICONTROL Sandboxes]** dashboard met de status &quot;[!UICONTROL Creating]&quot;. Nieuwe sandboxen nemen ongeveer 30 seconden in beslag om te worden ingericht door het systeem, waarna hun status verandert in &quot;[!UICONTROL Active]&quot;.
+Nadat u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe sandbox in het **[!UICONTROL Sandboxes]** -dashboard met de status &quot;[!UICONTROL Creating]&quot;. De nieuwe zandbakken nemen ongeveer 30 seconden in om door het systeem worden provisioned, waarna hun status in &quot;[!UICONTROL Active]&quot;verandert.
 
-![new-sandbox](../images/ui/new-sandbox.png)
+![ nieuw-zandbak ](../images/ui/new-sandbox.png)
 
 ## Een sandbox opnieuw instellen
 
 >[!WARNING]
 >
 >Hieronder volgt een lijst met uitzonderingen die kunnen voorkomen dat u de standaardproductiessandbox of een door de gebruiker gemaakte productiesandbox opnieuw instelt:
->* De standaardproductiesandbox kan niet opnieuw worden ingesteld als de identiteitsgrafiek die in de sandbox wordt gehost, ook door Adobe Analytics wordt gebruikt voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=nl) gebruiken.
->* De standaardproductiesandbox kan niet opnieuw worden ingesteld als de identiteitsgrafiek die in de sandbox wordt gehost, ook door Adobe Audience Manager wordt gebruikt voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl).
+>* De standaardproductiestandaard kan niet worden teruggesteld als de identiteitsgrafiek die in de zandbak wordt ontvangen ook door Adobe Analytics voor de [ eigenschap van de Analyse van het Intern Apparaat (CDA) ](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=nl) wordt gebruikt.
+>* De standaardproductiestandaard kan niet worden teruggesteld als de identiteitsgrafiek die in de zandbak wordt ontvangen ook door Adobe Audience Manager voor [ Mensen Gebaseerde Doelen (PBD) ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl) wordt gebruikt.
 >* De standaardproductiefandbox kan niet worden opnieuw ingesteld als het gegevens voor zowel eigenschappen CDA als PBD bevat.
 >* Een door de gebruiker gemaakte productiesandbox die wordt gebruikt voor bidirectioneel segmentdelen met Adobe Audience Manager of Audience Core Service kan na een waarschuwingsbericht worden hersteld.
 >* Voordat u een sandbox-reset start, moet u de composities handmatig verwijderen om ervoor te zorgen dat de bijbehorende publieksgegevens op de juiste wijze worden opgeschoond.
@@ -88,15 +88,15 @@ Als u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe san
 
 De compositie van het publiek is momenteel niet geïntegreerd met de functie voor het opnieuw instellen van de sandbox, zodat het publiek handmatig moet worden verwijderd voordat de sandbox opnieuw wordt ingesteld.
 
-Selecteren **[!UICONTROL Audiences]** van de linkernavigatie en selecteer dan **[!UICONTROL Compositions]**.
+Selecteer **[!UICONTROL Audiences]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Compositions]** .
 
-![De [!UICONTROL Compositions] in de [!UICONTROL Audiences] werkruimte.](../images/ui/audiences.png)
+![ het [!UICONTROL Compositions] lusje in de [!UICONTROL Audiences] werkruimte.](../images/ui/audiences.png)
 
-Selecteer vervolgens de ellips (`...`) naast de eerste doelgroep en selecteer vervolgens **[!UICONTROL Delete]**.
+Selecteer vervolgens de ellips (`...`) naast het eerste publiek en selecteer **[!UICONTROL Delete]** .
 
-![Het publieksmenu markeert de [!UICONTROL Delete] -optie.](../images/ui/delete-composition.png)
+![ het publieksmenu dat de [!UICONTROL Delete] optie benadrukt.](../images/ui/delete-composition.png)
 
-Er wordt een bevestiging van een geslaagde verwijdering weergegeven en u wordt teruggestuurd naar de **[!UICONTROL Compositions]** tab.
+Er wordt een bevestiging van een geslaagde verwijdering weergegeven en u wordt teruggestuurd naar het tabblad **[!UICONTROL Compositions]** .
 
 Herhaal bovenstaande stappen met al uw composities. Hiermee verwijdert u alle soorten publiek uit het overzicht van het publiek. Wanneer alle soorten publiek zijn verwijderd, kunt u de sandbox opnieuw instellen.
 
@@ -104,38 +104,38 @@ Herhaal bovenstaande stappen met al uw composities. Hiermee verwijdert u alle so
 
 Als u een productie- of ontwikkelingssandbox opnieuw instelt, worden alle bronnen verwijderd die aan die sandbox zijn gekoppeld (schema&#39;s, gegevenssets, enzovoort), terwijl de naam van de sandbox en de bijbehorende machtigingen behouden blijven. Deze &#39;schone&#39; sandbox blijft onder dezelfde naam beschikbaar voor gebruikers die er toegang toe hebben.
 
-Selecteer de sandbox die u wilt herstellen in de lijst met sandboxen. Selecteer in het rechternavigatievenster dat wordt weergegeven **[!UICONTROL Sandbox reset]**.
+Selecteer de sandbox die u wilt herstellen in de lijst met sandboxen. Selecteer **[!UICONTROL Sandbox reset]** in het rechternavigatievenster dat wordt weergegeven.
 
-![reset](../images/ui/reset.png)
+![ teruggestelde ](../images/ui/reset.png)
 
-Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen. Selecteren **[!UICONTROL Continue]** om verder te gaan.
+Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen. Selecteer **[!UICONTROL Continue]** om door te gaan.
 
-![resetwaarschuwing](../images/ui/reset-warning.png)
+![ terugstellen-waarschuwing ](../images/ui/reset-warning.png)
 
-Voer in het laatste bevestigingsvenster de naam van de sandbox in het dialoogvenster in en selecteer **[!UICONTROL Reset]**.
+Voer in het laatste bevestigingsvenster de naam van de sandbox in het dialoogvenster in en selecteer **[!UICONTROL Reset]** .
 
-![opnieuw bevestigen](../images/ui/reset-confirm.png)
+![ terugstellen-bevestigen ](../images/ui/reset-confirm.png)
 
 ## Een sandbox verwijderen
 
 >[!WARNING]
 >
->U kunt de standaardproductiesandbox niet verwijderen. Nochtans, om het even welke user-created productiesandbox die voor bidirectioneel segment het delen met wordt gebruikt [!DNL Audience Manager] of [!DNL Audience Core Service] kan na een waarschuwingsbericht worden verwijderd.
+>U kunt de standaardproductiesandbox niet verwijderen. Elke door de gebruiker gemaakte productiesandbox die wordt gebruikt voor bidirectioneel segmentdelen met [!DNL Audience Manager] of [!DNL Audience Core Service] , kan echter na een waarschuwingsbericht worden verwijderd.
 
 Als u een productie- of ontwikkelingssandbox verwijdert, worden alle bronnen die aan die sandbox zijn gekoppeld, inclusief de machtigingen, permanent verwijderd.
 
-Selecteer de sandbox die u wilt verwijderen uit de lijst met sandboxen. Selecteer in het rechternavigatievenster dat wordt weergegeven **[!UICONTROL Delete]**.
+Selecteer de sandbox die u wilt verwijderen uit de lijst met sandboxen. Selecteer **[!UICONTROL Delete]** in het rechternavigatievenster dat wordt weergegeven.
 
-![delete](../images/ui/delete.png)
+![ schrapping ](../images/ui/delete.png)
 
-Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen. Selecteren **[!UICONTROL Continue]** om verder te gaan.
+Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen. Selecteer **[!UICONTROL Continue]** om door te gaan.
 
-![delete-warning](../images/ui/delete-warning.png)
+![ schrapping-waarschuwing ](../images/ui/delete-warning.png)
 
-Voer in het laatste bevestigingsvenster de naam van de sandbox in het dialoogvenster in en selecteer  **[!UICONTROL Continue]**.
+Voer in het laatste bevestigingsvenster de naam van de sandbox in het dialoogvenster in en selecteer **[!UICONTROL Continue]** .
 
-![delete-confirm](../images/ui/delete-confirm.png)
+![ schrapping-bevestig ](../images/ui/delete-confirm.png)
 
 ## Volgende stappen
 
-Dit document laat zien hoe u sandboxen beheert in de gebruikersinterface van het Experience Platform. Voor informatie over het beheren van sandboxen met de sandbox-API raadpleegt u de [sandboxontwikkelaarshandleiding](../api/getting-started.md).
+Dit document laat zien hoe u sandboxen beheert in de gebruikersinterface van het Experience Platform. Voor informatie over hoe te om zandbakken te beheren gebruikend zandbak API, zie de [ gids van de zandbakontwikkelaar ](../api/getting-started.md).

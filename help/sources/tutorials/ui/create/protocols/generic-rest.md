@@ -1,33 +1,33 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Algemene REST API
-title: Een algemene REST API-bronverbinding maken in de gebruikersinterface
+title: Een algemene REST API Source-verbinding maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een algemene REST API-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 1%
+source-wordcount: '615'
+ht-degree: 0%
 
 ---
 
-# Een [!DNL Generic REST API] bronverbinding in de gebruikersinterface
+# Een [!DNL Generic REST API] bronverbinding maken in de gebruikersinterface
 
 >[!NOTE]
 >
-> De [!DNL Generic REST API] De bron is in bèta. Zie de [Overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+> De bron [!DNL Generic REST API] is in bèta. Zie het [ Bronoverzicht ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Deze zelfstudie bevat stappen voor het maken van een [!DNL Generic REST API] bronaansluiting die de Adobe Experience Platform-gebruikersinterface gebruikt.
+Deze zelfstudie bevat stappen voor het maken van een [!DNL Generic REST API] bronaansluiting met behulp van de Adobe Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende componenten van Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Vereiste referenties verzamelen
 
-Voor toegang tot uw [!DNL Generic REST API] account op Platform, moet u geldige geloofsbrieven voor het authentificatietype van uw keus verstrekken. Generieke REST API ondersteunt zowel OAuth 2-vernieuwingscode als basisverificatie. Zie de volgende lijsten voor informatie over de geloofsbrieven voor de twee gesteunde authentificatietypen.
+Als u toegang wilt krijgen tot uw [!DNL Generic REST API] -account op Platform, moet u geldige referenties opgeven voor het type verificatie dat u kiest. Generieke REST API ondersteunt zowel OAuth 2-vernieuwingscode als basisverificatie. Zie de volgende lijsten voor informatie over de geloofsbrieven voor de twee gesteunde authentificatietypen.
 
 #### Code voor 2 vernieuwen
 
@@ -53,40 +53,40 @@ Voor toegang tot uw [!DNL Generic REST API] account op Platform, moet u geldige 
 
 ## Maak verbinding met uw Generic REST API-account
 
-Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
 
-Onder de [!UICONTROL Protocols] categorie, selecteert u **[!UICONTROL Generic REST API]** en selecteer vervolgens **[!UICONTROL Add data]**.
+Selecteer onder de categorie [!UICONTROL Protocols] de optie **[!UICONTROL Generic REST API]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![catalogus](../../../../images/tutorials/create/generic-rest/catalog.png)
+![ catalogus ](../../../../images/tutorials/create/generic-rest/catalog.png)
 
-De **[!UICONTROL Connect to Generic REST API]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to Generic REST API]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Bestaande account
 
-Als u een bestaande account wilt verbinden, selecteert u de algemene REST API-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om verder te gaan.
+Als u een bestaande account wilt verbinden, selecteert u de algemene REST API-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![bestaand](../../../../images/tutorials/create/generic-rest/existing.png)
+![ bestaand ](../../../../images/tutorials/create/generic-rest/existing.png)
 
 ### Nieuwe account
 
-Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam en een beschrijving van de optie voor uw nieuwe [!DNL Generic REST API] account.
+Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u vervolgens een naam en een optiebeschrijving voor uw nieuwe [!DNL Generic REST API] -account.
 
-![new](../../../../images/tutorials/create/generic-rest/new.png)
+![ nieuw ](../../../../images/tutorials/create/generic-rest/new.png)
 
 #### Verifiëren met OAuth 2-vernieuwingscode
 
-[!DNL Generic REST API] steunt zowel OAuth 2 vernieuwt code en basisauthentificatie. Om het gebruiken van een authentificatie te verifiëren OAuth2, selecteer **[!UICONTROL OAuth2RefreshCode]**, geef uw OAuth 2-referenties op en selecteer **[!UICONTROL Connect to source]**.
+[!DNL Generic REST API] ondersteunt zowel OAuth 2 om code te vernieuwen als basisverificatie. Als u wilt verifiëren met een OAuth2-verificatie, selecteert u **[!UICONTROL OAuth2RefreshCode]**, geeft u uw OAuth 2-referenties op en selecteert u vervolgens **[!UICONTROL Connect to source]** .
 
 ![](../../../../images/tutorials/create/generic-rest/oauth2.png)
 
 #### Verifiëren met gebruik van basisverificatie
 
-Als u basisverificatie wilt gebruiken, selecteert u **[!UICONTROL Basic authentication]**, geef uw host, gebruikersnaam en wachtwoord op en selecteer vervolgens **[!UICONTROL Connect to source]**.
+Als u standaardverificatie wilt gebruiken, selecteert u **[!UICONTROL Basic authentication]** , geeft u uw host, gebruikersnaam en wachtwoord op en selecteert u vervolgens **[!UICONTROL Connect to source]** .
 
 ![](../../../../images/tutorials/create/generic-rest/basic-authentication.png)
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw algemene REST API-account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens over te brengen naar het platform](../../dataflow/protocols.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw algemene REST API-account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Platform ](../../dataflow/protocols.md) te brengen.

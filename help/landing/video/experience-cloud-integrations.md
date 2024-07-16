@@ -1,6 +1,6 @@
 ---
 title: Integratie met Experience Cloud-toepassingen
-description: Deze video biedt een overzicht van hoe Adobe Experience Platform kan integreren met Experience Cloud-toepassingen en -mogelijkheden zoals Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, Customer Attributes, Audience Library en -tags.
+description: Deze video biedt een overzicht van hoe Adobe Experience Platform kan integreren met Experience Cloud toepassingen en mogelijkheden zoals Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, Customer Attributes, Audience Library en tags.
 kt: 4334
 audience: all
 doc-type: video
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ---
 
-# Integratie met Experience Cloud-toepassingen
+# Integratie met Experience Cloud toepassingen
 
 Deze video biedt een overzicht van hoe Adobe Experience Platform kan integreren met Adobe Experience Cloud-toepassingen en -mogelijkheden zoals Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, Customer Attributes, Audience Library en -tags.
 

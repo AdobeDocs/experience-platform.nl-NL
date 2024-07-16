@@ -4,26 +4,26 @@ description: Leer hoe u gebruikersmachtigingen voor Adobe Experience Platform Pr
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '1407'
-ht-degree: 1%
+source-wordcount: '1384'
+ht-degree: 0%
 
 ---
 
 # Machtigingen voor Privacy Service beheren
 
-Toegang tot [Adobe Experience Platform Privacy Service](./home.md) wordt gecontroleerd door granulaire op rol-gebaseerde toestemmingen in Adobe Admin Console. Door productprofielen te creëren die toestemmingen aan groepen gebruikers toewijzen, kunt u bepalen wie toegang heeft tot welke eigenschappen in de Privacy Service [UI](./ui/overview.md) en [API](./api/overview.md).
+De toegang tot [ Adobe Experience Platform Privacy Service ](./home.md) wordt gecontroleerd door granulaire op rol-gebaseerde toestemmingen in Adobe Admin Console. Door productprofielen tot stand te brengen die toestemmingen aan groepen gebruikers toewijzen, kunt u bepalen wie toegang heeft tot welke eigenschappen in de Privacy Service [ UI ](./ui/overview.md) en [ API ](./api/overview.md).
 
 >[!NOTE]
 >
->Wanneer u een integratie maakt voor de Privacy Service-API, moet u een bestaand productprofiel selecteren om te bepalen voor welke functies of handelingen integratiemachtigingen gelden. Zie de handleiding op [aan de slag met de Privacy Service-API](./api/getting-started.md) voor meer informatie .
+>Wanneer u een integratie maakt voor de Privacy Service-API, moet u een bestaand productprofiel selecteren om te bepalen voor welke functies of handelingen integratiemachtigingen gelden. Zie de gids op [ begonnen worden met de Privacy Service API ](./api/getting-started.md) voor meer informatie.
 
 In deze handleiding ziet u hoe u machtigingen voor Privacy Service beheert.
 
 ## Aan de slag
 
-Om toegangsbeheer voor Privacy Service te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een productintegratie met Adobe Experience Platform Privacy Service heeft. De minimale rol die machtigingen kan verlenen of intrekken, is een **productprofielbeheerder**. Andere beheerderrollen die toestemmingen kunnen beheren zijn **productbeheerders** (kan alle profielen in een product beheren) en **systeembeheerders** (geen beperkingen). Zie het artikel over [administratieve taken](https://helpx.adobe.com/enterprise/using/admin-roles.html) in de Adobe Enterprise administration guide voor meer informatie.
+Om toegangsbeheer voor Privacy Service te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een productintegratie met Adobe Experience Platform Privacy Service heeft. De minimumrol die toestemmingen kan verlenen of terugtrekken is de beheerder van het a **productprofiel**. Andere beheerderrollen die toestemmingen kunnen beheren zijn **productbeheerders** (kan alle profielen binnen een product beheren) en **systeembeheerders** (geen beperkingen). Zie het artikel op [ administratieve rollen ](https://helpx.adobe.com/enterprise/using/admin-roles.html) in de het beleidsgids van de Onderneming van de Adobe voor meer informatie.
 
-Deze gids veronderstelt u vertrouwd met basisconcepten van de Admin Console zoals productprofielen en hoe zij producttoestemmingen aan individuele gebruikers en groepen verlenen. Zie de klasse [Gebruikershandleiding voor Admin Consoles](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
+Deze gids veronderstelt u vertrouwd met basisconcepten van de Admin Console zoals productprofielen en hoe zij producttoestemmingen aan individuele gebruikers en groepen verlenen. Voor meer informatie, zie de [ gebruikersgids van de Admin Console ](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
 
 ## Beschikbare machtigingen
 
@@ -31,7 +31,7 @@ De volgende lijst schetst de beschikbare toestemmingen voor Privacy Service met 
 
 >[!NOTE]
 >
->Alle Privacy Service en [!UICONTROL Opt Out of Sale] machtigingen zijn gescheiden en gescheiden van elkaar, zonder functionele overlapping. Dit is mogelijk omdat de Privacy Service-API als een epidemie wordt beschouwd.
+>Alle Privacy Service- en [!UICONTROL Opt Out of Sale] -machtigingen zijn gescheiden en gescheiden van elkaar, zonder functionele overlapping. Dit is mogelijk omdat de Privacy Service-API als een epidemie wordt beschouwd.
 
 | Categorie | Machtiging | Beschrijving |
 | --- | --- | --- |
@@ -45,100 +45,100 @@ De volgende lijst schetst de beschikbare toestemmingen voor Privacy Service met 
 
 ## Machtigingen beheren {#manage}
 
-Om de toestemmingen van de Privacy Service te beheren, login aan [Admin Console](https://adminconsole.adobe.com/) en selecteert u **[!UICONTROL Products]** in de bovenste navigatie. Van hier, selecteer **[!UICONTROL Adobe Experience Platform Privacy Service]**.
+Om de toestemmingen van de Privacy Service te beheren, login aan [ Admin Console ](https://adminconsole.adobe.com/) en selecteer **[!UICONTROL Products]** van de hoogste navigatie. Selecteer **[!UICONTROL Adobe Experience Platform Privacy Service]** van hier.
 
-![De Admin Console met de Privacy Service productkaart gemarkeerd.](./images/permissions/privacy-service-card.png)
+![ de Admin Console met de benadrukte kaart van het het productproduct van de Privacy Service.](./images/permissions/privacy-service-card.png)
 
 ### Een productprofiel selecteren of maken
 
-In het volgende scherm ziet u een lijst met beschikbare productprofielen voor Privacy Service onder uw organisatie. Als er geen productprofielen bestaan, selecteert u **[!UICONTROL New Profile]** om er een te maken. Als u veelvoudige rollen of gebruikersgroepen in uw organisatie hebt die verschillende niveaus van toegang vereisen, zou u een afzonderlijk productprofiel voor elk van hen moeten creëren.
+In het volgende scherm ziet u een lijst met beschikbare productprofielen voor Privacy Service onder uw organisatie. Als er geen productprofielen bestaan, selecteert u **[!UICONTROL New Profile]** om een profiel te maken. Als u veelvoudige rollen of gebruikersgroepen in uw organisatie hebt die verschillende niveaus van toegang vereisen, zou u een afzonderlijk productprofiel voor elk van hen moeten creëren.
 
-![De Admin Console met het Privacy Service productprofiel gemarkeerd.](./images/permissions/select-or-create-profile.png)
+![ de Admin Console met het benadrukte het productprofiel van de Privacy Service.](./images/permissions/select-or-create-profile.png)
 
-Nadat u een productprofiel hebt geselecteerd, kunt u de opdracht **[!UICONTROL Permissions]** te beginnen tab [bewerken, machtigingen](#edit-permissions) voor het profiel, of selecteer **[!UICONTROL Users]** te beginnen tab [gebruikers toewijzen](#assign-users) naar het profiel.
+Na het selecteren van een productprofiel, kunt u het **[!UICONTROL Permissions]** lusje gebruiken om [ het uitgeven toestemmingen ](#edit-permissions) voor het profiel te beginnen, of het **[!UICONTROL Users]** lusje te selecteren [ toewijzend gebruikers ](#assign-users) aan het profiel.
 
-![Het tabblad Machtigingen voor een Admin Console van het productprofiel.](./images/permissions/users-permissions-tabs.png)
+![ het toestemmingenlusje voor een Admin Console van het productprofiel.](./images/permissions/users-permissions-tabs.png)
 
 ### Machtigingen voor het profiel bewerken {#edit-permissions}
 
-Op de **[!UICONTROL Permissions]** selecteert u een van de weergegeven machtigingscategorieën voor toegang tot de weergave voor bewerken van machtigingen.
+Selecteer op het tabblad **[!UICONTROL Permissions]** een van de weergegeven machtigingscategorieën voor toegang tot de weergave voor bewerken van machtigingen.
 
 Wanneer u machtigingen voor een profiel bewerkt, worden in de linkerkolom de beschikbare machtigingen vermeld, terwijl de machtigingen die in het profiel zijn opgenomen in de rechterkolom worden weergegeven. Selecteer de vermelde toestemmingen om hen tussen één van beide kolom te bewegen.
 
-![De beschikbare en opgenomen machtigingskolommen.](./images/permissions/edit-permissions.png)
+![ Beschikbare en inbegrepen toestemmingskolommen.](./images/permissions/edit-permissions.png)
 
 Machtigingen zijn ingedeeld in categorieën. Als u wilt schakelen tussen categorieën, selecteert u de gewenste categorie in de linkernavigatie.
 
-![De [!UICONTROL Opt Out of Sale] onder machtigingen.](./images/permissions/switch-category.png)
+![ de [!UICONTROL Opt Out of Sale] sectie onder toestemmingen.](./images/permissions/switch-category.png)
 
-Selecteren **[!UICONTROL Save]** zodra u klaar bent met het configureren van machtigingen.
+Selecteer **[!UICONTROL Save]** nadat u de machtigingen hebt geconfigureerd.
 
-![De machtigingsconfiguratie voor het productprofiel met Opslaan gemarkeerd.](./images/permissions/save-permissions.png)
+![ de toestemmingsconfiguratie voor het productprofiel met sparen benadrukte.](./images/permissions/save-permissions.png)
 
 De weergave van het productprofiel wordt opnieuw weergegeven met de toegevoegde machtigingen weergegeven.
 
-![De toegevoegde machtigingen voor het productprofiel.](./images/permissions/permissions-added.png)
+![ de toegevoegde toestemmingen voor het productprofiel.](./images/permissions/permissions-added.png)
 
 ### Gebruikers toewijzen aan het profiel {#assign-users}
 
-Als u gebruikers wilt toewijzen aan het productprofiel (en hun de geconfigureerde machtigingen van het profiel wilt verlenen), selecteert u de optie **[!UICONTROL Users]** tab, gevolgd door **[!UICONTROL Add user]**.
+Als u gebruikers wilt toewijzen aan het productprofiel (en hun de geconfigureerde machtigingen van het profiel wilt verlenen), selecteert u het tabblad **[!UICONTROL Users]** , gevolgd door **[!UICONTROL Add user]** .
 
-![Het tabblad Gebruikers voor een productprofiel in Admin Console.](./images/permissions/manage-users.png)
+![ het lusje van Gebruikers voor een productprofiel in Admin Console.](./images/permissions/manage-users.png)
 
-Voor meer informatie over het beheren van gebruikers voor een productprofiel raadpleegt u de [Documentatie Admin Console](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html).
+Voor meer informatie bij het beheren van gebruikers voor een productprofiel, zie de [ documentatie van de Admin Console ](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html).
 
 ### Verouderde API-referenties migreren naar het profiel {#migrate-tech-accounts}
 
 >[!NOTE]
 >
->Deze sectie is alleen van toepassing op bestaande API-referenties die zijn gemaakt voordat Privacy Service-machtigingen in Adobe Admin Console werden geïntegreerd. Voor nieuwe referenties worden productprofielen (en hun machtigingen) toegewezen via [Adobe Developer Console-projecten](https://developer.adobe.com/developer-console/docs/guides/projects/) in plaats daarvan.<br><br>Zie de sectie over [productprofielen toewijzen aan een project](./api/getting-started.md#product-profiles) in de gids Aan de slag van de Privacy Service API voor meer informatie.
+>Deze sectie is alleen van toepassing op bestaande API-referenties die zijn gemaakt voordat Privacy Service-machtigingen in Adobe Admin Console werden geïntegreerd. Voor nieuwe geloofsbrieven, worden de productprofielen (en hun toestemmingen) toegewezen door [ projecten van Adobe Developer Console ](https://developer.adobe.com/developer-console/docs/guides/projects/) in plaats daarvan.<br><br> zie de sectie over [ het toewijzen van productprofielen aan een project ](./api/getting-started.md#product-profiles) in Privacy Service API begonnen gids voor meer informatie.
 
 In het verleden was voor technische accounts geen productprofiel vereist voor integratie en machtigingen. Vanwege recente verbeteringen in de machtigingen voor Privacys Service is het nu echter nodig om oude API-gegevens te migreren naar het productprofiel. Met deze update kunnen granulaire machtigingen worden verleend aan houders van technische accounts. Volg de onderstaande stappen om technische accountmachtigingen voor Privacy Service bij te werken.
 
 #### Technische accountmachtigingen bijwerken {#update-tech-account-permissions}
 
-De eerste stap bij het toewijzen van een rechtenset voor uw technische account is naar de [Adobe Admin Console](https://adminconsole.adobe.com/) en maak een nieuw productprofiel voor Privacy Service.
+De eerste stap in het toewijzen van een toestemming die voor uw technische rekening wordt geplaatst moet aan [ Adobe Admin Console ](https://adminconsole.adobe.com/) navigeren en een nieuw productprofiel voor Privacy Service creëren.
 
-Selecteer in de UI Admin Console de optie **Producten** vanuit de navigatiebalk, gevolgd door **[!UICONTROL Experience Cloud]** en **[!UICONTROL Adobe Experience Platform Privacy Service]** in de linkerzijbalk. De [!UICONTROL Product Profiles] wordt weergegeven. Selecteren **Nieuw profiel** om een nieuw productprofiel voor Privacy Service te maken.
+Van de Admin Console UI, uitgezochte **Producten** van de navigatiebar, die door **[!UICONTROL Experience Cloud]** en **[!UICONTROL Adobe Experience Platform Privacy Service]** in linkerzijbalk wordt gevolgd. Het tabblad [!UICONTROL Product Profiles] wordt weergegeven. Selecteer **Nieuw Profiel** om een nieuw productprofiel voor Privacy Service tot stand te brengen.
 
-![Het tabblad Productprofielen Experience Platform Privacy Service in Adobe Admin Console met Nieuw profiel gemarkeerd.](./images/permissions/create-product-profile.png)
+![ het lusje van Profielen van het Product van Experience Platform Privacy Service in Adobe Admin Console met Nieuw Gemarkeerd Profiel.](./images/permissions/create-product-profile.png)
 
-De [!UICONTROL Create a new product profile] wordt weergegeven. Volledige instructies over het maken van een productprofiel vindt u in het gedeelte [UI-gids voor het maken van profielen](../access-control/ui/create-profile.md).
+Het dialoogvenster [!UICONTROL Create a new product profile] wordt weergegeven. De volledige instructies op hoe te om een productprofiel tot stand te brengen kunnen in de [ gids UI worden gevonden om profielen ](../access-control/ui/create-profile.md) tot stand te brengen.
 
-Nadat u het nieuwe productprofiel hebt opgeslagen, navigeert u naar de [Adobe Developer Console](https://developer.adobe.com/console/home) en meld u aan bij dat product of dat project. Selecteren **[!UICONTROL Projects]** vanaf de bovenste navigatie, gevolgd door de kaart voor uw project.
+Nadat u uw nieuw productprofiel hebt bewaard, navigeer aan [ Adobe Developer Console ](https://developer.adobe.com/console/home) en login in dat product of dat project. Selecteer **[!UICONTROL Projects]** in de bovenste navigatie, gevolgd door de kaart voor uw project.
 
 >[!NOTE]
 >
->U moet mogelijk uw cache wissen en/of enige tijd wachten totdat het nieuwe project in uw lijst met projecten voor de Developer Console wordt weergegeven.
+>Mogelijk moet u de cache wissen en/of wachten tot het nieuwe project in uw lijst met Developer Console-projecten wordt weergegeven.
 
-Nadat u in uw project hebt geregistreerd, selecteer **[!UICONTROL Privacy Service API]** integratie vanuit de linkerzijbalk.
+Nadat u zich hebt aangemeld bij uw project, selecteert u de **[!UICONTROL Privacy Service API]** -integratie in de linkerzijbalk.
 
-![Het tabblad Projecten van de Adobe Developer Console met projecten en Privacy Service-API is gemarkeerd.](./images/permissions/login-to-dev-console-project.png)
+![ het lusje van Projecten van Adobe Developer Console met Gemarkeerde Projecten en Privacy Service API.](./images/permissions/login-to-dev-console-project.png)
 
-Het Privacy Service API-integratiedashboard wordt weergegeven. Vanuit dit dashboard kunt u het productprofiel bewerken dat aan dat project is gekoppeld. Selecteren **[!UICONTROL Edit product profiles]** om het proces te starten. De [!UICONTROL Configure API] wordt weergegeven.
+Het Privacy Service API-integratiedashboard wordt weergegeven. Vanuit dit dashboard kunt u het productprofiel bewerken dat aan dat project is gekoppeld. Selecteer **[!UICONTROL Edit product profiles]** om met het proces te beginnen. Het dialoogvenster [!UICONTROL Configure API] wordt weergegeven.
 
-![Het Privacy Service API-integratiedashboard in de Adobe Developer-console met de markering Productprofielen bewerken](./images/permissions/edit-product-profiles.png)
+![ het Privacy Service API integratiedashboard in Adobe Developer Console met Edit benadrukte productprofielen ](./images/permissions/edit-product-profiles.png)
 
-De [!UICONTROL Configure API] toont de beschikbare productprofielen die momenteel in de dienst bestaan. Ze correleren met de productprofielen die in de beheerconsole zijn gemaakt. Selecteer in de lijst met beschikbare productprofielen het selectievakje voor het nieuwe productprofiel dat u voor de technische account in de beheerconsole hebt gemaakt. Dit associeert automatisch deze technische rekening met de toestemmingen in het geselecteerde productprofiel. Selecteren **[!UICONTROL Save configured API]** om uw instellingen te bevestigen.
+In het dialoogvenster [!UICONTROL Configure API] worden de beschikbare productprofielen weergegeven die momenteel in de service bestaan. Ze correleren met de productprofielen die in de beheerconsole zijn gemaakt. Selecteer in de lijst met beschikbare productprofielen het selectievakje voor het nieuwe productprofiel dat u voor de technische account in de beheerconsole hebt gemaakt. Dit associeert automatisch deze technische rekening met de toestemmingen in het geselecteerde productprofiel. Selecteer **[!UICONTROL Save configured API]** om uw instellingen te bevestigen.
 
 >[!NOTE]
 >
 >Als er al een technische account is gekoppeld aan een productprofiel, wordt al een van de selectievakjes in de lijst met beschikbare productprofielen geselecteerd.
 
-![Het dialoogvenster API configureren in Adobe Developer Console met het selectievakje Productprofiel en geconfigureerde API opslaan gemarkeerd.](./images/permissions/select-profile-for-tech-account.png)
+![ Vorm API dialoog in Adobe Developer Console met een checkbox van het productprofiel en sparen gevormde benadrukte API.](./images/permissions/select-profile-for-tech-account.png)
 
 #### Bevestig dat de instellingen zijn toegepast {#confirm-applied-settings}
 
-Bevestig dat uw instellingen zijn toegepast op het account. Terugkeren naar de [Admin Console](https://adminconsole.adobe.com/) en navigeer naar het nieuwe productprofiel. Selecteer de **[!UICONTROL API Credentials]** tabblad om een lijst met verwante projecten weer te geven. Het project dat in de Console van de Ontwikkelaar wordt gebruikt waar u het productprofiel aan de technische rekening toewees wordt getoond in de lijst van geloofsbrieven die. De naam van elke API-referentie bestaat uit de projectnaam met een willekeurig gegenereerd nummer dat aan het einde is achtervoegd. Selecteer een referentie om het dialoogvenster [!UICONTROL Details] deelvenster.
+Bevestig dat uw instellingen zijn toegepast op het account. Terugkeer aan de [ Admin Console ](https://adminconsole.adobe.com/) en navigeer aan uw onlangs gecreeerd productprofiel. Selecteer het tabblad **[!UICONTROL API Credentials]** om een lijst met gekoppelde projecten weer te geven. Het in Developer Console gebruikte project waaraan u het productprofiel hebt toegewezen aan de technische account, wordt weergegeven in de lijst met referenties. De naam van elke API-referentie bestaat uit de projectnaam met een willekeurig gegenereerd nummer dat aan het einde is achtervoegd. Selecteer een referentie om het deelvenster [!UICONTROL Details] te openen.
 
-![Een productprofiel in de Admin Console met de API geloofsbrieven tabel en een rij van benadrukte projectgeloofsbrieven.](./images/permissions/confirm-credentials-in-admin-console.png)
+![ A productprofiel in de Admin Console met de API geloofsbrieven tabel en een rij van benadrukte projectgeloofsbrieven.](./images/permissions/confirm-credentials-in-admin-console.png)
 
-De [!UICONTROL Details] bevat informatie over de API-referentie, waaronder de bijbehorende technische id, de API-sleutel, de datum die is gemaakt en gewijzigd, en de bijbehorende Adobe Producten.
+Het deelvenster [!UICONTROL Details] bevat informatie over de API-referentie, waaronder de bijbehorende technische id, de API-sleutel, de datum die u hebt gemaakt en gewijzigd, en de bijbehorende Adobe Producten.
 
-![Het gemarkeerde deelvenster Details van een API-referentie in de Admin Console.](./images/permissions/admin-console-details-panel.png)
+![ het benadrukte paneel van Details van een API referentie binnen Admin Console.](./images/permissions/admin-console-details-panel.png)
 
 ## Volgende stappen
 
 Deze gids behandelde de beschikbare toestemmingen voor Privacy Service en hoe te om hen door Admin Console te beheren.
 
-Raadpleeg voor meer informatie over het maken van een nieuwe API-integratie nadat u productprofielen hebt ingesteld de [Aan de slag-handleiding voor de Privacy Service-API](./api/getting-started.md). Raadpleeg voor meer informatie over het beheren van machtigingen voor andere Adobe Experience Platform-mogelijkheden de [toegangsbeheerdocumentatie](../access-control/home.md).
+Voor stappen op hoe te om een nieuwe API integratie na vestiging productprofielen tot stand te brengen, zie [ begonnen gids voor de Privacy Service API ](./api/getting-started.md). Voor meer informatie bij het beheren van toestemmingen voor andere mogelijkheden van Adobe Experience Platform, verwijs naar de [ documentatie van de toegangscontrole ](../access-control/home.md).

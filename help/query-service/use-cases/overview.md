@@ -2,7 +2,8 @@
 title: Ondersteunde gebruiksgevallen met de Adobe Experience Platform Query Service
 description: Leer welke gebruiksgevallen worden ondersteund met de Adobe Experience Platform Query Service.
 keywords: Query-service;gebruik van gevallen
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+exl-id: eba8050d-be3a-41b6-8175-4f6b2b2ef7b0
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
@@ -20,4 +21,3 @@ Elk document in deze sectie bevat informatie over de wijze waarop het respectiev
 - [Levensduurwaarde van klant](./customer-lifetime-value.md)
 - [Een buigscore bepalen](./propensity-score.md)
 - [Fuzzy Match](./fuzzy-match.md)
-

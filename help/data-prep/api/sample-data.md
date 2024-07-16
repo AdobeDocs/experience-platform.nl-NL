@@ -5,23 +5,23 @@ title: API-eindpunt voor voorbeeldgegevens
 description: U kunt het `-/steekproeven' eindpunt in Adobe Experience Platform API gebruiken om kaartsteekproefgegevens programmatically terug te winnen, tot stand te brengen bij te werken en te bevestigen.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 1%
+source-wordcount: '405'
+ht-degree: 0%
 
 ---
 
 
 # Gegevenseindpunt van sample
 
-Voorbeeldgegevens kunnen worden gebruikt bij het maken van een schema voor uw toewijzingsset. U kunt de `/samples` eindpunt in de Prep API van Gegevens om programmatically steekproefgegevens terug te winnen, tot stand te brengen en bij te werken.
+Voorbeeldgegevens kunnen worden gebruikt bij het maken van een schema voor uw toewijzingsset. U kunt het `/samples` eindpunt in de Prep API van Gegevens gebruiken om, steekproefgegevens programmatically terug te winnen tot stand te brengen en bij te werken.
 
 ## Voorbeeldgegevens weergeven
 
-U kunt een lijst van alle gegevens van de toewijzingssteekproef voor uw organisatie terugwinnen door een verzoek van de GET aan `/samples` eindpunt.
+U kunt een lijst van alle gegevens van de toewijzingssteekproef voor uw organisatie terugwinnen door een verzoek van de GET tot het `/samples` eindpunt te richten.
 
-**API-indeling**
+**API formaat**
 
-De `/samples` het eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. U moet op dit moment beide opties opnemen `start` en `limit` -parameters als onderdeel van uw verzoek.
+Het `/samples` eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Momenteel moet u zowel de parameters `start` als `limit` opnemen als onderdeel van uw verzoek.
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -29,8 +29,8 @@ GET /samples?limit={LIMIT}&start={START}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{LIMIT}` | **Vereist**. Hiermee geeft u het aantal geretourneerde gegevens van het toewijzingsvoorbeeld op. |
-| `{START}` | **Vereist**. Hiermee bepaalt u de verschuiving van de resultatenpagina&#39;s. Als u de eerste pagina met resultaten wilt ophalen, stelt u de waarde in op `start=0`. |
+| `{LIMIT}` | **Vereiste**. Hiermee geeft u het aantal geretourneerde gegevens van het toewijzingsvoorbeeld op. |
+| `{START}` | **Vereiste**. Hiermee bepaalt u de verschuiving van de resultatenpagina&#39;s. Als u de eerste pagina met resultaten wilt ophalen, stelt u de waarde in op `start=0` . |
 
 **Verzoek**
 
@@ -44,7 +44,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met informatie over de laatste twee objecten van de voorbeeldgegevens van de toewijzing.
 
@@ -81,12 +81,12 @@ Een geslaagde reactie retourneert HTTP-status 200 met informatie over de laatste
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `sampleData` |  |
-| `sampleType` |  |
+| `sampleData` | |
+| `sampleType` | |
 
 ## Voorbeeldgegevens maken
 
-U kunt voorbeeldgegevens maken door een POST aan te vragen bij de `/samples` eindpunt.
+U kunt steekproefgegevens tot stand brengen door een verzoek van de POST aan het `/samples` eindpunt te doen.
 
 ```http
 POST /samples
@@ -108,7 +108,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met informatie over de nieuwe voorbeeldgegevens.
 
@@ -127,9 +127,9 @@ Een geslaagde reactie retourneert HTTP-status 200 met informatie over de nieuwe 
 
 ## Voorbeeldgegevens maken door een bestand te uploaden
 
-U kunt voorbeeldgegevens maken met behulp van een bestand door een POST aan te vragen bij de `/samples/upload` eindpunt.
+U kunt steekproefgegevens tot stand brengen gebruikend een dossier door een verzoek van de POST aan het `/samples/upload` eindpunt te richten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /samples/upload
@@ -147,7 +147,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -F 'file=@{PATH_TO_FILE}.json'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met informatie over de nieuwe voorbeeldgegevens.
 
@@ -166,9 +166,9 @@ Een geslaagde reactie retourneert HTTP-status 200 met informatie over de nieuwe 
 
 ## Een specifiek voorbeeldgegevensobject opzoeken
 
-U kunt een specifiek voorwerp van steekproefgegevens opzoeken door zijn identiteitskaart in de weg van een verzoek van de GET aan te verstrekken `/samples` eindpunt.
+U kunt een specifiek voorwerp van steekproefgegevens opzoeken door zijn identiteitskaart in de weg van een verzoek van de GET aan het `/samples` eindpunt te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /samples/{SAMPLE_ID}
@@ -188,7 +188,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met informatie over het voorbeeldgegevensobject dat u wilt ophalen.
 
@@ -207,9 +207,9 @@ Een geslaagde reactie retourneert HTTP-status 200 met informatie over het voorbe
 
 ## Voorbeeldgegevens bijwerken
 
-U kunt een specifiek voorbeeldgegevensobject bijwerken door de id ervan op te geven in het pad van een verzoek van de PUT aan de `/samples` eindpunt.
+U kunt een specifiek voorwerp van steekproefgegevens bijwerken door zijn identiteitskaart in de weg van een verzoek van de PUT aan het `/samples` eindpunt te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /samples/{SAMPLE_ID}
@@ -236,7 +236,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
   }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met informatie over de bijgewerkte voorbeeldgegevens.
 

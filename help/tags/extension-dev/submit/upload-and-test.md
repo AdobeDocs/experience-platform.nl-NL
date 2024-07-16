@@ -4,7 +4,7 @@ description: Leer hoe u uw extensie kunt valideren, uploaden en testen in Adobe 
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
 source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
 workflow-type: tm+mt
-source-wordcount: '2379'
+source-wordcount: '2359'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
-Als u de extensies van tags in Adobe Experience Platform wilt testen, gebruikt u de API-tags en/of opdrachtregelprogramma&#39;s om de extensiepakketten te uploaden. Vervolgens gebruikt u de gebruikersinterface van het Platform of de gebruikersinterface van de gegevensverzameling om uw extensiepakket te installeren in een eigenschap en de mogelijkheden ervan uit te oefenen in een tagbibliotheek en te bouwen.
+Als u tagextensies wilt testen in Adobe Experience Platform, gebruikt u de API-tags en/of opdrachtregelprogramma&#39;s om de extensiepakketten te uploaden. Vervolgens gebruikt u de interface van het platform of de gebruikersinterface voor gegevensverzameling om uw extensiepakket te installeren in een eigenschap en de mogelijkheden ervan uit te oefenen in een tagbibliotheek en te bouwen.
 
 In dit document wordt beschreven hoe u end-to-end tests voor uw extensie kunt implementeren.
 
@@ -25,33 +25,33 @@ In dit document wordt beschreven hoe u end-to-end tests voor uw extensie kunt im
 
 ## Uw extensie valideren {#validate}
 
-Zodra uw team met de prestaties van uw uitbreiding en de resultaten wordt tevredengesteld zij in zien [Sandbox](https://www.npmjs.com/package/@adobe/reactor-sandbox#running-the-sandbox) moet u klaar zijn om het extensiepakket te uploaden naar tags.
+Zodra uw team met de prestaties van uw uitbreiding en de resultaten wordt tevredengesteld die zij in het [ Sandbox ](https://www.npmjs.com/package/@adobe/reactor-sandbox#running-the-sandbox) hulpmiddel zien, zou u bereid moeten zijn om uw uitbreidingspakket aan markeringen te uploaden.
 
-Voordat u gaat uploaden, moet u controleren of de vereiste velden of instellingen aanwezig zijn. U kunt bijvoorbeeld uw [extensiemanifest](../manifest.md), uw [extensieconfiguratie](../configuration.md), uw [views](../web/views.md)en uw [bibliotheekmodules](../web/format.md) (ten minste) is een goede praktijk.
+Voordat u gaat uploaden, moet u controleren of de vereiste velden of instellingen aanwezig zijn. Bijvoorbeeld, die uw [ uitbreidingsmanifest ](../manifest.md) herzien, is uw [ uitbreidingsconfiguratie ](../configuration.md), uw [ meningen ](../web/views.md), en uw [ bibliotheekmodules ](../web/format.md) (bij een minimum) goede praktijk.
 
-Een specifiek voorbeeld hiervan is uw logobestand: Een `"iconPath": "example.svg",` lijn naar uw `extension.json` en neem dat logoafbeeldingsbestand op in uw project. Dit is het relatieve pad naar het pictogram dat voor de extensie wordt weergegeven. Het mag niet beginnen met een schuine streep. Het moet verwijzen naar een SVG-bestand met een `.svg` extensie. De SVG moet normaal worden weergegeven wanneer deze vierkant wordt gerenderd en kan door de gebruikersinterface worden geschaald. Zie de [SVG-artikel schalen](https://css-tricks.com/scale-svg/) voor meer informatie .
+Een specifiek voorbeeld is uw logobestand: voeg een `"iconPath": "example.svg",` -regel toe aan uw `extension.json` -bestand en neem dat logoafbeeldingsbestand op in uw project. Dit is het relatieve pad naar het pictogram dat voor de extensie wordt weergegeven. Het mag niet beginnen met een schuine streep. De extensie moet verwijzen naar een SVG-bestand met de extensie `.svg` . De SVG moet normaal worden weergegeven wanneer deze vierkant wordt gerenderd en kan door de gebruikersinterface worden geschaald. Zie [ hoe te artikel van SVG ](https://css-tricks.com/scale-svg/) voor meer details schrapen.
 
 >[!NOTE]
 >
->Neem voor openbare extensies een item op in uw `extension.json` met een link naar je aanbieding op eBay. Uw [extensiemanifest](../manifest.md) moet een dergelijke vermelding bevatten: `"exchangeUrl":"https://www.adobeexchange.com/experiencecloud.details.12345.html"` verwijzen naar de URL van je Exchange-aanbieding.
+>Neem voor openbare extensies een item in de `extension.json` op met een koppeling naar de aanbieding op eBay Exchange. Uw [ uitbreidingsmanifest ](../manifest.md) zou een ingang als dit moeten omvatten: `"exchangeUrl":"https://www.adobeexchange.com/experiencecloud.details.12345.html"` die aan URL van uw lijst van de Uitwisseling richten.
 
 ## Een Adobe I/O-integratie maken {#integration}
 
 Als u de API- of opdrachtregelprogramma&#39;s wilt gebruiken, hebt u een technisch account met Adobe I/O nodig. U moet de technische account maken in de I/O-console en vervolgens het gereedschap Uploader gebruiken om het extensiepakket te uploaden.
 
-Voor informatie over het maken van een technisch account voor gebruik met tags in Adobe Experience Platform raadpleegt u de [Aan de slag met Reactor-API](../../api/getting-started.md) hulplijn.
+Voor informatie bij het creëren van een technische rekening voor gebruik met markeringen in Adobe Experience Platform, gelieve te verwijzen naar [ Reactor API die ](../../api/getting-started.md) gids Aan de slag wordt.
 
 >[!IMPORTANT]
 >
->Om tot een Integratie in Adobe I/O te leiden moet u een Beheerder van de Organisatie van de Experience Cloud of een Experience Cloud zijn Org Ontwikkelaar.
+>Om tot een Integratie in Adobe I/O te leiden moet u een Beheerder van de Organisatie van het Experience Cloud of een Experience Cloud zijn Org Ontwikkelaar.
 
 Als u geen Integratie kunt tot stand brengen, is het waarschijnlijk dat u niet de correcte toestemmingen hebt. Hiervoor is een Org Admin nodig om de stappen voor u te voltooien of om u toe te wijzen als ontwikkelaar.
 
-## Upload Your extension package {#upload}
+## Upload Uw extensiepakket {#upload}
 
 Nu u geloofsbrieven hebt, bent u bereid om uw uitbreidingspakket van begin tot eind te testen.
 
-Wanneer u het extensiepakket voor het eerst uploadt, wordt het omgezet in een status van `development`. Dit betekent dat het alleen zichtbaar is voor uw eigen organisatie en alleen met een eigenschap die is gemarkeerd voor extensieontwikkeling.
+Wanneer u het extensiepakket voor het eerst uploadt, wordt de status `development` weergegeven. Dit betekent dat het alleen zichtbaar is voor uw eigen organisatie en alleen met een eigenschap die is gemarkeerd voor extensieontwikkeling.
 
 Gebruik de bevellijn om het volgende bevel binnen de folder in werking te stellen die uw .zip pakket bevat.
 
@@ -59,9 +59,9 @@ Gebruik de bevellijn om het volgende bevel binnen de folder in werking te stelle
 npx @adobe/reactor-uploader
 ```
 
-`npx` kunt u een npm-pakket downloaden en uitvoeren zonder het daadwerkelijk op uw computer te installeren. Dit is de eenvoudigste manier om de Uploader uit te voeren.
+Met `npx` kunt u een npm-pakket downloaden en uitvoeren zonder het daadwerkelijk op uw computer te installeren. Dit is de eenvoudigste manier om de Uploader uit te voeren.
 
-Voor Uploader moet u verschillende gegevens invoeren. De technische account-id, de API-sleutel en andere gegevens kunnen worden opgehaald van de Adobe I/O-console. Ga naar de [Integratiepagina](https://console.adobe.io/integrations) in de I/O-console. Selecteer de juiste organisatie in het vervolgkeuzemenu, zoek de juiste integratie en selecteer **[!UICONTROL View]**.
+Voor Uploader moet u verschillende gegevens invoeren. De technische account-id, de API-sleutel en andere gegevens kunnen worden opgehaald van de Adobe I/O-console. Navigeer aan de [ pagina van Integraties ](https://console.adobe.io/integrations) in de I/O console. Selecteer de juiste organisatie in het vervolgkeuzemenu, zoek de juiste integratie en selecteer **[!UICONTROL View]** .
 
 - Wat is het pad naar uw persoonlijke sleutel? /path/to/private.key. Dit is de plaats u uw privé sleutel in stap 2 hierboven bewaarde.
 - Wat is je Org ID? Kopieer en plak deze vanuit de overzichtspagina van de I/O-console die u eerder hebt geopend.
@@ -74,55 +74,55 @@ Uw extensiepakket wordt vervolgens geüpload en de uploader geeft u de id van he
 
 >[!NOTE]
 >
->Tijdens het uploaden of patchen worden extensiepakketten in een status in behandeling geplaatst, terwijl het systeem het pakket asynchroon extraheert en implementeert. Tijdens dit proces kunt u de opdracht `extension_package` ID voor de status met behulp van de API en binnen de UI. Er wordt een extensiekaart weergegeven in de catalogus die is gemarkeerd als In behandeling.
+>Tijdens het uploaden of patchen worden extensiepakketten in een status in behandeling geplaatst, terwijl het systeem het pakket asynchroon extraheert en implementeert. Tijdens dit proces kunt u de `extension_package` -id voor de status opvragen met de API en de interface. Er wordt een extensiekaart weergegeven in de catalogus die is gemarkeerd als In behandeling.
 
 >[!NOTE]
 >
->Als u de uploader vaak wilt uitvoeren, kan het lastig zijn al deze informatie telkens in te voeren. U kunt deze ook als argumenten doorgeven vanaf de opdrachtregel. Kijk uit de [Sectie Opdrachtregelargumenten](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) van de NPM-documenten voor meer informatie.
+>Als u de uploader vaak wilt uitvoeren, kan het lastig zijn al deze informatie telkens in te voeren. U kunt deze ook als argumenten doorgeven vanaf de opdrachtregel. Controle uit de [ sectie van de Argumenten van de Lijn van het Bevel ](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) van de NPM- documenten voor meer info.
 
 ## Een ontwikkeleigenschap maken {#property}
 
-Nadat u zich bij UI hebt aangemeld en selecteert u **[!UICONTROL Tags]** in de linkernavigatie [!UICONTROL Properties] wordt weergegeven. Een eigenschap is een container voor de tags die u wilt implementeren en kan op een of meerdere sites worden gebruikt.
+Nadat u zich hebt aangemeld bij de gebruikersinterface en **[!UICONTROL Tags]** hebt geselecteerd in de linkernavigatie, wordt het [!UICONTROL Properties] -scherm weergegeven. Een eigenschap is een container voor de tags die u wilt implementeren en kan op een of meerdere sites worden gebruikt.
 
 ![](../images/getting-started/properties-screen.png)
 
-De eerste keer dat u zich aanmeldt, worden er geen eigenschappen op het scherm weergegeven. Selecteren **Nieuwe eigenschap** om er een te maken. Voer een naam en een URL in. Gebruik de URL van uw testsite of de pagina waarop u de extensie gaat testen. Dit domeinveld kan door sommige extensies worden gebruikt of door een voorwaarde met de extensie Core.
+De eerste keer dat u zich aanmeldt, worden er geen eigenschappen op het scherm weergegeven. Selecteer **Nieuw Bezit** om te creëren. Voer een naam en een URL in. Gebruik de URL van uw testsite of de pagina waarop u de extensie gaat testen. Dit domeinveld kan door sommige extensies worden gebruikt of door een voorwaarde met de extensie Core.
 
 >[!NOTE]
 >
->`localhost` werkt niet als een URL-waarde. Gebruik in plaats daarvan een willekeurige modelwaarde om te testen of u een `localhost` URL. Bijvoorbeeld, example.com.
+>`localhost` werkt niet als een URL-waarde. Gebruik in plaats daarvan een willekeurige modelwaarde voor het testen als u een `localhost` URL gebruikt. Bijvoorbeeld example.com.
 
-Als u deze eigenschap wilt gebruiken voor het testen van de extensieontwikkeling, moet u de **GEAVANCEERDE OPTIONS** en controleer of het selectievakje **Configureren voor de ontwikkeling van extensies**.
+Om dit bezit voor het testen van de uitbreidingsontwikkeling te gebruiken, moet u de **GEAVANCEERDE OPTIONS** uitbreiden en ervoor zorgen om de doos voor **te controleren vormt voor uitbreidingsontwikkeling**.
 
 ![](../images/getting-started/launch-create-a-dev-property.png)
 
-Selecteren **Opslaan** onderaan om de nieuwe eigenschap op te slaan.
+Selecteer **sparen** bij de bodem om uw nieuw bezit te bewaren.
 
 Het scherm Eigenschappen wordt weergegeven. Selecteer de naam van de eigenschap die u zojuist hebt gemaakt. Het scherm van het Overzicht van het Bezit verschijnt. Het voorziet verbindingen met elk gebied van het systeem van de globale navigatiekoppelingen in de kolom op de linkerzijde.
 
 ## De extensie installeren {#install-extension}
 
-Als u de extensie in deze eigenschap wilt installeren, selecteert u de optie **Extensies** in de hoofdnavigatiekoppelingen in de linkerkolom. De **Kern** extensie wordt weergegeven op het tabblad **Geïnstalleerd** scherm. De extensie Core bevat alle functionaliteit voor tagbeheer binnen de gegevensverzameling.
+Om uw uitbreiding in dit bezit te installeren, selecteer de **verbinding van Uitbreidingen** in de belangrijkste navigatiekoppelingen in de linkerkolom. De **uitbreiding van de Kern** wordt getoond op het **Geïnstalleerde** scherm. De extensie Core bevat alle functionaliteit voor tagbeheer binnen de gegevensverzameling.
 
 ![](../images/getting-started/extensions.png)
 
-Als u de extensie wilt toevoegen, selecteert u de optie **Catalogus** tab.
+Om uw uitbreiding toe te voegen, selecteer de **Catalogus** tabel.
 
 ![](../images/getting-started/catalog.png)
 
-De catalogus bevat kaartpictogrammen voor elke beschikbare extensie. Als uw extensie niet wordt weergegeven in de catalogus, controleert u of u de bovenstaande stappen hebt uitgevoerd in de secties Stel Adobe beheerconsole in en Creating Your Extension Package. Uw extensiepakket wordt mogelijk ook weergegeven als In behandeling als het Platform de eerste verwerking niet heeft voltooid.
+In de catalogus worden kaartpictogrammen weergegeven voor elke beschikbare extensie. Als uw extensie niet wordt weergegeven in de catalogus, controleert u of u de bovenstaande stappen hebt uitgevoerd in de secties Stel de beheerconsole van de Adobe in en Creating Your Extension Package. Uw extensiepakket wordt mogelijk ook weergegeven als In behandeling als Platform de eerste verwerking niet heeft voltooid.
 
-Als u de vorige stappen hebt uitgevoerd en nog steeds geen extensiepakket in behandeling of Mislukt ziet in de catalogus, moet u de status van het extensiepakket rechtstreeks controleren met de API. Voor informatie over hoe u de juiste API-aanroep kunt maken, leest u [Een ExtensionPackage ophalen](../../api/endpoints/extension-packages.md#lookup) in de API-documentatie.
+Als u de vorige stappen hebt uitgevoerd en nog steeds geen extensiepakket in behandeling of Mislukt ziet in de catalogus, moet u de status van het extensiepakket rechtstreeks controleren met de API. Voor informatie over hoe te om de aangewezen API vraag te maken, lees [ Vets een ExtensionPackage ](../../api/endpoints/extension-packages.md#lookup) in de API documentatie.
 
-Selecteer **Installeren** onder aan de kaart.
+Nadat uw extensiepakket verwerking heeft gebeëindigd, selecteert u **Installeren** onder aan de kaart.
 
 ![](../images/getting-started/install-extension.png)
 
-Het configuratiescherm wordt geopend (op voorwaarde dat de extensie er een heeft). Voeg om het even welke informatie toe nodig om uw uitbreiding te vormen en te selecteren **Opslaan** onderaan. In het voorbeeld van het configuratiescherm dat u hier ziet, wordt de Facebook-extensie gebruikt waarvoor een Pixel-id is vereist.
+Het configuratiescherm wordt geopend (op voorwaarde dat de extensie er een heeft). Voeg om het even welke informatie nodig toe om uw uitbreiding te vormen en **te selecteren sparen** bij de bodem. In het voorbeeld van het configuratiescherm dat u hier ziet, wordt de Facebook-extensie gebruikt waarvoor een Pixel-id is vereist.
 
 ![](../images/getting-started/fb-extension.png)
 
-U moet nu de **Geïnstalleerd** het scherm van uitbreidingen met de uitbreiding van de Kern en uw uitbreiding.
+U zou nu het **Geïnstalleerde** uitbreidingsscherm met de uitbreiding van de Kern en uw uitbreiding moeten zien.
 
 ![](../images/getting-started/extension-installed.png)
 
@@ -132,25 +132,25 @@ Extensies bieden nieuwe mogelijkheden voor gebruikers van Adobe Experience Platf
 
 ### Gegevenselementen
 
-Het doel van elementen met taggegevens is om gebruikers te helpen bij het behouden van waarden. Elk gegevenselement is een toewijzing of aanwijzer aan brongegevens. Eén gegevenselement is een variabele die kan worden toegewezen aan querytekenreeksen, URL&#39;s, cookie-waarden, JavaScript-variabelen enzovoort. Selecteren **Gegevenselementen** van de linkernavigatiebalk, en **Nieuw gegevenselement maken**.
+Het doel van elementen met taggegevens is om gebruikers te helpen bij het behouden van waarden. Elk gegevenselement is een toewijzing of aanwijzer aan brongegevens. Eén gegevenselement is een variabele die kan worden toegewezen aan querytekenreeksen, URL&#39;s, cookie-waarden, JavaScript-variabelen, enzovoort. Selecteer **Elementen van Gegevens** van de linkernavigatiebar, en **creeer Nieuw Element van Gegevens**.
 
 ![](../images/getting-started/data-element-create-new-link.png)
 
-Extensies kunnen gegevenselementen definiëren als dat nodig is om de extensie te laten werken of eenvoudig als gebruiksvriendelijk voor gebruikers. Wanneer een extensie gegevenselementen bevat, worden deze weergegeven in een vervolgkeuzelijst voor gebruikers in het dialoogvenster **Gegevenselement maken** scherm:
+Extensies kunnen gegevenselementen definiëren als dat nodig is om de extensie te laten werken of eenvoudig als gebruiksvriendelijk voor gebruikers. Wanneer een uitbreiding gegevenselemetypes verstrekt, verschijnen zij in een vervolgkeuzelijst voor gebruikers op **het Create scherm van het Element van Gegevens**:
 
 ![](../images/getting-started/create-data-element.png)
 
-Wanneer een gebruiker de extensie selecteert in het menu **Extensie** vervolgkeuzelijst **Type gegevenselement** dropdown is bevolkt met om het even welke die elementtypes van gegevens door uw uitbreiding worden verstrekt. De gebruiker kan dan elk gegevenselement aan zijn bronwaarde in kaart brengen. De elementen van gegevens kunnen dan worden gebruikt wanneer het bouwen van regels in de Gebeurtenis van de Verandering van het Element van Gegevens of de Gebeurtenis van de Code van de Douane om een uit te voeren regel teweeg te brengen. Een gegevenselement kan ook in de Voorwaarde van het Element van Gegevens of andere Voorwaarden, Uitzonderingen, of Acties in een regel worden gebruikt.
+Wanneer een gebruiker uw uitbreiding van **Uitbreiding** dropdown selecteert, wordt het **Type van Element van Gegevens** dropdown bevolkt met om het even welke die types van gegevenselement door uw uitbreiding worden verstrekt. De gebruiker kan dan elk gegevenselement aan zijn bronwaarde in kaart brengen. De elementen van gegevens kunnen dan worden gebruikt wanneer het bouwen van regels in de Gebeurtenis van de Verandering van het Element van Gegevens of de Gebeurtenis van de Code van de Douane om een uit te voeren regel teweeg te brengen. Een gegevenselement kan ook in de Voorwaarde van het Element van Gegevens of andere Voorwaarden, Uitzonderingen, of Acties in een regel worden gebruikt.
 
 Zodra het gegevenselement wordt gecreeerd (de afbeelding wordt opstelling), kunnen de gebruikers de brongegevens door het gegevenselement eenvoudig van verwijzingen te voorzien van verwijzingen voorzien. Als de bron van de waarde verandert (site wordt opnieuw ontworpen, enz.) gebruikers hoeven de toewijzing slechts eenmaal in UI bij te werken en alle gegevenselementen zullen automatisch de nieuwe bronwaarde ontvangen.
 
 ### Regels
 
-Selecteer **Regels** koppeling in de linkernavigatie, dan **Nieuwe regel maken**.
+Selecteer de **verbinding van Regels** in de linkernavigatie, dan **creeer Nieuwe Regel**.
 
 ![](../images/getting-started/rules-link.png)
 
-Voer eerst een beschrijvende naam in als regel. De **Regel maken** scherm wordt ingesteld als een `if-then` instructie.
+Voer eerst een beschrijvende naam in als regel. **creeer het scherm van de Regel** is opstelling als een `if-then` verklaring.
 
 ![](../images/getting-started/create-new-rule.png)
 
@@ -160,35 +160,35 @@ Voeg met het Facebook-extensievoorbeeld een gebeurtenis toe telkens wanneer een 
 
 ![](../images/getting-started/load-event.png)
 
-De `Window Loaded` **Type gebeurtenis** zorgt ervoor dat wanneer een pagina op de testplaats laadt deze regel zal worden teweeggebracht. Selecteren **Wijzigingen behouden**. In dit voorbeeld negeert u **Voorwaarden** aangezien de regel voor om het even welke pagina op de testplaats zou moeten in werking worden gesteld.
+Het `Window Loaded` **Type van Gebeurtenis** zorgt ervoor dat om het even welke tijd een pagina op de testplaats laadt deze regel zal worden teweeggebracht. Selecteer **houden Veranderingen**. Voor dit voorbeeld, negeer **Voorwaarden** aangezien de regel voor om het even welke pagina op de testplaats zou moeten worden teweeggebracht.
 
-Onder **ACTIES** selecteren **Toevoegen**. De **Configuratie van handelingen** scherm verschijnt.Daarna moet u de uitbreiding kiezen waarop de regel moet worden toegepast, en de actie om voor te komen wanneer de regel wordt teweeggebracht. Selecteren **Facebook Pixel** van de **Extensie** vervolgkeuzelijst, en **Paginaweergave verzenden** van de **Type handeling** vervolgkeuzelijst. Selecteren **Wijzigingen behouden** en vervolgens **Opslaan** over het volgende **Regel bewerken** scherm.
+Onder **ACTIES** uitgezocht **voeg** toe. Het **scherm van de Configuratie van de Actie** verschijnt.Daarna moet u de uitbreiding kiezen dat de regel moet worden toegepast op, en de actie om voor te komen wanneer de regel wordt teweeggebracht. Selecteer **Pixel van Facebook** van de **3} dropdown lijst van de Uitbreiding {, en** verzend de Mening van de Pagina **van het** Type van Actie **dropdown lijst.** Selecteer **houden Veranderingen**, en dan **sparen** op het volgende **uitgeven het scherm van de Regel**.
 
 ![](../images/getting-started/action-configuration.png)
 
 Selecteer tijdens het testen van de extensie relevante gebeurtenissen, voorwaarden, enzovoort. die door uw extensie worden geleverd, in een willekeurig aantal regels.
 
-## Uw wijzigingen publiceren {#publish}
+## Je wijzigingen Publish {#publish}
 
-Selecteer in de hoofdnavigatie de optie **Publiceren**, dan op **Nieuwe bibliotheek toevoegen** koppeling:
+In de belangrijkste navigatie, uitgezochte **het Publiceren**, dan op **voeg Nieuwe Bibliotheek** verbinding toe:
 
 ![](../images/getting-started/add-new-library.png)
 
-Een bibliotheek is een set instructies voor hoe extensies, gegevenselementen en regels met elkaar en met een website communiceren. Bibliotheken worden gecompileerd in builds. Een bibliotheek kan net zoveel wijzigingen bevatten als een gebruiker gemakkelijk kan maken of testen in één keer.
+Een bibliotheek is een set instructies voor hoe extensies, gegevenselementen en regels met elkaar en met een website communiceren. Bibliotheken worden gecompileerd in builds. Een bibliotheek kan net zoveel wijzigingen bevatten als een gebruiker op een gemakkelijke manier tegelijk kan maken of testen.
 
-Op de **Bibliotheek maken** scherm, voeg een naam in toe **Naam** tekstveld. Tags bieden een standaardontwikkelomgeving met de naam **Ontwikkeling**. Selecteren **Ontwikkeling** van de **Omgeving** vervolgkeuzelijst. Voeg voor het gemak alle beschikbare bronnen toe. Selecteren **Alle gewijzigde bronnen toevoegen** selecteert u vervolgens **Opslaan**.
+Op **creeer Bibliotheek** scherm, voeg een naam op het **3} tekstgebied van de Naam {toe.** De markeringen verstrekken een standaardontwikkelomgeving genoemd **Ontwikkeling**. Selecteer **Ontwikkeling** van de **milieu** dropdown lijst. Voeg voor het gemak alle beschikbare bronnen toe. Selecteer **toevoegen Alle Gewijzigde Middelen**, dan uitgezocht **sparen**.
 
 >[!NOTE]
 >
->Wanneer u een bron aan een bibliotheek toevoegt, wordt een momentopname van die bron op dat exacte moment genomen en aan de bibliotheek toegevoegd. Wanneer u later wijzigingen aanbrengt in uw bronnen (bijvoorbeeld als gevolg van correcties die u moet aanbrengen), moet u de bibliotheek ook bijwerken met de nieuwste wijzigingen in uw bronnen. De **Alle gewijzigde bronnen toevoegen** Deze knop is ook hiervoor nuttig.
+>Wanneer u een bron aan een bibliotheek toevoegt, wordt een momentopname van die bron op dat exacte moment genomen en aan de bibliotheek toegevoegd. Wanneer u later wijzigingen aanbrengt in uw bronnen (bijvoorbeeld als gevolg van correcties die u moet aanbrengen), moet u de bibliotheek ook bijwerken met de nieuwste wijzigingen in uw bronnen. **voeg Alle Gewijzigde Middelen** knoop toe is nuttig ook voor dit doel.
 
 ![](../images/getting-started/create-new-library.png)
 
-Nu alle wijzigingen zijn opgenomen in de nieuwe bibliotheek (met de naam **dev** in het opgegeven voorbeeld) selecteert u **Opslaan en samenstellen tot ontwikkeling**.
+Nu alle veranderingen in de pas gecreëerde bibliotheek (genoemd **dev** in het verstrekte voorbeeld) inbegrepen zijn, uitgezocht **sparen en bouwt aan Ontwikkeling**.
 
 ![](../images/getting-started/build-for-dev.png)
 
-Nadat het bouwstijlproces voltooit, groen **succes** wordt weergegeven naast de bibliotheeknaam.
+Nadat het bouwstijlproces voltooit, een groene **succes** indicatorvertoningen naast de bibliotheeknaam.
 
 ![](../images/getting-started/successful-build.png)
 
@@ -196,22 +196,22 @@ De tagbibliotheek is nu gepubliceerd en beschikbaar voor gebruik. De testpagina 
 
 ## Tags op een testsite installeren {#install-data-collection-tags}
 
-Installatie-instructies zijn beschikbaar op het tabblad Omgevingen. Op deze pagina worden alle beschikbare omgevingen weergegeven en kunt u meer maken. Terwijl de bibliotheek naar de ontwikkelomgeving is gepubliceerd, selecteert u het vakpictogram in het dialoogvenster **INSTALLEREN** kolom op de **Ontwikkeling** rij.
+Installatie-instructies zijn beschikbaar op het tabblad Omgevingen. Op deze pagina worden alle beschikbare omgevingen weergegeven en kunt u meer maken. Aangezien de bibliotheek aan het milieu van de Ontwikkeling werd gepubliceerd selecteer het bakpictogram in de **INSTALLEER** kolom op de **3} rij van de Ontwikkeling.**
 
 ![](../images/getting-started/launch-installation-instructions.png)
 
-De **Webinstallatieinstructies** wordt een dialoog voor de ontwikkelomgeving weergegeven. Selecteer het pictogram Kopiëren om het volledige te kopiëren `<script>` tag.
+Het **Web installeert de dialoog van Instructies** voor het milieu van de Ontwikkeling verschijnt. Selecteer het kopieerpictogram om de volledige `<script>` -tag te kopiëren.
 
 ![](../images/getting-started/launch-installation-instructions-dialogue.png)
 
-Voltooi de installatie door deze installatie te plaatsen `<script>` tag in de `<head>` van uw document of sitesjabloon. Ga vervolgens naar de testsite om het gedrag van uw gepubliceerde tagbibliotheek te bekijken.
+Voltooi de installatie door deze enkele `<script>` -tag in de `<head>` -sectie van uw document- of sitesjabloon te plaatsen. Ga vervolgens naar de testsite om het gedrag van uw gepubliceerde tagbibliotheek te bekijken.
 
 ## Testen {#test}
 
 Hieronder volgt een lijst met handige consoleopdrachten voor het valideren van uw extensie op uw testpagina of site.
 
-- `_satellite.setDebug(true);` zal zuivert wijze en output nuttige registrerenverklaringen aan de console toelaten.
-- De `_satellite._container` Het object bevat nuttige informatie over de geïmplementeerde bibliotheek, waaronder informatie over de opgenomen build, gegevenselementen, regels en extensies.
+- In `_satellite.setDebug(true);` worden de foutopsporingsmodus ingeschakeld en worden nuttige logboekinstructies naar de console uitgevoerd.
+- Het `_satellite._container` -object bevat nuttige informatie over de geïmplementeerde bibliotheek, waaronder informatie over de opgenomen build, gegevenselementen, regels en extensies.
 
 Het doel van deze test is de functionaliteit van de geïmplementeerde bibliotheek te controleren en ervoor te zorgen dat het extensiepakket zich gedraagt zoals u had verwacht nadat het in een bibliotheek is opgenomen.
 
@@ -224,7 +224,7 @@ Wanneer u veranderingen ontdekt die aan uw uitbreidingspakket moeten worden aang
 
    >[!NOTE]
    >
-   >Argumenten kunnen op de bevellijn worden overgegaan om tijd te besparen door het herhaalde ingaan van geloofsbrieven te vermijden. Lees voor meer informatie hierover de [reactoruploader, documentatie](https://www.npmjs.com/package/@adobe/reactor-uploader).
+   >Argumenten kunnen op de bevellijn worden overgegaan om tijd te besparen door het herhaalde ingaan van geloofsbrieven te vermijden. Voor meer informatie over dit, lees de [ reactor-uploader documentatie ](https://www.npmjs.com/package/@adobe/reactor-uploader).
 1. De installatiestap kan worden overgeslagen wanneer een bestaand pakket wordt bijgewerkt.
 1. Wijzig middelen - als de configuratie voor om het even welk van uw uitbreidingscomponenten is veranderd, zult u die middelen in UI moeten bijwerken.
 1. Voeg de meest recente wijzigingen toe aan uw bibliotheek en maak de bibliotheek opnieuw.

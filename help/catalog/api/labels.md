@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # De etiketten van het gegevensgebruik in de Dienst van de Dataset API
 
-Afzonderlijk van de dienst API van de Catalogus, [!DNL Dataset Service] API verstrekt eindpunten om de etiketten van het gegevensgebruik voor datasets te beheren. Voor stappen op hoe te om vraag aan deze eindpunten te maken, gelieve te verwijzen naar de gids op [gegevensgebruikslabels beheren met de API](../../data-governance/labels/dataset-api.md) in de documentatie van Adobe Experience Platform Data Governance.
+De API van [!DNL Dataset Service], die los staat van de API van de Catalogusservice, biedt eindpunten voor het beheer van gegevensverbruikslabels voor gegevenssets. Voor stappen op hoe te om vraag aan deze eindpunten te maken, gelieve te verwijzen naar de gids over [ het beheren van de etiketten van het gegevensgebruik gebruikend API ](../../data-governance/labels/dataset-api.md) in de documentatie van het Beleid van de Gegevens van Adobe Experience Platform.

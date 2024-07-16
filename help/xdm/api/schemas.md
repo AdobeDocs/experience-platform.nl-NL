@@ -6,28 +6,28 @@ description: Het /schemas eindpunt in de Registratie API van het Schema staat u 
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1443'
 ht-degree: 0%
 
 ---
 
 # Schemas, eindpunt
 
-Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u in Adobe Experience Platform wilt invoeren. Elk schema bestaat uit een klasse en nul of meer groepen schemavelden. De `/schemas` in de [!DNL Schema Registry] Met API kunt u schema&#39;s programmatisch beheren binnen uw ervaringstoepassing.
+Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u in Adobe Experience Platform wilt invoeren. Elk schema bestaat uit een klasse en nul of meer groepen schemavelden. Met het eindpunt `/schemas` in de [!DNL Schema Registry] API kunt u schema&#39;s programmatisch beheren binnen uw ervaringstoepassing.
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met schema&#39;s ophalen {#list}
 
-U kunt alle schema&#39;s weergeven onder de `global` of `tenant` container door een GET-aanvraag in te dienen bij `/global/schemas` of `/tenant/schemas`, respectievelijk.
+U kunt alle schema&#39;s weergeven onder de container `global` of `tenant` door een aanvraag voor een GET in te dienen bij respectievelijk `/global/schemas` of `/tenant/schemas` .
 
 >[!NOTE]
 >
->Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [queryparameters](./appendix.md#query) voor meer informatie.
+>Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [ vraagparameters ](./appendix.md#query) in het bijlage document voor meer informatie.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
@@ -35,14 +35,14 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container waarin de schema&#39;s zijn ondergebracht die u wilt ophalen: `global` voor door Adobe gemaakte schema&#39;s of `tenant` voor schema&#39;s die eigendom zijn van uw organisatie. |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de [bijgevoegd document](./appendix.md#query) voor een lijst met beschikbare parameters. |
+| `{CONTAINER_ID}` | De container waarin de schema&#39;s zijn opgeslagen die u wilt ophalen: `global` voor schema&#39;s die zijn gemaakt met een Adobe of `tenant` voor schema&#39;s die eigendom zijn van uw organisatie. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [ bijlage document ](./appendix.md#query) voor een lijst van beschikbare parameters. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Het volgende verzoek wint een lijst van schema&#39;s van terug `tenant` container gebruiken `orderby` query-parameter om de resultaten op hun te sorteren `title` kenmerk.
+Met de volgende aanvraag wordt een lijst met schema&#39;s opgehaald uit de container `tenant` . Hierbij wordt een `orderby` query-parameter gebruikt om de resultaten op hun `title` -kenmerk te sorteren.
 
 ```shell
 curl -X GET \
@@ -54,18 +54,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Het volgende `Accept` Kopteksten zijn beschikbaar voor aanbiedingsschema&#39;s:
+De antwoordindeling is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. De volgende `Accept` kopteksten zijn beschikbaar voor aanbiedingsschema&#39;s:
 
 | `Accept` header | Beschrijving |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
-| `application/vnd.adobe.xed+json` | Retourneert het volledige JSON-schema voor elke bron, met het origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
+| `application/vnd.adobe.xed+json` | Retourneert het volledige JSON-schema voor elke bron, met origineel `$ref` en `allOf` inbegrepen. (Limiet: 300) |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-In bovengenoemd verzoek werd gebruikgemaakt van de `application/vnd.adobe.xed-id+json` `Accept` header, daarom bevat de reactie alleen de `title`, `$id`, `meta:altId`, en `version` kenmerken voor elk schema. Het andere gebruiken `Accept` header (`application/vnd.adobe.xed+json`) retourneert alle kenmerken van elk schema. Selecteer de juiste `Accept` afhankelijk van de informatie die u in uw reactie nodig hebt.
+In de bovenstaande aanvraag is de header `application/vnd.adobe.xed-id+json` `Accept` gebruikt en daarom bevat het antwoord alleen de kenmerken `title` , `$id` , `meta:altId` en `version` voor elk schema. Als u de andere `Accept` header (`application/vnd.adobe.xed+json` ) gebruikt, worden alle kenmerken van elk schema geretourneerd. Selecteer de juiste `Accept` header, afhankelijk van de informatie die u in uw reactie nodig hebt.
 
 ```json
 {
@@ -101,7 +101,7 @@ In bovengenoemd verzoek werd gebruikgemaakt van de `application/vnd.adobe.xed-id
 
 U kunt een specifiek schema opzoeken door een verzoek van de GET te doen dat identiteitskaart van het schema in de weg omvat.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
@@ -109,14 +109,14 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container waarin het schema is opgeslagen dat u wilt ophalen: `global` voor een door Adobe gemaakt schema of `tenant` voor een schema dat eigendom is van uw organisatie. |
-| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het schema dat u wilt opzoeken. |
+| `{CONTAINER_ID}` | De container waarin het schema is opgeslagen dat u wilt ophalen: `global` voor een schema dat is gemaakt met een Adobe of `tenant` voor een schema dat eigendom is van uw organisatie. |
+| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het schema dat u wilt opzoeken. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Het volgende verzoek wint een schema terug dat door zijn wordt gespecificeerd `meta:altId` waarde in het pad.
+Met de volgende aanvraag wordt een schema opgehaald dat door de `meta:altId` -waarde in het pad wordt opgegeven.
 
 ```shell
 curl -X GET \
@@ -128,22 +128,22 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Alle opzoekverzoeken vereisen een `version` worden opgenomen in de `Accept` header. Het volgende `Accept` Kopteksten zijn beschikbaar:
+De antwoordindeling is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. Voor alle opzoekverzoeken moet een `version` worden opgenomen in de `Accept` -koptekst. De volgende `Accept` headers zijn beschikbaar:
 
 | `Accept` header | Beschrijving |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version=1` | Onbewerkt met `$ref` en `allOf`, heeft titels en beschrijvingen. |
-| `application/vnd.adobe.xed-full+json; version=1` | `$ref` en `allOf` heeft titels en beschrijvingen. |
-| `application/vnd.adobe.xed-notext+json; version=1` | Onbewerkt met `$ref` en `allOf`, geen titels of beschrijvingen. |
+| `application/vnd.adobe.xed+json; version=1` | Met `$ref` en `allOf` heeft Raw titels en beschrijvingen. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` en `allOf` resolve, heeft titels en beschrijvingen. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Onbewerkt met `$ref` en `allOf` , geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` en `allOf` opgelost, geen titels of beschrijvingen. |
-| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en `allOf` opgelost, beschrijving inbegrepen. |
-| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` en `allOf` heeft titels en beschrijvingen. Verouderde velden worden aangegeven met een `meta:status` kenmerk van `deprecated`. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en `allOf` opgelost, inclusief beschrijvingen. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` en `allOf` resolve, heeft titels en beschrijvingen. Vervangen velden worden aangegeven met een `meta:status` -kenmerk van `deprecated` . |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert de details van het schema terug. De geretourneerde velden zijn afhankelijk van de `Accept` in de aanvraag verzonden. Experimenteer met andere `Accept` Kopteksten om de reacties te vergelijken en te bepalen welke kopbal het beste voor uw gebruiksgeval is.
+Een succesvolle reactie keert de details van het schema terug. Welke velden worden geretourneerd, is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. Experimenteer met verschillende kopteksten van `Accept` om de reacties te vergelijken en te bepalen welke kopbal het beste voor uw gebruiksgeval is.
 
 ```json
 {
@@ -200,9 +200,9 @@ Het proces van de schemacompositie begint door een klasse toe te wijzen. De klas
 
 >[!NOTE]
 >
->De voorbeeldaanroep hieronder is slechts een basislijnvoorbeeld van hoe u een schema in de API maakt, met de minimale compositievereisten van een klasse en geen veldgroepen. Voor volledige stappen over hoe te om een schema in API tot stand te brengen, met inbegrip van hoe te om gebieden toe te wijzen die gebiedsgroepen en gegevenstypes gebruiken, zie [zelfstudie over het maken van schema&#39;s](../tutorials/create-schema-api.md).
+>De voorbeeldaanroep hieronder is slechts een basislijnvoorbeeld van hoe u een schema in de API maakt, met de minimale compositievereisten van een klasse en geen veldgroepen. Voor volledige stappen op hoe te om een schema in API tot stand te brengen, met inbegrip van hoe te om gebieden toe te wijzen die gebiedsgroepen en gegevenstypes gebruiken, zie de [ zelfstudie van de schemaverwezenlijking ](../tutorials/create-schema-api.md).
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /tenant/schemas
@@ -210,7 +210,7 @@ POST /tenant/schemas
 
 **Verzoek**
 
-Het verzoek moet een `allOf` kenmerk dat verwijst naar het `$id` van een klasse. Dit attribuut bepaalt de &quot;basisklasse&quot;die het schema zal uitvoeren. In dit voorbeeld is de basisklasse een klasse &quot;Eigenschapinformatie&quot; die eerder is gemaakt.
+De aanvraag moet een `allOf` -kenmerk bevatten dat naar de `$id` van een klasse verwijst. Dit attribuut bepaalt de &quot;basisklasse&quot;die het schema zal uitvoeren. In dit voorbeeld is de basisklasse een klasse &quot;Eigenschapinformatie&quot; die eerder is gemaakt.
 
 ```SHELL
 curl -X POST \
@@ -234,13 +234,13 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `allOf` | Een array van objecten, waarbij elk object verwijst naar een klasse of veldgroep waarvan de velden door het schema worden geïmplementeerd. Elk object bevat één eigenschap (`$ref`) waarvan de waarde de `$id` van de klasse of de gebiedsgroep zal het nieuwe schema uitvoeren. Er moet één klasse worden opgegeven, met nul of meer extra veldgroepen. In het bovenstaande voorbeeld wordt het ene object in het dialoogvenster `allOf` array is de klasse van het schema. |
+| `allOf` | Een array van objecten, waarbij elk object verwijst naar een klasse of veldgroep waarvan het schema velden implementeert. Elk object bevat één eigenschap (`$ref`) waarvan de waarde de `$id` vertegenwoordigt van de klasse of veldgroep die het nieuwe schema zal implementeren. Er moet één klasse worden opgegeven, met nul of meer extra veldgroepen. In het bovenstaande voorbeeld is het ene object in de array `allOf` de klasse van het schema. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van het nieuwe schema, inclusief de `$id`, `meta:altId`, en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry].
+Een succesvol antwoord retourneert HTTP-status 201 (Gemaakt) en een lading die de details bevat van het nieuwe schema, inclusief `$id`, `meta:altId` en `version` . Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry] .
 
 ```JSON
 {
@@ -275,19 +275,19 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die d
 }
 ```
 
-Een GET-aanvraag uitvoeren op [lijst alle schema&#39;s](#list) in de huurderscontainer zou nu het nieuwe schema omvatten. U kunt een [opzoekverzoek (GET)](#lookup) URL-gecodeerd gebruiken `$id` URI om het nieuwe schema direct te bekijken.
+Het uitvoeren van een verzoek van de GET aan [ lijst alle schema&#39;s ](#list) in de huurderscontainer zou nu het nieuwe schema omvatten. U kunt a [ raadpleging (GET) verzoek ](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om het nieuwe schema direct te bekijken.
 
-Als u aanvullende velden aan een schema wilt toevoegen, kunt u een [PATCH-bewerking](#patch) om veldgroepen toe te voegen aan de schema&#39;s `allOf` en `meta:extends` arrays.
+Om extra gebieden aan een schema toe te voegen, kunt u de verrichting van de a [ PATCH ](#patch) uitvoeren om gebiedsgroepen aan de 2} en `meta:extends` series van het schema toe te voegen.`allOf`
 
 ## Een schema bijwerken {#put}
 
-U kunt een volledig schema door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een schema door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die wanneer zouden worden vereist [een nieuw schema maken](#create) in een verzoek van de POST.
+U kunt een volledig schema door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een schema door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [ creërend een nieuw schema ](#create) in een verzoek van de POST.
 
 >[!NOTE]
 >
->Als u slechts een deel van een schema wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [het bijwerken van een gedeelte van een schema](#patch).
+>Als u slechts een deel van een schema wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [ het bijwerken van een gedeelte van een schema ](#patch).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /tenant/schemas/{SCHEMA_ID}
@@ -295,13 +295,13 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het schema dat u opnieuw wilt schrijven. |
+| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het schema dat u opnieuw wilt schrijven. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Het volgende verzoek vervangt een bestaand schema, veranderend zijn `title`, `description`, en `allOf` kenmerken.
+De volgende aanvraag vervangt een bestaand schema door de kenmerken `title` , `description` en `allOf` ervan te wijzigen.
 
 ```SHELL
 curl -X PUT \
@@ -323,7 +323,7 @@ curl -X PUT \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van het bijgewerkte schema terug.
 
@@ -362,15 +362,15 @@ Een succesvolle reactie keert de details van het bijgewerkte schema terug.
 
 ## Een gedeelte van een schema bijwerken {#patch}
 
-U kunt een gedeelte van een schema bijwerken door een verzoek van PATCH te gebruiken. De [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add`, `remove`, en `replace`. Voor meer informatie over JSON Patch raadpleegt u de [Handleiding voor API-basisbeginselen](../../landing/api-fundamentals.md#json-patch).
+U kunt een gedeelte van een schema bijwerken door een verzoek van PATCH te gebruiken. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Als u een volledige bron wilt vervangen door nieuwe waarden in plaats van afzonderlijke velden bij te werken, raadpleegt u de sectie over [het vervangen van een schema gebruikend een verrichting van de PUT](#put).
+>Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [ het vervangen van een schema gebruikend een verrichting van de PUT ](#put).
 
 Een van de meest gangbare PATCH-bewerkingen bestaat uit het toevoegen van eerder gedefinieerde veldgroepen aan een schema, zoals in het onderstaande voorbeeld wordt getoond.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /tenant/schemas/{SCHEMA_ID} 
@@ -378,15 +378,15 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SCHEMA_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van het schema dat u wilt bijwerken. |
+| `{SCHEMA_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van het schema dat u wilt bijwerken. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-In de onderstaande voorbeeldaanvraag wordt een nieuwe veldgroep aan een schema toegevoegd door de naam van die veldgroep toe te voegen `$id` waarde voor beide `meta:extends` en `allOf` arrays.
+In de onderstaande voorbeeldaanvraag wordt een nieuwe veldgroep toegevoegd aan een schema door de waarde `$id` van die veldgroep toe te voegen aan de arrays `meta:extends` en `allOf` .
 
-De aanvraaginstantie heeft de vorm van een array, waarbij elk vermeld object een specifieke wijziging in een afzonderlijk veld vertegenwoordigt. Elk object bevat de uit te voeren bewerking (`op`), welk veld de bewerking moet worden uitgevoerd (`path`) en welke informatie in die operatie moet worden opgenomen (`value`).
+De aanvraaginstantie heeft de vorm van een array, waarbij elk vermeld object een specifieke wijziging in een afzonderlijk veld vertegenwoordigt. Elk voorwerp omvat uit te voeren verrichting (`op`), welk gebied de verrichting zou moeten worden uitgevoerd (`path`), en welke informatie in die verrichting (`value`) zou moeten worden omvat.
 
 ```SHELL
 curl -X PATCH\
@@ -412,9 +412,9 @@ curl -X PATCH\
       ]'
 ```
 
-**Antwoord**
+**Reactie**
 
-De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De veldgroep `$id` is toegevoegd aan de `meta:extends` array en een verwijzing (`$ref`) aan de veldgroep `$id` wordt nu weergegeven in het dialoogvenster `allOf` array.
+De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De veldgroep `$id` is toegevoegd aan de array `meta:extends` en een verwijzing ( `$ref` ) naar de veldgroep `$id` wordt nu weergegeven in de array `allOf` .
 
 ```JSON
 {
@@ -455,13 +455,13 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De veldgr
 
 ## Een schema inschakelen voor gebruik in realtime-klantprofiel {#union}
 
-Om aan een schema deel te nemen [Klantprofiel in realtime](../../profile/home.md), moet u een `union` tag toevoegen aan schema&#39;s `meta:immutableTags` array. U kunt dit bereiken door een PATCH-verzoek voor het desbetreffende schema in te dienen.
+Opdat een schema om aan [ in real time Profiel van de Klant ](../../profile/home.md) deel te nemen, moet u a `union` markering aan de 3} serie van het schema {toevoegen. `meta:immutableTags` U kunt dit bereiken door een PATCH-verzoek voor het desbetreffende schema in te dienen.
 
 >[!IMPORTANT]
 >
 >Onveranderbare tags zijn tags die zijn bedoeld om te worden ingesteld, maar die nooit worden verwijderd.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /tenant/schemas/{SCHEMA_ID} 
@@ -469,13 +469,13 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SCHEMA_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van het schema dat u wilt inschakelen. |
+| `{SCHEMA_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van het schema dat u wilt inschakelen. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-De onderstaande voorbeeldaanvraag voegt een `meta:immutableTags` array naar een bestaand schema, waarbij de array een enkele tekenreekswaarde krijgt van `union` om deze in te schakelen voor gebruik in Profiel.
+In de onderstaande voorbeeldaanvraag wordt een array `meta:immutableTags` toegevoegd aan een bestaand schema, zodat de array een enkele tekenreekswaarde `union` krijgt om deze in te schakelen voor gebruik in Profiel.
 
 ```SHELL
 curl -X PATCH\
@@ -494,9 +494,9 @@ curl -X PATCH\
       ]'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord keert de details van het bijgewerkte schema terug, die tonen dat `meta:immutableTags` array is toegevoegd.
+Een succesvol antwoord retourneert de details van het bijgewerkte schema, waarbij wordt getoond dat de array `meta:immutableTags` is toegevoegd.
 
 ```JSON
 {
@@ -538,13 +538,13 @@ Een succesvol antwoord keert de details van het bijgewerkte schema terug, die to
 }
 ```
 
-U kunt nu de samenvoeging voor de klasse van dit schema bekijken om te bevestigen dat de gebieden van het schema worden vertegenwoordigd. Zie de [Punthandleiding voor vakbonden](./unions.md) voor meer informatie .
+U kunt nu de samenvoeging voor de klasse van dit schema bekijken om te bevestigen dat de gebieden van het schema worden vertegenwoordigd. Zie de [ gids van het vakbondseindpunt ](./unions.md) voor meer informatie.
 
 ## Schema verwijderen {#delete}
 
 Het kan soms noodzakelijk zijn om een schema uit de Registratie van het Schema te verwijderen. Dit wordt gedaan door een verzoek van de DELETE met schema identiteitskaart uit te voeren die in de weg wordt verstrekt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /tenant/schemas/{SCHEMA_ID}
@@ -552,7 +552,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SCHEMA_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van het schema dat u wilt verwijderen. |
+| `{SCHEMA_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van het schema dat u wilt verwijderen. |
 
 {style="table-layout:auto"}
 
@@ -567,8 +567,8 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
-U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan het schema te proberen. U moet een `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the schema has been removed from the Schema Registry.
+U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan het schema te proberen. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat het schema uit de schemaregistratie is verwijderd.

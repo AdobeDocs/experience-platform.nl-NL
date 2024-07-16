@@ -4,7 +4,7 @@ description: Dit document bevat aanvullende informatie over het werken met de AP
 exl-id: fdfa019d-ce0e-456b-b591-7d96d1115e02
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ De sandbox Tooling-API ondersteunt het gebruik van queryparameters voor het pagi
 
 >[!NOTE]
 >
->De `limit` kan afzonderlijk worden doorgegeven en gestart.
+>`limit` kan afzonderlijk worden doorgegeven en gestart.
 
 | Parameter | Beschrijving |
 | --- | --- |

@@ -28,13 +28,13 @@ Om opnieuw te kunnen samenvatten: als u slechts één keer per dag Adobe Real-Ti
 
 
 Lees verder voor meer informatie over de Magnite: Streaming Batch-bestemming, hoe u er verbinding mee kunt maken en hoe u het Adobe Real-Time CDP-publiek activeert.
-Voor meer informatie over de bestemming Real-Time, zie [dit doc](magnite-streaming.md) in plaats daarvan.
+Voor meer informatie over de bestemming in real time, zie [ dit doc ](magnite-streaming.md) in plaats daarvan.
 
 >[!IMPORTANT]
 >
 >Deze bestemmingsschakelaar is in bèta en slechts beschikbaar om klanten te selecteren. Neem contact op met uw Adobe als u toegang wilt aanvragen.
 >
->De bestemmingsschakelaar en documentatiepagina worden gecreeerd en door [!DNL Magnite] team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via `adobe-tech@magnite.com`.
+>De doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Magnite] . Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via `adobe-tech@magnite.com` .
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -54,15 +54,15 @@ Elk publiek dat via de Magnite Streaming wordt geactiveerd: de batchbestemming w
 
 ## Vereisten {#prerequisites}
 
-Als u de Magnite-doelen in Adobe Experience Platform wilt gebruiken, moet u eerst een Magnite Streaming-account hebben. Als u een [!DNL Magnite Streaming] account, neem contact op met je [!DNL Magnite] accountmanager moet gegevens krijgen voor toegang tot [!DNL Magnite's] bestemmingen. Als u geen [!DNL Magnite Streaming] account, surf naar adobe-tech@magnite.com
+Als u de Magnite-doelen in Adobe Experience Platform wilt gebruiken, moet u eerst een Magnite Streaming-account hebben. Als u een [!DNL Magnite Streaming] -account hebt, vraagt u uw [!DNL Magnite] accountmanager om referenties voor toegang tot [!DNL Magnite's] -doelen. Als u geen [!DNL Magnite Streaming] -account hebt, kunt u contact opnemen met adobe-tech@magnite.com
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-De toeristenstroom: de batchbestemming kan worden ontvangen *alle* identiteitsbronnen van de Adobe CDP. Deze bestemming heeft momenteel drie doelidentiteitsvelden waarnaar u de koppeling wilt maken.
+De toeristenstroom: De bestemming van de partij kan *om het even welke* identiteitsbronnen van de Adobe CDP ontvangen. Deze bestemming heeft momenteel drie doelidentiteitsvelden waarnaar u de koppeling wilt maken.
 
 >[!NOTE]
 >
->*Alle* Identiteitsbronnen kunnen aan om het even welk van het doel magnite_deviceId in kaart brengen.
+>*Om het even welke* identiteitsbronnen kunnen aan om het even welk van het doel magnite_deviceId in kaart brengen.
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
@@ -76,8 +76,8 @@ De toeristenstroom: de batchbestemming kan worden ontvangen *alle* identiteitsbr
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ De toeristenstroom: de batchbestemming kan worden ontvangen *alle* identiteitsbr
 | Item | Type | Notities |
 |-----------------------------|----------|----------|
 | Exporttype | Publiek exporteren | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in Magnite Streaming: Batchbestemming. |
-| Exportfrequentie | Batch | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over batch [bestandsgebaseerde doelen](/help/destinations/destination-types.md). |
+| Exportfrequentie | Batch | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over partij [ op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md). |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ Als u al een bestaand account hebt, kunt u dit vinden door de optie Account te w
 
 Als u een nieuwe account wilt maken en deze voor het eerst wilt verifiëren bij de bestemming, vult u de velden &quot;S3-toegangssleutel&quot; en &quot;S3 geheime sleutel&quot; in (die u via uw accountmanager ontvangt) en selecteert u **[!UICONTROL Connect to destination]**
 
-![doelconfiguratie, automatische velden niet ingevuld](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
+![ ongevulde gebieden van de bestemmingsconfiguratie ](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
 
 >[!NOTE]
 >
@@ -112,47 +112,49 @@ Als u een nieuwe account wilt maken en deze voor het eerst wilt verifiëren bij 
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-* **[!UICONTROL Name]**: Een naam waarmee u deze doelverbinding/instantie in de toekomst herkent.
-* **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemmingsverbinding/instantie in de toekomst identificeren.
+* **[!UICONTROL Name]**: Een naam waarmee u deze doelverbinding/-instantie herkent in het dialoogvenster
+de toekomst.
+* **[!UICONTROL Description]**: Een beschrijving die u helpt dit te identificeren
+doelverbinding/-instantie in de toekomst.
 * **[!UICONTROL Name of your source partner]**: De naam die u als bron wilt opgeven in het platform van Magnite Streaming
 
-![aangepaste doelconfiguratievelden ingevuld](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
+![ gevulde gebieden van de bestemmingsconfiguratie ](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
 >[!NOTE]
 >
 >Als u meerdere id-typen wilt verzenden (GAID, IDFA, enz.) wanneer u de Batch-bestemming gebruikt, is voor elke verbinding een nieuwe doelverbinding/nieuwe doelinstantie vereist. Neem voor meer informatie contact op met uw vertegenwoordiger van uw Magnite-account.
 
-U kunt vervolgens doorgaan door **[!UICONTROL Next]**
+U kunt vervolgens doorgaan door **[!UICONTROL Next]** te selecteren
 
 Op het volgende scherm, getiteld &quot;Governance Policy and Enforcement Actions (Optional)&quot;, kunt u naar keuze om het even welk relevant beleid van het gegevensbeheer selecteren. &quot;Gegevens exporteren&quot; wordt over het algemeen geselecteerd voor de bestemming Magnite Streaming Batch.
 
-![Optioneel governancebeleid en handhavingsmaatregelen](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
+![ Facultatief beleid van het bestuur en handhavingsacties ](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
-Als deze optie is geselecteerd of als u dit optionele scherm wilt overslaan, selecteert u **[!UICONTROL Create]**
+Selecteer **[!UICONTROL Create]** wanneer deze optie is geselecteerd of wanneer u dit optionele scherm wilt overslaan
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ### Segmenten naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lezen [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
-In de **[!UICONTROL Source field]**kunt u elk kenmerk of elke identiteit voor uw apparaten selecteren. In dit voorbeeld hebben we een aangepaste IdentityMap met de naam &#39;DeviceId&#39; geselecteerd
-![de gewenste gegevensvelden toewijzen aan het veld device_id](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
+In **[!UICONTROL Source field]**, kunt u om het even welk attribuut of identiteit voor uw apparaten selecteren. In dit voorbeeld hebben we een aangepaste IdentityMap met de naam &#39;DeviceId&#39; geselecteerd
+![ kaart gewenste gegevensgebieden aan het apparaat_id gebied ](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
-In de **[!UICONTROL Target field]**:
-![Selecteer de gewenste doelidentiteit van het apparaattype](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Zie [Ondersteunde identiteiten](#supported-identities) voor meer informatie .
-In dit voorbeeld hebben we de **[!UICONTROL Target field]**: magnite_deviceId_CUSTOM, omdat onze **[!UICONTROL Source field]** was gedefinieerd als een aangepaste IdentityMap: DeviceID.
+In de lus **[!UICONTROL Target field]** :
+![ selecteer de aangewezen doelidentiteit van het apparatentype ](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) zie [ Gesteunde Identiteiten ](#supported-identities) voor meer informatie.
+In dit voorbeeld hebben we **[!UICONTROL Target field]**: magnite_deviceId_CUSTOM geselecteerd, omdat onze **[!UICONTROL Source field]** is gedefinieerd als een aangepaste IdentityMap: DeviceID.
 
 >[!NOTE]
 >
@@ -167,7 +169,7 @@ Op het scherm &quot;Vorm filename en de uitvoerplanning voor elk publiek&quot;, 
 >
 > Een toewijzings-id moet worden opgegeven wanneer een publiek een bestaande segment-id heeft die eerder bekend is bij Magnite Streaming. Anders moet &#39;NONE&#39; worden gebruikt als de toewijzing-id.
 >
-> Wanneer u de bestandsnaam voor elk publiek configureert, neemt u de toewijzingsid op via het veld Aangepaste tekst dat u wilt toevoegen. De toewijzen-id wordt toegevoegd als: `{previous_filename}\_\[MAPPING_ID\].` Als dit publiek nieuw is voor Magnite Streaming en u geen toewijzings-id opgeeft, moet &#39;NONE&#39; worden ingevoerd in het veld &#39;Aangepaste tekst&#39;. De nieuwe bestandsnaam in dit geval moet zijn: `{previous_filename}\_\[NONE\]`.
+> Wanneer u de bestandsnaam voor elk publiek configureert, neemt u de toewijzingsid op via het veld Aangepaste tekst dat u wilt toevoegen. Aan de toewijzen-id wordt het volgende toegevoegd: `{previous_filename}\_\[MAPPING_ID\].` Als dit publiek nieuw is voor Magnite Streaming en u geen toewijzings-id opgeeft, wordt &#39;NONE&#39; weergegeven in het veld &#39;Aangepaste tekst&#39;. De nieuwe bestandsnaam in dit geval moet zijn: `{previous_filename}\_\[NONE\]` .
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
@@ -177,12 +179,12 @@ Nadat uw publiek is geüpload, kunt u controleren of uw publiek op de juiste wij
 
 >[!NOTE]
 >
->Soorten publiek geactiveerd/geleverd aan de Magnite Streaming Batch-bestemming *vervangen* hetzelfde publiek dat via de realtime-bestemming Magnite Streaming werd geactiveerd/geleverd. Als u omhoog een segment gebruikend de segmentnaam kijkt, kunt u niet het segment in real time vinden, tot de partij is opgenomen en door het platform van de Streaming van de Magnite verwerkt.
+>Het publiek activeerde/geleverde aan de Magnite die Batch bestemming stroomt zal ** het zelfde publiek vervangen dat via de Magnite die in real time bestemming stroomt werd geactiveerd/geleverd. Als u omhoog een segment gebruikend de segmentnaam kijkt, kunt u niet het segment in real time vinden, tot de partij is opgenomen en door het platform van de Streaming van de Magnite verwerkt.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] dwingt gegevensbeheer af, lees de [Overzicht van gegevensbeheer](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
-Ga voor aanvullende Help-documentatie naar de [Magnite Help Center](https://help.magnite.com/help).
+Voor extra hulpdocumentatie, bezoek het [ Centrum van de Hulp van de Magniet ](https://help.magnite.com/help).

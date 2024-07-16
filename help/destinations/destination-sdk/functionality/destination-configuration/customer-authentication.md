@@ -4,33 +4,33 @@ title: Configuratie van klantverificatie
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
 
 # Configuratie van klantverificatie
 
-Experience Platform verstrekt grote flexibiliteit in de authentificatieprotocollen beschikbaar aan partners en klanten. U kunt uw bestemming vormen om het even welke industrie-standaardauthentificatiemethodes zoals te steunen [!DNL OAuth2], togertokenverificatie, wachtwoordverificatie en nog veel meer.
+Experience Platform verstrekt grote flexibiliteit in de authentificatieprotocollen beschikbaar aan partners en klanten. U kunt uw bestemming vormen om het even welke industrie-standaardauthentificatiemethodes zoals [!DNL OAuth2], toonder symbolische authentificatie, wachtwoordauthentificatie, en vele meer te steunen.
 
 Deze pagina verklaart hoe te opstelling uw bestemming gebruikend uw aangewezen authentificatiemethode. Gebaseerd op de authentificatieconfiguratie die u gebruikt wanneer u uw bestemming creeert, zullen de klanten verschillende soorten authentificatiepagina&#39;s zien wanneer het verbinden met de bestemming in Experience Platform UI.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in [configuratieopties](../configuration-options.md) documentatie of zie de volgende pagina&#39;s van het overzicht van bestemmingsconfiguratie:
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ documentatie van configuratieopties ](../configuration-options.md) of zie de volgende pagina&#39;s van het overzicht van bestemmingsconfiguratie:
 
 * [Gebruik Destination SDK om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-Voordat klanten gegevens kunnen exporteren van Platform naar uw bestemming, moeten ze een nieuwe verbinding maken tussen Experience Platform en uw bestemming door de stappen uit te voeren die in het dialoogvenster [doelverbinding](../../../ui/connect-destination.md) zelfstudie.
+Alvorens de klanten gegevens van Platform naar uw bestemming kunnen uitvoeren, moeten zij een nieuwe verbinding tussen Experience Platform en uw bestemming tot stand brengen, door de stappen te volgen die in het ](../../../ui/connect-destination.md) leerprogramma worden beschreven 0} bestemmingsverbinding {.[
 
-Wanneer [een doel maken](../../authoring-api/destination-configuration/create-destination-configuration.md) door Destination SDK, de `customerAuthenticationConfigurations` sectie bepaalt wat de klanten in [verificatiescherm](../../../ui/connect-destination.md#authenticate). Afhankelijk van het type van bestemmingsauthentificatie, moeten de klanten diverse authentificatiedetails, zoals verstrekken:
+Wanneer [ creërend een bestemming ](../../authoring-api/destination-configuration/create-destination-configuration.md) door Destination SDK, bepaalt de `customerAuthenticationConfigurations` sectie welke klanten in het [ authentificatiescherm ](../../../ui/connect-destination.md#authenticate) zien. Afhankelijk van het type van bestemmingsauthentificatie, moeten de klanten diverse authentificatiedetails, zoals verstrekken:
 
-* Voor bestemmingen die [basisverificatie](#basic), moeten de gebruikers een gebruikersbenaming en een wachtwoord in de de authentificatiepagina van het Experience Platform UI direct verstrekken.
-* Voor bestemmingen die [waarmerking](#bearer), moeten gebruikers een token aan toonder leveren.
-* Voor bestemmingen die [OAuth2-vergunning](#oauth2), worden de gebruikers opnieuw gericht aan de login van uw bestemming pagina waar zij login met hun geloofsbrieven kunnen.
-* Voor [Amazon S3](#s3) doelen, gebruikers moeten hun [!DNL Amazon S3] toegangssleutel en geheime sleutel.
-* Voor [Azure Blob](#blob) doelen, gebruikers moeten hun [!DNL Azure Blob] verbindingsreeks.
+* Voor bestemmingen die [ basisauthentificatie ](#basic) gebruiken, moeten de gebruikers een gebruikersbenaming en een wachtwoord direct in de Experience Platform UI authentificatiepagina verstrekken.
+* Voor bestemmingen die [ dragerauthentificatie ](#bearer) gebruiken, moeten de gebruikers een dragertoken verstrekken.
+* Voor bestemmingen die [ vergunning gebruiken OAuth2 ](#oauth2), worden de gebruikers opnieuw gericht aan login van uw bestemming pagina waar zij met hun geloofsbrieven kunnen login.
+* Voor [ Amazon S3 ](#s3) bestemmingen, moeten de gebruikers hun [!DNL Amazon S3] toegangssleutel en geheime sleutel verstrekken.
+* Voor [ Azure Klob ](#blob) bestemmingen, moeten de gebruikers hun [!DNL Azure Blob] verbindingskoord verstrekken.
 
-U kunt de details van de klantenauthentificatie via `/authoring/destinations` eindpunt. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
+U kunt de details van de klantenauthentificatie via het `/authoring/destinations` eindpunt vormen. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
 * [Een doelconfiguratie maken](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Een doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md)
@@ -39,11 +39,11 @@ Dit artikel beschrijft alle gesteunde configuraties van de klantenauthentificati
 
 >[!IMPORTANT]
 >
->De configuratie van de klantenauthentificatie vereist u niet om het even welke parameters te vormen. U kunt de fragmenten die op deze pagina worden getoond in uw API-aanroepen kopiëren en plakken wanneer [maken](../../authoring-api/destination-configuration/create-destination-configuration.md) of [bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md) een bestemmingsconfiguratie, en uw gebruikers zullen het overeenkomstige authentificatiescherm in het Platform UI zien.
+>De configuratie van de klantenauthentificatie vereist u niet om het even welke parameters te vormen. U kunt de fragmenten kopiëren en kleven die in deze pagina in uw API vraag worden getoond wanneer [ creërend ](../../authoring-api/destination-configuration/create-destination-configuration.md) of [ het bijwerken ](../../authoring-api/destination-configuration/update-destination-configuration.md) een bestemmingsconfiguratie, en uw gebruikers het overeenkomstige authentificatiescherm in het Platform UI zullen zien.
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Ondersteunde integratietypen {#supported-integration-types}
 
@@ -56,7 +56,7 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 
 ## Configuratie van verificatieregel {#authentication-rule}
 
-Wanneer het gebruiken van om het even welke configuraties van de klantenauthentificatie die in deze pagina worden beschreven, altijd plaatsen `authenticationRule` parameter in [bestemmingslevering](destination-delivery.md) tot `"CUSTOMER_AUTHENTICATION"`, zoals hieronder weergegeven.
+Wanneer het gebruiken van om het even welke configuraties van de klantenauthentificatie die in deze pagina worden beschreven, plaats altijd de `authenticationRule` parameter in [ bestemmingslevering ](destination-delivery.md) aan `"CUSTOMER_AUTHENTICATION"`, zoals hieronder getoond.
 
 ```json {line-numbers="true" highlight="4"
 {
@@ -75,9 +75,9 @@ Basisverificatie wordt ondersteund voor realtime (streaming) integratie in Exper
 
 Wanneer u het basisidentificatietype vormt, moeten de gebruikers een gebruikersbenaming en een wachtwoord invoeren om met uw bestemming te verbinden.
 
-![UI-weergave met basisverificatie](../../assets/functionality/destination-configuration/basic-authentication-ui.png)
+![ UI teruggeeft met basisauthentificatie ](../../assets/functionality/destination-configuration/basic-authentication-ui.png)
 
-Aan opstellings basisauthentificatie voor uw bestemming, vorm `customerAuthenticationConfigurations` via de `/destinations` eindpunt zoals hieronder getoond:
+Als u basisverificatie voor uw doel wilt instellen, configureert u de sectie `customerAuthenticationConfigurations` via het `/destinations` -eindpunt, zoals hieronder wordt getoond:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -91,9 +91,9 @@ Aan opstellings basisauthentificatie voor uw bestemming, vorm `customerAuthentic
 
 Wanneer u het dragerauthentificatietype vormt, worden de gebruikers vereist om het dragerteken in te voeren dat zij uit uw bestemming verkrijgen.
 
-![UI-weergave met dragerverificatie](../../assets/functionality/destination-configuration/bearer-authentication-ui.png)
+![ UI teruggeeft met dragerauthentificatie ](../../assets/functionality/destination-configuration/bearer-authentication-ui.png)
 
-Aan opstellingstradientypeauthentificatie voor uw bestemming, vorm `customerAuthenticationConfigurations` via de `/destinations` eindpunt zoals hieronder getoond:
+Als u verificatie met meer typen wilt instellen voor uw doel, configureert u de sectie `customerAuthenticationConfigurations` via het `/destinations` -eindpunt, zoals hieronder wordt getoond:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -105,11 +105,11 @@ Aan opstellingstradientypeauthentificatie voor uw bestemming, vorm `customerAuth
 
 ## OAuth 2-verificatie {#oauth2}
 
-Gebruikers selecteren **[!UICONTROL Connect to destination]** om OAuth 2 authentificatiestroom aan uw bestemming, zoals aangetoond in het voorbeeld hieronder voor de bestemming van het publiek van de Twitter van de Douane teweeg te brengen. Voor gedetailleerde informatie bij het vormen van OAuth 2 authentificatie aan uw bestemmingshindpunt, lees specifiek [Destination SDK OAuth 2-verificatiepagina](oauth2-authorization.md).
+Gebruikers selecteren **[!UICONTROL Connect to destination]** om de OAuth 2-verificatiestroom naar uw doel te activeren, zoals in het onderstaande voorbeeld voor de bestemming Aangepast publiek van Twitter wordt getoond. Voor gedetailleerde informatie bij het vormen van OAuth 2 authentificatie aan uw bestemmingshindpunt, lees de specifieke [ Destination SDK OAuth 2 authentificatiepagina ](oauth2-authorization.md).
 
-![UI-weergave met OAuth 2-verificatie](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
+![ UI teruggeeft met 2 authentificatie OAuth ](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
-Aan opstelling [!DNL OAuth2] de authentificatie voor uw bestemming, vormt `customerAuthenticationConfigurations` via de `/destinations` eindpunt zoals hieronder getoond:
+Als u [!DNL OAuth2] -verificatie wilt instellen voor uw doel, configureert u de `customerAuthenticationConfigurations` -sectie via het `/destinations` -eindpunt, zoals hieronder wordt weergegeven:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -121,13 +121,13 @@ Aan opstelling [!DNL OAuth2] de authentificatie voor uw bestemming, vormt `custo
 
 ## Amazon S3-verificatie {#s3}
 
-[!DNL Amazon S3] de authentificatie wordt gesteund voor op dossier-gebaseerde bestemmingen in Experience Platform.
+[!DNL Amazon S3] -verificatie wordt ondersteund voor op bestanden gebaseerde doelen in Experience Platform.
 
 Wanneer u het Amazon S3 authentificatietype vormt, worden de gebruikers vereist om hun S3 geloofsbrieven in te voeren.
 
-![UI die met S3 authentificatie teruggeeft](../../assets/functionality/destination-configuration/s3-authentication-ui.png)
+![ UI teruggeeft met S3 authentificatie ](../../assets/functionality/destination-configuration/s3-authentication-ui.png)
 
-Aan opstelling [!DNL Amazon S3] de authentificatie voor uw bestemming, vormt `customerAuthenticationConfigurations` via de `/destinations` eindpunt zoals hieronder getoond:
+Als u [!DNL Amazon S3] -verificatie wilt instellen voor uw doel, configureert u de `customerAuthenticationConfigurations` -sectie via het `/destinations` -eindpunt, zoals hieronder wordt weergegeven:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -139,13 +139,13 @@ Aan opstelling [!DNL Amazon S3] de authentificatie voor uw bestemming, vormt `cu
 
 ## Azure Blob-verificatie  {#blob}
 
-[!DNL Azure Blob Storage] de authentificatie wordt gesteund voor op dossier-gebaseerde bestemmingen in Experience Platform.
+[!DNL Azure Blob Storage] -verificatie wordt ondersteund voor op bestanden gebaseerde doelen in Experience Platform.
 
 Wanneer u het verificatietype Azure Blob configureert, moeten gebruikers de verbindingstekenreeks invoeren.
 
-![UI-weergave met Blob-verificatie](../../assets/functionality/destination-configuration/blob-authentication-ui.png)
+![ UI teruggeeft met authentificatie Blob ](../../assets/functionality/destination-configuration/blob-authentication-ui.png)
 
-Aan opstelling [!DNL Azure Blob] de authentificatie voor uw bestemming, vormt `customerAuthenticationConfigurations` in de `/destinations` eindpunt zoals hieronder getoond:
+Als u [!DNL Azure Blob] -verificatie wilt instellen voor uw doel, configureert u de parameter `customerAuthenticationConfigurations` in het eindpunt `/destinations` , zoals hieronder wordt weergegeven:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -157,13 +157,13 @@ Aan opstelling [!DNL Azure Blob] de authentificatie voor uw bestemming, vormt `c
 
 ## [!DNL Azure Data Lake Storage] verificatie {#adls}
 
-[!DNL Azure Data Lake Storage] de authentificatie wordt gesteund voor op dossier-gebaseerde bestemmingen in Experience Platform.
+[!DNL Azure Data Lake Storage] -verificatie wordt ondersteund voor op bestanden gebaseerde doelen in Experience Platform.
 
-Wanneer u vormt [!DNL Azure Data Lake Storage] het authentificatietype, worden de gebruikers vereist om de Azure Belangrijkste geloofsbrieven van de Dienst en hun huurdersinformatie in te voeren.
+Wanneer u het [!DNL Azure Data Lake Storage] authentificatietype vormt, worden de gebruikers vereist om de Azure Belangrijkste geloofsbrieven van de Dienst en hun huurdersinformatie in te voeren.
 
-![UI-renderen met [!DNL Azure Data Lake Storage] verificatie](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
+![ UI teruggeeft met [!DNL Azure Data Lake Storage] authentificatie ](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
 
-Aan opstelling [!DNL Azure Data Lake Storage] (ADLS) authentificatie voor uw bestemming, vorm `customerAuthenticationConfigurations` in de `/destinations` eindpunt zoals hieronder getoond:
+Als u [!DNL Azure Data Lake Storage] (ADLS)-verificatie wilt instellen voor uw doel, configureert u de parameter `customerAuthenticationConfigurations` in het eindpunt `/destinations` , zoals hieronder wordt weergegeven:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -175,13 +175,13 @@ Aan opstelling [!DNL Azure Data Lake Storage] (ADLS) authentificatie voor uw bes
 
 ## SFTP met wachtwoordverificatie
 
-[!DNL SFTP] verificatie met wachtwoord wordt ondersteund voor op bestanden gebaseerde doelen in Experience Platform.
+[!DNL SFTP] -verificatie met wachtwoord wordt ondersteund voor op bestanden gebaseerde doelen in Experience Platform.
 
 Wanneer u SFTP met het type van wachtwoordauthentificatie vormt, worden de gebruikers vereist om de gebruikersbenaming en het wachtwoord van SFTP, evenals het domein en de haven van SFTP in te voeren (de standaardhaven is 22).
 
-![UI-weergave met SFTP met wachtwoordverificatie](../../assets/functionality/destination-configuration/sftp-password-authentication-ui.png)
+![ UI teruggeeft met SFTP met wachtwoordauthentificatie ](../../assets/functionality/destination-configuration/sftp-password-authentication-ui.png)
 
-Als u SFTP-verificatie wilt instellen met een wachtwoord voor uw doel, configureert u de `customerAuthenticationConfigurations` in de `/destinations` eindpunt zoals hieronder getoond:
+Als u SFTP-verificatie wilt instellen met een wachtwoord voor uw doel, configureert u de parameter `customerAuthenticationConfigurations` in het `/destinations` -eindpunt, zoals hieronder wordt weergegeven:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -193,13 +193,13 @@ Als u SFTP-verificatie wilt instellen met een wachtwoord voor uw doel, configure
 
 ## SFTP met SSH-sleutelverificatie
 
-[!DNL SFTP] verificatie met [!DNL SSH] key wordt ondersteund voor op bestanden gebaseerde doelen in Experience Platform.
+[!DNL SFTP] -verificatie met de [!DNL SSH] -toets wordt ondersteund voor op een bestand gebaseerde doelen in Experience Platform.
 
 Wanneer u SFTP met SSH zeer belangrijke authentificatietype vormt, worden de gebruikers vereist om de gebruikersbenaming van SFTP en de sleutel van SSH, evenals het domein en de haven van SFTP in te voeren (de standaardhaven is 22).
 
-![UI-weergave met SFTP met SSH-sleutelverificatie](../../assets/functionality/destination-configuration/sftp-key-authentication-ui.png)
+![ UI teruggeeft met SFTP met SSH zeer belangrijke authentificatie ](../../assets/functionality/destination-configuration/sftp-key-authentication-ui.png)
 
-Om de authentificatie van SFTP met de sleutel van SSH voor uw bestemming te plaatsen, vorm `customerAuthenticationConfigurations` in de `/destinations` eindpunt zoals hieronder getoond:
+Als u SFTP-verificatie wilt instellen met SSH-sleutel voor uw doel, configureert u de parameter `customerAuthenticationConfigurations` in het `/destinations` -eindpunt, zoals hieronder wordt getoond:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -211,13 +211,13 @@ Om de authentificatie van SFTP met de sleutel van SSH voor uw bestemming te plaa
 
 ## [!DNL Google Cloud Storage] verificatie {#gcs}
 
-[!DNL Google Cloud Storage] de authentificatie wordt gesteund voor op dossier-gebaseerde bestemmingen in Experience Platform.
+[!DNL Google Cloud Storage] -verificatie wordt ondersteund voor op bestanden gebaseerde doelen in Experience Platform.
 
-Wanneer u vormt [!DNL Google Cloud Storage] verificatietype, gebruikers moeten hun gegevens invoeren [!DNL Google Cloud Storage] [!UICONTROL access key ID] en [!UICONTROL secret access key].
+Wanneer u het verificatietype [!DNL Google Cloud Storage] configureert, moeten gebruikers hun [!DNL Google Cloud Storage] [!UICONTROL access key ID] en [!UICONTROL secret access key] invoeren.
 
-![UI-weergave met Google Cloud Storage-verificatie](../../assets/functionality/destination-configuration/google-cloud-storage-ui.png)
+![ UI teruggeeft met de authentificatie van de Opslag van de Wolk van Google ](../../assets/functionality/destination-configuration/google-cloud-storage-ui.png)
 
-Aan opstelling [!DNL Google Cloud Storage] de authentificatie voor uw bestemming, vormt `customerAuthenticationConfigurations` in de `/destinations` eindpunt zoals hieronder getoond:
+Als u [!DNL Google Cloud Storage] -verificatie wilt instellen voor uw doel, configureert u de parameter `customerAuthenticationConfigurations` in het eindpunt `/destinations` , zoals hieronder wordt weergegeven:
 
 ```json
 "customerAuthenticationConfigurations":[

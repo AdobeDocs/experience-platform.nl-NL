@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # [!UICONTROL Support Site Search] schemaveldgroep
 
-[!UICONTROL Support Site Search] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Het verstrekt één enkele `siteKnowledge.supportSiteSearch` naar een schema dat informatie over een steunplaatsonderzoek vastlegt.
+[!UICONTROL Support Site Search] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md). Het biedt één `siteKnowledge.supportSiteSearch` -object aan een schema dat informatie over een ondersteuningssite-zoekopdracht vastlegt.
 
 ![](../../images/field-groups/support-site-search.png)
 
@@ -21,4 +21,4 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).

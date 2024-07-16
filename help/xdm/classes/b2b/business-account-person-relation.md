@@ -9,15 +9,15 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL XDM Business Account Person Relation] class
+# [!UICONTROL XDM Business Account Person Relation] -klasse
 
 >[!IMPORTANT]
 >
->Deze klasse is bedoeld om te worden gebruikt door organisaties met toegang tot [Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). U moet toegang hebben tot Real-Time CDP B2B Edition om deze klasse te laten deelnemen aan [Klantprofiel in realtime](../../../profile/home.md).
+>Deze klasse is bedoeld om door organisaties met toegang tot [ Adobe Real-time Customer Data Platform B2B Uitgave ](../../../rtcdp/b2b-overview.md) worden gebruikt. U moet toegang tot de Uitgave van Real-Time CDP B2B hebben opdat deze klasse aan [ in real time het Profiel van de Klant ](../../../profile/home.md) deelneemt.
 
-[!UICONTROL XDM Business Account Person Relation] is een standaardklasse van de Gegevens van de Ervaring van het Model (XDM) die de minimum vereiste eigenschappen van een persoon vangt die met een bedrijfsrekening wordt geassocieerd.
+[!UICONTROL XDM Business Account Person Relation] is een standaard klasse van het Gegevensmodel van de Ervaring (XDM) die de minimum vereiste eigenschappen van een persoon vangt die met een bedrijfsrekening wordt geassocieerd.
 
-![De structuur van de XDM Business Account Person Relation-klasse zoals deze wordt weergegeven in de gebruikersinterface](../../images/classes/b2b/business-account-person-relation.png)
+![ de structuur van de XDM klasse van de Verhouding van de Onderneming van de Rekening zoals het in UI ](../../images/classes/b2b/business-account-person-relation.png) verschijnt
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -30,7 +30,7 @@ ht-degree: 0%
 | `accountPersonID` | String | Een unieke identificatiecode voor de relatie-entiteit van de rekeningpersoon. |
 | `currencyCode` | String | De ISO 4217-valutacode die wordt gebruikt voor de relatie tussen de rekening en de persoon. |
 | `isActive` | Boolean | Geeft aan of de relatie tussen de account en de persoon actief is. |
-| `isDeleted` | Boolean | Geeft aan of deze relatie tussen account en persoon in het Marketo Engage is verwijderd.<br><br>Wanneer u de opdracht [Marketo-bronaansluiting](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden alle records die in Marketo worden verwijderd, automatisch weergegeven in Real-Time klantprofiel. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door in te stellen `isDeleted` tot `true`, kunt u het gebied gebruiken om uit te filteren welke verslagen uit uw bronnen zijn geschrapt wanneer het vragen van het meer van Gegevens. |
+| `isDeleted` | Boolean | Geeft aan of deze relatie tussen account en persoon in het Marketo Engage is verwijderd.<br><br> wanneer het gebruiken van de [ Marketo bronschakelaar ](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden om het even welke verslagen die in Marketo worden geschrapt automatisch weerspiegeld in Real-Time Profiel van de Klant. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door `isDeleted` in te stellen op `true` , kunt u het veld gebruiken om uit te filteren welke records uit uw bronnen zijn verwijderd wanneer u een query uitvoert op het gegevensmeer. |
 | `isDirect` | Boolean | Geeft aan of dit een directe relatie is tussen de rekening en de persoon. |
 | `isPrimary` | Boolean | Geeft aan of de persoon de primaire contactpersoon voor deze account is. |
 | `personID` | String | Een unieke identificatiecode voor de persoon in de relatie tussen de account en de persoon. |
@@ -41,4 +41,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Zie de handleiding op [schema-relaties in Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) om te leren hoe deze klasse conceptueel op de andere klassen B2B betrekking heeft en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.
+Zie de gids op [ schemaverhoudingen in de Uitgave van Real-Time CDP B2B ](../../tutorials/relationship-b2b.md) leren hoe deze klasse conceptueel op de andere klassen B2B betrekking heeft en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.

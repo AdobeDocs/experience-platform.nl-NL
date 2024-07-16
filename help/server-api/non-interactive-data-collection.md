@@ -18,7 +18,7 @@ De niet-interactieve eindpunten van de gebeurtenisgegevensinzameling worden gebr
 
 Het verzenden van gebeurtenissen in batch wordt aanbevolen wanneer gebeurtenissen voor eindgebruikers gedurende een korte periode lokaal in de wachtrij worden geplaatst (bijvoorbeeld wanneer er geen netwerkverbinding is).
 
-Gebeurtenissen in batch moeten niet noodzakelijkerwijs tot dezelfde eindgebruiker behoren, wat betekent dat gebeurtenissen verschillende identiteiten binnen hun eigen identiteit kunnen bevatten `identityMap` object.
+Batch-gebeurtenissen hoeven niet noodzakelijkerwijs tot dezelfde eindgebruiker te behoren, wat betekent dat gebeurtenissen verschillende identiteiten kunnen bevatten binnen hun `identityMap` -object.
 
 ## Niet-interactief voorbeeld van API-aanroep {#example}
 
@@ -91,16 +91,16 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | Parameter | Type | Vereist | Beschrijving |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Ja | ID van de gegevensstroom die door het eindpunt van de gegevensinzameling wordt gebruikt. |
-| `requestId` | `String` | Nee | Geef een externe overtrekID voor aanvragen op. Als niets wordt verstrekt, zal het Netwerk van de Rand één voor u produceren en zal het terug in de reactielichaam/kopballen terugkeren. |
-| `silent` | `Boolean` | Nee | Optionele booleaanse parameter die aangeeft of het Edge-netwerk een `204 No Content` reageren met een lege lading of niet. Kritieke fouten worden gerapporteerd met behulp van de corresponderende HTTP-statuscode en -lading. |
+| `requestId` | `String` | Nee | Geef een externe overtrekID voor aanvragen op. Als niets wordt verstrekt, zal de Edge Network één voor u produceren en zal het terug in de reactielichaam/kopballen terugkeren. |
+| `silent` | `Boolean` | Nee | Optionele booleaanse parameter die aangeeft of de Edge Network een `204 No Content` -reactie moet retourneren met een lege lading. Kritieke fouten worden gerapporteerd met behulp van de corresponderende HTTP-statuscode en -lading. |
 
 ### Antwoord {#response}
 
-Een geslaagde reactie retourneert een van de volgende statussen en een `requestID` indien in het verzoek geen informatie is verstrekt.
+Een geslaagde reactie retourneert een van de volgende statussen en een `requestID` als er niets in de aanvraag is opgegeven.
 
-* `202 Accepted` wanneer het verzoek met succes is verwerkt;
-* `204 No Content` wanneer de aanvraag met succes is verwerkt en `silent` parameter is ingesteld op `true`;
-* `400 Bad Request` wanneer het verzoek niet correct is geformuleerd (bv. de verplichte primaire identiteit is niet gevonden).
+* `202 Accepted` wanneer de aanvraag correct is verwerkt;
+* `204 No Content` wanneer de aanvraag is verwerkt en de parameter `silent` is ingesteld op `true` ;
+* `400 Bad Request` wanneer de aanvraag niet correct is samengesteld (de verplichte primaire identiteit is bijvoorbeeld niet gevonden).
 
 ```json
 {

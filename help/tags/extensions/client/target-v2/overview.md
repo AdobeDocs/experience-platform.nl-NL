@@ -4,7 +4,7 @@ description: Meer informatie over de Adobe Target v2-tagextensie in Adobe Experi
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1314'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Gebruik deze verwijzing voor informatie over de beschikbare opties wanneer het gebruiken van deze uitbreiding om een regel te bouwen.
 
@@ -23,9 +23,9 @@ Gebruik deze verwijzing voor informatie over de beschikbare opties wanneer het g
 >
 >De Adobe Target-extensie vereist At.js 2.x.
 
-Als de extensie Adobe Target nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensions > Catalog]**, plaatst u de cursor boven de doelextensie en selecteert u **[!UICONTROL Install]**.
+Als de Adobe Target-extensie nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensions > Catalog]** , plaatst u de cursor boven de Target-extensie en selecteert u **[!UICONTROL Install]** .
 
-Als u de extensie wilt configureren, opent u het tabblad Extensies, plaatst u de muisaanwijzer op de extensie en selecteert u **[!UICONTROL Configure]**.
+Als u de extensie wilt configureren, opent u het tabblad Extensies, plaatst u de muisaanwijzer op de extensie en selecteert u **[!UICONTROL Configure]** .
 
 ![](../../../images/targetv2config.png)
 
@@ -49,13 +49,13 @@ Het serverdomein verwijst naar het domein waar de verzoeken van het Doel worden 
 
 #### GDPR Opt-In
 
-Als deze optie is ingeschakeld, biedt Adobe Target de aanmeldingsfunctionaliteit waarmee u uw strategie voor het beheer van uw toestemming kunt ondersteunen. Met de functie Inschakelen kunnen klanten bepalen hoe en wanneer de tag Doel wordt geactiveerd.  Voor meer informatie over Adobe Opt-in, zie [Privacy en algemene gegevensbeschermingsverordening (GDPR)](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
+Als deze optie is ingeschakeld, biedt Adobe Target aanmeldingsfunctionaliteit waarmee u uw strategie voor het beheer van uw toestemming kunt ondersteunen. Met de functie Inschakelen kunnen klanten bepalen hoe en wanneer de tag Doel wordt geactiveerd.  Voor meer informatie over Adobe open-binnen, zie [ Privacy en Algemene Verordening van de Bescherming van Gegevens (GDPR) ](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
 
 #### Time-out (ms)
 
 Als de reactie van Doel niet binnen de bepaalde periode wordt ontvangen, de vraagtijden uit en de standaardinhoud wordt getoond. Tijdens de bezoekerssessie wordt nog steeds geprobeerd om aanvullende verzoeken in te dienen. Het gebrek is 3000ms, die van de Onderbreking verschillend zou kunnen zijn die in het gebruikersinterface van het Doel wordt gevormd.
 
-Raadpleeg voor meer informatie over de werking van de instelling Time-out de optie [Adobe Target Help](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html).
+Voor meer informatie over hoe de Onderbreking het plaatsen van de Onderbreking werkt, verwijs naar de [ hulp van Adobe Target ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html).
 
 ## Handelingstypen voor doelextensie
 
@@ -65,13 +65,13 @@ De uitbreiding van het Doel verstrekt de volgende acties in Dan gedeelte van een
 
 ### Doel laden
 
-Voeg deze actie aan uw markeringsregel toe waar het zinvol is om Doel in de context van uw regel te laden. Hiermee wordt de bibliotheek at.js in de pagina geladen. In de meeste implementaties moet Doel op elke pagina van uw site worden geladen. Adobe adviseert gebruikend de actie van het Doel van de Lading slechts als het door een vraag van het Doel wordt voorafgegaan. Anders, zou u op kwesties zoals de vraag van Analytics kunnen lopen die wordt vertraagd.
+Voeg deze actie aan uw markeringsregel toe waar het zinvol is om Doel in de context van uw regel te laden. Hiermee wordt de bibliotheek at.js in de pagina geladen. In de meeste implementaties moet Doel op elke pagina van uw site worden geladen. De Adobe adviseert gebruikend de actie van het Doel van de Lading slechts als het door een vraag van het Doel wordt voorafgegaan. Anders, zou u op kwesties zoals de vraag van Analytics kunnen lopen die wordt vertraagd.
 
 Er is geen configuratie nodig.
 
 ### Doel laden met apparaatdefinitie
 
-Voeg deze handeling toe aan de tagregel waar het zin heeft om Doel te laden met [Apparaatbeslissingen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html) ingeschakeld in de context van uw regel. Hierdoor wordt de bibliotheek at.js geladen met apparaatbesluitvorming ingeschakeld op de pagina. In de meeste implementaties moet Doel op elke pagina van uw site worden geladen. Adobe adviseert gebruikend het Doel van de Lading met de Beslissende actie van het Apparaat slechts als het door een vraag van het Doel wordt voorafgegaan. Anders, zou u op kwesties zoals de vraag van Analytics kunnen lopen die wordt vertraagd.
+Voeg deze actie aan uw markeringsregel toe waar het zinvol is om Doel met [ op-apparatenbeslissing ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html) te laden die in de context van uw regel wordt toegelaten. Hierdoor wordt de bibliotheek at.js geladen met apparaatbesluitvorming ingeschakeld op de pagina. In de meeste implementaties moet Doel op elke pagina van uw site worden geladen. De Adobe adviseert gebruikend het Doel van de Lading met de Beslissing van het Apparaat slechts als het door een vraag van het Doel wordt voorafgegaan. Anders, zou u op kwesties zoals de vraag van Analytics kunnen lopen die wordt vertraagd.
 
 Er is geen configuratie nodig.
 
@@ -95,10 +95,10 @@ Met dit actietype kan Target een aanvraag uitvoeren wanneer de pagina wordt gela
 
 U moet opgeven of het verbergen van het lichaam moet worden ingeschakeld om flikkering te voorkomen en welke stijl wordt gebruikt wanneer het element van het lichaam wordt verborgen. De volgende opties zijn beschikbaar:
 
-* **Bodyhiding:** U kunt deze instelling in- of uitschakelen. De standaardwaarde is Enabled, wat betekent HTML BODY verborgen is.
-* **Verborgen stijl hoofdtekst:** De standaardwaarde is body{opacity:0}. Deze waarde kan in iets anders worden veranderd, zoals lichaam {display:none}.
+* **Bodyverbergen:** u kunt dit het plaatsen toelaten of onbruikbaar maken. De standaardwaarde is Enabled, wat betekent HTML BODY verborgen is.
+* **Verborgen Stijl van het Lichaam:** de standaardwaarde is lichaam {opaciteit:0}. Deze waarde kan in iets anders worden veranderd, zoals lichaam {display:none}.
 
-Raadpleeg voor meer informatie de [Online Help-documentatie van Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html).
+Voor meer informatie, verwijs naar de [ online hulpdocumentatie van het Doel ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html).
 
 ### Triggerweergave
 
@@ -107,7 +107,7 @@ De actie Weergave activeren kan worden aangeroepen wanneer een nieuwe pagina wor
 1. Geef de weergavenaam op die moet worden geactiveerd.
 1. Geef aan of de weergave moet worden geactiveerd door het selectievakje Pagina in te schakelen. Als de weergave is gecorreleerd aan een component die opnieuw wordt weergegeven en niet aan een indruk voor rapportage wordt toegewezen, schakelt u het selectievakje Pagina niet in.
 
-Voor meer informatie over het activeren van een weergave raadpleegt u de [`triggerView()` Help-documentatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/adobe-target-triggerview-atjs-2.html).
+Raadpleeg de [`triggerView()` Help-documentatie ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/adobe-target-triggerview-atjs-2.html) voor meer informatie over het activeren van een weergave.
 
 ## Basisimplementatie van Adobe Target
 
@@ -134,7 +134,7 @@ Houd rekening met het volgende wanneer u het voorverborgen fragment gebruikt:
    * Wanneer de pagina de aanvraagtijden uit laadt
    * Wanneer het fragment zelf een keer uitvalt
 * De actie &quot;Vuurpagina laden&quot; moet op alle pagina&#39;s worden gebruikt met het voorverborgen fragment om de duur van het voorverbergen te minimaliseren.
-* Het verbergen van de hoofdtekst moet ook worden ingeschakeld in de handeling Verzoek om pagina laden in de regel Pagina laden die u voor Doel gebruikt. anders blijven alle paginalading verborgen gedurende de time-outperiode.
+* Het verbergen van de hoofdtekst moet ook worden ingeschakeld in de handeling Aanvraag voor laden pagina in de regel voor het laden van de pagina die u voor Doel gebruikt. Als dit niet het geval is, blijven alle paginalading verborgen gedurende de time-outperiode.
 
 Het codefragment dat u vooraf verbergt, ziet er als volgt uit en kan worden geminificeerd. De configureerbare opties zijn aan het eind:
 

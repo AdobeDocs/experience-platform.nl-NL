@@ -1,24 +1,24 @@
 ---
 solution: Experience Platform
-title: Logische kwantoren van PQL
-description: Logische kwantoren kunnen worden gebruikt om voorwaarden met arrays in de Taal van de Vraag van het Profiel (PQL) te bevestigen.
+title: Logische PQL-kwantoren
+description: Logische kwantoren kunnen worden gebruikt om omstandigheden met arrays in Profile Query Language (PQL) te bevestigen.
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 2%
+source-wordcount: '203'
+ht-degree: 0%
 
 ---
 
 # Logische kwantor-functies
 
-Logische kwantoren kunnen worden gebruikt om voorwaarden met arrays in te stellen [!DNL Profile Query Language] (PQL). Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
+Logische kwantoren kunnen worden gebruikt om voorwaarden met arrays in [!DNL Profile Query Language] (PQL) te bevestigen. Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht ](./overview.md) worden gevonden.
 
 ## Exists
 
-De `exists` functie bepaalt het bestaan van een item in een array, op voorwaarde dat het aan de opgegeven voorwaarde voldoet.
+De functie `exists` bepaalt het bestaan van een item in een array, op voorwaarde dat dit item voldoet aan de opgegeven voorwaarde.
 
-**Indeling**
+**Formaat**
 
 ```sql
 exists {VARIABLE} from {EXPRESSION} where {CONDITION}
@@ -33,7 +33,7 @@ exists {VARIABLE} from {EXPRESSION} : {CONDITION}
 
 **Voorbeeld**
 
-De volgende PQL-query krijgt alle gebeurtenissen met een prijs hoger dan $50 of met een SKU van &#39;PS&#39;.
+De volgende PQL-query haalt alle gebeurtenissen op met een prijs hoger dan $50 of met een SKU van &#39;PS&#39;.
 
 ```sql
 exists E from xEvent where (E.commerce.item.price > 50), I from E.productListItems where I.SKU = "PS"
@@ -41,9 +41,9 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Voor alles
 
-De `forall` Deze functie bepaalt alle items in een array die aan alle opgegeven voorwaarden voldoen.
+De functie `forall` bepaalt alle items in een array die aan alle opgegeven voorwaarden voldoen.
 
-**Indeling**
+**Formaat**
 
 ```sql
 forall {VARIABLE} from {EXPRESSION} where {CONDITION}
@@ -58,7 +58,7 @@ forall {VARIABLE} from {EXPRESSION} : {CONDITION}
 
 **Voorbeeld**
 
-De volgende PQL-query krijgt alle gebeurtenissen met een prijs hoger dan $50 en een SKU van &#39;PS&#39;.
+De volgende PQL-query haalt alle gebeurtenissen op met een prijs hoger dan $50 en een SKU van &#39;PS&#39;.
 
 ```sql
 forall E from xEvent where (E.commerce.item.price > 50), I from E.productListItems where I.SKU = "PS"
@@ -66,4 +66,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Volgende stappen
 
-Nu u over logische kwantoren hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).
+Nu u over logische kwantoren hebt geleerd, kunt u hen binnen uw vragen van PQL gebruiken. Voor meer informatie over andere functies van PQL, te lezen gelieve het [ overzicht van Profile Query Language ](./overview.md).

@@ -1,24 +1,24 @@
 ---
 solution: Experience Platform
-title: PQL-vergelijkingsfuncties
+title: Vergelijkingsfuncties van PQL
 description: Vergelijkingsfuncties worden gebruikt om verschillende expressies en waarden met elkaar te vergelijken, waarbij "true" of "false" overeenkomstig wordt geretourneerd.
 exl-id: 15f106c7-b88b-4042-b925-703e2a309573
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 7%
+ht-degree: 0%
 
 ---
 
 # Vergelijkingsfuncties
 
-Vergelijkingsfuncties worden gebruikt om verschillende expressies en waarden met elkaar te vergelijken en retourneren `true` of `false` dienovereenkomstig. Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
+Vergelijkingsfuncties worden gebruikt om verschillende expressies en waarden met elkaar te vergelijken en `true` of `false` dienovereenkomstig te retourneren. Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht ](./overview.md) worden gevonden.
 
-## Equals (Is gelijk aan)
+## Gelijk
 
-De `=` (equals) functie controleert of één waarde of expressie gelijk is aan een andere waarde of expressie.
+De functie `=` (equals) controleert of een waarde of expressie gelijk is aan een andere waarde of expressie.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {EXPRESSION} = {VALUE}
@@ -26,7 +26,7 @@ De `=` (equals) functie controleert of één waarde of expressie gelijk is aan e
 
 **Voorbeeld**
 
-De volgende vraag PQL controleert als het land van het huisadres in Canada is.
+De volgende PQL-query controleert of het thuisadresland zich in Canada bevindt.
 
 ```sql
 homeAddress.countryISO = "CA"
@@ -34,9 +34,9 @@ homeAddress.countryISO = "CA"
 
 ## Niet gelijk
 
-De `!=` (niet gelijk aan) functie controleert of één waarde of expressie **niet** gelijk aan een andere waarde of expressie.
+De `!=` (niet gelijk aan) functie controleert of één waarde of uitdrukking **** niet gelijk aan een andere waarde of een uitdrukking is.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {EXPRESSION} != {VALUE}
@@ -44,17 +44,17 @@ De `!=` (niet gelijk aan) functie controleert of één waarde of expressie **nie
 
 **Voorbeeld**
 
-De volgende vraag PQL controleert als het land van het huisadres niet in Canada is.
+De volgende PQL-query controleert of het thuisadresland zich niet in Canada bevindt.
 
 ```sql
 homeAddress.countryISO != "CA"
 ```
 
-## Greater than
+## Groter dan
 
-De `>` (groter dan) wordt gebruikt om te controleren of de eerste waarde groter is dan de tweede waarde.
+De functie `>` (groter dan) wordt gebruikt om te controleren of de eerste waarde groter is dan de tweede waarde.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {EXPRESSION} > {EXPRESSION} 
@@ -68,11 +68,11 @@ De volgende PQL-query definieert personen wier verjaardagen niet in januari of f
 person.birthMonth > 2
 ```
 
-## Greater than or equal to
+## Groter dan of gelijk aan
 
-De `>=` (groter dan of gelijk aan) functie wordt gebruikt om te controleren of de eerste waarde groter dan of gelijk aan de tweede waarde is.
+De functie `>=` (groter dan of gelijk aan) wordt gebruikt om te controleren of de eerste waarde groter dan of gelijk is aan de tweede waarde.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {EXPRESSION} >= {EXPRESSION} 
@@ -86,11 +86,11 @@ De volgende PQL-query definieert personen wier verjaardagen niet in januari of f
 person.birthMonth >= 3
 ```
 
-## Less than
+## Minder dan
 
-De `<` (kleiner dan) vergelijkingsfunctie wordt gebruikt om te controleren of de eerste waarde kleiner is dan de tweede waarde.
+De vergelijkingsfunctie `<` (kleiner dan) wordt gebruikt om te controleren of de eerste waarde kleiner is dan de tweede waarde.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {EXPRESSION} < {EXPRESSION} 
@@ -98,17 +98,17 @@ De `<` (kleiner dan) vergelijkingsfunctie wordt gebruikt om te controleren of de
 
 **Voorbeeld**
 
-De volgende vraag PQL bepaalt mensen van wie verjaardag in Januari is.
+In de volgende PQL-query worden personen gedefinieerd die in januari jarig zijn.
 
 ```sql
 person.birthMonth < 2
 ```
 
-## Less than or equal to
+## Kleiner dan of gelijk aan
 
-De `<=` (kleiner dan of gelijk aan) vergelijkingsfunctie wordt gebruikt om te controleren of de eerste waarde kleiner dan of gelijk is aan de tweede waarde.
+De vergelijkingsfunctie `<=` (kleiner dan of gelijk aan) wordt gebruikt om te controleren of de eerste waarde kleiner dan of gelijk is aan de tweede waarde.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {EXPRESSION} <= {EXPRESSION} 
@@ -116,7 +116,7 @@ De `<=` (kleiner dan of gelijk aan) vergelijkingsfunctie wordt gebruikt om te co
 
 **Voorbeeld**
 
-De volgende vraag PQL bepaalt mensen van wie verjaardag in Januari of Februari is.
+De volgende PQL-query definieert personen van wie de geboortedatum in januari of februari is.
 
 ```sql
 person.birthMonth <= 2
@@ -124,4 +124,4 @@ person.birthMonth <= 2
 
 ## Volgende stappen
 
-Nu u over vergelijkingsfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).
+Nu u over vergelijkingsfuncties hebt geleerd, kunt u hen binnen uw vragen van PQL gebruiken. Voor meer informatie over andere functies van PQL, te lezen gelieve het [ overzicht van Profile Query Language ](./overview.md).

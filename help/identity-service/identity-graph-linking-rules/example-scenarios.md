@@ -28,7 +28,7 @@ Er zijn gevallen waarin meerdere aanmeldingen op één apparaat kunnen plaatsvin
 | Openbare kiosk | Reizigers op een luchthaven melden zich aan met hun loyaliteitsidentiteitskaart om zakken in te checken en instapkaarten af te drukken. |
 | Bellen | Het personeel van het centrum van de vraag login op één enkel apparaat namens klanten die klantensteun roepen om kwesties op te lossen. |
 
-![gezamenlijke apparaten](../images/identity-settings/shared-devices.png)
+![ delen-apparaten ](../images/identity-settings/shared-devices.png)
 
 In deze gevallen, vanuit een grafiekstandpunt, zonder toegelaten grenzen, zal één enkele ECID met veelvoudige CRM IDs worden verbonden.
 
@@ -41,7 +41,7 @@ Met de regels voor identiteitsgrafieken kunt u:
 
 Er zijn ook instanties van gebruikers die valse waarden als telefoonaantallen en/of e-mailadressen verstrekken wanneer het registreren. In deze gevallen, als de grenzen niet worden toegelaten, dan zal telefoon/e-mail verwante identiteiten uiteindelijk worden verbonden met veelvoudige verschillende CRM IDs.
 
-![invalid-email-phone](../images/identity-settings/invalid-email-phone.png)
+![ ongeldig-e-mail-telefoon ](../images/identity-settings/invalid-email-phone.png)
 
 Met de regels voor identiteitsgrafieken kunt u:
 
@@ -58,7 +58,7 @@ Er zijn gevallen waarin niet-unieke, onjuiste identiteitswaarden in het systeem 
 
 Deze identiteiten kunnen resulteren in de volgende grafieken, waarbij meerdere CRM-id&#39;s samen met de &#39;slechte&#39; identiteit worden samengevoegd:
 
-![ongeldige gegevens](../images/identity-settings/bad-data.png)
+![ slecht-gegevens ](../images/identity-settings/bad-data.png)
 
 Met de verbindingsregels van de identiteitsgrafiek kunt u identiteitskaart van CRM als unieke herkenningsteken vormen om ongewenste profiel te verhinderen die als gevolg van dit type van gegevens ineenstorten.
 

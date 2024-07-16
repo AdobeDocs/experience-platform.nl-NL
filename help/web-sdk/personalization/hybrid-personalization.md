@@ -1,47 +1,47 @@
 ---
-title: Hybride verpersoonlijking die Web SDK en de Server API van het Netwerk van Edge gebruikt
+title: Hybride verpersoonlijking die Web SDK en de Server API van de Edge Network gebruikt
 description: Dit artikel toont aan hoe u SDK van het Web samen met de Server API kunt gebruiken om hybride verpersoonlijking op uw Webeigenschappen op te stellen.
 keywords: personalisatie; hybride; server-API; server-side; hybride implementatie;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
 source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
 source-wordcount: '853'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
-# Hybride verpersoonlijking die Web SDK en de Server API van het Netwerk van Edge gebruikt
+# Hybride verpersoonlijking die Web SDK en de Server API van de Edge Network gebruikt
 
 ## Overzicht {#overview}
 
-De verpersoonlijking van Hybdrid beschrijft het proces om verpersoonlijkingsinhoud server-kant terug te winnen, die [Edge Network Server-API](../../server-api/overview.md)en renderen op de client, met de [Web SDK](../home.md).
+Hybdrid verpersoonlijking beschrijft het proces om verpersoonlijkingsinhoud server-kant terug te winnen, gebruikend de [ Server API van de Edge Network ](../../server-api/overview.md), en het terug te geven cliënt-kant, gebruikend [ Web SDK ](../home.md).
 
-U kunt hybride personalisatie met verpersoonlijkingsoplossingen zoals Adobe Target, Adobe Journey Optimizer, of Offer decisioning gebruiken, het verschil is de inhoud van [!UICONTROL Server API] lading.
+U kunt hybride personalisatie met verpersoonlijkingsoplossingen zoals Adobe Target, Adobe Journey Optimizer, of Offer decisioning gebruiken, het verschil is de inhoud van de [!UICONTROL Server API] lading.
 
 ## Vereisten {#prerequisites}
 
 Controleer of u aan de volgende voorwaarden voldoet voordat u hybride personalisatie gaat implementeren op uw webeigenschappen:
 
-* U hebt besloten welke personalisatieoplossing u wilt gebruiken. Dit heeft gevolgen voor de inhoud van de [!UICONTROL Server API] lading.
-* U hebt toegang tot een toepassingsserver die u kunt gebruiken om [!UICONTROL Server API] oproepen.
-* U hebt toegang tot de [Edge Network Server-API](../../server-api/authentication.md).
-* U hebt de juiste [geconfigureerd](/help/web-sdk/commands/configure/overview.md) en stelde SDK van het Web op de pagina&#39;s op die u wilt personaliseren.
+* U hebt besloten welke personalisatieoplossing u wilt gebruiken. Dit is van invloed op de inhoud van de [!UICONTROL Server API] payload.
+* U hebt toegang tot een toepassingsserver waarmee u [!UICONTROL Server API] aanroepen kunt uitvoeren.
+* U hebt toegang tot [ de Server API van de Edge Network ](../../server-api/authentication.md).
+* U hebt correct [ gevormd ](/help/web-sdk/commands/configure/overview.md) en opgesteld SDK van het Web op de pagina&#39;s die u wilt personaliseren.
 
 ## Stroomdiagram {#flow-diagram}
 
 In het onderstaande stroomdiagram wordt de volgorde beschreven van de stappen die zijn genomen om hybride personalisatie te leveren.
 
-![Visueel stroomdiagram dat de orde van de genomen stappen toont om hybride verpersoonlijking te leveren.](assets/hybrid-personalization-diagram.png)
+![ Visueel stroomdiagram dat de orde van de genomen stappen toont om hybride verpersoonlijking te leveren.](assets/hybrid-personalization-diagram.png)
 
-1. Bestaande cookies die eerder door de browser zijn opgeslagen, vooraf ingesteld op `kndctr_`, worden opgenomen in de browseraanvraag.
+1. Eventuele bestaande cookies die eerder door de browser zijn opgeslagen, vooraf ingesteld door `kndctr_` , worden opgenomen in de browseraanvraag.
 1. De clientwebbrowser vraagt de webpagina op van uw toepassingsserver.
-1. Wanneer de toepassingsserver de paginaaanvraag ontvangt, wordt een `POST` verzoek aan de [Interactieve de gegevensinzamelingspunten van de Server API](../../server-api/interactive-data-collection.md) om personalisatie-inhoud op te halen. De `POST` verzoek bevat een `event` en `query`. De cookies uit de vorige stap, indien beschikbaar, worden opgenomen in de `meta>state>entries` array.
+1. Wanneer de toepassingsserver het paginaverzoek ontvangt, doet het a `POST` verzoek aan het [ de interactieve eindpunt van de gegevensinzameling van de Server API ](../../server-api/interactive-data-collection.md) om verpersoonlijkingsinhoud te halen. De aanvraag `POST` bevat een `event` en een `query` . De cookies uit de vorige stap, indien beschikbaar, worden opgenomen in de array `meta>state>entries` .
 1. De server-API retourneert de verpersoonlijkingsinhoud naar uw toepassingsserver.
-1. De toepassingsserver retourneert een HTML-reactie op de clientbrowser die de [identiteits- en clustercookies](#cookies).
-1. Op de clientpagina [!DNL Web SDK] `applyResponse` wordt aangeroepen, waarbij de koppen en de hoofdtekst van het [!UICONTROL Server API] antwoord van de vorige stap.
-1. De [!DNL Web SDK] geeft Doel weer [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) biedt en Journey Optimizer Web Channel-items automatisch aan, omdat de `renderDecisions` markering is ingesteld op `true`.
-1. Doel op basis van formulier [!DNL HTML]/[!DNL JSON] aanbiedingen en op code gebaseerde ervaringen van Journey Optimizer worden handmatig toegepast via de `applyProposition` methode, om de [!DNL DOM] op basis van de personalisatie-inhoud in het voorstel.
-1. Voor formuliergebaseerd doel [!DNL HTML]/[!DNL JSON] weergavegebeurtenissen moeten handmatig worden verzonden om aan te geven wanneer de geretourneerde inhoud is weergegeven. Dit geldt ook voor aanbiedingen en ervaringen op basis van Journey Optimizer-code. Dit gebeurt via de `sendEvent` gebruiken.
+1. De toepassingsserver keert een reactie van HTML op cliëntbrowser terug, die de [ identiteit en clusterkoekjes ](#cookies) bevatten.
+1. Op de clientpagina wordt de opdracht [!DNL Web SDK] `applyResponse` aangeroepen, waarbij de koppen en de hoofdtekst van het [!UICONTROL Server API] -antwoord uit de vorige stap worden doorgegeven.
+1. [!DNL Web SDK] geeft de aanbiedingen van het Doel [[!DNL Visual Experience Composer (VEC)] ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) en de punten van het Kanaal van Journey Optimizer automatisch terug, omdat de `renderDecisions` vlag aan `true` wordt geplaatst.
+1. Doelformuliergebaseerde [!DNL HTML]/[!DNL JSON] -aanbiedingen en Journey Optimizer-ervaringen op basis van code worden handmatig toegepast via de `applyProposition` -methode om de [!DNL DOM] bij te werken op basis van de personalisatie-inhoud in het voorstel.
+1. Voor op vorm-gebaseerde [!DNL HTML]/ [!DNL JSON] aanbiedingen van het Doel en op code-gebaseerde ervaringen van Journey Optimizer, moeten de vertoningsgebeurtenissen manueel worden verzonden om erop te wijzen wanneer de teruggekeerde inhoud is getoond. Dit gebeurt via de opdracht `sendEvent` .
 
 ## Cookies {#cookies}
 
@@ -50,7 +50,7 @@ Cookies worden gebruikt om de gebruikersidentiteit en clusterinformatie voort te
 | Cookie | Doel | Opgeslagen door | Verzonden door |
 |---|---|---|---|
 | `kndctr_AdobeOrg_identity` | Bevat identiteitsgegevens van de gebruiker. | Applicatieserver | Applicatieserver |
-| `kndctr_AdobeOrg_cluster` | Wijst op welke cluster van het Netwerk van de Rand zou moeten worden gebruikt om de verzoeken te vervullen. | Applicatieserver | Applicatieserver |
+| `kndctr_AdobeOrg_cluster` | Geeft aan welke Edge Network-cluster moet worden gebruikt om aan de aanvragen te voldoen. | Applicatieserver | Applicatieserver |
 
 ## Verzoek om plaatsing {#request-placement}
 
@@ -65,7 +65,7 @@ Server-API-aanvragen zijn vereist om proposities op te halen en een weergavemeld
 
 Bij het implementeren van hybride personalisatie moet u speciale aandacht besteden aan het tellen van pagina&#39;s in Analytics.
 
-Wanneer u [configureren, een gegevensstroom](../../datastreams/overview.md) voor Analytics worden gebeurtenissen automatisch doorgestuurd, zodat de paginareeksen worden vastgelegd.
+Wanneer u [ een gegevensstroom ](../../datastreams/overview.md) voor Analytics vormt, door:sturen de gebeurtenissen automatisch zodat de paginareeksen worden gevangen.
 
 Het voorbeeld van deze implementatie gebruikt twee verschillende gegevensstromen:
 
@@ -84,7 +84,7 @@ De voorbeeldaanvraag hieronder illustreert een Server API-aanvraag die uw toepas
 >In dit voorbeeldverzoek wordt Adobe Target gebruikt als een oplossing voor personalisatie. Uw verzoek kan afhankelijk van uw gekozen personalisatieoplossing variëren.
 
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /ee/v2/interact
@@ -162,8 +162,8 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | Parameter | Type | Vereist | Beschrijving |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Ja. | Identiteitskaart van de gegevensstroom die u gebruikt om de interactie tot het Netwerk van de Rand over te gaan. Zie de [datastreams, overzicht](../../datastreams/overview.md) leren hoe u een gegevensstroom kunt configureren. |
-| `requestId` | `String` | Nee | Een willekeurige id voor correlerende interne serveraanvragen. Als niets wordt verstrekt, zal het Netwerk van de Rand één produceren en zal het in de reactie terugkeren. |
+| `dataStreamId` | `String` | Ja. | De id van de gegevensstroom die u gebruikt om de interacties door te geven aan de Edge Network. Zie het [ overzicht van gegevensstromen ](../../datastreams/overview.md) leren hoe te om een gegevensstroom te vormen. |
+| `requestId` | `String` | Nee | Een willekeurige id voor correlerende interne serveraanvragen. Als niets wordt verstrekt, zal de Edge Network één produceren en zal het in de reactie terugkeren. |
 
 ### Serverreactie {#server-response}
 
@@ -203,7 +203,7 @@ De voorbeeldreactie hieronder laat zien hoe de API-reactie van de server eruit z
 
 ## Aanvraag op de client {#client-request}
 
-Op de clientpagina [!DNL Web SDK] `applyResponse` wordt het bevel geroepen, die in de kopballen en het lichaam van de server-zijreactie overgaan.
+Op de clientpagina wordt de opdracht [!DNL Web SDK] `applyResponse` aangeroepen, waarbij de koppen en de hoofdtekst van de reactie van de server worden doorgegeven.
 
 ```js
    alloy("applyResponse", {
@@ -253,7 +253,7 @@ Op de clientpagina [!DNL Web SDK] `applyResponse` wordt het bevel geroepen, die 
    ).then(applyPersonalization("sample-json-offer"));
 ```
 
-Op formulier gebaseerd [!DNL JSON] aanbiedingen worden handmatig toegepast via de `applyPersonalization` methode, om de [!DNL DOM] op basis van het aanbod voor personalisatie. Voor op formulieren gebaseerde activiteiten moeten weergavegebeurtenissen handmatig worden verzonden om aan te geven wanneer de aanbieding is weergegeven. Dit gebeurt via de `sendEvent` gebruiken.
+[!DNL JSON] -aanbiedingen op basis van formulieren worden handmatig toegepast via de methode `applyPersonalization` om de [!DNL DOM] bij te werken op basis van de aanpassingsaanbieding. Voor op formulieren gebaseerde activiteiten moeten weergavegebeurtenissen handmatig worden verzonden om aan te geven wanneer de aanbieding is weergegeven. Dit gebeurt via de opdracht `sendEvent` .
 
 ```js
 function sendDisplayEvent(decision) {
@@ -280,4 +280,4 @@ function sendDisplayEvent(decision) {
 
 ## Voorbeeldtoepassing {#sample-app}
 
-Om u te helpen experimenteren en meer te leren over dit type van verpersoonlijking, verstrekken wij een steekproeftoepassing die u voor het testen kunt downloaden en gebruiken. U kunt de toepassing vanuit deze [GitHub-opslagplaats](https://github.com/adobe/alloy-samples).
+Om u te helpen experimenteren en meer te leren over dit type van verpersoonlijking, verstrekken wij een steekproeftoepassing die u voor het testen kunt downloaden en gebruiken. U kunt de toepassing, samen met gedetailleerde instructies op downloaden hoe te om het te gebruiken, van deze [ bewaarplaats GitHub ](https://github.com/adobe/alloy-samples).

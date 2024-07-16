@@ -10,27 +10,27 @@ ht-degree: 0%
 
 ---
 
-# Stroomspecificaties bijwerken met de opdracht [!DNL Flow Service] API
+# Stroomspecificaties bijwerken met de API [!DNL Flow Service]
 
 >[!NOTE]
 >
->Self-Serve Sources Streaming SDK bevindt zich in bèta. Lees de [overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+>Self-Serve Sources Streaming SDK bevindt zich in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Als u een nieuwe id voor de verbindingsspecificatie hebt gegenereerd, moet u deze id toevoegen aan een stroomspecificatie om een gegevensstroom te kunnen maken.
 
-De specificaties van de stroom bevatten informatie die een stroom bepaalt, met inbegrip van bron en doel verbindings IDs die het steunt, transformatiespecificaties die nodig zijn om op de gegevens worden toegepast, en het plannen van parameters die worden vereist om een stroom te produceren. U kunt de stroomspecificaties bewerken met de `/flowSpecs` eindpunt.
+De specificaties van de stroom bevatten informatie die een stroom bepaalt, met inbegrip van bron en doel verbindings IDs die het steunt, transformatiespecificaties die nodig zijn om op de gegevens worden toegepast, en het plannen van parameters die worden vereist om een stroom te produceren. U kunt stroomspecificaties bewerken met het eindpunt `/flowSpecs` .
 
-In het volgende document worden stappen beschreven voor het ophalen en bijwerken van stroomspecificaties met behulp van de [!DNL Flow Service] API voor Self-Serve Sources (Streaming SDK).
+In het volgende document worden stappen beschreven voor het ophalen en bijwerken van stroomspecificaties met de [!DNL Flow Service] API voor Self-Serve Sources (Streaming SDK).
 
 ## Aan de slag
 
-Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een stroomspecificatie opzoeken {#lookup}
 
-Bronnen die zijn gemaakt met de `generic-streaming` de sjabloon gebruiken `GenericStreamingAEP` stroomspecificatie. Deze stroomspecificatie kan worden teruggewonnen door een verzoek van de GET aan `/flowSpecs/` en het verstrekken van `flowSpec.id` van `e77fde5a-22a8-11ed-861d-0242ac120002`.
+Bronnen die zijn gemaakt met de `generic-streaming` -sjabloon, gebruiken allemaal de `GenericStreamingAEP` flow specification. Deze flowspecificatie kan worden opgehaald door een aanvraag voor een GET in te dienen bij het `/flowSpecs/` -eindpunt en de eigenschap `flowSpec.id` of `e77fde5a-22a8-11ed-861d-0242ac120002` op te geven.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
@@ -38,7 +38,7 @@ GET /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **Verzoek**
 
-Met het volgende verzoek wordt het `e77fde5a-22a8-11ed-861d-0242ac120002` stroomspecificatie.
+Met de volgende aanvraag wordt de `e77fde5a-22a8-11ed-861d-0242ac120002` flow-specificatie opgehaald.
 
 ```shell
 curl -X GET \
@@ -50,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de queried flow specificatie.
 
@@ -154,9 +154,9 @@ U kunt de velden van een stroomspecificatie bijwerken via een PUT-bewerking. Wan
 
 >[!IMPORTANT]
 >
->Wanneer u een verbindingsspecificatie voor een nieuwe bron creeert, moet u zijn specifieke identiteitskaart aan toevoegen `sourceConnectionSpecIds` array van de stroomspecificaties die overeenkomen met uw bron. Dit zorgt ervoor dat uw nieuwe bron door een bestaande stroomspecificatie wordt gesteund, zodat kunt u het proces van de gegevensstroom tot stand brengen met uw nieuwe bron voltooien.
+>Wanneer u een verbindingsspecificatie voor een nieuwe bron maakt, moet u de specificatie-id ervan toevoegen aan de array `sourceConnectionSpecIds` van de stroomspecificaties die overeenkomen met uw bron. Dit zorgt ervoor dat uw nieuwe bron door een bestaande stroomspecificatie wordt gesteund, zodat kunt u het proces van de gegevensstroom tot stand brengen met uw nieuwe bron voltooien.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
@@ -164,7 +164,7 @@ PUT /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **Verzoek**
 
-In het volgende verzoek wordt de stroomspecificatie van `e77fde5a-22a8-11ed-861d-0242ac120002` om de verbindingsspecificatie-id op te nemen `bdb5b792-451b-42de-acf8-15f3195821de`.
+De volgende aanvraag werkt de stroomspecificatie van `e77fde5a-22a8-11ed-861d-0242ac120002` bij en bevat de verbindingsspecificatie-id `bdb5b792-451b-42de-acf8-15f3195821de` .
 
 ```shell
 PUT -X GET \
@@ -264,9 +264,9 @@ PUT -X GET \
   }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie retourneert de details van de aangevraagde flowspecificatie, inclusief de bijgewerkte lijst van `sourceConnectionSpecIds`.
+Een geslaagde reactie retourneert de details van de aangevraagde flowspecificatie, inclusief de bijgewerkte lijst van `sourceConnectionSpecIds` .
 
 ```json
 {
@@ -368,4 +368,4 @@ Een succesvolle reactie retourneert de details van de aangevraagde flowspecifica
 
 ## Volgende stappen
 
-Als de nieuwe verbindingsspecificatie aan de juiste stroomspecificatie is toegevoegd, kunt u nu doorgaan met testen en uw nieuwe bron verzenden. Zie de handleiding op [een nieuwe bron testen en verzenden](./submit.md) voor meer informatie .
+Als de nieuwe verbindingsspecificatie aan de juiste stroomspecificatie is toegevoegd, kunt u nu doorgaan met testen en uw nieuwe bron verzenden. Zie de gids op [ het testen en het voorleggen van een nieuwe bron ](./submit.md) voor meer informatie.

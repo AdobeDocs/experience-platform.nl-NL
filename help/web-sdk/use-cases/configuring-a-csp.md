@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Een CSP configureren
 
-A [Beveiligingsbeleid voor inhoud](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) wordt gebruikt om de middelen te beperken browser wordt toegestaan te gebruiken. Het CSP kan ook de functionaliteit van manuscript en stijlmiddelen beperken. Adobe Experience Platform Web SDK vereist geen CSP, maar het toevoegen van één kan de aanvalsoppervlakte verminderen om tegen kwaadwillige aanvallen te verhinderen.
+A [ het Beleid van de Veiligheid van de Inhoud ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) wordt gebruikt om de middelen te beperken browser wordt toegestaan te gebruiken. Het CSP kan ook de functionaliteit van manuscript en stijlmiddelen beperken. Adobe Experience Platform Web SDK vereist geen CSP, maar het toevoegen van één kan de aanvalsoppervlakte verminderen om tegen kwaadwillige aanvallen te verhinderen.
 
-Het CDV moet weerspiegelen hoe [!DNL Platform Web SDK] wordt opgesteld en gevormd. In het volgende CDV wordt aangegeven welke wijzigingen nodig zijn om de SDK correct te laten functioneren. Afhankelijk van uw specifieke omgeving zijn waarschijnlijk aanvullende CSP-instellingen vereist.
+Het CSP moet weerspiegelen hoe [!DNL Platform Web SDK] wordt opgesteld en gevormd. In het volgende CDV wordt aangegeven welke wijzigingen nodig zijn om de SDK correct te laten functioneren. Afhankelijk van uw specifieke omgeving zijn waarschijnlijk aanvullende CSP-instellingen vereist.
 
 ## Voorbeeld van beveiligingsbeleid voor inhoud
 
@@ -29,17 +29,17 @@ default-src 'self';
 connect-src 'self' EDGE-DOMAIN
 ```
 
-In het bovenstaande voorbeeld: `EDGE-DOMAIN` moet worden vervangen door het domein van de eerste partij. Het eerste partijdomein wordt gevormd voor [edgeDomain](../commands/configure/edgedomain.md) instellen. Als geen first-party domein is gevormd, `EDGE-DOMAIN` vervangen door `*.adobedc.net`. Als bezoekersmigratie is ingeschakeld met [idMigrationEnabled](../commands/configure/idmigrationenabled.md)de `connect-src` richtlijn moet ook `*.demdex.net`.
+In het bovenstaande voorbeeld moet `EDGE-DOMAIN` worden vervangen door het domein van de eerste partij. Het eerste partijdomein wordt gevormd voor [ edgeDomain ](../commands/configure/edgedomain.md) het plaatsen. Als er geen domein van de eerste partij is geconfigureerd, moet `EDGE-DOMAIN` worden vervangen door `*.adobedc.net` . Als de bezoekersmigratie gebruikend [ idMigrationEnabled ](../commands/configure/idmigrationenabled.md) wordt aangezet, moet de `connect-src` richtlijn ook `*.demdex.net` omvatten.
 
 ### NONCE gebruiken om inlinescript en stijlelementen toe te staan
 
-[!DNL Platform Web SDK] kan pagina-inhoud wijzigen en moet worden goedgekeurd om inline script- en stijltags te maken. Om dit te bereiken, beveelt de Adobe het gebruik van een nonce aan voor de [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) CSP-instructie. Een nonce is een cryptografisch sterk willekeurig token dat door de server wordt gegenereerd en dat één keer per unieke paginaweergave wordt gegenereerd.
+[!DNL Platform Web SDK] kan pagina-inhoud wijzigen en moet worden goedgekeurd om inline script- en stijltags te maken. Om dit te verwezenlijken, adviseert de Adobe het gebruiken van één keer voor [ gebrek-src ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) CSP richtlijn. Een nonce is een cryptografisch sterk willekeurig token dat door de server wordt gegenereerd en dat één keer per unieke paginaweergave wordt gegenereerd.
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-Daarnaast moet het CDV eenmaal worden toegevoegd als kenmerk van het [!DNL Platform Web SDK] [basiscode](../install/library.md) scripttag. [!DNL Platform Web SDK] gebruikt deze optie vervolgens eenmaal bij het toevoegen van inline script- of stijltags aan de pagina:
+Bovendien moet CSP nonce als attribuut aan de [!DNL Platform Web SDK] [ markering van het basiscode ](../install/library.md) manuscript worden toegevoegd. [!DNL Platform Web SDK] gebruikt deze code vervolgens eenmaal wanneer u inline script- of stijltags aan de pagina toevoegt:
 
 ```
 <script nonce="SERVER-GENERATED-NONCE">
@@ -50,7 +50,7 @@ Daarnaast moet het CDV eenmaal worden toegevoegd als kenmerk van het [!DNL Platf
 </script>
 ```
 
-Als een nonce niet wordt gebruikt, kunt u het volgende toevoegen: `unsafe-inline` aan de `script-src` en `style-src` CSP-instructies:
+Als geen enkele keer wordt gebruikt, kunt u ook `unsafe-inline` aan de CSP-instructies `script-src` en `style-src` toevoegen:
 
 ```
 script-src 'unsafe-inline'
@@ -59,11 +59,11 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->Adobe doet **niet** adviseren specificeren `unsafe-inline` omdat het voor om het even welk manuscript toestaat om op de pagina te lopen, die de voordelen van het CDV beperkt.
+>De Adobe **adviseert** niet het specificeren `unsafe-inline` omdat het voor om het even welk manuscript om op de pagina toestaat te lopen, die de voordelen van CSP beperkt.
 
 ## Een CSP configureren voor In-App Messaging {#in-app-messaging}
 
-Wanneer u [Webberichten in de app](../personalization/web-in-app-messaging.md), moet u de volgende richtlijn in uw CSP opnemen:
+Wanneer u [ het Overseinen van het Web in-App ](../personalization/web-in-app-messaging.md) vormt, moet u de volgende richtlijn in uw CSP omvatten:
 
 ```
 default-src  blob:;

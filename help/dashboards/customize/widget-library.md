@@ -14,51 +14,51 @@ ht-degree: 0%
 
 In de Adobe Experience Platform-gebruikersinterface kunt u de gegevens van uw organisatie bekijken en ermee werken met meerdere dashboards. U kunt bepaalde dashboards ook bijwerken door widgets aan uw dashboardmening toe te voegen.
 
-Deze gids verstrekt geleidelijke instructies voor de toegang tot van [!UICONTROL Widget library] in Experience Platform, waar u standaardwidgets kunt selecteren en aangepaste widgets kunt maken om de informatie aan te passen die in uw dashboards wordt weergegeven.
+Deze handleiding bevat stapsgewijze instructies voor toegang tot [!UICONTROL Widget library] in het Experience Platform, waar u standaardwidgets kunt selecteren en aangepaste widgets kunt maken om de informatie die in uw dashboards wordt weergegeven, aan te passen.
 
 >[!NOTE]
 >
 >Alle updates van de dashboards worden uitgevoerd per organisatie en per sandbox.
 
-Voor informatie over het wijzigen van de locatie en grootte van de widgets die al in uw dashboards worden weergegeven, raadpleegt u de [hulplijn voor dashboards wijzigen](modify.md).
+Voor informatie over hoe te om de plaats en de grootte van widgets te wijzigen die reeds in uw dashboards worden getoond, gelieve te verwijzen naar [ wijzigen dashboardgids ](modify.md).
 
 ## De widgetbibliotheek openen {#access}
 
-Selecteer op elk dashboard (bijvoorbeeld het dashboard Profielen) de optie **[!UICONTROL Add widget]** om rechtstreeks naar de widgetbibliotheek te navigeren waar u [widgets toevoegen](#add-widgets) naar het dashboard.
+Van om het even welk dashboard (bijvoorbeeld, het dashboard van Profielen), selecteer **[!UICONTROL Add widget]** om direct aan de widgetbibliotheek te navigeren waar u widgets [ ](#add-widgets) aan uw dashboard kunt toevoegen.
 
-![Het tabblad Overzicht van het dashboard Profielen met de knop Widget toevoegen gemarkeerd.](../images/customization/profiles-overview-add-widget.png)
+![ het lusje van het het overzichtsoverzicht van Profielen met de Add benadrukte widgetknoop.](../images/customization/profiles-overview-add-widget.png)
 
-Selecteren **[!UICONTROL Modify dashboard]** als u widgets wilt verplaatsen, vergroten of verkleinen of verwijderen uit het dashboard. Vanuit deze weergave kunt u ook **[!UICONTROL Widget library]** om te bladeren en [widgets toevoegen](#add-widgets). Zie voor meer informatie over het bewerken van widgetgrootten en lay-out de [Documentatie voor dashboards wijzigen](./modify.md).
+Selecteer **[!UICONTROL Modify dashboard]** om widgets van het dashboard te verplaatsen, te vergroten of te verkleinen of te verwijderen. Van deze vertoning kunt u **[!UICONTROL Widget library]** ook selecteren om te doorbladeren en [ widgets ](#add-widgets) toevoegen. Leren hoe te om widgetgrootte en lay-out uit te geven, zie [ dashboarddocumentatie wijzigen ](./modify.md).
 
-![Het dashboardoverzicht Profielen met het dashboard Wijzigen gemarkeerd.](../images/customization/modify-dashboard.png)
+![ het dashboardoverzicht van Profielen met Modify benadrukt dashboard.](../images/customization/modify-dashboard.png)
 
-Selecteren **[!UICONTROL Widget library]** om de widgetbibliotheek te openen en alle beschikbare standaardmetriek te bekijken of te beginnen met het maken van aangepaste widgets.
+Selecteer **[!UICONTROL Widget library]** om de widgetbibliotheek te openen en alle beschikbare standaardmetriek weer te geven of om aangepaste widgets te maken.
 
-![De weergave van het aangepaste dashboard met de widgetbibliotheek gemarkeerd.](../images/customization/widget-library-button.png)
+![ wijzigt dashboardmening met benadrukte bibliotheek Widget.](../images/customization/widget-library-button.png)
 
 ## Widgets toevoegen {#add-widgets}
 
-Van de [!UICONTROL Widget library]selecteert u een widget in de lijst met beschikbare standaard- of aangepaste widgets. Een vinkje in de hoek van de widget geeft de selectie aan.
+Selecteer in het [!UICONTROL Widget library] een widget uit de lijst met beschikbare standaard- of aangepaste widgets. Een vinkje in de hoek van de widget geeft de selectie aan.
 
-![De widgetbibliotheek met een geselecteerde widget en een vinkje gemarkeerd.](../images/customization/confirm-selected-widget-to-add.png)
+![ de widgetbibliotheek met een geselecteerde benadrukte widget en vinkje.](../images/customization/confirm-selected-widget-to-add.png)
 
 ### Label tijdens gebruik {#in-use-label}
 
-Widgets die al aan een dashboard zijn toegevoegd, hebben een [!UICONTROL In-use] label dat aan hen wordt verbonden wanneer bekeken in de widgetbibliotheek. Met dit label worden widgets gemarkeerd die al aan het dashboard zijn toegevoegd om dubbel werk te voorkomen. U kunt desgewenst nog steeds dezelfde widget meerdere keren toevoegen.
+Aan widgets die al aan een dashboard zijn toegevoegd, is een label [!UICONTROL In-use] gekoppeld wanneer deze in de widgetbibliotheek worden weergegeven. Met dit label worden widgets gemarkeerd die al aan het dashboard zijn toegevoegd om dubbel werk te voorkomen. U kunt desgewenst nog steeds dezelfde widget meerdere keren toevoegen.
 
-![De widgetbibliotheek met het label in gebruik gemarkeerd.](../images/customization/in-use-label.png)
+![ de widgetbibliotheek met het in-gebruiks benadrukte etiket.](../images/customization/in-use-label.png)
 
-Als u alle vereiste widgets hebt geselecteerd, selecteert u **[!UICONTROL Add widgets]** om uw keuze te bevestigen en de widgets aan het dashboard toe te voegen.
+Nadat u alle vereiste widgets hebt geselecteerd, selecteert u **[!UICONTROL Add widgets]** om uw keuze te bevestigen en de widgets aan het dashboard toe te voegen.
 
 ## Standaard- en aangepaste widgets {#standard-and-custom}
 
-De [!UICONTROL Widget library] bevat twee tabbladen:
+[!UICONTROL Widget library] bevat twee tabbladen:
 
-* **[!UICONTROL Standard]:** Het standaardtabblad bevat widgets die worden verschaft door Adobe. U kunt de dashboards bijwerken gebruikend om het even welk van deze standaardmetriek. Raadpleeg de handleiding voor meer informatie over het toevoegen van standaardwidgets aan het dashboard [standaardwidgets gebruiken in dashboards](standard-widgets.md).
-* **[!UICONTROL Custom]:** Op het tabblad Aangepast kunt u widgets maken en delen binnen uw organisatie. Voor volledige stappen voor het maken van uw eigen widgets raadpleegt u de [aangepaste widgets voor hulplijn voor dashboards](custom-widgets.md).
+* **[!UICONTROL Standard]:** Het standaardlusje bevat widgets die door Adobe worden verstrekt. U kunt de dashboards bijwerken gebruikend om het even welk van deze standaardmetriek. Meer leren over het toevoegen van standaard widgets aan uw dashboard, verwijs naar de gids voor [ gebruikend standaardwidgets in dashboards ](standard-widgets.md).
+* **[!UICONTROL Custom]:** Met het aangepaste tabblad kunt u widgets maken en delen binnen uw organisatie. Voor volledige stappen aan het creëren van uw eigen widgets, verwijs naar [ douanewidgets voor dashboardgids ](custom-widgets.md).
 
-![De widgetbibliotheek met de standaard- en aangepaste tabbladen gemarkeerd.](../images/customization/widget-library.png)
+![ de widgetbibliotheek met de standaard en douanetabs benadrukte.](../images/customization/widget-library.png)
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, hebt u nu toegang tot de widgetbibliotheek in de interface van het Experience Platform. Als u de grootte en locatie wilt wijzigen van widgets die in het dashboard worden weergegeven, raadpleegt u de [hulplijn voor dashboards wijzigen](modify.md).
+Nadat u dit document hebt gelezen, hebt u nu toegang tot de widgetbibliotheek in de interface van het Experience Platform. Om de grootte en de plaats van widgets te wijzigen die in het dashboard verschijnen, gelieve te verwijzen naar [ wijzigen dashboardgids ](modify.md).

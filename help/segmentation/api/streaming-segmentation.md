@@ -15,9 +15,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->In het volgende document wordt aangegeven hoe u streamingsegmentatie kunt gebruiken met de API. Voor informatie over het gebruik van streaming segmentatie via de gebruikersinterface, leest u de [UI-gids voor streamingsegmentatie](../ui/streaming-segmentation.md).
+>In het volgende document wordt aangegeven hoe u streamingsegmentatie kunt gebruiken met de API. Voor informatie bij het gebruiken van het stromen segmentatie die UI gebruiken, gelieve de [ het stromen segmentatie UI gids ](../ui/streaming-segmentation.md) te lezen.
 
-Segmentering streamen op [!DNL Adobe Experience Platform] staat klanten toe om segmentatie in bijna real time te doen terwijl het concentreren op gegevensrijkdom. Met streaming segmentering gebeurt segmentkwalificatie nu als streaming gegevens binnenkomen [!DNL Platform], om de noodzaak om segmentatietaken te plannen en uit te voeren te verlichten. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien het gegeven wordt overgegaan in [!DNL Platform]Dit betekent dat segmentlidmaatschap up-to-date blijft zonder geplande segmentatietaken uit te voeren.
+Door segmentatie te streamen op [!DNL Adobe Experience Platform] kunnen klanten segmentering uitvoeren in de buurt van realtime en tegelijk de nadruk leggen op gegevensrijkdom. Met streamingsegmentatie gebeurt segmentkwalificatie nu als streaminggegevens in [!DNL Platform] terechtkomen, waardoor de noodzaak om segmentatietaken te plannen en uit te voeren, wordt verminderd. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens in [!DNL Platform] worden overgegaan, betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
@@ -29,33 +29,33 @@ Segmentering streamen op [!DNL Adobe Experience Platform] staat klanten toe om s
 
 ## Aan de slag
 
-Deze ontwikkelaarshandleiding vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] diensten betrokken bij het stromen segmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Deze ontwikkelaarsgids vereist een werkend inzicht in de diverse [!DNL Adobe Experience Platform] diensten betrokken bij het stromen segmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Biedt een eenvormig consumentenprofiel in real-time, gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-- [[!DNL Segmentation]](../home.md): Verstrekt de capaciteit om publiek tot stand te brengen gebruikend segmentdefinities en andere externe bronnen van uw [!DNL Real-Time Customer Profile] gegevens.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform consumentenprofiel in realtime, gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+- [[!DNL Segmentation]](../home.md): biedt de mogelijkheid om een publiek te maken met behulp van segmentdefinities en andere externe bronnen van uw [!DNL Real-Time Customer Profile] -gegevens.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan te maken [!DNL Platform] API&#39;s.
+De volgende secties bevatten aanvullende informatie die u moet weten om aanroepen van [!DNL Platform] API&#39;s te kunnen uitvoeren.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze ontwikkelaarsgids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
+Deze ontwikkelaarsgids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
-- Toestemming: houder `{ACCESS_TOKEN}`
+- Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Voor meer informatie over sandboxen in [!DNL Platform], zie de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -67,7 +67,7 @@ Voor het invullen van specifieke aanvragen kunnen extra kopteksten nodig zijn. I
 
 >[!NOTE]
 >
->U zult geplande segmentatie voor de organisatie moeten toelaten opdat het stromen segmentatie werkt. Informatie over het inschakelen van geplande segmentatie vindt u in het gedeelte [geplande segmenteringssectie inschakelen](#enable-scheduled-segmentation)
+>U zult geplande segmentatie voor de organisatie moeten toelaten opdat het stromen segmentatie werkt. De informatie over het toelaten van geplande segmentatie kan in [ worden gevonden toelaat geplande segmentatiesectie ](#enable-scheduled-segmentation)
 
 Opdat een segmentdefinitie wordt geëvalueerd die het stromen segmentatie gebruikt, moet de vraag aan de volgende richtlijnen in overeenstemming zijn.
 
@@ -78,15 +78,15 @@ Opdat een segmentdefinitie wordt geëvalueerd die het stromen segmentatie gebrui
 | Eén gebeurtenis met een tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis met een tijdvenster. |
 | Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. |
 | Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, met een of meer profielkenmerken, en die optreedt binnen een relatief tijdvenster van minder dan 24 uur. |
-| Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmenten bevat. **Opmerking:** Als een segment van segmenten wordt gebruikt, zal de profielontzetting gebeuren **om de 24 uur**. |
-| Meerdere gebeurtenissen met een profielkenmerk | Elke segmentdefinitie die verwijst naar meerdere gebeurtenissen **in de laatste 24 uur** en (optioneel) heeft een of meer profielkenmerken. |
+| Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmenten bevat. **Nota:** als een segment van segmenten wordt gebruikt, zal de profielontzetting **elke 24 uren** gebeuren. |
+| Meerdere gebeurtenissen met een profielkenmerk | Om het even welke segmentdefinitie die naar veelvoudige gebeurtenissen **binnen de laatste 24 uren** verwijst en (naar keuze) heeft één of meerdere profielattributen. |
 
-Een segmentdefinitie zal **niet** voor het stromen segmentatie in de volgende scenario&#39;s worden toegelaten:
+Een segmentdefinitie zal **** niet voor het stromen segmentatie in de volgende scenario&#39;s worden toegelaten:
 
 - De segmentdefinitie omvat Adobe Audience Manager (AAM)-segmenten of -kenmerken.
 - De segmentdefinitie omvat meerdere entiteiten (vragen van meerdere entiteiten).
-- De segmentdefinitie omvat een combinatie van één gebeurtenis en een `inSegment` gebeurtenis.
-   - Als het segment echter in de `inSegment` gebeurtenis is alleen profiel, de segmentdefinitie **zal** is ingeschakeld voor streamingsegmentatie.
+- De segmentdefinitie bevat een combinatie van één gebeurtenis en een `inSegment` -gebeurtenis.
+   - Nochtans, als het segment in de `inSegment` gebeurtenis profiel slechts is, zal de segmentdefinitie **** voor het stromen segmentatie worden toegelaten.
 - In de segmentdefinitie wordt &quot;Jaar negeren&quot; gebruikt als onderdeel van de tijdbeperkingen.
 
 Houd rekening met de volgende richtlijnen bij het uitvoeren van streaming segmentatie:
@@ -94,7 +94,7 @@ Houd rekening met de volgende richtlijnen bij het uitvoeren van streaming segmen
 | Type query | Richtsnoer |
 | ---------- | -------- |
 | Single-event-query | Er gelden geen limieten voor het terugzoekvenster. |
-| Query uitvoeren met gebeurtenisgeschiedenis | <ul><li>Het terugzoekvenster is beperkt tot **één dag**.</li><li>Een strikte voorwaarde voor de tijdvolgorde **moet** tussen de gebeurtenissen bestaan.</li><li>Query&#39;s met ten minste één genegeerde gebeurtenis worden ondersteund. De gehele gebeurtenis **kan** een negatie zijn.</li></ul> |
+| Query uitvoeren met gebeurtenisgeschiedenis | <ul><li>Het raadplegingsvenster is beperkt tot **één dag**.</li><li>Een strikte tijd-opdracht gevend voorwaarde **moet** tussen de gebeurtenissen bestaan.</li><li>Query&#39;s met ten minste één genegeerde gebeurtenis worden ondersteund. Nochtans, kan de volledige gebeurtenis **niet** een negatie zijn.</li></ul> |
 
 Als een segmentdefinitie wordt gewijzigd zodat deze niet meer voldoet aan de criteria voor het streamen van segmentatie, schakelt de segmentdefinitie automatisch over van &quot;Streaming&quot; naar &quot;Batch&quot;.
 
@@ -102,11 +102,11 @@ Bovendien, segmentonkwalificatie, zo gelijkaardig aan segmentkwalificatie, gebeu
 
 ## Hiermee worden alle segmentdefinities opgehaald die zijn ingeschakeld voor streaming segmentatie
 
-U kunt een lijst van al uw segmentdefinities terugwinnen die voor het stromen segmentatie binnen uw organisatie door een verzoek van de GET aan te dienen worden toegelaten `/segment/definitions` eindpunt.
+U kunt een lijst van al uw segmentdefinities terugwinnen die voor het stromen segmentatie binnen uw organisatie door een verzoek van de GET tot het `/segment/definitions` eindpunt te richten worden toegelaten.
 
-**API-indeling**
+**API formaat**
 
-Om streaming-toegelaten segmentdefinities terug te winnen, moet u de vraagparameter omvatten `evaluationInfo.continuous.enabled=true` in het aanvraagpad.
+Als u streaming-ingeschakelde segmentdefinities wilt ophalen, moet u de queryparameter `evaluationInfo.continuous.enabled=true` opnemen in het aanvraagpad.
 
 ```http
 GET /segment/definitions?evaluationInfo.continuous.enabled=true
@@ -124,7 +124,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een serie van segmentdefinities in uw organisatie terug die voor het stromen segmentatie worden toegelaten.
 
@@ -215,9 +215,9 @@ Een succesvolle reactie keert een serie van segmentdefinities in uw organisatie 
 
 ## Een segmentdefinitie maken die geschikt is voor streaming
 
-Als een segmentdefinitie overeenkomt met een van de [hierboven vermelde typen streamingsegmentatie](#query-types).
+Een segmentdefinitie zal automatisch stromen-toegelaten zijn als het één van de [ het stromen segmentatietypen aanpast die hierboven ](#query-types) worden vermeld.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /segment/definitions
@@ -261,9 +261,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->Dit is een standaard &quot;creeer een verzoek van de segmentdefinitie&quot;. Lees de zelfstudie voor meer informatie over het maken van een segmentdefinitie [segmentdefinitie maken](../tutorials/create-a-segment.md).
+>Dit is een standaard &quot;creeer een verzoek van de segmentdefinitie&quot;. Voor meer informatie over het creëren van een segmentdefinitie, te lezen gelieve het leerprogramma bij [ het creëren van een segmentdefinitie ](../tutorials/create-a-segment.md).
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van de nieuw gecreeerd streaming-toegelaten segmentdefinitie terug.
 
@@ -311,13 +311,13 @@ Nadat de streamingevaluatie is ingeschakeld, moet een basislijn worden gemaakt (
 
 >[!NOTE]
 >
->De geplande evaluatie kan voor zandbakken met een maximum van vijf (5) fusiebeleid voor worden toegelaten [!DNL XDM Individual Profile]. Als uw organisatie meer dan vijf samenvoegbeleidsregels heeft voor [!DNL XDM Individual Profile] binnen één sandboxomgeving kunt u geen geplande evaluatie gebruiken.
+>Een geplande evaluatie kan worden ingeschakeld voor sandboxen met maximaal vijf (5) samenvoegbeleidsregels voor [!DNL XDM Individual Profile] . Als uw organisatie meer dan vijf samenvoegbeleidsregels voor [!DNL XDM Individual Profile] heeft binnen één sandbox-omgeving, kunt u geen geplande evaluatie gebruiken.
 
 ### Een schema maken
 
-Door een POST aan de `/config/schedules` eindpunt, kunt u een programma tot stand brengen en de specifieke tijd omvatten wanneer het programma zou moeten worden teweeggebracht.
+Door een verzoek van de POST aan het `/config/schedules` eindpunt te doen, kunt u een programma tot stand brengen en de specifieke tijd omvatten wanneer het programma zou moeten worden teweeggebracht.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /config/schedules
@@ -348,14 +348,14 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `name` | **(Vereist)** De naam van het schema. Moet een tekenreeks zijn. |
-| `type` | **(Vereist)** Het taaktype in tekenreeksindeling. De ondersteunde typen zijn `batch_segmentation` en `export`. |
-| `properties` | **(Vereist)** Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
-| `properties.segments` | **(Vereist als `type` equals `batch_segmentation`)** Gebruiken `["*"]` zorgt ervoor dat alle segmentdefinities worden opgenomen. |
-| `schedule` | **(Vereist)** Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Het getoonde voorbeeld (`0 0 1 * * ?`) betekent dat de baan elke dag om 1 wordt geactiveerd:00:00 UTC. Voor meer informatie raadpleegt u de bijlage bij de [expressie-indeling voor uitsnijden](./schedules.md#appendix) binnen de documentatie over de programma&#39;s binnen de segmentatie. |
-| `state` | *(Optioneel)* Tekenreeks die de planningsstatus bevat. Beschikbare waarden: `active` en `inactive`. Standaardwaarde is `inactive`. Een organisatie kan slechts één programma maken. De stappen voor het bijwerken van het programma zijn beschikbaar later in dit leerprogramma. |
+| `name` | **(Vereist)** De naam van programma. Moet een tekenreeks zijn. |
+| `type` | **(Vereist)** Het baantype in koordformaat. De ondersteunde typen zijn `batch_segmentation` en `export` . |
+| `properties` | **(Vereist)** Een voorwerp dat extra eigenschappen met betrekking tot het programma bevat. |
+| `properties.segments` | **(Vereist als `type` gelijk is aan `batch_segmentation` )** `["*"]` zorgt ervoor dat alle segmentdefinities worden opgenomen. |
+| `schedule` | **(Vereist)** Een koord dat het baanprogramma bevat. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Het getoonde voorbeeld (`0 0 1 * * ?`) betekent de baan elke dag bij 1 :00: 00 UTC wordt teweeggebracht. Voor meer informatie, te herzien gelieve het bijlage op het [ formaat van de cron uitdrukking ](./schedules.md#appendix) binnen de documentatie over programma&#39;s binnen segmentatie. |
+| `state` | *(Facultatief)* Koord die de planningsstaat bevatten. Beschikbare waarden: `active` en `inactive` . De standaardwaarde is `inactive` . Een organisatie kan slechts één programma maken. De stappen voor het bijwerken van het programma zijn beschikbaar later in dit leerprogramma. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van het onlangs gecreeerde programma terug.
 
@@ -385,9 +385,9 @@ Een succesvolle reactie keert de details van het onlangs gecreeerde programma te
 
 ### Een schema inschakelen
 
-Een schema is standaard inactief wanneer het wordt gemaakt, tenzij het `state` eigenschap is ingesteld op `active` in de create (POST) aanvraaginstantie. U kunt een programma inschakelen (stel de `state` tot `active`) door een PATCH-verzoek aan de `/config/schedules` en met inbegrip van identiteitskaart van het programma in de weg.
+Een schema is standaard niet actief wanneer het wordt gemaakt, tenzij de eigenschap `state` is ingesteld op `active` in de aanvraagtekst (POST) create. U kunt een schema inschakelen (stel `state` in op `active` ) door een PATCH-aanvraag in te dienen bij het `/config/schedules` -eindpunt en de id van het schema op te nemen in het pad.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /config/schedules/{SCHEDULE_ID}
@@ -395,7 +395,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **Verzoek**
 
-Het volgende verzoek gebruikt [JSON-patchopmaak](https://datatracker.ietf.org/doc/html/rfc6902) om de `state` van het schema `active`.
+Het volgende verzoek gebruikt [ het formatteren van het Reparatie JSON ](https://datatracker.ietf.org/doc/html/rfc6902) om `state` van het programma aan `active` bij te werken.
 
 ```shell
 curl -X POST \
@@ -414,7 +414,7 @@ curl -X POST \
       ]'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde update retourneert een lege reactiehoofdtekst en HTTP Status 204 (Geen inhoud).
 
@@ -424,7 +424,7 @@ Dezelfde bewerking kan worden gebruikt om een schema uit te schakelen door de wa
 
 Nu u zowel nieuwe als bestaande segmentdefinities voor het stromen segmentatie hebt toegelaten, en geplande segmentatie toegelaten om een basislijn te ontwikkelen en terugkomende evaluaties uit te voeren, kunt u beginnen streaming-Toegelaten segmentdefinities voor uw organisatie tot stand te brengen.
 
-Ga voor meer informatie over het uitvoeren van vergelijkbare acties en het werken met segmentdefinities in de Adobe Experience Platform-gebruikersinterface naar de [Gebruikershandleiding voor Segment Builder](../ui/segment-builder.md).
+Leren hoe te om gelijkaardige acties uit te voeren en met segmentdefinities te werken gebruikend het gebruikersinterface van Adobe Experience Platform, gelieve de [ gebruikersgids van de Bouwer van het Segment ](../ui/segment-builder.md) te bezoeken.
 
 ## Bijlage
 
@@ -432,7 +432,7 @@ In de volgende sectie worden veelgestelde vragen over streamingsegmentatie weerg
 
 ### Vindt streaming segmentatie ook &#39;onkwalificatie&#39; plaats in real-time?
 
-Doorgaans gebeurt een onkwalificatie van streamingsegmentatie in real-time. Bij streamingsegmentdefinities die gebruikmaken van segmenten, is dit echter wel het geval **niet** in real time niet in aanmerking komen, in plaats daarvan na 24 uur niet in aanmerking.
+Doorgaans gebeurt een onkwalificatie van streamingsegmentatie in real-time. Nochtans, die segmentdefinities stromen die segmenten van segmenten gebruiken **niet** in real time niet kwalificeren, in plaats daarvan na 24 uren unqualified.
 
 ### Aan welke gegevens werkt streaming segmentatie?
 
@@ -440,17 +440,17 @@ Streaming segmentatie werkt op alle gegevens die via een streaming bron zijn ing
 
 ### Hoe worden segmentdefinities gedefinieerd als batch- of streaming-segmentatie?
 
-Een segmentdefinitie wordt gedefinieerd als batch- of streaming-segmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst met segmentdefinities die als streaming segment worden geëvalueerd, kunt u vinden in het dialoogvenster [sectie met querytypen voor streamingsegmentering](#query-types).
+Een segmentdefinitie wordt gedefinieerd als batch- of streaming-segmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst waarvan segmentdefinities als het stromen segment zullen worden geëvalueerd kan in de [ het stromen sectie van de segmenteringsvraagtypes ](#query-types) worden gevonden.
 
-Houd er rekening mee dat als een segment **beide** een `inSegment` en een directe &#39;single-event&#39;-keten, kan deze niet in aanmerking komen voor streamingsegmentatie. Als u deze segmentdefinitie voor het stromen segmentatie wilt kwalificeren, zou u de directe enige-gebeurtenisketting zijn eigen segmentdefinitie moeten maken.
+Gelieve te merken op dat als een segment **zowel** een `inSegment` uitdrukking als een directe enige-gebeurtenisketting bevat, het niet voor het stromen segmentatie kan kwalificeren. Als u deze segmentdefinitie voor het stromen segmentatie wilt kwalificeren, zou u de directe enige-gebeurtenisketting zijn eigen segmentdefinitie moeten maken.
 
 ### Waarom neemt het aantal &quot;totaal gekwalificeerde&quot;segmentdefinities toe terwijl het aantal onder &quot;Laatste X dagen&quot;bij nul blijft binnen de sectie van de segmentdefinitiedetails?
 
 Het aantal totaal gekwalificeerde segmentdefinities wordt getrokken uit de dagelijkse segmentatietaak, die publiek omvat dat voor zowel partij als streaming segmentdefinities kwalificeert. Deze waarde wordt weergegeven voor definities van zowel batch- als streaming segmenten.
 
-Het getal onder de &quot;Laatste X dagen&quot; **alleen** omvat doelgroepen die zijn gekwalificeerd in streamingsegmentatie, en **alleen** neemt toe als u gegevens in het systeem hebt gestreamd en het telt naar die het stromen definitie. Deze waarde is **alleen** weergegeven voor streamingsegmentdefinities. Dientengevolge, deze waarde **kan** weergeven als 0 voor definities van batchsegmenten.
+Het aantal onder de &quot;Laatste dagen van X&quot;**slechts** omvat publiek dat in het stromen segmentatie wordt gekwalificeerd, en **slechts** verhogingen als u gegevens in het systeem hebt gestroomd en het telt naar die het stromen definitie. Deze waarde is **slechts** getoond voor het stromen segmentdefinities. Dientengevolge, kan deze waarde **** tonen als 0 voor de definities van het partijsegment.
 
-Als u dus ziet dat het getal onder &quot;Laatste X dagen&quot; nul is en dat de lijngrafiek ook nul rapporteert, hebt u **niet** profielen naar het systeem gestreamd die voor die segmentdefinitie in aanmerking zouden komen.
+Dientengevolge, als u ziet dat het aantal onder &quot;Laatste dagen van X&quot;nul is, en de lijngrafiek ook nul rapporteert, hebt u **** gestroomd geen profielen in het systeem dat voor die segmentdefinitie zou kwalificeren.
 
 ### Hoe lang duurt het voordat een segmentdefinitie beschikbaar is?
 
@@ -458,4 +458,4 @@ Het duurt tot één uur voordat een segmentdefinitie beschikbaar is.
 
 ### Zijn er beperkingen aan de gegevens waarin wordt gestreamd?
 
-Voor het gebruik van gestreamde gegevens in streamingsegmentatie is er **moet** moet ruimte zijn tussen de gebeurtenissen die worden gestreamd. Als er te veel gebeurtenissen binnen dezelfde seconde worden gestreamd, behandelt Platform deze gebeurtenissen als door beide gegenereerde gegevens en worden ze genegeerd. Als beste praktijken, zou u moeten hebben **ten minste** vijf seconden tussen gebeurtenisgegevens om ervoor te zorgen dat de gegevens correct worden gebruikt.
+Opdat de gestroomde gegevens in het stromen segmentatie worden gebruikt, moet **** het uit elkaar plaatsen tussen de gebeurtenissen zijn die binnen worden gestroomd. Als er te veel gebeurtenissen binnen dezelfde seconde worden gestreamd, behandelt Platform deze gebeurtenissen als door beide gegenereerde gegevens en worden ze genegeerd. Als beste praktijken, zou u **minstens** vijf seconden tussen gebeurtenisgegevens moeten hebben om ervoor te zorgen dat het gegeven behoorlijk wordt gebruikt.

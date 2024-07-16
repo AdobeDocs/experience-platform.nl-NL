@@ -1,70 +1,70 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;ServiceNow;serviceow
 solution: Experience Platform
-title: Creeer een Verbinding van de Bron ServiceNow in UI
+title: Een ServiceNow Source-verbinding maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een ServiceNow-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 1%
+source-wordcount: '433'
+ht-degree: 0%
 
 ---
 
-# Een [!DNL ServiceNow] bronverbinding in de gebruikersinterface
+# Een [!DNL ServiceNow] bronverbinding maken in de gebruikersinterface
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL ServiceNow] bronaansluiting met behulp van de [!DNL Platform] gebruikersinterface.
+Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL ServiceNow] bronaansluiting met behulp van de gebruikersinterface van [!DNL Platform] .
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
-   * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u al een geldige [!DNL ServiceNow] verbinding hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [configureren, gegevensstroom](../../dataflow/customer-success.md)
+Als u reeds een geldige [!DNL ServiceNow] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/customer-success.md)
 
 ### Vereiste referenties verzamelen
 
-Om toegang te krijgen tot uw [!DNL ServiceNow] account op [!DNL Platform]moet u de volgende waarden opgeven:
+Als u toegang wilt krijgen tot uw [!DNL ServiceNow] account op [!DNL Platform] , moet u de volgende waarden opgeven:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `endpoint` | Het eindpunt van het [!DNL ServiceNow] server. |
-| `username` | De gebruikersnaam die wordt gebruikt om verbinding te maken met de [!DNL ServiceNow] server voor verificatie. |
-| `password` | Het wachtwoord waarmee verbinding moet worden gemaakt met de [!DNL ServiceNow] server voor verificatie. |
+| `endpoint` | Het eindpunt van de [!DNL ServiceNow] server. |
+| `username` | De gebruikersnaam die wordt gebruikt voor verbinding met de [!DNL ServiceNow] -server voor verificatie. |
+| `password` | Het wachtwoord waarmee verbinding moet worden gemaakt met de [!DNL ServiceNow] -server voor verificatie. |
 
-Raadpleeg voor meer informatie over aan de slag gaan [dit [!DNL ServiceNow] document](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
+Voor meer informatie over begonnen worden, verwijs naar [ dit  [!DNL ServiceNow]  document ](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
 
-## Verbind uw [!DNL ServiceNow] account
+## Sluit uw [!DNL ServiceNow] -account aan
 
-Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL ServiceNow] account aan [!DNL Platform].
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL ServiceNow] -account te koppelen aan [!DNL Platform] .
 
-Aanmelden bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de **[!UICONTROL Sources]** werkruimte. De **[!UICONTROL Catalog]** in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de **[!UICONTROL Customer Success]** categorie, selecteert u **[!UICONTROL ServiceNow]**. Als dit de eerste keer is met deze connector, selecteert u **[!UICONTROL Configure]**. Anders selecteert u **[!UICONTROL Connect source]** om een nieuwe [!DNL ServiceNow] -aansluiting.
+Selecteer onder de categorie **[!UICONTROL Customer Success]** de optie **[!UICONTROL ServiceNow]** . Selecteer **[!UICONTROL Configure]** als dit de eerste keer is dat u deze connector gebruikt. Anders selecteert u **[!UICONTROL Connect source]** om een nieuwe [!DNL ServiceNow] -connector te maken.
 
 ![](../../../../images/tutorials/create/servicenow/catalog.png)
 
-De **[!UICONTROL Connect to ServiceNow]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to ServiceNow]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
-Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL ServiceNow] referenties. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Selecteer **[!UICONTROL New account]** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL ServiceNow] -gegevens op. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
 ![](../../../../images/tutorials/create/servicenow/new.png)
 
 ### Bestaande account
 
-Als u een bestaande account wilt verbinden, selecteert u de optie [!DNL ServiceNow] account waarmee u verbinding wilt maken, selecteert u **[!UICONTROL Next]** om verder te gaan.
+Als u een bestaande account wilt verbinden, selecteert u de [!DNL ServiceNow] -account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ![](../../../../images/tutorials/create/servicenow/existing.png)
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL ServiceNow] account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens over te brengen naar [!DNL Platform]](../../dataflow/customer-success.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL ServiceNow] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Platform]](../../dataflow/customer-success.md) te brengen.

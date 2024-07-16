@@ -4,7 +4,7 @@ description: Met het eindpunt /tools in de sandbox Tooling-API kunt u JSON-taakg
 exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '150'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 Met gereedschappen voor sandboxen kunt u verschillende artefacten selecteren en exporteren naar een pakket. Een pakket kan uit één object of uit meerdere objecten bestaan. Alle objecten die in een pakket zijn opgenomen, moeten afkomstig zijn uit dezelfde sandbox.
 
-De `/tools` kunt u JSON-taakgegevens weergeven en ophalen.
+Met het eindpunt `/tools` in de API voor het bewerken van sandboxen kunt u JSON-taakgegevens weergeven en ophalen.
 
 ## Taakdetails {#details}
 
-Als u de JSON-taakgegevens onafhankelijk wilt ophalen, vraagt u een GET aan de `/tools` en geef de id van de taak op.
+Als u de JSON-taakgegevens onafhankelijk wilt ophalen, vraagt u een GET aan bij het `/tools` -eindpunt en geeft u de id van de taak op.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /tools/job/{JOB_ID}
@@ -31,7 +31,7 @@ GET /tools/job/{JOB_ID}
 
 **Verzoek**
 
-Met het volgende verzoek wordt informatie opgehaald voor {JOB_ID}.
+Met de volgende aanvraag wordt informatie voor {JOB_ID} opgehaald.
 
 ```shell
 curl -X GET \
@@ -41,9 +41,9 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert details voor de id van de gevraagde taak en geeft statusupdates in real time op als `completedTasks` en `failedTasks` worden bijgewerkt naarmate de taak vordert.
+Een succesvol antwoord retourneert gegevens voor de id van de gevraagde taak, waardoor statusupdates in real time beschikbaar zijn als `completedTasks` en `failedTasks` worden bijgewerkt naarmate de taak vordert.
 
 ```json
 {

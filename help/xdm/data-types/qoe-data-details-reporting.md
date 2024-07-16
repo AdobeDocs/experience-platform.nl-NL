@@ -1,7 +1,8 @@
 ---
 title: QoE (Kwaliteit van Ervaring) Gegevens die Gegevenstype melden
 description: Leer over de (Kwaliteit van Ervaring) Gegevens QoE die het gegevenstype van de Ervaring van het Gegevenstype (XDM) gegevenstype melden.
-source-git-commit: a604dc8b541784ace8aedef42030e5bd8b646c28
+exl-id: 608baa9b-12ca-466c-a962-1401abc0344e
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '435'
 ht-degree: 0%
@@ -10,10 +11,10 @@ ht-degree: 0%
 
 # QoE (Kwaliteit van Ervaring) Gegevens - Rapportgegevenstype
 
-[!UICONTROL QoE Data Details] De rapportering is een standaardgegevenstype van de Gegevens van de Ervaring van het Model (XDM) verstrekt gedetailleerde metriek met betrekking tot de kwaliteit van ervaring (QoE) tijdens media playback. Gebruik de [!UICONTROL QoE Data Details] Rapporteert het gegevenstype voor het vastleggen van details, zoals informatie over bitsnelheid, framesnelheden, buffergebeurtenissen, gedropte frames, enzovoort. Media-rapportvelden worden door Adobe-services gebruikt voor het analyseren van de velden Media Collection die door gebruikers worden verzonden. Deze gegevens worden, samen met andere specifieke maatstaven voor gebruikers, berekend en gerapporteerd. Met dit gegevenstype kunt u de afspeelkwaliteit analyseren, zodat u inzicht hebt in de streamingprestaties, gebruikerservaring en potentiële problemen die tijdens afspeelsessies zijn opgetreden.
+[!UICONTROL QoE Data Details] Rapportage is een standaard XDM-gegevenstype (Experience Data Model) dat gedetailleerde metriek biedt met betrekking tot de kwaliteit van de ervaring (QoE) tijdens het afspelen van media. Gebruik het gegevenstype [!UICONTROL QoE Data Details] Rapportage voor het vastleggen van details zoals bitsnelheidgegevens, framesnelheden, buffergebeurtenissen, gedropte frames enzovoort. Media-rapportvelden worden door Adobe-services gebruikt voor het analyseren van de velden Media Collection die door gebruikers worden verzonden. Deze gegevens worden, samen met andere specifieke maatstaven voor gebruikers, berekend en gerapporteerd. Met dit gegevenstype kunt u de afspeelkwaliteit analyseren, zodat u inzicht hebt in de streamingprestaties, gebruikerservaring en potentiële problemen die tijdens afspeelsessies zijn opgetreden.
 
 +++Select om het gegevenstype van de Gegevens te tonen QoE die van Gegevens het gegevenstype melden.
-![Een diagram van de (Kwaliteit van Ervaring) Gegevens QoE die gegevenstype melden.](../images/data-types/qoe-data-details-reporting.png)
+![ een diagram van QoE (Kwaliteit van Ervaring) Gegevens die gegevenstype melden.](../images/data-types/qoe-data-details-reporting.png)
 +++
 
 >[!NOTE]

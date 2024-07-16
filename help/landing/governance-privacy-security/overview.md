@@ -6,8 +6,8 @@ description: Adobe Experience Platform biedt verschillende services en tools waa
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 2%
+source-wordcount: '857'
+ht-degree: 1%
 
 ---
 
@@ -25,21 +25,21 @@ De diensten kunnen in drie domeinen worden gecategoriseerd:
 
 ## Gegevensbeheer {#governance}
 
-Het beheer van gegevens is een essentieel begrip dat met elke mogelijkheid in Experience Platform wordt verweven. Het gegevensbeheer vertegenwoordigt uw vermogen om uw gegevens door zijn reis door Platform te controleren en te begrijpen. Dit omvat het handhaven van gegevenskwaliteit, gegevenslijn, gegevens het catalogiseren, en meer.
+Het beheer van gegevens is een essentieel begrip dat met elke mogelijkheid in Experience Platform wordt verweven. Het beheer van gegevens vertegenwoordigt uw vermogen om uw gegevens door zijn reis door Platform te controleren en te begrijpen. Dit omvat het handhaven van gegevenskwaliteit, gegevenslijn, gegevens het catalogiseren, en meer.
 
 ### Adobe Experience Platform Data Governance {#data-governance}
 
-Als dienst van het Platform, staat het Beheer van Gegevens van Adobe Experience Platform u toe om klantengegevens te beheren en naleving van verordeningen, beperkingen, en beleid te verzekeren dat op gegevensgebruik van toepassing is. Het speelt een belangrijke rol binnen Experience Platform op diverse niveaus, met inbegrip van het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, beleidshandhaving, en gegevenslijn.
+Als platformservice kunt u met Adobe Experience Platform Data Governance klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. Het speelt een belangrijke rol binnen Experience Platform op diverse niveaus, met inbegrip van het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, beleidshandhaving, en gegevenslijn.
 
-Zie de [Overzicht van gegevensbeheer](../../data-governance/home.md) voor meer informatie .
+Zie het [ overzicht van het Beleid van Gegevens ](../../data-governance/home.md) voor meer informatie.
 
 ### Catalogus en gegevenssets {#catalog}
 
-Catalogusservice is het systeem voor het opnemen van gegevens voor de locatie en de verbinding binnen het Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het meer van Gegevens als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
+Catalogusservice is het systeem voor het opnemen van gegevens voor de locatie en de verbinding binnen het platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het meer van Gegevens als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
 
 De catalogus organiseert ingebedde gegevens in datasets, met elke dataset die meta-gegevens bevat die kunnen worden gebruikt om de gegevens te etiketteren en te categoriseren het bevat.
 
-Zie de [Overzicht van Catalog Service](../../catalog/home.md) voor meer informatie over de dienst. Om te leren hoe te om datasets in Experience Platform te beheren, zie [Overzicht van gegevenssets](../../catalog/datasets/overview.md).
+Zie het [ overzicht van de Dienst van de Catalogus ](../../catalog/home.md) voor meer informatie over de dienst. Leren hoe te om datasets in Experience Platform te beheren, zie het [ overzicht van datasets ](../../catalog/datasets/overview.md).
 
 ## Privacy {#privacy}
 
@@ -51,15 +51,15 @@ Wettelijke privacyregels zoals de Algemene Verordening van de Europese Unie inza
 
 Adobe Experience Platform Privacy Service biedt een RESTful-API en -gebruikersinterface waarmee u deze aanvragen kunt beheren. Met Privacy Service kunt u verzoeken indienen om toegang te krijgen tot of persoonlijke klantgegevens te verwijderen uit Adobe Experience Cloud-toepassingen, waardoor u gemakkelijker kunt voldoen aan wettelijke en organisatorische privacyregels.
 
-Zie de [Overzicht van Privacy Service](../../privacy-service/home.md) voor meer informatie .
+Zie het [ overzicht van de Privacy Service ](../../privacy-service/home.md) voor meer informatie.
 
-### Goedkeuring {#consent}
+### Conceptverwerking {#consent}
 
-Veel wettelijke privacyverordeningen hebben vereisten ingevoerd voor actieve en specifieke toestemming op het gebied van gegevensverzameling, personalisatie en andere gevallen van marketinggebruik. Om aan deze vereisten te voldoen, staat het Experience Platform u toe om toestemmingsinformatie in individuele klantenprofielen te vangen en die voorkeur te gebruiken als bepalende factor in hoe de gegevens van elke klant in stroomafwaartse werkschema&#39;s van de Platform worden gebruikt.
+Veel wettelijke privacyverordeningen hebben vereisten ingevoerd voor actieve en specifieke toestemming op het gebied van gegevensverzameling, personalisatie en andere gevallen van marketinggebruik. Om aan deze vereisten te voldoen, staat het Experience Platform u toe om toestemmingsinformatie in individuele klantenprofielen te vangen en die voorkeur te gebruiken als bepalende factor in hoe de gegevens van elke klant in stroomafwaartse workflows van het Platform worden gebruikt.
 
-Als u wilt leren hoe u toestemming van klanten en voorkeursgegevens kunt verwerken met de Adobe-standaard, raadpleegt u het overzicht over [verwerking van toestemming in Experience Platform](./consent/adobe/overview.md).
+Leren hoe te om klantentoestemming en voorkeursgegevens te verwerken gebruikend de norm van de Adobe, zie het overzicht over [ toestemmingsverwerking in Experience Platform ](./consent/adobe/overview.md).
 
-Voor informatie over hoe de gegevens van de de toestemmingstoestemming van de procesklant in overeenstemming met IAB Transparantie en het Kader van de Toestemming (TCF) 2.0, zie het overzicht over [IAB TCF 2.0-ondersteuning in Platform](./consent/iab/overview.md).
+Voor informatie over hoe de gegevens van de de toestemmingen van de procesklant in overeenstemming met IAB Transparantie en het Kader van de Toestemming (TCF) 2.0, het overzicht over [ IAB TCF 2.0 steun in Platform ](./consent/iab/overview.md) zien.
 
 ## Beveiliging {#security}
 
@@ -67,13 +67,13 @@ De integriteit en veiligheid van uw gegevens zijn onmisbaar voor uw bedrijf, en 
 
 ### Gegevenscodering
 
-Alle gegevens van het Platform worden in doorvoer en in rust versleuteld. Document weergeven op [gegevenscodering in Platform](./encryption.md) voor meer informatie .
+Alle gegevens van het Platform worden gecodeerd in doorvoer en in rust. Zie het document over [ gegevensencryptie in Platform ](./encryption.md) voor meer informatie.
 
 ### Toegangsbeheer {#access-control}
 
-Experience Platform gebruikt Adobe Admin Console om op rol-gebaseerde toegangsbeheer aan diverse mogelijkheden van het Platform te verstrekken. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
+Experience Platform gebruikt de Adobe Admin Console om op rol-gebaseerde toegangscontrole aan diverse mogelijkheden van het Platform te verstrekken. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 
-Zie de [toegangsbeheeroverzicht](../../access-control/home.md) voor meer informatie .
+Zie het [ overzicht van de toegangscontrole ](../../access-control/home.md) voor meer informatie.
 
 ### Sandboxes {#sandboxes}
 
@@ -85,4 +85,4 @@ Zie het [sandboxoverzicht](../../sandboxes/home.md) voor meer informatie.
 
 ## Volgende stappen
 
-In dit document wordt een overzicht gegeven van de verschillende diensten en instrumenten van de Platform op het gebied van gegevensbeheer, privacy en beveiliging. Raadpleeg de documentatie in deze handleiding voor meer informatie over deze mogelijkheden.
+In dit document wordt een overzicht gegeven van de verschillende platformservices en -instrumenten die betrokken zijn bij gegevensbeheer, privacy en beveiliging. Raadpleeg de documentatie in deze handleiding voor meer informatie over deze mogelijkheden.

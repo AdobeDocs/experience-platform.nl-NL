@@ -12,102 +12,102 @@ ht-degree: 0%
 
 # [!DNL Real-Time Customer Profile] detailaanpassing {#profile-detail-customization}
 
-In de Adobe Experience Platform-gebruikersinterface kunt u bekijken en communiceren met [!DNL Real-Time Customer Profile] gegevens in de vorm van klantprofielen. De profielgegevens die in de gebruikersinterface worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van elke afzonderlijke klant. Dit omvat details zoals basiskenmerken, gekoppelde identiteiten en kanaalvoorkeuren. De standaardvelden in profielen kunnen ook op organisatorisch niveau worden gewijzigd, zodat de voorkeur wordt weergegeven [!DNL Profile] kenmerken. Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop [!DNL Profile] gegevens worden weergegeven in de interface van het platform.
+In de Adobe Experience Platform-gebruikersinterface kunt u [!DNL Real-Time Customer Profile] -gegevens weergeven en ermee werken in de vorm van klantprofielen. De profielgegevens die in de gebruikersinterface worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van elke afzonderlijke klant. Dit omvat details zoals basiskenmerken, gekoppelde identiteiten en kanaalvoorkeuren. De standaardvelden in profielen kunnen ook op organisatorisch niveau worden gewijzigd, zodat de voorkeurskenmerken [!DNL Profile] worden weergegeven. Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop [!DNL Profile] -gegevens worden weergegeven in de gebruikersinterface van het platform.
 
-Voor een volledige handleiding naar de profielgebruikersinterface gaat u naar de [Handleiding voor profielgebruikersinterface](user-guide.md).
+Voor een volledige gids aan Profielen UI, gelieve te bezoeken de [ gids UI van het Profiel ](user-guide.md).
 
 ## Kaarten opnieuw ordenen en het formaat ervan wijzigen {#reorder-and-resize-cards}
 
-Van de **[!UICONTROL Detail]** tabblad van het klantprofiel, kunt u **[!UICONTROL Customize profile details]** om bestaande kaarten te vergroten of te verkleinen en opnieuw te rangschikken.
+Op het tabblad **[!UICONTROL Detail]** van het klantprofiel kunt u **[!UICONTROL Customize profile details]** selecteren om bestaande kaarten te vergroten of te verkleinen en opnieuw te rangschikken.
 
-![De knop Profieldetails aanpassen wordt gemarkeerd op het dashboard Profiel.](../images/profile-customization/customize-profile-details.png)
+![ de Customize knoop van profieldetails wordt benadrukt op het dashboard van het Profiel.](../images/profile-customization/customize-profile-details.png)
 
-Nadat u het dashboard hebt gewijzigd, kunt u de kaarten opnieuw rangschikken door de kaarttitel te selecteren en de kaarten in de gewenste volgorde te slepen. U kunt ook het formaat van een kaart wijzigen door het hoeksymbool in de rechterbenedenhoek van de kaart te selecteren (`⌟`) en sleept u de kaart naar het gewenste formaat. In dit voorbeeld wordt **[!UICONTROL Basic attributes]** wordt de grootte van de kaart gewijzigd.
+Nadat u het dashboard hebt gewijzigd, kunt u de kaarten opnieuw rangschikken door de kaarttitel te selecteren en de kaarten in de gewenste volgorde te slepen. U kunt een kaart ook resize door het hoeksymbool in de bodem-juiste hoek van de kaart (`⌟`) te selecteren en de kaart te slepen aan de gewenste grootte. In dit voorbeeld wordt de grootte van de **[!UICONTROL Basic attributes]** -kaart gewijzigd.
 
-![De knop Grootte wijzigen wordt gemarkeerd in de kaart met basiskenmerken.](../images/profile-customization/resize.png)
+![ resize knoop wordt benadrukt binnen de Basis kenmerkkaart.](../images/profile-customization/resize.png)
 
-De geselecteerde kaart wordt aangepast aan de gewenste grootte en de omringende kaarten worden dynamisch verplaatst. Hierdoor kunnen sommige kaarten naar extra rijen worden verplaatst, waardoor u omlaag moet schuiven om alle kaarten weer te geven. Wanneer bijvoorbeeld &quot;[!UICONTROL Basic attributes]&quot; de kaart wordt vergroot of verkleind.[!UICONTROL Linked identities]&quot; De kaart is niet meer zichtbaar op de bovenste rij en wordt nu weergegeven op een nieuwe tweede rij in het profiel (niet weergegeven). Als u &quot;[!UICONTROL Linked identities]&quot;-kaart naar de bovenste rij kunt u slepen en neerzetten op de huidige positie van &quot;[!UICONTROL Channel preferences]&quot; kaart.
+De geselecteerde kaart wordt aangepast aan de gewenste grootte en de omringende kaarten worden dynamisch verplaatst. Hierdoor kunnen sommige kaarten naar extra rijen worden verplaatst, waardoor u omlaag moet schuiven om alle kaarten weer te geven. Bijvoorbeeld, wanneer de &quot;[!UICONTROL Basic attributes]&quot;kaart resized de &quot;[!UICONTROL Linked identities]&quot;kaart niet meer op de hoogste rij zichtbaar is en nu op een nieuwe tweede rij binnen het profiel (getoond niet) verschijnt. Om &quot;[!UICONTROL Linked identities]&quot;kaart aan de hoogste rij terug te keren, kon u het slepen en in de huidige positie van &quot;[!UICONTROL Channel preferences]&quot;kaart laten vallen.
 
-![Een kaart van hergrootte wordt gemarkeerd.](../images/profile-customization/resized.png)
+![ wordt een re-gerangschikte kaart van A benadrukt.](../images/profile-customization/resized.png)
 
 ## Kaarten bewerken en verwijderen
 
-Naast het wijzigen van het formaat en het opnieuw ordenen van kaarten, kunt u de inhoud van bepaalde kaarten bewerken en enkele kaarten volledig uit het dashboard verwijderen. De ovalen selecteren (`...`) in de rechterbovenhoek van de kaart te bewerken of te verwijderen. Hiermee wordt een vervolgkeuzelijst geopend met opties voor het bewerken of verwijderen van de kaart, afhankelijk van de eigenschappen van de geselecteerde kaart.
+Naast het wijzigen van het formaat en het opnieuw ordenen van kaarten, kunt u de inhoud van bepaalde kaarten bewerken en enkele kaarten volledig uit het dashboard verwijderen. Selecteer de ellipsen (`...`) in de hoger-juiste hoek van de kaart om het uit te geven of te verwijderen. Hiermee wordt een vervolgkeuzelijst geopend met opties voor het bewerken of verwijderen van de kaart, afhankelijk van de eigenschappen van de geselecteerde kaart.
 
 >[!NOTE]
 >
 >Niet alle kaarten kunnen worden bewerkt of verwijderd. Dit komt omdat sommige kaarten alleen-lezen of vereiste informatie bevatten. Als een kaart geen ellipsen in de hoger-juiste hoek heeft, bevat het read-only EN vereiste informatie en kan niet worden uitgegeven noch kan het worden verwijderd. Als een kaart ovalen in de hoek heeft en u deze selecteert, wordt alleen een optie voor het verwijderen van de kaart weergegeven. De kaartgegevens zijn alleen-lezen en kunnen dan niet worden bewerkt.
 
-![Het vervolgkeuzemenu voor de bewerkkaart is gemarkeerd. Dit omvat opties om de kaart uit te geven of te verwijderen.](../images/profile-customization/edit-card.png)
+![ uitgeeft kaartdropdown wordt benadrukt. Dit omvat opties om de kaart uit te geven of te verwijderen.](../images/profile-customization/edit-card.png)
 
-Selecteren **[!UICONTROL Edit]** in het vervolgkeuzemenu om de **[!UICONTROL Edit widget]** in de werkruimte, waar u de kaarttitel kunt bijwerken, de zichtbare kenmerken opnieuw kunt ordenen of verwijderen, of extra kenmerken kunt toevoegen met behulp van de **[!UICONTROL Add attributes]** knop.
+Selecteer **[!UICONTROL Edit]** in het vervolgkeuzemenu om de werkruimte van **[!UICONTROL Edit widget]** te openen, waar u de kaarttitel kunt bijwerken, de zichtbare kenmerken opnieuw kunt ordenen of eruit kunt verwijderen of extra kenmerken kunt toevoegen met de knop **[!UICONTROL Add attributes]** .
 
-![De kaart met basiskenmerken wordt weergegeven.](../images/profile-customization/basic-attributes.png)
+![ de Basis kenmerkkaart wordt getoond.](../images/profile-customization/basic-attributes.png)
 
 ## Kenmerken toevoegen {#add-attributes}
 
-Van de **[!UICONTROL Edit widget]** scherm, selecteren **[!UICONTROL Add attributes]** in de rechterbovenhoek van de kaart om kenmerken aan die kaart toe te voegen.
+Selecteer in het scherm **[!UICONTROL Edit widget]** de optie **[!UICONTROL Add attributes]** in de rechterbovenhoek van de kaart om kenmerken aan die kaart toe te voegen.
 
-![De knop Kenmerken toevoegen in de kaart met basiskenmerken is gemarkeerd.](../images/profile-customization/add-attributes.png)
+![ Add attributenknoop binnen de Basis kenmerkkaart wordt benadrukt.](../images/profile-customization/add-attributes.png)
 
-Wanneer de **[!UICONTROL Select union schema field]** wordt geopend, wordt aan de linkerkant van het dialoogvenster de volledige [!UICONTROL XDM Individual Profile] samenvoegingsschema, met onderliggende velden genest. Voor meer informatie over unieschema&#39;s raadpleegt u de [vakbondsschema&#39;s [!DNL Profile] gebruikershandleiding](user-guide.md#union-schema).
+Wanneer het dialoogvenster **[!UICONTROL Select union schema field]** wordt geopend, ziet u aan de linkerkant van het dialoogvenster het volledige [!UICONTROL XDM Individual Profile] -samenvoegingsschema, met onderliggende velden. Voor meer informatie over unieschema&#39;s, gelieve te verwijzen naar de [ sectie van unieschema&#39;s van de  [!DNL Profile]  gebruikersgids ](user-guide.md#union-schema).
 
-De **[!UICONTROL Selected Attributes]** in de rechterzijde van het dialoogvenster worden de kenmerken weergegeven die momenteel zijn opgenomen in de kaart die u bewerkt. U kunt hier ook kenmerken verwijderen en opnieuw ordenen. Het totale aantal geselecteerde kenmerken en het maximumaantal kenmerken (20) dat aan één kaart kan worden toegevoegd, worden weergegeven.
+In de sectie **[!UICONTROL Selected Attributes]** aan de rechterkant van het dialoogvenster ziet u de kenmerken die momenteel zijn opgenomen in de kaart die u bewerkt. U kunt hier ook kenmerken verwijderen en opnieuw ordenen. Het totale aantal geselecteerde kenmerken en het maximumaantal kenmerken (20) dat aan één kaart kan worden toegevoegd, worden weergegeven.
 
-![De kenmerken die momenteel de kenmerken op de kaart vormen, worden gemarkeerd.](../images/profile-customization/select-before.png)
+![ de attributen die momenteel omhoog de attributen op de kaart maken worden benadrukt.](../images/profile-customization/select-before.png)
 
-U kunt om het even welke beschikbare gebieden van het unieschema selecteren om de attributen op de kaart aan te passen die u uitgeeft. Wanneer u de velden selecteert, kunt u kiezen of u de naam van het bestandspad of de weergavenaam wilt zien. Als u wilt schakelen tussen deze twee beeldschermen, selecteert u de optie **[!UICONTROL Show display names]** schakelen.
+U kunt om het even welke beschikbare gebieden van het unieschema selecteren om de attributen op de kaart aan te passen die u uitgeeft. Wanneer u de velden selecteert, kunt u kiezen of u de naam van het bestandspad of de weergavenaam wilt zien. Als u wilt schakelen tussen deze twee weergaven, selecteert u de schakeloptie **[!UICONTROL Show display names]** .
 
-![De [!UICONTROL Show display names] schakeloptie wordt gemarkeerd op de pagina Profieldetails.](../images/profile-customization/show-display-names.png)
+![ de [!UICONTROL Show display names] knevel wordt benadrukt binnen de de detailpagina van het Profiel.](../images/profile-customization/show-display-names.png)
 
-Geselecteerde velden worden weergegeven met een vinkje ernaast en worden automatisch toegevoegd aan de lijst met geselecteerde kenmerken. Als u alle kenmerken hebt toegevoegd die u op de kaart wilt weergeven, kiest u **[!UICONTROL Select]** om terug te keren naar de **[!UICONTROL Edit widget]** scherm.
+Geselecteerde velden worden weergegeven met een vinkje ernaast en worden automatisch toegevoegd aan de lijst met geselecteerde kenmerken. Nadat u alle kenmerken hebt toegevoegd die u op de kaart wilt weergeven, kiest u **[!UICONTROL Select]** om terug te keren naar het **[!UICONTROL Edit widget]** -scherm.
 
-![De toegevoegde kenmerken worden gemarkeerd.](../images/profile-customization/select-after.png)
+![ de onlangs toegevoegde attributen worden benadrukt.](../images/profile-customization/select-after.png)
 
-Wanneer u terugkeert naar de **[!UICONTROL Edit widget]** , moet de lijst met kenmerken op de kaart nu worden bijgewerkt om uw keuzes weer te geven. U kunt de kaartkenmerken nog steeds verwijderen of opnieuw rangschikken of de kaarttitel desgewenst bewerken. Als uw bewerkingen zijn voltooid, selecteert u **[!UICONTROL Save]** om uw wijzigingen op te slaan.
+Wanneer u terugkeert naar het scherm **[!UICONTROL Edit widget]** , moet de lijst met kenmerken op de kaart nu worden bijgewerkt om uw keuzes weer te geven. U kunt de kaartkenmerken nog steeds verwijderen of opnieuw rangschikken of de kaarttitel desgewenst bewerken. Nadat de bewerkingen zijn voltooid, selecteert u **[!UICONTROL Save]** om de wijzigingen op te slaan.
 
-![De toegevoegde kenmerken worden weergegeven op de bewerkte kaart.](../images/profile-customization/new-attributes.png)
+![ de onlangs toegevoegde attributen worden getoond op de uitgegeven kaart.](../images/profile-customization/new-attributes.png)
 
-Nadat u het bestand hebt opgeslagen, gaat u terug naar de **[!UICONTROL Detail]** waar de bijgewerkte kaart en kenmerken zichtbaar zijn.
+Na het opslaan gaat u terug naar het tabblad **[!UICONTROL Detail]** waar de bijgewerkte kaart en kenmerken zichtbaar zijn.
 
-![De toegevoegde kenmerken worden weergegeven op de kaart in het dashboard Profiel.](../images/profile-customization/added-attributes.png)
+![ de onlangs toegevoegde attributen worden getoond op de kaart binnen het dashboard van het Profiel.](../images/profile-customization/added-attributes.png)
 
 ## Een nieuwe kaart toevoegen {#add-a-new-card}
 
-Als u de weergave van profielen in het Experience Platform verder wilt aanpassen, kunt u ervoor kiezen nieuwe kaarten aan het dashboard toe te voegen en de kenmerken te selecteren die u op die kaarten wilt weergeven. Selecteer **[!UICONTROL Modify dashboard]** op de **[!UICONTROL Detail]** tab.
+Als u de weergave van profielen in het Experience Platform verder wilt aanpassen, kunt u ervoor kiezen nieuwe kaarten aan het dashboard toe te voegen en de kenmerken te selecteren die u op die kaarten wilt weergeven. Selecteer eerst **[!UICONTROL Modify dashboard]** op de tab **[!UICONTROL Detail]** .
 
-![De knop Profieldetails aanpassen is gemarkeerd.](../images/profile-customization/customize-profile-details.png)
+![ de Customize knoop van profieldetails wordt benadrukt.](../images/profile-customization/customize-profile-details.png)
 
-Selecteer vervolgens **[!UICONTROL Add widget]** linksboven in het dashboard.
+Selecteer vervolgens **[!UICONTROL Add widget]** in de linkerbovenhoek van het dashboard.
 
-![De knop Widget toevoegen is gemarkeerd.](../images/profile-customization/add-widget.png)
+![ Add wordt widget knoop benadrukt.](../images/profile-customization/add-widget.png)
 
-Als u een nieuwe kaart wilt toevoegen, wordt het dialoogvenster **[!UICONTROL Edit widget]** op het scherm waar u een titel voor de nieuwe kaart kunt opgeven en de kenmerken kunt kiezen die de kaart moet weergeven. Als u kenmerken aan de kaart wilt toevoegen, selecteert u **[!UICONTROL Add attributes]**.
+Als u een nieuwe kaart wilt toevoegen, wordt het scherm **[!UICONTROL Edit widget]** geopend waarin u een titel voor de nieuwe kaart kunt opgeven en de kenmerken kunt kiezen die u op de kaart wilt weergeven. Selecteer **[!UICONTROL Add attributes]** als u kenmerken aan de kaart wilt toevoegen.
 
-![Er wordt een lege nieuwe widget-kaart weergegeven in het scherm van de widget bewerken.](../images/profile-customization/edit-widget.png)
+![ een lege nieuwe widget kaart wordt getoond in het Edit widgetscherm.](../images/profile-customization/edit-widget.png)
 
-Wanneer de **[!UICONTROL Select union schema field]** wordt geopend, wordt aan de linkerkant van het dialoogvenster de volledige [!UICONTROL XDM Individual Profile] verenigingsschema en de **[!UICONTROL Selected Attributes]** aan de rechterkant van het dialoogvenster worden de kenmerken weergegeven die u voor uw kaart selecteert. Zie voor meer informatie over het toevoegen van kenmerken de [sectie over het toevoegen van kenmerken](#add-attributes) die eerder in dit document wordt weergegeven.
+Wanneer het dialoogvenster **[!UICONTROL Select union schema field]** wordt geopend, ziet u aan de linkerkant van het dialoogvenster het volledige [!UICONTROL XDM Individual Profile] union-schema en in de sectie **[!UICONTROL Selected Attributes]** aan de rechterkant van het dialoogvenster ziet u de kenmerken die u voor uw kaart selecteert. Voor meer informatie bij het toevoegen van attributen, zie de [ sectie bij het toevoegen van attributen ](#add-attributes) die vroeger in dit document verschijnt.
 
-Het totale aantal geselecteerde kenmerken en het maximumaantal kenmerken (20) dat aan één kaart kan worden toegevoegd, worden weergegeven. U kunt de geselecteerde kenmerken ook uit dit scherm verwijderen en opnieuw rangschikken. Als u alle kenmerken hebt toegevoegd die u op de kaart wilt weergeven, kiest u **[!UICONTROL Select]** om terug te keren naar de **[!UICONTROL Edit widget]** scherm.
+Het totale aantal geselecteerde kenmerken en het maximumaantal kenmerken (20) dat aan één kaart kan worden toegevoegd, worden weergegeven. U kunt de geselecteerde kenmerken ook uit dit scherm verwijderen en opnieuw rangschikken. Nadat u alle kenmerken hebt toegevoegd die u op de kaart wilt weergeven, kiest u **[!UICONTROL Select]** om terug te keren naar het **[!UICONTROL Edit widget]** -scherm.
 
-![De velden die u aan de kaart toevoegt, worden gemarkeerd.](../images/profile-customization/add-widget-attributes.png)
+![ de gebieden die u aan de kaart toevoegt worden benadrukt.](../images/profile-customization/add-widget-attributes.png)
 
-Wanneer u terugkeert naar de **[!UICONTROL Edit widget]** , moet de lijst met kenmerken op de kaart uw keuzes in het vorige scherm weerspiegelen. U kunt de kaartkenmerken ook opnieuw rangschikken en verwijderen.
+Wanneer u terugkeert naar het scherm **[!UICONTROL Edit widget]** , moet de lijst met kenmerken op de kaart uw keuzes uit het vorige scherm weerspiegelen. U kunt de kaartkenmerken ook opnieuw rangschikken en verwijderen.
 
-Als u uw nieuwe kaart wilt opslaan, moet u eerst een **[!UICONTROL Card title]**, dan kunt u **[!UICONTROL Save]** en het maken van de kaart voltooien.
+Als u uw nieuwe kaart wilt opslaan, moet u eerst een **[!UICONTROL Card title]** opgeven, kunt u **[!UICONTROL Save]** selecteren en het maken van de kaart voltooien.
 
-![Een voorvertoning van de nieuwe widget wordt weergegeven in het scherm van de widget Bewerken.](../images/profile-customization/new-widget.png)
+![ nieuwe widget wordt voorvertoond binnen het Edit widgetscherm.](../images/profile-customization/new-widget.png)
 
-Nadat u het bestand hebt opgeslagen, gaat u terug naar de **[!UICONTROL Detail]** waar uw nieuwe kaart en kenmerken zichtbaar zijn.
+Na het opslaan gaat u terug naar het tabblad **[!UICONTROL Detail]** waar uw nieuwe kaart en kenmerken zichtbaar zijn.
 
-![De nieuwe widget wordt toegevoegd aan het profieldashboard.](../images/profile-customization/added-widget.png)
+![ nieuwe widget wordt toegevoegd aan het dashboard van het Profiel.](../images/profile-customization/added-widget.png)
 
 ## Standaardkaarten herstellen
 
-Als u op een gegeven moment besluit dat u de standaardkaarten die sindsdien zijn verwijderd, wilt herstellen, kunt u dit snel en eenvoudig doen. Eerst selecteert u **[!UICONTROL Modify dashboard]** selecteert u vervolgens **[!UICONTROL Restore default cards]**. Als de standaardkaarten zichtbaar zijn, kunt u **[!UICONTROL Save]** om uw veranderingen te bewaren of te selecteren **[!UICONTROL Cancel]** als u de standaardkaarten niet wilt herstellen.
+Als u op een gegeven moment besluit dat u de standaardkaarten die sindsdien zijn verwijderd, wilt herstellen, kunt u dit snel en eenvoudig doen. Selecteer eerst **[!UICONTROL Modify dashboard]** en selecteer vervolgens **[!UICONTROL Restore default cards]** . Wanneer de standaardkaarten zichtbaar zijn, kunt u **[!UICONTROL Save]** selecteren om uw wijzigingen op te slaan of **[!UICONTROL Cancel]** selecteren als u de standaardkaarten niet wilt herstellen.
 
-![De knop Standaardkaarten herstellen wordt gemarkeerd in het profieldashboard.](../images/profile-customization/restore-default.png)
+![ de Restore standaardkaartenknoop wordt benadrukt in het dashboard van het Profiel.](../images/profile-customization/restore-default.png)
 
 ## Volgende stappen
 
-Als u dit document volgt, kunt u nu de profielweergave voor uw organisatie bijwerken, zoals kaarten toevoegen en verwijderen, kaartdetails en kenmerken bewerken en kaarten opnieuw ordenen en vergroten of verkleinen. Meer informatie over werken met [!DNL Profile] gegevens in de gebruikersinterface van het Experience Platform, raadpleeg [[!DNL Profile] gebruikershandleiding](user-guide.md).
+Als u dit document volgt, kunt u nu de profielweergave voor uw organisatie bijwerken, zoals kaarten toevoegen en verwijderen, kaartdetails en kenmerken bewerken en kaarten opnieuw ordenen en vergroten of verkleinen. Meer over het werken met [!DNL Profile] gegevens in het Experience Platform UI leren, gelieve te verwijzen naar de [[!DNL Profile]  gebruikersgids ](user-guide.md).

@@ -8,7 +8,7 @@ description: Meer informatie over de vereiste gebeurtenissen, invoer en uitvoer 
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
-source-wordcount: '2471'
+source-wordcount: '2492'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ Hier volgen de stappen voor het samenstellen van nevenmodellen en het identifice
 
 2. Prioriteit geven aan gebruiksgevallen: welke zijn de hoogste prioriteiten voor het bedrijf?
 
-3. Modellen maken in Customer AI: bekijk dit [snelle zelfstudie](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html) en verwijzen naar onze [UI-hulplijn](../customer-ai/user-guide/configure.md) voor een stapsgewijs proces om een model te bouwen.
+3. Bouw modellen in Klant AI: bekijk dit [ snelle leerprogramma ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html) en verwijs naar onze [ gids UI ](../customer-ai/user-guide/configure.md) voor een geleidelijke proces om een model te bouwen.
 
-4. [Segmenten maken](../customer-ai/user-guide/create-segment.md) modelresultaten gebruiken.
+4. [ bouwt segmenten ](../customer-ai/user-guide/create-segment.md) gebruikend modelresultaten.
 
 5. Voer gerichte bedrijfsacties uit die op deze segmenten worden gebaseerd. De resultaten controleren en de acties doorlopen om deze te verbeteren.
 
@@ -36,10 +36,10 @@ Hier zijn voorbeeldconfiguraties voor uw eerste model.  Het voorbeeldmodel, dat 
 
 | Stap | Definitie | Voorbeeld |
 | ---- | ------ | ------- |
-| Instellen | Geef basisinformatie over het model op. | **Naam**: Propensatiemodel potloodaankoop <br> **Modeltype**: Conversie |
-| Gegevens selecteren | Specificeer de datasets die worden gebruikt om het model te bouwen. | **Gegevensset**: Adobe Analytics-gegevensset <br> **Identiteit**: Zorg ervoor dat de identiteitskolom voor elke gegevensset is ingesteld op een gemeenschappelijke identiteit. |
-| Doel definiëren | Definieer het doel, de in aanmerking komende populatie, aangepaste gebeurtenissen en profielkenmerken. | **Voorspeldoel**: Select `commerce.purchases.value` is gelijk aan potlood <br> **Venster Uitvoer**: 30 dagen. |
-| Opties instellen | Stel de planning voor het vernieuwen van het model in en schakel scores voor profiel in | **Schema**: Wekelijks <br> **Inschakelen voor profiel**: Dit moet worden ingeschakeld als de uitvoer van het model in segmentatie moet worden gebruikt. |
+| Instellen | Geef basisinformatie over het model op. | **Naam**: Het model van de de koopsheid van het potlood <br> **ModelType**: Omzetting |
+| Gegevens selecteren | Specificeer de datasets die worden gebruikt om het model te bouwen. | **Dataset**: dataset van Adobe Analytics <br> **Identiteit**: Verzeker de identiteitskolom voor elke dataset wordt geplaatst om een gemeenschappelijke identiteit te zijn. |
+| Doel definiëren | Definieer het doel, de in aanmerking komende populatie, aangepaste gebeurtenissen en profielkenmerken. | **Voorspellingsdoel**: Uitgezochte `commerce.purchases.value` evenaart aan potlood <br> **venster van de Resultaat**: 30 dagen. |
+| Opties instellen | Stel de planning voor het vernieuwen van het model in en schakel scores voor profiel in | **Programma**: Wekelijks <br> **laat voor profiel** toe: Dit moet voor de modeloutput worden toegelaten die in segmentatie moet worden gebruikt. |
 
 ## Overzicht van gegevens {#data-overview}
 
@@ -47,33 +47,33 @@ In de volgende secties wordt een overzicht gegeven van de verschillende vereiste
 
 De AI van de klant werkt door de volgende datasets te analyseren om te voorspellen (wanneer een klant waarschijnlijk zal stoppen met het gebruik van het product) of de conversie (wanneer een klant waarschijnlijk een aankoop zal doen) eigenschapscores:
 
-- Adobe Analytics-gegevens gebruiken met de [Bronconnector voor analyse](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- Adobe Audience Manager-gegevens gebruiken met de [Audience Manager-bronaansluiting](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Gegevensset Experience Event](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
-- [Gegevensverzameling over ervaringen met consumenten](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
+- De gegevens van Adobe Analytics die de [ bron van Analytics schakelaar ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruiken
+- Adobe Audience Manager gegevens die de [ Audience Manager bronschakelaar gebruiken ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+- [ dataset van de Gebeurtenis van de Ervaring ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
+- [ de dataset van de Gebeurtenis van de Ervaring van de consument ](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
-U kunt veelvoudige datasets van verschillende bronnen toevoegen als elk van de datasets het zelfde identiteitstype (namespace) zoals ECID deelt. Voor meer informatie bij het toevoegen van veelvoudige datasets, bezoek [Handleiding voor AI-gebruikers van klant](../customer-ai/user-guide/configure.md).
+U kunt veelvoudige datasets van verschillende bronnen toevoegen als elk van de datasets het zelfde identiteitstype (namespace) zoals ECID deelt. Voor meer informatie bij het toevoegen van veelvoudige datasets, bezoek de [ AI gebruikersgids van de Klant ](../customer-ai/user-guide/configure.md).
 
 >[!IMPORTANT]
 >
->De bronschakelaars nemen tot vier weken aan backfill gegevens in beslag. Als u onlangs opstelling een schakelaar plaatst, zou u moeten verifiëren dat de dataset de minimumlengte van gegevens heeft die voor AI van de Klant wordt vereist. Controleer de [historische gegevens](#data-requirements) om te verifiëren u genoeg gegevens voor uw vooruitgangsdoel hebt.
+>Source-connectors hebben tot vier weken nodig om back-ups te maken van gegevens. Als u onlangs opstelling een schakelaar plaatst, zou u moeten verifiëren dat de dataset de minimumlengte van gegevens heeft die voor AI van de Klant wordt vereist. Gelieve te herzien de [ historische gegevens ](#data-requirements) sectie om te verifiëren u genoeg gegevens voor uw vooruitgangsdoel hebt.
 
 In de volgende tabel wordt een aantal gangbare terminologie beschreven die in dit document wordt gebruikt:
 
 | Term | Definitie |
 | --- | --- |
-| [Experience Data Model (XDM)](../../xdm/home.md) | XDM is het basiskader dat Adobe Experience Cloud, aangedreven door Adobe Experience Platform, toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op het juiste moment te leveren. Het platform gebruikt het Systeem XDM om gegevens op een bepaalde manier te organiseren die het voor de diensten van het Platform gemakkelijker maakt te gebruiken. |
-| [XDM-schema](../../xdm/schema/composition.md) | Het Experience Platform gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens. Voordat gegevens in Platform kunnen worden opgenomen, moet een schema worden samengesteld om de gegevensstructuur te beschrijven en beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. Schema&#39;s bestaan uit een basis-XDM-klasse en nul of meer schemaveldgroepen. |
-| [XDM-klasse](../../xdm/schema/field-constraints.md) | Alle XDM-schema&#39;s beschrijven gegevens die als `Experience Event`. Het gegevensgedrag van een schema wordt bepaald door de klasse van het schema, die aan een schema wordt toegewezen wanneer het eerst wordt gecreeerd. De klassen XDM beschrijven het kleinste aantal eigenschappen een schema moet bevatten om een bepaald gegevensgedrag te vertegenwoordigen. |
-| [Veldengroepen](../../xdm/schema/composition.md) | Een component die een of meer velden in een schema definieert. Veldgroepen dwingen af hoe hun velden worden weergegeven in de hiërarchie van het schema en tonen daarom in elk schema dezelfde structuur aan waarin ze zijn opgenomen. Veldgroepen zijn alleen compatibel met specifieke klassen, zoals bepaald door hun `meta:intendedToExtend` kenmerk. |
-| [Gegevenstype](../../xdm/schema/composition.md) | Een component die ook een of meer velden voor een schema kan bevatten. In tegenstelling tot veldgroepen worden gegevenstypen echter niet beperkt tot een bepaalde klasse. Dit maakt gegevenstypes een flexibelere optie om gemeenschappelijke gegevensstructuren te beschrijven die over veelvoudige schema&#39;s met potentieel verschillende klassen herbruikbaar zijn. De gegevenstypen die in dit document worden beschreven, worden ondersteund door zowel de CEE- als Adobe Analytics-schema&#39;s. |
-| [Klantprofiel in real time](../../profile/home.md) | Klantprofiel in realtime biedt een gecentraliseerd consumentenprofiel voor gericht en gepersonaliseerd ervaringsbeheer. Elk profiel bevat gegevens die op alle systemen zijn geaggregeerd, en actioneerbare tijdstempelaccounts van gebeurtenissen waarbij de persoon is betrokken die hebben plaatsgevonden in een van de systemen die u met Experience Platform gebruikt. |
+| [ Model van de Gegevens van de Ervaring (XDM) ](../../xdm/home.md) | XDM is het basiskader dat Adobe Experience Cloud, aangedreven door Adobe Experience Platform, toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op het juiste moment te leveren. Het platform gebruikt het Systeem XDM om gegevens op een bepaalde manier te organiseren die het voor de diensten van het Platform gemakkelijker maakt te gebruiken. |
+| [ XDM Schema ](../../xdm/schema/composition.md) | Het Experience Platform gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens. Voordat gegevens in Platform kunnen worden opgenomen, moet een schema worden samengesteld om de gegevensstructuur te beschrijven en beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. Schema&#39;s bestaan uit een basis-XDM-klasse en nul of meer schemaveldgroepen. |
+| [ klasse XDM ](../../xdm/schema/field-constraints.md) | Alle XDM-schema&#39;s beschrijven gegevens die als `Experience Event` kunnen worden gecategoriseerd. Het gegevensgedrag van een schema wordt bepaald door de klasse van het schema, die aan een schema wordt toegewezen wanneer het eerst wordt gecreeerd. De klassen XDM beschrijven het kleinste aantal eigenschappen een schema moet bevatten om een bepaald gegevensgedrag te vertegenwoordigen. |
+| [Veldengroepen](../../xdm/schema/composition.md) | Een component die een of meer velden in een schema definieert. Veldgroepen dwingen af hoe hun velden worden weergegeven in de hiërarchie van het schema en tonen daarom in elk schema dezelfde structuur aan waarin ze zijn opgenomen. Veldgroepen zijn alleen compatibel met specifieke klassen, zoals bepaald door het kenmerk `meta:intendedToExtend` ervan. |
+| [ Type van Gegevens ](../../xdm/schema/composition.md) | Een component die ook een of meer velden voor een schema kan bevatten. In tegenstelling tot veldgroepen worden gegevenstypen echter niet beperkt tot een bepaalde klasse. Dit maakt gegevenstypes een flexibelere optie om gemeenschappelijke gegevensstructuren te beschrijven die over veelvoudige schema&#39;s met potentieel verschillende klassen herbruikbaar zijn. De gegevenstypen die in dit document worden beschreven, worden ondersteund door zowel de CEE- als Adobe Analytics-schema&#39;s. |
+| [ Real-time het Profiel van de Klant ](../../profile/home.md) | Klantprofiel in realtime biedt een gecentraliseerd consumentenprofiel voor gericht en gepersonaliseerd ervaringsbeheer. Elk profiel bevat gegevens die op alle systemen zijn geaggregeerd, en actioneerbare tijdstempelaccounts van gebeurtenissen waarbij de persoon is betrokken die hebben plaatsgevonden in een van de systemen die u met Experience Platform gebruikt. |
 
 ## Invoergegevens van AI van de klant {#customer-ai-input-data}
 
-Voor inputdatasets, zoals Adobe Analytics en Adobe Audience Manager, wijzen de respectieve bronschakelaars direct de gebeurtenissen in deze standaardgebiedsgroepen (Handel, Web, Toepassing, en Onderzoek) door gebrek tijdens het verbindingsproces in kaart. In de onderstaande tabel worden de gebeurtenisvelden weergegeven in de standaardveldgroepen voor Klanten-AI.
+Voor inputdatasets, zoals Adobe Analytics en Adobe Audience Manager, wijzen de respectieve bronschakelaars direct de gebeurtenissen in deze standaardgebiedsgroepen (Commerce, Web, Toepassing, en Onderzoek) door gebrek tijdens het verbindingsproces in kaart. In de onderstaande tabel worden de gebeurtenisvelden weergegeven in de standaardveldgroepen voor Klanten-AI.
 
-Voor meer informatie over het in kaart brengen van de gegevens van Adobe Analytics of van de Audience Manager gegevens, bezoek de het gebiedsafbeeldingen van de Analyse of Audience Manager [hulplijn voor veldtoewijzingen](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
+Voor meer informatie bij het in kaart brengen van de gegevens van Adobe Analytics of van de Audience Manager, bezoek de het gebiedsafbeeldingen van de Analyse of Audience Manager [ gids van de het gebiedsafbeeldingen ](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
 
 U kunt de Gebeurtenis van de Ervaring of de Gebeurtenis XDM schema&#39;s van de Ervaring voor inputdatasets gebruiken die niet via één van de bovengenoemde schakelaars worden bevolkt. Extra XDM gebiedsgroepen kunnen tijdens het proces van de schemaverwezenlijking worden toegevoegd. De veldgroepen kunnen door Adobe worden verstrekt zoals de standaardgebiedsgroepen of een groep van het douanegebied, die de gegevensvertegenwoordiging in het Platform aanpast.
 
@@ -89,9 +89,9 @@ De Gebeurtenissen van de ervaring worden gebruikt om diverse klantengedrag te be
 >
 >Als u Adobe Analytics- of Adobe Audience Manager-gegevens gebruikt, wordt het schema automatisch gemaakt met de vereiste standaardgebeurtenissen die nodig zijn om uw gegevens vast te leggen. Als u uw eigen EE-schema maakt om gegevens vast te leggen, moet u overwegen welke veldgroepen nodig zijn om uw gegevens vast te leggen.
 
-Klant-AI gebruikt standaard de gebeurtenissen in deze vier standaardveldgroepen: Handel, Web, Toepassing en Zoeken. Het is niet nodig om voor elke gebeurtenis gegevens te hebben in de hieronder vermelde standaardveldgroepen, maar voor bepaalde scenario&#39;s zijn bepaalde gebeurtenissen vereist. Als u gebeurtenissen in de beschikbare standaardveldgroepen hebt, is het raadzaam deze op te nemen in uw schema. Bijvoorbeeld, als u een model van AI van de Klant voor het voorspellen van aankoopgebeurtenissen wilde tot stand brengen, is het nuttig om gegevens van de de detailsgebiedgroepen van de Handel en van de Web-pagina te hebben.
+Klant-AI gebruikt standaard de gebeurtenissen in deze vier standaardveldgroepen: Commerce, Web, Application en Search. Het is niet nodig om voor elke gebeurtenis gegevens te hebben in de hieronder vermelde standaardveldgroepen, maar voor bepaalde scenario&#39;s zijn bepaalde gebeurtenissen vereist. Als u gebeurtenissen in de beschikbare standaardveldgroepen hebt, is het raadzaam deze op te nemen in uw schema. Als u bijvoorbeeld een AI-model van de klant wilt maken voor het voorspellen van aankoopgebeurtenissen, is het handig om gegevens te hebben van de veldgroepen Commerce en Webpagina details.
 
-Als u een veldgroep wilt weergeven in de interface van het platform, selecteert u de optie **[!UICONTROL Schemas]** op de linkerspoorstaaf, gevolgd door de **[!UICONTROL Field groups]** tab.
+Als u een veldgroep wilt weergeven in de gebruikersinterface van het platform, selecteert u de tab **[!UICONTROL Schemas]** in de linkertrack, gevolgd door de tab **[!UICONTROL Field groups]** .
 
 | Veldgroep | Het type Event | XDM-veldpad |
 | --- | --- | --- |
@@ -113,15 +113,15 @@ Als u een veldgroep wilt weergeven in de interface van het platform, selecteert 
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> `application.name` </li> |
 | [!UICONTROL Search Details] | zoeken | `search.keywords` |
 
-Bovendien kan de AI van de Klant abonnementsgegevens gebruiken om betere modellen van de Koor te bouwen. Abonnementsgegevens zijn nodig voor elk profiel dat de [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) indeling van gegevenstype. De meeste velden zijn optioneel, maar voor een optimaal chroommodel is het zeer raadzaam gegevens te verstrekken voor zoveel mogelijk velden, zoals: `startDate`, `endDate`en alle andere relevante gegevens. Neem contact op met uw accountteam voor extra ondersteuning voor deze functie.
+Bovendien kan de AI van de Klant abonnementsgegevens gebruiken om betere modellen van de Koor te bouwen. Abonnementsgegevens zijn nodig voor elk profiel met de gegevensindeling [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) . De meeste velden zijn echter optioneel voor een optimaal chroommodel. Het wordt echter ten zeerste aanbevolen gegevens op te geven voor zoveel mogelijk velden, zoals `startDate` , `endDate` en alle andere relevante details. Neem contact op met uw accountteam voor extra ondersteuning voor deze functie.
 
 ### Aangepaste gebeurtenissen en profielkenmerken toevoegen {#add-custom-events}
 
-Als u over informatie beschikt die u naast de standaardinstelling wilt opnemen [standaardgebeurtenisvelden](#standard-events) gebruikt door AI van de Klant, kunt u gebruiken [aangepaste gebeurtenisconfiguratie](./user-guide/configure.md#custom-events) om de gegevens te verhogen die door het model worden gebruikt.
+Als u informatie hebt u wenst om naast de standaard [ standaardgebeurtenisgebieden ](#standard-events) te omvatten die door Klant AI worden gebruikt, kunt u de [ configuratie van de douanegebeurtenis ](./user-guide/configure.md#custom-events) gebruiken om de gegevens te verhogen die door het model worden gebruikt.
 
 #### Wanneer moet u aangepaste gebeurtenissen gebruiken?
 
-De gebeurtenissen van de douane zijn noodzakelijk wanneer de datasets die in de stap van de datasetselectie worden gekozen bevatten *none* van de standaardvelden voor gebeurtenissen die door de AI van de Klant worden gebruikt. De AI van de Klant heeft informatie over minstens één gebeurtenis van het gebruikersgedrag buiten het resultaat nodig.
+De gebeurtenissen van de douane zijn noodzakelijk wanneer de datasets die in de stap van de datasetselectie worden gekozen *niets* van de standaardgebeurtenisgebieden bevatten die door Klant AI worden gebruikt. De AI van de Klant heeft informatie over minstens één gebeurtenis van het gebruikersgedrag buiten het resultaat nodig.
 
 Aangepaste gebeurtenissen zijn handig voor:
 
@@ -143,9 +143,9 @@ Hieronder volgt een selectie industriespecifieke voorbeelden van aangepaste gebe
 
 | Industrie | Aangepaste gebeurtenissen |
 | --- | --- |
-| Detailhandel | Transactie in de winkel<br>Aanmelden voor clubkaart<br>Mobiele coupon knippen. |
-| Entertainment | Lidmaatschap voor koopseizoen <br> Video streamen. |
-| Ziekenhuis | Reservering restaurant maken <br> Koop loyaliteitspunten. |
+| Detailhandel | In-store transactie <br> Teken omhoog voor de kaart van de club <br> de mobiele coupon van de Clip. |
+| Entertainment | Schaf uw abonnement aan op <br> Stream video. |
+| Ziekenhuis | Reservering voor restaurant maken <br> Aankooppunten. |
 | Reizen | Informatie over bekende reizigers toevoegen Aankoopmijlen. |
 | Communicatie | Plan upgraden/downgraden/annuleren. |
 
@@ -185,7 +185,7 @@ De minimaal vereiste gegevensduur in het systeem bepalen:
 
    - Vereiste gegevens = 60 dagen + 30 dagen = 90 dagen
 
-- U wilt voorspellen of de gebruiker waarschijnlijk de komende 7 dagen een horloge zal kopen **zonder** een expliciete in aanmerking komende bevolking. In dit geval is de in aanmerking komende populatie standaard &quot;diegenen die de afgelopen 45 dagen actief zijn geweest&quot; en is het resultaatvenster 7 dagen.
+- U wilt voorspellen of de gebruiker waarschijnlijk een horloge in de volgende 7 dagen **zal kopen zonder** het verstrekken van een expliciete in aanmerking komende bevolking. In dit geval is de in aanmerking komende populatie standaard &quot;diegenen die de afgelopen 45 dagen actief zijn geweest&quot; en is het resultaatvenster 7 dagen.
 
    - Geschikt terugkijkvenster = 45 dagen
 
@@ -207,11 +207,11 @@ Hoewel de AI van de Klant een minimumperiode vereist om de gegevens binnen het s
 
 ## AI-uitvoergegevens van klant {#customer-ai-output-data}
 
-De AI van de Klant produceert verscheidene attributen voor individuele profielen die als verkiesbaar worden beschouwd. Er zijn twee manieren om de score (output) te verbruiken op basis van wat u hebt voorzien. Als u een Real-time dataset van het Profiel van de Klant hebt toegelaten, kunt u inzichten van het Profiel van de Klant in real time in [Segment Builder](../../segmentation/ui/segment-builder.md). Als u geen profiel-toegelaten dataset hebt, kunt u [De AI-uitvoer van de klant downloaden](./user-guide/download-scores.md) dataset beschikbaar op het data Lake.
+De AI van de Klant produceert verscheidene attributen voor individuele profielen die als verkiesbaar worden beschouwd. Er zijn twee manieren om de score (output) te verbruiken op basis van wat u hebt voorzien. Als u een in real time Klantprofiel-Toegelaten dataset in real time hebt, kunt u inzichten van het Profiel van de Klant in real time in de [ Bouwer van het Segment ](../../segmentation/ui/segment-builder.md) verbruiken. Als u geen profiel-toegelaten dataset hebt, kunt u [ de output van de Klant AI ](./user-guide/download-scores.md) dataset downloaden beschikbaar op het gegevensmeer.
 
-U kunt de outputdataset in het Platform vinden **Gegevenssets** werkruimte. Alle AI-uitvoergegevenssets van de klant beginnen met de naam **AI-scores van klant - NAME_OF_APP**. Evenzo beginnen alle AI-uitvoerschema&#39;s van de Klant met de naam **AI-schema van klant - Naam_van_app**.
+U kunt de outputdataset in de 2} werkruimte van de Datasets van het Platform **{vinden.** Alle de outputdatasets beginnen van de Klant AI met de naam **Scores van de Klant - NAME_OF_APP**. Op dezelfde manier beginnen alle de outputschema&#39;s van AI van de Klant met het naam **Schema van de Klant AI - Name_of_app**.
 
-![Naam van de gegevensreeksen van de uitvoer in AI van de Klant](./images/user-guide/cai-schema-name-of-app.png)
+![ Naam van de outputdatasets in Klant AI ](./images/user-guide/cai-schema-name-of-app.png)
 
 In de onderstaande tabel worden de verschillende kenmerken beschreven die in de uitvoer van AI van de Klant zijn aangetroffen:
 
@@ -226,4 +226,4 @@ In de onderstaande tabel worden de verschillende kenmerken beschreven die in de 
 
 ## Volgende stappen {#next-steps}
 
-Wanneer u uw gegevens hebt voorbereid en ervoor zorgt dat al uw referenties en schema&#39;s aanwezig zijn, raadpleegt u de [Een AI-instantie van een klant configureren](./user-guide/configure.md) gids, die u door een geleidelijke leerprogramma begeleidt om een instantie van de Klant te creëren AI.
+Zodra u uw gegevens voorbereidt en ervoor zorgt dat al uw geloofsbrieven en schema&#39;s op zijn plaats zijn, verwijs naar [ vorm een gids van de Instantie van de Klant AI ](./user-guide/configure.md), die u door een geleidelijke leerprogramma loopt om een instantie van de Klant te creëren AI.

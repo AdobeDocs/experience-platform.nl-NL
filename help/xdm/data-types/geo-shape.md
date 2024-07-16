@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!UICONTROL Geo Shape] gegevenstype
 
-[!UICONTROL Geo Shape] is een standaard XDM gegevenstype dat de vorm van een geografisch gebied beschrijft. Dit gegevenstype is gebaseerd op de openbare specificatie die op [schema.org](https://schema.org/GeoShape).
+[!UICONTROL Geo Shape] is een standaard XDM gegevenstype dat de vorm van een geografisch gebied beschrijft. Dit gegevenstype is gebaseerd op de openbare die specificatie op [ wordt gedocumenteerd schema.org ](https://schema.org/GeoShape).
 
 <img src="../images/data-types/geo-shape.png" width="500" /><br />
 
@@ -23,6 +23,6 @@ ht-degree: 0%
 | `_schema.circle` | Array van [[!UICONTROL Geo Coordinates]](./geo-coordinates.md) | Beschrijft een cirkelvormig gebied met een specifieke straal die op een geografische coördinaat wordt gecentreerd. |
 | `_schema.polygon` | [[!UICONTROL Geo Circle]](./geo-circle.md) | Een reeks van vier of meer coördinaten waarbij de eerste en laatste coördinaten identiek zijn. |
 | `_schema.description` | String | Een beschrijving van wat de vorm definieert. |
-| `_schema.elevation` | Dubbel | De specifieke of minimale hoogte van de vorm. Deze waarde is in overeenstemming met de [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) datum en wordt gemeten in meters. In combinatie met `ceiling`Deze eigenschap kan worden gebruikt om een driedimensionaal selectiekader voor een locatie uit te drukken. |
+| `_schema.elevation` | Dubbel | De specifieke of minimale hoogte van de vorm. Deze waarde is aan het [ WGS84 ](https://gisgeography.com/wgs84-world-geodetic-system/) gegeven en in meters gemeten. In combinatie met `ceiling` kan deze eigenschap worden gebruikt om een driedimensionaal selectiekader voor een locatie uit te drukken. |
 | `_id` | String | Een unieke, door het systeem gegenereerde id voor de vorm. |
-| `ceiling` | Dubbel | De maximale hoogte van de vorm. Deze eigenschap is alleen geldig in combinatie met `elevation`. De waarde is in overeenstemming met de [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) datum en wordt gemeten in meters. In combinatie met `elevation`Deze eigenschap kan worden gebruikt om een driedimensionaal selectiekader voor een locatie uit te drukken. |
+| `ceiling` | Dubbel | De maximale hoogte van de vorm. Deze eigenschap is alleen geldig in combinatie met `elevation` . De waarde is met het [ WGS84 ](https://gisgeography.com/wgs84-world-geodetic-system/) gegeven in overeenstemming en in meters gemeten. In combinatie met `elevation` kan deze eigenschap worden gebruikt om een driedimensionaal selectiekader voor een locatie uit te drukken. |

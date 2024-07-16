@@ -8,13 +8,13 @@ exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '79'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 # Beschikbare naamruimten weergeven
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /idnamespace/identities
@@ -31,9 +31,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-De reactie bevat een array met objecten, waarbij elk object een beschikbare naamruimte vertegenwoordigt. Naamruimten met een &quot;[!UICONTROL custom]&quot; waarde van &quot;[!UICONTROL false]&quot; zijn standaardnaamruimten, terwijl die met een &quot;[!UICONTROL custom]&quot; waarde van &quot;[!UICONTROL true]&quot; zijn naamruimten die uw organisatie heeft gemaakt.
+De reactie bevat een array met objecten, waarbij elk object een beschikbare naamruimte vertegenwoordigt. Namespaces met een &quot;[!UICONTROL custom]&quot;waarde van &quot;[!UICONTROL false]&quot;zijn standaardnamespaces, terwijl die met een &quot;[!UICONTROL custom]&quot;waarde van &quot;[!UICONTROL true]&quot;zijn namespaces die uw organisatie heeft gecreeerd.
 
 >[!NOTE]
 >
@@ -79,4 +79,4 @@ De reactie bevat een array met objecten, waarbij elk object een beschikbare naam
 
 ## Volgende stappen
 
-Ga naar de volgende zelfstudie om [een aangepaste naamruimte maken](./create-custom-namespace.md)
+Ga aan het volgende leerprogramma te werk om [ een douane te creëren namespace ](./create-custom-namespace.md)

@@ -4,18 +4,18 @@ title: Een doelserverconfiguratie bijwerken
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 8%
+source-wordcount: '1101'
+ht-degree: 2%
 
 ---
 
 # Een doelserverconfiguratie bijwerken
 
-Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om een bestaande configuratie van de bestemmingsserver bij te werken, gebruikend `/authoring/destination-servers` API-eindpunt.
+Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om een bestaande configuratie van de doelserver bij te werken met behulp van het API-eindpunt `/authoring/destination-servers` .
 
 >[!TIP]
 >
->Om het even welke updateverrichting op geproduceerde/openbare bestemmingen is zichtbaar slechts nadat u gebruikt [publicatie-API](../../publishing-api/create-publishing-request.md) en dient de update in voor toetsing door de Adobe.
+>Om het even welke updateverrichting op geproduceerde/openbare bestemmingen is zichtbaar slechts nadat u [ het publiceren API ](../../publishing-api/create-publishing-request.md) gebruikt en voorlegt de update voor Adobe overzicht.
 
 Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, lees de volgende artikelen:
 
@@ -26,23 +26,23 @@ Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpun
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Aan de slag met API-bewerkingen voor doelserver {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een doelserverconfiguratie bijwerken {#update}
 
-U kunt een [bestaand](create-destination-server.md) doelserverconfiguratie door een `PUT` verzoek aan de `/authoring/destination-servers` eindpunt met de bijgewerkte nuttige lading.
+U kunt een [ bestaande ](create-destination-server.md) configuratie van de bestemmingsserver bijwerken door een `PUT` verzoek aan het `/authoring/destination-servers` eindpunt met de bijgewerkte nuttige lading te doen.
 
 >[!TIP]
 >
->**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
+>**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-Om een bestaande configuratie van de bestemmingsserver en zijn overeenkomstige te verkrijgen `{INSTANCE_ID}`, zie het artikel over [ophalen, configuratie van doelserver](retrieve-destination-server.md).
+Om een bestaande configuratie van de bestemmingsserver en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie het artikel over [ het terugwinnen van een configuratie van de bestemmingsserver ](retrieve-destination-server.md).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /authoring/destination-servers/{INSTANCE_ID}
@@ -50,7 +50,7 @@ PUT /authoring/destination-servers/{INSTANCE_ID}
 
 | Parameter | Beschrijving |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | De id van de configuratie van de doelserver die u wilt bijwerken. Om een bestaande configuratie van de bestemmingsserver en zijn overeenkomstige te verkrijgen `{INSTANCE_ID}`, zie [De configuratie van een doelserver ophalen](retrieve-destination-server.md). |
+| `{INSTANCE_ID}` | De id van de configuratie van de doelserver die u wilt bijwerken. Om een bestaande configuratie van de bestemmingsserver en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie [ een configuratie van de bestemmingsserver ](retrieve-destination-server.md) terugwinnen. |
 
 De volgende verzoeken werken een bestaande configuratie van de bestemmingsserver bij, die door de parameters wordt gevormd die in de lading worden verstrekt.
 
@@ -58,7 +58,7 @@ Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB Real-time (streaming)]
+>[!TAB  Real-time (het stromen) ]
 
 +++verzoek
 
@@ -92,14 +92,14 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `name` | Tekenreeks | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server`. |
-| `destinationServerType` | Tekenreeks | *Vereist.* Instellen op `URL_BASED` voor realtime (streaming) doelen. |
-| `urlBasedDestination.url.templatingStrategy` | Tekenreeks | *Vereist.* <ul><li>Gebruiken `PEBBLE_V1` als de Adobe de URL in het dialoogvenster `value` veld hieronder. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Gebruiken `NONE` als er aan de zijde van de Adobe geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | Tekenreeks | *Vereist.* Vul het adres van het API eindpunt in dat Experience Platform zou moeten verbinden met. |
-| `httpTemplate.httpMethod` | Tekenreeks | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. Opties zijn `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`. |
-| `httpTemplate.requestBody.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Tekenreeks | *Vereist.* Dit koord is karakter-beschermde versie die de gegevens van de klanten van het Platform aan het formaat omzet uw dienst verwacht. <br> <ul><li> Voor informatie over het schrijven van de sjabloon leest u de [Sjabloonsectie gebruiken](../../functionality/destination-server/message-format.md#using-templating). </li><li> Raadpleeg voor meer informatie over het escapen van tekens de [RFC JSON-standaard, sectie 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie raadpleegt u de [Profielkenmerken](../../functionality/destination-server/message-format.md#attributes) transformatie. </li></ul> |
-| `httpTemplate.contentType` | Tekenreeks | *Vereist.* Het inhoudstype dat uw server accepteert. Deze waarde is zeer waarschijnlijk `application/json`. |
+| `name` | String | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server` . |
+| `destinationServerType` | String | *Vereist.* Ingesteld op `URL_BASED` voor realtime (streaming) doelen. |
+| `urlBasedDestination.url.templatingStrategy` | String | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als de Adobe de URL in het onderstaande veld `value` moet transformeren. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items` hebt. </li><li> Gebruik `NONE` als er aan de zijde van de Adobe geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items` .</li></ul> |
+| `urlBasedDestination.url.value` | String | *Vereist.* Vul het adres in van het API-eindpunt waarmee het Experience Platform verbinding moet maken. |
+| `httpTemplate.httpMethod` | String | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. De opties zijn `GET`, `PUT`, `PUT`, `DELETE`, `PATCH` . |
+| `httpTemplate.requestBody.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `httpTemplate.requestBody.value` | String | *Vereist.* Deze tekenreeks is de op tekens gebaseerde versie die de gegevens van Platformklanten omzet in de indeling die uw service verwacht. <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [ Gebruikend het malplaatjesectie ](../../functionality/destination-server/message-format.md#using-templating). </li><li> Voor meer informatie over karakter het ontsnappen, verwijs naar de [ norm RFC JSON, sectie zeven ](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [ transformatie van de Attributen van het Profiel ](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.contentType` | String | *Vereist.* Het inhoudstype dat uw server accepteert. Deze waarde is zeer waarschijnlijk `application/json` . |
 
 {style="table-layout:auto"}
 
@@ -201,13 +201,13 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `name` | Tekenreeks | De naam van de doelverbinding. |
-| `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Amazon S3], stelt u deze in op `FILE_BASED_S3`. |
-| `fileBasedS3Destination.bucket.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedS3Destination.bucket.value` | Tekenreeks | De naam van [!DNL Amazon S3] emmer die door deze bestemming moet worden gebruikt. |
-| `fileBasedS3Destination.path.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedS3Destination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
-| `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
+| `name` | String | De naam van de doelverbinding. |
+| `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel deze waarde voor [!DNL Amazon S3] in op `FILE_BASED_S3` . |
+| `fileBasedS3Destination.bucket.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedS3Destination.bucket.value` | String | De naam van de [!DNL Amazon S3] emmer die door dit doel moet worden gebruikt. |
+| `fileBasedS3Destination.path.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedS3Destination.path.value` | String | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
+| `fileConfigurations` | N.v.t. | Zie [ dossier het formatteren configuratie ](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
 
 {style="table-layout:auto"}
 
@@ -307,15 +307,15 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `name` | Tekenreeks | De naam van de doelverbinding. |
-| `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL SFTP] doelen, stel deze in op `FILE_BASED_SFTP`. |
-| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedSFTPDestination.rootDirectory.value` | Tekenreeks | De hoofdmap van de doelopslag. |
-| `fileBasedSFTPDestination.hostName.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedSFTPDestination.hostName.value` | Tekenreeks | De hostnaam van de bestemmingsopslag. |
+| `name` | String | De naam van de doelverbinding. |
+| `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel dit voor [!DNL SFTP] -doelen in op `FILE_BASED_SFTP` . |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedSFTPDestination.rootDirectory.value` | String | De hoofdmap van de doelopslag. |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedSFTPDestination.hostName.value` | String | De hostnaam van de bestemmingsopslag. |
 | `port` | Geheel | De SFTP-serverpoort. |
-| `encryptionMode` | Tekenreeks | Geeft aan of bestandsversleuteling moet worden gebruikt. Ondersteunde waarden: <ul><li>PGP</li><li>Geen</li></ul> |
-| `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
+| `encryptionMode` | String | Geeft aan of bestandsversleuteling moet worden gebruikt. Ondersteunde waarden: <ul><li>PGP</li><li>Geen</li></ul> |
+| `fileConfigurations` | N.v.t. | Zie [ dossier het formatteren configuratie ](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
 
 {style="table-layout:auto"}
 
@@ -327,7 +327,7 @@ Een succesvolle reactie keert status 200 van HTTP met de details van uw bijgewer
 
 +++
 
->[!TAB Azure Data Lake Storage]
+>[!TAB  Azure de Opslag van het meer van Gegevens ]
 
 +++verzoek
 
@@ -413,11 +413,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `name` | Tekenreeks | De naam van de doelverbinding. |
-| `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Azure Data Lake Storage] doelen, stel deze in op `FILE_BASED_ADLS_GEN2`. |
-| `fileBasedAdlsGen2Destination.path.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedAdlsGen2Destination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
-| `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
+| `name` | String | De naam van de doelverbinding. |
+| `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel dit voor [!DNL Azure Data Lake Storage] -doelen in op `FILE_BASED_ADLS_GEN2` . |
+| `fileBasedAdlsGen2Destination.path.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedAdlsGen2Destination.path.value` | String | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
+| `fileConfigurations` | N.v.t. | Zie [ dossier het formatteren configuratie ](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
 
 {style="table-layout:auto"}
 
@@ -429,7 +429,7 @@ Een succesvolle reactie keert status 200 van HTTP met de details van uw bijgewer
 
 +++
 
->[!TAB Azure Blob Storage]
+>[!TAB  Azure Blob Storage ]
 
 +++verzoek
 
@@ -519,13 +519,13 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `name` | Tekenreeks | De naam van de doelverbinding. |
-| `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Azure Blob Storage] doelen, stel deze in op `FILE_BASED_AZURE_BLOB`. |
-| `fileBasedAzureBlobDestination.path.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedAzureBlobDestination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
-| `fileBasedAzureBlobDestination.container.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedAzureBlobDestination.container.value` | Tekenreeks | De naam van [!DNL Azure Blob Storage] container die door deze bestemming moet worden gebruikt. |
-| `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
+| `name` | String | De naam van de doelverbinding. |
+| `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel dit voor [!DNL Azure Blob Storage] -doelen in op `FILE_BASED_AZURE_BLOB` . |
+| `fileBasedAzureBlobDestination.path.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedAzureBlobDestination.path.value` | String | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
+| `fileBasedAzureBlobDestination.container.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedAzureBlobDestination.container.value` | String | De naam van de [!DNL Azure Blob Storage] -container die door dit doel moet worden gebruikt. |
+| `fileConfigurations` | N.v.t. | Zie [ dossier het formatteren configuratie ](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
 
 {style="table-layout:auto"}
 
@@ -537,7 +537,7 @@ Een succesvolle reactie keert status 200 van HTTP met de details van uw bijgewer
 
 +++
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB  Gegevens Landing Zone (DLZ) ]
 
 +++verzoek
 
@@ -624,11 +624,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `name` | Tekenreeks | De naam van de doelverbinding. |
-| `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Data Landing Zone] doelen, stel deze in op `FILE_BASED_DLZ`. |
-| `fileBasedDlzDestination.path.templatingStrategy` | Tekenreeks | *Vereist.*  Gebruik `PEBBLE_V1`. |
-| `fileBasedDlzDestination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
-| `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
+| `name` | String | De naam van de doelverbinding. |
+| `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel dit voor [!DNL Data Landing Zone] -doelen in op `FILE_BASED_DLZ` . |
+| `fileBasedDlzDestination.path.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedDlzDestination.path.value` | String | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
+| `fileConfigurations` | N.v.t. | Zie [ dossier het formatteren configuratie ](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
 
 {style="table-layout:auto"}
 
@@ -640,7 +640,7 @@ Een succesvolle reactie keert status 200 van HTTP met de details van uw bijgewer
 
 +++
 
->[!TAB Google Cloud Storage]
+>[!TAB  Google Cloud Storage ]
 
 +++verzoek
 
@@ -730,13 +730,13 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `name` | Tekenreeks | De naam van de doelverbinding. |
-| `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Google Cloud Storage] doelen, stel deze in op `FILE_BASED_GOOGLE_CLOUD`. |
-| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | Tekenreeks | *Vereist.*  Gebruik `PEBBLE_V1`. |
-| `fileBasedGoogleCloudStorageDestination.bucket.value` | Tekenreeks | De naam van [!DNL Google Cloud Storage] emmer die door deze bestemming moet worden gebruikt. |
-| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedGoogleCloudStorageDestination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
-| `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
+| `name` | String | De naam van de doelverbinding. |
+| `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel dit voor [!DNL Google Cloud Storage] -doelen in op `FILE_BASED_GOOGLE_CLOUD` . |
+| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedGoogleCloudStorageDestination.bucket.value` | String | De naam van de [!DNL Google Cloud Storage] emmer die door dit doel moet worden gebruikt. |
+| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedGoogleCloudStorageDestination.path.value` | String | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
+| `fileConfigurations` | N.v.t. | Zie [ dossier het formatteren configuratie ](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
 
 {style="table-layout:auto"}
 
@@ -752,11 +752,11 @@ Een succesvolle reactie keert status 200 van HTTP met de details van uw bijgewer
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u een configuratie van de doelserver kunt bijwerken via de Destination SDK `/authoring/destination-servers` API-eindpunt.
+Nadat u dit document hebt gelezen, weet u nu hoe u een configuratie van de doelserver kunt bijwerken via het API-eindpunt Destination SDK `/authoring/destination-servers` .
 
 Raadpleeg de volgende artikelen voor meer informatie over wat u met dit eindpunt kunt doen:
 

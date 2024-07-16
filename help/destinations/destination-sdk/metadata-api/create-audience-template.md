@@ -4,8 +4,8 @@ title: Een publiekssjabloon maken
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '624'
-ht-degree: 3%
+source-wordcount: '625'
+ht-degree: 0%
 
 ---
 
@@ -13,25 +13,25 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Voor sommige bestemmingen die gebruikend Destination SDK worden gecreeerd, moet u een configuratie van publieksmeta-gegevens tot stand brengen programmatically om, publieksmeta-gegevens in de bestemming tot stand te brengen bij te werken of te schrappen. Op deze pagina ziet u hoe u de `/authoring/audience-templates` API eindpunt om de configuratie tot stand te brengen.
+Voor sommige bestemmingen die gebruikend Destination SDK worden gecreeerd, moet u een configuratie van publieksmeta-gegevens tot stand brengen programmatically om, publieksmeta-gegevens in de bestemming tot stand te brengen bij te werken of te schrappen. Op deze pagina ziet u hoe u het API-eindpunt `/authoring/audience-templates` gebruikt om de configuratie te maken.
 
-Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [beheer van metagegevens van het publiek](../functionality/audience-metadata-management.md).
+Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [ beheer van publieksmeta-gegevens ](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Aan de slag met API-bewerkingen voor publiekssjablonen {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een publiekssjabloon maken {#create}
 
-U kunt een nieuwe publiekssjabloon maken door een `POST` verzoek aan de `/authoring/audience-templates` eindpunt.
+U kunt een nieuwe publiekssjabloon maken door een `POST` -aanvraag in te dienen bij het `/authoring/audience-templates` -eindpunt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /authoring/audience-templates
@@ -39,7 +39,7 @@ POST /authoring/audience-templates
 
 +++verzoek
 
-Het volgende verzoek leidt tot een nieuw publieksmalplaatje, dat door de parameters wordt gevormd die in de lading worden verstrekt. De hieronder vermelde lading omvat alle parameters die door `/authoring/audience-templates` eindpunt. Merk op dat u niet alle parameters op de vraag moet toevoegen en dat het malplaatje, volgens uw API vereisten aanpasbaar is.
+Het volgende verzoek leidt tot een nieuw publieksmalplaatje, dat door de parameters wordt gevormd die in de lading worden verstrekt. De onderstaande lading bevat alle parameters die door het `/authoring/audience-templates` -eindpunt worden geaccepteerd. Merk op dat u niet alle parameters op de vraag moet toevoegen en dat het malplaatje, volgens uw API vereisten aanpasbaar is.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -189,18 +189,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 | Eigenschap | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `name` | Tekenreeks | De naam van het malplaatje van publieksmeta-gegevens voor uw bestemming. Deze naam zal in om het even welk partner-specifiek foutenmelding in het gebruikersinterface van het Experience Platform verschijnen, dat door het foutenbericht wordt gevolgd van wordt ontleed `metadataTemplate.create.errorSchemaMap`. |
-| `url` | Tekenreeks | De URL en het eindpunt van uw API, die voor het creëren van, het bijwerken van, het schrappen van, of het bevestigen van publiek in uw platform wordt gebruikt. Twee voorbeelden uit de branche zijn: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` en `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
-| `httpMethod` | Tekenreeks | De methode die op uw eindpunt wordt gebruikt programmatically tot stand te brengen, bij te werken, te schrappen, of het publiek in uw bestemming te bevestigen. Bijvoorbeeld: `POST`, `PUT`, `DELETE` |
-| `headers.header` | Tekenreeks | Geeft alle HTTP-headers op die moeten worden toegevoegd aan de aanroep van de API. Bijvoorbeeld: `"Content-Type"` |
-| `headers.value` | Tekenreeks | Geeft de waarde aan van HTTP-headers die moeten worden toegevoegd aan de aanroep van de API. Bijvoorbeeld: `"application/x-www-form-urlencoded"` |
-| `requestBody` | Tekenreeks | Hier geeft u de inhoud op van de berichttekst die naar de API moet worden verzonden. De parameters die aan de `requestBody` afhankelijk van de velden die uw API accepteert. Raadpleeg voor een voorbeeld de [eerste sjabloonvoorbeeld](../functionality/audience-metadata-management.md#example-1) in het document met de metagegevensfunctionaliteit van het publiek. |
-| `responseFields.name` | Tekenreeks | Geef antwoordvelden op die de API retourneert wanneer deze wordt aangeroepen. Raadpleeg voor een voorbeeld de [sjabloonvoorbeelden](../functionality/audience-metadata-management.md#examples) in het document met de metagegevensfunctionaliteit van het publiek. |
-| `responseFields.value` | Tekenreeks | Geef de waarde op van de reactievelden die de API retourneert wanneer deze wordt aangeroepen. |
-| `responseErrorFields.name` | Tekenreeks | Geef antwoordvelden op die de API retourneert wanneer deze wordt aangeroepen. Raadpleeg voor een voorbeeld de [sjabloonvoorbeelden](../functionality/audience-metadata-management.md#examples) in het document met de metagegevensfunctionaliteit van het publiek. |
-| `responseErrorFields.value` | Tekenreeks | Parseert om het even welke foutenmeldingen die op API vraagreacties van uw bestemming zijn teruggekeerd. Deze foutberichten worden weergegeven in de gebruikersinterface van het Experience Platform. |
-| `validations.field` | Tekenreeks | Geeft aan of validaties voor velden moeten worden uitgevoerd voordat API-aanroepen naar uw doel worden uitgevoerd. U kunt bijvoorbeeld `{{validations.accountId}}` om de account-id van de gebruiker te valideren. |
-| `validations.regex` | Tekenreeks | Hiermee geeft u aan hoe het veld moet worden gestructureerd voordat de validatie wordt doorgegeven. |
+| `name` | String | De naam van het malplaatje van publieksmeta-gegevens voor uw bestemming. Deze naam zal in om het even welk partner-specifiek foutenmelding in het gebruikersinterface van het Experience Platform verschijnen, dat door het foutenbericht wordt gevolgd van `metadataTemplate.create.errorSchemaMap` wordt ontleed. |
+| `url` | String | De URL en het eindpunt van uw API, die voor het creëren van, het bijwerken van, het schrappen van, of het bevestigen van publiek in uw platform wordt gebruikt. Twee voorbeelden uit de branche zijn: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` en `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}` . |
+| `httpMethod` | String | De methode die op uw eindpunt wordt gebruikt programmatically tot stand te brengen, bij te werken, te schrappen, of het publiek in uw bestemming te bevestigen. Bijvoorbeeld: `POST`, `PUT`, `DELETE` |
+| `headers.header` | String | Geeft alle HTTP-headers op die moeten worden toegevoegd aan de aanroep van de API. Bijvoorbeeld: `"Content-Type"` |
+| `headers.value` | String | Geeft de waarde aan van HTTP-headers die moeten worden toegevoegd aan de aanroep van de API. Bijvoorbeeld: `"application/x-www-form-urlencoded"` |
+| `requestBody` | String | Hier geeft u de inhoud op van de berichttekst die naar de API moet worden verzonden. Welke parameters aan het `requestBody` -object moeten worden toegevoegd, is afhankelijk van de velden die de API accepteert. Bijvoorbeeld, verwijs naar het [ eerste malplaatjevoorbeeld ](../functionality/audience-metadata-management.md#example-1) in het document van de de meta-gegevensfunctionaliteit van het publiek. |
+| `responseFields.name` | String | Geef antwoordvelden op die de API retourneert wanneer deze wordt aangeroepen. Bijvoorbeeld, verwijs naar de [ malplaatjevoorbeelden ](../functionality/audience-metadata-management.md#examples) in het document van de de meta-gegevensfunctionaliteit van het publiek. |
+| `responseFields.value` | String | Geef de waarde op van de reactievelden die de API retourneert wanneer deze wordt aangeroepen. |
+| `responseErrorFields.name` | String | Geef antwoordvelden op die de API retourneert wanneer deze wordt aangeroepen. Bijvoorbeeld, verwijs naar de [ malplaatjevoorbeelden ](../functionality/audience-metadata-management.md#examples) in het document van de de meta-gegevensfunctionaliteit van het publiek. |
+| `responseErrorFields.value` | String | Parseert om het even welke foutenmeldingen die op API vraagreacties van uw bestemming zijn teruggekeerd. Deze foutberichten worden weergegeven in de gebruikersinterface van het Experience Platform. |
+| `validations.field` | String | Geeft aan of validaties voor velden moeten worden uitgevoerd voordat API-aanroepen naar uw doel worden uitgevoerd. U kunt bijvoorbeeld `{{validations.accountId}}` gebruiken om de account-id van de gebruiker te valideren. |
+| `validations.regex` | String | Hiermee geeft u aan hoe het veld moet worden gestructureerd voordat de validatie wordt doorgegeven. |
 
 {style="table-layout:auto"}
 
@@ -214,8 +214,8 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs gec
 
 ## API-foutafhandeling
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, weet u nu wanneer u publiekssjablonen wilt gebruiken en hoe u een publiekssjabloon kunt configureren met de `/authoring/audience-templates` API-eindpunt. Lezen [hoe te om Destination SDK te gebruiken om uw bestemming te vormen](../guides/configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Nadat u dit document hebt gelezen, weet u nu wanneer u publiekssjablonen wilt gebruiken en hoe u een publiekssjabloon kunt configureren met het API-eindpunt van `/authoring/audience-templates` . Lees [ hoe te om Destination SDK te gebruiken om uw bestemming ](../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

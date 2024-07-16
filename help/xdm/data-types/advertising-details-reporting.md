@@ -1,7 +1,8 @@
 ---
-title: Advertentiegegevens Rapportage Gegevenstype
+title: Advertising Details Reporting Data Type
 description: Meer informatie over het gegevenstype Advertising Details Reporting Experience Data Model (XDM).
-source-git-commit: a604dc8b541784ace8aedef42030e5bd8b646c28
+exl-id: fbca5b2a-a9bd-4f76-a494-d682cb2cbfbc
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
@@ -12,8 +13,8 @@ ht-degree: 0%
 
 [!UICONTROL Advertising Details] Rapportage is een standaard XDM-gegevenstype (Experience Data Model) waarmee belangrijke kenmerken met betrekking tot advertenties worden vastgelegd. Het bevat informatie zoals de advertentie-id, adverteerder en campagne-id&#39;s, lengte, positie binnen een reeks, details over de speler die de advertentie rendert, enzovoort. U kunt dit gegevenstype gebruiken om verschillende aspecten van de prestaties en betrokkenheid van advertenties te volgen en te analyseren, en inzichten te verschaffen in de interactie van het publiek met en de reactie op verschillende advertenties.
 
-+++Selecteer om een diagram van het gegevenstype Rapportage van advertentiedetails weer te geven.
-![Een diagram van het gegevenstype Rapportage van advertentiegegevens.](../images/data-types/advertising-details-information.png)
++++Selecteer om een diagram van het gegevenstype Advertising Details Reporting weer te geven.
+![ een diagram van de Details van Advertising die gegevenstype melden.](../images/data-types/advertising-details-information.png)
 +++
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
@@ -35,4 +36,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json)
+Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json)

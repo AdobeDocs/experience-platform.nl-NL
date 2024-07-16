@@ -4,7 +4,7 @@ description: Gebruik rapportsjablonen om gegevens van Experience Platforms te ve
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
 source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1436'
 ht-degree: 0%
 
 ---
@@ -17,18 +17,18 @@ Dit document bevat instructies voor het maken van een verbinding tussen Adobe Ex
 
 ## Aan de slag
 
-Voordat u verdergaat met deze zelfstudie wordt u aangeraden een goed inzicht te hebben in [schemacompositie](../../xdm/schema/composition.md) in Experience Platform, en hoe de attributen in het Profiel van de Klant in real time door [samenvoegingsschema](../../xdm/schema/composition.md#union).
+Alvorens met dit leerprogramma verder te gaan wordt het geadviseerd om een goed begrip van [ schemacompositie ](../../xdm/schema/composition.md) in Experience Platform te hebben, en hoe de attributen in het Profiel van de Klant in real time door het [ vakbondsschema ](../../xdm/schema/composition.md#union) inbegrepen zijn.
 
 Gebruikers moeten eerst de volgende platformmachtigingen hebben verkregen om de Power BI-toepassingsintegratie te installeren:
 
 - Query&#39;s beheren
 - Sandboxen beheren
 
-Voor meer informatie over het toewijzen van deze machtigingen leest u de [toegangsbeheer](../../access-control/home.md) documentatie.
+Leren hoe te om deze toestemmingen toe te wijzen, te lezen gelieve de [ toegangscontrole ](../../access-control/home.md) documentatie.
 
-U moet ook over een Power BI-account beschikken om deze zelfstudie te kunnen volgen. Als u een account wilt maken, navigeert u naar de [Power BI homepage](https://powerbi.microsoft.com/en-us/) en volgt u het aanmeldingsproces. Gebruikers van deze Power BI-account moeten ook **Werkruimte maken** instellen binnen de instellingen voor Power BI. Deze instelling vindt u in de huurdersinstellingen van de beheerportal voor Power BI. Als uw account is opgegeven door uw huurder of werkgever, neemt u contact op met uw respectieve beheerder om deze instelling in te schakelen.
+U moet ook over een Power BI-account beschikken om deze zelfstudie te kunnen volgen. Om een rekening tot stand te brengen, navigeer aan de [ homepage van de Power BI ](https://powerbi.microsoft.com/en-us/) en volg het sign-up proces. De gebruikers voor deze rekening van Power BI moeten **ook toelaten creeer werkruimte** plaatsen binnen hun montages van Power BI. Deze instelling vindt u in de huurdersinstellingen van de beheerportal voor Power BI. Als uw account is opgegeven door uw huurder of werkgever, neemt u contact op met uw respectieve beheerder om deze instelling in te schakelen.
 
-![Met de Power BI Admin-portal maakt u werkruimte-instellingen.](../images/power-bi/create-workspace-settings.png)
+{het portaal van Admin van 0} Power BI leidt werkruimtemontages.](../images/power-bi/create-workspace-settings.png)![
 
 >[!NOTE]
 >
@@ -36,31 +36,31 @@ U moet ook over een Power BI-account beschikken om deze zelfstudie te kunnen vol
 
 ## De integratie van de Power BI-toepassing installeren
 
-Selecteer in de interface van het platform de optie **[!UICONTROL Dashboards]** in de linkernavigatie om de [!UICONTROL Dashboards] werkruimte. De [!UICONTROL Browse] wordt een lijst weergegeven met momenteel beschikbare dashboardweergaven. Raadpleeg voor meer informatie over het weergeven van beschikbare dashboards de [inventarisdocumentatie](../inventory.md).
+Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Dashboards]** in de linkernavigatie om de werkruimte van [!UICONTROL Dashboards] te openen. Op het tabblad [!UICONTROL Browse] wordt een lijst weergegeven met momenteel beschikbare dashboardweergaven. Meer over het bekijken van beschikbare dashboards leren, zie de [ inventarisdocumentatie ](../inventory.md).
 
-Selecteer vervolgens de **[!UICONTROL Integrations]** tab. De integratiepagina van de Power BI-toepassing wordt weergegeven. Van hier, selecteer **[!UICONTROL Install]** om de installatie te starten.
+Selecteer vervolgens de tab **[!UICONTROL Integrations]** . De integratiepagina van de Power BI-toepassing wordt weergegeven. Selecteer van hieruit **[!UICONTROL Install]** om de installatie te starten.
 
 >[!NOTE]
 >
->De [!UICONTROL Install] de knop is uitgeschakeld, tenzij u over de machtigingen Query Service Manage en Manage Sandboxen beschikt.
+>De knop [!UICONTROL Install] is alleen beschikbaar als u over de machtigingen Query Service Manage en Manage Sandboxes beschikt.
 
-![Power BI detailsscherm met de knop Installeren gemarkeerd.](../images/power-bi/details-screen.png)
+![ het detailsscherm van de Power BI met Install benadrukte knoop.](../images/power-bi/details-screen.png)
 
 ### Geef referenties op
 
-De eerste stap in het installatieproces is het verstrekken van niet-vervallende geloofsbrieven voor de toepassingsintegratie van de Power BI. U kunt de volgende twee opties gebruiken: [[!UICONTROL Create new credentials]](#create-new-credentials) of [[!UICONTROL Use existing credentials]](#use-existing-credentials). Selecteer de juiste schakeloptie om door te gaan.
+De eerste stap in het installatieproces is het verstrekken van niet-vervallende geloofsbrieven voor de toepassingsintegratie van de Power BI. U kunt de volgende twee opties opgeven: [[!UICONTROL Create new credentials]](#create-new-credentials) of [[!UICONTROL Use existing credentials]](#use-existing-credentials) . Selecteer de juiste schakeloptie om door te gaan.
 
 #### Nieuwe referenties maken {#create-new-credentials}
 
-Er zijn twee vereiste gebieden wanneer het produceren van nieuwe geloofsbrieven: [!UICONTROL Name] en [!UICONTROL Assigned to]. De [!UICONTROL Assigned to] heeft betrekking op het e-mailadres dat is gekoppeld aan uw Power BI-account.
+Er zijn twee vereiste velden voor het genereren van nieuwe referenties: [!UICONTROL Name] en [!UICONTROL Assigned to] . Het veld [!UICONTROL Assigned to] heeft betrekking op het e-mailadres dat is gekoppeld aan uw Power BI-account.
 
-![Power BI genereert een nieuw aanmeldingsscherm.](../images/power-bi/generate-new-credentials.png)
+![ Power BI produceert nieuw geloofsbrieven scherm.](../images/power-bi/generate-new-credentials.png)
 
 >[!IMPORTANT]
 >
->Het creëren van niet-vervallende geloofsbrieven vereist u om bepaalde toegewezen toestemmingen en rollen te hebben. De noodzakelijke toestemmingen zijn leiden Sandboxes en beheren de Integratie van de Dienst van de Vraag. De vereiste rollen zijn Adobe Experience Platform admin en ontwikkelaarrollen. Voor meer informatie over het toewijzen van deze machtigingen leest u de [toegangsbeheer](../../access-control/home.md) documentatie.
+>Het creëren van niet-vervallende geloofsbrieven vereist u om bepaalde toegewezen toestemmingen en rollen te hebben. De noodzakelijke toestemmingen zijn leiden Sandboxes en beheren de Integratie van de Dienst van de Vraag. De vereiste rollen zijn Adobe Experience Platform admin en ontwikkelaarrollen. Leren hoe te om deze toestemmingen toe te wijzen, te lezen gelieve de [ toegangscontrole ](../../access-control/home.md) documentatie.
 
-Om meer over het produceren van niet-vervallende geloofsbrieven van de Dienst van de Vraag te leren, gelieve te verwijzen naar [niet-vervallende gebruikersgids](../../query-service/ui/credentials.md#non-expiring-credentials).
+Meer leren over het produceren van niet-het verlopen geloofsbrieven van de Dienst van de Vraag, gelieve te verwijzen naar [ niet-het verlopen geloofsbrieven gids ](../../query-service/ui/credentials.md#non-expiring-credentials).
 
 Nadat u voor het eerst een niet-vervallende referenties hebt gegenereerd, wordt een JSON-bestand naar die computer gedownload. Dit JSON-bestand kan vervolgens als referenties worden gedeeld met andere gebruikers om het installatieproces te voltooien.
 
@@ -72,23 +72,23 @@ Een JSON-referentiebestand kan ook worden geüpload om de validatie te doorstaan
 >
 >Als u een bestaande niet-vervallende referentie wilt gebruiken, moet aan de gebruiker al een referentie zijn toegewezen. Als de gebruiker geen referentie heeft toegewezen en geen nieuwe kan maken met de Adobe Admin Console, kan de gebruiker niet doorgaan met het installatieproces.
 
-Selecteren **[!UICONTROL Upload credential file]** selecteert u vervolgens het JSON-bestand dat u wilt uploaden in het dialoogvenster dat verschijnt.
+Selecteer **[!UICONTROL Upload credential file]** en selecteer vervolgens het JSON-bestand dat u wilt uploaden in het dialoogvenster dat verschijnt.
 
-![Scherm Referenties Power BI met knop Referentiebestand uploaden gemarkeerd.](../images/power-bi/upload-credential-file.png)
+![ het geloofsbrieven scherm van de Power BI met de benadrukte knoop van het crediteurdossier van de Upload.](../images/power-bi/upload-credential-file.png)
 
-Nadat u de niet-vervallende geloofsbrieven verstrekt, worden zij automatisch bevestigd door Platform. Er verschijnt een bevestigingsbericht als de validatie is gelukt. Selecteren **[!UICONTROL Next]** de instemming van de Power BI-aanvraag te herzien.
+Nadat u de niet-vervallende geloofsbrieven verstrekt, worden zij automatisch bevestigd door Platform. Er verschijnt een bevestigingsbericht als de validatie is gelukt. Selecteer **[!UICONTROL Next]** om de toestemmingsovereenkomst voor de toepassing van de Power BI te herzien.
 
-![Niet-vervallende gegevens zijn gevalideerd op het scherm met de knop Volgende gemarkeerd.](../images/power-bi/successfully-uploaded-credential-file.png)
+![ Niet-vervallende geloofsbrieven met succes bevestigde het scherm met de Volgende benadrukte knoop.](../images/power-bi/successfully-uploaded-credential-file.png)
 
 ### Goedkeuring verlenen
 
-Het toestemmingsscherm verschijnt. Selecteren **[!UICONTROL Review consent]** om een nieuw venster te openen met de vereiste machtigingen voor Power BI om toegang te krijgen tot en gebruik te maken van uw gegevens volgens de servicevoorwaarden en privacyverklaring.
+Het toestemmingsscherm verschijnt. Selecteer **[!UICONTROL Review consent]** om een nieuw venster te openen waarin wordt aangegeven welke machtigingen Power BI nodig hebben om uw gegevens te openen en te gebruiken in overeenstemming met de servicevoorwaarden en privacyverklaring.
 
-![De toestemmingsvertoning verstrekken met de benadrukte knoop van de Goedkeuring van het Overzicht.](../images/power-bi/provide-consent-display.png)
+![ verstrek toestemmingsvertoning met de benadrukte de toestemmingsknoop van het Overzicht.](../images/power-bi/provide-consent-display.png)
 
-Selecteren **[!UICONTROL Accept]** om Power BI toestemming te verlenen om tot uw gegevens van het Platform toegang te hebben en te gebruiken.
+Selecteer **[!UICONTROL Accept]** om Power BI toestemming te verlenen om toegang te krijgen tot en gebruik te maken van uw gegevens van het Platform.
 
-![Machtigingsaanvraag voor Power BI-toepassing.](../images/power-bi/permissions.png)
+![ verzoek van Toestemmingen om toepassing van de Power BI.](../images/power-bi/permissions.png)
 
 >[!NOTE]
 >
@@ -96,13 +96,13 @@ Selecteren **[!UICONTROL Accept]** om Power BI toestemming te verlenen om tot uw
 
 Na het verstrekken van toestemming, wordt het rapportmalplaatje automatisch geïnstalleerd in het milieu van de Power BI als deel van het installatieproces. Power BI gebruikt dan de niet-vervallende geloofsbrieven om tot Platform toegang te hebben, alle SQL vragen opeenvolgend uit te voeren, en het rapportmalplaatje met de teruggekeerde gegevens te bevolken.
 
-Selecteren **[!UICONTROL Finish]** om terug te keren naar de dashboardvoorraad.
+Selecteer **[!UICONTROL Finish]** om terug te keren naar de dashboardvoorraad.
 
-![De toestemmingsvertoning verstrekken met de Afwerking benadrukte knoop.](../images/power-bi/finish-consent-review.png)
+![ verstrekt toestemmingsvertoning met de benadrukte knoop van de Afwerking.](../images/power-bi/finish-consent-review.png)
 
-Nu het het rapportmalplaatje van de Power BI wordt geïnstalleerd, verschijnt het in de lijst van beschikbare dashboards onder [!UICONTROL Browse] tab. Selecteren **[!UICONTROL Power BI]** in de lijst om naar de omgeving van de Power BI te navigeren.
+Nu de rapportsjabloon Power BI is geïnstalleerd, wordt deze weergegeven in de lijst met beschikbare dashboards onder het tabblad [!UICONTROL Browse] . Selecteer **[!UICONTROL Power BI]** in de lijst om naar de omgeving van de Power BI te navigeren.
 
-![Power BI die wordt vermeld in de dashboardvoorraad.](../images/power-bi/power-bi-dashboard-inventory.png)
+![ Power BI die in de dashboardinventaris wordt vermeld.](../images/power-bi/power-bi-dashboard-inventory.png)
 
 >[!IMPORTANT]
 >
@@ -110,7 +110,7 @@ Nu het het rapportmalplaatje van de Power BI wordt geïnstalleerd, verschijnt he
 
 ## Power BI-werkruimte
 
-Na aanmelden [de werkruimte Power BI](https://dxt.powerbi.com), zijn de rapportmalplaatjes beschikbaar voor elk van de diensten waartot u toegang hebt. De rapportmalplaatjes omvatten profielen, segmenten, en bestemmingsdashboards **alleen** als zij de overeenkomstige meningstoestemmingen hebben.
+Na het registreren in [ de werkruimte van de Power BI ](https://dxt.powerbi.com), zijn de rapportmalplaatjes beschikbaar voor elk van de diensten waartot u toegang hebt. De rapportmalplaatjes omvatten profielen, segmenten, en bestemmingsdashboards **slechts** als zij de overeenkomstige meningstoestemmingen hebben.
 
 De standaardwidgets van profielen, segmenten, en bestemmingen zijn beschikbaar binnen de malplaatjerapporten van de Power BI door gebrek.
 
@@ -118,7 +118,7 @@ De standaardwidgets van profielen, segmenten, en bestemmingen zijn beschikbaar b
 >
 >U moet bewerkingsmachtigingen hebben ingeschakeld voor een bepaald dashboard om dat dashboard te kunnen installeren in de Power BI-omgeving.
 
-![Sjabloonrapport van profiel Power BI met gebruik van standaardwidgets voor platformprofielen.](../images/power-bi/profile-report-template.png)
+![ het malplaatjerapport van het Profiel van het Power BI die standaard widgets van het Profiel van het Platform gebruiken.](../images/power-bi/profile-report-template.png)
 
 Nadat een dashboard in Power BI wordt geïnstalleerd, worden de rapportmalplaatjes getoond aan alle gebruikers door gebrek. Als u toegang tot om het even welke rapportmalplaatjes wilt beperken, zorg ervoor dat u toegang voor de gebruikers in kwestie van binnen het milieu van de Power BI onbruikbaar maakt.
 
@@ -128,36 +128,36 @@ Door het gebruik van douane widgets, kunt u douanekenmerken aan uw gegevensmodel
 
 >[!NOTE]
 >
->De kenmerken die u voor aangepaste widgets kunt gebruiken, zijn afhankelijk van wat beschikbaar is in het samenvoegingsschema. Als u wilt leren hoe u vakbondsschema&#39;s kunt bekijken en verkennen ten behoeve van uw aangepaste widgets, raadpleegt u de [UI-hulplijn verenigingsschema](../../profile/ui/union-schema.md).
+>De kenmerken die u voor aangepaste widgets kunt gebruiken, zijn afhankelijk van wat beschikbaar is in het samenvoegingsschema. Leren hoe te om verenigingsschema&#39;s aan het voordeel van uw douane widgets te bekijken en te onderzoeken, zie de [ gids UI van het uniesschema ](../../profile/ui/union-schema.md).
 
 ### Een aangepaste widget maken
 
-Aangepaste widgets worden gemaakt via de widgetbibliotheek. Zie de [Overzicht van Widget-bibliotheek](../customize/widget-library.md) voor een inleiding op het kenmerk en de [zelfstudie voor het maken van een aangepaste widget](../customize/custom-widgets.md) voor specifieke instructies.
+Aangepaste widgets worden gemaakt via de widgetbibliotheek. Zie het [ overzicht van de Bibliotheek van Widget ](../customize/widget-library.md) voor een inleiding aan de eigenschap en [ leerprogramma voor het creëren van een douane widget ](../customize/custom-widgets.md) voor specifieke instructies.
 
 >[!IMPORTANT]
 >
->Nieuwe aangepaste widgets zijn **niet** wordt automatisch gesynchroniseerd tussen Adobe Experience Platform-dashboards en de Power BI-rapportsjablonen. Aangepaste widgets die in de gebruikersinterface van het platform worden gemaakt, moeten handmatig opnieuw worden gemaakt in de Power BI-omgeving.
+>Nieuw gecreeerde douanewidgets worden **niet** automatisch gesynchroniseerd tussen de dashboards van Adobe Experience Platform en de het rapportmalplaatjes van de Power BI. Aangepaste widgets die in de gebruikersinterface van het platform worden gemaakt, moeten handmatig opnieuw worden gemaakt in de Power BI-omgeving.
 
 ### De aangepaste widget opnieuw maken in de Power BI-omgeving
 
-Zodra uw dashboard de aangewezen metriek en de attributen bevat binnen douane widgets, bent u bereid om het rapportmalplaatje te wijzigen dat van binnen het milieu van de Power BI wordt getoond. Zie de [Power BI](https://docs.microsoft.com/en-us/power-bi/) voor informatie over hoe te om een rapport door zijn gebruikersinterface uit te geven.
+Zodra uw dashboard de aangewezen metriek en de attributen bevat binnen douane widgets, bent u bereid om het rapportmalplaatje te wijzigen dat van binnen het milieu van de Power BI wordt getoond. Zie de [ documentatie van de Power BI ](https://docs.microsoft.com/en-us/power-bi/) voor informatie over hoe te om een rapport door zijn gebruikersinterface uit te geven.
 
 ## De integratie van de Power BI-toepassing verwijderen
 
-Als u het dashboard wilt verwijderen, navigeert u naar het dashboardoverzicht en selecteert u het verwijderpictogram (![](../images/power-bi/delete-icon.png)) naast de naam van het dashboard.
+Als u het dashboard wilt verwijderen, navigeert u naar het dashboardoverzicht en selecteert u het verwijderingspictogram ( ![](../images/power-bi/delete-icon.png) ) naast de naam van het dashboard.
 
 >[!NOTE]
 >
 >Alleen de gebruiker die het Power BI-dashboard heeft geïnstalleerd, kan de integratie verwijderen uit de interface van het platform.
 
-![Het bladertabblad van het Dashboards-overzichtsscherm wordt weergegeven met de knop Bladeren en het verwijderpictogram is gemarkeerd.](../images/power-bi/delete-power-bi-dashboard.png)
+![ het inventarisscherm van dashboards doorbladert lusje dat met Browse wordt getoond knoop en schrapt benadrukt pictogram.](../images/power-bi/delete-power-bi-dashboard.png)
 
-Er verschijnt een bevestigingspop-up. Selecteren **[!UICONTROL Delete]** om het proces te bevestigen.
+Er verschijnt een bevestigingspop-up. Selecteer **[!UICONTROL Delete]** om het proces te bevestigen.
 
 >[!IMPORTANT]
 >
->Als u het dashboard van het Power BI verwijdert uit de platforminterface, gebeurt dit **niet** verwijder de rapportmalplaatjes beschikbaar in uw milieu van de Power BI. Als u de informatie volledig wilt schrappen die in de het rapportmalplaatjes van de Power BI wordt gehouden, moet u login uw rekening van de Power BI en de rapportmalplaatjes van die milieu schrappen. Nadat een gebruiker het dashboard van het Power BI heeft verwijderd, kan hij of zij de hierboven beschreven installatie-instructies volgen.
+>Het schrappen van het dashboard van Power BI van het Platform UI schrapt **niet** de rapportmalplaatjes beschikbaar in uw milieu van de Power BI. Als u de informatie volledig wilt schrappen die in de het rapportmalplaatjes van de Power BI wordt gehouden, moet u login uw rekening van de Power BI en de rapportmalplaatjes van die milieu schrappen. Nadat een gebruiker het dashboard van het Power BI heeft verwijderd, kan hij of zij de hierboven beschreven installatie-instructies volgen.
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u een beter inzicht in hoe de malplaatjes van het Power BI- rapport in Platform kunnen worden geïntegreerd om dwingende gegevensinzichten van uw profielen, segmenten, of bestemmingsdashboards te delen. Zie de [dashboard-aanpassingsoverzicht](../customize/overview.md) voor meer informatie over het aanpassen van uw dashboards.
+Door dit document te lezen, hebt u een beter inzicht in hoe de malplaatjes van het Power BI- rapport in Platform kunnen worden geïntegreerd om dwingende gegevensinzichten van uw profielen, segmenten, of bestemmingsdashboards te delen. Zie het [ overzicht van de dashboardaanpassing ](../customize/overview.md) om meer over het aanpassen van uw dashboards te leren.

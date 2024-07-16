@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform Insights-gegevensmodel B2C Edition
 
-Het Real-time Customer Data Platform Insights Data Model voor het [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) blootstelt de gegevensmodellen en SQL die de inzichten voor diverse profiel, bestemming, en segmentatiewidgets aandrijven. U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw user-defined dashboards worden gebruikt. Zie de vraag versnelde opslag die inzichten documentatie rapporteert om te leren [hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards te bouwen](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
+Het model van Gegevens van Real-time Customer Data Platform van Inzichten voor de [ B2C Uitgave ](../../rtcdp/overview.md#rtcdp-b2c) stelt de gegevensmodellen en SQL bloot die de inzichten voor diverse profiel, bestemming, en segmentatiewidgets aandrijven. U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw user-defined dashboards worden gebruikt. Zie de vraag versnelde opslag die inzichten documentatie rapporteert om [ te leren hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards ](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md) te bouwen.
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ Het Real-time Customer Data Platform Insights Data Model voor het [B2C Edition](
 
 ## Vereisten
 
-Deze handleiding vereist een goed begrip van de [door de gebruiker gedefinieerde dashboardfunctie](../user-defined-dashboards.md). Lees de documentatie voordat u verdergaat met deze handleiding.
+Deze gids vereist een werkend begrip van de [ user-defined dashboardeigenschap ](../user-defined-dashboards.md). Lees de documentatie voordat u verdergaat met deze handleiding.
 
 ## Real-Time CDP inzichtsrapporten en gebruiksgevallen
 
@@ -41,13 +41,13 @@ Het profielmodel bestaat uit drie datasets:
 
 De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
-![Een ERD van het profielmodel.](../images/cdp-insights/profile-model.png)
+![ ERD van het profielmodel.](../images/cdp-insights/profile-model.png)
 
 #### Het gebruikte hoofdlettergebruik voor het aantal profielen {#profile-count}
 
-De logica die wordt gebruikt voor de [!UICONTROL Profile count] widget retourneert het totale aantal samengevoegde profielen in de profielenopslag op het moment dat de momentopname werd gemaakt. Zie de [[!UICONTROL Profile count] widget-documentatie](../guides/profiles.md#profile-count) voor meer informatie .
+De logica die voor de [!UICONTROL Profile count] widget wordt gebruikt, retourneert het totale aantal samengevoegde profielen in de opslag Profiel op het moment dat de momentopname werd gemaakt. Zie de [[!UICONTROL Profile count] widgetdocumentatie ](../guides/profiles.md#profile-count) voor meer informatie.
 
-De SQL die de [!UICONTROL Profile count] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
+De SQL die de [!UICONTROL Profile count] -widget genereert, wordt in de inklapbare sectie hieronder weergegeven.
 
 +++SQL-query
 
@@ -65,9 +65,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### Het gebruik van hoofdletters en kleine letters in één identiteitsprofiel {#single-identity-profiles}
 
-De logica die wordt gebruikt voor de [!UICONTROL Single identity profiles] widget bevat een aantal profielen van uw organisatie die slechts één type id hebben waarmee hun identiteit wordt gemaakt. Zie de [[!UICONTROL Single identity profiles] widget-documentatie](../guides/profiles.md#single-identity-profiles) voor meer informatie .
+De logica die wordt gebruikt voor de [!UICONTROL Single identity profiles] -widget, biedt een telling van de profielen van uw organisatie die slechts één type id hebben dat tot hun identiteit leidt. Zie de [[!UICONTROL Single identity profiles] widgetdocumentatie ](../guides/profiles.md#single-identity-profiles) voor meer informatie.
 
-De SQL die de [!UICONTROL Single identity profiles] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
+De SQL die de [!UICONTROL Single identity profiles] -widget genereert, wordt in de inklapbare sectie hieronder weergegeven.
 
 +++SQL-query
 
@@ -94,13 +94,13 @@ Het naamruimtemodel bestaat uit de volgende gegevenssets:
 
 De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
-![Een ERD van het naamruimtemodel.](../images/cdp-insights/namespace-model.png)
+![ ERD van het namespace model.](../images/cdp-insights/namespace-model.png)
 
 #### Profielen op basis van hoofdlettergebruik {#profiles-by-identity}
 
-De [!UICONTROL Profiles by identity] De widget geeft de indeling van de identiteiten weer in alle samengevoegde profielen in de winkel Profiel. Zie de [[!UICONTROL Profiles by identity] widget-documentatie](../guides/profiles.md#profiles-by-identity) voor meer informatie .
+De [!UICONTROL Profiles by identity] -widget geeft de indeling van de identiteiten weer in alle samengevoegde profielen in uw profielenarchief. Zie de [[!UICONTROL Profiles by identity] widgetdocumentatie ](../guides/profiles.md#profiles-by-identity) voor meer informatie.
 
-De SQL die de [!UICONTROL Profiles by identity] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
+De SQL die de [!UICONTROL Profiles by identity] -widget genereert, wordt in de inklapbare sectie hieronder weergegeven.
 
 +++SQL-query
 
@@ -122,9 +122,9 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### Individuele identiteitsprofielen per geval van identiteitsgebruik {#single-identity-profiles-by-identity}
 
-De logica die wordt gebruikt voor de [!UICONTROL Single identity profiles by identity] widget illustreert het totale aantal profielen dat met slechts één unieke id wordt geïdentificeerd. Zie de [Eén identiteitsprofiel op basis van documentatie voor een identiteitswidget](../guides/profiles.md#single-identity-profiles-by-identity) voor meer informatie .
+De logica die voor de [!UICONTROL Single identity profiles by identity] -widget wordt gebruikt, illustreert het totale aantal profielen dat met slechts één unieke id is geïdentificeerd. Zie [ Enige identiteitsprofielen door de documentatie van identiteitskaart widget ](../guides/profiles.md#single-identity-profiles-by-identity) voor meer informatie.
 
-De SQL die de [!UICONTROL Single identity profiles by identity] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
+De SQL die de [!UICONTROL Single identity profiles by identity] -widget genereert, wordt in de inklapbare sectie hieronder weergegeven.
 
 +++SQL-query
 
@@ -157,13 +157,13 @@ Het publieksmodel bestaat uit de volgende datasets:
 
 De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
-![Een ERD van het publieksmodel.](../images/cdp-insights/audience-model.png)
+![ ERD van het publieksmodel.](../images/cdp-insights/audience-model.png)
 
 #### Gebruiksscenario voor grootte publiek {#audience-size}
 
-De logica die wordt gebruikt voor de [!UICONTROL Audience size] widget retourneert het totale aantal samengevoegde profielen in het geselecteerde publiek op het moment van de meest recente opname. Zie de [[!UICONTROL Audience size] widget-documentatie](../guides/audiences.md#audience-size) voor meer informatie .
+De logica die voor de [!UICONTROL Audience size] widget wordt gebruikt, retourneert het totale aantal samengevoegde profielen binnen het geselecteerde publiek op het moment van de meest recente momentopname. Zie de [[!UICONTROL Audience size] widgetdocumentatie ](../guides/audiences.md#audience-size) voor meer informatie.
 
-De SQL die de [!UICONTROL Audience size] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
+De SQL die de [!UICONTROL Audience size] -widget genereert, wordt in de inklapbare sectie hieronder weergegeven.
 
 +++SQL-query
 
@@ -185,9 +185,9 @@ WHERE
 
 #### Omvang van het publiek omwenteling trend gebruikscase {#audience-size-change-trend}
 
-De logica die wordt gebruikt voor de [!UICONTROL Audience size change trend] widget geeft een lijngrafiekillustratie van het verschil tussen de meest recente dagelijkse momentopnamen in het totale aantal profielen dat voor een bepaald publiek is gekwalificeerd . Zie de [[!UICONTROL Audience size change trend] widget-documentatie](../guides/audiences.md#audience-size-change-trend) voor meer informatie .
+De logica die wordt gebruikt voor de widget [!UICONTROL Audience size change trend] , biedt een lijngrafiekillustratie van het verschil in het totale aantal profielen dat in aanmerking kwam voor een bepaald publiek tussen de meest recente dagelijkse momentopnamen. Zie de [[!UICONTROL Audience size change trend] widgetdocumentatie ](../guides/audiences.md#audience-size-change-trend) voor meer informatie.
 
-De SQL die de [!UICONTROL Audience size change trend] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
+De SQL die de [!UICONTROL Audience size change trend] -widget genereert, wordt in de inklapbare sectie hieronder weergegeven.
 
 +++SQL-query
 
@@ -222,9 +222,9 @@ SELECT date_key,
 
 #### De meeste gebruikte bestemmingen gebruiken case {#most-used-destinations}
 
-De logica die wordt gebruikt in de [!UICONTROL Most used destinations] widget geeft een overzicht van de meest gebruikte doelen van uw organisatie op basis van het aantal soorten publiek dat aan hen is toegewezen. Deze rangschikking biedt inzicht in welke bestemmingen worden gebruikt en toont mogelijk ook de bestemmingen die mogelijk onderbenut zijn. Zie de documentatie op de [[!UICONTROL Most used destinations] widget](../guides/destinations.md#most-used-destinations) voor meer informatie .
+De logica die wordt gebruikt in de [!UICONTROL Most used destinations] -widget geeft een overzicht van de meest gebruikte doelen van uw organisatie op basis van het aantal soorten publiek dat aan hen is toegewezen. Deze rangschikking biedt inzicht in welke bestemmingen worden gebruikt en toont mogelijk ook de bestemmingen die mogelijk onderbenut zijn. Raadpleeg de documentatie bij de [[!UICONTROL Most used destinations] widget ](../guides/destinations.md#most-used-destinations) voor meer informatie.
 
-De SQL die de [!UICONTROL Most used destinations] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
+De SQL die de [!UICONTROL Most used destinations] -widget genereert, wordt in de inklapbare sectie hieronder weergegeven.
 
 +++SQL-query
 
@@ -247,9 +247,9 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 #### Recentelijk geactiveerd publiek gebruikt draagtas {#recently-activated-audiences}
 
-De logica voor de [!UICONTROL Recently activated audiences] widget bevat een lijst met de soorten publiek die het laatst aan een doel zijn toegewezen. Deze lijst verstrekt een momentopname van het publiek en de bestemmingen die actief in gebruik in het systeem zijn en in het oplossen van problemen kunnen helpen om het even welke onjuiste afbeeldingen. Zie de [[!UICONTROL Recently activated audiences] widget-documentatie](../guides/destinations.md#recently-activated-audiences) voor meer informatie .
+De logica voor de [!UICONTROL Recently activated audiences] -widget bevat een lijst met soorten publiek die het laatst aan een doel zijn toegewezen. Deze lijst verstrekt een momentopname van het publiek en de bestemmingen die actief in gebruik in het systeem zijn en in het oplossen van problemen kunnen helpen om het even welke onjuiste afbeeldingen. Zie de [[!UICONTROL Recently activated audiences] widgetdocumentatie ](../guides/destinations.md#recently-activated-audiences) voor meer informatie.
 
-De SQL die de [!UICONTROL Recently activated audiences] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
+De SQL die de [!UICONTROL Recently activated audiences] -widget genereert, wordt in de inklapbare sectie hieronder weergegeven.
 
 +++SQL-query
 
@@ -287,13 +287,13 @@ Het namespace-publiek model wordt samengesteld uit de volgende datasets:
 
 De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
-![Een ERD van het naamruimte-publieksmodel.](../images/cdp-insights/namespace-audience-model.png)
+![ ERD van het namespace-publiek model.](../images/cdp-insights/namespace-audience-model.png)
 
 #### Profielen op identiteit voor gebruik van hoofdletters voor een publiek {#audience-profiles-by-identity}
 
-De logica die wordt gebruikt in de [!UICONTROL Profiles by identity] widget geeft een overzicht van de identiteiten in alle samengevoegde profielen in het archief met profielen voor een bepaald publiek. Zie de [[!UICONTROL Profiles by identity] widget-documentatie](../guides/audiences.md#profiles-by-identity) voor meer informatie .
+De logica die wordt gebruikt in de [!UICONTROL Profiles by identity] -widget, biedt een uitsplitsing van de identiteiten in alle samengevoegde profielen in uw profielenarchief voor een bepaald publiek. Zie de [[!UICONTROL Profiles by identity] widgetdocumentatie ](../guides/audiences.md#profiles-by-identity) voor meer informatie.
 
-De SQL die de [!UICONTROL Profiles by identity] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
+De SQL die de [!UICONTROL Profiles by identity] -widget genereert, wordt in de inklapbare sectie hieronder weergegeven.
 
 +++SQL-query
 
@@ -323,13 +323,13 @@ Het model van overlappende naamruimte bestaat uit de volgende gegevenssets:
 
 De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
-![Een ERD van het overlap-naamruimtemodel.](../images/cdp-insights/overlap-namespace-model.png)
+![ ERD van het overlappende namespace model.](../images/cdp-insights/overlap-namespace-model.png)
 
 #### Identiteitsoverlapping (profielen) gebruikt hoofdletters/kleine letters {#profiles-identity-overlap}
 
-De logica die wordt gebruikt in de [!UICONTROL Identity overlap] widget geeft de overlapping van profielen in uw **Profielenarchief** die de twee geselecteerde identiteiten bevatten. Zie de klasse [[!UICONTROL Identity overlap] widgetsectie van het dialoogvenster [!UICONTROL Profiles] dashboarddocumentatie](../guides/profiles.md#identity-overlap).
+De logica die in [!UICONTROL Identity overlap] widget wordt gebruikt toont de overlapping van profielen in uw **opslag van het Profiel** die de twee geselecteerde identiteiten bevatten. Zie de sectie [[!UICONTROL Identity overlap] widget van de [!UICONTROL Profiles] dashboarddocumentatie ](../guides/profiles.md#identity-overlap) voor meer informatie.
 
-De SQL die de [!UICONTROL Identity overlap] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
+De SQL die de [!UICONTROL Identity overlap] -widget genereert, wordt in de inklapbare sectie hieronder weergegeven.
 
 +++SQL-query
 
@@ -392,13 +392,13 @@ De overlappende naamruimte door het publieksmodel bestaat uit de volgende datase
 
 De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
-![Een ERD van de overlappende naamruimte per publieksmodel.](../images/cdp-insights/overlap-namespace-by-audience-model.png)
+![ ERD van overlappend namespace door publieksmodel.](../images/cdp-insights/overlap-namespace-by-audience-model.png)
 
 #### Identiteitsoverlapping (publiek) gebruikt hoofdletters/kleine letters {#audiences-identity-overlap}
 
-De logica die wordt gebruikt in de [!UICONTROL Audiences] dashboard [!UICONTROL Identity overlap] widget illustreert de overlapping van profielen die de twee geselecteerde identiteiten voor een bepaald publiek bevatten. Zie de klasse [[!UICONTROL Identity overlap] widgetsectie van het dialoogvenster [!UICONTROL Audiences] dashboarddocumentatie](../guides/audiences.md#identity-overlap).
+De logica die wordt gebruikt in de [!UICONTROL Audiences] dashboard [!UICONTROL Identity overlap] -widget, illustreert de overlapping van profielen die de twee geselecteerde identiteiten voor een bepaald publiek bevatten. Zie de sectie [[!UICONTROL Identity overlap] widget van de [!UICONTROL Audiences] dashboarddocumentatie ](../guides/audiences.md#identity-overlap) voor meer informatie.
 
-De SQL die de [!UICONTROL Identity overlap] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
+De SQL die de [!UICONTROL Identity overlap] -widget genereert, wordt in de inklapbare sectie hieronder weergegeven.
 
 +++SQL-query
 

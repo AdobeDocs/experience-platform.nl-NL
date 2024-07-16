@@ -12,21 +12,21 @@ ht-degree: 0%
 
 # Versnelde vragen eindpunt
 
-Als onderdeel van de Data Distiller SKU [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/) staat u toe om stateless vragen aan de versnelde opslag te maken. De geretourneerde resultaten zijn gebaseerd op geaggregeerde gegevens. Door de afgenomen latentie van de resultaten is een meer interactieve uitwisseling van informatie mogelijk. De API&#39;s voor versnelde query&#39;s worden ook gebruikt om [door de gebruiker gedefinieerde dashboards](../../dashboards/user-defined-dashboards.md).
+Als deel van Gegevens Distiller SKU, staat de [ Dienst API van de Vraag ](https://developer.adobe.com/experience-platform-apis/references/query-service/) u toe om stateless vragen aan de versnelde opslag te maken. De geretourneerde resultaten zijn gebaseerd op geaggregeerde gegevens. Door de afgenomen latentie van de resultaten is een meer interactieve uitwisseling van informatie mogelijk. Versnelde vragen APIs wordt ook gebruikt aan macht [ user-defined dashboards ](../../dashboards/user-defined-dashboards.md).
 
-Voordat u verdergaat met deze handleiding, moet u controleren of u de [API-handleiding voor query-service](./getting-started.md) om de API van de Query-service met succes te kunnen gebruiken.
+Alvorens met deze gids verder te gaan, zorg ervoor dat u de [ gids van de Dienst API van de Vraag ](./getting-started.md) gelezen en begrepen hebt om de Dienst API van de Vraag met succes te gebruiken.
 
 ## Aan de slag
 
-De gegevens Distiller SKU wordt vereist om de vraag versnelde opslag te gebruiken. Zie de [verpakking](../packaging.md) en [guardrails](../guardrails.md#query-accelerated-store), en [licenties](../data-distiller/license-usage.md) documentatie die betrekking heeft op de gegevens Distiller SKU. Als u geen gegevens hebt Distiller SKU gelieve uw vertegenwoordiger van de klantendienst van de Adobe voor meer informatie te contacteren.
+De gegevens Distiller SKU wordt vereist om de vraag versnelde opslag te gebruiken. Gelieve te zien het [ verpakken ](../packaging.md) en [ guardrails ](../guardrails.md#query-accelerated-store), en [ verlenen van vergunningen ](../data-distiller/license-usage.md) documentatie die op het SKU van Gegevens Distiller betrekking heeft. Als u geen gegevens hebt Distiller SKU gelieve uw vertegenwoordiger van de klantendienst van de Adobe voor meer informatie te contacteren.
 
 In de volgende secties worden de API-aanroepen beschreven die nodig zijn om de versnelde opslag zonder status te openen via de API voor Query-service. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
 ## Een versnelde query uitvoeren {#run-accelerated-query}
 
-Voer een verzoek van de POST in aan de `/accelerated-queries` eindpunt om een versnelde vraag in werking te stellen. De vraag is of bevat direct in de verzoeklading of van verwijzingen voorzien met een malplaatjeidentiteitskaart
+Maak een verzoek van de POST aan het `/accelerated-queries` eindpunt om een versnelde vraag in werking te stellen. De vraag is of bevat direct in de verzoeklading of van verwijzingen voorzien met een malplaatjeidentiteitskaart
 
-**API-indeling**
+**API formaat**
 
 ```shell
 POST /accelerated-queries
@@ -36,7 +36,7 @@ POST /accelerated-queries
 
 >[!IMPORTANT]
 >
->Verzoeken aan de `/accelerated-queries` voor het eindpunt is een SQL-instructie OF een sjabloon-id vereist, maar niet beide. Als u beide bestanden in een aanvraag indient, treedt er een fout op.
+>Voor aanvragen naar het eindpunt van `/accelerated-queries` is een SQL-instructie OF een sjabloon-id vereist, maar niet beide. Als u beide bestanden in een aanvraag indient, treedt er een fout op.
 
 Het volgende verzoek legt een SQL vraag in het verzoeklichaam aan de versnelde opslag voor.
 
@@ -80,13 +80,13 @@ curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `dbName` | De naam van de database waarnaar u een versnelde query uitvoert. De waarde voor `dbName` moet het formaat van `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. De opgegeven database moet aanwezig zijn in de versnelde opslag, anders leidt de aanvraag tot een fout. U moet er ook voor zorgen dat de `x-sandbox-name` naam van kop- en sandbox in `dbName` verwijzen naar dezelfde sandbox. |
+| `dbName` | De naam van de database waarnaar u een versnelde query uitvoert. De waarde voor `dbName` moet de notatie `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}` hebben. De opgegeven database moet aanwezig zijn in de versnelde opslag, anders leidt de aanvraag tot een fout. U moet er ook voor zorgen dat de naam van de `x-sandbox-name` -header en -sandbox in `dbName` naar dezelfde sandbox verwijst. |
 | `sql` | Een SQL-instructiereeks. De maximale toegestane grootte is 1000000 tekens. |
-| `templateId` | De unieke id van een query die is gemaakt en opgeslagen als een sjabloon wanneer een aanvraag voor een POST wordt ingediend bij de `/templates` eindpunt. |
+| `templateId` | De unieke id van een query die is gemaakt en opgeslagen als een sjabloon wanneer een aanvraag voor een POST wordt ingediend bij het `/templates` -eindpunt. |
 | `name` | Een optionele, beschrijvende naam voor de versnelde query. |
 | `description` | Een optionele opmerking over de intentie van de query om andere gebruikers te helpen bij het begrijpen van het doel ervan. De maximale toegestane grootte is 1000 bytes. |
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met het ad-hocschema dat door de query is gemaakt.
 
@@ -209,6 +209,6 @@ Een geslaagde reactie retourneert HTTP-status 200 met het ad-hocschema dat door 
 | `resultsMeta` | Dit object bevat de metagegevens voor elke kolom die in de resultaten wordt geretourneerd, zodat gebruikers de naam en het type van elke kolom weten. |
 | `resultsMeta._adhoc` | Een ad-hoc schema van de Gegevens van de Ervaring Model (XDM) met gebieden die namespaced voor gebruik slechts door één enkele dataset zijn. |
 | `resultsMeta._adhoc.type` | Het gegevenstype van het ad-hocschema. |
-| `resultsMeta._adhoc.meta:xdmType` | Dit is een systeemgegenereerde waarde voor het XDM-veldtype. Raadpleeg de documentatie over de beschikbare typen voor meer informatie over de beschikbare typen [beschikbare XDM-typen](../../xdm/tutorials/custom-fields-api.md). |
+| `resultsMeta._adhoc.meta:xdmType` | Dit is een systeemgegenereerde waarde voor het XDM-veldtype. Voor meer informatie over de beschikbare types zie de documentatie over [ beschikbare types XDM ](../../xdm/tutorials/custom-fields-api.md). |
 | `resultsMeta._adhoc.properties` | Dit zijn de kolomnamen van de gevraagde dataset. |
 | `resultsMeta._adhoc.results` | Dit zijn de rijnamen van de gevraagde dataset. Ze weerspiegelen elk van de geretourneerde kolommen. |

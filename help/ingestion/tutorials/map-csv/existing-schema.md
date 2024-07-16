@@ -7,8 +7,8 @@ description: In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand via de Ado
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 1%
+source-wordcount: '890'
+ht-degree: 0%
 
 ---
 
@@ -16,59 +16,59 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->In dit document wordt beschreven hoe u een CSV-bestand toewijst aan een bestaand XDM-schema. Voor informatie over hoe te om het AI-Gegenereerde hulpmiddel van de schemaaanbeveling (momenteel in bèta) te gebruiken, zie het document op [toewijzen van een CSV-bestand aan de hand van aanbevelingen voor machinaal leren](./recommendations.md).
+>In dit document wordt beschreven hoe u een CSV-bestand toewijst aan een bestaand XDM-schema. Voor informatie over hoe te om het AI-Gegenereerde hulpmiddel van de schemaaanbeveling (momenteel in bèta) te gebruiken, zie het document op [ in kaart brengend een Csv- dossier gebruikend machine-leert aanbevelingen ](./recommendations.md).
 
-Om CSV-gegevens in te nemen [!DNL Adobe Experience Platform], moeten de gegevens worden toegewezen aan een [!DNL Experience Data Model] (XDM) schema. In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand met het [!DNL Platform] gebruikersinterface.
+Als u CSV-gegevens in [!DNL Adobe Experience Platform] wilt invoeren, moeten de gegevens worden toegewezen aan een [!DNL Experience Data Model] (XDM)-schema. In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand via de gebruikersinterface van [!DNL Platform] kunt toewijzen aan een XDM-schema.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van [!DNL Platform]:
+Deze zelfstudie vereist een goed begrip van de volgende componenten van [!DNL Platform] :
 
-- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring.
-- [Inname in batch](../../batch-ingestion/overview.md): De methode waarbij [!DNL Platform] Hiermee worden gegevens uit door de gebruiker opgegeven gegevensbestanden opgenomen.
-- [Adobe Experience Platform Data Prep](../../batch-ingestion/overview.md): Een reeks mogelijkheden die u toestaan om opgenomen gegevens in kaart te brengen en om te zetten om aan schema&#39;s in overeenstemming te zijn XDM. De documentatie over [Functies Data Prep](../../../data-prep/functions.md) is met name van belang voor schema-toewijzing.
+- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt.
+- [ Inname van de Partij ](../../batch-ingestion/overview.md): De methode waardoor [!DNL Platform] gegevens van user-provided gegevensbestanden opneemt.
+- [ Prep van Gegevens van Adobe Experience Platform ](../../batch-ingestion/overview.md): Een reeks mogelijkheden die u toestaan om opgenomen gegevens in kaart te brengen en om te zetten om met schema&#39;s in overeenstemming te zijn XDM. De documentatie over [ Prep functies van Gegevens ](../../../data-prep/functions.md) is bijzonder relevant voor schemaafbeelding.
 
-Deze zelfstudie vereist ook dat u al een dataset hebt gemaakt om uw CSV-gegevens in te voeren. Voor stappen bij het creëren van een dataset in UI, zie [zelfstudie over gegevensinvoer](../ingest-batch-data.md).
+Deze zelfstudie vereist ook dat u al een dataset hebt gemaakt om uw CSV-gegevens in te voeren. Voor stappen bij het creëren van een dataset in UI, zie [ gegevens ingest leerprogramma ](../ingest-batch-data.md).
 
 ## Kies een bestemming
 
-Aanmelden bij [[!DNL Adobe Experience Platform]](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Workflows]** van de linkernavigatiebalk voor toegang tot de **[!UICONTROL Workflows]** werkruimte.
+Meld u aan bij [[!DNL Adobe Experience Platform] ](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Workflows]** in de linkernavigatiebalk om de **[!UICONTROL Workflows]** -werkruimte te openen.
 
-Van de **[!UICONTROL Workflows]** scherm, selecteren **[!UICONTROL Map CSV to XDM schema]** onder de **[!UICONTROL Data ingestion]** en selecteer vervolgens **[!UICONTROL Launch]**.
+Selecteer in het scherm **[!UICONTROL Workflows]** de optie **[!UICONTROL Map CSV to XDM schema]** onder de sectie **[!UICONTROL Data ingestion]** en selecteer vervolgens **[!UICONTROL Launch]** .
 
 ![](../../images/tutorials/map-a-csv-file/workflows.png)
 
-De **[!UICONTROL Map CSV to XDM schema]** wordt weergegeven, vanaf de **[!UICONTROL Destination]** stap. Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U kunt of een bestaande dataset gebruiken of nieuwe creëren.
+De **[!UICONTROL Map CSV to XDM schema]** -workflow wordt weergegeven, vanaf de **[!UICONTROL Destination]** -stap. Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U kunt een bestaande gegevensset gebruiken of een nieuwe gegevensset maken.
 
-**Een bestaande gegevensset gebruiken**
+**Gebruik een bestaande dataset**
 
-Om uw CSV- gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Use existing dataset]**. U kunt of een bestaande dataset terugwinnen gebruikend de onderzoeksfunctie of door door de lijst van bestaande datasets in het paneel te scrollen.
+Als u uw CSV-gegevens in een bestaande gegevensset wilt opnemen, selecteert u **[!UICONTROL Use existing dataset]** . U kunt of een bestaande dataset terugwinnen gebruikend de onderzoeksfunctie of door door de lijst van bestaande datasets in het paneel te scrollen.
 
 ![](../../images/tutorials/map-a-csv-file/use-existing-dataset.png)
 
-Om uw CSV- gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL Create new dataset]** en voert een naam en een beschrijving voor de gegevensset in de opgegeven velden in. Selecteer een schema door of de onderzoeksfunctie te gebruiken of door door de lijst van schema&#39;s te scrollen verstrekt. Selecteren **[!UICONTROL Next]** om verder te gaan.
+Als u uw CSV-gegevens in een nieuwe gegevensset wilt opnemen, selecteert u **[!UICONTROL Create new dataset]** en voert u een naam en beschrijving in voor de gegevensset in de velden die u opgeeft. Selecteer een schema door of de onderzoeksfunctie te gebruiken of door door de lijst van schema&#39;s te scrollen verstrekt. Selecteer **[!UICONTROL Next]** om door te gaan.
 
 ![](../../images/tutorials/map-a-csv-file/create-new-dataset.png)
 
 ## Gegevens toevoegen
 
-De **[!UICONTROL Add data]** wordt weergegeven. Sleep het CSV-bestand naar de beschikbare ruimte of selecteer **[!UICONTROL Choose files]** om uw CSV-bestand handmatig in te voeren.
+De stap **[!UICONTROL Add data]** wordt weergegeven. Sleep het CSV-bestand naar de beschikbare ruimte en zet het neer of selecteer **[!UICONTROL Choose files]** om het CSV-bestand handmatig in te voeren.
 
 ![](../../images/tutorials/map-a-csv-file/add-data.png)
 
-De **[!UICONTROL Sample data]** wordt weergegeven zodra het bestand is geüpload, met daarin de eerste tien rijen met gegevens. Nadat u hebt bevestigd dat de gegevens naar behoren zijn geüpload, selecteert u **[!UICONTROL Next]**.
+De sectie **[!UICONTROL Sample data]** wordt weergegeven wanneer het bestand is geüpload. De eerste tien rijen met gegevens worden weergegeven. Selecteer **[!UICONTROL Next]** als u hebt bevestigd dat de gegevens naar behoren zijn geüpload.
 
 ![](../../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## CSV-velden toewijzen aan XDM-schemavelden
 
-De **[!UICONTROL Mapping]** wordt weergegeven. De kolommen van het CSV-bestand staan onder **[!UICONTROL Source Field]**, met de bijbehorende XDM-schemavelden vermeld onder **[!UICONTROL Target Field]**.
+De stap **[!UICONTROL Mapping]** wordt weergegeven. De kolommen van het CSV-bestand worden weergegeven onder **[!UICONTROL Source Field]** en de bijbehorende XDM-schemavelden onder **[!UICONTROL Target Field]** .
 
-[!DNL Platform] verstrekt automatisch intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd dat u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
+[!DNL Platform] verstrekt automatisch intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd die u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
 
 ![](../../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
-Als u alle automatisch gegenereerde toewijzingswaarden wilt accepteren, schakelt u het selectievakje &quot;[!UICONTROL Accept all target fields]&quot;.
+Om alle auto-genererende toewijzingswaarden goed te keuren, selecteer checkbox geëtiketteerd &quot;[!UICONTROL Accept all target fields]&quot;.
 
 ![](../../images/tutorials/map-a-csv-file/filled-mapping-with-suggestions.png)
 
@@ -76,11 +76,11 @@ Soms is er meer dan één aanbeveling beschikbaar voor het bronschema. Als dit g
 
 ![](../../images/tutorials/map-a-csv-file/multiple-recommendations.png)
 
-Alternatief, kunt u verkiezen om uw bronschema aan uw doelschema manueel in kaart te brengen. Houd de muisaanwijzer boven het bronschema dat u wilt toewijzen en selecteer vervolgens het plusteken.
+U kunt ook handmatig uw bronschema toewijzen aan uw doelschema. Houd de muisaanwijzer boven het bronschema dat u wilt toewijzen en selecteer vervolgens het plusteken.
 
 ![](../../images/tutorials/map-a-csv-file/mapping-with-suggestions-and-buttons.png)
 
-De **[!UICONTROL Map source to target field]** wordt weergegeven. Hier kunt u selecteren welk veld u wilt toewijzen, gevolgd door **[!UICONTROL Save]** om uw nieuwe toewijzing toe te voegen.
+De pop-up **[!UICONTROL Map source to target field]** wordt weergegeven. Van hieruit kunt u selecteren welk veld u wilt toewijzen, gevolgd door **[!UICONTROL Save]** om de nieuwe toewijzing toe te voegen.
 
 ![](../../images/tutorials/map-a-csv-file/manual-mapping.png)
 
@@ -90,25 +90,25 @@ Als u een van de toewijzingen wilt verwijderen, plaatst u de muis boven de toewi
 
 Met berekende velden kunnen waarden worden gemaakt op basis van de kenmerken in het invoerschema. Deze waarden kunnen vervolgens aan kenmerken in het doelschema worden toegewezen en een naam en beschrijving worden gegeven om de referentie eenvoudiger te maken.
 
-Selecteer **[!UICONTROL Add calculated field]** om verder te gaan.
+Selecteer de knop **[!UICONTROL Add calculated field]** om door te gaan.
 
 ![](../../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
-De **[!UICONTROL Create calculated field]** wordt weergegeven. Het linkerdialoogvenster bevat de velden, functies en operatoren die in berekende velden worden ondersteund. Selecteer een van de tabbladen om functies, velden of operatoren toe te voegen aan de expressie-editor.
+Het deelvenster **[!UICONTROL Create calculated field]** wordt weergegeven. Het linkerdialoogvenster bevat de velden, functies en operatoren die in berekende velden worden ondersteund. Selecteer een van de tabbladen om functies, velden of operatoren toe te voegen aan de expressie-editor.
 
 ![](../../images/tutorials/map-a-csv-file/create-calculated-fields.png)
 
 | Tabtoets | Beschrijving |
 | --------- | ----------- |
 | Velden | Het tabblad Veld bevat velden en kenmerken die beschikbaar zijn in het bronschema. |
-| Functies | Op het tabblad Functies staan de functies die beschikbaar zijn voor het transformeren van de gegevens. Lees de handleiding voor meer informatie over de functies die u binnen berekende velden kunt gebruiken [functies Data Prep (Mapper) gebruiken](../../../data-prep/functions.md). |
+| Functies | Op het tabblad Functies staan de functies die beschikbaar zijn voor het transformeren van de gegevens. Om meer over de functies te leren u binnen berekende gebieden kunt gebruiken, te lezen gelieve de gids op [ gebruikend de functies van de Prep van Gegevens (Mapper) ](../../../data-prep/functions.md). |
 | Operatoren | Het tabblad Operatoren bevat een lijst met operatoren die beschikbaar zijn om de gegevens te transformeren. |
 
 U kunt handmatig velden, functies en operatoren toevoegen met de expressieeditor in het midden. Selecteer de editor om een expressie te maken.
 
 ![](../../images/tutorials/map-a-csv-file/create-calculated-field.png)
 
-Selecteren **[!UICONTROL Save]** om verder te gaan.
+Selecteer **[!UICONTROL Save]** om door te gaan.
 
 Het kaartscherm verschijnt weer met het nieuwe bronveld. Pas het desbetreffende doelveld toe en selecteer **[!UICONTROL Finish]** om de toewijzing te voltooien.
 
@@ -116,8 +116,8 @@ Het kaartscherm verschijnt weer met het nieuwe bronveld. Pas het desbetreffende 
 
 ## Gegevens bijhouden
 
-Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Raadpleeg de zelfstudie voor meer informatie over het controleren van gegevensinvoer. [controle gegevensinvoer](../../../ingestion/quality/monitor-data-ingestion.md).
+Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Voor meer informatie bij het controleren van gegevensopname, zie het leerprogramma op [ controle gegevensopname ](../../../ingestion/quality/monitor-data-ingestion.md).
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een standaard CSV-bestand toegewezen aan een XDM-schema en het ingepakt in [!DNL Platform]. Deze gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-Time Customer Profile]. Zie het overzicht voor [[!DNL Real-Time Customer Profile]](../../../profile/home.md) voor meer informatie .
+Aan de hand van deze zelfstudie hebt u een standaard CSV-bestand toegewezen aan een XDM-schema en het ingepakt in [!DNL Platform] . Deze gegevens kunnen nu worden gebruikt door downstream [!DNL Platform] -services, zoals [!DNL Real-Time Customer Profile] . Zie het overzicht voor [[!DNL Real-Time Customer Profile]](../../../profile/home.md) voor meer informatie.

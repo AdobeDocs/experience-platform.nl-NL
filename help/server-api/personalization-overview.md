@@ -1,6 +1,6 @@
 ---
-title: Overzicht van personalisatie
-description: Leer hoe u de Adobe Experience Platform Edge Network Server-API gebruikt om persoonlijke inhoud op te halen uit de oplossingen voor het aanpassen van Adoben.
+title: Personalization-overzicht
+description: Leer hoe u de Adobe Experience Platform Edge Network Server-API gebruikt om persoonlijke inhoud op te halen van de oplossingen voor het aanpassen van Adoben.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
 source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
@@ -9,26 +9,26 @@ ht-degree: 4%
 
 ---
 
-# Overzicht van personalisatie
+# Personalization-overzicht
 
-Met de [!DNL Server API]kunt u persoonlijke inhoud ophalen van Adobe-personalisatieoplossingen, waaronder [Adobe Target](https://business.adobe.com/products/target/adobe-target.html), [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home), en [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=nl).
+Met [!DNL Server API], kunt u gepersonaliseerde inhoud van de oplossingen van de de verpersoonlijking van de Adobe terugwinnen, met inbegrip van [ Adobe Target ](https://business.adobe.com/products/target/adobe-target.html), [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home), en [ Offer decisioning ](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=nl).
 
-Daarnaast worden de [!DNL Server API] bevoegdheden personaliseringsmogelijkheden van zelfde pagina en van volgende pagina door de verpersoonlijkingsbestemmingen van Adobe Experience Platform, zoals [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) en de [aangepaste verpersoonlijkingsverbinding](../destinations/catalog/personalization/custom-personalization.md). Om te leren hoe te om Experience Platform voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen, zie [speciale gids](../destinations/ui/activate-edge-personalization-destinations.md).
+Bovendien, de [!DNL Server API] bevoegdheden zelfde-pagina en volgende-pagina verpersoonlijkingsmogelijkheden door de verpersoonlijkingsbestemmingen van Adobe Experience Platform, zoals [ Adobe Target ](../destinations/catalog/personalization/adobe-target-connection.md) en de [ verbinding van de douaneverpersoonlijking ](../destinations/catalog/personalization/custom-personalization.md). Leren hoe te om Experience Platform voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen, zie de [ specifieke gids ](../destinations/ui/activate-edge-personalization-destinations.md).
 
-Wanneer het gebruiken van de Server API, moet u de reactie integreren die door de verpersoonlijkingsmotor met de logica wordt verstrekt die wordt gebruikt om inhoud op uw plaats terug te geven. In tegenstelling tot [Web SDK](../web-sdk/home.md)de [!DNL Server API] heeft geen mechanisme om inhoud automatisch toe te passen die door de oplossingen van de Adobe van de verpersoonlijking is teruggekeerd.
+Wanneer het gebruiken van de Server API, moet u de reactie integreren die door de verpersoonlijkingsmotor met de logica wordt verstrekt die wordt gebruikt om inhoud op uw plaats terug te geven. In tegenstelling tot [ SDK van het Web ](../web-sdk/home.md), heeft [!DNL Server API] geen mechanisme om inhoud automatisch toe te passen die door de verpersoonlijkingsoplossingen van de Adobe is teruggekeerd.
 
 ## Terminologie {#terminology}
 
 Alvorens met de oplossingen van de verpersoonlijking van de Adobe te werken, zorg ervoor om de volgende concepten te begrijpen:
 
 * **Aanbieding**: een aanbieding is een marketingbericht waaraan regels gekoppeld kunnen zijn die bepalen wie in aanmerking komt om de aanbieding te zien.
-* **Besluit**: Een besluit (voorheen bekend als de aanbiedingsactiviteit) brengt de selectie van een aanbieding ter kennis.
-* **Schema**: In het schema van een besluit wordt aangegeven welk soort aanbieding wordt geretourneerd.
-* **Toepassingsgebied**: De reikwijdte van het besluit.
-   * In Adobe Target [!DNL mbox]. De [!DNL global mbox] is de `__view__` bereik
-   * Voor [!DNL Offer Decisioning], dit zijn de Base64-Gecodeerde koorden van JSON die de activiteit en plaatsings IDs bevatten u de dienst van de offer decisioning wilt gebruiken om aanbiedingen voor te stellen.
+* **Besluit**: Een besluit (die eerder als aanbiedingsactiviteit wordt bekend) informeert de selectie van een aanbieding.
+* **Schema**: Het schema van een besluit informeert het type van teruggekeerde aanbieding.
+* **Reikwijdte**: Het werkingsgebied van het besluit.
+   * In Adobe Target is dit de [!DNL mbox] . De [!DNL global mbox] is het `__view__` bereik
+   * Voor [!DNL Offer Decisioning], zijn dit de Base64-Gecodeerde koorden van JSON die de activiteit en plaatsings IDs bevatten u de dienst van de offer decisioning wilt gebruiken om aanbiedingen voor te stellen.
 
-## De `query` object {#query-object}
+## Het object `query` {#query-object}
 
 Voor het ophalen van gepersonaliseerde inhoud is een expliciet aanvraagqueryobject voor een aanvraagvoorbeeld vereist. Het queryobject heeft de volgende indeling:
 
@@ -66,7 +66,7 @@ Voor het ophalen van gepersonaliseerde inhoud is een expliciet aanvraagqueryobje
 
 ## Het object handle {#handle}
 
-De gepersonaliseerde inhoud die van verpersoonlijkingsoplossingen wordt teruggewonnen wordt voorgesteld in a `personalization:decisions` handle met de volgende notatie voor de lading:
+De gepersonaliseerde inhoud die van verpersoonlijkingsoplossingen wordt teruggewonnen wordt voorgesteld in een `personalization:decisions` handvat, dat het volgende formaat voor zijn lading heeft:
 
 ```json
 {
@@ -137,7 +137,7 @@ De gepersonaliseerde inhoud die van verpersoonlijkingsoplossingen wordt teruggew
 
 ## Voorbeeld-API-aanroep {#sample-call}
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /ee/v2/interact
@@ -192,11 +192,11 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | Parameter | Type | Vereist | Beschrijving |
 | --- | --- | --- | --- |
 | `configId` | String | Ja | De gegevensstroom-id. |
-| `requestId` | String | Nee | Geef een externe overtrekID voor aanvragen op. Als niets wordt verstrekt, zal het Netwerk van de Rand één voor u produceren en zal het terug in de reactielichaam/kopballen terugkeren. |
+| `requestId` | String | Nee | Geef een externe overtrekID voor aanvragen op. Als niets wordt verstrekt, zal de Edge Network één voor u produceren en zal het terug in de reactielichaam/kopballen terugkeren. |
 
 ### Antwoord {#response}
 
-Retourneert een `200 OK` status en een of meer `Handle` objecten, afhankelijk van de Edge-services die zijn ingeschakeld in de configuratie van de gegevensstroom.
+Retourneert een `200 OK` status en een of meer `Handle` -objecten, afhankelijk van de Edge-services die zijn ingeschakeld in de configuratie van de gegevensstroom.
 
 ```json
 {
@@ -254,11 +254,11 @@ Retourneert een `200 OK` status en een of meer `Handle` objecten, afhankelijk va
 
 ## Meldingen {#notifications}
 
-Meldingen moeten worden geactiveerd wanneer een vooraf ingestelde inhoud of weergave is bezocht of weergegeven aan de eindgebruiker. Om meldingen voor het juiste bereik uit te schakelen, moet u de bijbehorende `id` voor elk toepassingsgebied.
+Meldingen moeten worden geactiveerd wanneer een vooraf ingestelde inhoud of weergave is bezocht of weergegeven aan de eindgebruiker. Als meldingen voor het juiste bereik moeten worden afgebroken, moet u de bijbehorende `id` gegevens voor elk bereik bijhouden.
 
-Meldingen aan de rechterkant `id` voor de overeenkomstige werkingsgebieden moeten worden geactiveerd om de rapportage correct weer te geven.
+Meldingen met de juiste waarde `id` voor het corresponderende bereik moeten worden geactiveerd om de rapportage correct weer te geven.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /ee/v2/collect
@@ -316,16 +316,16 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | Parameter | Type | Vereist | Beschrijving |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Ja | ID van de gegevensstroom die door het eindpunt van de gegevensinzameling wordt gebruikt. |
-| `requestId` | `String` | Nee | Externe id voor overtrekken van externe aanvraag. Als niets wordt verstrekt, zal het Netwerk van de Rand één voor u produceren en zal het terug in de reactielichaam/kopballen terugkeren. |
-| `silent` | `Boolean` | Nee | Optionele booleaanse parameter die aangeeft of het Edge-netwerk een `204 No Content` reageren met een lege lading. Kritieke fouten worden gerapporteerd met behulp van de corresponderende HTTP-statuscode en -lading. |
+| `requestId` | `String` | Nee | Externe id voor overtrekken van externe aanvraag. Als niets wordt verstrekt, zal de Edge Network één voor u produceren en zal het terug in de reactielichaam/kopballen terugkeren. |
+| `silent` | `Boolean` | Nee | Optionele booleaanse parameter die aangeeft of de Edge Network een `204 No Content` -reactie moet retourneren met een lege lading. Kritieke fouten worden gerapporteerd met behulp van de corresponderende HTTP-statuscode en -lading. |
 
 ### Antwoord {#notifications-response}
 
-Een geslaagde reactie retourneert een van de volgende statussen en een `requestID` indien in het verzoek geen informatie is verstrekt.
+Een geslaagde reactie retourneert een van de volgende statussen en een `requestID` als er niets in de aanvraag is opgegeven.
 
-* `202 Accepted` wanneer het verzoek met succes is verwerkt;
-* `204 No Content` wanneer de aanvraag met succes is verwerkt en `silent` parameter is ingesteld op `true`;
-* `400 Bad Request` wanneer het verzoek niet correct is geformuleerd (bv. de verplichte primaire identiteit is niet gevonden).
+* `202 Accepted` wanneer de aanvraag correct is verwerkt;
+* `204 No Content` wanneer de aanvraag is verwerkt en de parameter `silent` is ingesteld op `true` ;
+* `400 Bad Request` wanneer de aanvraag niet correct is samengesteld (de verplichte primaire identiteit is bijvoorbeeld niet gevonden).
 
 ```json
 {

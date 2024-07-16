@@ -14,26 +14,26 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[!DNL Airship] is het toonaangevende platform voor betrokkenheid van klanten, waarmee u in elke fase van de levenscyclus van de klant betekenisvolle, gepersonaliseerde omnichannel berichten aan uw gebruikers kunt leveren.
+[!DNL Airship] is het toonaangevende platform voor betrokkenheid van klanten, waarmee u in elke fase van de levenscyclus van de klant betekenisvolle, gepersonaliseerde omnichannel berichten voor uw gebruikers kunt leveren.
 
-Deze integratie geeft Adobe profielgegevens door aan [!DNL Airship] als [Attributen](https://docs.airship.com/guides/audience/attributes/) voor aanwijzen of activeren.
+Deze integratie gaat profielgegevens van de Adobe in [!DNL Airship] als [ Attributen ](https://docs.airship.com/guides/audience/attributes/) voor het richten van of het teweegbrengen over.
 
-Meer informatie over [!DNL Airship], zie de [Airship Docs](https://docs.airship.com).
+Meer over [!DNL Airship] leren, zie [ Dokken van het Luchtschip ](https://docs.airship.com).
 
 >[!TIP]
 >
->Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en gehandhaafd door [!DNL Airship] team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via [support.airship.com](https://support.airship.com/).
+>Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Airship] . Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct bij [ support.airship.com ](https://support.airship.com/) te contacteren.
 
 ## Vereisten {#prerequisites}
 
-Voordat u uw publiek naar kunt sturen [!DNL Airship], moet u:
+Voordat u uw publiek naar [!DNL Airship] kunt sturen, moet u:
 
-* Kenmerken inschakelen in uw [!DNL Airship] project.
+* Kenmerken inschakelen in uw [!DNL Airship] -project.
 * Een token voor toonder genereren voor verificatie.
 
 >[!TIP]
 >
->Een [!DNL Airship] account via [deze koppeling naar aanmelding](https://go.airship.eu/accounts/register/plan/starter/) als u dat nog niet hebt gedaan.
+>Creeer een [!DNL Airship] rekening via [ deze signaleringsverbinding ](https://go.airship.eu/accounts/register/plan/starter/) als u niet reeds hebt.
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -41,8 +41,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -53,115 +53,115 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam) en/of identiteiten volgens uw veldtoewijzing. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Kenmerken inschakelen {#enable-attributes}
 
-Adobe Experience Platform-profielkenmerken lijken op [!DNL Airship] -kenmerken en kunnen gemakkelijk aan elkaar worden toegewezen in Platform met behulp van het toewijzingsprogramma dat hieronder verder wordt weergegeven op deze pagina.
+Adobe Experience Platform-profielkenmerken lijken op [!DNL Airship] -kenmerken en kunnen eenvoudig aan elkaar worden toegewezen in Platform met behulp van het toewijzingsgereedschap dat hieronder op deze pagina wordt getoond.
 
-[!DNL Airship] de projecten hebben verscheidene vooraf bepaalde en standaardattributen. Als u een aangepast kenmerk hebt, moet u dit definiëren in [!DNL Airship] eerst. Zie [Kenmerken instellen en beheren](https://docs.airship.com/tutorials/audience/attributes/) voor meer informatie.
+[!DNL Airship] -projecten hebben verschillende vooraf gedefinieerde en standaardkenmerken. Als u een aangepast kenmerk hebt, moet u dit eerst definiëren in [!DNL Airship] . Zie [ Opstelling en beheer Attributen ](https://docs.airship.com/tutorials/audience/attributes/) voor details.
 
 ## Dragertoken genereren {#bearer-token}
 
-Ga naar **[!UICONTROL Settings]** &quot; **[!UICONTROL APIs & Integrations]** in de [Luchtvaartdashboard](https://go.airship.com) en selecteert u **[!UICONTROL Tokens]** in het linkermenu.
+Ga naar **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]** in [ het dashboard van het Luchtschip ](https://go.airship.com) en selecteer **[!UICONTROL Tokens]** in het linkermenu.
 
 Klik op **[!UICONTROL Create Token]**.
 
 Geef uw token een gebruikersvriendelijke naam, bijvoorbeeld Doel van kenmerken van Adobe en selecteer Alle toegang voor de rol.
 
-Klikken **[!UICONTROL Create Token]** en bewaren de gegevens als vertrouwelijk.
+Klik op **[!UICONTROL Create Token]** en sla de details op als vertrouwelijk.
 
 ## Gebruiksscenario’s {#use-cases}
 
-Om u te helpen beter begrijpen hoe en wanneer u het [!DNL Airship Attributes] doel, hier zijn de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
+Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Airship Attributes] bestemming zou moeten gebruiken, zijn hier voorbeelden van gebruiksgevallen die de klanten van Adobe Experience Platform door deze bestemming kunnen oplossen.
 
 ### Hoofdletters gebruiken #1
 
-Gebruik profielgegevens die in Adobe Experience Platform zijn verzameld voor personalisatie van het bericht en rijke inhoud binnen een van de volgende [!DNL Airship]Kanalen. Bijvoorbeeld, hefboomwerking [!DNL Experience Platform] profielgegevens om locatiekenmerken in te stellen binnen [!DNL Airship]. Hierdoor kan een hotelmerk voor elke gebruiker een afbeelding weergeven voor de dichtstbijzijnde hotellocatie.
+Gebruik profielgegevens die in Adobe Experience Platform zijn verzameld voor personalisatie van het bericht en rijke inhoud binnen de kanalen van [!DNL Airship]. Gebruik bijvoorbeeld [!DNL Experience Platform] -profielgegevens om locatiekenmerken in te stellen binnen [!DNL Airship] . Hierdoor kan een hotelmerk voor elke gebruiker een afbeelding weergeven voor de dichtstbijzijnde hotellocatie.
 
 ### Hoofdletters gebruiken #2
 
-Kenmerken van Adobe Experience Platform benutten om verder te verrijken [!DNL Airship] profielen en deze combineren met SDK of [!DNL Airship] voorspellende gegevens. Een detailhandelaar kan bijvoorbeeld een publiek met loyaliteitsstatus en locatiegegevens (kenmerken van Platform) maken en [!DNL Airship] voorspeld om gegevens te sturen om hoogst gerichte berichten naar gebruikers in de gouden loyaliteitsstatus te verzenden die in Las Vegas, NV wonen, en een hoge waarschijnlijkheid van het kurken hebben.
+Gebruik kenmerken van Adobe Experience Platform om [!DNL Airship] -profielen verder te verrijken en combineer deze met SDK of [!DNL Airship] voorspellende gegevens. Een detailhandelaar kan bijvoorbeeld een publiek met loyaliteitsstatus en locatiegegevens (kenmerken van Platform) en [!DNL Airship] maken dat gegevens naar verwachting zal doorsturen om zeer gerichte berichten te verzenden naar gebruikers in de status van gouden loyaliteit die in Las Vegas, NV wonen en die een grote kans hebben om te worden afgespeeld.
 
 ## Verbinden met de bestemming {#connect}
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
+Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
-* **[!UICONTROL Bearer token]**: het token dat u hebt gegenereerd op basis van het [!DNL Airship] dashboard.
+* **[!UICONTROL Bearer token]** : het token dat u hebt gegenereerd op het dashboard van [!DNL Airship] .
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-* **[!UICONTROL Name]**: voer een naam in die u zal helpen deze bestemming te identificeren.
-* **[!UICONTROL Description]**: voer een beschrijving in voor deze bestemming.
-* **[!UICONTROL Domain]**: selecteer een Amerikaans of EU-datacenter, afhankelijk van welke [!DNL Airship] het gegevenscentrum is op deze bestemming van toepassing.
+* **[!UICONTROL Name]**: voer een naam in die u helpt bij het identificeren van dit doel.
+* **[!UICONTROL Description]** : voer een beschrijving in voor dit doel.
+* **[!UICONTROL Domain]**: selecteer een Amerikaans of EU-datacenter, afhankelijk van welk [!DNL Airship] -datacenter op dit doel van toepassing is.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Zie [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Zie [ publieksgegevens aan het stromen publiek de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
 ## Toewijzingsoverwegingen {#mapping-considerations}
 
-[!DNL Airship] attributen kunnen op of een kanaal worden geplaatst, dat apparateninstantie, b.v., iPhone, of een genoemde gebruiker vertegenwoordigt, die alle apparaten van een gebruiker aan een gemeenschappelijk herkenningsteken zoals een klant identiteitskaart in kaart brengt. Als u onbewerkte (niet-gehashte) e-mailadressen als primaire identiteit in uw schema hebt, selecteert u het e-mailveld in uw schema **[!UICONTROL Source Attributes]** en de kaart aan [!DNL Airship] benoemde gebruiker in de rechterkolom onder **[!UICONTROL Target Identities]**, zoals hieronder weergegeven.
+[!DNL Airship] -kenmerken kunnen worden ingesteld op een kanaal dat apparaatinstantie vertegenwoordigt, bijvoorbeeld iPhone, of op een benoemde gebruiker, die alle apparaten van een gebruiker toewijst aan een gemeenschappelijke id, zoals een klant-id. Als u normale (niet-gehashte) e-mailadressen als primaire identiteit in uw schema hebt, selecteert u het e-mailveld in uw **[!UICONTROL Source Attributes]** en wijst u deze toe aan de [!DNL Airship] benoemde gebruiker in de rechterkolom onder **[!UICONTROL Target Identities]** , zoals hieronder wordt weergegeven.
 
-![Toewijzing van benoemde gebruikers](../../assets/catalog/mobile-engagement/airship/mapping.png)
+![ Benoemde Toewijzing van de Gebruiker ](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
 Voor herkenningstekens die aan een kanaal, d.w.z., een apparaat moeten worden in kaart gebracht, kaart aan het aangewezen kanaal dat op de bron wordt gebaseerd. De volgende afbeeldingen laten zien hoe twee toewijzingen worden gemaakt:
 
-* IDFA iOS Advertising ID to an [!DNL Airship] iOS-kanaal
-* Adobe `fullName` kenmerk naar [!DNL Airship] Kenmerk &quot;Volledige naam&quot;
+* IDFA iOS Advertising ID to an [!DNL Airship] iOS channel
+* Kenmerk Adobe `fullName` naar kenmerk [!DNL Airship] &quot;Volledige naam&quot;
 
 >[!NOTE]
 >
->Gebruik de gebruikersvriendelijke naam die in het dialoogvenster [!DNL Airship] dashboard wanneer het selecteren van het doelgebied voor uw attributenafbeelding.
+>Gebruik de gebruikersvriendelijke naam die in het dashboard van [!DNL Airship] verschijnt wanneer het selecteren van het doelgebied voor uw attributenafbeelding.
 
-**Identiteit kaart**
+**Identiteit van de Kaart**
 
 Bronveld selecteren:
 
-![Verbinden met kenmerken van het luchtschip](../../assets/catalog/mobile-engagement/airship/select-source-identity.png)
+![ verbind met de Attributen van het Luchtschip ](../../assets/catalog/mobile-engagement/airship/select-source-identity.png)
 
 Doelveld selecteren:
 
-![Verbinden met kenmerken van het luchtschip](../../assets/catalog/mobile-engagement/airship/select-target-identity.png)
+![ verbind met de Attributen van het Luchtschip ](../../assets/catalog/mobile-engagement/airship/select-target-identity.png)
 
-**Kenmerk Kaart**
+**attributen van de Kaart**
 
 Bronkenmerk selecteren:
 
-![Bronveld selecteren](../../assets/catalog/mobile-engagement/airship/select-source-attributes.png)
+![ Uitgezochte brongebied ](../../assets/catalog/mobile-engagement/airship/select-source-attributes.png)
 
 Doelkenmerk selecteren:
 
-![Doelveld selecteren](../../assets/catalog/mobile-engagement/airship/select-target-attribute.png)
+![ Uitgezochte doelgebied ](../../assets/catalog/mobile-engagement/airship/select-target-attribute.png)
 
 Toewijzing verifiëren:
 
-![Kanaaltoewijzing](../../assets/catalog/mobile-engagement/airship/mapping.png)
+![ de afbeelding van het Kanaal ](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](../../../data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](../../../data-governance/home.md).

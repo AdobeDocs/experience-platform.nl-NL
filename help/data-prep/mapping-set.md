@@ -19,10 +19,10 @@ Een toewijzingsset is een set toewijzingen waarmee gegevens van het ene schema n
 
 Voor dit overzicht is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
-- [Gegevensprep](./home.md): Data Prep staat gegevensingenieurs toe om gegevens in kaart te brengen, om te zetten en te bevestigen aan en van het Model van de Gegevens van de Ervaring (XDM).
-- [Gegevensstromen](../dataflows/home.md): Gegevensstromen zijn een weergave van gegevenstaken die gegevens verplaatsen over het hele platform. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile], en [!DNL Destinations].
-- [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md): De methoden waarmee gegevens kunnen worden verzonden naar [!DNL Experience Platform].
-- [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+- [ Prep van Gegevens ](./home.md): De Prep van Gegevens staat gegevensingenieurs toe om, gegevens in kaart te brengen om te transformeren en te bevestigen aan en van het Model van Gegevens van de Ervaring (XDM).
+- [ Dataflows ](../dataflows/home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
+- [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md): de methoden waarmee gegevens naar [!DNL Experience Platform] kunnen worden verzonden.
+- [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
 
 ## Syntaxis toewijzingsset
 
@@ -73,28 +73,28 @@ De volgende JSON is een voorbeeld van een typische toewijzingenset:
 | `inputSchema` | Het XDM-schema voor de binnenkomende gegevens. |
 | `outputSchema` | Het XDM-schema waaraan de invoergegevens moeten voldoen, wordt getransformeerd. |
 | `mappings` | Een serie van gebied aan gebied afbeeldingen van het bronschema aan het bestemmingsschema. |
-| `sourceType` | Voor elke vermelde afbeelding, zijn `sourceType` kenmerk geeft het type bron aan dat moet worden toegewezen. Kan één van `ATTRIBUTE`, `STATIC`, of `EXPRESSION`: <ul><li> `ATTRIBUTE` wordt gebruikt voor alle waarden die in het bronpad worden gevonden. </li><li>`STATIC` wordt gebruikt voor waarden die in het bestemmingspad worden geïnjecteerd. Deze waarde blijft constant en wordt niet beïnvloed door het bronschema.</li><li> `EXPRESSION` wordt gebruikt voor een expressie die tijdens runtime wordt opgelost. Een lijst met beschikbare expressies vindt u in het dialoogvenster [handleiding voor toewijzingsfuncties](./functions.md).</li> </ul> |
-| `source` | Voor elke vermelde afbeelding wordt de `source` Dit kenmerk geeft het veld aan dat u wilt toewijzen. Meer informatie over hoe te om uw bron te vormen kan in worden gevonden [overzicht van bronnen](../sources/home.md). |
-| `destination` | Voor elke vermelde afbeelding wordt de `destination` kenmerk geeft het veld aan, of het pad naar het veld, waar de waarde wordt geëxtraheerd uit het `source` wordt geplaatst. Meer informatie over hoe te om uw bestemmingen te vormen kan in worden gevonden [doeloverzicht](../destinations/home.md). |
-| `mappings.name` | (*Optioneel*) Een naam voor de toewijzing. |
-| `mappings.description` | (*Optioneel*) Een beschrijving van de toewijzing. |
+| `sourceType` | Voor elke vermelde afbeelding geeft het kenmerk `sourceType` het type bron aan dat moet worden toegewezen. Kan een van `ATTRIBUTE` , `STATIC` of `EXPRESSION` zijn: <ul><li> `ATTRIBUTE` wordt gebruikt voor alle waarden die in het bronpad worden gevonden. </li><li>`STATIC` wordt gebruikt voor waarden die in het doelpad worden geïnjecteerd. Deze waarde blijft constant en wordt niet beïnvloed door het bronschema.</li><li> `EXPRESSION` wordt gebruikt voor een expressie die tijdens runtime wordt opgelost. Een lijst van beschikbare uitdrukkingen kan in de [ handleiding van toewijzingsfuncties ](./functions.md) worden gevonden.</li> </ul> |
+| `source` | Voor elke vermelde afbeelding geeft het kenmerk `source` het veld aan dat u wilt toewijzen. Meer informatie over hoe te om uw bron te vormen kan in het [ overzicht van bronnen ](../sources/home.md) worden gevonden. |
+| `destination` | Voor elke vermelde toewijzing geeft het kenmerk `destination` het veld aan of het pad naar het veld, waar de waarde die uit het veld `source` is geëxtraheerd, wordt geplaatst. Meer informatie over hoe te om uw bestemmingen te vormen kan in het [ bestemmingsoverzicht ](../destinations/home.md) worden gevonden. |
+| `mappings.name` | (*Facultatieve*) een naam voor de afbeelding. |
+| `mappings.description` | (*Facultatieve*) een beschrijving van de afbeelding. |
 
 ## Toewijzingsbronnen configureren
 
-In een afbeelding worden de `source` Dit kan een veld, expressie of statische waarde zijn. Op basis van het opgegeven brontype kan de waarde op verschillende manieren worden geëxtraheerd.
+In een afbeelding kan de `source` een veld, expressie of statische waarde zijn. Op basis van het opgegeven brontype kan de waarde op verschillende manieren worden geëxtraheerd.
 
 ### Veld in kolomgegevens
 
-Wanneer u een veld toewijst aan kolomgegevens, zoals een CSV-bestand, gebruikt u de opdracht `ATTRIBUTE` brontype. Als het veld `.` binnen de naam ervan gebruiken `\` om de waarde te verwijderen. Hieronder vindt u een voorbeeld van deze toewijzing:
+Wanneer u een veld toewijst aan kolomgegevens, zoals een CSV-bestand, gebruikt u het brontype `ATTRIBUTE` . Als het veld `.` in de naam bevat, gebruikt u `\` om de waarde te laten ontsnappen. Hieronder vindt u een voorbeeld van deze toewijzing:
 
-**CSV-bestand voorbeeld:**
+**Csv- dossier van de Steekproef:**
 
 ```csv
 Full.Name, Email
 John Smith, js@example.com
 ```
 
-**Voorbeeldtoewijzing**
+**de afbeelding van de Steekproef**
 
 ```json
 {
@@ -116,9 +116,9 @@ John Smith, js@example.com
 
 ### Veld in geneste gegevens
 
-Wanneer u een veld in geneste gegevens toewijst, zoals een JSON-bestand, gebruikt u de opdracht `ATTRIBUTE` brontype. Als het veld `.` binnen de naam ervan gebruiken `\` om de waarde te verwijderen. Hieronder vindt u een voorbeeld van deze toewijzing:
+Wanneer u een veld toewijst aan geneste gegevens, zoals een JSON-bestand, gebruikt u het brontype `ATTRIBUTE` . Als het veld `.` in de naam bevat, gebruikt u `\` om de waarde te laten ontsnappen. Hieronder vindt u een voorbeeld van deze toewijzing:
 
-**Voorbeeld-JSON-bestand**
+**Steekproef JSON- dossier**
 
 ```json
 {
@@ -129,7 +129,7 @@ Wanneer u een veld in geneste gegevens toewijst, zoals een JSON-bestand, gebruik
 }
 ```
 
-**Voorbeeldtoewijzing**
+**de afbeelding van de Steekproef**
 
 ```json
 {
@@ -151,9 +151,9 @@ Wanneer u een veld in geneste gegevens toewijst, zoals een JSON-bestand, gebruik
 
 ### Veld binnen een array
 
-Wanneer u een veld in een array toewijst, kunt u een specifieke waarde ophalen met een index. Om dit te doen, gebruik `ATTRIBUTE` Het brontype en de index van de waarde die u wilt toewijzen. Hieronder vindt u een voorbeeld van deze toewijzing:
+Wanneer u een veld in een array toewijst, kunt u een specifieke waarde ophalen met een index. Hiervoor gebruikt u het brontype `ATTRIBUTE` en de index van de waarde die u wilt toewijzen. Hieronder vindt u een voorbeeld van deze toewijzing:
 
-**Voorbeeld-JSON-bestand**
+**Steekproef JSON- dossier**
 
 ```json
 {
@@ -172,7 +172,7 @@ Wanneer u een veld in een array toewijst, kunt u een specifieke waarde ophalen m
 }
 ```
 
-**Voorbeeldtoewijzing**
+**de afbeelding van de Steekproef**
 
 ```json
 {
@@ -194,9 +194,9 @@ Wanneer u een veld in een array toewijst, kunt u een specifieke waarde ophalen m
 
 ### Array naar array of object naar object
 
-Met de `ATTRIBUTE` brontype, kunt u een array ook rechtstreeks toewijzen aan een array of een object aan een object. Hieronder vindt u een voorbeeld van deze toewijzing:
+Met behulp van het brontype `ATTRIBUTE` kunt u een array ook rechtstreeks toewijzen aan een array of een object aan een object. Hieronder vindt u een voorbeeld van deze toewijzing:
 
-**Voorbeeld-JSON-bestand**
+**Steekproef JSON- dossier**
 
 ```json
 {
@@ -215,7 +215,7 @@ Met de `ATTRIBUTE` brontype, kunt u een array ook rechtstreeks toewijzen aan een
 }
 ```
 
-**Voorbeeldtoewijzing**
+**de afbeelding van de Steekproef**
 
 ```json
 {
@@ -246,9 +246,9 @@ Met de `ATTRIBUTE` brontype, kunt u een array ook rechtstreeks toewijzen aan een
 
 ### Interactieve bewerkingen op arrays
 
-Met de `ATTRIBUTE` brontype, kunt u door series herhaling en kaart hen aan een doelschema door een vervangingsindex te gebruiken (`[*]`). Hieronder vindt u een voorbeeld van deze toewijzing:
+Met behulp van het brontype `ATTRIBUTE` kunt u arrays doorlopen en toewijzen aan een doelschema met behulp van een jokertekenindex (`[*]` ). Hieronder vindt u een voorbeeld van deze toewijzing:
 
-**Voorbeeld-JSON-bestand**
+**Steekproef JSON- dossier**
 
 ```json
 {
@@ -267,7 +267,7 @@ Met de `ATTRIBUTE` brontype, kunt u door series herhaling en kaart hen aan een d
 }
 ```
 
-**Voorbeeldtoewijzing**
+**de afbeelding van de Steekproef**
 
 ```json
 {
@@ -298,9 +298,9 @@ Met de `ATTRIBUTE` brontype, kunt u door series herhaling en kaart hen aan een d
 
 ### Constante waarde
 
-Als u een constante of een statische waarde wilt toewijzen, gebruikt u de opdracht `STATIC` brontype.  Wanneer u de opdracht `STATIC` brontype, de `source` vertegenwoordigt de hard-gecodeerde waarde die u aan wilt toewijzen `destination`. Hieronder vindt u een voorbeeld van deze toewijzing:
+Als u een constante of een statische waarde wilt toewijzen, gebruikt u het brontype `STATIC` .  Wanneer u het brontype `STATIC` gebruikt, vertegenwoordigt `source` de hard-gecodeerde waarde die u aan `destination` wilt toewijzen. Hieronder vindt u een voorbeeld van deze toewijzing:
 
-**Voorbeeld-JSON-bestand**
+**Steekproef JSON- dossier**
 
 ```json
 {
@@ -309,7 +309,7 @@ Als u een constante of een statische waarde wilt toewijzen, gebruikt u de opdrac
 }
 ```
 
-**Voorbeeldtoewijzing**
+**de afbeelding van de Steekproef**
 
 ```json
 {
@@ -329,9 +329,9 @@ Als u een constante of een statische waarde wilt toewijzen, gebruikt u de opdrac
 
 ### Expressies
 
-Als u een expressie wilt toewijzen, gebruikt u de opdracht `EXPRESSION` brontype. Een lijst met geaccepteerde functies vindt u in het dialoogvenster [handleiding voor toewijzingsfuncties](./functions.md). Wanneer u de opdracht `EXPRESSION` brontype, de `source` vertegenwoordigt de functie u wilt oplossen. Hieronder vindt u een voorbeeld van deze toewijzing:
+Als u een expressie wilt toewijzen, gebruikt u het brontype `EXPRESSION` . Een lijst van toegelaten functies kan in de [ handleiding van toewijzingsfuncties ](./functions.md) worden gevonden. Wanneer u het brontype `EXPRESSION` gebruikt, vertegenwoordigt `source` de functie die u wilt omzetten. Hieronder vindt u een voorbeeld van deze toewijzing:
 
-**Voorbeeld-JSON-bestand**
+**Steekproef JSON- dossier**
 
 ```json
 {
@@ -341,7 +341,7 @@ Als u een expressie wilt toewijzen, gebruikt u de opdracht `EXPRESSION` brontype
 }
 ```
 
-**Voorbeeldtoewijzing**
+**de afbeelding van de Steekproef**
 
 ```json
 {
@@ -363,13 +363,13 @@ Als u een expressie wilt toewijzen, gebruikt u de opdracht `EXPRESSION` brontype
 
 ## Toewijzingsdoelen configureren
 
-In een afbeelding worden de `destination` is de locatie waar de waarde uit de `source` wordt ingevoegd.
+In een toewijzing is `destination` de locatie waar de waarde die uit `source` wordt geëxtraheerd, wordt ingevoegd.
 
 ### Veld op hoofdniveau
 
-Wanneer u de `source` de waarde tot het wortelniveau van uw getransformeerde gegevens, volgt het voorbeeld hieronder:
+Wanneer u de `source` -waarde wilt toewijzen aan het hoofdniveau van de getransformeerde gegevens, volgt u het onderstaande voorbeeld:
 
-**Voorbeeld-JSON-bestand**
+**Steekproef JSON- dossier**
 
 ```json
 {
@@ -380,7 +380,7 @@ Wanneer u de `source` de waarde tot het wortelniveau van uw getransformeerde geg
 }
 ```
 
-**Voorbeeldtoewijzing**
+**de afbeelding van de Steekproef**
 
 ```json
 {
@@ -400,9 +400,9 @@ Wanneer u de `source` de waarde tot het wortelniveau van uw getransformeerde geg
 
 ### Geneste veld
 
-Wanneer u de `source` volgt u het onderstaande voorbeeld om een waarde toe te voegen aan een genest veld in uw getransformeerde gegevens:
+Wanneer u de waarde `source` wilt toewijzen aan een genest veld in uw getransformeerde gegevens, volgt u het onderstaande voorbeeld:
 
-**Voorbeeld-JSON-bestand**
+**Steekproef JSON- dossier**
 
 ```json
 {
@@ -411,7 +411,7 @@ Wanneer u de `source` volgt u het onderstaande voorbeeld om een waarde toe te vo
 }
 ```
 
-**Voorbeeldtoewijzing**
+**de afbeelding van de Steekproef**
 
 ```json
 {
@@ -433,9 +433,9 @@ Wanneer u de `source` volgt u het onderstaande voorbeeld om een waarde toe te vo
 
 ### Veld bij een specifieke arrayindex
 
-Wanneer u de `source` Volg het onderstaande voorbeeld voor een waarde van een specifieke index in een array in uw getransformeerde gegevens:
+Wanneer u de `source` -waarde wilt toewijzen aan een specifieke index in een array in uw getransformeerde gegevens, volgt u het onderstaande voorbeeld:
 
-**Voorbeeld-JSON-bestand**
+**Steekproef JSON- dossier**
 
 ```json
 {
@@ -446,7 +446,7 @@ Wanneer u de `source` Volg het onderstaande voorbeeld voor een waarde van een sp
 }
 ```
 
-**Voorbeeldtoewijzing**
+**de afbeelding van de Steekproef**
 
 ```json
 {
@@ -466,7 +466,7 @@ Wanneer u de `source` Volg het onderstaande voorbeeld voor een waarde van een sp
 
 ### Iteratieve arraybewerking
 
-Wanneer u arrays doorloopt en de waarden aan het doel wilt toewijzen, kunt u een jokertekenindex gebruiken (`[*]`). Hieronder ziet u een voorbeeld:
+Wanneer u door series wilt herhalen en de waarden aan het doel in kaart brengen, kunt u een vervangingsindex (`[*]`) gebruiken. Hieronder ziet u een voorbeeld:
 
 ```json
 {
@@ -485,7 +485,7 @@ Wanneer u arrays doorloopt en de waarden aan het doel wilt toewijzen, kunt u een
 }
 ```
 
-**Voorbeeldtoewijzing**
+**de afbeelding van de Steekproef**
 
 ```json
 {
@@ -516,4 +516,4 @@ Wanneer u arrays doorloopt en de waarden aan het doel wilt toewijzen, kunt u een
 
 ## Volgende stappen
 
-Door dit document te lezen, zou u nu moeten begrijpen hoe de kaartreeksen worden geconstrueerd, met inbegrip van hoe te om individuele afbeeldingen binnen een mappenset te vormen. Lees voor meer informatie over andere functies van Data Prep de [Overzicht van Data Prep](./home.md). Als u wilt weten hoe u toewijzingssets kunt gebruiken in de Data Prep API, leest u de [Handleiding voor ontwikkelaars van Data Prep](./api/overview.md).
+Door dit document te lezen, zou u nu moeten begrijpen hoe de kaartreeksen worden geconstrueerd, met inbegrip van hoe te om individuele afbeeldingen binnen een mappenset te vormen. Voor meer informatie over andere eigenschappen van de Prep van Gegevens, te lezen gelieve het [ overzicht van de Prep van Gegevens ](./home.md). Leren hoe te om kaartreeksen binnen de Prep API van Gegevens te gebruiken, gelieve de [ ontwikkelaarsgids van de Prep van Gegevens ](./api/overview.md) te lezen.

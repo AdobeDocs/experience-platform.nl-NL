@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 De publicatiestroom voor tags in Adobe Experience Platform verwijst naar het proces van het maken van bibliotheken, het testen van builds en het goedkeuren van deze voor productie.
 
@@ -21,17 +21,17 @@ Welke acties beschikbaar zijn in een bibliotheek, is afhankelijk van de status v
 
 In de onderstaande secties vindt u informatie over machtigingen, de bibliotheekstatus en de upstream die betrekking heeft op de publicatiestroom.
 
-## Toestemmingen {#permissions}
+## Machtigingen {#permissions}
 
-Er zijn verschillende niveaus van gebruikerstoestemmingen die voor de het publiceren stroom belangrijk zijn; in het bijzonder [!UICONTROL Develop], [!UICONTROL Approve], en [!UICONTROL Publish] eigendomsrechten:
+Er zijn verschillende niveaus van gebruikersmachtigingen die belangrijk zijn voor de publicatiestroom. Het gaat hierbij met name om de rechten van de eigenschappen [!UICONTROL Develop] , [!UICONTROL Approve] en [!UICONTROL Publish] :
 
-* **[!UICONTROL Develop]**: Omvat de capaciteit om bibliotheken tot stand te brengen, voor ontwikkeling te bouwen, en voor goedkeuring voor te leggen.
-* **[!UICONTROL Approve]**: Omvat de capaciteit om voor het opvoeren te bouwen en gefaseerde bouwstijlen goed te keuren.
-* **[!UICONTROL Publish]**: Bevat de mogelijkheid om een goedgekeurde bibliotheek te publiceren.
+* **[!UICONTROL Develop]**: biedt de mogelijkheid om bibliotheken te maken, te ontwikkelen en ter goedkeuring in te dienen.
+* **[!UICONTROL Approve]**: biedt de mogelijkheid om gefaseerde builds te maken en goed te keuren.
+* **[!UICONTROL Publish]**: hiermee kunt u een goedgekeurde bibliotheek publiceren.
 
 Deze rechten zijn niet inclusief. Eén persoon kan de workflow van begin tot eind alleen uitvoeren als aan die persoon alle drie rechten binnen een bepaalde eigenschap zijn toegekend.
 
-Zie de [gebruikershandleiding voor machtigingen](../administration/user-permissions.md) voor meer informatie over het beheren van toestemmingen voor markeringen.
+Zie de [ gids van de gebruikerstoestemmingen ](../administration/user-permissions.md) voor meer informatie bij het beheren van toestemmingen voor markeringen.
 
 ## Status van bibliotheek {#state}
 
@@ -42,7 +42,7 @@ Wanneer het over de het publiceren stroom aankomt, zijn er vier basisstaten dat 
 * [[!UICONTROL Approved]](#approved)
 * [[!UICONTROL Published]](#published)
 
-Deze vier staten worden als kolommen weergegeven in de **[!UICONTROL Publishing Flow]** tab.
+Deze vier staten worden als kolommen weergegeven op het tabblad **[!UICONTROL Publishing Flow]** .
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -52,74 +52,74 @@ Er moeten specifieke acties worden ondernomen om een bibliotheek tussen deze sta
 
 ### [!UICONTROL Development] {#development}
 
-Wanneer nieuwe bibliotheken worden gemaakt, beginnen deze in het dialoogvenster [!UICONTROL Development] status. Alle wijzigingen in een bibliotheek moeten worden aangebracht terwijl de bibliotheek zich in [!UICONTROL Development]. Wanneer de ontwikkeling en het testen zijn voltooid, kan de bibliotheek ter goedkeuring worden ingediend.
+Wanneer nieuwe bibliotheken worden gemaakt, beginnen deze in de status [!UICONTROL Development] . Wijzigingen in een bibliotheek moeten worden aangebracht terwijl de bibliotheek zich in [!UICONTROL Development] bevindt. Wanneer de ontwikkeling en het testen zijn voltooid, kan de bibliotheek ter goedkeuring worden ingediend.
 
-In de volgende tabel worden de beschikbare acties voor een bibliotheek in de [!UICONTROL Development] status:
+In de volgende tabel worden de beschikbare acties voor een bibliotheek in de status [!UICONTROL Development] weergegeven:
 
 | Actie | Beschrijving |
 | --- | --- |
-| [!UICONTROL Edit] | Gebruik de [!UICONTROL Edit Library] scherm om componenten aan de bibliotheek toe te voegen of te verwijderen. |
+| [!UICONTROL Edit] | Met het scherm [!UICONTROL Edit Library] kunt u componenten toevoegen aan of verwijderen uit de bibliotheek. |
 | [!UICONTROL Build to Development] | Maak een build voor de bibliotheek. De build wordt gecompileerd en geïmplementeerd in de omgeving waaraan de bibliotheek is toegewezen. Deze stap mislukt als de bibliotheek niet aan een omgeving is toegewezen of als de bibliotheek een wijziging bevat die al in de upstream is gedefinieerd. |
-| [!UICONTROL Submit for Approval] | Wijs de bibliotheek niet toe aan de ontwikkelomgeving en verplaats de bibliotheek naar de [!UICONTROL Submitted] kolom voor een gebruiker met toestemmingen om aan te werken. Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
-| [!UICONTROL Submit & Build to Staging] | Dit kan alleen worden uitgevoerd door een gebruiker met zowel de rechten Ontwikkelen als Goedkeuren. Hiermee wordt de toewijzing van de bibliotheek aan de ontwikkelomgeving ongedaan gemaakt, wordt de bibliotheek naar de [!UICONTROL Submitted] status en bouwt de bibliotheek naar de testomgeving. Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
-| [!UICONTROL Approve for Publishing] | Dit kan alleen worden uitgevoerd door een gebruiker met zowel de rechten Ontwikkelen als Goedkeuren. Met deze handeling wordt de toewijzing van de bibliotheek aan de ontwikkelomgeving ongedaan gemaakt en wordt de bibliotheek naar de [!UICONTROL Approved] staat - de testomgeving en de [!UICONTROL Submitted] staat volledig. Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
-| [!UICONTROL Approve & Publish to Production] | Dit kan alleen worden uitgevoerd door een gebruiker met de rechten Ontwikkelen, Goedkeuren en Publiceren. Met deze handeling wordt de toewijzing van de bibliotheek aan de ontwikkelomgeving ongedaan gemaakt en wordt de bibliotheek naar de [!UICONTROL Approved] staat en publiceert naar productie. Na voltooiing van de productiebuild wordt de bibliotheek verplaatst naar de [!UICONTROL Published] status. Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
+| [!UICONTROL Submit for Approval] | Wijs de bibliotheek niet toe vanuit de ontwikkelomgeving en verplaats de bibliotheek naar de kolom [!UICONTROL Submitted] , zodat een gebruiker met goedkeuringsmachtigingen eraan kan werken. Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
+| [!UICONTROL Submit & Build to Staging] | Dit kan alleen worden uitgevoerd door een gebruiker met zowel de rechten Ontwikkelen als Goedkeuren. Deze actie verwijdert de toewijzing van de bibliotheek uit de ontwikkelomgeving, verplaatst de bibliotheek naar de status [!UICONTROL Submitted] en bouwt de bibliotheek naar de testomgeving. Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
+| [!UICONTROL Approve for Publishing] | Dit kan alleen worden uitgevoerd door een gebruiker met zowel de rechten Ontwikkelen als Goedkeuren. Deze actie verwijdert de toewijzing van de bibliotheek uit de ontwikkelomgeving en verplaatst deze naar de status [!UICONTROL Approved] (de testomgeving en de status [!UICONTROL Submitted] worden volledig overgeslagen). Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
+| [!UICONTROL Approve & Publish to Production] | Dit kan alleen worden uitgevoerd door een gebruiker met de rechten Ontwikkelen, Goedkeuren en Publish. Met deze handeling wordt de toewijzing van de bibliotheek aan de ontwikkelomgeving ongedaan gemaakt, verplaatst naar de status [!UICONTROL Approved] en gepubliceerd naar productie. Nadat de productiebuild is voltooid, wordt de bibliotheek naar de status [!UICONTROL Published] verplaatst. Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
 | [!UICONTROL Delete] | Verwijder de bibliotheek van het systeem. Hierdoor wordt de build niet uit de omgeving verwijderd. |
 
 ### [!UICONTROL Submitted] {#submitted}
 
-Wanneer een bibliotheek zich in de [!UICONTROL Submitted] een gebruiker met goedkeuringsmachtigingen kan de bibliotheek in de testomgeving testen. Wanneer het testen is voltooid, kan de bibliotheek worden goedgekeurd of geweigerd. Geweigerde builds gaan terug naar [!UICONTROL Development] Er kunnen dus aanvullende wijzigingen worden aangebracht voordat u de publicatiestroom opnieuw start.
+Wanneer een bibliotheek de status [!UICONTROL Submitted] heeft, kan een gebruiker met goedkeuringsmachtigingen de bibliotheek testen in de testomgeving. Wanneer het testen is voltooid, kan de bibliotheek worden goedgekeurd of geweigerd. Geweigerde builds gaan terug naar [!UICONTROL Development] , zodat er aanvullende wijzigingen kunnen worden aangebracht voordat de publicatiestroom opnieuw wordt gestart.
 
-In de volgende tabel worden de beschikbare acties voor een bibliotheek in de [!UICONTROL Submitted] status:
+In de volgende tabel worden de beschikbare acties voor een bibliotheek in de status [!UICONTROL Submitted] weergegeven:
 
 | Actie | Beschrijving |
 | --- | --- |
-| [!UICONTROL Open] | De inhoud van de bibliotheek weergeven. Wijzigingen zijn niet toegestaan voor bibliotheken buiten de [!UICONTROL Development] kolom. Als er wijzigingen nodig zijn, moet de bibliotheek worden afgewezen zodat er wijzigingen kunnen worden aangebracht in [!UICONTROL Development]. |
+| [!UICONTROL Open] | De inhoud van de bibliotheek weergeven. Wijzigingen zijn niet toegestaan voor bibliotheken buiten de kolom [!UICONTROL Development] . Als er wijzigingen nodig zijn, moet de bibliotheek worden afgewezen zodat er wijzigingen kunnen worden aangebracht in [!UICONTROL Development] . |
 | [!UICONTROL Build for Staging] | Bouw de bibliotheek in het opvoeren milieu voor plaatsing. |
-| [!UICONTROL Approve for Publishing] | De bibliotheek naar de [!UICONTROL Approved] kolom voor een gebruiker met publicatiemachtigingen om aan te werken. |
-| [!UICONTROL Approve & Publish to Production] | Dit kan alleen worden uitgevoerd door een gebruiker met zowel Goedkeuren als Publicatierechten. Hiermee wordt de toewijzing van de bibliotheek uit de testomgeving verwijderd en verplaatst naar de [!UICONTROL Approved] staat en publiceert naar productie. Na voltooiing van de productiebuild wordt de bibliotheek verplaatst naar de [!UICONTROL Published] status. Dit kan met ons zonder een succesvolle bouwstijl in het opvoeren van milieu worden uitgevoerd. |
-| [!UICONTROL Reject] | Wijs de bibliotheek niet toe vanuit de testomgeving en verplaats de bibliotheek terug naar de [!UICONTROL Development] kolom voor verdere wijzigingen. |
+| [!UICONTROL Approve for Publishing] | Verplaats de bibliotheek naar de kolom [!UICONTROL Approved] zodat een gebruiker met publicatiemachtigingen eraan kan werken. |
+| [!UICONTROL Approve & Publish to Production] | Dit kan alleen worden uitgevoerd door een gebruiker met zowel de rechten Goedkeuren als Publish. Met deze handeling wordt de toewijzing van de bibliotheek aan de testomgeving ongedaan gemaakt, verplaatst naar de status [!UICONTROL Approved] en gepubliceerd naar productie. Nadat de productiebuild is voltooid, wordt de bibliotheek naar de status [!UICONTROL Published] verplaatst. Dit kan met ons zonder een succesvolle bouwstijl in het opvoeren van milieu worden uitgevoerd. |
+| [!UICONTROL Reject] | Wijs de bibliotheek niet toe vanuit de testomgeving en verplaats de bibliotheek terug naar de kolom [!UICONTROL Development] voor verdere wijzigingen. |
 
 ### [!UICONTROL Approved] {#approved}
 
-Nadat een bibliotheek is goedgekeurd, kan een gebruiker met publicatiemachtigingen de bibliotheek publiceren of afwijzen. Geweigerde builds gaan terug naar [!UICONTROL Development] zodat verdere wijzigingen kunnen worden aangebracht voordat de publicatiestroom opnieuw begint.
+Nadat een bibliotheek is goedgekeurd, kan een gebruiker met publicatiemachtigingen de bibliotheek publiceren of afwijzen. Geweigerde builds gaan terug naar [!UICONTROL Development] , zodat verdere wijzigingen kunnen worden aangebracht voordat de publicatiestroom opnieuw begint.
 
-In de volgende tabel worden de beschikbare acties voor een bibliotheek in de [!UICONTROL Approved] status:
+In de volgende tabel worden de beschikbare acties voor een bibliotheek in de status [!UICONTROL Approved] weergegeven:
 
 | Actie | Beschrijving |
 | --- | --- |
-| [!UICONTROL Open] | De inhoud van de bibliotheek weergeven. Wijzigingen zijn niet toegestaan voor bibliotheken buiten de [!UICONTROL Development] kolom. Als er wijzigingen nodig zijn, moet de bibliotheek worden afgewezen zodat er wijzigingen kunnen worden aangebracht in [!UICONTROL Development]. |
-| [!UICONTROL Build and Publish to Production] | Wijs de bibliotheek uit de testomgeving weg, wijs de bibliotheek aan het productiemilieu toe, en stel het op.<br><br>**Belangrijk**: Als deze optie is geselecteerd, wordt uw bibliotheek live in uw productieomgeving. Controleer of de bibliotheek de gewenste wijzigingen bevat voordat u deze optie selecteert. |
-| [!UICONTROL Reject] | Wijs de bibliotheek niet toe aan de testomgeving en verplaats de bibliotheek naar de [!UICONTROL Development] kolom voor verdere wijzigingen. |
+| [!UICONTROL Open] | De inhoud van de bibliotheek weergeven. Wijzigingen zijn niet toegestaan voor bibliotheken buiten de kolom [!UICONTROL Development] . Als er wijzigingen nodig zijn, moet de bibliotheek worden afgewezen zodat er wijzigingen kunnen worden aangebracht in [!UICONTROL Development] . |
+| [!UICONTROL Build and Publish to Production] | Wijs de bibliotheek uit de testomgeving weg, wijs de bibliotheek aan het productiemilieu toe, en stel het op.<br><br>**Belangrijk**: Wanneer deze optie wordt geselecteerd, wordt uw bibliotheek levend in uw productiemilieu. Controleer of de bibliotheek de gewenste wijzigingen bevat voordat u deze optie selecteert. |
+| [!UICONTROL Reject] | Wijs de bibliotheek niet toe vanuit de testomgeving en verplaats de bibliotheek naar de kolom [!UICONTROL Development] voor verdere wijzigingen. |
 
 ### [!UICONTROL Published] {#published}
 
-De [!UICONTROL Published] in de kolom wordt aangegeven welke bibliotheken zijn gepubliceerd en welke publicatiedata zijn gepubliceerd. De momenteel gepubliceerde bibliotheek wordt weergegeven met een groene stip ernaast. Tenzij u een republish op een vorige bibliotheek hebt uitgevoerd, zal dit altijd de bibliotheek bij de bovenkant van de kolom zijn.
+In de kolom [!UICONTROL Published] ziet u welke bibliotheken zijn gepubliceerd en de publicatiedatums. De momenteel gepubliceerde bibliotheek wordt weergegeven met een groene stip ernaast. Tenzij u opnieuw publiceert op een vorige bibliotheek, zal dit altijd de bibliotheek bij de bovenkant van de kolom zijn.
 
 | Actie | Beschrijving |
 | --- | --- |
-| [!UICONTROL Open] | De inhoud van de bibliotheek weergeven. Wijzigingen zijn niet toegestaan voor bibliotheken buiten de [!UICONTROL Development] kolom. Als u wilt wijzigen wat zich in uw productieomgeving bevindt, moet u een nieuwe bibliotheek maken en deze door het volledige publicatieproces verplaatsen. |
-| [!UICONTROL Republish] | Deze actie is alleen beschikbaar voor de vijf laatst gepubliceerde bibliotheken en alleen als de productieomgeving (A) is geconfigureerd met de optie Archiveren uitgeschakeld en (b) een [!UICONTROL Managed by Adobe] host op het moment van de build. |
-| [!UICONTROL Download] | Deze actie is alleen beschikbaar voor de vijf laatst gepubliceerde bibliotheken en alleen als de productieomgeving (A) is geconfigureerd met de optie Archiveren ingeschakeld en (b) een [!UICONTROL Managed by Adobe] host op het moment van de build. |
+| [!UICONTROL Open] | De inhoud van de bibliotheek weergeven. Wijzigingen zijn niet toegestaan voor bibliotheken buiten de kolom [!UICONTROL Development] . Als u wilt wijzigen wat zich in uw productieomgeving bevindt, moet u een nieuwe bibliotheek maken en deze door het volledige publicatieproces verplaatsen. |
+| [!UICONTROL Republish] | Deze actie is alleen beschikbaar voor de vijf laatst gepubliceerde bibliotheken en alleen als de productieomgeving (A) is geconfigureerd met de optie Archiveren uitgeschakeld en (b) een [!UICONTROL Managed by Adobe] host gebruikt op het moment van de build. |
+| [!UICONTROL Download] | Deze actie is alleen beschikbaar voor de vijf laatst gepubliceerde bibliotheken en alleen als de productieomgeving (A) is geconfigureerd met de optie Archiveren ingeschakeld en (b) een [!UICONTROL Managed by Adobe] host gebruikt op het moment van de build. |
 
 ## Upstream {#upstream}
 
 Nadat u de eerste bibliotheek hebt gepubliceerd, wordt het belangrijk om de rol van de upstream te begrijpen wanneer u nieuwere bibliotheken door de publicatiestroom verplaatst.
 
-Als er momenteel een bibliotheek in de [!UICONTROL Development], [!UICONTROL Submitted], of [!UICONTROL Approved] in het werkgebied, neemt die bibliotheek de regels, gegevenselementen en extensies over van bibliotheken die upstream zijn. Deze geërfte bronnen vormen een &quot;basislijn&quot; voor elke bibliotheek terwijl deze door de publicatiestroom worden verplaatst. In wezen, kunt u aan elke nieuwe bibliotheek eenvoudig als reeks veranderingen in de basislijn denken die door upstream wordt gevestigd. Dit zorgt ervoor dat niets onverwacht van een vorige bibliotheek wordt beschreven wanneer een nieuwe herhaling wordt gepubliceerd.
+Als een bibliotheek zich momenteel in het werkgebied [!UICONTROL Development] , [!UICONTROL Submitted] of [!UICONTROL Approved] bevindt, overerft die bibliotheek de regels, gegevenselementen en extensies van bibliotheken die upstream zijn. Deze geërfte bronnen vormen een &quot;basislijn&quot; voor elke bibliotheek terwijl deze door de publicatiestroom worden verplaatst. In wezen, kunt u aan elke nieuwe bibliotheek eenvoudig als reeks veranderingen in de basislijn denken die door upstream wordt gevestigd. Dit zorgt ervoor dat niets onverwacht van een vorige bibliotheek wordt beschreven wanneer een nieuwe herhaling wordt gepubliceerd.
 
-Wat in de upstream wordt opgenomen, is afhankelijk van het huidige werkgebied van de bibliotheek. Bibliotheken in het dialoogvenster [!UICONTROL Approved] kolom erft alleen bronnen van de [!UICONTROL Published] bibliotheek, terwijl bibliotheken onder [!UICONTROL Development] erven middelen van alle andere kolommen.
+Wat in de upstream wordt opgenomen, is afhankelijk van het huidige werkgebied van de bibliotheek. Bibliotheken in de kolom [!UICONTROL Approved] nemen bijvoorbeeld alleen bronnen over van de [!UICONTROL Published] -bibliotheek, terwijl bibliotheken onder [!UICONTROL Development] bronnen van alle andere kolommen overnemen.
 
 ![](./images/approval-workflow/upstream.png)
 
-Wanneer u een bibliotheek in de gebruikersinterface bewerkt, worden alle bronnen die van de upstream zijn overgeërfd, weergegeven in het dialoogvenster **[!UICONTROL Resources Upstream]** sectie. Als u deze bronnen wilt weergeven, selecteert u het tabblad Uitvouwen onder de sectiekop.
+Wanneer u een bibliotheek bewerkt in de gebruikersinterface, worden alle bronnen die van de upstream worden overgeërfd, weergegeven in de sectie **[!UICONTROL Resources Upstream]** . Als u deze bronnen wilt weergeven, selecteert u het tabblad Uitvouwen onder de sectiekop.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 
-De sectie breidt zich uit om de individuele middelen te tonen die van upstream worden geërft. U kunt de linkerrail gebruiken om te filteren tussen [!UICONTROL Rules], [!UICONTROL Data Elements], en [!UICONTROL Extensions]of gebruik de zoekbalk om een bepaalde bron op naam op te zoeken.
+De sectie breidt zich uit om de individuele middelen te tonen die van upstream worden geërft. U kunt de linkerspoorlijn gebruiken om tussen [!UICONTROL Rules], [!UICONTROL Data Elements], en [!UICONTROL Extensions] te filtreren, of de onderzoeksbar te gebruiken om een specifieke middel op naam op te zoeken.
 
 ![](./images/approval-workflow/upstream-resources.png)
 
 ## Volgende stappen
 
-Deze handleiding biedt een uitgebreid overzicht van de publicatiestroom voor bibliotheken in Adobe Experience Platform. Raadpleeg voor meer informatie over het publiceren van bibliotheken de [publicatieoverzicht](./overview.md).
+Deze handleiding biedt een uitgebreid overzicht van de publicatiestroom voor bibliotheken in Adobe Experience Platform. Meer over leren hoe te om uw bibliotheken te publiceren, verwijs naar het [ het publiceren overzicht ](./overview.md).

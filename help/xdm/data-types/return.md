@@ -1,7 +1,8 @@
 ---
 title: Gegevenstype retourneren
 description: Leer over het gegevenstype van de Gegevens van de Ervaring van de Terugkeer Model (XDM).
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: 1fd99a25-547f-49e7-8980-dda7db2ebb8a
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 1%
@@ -10,9 +11,9 @@ ht-degree: 1%
 
 # [!UICONTROL Return] gegevenstype
 
-[!UICONTROL Return] is een standaardgegevenstype van de Gegevens van de Ervaring Model (XDM) dat de essentiële informatie met betrekking tot een Vergunning van de Goederen van de Terugkeer (RMA) vangt.
+[!UICONTROL Return] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat de essentiële informatie met betrekking tot een Vergunning van de Handel van de Terugkeer (RMA) vangt.
 
-![Een diagram van het gegevenstype Return.](../images/data-types/return.png)
+![ A diagram van het gegevenstype van de Terugkeer.](../images/data-types/return.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |----------------------------------|----------------------|-----------|--------------------------------------------------|
@@ -24,6 +25,5 @@ ht-degree: 1%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/return.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/return.schema.json)
-
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/return.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/return.schema.json)

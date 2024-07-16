@@ -7,7 +7,7 @@ badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/le
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '984'
 ht-degree: 2%
 
 ---
@@ -22,137 +22,137 @@ Dit leerprogramma begeleidt u door de stappen om scoredoelstellingen van de voor
 
 ## Een nieuwe score maken
 
-Als u een nieuwe score wilt maken, selecteert u de **[!UICONTROL Services]** in de zijbalk en selecteer **[!UICONTROL Create score]**.
+Als u een nieuwe score wilt maken, selecteert u **[!UICONTROL Services]** in het zijpaneel en selecteert u **[!UICONTROL Create score]** .
 
-![plas-new-score](../assets/../b2b-ai-ml-services/assets/plas-create-score.png)
+![ plas-new-score ](../assets/../b2b-ai-ml-services/assets/plas-create-score.png)
 
-De **[!UICONTROL Basic information]** wordt weergegeven en u wordt gevraagd een profieltype te selecteren, een naam en een optionele beschrijving in te voeren. Selecteer **[!UICONTROL Next]**.
+Het scherm **[!UICONTROL Basic information]** wordt weergegeven en u wordt gevraagd een profieltype te selecteren, een naam en een optionele beschrijving in te voeren. Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![plas-enter-basic-information](../assets/../b2b-ai-ml-services/assets/plas-basic-information.png)
+![ plas-enter-basis-informatie ](../assets/../b2b-ai-ml-services/assets/plas-basic-information.png)
 
-De **[!UICONTROL Define your goal]** wordt weergegeven. Selecteer de vervolgkeuzepijl en selecteer vervolgens een doeltype in het vervolgkeuzevenster dat wordt weergegeven.
+Het scherm **[!UICONTROL Define your goal]** wordt weergegeven. Selecteer de vervolgkeuzepijl en selecteer vervolgens een doeltype in het vervolgkeuzevenster dat wordt weergegeven.
 
-![plas-select-a-target](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
+![ plas-selecteren-a-doel ](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
 
-De **[!UICONTROL Goal specifics]** wordt geopend. Selecteer de vervolgkeuzepijl en selecteer vervolgens de naam van het doelveld in het vervolgkeuzevenster dat wordt weergegeven.
+Het dialoogvenster **[!UICONTROL Goal specifics]** wordt geopend. Selecteer de vervolgkeuzepijl en selecteer vervolgens de naam van het doelveld in het vervolgkeuzevenster dat wordt weergegeven.
 
-![plas-select-a-target-field-name](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
+![ plas-uitgezochte-a-doel-gebied-naam ](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
 
-De **[!UICONTROL Goal conditions]** wordt weergegeven. Selecteer de vervolgkeuzepijl en selecteer vervolgens de voorwaarde in het vervolgkeuzevenster dat wordt weergegeven.
+De selectie van **[!UICONTROL Goal conditions]** wordt weergegeven. Selecteer de vervolgkeuzepijl en selecteer vervolgens de voorwaarde in het vervolgkeuzevenster dat wordt weergegeven.
 
-![plas-target-specifics-condition](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
+![ plas-doel-specificatie-voorwaarde ](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
 
-De **[!UICONTROL Goal value]** wordt weergegeven. Vervolgens configureert u uw [!UICONTROL Goal specifics]. Selecteer de [!UICONTROL Enter Field Value] en voer de waarde van uw doel in.
+Het veld **[!UICONTROL Goal value]** wordt weergegeven. Configureer vervolgens de [!UICONTROL Goal specifics] . Selecteer het deelvenster [!UICONTROL Enter Field Value] en voer de waarde van uw doel in.
 
 >[!NOTE]
 >
 >U kunt meerdere doelwaarden toevoegen.
 
-![plas-target-specifics-field-value](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-value.png)
+![ plas-doel-specifiek-gebied-waarde ](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-value.png)
 
-Als u aanvullende velden wilt toevoegen, selecteert u **[!UICONTROL Add field]**.
+Selecteer **[!UICONTROL Add field]** als u aanvullende velden wilt toevoegen.
 
-![plas-target-specifics-add-event](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-add-event.png)
+![ plas-doel-specifiek-toe:voegen-gebeurtenis ](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-add-event.png)
 
 Selecteer de vervolgkeuzepijl en selecteer vervolgens het gewenste tijdframe om de voorspelling te configureren.
 
-![plas-prediction-timeframe](../assets/../b2b-ai-ml-services/assets/plas-prediction-timeframe.png)
+![ plas-voorspelling-timeframe ](../assets/../b2b-ai-ml-services/assets/plas-prediction-timeframe.png)
 
-Het geselecteerde samenvoegbeleid bepaalt hoe de veldwaarden van een personenprofiel worden geselecteerd. Selecteer met de vervolgkeuzepijl het gewenste samenvoegbeleid en selecteer **[!UICONTROL Finish]**.
+Het geselecteerde samenvoegbeleid bepaalt hoe de veldwaarden van een personenprofiel worden geselecteerd. Selecteer met de vervolgkeuzepijl het gewenste samenvoegbeleid en selecteer vervolgens **[!UICONTROL Finish]** .
 
-De **[!UICONTROL Scoring setup is complete]** wordt bevestigd dat de nieuwe score is gemaakt. Selecteer **[!UICONTROL OK]**.
+Het dialoogvenster **[!UICONTROL Scoring setup is complete]** wordt weergegeven met de bevestiging dat de nieuwe score is gemaakt. Selecteer **[!UICONTROL OK]**.
 
-![plas-score-complete](../assets/../b2b-ai-ml-services/assets/plas-score-complete.png)
+![ plas-score-volledige ](../assets/../b2b-ai-ml-services/assets/plas-score-complete.png)
 
 >[!NOTE]
 >
 >Het kan tot 24 uur duren voor elk scoringsproces wordt voltooid.
 
-U bent teruggekeerd aan **[!UICONTROL Services]** Hier kunt u de nieuwe score zien die in de lijst met scores is gemaakt.
+U keert terug naar het tabblad **[!UICONTROL Services]** waar u de nieuwe score kunt zien die is gemaakt in de lijst met scores.
 
-![met plas-score](../assets/../b2b-ai-ml-services/assets/plas-score-created.png)
+![ plas-score-gecreeerde ](../assets/../b2b-ai-ml-services/assets/plas-score-created.png)
 
 Selecteer de score om details en aanvullende informatie over de details van de laatste uitvoering weer te geven.
 
-![plas-score-extra-informatie](../assets/../b2b-ai-ml-services/assets/plas-score-info.png)
+![ plas-score-extra-informatie ](../assets/../b2b-ai-ml-services/assets/plas-score-info.png)
 
-Voor meer gedetailleerde informatie over de foutcodes die u kunt zien onder de laatste run-details, raadpleegt u de sectie over [leidt tot AI pijpleidingsfoutencodes](#leads-ai-pipeline-error-codes) in dit document.
+Voor meer gedetailleerde informatie over de foutencodes die onder de laatste looppasdetails kunnen worden gezien, gelieve naar de sectie op [ te verwijzen leidt AI de codes van de pijpleidingsfout ](#leads-ai-pipeline-error-codes) in dit document.
 
 ## Een score bewerken
 
-Als u een score wilt bewerken, selecteert u een score in het menu **[!UICONTROL Services]** en selecteert u **[!UICONTROL Edit]** in het deelvenster Extra details aan de rechterkant van het scherm.
+Als u een score wilt bewerken, selecteert u een score op de tab **[!UICONTROL Services]** en selecteert u **[!UICONTROL Edit]** in het deelvenster Extra details aan de rechterkant van het scherm.
 
-![plas-edit-score](../assets/../b2b-ai-ml-services/assets/plas-edit-score.png)
+![ plas-geef-score ](../assets/../b2b-ai-ml-services/assets/plas-edit-score.png) uit
 
-De **[!UICONTROL Edit instance]** wordt weergegeven, waar u de beschrijving van de score kunt bewerken. Breng uw wijzigingen aan en selecteer **[!UICONTROL Save]**.
+Het dialoogvenster **[!UICONTROL Edit instance]** wordt weergegeven. Hier kunt u de beschrijving van de score bewerken. Breng de gewenste wijzigingen aan en selecteer **[!UICONTROL Save]** .
 
-![plas-edit-save](../assets/../b2b-ai-ml-services/assets/plas-edit-save.png)
+![ plas-geef-sparen ](../assets/../b2b-ai-ml-services/assets/plas-edit-save.png)
 
 >[!NOTE]
 >
 >De scoreconfiguratie kan niet worden gewijzigd omdat dit modelomscholing en re-scoring teweegbrengt. Het equivalent hiervan is het verwijderen van de score en het maken van een nieuwe score. Als u de configuratie van de score wilt bewerken, moet u deze score klonen of een nieuwe score maken.
 
-U bent teruggekeerd aan **[!UICONTROL Services]** tab. Selecteer de score om de bijgewerkte beschrijvingsdetails in het extra detailpaneel op de rechterkant van het scherm te bekijken.
+U wordt teruggestuurd naar het tabblad **[!UICONTROL Services]** . Selecteer de score om de bijgewerkte beschrijvingsdetails in het extra detailpaneel op de rechterkant van het scherm te bekijken.
 
 ## Een score klonen
 
-Om een score te klonen, selecteer een score van **[!UICONTROL Services]** en selecteert u **[!UICONTROL Clone]** in het deelvenster Extra details aan de rechterkant van het scherm.
+Als u een score wilt klonen, selecteert u een score op de tab **[!UICONTROL Services]** en selecteert u **[!UICONTROL Clone]** in het deelvenster Extra details aan de rechterkant van het scherm.
 
-![plas-clone-score](../assets/../b2b-ai-ml-services/assets/plas-clone-score.png)
+![ plas-klone-score ](../assets/../b2b-ai-ml-services/assets/plas-clone-score.png)
 
-De **[!UICONTROL Basic information]** wordt weergegeven. Het profieltype, de naam en de beschrijving worden gekloond op basis van de oorspronkelijke score. Wijzig deze details en selecteer **[!UICONTROL Next]**.
+Het scherm **[!UICONTROL Basic information]** wordt weergegeven. Het profieltype, de naam en de beschrijving worden gekloond op basis van de oorspronkelijke score. Wijzig deze details en selecteer **[!UICONTROL Next]** .
 
-![plas-clone-basic-info](../assets/../b2b-ai-ml-services/assets/plas-clone-basic-info.png)
+![ plas-clone-basic-info ](../assets/../b2b-ai-ml-services/assets/plas-clone-basic-info.png)
 
-De **[!UICONTROL Define your goal]** wordt weergegeven. Voltooi de sectie Doelen zoals u zou wanneer het creëren van een nieuwe score en selecteer **[!UICONTROL Finish]**.
+Het scherm **[!UICONTROL Define your goal]** wordt weergegeven. Voltooi de doelsectie zoals u zou toen het creëren van een nieuwe score en selecteer **[!UICONTROL Finish]**.
 
-U bent teruggekeerd aan **[!UICONTROL Services]** Hier ziet u de zojuist gekloonde score in de lijst.
+U keert terug naar het tabblad **[!UICONTROL Services]** waar u de zojuist gekloonde score in de lijst kunt zien.
 
 >[!NOTE]
 >
->De **[!UICONTROL Define your goal]** wordt niet gekloond vanaf de oorspronkelijke score.
+>De sectie **[!UICONTROL Define your goal]** wordt niet gekloond op basis van de oorspronkelijke score.
 
 ## Muziek verwijderen
 
-Om een score te schrappen, selecteer een score van **[!UICONTROL Services]** en selecteert u **[!UICONTROL Delete]** in het deelvenster Extra details aan de rechterkant van het scherm.
+Als u een score wilt verwijderen, selecteert u een score op de tab **[!UICONTROL Services]** en selecteert u **[!UICONTROL Delete]** in het deelvenster Extra details aan de rechterkant van het scherm.
 
-![plas-delete-score](../assets/../b2b-ai-ml-services/assets/plas-delete-score.png)
+![ plas-schrapping-score ](../assets/../b2b-ai-ml-services/assets/plas-delete-score.png)
 
-De **[!UICONTROL Delete documentation]** bevestigingsvenster verschijnt. Selecteer **[!UICONTROL Delete]**.
+Het bevestigingsvenster van **[!UICONTROL Delete documentation]** wordt weergegeven. Selecteer **[!UICONTROL Delete]**.
 
-![plas-delete-score-bevestiging](../assets/../b2b-ai-ml-services/assets/plas-delete-score-confirmation.png)
+![ plas-schrapping-score-bevestiging ](../assets/../b2b-ai-ml-services/assets/plas-delete-score-confirmation.png)
 
 >[!NOTE]
 >
 >Als u de muziekdefinitie verwijdert, worden ook alle voorspelde scores in het profiel van de persoon of het account verwijderd, maar niet de veldgroep die voor de muziekdefinitie is gemaakt. De veldgroep wordt in het gegevensmodel &#39;wees&#39; gelaten.
 
-U bent teruggekeerd aan **[!UICONTROL Services]** waar u de score niet meer in de lijst kunt zien.
+U keert terug naar het tabblad **[!UICONTROL Services]** waar u de score niet meer kunt zien in de lijst.
 
 ## Voorloopfoutcodes voor AI-pijpleidingen
 
 | Foutcode | Foutbericht |
 | --- | --- |
-| 401 | FOUT 401. De AI-pijpleiding voor leads is gestopt: onvoldoende geldige accounts voor accountscoring. Aantal rekeningen: {}. |
+| 401 | FOUT 401. De AI-pijpleiding voor leads is gestopt: onvoldoende geldige accounts voor accountscoring. Aantal accounts: {}. |
 | 402 | FOUT 402. Leidt AI pijpleiding tegengehouden: niet genoeg geldige contacten voor contactscore. Aantal contactpersonen: {}. |
 | 403 | FOUT 403. De AI-pijplijn van leads is gestopt: onvoldoende activiteitenvolume voor modeltraining. Aantal gebeurtenissen: {}. |
-| 404 | FOUT 404. De AI-pijplijn van leads is gestopt: onvoldoende conversies voor modeltraining. Aantal omzettingen: {}. |
-| 405 | FOUT 405. De AI-pijplijn van leads is gestopt: de activiteit is te beperkt voor een geldige modeltraining. Alleen {} percent van rekeningen heeft activiteit. |
-| 406 | FOUT 406. De AI-pijplijn van leads is gestopt: de activiteit is te beperkt voor een geldige modeltraining. Alleen {} percent van contacten heeft activiteit. |
+| 404 | FOUT 404. De AI-pijplijn van leads is gestopt: onvoldoende conversies voor modeltraining. Aantal conversies: {}. |
+| 405 | FOUT 405. De AI-pijplijn van leads is gestopt: de activiteit is te beperkt voor een geldige modeltraining. Slechts {} procent van de accounts heeft activiteit. |
+| 406 | FOUT 406. De AI-pijplijn van leads is gestopt: de activiteit is te beperkt voor een geldige modeltraining. Slechts {} percent van contacten heeft activiteit. |
 | 407 | FOUT 407. De AI-pijplijn van leads is gestopt: de gegevenstypen van de scoring komen niet overeen met de trainingsgegevens. |
-| 408 | FOUT 408. AI-pijpleiding gestopt: ontbrekende snelheid is te hoog voor activiteitsfuncties. Ontbrekende frequentie: {}. |
-| 409 | FOUT 409. De AI-pijplijn van leads is gestopt: de auc van de test is te laag. Auc testen: {}. |
-| 410 | FOUT 410. De AI-pijplijn wordt gestopt: de auc van de test is te laag na het instellen van de parameter. Auc testen: {}. |
-| 411 | FOUT 411 De AI-pijplijn van leads is gestopt: de trainingsgegevens hebben onvoldoende conversies om een betrouwbaar model te produceren. conversies: {}. |
+| 408 | FOUT 408. AI-pijpleiding gestopt: ontbrekende snelheid is te hoog voor activiteitsfuncties. Ontbrekende snelheid: {}. |
+| 409 | FOUT 409. De AI-pijplijn van leads is gestopt: de auc van de test is te laag. Testauc: {}. |
+| 410 | FOUT 410. De AI-pijplijn wordt gestopt: de auc van de test is te laag na het instellen van de parameter. Testauc: {}. |
+| 411 | FOUT 411 De AI-pijplijn van leads is gestopt: de trainingsgegevens hebben onvoldoende conversies om een betrouwbaar model te produceren. Conversies: {}. |
 | 412 | FOUT 412. AI-pijpleiding gestopt: testgegevens hebben geen conversie om AUC-ROC te berekenen. |
 
 | Waarschuwing/informatiecode | Bericht |
 | --- | --- |
-| 100 | INFO 100. Leidt AI-kwaliteitscontrole: het aantal rekeningen is: {}. |
-| 101 | INFO 101. Leidt AI-kwaliteitscontrole: het aantal contactpersonen is: {}. |
-| 102 | INFO 102. Leidt AI-kwaliteitscontrole: het aantal mogelijkheden is: {}. |
+| 100 | INFO 100. Leidt AI-kwaliteitscontrole: het aantal accounts is: {} . |
+| 101 | INFO 101. Leidt AI-kwaliteitscontrole: het aantal contactpersonen is: {} . |
+| 102 | INFO 102. Leidt AI-kwaliteitscontrole: het aantal kansen is: {} . |
 | 103 | INFO 103. Leidt de AI-kwaliteitscontrole: de testauc is laag. Start parameterinstelling. Testauc: {}. |
-| 200 | Waarschuwing 200. Leidt de AI-kwaliteitscontrole: de ontbrekende snelheid van de firewallfuncties is: {}. |
-| 201 | Waarschuwing 201. Leidt AI-kwaliteitscontrole: de ontbrekende activiteitsfuncties zijn: {}. |
+| 200 | Waarschuwing 200. Leidt AI-kwaliteitscontrole: de ontbrekende snelheid van eerste grafische functies is: {} . |
+| 201 | Waarschuwing 201. Leidt AI-kwaliteitscontrole: de ontbrekende activiteitsfuncties zijn: {} . |
 
 ## Volgende stappen
 

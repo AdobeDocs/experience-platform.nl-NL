@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # [!UICONTROL Deposit Details] schemaveldgroep
 
-[!UICONTROL Deposit Details] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). De veldgroep bevat één `personalFinances.deposits` veld naar een schema waarin details over een financiële aanbetaling worden vastgelegd.
+[!UICONTROL Deposit Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md). De veldgroep verschaft één `personalFinances.deposits` -veld voor een schema waarin details over een financiële aanbetaling worden vastgelegd.
 
 ![](../../images/field-groups/deposit-details.png)
 
@@ -23,4 +23,4 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json).

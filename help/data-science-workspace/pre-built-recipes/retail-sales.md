@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;winkelrecept;Data Science Workspace;populaire onderwerpen;recepten;prebuild recept
+keywords: Experience Platform;kleinhandelsrecept;Data Science Workspace;populaire onderwerpen;recepten;prebuild recept
 solution: Experience Platform
 title: Recipe detailhandel
 description: Met het recept voor detailhandel kunt u de verkoopprognose voor alle winkels die gedurende een bepaalde periode worden ingezaaid, voorspellen. Met een accuraat voorspellingsmodel zou de detailhandelaar de relatie tussen vraag en prijsbeleid kunnen vinden en geoptimaliseerde prijsbeslissingen kunnen nemen om verkoop en inkomsten te maximaliseren.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Het volgende document zal vragen zoals beantwoorden:
 
 ## Voor wie is dit recept gebouwd?
 
-Een detailhandelaar staat voor vele uitdagingen om concurrerend te blijven op de huidige markt. Uw merk probeert de jaarlijkse verkoop voor uw merk in de detailhandel te verhogen, maar er zijn veel beslissingen om uw bedrijfskosten te minimaliseren. Te veel levering verhoogt voorraadkosten terwijl te weinig levering het risico verhoogt om klanten aan andere merken te verliezen. Moet u de komende maanden meer voorraad bestellen? Hoe bepaalt u de optimale prijs voor uw producten om wekelijkse verkoopdoelstellingen te handhaven?
+Een detailhandelaar staat voor vele uitdagingen om concurrerend te blijven op de huidige markt. Uw merk probeert de jaarlijkse verkoop voor uw merk in de detailhandel te verhogen, maar er zijn veel beslissingen om uw bedrijfskosten tot een minimum te beperken. Te veel levering verhoogt voorraadkosten terwijl te weinig levering het risico verhoogt om klanten aan andere merken te verliezen. Moet u de komende maanden meer voorraad bestellen? Hoe bepaalt u de optimale prijs voor uw producten om wekelijkse verkoopdoelstellingen te handhaven?
 
 ## Wat doet dit recept?
 
@@ -30,19 +30,19 @@ In het recept Verkoopprognose voor detailhandel wordt machinaal leren gebruikt o
 
 ## Hoe begin ik?
 
-U kunt aan de slag door dit te volgen [zelfstudie](../jupyterlab/create-a-model.md).
+U kunt begonnen worden door dit [ leerprogramma ](../jupyterlab/create-a-model.md) te volgen.
 
 Deze zelfstudie gaat over het maken van het recept voor detailhandel in een Jupyter-laptop en het gebruik van de laptop voor het recept-workflow om het recept in Adobe Experience Platform te maken.
 
 ## Gegevensschema
 
-Dit recept gebruikt [XDM-schema&#39;s](../../xdm/schema/field-dictionary.md) om de gegevens te modelleren. Het schema dat voor dit recept wordt gebruikt wordt hieronder getoond:
+Dit recept gebruikt [ schema&#39;s XDM ](../../xdm/schema/field-dictionary.md) om de gegevens te modelleren. Het schema dat voor dit recept wordt gebruikt wordt hieronder getoond:
 
 | Veldnaam | Type |
 | --- | --- |
-| date | Tekenreeks |
+| date | String |
 | winkel | Geheel |
-| storeType | Tekenreeks |
+| storeType | String |
 | wekelijkseVerkoop | Getal |
 | storeSize | Geheel |
 | temperatuur | Getal |
@@ -55,9 +55,9 @@ Dit recept gebruikt [XDM-schema&#39;s](../../xdm/schema/field-dictionary.md) om 
 
 ## Algorithm
 
-Ten eerste, de opleidingsdataset in het *DSWRetailSales* schema is geladen. Vanaf hier wordt het model getraind met behulp van een [algoritme voor gradient boosting regressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Bij het verhogen van het verloop wordt ervan uitgegaan dat zwakke studenten (een die minstens iets beter is dan een willekeurige kans) een opvolging van studenten kunnen vormen die zich richten op het verbeteren van de zwakheden van de vorige leerling. Samen kunnen ze worden gebruikt om een krachtig voorspellend model te maken.
+Eerst, wordt de opleidingsdataset in het *DSWRetailSales* schema geladen. Van hier, wordt het model getraind gebruikend a [ gradiënt die regressoralgoritme opvoert ](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Bij het verhogen van het verloop wordt ervan uitgegaan dat zwakke studenten (een die minstens iets beter is dan een willekeurige kans) een opvolging van studenten kunnen vormen die zich richten op het verbeteren van de zwakheden van de vorige leerling. Samen kunnen ze worden gebruikt om een krachtig voorspellend model te maken.
 
-Het proces omvat drie elementen: een verliesfunctie, een zwakke leerling en een additief model.
+Het proces bestaat uit drie elementen: een verliesfunctie, een zwakke leerling en een additief model.
 
 De verliesfunctie verwijst naar een maat van hoe goed een voorspellingsmodel doet in termen van het kunnen voorspellen van het verwachte resultaat - de minste vierkantsregressie wordt in dit recept gebruikt.
 

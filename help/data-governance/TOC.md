@@ -30,12 +30,12 @@ ht-degree: 34%
    * [Overzicht](enforcement/overview.md)
    * [Automatische handhaving](enforcement/auto-enforcement.md)
    * [Op API gebaseerde handhaving](enforcement/api-enforcement.md)
-* Policy Service API {#api}
+* Beleidsservice-API {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
    * [Labels](api/labels.md)
    * [Beleid](api/policies.md)
    * [Marketingacties](api/marketing-actions.md)
    * [Evaluatie](api/evaluation.md)
-* [API-referentie](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/policy-service/)
+* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

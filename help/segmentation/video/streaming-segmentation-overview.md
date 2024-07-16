@@ -1,6 +1,6 @@
 ---
 title: Streaming segmentering in Adobe Experience Platform
-description: Deze video biedt een basiskennis van streamingsegmentatie binnen Adobe Experience Platform en beschrijft hoe u streamingsegmentatie kunt uitvoeren met behulp van de interface van het Platform.
+description: Deze video biedt een basiskennis van streamingsegmentatie binnen Adobe Experience Platform en beschrijft hoe u streamingsegmentatie kunt uitvoeren met behulp van de platforminterface.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -19,12 +19,12 @@ ht-degree: 0%
 
 # Segmentering streamen in de gebruikersinterface van het Experience Platform
 
-De volgende video is bedoeld om uw begrip van het stromen segmentatie te steunen. Het toont een voorbeeld van een klantervaring gevolgd door een snelle rondleiding van belangrijke eigenschappen in het [!DNL Platform] interface. Lees voor meer informatie over streamingsegmentatie en hoe u streamingsegmentatie in de gebruikersinterface kunt uitvoeren. [UI-gids voor streamingsegmentatie](../ui/streaming-segmentation.md).
+De volgende video is bedoeld om uw begrip van het stromen segmentatie te steunen. Hierin wordt een voorbeeld van een klantervaring weergegeven, gevolgd door een snelle rondleiding van de belangrijkste functies in de [!DNL Platform] -interface. Meer over het stromen segmentatie leren en hoe te om segmentatie in UI te stromen, te lezen gelieve de [ het stromen segmentatie UI gids ](../ui/streaming-segmentation.md).
 
-Als u geïnteresseerd bent in het streamen van segmentatie met de segmentatie-API, leest u de [API-handleiding voor streaming](../api/streaming-segmentation.md).
+Als u in het stromen van segmentatie gebruikend de Segmentatie API geinteresseerd bent, te lezen gelieve de [ het stromen segmentatie API gids ](../api/streaming-segmentation.md).
 
 >[!NOTE]
 >
->De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest actuele informatie raadpleegt u de [UI-gids voor streamingsegmentatie](../ui/streaming-segmentation.md).
+>De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, gelieve te verwijzen naar de [ het stromen segmentatie UI gids ](../ui/streaming-segmentation.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)

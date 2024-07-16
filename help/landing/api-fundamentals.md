@@ -6,22 +6,22 @@ description: Dit document biedt een kort overzicht van enkele onderliggende tech
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 1%
+source-wordcount: '506'
+ht-degree: 0%
 
 ---
 
 # Grondbeginselen van Experience Platform API
 
-Adobe Experience Platform API&#39;s maken gebruik van verschillende onderliggende technologieën en syntaxis die belangrijk zijn om te begrijpen voor een effectief beheer van JSON [!DNL Platform] middelen. Dit document bevat een kort overzicht van deze technologieën en koppelingen naar externe documentatie voor meer informatie.
+Adobe Experience Platform API&#39;s maken gebruik van verschillende onderliggende technologieën en syntaxis die belangrijk zijn om te begrijpen voor een effectief beheer van op JSON gebaseerde [!DNL Platform] bronnen. Dit document bevat een kort overzicht van deze technologieën en koppelingen naar externe documentatie voor meer informatie.
 
 ## JSON-aanwijzer {#json-pointer}
 
-JSON Pointer is een gestandaardiseerde tekenreekssyntaxis ([RFC 6901](https://tools.ietf.org/html/rfc6901)) voor het identificeren van specifieke waarden in JSON-documenten. Een JSON-aanwijzer is een reeks tokens gescheiden door `/` tekens, die objectsleutels of array-indexen opgeven, en tokens kunnen een tekenreeks of een getal zijn. JSON-aanwijzertekenreeksen worden in veel PATCH-bewerkingen gebruikt voor [!DNL Platform] API&#39;s, zoals verderop in dit document wordt beschreven. Voor meer informatie over JSON-aanwijzer raadpleegt u de [Overzicht van JSON-aanwijzer](https://rapidjson.org/md_doc_pointer.html).
+JSON Aanwijzer is een gestandaardiseerde koordsyntaxis ([ RFC 6901 ](https://tools.ietf.org/html/rfc6901)) voor het identificeren van specifieke waarden binnen JSON documenten. Een JSON-aanwijzer is een tekenreeks met tokens die door `/` -tekens worden gescheiden. Hiermee worden objectsleutels of arrayindexen opgegeven. De tokens kunnen een tekenreeks of een getal zijn. JSON-aanwijzertekenreeksen worden gebruikt in vele PATCH-bewerkingen voor [!DNL Platform] API&#39;s, zoals verderop in dit document wordt beschreven. Voor meer informatie over Aanwijzer JSON, gelieve te verwijzen naar de [ documentatie van het overzicht van de Aanwijzer JSON ](https://rapidjson.org/md_doc_pointer.html).
 
 ### Voorbeeld-JSON-schemaobject
 
-De volgende JSON vertegenwoordigt een vereenvoudigd XDM-schema waarvan met behulp van JSON-aanwijzertekenreeksen naar velden kan worden verwezen. Merk op dat alle gebieden die gebruikend de groepen van het douaneschema gebied (zoals zijn toegevoegd `loyaltyLevel`) worden genoemd onder a `_{TENANT_ID}` object, terwijl velden die zijn toegevoegd met behulp van kernveldgroepen (zoals `fullName`) niet.
+De volgende JSON vertegenwoordigt een vereenvoudigd XDM-schema waarvan met behulp van JSON-aanwijzertekenreeksen naar velden kan worden verwezen. Alle velden die zijn toegevoegd met behulp van aangepaste schemaveldgroepen (zoals `loyaltyLevel` ), krijgen een naamruimte onder een `_{TENANT_ID}` -object, terwijl velden die zijn toegevoegd met behulp van kernveldgroepen (zoals `fullName` ) dat niet doen.
 
 ```json
 {
@@ -82,21 +82,21 @@ De volgende JSON vertegenwoordigt een vereenvoudigd XDM-schema waarvan met behul
 
 ### Voorbeeld-JSON-aanwijzers op basis van een schemaobject
 
-| JSON-aanwijzer | Oplossen naar |
+| JSON-aanwijzer | Oplossingen voor |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | (Retourneert een verwijzing naar de `fullName` veld, verstrekt door een kernveldgroep.) |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Retourneert een verwijzing naar de `loyaltyLevel` veld, opgegeven door een aangepaste veldgroep.) |
+| `"/properties/person/properties/name/properties/fullName"` | (Retourneert een verwijzing naar het veld `fullName` , opgegeven door een kernveldgroep.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Retourneert een verwijzing naar het veld `loyaltyLevel` , opgegeven door een aangepaste veldgroep.) |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!NOTE]
 >
->Wanneer u werkt met de `xdm:sourceProperty` en `xdm:destinationProperty` kenmerken van [!DNL Experience Data Model] (XDM)-descriptors, alle `properties` sleutels moeten **uitgesloten** uit de JSON-pointer-tekenreeks. Zie de [!DNL Schema Registry] Subhandleiding voor API-ontwikkelaars ingeschakeld [beschrijvingen](../xdm/api/descriptors.md) voor meer informatie .
+>Wanneer het behandelen van `xdm:sourceProperty` en `xdm:destinationProperty` attributen van [!DNL Experience Data Model] (XDM) beschrijvers, moeten om het even welke `properties` sleutels **** van het koord van de Aanwijzer JSON worden uitgesloten. Zie de [!DNL Schema Registry] sub-gids van de ontwikkelaar van API op [ beschrijvers ](../xdm/api/descriptors.md) voor meer informatie.
 
 ## JSON Patch {#json-patch}
 
-Er zijn veel PATCH-bewerkingen voor [!DNL Platform] API&#39;s die JSON Patch-objecten accepteren voor hun aanvraaglading. JSON Patch is een gestandaardiseerde indeling ([RFC 6902](https://tools.ietf.org/html/rfc6902)) voor het beschrijven van wijzigingen in een JSON-document. Hiermee kunt u gedeeltelijke updates voor JSON definiëren zonder dat u het gehele document in een aanvraaginstantie hoeft te verzenden.
+Er zijn veel PATCH-bewerkingen voor API&#39;s van [!DNL Platform] die JSON Patch-objecten accepteren voor hun aanvraaglading. JSON Reparatie is een gestandaardiseerd formaat ([ RFC 6902 ](https://tools.ietf.org/html/rfc6902)) voor het beschrijven van veranderingen in een JSON- document. Hiermee kunt u gedeeltelijke updates voor JSON definiëren zonder dat u het gehele document in een aanvraaginstantie hoeft te verzenden.
 
 ### Voorbeeld van JSON Patch-object
 
@@ -107,21 +107,21 @@ Er zijn veel PATCH-bewerkingen voor [!DNL Platform] API&#39;s die JSON Patch-obj
 }
 ```
 
-* `op`: Het type patchbewerking. Hoewel JSON Patch verschillende bewerkingstypen ondersteunt, worden niet alle PATCH-bewerkingen in [!DNL Platform] API&#39;s zijn compatibel met elk type bewerking. Beschikbare bewerkingstypen zijn:
+* `op`: Het type patchbewerking. Hoewel JSON Patch verschillende bewerkingstypen ondersteunt, zijn niet alle PATCH-bewerkingen in [!DNL Platform] API&#39;s compatibel met elk bewerkingstype. Beschikbare bewerkingstypen zijn:
    * `add`
    * `remove`
    * `replace`
    * `copy`
    * `move`
    * `test`
-* `path`: Het deel van de JSON-structuur dat moet worden bijgewerkt, geïdentificeerd aan de hand van [JSON-aanwijzer](#json-pointer) notatie.
+* `path`: Het deel van de structuur JSON dat moet worden bijgewerkt, gebruikend [ JSON ](#json-pointer) aantekening van de Aanwijzer wordt geïdentificeerd.
 
-Afhankelijk van het type bewerking dat in `op`heeft het JSON-object Patch mogelijk aanvullende eigenschappen nodig. Raadpleeg voor meer informatie over de verschillende JSON-patchbewerkingen en de bijbehorende syntaxis de [JSON-patchdocumentatie](https://datatracker.ietf.org/doc/html/rfc6902).
+Afhankelijk van het type bewerking dat in `op` wordt aangegeven, heeft het JSON-object Patch mogelijk aanvullende eigenschappen nodig. Voor meer informatie over de verschillende verrichtingen van het Reparatie JSON en hun vereiste syntaxis, gelieve te verwijzen naar de [ documentatie van het Reparatie JSON ](https://datatracker.ietf.org/doc/html/rfc6902).
 
 ## JSON Schema {#json-schema}
 
-JSON-schema is een indeling waarmee de structuur van JSON-gegevens wordt beschreven en gevalideerd. [Experience Data Model (XDM)](../xdm/home.md) hefboomwerkingen de mogelijkheden van het Schema JSON om beperkingen op de structuur en het formaat van ingebedde gegevens van de klantenervaring af te dwingen. Voor meer informatie over JSON-schema raadpleegt u de [officiële documentatie](https://json-schema.org/).
+JSON-schema is een indeling waarmee de structuur van JSON-gegevens wordt beschreven en gevalideerd. [ Model van de Gegevens van de Ervaring (XDM) ](../xdm/home.md) hefboomwerkingen JSON de mogelijkheden van het Schema om beperkingen op de structuur en het formaat van ingebedde gegevens van de klantenervaring af te dwingen. Voor meer informatie over Schema JSON, gelieve te verwijzen naar de [ officiële documentatie ](https://json-schema.org/).
 
 ## Volgende stappen
 
-In dit document worden enkele technologieën en syntaxis geïntroduceerd die van belang zijn voor het beheer van JSON-bronnen voor [!DNL Experience Platform]. Zie de [gids Aan de slag](api-guide.md) voor meer informatie over het werken met Platform APIs, met inbegrip van beste praktijken. Voor antwoorden op veelgestelde vragen raadpleegt u de [Handleiding voor het oplossen van problemen met Platforms](troubleshooting.md).
+In dit document worden enkele technologieën en syntaxis geïntroduceerd die betrokken zijn bij het beheer van JSON-bronnen voor [!DNL Experience Platform] . Verwijs naar de [ begonnen gids ](api-guide.md) voor meer informatie bij het werken met Platform APIs, met inbegrip van beste praktijken. Voor antwoorden op vaak gestelde vragen, verwijs naar de [ het oplossen van problemengids van het Platform ](troubleshooting.md).

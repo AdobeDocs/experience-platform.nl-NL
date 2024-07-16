@@ -8,7 +8,7 @@ role: User
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 23%
+ht-degree: 20%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 23%
    - [Handleiding gebruikersinterface](attribution-ai/user-guide.md)
    - [Inzichten ontdekken](attribution-ai/discover-insights.md)
    - [Muziek downloaden](attribution-ai/download-scores.md)
-   - Data Governance {#aai-data-governance}
+   - Gegevensbeheer {#aai-data-governance}
       - [Toegangsbesturingselementen](attribution-ai/aai-data-governance/access-controls.md)
       - [Controlelogboeken](attribution-ai/aai-data-governance/audit-logs.md)
       - [Door de klant beheerde sleutels](attribution-ai/aai-data-governance/customer-managed-keys.md)
@@ -35,24 +35,24 @@ ht-degree: 23%
 - Inhoud labelen {#content-commerce-ai}
    - [Overzicht](content-commerce-ai/overview.md)
    - [Aan de slag](content-commerce-ai/getting-started.md)
-   - API voor inhoudtags{#api}
+   - API voor inhoudtags {#api}
       - [Kleurlabels](content-commerce-ai/api/color-tagging.md)
       - [Trefwoordtags](content-commerce-ai/api/keyword-tagging.md)
       - [Tekstaanwezigheid en optische tekenherkenning](content-commerce-ai/api/optical-character-recognition.md)
-- Customer AI {#customer-ai}
+- AI van klant {#customer-ai}
    - [Overzicht](customer-ai/overview.md)
    - [Aan de slag met Customer AI](customer-ai/getting-started.md)
    - [Gegevensvereisten](customer-ai/data-requirements.md)
-   - UI-hulplijnen{#user-guide}
+   - UI-hulplijnen {#user-guide}
       - [Een instantie configureren](customer-ai/user-guide/configure.md)
       - [Inzichten ontdekken](customer-ai/user-guide/discover-insights.md)
       - [Segmenten maken met behulp van AI-scores van de klant](customer-ai/user-guide/create-segment.md)
       - [Muziek downloaden](customer-ai/user-guide/download-scores.md)
-   - [Problemen oplossen](customer-ai/troubleshooting.md)
-   - Data Governance {#cai-data-governance}
+   - [ het oplossen van problemen van de Fout ](customer-ai/troubleshooting.md)
+   - Gegevensbeheer {#cai-data-governance}
       - [Toegangsbesturingselementen](customer-ai/cai-data-governance/access-controls.md)
       - [Controlelogboeken](customer-ai/cai-data-governance/audit-logs.md)
       - [Door de klant beheerde sleutels](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Gegevensbeheer](customer-ai/cai-data-governance/data-governance.md)
       - [Beleid inzake governance](customer-ai/cai-data-governance/governance-policies.md)
-- [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

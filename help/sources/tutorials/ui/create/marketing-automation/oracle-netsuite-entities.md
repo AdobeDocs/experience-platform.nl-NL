@@ -1,48 +1,49 @@
 ---
-title: Een [!DNL Oracle NetSuite Entities] bronverbinding in de gebruikersinterface
+title: Creeer a [!DNL Oracle NetSuite Entities]  bronverbinding in UI
 description: Leer hoe u een Oracle NetSuite Entities-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 hide: true
 hidefromtoc: true
 badge: Beta
-source-git-commit: 053cf0af327b39830f025686e0f8f67c27f1c45c
+exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL Oracle NetSuite Entities] bronverbinding in de gebruikersinterface
+# Een [!DNL Oracle NetSuite Entities] bronverbinding maken in de gebruikersinterface
 
 >[!NOTE]
 >
->De [!DNL Oracle NetSuite Entities] De bron is in bèta. Zie de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+>De bron [!DNL Oracle NetSuite Entities] is in bèta. Zie het [ overzicht van bronnen ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-Lees het volgende leerprogramma om te leren hoe te om contacten en klantengegevens van uw te brengen [!DNL Oracle NetSuite Entities] account aan Adobe Experience Platform in de gebruikersinterface.
+Lees de volgende zelfstudie om te leren hoe u contactpersonen en klantgegevens van uw [!DNL Oracle NetSuite Entities] -account naar Adobe Experience Platform in de gebruikersinterface kunt brengen.
 
 ## Aan de slag {#getting-started}
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
-   * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u al een geldige [!DNL Oracle NetSuite] account, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [configureren, gegevensstroom](../../dataflow/marketing-automation.md).
+Als u reeds een geldige [!DNL Oracle NetSuite] rekening hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/marketing-automation.md).
 
 >[!TIP]
 >
->Lees de [[!DNL Oracle NetSuite] overzicht](../../../../connectors/marketing-automation/oracle-netsuite.md) voor informatie over hoe te om uw authentificatiegeloofsbrieven terug te winnen.
+>Lees het [[!DNL Oracle NetSuite]  overzicht ](../../../../connectors/marketing-automation/oracle-netsuite.md) voor informatie over hoe te om uw authentificatiegeloofsbrieven terug te winnen.
 
-## Verbind uw [!DNL Oracle NetSuite Activities] account {#connect-account}
+## Sluit uw [!DNL Oracle NetSuite Activities] -account aan {#connect-account}
 
-Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
+Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de *Marketing Automation* categorie, selecteert u **[!DNL Oracle NetSuite Entities]** en selecteer vervolgens **[!UICONTROL Add data]**.
+Onder de *categorie van de Automatisering van de Marketing*, selecteer **[!DNL Oracle NetSuite Entities]**, en selecteer dan **[!UICONTROL Add data]**.
 
-![Platform UI-screenshot voor catalogus met Oracle NetSuite Entities-kaart](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/catalog-card.png)
+{het schermschot van het platform UI voor catalogus met de kaart van de Entiteiten van Oracle NetSuite ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/catalog-card.png)![
 
-De **[!UICONTROL Connect Oracle NetSuite Entities account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect Oracle NetSuite Entities account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 >[!IMPORTANT]
 >
@@ -50,15 +51,15 @@ De **[!UICONTROL Connect Oracle NetSuite Entities account]** wordt weergegeven. 
 
 ### Bestaande account {#existing-account}
 
-Als u een bestaande account wilt gebruiken, selecteert u de optie [!DNL Oracle NetSuite Entities] account waarmee u een nieuwe gegevensstroom wilt maken, selecteert u **[!UICONTROL Next]** om verder te gaan.
+Als u een bestaande account wilt gebruiken, selecteert u de [!DNL Oracle NetSuite Entities] -account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u vervolgens **[!UICONTROL Next]** om door te gaan.
 
-![Platform UI-screenshot om Oracle NetSuite Entities-account te verbinden met een bestaande account](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/existing.png)
+{het schermschot van het platform UI om de rekening van de Entiteiten van Oracle NetSuite met een bestaande rekening te verbinden ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/existing.png)![
 
 ### Nieuwe account {#new-account}
 
-Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam, een optionele beschrijving en uw referenties op. Selecteer **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u een naam, een optionele beschrijving en uw referenties op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![Platform UI-screenshot om Oracle NetSuite Entities-account te verbinden met een nieuwe account](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/new.png)
+{het schermschot van het platform UI om de rekening van de Entiteiten van Oracle NetSuite met een nieuwe rekening te verbinden ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/new.png)![
 
 ### Gegevens selecteren
 
@@ -71,42 +72,42 @@ Selecteer vervolgens het objecttype dat u aan het Experience Platform wilt toevo
 
 >[!BEGINTABS]
 
->[!TAB Contact]
+>[!TAB  Contact ]
 
-![Platform UI-screenshot voor Oracle Netsuite Entiteiten die configuratie met geselecteerde contactoptie tonen](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)
+{het schermschot van het platform UI voor de Entiteiten van Netsuite van het Oracle die configuratie met geselecteerde optie van het Contact tonen ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)![
 
->[!TAB Klant]
+>[!TAB  Klant ]
 
-![Platform UI-screenshot voor Oracle Netsuite Entiteiten die configuratie met de geselecteerde optie van de Klant tonen](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)
+{het schermschot van het platform UI voor de Entiteiten van Netsuite van het Oracle die configuratie met geselecteerde optie van de Klant tonen ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)![
 
 >[!ENDTABS]
 
 ## Volgende stappen {#next-steps}
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Oracle NetSuite Entities] account. U kunt nu verdergaan met de volgende zelfstudie en [een dataflow configureren om gegevens over marketingautomatisering naar Platform te brengen](../../dataflow/marketing-automation.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Oracle NetSuite Entities] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om de gegevens van de marketing automatisering in Platform ](../../dataflow/marketing-automation.md) te brengen.
 
 ## Aanvullende bronnen {#additional-resources}
 
-In de volgende secties vindt u aanvullende bronnen die u kunt raadplegen wanneer u de [!DNL Oracle NetSuite Entities] bron.
+De onderstaande secties bevatten aanvullende bronnen waarnaar u kunt verwijzen wanneer u de [!DNL Oracle NetSuite Entities] -bron gebruikt.
 
 ### Toewijzing {#mapping}
 
-Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie [UI-hulplijn voor gegevensvoorinstelling](../../../../../data-prep/ui/mapping.md).
+Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >
->De weergegeven velden zijn afhankelijk van de abonnementen die uw [!DNL Oracle NetSuite] account heeft toegang tot. Als u bijvoorbeeld geen toegang hebt tot facturering, worden de betreffende velden voor facturering niet weergegeven.
+>De weergegeven velden zijn afhankelijk van de abonnementen waartoe uw [!DNL Oracle NetSuite] -account toegang heeft. Als u bijvoorbeeld geen toegang hebt tot facturering, worden de betreffende velden voor facturering niet weergegeven.
 
 ### Planning {#scheduling}
 
-Wanneer u uw [!DNL Oracle NetSuite Entities] dataflow voor opname, moet u de volgende frequentie en intervalconfiguratie selecteren:
+Wanneer u de gegevensstroom [!DNL Oracle NetSuite Entities] wilt plannen voor opname, moet u de volgende frequentie- en intervalconfiguratie selecteren:
 
 | Frequentie | Interval |
 | --- | --- |
 | `Once` | 1 |
 
-Tijdens het ophalen van gegevens worden de [!DNL Oracle NetSuite] reageert met de laatst gewijzigde of gemaakte datum als een datumnotatie in plaats van een tijdstempel. De planning is daarom beperkt tot één dag.
+Tijdens het ophalen van gegevens reageert [!DNL Oracle NetSuite] met de laatst gewijzigde of gemaakte datum als datumnotatie in plaats van als tijdstempel. De planning is daarom beperkt tot één dag.
 
-Als u de waarden voor uw schema hebt opgegeven, selecteert u **[!UICONTROL Next]**.
+Als u de waarden voor uw schema hebt opgegeven, selecteert u **[!UICONTROL Next]** .
 
-![De planningsstap van de bronworkflow.](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/scheduling.png)
+![ de het plannen stap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/scheduling.png)

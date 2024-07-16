@@ -1,9 +1,10 @@
 ---
-title: Samenvatting de Gecodeerde Gegevens in de Werkruimte UI van Bronnen
+title: Samenvatting Gecodeerde Gegevens in Brongebruikersinterface Workspace
 description: Leer hoe u gecodeerde gegevens kunt invoeren in de UI-werkruimte voor bronnen.
 hide: true
 hidefromtoc: true
-source-git-commit: f2a0a9b84dfd3c1d32c8049148d38ef4d2ec822e
+exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
+source-git-commit: a11f469cb54421e0ca30c7c5878128e216470f7f
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%

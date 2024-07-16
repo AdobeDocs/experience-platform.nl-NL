@@ -6,57 +6,57 @@ exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
 source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
 workflow-type: tm+mt
 source-wordcount: '394'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# Een [!DNL Teradata Vantage] bronverbinding in de gebruikersinterface
+# Een [!DNL Teradata Vantage] bronverbinding maken in de gebruikersinterface
 
-Deze zelfstudie bevat stappen voor het maken van een [!DNL Teradata Vantage] bronaansluiting die de Adobe Experience Platform-gebruikersinterface gebruikt.
+Deze zelfstudie bevat stappen voor het maken van een [!DNL Teradata Vantage] bronaansluiting met behulp van de Adobe Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende componenten van Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Experience Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Experience Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Vereiste referenties verzamelen
 
-Voor toegang tot uw [!DNL Teradata Vantage] account op Platform, moet u de volgende verificatiewaarde opgeven:
+Als u toegang wilt krijgen tot uw [!DNL Teradata Vantage] -account op Platform, moet u de volgende verificatiewaarde opgeven:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| Verbindingstekenreeks | Een verbindingstekenreeks is een tekenreeks die informatie bevat over een gegevensbron en over de manier waarop u hiermee verbinding kunt maken. Het patroon van de verbindingstekenreeks voor [!DNL Teradata Vantage] is `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
+| Verbindingstekenreeks | Een verbindingstekenreeks is een tekenreeks die informatie bevat over een gegevensbron en over de manier waarop u hiermee verbinding kunt maken. Het patroon van de verbindingstekenreeks voor [!DNL Teradata Vantage] is `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}` . |
 
-Raadpleeg voor meer informatie over aan de slag gaan [[!DNL Teradata Vantage] document](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
+Voor meer informatie over begonnen worden, verwijs naar dit [[!DNL Teradata Vantage]  document ](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
 
-## Verbind uw [!DNL Teradata Vantage] account
+## Sluit uw [!DNL Teradata Vantage] -account aan
 
-Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
+Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de [!UICONTROL Databases] categorie, selecteert u **[!UICONTROL Teradata Vantage]** en selecteer vervolgens **[!UICONTROL Set up]**.
+Selecteer onder de categorie [!UICONTROL Databases] de optie **[!UICONTROL Teradata Vantage]** en selecteer vervolgens **[!UICONTROL Set up]** .
 
 >[!TIP]
 >
->De bronnen in de broncatalogus geven de **[!UICONTROL Set up]** als een bepaalde bron nog geen geverifieerde account heeft. Als er eenmaal een geverifieerd account is, wordt deze optie gewijzigd in **[!UICONTROL Add data]**.
+>Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account bestaat, verandert deze optie in **[!UICONTROL Add data]** .
 
-![De broncatalogus met de geselecteerde Teradata Vantage-bron.](../../../../images/tutorials/create/teradata/catalog.png)
+![ de broncatalogus met de geselecteerde bron van de Vantage van Teradata.](../../../../images/tutorials/create/teradata/catalog.png)
 
-De **[!UICONTROL Connect to Teradata Vantage]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to Teradata Vantage]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Bestaande account
 
-Als u een bestaande account wilt verbinden, selecteert u de optie [!DNL Teradata Vantage] account waarmee u verbinding wilt maken, selecteert u **[!UICONTROL Next]** om verder te gaan.
+Als u een bestaande account wilt verbinden, selecteert u de [!DNL Teradata Vantage] -account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![De pagina Bestaande accounts in de werkruimte Bronnen.](../../../../images/tutorials/create/teradata/existing.png)
+![ de bestaande rekeningenpagina in de bronwerkruimte.](../../../../images/tutorials/create/teradata/existing.png)
 
 ### Nieuwe account
 
-Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Teradata Vantage] referenties. Selecteer **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Selecteer **[!UICONTROL New account]** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Teradata Vantage] -gegevens op. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![De nieuwe interface voor het maken van accounts in de werkruimte Bronnen.](../../../../images/tutorials/create/teradata/new.png)
+![ de nieuwe interface van de rekeningsverwezenlijking in de bronwerkruimte.](../../../../images/tutorials/create/teradata/new.png)
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw Teradata Vantage-account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens over te brengen naar het platform](../../dataflow/databases.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw Teradata Vantage-account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Platform ](../../dataflow/databases.md) te brengen.

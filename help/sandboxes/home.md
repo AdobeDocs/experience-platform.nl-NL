@@ -23,11 +23,11 @@ Dit document biedt een overzicht op hoog niveau van sandboxen in Experience Plat
 
 Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Er worden twee soorten sandboxen ondersteund op het Experience Platform:
 
-* **Productiesandbox**: Een productiesandbox moet worden gebruikt met profielen in uw productieomgeving. Met Platform kunt u meerdere productiesandboxen maken om de juiste functionaliteit voor gegevens te bieden terwijl de operationele isolatie behouden blijft. Met deze functie kunt u specifieke productiesandboxen toewijzen aan verschillende bedrijfsonderdelen, merken, projecten of regio&#39;s. Productiesandboxen ondersteunen een volume productieprofielen tot aan uw licentie [!DNL Profile] verbintenis (cumulatief gemeten over al uw geautoriseerde productiesandboxen). U hebt het recht om een gemiddeld profiel met licentie te gebruiken per geautoriseerde [!DNL Profile] (cumulatief gemeten over al uw geoorloofde productie sandboxen).
-* **Ontwikkelingssandbox**: Een ontwikkelingssandbox is een sandbox die uitsluitend kan worden gebruikt voor ontwikkeling en testen met niet-productieprofielen. De zandbakken van de ontwikkeling steunen een hoeveelheid non-production profielen tot 10% van uw vergunning [!DNL Profile] verbintenis (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen). U hebt recht op maximaal:
+* **zandbak van de Productie**: Een productiestandaard wordt bedoeld om met profielen in uw productiemilieu te worden gebruikt. Met Platform kunt u meerdere productiesandboxen maken om de juiste functionaliteit voor gegevens te bieden terwijl de operationele isolatie behouden blijft. Met deze functie kunt u specifieke productiesandboxen toewijzen aan verschillende bedrijfsonderdelen, merken, projecten of regio&#39;s. Productiesandboxen ondersteunen een volume productieprofielen tot aan uw gelicentieerde [!DNL Profile] toezegging (cumulatief gemeten over al uw geoorloofde productie-sandboxen). U hebt het recht om een gemiddeld profiel met licentie te gebruiken per geautoriseerde [!DNL Profile] (dit profiel wordt cumulatief gemeten in al uw geautoriseerde productiesandboxen).
+* **zandbak van de Ontwikkeling**: Een ontwikkelingszandbak is een zandbak die exclusief voor ontwikkeling en het testen met niet-productieprofielen kan worden gebruikt. Ontwikkelingssandboxen ondersteunen een volume niet-productieprofielen tot 10% van uw gelicentieerde [!DNL Profile] -betrokkenheid (cumulatief gemeten in alle geautoriseerde ontwikkelingssandboxen). U hebt recht op maximaal:
    * een gemiddelde rijkheid van het non-production profiel van 75 kilobytes per geautoriseerd niet-productieprofiel (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen);
    * één batchsegmentatietaak per dag, per ontwikkelingssandbox;
-   * Gemiddeld 120 [!DNL Profile] API-aanroepen, per [!DNL Profile], per jaar (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen.
+   * Gemiddeld 120 [!DNL Profile] API-aanroepen per [!DNL Profile] per jaar (cumulatief gemeten in al uw geautoriseerde ontwikkelingssandboxen).
 
 Een instantie van het Experience Platform steunt veelvoudige productie en ontwikkelingszandbakken, met elke zandbak die zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.) handhaaft. Bovendien hebben zowel productie als ontwikkelingszandbakken een terugstellende eigenschap die alle klant-gecreeerde middelen uit de zandbak verwijdert. Ontwikkelingssandboxen kunnen niet worden geconverteerd naar productiesandboxen.
 
@@ -41,25 +41,25 @@ Tot slot is de standaardproductiesandbox de eerste productiesandbox die wordt ge
 
 Samengevat bieden sandboxen de volgende voordelen:
 
-* **Levenscyclusbeheer van toepassingen**: Maak afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
-* **Project- en merkbeheer**: Sta veelvoudige projecten toe om in parallel binnen de zelfde organisatie te lopen, terwijl het verstrekken van isolatie en toegangscontrole.
-* **Flexibele ontwikkeling-ecosysteem**: Bied sandboxen op een naadloze, schaalbare en voordelige manier aan voor exploratie-, activeer- en demonstratiedoeleinden.
+* **Levenscyclusbeheer van de Toepassing**: Creeer afzonderlijke virtuele milieu&#39;s om digitale ervaringstoepassingen te ontwikkelen en te evolueren.
+* **Project en merkbeheer**: sta veelvoudige projecten toe om parallel binnen de zelfde organisatie te lopen, terwijl het verstrekken van isolatie en toegangscontrole.
+* **Flexibel ontwikkelings ecosysteem**: Verstrek zandbakken op een naadloze, scalable, en rendabele manier voor exploratie, enablement, en demonstratiedoeleinden.
 
 ## Toegangsbeheer voor sandboxen
 
-Standaard hebben alle gebruikers van een organisatie toegang tot een productiesandbox. Toegang tot niet-productiesandboxen moet worden verleend door een systeembeheerder, productbeheerder of productprofielbeheerder via de [Adobe Admin Console](https://adminconsole.adobe.com).
+Standaard hebben alle gebruikers van een organisatie toegang tot een productiesandbox. De toegang tot niet productiestanddozen moet door een systeembeheerder, productbeheerder, of de beheerder van het productprofiel door [ Adobe Admin Console ](https://adminconsole.adobe.com) worden verleend.
 
 Voor het weergeven, maken, bijwerken of verwijderen van niet-productiesandboxen moeten gebruikers ook de bevoegdheden van Sandbox-beheer hebben.
 
-Voor meer informatie over het beheren van rollen en toestemmingen voor zandbakken, zie [toegangsbeheeroverzicht](../access-control/home.md).
+Voor meer informatie bij het beheren van rollen en toestemmingen voor zandbakken, zie het [ overzicht van de toegangscontrole ](../access-control/home.md).
 
 ## Sandboxen in de gebruikersinterface van het Experience Platform
 
-In de [Gebruikersinterface Experience Platform](https://platform.adobe.com)kunnen gebruikers schakelen tussen de sandboxen waartoe ze toegang hebben via de **sandboxschakelaar** besturingselementen linksboven in het scherm.  Gebruikers met de bevoegdheden van Sandbox-beheer hebben ook toegang tot **[!UICONTROL Sandboxes]** in de linkernavigatie, waar zij sandboxen voor hun organisatie kunnen bekijken en beheren. Voor meer informatie over het werken met sandboxen in de gebruikersinterface raadpleegt u de [gebruikershandleiding sandbox](ui/overview.md).
+In het [ gebruikersinterface van het Experience Platform ](https://platform.adobe.com), kunnen de gebruikers tussen de zandbakken schakelen zij toegang hebben tot door de **zandbakschakelaar** controle op top-left van het scherm te gebruiken.  Gebruikers met bevoegdheden voor Sandboxbeheer hebben ook toegang tot het tabblad **[!UICONTROL Sandboxes]** in de linkernavigatie, waar ze sandboxen voor hun organisatie kunnen weergeven en beheren. Voor meer informatie over hoe te met zandbakken in UI te werken, zie de [ gids van de zandbakgebruiker ](ui/overview.md).
 
 ## Sandboxen in Experience Platform-API&#39;s
 
-Bij het aanroepen van Experience Platform-API&#39;s moet een sandboxnaam worden opgegeven onder de koptekst `x-sandbox-name`. Wanneer u bijvoorbeeld een aanroep naar de [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) Als u alle gegevenssets in de productiesandbox wilt weergeven, wordt de naam van de sandbox (&quot;prod&quot;) als een header weergegeven in de API-aanvraag:
+Wanneer u aanroepen uitvoert naar Experience Platform-API&#39;s, moet een sandboxnaam worden opgegeven onder de header `x-sandbox-name` . Bijvoorbeeld, wanneer het doen van een vraag aan [[!DNL Catalog Service API] ](https://www.adobe.io/experience-platform-apis/references/catalog/) om alle datasets binnen de zandbak van de Productie te bekijken, wordt de naam van de zandbak (&quot;prod&quot;) verstrekt als kopbal in het API verzoek:
 
 ```shell
 curl -X GET \
@@ -70,14 +70,14 @@ curl -X GET \
   -H 'x-sandbox-name: prod'
 ```
 
-Indien `x-sandbox-name` is niet opgenomen in een API-aanroep, gebruikt het systeem in plaats daarvan een standaardsandbox. De beste manier is echter om deze header altijd op te nemen in alle API-aanroepen, zelfs wanneer de standaardsandbox wordt gebruikt. Daarom wordt in de API-documentatie voor Experience Platforms met `x-sandbox-name` als een vereiste koptekst.
+Als `x-sandbox-name` niet is opgenomen in een API-aanroep, gebruikt het systeem een standaardsandbox. De beste manier is echter om deze header altijd op te nemen in alle API-aanroepen, zelfs wanneer de standaardsandbox wordt gebruikt. Daarom wordt `x-sandbox-name` in de API-documentatie voor Experience Platform beschouwd als een vereiste header.
 
 ### Sandbox-API
 
-Met de sandbox-API kunt u sandboxen beheren met behulp van RESTful-API-bewerkingen. Zie de [sandboxontwikkelaarshandleiding](api/overview.md) voor gedetailleerde informatie over het gebruik van de API, waaronder correct opgemaakte aanvragen en voorbeeldantwoorden.
+Met de sandbox-API kunt u sandboxen beheren met behulp van RESTful-API-bewerkingen. Zie de [ gids van de zandbakontwikkelaar ](api/overview.md) voor gedetailleerde informatie over hoe te om API, met inbegrip van behoorlijk geformatteerde verzoeken en voorbeeldreacties te gebruiken.
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u kennis genomen van de belangrijkste concepten met betrekking tot sandboxen in Experience Platform. Zie voor gedetailleerde stappen over het beheren van sandboxen de [gebruikershandleiding](ui/overview.md) voor de gebruikersinterface of de [ontwikkelaarsgids](./api/getting-started.md) voor de API.
+Door dit document te lezen, hebt u kennis genomen van de belangrijkste concepten met betrekking tot sandboxen in Experience Platform. Voor gedetailleerde stappen op hoe te om zandbakken te beheren, zie de [ gebruikersgids ](ui/overview.md) voor UI of de [ ontwikkelaarsgids ](./api/getting-started.md) voor API.
 
-Hoewel sandboxen een waardevol hulpmiddel zijn om platformomgevingen voor uw ontwikkelingsteam te isoleren, kunt u ook meer korrelige toegangscontrole beheren met de Adobe Admin Console. Zie de [toegangsbeheeroverzicht](../access-control/home.md) voor meer informatie .
+Hoewel sandboxen een waardevol hulpmiddel zijn om platformomgevingen voor uw ontwikkelingsteam te isoleren, kunt u ook meer korrelige toegangscontrole beheren met de Adobe Admin Console. Zie het [ overzicht van de toegangscontrole ](../access-control/home.md) voor meer informatie.

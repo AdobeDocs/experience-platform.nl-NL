@@ -13,39 +13,39 @@ ht-degree: 2%
 
 # Adobe [!DNL Real-Time CDP] Documentatie {#rtcdp-documentation}
 
-Gebruik Adobe Real-time Customer Data Platform (Real-Time CDP) om bekende en anonieme gegevens van meerdere bedrijfsbronnen samen te brengen om klantprofielen te maken die kunnen worden gebruikt om persoonlijke klantervaringen in real-time op alle kanalen en apparaten te bieden. Lees de [Real-Time CDP-overzicht](/help/rtcdp/overview.md) voor meer informatie .
+Gebruik Adobe Real-time Customer Data Platform (Real-Time CDP) om bekende en anonieme gegevens van meerdere bedrijfsbronnen samen te brengen om klantprofielen te maken die kunnen worden gebruikt om persoonlijke klantervaringen in real-time op alle kanalen en apparaten te bieden. Lees het [ overzicht van Real-Time CDP ](/help/rtcdp/overview.md) voor meer informatie.
 
 ## Nieuwe functies {#whats-new}
 
-Bekijk de nieuwste verbeteringen in Real-Time CDP-producten en -documentatie. Bekijk voor een uitgebreide lijst met functies, verbeteringen en oplossingen de gedetailleerde [Aanvullende informatie](/help/release-notes/latest/latest.md). Blijf up-to-date met de nieuwste wijzigingen in onze documentatie door de [sectie met maandelijkse releaseopmerkingen met documentupdates](/help/release-notes/latest/latest.md#documentation-updates).
+Bekijk de nieuwste verbeteringen in Real-Time CDP-producten en -documentatie. Bekijk voor een uitgebreide lijst met functies, verbeteringen en oplossingen de gedetailleerde [Aanvullende informatie](/help/release-notes/latest/latest.md). Blijf bijgewerkt met de recentste veranderingen in onze documentatie door de [ sectie van documentatieupdates van de maandelijkse versienota&#39;s ](/help/release-notes/latest/latest.md#documentation-updates) te bezoeken.
 
 >[!BEGINTABS]
 
->[!TAB Hoofdletters gebruiken]
+>] Van het Geval gebruik Playbooks [!TAB 
 
-De [!UICONTROL Use Case Playbooks] Deze functionaliteit is nu algemeen beschikbaar voor alle Real-Time CDP- en Adobe Journey Optimizer-klanten. [!UICONTROL Use Case Playbooks] zijn ontworpen om gebruikers te helpen bij het overwinnen van uitdagingen wanneer ze met Real-time Customer Data Platform of Adobe Journey Optimizer beginnen. Als u niet zeker weet waar u moet beginnen of hoe u de juiste middelen voor uw gewenste gebruiksscenario&#39;s kunt maken, kunt u met Afspeelboeken voor hoofdletters en kleine letters inspiratie bieden en verschillende middelen maken die u kunt testen en importeren in productieomgevingen wanneer u klaar bent.
+De [!UICONTROL Use Case Playbooks] -functionaliteit is nu algemeen beschikbaar voor alle Real-Time CDP- en Adobe Journey Optimizer-klanten. [!UICONTROL Use Case Playbooks] zijn ontworpen om gebruikers te helpen bij het overwinnen van uitdagingen wanneer ze met Real-time Customer Data Platform of Adobe Journey Optimizer beginnen. Als u niet zeker weet waar u moet beginnen of hoe u de juiste middelen voor uw gewenste gebruiksscenario&#39;s kunt maken, kunt u met Afspeelboeken voor hoofdletters en kleine letters inspiratie bieden en verschillende middelen maken die u kunt testen en importeren in productieomgevingen wanneer u klaar bent.
 
 [![afbeelding](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
 
->[!TAB Gereedschap Sandbox]
+>[!TAB  het tooling van Sandbox ]
 
 Met de gereedschapfunctie van de sandbox kunt u de configuratienauwkeurigheid in de verschillende sandboxen verbeteren en configuraties naadloos exporteren en importeren tussen sandboxen. U kunt de functie voor gereedschappen in de sandbox gebruiken om verschillende objecten te selecteren en deze te exporteren naar een pakket.
 
 [![afbeelding](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
 
->[!TAB Berekende kenmerken]
+>[!TAB  Berekende attributen ]
 
 U kunt gebeurtenisgegevens eenvoudig samenvatten in profielkenmerken via een intuïtieve gebruikersinterface voor verbeterde op gedrag gebaseerde segmentatie, personalisatie en activering. Met deze functie kunt u berekende kenmerken op een manier maken die zichzelf aanbiedt, deze beheren en ze in segmentatie, Real-Time CDP-doelen of Adobe Journey Optimizer gebruiken. Bovendien vereenvoudigen de berekende kenmerken de segmentatie en de workflows voor reizen, zodat u probleemloos relevante ervaringen kunt opdoen.
 
 [![afbeelding](assets/do-not-localize/learn-more-button.svg)](/help/profile/computed-attributes/overview.md)
 
->[!TAB Gegevens exporteren]
+>[!TAB  de uitvoer van Gegevens ]
 
-De functie voor het exporteren van gegevenssets is nu algemeen beschikbaar. Zie [welke gegevenssets u kunt exporteren op basis van de app Experience Platform](../destinations/ui/export-datasets.md#datasets-to-export) u hebt aangeschaft en de [instructies voor de uitvoer van gegevenssets](/help/destinations/guardrails.md#dataset-exports).
+De functie voor het exporteren van gegevenssets is nu algemeen beschikbaar. Zie [ welke datasets u kunt uitvoeren gebaseerd op Experience Platform app ](../destinations/ui/export-datasets.md#datasets-to-export) u, kocht en de [ gidsen voor het uitvoeren van datasets ](/help/destinations/guardrails.md#dataset-exports) controleert.
 
 [![afbeelding](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
 
->[!TAB Ondersteuning van partnergegevens]
+>[!TAB  de gegevenssteun van de Partner ]
 
 Voer bovenkanaalmarketing in Real-Time CDP, met partner-gesourceerde perspectiefprofielen en partner IDs uit om nieuwe klanten te bereiken en uw eerste-partijgegevens te verrijken. Gebruik kookloze herkenningstekens en hashed PII van gegevenspartners van keus om netto nieuwe klanten te bereiken en derdekoekjesafhankelijkheid te verminderen.
 
@@ -61,24 +61,24 @@ Begin door het materiaal in de hieronder verbindingen te lezen om zich met de co
   <tr style="border: 0;">
     <td>
     <a href="/help/rtcdp/get-started.md"><img src="assets/do-not-localize/start-quick.png"></a>
-    <div><strong>Aan de slag</strong><br/>Bekijk een overzicht van Real-Time CDP en leer hoe u met Real-Time CDP gegevens op schaal kunt invoeren, beheren en activeren.</div>
+    <div><strong> krijgen begonnen </strong><br/> krijgt een overzicht van Real-Time CDP om te leren hoe te, gegevens op schaal met Real-Time CDP innemen te beheren en te activeren.</div>
     </td>
     <td>
     <a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/start-campaign.jpeg"></a>
-    <div><strong>Welke Real-Time CDP-editie is geschikt voor mijn bedrijf</strong><br/>Begrijp de verschillen tussen de verschillende versies van Real-Time CDP en bepaal welke het beste is voor uw bedrijf.</div>
+    <div><strong> Welke uitgave van Real-Time CDP juist voor mijn bedrijf </strong><br/> is begrijpt de verschillen tussen de verschillende versies van Real-Time CDP en beslist welke beste voor uw bedrijf is.</div>
     </td>
     <td>
     <a href="/help/landing/ui-guide.md"><img src="assets/do-not-localize/start-interface.jpeg"></a>
-    <div><strong>Gebruikersinterface</strong><br/>Begrijp de elementen van de Real-Time CDP UI-startpagina, hoe u kunt navigeren en uw ervaring in producten kunt optimaliseren.</div>
+    <div><strong> gebruikersinterface </strong><br/> begrijpt de elementen van de homepage van Real-Time CDP UI, hoe te navigeren en uw in-productervaring optimaliseren.</div>
     </td>
     <td>
     <a href="/help/landing/end-to-end-tutorial.md"><img src="assets/do-not-localize/start-journey.jpeg"></a>
-    <div><strong>Ontdek een end-to-end workflow</strong><br/>Begrijp de stroom gegevens van opname, door verrijkende profielen en het creëren van publiek, aan activering.
+    <div><strong> verken een werkschema van begin tot eind </strong><br/> begrijpt de stroom van gegevens van opname, door het verrijken van profielen en het creëren van publiek, aan activering.
     </div>
     </td>
     <td>
     <a href="/help/rtcdp/use-case-guides/overview.md"><img src="assets/do-not-localize/start-use-cases.jpeg"></a>
-    <div><strong>Voorbeeld van Real-Time CDP-gebruiksscenario's</strong><br/>Ontdek de vele manieren waarop Real-Time CDP uw bedrijf kan helpen nieuwe klanten aan te schaffen, uw bekende profielen te verrijken en nog veel meer.
+    <div></strong><br/> Onderzoek van het Gebruik van de Steekproef Real-Time CDP de vele manieren waarin Real-Time CDP uw bedrijf kan helpen nieuwe klanten verwerven, verrijkt uw bekende profielen, en meer.<strong>
     </div>
     </td>
   </tr>
@@ -100,7 +100,7 @@ Begrijp de vier basispijlers van Adobe Real-Time CDP die u helpen:
 * Weet dat u gegevens beheert terwijl u zich aan diverse verordeningen, beperkingen, en beleid handhaaft die op gegevensgebruik van toepassing zijn;
 * Markeer uw klanten en pas hun ervaring op verschillende kanalen aan.
 
-![Uittreksel van een dia met de vier pijlers van Adobe Real-Time CDP.](/help/rtcdp/assets/rtcdp-four-pillars.png)
+![ Uittreksel van een dia die de vier pijlers van Adobe Real-Time CDP tonen.](/help/rtcdp/assets/rtcdp-four-pillars.png)
 
 Verken de onderstaande koppelingen naar productdocumentatie om te begrijpen hoe de vier basispijlers van Adobe Real-Time CDP u kunnen helpen zaken voor uw bedrijfsgebruik te realiseren.
 
@@ -108,37 +108,37 @@ Verken de onderstaande koppelingen naar productdocumentatie om te begrijpen hoe 
   <tr style="border: 0;">
     <td>
       <img src="assets/do-not-localize/icon-data.svg" width="35px"><br/>
-      <strong>Inname en beheer van gegevens</strong><br/>Onderzoek de vele manieren waarop u gegevens in Real-Time CDP kunt krijgen. <br/><a href="/help/ingestion/batch-ingestion/overview.md">Inname in batch</a> - <a href="/help/ingestion/streaming-ingestion/overview.md">Streaming opname</a> - <a href="/help/sources/home.md">Bronnen</a> - <a href="/help/xdm/schema/composition.md">Schemas</a> - <a href="/help/catalog/datasets/overview.md">Gegevenssets</a> - <a href="/help/query-service/home.md">Zoekopdrachten</a>
+      <strong> Inname van Gegevens en beheer </strong><br/> Onderzoek de vele manieren waarin u gegevens in Real-Time CDP kunt krijgen. <br/><a href="/help/ingestion/batch-ingestion/overview.md"> Inname van de Partij </a> - <a href="/help/ingestion/streaming-ingestion/overview.md"> Streaming opname </a> - <a href="/help/sources/home.md"> Bronnen </a> - <a href="/help/xdm/schema/composition.md"> Schema's </a> - <a href="/help/catalog/datasets/overview.md"> Datasets </a> - <a href="/help/query-service/home.md"> Vragen </a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon_profile-audience.svg" width="35px"><br/>
-      <strong>Profielen en publiek</strong><br/>Beheer verschillende typen profielen en groepeer deze in soorten publiek op basis van algemene belangen, gedrag of kenmerken. <br/><a href="/help/segmentation/home.md">Soorten publiek</a> - <a href="/help/profile/home.md">Profielen</a> - <a href="/help/identity-service/home.md">Identiteiten</a> - <a href="/help/dashboards/guides/license-usage.md">Licentiegebruik</a> - <a href="/help/privacy-service/home.md">Privacybeheer</a>
+      <strong> Profielen &amp; publiek </strong><br/> leiden diverse soorten profielen en groeperen hen in publiek dat op gemeenschappelijke belangen, gedrag, of eigenschappen wordt gebaseerd. <br/><a href="/help/segmentation/home.md"> Soorten publiek </a> - <a href="/help/profile/home.md"> Profielen </a> - <a href="/help/identity-service/home.md"> Identiteiten </a> - <a href="/help/dashboards/guides/license-usage.md"> het gebruik van de Vergunning </a> - <a href="/help/privacy-service/home.md"> het beheer van de Privacy </a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-lock.svg" width="35px"><br/>
-      <strong>Beheer en vertrouwen van gegevens</strong><br/>Begrijp hoe te om naleving van diverse verordeningen, beperkingen, en beleid te verzekeren van toepassing op gegevensgebruik. <br/><a href="/help/data-governance/home.md">Gegevensbeheer</a> - <a href="/help/data-governance/labels/overview.md">Labels voor gegevensgebruik</a> - <a href="/help/data-governance/policies/overview.md">Beleid voor gegevensgebruik</a>
+      <strong> het bestuur en het vertrouwen van Gegevens </strong><br/> begrijpen hoe te naleving van diverse verordeningen, beperkingen, en beleid te verzekeren van toepassing op gegevensgebruik. <br/><a href="/help/data-governance/home.md"> het bestuur van Gegevens </a> - <a href="/help/data-governance/labels/overview.md"> de gebruiksetiketten van Gegevens </a> - <a href="/help/data-governance/policies/overview.md"> het gebruiksbeleid van Gegevens </a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-content.svg" width="35px"><br/>
-      <strong>Gegevensactivering</strong><br/>Markeer uw klanten via verschillende kanalen en exporteer gegevens van Real-Time CDP naar de gewenste opslaglocatie. <br/><a href="/help/destinations/catalog/overview.md">Doelcatalogus</a> - <a href="/help/destinations/destination-types.md">Doeltypen</a> - <a href="/help/destinations/ui/activation-overview.md">Soorten publiek activeren</a>  - <a href="/help/destinations/ui/export-datasets.md">Gegevensbestanden exporteren</a>
+      <strong> de activering van Gegevens </strong><br/> Markt aan uw klanten over kanalen en de uitvoergegevens van Real-Time CDP aan om het even welke gewenste opslagplaats. <br/><a href="/help/destinations/catalog/overview.md"> de catalogus van Doelen </a> - <a href="/help/destinations/destination-types.md"> types van Bestemming </a> - <a href="/help/destinations/ui/activation-overview.md"> activeer publiek </a> - <a href="/help/destinations/ui/export-datasets.md"> datasets van de Uitvoer </a>
     </td>
   </tr>
   <tr style="border: 0;">
     <td>
       <img src="assets/do-not-localize/icon-configure.svg" width="35px"><br/>
-      <strong>Configuratie en beheer</strong><br/>Als beheerder, leer hoe u uw team met de juiste toestemmingen, toegangscontroles, en zandbakconfiguraties kunt bijstaan. <br/><a href="/help/access-control/home.md">Toegangsbeheer</a> - <a href="/help/access-control/abac/overview.md">Toegangsbeheer op basis van kenmerken</a> - <a href="/help/access-control/abac/end-to-end-guide.md">End-to-end hulplijn</a> - <a href="/help/sandboxes/home.md">Sandboxbeheer</a> 
+      <strong> Configuratie en beleid </strong><br/> als beheerder, leer hoe u uw team met de juiste toestemmingen, toegangscontroles, en zandbakconfiguraties kunt bijstaan. <br/><a href="/help/access-control/home.md"> controle van de Toegang </a> - <a href="/help/access-control/abac/overview.md"> Op Attribuut-Gebaseerd toegangsbeheer </a> - <a href="/help/access-control/abac/end-to-end-guide.md"> gids van begin tot eind </a> - <a href="/help/sandboxes/home.md"> het beheer van Sandboxen </a> 
     </td>
     <td>
       <img src="assets/do-not-localize/icon-cloud.svg" width="35px"><br/>
-      <strong>Mogelijkheden voor cloud en AI/ML</strong><br/>De AI en mogelijkheden van ML helpen u bij elke stap van de manier in veelvoudige dashboards. Tot de hooglichten behoren de onderstaande gebieden. <br/> <a href="/help/segmentation/ui/lookalike-audiences.md">Lookalike-publiek</a> - <a href="/help/rtcdp/segmentation/customer-ai.md">Customer AI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md">Verwante accounts</a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md">Voorspelend lood en account scoring</a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md">Aangrenzende overeenkomst tussen accounts</a>
+      <strong> Cloud en AI/ML mogelijkheden </strong><br/> AI en de mogelijkheden van ML helpen u bij elke stap van de manier in veelvoudige dashboards. Tot de hooglichten behoren de onderstaande gebieden. <br/> <a href="/help/segmentation/ui/lookalike-audiences.md"> Lookalike publiek </a> - <a href="/help/rtcdp/segmentation/customer-ai.md"> AI van de Klant </a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md"> Verwante rekeningen </a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md"> Predictieve lood en rekening het scoren </a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md"> lood-aan-rekening aanpassing </a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-learn.svg" width="35px"><br/>
-      <strong>Guardrails en best practices</strong><br/>Meer informatie over de beste praktijken en de huidige beperkingen bij het werken met gegevens in Real-Time CDP.<br/><a href="/help/rtcdp/guardrails/overview.md">Guardrails</a> - <a href="/help/landing/license-usage-and-guardrails/data-management-best-practices.md">Aanbevolen werkwijzen voor gegevensbeheerlicenties</a> - <a href="/help/xdm/schema/best-practices.md">Aanbevolen werkwijzen voor gegevensmodellering</a> - <a href="/help/privacy-service/best-practices.md">Aanbevolen werkwijzen voor Privacy Service</a> 
+      <strong> Guardrails en beste praktijken </strong><br/> leren over beste praktijken en huidige beperkingen wanneer het werken met gegevens in Real-Time CDP.<br/><a href="/help/rtcdp/guardrails/overview.md"> Guardrails </a> - <a href="/help/landing/license-usage-and-guardrails/data-management-best-practices.md"> Beste praktijken van de Entitlement van de Vergunning van het Beheer van Gegevens </a> - <a href="/help/xdm/schema/best-practices.md"> Beste praktijken van de Modellering van Gegevens </a> - <a href="/help/privacy-service/best-practices.md"> Beste praktijken van de Privacy Service </a> 
     </td>
     <td>
       <img src="assets/do-not-localize/icon-code.svg" width="35px"><br/>
-      <strong>Ontwikkelaar</strong><br/>Gebruik de verschillende API's en SDK's van Real-Time CDP om gegevensinvoer in te stellen, profielen te beheren, doelgroepen te maken en nog veel meer. <br/><a href="/help/landing/api-authentication.md">Verifiëren en aan de slag gaan met API's</a> - <a href="https://developer.adobe.com/experience-platform-apis/">Volledige API-referentie</a> - <a href="/help/destinations/destination-sdk/overview.md">Destination SDK</a> - <a href="/help/sources/sources-sdk/overview.md">Bronnen-SDK</a> - <a href="https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/">Mobile SDK</a>
+      <strong> Ontwikkelaar </strong><br/> Gebruik diverse APIs en SDKs die door Real-Time CDP aan opstellings gegevensopname worden verstrekt, profielen beheren, tot publiek, en meer leiden. <br/><a href="/help/landing/api-authentication.md"> verifieert en wordt begonnen met APIs </a> - <a href="https://developer.adobe.com/experience-platform-apis/"> Volledige API verwijzing </a> - <a href="/help/destinations/destination-sdk/overview.md"> Destination SDK </a> - <a href="/help/sources/sources-sdk/overview.md"> Bronnen SDK </a> - <a href="https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/"> Mobiele SDK </a>
     </td>
   </tr>
 </table>
@@ -155,11 +155,11 @@ Bekijk deze drie inleidende video&#39;s voor een beter begrip van Real-Time CDP,
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html">
-    <strong>Real-Time CDP als onderdeel van de Adobe Experience Cloud</strong>
+    <strong> Real-Time CDP als deel van Adobe Experience Cloud </strong>
     </a>
     </div>
     <p>
-    <em>Begrijp waar Real-Time CDP past binnen de grotere Adobe Experience Cloud</em>
+    <em> Begrijp waar Real-Time CDP binnen grotere Adobe Experience Cloud </em> past
     <p>
   </td>
   <td>
@@ -168,11 +168,11 @@ Bekijk deze drie inleidende video&#39;s voor een beter begrip van Real-Time CDP,
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
-    <strong>Basisarchitectuur van Adobe Experience Platform</strong>
+    <strong> Basisarchitectuur van Adobe Experience Platform </strong>
     </a>
     </div>
     <p>
-    <em>Leer de architectuur op hoog niveau van Adobe Experience Platform van een geleide analyse van een overzichtsdiagram</em>
+    <em> leer de architectuur op hoog niveau van Adobe Experience Platform van een geleide analyse van een overzichtsdiagram </em>
     <p>
   </td>
   <td>
@@ -181,11 +181,11 @@ Bekijk deze drie inleidende video&#39;s voor een beter begrip van Real-Time CDP,
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=en">
-    <strong>Interface tour van Adobe Experience Platform</strong>
+    <strong> Rondleiding van de Interface van Adobe Experience Platform </strong>
     </a>
     </div>
     <p>
-    <em>Leer hoe u door de Real-Time CDP-gebruikersinterface kunt navigeren</em>
+    <em> Leer hoe te om het gebruikersinterface van Real-Time CDP te navigeren </em>
     <p>
   </td>
   </tr>
@@ -196,13 +196,13 @@ Bekijk deze drie inleidende video&#39;s voor een beter begrip van Real-Time CDP,
 Blader hieronder naar de links om meer inzicht te krijgen in Real-Time CDP-gebruiksgevallen, -services en nog veel meer.
 
 <table style="table-layout:fixed"><tr style="border: 0;">
-<td><strong>Real-Time CDP</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=nl" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Productbeschrijving Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">Beveiligingsoverzicht (PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html" target="_blank">Implementatie blauwdrukken</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html" target="_blank">Verklarende woordenlijst</a>
+<td><strong> Real-Time CDP </strong><br/>
+<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=nl" target="_blank"> Tutorials </a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank"> de beschrijving van het Product Real-Time CDP B2C Uitgave </a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank"> B2B Uitgave </a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank"> B2B Uitgave </a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank"> Overzicht van de Veiligheid (PDF) </a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html" target="_blank"> de Blauwdrukken van de Uitvoering 13} - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html" target="_blank"> Verklarende woordenlijst </a></a>
 </td>
-<td><strong>Adobe Experience Platform</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html" target="_blank">Documentatie</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API-referentie - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank">Cursus: Inleiding tot Experience Platform</a></a>
+<td><strong> Adobe Experience Platform </strong><br/>
+<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html" target="_blank"> Documentatie </a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank"> API verwijzing - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank"> Cursus: Inleiding aan Experience Platform </a> </a>
 </td>
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>Blijf op de hoogte, draag bij aan de gemeenschap en verhoog uw Adobe Real-Time CDP-ervaring!</b><br/>Bezoek de Real-time Customer Data Platform-gemeenschap om functionaliteit met collega's te bespreken. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Word vandaag lid van de gemeenschap!</a></td></tr></table>
+<b> blijf op de hoogte, draag aan de gemeenschap bij, en verhoog uw ervaring van Adobe Real-Time CDP!</b><br/> Bezoek de gemeenschap van Real-time Customer Data Platform om functionaliteit met medepraktiseraars te bespreken. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP"> sluit zich vandaag aan bij de gemeenschap!</a></td></tr></table>

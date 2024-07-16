@@ -11,57 +11,57 @@ ht-degree: 0%
 
 # [!UICONTROL Account Profiles] dashboard
 
-De gebruikersinterface van Adobe Experience Platform (UI) biedt een dashboard waarmee u belangrijke informatie over uw accountprofielen kunt bekijken, zoals vastgelegd tijdens een dagelijkse momentopname. In deze handleiding wordt beschreven hoe u de [!UICONTROL Account Profiles] dashboard in UI en verstrekt meer informatie over de visualisaties die in het dashboard worden getoond.
+De gebruikersinterface van Adobe Experience Platform (UI) biedt een dashboard waarmee u belangrijke informatie over uw accountprofielen kunt bekijken, zoals vastgelegd tijdens een dagelijkse momentopname. In deze handleiding wordt beschreven hoe u het dashboard [!UICONTROL Account Profiles] in de gebruikersinterface kunt openen en gebruiken en wordt meer informatie gegeven over de visualisaties die in het dashboard worden weergegeven.
 
-Dit document biedt een overzicht van de functies in het [!UICONTROL Account Profiles] dashboard en geeft details over de beschikbare standaardinzichten. Zie de [[!UICONTROL Account Profiles] UI-hulplijn](../../rtcdp/accounts/account-profile-ui-guide.md) voor uitgebreide informatie over de beschikbare functies.
+Dit document biedt een overzicht van de functies in het dashboard van [!UICONTROL Account Profiles] en geeft details over de beschikbare standaardinzichten. Zie de [[!UICONTROL Account Profiles] gids UI ](../../rtcdp/accounts/account-profile-ui-guide.md) voor uitvoerige details over zijn beschikbare eigenschappen.
 
 ## Aan de slag
 
-U moet recht hebben op [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) toegang tot B2B [!UICONTROL Account Profiles] dashboard.
+U moet aan [ Adobe Real-time Customer Data Platform B2B Uitgave ](../../rtcdp/b2b-overview.md) gerechtigd zijn om tot het B2B [!UICONTROL Account Profiles] dashboard toegang te hebben.
 
 ## Gegevens van accountprofielen {#data}
 
-De [!UICONTROL Account Profiles] op het dashboard wordt een momentopname van de gegevens van uw geconsolideerde account weergegeven. Deze rekeningsinformatie komt uit de veelvoudige bronnen over uw marketing kanalen en de diverse systemen die uw organisatie momenteel gebruikt om de informatie van de klantenrekening op te slaan.
+Op het dashboard van [!UICONTROL Account Profiles] wordt een momentopname van de gegevens van uw geconsolideerde account weergegeven. Deze rekeningsinformatie komt uit de veelvoudige bronnen over uw marketing kanalen en de diverse systemen die uw organisatie momenteel gebruikt om de informatie van de klantenrekening op te slaan.
 
-De profielgegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of voorbeeld van de gegevens en de [!UICONTROL Account Profiles] het dashboard wordt niet in real-time bijgewerkt.
+De profielgegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of voorbeeld van de gegevens en het dashboard van [!UICONTROL Account Profiles] wordt niet in real-time bijgewerkt.
 
 >[!NOTE]
 >
 >Wijzigingen of updates die zijn aangebracht in de gegevens nadat de momentopname is gemaakt, worden pas in het dashboard weergegeven als de volgende momentopname is gemaakt.
 
-## Ontdek de [!UICONTROL Account Profiles] dashboard {#explore}
+## Het dashboard van [!UICONTROL Account Profiles] verkennen {#explore}
 
-Ga naar de [!UICONTROL Account Profiles] het dashboard binnen UI van het Platform, uitgezocht **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in het linkernavigatievenster.
+Als u naar het [!UICONTROL Account Profiles] -dashboard in de gebruikersinterface van het platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** onder [!UICONTROL Accounts] in het navigatievenster aan de linkerkant.
 
-![De interface Platform met accountprofielen in de linkernavigatie is gemarkeerd en het tabblad Overzicht wordt weergegeven.](../images/account-profiles/account-profiles-dashboard.png)
+![ het Platform UI met de Profielen van de Rekening in de linkerbenadrukte navigatie en het overzicht getoonde lusje.](../images/account-profiles/account-profiles-dashboard.png)
 
-Van de [!UICONTROL Account Profiles] dashboard, u kunt of [door de accountprofielen bladeren die in uw organisatie worden opgenomen](#browse-account-profiles), of [de volledige gegevens van uw accountprofiel in één oogopslag weergeven met widgets](#standard-widgets).
+Van het [!UICONTROL Account Profiles] dashboard, kunt u of [ de rekeningsprofielen doorbladeren die in uw organisatie ](#browse-account-profiles) worden opgenomen, of [ bekijken de volledige gegevens van uw rekeningsprofiel bij een blik gebruikend widgets ](#standard-widgets).
 
 ### Datumfilter {#date-filter}
 
-De [!UICONTROL Overview] tab bestaat uit widgets die alleen-lezen gegevens bieden om belangrijke informatie over uw accountprofielen over te brengen. Selecteer het kalenderpictogram of de data om het globale datumfilter voor uw widgets te veranderen.
+Het tabblad [!UICONTROL Overview] is samengesteld uit widgets die alleen-lezen gegevens bieden waarmee belangrijke informatie over uw accountprofielen wordt overgebracht. Selecteer het kalenderpictogram of de data om het globale datumfilter voor uw widgets te veranderen.
 
 >[!IMPORTANT]
 >
->Het datumbereik dat u in de vervolgkeuzelijst selecteert, beïnvloedt alle inzichten, behalve de twee widgets voor voorspellende scoring ([distributie](#predictive-scoring-distribution) en [invloedrijke factoren](#predictive-scoring-top-influential-factors)).
+>De datumwaaier die u in de dropdown kalender selecteert beïnvloedt alle inzichten behalve de twee vooruitlopende het noteren widgets ([ distributie ](#predictive-scoring-distribution) en [ hoogste invloedrijke factoren ](#predictive-scoring-top-influential-factors)).
 
-![Het tabblad Overzicht van accountprofielen met de datumkiezer en het filterpictogram gemarkeerd.](../images/account-profiles/date-filter.png)
+![ het overzicht lusje van Profielen van de Rekening met de benadrukte datumselecteur en filterpictogram.](../images/account-profiles/date-filter.png)
 
 ### Configureer de lead in account matching-service {#lead-to-account-matching-service}
 
-Selecteren **[!UICONTROL Settings]** om de lead to account matching service van de [!UICONTROL Account settings] in. Voor volledige details over hoe te om uw lood te vormen aan rekening aanpassen, zie [UI-hulplijn](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). Als u meer wilt weten over &#39;lead to account matching&#39;, raadpleegt u de [leiden tot account-overeenkomsten in Real-Time CDP B2B-documentatie](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+Selecteer **[!UICONTROL Settings]** om in het dialoogvenster [!UICONTROL Account settings] de service voor lead to account matching te configureren. Voor volledige details op hoe te om uw lood aan rekening aanpassing te vormen, zie de [ gids UI ](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). Meer leren over lood aan rekening aanpassing, verwijs naar [ leiden tot rekening die in de documentatie van Real-Time CDP B2B ](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) aanpassen.
 
-![Het dashboard Accountprofielen met instellingen gemarkeerd.](../images/account-profiles/settings.png)
+![ het dashboard van Profielen van de Rekening met benadrukte Montages.](../images/account-profiles/settings.png)
 
 ## Accountprofielen zoeken {#browse-account-profiles}
 
-Van de [!UICONTROL Browse] kunt u de alleen-lezen accountprofielen die in uw organisatie worden ingevoerd, doorzoeken en bekijken. Gebruik een account-id van een verbonden onderneming of voer de brongegevens rechtstreeks in. Vanuit deze werkruimte kunt u belangrijke informatie zien die bij het accountprofiel hoort, zoals naam, industrie, inkomsten en het publiek.
+Via het tabblad [!UICONTROL Browse] kunt u zoeken naar de alleen-lezen accountprofielen die in uw organisatie worden opgenomen. Gebruik een account-id van een verbonden onderneming of voer de brongegevens rechtstreeks in. Vanuit deze werkruimte kunt u belangrijke informatie zien die bij het accountprofiel hoort, zoals naam, industrie, inkomsten en het publiek.
 
-Selecteer de [!UICONTROL Profile ID] uit de resultaten die worden weergegeven op de [!UICONTROL Browse] om de [!UICONTROL Details] voor het accountprofiel.
+Selecteer in de resultaten op het tabblad [!UICONTROL Browse] de optie [!UICONTROL Profile ID] om het tabblad [!UICONTROL Details] voor het accountprofiel te openen.
 
-![Op het tabblad Accountprofielen worden de resultaten weergegeven en wordt de profiel-id gemarkeerd.](../images/account-profiles/account-profiles-browse-tab.png)
+![ De Profielen van de Rekening doorbladeren lusje met getoonde resultaten en benadrukte identiteitskaart van het Profiel.](../images/account-profiles/account-profiles-browse-tab.png)
 
-De accountprofielgegevens die worden weergegeven op het tabblad [!UICONTROL Details] tabblad is samengevoegd vanuit meerdere profielfragmenten om een enkele weergave van de afzonderlijke account te vormen. Zie de documentatie op [bladeren door accountprofielen in Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) voor meer informatie over de weergavemogelijkheden van het accountprofiel in de gebruikersinterface van het platform.
+De accountprofielgegevens die op het tabblad [!UICONTROL Details] worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten tot één weergave van het individuele account. Zie de documentatie bij [ doorbladerend rekeningsprofielen in Adobe Real-time Customer Data Platform ](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) om meer over de mogelijkheden van het rekeningsprofiel te leren bekijken in Platform UI.
 
 ## Standaardwidgets {#standard-widgets}
 
@@ -86,63 +86,63 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 
 ### Accountprofielen toegevoegd {#account-profiles-added}
 
-De [!UICONTROL Account profiles added] widget gebruikt een lijngrafiek om het aantal rekeningsprofielen te tonen die elke dag over een tijdspanne worden toegevoegd. Gebruik het globale datumfilter dat zich boven aan het dashboard bevindt om de analyseperiode te bepalen. Als er geen datumfilter is opgegeven, worden in het standaardgedrag de accountprofielen weergegeven die zijn toegevoegd voor het jaar vóór vandaag. De resultaten kunnen worden gebruikt om een trend in het aantal toegevoegde accountprofielen af te leiden.
+De widget [!UICONTROL Account profiles added] gebruikt een lijngrafiek om het aantal accountprofielen weer te geven dat elke dag wordt toegevoegd over een bepaalde tijdsperiode. Gebruik het globale datumfilter dat zich boven aan het dashboard bevindt om de analyseperiode te bepalen. Als er geen datumfilter is opgegeven, worden in het standaardgedrag de accountprofielen weergegeven die zijn toegevoegd voor het jaar vóór vandaag. De resultaten kunnen worden gebruikt om een trend in het aantal toegevoegde accountprofielen af te leiden.
 
-![De widget Accountprofielen toegevoegd.](../images/account-profiles/account-profiles-added.png)
+![ De toegevoegde de profielen van de Rekening widget.](../images/account-profiles/account-profiles-added.png)
 
 ### Nieuwe rekeningen van de industrie {#accounts-by-industry}
 
-De [!UICONTROL New accounts by industry] widget geeft het totale aantal accounts in één meting in een donutgrafiek weer. Het donutdiagram illustreert de relatieve samenstelling van verschillende industrieën waaruit dit totaal bestaat. Een kleurgecodeerde sleutel geeft een indeling van alle opgenomen industrieën. Individuele tellingen voor elke industrie worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
+Met de widget [!UICONTROL New accounts by industry] wordt het totale aantal accounts in één meting in een donutgrafiek weergegeven. Het donutdiagram illustreert de relatieve samenstelling van verschillende industrieën waaruit dit totaal bestaat. Een kleurgecodeerde sleutel geeft een indeling van alle opgenomen industrieën. Individuele tellingen voor elke industrie worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
 
-![De widget Nieuwe accounts per branche.](../images/account-profiles/new-accounts-by-industry.png)
+![ De Nieuwe rekeningen door industrie widget.](../images/account-profiles/new-accounts-by-industry.png)
 
 ### Nieuwe accounts per type {#accounts-by-type}
 
-De [!UICONTROL New accounts by type] widget geeft het totale aantal accounts in één meting in een donutgrafiek weer. Het donutdiagram illustreert de relatieve samenstelling van verschillende accounttypen waaruit dit totaal bestaat. Een kleurgecodeerde sleutel geeft een indeling van alle opgenomen accounttypen. Individuele tellingen voor elk type van rekening worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
+Met de widget [!UICONTROL New accounts by type] wordt het totale aantal accounts in één meting in een donutgrafiek weergegeven. Het donutdiagram illustreert de relatieve samenstelling van verschillende accounttypen waaruit dit totaal bestaat. Een kleurgecodeerde sleutel geeft een indeling van alle opgenomen accounttypen. Individuele tellingen voor elk type van rekening worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
 
-![De nieuwe accounts op type-widget.](../images/account-profiles/new-accounts-by-type.png)
+![ De Nieuwe rekeningen door type widget.](../images/account-profiles/new-accounts-by-type.png)
 
 ### Nieuwe mogelijkheden per persoonlijke rol {#opportunities-by-person-role}
 
-De [!UICONTROL New opportunities by person role] widget geeft het totale aantal van uw mogelijkheden in één meting binnen een donutgrafiek weer. Het donutdiagram illustreert de relatieve samenstelling van rollen die uit dit totale aantal kansen bestaan. Een kleurgecodeerde sleutel geeft een indeling van alle opgenomen rollen. Individuele tellingen voor elke rol worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
+Met de widget [!UICONTROL New opportunities by person role] wordt het totale aantal mogelijkheden in één meting in een donutgrafiek weergegeven. Het donutdiagram illustreert de relatieve samenstelling van rollen die uit dit totale aantal kansen bestaan. Een kleurgecodeerde sleutel geeft een indeling van alle opgenomen rollen. Individuele tellingen voor elke rol worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
 
 >[!NOTE]
 >
->De [!UICONTROL No data found] of [!UICONTROL Unable to load] De fout wordt veroorzaakt wanneer &quot;opportunity-Persoon&quot;brug-lijst niet in uw schema wordt gebruikt. Als uw inzicht één van deze fouten toont, controleer uw verenigingsschema en zorg ervoor dat de &quot;opportuniteit-Persoon&quot;gebiedsgroep gegevens opneemt.
+>De fout [!UICONTROL No data found] of [!UICONTROL Unable to load] wordt veroorzaakt wanneer de de brug-lijst van de &quot;opportuniteit-Persoon&quot;niet in uw schema wordt gebruikt. Als uw inzicht één van deze fouten toont, controleer uw verenigingsschema en zorg ervoor dat de &quot;opportuniteit-Persoon&quot;gebiedsgroep gegevens opneemt.
 
-![De nieuwe mogelijkheden per widget voor persoonlijke rol.](../images/account-profiles/new-opportunities-by-person-role.png)
+![ de Nieuwe kansen door de widget van de persoonsrol.](../images/account-profiles/new-opportunities-by-person-role.png)
 
 ### Nieuwe mogelijkheden door inkomsten {#opportunities-by-revenue}
 
-De [!UICONTROL New opportunities by revenue] widget gebruikt een staafdiagram om het totale geschatte bedrag van opbrengst te illustreren die door uw kansen wordt geproduceerd. De widget biedt ondersteuning voor maximaal zes mogelijkheden.
+De [!UICONTROL New opportunities by revenue] -widget gebruikt een staafdiagram om de totale geschatte hoeveelheid opbrengsten te illustreren die door uw mogelijkheden wordt gegenereerd. De widget biedt ondersteuning voor maximaal zes mogelijkheden.
 
 Om een dialoog te zien die het specifieke opbrengsttotaal voor een kans bevat, gebruik de curseur om over individuele bars te bewegen.
 
-![De nieuwe kansen door opbrengstwidget.](../images/account-profiles/new-opportunities-by-revenue.png)
+![ de Nieuwe kansen door opbrengstwidget.](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### Nieuwe mogelijkheden per status en podium {#opportunities-by-status-&-stage}
+### Nieuwe mogelijkheden per status en werkgebied {#opportunities-by-status-&-stage}
 
 Deze widget gebruikt een staafdiagram om het aantal kansen te illustreren die of open of gesloten zijn in alle stadia van de marketing/verkooptrechter. De widget gebruikt kleuren om het werkgebied van de mogelijkheden te onderscheiden. Een kleurcoderingssleutel geeft de beschikbare stadia voor mogelijkheden aan.
 
-![De nieuwe kansen per status &amp; stadium widget.](../images/account-profiles/new-opportunities-by-status-&-stage.png)
+![ de Nieuwe kansen door status &amp; stadium widget.](../images/account-profiles/new-opportunities-by-status-&-stage.png)
 
 ### Nieuwe kansen gewonnen {#opportunities-won}
 
-De [!UICONTROL New opportunities won] widget geeft het totale aantal kansen weer dat u met succes hebt voltooid in één meting in een donutgrafiek. Het donutdiagram illustreert de relatieve samenstelling van kansen die of worden gewonnen of niet. Bij een kleurcoderingssleutel wordt onderscheid gemaakt tussen de wel en niet-gewonnen mogelijkheden. Individuele tellingen voor elke rol worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
+De [!UICONTROL New opportunities won] widget geeft het totale aantal kansen weer dat met succes is voltooid in één meting binnen een donutgrafiek. Het donutdiagram illustreert de relatieve samenstelling van kansen die of worden gewonnen of niet. Bij een kleurcoderingssleutel wordt onderscheid gemaakt tussen de wel en niet-gewonnen mogelijkheden. Individuele tellingen voor elke rol worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
 
-![De widget Nieuwe kansen heeft gewonnen.](../images/account-profiles/new-opportunities-won.png)
+![ de Nieuwe kansen won widget.](../images/account-profiles/new-opportunities-won.png)
 
 ### Opportuniteiten toegevoegd {#opportunities-added}
 
-De [!UICONTROL Opportunities added] widget gebruikt een lijngrafiek om het aantal kansen te tonen die elke dag over een periode worden toegevoegd. Gebruik het globale datumfilter dat zich boven aan het dashboard bevindt om de analyseperiode te bepalen. Als geen datumfilter wordt verstrekt, maakt een lijst het standaardgedrag van de kansen die voor het jaar voorafgaand aan vandaag worden toegevoegd. De resultaten kunnen worden gebruikt om een trend in het aantal toegevoegde kansen af te leiden.
+De widget [!UICONTROL Opportunities added] gebruikt een lijngrafiek om het aantal kansen weer te geven dat elke dag over een tijdsperiode wordt toegevoegd. Gebruik het globale datumfilter dat zich boven aan het dashboard bevindt om de analyseperiode te bepalen. Als geen datumfilter wordt verstrekt, maakt een lijst het standaardgedrag van de kansen die voor het jaar voorafgaand aan vandaag worden toegevoegd. De resultaten kunnen worden gebruikt om een trend in het aantal toegevoegde kansen af te leiden.
 
 <!-- Link to date filter documentation from Annamalai -->
 
-![De widget Opportunity toegevoegd.](../images/account-profiles/opportunities-added.png)
+![ De toegevoegde opportuniteiten widget.](../images/account-profiles/opportunities-added.png)
 
 ### Predictieve spreiding van scores {#predictive-scoring-distribution}
 
-De [!UICONTROL Predictive scoring distribution] widget geeft de verdeling van de score van alle accountprofielen weer om u te helpen de gezondheid van uw verkooppijplijn in één oogopslag te begrijpen . De het scoren gegevens worden overgebracht door een donutgrafiek en een kolomgrafiek.
+De [!UICONTROL Predictive scoring distribution] widget geeft de score weer van alle accountprofielen, zodat u in één oogopslag de gezondheid van uw verkooppijplijn kunt begrijpen. De het scoren gegevens worden overgebracht door een donutgrafiek en een kolomgrafiek.
 
 Het donutdiagram toont het aandeel van uw totale accountprofielen in elk van de sterke, gemiddelde en lage neiging om emmers te kopen. De sleutel bevat meer details over de secties met kleurcodes, waaronder de bereiken van het scoremmer en het aantal accountprofielen in dat bereik.
 
@@ -154,11 +154,11 @@ Met het vervolgkeuzemenu in de widget kunt u het accountscoremodel selecteren.
 >
 >Filters voor het algemene datumbereik zijn niet van toepassing op voorspellende scoring-inzichten. Met widgets voor voorspellende scoring worden gegevens geanalyseerd op basis van het accountscoremodel dat is geselecteerd in de vervolgkeuzelijst.
 
-![De widget voor voorspellende codeverdeling.](../images/account-profiles/predictive-scoring-distribution.png)
+![ de Predictive het scoren verdelingswidget.](../images/account-profiles/predictive-scoring-distribution.png)
 
 ### Predictieve scoring van invloedrijke factoren {#predictive-scoring-top-influential-factors}
 
-De [!UICONTROL Predictive scoring top influential factors] widget helpt u de belangrijkste factoren te begrijpen die de scores voor elke aandrijvingsemmer drijven.
+Met de widget [!UICONTROL Predictive scoring top influential factors] krijgt u inzicht in de belangrijkste factoren die de scores voor elk eigenschapemmertje bepalen.
 
 Deze widget toont de belangrijkste invloedrijke factoren voor elk van de hoge, gemiddelde, en lage aandrijvingsemmers. Een staaf voor elke invloedrijke factor geeft het percentage aan van de accountprofielen in dat eigenschapssemmer dat de specifieke invloedrijke factor bevat.
 
@@ -168,16 +168,16 @@ Met het vervolgkeuzemenu in de widget kunt u het accountscoremodel selecteren.
 >
 >Filters voor het algemene datumbereik zijn niet van toepassing op voorspellende scoring-inzichten. Met widgets voor voorspellende scoring worden gegevens geanalyseerd op basis van het accountscoremodel dat is geselecteerd in de vervolgkeuzelijst.
 
-![De widget Voorspelende score met invloedrijke factoren.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+![ het Predictive scoring top invloential factorwidget.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
 ## Kan gegevensfout niet laden {#errors}
 
-Als een widget wordt weergegeven *[!UICONTROL Unable to load. Try again.]* omdat er voor de B2B-entiteit geen gegevens beschikbaar zijn. De widget die bijvoorbeeld hieronder wordt weergegeven [!UICONTROL New opportunities by person role]toont het bericht &quot;[!UICONTROL Unable to load. Try again.]&quot; omdat deze sandbox geen opportuniteitsgegevens heeft.
+Als een widget *[!UICONTROL Unable to load. Try again.]* weergeeft, is dit omdat er geen gegevens beschikbaar zijn voor de B2B-entiteit. De widget die bijvoorbeeld onder [!UICONTROL New opportunities by person role] wordt weergegeven, toont het bericht &quot; [!UICONTROL Unable to load. Try again.]&quot; omdat deze sandbox geen opportuniteitsgegevens bevat.
 
-![Onbekwaam om wijzerplaatfout te laden.](../images/account-profiles/unable-to-load.png)
+![ Onbekwaam om inzicht fout te laden.](../images/account-profiles/unable-to-load.png)
 
-U moet gegevens van B2B-entiteiten invoeren om het probleem op te lossen *opportuniteit* in de sandbox. Na 48 uur worden de gegevens weerspiegeld in de widgets.
+Om de kwestie op te lossen, moet u B2B entiteitsgegevens, zoals *opportunitypersoon* gegevens, in de zandbak innemen. Na 48 uur worden de gegevens weerspiegeld in de widgets.
 
 ## Volgende stappen
 
-Door dit document te volgen, moet u nu weten hoe u de [!UICONTROL Account Profiles] Het dashboard en de metriek die in beschikbare widgets wordt getoond begrijpen. Als u meer wilt weten over het werken met accountprofielen als onderdeel van uw B2B-gegevens in de interface van het Experience Platform, raadpleegt u de [overzicht van accountprofielen](../../rtcdp/accounts/account-profile-overview.md) voor Adobe Real-Time CDP, B2B Edition.
+Als u dit document volgt, moet u nu weten hoe u het dashboard van [!UICONTROL Account Profiles] kunt vinden en welke maatstaven in de beschikbare widgets worden weergegeven. Meer over het werken met rekeningsprofielen als deel van uw B2B- gegevens in het Experience Platform UI leren, gelieve te verwijzen naar het [ overzicht van rekeningsprofielen ](../../rtcdp/accounts/account-profile-overview.md) voor Adobe Real-Time CDP, B2B Uitgave.

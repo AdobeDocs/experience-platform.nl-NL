@@ -6,26 +6,26 @@ description: Het /auditlog eindpunt in de Registratie API van het Schema staat u
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 0%
+source-wordcount: '397'
+ht-degree: 1%
 
 ---
 
 # Het eindpunt van het controlelogboek
 
-Voor elke bron van het Gegevensmodel van de Ervaring (XDM), [!DNL Schema Registry] onderhoudt een logboek van alle veranderingen die tussen verschillende updates zijn voorgekomen. De `/auditlog` in de [!DNL Schema Registry] API staat u toe om een controlelogboek voor om het even welke klasse, de groep van het schemagebied, gegevenstype, of schema terug te winnen dat door identiteitskaart wordt gespecificeerd.
+Voor elke bron van het Gegevensmodel van de Ervaring (XDM), [!DNL Schema Registry] handhaaft een logboek van alle veranderingen die tussen verschillende updates zijn voorgekomen. Met het `/auditlog` -eindpunt in de [!DNL Schema Registry] API kunt u een controlelogboek ophalen voor een klasse, schemaveldgroep, gegevenstype of schema dat door de id is opgegeven.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
-De `/auditlog` het eindpunt maakt deel uit van de verre procedurevraag (RPCs) die door het [!DNL Schema Registry]. Anders dan bij andere eindpunten in het deelvenster [!DNL Schema Registry] API, RPC-eindpunten vereisen geen extra headers zoals `Accept` of `Content-Type`en geen `CONTAINER_ID`. In plaats daarvan moeten ze de opdracht `/rpc` naamruimte, zoals wordt getoond in de API-aanroep hieronder.
+Het `/auditlog` eindpunt maakt deel uit van de verre procedurevraag (RPCs) die door [!DNL Schema Registry] wordt gesteund. In tegenstelling tot andere eindpunten in de [!DNL Schema Registry] API, vereisen RPC-eindpunten geen extra kopteksten zoals `Accept` of `Content-Type` en gebruiken ze geen `CONTAINER_ID` . In plaats daarvan moeten ze de naamruimte `/rpc` gebruiken, zoals wordt getoond in de API-aanroep hieronder.
 
 ## Hiermee wordt een controlelogbestand voor een bron opgehaald
 
-U kunt een controlelogboek voor om het even welke klasse, gebiedsgroep, gegevenstype, of schema terugwinnen binnen de Bibliotheek van het Schema door identiteitskaart van het middel in de weg van een verzoek van de GET aan te specificeren `/auditlog` eindpunt.
+U kunt een controlelogboek voor om het even welke klasse, gebiedsgroep, gegevenstype, of schema terugwinnen binnen de Bibliotheek van het Schema door identiteitskaart van het middel in de weg van een verzoek van de GET aan het `/auditlog` eindpunt te specificeren.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /rpc/auditlog/{RESOURCE_ID}
@@ -33,7 +33,7 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RESOURCE_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het middel waarvan controlelogboek u wilt terugwinnen. |
+| `{RESOURCE_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de bron waarvan u het auditlogboek wilt ophalen. |
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een chronologische lijst van veranderingen terug die in het middel worden aangebracht, van meest recente tot minst recente.
 
@@ -122,7 +122,7 @@ Een succesvolle reactie keert een chronologische lijst van veranderingen terug d
 | `id` | De `$id` van de bron die is gewijzigd. Deze waarde vertegenwoordigt typisch het middel dat in de verzoekweg wordt gespecificeerd, maar kan een afhankelijke middel vertegenwoordigen als dat de bron van de verandering is. |
 | `xdmType` | Het type bron dat is gewijzigd. |
 | `action` | Het type wijziging dat is aangebracht. |
-| `path` | A [JSON-aanwijzer](../../landing/api-fundamentals.md#json-pointer) tekenreeks die het pad aangeeft naar het specifieke veld dat is gewijzigd of toegevoegd. |
+| `path` | A ](../../landing/api-fundamentals.md#json-pointer) koord dat van de Aanwijzer JSON [ op de weg wijst aan het specifieke gebied dat werd veranderd of toegevoegd. |
 | `value` | De waarde die is toegewezen aan het nieuwe of bijgewerkte veld. |
 
 {style="table-layout:auto"}

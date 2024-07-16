@@ -4,14 +4,14 @@ description: De meest recente release bevat de extensie Common Analytics Plugins
 exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 5%
+source-wordcount: '352'
+ht-degree: 2%
 
 ---
 
 # Opmerkingen bij de release Common Analytics Plugins
 
-## 3 juni 2022
+## zaterdag 3 juni 2022
 
 ### Common Analytics Plugins Extension 3.0.7
 
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 * Insteekmodules die cookies instellen, gebruiken nu de beveiligde markering
 
-## 23 juni 2021
+## donderdag 23 juni 2021
 
 ### Common Analytics Plugins Extension 3.0.6
 
@@ -27,7 +27,7 @@ ht-degree: 5%
 
 * getPercentPageViewed werd afgebroken bij gebruik van speciale tekens. Dit probleem is nu opgelost.
 
-## 20 mei 2021
+## vrijdag 20 mei 2021
 
 ### Common Analytics Plugins Extension 3.0.5
 
@@ -35,7 +35,7 @@ ht-degree: 5%
 
 * getTimeParting werd niet correct geïnitialiseerd bij gebruik van de generieke initialiseringsactie. Dit probleem is nu opgelost.
 
-## 26 maart 2021
+## zaterdag 26 maart 2021
 
 ### Common Analytics Plugins Extension 3.0.4
 
@@ -45,13 +45,13 @@ ht-degree: 5%
 * Probleem verholpen waarbij getQueryParam ongedefinieerd werd geretourneerd in plaats van &quot;&quot; als queryParam niet aanwezig was in de queryreeks
 * Probleem verholpen waarbij onjuiste versienummers werden weergegeven in de initialisatiehandeling
 
-## 19 maart 2021
+## zaterdag 19 maart 2021
 
 ### Common Analytics Plugins Extension 3.0.2
 
 #### Functies
 
-* Alle plug-ins die automatisch worden bijgewerkt om versiegegevens op te nemen als contextgegevens
+* Alle plug-ins die automatisch worden bijgewerkt, bevatten versiegegevens als contextgegevens
 * Toegevoegde getPercentPageViewed-plug-in
 * Gegevenselementen toegevoegd voor de volgende plug-ins
    * getGeoCoordinates
@@ -64,7 +64,7 @@ ht-degree: 5%
    * getVisitNum
 * Bijgewerkte stijlen
 
-## 9 april 2020
+## vrijdag 9 april 2020
 
 ### Common Analytics Plugins Extension 2.2.0
 
@@ -84,7 +84,7 @@ ht-degree: 5%
 
 * Probleem verholpen waardoor compatibiliteit met versie 2.0.X met oudere versies werd voorkomen
 * Documentkoppelingen wezen op onjuiste documentatie. Dit probleem is nu opgelost.
-* Probleem verholpen waarbij `getTimeSinceLastVisit` twee keer verscheen in de initialiseringsactie
+* Probleem verholpen waarbij `getTimeSinceLastVisit` twee keer werd weergegeven in de initialisatieactie. Dit probleem is nu opgelost.
 
 ## 15 november 2019
 
@@ -93,9 +93,9 @@ ht-degree: 5%
 #### Opgeloste problemen
 
 * Nieuwe insteekacties voor afzonderlijke insteekmodules ter ondersteuning van achterwaartse compatibiliteit
-* Probleem verholpen met de `cleanStr` insteekmodule
-* Probleem verholpen met de `getResponsiveLayout` insteekmodule
-* Probleem verholpen met de `getPageName` insteekmodule
+* Probleem verholpen met de `cleanStr` -plug-in
+* Probleem verholpen met de `getResponsiveLayout` -plug-in
+* Probleem verholpen met de `getPageName` -plug-in
 
 #### Functies
 
@@ -104,7 +104,7 @@ ht-degree: 5%
 * Versie-update voor `getNewRepeat`
 * Bijgewerkte documentatie voor alle plug-ins
 
-## 30 oktober 2019
+## donderdag 30 oktober 2019
 
 ### Common Analytics Plugins Extension 2.0.3
 
@@ -112,7 +112,7 @@ ht-degree: 5%
 
 * Probleem verholpen waarbij documentatiekoppelingen werden verbroken
 
-## 11 oktober 2019
+## zaterdag 11 oktober 2019
 
 ### Common Analytics Plugins Extension 2.0.2
 
@@ -121,7 +121,7 @@ ht-degree: 5%
 * 15 plug-ins toegevoegd aan de extensie
 * Nieuwe initialiseringsactie gemaakt om een betere implementatie te ondersteunen
 
-## 11 juli 2019
+## vrijdag 11 juli 2019
 
 ### Common Analytics Plugins Extension 1.0.4
 

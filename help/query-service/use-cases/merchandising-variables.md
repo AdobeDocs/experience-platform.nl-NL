@@ -4,21 +4,21 @@ description: Leer hoe te om gebieden XDM en steekproefvragen te verstrekken om t
 exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1103'
-ht-degree: 1%
+source-wordcount: '1089'
+ht-degree: 0%
 
 ---
 
 # Commerciële variabelen uit analysegegevens retourneren en gebruiken
 
-De Dienst van de Vraag van het gebruik om de gegevens te beheren die van Adobe Analytics in Adobe Experience Platform als datasets worden opgenomen. De volgende secties verstrekken steekproefvragen die u kunt gebruiken om tot de het verhandelen variabelen in uw datasets van Analytics toegang te hebben. Zie de documentatie voor meer informatie over [Adobe Analytics-gegevens opnemen en toewijzen](../../sources/connectors/adobe-applications/mapping/analytics.md) via de bron Analytics
+De Dienst van de Vraag van het gebruik om de gegevens te beheren die van Adobe Analytics in Adobe Experience Platform als datasets worden opgenomen. De volgende secties verstrekken steekproefvragen die u kunt gebruiken om tot de het verhandelen variabelen in uw datasets van Analytics toegang te hebben. Zie de documentatie voor meer informatie over [ hoe te om de gegevens van Adobe Analytics in te voeren en in kaart te brengen ](../../sources/connectors/adobe-applications/mapping/analytics.md) door de bron van Analytics
 
-## Merchandisingvariabelen {#merchandising-variables}
+## Merchandiings-variabelen {#merchandising-variables}
 
 De variabelen van de koophandel kunnen één van twee syntaxis volgen:
 
-* **Productsyntaxis**: Koppelt de waarde eVar aan een product. 
-* **Conversievariabele syntaxis**: Koppelt de eVar alleen aan een product als er een bindingsgebeurtenis plaatsvindt. U kunt de gebeurtenissen selecteren die als bindingsgebeurtenissen fungeren.
+* **Syntaxis van het Product**: Vendeert de waarde van eVar aan een product. 
+* **Veranderlijke Syntaxis van de Omzetting**: Verleent de eVar met een product slechts als een bindende gebeurtenis voorkomt. U kunt de gebeurtenissen selecteren die als bindingsgebeurtenissen fungeren.
 
 ## Productsyntaxis {#product-syntax}
 
@@ -26,9 +26,9 @@ In Adobe Analytics kunnen aangepaste productgegevens worden verzameld via specia
 
 Deze variabelen worden ook wel handelsvariabelen in de productsyntaxis genoemd. Op deze manier kunt u informatie verzamelen, zoals een &quot;kortingsbedrag&quot; per product of informatie over de &quot;locatie op pagina&quot; van het product in de zoekresultaten van de klant.
 
-Meer informatie over het gebruik van de productsyntaxis vindt u in de Adobe Analytics-documentatie op [eVars implementeren met productsyntaxis](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
+Meer leren over het gebruiken van de productsyntaxis, te lezen gelieve de documentatie van Adobe Analytics op [ uitvoerend eVars gebruikend productsyntaxis ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
 
-In de onderstaande secties worden de XDM-velden beschreven die nodig zijn voor toegang tot de handelsvariabelen in uw [!DNL Analytics] gegevensset:
+In de volgende secties worden de XDM-velden beschreven die nodig zijn voor toegang tot de variabelen voor handelsdoeleinden in uw gegevensset [!DNL Analytics] :
 
 ### eVars
 
@@ -50,11 +50,11 @@ productListItems[#]._experience.analytics.event1to100.event#.value
 
 ## Gebruiksscenario&#39;s voor productsyntaxis {#product-use-cases}
 
-De volgende gebruiksgevallen zijn vooral bedoeld voor het retourneren van een eVar voor handelsdoeleinden uit de `productListItems` array met SQL.
+In de volgende gebruiksgevallen wordt de focus op het retourneren van een eVar van de array `productListItems` met SQL.
 
 ### Retourneer een eVar voor handelsdoeleinden en een gebeurtenis
 
-De vraag keert hieronder een koopvaardigende eVar en een gebeurtenis voor het eerste product terug dat in wordt gevonden `productListItems` array.
+De onderstaande query retourneert een eVar en gebeurtenis voor het eerste product dat in de array `productListItems` wordt gevonden.
 
 ```sql
 SELECT
@@ -70,7 +70,7 @@ LIMIT 10
 
 ### Explodeer de array productListItems en retourneer de eVar en gebeurtenis voor elk product.
 
-In deze volgende query wordt het dialoogvenster `productListItems` array en retourneert elke eVar en gebeurtenis die door de handel wordt verwerkt. De `_id` wordt opgenomen om de relatie met de originele hit te tonen. De `_id` value is een unieke primaire sleutel voor de dataset.
+Met deze volgende query wordt de array `productListItems` geëxplodeerd en wordt elke eVar en gebeurtenis per product geretourneerd. Het veld `_id` wordt opgenomen om de relatie met de oorspronkelijke hit weer te geven. De `_id` -waarde is een unieke primaire sleutel voor de gegevensset.
 
 >[!NOTE]
 >
@@ -110,26 +110,26 @@ Het onderstaande productzoekingsscenario illustreert bijvoorbeeld hoe de vereist
 
 1. Een gebruiker voert een intern onderzoek naar &quot;winterhoed&quot;uit die de omzettingssyntaxis toegelaten merchandising eVar6 aan &quot;intern onderzoek:winterhoed&quot;plaatst.
 2. De gebruiker klikt op &quot;wafelbeanie&quot; en landt op de pagina met productdetails.\
-   a. De landing hier brandt voor een `Product View` gebeurtenis voor de &quot;waffle beanie&quot; voor $12,99.\
-   b) sinds `Product View` wordt gevormd als bindende gebeurtenis, is het product &quot;wafelbeanie&quot;nu gebonden aan de eVar6 waarde van &quot;intern onderzoek:winterhoed&quot;. Telkens wanneer het &quot;wafelbeanie&quot;-product wordt verzameld, wordt het gekoppeld aan &quot;interne zoekactie:winterhoed&quot;. Dit gebeurt totdat de eVar-instelling voor verlopen is bereikt of er een nieuwe eVar6-waarde is ingesteld en de bindingsgebeurtenis opnieuw met dat product plaatsvindt.
-3. De gebruiker voegt het product aan zijn winkelwagentje toe en ontslaat het `Cart Add` gebeurtenis.
+   a. Met de landing hier wordt een `Product View` -gebeurtenis voor de &quot;waffle beanie&quot; voor $12,99 geactiveerd.\
+   b. Aangezien `Product View` is geconfigureerd als een bindingsgebeurtenis, is het product &quot;waffle beanie&quot; nu gebonden aan de eVar6-waarde van &quot;internal search:winter hat&quot;. Telkens wanneer het &quot;wafelbeanie&quot;-product wordt verzameld, wordt het gekoppeld aan &quot;interne zoekactie:winterhoed&quot;. Dit gebeurt totdat de eVar-instelling voor verlopen is bereikt of er een nieuwe eVar6-waarde is ingesteld en de bindingsgebeurtenis opnieuw met dat product plaatsvindt.
+3. De gebruiker voegt het product aan zijn winkelwagentje toe en activeert de gebeurtenis `Cart Add` .
 4. De gebruiker voert een andere interne zoekopdracht naar &quot;zomershirt&quot; uit, die de omzettingssyntaxis voor merchandising eVar6 instelt op &quot;intern zoeken:zomershirt&quot;.
 5. De gebruiker selecteert &quot;sporty t-shirt&quot; en landt op de pagina met productdetails.\
-   a. De landing hier brandt voor een `Product View` evenement voor &quot;sporty t-shirt voor $19,99.\
-   b. Als de `Product View` Het evenement is bindend en het product &quot;sporty t-shirt&quot; is nu gebonden aan de eVar6-waarde van &quot;internal search:zomer shirt&quot;. Het vorige product &quot;wafelbeanie&quot; is nog steeds gebonden aan een eVar6-waarde van &quot;internal search:waffle beanie&quot;.
-6. De gebruiker voegt het product aan zijn winkelwagentje toe en ontslaat het `Cart Add` gebeurtenis.
+   a. Met de landing hier wordt een `Product View` -evenement voor &#39;sportt-shirt voor $19,99 gestart.\
+   b. Aangezien het `Product View` -evenement het bindende evenement is, is het product &#39;sporty t-shirt&#39; nu gebonden aan de eVar6-waarde van &#39;internal search:zomer shirt&#39;. Het vorige product &quot;wafelbeanie&quot; is nog steeds gebonden aan een eVar6-waarde van &quot;internal search:waffle beanie&quot;.
+6. De gebruiker voegt het product aan zijn winkelwagentje toe en activeert de gebeurtenis `Cart Add` .
 7. De gebruiker checkt beide producten uit.
 
 Bij het rapporteren zijn de bestellingen, opbrengsten, productweergaven en winkelwagentjes rapporteerbaar ten opzichte van eVar6 en zijn ze afgestemd op de activiteit van het gebonden product.
 
 | eVar6 (productbepalingsmethode) | omzet | orders | productweergave | cartografische objecten |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| intern zoeken:zomershirt | 19.99 | 1 | 1 | 1 |
-| interne zoekopdracht:winterhoed | 12.99 | 1 | 1 | 1 |
+| intern zoeken:zomershirt | 19,99 | 1 | 1 | 1 |
+| interne zoekopdracht:winterhoed | 12,99 | 1 | 1 | 1 |
 
-Meer informatie over het gebruik van de syntaxis van de conversievariabele vindt u in de Adobe Analytics-documentatie op [implementeren van eVars met syntaxis van conversievariabelen](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
+Om meer over het gebruiken van de syntaxis van de omzetvariabele te leren, te lezen gelieve de documentatie van Adobe Analytics op [ uitvoerend eVars gebruikend de syntaxis van de omzettingsvariabele ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
 
-Hieronder worden de XDM-velden weergegeven die de syntaxis van de conversievariabele in uw [!DNL Analytics] gegevensset:
+Hieronder worden de XDM-velden weergegeven die de syntaxis van de conversievariabele in uw [!DNL Analytics] -dataset produceren:
 
 #### eVars
 
@@ -220,4 +220,4 @@ LIMIT 100
 
 Door dit document te lezen, zou u beter inzicht in moeten hebben hoe te om een koopvaardigende eVar terug te keren gebruikend productsyntaxis en een waarde aan een specifiek product met de syntaxis van de omzettingsvariabele te binden.
 
-Als u dit nog niet hebt gedaan, moet u de [Analyseinzichten voor documentatie over web en mobiele interacties](./analytics-insights.md) volgende. Het verstrekt gemeenschappelijke gebruiksgevallen en toont hoe te om de Dienst van de Vraag te gebruiken om actionable inzichten van Web en mobiele gegevens van Adobe Analytics tot stand te brengen.
+Als u dit nog niet hebt gedaan, zou u de [ inzichten van Analytics voor Web en mobiele interactieverklaring ](./analytics-insights.md) daarna moeten lezen. Het verstrekt gemeenschappelijke gebruiksgevallen en toont hoe te om de Dienst van de Vraag te gebruiken om actionable inzichten van Web en mobiele gegevens van Adobe Analytics tot stand te brengen.

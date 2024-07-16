@@ -4,49 +4,50 @@ description: Leer hoe u een bronverbinding en gegevensstroom maakt om Oracle Net
 hide: true
 hidefromtoc: true
 badge: Beta
-source-git-commit: 053cf0af327b39830f025686e0f8f67c27f1c45c
+exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '1961'
 ht-degree: 0%
 
 ---
 
-# Een bronverbinding en gegevensstroom maken voor [!DNL Oracle NetSuite Activities] de Flow Service API gebruiken
+# Een bronverbinding en gegevensstroom maken voor [!DNL Oracle NetSuite Activities] met de Flow Service API
 
 >[!NOTE]
 >
->De [!DNL Oracle NetSuite Activities] De bron is in bèta. Zie de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+>De bron [!DNL Oracle NetSuite Activities] is in bèta. Zie het [ overzicht van bronnen ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-Lees de volgende zelfstudie om te leren hoe u gebeurtenisgegevens van uw [!DNL Oracle NetSuite Activities] account aan Adobe Experience Platform [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees het volgende leerprogramma leren hoe te om gebeurtenisgegevens van uw [!DNL Oracle NetSuite Activities] rekening aan Adobe Experience Platform te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL Oracle NetSuite Activities] met de [!DNL Flow Service] API.
+In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL Oracle NetSuite Activities] via de [!DNL Flow Service] API.
 
 ### Verificatie
 
-Lees de [[!DNL Oracle NetSuite] overzicht](../../../../connectors/marketing-automation/oracle-netsuite.md) voor informatie over hoe te om uw authentificatiegeloofsbrieven terug te winnen.
+Lees het [[!DNL Oracle NetSuite]  overzicht ](../../../../connectors/marketing-automation/oracle-netsuite.md) voor informatie over hoe te om uw authentificatiegeloofsbrieven terug te winnen.
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
-## Verbinden [!DNL Oracle NetSuite Activities] naar Platform met de [!DNL Flow Service] API
+## Verbinding maken [!DNL Oracle NetSuite Activities] met platform met behulp van de [!DNL Flow Service] API
 
-Volg de onderstaande handleiding voor meer informatie over het verifiëren van uw [!DNL Oracle NetSuite Activities] bron, creeer een bronverbinding, en creeer een gegevensstroom om uw gebeurtenisgegevens aan Experience Platform te brengen.
+Volg de onderstaande handleiding om te leren hoe u de [!DNL Oracle NetSuite Activities] -bron kunt verifiëren, een bronverbinding kunt maken en een gegevensstroom kunt maken om uw gebeurtenisgegevens naar het Experience Platform te brengen.
 
 ### Een basisverbinding maken {#base-connection}
 
 Een basisverbinding behoudt informatie tussen uw bron en Experience Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL Oracle NetSuite Activities] verificatiegegevens als onderdeel van de aanvraaginstantie.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL Oracle NetSuite Activities] -verificatiegegevens op als onderdeel van de aanvraaginstantie.
 
-**API-indeling**
+**API formaat**
 
 ```https
 POST /connections
@@ -54,7 +55,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Oracle NetSuite Activities]:
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL Oracle NetSuite Activities] gemaakt:
 
 ```shell
 curl -X POST \
@@ -87,16 +88,16 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van uw basisverbinding. Zorg ervoor dat de naam van uw basisverbinding beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw basisverbinding te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw basisverbinding. |
-| `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat de bron is geregistreerd en goedgekeurd via het [!DNL Flow Service] API. |
+| `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat de bron is geregistreerd en goedgekeurd via de API van [!DNL Flow Service] . |
 | `auth.specName` | Het verificatietype dat u gebruikt om uw bron te verifiëren bij Platform. |
-| `auth.params.clientId` | De client-id-waarde wanneer u de integratierecord maakt. Het proces voor het maken van een interactierecord is te vinden [hier](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). De waarde bestaat uit een tekenreeks van 64 tekens, vergelijkbaar met `7fce.....b42f`. |
-| `auth.params.clientSecret` | De client-id-waarde wanneer u de integratierecord maakt. Het proces voor het maken van een interactierecord is te vinden [hier](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). De waarde bestaat uit een tekenreeks van 64 tekens, vergelijkbaar met `5c98.....1b46`. |
-| `auth.params.accessTokenUrl` | De [!DNL NetSuite] Toegang krijgen tot token-URL, vergelijkbaar met `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token` waar u ACCOUNT_ID vervangt door uw [!DNL NetSuite] Account-ID. |
-| `auth.params.accessToken` | De het symbolische waarde van de Toegang wordt geproduceerd aan het eind van [Stap twee](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) van de [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) zelfstudie. Toegangstokens verlopen slechts 60 minuten. de waarde bestaat uit een tekenreeks van 1024 tekens die is opgemaakt als JSON Web Token (JWT), vergelijkbaar met `eyJr......f4V0`. |
+| `auth.params.clientId` | De client-id-waarde wanneer u de integratierecord maakt. Het proces om een interingsverslag tot stand te brengen kan [ hier ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) worden gevonden. De waarde bestaat uit een tekenreeks van 64 tekens, vergelijkbaar met `7fce.....b42f` . |
+| `auth.params.clientSecret` | De client-id-waarde wanneer u de integratierecord maakt. Het proces om een interingsverslag tot stand te brengen kan [ hier ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) worden gevonden. De waarde bestaat uit een tekenreeks van 64 tekens, vergelijkbaar met `5c98.....1b46` . |
+| `auth.params.accessTokenUrl` | De [!DNL NetSuite] Access Token URL, vergelijkbaar met `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token` waar u ACCOUNT_ID vervangt door uw account-id van [!DNL NetSuite] . |
+| `auth.params.accessToken` | De het symbolische waarde van de Toegang wordt geproduceerd aan het eind van [ Stap Twee ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) van [ OAuth 2.0 de Stroom van de Verlening van de Code van de Toestemming ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) leerprogramma. Toegangstokens verlopen slechts 60 minuten. de waarde bestaat uit een tekenreeks van 1024 tekens die wordt opgemaakt als JSON Web Token (JWT), vergelijkbaar met `eyJr......f4V0` . |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de nieuwe basisverbinding, inclusief de unieke verbindingsidentificatie (`id`). Deze id is vereist om de bestandsstructuur en inhoud van uw bron in de volgende stap te verkennen.
+Een succesvolle reactie keert de pas gecreëerde basisverbinding, met inbegrip van zijn unieke verbindings herkenningsteken (`id`) terug. Deze id is vereist om de bestandsstructuur en inhoud van uw bron in de volgende stap te verkennen.
 
 ```json
 {
@@ -107,9 +108,9 @@ Een geslaagde reactie retourneert de nieuwe basisverbinding, inclusief de unieke
 
 ### Ontdek uw bron {#explore}
 
-Zodra u uw identiteitskaart van de basisverbinding hebt, kunt u de inhoud en de structuur van uw brongegevens nu onderzoeken door een verzoek van de GET aan uit te voeren `/connections` eindpunt terwijl het verstrekken van uw identiteitskaart van de basisverbinding als vraagparameter.
+Zodra u uw identiteitskaart van de basisverbinding hebt, kunt u de inhoud en de structuur van uw brongegevens nu onderzoeken door een verzoek van de GET aan het `/connections` eindpunt uit te voeren terwijl het verstrekken van uw identiteitskaart van de basisverbinding als vraagparameter.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&sourceParams={SOURCE_PARAMS}
@@ -122,11 +123,11 @@ Wanneer het uitvoeren van GET verzoeken om de het dossierstructuur en inhoud van
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | De id van de basisverbinding die in de vorige stap is gegenereerd. |
-| `objectType=rest` | Het type object dat u wilt verkennen. Deze waarde is momenteel altijd ingesteld op `rest`. |
-| `{OBJECT}` | Deze parameter is alleen vereist wanneer een specifieke map wordt weergegeven. Zijn waarde vertegenwoordigt de weg van de folder u wenst te onderzoeken. Voor deze bron zou de waarde `json`. |
-| `fileType=json` | Het bestandstype van het bestand dat u naar Platform wilt verzenden. Momenteel `json` is het enige ondersteunde bestandstype. |
+| `objectType=rest` | Het type object dat u wilt verkennen. Deze waarde is momenteel altijd ingesteld op `rest` . |
+| `{OBJECT}` | Deze parameter is alleen vereist wanneer een specifieke map wordt weergegeven. Zijn waarde vertegenwoordigt de weg van de folder u wenst te onderzoeken. Voor deze bron zou de waarde `json` zijn. |
+| `fileType=json` | Het bestandstype van het bestand dat u naar Platform wilt verzenden. Momenteel is `json` het enige ondersteunde bestandstype. |
 | `{PREVIEW}` | Een booleaanse waarde die definieert of de inhoud van de verbinding voorvertoning ondersteunt. |
-| `{SOURCE_PARAMS}` | Bepaalt parameters voor het brondossier u aan Platform wilt brengen. Het geaccepteerde indelingstype ophalen voor `{SOURCE_PARAMS}`, moet u het volledige koord in base64 coderen. <br> De waarde is leeg voor [!DNL Oracle NetSuite Activities].</li></ul> |
+| `{SOURCE_PARAMS}` | Bepaalt parameters voor het brondossier u aan Platform wilt brengen. Als u het geaccepteerde format-type voor `{SOURCE_PARAMS}` wilt ophalen, moet u de gehele tekenreeks coderen in base64. <br> De waarde is leeg voor [!DNL Oracle NetSuite Activities] .</li></ul> |
 
 ```shell
 curl -X GET \
@@ -137,7 +138,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een JSON-structuur als volgt:
 
@@ -330,9 +331,9 @@ Een geslaagde reactie retourneert een JSON-structuur als volgt:
 
 ### Een bronverbinding maken {#source-connection}
 
-U kunt een bronverbinding tot stand brengen door een verzoek van de POST aan `/sourceConnections` het eindpunt van de [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
+U kunt een bronverbinding maken door een aanvraag voor een POST in te dienen bij het eindpunt `/sourceConnections` van de [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
 
-**API-indeling**
+**API formaat**
 
 ```https
 POST /sourceConnections
@@ -340,7 +341,7 @@ POST /sourceConnections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een bronverbinding gemaakt voor [!DNL Oracle NetSuite Activities].
+Met de volgende aanvraag wordt een bronverbinding voor [!DNL Oracle NetSuite Activities] gemaakt.
 
 ```shell
 curl -X POST \
@@ -372,9 +373,9 @@ curl -X POST \
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de bronverbinding. |
 | `baseConnectionId` | De basis verbindings-id van [!DNL Oracle NetSuite Activities]. Deze id is gegenereerd in een eerdere stap. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met uw bron. |
-| `data.format` | Het formaat van de [!DNL Oracle NetSuite Activities] gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json`. |
+| `data.format` | De indeling van de [!DNL Oracle NetSuite Activities] -gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json` . |
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is in een latere stap vereist om een gegevensstroom te maken.
+Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde bronverbinding terug. Deze id is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -387,23 +388,23 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van het Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doelXDM schema kan tot stand worden gebracht door een POST verzoek aan te voeren [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+Een doelXDM schema kan worden gecreeerd door een verzoek van de POST aan de [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) uit te voeren.
 
-Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](../../../../../xdm/api/schemas.md#create-a-schema).
+Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [ creërend een schema gebruikend API ](../../../../../xdm/api/schemas.md#create-a-schema).
 
 ### Een doelgegevensset maken {#target-dataset}
 
-Een doeldataset kan tot stand worden gebracht door een verzoek van de POST aan [Catalogusservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), op voorwaarde dat de id van het doelschema zich binnen de payload bevindt.
+Een doeldataset kan worden gecreeerd door een verzoek van de POST aan de [ Dienst API van de Catalogus uit te voeren ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met de API](../../../../../catalog/api/create-dataset.md).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [ het creëren van een dataset gebruikend API ](../../../../../catalog/api/create-dataset.md).
 
 ### Een doelverbinding maken {#target-connection}
 
-Een doelverbinding vertegenwoordigt de verbinding met de bestemming waar de ingesloten gegevens moeten worden opgeslagen. Om een doelverbinding tot stand te brengen, moet u vaste identiteitskaart verstrekken van de verbindingsspecificatie die aan het gegevens meer beantwoordt. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Een doelverbinding vertegenwoordigt de verbinding met de bestemming waar de ingesloten gegevens moeten worden opgeslagen. Om een doelverbinding tot stand te brengen, moet u vaste identiteitskaart verstrekken van de verbindingsspecificatie die aan het gegevens meer beantwoordt. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c` .
 
-U hebt nu de unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan het gegevensmeer. Met deze id&#39;s kunt u een doelverbinding maken met de [!DNL Flow Service] API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
+U hebt nu de unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan het gegevensmeer. Met behulp van deze id&#39;s kunt u een doelverbinding maken met de [!DNL Flow Service] API om de gegevensset op te geven die de binnenkomende brongegevens zal bevatten.
 
-**API-indeling**
+**API formaat**
 
 ```https
 POST /targetConnections
@@ -411,7 +412,7 @@ POST /targetConnections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een doelverbinding gemaakt voor [!DNL Oracle NetSuite Activities]:
+Met de volgende aanvraag wordt een doelverbinding voor [!DNL Oracle NetSuite Activities] gemaakt:
 
 ```shell
 curl -X POST \
@@ -445,13 +446,13 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | De naam van de doelverbinding. Zorg ervoor dat de naam van uw doelverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw doelverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de doelverbinding. |
-| `connectionSpec.id` | De id van de verbindingsspecificatie die correspondeert met data Lake. Deze vaste ID is: `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
-| `data.format` | Het formaat van de [!DNL Oracle NetSuite Activities] gegevens die u wilt invoeren. |
+| `connectionSpec.id` | De id van de verbindingsspecificatie die correspondeert met data Lake. Deze vaste id is: `6b137bf6-d2a0-48c8-914b-d50f4942eb85` . |
+| `data.format` | De indeling van de [!DNL Oracle NetSuite Activities] -gegevens die u wilt invoeren. |
 | `params.dataSetId` | De doel dataset ID die in een vorige stap wordt teruggewonnen. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id`). Deze id is vereist in latere stappen.
+Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverbinding (`id`) terug. Deze id is vereist in latere stappen.
 
 ```json
 {
@@ -462,9 +463,9 @@ Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id
 
 ### Een toewijzing maken {#mapping}
 
-Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt. Dit wordt bereikt door een verzoek van de POST uit te voeren aan [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) met gegevenstoewijzingen die zijn gedefinieerd in de payload van het verzoek.
+Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt. Dit wordt bereikt door een verzoek van de POST aan [[!DNL Data Prep]  API ](https://www.adobe.io/experience-platform-apis/references/data-prep/) met gegevenstoewijzingen uit te voeren die binnen de verzoeklading worden bepaald.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /conversion/mappingSets
@@ -527,14 +528,14 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `outputSchema.schemaRef.id` | De id van de [doel-XDM-schema](#target-schema) gegenereerd in een eerdere stap. |
+| `outputSchema.schemaRef.id` | Identiteitskaart van het [ doelXDM- schema ](#target-schema) in een vroegere stap wordt geproduceerd. |
 | `mappings.sourceType` | Het bronkenmerktype dat wordt toegewezen. |
 | `mappings.source` | Het bronkenmerk dat moet worden toegewezen aan een XDM-doelpad. |
 | `mappings.destination` | Het doel-XDM-pad waaraan het bronkenmerk wordt toegewezen. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de unieke id (`id`). Deze waarde is in een latere stap vereist om een gegevensstroom te maken.
+Een succesvolle reactie keert details van de pas gecreëerde afbeelding met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze waarde is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -549,15 +550,15 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar het verzamelen van gegevens van [!DNL Oracle NetSuite Activities] aan Platform moet een gegevensstroom creëren. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar het verzenden van gegevens van [!DNL Oracle NetSuite Activities] naar Platform is het maken van een gegevensstroom. Momenteel zijn de volgende vereiste waarden voorbereid:
 
-* [Bronverbinding-id](#source-connection)
+* [Source-verbinding-id](#source-connection)
 * [Doel-verbindings-id](#target-connection)
 * [Toewijzing-id](#mapping)
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /flows
@@ -605,21 +606,21 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van uw gegevensstroom. Zorg ervoor dat de naam van uw gegevensstroom beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw gegevensstroom omhoog te kijken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw gegevensstroom. |
-| `flowSpec.id` | De flow specification-id die is vereist om een gegevensstroom te maken. Deze vaste ID is: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | De corresponderende versie van de specificatie-id voor de stroom. Deze waarde wordt standaard ingesteld op `1.0`. |
-| `sourceConnectionIds` | De [bron-verbindings-id](#source-connection) gegenereerd in een eerdere stap. |
-| `targetConnectionIds` | De [doel-verbindings-id](#target-connection) gegenereerd in een eerdere stap. |
+| `flowSpec.id` | De flow specification-id die is vereist om een gegevensstroom te maken. Deze vaste id is: `6499120c-0b15-42dc-936e-847ea3c24d72` . |
+| `flowSpec.version` | De corresponderende versie van de specificatie-id voor de stroom. Deze waarde is standaard ingesteld op `1.0` . |
+| `sourceConnectionIds` | [ bron verbindingsidentiteitskaart ](#source-connection) die in een vroegere stap wordt geproduceerd. |
+| `targetConnectionIds` | De [ identiteitskaart van de doelverbinding ](#target-connection) die in een vroegere stap wordt geproduceerd. |
 | `transformations` | Deze eigenschap bevat de verschillende transformaties die op de gegevens moeten worden toegepast. Dit bezit wordt vereist wanneer het brengen van niet-XDM-Volgzame gegevens aan Platform. |
 | `transformations.name` | De naam die aan de transformatie is toegewezen. |
-| `transformations.params.mappingId` | De [toewijzing-id](#mapping) gegenereerd in een eerdere stap. |
-| `transformations.params.mappingVersion` | De corresponderende versie van de toewijzing-id. Deze waarde wordt standaard ingesteld op `0`. |
+| `transformations.params.mappingId` | [ afbeelding identiteitskaart ](#mapping) die in een vroegere stap wordt geproduceerd. |
+| `transformations.params.mappingVersion` | De corresponderende versie van de toewijzing-id. Deze waarde is standaard ingesteld op `0` . |
 | `scheduleParams.startTime` | This property contains information on the ingestion Scheduling of the dataflow. |
 | `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. |
 | `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom. Met deze id kunt u uw gegevensstroom controleren, bijwerken of verwijderen.
+Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd dataflow terug. Met deze id kunt u uw gegevensstroom controleren, bijwerken of verwijderen.
 
 ```json
 {
@@ -634,20 +635,20 @@ In de volgende sectie vindt u informatie over de stappen die u kunt uitvoeren om
 
 ### Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Lees de handleiding voor volledige API-voorbeelden op [de gegevensstroom van uw bronnen controleren met behulp van de API](../../monitor.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor volledige API voorbeelden, lees de gids op [ controlerend uw brongegevens gebruikend API ](../../monitor.md).
 
 ### Uw gegevensstroom bijwerken
 
-Werk de details van uw dataflow, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen bij door een verzoek van de PATCH aan het `/flows` eindpunt van [!DNL Flow Service] API, terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-verzoek indient, moet u de unieke gegevens van uw gegevensstroom opgeven `etag` in de `If-Match` header. Lees de handleiding voor volledige API-voorbeelden op [bronnen bijwerken met behulp van de API](../../update-dataflows.md).
+Werk de details van uw gegevensstroom bij, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen door een PATCH verzoek aan het `/flows` eindpunt van [!DNL Flow Service] API te richten, terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-verzoek indient, moet u de unieke `etag` gegevens van uw gegevensstroom opgeven in de `If-Match` -header. Voor volledige API voorbeelden, lees de gids bij [ het bijwerken bronnen dataflows gebruikend API ](../../update-dataflows.md).
 
 ### Uw account bijwerken
 
-Werk de naam, beschrijving en referenties van uw bronaccount bij door een PATCH-verzoek uit te voeren naar de [!DNL Flow Service] API terwijl het verstrekken van uw identiteitskaart van de basisverbinding als vraagparameter. Wanneer u een PATCH-aanvraag indient, moet u de unieke bronaccount opgeven `etag` in de `If-Match` header. Lees de handleiding voor volledige API-voorbeelden op [het bijwerken van uw bronrekening gebruikend API](../../update.md).
+Werk de naam, beschrijving en gegevens van uw bronaccount bij door een PATCH-aanvraag uit te voeren naar de [!DNL Flow Service] API en uw basis-verbindings-id op te geven als een queryparameter. Wanneer u een PATCH-aanvraag indient, moet u de unieke `etag` van uw bronaccount opgeven in de `If-Match` -header. Voor volledige API voorbeelden, lees de gids bij [ het bijwerken van uw bronrekening gebruikend API ](../../update.md).
 
 ### Uw gegevensstroom verwijderen
 
-Verwijder de gegevensstroom door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl het verstrekken van identiteitskaart van dataflow wilt u als deel van de vraagparameter schrappen. Lees de handleiding voor volledige API-voorbeelden op [verwijderen, gegevensstromen met behulp van de API](../../delete-dataflows.md).
+Verwijder de gegevensstroom door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API en de id op te geven van de gegevensstroom die u wilt verwijderen als onderdeel van de queryparameter. Voor volledige API voorbeelden, lees de gids op [ schrappend uw dataflows gebruikend API ](../../delete-dataflows.md).
 
 ### Uw account verwijderen
 
-Uw account verwijderen door een DELETE-verzoek uit te voeren aan de [!DNL Flow Service] API terwijl het verstrekken van de identiteitskaart van de basisverbinding van de rekening u wilt schrappen. Lees de handleiding voor volledige API-voorbeelden op [verwijderen van uw bronaccount met behulp van de API](../../delete.md).
+Verwijder uw account door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl u de basis verbinding-id opgeeft van het account dat u wilt verwijderen. Voor volledige API voorbeelden, lees de gids bij [ het schrappen van uw bronrekening gebruikend API ](../../delete.md).

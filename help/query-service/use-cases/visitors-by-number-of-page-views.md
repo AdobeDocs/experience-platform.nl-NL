@@ -5,16 +5,16 @@ description: Leer hoe u query's schrijft die Experience Events gebruiken om een 
 exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
 
 # Bezoekers weergeven op basis van hun aantal paginaweergaven
 
-Dit document bevat een voorbeeld van de SQL-code die nodig is om een lijst met bezoekers op te halen, ingedeeld op basis van het aantal paginaweergaven. Met Adobe Experience Platform Query Service kunt u query&#39;s schrijven die worden gebruikt [!DNL Experience Events] om verschillende gebruiksgevallen vast te leggen. De Gebeurtenissen van de ervaring worden vertegenwoordigd door de klasse ExperienceEvent van het Gegevensmodel van de Ervaring (XDM), die een onveranderlijke en niet-geaggregeerde momentopname van het systeem vangt wanneer een gebruiker met een website of de dienst interactie aangaat. De Gebeurtenissen van de ervaring kunnen zelfs voor tijd-domeinanalyse worden gebruikt. Zie de [sectie Volgende stappen](#next-steps) voor meer gebruik: [!DNL Experience Events] om bezoekersrapporten te genereren.
+Dit document bevat een voorbeeld van de SQL-code die nodig is om een lijst met bezoekers op te halen, ingedeeld op basis van het aantal paginaweergaven. Met Adobe Experience Platform Query Service kunt u query&#39;s schrijven die [!DNL Experience Events] gebruiken om verschillende gebruiksgevallen vast te leggen. De Gebeurtenissen van de ervaring worden vertegenwoordigd door de klasse ExperienceEvent van het Gegevensmodel van de Ervaring (XDM), die een onveranderlijke en niet-geaggregeerde momentopname van het systeem vangt wanneer een gebruiker met een website of de dienst interactie aangaat. De Gebeurtenissen van de ervaring kunnen zelfs voor tijd-domeinanalyse worden gebruikt. Zie [ volgende stappen sectie ](#next-steps) voor meer gebruiksgevallen die [!DNL Experience Events] impliceren om bezoekersrapporten te produceren.
 
-Meer informatie over XDM en [!DNL Experience Events] kunt u vinden in het dialoogvenster [[!DNL XDM System] overzicht](../../xdm/home.md). Door de Dienst van de Vraag met te combineren [!DNL Experience Events], kunt u gedragstrends onder uw gebruikers effectief volgen. Het volgende document bevat voorbeelden van query&#39;s die betrekking hebben op [!DNL Experience Events].
+Meer informatie over XDM en [!DNL Experience Events] kan in het [[!DNL XDM System]  overzicht ](../../xdm/home.md) worden gevonden. Door de Dienst van de Vraag met [!DNL Experience Events] te combineren, kunt u gedragstendensen onder uw gebruikers effectief volgen. Het volgende document bevat voorbeelden van query&#39;s die [!DNL Experience Events] betreffen.
 
 ## Doelstelling
 
@@ -50,7 +50,7 @@ De resultaten van de query worden weergegeven in de onderstaande tabel.
 
 ## Volgende stappen {#next-steps}
 
-Door dit document te lezen, hebt u een beter inzicht in hoe te om de Dienst van de Vraag met te gebruiken [!DNL Experience Events] om gebruikers weer te geven die de meeste pagina&#39;s hebben bekeken.
+Door dit document te lezen, hebt u een beter inzicht in hoe u de Query-service met [!DNL Experience Events] kunt gebruiken om gebruikers weer te geven die de meeste pagina&#39;s hebben bekeken.
 
 Raadpleeg de volgende gebruiksgevallen voor meer informatie over andere gebruikte gevallen die door bezoekers worden gebruikt:
 

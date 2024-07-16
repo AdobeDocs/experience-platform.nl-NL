@@ -12,75 +12,75 @@ ht-degree: 0%
 
 # [!DNL Query Service] SSL-opties
 
-Voor meer veiligheid, Adobe Experience Platform [!DNL Query Service] biedt native ondersteuning voor SSL-verbindingen om client-/servercommunicatie te coderen. In dit document worden de beschikbare SSL-opties besproken voor clientverbindingen van derden met [!DNL Query Service] en hoe u verbinding maakt met de `verify-full` SSL-parameterwaarde.
+Voor meer beveiliging biedt Adobe Experience Platform [!DNL Query Service] native ondersteuning voor SSL-verbindingen om client-/servercommunicatie te coderen. In dit document wordt beschreven welke SSL-opties beschikbaar zijn voor clientverbindingen van derden met [!DNL Query Service] en hoe verbinding kan worden gemaakt met behulp van de waarde van de parameter `verify-full` SSL.
 
 ## Vereisten
 
-In dit document wordt ervan uitgegaan dat u al een clienttoepassing van een andere fabrikant hebt gedownload voor gebruik met uw platformgegevens. Specifieke instructies over hoe te om SSL veiligheid op te nemen wanneer het verbinden met een derdecliënt worden gevonden in hun respectieve documentatie van de verbindingsgids. Voor een lijst van allen [!DNL Query Service] ondersteunde clients, raadpleegt u de [Overzicht van clientverbindingen](./overview.md).
+In dit document wordt ervan uitgegaan dat u al een clienttoepassing van een andere fabrikant hebt gedownload voor gebruik met uw platformgegevens. Specifieke instructies over hoe te om SSL veiligheid op te nemen wanneer het verbinden met een derdecliënt worden gevonden in hun respectieve documentatie van de verbindingsgids. Voor een lijst van alle [!DNL Query Service] gesteunde cliënten, zie het [ overzicht van cliëntverbindingen ](./overview.md).
 
 ## Beschikbare SSL-opties {#available-ssl-options}
 
 Platform ondersteunt verschillende SSL-opties die aansluiten bij uw behoeften op het gebied van gegevensbeveiliging en die een evenwicht vormen tussen de verwerkingsoverhead van codering en sleuteluitwisseling.
 
-De verschillende `sslmode` parameterwaarden bieden verschillende beschermingsniveaus. Door uw gegevens in beweging met SSL certificaten te coderen, helpt het &quot;man-in-the-middle&quot; (MITM) aanvallen, afluisteren, en imitatie te voorkomen. De onderstaande tabel bevat een uitsplitsing van de verschillende beschikbare SSL-modi en het beschermingsniveau dat zij bieden.
+De verschillende `sslmode` -parameterwaarden bieden verschillende beveiligingsniveaus. Door uw gegevens in beweging met SSL certificaten te coderen, helpt het &quot;man-in-the-middle&quot; (MITM) aanvallen, afluisteren, en imitatie te voorkomen. De onderstaande tabel bevat een uitsplitsing van de verschillende beschikbare SSL-modi en het beschermingsniveau dat zij bieden.
 
 >[!NOTE]
 >
-> De SSL-waarde `disable` wordt niet ondersteund door Adobe Experience Platform vanwege de vereiste naleving van de gegevensbescherming.
+> De SSL-waarde `disable` wordt niet ondersteund door Adobe Experience Platform vanwege de vereiste compatibiliteit met gegevensbeveiliging.
 
 | sslmode | Afvalbeveiliging | MITM-beveiliging | Beschrijving |
 |---|---|---|---|
 | `allow` | Gedeeltelijk | Nee | Veiligheid is geen prioriteit, snelheid en een lage verwerkingsoverhead zijn belangrijker. Deze modus kiest alleen voor codering als de server erop staat. |
 | `prefer` | Gedeeltelijk | Nee | Codering is niet vereist, maar de communicatie wordt gecodeerd als de server dit ondersteunt. |
 | `require` | Ja | Nee | Codering is vereist voor alle communicatie. Het netwerk wordt vertrouwd om met de correcte server te verbinden. ServerSSL-certificaatvalidatie is niet vereist. |
-| `verify-ca` | Ja | Afhankelijk van CA-beleid | Codering is vereist voor alle communicatie. Servervalidatie is vereist voordat gegevens worden gedeeld. Hiervoor moet u een basiscertificaat instellen in uw [!DNL PostgreSQL] thuismap. [Details worden hieronder gegeven](#instructions) |
-| `verify-full` | Ja | Ja | Codering is vereist voor alle communicatie. Servervalidatie is vereist voordat gegevens worden gedeeld. Hiervoor moet u een basiscertificaat instellen in uw [!DNL PostgreSQL] thuismap. [Details worden hieronder gegeven](#instructions). |
+| `verify-ca` | Ja | Afhankelijk van CA-beleid | Codering is vereist voor alle communicatie. Servervalidatie is vereist voordat gegevens worden gedeeld. Hiervoor moet u een basiscertificaat instellen in de [!DNL PostgreSQL] -thuismap. [ de Details worden verstrekt hieronder ](#instructions) |
+| `verify-full` | Ja | Ja | Codering is vereist voor alle communicatie. Servervalidatie is vereist voordat gegevens worden gedeeld. Hiervoor moet u een basiscertificaat instellen in de [!DNL PostgreSQL] -thuismap. [ Details worden verstrekt hieronder ](#instructions). |
 
 >[!NOTE]
 >
->Het verschil tussen `verify-ca` en `verify-full` is afhankelijk van het beleid van de basiscertificeringsinstantie (CA). Als u uw eigen lokale CA hebt gemaakt voor het uitgeven van persoonlijke certificaten voor uw toepassingen, gebruikt u `verify-ca` biedt vaak voldoende bescherming. Indien een openbare CA wordt gebruikt, `verify-ca` staat verbindingen met een server toe die iemand anders bij CA kan hebben geregistreerd. `verify-full` moet altijd worden gebruikt met een openbare wortel CA.
+>Het verschil tussen `verify-ca` en `verify-full` is afhankelijk van het beleid van de basiscertificeringsinstantie (CA). Als u uw eigen lokale CA hebt gemaakt om persoonlijke certificaten voor uw toepassingen uit te geven, biedt het gebruik van `verify-ca` vaak voldoende beveiliging. Als u een openbare CA gebruikt, staat `verify-ca` verbindingen toe met een server die iemand anders mogelijk bij de CA heeft geregistreerd. `verify-full` moet altijd worden gebruikt met een openbare basis-CA.
 
-Wanneer het vestigen van een derdeverbinding aan een gegevensbestand van het Platform, wordt u geadviseerd te gebruiken `sslmode=require` minimaal voor een veilige verbinding voor uw gegevens in beweging. De `verify-full` SSL-modus wordt aanbevolen voor gebruik in de meeste omgevingen die gevoelig zijn voor beveiliging.
+Wanneer u een verbinding van derden tot stand brengt met een Platform-database, wordt u aangeraden `sslmode=require` minimaal te gebruiken om een veilige verbinding tot stand te brengen voor uw gegevens in beweging. De SSL-modus van `verify-full` wordt aanbevolen voor gebruik in de meeste beveiligingsgevoelige omgevingen.
 
 ## Een basiscertificaat instellen voor serververificatie {#root-certificate}
 
 >[!IMPORTANT]
 >
->De TLS/SSL-certificaten op productieomgevingen voor de API voor interactieve posters van Query Service zijn op woensdag 24 januari 2024 vernieuwd.<br>Hoewel dit een jaarlijkse vereiste is, is het basiscertificaat in de keten in dit geval ook gewijzigd omdat de TLS/SSL-certificaatleverancier van de Adobe de certificaathiërarchie heeft bijgewerkt. Dit kan gevolgen hebben voor bepaalde klanten van Postgres als hun lijst van de Autoriteiten van het Certificaat de wortelcert mist. Bijvoorbeeld, kan een cliënt PSQL CLI de wortelcertificaten moeten hebben aan een expliciet dossier worden toegevoegd `~/postgresql/root.crt`anders kan dit resulteren in een fout. Bijvoorbeeld: `psql: error: SSL error: certificate verify failed`. Zie de [officiële documentatie van PostgreSQL](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) voor meer informatie over dit onderwerp .<br>Het basiscertificaat dat moet worden toegevoegd, kan worden gedownload van [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
+>De TLS/SSL-certificaten op productieomgevingen voor de API voor interactieve posters van Query Service zijn op woensdag 24 januari 2024 vernieuwd.<br> Hoewel dit een jaarlijks vereiste is, is het wortelcertificaat in de ketting ook veranderd aangezien de het certificaatleverancier van TLS/SSL van Adobe hun certificaathiërarchie heeft bijgewerkt. Dit kan gevolgen hebben voor bepaalde klanten van Postgres als hun lijst van de Autoriteiten van het Certificaat de wortelcert mist. Een PSQL CLI-client moet bijvoorbeeld de basiscertificaten toevoegen aan een expliciet bestand `~/postgresql/root.crt` , anders kan dit resulteren in een fout. Bijvoorbeeld `psql: error: SSL error: certificate verify failed` . Zie de [ officiële documentatie PostgreSQL ](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) voor meer informatie over deze kwestie.<br> het wortelcertificaat om toe te voegen kan van [ https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem ](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem) worden gedownload.
 
 Om een veilige verbinding te verzekeren, moet SSL gebruik op zowel de cliënt als de server worden gevormd alvorens de verbinding wordt gemaakt. Als SSL slechts op de server wordt gevormd, zou de cliënt gevoelige informatie zoals wachtwoorden kunnen verzenden alvorens het wordt gevestigd dat de server hoge veiligheid vereist.
 
-Standaard, [!DNL PostgreSQL] voert geen verificatie van het servercertificaat uit. Om de identiteit van de server te verifiëren en een veilige verbinding te waarborgen voordat vertrouwelijke gegevens worden verzonden (als onderdeel van SSL `verify-full` (modus), moet u een basiscertificaat (zelfondertekend) op uw lokale computer plaatsen (`root.crt`) en een bladcertificaat dat is ondertekend door het basiscertificaat op de server.
+Standaard voert [!DNL PostgreSQL] geen verificatie van het servercertificaat uit. Als u de identiteit van de server wilt verifiëren en een beveiligde verbinding wilt garanderen voordat vertrouwelijke gegevens worden verzonden (als onderdeel van de SSL `verify-full` -modus), moet u een basiscertificaat (zelfondertekend) op uw lokale computer (`root.crt` ) en een bladcertificaat dat is ondertekend door het basiscertificaat op de server plaatsen.
 
-Als de `sslmode` parameter is ingesteld op `verify-full`, zal libpq verifiëren dat de server betrouwbaar is door de certificaatketen tot het wortelcertificaat te controleren dat op de cliënt wordt opgeslagen. Vervolgens wordt gecontroleerd of de hostnaam overeenkomt met de naam die is opgeslagen in het servercertificaat.
+Als de parameter `sslmode` is ingesteld op `verify-full` , controleert libpq of de server betrouwbaar is door de certificaatketen tot aan het basiscertificaat te controleren dat op de client is opgeslagen. Vervolgens wordt gecontroleerd of de hostnaam overeenkomt met de naam die is opgeslagen in het servercertificaat.
 
-Als u verificatie met servercertificaten wilt toestaan, moet u een of meer basiscertificaten plaatsen (`root.crt`) in de [!DNL PostgreSQL] in uw thuismap. Het bestandspad lijkt op `~/.postgresql/root.crt`.
+Als u verificatie met servercertificaten wilt toestaan, moet u een of meer basiscertificaten (`root.crt`) in het [!DNL PostgreSQL] -bestand in de thuismap plaatsen. Het bestandspad lijkt op `~/.postgresql/root.crt` .
 
-## Verifiëren-volledige SSL-modus inschakelen voor gebruik met een derde [!DNL Query Service] verbinding {#instructions}
+## Verifiëren-volledige SSL-modus inschakelen voor gebruik met een [!DNL Query Service] -verbinding van derden {#instructions}
 
-Als u strengere beveiligingscontrole nodig hebt dan `sslmode=require`kunt u de gemarkeerde stappen volgen om een client van een derde te verbinden met [!DNL Query Service] gebruiken `verify-full` SSL-modus.
+Als u een strikter beveiligingsbeheer nodig hebt dan `sslmode=require` , kunt u de gemarkeerde stappen volgen om een client van een derde te verbinden met [!DNL Query Service] via de SSL-modus `verify-full` .
 
 >[!NOTE]
 >
 >Er zijn veel opties beschikbaar om een SSL-certificaat te verkrijgen. Vanwege de toenemende trend in schurkencertificaten wordt DigiCert in deze handleiding gebruikt omdat deze wereldwijd een vertrouwde leverancier zijn van hoogwaardige TLS/SSL-, PKI-, IoT- en ondertekeningsoplossingen.
 
-1. Navigeren naar [de lijst met beschikbare DigiCert-basiscertificaten](https://www.digicert.com/kb/digicert-root-certificates.htm)
-1. Zoeken naar &quot;[!DNL DigiCert Global Root G2]&quot; uit de lijst met beschikbare certificaten.
-1. Selecteren [!DNL **PEM downloaden**] om het bestand naar uw lokale computer te downloaden.
-   ![De lijst met beschikbare DigiCert-basiscertificaten met Download PEM gemarkeerd.](../images/clients/ssl-modes/digicert.png)
-1. De naam van het beveiligingscertificaatbestand wijzigen in `root.crt`.
-1. Kopieer het bestand naar de [!DNL PostgreSQL] map. Het vereiste bestandspad is afhankelijk van uw besturingssysteem. Als de map nog niet bestaat, maakt u de map.
+1. Ga aan [ de lijst van beschikbare DigiCert wortelcertificaten ](https://www.digicert.com/kb/digicert-root-certificates.htm)
+1. Zoek naar &quot;[!DNL DigiCert Global Root G2]&quot;van de lijst van beschikbare certificaten.
+1. Selecteer [!DNL **PEM van de Download**] om het dossier aan uw lokale machine te downloaden.
+   ![ de lijst van beschikbare DigiCert wortelcertificaten met benadrukte Download PEM.](../images/clients/ssl-modes/digicert.png)
+1. Wijzig de naam van het beveiligingscertificaatbestand in `root.crt` .
+1. Kopieer het bestand naar de map [!DNL PostgreSQL] . Het vereiste bestandspad is afhankelijk van uw besturingssysteem. Als de map nog niet bestaat, maakt u de map.
    - Als u macOS gebruikt, is het pad `/Users/<username>/.postgresql`
    - Als u Windows gebruikt, is het pad `%appdata%\postgresql`
 
 >[!TIP]
 >
->Als u uw `%appdata%` bestandslocatie op een Windows-besturingssysteem, druk op ⊞ **Win + R** en invoer `%appdata%` in het zoekveld.
+>Om uw `%appdata%` dossierplaats op een werkend systeem van Vensters te vinden, druk ⊞ **Win + R** en input `%appdata%` in het onderzoeksgebied.
 
-Na de [!DNL DigiCert Global Root G2] CRT-bestand is beschikbaar in uw [!DNL PostgreSQL] map, kunt u verbinding maken met [!DNL Query Service] met de `sslmode=verify-full` of `sslmode=verify-ca` -optie.
+Nadat het [!DNL DigiCert Global Root G2] CRT-bestand beschikbaar is in de [!DNL PostgreSQL] -map, kunt u verbinding maken met [!DNL Query Service] via de optie `sslmode=verify-full` of `sslmode=verify-ca` .
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u een beter inzicht in de beschikbare SSL-opties voor het verbinden van een client van derden met [!DNL Query Service], en ook hoe de `verify-full` SSL-optie om uw gegevens in beweging te coderen.
+Door dit document te lezen, hebt u een beter inzicht in de beschikbare SSL-opties voor het aansluiten van een client van derden op [!DNL Query Service] en ook in de manier waarop u de optie `verify-full` SSL kunt inschakelen om uw gegevens in beweging te coderen.
 
-Indien u dit nog niet hebt gedaan, volgt u de aanwijzingen op [een client van een andere fabrikant verbinden met [!DNL Query Service]](./overview.md).
+Als u dit niet reeds hebt gedaan, volg de begeleiding bij [ verbindend een derdecliënt aan  [!DNL Query Service]](./overview.md).

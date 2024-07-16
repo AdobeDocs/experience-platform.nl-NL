@@ -7,36 +7,36 @@ user-guide-description: Krijg een overzicht op hoog niveau van datasets in Exper
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 2%
+source-wordcount: '871'
+ht-degree: 1%
 
 ---
 
 # Overzicht van gegevenssets
 
-Alle gegevens die met succes in Adobe Experience Platform zijn ingevoerd, blijven behouden in het dialoogvenster [!DNL Data Lake] als datasets. Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die een schema (kolommen) en gebieden (rijen) bevat. Datasets bevatten ook metagegevens die verschillende aspecten van de gegevens beschrijven die ze opslaan.
+Alle gegevens die met succes in Adobe Experience Platform worden opgenomen, blijven binnen [!DNL Data Lake] als datasets bestaan. Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die een schema (kolommen) en gebieden (rijen) bevat. Datasets bevatten ook metagegevens die verschillende aspecten van de gegevens beschrijven die ze opslaan.
 
-Dit document biedt een overzicht op hoog niveau van gegevenssets in [!DNL Experience Platform].
+Dit document biedt een overzicht op hoog niveau van gegevenssets in [!DNL Experience Platform] .
 
 ## Gegevenssets maken en metagegevens bijhouden
 
-[!DNL Catalog Service] is het registratiesysteem voor gegevenslocatie en -lijn binnen [!DNL Experience Platform]en wordt gebruikt om gegevenssets te maken en te beheren. [!DNL Catalog] traceert de meta-gegevens voor elke dataset, die een verwijzing naar omvat [!DNL Experience Data Model] (XDM) schema de dataset aan (verklaard in de volgende sectie) en het aantal verslagen voldoet die in die dataset worden opgenomen.
+[!DNL Catalog Service] is het recordsysteem voor de gegevenslocatie en -lijn binnen [!DNL Experience Platform] en wordt gebruikt om gegevenssets te maken en te beheren. [!DNL Catalog] volgt de meta-gegevens voor elke dataset, die een verwijzing naar het [!DNL Experience Data Model] (XDM) schema omvat de dataset aan (verklaard in de volgende sectie) en het aantal verslagen voldoet die in die dataset worden opgenomen.
 
-Zie de [Overzicht van Catalog Service](../home.md) voor meer informatie .
+Zie het [ overzicht van de Dienst van de Catalogus ](../home.md) voor meer informatie.
 
 ## Beperkingen van gegevenssetgegevens afdwingen
 
-[!DNL Experience Data Model] (XDM) is het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring. Alle gegevens waarin [!DNL Platform] moet in overeenstemming zijn met een vooraf gedefinieerd XDM-schema voordat het in het [!DNL Data Lake] als gegevensset.
+[!DNL Experience Data Model] (XDM) is het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt. Alle gegevens die in [!DNL Platform] worden opgenomen, moeten in overeenstemming zijn met een vooraf gedefinieerd XDM-schema voordat het in [!DNL Data Lake] als dataset kan worden voortgezet.
 
 Alle datasets bevatten een verwijzing naar het schema XDM dat het formaat en de structuur van de gegevens beperkt die zij kunnen opslaan. Het proberen om gegevens aan een dataset te uploaden die niet met het schema XDM van de dataset in overeenstemming is zal binnendringen veroorzaken om te ontbreken.
 
-Voor meer informatie over XDM, zie [XDM System, overzicht](../../xdm/home.md).
+Voor meer informatie over XDM, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
 
 ## Gegevens in gegevenssets invoegen
 
-Adobe Experience Platform Data Ingestie vertegenwoordigt de veelvoudige methodes waardoor [!DNL Platform] neemt gegevens uit diverse bronnen op. Ongeacht de manier van inname worden alle gegevens die correct zijn ingesloten, geconverteerd naar batchbestanden. Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. Deze partijdossiers worden dan toegevoegd aan specifieke datasets en voortgeduurd binnen [!DNL Data Lake].
+Adobe Experience Platform Data Ingestie vertegenwoordigt de meerdere methoden waarmee [!DNL Platform] gegevens uit verschillende bronnen inneemt. Ongeacht de manier van inname worden alle gegevens die correct zijn ingesloten, geconverteerd naar batchbestanden. Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. Deze partijdossiers worden dan toegevoegd aan specifieke datasets en binnen [!DNL Data Lake] voortgeduurd.
 
-Zie de [Overzicht van gegevensinname](../../ingestion/home.md) voor meer informatie .
+Zie het [ Overzicht van de Ingestie van Gegevens ](../../ingestion/home.md) voor meer informatie.
 
 ## Labels die worden toegepast op gegevenssets van schema&#39;s
 
@@ -44,29 +44,29 @@ Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren om er
 
 >[!IMPORTANT]
 >
->Labels kunnen niet meer worden toegepast op velden op het niveau van de gegevensset. Deze workflow is vervangen door labels op schemaniveau. Alle labels die eerder op het niveau van gegevenssetobjecten zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de interface van het platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de sectie over [eerder toegepaste labels migreren](../../data-governance/e2e.md#migrate-labels) voor instructies over hoe te om dit te doen.
+>Labels kunnen niet meer worden toegepast op velden op het niveau van de gegevensset. Deze workflow is vervangen door labels op schemaniveau. Alle labels die eerder op het niveau van gegevenssetobjecten zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de interface van het platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de sectie op [ migrerend eerder toegepaste etiketten ](../../data-governance/e2e.md#migrate-labels) voor instructies op hoe te om dit te doen.
 
-Zie de [Overzicht van gegevensbeheer](../../data-governance/home.md) voor meer informatie over de dienst. Voor stappen voor het werken met gebruikslabels in [!DNL Platform]Raadpleeg de volgende hulplijnen:
+Zie het [ overzicht van het Beleid van Gegevens ](../../data-governance/home.md) voor meer informatie over de dienst. Raadpleeg de volgende hulplijnen voor stappen over het werken met gebruikslabels in [!DNL Platform] :
 
 * [Labels beheren in de gebruikersinterface](../../data-governance/labels/user-guide.md)
 * [Gegevenssetlabels beheren in de API](../../data-governance/labels/dataset-api.md)
 
-## Gegevensbestanden in de stroomafwaartse richting [!DNL Platform] diensten
+## Datasets in downstream [!DNL Platform] -services
 
-Zodra de datasets zijn gebruikt om opgenomen gegevens op te slaan, worden die datasets dan gebruikt door stroomafwaarts [!DNL Platform] services voor het bijwerken van klantprofielen, het verkrijgen van inzicht door het leren van machines en meer.
+Zodra de datasets zijn gebruikt om ingebedde gegevens op te slaan, worden die datasets dan gebruikt door stroomafwaartse [!DNL Platform] diensten om klantenprofielen bij te werken, inzichten door machine het leren te bereiken, en meer.
 
 Hieronder volgt een lijst met downstreamservices die gegevenssets gebruiken voor diverse bewerkingen. Raadpleeg de documentatie bij elke service voor meer informatie.
 
 * [[!DNL Data Access API]](../../data-access/home.md): Hiermee kunt u de inhoud van bestanden in gegevenssets openen en downloaden.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Bruggen identiteiten over apparaten en systemen, die datasets verbinden samen op de identiteitsgebieden worden gebaseerd die door de schema&#39;s XDM worden bepaald zij met in overeenstemming zijn.
-* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Hefboomwerkingen [!DNL Identity Service] om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. [!DNL Real-Time Customer Profile] Hiermee worden gegevens opgehaald van de [!DNL Data Lake] en blijven klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
-* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Hiermee kunt u segmenten samenstellen en soorten publiek genereren op basis van uw [!DNL Real-Time Customer Profile] gegevens. Deze doelgroepen kunnen vervolgens naar hun eigen gegevensbestanden worden geëxporteerd binnen de [!DNL Data Lake].
-* [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Gebruikt machinaal leren en kunstmatige intelligentie om inzichten in grote datasets te ontdekken.
-* [Adobe Experience Platform Query Service](../../query-service/home.md): Hiermee kunt u standaard-SQL gebruiken om gegevens te zoeken in [!DNL Experience Platform], worden alle gegevenssets binnen de [!DNL Data Lake] en het vangen van vraagresultaten als nieuwe dataset voor gebruik in het melden, [!DNL Data Science Workspace], of [!DNL Real-Time Customer Profile].
-* [Adobe Experience Platform-bestemmingsservice](../../destinations/home.md): Hiermee kunt u [exportgegevenssets](/help/destinations/ui/export-datasets.md) naar uw gewenste locatie voor cloudopslag of e-mailmarketing, voor rapportage of gegevenswetenschappelijke activiteiten.
+* [ Dienst van de Identiteit van Adobe Experience Platform ](../../identity-service/home.md): Brugshanden identiteiten over apparaten en systemen, die datasets verbinden samen op de identiteitsgebieden worden gebaseerd die door de schema&#39;s XDM worden bepaald zij met in overeenstemming zijn.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): maakt gebruik van [!DNL Identity Service] om in real-time gedetailleerde klantprofielen te maken op basis van uw gegevenssets. [!DNL Real-Time Customer Profile] haalt gegevens van [!DNL Data Lake] en houdt klantenprofielen in zijn eigen afzonderlijke gegevensopslag voort.
+* [ de Dienst van de Segmentatie van Adobe Experience Platform ](../../segmentation/home.md): Staat u toe om segmenten te bouwen en publiek van uw [!DNL Real-Time Customer Profile] gegevens te produceren. Deze doelgroepen kunnen vervolgens worden geëxporteerd naar hun eigen gegevenssets in de [!DNL Data Lake] .
+* [ Workspace van de Wetenschap van Gegevens van Adobe Experience Platform ](../../data-science-workspace/home.md): Gebruikt machine het leren en kunstmatige intelligentie om inzichten in grote datasets te ontdekken.
+* [ de Dienst van de Vraag van Adobe Experience Platform ](../../query-service/home.md): Staat u toe om standaardSQL te gebruiken om gegevens in [!DNL Experience Platform] te vragen, die tot om het even welke datasets binnen [!DNL Data Lake] toetreden en vraagresultaten als nieuwe dataset voor gebruik in het melden, [!DNL Data Science Workspace], of [!DNL Real-Time Customer Profile] vangen.
+* [ de Dienst van Bestemmingen van Adobe Experience Platform ](../../destinations/home.md): Staat u toe [ uitvoerdatasets ](/help/destinations/ui/export-datasets.md) aan uw gewenste wolkenopslag of e-mail marketing bestemmingen, voor het melden van of activiteiten van de gegevenswetenschap.
 
 ## Volgende stappen
 
-Door dit document te lezen, bent u geïntroduceerd in de belangrijkste toepassingen van datasets in [!DNL Experience Platform], alsmede de diverse [!DNL Platform] services die gegevenssets gebruiken. Voor meer details over de vele manieren worden de datasets gebruikt binnen [!DNL Platform], raadpleeg de servicedocumentatie die in dit overzicht is gekoppeld.
+Door dit document te lezen, bent u geïntroduceerd in de belangrijkste toepassingen van datasets in [!DNL Experience Platform], evenals de diverse [!DNL Platform] diensten die datasets gebruiken. Voor meer informatie over de vele manieren worden de datasets gebruikt in [!DNL Platform], te herzien gelieve de de dienstdocumentatie verbonden door dit overzicht.
 
-Voor stappen op hoe te met datasets binnen interactie te gaan [!DNL Experience Platform] UI, zie [gebruikershandleiding voor gegevenssets](user-guide.md).
+Voor stappen op hoe te met datasets binnen [!DNL Experience Platform] UI in wisselwerking te staan, zie de [ gids van de datasetgebruiker ](user-guide.md).

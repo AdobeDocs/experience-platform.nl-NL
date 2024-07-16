@@ -15,24 +15,24 @@ ht-degree: 0%
 
 Terwijl u een segmentdefinitie ontwikkelt, kunt u de schatting- en voorvertoningsgereedschappen in Adobe Experience Platform gebruiken om informatie op overzichtsniveau weer te geven, zodat u zeker weet dat u het publiek dat u verwacht, isoleert.
 
-* **Voorvertoningen** U kunt gepagineerde lijsten met kwalificerende profielen voor een segmentdefinitie opgeven, zodat u de resultaten kunt vergelijken met wat u verwacht.
+* **Voorproeven** verstrekken gepagineerde lijsten van kwalificerende profielen voor een segmentdefinitie, toestaand u om de resultaten tegen te vergelijken wat u verwacht.
 
-* **Schattingen** statistische informatie verstrekken over een segmentdefinitie, zoals de geprojecteerde publieksgrootte, het betrouwbaarheidsinterval, en fout standaardafwijking.
+* **Schattingen** verstrekken statistische informatie over een segmentdefinitie, zoals de geprojecteerde publieksgrootte, het betrouwbaarheidsinterval, en fout standaardafwijking.
 
 >[!NOTE]
 >
->Als u toegang wilt tot vergelijkbare metriek met betrekking tot realtime klantprofielgegevens, zoals het totale aantal profielfragmenten en samengevoegde profielen binnen specifieke naamruimten of het profielgegevensbestand als geheel, raadpleegt u de [profielvoorbeeld (voorbeeldstatus), eindhulplijn](../../profile/api/preview-sample-status.md), onderdeel van de ontwikkelaarsgids voor profiel API.
+>Om tot gelijkaardige metriek met betrekking tot de gegevens van het Profiel van de Klant in real time, zoals het totale aantal profielfragmenten en samengevoegde profielen binnen specifieke namespaces of de de gegevensopslag van het Profiel als geheel toegang te hebben, gelieve te verwijzen naar de [ gids van de profielvoorproef (de status van de voorproefsteekproef) ](../../profile/api/preview-sample-status.md), een deel van de de ontwikkelaarsgids van het Profiel API.
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Hoe schattingen worden gegenereerd
 
 Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 5% verhoogt of verlaagt, wordt een samplingtaak geactiveerd om het aantal bij te werken. De manier waarop gegevensbemonstering wordt gestart, hangt af van de wijze van inname:
 
-* **Batchopname:** Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal bij te werken als aan de drempel van 5% voor verhogen of verlagen is voldaan.
-* **Streaming opname:** Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om de telling bij te werken.
+* **Inname van de Partij:** voor partijingestie, binnen 15 minuten van met succes het opnemen van een partij in de opslag van het Profiel, als de 5% verhoging of dalingsdrempel wordt ontmoet, wordt een baan in werking gesteld om de telling bij te werken.
+* **Streaming opname:** voor het stromen gegevenswerkschema&#39;s, wordt een controle gedaan op een uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan aan. Als dit het geval is, wordt er automatisch een taak geactiveerd om de telling bij te werken.
 
 De voorbeeldgrootte van de scan is afhankelijk van het totale aantal entiteiten in de profielopslag. Deze steekproefgrootte wordt vertegenwoordigd in de volgende lijst:
 
@@ -48,13 +48,13 @@ De voorbeeldgrootte van de scan is afhankelijk van het totale aantal entiteiten 
 
 ## Een nieuwe voorvertoning maken {#create-preview}
 
-U kunt een nieuwe voorvertoning maken door een POST aan te vragen bij de `/preview` eindpunt.
+U kunt een nieuwe voorvertoning maken door een POST aan te vragen bij het eindpunt van `/preview` .
 
 >[!NOTE]
 >
 >Er wordt automatisch een geschatte taak gemaakt wanneer een voorbeeldtaak wordt gemaakt. Deze twee taken delen dezelfde id.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /preview
@@ -80,12 +80,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `predicateExpression` | De uitdrukking PQL om de gegevens door te vragen. |
-| `predicateType` | Het predikentype voor de vraaguitdrukking onder `predicateExpression`. Momenteel is de enige toegestane waarde voor deze eigenschap: `pql/text`. |
-| `predicateModel` | De naam van [!DNL Experience Data Model] (XDM) schema-klasse waarop de profielgegevens zijn gebaseerd. |
-| `graphType` | Het grafiektype waarvan u de cluster wilt ophalen. De ondersteunde waarden zijn: `none` (voert geen identiteitsstitching uit) en `pdg` (Er wordt identiteitsstitching uitgevoerd op basis van uw persoonlijke identiteitsgrafiek). |
+| `predicateExpression` | De PQL-expressie waarmee de gegevens worden opgevraagd. |
+| `predicateType` | Het predikaat type voor de vraaguitdrukking onder `predicateExpression`. Momenteel is `pql/text` de enige toegestane waarde voor deze eigenschap. |
+| `predicateModel` | De naam van de schemaklasse [!DNL Experience Data Model] (XDM) waarop de profielgegevens zijn gebaseerd. |
+| `graphType` | Het grafiektype waarvan u de cluster wilt ophalen. De ondersteunde waarden zijn `none` (voert geen identiteitsstitching uit) en `pdg` (voert identiteitsstitching uit op basis van uw persoonlijke identiteitsgrafiek). |
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert HTTP-status 201 (Gemaakt) met details van de zojuist gemaakte voorvertoning.
 
@@ -106,9 +106,9 @@ Een succesvol antwoord retourneert HTTP-status 201 (Gemaakt) met details van de 
 
 ## De resultaten van een specifieke voorvertoning ophalen {#get-preview}
 
-U kunt gedetailleerde informatie over een specifieke voorvertoning opvragen door een GET-aanvraag in te dienen bij de `/preview` en het verstrekken van voorproef identiteitskaart in de verzoekweg.
+U kunt gedetailleerde informatie over een specifieke voorproef terugwinnen door een verzoek van de GET aan het `/preview` eindpunt te richten en voorproef identiteitskaart in de verzoekweg te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /preview/{PREVIEW_ID}
@@ -116,7 +116,7 @@ GET /preview/{PREVIEW_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | De `previewId` De waarde van de voorvertoning die u wilt ophalen. |
+| `{PREVIEW_ID}` | De `previewId` -waarde van de voorvertoning die u wilt ophalen. |
 
 **Verzoek**
 
@@ -128,7 +128,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie over de opgegeven voorvertoning.
 
@@ -179,13 +179,13 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. Met de opgegeven koppelingen kunt u de opgegeven entiteiten opzoeken met de [API-eindpunt voor profieltoegang](../../profile/api/entities.md). |
+| `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. De verstrekte verbindingen kunnen worden gebruikt om de gespecificeerde entiteiten omhoog te kijken, gebruikend het [ API eindpunt van de profieltoegang ](../../profile/api/entities.md). |
 
 ## De resultaten van een specifieke geschatte taak ophalen {#get-estimate}
 
-Nadat u een voorvertoningstaak hebt gemaakt, kunt u de bijbehorende taak gebruiken `previewId` op het pad van een verzoek van de GET aan de `/estimate` eindpunt om statistische informatie over de segmentdefinitie, met inbegrip van geprojecteerde publieksgrootte, betrouwbaarheidsinterval, en fout standaardafwijking te bekijken.
+Als u een voorvertoningstaak hebt gemaakt, kunt u de `previewId` ervan gebruiken in het pad van een aanvraag van een GET naar het `/estimate` -eindpunt om statistische informatie weer te geven over de segmentdefinitie, zoals de geprojecteerde publieksgrootte, het betrouwbaarheidsinterval en de standaardafwijking voor fouten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /estimate/{PREVIEW_ID}
@@ -193,7 +193,7 @@ GET /estimate/{PREVIEW_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | Een geschatte taak wordt alleen geactiveerd wanneer een voorvertoningstaak wordt gemaakt en de twee taken dezelfde id-waarde delen voor opzoekdoeleinden. Dit is met name de `previewId` waarde die wordt geretourneerd bij het maken van de voorvertoningstaak. |
+| `{PREVIEW_ID}` | Een geschatte taak wordt alleen geactiveerd wanneer een voorvertoningstaak wordt gemaakt en de twee taken dezelfde id-waarde delen voor opzoekdoeleinden. Dit is met name de `previewId` -waarde die wordt geretourneerd toen de voorvertoningstaak werd gemaakt. |
 
 **Verzoek**
 
@@ -207,7 +207,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert HTTP status 200 met details van de geschatte taak.
 
@@ -245,8 +245,8 @@ Een succesvolle reactie retourneert HTTP status 200 met details van de geschatte
 | -------- | ----------- |
 | `estimatedNamespaceDistribution` | Een array met objecten die het aantal profielen in het segment weergeeft, uitgesplitst naar naamruimte van identiteit. Het totale aantal profielen per naamruimte (door de waarden voor elke naamruimte bij elkaar op te tellen) kan hoger zijn dan de metrische waarde van het aantal profielen, omdat één profiel aan meerdere naamruimten kan worden gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd. |
 | `state` | De huidige status van de voorvertoningstaak. De status wordt ‘UITGEVOERD’ totdat de verwerking is voltooid, waarna de status ‘RESULT_READY’ of ‘FAILED’ wordt. |
-| `_links.preview` | Wanneer de `state` is &quot;RESULT_READY&quot;, verstrekt dit gebied een URL om de schatting te bekijken. |
+| `_links.preview` | Wanneer `state` &quot;RESULT_READY&quot; is, verstrekt dit gebied een URL om de schatting te bekijken. |
 
 ## Volgende stappen
 
-Nadat u deze handleiding hebt gelezen, hebt u een beter inzicht in hoe u met voorvertoningen en schattingen werkt met de segmentatie-API. Ga naar de [profielvoorvertoning (`/previewsamplestatus`) eindpunthulplijn](../../profile/api/preview-sample-status.md).
+Nadat u deze handleiding hebt gelezen, hebt u een beter inzicht in hoe u met voorvertoningen en schattingen werkt met de segmentatie-API. Leer hoe te om tot metriek met betrekking tot uw gegevens van het Profiel van de Klant in real time, zoals het totale aantal profielfragmenten en samengevoegde profielen binnen specifieke namespaces of de gegevensopslag van het Profiel als geheel toegang te hebben, gelieve de [ voorproef van het profielmonster (`/previewsamplestatus`) eindpuntgids ](../../profile/api/preview-sample-status.md) te bezoeken.

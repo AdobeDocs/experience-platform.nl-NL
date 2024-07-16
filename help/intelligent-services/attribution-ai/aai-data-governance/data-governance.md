@@ -7,7 +7,7 @@ description: Adobe Experience Platform biedt verschillende services en tools waa
 exl-id: 70b04061-0cb0-4b3e-9dfa-d49cc0ef1be0
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,10 @@ Dankzij de integratie tussen Attribution AI en Adobe Experience Platform Data Go
 
 De etiketten en het beleid van het gegevensgebruik die op datasets werden gecreeerd die door Platform worden verbruikt kunnen in het de configuratiewerkschema van de Attribution AI worden bedekt. Deze labels stoppen of waarschuwen gebruikers die gelabelde velden gebruiken.
 
-Dankzij deze integratie kunt u de naleving efficiënter beheren. Gegevensstewards in uw organisatie kunnen beleid plaatsen om gebruik te beperken. Dientengevolge, kunt u gegevens gebruiken die met beleid in plaats van gegevens worden bepaald in overeenstemming zijn. Lees de documentatie op [Labels en beleid](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html) voor meer informatie.
+Dankzij deze integratie kunt u de naleving efficiënter beheren. Gegevensstewards in uw organisatie kunnen beleid plaatsen om gebruik te beperken. Dientengevolge, kunt u gegevens gebruiken die met beleid in plaats van gegevens worden bepaald in overeenstemming zijn. Lees de documentatie over [ Etiketten en Beleid ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html) om meer te leren.
 
 Meer informatie over deze functie vindt u hier:
 
-[Aan de slag in de Attribution AI](../../attribution-ai/getting-started.md)
-[Adobe Experience Platform en toepassingen](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
-[Adobe Experience Cloud-architectuurdiagrammen](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html)
+[ Begonnen het worden in Attribution AI ](../../attribution-ai/getting-started.md)
+[ Adobe Experience Platform &amp; Toepassingen ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
+[ Adobe Experience Cloud architectuurdiagrammen ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html)

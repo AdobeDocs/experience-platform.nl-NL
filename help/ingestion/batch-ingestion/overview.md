@@ -7,15 +7,15 @@ exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '1388'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # Overzicht van de API voor inname van batch
 
-Met de Adobe Experience Platform Batch Ingestie-API kunt u gegevens als batchbestanden in Platform opnemen. Gegevens die worden ingevoerd, kunnen profielgegevens zijn van een vlak bestand (zoals een Parquet-bestand) of gegevens die overeenkomen met een bekend schema in het [!DNL Experience Data Model] (XDM) register.
+Met de Adobe Experience Platform Batch Ingestie-API kunt u gegevens als batchbestanden in Platform opnemen. Gegevens die worden ingesloten, kunnen profielgegevens zijn van een vlak bestand (zoals een Parquet-bestand) of gegevens die overeenkomen met een bekend schema in het XDM-register ([!DNL Experience Data Model] ).
 
-De [Referentie voor API voor batchverwerking](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) aanvullende informatie over deze API-aanroepen.
+De [ Verwijzing van de Opname API van de Partij ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) verstrekt extra informatie over deze API vraag.
 
 Het volgende diagram schetst het proces van partijingestie:
 
@@ -23,12 +23,12 @@ Het volgende diagram schetst het proces van partijingestie:
 
 ## Aan de slag
 
-De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [Batchverwerking-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+De API eindpunten die in deze gids worden gebruikt maken deel uit van [ de Ingestie API van de Partij ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ### [!DNL Data Ingestion] voorwaarden
 
 - De gegevens die moeten worden geüpload, moeten de indeling Parquet of JSON hebben.
-- Een dataset die in [[!DNL Catalog services]](../../catalog/home.md).
+- Een dataset die in [[!DNL Catalog services]](../../catalog/home.md) wordt gecreeerd.
 - De inhoud van het dossier van het Pakket moet een ondergroep van het schema van de dataset aanpassen die in wordt geupload.
 - Heb uw uniek Token van de Toegang na authentificatie.
 
@@ -48,15 +48,15 @@ De gegevensinvoer in de batch heeft enkele beperkingen:
 
 >[!NOTE]
 >
->Als u een bestand wilt uploaden dat groter is dan 512 MB, moet het bestand in kleinere delen worden verdeeld. Instructies voor het uploaden van een groot bestand vindt u in de [groot gedeelte voor het uploaden van bestanden in dit document](#large-file-upload---create-file).
+>Als u een bestand wilt uploaden dat groter is dan 512 MB, moet het bestand in kleinere delen worden verdeeld. De instructies om een groot dossier te uploaden kunnen in de [ grote dossier worden gevonden uploadt sectie van dit document ](#large-file-upload---create-file).
 
 ### Typen
 
-Bij het invoeren van gegevens is het belangrijk om te begrijpen hoe [!DNL Experience Data Model] (XDM) schema&#39;s werken. Voor meer informatie over hoe XDM gebiedstypes aan verschillende formaten in kaart brengen, gelieve te lezen [Handleiding voor ontwikkelaars van het schema Register](../../xdm/api/getting-started.md).
+Bij het opnemen van gegevens is het belangrijk dat u begrijpt hoe [!DNL Experience Data Model] (XDM)-schema&#39;s werken. Voor meer informatie over hoe de types van XDM- gebied aan verschillende formaten in kaart brengen, gelieve de [ de ontwikkelaarsgids van de Registratie van het Schema ](../../xdm/api/getting-started.md) te lezen.
 
-Er is enige flexibiliteit wanneer het opnemen van gegevens - als een type niet aanpast wat in het doelschema is, zullen de gegevens in het uitgedrukt doeltype worden omgezet. Als dit niet het geval is, zal de batchverwerking mislukken met een `TypeCompatibilityException`.
+Er is enige flexibiliteit wanneer het opnemen van gegevens - als een type niet aanpast wat in het doelschema is, zullen de gegevens in het uitgedrukt doeltype worden omgezet. Als dit niet het geval is, mislukt de batch met een `TypeCompatibilityException` .
 
-JSON en CSV hebben bijvoorbeeld geen `date` of `date-time` type. Als gevolg hiervan worden deze waarden uitgedrukt met [Tekenreeksen met ISO 8601-indeling](https://www.iso.org/iso-8601-date-and-time-format.html) (2018-07-10T15):05:59,000-08:00&quot;) of Unix Tijd die in milliseconden (1531263959000) wordt geformatteerd en bij inname in het doelXDM type wordt omgezet.
+JSON en CSV hebben bijvoorbeeld geen `date` - of `date-time` -type. Dientengevolge, worden deze waarden uitgedrukt gebruikend [ ISO 8601 geformatteerde koorden ](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15 :05: 59.000-08:00&quot;) of Unix Tijd die in milliseconden (1531263959 wordt geformatteerd 000) en worden bij inname omgezet in het doel-XDM-type.
 
 In de onderstaande tabel worden de conversies weergegeven die worden ondersteund bij het invoeren van gegevens.
 
@@ -79,7 +79,7 @@ In de onderstaande tabel worden de conversies weergegeven die worden ondersteund
 
 ## De API gebruiken
 
-De [!DNL Data Ingestion] API staat u toe om gegevens als partijen (een eenheid gegevens in te voeren die uit één of meerdere dossiers bestaat die als één enkele eenheid moeten worden opgenomen) in [!DNL Experience Platform] in drie basisstappen :
+Met de API van [!DNL Data Ingestion] kunt u gegevens in drie basisstappen als batches (een gegevenseenheid die bestaat uit een of meer bestanden die als één eenheid moeten worden opgenomen) in [!DNL Experience Platform] invoeren:
 
 1. Maak een nieuwe batch.
 2. Upload dossiers aan een gespecificeerde dataset die het XDM schema van de gegevens aanpast.
@@ -146,11 +146,11 @@ U kunt bestanden uploaden met de API voor kleine bestanden uploaden. Als uw best
 
 >[!NOTE]
 >
->De opname van de partij kan worden gebruikt om gegevens in de opslag van het Profiel stapsgewijs bij te werken. Zie de sectie over [een batch bijwerken](#patch-a-batch) in de [handleiding voor het ontwikkelen van batch-inhoud](api-overview.md).
+>De opname van de partij kan worden gebruikt om gegevens in de opslag van het Profiel stapsgewijs bij te werken. Voor meer informatie, zie de sectie op [ het bijwerken van een partij ](#patch-a-batch) in de [ gids van de de partijontwikkelaar van de inname ](api-overview.md).
 
 >[!INFO]
 >
->In de onderstaande voorbeelden worden de [Apache Parquet](https://parquet.apache.org/docs/) bestandsindeling. Een voorbeeld met de JSON-bestandsindeling vindt u in het dialoogvenster [handleiding voor het ontwikkelen van batch-inhoud](api-overview.md).
+>De voorbeelden hieronder gebruiken het [ Apache 1} dossierformaat van het Pakket {. ](https://parquet.apache.org/docs/) Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [ handleiding van de partijontwikkelaar ](api-overview.md) worden gevonden.
 
 ### Kleine bestandsupload
 
@@ -257,7 +257,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Signaalbatchverwerking
 
-Nadat alle bestanden naar de batch zijn geüpload, kan de batch worden gemarkeerd als voltooid. Door dit te doen, [!DNL Catalog] DataSetFile-items worden gemaakt voor de voltooide bestanden en zijn gekoppeld aan de hierboven gegenereerde batch. De [!DNL Catalog] batch wordt vervolgens gemarkeerd als succesvol, waardoor stroomafwaartse stromen worden geactiveerd om de beschikbare gegevens in te voeren.
+Nadat alle bestanden naar de batch zijn geüpload, kan de batch worden gemarkeerd als voltooid. Op deze manier worden de [!DNL Catalog] DataSetFile-items gemaakt voor de voltooide bestanden en gekoppeld aan de hierboven gegenereerde batch. De batch [!DNL Catalog] wordt vervolgens gemarkeerd als succesvol, waardoor stroomafwaartse stromen worden geactiveerd om de beschikbare gegevens in te voeren.
 
 **Verzoek**
 
@@ -287,7 +287,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 Wanneer u wacht tot de bestanden naar de batch zijn geüpload, kunt u de status van de batch controleren om de voortgang te zien.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /batch/{BATCH_ID}
@@ -401,20 +401,20 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 | -------- | ----------- |
 | `{USER_ID}` | De id van de gebruiker die de batch heeft gemaakt of bijgewerkt. |
 
-De `"status"` is wat de huidige status van de gevraagde partij toont. De batches kunnen een van de volgende statussen hebben:
+In het veld `"status"` wordt de huidige status van de aangevraagde batch weergegeven. De batches kunnen een van de volgende statussen hebben:
 
 ## Statistieken van inname in batch
 
 | Status | Beschrijving |
 | ------ | ----------- |
 | Verlaten | De batch is niet binnen de verwachte tijd voltooid. |
-| Afgebroken | Een afbreekbewerking heeft **expliciet** is aangeroepen (via de tag Batch Ingest API) voor de opgegeven batch. Wanneer de batch in de status &quot;Geladen&quot; is, kan deze niet worden afgebroken. |
+| Afgebroken | Een afbreekverrichting heeft **uitdrukkelijk** geroepen (via Samenvatting van de Partij API) voor de gespecificeerde partij. Wanneer de batch in de status &quot;Geladen&quot; is, kan deze niet worden afgebroken. |
 | Actief | De partij is met succes bevorderd en is beschikbaar voor downstreamconsumptie. Deze status kan door elkaar worden gebruikt met &quot;Succes&quot;. |
 | Verwijderd | De gegevens voor de batch zijn volledig verwijderd. |
-| Mislukt | Een eindstaat die uit of slechte configuratie en/of slechte gegevens voortvloeit. Gegevens voor een mislukte batch worden **niet** opdagen. Deze status kan door elkaar worden gebruikt met &quot;Mislukking&quot;. |
+| Mislukt | Een eindstaat die uit of slechte configuratie en/of slechte gegevens voortvloeit. De gegevens voor een ontbroken partij zullen **niet** verschijnen. Deze status kan door elkaar worden gebruikt met &quot;Mislukking&quot;. |
 | Inactief | De batch is gepromoveerd, maar is teruggezet of verlopen. De partij is niet meer beschikbaar voor downstreamconsumptie. |
 | Geladen | De gegevens voor de partij zijn volledig en de partij is klaar voor bevordering. |
-| Laden | Gegevens voor deze batch worden geüpload en de batch is momenteel **niet** klaar om te worden bevorderd. |
+| Laden | De gegevens voor deze partij worden geupload en de partij is momenteel **niet** klaar om worden bevorderd. |
 | Opnieuw proberen | De gegevens voor deze batch worden verwerkt. Vanwege een systeem- of overgangsfout is de batch echter mislukt. Hierdoor wordt deze batch opnieuw geprobeerd. |
 | Staand | De testfase van het promotieproces voor een batch is voltooid en de innametaak is uitgevoerd. |
 | Staging | De gegevens voor de partij worden verwerkt. |

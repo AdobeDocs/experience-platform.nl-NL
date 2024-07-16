@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Verlopen van gebeurtenissen beleven
 
-In Adobe Experience Platform, kunt u vervaltijden voor alle Gebeurtenissen van de Ervaring vormen die in een dataset worden opgenomen die voor wordt toegelaten [Klantprofiel in realtime](./home.md). Hiermee kunt u automatisch gegevens verwijderen uit het profielarchief die niet meer geldig of nuttig zijn voor uw gebruiksgevallen.
+In Adobe Experience Platform, kunt u vervaltijden voor alle Gebeurtenissen van de Ervaring vormen die in een dataset worden opgenomen die voor [ in real time wordt toegelaten Profiel van de Klant ](./home.md). Hiermee kunt u automatisch gegevens verwijderen uit het profielarchief die niet meer geldig of nuttig zijn voor uw gebruiksgevallen.
 
 Verlopen van ervaringsgebeurtenissen kunnen niet worden geconfigureerd via de interface of API&#39;s van het platform. In plaats daarvan, moet u steun contacteren om de Verlopen van de Gebeurtenis van de Ervaring op uw vereiste datasets toe te laten.
 
 >[!IMPORTANT]
 >
->Verlopen van de Gebeurtenis van de ervaring moeten niet met datasettermijnen worden verward, die de volledige dataset schrappen nadat de vervaldatum wordt bereikt. Deze worden manueel gevormd door [Adobe Experience Platform Data Hygiene](../hygiene/home.md).
+>Verlopen van de Gebeurtenis van de ervaring moeten niet met datasettermijnen worden verward, die de volledige dataset schrappen nadat de vervaldatum wordt bereikt. Deze worden manueel gevormd door [ Hygiene van Gegevens van Adobe Experience Platform ](../hygiene/home.md).
 
 ## Geautomatiseerd vervalproces
 
@@ -30,7 +30,7 @@ Nadat de Verlopen van de Gebeurtenis van de Ervaring op een profiel-Toegelaten d
 
 >[!WARNING]
 >
->Na toepassing worden alle gegevens die ouder zijn dan het aantal dagen dat door de vervalwaarde is toegewezen, gebruikt **permanent verwijderd** en kan niet worden hersteld.
+>Zodra toegepast, wordt om het even welke gegevens die ouder zijn dan het aantal dagen dat door de vervalwaarde wordt toegewezen permanent geschrapt **** en kan niet worden hersteld.
 
 Als u bijvoorbeeld op 15 mei een vervalwaarde van 30 dagen hebt toegepast, worden de volgende stappen uitgevoerd:
 
@@ -54,26 +54,26 @@ De de gegevensvervaldatum van de Ervaring van de Gebeurtenisgegevens en de gegev
 
 #### Korreligheid
 
-Ervaar de gegevensvervaldatum van de Gebeurtenis werkt op een **gegevensset** niveau. Dientengevolge, kan elke dataset een verschillende het aflopen van gegevens hebben plaatsen.
+De gegevensvervaldatum van de Gebeurtenis van de ervaring werkt op het niveau van de a **dataset**. Dientengevolge, kan elke dataset een verschillende het aflopen van gegevens hebben plaatsen.
 
-De vervaldatum van gegevens van het Pseudoniem Profiel werkt op een **sandbox** niveau. Als gevolg hiervan is het verlopen van de gegevens van invloed op alle profielen in de sandbox.
+De pseudoniem gegevens van het Profiel vervalsen werken op a **zandbak** niveau. Als gevolg hiervan is het verlopen van de gegevens van invloed op alle profielen in de sandbox.
 
 #### Identiteitstypen
 
-Ervaring gebeurtenisgegevens verlopen verwijdert gebeurtenissen **alleen** op basis van de tijdstempel van de gebeurtenisrecord. De opgenomen naamruimten zijn **genegeerd** voor vervaldoeleinden.
+De gegevensvervaldatum van de Gebeurtenis van de ervaring verwijdert gebeurtenissen **slechts** die op timestamp van het gebeurtenisverslag wordt gebaseerd. De inbegrepen identiteitsnamespaces zijn **genegeerd** voor vervaldoeleinden.
 
-Vervaldatum van gegevens van pseudoniem profiel **alleen** overweegt profielen met identiteitsgrafieken die identiteitsnaamruimten bevatten die door de klant werden geselecteerd, zoals `ECID`, `AAID`of andere soorten cookies. Als het profiel **alle** extra naamruimte voor identiteit **niet** in de geselecteerde lijst van de klant, zal het profiel **niet** worden geschrapt.
+De pseudoniem gegevens van het Profiel verlopen **slechts** overweegt profielen die identiteitsgrafieken hebben die identiteitsnamespaces bevatten die door de klant, zoals `ECID`, `AAID`, of andere soorten koekjes werden geselecteerd. Als het profiel **om het even welke** extra identiteitsnamespace bevat die **niet** in de geselecteerde lijst van de klant was, zal het profiel **** niet worden geschrapt.
 
 #### Verwijderde items
 
-Ervaring gebeurtenisgegevens verlopen **alleen** verwijdert gebeurtenissen en doet **niet** profielklassegegevens verwijderen. De profielklassegegevens worden alleen verwijderd wanneer alle gegevens over het profiel zijn verwijderd **alles** gegevenssets en er zijn **nee** nog resterende profielklassecords voor het profiel.
+De gegevensvervaldatum van de Gebeurtenis van de ervaring **slechts** verwijdert gebeurtenissen en **verwijdert** geen gegevens van de profielklasse. De gegevens van de profielklasse worden slechts verwijderd wanneer alle gegevens over **alle** datasets worden verwijderd en er **geen** dossiers van de profielklasse blijven voor het profiel.
 
-Vervaldatum van gegevens van pseudoniem profiel wordt verwijderd **beide** gebeurtenis- en profielrecords. Hierdoor worden ook de profielklassegegevens verwijderd.
+De pseudoniem gegevensvervaldatum van het Profiel verwijdert **zowel** gebeurtenis als profielverslagen. Hierdoor worden ook de profielklassegegevens verwijderd.
 
 ### Hoe kan de gegevensvervaldatum van het Pseudoniem Profiel samen met de gegevensvervaldatum van de Gebeurtenis van de Ervaring worden gebruikt?
 
 De vervaldatum van Pseudoniem Profielgegevens en Experience Event-gegevens kunnen worden gebruikt om elkaar aan te vullen.
 
-U moet **altijd** De gegevensvervaldatum van de de Ervaring van de opstelling Gebeurtenis in uw datasets, die op uw behoeften wordt gebaseerd om gegevens over uw bekende klanten te behouden. Als de geldigheids-gebeurtenisgegevensvervaldatum is ingesteld, kunt u de gegevensvervaldatum van het Pseudoniem-profiel gebruiken om automatisch Pseudoniem-profielen te verwijderen. Doorgaans is de vervalperiode van de gegevens voor Pseudoniem Profielen korter dan de vervalperiode van de gegevens voor Experience Events.
+U zou **altijd** de gegevensvervaldatum van de Gebeurtenis van de opstellingsErvaring in uw datasets, die op uw behoeften worden gebaseerd om gegevens over uw bekende klanten te behouden. Als de geldigheids-gebeurtenisgegevensvervaldatum is ingesteld, kunt u de gegevensvervaldatum van het Pseudoniem-profiel gebruiken om automatisch Pseudoniem-profielen te verwijderen. Doorgaans is de vervalperiode van de gegevens voor Pseudoniem Profielen korter dan de vervalperiode van de gegevens voor Experience Events.
 
 In een typisch geval kunt u de gegevensvervaldatum van de Experience-gebeurtenis instellen op basis van de waarden van uw bekende gebruikersgegevens en u kunt de gegevensvervaldatum van het Pseudoniem-profiel instellen op een veel kortere duur om de invloed van Pseudoniem-profielen op de naleving van de Platform-licentie te beperken.

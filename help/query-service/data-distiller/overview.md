@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Overzicht van Data Distiller
 
-Data Distiller is een pakket dat een subset van de functies van Adobe Experience Platform bevat. Met Data Distiller kunt u gegevensvoorbereiding na inname (zoals reinigen, vormen en manipulatie) uitvoeren voor realtime klantprofiel of analytische gebruiksgevallen door batchquery&#39;s uit te voeren in Query Service. Uw gebruik van Data Distiller is afhankelijk van uw machtiging voor toepassingen op basis van Platforms.
+Data Distiller is een pakket dat een subset van de functies van Adobe Experience Platform bevat. Met Data Distiller kunt u gegevensvoorbereiding na inname (zoals reinigen, vormen en manipulatie) uitvoeren voor realtime klantprofiel of analytische gebruiksgevallen door batchquery&#39;s uit te voeren in Query Service. Uw gebruik van Data Distiller is afhankelijk van uw machtiging voor platformgebaseerde toepassingen.
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}
@@ -35,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## Guardrails
 
-Zie de [Query Service-handleidingen](../guardrails.md) document met betrekking tot standaardgebruikslimieten voor Query Service-gegevens met betrekking tot uw licentierechten.
+Zie het ](../guardrails.md) document van de Dienst van de Vraag 1} betreffende standaardgebruiksgrenzen voor de gegevens van de Dienst van de Vraag met betrekking tot uw verlenen van vergunningen.[
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits

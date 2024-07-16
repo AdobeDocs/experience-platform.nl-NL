@@ -4,7 +4,7 @@ description: Meer informatie over de tagextensie voor Adobe Target in Adobe Expe
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1184'
+source-wordcount: '1171'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Gebruik deze verwijzing voor informatie over de beschikbare opties wanneer het gebruiken van deze uitbreiding om een regel te bouwen.
 
@@ -23,9 +23,9 @@ Gebruik deze verwijzing voor informatie over de beschikbare opties wanneer het g
 >
 > De Adobe Target-extensie vereist at.js. mbox.js wordt niet ondersteund.
 
-Als de extensie Adobe Target nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensions > Catalog]**, plaatst u de cursor boven de doelextensie en selecteert u **[!UICONTROL Install]**.
+Als de Adobe Target-extensie nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensions > Catalog]** , plaatst u de cursor boven de Target-extensie en selecteert u **[!UICONTROL Install]** .
 
-Als u de extensie wilt configureren, opent u de [!UICONTROL Extensions] , plaatst u de cursor boven de extensie en selecteert u vervolgens **[!UICONTROL Configure]**.
+Als u de extensie wilt configureren, opent u het tabblad [!UICONTROL Extensions] , plaatst u de muisaanwijzer op de extensie en selecteert u **[!UICONTROL Configure]** .
 
 ![](../../../images/ext-target-config.png)
 
@@ -39,19 +39,19 @@ De volgende configuratieopties zijn beschikbaar:
 
 De clientcode is de account-id van Target. Dit zou bijna altijd als standaardwaarde moeten worden verlaten.
 
-Kan worden gewijzigd met gegevenselementen.
+Kan worden gewijzigd met behulp van gegevenselementen.
 
 #### Organisatie-ID
 
 Deze id koppelt uw implementatie aan uw Adobe Experience Cloud-account. Dit zou bijna altijd als standaardwaarde moeten worden verlaten.
 
-Kan worden gewijzigd met gegevenselementen.
+Kan worden gewijzigd met behulp van gegevenselementen.
 
 #### Algemene naam van box
 
 Toont de naam van uw globale verzoek van het Doel. Deze naam is standaard target-global-mbox, tenzij u de naam in de gebruikersinterface van het Doel hebt gewijzigd voordat u de extensie toevoegt.
 
-Kan worden gewijzigd met gegevenselementen.
+Kan worden gewijzigd met behulp van gegevenselementen.
 
 #### Serverdomein
 
@@ -61,18 +61,18 @@ Het domein waar de verzoeken van het Doel worden verzonden. Dit zou bijna altijd
 
 Bepaalt waar Doel cookies instelt in de browsers.
 
-* **Uitgeschakeld:** Stelt de cookies alleen in op het domein van de eerste fabrikant. Dit is de standaardinstelling.
-* **Ingeschakeld:** Stelt cookies in op zowel het eerste domein als het externe doeldomein (het &#39;serverdomein&#39;).
+* **Gehandicapte:** plaatst de koekjes op het eerste-partijdomein slechts. Dit is de standaardinstelling.
+* **Toegelaten:** plaatst koekjes op zowel het eerste-partijdomein als het derdedomein van het Doel (het &quot;Domein van de Server&quot;).
 
 #### Time-out (ms)
 
 Als de reactie van Doel niet binnen de bepaalde periode wordt ontvangen, de vraagtijden uit en de standaardinhoud wordt getoond. Tijdens de bezoekerssessie wordt nog steeds geprobeerd om aanvullende verzoeken in te dienen. Het gebrek is 3000ms, die van de Onderbreking verschillend zou kunnen zijn die in het gebruikersinterface van het Doel wordt gevormd.
 
-Raadpleeg voor meer informatie over de werking van de instelling Time-out de optie [Adobe Target Help](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html).
+Voor meer informatie over hoe de Onderbreking het plaatsen van de Onderbreking werkt, verwijs naar de [ hulp van Adobe Target ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html).
 
 #### Andere at.js-instellingen beschikbaar in de gebruikersinterface van Doel
 
-Verschillende instellingen die beschikbaar zijn op de [!UICONTROL Edit at.js settings] De pagina van Doel UI maakt geen deel uit van de uitbreiding van het Doel. Hier volgen enkele suggesties voor het uitvoeren van taken:
+Verschillende instellingen die beschikbaar zijn op de [!UICONTROL Edit at.js settings] -pagina van de doelinterface maken geen deel uit van de doelextensie. Hier volgen enkele suggesties voor het uitvoeren van taken:
 
 * Automatisch globale mbox maken Deze instelling wordt vervangen door de actie Globale mbox branden in de extensie Doel.
 * Bibliotheekkop Deze instelling maakt geen deel uit van de doelextensie. Plaats code die voor at.js in een actie van de Uitbreiding van de Kern > van de Code van de Douane moet worden geladen alvorens de actie van het Doel van de Lading te gebruiken.
@@ -95,14 +95,14 @@ Er is geen configuratie nodig.
 Voeg parameters toe aan alle mbox-aanvragen. De handeling Doel laden moet eerder worden gebruikt.
 
 1. Geef de naam en waarde op van de parameters die u wilt toevoegen.
-1. Selecteer **plus (+)** om meer parameters toe te voegen.
+1. Selecteer **plus (+)** pictogram om meer parameters toe te voegen.
 
 ### Globale Mbox-parameters toevoegen
 
 Voeg alleen parameters toe aan uw algemene mbox-aanvragen. De handeling Doel laden moet eerder worden gebruikt.
 
 1. Geef de naam en waarde op van de parameters die u wilt toevoegen.
-1. Selecteer **plus (+)** om meer parameters toe te voegen.
+1. Selecteer **plus (+)** pictogram om meer parameters toe te voegen.
 
 ### Globale standaardmap
 
@@ -112,10 +112,10 @@ Geef op of het verbergen van het lichaam moet worden ingeschakeld om flikkering 
 
 De volgende opties zijn beschikbaar:
 
-* **Bodyhiding:** U kunt deze instelling in- of uitschakelen. De standaardwaarde is Enabled, wat betekent HTML BODY verborgen is.
-* **Verborgen stijl hoofdtekst:** De standaardwaarde is `body{opacity:0}`. Deze waarde kan worden gewijzigd in iets anders, zoals `body{display:none}`.
+* **Bodyverbergen:** u kunt dit het plaatsen toelaten of onbruikbaar maken. De standaardwaarde is Enabled, wat betekent HTML BODY verborgen is.
+* **Verborgen Stijl van het Lichaam:** de standaardwaarde is `body{opacity:0}`. Deze waarde kan worden gewijzigd in iets anders, zoals `body{display:none}` .
 
-Raadpleeg voor meer informatie de [Online Help-documentatie van Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html).
+Voor meer informatie, verwijs naar de [ online hulpdocumentatie van het Doel ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html).
 
 ## Basisimplementatie van Adobe Target
 

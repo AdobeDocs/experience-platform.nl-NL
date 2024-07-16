@@ -14,73 +14,73 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Deze gids verklaart hoe te om publiek tot stand te brengen gebruikend de Samenstelling van het Publiek. Als u wilt leren hoe u publiek kunt maken met segmentdefinities met de Segment Builder, leest u de [Handleiding voor de gebruikersinterface van Segment Builder](./segment-builder.md).
+>Deze gids verklaart hoe te om publiek tot stand te brengen gebruikend de Samenstelling van het Publiek. Leer hoe te om publiek door segmentdefinities tot stand te brengen gebruikend de Bouwer van het Segment gelieve de [ gids UI van de Bouwer van het Segment ](./segment-builder.md) te lezen.
 
 De Samenstelling van het publiek verstrekt een werkruimte om publiek te bouwen en uit te geven, gebruikend blokken die worden gebruikt om verschillende acties te vertegenwoordigen.
 
-![De interface Audience Composition.](../images/ui/audience-composition/audience-composition.png)
+![ de Samenstelling UI van de Publiek.](../images/ui/audience-composition/audience-composition.png)
 
-Als u de details van de compositie wilt wijzigen, inclusief de titel en beschrijving, selecteert u de optie ![schuifregelaars](../images/ui/audience-composition/sliders.png) knop.
+Om de details van de samenstelling, met inbegrip van de titel en de beschrijving te veranderen, selecteer de ![ schuif ](../images/ui/audience-composition/sliders.png) knoop.
 
-De **[!UICONTROL Composition properties]** wordt weergegeven. U kunt hier details van uw samenstelling, met inbegrip van de titel en de beschrijving opnemen.
+De pop-up **[!UICONTROL Composition properties]** wordt weergegeven. U kunt hier details van uw samenstelling, met inbegrip van de titel en de beschrijving opnemen.
 
-![De keuzelijst Compositie-eigenschappen wordt weergegeven.](../images/ui/audience-composition/composition-properties.png)
+![ popover van de Samenstelling wordt getoond eigenschappen.](../images/ui/audience-composition/composition-properties.png)
 
 >[!NOTE]
 >
->Als u **niet** Als u de compositie een titel geeft, krijgt deze de titel &quot;Compositie&quot;, gevolgd door de datum en tijd waarop de compositie wordt gemaakt. Bovendien, elke samenstelling **moet** hebben een eigen unieke naam.
+>Als u **niet** uw samenstelling een titel geeft, zal het een titel van &quot;Samenstelling&quot;hebben die door de aanmaakdatum en de tijd door gebrek wordt gevolgd. Bovendien, moet elke samenstelling **** zijn eigen unieke naam hebben.
 
 Nadat u de details van uw compositie hebt bijgewerkt, selecteert u **[!UICONTROL Save]** om deze updates te bevestigen. Het canvas van de publiekscompositie verschijnt opnieuw.
 
-Het canvas van de publiekssamenstelling bestaat uit vier verschillende types van blokken: **[[!UICONTROL Audience]](#audience-block)**, **[[!UICONTROL Exclude]](#exclude-block)**, **[[!UICONTROL Rank]](#rank-block)**, en **[[!UICONTROL Split]](#split-block)**.
+Het canvas met publiekscompositie bestaat uit vier verschillende typen blokken: **[[!UICONTROL Audience]](#audience-block)** , **[[!UICONTROL Exclude]](#exclude-block)** , **[[!UICONTROL Rank]](#rank-block)** en **[[!UICONTROL Split]](#split-block)** .
 
 ## [!UICONTROL Audience] {#audience-block}
 
-De **[!UICONTROL Audience]** met bloktype kunt u de subdoelgroepen toevoegen die u wilt samenstellen voor een groter publiek. Standaard kunt u een **[!UICONTROL Audience]** blok is inbegrepen bij de bovenkant van het samenstellingscanvas.
+Met het bloktype **[!UICONTROL Audience]** kunt u subpubliek toevoegen dat u wilt samenstellen voor een groter publiek. Standaard wordt een **[!UICONTROL Audience]** -blok boven aan het compositicanvas weergegeven.
 
-Wanneer u **[!UICONTROL Audience]** blok, de juiste spoorvertoningen controles voor het etiketteren van het publiek, toevoegend publiek aan het blok, en bouwend douaneregels voor het publieksblok.
+Wanneer u het blok **[!UICONTROL Audience]** selecteert, worden in de rechtertrack besturingselementen weergegeven voor het labelen van het publiek, het toevoegen van een publiek aan het blok en het maken van aangepaste regels voor het blok publiek.
 
 >[!NOTE]
 >
->U kunt een publiek toevoegen **of** een aangepaste regel maken. Deze twee functies **kan** samen worden gebruikt.
+>U kunt of publiek **toevoegen of** een douaneregel creëren. Deze twee functies **kunnen niet** samen worden gebruikt.
 
-![De het blokdetails van het Publiek worden getoond.](../images/ui/audience-composition/audience-block.png)
+![ de het blokdetails van het Publiek worden getoond.](../images/ui/audience-composition/audience-block.png)
 
 ### [!UICONTROL Add audience] {#add-audience}
 
-Om publiek aan het blok van het Publiek toe te voegen. selecteren **[!UICONTROL Add Audience]**.
+Om publiek aan het blok van het Publiek toe te voegen. Selecteer **[!UICONTROL Add Audience]** .
 
-![De knop voor het publiek toevoegen is gemarkeerd.](../images/ui/audience-composition/add-audience.png)
+![ Add publieksknoop wordt benadrukt.](../images/ui/audience-composition/add-audience.png)
 
 >[!IMPORTANT]
 >
->Houd er rekening mee dat **alleen** publiek dat met het standaardsamenvoegbeleid is gedefinieerd, wordt weergegeven.
+>Gelieve te merken op dat **slechts** publiek dat gebruikend het standaardsamenvoegbeleid wordt bepaald zal verschijnen.
 >
->Alleen **gepubliceerd** publiek dat met de Bouwer van het Segment wordt gecreeerd kan worden gebruikt. Soorten publiek dat is gemaakt met Audience Composition en extern gegenereerde doelgroepen zijn **niet** beschikbaar.
+>Bovendien, slechts **gepubliceerde** publiek dat gebruikend de Bouwer van het Segment wordt gecreeerd kan worden gebruikt. Het publiek dat gebruikend de Samenstelling van het Publiek en extern geproduceerde publiek wordt gecreeerd is **niet** beschikbaar.
 
-Er wordt een lijst met doelgroepen weergegeven. Selecteer het publiek dat u wilt opnemen, gevolgd door **[!UICONTROL Add]** om ze toe te voegen aan uw publieksblok.
+Er wordt een lijst met doelgroepen weergegeven. Selecteer het publiek dat u wilt opnemen, gevolgd door **[!UICONTROL Add]** om deze aan het blok met doelgroepen toe te voegen.
 
-![Er wordt een lijst met doelgroepen weergegeven. In dit dialoogvenster kunt u selecteren welk publiek u wilt toevoegen.](../images/ui/audience-composition/select-audience.png)
+![ een lijst van publiek verschijnt. U kunt selecteren welk publiek u van dit dialoogvenster wilt toevoegen.](../images/ui/audience-composition/select-audience.png)
 
-Uw geselecteerde publiek verschijnt nu binnen de juiste spoorlijn wanneer **[!UICONTROL Audience]** wordt geselecteerd. Vanaf hier kunt u het samenvoegingstype van het gecombineerde publiek wijzigen.
+Het geselecteerde publiek wordt nu weergegeven in de rechtertrack wanneer het **[!UICONTROL Audience]** -blok wordt geselecteerd. Vanaf hier kunt u het samenvoegingstype van het gecombineerde publiek wijzigen.
 
-![De mogelijke samenvoegingstypen voor het publiek worden gemarkeerd.](../images/ui/audience-composition/merge-types.png)
+![ de mogelijke fusietypes voor het publiek worden benadrukt.](../images/ui/audience-composition/merge-types.png)
 
 | Type samenvoegen | Beschrijving |
 | ---------- | ----------- |
 | [!UICONTROL Union] | De doelgroepen worden in één publiek samengevoegd. Dit zou het equivalent van een OF verrichting zijn. |
-| [!UICONTROL Intersection] | Het publiek wordt gecombineerd, met alleen het publiek dat wordt gedeeld in **alles** van de toegevoegde waarden. Dit zou het equivalent van een EN verrichting zijn. |
-| [!UICONTROL Exclude overlap] | Het publiek wordt gecombineerd, met alleen het publiek dat wordt gedeeld in **één, maar niet alle** van de toegevoegde waarden. Dit is het equivalent van een XOR-bewerking. |
+| [!UICONTROL Intersection] | Het publiek wordt gecombineerd, met slechts het publiek dat in **allen** van hen wordt gedeeld die worden toegevoegd. Dit zou het equivalent van een EN verrichting zijn. |
+| [!UICONTROL Exclude overlap] | Het publiek wordt gecombineerd, met slechts het publiek dat in **wordt gedeeld, maar niet allen** van hen die worden toegevoegd. Dit is het equivalent van een XOR-bewerking. |
 
 ### [!UICONTROL Build rule] {#build-rule}
 
-Als u een aangepaste regel wilt toevoegen aan het blok Publiek, selecteert u **[!UICONTROL Build rule]**.
+Selecteer **[!UICONTROL Build rule]** als u een aangepaste regel wilt toevoegen aan het blok Publiek.
 
-![De knop Build rule is gemarkeerd.](../images/ui/audience-composition/build-rule.png)
+![ wordt de knoop van de bouwstijlregel benadrukt.](../images/ui/audience-composition/build-rule.png)
 
-De Segment Builder wordt weergegeven. U kunt de Bouwer van het Segment gebruiken om een douaneregel tot stand te brengen voor het publiek te volgen. Meer informatie over het gebruik van de Segment Builder vindt u in de [Handleiding Segment Builder](./segment-builder.md).
+De Segment Builder wordt weergegeven. U kunt de Bouwer van het Segment gebruiken om een douaneregel tot stand te brengen voor het publiek te volgen. Meer informatie over het gebruiken van de Bouwer van het Segment kan in de [ gids van de Bouwer van het Segment ](./segment-builder.md) worden gevonden.
 
-![De gebruikersinterface van Segment Builder wordt weergegeven.](../images/ui/audience-composition/segment-builder.png)
+![ wordt de Bouwer UI van het Segment getoond.](../images/ui/audience-composition/segment-builder.png)
 
 Nadat u een aangepaste regel hebt toegevoegd, selecteert u **[!UICONTROL Save]** om de regel aan uw publiek toe te voegen.
 
@@ -88,101 +88,101 @@ Nadat u een aangepaste regel hebt toegevoegd, selecteert u **[!UICONTROL Save]**
 
 ## [!UICONTROL Exclude] {#exclude-block}
 
-De **[!UICONTROL Exclude]** met bloktype kunt u opgegeven deelsoorten of kenmerken uitsluiten van het nieuwe, grotere publiek.
+Met het bloktype **[!UICONTROL Exclude]** kunt u opgegeven deelsoorten of kenmerken uitsluiten van het nieuwe, grotere publiek.
 
-Om een **[!UICONTROL Exclude]** blok, selecteer **+** pictogram, gevolgd door **[!UICONTROL Exclude]**.
+Als u een **[!UICONTROL Exclude]** -blok wilt toevoegen, selecteert u het pictogram **+** , gevolgd door **[!UICONTROL Exclude]** .
 
-![De optie Uitsluiten is geselecteerd.](../images/ui/audience-composition/add-exclude-block.png)
+![ de Uitsluiting optie wordt geselecteerd.](../images/ui/audience-composition/add-exclude-block.png)
 
-De **[!UICONTROL Exclude]** wordt toegevoegd. Wanneer dit blok wordt geselecteerd, verschijnen de details over de uitsluiting in het juiste spoor. Dit geldt ook voor het label en uitsluitingstype van het blok. U kunt uitsluiten [op publiek](#exclude-audience) of [by, kenmerk](#exclude-attribute).
+Het blok **[!UICONTROL Exclude]** wordt toegevoegd. Wanneer dit blok wordt geselecteerd, verschijnen de details over de uitsluiting in het juiste spoor. Dit geldt ook voor het label en uitsluitingstype van het blok. U kunt [ door publiek ](#exclude-audience) uitsluiten of [ door attribuut ](#exclude-attribute).
 
-![Het blok van de Uitsluiting, die de twee verschillende beschikbare uitsluitingstypes benadrukken.](../images/ui/audience-composition/exclude.png)
+![ het blok van de Uitsluiting, die twee verschillende benadrukt sluit beschikbare types uit.](../images/ui/audience-composition/exclude.png)
 
 ### Uitsluiten door publiek {#exclude-audience}
 
-Als u uitsluiting door het publiek toepast, kunt u selecteren welk publiek u wilt uitsluiten door **[!UICONTROL Add Audience]**.
+Als u uitsluiting instelt voor het publiek, kunt u selecteren welk publiek u wilt uitsluiten door **[!UICONTROL Add Audience]** te selecteren.
 
-![De [!UICONTROL Add audience] is geselecteerd, waarmee u kunt kiezen welk publiek u wilt uitsluiten.](../images/ui/audience-composition/add-excluded-audience.png)
+![ wordt de [!UICONTROL Add audience] knoop geselecteerd, die u laat kiezen welk publiek u wilt uitsluiten.](../images/ui/audience-composition/add-excluded-audience.png)
 
 >[!IMPORTANT]
 >
->Alleen **gepubliceerd** publiek dat met de Bouwer van het Segment wordt gecreeerd kan worden gebruikt. Soorten publiek dat is gemaakt met Audience Composition en extern gegenereerde doelgroepen zijn **niet** beschikbaar.
+>Slechts **gepubliceerde** publiek dat gebruikend de Bouwer van het Segment wordt gecreeerd kan worden gebruikt. Het publiek dat gebruikend de Samenstelling van het Publiek en extern geproduceerde publiek wordt gecreeerd is **niet** beschikbaar.
 
-Er wordt een lijst met doelgroepen weergegeven. Selecteren **[!UICONTROL Add]** om het publiek toe te voegen u aan uw exclusief blok wilt uitsluiten.
+Er wordt een lijst met doelgroepen weergegeven. Selecteer **[!UICONTROL Add]** om het publiek toe te voegen u aan uw exclusief blok wilt uitsluiten.
 
-![Er wordt een lijst met doelgroepen weergegeven. In dit dialoogvenster kunt u selecteren welk publiek u wilt toevoegen.](../images/ui/audience-composition/select-audience.png)
+![ een lijst van publiek verschijnt. U kunt selecteren welk publiek u van dit dialoogvenster wilt toevoegen.](../images/ui/audience-composition/select-audience.png)
 
 ### Uitsluiten op kenmerk {#exclude-attribute}
 
-Als u per kenmerk uitschakelt, kunt u selecteren welke kenmerken u wilt uitsluiten door de optie ![filter](../images/ui/audience-composition/filter-attribute.png) pictogram in het deelvenster **[!UICONTROL Exclusion rule]** sectie.
+Als u door attribuut uitsluit, kunt u selecteren welke attributen u wilt uitsluiten door het ![ filter ](../images/ui/audience-composition/filter-attribute.png) pictogram binnen de **[!UICONTROL Exclusion rule]** sectie te selecteren.
 
-![De kenmerkensectie wordt gemarkeerd en u ziet waar u wilt selecteren om het kenmerk te kiezen dat u wilt uitsluiten.](../images/ui/audience-composition/exclude-attribute.png)
+![ de attributensectie wordt benadrukt, tonend u waar te selecteren om de attributen te kiezen om uit te sluiten.](../images/ui/audience-composition/exclude-attribute.png)
 
-Er wordt een lijst met profielkenmerken weergegeven. Selecteer het kenmerktype dat u wilt uitsluiten, gevolgd door **[!UICONTROL Select]** om deze aan uw uitsluitingsblok toe te voegen.
+Er wordt een lijst met profielkenmerken weergegeven. Selecteer het kenmerktype dat u wilt uitsluiten, gevolgd door **[!UICONTROL Select]** om deze toe te voegen aan het uitsluitingsblok.
 
-![Er wordt een lijst met kenmerken weergegeven.](../images/ui/audience-composition/select-attribute-exclude.png)
+![ A lijst van attributen wordt getoond.](../images/ui/audience-composition/select-attribute-exclude.png)
 
 >[!IMPORTANT]
 >
->Als u deze optie niet instelt op kenmerk, kunt u alleen **één** waarde die moet worden uitgesloten. Als u een scheidingsteken gebruikt, zoals een komma of puntkomma, wordt die exacte waarde alleen uitgesloten. Stel de waarde bijvoorbeeld in als `red, blue` leidt tot uitsluiting van de term `red, blue` van het kenmerk, maar **niet** resulteert in het uitsluiten van de term `red` of `blue`.
+>Wanneer exclusief door attribuut, kunt u **slechts één** waarde specificeren om uit te sluiten. Als u een scheidingsteken gebruikt, zoals een komma of puntkomma, wordt die exacte waarde alleen uitgesloten. Bijvoorbeeld, zal het plaatsen van de waarde als `red, blue` in het uitsluiten van de termijn `red, blue` van de attributen resulteren, maar zal **** niet in het uitsluiten van of de termijn `red` of `blue` resulteren.
 
 ## [!UICONTROL Enrich] {#enrich-block}
 
 >[!IMPORTANT]
 >
->Op dit moment kunnen verrijkingskenmerken **alleen** worden gebruikt in downstreamscenario&#39;s van Adobe Journey Optimizer.
+>Op dit punt in tijd, kunnen de verrijkingsattributen **slechts** in stroomafwaartse scenario&#39;s van Adobe Journey Optimizer worden gebruikt.
 
-De **[!UICONTROL Enrich]** het bloktype staat u toe om uw publiek met extra attributen van een dataset te verrijken. U kunt deze kenmerken gebruiken in gevallen van verpersoonlijkingsgebruik.
+Met het bloktype **[!UICONTROL Enrich]** kunt u het publiek verrijken met extra kenmerken uit een gegevensset. U kunt deze kenmerken gebruiken in gevallen van verpersoonlijkingsgebruik.
 
-Om een **[!UICONTROL Enrich]** blok, selecteer **+** pictogram, gevolgd door **[!UICONTROL Enrich]**.
+Als u een **[!UICONTROL Enrich]** -blok wilt toevoegen, selecteert u het pictogram **+** , gevolgd door **[!UICONTROL Enrich]** .
 
-![De [!UICONTROL Enrich] is geselecteerd.](../images/ui/audience-composition/add-enrich-block.png)
+![ de [!UICONTROL Enrich] optie wordt geselecteerd.](../images/ui/audience-composition/add-enrich-block.png)
 
-De **[!UICONTROL Enrich]** wordt toegevoegd. Wanneer dit blok wordt geselecteerd, verschijnen de details over de verrijking in het juiste spoor. Dit omvat het etiket van het blok en de verrijkingsdataset.
+Het blok **[!UICONTROL Enrich]** wordt toegevoegd. Wanneer dit blok wordt geselecteerd, verschijnen de details over de verrijking in het juiste spoor. Dit omvat het etiket van het blok en de verrijkingsdataset.
 
-Als u de gegevensset wilt selecteren waarmee u het publiek wilt verrijken, selecteert u de ![filter](../images/ui/audience-composition/filter-attribute.png) pictogram.
+Om de dataset te selecteren om het publiek met te verrijken, selecteer het ![ filter ](../images/ui/audience-composition/filter-attribute.png) pictogram.
 
-![De filterknop wordt gemarkeerd. Als u dit selecteert, gaat u naar de [!UICONTROL Select dataset] popover.](../images/ui/audience-composition/enrich-select-dataset.png)
+![ de filterknoop wordt benadrukt. Als u dit selecteert, gaat u naar de [!UICONTROL Select dataset] popover. ](../images/ui/audience-composition/enrich-select-dataset.png)
 
-De **[!UICONTROL Select dataset]** wordt weergegeven. Selecteer de dataset die u voor verrijking wilt toevoegen, die door wordt gevolgd **[!UICONTROL Select]** toevoegen van de gegevensset voor verrijking.
+De pop-up **[!UICONTROL Select dataset]** wordt weergegeven. Selecteer de dataset die u voor verrijking wilt toevoegen, die door **[!UICONTROL Select]** wordt gevolgd om de dataset voor verrijking toe te voegen.
 
-![De gekozen dataset wordt geselecteerd.](../images/ui/audience-composition/enrich-dataset-selected.png)
+![ de gekozen dataset wordt geselecteerd.](../images/ui/audience-composition/enrich-dataset-selected.png)
 
 >[!IMPORTANT]
 >
->De geselecteerde dataset **moet** voldoen aan de volgende criteria:
+>De geselecteerde dataset **moet** aan de volgende criteria voldoen:
 >
->- De dataset **moet** van recordtype zijn.
->   - De dataset **kan** van het gebeurtenistype zijn, door het systeem worden gegenereerd of zijn gemarkeerd voor Profiel.
+>- De dataset **moet** van verslagtype zijn.
+>   - De dataset **kan** niet van gebeurtenistype zijn, systeem-geproduceerd zijn, of voor Profiel duidelijk zijn.
 >- De dataset **moet** 1 GB of kleiner zijn.
 
-De **[!UICONTROL Enrichment criteria]** nu wordt dit gedeelte op de rechterspoorlijn weergegeven . In deze sectie kunt u de optie **[!UICONTROL Source join key]** en de **[!UICONTROL Enrichment dataset join key]**, waarmee u de verrijkingsdataset kunt koppelen aan het publiek dat u probeert te maken.
+Het gedeelte **[!UICONTROL Enrichment criteria]** wordt nu weergegeven op de rechterrails. In deze sectie kunt u **[!UICONTROL Source join key]** en **[!UICONTROL Enrichment dataset join key]** selecteren, waarmee u de verrijkingsdataset kunt koppelen aan het publiek dat u probeert te maken.
 
-![De [!UICONTROL Enrichment criteria] gemarkeerd.](../images/ui/audience-composition/enrichment-criteria.png)
+![ het [!UICONTROL Enrichment criteria] gebied wordt benadrukt.](../images/ui/audience-composition/enrichment-criteria.png)
 
-Als u de optie **[!UICONTROL Source join key]**, selecteert u de ![filter](../images/ui/audience-composition/filter-attribute.png) pictogram.
+Om **[!UICONTROL Source join key]** te selecteren, selecteer het ![ filter ](../images/ui/audience-composition/filter-attribute.png) pictogram.
 
-![Het filterpictogram voor de [!UICONTROL Source join key] wordt gemarkeerd.](../images/ui/audience-composition/enrich-select-source-join-key.png)
+![ het filterpictogram voor [!UICONTROL Source join key] wordt benadrukt.](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
-De **[!UICONTROL Select a profile attribute]** wordt weergegeven. Selecteer het profielattribuut u als bron verbindt sleutel wilt gebruiken, die door wordt gevolgd **[!UICONTROL Select]** om dat attribuut als uw bron te kiezen sluit zich bij sleutel aan.
+De pop-up **[!UICONTROL Select a profile attribute]** wordt weergegeven. Selecteer het profielkenmerk dat u als de bronverbindingssleutel wilt gebruiken, gevolgd door **[!UICONTROL Select]** om dat kenmerk als uw bronverbindingssleutel te kiezen.
 
-![Het kenmerk dat u wilt gebruiken als de verbindingssleutel van de bron, wordt gemarkeerd.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+![ het attribuut u als bron wilt gebruiken toetreedt sleutel wordt benadrukt.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-Als u de optie **[!UICONTROL Enrichment dataset join key]**, selecteert u de ![filter](../images/ui/audience-composition/filter-attribute.png) pictogram.
+Om **[!UICONTROL Enrichment dataset join key]** te selecteren, selecteer het ![ filter ](../images/ui/audience-composition/filter-attribute.png) pictogram.
 
-![Het filterpictogram voor de [!UICONTROL Enrichment dataset join key] wordt gemarkeerd.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
+![ het filterpictogram voor [!UICONTROL Enrichment dataset join key] wordt benadrukt.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
 
-De **[!UICONTROL Enrichment attributes]** wordt weergegeven. Selecteer de attributen u als de de verbindingssleutel van de verrijkingsdataset wilt gebruiken, die door wordt gevolgd **[!UICONTROL Select]** om dat attribuut te kiezen aangezien uw verrijkingsdataset zich bij sleutel aansluit.
+De pop-up **[!UICONTROL Enrichment attributes]** wordt weergegeven. Selecteer het attribuut u als de de verbindingssleutel van de verrijkingsdataset wilt gebruiken, die door **[!UICONTROL Select]** wordt gevolgd om dat attribuut te kiezen aangezien uw de verbindingssleutel van de verrijkingsdataset.
 
-![Het attribuut u wilt gebruiken aangezien de de verbindingssleutel van de verrijkingsdataset wordt benadrukt.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+![ het attribuut u wilt gebruiken aangezien de de toetreden van de verrijkingsdataset sleutel wordt benadrukt.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
 
-Nu u beide verbindingssleutels hebt toegevoegd, de **[!UICONTROL Enrichment attributes]** wordt weergegeven. U kunt nu het kenmerk toevoegen waarmee u het publiek wilt verfraaien. Als u deze kenmerken wilt toevoegen, selecteert u **[!UICONTROL Add attribute]**.
+Nu u beide verbindingssleutels hebt toegevoegd, wordt de sectie **[!UICONTROL Enrichment attributes]** weergegeven. U kunt nu het kenmerk toevoegen waarmee u het publiek wilt verfraaien. Selecteer **[!UICONTROL Add attribute]** als u deze kenmerken wilt toevoegen.
 
-![De [!UICONTROL Add attribute] wordt gemarkeerd.](../images/ui/audience-composition/enrich-select-add-attribute.png)
+![ wordt de [!UICONTROL Add attribute] knoop benadrukt.](../images/ui/audience-composition/enrich-select-add-attribute.png)
 
-De **[!UICONTROL Enrichment attributes]** wordt weergegeven. U kunt de attributen van de dataset selecteren om uw publiek te verrijken met, gevolgd door **[!UICONTROL Select]** om de kenmerken aan uw publiek toe te voegen.
+De pop-up **[!UICONTROL Enrichment attributes]** wordt weergegeven. U kunt de attributen van de dataset selecteren om uw publiek met te verrijken, gevolgd door **[!UICONTROL Select]** om de attributen aan uw publiek toe te voegen.
 
-![De verrijkingskenmerken die u wilt toevoegen, worden gemarkeerd.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+![ de verrijkingsattributen u wilt toevoegen worden benadrukt.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
 
 <!-- ## [!UICONTROL Join] {#join-block}
 
@@ -206,37 +206,37 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL Rank] {#rank-block}
 
-De **[!UICONTROL Rank]** het bloktype staat u toe om profielen te rangschikken en te sorteren die op een gespecificeerd attribuut worden gebaseerd en deze gerangschikte profielen aan uw samenstelling te omvatten.
+Met het bloktype **[!UICONTROL Rank]** kunt u profielen rangschikken en sorteren op basis van een opgegeven kenmerk en deze gerangschikte profielen opnemen in uw compositie.
 
-Als u een **[!UICONTROL Rank]** blok, selecteer **+** pictogram, gevolgd door **[!UICONTROL Rank]**.
+Als u een **[!UICONTROL Rank]** -blok wilt toevoegen, selecteert u het pictogram **+** , gevolgd door **[!UICONTROL Rank]** .
 
-![De optie Rank is geselecteerd.](../images/ui/audience-composition/add-rank-block.png)
+![ de optie van de Rang wordt geselecteerd.](../images/ui/audience-composition/add-rank-block.png)
 
 Wanneer u het blok selecteert, worden de details over het rangschikken getoond in de juiste spoorstaaf, met inbegrip van het etiket van het blok, het attribuut aan rangschikking, de rangschikking, en een knevel om het aantal profielen te beperken tot rangschikking.
 
-![De rank blok wordt gemarkeerd, evenals de details van de rank blok.](../images/ui/audience-composition/rank.png)
+![ het rangtelblok wordt benadrukt, evenals de details van het rangtelblok.](../images/ui/audience-composition/rank.png)
 
-Als u wilt selecteren op welk kenmerk het publiek moet worden geplaatst, selecteert u de optie ![filter](../images/ui/audience-composition/filter-attribute.png) pictogram.
+Om te selecteren welk attribuut om het publiek door te rangschikken, selecteer het ![ filter ](../images/ui/audience-composition/filter-attribute.png) pictogram.
 
-![Het filterpictogram wordt gemarkeerd, zodat u kunt zien wat u moet selecteren om het selectiescherm voor profielkenmerken te openen.](../images/ui/audience-composition/select-rank-attribute.png)
+![ het filterpictogram wordt benadrukt, die u tonen wat te selecteren om tot het scherm van de profielkenmerkselectie toegang te hebben.](../images/ui/audience-composition/select-rank-attribute.png)
 
-Er wordt een lijst met profielkenmerken weergegeven. Op deze popover, kunt u het attributentype selecteren u uw publiek door wilt rangschikken. Selecteren **[!UICONTROL Select]** om het aan uw rangschikkingsblok toe te voegen. Let op: het geselecteerde kenmerk kan **alleen** zijn getallen.
+Er wordt een lijst met profielkenmerken weergegeven. Op deze popover, kunt u het attributentype selecteren u uw publiek door wilt rangschikken. Selecteer **[!UICONTROL Select]** om het aan uw rangtelblok toe te voegen. Gelieve te merken op dat het geselecteerde attribuut **slechts** aantallen kan zijn.
 
-![Er wordt een lijst met kenmerken weergegeven.](../images/ui/audience-composition/select-attribute-rank.png)
+![ A lijst van attributen wordt getoond.](../images/ui/audience-composition/select-attribute-rank.png)
 
 Na het selecteren van de attributen, kunt u de orde selecteren om het door te rangschikken. Dit gebeurt in oplopende (van laagste naar hoogste) of aflopende (van hoogste naar laagste) volgorde.
 
-Bovendien kunt u het aantal geretourneerde profielen beperken door de optie **[!UICONTROL Add profile limit]** schakelen. Wanneer deze schakeloptie is ingeschakeld, kunt u het maximumaantal profielen instellen dat wordt geretourneerd in het dialoogvenster **[!UICONTROL Included profiles]** veld.
+Bovendien kunt u het aantal geretourneerde profielen beperken door de schakeloptie **[!UICONTROL Add profile limit]** in te schakelen. Wanneer deze schakeloptie is ingeschakeld, kunt u het maximumaantal profielen instellen dat wordt geretourneerd binnen het veld **[!UICONTROL Included profiles]** .
 
-![De schakeloptie voor het toevoegen van profiellimieten wordt gemarkeerd. Hiermee kunt u het aantal geretourneerde profielen beperken.](../images/ui/audience-composition/add-profile-limit.png)
+![ de Add knevel van de profielgrens wordt benadrukt, die u het aantal teruggekeerde profielen laat beperken.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Split] {#split-block}
 
-De **[!UICONTROL Split]** met bloktype kunt u het nieuwe publiek opsplitsen in verschillende deelsoorten. U kunt dit publiek splitsen op basis van een percentage of op basis van een kenmerk. Wanneer u uw publiek in deelsoorten splitst, wordt deze splitsing **blijvend**. Dit betekent dat het profiel bij elke evaluatie in hetzelfde subpubliek wordt weergegeven.
+Met het bloktype **[!UICONTROL Split]** kunt u uw nieuwe publiek opsplitsen in verschillende deelsoorten. U kunt dit publiek splitsen op basis van een percentage of op basis van een kenmerk. Wanneer het splitsen van uw publiek in sub-publiek, is deze splitsing **blijvend**. Dit betekent dat het profiel bij elke evaluatie in hetzelfde subpubliek wordt weergegeven.
 
-Als u een **[!UICONTROL Split]** blok, selecteer **+** pictogram, gevolgd door **[!UICONTROL Split]**.
+Als u een **[!UICONTROL Split]** -blok wilt toevoegen, selecteert u het pictogram **+** , gevolgd door **[!UICONTROL Split]** .
 
-![De optie Splitsen is geselecteerd.](../images/ui/audience-composition/add-split-block.png)
+![ de Gesplitste optie wordt geselecteerd.](../images/ui/audience-composition/add-split-block.png)
 
 Wanneer u het publiek splitst, kunt u splitsen op percentage of splitsen op kenmerk.
 
@@ -246,36 +246,36 @@ Bij het splitsen naar percentage worden de doelgroepen willekeurig gesplitst op 
 
 U kunt bijvoorbeeld drie paden hebben, elk met een ander percentage profielen.
 
-![De uitsplitsing in aantal opgeslagen soorten publiek en percentages wordt weergegeven.](../images/ui/audience-composition/percentages.png)
+![ de uitsplitsing in aantal bewaard publiek en percentages wordt getoond.](../images/ui/audience-composition/percentages.png)
 
 ### Splitsen op kenmerk {#split-attribute}
 
-Bij splitsen op kenmerk wordt het publiek gesplitst op basis van de opgegeven kenmerken. Selecteer het kenmerk waarop u wilt splitsen **[!UICONTROL Split]** blok, gevolgd door de ![filter](../images/ui/audience-composition/filter-attribute.png) pictogram.
+Bij splitsen op kenmerk wordt het publiek gesplitst op basis van de opgegeven kenmerken. Om de attributen te selecteren door te splitsen, selecteer het **[!UICONTROL Split]** blok, dat door het ![ filter ](../images/ui/audience-composition/filter-attribute.png) pictogram wordt gevolgd.
 
-![De filterknop wordt geselecteerd en geeft aan hoe u op kenmerk moet filteren.](../images/ui/audience-composition/select-split-attribute.png)
+![ de filterknoop wordt geselecteerd, tonend hoe te door attribuut te filtreren.](../images/ui/audience-composition/select-split-attribute.png)
 
-Er wordt een lijst met profielkenmerken weergegeven. Selecteer het kenmerktype, gevolgd door **[!UICONTROL Select]** om het toe te voegen aan uw gesplitste blok.
+Er wordt een lijst met profielkenmerken weergegeven. Selecteer het kenmerktype, gevolgd door **[!UICONTROL Select]** om het aan uw gesplitste blok toe te voegen.
 
-![Er wordt een lijst met kenmerken weergegeven.](../images/ui/audience-composition/select-attribute-exclude.png)
+![ A lijst van attributen wordt getoond.](../images/ui/audience-composition/select-attribute-exclude.png)
 
-Nadat u het kenmerk hebt geselecteerd, kunt u kiezen tot welke profielen u wilt behoren door de waarden in het deelvenster **[!UICONTROL Values]** veld.
+Nadat u het kenmerk hebt geselecteerd, kunt u kiezen tot welke profielen u wilt behoren door de waarden in het veld **[!UICONTROL Values]** toe te voegen.
 
-![De waarden waarop u de kenmerken wilt splitsen, worden toegevoegd.](../images/ui/audience-composition/attribute-split-values.png)
+![ de waarden u de attributen door wilt verdelen worden toegevoegd.](../images/ui/audience-composition/attribute-split-values.png)
 
-Daarnaast kunt u de opdracht **[!UICONTROL Other profiles]** Schakel deze optie in om een subpubliek te maken dat uit alle niet-geselecteerde profielen bestaat.
+Bovendien kunt u de schakeloptie **[!UICONTROL Other profiles]** inschakelen om een subpubliek te maken dat bestaat uit alle niet-geselecteerde profielen.
 
-![De schakeloptie Andere profielen wordt gemarkeerd.](../images/ui/audience-composition/split-other-profiles.png)
+![ de Andere profielknevel wordt benadrukt.](../images/ui/audience-composition/split-other-profiles.png)
 
 ## Uw publiek publiceren
 
-Nadat u de doelgroep hebt samengesteld, kunt u deze opslaan en publiceren door **[!UICONTROL Publish]**.
+Nadat u de doelgroep hebt samengesteld, kunt u deze opslaan en publiceren door **[!UICONTROL Publish]** te selecteren.
 
-![De knop Publiceren is gemarkeerd en geeft aan hoe u uw publiek kunt opslaan en publiceren.](../images/ui/audience-composition/publish.png)
+![ de knoop van Publish wordt benadrukt, tonend u om uw publiek te bewaren en te publiceren.](../images/ui/audience-composition/publish.png)
 
 Als er fouten optreden bij het maken van het publiek, verschijnt er een waarschuwing met de informatie over het oplossen van het probleem.
 
-![De knop Publiceren is gemarkeerd en geeft aan hoe u uw publiek kunt opslaan en publiceren.](../images/ui/audience-composition/audience-alert.png)
+![ de knoop van Publish wordt benadrukt, tonend u om uw publiek te bewaren en te publiceren.](../images/ui/audience-composition/audience-alert.png)
 
 ## Volgende stappen
 
-De Samenstelling van het publiek verstrekt een rijke werkschema toelatend u om publiek van de verschillende bloktypes tot stand te brengen. Meer over andere delen van de Dienst UI van de Segmentatie leren, gelieve te lezen [Gebruikershandleiding voor segmentatieservice](./overview.md).
+De Samenstelling van het publiek verstrekt een rijke werkschema toelatend u om publiek van de verschillende bloktypes tot stand te brengen. Om meer over andere delen van de Dienst UI van de Segmentatie te leren, te lezen gelieve de [ gebruikersgids van de Dienst van de Segmentatie ](./overview.md).

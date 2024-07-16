@@ -9,9 +9,9 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL Policy] class
+# [!UICONTROL Policy] -klasse
 
-In Experience Data Model (XDM), [!UICONTROL Policy] klasse legt de minimumreeks eigenschappen vast die een verzekeringspolis definiëren.
+In Experience Data Model (XDM) legt de klasse [!UICONTROL Policy] de minimale set eigenschappen vast die een verzekeringsbeleid definiëren.
 
 ![](../images/classes/policy.png)
 
@@ -27,7 +27,7 @@ In Experience Data Model (XDM), [!UICONTROL Policy] klasse legt de minimumreeks 
 | `owner.mobilePhone` | [[!UICONTROL Phone number]](../data-types/phone-number.md) | Het mobiele telefoonnummer van de eigenaar. |
 | `owner.personalEmail` | [[!UICONTROL Email address]](../data-types/email-address.md) | Het persoonlijke e-mailadres van de eigenaar. |
 | `ID` | [!UICONTROL String] | Een identificatiecode voor de verzekeringspolis. |
-| `_id` | [!UICONTROL String] | Een unieke, door het systeem gegenereerde tekenreeks-id voor de record. Dit veld wordt gebruikt om het unieke karakter van een individueel record te volgen, om te voorkomen dat gegevens dubbel worden opgeslagen en om dat record op te zoeken in downstreamdiensten.<br><br>Aangezien dit veld door het systeem wordt gegenereerd, wordt er geen expliciete waarde opgegeven tijdens het invoeren van gegevens. U kunt er echter desgewenst nog voor kiezen om uw eigen unieke id-waarden op te geven. |
+| `_id` | [!UICONTROL String] | Een unieke, door het systeem gegenereerde tekenreeks-id voor de record. Dit veld wordt gebruikt om het unieke karakter van een individueel record te volgen, om te voorkomen dat gegevens dubbel worden opgeslagen en om dat record op te zoeken in downstreamdiensten.<br><br> Aangezien dit gebied systeem-geproduceerd is, wordt het geen expliciete waarde geleverd tijdens gegevensopname. U kunt er echter desgewenst nog voor kiezen om uw eigen unieke id-waarden op te geven. |
 | `endDate` | [!UICONTROL DateTime] | De datum waarop de dekking van de verzekeringspolis eindigt (of eindigt). |
 | `hasAssignedBeneficiary` | [!UICONTROL Boolean] | Geeft aan of aan het beleid een begunstigde is toegewezen. |
 | `name` | [!UICONTROL String] | De naam van de verzekeringsovereenkomst. |

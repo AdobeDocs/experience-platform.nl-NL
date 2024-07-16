@@ -13,18 +13,18 @@ ht-degree: 0%
 
 Als er in Adobe Experience Platform meerdere dashboards beschikbaar zijn in uw organisatie, kunt u de dashboardvoorraad bekijken in de gebruikersinterface (UI).
 
-Selecteer **[!UICONTROL Dashboards]** in de linkernavigatie en selecteer vervolgens de **[!UICONTROL Browse]** tab.
+Als u de dashboards wilt weergeven die uw organisatie heeft geconfigureerd, selecteert u **[!UICONTROL Dashboards]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Browse]** .
 
-Een lijst van alle dashboards beschikbaar op uw instantie van het Platform wordt getoond onder [!UICONTROL Browse] tab. Dit omvat geïntegreerde dashboards die door uw organisatie worden gecreeerd die door derdetoepassingen zijn gevormd.
+Een lijst van alle dashboards beschikbaar op uw instantie van het Platform wordt getoond onder [!UICONTROL Browse] tabel. Dit omvat geïntegreerde dashboards die door uw organisatie worden gecreeerd die door derdetoepassingen zijn gevormd.
 
-![Het tabblad Bladeren in het gedeelte dashboards van de gebruikersinterface.](./images/inventory/browse-tab.png)
+![ het Browse lusje binnen de dashboardsectie van UI.](./images/inventory/browse-tab.png)
 
-U kunt een afzonderlijk dashboard bekijken door de naam van het dashboard in de lijst te selecteren.
+U kunt een afzonderlijk dashboard weergeven door de naam van het dashboard in de lijst te selecteren.
 
-![Blader door het tabblad met de naam van een gemarkeerd dashboard.](./images/inventory/dashboard-name.png)
+![ doorbladert lusje met een naam van een benadrukt dashboard.](./images/inventory/dashboard-name.png)
 
-Als deze optie is geselecteerd, wordt het dashboard geopend in de gebruikersinterface van het Platform of in een volledig geïntegreerde toepassingswerkruimte waarvoor u zich met de vereiste gegevens moet aanmelden.
+Als deze optie is geselecteerd, wordt het dashboard geopend in de gebruikersinterface van het platform of in een volledig geïntegreerde toepassingswerkruimte waarvoor u zich met de vereiste aanmeldingsgegevens moet aanmelden.
 
 ## Aangepaste dashboards maken
 
-Met Adobe Experience Platform-dashboards kunt u aangepaste dashboards maken en beheren waar u widgets met maat kunt maken, toevoegen en bewerken om belangrijke metrische gegevens die relevant zijn voor uw organisatie te visualiseren. Zie de [gebruikergedefinieerde handleiding voor dashboards](./user-defined-dashboards.md) voor volledige instructies bij het maken en configureren van aangepaste dashboards.
+Met Adobe Experience Platform-dashboards kunt u aangepaste dashboards maken en beheren waar u widgets met maat kunt maken, toevoegen en bewerken om belangrijke metrische gegevens die relevant zijn voor uw organisatie te visualiseren. Zie de [ gebruiker bepaalde dashboardgids ](./user-defined-dashboards.md) voor volledige instructies bij het creëren van en het vormen van douanedashboards.

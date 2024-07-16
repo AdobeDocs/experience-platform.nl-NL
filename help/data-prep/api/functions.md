@@ -5,20 +5,20 @@ description: U kunt het `/functies' eindpunt in de Prep API van Gegevens gebruik
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
 
 # Functie-eindpunten
 
-Met toewijzingsfuncties kunt u gegevens transformeren tussen bron- en doelschema&#39;s. U kunt de `/languages/el` eindpunt om uw uitdrukkingen te bevestigen evenals een lijst van alle beschikbare afbeelding-vastgestelde functies te krijgen.
+Met toewijzingsfuncties kunt u uw gegevens transformeren tussen bron- en doelschema&#39;s. U kunt het `/languages/el` eindpunt gebruiken om uw uitdrukkingen te bevestigen evenals een lijst van alle beschikbare afbeelding-vastgestelde functies te krijgen.
 
 ## Expressies valideren
 
-U kunt valideren of uw huidige expressie geldig is door een POST aan te vragen bij de `/languages/el/validate` eindpunt.
+U kunt valideren of uw huidige expressie geldig is door een POST aan te vragen bij het `/languages/el/validate` -eindpunt.
 
-**API-indeling**
+**API formaat**
 
 ```
 POST /languages/el/validate
@@ -39,7 +39,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
   }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met de validatiestatus van de expressie.
 
@@ -52,9 +52,9 @@ Een geslaagde reactie retourneert HTTP-status 200 met de validatiestatus van de 
 
 ## Lijsttoewijzingsfuncties
 
-U kunt een lijst van alle afbeelding-vastgestelde functies terugwinnen beschikbaar aan u door een verzoek van de GET aan `/languages/el/functions` eindpunt.
+U kunt een lijst van alle afbeelding-vastgestelde functies terugwinnen beschikbaar aan u door een verzoek van de GET aan het `/languages/el/functions` eindpunt te doen.
 
-**API-indeling**
+**API formaat**
 
 ```
 GET /languages/el/functions
@@ -70,7 +70,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met een lijst van alle beschikbare toewijzingsfuncties.
 
@@ -117,9 +117,9 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van alle beschik
 
 ## Operatoren voor lijsttoewijzing
 
-U kunt een lijst van alle in kaart gebrachte exploitanten terugwinnen beschikbaar aan u door een verzoek van de GET aan `/languages/el/operators` eindpunt.
+U kunt een lijst van alle in kaart brengende - vastgestelde exploitanten terugwinnen beschikbaar aan u door een verzoek van de GET aan het `/languages/el/operators` eindpunt te richten.
 
-**API-indeling**
+**API formaat**
 
 ```
 GET /languages/el/operators
@@ -135,7 +135,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/op
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met een lijst van alle beschikbare toewijzingsoperatoren.
 

@@ -14,37 +14,37 @@ ht-degree: 2%
 
 # [!DNL Identity Service] API-handleiding
 
-Adobe Experience Platform [!DNL Identity Service] beheert de cross-device, cross-channel en bijna real-time identificatie van uw klanten in een zogenaamde identiteitsgrafiek in Adobe Experience Platform.
+Adobe Experience Platform [!DNL Identity Service] beheert de identificatie van uw klanten op alle apparaten, via meerdere kanalen en bijna realtime in een identiteitsgrafiek in Adobe Experience Platform.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Identity Service]](../home.md): Oplost de fundamentele uitdaging die door de fragmentatie van gegevens van het klantenprofiel wordt gesteld. Het doet dit door identiteiten over apparaten en systemen te overbruggen waar de klanten met uw merk in wisselwerking staan.
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Biedt een uniform, consumentenprofiel in real-time op basis van geaggregeerde gegevens van meerdere bronnen.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Identity Service]](../home.md): lost de fundamentele uitdaging op die door de fragmentatie van de gegevens van het klantenprofiel wordt gesteld. Het doet dit door identiteiten over apparaten en systemen te overbruggen waar de klanten met uw merk in wisselwerking staan.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, consumentenprofiel in real-time op basis van geaggregeerde gegevens van meerdere bronnen.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt.
 
-De volgende secties verstrekken extra informatie die u zult moeten kennen of hebben aan met succes vraag aan [!DNL Identity Service] API.
+De volgende secties bevatten aanvullende informatie die u moet weten of die u zelf moet hebben om aanroepen naar de [!DNL Identity Service] API te kunnen uitvoeren.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
-- Toestemming: houder `{ACCESS_TOKEN}`
+- Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Voor meer informatie over sandboxen in [!DNL Platform], zie de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -52,16 +52,16 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ### Regionaal verpletteren
 
-De [!DNL Identity Service] API gebruikt regio-specifieke eindpunten die de opname van een `{REGION}` als onderdeel van het aanvraagpad. Tijdens de levering van uw organisatie, wordt een gebied bepaald en opgeslagen binnen uw organisatieprofiel. Het gebruiken van het correcte gebied met elk eindpunt zorgt ervoor dat alle die verzoeken gebruikend worden gemaakt [!DNL Identity Service] API worden naar het juiste gebied gerouteerd.
+De [!DNL Identity Service] API gebruikt regio-specifieke eindpunten die de opneming van een `{REGION}` als deel van de verzoekweg vereisen. Tijdens de levering van uw organisatie, wordt een gebied bepaald en opgeslagen binnen uw organisatieprofiel. Als u het juiste gebied bij elk eindpunt gebruikt, zorgt u ervoor dat alle aanvragen die met de [!DNL Identity Service] API zijn gemaakt, naar het juiste gebied worden gerouteerd.
 
-Er zijn momenteel twee gebieden die worden ondersteund door [!DNL Identity Service] API&#39;s: VA7 en NLD2.
+Er zijn momenteel twee gebieden die door [!DNL Identity Service] API&#39;s worden ondersteund: VA7 en NLD2.
 
 In de onderstaande tabel worden voorbeeldpaden met behulp van gebieden weergegeven:
 
 | Service | Regio: VA7 | Regio: NLD2 |
 | ------ | -------- |--------- |
-| [!DNL Identity Service] API | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
-| [!DNL Identity Namespace] API | https://</span>platform-va7.adobe.</span>io/data/core/idnamespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
+| [!DNL Identity Service] API | https://</span> platform-va7.adobe.</span> io/data/core/identity/{ENDPOINT} | https://</span> platform-nld2.adobe.</span> io/data/core/identity/{ENDPOINT} |
+| [!DNL Identity Namespace] API | https://</span> platform-va7.adobe.</span> io/data/core/idnamespace/{ENDPOINT} | https://</span> platform-nld2.adobe.</span> io/data/core/idnamespace {ENDPOINT} |
 
 >[!NOTE]
 >
@@ -69,21 +69,21 @@ In de onderstaande tabel worden voorbeeldpaden met behulp van gebieden weergegev
 
 Als u het gebied niet kunt vinden binnen uw organisatieprofiel, gelieve uw systeembeheerder voor steun te contacteren.
 
-## Met de [!DNL Identity Service] API
+## De API van [!DNL Identity Service] gebruiken
 
 De parameters van de identiteit die in deze diensten worden gebruikt kunnen op één van twee manieren worden uitgedrukt; samenstelling of XID.
 
-Samengestelde identiteiten zijn constructies die zowel de ID-waarde als de naamruimte omvatten. Wanneer u samengestelde identiteiten gebruikt, kan de naamruimte worden opgegeven door een van de volgende namen (`namespace.code`) of ID (`namespace.id`).
+Samengestelde identiteiten zijn constructies die zowel de ID-waarde als de naamruimte omvatten. Wanneer het gebruiken van samengestelde identiteiten, kan namespace door of naam (`namespace.code`) of identiteitskaart (`namespace.id`) worden geleverd.
 
-Wanneer een identiteit wordt voortgeduurd, [!DNL Identity Service] Hiermee genereert en wijst u een id toe aan die identiteit, de native id of XID. Alle variaties van de API&#39;s voor clusterbeheer en toewijzing ondersteunen zowel samengestelde identiteiten als XID in hun aanvragen en antwoorden. Een van de parameters is vereist - `xid` of combinatie van [`ns` of `nsid`] en `id` om deze API&#39;s te gebruiken.
+Wanneer een identiteit wordt voortgezet, genereert [!DNL Identity Service] een id die de native id of XID wordt genoemd en wijst deze toe. Alle variaties van de API&#39;s voor clusterbeheer en toewijzing ondersteunen zowel samengestelde identiteiten als XID in hun aanvragen en antwoorden. Een van de parameters is vereist - `xid` of combinatie van [`ns` of `nsid`] en `id` om deze API&#39;s te gebruiken.
 
 Om de lading in reacties te beperken, passen APIs hun reacties aan het type van gebruikte identiteitsconstructie aan. Als u XID doorgeeft aan uw reacties, hebben XID&#39;s als u samengestelde identiteiten doorgeeft, volgt de reactie de structuur die in de aanvraag wordt gebruikt.
 
-In de voorbeelden in dit document wordt niet ingegaan op de volledige functionaliteit van de [!DNL Identity Service] API. Voor de volledige API raadpleegt u de [Referentie voor Tagger-API](https://www.adobe.io/experience-platform-apis/references/identity-service).
+De voorbeelden in dit document hebben geen betrekking op de volledige functionaliteit van de [!DNL Identity Service] API. Voor volledige API, zie de [ Verwijzing van Swagger API ](https://www.adobe.io/experience-platform-apis/references/identity-service).
 
 >[!NOTE]
 >
->Alle geretourneerde identiteiten hebben de native XID-vorm wanneer native XID wordt gebruikt in de aanvraag. Het wordt aanbevolen het formulier ID/naamruimte te gebruiken. Zie de sectie over [XID ophalen voor een identiteit](./create-custom-namespace.md).
+>Alle geretourneerde identiteiten hebben de native XID-vorm wanneer native XID wordt gebruikt in de aanvraag. Het wordt aanbevolen het formulier ID/naamruimte te gebruiken. Voor meer informatie, zie de sectie over [ het krijgen van XID voor een identiteit ](./create-custom-namespace.md).
 
 ## Volgende stappen
 

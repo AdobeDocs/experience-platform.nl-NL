@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # SQL-naslagservice
 
-[!DNL Query Service] verstrekt de capaciteit standaardANSI SQL voor te gebruiken `SELECT` instructies en andere beperkte opdrachten. [!DNL Query Service] omvat geen functionaliteit van de Taal van de Definitie van Gegevens of van de Manipulatie van Gegevens. De gegevens die via de service worden gevraagd, zijn afkomstig van [!DNL Experience Data Lake], die grotendeels onveranderlijke gegevensbestanden bevat.
+[!DNL Query Service] biedt de mogelijkheid om standaard ANSI SQL voor `SELECT` -instructies en andere beperkte opdrachten te gebruiken. [!DNL Query Service] beschikt niet over de functionaliteit Taal voor gegevensdefinitie of Taal voor gegevensmanipulatie. De gegevens die via de service worden gevraagd, komen uit [!DNL Experience Data Lake] , dat grotendeels onveranderlijke gegevenssets bevat.

@@ -6,40 +6,40 @@ description: Dit document loopt door de stappen voor het verbinden van R Studio 
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
 
-# Verbinden [!DNL RStudio] aan de Dienst van de Vraag
+# Verbinden [!DNL RStudio] met de Dienst van de Vraag
 
-Dit document doorloopt de stappen voor het verbinden [!DNL RStudio] met Adobe Experience Platform [!DNL Query Service].
+In dit document worden de stappen doorlopen waarmee u [!DNL RStudio] kunt verbinden met Adobe Experience Platform [!DNL Query Service] .
 
 >[!NOTE]
 >
-> [!DNL RStudio] is nu herbrandd als [!DNL Posit]. [!DNL RStudio] producten zijn hernoemd naar [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] Manager, [!DNL Posit Cloud], en [!DNL Posit Academy].
+> [!DNL RStudio] is nu herbrandd als [!DNL Posit] . De naam van [!DNL RStudio] -producten is gewijzigd in [!DNL Posit Connect] , [!DNL Posit Workbench] , [!DNL Posit Package] Manager [!DNL Posit Cloud] en [!DNL Posit Academy] .
 >
-> Deze handleiding gaat ervan uit dat u al toegang hebt tot [!DNL RStudio] en zijn vertrouwd met het gebruik ervan. Meer informatie over [!DNL RStudio] kunt u vinden in het dialoogvenster [ambtenaar [!DNL RStudio] documentatie](https://rstudio.com/products/rstudio/).
+> In deze handleiding wordt ervan uitgegaan dat u al toegang hebt tot [!DNL RStudio] en vertrouwd bent met het gebruik ervan. Meer informatie over [!DNL RStudio] kan in de [ officiële  [!DNL RStudio]  documentatie ](https://rstudio.com/products/rstudio/) worden gevonden.
 > 
-> Daarnaast te gebruiken [!DNL RStudio] met de Dienst van de Vraag, moet u installeren [!DNL PostgreSQL] JDBC 4.2-stuurprogramma. U kunt het JDBC-stuurprogramma downloaden van het dialoogvenster [[!DNL PostgreSQL] officiële site](https://jdbc.postgresql.org/download/).
+> Als u [!DNL RStudio] wilt gebruiken met Query Service, moet u bovendien het [!DNL PostgreSQL] JDBC 4.2-stuurprogramma installeren. U kunt de bestuurder JDBC van de [[!DNL PostgreSQL]  officiële plaats ](https://jdbc.postgresql.org/download/) downloaden.
 
-## Een [!DNL Query Service] verbinding in de [!DNL RStudio] interface
+## Een [!DNL Query Service] -verbinding maken in de [!DNL RStudio] -interface
 
-Na installatie [!DNL RStudio]moet u het RJDBC-pakket installeren. Instructies over hoe [een database verbinden via de opdrachtregel](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) te vinden in de officiële documentatie van Posit.
+Nadat u [!DNL RStudio] hebt geïnstalleerd, moet u het RJDBC-pakket installeren. De instructies op hoe te om [ een gegevensbestand door de bevellijn ](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) te verbinden kunnen in de officiële documentatie van de Positie worden gevonden.
 
-Als u een Mac-besturingssysteem gebruikt, kunt u **[!UICONTROL Tools]** in de menubalk gevolgd door **[!UICONTROL Install Packages]** in het vervolgkeuzemenu. U kunt ook de **[!DNL Packages]** en selecteer **[!DNL Install]**.
+Als u een Mac OS gebruikt, kunt u **[!UICONTROL Tools]** selecteren in de menubalk gevolgd door **[!UICONTROL Install Packages]** in het vervolgkeuzemenu. U kunt ook het tabblad **[!DNL Packages]** in de UI voor het bewerken van RStudio selecteren en **[!DNL Install]** selecteren.
 
-Er wordt een pop-up weergegeven met de **[!DNL Install Packages]** scherm. Zorg ervoor dat **[!DNL Repository (CRAN)]** is geselecteerd voor de **[!DNL Install from]** sectie. De waarde voor **[!DNL Packages]** moeten `RJDBC`. Zorgen **[!DNL Install dependencies]** is geselecteerd. Nadat u hebt bevestigd dat alle waarden correct zijn, selecteert u **[!DNL Install]** om de pakketten te installeren. Nu het RJDBC-pakket is geïnstalleerd, start u het opnieuw op [!DNL RStudio] om het installatieproces te voltooien.
+Er verschijnt een pop-up met daarin het **[!DNL Install Packages]** -scherm. Zorg ervoor dat **[!DNL Repository (CRAN)]** is geselecteerd voor de sectie **[!DNL Install from]** . De waarde voor **[!DNL Packages]** moet `RJDBC` zijn. Zorg ervoor dat **[!DNL Install dependencies]** is geselecteerd. Nadat u hebt bevestigd dat alle waarden correct zijn, selecteert u **[!DNL Install]** om de pakketten te installeren. Nu het RJDBC-pakket is geïnstalleerd, start u [!DNL RStudio] opnieuw om het installatieproces te voltooien.
 
-Na [!DNL RStudio] opnieuw is gestart, kunt u nu verbinding maken met Query Service. Selecteer **[!DNL RJDBC]** in de **[!DNL Packages]** en voert u de volgende opdracht in de console in:
+Nadat [!DNL RStudio] opnieuw is gestart, kunt u nu verbinding maken met Query Service. Selecteer het **[!DNL RJDBC]** -pakket in het deelvenster **[!DNL Packages]** en voer de volgende opdracht in de console in:
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Wanneer `{PATH TO THE POSTGRESQL JDBC JAR}` staat voor het pad naar de [!DNL PostgreSQL] JDBC JAR die op uw computer is geïnstalleerd.
+Waar `{PATH TO THE POSTGRESQL JDBC JAR}` het pad vertegenwoordigt naar de [!DNL PostgreSQL] JDBC JAR die op uw computer is geïnstalleerd.
 
-Nu, kunt u uw verbinding aan de Dienst van de Vraag tot stand brengen. Ga het volgende bevel in de console in:
+Nu, kunt u uw verbinding aan de Dienst van de Vraag creëren. Ga het volgende bevel in de console in:
 
 ```console
 qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
@@ -47,17 +47,17 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!IMPORTANT]
 >
->Zie de [[!DNL Query Service] SSL-documentatie](./ssl-modes.md) voor meer informatie over SSL-ondersteuning voor verbindingen van derden met Adobe Experience Platform Query Service en over het maken van verbindingen met deze service `verify-full` SSL-modus.
+>Zie de [[!DNL Query Service]  SSL documentatie ](./ssl-modes.md) om over SSL steun voor derdeverbindingen aan de Dienst van de Vraag van Adobe Experience Platform te leren, en hoe te om het gebruiken van `verify-full` SSL wijze te verbinden.
 
-Voor meer informatie over het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, gelieve te lezen [aanmeldingsgids](../ui/credentials.md). Meld u aan om uw referenties te zoeken [!DNL Platform]selecteert u vervolgens **[!UICONTROL Queries]**, gevolgd door **[!UICONTROL Credentials]**.
+Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, te lezen gelieve de [ gids van geloofsbrieven ](../ui/credentials.md). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Queries]** , gevolgd door **[!UICONTROL Credentials]** .
 
 Een bericht in de consoleoutput bevestigt de verbinding aan de Dienst van de Vraag.
 
 ## Bezig met schrijven van query&#39;s
 
-Nu hebt u verbinding met [!DNL Query Service], kunt u vragen schrijven om SQL-instructies uit te voeren en te bewerken. U kunt bijvoorbeeld `dbGetQuery(con, sql)` om query&#39;s uit te voeren, waarbij `sql` is de SQL-query die u wilt uitvoeren.
+Nu u verbinding hebt gemaakt met [!DNL Query Service] , kunt u query&#39;s schrijven om SQL-instructies uit te voeren en te bewerken. U kunt `dbGetQuery(con, sql)` bijvoorbeeld gebruiken om query&#39;s uit te voeren, waarbij `sql` de SQL-query is die u wilt uitvoeren.
 
-De volgende vraag gebruikt een dataset die bevat [Experience Events](../../xdm/classes/experienceevent.md) en maakt u een histogram van paginaweergaven van een website, op basis van de schermhoogte van het apparaat.
+De volgende vraag gebruikt een dataset die [ Gebeurtenissen van de Ervaring ](../../xdm/classes/experienceevent.md) bevat en leidt tot een histogram van paginameningen van een website, gezien de het schermhoogte van het apparaat.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -94,4 +94,4 @@ df_pageviews
 
 ## Volgende stappen
 
-Lees voor meer informatie over het schrijven en uitvoeren van query&#39;s de handleiding op [uitvoeren, query&#39;s](../best-practices/writing-queries.md).
+Voor meer informatie over hoe te om vragen te schrijven en in werking te stellen, te lezen gelieve de gids op [ lopende vragen ](../best-practices/writing-queries.md).

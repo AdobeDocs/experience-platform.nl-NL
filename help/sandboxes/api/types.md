@@ -14,17 +14,17 @@ ht-degree: 1%
 
 # Standaardboxtypen, eindpunt
 
-U kunt een lijst met ondersteunde sandboxtypen voor uw organisatie opvragen door een GET-aanvraag in te dienen bij de `/sandboxTypes` eindpunt.
+U kunt een lijst van gesteunde zandbaktypes voor uw organisatie terugwinnen door een verzoek van de GET aan het `/sandboxTypes` eindpunt te richten.
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Sandbox]  API ](https://www.adobe.io/experience-platform-apis/references/sandbox). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met ondersteunde sandboxtypen ophalen
 
-U kunt een lijst met ondersteunde sandboxtypen voor uw organisatie opvragen door een GET-aanvraag in te dienen bij de `/sandboxTypes` eindpunt.
+U kunt een lijst van gesteunde zandbaktypes voor uw organisatie terugwinnen door een verzoek van de GET aan het `/sandboxTypes` eindpunt te richten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /sandboxTypes
@@ -40,7 +40,7 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lijst met sandboxtypen die worden ondersteund voor uw organisatie.
 

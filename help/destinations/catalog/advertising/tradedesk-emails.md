@@ -1,5 +1,5 @@
 ---
-title: (Bèta) De handelsbank - CRM-verbinding
+title: (Beta) Trade Desk - CRM connection
 description: Activeer profielen aan uw rekening van het Bureau van de Handel voor publiek gericht en onderdrukking die op de gegevens van CRM wordt gebaseerd.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
@@ -10,46 +10,46 @@ ht-degree: 0%
 
 ---
 
-# (bèta) De [!DNL Trade Desk] - CRM-verbinding
+# (Beta) De [!DNL Trade Desk] - CRM-verbinding
 
 >[!IMPORTANT]
 >
->[!DNL The Trade Desk - CRM] Doel in Platform is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
+>[!DNL The Trade Desk - CRM] -doel in Platform is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 >
->Met de release van EUID (European Unified ID) ziet u nu twee [!DNL The Trade Desk - CRM] bestemmingen in de [doelcatalogus](/help/destinations/catalog/overview.md).
->* Als u gegevens in de EU verzamelt, moet u de **[!DNL The Trade Desk - CRM (EU)]** bestemming.
->* Als u gegevens in de APAC- of NAMER-gebieden bront, gebruikt u de **[!DNL The Trade Desk - CRM (NAMER & APAC)]** bestemming.
+>Met de versie van EUID (Europese Verenigde identiteitskaart), ziet u nu twee [!DNL The Trade Desk - CRM] bestemmingen in de [ bestemmingscatalogus ](/help/destinations/catalog/overview.md).
+>* Gebruik de **[!DNL The Trade Desk - CRM (EU)]** -bestemming als u gegevens in de EU levert.
+>* Gebruik het doel **[!DNL The Trade Desk - CRM (NAMER & APAC)]** als u gegevens in de APAC- of NAMER-gebieden bront.
 >
->Beide bestemmingen in Experience Platform zijn momenteel in bèta. Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en gehandhaafd door *[!DNL Trade Desk]* team. Neem contact op met uw [!DNL Trade Desk] de documentatie en de functionaliteit kunnen worden gewijzigd.
+>Beide bestemmingen in Experience Platform zijn momenteel in bèta. Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van *[!DNL Trade Desk]* . Neem voor vragen of verzoeken om updates contact op met uw [!DNL Trade Desk] -vertegenwoordiger. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 ## Overzicht {#overview}
 
-Dit document is ontworpen om u te helpen profielen te activeren voor uw [!DNL Trade Desk] account voor doelgroepen en suppressie op basis van CRM-gegevens.
+Dit document is ontworpen om u te helpen profielen naar uw [!DNL Trade Desk] -account activeren voor publiek dat zich richt op en onderdrukt op basis van CRM-gegevens.
 
-[!DNL The Trade Desk(TTD)] het uploadbestand van e-mailadressen op geen enkel moment rechtstreeks afhandelt, en [!DNL The Trade Desk] sla je onbewerkte e-mails (zonder hashing) op.
+[!DNL The Trade Desk(TTD)] handelt het geüploade bestand met e-mailadressen nooit rechtstreeks af en [!DNL The Trade Desk] slaat uw onbewerkte (ongehashte) e-mails niet op.
 
 >[!TIP]
 >
->Gebruiken [!DNL The Trade Desk] CRM-bestemmingen voor CRM-gegevenstoewijzing, zoals e-mailadres of hashed-e-mailadres. Gebruik de [andere bestemming van de handelsbank](/help/destinations/catalog/advertising/tradedesk.md) in de Adobe Experience Platform-catalogus voor cookies en toegewezen apparaat-id.
+>Gebruik [!DNL The Trade Desk] CRM-doelen voor CRM-gegevenstoewijzing, zoals e-mailadres of gehasht e-mailadres. Gebruik de [ andere bestemming van het Bureau van de Handel ](/help/destinations/catalog/advertising/tradedesk.md) in de catalogus van Adobe Experience Platform voor koekjes en de afbeeldingen van apparatenidentiteitskaart.
 
 ## Vereisten {#prerequisites}
 
-Voordat u het publiek kunt activeren op [!DNL The Trade Desk], moet u contact opnemen met uw [!DNL The Trade Desk] accountmanager om het CRM-instapcontract te ondertekenen. [!DNL The Trade Desk] zal dan toestemming geven en uw adverteerder identiteitskaart delen om uw bestemming te vormen.
+Voordat u het publiek naar [!DNL The Trade Desk] kunt activeren, moet u contact opnemen met uw [!DNL The Trade Desk] -accountmanager om het CRM-instapcontract te ondertekenen. [!DNL The Trade Desk] geeft vervolgens toestemming en deelt uw adverteerder-id om uw bestemming te configureren.
 
 ## Vereisten voor ID-afstemming {#id-matching-requirements}
 
-Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, moet u aan de desbetreffende vereisten voldoen. Lees de [Overzicht van naamruimte van id](/help/identity-service/features/namespaces.md) voor meer informatie .
+Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, moet u aan de desbetreffende vereisten voldoen. Gelieve te lezen het [ overzicht van Namespace van de Identiteit ](/help/identity-service/features/namespaces.md) voor meer informatie.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL The Trade Desk] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
+[!DNL The Trade Desk] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de sectie met vereisten voor id-afstemming en gebruik de juiste naamruimten voor normale tekst en gehashte e-mailadressen.
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| Email | E-mailadressen (tekst wissen) | Invoer `email` als de doelidentiteit wanneer uw bronidentiteit een e-mailnaamruimte of attribuut is. |
-| Email_LC_SHA256 | E-mailadressen moeten worden gehasht met behulp van SHA256 en verlaagd. U kunt deze instelling later niet wijzigen. | Invoer `hashed_email` als de doelidentiteit wanneer uw bronidentiteit een naamruimte of attribuut Email_LC_SHA256 is. |
+| Email | E-mailadressen (tekst wissen) | Voer `email` in als de doelidentiteit wanneer de bronidentiteit een naamruimte of attribuut E-mail is. |
+| Email_LC_SHA256 | E-mailadressen moeten worden gehasht met behulp van SHA256 en verlaagd. U kunt deze instelling later niet wijzigen. | Voer `hashed_email` in als de doelidentiteit wanneer uw bronidentiteit een naamruimte of attribuut Email_LC_SHA256 is. |
 
 {style="table-layout:auto"}
 
@@ -57,15 +57,15 @@ Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA25
 
 U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen of onbewerkte e-mailadressen gebruiken.
 
-Als u meer wilt weten over het invoeren van e-mailadressen in Experience Platform, leest u de [overzicht van batch-opname](/help/ingestion/batch-ingestion/overview.md).
+Om over het opnemen van e-mailadressen in Experience Platform te leren, lees het [ overzicht van de partijingestitie ](/help/ingestion/batch-ingestion/overview.md).
 
 Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende vereisten voldoen:
 
 * Voorloopspaties en volgspaties verwijderen.
 * Zet alle ASCII-tekens om in kleine letters.
-* In `gmail.com` e-mailadressen, verwijder de volgende karakters uit het gebruikersnaaddeel van het e-mailadres:
-   * De periode (. (ASCII-code 46). U kunt bijvoorbeeld normaliseren `jane.doe@gmail.com` tot `janedoe@gmail.com`.
-   * Het plusteken (+ (ASCII-code 43)) en alle daaropvolgende tekens. U kunt bijvoorbeeld normaliseren `janedoe+home@gmail.com` tot `janedoe@gmail.com`.
+* Verwijder in het gedeelte Gebruikersnaam van het e-mailadres van `gmail.com` de volgende tekens uit het e-mailadres:
+   * De periode (. (ASCII-code 46). U kunt `jane.doe@gmail.com` bijvoorbeeld normaliseren naar `janedoe@gmail.com` .
+   * Het plusteken (+ (ASCII-code 43)) en alle daaropvolgende tekens. U kunt `janedoe+home@gmail.com` bijvoorbeeld normaliseren naar `janedoe@gmail.com` .
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -74,7 +74,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (e-mail of gehashte e-mail) die worden gebruikt in de bestemming Handelsbureau. |
-| Exportfrequentie | **[!UICONTROL Daily Batch]** | Aangezien een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, wordt het profiel (identiteiten) één keer per dag bijgewerkt stroomafwaarts aan het bestemmingsplatform. Meer informatie over [batchexport](/help/destinations/destination-types.md#file-based). |
+| Exportfrequentie | **[!UICONTROL Daily Batch]** | Aangezien een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, wordt het profiel (identiteiten) één keer per dag bijgewerkt stroomafwaarts aan het bestemmingsplatform. Lees meer over [ partijuitvoer ](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -86,41 +86,41 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ### Bestemmingsdetails invullen {#fill-in-details}
 
-Voordat u publieksgegevens naar een doel kunt verzenden of activeren, moet u een verbinding met uw eigen doelplatform instellen. while [opzetten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) voor deze bestemming moet u de volgende informatie opgeven:
+Voordat u publieksgegevens naar een doel kunt verzenden of activeren, moet u een verbinding met uw eigen doelplatform instellen. Terwijl [ vestiging ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) deze bestemming, u de volgende informatie moet verstrekken:
 
-* **[!UICONTROL Account Type]**: Kies de optie **[!UICONTROL Existing Account]** -optie.
-* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
+* **[!UICONTROL Account Type]**: Kies de optie **[!UICONTROL Existing Account]** .
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Advertiser ID]**: uw [!DNL Trade Desk Advertiser ID], die door uw [!DNL Trade Desk] Accountmanager of gevonden onder [!DNL Advertiser Preferences] in de [!DNL Trade Desk] UI.
+* **[!UICONTROL Advertiser ID]**: uw [!DNL Trade Desk Advertiser ID] , die kan worden gedeeld door uw [!DNL Trade Desk] accountmanager of kan worden gevonden onder [!DNL Advertiser Preferences] in de gebruikersinterface van [!DNL Trade Desk] .
 
-![Platform UI het schermschot die tonen hoe te om bestemmingsdetails in te vullen.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+{het schermschot van het platform UI die tonen hoe te om bestemmingsdetails in te vullen.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)![
 
-Wanneer u verbinding maakt met de bestemming, is het instellen van een beleid voor gegevensbeheer volledig optioneel. Controleer het Experience Platform [gegevensbeheer - overzicht](/help/data-governance/policies/overview.md) voor meer informatie .
+Wanneer u verbinding maakt met de bestemming, is het instellen van een beleid voor gegevensbeheer volledig optioneel. Gelieve te herzien het Experience Platform [ overzicht van het gegevensbeheer ](/help/data-governance/policies/overview.md) voor meer details.
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lezen [publieksgegevens activeren om exportdoelen voor batchprofielen te activeren](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies voor het activeren van het publiek naar een bestemming.
+Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan een bestemming.
 
-In de **[!UICONTROL Scheduling]** pagina, kunt u het programma en de dossiernamen voor elk publiek vormen u uitvoert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
+Op de pagina **[!UICONTROL Scheduling]** kunt u het schema en de bestandsnamen configureren voor elk publiek dat u exporteert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
 
-![Platform UI screenshot om publieksactivering te plannen.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+{het schermschot van het platform UI aan de activering van het programmapubliek.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)![
 
 >[!NOTE]
 >
->Alle soorten publiek geactiveerd voor [!DNL The Trade Desk] De Bestemming van CRM wordt automatisch geplaatst aan een dagelijkse frequentie en volledige dossieruitvoer.
+>Alle soorten publiek die op [!DNL The Trade Desk] CRM-bestemming worden geactiveerd, worden automatisch ingesteld op een dagelijkse frequentie en het volledige bestand wordt geëxporteerd.
 
-![Platform UI screenshot om publieksactivering te plannen.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+{het schermschot van het platform UI aan de activering van het programmapubliek.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)![
 
-In de **[!UICONTROL Mapping]** pagina, moet u attributen of identiteitsnamespaces van de bronkolom en kaart aan de doelkolom selecteren.
+Op de pagina **[!UICONTROL Mapping]** moet u kenmerken of naamruimten selecteren in de bronkolom en toewijzen aan de doelkolom.
 
-![Platform UI-screenshot om publieksactivering in kaart te brengen.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+{het schermschot van het platform UI aan de activering van het kaartpubliek.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)![
 
-Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het activeren van het publiek naar [!DNL The Trade Desk] CRM-bestemming.
+Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het activeren van soorten publiek naar [!DNL The Trade Desk] CRM-bestemming.
 
 >[!IMPORTANT]
 >
@@ -128,23 +128,23 @@ Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het active
 
 Bronvelden selecteren:
 
-* Selecteer de `Email` naamruimte of attribuut als bronidentiteit als het onbewerkte e-mailadres wordt gebruikt bij het invoeren van gegevens.
-* Selecteer de `Email_LC_SHA256` naamruimte of attribuut als bronidentiteit als u de e-mailadressen van de klant bij het invoeren van gegevens in Platform hebt gewijzigd.
+* Selecteer de naamruimte of het kenmerk `Email` als bronidentiteit als u het onbewerkte e-mailadres bij gegevensinvoer gebruikt.
+* Selecteer de naamruimte of het kenmerk `Email_LC_SHA256` als bronidentiteit als u de e-mailadressen van klanten bij het invoeren van gegevens in Platform hebt gewijzigd.
 
 Doelvelden selecteren:
 
-* Invoer  `email` als doelidentiteit wanneer uw bronnaamruimte of -kenmerk `Email`.
-* Invoer  `hashed_email` als doelidentiteit wanneer uw bronnaamruimte of -kenmerk `Email_LC_SHA256`.
+* Voer `email` in als doelidentiteit wanneer uw bronnaamruimte of -kenmerk `Email` is.
+* Voer `hashed_email` in als doelidentiteit wanneer uw bronnaamruimte of -kenmerk `Email_LC_SHA256` is.
 
 ## Gegevens exporteren valideren {#validate}
 
-Om te controleren dat de gegevens correct uit Experience Platform en naar worden uitgevoerd [!DNL The Trade Desk], gelieve het publiek onder Adobe 1PD gegevensblok te vinden binnen [!DNL The Trade Desk] Data Management Platform (DMP). Hier volgen de stappen om de bijbehorende id te vinden in het dialoogvenster [!DNL Trade Desk] UI:
+Als u wilt controleren of gegevens correct vanuit het Experience Platform naar [!DNL The Trade Desk] worden geëxporteerd, zoekt u het publiek onder de gegevenstegel Adobe 1PD in het [!DNL The Trade Desk] Data Management Platform (DMP). Hier volgen de stappen voor het zoeken van de bijbehorende id in de gebruikersinterface van [!DNL Trade Desk] :
 
-1. Klik eerst op de knop **[!UICONTROL Data]** Tab en revisie **[!UICONTROL First-Party]**.
-2. Omlaag schuiven, onder **[!UICONTROL Imported Data]**, vindt u de **[!UICONTROL Adobe 1PD Tile]**.
-3. Klik op de **[!UICONTROL Adobe 1PD]** tegel, waarin alle soorten publiek worden vermeld die zijn geactiveerd voor de [!DNL Trade Desk] bestemming voor uw adverteerder. U kunt ook de zoekfunctie gebruiken.
-4. Segment-id # van Experience Platform wordt weergegeven als Segmentnaam in het dialoogvenster [!DNL Trade Desk] UI.
+1. Klik eerst op het tabblad **[!UICONTROL Data]** en revisie **[!UICONTROL First-Party]** .
+2. Schuif omlaag op de pagina, onder **[!UICONTROL Imported Data]** , zoekt u de **[!UICONTROL Adobe 1PD Tile]** .
+3. Klik op de tegel** [!UICONTROL Adobe 1PD]** en hierin worden alle soorten publiek weergegeven die zijn geactiveerd voor de [!DNL Trade Desk] -bestemming voor uw adverteerder. U kunt ook de zoekfunctie gebruiken.
+4. Segment-id # van Experience Platform wordt weergegeven als Segmentnaam in de gebruikersinterface van [!DNL Trade Desk] .
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).

@@ -13,41 +13,41 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Gebruik de [!DNL Pega Customer Decision Hub] doel in Adobe Experience Platform om profielkenmerken en lidmaatschapsgegevens voor het publiek naar te sturen [!DNL Pega Customer Decision Hub] voor de volgende beste-actiebeslissing.
+Gebruik de [!DNL Pega Customer Decision Hub] -bestemming in Adobe Experience Platform om profielkenmerken en lidmaatschapsgegevens voor het publiek naar [!DNL Pega Customer Decision Hub] te verzenden voor het bepalen van de volgende best mogelijke actie.
 
-Profiellidmaatschap voor publiek van Adobe Experience Platform, indien geladen in [!DNL Pega Customer Decision Hub], kan worden gebruikt als voorspeller in adaptieve modellen en helpt de juiste contextuele en gedragsgegevens te leveren voor de volgende-best-actie beslissingsdoeleinden.
+Wanneer u het lidmaatschap van het publiek van Adobe Experience Platform in [!DNL Pega Customer Decision Hub] laadt, kunt u het profiel gebruiken als voorspeller in adaptieve modellen en de juiste contextafhankelijke gegevens en gedragsgegevens leveren voor beslissingen met de volgende best mogelijke actie.
 
 >[!IMPORTANT]
 >
->Deze bestemmings schakelaar en documentatiepagina worden gecreeerd en door Pegasystems gehandhaafd. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen met Pega [hier](mailto:support@pega.com).
+>Deze bestemmings schakelaar en documentatiepagina worden gecreeerd en door Pegasystems gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve te contacteren direct [ hier ](mailto:support@pega.com).
 
 ## Gebruiksscenario’s
 
-Om u te helpen beter begrijpen hoe en wanneer u het [!DNL Customer Decision Hub] doel, hier zijn de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
+Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Customer Decision Hub] bestemming zou moeten gebruiken, zijn hier voorbeelden van gebruiksgevallen die de klanten van Adobe Experience Platform door deze bestemming kunnen oplossen.
 
 ### Telecommunicatie
 
-Een markator wil inzichten van de op het model gebaseerde best action van de gegevenswetenschap zoals geleverd door [!DNL Pega Customer Decision Hub] voor de betrokkenheid van de klant. [!DNL Pega Customer Decision Hub] is sterk afhankelijk van de intentie van de klant, bijvoorbeeld &quot;Interested_In_5G&quot;, &quot;Interested_in_Unlimited_Dataplan&quot; of &quot;Interest_in_iPhone_accessoires&quot;.
+Een markator wil inzichten van de op het gegevenswetenschapsmodel gebaseerde beste actie zoals geleverd door [!DNL Pega Customer Decision Hub] voor de betrokkenheid van de klant benutten. [!DNL Pega Customer Decision Hub] is sterk afhankelijk van de intentie van de klant, bijvoorbeeld &quot;Interested_In_5G&quot;, &quot;Interested_in_Unlimited_Dataplan&quot; of &quot;Interest_in_iPhone_accessoires&quot;.
 
 ### Financiële diensten
 
-Een markator wil de aanbiedingen optimaliseren voor klanten die zich hebben geabonneerd op of zich niet hebben geabonneerd op nieuwsbrieven van het pensioenplan of het pensioenplan. Bedrijven met financiële services kunnen meerdere Customer ID&#39;s van hun eigen CRM&#39;s opnemen in Adobe Experience Platform, een publiek opbouwen op basis van hun eigen offline gegevens en profielen verzenden die het publiek binnenkomen en verlaten [!DNL Pega Customer Decision Hub] voor volgende-best-actie (NBA) besluit in uitgaande kanalen.
+Een markator wil de aanbiedingen optimaliseren voor klanten die zich hebben geabonneerd op of zich niet hebben geabonneerd op nieuwsbrieven van het pensioenplan of het pensioenplan. Bedrijven met financiële services kunnen meerdere Customer ID&#39;s van hun eigen CRM&#39;s opnemen in Adobe Experience Platform, een publiek opbouwen van hun eigen offline gegevens en profielen verzenden die het publiek binnenkomen en verlaten naar [!DNL Pega Customer Decision Hub] voor NBA-beslissingen (next-best-action) in uitgaande kanalen.
 
 ## Vereisten {#prerequisites}
 
-Voordat u deze bestemming kunt gebruiken om gegevens uit Adobe Experience Platform te exporteren, moet u de volgende voorwaarden uitvoeren in [!DNL Pega Customer Decision Hub]:
+Voordat u deze bestemming kunt gebruiken om gegevens uit Adobe Experience Platform te exporteren, moet u controleren of aan de volgende voorwaarden is voldaan in [!DNL Pega Customer Decision Hub] :
 
-* Vorm [Adobe Experience Platform Profile and Publiek Membership Integration Component](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) in uw [!DNL Pega Customer Decision Hub] -instantie.
-* OAuth 2.0 configureren [Clientregistratie met clientreferenties](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) subsidietype in uw [!DNL Pega Customer Decision Hub] -instantie.
-* Configureren [realtime gegevensstroom](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) voor de gegevensstroom van het Lidmaatschap van het publiek van de Adobe in uw [!DNL Pega Customer Decision Hub] -instantie.
+* Vorm de [ de integratiecomponent van het Profiel van Adobe Experience Platform en van het Volwassenlidmaatschap ](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) in uw [!DNL Pega Customer Decision Hub] instantie.
+* Vorm OAuth 2.0 [ Registratie van de Cliënt gebruikend het 1} giftetype van de Credentials van de Cliënt in uw [!DNL Pega Customer Decision Hub] instantie.](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration)
+* Vorm [ in real time de gegevensstroom van de looppas ](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) voor de gegevensstroom van het Lidmaatschap van de Adobe van het Publiek in uw [!DNL Pega Customer Decision Hub] instantie.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Pega Customer Decision Hub] biedt ondersteuning voor de activering van aangepaste gebruikers-id&#39;s die in de onderstaande tabel worden beschreven. Zie voor meer informatie [identiteiten](/help/identity-service/features/namespaces.md).
+[!DNL Pega Customer Decision Hub] ondersteunt de activering van aangepaste gebruikers-id&#39;s die in de onderstaande tabel worden beschreven. Voor meer details, zie [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving |
 |---|---|
-| *CustomerID* | Algemene gebruikersnaam die een profiel op unieke wijze identificeert in [!DNL Pega Customer Decision Hub] en Adobe Experience Platform |
+| *CustomerID* | Algemene gebruikersnaam die een profiel in [!DNL Pega Customer Decision Hub] en Adobe Experience Platform op unieke wijze identificeert |
 
 {style="table-layout:auto"}
 
@@ -57,87 +57,87 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | Alle leden van een publiek met id exporteren (*CustomerID*), kenmerken (achternaam, voornaam, locatie, enz.) en gegevens van het publiek over het lidmaatschap. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn altijd op API gebaseerde verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt, dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Zie voor meer informatie [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | Exporteer alle leden van een publiek met herkenningsteken (*CustomerID*), attributen (achternaam, voornaam, plaats, enz.) en gegevens van het publiek over het lidmaatschap. |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn altijd op API gebaseerde verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt, dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Voor meer informatie, zie [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Verbinden met de bestemming {#connect}
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 #### OAuth 2 Client Credentials-verificatie {#oauth-2-client-credentials-authentication}
 
-![Afbeelding van het UI-scherm waar u verbinding kunt maken met de Pega CDH-bestemming met OAuth 2 met verificatie van clientreferenties](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
+![ Beeld van het scherm UI waar u met de bestemming van Pega CDH kunt verbinden, gebruikend OAuth 2 met de authentificatie van de Credentials van de Cliënt ](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
 
-Vul de onderstaande velden in en selecteer **[!UICONTROL Connect to destination]**:
+Vul de onderstaande velden in en selecteer **[!UICONTROL Connect to destination]** :
 
 * **[!UICONTROL Access Token URL]**: De URL van het toegangstoken OAuth 2 op uw [!DNL Pega Customer Decision Hub] -instantie.
-* **[!UICONTROL Client ID]**: De OAuth 2 [!DNL client ID] die u in uw [!DNL Pega Customer Decision Hub] -instantie.
-* **[!UICONTROL Client Secret]**: De OAuth 2 [!DNL client secret] die u in uw [!DNL Pega Customer Decision Hub] -instantie.
+* **[!UICONTROL Client ID]**: De OAuth 2 [!DNL client ID] die u in de [!DNL Pega Customer Decision Hub] -instantie hebt gegenereerd.
+* **[!UICONTROL Client Secret]**: De OAuth 2 [!DNL client secret] die u in de [!DNL Pega Customer Decision Hub] -instantie hebt gegenereerd.
 
 ### Doelgegevens invullen {#destination-details}
 
-Na het vestigen van de authentificatieverbinding aan [!DNL Pega Customer Decision Hub], verstrekt de volgende informatie voor de bestemming:
+Na het vestigen van de authentificatieverbinding aan [!DNL Pega Customer Decision Hub], verstrek de volgende informatie voor de bestemming:
 
-![Afbeelding van het UI-scherm met de voltooide velden voor de Pega CDH-doeldetails](../../assets/catalog/personalization/pega/pega-connect-destination.png)
+![ Beeld van het scherm UI die voltooide gebieden voor de Peg CDH bestemmingsdetails tonen ](../../assets/catalog/personalization/pega/pega-connect-destination.png)
 
-Om details voor de bestemming te vormen, vul de vereiste gebieden in en selecteer **[!UICONTROL Next]**.
+Als u details voor het doel wilt configureren, vult u de vereiste velden in en selecteert u **[!UICONTROL Next]** .
 
-* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Host Name]**: De hostnaam van de Pega-client voor het besluit van de klant waarnaar het profiel wordt geëxporteerd als JSON-gegevens.
+* **[!UICONTROL Host Name]**: De hostnaam van de PEGA-client voor beslissingen van klanten waarnaar het profiel wordt geëxporteerd als JSON-gegevens.
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Zie [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](../../ui/activate-streaming-profile-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Zie [ publieksgegevens aan het stromen van profieluitvoer bestemmingen ](../../ui/activate-streaming-profile-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
 ### Doelkenmerken {#attributes}
 
-In de [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) stap, raadt de Adobe u aan een unieke id te selecteren in uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas). Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
+In de [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) stap, adviseert de Adobe dat u een uniek herkenningsteken van uw [ verenigingsschema ](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
 
 ### Voorbeeld van toewijzing: profielupdates activeren in [!DNL Pega Customer Decision Hub] {#mapping-example}
 
-Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het exporteren van profielen naar [!DNL Pega Customer Decision Hub].
+Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het exporteren van profielen naar [!DNL Pega Customer Decision Hub] .
 
 Bronvelden selecteren:
 
-* Selecteer een id (bijvoorbeeld: CustomerID) als bronidentiteit die een profiel in Adobe Experience Platform op unieke wijze identificeert en [!DNL Pega Customer Decision Hub].
-* Selecteer wijzigingen in XDM-bronprofielkenmerken die u wilt exporteren en bijwerken in [!DNL Pega Customer Decision Hub].
+* Selecteer een id (bijvoorbeeld: CustomerID) als bronidentiteit die een profiel in Adobe Experience Platform en [!DNL Pega Customer Decision Hub] op unieke wijze identificeert.
+* Selecteer wijzigingen in XDM-bronprofielkenmerken die u wilt exporteren en bijwerken in [!DNL Pega Customer Decision Hub] .
 
 Doelvelden selecteren:
 
-* Selecteer de `CustomerID` naamruimte als doelidentiteit.
+* Selecteer de naamruimte `CustomerID` als doelidentiteit.
 * Selecteer namen van bestemmingsprofielkenmerken die moeten worden toegewezen aan de overeenkomende XDM-bronprofielkenmerken.
 
-![Identiteitskaart](../../assets/catalog/personalization/pega/pega-source-destination-mapping.png)
+![ de afbeelding van de Identiteit ](../../assets/catalog/personalization/pega/pega-source-destination-mapping.png)
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
-Een geslaagde update voor een profiel voor publiekslidmaatschap zou de publieksidentificatie, de naam en de status in de PEGA-datastore invoegen voor het publicatiepubliek. De lidmaatschapsgegevens zijn gekoppeld aan een klant die gebruikmaakt van Customer Profile Designer in [!DNL Pega Customer Decision Hub], zoals hieronder weergegeven.
-![Afbeelding van het UI-scherm waarin u de gegevens van het Adobe Audience Membership aan de Klant kunt koppelen, met behulp van Customer Profile Designer](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
+Een geslaagde update voor een profiel voor publiekslidmaatschap zou de publieksidentificatie, de naam en de status in de PEGA-datastore invoegen voor het publicatiepubliek. De lidmaatschapsgegevens zijn gekoppeld aan een klant die gebruikmaakt van Customer Profile Designer in [!DNL Pega Customer Decision Hub], zoals hieronder wordt weergegeven.
+![ Beeld van het scherm UI waar u de gegevens van het Lidmaatschap van de Adobe van het Publiek aan Klant kunt associëren, gebruikend Designer van het Profiel van de Klant ](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-De gegevens van het publiekslidmaatschap worden gebruikt in het volgende-Beste beleid van de Aanwezigheid van de Ontwerper van Pega voor volgende-best-actie besluit, zoals hieronder getoond.
-![Afbeelding van het UI-scherm waar u de lidmaatschapsvelden van het publiek kunt toevoegen als voorwaarden in het Betrokkenheidsbeleid van Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+De gegevens van het publiekslidmaatschap worden gebruikt in het volgende-Beste-Actie Designer Betrokkenheidsbeleid van Pega voor volgende-best-actie besluit, zoals hieronder getoond.
+![ Beeld van het scherm UI waar u de gebieden van het het lidmaatschapsaandeel van het Publiek als voorwaarden in het Beleid van de Betrokkenheid van volgende-Beste-Actie Designer ](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png) kunt toevoegen
 
 De gegevensvelden voor het gebruikerslidmaatschap van de klant worden toegevoegd als voorspellers in Adaptieve modellen, zoals hieronder wordt weergegeven.
-![Beeld van het scherm UI waar u de gebieden van het lidmaatschap van de Publiek als voorspellers in Adaptieve modellen kunt toevoegen, gebruikend de Studio van de Voorspelling](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
+![ Beeld van het scherm UI waar u de gebieden van het lidmaatschapsaandeel van het Publiek als voorspellers in Aanpassings modellen kunt toevoegen, gebruikend de Studio van de Voorspelling ](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Aanvullende bronnen {#additional-resources}
 
-Zie [Een OAuth 2.0-clientregistratie instellen](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) in [!DNL Pega Customer Decision Hub].
+Zie [ Vestiging een OAuth 2.0 cliëntregistratie ](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) in [!DNL Pega Customer Decision Hub].
 
-Zie [Een real-time runtime maken voor gegevensstromen](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) in [!DNL Pega Customer Decision Hub].
+Zie [ Creërend een in real time looppas voor gegevensstromen ](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) in [!DNL Pega Customer Decision Hub].
 
-Zie [De klantgegevens beheren in de Designer van het Klantprofiel](https://docs.pega.com/whats-new-pega-platform/manage-customer-records-customer-profile-designer-86).
+Zie [ klantenverslagen in Designer van het Profiel van de Klant beheren ](https://docs.pega.com/whats-new-pega-platform/manage-customer-records-customer-profile-designer-86).
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).

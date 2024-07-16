@@ -20,11 +20,11 @@ In Adobe Experience Platform maken we onderscheid tussen verschillende doeltypen
 
 Ten slotte kan ook een onderscheid worden gemaakt tussen openbare bestemmingen die beschikbaar zijn in alle organisaties in de lijst met bestemmingen, en particuliere bestemmingen die Real-Time CDP Ultimate-klanten kunnen maken om aan hun specifieke gevallen van exportgebruik te voldoen.
 
-![Soorten bestemmingsdiagram.](./assets/destination-types/types-of-destinations-no-highlight.png)
+![ Types van bestemmingsdiagram.](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## Verbindingen {#connections}
 
-**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]**, en **[!DNL Edge Personalization]** doelen in Adobe Experience Platform leggen gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen om de [Klantprofiel in realtime](../profile/home.md), segmentatie toe te passen, en publiek en gekwalificeerde profielen naar bestemmingen uit te voeren.
+**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]**, en **[!DNL Edge Personalization]** de bestemmingen in Adobe Experience Platform vangen gebeurtenisgegevens, combineren het met andere gegevensbronnen om het [ Real-Time Profiel van de Klant ](../profile/home.md) te vormen, segmentatie toe te passen, en uitvoerpubliek en gekwalificeerde profielen naar bestemmingen uit te voeren.
 
 ## Profielexportdoelen {#profile-export}
 
@@ -37,7 +37,7 @@ Profielexportdoelen ontvangen onbewerkte gegevens, vaak met e-mailadres als prim
 
 >[!IMPORTANT]
 >
->De bestemmingen van de onderneming, of het stromen profiel de uitvoerbestemmingen, zijn beschikbaar aan [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) alleen aan klanten.
+>De bestemmingen van de onderneming, of het stromen profiel de uitvoerbestemmingen, zijn beschikbaar aan [ Adobe Real-time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) slechts klanten.
 
 Gebruik gegevensconnectors voor bedrijfsdoelgegevens om Adobe Real-time Customer Data Platform-profielen in bijna realtime te leveren aan interne systemen of aan andere systemen van derden voor gegevenssynchronisatie, analyse en verdere gebruiksscenario&#39;s voor profielverrijking.
 
@@ -51,17 +51,17 @@ De bestemmingen van de onderneming omvatten:
 
 ### Batchbestemmingen (op basis van bestanden) {#file-based}
 
-Bestandsgebaseerde doelen ontvangen `.csv` bestanden met profielen en/of kenmerken. [Amazon S3](catalog/cloud-storage/amazon-s3.md) Dit is een voorbeeld van een bestemming waar u bestanden kunt exporteren die profielen bevatten.
+Bestandsdoelen ontvangen `.csv` -bestanden met profielen en/of kenmerken. [ Amazon S3 ](catalog/cloud-storage/amazon-s3.md) is een voorbeeld van een bestemming waar u dossiers kunt uitvoeren die profieluitvoer bevatten.
 
 ## Streaming doelpubliek exporteren {#streaming-destinations}
 
-De de uitvoerbestemmingen van het publiek van het publiek ontvangen de gegevens van het Experience Platform. Deze doelen gebruiken gebruikers-id&#39;s of gebruikers-id&#39;s. Reclame en sociale bestemmingen zoals [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), of [Facebook](catalog/social/facebook.md) zijn voorbeelden van dergelijke bestemmingen .
+De de uitvoerbestemmingen van het publiek van het publiek ontvangen de gegevens van het Experience Platform. Deze doelen gebruiken gebruikers-id&#39;s of gebruikers-id&#39;s. Advertising en sociale bestemmingen zoals [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), of [ Facebook ](catalog/social/facebook.md) zijn voorbeelden van dergelijke bestemmingen.
 
 ## Edge-verpersoonlijkingsdoelen {#edge-personalization-destinations}
 
-De het verpersoonlijkingsbestemmingen van de rand in Experience Platform omvatten [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) en de [Aangepast aanpassingsdoel](/help/destinations/catalog/personalization/custom-personalization.md). Door deze bestemmingen te gebruiken, kunt u zelfde-pagina en volgende-pagina gebruiksgevallen van het verpersoonlijkingsgebruik voor uw klanten toelaten.
+De de verpersoonlijkingsbestemmingen van Edge in Experience Platform omvatten [ Adobe Target ](/help/destinations/catalog/personalization/adobe-target-connection.md) en de [ de verpersoonlijkingsbestemming van de Douane ](/help/destinations/catalog/personalization/custom-personalization.md). Door deze bestemmingen te gebruiken, kunt u zelfde-pagina en volgende-pagina gebruiksgevallen van het verpersoonlijkingsgebruik voor uw klanten toelaten.
 
-Meer informatie over hoe [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](/help/destinations/ui/activate-edge-personalization-destinations.md).
+Lees meer over hoe te [ verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking ](/help/destinations/ui/activate-edge-personalization-destinations.md) vormen.
 
 ## Exporteren van profielen en doelgroepen - video-overzicht {#video}
 
@@ -77,18 +77,18 @@ U kunt drie soorten publiek van Experience Platform naar diverse bestemmingen ui
 * Accountpubliek
 * Doelgroepen
 
-Meer informatie over de [verschillende soorten doelgroepen](/help/segmentation/ui/account-audiences.md#terminology).
+Leer meer over de [ diverse publiekstypes ](/help/segmentation/ui/account-audiences.md#terminology).
 
 Een symbool op de doelkaart geeft aan welke soorten publiek u naar elk doel kunt exporteren.
 
-![Voorbeeld van doelkaart met symbolen die aangeven welke soorten publiek kunnen worden geëxporteerd.](/help/destinations/assets/destination-types/types-of-audiences.png)
+![ de bestemmingskaart van het Voorbeeld met symbolen die tonen welke publiekstypes kunnen worden uitgevoerd.](/help/destinations/assets/destination-types/types-of-audiences.png)
 
 
 ## Dataset-exportdoelen {#dataset-export-destinations}
 
 Sommige bestemmingen van de wolkenopslag in de catalogus van bestemmingen steunen dataset de uitvoer. Gebruik deze doelen om onbewerkte gegevenssets te exporteren naar opslaglocaties in de cloud.
 
-Meer informatie over hoe [exportgegevenssets](/help/destinations/ui/export-datasets.md).
+Lees meer over hoe te [ uitvoerdatasets ](/help/destinations/ui/export-datasets.md).
 
 ## Extensies {#extensions}
 
@@ -96,11 +96,11 @@ Platform maakt gebruik van de kracht en flexibiliteit van tagbeheer, zodat u tag
 
 >[!TIP]
 >
->Raadpleeg voor meer informatie over extensies van tags, waaronder gebruik en het zoeken van deze extensies in de interface de [overzicht van tagextensies](./catalog/launch-extensions/overview.md).
+>Voor gedetailleerde informatie over markeringsuitbreidingen, met inbegrip van gebruiksgevallen en hoe te om hen in de interface te vinden, zie het [ overzicht van markeringsuitbreidingen ](./catalog/launch-extensions/overview.md).
 
-Met extensies kunt u onbewerkte gebeurtenisgegevens doorsturen naar verschillende typen doelen. Extensies beschouwen als een **Gebeurtenis doorsturen** type bestemming. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Verkrijg inzicht in verpersoonlijkingsuitbreiding](./catalog/personalization/gainsight.md) of de [Bevestiging Stem van de uitbreiding van de Klant](./catalog/voice/confirmit-digital-feedback.md).
+Met extensies kunt u onbewerkte gebeurtenisgegevens doorsturen naar verschillende typen doelen. Denk aan uitbreidingen als **Gebeurtenis door:sturen** type van bestemming. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. De voorbeelden van die zijn de [ Verkenningsverpersoonlijkingsuitbreiding van de Reeks ](./catalog/personalization/gainsight.md) of de [ Bevestiging Stem van de uitbreiding van de Klant ](./catalog/voice/confirmit-digital-feedback.md).
 
-![Extensies labelen in vergelijking met andere doelen](./assets/common/launch-and-other-destinations.png)
+![ uitbreidingen van de Markering vergeleken met andere bestemmingen ](./assets/common/launch-and-other-destinations.png)
 
 ## Wanneer gebruiken verbindingen en uitbreidingen {#when-to-use}
 
@@ -112,6 +112,6 @@ Extensies zijn handig wanneer gebeurtenisgegevens worden gebruikt om een handeli
 
 ## Doelcategorieën {#categories}
 
-De verbindingen en extensies in het dialoogvenster [doelcatalogus](https://platform.adobe.com/destination/catalog) worden gegroepeerd op doelcategorie (**Reclame**, **Cloud-opslag**, **Platformen voor enquêtes**, **E-mailmarketing**, enz.), afhankelijk van de marketingactie die ze u helpen te bereiken. Voor meer informatie over elk van de categorieën, evenals de bestemmingen inbegrepen in elke categorie, zie [Documentatie doelcatalogus](./catalog/overview.md).
+De verbindingen en de uitbreidingen in de [ bestemmingscatalogus ](https://platform.adobe.com/destination/catalog) worden gegroepeerd door bestemmingscategorie (**Advertising**, **de opslag van de Wolk**, **platforms van het Onderzoek**, **E-mail marketing**, enz.), afhankelijk van de marketing actie die zij u helpen bereiken. Voor meer informatie over elk van de categorieën, evenals de bestemmingen inbegrepen in elke categorie, zie de [ catalogusdocumentatie van Doelen ](./catalog/overview.md).
 
-![Doelcategorieën die zijn gemarkeerd in de cataloguspagina.](./assets/destination-types/destination-categories-menu.png)
+![ categorieën van de Bestemming die in de cataloguspagina worden benadrukt.](./assets/destination-types/destination-categories-menu.png)

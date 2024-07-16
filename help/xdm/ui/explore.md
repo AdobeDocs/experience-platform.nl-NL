@@ -14,25 +14,25 @@ ht-degree: 0%
 
 # Schema-bronnen in de gebruikersinterface verkennen
 
-In Adobe Experience Platform worden alle XDM-schemabronnen (Experience Data Model) opgeslagen in het [!DNL Schema Library], met inbegrip van standaardmiddelen die door Adobe en douanemiddelen worden verstrekt die door uw organisatie worden bepaald. In Experience Platform UI, kunt u de structuur en de gebieden van om het even welk bestaand schema, klasse, gebiedsgroep, of gegevenstype in bekijken [!DNL Schema Library]. Dit is vooral nuttig wanneer het plannen van en het voorbereidingen treffen voor gegevensopname, aangezien UI informatie over de verwachte gegevenstypes en gebruiksgevallen van elk gebied verstrekt door deze middelen XDM verstrekt.
+In Adobe Experience Platform worden alle XDM-schemabronnen (Experience Data Model) opgeslagen in [!DNL Schema Library] , inclusief standaardbronnen die worden geleverd door Adobe en aangepaste bronnen die door uw organisatie zijn gedefinieerd. In de interface van het Experience Platform kunt u de structuur en de gebieden van om het even welk bestaand schema, klasse, gebiedsgroep, of gegevenstype in [!DNL Schema Library] bekijken. Dit is vooral nuttig wanneer het plannen van en het voorbereidingen treffen voor gegevensopname, aangezien UI informatie over de verwachte gegevenstypes en gebruiksgevallen van elk gebied verstrekt door deze middelen XDM verstrekt.
 
 Deze zelfstudie behandelt de stappen voor het verkennen van bestaande schema&#39;s, klassen, gebiedsgroepen, en gegevenstypes in Experience Platform UI.
 
 ## Een schemabron opzoeken {#lookup}
 
-Selecteer in de interface Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie. De [!UICONTROL Schemas] werkruimte biedt een **[!UICONTROL Browse]** tabblad om alle schema&#39;s in uw organisatie te verkennen, samen met extra speciale tabbladen voor het verkennen van **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, en **[!UICONTROL Data types]** respectievelijk.
+Selecteer **[!UICONTROL Schemas]** in de gebruikersinterface van het platform in de linkernavigatie. De werkruimte van [!UICONTROL Schemas] biedt een tabblad **[!UICONTROL Browse]** waarin alle schema&#39;s in uw organisatie worden verkend, samen met extra specifieke tabbladen voor respectievelijk **[!UICONTROL Classes]** , **[!UICONTROL Field groups]** en **[!UICONTROL Data types]** .
 
 ![](../images/ui/explore/tabs.png)
 
-Het filterpictogram (![Pictogramafbeelding filteren](../images/ui/explore/icon.png)) onthult controles in de linkerspoorstaaf om de vermelde resultaten te beperken. De weergegeven besturingselementen verschillen afhankelijk van het type bron dat wordt vermeld.
+Het filterpictogram (![ Beeld van het Pictogram van de Filter ](../images/ui/explore/icon.png)) openbaart controles in het linkerspoor om onderaan vermelde resultaten te versmallen. De weergegeven besturingselementen verschillen afhankelijk van het type bron dat wordt vermeld.
 
-Als u bijvoorbeeld de lijst wilt filteren zodat alleen de standaardgegevenstypen worden weergegeven die door de Adobe worden opgegeven, selecteert u **[!UICONTROL Datatype]** en **[!UICONTROL Adobe]** onder de **[!UICONTROL Type]** en **[!UICONTROL Owner]** secties.
+Als u bijvoorbeeld de lijst wilt filteren om alleen standaardgegevenstypen weer te geven die door Adobe worden aangeboden, selecteert u respectievelijk **[!UICONTROL Datatype]** en **[!UICONTROL Adobe]** onder de secties **[!UICONTROL Type]** en **[!UICONTROL Owner]** .
 
-De **[!UICONTROL Included in Profile]** knevel staat u toe om resultaten te filtreren om slechts middelen te tonen die in schema&#39;s worden gebruikt die voor gebruik binnen zijn toegelaten [Klantprofiel in realtime](../../profile/home.md). De **[!UICONTROL Show adhoc schemas]** schakelt de filters de lijst van schema&#39;s van een knevel die met gebieden werden gecreeerd die namespaced voor gebruik slechts door één enkele dataset zijn.
+De **[!UICONTROL Included in Profile]** knevel staat u toe om resultaten te filtreren om slechts middelen te tonen die in schema&#39;s worden gebruikt die voor gebruik in [ in real time het Profiel van de Klant ](../../profile/home.md) zijn toegelaten. Met de schakeloptie **[!UICONTROL Show adhoc schemas]** wordt de lijst met schema&#39;s gefilterd die zijn gemaakt met velden waarvan de naamruimte is ingesteld voor gebruik met slechts één gegevensset.
 
-![De [!UICONTROL Schemas] werkruimte [!UICONTROL Browse] met de markering van het deelvenster Filters.](../images/ui/explore/filter.png)
+![ het [!UICONTROL Schemas] werkruimte [!UICONTROL Browse] lusje met het benadrukte filterenpaneel.](../images/ui/explore/filter.png)
 
-Wanneer u bronnen op de **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, of **[!UICONTROL Data types]** tabs, kunt u selecteren **[!UICONTROL Adobe]** alleen standaardbronnen tonen of **[!UICONTROL Customer]** om alleen bronnen weer te geven die door uw organisatie zijn gemaakt.
+Wanneer u bronnen op de tabbladen **[!UICONTROL Classes]** , **[!UICONTROL Field groups]** of **[!UICONTROL Data types]** weergeeft, kunt u **[!UICONTROL Adobe]** selecteren om alleen standaardbronnen weer te geven of **[!UICONTROL Customer]** om alleen bronnen weer te geven die door uw organisatie zijn gemaakt.
 
 ![](../images/ui/explore/filter-data-type.png)
 
@@ -56,17 +56,17 @@ Alle objecten-type gebieden die sub-eigenschappen bevatten worden doen ineenstor
 
 ### Standaardklasse- en veldgroepindicator {#standard-class-and-field-group-indicator}
 
-In de Schema-editor worden standaard (door Adobe gegenereerde) klassen en veldgroepen aangeduid met het hangslotpictogram (![Een hangslotpictogram.](../images/ui/explore/padlock-icon.png). Het hangslot verschijnt in de linkerspoorstaaf naast de klasse of de naam van de gebiedsgroep, evenals naast om het even welk gebied in het schemadiagram dat een deel van een systeem-geproduceerde middel is.
+Binnen de Redacteur van het Schema, worden de standaard (Adobe-geproduceerde) klassen en de gebiedsgroepen vermeld met het hangslotpictogram (![ A hangslotpictogram.](../images/ui/explore/padlock-icon.png). Het hangslot verschijnt in de linkerspoorstaaf naast de klasse of de naam van de gebiedsgroep, evenals naast om het even welk gebied in het schemadiagram dat een deel van een systeem-geproduceerde middel is.
 
-![De Schema-editor met het hangslotpictogram gemarkeerd](../images/ui/explore/schema-editor-padlock-icon.png)
+![ de Redacteur van het Schema met het gemarkeerde hangslotpictogram ](../images/ui/explore/schema-editor-padlock-icon.png)
 
-Zie de [Aangepaste velden toevoegen aan standaardveldgroepen](./resources/schemas.md) documentatie voor richtsnoeren. U kunt een standaardklasse niet bewerken.
+Zie [ douanegebieden aan standaardgebiedsgroepen ](./resources/schemas.md) documentatie voor begeleiding toevoegen. U kunt een standaardklasse niet bewerken.
 
 ### Door het systeem gegenereerde velden {#system-fields}
 
-Sommige veldnamen worden voorafgegaan door een onderstrepingsteken, zoals `_repo` en `_id`. Deze vertegenwoordigen placeholders voor gebieden die het systeem automatisch zal produceren en toewijzen aangezien de gegevens worden opgenomen.
+Sommige veldnamen worden voorafgegaan door een onderstrepingsteken, zoals `_repo` en `_id` . Deze vertegenwoordigen placeholders voor gebieden die het systeem automatisch zal produceren en toewijzen aangezien de gegevens worden opgenomen.
 
-Daarom moeten de meeste van deze velden worden uitgesloten van de structuur van uw gegevens wanneer u deze opneemt in Platform. De belangrijkste uitzondering op deze regel is de [`_{TENANT_ID}` field](../api/getting-started.md#know-your-tenant_id), waarin alle XDM-velden die onder uw organisatie worden gemaakt naamruimte moeten krijgen.
+Daarom moeten de meeste van deze velden worden uitgesloten van de structuur van uw gegevens wanneer u deze opneemt in Platform. De belangrijkste uitzondering op deze regel is het [`_{TENANT_ID}` gebied ](../api/getting-started.md#know-your-tenant_id), dat alle gebieden XDM die onder uw organisatie worden gecreeerd namespaced onder moeten zijn.
 
 ### Datatypen {#data-types}
 
@@ -74,7 +74,7 @@ Voor elk veld dat op het canvas wordt weergegeven, wordt het corresponderende ge
 
 ![](../images/ui/explore/data-types.png)
 
-Elk gegevenstype dat wordt toegevoegd met vierkante haakjes (`[]`) vertegenwoordigt een array van dat specifieke gegevenstype. Een gegevenstype van **[!UICONTROL String]\[]** Hiermee wordt aangegeven dat het veld een array van tekenreekswaarden verwacht. Een gegevenstype van **[!UICONTROL Payment Item]\[]** Hiermee wordt een array van objecten aangegeven die voldoen aan de [!UICONTROL Payment Item] gegevenstype.
+Om het even welk gegevenstype dat met vierkante haakjes (`[]`) wordt toegevoegd vertegenwoordigt een serie van dat bepaalde gegevenstype. Bijvoorbeeld, wijst een gegevenstype van **[!UICONTROL String]\ []** erop dat het gebied een serie van koordwaarden verwacht. Een gegevenstype van **[!UICONTROL Payment Item]\ []** wijst op een serie van voorwerpen die met het [!UICONTROL Payment Item] gegevenstype in overeenstemming zijn.
 
 Als een arrayveld is gebaseerd op een objecttype, kunt u het pictogram ervan op het canvas selecteren om de verwachte kenmerken voor elk arrayitem weer te geven.
 
@@ -82,7 +82,7 @@ Als een arrayveld is gebaseerd op een objecttype, kunt u het pictogram ervan op 
 
 ### [!UICONTROL Field properties] {#field-properties}
 
-Wanneer u de naam van een veld op het canvas selecteert, wordt het rechterspoor bijgewerkt en worden de details van dat veld onder **[!UICONTROL Field properties]**. Dit kan een beschrijving bevatten van het bedoelde gebruiksgeval van het veld, standaardwaarden, patronen, indelingen, of het veld al dan niet is vereist, enzovoort.
+Wanneer u de naam van een veld op het canvas selecteert, wordt de rechterrails bijgewerkt en worden details over dat veld onder **[!UICONTROL Field properties]** weergegeven. Dit kan een beschrijving bevatten van het bedoelde gebruiksgeval van het veld, standaardwaarden, patronen, indelingen, of het veld al dan niet is vereist, enzovoort.
 
 ![](../images/ui/explore/field-properties.png)
 
@@ -94,17 +94,17 @@ Als het veld dat u inspecteert een opsommingsveld is, geeft de rechterspoorstaaf
 
 Wanneer het inspecteren van schema&#39;s die identiteitsgebieden bevatten, zijn deze gebieden vermeld in het linkerspoor onder de klasse of de gebiedsgroep die hen aan het schema verstrekt. Selecteer de naam van het identiteitsveld in de linkerrail om het veld op het canvas weer te geven, ongeacht hoe diep het veld is genest.
 
-Identiteitsvelden worden op het canvas gemarkeerd met een vingerafdrukpictogram (![Pictogramafbeelding voor vingerafdruk](../images/ui/explore/identity-symbol.png)). Als u de naam van het identiteitsveld selecteert, kunt u aanvullende informatie weergeven, zoals de [naamruimte identity](../../identity-service/features/namespaces.md) en of het veld de primaire identiteit voor het schema is.
+De gebieden van de identiteit worden benadrukt in het canvas met een vingerafdrukpictogram (![ Beeld van het Pictogram van de Vingerprint ](../images/ui/explore/identity-symbol.png)). Als u de naam van het identiteitsgebied selecteert, kunt u extra informatie zoals [ identiteitsnamespace ](../../identity-service/features/namespaces.md) bekijken en of het gebied al dan niet de primaire identiteit voor het schema is.
 
 ![](../images/ui/explore/identity-field.png)
 
 >[!NOTE]
 >
->Zie de handleiding op [identiteitsvelden definiëren](./fields/identity.md) voor meer informatie over identiteitsvelden en hun relatie met downstreamplatformdiensten.
+>Zie de gids op [ bepalende identiteitsgebieden ](./fields/identity.md) voor meer informatie over identiteitsgebieden en hun verhouding met de stroomafwaartse diensten van het Platform.
 
 ### Relatievelden {#relationship}
 
-Als u een schema inspecteert dat een relatieveld bevat, zal het gebied in de linkerspoorstaaf onder worden vermeld **[!UICONTROL Relationships]**. Selecteer de naam van het relatieveld in de linkerrail om het veld op het canvas weer te geven, ongeacht hoe diep het veld is genest.
+Als u een schema inspecteert dat een relatieveld bevat, zal het gebied in de linkerspoorstaaf onder **[!UICONTROL Relationships]** worden vermeld. Selecteer de naam van het relatieveld in de linkerrail om het veld op het canvas weer te geven, ongeacht hoe diep het veld is genest.
 
 Relatievelden worden ook op unieke wijze gemarkeerd op het canvas en tonen de naam van het referentieschema waarnaar het veld koppelt. Als u de naam van het relatieveld selecteert, kunt u de identiteitsnaamruimte van de primaire identiteit van het verwijzingsschema in het juiste spoor bekijken.
 
@@ -112,8 +112,8 @@ Relatievelden worden ook op unieke wijze gemarkeerd op het canvas en tonen de na
 
 >[!NOTE]
 >
->Zie de zelfstudie aan [het creëren van een verhouding in UI](../tutorials/relationship-ui.md) voor meer informatie over het gebruik van verhoudingen in schema&#39;s XDM.
+>Zie het leerprogramma op [ creërend een verband in UI ](../tutorials/relationship-ui.md) voor meer informatie over het gebruik van verhoudingen in schema&#39;s XDM.
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u bestaande XDM-bronnen kunt verkennen in de gebruikersinterface van het Experience Platform. Voor meer informatie over de verschillende eigenschappen van [!UICONTROL Schemas] werkruimte en [!DNL Schema Editor], zie de [[!UICONTROL Schemas] werkruimte - overzicht](./overview.md).
+In dit document wordt beschreven hoe u bestaande XDM-bronnen kunt verkennen in de gebruikersinterface van het Experience Platform. Zie het [[!UICONTROL Schemas] overzicht van de werkruimte ](./overview.md) voor meer informatie over de verschillende functies van de [!UICONTROL Schemas] -werkruimte en [!DNL Schema Editor] .

@@ -34,17 +34,17 @@ Een detailhandelaar zoekt naar een beter begrip van de voorkeur van de klant voo
 ## Vereisten {#prerequisites}
 
 Voor de verbinding met Medallia is de volgende informatie vereist:
-* **URL OAuth Token Endpoint**
-* **Client-id**
-* **Clientgeheim**
-* **API Gateway-URL**
-* **API-naam importeren**
+* **OAuth Symbolische Eindpunt URL**
+* **identiteitskaart van de Cliënt**
+* **Geheim van de Cliënt**
+* **URL van de Gateway van API Gateway**
+* **de Naam van de Invoer API**
 
 Werk samen met uw Media-leveringsteam om deze gegevens te verkrijgen.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-Medallia ondersteunt de activering van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
+Medallia ondersteunt de activering van de identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -59,8 +59,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle zojuist gekwalificeerde leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken voor het geselecteerde profiel van het dialoogvenster [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle onlangs gekwalificeerde leden van een segment, samen met de gewenste schemagebieden (bijvoorbeeld: e-mailadres, telefoonaantal, achternaam), zoals gekozen in het uitgezochte scherm van profielattributen van het [ werkschema van de bestemmingsactivering ](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -68,70 +68,70 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
+Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
-* **[!UICONTROL OAuth Token Endpoint URL]**: Doorgaans heeft dit de vorm van https://instance.medallia.tld/oauth/tenant/token.
+* **[!UICONTROL OAuth Token Endpoint URL]**: De notatie https://instance.medallia.tld/oauth/tenant/token.
 * **[!UICONTROL Client ID]**: Vraag het aan bij uw Media-leveringsteam.
 * **[!UICONTROL Client Secret]**: Vraag het aan bij uw Media-leveringsteam.
 
-![Afbeelding die het verificatiescherm voor deze bestemming weergeeft.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
+![ Beeld dat het authentificatiescherm voor deze bestemming toont.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL API Gateway URL]**: Vraag het aan bij uw Media-leveringsteam. De notatie https://instance-tenant.apis.medallia.com.
 * **[!UICONTROL Import API Name]**: Vraag het aan bij uw Media-leveringsteam. Naam van de Media Import API (ook wel Web Feed genoemd) die in deze verbinding moet worden gebruikt. U kunt verschillende soorten publiek activeren voor verschillende API&#39;s voor importeren om verschillende enquêteprogramma&#39;s te activeren.
 
-![Afbeelding die het scherm met doeldetails voor deze bestemming weergeeft.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
+![ Beeld dat het scherm van bestemmingsdetails voor deze bestemming toont.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
 De volgende naamruimte(s) voor de doelidentiteit moeten worden toegewezen, afhankelijk van het gebruiksgeval:
-* Voor e-mailenquêtes: **email** moet worden toegewezen als een doelveld met **Doelveld** > **Naamruimte selecteren** > **email**
-* Voor SMS-enquêtes: **telefoon** moet worden toegewezen als een doelveld met **Doelveld** > **Naamruimte selecteren** > **telefoon**. Telefoonnummers moeten de E.164-indeling hebben, waaronder een plusteken (+), een internationale aanroepcode van het land, een lokale netcode en een telefoonnummer.
+* Voor op e-mail-Gebaseerde onderzoeken, **e-mail** moet als doelgebied worden in kaart gebracht gebruikend **het gebied van het Doel** > **Uitgezochte identiteit namespace** > **e-mail**
+* Voor op SMS-Gebaseerde onderzoeken, **telefoon** moet als doelgebied worden in kaart gebracht gebruikend **het gebied van het Doel** > **Uitgezochte identiteit namespace** > **telefoon**. Telefoonnummers moeten de E.164-indeling hebben, waaronder een plusteken (+), een internationale aanroepcode van het land, een lokale netcode en een telefoonnummer.
 
 Het wordt sterk geadviseerd dat u ook extra attributen van de doeldouane in kaart brengt om gepersonaliseerde onderzoeken tot stand te brengen en extra informatie over de klant aan het onderzoeksverslag toe te voegen:
 
 * De gepersonaliseerde onderzoeken richten typisch de klant door naam
-   * De voornaam van de klant toewijzen aan **Doelveld** > **Aangepaste kenmerken selecteren** > **Kenmerknaam** > **firstname**
-   * De achternaam van de klant toewijzen aan **Doelveld** > **Aangepaste kenmerken selecteren** > **Kenmerknaam** > **lastname**
+   * Wijs de voornaam van de klant aan **gebied van het Doel** toe > **Uitgezochte douanekenmerken** > **naam van Attributen** > **firstname**
+   * Wijs de achternaam van de klant aan **gebied van het Doel** toe > **Uitgezochte douanekenmerken** > **Naam van Attributen** > **lastname**
 * Toewijzingen toevoegen voor andere aangepaste doelkenmerken naar wens
 
-![Afbeelding die een voorbeeldtoewijzing voor identiteiten en kenmerken weergeeft.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
+![ Beeld dat een steekproefafbeelding voor identiteiten en attributen toont.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
 
 >[!IMPORTANT]
 > 
-> Deel uw Media-leveringsteam exact **Kenmerknamen** voor elk doelattribuut van de douane u toewijst gebruikend **Doelveld** > **Aangepaste kenmerken selecteren** > **Kenmerknaam**. Mogelijk wilt u een schermafbeelding maken van de toewijzingspagina om deze rechtstreeks te delen.
+> Het aandeel met uw Media leveringsteam de nauwkeurige **namen van Attributen** voor elk attribuut van de doeldouane u in kaart brengt gebruikend **gebied van het Doel** > **Uitgezochte douanekenmerken** > **naam van Attributen**. Mogelijk wilt u een schermafbeelding maken van de toewijzingspagina om deze rechtstreeks te delen.
 
 ## Geëxporteerde gegevens {#exported-data}
 
 Zodra u uw segment(en) hebt geactiveerd naar de bestemming, informeert u het leveringsteam van Medallia, dat de geëxporteerde gegevens van Adobe Experience Platform naar Medallia zal kunnen valideren. Let op: enquêtes kunnen alleen in Medallia worden geactiveerd nadat de gegevens zijn geverifieerd; voorafgaand aan deze verificatie worden de gegevens naar Medallia geëxporteerd, maar worden geen enquêtes naar de klanten gestart.
 
-Hieronder ziet u een voorbeeld van JSON van de geëxporteerde gegevens, waarin de voorbeeldtoewijzing uit de bovenstaande schermafbeelding in het dialoogvenster **Kenmerken en identiteiten toewijzen** sectie:
+Een steekproef JSON van de uitgevoerde gegevens wordt hieronder verstrekt, die de voorbeeldafbeelding van het scherm hierboven in de **attributen en identiteiten van de Kaart** sectie gebruikt:
 
 ```json
 [
@@ -150,4 +150,4 @@ Hieronder ziet u een voorbeeld van JSON van de geëxporteerde gegevens, waarin d
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).

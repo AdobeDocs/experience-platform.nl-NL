@@ -14,7 +14,7 @@ ht-degree: 0%
 
 U kunt de eigenschappen van een verbindingsspecificatie bijwerken via een PUT-bewerking. Wanneer het bijwerken van een verbindingsspecificatie door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer het creëren van een nieuwe verbindingsspecificatie in een verzoek van de POST.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /connectionSpecs/{CONNECTION_SPEC_ID}
@@ -22,7 +22,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **Verzoek**
 
-De volgende aanvraag werkt de `name` van de [!DNL MailChimp] bron die in de vorige stap is gemaakt.
+Met de volgende aanvraag wordt de `name` van de [!DNL MailChimp] -bron bijgewerkt die in de vorige stap is gemaakt.
 
 ```shell
 PUT -X GET \
@@ -203,7 +203,7 @@ PUT -X GET \
   }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle vraag keert de bijgewerkte details van de verbindingsspecificatie, met inbegrip van zijn bijgewerkte naam terug.
 

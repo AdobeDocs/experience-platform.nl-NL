@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # [!UICONTROL Payment Item] gegevenstype
 
-[!UICONTROL Payment Item] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat een betaling verbonden aan een orde beschrijft die het type van betaling, het bedrag, en de bijbehorende munt bepaalt.
+[!UICONTROL Payment Item] is een standaard XDM-gegevenstype (Experience Data Model) waarmee een betaling wordt beschreven voor een bestelling die het type betaling, het bedrag en de bijbehorende valuta definieert.
 
 <img src="../images/data-types/payment-item.PNG" width="400" /><br />
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `currencyCode` | String | De ISO 4217-valutacode die wordt gebruikt voor de totalen van de orders. Alle instanties moeten overeenkomen met de reguliere expressie `^[A-Z]{3}$`. Voorbeelden zijn `USD` en `EUR`. |
+| `currencyCode` | String | De ISO 4217-valutacode die wordt gebruikt voor de totalen van de orders. Alle instanties moeten overeenkomen met de reguliere expressie `^[A-Z]{3}$` . Voorbeelden zijn `USD` en `EUR` . |
 | `paymentAmount` | Dubbel | De waarde van de betaling. |
 | `paymentType` | String | De betalingsmethode voor deze bestelling. Tot de geaccepteerde opsommingswaarden behoren: <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
 | `transactionID` | String | De unieke transactie-id voor dit betalingsobject. |
@@ -28,5 +28,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.schema.json)

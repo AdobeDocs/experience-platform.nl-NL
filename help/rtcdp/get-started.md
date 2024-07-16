@@ -50,15 +50,15 @@ Met Real-Time CDP, aangedreven door Adobe Experience Platform, kan de marketingo
 
 Deze zelfstudie bevat de volgende stappen:
 
-1. De [klantprofiel](#customer-profile).
-1. [Persoonlijk maken](#personalizing-the-user-experience) de gebruikerservaring.
-1. Gebruiken [meerdere gegevensbronnen](#using-multiple-data-sources).
-1. [Een gegevensbron configureren](#configuring-a-data-source).
-1. [De gegevens verzamelen](#bringing-the-data-together-for-a-specific-customer) voor een specifieke klant.
-1. Instellen [publiek](#audiences).
-1. Instellen [bestemmingen](#destinations).
-1. [Het profiel op verschillende apparaten plaatsen](#cross-device-identity-stitching).
-1. [Het profiel analyseren](#analyzing-the-profile).
+1. Bouw het [ klantenprofiel ](#customer-profile).
+1. [ personaliseer ](#personalizing-the-user-experience) de gebruikerservaring.
+1. Gebruik [ veelvoudige gegevensbronnen ](#using-multiple-data-sources).
+1. [ vorm een gegevensbron ](#configuring-a-data-source).
+1. [ verzamel de gegevens ](#bringing-the-data-together-for-a-specific-customer) voor een specifieke klant.
+1. Opstelling [ publiek ](#audiences).
+1. Opstelling [ bestemmingen ](#destinations).
+1. [ Tik het profiel over apparaten ](#cross-device-identity-stitching).
+1. [ analyseer het profiel ](#analyzing-the-profile).
 
 ## Klantprofiel
 
@@ -66,7 +66,7 @@ Wanneer klanten uw site voor het eerst bezoeken, weet u niets over hen.
 
 ![afbeelding](assets/luma-site.png)
 
-Tijdens het navigeren worden gegevens in real-time vastgelegd en niet alleen naar een rapportsuite in Adobe Analytics verzonden, maar ook rechtstreeks naar Adobe Experience Platform. Terwijl gegevens worden verzameld, vormt u één weergave van de consument op basis van gedragsgegevens in [!DNL Experience Platform's real-time customer profile].
+Tijdens het navigeren worden gegevens in real-time vastgelegd en niet alleen naar een rapportsuite in Adobe Analytics verzonden, maar ook rechtstreeks naar Adobe Experience Platform. Terwijl gegevens worden verzameld, vormt u één weergave van de consument op basis van gedragsgegevens in [!DNL Experience Platform's real-time customer profile] .
 
 Veel bezoekers van de website zijn waarschijnlijk herhaalde klanten die eerder bij Luma hebben aangeschaft.  Het is belangrijk voor Luma om overseinen en dienstenaanbod te personaliseren om zowel nieuwe als herhaalde bezoekers, evenals bekende klanten te richten.
 
@@ -76,7 +76,7 @@ Een niet-geïdentificeerde bezoeker navigeert bijvoorbeeld naar het gedeelte Men
 
 ![afbeelding](assets/luma-sweatshirts.png)
 
-Aangezien de klant navigeert om meer over deze producten te leren, worden deze productmeningen verzameld in Adobe Analytics en verzonden naar [!DNL Experience Platform].
+Wanneer de klant navigeert voor meer informatie over deze producten, worden deze productweergaven verzameld in Adobe Analytics en verzonden naar [!DNL Experience Platform] .
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
@@ -95,9 +95,9 @@ Twee middelpunten worden samengevoegd:
 * De anonieme bladergegevens
 * De bestaande gegevens van Sarah Rose-account
 
-Beide middelpunten worden in één profiel gecombineerd in [!DNL Experience Platform]. Luma heeft nu een eensgezind beeld van deze consument.
+Beide middelpunten worden gecombineerd in één profiel in [!DNL Experience Platform] . Luma heeft nu een eensgezind beeld van deze consument.
 
-Op basis van het bladergedrag van de anonieme bezoeker in de sectie Men van de plaats, zou men kunnen veronderstellen dat de klant een man was. Nu ze zich heeft aangemeld, herkent Luma Sarah Rose. Luma gebruikt de kracht van de [!DNL Real-Time Customer Profile] om het overseinen te verfijnen die aan haar over kanalen worden geleverd.
+Op basis van het bladergedrag van de anonieme bezoeker in de sectie Men van de plaats, zou men kunnen veronderstellen dat de klant een man was. Nu ze zich heeft aangemeld, herkent Luma Sarah Rose. Luma gebruikt de macht van [!DNL Real-Time Customer Profile] om het overseinen te raffineren die aan haar over kanalen worden geleverd.
 
 ## De gebruikerservaring aanpassen
 
@@ -142,11 +142,11 @@ Al deze gegevens uit verschillende bronnen worden samengevoegd in één enkel un
 
 ## Een gegevensbron configureren
 
-Gebruiken [!DNL Real-Time Customer Data Platform] om nieuwe gegevensbronnen in Platform te introduceren. Real-Time CDP bevat een catalogus met gegevensbronnen die snel en eenvoudig aan het profiel kunnen worden toegevoegd.
+Gebruik [!DNL Real-Time Customer Data Platform] om nieuwe gegevensbronnen naar het platform te brengen. Real-Time CDP bevat een catalogus met gegevensbronnen die snel en eenvoudig aan het profiel kunnen worden toegevoegd.
 
 ![afbeelding](assets/luma-source-cat.png)
 
-Als u bijvoorbeeld de CRM-gegevens van Luma wilt invoeren, filtert u de catalogus op *CRM* en alle connectors die *CRM* worden weergegeven. Toevoegen [!DNL Microsoft Dynamics CRM] gegevens:
+Bijvoorbeeld, om de gegevens van CRM van Luma in te nemen, filter de catalogus door *CRM*, en alle uit-van-de-doos schakelaars die *CRM* bevatten zijn vermeld. [!DNL Microsoft Dynamics CRM] gegevens toevoegen:
 
 1. Autoriseer de verbinding.
 
@@ -156,9 +156,9 @@ Als u bijvoorbeeld de CRM-gegevens van Luma wilt invoeren, filtert u de catalogu
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   Selecteer bijvoorbeeld **[!UICONTROL Contacts]**. Er wordt automatisch een voorvertoning van de contactgegevens geladen, zodat u zeker weet dat alles er naar behoren uitziet.
+   Selecteer bijvoorbeeld **[!UICONTROL Contacts]** . Er wordt automatisch een voorvertoning van de contactgegevens geladen, zodat u zeker weet dat alles er naar behoren uitziet.
 
-   Real-Time CDP haalt veel handmatige werk uit dit proces door standaardvelden automatisch toe te wijzen aan de [!DNL Experience Data Model] (XDM)-profielschema.
+   Real-Time CDP haalt veel handmatige werkzaamheden uit dit proces door standaardvelden automatisch toe te wijzen aan het [!DNL Experience Data Model] (XDM) profielschema.
 
 1. Controleer de veldtoewijzingen.
 
@@ -171,7 +171,7 @@ Als u bijvoorbeeld de CRM-gegevens van Luma wilt invoeren, filtert u de catalogu
 
    ![afbeelding](assets/luma-source-sched.png)
 
-Het is klaar. Je hebt net toegevoegd [!DNL Microsoft CRM] als gegevensbron in [!DNL Experience Platform].
+Het is klaar. U hebt zojuist [!DNL Microsoft CRM] als gegevensbron toegevoegd aan [!DNL Experience Platform] .
 
 ### Ingesloten gegevens labelen voor gebruiksbeleid
 
@@ -193,16 +193,16 @@ Alle profielinformatie Luma heeft over Sarah displays. Dit omvat haar persoonlij
 
 | Categorie | Beschrijving |
 |---|---|
-| Identiteiten | Hiermee geeft u de identiteiten weer die aan elkaar zijn gekoppeld in [!DNL Platform] van Sarah&#39;s interacties met Luma via kanalen en apparaten. Haar ECID van de website wordt weergegeven. Haar identiteit omvat ook de ECID van haar mobiele app, haar e-mailadres, een CRM-id van de onlangs toegevoegde [!DNL Microsoft Dynamics] dataset, en een loyaliteitsidentiteitskaart die in Adobe Experience Platform van het systeem van de loyaliteit van de Luma wordt overgegaan. |
+| Identiteiten | Toont de identiteiten die in [!DNL Platform] van de interactie van Sarah met Luma over kanalen en apparaten met elkaar verbonden zijn. Haar ECID van de website wordt weergegeven. Haar identiteit omvat ook de ECID van haar mobiele app, haar e-mailadres, een CRM-id van de onlangs toegevoegde [!DNL Microsoft Dynamics] dataset en een loyaliteitsidentiteitskaart die vanuit het Luma-loyaliteitssysteem aan Adobe Experience Platform is doorgegeven. |
 | Gebeurtenissen | Toont alle interactiegegevens van Sarah met het merk Luma. Dit omvat het item dat ze net bekeken heeft, alles wat ze in het verleden bekeken heeft, de e-mails die ze heeft ontvangen, haar interacties met het callcenter, en op welk kanaal en apparaat deze interacties plaatsvonden. |
 
 Het Real-Time CDP-profiel reduceert de workflow van het marketingteam van Luma van weken tot minuten en ontgrendelt mogelijkheden voor personalisatie op basis van deze 360-gradenweergave. In het profiel worden de gedragsgegevens samengevoegd vanaf het moment dat ze door de site bladert voordat ze zich aanmeldt, met haar bestaande klantprofiel, en wordt een uitgebreide weergave van Sarah gemaakt.
 
-Het marketingteam kan deze verbeterde functie gebruiken. [!DNL Real-Time Customer Profile] om Sarah&#39;s ervaring beter te personaliseren en haar merkloyaliteit met Luma te vergroten.
+Het marketingteam kan deze verbeterde [!DNL Real-Time Customer Profile] gebruiken om Sarah&#39;s ervaring beter te personaliseren en haar merkloyaliteit met Luma te vergroten.
 
 ## Doelgroepen
 
-Dankzij de krachtige Adobe Experience Platform-segmentatiemogelijkheden kunnen marketers kenmerken, gebeurtenissen en bestaand publiek combineren op basis van gegevens die zijn vastgelegd in de [!DNL Real-Time Customer Profile].
+Dankzij de krachtige Adobe Experience Platform-segmentatiemogelijkheden kunnen marketers kenmerken, gebeurtenissen en bestaand publiek combineren op basis van gegevens die zijn vastgelegd in de [!DNL Real-Time Customer Profile] .
 
 <!-- ![image](assets/luma-segments.png) -->
 
@@ -260,7 +260,7 @@ U kunt de publieksuitvoer ook plannen om op een bepaald tijdstip te beginnen of 
 >
 >Als u het datumveld selecteert, wordt dit automatisch 90 dagen gepland.
 
-Selecteren **[!UICONTROL Save]** naar de volgende pagina gaan.
+Selecteer **[!UICONTROL Save]** om naar de volgende pagina te gaan.
 
 Wanneer een klant in dit publiek een aankoop doet, wordt zijn lidmaatschap aan dit publiek onderdrukt in echt - tijd. Ze komen niet meer in aanmerking omdat hun status is gewijzigd.
 
@@ -272,7 +272,7 @@ Adobe Experience Platform bevat privacy- en beveiligingsinstellingen om te bepal
 
 Als uw activiteit beleid schendt, verschijnt een waarschuwing. Deze waarschuwing bevat informatie over de gegevenslijn die u kan helpen identificeren waarom het beleid werd overtreden, en wat u kunt doen om de schending op te lossen.
 
-Met deze bedieningsorganen [!DNL Experience Platform] Luma helpt om zich aan de regels en de markt verantwoordelijk te houden. Deze controles zijn flexibel en kunnen worden gewijzigd om aan de vereisten van de veiligheids en governanceteams van de Luma te voldoen, die hen toestaan om regionale en organisatorische vereisten voor het beheren van bekende en onbekende klantengegevens vertrouwelijk te behandelen.
+Met deze besturingselementen helpt [!DNL Experience Platform] Luma om zich aan de voorschriften te houden en verantwoord op de markt te brengen. Deze controles zijn flexibel en kunnen worden gewijzigd om aan de vereisten van de veiligheids en governanceteams van de Luma te voldoen, die hen toestaan om regionale en organisatorische vereisten voor het beheren van bekende en onbekende klantengegevens vertrouwelijk te behandelen.
 
 <!--
 

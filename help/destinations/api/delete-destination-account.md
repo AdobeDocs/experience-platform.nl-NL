@@ -7,16 +7,16 @@ description: Leer hoe u een doelaccount kunt verwijderen met de Flow Service API
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
 
 # Een doelaccount verwijderen met de Flow Service API
 
-[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
-Voordat u gegevens kunt activeren, moet u verbinding maken met de bestemming door eerst een doelaccount in te stellen. Deze zelfstudie behandelt de stappen voor het verwijderen van bestemmingsaccounts die niet meer nodig zijn via het dialoogvenster [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Voordat u gegevens kunt activeren, moet u verbinding maken met de bestemming door eerst een doelaccount in te stellen. Dit leerprogramma behandelt de stappen om bestemmingsrekeningen te schrappen die niet meer nodig zijn door [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) te gebruiken.
 
 >[!NOTE]
 >
@@ -24,34 +24,34 @@ Voordat u gegevens kunt activeren, moet u verbinding maken met de bestemming doo
 
 ## Aan de slag {#get-started}
 
-Voor deze zelfstudie moet u een geldige verbinding-id hebben. De verbinding-id vertegenwoordigt de accountverbinding met het doel. Als u geen geldige verbinding-id hebt, selecteert u het gewenste doel in het menu [doelcatalogus](../catalog/overview.md) en voert u de volgende stappen uit: [verbinden met de bestemming](../ui/connect-destination.md) voordat u deze zelfstudie probeert.
+Voor deze zelfstudie moet u een geldige verbinding-id hebben. De verbindings-id vertegenwoordigt de accountverbinding met de bestemming. Als u geen geldige verbindingsidentiteitskaart hebt, selecteer uw bestemming van keus van de [ bestemmingscatalogus ](../catalog/overview.md) en volg de stappen die aan [ worden geschetst verbinden met de bestemming ](../ui/connect-destination.md) alvorens dit leerprogramma te proberen.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Doelen](../home.md): [!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-* [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Doelen ](../home.md): [!DNL Destinations] zijn pre-gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+* [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u nodig hebt om een doelaccount te kunnen verwijderen met de opdracht [!DNL Flow Service] API.
+De volgende secties bevatten aanvullende informatie die u moet weten om een doelaccount met de [!DNL Flow Service] API te kunnen verwijderen.
 
 ### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen {#gather-values-for-required-headers}
 
-Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform], met inbegrip van die welke [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Als de `x-sandbox-name` header is niet opgegeven, aanvragen worden opgelost onder de `prod` sandbox.
+>Als de header `x-sandbox-name` niet is opgegeven, worden aanvragen opgelost onder de sandbox `prod` .
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
@@ -60,17 +60,17 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 ## De verbinding-id zoeken van de doelaccount die u wilt verwijderen {#find-connection-id}
 
 >[!NOTE]
->Deze zelfstudie gebruikt de [Luchtvaartbestemming](../catalog/mobile-engagement/airship-attributes.md) als voorbeeld, maar de beschreven stappen zijn van toepassing op om het even welk van [beschikbare bestemmingen](../catalog/overview.md).
+>Dit leerprogramma gebruikt de [ bestemming van het Luchtschip ](../catalog/mobile-engagement/airship-attributes.md) als voorbeeld, maar de stappen die worden geschetst zijn op om het even welke [ beschikbare bestemmingen ](../catalog/overview.md) van toepassing.
 
 De eerste stap bij het verwijderen van een doelaccount is om de verbinding-id te achterhalen die overeenkomt met de doelaccount die u wilt verwijderen.
 
-Blader in de gebruikersinterface van het Experience Platform naar **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]** en selecteer de account die u wilt verwijderen door het nummer in het dialoogvenster **[!UICONTROL Destinations]** kolom.
+Blader in de gebruikersinterface van het Experience Platform naar **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]** en selecteer de account die u wilt verwijderen door het nummer in de kolom **[!UICONTROL Destinations]** te selecteren.
 
-![Doelaccount selecteren om te verwijderen](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
+![ Uitgezochte bestemmingsrekening om te schrappen ](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
 
 Vervolgens kunt u de verbinding-id van het doelaccount ophalen via de URL in uw browser.
 
-![Verbindings-id ophalen van URL](/help/destinations/assets/api/delete-destination-account/find-connection-id.png)
+![ wint verbindingsidentiteitskaart van URL ](/help/destinations/assets/api/delete-destination-account/find-connection-id.png) terug
 
 <!--
 
@@ -148,13 +148,12 @@ A successful response returns the current details of your connection including i
 >
 >Voordat u de doelaccount verwijdert, moet u bestaande gegevensstromen naar de doelaccount verwijderen.
 >Als u bestaande gegevensstromen wilt verwijderen, raadpleegt u de volgende pagina&#39;s:
->* [De gebruikersinterface van het Experience Platform gebruiken](../ui/delete-destinations.md) bestaande gegevensstromen te verwijderen;
->* [De Flow Service-API gebruiken](delete-destination-dataflow.md) om bestaande gegevensstromen te schrappen.
+>* [ gebruik het Experience Platform UI ](../ui/delete-destinations.md) om bestaande dataflows te schrappen;
+>* [ Gebruik de Dienst API van de Stroom ](delete-destination-dataflow.md) om bestaande dataflows te schrappen.
 
+Nadat u een verbinding-id hebt en hebt gecontroleerd dat er geen gegevensstromen naar de doelaccount bestaan, voert u een DELETE-aanvraag uit naar de [!DNL Flow Service] API.
 
-Zodra u een verbindings identiteitskaart hebt en ervoor gezorgd dat geen dataflows aan de bestemmingsrekening bestaan, voer een verzoek van DELETE aan [!DNL Flow Service] API.
-
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /connections/{CONNECTION_ID}
@@ -162,7 +161,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | De unieke `id` waarde voor de verbinding u wilt schrappen. |
+| `{CONNECTION_ID}` | De unieke `id` -waarde voor de verbinding die u wilt verwijderen. |
 
 **Verzoek**
 
@@ -175,14 +174,14 @@ curl -X DELETE \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst. U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan de verbinding te proberen. De API retourneert een HTTP 404 (Not Found)-fout die aangeeft dat de doelaccount is verwijderd.
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Verwijs naar [ API statuscodes ](../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u de opdracht [!DNL Flow Service] API om bestaande doelaccounts te verwijderen. Voor meer informatie bij het gebruiken van bestemmingen, verwijs naar [Overzicht van doelen](/help/destinations/home.md).
+Door deze zelfstudie te volgen, hebt u de [!DNL Flow Service] API gebruikt om bestaande doelaccounts te verwijderen. Voor meer informatie bij het gebruiken van bestemmingen, verwijs naar het [ overzicht van bestemmingen ](/help/destinations/home.md).

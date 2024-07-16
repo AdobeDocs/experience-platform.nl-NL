@@ -5,58 +5,58 @@ exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 source-git-commit: 60590a77859320891717244eec58b556935354b5
 workflow-type: tm+mt
 source-wordcount: '1315'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # Machtigingsbeheer voor gegevensverzameling in Experience Platform
 
-[Gegevensverzameling in Adobe Experience Platform](./home.md) bestaat uit verschillende technologieën die samenwerken om uw gegevens te verzamelen en over te dragen. De toegang tot deze technologieën wordt gecontroleerd door granulaire op rol-gebaseerde toestemmingen in Adobe Admin Console.
+[ de inzameling van Gegevens in Adobe Experience Platform ](./home.md) wordt samengesteld van verscheidene verschillende technologieën die samenwerken om uw gegevens te verzamelen en over te brengen. De toegang tot deze technologieën wordt gecontroleerd door granulaire op rol-gebaseerde toestemmingen in Adobe Admin Console.
 
 Deze gids toont u hoe te om toestemmingen voor de eigenschappen van de gegevensinzameling te beheren.
 
 ## Aan de slag
 
-Om toegangsbeheer voor gegevensinzameling te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een productintegratie met de Inzameling van Gegevens van Adobe Experience Platform heeft. De minimale rol die machtigingen kan verlenen of intrekken, is een **productprofielbeheerder**. Andere beheerderrollen die toestemmingen kunnen beheren zijn **productbeheerders** (kan alle profielen in een product beheren) en **systeembeheerders** (geen beperkingen). Zie het artikel over [administratieve taken](https://helpx.adobe.com/enterprise/using/admin-roles.html) in de Adobe Enterprise administration guide voor meer informatie.
+Om toegangsbeheer voor gegevensinzameling te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een productintegratie met de Inzameling van Gegevens van Adobe Experience Platform heeft. De minimumrol die toestemmingen kan verlenen of terugtrekken is de beheerder van het a **productprofiel**. Andere beheerderrollen die toestemmingen kunnen beheren zijn **productbeheerders** (kan alle profielen binnen een product beheren) en **systeembeheerders** (geen beperkingen). Zie het artikel op [ administratieve rollen ](https://helpx.adobe.com/enterprise/using/admin-roles.html) in de het beleidsgids van de Onderneming van de Adobe voor meer informatie.
 
-Deze gids veronderstelt u vertrouwd met basisconcepten van de Admin Console zoals productprofielen en hoe zij producttoestemmingen aan individuele gebruikers en groepen verlenen. Zie de klasse [Gebruikershandleiding voor Admin Consoles](https://helpx.adobe.com/enterprise/using/admin-console.html).
+Deze gids veronderstelt u vertrouwd met basisconcepten van de Admin Console zoals productprofielen en hoe zij producttoestemmingen aan individuele gebruikers en groepen verlenen. Voor meer informatie, zie de [ gebruikersgids van de Admin Console ](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
 
 ## Beschikbare machtigingen
 
-De relevante toestemmingen voor de Inzameling van Gegevens worden verstrekt door twee productbenamingen in Admin Console: **Adobe Experience Platform** en **Adobe Experience Platform-gegevensverzameling**. In de volgende secties worden de machtigingen beschreven die onder elk product worden verleend, en worden beschrijvingen gegeven van de specifieke mogelijkheden waartoe deze toegang verlenen.
+De relevante toestemmingen voor de Inzameling van Gegevens worden verstrekt door twee productaanwijzingen in Admin Console: **Adobe Experience Platform** en **de Inzameling van Gegevens van Adobe Experience Platform**. In de volgende secties worden de machtigingen beschreven die onder elk product worden verleend, en worden beschrijvingen gegeven van de specifieke mogelijkheden waartoe deze toegang verlenen.
 
 ### Adobe Experience Platform-machtigingen
 
-De toestemmingen onder Adobe Experience Platform omvatten toegang tot gegevensstromen, identiteiten, schema&#39;s, en zandbakken. Voor stappen voor het configureren van Adobe Experience Platform-machtigingen raadpleegt u de [gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview.md).
+De toestemmingen onder Adobe Experience Platform omvatten toegang tot gegevensstromen, identiteiten, schema&#39;s, en zandbakken. Voor stappen op hoe te om de toestemmingen van Adobe Experience Platform te vormen, zie de [ gebruikershandleiding van de toegangscontrole ](../access-control/ui/overview.md).
 
 | Categorie | Machtiging | Beschrijving |
 | --- | --- | --- |
-| Sandboxes | (N.v.t.) | Afhankelijk van de [sandboxen](../sandboxes/home.md) die onder uw organisatie zijn gecreeerd, kunt u toegang tot elk van hen door deze toestemmingencategorie in Admin Console controleren. |
-| Gegevensmodellering | Schema&#39;s beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [XDM-schema&#39;s (Experience Data Model)](../xdm/home.md). |
+| Sandboxes | (N.v.t.) | Afhankelijk van de [ zandbakken ](../sandboxes/home.md) die onder uw organisatie zijn gecreeerd, kunt u toegang tot elk van hen door deze toestemmingscategorie in Admin Console controleren. |
+| Gegevensmodellering | Schema&#39;s beheren | Verleent de capaciteit om, [ schema&#39;s van de Gegevens van de Ervaring te bekijken tot stand te brengen en uit te geven (XDM) ](../xdm/home.md). |
 | Gegevensmodellering | Schema&#39;s weergeven | Hiermee verleent u alleen-lezen toegang tot schema&#39;s. |
-| Identity Management | Naamruimten beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [naamruimten](../identity-service/features/namespaces.md). |
+| Identity Management | Naamruimten beheren | Verleent de capaciteit om te bekijken, tot stand te brengen en uit te geven [ identiteit namespaces ](../identity-service/features/namespaces.md). |
 | Identity Management | Identiteitsnaamruimten weergeven | Hiermee wordt alleen-lezen toegang verleend tot naamruimten. |
-| Dataverzameling | Gegevensstromen beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [datastreams](../datastreams/overview.md). |
+| Dataverzameling | Gegevensstromen beheren | Verleent de capaciteit om te bekijken, tot stand te brengen en uit te geven [ gegevensstromen ](../datastreams/overview.md). |
 | Dataverzameling | Gegevensstromen weergeven | Biedt alleen-lezen toegang tot gegevensstreams. |
 
 {style="table-layout:auto"}
 
 ### Machtigingen voor Adobe Experience Platform-gegevensverzameling
 
-Machtigingen onder Adobe Experience Platform Data Collection beheren toegang tot tags en mogelijkheden voor het doorsturen van gebeurtenissen, waaronder eigenschappen, extensies en omgevingen. Voor stappen op hoe te om de toestemmingen van de Inzameling van Gegevens van Adobe Experience Platform te vormen, zie [sectie hieronder](#manage).
+Machtigingen onder Adobe Experience Platform Data Collection beheren toegang tot tags en mogelijkheden voor het doorsturen van gebeurtenissen, waaronder eigenschappen, extensies en omgevingen. Voor stappen op hoe te om de toestemmingen van de Inzameling van Gegevens van Adobe Experience Platform te vormen, zie de [ hieronder sectie ](#manage).
 
 | Categorie | Machtiging | Beschrijving |
 | --- | --- | --- |
-| Platforms | Web | Toegang tot [webeigenschappen](../tags/ui/administration/companies-and-properties.md) in combinatie met andere eigendomsrechten. |
-| Platforms | Mobiel | Toegang tot [mobiele eigenschappen](../tags/ui/administration/companies-and-properties.md) in combinatie met andere eigendomsrechten. |
-| Platforms | Rand | Toegang tot [Eigenschappen van Event Forwarding Edge](../tags/ui/event-forwarding/getting-started.md) in combinatie met andere eigendomsrechten. |
-| Eigenschappen | (N.v.t.) | Afhankelijk van de eigenschappen die onder uw organisatie zijn gecreeerd, kunt u toegang tot elk van hen door deze toestemmingscategorie in Admin Console controleren.<br><br>De toegewezen bezitsrechten van een gebruiker zijn slechts op de eigenschappen van toepassing zij toegang tot door deze toestemmingscategorie zijn verleend. |
-| Eigendomsrechten | Goedkeuren | Biedt de mogelijkheid om een bibliotheekbuild goed te keuren als onderdeel van de [publicatiestroom](../tags/ui/publishing/publishing-flow.md). |
-| Eigendomsrechten | Ontwikkelen | Biedt de mogelijkheid om een bibliotheekbuild te ontwikkelen als onderdeel van de [publicatiestroom](../tags/ui/publishing/publishing-flow.md). |
+| Platforms | Web | Verleent toegang tot [ Webeigenschappen ](../tags/ui/administration/companies-and-properties.md) wanneer gecombineerd met andere bezitsrechten. |
+| Platforms | Mobiel | Verleent toegang tot [ mobiele eigenschappen ](../tags/ui/administration/companies-and-properties.md) wanneer gecombineerd met andere bezitsrechten. |
+| Platforms | Edge | Verleent toegang tot [ Gebeurtenis die de eigenschappen van Edge ](../tags/ui/event-forwarding/getting-started.md) door:sturen wanneer gecombineerd met andere bezitsrechten. |
+| Properties | (N.v.t.) | Afhankelijk van de eigenschappen die onder uw organisatie zijn gecreeerd, kunt u toegang tot elk van hen door deze toestemmingscategorie in Admin Console controleren.<br><br> de toegewezen bezitsrechten van A gebruiker zijn slechts op de eigenschappen van toepassing zij toegang tot door deze toestemmingscategorie zijn verleend. |
+| Eigendomsrechten | Goedkeuren | Verleent de capaciteit om een bibliotheek goed te keuren bouwt als deel van de [ het publiceren stroom ](../tags/ui/publishing/publishing-flow.md). |
+| Eigendomsrechten | Ontwikkelen | Verleent de capaciteit om een bibliotheek te ontwikkelen bouwt als deel van de [ het publiceren stroom ](../tags/ui/publishing/publishing-flow.md). |
 | Eigendomsrechten | Eigenschap bewerken | Biedt de mogelijkheid om de basisconfiguratie te bewerken voor de eigenschappen waartoe een gebruiker toegang heeft. |
-| Eigendomsrechten | Omgevingen beheren | Biedt de mogelijkheid om de [omgevingen](../tags/ui/publishing/environments.md) voor de eigenschappen waartoe een gebruiker toegang heeft. |
-| Eigendomsrechten | Extensies beheren | Biedt de mogelijkheid om de [extensions](../tags/ui/managing-resources/extensions/overview.md) voor de eigenschappen waartoe een gebruiker toegang heeft. |
-| Eigendomsrechten | Publiceren | Biedt de mogelijkheid om een bibliotheekbuild te publiceren als onderdeel van de [publicatiestroom](../tags/ui/publishing/publishing-flow.md). |
+| Eigendomsrechten | Omgevingen beheren | Verleent de capaciteit om de [ milieu&#39;s ](../tags/ui/publishing/environments.md) voor de eigenschappen te beheren een gebruiker heeft toegang tot. |
+| Eigendomsrechten | Extensies beheren | Verleent de capaciteit om de [ uitbreidingen ](../tags/ui/managing-resources/extensions/overview.md) voor de eigenschappen te beheren een gebruiker heeft toegang tot. |
+| Eigendomsrechten | Publish | Verleent de capaciteit om een bibliotheek te publiceren bouwt als deel van de [ het publiceren stroom ](../tags/ui/publishing/publishing-flow.md). |
 | Bedrijfsrechten | Extensies ontwikkelen | Biedt de mogelijkheid extensiepakketten te maken en te wijzigen die eigendom zijn van uw organisatie, inclusief persoonlijke releases en verzoeken om openbare release. |
 | Bedrijfsrechten | App Configurations beheren | Deze machtiging is alleen van toepassing als u een licentie voor Adobe Journey Optimizer hebt of een andere oplossing die toegang biedt tot mobiele berichten in de app en via pushberichten. Op deze manier kunt u de apps beheren die Adobe Experience Cloud kent, samen met de vereiste pushgegevens die nodig zijn om te communiceren met de Firebase Cloud Messaging-service en de Apple Push Notification-service. |
 | Bedrijfsrechten | Eigenschappen beheren | Hiermee kunt u tags (webeigenschap), gebeurtenissen doorsturen (eigenschap edge) en mobiele eigenschappen maken en beheren. |
@@ -65,11 +65,11 @@ Machtigingen onder Adobe Experience Platform Data Collection beheren toegang tot
 
 >[!NOTE]
 >
->Voor meer informatie over hoe deze toestemmingen mogelijkheden in markeringen beïnvloeden, met inbegrip van beleidsstrategieën voor gemeenschappelijke scenario&#39;s, zie de tagdocumentatie op [gebruikersmachtigingen](../tags/ui/administration/user-permissions.md).
+>Voor meer informatie over hoe deze toestemmingen mogelijkheden in markeringen beïnvloeden, met inbegrip van beleidsstrategieën voor gemeenschappelijke scenario&#39;s, zie de codedocumentatie op [ gebruikerstoestemmingen ](../tags/ui/administration/user-permissions.md).
 
-## Rechten beheren {#manage}
+## Machtigingen beheren {#manage}
 
-Machtigingen voor gegevensverzameling worden beheerd door middel van twee productbenamingen: **Adobe Experience Platform** en **Adobe Experience Platform-gegevensverzameling**.
+De toestemmingen voor gegevensinzameling worden beheerd door twee productbenamingen: **Adobe Experience Platform** en **de Inzameling van Gegevens van Adobe Experience Platform**.
 
 Raadpleeg de onderstaande subsecties voor informatie over het beheren van de relevante machtigingen onder elk product in de Admin Console:
 
@@ -82,17 +82,17 @@ Raadpleeg de onderstaande subsecties voor informatie over het beheren van de rel
 >
 >Om toestemmingen voor een rol te beheren, zult u beheerderrechten vereisen. Neem contact op met de systeembeheerder als u geen beheerdersrechten hebt.
 
-Experience Cloud **[!UICONTROL Permissions]** kunt u gebruikersrollen en beleid bepalen om toegang voor eigenschappen en voorwerpen binnen een producttoepassing te beheren.
+Met de sectie Experience Cloud **[!UICONTROL Permissions]** kunt u gebruikersrollen en beleid definiëren voor het beheren van de toegang voor functies en objecten in een producttoepassing.
 
-Doorheen [!UICONTROL Permissions], kunt u rollen tot stand brengen en beheren en de gewenste middeltoestemmingen voor deze rollen toewijzen.
+Via [!UICONTROL Permissions] kunt u rollen maken en beheren en de gewenste resourcemachtigingen voor deze rollen toewijzen.
 
-![Adobe Experience Cloud markeert het machtigingsproduct.](./images/permissions/permissions-product.png)
+![ Adobe Experience Cloud die het product van Toestemmingen benadrukt.](./images/permissions/permissions-product.png)
 
-Als u toegang wilt tot functies voor gegevensverzameling, moet u alle machtigingen inschakelen in het dialoogvenster **[!UICONTROL Sandboxes]**, **[!UICONTROL Data Modeling]**, **[!UICONTROL Identity Management]**, en **[!UICONTROL Data Collection]** categorieën.
+Als u toegang wilt tot functies voor gegevensverzameling, moet u alle machtigingen inschakelen in de categorieën **[!UICONTROL Sandboxes]** , **[!UICONTROL Data Modeling]** , **[!UICONTROL Identity Management]** en **[!UICONTROL Data Collection]** .
 
-![Afbeelding die de productkaart voor gegevensverzameling in Admin Console weergeeft](./images/permissions/platform-permission-card.png)
+![ Beeld dat de het productkaart van de Inzameling van Gegevens in Admin Console toont ](./images/permissions/platform-permission-card.png)
 
-Zie de [gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview.md) voor gedetailleerde instructies over het beheren van de toestemmingen van het Platform.
+Zie de [ gids van de toegangscontrole UI ](../access-control/ui/overview.md) voor gedetailleerde instructies bij het beheren van de toestemmingen van het Platform.
 
 >[!NOTE]
 >
@@ -100,46 +100,46 @@ Zie de [gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview
 
 ### Rechten beheren in Adobe Experience Platform Data Collection {#manage-collection}
 
-U kunt deze machtigingen beheren door u aan te melden bij de Admin Console en de optie **[!UICONTROL Products]** in de bovenste navigatie selecteert u vervolgens **[!UICONTROL Adobe Experience Platform Data Collection]**.
+Als u deze machtigingen wilt beheren, meldt u zich aan bij de Admin Console en selecteert u **[!UICONTROL Products]** in de bovenste navigatie en selecteert u vervolgens **[!UICONTROL Adobe Experience Platform Data Collection]** .
 
-![Afbeelding die de productkaart voor gegevensverzameling in Admin Console weergeeft](./images/permissions/data-collection-card.png)
+![ Beeld dat de het productkaart van de Inzameling van Gegevens in Admin Console toont ](./images/permissions/data-collection-card.png)
 
 #### Een productprofiel selecteren of maken
 
-In het volgende scherm ziet u een lijst met beschikbare productprofielen voor gegevensverzameling onder uw organisatie, waarbij het standaardprofiel **[!DNL Default Data Collection All Access]**. U kunt desgewenst het standaardproductprofiel bewerken of u kunt **[!UICONTROL New Profile]** om er een te maken. Als u veelvoudige rollen of gebruikersgroepen in uw organisatie hebt die verschillende niveaus van toegang vereisen, zou u een afzonderlijk productprofiel voor elk van hen moeten creëren.
+In het volgende scherm ziet u een lijst met beschikbare productprofielen voor gegevensverzameling onder uw organisatie. Het standaardprofiel is **[!DNL Default Data Collection All Access]** . U kunt desgewenst het standaardproductprofiel bewerken of u kunt **[!UICONTROL New Profile]** selecteren om een profiel te maken. Als u veelvoudige rollen of gebruikersgroepen in uw organisatie hebt die verschillende niveaus van toegang vereisen, zou u een afzonderlijk productprofiel voor elk van hen moeten creëren.
 
-![Afbeelding met de productprofielen voor gegevensverzameling in Admin Console](./images/permissions/new-profile.png)
+![ Beeld dat de productprofielen voor de Inzameling van Gegevens in Admin Console toont ](./images/permissions/new-profile.png)
 
-Nadat u een productprofiel hebt geselecteerd of gemaakt, kunt u de opdracht **[!UICONTROL Edit]** Te starten pictogrammen [bewerken, machtigingen](#edit-permissions) voor het profiel, of selecteer **[!UICONTROL Users]** te beginnen tab [gebruikers toewijzen](#assign-users) naar het profiel.
+Na het selecteren van of het creëren van een productprofiel, kunt u de **[!UICONTROL Edit]** pictogrammen gebruiken om [ het uitgeven toestemmingen ](#edit-permissions) voor het profiel te beginnen, of het **[!UICONTROL Users]** lusje te selecteren om [ te beginnen toewijzend gebruikers ](#assign-users) aan het profiel.
 
-![Afbeelding met het tabblad Machtigingen voor een Admin Console met het productprofiel](./images/permissions/edit-permission-categories.png)
+![ Beeld dat het toestemmingenlusje voor een Admin Console van het productprofiel toont ](./images/permissions/edit-permission-categories.png)
 
 #### Machtigingen voor het productprofiel bewerken {#edit-permissions}
 
 Wanneer u machtigingen voor een profiel bewerkt, worden in de linkerkolom de beschikbare machtigingen vermeld, terwijl de machtigingen die in het profiel zijn opgenomen in de rechterkolom worden weergegeven. Selecteer de vermelde toestemmingen om hen tussen één van beide kolom te bewegen.
 
-![Afbeelding met machtigingen die zijn toegevoegd onder de meegeleverde kolom](./images/permissions/added-permissions.png)
+![ Beeld die toestemmingen tonen onder de inbegrepen kolom worden toegevoegd ](./images/permissions/added-permissions.png)
 
 Machtigingen zijn ingedeeld in categorieën. Als u wilt schakelen tussen categorieën, selecteert u de gewenste categorie in de linkernavigatie.
 
-![Afbeelding met de sectie bedrijfsrechten onder machtigingen](./images/permissions/switch-category.png)
+![ Beeld dat de sectie van bedrijfrechten onder toestemmingen toont ](./images/permissions/switch-category.png)
 
-Selecteren **[!UICONTROL Save]** zodra u klaar bent met het configureren van machtigingen.
+Selecteer **[!UICONTROL Save]** nadat u de machtigingen hebt geconfigureerd.
 
-![Afbeelding met de machtigingsconfiguratie die wordt opgeslagen voor het productprofiel](./images/permissions/save-permissions.png)
+![ Beeld dat de toestemmingsconfiguratie toont die voor het productprofiel wordt bewaard ](./images/permissions/save-permissions.png)
 
 De weergave van het productprofiel wordt opnieuw weergegeven met de toegevoegde machtigingen weergegeven.
 
-![Afbeelding met de toegevoegde machtigingen voor het productprofiel](./images/permissions/permissions-added.png)
+![ Beeld dat de toegevoegde toestemmingen voor het productprofiel ](./images/permissions/permissions-added.png) toont
 
 #### Gebruikers toewijzen aan het productprofiel {#assign-users}
 
-Als u gebruikers wilt toewijzen aan het productprofiel (en hun de geconfigureerde machtigingen van het profiel wilt verlenen), selecteert u de optie **[!UICONTROL Users]** tab, gevolgd door **[!UICONTROL Add user]**.
+Als u gebruikers wilt toewijzen aan het productprofiel (en hun de geconfigureerde machtigingen van het profiel wilt verlenen), selecteert u het tabblad **[!UICONTROL Users]** , gevolgd door **[!UICONTROL Add user]** .
 
-![Afbeelding die het tabblad Gebruikers voor een productprofiel in Admin Console weergeeft](./images/permissions/manage-users.png)
+![ Beeld dat het gebruikerslusje voor een productprofiel in Admin Console toont ](./images/permissions/manage-users.png)
 
-Voor meer informatie over het beheren van gebruikers voor een productprofiel raadpleegt u de [Documentatie Admin Console](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html).
+Voor meer informatie bij het beheren van gebruikers voor een productprofiel, zie de [ documentatie van de Admin Console ](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html).
 
 ## Volgende stappen
 
-Deze gids behandelde de beschikbare toestemmingen voor de Inzameling van Gegevens en hoe te om hen door Admin Console te beheren. Raadpleeg voor meer informatie over het beheren van machtigingen voor andere Adobe Experience Platform-mogelijkheden de [toegangsbeheerdocumentatie](../access-control/home.md).
+Deze gids behandelde de beschikbare toestemmingen voor de Inzameling van Gegevens en hoe te om hen door Admin Console te beheren. Voor meer informatie bij het beheren van toestemmingen voor andere mogelijkheden van Adobe Experience Platform, verwijs naar de [ documentatie van de toegangscontrole ](../access-control/home.md).

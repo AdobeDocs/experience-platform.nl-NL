@@ -20,12 +20,12 @@ Identiteiten die verwant zijn in een identiteitsgrafiek, ongeacht naamruimte, wo
 
 Haal alle clusterleden op voor één identiteit.
 
-U kunt de optionele `graph-type` parameter om de identiteitsgrafiek aan te geven waaruit de cluster moet komen. De opties zijn:
+U kunt de optionele parameter `graph-type` gebruiken om de identiteitsgrafiek aan te geven waaruit de cluster moet worden opgehaald. De opties zijn:
 
 - Geen - voer geen identiteitsstitching uit.
-- Privégrafiek - Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek. Indien niet `graph-type` is opgegeven, is dit de standaardinstelling.
+- Privégrafiek - Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek. Als er geen `graph-type` is opgegeven, is dit de standaardinstelling.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAMETERS}
@@ -33,7 +33,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **Verzoek**
 
-Optie 1: Geef de identiteit op als naamruimte (`nsId`, op ID) en ID-waarde (`id`).
+Optie 1: Verstrek de identiteit als namespace (`nsId`, door identiteitskaart) en waarde van identiteitskaart (`id`).
 
 ```shell
 curl -X GET \
@@ -44,7 +44,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 2: Geef de identiteit op als naamruimte (`ns`, op naam) en ID-waarde (`id`).
+Optie 2: Verstrek de identiteit als namespace (`ns`, door naam) en waarde van identiteitskaart (`id`).
 
 ```shell
 curl -X GET \
@@ -55,7 +55,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 3: Geef de identiteit op als XID (`xid`). Zie de sectie over dit document voor meer informatie over het verkrijgen van de XID van een identiteit [XID ophalen voor een identiteit](./list-native-id.md).
+Optie 3: Geef de identiteit op als XID (`xid`). Voor meer op hoe te om XID van een identiteit te verkrijgen, zie de sectie van dit document die [ behandelt die XID voor een identiteit ](./list-native-id.md) krijgen.
 
 ```shell
 curl -X GET \
@@ -68,13 +68,13 @@ curl -X GET \
 
 ## Gekoppelde identiteiten voor meerdere identiteiten ophalen
 
-Gebruiken `POST` als equivalent van de partij `GET` hierboven beschreven methode om de identiteiten in de clusters van meerdere identiteiten te retourneren.
+Gebruik `POST` als een batchequivalent van de hierboven beschreven methode `GET` om de identiteiten in de clusters van meerdere identiteiten te retourneren.
 
 >[!NOTE]
 >
 >Het verzoek mag niet meer dan 1000 identiteiten bevatten. Verzoeken die langer zijn dan 1000 identiteiten, resulteren in 400 statuscode.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
@@ -84,9 +84,9 @@ POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
 
 Het volgende verzoek toont het verstrekken van een lijst van XIDs aan waarvoor om clusterleden terug te winnen.
 
-**Studieverzoek**
+**verzoek van de Stub**
 
-Gebruik van `x-uis-cst-ctx: stub` header retourneert een onderbroken reactie. Dit is een tijdelijke oplossing om de snelle vooruitgang van de integratieontwikkeling te vergemakkelijken, terwijl de diensten worden voltooid. Dit wordt vervangen wanneer het niet meer nodig is.
+Het gebruik van `x-uis-cst-ctx: stub` header retourneert een stoppelreactie. Dit is een tijdelijke oplossing om de snelle vooruitgang van de integratieontwikkeling te vergemakkelijken, terwijl de diensten worden voltooid. Dit wordt vervangen wanneer het niet meer nodig is.
 
 ```shell
 curl -X POST \
@@ -102,7 +102,7 @@ curl -X POST \
 }'
 ```
 
-**Bellen met XID&#39;s**
+**Vraag die XIDs** gebruikt
 
 ```shell
 curl -X POST \
@@ -118,7 +118,7 @@ curl -X POST \
 }' | json_pp
 ```
 
-**Aanroepen met UID&#39;s**
+**Vraag die UIDs** gebruikt
 
 ```shell
 curl -X POST \
@@ -142,9 +142,9 @@ curl -X POST \
 }' | json_pp
 ```
 
-**Antwoord**
+**Reactie**
 
-**&#39;Stubbed&#39;-respons**
+**&#39;Stubbed&#39; response**
 
 ```json
 {
@@ -184,7 +184,7 @@ curl -X POST \
 }
 ```
 
-**Volledige respons**
+**Volledige reactie**
 
 ```json
 {
@@ -242,4 +242,4 @@ curl -X POST \
 
 ## Volgende stappen
 
-Ga naar de volgende zelfstudie om [lijst van de clustergeschiedenis van een identiteit](./list-cluster-history.md)
+Ga aan het volgende leerprogramma te werk [ lijst van de clustergeschiedenis van een identiteit ](./list-cluster-history.md)

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Streaming bronnen, zoals de [HTTP API-bron](../../sources/connectors/streaming/http.md) worden momenteel niet ondersteund door het dashboard voor bewaking. Op dit moment kunt u het dashboard alleen gebruiken om batchbronnen te controleren.
+>Het stromen bronnen, zoals de [ bron van HTTP API ](../../sources/connectors/streaming/http.md) wordt momenteel niet gesteund door het controledashboard. Op dit moment kunt u het dashboard alleen gebruiken om batchbronnen te controleren.
 
 Lees dit document om te leren hoe te om het controledashboard te gebruiken om uw brongegevens in de UI van het Experience Platform te controleren.
 
@@ -21,12 +21,12 @@ Lees dit document om te leren hoe te om het controledashboard te gebruiken om uw
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Gegevensstromen](../home.md): Gegevensstromen zijn een weergave van gegevenstaken die gegevens verplaatsen over het hele platform. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile], en [!DNL Destinations].
-   * [Dataflow-uitvoering](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
-* [Bronnen](../../sources/home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
-* [Identiteitsservice](../../identity-service/home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-* [Klantprofiel in realtime](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Dataflows ](../home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
+   * [ looppas Dataflow ](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
+* [ Bronnen ](../../sources/home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [ Dienst van de Identiteit ](../../identity-service/home.md): Verkrijg een betere mening van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
+* [ Real-Time Profiel van de Klant ](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [ Sandboxes ](../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Brongegevens controleren met het dashboard voor bewaking
 
@@ -46,19 +46,19 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
 
-Selecteer in het dashboard voor bewaking de optie [!UICONTROL Sources] in de hoofdkop om het dashboard bij te werken met een weergave van de gegevensstroomopnamesnelheid van uw bronnen.
+Selecteer in het dashboard voor bewaking [!UICONTROL Sources] in de hoofdkoptekst om het dashboard bij te werken met een weergave van de gegevensstroomopnamesnelheid van uw bronnen.
 
-![Het controledashboard met de geselecteerde bronkaart.](../assets/ui/monitor-sources/sources.png)
+![ het controledashboard met de geselecteerde bronkaart.](../assets/ui/monitor-sources/sources.png)
 
-De [!UICONTROL Ingestion rate] de grafiek toont uw tarief van de gegevensopname die op uw gevormd tijdkader wordt gebaseerd. Standaard geeft het dashboard voor de bewaking de innamesnelheid van de laatste 24 uur weer. Voor stappen op hoe te om uw tijdkader te vormen, lees de gids op [bewakingstijd configureren](monitor.md#configure-monitoring-time-frame).
+In de grafiek [!UICONTROL Ingestion rate] wordt de gegevensinnamesnelheid weergegeven op basis van het geconfigureerde tijdkader. Standaard geeft het dashboard voor de bewaking de innamesnelheid van de laatste 24 uur weer. Voor stappen op hoe te om uw tijdkader te vormen, leest de gids bij [ vormend controletijdkader ](monitor.md#configure-monitoring-time-frame).
 
-De grafiek wordt standaard weergegeven. Als u de grafiek wilt verbergen, selecteert u **[!UICONTROL Metrics and graphs]** om de knevel onbruikbaar te maken en de grafiek te verbergen.
+De grafiek wordt standaard weergegeven. Als u de grafiek wilt verbergen, selecteert u **[!UICONTROL Metrics and graphs]** om het schakelen uit te schakelen en de grafiek te verbergen.
 
-![De grafiek van de metrische gegevens voor de inlaatsnelheid.](../assets/ui/monitor-sources/metrics-graph.png)
+![ de grafiek van het innametarief.](../assets/ui/monitor-sources/metrics-graph.png)
 
 Het onderste gedeelte van het dashboard toont een lijst die het huidige metriekrapport voor alle bestaande brongegevens schetst.
 
-![De metrietabel voor het monitoringdashboard.](../assets/ui/monitor-sources/metrics-table.png)
+![ de metrietabel van het controledashboard.](../assets/ui/monitor-sources/metrics-table.png)
 
 | Metrics | Beschrijving |
 | --- | --- |
@@ -76,34 +76,34 @@ U kunt uw gegevens verder filteren met de opties boven de metrieke tabel:
 | Filteropties | Beschrijving |
 | --- | --- |
 | Zoeken | Met de zoekbalk kunt u de weergave filteren op één brontype. |
-| Bronnen | Selecteren **[!UICONTROL Sources]** om uw mening te filtreren en metrische gegevens per brontype te tonen. Dit is de standaardweergave die het dashboard voor bewaking gebruikt. |
-| Gegevensstromen | Selecteren **[!UICONTROL Dataflows]** om uw mening te filtreren en metrische gegevens per dataflow te tonen. |
-| Alleen fouten tonen | Selecteren **[!UICONTROL Show failures only]** om uw mening te filtreren en slechts gegevens te tonen die gemelde innamemislukkingen. |
-| Mijn bronnen | U kunt de weergave verder filteren met de opdracht [!UICONTROL My sources] vervolgkeuzelijst. Met het vervolgkeuzemenu filtert u de weergave op categorie. U kunt ook **[!UICONTROL All sources]** om metriek op alle of bronnen te tonen, of te selecteren **[!UICONTROL My sources]** om alleen de bronnen weer te geven waarmee u een corresponderende account hebt. |
+| Bronnen | Selecteer **[!UICONTROL Sources]** om de weergave te filteren en metrische gegevens per type bron weer te geven. Dit is de standaardweergave die het dashboard voor bewaking gebruikt. |
+| Gegevensstromen | Selecteer **[!UICONTROL Dataflows]** om uw weergave te filteren en metrische gegevens per gegevensstroom weer te geven. |
+| Alleen fouten tonen | Selecteer **[!UICONTROL Show failures only]** om uw weergave te filteren en alleen gegevens weer te geven die mislukte inname hebben gemeld. |
+| Mijn bronnen | U kunt de weergave verder filteren met het vervolgkeuzemenu [!UICONTROL My sources] . Met het vervolgkeuzemenu filtert u de weergave op categorie. U kunt ook **[!UICONTROL All sources]** selecteren om metriek in alle bronnen of bronnen weer te geven, of **[!UICONTROL My sources]** selecteren om alleen de bronnen weer te geven waarmee u een corresponderende account hebt. |
 
 {style="table-layout:auto"}
 
-Selecteer het filterpictogram om de gegevens te controleren die in een specifieke gegevensstroom worden opgenomen ![filter](../assets/ui/monitor-sources/filter.png) naast een bron.
+Om de gegevens te controleren die in een specifieke dataflow worden opgenomen, selecteer het filterpictogram ![ filter ](../assets/ui/monitor-sources/filter.png) naast een bron.
 
-![Controleer een specifieke gegevensstroom door het filterpictogram naast een bepaalde bron te selecteren.](../assets/ui/monitor-sources/monitor-dataflow.png)
+![ Monitor een specifieke dataflow door het filterpictogram naast een bepaalde bron te selecteren.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 De metrietabel werkt aan een lijst van actieve gegevens bij die aan de bron beantwoorden die u selecteerde. Tijdens deze stap, kunt u extra informatie over uw gegevensstromen, met inbegrip van hun overeenkomstige dataset en gegevenstype, evenals een tijdstempel bekijken om erop te wijzen wanneer zij het laatst actief waren.
 
-Selecteer het filterpictogram om een gegevensstroom verder te inspecteren ![filter](../assets/ui/monitor-sources/filter.png) naast een gegevensstroom.
+Om een dataflow verder te inspecteren, selecteer het filterpictogram ![ filter ](../assets/ui/monitor-sources/filter.png) naast een dataflow.
 
-![De dataflows lijst in het controledashboard.](../assets/ui/monitor-sources/select-dataflow.png)
+![ de dataflows lijst in het controledashboard.](../assets/ui/monitor-sources/select-dataflow.png)
 
 Daarna, wordt u genomen aan een interface die van alle dataflow looplooploopherhalingen van dataflow een lijst maakt die u selecteerde.
 
 Dataflow-uitvoering is een instantie van de uitvoering van de gegevensstroom. Bijvoorbeeld, als een dataflow om 09:00 AM, 10:00 AM, en 11:00 AM gepland is te lopen, dan zou u drie instanties van een stroomlooppas hebben. De looppas van de stroom is specifiek voor uw bepaalde organisatie.
 
-Als u metriek van een specifieke gegevensstroomrun-iteratie wilt inspecteren, selecteert u het filterpictogram ![filter](../assets/ui/monitor-sources/filter.png) naast uw gegevensstroom.
+Om metriek van een specifieke dataflow looploopherhaling te inspecteren, selecteer het filterpictogram ![ filter ](../assets/ui/monitor-sources/filter.png) naast uw dataflow.
 
-![De metrische pagina van de dataflow looppas.](../assets/ui/monitor-sources/dataflow-page.png)
+![ de dataflow looppas metrische pagina.](../assets/ui/monitor-sources/dataflow-page.png)
 
 Gebruik de gegevenspagina van de dataflow looppas om metriek en informatie van uw geselecteerde looppas herhaling te bekijken.
 
-![De gegevenspagina van de dataflow-run.](../assets/ui/monitor-sources/dataflow-run-details.png)
+![ de dataflow looppas detailpagina.](../assets/ui/monitor-sources/dataflow-run-details.png)
 
 | Gegevens gegevensstroom uitvoeren | Beschrijving |
 | --- | --- |
@@ -124,19 +124,19 @@ Gebruik de gegevenspagina van de dataflow looppas om metriek en informatie van u
 
 {style="table-layout:auto"}
 
-Als er fouten optreden in de dataflow-uitvoering, kunt u omlaag schuiven naar de onderkant van de pagina met de opdracht [!UICONTROL Dataflow run errors] interface.
+Als in de dataflow fouten worden gerapporteerd, kunt u naar de onderkant van de pagina schuiven met de interface [!UICONTROL Dataflow run errors] .
 
-Gebruik de [!UICONTROL Records failed] sectie om metriek weer te geven op records die niet zijn opgenomen vanwege fouten. Als u een uitgebreid foutrapport wilt weergeven, selecteert u **[!UICONTROL Preview error diagnostics]**. Als u een kopie van de foutdiagnose en het bestandsmanifest wilt downloaden, selecteert u **[!UICONTROL Download]** en kopieer vervolgens de voorbeeld-API-aanroep die u met de [!DNL Data Access] API.
+In de sectie [!UICONTROL Records failed] kunt u metrische gegevens weergeven voor records die niet zijn opgenomen als gevolg van fouten. Selecteer **[!UICONTROL Preview error diagnostics]** als u een uitgebreid foutrapport wilt weergeven. Als u een kopie van de foutdiagnostiek en het bestandsmanifest wilt downloaden, selecteert u **[!UICONTROL Download]** en kopieert u vervolgens de voorbeeld-API-aanroep die u met de [!DNL Data Access] -API wilt gebruiken.
 
 >[!NOTE]
 >
 >U kunt foutdiagnostiek alleen gebruiken als deze functie is ingeschakeld tijdens het maken van de bronverbinding.
 
-![Het deelvenster met uitvoerfouten voor de gegevensstroom.](../assets/ui/monitor-sources/errors.png)
+![ het dataflow looppas foutenpaneel.](../assets/ui/monitor-sources/errors.png)
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen, hebt u met succes de gegevensstroom van de opname van bron-niveau gecontroleerd gebruikend **[!UICONTROL Monitoring]** dashboard. U hebt ook met succes fouten geïdentificeerd die tot de mislukking van gegevensstromen tijdens het innameproces hebben bijgedragen. Raadpleeg de volgende documenten voor meer informatie:
+Aan de hand van deze zelfstudie hebt u de gegevensstroom voor inname vanaf het bronniveau gecontroleerd met het dashboard **[!UICONTROL Monitoring]** . U hebt ook met succes fouten geïdentificeerd die tot de mislukking van gegevensstromen tijdens het innameproces hebben bijgedragen. Raadpleeg de volgende documenten voor meer informatie:
 
-* [Identiteitsgegevens controleren](./monitor-identities.md).
-* [Bewaking van profielgegevens](./monitor-profiles.md).
+* [ de identiteitsgegevens van de Controle ](./monitor-identities.md).
+* [ het profielgegevens van de Controle ](./monitor-profiles.md).

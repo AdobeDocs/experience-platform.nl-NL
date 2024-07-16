@@ -7,46 +7,46 @@ description: In dit document worden belangrijke gegevens beschreven die u moet w
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1088'
 ht-degree: 2%
 
 ---
 
-# Algemene richtlijnen voor query-uitvoering in [!DNL Query Service]
+# Algemene richtlijnen voor het uitvoeren van query&#39;s in [!DNL Query Service]
 
-In dit document worden belangrijke gegevens vermeld die u moet weten wanneer u query&#39;s schrijft in Adobe Experience Platform [!DNL Query Service].
+Dit document bevat belangrijke informatie die u moet weten wanneer u query&#39;s schrijft in Adobe Experience Platform [!DNL Query Service] .
 
-Voor gedetailleerde informatie over de SQL-syntaxis die wordt gebruikt in [!DNL Query Service], lees de [SQL-syntaxisdocumentatie](../sql/syntax.md).
+Voor gedetailleerde informatie over de SQL syntaxis die in [!DNL Query Service] wordt gebruikt, te lezen gelieve de [ SQL syntaxisdocumentatie ](../sql/syntax.md).
 
 ## Uitvoeringsmodellen voor query
 
-Adobe Experience Platform [!DNL Query Service] heeft twee modellen van vraaguitvoering: interactief en niet-interactief. De interactieve uitvoering wordt gebruikt voor vraagontwikkeling en rapportgeneratie in bedrijfsintelligentiehulpmiddelen, terwijl niet-interactief voor grotere banen en operationele vragen als deel van een werkschema van de gegevensverwerking wordt gebruikt.
+Adobe Experience Platform [!DNL Query Service] heeft twee modellen voor het uitvoeren van query&#39;s: interactief en niet-interactief. De interactieve uitvoering wordt gebruikt voor vraagontwikkeling en rapportgeneratie in bedrijfsintelligentiehulpmiddelen, terwijl niet-interactief voor grotere banen en operationele vragen als deel van een werkschema van de gegevensverwerking wordt gebruikt.
 
 ### Interactieve queryuitvoering
 
-De vragen kunnen interactief worden uitgevoerd door hen door voor te leggen [!DNL Query Service] UI of [via een verbonden client](../clients/overview.md). Bij uitvoering [!DNL Query Service] via een verbonden client een actieve sessie wordt uitgevoerd tussen de client en [!DNL Query Service] tot of de voorgelegde vraag terugkeert of tijden uit.
+De vragen kunnen interactief worden uitgevoerd door hen door [!DNL Query Service] UI of [ door een verbonden cliënt ](../clients/overview.md) voor te leggen. Wanneer [!DNL Query Service] via een verbonden client wordt uitgevoerd, wordt een actieve sessie uitgevoerd tussen de client en [!DNL Query Service] totdat de verzonden query terugkeert of de time-out.
 
 De interactieve vraaguitvoering heeft de volgende beperkingen:
 
 | Parameter | Beperking |
 | --------- | ---------- |
 | Time-out query | 10 minuten |
-| Maximumaantal geretourneerde rijen | 50,000 |
+| Maximumaantal geretourneerde rijen | 50.000 |
 | Maximum aantal gelijktijdige query&#39;s | 5 |
 
 >[!NOTE]
 >
->Als u de maximale rijbeperking wilt overschrijven, neemt u `LIMIT 0` in uw query. De zoektime-out van 10 minuten is nog steeds van toepassing.
+>Als u de maximale rijbeperking wilt overschrijven, neemt u `LIMIT 0` op in de query. De zoektime-out van 10 minuten is nog steeds van toepassing.
 
-Standaard worden de resultaten van interactieve query&#39;s geretourneerd aan de client en zijn deze **niet** aanhoudend. Om de resultaten als dataset in [!DNL Experience Platform], moet de query de `CREATE TABLE AS SELECT` syntaxis.
+Door gebrek, worden de resultaten van interactieve vragen teruggekeerd aan de cliënt en **niet** voortgeduurd. Om de resultaten als dataset in [!DNL Experience Platform] voort te zetten, moet de vraag de `CREATE TABLE AS SELECT` syntaxis gebruiken.
 
 ### Niet-interactieve query-uitvoering
 
-Vragen ingediend via de [!DNL Query Service] API wordt niet-interactief uitgevoerd. Niet-interactieve uitvoering betekent dat: [!DNL Query Service] ontvangt de API-aanroep en voert de query uit in de volgorde waarin deze is ontvangen. Niet-interactieve query&#39;s resulteren altijd in het genereren van een nieuwe dataset in [!DNL Experience Platform] om de resultaten te ontvangen, of de toevoeging van nieuwe rijen in een bestaande dataset.
+Vragen die via de [!DNL Query Service] API worden verzonden, worden niet-interactief uitgevoerd. Niet-interactieve uitvoering betekent dat [!DNL Query Service] de API-aanroep ontvangt en de query uitvoert in de volgorde waarin deze wordt ontvangen. Niet-interactieve query&#39;s resulteren altijd in het genereren van een nieuwe dataset in [!DNL Experience Platform] om de resultaten te ontvangen, of in het invoegen van nieuwe rijen in een bestaande dataset.
 
 ## Een specifiek veld binnen een object openen
 
-Als u toegang wilt krijgen tot een veld binnen een object in de query, kunt u beide puntnotaties gebruiken (`.`) of vierkante haakjes (`[]`). De volgende SQL-instructie gebruikt puntnotatie om de `endUserIds` object naar beneden `mcid` object.
+Om tot een gebied binnen een voorwerp in uw vraag toegang te hebben, kunt u of puntaantekening (`.`) of haakjesaantekening (`[]`) gebruiken. De volgende SQL-instructie gebruikt puntnotatie om het `endUserIds` -object omlaag te verplaatsen naar het `mcid` -object.
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | De naam van de analystabel. |
 
-De volgende SQL-instructie gebruikt haakjes om de `endUserIds` object naar beneden `mcid` object.
+De volgende SQL-instructie gebruikt haakjesnotatie om het `endUserIds` -object omlaag te verplaatsen naar het `mcid` -object.
 
 ```sql
 SELECT endUserIds['_experience']['mcid']
@@ -91,7 +91,7 @@ Beide voorbeeldquery&#39;s hierboven retourneren een samengevoegd object in plaa
 (1 row)
 ```
 
-De geretourneerde `endUserIds._experience.mcid` object bevat de overeenkomende waarden voor de volgende parameters:
+Het geretourneerde `endUserIds._experience.mcid` -object bevat de overeenkomende waarden voor de volgende parameters:
 
 - `id`
 - `namespace`
@@ -120,9 +120,9 @@ De enige citaten, de dubbele citaten, en de achtercitaten hebben verschillend ge
 
 ### Enkele aanhalingstekens
 
-Het enkele citaat (`'`) wordt gebruikt om tekstreeksen te maken. Deze kan bijvoorbeeld worden gebruikt in het dialoogvenster `SELECT` instructie om een statische tekstwaarde te retourneren in het resultaat en in de `WHERE` clausule om de inhoud van een kolom te evalueren.
+Het enige citaat (`'`) wordt gebruikt om tekstkoorden tot stand te brengen. U kunt deze bijvoorbeeld gebruiken in de instructie `SELECT` om een statische tekstwaarde te retourneren in het resultaat en in de component `WHERE` om de inhoud van een kolom te evalueren.
 
-Met de volgende query wordt een statische tekstwaarde gedeclareerd (`'datasetA'`) voor een kolom:
+Met de volgende query wordt een statische tekstwaarde (`'datasetA'`) gedeclareerd voor een kolom:
 
 ```sql
 SELECT 
@@ -134,7 +134,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-De volgende query gebruikt een tekenreeks tussen aanhalingstekens (`'homepage'`) in de WHERE-component om gebeurtenissen voor een specifieke pagina te retourneren.
+De volgende vraag gebruikt één-geciteerde koord (`'homepage'`) in zijn WAAR clausule om gebeurtenissen voor een specifieke pagina terug te keren.
 
 ```sql
 SELECT 
@@ -148,7 +148,7 @@ LIMIT 10
 
 ### Dubbele aanhalingstekens
 
-Het dubbele citaat (`"`) wordt gebruikt om een id met spaties te declareren.
+Het dubbele citaat (`"`) wordt gebruikt om een herkenningsteken met ruimten te verklaren.
 
 De volgende query gebruikt dubbele aanhalingstekens om waarden uit opgegeven kolommen te retourneren wanneer één kolom een spatie in de id bevat:
 
@@ -165,11 +165,11 @@ FROM
 
 >[!NOTE]
 >
->Dubbele aanhalingstekens **kan** worden gebruikt met toegang tot puntnotatievelden.
+>De dubbele citaten **kunnen** niet met het gebiedstoegang van de puntnotatie worden gebruikt.
 
 ### Achter aanhalingstekens
 
-The back quote `` ` `` wordt gebruikt om gereserveerde kolomnamen te omzeilen **alleen** bij gebruik van puntnotatiesyntaxis. Bijvoorbeeld sinds `order` is een gereserveerd woord in SQL, moet u backquotes gebruiken om tot het gebied toegang te hebben `commerce.order`:
+Het achtercitaat `` ` `` wordt gebruikt om gereserveerde kolomnamen **slechts** te ontsnappen wanneer het gebruiken van de syntaxis van de puntnotatie. Omdat `order` bijvoorbeeld een gereserveerd woord is in SQL, moet u backquotes gebruiken om toegang te krijgen tot het veld `commerce.order` :
 
 ```sql
 SELECT 
@@ -179,7 +179,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-Achteraanhalingstekens worden ook gebruikt om toegang te krijgen tot een veld dat met een getal begint. Als u bijvoorbeeld toegang wilt krijgen tot het veld `30_day_value`, moet u de notatie voor aanhalingstekens gebruiken.
+Achteraanhalingstekens worden ook gebruikt om toegang te krijgen tot een veld dat met een getal begint. Als u bijvoorbeeld toegang wilt krijgen tot het veld `30_day_value` , moet u de notatie voor aanhalingstekens gebruiken.
 
 ```SQL
 SELECT
@@ -189,7 +189,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-Achter aanhalingstekens zijn **niet** nodig als u haakjes gebruikt.
+De achtercitaten zijn **niet** nodig als u steun-aantekening gebruikt.
 
 ```sql
  SELECT
@@ -201,11 +201,11 @@ Achter aanhalingstekens zijn **niet** nodig als u haakjes gebruikt.
 
 ## Tabelgegevens weergeven
 
-Na het verbinden met de Dienst van de Vraag, kunt u al uw beschikbare lijsten op Platform zien door of `\d` of `SHOW TABLES` opdrachten.
+Nadat u verbinding hebt gemaakt met Query Service, kunt u al uw beschikbare tabellen op Platform weergeven met de opdrachten `\d` of `SHOW TABLES` .
 
 ### Standaardtabelweergave
 
-De `\d` toont het bevel de norm [!DNL PostgreSQL] weergave voor tabellen met lijsten. Een voorbeeld van de output van dit bevel kan hieronder worden gezien:
+De opdracht `\d` toont de standaardweergave van [!DNL PostgreSQL] voor het weergeven van tabellen. Een voorbeeld van de output van dit bevel kan hieronder worden gezien:
 
 ```sql
              List of relations
@@ -218,7 +218,7 @@ De `\d` toont het bevel de norm [!DNL PostgreSQL] weergave voor tabellen met lij
 
 ### Gedetailleerde tabelweergave
 
-`SHOW TABLES` bevel is een douanebevel dat gedetailleerdere informatie over de lijsten verstrekt. Een voorbeeld van de output van dit bevel kan hieronder worden gezien:
+`SHOW TABLES` is een aangepaste opdracht die gedetailleerdere informatie over de tabellen biedt. Een voorbeeld van de output van dit bevel kan hieronder worden gezien:
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -230,9 +230,9 @@ De `\d` toont het bevel de norm [!DNL PostgreSQL] weergave voor tabellen met lij
 
 ### Schema-informatie
 
-Als u meer gedetailleerde informatie over de schema&#39;s in de tabel wilt weergeven, kunt u de opdracht `\d {TABLE_NAME}` opdracht, waar `{TABLE_NAME}` is de naam van de lijst waarvan schemainformatie u wilt bekijken.
+Als u meer gedetailleerde informatie over de schema&#39;s in de tabel wilt weergeven, gebruikt u de opdracht `\d {TABLE_NAME}` , waarbij `{TABLE_NAME}` de naam is van de tabel waarvan u de schemagegevens wilt weergeven.
 
-In het volgende voorbeeld worden de schemagegevens voor het `luma_midvalues` tabel, die u kunt zien met `\d luma_midvalues`:
+In het volgende voorbeeld worden de schemagegevens voor de tabel `luma_midvalues` weergegeven, die u kunt zien met `\d luma_midvalues` :
 
 ```sql
                          Table "public.luma_midvalues"
@@ -255,9 +255,9 @@ In het volgende voorbeeld worden de schemagegevens voor het `luma_midvalues` tab
  search            | search                      |           |          | 
 ```
 
-Bovendien kunt u meer informatie over een bepaalde kolom krijgen door de naam van de kolom aan de lijstnaam toe te voegen. Dit wordt in de notatie geschreven `\d {TABLE_NAME}_{COLUMN}`.
+Bovendien kunt u meer informatie over een bepaalde kolom krijgen door de naam van de kolom aan de lijstnaam toe te voegen. Dit wordt geschreven in de notatie `\d {TABLE_NAME}_{COLUMN}` .
 
-In het volgende voorbeeld wordt aanvullende informatie voor het `web` kolom, en zou worden aangehaald door het volgende bevel te gebruiken: `\d luma_midvalues_web`:
+In het volgende voorbeeld wordt aanvullende informatie voor de kolom `web` getoond, die met de volgende opdracht wordt aangeroepen: `\d luma_midvalues_web`
 
 ```sql
                  Composite type "public.luma_midvalues_web"
@@ -271,7 +271,7 @@ In het volgende voorbeeld wordt aanvullende informatie voor het `web` kolom, en 
 
 U kunt zich bij veelvoudige datasets aansluiten samen om gegevens van andere datasets in uw vraag te omvatten.
 
-Het volgende voorbeeld zou zich bij de volgende twee datasets (`your_analytics_table` en `custom_operating_system_lookup`) en maakt een `SELECT` voor de bovenste 50 besturingssystemen op aantal pagina&#39;s.
+In het volgende voorbeeld worden de volgende twee gegevenssets (`your_analytics_table` en `custom_operating_system_lookup` ) samengevoegd en wordt een instructie `SELECT` voor de bovenste 50 besturingssystemen gemaakt op basis van het aantal paginaweergaven.
 
 **Query**
 
@@ -292,34 +292,34 @@ LIMIT 50;
 
 | Besturingssysteem | PageViews |
 | --------------- | --------- |
-| Windows 7 | 2781979.0 |
-| Windows XP | 1669824.0 |
-| Windows 8 | 420024.0 |
-| Adobe AIR | 315032.0 |
-| Windows Vista | 173566.0 |
-| Mobile iOS 6.1.3 | 119069.0 |
-| Linux | 56516.0 |
-| OSX 10.6.8 | 53652.0 |
-| Android 4.0.4 | 46167.0 |
-| Android 4.0.3 | 31852.0 |
-| Windows Server 2003 en XP x64 Edition | 28883.0 |
-| Android 4.1.1 | 24336.0 |
-| Android 2.3.6 | 15735.0 |
-| OSX 10.6 | 13357.0 |
-| Windows Phone 7.5 | 11054.0 |
-| Android 4.3 | 9221.0 |
+| Windows 7 | 2781979,0 |
+| Windows XP | 1669824,0 |
+| Windows 8 | 420024,0 |
+| Adobe AIR | 315032,0 |
+| Windows Vista | 173566,0 |
+| Mobile iOS 6.1.3 | 119069,0 |
+| Linux | 56516,0 |
+| OSX 10.6.8 | 53652,0 |
+| Android 4.0.4 | 46167,0 |
+| Android 4.0.3 | 31852,0 |
+| Windows Server 2003 en XP x64 Edition | 28883,0 |
+| Android 4.1.1 | 24336,0 |
+| Android 2.3.6 | 15735,0 |
+| OSX 10.6 | 13357,0 |
+| Windows Phone 7.5 | 11054,0 |
+| Android 4.3 | 9221,0 |
 
 ## Deduplicatie
 
-De Dienst van de vraag steunt gegevensdeduplicatie, of de verwijdering van dubbele rijen uit gegevens. Lees voor meer informatie over deduplicatie de [Handleiding voor deduplicatie van Query Service](../key-concepts/deduplication.md).
+De Dienst van de vraag steunt gegevensdeduplicatie, of de verwijdering van dubbele rijen uit gegevens. Voor meer informatie over deduplicatie, te lezen gelieve de [ gids van de Deduplicatie van de Dienst van de Vraag ](../key-concepts/deduplication.md).
 
 ## De berekeningen van de tijdzone in de Dienst van de Vraag
 
-De Service van de vraag normaliseert persisted gegevens in Adobe Experience Platform gebruikend het timestamp formaat UTC. Voor meer informatie over hoe te om uw tijdzonevereiste aan en van een timestamp UTC te vertalen, gelieve te zien [sectie Veelgestelde vragen over het wijzigen van de tijdzone van en naar een UTC-tijdstempel](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
+De Service van de vraag normaliseert persisted gegevens in Adobe Experience Platform gebruikend het timestamp formaat UTC. Voor meer informatie over hoe te om uw tijdzonevereiste aan en van een timestamp te vertalen UTC, gelieve de [ sectie van Veelgestelde vragen te zien over hoe te om de tijdzone aan en van een Tijdstempel van UTC ](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?) te veranderen.
 
 ## Volgende stappen
 
-Door dit document te lezen, bent u op enkele belangrijke overwegingen geïntroduceerd wanneer het schrijven van vragen gebruikend [!DNL Query Service]. Voor meer informatie over hoe u de SQL-syntaxis kunt gebruiken om uw eigen query&#39;s te schrijven, leest u de [SQL-syntaxisdocumentatie](../sql/syntax.md).
+Door dit document te lezen, bent u op een aantal belangrijke overwegingen geïntroduceerd wanneer het schrijven van vragen gebruikend [!DNL Query Service]. Voor meer informatie over hoe te om de SQL syntaxis te gebruiken om uw eigen vragen te schrijven, te lezen gelieve de [ SQL syntaxisdocumentatie ](../sql/syntax.md).
 
 Voor meer steekproeven van vragen die binnen de Dienst van de Vraag kunnen worden gebruikt, gelieve de volgende documentatie van het gebruiksgeval te lezen:
 

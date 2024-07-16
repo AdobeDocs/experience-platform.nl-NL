@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Zichtbare inzichten en het kijkachtige publiek zijn alleen beschikbaar in de **B2C-editie**.
+>De blik-gelijke inzichten en het blik-gelijke publiek zijn slechts beschikbaar in de **B2C- uitgave**.
 
 In Adobe Experience Platform bieden look-alike-gebruikers intelligente inzichten op elk van uw doelgroepen en maken ze gebruik van op computers gebaseerde inzichten om klanten met een hoge waarde te identificeren en als doel in te stellen met uw marketingcampagnes.
 
@@ -24,19 +24,19 @@ Met look-alike soorten publiek, kunt u uitgebreide soorten publiek tot stand bre
 
 Zorg ervoor dat u de volgende concepten begrijpt voordat u aan de slag gaat met look-alike-soorten:
 
-- **Basispubliek**: Het basispubliek is het publiek waarover je meer inzichten wilt weten. Dit is het publiek dat het look-alike model is **gebaseerd** op.
-- **Labeljauwmodel**: Een model dat lijkt op een computer is een leermodel dat is opgeleid voor elk in aanmerking komend basispubliek zonder dat de klant daar iets mee doet. Elk model ziet er hetzelfde uit en creëert de invloedrijke factoren en grafieken van de gelijkenis. Een look-alike-model doet dit **niet** wordt gescoord.
-- **Kijk-als publiek**: Een publiek dat op look-alike lijkt is het publiek dat wordt gecreeerd wanneer een blik-gelijkaardig model met een geselecteerde gelijkenisdrempel op het basispubliek wordt toegepast. U kunt veelvoudige blik-alike publiek tot stand brengen gebruikend het zelfde blik-als model. Het publiek ziet er hetzelfde uit: wat wordt er gescoord.
+- **het publiek van de Basis**: Het basispubliek is het publiek dat u meer inzichten over wilt weten. Dit is het publiek dat het blik-gelijke model **** op gebaseerd is.
+- **blik-gelijkaardig model**: Een blik-gelijkaardig model is een machine het leren model dat op elk geschikt basispubliek zonder enige klanteninput wordt getraind. Elk model ziet er hetzelfde uit en creëert de invloedrijke factoren en grafieken van de gelijkenis. Een blik-gelijkaardig model wordt **niet** gescoord.
+- **kijkt-als publiek**: Een blik-gelijkaardig publiek is het publiek dat wordt gecreeerd wanneer een blik-gelijkaardig model met een geselecteerde gelijkenisdrempel op het basispubliek wordt toegepast. U kunt veelvoudige blik-alike publiek tot stand brengen gebruikend het zelfde blik-als model. Het publiek ziet er hetzelfde uit: wat wordt er gescoord.
 - **Totale adresseerbare publieksgrootte**: De totale adresseerbare publieksgrootte is het totale aantal profielen in de afgelopen 30 dagen minus de populatie van het basispubliek in de afgelopen 30 dagen. Bijvoorbeeld, als een klant 10 miljoen profielen in de afgelopen 30 dagen heeft, en het basispubliek 1 miljoen profielen in de afgelopen 30 dagen heeft, is de totale adresseerbare publieksgrootte 9 miljoen profielen.
 
 ## Subsidiabiliteit {#eligibility}
 
-Voor het gebruik van look-alike inzichten, het basispubliek **moet** voldoen aan de volgende subsidiabiliteitscriteria:
+Om blik-gelijke inzichten te gebruiken, moet het basispubliek **** aan de volgende toelatingscriteria voldoen:
 
-- Het basispubliek **moet** worden gemaakt in Platform.
-   - Extern gegenereerde doelgroepen zijn **niet** geschikt voor look-alike inzichten.
-- Het basispubliek **moet** bevindt zich op het standaardsamenvoegbeleid.
-- Het basispubliek **moet** geen velden gebruiken die zijn beperkt door gegevensbeheer.
+- Het basispubliek **moet** binnen Platform worden gecreeerd.
+   - Extern-geproduceerd publiek is **niet** geschikt voor blik-gelijke inzichten.
+- Het basispubliek **moet** op het standaard fusiebeleid zijn.
+- Het basispubliek **moet** geen gebieden gebruiken die door gegevensbeheer worden beperkt.
 
 ## Modeldetails van het model {#details}
 
@@ -69,9 +69,9 @@ Op dit moment wordt het model van look-alike elke 24 uur uitgevoerd en worden de
 
 De volgende rechten gelden voor het gebruik van look-alike-soorten:
 
-- Real-Time CDP Primaire klanten hebben recht op **5** actief soort publiek in productiesandvakken
-- Real-Time CDP Ultimate-klanten hebben recht op **20** actief soort publiek in productiesandvakken
-- Ontwikkelingssandboxen zijn beperkt tot **5** Levendig publiek voor alle Real-Time CDP-klanten
+- De eerste klanten van Real-Time CDP hebben recht op **5** actieve blik-alike publiek in productiesanddozen
+- Real-Time CDP Ultimate-klanten hebben recht op **20** actieve look-alike-soorten publiek in productiesandboxen
+- De zandbakken van de ontwikkeling zijn beperkt tot **5** blik-gelijke publiek voor alle klanten van Real-Time CDP
 
 Pakketten met invoegtoepassingen, die later beschikbaar zullen zijn, verhogen de rechten voor de productie van sandboxen met 20 soorten publiek per verpakking.
 
@@ -79,13 +79,13 @@ Neem contact op met uw Adobe als u wilt controleren of u toegang hebt tot vergel
 
 ## Zichtbare inzichten weergeven {#view}
 
-Zichtbare inzichten zijn ingebouwd met de pagina met publieksdetails. Als u de look-alike inzichten voor een publiek wilt bekijken, selecteert u **[!UICONTROL Audiences]** in de linkernavigatiebalk, gevolgd door **[!UICONTROL Browse]** en het publiek waarvoor u de inzichten wilt bekijken.
+Zichtbare inzichten zijn ingebouwd met de pagina met publieksdetails. Als u de look-alike inzichten voor een publiek wilt bekijken, selecteert u **[!UICONTROL Audiences]** in de linkernavigatiebalk, gevolgd door **[!UICONTROL Browse]** , en het publiek waarvoor u de inzichten wilt weergeven.
 
-![De knop Soorten publiek wordt gemarkeerd en het basispubliek dat wordt gebruikt voor modellering op basis van look-alike.](../images/ui/lookalike-audiences/browse.png)
+![ de knoop van het publiek wordt benadrukt, evenals het basispubliek dat voor blik-gelijke modellering wordt gebruikt.](../images/ui/lookalike-audiences/browse.png)
 
-De pagina met publieksdetails wordt weergegeven. Selecteren **[!UICONTROL Look-alike insights]** om de kijkachtige inzichten van het publiek te bekijken. De **[!UICONTROL Look-alike insights]** wordt weergegeven. Deze pagina heeft drie hoofdelementen: de gelijkenis en de bereikgrafiek, het kijkachtige publiek en de invloedrijke factoren.
+De pagina met publieksdetails wordt weergegeven. Selecteer het tabblad **[!UICONTROL Look-alike insights]** om de kijkgelijke inzichten van het publiek weer te geven. De pagina **[!UICONTROL Look-alike insights]** wordt weergegeven. Deze pagina heeft drie hoofdelementen: de gelijkenis en de bereikgrafiek, het kijkachtige publiek en de invloedrijke factoren.
 
-![Het tabblad Zichtbare inzichten wordt gemarkeerd en geeft de look-alike inzichten voor het basispubliek weer.](../images/ui/lookalike-audiences/look-alike-insights.png)
+![ het blik-gelijke inzichten lusje wordt benadrukt, tonend de blik-gelijke inzichten voor het basispubliek.](../images/ui/lookalike-audiences/look-alike-insights.png)
 
 ### Gelijksoortigheid en bereik {#similarity-and-reach}
 
@@ -94,15 +94,15 @@ De pagina met publieksdetails wordt weergegeven. Selecteren **[!UICONTROL Look-a
 >title="Gelijksoortigheid en bereik"
 >abstract="Met de gelijkenis en het bereik van de grafiek wordt het verwachte bereik van een publiek dat er uitziet boven een bepaalde score voor gelijkenis weergegeven. U kunt de muisaanwijzer boven een specifiek punt in de grafiek plaatsen om het percentage voor gelijkenis en het verwachte aantal profielen voor het momenteel gemarkeerde punt weer te geven."
 
-De gelijkenis en bereiksectie toont een grafiek die het verwachte bereik van een publiek dat van look-alike bestaat uit profielen boven een bepaalde gelijkenisscore in kaart brengt. De overeenkomstenscore vertegenwoordigt de **afstand** van overeenkomst tussen het profiel van het basispubliek en het profiel van het kijkgelijke inzicht.
+De gelijkenis en bereiksectie toont een grafiek die het verwachte bereik van een publiek dat van look-alike bestaat uit profielen boven een bepaalde gelijkenisscore in kaart brengt. De gelijkenisscore vertegenwoordigt de **afstand** van gelijkenis tussen het profiel van het basispubliek en het blik-gelijke profiel van het inzicht.
 
-![De gelijkenis en bereikgrafiek worden gemarkeerd.](../images/ui/lookalike-audiences/similarity-and-reach.png)
+![ de gelijkenis en bereikgrafiek wordt benadrukt.](../images/ui/lookalike-audiences/similarity-and-reach.png)
 
 In deze grafiek wordt op de x-as het percentage gemeten waarmee een profiel en leden van het geselecteerde publiek op elkaar lijken. De score op basis van de overeenkomst varieert van 0% tot 100%, waarbij een hogere score op basis van gelijkenis aangeeft dat een profiel in termen van invloedrijke factorwaarden dichter bij de leden van het geselecteerde publiek ligt.
 
-Op de y-as wordt het verwachte aantal profielen weergegeven met het percentage voor gelijkenis dat overeenkomt met de overeenkomende waarde van de x-as. Deze verwachte telling van profielen varieert van 0 tot de totale adresseerbare publieksgrootte of 25 miljoen profielen, welke lager is. Deze as wordt gemeten op een **logaritmische schaal** de leesbaarheid van de grafiek verbeteren.
+Op de y-as wordt het verwachte aantal profielen weergegeven met het percentage voor gelijkenis dat overeenkomt met de overeenkomende waarde van de x-as. Deze verwachte telling van profielen varieert van 0 tot de totale adresseerbare publieksgrootte of 25 miljoen profielen, welke lager is. Deze as wordt gemeten op a **logaritmische schaal** om de leesbaarheid van de grafiek te verbeteren.
 
-De grafiek is **cumulatief** van rechts naar links. Dit betekent dat op elk punt in de grafiek de waarde van de y-as het aantal profielen is dat op dezelfde manier werkt **boven** de drempel voor gelijkenis. Als de x-as bijvoorbeeld 60% is en de y-as 10 miljoen, betekent dit dat er 10 miljoen profielen zijn met een gelijkenis van 60% of meer ten opzichte van het basispubliek.
+Gelieve te merken op dat de grafiek **cumulatief** van rechts naar links is. Dit betekent dat op om het even welk punt in de grafiek, de waarde van de y-as het aantal profielen is die een gelijkenis **boven** de gelijkenisdrempel hebben. Als de x-as bijvoorbeeld 60% is en de y-as 10 miljoen, betekent dit dat er 10 miljoen profielen zijn met een gelijkenis van 60% of meer ten opzichte van het basispubliek.
 
 U kunt de muisaanwijzer boven een specifiek punt in de grafiek plaatsen om het percentage voor gelijkenis en het verwachte aantal profielen voor het momenteel gemarkeerde punt weer te geven.
 
@@ -110,7 +110,7 @@ U kunt de muisaanwijzer boven een specifiek punt in de grafiek plaatsen om het p
 
 De blik-gelijke sectie van publiek toont een lijst van alle blik-gelijke publiek dat eerder voor het geselecteerde basispubliek is gecreeerd.
 
-![De sectie Zichtbaar publiek wordt gemarkeerd.](../images/ui/lookalike-audiences/select-laa.png)
+![ de blik-alike sectie van het publiek wordt benadrukt.](../images/ui/lookalike-audiences/select-laa.png)
 
 ### Influentiële factoren {#influential-factors}
 
@@ -122,11 +122,11 @@ De blik-gelijke sectie van publiek toont een lijst van alle blik-gelijke publiek
 
 In de sectie met invloedrijke factoren worden de 100 belangrijkste factoren weergegeven die van invloed zijn op het model dat er op lijkt voor het geselecteerde basispubliek. Deze invloedrijke factoren zijn de profielattributen, de ervaringsgebeurtenissen, en de publiekslidmaatschappen die het belangrijkst in het verklaren van gelijkenissen in het basispubliek zijn. Met een goed begrip van de belangrijkste invloedrijke factoren kunt u uw marketinginhoud beter aanpassen aan dit publiek en aan elk publiek dat u eruit maakt. Niet alle invloedrijke factoren die van invloed zijn op het model dat er op lijkt, worden weergegeven.
 
-Voor invloedrijke factoren die numeriek zijn, kunnen de sleutelwaardeparen in emmers worden gezet, afhankelijk van het aantal verschillende waarden die sleutel heeft. Als u bijvoorbeeld een sleutel van `income`Er zijn waarschijnlijk veel unieke waarden. Dientengevolge zullen de belangrijkste waardeparen in emmers worden geplaatst die als konden kijken `income=[0 -> 30000]`, `income=[30000 -> 50000]`, en `income=[50000 -> 100000]`.
+Voor invloedrijke factoren die numeriek zijn, kunnen de sleutelwaardeparen in emmers worden gezet, afhankelijk van het aantal verschillende waarden die sleutel heeft. Als u bijvoorbeeld een sleutel van `income` hebt, zijn er waarschijnlijk veel unieke waarden. Hierdoor worden de sleutelwaardeparen in emmers geplaatst die er als `income=[0 -> 30000]`, `income=[30000 -> 50000]` en `income=[50000 -> 100000]` kunnen uitzien.
 
 Deze emmers worden regelmatig opnieuw berekend om ervoor te zorgen dat de gegevens worden bijgewerkt.
 
-![De sectie invloedrijke factoren wordt benadrukt.](../images/ui/lookalike-audiences/influential-factors.png)
+![ wordt de invloedrijke factorsectie benadrukt.](../images/ui/lookalike-audiences/influential-factors.png)
 
 >[!NOTE]
 >
@@ -135,27 +135,27 @@ Deze emmers worden regelmatig opnieuw berekend om ervoor te zorgen dat de gegeve
 | Veld | Beschrijving |
 | ----- | ----------- |
 | Type | Het type gegevens waaruit de invloedsfactor wordt afgeleid. Dit kan een profielattribuut, een ervaringsgebeurtenis, of een publiekslidmaatschap zijn. |
-| Sleutel | De naam van het gegevensveld. Voor sleutels van het type van publiekslidmaatschap, vertegenwoordigt deze waarde **namespace** van het publiek waar de gegevens vandaan komen. Mogelijke waarden zijn `ups` (Segmenteringsdienst) en `AO` (Audience Orchestration). Voor sleutels van andere types, vertegenwoordigt deze waarde het XDM gebiedspad. Als het bedrijf Luma bijvoorbeeld een aangepast veld heeft met de naam &#39;inkomen&#39;, is de sleutel `_luma.income` |
-| Waarde | De waarde varieert afhankelijk van de invloedrijke factor die het vertegenwoordigt. Voor profielkenmerken of ervaringsgebeurtenissen vertegenwoordigt dit veld de waarde of het waardebereik van het gegevensveld dat de gelijkenis met de leden van het basispubliek aangeeft. Het waardebereik wordt geschreven in het formulier `[A -> B]`, waarbij `A` het laagste bereik vertegenwoordigt terwijl `B` geeft het hogere bereik aan. Voor publiekslidmaatschappen, is dit gebied de naam van het publiek. |
+| Sleutel | De naam van het gegevensveld. Voor sleutels van het type van publiekslidmaatschap, vertegenwoordigt deze waarde **namespace** van het publiek waar de gegevens uit komen. Mogelijke waarden zijn `ups` (Segmentation Service) en `AO` (Audience Orchestration). Voor sleutels van andere types, vertegenwoordigt deze waarde het XDM gebiedspad. Als het bedrijf Luma bijvoorbeeld een aangepast veld met de naam &#39;inkomen&#39; heeft, is de sleutel `_luma.income` |
+| Waarde | De waarde varieert afhankelijk van de invloedrijke factor die het vertegenwoordigt. Voor profielkenmerken of ervaringsgebeurtenissen vertegenwoordigt dit veld de waarde of het waardebereik van het gegevensveld dat de gelijkenis met de leden van het basispubliek aangeeft. Het waardebereik wordt geschreven in de vorm `[A -> B]` , waarbij `A` het onderste bereik vertegenwoordigt terwijl `B` het hogere bereik vertegenwoordigt. Voor publiekslidmaatschappen, is dit gebied de naam van het publiek. |
 | Belang | Het relatieve belang van de invloedrijke factor. Dit kan hoog, gemiddeld of laag zijn. |
 
 ## Een publiek met een look-alike maken {#create}
 
 >[!IMPORTANT]
 >
->U **kan** Gebruik een publiek van het soort look-alike als basispubliek voor een ander publiek van het soort look-alike. Dat wil zeggen, u **kan** Hiermee maakt u een geketend soort publiek.
+>U **kunt niet** een blik-gelijkaardig publiek als basispubliek voor een ander publiek gebruiken kijkt-als. Dat wil zeggen, kunt u **niet** geketineerde blik-gelijke publiek tot stand brengen.
 
-Als u een publiek wilt maken dat lijkt op het weergeven, moet u het publiek selecteren waarvan u het publiek wilt baseren op het soort weergave. Als u toegang wilt tot uw lijst met beschikbare soorten publiek, selecteert u **[!UICONTROL Audiences]** in de linkernavigatiebalk, gevolgd door **[!UICONTROL Browse]**. De lijst met soorten publiek wordt weergegeven. Op deze pagina kunt u het publiek selecteren dat u wilt gebruiken als uw basispubliek.
+Als u een publiek wilt maken dat lijkt op het weergeven, moet u het publiek selecteren waarvan u het publiek wilt baseren op het soort weergave. Als u de lijst met beschikbare soorten publiek wilt openen, selecteert u **[!UICONTROL Audiences]** in de linkernavigatiebalk, gevolgd door **[!UICONTROL Browse]** . De lijst met soorten publiek wordt weergegeven. Op deze pagina kunt u het publiek selecteren dat u wilt gebruiken als uw basispubliek.
 
-![De knop Soorten publiek wordt gemarkeerd en het basispubliek dat wordt gebruikt voor modellering op basis van look-alike.](../images/ui/lookalike-audiences/browse.png)
+![ de knoop van het publiek wordt benadrukt, evenals het basispubliek dat voor blik-gelijke modellering wordt gebruikt.](../images/ui/lookalike-audiences/browse.png)
 
-Selecteer op de pagina met publieksdetails de optie **[!UICONTROL Create look-alike audience]** om een begin te maken met het maken van een publiek dat er hetzelfde uitziet.
+Selecteer **[!UICONTROL Create look-alike audience]** op de pagina met publieksdetails om een publiek te maken dat er hetzelfde uitziet.
 
-![De [!UICONTROL Create look-alike audience] wordt gemarkeerd.](../images/ui/lookalike-audiences/create-look-alike-audience.png)
+![ wordt de [!UICONTROL Create look-alike audience] knoop benadrukt.](../images/ui/lookalike-audiences/create-look-alike-audience.png)
 
-De **[!UICONTROL Create a look-alike audience]** wordt weergegeven. Op deze pagina kunt u het percentage voor gelijkenis instellen voor het publiek dat er hetzelfde uitziet.
+De pop-up **[!UICONTROL Create a look-alike audience]** wordt weergegeven. Op deze pagina kunt u het percentage voor gelijkenis instellen voor het publiek dat er hetzelfde uitziet.
 
-![De [!UICONTROL Create a look-alike audience] popover wordt weergegeven.](../images/ui/lookalike-audiences/create-audience.png)
+![ popover [!UICONTROL Create a look-alike audience] wordt getoond.](../images/ui/lookalike-audiences/create-audience.png)
 
 U kunt dit percentage op drie verschillende manieren instellen:
 
@@ -165,29 +165,29 @@ U kunt dit percentage op drie verschillende manieren instellen:
 
 U kunt details over het publiek ook bijwerken kijkt-als, met inbegrip van zijn naam en beschrijving. Standaard wordt de naam van het publiek voor de look-alike-toets gegenereerd op basis van de naam van het basispubliek en het eerder opgegeven percentage voor gelijkenis.
 
-![De basisinformatie wordt in de [!UICONTROL Create a look-alike audience] popover.](../images/ui/lookalike-audiences/basic-info.png)
+![ de basisinformatie wordt benadrukt binnen [!UICONTROL Create a look-alike audience] popover.](../images/ui/lookalike-audiences/basic-info.png)
 
-Selecteren **[!UICONTROL Create]** om uw publiek voor de look-alike te voltooien.
+Selecteer **[!UICONTROL Create]** om het maken van een soort publiek te voltooien.
 
-![De knop Maken is gemarkeerd in het dialoogvenster [!UICONTROL Create a look-alike audience] popover.](../images/ui/lookalike-audiences/create-audience.png)
+![ creeer knoop wordt benadrukt binnen [!UICONTROL Create a look-alike audience] popover.](../images/ui/lookalike-audiences/create-audience.png)
 
-Het nieuwe publiek van het soort look-alike kan in nieuw worden betreden **[!UICONTROL Look-alike audiences]** van de pagina met publieksdetails, en is ook beschikbaar in het Portaal van de Publiek en voor andere downstreamtoepassingen. Houd er rekening mee dat het enige tijd duurt voordat het publiek voor het look-alike wordt gescoord. Totdat een score wordt toegekend, wordt het aantal profielen weergegeven op 0.
+Het nieuwe publiek van de blik-alike publiek kan in de **[!UICONTROL Look-alike audiences]** sectie van de pagina van de publieksdetails worden betreden, en is ook beschikbaar in het Portaal van de Publiek en voor andere stroomafwaartse gebruik. Houd er rekening mee dat het enige tijd duurt voordat het publiek voor het look-alike wordt gescoord. Totdat een score wordt toegekend, wordt het aantal profielen weergegeven op 0.
 
 ## Weergave-gelijke publieksdetails weergeven {#view-details}
 
-Als u de details van een publiek met een look-alike wilt weergeven, selecteert u de soort publiek in het deelvenster **[!UICONTROL Look-alike audiences]** van het basispubliek.
+Als u de details van een publiek met een look-alike wilt weergeven, selecteert u het publiek voor de look-alike in het gedeelte **[!UICONTROL Look-alike audiences]** van het basispubliek.
 
-![De sectie Zichtbaar publiek wordt gemarkeerd.](../images/ui/lookalike-audiences/select-laa.png)
+![ de blik-alike sectie van het publiek wordt benadrukt.](../images/ui/lookalike-audiences/select-laa.png)
 
-De pagina met publieksdetails wordt weergegeven. Lees voor meer informatie over deze pagina de [sectie met publieksdetails van het overzicht van het portal Poorten publiek](./audience-portal.md#audience-details).
+De pagina met publieksdetails wordt weergegeven. Voor meer informatie over deze pagina, te lezen gelieve de [ sectie van publieksdetails van het Poortoverzicht van het Poort van het Publiek ](./audience-portal.md#audience-details).
 
-![De details van het kijkachtige publiek worden getoond.](../images/ui/lookalike-audiences/laa-details.png)
+![ de Details van het publiek worden blik-alike getoond.](../images/ui/lookalike-audiences/laa-details.png)
 
 ## Gegevensvelden uitsluiten van modellering als vergelijkbaar {#exclude}
 
 >[!IMPORTANT]
 >
-> **U** ervoor zorgen dat gegevens, inclusief gevoelige gegevens, op de juiste wijze worden geëtiketteerd en dat het beleid voor gegevensgebruik is gedefinieerd en ingeschakeld om te voldoen aan de wettelijke en bestuursrechtelijke verplichtingen waaronder u werkt. U zou zich ook moeten bewust zijn dat de gegevensgebieden of segmentlidmaatschap die zijn **niet** rechtstreeks gecorreleerd met gegevensvelden die typisch worden geassocieerd met gevoelige of beschermde gegevenstypen kan een bron van potentiële afwijking zijn. **U** zijn verantwoordelijk voor het analyseren van uw gegevens om de juiste beleidsregels voor gegevensgebruik op uw gegevens te identificeren, te labelen en toe te passen, inclusief gegevensvelden die als proxy kunnen dienen voor gevoelige of beveiligde gegevenstypen en die van modellering moeten worden uitgesloten.
+> **u** bent verantwoordelijk voor het verzekeren dat de gegevens, met inbegrip van gevoelige gegevens, correct geëtiketteerd zijn en dat het beleid van het gegevensgebruik is bepaald en toegelaten om aan de wettelijke en regelgevende verplichtingen te voldoen waaronder u werkt. U zou zich ook moeten bewust zijn dat de gegevensgebieden of segmentlidmaatschap die **niet** direct gecorreleerd met gegevensgebieden typisch verbonden aan gevoelige of beschermde gegevenstypes een bron van potentiële vooroordelen kunnen zijn. **u** bent verantwoordelijk in het analyseren van uw gegevens om, het aangewezen beleid van het gegevensgebruik op uw gegevens te identificeren te etiketteren en toe te passen, met inbegrip van om het even welke gegevensgebieden die volmacht voor gevoelige of beschermde gegevenstypes kunnen en van modellering zouden moeten worden uitgesloten.
 
 De blik-gelijkaardig publiek kan worden gevormd om gegevensgebieden uit te sluiten die voor de &quot;van de Gegevens actie&quot;van de marketing van Gegevens worden beperkt door de relevante etiketten en het beleid van het gegevensgebruik toe te passen. Gegevens die zijn gelabeld als beperkt in gebruik voor gegevenswetenschap, worden uit overweging genomen wanneer u een kijkachtig publieksmodel opleidt en wanneer u een kijkachtig publiek uit het opgeleide model genereert. 
 
@@ -195,10 +195,10 @@ De blik-gelijkaardig publiek kan worden gevormd om gegevensgebieden uit te sluit
 >
 >Het kan tot 48 uur duren voordat wijzigingen in de labels voor gegevensgebruik op het basispubliek van kracht worden.
 
-Het standaard &quot;C9&quot;etiket kan worden gebruikt om gegevens te etiketteren die niet voor gegevenswetenschap zouden moeten worden gebruikt en kunnen worden afgedwongen door het standaardbeleid &quot;van de Gegevens van de Beperking&quot;toe te laten. U kunt ook aanvullende beleidsregels maken om gegevens te beperken met andere labels, waaronder gevoelige labels, voor gebruik in gegevenswetenschap. Lees voor meer informatie over het beheer van het beleid voor gegevensgebruik de [UI-gids voor gegevensgebruiksbeleid](../../data-governance/policies/user-guide.md). Lees voor meer informatie over het beheren van labels voor gegevensgebruik de [UI-handleiding voor gegevensgebruikslabels](../../data-governance/labels/user-guide.md).
+Het standaard &quot;C9&quot;etiket kan worden gebruikt om gegevens te etiketteren die niet voor gegevenswetenschap zouden moeten worden gebruikt en kunnen worden afgedwongen door het standaardbeleid &quot;van de Gegevens van de Beperking&quot;toe te laten. U kunt ook aanvullende beleidsregels maken om gegevens te beperken met andere labels, waaronder gevoelige labels, voor gebruik in gegevenswetenschap. Voor meer informatie bij het beheren van het beleid van het gegevensgebruik, te lezen gelieve de [ gids UI van het gegevensgebruiksbeleid ](../../data-governance/policies/user-guide.md). Voor meer informatie bij het beheren van de etiketten van het gegevensgebruik, te lezen gelieve de [ gids UI van de etiketten van het gegevensgebruik ](../../data-governance/labels/user-guide.md).
 
-Als een basispubliek standaard geen contractlabels heeft, wordt het modelleringsproces voor look-alike-soorten publiek uitgesloten **alle** gebied, dataset, of publiek dat op het toegelaten privacybeleid voor uw organisatie wordt gebaseerd.
+Door gebrek, als een basispubliek geen contractetiketten heeft, zal het modelleringsproces voor blik-alike publiek **om het even welk** gebied, dataset, of publiek uitsluiten dat op het toegelaten privacybeleid voor uw organisatie wordt gebaseerd.
 
 ## Volgende stappen
 
-Nadat u deze handleiding hebt gelezen, hebt u geleerd hoe u look-alike inzichten kunt bekijken en op basis van deze inzichten een soort publiek kunt maken dat lijkt op look-alike. Lees voor meer informatie over het publiek in de gebruikersinterface van Adobe Experience Platform de [Handleiding voor segmentatieservice](./overview.md).
+Nadat u deze handleiding hebt gelezen, hebt u geleerd hoe u look-alike inzichten kunt bekijken en op basis van deze inzichten een soort publiek kunt maken dat lijkt op look-alike. Voor meer informatie over publiek in Adobe Experience Platform UI, te lezen gelieve de [ gids UI van de Dienst van de Segmentatie ](./overview.md).

@@ -4,7 +4,7 @@ title: Een transformatiesjabloon voor een voorbeeldbericht genereren
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -14,23 +14,23 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->**API-eindpunt**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
+>**API eindpunt**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
 
-Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met de `/authoring/testing/template/sample` API-eindpunt, om een [berichttransformatiesjabloon](../../functionality/destination-server/message-format.md#using-templating) voor uw bestemming. Voor een beschrijving van de functionaliteit die door dit eindpunt wordt gesteund, lees [sjabloon maken](create-template.md).
+Deze pagina maakt een lijst en beschrijft alle API verrichtingen die u het gebruiken van het `/authoring/testing/template/sample` API eindpunt kunt uitvoeren, om het malplaatje van de a [ berichttransformatie ](../../functionality/destination-server/message-format.md#using-templating) voor uw bestemming te produceren. Voor een beschrijving van de functionaliteit die door dit eindpunt wordt gesteund, lees [ creeer malplaatje ](create-template.md).
 
 ## Aan de slag met API-voorbeeldbewerkingen voor sjablonen {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Voorbeeldsjabloon ophalen {#generate-sample-template}
 
-U kunt een voorbeeldsjabloon ophalen door een GET-aanvraag in te dienen bij de `authoring/testing/template/sample/` eindpunt en het verstrekken van bestemmingsidentiteitskaart van de bestemmingsconfiguratie die op wordt gebaseerd waarop u uw malplaatje creeert.
+U kunt een steekproefmalplaatje krijgen door een verzoek van de GET tot het `authoring/testing/template/sample/` eindpunt te richten en bestemmingsidentiteitskaart van de bestemmingsconfiguratie te verstrekken die op wordt gebaseerd die u uw malplaatje creeert.
 
 >[!TIP]
 >
->* De doel-id die u hier moet gebruiken, is de `instanceId` die met een bestemmingsconfiguratie beantwoordt, die wordt gecreeerd gebruikend `/destinations` eindpunt. Zie de [een doelconfiguratie ophalen](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) voor meer informatie .
+>* De doel-id die u hier moet gebruiken, is de `instanceId` die overeenkomt met een doelconfiguratie die is gemaakt met het `/destinations` -eindpunt. Verwijs naar [ terugwinnen een bestemmingsconfiguratie ](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) voor meer details.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET authoring/testing/template/sample/{DESTINATION_ID}
@@ -54,11 +54,11 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met een voorbeeldsjabloon die u kunt bewerken om aan te passen aan de verwachte gegevensindeling.
 
-Als de bestemmingsidentiteitskaart u verstrekt beantwoordt aan een bestemmingsconfiguratie met [beste inspanningsaggregatie](../../functionality/destination-configuration/aggregation-policy.md) en `maxUsersPerRequest=1` in het samenvoegingsbeleid, keert het verzoek een steekproefmalplaatje gelijkend op dit terug:
+Als bestemmingsidentiteitskaart u verstrekt aan een bestemmingsconfiguratie met [ beste inspanningssamenvoeging ](../../functionality/destination-configuration/aggregation-policy.md) en `maxUsersPerRequest=1` in het samenvoegingsbeleid beantwoordt, keert het verzoek een steekproefmalplaatje gelijkend op dit terug:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -91,7 +91,7 @@ Als de bestemmingsidentiteitskaart u verstrekt beantwoordt aan een bestemmingsco
 }
 ```
 
-Als de bestemmingsidentiteitskaart u verstrekt beantwoordt aan een malplaatje van de bestemmingsserver met [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) of [beste inspanningsaggregatie](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) with `maxUsersPerRequest` Bij meer dan één sjabloon retourneert de aanvraag een voorbeeldsjabloon die vergelijkbaar is met deze sjabloon:
+Als bestemmingsidentiteitskaart u verstrekt aan een malplaatje van de bestemmingsserver met [ configureerbare samenvoeging ](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) of [ beste inspanningssamenvoeging ](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) met `maxUsersPerRequest` groter dan één beantwoordt, keert het verzoek een steekproefmalplaatje gelijkend op dit terug:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
@@ -132,8 +132,8 @@ Als de bestemmingsidentiteitskaart u verstrekt beantwoordt aan een malplaatje va
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, kunt u nu een sjabloon voor berichttransformatie genereren met de opdracht `/authoring/testing/template/sample` API-eindpunt. Vervolgens kunt u de [API-eindpunt van sjabloon renderen](render-template-api.md) om geëxporteerde profielen te genereren op basis van de sjabloon en deze te vergelijken met de verwachte gegevensindeling van uw bestemming.
+Nadat u dit document hebt gelezen, weet u nu hoe u een sjabloon voor berichttransformatie kunt genereren met behulp van het API-eindpunt van `/authoring/testing/template/sample` . Daarna, kunt u [ gebruiken teruggeeft malplaatje API eindpunt ](render-template-api.md) om uitgevoerde profielen te produceren die op het malplaatje worden gebaseerd en hen tegen het verwachte gegevensformaat van uw bestemming te vergelijken.

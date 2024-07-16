@@ -1,7 +1,8 @@
 ---
 title: edgeBasePath
 description: Het basispad van het eindpunt dat wordt gebruikt voor interactie met Adobe-services.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 3542575d-ad02-415c-8e47-97c877dfdd9d
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 1%
@@ -10,22 +11,22 @@ ht-degree: 1%
 
 # `edgeBasePath`
 
-De `edgeBasePath` Deze eigenschap wijzigt het doelpad wanneer u werkt met Adobe-services. De meeste organisaties hoeven deze eigenschap niet in te stellen of te wijzigen.
+De eigenschap `edgeBasePath` wijzigt het doelpad wanneer u werkt met Adobe-services. De meeste organisaties hoeven deze eigenschap niet in te stellen of te wijzigen.
 
-## Edge-basispad met de webSDK-tagextensie
+## Edge-basispad met de Web SDK-tagextensie
 
-Voer de gewenste tekst in het dialoogvenster **[!UICONTROL Edge base path]** tekstveld wanneer [configureren van de tagextensie](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Ga de gewenste tekst op het **[!UICONTROL Edge base path]** tekstgebied in wanneer [ vormend de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
-1. Navigeren naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] kaart.
-1. Omlaag schuiven naar de [!UICONTROL Advanced Settings] en voert u vervolgens de gewenste waarde in in het dialoogvenster **[!UICONTROL Edge base path]** tekstveld.
-1. Klikken **[!UICONTROL Save]** publiceert u vervolgens uw wijzigingen.
+1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
+1. Blader omlaag naar de sectie [!UICONTROL Advanced Settings] en voer in het tekstveld **[!UICONTROL Edge base path]** de gewenste waarde in.
+1. Klik op **[!UICONTROL Save]** en publiceer de wijzigingen.
 
 ## Edge-basispad met de Web SDK JavaScript-bibliotheek
 
-Stel de `edgeBasePath` tekstveld wanneer het `configure` gebruiken. Als u deze eigenschap weglaat, wordt standaard de waarde van `ee`. Adobe raadt aan deze eigenschap uit de meeste configuraties weg te laten.
+Stel het tekstveld `edgeBasePath` in wanneer u de opdracht `configure` uitvoert. Wanneer u deze eigenschap weglaat, krijgt deze standaard de waarde `ee` . Adobe raadt aan deze eigenschap uit de meeste configuraties weg te laten.
 
 ```js
 alloy("configure", {

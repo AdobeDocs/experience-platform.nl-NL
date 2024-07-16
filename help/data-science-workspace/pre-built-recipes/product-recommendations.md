@@ -6,8 +6,8 @@ description: Met het product Recommendations-recept kunt u op maat gemaakte prod
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '477'
-ht-degree: 1%
+source-wordcount: '466'
+ht-degree: 0%
 
 ---
 
@@ -25,29 +25,29 @@ Het product-Recommendations-recept gebruikt automatisch leren om de interactie v
 
 ## Hoe begin ik?
 
-U kunt aan de slag door de zelfstudie van Adobe Experience Platform Lab te volgen (zie de verbinding van het Laboratorium hieronder). Deze zelfstudie laat u zien hoe u het product Recommendations-recept kunt maken in een Jupyter-laptop door het volgende te doen: [notebook naar recept](../jupyterlab/create-a-model.md) werkschema en de toepassing van het recept in [!DNL Experience Platform] [!DNL Data Science Workspace].
+U kunt aan de slag door de zelfstudie van Adobe Experience Platform Lab te volgen (zie de verbinding van het Laboratorium hieronder). Dit leerprogramma zal u tonen hoe te om het recept van Recommendations van het Product in een Notitieboekje van de Jupyter tot stand te brengen door [ notitieboekje aan recept ](../jupyterlab/create-a-model.md) werkschema te volgen, en het recept in [!DNL Experience Platform] uit te voeren [!DNL Data Science Workspace].
 
-* [Lab: De toekomst voorspellen met Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
-* [Lab-bronnen](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
+* [ Laboratorium: Verwacht de Toekomst met de Wetenschap van Gegevens Workspace ](https://expleague.azureedge.net/labs/L777/index.html)
+* [ middelen van het Laboratorium ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## Gegevensschema
 
-In dit recept wordt aangepaste [XDM-schema&#39;s](../../xdm/schema/field-dictionary.md) om de invoer- en uitvoergegevens te modelleren:
+Dit recept gebruikt douane [ XDM schema&#39;s ](../../xdm/schema/field-dictionary.md) om de input en outputgegevens te modelleren:
 
 ### Invoergegevensschema
 
 | Veldnaam | Type |
 | --- | --- |
-| itemId | Tekenreeks |
-| interactionType | Tekenreeks |
-| timestamp | Tekenreeks |
-| userId | Tekenreeks |
+| itemId | String |
+| interactionType | String |
+| tijdstempel | String |
+| userId | String |
 
 ### Uitvoergegevensschema
 
 | Veldnaam | Type |
 | --- | --- |
-| aanbevelingen | Tekenreeks |
+| aanbevelingen | String |
 | userId | Geheel |
 
 ## Algorithm

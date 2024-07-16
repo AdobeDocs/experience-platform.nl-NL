@@ -18,17 +18,17 @@ ht-degree: 1%
 >
 >Als een gebruikerstoken wordt overgegaan, dan moet de gebruiker van het teken een &quot;org admin&quot;rol voor gevraagde org hebben.
 
-De `/products` eindpunt in op attribuut-gebaseerde toegangsbeheer API staat u toe om producten evenals toestemmingscategorieën en toestemmingsreeksen programmatically te beheren verbonden aan producten in uw organisatie.
+Het `/products` eindpunt in op attribuut-gebaseerde toegangsbeheer API staat u toe om producten evenals toestemmingscategorieën en toestemmingsreeksen programmatically te beheren verbonden aan producten in uw organisatie.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van op attribuut-gebaseerde toegangsbeheer API. Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van op attribuut-gebaseerde toegangsbeheer API. Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met producten met rechten ophalen {#list}
 
-U kunt een lijst met producten met rechten ophalen door een GET-aanvraag in te dienen bij de `/products` eindpunt.
+U kunt een lijst van gemachtigde producten terugwinnen door een verzoek van de GET tot het `/products` eindpunt te richten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /products/
@@ -46,7 +46,7 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van gerechtigde producten terug die tot uw organisatie behoren.
 
@@ -70,9 +70,9 @@ Een succesvolle reactie keert een lijst van gerechtigde producten terug die tot 
 
 ## Machtigingscategorieën opzoeken op product-id
 
-U kunt machtigingscategorieën voor een bepaald product opzoeken door een verzoek van de GET tot de `/products/{PRODUCT_ID}/categories` als u uw product-id opgeeft.
+U kunt machtigingscategorieën voor een bepaald product opzoeken door een aanvraag voor een GET in te dienen bij het eindpunt `/products/{PRODUCT_ID}/categories` terwijl u uw product-id opgeeft.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /products/{PRODUCT_ID}/categories
@@ -84,7 +84,7 @@ GET /products/{PRODUCT_ID}/categories
 
 **Verzoek**
 
-Het volgende verzoek wint toestemmingscategorieën verbonden aan terug `{PRODUCT_ID}`.
+Met de volgende aanvraag worden machtigingscategorieën opgehaald die aan `{PRODUCT_ID}` zijn gekoppeld.
 
 ```shell
 curl -X GET \
@@ -94,7 +94,7 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de toestemmingscategorieën verbonden aan productID terug u vroeg.
 
@@ -145,9 +145,9 @@ Een succesvolle reactie keert de toestemmingscategorieën verbonden aan productI
 
 ## Machtigingssets opzoeken op product-id
 
-U kunt rechtensets opzoeken voor een bepaald product door een GET-aanvraag in te dienen bij de `/products/{PRODUCT_ID}/permission-sets` als u uw product-id opgeeft.
+U kunt rechtensets opzoeken voor een bepaald product door een aanvraag voor een GET in te dienen bij het eindpunt van `/products/{PRODUCT_ID}/permission-sets` terwijl u de product-id opgeeft.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /products/{PRODUCT_ID}/permission-sets
@@ -159,7 +159,7 @@ GET /products/{PRODUCT_ID}/permission-sets
 
 **Verzoek**
 
-Het volgende verzoek wint toestemmingsreeksen verbonden aan terug `{PRODUCT_ID}`.
+De volgende aanvraag haalt rechtensets op die zijn gekoppeld aan `{PRODUCT_ID}` .
 
 ```shell
 curl -X GET \
@@ -169,7 +169,7 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de toestemmingsreeksen verbonden aan productID terug u vroeg.
 
@@ -242,4 +242,4 @@ Een succesvolle reactie keert de toestemmingsreeksen verbonden aan productID ter
 | `category` | De beschikbare machtigingencategorie. |
 | `permissions` | De toestemmingen omvatten de capaciteit om de eigenschappen van het Platform te bekijken en/of te gebruiken, zoals het creëren van zandbakken, het bepalen van schema&#39;s, en het beheren van datasets. |
 | `permissions.resource` | Het element of object waartoe een onderwerp al dan niet toegang heeft. Bronnen kunnen bestanden, toepassingen, servers of zelfs API&#39;s zijn. |
-| `permissions.actions` | De handeling die een onderwerp mag uitvoeren tegen een bron met vragen. Mogelijke waarden zijn: `view`, `read`, `create`, `edit`, en `delete` |
+| `permissions.actions` | De handeling die een onderwerp mag uitvoeren tegen een bron met vragen. Mogelijke waarden zijn: `view` , `read` , `create` , `edit` en `delete` |

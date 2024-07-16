@@ -15,11 +15,11 @@ De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adob
 
 Begrijp uw publieksinzichten door tot SQL toegang te hebben die hen macht, dan uw eigen inzichten produceert om de identiteiten en de profielen verder te onderzoeken die uw publiek maken. Transformeer uw onbewerkte gegevens in nieuwe inzichten die kunnen worden gebruikt door het bestaande Real-Time CDP-gegevensmodel SQL als inspiratie te gebruiken voor het maken van query&#39;s voor uw unieke bedrijfsbehoeften.
 
-Zie de [SQL-documentatie weergeven](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct via PLatform UI aan te passen.
+Zie de [ documentatie van de Mening SQL ](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
 
-U kunt de volgende inzichten allemaal gebruiken als onderdeel van de [Sitepagina](../guides/audiences.md) of een aangepaste [door gebruiker gedefinieerd dashboard](../user-defined-dashboards.md). Zie de [aanpassingsoverzicht](../customize/overview.md) voor instructies over het aanpassen van het dashboard of [nieuwe widgets maken en bewerken](../customize/custom-widgets.md) in de widgetbibliotheek en [door gebruiker gedefinieerd dashboard](../user-defined-dashboards.md#create-widget).
+De volgende inzichten zijn allen beschikbaar voor u om als deel van het [ dashboard van Soorten Soorten publiek ](../guides/audiences.md) of een douane [ user-defined dashboard ](../user-defined-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../user-defined-dashboards.md#create-widget) uit.
 
-U kunt de volgende inzichten allemaal gebruiken als onderdeel van de [Sitepagina](../guides/audiences.md) of een aangepast dashboard.
+De volgende inzichten zijn allen beschikbaar voor u om als deel van het [ dashboard van Soorten Soorten publiek ](../guides/audiences.md) of een douanedashboard te gebruiken.
 
 ## Rapport publiek overlappen {#audience-overlap-report}
 
@@ -86,7 +86,7 @@ SELECT source_segment_name,
 
 +++
 
-Zie de [Documentatie van de widget rapport voor publiek-overlap](../guides/audiences.md#audience-overlap-report) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie het [ publiek overlappen rapport widget documentatie ](../guides/audiences.md#audience-overlap-report) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Audioverlap {#audience-overlap}
 
@@ -133,7 +133,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Zie de [Documentatie over overlappende widget publiek](../guides/audiences.md#audience-overlap) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie het [ publiek overlappen widget documentatie ](../guides/audiences.md#audience-overlap) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Ontwikkeling van de omvang van het publiek {#audience-size-change-trend}
 
@@ -174,7 +174,7 @@ SELECT date_key,
 
 +++
 
-Zie de [Tendmatige widget documentatie over wijziging van de doelgrootte](../guides/audiences.md#audience-size-change-trend) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van de de veranderingstrend van de grootte van het publiek ](../guides/audiences.md#audience-size-change-trend) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Ontwikkeling van de omvang van het publiek naar identiteit {#audience-size-trend-by-identity}
 
@@ -207,7 +207,7 @@ SELECT sum(count_of_profiles) AS identities,
 
 +++
 
-Zie de [Tendens van de omvang van het publiek naar identiteitswidgetdocumentatie](../guides/audiences.md#audience-size-trend-by-identity) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ trend van de grootte van het publiek door de documentatie van de identiteitswidget ](../guides/audiences.md#audience-size-trend-by-identity) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Ontwikkeling van de omvang van het publiek {#audience-size-trend}
 
@@ -238,7 +238,7 @@ SELECT date_key,
 
 +++
 
-Zie de [Tendensen-widgetdocumentatie voor doelgrootte](../guides/audiences.md#audience-size-trend) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van de de groottewidget van de Grootte van het Publiek ](../guides/audiences.md#audience-size-trend) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Grootte publiek {#audience-size}
 
@@ -266,7 +266,7 @@ WHERE
 
 +++
 
-Zie de [Documentatie over de widget Grootte publiek](../guides/audiences.md#audience-size) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van de de groottewidget van de Audience ](../guides/audiences.md#audience-size) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## AI-distributie van scores door klant {#customer-ai-distribution-of-scores}
 
@@ -409,7 +409,7 @@ SELECT b.model_name,
 
 +++
 
-Zie de [AI-distributie van de widgetdocumentatie voor scores door de klant](../guides/audiences.md#customer-ai-distribution-of-scores) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ AI distributie van de Klant van de documentatie van de scores widget ](../guides/audiences.md#customer-ai-distribution-of-scores) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Overzicht van AI-scores van klant {#customer-ai-scoring-summary}
 
@@ -454,13 +454,13 @@ SELECT model_name,
 
 +++
 
-Zie de [Documentatie van de overzichtswidget voor scores van AI](../guides/audiences.md#customer-ai-scoring-summary) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ AI van de Klant die summiere widget documentatie ](../guides/audiences.md#customer-ai-scoring-summary) voor informatie over de verschijning en de functionaliteit van dit inzicht scoren.
 
 ## Identiteitsoverlapping {#identity-overlap}
 
 Vragen beantwoord door dit inzicht:
 
-- Wat is het gemeenschappelijke snijpunt tussen [!UICONTROL Identity Type A] en [!UICONTROL Identity Type B] voor een gefilterd publiek?
+- Wat is het algemene snijpunt tussen [!UICONTROL Identity Type A] en [!UICONTROL Identity Type B] voor een gefilterd publiek?
 - Hoe verfijn ik klantenpubliek dat op de overlapping van specifieke identiteitstypes wordt gebaseerd, om de gerichte marketing strategieën te verbeteren?
 - Welke inzichten kunnen worden verkregen bij de evaluatie van de prestaties van de campagne op de elkaar kruisende gebieden?
 - Op basis van deze inzichten, hoe kunnen toekomstige marketinginspanningen worden geoptimaliseerd?
@@ -514,7 +514,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Zie de [Documentatie over overlappende identiteitswidgets](../guides/audiences.md#identity-overlap) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van de overlap van de Identiteit ](../guides/audiences.md#identity-overlap) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Profielen op identiteit {#profiles-by-identity}
 
@@ -542,7 +542,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Zie de [Profielen op documentatie van widget identiteit](../guides/audiences.md#profiles-by-identity) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie [ Profielen door de documentatie van de identiteitswidget ](../guides/audiences.md#profiles-by-identity) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Geplande activeringen {#scheduled-activations}
 
@@ -577,12 +577,12 @@ SELECT p.destination_platform ,
 
 +++
 
-Zie de [Geplande documentatie van de widget voor activeringen](../guides/audiences.md#scheduled-activations) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ Geplande documentatie van de activeringswidget ](../guides/audiences.md#scheduled-activations) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Volgende stappen
 
 Door dit document te lezen, begrijpt u nu de SQL die dashboardinzichten produceert en welke gemeenschappelijke vragen deze analyse oplost. U kunt nu de SQL bewerken en doorlopen om uw eigen inzichten te genereren.
 
-Zie de [SQL-documentatie weergeven](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct via PLatform UI aan te passen.
+Zie de [ documentatie van de Mening SQL ](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
 
-U kunt ook de SQL lezen en begrijpen die inzichten voor [Profielen](./profiles.md), [Accountprofielen](./account-profiles.md) en [Doelen](./destinations.md) dashboards.
+U kunt SQL ook lezen en begrijpen die inzichten voor [ Profielen ](./profiles.md), [ Profielen van de Rekening ](./account-profiles.md) en [ Doelen ](./destinations.md) dashboards van Doelen {produceert.

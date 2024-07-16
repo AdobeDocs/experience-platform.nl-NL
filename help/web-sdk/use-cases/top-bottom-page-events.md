@@ -33,11 +33,11 @@ Door bovenkant en bodem van paginagebeurtenissen in Web SDK te gebruiken, kan he
 
 ## Boven aan pagina, gebeurtenisvoorbeeld {#top-of-page}
 
-Het codevoorbeeld hieronder illustreert een top van de configuratie van de paginagebeurtenis die om verpersoonlijking maar niet verzoekt [weergavegebeurtenissen verzenden](../personalization/display-events.md#send-sendEvent-calls) voor automatisch weergegeven voorstellingen. De [weergavegebeurtenissen](../personalization/display-events.md#send-sendEvent-calls) wordt verzonden als onderdeel van de gebeurtenis onderaan.
+De codesteekproef hieronder illustreert een bovenkant van de configuratie van de paginagebeurtenis die om verpersoonlijking verzoekt maar niet [ vertoningsgebeurtenissen ](../personalization/display-events.md#send-sendEvent-calls) voor automatisch teruggegeven voorstellingen verzendt. De [ vertoningsgebeurtenissen ](../personalization/display-events.md#send-sendEvent-calls) zullen als deel van de bodem-van-pagina gebeurtenis worden verzonden.
 
 >[!BEGINTABS]
 
->[!TAB De gebeurtenis Boven aan pagina]
+>[!TAB  Boven aan paginagebeurtenis ]
 
 ```js
 alloy("sendEvent", {
@@ -51,9 +51,9 @@ alloy("sendEvent", {
 
 | Paramter | Vereist/optioneel | Beschrijving |
 |---|---|---|
-| `type` | Vereist | Deze parameter instellen op `decisioning.propositionFetch`. Dit speciale gebeurtenistype instrueert Adobe Analytics deze gebeurtenis te laten vallen. Wanneer u Customer Journey Analytics gebruikt, kunt u ook een filter instellen om deze gebeurtenissen neer te zetten. |
-| `renderDecisions` | Vereist | Deze parameter instellen op `true`. Deze parameter vertelt Web SDK om besluiten terug te geven die door het Netwerk van de Rand zijn teruggekeerd. |
-| `personalization.sendDisplayEvent` | Vereist | Deze parameter instellen op `false`. Hiermee voorkomt u dat weergavegebeurtenissen worden verzonden. |
+| `type` | Vereist | Stel deze parameter in op `decisioning.propositionFetch` . Dit speciale gebeurtenistype instrueert Adobe Analytics deze gebeurtenis te laten vallen. Wanneer u Customer Journey Analytics gebruikt, kunt u ook een filter instellen om deze gebeurtenissen neer te zetten. |
+| `renderDecisions` | Vereist | Stel deze parameter in op `true` . Deze parameter vertelt Web SDK om besluiten terug te geven die door de Edge Network zijn teruggekeerd. |
+| `personalization.sendDisplayEvent` | Vereist | Stel deze parameter in op `false` . Hiermee voorkomt u dat weergavegebeurtenissen worden verzonden. |
 
 >[!ENDTABS]
 
@@ -61,13 +61,13 @@ alloy("sendEvent", {
 
 >[!BEGINTABS]
 
->[!TAB Automatisch gerenderde voorstellingen]
+>[!TAB  Auto-teruggegeven voorstellingen ]
 
-Het codevoorbeeld hieronder illustreert een bodem van de configuratie van de paginagebeurtenis die vertoningsgebeurtenissen voor voorstellingen verzendt die automatisch op de pagina werden teruggegeven maar waarvoor de vertoningsgebeurtenissen werden onderdrukt binnen [bovenzijde van pagina](#top-of-page) gebeurtenis.
+De codesteekproef hieronder illustreert een bodem van de configuratie van de paginagebeurtenis die vertoningsgebeurtenissen voor voorstellingen verzendt die automatisch op de pagina werden teruggegeven maar waarvoor de vertoningsgebeurtenissen in [ bovenkant van pagina ](#top-of-page) gebeurtenis werden onderdrukt.
 
 >[!NOTE]
 >
->In dit scenario moet u de onderkant van de paginagebeurtenis aanroepen _na_ de bovenkant van pagina één. De onderzijde van de gebeurtenis page hoeft echter niet te wachten tot de bovenzijde van pagina één is voltooid.
+>In dit scenario, moet u de bodem van paginagebeurtenis _na_ de bovenkant van pagina één roepen. De onderzijde van de gebeurtenis page hoeft echter niet te wachten tot de bovenzijde van pagina één is voltooid.
 
 ```js
 alloy("sendEvent", {
@@ -80,10 +80,10 @@ alloy("sendEvent", {
 
 | Parameter | Vereist/optioneel | Beschrijving |
 |---|---|---|
-| `personalization.includeRenderedPropositions` | Vereist | Deze parameter instellen op `true`. Hierdoor kunnen weergavegebeurtenissen worden verzonden die boven aan de paginagebeurtenis zijn onderdrukt. |
+| `personalization.includeRenderedPropositions` | Vereist | Stel deze parameter in op `true` . Hierdoor kunnen weergavegebeurtenissen worden verzonden die boven aan de paginagebeurtenis zijn onderdrukt. |
 | `xdm` | Optioneel | Gebruik deze sectie om alle gegevens op te nemen die u onder aan de paginagebeurtenis nodig hebt. |
 
->[!TAB Handmatig gerenderde voorstellingen]
+>[!TAB  manueel teruggegeven voorstellingen ]
 
 In het onderstaande codevoorbeeld ziet u een onderkant van de configuratie van een paginagebeurtenis die weergavegebeurtenissen verzendt voor voorstellen die handmatig op de pagina zijn weergegeven (bijvoorbeeld voor aangepaste beslissingsbereiken of oppervlakken).
 
@@ -117,8 +117,8 @@ alloy("sendEvent", {
 
 | Paramter | Vereist/optioneel | Beschrijving |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Vereist | Deze sectie bepaalt manueel teruggegeven voorstellingen. U moet het voorstel opnemen `ID`, `scope`, en `scopeDetails`. Zie de documentatie over hoe u [handmatig personalisatie renderen](../personalization/rendering-personalization-content.md#manually) voor meer informatie over hoe te om vertoningsgebeurtenissen voor manueel teruggegeven inhoud te registreren. Handmatig gerenderde verpersoonlijkingsinhoud moet onder aan de paginaklok worden opgenomen. |
-| `xdm._experience.decisioning.propositionEventType` | Vereist | Deze parameter instellen op `display: 1`. |
+| `xdm._experience.decisioning.propositions` | Vereist | Deze sectie bepaalt manueel teruggegeven voorstellingen. U moet de voorstelling `ID` , `scope` en `scopeDetails` opnemen. Zie de documentatie op hoe te [ verpersoonlijking ](../personalization/rendering-personalization-content.md#manually) voor meer informatie manueel teruggeven over hoe te om vertoningsgebeurtenissen voor manueel teruggegeven inhoud te registreren. Handmatig gerenderde verpersoonlijkingsinhoud moet onder aan de paginaklok worden opgenomen. |
+| `xdm._experience.decisioning.propositionEventType` | Vereist | Stel deze parameter in op `display: 1` . |
 | `xdm` | Optioneel | Gebruik deze sectie om alle gegevens op te nemen die u onder aan de paginagebeurtenis nodig hebt. |
 
 >[!ENDTABS]
@@ -129,9 +129,9 @@ alloy("sendEvent", {
 
 >[!BEGINTABS]
 
->[!TAB Weergave eerste pagina]
+>[!TAB  Eerste paginamening ]
 
-In het onderstaande voorbeeld wordt de toevoeging van de vereiste `xdm.web.webPageDetails.viewName` parameter. Dit is wat het tot één-paginatoepassing maakt. De `viewName` in dit voorbeeld is de weergave die wordt geladen op de pagina die wordt geladen.
+In het onderstaande voorbeeld wordt de parameter `xdm.web.webPageDetails.viewName` toegevoegd. Dit is wat het tot één-paginatoepassing maakt. De `viewName` in dit voorbeeld is de weergave die wordt geladen op de pagina die wordt geladen.
 
 ```js
 // Top of page, render decisions for the "home" view.
@@ -170,7 +170,7 @@ alloy("sendEvent", {
 });
 ```
 
->[!TAB Weergave tweede pagina (Option 1)]
+>[!TAB  Tweede paginamening (Optie 1) ]
 
 In dit voorbeeld is het niet nodig om boven/onder pagina te splitsen, omdat de personalisatie voor de pagina al is opgehaald.
 
@@ -189,9 +189,9 @@ alloy("sendEvent", {
 ```
 
 
->[!TAB Weergave tweede pagina (Option 2)]
+>[!TAB  Tweede paginamening (Optie 2) ]
 
-Als u nog steeds de onderkant van een paginaklok moet vertragen, kunt u `applyPropositions` voor de bovenkant van de paginareet. Aangezien geen verpersoonlijking moet worden gehaald en geen Analytische gegevens moeten worden geregistreerd, is er geen behoefte om een verzoek aan het Netwerk van de Rand te doen.
+Als u nog steeds de onderkant van een paginaklok moet vertragen, kunt u `applyPropositions` gebruiken voor de bovenkant van een paginaklok. Aangezien geen verpersoonlijking moet worden opgehaald en geen Analytische gegevens moeten worden geregistreerd, is het niet nodig om een verzoek aan de Edge Network te richten.
 
 ```js
 // top of page, render the decisions already fetched for the "cart" view.
@@ -222,4 +222,4 @@ alloy("sendEvent", {
 
 ## GitHub-voorbeeld {#github-sample}
 
-Het voorbeeld is gevonden op [dit adres](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) toont aan hoe te om Experience Platform en Web SDK te gebruiken om verpersoonlijking bij de bovenkant van de pagina te verzoeken, en analysemetriek bij de bodem te verzenden. U kunt het voorbeeld downloaden en lokaal uitvoeren om te begrijpen hoe boven- en onderaan pagina-gebeurtenissen werken.
+De steekproef die bij [ wordt gevonden dit adres ](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) toont aan hoe te om Experience Platform en Web SDK te gebruiken om verpersoonlijking bij de bovenkant van de pagina te verzoeken, en analysemetriek bij de bodem te verzenden. U kunt het voorbeeld downloaden en lokaal uitvoeren om te begrijpen hoe boven- en onderaan pagina-gebeurtenissen werken.

@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Oracle Service Cloud;oracle service cloud
-title: Overzicht van oracle Service Cloud Source Connector
+title: Overzicht oracle Service Cloud Source Connector
 description: Leer hoe u Oracle Service Cloud met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
@@ -19,7 +19,7 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van een sy
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
 
 In de onderstaande documentatie vindt u informatie over hoe u Oracle Service Cloud kunt verbinden met Platform via API&#39;s of de gebruikersinterface:
 

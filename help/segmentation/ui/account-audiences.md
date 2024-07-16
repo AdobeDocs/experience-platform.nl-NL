@@ -15,57 +15,57 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Accountpubliek is alleen beschikbaar in het dialoogvenster [B2B Edition van Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) en de [B2P Edition van Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
+>Het publiek van de rekening is slechts beschikbaar in de [ B2B Uitgave van Real-time Customer Data Platform ](../../rtcdp/overview.md#rtcdp-b2b) en de [ B2P Uitgave van Real-time Customer Data Platform ](../../rtcdp/overview.md#rtcdp-b2p).
 
 Met de segmentatie van uw account kunt u in Adobe Experience Platform de volledige versnelling en verfijning van de segmentatieervaring van marketingmedewerkers van op mensen gebaseerde doelgroepen naar op account gebaseerde doelgroepen brengen.
 
-Accountpubliek kan worden gebruikt als input voor op account gebaseerde bestemmingen, zodat u zich kunt richten op de personen binnen die accounts in downstreamservices. U kunt bijvoorbeeld een publiek met een account gebruiken om records op te halen van alle accounts die dat wel doen **niet** beschikken over contactgegevens voor alle personen die de titel Chief Operating Officer (COO) of Chief Marketing Officer (CMO) hebben.
+Accountpubliek kan worden gebruikt als input voor op account gebaseerde bestemmingen, zodat u zich kunt richten op de personen binnen die accounts in downstreamservices. Bijvoorbeeld, kunt u op rekening-gebaseerde publiek gebruiken om verslagen van alle rekeningen terug te winnen die **** geen contactinformatie voor om het even welke mensen met de titel HoofdWerkende Functionaris (COO) of HoofdMarketingFunctionaris (CMO) hebben.
 
 ## Terminologie {#terminology}
 
 Voordat u aan de slag gaat met het publiek van de account, bekijkt u eerst de verschillen tussen de verschillende soorten publiek:
 
-- **Accountpubliek**: Een publiek in een account is een publiek dat is gemaakt met **account** profielgegevens. Accountprofielgegevens kunnen worden gebruikt om een publiek te maken dat zich richt op personen binnen downstreamaccounts. Lees voor meer informatie over accountprofielen de [overzicht van accountprofiel](../../rtcdp/accounts/account-profile-overview.md).
-- **Personen**: Een publiek van een persoon is een publiek dat is gemaakt met **klant** profielgegevens. De profielgegevens van de klant kunnen worden gebruikt om publiek tot stand te brengen dat op de klantenkring van uw zaken gericht is. Lees voor meer informatie over klantprofielen de [Overzicht van het realtime klantprofiel](../../profile/home.md).
-- **Doelgroepen**: Een publiek met perspectief is een publiek dat is gemaakt met **vooruitzicht** profielgegevens. Met profielgegevens kan een publiek van niet-geverifieerde gebruikers worden gemaakt. Lees voor meer informatie over perspectiefprofielen de [Overzicht van perspectiefprofielen](../../profile/ui/prospect-profile.md).
+- **publiek van de Rekening**: Een rekeningspubliek is een publiek dat gebruikend **rekening** profielgegevens wordt gecreeerd. Accountprofielgegevens kunnen worden gebruikt om een publiek te maken dat zich richt op personen binnen downstreamaccounts. Voor meer informatie over rekeningsprofielen, te lezen gelieve het [ overzicht van het rekeningsprofiel ](../../rtcdp/accounts/account-profile-overview.md).
+- **publiek van Mensen**: Een publiek van de mensen is een publiek dat gebruikend **klant** profielgegevens wordt gecreeerd. De profielgegevens van de klant kunnen worden gebruikt om publiek tot stand te brengen dat op de klantenkring van uw zaken gericht is. Voor meer informatie over klantenprofielen, te lezen gelieve het [ overzicht van het Profiel van de Klant in real time ](../../profile/home.md).
+- **het publiek van het Vooruitzicht**: Een perspectiefpubliek is een publiek dat gebruikend **het profielgegevens van het vooruitzicht** wordt gecreeerd. Met profielgegevens kan een publiek van niet-geverifieerde gebruikers worden gemaakt. Voor meer informatie over perspectiefprofielen, gelieve het [ overzicht van het perspectiefprofiel ](../../profile/ui/prospect-profile.md) te lezen.
 
 ## Toegang {#access}
 
-Als u toegang wilt tot het publiek van een account, selecteert u **[!UICONTROL Audiences]** in de **[!UICONTROL Accounts]** sectie.
+Selecteer **[!UICONTROL Audiences]** in de **[!UICONTROL Accounts]** -sectie om toegang te krijgen tot het accountpubliek.
 
-![De knop Soorten publiek wordt gemarkeerd in de sectie Accounts.](../images/ui/account-audiences/select.png)
+![ de knoop van het publiek wordt benadrukt binnen de sectie van Rekeningen.](../images/ui/account-audiences/select.png)
 
-De [!UICONTROL Browse] wordt weergegeven en geeft een lijst weer van alle accountpubliek voor de organisatie.
+De pagina [!UICONTROL Browse] wordt weergegeven met een lijst van alle accountsoorten voor de organisatie.
 
-![Het accountpubliek dat bij de organisatie hoort, wordt weergegeven.](../images/ui/account-audiences/browse.png)
+![ het rekeningspubliek dat tot de organisatie behoort wordt getoond.](../images/ui/account-audiences/browse.png)
 
 Deze weergave bevat informatie over het publiek, zoals de naam, het aantal profielen, de oorsprong, de levenscyclusstatus, de datum waarop deze is gemaakt en de datum waarop deze voor het laatst is bijgewerkt.
 
-U kunt ook de functie voor zoeken en filteren gebruiken om snel naar specifieke accountsoorten te zoeken en deze te sorteren. Meer informatie over deze functie vindt u in het gedeelte [Overzicht van het portal Publiek](./audience-portal.md#manage-audiences).
+U kunt ook de functie voor zoeken en filteren gebruiken om snel naar specifieke accountsoorten te zoeken en deze te sorteren. Meer informatie over deze eigenschap kan in het [ Poortoverzicht van het Poort van het Publiek ](./audience-portal.md#manage-audiences) worden gevonden.
 
 ## publiek maken {#create}
 
 >[!NOTE]
 >
->Accountpubliek wordt geëvalueerd met **partij** segmentatie, en wordt om de 24 uur geëvalueerd.
+>Het publiek van de rekening wordt geëvalueerd gebruikend **partij** segmentatie, en zal om de 24 uur worden geëvalueerd.
 
-Als u een accountpubliek wilt maken, selecteert u **[!UICONTROL Create audience]** op de [!UICONTROL Browse] pagina.
+Selecteer **[!UICONTROL Create audience]** op de [!UICONTROL Browse] -pagina om een accountpubliek te maken.
 
-![De [!UICONTROL Create audience] wordt gemarkeerd op de pagina waarop het publiek van de account bladert.](../images/ui/account-audiences/select-create-audience.png)
+![ de [!UICONTROL Create audience] knoop wordt benadrukt op het verslagpubliek doorbladert pagina.](../images/ui/account-audiences/select-create-audience.png)
 
-De Segment Builder wordt weergegeven. De accountkenmerken en het publiek worden weergegeven op de linkernavigatiebalk. Onder de [!UICONTROL Attributes] kunt u zowel door het platform gemaakte als aangepaste kenmerken toevoegen.
+De Segment Builder wordt weergegeven. De accountkenmerken en het publiek worden weergegeven op de linkernavigatiebalk. Onder het tabblad [!UICONTROL Attributes] kunt u zowel door het platform gemaakte als aangepaste kenmerken toevoegen.
 
-![De Segment Builder wordt weergegeven. Merk op dat slechts de attributen en het publiek worden getoond.](../images/ui/account-audiences/segment-builder.png)
+![ de Bouwer van het Segment wordt getoond. Merk op dat slechts de attributen en het publiek worden getoond.](../images/ui/account-audiences/segment-builder.png)
 
-Houd er rekening mee dat gebeurtenissen onder **[!UICONTROL People]**, in plaats van hun eigen tabblad te zijn, aangezien deze kenmerken aan personen zijn gekoppeld.
+Houd er bij het maken van accountsoorten rekening mee dat gebeurtenissen worden vermeld onder **[!UICONTROL People]** in plaats van hun eigen tabblad, omdat deze kenmerken aan personen zijn gekoppeld.
 
-![De locatie waar naar gebeurtenissen moet worden gezocht, die zich binnen het [!UICONTROL People] wordt gemarkeerd.](../images/ui/account-audiences/attributes.png)
+![ de plaats om gebeurtenissen te vinden, die binnen de [!UICONTROL People] omslag is, wordt benadrukt.](../images/ui/account-audiences/attributes.png)
 
-Onder de [!UICONTROL Audiences] kunt u eerder gemaakte, op personen gebaseerde soorten publiek toevoegen om van af te bouwen bij het maken van uw eigen accountpubliek.
+Onder het tabblad [!UICONTROL Audiences] kunt u eerder gemaakte, op personen gebaseerde soorten publiek toevoegen om van af te bouwen bij het maken van uw eigen accountpubliek.
 
-![Het tabblad Soorten publiek in de Segmentbouwer wordt gemarkeerd.](../images/ui/account-audiences/audiences.png)
+![ het lusje van het publiek binnen de Bouwer van het Segment wordt benadrukt.](../images/ui/account-audiences/audiences.png)
 
-Voor meer informatie over het gebruik van de Segment Builder leest u de [Handleiding voor de gebruikersinterface van Segment Builder](./segment-builder.md).
+Voor meer informatie bij het gebruiken van de Bouwer van het Segment, te lezen gelieve de [ gids UI van de Bouwer van het Segment ](./segment-builder.md).
 
 ## Het publiek activeren {#activate}
 
@@ -75,15 +75,15 @@ Voor meer informatie over het gebruik van de Segment Builder leest u de [Handlei
 
 Nadat u het publiek van uw account hebt gemaakt, kunt u het publiek activeren voor andere downstreamservices.
 
-Selecteer het publiek dat u wilt activeren, gevolgd door **[!UICONTROL Activate to destination]**.
+Selecteer het publiek dat u wilt activeren, gevolgd door **[!UICONTROL Activate to destination]** .
 
-![De [!UICONTROL Activate to destination] wordt gemarkeerd in het menu met snelle acties voor het geselecteerde publiek.](../images/ui/account-audiences/activate.png)
+![ de [!UICONTROL Activate to destination] knoop wordt benadrukt in het snelle actiemenu voor het geselecteerde publiek.](../images/ui/account-audiences/activate.png)
 
-De [!UICONTROL Activate destination] wordt weergegeven. Voor meer informatie over het activeringsproces, waaronder ondersteunde bestemmingen en meer informatie over veldtoewijzingen, leest u de [accountpubliek activeren](/help/destinations/ui/activate-account-audiences.md) zelfstudie.
+De pagina [!UICONTROL Activate destination] wordt weergegeven. Voor meer informatie over het activeringsproces, met inbegrip van gesteunde bestemmingen en details op gebiedsafbeeldingen, te lezen gelieve [ accountpubliek ](/help/destinations/ui/activate-account-audiences.md) leerprogramma activeren.
 
 ## Volgende stappen {#next-steps}
 
-Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u uw accountpubliek kunt maken en gebruiken in Adobe Experience Platform. Als u wilt weten hoe u andere soorten publiek in Platform kunt gebruiken, leest u de [Handleiding voor segmentatieservice](./overview.md).
+Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u uw accountpubliek kunt maken en gebruiken in Adobe Experience Platform. Leren hoe te om andere soorten publiek in Platform te gebruiken, te lezen gelieve de [ gids UI van de Dienst van de Segmentatie ](./overview.md).
 
 ## Bijlage {#appendix}
 
@@ -99,86 +99,86 @@ In de volgende sectie vindt u aanvullende informatie over het accountpubliek.
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
 >title="Maximale diepte van geneste container"
->abstract="De maximale diepte van geneste containers is **5**. Dit betekent dat u **kan** wanneer u een publiek maakt, hebt u meer dan vijf geneste containers."
+>abstract="De maximumdiepte van genestelde containers is **5**. Dit betekent dat u **niet** meer dan vijf genestelde containers kunt hebben wanneer het creëren van uw publiek."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxBreadth"
 >title="Fout in maximumaantal regels"
->abstract="Het maximumaantal regels in één container is **5**. Dit betekent dat u **kan** wanneer u een publiek maakt, hebt u meer dan vijf regels in één container."
+>abstract="Het maximumaantal regels binnen één enkele container is **5**. Dit betekent u dat u **niet** meer dan vijf regels binnen één enkele container kan hebben wanneer het creëren van uw publiek."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_crossEntityMaxDepth"
 >title="Fout in maximumbedrag van entiteit"
->abstract="Het maximumaantal entiteiten tussen verschillende entiteiten dat binnen één publiek kan worden gebruikt, is **5**. Een kruisentiteit is wanneer u tussen verschillende entiteiten in uw publiek verandert. Bijvoorbeeld, ga van een Rekening naar een Persoon aan een Lijst van de Marketing."
+>abstract="Het maximumaantal dwars entiteiten die binnen één enkel publiek kunnen worden gebruikt is **5**. Een kruisentiteit is wanneer u tussen verschillende entiteiten in uw publiek verandert. Bijvoorbeeld, ga van een Rekening naar een Persoon aan een Lijst van de Marketing."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowCustomEntity"
 >title="Fout aangepaste entiteit"
->abstract="Aangepaste entiteiten zijn **niet** toegestaan."
+>abstract="De entiteiten van de douane worden **niet** toegestaan."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_b2bBuiltInEntities"
 >title="Invalid B2B entity error"
->abstract="Alleen de volgende B2B-entiteiten mogen worden gebruikt: `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member`, en `_xdm.classes.campaign`."
+>abstract="Alleen de volgende B2B-entiteiten mogen worden gebruikt: `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member` en `_xdm.classes.campaign`."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_rhsMaxOptions"
 >title="Fout in maximumwaarden"
->abstract="Het maximumaantal waarden dat voor één veld kan worden gecontroleerd, is **50**."
+>abstract="Het maximumaantal waarden dat voor één enkel gebied kan worden gecontroleerd is **50**."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowInSegmentByReference"
 >title="gebeurtenisfout in inSegment"
->abstract="inSegment-gebeurtenissen zijn **niet** toegestaan."
+>abstract="inSegment worden de gebeurtenissen **niet** toegestaan."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowInSegmentByValue"
 >title="gebeurtenisfout in inSegment"
->abstract="inSegment-gebeurtenissen zijn **niet** toegestaan."
+>abstract="inSegment worden de gebeurtenissen **niet** toegestaan."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowSequentialEvents"
 >title="Opeenvolgende gebeurtenisfout"
->abstract="Sequentiële gebeurtenissen zijn **niet** toegestaan."
+>abstract="De opeenvolgende gebeurtenissen worden **niet** toegestaan."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowMaps"
 >title="Eigenschappenfout toewijzen"
->abstract="Eigenschappen van het type Map zijn **niet** toegestaan."
+>abstract="De kaart-type eigenschappen zijn **niet** toegestaan."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_maxNestedAggregationDepth"
 >title="Maximale diepte van geneste entiteit"
->abstract="De maximale diepte van geneste arrays is **5**."
+>abstract="De maximumdiepte van genestelde series is **5**."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_maxObjectNestingLevel"
 >title="Maximale fout in aantal geneste objecten"
->abstract="Het maximale aantal toegestane geneste objecten is **10**."
+>abstract="Het maximumaantal genestelde toegelaten voorwerpen is **10**."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_generic"
 >title="Inbreuk op beperking"
 >abstract="Het publiek schendt een beperking. Lees het gekoppelde document voor meer informatie."
 
-Bij het gebruik van accountsoorten **moet** voldoen aan de volgende beperkingen:
+Wanneer het gebruiken van rekeningspubliek, moet het publiek **** aan de volgende beperkingen voldoen:
 
 >[!NOTE]
 >
->In de volgende lijst wordt de **default** beperkingen voor het publiek voor rekening. Deze waarden **kan** wijzigen, afhankelijk van de instellingen die door de beheerder van uw organisatie zijn geïmplementeerd.
+>De volgende lijst toont de **standaard** beperkingen voor rekeningspubliek. Deze waarden **kunnen** veranderen, afhankelijk van de montages die door de beheerder van uw organisatie worden uitgevoerd.
 
-- Het maximale terugzoekvenster voor Experience Events is **dertig dagen**.
-- De maximale diepte van geneste containers is **5**.
-   - Dit betekent dat u **kan** wanneer u een publiek maakt, hebt u meer dan vijf geneste containers.
-- Het maximumaantal regels in één container is **5**.
-   - Dit betekent dat uw publiek **kan** hebben meer dan vijf regels die uw publiek samenstellen.
-- Het maximumaantal entiteiten tussen de verschillende entiteiten dat kan worden gebruikt is **5**.
+- Het maximumterugkijkvenster voor de Gebeurtenissen van de Ervaring is **30 dagen**.
+- De maximumdiepte van genestelde containers is **5**.
+   - Dit betekent dat u **niet** meer dan vijf genestelde containers kunt hebben wanneer het creëren van uw publiek.
+- Het maximumaantal regels binnen één enkele container is **5**.
+   - Dit betekent dat uw publiek **niet** meer dan vijf regels kan hebben die uw publiek samenstellen.
+- Het maximumaantal dwars entiteiten die kunnen worden gebruikt is **5**.
    - Een kruisentiteit is wanneer u tussen verschillende entiteiten in uw publiek verandert. Bijvoorbeeld, ga van een Rekening naar een Persoon aan een Lijst van de Marketing.
-- Aangepaste entiteiten **kan** worden gebruikt.
-- Het maximumaantal waarden dat voor één veld kan worden gecontroleerd, is **50**.
+- De entiteiten van de douane **kunnen niet** worden gebruikt.
+- Het maximumaantal waarden dat voor één enkel gebied kan worden gecontroleerd is **50**.
    - Als u bijvoorbeeld een veld hebt met de naam &quot;City&quot;, kunt u die waarde controleren op 50 namen van steden.
-- Accountpubliek **kan** gebruiken `inSegment` gebeurtenissen.
-- Accountpubliek **kan** opeenvolgende gebeurtenissen gebruiken.
-- Accountpubliek **kan** gebruiken, kaarten.
-- De maximale diepte van geneste arrays is **5**.
-- Het maximumaantal geneste objecten is **10**.
+- Het publiek van de rekening **kan niet** gebruiken `inSegment` gebeurtenissen.
+- Het publiek van de rekening **kan** geen opeenvolgende gebeurtenissen gebruiken.
+- Het publiek van de rekening **kan** geen kaarten gebruiken.
+- De maximumdiepte van genestelde series is **5**.
+- Het maximumaantal genestelde voorwerpen is **10**.

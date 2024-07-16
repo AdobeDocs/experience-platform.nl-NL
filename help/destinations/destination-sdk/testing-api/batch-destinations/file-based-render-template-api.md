@@ -5,7 +5,7 @@ exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
 source-git-commit: 6bd169075cd3826ae2a0907e6e624fd901076a4a
 workflow-type: tm+mt
 source-wordcount: '386'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -14,26 +14,26 @@ ht-degree: 2%
 
 ## Overzicht {#overview}
 
-De `/authoring/testing/template/render` eindpunt helpt u visualiseren hoe templatized [klantgegevensvelden](../../functionality/destination-configuration/customer-data-fields.md) bepaald in uw bestemmingsconfiguratie zou als kijken.
+Het `/authoring/testing/template/render` eindpunt helpt u visualiseren hoe de templatized [ gebieden van klantengegevens ](../../functionality/destination-configuration/customer-data-fields.md) die in uw bestemmingsconfiguratie worden bepaald als zouden kijken.
 
 Het eindpunt produceert willekeurige waarden voor uw gebieden van klantengegevens, en keert hen in de reactie terug. Hierdoor kunt u de semantische structuur van gegevensvelden van klanten, zoals emmernamen of mappaden, valideren.
 
 ## Aan de slag {#getting-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Vereisten {#prerequisites}
 
-Voordat u de `/template/render` aan, zorg ervoor u aan de volgende voorwaarden voldoet:
+Voordat u het eindpunt `/template/render` kunt gebruiken, moet u controleren of aan de volgende voorwaarden is voldaan:
 
-* U hebt een bestaande op dossier-gebaseerde bestemming die door de Destination SDK wordt gecreeerd en u kunt het in uw zien [doelcatalogus](../../../ui/destinations-workspace.md).
+* U hebt een bestaande op dossier-gebaseerde bestemming die door de Destination SDK wordt gecreeerd en u kunt het in uw [ catalogus van bestemmingen ](../../../ui/destinations-workspace.md) zien.
 * Als u de API-aanvraag met succes wilt uitvoeren, hebt u de id van de doelinstantie nodig die overeenkomt met de doelinstantie die u wilt testen. Krijg bestemmingsidentiteitskaart die u in de API vraag, van URL zou moeten gebruiken, wanneer het doorbladeren van een verbinding met uw bestemming in Platform UI.
 
-   ![UI-afbeelding die laat zien hoe u de id van de doelinstantie opgehaald kunt krijgen via de URL.](../../assets/testing-api/get-destination-instance-id.png)
+  ![ beeld UI die hoe te om bestemmingsidentiteitskaart van URL te krijgen toont.](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Gelimiteerde klantvelden renderen {#render-customer-fields}
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /authoring/testing/template/render/destination
@@ -56,7 +56,7 @@ Om het gedrag van dit API eindpunt te illustreren, overwegen een op dossier-geba
 
 **Verzoek**
 
-De onderstaande aanvraag roept de `/authoring/testing/template/render` eindpunt, dat een reactie met willekeurig geproduceerde waarden voor de twee hierboven vermelde gebieden van klantengegevens terugkeert.
+Het verzoek hieronder roept het `/authoring/testing/template/render` eindpunt, dat een reactie met willekeurig geproduceerde waarden voor de twee hierboven vermelde gebieden van klantengegevens terugkeert.
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render/destination' \
@@ -77,12 +77,12 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 | Parameters | Beschrijving |
 | -------- | ----------- |
-| `destinationId` | De id van de [doelconfiguratie](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) dat u test. |
-| `templates` | De sjabloonveldnamen die zijn gedefinieerd in uw [doelserverconfiguratie](../../authoring-api/destination-server/create-destination-server.md). |
+| `destinationId` | Identiteitskaart van de [ bestemmingsconfiguratie ](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) die u test. |
+| `templates` | De templatized gebiedsnamen die in uw [ configuratie van de bestemmingsserver ](../../authoring-api/destination-server/create-destination-server.md) worden bepaald. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een `HTTP 200 OK` en de hoofdtekst bevat willekeurig gegenereerde waarden voor uw sjabloonvelden.
+Een geslaagde reactie retourneert een `HTTP 200 OK` -status en de hoofdtekst bevat willekeurig gegenereerde waarden voor uw sjabloonvelden.
 
 Deze reactie kan u helpen de correcte structuur van uw gebieden van klantengegevens, zoals emmernamen of omslagwegen bevestigen.
 
@@ -98,8 +98,8 @@ Deze reactie kan u helpen de correcte structuur van uw gebieden van klantengegev
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u de configuratie van het gegevensveld van de klant kunt valideren die in uw [doelserver](../../authoring-api/destination-server/create-destination-server.md).
+Na het lezen van dit document, weet u nu hoe te om de configuratie te bevestigen van het gebied van klantengegevens die in uw [ bestemmingsserver ](../../authoring-api/destination-server/create-destination-server.md) wordt bepaald.

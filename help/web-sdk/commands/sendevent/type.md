@@ -1,7 +1,8 @@
 ---
 title: eventType
 description: Plaats het type van gebeurtenis voor een sendEvent vraag.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 9d0fae3b-827a-4084-b460-b755e478e06a
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 1%
@@ -10,28 +11,28 @@ ht-degree: 1%
 
 # `eventType`
 
-De `eventType` het bezit staat u toe om het type van gebeurtenis te bepalen u gebruikend het Web SDK verzendt. In dit veld wordt uiteindelijk de waarde `xdm.eventType` veld. Het is nuttig wanneer u de gebeurtenistypen wilt onderscheiden die u naar Adobe verzendt.
+Met de eigenschap `eventType` kunt u het type gebeurtenis definiëren dat u verzendt met de SDK van het web. In dit veld wordt het veld `xdm.eventType` uiteindelijk gevuld. Het is nuttig wanneer u de gebeurtenistypen wilt onderscheiden die u naar Adobe verzendt.
 
-Adobe biedt enkele vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken. Zie [Beschikbare waarden voor `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype) in de XDM-gebruikershandleiding voor een volledige lijst met vooraf gedefinieerde waarden. U kunt desgewenst ook uw eigen waarden gebruiken.
+Adobe biedt enkele vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken. Zie [ Beschikbare waarden voor `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype) in de XDM gebruikersgids voor een volledige lijst van vooraf bepaalde waarden. U kunt desgewenst ook uw eigen waarden gebruiken.
 
-Als u beide instelt `type` hier en `xdm.eventType` in de [`xdm`](xdm.md) -object heeft de waarde in dit veld prioriteit.
+Wanneer u zowel `type` hier als `xdm.eventType` in het [`xdm`](xdm.md) -object instelt, krijgt de waarde in dit veld prioriteit.
 
 ## Gebeurtenistype configureren met de web SDK-tagextensie
 
-Stel de **[!UICONTROL Type]** vervolgkeuzelijst binnen de handelingen van een labelregel.
+Stel het vervolgkeuzeveld **[!UICONTROL Type]** in binnen de handelingen van een labelregel.
 
-1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
-1. Navigeren naar **[!UICONTROL Rules]** Selecteer vervolgens de gewenste regel.
-1. Onder [!UICONTROL Actions], selecteert u een bestaande actie of maakt u een actie.
-1. Stel de [!UICONTROL Extension] vervolgkeuzeveld naar **[!UICONTROL Adobe Experience Platform Web SDK]** en stelt de [!UICONTROL Action Type] tot **[!UICONTROL Send event]**.
-1. Het vervolgkeuzemenu onder de **[!UICONTROL Type]** of voer uw eigen waarde in.
-1. Klikken **[!UICONTROL Keep Changes]** en voer vervolgens uw publicatieworkflow uit.
+1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
+1. Selecteer onder [!UICONTROL Actions] een bestaande actie of maak een actie.
+1. Stel het vervolgkeuzeveld [!UICONTROL Extension] in op **[!UICONTROL Adobe Experience Platform Web SDK]** en stel de waarde [!UICONTROL Action Type] in op **[!UICONTROL Send event]** .
+1. Gebruik de vervolgkeuzelijst onder het veld **[!UICONTROL Type]** of voer uw eigen waarde in.
+1. Klik op **[!UICONTROL Keep Changes]** en voer vervolgens de publicatieworkflow uit.
 
 ## Gebeurtenistype configureren met de Web SDK JavaScript-bibliotheek
 
-Stel de `eventType` tekenreekseigenschap wanneer de `sendEvent` gebruiken.
+Stel de eigenschap `eventType` string in wanneer u de opdracht `sendEvent` uitvoert.
 
 ```js
 alloy("sendEvent", {

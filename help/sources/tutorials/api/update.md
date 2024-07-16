@@ -7,8 +7,8 @@ description: In deze zelfstudie worden de stappen beschreven voor het bijwerken 
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 1%
+source-wordcount: '519'
+ht-degree: 0%
 
 ---
 
@@ -16,26 +16,26 @@ ht-degree: 1%
 
 In sommige omstandigheden is het mogelijk dat de details van een bestaande bronverbinding moeten worden bijgewerkt. [!DNL Flow Service] biedt u de mogelijkheid om details van een bestaande batch- of streamingverbinding toe te voegen, te bewerken en te verwijderen, inclusief de naam, beschrijving en gegevens.
 
-In deze zelfstudie worden de stappen beschreven voor het bijwerken van de gegevens en referenties van een verbinding met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma behandelt de stappen voor het bijwerken van de details en de geloofsbrieven van een verbinding gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
-Voor deze zelfstudie moet u beschikken over een bestaande verbinding en een geldige verbinding-id. Als u geen bestaande verbinding hebt, selecteert u de gewenste bron in het menu [overzicht van bronnen](../../home.md) en voer de stappen uit die zijn beschreven voordat u deze zelfstudie uitvoert.
+Voor deze zelfstudie moet u beschikken over een bestaande verbinding en een geldige verbinding-id. Als u geen bestaande verbinding hebt, selecteer uw bron van keus van het [ overzicht van bronnen ](../../home.md) en volg de stappen die alvorens dit leerprogramma te proberen worden geschetst.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
 
 ## Verbindingsdetails opzoeken
 
-De eerste stap bij het bijwerken van uw verbinding is het terugwinnen van zijn details gebruikend uw verbindingsidentiteitskaart Als u de huidige gegevens van uw verbinding wilt ophalen, vraagt u een GET aan de [!DNL Flow Service] API terwijl het verstrekken van verbindings identiteitskaart, van de verbinding u wilt bijwerken.
+De eerste stap bij het bijwerken van uw verbinding is het terugwinnen van zijn details gebruikend uw verbindingsidentiteitskaart Als u de huidige gegevens van uw verbinding wilt ophalen, vraagt u de GET aan de [!DNL Flow Service] API terwijl u de verbinding-id opgeeft, van de verbinding die u wilt bijwerken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /connections/{CONNECTION_ID}
@@ -43,11 +43,11 @@ GET /connections/{CONNECTION_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | De unieke `id` waarde voor de verbinding u wilt terugwinnen. |
+| `{CONNECTION_ID}` | De unieke `id` -waarde voor de verbinding die u wilt ophalen. |
 
 **Verzoek**
 
-Het volgende verzoek wint informatie betreffende uw verbinding terug.
+Met het volgende verzoek wordt informatie over uw verbinding opgehaald.
 
 ```shell
 curl -X GET \
@@ -58,9 +58,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord geeft de huidige details van uw verbinding met inbegrip van zijn geloofsbrieven, uniek herkenningsteken (`id`) en versie. De versiewaarde is vereist om uw verbinding bij te werken.
+Een succesvolle reactie keert de huidige details van uw verbinding met inbegrip van zijn geloofsbrieven, unieke herkenningsteken (`id`), en versie terug. De versiewaarde is vereist om uw verbinding bij te werken.
 
 ```json
 {
@@ -98,13 +98,13 @@ Een succesvol antwoord geeft de huidige details van uw verbinding met inbegrip v
 
 ## Verbinding bijwerken
 
-Als u de naam, beschrijving en referenties van uw verbinding wilt bijwerken, moet u een PATCH-verzoek uitvoeren naar de [!DNL Flow Service] API terwijl het verstrekken van uw verbindingsidentiteitskaart, versie, en de nieuwe informatie u wilt gebruiken.
+Als u de naam, beschrijving en referenties van uw verbinding wilt bijwerken, voert u een PATCH-aanvraag uit naar de API van [!DNL Flow Service] en geeft u uw verbinding-id, versie en de nieuwe informatie op die u wilt gebruiken.
 
 >[!IMPORTANT]
 >
->De `If-Match` header is required when making a PATCH request. De waarde voor deze header is de unieke versie van de verbinding die u wilt bijwerken.
+>De header `If-Match` is vereist wanneer een PATCH-aanvraag wordt ingediend. De waarde voor deze header is de unieke versie van de verbinding die u wilt bijwerken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /connections/{CONNECTION_ID}
@@ -112,7 +112,7 @@ PATCH /connections/{CONNECTION_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | De unieke `id` waarde voor de verbinding u wilt bijwerken. |
+| `{CONNECTION_ID}` | De unieke `id` waarde voor de verbinding die u wilt bijwerken. |
 
 **Verzoek**
 
@@ -151,13 +151,13 @@ curl -X PATCH \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de verbinding bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de verbinding bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . |
 | `path` | Het pad van de parameter die moet worden bijgewerkt. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie retourneert uw verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw verbinding-id opgeeft.
+Een succesvolle reactie retourneert uw verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een aanvraag voor een GET in te dienen bij de [!DNL Flow Service] API en tegelijk uw verbinding-id op te geven.
 
 ```json
 {
@@ -168,4 +168,4 @@ Een succesvolle reactie retourneert uw verbindings-id en een bijgewerkt label. U
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u de gegevens en gegevens bijgewerkt die aan uw verbinding zijn gekoppeld met de [!DNL Flow Service] API. Voor meer informatie bij het gebruiken van bronschakelaars, zie [overzicht van bronnen](../../home.md).
+Aan de hand van deze zelfstudie hebt u de referenties en informatie bijgewerkt die aan uw verbinding zijn gekoppeld met de API van [!DNL Flow Service] . Voor meer informatie bij het gebruiken van bronschakelaars, zie het [ overzicht van bronnen ](../../home.md).

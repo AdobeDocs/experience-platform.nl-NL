@@ -12,24 +12,24 @@ ht-degree: 0%
 
 # Sandboxen beheren
 
-Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Zie voor meer informatie over sandboxen de [Overzicht van sandboxen](../../../sandboxes/home.md).
+Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Voor meer informatie over zandbakken, zie het [ overzicht van Sandboxen ](../../../sandboxes/home.md).
 
 ## Sandboxen configureren
 
-Als u de details en rollen wilt weergeven waaraan een sandbox is toegewezen, selecteert u de optie **[!UICONTROL Sandboxes]** tab.
+Als u details en rollen wilt weergeven waaraan een sandbox is toegewezen, selecteert u het tabblad **[!UICONTROL Sandboxes]** .
 
-![flash-sandboxen, tabblad](../../images/flac-ui/flac-sandboxes-tab.png)
+![ fc-sandboxen-lusje ](../../images/flac-ui/flac-sandboxes-tab.png)
 
 Er wordt een lijst met sandboxen weergegeven. Selecteer in de lijst de sandbox die u wilt weergeven. U kunt ook de zoekbalk gebruiken om naar de sandbox te zoeken door de naam van de sandbox op te geven.
 
 Het tabblad Details geeft een overzicht van de sandbox. In het overzicht worden de naam, het type, het gebied, de wijzigingsdatum, de naam van de sandbox en de status van de sandbox weergegeven.
 
-![fc-sandboxen, details](../../images/flac-ui/flac-sandboxes-details.png)
+![ fc-zandbakken-details ](../../images/flac-ui/flac-sandboxes-details.png)
 
-Selecteer **[!UICONTROL Roles]** om de rollen weer te geven waaraan de sandbox is toegewezen.
+Selecteer het tabblad **[!UICONTROL Roles]** om de rollen weer te geven waaraan de sandbox is toegewezen.
 
-![flash-sandboxen-rollen](../../images/flac-ui/flac-sandboxes-roles.png)
+![ fc-zandbakken-rollen ](../../images/flac-ui/flac-sandboxes-roles.png)
 
 ## Volgende stappen
 
-U hebt nu geleerd hoe u de sandboxdetails en de rollen kunt weergeven die momenteel aan de sandbox zijn toegewezen. Voor een overzicht op hoog niveau van sandboxen in Experience Platform raadpleegt u de [overzichtsdocumentatie van sandbox](../../sanboxes/../ui/overview.md).
+U hebt nu geleerd hoe u de sandboxdetails en de rollen kunt weergeven die momenteel aan de sandbox zijn toegewezen. Voor een overzicht op hoog niveau van zandbakken in Experience Platform, gelieve te verwijzen naar de [ documentatie van het zandbakoverzicht ](../../sanboxes/../ui/overview.md).

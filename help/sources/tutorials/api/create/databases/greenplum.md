@@ -7,44 +7,44 @@ description: Leer hoe u GreenPlum met Adobe Experience Platform kunt verbinden m
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 1%
+source-wordcount: '426'
+ht-degree: 0%
 
 ---
 
-# Een [!DNL GreenPlum] basisverbinding met de [!DNL Flow Service] API
+# Een [!DNL GreenPlum] basisverbinding maken met de [!DNL Flow Service] API
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL GreenPlum] met de [[!DNL Flow Service] API](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL GreenPlum] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL GreenPlum] met de [!DNL Flow Service] API.
+In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL GreenPlum] via de [!DNL Flow Service] API.
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL GreenPlum] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL GreenPlum] is `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met de instantie [!DNL GreenPlum] . Het patroon van de verbindingstekenreeks voor [!DNL GreenPlum] is `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b` . |
 
-Voor meer informatie over het verkrijgen van een verbindingstekenreeks raadpleegt u [dit GreenPlum-document](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
+Voor meer informatie bij het verwerven van een verbindingskoord, verwijs naar [ dit document GreenPlum ](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL GreenPlum] verificatiereferenties als onderdeel van de aanvraagparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL GreenPlum] -verificatiegegevens op als onderdeel van de aanvraagparameters.
 
-**API-indeling**
+**API formaat**
 
 ```https
 POST /connections
@@ -52,7 +52,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL GreenPlum]:
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL GreenPlum] gemaakt:
 
 ```shell
 curl -X POST \
@@ -80,12 +80,12 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met een [!DNL GreenPlum] account. Het patroon van de verbindingstekenreeks is: `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | De [!DNL GreenPlum] Verbindingsspecificatie-id: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `auth.params.connectionString` | De verbindingstekenreeks waarmee verbinding wordt gemaakt met een [!DNL GreenPlum] -account. Het patroon van de verbindingstekenreeks is: `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` . |
+| `connectionSpec.id` | The [!DNL GreenPlum] connection specification ID: `37b6bf40-d318-4655-90be-5cd6f65d334b` . |
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
 ```json
 {
@@ -96,7 +96,7 @@ Een succesvol antwoord retourneert details van de zojuist gemaakte verbinding, i
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL GreenPlum] basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
+Aan de hand van deze zelfstudie hebt u een [!DNL GreenPlum] basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
-* [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
-* [Maak een gegevensstroom om databasegegevens naar het Platform te brengen met de [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Onderzoek de structuur en de inhoud van uw gegevenslijsten gebruikend  [!DNL Flow Service]  API](../../explore/tabular.md)
+* [Creeer een dataflow om gegevensbestandgegevens aan Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/database-nosql.md)

@@ -6,8 +6,8 @@ description: Als u een afbeelding opgeeft met kleurcodes, kunt u het histogram v
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 source-git-commit: fd8891bdc7d528e327d2a72c2427f7bbc6dc8a03
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 2%
+source-wordcount: '662'
+ht-degree: 0%
 
 ---
 
@@ -15,15 +15,15 @@ ht-degree: 2%
 
 Wanneer u een afbeelding opgeeft, kan de service kleurlabels een histogram met pixelkleuren berekenen en deze sorteren op dominante kleuren in emmers. De kleuren in de afbeeldingspixels worden in 40 overheersende kleuren gedicht die representatief zijn voor het kleurenspectrum. Vervolgens wordt een histogram met kleurwaarden berekend tussen deze 40 kleuren. De dienst heeft twee varianten:
 
-**Kleurlabels (volledige afbeelding)**
+**Tags toevoegen van de Kleur (volledig beeld)**
 
 Met deze methode extraheert u een kleurenhistogram over de hele afbeelding.
 
-**Kleurlabels (met masker)**
+**Kleur het etiketteren (met masker)**
 
 Deze methode gebruikt een op diepleren gebaseerde voorgrondextractor om objecten op de voorgrond te identificeren. Nadat de voorgrondobjecten zijn geëxtraheerd, wordt een histogram samen met de hele afbeelding berekend over de dominante kleuren voor zowel de voorgrond- als de achtergrondgebieden.
 
-**Toonextractie**
+**Tone extractie**
 
 Naast de hierboven vermelde varianten, kunt u de dienst vormen om een histogram van tonen voor terug te winnen:
 
@@ -32,15 +32,15 @@ Naast de hierboven vermelde varianten, kunt u de dienst vormen om een histogram 
 
 De volgende afbeelding is gebruikt in het voorbeeld dat in dit document wordt weergegeven:
 
-![testafbeelding](../images/QQAsset1.jpg)
+![ testbeeld ](../images/QQAsset1.jpg)
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /services/v2/predict
 ```
 
-**Verzoek - volledige afbeeldingsvariant**
+**Verzoek - de volledige beeldvariant**
 
 In het volgende voorbeeldverzoek wordt de methode full-image gebruikt voor kleurlabeling en worden kleuren uit een afbeelding geëxtraheerd op basis van de invoerparameters die in de payload zijn opgegeven. Zie de tabel onder de voorbeeldlading voor meer informatie over de getoonde inputparameters.
 
@@ -81,15 +81,15 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
-**Reactie - volledige afbeeldingsvariant**
+**Reactie - de volledige beeldvariant**
 
-Wanneer de reactie is gelukt, worden de details van de geëxtraheerde kleuren geretourneerd. Elke kleur wordt vertegenwoordigd door een `feature_value` key, die de volgende informatie bevat:
+Wanneer de reactie is gelukt, worden de details van de geëxtraheerde kleuren geretourneerd. Elke kleur wordt vertegenwoordigd door een `feature_value` -toets, die de volgende informatie bevat:
 
 - Een kleurnaam
 - Het percentage waarmee deze kleur wordt weergegeven in verhouding tot de afbeelding
 - De RGB-waarde van de kleur
 
-`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`De gevonden kleur is wit, die wordt aangetroffen in 58,34% van de afbeelding, en heeft een gemiddelde RGB-waarde van 254, 254, 243.
+`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}` betekent de gevonden kleur wit is, die in 58.34% van het beeld wordt gevonden, en een gemiddelde waarde van RGB van 254, 254, 243 heeft.
 
 ```json
 {
@@ -159,9 +159,9 @@ Wanneer de reactie is gelukt, worden de details van de geëxtraheerde kleuren ge
 
 Het resultaat hier heeft kleur die is uitgepakt voor het &quot;algemene&quot; afbeeldingsgebied.
 
-**Verzoek - variant gemaskeerde afbeelding**
+**Verzoek - gemaskeerde beeldvariant**
 
-In het volgende voorbeeldverzoek wordt de maskeringsmethode gebruikt voor kleurlabeling. Dit wordt ingeschakeld door het instellen van de `enable_mask` parameter to `true` in het verzoek.
+In het volgende voorbeeldverzoek wordt de maskeringsmethode gebruikt voor kleurlabeling. Dit wordt ingeschakeld door de parameter `enable_mask` in de aanvraag in te stellen op `true` .
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -204,9 +204,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 >[!NOTE]
 >
->Daarnaast worden de `retrieve_tone` parameter wordt ook ingesteld op `true` in bovengenoemd verzoek. Op deze manier kunnen we een histogram ophalen voor de distributie van kleurtinten over warme, neutrale en koele tonen in de algemene, voor- en achtergrondgebieden van de afbeelding.
+>Bovendien wordt de parameter `retrieve_tone` ook ingesteld op `true` in de bovenstaande aanvraag. Op deze manier kunnen we een histogram ophalen voor de distributie van kleurtinten over warme, neutrale en koele tonen in de algemene, voor- en achtergrondgebieden van de afbeelding.
 
-**Reactie - variant gemaskeerde afbeelding**
+**Reactie - gemaskeerde beeldvariant**
 
 ```json
 {
@@ -356,22 +356,22 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 Naast de kleuren uit de hele afbeelding, kunt u nu ook kleuren uit de voor- en achtergrondgebieden zien. Aangezien het ophalen van kleurtonen is ingeschakeld voor elk van de bovenstaande gebieden, kunt u ook het histogram van een toon ophalen.
 
-**Invoerparameters**
+**de parameters van de Input**
 
-| Naam | Datatype | Vereist | Standaard | Waarden | Beschrijving |
+| Naam | Gegevenstype | Vereist | Standaard | Waarden | Beschrijving |
 | --- | --- | --- | --- | --- | --- |
 | `documents` | array (Document-Object) | Ja | - | Zie hieronder | Lijst met JSON-elementen waarbij elk item in de lijst één document vertegenwoordigt. |
 | `top_n` | getal | Nee | 0 | Niet-negatief geheel getal | Aantal resultaten dat moet worden geretourneerd. 0, om alle resultaten te retourneren. Wanneer gebruikt in combinatie met een drempelwaarde, zal het aantal geretourneerde resultaten kleiner zijn dan een van beide limieten. |
-| `min_coverage` | getal | Nee | 0.05 | Reëel nummer | Drempel van dekking waarboven de resultaten moeten worden geretourneerd. Sluit parameter uit om alle resultaten te retourneren. |
-| `resize_image` | getal | Nee | Waar | Waar/Onwaar | Of de invoerafbeelding moet worden vergroot of verkleind. Standaard wordt de grootte van de afbeeldingen gewijzigd in 320*320 pixels voordat kleurextractie wordt uitgevoerd. Voor het zuiveren doeleinden kunnen wij de code toestaan om op volledig-beeld te lopen, door dit te plaatsen aan `False`. |
+| `min_coverage` | getal | Nee | 0,05 | Reëel nummer | Drempel van dekking waarboven de resultaten moeten worden geretourneerd. Sluit parameter uit om alle resultaten te retourneren. |
+| `resize_image` | getal | Nee | Waar | Waar/Onwaar | Of de invoerafbeelding moet worden vergroot of verkleind. Standaard wordt de grootte van de afbeeldingen gewijzigd in 320*320 pixels voordat kleurextractie wordt uitgevoerd. Voor foutopsporingsdoeleinden kunnen we toestaan dat de code ook op een volledige afbeelding wordt uitgevoerd, door deze in te stellen op `False` . |
 | `enable_mask` | getal | Nee | Onwaar | Waar/Onwaar | Schakelt kleurextractie in/uit |
 | `retrieve_tone` | getal | Nee | Onwaar | Waar/Onwaar | Schakelt toonextractie in/uit |
 
-**Object Document**
+**voorwerp van het Document**
 
-| Naam | Datatype | Vereist | Standaard | Waarden | Beschrijving |
+| Naam | Gegevenstype | Vereist | Standaard | Waarden | Beschrijving |
 | -----| --------- | -------- | ------- | ------ | ----------- |
 | `repo:path` | string | - | - | - | Vooraf ondertekende URL van het document. |
 | `sensei:repoType` | string | - | - | HTTPS | Type repo waar de afbeelding wordt opgeslagen. |
 | `sensei:multipart_field_name` | string | - | - | - | Gebruik dit wanneer u het afbeeldingsbestand doorgeeft als een meerdelig argument in plaats van vooraf ondertekende URL&#39;s te gebruiken. |
-| `dc:format` | string | Ja | - | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | De codering van afbeeldingen wordt gecontroleerd aan de hand van toegestane invoercoderingstypen voordat deze wordt verwerkt. |
+| `dc:format` | string | Ja | - | &quot;image/jpg&quot;, <br> &quot;image/jpeg&quot;, <br> &quot;image/png&quot;, <br> &quot;image/tiff&quot; | De codering van afbeeldingen wordt gecontroleerd aan de hand van toegestane invoercoderingstypen voordat deze wordt verwerkt. |

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Doelverbindingen bewerken met de Flow Service API
 
-Deze zelfstudie behandelt de stappen voor het bewerken van verschillende componenten van een doelverbinding. Leer hoe u verificatiereferenties, exportlocatie en meer kunt bijwerken met de opdracht [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Deze zelfstudie behandelt de stappen voor het bewerken van verschillende componenten van een doelverbinding. Leer hoe te om authentificatiegeloofsbrieven, de uitvoerplaats, en meer bij te werken door [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) te gebruiken.
 
 >[!NOTE]
 >
@@ -21,56 +21,56 @@ Deze zelfstudie behandelt de stappen voor het bewerken van verschillende compone
 
 ## Aan de slag {#get-started}
 
-Voor deze zelfstudie moet u een geldige gegevensstroom-id hebben. Als u geen geldige dataflow-id hebt, selecteert u de gewenste bestemming in het menu [doelcatalogus](../catalog/overview.md) en voert u de volgende stappen uit: [verbinden met de bestemming](../ui/connect-destination.md) en [gegevens activeren](../ui/activation-overview.md) voordat u deze zelfstudie probeert.
+Voor deze zelfstudie moet u een geldige gegevensstroom-id hebben. Als u geen geldige dataflow identiteitskaart hebt, selecteer uw bestemming van keus van de [ bestemmingscatalogus ](../catalog/overview.md) en volg de stappen die aan [ worden geschetst verbinden met de bestemming ](../ui/connect-destination.md) en [ activeren gegevens ](../ui/activation-overview.md) alvorens dit leerprogramma te proberen.
 
 >[!NOTE]
 >
-> De voorwaarden *stroom* en *dataflow* worden onderling verwisselbaar gebruikt in deze zelfstudie. In de context van deze zelfstudie hebben ze dezelfde betekenis.
+> De termen *stroom* en *dataflow* worden gebruikt onderling verwisselbaar in dit leerprogramma. In de context van deze zelfstudie hebben ze dezelfde betekenis.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Doelen](../home.md): [!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Doelen ](../home.md): [!DNL Destinations] zijn pre-gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+* [ Sandboxes ](../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om uw gegevensstroom met succes bij te werken met de [!DNL Flow Service] API.
+De volgende secties bevatten aanvullende informatie die u moet weten om uw gegevensstroom met de [!DNL Flow Service] API te kunnen bijwerken.
 
 ### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de gids voor het oplossen van problemen met Experience Platforms.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste koppen {#gather-values-for-required-headers}
 
-Als u aanroepen wilt uitvoeren naar platform-API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle middelen in Experience Platform, met inbegrip van die welke toebehoren aan [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in Experience Platform, inclusief die van [!DNL Flow Service], zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Als de `x-sandbox-name` header is niet opgegeven, aanvragen worden opgelost onder de `prod` sandbox.
+>Als de header `x-sandbox-name` niet is opgegeven, worden aanvragen opgelost onder de sandbox `prod` .
 
-Alle verzoeken die een lading bevatten (`POST`, `PUT`, `PATCH`) vereist een extra koptekst voor mediatype:
+Alle verzoeken die een payload (`POST`, `PUT`, `PATCH`) bevatten vereisen een extra media type kopbal:
 
 * `Content-Type: application/json`
 
 ## Gegevens over gegevensstroom opzoeken {#look-up-dataflow-details}
 
-De eerste stap bij het bewerken van uw doelverbinding is het ophalen van gegevens over de gegevensstroom met uw flow-id. U kunt de huidige details van een bestaande gegevensstroom bekijken door een verzoek van de GET aan `/flows` eindpunt.
+De eerste stap bij het bewerken van uw doelverbinding is het ophalen van gegevens over de gegevensstroom met uw flow-id. U kunt de huidige details van een bestaande gegevensstroom bekijken door een verzoek van de GET aan het `/flows` eindpunt te richten.
 
 >[!TIP]
 >
->U kunt Experience Platform UI gebruiken om gewenste dataflow identiteitskaart van een bestemming te krijgen. Ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, selecteert u de gewenste doelgegevensstroom en zoekt u de doel-id in de rechtertrack. De doel-id is de waarde die u in de volgende stap als stroom-id wilt gebruiken.
+>U kunt Experience Platform UI gebruiken om gewenste dataflow identiteitskaart van een bestemming te krijgen. Ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en selecteer de gewenste doelgegevensstroom en zoek de doel-id in de rechtertrack. De doel-id is de waarde die u in de volgende stap als stroom-id wilt gebruiken.
 >
-> ![Doel-id ophalen met de gebruikersinterface van het Experience Platform](/help/destinations/assets/api/edit-destination/get-destination-id.png)
+> ![ krijgt bestemmingsidentiteitskaart gebruikend het Experience Platform UI ](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
 >[!BEGINSHADEBOX]
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /flows/{FLOW_ID}
@@ -93,9 +93,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord retourneert de huidige details van uw gegevensstroom inclusief de versie, unieke id (`id`) en andere relevante informatie. Het meest relevant voor deze zelfstudie zijn de doel-verbinding en basis-verbindings-id&#39;s die in de onderstaande reactie worden gemarkeerd. U gebruikt deze id&#39;s in de volgende secties om verschillende componenten van de doelverbinding bij te werken.
+Een succesvolle reactie keert de huidige details van uw gegevensstroom met inbegrip van zijn versie, uniek herkenningsteken (`id`), en andere relevante informatie terug. Het meest relevant voor deze zelfstudie zijn de doel-verbinding en basis-verbindings-id&#39;s die in de onderstaande reactie worden gemarkeerd. U gebruikt deze id&#39;s in de volgende secties om verschillende componenten van de doelverbinding bij te werken.
 
 ```json {line-numbers="true" start-line="1" highlight="27,38"}
 {
@@ -175,25 +175,25 @@ Een succesvol antwoord retourneert de huidige details van uw gegevensstroom incl
 
 ## Doelverbindingscomponenten bewerken (opslaglocatie en andere componenten) {#patch-target-connection}
 
-De componenten van een doelverbinding verschillen door bestemming. Bijvoorbeeld: [!DNL Amazon S3] doelen, kunt u het emmertje en pad bijwerken waar bestanden worden geëxporteerd. Voor [!DNL Pinterest] doelen, kunt u uw [!DNL Pinterest Advertiser ID] en voor [!DNL Google Customer Match] u kunt uw [!DNL Pinterest Account ID].
+De componenten van een doelverbinding verschillen door bestemming. Voor [!DNL Amazon S3] -doelen kunt u bijvoorbeeld het emmertje en het pad bijwerken waar bestanden worden geëxporteerd. Voor [!DNL Pinterest] -doelen kunt u [!DNL Pinterest Advertiser ID] bijwerken en voor [!DNL Google Customer Match] kunt u [!DNL Pinterest Account ID] bijwerken.
 
-Als u componenten van een doelverbinding wilt bijwerken, voert u een `PATCH` verzoek aan de `/targetConnections/{TARGET_CONNECTION_ID}` eindpunt terwijl het verstrekken van uw identiteitskaart van de doelverbinding, versie, en de nieuwe waarden u wilt gebruiken. Herinner me, kreeg u uw identiteitskaart van de doelverbinding in de vorige stap, toen u een bestaande gegevensstroom aan uw gewenste bestemming inspecteerde.
+Als u componenten van een doelverbinding wilt bijwerken, voert u een `PATCH` -aanvraag uit naar het `/targetConnections/{TARGET_CONNECTION_ID}` -eindpunt terwijl u uw doel-verbindings-id, -versie en de nieuwe waarden opgeeft die u wilt gebruiken. Herinner me, kreeg u uw identiteitskaart van de doelverbinding in de vorige stap, toen u een bestaande gegevensstroom aan uw gewenste bestemming inspecteerde.
 
 >[!IMPORTANT]
 >
->De `If-Match` header is vereist wanneer een `PATCH` verzoek. De waarde voor deze header is de unieke versie van de doelverbinding die u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, doelverbinding, en anderen bij.
+>De header `If-Match` is vereist wanneer u een `PATCH` -aanvraag indient. De waarde voor deze header is de unieke versie van de doelverbinding die u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, doelverbinding, en anderen bij.
 >
-> Als u de meest recente versie van de etag-waarde wilt ophalen, moet u een verzoek van de GET indienen bij de `/targetConnections/{TARGET_CONNECTION_ID}` eindpunt, waarbij `{TARGET_CONNECTION_ID}` Dit is de doel-verbindings-id die u wilt bijwerken.
+> Als u de meest recente versie van de etag-waarde wilt ophalen, moet u een verzoek van de GET uitvoeren naar het `/targetConnections/{TARGET_CONNECTION_ID}` -eindpunt, waarbij `{TARGET_CONNECTION_ID}` de doel-verbindings-id is die u wilt bijwerken.
 >
-> Zorg ervoor dat u de waarde van de optie `If-Match` dubbele aanhalingstekens, zoals in de onderstaande voorbeelden bij het maken van `PATCH` verzoeken.
+> Zorg ervoor dat u de waarde van de header `If-Match` tussen dubbele aanhalingstekens plaatst, zoals in de onderstaande voorbeelden, wanneer u `PATCH` -aanvragen maakt.
 
 Hieronder staan enkele voorbeelden van het bijwerken van parameters in de specificaties van de doelverbinding voor verschillende typen doelen. Maar de algemene regel om parameters voor om het even welke bestemming bij te werken is als volgt:
 
-Download de gegevensstroom-id van de verbinding > verkrijg de doel verbindings-id > `PATCH` de doelverbinding met bijgewerkte waarden voor de gewenste parameters.
+Haal de gegevensstroom-id op van de verbinding > verkrijg de doel-verbindings-id > `PATCH` de doelverbinding met bijgewerkte waarden voor de gewenste parameters.
 
 >[!BEGINSHADEBOX]
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /targetConnections/{TARGET_CONNECTION_ID}
@@ -205,7 +205,7 @@ PATCH /targetConnections/{TARGET_CONNECTION_ID}
 
 **Verzoek**
 
-De volgende aanvraag werkt de `bucketName` en `path` parameters van een [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) doelverbinding.
+Met de volgende aanvraag worden de parameters `bucketName` en `path` van een [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) -doelverbinding bijgewerkt.
 
 ```shell
 curl -X PATCH \
@@ -229,13 +229,13 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . |
 | `path` | Definieert het deel van de flow dat moet worden bijgewerkt. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkte Etag. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl het verstrekken van uw doel verbindings ID.
+Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkte Etag. U kunt de update verifiëren door een aanvraag voor een GET in te dienen bij de [!DNL Flow Service] API en tegelijk uw doel-verbindings-id op te geven.
 
 ```json
 {
@@ -244,11 +244,11 @@ Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkte Etag
 }
 ```
 
->[!TAB Google Ad Manager en Google Ad Manager 360]
+>[!TAB  de Manager van de Advertentie van Google en Manager 360 van Google ]
 
 **Verzoek**
 
-Met het volgende verzoek worden de parameters van een [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) of [[!DNL Google Ad Manager 360] doel](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) verbinding om de nieuwe [**[!UICONTROL Append audience ID to audience name]**](/help/release-notes/2023/april-2023.md#destinations) veld.
+Het volgende verzoek werkt de parameters van a [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) of [[!DNL Google Ad Manager 360]  bestemmings ](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) verbinding bij om het nieuwe [**[!UICONTROL Append audience ID to audience name]**](/help/release-notes/2023/april-2023.md#destinations) gebied toe te voegen.
 
 ```shell
 curl -X PATCH \
@@ -269,13 +269,13 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . |
 | `path` | Definieert het deel van de flow dat moet worden bijgewerkt. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl het verstrekken van uw doel verbindings ID.
+Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een aanvraag voor een GET in te dienen bij de [!DNL Flow Service] API en tegelijk uw doel-verbindings-id op te geven.
 
 ```json
 {
@@ -284,11 +284,11 @@ Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkt label
 }
 ```
 
->[!TAB Pinterest]
+>[!TAB  Pinterest ]
 
 **Verzoek**
 
-De volgende aanvraag werkt de `advertiserId` parameter van een [[!DNL Pinterest] doelverbinding](/help/destinations/catalog/advertising/pinterest.md#parameters).
+Het volgende verzoek werkt de `advertiserId` parameter van a [[!DNL Pinterest]  bestemmingsverbinding ](/help/destinations/catalog/advertising/pinterest.md#parameters) bij.
 
 ```shell
 curl -X PATCH \
@@ -311,13 +311,13 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . |
 | `path` | Definieert het deel van de flow dat moet worden bijgewerkt. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl het verstrekken van uw doel verbindings ID.
+Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een aanvraag voor een GET in te dienen bij de [!DNL Flow Service] API en tegelijk uw doel-verbindings-id op te geven.
 
 ```json
 {
@@ -332,27 +332,27 @@ Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkt label
 
 ## Basisverbindingscomponenten bewerken (verificatieparameters en andere componenten) {#patch-base-connection}
 
-Bewerk de basisverbinding wanneer u de referenties van een doel wilt bijwerken. De componenten van een basisverbinding verschillen door bestemming. Bijvoorbeeld: [!DNL Amazon S3] bestemmingen, kunt u de toegangssleutel en geheime sleutel aan uw bijwerken [!DNL Amazon S3] locatie.
+Bewerk de basisverbinding wanneer u de referenties van een doel wilt bijwerken. De componenten van een basisverbinding verschillen door bestemming. Voor [!DNL Amazon S3] -doelen kunt u bijvoorbeeld de toegangstoets en de geheime sleutel bijwerken naar uw [!DNL Amazon S3] -locatie.
 
-Als u componenten van een basisverbinding wilt bijwerken, voert u een `PATCH` verzoek aan de `/connections` eindpunt terwijl het verstrekken van uw identiteitskaart van de basisverbinding, versie, en de nieuwe waarden u wilt gebruiken.
+Als u componenten van een basisverbinding wilt bijwerken, voert u een `PATCH` -aanvraag uit naar het `/connections` -eindpunt terwijl u de id, versie en de nieuwe waarden voor de basisverbinding opgeeft die u wilt gebruiken.
 
-Je hebt je basis verbinding-id in een [vorige stap](#look-up-dataflow-details), wanneer u een bestaande gegevensstroom aan uw gewenste bestemming voor de parameter inspecteerde `baseConnection`.
+Herinner me, u uw identiteitskaart van de basisverbinding in a [ vorige stap ](#look-up-dataflow-details) kreeg, toen u een bestaande dataflow aan uw gewenste bestemming voor de parameter `baseConnection` inspecteerde.
 
 >[!IMPORTANT]
 >
->De `If-Match` header is vereist wanneer een `PATCH` verzoek. De waarde voor deze header is de unieke versie van de basisverbinding die u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, basisverbinding, en anderen bij.
+>De header `If-Match` is vereist wanneer u een `PATCH` -aanvraag indient. De waarde voor deze header is de unieke versie van de basisverbinding die u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, basisverbinding, en anderen bij.
 >
-> Als u de meest recente versie van de Etag-waarde wilt ophalen, dient u een GET-aanvraag uit te voeren bij de `/connections/{BASE_CONNECTION_ID}` eindpunt, waarbij `{BASE_CONNECTION_ID}` Dit is de basisverbindings-id die u wilt bijwerken.
+> Als u de meest recente versie van de Etag-waarde wilt ophalen, moet u een aanvraag voor GET uitvoeren naar het `/connections/{BASE_CONNECTION_ID}` -eindpunt, waarbij `{BASE_CONNECTION_ID}` de basis-verbindings-id is die u wilt bijwerken.
 >
-> Zorg ervoor dat u de waarde van de optie `If-Match` dubbele aanhalingstekens, zoals in de onderstaande voorbeelden bij het maken van `PATCH` verzoeken.
+> Zorg ervoor dat u de waarde van de header `If-Match` tussen dubbele aanhalingstekens plaatst, zoals in de onderstaande voorbeelden, wanneer u `PATCH` -aanvragen maakt.
 
 Hieronder staan enkele voorbeelden van het bijwerken van parameters in de specificatie van de basisverbinding voor verschillende soorten doelen. Maar de algemene regel om parameters voor om het even welke bestemming bij te werken is als volgt:
 
-Download de gegevensstroom-id van de verbinding > verkrijg de id van de basisverbinding > `PATCH` de basisverbinding met bijgewerkte waarden voor de gewenste parameters.
+Haal de gegevensstroom-id op van de verbinding > verkrijg de id van de basisverbinding > `PATCH` de basisverbinding met bijgewerkte waarden voor de gewenste parameters.
 
 >[!BEGINSHADEBOX]
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /connections/{BASE_CONNECTION_ID}
@@ -364,7 +364,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 **Verzoek**
 
-De volgende aanvraag werkt de `accessId` en `secretKey` parameters van een [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) doelverbinding.
+Met de volgende aanvraag worden de parameters `accessId` en `secretKey` van een [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) -doelverbinding bijgewerkt.
 
 ```shell
 curl -X PATCH \
@@ -388,13 +388,13 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . |
 | `path` | Definieert het deel van de flow dat moet worden bijgewerkt. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl het verstrekken van uw identiteitskaart van de basisverbinding.
+Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een aanvraag voor een GET in te dienen bij de [!DNL Flow Service] API en tegelijk uw basis-verbindings-id op te geven.
 
 ```json
 {
@@ -403,11 +403,11 @@ Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt labe
 }
 ```
 
->[!TAB Azure Blob]
+>[!TAB  Azure Blob ]
 
 **Verzoek**
 
-Met het volgende verzoek worden de parameters van een [[!DNL Azure Blob] doel](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) verbinding om de verbindingstekenreeks bij te werken die is vereist om verbinding te maken met een Azure Blob-instantie.
+Het volgende verzoek werkt de parameters van een [[!DNL Azure Blob]  bestemmings ](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) verbinding bij om het verbindingskoord bij te werken dat wordt vereist om met een Azure instantie van Blob te verbinden.
 
 ```shell
 curl -X PATCH \
@@ -430,13 +430,13 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . |
 | `path` | Definieert het deel van de flow dat moet worden bijgewerkt. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl het verstrekken van uw identiteitskaart van de basisverbinding.
+Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een aanvraag voor een GET in te dienen bij de [!DNL Flow Service] API en tegelijk uw basis-verbindings-id op te geven.
 
 ```json
 {
@@ -451,8 +451,8 @@ Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt labe
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform voor meer informatie over het interpreteren van foutenreacties.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Verwijs naar [ API statuscodes ](/help/landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform voor meer informatie bij het interpreteren van foutenreacties.
 
 ## Volgende stappen {#next-steps}
 
-Door dit leerprogramma te volgen, hebt u geleerd hoe te om diverse componenten van een bestemmingsverbinding bij te werken gebruikend [!DNL Flow Service] API. Voor meer informatie over bestemmingen, zie [Overzicht van doelen](../home.md).
+Aan de hand van deze zelfstudie hebt u geleerd hoe u verschillende componenten van een doelverbinding kunt bijwerken met de [!DNL Flow Service] API. Voor meer informatie over bestemmingen, zie het [ overzicht van bestemmingen ](../home.md).

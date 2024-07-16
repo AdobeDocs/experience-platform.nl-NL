@@ -15,18 +15,18 @@ In de weergave Extensieversie kunt u snel bepalen welke Adobe Experience Platfor
 
 ## Aan de slag met de weergaven van extensies
 
-Na [Betrouwbaarheid instellen](../tutorials/implement-assurance.md)in de **Home** weergave, selecteren **[!UICONTROL Extension Versions]**
+Na [ vestiging Verzekering ](../tutorials/implement-assurance.md), in de **3} mening van het Huis {, uitgezocht **[!UICONTROL Extension Versions]****
 
-![Extensieversies](./images/versions/versions-extension.png)
+![ Versies van de Uitbreiding ](./images/versions/versions-extension.png)
 
-## Controleren of uw versie up-to-date is
+## Controleren of uw versie is bijgewerkt
 
 In deze weergave ziet u zowel de nieuwste versie van elke mobiele SDK als de huidige versie die u hebt geïnstalleerd, indien van toepassing. Als een versie synchroon is met de meest recente versie, wordt een groen symbool weergegeven voor de geïnstalleerde versie. Anders wordt de badge rood weergegeven.
 
-![Vergelijking van extensieversies](./images/versions/versions-extension-version.png)
+![ Vergelijking van de Versies van de Uitbreiding ](./images/versions/versions-extension-version.png)
 
 ## Exportversies
 
-Rechtsboven in de weergave kunt u **[!UICONTROL Export Versions]** Dit geeft u een JSON-payload met alle informatie over extensies en het platform dat door de client wordt gebruikt. U kunt deze gegevens exporteren naar een JSON-bestand of kopiëren naar het klembord.
+Rechtsboven in de weergave kunt u **[!UICONTROL Export Versions]** selecteren, zodat u een JSON-payload hebt met alle informatie over extensies en het platform dat door de client wordt gebruikt. U kunt deze gegevens exporteren naar een JSON-bestand of kopiëren naar het klembord.
 
-![Exporteren van extensies](./images/versions/versions-extension-export.png)
+![ Uitvoer van de Versies van de Uitbreiding ](./images/versions/versions-extension-export.png)

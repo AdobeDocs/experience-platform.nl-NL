@@ -8,7 +8,7 @@ exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '1151'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -16,8 +16,8 @@ ht-degree: 2%
 
 Real-time Customer Data Platform B2B Edition breidt het bestaande Real-Time CDP- en Adobe Experience Platform-aanbod uit ter ondersteuning van B2B-gegevens en -workflows. Dit document biedt een voorbeeld van een gebruiksgeval dat de extra voordelen aantoont die door de B2B Edition worden geboden. Deze omvatten:
 
-- Combineer persoon- en accountgegevens uit verschillende gegevensbronnen op dezelfde locatie om een uitgebreide weergave te maken die een beter inzicht in de klanten en een nauwkeuriger segmentering mogelijk maakt. Zie de documentatie op [XDM-schemarelaties maken](./schemas/b2b.md) voor gebruik met verschillende B2B-bronnen voor meer informatie.
-- Segmenteer een publiek op basis van kenmerken van verwante entiteiten. Dit omvat Rekeningen, Kansen, Campagnes, en de Lijst van de Marketing. Het publiek is niet meer beperkt tot alleen Personen-kenmerken en Experience Events. Zie de [B2B-segmentatiedocumentatie](./segmentation/b2b.md) voor meer voorbeelden van B2B-specifieke doelgroepen.
+- Combineer persoon- en accountgegevens uit verschillende gegevensbronnen op dezelfde locatie om een uitgebreide weergave te maken die een beter inzicht in de klanten en een nauwkeuriger segmentering mogelijk maakt. Zie de documentatie bij [ het creëren van XDM schemaverhoudingen ](./schemas/b2b.md) voor gebruik met gevarieerde B2B bronnen voor meer informatie.
+- Segmenteer een publiek op basis van kenmerken van verwante entiteiten. Dit omvat Rekeningen, Kansen, Campagnes, en de Lijst van de Marketing. Het publiek is niet meer beperkt tot alleen Personen-kenmerken en Experience Events. Zie de [ B2B segmentatiedocumentatie ](./segmentation/b2b.md) voor meer voorbeelden van het creëren van B2B-Specifiek publiek.
 - Native ondersteuning bieden voor het gebruik van één persoon met betrekking tot meerdere rekeningen.
 
 ## Gebruiksscenario
@@ -38,9 +38,9 @@ In Marketo 2 wordt Townsend opgenomen als Account 2. Account 2 heeft ook twee ve
 
 Voor integratie en aanvullende bedrijfscontroledoeleinden beschikt Bodea ook over een MDM-systeem (Master Data Management), waarbij een record wordt bijgehouden waarin wordt aangegeven dat Account 1 in Marketo 1 (en CRM 1) en Account 2 in Marketo 2 (en CRM 2) dezelfde onderneming zijn.
 
-In de laatste maand: `p2@townsend.com` Marketo 1 bezocht de nieuwe productpagina en het webbezoek werd geregistreerd.
+In de laatste maand bezocht `p2@townsend.com` de nieuwe productpagina en werd het webbezoek opgenomen door Marketo 1.
 
-![rekeninginformatiediagram](./assets/account-info.png)
+![ diagram van rekeninginfo ](./assets/account-info.png)
 
 ## Het probleem
 
@@ -60,7 +60,7 @@ Met Real-Time CDP B2B Edition kan het marketingteam van Bodea:
 
 - Combineer de gegevens van alle verschillende bronnen (meerdere Marketo- en CRM-instanties en het hoofdgegevensbeheer) tot Real-Time CDP B2B Edition.
 
-Met RT-CDP B2B Edition kan Bodea de Bron van het Marketo Engage Schakelaar gebruiken om B2B gegevens van Marketo 1 en Marketo 2 in Experience Platform te brengen en deze gegevens huidig te houden gebruikend Platform verbonden toepassingen. Zie de [Marketo-bronaansluiting](../sources/connectors/adobe-applications/marketo/marketo.md) documentatie voor meer informatie.
+Met RT-CDP B2B Edition, kan Bodea de Schakelaar van Source van het Marketo Engage gebruiken om B2B gegevens van Marketo 1 en Marketo 2 in Experience Platform te brengen en dit gegeven huidig te houden gebruikend Platform verbonden toepassingen. Zie de ](../sources/connectors/adobe-applications/marketo/marketo.md) documentatie van de 0} de bronschakelaar van Marketo {voor meer informatie.[
 
 B2B-gegevens (Mensen, Accounts, Opportunity, and activity ) van CRM1 worden gesynchroniseerd in Marketo 1. Evenzo worden alle B2B-gegevens van CRM 2 gesynchroniseerd in Marketo 2. Ze worden gesynchroniseerd in Adobe Experience Platform via de Marketo-bronconnector. Nochtans, als Bodea extra gegevens van CRM in Experience Platform wil brengen, kunnen zij bestaande Verbindingen van CRM gebruiken.
 
@@ -83,7 +83,7 @@ In het belang van de eenvoud en het doel van dit voorbeeld worden mensen geïden
    - EN
    - De productpagina in de afgelopen maand hebben bezocht
 
-- Creëer een publiek dat de meest efficiënte ontvangers van de nieuwe marketingcampagne van Bodea is. In dit voorbeeld helpt RT-CDP, B2B Edition de markeerteken identificeren `p2@townsend.com` als het juiste doel voor deze marketingcampagne.
+- Creëer een publiek dat de meest efficiënte ontvangers van de nieuwe marketingcampagne van Bodea is. In dit voorbeeld, RT-CDP, zal B2B Uitgave de tellers helpen `p2@townsend.com` identificeren als het juiste doel voor deze marketing campagne.
 
 Door het Marketo Engage en de bestemmingen van LinkedIn te gebruiken, heeft Bodea een oplossing van het het beheer van de klantenervaring van begin tot eind (CXM) voor zijn marketing team. Het in Experience Platform gemaakte publiek wordt naar de Marketo-bestemming geduwd, waar het als een statische lijst wordt weergegeven. Dit publiek wordt vervolgens automatisch toegevoegd aan een Marketo-marketingcampagne. Tegelijkertijd kan het publiek ook door de RT-CDP B2B Edition naar een LinkedIn-marketingcampagne worden gestuurd.
 

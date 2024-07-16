@@ -15,11 +15,11 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > * De Adobe adviseert dat u referentie deze pagina en het om de drie maanden om de recentste IP adressen controleert. Adobe verstrekt geen bericht van nieuwe IP waaiers.
-> * Hoewel Adobe gegevensuitvoer naar SFTP-servers ondersteunt, zijn de aanbevolen opslaglocaties voor wolken voor het exporteren van gegevens: [!DNL Amazon S3] en [!DNL Azure Blob].
+> * Hoewel Adobe gegevensuitvoer naar SFTP-servers ondersteunt, zijn de aanbevolen locaties voor cloudopslag voor het exporteren van gegevens [!DNL Amazon S3] en [!DNL Azure Blob] .
 
 ## Overzicht {#overview}
 
-Deze pagina verstrekt IP adressen die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform naar uw veilig uit te voeren [SFTP-server](../destinations/catalog/cloud-storage/sftp.md).
+Deze pagina verstrekt IP adressen die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform aan uw [ server van SFTP ](../destinations/catalog/cloud-storage/sftp.md) veilig uit te voeren.
 
 U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewall. Door de aangewezen IP waaier te specificeren, kunt u verkeer voor de dienst van de gegevensoverdracht toestaan.
 

@@ -1,59 +1,59 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Zoho CRM;zoho crm;Zoho;zoho
 solution: Experience Platform
-title: Zoho CRM Source Connector Overzicht
+title: Zoho CRM Source Connector - Overzicht
 description: Leer hoe u Zoho CRM aan Adobe Experience Platform verbindt gebruikend APIs of het gebruikersinterface.
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
 
 # [!DNL Zoho CRM]
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] diensten. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met [!DNL Platform] -services. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens van een CRM-systeem van derden. Ondersteuning voor CRM-providers omvat [!DNL Zoho CRM].
+Experience Platform biedt ondersteuning voor het opnemen van gegevens van een CRM-systeem van derden. Tot de ondersteuning voor CRM-providers behoren [!DNL Zoho CRM] .
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
 
-## Vraag uw verificatiereferenties op voor [!DNL Zoho CRM]
+## Uw verificatiereferenties ophalen voor [!DNL Zoho CRM]
 
-Voordat u gegevens van uw [!DNL Zoho CRM] account aan Platform, moet u eerst uw gegevens ophalen om uw [!DNL Zoho CRM] bron. Voer de onderstaande stappen uit om uw client-id, clientgeheim, toegangstoken op te halen en token te vernieuwen.
+Voordat u gegevens van uw [!DNL Zoho CRM] -account naar Platform kunt verzenden, moet u eerst uw referenties ophalen om de [!DNL Zoho CRM] -bron te verifiëren. Voer de onderstaande stappen uit om uw client-id, clientgeheim, toegangstoken op te halen en token te vernieuwen.
 
 ### Uw toepassing registreren
 
-De eerste stap bij het ophalen van uw verificatiegegevens bestaat uit het registreren van uw toepassing met de [[!DNL Zoho CRM] ontwikkelaarsconsole](https://accounts.zoho.com/). Om uw toepassing te registreren, moet u uw cliënttype selecteren van: JavaScript, webgebaseerd, mobiel, niet-browser mobiele toepassingen of zelfclient. Geef vervolgens waarden op voor de naam van de toepassing, de URL van de webpagina en een geautoriseerde omleidings-URI die [!DNL Zoho CRM] U kunt dan gebruiken om u met een giftetoken om te leiden.
+De eerste stap in het terugwinnen van uw authentificatiegeloofsbrieven moet uw toepassing registreren gebruikend de [[!DNL Zoho CRM]  ontwikkelaarsconsole ](https://accounts.zoho.com/). Om uw toepassing te registreren, moet u uw cliënttype van selecteren: JavaScript, web-based, mobiele, niet browser mobiele toepassingen, of zelf-cliënt. Geef vervolgens waarden op voor de naam van uw toepassing, de URL van uw webpagina en een geautoriseerde omleidings-URI die [!DNL Zoho CRM] kan gebruiken om u om te leiden met een giftetoken.
 
 Een geslaagde registratie retourneert uw client-id en clientgeheim.
 
 ### Een autorisatieverzoek maken
 
-Vervolgens moet u een [autorisatieverzoek](https://www.zoho.com/crm/developer/docs/api/v2/auth-request.html) via een webtoepassing of een zelfclient. Het vergunningsverzoek keert uw subsidieteken terug, dat beurtelings u toestaat om uw toegangstoken terug te winnen.
+Daarna, moet u een [ vergunningsverzoek ](https://www.zoho.com/crm/developer/docs/api/v2/auth-request.html) tot stand brengen gebruikend of een web-based toepassing of een zelf-cliënt. Het vergunningsverzoek keert uw subsidieteken terug, dat beurtelings u toestaat om uw toegangstoken terug te winnen.
 
-Wanneer u een autorisatieaanvraag maakt, moet u waarden voor beide invullen **bereik** en **toegangstype**. Zie dit [[!DNL Zoho CRM] document](https://www.zoho.com/crm/developer/docs/api/v2/scopes.html) voor meer informatie over het bereik, terwijl uw **toegangstype** moet altijd worden ingesteld op `offline`.
+Wanneer het creëren van een vergunningsverzoek, moet u waarden voor zowel **werkingsgebied** invullen en **toegangstype**. Verwijs naar dit [[!DNL Zoho CRM]  document ](https://www.zoho.com/crm/developer/docs/api/v2/scopes.html) voor meer informatie over werkingsgebied, terwijl uw **toegangstype** altijd aan `offline` zou moeten worden geplaatst.
 
 ### Uw toegangs- en vernieuwingstolken genereren
 
-Zodra u uw subsidie-teken hebt teruggewonnen, kunt u uw [tokens openen en vernieuwen](https://www.zoho.com/crm/developer/docs/api/v2/access-refresh.html) door een POST aan te vragen `{ACCOUNTS_URL}/oauth/v2/token` terwijl het verstrekken van uw cliëntidentiteitskaart, cliëntgeheim, giftetoken, en herleidt URI. Tijdens deze stap moet u ook `grant_type` als parameter, en de waarde instellen als `"authorization_code"`.
+Zodra u uw subsidieteken hebt teruggewonnen, kunt u uw [ toegang produceren en tokens ](https://www.zoho.com/crm/developer/docs/api/v2/access-refresh.html) verfrissen door een verzoek van de POST aan `{ACCOUNTS_URL}/oauth/v2/token` te doen terwijl het verstrekken van uw cliëntidentiteitskaart, cliëntgeheim, giftetoken, en herleiding URI. Tijdens deze stap moet u `grant_type` ook als parameter opnemen en de waarde als `"authorization_code"` instellen.
 
 Een succesvol verzoek keert uw toegang terug en verfrist tekenen, die u dan kunt gebruiken om voor authentiek te verklaren.
 
-Raadpleeg voor gedetailleerde stappen over het verkrijgen van uw referenties de [[!DNL Zoho CRM] verificatiegids](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
+Voor gedetailleerde stappen bij het verwerven van uw geloofsbrieven, zie de [[!DNL Zoho CRM]  authentificatiegids ](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 
-## Verbinden [!DNL Zoho CRM] tot [!DNL Platform] gebruiken, API&#39;s
+## Verbind [!DNL Zoho CRM] met [!DNL Platform] gebruikend APIs
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Zoho CRM] Platforms met behulp van API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Zoho CRM] en Platform via API&#39;s of de gebruikersinterface:
 
-- [Een [!DNL Zoho CRM] basisverbinding met de Flow Service API](../../tutorials/api/create/crm/zoho.md)
+- [Creeer a [!DNL Zoho CRM]  basisverbinding gebruikend de Dienst API van de Stroom](../../tutorials/api/create/crm/zoho.md)
 - [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
-- [Creeer een dataflow voor een bron van CRM gebruikend de Dienst API van de Stroom](../../tutorials/api/collect/crm.md)
+- [Een gegevensstroom maken voor een CRM-bron met behulp van de Flow Service API](../../tutorials/api/collect/crm.md)
 
-## Verbinden [!DNL Zoho CRM] tot [!DNL Platform] gebruiken van UI
+## Verbind [!DNL Zoho CRM] met [!DNL Platform] gebruikend UI
 
-- [Een [!DNL Zoho CRM] bronverbinding in de gebruikersinterface](../../tutorials/ui/create/crm/zoho.md)
+- [Creeer a [!DNL Zoho CRM]  bronverbinding in UI](../../tutorials/ui/create/crm/zoho.md)
 - [Een gegevensstroom maken voor een CRM-bronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/crm.md)

@@ -1,38 +1,38 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;de stroomdienst;De Dienst API van de stroom;bronnen;Bronnen
-title: Gegevens op rijniveau voor een bron filteren met behulp van de Flow Service API
+title: Gegevens op rijniveau voor een Source filteren met behulp van de Flow Service API
 description: Deze zelfstudie behandelt de stappen voor het filteren van gegevens op bronniveau met behulp van de Flow Service API
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
 source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
 workflow-type: tm+mt
-source-wordcount: '782'
-ht-degree: 1%
+source-wordcount: '778'
+ht-degree: 0%
 
 ---
 
-# Gegevens op rijniveau filteren voor een bron die de [!DNL Flow Service] API
+# Gegevens op rijniveau voor een bron filteren met de API [!DNL Flow Service]
 
 >[!IMPORTANT]
 >
 >De steun voor het filtreren van rij-vlakke gegevens is momenteel slechts beschikbaar aan de volgende bronnen:
 >
->* [Google BigQuery](../../connectors/databases/bigquery.md)
->* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
->* [Salesforce](../../connectors/crm/salesforce.md)
->* [Snowflake](../../connectors/databases/snowflake.md)
+>* [ Google BigQuery ](../../connectors/databases/bigquery.md)
+>* [ de Dynamica van Microsoft ](../../connectors/crm/ms-dynamics.md)
+>* [ Salesforce ](../../connectors/crm/salesforce.md)
+>* [ Snowflake ](../../connectors/databases/snowflake.md)
 
-Deze zelfstudie bevat stappen voor het filteren van gegevens op rijniveau voor een bron met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma verstrekt stappen op hoe te rij-vlakke gegevens voor een bron filtreren gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
 
 ## Brongegevens filteren
 
@@ -42,9 +42,9 @@ De volgende schetsen stappen om rij-vlakke gegevens voor uw bron te filtreren.
 
 Voordat u de API kunt gebruiken voor het filteren van gegevens op rijniveau voor een bron, moet u eerst de verbindingsspecificatie van uw bron details ophalen om te bepalen welke operatoren en taal door een specifieke bron worden ondersteund.
 
-Om de verbindingsspecificatie van een bepaalde bron terug te winnen, doe een verzoek van de GET aan `/connectionSpecs` het eindpunt van de [!DNL Flow Service] API terwijl het verstrekken van de bezitsnaam van uw bron als deel van uw vraagparameters.
+Om de verbindingsspecificatie van een bepaalde bron terug te winnen, doe een verzoek van de GET aan het `/connectionSpecs` eindpunt van [!DNL Flow Service] API terwijl het verstrekken van de bezitsnaam van uw bron als deel van uw vraagparameters.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /connectionSpecs/{QUERY_PARAMS}
@@ -52,11 +52,11 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMS}` | De optionele queryparameters waarmee u resultaten wilt filteren. U kunt de [!DNL Google BigQuery] de verbindingsspecificatie door toepassing van `name` eigenschap en specificeren `"google-big-query"` in uw zoekopdracht. |
+| `{QUERY_PARAMS}` | De optionele queryparameters waarmee u resultaten wilt filteren. U kunt de verbindingsspecificatie van [!DNL Google BigQuery] ophalen door de eigenschap `name` toe te passen en `"google-big-query"` op te geven in de zoekopdracht. |
 
 **Verzoek**
 
-Met het volgende verzoek worden verbindingsspecificaties opgehaald voor [!DNL Google BigQuery].
+Met de volgende aanvraag worden verbindingsspecificaties voor [!DNL Google BigQuery] opgehaald.
 
 ```shell
 curl -X GET \
@@ -67,9 +67,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord keert de verbindingsspecificaties voor terug [!DNL Google BigQuery], inclusief informatie over de ondersteunde querytaal en logische operatoren.
+Een geslaagde reactie retourneert de verbindingsspecificaties voor [!DNL Google BigQuery] , inclusief informatie over de ondersteunde querytaal en logische operatoren.
 
 >[!NOTE]
 >
@@ -121,14 +121,14 @@ Een succesvol antwoord keert de verbindingsspecificaties voor terug [!DNL Google
 | `>` | Filtert op of de eigenschap groter is dan de opgegeven waarde. |
 | `<=` | Filtert op of de eigenschap kleiner dan of gelijk is aan de opgegeven waarde. |
 | `>=` | Filtert op of de eigenschap groter dan of gelijk is aan de opgegeven waarde. |
-| `like` | Filters die worden gebruikt in een `WHERE` naar een opgegeven patroon te zoeken. |
+| `like` | Filters door in een `WHERE` -component te worden gebruikt om naar een opgegeven patroon te zoeken. |
 | `in` | Filtert op of het bezit binnen een gespecificeerde waaier is. |
 
 {style="table-layout:auto"}
 
 ### Filtervoorwaarden voor inname opgeven
 
-Nadat u de logische operatoren en de querytaal hebt geïdentificeerd die door uw bron wordt ondersteund, kunt u PQL (Profile Query Language) gebruiken om de filtervoorwaarden op te geven die u op de brongegevens wilt toepassen.
+Nadat u de logische operatoren en de querytaal hebt geïdentificeerd die door uw bron worden ondersteund, kunt u Profile Query Language (PQL) gebruiken om de filtervoorwaarden op te geven die u op de brongegevens wilt toepassen.
 
 In het onderstaande voorbeeld worden voorwaarden alleen toegepast op geselecteerde gegevens die overeenkomen met de opgegeven waarden voor de knooppunttypen die als parameters worden vermeld.
 
@@ -155,9 +155,9 @@ In het onderstaande voorbeeld worden voorwaarden alleen toegepast op geselecteer
 
 ### Een voorbeeld van uw gegevens bekijken
 
-U kunt een voorvertoning van uw gegevens weergeven door een verzoek in te dienen bij de GET `/explore` het eindpunt van de [!DNL Flow Service] API tijdens `filters` als onderdeel van uw queryparameters en het opgeven van uw PQL-invoervoorwaarden in [!DNL Base64].
+U kunt een voorvertoning van uw gegevens weergeven door een aanvraag voor een GET in te dienen bij het `/explore` -eindpunt van de [!DNL Flow Service] API, terwijl u `filters` opgeeft als onderdeel van de queryparameters en uw PQL-invoervoorwaarden opgeeft in [!DNL Base64] .
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}&preview=true&filters={FILTERS}
@@ -167,7 +167,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | De basis verbindings-id van uw bron. |
 | `{TABLE_PATH}` | De eigenschap path van de tabel die u wilt inspecteren. |
-| `{FILTERS}` | Uw PQL-filtervoorwaarden gecodeerd in [!DNL Base64]. |
+| `{FILTERS}` | Uw PQL-filtervoorwaarden zijn gecodeerd in [!DNL Base64] . |
 
 **Verzoek**
 
@@ -180,7 +180,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol verzoek retourneert de volgende reactie.
 
@@ -330,9 +330,9 @@ Een succesvol verzoek retourneert de volgende reactie.
 
 ### Een bronverbinding maken voor gefilterde gegevens
 
-Om een bronverbinding tot stand te brengen en gefilterde gegevens in te voeren, doe een verzoek van de POST aan `/sourceConnections` eindpunt terwijl het verstrekken van uw het filtreren voorwaarden als deel van uw lichaamsparameters.
+Om een bronverbinding tot stand te brengen en gefilterde gegevens in te voeren, doe een verzoek van de POST aan het `/sourceConnections` eindpunt terwijl het verstrekken van uw het filtreren voorwaarden als deel van uw lichaamsparameters.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /sourceConnections
@@ -340,7 +340,7 @@ POST /sourceConnections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een bronverbinding gemaakt voor het invoeren van gegevens van `test1.fasTestTable` waar `city` = `DDN`.
+Met de volgende aanvraag wordt een bronverbinding gemaakt voor het invoeren van gegevens van `test1.fasTestTable` waarbij `city` = `DDN` .
 
 ```shell
 curl -X POST \
@@ -385,9 +385,9 @@ curl -X POST \
     }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding.
+Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde bronverbinding terug.
 
 ```json
 {
@@ -402,7 +402,7 @@ Deze sectie verstrekt verdere voorbeelden van verschillende ladingen voor het fi
 
 ### Enkelvoudige omstandigheden
 
-U kunt de eerste `fnApply` voor scenario&#39;s die slechts één voorwaarde vereisen.
+U kunt het eerste `fnApply` weglaten voor scenario&#39;s die slechts één voorwaarde vereisen.
 
 ```json
 {
@@ -425,7 +425,7 @@ U kunt de eerste `fnApply` voor scenario&#39;s die slechts één voorwaarde vere
 }
 ```
 
-### Met de `in` operator
+### De operator `in` gebruiken
 
 Zie de voorbeeldlading hieronder voor een voorbeeld van de exploitant `in`.
 
@@ -459,7 +459,7 @@ Zie de voorbeeldlading hieronder voor een voorbeeld van de exploitant `in`.
 }
 ```
 
-### Met de `isNull` operator
+### De operator `isNull` gebruiken
 
 Zie de voorbeeldlading hieronder voor een voorbeeld van de exploitant `isNull`.
 
@@ -480,7 +480,7 @@ Zie de voorbeeldlading hieronder voor een voorbeeld van de exploitant `isNull`.
 }
 ```
 
-### Met de `NOT` operator
+### De operator `NOT` gebruiken
 
 Zie de voorbeeldlading hieronder voor een voorbeeld van de exploitant `NOT`.
 

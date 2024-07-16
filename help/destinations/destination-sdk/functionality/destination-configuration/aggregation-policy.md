@@ -4,8 +4,8 @@ title: Samenvoegingsbeleid
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
-source-wordcount: '995'
-ht-degree: 1%
+source-wordcount: '1006'
+ht-degree: 0%
 
 ---
 
@@ -17,20 +17,20 @@ Gebruik configureerbare samenvoeging om diep in de montages te duiken die door D
 
 Wanneer u een realtime (streaming) bestemming maakt met Destination SDK, kunt u configureren hoe de geëxporteerde profielen moeten worden gecombineerd in de resulterende export. Dit gedrag wordt bepaald door de instellingen van het aggregatiebeleid.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in [configuratieopties](../configuration-options.md) documentatie of bekijk de gids over hoe te [gebruik Destination SDK om een het stromen bestemming te vormen](../../guides/configure-destination-instructions.md#create-destination-configuration).
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ gebruiken Destination SDK om een het stromen bestemming ](../../guides/configure-destination-instructions.md#create-destination-configuration) te vormen.
 
-U kunt de montages van het samenvoegingsbeleid via vormen `/authoring/destinations` eindpunt. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
+U kunt de montages van het samenvoegingsbeleid via het `/authoring/destinations` eindpunt vormen. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
 * [Een doelconfiguratie maken](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Een doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
 In dit artikel worden alle ondersteunde instellingen voor samenvoegingsbeleid beschreven die u voor uw bestemming kunt gebruiken.
 
-Nadat u dit document hebt gelezen, raadpleegt u de documentatie op [gebruik maken van sjablonen](../../functionality/destination-server/message-format.md#using-templating) en de [samenvoegingssleutelvoorbeelden](../../functionality/destination-server/message-format.md#template-aggregation-key) om te begrijpen hoe te om het samenvoegingsbeleid in uw malplaatje van de berichttransformatie te omvatten dat op uw geselecteerd samenvoegingsbeleid wordt gebaseerd.
+Na het lezen door dit document, verwijs naar de documentatie op [ gebruikend het templating ](../../functionality/destination-server/message-format.md#using-templating) en de [ belangrijkste voorbeelden van de samenvoeging ](../../functionality/destination-server/message-format.md#template-aggregation-key) om te begrijpen hoe te om het samenvoegingsbeleid in uw malplaatje van de berichttransformatie te omvatten dat op uw geselecteerd samenvoegingsbeleid wordt gebaseerd.
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Ondersteunde integratietypen {#supported-integration-types}
 
@@ -45,7 +45,7 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 
 De beste inspanningssamenvoeging werkt het best voor bestemmingen die minder profielen per verzoek verkiezen en eerder meer verzoeken met minder gegevens dan minder verzoeken met meer gegevens zouden nemen.
 
-In de onderstaande voorbeeldconfiguratie ziet u een aggregatieconfiguratie voor de beste inspanning. Voor een voorbeeld van configureerbare samenvoeging, zie [configureerbare samenvoeging](#configurable-aggregation) sectie. De parameters die van toepassing zijn op de aggregatie van de best mogelijke inspanning worden in de onderstaande tabel beschreven.
+In de onderstaande voorbeeldconfiguratie ziet u een aggregatieconfiguratie voor de beste inspanning. Voor een voorbeeld van configureerbare samenvoeging, zie de [ configureerbare samenvoeging ](#configurable-aggregation) sectie. De parameters die van toepassing zijn op de aggregatie van de best mogelijke inspanning worden in de onderstaande tabel beschreven.
 
 ```json
 "aggregation":{
@@ -59,9 +59,9 @@ In de onderstaande voorbeeldconfiguratie ziet u een aggregatieconfiguratie voor 
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `aggregationType` | Tekenreeks | Wijst op het type van samenvoegingsbeleid dat uw bestemming zou moeten gebruiken. Ondersteunde aggregatietypen: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `bestEffortAggregation.maxUsersPerRequest` | Geheel | Experience Platform kan meerdere geëxporteerde profielen samenvoegen in één HTTP-aanroep. <br><br>Deze waarde wijst op het maximumaantal profielen dat uw eindpunt in één enkele vraag van HTTP zou moeten ontvangen. Merk op dat dit een beste inspanningssamenvoeging is. Bijvoorbeeld, als u waarde 100 specificeert, zou Platform om het even welk aantal profielen kunnen verzenden kleiner dan 100 op een vraag. <br><br> Als uw server niet meerdere gebruikers per aanvraag accepteert, stelt u deze waarde in op `1`. |
-| `bestEffortAggregation.splitUserById` | Boolean | Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Deze markering instellen op `true` als uw server slechts één identiteit per vraag goedkeurt, voor een bepaalde identiteitsnaamruimte. |
+| `aggregationType` | String | Wijst op het type van samenvoegingsbeleid dat uw bestemming zou moeten gebruiken. Ondersteunde aggregatietypen: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
+| `bestEffortAggregation.maxUsersPerRequest` | Geheel | Experience Platform kan meerdere geëxporteerde profielen samenvoegen in één HTTP-aanroep. <br><br> Deze waarde wijst op het maximumaantal profielen dat uw eindpunt in één enkele vraag van HTTP zou moeten ontvangen. Merk op dat dit een beste inspanningssamenvoeging is. Bijvoorbeeld, als u waarde 100 specificeert, zou Platform om het even welk aantal profielen kunnen verzenden kleiner dan 100 op een vraag. <br><br> Als uw server niet per aanvraag meerdere gebruikers accepteert, stelt u deze waarde in op `1` . |
+| `bestEffortAggregation.splitUserById` | Boolean | Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Stel deze markering in op `true` als uw server slechts één identiteit per aanroep accepteert, voor een opgegeven naamruimte voor de identiteit. |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ In de onderstaande voorbeeldconfiguratie ziet u een aggregatieconfiguratie voor 
 
 De configureerbare samenvoeging werkt het best als u eerder in grote partijen, met duizenden profielen op de zelfde vraag zou nemen. Met deze optie kunt u ook de geëxporteerde profielen samenvoegen op basis van complexe aggregatieregels.
 
-De voorbeeldconfiguratie toont hieronder een configureerbare samenvoegingsconfiguratie. Voor een voorbeeld van de beste inspanningssamenvoeging, zie [beste inspanningsaggregatie](#best-effort-aggregation) sectie. De parameters die van toepassing zijn op configureerbare aggregatie worden in de onderstaande tabel beschreven.
+De voorbeeldconfiguratie toont hieronder een configureerbare samenvoegingsconfiguratie. Voor een voorbeeld van beste inspanningssamenvoeging, zie de [ best inspanningssamenvoeging ](#best-effort-aggregation) sectie. De parameters die van toepassing zijn op configureerbare aggregatie worden in de onderstaande tabel beschreven.
 
 ```json
 "aggregation":{
@@ -107,15 +107,15 @@ De voorbeeldconfiguratie toont hieronder een configureerbare samenvoegingsconfig
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `aggregationType` | Tekenreeks | Wijst op het type van samenvoegingsbeleid dat uw bestemming zou moeten gebruiken. Ondersteunde aggregatietypen: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `configurableAggregation.splitUserById` | Boolean | Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Deze markering instellen op `true` als uw server slechts één identiteit per vraag goedkeurt, voor een bepaalde identiteitsnaamruimte. |
-| `configurableAggregation.maxBatchAgeInSecs` | Geheel | Gebruikt in combinatie met `maxNumEventsInBatch`, bepaalt deze parameter hoe lang Experience Platform zou moeten wachten tot het verzenden van een API vraag naar uw eindpunt. <ul><li>Minimumwaarde (in seconden): 1800</li><li>Maximumwaarde (in seconden): 3600</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3600 seconden OF wachten tot er 10000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
-| `configurableAggregation.maxNumEventsInBatch` | Geheel | Wordt gebruikt in combinatie met `maxBatchAgeInSecs`, bepaalt deze parameter hoeveel gekwalificeerde profielen moeten worden samengevoegd in een API-aanroep. <ul><li>Minimumwaarde: 1000</li><li>Maximumwaarde: 10000</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3600 seconden OF wachten tot er 10000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
+| `aggregationType` | String | Wijst op het type van samenvoegingsbeleid dat uw bestemming zou moeten gebruiken. Ondersteunde aggregatietypen: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
+| `configurableAggregation.splitUserById` | Boolean | Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Stel deze markering in op `true` als uw server slechts één identiteit per aanroep accepteert, voor een opgegeven naamruimte voor de identiteit. |
+| `configurableAggregation.maxBatchAgeInSecs` | Geheel | Deze parameter wordt gebruikt in combinatie met `maxNumEventsInBatch` en bepaalt hoe lang Experience Platform moet wachten tot een API-aanroep naar het eindpunt wordt verzonden. <ul><li>Minimumwaarde (in seconden): 1800</li><li>Maximumwaarde (in seconden): 3600</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3600 seconden OF wachten tot er 10000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
+| `configurableAggregation.maxNumEventsInBatch` | Geheel | Deze parameter wordt gebruikt in combinatie met `maxBatchAgeInSecs` en bepaalt hoeveel gekwalificeerde profielen moeten worden samengevoegd in een API-aanroep. <ul><li>Minimumwaarde: 1000</li><li>Maximumwaarde: 10000</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3600 seconden OF wachten tot er 10000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
 | `configurableAggregation.aggregationKey` | - | Hiermee kunt u de geëxporteerde profielen samenvoegen die aan de bestemming zijn toegewezen op basis van de hieronder beschreven parameters. |
-| `configurableAggregation.aggregationKey.includeSegmentId` | Boolean | Deze parameter instellen op `true` als u profielen wilt groeperen die naar uw bestemming door publiek-id worden uitgevoerd. |
-| `configurableAggregation.aggregationKey.includeSegmentStatus` | Boolean | Deze parameter en `includeSegmentId` tot `true`, als u profielen wilt groeperen die naar uw bestemming door publiek-identiteitskaart en publieksstatus worden uitgevoerd. |
-| `configurableAggregation.aggregationKey.includeIdentity` | Boolean | Deze parameter instellen op `true` als u profielen wilt groeperen die naar uw bestemming door identiteitsnamespace worden uitgevoerd. |
-| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Deze parameter instellen op `true` als u wilt dat de geëxporteerde profielen worden samengevoegd tot groepen op basis van één identiteit (GAID, IDFA, telefoonnummers, e-mail, enz.). |
+| `configurableAggregation.aggregationKey.includeSegmentId` | Boolean | Stel deze parameter in op `true` als u profielen wilt groeperen die naar uw doel zijn geëxporteerd op basis van gebruikers-id. |
+| `configurableAggregation.aggregationKey.includeSegmentStatus` | Boolean | Stel deze parameter en `includeSegmentId` in op `true` als u profielen wilt groeperen die naar uw doel zijn geëxporteerd op basis van gebruikers-id en de status van het publiek. |
+| `configurableAggregation.aggregationKey.includeIdentity` | Boolean | Stel deze parameter in op `true` als u profielen wilt groeperen die via naamruimte naar uw doel worden geëxporteerd. |
+| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Stel deze parameter in op `true` als u wilt dat de geëxporteerde profielen worden samengevoegd in groepen op basis van één identiteit (GAID, IDFA, telefoonnummers, e-mail, enz.). |
 | `configurableAggregation.aggregationKey.groups` | Array | Maak lijsten met identiteitsgroepen als u profielen wilt groeperen die naar uw doel zijn geëxporteerd door groepen naamruimten. U kunt bijvoorbeeld profielen die de mobiele id&#39;s IDFA en GAID bevatten, combineren in één aanroep naar uw bestemming en e-mails in een andere via de configuratie die in het bovenstaande voorbeeld wordt getoond. |
 
 {style="table-layout:auto"}

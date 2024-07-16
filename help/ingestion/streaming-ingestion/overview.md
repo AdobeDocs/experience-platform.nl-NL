@@ -13,33 +13,33 @@ ht-degree: 0%
 
 # Overzicht van het opnemen van streaming
 
-Streaming invoer voor Adobe Experience Platform biedt gebruikers een methode om gegevens van client- en serverapparaten naar [!DNL Experience Platform] in real time.
+Streaming opname voor Adobe Experience Platform biedt gebruikers een methode om gegevens van client- en serverapparaten in real-time naar [!DNL Experience Platform] te verzenden.
 
 ## Wat kan je doen met streaming opname?
 
-Met Adobe Experience Platform kunt u zorgen voor een gecoördineerde, consistente en relevante ervaring door een [!DNL Real-Time Customer Profile] voor elk van uw individuele klanten. Streaming opname speelt een sleutelrol bij het samenstellen van deze profielen doordat u [!DNL Profile] gegevens in de [!DNL Data Lake] met zo weinig mogelijk vertraging.
+Met Adobe Experience Platform kunt u gecoördineerde, consistente en relevante ervaringen aansturen door een [!DNL Real-Time Customer Profile] voor elk van uw individuele klanten te genereren. Streaming opname speelt een belangrijke rol bij het samenstellen van deze profielen doordat u [!DNL Profile] -gegevens zo weinig mogelijk latentie kunt leveren in de [!DNL Data Lake] .
 
 De volgende video is ontworpen om u te helpen bij het begrijpen van streaming opname en geeft een overzicht van de bovenstaande concepten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
-### Stroomprofielrecords en [!DNL ExperienceEvents]
+### Stream-profielrecords en [!DNL ExperienceEvents]
 
-Met streaming opname kunnen gebruikers profielrecords streamen en [!DNL ExperienceEvents] tot [!DNL Platform] in seconden om realtime personalisatie te bevorderen. Alle gegevens die naar streaming opname-API&#39;s worden verzonden, blijven automatisch behouden in de [!DNL Data Lake].
+Met streaming opname kunnen gebruikers profielrecords streamen en [!DNL ExperienceEvents] naar [!DNL Platform] in seconden om de realtime personalisatie te bevorderen. Alle gegevens die naar streaming opname-API&#39;s worden verzonden, blijven automatisch behouden in de [!DNL Data Lake] .
 
-Lees de [een verbindingsgids voor streaming maken](../tutorials/create-streaming-connection.md) voor meer informatie .
+Gelieve te lezen [ creeer een het stromen verbindingsgids ](../tutorials/create-streaming-connection.md) voor meer informatie.
 
 ### Stream naar gegevenssets
 
-Zodra u zeker bent dat uw gegevens schoon zijn, kunt u uw datasets toelaten voor [!DNL Real-Time Customer Profile] en [!DNL Identity Service].
+Als u zeker weet dat uw gegevens schoon zijn, kunt u de gegevenssets inschakelen voor [!DNL Real-Time Customer Profile] en [!DNL Identity Service] .
 
-Voor meer informatie over het toelaten van een dataset voor [!DNL Profile] en [!DNL Identity Service], lees de [vormen een datasetgids](../../profile/tutorials/dataset-configuration.md).
+Voor meer informatie bij het toelaten van een dataset voor [!DNL Profile] en [!DNL Identity Service], te lezen gelieve [ een datasetgids ](../../profile/tutorials/dataset-configuration.md) vormen.
 
 ## Wat is de verwachte latentie voor het stromen van opname op Experience Platform?
 
 >[!IMPORTANT]
 >
->Hulplijnen voor het opnemen van streaming worden berekend op organisatieniveau en niet op sandboxniveau. Dit betekent dat uw gegevensgebruik per sandbox is gebonden aan de totale gebruiksrechten voor licenties die overeenkomen met uw volledige organisatie. Daarnaast is het gebruik van gegevens in ontwikkelingssandboxen beperkt tot 10% van uw totale profielen. Lees voor meer informatie over gebruiksrechten voor licenties de [Best practices-handleiding voor gegevensbeheer](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
+>Hulplijnen voor het opnemen van streaming worden berekend op organisatieniveau en niet op sandboxniveau. Dit betekent dat uw gegevensgebruik per sandbox is gebonden aan de totale gebruiksrechten voor licenties die overeenkomen met uw volledige organisatie. Daarnaast is het gebruik van gegevens in ontwikkelingssandboxen beperkt tot 10% van uw totale profielen. Voor meer informatie over de gebruiksrechten van de vergunning, lees de [ gids van de beste praktijken van het gegevensbeheer ](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 | Doel | Verwachte vertraging |
 | --------- | ---------------- |
@@ -52,13 +52,13 @@ In de onderstaande tabel vindt u een overzicht van de aanvraag per seconden voor
 
 | RPS-limiet | Notities |
 | --- | --- |
-| 1000 verzoeken per seconde | Deze kunnen meerdere berichten bevatten wanneer u `/collection/batch` eindpunt. |
-| 10000 individuele berichten per seconde | De berichten kunnen in minder daadwerkelijke verzoeken worden gegroepeerd wanneer het gebruiken van `/collection/batch` eindpunt. |
+| 1000 verzoeken per seconde | Deze kunnen meerdere berichten bevatten wanneer het gebruiken van `/collection/batch` eindpunt. |
+| 10000 individuele berichten per seconde | De berichten kunnen in minder daadwerkelijke verzoeken worden gegroepeerd wanneer het gebruiken van het `/collection/batch` eindpunt. |
 
 >[!IMPORTANT]
 >
->De afgedwongen limiet wordt **60 verzoeken per minuut** bij synchrone validatie zoals bedoeld voor foutopsporingsdoeleinden.
+>De afgedwongen grens wordt **60 verzoeken per minuut** wanneer het gebruiken van synchrone bevestiging aangezien het voor het zuiveren doeleinden bedoeld is.
 
 ## Adobe Experience Platform-extensie
 
-Met de Adobe Experience Platform-extensie kunt u een nieuwe streamingverbinding maken. De [!DNL Experience Platform] extensie biedt acties voor het verzenden van bakens die zijn opgemaakt in [!DNL Experience Data Model] (XDM) voor real-time invoer naar [!DNL Experience Platform]. Ga naar [Extensie Experience Platform](../../tags/extensions/client/web-sdk/overview.md) documentatie voor meer informatie.
+Met de Adobe Experience Platform-extensie kunt u een nieuwe streamingverbinding maken. De extensie [!DNL Experience Platform] biedt acties voor het verzenden van bakens die zijn opgemaakt in [!DNL Experience Data Model] (XDM) voor realtime invoer naar [!DNL Experience Platform] . Bezoek de ](../../tags/extensions/client/web-sdk/overview.md) documentatie van de Uitbreiding van het Experience Platform 0} {voor meer informatie.[

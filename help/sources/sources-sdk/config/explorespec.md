@@ -6,7 +6,7 @@ exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
 source-wordcount: '254'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -84,4 +84,4 @@ De specificaties van het onderzoek bepalen de parameters die voor het onderzoeke
 
 ## Volgende stappen
 
-Als uw verkenningsspecificaties zijn gevuld, kunt u doorgaan en een volledige verbindingsspecificatie maken met de opdracht [!DNL Flow Service] API. Zie de [Zelfbedieningsbronnen (Batch SDK) API-handleiding](../api/api-overview.md) voor meer informatie .
+Als uw verkenningsspecificaties zijn gevuld, kunt u doorgaan met het maken van een volledige verbindingsspecificatie met de API [!DNL Flow Service] . Zie de [ Zelfbediening gids van de Bron (van de Partij SDK) API ](../api/api-overview.md) voor meer informatie.

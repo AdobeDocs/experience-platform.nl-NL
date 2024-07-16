@@ -12,42 +12,42 @@ ht-degree: 0%
 
 # [!DNL SAP Commerce] verbinding
 
-[!DNL SAP Commerce], voorheen bekend als [[!DNL Hybris]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), is een op de cloud gebaseerde e-commerceoplossing voor B2B- en B2C-ondernemingen en is beschikbaar als onderdeel van het SAP Customer Experience-portfolio. [[!DNL SAP] Abonnementsfacturering](https://www.sap.com/products/financial-management/subscription-billing.html) is een product dat onder de portfolio valt en maakt een volledig levenscyclusbeheer met een abonnement mogelijk met vereenvoudigde verkoop- en betalingservaringen via gestandaardiseerde integratie.
+[!DNL SAP Commerce], vroeger gekend als [[!DNL Hybris] ](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), is een op wolk-gebaseerde e-commerceoplossing voor B2B en B2C ondernemingen en beschikbaar als deel van de portefeuille van de Ervaring van de Klant van SAP. [[!DNL SAP]  het Factureren van het Abonnement 1} is een product onder de portefeuille en laat volledig beheer van de abonnementslevenscyclus met vereenvoudigde het verkopen en betaling ervaringen door gestandaardiseerde integratie toe.](https://www.sap.com/products/financial-management/subscription-billing.html)
 
-Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL SAP Subscription Billing] klantbeheer-API](https://api.sap.com/api/BusinessPartner_APIs/path/PUT_customers-customerNumber), om uw klantgegevens bij te werken binnen [!DNL SAP Commerce] van een bestaand publiek van het Experience Platform na activering.
+Dit [!DNL Adobe Experience Platform] [ bestemming ](/help/destinations/home.md) gebruikt [[!DNL SAP Subscription Billing]  klantenbeheer API ](https://api.sap.com/api/BusinessPartner_APIs/path/PUT_customers-customerNumber), om uw klantendetails binnen [!DNL SAP Commerce] van een bestaand publiek van het Experience Platform na activering bij te werken.
 
-Instructies voor verificatie aan uw [!DNL SAP Commerce] de instantie is verder onderaan, in de [Verifiëren voor bestemming](#authenticate) sectie.
+De instructies om aan uw [!DNL SAP Commerce] instantie voor authentiek te verklaren zijn verder hieronder, in [ voor authentiek verklaren aan bestemmings ](#authenticate) sectie.
 
 ## Gebruiksscenario’s {#use-cases}
 
-Om u te helpen beter begrijpen hoe en wanneer u het [!DNL SAP Commerce] doel, hier is een geval van steekproefgebruik dat de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
+Om u beter te helpen begrijpen hoe en wanneer u de [!DNL SAP Commerce] bestemming zou moeten gebruiken, is hier een geval van het steekproefgebruik dat de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
-[!DNL SAP Commerce] klanten slaan informatie op over individuen of organisatorische entiteiten die met uw zaken in wisselwerking staan. Uw team gebruikt de klanten die in [!DNL SAP Commerce] om het publiek in de Experience Platform op te bouwen. Na verzending van deze soorten publiek naar [!DNL SAP Commerce], wordt hun informatie bijgewerkt en wordt elke klant toegewezen een bezit met zijn waarde als publieksnaam die wijst op welk publiek de klant tot behoort.
+[!DNL SAP Commerce] -klanten slaan informatie op over personen of organisaties die met uw bedrijf communiceren. Uw team gebruikt de klanten die in [!DNL SAP Commerce] bestaan om het publiek van de Experience Platform te bouwen. Na het verzenden van deze soorten publiek naar [!DNL SAP Commerce] wordt hun informatie bijgewerkt en wordt aan elke klant een eigenschap toegewezen met de waarde ervan als de publieksnaam die aangeeft tot welk publiek de klant behoort.
 
 ## Vereisten {#prerequisites}
 
-Raadpleeg de onderstaande secties voor alle voorwaarden die u in het Experience Platform moet instellen en [!DNL SAP Commerce] en voor informatie die u moet verzamelen voordat u met de [!DNL SAP Commerce] bestemming.
+Raadpleeg de onderstaande secties voor alle voorwaarden die u in Experience Platform en [!DNL SAP Commerce] moet instellen en voor informatie die u moet verzamelen voordat u met het [!DNL SAP Commerce] -doel kunt werken.
 
 ### Voorwaarden voor Experience Platforms {#prerequisites-in-experience-platform}
 
-Voordat u gegevens activeert naar de [!DNL SAP Commerce] doel, u moet een [schema](/help/xdm/schema/composition.md), [gegevensset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), en [publiek](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) gemaakt in [!DNL Experience Platform].
+Alvorens gegevens aan de [!DNL SAP Commerce] bestemming te activeren, moet u a [ schema ](/help/xdm/schema/composition.md), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) hebben, en [ publiek ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) dat in [!DNL Experience Platform] wordt gecreeerd.
 
-Raadpleeg de documentatie bij het Experience Platform voor [Publiek Lidmaatschap Details schema groep](/help/xdm/field-groups/profile/segmentation.md) als u hulp over publieksstatus nodig hebt.
+Verwijs naar de documentatie van het Experience Platform voor [ het schemagroep van de Details van het Lidmaatschap van de Publiek ](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op publieksstatus nodig hebt.
 
-### Vereisten voor de [!DNL SAP Commerce] doel {#prerequisites-destination}
+### Vereisten voor het doel [!DNL SAP Commerce] {#prerequisites-destination}
 
-Houd rekening met de volgende voorwaarden om gegevens van Platform naar uw [!DNL SAP Commerce] account:
+Houd rekening met de volgende voorwaarden om gegevens van Platform naar uw [!DNL SAP Commerce] -account te exporteren:
 
-#### U moet een [!DNL SAP Subscription Billing] account {#prerequisites-account}
+#### U moet een [!DNL SAP Subscription Billing] -account hebben {#prerequisites-account}
 
-Als u gegevens van Platform naar uw wilt exporteren [!DNL SAP Commerce] account, hebt u een [!DNL SAP Subscription Billing] account. Als u geen geldige factureringsrekening hebt, contacteer uw [!DNL SAP] accountmanager. Zie de [[!DNL SAP] Platformconfiguratie](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) voor meer informatie.
+Als u gegevens wilt exporteren van Platform naar uw [!DNL SAP Commerce] -account, hebt u een [!DNL SAP Subscription Billing] -account nodig. Neem contact op met uw accountmanager van [!DNL SAP] als u geen geldige factureringsaccount hebt. Verwijs naar het [[!DNL SAP]  document van de Configuratie van het Platform ](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) voor extra details.
 
 #### Een servicesleutel genereren {#prerequisites-service-key}
 
-* De [!DNL SAP Commerce] de de dienstsleutel staat u toe om tot [!DNL SAP Subscription Billing] API via Experience Platform. Zie de [!DNL SAP Commerce] [Creeer de Sleutel van de Dienst met identiteitskaart van de Cliënt en Geheime cliënt](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) om een de dienstsleutel te creëren. [!DNL SAP Commerce] vereist het volgende:
+* Met de servicetoets [!DNL SAP Commerce] hebt u via het Experience Platform toegang tot de API van [!DNL SAP Subscription Billing] . Verwijs naar [!DNL SAP Commerce] [ creeer een Sleutel van de Dienst met identiteitskaart van de Cliënt en Geheime Cliënt ](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) om een de dienstsleutel tot stand te brengen. [!DNL SAP Commerce] vereist het volgende:
    * Client-id
    * Clientgeheim
-   * URL. Het URL-patroon is als volgt: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Deze waarde wordt later gebruikt om waarden te verkrijgen voor `Region` en `Endpoint`.
+   * URL. Het URL-patroon is als volgt: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Deze waarde wordt later gebruikt om waarden voor `Region` en `Endpoint` op te halen.
 
 +++Select om een voorbeeld van de de dienstsleutel te zien
 
@@ -79,50 +79,50 @@ Als u gegevens van Platform naar uw wilt exporteren [!DNL SAP Commerce] account,
 
 #### Aangepaste verwijzingen maken in [!DNL SAP Subscription Billing] {#prerequisites-custom-reference}
 
-De publieksstatus van het Experience Platform bijwerken in [!DNL SAP Subscription Billing]hebt u een aangepast verwijzingsveld nodig voor elk publiek dat is geselecteerd in Platform.
+Als u de publieksstatus van het Experience Platform in [!DNL SAP Subscription Billing] wilt bijwerken, hebt u een aangepast verwijzingsveld nodig voor elk publiek dat is geselecteerd in Platform.
 
-Meld u aan bij uw [!DNL SAP Subscription Billing] en navigeer naar de **[Hoofdgegevens en -configuratie]** > **[Aangepaste verwijzingen]** pagina. Selecteer vervolgens **[!UICONTROL Create]** om een nieuwe referentie toe te voegen voor elk publiek dat is geselecteerd in Platform. U zult deze verwijzingsgebiedsnamen in volgende vereisen [Het publiek van het programma uitvoeren en voorbeeld](#schedule-segment-export-example) stap.
+Om de douaneverwijzingen tot stand te brengen, login aan uw [!DNL SAP Subscription Billing] rekening en aan de **[Hoofdgegevens en Configuratie]** te navigeren > **[de pagina van de Verwijzingen van de Douane]**. Selecteer vervolgens **[!UICONTROL Create]** om een nieuwe referentie toe te voegen voor elk publiek dat is geselecteerd in Platform. U zult deze namen van verwijzingsgebieden in de verdere [ uitvoer van het publiek van het Programma en voorbeeld ](#schedule-segment-export-example) stap vereisen.
 
-Een voorbeeld van hoe u een aangepaste **[!UICONTROL Reference Type]** binnen [!DNL SAP Subscription Billing] wordt hieronder weergegeven:
-![Afbeelding die aangeeft waar een aangepaste verwijzing moet worden gemaakt in de facturering voor SAP-abonnementen.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
+Hieronder ziet u een voorbeeld van het maken van een aangepaste **[!UICONTROL Reference Type]** in [!DNL SAP Subscription Billing] :
+![ Beeld dat waar toont om een douaneverwijzing in het Factureren van het Abonnement van SAP tot stand te brengen.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
-Zie voor aanvullende informatie de [!DNL SAP Subscription Billing] [aangepaste verwijzingen](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27) documentatie.
+Voor extra begeleiding, verwijs naar de [!DNL SAP Subscription Billing] [ documentatie van douaneverwijzingen ](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27).
 
 ### Vereiste referenties verzamelen {#gather-credentials}
 
-Verbinding maken [!DNL SAP Commerce] als u een Experience Platform wilt maken, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Als u [!DNL SAP Commerce] wilt verbinden met een Experience Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Client-id | De waarde van `clientId` uit de servicesleutel. |
-| Clientgeheim | De waarde van `clientSecret` uit de servicesleutel. |
-| Endpoint | De waarde van `url` van de de dienstsleutel, is het gelijkaardig aan `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| Regio | De locatie van uw datacenter. De regio is aanwezig in de `url` en heeft een waarde vergelijkbaar met `eu10` of `us10`. Als de `url` is `https://eu10.revenue.cloud.sap/api` u hebt `eu10`. |
+| Client-id | De waarde van `clientId` in de servicetoets. |
+| Clientgeheim | De waarde van `clientSecret` in de servicetoets. |
+| Endpoint | De waarde van `url` in de servicesleutel komt overeen met `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` . |
+| Regio | De locatie van uw datacenter. Het gebied is aanwezig in de `url` en heeft een waarde vergelijkbaar met `eu10` of `us10` . Als de waarde `url` bijvoorbeeld `https://eu10.revenue.cloud.sap/api` is, hebt u `eu10` nodig. |
 
 ## Guardrails {#guardrails}
 
-API-aanvragen aan de [!DNL SAP Cloud Management service] zijn onderworpen aan [Snelheidslimieten](https://help.sap.com/docs/btp/sap-business-technology-platform/account-administration-rate-limiting). Wanneer de tarieflimiet wordt overschreden, wordt een `HTTP 429 Too Many Requests` antwoordstatuscode.
+API verzoeken aan [!DNL SAP Cloud Management service] zijn onderworpen aan [ Grenswaarden van het Tarief ](https://help.sap.com/docs/btp/sap-business-technology-platform/account-administration-rate-limiting). Wanneer de snelheidslimiet wordt overschreden, krijgt u een `HTTP 429 Too Many Requests` antwoordstatuscode.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL SAP Commerce] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
+[!DNL SAP Commerce] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 | --- | --- | --- |
-| `customerNumberSAP` | Een klant-id van de individuele of zakelijke klant die al in uw [!DNL SAP Commerce] account. | Verplicht |
+| `customerNumberSAP` | Een klant-id van de individuele of zakelijke klant die al in uw [!DNL SAP Commerce] -account aanwezig is. | Verplicht |
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
 In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+Deze bestemming steunt de activering van alle die publiek door de Dienst van de Segmentatie van het Experience Platform [ wordt geproduceerd ](../../../segmentation/home.md).
 
 Deze bestemming ondersteunt ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
 
 | Type publiek | Ondersteund | Beschrijving |
 | ------------- | --------- | ----------- |
-| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -132,8 +132,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een publiek samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Voor elk geselecteerd publiek in Platform, het overeenkomstige [!DNL SAP Commerce] extra attributen worden bijgewerkt met zijn publieksstatus van Platform.</li></ul> |
-| Exportfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Wanneer een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een publiek samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)* volgens uw veldtoewijzing.</li><li> Voor elk geselecteerd publiek in Platform, wordt het overeenkomstige [!DNL SAP Commerce] extra attribuut bijgewerkt met zijn publieksstatus van Platform.</li></ul> |
+| Exportfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Wanneer een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -141,101 +141,101 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u de **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
-Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, zoeken naar [!DNL SAP Commerce]. U kunt de locatie ook onder de **[!UICONTROL eCommerce]** categorie.
+Zoek in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** naar [!DNL SAP Commerce] . U kunt de locatie ook in de categorie **[!UICONTROL eCommerce]** vinden.
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Vul de vereiste velden hieronder in. Zie de [Een servicesleutel genereren](#prerequisites-service-key) voor eventuele richtsnoeren.
+Vul de vereiste velden hieronder in. Verwijs naar [ een de dienstsleutel ](#prerequisites-service-key) sectie voor om het even welke begeleiding produceren.
 
 | Veld | Beschrijving |
 | --- | --- |
-| **[!UICONTROL Client ID]** | De waarde van `clientId` uit de servicesleutel. |
-| **[!UICONTROL Client secret]** | De waarde van `clientSecret` uit de servicesleutel. |
-| **[!UICONTROL Endpoint]** | De waarde van `url` van de de dienstsleutel, is het gelijkaardig aan `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| **[!UICONTROL Region]** | De locatie van uw datacenter. De regio is aanwezig in de `url` en heeft een waarde vergelijkbaar met `eu10` of `us10`. Als de `url` is `https://eu10.revenue.cloud.sap/api` u hebt `eu10`. |
+| **[!UICONTROL Client ID]** | De waarde van `clientId` in de servicetoets. |
+| **[!UICONTROL Client secret]** | De waarde van `clientSecret` in de servicetoets. |
+| **[!UICONTROL Endpoint]** | De waarde van `url` in de servicesleutel komt overeen met `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` . |
+| **[!UICONTROL Region]** | De locatie van uw datacenter. Het gebied is aanwezig in de `url` en heeft een waarde vergelijkbaar met `eu10` of `us10` . Als de waarde `url` bijvoorbeeld `https://eu10.revenue.cloud.sap/api` is, hebt u `eu10` nodig. |
 
-Om voor authentiek te verklaren aan de bestemming, uitgezocht **[!UICONTROL Connect to destination]**.
-![Afbeelding van platforminterface die aangeeft hoe u zich voor verificatie bij de bestemming kunt aanmelden.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
+Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel.
+![ Beeld van Platform UI die tonen hoe te aan de bestemming voor authentiek te verklaren.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
 
-Als de verstrekte gegevens geldig zijn, geeft de interface een **[!UICONTROL Connected]** status met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
+Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **[!UICONTROL Connected]** weer met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-![Afbeelding van platforminterface met de bestemmingsdetails die na verificatie moeten worden ingevuld.](../../assets/catalog/ecommerce/sap-commerce/destination-details.png)
+![ Beeld van Platform UI die de bestemmingsdetails tonen die na authentificatie moeten worden gevuld.](../../assets/catalog/ecommerce/sap-commerce/destination-details.png)
 
-* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Type of Customer]**: Selecteer een van ***Individueel*** of ***Bedrijf*** afhankelijk van de entiteiten in uw publiek. De [!DNL SAP Subscription Billing] [schema](https://api.sap.com/api/BusinessPartner_APIs/schema) Hiermee schakelt u de verplichte velden in, afhankelijk van deze selectie die is toegewezen aan de `customerType` kenmerk. Als de selectie ***Bedrijf***, dan de verplichte toewijzingen zoals `firstName` en `lastName` vereist voor een individuele klant zal worden genegeerd en `company` verplicht wordt en omgekeerd.
+* **[!UICONTROL Type of Customer]**: Selecteer of ***Individueel*** of ***Collectief*** afhankelijk van de entiteiten binnen uw publiek. Het [!DNL SAP Subscription Billing] [ schema ](https://api.sap.com/api/BusinessPartner_APIs/schema) schakelt de verplichte gebieden afhankelijk van deze selectie die aan het `customerType` attribuut in kaart wordt gebracht. Als de selectie ***Collectief*** is, dan zullen de verplichte die afbeeldingen als `firstName` en `lastName` voor een individuele klant worden vereist worden genegeerd en `company` verplicht en vice versa.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
-Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL SAP Commerce] doel, moet u door de stap van de gebiedstoewijzing gaan. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming. Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL SAP Commerce] doelvelden, voert u de volgende stappen uit:
+Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL SAP Commerce] -bestemming wilt verzenden, moet u de stap voor veldtoewijzing doorlopen. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming. Voer de onderstaande stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL SAP Commerce] -doelvelden:
 
-#### Wijs de `customerNumberSAP` identiteit
+#### Wijs de `customerNumberSAP` identiteit toe
 
-De `customerNumberSAP` identiteit is een verplichte toewijzing voor deze bestemming. Voer de onderstaande stappen uit om deze toe te wijzen:
-1. In de **[!UICONTROL Mapping]** stap, selecteren **[!UICONTROL Add new mapping]**. U ziet nu een nieuwe toewijzingsrij op het scherm.
-   ![Platform UI screenshot met nieuwe toewijzingsknop gemarkeerd.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
-1. In de **[!UICONTROL Select source field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteert u `customerNumberSAP`.
-   ![Schermopname van de gebruikersinterface van het platform die e-mail als bronattribuut selecteert om als identiteit in kaart te brengen.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
-1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteert u de `customerNumber` identiteit.
-   ![Schermopname van de gebruikersinterface van het platform die e-mail als doelattribuut selecteert om als identiteit in kaart te brengen.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
+De identiteit van `customerNumberSAP` is een verplichte toewijzing voor dit doel. Voer de onderstaande stappen uit om deze toe te wijzen:
+1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . U ziet nu een nieuwe toewijzingsrij op het scherm.
+   {het schermschot van het platform UI met toevoegen nieuwe benadrukte toewijzingsknoop.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)![
+1. Kies in het **[!UICONTROL Select source field]** -venster de **[!UICONTROL Select identity namespace]** en selecteer `customerNumberSAP` .
+   {het schermschot van het platform UI die e-mail als bronattribuut selecteert om als identiteit in kaart te brengen.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)![
+1. Kies in het **[!UICONTROL Select target field]** -venster de **[!UICONTROL Select identity namespace]** en selecteer de `customerNumber` -identiteit.
+   {het schermschot van het platform UI die e-mail als doelattribuut selecteert om als identiteit in kaart te brengen.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)![
 
 | Source-veld | Doelveld | Verplicht |
 | --- | --- | --- |
 | `IdentityMap: customerNumberSAP` | `Identity: customerNumber` | Ja |
 
 Hieronder ziet u een voorbeeld met de identiteitstoewijzing:
-![Afbeelding van platforminterface die een voorbeeld van de identiteitstoewijzing van customerNumber weergeeft.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
+![ Beeld van Platform UI die een voorbeeld van de identiteitstoewijzing van customerNumber toont.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
 
 #### Toewijzingskenmerken
 
-Andere kenmerken toevoegen die u wilt bijwerken tussen het XDM-profielschema en uw [!DNL SAP Subscription Billing] -account, herhaal de onderstaande stappen:
-1. In de **[!UICONTROL Mapping]** stap, selecteren **[!UICONTROL Add new mapping]**. U ziet nu een nieuwe toewijzingsrij op het scherm.
-   ![Platform UI screenshot met nieuwe toewijzingsknop gemarkeerd.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
-1. In de **[!UICONTROL Select source field]** venster, kiest u de **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk.
-   ![Platform UI screenshot die Achternaam als bronkenmerk selecteert.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
-1. In de **[!UICONTROL Select target field]** venster, kiest u **[!UICONTROL Select custom attributes]** categorie en typ de naam van de [!DNL SAP Subscription Billing] kenmerk uit de lijst met klanten [schema](https://api.sap.com/api/BusinessPartner_APIs/schema) kenmerken.
-   ![Het schermschot van UI van het platform waar lastName als doelattribuut wordt bepaald.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
+Herhaal de onderstaande stappen om andere kenmerken toe te voegen die u tussen het XDM-profielschema en uw [!DNL SAP Subscription Billing] -account wilt bijwerken:
+1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . U ziet nu een nieuwe toewijzingsrij op het scherm.
+   {het schermschot van het platform UI met toevoegen nieuwe benadrukte toewijzingsknoop.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)![
+1. Kies in het venster **[!UICONTROL Select source field]** de categorie **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk.
+   ![ het schermschot van het Platform UI die Achternaam als bronattribuut selecteert.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
+1. In het **[!UICONTROL Select target field]** venster, kies **[!UICONTROL Select custom attributes]** categorie en typ de naam van het [!DNL SAP Subscription Billing] attribuut van de lijst van klant [ schema ](https://api.sap.com/api/BusinessPartner_APIs/schema) attributen.
+   {het schermschot van het platform UI waar lastName als doelattribuut wordt bepaald.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)![
 
 >[!IMPORTANT]
 >
-> Doelveldnamen zijn hoofdlettergevoelig en moeten overeenkomen met [!DNL SAP Subscription Billing] kenmerknamen. De enige uitzondering hiervoor is `country` waar u moet gebruiken `countryCode` in plaats daarvan. [!DNL SAP Subscription Billing] ondersteunt alpha-2 (ISO 3166) landcodes. De waarde is hoofdlettergevoelig en moet tussen 0 en 3 tekens lang zijn. Zorg er dus voor dat u exact de gedefinieerde waarden opgeeft, anders treden er fouten op: `The country code {} does not exist` of `size must be between 0 and 3`.
+> Doelveldnamen zijn hoofdlettergevoelig en moeten overeenkomen met namen van [!DNL SAP Subscription Billing] -kenmerken. De enige uitzondering hiervoor is `country` waar u `countryCode` moet gebruiken. [!DNL SAP Subscription Billing] ondersteunt alpha-2 (ISO 3166)-landcodes. De waarde is hoofdlettergevoelig en moet tussen 0 en 3 tekens lang zijn. Zorg er dus voor dat u de gedefinieerde waarden exact opgeeft, anders treden er fouten op: `The country code {} does not exist` of `size must be between 0 and 3` .
 
-#### Kaart `mandatory` kenmerken voor het geselecteerde klanttype
+#### Kenmerken toewijzen `mandatory` voor het geselecteerde klanttype
 
-De verplichte kenmerktoewijzingen zijn afhankelijk van de **[!UICONTROL Type of Customer]** die u had geselecteerd. Selecteer een van de volgende opties om de verplichte kenmerken toe te wijzen:
+De verplichte kenmerktoewijzingen zijn afhankelijk van de **[!UICONTROL Type of Customer]** die u hebt geselecteerd. Selecteer een van de volgende opties om de verplichte kenmerken toe te wijzen:
 
 >[!BEGINTABS]
 
->[!TAB Individuele klant]
+>[!TAB  Individuele klant ]
 
 | Source-veld | Doelveld | Verplicht |
 | --- | --- | --- |
 | `xdm: person.lastName` | `Attribute: lastName` | Ja |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Ja |
 
->[!TAB Zakelijke klant]
+>[!TAB  Collectieve klant ]
 
 | Source-veld | Doelveld | Verplicht |
 | --- | --- | --- |
@@ -246,11 +246,11 @@ De verplichte kenmerktoewijzingen zijn afhankelijk van de **[!UICONTROL Type of 
 
 #### Extra kenmerken toewijzen
 
-Vervolgens kunt u aanvullende toewijzingen toevoegen tussen uw XDM-profielschema en het [!DNL SAP Subscription Billing] [schema](https://api.sap.com/api/BusinessPartner_APIs/schema) kenmerken voor een klant, zoals hieronder wordt getoond:
+U kunt om het even welke extra afbeeldingen tussen uw XDM profielschema en [!DNL SAP Subscription Billing] [ schema ](https://api.sap.com/api/BusinessPartner_APIs/schema) attributen voor een klant zoals hieronder getoond dan toevoegen:
 
 >[!BEGINTABS]
 
->[!TAB Individuele klant]
+>[!TAB  Individuele klant ]
 
 | Source-veld | Doelveld | Verplicht |
 | --- | --- | --- |
@@ -259,9 +259,9 @@ Vervolgens kunt u aanvullende toewijzingen toevoegen tussen uw XDM-profielschema
 | `xdm: workAddress.city` | `Attribute: city` | Nee |
 
 Een voorbeeld met zowel verplichte als optionele kenmerktoewijzingen waarbij de klant een individu is, wordt hieronder weergegeven:
-![Afbeelding van platforminterface die een voorbeeld weergeeft met zowel verplichte als optionele kenmerktoewijzingen waarbij de klant een individu is.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
+![ Beeld van Platform UI die een voorbeeld met zowel verplichte als facultatieve attributenafbeeldingen toont waar de klant een individu is.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
 
->[!TAB Zakelijke klant]
+>[!TAB  Collectieve klant ]
 
 | Source-veld | Doelveld | Verplicht |
 | --- | --- | --- |
@@ -269,59 +269,63 @@ Een voorbeeld met zowel verplichte als optionele kenmerktoewijzingen waarbij de 
 | `xdm: workAddress.city` | `Attribute: city` | Nee |
 
 Een voorbeeld met zowel verplichte als optionele kenmerktoewijzingen waarbij de klant een onderneming is, wordt hieronder weergegeven:
-![Afbeelding van platforminterface die een voorbeeld toont met zowel verplichte als optionele kenmerktoewijzingen waarbij de klant een bedrijf is.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
+![ Beeld van Platform UI die een voorbeeld met zowel verplichte als facultatieve attributenafbeeldingen toont waar de klant een collectief is.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
 
 >[!ENDTABS]
 
-Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ### Het publiek van het programma uitvoeren en voorbeeld {#schedule-segment-export-example}
 
-Bij het uitvoeren van de [Het exporteren van publiek plannen](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) stap, moet u het publiek van het Platform aan de [attributes](#prerequisites-attribute) in [!DNL SAP Subscription Billing].
+Wanneer het uitvoeren van de [ stap van de de publieksuitvoer van het Programma ](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), moet u het publiek van het Platform aan de [ attributen ](#prerequisites-attribute) in kaart brengen [!DNL SAP Subscription Billing].
 
-Een voorbeeld van de stap van de het publieksuitvoer van het Programma, met de plaats van [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** gemarkeerd, wordt hieronder weergegeven:
-![Afbeelding van Platform waarin het publiek van de planning wordt weergegeven en waaraan id&#39;s zijn toegewezen.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
+Hieronder ziet u een voorbeeld van de stap die het publiek van het venster Planning uitvoert en de locatie van de [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** gemarkeerd is:
+![ Beeld van Platform die de uitvoer van het planningspubliek met Bebevolkte Toewijzing IDs tonen.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
-Om dit te doen, selecteer elk segment, dan ga naam van de douaneverwijzing van in [!DNL SAP Subscription Billing] in de [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** veld doelaansluiting. Raadpleeg voor hulp bij het maken van aangepaste verwijzingen de [Aangepaste verwijzingen maken in [!DNL SAP Subscription Billing]](#prerequisites-custom-reference) sectie.
+Hiervoor selecteert u elk segment en voert u vervolgens de naam in van de aangepaste verwijzing uit [!DNL SAP Subscription Billing] in het veld voor de [!DNL SAP Commerce] doelconnector **[!UICONTROL Mapping ID]** . Voor begeleiding bij het creëren van douaneverwijzingen, verwijs naar [ creeer douaneverwijzingen in  [!DNL SAP Subscription Billing]](#prerequisites-custom-reference) sectie.
 
 >[!IMPORTANT]
 >
 > Gebruik het aangepaste referentielabel niet als waarde.
->![Afbeelding die aangeeft dat u de aangepaste verwijzingslabelwaarde niet moet gebruiken voor toewijzing.](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png)
+>![Het beeld erop wijst dat u niet de waarde van het douanelabel van de verwijzing voor afbeelding zou moeten gebruiken.](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png)
 
-Stel dat het publiek van het geselecteerde Experience Platform `sap_audience1` en u wilt dat de status wordt bijgewerkt in het dialoogvenster [!DNL SAP Subscription Billing] aangepaste verwijzing `SAP_1`geeft u deze waarde op in het dialoogvenster [!DNL SAP_Commerce] **[!UICONTROL Mapping ID]** veld.
+Als het publiek van het geselecteerde Experience Platform bijvoorbeeld `sap_audience1` is en u wilt dat de status wordt bijgewerkt naar de [!DNL SAP Subscription Billing] aangepaste referentie `SAP_1` , geeft u deze waarde op in het veld [!DNL SAP_Commerce] **[!UICONTROL Mapping ID]** .
 
-Een voorbeeld **[!UICONTROL Reference Type]** van [!DNL SAP Subscription Billing] wordt hieronder weergegeven:
-![Afbeelding die aangeeft waar een aangepaste verwijzing moet worden gemaakt in de facturering voor SAP-abonnementen.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
+Hieronder ziet u een voorbeeld **[!UICONTROL Reference Type]** van [!DNL SAP Subscription Billing] :
+![ Beeld dat waar toont om een douaneverwijzing in het Factureren van het Abonnement van SAP tot stand te brengen.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
-Een voorbeeld van de stap van de het publieksuitvoer van het Programma, met een geselecteerd publiek en zijn overeenkomstige [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** gemarkeerd, wordt hieronder weergegeven:
-![Afbeelding van Platform waarin het publiek van de planning wordt weergegeven en waaraan id&#39;s zijn toegewezen.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
+Hieronder ziet u een voorbeeld van de stap die het publiek van het venster Planning uitvoert, met een geselecteerd publiek en de bijbehorende [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** gemarkeerd:
+![ Beeld van Platform die de uitvoer van het planningspubliek met Bebevolkte Toewijzing IDs tonen.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
 
-Zoals u ziet in het dialoogvenster **[!UICONTROL Mapping ID]** veld moet exact overeenkomen met [!DNL SAP Subscription Billing] **[!UICONTROL Reference Type]** waarde.
+Zoals u ziet, moet de waarde in het veld **[!UICONTROL Mapping ID]** exact overeenkomen met de waarde [!DNL SAP Subscription Billing] **[!UICONTROL Reference Type]** .
 
 Herhaal deze sectie voor elk geactiveerd publiek van het Platform.
 
-Op basis van de bovenstaande afbeelding waarin u twee soorten publiek hebt geselecteerd, wordt de afbeelding als volgt toegewezen: | [!DNL SAP Commerce] doelnaam | [!DNL SAP Subscription Billing] **[!UICONTROL Reference Type]** | [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** value | | — | — | — | | sap_publiek1 | `SAP_1` | `SAP_1` | | SAP-publiek2 | `SAP_2` | `SAP_2` |
+Op basis van de bovenstaande afbeelding waarin u twee soorten publiek hebt geselecteerd, wordt de afbeelding als volgt toegewezen:
+| [!DNL SAP Commerce] publieksnaam | [!DNL SAP Subscription Billing] **[!UICONTROL Reference Type]** | [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** value |
+| — | — | — |
+| sap_publiek1 | `SAP_1` | `SAP_1` |
+| SAP-publiek2 | `SAP_2` | `SAP_2` |
 
 ## Gegevens exporteren valideren {#exported-data}
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
-Aanmelden bij de [!DNL SAP Subscription Billing] account, navigeer naar de **[!UICONTROL Contacts]** pagina om de status van het publiek te controleren. De lijst kan worden gevormd om kolommen voor de douaneverwijzingen te tonen en de overeenkomstige publieksstatus te tonen.
-![Afbeelding van SAP Subscription Billing met de overzichtspagina van de klant en de kolomkoppen met de publieksnaam en de publieksstatus van de cellen](../../assets/catalog/ecommerce/sap-commerce/customer-overview.png)
+Meld u aan bij de [!DNL SAP Subscription Billing] -account en navigeer naar de **[!UICONTROL Contacts]** -pagina om de status van het publiek te controleren. De lijst kan worden gevormd om kolommen voor de douaneverwijzingen te tonen en de overeenkomstige publieksstatus te tonen.
+![ Beeld van het Factureren van het Abonnement van SAP die de pagina van het klantenoverzicht met kolomkopballen tonen die de publieksnaam en de statistieken van het celpubliek tonen ](../../assets/catalog/ecommerce/sap-commerce/customer-overview.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
 
 ## Fouten en problemen oplossen {#errors-and-troubleshooting}
 
-Zie de [[!DNL SAP Subscription Billing] Fouttypen](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/1a6a0dd6129c48e8b235190a1b5409fa.html) documentatiepagina voor een lijst van mogelijke fouttypen en hun responscodes.
+Verwijs naar de [[!DNL SAP Subscription Billing]  de documentatiepagina van de Types van Fout ](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/1a6a0dd6129c48e8b235190a1b5409fa.html) voor een lijst van mogelijke foutentypes en hun antwoordcodes.
 
 ## Aanvullende bronnen {#additional-resources}
 
-Aanvullende nuttige informatie uit de [!DNL SAP] de documentatie is hieronder:
-* [Facturering voor SAP-abonnementen aan boord](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/e4b8badf7d124026991e4ab6b57d2a33.html)
+Hieronder vindt u aanvullende nuttige informatie uit de documentatie van [!DNL SAP] :
+* [ Billing van het Abonnement van SAP aan boord ](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/e4b8badf7d124026991e4ab6b57d2a33.html)
 
 ### Changelog
 

@@ -13,20 +13,20 @@ ht-degree: 0%
 
 # Overzicht van beleidshandhaving
 
-Eenmaal [gegevensgebruikslabels](../labels/overview.md) zijn toegepast en [beleid voor gegevensgebruik](../policies/overview.md) Als u een beleid hebt gedefinieerd, kunt u dat beleid toepassen om gegevensbewerkingen te voorkomen die beleidsovertredingen vormen.
+Zodra [ de etiketten van het gegevensgebruik ](../labels/overview.md) zijn toegepast en [ het beleid van het gegevensgebruik ](../policies/overview.md) zijn bepaald, kunt u dat beleid afdwingen om gegevensverrichtingen te verhinderen die beleidsschendingen vormen.
 
 >[!NOTE]
 >
->Dit document is gericht op de handhaving van het beleid voor gegevensgebruik. Voor informatie over het beleid van de toegangscontrole, verwijs naar de gids over [attribuut-based toegangsbeheer](../../access-control/abac/overview.md).
+>In dit document wordt de nadruk gelegd op de handhaving van het beleid voor gegevensgebruik. Voor informatie over toegangsbeheerbeleid, verwijs naar de gids op [ op attributen-gebaseerde toegangsbeheer ](../../access-control/abac/overview.md).
 
-Er zijn twee methoden voor de handhaving van het beleid in Adobe Experience Platform: automatische handhaving en op API gebaseerde handhaving.
+Er zijn twee methoden voor beleidshandhaving op Adobe Experience Platform: automatische handhaving en op API gebaseerde handhaving.
 
 ## Automatische handhaving
 
-Het Experience Platform maakt gebruik van gegevenslijn, gegevensclassificatie en mogelijkheden voor beleidsbeheer om beleidsovertredingen automatisch te evalueren en aan te geven. Zie het overzicht op [automatische beleidshandhaving](./auto-enforcement.md) voor meer informatie .
+Het Experience Platform maakt gebruik van gegevenslijn, gegevensclassificatie en mogelijkheden voor beleidsbeheer om beleidsovertredingen automatisch te evalueren en aan te geven. Zie het overzicht op [ automatische beleidshandhaving ](./auto-enforcement.md) voor meer informatie.
 
 ## Op API gebaseerde handhaving
 
-De [!DNL Policy Service] API verstrekt eindpunten die u toestaan om marketing acties tegen datasets of willekeurige combinaties etiketten van het gegevensgebruik te testen om te controleren als om het even welke beleidsschendingen voorkomen. Op basis van de API-reactie kunt u vervolgens protocollen in uw ervaringstoepassing instellen om de naleving van het gegevensbeheerbeleid op de juiste manier af te dwingen.
+De API van [!DNL Policy Service] verstrekt eindpunten die u toestaan om marketing acties tegen datasets of willekeurige combinaties etiketten van het gegevensgebruik te testen om als om het even welke beleidsschendingen te controleren. Op basis van de API-reactie kunt u vervolgens protocollen in uw ervaringstoepassing instellen om de naleving van het gegevensbeheerbeleid op de juiste manier af te dwingen.
 
-Zie de zelfstudie aan [Op API gebaseerde handhaving](./api-enforcement.md) voor stappen over hoe te om beleid te evalueren gebruikend API.
+Zie het leerprogramma op [ API-Gebaseerde handhaving ](./api-enforcement.md) voor stappen op hoe te om beleid te evalueren gebruikend API.

@@ -1,24 +1,24 @@
 ---
 solution: Experience Platform
 title: Rekenkundige functies van PAL
-description: De rekenkundige functies worden gebruikt om basisberekeningen op waarden in de Taal van de Vraag van het Profiel (PQL) uit te voeren.
+description: Rekenkundige functies worden gebruikt voor het uitvoeren van basisberekeningen voor waarden in Profile Query Language (PQL).
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '243'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 # Rekenkundige functies
 
-Rekenkundige functies worden gebruikt voor het uitvoeren van basisberekeningen voor waarden in [!DNL Profile Query Language] (PQL). Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
+Rekenkundige functies worden gebruikt voor het uitvoeren van basisberekeningen voor waarden in [!DNL Profile Query Language] (PQL). Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht ](./overview.md) worden gevonden.
 
 ## Toevoegen
 
-De `+` (optellen) functie wordt gebruikt om de som twee argumentuitdrukkingen te vinden.
+De functie `+` (optellen) wordt gebruikt om de som twee argumentuitdrukkingen te vinden.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {NUMBER} + {NUMBER}
@@ -26,7 +26,7 @@ De `+` (optellen) functie wordt gebruikt om de som twee argumentuitdrukkingen te
 
 **Voorbeeld**
 
-De volgende vraag PQL sommen de prijs van twee verschillende producten.
+In de volgende PQL-query wordt de prijs van twee verschillende producten samengevat.
 
 ```sql
 product1.price + product2.price
@@ -34,9 +34,9 @@ product1.price + product2.price
 
 ## Vermenigvuldigen
 
-De `*` (vermenigvuldigen) functie wordt gebruikt om het product van twee argument uitdrukkingen te vinden.
+De functie `*` (vermenigvuldigen) wordt gebruikt om het product van twee argumentexpressies te vinden.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {NUMBER} * {NUMBER}
@@ -44,7 +44,7 @@ De `*` (vermenigvuldigen) functie wordt gebruikt om het product van twee argumen
 
 **Voorbeeld**
 
-De volgende vraag PQL vindt het product van de inventaris en de prijs van een product om de bruto waarde van het product te vinden.
+In de volgende PQL-query worden het product van de voorraad en de prijs van een product gevonden om de brutowaarde van het product te vinden.
 
 ```sql
 product.inventory * product.price
@@ -52,9 +52,9 @@ product.inventory * product.price
 
 ## Aftrekken
 
-De `-` (aftrekken) functie wordt gebruikt om het verschil tussen twee argument expressies te vinden.
+De functie `-` (aftrekken) wordt gebruikt om het verschil tussen twee argumentexpressies te zoeken.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {NUMBER} - {NUMBER}
@@ -62,7 +62,7 @@ De `-` (aftrekken) functie wordt gebruikt om het verschil tussen twee argument e
 
 **Voorbeeld**
 
-De volgende vraag PQL vindt het verschil in prijs tussen twee verschillende producten.
+Met de volgende PQL-query wordt het prijsverschil tussen twee verschillende producten gevonden.
 
 ```sql
 product1.price - product2.price
@@ -70,9 +70,9 @@ product1.price - product2.price
 
 ## Splitsen
 
-De `/` (delen) wordt gebruikt om het quotiënt van twee argumentuitdrukkingen te vinden.
+De functie `/` (delen) wordt gebruikt om het quotiënt van twee argumentuitdrukkingen te vinden.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {NUMBER} / {NUMBER}
@@ -80,7 +80,7 @@ De `/` (delen) wordt gebruikt om het quotiënt van twee argumentuitdrukkingen te
 
 **Voorbeeld**
 
-Met de volgende PQL-query wordt het quotiënt gevonden tussen de totale verkochte producten en het totale verdiende geld om de gemiddelde kosten per object te zien.
+In de volgende PQL-query wordt het quotiënt gevonden tussen de totale verkochte producten en het totale verdiende geld om de gemiddelde kosten per object te zien.
 
 ```sql
 totalProduct.price / totalProduct.sold
@@ -88,9 +88,9 @@ totalProduct.price / totalProduct.sold
 
 ## Herinnering
 
-De `%` (restbepaling bij deling/rest) wordt gebruikt om de rest te zoeken na het delen van de twee argumentexpressies.
+De functie `%` (restbepaling bij deling/restbepaling) wordt gebruikt om de rest te zoeken na het delen van de twee argumentexpressies.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {NUMBER} % {NUMBER}
@@ -98,7 +98,7 @@ De `%` (restbepaling bij deling/rest) wordt gebruikt om de rest te zoeken na het
 
 **Voorbeeld**
 
-De volgende vraag PQL controleert als de leeftijd van de persoon door vijf deelbaar is.
+De volgende PQL-query controleert of de leeftijd van de persoon door vijf kan worden gedeeld.
 
 ```sql
 person.age % 5 = 0
@@ -106,4 +106,4 @@ person.age % 5 = 0
 
 ## Volgende stappen
 
-Nu u over rekenkundige functies hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).
+Nu u over rekenkundige functies hebt geleerd, kunt u deze gebruiken binnen uw PQL-query&#39;s. Voor meer informatie over andere functies van PQL, te lezen gelieve het [ overzicht van Profile Query Language ](./overview.md).

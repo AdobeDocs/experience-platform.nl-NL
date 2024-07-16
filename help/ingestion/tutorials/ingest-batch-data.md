@@ -7,32 +7,32 @@ description: Met Adobe Experience Platform kunt u gegevens eenvoudig importeren 
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
 source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
 workflow-type: tm+mt
-source-wordcount: '1259'
+source-wordcount: '1260'
 ht-degree: 0%
 
 ---
 
 # Gegevens opnemen in Adobe Experience Platform
 
-Met Adobe Experience Platform kunt u eenvoudig gegevens importeren in [!DNL Platform] als batchbestanden. Voorbeelden van gegevens die moeten worden opgenomen, kunnen profielgegevens van een vlak bestand in een CRM-systeem (zoals een Parquet-bestand) of gegevens bevatten die overeenkomen met een bekende versie [!DNL Experience Data Model] (XDM) schema in de Registratie van het Schema.
+Met Adobe Experience Platform kunt u gegevens eenvoudig als batchbestanden importeren in [!DNL Platform] . Voorbeelden van gegevens die moeten worden opgenomen, kunnen profielgegevens bevatten van een plat bestand in een CRM-systeem (zoals een Parquet-bestand) of gegevens die voldoen aan een bekend [!DNL Experience Data Model] (XDM) schema in de Schema-register.
 
 ## Aan de slag
 
-Als u deze zelfstudie wilt voltooien, moet u toegang hebben tot [!DNL Experience Platform]. Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform], spreek gelieve met uw systeembeheerder alvorens te werk te gaan.
+U moet toegang hebben tot [!DNL Experience Platform] om deze zelfstudie te kunnen voltooien. Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform] , neemt u contact op met uw systeembeheerder voordat u verdergaat.
 
-Als u gegevens liever wilt invoeren met API&#39;s voor gegevensinname, begint u met het lezen van de [Handleiding voor ontwikkelaars van batchverwerking](../batch-ingestion/api-overview.md).
+Als u verkiest gegevens in te voeren gebruikend de Ingestie APIs van Gegevens gelieve te beginnen door de [ gids van de ontwikkelaar van de Ingestie van de Partij van de Partij ](../batch-ingestion/api-overview.md) te lezen.
 
 ## Werkruimte Gegevensbestanden
 
-De werkruimte Datasets binnen [!DNL Experience Platform] staat u toe om alle datasets te bekijken en te beheren die uw organisatie heeft gemaakt, evenals nieuwe degenen te creëren.
+Met de werkruimte Datasets in [!DNL Experience Platform] kunt u alle gegevenssets die uw organisatie heeft gemaakt, weergeven en beheren en nieuwe gegevenssets maken.
 
-De werkruimte Datasets weergeven door op **[!UICONTROL Datasets]** in de linkernavigatie. De werkruimte van Datasets bevat een lijst van datasets, met inbegrip van kolommen die naam tonen, (datum en tijd), bron, schema, en laatste partijstatus, evenals de datum en de tijd de dataset het laatst werd bijgewerkt.
+U kunt de werkruimte Datasets weergeven door op **[!UICONTROL Datasets]** te klikken in de linkernavigatie. De werkruimte van Datasets bevat een lijst van datasets, met inbegrip van kolommen die naam tonen, (datum en tijd), bron, schema, en laatste partijstatus, evenals de datum en de tijd de dataset het laatst werd bijgewerkt.
 
 >[!NOTE]
 >
->Klik op het filterpictogram naast de zoekbalk om filtermogelijkheden te gebruiken om alleen die datasets weer te geven die zijn ingeschakeld voor [!DNL Profile].
+>Klik op het filterpictogram naast de zoekbalk om filtermogelijkheden te gebruiken om alleen die datasets weer te geven die zijn ingeschakeld voor [!DNL Profile] .
 
-![Alle gegevenssets weergeven](../images/tutorials/ingest-batch-data/datasets-overview.png)
+![ Mening alle datasets ](../images/tutorials/ingest-batch-data/datasets-overview.png)
 
 ## Een gegevensset maken
 
@@ -40,116 +40,116 @@ Als u een gegevensset wilt maken, klikt u op **[!UICONTROL Create Dataset]** in 
 
 ![](../images/tutorials/ingest-batch-data/click-create-datasets.png)
 
-Op de **[!UICONTROL Create Dataset]** scherm, selecteer of u &quot;[!UICONTROL Create Dataset from Schema]&quot; of &quot;[!UICONTROL Create Dataset from CSV File]&quot;.
+Voor het **[!UICONTROL Create Dataset]** scherm, selecteer of u &quot; [!UICONTROL Create Dataset from Schema]&quot;of &quot;[!UICONTROL Create Dataset from CSV File]&quot;zou willen.
 
-Voor deze zelfstudie wordt een schema gebruikt om de dataset te maken. Klikken **[!UICONTROL Create Dataset from Schema]** om door te gaan.
+Voor deze zelfstudie wordt een schema gebruikt om de dataset te maken. Klik op **[!UICONTROL Create Dataset from Schema]** om door te gaan.
 
-![Gegevensbron selecteren](../images/tutorials/ingest-batch-data/create-dataset.png)
+![ Uitgezochte gegevensbron ](../images/tutorials/ingest-batch-data/create-dataset.png)
 
 ## Gegevenssetschema selecteren
 
-Op de **[!UICONTROL Select Schema]** , kiest u een schema door op het keuzerondje naast het schema te klikken dat u wilt gebruiken. Voor deze zelfstudie wordt de gegevensset gemaakt met het schema Loyalty-leden. Het gebruiken van de onderzoeksbar aan filterschema&#39;s is een nuttige manier om het nauwkeurige schema te vinden u zoekt.
+Kies in het scherm **[!UICONTROL Select Schema]** een schema door op het keuzerondje naast het schema te klikken dat u wilt gebruiken. Voor deze zelfstudie wordt de gegevensset gemaakt met het schema Loyalty-leden. Het gebruiken van de onderzoeksbar aan filterschema&#39;s is een nuttige manier om het nauwkeurige schema te vinden u zoekt.
 
-Als u het keuzerondje hebt geselecteerd naast het schema dat u wilt gebruiken, klikt u op **[!UICONTROL Next]**.
+Als u het keuzerondje hebt geselecteerd naast het schema dat u wilt gebruiken, klikt u op **[!UICONTROL Next]** .
 
-![Schema selecteren](../images/tutorials/ingest-batch-data/select-schema.png)
+![ Uitgezochte schema ](../images/tutorials/ingest-batch-data/select-schema.png)
 
 ## Gegevensset configureren
 
-Op de **[!UICONTROL Configure Dataset]** scherm, zult u uw dataset een naam moeten geven en kan ook een beschrijving van de dataset ook verstrekken.
+Op het **[!UICONTROL Configure Dataset]** scherm, zult u moeten uw dataset een naam geven en kan ook een beschrijving van de dataset ook verstrekken.
 
-**Opmerkingen over gegevenssetnamen:**
+**Nota&#39;s op de Namen van Dataset:**
 
 - De namen van gegevenssets moeten kort en beschrijvend zijn, zodat de gegevensset later gemakkelijk in de bibliotheek kan worden gevonden.
 - Dataset-namen moeten uniek zijn, wat betekent dat ze ook specifiek genoeg moeten zijn om in de toekomst niet opnieuw te worden gebruikt.
 - Het is beste praktijken om extra informatie over de dataset te verstrekken gebruikend het beschrijvingsgebied, aangezien het andere gebruikers kan helpen tussen datasets in de toekomst differentiëren.
 
-Als de gegevensset een naam en beschrijving heeft, klikt u op **[!UICONTROL Finish]**.
+Als de gegevensset een naam en beschrijving heeft, klikt u op **[!UICONTROL Finish]** .
 
-![Gegevensset configureren](../images/tutorials/ingest-batch-data/configure-dataset.png)
+![ vorm dataset ](../images/tutorials/ingest-batch-data/configure-dataset.png)
 
 ## Gegevensactiviteit
 
-Er is nu een lege dataset gemaakt en u bent teruggestuurd naar de **[!UICONTROL Dataset Activity]** in de werkruimte Datasets. U zou de naam van de dataset in de upper-left hoek van de werkruimte, samen met een bericht moeten zien dat &quot;Geen partijen zijn toegevoegd.&quot; Dit moet worden verwacht aangezien u nog geen partijen aan deze dataset hebt toegevoegd.
+Er is nu een lege dataset gemaakt en u bent teruggestuurd naar het tabblad **[!UICONTROL Dataset Activity]** in de werkruimte Datasets. U zou de naam van de dataset in de upper-left hoek van de werkruimte, samen met een bericht moeten zien dat &quot;Geen partijen zijn toegevoegd.&quot; Dit moet worden verwacht aangezien u nog geen partijen aan deze dataset hebt toegevoegd.
 
-Aan de rechterkant van de werkruimte Datasets ziet u de **[!UICONTROL Info]** tabblad met informatie over uw nieuwe gegevensset, zoals id van de gegevensset, naam, beschrijving, tabelnaam, schema, streaming en bron. Het tabblad Info bevat ook informatie over het tijdstip waarop de gegevensset is gemaakt en de datum waarop deze voor het laatst is gewijzigd.
+Rechts in de werkruimte Datasets ziet u het tabblad **[!UICONTROL Info]** met informatie over uw nieuwe gegevensset, zoals de id van de gegevensset, naam, beschrijving, tabelnaam, schema, streaming en bron. Het tabblad Info bevat ook informatie over het tijdstip waarop de gegevensset is gemaakt en de datum waarop deze voor het laatst is gewijzigd.
 
-Ook op het tabblad Info is een  **[!UICONTROL Profile]** knevel dat voor het toelaten van uw dataset voor gebruik met wordt gebruikt [!DNL Real-Time Customer Profile]. gebruik van deze schakeloptie, en [!DNL Real-Time Customer Profile], zal nader worden toegelicht in het volgende gedeelte.
+Op het tabblad Info vindt u ook een **[!UICONTROL Profile]** -schakeloptie die wordt gebruikt voor het inschakelen van uw gegevensset voor gebruik met [!DNL Real-Time Customer Profile] . Het gebruik van deze schakeloptie en [!DNL Real-Time Customer Profile] wordt nader toegelicht in de volgende sectie.
 
-![Gegevensactiviteit](../images/tutorials/ingest-batch-data/sample-dataset.png)
+![ de activiteit van de Dataset ](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
 ## Gegevensset inschakelen voor [!DNL Real-Time Customer Profile]
 
-Datasets worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform], en die gegevens worden uiteindelijk gebruikt om individuen te identificeren en informatie uit meerdere bronnen te koppelen. Die samengevoegde informatie wordt een [!DNL Real-Time Customer Profile]. Om [!DNL Platform] te weten welke informatie in de [!DNL Real-Time Profile]kunnen gegevenssets worden gemarkeerd voor opname met behulp van de **[!UICONTROL Profile]** schakelen.
+Datasets worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform] en die gegevens worden uiteindelijk gebruikt om individuen te identificeren en informatie die uit meerdere bronnen afkomstig is aan elkaar te koppelen. Deze samengevoegde informatie wordt een [!DNL Real-Time Customer Profile] genoemd. [!DNL Platform] weet welke informatie moet worden opgenomen in de [!DNL Real-Time Profile] , dus gegevenssets kunnen worden gemarkeerd voor opname met de **[!UICONTROL Profile]** -schakeloptie.
 
-Deze schakeloptie is standaard uitgeschakeld. Als u schakelt [!DNL Profile], worden alle gegevens die in de gegevensset worden opgenomen, gebruikt om een individu te identificeren en zijn [!DNL Real-Time Profile].
+Deze schakeloptie is standaard uitgeschakeld. Als u [!DNL Profile] inschakelt, worden alle gegevens die in de gegevensset worden ingevoerd, gebruikt om een individu te identificeren en de gegevens aan elkaar te koppelen [!DNL Real-Time Profile] .
 
-Meer informatie over [!DNL Real-Time Customer Profile] en werken met identiteiten, raadpleeg de [Identiteitsservice](../../identity-service/home.md) documentatie.
+Om meer over [!DNL Real-Time Customer Profile] en het werken met identiteiten te leren, te herzien gelieve de [ documentatie van de Dienst van de Identiteit ](../../identity-service/home.md).
 
-Om de dataset voor toe te laten [!DNL Real-Time Customer Profile]klikt u op de knop **[!UICONTROL Profile]** schakelen in de **[!UICONTROL Info]** tab.
+Als u de gegevensset voor [!DNL Real-Time Customer Profile] wilt inschakelen, klikt u op de **[!UICONTROL Profile]** -schakeloptie op het tabblad **[!UICONTROL Info]** .
 
-![Schakelen tussen profielen](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
+![ knevel van het Profiel ](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-Er verschijnt een dialoogvenster waarin u wordt gevraagd te bevestigen dat u de gegevensset wilt inschakelen voor [!DNL Real-Time Customer Profile].
+Er verschijnt een dialoogvenster waarin u wordt gevraagd te bevestigen dat u de gegevensset wilt inschakelen voor [!DNL Real-Time Customer Profile] .
 
-![Dialoogvenster Profiel inschakelen](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
+![ laat de dialoog van het Profiel ](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png) toe
 
-Klikken **[!UICONTROL Enable]** en de schakeloptie wordt blauw, wat aangeeft dat de schakeloptie is ingeschakeld.
+Klik op **[!UICONTROL Enable]** en de schakeloptie wordt blauw om aan te geven dat deze is ingeschakeld.
 
-![Ingeschakeld voor profiel](../images/tutorials/ingest-batch-data/profile-enabled-dataset.png)
+![ Toegelaten voor Profiel ](../images/tutorials/ingest-batch-data/profile-enabled-dataset.png)
 
 ## Gegevens toevoegen aan gegevensset
 
-Gegevens kunnen op verschillende manieren aan een gegevensset worden toegevoegd. U kunt desgewenst [!DNL Data Ingestion] API&#39;s of een ETL-partner zoals [!DNL Unifi] of [!DNL Informatica]. Voor deze zelfstudie worden gegevens toegevoegd aan de gegevensset met de **[!UICONTROL Add Data]** in de gebruikersinterface.
+Gegevens kunnen op verschillende manieren aan een gegevensset worden toegevoegd. U kunt ervoor kiezen om [!DNL Data Ingestion] API&#39;s of een ETL-partner zoals [!DNL Unifi] of [!DNL Informatica] te gebruiken. Voor deze zelfstudie worden gegevens toegevoegd aan de gegevensset met het tabblad **[!UICONTROL Add Data]** in de gebruikersinterface.
 
-Als u wilt beginnen met het toevoegen van gegevens aan de gegevensset, klikt u op de knop **[!UICONTROL Add Data]** tab. U kunt nu bestanden slepen en neerzetten of op uw computer bladeren naar de bestanden die u wilt toevoegen.
+Klik op het tabblad **[!UICONTROL Add Data]** om gegevens toe te voegen aan de gegevensset. U kunt nu bestanden slepen en neerzetten of op uw computer bladeren naar de bestanden die u wilt toevoegen.
 
 >[!NOTE]
 >
 >Platform ondersteunt twee bestandstypen voor gegevensinvoer, Parquet of JSON. U kunt maximaal vijf bestanden tegelijk toevoegen, waarbij de maximale bestandsgrootte van elk bestand 1 GB is.
 
-![Tabblad Gegevens toevoegen](../images/tutorials/ingest-batch-data/drag-and-drop.png)
+![ voeg Gegevens tabel ](../images/tutorials/ingest-batch-data/drag-and-drop.png) toe
 
 ## Een bestand uploaden {#upload-file}
 
-Nadat u een Parquet- of JSON-bestand dat u wilt uploaden hebt gesleept en neergezet (of door het bestand hebt gebladerd en geselecteerd), [!DNL Platform] zal onmiddellijk beginnen het dossier te verwerken en **[!UICONTROL Uploading]** wordt weergegeven op het tabblad **[!UICONTROL Add Data]** tabblad met de voortgang van het uploaden van bestanden.
+Wanneer u een Parquet- of JSON-bestand dat u wilt uploaden sleept en neerzet (of bladert en selecteert), begint [!DNL Platform] onmiddellijk met het verwerken van het bestand. Op het tabblad **[!UICONTROL Add Data]** wordt een dialoogvenster **[!UICONTROL Uploading]** weergegeven met de voortgang van het uploaden van het bestand.
 
-![Het dialoogvenster Uploaden](../images/tutorials/ingest-batch-data/uploading-file.png)
+![ Uploading dialoog ](../images/tutorials/ingest-batch-data/uploading-file.png)
 
 ## Dataset-meetgegevens
 
-Nadat het bestand is geüpload, wordt het **[!UICONTROL Dataset Activity]** toont niet meer dat &quot;Er zijn geen batches toegevoegd&quot;. In plaats daarvan **[!UICONTROL Dataset Activity]** op het tabblad ziet u nu de metriek van de gegevensset. Alle metriek tonen &quot;0&quot;in dit stadium aangezien de partij nog niet heeft geladen.
+Nadat het bestand is geüpload, ziet u op het tabblad **[!UICONTROL Dataset Activity]** niet meer dat er geen batches zijn toegevoegd. In plaats daarvan bevat het tabblad **[!UICONTROL Dataset Activity]** nu gegevenssetgegevens. Alle metriek tonen &quot;0&quot;in dit stadium aangezien de partij nog niet heeft geladen.
 
-Onder aan het tabblad vindt u een lijst met de **[!UICONTROL Batch ID]** van de gegevens die zojuist via de [&quot;Gegevens toevoegen aan gegevensset&quot;](#add-data-to-dataset) proces. Ook wordt informatie over de batch opgenomen, zoals de datum waarop de gegevens zijn ingevoerd, het aantal records dat is ingevoerd en de huidige status van de batch.
+Bij de bodem van het lusje is een lijst die **[!UICONTROL Batch ID]** van de gegevens toont die enkel door [ &quot;werden opgenomen voeg gegevens aan dataset&quot;](#add-data-to-dataset) proces toe. Ook wordt informatie over de batch opgenomen, zoals de datum waarop de gegevens zijn ingevoerd, het aantal records dat is ingevoerd en de huidige status van de batch.
 
-![Dataset-meetgegevens](../images/tutorials/ingest-batch-data/batch-id.png)
+![ metriek van de Dataset ](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## Batchgegevens
 
-Klik op de knop **[!UICONTROL Batch ID]** om een **[!UICONTROL Batch Overview]**, met aanvullende gegevens over de partij. Zodra de batch klaar is met laden, wordt de informatie over de batch bijgewerkt om het aantal records dat wordt ingevoerd en de bestandsgrootte weer te geven. De status verandert ook in &quot;Voltooid&quot; of &quot;Mislukt&quot;. Als de batch mislukt, wordt de **[!UICONTROL Error Code]** in de sectie worden details gegeven over eventuele fouten tijdens de inname.
+Klik op **[!UICONTROL Batch ID]** om een **[!UICONTROL Batch Overview]** weer te geven en aanvullende gegevens over de batch weer te geven. Zodra de batch klaar is met laden, wordt de informatie over de batch bijgewerkt om het aantal records dat wordt ingevoerd en de bestandsgrootte weer te geven. De status verandert ook in &quot;Voltooid&quot; of &quot;Mislukt&quot;. Als de batch mislukt, bevat de sectie **[!UICONTROL Error Code]** details over eventuele fouten tijdens de inname.
 
-Zie voor meer informatie en veelgestelde vragen over het innemen van batch de bijsluiter. [Handleiding voor het oplossen van problemen met de inname](../batch-ingestion/troubleshooting.md).
+Voor meer informatie en vaak gestelde vragen betreffende batch-opname, zie de [ het oplossen van problemengids van de Opname van de Partij ](../batch-ingestion/troubleshooting.md).
 
-Als u wilt terugkeren naar de **[!UICONTROL Dataset Activity]** scherm, klik de naam van de dataset (**[!UICONTROL Loyalty Details]**) in het breadcrumb.
+Als u wilt terugkeren naar het scherm **[!UICONTROL Dataset Activity]** , klikt u op de naam van de gegevensset ( **[!UICONTROL Loyalty Details]** ) in de broodkruimel.
 
-![Batchoverzicht](../images/tutorials/ingest-batch-data/batch-details.png)
+![ Overzicht van de Partij ](../images/tutorials/ingest-batch-data/batch-details.png)
 
 ## Gegevensset voorvertoning
 
-Zodra de dataset klaar is, een optie aan **[!UICONTROL Preview Dataset]** boven aan het dialoogvenster **[!UICONTROL Dataset Activity]** tab.
+Zodra de dataset klaar is, verschijnt een optie aan **[!UICONTROL Preview Dataset]** bij de bovenkant van **[!UICONTROL Dataset Activity]** tabel.
 
-Klikken **[!UICONTROL Preview Dataset]** om een dialoog te openen die steekproefgegevens van binnen de dataset toont. Als de dataset gebruikend een schema werd gecreeerd, zullen de details voor het datasetschema op de linkerkant van de voorproef verschijnen. U kunt het schema uitbreiden gebruikend de pijlen om de schemastructuur te zien. Elke kolomkop in de voorvertoningsgegevens vertegenwoordigt een veld in de gegevensset.
+Klik op **[!UICONTROL Preview Dataset]** om een dialoogvenster te openen met voorbeeldgegevens uit de gegevensset. Als de dataset gebruikend een schema werd gecreeerd, zullen de details voor het datasetschema op de linkerkant van de voorproef verschijnen. U kunt het schema uitbreiden gebruikend de pijlen om de schemastructuur te zien. Elke kolomkop in de voorvertoningsgegevens vertegenwoordigt een veld in de gegevensset.
 
-![Gegevens over gegevensset](../images/tutorials/ingest-batch-data/dataset-preview.png)
+![ de details van de Dataset ](../images/tutorials/ingest-batch-data/dataset-preview.png)
 
 ## Volgende stappen en extra bronnen
 
-Nu u een dataset hebt gecreeerd en met succes gegevens in opgenomen [!DNL Experience Platform], kunt u deze stappen herhalen om een nieuwe dataset tot stand te brengen of meer gegevens in de bestaande dataset in te voeren.
+Nu u een dataset hebt gecreeerd en met succes gegevens in [!DNL Experience Platform] opgenomen, kunt u deze stappen herhalen om een nieuwe dataset tot stand te brengen of meer gegevens in de bestaande dataset in te voeren.
 
-Lees voor meer informatie over het gebruik van batches de [Overzicht van inname in batch](../batch-ingestion/overview.md) en vergroot uw leermogelijkheden door de onderstaande video te bekijken.
+Om meer over partijingestie te leren, te lezen gelieve het [ overzicht van de Ingestie van de Partij ](../batch-ingestion/overview.md) en uw het leren aan te vullen door de video hieronder te letten.
 
 >[!WARNING]
 >
->De [!DNL Platform] De gebruikersinterface die in de volgende video wordt weergegeven, is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+>De gebruikersinterface van [!DNL Platform] in de volgende video is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

@@ -2,19 +2,19 @@
 title: Eindpunt van mappen
 description: Leer hoe u mappen maakt, bijwerkt, beheert en verwijdert met de Adobe Experience Platform API's.
 role: Developer
-source-git-commit: 8f9a2b5a2063b76518302eb9de38b628c87416e1
+exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 1%
 
 ---
 
-
 # Mappen, eindpunt
 
 >[!IMPORTANT]
 >
->De eindpunt-URL voor deze set eindpunten is `https://experience.adobe.io`.
+>De eindpunt-URL voor deze set eindpunten is `https://experience.adobe.io` .
 
 De omslagen zijn een capaciteit die u uw bedrijfsvoorwerpen voor gemakkelijkere navigatie en categorisering laat beter organiseren.
 
@@ -22,13 +22,13 @@ Deze handleiding bevat informatie die u helpt meer inzicht te krijgen in mappen 
 
 ## Aan de slag
 
-Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Een lijst met mappen ophalen {#list}
 
-U kunt een lijst met mappen ophalen die bij uw organisatie horen door een aanvraag van een GET in te dienen bij de `/folder` en geeft u het maptype en de bovenliggende map-id op.
+U kunt een lijst van omslagen terugwinnen die tot uw organisatie behoren door een verzoek van de GET tot het `/folder` eindpunt te richten en het omslagtype en ouderomslag identiteitskaart te specificeren.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
@@ -36,8 +36,8 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Het type objecten dat zich in de map bevindt. Tot de ondersteunde waarden behoren: `segment` en `dataset`. |
-| `{PARENT_FOLDER_ID}` | De id van de bovenliggende map waarvan u de lijst met mappen ophaalt. Gebruik de map-id om een lijst met alle bovenliggende mappen weer te geven `root`. |
+| `{FOLDER_TYPE}` | Het type objecten dat zich in de map bevindt. Tot de ondersteunde waarden behoren `segment` en `dataset` . |
+| `{PARENT_FOLDER_ID}` | De id van de bovenliggende map waarvan u de lijst met mappen ophaalt. Als u een lijst met alle bovenliggende mappen wilt weergeven, gebruikt u de map-id `root` . |
 
 **Verzoek**
 
@@ -54,7 +54,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/root/subfo
 
 +++
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met een lijst van alle top-level omslagen voor dataset in uw organisatie terug.
 
@@ -113,9 +113,9 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van alle top-lev
 
 ## Nieuwe map maken {#create}
 
-U kunt een nieuwe map maken door een POST aan te vragen bij de `/folder` en het omslagtype specificeren.
+U kunt een nieuwe omslag tot stand brengen door een verzoek van de POST aan het `/folder` eindpunt te richten en het omslagtype te specificeren.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /folder/{FOLDER_TYPE}
@@ -123,7 +123,7 @@ POST /folder/{FOLDER_TYPE}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Het type objecten dat zich in de map bevindt. Tot de ondersteunde waarden behoren: `segment` en `dataset`. |
+| `{FOLDER_TYPE}` | Het type objecten dat zich in de map bevindt. Tot de ondersteunde waarden behoren `segment` en `dataset` . |
 
 **Verzoek**
 
@@ -149,7 +149,7 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folder/dataset
 
 +++
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert HTTP-status 200 met details van de nieuwe map.
 
@@ -185,9 +185,9 @@ Een succesvol antwoord retourneert HTTP-status 200 met details van de nieuwe map
 
 ## Een specifieke map ophalen {#get}
 
-U kunt een specifieke map die tot uw organisatie behoort, ophalen door een verzoek tot GET in te dienen bij de `/folder` en het specificeren van het omslagtype en identiteitskaart van de omslag.
+U kunt een specifieke omslag terugwinnen die tot uw organisatie behoort door een verzoek van de GET tot het `/folder` eindpunt te richten en het omslagtype en identiteitskaart van de omslag te specificeren.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
@@ -195,7 +195,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Het type objecten dat zich in de map bevindt. Tot de ondersteunde waarden behoren: `segment` en `dataset`. |
+| `{FOLDER_TYPE}` | Het type objecten dat zich in de map bevindt. Tot de ondersteunde waarden behoren `segment` en `dataset` . |
 | `{FOLDER_ID}` | De id van de map die u ophaalt. |
 
 **Verzoek**
@@ -213,7 +213,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 
 +++
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met details van de gevraagde map.
 
@@ -250,15 +250,15 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van de gevraagde m
 | `createdAt` | De tijdstempel van wanneer de map is gemaakt. |
 | `modifiedBy` | De id van de gebruiker die de map voor het laatst heeft bijgewerkt. |
 | `modifiedAt` | De tijdstempel van wanneer de map voor het laatst is bijgewerkt. |
-| `status` | De status van de aangevraagde map. Tot de ondersteunde waarden behoren `IN_USE` en `ARCHIVED`. |
+| `status` | De status van de aangevraagde map. Tot de ondersteunde waarden behoren `IN_USE` en `ARCHIVED` . |
 
 +++
 
 ## Een opgegeven map valideren {#validate}
 
-U kunt valideren of een map objecten kan bevatten door een GET-aanvraag in te dienen bij de `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` en geef zowel het maptype als de id op.
+U kunt valideren of een map objecten kan bevatten door een GET-aanvraag in te dienen bij het `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` -eindpunt en zowel het maptype als de id op te geven.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
@@ -266,7 +266,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Het type objecten dat zich in de map bevindt. Tot de ondersteunde waarden behoren: `segment` en `dataset`. |
+| `{FOLDER_TYPE}` | Het type objecten dat zich in de map bevindt. Tot de ondersteunde waarden behoren `segment` en `dataset` . |
 | `{FOLDER_ID}` | De id van de map die u valideert. |
 
 **Verzoek**
@@ -284,7 +284,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 
 +++
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde status retourneert HTTP status 200 met details over de map die u valideert.
 
@@ -316,9 +316,9 @@ Een geslaagde status retourneert HTTP status 200 met details over de map die u v
 
 ## Een specifieke map bijwerken {#update}
 
-U kunt de details van een specifieke omslag bijwerken die tot uw organisatie behoort door een PATCH verzoek aan te dienen bij `/folder` en het specificeren van het omslagtype en identiteitskaart van de omslag.
+U kunt de details van een specifieke omslag bijwerken die tot uw organisatie behoort door een verzoek van de PATCH aan het `/folder` eindpunt te richten en het omslagtype en identiteitskaart van de omslag te specificeren.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
@@ -326,7 +326,7 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Het type objecten dat zich in de map bevindt. Tot de ondersteunde waarden behoren: `segment` en `dataset`. |
+| `{FOLDER_TYPE}` | Het type objecten dat zich in de map bevindt. Tot de ondersteunde waarden behoren `segment` en `dataset` . |
 | `{FOLDER_ID}` | De id van de map die u bijwerkt. |
 
 **Verzoek**
@@ -349,7 +349,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 
 +++
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert HTTP-status 200 met informatie over de nieuwe map.
 
@@ -378,9 +378,9 @@ Een succesvolle reactie retourneert HTTP-status 200 met informatie over de nieuw
 
 ## Een specifieke map verwijderen {#delete}
 
-U kunt een specifieke map verwijderen die tot uw organisatie behoort door een DELETE-aanvraag in te dienen bij de `/folder` en geeft u het maptype en de map-id op.
+U kunt een specifieke map die tot uw organisatie behoort, verwijderen door een DELETE-aanvraag in te dienen bij de `/folder` en het maptype en de map-id op te geven.
 
-***API-indeling**
+***API formaat**
 
 ```http
 DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
@@ -388,7 +388,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Het type objecten dat zich in de map bevindt. Tot de ondersteunde waarden behoren: `segment` en `dataset`. |
+| `{FOLDER_TYPE}` | Het type objecten dat zich in de map bevindt. Tot de ondersteunde waarden behoren `segment` en `dataset` . |
 | `{FOLDER_ID}` | De id van de map die u verwijdert. |
 
 **Verzoek**
@@ -406,7 +406,7 @@ curl -X DELETE https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287
 
 +++
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met een berichttekst waarin u wordt geïnformeerd over de verwijdering van de map.
 

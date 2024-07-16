@@ -4,7 +4,7 @@ description: Leer hoe te om de gebieden van de Gegevens van de Ervaring van het 
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
 source-git-commit: 4fa98df9dcc296ba7cb141cb22df116524a0eb0c
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,21 @@ Aangezien de vervangen gebieden van UI door gebrek worden verborgen, stroomlijnt
 
 >[!NOTE]
 >
->Voordat gegevens in een schema worden opgenomen, kunt u overbodige veldgroepen verwijderen. Zie de documentatie op [hoe te om een gebiedsgroep uit een schema te verwijderen](../ui/resources/schemas.md#remove-fields) voor meer informatie .
+>Voordat gegevens in een schema worden opgenomen, kunt u overbodige veldgroepen verwijderen. Zie de documentatie op [ hoe te om een gebiedsgroep uit een schema ](../ui/resources/schemas.md#remove-fields) voor meer informatie te verwijderen.
 
-Nadat gegevens in uw schema zijn opgenomen, kunt u geen velden meer uit het schema verwijderen zonder verbreken van wijzigingen aan te brengen. In dit geval kunt u een ongewenst veld binnen een schema of aangepaste bron vervangen door de opdracht [Schema-editor](./create-schema-ui.md) of de [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+Nadat gegevens in uw schema zijn opgenomen, kunt u geen velden meer uit het schema verwijderen zonder verbreken van wijzigingen aan te brengen. In dit geval, kunt u een ongewenst gebied binnen een schema of een douanemiddel verwerpen door de [ Redacteur van het Schema ](./create-schema-ui.md) of [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) te gebruiken.
 
-In dit document wordt beschreven hoe u velden voor verschillende XDM-bronnen kunt vervangen met de Schema-editor in de gebruikersinterface van het Experience Platform. Raadpleeg de zelfstudie voor stappen over het vervangen van een XDM-veld met de API [een XDM-veld vervangen met de API voor het schemaregister](./field-deprecation-api.md).
+In dit document wordt beschreven hoe u velden voor verschillende XDM-bronnen kunt vervangen met de Schema-editor in de gebruikersinterface van het Experience Platform. Voor stappen bij het afschilderen van een XDM gebied gebruikend API, zie het leerprogramma op [ afgekeurd een gebied XDM gebruikend de Registratie API van het Schema ](./field-deprecation-api.md).
 
 ## Een veld verwijderen {#deprecate}
 
-Als u een aangepast veld wilt vervangen, navigeert u naar de Schema-editor voor het schema dat u wilt bewerken. Selecteer het veld dat u wilt vervangen in het dialoogvenster [!UICONTROL Structure] het canvas, gevolgd door **[!UICONTROL Deprecate]** van de [!UICONTROL Field Properties].
+Als u een aangepast veld wilt vervangen, navigeert u naar de Schema-editor voor het schema dat u wilt bewerken. Selecteer het veld dat u wilt vervangen in het gedeelte [!UICONTROL Structure] van het canvas, gevolgd door **[!UICONTROL Deprecate]** in het [!UICONTROL Field Properties] .
 
-![De Schema-editor met een geselecteerd veld en de optie Vervangen gemarkeerd.](../images/tutorials/field-deprecation/deprecate-single-field.png)
+![ de redacteur van het Schema met een geselecteerd gebied en benadrukt afgekeurd.](../images/tutorials/field-deprecation/deprecate-single-field.png)
 
-Er wordt een dialoogvenster weergegeven waarin u uw keuzes kunt bevestigen en waarin u wordt gemeld dat het veld wordt verwijderd uit de UI-weergave van het samenvoegingsschema en verborgen wordt voor downstreamgebruikersinterface. Selecteer **[!UICONTROL Confirm]**.
+Er wordt een dialoogvenster weergegeven waarin u uw keuzes kunt bevestigen en waarin u wordt gemeld dat het veld wordt verwijderd uit de UI-weergave van het samenvoegingsschema en verborgen wordt voor downstreamgebruikersinterface. Selecteer **[!UICONTROL Confirm]** om de handeling te voltooien.
 
-![Het dialoogvenster Afgekeurd veld met Bevestigen gemarkeerd.](../images/tutorials/field-deprecation/deprecate-field-dialog.png)
+![ de Deprecate gebiedsdialoog met Bevestig benadrukte.](../images/tutorials/field-deprecation/deprecate-field-dialog.png)
 
 Het veld wordt nu verwijderd uit de UI-weergave.
 
@@ -41,24 +41,24 @@ Het veld wordt nu verwijderd uit de UI-weergave.
 
 ## Vervangen velden tonen {#show-deprecated}
 
-Als u eerder vervangen velden wilt weergeven, navigeert u naar het desbetreffende schema in de Schema-editor. Selecteer de **[!UICONTROL Show deprecated fields]** Selectievakje in het dialoogvenster [!UICONTROL Composition] van het canvas.
+Als u eerder vervangen velden wilt weergeven, navigeert u naar het desbetreffende schema in de Schema-editor. Schakel het selectievakje **[!UICONTROL Show deprecated fields]** in het gedeelte [!UICONTROL Composition] van het canvas in.
 
-Het vervangen veld wordt nu weergegeven in de UI-weergave. Selecteren **[!UICONTROL Save]** om uw instellingen te bevestigen.
+Het vervangen veld wordt nu weergegeven in de UI-weergave. Selecteer **[!UICONTROL Save]** om uw instellingen te bevestigen.
 
-![De Schema-editor waarin een veld is geselecteerd, Afgekeurde velden tonen en Geselecteerde velden opslaan.](../images/tutorials/field-deprecation/show-deprecated-fields.png)
+![ de Redacteur van het Schema met een geselecteerd gebied, toon verouderde gebieden en sparen benadrukte.](../images/tutorials/field-deprecation/show-deprecated-fields.png)
 
 ## Onbewerkte velden {#undeprecate-fields}
 
-Als u een vervangen veld ongedaan wilt maken, moet u eerst [het vervangen veld weergeven](#show-deprecated) zoals hierboven beschreven, selecteert u vervolgens het vervangen veld in de [!UICONTROL Structure] sectie. Selecteer vervolgens **[!UICONTROL Undeprecate]** van de [!UICONTROL Field properties] zijbalk, gevolgd door **[!UICONTROL Save]**.
+Om een afgekeurd gebied ongedaan te maken, eerst [ tonen het afgekeurde gebied ](#show-deprecated) zoals hierboven beschreven, dan selecteren het afgekeurde gebied van de redacteur [!UICONTROL Structure] sectie. Selecteer vervolgens **[!UICONTROL Undeprecate]** in de [!UICONTROL Field properties] zijbalk gevolgd door **[!UICONTROL Save]** .
 
-![De Schema-editor met het vervangen veld, Onafgekeurd en Opslaan gemarkeerd.](../images/tutorials/field-deprecation/undeprecate-single-field.png)
+![ de Redacteur van het Schema met het afgekeurde gebied, Onafgekeurd, en sparen benadrukte.](../images/tutorials/field-deprecation/undeprecate-single-field.png)
 
-De [!UICONTROL Undeprecate field] wordt weergegeven. Selecteer **[!UICONTROL Confirm]**.
+Het dialoogvenster [!UICONTROL Undeprecate field] wordt weergegeven. Selecteer **[!UICONTROL Confirm]** om uw wijzigingen te bevestigen.
 
-![De [!UICONTROL Undeprecate field] dialoog met Bevestigen gemarkeerd.](../images/tutorials/field-deprecation/undeprecate-field-dialog.png)
+![ de [!UICONTROL Undeprecate field] dialoog met Bevestig benadrukte.](../images/tutorials/field-deprecation/undeprecate-field-dialog.png)
 
 Het veld wordt nu als standaard weergegeven in de UI-weergave en ook in downstreamgebruikersinterface. U kunt het veld nu vervangen.
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u XDM-velden kunt vervangen met de interface van de Schema-editor. Voor meer informatie bij het vormen van gebieden voor douanemiddelen, zie de gids op [XDM-velden definiëren in de API](./custom-fields-api.md). Zie voor meer informatie over het beheren van descriptoren de [eindhulplijn descriptorpunt](../api/descriptors.md).
+In dit document wordt beschreven hoe u XDM-velden kunt vervangen met de interface van de Schema-editor. Voor meer informatie bij het vormen van gebieden voor douanemiddelen, zie de gids bij [ het bepalen van gebieden XDM in API ](./custom-fields-api.md). Voor meer informatie bij het beheren van beschrijvers, zie de [ gids van het beschrijvingseindpunt ](../api/descriptors.md).

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Marketo Engage;marketo engageren;Marketo;mapping
 solution: Experience Platform
-title: Velden toewijzen aan de bron van het Marketo Engage
+title: Toewijzingsvelden voor het Marketo Engage Source
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
@@ -13,23 +13,23 @@ ht-degree: 0%
 
 # [!DNL Marketo Engage] veldtoewijzingen {#marketo-engage-field-mappings}
 
-De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [!DNL Marketo] datasets en hun overeenkomstige gebieden van het Gegevensmodel van de Ervaring (XDM).
+De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [!DNL Marketo] -gegevenssets en de bijbehorende XDM-velden (Experience Data Model).
 
 >[!TIP]
 >
->Alles [!DNL Marketo] gegevenssets, behalve `Activities` now-ondersteuning `isDeleted`. Uw bestaande gegevensstromen zullen automatisch omvatten `isDeleted`, maar neemt alleen de vlag voor nieuw opgenomen gegevens op. Als u de vlag op al uw historische gegevens wilt toepassen, dan moet u uw bestaande dataflows tegenhouden en hen met de nieuwe afbeelding ontspannen. Houd er rekening mee dat als u `isDeleted`dan hebt u geen toegang meer tot de functionaliteit. Het is van essentieel belang dat de toewijzing wordt behouden nadat deze automatisch wordt gevuld.
+>Alle [!DNL Marketo] -gegevenssets behalve `Activities` nu ondersteunen `isDeleted` . De bestaande gegevensstromen zullen automatisch `isDeleted` omvatten, maar zullen slechts de vlag voor onlangs opgenomen gegevens opnemen. Als u de vlag op al uw historische gegevens wilt toepassen, dan moet u uw bestaande dataflows tegenhouden en hen met de nieuwe afbeelding ontspannen. Als u `isDeleted` verwijdert, hebt u geen toegang meer tot de functionaliteit. Het is van essentieel belang dat de toewijzing wordt behouden nadat deze automatisch wordt gevuld.
 
 ## Activiteiten {#activities}
 
-De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als u standaardactiviteiten wilt gebruiken, moet u het schema bijwerken met de [schema automatisch genereren, hulpprogramma](../marketo/marketo-namespaces.md) omdat u nieuwe `activities` de gegevensstroom zonder uw schema bij te werken, zal de toewijzingsmalplaatjes ontbreken aangezien de nieuwe doelgebieden niet in uw schema aanwezig zullen zijn. Als u ervoor kiest uw schema niet bij te werken, kunt u nog steeds een nieuwe gegevensstroom maken en eventuele fouten negeren. Nochtans, zullen om het even welke nieuwe of bijgewerkte gebieden niet in Platform worden opgenomen.
+De bron [!DNL Marketo] ondersteunt nu aanvullende standaardactiviteiten. Om standaardactiviteiten te gebruiken, moet u uw schema bijwerken gebruikend het [ schema auto-generatienut ](../marketo/marketo-namespaces.md) omdat als u nieuwe `activities` dataflow creeert zonder uw schema bij te werken, de afbeeldingsmalplaatjes zullen ontbreken aangezien de nieuwe doelgebieden niet in uw schema aanwezig zullen zijn. Als u ervoor kiest uw schema niet bij te werken, kunt u nog steeds een nieuwe gegevensstroom maken en eventuele fouten negeren. Nochtans, zullen om het even welke nieuwe of bijgewerkte gebieden niet in Platform worden opgenomen.
 
-Lees de documentatie op [XDM Experience Event-klasse](../../../../xdm/classes/experienceevent.md) voor meer informatie over de klasse XDM en XDM gebiedsgroep(en).
+Lees de documentatie over [ de klasse van de Gebeurtenis van de Ervaring XDM ](../../../../xdm/classes/experienceevent.md) voor meer informatie over de Klasse XDM en de Groep(s) van het Gebied XDM.
 
 >[!NOTE]
 >
->De `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` bronveld is een berekend veld dat met het **[!UICONTROL Add calculated field]** in de gebruikersinterface van het Experience Platform. Lees de zelfstudie aan [berekende velden toevoegen](../../../../data-prep/ui/mapping.md#calculated-fields) voor meer informatie .
+>Het bronveld `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` is een berekend veld dat moet worden toegevoegd met de optie **[!UICONTROL Add calculated field]** in de gebruikersinterface van het Experience Platform. Lees het leerprogramma op [ toevoegend berekende gebieden ](../../../../data-prep/ui/mapping.md#calculated-fields) voor meer informatie.
 
-| Brongegevensset | XDM-doelveld | Notities |
+| Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
 | `"Marketo"` | `personKey.sourceType` |
@@ -137,15 +137,15 @@ Lees de documentatie op [XDM Experience Event-klasse](../../../../xdm/classes/ex
 
 ## Programma&#39;s {#programs}
 
-Lees de [Overzicht van XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [Business Campagne Details schema groep](../../../../xdm/field-groups/b2b-campaign/details.md) hulplijn.
+Lees het [ XDM BedrijfsCampagne overzicht ](../../../../xdm/classes/b2b/business-campaign.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de ](../../../../xdm/field-groups/b2b-campaign/details.md) gids van het het schemagebied van de Details van de BedrijfsCampagne [.
 
-| Brongegevensset | XDM-doelveld | Notities |
+| Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
 | `id` | `campaignKey.sourceID` |
 | `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
-| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | De  `extSourceSystemAudit.externalKey` is de secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` wordt automatisch vervangen. |
+| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | De `extSourceSystemAudit.externalKey` is de secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` worden automatisch vervangen. |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -168,9 +168,9 @@ Lees de [Overzicht van XDM Business Campaign](../../../../xdm/classes/b2b/busine
 
 ## Lidmaatschap van programma {#program-memberships}
 
-Lees de [Overzicht van XDM Business Campaign-leden](../../../../xdm/classes/b2b/business-campaign-members.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [XDM Business Campagne Member Details schema veldgroep](../../../../xdm/field-groups/b2b-campaign-members/details.md) hulplijn.
+Lees het [ XDM overzicht van de Leden Bedrijfs van de Campagne ](../../../../xdm/classes/b2b/business-campaign-members.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de ](../../../../xdm/field-groups/b2b-campaign-members/details.md) gids van het het schemagebied van de Details van het Lid van de BedrijfsCampagne van de 0} XDM.[
 
-| Brongegevensset | XDM-doelveld | Notities |
+| Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignMemberKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
@@ -189,7 +189,7 @@ Lees de [Overzicht van XDM Business Campaign-leden](../../../../xdm/classes/b2b/
 | `webinarUrl` | `webinarConfirmationUrl` |
 | `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
-| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | De `extSourceSystemAudit.externalKey` is de secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` wordt automatisch vervangen. |
+| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | De `extSourceSystemAudit.externalKey` is de secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` worden automatisch vervangen. |
 | `sfdc.lastStatus` | `lastStatus` |
 | `sfdc.hasResponded` | `hasResponded` |
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
@@ -201,15 +201,15 @@ Lees de [Overzicht van XDM Business Campaign-leden](../../../../xdm/classes/b2b/
 
 ## Bedrijven {#companies}
 
-Lees de [Overzicht van XDM Business Account](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
+Lees het [ XDM overzicht van de BedrijfsRekening ](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
 
-| Brongegevensset | XDM-doelveld | Notities |
+| Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
 | `concat(id, ".mkto_org")` | `accountKey.sourceID` |
 | `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
-| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId, "sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | De `extSourceSystemAudit.externalKey` is de secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` wordt automatisch vervangen. |
+| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId, "sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | De `extSourceSystemAudit.externalKey` is de secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` worden automatisch vervangen. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -233,9 +233,9 @@ Lees de [Overzicht van XDM Business Account](../../../../xdm/classes/b2b/busines
 
 ## Statische lijsten {#static-lists}
 
-Lees de [Overzicht van XDM Business Marketing List](../../../../xdm/classes/b2b/business-marketing-list.md) voor meer informatie over de klasse XDM.
+Lees het [ XDM overzicht van de Bedrijfs Marketing van de Lijst ](../../../../xdm/classes/b2b/business-marketing-list.md) voor meer informatie over de klasse XDM.
 
-| Brongegevensset | XDM-doelveld | Notities |
+| Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` wordt vervangen als onderdeel van de API voor zoeken. |
@@ -251,9 +251,9 @@ Lees de [Overzicht van XDM Business Marketing List](../../../../xdm/classes/b2b/
 
 ## Statische lijstlidmaatschappen {#static-list-memberships}
 
-Lees de [Overzicht van leden van XDM Business Marketing List](../../../../xdm/classes/b2b/business-marketing-list-members.md) voor meer informatie over de Klasse XDM.
+Lees het [ XDM Bedrijfs van de Marketing Lijst Leden overzicht ](../../../../xdm/classes/b2b/business-marketing-list-members.md) voor meer informatie over de Klasse XDM.
 
-| Brongegevensset | XDM-doelveld | Notities |
+| Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListMemberKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
@@ -272,15 +272,15 @@ Lees de [Overzicht van leden van XDM Business Marketing List](../../../../xdm/cl
 >
 >De genoemde rekeningen dataset is slechts noodzakelijk met de op rekening-gebaseerde marketing van Marketo (ABM) eigenschap. Als u ABM niet gebruikt, hoeft u geen toewijzingen in te stellen voor benoemde accounts.
 
-Lees de [Overzicht van XDM Business Account](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
+Lees het [ XDM overzicht van de BedrijfsRekening ](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
 
-| Brongegevensset | XDM-doelveld | Notities |
+| Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
 | `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
-| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | De `extSourceSystemAudit.externalKey` is de secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` wordt automatisch vervangen. |
+| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | De `extSourceSystemAudit.externalKey` is de secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` worden automatisch vervangen. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -300,15 +300,15 @@ Lees de [Overzicht van XDM Business Account](../../../../xdm/classes/b2b/busines
 
 ## Kansen {#opportunities}
 
-Lees de [Overzicht van XDM Business Opportunity](../../../../xdm/classes/b2b/business-opportunity.md) voor meer informatie over de klasse XDM.
+Lees het [ XDM overzicht van de BedrijfsKans ](../../../../xdm/classes/b2b/business-opportunity.md) voor meer informatie over de klasse XDM.
 
-| Brongegevensset | XDM-doelveld | Notities |
+| Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
 | `id` | `opportunityKey.sourceID` |
 | `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
-| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Secundaire identiteit De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` wordt automatisch vervangen. |
+| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Secundaire identiteit De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` worden automatisch vervangen. |
 | `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | Relatie |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
@@ -327,7 +327,7 @@ Lees de [Overzicht van XDM Business Opportunity](../../../../xdm/classes/b2b/bus
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | Deze brondataset is slechts beschikbaar aan gebruikers met [!DNL Salesforce] integratie. |
+| `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | Deze brongegevensset is alleen beschikbaar voor gebruikers met de [!DNL Salesforce] -integratie. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -337,15 +337,15 @@ Lees de [Overzicht van XDM Business Opportunity](../../../../xdm/classes/b2b/bus
 
 ## Contactrollen opportunity {#opportunity-contact-roles}
 
-Lees de [Overzicht van de XDM Business Opportunity Person Relatie](../../../../xdm/classes/b2b/business-account-person-relation.md) voor meer informatie over de klasse XDM.
+Lees het [ XDM overzicht van de Verhouding van de Person van de Bedrijfs van de Opportunity ](../../../../xdm/classes/b2b/business-account-person-relation.md) voor meer informatie over de klasse XDM.
 
-| Brongegevensset | XDM-doelveld | Notities |
+| Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
 | `id` | `opportunityPersonKey.sourceID` |
 | `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityPersonKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt vervangen als onderdeel van de API voor zoeken. |
-| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | De `extSourceSystemAudit.externalKey` is de secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` wordt automatisch vervangen. |
+| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | De `extSourceSystemAudit.externalKey` is de secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` worden automatisch vervangen. |
 | `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | Relatie |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relatie |
 | `role` | `personRole` |
@@ -358,15 +358,15 @@ Lees de [Overzicht van de XDM Business Opportunity Person Relatie](../../../../x
 
 ## Personen {#persons}
 
-Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [XDM Business Person Details schema, veldgroep](../../../../xdm/field-groups/profile/business-person-details.md) gids en [XDM Business Person Components Schema, veldgroep](../../../../xdm/field-groups/profile/business-person-components.md) hulplijn.
+Lees het [ XDM Individuele overzicht van het Profiel ](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de ](../../../../xdm/field-groups/profile/business-person-details.md) gids van de het schemagroep van de Details van de BedrijfsPersoon van 0} XDM {en [ XDM van de BedrijfsPersoon de het schemagroep van Componenten van de Componenten ](../../../../xdm/field-groups/profile/business-person-components.md).[
 
-| Brongegevensset | XDM-doelveld | Notities |
+| Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `b2b.personKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
 | `id` | `b2b.personKey.sourceID` |
 | `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
-| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | Als het abonnement wordt opgezegd `true` (bijvoorbeeld value = `1`), dan instellen `consents.marketing.email.val` as (`n`). Als het abonnement wordt opgezegd `false` (bijvoorbeeld value = `0`), dan instellen `consents.marketing.email.val` als `null`. |
+| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | Als unsubscribed `true` is (bijvoorbeeld value = `1`), dan plaats `consents.marketing.email.val` als (`n`). Als unsubscribed `false` is (bijvoorbeeld value = `0` ), stelt u `consents.marketing.email.val` in als `null` . |
 | `iif(unsubscribedReason != null && unsubscribedReason != "", substr(unsubscribedReason, 0, 100), null)` | `consents.marketing.email.reason` |
 | `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
@@ -415,4 +415,4 @@ Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individu
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u meer inzicht gekregen in de toewijzingsrelatie tussen uw [!DNL Marketo] datasets en hun overeenkomstige gebieden XDM. Zie de zelfstudie aan [een [!DNL Marketo] bronverbinding](../../../tutorials/ui/create/adobe-applications/marketo.md) om uw [!DNL Marketo] dataflow.
+Door dit document te lezen, hebt u inzicht gekregen in de toewijzingsverhouding tussen uw [!DNL Marketo] datasets en hun overeenkomstige gebieden XDM. Zie het leerprogramma op [ creërend a  [!DNL Marketo]  bronverbinding ](../../../tutorials/ui/create/adobe-applications/marketo.md) om uw [!DNL Marketo] dataflow te voltooien.

@@ -6,16 +6,16 @@ description: U kunt een partij tot stand brengen door een verzoek van de POST aa
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
 # Een batch maken
 
-Opdat een dataset gegevens inneemt, moet het een partij hebben verbonden aan het. Met de `id` waarde van een bestaande dataset, kunt u een partij tot stand brengen door een verzoek van de POST aan de `/batches` in de [!DNL Catalog] API.
+Opdat een dataset gegevens inneemt, moet het een partij hebben verbonden aan het. Met de `id` -waarde van een bestaande gegevensset kunt u een batch maken door een aanvraag voor een POST in te dienen bij het `/batches` -eindpunt in de [!DNL Catalog] -API.
 
-**API-indeling**
+**API formaat**
 
 ```HTTP
 POST /batches
@@ -38,11 +38,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `datasetId` | De `id` van de dataset zal de partij met worden geassocieerd. |
+| `datasetId` | De `id` van de gegevensset waaraan de batch wordt gekoppeld. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject met details van de nieuwe batch, inclusief de nieuwe batch `id`, een alleen-lezen tekenreeks die door het systeem wordt gegenereerd.
+Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject dat details bevat van de nieuwe batch, inclusief de `id` -tekenreeks die door het systeem wordt gegenereerd.
 
 ```JSON
 {

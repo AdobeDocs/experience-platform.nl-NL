@@ -4,8 +4,8 @@ title: Een doelpublicatieverzoek ophalen
 exl-id: fceef12d-a52c-4259-a91e-7af88b132800
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 2%
+source-wordcount: '836'
+ht-degree: 0%
 
 ---
 
@@ -17,28 +17,28 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
+>**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-Nadat u hebt gevormd en uw bestemming getest, kunt u het voorleggen aan Adobe voor overzicht en het publiceren. Lezen [Ter controle een bestemming verzenden die is geschreven in Destination SDK](../guides/submit-destination.md) voor alle andere stappen moet u als deel van het proces van de bestemmingsvoorlegging doen.
+Nadat u hebt gevormd en uw bestemming getest, kunt u het voorleggen aan Adobe voor overzicht en het publiceren. Lees [ voorlegt voor overzicht een bestemming die in Destination SDK ](../guides/submit-destination.md) voor alle andere stappen wordt geschreven u als deel van het proces van de bestemmingsvoorlegging moet doen.
 
 Gebruik het API-eindpunt voor publicatiedoelen om een publicatieverzoek in te dienen wanneer:
 
 * Als partner van Destination SDK, wilt u uw geproduceerde bestemming beschikbaar over alle organisaties van het Experience Platform voor alle klanten van het Experience Platform aan gebruik maken;
-* U maakt *alle updates* naar uw configuraties. De updates van de configuratie worden weerspiegeld in de bestemming slechts nadat u een nieuw het publiceren verzoek indient, dat door het team van het Experience Platform wordt goedgekeurd.
+* U maakt *om het even welke updates* aan uw configuraties. De updates van de configuratie worden weerspiegeld in de bestemming slechts nadat u een nieuw het publiceren verzoek indient, dat door het team van het Experience Platform wordt goedgekeurd.
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Aan de slag met API-bewerkingen voor doelpublicatie {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Publicatieverzoeken voor bestemming weergeven {#retrieve-list}
 
-U kunt een lijst van alle bestemmingen terugwinnen die voor publicatie voor uw organisatie IMS door een verzoek van de GET aan wordt voorgelegd `/authoring/destinations/publish` eindpunt.
+U kunt een lijst van alle bestemmingen terugwinnen die voor publicatie voor uw organisatie IMS door een verzoek van de GET aan het `/authoring/destinations/publish` eindpunt worden voorgelegd te doen.
 
-**API-indeling**
+**API formaat**
 
 Gebruik de volgende API-indeling om alle publicatieverzoeken voor uw account op te halen.
 
@@ -46,7 +46,7 @@ Gebruik de volgende API-indeling om alle publicatieverzoeken voor uw account op 
 GET /authoring/destinations/publish
 ```
 
-Gebruik de volgende API-indeling om een specifieke publicatieaanvraag op te halen, gedefinieerd door de `{DESTINATION_ID}` parameter.
+Gebruik de volgende API-indeling om een specifieke publicatieaanvraag op te halen, die door de parameter `{DESTINATION_ID}` wordt gedefinieerd.
 
 ```http
 GET /authoring/destinations/publish/{DESTINATION_ID}
@@ -54,17 +54,17 @@ GET /authoring/destinations/publish/{DESTINATION_ID}
 
 **Verzoek**
 
-De volgende twee verzoeken winnen alle het publiceren verzoeken voor uw IMS Organisatie, of een specifiek het publiceren verzoek terug, afhankelijk van of u overgaan `DESTINATION_ID` in de aanvraag.
+Met de volgende twee verzoeken worden alle publicatieverzoeken voor uw IMS-organisatie of een specifieke publicatieaanvraag opgehaald, afhankelijk van het feit of u de parameter `DESTINATION_ID` in de aanvraag doorgeeft.
 
 Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB Alle publicatieverzoeken ophalen]
+>[!TAB  wint alle het publiceren verzoeken ] terug
 
 +++verzoek
 
-Met het volgende verzoek wordt de lijst met publicatieverzoeken opgehaald die u hebt verzonden, op basis van [!DNL IMS Org ID] en sandboxconfiguratie.
+Met het volgende verzoek wordt de lijst opgehaald met publicatieverzoeken die u hebt verzonden, op basis van de configuratie van [!DNL IMS Org ID] en de sandbox.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -78,7 +78,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Response
 
-De volgende reactie retourneert HTTP-status 200 met een lijst van alle doelen die zijn verzonden voor publicatie waartoe u toegang hebt, op basis van de IMS-organisatie-id en de sandboxnaam die u hebt gebruikt. Eén `configId` komt overeen met de publicatieaanvraag voor één bestemming.
+De volgende reactie retourneert HTTP-status 200 met een lijst van alle doelen die zijn verzonden voor publicatie waartoe u toegang hebt, op basis van de IMS-organisatie-id en de sandboxnaam die u hebt gebruikt. Eén `configId` komt overeen met de publicatieaanvraag voor één doel.
 
 ```json
 {
@@ -116,18 +116,18 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van alle doelen di
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `destinationId` | Tekenreeks | De bestemmingsidentiteitskaart van de bestemmingsconfiguratie die u voor het publiceren hebt voorgelegd. |
-| `publishDetailsList.configId` | Tekenreeks | De unieke id van de bestemming publiceert het verzoek voor uw verzonden bestemming. |
-| `publishDetailsList.allowedOrgs` | Tekenreeks | Keert de organisaties van het Experience Platform terug waarvoor de bestemming beschikbaar is. <br> <ul><li> Voor `"destinationType": "PUBLIC"`, retourneert deze parameter `"*"`, hetgeen betekent dat de bestemming beschikbaar is voor alle organisaties van de Experience Platform.</li><li> Voor `"destinationType": "DEV"`, retourneert deze parameter de organisatie-id van de organisatie die u hebt gebruikt voor het schrijven en testen van het doel.</li></ul> |
-| `publishDetailsList.status` | Tekenreeks | De status van uw doelpublicatieverzoek. Mogelijke waarden zijn `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Doelen met de waarde `PUBLISHED` live zijn en door klanten in de Experience Platform kunnen worden gebruikt. |
-| `publishDetailsList.destinationType` | Tekenreeks | Het type bestemming. Waarden kunnen `DEV` en `PUBLIC`. `DEV` komt overeen met het doel in uw organisatie Experience Platform. `PUBLIC` komt overeen met het doel dat u hebt verzonden voor publicatie. Denk aan deze twee opties in Git-termen, waar de `DEV` versie vertegenwoordigt uw lokale auteurstak en `PUBLIC` versie staat voor de externe hoofdvertakking. |
-| `publishDetailsList.publishedDate` | Tekenreeks | De datum waarop de bestemming voor publicatie werd voorgelegd, in tijdperk. |
+| `destinationId` | String | De bestemmingsidentiteitskaart van de bestemmingsconfiguratie die u voor het publiceren hebt voorgelegd. |
+| `publishDetailsList.configId` | String | De unieke id van de bestemming publiceert het verzoek voor uw verzonden bestemming. |
+| `publishDetailsList.allowedOrgs` | String | Keert de organisaties van het Experience Platform terug waarvoor de bestemming beschikbaar is. <br> <ul><li> Voor `"destinationType": "PUBLIC"` retourneert deze parameter `"*"` , wat betekent dat het doel beschikbaar is voor alle organisaties van het Experience Platform.</li><li> Voor `"destinationType": "DEV"` retourneert deze parameter de organisatie-id van de organisatie die u hebt gebruikt voor het schrijven en testen van het doel.</li></ul> |
+| `publishDetailsList.status` | String | De status van uw doelpublicatieverzoek. Mogelijke waarden zijn `TEST` , `REVIEW` , `APPROVED` , `PUBLISHED` , `DENIED` , `REVOKED` , `DEPRECATED` . Doelen met de waarde `PUBLISHED` zijn live en kunnen door klanten van het Experience Platform worden gebruikt. |
+| `publishDetailsList.destinationType` | String | Het type bestemming. Waarden kunnen `DEV` en `PUBLIC` zijn. `DEV` komt overeen met het doel in uw organisatie van het Experience Platform. `PUBLIC` komt overeen met het doel dat u hebt verzonden voor publicatie. Denk aan deze twee opties in Git-termen, waarbij de versie van `DEV` uw lokale ontwerpvertakking vertegenwoordigt en de versie van `PUBLIC` de externe hoofdvertakking. |
+| `publishDetailsList.publishedDate` | String | De datum waarop de bestemming voor publicatie werd voorgelegd, in tijdperk. |
 
 {style="table-layout:auto"}
 
 +++
 
->[!TAB Een specifiek publicatieverzoek ophalen]
+>[!TAB  wint een specifiek het publiceren verzoek ] terug
 
 +++verzoek
 
@@ -147,7 +147,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Response
 
-Als u een `DESTINATION_ID` in de API vraag, keert de reactie status 200 van HTTP met gedetailleerde informatie over de gespecificeerde bestemming terug publiceer verzoek.
+Als u een `DESTINATION_ID` in de API-aanroep hebt doorgegeven, retourneert de reactie HTTP-status 200 met gedetailleerde informatie over de opgegeven publicatieaanvraag voor de bestemming.
 
 ```json
 {
@@ -168,12 +168,12 @@ Als u een `DESTINATION_ID` in de API vraag, keert de reactie status 200 van HTTP
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `destinationId` | Tekenreeks | De bestemmingsidentiteitskaart van de bestemmingsconfiguratie die u voor het publiceren hebt voorgelegd. |
-| `publishDetailsList.configId` | Tekenreeks | De unieke id van de bestemming publiceert het verzoek voor uw verzonden bestemming. |
-| `publishDetailsList.allowedOrgs` | Tekenreeks | Keert de organisaties van het Experience Platform terug waarvoor de bestemming beschikbaar is. <br> <ul><li> Voor `"destinationType": "PUBLIC"`, retourneert deze parameter `"*"`, hetgeen betekent dat de bestemming beschikbaar is voor alle organisaties van de Experience Platform.</li><li> Voor `"destinationType": "DEV"`, retourneert deze parameter de organisatie-id van de organisatie die u hebt gebruikt voor het schrijven en testen van het doel.</li></ul> |
-| `publishDetailsList.status` | Tekenreeks | De status van uw doelpublicatieverzoek. Mogelijke waarden zijn `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Doelen met de waarde `PUBLISHED` live zijn en door klanten in de Experience Platform kunnen worden gebruikt. |
-| `publishDetailsList.destinationType` | Tekenreeks | Het type bestemming. Waarden kunnen `DEV` en `PUBLIC`. `DEV` komt overeen met het doel in uw organisatie Experience Platform. `PUBLIC` komt overeen met het doel dat u hebt verzonden voor publicatie. Denk aan deze twee opties in Git-termen, waar de `DEV` versie vertegenwoordigt uw lokale auteurstak en `PUBLIC` versie staat voor de externe hoofdvertakking. |
-| `publishDetailsList.publishedDate` | Tekenreeks | De datum waarop de bestemming voor publicatie werd voorgelegd, in tijdperk. |
+| `destinationId` | String | De bestemmingsidentiteitskaart van de bestemmingsconfiguratie die u voor het publiceren hebt voorgelegd. |
+| `publishDetailsList.configId` | String | De unieke id van de bestemming publiceert het verzoek voor uw verzonden bestemming. |
+| `publishDetailsList.allowedOrgs` | String | Keert de organisaties van het Experience Platform terug waarvoor de bestemming beschikbaar is. <br> <ul><li> Voor `"destinationType": "PUBLIC"` retourneert deze parameter `"*"` , wat betekent dat het doel beschikbaar is voor alle organisaties van het Experience Platform.</li><li> Voor `"destinationType": "DEV"` retourneert deze parameter de organisatie-id van de organisatie die u hebt gebruikt voor het schrijven en testen van het doel.</li></ul> |
+| `publishDetailsList.status` | String | De status van uw doelpublicatieverzoek. Mogelijke waarden zijn `TEST` , `REVIEW` , `APPROVED` , `PUBLISHED` , `DENIED` , `REVOKED` , `DEPRECATED` . Doelen met de waarde `PUBLISHED` zijn live en kunnen door klanten van het Experience Platform worden gebruikt. |
+| `publishDetailsList.destinationType` | String | Het type bestemming. Waarden kunnen `DEV` en `PUBLIC` zijn. `DEV` komt overeen met het doel in uw organisatie van het Experience Platform. `PUBLIC` komt overeen met het doel dat u hebt verzonden voor publicatie. Denk aan deze twee opties in Git-termen, waarbij de versie van `DEV` uw lokale ontwerpvertakking vertegenwoordigt en de versie van `PUBLIC` de externe hoofdvertakking. |
+| `publishDetailsList.publishedDate` | String | De datum waarop de bestemming voor publicatie werd voorgelegd, in tijdperk. |
 
 {style="table-layout:auto"}
 
@@ -183,4 +183,4 @@ Als u een `DESTINATION_ID` in de API vraag, keert de reactie status 200 van HTTP
 
 ## API-foutafhandeling
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.

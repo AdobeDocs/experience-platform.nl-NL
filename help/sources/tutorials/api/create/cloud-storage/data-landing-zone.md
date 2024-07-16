@@ -7,37 +7,37 @@ description: Leer hoe u Adobe Experience Platform verbindt met Data Landing Zone
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
 source-git-commit: 0089aa0d6b765645840e6954c3957282c2ad972b
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1300'
 ht-degree: 1%
 
 ---
 
-# Verbinden [!DNL Data Landing Zone] naar Adobe Experience Platform met behulp van de Flow Service API
+# Verbind [!DNL Data Landing Zone] met Adobe Experience Platform gebruikend de Dienst API van de Stroom
 
 >[!IMPORTANT]
 >
->Deze pagina is specifiek voor de [!DNL Data Landing Zone] *bron* in Experience Platform. Voor informatie over het verbinden met [!DNL Data Landing Zone] *doel* -aansluiting, verwijzen naar de [[!DNL Data Landing Zone] doeldocumentatiepagina](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
+>Deze pagina is specifiek voor de [!DNL Data Landing Zone] *bron* schakelaar in Experience Platform. Voor informatie bij het verbinden met de [!DNL Data Landing Zone] *bestemmings* schakelaar, verwijs naar de [[!DNL Data Landing Zone]  pagina van de bestemmingsdocumentatie ](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
-[!DNL Data Landing Zone] is een veilige, op de cloud gebaseerde opslagfaciliteit voor bestanden die naar Adobe Experience Platform kunnen worden overgebracht. Gegevens worden automatisch verwijderd uit het dialoogvenster [!DNL Data Landing Zone] na zeven dagen.
+[!DNL Data Landing Zone] is een veilige, op de cloud gebaseerde opslagvoorziening voor bestanden die naar Adobe Experience Platform kunnen worden overgebracht. Gegevens worden automatisch na zeven dagen uit de [!DNL Data Landing Zone] verwijderd.
 
-Deze zelfstudie begeleidt u door de stappen voor het maken van een [!DNL Data Landing Zone] bronverbinding met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Deze zelfstudie bevat ook instructies voor het ophalen van uw [!DNL Data Landing Zone], en uw referenties bekijken en vernieuwen.
+Dit leerprogramma begeleidt u door de stappen op hoe te om a [!DNL Data Landing Zone] bronverbinding tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/). Deze zelfstudie bevat ook instructies voor het ophalen van [!DNL Data Landing Zone] en het weergeven en vernieuwen van uw referenties.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-In de volgende secties vindt u aanvullende informatie die u nodig hebt om een [!DNL Data Landing Zone] bronverbinding met de [!DNL Flow Service] API.
+De volgende secties bevatten aanvullende informatie die u moet weten om een [!DNL Data Landing Zone] -bronverbinding met de [!DNL Flow Service] API te kunnen maken.
 
-Voor deze zelfstudie moet u ook de handleiding lezen op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md) leren hoe te aan Platform APIs voor authentiek te verklaren en de voorbeeldvraag te interpreteren die in de documentatie wordt verstrekt.
+Dit leerprogramma vereist u ook om de gids te lezen over [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md) om te leren hoe te aan Platform APIs voor authentiek te verklaren en de voorbeeldvraag te interpreteren die in de documentatie wordt verstrekt.
 
 ## Een bruikbare landingszone ophalen
 
-De eerste stap bij het gebruik van API&#39;s voor toegang [!DNL Data Landing Zone] moet een verzoek van de GET indienen bij de `/landingzone` het eindpunt van de [!DNL Connectors] API tijdens `type=user_drop_zone` als deel van uw verzoekkopbal.
+De eerste stap bij het gebruik van API&#39;s voor toegang tot [!DNL Data Landing Zone] is het aanvragen van een GET voor het `/landingzone` eindpunt van de [!DNL Connectors] API terwijl het opgeven van `type=user_drop_zone` als onderdeel van de aanvraagheader.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /data/foundation/connectors/landingzone?type=user_drop_zone
@@ -45,7 +45,7 @@ GET /data/foundation/connectors/landingzone?type=user_drop_zone
 
 | Kopteksten | Beschrijving |
 | --- | --- |
-| `user_drop_zone` | De `user_drop_zone` Met type kan de API een landingszone-container onderscheiden van de andere typen containers die voor u beschikbaar zijn. |
+| `user_drop_zone` | Met het type `user_drop_zone` kan de API een landingszone-container onderscheiden van de andere typen containers die voor u beschikbaar zijn. |
 
 **Verzoek**
 
@@ -61,9 +61,9 @@ curl -X GET \
   -H 'Content-Type: application/json' 
 ```
 
-**Antwoord**
+**Reactie**
 
-De volgende reactie geeft informatie over een landingszone, inclusief de bijbehorende `containerName` en `containerTTL`.
+De volgende reactie retourneert informatie over een landingszone, inclusief de corresponderende `containerName` en `containerTTL` .
 
 ```json
 {
@@ -77,11 +77,11 @@ De volgende reactie geeft informatie over een landingszone, inclusief de bijbeho
 | `containerName` | De naam van de landingszone die u hebt opgehaald. |
 | `containerTTL` | De vervaltijd (in dagen) die op uw gegevens binnen de landingszone wordt toegepast. Alle gegevens binnen een bepaalde landingszone worden na zeven dagen verwijderd. |
 
-## Ophalen [!DNL Data Landing Zone] geloofsbrieven
+## [!DNL Data Landing Zone] gebruikersgegevens ophalen
 
-Om geloofsbrieven voor te winnen [!DNL Data Landing Zone]een verzoek tot GET aan de `/credentials` het eindpunt van de [!DNL Connectors] API.
+Als u referenties voor een [!DNL Data Landing Zone] wilt ophalen, vraagt u een GET aan bij het `/credentials` -eindpunt van de [!DNL Connectors] API.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /data/foundation/connectors/landingzone/credentials?type=user_drop_zone
@@ -101,9 +101,9 @@ curl -X GET \
   -H 'Content-Type: application/json' \
 ```
 
-**Antwoord**
+**Reactie**
 
-De volgende reactie keert de referentie informatie voor uw gegevens landende streek, met inbegrip van uw huidige terug `SASToken`, `SASUri`, `storageAccountName`en vervaldatum.
+De volgende reactie retourneert de referentie-informatie voor de landingszone van uw gegevens, inclusief de huidige `SASToken` , `SASUri` , `storageAccountName` en vervaldatum.
 
 ```json
 {
@@ -123,11 +123,11 @@ De volgende reactie keert de referentie informatie voor uw gegevens landende str
 | `expiryDate` | De datum waarop uw SAS-token verloopt. U moet uw token vernieuwen vóór de vervaldatum om het te kunnen blijven gebruiken in uw toepassing voor het uploaden van gegevens naar de landingszone van gegevens. Als u niet manueel uw teken vóór de verklaarde vervaldatum vernieuwt, dan zal het automatisch verfrissen en een nieuw teken verstrekken wanneer de geloofsbrieven van de GET worden uitgevoerd. |
 
 
-## Bijwerken [!DNL Data Landing Zone] geloofsbrieven
+## [!DNL Data Landing Zone] gebruikersgegevens bijwerken
 
-U kunt uw `SASToken` door een POST aan de `/credentials` het eindpunt van de [!DNL Connectors] API.
+U kunt uw `SASToken` bijwerken door een aanvraag voor een POST in te dienen bij het `/credentials` eindpunt van de [!DNL Connectors] API.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh
@@ -135,8 +135,8 @@ POST /data/foundation/connectors/landingzone/credentials?type=user_drop_zone&act
 
 | Kopteksten | Beschrijving |
 | --- | --- |
-| `user_drop_zone` | De `user_drop_zone` Met type kan de API een landingszone-container onderscheiden van de andere typen containers die voor u beschikbaar zijn. |
-| `refresh` | De `refresh` actie staat u toe om uw landingszonegeloofsbrieven terug te stellen en automatisch een nieuwe te produceren `SASToken`. |
+| `user_drop_zone` | Met het type `user_drop_zone` kan de API een landingszone-container onderscheiden van de andere typen containers die voor u beschikbaar zijn. |
+| `refresh` | Met de handeling `refresh` kunt u de gegevens van de landingszone opnieuw instellen en automatisch een nieuwe `SASToken` genereren. |
 
 **Verzoek**
 
@@ -152,9 +152,9 @@ curl -X POST \
   -H 'Content-Type: application/json' \
 ```
 
-**Antwoord**
+**Reactie**
 
-In het volgende antwoord worden bijgewerkte waarden voor uw `SASToken` en `SASUri`.
+In het volgende antwoord worden bijgewerkte waarden voor de `SASToken` en `SASUri` geretourneerd.
 
 ```json
 {
@@ -168,9 +168,9 @@ In het volgende antwoord worden bijgewerkte waarden voor uw `SASToken` en `SASUr
 
 ## Bestandsstructuur en inhoud van landingszones verkennen
 
-U kunt de bestandsstructuur en inhoud van de landingszone verkennen door een GET-verzoek in te dienen bij de `connectionSpecs` het eindpunt van de [!DNL Flow Service] API.
+U kunt de bestandsstructuur en de inhoud van de landingszone verkennen door een aanvraag voor een GET in te dienen bij het eindpunt `connectionSpecs` van de [!DNL Flow Service] API.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=root
@@ -178,7 +178,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=root
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONNECTION_SPEC_ID}` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Landing Zone]. Deze vaste ID is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `{CONNECTION_SPEC_ID}` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Landing Zone] . Deze vaste id is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8` . |
 
 **Verzoek**
 
@@ -191,9 +191,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord retourneert een array met bestanden en mappen die in de gevraagde map zijn gevonden. Neem nota van het `path` eigenschap van het bestand dat u wilt uploaden, omdat u dit in de volgende stap moet opgeven om de structuur te controleren.
+Een succesvol antwoord retourneert een array met bestanden en mappen die in de gevraagde map zijn gevonden. Let op de eigenschap `path` van het bestand dat u wilt uploaden, aangezien u dit in de volgende stap moet opgeven om de structuur te controleren.
 
 ```json
 [
@@ -225,7 +225,7 @@ Een succesvol antwoord retourneert een array met bestanden en mappen die in de g
 
 Om de structuur van een dossier in uw landende streek te inspecteren, voer een verzoek van de GET uit terwijl het verstrekken van de weg van het dossier en type als vraagparameter.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}
@@ -233,7 +233,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | Parameter | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| `{CONNECTION_SPEC_ID}` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Landing Zone]. Deze vaste ID is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `{CONNECTION_SPEC_ID}` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Landing Zone] . Deze vaste id is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8` . |
 | `{OBJECT_TYPE}` | Het type object waartoe u toegang wilt hebben. | `file` |
 | `{OBJECT}` | Het pad en de naam van het object waartoe u toegang wilt hebben. | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | Het type bestand. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
@@ -250,7 +250,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord geeft de structuur van het gevraagde bestand, inclusief bestandsnamen en gegevenstypen.
 
@@ -315,22 +315,22 @@ Een succesvol antwoord geeft de structuur van het gevraagde bestand, inclusief b
 }
 ```
 
-### Gebruiken `determineProperties` om automatisch informatie over de bestandseigenschappen van een [!DNL Data Landing Zone]
+### Gebruik `determineProperties` om automatisch informatie over de bestandseigenschappen van een [!DNL Data Landing Zone] te detecteren
 
-U kunt de `determineProperties` parameter om eigenschapinformatie van de bestandsinhoud van uw [!DNL Data Landing Zone] wanneer het maken van een vraag van de GET om de inhoud en de structuur van uw bron te onderzoeken.
+U kunt de parameter `determineProperties` gebruiken om eigenschapinformatie van de dossierinhoud van uw [!DNL Data Landing Zone] automatisch te ontdekken wanneer het maken van een vraag van de GET om de inhoud en de structuur van uw bron te onderzoeken.
 
-#### `determineProperties` Gebruikt gevallen
+#### `determineProperties` gebruikt hoofdletters/kleine letters
 
-In de volgende tabel worden verschillende scenario&#39;s beschreven die u kunt tegenkomen bij het gebruik van de `determineProperties` de parameter van de vraag of manueel het verstrekken van informatie over uw dossier.
+In de volgende tabel worden verschillende scenario&#39;s beschreven die u kunt tegenkomen wanneer u de query-parameter `determineProperties` gebruikt of handmatig informatie over het bestand opgeeft.
 
 | `determineProperties` | `queryParams` | Antwoord |
 | --- | --- | --- |
-| Waar | N.v.t. | Indien `determineProperties` wordt verstrekt als vraagparameter, dan komt de dossiereigenschappen opsporing voor en de reactie keert een nieuw terug `properties` sleutel die informatie over dossiertype, compressietype, en kolomscheidingsteken omvat. |
-| N.v.t. | Waar | Als de waarden voor bestandstype, compressietype en kolomscheidingsteken handmatig worden opgegeven als onderdeel van `queryParams`, dan worden zij gebruikt om het schema te produceren en de zelfde eigenschappen zijn teruggekeerd als deel van de reactie. |
+| Waar | N.v.t. | Als `determineProperties` wordt verstrekt als vraagparameter, dan komt de dossiereigenschappen opsporing voor en de reactie keert een nieuwe `properties` sleutel terug die informatie over dossiertype, compressietype, en kolomscheidingsteken omvat. |
+| N.v.t. | Waar | Als de waarden voor bestandstype, compressietype en kolomscheidingsteken handmatig worden opgegeven als onderdeel van `queryParams` , worden deze gebruikt om het schema te genereren en worden dezelfde eigenschappen geretourneerd als onderdeel van het antwoord. |
 | Waar | Waar | Als beide opties gelijktijdig worden uitgevoerd, wordt een fout geretourneerd. |
 | N.v.t. | N.v.t. | Als geen van beide opties wordt opgegeven, wordt een fout geretourneerd omdat er geen manier is om eigenschappen voor de reactie op te halen. |
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&determineProperties=true
@@ -338,7 +338,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | Parameter | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| `determineProperties` | Met deze queryparameter kan de [!DNL Flow Service] API om informatie over de eigenschappen van uw dossier, met inbegrip van informatie over dossiertype, compressietype, en kolomscheidingsteken te ontdekken. | `true` |
+| `determineProperties` | Met deze queryparameter kan de [!DNL Flow Service] -API informatie detecteren over de eigenschappen van het bestand, zoals informatie over het bestandstype, het compressietype en het kolomscheidingsteken. | `true` |
 
 **Verzoek**
 
@@ -351,9 +351,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord retourneert de structuur van het bestand waarop de vraag betrekking heeft, inclusief bestandsnamen en gegevenstypen, en ook een `properties` sleutel, met informatie over `fileType`, `compressionType`, en `columnDelimiter`.
+Een succesvol antwoord retourneert de structuur van het bestand waarop de vraag betrekking heeft, inclusief bestandsnamen en gegevenstypen, en ook een `properties` -sleutel met informatie over `fileType` , `compressionType` en `columnDelimiter` .
 
 +++klik op mij
 
@@ -448,19 +448,19 @@ Een succesvol antwoord retourneert de structuur van het bestand waarop de vraag 
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `properties.fileType` | Het corresponderende bestandstype van het bestand waarnaar wordt gevraagd. De ondersteunde bestandstypen zijn: `delimited`, `json`, en `parquet`. |
+| `properties.fileType` | Het corresponderende bestandstype van het bestand waarnaar wordt gevraagd. De ondersteunde bestandstypen zijn: `delimited` , `json` en `parquet` . |
 | `properties.compressionType` | Het corresponderende compressietype dat wordt gebruikt voor het bestand waarnaar wordt gevraagd. De ondersteunde compressietypen zijn: <ul><li>`bzip2`</li><li>`gzip`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
-| `properties.columnDelimiter` | Het corresponderende kolomscheidingsteken dat wordt gebruikt voor het bestand waarnaar wordt gevraagd. Elke waarde van één teken is een toegestaan kolomscheidingsteken. De standaardwaarde is een komma `(,)`. |
+| `properties.columnDelimiter` | Het corresponderende kolomscheidingsteken dat wordt gebruikt voor het bestand waarnaar wordt gevraagd. Elke waarde van één teken is een toegestaan kolomscheidingsteken. De standaardwaarde is een komma `(,)` . |
 
 
 ## Een bronverbinding maken
 
 Een bronverbinding maakt en beheert de verbinding met de externe bron vanwaar gegevens worden ingevoerd. Een bronverbinding bestaat uit informatie zoals gegevensbron, gegevensformaat, en bron identiteitskaart nodig om een gegevensstroom tot stand te brengen. Een bronverbindingsinstantie is specifiek voor een huurder en organisatie.
 
-Om een bronverbinding tot stand te brengen, doe een verzoek van de POST aan `/sourceConnections` het eindpunt van de [!DNL Flow Service] API.
+Als u een bronverbinding wilt maken, vraagt u een POST naar het `/sourceConnections` -eindpunt van de [!DNL Flow Service] API.
 
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /sourceConnections
@@ -496,11 +496,11 @@ curl -X POST \
 | `name` | De naam van uw [!DNL Data Landing Zone] bronverbinding. |
 | `data.format` | De indeling van de gegevens die u naar het platform wilt verzenden. |
 | `params.path` | Het pad naar het bestand dat u naar het platform wilt verzenden. |
-| `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Landing Zone]. Deze vaste ID is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Landing Zone] . Deze vaste id is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8` . |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is vereist in de volgende zelfstudie om een gegevensstroom te maken.
+Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde bronverbinding terug. Deze id is vereist in de volgende zelfstudie om een gegevensstroom te maken.
 
 ```json
 {
@@ -511,4 +511,4 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u uw [!DNL Data Landing Zone] geloofsbrieven, verkende zijn dossierstructuur om het dossier te vinden u aan Platform wilt brengen, en creeerde een bronverbinding beginnen uw gegevens aan Platform te brengen. U kunt nu verdergaan met de volgende zelfstudie, waarin u leert hoe u [een gegevensstroom maken om gegevens voor cloudopslag naar het platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u uw [!DNL Data Landing Zone] -gegevens opgehaald, de bestandsstructuur verkend om het bestand te zoeken dat u naar Platform wilt verzenden, en een bronverbinding gemaakt om uw gegevens naar Platform te brengen. U kunt nu aan het volgende leerprogramma te werk gaan, waar u zult leren hoe te [ een dataflow creëren om de gegevens van de wolkenopslag aan Platform te brengen gebruikend  [!DNL Flow Service]  API ](../../collect/cloud-storage.md).

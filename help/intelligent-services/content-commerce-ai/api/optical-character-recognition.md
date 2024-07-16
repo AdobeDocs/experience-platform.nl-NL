@@ -6,8 +6,8 @@ description: In de API voor inhoudslabeling kan de service Aanwezigheid van teks
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 source-git-commit: 82722ddf7ff543361177b555fffea730a7879886
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 2%
+source-wordcount: '693'
+ht-degree: 0%
 
 ---
 
@@ -17,9 +17,9 @@ Met de OCR-service (Text Presence/Optical Character Recognition) kunt u aangeven
 
 De volgende afbeelding is gebruikt in de voorbeeldaanvraag die in dit document wordt weergegeven:
 
-![Voorbeeldafbeelding](../images/sample_image.png)
+![ Beeld van de Steekproef ](../images/sample_image.png)
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /services/v2/predict
@@ -72,13 +72,13 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Als het antwoord met succes is beantwoord, wordt de tekst geretourneerd die is aangetroffen in het dialoogvenster `tags` lijst voor elke afbeelding die in de aanvraag is doorgegeven. Als een bepaalde afbeelding geen tekst bevat, `is_text_present` is 0 en `tags` is een lege lijst.
+Een succesvol antwoord retourneert de tekst die in de lijst `tags` is gedetecteerd voor elke afbeelding die in de aanvraag is doorgegeven. Als een bepaalde afbeelding geen tekst bevat, is `is_text_present` 0 en is `tags` een lege lijst.
 
-[result0, result1, ...]: lijst met reacties voor elk invoerdocument. Elk resultaat is een dict met toetsen:
+[ result0, result1, ... ]: lijst van reacties voor elk inputdocument. Elk resultaat is een dict met toetsen:
 
-1. request_element_id: overeenkomende index met het invoerbestand voor deze reactie, 0 voor de eerste afbeelding in de documentenlijst van de aanvraag, 1 voor de volgende afbeelding enzovoort.
+1. request_element_id: overeenkomende index met het invoerbestand voor deze reactie, 0 voor de eerste afbeelding in de documentenlijst van de aanvraag, 1 voor de volgende afbeelding, enzovoort.
 2. tags: lijst met woordenboeken, elk woordenboek heeft twee sleutels: tekst, een herkend woord uit de afbeelding, en relevantie, die wordt berekend als het deel van het gebied van het selectiekader van de geëxtraheerde tekst in vergelijking met de volledige afbeelding. 0,01 wordt omgezet in een tekst die minstens 1% van de afbeelding in beslag neemt.
 3. is_text_present: 0 of 1, afhankelijk van of er tekst aanwezig is in de afbeelding. Als de labels 0 zijn, is de lijst leeg.
 
@@ -202,12 +202,12 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `repo:path` | Vooraf ondertekende URL naar afbeeldingselement. | Ja |
 | `sensei:repoType` | &quot;HTTP&quot; (voor presigned-url). | Nee |
 | `dc:format` | Gecodeerde indeling van invoerafbeelding. Alleen afbeeldingsindelingen zoals JPEG, JPG, PNG en TIF zijn toegestaan voor het coderen van afbeeldingen. De dc:indeling wordt vergeleken met toegestane indelingen. | Nee |
-| `correct_with_dictionary` | Of de woorden met een Engels woordenboek moeten worden gecorrigeerd? Als deze optie niet is ingeschakeld, kunnen niet-Engelse woorden worden herkend. Standaard is waar: ingeschakeld.) Als het woordenboek is ingeschakeld, hoeft u niet altijd een Engels woord te hebben. We proberen het te corrigeren, maar als dit niet mogelijk is binnen een bepaalde bewerkingsafstand, retourneren we het oorspronkelijke woord. | Nee |
+| `correct_with_dictionary` | Of de woorden met een Engels woordenboek moeten worden gecorrigeerd? Als deze optie niet is ingeschakeld, kunnen niet-Engelse woorden worden herkend. Standaard is Waar: ingeschakeld.) Als het woordenboek is ingeschakeld, is het niet nodig dat u altijd een Engels woord krijgt. We proberen het te corrigeren, maar als dit niet mogelijk is binnen een bepaalde bewerkingsafstand, retourneren we het oorspronkelijke woord. | Nee |
 | `filter_with_dictionary` | Of u de woorden wilt filteren zodat deze alleen de woorden uit het Engelse woordenboek bevatten? Als dit wordt ingeschakeld, zullen de geretourneerde woorden altijd bij het grote Engels horen, dat 470 kB-woorden omvat. | Nee |
-| `min_probability` | Wat is de minimale waarschijnlijkheid voor de erkende woorden? Alleen de woorden die uit de afbeelding zijn geëxtraheerd en die een grotere waarschijnlijkheid hebben dan min_likely, worden door de service geretourneerd. De standaardwaarde is ingesteld op 0,2. | Nee |
-| `min_relevance` | Wat is de minimale relevantie voor de erkende woorden? Alleen de woorden die uit de afbeelding zijn geëxtraheerd en die relevanter zijn dan min_relevantie, worden door de service geretourneerd. De standaardwaarde is ingesteld op 0,01. De relevantie wordt berekend als het deel van het gebied van het selectiekader van de geëxtraheerde tekst ten opzichte van de volledige afbeelding. 0,01 wordt omgezet in een tekst die minstens 1% van de afbeelding in beslag neemt. | Nee |
+| `min_probability` | Wat is de minimale waarschijnlijkheid voor de erkende woorden? Alleen de woorden die uit de afbeelding zijn geëxtraheerd en die een grotere waarschijnlijkheid hebben dan min_likely, worden door de service geretourneerd. De standaardwaarde is 0,2. | Nee |
+| `min_relevance` | Wat is de minimale relevantie voor de erkende woorden? Alleen de woorden die uit de afbeelding zijn geëxtraheerd en die relevanter zijn dan min_relevantie, worden door de service geretourneerd. De standaardwaarde is 0,01. De relevantie wordt berekend als het deel van het gebied van het selectiekader van de geëxtraheerde tekst ten opzichte van de volledige afbeelding. 0,01 wordt omgezet in een tekst die minstens 1% van de afbeelding in beslag neemt. | Nee |
 
-| Naam | Datatype | Vereist | Standaard | Waarden | Beschrijving |
+| Naam | Gegevenstype | Vereist | Standaard | Waarden | Beschrijving |
 | -----| --------- | -------- | ------- | ------ | ----------- |
 | `repo:path` | string | - | - | - | Vooraf ondertekende URL van de afbeelding waaruit tekst moet worden geëxtraheerd. |
 | `sensei:repoType` | string | - | - | HTTPS | Type repo waar de afbeelding wordt opgeslagen. |

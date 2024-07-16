@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;klantkenmerken
 solution: Experience Platform
-title: Creeer een BronVerbinding van de Attributen van de Klant in UI
+title: Een Source Connection met klantkenmerken maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een bronverbinding maakt in de gebruikersinterface om profielgegevens van klantkenmerken over te brengen naar Adobe Experience Platform.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
 
 # Een bronverbinding voor klantkenmerken maken in de gebruikersinterface
 
-Deze zelfstudie bevat stappen voor het maken van een bronverbinding in de gebruikersinterface om profielgegevens van klantkenmerken over te brengen naar Adobe Experience Platform. Voor meer informatie over de Attributen van de Klant, zie [Overzicht van klantkenmerken](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
+Deze zelfstudie bevat stappen voor het maken van een bronverbinding in de gebruikersinterface om profielgegevens van klantkenmerken over te brengen naar Adobe Experience Platform. Voor meer informatie over de Attributen van de Klant, zie het [ overzicht van de Attributen van de Klant ](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
 
 >[!IMPORTANT]
 >
@@ -26,17 +26,17 @@ Deze zelfstudie bevat stappen voor het maken van een bronverbinding in de gebrui
 >
 >Als u al een bronverbinding hebt gemaakt voor de profielgegevens van Klantkenmerken, is de optie om verbinding te maken met de bron uitgeschakeld.
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een verbinding kunt maken.
+Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een verbinding kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
 
-Onder de [!UICONTROL Adobe applications] categorie, selecteert u **[!UICONTROL Customer Attributes]** en selecteer vervolgens **[!UICONTROL Add data]**.
+Selecteer onder de categorie [!UICONTROL Adobe applications] de optie **[!UICONTROL Customer Attributes]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![catalogus](../../../../images/tutorials/create/customer-attributes/catalog.png)
+![ catalogus ](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
 ### Gegevensbron van klantkenmerken selecteren
 
-De [!UICONTROL Add data] het scherm maakt een lijst van alle beschikbare gegevensbronnen voor de Attributen van de Klant. Er kan slechts één gegevensset worden geselecteerd per bronverbinding Klantkenmerken.
+In het scherm [!UICONTROL Add data] worden alle beschikbare gegevensbronnen voor Klantkenmerken weergegeven. Er kan slechts één gegevensset worden geselecteerd per bronverbinding Klantkenmerken.
 
 >[!NOTE]
 >
@@ -46,36 +46,36 @@ De evolutie van het schema wordt niet gesteund door de bron van klantenattribute
 
 >[!IMPORTANT]
 >
->Terwijl u een gegevens van klantenattributen kunt schrappen dataflow, zal zijn overeenkomstige dataset zelfs na schrapping van dataflow blijven. Zie de handleiding op [verwijderen, gegevensset](../../../../../catalog/datasets/user-guide.md) voor stappen op hoe te om een dataset manueel te schrappen.
+>Terwijl u een gegevens van klantenattributen kunt schrappen dataflow, zal zijn overeenkomstige dataset zelfs na schrapping van dataflow blijven. Zie de gids bij [ het schrappen van een dataset ](../../../../../catalog/datasets/user-guide.md) voor stappen op hoe te om een dataset manueel te schrappen.
 
-Als u een nieuwe verbinding wilt maken, selecteert u een gegevensbron in de lijst en selecteert u **[!UICONTROL Next]**.
+Als u een nieuwe verbinding wilt maken, selecteert u een gegevensbron in de lijst en selecteert u vervolgens **[!UICONTROL Next]** .
 
-![add-data](../../../../images/tutorials/create/customer-attributes/add-data.png)
+![ toe:voegen-gegevens ](../../../../images/tutorials/create/customer-attributes/add-data.png)
 
 ### Gegevens over gegevensstroom opgeven
 
-De [!UICONTROL Dataflow detail] wordt weergegeven, zodat u een naam en een korte beschrijving voor de gegevensstroom kunt opgeven. Tijdens dit proces kunt u ook instellingen configureren voor [!UICONTROL Error diagnostics], [!UICONTROL Partial ingestion], en [!UICONTROL Alerts].
+De stap [!UICONTROL Dataflow detail] wordt weergegeven, zodat u een naam en een korte beschrijving voor de gegevensstroom kunt opgeven. Tijdens dit proces kunt u ook instellingen configureren voor [!UICONTROL Error diagnostics] , [!UICONTROL Partial ingestion] en [!UICONTROL Alerts] .
 
-[!UICONTROL Error diagnostics] laat gedetailleerde foutenmelding generatie voor om het even welke onjuiste verslagen toe die in uw dataflow voorkomen, terwijl [!UICONTROL Partial ingestion] kunt u gegevens met fouten opnemen tot een bepaalde drempel die u handmatig definieert. Zie de [gedeeltelijke batch-opname, overzicht](../../../../../ingestion/batch-ingestion/partial.md) voor meer informatie .
+In [!UICONTROL Error diagnostics] kunnen gedetailleerde foutberichten worden gegenereerd voor onjuiste records in de gegevensstroom, terwijl u in [!UICONTROL Partial ingestion] gegevens met fouten kunt invoeren tot een bepaalde drempel die u handmatig definieert. Zie het [ gedeeltelijke overzicht van partijingestie ](../../../../../ingestion/batch-ingestion/partial.md) voor meer informatie.
 
-U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van uw gegevensstroom. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [abonneren op berichten voor bronnen met behulp van de gebruikersinterface](../../alerts.md).
+U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van uw gegevensstroom. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bronalarm gebruikend UI ](../../alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw gegevensstroom, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor de gegevensstroom, selecteert u **[!UICONTROL Next]** .
 
-![dataFlow-detail](../../../../images/tutorials/create/customer-attributes/dataflow-detail.png)
+![ dataflow-detail ](../../../../images/tutorials/create/customer-attributes/dataflow-detail.png)
 
 ### Gegevensstroom controleren
 
-De [!UICONTROL Review] wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
+De stap [!UICONTROL Review] wordt weergegeven, zodat u de nieuwe gegevensstroom kunt bekijken voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-* **[!UICONTROL Connection]**: Toont het brontype, de relevante weg van het gekozen brondossier, en het aantal kolommen binnen dat brondossier.
-* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
+* **[!UICONTROL Connection]**: geeft het brontype, het relevante pad van het gekozen bronbestand en het aantal kolommen in dat bronbestand weer.
+* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset volgt aan.
 
-![revisie](../../../../images/tutorials/create/customer-attributes/review.png)
+![ overzicht ](../../../../images/tutorials/create/customer-attributes/review.png)
 
 ## Volgende stappen
 
-Zodra de verbinding wordt gecreeerd, wordt een doelschema en een dataset automatisch gecreeerd om de inkomende gegevens te bevatten. Wanneer de aanvankelijke opname voltooit, kunnen de gegevens van het klantenkenmerkprofiel door de stroomafwaartse diensten van het Platform zoals worden gebruikt [!DNL Real-Time Customer Profile] en [!DNL Segmentation Service]. Raadpleeg de volgende documenten voor meer informatie:
+Zodra de verbinding wordt gecreeerd, wordt een doelschema en een dataset automatisch gecreeerd om de inkomende gegevens te bevatten. Wanneer de eerste invoer is voltooid, kunnen de profielgegevens van de klantkenmerken worden gebruikt door downstream-platformservices zoals [!DNL Real-Time Customer Profile] en [!DNL Segmentation Service] . Raadpleeg de volgende documenten voor meer informatie:
 
 * [[!DNL Real-Time Customer Profile]-overzicht](../../../../../profile/home.md)
 * [[!DNL Segmentation Service]-overzicht](../../../../../segmentation/home.md)

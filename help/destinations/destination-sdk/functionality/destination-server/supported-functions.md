@@ -4,60 +4,60 @@ title: Ondersteunde transformatiefuncties in Destination SDK
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 1%
+source-wordcount: '552'
+ht-degree: 0%
 
 ---
 
 # Ondersteunde transformatiefuncties in Destination SDK
 
-Experience Platform-Destination SDK gebruikt [[!DNL Pebble] sjablonen](https://pebbletemplates.io/), zodat u de uit Experience Platform geëxporteerde gegevens kunt omzetten in de indeling die voor uw bestemming vereist is.
+De Destination SDK van het Experience Platform gebruikt [[!DNL Pebble]  malplaatjes ](https://pebbletemplates.io/), toestaand u om de gegevens die van Experience Platform worden uitgevoerd in het formaat om te zetten dat door uw bestemming wordt vereist.
 
-Het Experience Platform [!DNL Pebble] de implementatie is gewijzigd, in vergelijking met de versie van de box buiten de verpakking die wordt geleverd door [!DNL Pebble]. Naast de functies die buiten de box worden geleverd door [!DNL Pebble], heeft de Adobe enkele extra functies gemaakt die u kunt gebruiken met Destination SDK.
+De implementatie van het Experience Platform [!DNL Pebble] heeft enkele wijzigingen ten opzichte van de versie van het tekstvak die wordt geleverd door [!DNL Pebble] . Naast de functies die [!DNL Pebble] biedt voor &#39;out-of-the-box&#39;, heeft Adobe ook enkele extra functies gemaakt die u kunt gebruiken met Destination SDK.
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Waar wordt het gebruikt? {#where-to-use}
 
-Gebruik de ondersteunde functies die verderop op op deze pagina worden vermeld wanneer [een sjabloon voor berichttransformatie maken](../../testing-api/streaming-destinations/create-template.md) voor de gegevens die uit Experience Platform naar uw bestemming worden uitgevoerd.
+Gebruik de gesteunde die functies verder hieronder op deze pagina worden vermeld wanneer [ creërend een malplaatje van de berichttransformatie ](../../testing-api/streaming-destinations/create-template.md) voor de gegevens uit Experience Platform naar uw bestemming worden uitgevoerd.
 
-De sjabloon voor berichttransformatie wordt gebruikt in het dialoogvenster [doelserverconfiguratie](templating-specs.md) voor streamingdoelen.
+Het malplaatje van de berichttransformatie wordt gebruikt in de [ configuratie van de bestemmingsserver ](templating-specs.md) voor het stromen bestemmingen.
 
 ## Vereisten {#prerequisites}
 
-Als u de concepten en functies in deze referentiepagina wilt begrijpen, leest u de [berichtindeling](message-format.md) document eerst. U moet de [structuur van een profiel](message-format.md#profile-structure) in Experience Platform voordat u kunt gebruiken [!DNL Pebble] sjablonen voor transformatie en de geëxporteerde gegevens.
+Om de concepten en de functies in deze verwijzingspagina te begrijpen, lees eerst het [ document van het berichtformaat ](message-format.md). U moet de [ structuur van een profiel ](message-format.md#profile-structure) in Experience Platform begrijpen alvorens u [!DNL Pebble] malplaatjes kunt gebruiken om en de uitgevoerde gegevens te transformeren.
 
-Lees de sjabloonvoorbeelden in de sectie voordat u doorgaat naar de functies die hieronder worden beschreven [Een sjabloontaal gebruiken voor de transformaties voor identiteit, kenmerken en publieksleiding](message-format.md#using-templating). De voorbeelden in dat verband beginnen zeer eenvoudig en nemen toe in complexiteit.
+Alvorens u aan de hieronder gedocumenteerde functies vooruitgaat, herzie de sjabloonvoorbeelden in de sectie [ Gebruikend een het malplaatjetaal voor de identiteit, de attributen, en de transformaties van het publiekslidmaatschap ](message-format.md#using-templating). De voorbeelden in dat verband beginnen zeer eenvoudig en nemen toe in complexiteit.
 
-## Ondersteund [!DNL Pebble] functies {#supported-functions}
+## Ondersteunde [!DNL Pebble] functies {#supported-functions}
 
-Van de [!DNL Pebble] tagsectie, alleen Destination SDK ondersteunt:
+In de sectie [!DNL Pebble] -tags ondersteunt alleen Destination SDK:
 
-* [filter](https://pebbletemplates.io/wiki/tag/filter/)
-* [for](https://pebbletemplates.io/wiki/tag/for/)
-* [indien](https://pebbletemplates.io/wiki/tag/if/)
-* [set](https://pebbletemplates.io/wiki/tag/set/)
+* [ filter ](https://pebbletemplates.io/wiki/tag/filter/)
+* [ for ](https://pebbletemplates.io/wiki/tag/for/)
+* [ als ](https://pebbletemplates.io/wiki/tag/if/)
+* [ plaats ](https://pebbletemplates.io/wiki/tag/set/)
 
 >[!TIP]
 >
->Gebruiken `for` is anders wanneer u doorloopt *array* of *map* elementen in een sjabloon. Wanneer u een array doorloopt, kunt u het element rechtstreeks ophalen. Wanneer u door een kaart herhaalt, krijgt u elke kaartingang, die een zeer belangrijk-waardepaar heeft.
+>Het gebruiken `for` is verschillend wanneer het herhalen door *serie* of *kaart* elementen in een malplaatje. Wanneer u een array doorloopt, kunt u het element rechtstreeks ophalen. Wanneer u door een kaart herhaalt, krijgt u elke kaartingang, die een zeer belangrijk-waardepaar heeft.
 >
-> * Denk bij een voorbeeld van een arrayelement aan de identiteiten in een [identityMap](message-format.md#identities) naamruimte, waar u elementen zoals `identityMap.gaid`, `identityMap.email`, of een soortgelijke situatie.
-> * Denk aan een voorbeeld van een structuurelement [segmentLidmaatschap](message-format.md#segment-membership).
+> * Voor een voorbeeld van een serieelement, denk over de identiteiten in [ identityMap ](message-format.md#identities) namespace, waar u door elementen zoals `identityMap.gaid` kon herhalen, `identityMap.email`, of gelijkaardig.
+> * Voor een voorbeeld van een kaartelement, denk over [ segmentMembership ](message-format.md#segment-membership).
 
-Van de [!DNL Pebble] filtersectie, Destination SDK ondersteunt alle functies. In het onderstaande voorbeeld wordt getoond hoe de `date` functie kan binnen Destination SDK worden gebruikt.
+Vanuit de filtersectie [!DNL Pebble] biedt Destination SDK ondersteuning voor alle functies. In het onderstaande voorbeeld wordt getoond hoe de functie `date` binnen Destination SDK kan worden gebruikt.
 
-Van de [!DNL Pebble] functies, sectie, Adobe doet dit *niet* de [bereik](https://pebbletemplates.io/wiki/function/range/) functie.
+Van de [!DNL Pebble] functies sectie, steunt de Adobe ** niet de [ waaier ](https://pebbletemplates.io/wiki/function/range/) functie.
 
-## Voorbeeld van hoe het `date` function wordt gebruikt {#date-function}
+## Voorbeeld van het gebruik van de functie `date` {#date-function}
 
-Uitlijnen hoe [!DNL Pebble] functies worden gebruikt in Destination SDK, zie hieronder hoe de datumfunctie ([link in Pebble documentatie](https://pebbletemplates.io/wiki/filter/date/)) wordt gebruikt om de indeling van een tijdstempel te transformeren.
+Om te verklaren hoe [!DNL Pebble] functies in Destination SDK worden gebruikt, zie onder hoe de datumfunctie ([ verbinding in de documentatie van de Beerbeurt ](https://pebbletemplates.io/wiki/filter/date/)) wordt gebruikt om het formaat van een timestamp om te zetten.
 
 ### Gebruiksscenario
 
-U wilt het dialoogvenster `lastQualificationTime` tijdstempel van de standaard [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) waarde die Experience Platform naar een andere waarde uitvoert die door uw bestemming wordt voorkeur.
+U wilt `lastQualificationTime` timestamp van de standaard [ ISO 8601 ](https://en.wikipedia.org/wiki/ISO_8601) waarde veranderen die het Experience Platform naar een andere waarde uitvoert die door uw bestemming wordt voorkeur.
 
 ### Voorbeeld
 
@@ -85,7 +85,7 @@ U wilt het dialoogvenster `lastQualificationTime` tijdstempel van de standaard [
 
 ## Door Adobe toegevoegde functies {#functions-added-by-adobe}
 
-Naast de functies die buiten de box worden geleverd door [!DNL Pebble], zie onder de extra functies die door Adobe worden gecreeerd die u voor uw gegevensuitvoer kunt gebruiken.
+Naast de functies buiten de doos die door [!DNL Pebble] worden verstrekt, zie hieronder de extra functies die door Adobe worden gecreeerd die u voor uw gegevensuitvoer kunt gebruiken.
 
 ### `addedSegments` en `removedSegments` functies {#addedsegments-removedsegments-functions}
 
@@ -199,7 +199,7 @@ added: <111111><333333>;|removed: <222222>;
 
 ## Volgende stappen {#next-steps}
 
-U weet nu welke [!DNL Pebble] functies worden ondersteund in Destination SDK en hoe u deze kunt gebruiken om de indeling van de geëxporteerde gegevens aan uw wensen aan te passen. Hierna volgt een overzicht van de volgende pagina&#39;s:
+U weet nu welke [!DNL Pebble] -functies worden ondersteund in Destination SDK en hoe u deze kunt gebruiken om de indeling van de geëxporteerde gegevens aan uw wensen aan te passen. Hierna volgt een overzicht van de volgende pagina&#39;s:
 
 * [Een sjabloon voor berichttransformatie maken en testen](../../testing-api/streaming-destinations/create-template.md)
 * [API-bewerkingen voor sjablonen renderen](../../testing-api/streaming-destinations/render-template-api.md)

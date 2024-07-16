@@ -2,10 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevens prep;api gids;schema's;
 solution: Experience Platform
 title: Schemas API Endpoint
-description: U kunt het `/schema's' eindpunt in Adobe Experience Platform API gebruiken om schema's voor gebruik met Mapper in Platform programmatically terug te winnen, tot stand te brengen en bij te werken.
+description: U kunt het `/schema's' eindpunt in Adobe Experience Platform API gebruiken om, schema's voor gebruik met Mapper in Platform programmatically terug te winnen tot stand te brengen en bij te werken.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '616'
 ht-degree: 1%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 1%
 
 # Schemas, eindpunt
 
-Schema&#39;s kunnen met Mapper worden gebruikt om ervoor te zorgen dat de gegevens die u in Adobe Experience Platform hebt ingevoerd overeenkomen met wat u wilt opnemen. U kunt de `/schemas` eindpunt programmatically om douaneschema&#39;s voor gebruik met Mapper in Platform tot stand te brengen, te maken en te krijgen.
+Schema&#39;s kunnen met Mapper worden gebruikt om ervoor te zorgen dat de gegevens die u in Adobe Experience Platform hebt ingevoerd overeenkomen met wat u wilt opnemen. U kunt het `/schemas` eindpunt gebruiken om, douaneschema&#39;s programmatically tot stand te brengen voor gebruik met Mapper in Platform.
 
 >[!NOTE]
 >
->Schema&#39;s die met dit eindpunt worden gemaakt, worden uitsluitend gebruikt met Mapper- en toewijzingssets. Als u schema&#39;s wilt maken die toegankelijk zijn voor andere services van Platforms, leest u de [Handleiding voor ontwikkelaars van het schema Register](../../xdm/api/schemas.md).
+>Schema&#39;s die met dit eindpunt worden gemaakt, worden uitsluitend gebruikt met Mapper- en toewijzingssets. Om schema&#39;s tot stand te brengen die door andere diensten van het Platform toegankelijk zijn, te lezen gelieve de [ de ontwikkelaarsgids van de Registratie van het Schema ](../../xdm/api/schemas.md).
 
 ## Alle schema&#39;s ophalen
 
-U kunt een lijst van alle beschikbare schema&#39;s van de Apper voor uw organisatie terugwinnen door een verzoek van de GET aan te dienen `/schemas` eindpunt.
+U kunt een lijst van alle beschikbare schema&#39;s van de Apper voor uw organisatie terugwinnen door een verzoek van de GET tot het `/schemas` eindpunt te richten.
 
-**API-indeling**
+**API formaat**
 
-De `/schemas` het eindpunt steunt verscheidene vraagparameters om u te helpen uw resultaten filtreren. Hoewel de meeste van deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om de kostbare overhead te helpen verminderen. U moet echter beide opties opnemen `start` en `limit` -parameters als onderdeel van uw verzoek. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`).
+Het `/schemas` eindpunt steunt verscheidene vraagparameters om u te helpen uw resultaten filtreren. Hoewel de meeste van deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om de kostbare overhead te helpen verminderen. U moet echter zowel de parameters `start` als `limit` opnemen als onderdeel van uw aanvraag. De veelvoudige parameters kunnen worden omvat, die door ampersands (`&`) worden gescheiden.
 
 ```http
 GET /schemas?limit={LIMIT}&start={START}
@@ -36,10 +36,10 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{LIMIT}` | **Vereist**. Geeft het aantal geretourneerde schema&#39;s aan. |
-| `{START}` | **Vereist**. Hiermee bepaalt u de verschuiving van de resultatenpagina&#39;s. Als u de eerste pagina met resultaten wilt ophalen, stelt u de waarde in op `start=0`. |
+| `{LIMIT}` | **Vereiste**. Geeft het aantal geretourneerde schema&#39;s aan. |
+| `{START}` | **Vereiste**. Hiermee bepaalt u de verschuiving van de resultatenpagina&#39;s. Als u de eerste pagina met resultaten wilt ophalen, stelt u de waarde in op `start=0` . |
 | `{NAME}` | Hiermee filtert u het schema op basis van de naam. |
-| `{ORDER_BY}` | Hiermee sorteert u de volgorde van de resultaten. De ondersteunde velden zijn `modifiedDate` en `createdDate`. U kunt de eigenschap vooraf samenvoegen met `+` of `-` om het te sorteren in oplopende of dalende orde. |
+| `{ORDER_BY}` | Sorteert de volgorde van de resultaten. De ondersteunde velden zijn `modifiedDate` en `createdDate` . U kunt de eigenschap voorvullen met `+` of `-` om deze in oplopende of aflopende volgorde te sorteren. |
 
 **Verzoek**
 
@@ -53,7 +53,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 De volgende reactie keert status 200 van HTTP met een lijst van de gevraagde schema&#39;s terug.
 
@@ -132,7 +132,7 @@ De volgende reactie keert status 200 van HTTP met een lijst van de gevraagde sch
 
 ## Een schema maken
 
-U kunt een schema creëren om tegen te bevestigen door een verzoek van de POST aan `/schemas` eindpunt. Er zijn drie manieren om een schema te maken: een [JSON Schema](https://json-schema.org/), met gebruik van voorbeeldgegevens of met verwijzing naar een bestaand XDM-schema.
+U kunt een schema tot stand brengen om tegen te bevestigen door een verzoek van de POST aan het `/schemas` eindpunt te doen. Er zijn drie manieren om een schema tot stand te brengen: het verzenden van het Schema van a [ JSON ](https://json-schema.org/), gebruikend steekproefgegevens, of het van verwijzingen voorzien van een bestaand schema XDM.
 
 ```http
 POST /schemas
@@ -142,7 +142,7 @@ POST /schemas
 
 **Verzoek**
 
-Met het volgende verzoek kunt u een schema maken door een [JSON Schema](https://json-schema.org/).
+Het volgende verzoek laat u een schema tot stand brengen door a [ Schema JSON ](https://json-schema.org/) te verzenden.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -161,7 +161,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met informatie over uw onlangs gecreeerd schema terug.
 
@@ -200,7 +200,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 | -------- | ----------- |
 | `sampleId` | De id van de voorbeeldgegevens waarvan u het schema baseert. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met informatie over uw onlangs gecreeerd schema terug.
 
@@ -269,9 +269,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 | -------- | ----------- |
 | `name` | De naam van het schema dat u wilt maken. |
 | `schemaRef.id` | De id van het schema waarnaar u verwijst. |
-| `schemaRef.contentType` | Bepaalt het reactieformaat van het referenced schema. Meer informatie in dit veld vindt u in het gedeelte [Handleiding voor ontwikkelaars van schemaregisters](../../xdm/api/schemas.md#lookup) |
+| `schemaRef.contentType` | Bepaalt het reactieformaat van het referenced schema. Meer informatie dit gebied kan in de [ gids van de schemaontwikkelaar van de schemacontrole ](../../xdm/api/schemas.md#lookup) worden gevonden |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met informatie over uw onlangs gecreeerd schema terug.
 
@@ -296,7 +296,7 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over uw onlangs
 
 U kunt een schema maken door een JSON-bestand te uploaden waaruit het kan worden omgezet.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /schemas/upload
@@ -304,7 +304,7 @@ POST /schemas/upload
 
 **Verzoek**
 
-Met de volgende aanvraag kunt u een schema maken op basis van een geüpload JSON-bestand.
+Met de volgende aanvraag kunt u een schema maken van een geüpload JSON-bestand.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload \
@@ -316,7 +316,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
  -F 'file=@{PATH_TO_FILE}.json'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met informatie over uw onlangs gecreeerd schema terug.
 
@@ -334,9 +334,9 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over uw onlangs
 
 ## Een specifiek schema ophalen
 
-U kunt informatie over een specifiek schema terugwinnen door een verzoek van de GET aan `/schemas` eindpunt en het verstrekken van identiteitskaart van het schema u wenst om in de verzoekweg terug te winnen.
+U kunt informatie over een specifiek schema terugwinnen door een verzoek van de GET tot het `/schemas` eindpunt te richten en identiteitskaart van het schema te verstrekken u in de verzoekweg wenst terug te winnen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /schemas/{SCHEMA_ID}
@@ -358,7 +358,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met informatie over het gespecificeerde schema terug.
 

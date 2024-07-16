@@ -13,11 +13,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 >[!NOTE]
 >
->Deze verlenging is vervangen door [Adobe Experience Platform Web SDK](../web-sdk/overview.md).
+>Deze uitbreiding is afgekeurd ten gunste van [ Adobe Experience Platform Web SDK ](../web-sdk/overview.md).
 
 De functies van deze extensie worden overgebracht naar een nieuwe extensie. Hier volgt een snelle vergelijking van de huidige functies.
 
@@ -37,21 +37,21 @@ De functies van deze extensie worden overgebracht naar een nieuwe extensie. Hier
 
 Deze sectie bevat een verwijzing naar de opties die beschikbaar zijn bij het configureren van de Adobe Experience Platform-extensie.
 
-Als de extensie Adobe Experience Platform nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensions > Catalog]**, plaatst u de aanwijzer boven de Adobe Experience Platform-extensie en selecteert u **[!UICONTROL Install]**.
+Als de Adobe Experience Platform-extensie nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensions > Catalog]** , plaatst u de aanwijzer op de Adobe Experience Platform-extensie en selecteert u **[!UICONTROL Install]** .
 
-Als u de extensie wilt configureren, opent u de [!UICONTROL Extensions] , plaatst u de cursor boven de extensie en selecteert u vervolgens **[!UICONTROL Configure]**.
+Als u de extensie wilt configureren, opent u het tabblad [!UICONTROL Extensions] , plaatst u de muisaanwijzer op de extensie en selecteert u **[!UICONTROL Configure]** .
 
 ![](../../../images/adobe-experience-platform-extension-configuration.png)
 
 ### Streaming verbinding
 
-Als u een streamingverbinding kiest, begint u met het streamen van gegevens naar Adobe Experience Platform. U kunt er een selecteren in de keuzelijst met streamingverbindingen. Streaming verbinding is een verplicht veld. Als u geen streamingverbinding hebt gemaakt, kunt u een verbinding maken door de optie **[!UICONTROL Create a streaming connection]** knop.
+Als u een streamingverbinding kiest, begint u met het streamen van gegevens naar Adobe Experience Platform. U kunt er een selecteren in de keuzelijst met streamingverbindingen. Streaming verbinding is een verplicht veld. Als er geen streamingverbinding wordt gemaakt, kunt u er een maken door op de knop **[!UICONTROL Create a streaming connection]** te klikken.
 
-Als u **[!UICONTROL Create a streaming connection]** er verschijnt een modaal venster.
+Als u **[!UICONTROL Create a streaming connection]** selecteert, wordt een modaal venster weergegeven.
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-Het modaal bevat velden met vooraf ingevulde waarden die naar wens kunnen worden gewijzigd. Als u meerdere streamingverbindingen wilt maken, moet u er rekening mee houden dat de **[!UICONTROL Data Source]** het veld moet uniek zijn. Een andere streamingverbinding maken met een **[!UICONTROL Data Source]** al gebruikt voor een andere verbinding zal mislukken.
+Het modaal bevat velden met vooraf ingevulde waarden die naar wens kunnen worden gewijzigd. Als u meerdere streamingverbindingen wilt maken, moet u er rekening mee houden dat het veld **[!UICONTROL Data Source]** uniek moet zijn. Het maken van een andere streamingverbinding met een **[!UICONTROL Data Source]** -verbinding die al voor een andere verbinding wordt gebruikt, mislukt.
 
 Nadat u een streamingeindpunt hebt geselecteerd, kiest u het streamingeindpunt URL en de bron.
 
@@ -85,7 +85,7 @@ Het veld Doelschema bevat het pad van een XDM-veld dat in het schema van de gege
 
 ### Selector schemaveld
 
-De uitbreiding biedt ook de mogelijkheid om een gebied van het doelschema te selecteren gebruikend een visuele selecteur. Als u de doelknoop selecteert die naast de het gebiedsinput van het doelschema zit, zal een modaal worden getoond waar u de het schemaboom van de dataset zult zien. U kunt een veld kiezen en vervolgens de **Selecteren** en de invoer van het doelschemaveld wordt bijgewerkt met het juiste XDM-pad.
+De uitbreiding biedt ook de mogelijkheid om een gebied van het doelschema te selecteren gebruikend een visuele selecteur. Als u de doelknoop selecteert die naast de het gebiedsinput van het doelschema zit, zal een modaal worden getoond waar u de het schemaboom van de dataset zult zien. U kunt een gebied kiezen, dan de **Uitgezochte** knoop selecteren en de input van het doelschemagebied zal worden bijgewerkt bevat de correcte weg XDM.
 
 ![](../../../images/adobe-experience-platform-send-beacon-schema-field-selector.png)
 
@@ -95,7 +95,7 @@ De schema&#39;s van de gegevens van het verslag en de reeksen gegevensschema&#39
 
 Identiteitsvelden kunnen op twee manieren binnen het schema worden gedefinieerd:
 
-1. De schema&#39;s van het verslag en van de Reeks van de Tijd bevatten allebei een speciaal gebied genoemd `xdm:identityMap` die een kaart van identiteiten kunnen bevatten.
+1. De schema&#39;s van het verslag en van de Reeks van de Tijd allebei bevatten een speciaal gebied genoemd `xdm:identityMap` dat een kaart van identiteiten kan bevatten.
 1. De zeer belangrijke gebieden kunnen als gebieden van de Identiteit binnen het schema worden gemerkt.
 
 ### Identiteitsvelden in de Adobe Experience Platform-extensie
@@ -112,7 +112,7 @@ Een schemagebied dat als niet-primair identiteitsgebied wordt bepaald, zal autom
 
 Er wordt een waarschuwingspictogram weergegeven bij elk niet-primair identiteitsveld dat geen waarde bevat.
 
-Een identiteitssectie zal zichtbaar zijn als uw schema een `xdm:identityMap` veld. U kunt deze sectie gebruiken als u liever gegevens met betrekking tot identiteiten verzendt met de opdracht `xdm:identityMap`.
+Een identiteitssectie zal zichtbaar zijn als uw schema een `xdm:identityMap` gebied bevat. U kunt deze sectie gebruiken als u liever gegevens met betrekking tot identiteiten verzendt met de `xdm:identityMap` .
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-section.png)
 
@@ -120,12 +120,12 @@ De sectie voor identiteitstoewijzing kan meerdere rijen bevatten. Elke rij kan e
 
 Als u meerdere identiteiten hebt binnen de sectie voor identiteitstoewijzing, kan slechts één identiteit als primair worden gemarkeerd.
 
-Als u een schema hebt dat een `xdm:identityMap` en tegelijkertijd een ander veld is gemarkeerd als een primair identiteitsveld, is de primaire kolom in het gedeelte voor identiteitstoewijzing niet zichtbaar.
+Als u een schema hebt dat een `xdm:identityMap` gebied heeft en tezelfdertijd een ander gebied duidelijk als primair identiteitsgebied is, zal de primaire kolom van binnen de sectie van de identiteitstoewijzing niet zichtbaar zijn.
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-section-not-primary.png)
 
 ### Vereiste velden
 
-Sommige schema&#39;s hebben verplichte velden op hoofdniveau. De meest voorkomende zijn `timestamp` en `_id`. Zonder deze gebieden te bepalen, zal het baken ontbreken. U kunt ze definiëren in de sectie voor schematoewijzing.
+Sommige schema&#39;s hebben verplichte velden op hoofdniveau. De meest voorkomende zijn `timestamp` en `_id` . Zonder deze gebieden te bepalen, zal het baken ontbreken. U kunt ze definiëren in de sectie voor schematoewijzing.
 
-Als uw sectie voor schematoewijzing niet bevat `timestamp` of `_id`, maar het datasetschema vereist hen, zal de uitbreiding van Adobe Experience Platform een baken verzenden die automatisch geproduceerde waarden bevat zodat het baken niet zal ontbreken. De automatisch geproduceerde waarden zullen aan de bakengegevens slechts worden toegevoegd als u die gebieden binnen de sectie van de schemaafbeelding niet hebt bepaald.
+Als uw sectie van de schemaafbeelding niet `timestamp` of `_id` zal bevatten, maar het datasetschema vereist hen, zal de uitbreiding van Adobe Experience Platform een baken verzenden die automatisch geproduceerde waarden bevat zodat het baken niet zal ontbreken. De automatisch geproduceerde waarden zullen aan de bakengegevens slechts worden toegevoegd als u die gebieden binnen de sectie van de schemaafbeelding niet hebt bepaald.

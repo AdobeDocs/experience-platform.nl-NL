@@ -7,7 +7,7 @@ badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/le
 exl-id: d3afbabb-005d-4537-831a-857c88043759
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ De voorspellende lood en de rekening die dienst de bovengenoemde uitdagingen doo
 
 >[!NOTE]
 >
->[!DNL Marketo] de gegevensbron wordt momenteel vereist aangezien het de enige gegevensbron is die de omzettingsgebeurtenissen op het niveau van het persoonprofiel kan verstrekken.
+>[!DNL Marketo] -gegevensbron is momenteel vereist omdat dit de enige gegevensbron is die conversiegebeurtenissen op het niveau van het persoonlijke profiel kan leveren.
 
 De voorspellende Lood en het Scoren van de Rekening gebruikt een boom-gebaseerde (willekeurige bos/gradiënt het bevorderen) machine het leren methode om het voorspellende lood te bouwen die model scoren.
 
@@ -37,7 +37,7 @@ De voorspellende lood en de rekening het scoren steunt de volgende types en de g
 | Type doel | Velden |
 | --- | --- |
 | `leadOperation.convertLead` | <ul><li>`leadOperation.convertLead.convertedStatus`</li><li>`leadOperation.convertLead.assignTo`</li></ul> |
-| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>Voorbeeld: `opportunityEvent.dataValueChanges.attributeName` equals `Stage` en `opportunityEvent.dataValueChanges.newValue` equals `Contract`</ul> |
+| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>Voorbeeld: `opportunityEvent.dataValueChanges.attributeName` is gelijk aan `Stage` en `opportunityEvent.dataValueChanges.newValue` is gelijk aan `Contract`</ul> |
 
 Het algoritme houdt rekening met de volgende attributen en inputgegevens:
 
@@ -52,7 +52,7 @@ Het algoritme houdt rekening met de volgende attributen en inputgegevens:
 
 >[!NOTE]
 > 
->Het algoritme inspecteert slechts `sourceAccountKey.sourceKey` in de Person:personComponents gebiedsgroep.
+>Het algoritme inspecteert `sourceAccountKey.sourceKey` gebied in de Person:personComponents gebiedsgroep slechts.
 
 * Accountprofiel
 
@@ -86,11 +86,11 @@ De gegevenskwaliteitseisen zijn als volgt:
 
 De het scoren banen worden in werking gesteld dagelijks en de resultaten worden bewaard als profiel en rekeningsattributen, die dan in segmentdefinities en verpersoonlijking kunnen worden gebruikt. Inzichten van de out-of-the-box analyse zijn ook beschikbaar op het accountoverzichtdashboard.
 
-Zie de documentatie voor meer informatie over hoe te [voorspelbare leads en accountscoring beheren](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) service.
+Zie de documentatie voor meer informatie over hoe te [ voorspelbare lood en rekening het sorteren ](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) dienst beheren.
 
 ## Voorspelende resultaten voor leads en accounts weergeven {#how-to-view}
 
-Na de baanlooppas, worden de resultaten bewaard in een nieuwe systeemdataset voor elk model onder de naam `LeadsAI.Scores` - ***de score***. Elke groep van het scoreveld kan bij worden gevestigd `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
+Na de baanlooppas, worden de resultaten bewaard in een nieuwe systeemdataset voor elk model onder de naam `LeadsAI.Scores` - ***de scorenaam***. Elke groep van het scoreveld kan bij `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name` worden gevestigd.
 
 | Kenmerk | Beschrijving |
 | --- | --- |
@@ -102,19 +102,19 @@ Na de baanlooppas, worden de resultaten bewaard in een nieuwe systeemdataset voo
 
 ### Klantprofielscores weergeven
 
-Selecteer **[!UICONTROL Profiles]** onder de klantensectie in het linkerpaneel, en ga dan identiteitsnamespace en identiteitswaarde in. Selecteer **[!UICONTROL View]**.
+Als u de voorspellende scores voor een personenprofiel wilt weergeven, selecteert u **[!UICONTROL Profiles]** onder de klantsectie in het linkerdeelvenster en voert u vervolgens de naamruimte en identiteitswaarde in. Selecteer **[!UICONTROL View]** wanneer u klaar bent.
 
 Selecteer vervolgens het profiel in de lijst.
 
-![Klantprofiel](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
+![ profiel van de Klant ](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-De **[!UICONTROL Detail]** De pagina bevat nu de voorspellende scores. Klik op het diagrampictogram naast de voorspellende score.
+De pagina **[!UICONTROL Detail]** bevat nu de voorspellende scores. Klik op het diagrampictogram naast de voorspellende score.
 
-![Voorspelende score voor klantprofiel](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
+![ het profielvoorspellende score van de Klant ](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 
 Een popup dialoog toont de score, de algemene scoreverdeling, de hoogste invloedrijke factoren voor deze score, en de definitie van het scoredoel.
 
-![Voorspelende score voor klantprofiel](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
+![ het profielvoorspellende score van de Klant details ](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
 
 ## Het controleren van voorspellende lood en rekenschap het scoren banen {#monitoring-jobs}
 
@@ -124,4 +124,4 @@ U kunt de standaardmetriek en de dagelijkse baan-in werking gestelde status door
 * Volgende scoretaak (datum)
 * Volgende trainingsbaan (datum)
 
-Zie de documentatie over [monitoring van banen voor voorspellend leiderschap en accountscoring](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Voor meer informatie, zie de documentatie over [ controletaken voor vooruitlopende lood en rekening het scoren ](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

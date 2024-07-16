@@ -2,11 +2,11 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Audience Manager toewijzen;publieksbeheertoewijzing
 solution: Experience Platform
 title: Toewijzingsvelden voor de Adobe Audience Manager Source Connector
-description: Leer hoe u Adobe Audience Manager-gegevens (Realtime, Onboded en Profielgegevens) toewijst aan corresponderende XDM-velden (Experience Data Model) voor de Audience Manager-bronaansluiting.
+description: Leer hoe u Adobe Audience Manager-gegevens (Realtime, Onboard en Profielgegevens) toewijst aan corresponderende XDM-velden (Experience Data Model) voor de Audience Manager-bronaansluiting.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
@@ -15,18 +15,18 @@ ht-degree: 0%
 
 De onderstaande tabellen bevatten de toewijzingen tussen de velden in Adobe Audience Manager-gegevens (Realtime, Onboard en Profielgegevens) en de bijbehorende XDM-velden.
 
-Zie de [XDM-veldwoordenboek](../../../../xdm/schema/field-dictionary.md) voor meer informatie over elk XDM-veld.
+Gelieve te zien het [ XDM gebiedswoordenboek ](../../../../xdm/schema/field-dictionary.md) voor meer informatie over elk gebied XDM.
 
-## Realtime gegevens
+## Realtime-gegevens
 
-Type: Realtime gegevens
+Type: realtime gegevens
 
 | Realtime-gegevensveld | XDM-veld |
 | --- | --- |
 | `requestIds[]` | `ExperienceEvent.identityMap["ECID"]` |
-| `requestIds[]` | `ExperienceEvent.endUserIds` - *Alleen voor naamruimten in endUserIds en alleen voor eerste waarden.* |
+| `requestIds[]` | `ExperienceEvent.endUserIds` - *slechts voor namespaces huidig in endUserIds en slechts eerste waarde.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
-| `primaryDeviceId` | ExperienceEvent.endUserIds - *Alleen voor naamruimten in endUserIds en alleen voor eerste waarden.* |
+| `primaryDeviceId` | ExperienceEvent.endUserIds - *slechts voor namespaces huidig in endUserIds en slechts eerste waarde.* |
 | `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` | `ExperienceEvent.profileStitch[]` |
@@ -40,7 +40,7 @@ Type: Realtime gegevens
 
 ## Profielgegevens
 
-Type: Profiel XDM
+Type: profiel XDM
 
 | Profielveld | XDM-veld |
 | --- | --- |

@@ -31,7 +31,7 @@ Momenteel ondersteunt Adobe Experience Platform de hieronder vermelde analytisch
 * [PX-verbinding ophalen](gainsight-px.md)
 * [Google Global Site Tag Analytics-extensie](gtag-analytics.md)
 * [Google Universal Analytics-extensie](google-universal-analytics.md)
-* [JW Player Analytics-extensie (Bèta)](jw-player-analytics.md)
+* [JW Player Analytics-extensie (Beta)](jw-player-analytics.md)
 * [Nielsen BSDK-extensie](nielsen-bsdk.md)
 * [Nielsen IMA Handler extension](nielsen-ima.md)
 * [Nielsen VideoJS Player Handler extension](nielsen-videojs.md)

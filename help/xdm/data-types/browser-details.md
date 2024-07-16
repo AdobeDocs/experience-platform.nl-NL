@@ -19,11 +19,11 @@ ht-degree: 0%
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `acceptLanguage` | String | Een IETF-taaltag ([RFC 5646](https://tools.ietf.org/html/rfc5646)). |
+| `acceptLanguage` | String | Een IETF taalmarkering ([ RFC 5646 ](https://tools.ietf.org/html/rfc5646)). |
 | `cookiesEnabled` | Boolean | Geeft aan of de instellingen van de gebruiker het schrijven van cookies toestaan. |
 | `javaEnabled` | Boolean | Geeft aan of Java is ingeschakeld in het apparaat waaruit de waarneming is uitgevoerd. |
 | `javaScriptEnabled` | Boolean | Geeft aan of JavaScript is ingeschakeld in het apparaat waaruit de waarneming is uitgevoerd. |
-| `javaScriptVersion` | String | De versie van JavaScript die tijdens de observatie wordt ondersteund. |
+| `javaScriptVersion` | String | De versie van JavaScript werd tijdens de observatie ondersteund. |
 | `javaVersion` | String | De versie van Java die tijdens de observatie wordt ondersteund. |
 | `name` | String | De naam van de toepassing of browser. |
 | `quicktimeVersion` | String | De versie van Apple Quicktime die tijdens de observatie wordt ondersteund. |
@@ -38,5 +38,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.schema.json)

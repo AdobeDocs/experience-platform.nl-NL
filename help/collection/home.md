@@ -7,13 +7,13 @@ exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '489'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
 # Overzicht van gegevensverzameling
 
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens van de klantenervaring van client-side bronnen kunt verzamelen en deze naar het Adobe Experience Platform Edge Network kunt verzenden, waar het in seconden kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe doelen.
+Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens van de klantenervaring van client-side bronnen kunt verzamelen en deze naar de Adobe Experience Platform-Edge Network kunt verzenden waar deze in seconden kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe doelen.
 
 Gegevensverzameling wordt ondersteund voor de volgende clientbronnen:
 
@@ -23,44 +23,44 @@ Gegevensverzameling wordt ondersteund voor de volgende clientbronnen:
 
 De inzameling van gegevens concentreert zich op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets, die het volgende omvatten:
 
-* [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
+* [ Edge Network van Adobe Experience Platform ](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Tags](../tags/home.md)
 * [Gegevensstromen](../datastreams/overview.md)
 * [Gebeurtenis doorsturen](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../web-sdk/home.md)
-* [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)
+* [ Adobe Experience Platform Mobile SDK ](https://developer.adobe.com/client-sdks/documentation/)
 * [Edge Network Server API](../server-api/overview.md)
-* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
+* [ Adobe Experience Platform Debugger ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
 * [Experience Platform Assurance](../assurance/home.md)
 
 
-Deze gids verstrekt een inleiding op hoog niveau aan gegevensinzameling en hoe het werkt om gegevens naar de producten van Adobe Experience Cloud en niet-Adobe toepassingen door het Netwerk van de Rand van het Platform te verzenden.
+Deze gids verstrekt een inleiding op hoog niveau aan gegevensinzameling en hoe het werkt om gegevens naar de producten van Adobe Experience Cloud en niet-Adobe toepassingen door de Edge Network van het Platform te verzenden.
 
 ## Tags, Web SDK en Mobile SDK
 
-De Platform Web SDK en Platform Mobile SDK doen ineenstorten en comprimeren alle bibliotheken van het product van de Adobe in één enkele ontwikkelingskit voor Web en mobiele platforms respectievelijk. Deze kunnen worden geïmplementeerd met onbewerkte code of met [tags](../tags/home.md) via de gebruikersinterface voor gegevensverzameling of de gebruikersinterface van Adobe Experience Platform.
+De Platform Web SDK en Platform Mobile SDK doen ineenstorten en comprimeren alle bibliotheken van het product van de Adobe in één enkele ontwikkelingskit voor Web en mobiele platforms respectievelijk. Deze kunnen worden uitgevoerd gebruikend ruwe code of gebruikend [ markeringen ](../tags/home.md) door de Inzameling UI van Gegevens of UI UI UI van Adobe Experience Platform.
 
-Het samenpersen van deze bibliotheken versnelt gegevensinzameling en consolideert verrichtingen in één enkele stroom van cliënt-zijapparaten aan het Netwerk van de Rand van het Platform.
+Het samenpersen van deze bibliotheken versnelt gegevensinzameling en consolideert verrichtingen in één enkele stroom van cliënt-zijapparaten aan de Edge Network van het Platform.
 
-![Tags, Web SDK, Mobile SDK](./images/home/tags-sdks.png)
+![ Markeringen, Web SDK, Mobiele SDK ](./images/home/tags-sdks.png)
 
-## Platform Edge Network en gegevensstreams {#edge}
+## Platform Edge Network en gegevensstromen {#edge}
 
-Platform Edge Network is een wereldwijd gedistribueerd, snel en betrouwbaar netwerk van servers die gegevens op enorme schaal kunnen ontvangen en verwerken. Met tags kunt u [datastreams](../datastreams/overview.md) voor producten zoals Adobe Target, Adobe Audience Manager en Adobe Analytics, waarmee u deze producten aan de serverzijde kunt activeren zonder de clientcode te wijzigen.
+De Edge Network van het platform is een globaal verdeeld, snel, en betrouwbaar netwerk van servers die gegevens kunnen ontvangen en verwerken op enorme schaal. Gebruikend markeringen, kunt u opstelling [ gegevensstromen ](../datastreams/overview.md) voor producten zoals Adobe Target, Adobe Audience Manager, en Adobe Analytics, die u toestaan om deze producten op de serverzijde te activeren zonder cliënt-zijcode te veranderen.
 
-Bovendien zijn de gegevensstromen geïntegreerd met verscheidene mogelijkheden van het Platform die helpen ervoor zorgen dat om het even welke gevoelige gegevens u verzendt correct met betrekking tot organisatiebeleid en wettelijke verordeningen wordt behandeld. Zie de sectie over [verwerking van gevoelige gegevens](../datastreams/overview.md#sensitive) in de documentatie van gegevensstromen voor meer informatie.
+Bovendien zijn de gegevensstromen geïntegreerd met verscheidene mogelijkheden van het Platform die helpen ervoor zorgen dat om het even welke gevoelige gegevens u verzendt correct met betrekking tot organisatiebeleid en wettelijke verordeningen wordt behandeld. Zie de sectie over [ behandelend gevoelige gegevens ](../datastreams/overview.md#sensitive) in de documentatie van gegevensstromen voor meer informatie.
 
-![Gegevensstromen en Adobe oplossingen](./images/home/adobe-solutions.png)
+![ Datastreams en de oplossingen van de Adobe ](./images/home/adobe-solutions.png)
 
 >[!NOTE]
 >
->Voor een inleiding op hoog niveau aan het Netwerk van de Rand van het Platform, verwijs naar het volgende [interactieve productrondreis](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
+>Voor een inleiding op hoog niveau aan de Edge Network van het Platform, verwijs naar de volgende [ interactieve producttour ](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
 ## Gebeurtenis doorsturen
 
-[Gebeurtenis doorsturen](../tags/ui/event-forwarding/overview.md) kan in om het even welke gegevensstroom van het Experience Platform tikken, die u toestaat om, gegevens te transformeren te verrijken en te verzenden naar om het even welke niet Adobe bestemming met extreme lage latentie en zonder enige dercode aan het cliëntapparaat toe te voegen.
+[ Gebeurtenis door:sturen ](../tags/ui/event-forwarding/overview.md) kan in om het even welke gegevensstroom van het Experience Platform tikken, toestaand u om, gegevens aan om het even welke niet Adobe bestemming met extreme lage latentie te transformeren en te verzenden en zonder enige derdecode aan het cliëntapparaat toe te voegen.
 
-![Gebeurtenis doorsturen](./images/home/event-forwarding.png)
+![ Gebeurtenis door:sturen ](./images/home/event-forwarding.png)
 
 >[!NOTE]
 >
@@ -70,6 +70,6 @@ Bovendien zijn de gegevensstromen geïntegreerd met verscheidene mogelijkheden v
 
 Dit document verstrekte een overzicht op hoog niveau van hoe de gegevensinzameling werkt om het proces te automatiseren om uw verzamelde gegevens van de klantenervaring naar de producten van de Adobe en derdebestemmingen te verzenden.
 
-![Gegevensverzamelingskader](./images/home/collection.png)
+![ Kader van de inzameling van Gegevens ](./images/home/collection.png)
 
-Raadpleeg voor meer informatie over de algemene workflow voor het verzenden van gebeurtenisgegevens via het Edge-netwerk de [end-to-end overzicht](./e2e.md).
+Voor meer informatie over het algemene werkschema betrokken bij het verzenden van gebeurtenisgegevens door de Edge Network, verwijs naar het [ overzicht van begin tot eind ](./e2e.md).

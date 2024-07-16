@@ -14,16 +14,16 @@ ht-degree: 0%
 
 # De clustergeschiedenis van een identiteit ophalen
 
-Identiteiten kunnen clusters bewegen tijdens de uitvoering van verschillende apparaatgrafieken. [!DNL Identity Service] geeft in de loop der tijd zichtbaarheid aan de clusterverenigingen van een bepaalde identiteit.
+Identiteiten kunnen clusters bewegen tijdens de uitvoering van verschillende apparaatgrafieken. [!DNL Identity Service] biedt in de loop der tijd zichtbaarheid in de clusterkoppelingen van een bepaalde identiteit.
 
-Optioneel gebruiken `graph-type` parameter om op het outputtype te wijzen om de cluster van te krijgen. De opties zijn:
+Gebruik de optionele parameter `graph-type` om het uitvoertype aan te geven waaruit de cluster moet worden opgehaald. De opties zijn:
 
 - `None` - Geen identiteitsstitching uitvoeren.
-- `Private Graph` - Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek. Indien niet `graph-type` is opgegeven, is dit de standaardinstelling.
+- `Private Graph` - Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek. Als er geen `graph-type` is opgegeven, is dit de standaardinstelling.
 
 ## De clustergeschiedenis van één identiteit ophalen
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
@@ -31,7 +31,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 
 **Verzoek**
 
-Optie 1: Geef de identiteit op als naamruimte (`nsId`, op ID) en ID-waarde (`id`).
+Optie 1: Verstrek de identiteit als namespace (`nsId`, door identiteitskaart) en waarde van identiteitskaart (`id`).
 
 ```shell
 curl -X GET \
@@ -42,7 +42,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 2: Geef de identiteit op als naamruimte (`ns`, op naam) en ID-waarde (`id`).
+Optie 2: Verstrek de identiteit als namespace (`ns`, door naam) en waarde van identiteitskaart (`id`).
 
 ```shell
 curl -X GET \
@@ -53,7 +53,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 3: Geef de identiteit op als XID (`xid`). Zie de sectie over dit document voor meer informatie over het verkrijgen van de XID van een identiteit [XID ophalen voor een identiteit](./list-native-id.md).
+Optie 3: Geef de identiteit op als XID (`xid`). Voor meer op hoe te om XID van een identiteit te verkrijgen, zie de sectie van dit document die [ behandelt die XID voor een identiteit ](./list-native-id.md) krijgen.
 
 ```shell
 curl -X GET \
@@ -66,19 +66,19 @@ curl -X GET \
 
 ## De clustergeschiedenis van meerdere identiteiten ophalen
 
-Gebruik de `POST` methode als equivalent van de partij `GET` hierboven beschreven methode om de clusterhistorie van meerdere identiteiten te retourneren.
+Gebruik de methode `POST` als een batchequivalent van de hierboven beschreven methode `GET` om de clusterhistorie van meerdere identiteiten te retourneren.
 
 >[!NOTE]
 >
 >Het verzoek mag niet meer dan 1000 identiteiten bevatten. Verzoeken die langer zijn dan 1000 identiteiten, resulteren in 400 statuscode.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 ```
 
-**Aanvragingsinstantie**
+**het lichaam van het Verzoek**
 
 Optie 1: Geef een lijst op met XID&#39;s waarvoor u clusterleden wilt ophalen.
 
@@ -107,9 +107,9 @@ Optie 2: Geef een lijst met identiteiten op als samengestelde id&#39;s, waarbij 
 
 **Verzoek**
 
-**Studieverzoek**
+**verzoek van de Stub**
 
-Gebruik van `x-uis-cst-ctx: stub` header retourneert een onderbroken reactie. Dit is een tijdelijke oplossing om de snelle vooruitgang van de integratieontwikkeling te vergemakkelijken, terwijl de diensten worden voltooid. Dit wordt vervangen wanneer het niet meer nodig is.
+Het gebruik van `x-uis-cst-ctx: stub` header retourneert een stoppelreactie. Dit is een tijdelijke oplossing om de snelle vooruitgang van de integratieontwikkeling te vergemakkelijken, terwijl de diensten worden voltooid. Dit wordt vervangen wanneer het niet meer nodig is.
 
 ```shell
 curl -X POST \
@@ -126,7 +126,7 @@ curl -X POST \
       }'
 ```
 
-**XID&#39;s gebruiken**
+**Gebruikend XIDs**
 
 ```shell
 curl -X POST \
@@ -142,7 +142,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**UID&#39;s gebruiken**
+**Gebruikend UIDs**
 
 ```shell
 curl -X POST \
@@ -166,7 +166,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**Respompen**
+**Respomse**
 
 ```json
 {
@@ -218,4 +218,4 @@ curl -X POST \
 
 ## Volgende stappen
 
-Ga naar de volgende zelfstudie om [lijst met identiteitstoewijzingen](./list-identity-mappings.md)
+Ga aan het volgende leerprogramma te werk aan [ identiteitstoewijzingen van de lijstidentiteit ](./list-identity-mappings.md)

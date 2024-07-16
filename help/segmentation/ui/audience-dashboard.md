@@ -14,8 +14,8 @@ ht-degree: 0%
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over uw publiek kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen.
 
-Ga voor gedetailleerde instructies over het openen van en communiceren met het dashboard voor publiek in de gebruikersinterface en voor meer informatie over de beschikbare metriek die in het dashboard wordt weergegeven naar de [gebruikershandleiding in dashboard](../../dashboards/guides/audiences.md).
+Voor gedetailleerde instructies op hoe te om tot en met het publiek dashboard in UI toegang te hebben en in wisselwerking te staan, evenals meer over de beschikbare metriek te leren die in het dashboard wordt getoond, gelieve de [ gids van het publiek ](../../dashboards/guides/audiences.md) te bezoeken.
 
-Voor een overzicht van alle dashboardfuncties in de gebruikersinterface van het Experience Platform, begin door te lezen [overzicht van dashboards](../../dashboards/home.md).
+Voor een overzicht van alle dashboardeigenschappen binnen het gebruikersinterface van het Experience Platform, gelieve te beginnen door het [ overzicht van dashboards ](../../dashboards/home.md) te lezen.
 
-![Het publiek dashboard. Hier worden drie widgets weergegeven: de widget voor de publieksgrootte, de widget voor de wijziging van de publieksgrootte en de profielen per identiteitswidget.](../../dashboards/images/segments/dashboard-overview.png)
+![ het publiek dashboard. Dit toont drie widgets - de widget voor de publieksgrootte, de widget voor de verandering van de publieksgrootte, en de profielen door identiteitswidget.](../../dashboards/images/segments/dashboard-overview.png)

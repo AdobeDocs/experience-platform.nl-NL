@@ -11,17 +11,17 @@ ht-degree: 0%
 
 # [!UICONTROL Healthcare Provider] schemaveldgroep
 
-[!UICONTROL Healthcare Provider] is een standaardschemagebiedgroep voor [[!UICONTROL Provider] class](../../classes/provider.md). Het biedt één veld van het objecttype `healthcareProvider` die eigenschappen vastlegt die verband houden met een individuele gezondheidswerker of een organisatie van een gezondheidsinstelling die een vergunning heeft om medische diagnoses en behandelingen te verrichten.
+[!UICONTROL Healthcare Provider] is een standaardgroep van het schemagebied voor de [[!UICONTROL Provider] klasse ](../../classes/provider.md). Het biedt één objecttype veld `healthcareProvider` waarin eigenschappen worden vastgelegd die gerelateerd zijn aan een individuele gezondheidswerker of een organisatie van een gezondheidszorginstelling die een vergunning heeft om medische diagnoses en behandelingsdiensten te verrichten.
 
 ![](../../images/field-groups/healthcare-provider.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `addressDetails` | Array van objecten | Hier worden de adresgegevens van de provider weergegeven. Elk object bevat de volgende eigenschappen: <ul><li>`address`: ([[!UICONTROL Postal address]](../../data-types/postal-address.md)): Het postadres van de aanbieder.</li><li>`addressType`: (String) Het type adres dat aangeeft waar de provider services levert.</li></ul> |
+| `addressDetails` | Array van objecten | Hier worden de adresgegevens van de provider weergegeven. Elk object bevat de volgende eigenschappen: <ul><li>`address`: ([[!UICONTROL Postal address]](../../data-types/postal-address.md)): Het postadres voor de leverancier.</li><li>`addressType`: (Tekenreeks) Het type adres dat aangeeft waar de provider services levert.</li></ul> |
 | `emailAddress` | [[!UICONTROL Email address]](../../data-types/email-address.md) | Het e-mailadres van de provider. |
 | `fax` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Het faxnummer van de provider. |
 | `phoneNumber` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Het telefoonnummer van de provider. |
-| `qualifications` | Array van objecten | Hier worden de certificeringen, licenties of opleidingen vermeld die betrekking hebben op het verlenen van zorg. Elk object bevat de volgende eigenschappen: <ul><li>`issuer`: ([[!UICONTROL Account details]](../../data-types/account-details.md)): De organisatie die de kwalificatie regelt en afgeeft.</li><li>`activePeriod`: (Geheel getal) Het jaar tot waar de kwalificatie geldig is.</li><li>`code`: (String) Een gecodeerde representatie van de kwalificatie.</li></ul> |
+| `qualifications` | Array van objecten | Hier worden de certificeringen, licenties of opleidingen vermeld die betrekking hebben op het verlenen van zorg. Elk object bevat de volgende eigenschappen: <ul><li>`issuer`: ([[!UICONTROL Account details]](../../data-types/account-details.md)): De organisatie die de kwalificatie regelt en uitgeeft.</li><li>`activePeriod`: (Geheel getal) Het jaar tot waar de kwalificatie geldig is.</li><li>`code`: (String) Een gecodeerde representatie van de kwalificatie.</li></ul> |
 | `classification` | String | De classificatie van de dienstverlener gebaseerd op klasse of categorie (zoals patiëntenzorg, niet patiëntenzorg, etc.). |
 | `isActive` | Boolean | Geeft aan of de provider actief is. |
 | `languages` | Array van tekenreeksen | Een lijst met talen die de provider gebruikt. |
@@ -32,4 +32,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).

@@ -14,30 +14,30 @@ ht-degree: 0%
 
 # Maak klantsegmenten met voorspelde scores
 
-Wanneer een voorspelling is voltooid, worden voorspelde scores voor de dichtheid automatisch verbruikt door Profielen. Door profielen te verrijken met AI-scores van de Klant, kunnen klantsegmenten worden gemaakt om een publiek te zoeken op basis van hun populatiescore. Deze sectie verstrekt stappen voor het creëren van segmenten gebruikend de Bouwer van het Segment. Voor een robuustere zelfstudie over het maken van segmenten raadpleegt u de [Gebruikershandleiding voor Segment Builder](../../../segmentation/ui/segment-builder.md).
+Wanneer een voorspelling is voltooid, worden voorspelde scores voor de dichtheid automatisch verbruikt door Profielen. Door profielen te verrijken met AI-scores van de Klant, kunnen klantsegmenten worden gemaakt om een publiek te zoeken op basis van hun populatiescore. Deze sectie verstrekt stappen voor het creëren van segmenten gebruikend de Bouwer van het Segment. Voor een robuustere zelfstudie bij het creëren van segmenten, gelieve de [ gebruikersgids van de Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) te zien.
 
 >[!IMPORTANT]
 >
 >Om deze methode te gebruiken, moet het Profiel van de Klant in real time voor de dataset worden toegelaten.
 
-Klik in de interface van het platform op **[!UICONTROL Segments]** in de linkernavigatie, en klik dan **[!UICONTROL Create segment]**.
+Klik in de interface Platform op **[!UICONTROL Segments]** in de linkernavigatie en klik vervolgens op **[!UICONTROL Create segment]** .
 
 ![](../images/user-guide/segments_new.png)
 
-De **Segment Builder** wordt weergegeven. Van links **[!UICONTROL Fields]** en onder de **[!UICONTROL Attributes]** tab, klik op de map met de naam **[!UICONTROL XDM Individual Profile]** en klik vervolgens op de map met de naamruimte van uw organisatie. De benoemde map **[!UICONTROL Customer AI]** bevat de resultaten van voorspellingslooppas en genoemd naar de instantie de scores tot behoren. Klik op een instantiemap om de resultaten van de gewenste instantie te openen.
+De **Bouwer van het Segment** verschijnt. Klik in de linkerkolom **[!UICONTROL Fields]** en onder de tab **[!UICONTROL Attributes]** op de map met de naam **[!UICONTROL XDM Individual Profile]** en klik vervolgens op de map met de naamruimte van uw organisatie. De map met de naam **[!UICONTROL Customer AI]** bevat de resultaten van voorspelling en krijgt een naam na de instantie waartoe de scores behoren. Klik op een instantiemap om de resultaten van de gewenste instantie te openen.
 
 ![](../images/user-guide/results_new.png)
 
-In het midden van Segment Builder kunt u de **[!UICONTROL Score]** kenmerk op de *regelbouwcanvas* om een regel te definiëren.
+Bevestigd in het centrum van de Bouwer van het Segment, sleep en laat vallen de **[!UICONTROL Score]** attributen op het *canvas van de regelbouwer* om een regel te bepalen.
 
-Rechts onder *Segmenteigenschappen* een naam voor het segment opgeven.
+Onder de rechtse *eigenschappen van het Segment* kolom, verstrek een naam voor het segment.
 
 ![](../images/user-guide/properties_new.png)
 
-Boven de linkerkant *Velden* kolom, klikt u op de **tandwiel** en selecteert u een *Samenvoegbeleid* in de vervolgkeuzelijst. Klikken **[!UICONTROL Save]** om het segment te maken.
+Boven de linkerhand *kolom van Gebieden*, klik het **tandwiel** pictogram en selecteer het beleid van de a *Fusie* van drop-down. Klik op **[!UICONTROL Save]** om het segment te maken.
 
 ![](../images/user-guide/merge_policy_new.png)
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een publiek gevonden dat is gebaseerd op hun populiteitsscores met de Segment Builder. U kunt uw publiek nu richten door hen aan bestemmingen te activeren. Zie de [Overzicht van doelen](../../../destinations/home.md) voor meer informatie .
+Door deze zelfstudie te volgen, hebt u een publiek gevonden dat is gebaseerd op hun populiteitsscores met de Segment Builder. U kunt uw publiek nu richten door hen aan bestemmingen te activeren. Zie het [ overzicht van bestemmingen ](../../../destinations/home.md) voor meer informatie.

@@ -13,111 +13,111 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
-Hieronder volgt een lijst met documentatie voor tags van clientzijde. Voor een lijst met beschikbare serverextensies raadpleegt u de [verwijzing naar extensies voor doorsturen van gebeurtenissen](../server/overview.md) in plaats daarvan.
+Hieronder volgt een lijst met documentatie voor tags van clientzijde. Voor een lijst van beschikbare server-zijuitbreidingen, zie de [ gebeurtenis die uitbreidingsverwijzing ](../server/overview.md) door:sturen.
 
 >[!NOTE]
 >
->Om het even welke uitbreidingsnaam die door een asterisk (*) wordt gevolgd verbindt met de lijst van de uitbreiding op de Uitwisseling van de Adobe, die installatie en gebruiksinstructies bevat. Alle andere koppelingen verwijzen naar de documentatie van de extensie op Adobe Experience League.
+>Elke extensienaam gevolgd door een sterretje (*) verwijst naar de vermelding van de extensie op de Adobe Exchange, die installatie- en gebruiksinstructies bevat. Alle andere koppelingen verwijzen naar de documentatie van de extensie op Adobe Experience League.
 
-* [Toegankelijke snelheidscijfers voor de site](https://exchange.adobe.com/apps/ec/103053)*
-* [Activity Map-klant](https://exchange.adobe.com/apps/ec/101531)*
-* [Pagina Actie vernieuwen](https://exchange.adobe.com/apps/ec/102848)*
-* [Websites bijhouden aanpassen](https://exchange.adobe.com/apps/ec/103195)*
-* [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
+* [ Toegankelijke Metriek van de Snelheid van de Plaats ](https://exchange.adobe.com/apps/ec/103053)*
+* [ Klanter van de Activity Map ](https://exchange.adobe.com/apps/ec/101531)*
+* [ de Pagina van de Actie verfrist zich ](https://exchange.adobe.com/apps/ec/102848)*
+* [ Adform Website het Volgen ](https://exchange.adobe.com/apps/ec/103195)*
+* [ Adobe Advertising Cloud ](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
-* [Adobe Analytics en Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
-* [Adobe Analytics &amp; Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
-* [Adobe Analytics &amp; Salesforce](https://exchange.adobe.com/apps/ec/101530)*
+* [ Adobe Analytics &amp; Adobe Target ](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
+* [ Adobe Analytics &amp; de Dynamica van Microsoft ](https://exchange.adobe.com/apps/ec/102966)*
+* [ Adobe Analytics &amp; Salesforce ](https://exchange.adobe.com/apps/ec/101530)*
 * [Adobe Analytics-producttekenreeks](./product-string/overview.md)
-* [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)*
-* [Adobe Analytics via Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
+* [ de Bouwer van het Koord van het Product van Adobe Analytics ](https://exchange.adobe.com/apps/ec/101461)*
+* [ Adobe Analytics via het Web SDK van Adobe Experience Platform ](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
 * [Adobe Audience Manager](./audience-manager/overview.md)
 * [Gegevenslaag client-Adobe](./client-data-layer/overview.md)
 * [Adobe ContextHub](./contexthub/overview.md)
-* [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
+* [ Adobe Experience Manager Forms ](https://exchange.adobe.com/apps/ec/107493)*
 * [Adobe Experience Cloud ID Service](./id-service/overview.md)
 * [Adobe Experience Platform Demo](./platform-demo/overview.md)
 * [Adobe Experience Platform Web SDK](./web-sdk/overview.md)
 * [Adobe Experience Manager Asset Insights](./asset-insights/overview.md)
-* [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
+* [ Adobe Fonts ](https://exchange.adobe.com/apps/ec/101538)*
 * [Adobe Media Analytics voor audio en video](./media-analytics/overview.md)
 * [Adobe Media Analytics (3.x SDK)](./media-analytics-3x/overview.md)
 * [Privacy Adoben](./privacy/overview.md)
-* [Adobe Report Suite Selector](https://exchange.adobe.com/apps/ec/100640)*
+* [ de Selector van de Reeks van het Rapport van de Adobe ](https://exchange.adobe.com/apps/ec/100640)*
 * [Adobe Target](./target/overview.md)
 * [Adobe Target v2](./target-v2/overview.md)
-* [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)*
-* [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)*
-* [Asset Insights AEM](https://exchange.adobe.com/apps/ec/103406)*
-* [JS-kennisgeving Airrem](https://exchange.adobe.com/apps/ec/103342)*
-* [Amplitude](https://exchange.adobe.com/apps/ec/108010)*
-* [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)*
-* [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)*
-* [Awin-conversietag](https://exchange.adobe.com/apps/ec/103240)*
-* [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)*
-* [Bing Ads Universal Event Tracking](https://exchange.adobe.com/apps/ec/100154)*
-* [Branch](https://exchange.adobe.com/apps/ec/101382)*
+* [ Toolkit van Adobe Target ](https://exchange.adobe.com/apps/ec/100640)*
+* [ Advertising Cloud ](https://exchange.adobe.com/apps/ec/100640)*
+* [ AEM de Inzichten van Activa ](https://exchange.adobe.com/apps/ec/103406)*
+* [ Airrem JS Notifier ](https://exchange.adobe.com/apps/ec/103342)*
+* [ Amplitude ](https://exchange.adobe.com/apps/ec/108010)*
+* [ Apollo QAX ](https://exchange.adobe.com/apps/ec/105068)*
+* [ Advertiser MasterTag ](https://exchange.adobe.com/apps/ec/103176)*
+* [ Awin de Markering van de Omzetting ](https://exchange.adobe.com/apps/ec/103240)*
+* [ Menselijke context Beemray ](https://exchange.adobe.com/apps/ec/101063)*
+* [ het Bing voegt de Universele Gebeurtenis het Volgen ](https://exchange.adobe.com/apps/ec/100154)* toe
+* [ Tak ](https://exchange.adobe.com/apps/ec/101382)*
 * [[!DNL BrightCove] video bijhouden](./brightcove/overview.md)
-* [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)*
-* [Kanaalbron-id](https://exchange.adobe.com/apps/ec/101412)*
-* [Cheetah Ervaringen](https://exchange.adobe.com/apps/ec/102759)*
-* [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
+* [ CallTrackingMetrics ](https://exchange.adobe.com/apps/ec/107695)*
+* [ het Herkenningsteken van Source van het Kanaal ](https://exchange.adobe.com/apps/ec/101412)*
+* [ Ervaringen van de Tijger ](https://exchange.adobe.com/apps/ec/102759)*
+* [ Clicktale ](https://exchange.adobe.com/apps/ec/100082)*
 * [Gebruikelijke plug-ins voor Analytics](./plugins/overview.md)
 * [Algemene insteekmodules voor Web SDK](./web-sdk/web-sdk-plugins.md)
-* [Concat](https://exchange.adobe.com/apps/ec/104690)*
-* [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
-* [Cookie-beheer voor toestemming door gebruikers CMP v2](https://exchange.adobe.com/apps/ec/*107037)*
+* [ Concat ](https://exchange.adobe.com/apps/ec/104690)*
+* [ ContentSquare ](https://exchange.adobe.com/apps/ec/100364)*
+* [ het Beheer van de Toestemming van het Koekje door Gebruikerscentrics CMP v2 ](https://exchange.adobe.com/apps/ec/*107037)*
 * [Kern](./core/overview.md)
-* [Aangepaste foutopsporingslogger](https://exchange.adobe.com/apps/ec/104698)*
-* [Klantenherkenning](https://exchange.adobe.com/apps/ec/100688)*
-* [Assistent gegevenselement (DEA)](https://exchange.adobe.com/apps/ec/101413)*
-* [Data Layer Manager](https://exchange.adobe.com/apps/ec/101462)*
-* [Decibel](https://exchange.adobe.com/apps/ec/100913)*
-* [Demandbase](https://exchange.adobe.com/apps/ec/101605)*
-* [Differentiële privacy](https://exchange.adobe.com/apps/ec/104535)*
-* [Dynamic Media Viewers](https://exchange.adobe.com/apps/ec/103048)*
-* [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)*
-* [OneTag knipperen](https://exchange.adobe.com/apps/ec/101392)*
-* [ForeSee](https://exchange.adobe.com/apps/ec/100164)*
-* [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)*
-* [Voorspelfunctie van Genesys](https://exchange.adobe.com/apps/ec/106148)*
+* [ Eigen zuivert Logger ](https://exchange.adobe.com/apps/ec/104698)*
+* [ Erkenning van de Klant ](https://exchange.adobe.com/apps/ec/100688)*
+* [ Medewerker van het Element van Gegevens (DEA) ](https://exchange.adobe.com/apps/ec/101413)*
+* [ Manager van de Laag van Gegevens ](https://exchange.adobe.com/apps/ec/101462)*
+* [ Decibel ](https://exchange.adobe.com/apps/ec/100913)*
+* [ Demandbase ](https://exchange.adobe.com/apps/ec/101605)*
+* [ Differentiële Privacy ](https://exchange.adobe.com/apps/ec/104535)*
+* [ de Kijkers van Dynamic Media ](https://exchange.adobe.com/apps/ec/103048)*
+* [ EDDL Helper ](https://exchange.adobe.com/apps/ec/107691)*
+* [ Flashtalk OneTag ](https://exchange.adobe.com/apps/ec/101392)*
+* [ ForeSee ](https://exchange.adobe.com/apps/ec/100164)*
+* [ verzamelen PX ](https://exchange.adobe.com/apps/ec/103343)*
+* [ Predictive Engagement van Genesys ](https://exchange.adobe.com/apps/ec/106148)*
 * [Google-gegevenslaag](./google-data-layer/overview.md)
-* [Google Global Site Tag (tag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)*
-* [InMoment](https://exchange.adobe.com/apps/ec/100847)*
-* [JSON Helper](https://exchange.adobe.com/apps/ec/106449)*
-* [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)*
-* [KickFire](https://exchange.adobe.com/apps/ec/101621)*
-* [Toewijzingstabel](https://exchange.adobe.com/apps/ec/103136)*
-* [Merkury Tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag)*
+* [ Google Globale markering van de Plaats (gtag) ](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)*
+* [ InMoment ](https://exchange.adobe.com/apps/ec/100847)*
+* [ JSON Helper ](https://exchange.adobe.com/apps/ec/106449)*
+* [ Analyses van de Speler JW ](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)*
+* [ KickFire ](https://exchange.adobe.com/apps/ec/101621)*
+* [ Toewijzende Lijst ](https://exchange.adobe.com/apps/ec/103136)*
+* [ Merkury Tag ](https://exchange.adobe.com/apps/ec/600027/merkury-tag)*
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
-* [Hoofd-eigenschappenbeheer](https://exchange.adobe.com/apps/ec/102992)*
-* [Monitor](https://exchange.adobe.com/apps/ec/106544)*
-* [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)*
-* [OneTrust Consent-beheer voor cookies](https://exchange.adobe.com/apps/ec/100340)*
-* [Pepperjam](https://exchange.adobe.com/apps/ec/103587)*
-* [Persado Connect](https://exchange.adobe.com/apps/ec/103745)*
-* [Pinterest-conversie bijhouden](https://exchange.adobe.com/apps/ec/100523)*
-* [Pixellader](https://exchange.adobe.com/apps/ec/100152)*
-* [Feedback op website van Qualtrics](https://exchange.adobe.com/apps/ec/101569)*
-* [Quantum Metric](https://exchange.adobe.com/apps/ec/101535)*
-* [Momentum oplossen](https://exchange.adobe.com/apps/ec/108352)*
-* [Rokt](https://exchange.adobe.com/apps/ec/107591)*
-* [SDI-enquête](https://exchange.adobe.com/apps/ec/102991)*
-* [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)*
-* [SessionCam](https://exchange.adobe.com/apps/ec/100517)*
+* [ HoofdManager van het Bezit ](https://exchange.adobe.com/apps/ec/102992)*
+* [ Controle ](https://exchange.adobe.com/apps/ec/106544)*
+* [ Nielsen Digitale SDK ](https://exchange.adobe.com/apps/ec/101361)*
+* [ OneTrust Consent Beheer voor Cookies ](https://exchange.adobe.com/apps/ec/100340)*
+* [ Pepperjam ](https://exchange.adobe.com/apps/ec/103587)*
+* [ Persado verbindt ](https://exchange.adobe.com/apps/ec/103745)*
+* [ het Volgen van de Omzetting van Pinterest ](https://exchange.adobe.com/apps/ec/100523)*
+* ](https://exchange.adobe.com/apps/ec/100152)* van de Lader van 0} pixel[
+* [ de Terugkoppeling van de Website van Qualtrics ](https://exchange.adobe.com/apps/ec/101569)*
+* [ Metrisch van Quantum ](https://exchange.adobe.com/apps/ec/101535)*
+* [ Los Momentum ](https://exchange.adobe.com/apps/ec/108352)*
+* [ Rokt ](https://exchange.adobe.com/apps/ec/107591)*
+* [ SDI Onderzoek ](https://exchange.adobe.com/apps/ec/102991)*
+* [ Toolkit SDI ](https://exchange.adobe.com/apps/ec/101460)*
+* [ SessionCam ](https://exchange.adobe.com/apps/ec/100517)*
 <!-- * [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html) -->
-* [Opslagspanner](https://exchange.adobe.com/apps/ec/102990)*
-* [TAGS van Loop Horizon](https://exchange.adobe.com/apps/ec/106092)*
-* [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)*
-* [Verrijking van gegevens in Tealium](https://exchange.adobe.com/apps/ec/104217)*
-* [TMMData Foundation Platform](https://exchange.adobe.com/apps/ec/100148)*
-* [TrustArc Cookie-toegangsbeheer](https://exchange.adobe.com/apps/ec/107037)*
-* [Vimeo Playback](https://exchange.adobe.com/apps/ec/108937)*
-* [Webvariaties](https://exchange.adobe.com/apps/ec/106769)*
-* [XDM Composer](https://exchange.adobe.com/apps/ec/106062)*
-* [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)*
-* [Tekstomzetting bijhouden](https://exchange.adobe.com/apps/ec/103174)*
-* [[!DNL Youtube] Afspelen](https://exchange.adobe.com/apps/ec/103174)*
+* [ Spanner van de Opslag ](https://exchange.adobe.com/apps/ec/102990)*
+* [ TAGS door Horizon van de Lijn ](https://exchange.adobe.com/apps/ec/106092)*
+* [ Tealium verzamelt ](https://exchange.adobe.com/apps/ec/104217)*
+* [ de Verrijking van Gegevens van de Tealium ](https://exchange.adobe.com/apps/ec/104217)*
+* [ Platform van de Stichting TMMData ](https://exchange.adobe.com/apps/ec/100148)*
+* [ TrustArc de Manager van de Toestemming van het Koekje ](https://exchange.adobe.com/apps/ec/107037)*
+* [ de Playback van Vimeo ](https://exchange.adobe.com/apps/ec/108937)*
+* [ de Vestigingen van het Web ](https://exchange.adobe.com/apps/ec/106769)*
+* [ XDM Composer ](https://exchange.adobe.com/apps/ec/106062)*
+* [ Yahoo Dot ](https://exchange.adobe.com/apps/ec/106062)*
+* [ Yext Omzetting die ](https://exchange.adobe.com/apps/ec/103174) volgen*
+* [[!DNL Youtube]  Playback ](https://exchange.adobe.com/apps/ec/103174)*
 * [[!DNL YouTube] video bijhouden](./youtube/overview.md)

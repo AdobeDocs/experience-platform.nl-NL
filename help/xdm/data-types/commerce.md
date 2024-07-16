@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schema's;handel;datatype;data-type;gegevenstype;
 solution: Experience Platform
-title: Gegevenstype Handel
-description: Leer over het gegevenstype van het Gegevensmodel van de Ervaring van de Handel (XDM).
+title: Commerce-gegevenstype
+description: Meer informatie over het gegevenstype Commerce Experience Data Model (XDM).
 exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 source-git-commit: f70ca0d8ab0e92cc0e1007021c0778361701dc84
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # [!UICONTROL Commerce] gegevenstype
 
-[!UICONTROL Commerce] is een standaard gegevenstype van het Gegevensmodel van de Ervaring (XDM) dat de verslagen met betrekking tot het kopen en het verkopen beschrijft.
+[!UICONTROL Commerce] is een standaard XDM-gegevenstype (Experience Data Model) dat de records beschrijft die betrekking hebben op kopen en verkopen.
 
-![Een schema van de [!UICONTROL Commerce] gegevenstype.](../images/data-types/commerce.png)
+![ een diagram van het [!UICONTROL Commerce] gegevenstype.](../images/data-types/commerce.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |------------------------------------------|-----------------------|------------------------------------|----------------------------------------------------------------------------------------------------------|
@@ -47,9 +47,9 @@ ht-degree: 0%
 
 ## [!UICONTROL billing] gegevenstype {#billing}
 
-[!UICONTROL billing] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat informatie over het factureren details bevat. Specifiek, concentreert het zich op het factureringsadres.
+[!UICONTROL billing] is een standaard XDM-gegevenstype (Experience Data Model) dat informatie bevat over factureringsdetails. Specifiek, concentreert het zich op het factureringsadres.
 
-![Een diagram van het gegevenstype voor facturering.](../images/data-types/billing.png)
+![ A diagram van het het factureren gegevenstype.](../images/data-types/billing.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |-------------------------------|-----------------|-----------------|--------------------------|
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de [!UICONTROL Commerce] gegevenstype, verwijs naar de openbare bewaarplaats XDM:
+Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype [!UICONTROL Commerce] :
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json)

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!UICONTROL Place context] gegevenstype
 
-[!UICONTROL Place context] is een standaard XDM gegevenstype dat de plaats van een waargenomen gebeurtenis, met inbegrip van punt-van-belang informatie en geografische coördinaten beschrijft.
+[!UICONTROL Place context] is een standaard XDM-gegevenstype dat de locatie van een waargenomen gebeurtenis beschrijft, inclusief informatie over punten en geografische coördinaten.
 
 <img src="../images/data-types/place-context.png" width="500" /><br />
 
@@ -22,12 +22,12 @@ ht-degree: 0%
 | `POIinteraction` | [[!UICONTROL Point of interest interaction]](./poi-interaction.md) | Beschrijft details over de punt-van-belang (POI) interactie. |
 | `activePOIs` | Array van [[!UICONTROL Point of interest details]](./poi-details.md) | Beschrijft POIs die de gebeurtenis veroorzaakte. |
 | `geo` | [[!UICONTROL Geo]](./geo.md) | Beschrijft de geografische plaats waar de ervaring werd geleverd. |
-| `localTime` | DateTime | Een tijdstempel in [RFC 339](https://tools.ietf.org/html/rfc3339) notatie die de lokale tijd aangeeft met een opgegeven verschuiving van de tijdzone. Het opmaakpatroon is `yyyy-MM-dd'T'HH:mm:ssXXX` (bijvoorbeeld `2001-07-04T12:08:56-07:00`). |
-| `localTimezoneOffset` | Geheel | De huidige lokale tijdzone wordt in minuten verschoven van UTC voor de `localTime` waarde. Dit moet, indien van toepassing, de huidige DST-verschuiving omvatten. |
+| `localTime` | DateTime | Een timestamp in [ RFC 3339 ](https://tools.ietf.org/html/rfc3339) formaat, die op de lokale tijd wijzen die met een verklaarde compensatie van de tijdzone gebruikt. Het opmaakpatroon is `yyyy-MM-dd'T'HH:mm:ssXXX` (bijvoorbeeld `2001-07-04T12:08:56-07:00` ). |
+| `localTimezoneOffset` | Geheel | De huidige lokale tijdzoneverschuiving in minuten vanaf UTC voor de waarde `localTime` . Dit moet, indien van toepassing, de huidige DST-verschuiving omvatten. |
 
 {style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.schema.json)

@@ -1,7 +1,8 @@
 ---
 title: Aangepaste metagegevens met gegevenrapportage gegevenstype
 description: Meer informatie over het gegevenstype Custom Metadata Details Reporting Experience Data Model (XDM).
-source-git-commit: a604dc8b541784ace8aedef42030e5bd8b646c28
+exl-id: d82d42fb-c725-4a81-9b2a-f6434020ab49
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
@@ -10,9 +11,9 @@ ht-degree: 0%
 
 # [!UICONTROL Custom Metadata Details] Gegevenstype rapporteren
 
-[!UICONTROL Custom Metadata Details] Rapportering is een standaard XDM-gegevenstype (Experience Data Model) dat een structuur definieert voor het opslaan van aangepaste metagegevens. De [!UICONTROL Custom Metadata Details] Bij het rapporteren van het gegevenstype worden details vastgelegd, zoals de naam en waarde van aangepaste metagegevens die zijn gekoppeld aan inhoud of interacties. Media-rapportvelden worden door Adobe-services gebruikt voor het analyseren van de velden voor de verzameling van media die door gebruikers worden verzonden. Deze gegevens worden, samen met andere specifieke maatstaven voor gebruikers, berekend en gerapporteerd.
+[!UICONTROL Custom Metadata Details] Rapportering is een standaard XDM-gegevenstype (Experience Data Model) waarmee een structuur wordt gedefinieerd voor het opslaan van aangepaste metagegevens. In het gegevenstype [!UICONTROL Custom Metadata Details] Reporting worden gegevens vastgelegd, zoals de naam en waarde van aangepaste metagegevens die zijn gekoppeld aan inhoud of interacties. Media-rapportvelden worden door Adobe-services gebruikt voor het analyseren van de velden voor de verzameling van media die door gebruikers worden verzonden. Deze gegevens worden, samen met andere specifieke maatstaven voor gebruikers, berekend en gerapporteerd.
 
-![Een diagram van het gegevenstype Custom Metadata Details Reporting.](../images/data-types/the-custom-metadata-reporting.png)
+![ A diagram van de Details die van Meta-gegevens van de Douane gegevenstype melden.](../images/data-types/the-custom-metadata-reporting.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |--------------------------------------------|------------------|-----------|-----------------------------------------|

@@ -12,28 +12,28 @@ ht-degree: 0%
 
 # [!UICONTROL Flight Reservation] schemaveldgroep
 
-[!UICONTROL Flight Reservation] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) gebruikt om informatie over een vluchtreservering vast te leggen.
+[!UICONTROL Flight Reservation] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md) wordt gebruikt om informatie betreffende een vluchtreserve te vangen die.
 
-De veldgroep is een uitbreiding van de [!UICONTROL Reservation Details] veldgroep en bevat dezelfde velden onder één veld van het objecttype, `reservations`. Naast deze generieke velden, [!UICONTROL Flight Reservation] omvat ook `flightReservations` array. Deze array met objecten wordt gebruikt om een of meer reserveringen te beschrijven met eigenschappen die uniek zijn voor luchtvervoer.
+De veldgroep is een extensie van de veldgroep [!UICONTROL Reservation Details] en bevat dezelfde velden onder één objecttype, `reservations` . Naast deze algemene velden bevat [!UICONTROL Flight Reservation] ook `flightReservations` array. Deze array met objecten wordt gebruikt om een of meer reserveringen te beschrijven met eigenschappen die uniek zijn voor luchtvervoer.
 
 >[!NOTE]
 >
->In dit document worden de details van het `flightReservations` array. Voor informatie over de andere velden die in het kader van de `reservations` object, raadpleeg de [[!UICONTROL Reservation Details] veldgroepverwijzing](./reservation-details.md).
+>In dit document worden de details van de array `flightReservations` besproken. Voor informatie over de andere gebieden die onder het `reservations` voorwerp worden verstrekt, gelieve te verwijzen naar [[!UICONTROL Reservation Details] de verwijzing van de gebiedsgroep ](./reservation-details.md).
 
-![Vluchtreserveringsstructuur](../../images/field-groups/flight-reservation/structure.png)
+![ structuur van de Reservering van de Vlucht ](../../images/field-groups/flight-reservation/structure.png)
 
 ## `flightReservations`
 
-`flightReservations` is een array met objecten die een lijst met vluchtreserveringen vertegenwoordigt. Als een reserveringsgebeurtenis reserveringen voor meerdere aansluitende vluchten op een reis inhoudt, kunnen deze reserveringen bijvoorbeeld als afzonderlijke objecten worden vermeld onder `flightReservations` voor één gebeurtenis.
+`flightReservations` is een array met objecten die een lijst met vliegreserveringen vertegenwoordigt. Als een reserveringsgebeurtenis reserveringen voor meerdere aansluitende vluchten op een reis bevat, kunnen deze reserveringen bijvoorbeeld worden vermeld als afzonderlijke objecten onder `flightReservations` voor één gebeurtenis.
 
-De structuur van elk object dat wordt geleverd onder `flightReservations` wordt hieronder gegeven.
+Hieronder vindt u de structuur van elk object dat onder `flightReservations` wordt geleverd.
 
-![flightReservations-structuur](../../images/field-groups/flight-reservation/flightReservations.png)
+![ flightReservations structuur ](../../images/field-groups/flight-reservation/flightReservations.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `flightCheckIn` | Object | Hiermee worden gegevens over de vluchtcontrole vastgelegd. Het object bevat de volgende eigenschappen:<ul><li>`arrivalAirportCode`: (String) De luchthavencode van de aankomststad.</li><li>`boardingGroup`: (String) De luchtvaartspecifieke indicator van instaporder.</li><li>`checkInMethod`: (String) De methode die de inchecken heeft gebruikt, zoals de teller, online, kiosk of zelfbediening.</li><li>`checkedBags`: (Geheel getal) Het aantal zakken dat voor de vlucht is gecontroleerd.</li><li>`checkedPassengers`: (Geheel getal) Het aantal passagiers dat voor de vlucht is ingecheckt, indien er meerdere passagiers zijn voor hetzelfde reserveringsnummer.</li><li>`confirmationNumber`: (String) Het bevestigingsnummer of de id van de reservering.</li><li>`departureAirportCode`: (String) De luchthavencode van de vertrekstad.</li><li>`flightNumber`: (String) The flight number for the flight being reserved.</li></ul> |
-| `flightStatusSearch` | Object | Hiermee worden de gegevens vastgelegd die worden teruggestuurd wanneer de status van de vlucht wordt doorzocht. Het object bevat de volgende eigenschappen:<ul><li>`arrivalAirportCode`: (String) De luchthavencode van de aankomststad.</li><li>`boardingGroup`: (String) De luchtvaartspecifieke indicator van instaporder.</li><li>`departureAirportCode`: (String) De luchthavencode van de vertrekstad.</li><li>`departureDate`: (DateTime) De vertrekdatum van de gereserveerde vlucht.</li><li>`flightNumber`: (String) The flight number for the flight being reserved.</li><li>`searchCount`: (Geheel getal) Het aantal keren dat de status van de gereserveerde vlucht is doorzocht.</li></ul> |
+| `flightCheckIn` | Object | Hiermee worden gegevens over de vluchtcontrole vastgelegd. Het object bevat de volgende eigenschappen:<ul><li>`arrivalAirportCode`: (String) De luchthavencode van de aankomststad.</li><li>`boardingGroup`: (Tekenreeks) De luchtvaartspecifieke indicator van instaporder.</li><li>`checkInMethod`: (Tekenreeks) De methode die de inchecking heeft gebruikt, zoals de teller, online, kiosk of zelfbediening.</li><li>`checkedBags`: (Geheel getal) Het aantal zakken dat op de vlucht is gecontroleerd.</li><li>`checkedPassengers`: (Geheel getal) Het aantal passagiers dat voor de vlucht is ingecheckt, indien er meerdere passagiers zijn voor hetzelfde reserveringsnummer.</li><li>`confirmationNumber`: (String) Het bevestigingsnummer of de id van de reservering.</li><li>`departureAirportCode`: (String) De luchthavencode van de vertrekstad.</li><li>`flightNumber`: (String) Het vluchtnummer voor de vlucht die wordt gereserveerd.</li></ul> |
+| `flightStatusSearch` | Object | Hiermee worden de gegevens vastgelegd die worden teruggestuurd wanneer de status van de vlucht wordt doorzocht. Het object bevat de volgende eigenschappen:<ul><li>`arrivalAirportCode`: (String) De luchthavencode van de aankomststad.</li><li>`boardingGroup`: (Tekenreeks) De luchtvaartspecifieke indicator van instaporder.</li><li>`departureAirportCode`: (String) De luchthavencode van de vertrekstad.</li><li>`departureDate`: (DateTime) De vertrekdatum van de vlucht die wordt gereserveerd.</li><li>`flightNumber`: (String) Het vluchtnummer voor de vlucht die wordt gereserveerd.</li><li>`searchCount`: (Geheel getal) Het aantal keren dat de status van de gereserveerde vlucht is doorzocht.</li></ul> |
 | `agentID` | String | De agent of de boekhouder die verantwoordelijk is voor de boeking van de boeking, indien van toepassing. |
 | `aircraftID` | String | Een id voor het luchtvaartuig. |
 | `aircraftType` | String | Het type luchtvaartuig. |
@@ -65,5 +65,5 @@ De structuur van elk object dat wordt geleverd onder `flightReservations` wordt 
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-flight-reservation.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-flight-reservation.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-flight-reservation.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-flight-reservation.schema.json)

@@ -11,28 +11,28 @@ ht-degree: 0%
 
 # Het eindpunt van gebeurtenissen controleren
 
-De logboeken van de controle worden gebruikt om details van gebruikersactiviteit voor diverse diensten en mogelijkheden te verstrekken. Elke actie die in een logboek wordt geregistreerd bevat meta-gegevens die op het actietype, datum en tijd, e-mailidentiteitskaart van de gebruiker die de actie, en extra attributen relevant voor het actietype uitvoerde. De `/audit/events` in de [!DNL Audit Query] API staat u toe om gebeurtenisgegevens voor de activiteit van uw organisatie programmatically terug te winnen in [!DNL Platform].
+De logboeken van de controle worden gebruikt om details van gebruikersactiviteit voor diverse diensten en mogelijkheden te verstrekken. Elke actie die in een logboek wordt geregistreerd bevat meta-gegevens die op het actietype, datum en tijd, e-mailidentiteitskaart van de gebruiker die de actie, en extra attributen relevant voor het actietype uitvoerde. Met het eindpunt `/audit/events` in de [!DNL Audit Query] API kunt u gebeurtenisgegevens voor de activiteit van uw organisatie in [!DNL Platform] programmatisch ophalen.
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Audit Query]  API ](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
 
 ## Controles weergeven
 
-U kunt gebeurtenisgegevens ophalen door een GET-aanvraag in te dienen bij de `/audit/events` eindpunt, die de gebeurtenissen specificeren u in de nuttige lading wenst terug te winnen.
+U kunt gebeurtenisgegevens terugwinnen door een verzoek van de GET tot het `/audit/events` eindpunt te richten, specificerend de gebeurtenissen u in de nuttige lading wenst terug te winnen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /audit/events
 ```
 
-De [!DNL Audit Query] API ondersteunt het gebruik van queryparameters voor pagina- en filterresultaten bij het weergeven van gebeurtenissen.
+De API van [!DNL Audit Query] ondersteunt het gebruik van queryparameters voor pagina- en filterresultaten bij het weergeven van gebeurtenissen.
 
 | Parameter | Beschrijving |
 | --- | --- |
 | `limit` | Het maximumaantal records dat in de reactie moet worden geretourneerd. De standaardwaarde `limit` is 50. |
-| `start` | Een aanwijzer naar het eerste item voor de geretourneerde zoekresultaten. Om tot de volgende pagina van resultaten toegang te hebben, zou deze parameter met de zelfde hoeveelheid moeten verhogen die door grens wordt vermeld. Voorbeeld: Als u toegang wilt krijgen tot de volgende pagina met resultaten voor een aanvraag met limit=50, gebruikt u de parameter start=50, vervolgens start=100 voor de pagina daarna, enzovoort. |
+| `start` | Een aanwijzer naar het eerste item voor de geretourneerde zoekresultaten. Om tot de volgende pagina van resultaten toegang te hebben, zou deze parameter met de zelfde hoeveelheid moeten verhogen die door grens wordt vermeld. Voorbeeld: als u toegang wilt krijgen tot de volgende pagina met resultaten voor een aanvraag met limit=50, gebruikt u de parameter start=50, vervolgens start=100 voor de pagina erna, enzovoort. |
 | `queryId` | Wanneer het maken van een vraag aan het /audit/events eindpunt, omvat de reactie een vraagId koordbezit. Om de zelfde vraag in een afzonderlijke vraag te maken, kunt u de waarde van Id als één enkele vraagparameter omvatten in plaats van manueel het vormen van de onderzoeksparameters opnieuw. |
 
 **Verzoek**
@@ -47,7 +47,7 @@ curl -X POST \
   -H 'x-request-id: {TRACING_ID}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de resulterende datapoints voor de metriek en de filters terug die in het verzoek worden gespecificeerd.
 
@@ -146,12 +146,12 @@ Een succesvolle reactie keert de resulterende datapoints voor de metriek en de f
 | --- | --- |
 | `customerAuditLogList` | Een array waarvan de objecten elk van de gebeurtenissen vertegenwoordigen die in de aanvraag zijn opgegeven. Elk object bevat informatie over de filterconfiguratie en retourneert gebeurtenisgegevens. |
 | `userEmail` | De e-mail van de gebruiker die de gebeurtenis heeft uitgevoerd. |
-| `eventType` | Het type gebeurtenis. Tot de typen gebeurtenissen behoren: `Core` en `Enhanced`. |
+| `eventType` | Het type gebeurtenis. Tot de gebeurtenistypen behoren `Core` en `Enhanced` . |
 | `imsOrgId` | De id van de organisatie waarop de gebeurtenis heeft plaatsgevonden. |
 | `permissionResource` | Het product of de capaciteit die de toestemming verstrekte voeren de actie uit. Een bron kan een van de volgende zijn: <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
 | `permissionType` | Het type machtiging dat bij de handeling is betrokken. |
 | `assetType` | Het type van middel van het Platform dat de actie werd uitgevoerd. |
-| `assetId` | Een unieke id voor de bron van het Platform waarop de handeling is uitgevoerd. |
+| `assetId` | Een unieke id voor de Platform-bron waarop de actie is uitgevoerd. |
 | `assetName` | De naam van de bron van het Platform waarop de actie werd uitgevoerd. |
 | `action` | Het type actie dat is opgenomen voor de gebeurtenis. Een handeling kan een van de volgende handelingen zijn: <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
 | `status` | De status van de actie. Een status kan een van de volgende zijn: </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |

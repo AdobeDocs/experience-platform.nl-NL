@@ -1,38 +1,38 @@
 ---
 title: Volgorde tijdstempel van klant
 description: Leer hoe u tijdstempelvolgorde van klanten toevoegt aan uw gegevenssets om consistentie in uw profielgegevens te verzekeren.
-badgePrivateBeta: label="Private Bèta" type="Informative"
+badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: dffbdafc3f063906c8c8fb648ace59b2f1aedab8
+exl-id: 1cd9f0b5-6334-4815-860a-78596a9cea1a
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
 
 ---
 
-
 # Tijdstempel van klant bestellen
 
-In Adobe Experience Platform wordt de gegevensvolgorde niet standaard gegarandeerd wanneer gegevens via streaming worden ingevoerd in de profielopslag. Met de tijdstempelbestelling van de klant kunt u garanderen dat het laatste bericht, volgens de opgegeven tijdstempel van de klant, behouden blijft in de profielopslag. Alle berichten van de waliteit zullen dan worden gelaten vallen, en zullen **niet** beschikbaar zijn voor gebruik in de stroomafwaartse diensten die profielgegevens zoals segmentatie en bestemmingen gebruiken. Hierdoor kunnen uw profielgegevens consistent zijn en blijven uw profielgegevens synchroon met uw bronsystemen.
+In Adobe Experience Platform wordt de gegevensvolgorde niet standaard gegarandeerd wanneer gegevens via streaming worden ingevoerd in de profielopslag. Met de tijdstempelbestelling van de klant kunt u garanderen dat het laatste bericht, volgens de opgegeven tijdstempel van de klant, behouden blijft in de profielopslag. Alle stapelberichten zullen dan worden gelaten vallen, en zullen **niet** voor gebruik in de stroomafwaartse diensten beschikbaar zijn die profielgegevens zoals segmentatie en bestemmingen gebruiken. Hierdoor kunnen uw profielgegevens consistent zijn en blijven uw profielgegevens synchroon met uw bronsystemen.
 
-Als u tijdstempelvolgorde van klanten wilt inschakelen, gebruikt u de optie `extSourceSystemAudit.lastUpdatedDate` in het veld [Externe bronsysteemauditkenmerken, veldgroep](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) en neem contact op met de technische accountmanager van de Adobe of de klantenservice van de Adobe met uw sandbox- en datasetgegevens.
+Om klanten timestamp het opdracht geven tot, gebruik het `extSourceSystemAudit.lastUpdatedDate` gebied binnen de [ Externe het gebiedsgroep van de Attributen van de Controle van het Systeem van Source ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) en contacteer uw Adobe Technische Manager van de Rekening of de Zorg van de Klant van de Adobe met uw zandbak en datasetinformatie.
 
 ## Restricties
 
 Tijdens deze persoonlijke bètaversie zijn de volgende beperkingen van toepassing wanneer u tijdstempelbestellingen van klanten gebruikt:
 
-- U kunt de tijdstempelvolgorde van klanten alleen gebruiken met **profielkenmerken** ingesloten met **streaming opname** in de profielenwinkel.
-   - Er zijn **nee** het bestellen van garanties die zijn verstrekt voor gegevens in het datumpigment of de Identity Service.
-- U kunt de tijdstempelvolgorde van de klant alleen gebruiken op **niet-productie** sandboxen.
-- U kunt de tijdstempelvolgorde van klanten alleen toepassen op **5** datasets per sandbox.
-- U **kan** gebruik het stromen upserts om gedeeltelijke rijupdates in een dataset te verzenden die klant toegelaten timestamp orde heeft.
-- De `extSourceSystemAudit.lastUpdatedDate` field **moet** in de [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) gebruiken. Wanneer u de ISO 8601-indeling gebruikt, wordt **moet** zijn als volledige datetime in het formaat `yyyy-MM-ddTHH:mm:ss.sssZ` (bijvoorbeeld `2028-11-13T15:06:49.001Z`).
-- Alle rijen met gegevens die worden ingevoerd **moet** bevatten `extSourceSystemAudit.lastUpdatedDate` veld als veldgroep op hoofdniveau. Dit betekent dat dit veld **moet** niet genest zijn binnen het XDM-schema. Als dit veld ontbreekt of een onjuiste indeling heeft, wordt de onjuiste record **niet** worden opgenomen en er wordt een overeenkomstig foutbericht verzonden.
-- Om het even welke dataset die voor klant timestamp het opdracht geven wordt toegelaten **moet** zijn een nieuwe dataset zonder om het even welke eerder opgenomen gegevens.
-- Voor een bepaald profielfragment alleen rijen die een recentere versie bevatten `extSourceSystemAudit.lastUpdatedDate` wordt opgenomen. Rijen die een `extSourceSystemAudit.lastUpdatedDate` ouder is of dezelfde leeftijd wordt weggegooid.
+- U kunt klant timestamp slechts gebruiken die met **profielattributen** opdracht geven die met **worden ingebed het stromen ingestie** op de opslag van het Profiel.
+   - Er zijn **geen** opdracht gevend tot garanties die voor gegevens in het gegevens meer of de Dienst van de Identiteit worden verstrekt.
+- U kunt klant timestamp slechts gebruiken die op **opdracht geeft tot niet productie** zandbakken.
+- U kunt klant timestamp die tot **slechts toepassen 5** datasets per zandbak opdracht geeft.
+- U **kunt niet** het stromen upserts gebruiken om gedeeltelijke rijupdates in een dataset te verzenden die klant timestamp het opdracht geven tot toegelaten heeft.
+- Het `extSourceSystemAudit.lastUpdatedDate` gebied **moet** in het [ formaat van ISO 8601 ](https://www.iso.org/iso-8601-date-and-time-format.html) zijn. Wanneer het gebruiken van ISO 8601 formaat, moet het **** als volledige datetime in het formaat `yyyy-MM-ddTHH:mm:ss.sssZ` (bijvoorbeeld, `2028-11-13T15:06:49.001Z`) zijn.
+- Alle rijen van gegevens die **worden opgenomen moeten** het `extSourceSystemAudit.lastUpdatedDate` gebied als top level gebiedsgroep bevatten. Dit betekent dat dit gebied **** niet binnen het schema XDM moet worden genest. Als dit gebied ontbreekt of in een onjuist formaat is, zal het misvormde verslag **niet** worden opgenomen, en een overeenkomstig foutenbericht zal worden verzonden.
+- Om het even welke dataset die voor klant timestamp opdracht geven tot **wordt toegelaten moet** een nieuwe dataset zonder om het even welke eerder opgenomen gegevens zijn.
+- Voor een bepaald profielfragment worden alleen rijen met een recentere `extSourceSystemAudit.lastUpdatedDate` opgenomen. Rijen die een `extSourceSystemAudit.lastUpdatedDate` bevatten die ouder of even oud is, worden genegeerd.
 
-## Recommendations
+## Aanbevelingen
 
 Houd rekening met het volgende wanneer u tijdstempelbestellingen voor klanten implementeert:
 

@@ -1,7 +1,8 @@
 ---
 title: Gegevenstype retouritem
 description: Leer over het gegevenstype van de Gegevens van de Ervaring van het Punt van de Terugkeer Model (XDM).
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: e703d65b-a133-484e-96d6-6b1f50fc1e48
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -10,9 +11,9 @@ ht-degree: 0%
 
 # [!UICONTROL Return Item] gegevenstype
 
-[!UICONTROL Return Item] is een standaard gegevenstype van het Gegevensmodel van de Ervaring (XDM) vangt essentiële details met betrekking tot het terugkeerproces voor een gekocht punt.
+[!UICONTROL Return Item] is een standaard XDM-gegevenstype (Experience Data Model) waarmee essentiële details worden vastgelegd met betrekking tot het retourproces voor een aangeschaft item.
 
-![Een diagram van het gegevenstype Item van de Terugkeer.](../images/data-types/return-item.png)
+![ A diagram van het gegevenstype van het Punt van de Terugkeer.](../images/data-types/return-item.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |-----------------------------|------------------------------|-----------|--------------------------------------------------------|
@@ -29,5 +30,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/returnitem.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/returnitem.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/returnitem.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/returnitem.schema.json)

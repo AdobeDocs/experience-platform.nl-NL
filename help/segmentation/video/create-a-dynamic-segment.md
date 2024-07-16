@@ -1,6 +1,6 @@
 ---
 title: Een dynamisch segment maken in Adobe Experience Platform
-description: Deze video biedt een basiskennis van het maken van een dynamisch segment met behulp van de interface van het Platform.
+description: Deze video biedt een basiskennis van het maken van een dynamisch segment met behulp van de interface van het platform.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -19,12 +19,12 @@ ht-degree: 0%
 
 # Een dynamisch segment maken in de gebruikersinterface van het Experience Platform
 
-De volgende video is bedoeld ter ondersteuning van uw begrip voor het maken van dynamische segmenten. Het toont een voorbeeld van een klantervaring gevolgd door een snelle rondleiding van belangrijke eigenschappen in het [!DNL Platform] interface. Voor meer informatie over segmentatie en hoe u segmenten in de gebruikersinterface kunt maken, leest u de [Handleiding Segment Builder](../ui/segment-builder.md).
+De volgende video is bedoeld ter ondersteuning van uw begrip voor het maken van dynamische segmenten. Hierin wordt een voorbeeld van een klantervaring weergegeven, gevolgd door een snelle rondleiding van de belangrijkste functies in de [!DNL Platform] -interface. Meer over segmentatie leren en hoe te om segmenten in UI tot stand te brengen, gelieve de [ gids van de Bouwer van het Segment ](../ui/segment-builder.md) te lezen.
 
-Als u een segment wilt maken met de segmentatie-API, leest u de [een segment-API-hulplijn maken](../tutorials/create-a-segment.md).
+Als u in het creëren van een segment gebruikend de Segmentatie API geinteresseerd bent, te lezen gelieve [ een segment API gids ](../tutorials/create-a-segment.md) creëren.
 
 >[!NOTE]
 >
->De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest actuele informatie raadpleegt u de [Handleiding Segment Builder](../ui/segment-builder.md).
+>De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, gelieve te verwijzen naar de [ gids van de Bouwer van het Segment ](../ui/segment-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)

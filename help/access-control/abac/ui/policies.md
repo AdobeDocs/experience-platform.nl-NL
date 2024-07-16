@@ -16,7 +16,7 @@ Het beleid van de toegangscontrole is verklaringen die attributen samenbrengen o
 
 >[!IMPORTANT]
 >
->Het beleid van de toegang moet niet met het beleid van het gegevensgebruik worden verward, dat controleert hoe het gegeven in Adobe Experience Platform wordt gebruikt in plaats van welke gebruikers in uw organisatie toegang tot het hebben. Zie de handleiding bij het maken van [beleid voor gegevensgebruik](../../../data-governance/policies/create.md) voor meer informatie .
+>Het beleid van de toegang moet niet met het beleid van het gegevensgebruik worden verward, dat controleert hoe het gegeven in Adobe Experience Platform wordt gebruikt in plaats van welke gebruikers in uw organisatie toegang tot het hebben. Zie de gids bij het creëren van [ beleid van het gegevensgebruik ](../../../data-governance/policies/create.md) voor meer informatie.
 
 <!-- ## Create a new policy
 
@@ -120,29 +120,29 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 >[!IMPORTANT]
 >
->Standaard worden de [!UICONTROL Auto-include] Deze functie is ingeschakeld voor alle klanten, wat betekent dat alle sandboxen aan het beleid worden toegevoegd.
+>Standaard is de functie [!UICONTROL Auto-include] ingeschakeld voor alle klanten, wat betekent dat alle sandboxen aan het beleid worden toegevoegd.
 
 >[!NOTE]
 >
->De **[!UICONTROL Default-Label-Based-Access-Control-Policy]** beleid is momenteel de enige beschikbare voor configuratie.
+>Het **[!UICONTROL Default-Label-Based-Access-Control-Policy]** -beleid is momenteel het enige beleid dat beschikbaar is voor configuratie.
 
-Als u sandboxen wilt weergeven die aan een beleid zijn gekoppeld, selecteert u het beleid in het menu **[!UICONTROL Policies]** tab.
+Als u sandboxen wilt weergeven die aan een beleid zijn gekoppeld, selecteert u het beleid op de tab **[!UICONTROL Policies]** .
 
-![De pagina met beleidsregels met een lijst met bestaande beleidsregels die beschikbaar zijn.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![ de beleidspagina die een lijst van bestaand beschikbaar beleid tonen.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
 Selecteer vervolgens het beleid en selecteer **[!UICONTROL Sandboxes]** tab. Er wordt een lijst weergegeven met sandboxen die aan het beleid zijn gekoppeld.
 
-![De pagina met beleidsregels met een lijst met bestaande beleidsregels die beschikbaar zijn.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+![ de beleidspagina die een lijst van bestaand beschikbaar beleid tonen.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
 
 ### Beleid toevoegen aan alle sandboxen
 
-Gebruik de **[!UICONTROL Auto-include]** schakelen op de **[!UICONTROL Sandboxes]** om het beleid voor alle sandboxen te activeren.
+Gebruik de schakeloptie **[!UICONTROL Auto-include]** op het tabblad **[!UICONTROL Sandboxes]** om het beleid voor alle sandboxen te activeren.
 
-![De [!UICONTROL Sandboxes] tabblad met het tabblad [!UICONTROL Auto-include] schakelen.](../../images/flac-ui/abac-policies-auto-include.png)
+![ het [!UICONTROL Sandboxes] lusje tonen van [!UICONTROL Auto-include] knevel.](../../images/flac-ui/abac-policies-auto-include.png)
 
-De **[!UICONTROL Enable Auto-include]** wordt weergegeven waarin u wordt gevraagd uw selectie te bevestigen. Selecteren **[!UICONTROL Enable]** om de configuratie-instelling te voltooien.
+In het dialoogvenster **[!UICONTROL Enable Auto-include]** wordt u gevraagd uw selectie te bevestigen. Selecteer **[!UICONTROL Enable]** om de configuratie-instelling te voltooien.
 
-![De [!UICONTROL Enable Auto-include] dialoogvenstermarkering [!UICONTROL Enable].](../../images/flac-ui/abac-policies-auto-include-enable.png)
+![ de [!UICONTROL Enable Auto-include] dialoog die [!UICONTROL Enable] benadrukt.](../../images/flac-ui/abac-policies-auto-include-enable.png)
 
 >[!SUCCESS]
 >
@@ -152,19 +152,19 @@ De **[!UICONTROL Enable Auto-include]** wordt weergegeven waarin u wordt gevraag
 
 >[!IMPORTANT]
 >
->Als de [!UICONTROL Auto-include] schakelt uit. U moet sandboxen handmatig beheren en toevoegen aan het beleid.
+>Toekomstige sandboxen worden niet standaard in het beleid opgenomen als de schakeloptie [!UICONTROL Auto-include] is uitgeschakeld. U moet sandboxen handmatig beheren en toevoegen aan het beleid.
 
-Gebruik de **[!UICONTROL Auto-include]** schakelen op de **[!UICONTROL Sandboxes]** om het beleid voor alle sandboxen uit te schakelen.
+Gebruik de schakeloptie **[!UICONTROL Auto-include]** op het tabblad **[!UICONTROL Sandboxes]** om het beleid voor alle sandboxen uit te schakelen.
 
-![De [!UICONTROL Sandboxes] tabblad met het tabblad [!UICONTROL Auto-include] schakelen.](../../images/flac-ui/abac-policies-auto-include.png)
+![ het [!UICONTROL Sandboxes] lusje tonen van [!UICONTROL Auto-include] knevel.](../../images/flac-ui/abac-policies-auto-include.png)
 
-Van de **[!UICONTROL Sandboxes]** tab, selecteert u **[!UICONTROL Add Sandboxes]** om sandboxen te selecteren waarop dit beleid van toepassing is.
+Selecteer op het tabblad **[!UICONTROL Sandboxes]** de optie **[!UICONTROL Add Sandboxes]** om de sandboxen te selecteren waarop dit beleid van toepassing is.
 
-![De [!UICONTROL Sandboxes] tabblad met een lijst met sandboxen die aan het beleid zijn toegevoegd.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+![ het [!UICONTROL Sandboxes] lusje dat een lijst van zandbakken toont die aan het beleid worden toegevoegd.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
 
 Er wordt een lijst met sandboxen weergegeven. Selecteer in de lijst de sandbox die u wilt toevoegen. U kunt ook de zoekbalk gebruiken om te zoeken naar de sandbox. Selecteer **[!UICONTROL Save]**.
 
-![De [!UICONTROL Add Sandboxes] pagina met een lijst met bestaande sandboxen die aan het beleid kunnen worden toegevoegd.](../../images/flac-ui/abac-policies-sandboxes-list.png)
+![ de [!UICONTROL Add Sandboxes] pagina die een lijst van bestaande zandbakken tonen beschikbaar om aan het beleid toe te voegen.](../../images/flac-ui/abac-policies-sandboxes-list.png)
 
 >[!SUCCESS]
 >
@@ -172,13 +172,13 @@ Er wordt een lijst met sandboxen weergegeven. Selecteer in de lijst de sandbox d
 
 ### Sandboxen verwijderen uit een beleid
 
-Als u een sandbox wilt verwijderen, selecteert u de **X** naast de naam van de sandbox.
+Om een zandbak te verwijderen, selecteer het **X** pictogram naast de zandbaknaam.
 
-![De [!UICONTROL Sandboxes] tabblad met een lijst met sandboxen, markeren [!UICONTROL X] om te verwijderen.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+![ het [!UICONTROL Sandboxes] lusje dat een lijst van zandbakken toont, die [!UICONTROL X] benadrukt om te schrappen.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
 
-De **[!UICONTROL Remove]** wordt weergegeven waarin u wordt gevraagd uw selectie te bevestigen. Selecteren **[!UICONTROL Confirm]** om de verwijdering te voltooien.
+In het dialoogvenster **[!UICONTROL Remove]** wordt u gevraagd uw selectie te bevestigen. Selecteer **[!UICONTROL Confirm]** om het verwijderen te voltooien.
 
-![De [!UICONTROL Remove] dialoogvenstermarkering [!UICONTROL Confirm].](../../images/flac-ui/abac-policies-remove-sandbox.png)
+![ de [!UICONTROL Remove] dialoog die [!UICONTROL Confirm] benadrukt.](../../images/flac-ui/abac-policies-remove-sandbox.png)
 
 >[!SUCCESS]
 >
@@ -186,23 +186,23 @@ De **[!UICONTROL Remove]** wordt weergegeven waarin u wordt gevraagd uw selectie
 
 ## Een beleid activeren
 
-Als u een bestaand beleid wilt activeren, selecteert u het beleid in het menu **[!UICONTROL Policies]** tab.
+Als u een bestaand beleid wilt activeren, selecteert u het beleid op het tabblad **[!UICONTROL Policies]** .
 
-![fc-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![ fc-beleid-uitgezocht ](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Selecteer vervolgens de ellips (`…`) naast de naam van een beleid en een vervolgkeuzelijst bevat besturingselementen voor het bewerken, activeren, verwijderen of dupliceren van de rol. Selecteer activeren in het vervolgkeuzemenu.
+Selecteer vervolgens de ellips (`…`) naast de naam van een beleid en een vervolgkeuzelijst met besturingselementen voor het bewerken, activeren, verwijderen of dupliceren van de rol. Selecteer activeren in het vervolgkeuzemenu.
 
-![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+![ fc-beleid-activeer ](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-De **[!UICONTROL Activate policy]** wordt weergegeven en u wordt gevraagd de activering te bevestigen.
+Het dialoogvenster **[!UICONTROL Activate policy]** wordt weergegeven, waarin u wordt gevraagd de activering te bevestigen.
 
-![flash-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+![ flash-policy-activate-confirm ](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
 
-U bent teruggekeerd aan **[!UICONTROL policies]** en verschijnt er een bevestiging van de activeringspop. De beleidsstatus wordt als actief weergegeven.
+U keert terug naar het tabblad **[!UICONTROL policies]** en er verschijnt een bevestiging van de activering. De beleidsstatus wordt als actief weergegeven.
 
-![geactiveerd door het beleid van de flac](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
+![ fc-beleid-geactiveerd ](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
 ## Volgende stappen
 
-Als een beleid geactiveerd is, kunt u verdergaan met de volgende stap naar [machtigingen voor een rol beheren](permissions.md).
+Met een geactiveerd beleid, kunt u aan de volgende stap te werk gaan [ toestemmingen voor een rol ](permissions.md) beheren.

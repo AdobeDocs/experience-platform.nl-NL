@@ -16,9 +16,9 @@ ht-degree: 15%
 
 # Data Science-werkruimte {#data-science-workspace}
 
-* [Overzicht van de Data Science-werkruimte](home.md)
+* [Overzicht van Data Science Workspace](home.md)
 * [Toegang tot en functies van Data Science Workspace](access-features-dsw.md)
-* [Analyse van de Data Science Workspace](walkthrough.md)
+* [Data Science Workspace-analyse](walkthrough.md)
 * JupyterLab-laptops {#jupyterlab}
    * [Overzicht](jupyterlab/overview.md)
    * [Toegang tot gegevens](jupyterlab/access-notebook-data.md)
@@ -27,7 +27,7 @@ ht-degree: 15%
    * [Onderzoeksgegevens (EDA)](jupyterlab/eda-notebook.md)
    * [Een model maken met de functie voor het maken van recept](jupyterlab/create-a-model.md)
    * [Samenwerken in JupyterLab met behulp van Git](jupyterlab/using-git-for-collaboration.md)
-* API voor leren werken met Sensei {#api}
+* Sensei Machine Learning-API {#api}
    * [Aan de slag](api/getting-started.md)
    * [Motoren](api/engines.md)
    * [MLInstances (recepten)](api/mlinstances.md)
@@ -40,7 +40,7 @@ ht-degree: 15%
    * [Recept voor productaanbevelingen](pre-built-recipes/product-recommendations.md)
    * [Voorspelling van productaankoop](pre-built-recipes/product-purchase-prediction.md)
    * [Detailhandelrecept](pre-built-recipes/retail-sales.md)
-* Model Authoring {#authoring}
+* Modellen ontwerpen {#authoring}
    * [Model Authoring SDK](authoring/sdk.md)
    * [Een functiepijpleiding maken](authoring/feature-pipeline.md)
    * [Model authoring met de Platform SDK (Python)](authoring/platform-sdk.md)
@@ -60,9 +60,9 @@ ht-degree: 15%
    * [Score een model (API)](models-recipes/score-model-api.md)
    * [Een model optimaliseren](models-recipes/optimize-model.md)
    * [Klantprofiel in real-time verrijken met kennis van machinaal leren](models-recipes/enrich-profile.md)
-   * [Een model publiceren als service (UI)](models-recipes/publish-model-service-ui.md)
-   * [Een model publiceren als service (API)](models-recipes/publish-model-service-api.md)
+   * [Publish a model as a service (UI)](models-recipes/publish-model-service-ui.md)
+   * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
    * [Geautomatiseerde training en scoring op een service (UI) plannen](models-recipes/schedule-models-ui.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-* [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [ API verwijzing ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
+* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

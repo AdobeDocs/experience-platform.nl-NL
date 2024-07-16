@@ -8,7 +8,7 @@ role: Admin
 source-git-commit: 9327cf8545caa306acd8077d089041d50a30e556
 workflow-type: tm+mt
 source-wordcount: '301'
-ht-degree: 13%
+ht-degree: 12%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 13%
    * [Gebruikersgids voor accountprofielen](accounts/account-profile-ui-guide.md)
 * Beheer {#admin}
    * [Overzicht van beheer](administration/admin-overview.md)
-* Splitsen en segmenteren {#segmentation}
+* Soorten publiek en segmentatie {#segmentation}
    * [Overzicht van segmentatie](segmentation/segmentation-overview.md)
    * [Handleiding Segment Builder](segmentation/segment-builder-guide.md)
    * [Segmentering in Real-Time CDP B2B Edition](segmentation/b2b.md)
@@ -46,15 +46,15 @@ ht-degree: 13%
    * [Doelen in Real-Time CDP B2B Edition](destinations/b2b.md)
 * Guardrails {#guardrails}
    * [Overzicht van Real-Time CDP-instructies](guardrails/overview.md)
-   * [Guardrails voor gegevensinvoer](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
-   * [Guardrails voor de [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
-   * [Guardrails voor [!DNL Real-Time Customer Profile] gegevens en segmentatie](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html){target="_blank"}
-   * [Guardrails voor [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
-   * [Guardrails voor [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
-   * [Guardrails voor gegevensactivering via bestemmingen](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
+   * [ Guardrails voor gegevensopname ](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html) {target="_blank"}
+   * [ Guardrails voor  [!DNL Edge Network Server API] ](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html) {target="_blank"}
+   * [ Guardrails voor  [!DNL Real-Time Customer Profile]  gegevens en segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html) {target="_blank"}
+   * [ Guardrails voor  [!DNL Identity Service]  gegevens ](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html) {target="_blank"}
+   * [ Guardrails voor  [!DNL Query Service] ](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html) {target="_blank"}
+   * [ Grafieken voor gegevensactivering door bestemmingen ](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html) {target="_blank"}
 * Identiteiten {#identity}
    * [Identiteiten en naamruimten](profile/identities-overview.md)
-* Beleid samenvoegen {#merge-policies}
+* Beleid voor samenvoegen {#merge-policies}
    * [Overzicht van beleid samenvoegen](profile/merge-policies.md)
 * Privacy en gegevensbeheer {#privacy}
    * [Privacyoverzicht](privacy/privacy-overview.md)
@@ -65,7 +65,7 @@ ht-degree: 13%
 * Real-Time CDP B2B Edition AI/ML-services {#b2b-cdp-ai-ml}
    * [Verwante accounts](b2b-ai-ml-services/related-accounts.md)
    * [Overeenkomende lead-account](b2b-ai-ml-services/lead-to-account-matching.md)
-   * Voorspelend lood en account scoring {#predictive-lead-and-account-scoring-intro}
+   * Voorspelende lead en accountscoring {#predictive-lead-and-account-scoring-intro}
       * [Overzicht van voorsprong en accountscoring](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
       * [Voorspelende leads en accountscoring beheren](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Schemas {#schemas}
@@ -77,7 +77,7 @@ ht-degree: 13%
 * Gebruiksscenario’s {#use-cases}
    * [Overzicht van voorbeelden](/help/rtcdp/use-case-guides/overview.md)
    * Klantenovername {#customer-acquisition}
-      * [Nieuwe klanten aantrekken en aanschaffen zonder afhankelijk te zijn van cookies van derden](/help/rtcdp/partner-data/prospecting.md)
+      * [ neemt en verwerft nieuwe klanten zonder gebiedsdeel op derdekoekjes ](/help/rtcdp/partner-data/prospecting.md) aan
       * [Onsite ervaringen voor onbekende bezoekers personaliseren met de erkenning van bezoekers met hulp van partners](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Offsite herbestemming van niet-geverifieerde gebruikers](./partner-data/offsite-retargeting.md)
    * Profielverrijking {#profile-enrichment}
@@ -86,5 +86,5 @@ ht-degree: 13%
       * [Evolueer eenmalig klantenwaarde aan levenwaarde](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [Neem op intelligente wijze uw klanten opnieuw aan](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Neem op intelligente wijze contact op met uw klanten: Luma-voorbeelden](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
-* [Opmerkingen bij de release Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
-* [Woordenlijst Experience Platform](https://www.adobe.com/go/platform-glossary-en)
+* [ de nota&#39;s van de Versie van het Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [ Verklarende woordenlijst van het Experience Platform ](https://www.adobe.com/go/platform-glossary-en)

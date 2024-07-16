@@ -15,7 +15,7 @@ ht-degree: 0%
 
 U kunt verscheidene ingebouwde functies van SQL van de Vonk gebruiken om SQL functionaliteit met de Dienst van de Vraag van Adobe Experience Platform uit te breiden. Dit document maakt een lijst van de SQL functies van de Vonk die door de Dienst van de Vraag worden gesteund.
 
-Voor meer gedetailleerde informatie over de functies, inclusief de syntaxis, het gebruik en voorbeelden, leest u de [SQL-functiedocumentatie parkeren](https://spark.apache.org/docs/latest/api/sql/index.html).
+Voor meer gedetailleerde informatie over de functies, met inbegrip van hun syntaxis, gebruik, en voorbeelden, lees de [ SQL van de Vonk functiedocumentatie ](https://spark.apache.org/docs/latest/api/sql/index.html).
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Voor meer gedetailleerde informatie over de functies, inclusief de syntaxis, het
 | [`atan2`](https://spark.apache.org/docs/latest/api/sql/index.html#atan2) | Hiermee wordt de hoek geretourneerd tussen het positieve x-asvlak en de punten die door de coördinaten worden aangegeven |
 | [`avg`](https://spark.apache.org/docs/latest/api/sql/index.html#avg) | Retourneert de gemiddelde waarde |
 | [`cbrt`](https://spark.apache.org/docs/latest/api/sql/index.html#cbrt) | Hiermee wordt de hoofdkubus geretourneerd |
-| [`ceil`](https://spark.apache.org/docs/latest/api/sql/index.html#ceil) of [`ceiling`](https://spark.apache.org/docs/latest/api/sql/index.html#ceiling) | Retourneert het kleinste gehele getal dat niet groter is dan de ingevoerde waarde |
+| [`ceil` ](https://spark.apache.org/docs/latest/api/sql/index.html#ceil) of [`ceiling` ](https://spark.apache.org/docs/latest/api/sql/index.html#ceiling) | Retourneert het kleinste gehele getal dat niet groter is dan de ingevoerde waarde |
 | [`conv`](https://spark.apache.org/docs/latest/api/sql/index.html#conv) | Omzetten van basis naar basis |
 | [`corr`](https://spark.apache.org/docs/latest/api/sql/index.html#corr) | Retourneert de Pearson-coëfficiënt tussen de getallen |
 | [`cos`](https://spark.apache.org/docs/latest/api/sql/index.html#cos) | Retourneert de cosinuswaarde |
@@ -71,13 +71,13 @@ Voor meer gedetailleerde informatie over de functies, inclusief de syntaxis, het
 | [`pi`](https://spark.apache.org/docs/latest/api/sql/index.html#pi) | Retourneert pi |
 | [`pmod`](https://spark.apache.org/docs/latest/api/sql/index.html#pmod) | Retourneert de positieve modulo tussen twee waarden |
 | [`positive`](https://spark.apache.org/docs/latest/api/sql/index.html#positive) | Retourneert de positieve waarde |
-| [`pow`](https://spark.apache.org/docs/latest/api/sql/index.html#pow), [`power`](https://spark.apache.org/docs/latest/api/sql/index.html#power) | Retourneert de eerste waarde tot de macht van de tweede waarde |
+| [`pow` ](https://spark.apache.org/docs/latest/api/sql/index.html#pow), [`power` ](https://spark.apache.org/docs/latest/api/sql/index.html#power) | Retourneert de eerste waarde tot de macht van de tweede waarde |
 | [`radians`](https://spark.apache.org/docs/latest/api/sql/index.html#radians) | Zet de waarde om in radialen |
 | [`rand`](https://spark.apache.org/docs/latest/api/sql/index.html#rand) | Retourneert een willekeurig getal tussen 0 en 1 |
 | [`randn`](https://spark.apache.org/docs/latest/api/sql/index.html#randn) | Retourneert een willekeurige waarde |
 | [`rint`](https://spark.apache.org/docs/latest/api/sql/index.html#rint) | Hiermee wordt de dichtstbijzijnde dubbele waarde geretourneerd |
 | [`round`](https://spark.apache.org/docs/latest/api/sql/index.html#round) | Retourneert de dichtstbijzijnde afgeronde waarde |
-| [`sign`](https://spark.apache.org/docs/latest/api/sql/index.html#sign), [`signum`](https://spark.apache.org/docs/latest/api/sql/index.html#signum) | Retourneert het numerieke teken |
+| [`sign` ](https://spark.apache.org/docs/latest/api/sql/index.html#sign), [`signum` ](https://spark.apache.org/docs/latest/api/sql/index.html#signum) | Retourneert het numerieke teken |
 | [`sin`](https://spark.apache.org/docs/latest/api/sql/index.html#sin) | Retourneert sinus van de waarde |
 | [`sinh`](https://spark.apache.org/docs/latest/api/sql/index.html#sinh) | Retourneert een hyperbolische sinus van de waarde |
 | [`sqrt`](https://spark.apache.org/docs/latest/api/sql/index.html#sqrt) | Retourneert de vierkantswortel van de waarde |
@@ -88,13 +88,13 @@ Voor meer gedetailleerde informatie over de functies, inclusief de syntaxis, het
 | [`tan`](https://spark.apache.org/docs/latest/api/sql/index.html#tan) | Retourneert tangens van de waarde |
 | [`tanh`](https://spark.apache.org/docs/latest/api/sql/index.html#tanh) | Hiermee wordt de hyperbolische tangens van de waarde geretourneerd |
 | [`var_pop`](https://spark.apache.org/docs/latest/api/sql/index.html#var_pop) | Retourneert de berekende bevolkingsvariatie |
-| [`var_samp`](https://spark.apache.org/docs/latest/api/sql/index.html#var_samp), [`variance`](https://spark.apache.org/docs/latest/api/sql/index.html#variance) | Retourneert de berekende samplevariatie |
+| [`var_samp` ](https://spark.apache.org/docs/latest/api/sql/index.html#var_samp), [`variance` ](https://spark.apache.org/docs/latest/api/sql/index.html#variance) | Retourneert de berekende samplevariatie |
 
 ### Logische operatoren en functies {#logical-operators}
 
 | Operator/functie | Beschrijving |
 | ----------------- | ----------- |
-| [`!`](https://spark.apache.org/docs/latest/api/sql/index.html#_1) of [`not`](https://spark.apache.org/docs/latest/api/sql/index.html#not) | Logisch niet |
+| [`!` ](https://spark.apache.org/docs/latest/api/sql/index.html#_1) of [`not` ](https://spark.apache.org/docs/latest/api/sql/index.html#not) | Logisch niet |
 | [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Minder dan |
 | [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | Kleiner dan of gelijk aan |
 | [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | Gelijk aan |
@@ -126,7 +126,7 @@ Voor meer gedetailleerde informatie over de functies, inclusief de syntaxis, het
 | [`date_sub`](https://spark.apache.org/docs/latest/api/sql/index.html#date_sub) | Aantal dagen uit datum verwijderen |
 | [`date_trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#date_trunc) | Retourneert de afgebroken datum naar de opgegeven eenheid |
 | [`datediff`](https://spark.apache.org/docs/latest/api/sql/index.html#datediff) | Hiermee wordt het verschil tussen datums in dagen geretourneerd |
-| [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day), [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | Retourneert de dag van de maand |
+| [`day` ](https://spark.apache.org/docs/latest/api/sql/index.html#day), [`dayofmonth` ](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | Retourneert de dag van de maand |
 | [`dayofweek`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofweek) | Retourneert de dag van de week (1-7) |
 | [`dayofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofyear) | Retourneert de dag van het jaar |
 | [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | Retourneert de datum in UNIX®-tijd |
@@ -139,8 +139,8 @@ Voor meer gedetailleerde informatie over de functies, inclusief de syntaxis, het
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | Retourneert de eerste dag na de invoer |
 | [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html#quarter) | Retourneert het kwartaal van de invoer |
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | Retourneert de tweede tekenreeks |
-| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Zet de tekenreeks om in een datum. **Opmerking:** De tekenreeks **moet** heeft de notatie `yyyy-mm-ddTHH24:MM:SS`. |
-| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Zet de tekenreeks om in een tijdstempel. **Opmerking:** De tekenreeks **moet** heeft de notatie `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Zet de tekenreeks om in een datum. **Nota:** het koord **moet** in het formaat `yyyy-mm-ddTHH24:MM:SS` zijn. |
+| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Zet de tekenreeks om in een tijdstempel. **Nota:** het koord **moet** in het formaat `yyyy-mm-ddTHH24:MM:SS` zijn. |
 | [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Zet de tekenreeks om in een UNIX®-tijdstempel |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | Zet de tekenreeks om in een UTC-tijdstempel |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | Kort de datum in |
@@ -209,16 +209,16 @@ Voor meer gedetailleerde informatie over de functies, inclusief de syntaxis, het
 | [`base64`](https://spark.apache.org/docs/latest/api/sql/index.html#base64) | Het argument wijzigen in een base64-tekenreeks |
 | [`bin`](https://spark.apache.org/docs/latest/api/sql/index.html#bin) | Het argument wijzigen in een binaire waarde |
 | [`bit_length`](https://spark.apache.org/docs/latest/api/sql/index.html#bit_length) | De bitlengte retourneren |
-| [`char`](https://spark.apache.org/docs/latest/api/sql/index.html#char), [`chr`](https://spark.apache.org/docs/latest/api/sql/index.html#chr) | Het ASCII-teken retourneren |
-| [`char_length`](https://spark.apache.org/docs/latest/api/sql/index.html#char_length), [`character_length`](https://spark.apache.org/docs/latest/api/sql/index.html#character_length) | Hiermee wordt de tekenreekslengte geretourneerd |
+| [`char` ](https://spark.apache.org/docs/latest/api/sql/index.html#char), [`chr` ](https://spark.apache.org/docs/latest/api/sql/index.html#chr) | Het ASCII-teken retourneren |
+| [`char_length` ](https://spark.apache.org/docs/latest/api/sql/index.html#char_length), [`character_length` ](https://spark.apache.org/docs/latest/api/sql/index.html#character_length) | Hiermee wordt de tekenreekslengte geretourneerd |
 | [`crc32`](https://spark.apache.org/docs/latest/api/sql/index.html#crc32) | Hiermee wordt de controlewaarde voor cyclische redundantie geretourneerd |
 | [`degrees`](https://spark.apache.org/docs/latest/api/sql/index.html#degrees) | Radialen omzetten in graden |
 | [`format_number`](https://spark.apache.org/docs/latest/api/sql/index.html#format_number) | De getalnotatie wijzigen |
-| [`from_json`](https://spark.apache.org/docs/latest/api/sql/index.html#from_json), [`get_json_object`](https://spark.apache.org/docs/latest/api/sql/index.html#get_json_object) | Gegevens ophalen van JSON |
+| [`from_json` ](https://spark.apache.org/docs/latest/api/sql/index.html#from_json), [`get_json_object` ](https://spark.apache.org/docs/latest/api/sql/index.html#get_json_object) | Gegevens ophalen van JSON |
 | [`hash`](https://spark.apache.org/docs/latest/api/sql/index.html#hash) | De hashwaarde retourneren |
 | [`hex`](https://spark.apache.org/docs/latest/api/sql/index.html#hex) | Zet het argument om in een hexadecimale waarde |
 | [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | Hiermee wordt de tekenreeks gewijzigd in titelhoofdletter |
-| [`lcase`](https://spark.apache.org/docs/latest/api/sql/index.html#lcase), [`lower`](https://spark.apache.org/docs/latest/api/sql/index.html#lower) | Hiermee wordt de tekenreeks gewijzigd in kleine letters |
+| [`lcase` ](https://spark.apache.org/docs/latest/api/sql/index.html#lcase), [`lower` ](https://spark.apache.org/docs/latest/api/sql/index.html#lower) | Hiermee wordt de tekenreeks gewijzigd in kleine letters |
 | [`lpad`](https://spark.apache.org/docs/latest/api/sql/index.html#lpad) | Hiermee wordt de linkerzijde van een tekenreeks geplakt |
 | [`map`](https://spark.apache.org/docs/latest/api/sql/index.html#map) | Een kaart maken |
 | [`map_from_arrays`](https://spark.apache.org/docs/latest/api/sql/index.html#map_from_arrays) | Een kaart maken van een array |
@@ -226,15 +226,15 @@ Voor meer gedetailleerde informatie over de functies, inclusief de syntaxis, het
 | [`md5`](https://spark.apache.org/docs/latest/api/sql/index.html#md5) | Hiermee wordt de md5-waarde geretourneerd |
 | [`rpad`](https://spark.apache.org/docs/latest/api/sql/index.html#rpad) | Hiermee wordt de rechterzijde van een tekenreeks geplakte |
 | [`rtrim`](https://spark.apache.org/docs/latest/api/sql/index.html#rtrim) | Hiermee verwijdert u volgspaties |
-| [`sha`](https://spark.apache.org/docs/latest/api/sql/index.html#sha), [`sha1`](https://spark.apache.org/docs/latest/api/sql/index.html#sha1) | De SHA1-waarde retourneren |
+| [`sha` ](https://spark.apache.org/docs/latest/api/sql/index.html#sha), [`sha1` ](https://spark.apache.org/docs/latest/api/sql/index.html#sha1) | De SHA1-waarde retourneren |
 | [`sha2`](https://spark.apache.org/docs/latest/api/sql/index.html#sha2) | De SHA2-waarde retourneren |
 | [`soundex`](https://spark.apache.org/docs/latest/api/sql/index.html#soundex) | De soundex-code retourneren |
 | [`stack`](https://spark.apache.org/docs/latest/api/sql/index.html#stack) | Waarden scheiden in rijen |
-| [`substr`](https://spark.apache.org/docs/latest/api/sql/index.html#substr), [`substring`](https://spark.apache.org/docs/latest/api/sql/index.html#substring) | De subtekenreeks retourneren |
+| [`substr` ](https://spark.apache.org/docs/latest/api/sql/index.html#substr), [`substring` ](https://spark.apache.org/docs/latest/api/sql/index.html#substring) | De subtekenreeks retourneren |
 | [`to_json`](https://spark.apache.org/docs/latest/api/sql/index.html#to_json) | Retourneert een JSON-tekenreeks |
 | [`translate`](https://spark.apache.org/docs/latest/api/sql/index.html#translate) | Waarden binnen tekenreeks vervangen |
 | [`trim`](https://spark.apache.org/docs/latest/api/sql/index.html#trim) | Voorlooptekens en navolgende tekens verwijderen |
-| [`ucase`](https://spark.apache.org/docs/latest/api/sql/index.html#ucase), [`upper`](https://spark.apache.org/docs/latest/api/sql/index.html#upper) | De tekenreeks wijzigen in hoofdletters |
+| [`ucase` ](https://spark.apache.org/docs/latest/api/sql/index.html#ucase), [`upper` ](https://spark.apache.org/docs/latest/api/sql/index.html#upper) | De tekenreeks wijzigen in hoofdletters |
 | [`unbase64`](https://spark.apache.org/docs/latest/api/sql/index.html#unbase64) | Zet de base64-tekenreeks om in binair getal |
 | [`unhex`](https://spark.apache.org/docs/latest/api/sql/index.html#unhex) | Hexadecimaal converteren naar binair |
 | [`uuid`](https://spark.apache.org/docs/latest/api/sql/index.html#uuid) | UUID retourneren |
@@ -250,19 +250,19 @@ Voor meer gedetailleerde informatie over de functies, inclusief de syntaxis, het
 | [`concat_ws`](https://spark.apache.org/docs/latest/api/sql/index.html#concat_ws) | Samenvoegen met scheidingsteken |
 | [`count`](https://spark.apache.org/docs/latest/api/sql/index.html#count) | Hiermee wordt het totale aantal rijen geretourneerd |
 | [`decode`](https://spark.apache.org/docs/latest/api/sql/index.html#decode) | Decoderen met een tekenset |
-| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | Retourneer de [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)de invoer |
+| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | Terugkeer [`n` ](https://spark.apache.org/docs/latest/api/sql/index.html#n) de input |
 | [`encode`](https://spark.apache.org/docs/latest/api/sql/index.html#encode) | Coderen met een tekenset |
-| [`first`](https://spark.apache.org/docs/latest/api/sql/index.html#first), [`first_value`](https://spark.apache.org/docs/latest/api/sql/index.html#first_value) | Retourneert de eerste waarde |
+| [`first` ](https://spark.apache.org/docs/latest/api/sql/index.html#first), [`first_value` ](https://spark.apache.org/docs/latest/api/sql/index.html#first_value) | Retourneert de eerste waarde |
 | [`grouping`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping) | Hiermee wordt aangegeven of een kolom is gegroepeerd |
 | [`grouping_id`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping_id) | Retourneert het niveau van groepering |
 | [`instr`](https://spark.apache.org/docs/latest/api/sql/index.html#instr) | Retourneert een op 1 gebaseerde index van het voorkomen van tekens |
 | [`json_tuple`](https://spark.apache.org/docs/latest/api/sql/index.html#json_tuple) | Retourneert een tuple van een JSON-invoer |
-| [`lag`](https://spark.apache.org/docs/latest/api/sql/index.html#lag), [`lead`](https://spark.apache.org/docs/latest/api/sql/index.html#lead) | Hiermee wordt de waarde vóór de verschuiving geretourneerd |
-| [`last`](https://spark.apache.org/docs/latest/api/sql/index.html#last), [`last_value`](https://spark.apache.org/docs/latest/api/sql/index.html#last_value) | Retourneert de laatste waarde |
-| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | Retourneert de eerste [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) tekens |
+| [`lag` ](https://spark.apache.org/docs/latest/api/sql/index.html#lag), [`lead` ](https://spark.apache.org/docs/latest/api/sql/index.html#lead) | Hiermee wordt de waarde vóór de verschuiving geretourneerd |
+| [`last` ](https://spark.apache.org/docs/latest/api/sql/index.html#last), [`last_value` ](https://spark.apache.org/docs/latest/api/sql/index.html#last_value) | Retourneert de laatste waarde |
+| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | Retourneert de eerste [`n` ](https://spark.apache.org/docs/latest/api/sql/index.html#n) -tekens |
 | [`length`](https://spark.apache.org/docs/latest/api/sql/index.html#length) | Retourneert de lengte van de tekenreeks |
 | [`levenshtein`](https://spark.apache.org/docs/latest/api/sql/index.html#levenshtein) | Retourneert de Levenshtein-afstand tussen tekenreeksen |
-| [`locate`](https://spark.apache.org/docs/latest/api/sql/index.html#locate), [`position`](https://spark.apache.org/docs/latest/api/sql/index.html#position) | Retourneert de positie van de eerste instantie van een subtekenreeks |
+| [`locate` ](https://spark.apache.org/docs/latest/api/sql/index.html#locate), [`position` ](https://spark.apache.org/docs/latest/api/sql/index.html#position) | Retourneert de positie van de eerste instantie van een subtekenreeks |
 | [`map_concat`](https://spark.apache.org/docs/latest/api/sql/index.html#map_concat) | Een kaart samenvoegen |
 | [`map_keys`](https://spark.apache.org/docs/latest/api/sql/index.html#map_keys) | Kaarttoetsen retourneren |
 | [`map_values`](https://spark.apache.org/docs/latest/api/sql/index.html#map_values) | De waarden van een kaart retourneren |
@@ -285,12 +285,12 @@ Voor meer gedetailleerde informatie over de functies, inclusief de syntaxis, het
 | [`shiftright`](https://spark.apache.org/docs/latest/api/sql/index.html#shiftright) | Bitsgewijs naar rechts verplaatsen ondertekend |
 | [`shiftrightunsigned`](https://spark.apache.org/docs/latest/api/sql/index.html#shiftrightunsigned) | Bitsgewijs zonder teken naar rechts verplaatsen |
 | [`size`](https://spark.apache.org/docs/latest/api/sql/index.html#size) | Hiermee wordt de grootte van de array geretourneerd |
-| [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | Een tekenreeks retourneren met [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) spaties |
+| [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | Een tekenreeks met [`n` ](https://spark.apache.org/docs/latest/api/sql/index.html#n) spaties retourneren |
 | [`split`](https://spark.apache.org/docs/latest/api/sql/index.html#split) | Gesplitste tekenreeks |
 | [`substring_index`](https://spark.apache.org/docs/latest/api/sql/index.html#substring_index) | Retourindex van subtekenreeks |
 | [`window`](https://spark.apache.org/docs/latest/api/sql/index.html#window) | Venster |
 | [`xpath`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath) | XML-knooppunten parseren |
-| [`xpath_double`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_double), [`xpath_number`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_number) | XML-knooppunten parseren voor dubbel |
+| [`xpath_double` ](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_double), [`xpath_number` ](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_number) | XML-knooppunten parseren voor dubbel |
 | [`xpath_float`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_float) | XML-knooppunten parseren voor float |
 | [`xpath_int`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_int) | XML-knooppunten parseren voor geheel getal |
 | [`xpath_long`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_long) | XML-knooppunten lange parseren |
@@ -303,7 +303,7 @@ Voor meer gedetailleerde informatie over de functies, inclusief de syntaxis, het
 | -------- | ----------- |
 | [`current_database`](https://spark.apache.org/docs/latest/api/sql/index.html#current_database) | Hiermee wordt de huidige database geretourneerd |
 | [`current_date`](https://spark.apache.org/docs/latest/api/sql/index.html#current_date) | Hiermee wordt de huidige datum geretourneerd |
-| [`current_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#current_timestamp), [`now`](https://spark.apache.org/docs/latest/api/sql/index.html#now) | Hiermee wordt de huidige tijdstempel geretourneerd |
+| [`current_timestamp` ](https://spark.apache.org/docs/latest/api/sql/index.html#current_timestamp), [`now` ](https://spark.apache.org/docs/latest/api/sql/index.html#now) | Hiermee wordt de huidige tijdstempel geretourneerd |
 
 ### Functies met hogere volgorde {#higher-order}
 

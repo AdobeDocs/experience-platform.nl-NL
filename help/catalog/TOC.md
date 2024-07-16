@@ -15,7 +15,7 @@ ht-degree: 24%
 # Catalogus en gegevenssets {#catalog}
 
 * [Overzicht van Catalog Service](home.md)
-* Catalogusservice-API {#api}
+* Catalog Service-API {#api}
    * [Aan de slag](api/getting-started.md)
    * [Catalogusgegevens filteren met behulp van queryparameters](api/filter-data.md)
    * [Objecten weergeven](api/list-objects.md)
@@ -35,5 +35,5 @@ ht-degree: 24%
    * [Een gegevensset inschakelen voor profiel en identiteit](datasets/enable-for-profile.md)
    * [Een gegevensset inschakelen voor profielupdates (upsert)](datasets/enable-upsert.md)
 * [Behandeling van een privacyverzoek in het Data Lake](privacy.md)
-* [API-referentie](https://www.adobe.io/experience-platform-apis/references/catalog/)
-* [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/catalog/)
+* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

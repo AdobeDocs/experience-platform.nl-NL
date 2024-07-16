@@ -4,8 +4,8 @@ description: Leer hoe u Data Distiller kunt gebruiken om gegevens van een Python
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
 source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 14%
+source-wordcount: '760'
+ht-degree: 13%
 
 ---
 
@@ -15,7 +15,7 @@ Dit document bevat enkele basisvoorbeelden en aanbevolen procedures voor het geb
 
 ## Aan de slag
 
-Voordat u verdergaat met deze handleiding, moet u controleren of u een verbinding met Data Distiller hebt gemaakt in uw [!DNL Python] -laptop. Zie de documentatie voor instructies over hoe u kunt [een verbinding maken [!DNL Python] notebook naar Data Distiller](./establish-connection.md).
+Voordat u verdergaat met deze handleiding, moet u controleren of u een verbinding met Data Distiller hebt gemaakt in uw [!DNL Python] -laptop. Zie de documentatie voor instructies op hoe te [ a  [!DNL Python]  notitieboekje met Gegevens Distiller ](./establish-connection.md) verbinden.
 
 ## Verkrijgen van basisstatistieken {#basic-statistics}
 
@@ -34,7 +34,7 @@ df = qs_cursor.query(basic_statistics_query, output="dataframe")
 df
 ```
 
-**Voorbeelduitvoer**
+**de output van de Steekproef**
 
 |     | totalRows | differentUsers |
 | --- | ----------- | -------------- |
@@ -42,9 +42,9 @@ df
 
 ## Een gesamplede versie van grote gegevenssets maken {#create-dataset-sample}
 
-Als de dataset u wenst te vragen zeer groot is, of als de nauwkeurige resultaten van verkennende vragen niet noodzakelijk zijn, gebruik [bemonsteringsfunctionaliteit](../../key-concepts/dataset-samples.md) beschikbaar voor Distiller-query&#39;s voor gegevens. Dit is een proces in twee stappen:
+Als de dataset u wenst om te vragen zeer groot is, of als de nauwkeurige resultaten van verkennende vragen niet noodzakelijk zijn, gebruik de [ steekproeffunctionaliteit ](../../key-concepts/dataset-samples.md) beschikbaar voor de vragen van Distiller van Gegevens. Dit is een proces in twee stappen:
 
-- Eerste, **analyseren** de dataset om een bemonsterde versie met een gespecificeerde steekproefverhouding te creëren
+- Eerst, **analyseert** de dataset om een bemonsterde versie met een gespecificeerde steekproefverhouding tot stand te brengen
 - Daarna, vraag de bemonsterde versie van de dataset. Afhankelijk van de functies die u op de gesamplede dataset toepast, kunt u de uitvoer naar de getallen schalen naar de volledige dataset
 
 ### Een 5%-voorbeeld maken {#create-sample}
@@ -64,7 +64,7 @@ qs_cursor.query(analyze_table_query, output="raw")
 
 ### Bekijk uw voorbeelden {#view-sample}
 
-U kunt de `sample_meta` functie om het even welke steekproeven te bekijken die van een bepaalde dataset zijn gecreeerd. In het codefragment hieronder ziet u hoe u het `sample_meta` functie.
+U kunt de functie `sample_meta` gebruiken om voorbeelden weer te geven die op basis van een bepaalde gegevensset zijn gemaakt. In het codefragment hieronder ziet u hoe u de functie `sample_meta` gebruikt.
 
 ```python
 sampled_version_of_table_query = f'''SELECT sample_meta('{table_name}')'''
@@ -73,11 +73,11 @@ df_samples = qs_cursor.query(sampled_version_of_table_query, output="dataframe")
 df_samples
 ```
 
-**Voorbeelduitvoer**:
+**de output van de Steekproef**:
 
 |   | sample_table_name | sample_dataset_id | parent_dataset_id | sample_type | sampling_rate | filter_condition_on_source_dataset | sample_num_rows | gemaakt |
 |---|---|---|---|---|---|---|---|---|
-| 0 | cmle_synthetische_data_experience_event_dataset_c... | 650f7a09ed6c3e28d34d7fc2 | 64fb4d7a7d748828d304a2f4 | uniform | 0.5 | 6427 | 23/09/2023 | 11:51:37 |
+| 0 | cmle_synthetische_data_experience_event_dataset_c... | 650f7a09ed6c3e28d34d7fc2 | 64fb4d7a7d748828d304a2f4 | uniform | 0,5 | 6427 | 09-23-2023 | 11 :51: 37 |
 
 {style="table-layout:auto"}
 
@@ -97,7 +97,7 @@ approx_count = df["cnt"].iloc[0] / (sampling_rate / 100)
 print(f"Approximate count: {approx_count} using {sampling_rate *10}% sample")
 ```
 
-**Voorbeelduitvoer**
+**de output van de Steekproef**
 
 ```console
 Approximate count: 1284600.0 using 5.0% sample
@@ -105,7 +105,7 @@ Approximate count: 1284600.0 using 5.0% sample
 
 ## Analyse van e-mailtrechter {#email-funnel-analysis}
 
-Een trechter-analyse is een methode om te begrijpen welke stappen nodig zijn om een doelresultaat te bereiken en hoeveel gebruikers elk van deze stappen doorlopen. In het onderstaande voorbeeld ziet u een eenvoudige trechter-analyse van de stappen die leiden tot een gebruiker die zich abonneert op een nieuwsbrief. Het resultaat van het abonnement wordt weergegeven als een gebeurtenistype van `web.formFilledOut`.
+Een trechter-analyse is een methode om te begrijpen welke stappen nodig zijn om een doelresultaat te bereiken en hoeveel gebruikers elk van deze stappen doorlopen. In het onderstaande voorbeeld ziet u een eenvoudige trechter-analyse van de stappen die leiden tot een gebruiker die zich abonneert op een nieuwsbrief. Het resultaat van het abonnement wordt weergegeven door een gebeurtenistype `web.formFilledOut` .
 
 Eerst, stel een vraag in werking om het aantal gebruikers bij elke stap te krijgen.
 
@@ -116,7 +116,7 @@ funnel_df = qs_cursor.query(simple_funnel_analysis_query, output="dataframe")
 funnel_df
 ```
 
-**Voorbeelduitvoer**
+**de output van de Steekproef**
 
 |   | eventType | differentUsers | differentEvents |
 |---|---|---|---|
@@ -138,7 +138,7 @@ funnel_df
 
 ### Zoekresultaten voor plotten {#plot-results}
 
-Vervolgens plaatst u de queryresultaten met de [!DNL Python] `plotly` bibliotheek:
+Vervolgens plaatst u de queryresultaten met behulp van de [!DNL Python] `plotly` -bibliotheek:
 
 ```python
 import plotly.express as px
@@ -150,20 +150,20 @@ fig = px.funnel(email_funnel_df, y='eventType', x='distinctUsers')
 fig.show()
 ```
 
-**Voorbeelduitvoer**
+**de output van de Steekproef**
 
-![An infographic of the eventType email trechter.](../../images/data-distiller/email-funnel.png)
+![ een infografisch van de eventType e-mailtrechter.](../../images/data-distiller/email-funnel.png)
 
 ## Gebeurteniscorrelaties {#event-correlations}
 
-Een andere algemene analyse is het berekenen van correlaties tussen gebeurtenistypen en een gebeurtenistype voor doelconversie. In dit voorbeeld wordt de abonnementsgebeurtenis vertegenwoordigd door `web.formFilledOut`. In dit voorbeeld wordt het [!DNL Spark] functies beschikbaar in de vragen van Distiller van Gegevens om de volgende stappen te bereiken:
+Een andere algemene analyse is het berekenen van correlaties tussen gebeurtenistypen en een gebeurtenistype voor doelconversie. In dit voorbeeld wordt de abonnementsgebeurtenis vertegenwoordigd door `web.formFilledOut` . In dit voorbeeld worden de [!DNL Spark] -functies die beschikbaar zijn in Data Distiller-query&#39;s gebruikt om de volgende stappen te bereiken:
 
 1. Telt het aantal gebeurtenissen voor elk gebeurtenistype door profiel.
-2. De tellingen van elk gebeurtenistype over profielen samenvoegen en de correlaties van elk gebeurtenistype berekenen met `web,formFilledOut`.
+2. De tellingen van elk gebeurtenistype over profielen groeperen en de correlaties van elk gebeurtenistype berekenen met `web,formFilledOut`.
 3. Transformeer het dataframe van tellingen en correlaties in een lijst van de Coëfficiënten van de Correlatie van Pearson van elke eigenschap (gebeurtenistype tellingen) met de doelgebeurtenis.
 4. U kunt de resultaten in een waarnemingspunt visualiseren.
 
-De [!DNL Spark] De functies voegen de gegevens samen om een kleine lijst van resultaten terug te keren, zodat kunt u dit type van vraag op de volledige dataset uitvoeren.
+De [!DNL Spark] functies voegen de gegevens samen om een kleine lijst van resultaten terug te keren, zodat kunt u dit type van vraag op de volledige dataset uitvoeren.
 
 ```python
 large_correlation_query=f'''
@@ -211,11 +211,11 @@ large_correlation_df = qs_cursor.query(large_correlation_query, output="datafram
 large_correlation_df
 ```
 
-**Voorbeelduitvoer**:
+**de output van de Steekproef**:
 
 |   | webFormsFilled_totalUsers | advertentieKliks_totalUsers | productViews_totalUsers | productPurchases_totalUsers | propositionDisses_totaUsers | propositionDisplay_totaUsers | propositionInteracts_totalUsers | emailClicks_totalUsers | emailOpens_totalUsers | webLinksClicks_totalUsers | ... | webForms_advertenceClicks | webForms_productViews | webForms_productPurchases | webForms_propositionDisses | webForms_propositionInteracts | webForms_emailClicks | webForms_emailOpens | webForms_emailSends | webForms_webLinkClicks | webForms_webPageViews |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | … | 0.026805 | 0.2779 | Geen | 0.06014 | 0.143656 | 0.305657 | 0.218874 | 0.192836 | 0.259353 | Geen |
+| 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | ... | 0,026805 | 0,2779 | Geen | 0,06014 | 0,143656 | 0,305657 | 0,218874 | 0,192836 | 0,259353 | Geen |
 
 {style="table-layout:auto"}
 
@@ -232,24 +232,24 @@ corrdf["pearsonCorrelation"] = corrdf["value"]
 corrdf.fillna(0)
 ```
 
-**Voorbeelduitvoer**:
+**de output van de Steekproef**:
 
 |    | variabel | value | functie | pearsonCorrelation |
 | --- | ---  |  ---  |  ---  | --- |
-| 0 | `webForms_EmailOpens` | 0.218874 | EmailOpens | 0.218874 |
-| 1 | `webForms_advertisingClicks` | 0.026805 | adverterenKliks | 0.026805 |
-| 2 | `webForms_productViews` | 0.277900 | productViews | 0.277900 |
-| 3 | `webForms_productPurchases` | 0.000000 | productPurchases | 0.000000 |
-| 4 | `webForms_propositionDismisses` | 0.060140 | propositionDisses | 0.060140 |
-| 5 | `webForms_propositionInteracts` | 0.143656 | propositionInteracts | 0.143656 |
-| 6 | `webForms_emailClicks` | 0.305657 | emailClicks | 0.305657 |
-| 7 | `webForms_emailOpens` | 0.218874 | emailOpens | 0.218874 |
-| 8 | `webForms_emailSends` | 0.192836 | emailSends | 0.192836 |
-| 9 | `webForms_webLinkClicks` | 0.259353 | webLinkClicks | 0.259353 |
-| 10 | `webForms_webPageViews` | 0.000000 | webPageViews | 0.000000 |
+| 0 | `webForms_EmailOpens` | 0,218874 | EmailOpens | 0,218874 |
+| 1 | `webForms_advertisingClicks` | 0,026805 | adverterenKliks | 0,026805 |
+| 2 | `webForms_productViews` | 0,277900 | productViews | 0,277900 |
+| 3 | `webForms_productPurchases` | 0,000000 | productPurchases | 0,000000 |
+| 4 | `webForms_propositionDismisses` | 0,060140 | propositionDisses | 0,060140 |
+| 5 | `webForms_propositionInteracts` | 0,143656 | propositionInteracts | 0,143656 |
+| 6 | `webForms_emailClicks` | 0,305657 | emailClicks | 0,305657 |
+| 7 | `webForms_emailOpens` | 0,218874 | emailOpens | 0,218874 |
+| 8 | `webForms_emailSends` | 0,192836 | emailSends | 0,192836 |
+| 9 | `webForms_webLinkClicks` | 0,259353 | webLinkClicks | 0,259353 |
+| 10 | `webForms_webPageViews` | 0,000000 | webPageViews | 0,000000 |
 
 
-Tot slot kunt u de correlaties met de `matplotlib` [!DNL Python] bibliotheek:
+Tot slot kunt u de correlaties met de `matplotlib` [!DNL Python] -bibliotheek visualiseren:
 
 ```python
 import matplotlib.pyplot as plt
@@ -258,8 +258,8 @@ sns.barplot(data=corrdf.fillna(0), y="feature", x="pearsonCorrelation")
 ax.set_title("Pearson Correlation of Events with the outcome event")
 ```
 
-![Een staafgrafiek van de Pearson-correlatie van gebeurtenissen met uitkomsten van gebeurtenissen](../../images/data-distiller/pearson-correlations.png)
+![ een staafgrafiek van de Correlatie van Pearson van gebeurtenissen van gebeurtenisresultaten ](../../images/data-distiller/pearson-correlations.png)
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u geleerd hoe u Data Distiller kunt gebruiken om gegevens van een [!DNL Python] -laptop. De volgende stap bij het maken van functiepijpleidingen van Experience Platform naar aangepaste modellen in uw computerleeromgeving is: [engineeringfuncties voor het leren van machines](./feature-engineering.md).
+Door dit document te lezen, hebt u geleerd hoe u Data Distiller kunt gebruiken om gegevens van een [!DNL Python] -laptop te verkennen en te analyseren. De volgende stap in het creëren van eigenschappijpleidingen van Experience Platform om douanemodellen in uw machine het leren milieu te voeren is [ ingenieurseigenschappen voor machine het leren ](./feature-engineering.md).

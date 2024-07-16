@@ -1,19 +1,19 @@
 ---
 title: De Groep van het Gebied van de Verrijking van de Partner van het profiel (Voorbeeld)
 description: Leer over de het schemagebiedgroep van de Verrijking van de Partner van het Profiel (Steekproef).
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: 02f7c358-3cf9-45cb-a5c5-e2cb1f140d93
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 0%
 
 ---
 
-
 # [!UICONTROL Profile Partner Enrichment (Sample)] schemaveldgroep
 
-[!UICONTROL Profile Partner Enrichment (Sample)] is een standaardschemagebiedgroep voor [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). Gebruik deze gebiedsgroep om extra gegevens te verstrekken met betrekking tot partner-gedreven verbeteringen voor klantenprofielen.
+[!UICONTROL Profile Partner Enrichment (Sample)] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../classes/individual-profile.md). Gebruik deze gebiedsgroep om extra gegevens te verstrekken met betrekking tot partner-gedreven verbeteringen voor klantenprofielen.
 
-![Een schema van de [!UICONTROL Profile Partner Enrichment (Sample)] veldgroep.](../../images/field-groups/profile-partner-enrichment-sample.png)
+![ A diagram van de [!UICONTROL Profile Partner Enrichment (Sample)] gebiedsgroep.](../../images/field-groups/profile-partner-enrichment-sample.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |-----------------------------|------------------------|-----------|----------------------------------|
@@ -48,4 +48,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de veldgroep raadpleegt u de [volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-profile-enrichment/profile-partner-enrichment-sample.schema.json) in de openbare XDM-opslagplaats.
+Voor meer details op de gebiedsgroep, verwijs naar het [ volledige schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-profile-enrichment/profile-partner-enrichment-sample.schema.json) op de openbare bewaarplaats XDM.

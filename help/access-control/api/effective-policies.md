@@ -18,9 +18,9 @@ ht-degree: 0%
 >
 >Als een gebruikerstoken wordt overgegaan, dan moet de gebruiker van het teken een &quot;org admin&quot;rol voor gevraagde org hebben.
 
-Om effectief toegangsbeheerbeleid voor de huidige gebruiker te bekijken, doe een verzoek van de POST aan `/acl/effective-policies` in de [!DNL Access Control] API. De toestemmingen en middeltypes u wilt terugwinnen moeten in de verzoeklading in de vorm van een serie worden verstrekt. Dit wordt geïllustreerd in de voorbeeld-API-aanroep hieronder.
+Als u effectief toegangsbeheerbeleid voor de huidige gebruiker wilt weergeven, vraagt u een POST naar het eindpunt `/acl/effective-policies` in de [!DNL Access Control] API. De toestemmingen en middeltypes u wilt terugwinnen moeten in de verzoeklading in de vorm van een serie worden verstrekt. Dit wordt geïllustreerd in de voorbeeld-API-aanroep hieronder.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /acl/effective-policies
@@ -28,7 +28,7 @@ POST /acl/effective-policies
 
 **Verzoek**
 
-Met de volgende verzoeken wordt informatie opgehaald over &quot;[!UICONTROL Manage Datasets]&quot; toestemming en toegang tot &quot;[!UICONTROL schemas]&quot; resource type voor de huidige gebruiker.
+De volgende verzoeken wint informatie over &quot;[!UICONTROL Manage Datasets]&quot;toestemming en toegang tot &quot;[!UICONTROL schemas]&quot;middeltype voor de huidige gebruiker terug.
 
 ```shell
 curl -X POST \
@@ -46,11 +46,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->Voor een volledige lijst van toestemmingen en middeltypes die in de ladingsserie kunnen worden verstrekt, zie de bijlage sectie op [geaccepteerde machtigingen en brontypen](#accepted-permissions-and-resource-types).
+>Voor een volledige lijst van toestemmingen en middeltypes die in de nuttige ladingsserie kunnen worden verstrekt, zie de bijlage sectie op [ toegelaten toestemmingen en middeltypes ](#accepted-permissions-and-resource-types).
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert informatie over de toestemmingen en middeltypes terug die in het verzoek worden verstrekt. De reactie omvat de actieve toestemmingen de huidige gebruiker voor de middeltypes die in het verzoek worden gespecificeerd. Als er machtigingen in de payload van de aanvraag actief zijn voor de huidige gebruiker, retourneert de API de bevoegdheid met een asterisk (`*`) om aan te geven dat de machtiging actief is. Eventuele machtigingen die in de aanvraag zijn opgegeven en die niet actief zijn voor de gebruiker, worden weggelaten uit de antwoordlading.
+Een succesvolle reactie keert informatie over de toestemmingen en middeltypes terug die in het verzoek worden verstrekt. De reactie omvat de actieve toestemmingen de huidige gebruiker voor de middeltypes die in het verzoek worden gespecificeerd. Als om het even welke toestemmingen inbegrepen in de verzoeklading voor de huidige gebruiker actief zijn, keert API de toestemming met een asterisk (`*`) terug om erop te wijzen dat de toestemming actief is. Eventuele machtigingen die in de aanvraag zijn opgegeven en die niet actief zijn voor de gebruiker, worden weggelaten uit de antwoordlading.
 
 ```json
 {
@@ -69,17 +69,17 @@ Een succesvolle reactie keert informatie over de toestemmingen en middeltypes te
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u de [!DNL Access Control] API om informatie over actieve toestemmingen en verwant toegangsbeleid voor middeltypes terug te keren. Voor meer informatie over toegangsbeheer voor [!DNL Experience Platform], zie de [toegangsbeheeroverzicht](../home.md).
+In dit document wordt beschreven hoe u aanroepen van de [!DNL Access Control] API kunt uitvoeren om informatie te retourneren over actieve machtigingen en het gerelateerde toegangsbeleid voor typen bronnen. Voor meer informatie over toegangsbeheer voor [!DNL Experience Platform], zie het [ overzicht van de toegangscontrole ](../home.md).
 
 ## Bijlage
 
-Deze sectie verstrekt aanvullende informatie voor het gebruiken van [!DNL Access Control] API.
+Deze sectie bevat aanvullende informatie voor het gebruik van de [!DNL Access Control] API.
 
 ### Toegelaten toestemmingen en middeltypes
 
-Hier volgt een lijst met machtigingen en typen bronnen die u kunt opnemen in de lading van een verzoek van een POST aan de `/acl/active-permissions` eindpunt.
+Hier volgt een lijst met machtigingen en typen bronnen die u kunt opnemen in de lading van een verzoek van een POST aan het `/acl/active-permissions` -eindpunt.
 
-**Machtigingen**
+**Toestemmingen**
 
 ```plaintext
 permissions/activate-destinations
@@ -117,7 +117,7 @@ permissions/view-segments
 permissions/view-sources
 ```
 
-**Brontypen**
+**types van Middel**
 
 ```plaintext
 resource-types/activation-associations

@@ -27,4 +27,4 @@ ht-degree: 50%
 - [Toewijzingssets](mapping-set.md)
 - [Stroom upserts](upserts.md)
 - [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-- [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Op deze pagina wordt ervan uitgegaan dat het samenvoegbeleid de identiteitsgrafiek gebruikt. Voor meer informatie over samenvoegingsbeleid in Real-Time het Profiel van de Klant, lees de documentatie over [samenvoegbeleid en identiteitsstijgingen](../profile/merge-policies/overview.md#identity-stitching).
+>Op deze pagina wordt ervan uitgegaan dat het samenvoegbeleid de identiteitsgrafiek gebruikt. Voor meer informatie over samenvoegingsbeleid in het Profiel van de Klant in real time, lees de documentatie over [ samenvoegbeleid en identiteit het stitching ](../profile/merge-policies/overview.md#identity-stitching).
 
 Hoewel u identiteitsservice en realtime klantprofiel tegelijk kunt gebruiken, zijn de twee functies van Adobe Experience Platform inherent niet hetzelfde.
 
@@ -29,9 +29,9 @@ De belangrijkste verschillen tussen Identiteitsservice en Real-Time Klantprofiel
 | | Identiteitsservice | Klantprofiel in realtime |
 | --- | --- |--- |
 | **Doel** | <ul><li>U kunt de Dienst van de Identiteit gebruiken om identiteitsgrafieken tot stand te brengen en te beheren.</li></ul> | U kunt Real-Time profiel van de Klant gebruiken aan: <ul><li>Maak een 360-gradenweergave van een klantprofiel.</li><li>Profielen weergeven en beheren.</li></ul> |
-| **Invoer** | <ul><li>Als u Identiteitsservice wilt gebruiken, moet u recordgegevens of tijdreeksgebeurtenissen invoeren die ten minste twee velden hebben die als identiteit zijn gemarkeerd. De gebieden die u als identiteit merkt worden dan opgenomen in de Dienst van de Identiteit.</li></ul> | <ul><li>Profielfragmenten: vertegenwoordigen een unieke primaire identiteit en de bijbehorende record- of gebeurtenisgegevens voor die id binnen een bepaalde gegevensset.</li><li>Identiteitsgrafieken: het profiel verwijst naar de identiteitsgrafiek voor een bepaald klantprofiel om alle profielfragmenten met dezelfde primaire identiteiten te identificeren.</li></ul> |
+| **Input** | <ul><li>Als u Identiteitsservice wilt gebruiken, moet u recordgegevens of tijdreeksgebeurtenissen invoeren die ten minste twee velden hebben die als identiteit zijn gemarkeerd. De gebieden die u als identiteit merkt worden dan opgenomen in de Dienst van de Identiteit.</li></ul> | <ul><li>Profielfragmenten: vertegenwoordigen een unieke primaire identiteit en de bijbehorende record- of gebeurtenisgegevens voor die id binnen een bepaalde gegevensset.</li><li>Identiteitsgrafieken: het profiel verwijst naar de identiteitsgrafiek voor een bepaald klantprofiel om alle profielfragmenten met dezelfde primaire identiteiten te identificeren.</li></ul> |
 | **Proces** | <ul><li>Als u ten minste twee identiteiten hebt ingevoerd, koppelt Identiteitsservice deze identiteiten vervolgens aan elkaar.</li></ul> | <ul><li>In real-time Klantprofiel worden profielfragmenten samengevoegd terwijl wordt verwezen naar hun overeenkomstige identiteitsgrafieken.</li></ul> |
-| **Uitvoer** | <ul><li>Het resultaat is een identiteitsgrafiek, die een reeks identiteiten met betrekking tot een individu is.</li></ul> | <ul><li>Het resultaat is een samengevoegd profiel, dat een enkele en uitgebreide weergave van een bepaalde klant is. Dit profiel kan dan in aanmerking komen voor een segment.</li></ul> |
+| **Output** | <ul><li>Het resultaat is een identiteitsgrafiek, die een reeks identiteiten met betrekking tot een individu is.</li></ul> | <ul><li>Het resultaat is een samengevoegd profiel, dat een enkele en uitgebreide weergave van een bepaalde klant is. Dit profiel kan dan in aanmerking komen voor een segment.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -42,9 +42,9 @@ Lees de onderstaande stappen om meer inzicht te krijgen in het proces van het ma
 * Eerst verwijst het Real-Time Profiel van de Klant naar een identiteitsgrafiek en wint alle identiteiten terug.
 * Vervolgens haalt Profiel profielfragmenten op met primaire identiteiten in de identiteitsgrafiek.
 * Wanneer de bewerking voltooid is, voegt Profiel dan alle bestaande gebeurtenissen en kenmerken samen.
-   * Als er conflicterende kenmerkinformatie is, worden kenmerken gekozen op basis van de samenvoegmethode. Lees voor meer informatie de [overzicht van samenvoegbeleid](../profile/merge-policies/overview.md).
+   * Als er conflicterende kenmerkinformatie is, worden kenmerken gekozen op basis van de samenvoegmethode. Voor meer informatie, lees het [ overzicht van het samenvoegingsbeleid ](../profile/merge-policies/overview.md).
 
-![Een stroomdiagram waarin wordt aangegeven hoe Identiteitsservice en het samenvoegen van profielen werken.](./images/merge-profile-process.png)
+![ A stroomdiagram die detailleert hoe de Dienst van de Identiteit en het Samenvoegen van het Profiel werken.](./images/merge-profile-process.png)
 
 ## Een veld aanwijzen als identiteit
 

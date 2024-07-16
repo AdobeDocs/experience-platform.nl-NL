@@ -7,50 +7,50 @@ description: Leer hoe u Adobe Experience Platform verbindt met een ServiceNow-se
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
 source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 1%
+source-wordcount: '468'
+ht-degree: 0%
 
 ---
 
-# Een [!DNL ServiceNow] basisverbinding met de [!DNL Flow Service] API
+# Een [!DNL ServiceNow] basisverbinding maken met de [!DNL Flow Service] API
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL Google ServiceNow] met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Google ServiceNow] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-In de volgende secties vindt u aanvullende informatie die u nodig hebt om verbinding te kunnen maken met een [!DNL ServiceNow] server die de [!DNL Flow Service] API.
+De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met een [!DNL ServiceNow] -server via de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] om verbinding te maken met [!DNL ServiceNow]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
+[!DNL Flow Service] kan alleen verbinding maken met [!DNL ServiceNow] als u waarden opgeeft voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `endpoint` | Het eindpunt van het [!DNL ServiceNow] server. |
-| `username` | De gebruikersnaam die wordt gebruikt om verbinding te maken met de [!DNL ServiceNow] server voor verificatie. |
-| `password` | Het wachtwoord waarmee verbinding moet worden gemaakt met de [!DNL ServiceNow] server voor verificatie. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL ServiceNow] is: `eb13cb25-47ab-407f-ba89-c0125281c563`. |
+| `endpoint` | Het eindpunt van de [!DNL ServiceNow] server. |
+| `username` | De gebruikersnaam die wordt gebruikt voor verbinding met de [!DNL ServiceNow] -server voor verificatie. |
+| `password` | Het wachtwoord waarmee verbinding moet worden gemaakt met de [!DNL ServiceNow] -server voor verificatie. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL ServiceNow] is: `eb13cb25-47ab-407f-ba89-c0125281c563` . |
 
-Raadpleeg voor meer informatie over aan de slag gaan [dit ServiceNow-document](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
+Voor meer informatie over begonnen worden, verwijs naar [ dit document ServiceNow ](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL ServiceNow] verificatiereferenties als onderdeel van de aanvraagparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL ServiceNow] -verificatiegegevens op als onderdeel van de aanvraagparameters.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /connections
@@ -58,7 +58,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL ServiceNow]:
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL ServiceNow] gemaakt:
 
 ```shell
 curl -X POST \
@@ -88,14 +88,14 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.server` | Het eindpunt van uw [!DNL ServiceNow] server. |
-| `auth.params.username` | De gebruikersnaam die wordt gebruikt om verbinding te maken met de [!DNL ServiceNow] server voor verificatie. |
-| `auth.params.password` | Het wachtwoord waarmee verbinding moet worden gemaakt met de [!DNL ServiceNow] server voor verificatie. |
-| `connectionSpec.id` | De [!DNL ServiceNow] Verbindingsspecificatie-id: `eb13cb25-47ab-407f-ba89-c0125281c563` |
+| `auth.params.server` | Het eindpunt van de [!DNL ServiceNow] -server. |
+| `auth.params.username` | De gebruikersnaam die wordt gebruikt voor verbinding met de [!DNL ServiceNow] -server voor verificatie. |
+| `auth.params.password` | Het wachtwoord waarmee verbinding moet worden gemaakt met de [!DNL ServiceNow] -server voor verificatie. |
+| `connectionSpec.id` | De [!DNL ServiceNow] connection specification ID: `eb13cb25-47ab-407f-ba89-c0125281c563` |
 
-**Antwoord**
+**Reactie**
 
-Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de unieke id (`id`). Deze id is vereist om uw CRM-systeem in de volgende stap te verkennen.
+Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw CRM-systeem in de volgende stap te verkennen.
 
 ```json
 {
@@ -106,7 +106,7 @@ Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL ServiceNow] basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
+Aan de hand van deze zelfstudie hebt u een [!DNL ServiceNow] basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
-* [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
-* [Maak een dataflow om de gegevens van het klantsucces naar het Platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/customer-success.md)
+* [Onderzoek de structuur en de inhoud van uw gegevenslijsten gebruikend  [!DNL Flow Service]  API](../../explore/tabular.md)
+* [Creeer een dataflow om de gegevens van het klantensucces aan Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/customer-success.md)

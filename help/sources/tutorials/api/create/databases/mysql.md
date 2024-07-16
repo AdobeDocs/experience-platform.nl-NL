@@ -1,54 +1,54 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;MySQL;mysql
 solution: Experience Platform
-title: Een [!DNL MySQL] Basisverbinding met de Flow Service API
+title: Creeer de Verbinding van de a [!DNL MySQL]  Basis Gebruikend de Dienst API van de Stroom
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met MySQL kunt verbinden met behulp van de Flow Service API.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 1%
+source-wordcount: '441'
+ht-degree: 0%
 
 ---
 
-# Een [!DNL MySQL] basisverbinding met de [!DNL Flow Service] API
+# Een [!DNL MySQL] basisverbinding maken met de [!DNL Flow Service] API
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL MySQL] met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL MySQL] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL MySQL] met de [!DNL Flow Service] API.
+In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL MySQL] via de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] om verbinding te maken met uw [!DNL MySQL] opslag, moet u de waarde voor het volgende verbindingsbezit verstrekken:
+Als u wilt dat [!DNL Flow Service] verbinding maakt met uw [!DNL MySQL] -opslag, moet u de waarde opgeven voor de volgende eigenschap connection:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De [!DNL MySQL] verbindingstekenreeks die aan uw account is gekoppeld. De [!DNL MySQL] patroon verbindingstekenreeks is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL MySQL] is `26d738e0-8963-47ea-aadf-c60de735468a`. |
+| `connectionString` | De [!DNL MySQL] verbindingstekenreeks die aan uw account is gekoppeld. Het patroon van de [!DNL MySQL] verbindingstekenreeks is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` . |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL MySQL] is `26d738e0-8963-47ea-aadf-c60de735468a` . |
 
-Raadpleeg deze voor meer informatie over het verkrijgen van een verbindingstekenreeks [[!DNL MySQL] document](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
+Voor meer informatie over het verkrijgen van een verbindingskoord, verwijs naar dit [[!DNL MySQL]  document ](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL MySQL] verificatiereferenties als onderdeel van de aanvraagparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL MySQL] -verificatiegegevens op als onderdeel van de aanvraagparameters.
 
-**API-indeling**
+**API formaat**
 
 ```https
 POST /connections
@@ -56,7 +56,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL MySQL]:
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL MySQL] gemaakt:
 
 ```shell
 curl -X POST \
@@ -84,12 +84,12 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `auth.params.connectionString` | De [!DNL MySQL] verbindingstekenreeks die aan uw account is gekoppeld. De [!DNL MySQL] patroon verbindingstekenreeks is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | De [!DNL MySQL] Verbindingsspecificatie-id: `26d738e0-8963-47ea-aadf-c60de735468a`. |
+| `auth.params.connectionString` | De [!DNL MySQL] verbindingstekenreeks die aan uw account is gekoppeld. Het patroon van de [!DNL MySQL] verbindingstekenreeks is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` . |
+| `connectionSpec.id` | The [!DNL MySQL] connection specification ID: `26d738e0-8963-47ea-aadf-c60de735468a` . |
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist om uw database te verkennen in de volgende zelfstudie.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw database te verkennen in de volgende zelfstudie.
 
 ```json
 {
@@ -100,8 +100,8 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL MySQL]basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
+Door deze zelfstudie te volgen, hebt u a [!DNL MySQL] basisverbinding gecreeerd gebruikend [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
-* [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
-* [Maak een gegevensstroom om databasegegevens naar het Platform te brengen met de [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Onderzoek de structuur en de inhoud van uw gegevenslijsten gebruikend  [!DNL Flow Service]  API](../../explore/tabular.md)
+* [Creeer een dataflow om gegevensbestandgegevens aan Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/database-nosql.md)
 

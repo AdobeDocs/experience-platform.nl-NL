@@ -16,47 +16,47 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
 >title="Opsommingen en voorgestelde waarden"
->abstract="An **Enum** beperkt een tekenreeksveld zodat alleen gegevens zijn toegestaan die overeenkomen met een vooraf gedefinieerde set waarden die moeten worden ingevoerd. Aan elke opsommingsbeperking kan een **Weergavenaam** die kenmerkdropdowns in de Segmentatie UI bevolkt. **Voorgestelde waarden** voor een veld de opname niet beperken en alleen de weergavenamen bepalen die in Segmentatie worden weergegeven. Als u veelvoudige schema&#39;s hebt die een gebied delen dat tot een gemeenschappelijke klasse of een gebiedsgroep behoort, en u verschillende aantallen of voorgestelde waarden voor dat gebied tussen elk schema bepaalt, worden die waarden samengevoegd en toegevoegd in het unieschema."
+>abstract="An **Enum** beperkt een koordgebied om slechts gegevens toe te staan die een vooraf bepaalde reeks te nemen waarden aanpassen. Elke enumbeperking kan a **naam van de Vertoning** worden toegewezen die kenmerkdropdowns in de Segmentatie UI bevolkt. **voorgestelde waarden** voor een gebied beperken geen opname en bepalen slechts de vertoningsnamen die in Segmentatie worden getoond. Als u veelvoudige schema&#39;s hebt die een gebied delen dat tot een gemeenschappelijke klasse of een gebiedsgroep behoort, en u verschillende aantallen of voorgestelde waarden voor dat gebied tussen elk schema bepaalt, worden die waarden samengevoegd en toegevoegd in het unieschema."
 
 In het Model van Gegevens van de Ervaring (XDM), kan een koordgebied een vooraf bepaalde reeks toegelaten of voorgestelde waarden worden gegeven om beter te controleren welke waarden in dat gebied worden opgenomen of hoe het in segmentatie zal gedragen.
 
-**[!UICONTROL Enums]** de waarden die voor een tekenreeksveld kunnen worden ingevoerd, beperken tot een vooraf gedefinieerde set. Als u probeert gegevens in te voeren in een opsommingsveld en de waarde niet overeenkomt met een van de gedefinieerde waarden in de configuratie, wordt invoer geweigerd.
+**[!UICONTROL Enums]** beperkt de waarden die voor een tekenreeksveld kunnen worden ingevoerd tot een vooraf gedefinieerde set. Als u probeert gegevens in te voeren in een opsommingsveld en de waarde niet overeenkomt met een van de gedefinieerde waarden in de configuratie, wordt invoer geweigerd.
 
-In tegenstelling tot opsommingen, **[!UICONTROL Suggested values]** kunt u een set aanbevolen waarden opgeven voor een tekenreeksveld dat de waarden die het kan invoeren niet beperkt. De voorgestelde waarden hebben daarentegen invloed op de beschikbare vooraf gedefinieerde waarden in het dialoogvenster [Segmenteringsinterface](../../../segmentation/ui/overview.md) wanneer het tekenreeksveld wordt opgenomen als een kenmerk.
+In tegenstelling tot opsommingen, staat de **[!UICONTROL Suggested values]** optie toe om een reeks geadviseerde waarden voor een koordgebied te wijzen dat niet de waarden beperkt die het kan opnemen. In plaats daarvan, beïnvloeden de voorgestelde waarden welke vooraf bepaalde waarden in [ Segmentatie UI ](../../../segmentation/ui/overview.md) beschikbaar zijn wanneer het omvatten van het koordgebied als attribuut.
 
-Wanneer [een nieuw veld definiëren](./overview.md#define) in de Adobe Experience Platform-gebruikersinterface en het type instellen op [!UICONTROL String]kunt u een [enum](#enum) of [voorgestelde waarden](#suggested-values) voor dat veld.
+Wanneer [ het bepalen van een nieuw gebied ](./overview.md#define) in het gebruikersinterface van Adobe Experience Platform en het plaatsen van het type aan [!UICONTROL String], wordt u gegeven de optie om een [ enum ](#enum) of [ gesuggereerde waarden ](#suggested-values) voor dat gebied te bepalen.
 
-![Afbeelding met de optie Enum &amp; Suggested Values ingeschakeld voor een tekenreeksveld in de gebruikersinterface](../../images/ui/fields/enum/enum-options-selected.png)
+![ Beeld dat Enum &amp; de Voorgestelde optie van Waarden toont die voor een koordgebied in UI wordt toegelaten ](../../images/ui/fields/enum/enum-options-selected.png)
 
-In dit document wordt beschreven hoe u opsommingen en voorgestelde waarden in het dialoogvenster [!UICONTROL Schemas] UI-werkruimte. Bekijk de volgende video voor een snel overzicht van opsommingen en voorgestelde waarden, inclusief hoe u deze kunt configureren in de gebruikersinterface en de bijbehorende downstreameffecten:
+In dit document wordt beschreven hoe u opsommingen en voorgestelde waarden definieert in de gebruikersinterface van [!UICONTROL Schemas] . Bekijk de volgende video voor een snel overzicht van opsommingen en voorgestelde waarden, inclusief hoe u deze kunt configureren in de gebruikersinterface en de bijbehorende downstreameffecten:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## Een opsomming definiëren {#enum}
 
-Selecteren **[!UICONTROL Enums and Suggested Values]** selecteert u vervolgens **[!UICONTROL Enums]**. Er worden extra besturingselementen weergegeven, zodat u de waardebeperkingen voor de opsomming kunt opgeven. Als u een beperking wilt toevoegen, selecteert u **[!UICONTROL Add row]**.
+Selecteer **[!UICONTROL Enums and Suggested Values]** en selecteer vervolgens **[!UICONTROL Enums]** . Er worden extra besturingselementen weergegeven, zodat u de waardebeperkingen voor de opsomming kunt opgeven. Selecteer **[!UICONTROL Add row]** als u een restrictie wilt toevoegen.
 
-![Afbeelding met de optie Enummeren die is geselecteerd in de gebruikersinterface](../../images/ui/fields/enum/enum-add-row.png)
+![ Beeld dat de optie van Enums toont die in UI wordt geselecteerd ](../../images/ui/fields/enum/enum-add-row.png)
 
-Onder de **[!UICONTROL Value]** moet u de exacte waarde opgeven waarmee u het veld wilt beperken. U kunt desgewenst een mensvriendelijk **[!UICONTROL Display Name]** ook voor de beperking, die beïnvloedt hoe de waarde in segmentatie zal worden vertegenwoordigd.
+Onder de kolom **[!UICONTROL Value]** moet u de exacte waarde opgeven waarnaar u het veld wilt beperken. U kunt optioneel ook een gebruiksvriendelijke **[!UICONTROL Display Name]** versie van de beperking opgeven, die bepaalt hoe de waarde in de segmentatie wordt weergegeven.
 
-Doorgaan met gebruik **[!UICONTROL Add row]** om de gewenste beperkingen en facultatieve etiketten aan enum toe te voegen of het schrappingspictogram te selecteren (![Afbeelding van het verwijderpictogram](../../images/ui/fields/enum/remove-icon.png)) naast een eerder toegevoegde rij om deze te verwijderen. Selecteer **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
+Ga verder om **[!UICONTROL Add row]** te gebruiken om de gewenste beperkingen en facultatieve etiketten aan de opsomming toe te voegen, of het schrappingspictogram (![ Beeld van het schrappingspictogram ](../../images/ui/fields/enum/remove-icon.png)) naast een eerder toegevoegde rij te selecteren om het te verwijderen. Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
 
-![Afbeelding met de opsommingswaarden en weergavenamen die zijn ingevuld voor het tekenreeksveld in de gebruikersinterface](../../images/ui/fields/enum/enum-confirm.png)
+![ Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld ](../../images/ui/fields/enum/enum-confirm.png)
 
 Het canvas wordt bijgewerkt met de wijzigingen. Wanneer u dit schema in de toekomst verkent, kunt u de beperkingen voor het enum gebied binnen het juiste spoor bekijken en uitgeven.
 
 ## Voorgestelde waarden definiëren {#suggested-values}
 
-Selecteren **[!UICONTROL Enums and Suggested Values]** selecteert u vervolgens **[!UICONTROL Suggested Values]** om extra besturingselementen weer te geven. Van hier, selecteer **[!UICONTROL Add row]** om voorgestelde waarden toe te voegen.
+Selecteer **[!UICONTROL Enums and Suggested Values]** en selecteer vervolgens **[!UICONTROL Suggested Values]** om extra besturingselementen weer te geven. Selecteer van hieruit **[!UICONTROL Add row]** om voorgestelde waarden toe te voegen.
 
-![Afbeelding met de optie Suggesties voor waarden die is geselecteerd in de gebruikersinterface](../../images/ui/fields/enum/suggested-add-row.png)
+![ Beeld dat de Voorgestelde optie van Waarden toont die in UI wordt geselecteerd ](../../images/ui/fields/enum/suggested-add-row.png)
 
-Onder de **[!UICONTROL Display Name]** kolom, verstrek een mensvriendelijke naam voor de waarde aangezien u het in de Segmentatie UI wilt verschijnen. Als u meer voorgestelde waarden wilt toevoegen, selecteert u **[!UICONTROL Add row]** en herhaal dit proces zo nodig. Als u een eerder toegevoegde rij wilt verwijderen, selecteert u ![het verwijderpictogram](../../images/ui/fields/enum/remove-icon.png) naast de rij in kwestie.
+Geef onder de kolom **[!UICONTROL Display Name]** een mensvriendelijke naam voor de waarde op zoals u deze wilt weergeven in de segmenteringsinterface. Als u meer gesuggereerde waarden wilt toevoegen, selecteert u **[!UICONTROL Add row]** nogmaals en herhaalt u zo nodig het proces. Om een eerder toegevoegde rij te verwijderen, selecteer ![ het schrappingspictogram ](../../images/ui/fields/enum/remove-icon.png) naast de rij in kwestie.
 
-Selecteer **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
+Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
 
-![Afbeelding met de opsommingswaarden en weergavenamen die zijn ingevuld voor het tekenreeksveld in de gebruikersinterface](../../images/ui/fields/enum/suggested-confirm.png)
+![ Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld ](../../images/ui/fields/enum/suggested-confirm.png)
 
 >[!NOTE]
 >
@@ -64,13 +64,13 @@ Selecteer **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
 
 ### Voorgestelde waarden voor standaardvelden beheren
 
-Sommige velden van standaard XDM-componenten bevatten hun eigen voorgestelde waarden, zoals `eventType` van de [[!UICONTROL XDM ExperienceEvent] class](../../classes/experienceevent.md). Hoewel u aanvullende voorgestelde waarden voor een standaardveld kunt maken, kunt u voorgestelde waarden die niet door uw organisatie zijn gedefinieerd, niet wijzigen of verwijderen. Als u een standaardveld in de gebruikersinterface weergeeft, worden de voorgestelde waarden weergegeven, maar alleen-lezen.
+Sommige gebieden van standaardXDM componenten bevatten hun eigen gesuggereerde waarden, zoals `eventType` van de [[!UICONTROL XDM ExperienceEvent] klasse ](../../classes/experienceevent.md). Hoewel u aanvullende voorgestelde waarden voor een standaardveld kunt maken, kunt u voorgestelde waarden die niet door uw organisatie zijn gedefinieerd, niet wijzigen of verwijderen. Als u een standaardveld in de gebruikersinterface weergeeft, worden de voorgestelde waarden weergegeven, maar alleen-lezen.
 
-![Afbeelding met de opsommingswaarden en weergavenamen die zijn ingevuld voor het tekenreeksveld in de gebruikersinterface](../../images/ui/fields/enum/suggested-standard.png)
+![ Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld ](../../images/ui/fields/enum/suggested-standard.png)
 
-Als u nieuwe voorgestelde waarden voor een standaardveld wilt toevoegen, selecteert u **[!UICONTROL Add row]**. Als u een voorgestelde waarde wilt verwijderen die eerder door uw organisatie is toegevoegd, selecteert u ![het verwijderpictogram](../../images/ui/fields/enum/remove-icon.png) naast de rij in kwestie.
+Selecteer **[!UICONTROL Add row]** als u nieuwe voorgestelde waarden voor een standaardveld wilt toevoegen. Om een gesuggereerde waarde te verwijderen die eerder door uw organisatie werd toegevoegd, selecteer ![ het schrappingspictogram ](../../images/ui/fields/enum/remove-icon.png) naast de rij in kwestie.
 
-![Afbeelding met de opsommingswaarden en weergavenamen die zijn ingevuld voor het tekenreeksveld in de gebruikersinterface](../../images/ui/fields/enum/suggested-standard-add.png)
+![ Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld ](../../images/ui/fields/enum/suggested-standard-add.png)
 
 <!-- ### Removing suggested values for standard fields
 
@@ -86,42 +86,42 @@ See the [section below](#evolution) for more information on the rules for updati
 
 ## Evolutieregels voor opsommingen en voorgestelde waarden {#evolution}
 
-Nadat een schema met een enum gebied is gebruikt om gegevens in Platform in te voeren, moeten om het even welke verdere veranderingen die in de schemadefinitie worden aangebracht aan de gegevens reeds in het systeem voldoen. In het algemeen kunnen wijzigingen die in een bestaand veld worden aangebracht, alleen dat veld maken **minder** restrictief. Een veld kan niet restrictiever worden gemaakt dan het al is.
+Nadat een schema met een enum gebied is gebruikt om gegevens in Platform in te voeren, moeten om het even welke verdere veranderingen die in de schemadefinitie worden aangebracht aan de gegevens reeds in het systeem voldoen. In het algemeen, kunnen de veranderingen die aan een bestaand gebied worden aangebracht slechts dat gebied **minder** restrictief maken. Een veld kan niet restrictiever worden gemaakt dan het al is.
 
 Wanneer het over aantallen en voorgestelde waarden aankomt, zijn de volgende regels post-ingesetion van toepassing:
 
-* U **KAN** Voeg voorgestelde waarden voor standaard- en aangepaste velden toe met bestaande voorgestelde waarden.
-* U **KAN** Verwijder voorgestelde waarden uit aangepaste velden met bestaande voorgestelde waarden.
-* U **KAN** Voeg nieuwe opsommingswaarden toe aan een bestaand aangepast opsommingsveld.
-* U **KAN** U kunt de opsommingswaarden van een aangepast veld alleen omzetten in voorgestelde waarden of deze omzetten in een tekenreeks zonder opsomming of voorgestelde waarden. **Deze schakelaar kan niet ongedaan worden gemaakt zodra toegepast.**
-* U **KAN NIET** nummers of voorgestelde waarden uit standaardvelden verwijderen.
-* U **KAN NIET** Voeg opsommingswaarden toe aan een veld zonder bestaande opsomming.
-* U **KAN NIET** minder verwijderen dan alle bestaande opsommingswaarden voor een aangepast veld.
-* U **KAN NIET** Schakel van voorgestelde waarden naar een opsomming.
+* U **KUNT** voorgestelde waarden voor standaard en douanevelden met bestaande voorgestelde waarden toevoegen.
+* U **KUNT** voorgestelde waarden uit douanegebieden met bestaande voorgestelde waarden verwijderen.
+* U **KUNT** nieuwe opsommingswaarden voor een bestaand gebied van het douanenum toevoegen.
+* U **KUNT** schakelaar de enum waarden van een douanegebied aan gesuggereerde waarden slechts, of het in een koord zonder opsomming of voorgestelde waarden omzetten. **deze schakelaar kan niet worden ongedaan gemaakt zodra toegepast.**
+* U **KAN** lijsten of gesuggereerde waarden van standaardgebieden NIET verwijderen.
+* U **KAN** enumwaarden aan een gebied zonder bestaand enum NIET toevoegen.
+* U **KAN** minder dan alle bestaande enumwaarden voor een douanegebied NIET verwijderen.
+* U **KAN** schakelaar van voorgestelde waarden aan een opsomming NIET.
 
 ## Regels samenvoegen voor opsommingen en voorgestelde waarden {#merging}
 
-Als de veelvoudige schema&#39;s het zelfde enum gebied met verschillende configuraties gebruiken, en die schema&#39;s inbegrepen in een unie zijn, zijn bepaalde regels van toepassing wanneer het over hoe de enum verschillen met elkaar in overeenstemming worden gebracht. De nauwkeurige regels hangen af van of de schema&#39;s die naar het zelfde standaardgebied verwijzen (als `eventType`) of als ze verwijzen naar hetzelfde aangepaste veldpad in verschillende veldgroepen.
+Als de veelvoudige schema&#39;s het zelfde enum gebied met verschillende configuraties gebruiken, en die schema&#39;s inbegrepen in een unie zijn, zijn bepaalde regels van toepassing wanneer het over hoe de enum verschillen met elkaar in overeenstemming worden gebracht. De exacte regels zijn afhankelijk van het feit of de schema&#39;s verwijzen naar hetzelfde standaardveld (zoals `eventType` ) of dat er wordt verwezen naar hetzelfde aangepaste veldpad in verschillende veldgroepen.
 
 Bij verwijzing naar hetzelfde standaardveld:
 
-* Eventuele extra voorgestelde waarden zijn **AANGEVOEGD** in de unie .
-* Updates van de voorgestelde waarden voor dezelfde opsommingssleutel zijn **BIJGEWERKT** in de unie .
+* Om het even welke extra voorgestelde waarden worden **TOEGEVOEGD** in de unie.
+* De updates die aan de voorgestelde waarden voor de zelfde enum sleutel worden gemaakt zijn **BIJGEWERKT** in de unie.
 
 Als in verschillende veldgroepen wordt verwezen naar hetzelfde aangepaste veldpad:
 
-* Eventuele extra voorgestelde waarden zijn **AANGEVOEGD** in de unie .
-* Als dezelfde extra voorgestelde waarde in meer dan één schema is gedefinieerd, zijn deze waarden: **SAMENGEVOEGD** in de unie . Met andere woorden, dezelfde voorgestelde waarde wordt niet twee keer na het samenvoegen weergegeven.
+* Om het even welke extra voorgestelde waarden worden **TOEGEVOEGD** in de unie.
+* Als de zelfde extra gesuggereerde waarde in meer dan één schema wordt bepaald, zijn die waarden **GEMERGED** in de unie. Met andere woorden, dezelfde voorgestelde waarde wordt niet twee keer na het samenvoegen weergegeven.
 
 ## Beperkingen voor validatie
 
 Vanwege de huidige systeembeperkingen zijn er twee gevallen waarin een enum niet door het systeem wordt gevalideerd tijdens inname:
 
-1. De opsomming wordt gedefinieerd op een [matrixveld](./array.md).
+1. Het enum wordt bepaald op een [ seriegebied ](./array.md).
 1. De opsomming wordt meer dan één niveau diep gedefinieerd in de schemahiërarchie.
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u opsommingen en voorgestelde waarden voor tekenreeksvelden in de gebruikersinterface definieert. Raadpleeg de volgende bronnen voor informatie over het beheren van opsommingen en voorgestelde waarden met de API voor schemaregistratie [zelfstudie](../../tutorials/suggested-values.md).
+In deze handleiding wordt beschreven hoe u opsommingen en voorgestelde waarden voor tekenreeksvelden in de gebruikersinterface definieert. Voor informatie over hoe te om lijsten en voorgestelde waarden te beheren gebruikend de Registratie API van het Schema, verwijs naar het volgende [ leerprogramma ](../../tutorials/suggested-values.md).
 
-Leer hoe u andere XDM-veldtypen definieert in het dialoogvenster [!DNL Schema Editor], zie het overzicht op [velden definiëren in de gebruikersinterface](./overview.md#special).
+Leren hoe te om andere XDM gebiedstypes in [!DNL Schema Editor] te bepalen, zie het overzicht op [ bepalend gebieden in UI ](./overview.md#special).

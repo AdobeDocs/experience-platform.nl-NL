@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;identiteitsservice;Identiteitsservice;gedeelde apparaten;Gedeelde apparaten
-title: Overzicht van gedeelde apparaten (bèta)
+title: Overzicht van gedeelde apparaten (Beta)
 description: De gedeelde Detectie van het Apparaat identificeert verschillende voor authentiek verklaarde gebruikers van het zelfde apparaat, die voor een nauwkeurigere vertegenwoordiging van klantengegevens in identiteitsgrafieken toestaan
 hide: true
 hidefromtoc: true
@@ -12,17 +12,17 @@ ht-degree: 0%
 
 ---
 
-# Overzicht van gedeelde apparaatdetectie (bèta)
+# Overzicht van gedeelde apparaatdetectie (Beta)
 
 >[!IMPORTANT]
 >
->De [!DNL Shared Device Detection] Deze functie bevindt zich in bèta. De kenmerken en documentatie van het programma kunnen worden gewijzigd.
+>De functie [!DNL Shared Device Detection] is in bèta. De kenmerken en documentatie van het programma kunnen worden gewijzigd.
 
-Adobe Experience Platform [!DNL Identity Service] helpt u om een beter beeld van uw klant en hun gedrag te krijgen door identiteiten over apparaten en systemen te overbruggen, die u toestaan om daadwerkelijke, persoonlijke digitale ervaringen in echt te leveren - tijd.
+Met Adobe Experience Platform [!DNL Identity Service] kunt u uw klanten en hun gedrag beter laten zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 
-[!DNL Shared Device] heeft betrekking op apparaten die door meer dan één persoon worden gebruikt. Voorbeelden van een gedeeld apparaat zijn tablets, bibliotheekcomputers en kiosken. Via de [!DNL Shared Device Detection] kunnen verschillende gebruikers van hetzelfde apparaat niet worden samengevoegd tot één identiteit, waardoor een individu nauwkeuriger kan worden weergegeven.
+[!DNL Shared Device] verwijst naar apparaten die door meerdere personen worden gebruikt. Voorbeelden van een gedeeld apparaat zijn tablets, bibliotheekcomputers en kiosken. Met de functie [!DNL Shared Device Detection] kunnen verschillende gebruikers van hetzelfde apparaat niet worden samengevoegd tot één identiteit, waardoor een individu nauwkeuriger kan worden weergegeven.
 
-Met [!DNL Shared Device Detection] u kunt:
+Met [!DNL Shared Device Detection] kunt u:
 
 * Maak afzonderlijke identiteitsgrafieken voor verschillende gebruikers van hetzelfde apparaat;
 * voorkomen dat gegevens van verschillende personen met hetzelfde apparaat worden gemengd;
@@ -30,108 +30,108 @@ Met [!DNL Shared Device Detection] u kunt:
 
 >[!TIP]
 >
->Configuraties voor [!DNL Shared Device Detection] moet voltooid zijn voordat u Profiel inschakelt voor gegevensset omdat u instellingen niet meer kunt wijzigen als er grafieken zijn gegenereerd in [!DNL Identity Service].
+>Configuraties voor [!DNL Shared Device Detection] moeten worden voltooid voordat u Profiel voor gegevensset inschakelt, omdat u de instellingen niet meer kunt wijzigen wanneer grafieken worden gegenereerd in [!DNL Identity Service] .
 
 ## Aan de slag met [!DNL Shared Device Detection]
 
-Met [!DNL Shared Device Detection] vereist een goed begrip van de verschillende betrokken platformdiensten. Voordat u begint te werken met [!DNL Shared Device Detection], raadpleeg de documentatie voor de volgende services:
+Als u met [!DNL Shared Device Detection] werkt, moet u de verschillende platformservices begrijpen. Voordat u begint te werken met [!DNL Shared Device Detection] , raadpleegt u de documentatie voor de volgende services:
 
-* [[!DNL Identity Service]](./home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-   * [Naamgrafiekviewer](./features/identity-graph-viewer.md): Visualiseer en communiceer met de kijker van de identiteitsgrafiek om beter te begrijpen hoe de klantenidentiteiten samen worden vastgemaakt, en op welke manieren.
-   * [Identiteitsnaamruimten](./features/namespaces.md): Zie de componenten van een volledig gekwalificeerde identiteit, en hoe identiteitskaart namespaces u toestaat om de context en het type van een identiteit te onderscheiden.
+* [[!DNL Identity Service]](./home.md): verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
+   * [ de grafiekkijker van de Identiteit ](./features/identity-graph-viewer.md): visualiseer en in wisselwerking met de kijker van de identiteitsgrafiek om beter te begrijpen hoe de klantenidentiteiten samen worden vastgezet, en op welke manieren.
+   * [ Identiteit namespaces ](./features/namespaces.md): Zie de componenten van een volledig gekwalificeerde identiteit, en hoe de identiteit namespaces u toestaat om de context en het type van een identiteit te onderscheiden.
 
 ## [!DNL Shared Device Detection] begrijpen
 
 Het is belangrijk de volgende terminologie te begrijpen wanneer het werken met
-[!DNL Shared Device Detection]. Zie de onderstaande tabel voor een lijst met termen die essentieel zijn voor een goed begrip [!DNL Shared Device Detection].
+[!DNL Shared Device Detection]. Zie de tabel hieronder voor een lijst met termen die essentieel zijn voor een goed begrip van [!DNL Shared Device Detection] .
 
 ### Terminologie
 
 | Voorwaarden | Definitie |
 | --- | --- |
 | Gedeeld apparaat | Een gedeeld apparaat is elk apparaat dat door meerdere personen wordt gebruikt. Voorbeelden van gedeelde apparaten zijn tablets, bibliotheekcomputers en kiosken. |
-| [!DNL Shared Device Detection] | [!DNL Shared Device Detection] verwijst naar een configuratie die plaatst die voor gegevens van verschillende gebruikers van het zelfde apparaat om van elkaar toestaat te worden gescheiden. |
+| [!DNL Shared Device Detection] | [!DNL Shared Device Detection] verwijst naar een configuratie-instelling waarmee gegevens van verschillende gebruikers van hetzelfde apparaat van elkaar kunnen worden gescheiden. |
 | Naamruimte van gedeelde identiteit | De naamruimte Gedeelde identiteit vertegenwoordigt het apparaat dat door meerdere gebruikers kan worden gebruikt. De naamruimte Gedeelde identiteit is doorgaans de ECID, maar kan ook worden ingesteld op andere apparaat-id&#39;s. |
 | Naamruimte gebruikersnaam gebruiker | De naamruimte van de Identiteit van de Gebruiker vertegenwoordigt de geverifieerde (het programma geopende) gebruiker van een gedeeld apparaat. |
 | Laatst geverifieerde gebruiker | De laatste voor authentiek verklaarde gebruiker vertegenwoordigt de gebruiker die het laatst aan een apparaat het programma werd geopend, als een apparaat door veelvoudige rekeningen wordt het programma geopend. |
 
 {style="table-layout:auto"}
 
-[!DNL Shared Device Detection] werkt door twee naamruimten te maken: de **Naamruimte van gedeelde identiteit** en de **Naamruimte gebruikersnaam gebruiker**.
+[!DNL Shared Device Detection] werkt door twee namespaces te vestigen: **Gedeelde Namespace van de Identiteit** en **Namespace van de Identiteit van de Gebruiker**.
 
 * De naamruimte Gedeelde identiteit vertegenwoordigt het apparaat dat door meerdere gebruikers kan worden gebruikt. Adobe raadt klanten aan ECID te gebruiken als de gedeelde apparaat-id.
 * De naamruimte voor de gebruikersnaam wordt toegewezen aan de naamruimte voor de identiteit die overeenkomt met de aanmeldings-id van een gebruiker. Dit kan de CRM-id, het e-mailadres, de gehashte e-mail of het telefoonnummer van de gebruiker zijn.
 
-Een gedeeld apparaat, zoals een tablet, heeft één **Naamruimte van gedeelde identiteit**. Aan de andere kant heeft elke gebruiker van een gedeeld apparaat een eigen toegewezen apparaat **Naamruimte gebruikersnaam gebruiker** die overeenkomt met hun respectieve login-id&#39;s. Een tablet dat Kevin en Nora bijvoorbeeld delen voor e-commerce gebruik heeft een eigen ECID van `1234`, terwijl Kevin zijn eigen naamruimte voor de gebruikersnaam heeft die aan zijn `kevin@email.com` account en Nora heeft haar eigen naamruimte voor gebruikersnaam toegewezen aan haar `nora@email.com` account.
+Een gedeeld apparaat, als een tablet, heeft één enkele **Gedeelde Namespace van de Identiteit**. Anderzijds, heeft elke gebruiker van een gedeeld apparaat hun eigen aangewezen **Namespace van de Identiteit van de Gebruiker** die met hun respectieve login IDs beantwoordt. Een tablet die Kevin en Nora bijvoorbeeld delen voor e-commerce gebruik heeft een eigen ECID van `1234`, terwijl Kevin zijn eigen naamruimte voor de gebruikersnaam heeft die is toegewezen aan zijn `kevin@email.com` -account en Nora haar eigen naamruimte voor de gebruikersnaam heeft toegewezen aan haar `nora@email.com` -account.
 
 [!DNL Shared Device Detection] kan onderscheid maken tussen verschillende gebruikers van hetzelfde apparaat door de naamruimte voor gedeelde identiteit te koppelen (bijvoorbeeld ECID) met de gebruikersnaam die als laatste is geverifieerd (aanmeldings-id).
 
 ### Hoe identiteitsgegevens naar een identiteitsgrafiek worden verzonden
 
-Neem het volgende voorbeeld om u te helpen begrijpen hoe [!DNL Shared Device Detection] werken:
+Neem het volgende voorbeeld om u te helpen begrijpen hoe [!DNL Shared Device Detection] werkt:
 
 >[!NOTE]
 >
 >In dit diagram, wordt de Gedeelde Namespace van de Identiteit gevormd aan ECID en de Namespace van de Identiteit van de Gebruiker wordt gevormd aan identiteitskaart CRM
 
-![diagram](./images/shared-device/diagram.png)
+![ diagram ](./images/shared-device/diagram.png)
 
 * Kevin en Nora delen een tablet om een e-commercewebsite te bezoeken. Ze beschikken echter allebei over hun eigen onafhankelijke accounts waarmee ze online kunnen bladeren en winkelen.
    * Als gedeeld apparaat heeft de tablet een bijbehorende ECID, die de webbrowser cookie-id van de tablet vertegenwoordigt;
-* Veronderstel dat Kevin het tablet en **aanmelden** naar zijn e-commerceaccount om naar hoofdtelefoons te bladeren, betekent dit dan dat Kevin&#39;s CRM-id (**Naamruimte gebruikersnaam gebruiker**) is nu gekoppeld aan de ECID van de tablet (**Naamruimte van gedeelde identiteit**). De browsergegevens van het tablet zijn nu opgenomen in Kevin&#39;s identiteitsgrafiek.
-   * If Kevin **logout** en Nora gebruikt de tablet en **aanmelden** voor haar eigen rekening en koopt een camera, dan is haar CRM-id nu gekoppeld aan de ECID van de tablet. De browsergegevens van de tablet zijn daarom opgenomen in de identiteitsgrafiek van Nora.
-   * Indien Nora **niet afmelden** en Kevin gebruikt de tablet, maar **niet aanmelden** De browsergegevens van de tablet zijn nog steeds opgenomen in Nora, omdat ze als geverifieerde gebruiker blijft en haar CRM-id nog steeds gekoppeld is aan de ECID van de tablet.
-   * Indien Nora **meldt zich af** en Kevin gebruikt de tablet, maar **niet aanmelden** en de browsergegevens van de tablet zijn nog steeds opgenomen in de identiteitsgrafiek van Nora, omdat **laatst geverifieerde gebruiker**, haar CRM-id blijft gekoppeld aan de ECID van de tablet.
-   * If Kevin **aanmelden** Ook hier wordt zijn CRM-id nu gekoppeld aan de ECID van de tablet, omdat hij nu de laatst geverifieerde gebruiker is en de browsergegevens van de tablet nu zijn opgenomen in zijn identiteitsgrafiek.
+* Veronderstel dat Kevin de tablet en **login** aan zijn e-commercerekening gebruikt om voor hoofdtelefoons te doorbladeren, betekent dit dan dat identiteitskaart van CRM van Kevin (**Identiteitskaart Namespace van de Gebruiker**) nu met ECID van de tablet (**Gedeelde Identiteitskaart Namespace**) wordt verbonden. De browsergegevens van het tablet zijn nu opgenomen in Kevin&#39;s identiteitsgrafiek.
+   * Als Kevin **zich** afmeldt en Nora de tablet en **login** aan haar eigen rekening gebruikt en een camera koopt, dan is haar identiteitskaart van CRM nu verbonden met ECID van de tablet. De browsergegevens van de tablet zijn daarom opgenomen in de identiteitsgrafiek van Nora.
+   * Als Nora **niet logout** en Kevin het tablet gebruikt, maar **login niet**, dan zijn de het doorbladeren van de tablet gegevens nog opgenomen met Nora, omdat zij als voor authentiek verklaarde gebruiker blijft en haar identiteitskaart van CRM is nog verbonden met ECID van de tablet.
+   * Als Nora **logout** en Kevin het tablet gebruikt, maar **login niet**, dan zijn de het doorbladeren van de tablet gegevens nog opgenomen met de identiteitsgrafiek van Nora, omdat als **laatst voor authentiek verklaarde gebruiker**, haar identiteitskaart van CRM verbonden met ECID van de tablet blijft.
+   * Als Kevin **opnieuw** het programma opent, dan wordt zijn identiteitskaart van CRM nu verbonden met ECID van de tablet, omdat hij nu de laatste voor authentiek verklaarde gebruiker is en de het doorbladeren gegevens van de tablet nu met zijn identiteitsgrafiek worden opgenomen.
 
-### Hoe [!DNL Profile Service] voegt profielfragmenten samen met [!DNL Shared Device Detection] enabled
+### Hoe [!DNL Profile Service] profielfragmenten samenvoegt met [!DNL Shared Device Detection] ingeschakeld
 
 [!DNL Profile Service] neemt nota van profielfragmenten en samengevoegde profielen. Elk individueel klantprofiel bestaat uit meerdere profielfragmenten die zijn samengevoegd tot één weergave van die klant. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken.
 
-Wanneer [!DNL Shared Device Detection] is ingeschakeld, [!DNL Profile] Hiermee definieert u de primaire identiteit van het profielfragment op basis van het feit of de ervaringsgebeurtenis al dan niet is geverifieerd
+Wanneer [!DNL Shared Device Detection] is ingeschakeld, definieert [!DNL Profile] de primaire identiteit van het profielfragment op basis van het feit of de ervaringsgebeurtenis is geverifieerd of niet-geverifieerd
 
-An **geverifieerde ervaringsgebeurtenis** is een actie die door een gebruiker wordt voltooid terwijl het programma geopend aan een apparaat. Voor geverifieerde ervaringsgebeurtenissen is de primaire identiteit de **Naamruimte gebruikersnaam gebruiker** (Aanmeldings-id). An **niet-geverifieerde ervaringsgebeurtenis** is een actie die door een gebruiker wordt voltooid die niet het programma wordt geopend aan een apparaat. Voor niet-geverifieerde ervaringsgebeurtenissen is de primaire identiteit de **Naamruimte van gedeelde identiteit** (ECID).
+Een **voor authentiek verklaarde ervaringsgebeurtenis** is een actie die door een gebruiker wordt voltooid terwijl het programma geopend aan een apparaat. Voor voor authentiek verklaarde ervaringsgebeurtenissen, is de primaire identiteit de **Namespace van de Identiteit van de Gebruiker** (Login identiteitskaart). Een **niet voor authentiek verklaarde ervaringsgebeurtenis** is een actie die door een gebruiker wordt voltooid die niet het programma wordt geopend aan een apparaat. Voor ongeautoriseerde ervaringsgebeurtenissen, is de primaire identiteit **Gedeelde Namespace van de Identiteit** (ECID).
 
-Zie de klasse  [[!DNL Real-Time Customer Profile] overzicht](../profile/home.md).
+Voor meer informatie, zie het [[!DNL Real-Time Customer Profile]  overzicht ](../profile/home.md).
 
 ## Gebruikersinterface voor gedeelde apparaten
 
-Selecteer in de interface Platform de optie **[!UICONTROL Identities]** van de linkernavigatie en selecteer dan **[!UICONTROL Identity settings]**.
+Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Identities]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Identity settings]** .
 
-![identity-dashboard](./images/shared-device/identity-dashboard.png)
+![ identiteit-dashboard ](./images/shared-device/identity-dashboard.png)
 
-De [!UICONTROL Shared device settings] wordt weergegeven, zodat u een interface hebt voor het configureren van gedeelde apparaatinstellingen voor uw gegevens. De instellingen voor gedeelde apparaten worden standaard uitgeschakeld.
+De pagina [!UICONTROL Shared device settings] wordt weergegeven en biedt u een interface voor het configureren van gedeelde apparaatinstellingen voor uw gegevens. De instellingen voor gedeelde apparaten worden standaard uitgeschakeld.
 
 Wanneer gedeelde apparaatinstellingen zijn ingeschakeld, kunnen gegevens van verschillende gebruikers van hetzelfde apparaat van elkaar worden gescheiden. Met deze configuratie-instelling kunt u identiteitsgrafieken helderder en nauwkeuriger weergeven, waarbij de gebruikersidentiteiten van hetzelfde apparaat niet met elkaar worden gecombineerd.
 
-Selecteren **[!UICONTROL Enable]** om de instellingen van uw gedeelde apparaat te wijzigen.
+Selecteer **[!UICONTROL Enable]** om de instellingen van uw gedeelde apparaat te wijzigen.
 
-![enable-shared-device](./images/shared-device/enable-shared-device.png)
+![ toelaten-gedeeld-apparaat ](./images/shared-device/enable-shared-device.png)
 
-De [!UICONTROL Shared Identity Namespace] en [!UICONTROL User Identity Namespace] Er worden configuratieopties weergegeven, waarmee u de naamruimten kunt wijzigen die u wilt gebruiken.
+De configuratieopties [!UICONTROL Shared Identity Namespace] en [!UICONTROL User Identity Namespace] worden weergegeven, zodat u de naamruimten kunt wijzigen die u wilt gebruiken.
 
-![set-namespaces](./images/shared-device/set-namespaces.png)
+![ reeks-namespaces ](./images/shared-device/set-namespaces.png)
 
-[!UICONTROL Shared Identity Namespace] vertegenwoordigt één enkel apparaat dat door veelvoudige verschillende gebruikers wordt gebruikt. Deze naamruimte is altijd ingesteld op **[!UICONTROL ECID]** omdat alle gebruikers van het Platform **[!UICONTROL ECID]** als de id van de webbrowser.
+[!UICONTROL Shared Identity Namespace] vertegenwoordigt één apparaat dat door veelvoudige verschillende gebruikers wordt gebruikt. Deze naamruimte is altijd ingesteld op **[!UICONTROL ECID]** omdat alle platformgebruikers **[!UICONTROL ECID]** gebruiken als de id van de webbrowser.
 
-![shared-identity-namespace](./images/shared-device/shared-identity-namespace.png)
+![ delen-identiteit-namespace ](./images/shared-device/shared-identity-namespace.png)
 
-De [!UICONTROL User Identity Namespace] Hiermee kunt u verschillende gebruikers van hetzelfde apparaat identificeren en voorkomen dat gegevens in dezelfde identiteitsgrafiek worden gecombineerd.
+Met [!UICONTROL User Identity Namespace] kunt u verschillende gebruikers van hetzelfde apparaat identificeren en voorkomen dat gegevens in dezelfde identiteitsgrafiek worden gecombineerd.
 
-![user-identity-namespace](./images/shared-device/user-identity-namespace.png)
+![ gebruiker-identity-namespace ](./images/shared-device/user-identity-namespace.png)
 
-Selecteer de **[!UICONTROL User Identity Namespace]** zoekbalk en voert u een naamruimte voor de identiteit in of selecteert u een naamruimte voor de identiteit in het vervolgkeuzemenu.
+Selecteer de zoekbalk van **[!UICONTROL User Identity Namespace]** en voer een naamruimte voor identiteit in of selecteer een naamruimte voor identiteit in het vervolgkeuzemenu.
 
 >[!TIP]
 >
 >De [!UICONTROL User Identity Namespace] moet worden toegewezen aan de naamruimte identity die overeenkomt met de aanmeldings-id van de eindgebruiker. U kunt onder andere de volgende opties kiezen: klant-id, e-mail en gehashte e-mail.
 
-![e-mail](./images/shared-device/emails.png)
+![ e-mails ](./images/shared-device/emails.png)
 
-Zodra u uw hebt gevormd [!UICONTROL Shared Device Settings], selecteert u **[!UICONTROL Save]**.
+Selecteer **[!UICONTROL Save]** nadat u de [!UICONTROL Shared Device Settings] -configuratie hebt geconfigureerd.
 
-![opslaan](./images/shared-device/save.png)
+![ sparen ](./images/shared-device/save.png)
 
-Er verschijnt een pop-upvenster waarin u wordt gevraagd uw selectie te bevestigen. Selecteren **[!UICONTROL Yes]** om de configuratie-instelling te voltooien.
+Er verschijnt een pop-upvenster waarin u wordt gevraagd uw selectie te bevestigen. Selecteer **[!UICONTROL Yes]** om de configuratie-instelling te voltooien.
 
-![bevestigen](./images/shared-device/confirm.png)
+![ bevestig ](./images/shared-device/confirm.png)

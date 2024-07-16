@@ -15,7 +15,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > * De Adobe adviseert dat u referentie deze pagina en het om de drie maanden om de recentste IP adressen controleert. Adobe verstrekt geen bericht van nieuwe IP waaiers.
-> * Hoewel Adobe gegevensuitvoer naar SFTP-servers ondersteunt, zijn de aanbevolen opslaglocaties voor wolken voor het exporteren van gegevens: [!DNL Amazon S3] en [!DNL Azure Blob].
+> * Hoewel Adobe gegevensuitvoer naar SFTP-servers ondersteunt, zijn de aanbevolen locaties voor cloudopslag voor het exporteren van gegevens [!DNL Amazon S3] en [!DNL Azure Blob] .
 
 ## Toepasselijkheid {#applicability}
 
@@ -27,7 +27,7 @@ De informatie over het IP-bereik op deze pagina is van toepassing op de volgende
 
 >[!IMPORTANT]
 >
->De IP-bereiken die op deze pagina worden beschreven, zijn *niet* ondersteund voor de volgende op bestanden gebaseerde cloudopslagdoelen: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] en [!UICONTROL Data Landing Zone].
+>De IP waaiers die op deze pagina worden gedocumenteerd worden ** niet gesteund voor de volgende op dossier-gebaseerde bestemmingen van de wolkenopslag: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] en [!UICONTROL Data Landing Zone].
 
 ## Overzicht {#overview}
 

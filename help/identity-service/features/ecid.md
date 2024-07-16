@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Experience Cloud-id (ECID) is een naamruimte voor gedeelde identiteit die wordt gebruikt in Adobe Experience Platform- en Adobe Experience Cloud-toepassingen.
 
-ECID vormt de basis voor de identiteit van de klant. Met de context van [[!DNL Identity Service]](../home.md), ECID wordt gebruikt als primaire id voor apparaten en als basisknooppunt voor identiteitsgrafieken.
+ECID vormt de basis voor de identiteit van de klant. Met de context van [[!DNL Identity Service]](../home.md) wordt ECID gebruikt als primaire id voor apparaten en als basisknooppunt voor identiteitsgrafieken.
 
 Met ECID kunt u:
 
@@ -31,8 +31,8 @@ Om uw onlinegebruikers te identificeren, moet u uw site of mobiele app van instr
 
 De volgende documentatie verstrekt verdere middelen bij het begrijpen van ECID over verschillende Platform en Experience Cloud toepassingen:
 
-* Raadpleeg de documentatie voor [Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html).
-* Raadpleeg de documentatie voor informatie over hoe ECID wordt gebruikt bij apps en mobiele webinhoud. [het bijhouden van bezoekers tussen een app en een mobiel web](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios).
-* Het implementeren van deze gereedschappen kan eenvoudig en eenvoudig te beheren zijn als u [tags](../../tags/home.md).
-* Zie de [Documentatie Privacy Service](../../privacy-service/identity-data.md) voor informatie over het gebruik van ECID om naleving van privacyregels zoals GDPR te vergemakkelijken.
-* Voor meer informatie over ECID met de context van Platform raadpleegt u de [Overzicht van identiteitsservice](../home.md) en de [Overzicht van naamruimten](./namespaces.md).
+* Om ECID met websiteimplementatie te gebruiken, zie de documentatie voor [ Dienst van de Identiteit van het Experience Cloud ](https://experienceleague.adobe.com/docs/id-service/using/home.html).
+* Om te zien hoe ECID met apps en mobiele webinhoud wordt gebruikt, zie de documentatie voor [ bezoeker die tussen app en mobiel Web ](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios) volgen.
+* Het opstellen van deze hulpmiddelen kan eenvoudig en gemakkelijk zijn te beheren als u [ markeringen ](../../tags/home.md) gebruikt.
+* Zie de [ documentatie van de Privacy Service ](../../privacy-service/identity-data.md) voor informatie bij het gebruiken van ECID om naleving van privacyverordeningen zoals GDPR te vergemakkelijken.
+* Voor meer informatie over ECID met de context van Platform, zie het [ overzicht van de Dienst van de Identiteit ](../home.md) en het [ overzicht van identiteitsnaamruimten ](./namespaces.md).

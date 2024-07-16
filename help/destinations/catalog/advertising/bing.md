@@ -14,19 +14,19 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-Gebruik de [!DNL Microsoft Bing] doel om profielgegevens naar het volledige [!DNL Microsoft Advertising Network], inclusief [!DNL Display Advertising], [!DNL Search], en [!DNL Native].
+Gebruik de bestemming [!DNL Microsoft Bing] om profielgegevens naar de volledige [!DNL Microsoft Advertising Network], inclusief [!DNL Display Advertising] , [!DNL Search] en [!DNL Native] te verzenden.
 
-De [!DNL Microsoft Bing] doel maken *[!DNL Custom Audiences]* in Microsoft. Deze zijn beschikbaar in het dialoogvenster [!DNL Microsoft Search Network] en [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) als vermeld in de [Microsoft Advertising-documentatie](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
+Het doel [!DNL Microsoft Bing] maakt *[!DNL Custom Audiences]* in Microsoft. Die zijn beschikbaar zowel in [!DNL Microsoft Search Network] als [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) zoals vermeld in de [ documentatie van Advertising van Microsoft ](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
-Profielgegevens verzenden naar [!DNL Microsoft Bing], moet u eerst verbinding maken met het doel.
+Als u profielgegevens naar [!DNL Microsoft Bing] wilt verzenden, moet u eerst verbinding maken met het doel.
 
 ## Gebruiksscenario’s {#use-cases}
 
-Als markator wil ik het publiek kunnen gebruiken dat is opgebouwd uit [!DNL Microsoft Advertising IDs] om gebruikers te richten via weergave- of zoekadvertenties over [!DNL Microsoft Advertising] kanalen.
+Als markator wil ik het publiek dat is samengesteld uit [!DNL Microsoft Advertising IDs] , kunnen gebruiken om gebruikers als doelgroep op te roepen via weergave- of zoekadvertenties langs [!DNL Microsoft Advertising] -kanalen.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Microsoft Bing] ondersteunt de activering van het publiek op basis van de in de onderstaande tabel weergegeven identiteiten. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
+[!DNL Microsoft Bing] ondersteunt de activering van soorten publiek op basis van de identiteiten in de onderstaande tabel. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Identiteit | Beschrijving |
 |---|---|
@@ -40,21 +40,21 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
-**[!DNL Audience Export]** - u exporteert alle leden van een publiek naar de [!DNL Microsoft Bing] bestemming.
+**[!DNL Audience Export]** - u exporteert alle leden van een publiek naar het [!DNL Microsoft Bing] -doel.
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek naar de [!DNL Microsoft Bing] bestemming. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek naar het doel van [!DNL Microsoft Bing] . |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -62,51 +62,51 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming wilt maken met [!DNL Microsoft Bing] en hebben de [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in het verleden (met Adobe Audience Manager of andere toepassingen), neem contact op met Adobe Consulting of Customer Care om ID syncs in te schakelen. Als u al eerder was ingesteld [!DNL Microsoft Bing] Als u integreert in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
+>Als u uw eerste bestemming met [!DNL Microsoft Bing] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in de Dienst van identiteitskaart van het Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebt toegelaten, gelieve uit te reiken aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL Microsoft Bing] -integratie hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
 
 Wanneer het vormen van de bestemming, moet u de volgende informatie verstrekken:
 
-* [!UICONTROL Account ID]: dit is jouw [!DNL Bing Ads CID], in gehele notatie.
+* [!UICONTROL Account ID]: dit is de [!DNL Bing Ads CID] -notatie, in gehele getallen.
 
 ## Verbinden met de bestemming {#connect}
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven.
 
 ### Doelgegevens invullen {#parameters}
 
-while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
+Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
-* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Account ID]**: Uw [!DNL Bing Ads Customer ID] (CID). Uw CID is een geheel getal, dat u kunt vinden in de URL wanneer u zich aanmeldt [!DNL Microsoft Advertising].
+* **[!UICONTROL Account ID]**: Uw [!DNL Bing Ads Customer ID] (CID). Uw CID is een geheel getal. U vindt deze in de URL wanneer u zich aanmeldt bij [!DNL Microsoft Advertising] .
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="Toewijzing-id"
->abstract="Voer de numerieke publiek-id voor de ring in waaraan u het geselecteerde segment wilt toewijzen. Indien [!UICONTROL Mapping ID] komt niet overeen met een publieks-id in de Bing-bestemming, worden de verwachte publieksgegevens in uw Bing-account niet weergegeven."
+>abstract="Voer de numerieke publiek-id voor de ring in waaraan u het geselecteerde segment wilt toewijzen. Als de opgegeven [!UICONTROL Mapping ID] niet overeenkomt met een gebruikers-id in de Bing-bestemming, worden de verwachte publieksgegevens in uw Bing-account niet weergegeven."
 
 >[!IMPORTANT]
 > 
->Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Zie [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Zie [ publieksgegevens aan het stromen publiek de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
-In de [Publiek schema](../../ui/activate-segment-streaming-destinations.md#scheduling) stap, moet u de publieksnaam handmatig toewijzen in het dialoogvenster [!UICONTROL Mapping ID] veld. Zo zorgt u ervoor dat de metagegevens van het publiek correct worden doorgegeven aan [!DNL Bing].
+In het [ programma van het Publiek ](../../ui/activate-segment-streaming-destinations.md#scheduling) stap, moet u de publieksnaam op het [!UICONTROL Mapping ID] gebied manueel in kaart brengen. Zo zorgt u ervoor dat de metagegevens van het publiek correct worden doorgegeven aan [!DNL Bing] .
 
-![UI-afbeelding die het scherm van het publieksprogramma weergeeft met een voorbeeld van hoe u de publieksnaam kunt toewijzen aan de Bing Mapping-id.](../../assets/catalog/advertising/bing/mapping-id.png)
+{het beeld van 0} UI die het scherm van het publieksprogramma met een voorbeeld van toont hoe te om de publieksnaam aan Bing Mapping identiteitskaart in kaart te brengen.](../../assets/catalog/advertising/bing/mapping-id.png)![
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Controleren of gegevens zijn geëxporteerd naar de [!DNL Microsoft Bing] doel, controleer uw [!DNL Microsoft Bing Ads] account. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
+Controleer uw [!DNL Microsoft Bing Ads] -account om te controleren of gegevens naar de [!DNL Microsoft Bing] -bestemming zijn geëxporteerd. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.

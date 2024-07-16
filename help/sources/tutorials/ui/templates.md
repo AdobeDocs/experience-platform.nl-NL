@@ -1,7 +1,7 @@
 ---
 description: Leer hoe u sjablonen in de gebruikersinterface van Adobe Experience Platform kunt gebruiken om uw gegevensverwerking voor B2B-gegevens te versnellen.
 title: Een gegevensstroom voor bronnen maken met sjablonen in de gebruikersinterface
-badge1: "Bèta"
+badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
 workflow-type: tm+mt
@@ -41,9 +41,9 @@ De volgende zelfstudie biedt stappen voor het gebruik van sjablonen in de gebrui
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Sjablonen gebruiken in de gebruikersinterface van het platform {#use-templates-in-the-platform-ui}
 
@@ -53,22 +53,22 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Exper
 >abstract="Selecteer het juiste bedrijfstype voor uw gebruiksscenario. De toegang hangt af van uw Real-time Customer Data Platform-abonnementaccount."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP-overzicht"
 
-Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in het Experience Platform.
+Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in het Experience Platform.
 
-Gebruik de *[!UICONTROL Categories]* om bronnen op categorie te filteren. U kunt ook een bronnaam invoeren in de zoekbalk om een specifieke bron uit de catalogus te zoeken.
+Gebruik het menu *[!UICONTROL Categories]* om bronnen op categorie te filteren. U kunt ook een bronnaam invoeren in de zoekbalk om een specifieke bron uit de catalogus te zoeken.
 
-Ga naar de [!UICONTROL Adobe applications] categorie om de [!DNL Marketo Engage] bronkaart en selecteer vervolgens [!UICONTROL Add data] om te beginnen.
+Ga naar de categorie [!UICONTROL Adobe applications] om de [!DNL Marketo Engage] bronkaart te zien en selecteer vervolgens [!UICONTROL Add data] om te beginnen.
 
-![Een catalogus van de werkruimte Bronnen met de gemarkeerde bron van het Marketo Engage.](../../images/tutorials/templates/catalog.png)
+![ een catalogus van de bronwerkruimte met de benadrukte bron van het Marketo Engage.](../../images/tutorials/templates/catalog.png)
 
 Er verschijnt een pop-upvenster met de optie om sjablonen te doorbladeren of bestaande schema&#39;s en gegevenssets te gebruiken.
 
-* **Door sjablonen bladeren**: Bronssjablonen maken automatisch schema&#39;s, identiteiten, gegevenssets en gegevensstromen met toewijzingsregels voor u. U kunt deze elementen naar wens aanpassen.
-* **Mijn bestaande middelen gebruiken**: Maak een overzicht van uw gegevens met gebruik van bestaande gegevenssets en schema&#39;s die u hebt gemaakt. U kunt nieuwe datasets en schema&#39;s ook tot stand brengen indien nodig.
+* **doorbladert malplaatjes**: De bronmalplaatjes leiden automatisch schema&#39;s, identiteiten, datasets, en dataflows met toewijzingsregels voor u. U kunt deze elementen naar wens aanpassen.
+* **Gebruik mijn bestaande activa**: Maak uw gegevens gebruikend bestaande datasets en schema&#39;s bekend die u creeerde. U kunt nieuwe datasets en schema&#39;s ook tot stand brengen indien nodig.
 
-Als u automatisch gegenereerde elementen wilt gebruiken, selecteert u **[!UICONTROL Browse templates]** en selecteer vervolgens **[!UICONTROL Select]**.
+Als u automatisch gegenereerde elementen wilt gebruiken, selecteert u **[!UICONTROL Browse templates]** en selecteert u **[!UICONTROL Select]** .
 
-![Een pop-upvenster met opties voor het bladeren door sjablonen of het gebruik van bestaande elementen.](../../images/tutorials/templates/browse-templates.png)
+![ pop-up venster van A met opties om malplaatjes te doorbladeren of bestaande activa te gebruiken.](../../images/tutorials/templates/browse-templates.png)
 
 ### Verificatie
 
@@ -76,17 +76,17 @@ De verificatiestap wordt weergegeven en u wordt gevraagd een nieuw account te ma
 
 >[!BEGINTABS]
 
->[!TAB Een bestaande account gebruiken]
+>[!TAB  Gebruik een bestaande rekening ]
 
-Als u een bestaande account wilt gebruiken, selecteert u [!UICONTROL Existing account] en selecteer vervolgens de account die u wilt gebruiken in de lijst die wordt weergegeven.
+Als u een bestaande account wilt gebruiken, selecteert u [!UICONTROL Existing account] en selecteert u vervolgens de account die u wilt gebruiken in de lijst die wordt weergegeven.
 
-![De selectiepagina voor een bestaande account met een lijst met bestaande accounts waartoe u toegang hebt.](../../images/tutorials/templates/existing-account.png)
+![ de selectiepagina voor een bestaande rekening met een lijst van bestaande rekeningen u kunt toegang hebben.](../../images/tutorials/templates/existing-account.png)
 
->[!TAB Een nieuwe account maken]
+>[!TAB  creeer een nieuwe rekening ]
 
-Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geef vervolgens uw bronverbindingsgegevens en accountverificatiegegevens op. Selecteer **[!UICONTROL Connect to source]** en laat de nieuwe verbinding enige tijd tot stand brengen.
+Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u vervolgens de gegevens van de bronverbinding en de verificatiegegevens van de account op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![De verificatiepagina voor een nieuwe account met gegevens over de bronverbinding en verificatiegegevens van de account.](../../images/tutorials/templates/new-account.png)
+![ de authentificatiepagina voor een nieuwe rekening met bronverbindingsdetails en geloofsbrieven van de rekeningsauthentificatie.](../../images/tutorials/templates/new-account.png)
 
 >[!ENDTABS]
 
@@ -94,7 +94,8 @@ Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** e
 
 Als uw account is geverifieerd, kunt u nu de sjabloon selecteren die u voor uw gegevensstroom wilt gebruiken.
 
-+++[!DNL Marketo Engage] sjablonen In de volgende tabel worden de sjablonen weergegeven die beschikbaar zijn voor de [!DNL Marketo Engage] bron.
++++[!DNL Marketo Engage] sjablonen
+In de volgende tabel worden de sjablonen weergegeven die beschikbaar zijn voor de [!DNL Marketo Engage] -bron.
 
 | [!DNL Marketo Engage] sjablonen | Beschrijving |
 | --- | --- |
@@ -113,13 +114,14 @@ Als uw account is geverifieerd, kunt u nu de sjabloon selecteren die u voor uw g
 
 +++
 
-+++[!DNL Salesforce] B2B-sjablonen De volgende tabel geeft een overzicht van de B2B-sjablonen die beschikbaar zijn voor de [!DNL Salesforce] bron.
++++[!DNL Salesforce] B2B-sjablonen
+In de volgende tabel worden de B2B-sjablonen weergegeven die beschikbaar zijn voor de [!DNL Salesforce] -bron.
 
 | [!DNL Salesforce] B2B-sjablonen | Beschrijving |
 | --- | --- |
 | Contact opnemen met account | De sjabloon Relatie contactpersoon account legt de relatie vast tussen een contactpersoon en een of meer accounts. |
 | Accounts | In de accountsjabloon worden gegevens van zakelijke accounts vastgelegd, zoals bedrijfsinformatie, locatie en factureringsgegevens. |
-| Campagneleden | In de sjabloon Campagneleden wordt de relatie vastgelegd tussen een afzonderlijke lead of contactpersoon en een specifieke [!DNL Salesforce] campagne. |
+| Campagneleden | In de sjabloon Campagneleden wordt de relatie vastgelegd tussen een afzonderlijke lead of contactpersoon en een specifieke [!DNL Salesforce] -campagne. |
 | Campagnes | Het malplaatje van Campagnes vangt bedrijfsrekeningsdetails zoals bedrijf firmographic informatie, plaats, en het factureren informatie. |
 | Contactpersonen | Het malplaatje van het Contact vangt attributen voor contacten zoals demografische details, contactinformatie, en verwante bedrijfsentiteiten. |
 | Leads | In de Leads-sjabloon worden kenmerken voor leads vastgelegd, zoals demografische gegevens, contactgegevens en gerelateerde bedrijfsentiteiten. |
@@ -130,7 +132,8 @@ Als uw account is geverifieerd, kunt u nu de sjabloon selecteren die u voor uw g
 
 +++
 
-+++[!DNL Salesforce] B2C-sjablonen De volgende tabel geeft een overzicht van de B2C-sjablonen die beschikbaar zijn voor de [!DNL Salesforce] bron.
++++[!DNL Salesforce] B2C-sjablonen
+In de volgende tabel worden de B2C-sjablonen weergegeven die beschikbaar zijn voor de [!DNL Salesforce] -bron.
 
 | [!DNL Salesforce] B2C-sjablonen | Beschrijving |
 | --- | --- |
@@ -141,7 +144,8 @@ Als uw account is geverifieerd, kunt u nu de sjabloon selecteren die u voor uw g
 
 +++
 
-+++[!DNL Microsoft Dynamics] B2B-sjablonen De volgende tabel geeft een overzicht van de B2B-sjablonen die beschikbaar zijn voor de [!DNL Microsoft Dynamics] bron.
++++[!DNL Microsoft Dynamics] B2B-sjablonen
+In de volgende tabel worden de B2B-sjablonen weergegeven die beschikbaar zijn voor de [!DNL Microsoft Dynamics] -bron.
 
 | [!DNL Microsoft Dynamics] B2B-sjablonen | Beschrijving |
 | --- | --- |
@@ -158,7 +162,8 @@ Als uw account is geverifieerd, kunt u nu de sjabloon selecteren die u voor uw g
 
 +++
 
-+++[!DNL Microsoft Dynamics] B2C-sjablonen De volgende tabel geeft een overzicht van de B2C-sjablonen die beschikbaar zijn voor de [!DNL Microsoft Dynamics] bron.
++++[!DNL Microsoft Dynamics] B2C-sjablonen
+In de volgende tabel worden de B2C-sjablonen weergegeven die beschikbaar zijn voor de [!DNL Microsoft Dynamics] -bron.
 
 | [!DNL Microsoft Dynamics] B2C-sjablonen | Beschrijving |
 | --- | --- |
@@ -169,15 +174,15 @@ Als uw account is geverifieerd, kunt u nu de sjabloon selecteren die u voor uw g
 
 +++
 
-Afhankelijk van het geselecteerde bedrijfstype, verschijnt een lijst van malplaatjes. Het voorvertoningspictogram selecteren ![voorvertoningspictogram](../../images/tutorials/templates/preview-icon.png) naast een sjabloonnaam om voorbeeldgegevens van de sjabloon voor te vertonen.
+Afhankelijk van het geselecteerde bedrijfstype, verschijnt een lijst van malplaatjes. Selecteer het voorproefpictogram ![ voorproefpictogram ](../../images/tutorials/templates/preview-icon.png) naast een malplaatjenaam aan voorproefgegevens van het malplaatje.
 
-![Een lijst met sjablonen waarop het voorvertoningspictogram is gemarkeerd.](../../images/tutorials/templates/templates.png)
+![ een lijst van malplaatjes met het voorproefpictogram benadrukte.](../../images/tutorials/templates/templates.png)
 
-Het voorvertoningsvenster wordt weergegeven, zodat u de voorbeeldgegevens van uw sjabloon kunt bekijken en inspecteren. Selecteer **[!UICONTROL Got it]**.
+Het voorvertoningsvenster wordt weergegeven, zodat u de voorbeeldgegevens van uw sjabloon kunt bekijken en inspecteren. Selecteer **[!UICONTROL Got it]** als u klaar bent.
 
-![Het voorbeeldvenster met voorbeeldgegevens.](../../images/tutorials/templates/preview-sample-data.png)
+![ het venster van voorproefsteekproefgegevens.](../../images/tutorials/templates/preview-sample-data.png)
 
-Selecteer vervolgens in de lijst de sjabloon die u wilt gebruiken. U kunt meerdere sjablonen selecteren en meerdere gegevensstromen tegelijk maken. Een sjabloon kan echter slechts eenmaal per account worden gebruikt. Als u de sjablonen hebt geselecteerd, selecteert u **[!UICONTROL Finish]** en laat u even de elementen genereren.
+Selecteer vervolgens in de lijst de sjabloon die u wilt gebruiken. U kunt meerdere sjablonen selecteren en meerdere gegevensstromen tegelijk maken. Een sjabloon kan echter slechts eenmaal per account worden gebruikt. Nadat u de sjablonen hebt geselecteerd, selecteert u **[!UICONTROL Finish]** en laat u de elementen enkele ogenblikken genereren.
 
 Als u één of gedeeltelijke punten van de lijst van beschikbare malplaatjes selecteert, zullen alle schema&#39;s B2B en identiteitsnamespaces nog worden geproduceerd om ervoor te zorgen dat de verhoudingen B2B over schema&#39;s correct worden gevormd.
 
@@ -185,23 +190,23 @@ Als u één of gedeeltelijke punten van de lijst van beschikbare malplaatjes sel
 >
 >Sjablonen die al zijn gebruikt, worden uitgeschakeld in de selectie.
 
-![De lijst van malplaatjes met het malplaatje van de Rol van het Contact van de Kans geselecteerd.](../../images/tutorials/templates/select-template.png)
+![ de lijst van malplaatjes met het malplaatje van de Rol van het Contact van de Kans selecteerde.](../../images/tutorials/templates/select-template.png)
 
 ### Een schema instellen
 
-De [!DNL Microsoft Dynamics] en de [!DNL Salesforce] bronnen beide ondersteuning bij het plannen van gegevensstromen.
+De [!DNL Microsoft Dynamics] en de [!DNL Salesforce] -bronnen ondersteunen beide het plannen van gegevensstromen.
 
-Gebruik de het plannen interface om een innameprogramma voor uw gegevensstromen te vormen. De innamefrequentie instellen op **Eenmaal** een eenmalige opname maken.
+Gebruik de het plannen interface om een innameprogramma voor uw gegevensstromen te vormen. Plaats uw innamefrequentie aan **eens** om eenmalig inname tot stand te brengen.
 
-![De het plannen interface voor de malplaatjes van de Dynamiek en van Salesforce.](../../images/tutorials/templates/schedule.png)
+![ de het plannen interface voor de malplaatjes van de Dynamiek en van Salesforce.](../../images/tutorials/templates/schedule.png)
 
-U kunt ook de innamefrequentie instellen op **Minute**, **Uur**, **Dag**, of **Week**. Als u uw gegevensstroom voor veelvoudige ingesties plant, dan moet u een interval plaatsen om een tijdkader tussen elke opname te vestigen. Bijvoorbeeld een innamefrequentie ingesteld op **Uur** en een interval instellen op **15** betekent dat uw gegevensstroom gepland is om gegevens in te voeren elke **15 uur**.
+Alternatief, kunt u uw ingangsfrequentie plaatsen aan **Minuut**, **Uur**, **Dag**, of **Week**. Als u uw gegevensstroom voor veelvoudige ingesties plant, dan moet u een interval plaatsen om een tijdkader tussen elke opname te vestigen. Bijvoorbeeld, een innamefrequentie die aan **wordt geplaatst Uren** en een interval dat aan **wordt geplaatst 15** betekent dat uw dataflow om gegevens in te voeren elk **15 uren**.
 
-Tijdens deze stap kunt u ook **backfill** en definieert u een kolom voor de incrementele opname van gegevens. Backfill wordt gebruikt om historische gegevens in te voeren, terwijl in de kolom die u voor incrementele inname definieert, nieuwe gegevens kunnen worden onderscheiden van bestaande gegevens.
+Tijdens deze stap, kunt u **backfill** ook toelaten en een kolom voor de stijgende opname van gegevens bepalen. Backfill wordt gebruikt om historische gegevens in te voeren, terwijl in de kolom die u voor incrementele inname definieert, nieuwe gegevens kunnen worden onderscheiden van bestaande gegevens.
 
-Nadat u het configureren van uw innameschema hebt voltooid, selecteert u **[!UICONTROL Finish]**.
+Selecteer **[!UICONTROL Finish]** nadat u het configureren van het innameschema hebt voltooid.
 
-![De het plannen interface voor Dynamica en malplaatjes Salesforce met toegelaten backfill.](../../images/tutorials/templates/backfill.png)
+![ de het plannen interface voor Dynamica en malplaatjes Salesforce met toegelaten backfill.](../../images/tutorials/templates/backfill.png)
 
 ### Elementen bekijken {#review-assets}
 
@@ -210,53 +215,53 @@ Nadat u het configureren van uw innameschema hebt voltooid, selecteert u **[!UIC
 >title="De automatisch gegenereerde elementen bekijken"
 >abstract="Het kan tot vijf minuten duren om alle activa te produceren. Als u ervoor kiest om de pagina te verlaten, ontvangt u een melding om terug te keren zodra de elementen zijn voltooid. U kunt de elementen bekijken zodra ze zijn gegenereerd en op elk gewenst moment aanvullende configuraties aan de gegevensstroom toevoegen."
 
-De [!UICONTROL Review template assets] op de pagina worden de elementen weergegeven die automatisch zijn gegenereerd als onderdeel van de sjabloon. In deze pagina, kunt u de auto-geproduceerde schema&#39;s, datasets, identiteitsnamespaces, en dataflows bekijken verbonden aan uw bronverbinding. Het kan tot vijf minuten duren om alle activa te produceren. Als u ervoor kiest om de pagina te verlaten, ontvangt u een melding om terug te keren zodra de elementen zijn voltooid. U kunt de elementen bekijken zodra ze zijn gegenereerd en op elk gewenst moment aanvullende configuraties aan de gegevensstroom toevoegen.
+Op de pagina [!UICONTROL Review template assets] worden de elementen weergegeven die automatisch zijn gegenereerd als onderdeel van de sjabloon. In deze pagina, kunt u de auto-geproduceerde schema&#39;s, datasets, identiteitsnamespaces, en dataflows bekijken verbonden aan uw bronverbinding. Het kan tot vijf minuten duren om alle activa te produceren. Als u ervoor kiest om de pagina te verlaten, ontvangt u een melding om terug te keren zodra de elementen zijn voltooid. U kunt de elementen bekijken zodra ze zijn gegenereerd en op elk gewenst moment aanvullende configuraties aan de gegevensstroom toevoegen.
 
-Door gebrek, worden de auto-geproduceerde dataflows geplaatst aan een ontwerpstaat om verdere aanpassing op configuraties, zoals toewijzingsregels of geplande frequenties toe te staan. De ovalen selecteren (`...`) naast de naam van de gegevensstroom en selecteer vervolgens **[!UICONTROL Preview mappings]** om de toewijzingssets te zien die voor uw conceptgegevensstroom zijn gemaakt.
+Door gebrek, worden de auto-geproduceerde dataflows geplaatst aan een ontwerpstaat om verdere aanpassing op configuraties, zoals toewijzingsregels of geplande frequenties toe te staan. Selecteer de ovalen (`...`) naast de naam van de gegevensstroom en selecteer vervolgens **[!UICONTROL Preview mappings]** om de toewijzingssets weer te geven die voor uw conceptgegevensstroom zijn gemaakt.
 
-![Een vervolgkeuzevenster met de optie voor voorvertoningstoewijzingen geselecteerd.](../../images/tutorials/templates/preview.png)
+![ dropdown venster van A met de geselecteerde voorproefmappings optie.](../../images/tutorials/templates/preview.png)
 
 Er wordt een voorvertoningspagina weergegeven waarmee u de toewijzingsrelatie tussen de brongegevensvelden en de doelschemavelden kunt controleren. Zodra u de afbeeldingen van uw gegevensstroom hebt bekeken. Selecteren **[!UICONTROL Got it.]**
 
-![Het voorvertoningsvenster voor toewijzingen.](../../images/tutorials/templates/preview-mappings.png)
+![ het venster van de afbeeldingsvoorproef.](../../images/tutorials/templates/preview-mappings.png)
 
-U kunt uw gegevensstromen op elk ogenblik na uitvoering bijwerken. De ovalen selecteren (`...`) naast de naam van de gegevensstroom en selecteer vervolgens **[!UICONTROL Update dataflow]**. U wordt genomen aan de pagina van het bronwerkschema waar u uw gegevens kunt bijwerken, met inbegrip van montages voor gedeeltelijke opname, foutendiagnostiek, en waakzame berichten, evenals de afbeelding van uw gegevensstroom.
+U kunt uw gegevensstromen op elk ogenblik na uitvoering bijwerken. Selecteer de ovalen (`...`) naast de naam van de gegevensstroom en selecteer vervolgens **[!UICONTROL Update dataflow]** . U wordt genomen aan de pagina van het bronwerkschema waar u uw gegevens kunt bijwerken, met inbegrip van montages voor gedeeltelijke opname, foutendiagnostiek, en waakzame berichten, evenals de afbeelding van uw gegevensstroom.
 
-U kunt de mening van de schemaredacteur gebruiken om updates aan uw auto-geproduceerd schema te maken. Bezoek de handleiding op [het gebruiken van de schemaredacteur](../../../xdm/tutorials/create-schema-ui.md) voor meer informatie .
+U kunt de mening van de schemaredacteur gebruiken om updates aan uw auto-geproduceerd schema te maken. Bezoek de gids op [ gebruikend de schemaredacteur ](../../../xdm/tutorials/create-schema-ui.md) voor meer informatie.
 
-![Een vervolgkeuzevenster met de optie voor het bijwerken van gegevens geselecteerd.](../../images/tutorials/templates/update.png)
+![ dropdown venster van A met de geselecteerde update dataflows optie.](../../images/tutorials/templates/update.png)
 
 >[!TIP]
 >
->U hebt toegang tot uw conceptgegevensstroom via het dialoogvenster [!UICONTROL Dataflows] cataloguspagina in de werkruimte Bronnen. Selecteren **[!UICONTROL Dataflows]** in de bovenste koptekst en selecteer vervolgens de gegevensstroom die u wilt bijwerken in de lijst.
+>U hebt toegang tot uw conceptgegevensstroom via de cataloguspagina [!UICONTROL Dataflows] in de werkruimte Bronnen. Selecteer **[!UICONTROL Dataflows]** in de bovenste koptekst en selecteer vervolgens in de lijst de gegevensstroom die u wilt bijwerken.
 >
->![Een lijst van bestaande gegevens in de dataflow catalogus van de bronwerkruimte.](../../images/tutorials/templates/dataflows.png)
+>![ een lijst van bestaande dataflows in de dataflows catalogus van de bronwerkruimte.](../../images/tutorials/templates/dataflows.png)
 
-### Uw gegevensstroom publiceren
+### Publish, uw gegevensstroom
 
-Begin met het publicatieproces door de bronworkflow te doorlopen. Nadat u [!UICONTROL Update dataflow], wordt u doorgestuurd naar de *[!UICONTROL Add data]* stap van de workflow. Selecteren **[!UICONTROL Next]** om verder te gaan.
+Begin met het publicatieproces door de bronworkflow te doorlopen. Nadat u [!UICONTROL Update dataflow] hebt geselecteerd, gaat u naar de *[!UICONTROL Add data]* -stap van de workflow. Selecteer **[!UICONTROL Next]** om door te gaan.
 
-![De add gegevensstap voor een ontwerp dataflow](../../images/tutorials/templates/continue-draft.png)
+![ voegt gegevensstap voor een ontwerp dataflow ](../../images/tutorials/templates/continue-draft.png) toe
 
-Bevestig vervolgens de gegevens in de gegevensstroom en configureer instellingen voor foutdiagnose, gedeeltelijke inname en waarschuwingsmeldingen. Selecteer **[!UICONTROL Next]**.
+Bevestig vervolgens de gegevens in de gegevensstroom en configureer instellingen voor foutdiagnose, gedeeltelijke inname en waarschuwingsmeldingen. Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![De stap met de details van de gegevensstroom voor een conceptgegevensstroom.](../../images/tutorials/templates/dataflow-detail.png)
+![ de dataflow detailstap voor een ontwerp dataflow.](../../images/tutorials/templates/dataflow-detail.png)
 
 >[!NOTE]
 >
->U kunt **[!UICONTROL Save as draft]** op om het even welk punt om de veranderingen te stoppen en te bewaren u aan uw gegevensstroom hebt aangebracht.
+>U kunt op elk gewenst moment **[!UICONTROL Save as draft]** selecteren om de wijzigingen die u in de gegevensstroom hebt aangebracht, te stoppen en op te slaan.
 
-De toewijzingsstap wordt weergegeven. Tijdens deze stap, kunt u de kaartconfiguraties van uw dataflow aanpassen. Voor een uitgebreide gids over de gegevens prep functies die voor afbeelding worden gebruikt, bezoek [UI-hulplijn voor gegevenprep](../../../data-prep/ui/mapping.md).
+De toewijzingsstap wordt weergegeven. Tijdens deze stap, kunt u de kaartconfiguraties van uw dataflow aanpassen. Voor een uitvoerige gids over de gegevens prep functies die voor afbeelding worden gebruikt, bezoek de [ gegevens prep UI gids ](../../../data-prep/ui/mapping.md).
 
-![De toewijzingsstap voor een conceptgegevensstroom.](../../images/tutorials/templates/mapping.png)
+![ de afbeeldingsstap voor een ontwerp dataflow.](../../images/tutorials/templates/mapping.png)
 
-Controleer ten slotte de details van uw gegevensstroom en selecteer **[!UICONTROL Save & ingest]** uw concept publiceren.
+Controleer ten slotte de details van uw gegevensstroom en selecteer **[!UICONTROL Save & ingest]** om uw concept te publiceren.
 
-![De overzichtsstap voor een ontwerp dataflow.](../../images/tutorials/templates/review.png)
+![ de overzichtsstap voor een ontwerp dataflow.](../../images/tutorials/templates/review.png)
 
 ## Volgende stappen
 
-Door dit leerprogramma te volgen, hebt u nu dataflows, evenals activa zoals schema&#39;s, datasets, en identiteitsnamespaces gebruikend malplaatjes gecreeerd. Voor algemene informatie over bronnen gaat u naar de [overzicht van bronnen](../../home.md).
+Door dit leerprogramma te volgen, hebt u nu dataflows, evenals activa zoals schema&#39;s, datasets, en identiteitsnamespaces gebruikend malplaatjes gecreeerd. Voor algemene informatie over bronnen, bezoek het [ overzicht van bronnen ](../../home.md).
 
 ## Waarschuwingen en meldingen {#alerts-and-notifications}
 
@@ -264,6 +269,6 @@ Sjablonen worden ondersteund door Adobe Experience Platform Alerts en u kunt het
 
 Selecteer het berichtpictogram de hoogste kopbal van Platform UI en selecteer dan het statusalarm om de activa te zien die u wilt herzien.
 
-![Het paneel met meldingen in de gebruikersinterface van het platform met een waarschuwing voor een mislukte gegevensstroom gemarkeerd.](../../images/tutorials/templates/notifications.png)
+![ het berichtenpaneel in Platform UI met een bericht alarmerend een ontbroken benadrukt dataflow.](../../images/tutorials/templates/notifications.png)
 
-U kunt de waakzame montages van uw malplaatjes bijwerken om zowel e-mail als in-Platform berichten over de status van uw gegevensstroom te ontvangen. Voor meer informatie bij het vormen van alarm, lees de gids op [hoe u zich op waarschuwingen voor gegevensstromen van bronnen kunt abonneren](../ui/alerts.md).
+U kunt de waakzame montages van uw malplaatjes bijwerken om zowel e-mail als in-Platform berichten over de status van uw gegevensstroom te ontvangen. Voor meer informatie bij het vormen van alarm, lees de gids op [ hoe te aan alarm voor brondataflows in te schrijven ](../ui/alerts.md).

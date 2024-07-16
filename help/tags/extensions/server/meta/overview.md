@@ -9,112 +9,112 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Meta Conversions API] extensieoverzicht
+# [!DNL Meta Conversions API] overzicht van extensies
 
-De [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) staat u toe om uw server-kant marketing gegevens aan te sluiten [!DNL Meta] -technologieën om uw advertentie te optimaliseren, de kosten per actie te verlagen en de resultaten te meten. Gebeurtenissen zijn gekoppeld aan een [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) ID en worden op dezelfde manier verwerkt als gebeurtenissen aan de clientzijde.
+Met [[!DNL Meta Conversions API] ](https://developers.facebook.com/docs/marketing-api/conversions-api/) kunt u uw marketinggegevens aan de serverzijde verbinden met [!DNL Meta] -technologieën om uw advertentie te optimaliseren, de kosten per actie te verlagen en de resultaten te meten. Gebeurtenissen zijn gekoppeld aan een [[!DNL Meta Pixel] ](https://developers.facebook.com/docs/meta-pixel/) -id en worden op dezelfde manier verwerkt als gebeurtenissen aan de clientzijde.
 
-Met de [!DNL Meta Conversions API] kunt u de API-mogelijkheden in uw [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) regels voor het verzenden van gegevens naar [!DNL Meta] van de Adobe Experience Platform Edge Network. In dit document wordt beschreven hoe u de extensie installeert en de mogelijkheden van de extensie gebruikt bij het doorsturen van gebeurtenissen [regel](../../../ui/managing-resources/rules.md).
+Gebruikend de [!DNL Meta Conversions API] uitbreiding, kunt u hefboomwerking de mogelijkheden van API in uw [ gebeurtenis door:sturen ](../../../ui/event-forwarding/overview.md) regels om gegevens naar [!DNL Meta] van de Edge Network van Adobe Experience Platform te verzenden. Dit document behandelt hoe te om de uitbreiding te installeren en zijn mogelijkheden in een gebeurtenis te gebruiken die [ regel ](../../../ui/managing-resources/rules.md) door:sturen.
 
 ## Demo
 
-De volgende video is bedoeld ter ondersteuning van uw begrip van de [!DNL Meta Conversions API].
+De volgende video is bedoeld om uw begrip van [!DNL Meta Conversions API] te steunen.
 
 >[!VIDEO](https://unlockmarketingdata.com/video-meta-conversions-api)
 
 ## Vereisten
 
-Het wordt sterk aanbevolen om [!DNL Meta Pixel] en de [!DNL Conversions API] om dezelfde gebeurtenissen te delen en te verzenden van respectievelijk de zijde van de client en de server, aangezien dit kan helpen gebeurtenissen te herstellen die niet zijn opgehaald door [!DNL Meta Pixel]. Voordat u de [!DNL Conversions API] voor meer informatie, raadpleegt u de handleiding op de [[!DNL Meta Pixel] extension](../../client/meta/overview.md) voor stappen over hoe te om het in uw cliënt-zijmarkeringsimplementaties te integreren.
+Het wordt ten zeerste aanbevolen om [!DNL Meta Pixel] en [!DNL Conversions API] te gebruiken om dezelfde gebeurtenissen te delen en te verzenden vanaf respectievelijk de client en de server, aangezien dit ertoe kan bijdragen dat gebeurtenissen worden hersteld die niet door [!DNL Meta Pixel] zijn opgehaald. Alvorens de [!DNL Conversions API] uitbreiding te installeren, zie de gids op de [[!DNL Meta Pixel]  uitbreiding ](../../client/meta/overview.md) voor stappen op hoe te om het in uw cliënt-zijmarkeringsimplementaties te integreren.
 
 >[!NOTE]
 >
->Het gedeelte over [deduplicatie van gebeurtenissen](#deduplication) verderop in dit document worden de stappen beschreven om ervoor te zorgen dat dezelfde gebeurtenis niet tweemaal wordt gebruikt, aangezien deze mogelijk van zowel de browser als de server wordt ontvangen.
+>De sectie op [ gebeurtenisdeduplicatie ](#deduplication) later in dit document behandelt de stappen om de zelfde gebeurtenis te verzekeren niet tweemaal wordt gebruikt, aangezien het van zowel browser als de server kan worden ontvangen.
 
-Voor het gebruik van de [!DNL Conversions API] uitbreiding, moet u toegang tot gebeurtenis hebben door:sturen en een geldige [!DNL Meta] account met toegang tot [!DNL Ad Manager] en [!DNL Event Manager]. U moet met name de id van een bestaande id kopiëren [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (of [een nieuwe [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) in plaats daarvan) kan de extensie worden geconfigureerd voor uw account.
+Als u de extensie [!DNL Conversions API] wilt gebruiken, hebt u toegang tot het doorsturen van gebeurtenissen en hebt u een geldige [!DNL Meta] -account met toegang tot [!DNL Ad Manager] en [!DNL Event Manager] . Specifiek, moet u identiteitskaart van bestaande [[!DNL Meta Pixel] kopiëren ](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (of [ creeer een nieuw  [!DNL Pixel] ](https://www.facebook.com/business/help/952192354843755) in plaats daarvan) zodat kan de uitbreiding aan uw rekening worden gevormd.
 
 >[!INFO]
 >
->Als u deze extensie wilt gebruiken met gegevens van mobiele apps of als u ook werkt met gegevens van offlinegebeurtenissen in uw [!DNL Meta] campagnes, zult u uw dataset door een bestaande app moeten creëren en selecteren **Maken met een pixel-id** wanneer hierom wordt gevraagd. Zie het artikel [Bepaal welke optie van de datasetverwezenlijking voor uw zaken juist is](https://www.facebook.com/business/help/5270377362999582?id=490360542427371) voor meer informatie. Zie de [Conversies-API voor toepassingsgebeurtenissen](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events) document voor alle vereiste en optionele parameters voor het bijhouden van apps.
+>Als u van plan bent om deze uitbreiding met mobiele toepassingsgegevens te gebruiken, of als u ook met off-line gebeurtenisgegevens in uw [!DNL Meta] campagnes werkt, zult u uw dataset door bestaande app moeten creëren en **selecteren creeert van een pixelidentiteitskaart** wanneer ertoe aangezet. Zie artikel [ beslissen welke optie van de datasetverwezenlijking juist voor uw zaken ](https://www.facebook.com/business/help/5270377362999582?id=490360542427371) voor details is. Verwijs naar [ Conversies API voor de Gebeurtenissen van de App ](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events) document voor alle vereiste en facultatieve app het volgen parameters.
 
 ## De extensie installeren
 
-Als u het dialoogvenster [!DNL Meta Conversions API] de extensie, navigeert u naar de gebruikersinterface van de gegevensverzameling of het Experience Platform en selecteert u **[!UICONTROL Event Forwarding]** in de linkernavigatie. Selecteer van hieruit een eigenschap waaraan u de extensie wilt toevoegen of maak een nieuwe eigenschap.
+Als u de extensie [!DNL Meta Conversions API] wilt installeren, navigeert u naar de gebruikersinterface van de gegevensverzameling of het Experience Platform en selecteert u **[!UICONTROL Event Forwarding]** in de linkernavigatie. Selecteer van hieruit een eigenschap waaraan u de extensie wilt toevoegen of maak een nieuwe eigenschap.
 
-Als u de gewenste eigenschap hebt geselecteerd of gemaakt, selecteert u **[!UICONTROL Extensions]** in de linkernavigatie, dan selecteer **[!UICONTROL Catalog]** tab. Zoeken naar [!UICONTROL Meta Conversions API] kaart, dan selecteren **[!UICONTROL Install]**.
+Wanneer u de gewenste eigenschap hebt geselecteerd of gemaakt, selecteert u **[!UICONTROL Extensions]** in de linkernavigatie en selecteert u vervolgens de tab **[!UICONTROL Catalog]** . Zoek de [!UICONTROL Meta Conversions API] -kaart en selecteer vervolgens **[!UICONTROL Install]** .
 
-![De [!UICONTROL Install] optie die voor [!UICONTROL Meta Conversions API] in de UI voor gegevensverzameling.](../../../images/extensions/server/meta/install.png)
+![ de [!UICONTROL Install] optie die voor de [!UICONTROL Meta Conversions API] uitbreiding in de Inzameling UI van Gegevens wordt geselecteerd.](../../../images/extensions/server/meta/install.png)
 
-In de configuratieweergave die wordt weergegeven, moet u de opdracht [!DNL Pixel] ID die u eerder hebt gekopieerd om de extensie te koppelen aan uw account. U kunt de id rechtstreeks in de invoer plakken, maar u kunt ook een gegevenselement gebruiken.
+In de configuratieweergave die wordt weergegeven, moet u de [!DNL Pixel] id opgeven die u eerder hebt gekopieerd om de extensie te koppelen aan uw account. U kunt de id rechtstreeks in de invoer plakken, maar u kunt ook een gegevenselement gebruiken.
 
-U moet ook een toegangstoken verstrekken om te gebruiken [!DNL Conversions API] specifiek. Zie de [!DNL Conversions API] documentatie over [toegangstoken genereren](https://developers.facebook.com/docs/marketing-api/conversions-api/get-started#access-token) voor stappen voor het verkrijgen van deze waarde.
+U moet ook een toegangstoken verstrekken om [!DNL Conversions API] specifiek te gebruiken. Verwijs naar de [!DNL Conversions API] documentatie over [ het produceren van een toegangstoken ](https://developers.facebook.com/docs/marketing-api/conversions-api/get-started#access-token) voor stappen op hoe te om deze waarde te verkrijgen.
 
-Selecteer **[!UICONTROL Save]**
+Selecteer **[!UICONTROL Save]** wanneer u klaar bent
 
-![De [!DNL Pixel] ID verstrekt als gegevenselement in de mening van de uitbreidingsconfiguratie.](../../../images/extensions/server/meta/configure.png)
+![ identiteitskaart [!DNL Pixel] als gegevenselement in de mening van de uitbreidingsconfiguratie wordt verstrekt die.](../../../images/extensions/server/meta/configure.png)
 
 De uitbreiding is geïnstalleerd en u kunt zijn mogelijkheden in uw gebeurtenis nu gebruiken die regels door:sturen.
 
 ## Integratie met de extensie Facebook en Instagram {#facebook}
 
-Dankzij de integratie met de extensie Facebook en Instagram kunt u uw account snel verifiëren bij uw Meta Business-account. Dit vult dan automatisch uw [!UICONTROL Pixel ID] en de Meta Conversions API [!UICONTROL Access Token], waardoor de API voor metaconversies eenvoudiger kan worden geïnstalleerd en geconfigureerd.
+Dankzij de integratie met de extensie Facebook en Instagram kunt u uw account snel verifiëren bij uw Meta Business-account. Vervolgens worden uw [!UICONTROL Pixel ID] en de Meta Conversions API [!UICONTROL Access Token] automatisch gevuld, zodat de API voor metaconversies eenvoudiger kan worden geïnstalleerd en geconfigureerd.
 
-Er wordt een dialoogvenster weergegeven met de vraag of u de verificatie in Facebook en Instagram wilt uitvoeren. [!UICONTROL Meta Conversions API] extensie.
+Er verschijnt een dialoogvenster met de vraag of u de verificatie wilt uitvoeren in Facebook en Instagram wanneer u de extensie [!UICONTROL Meta Conversions API] installeert.
 
-![De [!UICONTROL Meta Conversions API Extension] markering installatiepagina [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
+![ de [!UICONTROL Meta Conversions API Extension] installatiepagina die [!UICONTROL Connect to Meta] benadrukt.](../../../images/extensions/server/meta/mbe-extension-install.png)
 
 Een dialoogvraag om in Facebook en Instagram voor authentiek te verklaren verschijnt ook in de snel startwerkschemaUI binnen gebeurtenis het door:sturen.
 
-![UI-markering voor snelstartworkflow [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+![ Snelle het begin werkschema UI die [!UICONTROL Connect to Meta] benadrukt.](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
 
 ## Integratie met Event Quality Match Score (EMQ) {#emq}
 
-Dankzij de integratie met de Event Quality Match Score (EMQ) kunt u de doeltreffendheid van uw implementatie eenvoudig bekijken door de EMQ-scores weer te geven. Deze integratie minimaliseert contextomschakeling en helpt u het succes van uw implementaties van Meta Conversions API verbeteren. Deze gebeurtenissencores worden weergegeven in het dialoogvenster [!UICONTROL Meta Conversions API extension] configuratiescherm.
+Dankzij de integratie met de Event Quality Match Score (EMQ) kunt u de doeltreffendheid van uw implementatie eenvoudig bekijken door de EMQ-scores weer te geven. Deze integratie minimaliseert contextomschakeling en helpt u het succes van uw implementaties van Meta Conversions API verbeteren. Deze gebeurtenissencores worden weergegeven in het configuratiescherm van [!UICONTROL Meta Conversions API extension] .
 
-![De [!UICONTROL Meta Conversions API Extension] configuratiepagina markeren [!UICONTROL View EMQ Score].](../../../images/extensions/server/meta/emq-score.png)
+![ de [!UICONTROL Meta Conversions API Extension] configuratiepagina die [!UICONTROL View EMQ Score] benadrukt.](../../../images/extensions/server/meta/emq-score.png)
 
 ## Integratie met LiveRamp (Alpha) {#alpha}
 
-[!DNL LiveRamp] klanten die [!DNL LiveRamp]De voor authentiek verklaarde Oplossing van het Verkeer (ATS) die op hun plaatsen wordt opgesteld kan verkiezen om RampIDs als parameter van de klanteninformatie te delen. Werk met uw [!DNL Meta] accountteam om deel te nemen aan het Alpha-programma voor deze functie.
+[!DNL LiveRamp] klanten die [!DNL LiveRamp] voor authentiek verklaarde Oplossing van het Verkeer (ATS) op hun plaatsen hebben opgesteld kunnen verkiezen om RampIDs als parameter van de klanteninformatie te delen. Werk samen met uw accountteam van [!DNL Meta] om deel te nemen aan het Alpha-programma voor deze functie.
 
-![Meta-gebeurtenis door:sturen [!UICONTROL Rule] configuratiepagina markeren [!UICONTROL Partner Name (alpha)] en [!UICONTROL Partner ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
+![ de gebeurtenis die van Meta [!UICONTROL Rule] configuratiepagina [!UICONTROL Partner Name (alpha)] en [!UICONTROL Partner ID (alpha)] door:sturen.](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Vorm een gebeurtenis door:sturen regel {#rule}
 
-In deze sectie wordt beschreven hoe u de [!DNL Conversions API] uitbreiding in een generische gebeurtenis die regel door:sturen. In de praktijk, zou u verscheidene regels moeten vormen om allen te verzenden toegelaten [standaardgebeurtenissen](https://developers.facebook.com/docs/meta-pixel/reference) via [!DNL Meta Pixel] en [!DNL Conversions API]. Voor mobiele toepassingsgegevens raadpleegt u de vereiste velden, toepassingsgegevensvelden, parameters voor klantgegevens en aangepaste gegevens [hier](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events).
+Deze sectie behandelt hoe te om de [!DNL Conversions API] uitbreiding in een generische gebeurtenis te gebruiken die regel door:sturen. In praktijk, zou u verscheidene regels moeten vormen om alle toegelaten [ standaardgebeurtenissen ](https://developers.facebook.com/docs/meta-pixel/reference) via [!DNL Meta Pixel] en [!DNL Conversions API] te verzenden. Voor mobiele toepassingsgegevens, gelieve te zien de vereiste gebieden, de gebieden van toepassingsgegevens, de parameters van de klanteninformatie, en de details van douanegegevens [ hier ](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events).
 
 >[!NOTE]
 >
->Gebeurtenissen moeten [verzonden in real time](https://www.facebook.com/business/help/379226453470947?id=818859032317965) of zo dicht mogelijk bij real time voor betere optimalisering van de advertentiecampagne.
+>De gebeurtenissen zouden [ moeten worden verzonden in echt - tijd ](https://www.facebook.com/business/help/379226453470947?id=818859032317965) of zo dicht bij echt - tijd zoals mogelijk voor betere en campagneroptimalisering.
 
-Begin creërend een nieuwe gebeurtenis door:sturen regel en vorm zijn voorwaarden zoals gewenst. Selecteer bij het selecteren van de handelingen voor de regel de optie **[!UICONTROL Meta Conversions API Extension]** voor de extensie selecteert u vervolgens **[!UICONTROL Send Conversions API Event]** voor het actietype.
+Begin creërend een nieuwe gebeurtenis door:sturen regel en vorm zijn voorwaarden zoals gewenst. Wanneer u de handelingen voor de regel selecteert, selecteert u **[!UICONTROL Meta Conversions API Extension]** voor de extensie en selecteert u **[!UICONTROL Send Conversions API Event]** voor het actietype.
 
-![De [!UICONTROL Send Page View] actietype dat voor een regel in de Inzameling UI van Gegevens wordt geselecteerd.](../../../images/extensions/server/meta/select-action.png)
+![ het [!UICONTROL Send Page View] actietype dat voor een regel in de Inzameling UI van Gegevens wordt geselecteerd.](../../../images/extensions/server/meta/select-action.png)
 
-De controles verschijnen die u toestaan om de gebeurtenisgegevens te vormen die zullen worden verzonden naar [!DNL Meta] via de [!DNL Conversions API]. Deze opties kunnen rechtstreeks in de verstrekte input worden ingevoerd, of u kunt bestaande gegevenselementen selecteren om de waarden te vertegenwoordigen. De configuratieopties worden verdeeld in vier hoofdsecties, zoals hieronder beschreven.
+Er worden besturingselementen weergegeven waarmee u de gebeurtenisgegevens kunt configureren die via [!DNL Conversions API] naar [!DNL Meta] worden verzonden. Deze opties kunnen rechtstreeks in de verstrekte input worden ingevoerd, of u kunt bestaande gegevenselementen selecteren om de waarden te vertegenwoordigen. De configuratieopties worden verdeeld in vier hoofdsecties, zoals hieronder beschreven.
 
 | Config-sectie | Beschrijving |
 | --- | --- |
-| [!UICONTROL Server Event Parameters] | Algemene informatie over de gebeurtenis, waaronder de tijd dat deze heeft plaatsgevonden en de bronactie die deze heeft geactiveerd. Zie de [!DNL Meta] ontwikkelaarsdocumentatie voor meer informatie over de [standaardparameters voor gebeurtenissen](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) door de [!DNL Conversions API].<br><br>Als u beide gebruikt [!DNL Meta Pixel] en de [!DNL Conversions API] om gebeurtenissen te verzenden, zorg ervoor zowel als omvat **[!UICONTROL Event Name]** (`event_name`) en **[!UICONTROL Event ID]** (`event_id`) bij elke gebeurtenis, aangezien deze waarden worden gebruikt voor [deduplicatie van gebeurtenissen](#deduplication).<br><br>U kunt ook **[!UICONTROL Enable Limited Data Use]** om te helpen voldoen aan de opt-outs van klanten. Zie de [!DNL Conversions API] documentatie over [gegevensverwerkingsopties](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) voor meer informatie over deze functie. |
-| [!UICONTROL Customer Information Parameters] | De identiteitsgegevens van de gebruiker die worden gebruikt om de gebeurtenis aan een klant toe te schrijven. Sommige van deze waarden moeten worden gehasht voordat ze naar de API kunnen worden verzonden.<br><br>Voor een goede algemene API-verbinding en een hoge evenementkwaliteit (EMQ) is het raadzaam alle [geaccepteerde parameters voor klantinformatie](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) naast servergebeurtenissen. Deze parameters moeten ook [prioriteit op basis van hun belang en impact op het EMQ](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
-| [!UICONTROL Custom Data] | Aanvullende gegevens die moeten worden gebruikt voor optimalisatie van levering voor advertenties, opgegeven in de vorm van een JSON-object. Zie de [[!DNL Conversions API] documentatie](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) voor meer informatie over de geaccepteerde eigenschappen voor dit object.<br><br>Als u een aankoopgebeurtenis verzendt, moet u deze sectie gebruiken om de vereiste kenmerken op te geven `currency` en `value`. |
-| [!UICONTROL Test Event] | Deze optie wordt gebruikt om te verifiëren of uw configuratie servergebeurtenissen om veroorzaakt te ontvangen door [!DNL Meta] zoals verwacht. Selecteer de optie **[!UICONTROL Send as Test Event]** Schakel het selectievakje in en geef een gewenste testgebeurteniscode op in de onderstaande invoer. Zodra de gebeurtenis door:sturen regel wordt opgesteld, als u de uitbreiding en de actie correct vormde zou u activiteiten zien die binnen het **[!DNL Test Events]** weergeven in [!DNL Meta Events Manager]. |
+| [!UICONTROL Server Event Parameters] | Algemene informatie over de gebeurtenis, waaronder de tijd dat deze heeft plaatsgevonden en de bronactie die deze heeft geactiveerd. Verwijs naar de [!DNL Meta] ontwikkelaarsdocumentatie voor meer informatie over de [ standaardgebeurtenisparameters ](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) die door [!DNL Conversions API] worden goedgekeurd.<br><br> als u zowel [!DNL Meta Pixel] als [!DNL Conversions API] gebruikt om gebeurtenissen te verzenden, zorg ervoor om zowel **[!UICONTROL Event Name]** (`event_name`) als **[!UICONTROL Event ID]** (`event_id`) met elke gebeurtenis te omvatten, aangezien deze waarden voor [ gebeurtenisdeduplicatie ](#deduplication) worden gebruikt.<br><br> u hebt ook de optie aan **[!UICONTROL Enable Limited Data Use]** om te helpen aan klant opt-outs voldoen. Zie de [!DNL Conversions API] documentatie over [ gegevens verwerkend opties ](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) voor details op deze eigenschap. |
+| [!UICONTROL Customer Information Parameters] | De identiteitsgegevens van de gebruiker die worden gebruikt om de gebeurtenis aan een klant toe te schrijven. Sommige van deze waarden moeten worden gehasht voordat ze naar de API kunnen worden verzonden.<br><br> om een goede gemeenschappelijke API verbinding en de hoge kwaliteit van de gebeurtenisgelijke (EMQ) te verzekeren, wordt het geadviseerd dat u alle [ toegelaten parameters van de klanteninformatie ](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) naast servergebeurtenissen verzendt. Deze parameters zouden ook [ moeten worden geprioriteerd gebaseerd op hun belang en effect op EMQ ](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
+| [!UICONTROL Custom Data] | Aanvullende gegevens die moeten worden gebruikt voor optimalisatie van levering voor advertenties, opgegeven in de vorm van een JSON-object. Verwijs naar de [[!DNL Conversions API]  documentatie ](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) voor meer informatie over de toegelaten eigenschappen voor dit voorwerp.<br><br> Als u een aankoopgebeurtenis verzendt, moet u deze sectie gebruiken om de vereiste attributen `currency` en `value` te verstrekken. |
+| [!UICONTROL Test Event] | Deze optie wordt gebruikt om te controleren of uw configuratie ertoe leidt dat servergebeurtenissen door [!DNL Meta] worden ontvangen zoals verwacht. Als u deze functie wilt gebruiken, schakelt u het selectievakje **[!UICONTROL Send as Test Event]** in en geeft u een gewenste testgebeurteniscode op in de onderstaande invoer. Zodra de gebeurtenis door:sturen regel wordt opgesteld, als u de uitbreiding en de actie correct vormde zou u activiteiten moeten zien die binnen de **[!DNL Test Events]** mening in [!DNL Meta Events Manager] verschijnen. |
 
 {style="table-layout:auto"}
 
-Selecteer **[!UICONTROL Keep Changes]** om de actie aan de regelconfiguratie toe te voegen.
+Als u klaar bent, selecteert u **[!UICONTROL Keep Changes]** om de handeling aan de regelconfiguratie toe te voegen.
 
-![[!UICONTROL Keep Changes] geselecteerd voor de actieconfiguratie.](../../../images/extensions/server/meta/keep-changes.png)
+![[!UICONTROL Keep Changes] die voor de actieconfiguratie worden geselecteerd.](../../../images/extensions/server/meta/keep-changes.png)
 
-Als u tevreden bent met de regel, selecteert u **[!UICONTROL Save to Library]**. Ten slotte publiceert u een nieuwe gebeurtenis die wordt doorgestuurd [build](../../../ui/publishing/builds.md) om de wijzigingen in de bibliotheek mogelijk te maken.
+Selecteer **[!UICONTROL Save to Library]** als u tevreden bent met de regel. Tot slot publiceer een nieuwe gebeurtenis door:sturen [ bouwt ](../../../ui/publishing/builds.md) om de veranderingen toe te laten die aan de bibliotheek worden aangebracht.
 
 ## Gebeurtenisdeduplicatie {#deduplication}
 
-Zoals vermeld in het [sectie voorwaarden](#prerequisites)wordt aangeraden beide [!DNL Meta Pixel] de extensie van de tag en de [!DNL Conversions API] gebeurtenis die uitbreiding door:sturen om de zelfde gebeurtenissen van de cliënt en de server in een overtollige opstelling te verzenden. Dit kan helpen gebeurtenissen herstellen die niet door één of andere uitbreiding werden opgepikt.
+Zoals vermeld in de [ eerste vereisten sectie ](#prerequisites), adviseert men dat u zowel de [!DNL Meta Pixel] markeringsuitbreiding als [!DNL Conversions API] gebeurtenis gebruikt die uitbreiding door:sturen om de zelfde gebeurtenissen van de cliënt en de server in een overtollige opstelling te verzenden. Dit kan helpen gebeurtenissen herstellen die niet door één of andere uitbreiding werden opgepikt.
 
-Als u verschillende gebeurtenistypen verzendt van de client en de server zonder overlapping tussen beide, is deduplicatie niet nodig. Als echter één gebeurtenis wordt gedeeld door beide [!DNL Meta Pixel] en de [!DNL Conversions API], moet u ervoor zorgen dat deze overtollige gebeurtenissen worden gededupliceerd zodat uw rapport niet negatief wordt beïnvloed.
+Als u verschillende gebeurtenistypen verzendt van de client en de server zonder overlapping tussen beide, is deduplicatie niet nodig. Als echter één gebeurtenis wordt gedeeld door zowel [!DNL Meta Pixel] als [!DNL Conversions API] , moet u ervoor zorgen dat deze overbodige gebeurtenissen worden gededupliceerd, zodat de rapportage niet wordt beïnvloed.
 
-Wanneer u gedeelde gebeurtenissen verzendt, moet u een gebeurtenis-id en een naam opnemen voor elke gebeurtenis die u verzendt van zowel de client als de server. Wanneer meerdere gebeurtenissen met dezelfde id en naam worden ontvangen, [!DNL Meta] maakt automatisch gebruik van verschillende strategieën om deze te dedupliceren en de meest relevante gegevens te bewaren. Zie de [!DNL Meta] documentatie over [deduplicatie voor [!DNL Meta Pixel] en [!DNL Conversions API] gebeurtenissen](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) voor meer informatie over dit proces.
+Wanneer u gedeelde gebeurtenissen verzendt, moet u een gebeurtenis-id en een naam opnemen voor elke gebeurtenis die u verzendt van zowel de client als de server. Wanneer meerdere gebeurtenissen met dezelfde id en naam worden ontvangen, gebruikt [!DNL Meta] automatisch verschillende strategieën om deze te dedupliceren en de meest relevante gegevens te behouden. Zie de [!DNL Meta] documentatie over [ deduplicatie voor  [!DNL Meta Pixel]  en  [!DNL Conversions API]  gebeurtenissen ](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) voor details op dit proces.
 
-## Snelle startworkflow: extensie voor metaconversie-API (bèta) {#quick-start}
+## Snelle startworkflow: extensie voor metaconversie-API (Beta) {#quick-start}
 
 >[!IMPORTANT]
 >
@@ -144,63 +144,63 @@ In de volgende video wordt een inleiding gegeven op de functie Snel starten.
 Deze setup wordt automatisch uitgevoerd om zowel de API voor metaconversie als de Pixel-extensies van Meta te installeren. Deze hybride implementatie wordt aanbevolen door Meta voor het verzamelen en doorsturen van de serverzijde van de conversie van gebeurtenissen.
 De snelle opstellingseigenschap wordt ontworpen om klanten te helpen met een gebeurtenis beginnen die implementatie door:sturen en is niet bedoeld om een eind aan eind te leveren, volledig functionele implementatie die alle gebruiksgevallen aanpast.
 
-Selecteer **[!UICONTROL Get Started]** for **[!DNL Send Conversions Data to Meta]** over de Adobe Experience Platform-gegevensverzameling **[!UICONTROL Home]** pagina.
+Selecteer **[!UICONTROL Get Started]** voor **[!DNL Send Conversions Data to Meta]** op de pagina Adobe Experience Platform Data Collection **[!UICONTROL Home]** om de functie te installeren.
 
-![Homepage van gegevensverzameling met conversiegegevens naar meta](../../../images/extensions/server/meta/conversion-data-to-meta.png)
+![ de homepage van de inzameling van Gegevens die omzettingsgegevens in meta tonen ](../../../images/extensions/server/meta/conversion-data-to-meta.png)
 
-Voer uw **[!UICONTROL Domain]** selecteert u vervolgens **[!UICONTROL Next]**. Dit domein zal als noemende overeenkomst voor uw auto geproduceerde Markeringen en Gebeurtenis worden gebruikt die eigenschappen, regels, gegevenselementen, gegevensstromen, etc. door:sturen.
+Voer uw **[!UICONTROL Domain]** in en selecteer vervolgens **[!UICONTROL Next]** . Dit domein zal als noemende overeenkomst voor uw auto geproduceerde Markeringen en Gebeurtenis worden gebruikt die eigenschappen, regels, gegevenselementen, gegevensstromen, etc. door:sturen.
 
-![Welkomstscherm voor aanvragen van domeinnaam](../../../images/extensions/server/meta/welcome.png)
+![ Welkome scherm die domeinnaam verzoeken ](../../../images/extensions/server/meta/welcome.png)
 
-In de **[!UICONTROL Initial Setup]** dialoogvenster voert uw **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta Conversion API Access Token]**, en **[!UICONTROL Data Layer Path]** selecteert u vervolgens **[!UICONTROL Next]**.
+Voer in het dialoogvenster **[!UICONTROL Initial Setup]** de opties **[!UICONTROL Meta Pixel ID]** , **[!UICONTROL Meta Conversion API Access Token]** en **[!UICONTROL Data Layer Path]** in en selecteer vervolgens **[!UICONTROL Next]** .
 
-![Dialoogvenster Eerste configuratie](../../../images/extensions/server/meta/initial-setup.png)
+![ Aanvankelijke opstellingsdialoog ](../../../images/extensions/server/meta/initial-setup.png)
 
-Wacht enkele minuten tot het initiële installatieproces is voltooid en selecteer vervolgens **[!UICONTROL Next]**.
+Wacht enkele minuten tot het initiële installatieproces is voltooid en selecteer vervolgens **[!UICONTROL Next]** .
 
-![Eerste installatie voltooid bevestigingsscherm](../../../images/extensions/server/meta/setup-complete.png)
+![ Aanvankelijke opstelling voltooide bevestigingsscherm ](../../../images/extensions/server/meta/setup-complete.png)
 
-Van de **[!UICONTROL Add Code on Your Site]** dialoogvenster de code kopiëren die is opgegeven met behulp van de kopie ![Kopiëren](../../../images/extensions/server/meta/copy-icon.png) functie en plak deze in de `<head>` van uw bronwebsite. Na implementatie selecteert u **[!UICONTROL Start Validation]**
+Van de **[!UICONTROL Add Code on Your Site]** dialoog kopieert de code die wordt verstrekt gebruikend de functie van het exemplaar ![ Exemplaar ](../../../images/extensions/server/meta/copy-icon.png) en kleeft dit in `<head>` van uw bronwebsite. Selecteer na implementatie **[!UICONTROL Start Validation]**
 
-![Code toevoegen aan het dialoogvenster van uw site](../../../images/extensions/server/meta/add-code-on-your-site.png)
+![ voeg code op uw plaatsdialoog toe ](../../../images/extensions/server/meta/add-code-on-your-site.png)
 
-De [!UICONTROL Validation Results] geeft de resultaten van de implementatie van de extensie Meta weer. Selecteren **[!UICONTROL Next]**. U kunt ook aanvullende validatieresultaten zien door de optie **[!UICONTROL Assurance]** koppeling.
+In het dialoogvenster [!UICONTROL Validation Results] worden de resultaten van de implementatie van de extensie Meta weergegeven. Selecteer **[!UICONTROL Next]**. U kunt ook aanvullende validatieresultaten zien door de koppeling **[!UICONTROL Assurance]** te selecteren.
 
-![Dialoogvenster met testresultaten met de resultaten van de implementatie](../../../images/extensions/server/meta/test-results.png)
+![ de resultatendialoog van de Test tonend implementatieresultaten ](../../../images/extensions/server/meta/test-results.png)
 
-De **[!UICONTROL Next Steps]** schermweergave bevestigt de voltooiing van de installatie. Van hieruit hebt u de optie om uw implementatie te optimaliseren door nieuwe gebeurtenissen toe te voegen, die in de volgende sectie worden getoond.
+De schermweergave van **[!UICONTROL Next Steps]** bevestigt de voltooiing van de installatie. Van hieruit hebt u de optie om uw implementatie te optimaliseren door nieuwe gebeurtenissen toe te voegen, die in de volgende sectie worden getoond.
 
-Als u geen extra gebeurtenissen wilt toevoegen, selecteert u **[!UICONTROL Close]**.
+Selecteer **[!UICONTROL Close]** als u geen aanvullende gebeurtenissen wilt toevoegen.
 
-![Dialoogvenster Volgende stappen](../../../images/extensions/server/meta/next-steps.png)
+![ Volgende stappen dialoog ](../../../images/extensions/server/meta/next-steps.png)
 
 #### Extra gebeurtenissen toevoegen
 
-Selecteer **[!UICONTROL Edit Your Tags Web Property]**.
+Selecteer **[!UICONTROL Edit Your Tags Web Property]** als u nieuwe gebeurtenissen wilt toevoegen.
 
-![Dialoogvenster Volgende stappen waarin de webeigenschap voor tags wordt weergegeven](../../../images/extensions/server/meta/edit-your-tags-web-property.png)
+![ Volgende stappen dialoog tonen uitgeeft uw bezit van het markeringenWeb ](../../../images/extensions/server/meta/edit-your-tags-web-property.png)
 
-Selecteer de regel die overeenkomt met de meta-gebeurtenis die u wilt bewerken. Bijvoorbeeld: **MetaConversion_AddToCart**.
+Selecteer de regel die overeenkomt met de meta-gebeurtenis die u wilt bewerken. Bijvoorbeeld, **MetaConversion_AddToCart**.
 
 >[!NOTE]
 >
->Als er geen gebeurtenis is, zal deze regel niet lopen. Dit geldt voor alle regels, met de **MetaConversion_PageView** regel is de uitzondering.
+>Als er geen gebeurtenis is, zal deze regel niet lopen. Dit is waar voor alle regels, met **MetaConversion_PageView** regel die de uitzondering is.
 
-Om een gebeurtenis toe te voegen selecteer **[!UICONTROL Add]** onder de [!UICONTROL Events] kop.
+Als u een gebeurtenis wilt toevoegen, selecteert u **[!UICONTROL Add]** onder de kop [!UICONTROL Events] .
 
-![Pagina met eigenschappen van tag die geen gebeurtenissen weergeven](../../../images/extensions/server/meta/edit-rule.png)
+![ de eigenschappenpagina die van de Markering geen gebeurtenissen toont ](../../../images/extensions/server/meta/edit-rule.png)
 
-Selecteer de [!UICONTROL Event Type]. In dit voorbeeld hebben we de [!UICONTROL Click] gebeurtenis en geconfigureerd om te activeren wanneer de **.add-to-cart-button** is geselecteerd. Selecteren **[!UICONTROL Keep Changes]**.
+Selecteer het [!UICONTROL Event Type]. In dit voorbeeld, hebben wij de [!UICONTROL Click] gebeurtenis geselecteerd en het gevormd om te teweegbrengen wanneer **.add-to-cart-button** wordt geselecteerd. Selecteer **[!UICONTROL Keep Changes]**.
 
-![Gebeurtenisconfiguratiescherm met klikgebeurtenis](../../../images/extensions/server/meta/event-configuration.png)
+![ het configuratiescherm dat van de Gebeurtenis toont gebeurtenis ](../../../images/extensions/server/meta/event-configuration.png)
 
-De nieuwe gebeurtenis is opgeslagen. Selecteren **[!UICONTROL Select a working library]** en selecteer de bibliotheek die u wilt maken.
+De nieuwe gebeurtenis is opgeslagen. Selecteer **[!UICONTROL Select a working library]** en selecteer de bibliotheek die u wilt maken.
 
-![Een vervolgkeuzelijst met werkbibliotheken selecteren](../../../images/extensions/server/meta/working-library.png)
+![ Uitgezocht een werkende bibliotheekdaling onderaan ](../../../images/extensions/server/meta/working-library.png)
 
-Selecteer de vervolgkeuzelijst naast **[!UICONTROL Save to Library]** en selecteert u **[!UICONTROL Save to Library and Build]**. Hiermee wordt de wijziging in de bibliotheek gepubliceerd.
+Selecteer vervolgens de vervolgkeuzelijst naast **[!UICONTROL Save to Library]** en selecteer **[!UICONTROL Save to Library and Build]** . Hiermee wordt de wijziging in de bibliotheek gepubliceerd.
 
-![Opslaan in bibliotheek selecteren en samenstellen](../../../images/extensions/server/meta/save-and-build.png)
+![ Uitgezocht sparen aan bibliotheek en bouwt ](../../../images/extensions/server/meta/save-and-build.png)
 
 Herhaal deze stappen voor elke andere meta-omzettingsgebeurtenis u zou willen vormen.
 
@@ -208,29 +208,29 @@ Herhaal deze stappen voor elke andere meta-omzettingsgebeurtenis u zou willen vo
 
 >[!IMPORTANT]
 >
->De manier waarop u deze algemene gegevenslaag bijwerkt, is afhankelijk van uw websitearchitectuur. Een toepassing op één pagina verschilt van een renderingtoepassing op de server. Het is ook mogelijk dat u volledig verantwoordelijk bent voor het maken en bijwerken van deze gegevens in het product Tags. In alle gevallen moet de gegevenslaag worden bijgewerkt tussen het uitvoeren van de `MetaConversion_* rules`. Als u de gegevens niet tussen regels bijwerkt, kunt u ook in een geval lopen waar u stapelgegevens van het laatste verzendt `MetaConversion_* rule` in de huidige `MetaConversion_* rule`.
+>De manier waarop u deze algemene gegevenslaag bijwerkt, is afhankelijk van uw websitearchitectuur. Een toepassing op één pagina verschilt van een renderingtoepassing op de server. Het is ook mogelijk dat u volledig verantwoordelijk bent voor het maken en bijwerken van deze gegevens in het product Tags. In alle gevallen moet de gegevenslaag worden bijgewerkt tussen het uitvoeren van elk van de `MetaConversion_* rules` . Als u de gegevens niet bijwerkt tussen regels, kunt u ook in een geval lopen waarin u gegevens van de laatste `MetaConversion_* rule` in de huidige `MetaConversion_* rule` verzendt.
 
-Tijdens de configuratie, werd u gevraagd waar uw gegevenslaag leeft. Standaard is dit `window.dataLayer.meta`en binnen de `meta` -object, worden uw gegevens verwacht zoals hieronder wordt weergegeven.
+Tijdens de configuratie, werd u gevraagd waar uw gegevenslaag leeft. Standaard is dit `window.dataLayer.meta` en binnen het `meta` -object worden uw gegevens verwacht zoals hieronder wordt weergegeven.
 
-![Metagegevens gegevenslaag](../../../images/extensions/server/meta/data-layer-meta.png)
+![ de meta-informatie van de laag van Gegevens ](../../../images/extensions/server/meta/data-layer-meta.png)
 
-Dit is belangrijk om te begrijpen zoals elke `MetaConversion_*` regel gebruikt deze gegevensstructuur om de relevante gegevens door te geven aan de [!DNL Meta Pixel] en de [!DNL Meta Conversions API]. Raadpleeg de documentatie bij [standaardgebeurtenissen](https://developers.facebook.com/docs/meta-pixel/reference#standard-events) voor meer informatie over welke gegevens verschillende meta - gebeurtenissen vereisen.
+Dit is belangrijk om te begrijpen, aangezien elke `MetaConversion_*` -regel deze gegevensstructuur gebruikt om de relevante gegevens door te geven aan de [!DNL Meta Pixel] -extensie en aan [!DNL Meta Conversions API] . Verwijs naar de documentatie over [ standaardgebeurtenissen ](https://developers.facebook.com/docs/meta-pixel/reference#standard-events) voor meer informatie over welke gegevens de verschillende meta gebeurtenissen vereisen.
 
-Als u bijvoorbeeld de opdracht `MetaConversion_Subscribe` regel, u zou moeten bijwerken `window.dataLayer.meta.currency`, `window.dataLayer.meta.predicted_ltv`, en `window.dataLayer.meta.value` zoals beschreven in de documentatie over de objecteigenschappen [standaardgebeurtenissen](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
+Bijvoorbeeld, als u de `MetaConversion_Subscribe` regel wilde gebruiken, zou u `window.dataLayer.meta.currency` moeten bijwerken, `window.dataLayer.meta.predicted_ltv`, en `window.dataLayer.meta.value` volgens de objecten eigenschappen die in de documentatie over [ worden beschreven standaardgebeurtenissen ](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
 
 Hieronder ziet u een voorbeeld van wat er op een website moet worden uitgevoerd om de gegevenslaag bij te werken voordat de regel wordt uitgevoerd.
 
-![Metagegevens gegevenslaag bijwerken](../../../images/extensions/server/meta/update-data-layer-meta.png)
+![ de meta-informatie van de de gegevenslaag van de Update ](../../../images/extensions/server/meta/update-data-layer-meta.png)
 
-Standaard worden de `<datalayerpath>.conversionData.eventId` wordt willekeurig gegenereerd door de actie &quot;Nieuwe gebeurtenis-id genereren&quot; op een van de `MetaConversion_* rules`.
+Standaard wordt de `<datalayerpath>.conversionData.eventId` willekeurig gegenereerd door de actie Nieuwe gebeurtenis-id genereren voor een van de `MetaConversion_* rules` .
 
-Voor een lokale verwijzing naar hoe de gegevenslaag zou moeten kijken, kunt u de redacteur van de douanecode op `MetaConversion_DataLayer` data element on your property.
+Voor een lokale verwijzing naar hoe de gegevenslaag eruit zou moeten zien, kunt u de redacteur van de douanecode op het `MetaConversion_DataLayer` gegevenselement op uw bezit openen.
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u gebeurtenisgegevens op de server kunt verzenden naar [!DNL Meta] met de [!DNL Meta Conversions API] extensie. Het wordt aanbevolen om vanaf hier uw integratie uit te breiden door meer verbinding te maken [!DNL Pixels] en delen van meer gebeurtenissen, indien van toepassing. Voer een van de volgende twee handelingen uit om uw advertentieprestaties verder te verbeteren:
+In deze handleiding wordt beschreven hoe u gebeurtenisgegevens aan de serverzijde naar [!DNL Meta] kunt verzenden met de extensie [!DNL Meta Conversions API] . Het wordt aanbevolen om vanaf hier uw integratie uit te breiden door meer [!DNL Pixels] aan te sluiten en meer gebeurtenissen te delen, indien van toepassing. Voer een van de volgende twee handelingen uit om uw advertentieprestaties verder te verbeteren:
 
-* Andere verbindingen maken [!DNL Pixels] die nog niet met een [!DNL Conversions API] integratie.
-* Als u bepaalde gebeurtenissen uitsluitend via [!DNL Meta Pixel] op de client, stuur dezelfde gebeurtenissen naar de [!DNL Conversions API] ook aan de serverzijde.
+* Sluit andere [!DNL Pixels] -bestanden aan die nog niet zijn verbonden met een [!DNL Conversions API] -integratie.
+* Als u bepaalde gebeurtenissen uitsluitend via [!DNL Meta Pixel] op de client verzendt, moet u deze gebeurtenissen ook vanaf de server naar [!DNL Conversions API] verzenden.
 
-Zie de [!DNL Meta] documentatie over [beste praktijken voor [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965) voor meer begeleiding over hoe te om uw integratie effectief uit te voeren. Raadpleeg voor meer algemene informatie over tags en het doorsturen van gebeurtenissen in Adobe Experience Cloud de [overzicht van tags](../../../home.md).
+Zie de [!DNL Meta] documentatie over [ beste praktijken voor  [!DNL Conversions API] ](https://www.facebook.com/business/help/308855623839366?id=818859032317965) voor meer begeleiding op hoe te om uw integratie effectief uit te voeren. Voor meer algemene informatie over markeringen en gebeurtenis die in Adobe Experience Cloud door:sturen, verwijs naar het [ overzicht van markeringen ](../../../home.md).

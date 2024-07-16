@@ -13,23 +13,23 @@ ht-degree: 0%
 
 # Het eindpunt van segmentexporttaken
 
-De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. U kunt de `/export/jobs` eindpunt in de Adobe Experience Platform Segmentation API, die u toestaat programmatically om, uitvoerbanen terug te winnen tot stand te brengen en te annuleren.
+De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. U kunt het `/export/jobs` eindpunt in de Adobe Experience Platform Segmentation API gebruiken, die u toestaat programmatically om, uitvoerbanen terug te winnen tot stand te brengen en te annuleren.
 
 >[!NOTE]
 >
->Deze handleiding behandelt het gebruik van exportbanen in de [!DNL Segmentation API]. Voor informatie over het beheren van exporttaken voor [!DNL Real-Time Customer Profile] gegevens, zie de gids over [taken exporteren in de profiel-API](../../profile/api/export-jobs.md)
+>Deze handleiding behandelt het gebruik van exporttaken in de [!DNL Segmentation API] . Voor informatie over hoe te om uitvoerbanen voor [!DNL Real-Time Customer Profile] gegevens te beheren, zie de gids over [ de uitvoerbanen in het Profiel API ](../../profile/api/export-jobs.md)
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Een lijst met exporttaken ophalen {#retrieve-list}
 
-U kunt een lijst met alle exporttaken voor uw organisatie opvragen door een GET-aanvraag in te dienen bij de `/export/jobs` eindpunt.
+U kunt een lijst van alle uitvoerbanen voor uw organisatie terugwinnen door een verzoek van de GET tot het `/export/jobs` eindpunt te richten.
 
-**API-indeling**
+**API formaat**
 
-De `/export/jobs` het eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Hoewel deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om kostbare overhead te helpen verminderen. Het maken van een vraag aan dit eindpunt zonder parameters zal alle uitvoerbanen beschikbaar voor uw organisatie terugwinnen. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`).
+Het `/export/jobs` eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Hoewel deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om kostbare overhead te helpen verminderen. Het maken van een vraag aan dit eindpunt zonder parameters zal alle uitvoerbanen beschikbaar voor uw organisatie terugwinnen. De veelvoudige parameters kunnen worden omvat, die door ampersands (`&`) worden gescheiden.
 
 ```http
 GET /export/jobs
@@ -56,7 +56,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 De volgende reactie keert HTTP status 200 met een lijst van met succes voltooide uitvoerbanen terug, die op de vraagparameter wordt gebaseerd in de verzoekweg wordt verstrekt.
 
@@ -197,10 +197,10 @@ De volgende reactie keert HTTP status 200 met een lijst van met succes voltooide
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `destination` | Doelgegevens voor de geëxporteerde gegevens:<ul><li>`datasetId`: De id van de gegevensset waarin de gegevens zijn geëxporteerd.</li><li>`segmentPerBatch`: Een Booleaanse waarde die aangeeft of segment-id&#39;s worden geconsolideerd. De waarde &quot;false&quot; betekent dat alle segment-id&#39;s worden geëxporteerd naar één batch-id. De waarde &quot;true&quot; houdt in dat één segment-id wordt geëxporteerd naar één batch-id. **Opmerking:** Het instellen van de waarde op true kan van invloed zijn op de exportprestaties van batches.</li></ul> |
+| `destination` | Doelgegevens voor de geëxporteerde gegevens:<ul><li>`datasetId`: De id van de gegevensset waarin gegevens zijn geëxporteerd.</li><li>`segmentPerBatch`: Een Booleaanse waarde die aangeeft of segment-id&#39;s worden geconsolideerd. De waarde &quot;false&quot; betekent dat alle segment-id&#39;s worden geëxporteerd naar één batch-id. De waarde &quot;true&quot; houdt in dat één segment-id wordt geëxporteerd naar één batch-id. **Nota:** het plaatsen van de waarde aan waar kan partijuitvoerprestaties beïnvloeden.</li></ul> |
 | `fields` | Een lijst met de geëxporteerde velden, gescheiden door komma&#39;s. |
 | `schema.name` | De naam van het schema verbonden aan de dataset waar het gegeven moet worden uitgevoerd. |
-| `filter.segments` | De segmenten die worden geëxporteerd. De volgende velden worden opgenomen:<ul><li>`segmentId`: De segment-id waarnaar profielen worden geëxporteerd.</li><li>`segmentNs`: Segmentnaamruimte voor het opgegeven object `segmentID`.</li><li>`status`: Een array van tekenreeksen die een statusfilter voor de `segmentID`. Standaard, `status` heeft de waarde `["realized"]` Dit vertegenwoordigt alle profielen die in het segment in de huidige tijd vallen. Mogelijke waarden zijn: `realized` en `exited`. Een waarde van `realized` betekent dat het profiel voor het segment in aanmerking komt. Een waarde van `exiting` betekent dat het profiel het segment verlaat.</li></ul> |
+| `filter.segments` | De segmenten die worden geëxporteerd. De volgende velden worden opgenomen:<ul><li>`segmentId`: De segment-id waarnaar profielen worden geëxporteerd.</li><li>`segmentNs`: segmentnaamruimte voor de opgegeven `segmentID` .</li><li>`status`: Een array van tekenreeksen die een statusfilter voor de `segmentID` verschaft. Standaard heeft `status` de waarde `["realized"]` die alle profielen vertegenwoordigt die op dat moment in het segment vallen. Mogelijke waarden zijn: `realized` en `exited` . De waarde `realized` betekent dat het profiel voor het segment in aanmerking komt. De waarde `exiting` betekent dat het profiel het segment verlaat.</li></ul> |
 | `mergePolicy` | Voeg beleidsinformatie voor de uitgevoerde gegevens samen. |
 | `metrics.totalTime` | Een veld dat de totale tijd aangeeft waarop de exporttaak is uitgevoerd. |
 | `metrics.profileExportTime` | Een veld waarin de exporttijd van de profielen wordt aangegeven. |
@@ -209,9 +209,9 @@ De volgende reactie keert HTTP status 200 met een lijst van met succes voltooide
 
 ## Een nieuwe exporttaak maken {#create}
 
-U kunt een nieuwe exporttaak maken door een POST aan te vragen bij de `/export/jobs` eindpunt.
+U kunt een nieuwe exportbaan tot stand brengen door een verzoek van de POST aan het `/export/jobs` eindpunt te doen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /export/jobs
@@ -279,18 +279,18 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `fields` | Een lijst met de geëxporteerde velden, gescheiden door komma&#39;s. Als deze optie leeg blijft, worden alle velden geëxporteerd. |
 | `mergePolicy` | Hier geeft u het samenvoegbeleid op dat van toepassing is op de geëxporteerde gegevens. Neem deze parameter op wanneer er meerdere segmenten worden geëxporteerd. Als deze optie niet wordt opgegeven, zal het exportbeleid hetzelfde zijn als het opgegeven segment. |
 | `filter` | Een object dat aangeeft welke segmenten afhankelijk van de hieronder vermelde subeigenschappen in de exporttaak moeten worden opgenomen op basis van id, kwalificatietijd of ingangstijd. Als deze optie leeg blijft, worden alle gegevens geëxporteerd. |
-| `filter.segments` | Hiermee geeft u de segmenten op die u wilt exporteren. Als u deze waarde weglaat, worden alle gegevens van alle profielen geëxporteerd. Accepteert een array van segmentobjecten die elk de volgende velden bevatten:<ul><li>`segmentId`: **(Vereist als u `segments`)** Segment-id voor profielen die moeten worden geëxporteerd.</li><li>`segmentNs` *(Optioneel)* Segmentnaamruimte voor de opgegeven `segmentID`.</li><li>`status` *(Optioneel)* Een array van tekenreeksen die een statusfilter voor de `segmentID`. Standaard, `status` heeft de waarde `["realized"]` Dit vertegenwoordigt alle profielen die in het segment in de huidige tijd vallen. Mogelijke waarden zijn: `realized` en `exited`.  Een waarde van `realized` betekent dat het profiel voor het segment in aanmerking komt. Een waarde van `exiting` betekent dat het profiel het segment verlaat.</li></ul> |
+| `filter.segments` | Hiermee geeft u de segmenten op die u wilt exporteren. Als u deze waarde weglaat, worden alle gegevens van alle profielen geëxporteerd. Accepteert een array van segmentobjecten die elk de volgende velden bevatten:<ul><li>`segmentId`: **(Vereist als u `segments` gebruikt)** Segment-id voor profielen die moeten worden geëxporteerd.</li><li>`segmentNs` *(Optioneel)* Segmentnaamruimte voor de opgegeven `segmentID` .</li><li>`status` *(Facultatief)* Een serie van koorden die een statusfilter voor `segmentID` verstrekken. Standaard heeft `status` de waarde `["realized"]` die alle profielen vertegenwoordigt die op dat moment in het segment vallen. Mogelijke waarden zijn: `realized` en `exited` .  De waarde `realized` betekent dat het profiel voor het segment in aanmerking komt. De waarde `exiting` betekent dat het profiel het segment verlaat.</li></ul> |
 | `filter.segmentQualificationTime` | Filter op basis van segmentkwalificatietijd. De begintijd en/of eindtijd kunnen worden opgegeven. |
-| `filter.segmentQualificationTime.startTime` | Begintijd van segmentkwalificatie voor een segment-id voor een bepaalde status. Er is geen filter voor de begintijd van een segment-id-kwalificatie opgegeven. De tijdstempel moet worden opgegeven in [RFC 339](https://tools.ietf.org/html/rfc3339) gebruiken. |
-| `filter.segmentQualificationTime.endTime` | Eindtijd van segmentkwalificatie voor een segment-id voor een bepaalde status. Er is geen filter voor de eindtijd van een segment-id-kwalificatie opgegeven. De tijdstempel moet worden opgegeven in [RFC 339](https://tools.ietf.org/html/rfc3339) gebruiken. |
-| `filter.fromIngestTimestamp ` | Hiermee worden geëxporteerde profielen beperkt tot profielen die na deze tijdstempel zijn bijgewerkt. De tijdstempel moet worden opgegeven in [RFC 339](https://tools.ietf.org/html/rfc3339) gebruiken. <ul><li>`fromIngestTimestamp` for **profielen**, indien opgegeven: Bevat alle samengevoegde profielen waarin de samengevoegde bijgewerkte tijdstempel groter is dan de opgegeven tijdstempel. Ondersteunt `greater_than` operand.</li><li>`fromIngestTimestamp` for **gebeurtenissen**: Alle gebeurtenissen die na deze tijdstempel worden ingevoerd, worden geëxporteerd in overeenstemming met het resultaat van het profiel. Dit is niet de tijd van de gebeurtenis zelf, maar de tijd van inname voor de gebeurtenissen.</li> |
-| `filter.emptyProfiles` | Een booleaanse waarde die aangeeft of er voor lege profielen moet worden gefilterd. Profielen kunnen profielrecords, ExperienceEvent-records of beide bevatten. Profielen zonder profielrecords en alleen ExperienceEvent-records worden &#39;emptyProfiles&#39; genoemd. Als u alle profielen in het profielarchief wilt exporteren, inclusief de &quot;emptyProfiles&quot;, stelt u de waarde in van `emptyProfiles` tot `true`. Indien `emptyProfiles` is ingesteld op `false`worden alleen profielen met profielrecords in de winkel geëxporteerd. Standaard, als `emptyProfiles` -kenmerk is niet opgenomen, alleen profielen met profielrecords worden geëxporteerd. |
-| `additionalFields.eventList` | Bepaalt de tijdlijngebeurtenisvelden die worden geëxporteerd voor onderliggende of gekoppelde objecten door een of meer van de volgende instellingen op te geven:<ul><li>`fields`: Bestel de velden die u wilt exporteren.</li><li>`filter`: Geeft criteria op die de resultaten beperken die van gekoppelde objecten worden opgenomen. Hiermee wordt een minimumwaarde verwacht die vereist is voor het exporteren, meestal een datum.</li><li>`filter.fromIngestTimestamp`: Filtert tijdreeksgebeurtenissen naar gebeurtenissen die na de opgegeven tijdstempel zijn ingevoegd. Dit is niet de tijd van de gebeurtenis zelf, maar de tijd van inname voor de gebeurtenissen.</li><li>`filter.toIngestTimestamp`: Filtert de tijdstempel naar de tijdstempel die vóór de opgegeven tijdstempel is ingesloten. Dit is niet de tijd van de gebeurtenis zelf, maar de tijd van inname voor de gebeurtenissen.</li></ul> |
-| `destination` | **(Vereist)** Informatie over de geëxporteerde gegevens:<ul><li>`datasetId`: **(Vereist)** De id van de gegevensset waarin gegevens moeten worden geëxporteerd.</li><li>`segmentPerBatch`: *(Optioneel)* Een Booleaanse waarde die, indien niet opgegeven, standaard &quot;false&quot; is. De waarde &quot;false&quot; exporteert alle segment-id&#39;s naar één batch-id. De waarde &quot;waar&quot; exporteert één segment-id naar één batch-id. Merk op dat het plaatsen van de waarde om &quot;waar&quot;te zijn de prestaties van de partijuitvoer kan beïnvloeden.</li></ul> |
+| `filter.segmentQualificationTime.startTime` | Begintijd van segmentkwalificatie voor een segment-id voor een bepaalde status. Er is geen filter voor de begintijd van een segment-id-kwalificatie opgegeven. Tijdstempel moet in [ RFC 3339 ](https://tools.ietf.org/html/rfc3339) formaat worden verstrekt. |
+| `filter.segmentQualificationTime.endTime` | Eindtijd van segmentkwalificatie voor een segment-id voor een bepaalde status. Er is geen filter voor de eindtijd van een segment-id-kwalificatie opgegeven. Tijdstempel moet in [ RFC 3339 ](https://tools.ietf.org/html/rfc3339) formaat worden verstrekt. |
+| `filter.fromIngestTimestamp ` | Hiermee worden geëxporteerde profielen beperkt tot profielen die na deze tijdstempel zijn bijgewerkt. Tijdstempel moet in [ RFC 3339 ](https://tools.ietf.org/html/rfc3339) formaat worden verstrekt. <ul><li>`fromIngestTimestamp` voor **profielen**, als verstrekt: Omvat alle samengevoegde profielen waar samengevoegde bijgewerkte timestamp groter is dan bepaalde timestamp. Ondersteunt `greater_than` operand.</li><li>`fromIngestTimestamp` voor **gebeurtenissen**: Alle gebeurtenissen die na dit timestamp worden opgenomen zullen worden uitgevoerd die aan het resulterende profielresultaat beantwoorden. Dit is niet de tijd van de gebeurtenis zelf, maar de tijd van inname voor de gebeurtenissen.</li> |
+| `filter.emptyProfiles` | Een booleaanse waarde die aangeeft of er voor lege profielen moet worden gefilterd. Profielen kunnen profielrecords, ExperienceEvent-records of beide bevatten. Profielen zonder profielrecords en alleen ExperienceEvent-records worden &#39;emptyProfiles&#39; genoemd. Als u alle profielen wilt exporteren in het profielarchief, inclusief de &quot;emptyProfiles&quot;, stelt u de waarde van `emptyProfiles` in op `true` . Als `emptyProfiles` is ingesteld op `false` , worden alleen profielen met profielrecords in de winkel geëxporteerd. Als het kenmerk `emptyProfiles` niet is opgenomen, worden standaard alleen profielen met profielrecords geëxporteerd. |
+| `additionalFields.eventList` | Bepaalt de tijdlijngebeurtenisvelden die worden geëxporteerd voor onderliggende of gekoppelde objecten door een of meer van de volgende instellingen op te geven:<ul><li>`fields` : hiermee bepaalt u de velden die u wilt exporteren.</li><li>`filter` - Geeft criteria op die de resultaten beperken die van gekoppelde objecten worden opgenomen. Hiermee wordt een minimumwaarde verwacht die vereist is voor het exporteren, meestal een datum.</li><li>`filter.fromIngestTimestamp`: hiermee worden gebeurtenissen uit de tijdreeks gefilterd op gebeurtenissen die na de opgegeven tijdstempel zijn ingevoegd. Dit is niet de tijd van de gebeurtenis zelf, maar de tijd van inname voor de gebeurtenissen.</li><li>`filter.toIngestTimestamp`: hiermee wordt de tijdstempel gefilterd naar de tijdstempel die vóór de opgegeven tijdstempel is ingevoegd. Dit is niet de tijd van de gebeurtenis zelf, maar de tijd van inname voor de gebeurtenissen.</li></ul> |
+| `destination` | **(Vereist)** Informatie over de uitgevoerde gegevens:<ul><li>`datasetId`: **(Vereist)** identiteitskaart van de dataset waar het gegeven moet worden uitgevoerd.</li><li>`segmentPerBatch`: *(Facultatief)* Een waarde Van Boole die, als niet verstrekt, aan &quot;vals&quot;in gebreke blijft. De waarde &quot;false&quot; exporteert alle segment-id&#39;s naar één batch-id. De waarde &quot;waar&quot; exporteert één segment-id naar één batch-id. Merk op dat het plaatsen van de waarde om &quot;waar&quot;te zijn de prestaties van de partijuitvoer kan beïnvloeden.</li></ul> |
 | `schema.name` | **(Vereist)** De naam van het schema verbonden aan de dataset waar het gegeven moet worden uitgevoerd. |
-| `evaluationInfo.segmentation` | *(Optioneel)* Een booleaanse waarde die, indien niet opgegeven, standaard op `false`. Een waarde van `true` Hiermee wordt aangegeven dat segmentatie moet worden uitgevoerd op de exporttaak. |
+| `evaluationInfo.segmentation` | *(Optioneel)* Een Booleaanse waarde die, indien niet opgegeven, standaard op `false` wordt ingesteld. De waarde `true` geeft aan dat segmentatie moet worden uitgevoerd op de exporttaak. |
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met details van de nieuwe exporttaak.
 
@@ -357,7 +357,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van de nieuwe expo
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde alleen-lezen waarde die de exporttaak identificeert die zojuist is gemaakt. |
 
-Alternatief, indien `destination.segmentPerBatch` was ingesteld op `true`de `destination` bovenstaand object zou een `batches` array, zoals hieronder wordt getoond:
+Als `destination.segmentPerBatch` was ingesteld op `true` , heeft het bovenstaande `destination` -object een `batches` array, zoals hieronder wordt getoond:
 
 ```json
     "destination": {
@@ -382,9 +382,9 @@ Alternatief, indien `destination.segmentPerBatch` was ingesteld op `true`de `des
 
 ## Een specifieke exporttaak ophalen {#get}
 
-U kunt gedetailleerde informatie over een specifieke exporttaak opvragen door een GET-aanvraag in te dienen bij de `/export/jobs` eindpunt en het verstrekken van identiteitskaart van de uitvoerbaan u wenst om in de verzoekweg terug te winnen.
+U kunt gedetailleerde informatie over een specifieke uitvoerbaan terugwinnen door een verzoek van de GET aan het `/export/jobs` eindpunt te richten en identiteitskaart van de de uitvoerbaan te verstrekken u in de verzoekweg wenst terug te winnen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /export/jobs/{EXPORT_JOB_ID}
@@ -404,7 +404,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie over de opgegeven exporttaak.
 
@@ -467,10 +467,10 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `destination` | Doelgegevens voor de geëxporteerde gegevens:<ul><li>`datasetId`: De id van de gegevensset waarin de gegevens zijn geëxporteerd.</li><li>`segmentPerBatch`: Een Booleaanse waarde die aangeeft of segment-id&#39;s worden geconsolideerd. Een waarde van `false` betekent al segment IDs in één enkele partij ID was. Een waarde van `true` betekent dat één segment-id wordt geëxporteerd naar één batch-id.</li></ul> |
+| `destination` | Doelgegevens voor de geëxporteerde gegevens:<ul><li>`datasetId`: De id van de gegevensset waarin de gegevens zijn geëxporteerd.</li><li>`segmentPerBatch`: Een Booleaanse waarde die aangeeft of segment-id&#39;s worden geconsolideerd. De waarde `false` betekent dat alle segment-id&#39;s zich in één batch-id bevonden. De waarde `true` betekent dat één segment-id wordt geëxporteerd naar één batch-id.</li></ul> |
 | `fields` | Een lijst met de geëxporteerde velden, gescheiden door komma&#39;s. |
 | `schema.name` | De naam van het schema verbonden aan de dataset waar het gegeven moet worden uitgevoerd. |
-| `filter.segments` | De segmenten die worden geëxporteerd. De volgende velden worden opgenomen:<ul><li>`segmentId`: Segment-id voor profielen die moeten worden geëxporteerd.</li><li>`segmentNs`: Segmentnaamruimte voor het opgegeven object `segmentID`.</li><li>`status`: Een array van tekenreeksen die een statusfilter voor de `segmentID`. Standaard, `status` heeft de waarde `["realized"]` Dit vertegenwoordigt alle profielen die in het segment in de huidige tijd vallen. Mogelijke waarden zijn: `realized` en `exited`.  Een waarde van `realized` betekent dat het profiel voor het segment in aanmerking komt. Een waarde van `exiting` betekent dat het profiel het segment verlaat.</li></ul> |
+| `filter.segments` | De segmenten die worden geëxporteerd. De volgende velden worden opgenomen:<ul><li>`segmentId`: segment-id voor profielen die moeten worden geëxporteerd.</li><li>`segmentNs`: segmentnaamruimte voor de opgegeven `segmentID` .</li><li>`status`: Een array van tekenreeksen die een statusfilter voor de `segmentID` verschaft. Standaard heeft `status` de waarde `["realized"]` die alle profielen vertegenwoordigt die op dat moment in het segment vallen. Mogelijke waarden zijn: `realized` en `exited` .  De waarde `realized` betekent dat het profiel voor het segment in aanmerking komt. De waarde `exiting` betekent dat het profiel het segment verlaat.</li></ul> |
 | `mergePolicy` | Voeg beleidsinformatie voor de uitgevoerde gegevens samen. |
 | `metrics.totalTime` | Een veld dat de totale tijd aangeeft waarop de exporttaak is uitgevoerd. |
 | `metrics.profileExportTime` | Een veld waarin de exporttijd van de profielen wordt aangegeven. |
@@ -478,9 +478,9 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 
 ## Een specifieke exporttaak annuleren of verwijderen {#delete}
 
-U kunt verzoeken om de opgegeven exporttaak te verwijderen door een DELETE-aanvraag in te dienen bij de `/export/jobs` en het verstrekken van identiteitskaart van de de uitvoerbaan u wenst om in het verzoekweg te schrappen.
+U kunt verzoeken om de opgegeven exporttaak te verwijderen door een DELETE-aanvraag in te dienen bij het `/export/jobs` -eindpunt en de id op te geven van de exporttaak die u wilt verwijderen in het aanvraagpad.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /export/jobs/{EXPORT_JOB_ID}
@@ -500,7 +500,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert HTTP-status 204 met het volgende bericht:
 

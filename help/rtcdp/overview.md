@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Adobe Real-time Customer Data Platform (Real-Time CDP) is gebaseerd op Adobe Experience Platform en helpt bedrijven bekende en anonieme gegevens uit meerdere bedrijfsbronnen samen te brengen om klantprofielen te maken die kunnen worden gebruikt om persoonlijke klantervaringen in real-time op alle kanalen en apparaten te bieden.
 
-![Overzicht van verschillende Experience Platform-apps, met Real-Time CDP gemarkeerd.](/help/rtcdp/assets/platform-apps-overview.png)
+![ Overzicht van diverse Experience Platform apps, met benadrukt Real-Time CDP.](/help/rtcdp/assets/platform-apps-overview.png)
 
 Real-Time CDP beschikt over instrumenten voor gegevensbeheer, identiteitsbeheer, geavanceerde segmentering en gegevenswetenschap, zodat u profielen kunt maken en doelgroepen kunt definiëren, en rijke inzichten kunt afleiden terwijl u een strikt beleid voor gegevensbeheer kunt toepassen.
 
@@ -45,31 +45,31 @@ Bij de aankoop van Real-Time CDP heeft uw bedrijf de keuze uit drie versies, zoa
 
 Volledige informatie over de functionaliteit die in de Premier- en Ultimate-lagen van alle onderstaande edities is opgenomen:
 
-* [Real-time Customer Data Platform (B2C Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [ Real-time Customer Data Platform (B2C Uitgave - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [ Real-time Customer Data Platform (B2B Uitgave - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [ Real-time Customer Data Platform (B2P Uitgave - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 
 ### Adobe Real-time Customer Data Platform - Business-to-Consumer (B2C) Edition {#rtcdp-b2c}
 
-Real-Time CDP Business-to-Consumer (B2C) is speciaal ontworpen voor B2C-marketers om alles te verenigen, te besturen en te activeren *consumentengegevens* over systemen en kanalen voor meer gepersonaliseerde klantenervaringen en volledige datavrede-van-mening.
+De zaken-aan-consument van Real-Time CDP (B2C) is speciaal-gebouwd voor B2C marketers om alle *gegevens van de consument* over systemen en kanalen voor meer gepersonaliseerde klantenervaringen en volledige datavrede-van-mening te verenigen, te regeren en te activeren.
 
 ### Adobe Real-time Customer Data Platform - Business-to-Business (B2B)-editie {#rtcdp-b2b}
 
-Real-Time CDP Business-to-Business (B2B) is speciaal ontworpen voor B2B-marketers om alles te verenigen, te besturen en te activeren *gegevens over leads en accounts* over systemen en kanalen voor meer gepersonaliseerde klantenervaringen en volledige gegevensvrede-van-mening
+De zaken-aan-Zaken van Real-Time CDP (B2B) is speciaal-gebouwd voor B2B-verkopers om alle *lood en rekeningsgegevens* over systemen en kanalen voor meer gepersonaliseerde klantenervaringen te verenigen, te regeren en te activeren en gegevens te voltooien vrede-van-mening
 
 Met Real-Time CDP B2B Edition kunnen marketers volledige profielen voor personen en accounts maken. Specifiek kunt u verrijken, segmenteren, en alle gegevens uit verschillende bronnen exporteren vanuit een gecentraliseerde opslag van uniforme accountprofielen. Deze gegevens kunnen worden beheerd met behulp van instrumenten voor gegevensbeheer die beschikbaar zijn in elke stap van het centralisatieproces.
 
-Zie [het overzicht van de Real-Time CDP B2B Edition](./b2b-overview.md) voor uitgebreidere informatie.
+Zie [ het overzicht op de Uitgave van Real-Time CDP B2B ](./b2b-overview.md) voor uitvoerigere informatie.
 
 ### Adobe Real-time Customer Data Platform - B2P-editie (business-to-Person) {#rtcdp-b2p}
 
-Met de B2P-editie (Business-to-Person) van Real-Time CDP kunt u uw *B2C- en B2B-klantgegevens* het gebruiken van één enkel CDP om de zelfde persoon over alle lijnen van zaken met een naadloze ervaring en volledige gegevensvrede-van-mening te richten.
+Met de bedrijfs-aan-Persoon (B2P) uitgave van Real-Time CDP, kunt u verenigen, leiden en uw *B2C en B2B klantengegevens activeren* gebruikend één enkele CDP om de zelfde persoon over alle lijnen van zaken met een naadloze ervaring en volledige gegevenspruitje-van-mening te richten.
 
-Met deze editie krijgt u een volledig platform voor klantgegevens voor *B2C en B2B* bedrijven om ervaringen voor de zelfde persoon over alle lijnen van zaken te personaliseren.
+Met deze uitgave, krijgt u een volledig platform van klantengegevens voor *B2C en B2B* ondernemingen om ervaringen voor de zelfde persoon over alle lijnen van zaken te personaliseren.
 
 ## Aanvullende informatie
 
-Als u meer wilt weten over Adobe Experience Platform, begint u met het lezen van de [Overzicht van Experience Platform](../landing/home.md).
+Meer over Adobe Experience Platform leren, begin door het [ overzicht van het Experience Platform ](../landing/home.md) te lezen.
 
 De volgende documentatie wordt aanbevolen om u te helpen aan de slag te gaan met Real-time Customer Data Platform:
 
@@ -82,4 +82,4 @@ De volgende documentatie wordt aanbevolen om u te helpen aan de slag te gaan met
 
 ## Woordenlijst
 
-Gebruik de [**Verklarende woordenlijst**](/help/landing/glossary.md) pagina om de Real-Time CDP- en Adobe Experience Platform-terminologie te bekijken.
+Gebruik de **](/help/landing/glossary.md)pagina van de Verklarende woordenlijst[** {om de terminologie van Real-Time CDP en van Adobe Experience Platform te herzien.

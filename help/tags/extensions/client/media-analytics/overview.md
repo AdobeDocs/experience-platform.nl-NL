@@ -13,11 +13,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Gebruik deze documentatie voor informatie over het installeren, het vormen, en het uitvoeren van de Adobe Media Analytics voor Audio en Video uitbreiding (de uitbreiding van de Analyse van Media). Omvat zijn de opties beschikbaar wanneer het gebruiken van deze uitbreiding om een regel, samen met voorbeelden en verbindingen aan steekproeven te bouwen.
 
-De uitbreiding Media Analytics (MA) voegt de kernJavaScript Media SDK (Media 2.x SDK) toe. Deze extensie biedt de functionaliteit voor het toevoegen van de `MediaHeartbeat` tracker-instantie naar een tagsite of -project. De extensie MA vereist twee extra extensies:
+De extensie Media Analytics (MA) voegt de core JavaScript Media SDK (Media 2.x SDK) toe. Deze extensie biedt de functionaliteit voor het toevoegen van de `MediaHeartbeat` tracker-instantie aan een tagsite of -project. De extensie MA vereist twee extra extensies:
 
 * [Extensie Analytics](../analytics/overview.md)
 * [Extensie Experience Cloud-id](../id-service/overview.md)
@@ -28,16 +28,16 @@ De uitbreiding Media Analytics (MA) voegt de kernJavaScript Media SDK (Media 2.x
 
 Nadat u alle drie bovengenoemde uitbreidingen in uw markeringsproject hebt omvat, kunt u op één van twee manieren te werk gaan:
 
-* Gebruiken `MediaHeartbeat` API&#39;s van uw webtoepassing
-* Neem een spelerspecifieke extensie op of maak een extensie die specifieke media Player-gebeurtenissen toewijst aan de API&#39;s op het tabblad `MediaHeartbeat` tracker. Deze instantie wordt blootgesteld door de uitbreiding van MA.
+* `MediaHeartbeat` API&#39;s van uw webtoepassing gebruiken
+* Neem een spelerspecifieke extensie op of maak een Player-specifieke extensie die specifieke media Player-gebeurtenissen toewijst aan de API&#39;s in de `MediaHeartbeat` tracker-instantie. Deze instantie wordt blootgesteld door de uitbreiding van MA.
 
 ## De extensie MA installeren en configureren
 
-* **Installeren -** Als u de extensie MA wilt installeren, opent u de eigenschap voor extensie **[!UICONTROL Extensions > Catalog]**, boven de **[!UICONTROL Adobe Media Analytics for Audio and Video]** en selecteert u **[!UICONTROL Install]**.
+* **installeer -** om de uitbreiding van MA te installeren, open uw uitbreidingsbezit, uitgezochte **[!UICONTROL Extensions > Catalog]**, beweegt over de **[!UICONTROL Adobe Media Analytics for Audio and Video]** uitbreiding, en selecteert **[!UICONTROL Install]**.
 
-* **Configureren -** Om de uitbreiding van MA te vormen, open [!UICONTROL Extensions] , plaatst u de cursor boven de extensie en selecteert u vervolgens **[!UICONTROL Configure]**:
+* **vormt -** om de uitbreiding van MA te vormen, open het [!UICONTROL Extensions] lusje, over de uitbreiding te bewegen, en dan te selecteren **[!UICONTROL Configure]**:
 
-![Configuratie MA-extensie](../../../images/ext-va-config.jpg)
+![ de Configuratie van de Uitbreiding van MA ](../../../images/ext-va-config.jpg)
 
 ### Configuratieopties:
 
@@ -51,36 +51,36 @@ Nadat u alle drie bovengenoemde uitbreidingen in uw markeringsproject hebt omvat
 | Foutopsporingsregistratie | Logboekregistratie in- of uitschakelen |
 | SSL inschakelen | Enable or Disable sending pings over HTTPS |
 | API&#39;s exporteren naar vensterobject | Het exporteren van media-API&#39;s voor analyse naar een algemeen bereik in- of uitschakelen |
-| Naam variabele | Een variabele die u gebruikt om media Analytics API&#39;s te exporteren onder de `window` object |
+| Naam variabele | Een variabele die u gebruikt om Media Analytics API&#39;s te exporteren onder het `window` -object |
 
-**Herinnering:** De extensie MA vereist de [Analyse](../analytics/overview.md) en [Experience Cloud-id](../id-service/overview.md) extensies. U moet deze uitbreidingen aan uw uitbreidingsbezit ook toevoegen en hen vormen.
+**Herinnering:** de uitbreiding van MA vereist de [ Analytics ](../analytics/overview.md) en [ identiteitskaart van het Experience Cloud ](../id-service/overview.md) uitbreidingen. U moet deze uitbreidingen aan uw uitbreidingsbezit ook toevoegen en hen vormen.
 
 ## De extensie MA gebruiken
 
 ### Werken via een webpagina/JS-app
 
-De extensie MA exporteert de MediaHeartbone-API&#39;s in het algemene vensterobject door de instelling &quot;API&#39;s exporteren naar vensterobject&quot; in te schakelen in het dialoogvenster [!UICONTROL Configuration] pagina. Het exporteert de API&#39;s onder de naam van de geconfigureerde variabele. Bijvoorbeeld, als de veranderlijke naam wordt gevormd om te zijn `ADB` dan kan MediaHeartbone door worden betreden `window.ADB.MediaHeartbeat`.
+De extensie MA exporteert de MediaHeartbone-API&#39;s in het algemene vensterobject door de instelling &#39;API&#39;s exporteren naar vensterobject&#39; in te schakelen op de pagina [!UICONTROL Configuration] . Het exporteert de API&#39;s onder de naam van de geconfigureerde variabele. Als de variabelenaam bijvoorbeeld is ingesteld op `ADB` , kan MediaHeartbeat worden benaderd door `window.ADB.MediaHeartbeat` .
 
 >[!IMPORTANT]
 >
->De extensie MA exporteert de API&#39;s alleen wanneer `window["CONFIGURED_VARIABLE_NAME"]` is ongedefinieerd en overschrijft bestaande variabelen niet.
+>De extensie MA exporteert de API&#39;s alleen wanneer `window["CONFIGURED_VARIABLE_NAME"]` ongedefinieerd is en bestaande variabelen niet overschrijft.
 
-1. **MediaHeartbone-instantie maken:** `window["CONFIGURED_VARIABLE_NAME"].MediaHeartbeat.getInstance`
+1. **creeer MediaHeartbone Instantie:** `window["CONFIGURED_VARIABLE_NAME"].MediaHeartbeat.getInstance`
 
-   **Param:** Een geldig gedelegeerd object dat deze functies toegankelijk maakt.
+   **Params:** Een geldig afgevaardigde voorwerp dat deze functies blootstelt.
 
    | Methode |  Beschrijving   |
    | :--- | :--- |
-   | `getQoSObject()` | Retourneert `theMediaObject` instantie die huidige informatie QoS bevat. Deze methode wordt meerdere keren aangeroepen tijdens een afspeelsessie. De implementatie van de speler moet altijd de recentst beschikbare gegevens terugkeren QoS. |
+   | `getQoSObject()` | Retourneert `theMediaObject` -instantie die de huidige QoS-informatie bevat. Deze methode wordt meerdere keren aangeroepen tijdens een afspeelsessie. De implementatie van de speler moet altijd de recentst beschikbare gegevens terugkeren QoS. |
    | `getCurrentPlaybackTime()` | Retourneert de huidige positie van de afspeelkop. Voor het bijhouden van VOD wordt de waarde opgegeven in seconden vanaf het begin van het media-item. Voor het bijhouden van LIVE-/LIVE-waarden wordt de waarde opgegeven in seconden vanaf het begin van het programma. |
 
-   **Retourwaarde:** Een belofte die ofwel met een `MediaHeartbeat` -instantie of wordt door een foutbericht geweigerd.
+   **Waarde van de Terugkeer:** Een belofte die of met a `MediaHeartbeat` instantie of verwerpt met een foutenmelding lost.
 
-1. **Toegang tot MediaHeartbone-constanten:** `window["CONFIGURED_VARIABLE_NAME"].MediaHeartbeat`
+1. **De Constanten van MediaHeartbeat van de Toegang:** `window["CONFIGURED_VARIABLE_NAME"].MediaHeartbeat`
 
-   Hiermee worden alle constanten en statische methoden van de [`MediaHeartbeat`](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html) klasse.
+   Dit stelt alle constanten en statische methodes van de [`MediaHeartbeat` ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html) klasse bloot.
 
-   U kunt de voorbeeldspeler hier verkrijgen: [Voorbeeldspeler van MA](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/2.x). De voorbeeldspeler fungeert als een referentie waarmee u kunt laten zien hoe u de extensie MA kunt gebruiken om Media Analytics rechtstreeks vanuit een webapp te ondersteunen.
+   U kunt de steekproefspeler hier verkrijgen: [ Speler van de Steekproef van MA ](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/2.x). De voorbeeldspeler fungeert als een referentie waarmee u kunt laten zien hoe u de extensie MA kunt gebruiken om Media Analytics rechtstreeks vanuit een webapp te ondersteunen.
 
 1. Maak als volgt de instantie van MediaHeartbone tracker:
 
@@ -109,21 +109,21 @@ De extensie MA exporteert de MediaHeartbone-API&#39;s in het algemene vensterobj
 
 ### Werken met andere extensies
 
-De extensie MA stelt de `get-instance` en `media-heartbeat` gedeelde modules aan andere uitbreidingen. (Voor extra informatie over Gedeelde Modules, zie [Documentatie van gedeelde modules](../../../extension-dev/web/shared.md).)
+De extensie MA stelt de gedeelde `get-instance` en `media-heartbeat` modules beschikbaar voor andere extensies. (Voor extra informatie over Gedeelde Modules, zie [ Gedeelde documentatie van Modules ](../../../extension-dev/web/shared.md).)
 
 >[!IMPORTANT]
 >
->Gedeelde modules zijn alleen toegankelijk via andere extensies. Een webpagina/JS-toepassing heeft dus geen toegang tot de gedeelde modules of kan deze gebruiken `turbine` (zie codevoorbeeld hieronder) buiten een extensie.
+>Gedeelde modules zijn alleen toegankelijk via andere extensies. Een webpagina/JS-toepassing heeft dus geen toegang tot de gedeelde modules of kan `turbine` (zie het codevoorbeeld hieronder) buiten een extensie gebruiken.
 
-1. **MediaHeartbone-instantie maken:** `get-instance` Gedeelde module
+1. **creeer de Instantie MediaHeartbeat:** `get-instance` Gedeelde Module
 
-   **Param:**
+   **Params:**
 
    * Een geldig gedelegeerd object dat deze functies toegankelijk maakt:
 
      | Methode |  Beschrijving   |
      | :--- | :--- |
-     | `getQoSObject()` | Hiermee wordt het `MediaObject` instantie die de huidige informatie QoS bevat. Deze methode wordt meerdere keren aangeroepen tijdens een afspeelsessie. De spelerimplementatie moet altijd de laatst beschikbare gegevens terugkeren QoS. |
+     | `getQoSObject()` | Retourneert de `MediaObject` -instantie die de huidige QoS-informatie bevat. Deze methode wordt meerdere keren aangeroepen tijdens een afspeelsessie. De spelerimplementatie moet altijd de laatst beschikbare gegevens terugkeren QoS. |
      | `getCurrentPlaybackTime()` | Retourneert de huidige positie van de afspeelkop. Voor het bijhouden van VOD wordt de waarde opgegeven in seconden vanaf het begin van het media-item. Voor het bijhouden van LIVE-/LIVE-waarden wordt de waarde opgegeven in seconden vanaf het begin van het programma. |
 
    * Een optioneel config-object dat deze eigenschappen toegankelijk maakt:
@@ -134,11 +134,11 @@ De extensie MA stelt de `get-instance` en `media-heartbeat` gedeelde modules aan
      | Naam speler | Naam van de mediaspeler in gebruik (bijvoorbeeld &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) | Nee. Indien aanwezig, treedt de waarde met voeten die tijdens uitbreidingsconfiguratie wordt bepaald. |
      | Kanaal | Channel name, eigenschap | Nee. Indien aanwezig, treedt de waarde met voeten die tijdens uitbreidingsconfiguratie wordt bepaald. |
 
-   **Retourwaarde:** Een belofte die ofwel met een `MediaHeartbeat` -instantie of wordt door een foutbericht geweigerd.
+   **Waarde van de Terugkeer:** Een belofte die of met a `MediaHeartbeat` instantie of verwerpt met een foutenmelding lost.
 
-1. **Toegang tot MediaHeartbone-constanten:** `media-heartbeat` Gedeelde module
+1. **De Constanten van MediaHeartbeat van de Toegang:** `media-heartbeat` Gedeelde Module
 
-   Deze module stelt alle constanten en statische methoden van deze klasse beschikbaar: [https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html).
+   Deze module stelt alle constanten en statische methodes van deze klasse bloot: [ https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html).
 
 1. Maak als volgt de instantie van MediaHeartbone tracker:
 
@@ -174,11 +174,11 @@ De extensie MA stelt de `get-instance` en `media-heartbeat` gedeelde modules aan
    ...
    ```
 
-1. Gebruik de Media Heartboard-instantie om de [JS-documentatie van Media SDK](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) en [JS API-documentatie](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) om mediatracering te implementeren.
+1. Gebruikend de instantie van de Hartslag van Media, volg de [ documentatie van SDK van Media JS ](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) en [ JS API documentatie ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) om media het volgen uit te voeren.
 
 >[!NOTE]
 >
->**Testen:** Voor deze release moet u de extensie uploaden naar [Platform](../../../extension-dev/submit/upload-and-test.md), waar u toegang hebt tot alle afhankelijke extensies.
+>**het Testen:** voor deze versie, om uw uitbreiding te testen moet u het aan [ Platform ](../../../extension-dev/submit/upload-and-test.md) uploaden, waar u toegang tot alle afhankelijke uitbreidingen hebt.
 
 
 <!--

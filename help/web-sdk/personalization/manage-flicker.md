@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Wanneer de SDK probeert om personalisatie-inhoud te renderen, moet deze ervoor zorgen dat er geen flikkering optreedt. De flikkering, ook FOOC genoemd (Flash van Originele Inhoud), is wanneer een originele inhoud kort wordt getoond alvorens het alternatief tijdens het testen/verpersoonlijken verschijnt. De SDK probeert CSS-stijlen toe te passen op elementen van de pagina om ervoor te zorgen dat deze elementen worden verborgen totdat de personalisatie-inhoud is gerenderd.
 
-Hoe u flikkering beheert, hangt af van of u SDK van het Web synchroon of asynchroon opstelt. Controleer de `<head>` tag waar u implementeert `alloy.js` of de tagloader. De aanwezigheid van de `async` in het dialoogvenster `<script>` -tag bepaalt of de Web SDK asynchroon wordt geladen.
+Hoe u flikkering beheert, hangt af van of u SDK van het Web synchroon of asynchroon opstelt. Controleer de tag `<head>` op de plaats waar u `alloy.js` of de tagloader implementeert. De aanwezigheid van het kenmerk `async` in de tag `<script>` bepaalt of de SDK van het Web asynchroon wordt geladen.
 
 ```html
 <!-- This tag loads synchronously -->
@@ -38,9 +38,9 @@ Synchroon flikkerbeheer bestaat uit drie fasen:
 1. Voorbewerken
 1. Renderen
 
-Tijdens de **voorbedekfase**, gebruikt de SDK de [`prehidingStyle`](../commands/configure/prehidingstyle.md) configuratie-eigenschap om een HTML-stijltag te maken en deze toe te voegen aan de DOM om ervoor te zorgen dat de gewenste gedeelten van de pagina worden verborgen. Als u niet zeker weet welke delen van de pagina u wilt aanpassen, kunt u het beste `prehidingStyle` tot `body { opacity: 0 !important }`. Zo weet u zeker dat de hele pagina verborgen is. Dit heeft echter het nadeel van het leiden tot slechtere weergaveprestaties voor pagina&#39;s die worden gemeld door gereedschappen zoals Lighthouse, Webpaginatests, enzovoort. Voor de beste renderingprestaties van de pagina wordt aangeraden `prehidingStyle` aan een lijst van containerelementen die de delen van de pagina bevatten die zullen worden gepersonaliseerd.
+Tijdens de **preHide fase**, gebruikt SDK het [`prehidingStyle`](../commands/configure/prehidingstyle.md) configuratiebezit om een de stijlmarkering van HTML tot stand te brengen en het aan DOM toe te voegen om ervoor te zorgen dat de gewenste secties van de pagina verborgen zijn. Als u niet zeker weet welke delen van de pagina u wilt aanpassen, kunt u het beste `prehidingStyle` op `body { opacity: 0 !important }` instellen. Zo weet u zeker dat de hele pagina verborgen is. Dit heeft echter het nadeel van het leiden tot slechtere weergaveprestaties voor pagina&#39;s die worden gemeld door gereedschappen zoals Lighthouse, Webpaginatests, enzovoort. Voor de beste weergaveprestaties van de pagina, is het raadzaam `prehidingStyle` in te stellen op een lijst met containerelementen die de delen van de pagina bevatten die worden aangepast.
 
-Ervan uitgaande dat u een HTML-pagina hebt, zoals hieronder, en u weet dat alleen `bar` en `bazz` containerelementen zullen ooit worden gepersonaliseerd :
+Ervan uitgaande dat u een HTML-pagina hebt, zoals de pagina hieronder, en u weet dat alleen `bar` - en `bazz` -containerelementen ooit zullen worden aangepast:
 
 ```html
 <html>
@@ -62,11 +62,11 @@ Ervan uitgaande dat u een HTML-pagina hebt, zoals hieronder, en u weet dat allee
 </html>
 ```
 
-Vervolgens worden de `prehidingStyle` moet worden ingesteld op iets als `#bar, #bazz { opacity: 0 !important }`.
+Vervolgens moet de `prehidingStyle` worden ingesteld op iets als `#bar, #bazz { opacity: 0 !important }` .
 
-Zodra de SDK gepersonaliseerde inhoud van de server heeft ontvangen, **voorbewerkingsfase** start. Tijdens deze fase, wordt de reactie vooraf verwerkt, ervoor zorgend dat de elementen die gepersonaliseerde inhoud moeten bevatten worden verborgen. Nadat deze elementen zijn verborgen, wordt de stijltag HTML gemaakt op basis van de `prehidingStyle` De configuratieoptie wordt verwijderd en de hoofdtekst van de HTML of de verborgen containerelementen worden weergegeven.
+Zodra SDK gepersonaliseerde inhoud van de server heeft ontvangen, begint de **preprocessing fase**. Tijdens deze fase, wordt de reactie vooraf verwerkt, ervoor zorgend dat de elementen die gepersonaliseerde inhoud moeten bevatten worden verborgen. Nadat deze elementen zijn verborgen, wordt de stijltag HTML die is gemaakt op basis van de configuratieoptie `prehidingStyle` verwijderd en worden de hoofdtekst van de HTML of de verborgen containerelementen weergegeven.
 
-Nadat alle verpersoonlijkingsinhoud met succes is teruggegeven, of als er een fout was, **renderingfase** start. Alle eerder verborgen elementen worden weergegeven om er zeker van te zijn dat er geen verborgen elementen op de pagina staan die door de SDK zijn verborgen.
+Nadat al verpersoonlijkingsinhoud met succes is teruggegeven, of als er om het even welke fout was, begint de **teruggevende fase**. Alle eerder verborgen elementen worden weergegeven om er zeker van te zijn dat er geen verborgen elementen op de pagina staan die door de SDK zijn verborgen.
 
 ## Flicker beheren voor asynchrone implementaties
 
@@ -84,4 +84,4 @@ U wordt aangeraden de SDK altijd asynchroon te laden voor de beste weergaveprest
 </script>
 ```
 
-Om ervoor te zorgen dat de hoofdtekst van de HTML of de containerelementen niet gedurende langere tijd verborgen zijn, gebruikt het prehide fragment een timer die het fragment standaard verwijdert na `3000` milliseconden. De `3000` milliseconden is de maximale wachttijd. Als de reactie van de server eerder is ontvangen en verwerkt, wordt de voorverborgen HTML-stijltag zo snel mogelijk verwijderd.
+Om ervoor te zorgen dat de hoofdtekst van de HTML of de containerelementen niet gedurende langere tijd verborgen zijn, gebruikt het voorverborgen fragment een timer die het fragment standaard na `3000` milliseconden verwijdert. De `3000` milliseconden is de maximale wachttijd. Als de reactie van de server eerder is ontvangen en verwerkt, wordt de voorverborgen HTML-stijltag zo snel mogelijk verwijderd.

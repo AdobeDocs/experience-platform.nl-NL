@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # Overzicht van segmentatie over meerdere entiteiten
 
-Segmentatie tussen meerdere entiteiten is een geavanceerde functie die beschikbaar is als onderdeel van Adobe Experience Platform [!DNL Segmentation Service]. Met deze functie kunt u het programma uitbreiden [!DNL Real-Time Customer Profile] gegevens met aanvullende &quot;niet-persoonlijke&quot; gegevens (ook wel &quot;dimensie-entiteiten&quot; genoemd) die uw organisatie kan definiëren, zoals gegevens die betrekking hebben op producten of winkels. De segmentatie van meerdere entiteiten verstrekt flexibiliteit wanneer het bepalen van segmentdefinities die op gegevens relevant voor uw unieke bedrijfsbehoeften worden gebaseerd en kan zonder het hebben van deskundigheid in het vragen van gegevensbestanden worden uitgevoerd. Met de segmentatie van meerdere entiteiten, kunt u zeer belangrijke gegevens aan uw segmentdefinities toevoegen zonder het moeten dure veranderingen in gegevensstromen aanbrengen of op een achterste-eindgegevenssamenvoeging wachten.
+Segmentatie met meerdere entiteiten is een geavanceerde functie die beschikbaar is als onderdeel van Adobe Experience Platform [!DNL Segmentation Service] . Met deze functie kunt u [!DNL Real-Time Customer Profile] -gegevens uitbreiden met aanvullende gegevens van &#39;niet-personen&#39; (ook wel &#39;dimensie-entiteiten&#39; genoemd) die uw organisatie kan definiëren, zoals gegevens die betrekking hebben op producten of winkels. De segmentatie van meerdere entiteiten verstrekt flexibiliteit wanneer het bepalen van segmentdefinities die op gegevens relevant voor uw unieke bedrijfsbehoeften worden gebaseerd en kan zonder het hebben van deskundigheid in het vragen van gegevensbestanden worden uitgevoerd. Met de segmentatie van meerdere entiteiten, kunt u zeer belangrijke gegevens aan uw segmentdefinities toevoegen zonder het moeten dure veranderingen in gegevensstromen aanbrengen of op een achterste-eindgegevenssamenvoeging wachten.
 
 ## Aan de slag
 
 De segmentatie van meerdere entiteiten vereist een goed begrip van de verschillende diensten van Adobe Experience Platform die bij segmentatie betrokken zijn. Lees de volgende documentatie voordat u doorgaat met deze handleiding:
 
-* [[!DNL Real-Time Customer Profile]](../profile/home.md): Biedt een eenvormig consumentenprofiel in real-time, gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-   * [Profielhulplijnen](../profile/guardrails.md): Aanbevolen procedures voor het maken van gegevensmodellen die worden ondersteund door [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Hiermee kunt u een publiek opbouwen op [!DNL Real-Time Customer Profile] gegevens.
-* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [Basisbeginselen van de schemacompositie](../xdm/schema/composition.md#union): Leer de beste werkwijzen voor het samenstellen van schema&#39;s die in Experience Platform moeten worden gebruikt. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../xdm/schema/best-practices.md).
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): biedt een uniform consumentenprofiel in realtime, gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+   * [ de gidsen van het Profiel ](../profile/guardrails.md): Beste praktijken voor het creëren van gegevensmodellen die door [!DNL Profile] worden gesteund.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): hiermee kunt u soorten publiek maken op basis van [!DNL Real-Time Customer Profile] -gegevens.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Het gestandaardiseerde framework waarmee Experience Platform gegevens voor klantervaring organiseert.
+   * [ Grondbeginselen van schemacompositie ](../xdm/schema/composition.md#union): Leer beste praktijken voor het samenstellen van schema&#39;s die in Experience Platform moeten worden gebruikt. Om het beste gebruik van Segmentatie te maken, gelieve te verzekeren uw gegevens als profielen en gebeurtenissen volgens de [ beste praktijken voor gegevens modellering ](../xdm/schema/best-practices.md) worden opgenomen.
 
 ## Gebruiksscenario’s
 
@@ -38,7 +38,7 @@ Het is ingewikkeld om gebruikers in segmentdefinities voor het verlaten van wink
 
 ## Segmentdefinities met meerdere entiteiten maken
 
-Het creëren van een multi-entiteitsegmentdefinitie vereist eerst het bepalen van verhoudingen tussen schema&#39;s alvorens te gebruiken [!DNL Segmentation] API of de Bouwer UI van het Segment om de segmentdefinitie te bouwen.
+Wanneer u een definitie van een segment met meerdere entiteiten maakt, moet u eerst relaties tussen schema&#39;s definiëren voordat u de gebruikersinterface van de [!DNL Segmentation] API- of segmentbouwer gebruikt om de segmentdefinitie te maken.
 
 ### Relaties definiëren
 
@@ -58,4 +58,4 @@ Zodra u de noodzakelijke verhoudingen XDM hebt bepaald, kunt u beginnen om een m
 
 ## Segmentdefinities met meerdere entiteiten evalueren en openen
 
-Nadat u een segmentdefinitie hebt gemaakt, kunt u de resultaten evalueren en openen met de segmentatie-API. Het evalueren van een definitie van een segment met meerdere entiteiten lijkt sterk op het evalueren van een standaardsegmentdefinitie. Dit proces kan alleen worden uitgevoerd met de segmentatie-API. Voor een gedetailleerde gids die toont hoe te om API te gebruiken om segmentdefinities te evalueren en te openen, gelieve te lezen [evalueren van en toegang tot segmentdefinities](./tutorials/evaluate-a-segment.md) zelfstudie.
+Nadat u een segmentdefinitie hebt gemaakt, kunt u de resultaten evalueren en openen met de segmentatie-API. Het evalueren van een definitie van een segment met meerdere entiteiten lijkt sterk op het evalueren van een standaardsegmentdefinitie. Dit proces kan alleen worden uitgevoerd met de segmentatie-API. Voor een gedetailleerde gids die tonen hoe te om API te gebruiken om en segmentdefinities te evalueren toegang te hebben, gelieve [ te lezen evaluerend en tot segmentdefinities ](./tutorials/evaluate-a-segment.md) leerprogramma toegang te hebben.

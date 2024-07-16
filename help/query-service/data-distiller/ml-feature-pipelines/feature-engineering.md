@@ -4,27 +4,27 @@ description: Leer hoe u gegevens in Adobe Experience Platform omzet in functies 
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 13%
+source-wordcount: '1140'
+ht-degree: 11%
 
 ---
 
 # Engineer-functies voor machinaal leren
 
-In dit document wordt getoond hoe u gegevens in Adobe Experience Platform kunt omzetten in **functies**, of variabelen, die door een machine het leren model kunnen worden verbruikt. Dit proces wordt **functieengineering**. Met Data Distiller kunt u op schaal XML-functies berekenen en deze functies delen met uw computerleeromgeving. Dit betreft het volgende:
+Dit document toont aan hoe u gegevens in Adobe Experience Platform in **eigenschappen** kunt omzetten, of variabelen, die door een machine het leren model kunnen worden verbruikt. Dit proces wordt bedoeld als **eigenschapengineering**. Met Data Distiller kunt u op schaal XML-functies berekenen en deze functies delen met uw computerleeromgeving. Dit betreft het volgende:
 
 1. Maak een querysjabloon om de doellabels en -functies te definiëren die u voor uw model wilt berekenen
 2. Voer de vraag uit en sla de resultaten in een trainingsdataset op
 
 ## Uw trainingsgegevens definiëren {#define-training-data}
 
-Het volgende voorbeeld illustreert een vraag om opleidingsgegevens uit een dataset van de Gebeurtenissen van de Ervaring voor een model af te leiden om de neiging van een gebruiker te voorspellen om aan een nieuwsbrief in te tekenen. Abonnementsgebeurtenissen worden vertegenwoordigd door het gebeurtenistype `web.formFilledOut`en andere gedragsgebeurtenissen in de dataset worden gebruikt om eigenschappen op profielniveau af te leiden om abonnementen te voorspellen.
+Het volgende voorbeeld illustreert een vraag om opleidingsgegevens uit een dataset van de Gebeurtenissen van de Ervaring voor een model af te leiden om de neiging van een gebruiker te voorspellen om aan een nieuwsbrief in te tekenen. Abonnementsgebeurtenissen worden vertegenwoordigd door het gebeurtenistype `web.formFilledOut` en andere gedragsgebeurtenissen in de dataset worden gebruikt om functies op profielniveau af te leiden om abonnementen te voorspellen.
 
 ### Positieve en negatieve labels voor query {#query-positive-and-negative-labels}
 
 Een volledige dataset voor de opleiding van een (onder toezicht staande) machinaal leermodel omvat doelvariabele of -label die het te voorspellen resultaat vertegenwoordigt, en een reeks eigenschappen of verklarende variabelen die worden gebruikt om de voorbeeldprofielen te beschrijven die worden gebruikt om het model op te leiden.
 
-In dit geval is het label een variabele met de naam `subscriptionOccurred` dat gelijk is aan 1 als het gebruikersprofiel een gebeurtenis met type heeft `web.formFilledOut` , en 0 in andere gevallen. De volgende vraag keert een reeks van 50.000 gebruikers van de gebeurtenisdataset, met inbegrip van alle gebruikers met positieve etiketten terug (`subscriptionOccurred = 1`) plus een willekeurig geselecteerde gebruiker met negatieve labels om de grootte van het gebruikersmonster van 50.000 te voltooien. Dit zorgt ervoor dat de trainingsgegevens zowel positieve als negatieve voorbeelden bevatten waarvan het model kan leren.
+In dit geval is het label een variabele met de naam `subscriptionOccurred` die gelijk is aan 1 als het gebruikersprofiel een gebeurtenis van het type `web.formFilledOut` heeft en anders aan 0. De volgende vraag keert een reeks van 50.000 gebruikers van de gebeurtenissendataset, met inbegrip van alle gebruikers met positieve etiketten (`subscriptionOccurred = 1`) plus een reeks willekeurig geselecteerde gebruiker met negatieve etiketten terug om de 50.000 grootte van de gebruikerssteekproef te voltooien. Dit zorgt ervoor dat de trainingsgegevens zowel positieve als negatieve voorbeelden bevatten waarvan het model kan leren.
 
 ```python
 from aepp import queryservice
@@ -52,7 +52,7 @@ print(f"Number of classes: {len(df_labels)}")
 df_labels.head()
 ```
 
-**Voorbeelduitvoer**
+**de output van de Steekproef**
 
 Aantal klassen: 50000
 
@@ -70,13 +70,13 @@ Aantal klassen: 50000
 
 Met een aangewezen vraag kunt u de gebeurtenissen in de dataset in zinvolle, numerieke eigenschappen verzamelen die kunnen worden gebruikt om een aandrijvingsmodel te trainen. Voorbeelden van gebeurtenissen worden hieronder weergegeven:
 
-- **Aantal e-mails** die voor marketingdoeleinden zijn verzonden en door de gebruiker zijn ontvangen.
-- Gedeelte van deze e-mails die **geopend**.
-- Gedeelte van deze e-mailberichten waar de gebruiker **geselecteerd** de koppeling.
-- **Aantal producten** die zijn bekeken.
-- Aantal **voorstellen die verband houden met**.
-- Aantal **afgewezen voorstellen**.
-- Aantal **geselecteerde koppelingen**.
+- **Aantal e-mails** die voor marketing doeleinden werden verzonden en door de gebruiker werden ontvangen.
+- Gedeelte van deze e-mails die **** werden geopend.
+- Het gedeelte van deze e-mails waar de gebruiker **** de verbinding selecteerde.
+- **Aantal producten** die werden bekeken.
+- Aantal **voorstellingen die met** werden in wisselwerking gestaan.
+- Aantal **voorstellen die** werden verworpen.
+- Aantal **verbindingen die** werden geselecteerd.
 - Aantal minuten tussen twee opeenvolgende ontvangen e-mails.
 - Aantal minuten tussen twee opeenvolgende e-mails geopend.
 - Het aantal minuten tussen twee opeenvolgende e-mailberichten waarin de gebruiker de koppeling heeft geselecteerd.
@@ -144,15 +144,15 @@ df_features.head()
 
 +++
 
-**Voorbeelduitvoer**
+**de output van de Steekproef**
 
 |   | userId | emailsReceived | e-mailsGeopend | emailsClicked | productsViewed | propositionInteracts | voorstelAfgewezen | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
 | --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- | 
-| 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Geen | NaN |
-| 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Geen | NaN |
-| 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Geen | NaN |
-| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540.0 | 0.0 | NaN | NaN | NaN | Geen | NaN |
-| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588.0 | 0.0 | NaN | NaN | NaN | Geen | NaN |
+| 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Geen | NaN |
+| 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Geen | NaN |
+| 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Geen | NaN |
+| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540,0 | 0,0 | NaN | NaN | NaN | Geen | NaN |
+| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588,0 | 0,0 | NaN | NaN | NaN | Geen | NaN |
 
 {style="table-layout:auto"}
 
@@ -227,15 +227,15 @@ df_training_set.head()
 
 +++
 
-**Voorbeelduitvoer**
+**de output van de Steekproef**
 
-|  | userId | eventType | timestamp | subscriptionOccurred | emailsReceived | e-mailsGeopend | emailsClicked | productsViewed | propositionInteracts | voorstelAfgewezen | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
+|  | userId | eventType | tijdstempel | subscriptionOccurred | emailsReceived | e-mailsGeopend | emailsClicked | productsViewed | propositionInteracts | voorstelAfgewezen | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |    
-| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Geen | NaN | 1 |
-| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921.0 | 0.0 | NaN | 1703.0 | NaN | Geen | NaN | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365.0 | 26.0 | 1.0 | NaN | NaN | Geen | NaN | 7 |
-| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Geen | NaN | 1 |
-| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Geen | NaN | 1 |
+| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13 :44: 59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Geen | NaN | 1 |
+| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06 :01: 55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Geen | NaN | 1 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18 :36: 49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | Geen | NaN | 7 |
+| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19 :17: 12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Geen | NaN | 1 |
+| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21 :58: 29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Geen | NaN | 1 |
 
 {style="table-layout:auto"}
 
@@ -246,9 +246,9 @@ Het is typisch om een model met bijgewerkte opleidingsgegevens periodiek om te h
 Dit vereist een paar wijzigingen aan de vraag van de trainingsreeks:
 
 - Voeg logica toe om een nieuwe opleidingsdataset tot stand te brengen als het niet bestaat, en neem de nieuwe etiketten en de eigenschappen in de bestaande opleidingsdataset anders op. Hiervoor is een reeks van twee versies van de query voor de trainingsset vereist:
-   - Als eerste gebruikt u de `CREATE TABLE IF NOT EXISTS {table_name} AS` statement
-   - Vervolgens gebruikt u de `INSERT INTO {table_name}` verklaring voor het geval dat het opleidingsgegevensbestand reeds bestaat
-- Voeg een `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` instructie om de query te beperken tot gebeurtenisgegevens die binnen een opgegeven interval zijn toegevoegd. De `$` op momentopname IDs wijst erop dat zij variabelen zijn die binnen zullen worden overgegaan wanneer het vraagmalplaatje wordt uitgevoerd.
+   - Eerst gebruikt u de instructie `CREATE TABLE IF NOT EXISTS {table_name} AS`
+   - Vervolgens gebruikt u de instructie `INSERT INTO {table_name}` voor het geval waarin de trainingsdataset al bestaat
+- Voeg een instructie `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` toe om de query te beperken tot gebeurtenisgegevens die binnen een opgegeven interval zijn toegevoegd. Het voorvoegsel `$` op de momentopname-id&#39;s geeft aan dat het variabelen zijn die worden doorgegeven wanneer de querysjabloon wordt uitgevoerd.
 
 Als u deze wijzigingen toepast, wordt de volgende query uitgevoerd:
 
@@ -403,7 +403,7 @@ template_id = template_res["id"]
 print(f"Template for propensity training data created as ID {template_id}")
 ```
 
-**Voorbeelduitvoer**
+**de output van de Steekproef**
 
 `Template for propensity training data created as ID f3d1ec6b-40c2-4d13-93b6-734c1b3c7235`
 
@@ -441,7 +441,7 @@ query_final_id = query_final_res["id"]
 print(f"Query started successfully and got assigned ID {query_final_id} - it will take some time to execute")
 ```
 
-**Voorbeelduitvoer**
+**de output van de Steekproef**
 
 `Query started successfully and got assigned ID c6ea5009-1315-4839-b072-089ae01e74fd - it will take some time to execute`
 
@@ -468,7 +468,7 @@ def wait_for_query_completion(query_id):
 wait_for_query_completion(query_final_id)
 ```
 
-**Voorbeelduitvoer**
+**de output van de Steekproef**
 
 ```console
 Query is still in progress, sleeping…
@@ -484,4 +484,4 @@ Query completed successfully in 473.8 seconds
 
 ## Volgende stappen:
 
-Door dit document te lezen hebt u geleerd hoe u gegevens in Adobe Experience Platform kunt transformeren in functies, of variabelen, die door een model voor machinaal leren kunnen worden verbruikt. De volgende stap bij het maken van functiepijpleidingen van Experience Platform naar aangepaste modellen in uw computerleeromgeving is: [gegevensbestanden met exportfuncties](./export-data.md).
+Door dit document te lezen hebt u geleerd hoe u gegevens in Adobe Experience Platform kunt transformeren in functies, of variabelen, die door een model voor machinaal leren kunnen worden verbruikt. De volgende stap in het creëren van eigenschappijpleidingen van Experience Platform om douanemodellen in uw machine het leren milieu te voeren is [ eigenschapdatasets van de uitvoer ](./export-data.md).

@@ -6,20 +6,20 @@ description: Het volgende document verstrekt stappen op hoe te om een verbinding
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 source-git-commit: f47b7f725475fc7f7fac6dd406975b46f257e390
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 1%
+source-wordcount: '785'
+ht-degree: 0%
 
 ---
 
-# Een nieuwe verbindingsspecificatie maken met de opdracht [!DNL Flow Service] API
+# Een nieuwe verbindingsspecificatie maken met de API van [!DNL Flow Service]
 
-Een verbindingsspecificatie vertegenwoordigt de structuur van een bron. Het bevat informatie over de authentificatievereisten van een bron, bepaalt hoe de brongegevens kunnen worden onderzocht en worden geïnspecteerd, en verstrekt informatie over de attributen van een bepaalde bron. De `/connectionSpecs` in de [!DNL Flow Service] API staat u toe om de verbindingsspecificaties binnen uw organisatie programmatically te beheren.
+Een verbindingsspecificatie vertegenwoordigt de structuur van een bron. Het bevat informatie over de authentificatievereisten van een bron, bepaalt hoe de brongegevens kunnen worden onderzocht en worden geïnspecteerd, en verstrekt informatie over de attributen van een bepaalde bron. Met het eindpunt `/connectionSpecs` in de [!DNL Flow Service] API kunt u de verbindingsspecificaties binnen uw organisatie programmatisch beheren.
 
-In het volgende document worden de volgende stappen beschreven voor het maken van een verbindingsspecificatie met de opdracht [!DNL Flow Service] API en een nieuwe bron integreren via Self-Serve Sources (Batch SDK).
+In het volgende document worden de stappen beschreven voor het maken van een verbindingsspecificatie met de API [!DNL Flow Service] en het integreren van een nieuwe bron via Self-Serve Sources (Batch SDK).
 
 ## Aan de slag
 
-Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Artefacten verzamelen
 
@@ -31,33 +31,33 @@ Zodra u de Git-opslagruimte hebt opgegeven, moet u deze als volgt structureren:
    * {your_source}
       * Artefacten
          * {your_source}-category.txt
-         * {your_source}-description.txt
-         * {your_source}-icon.svg
-         * {your_source}-label.txt
-         * {your_source}-connectionSpec.json
+         * {your_source} -description.txt
+         * {your_source} -icon.svg
+         * {your_source} -label.txt
+         * {your_source} -connectionSpec.json
 
 | Artefacten (bestandsnamen) | Beschrijving | Voorbeeld |
 | --- | --- | --- |
 | {your_source} | De naam van de bron. Deze map moet alle artefacten bevatten die betrekking hebben op uw bron, in uw persoonlijke Git-opslagplaats. | `mailchimp-members` |
-| {your_source}-category.txt | De categorie waartoe uw bron behoort, opgemaakt als een tekstbestand. De lijst van beschikbare broncategorieën die door Zelfbediening Bronnen (de Band SDK) worden gesteund omvat: <ul><li>Advertising</li><li>Analytics</li><li>Toestemming en voorkeuren</li><li>CRM</li><li>Klant geslaagd</li><li>Database</li><li>e-commerce</li><li>Marketing Automation</li><li>Betalingen</li><li>Protocollen</li></ul> **Opmerking**: Neem contact op met uw Adobe als u van mening bent dat de bron niet in een van de bovenstaande categorieën past. | `mailchimp-members-category.txt` Geef in het bestand de categorie van de bron op, bijvoorbeeld: `marketingAutomation`. |
-| {your_source}-description.txt | Een korte beschrijving van de bron. | [!DNL Mailchimp Members] is een marketingautomatiseringsbron die u kunt gebruiken om [!DNL Mailchimp Members] gegevens naar Experience Platform. |
-| {your_source}-icon.svg | De afbeelding die moet worden gebruikt om uw bron weer te geven in de catalogus met bronnen in het Experience Platform. Dit pictogram moet een SVG-bestand zijn. |
-| {your_source}-label.txt | De naam van de bron zoals deze moet worden weergegeven in de catalogus met bronnen van het Experience Platform. | Mailchimp-leden |
-| {your_source}-connectionSpec.json | Een JSON-bestand dat de verbindingsspecificatie van uw bron bevat. Dit bestand is in eerste instantie niet vereist omdat u de verbindingsspecificatie invult als u deze handleiding invult. | `mailchimp-members-connectionSpec.json` |
+| {your_source}-category.txt | De categorie waartoe uw bron behoort, opgemaakt als een tekstbestand. De lijst van beschikbare broncategorieën die door Zelfbediening Bronnen (de Band SDK) worden gesteund omvat: <ul><li>Advertising</li><li>Analytics</li><li>Toestemming en voorkeuren</li><li>CRM</li><li>Klant geslaagd</li><li>Database</li><li>e-Commerce</li><li>Marketing Automation</li><li>Betalingen</li><li>Protocollen</li></ul> **Nota**: Als u gelooft dat uw bron niet in om het even welke bovengenoemde categorieën past, gelieve uw vertegenwoordiger van de Adobe te contacteren om te bespreken. | `mailchimp-members-category.txt` Geef in het bestand bijvoorbeeld de categorie van de bron op. `marketingAutomation` |
+| {your_source} -description.txt | Een korte beschrijving van de bron. | [!DNL Mailchimp Members] is een marketingautomatiseringsbron die u kunt gebruiken om [!DNL Mailchimp Members] -gegevens naar het Experience Platform te brengen. |
+| {your_source} -icon.svg | De afbeelding die moet worden gebruikt om uw bron weer te geven in de catalogus met bronnen in het Experience Platform. Dit pictogram moet een SVG-bestand zijn. |
+| {your_source} -label.txt | De naam van de bron zoals deze moet worden weergegeven in de catalogus met bronnen van het Experience Platform. | Mailchimp-leden |
+| {your_source} -connectionSpec.json | Een JSON-bestand dat de verbindingsspecificatie van uw bron bevat. Dit bestand is in eerste instantie niet vereist omdat u de verbindingsspecificatie invult als u deze handleiding invult. | `mailchimp-members-connectionSpec.json` |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
->Tijdens de testperiode van uw verbindingsspecificatie kunt u in plaats van de belangrijkste waarden `text` in het verbindingsdossier.
+>Tijdens de testperiode van de verbindingsspecificatie kunt u in plaats van de sleutelwaarden `text` gebruiken in de verbindingsspecificatie.
 
 Nadat u de benodigde bestanden hebt toegevoegd aan uw persoonlijke Git-opslagplaats, moet u een pull-aanvraag (PR) maken die door de Adobe kan worden gecontroleerd. Wanneer uw PR wordt goedgekeurd en samengevoegd, zult u van identiteitskaart worden voorzien die voor uw verbindingsspecificatie kan worden gebruikt om naar het etiket, de beschrijving, en het pictogram van uw bron te verwijzen.
 
-Voer vervolgens de onderstaande stappen uit om uw verbindingsspecificatie te configureren. Voor extra begeleiding op de verschillende functionaliteiten die u aan uw bron kunt toevoegen, zoals geavanceerd het plannen, douaneschema, of verschillende paginatypen, te herzien gelieve de gids op [bronspecificaties configureren](../config/sourcespec.md).
+Voer vervolgens de onderstaande stappen uit om uw verbindingsspecificatie te configureren. Voor extra begeleiding op de verschillende functionaliteiten die u aan uw bron, zoals geavanceerde het plannen, douaneschema, of verschillende paginatietypen kunt toevoegen, te herzien gelieve de gids op [ vormend bronspecificaties ](../config/sourcespec.md).
 
 ## Sjabloon voor verbindingsspecificatie kopiëren
 
-Nadat u de vereiste artefacten hebt verzameld, kopieert en plakt u de onderstaande sjabloon voor de verbindingsspecificatie naar de teksteditor van uw keuze en werkt u de kenmerken tussen haakjes bij `{}` met informatie die relevant is voor uw specifieke bron.
+Nadat u de vereiste artefacten hebt verzameld, kopieert en plakt u de onderstaande sjabloon voor de verbindingsspecificatie naar de teksteditor van uw keuze en werkt u de kenmerken tussen haakjes `{}` bij met informatie die relevant is voor uw specifieke bron.
 
 ```json
 {
@@ -452,9 +452,9 @@ Zie de volgende documenten voor instructies over hoe u de waarden van elk deel v
 * [Uw bronspecificatie configureren](../config/sourcespec.md)
 * [Uw verkenningsspecificatie configureren](../config/explorespec.md)
 
-Als de opgegeven gegevens zijn bijgewerkt, kunt u de nieuwe verbindingsspecificatie verzenden door een POST aan te vragen bij de `/connectionSpecs` het eindpunt van de [!DNL Flow Service] API.
+Wanneer de opgegeven gegevens zijn bijgewerkt, kunt u de nieuwe verbindingsspecificatie verzenden door een aanvraag voor een POST in te dienen bij het `/connectionSpecs` -eindpunt van de [!DNL Flow Service] API.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /connectionSpecs
@@ -462,7 +462,7 @@ POST /connectionSpecs
 
 **Verzoek**
 
-Het volgende verzoek is een voorbeeld van een volledig geschreven verbindingsspecificatie voor een [!DNL MailChimp] bron:
+De volgende aanvraag is een voorbeeld van een volledig geschreven verbindingsspecificatie voor een [!DNL MailChimp] -bron:
 
 ```shell
 curl -X POST \
@@ -646,9 +646,9 @@ curl -X POST \
   }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Met een geslaagde reactie wordt de nieuwe verbindingsspecificatie geretourneerd, inclusief de unieke `id`.
+Een geslaagde reactie retourneert de zojuist gemaakte verbindingsspecificatie, inclusief de unieke `id` .
 
 ```json
 {
@@ -835,6 +835,6 @@ Met een geslaagde reactie wordt de nieuwe verbindingsspecificatie geretourneerd,
 
 ## Volgende stappen
 
-Nu u een nieuwe verbindingsspecificatie hebt gecreeerd, moet u zijn overeenkomstige identiteitskaart van de verbindingsspecificatie aan een bestaande stroomspecificatie toevoegen. Zie de zelfstudie aan [bijwerken, stroomspecificaties](./update-flow-specs.md) voor meer informatie .
+Nu u een nieuwe verbindingsspecificatie hebt gecreeerd, moet u zijn overeenkomstige identiteitskaart van de verbindingsspecificatie aan een bestaande stroomspecificatie toevoegen. Zie het leerprogramma bij [ het bijwerken stroomspecificaties ](./update-flow-specs.md) voor meer informatie.
 
-Als u wijzigingen wilt aanbrengen in de verbindingsspecificatie die u hebt gemaakt, raadpleegt u de zelfstudie over [bijwerken, verbindingsspecificaties](./update-connection-specs.md).
+Om wijzigingen in de verbindingsspecificatie te maken die u creeerde, zie het leerprogramma bij [ het bijwerken van verbindingsspecificaties ](./update-connection-specs.md).

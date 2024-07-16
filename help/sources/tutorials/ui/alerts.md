@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >Waarschuwingen worden niet ondersteund in niet-productiesandboxen. Als u zich wilt abonneren op waarschuwingen, moet u ervoor zorgen dat u een productiesandbox gebruikt.
 
-Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Waarschuwingen verminderen of elimineren de noodzaak om de [[!DNL Observability Insights] API](../../../observability/api/overview.md) om na te gaan of een baan is voltooid, of een bepaalde mijlpaal in een werkstroom is bereikt of of er fouten zijn opgetreden.
+Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Het alarm vermindert of elimineert de behoefte om [[!DNL Observability Insights]  API ](../../../observability/api/overview.md) te peilen om te controleren als een baan heeft voltooid, als een bepaalde mijlpaal binnen een werkschema is bereikt, of als om het even welke fouten zijn voorgekomen.
 
 U kunt zich op alarm abonneren wanneer het creëren van een gegevensstroom om waakzame berichten betreffende de status, het succes, of het mislukken van uw looppas te ontvangen.
 
@@ -26,9 +26,9 @@ In dit document worden de stappen beschreven voor het ontvangen van berichten me
 
 Voor dit document is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
-* [Bronnen](../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Waarneming](../../../observability/home.md): [!DNL Observability Insights] kunt u de activiteiten van het Platform controleren door het gebruik van statistische metriek en gebeurtenisberichten.
-   * [Waarschuwingen](../../../observability/alerts/overview.md): Wanneer een bepaalde reeks voorwaarden in uw verrichtingen van het Platform wordt bereikt (zoals een potentieel probleem wanneer het systeem een drempel) schendt, kan het Platform waakzame berichten aan om het even welke gebruikers in uw organisatie leveren die aan hen hebben ingetekend.
+* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Observability ](../../../observability/home.md): [!DNL Observability Insights] staat u toe om de activiteiten van het Platform door het gebruik van statistische metriek en gebeurtenisberichten te controleren.
+   * [ Alarm ](../../../observability/alerts/overview.md): Wanneer een bepaalde reeks voorwaarden in uw verrichtingen van het Platform wordt bereikt (zoals een potentieel probleem wanneer het systeem een drempel) schendt, kan het Platform waakzame berichten aan om het even welke gebruikers in uw organisatie leveren die aan hen hebben ingetekend.
 
 ## Abonneren op waarschuwingen in de gebruikersinterface {#subscribe-sources-alerts}
 
@@ -42,9 +42,9 @@ Voor dit document is een goed begrip van de volgende Adobe Experience Platform-c
 >
 >U moet directe meldingen van e-mails voor uw Platform-account inschakelen om e-mailmeldingen voor uw gegevensstromen te ontvangen.
 
-U kunt waarschuwingen inschakelen voor uw gegevensstromen tijdens de [!UICONTROL Dataflow detail] stap van de bronworkflow in de werkruimte Bronnen.
+U kunt waarschuwingen voor uw gegevensstromen tijdens de [!UICONTROL Dataflow detail] stap van de bronwerkstroom in de bronwerkruimte inschakelen.
 
-![dataFlow-detail](../../images/tutorials/alerts/dataflow-detail.png)
+![ dataflow-detail ](../../images/tutorials/alerts/dataflow-detail.png)
 
 De beschikbare alarm voor bronnen dataflows zijn:
 
@@ -58,9 +58,9 @@ De beschikbare alarm voor bronnen dataflows zijn:
 | Resources Flow Run Success | Deze waarschuwing stuurt u een bericht wanneer gegevens van uw bron met succes aan Platform worden opgenomen. |
 | Fout bij uitvoeren van bronstroom | Deze waarschuwing stuurt u een bericht als er een fout optreedt in uw gegevensstroom. |
 
-Selecteer de waarschuwingen waarop u zich wilt abonneren en selecteer **[!UICONTROL Next]** om uw gegevensstroom te bekijken en te voltooien.
+Selecteer de waarschuwingen waarop u zich wilt abonneren en selecteer vervolgens **[!UICONTROL Next]** om uw gegevensstroom te bekijken en af te ronden.
 
-![waarschuwingen selecteren](../../images/tutorials/alerts/select-alerts.png)
+![ selecteren-alarm ](../../images/tutorials/alerts/select-alerts.png)
 
 Zie de volgende handleidingen voor gedetailleerde stappen bij het maken van een gegevensstroom voor bronnen in de gebruikersinterface:
 
@@ -82,50 +82,50 @@ Zodra uw gegevensstroom loopt, kunt u alarm door UI of door e-mail ontvangen.
 
 Alarm wordt vertegenwoordigd in UI door een berichtpictogram in de hoogste kopbal van het Platform UI. Selecteer het berichtpictogram om specifieke waakzame berichten betreffende uw gegevens te zien.
 
-![melding](../../images/tutorials/alerts/notification.png)
+![ bericht ](../../images/tutorials/alerts/notification.png)
 
 Het deelvenster met meldingen wordt weergegeven met een lijst met statusupdates in de gegevensstroom die u hebt gemaakt.
 
-![waarschuwingsvenster](../../images/tutorials/alerts/alert-window.png)
+![ alarm-venster ](../../images/tutorials/alerts/alert-window.png)
 
 U kunt de muisaanwijzer op een waarschuwingsbericht plaatsen om deze als gelezen te markeren of u kunt het klokpictogram selecteren om toekomstige herinneringen op de status van uw gegevensstroom in te stellen.
 
-![herinnering](../../images/tutorials/alerts/remind-me.png)
+![ herinnering-me ](../../images/tutorials/alerts/remind-me.png)
 
 Selecteer het waakzame bericht om specifieke informatie op uw gegevensstroom te zien.
 
-![select-alert-message](../../images/tutorials/alerts/select-alert-message.png)
+![ selecteren-waakzaam-bericht ](../../images/tutorials/alerts/select-alert-message.png)
 
-De [!UICONTROL Dataflow run overview] wordt weergegeven. In de bovenste helft van het scherm wordt een overzicht van uw gegevensstroom weergegeven, inclusief informatie over de kenmerken, de bijbehorende id voor de uitvoering van de gegevensstroom en het overzicht van de fouten op hoog niveau.
+De pagina [!UICONTROL Dataflow run overview] wordt weergegeven. In de bovenste helft van het scherm wordt een overzicht van uw gegevensstroom weergegeven, inclusief informatie over de kenmerken, de bijbehorende id voor de uitvoering van de gegevensstroom en het overzicht van de fouten op hoog niveau.
 
-![dataFlow-overzicht](../../images/tutorials/alerts/dataflow-overview.png)
+![ dataflow-overview ](../../images/tutorials/alerts/dataflow-overview.png)
 
-In de onderste helft van de pagina worden alle [!UICONTROL Dataflow run errors] die zijn uitgevoerd tijdens het werkgebied voor gegevensstroom. Hier kunt u een voorvertoning van de foutdiagnostiek bekijken of de [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) om foutdiagnostiek te downloaden of het bestandmanifest die overeenkomt met uw gegevensstroom.
+In de onderste helft van de pagina worden alle [!UICONTROL Dataflow run errors] weergegeven die zijn uitgevoerd tijdens het werkgebied waarin de gegevensstroom is uitgevoerd. Van hier, kunt u foutendiagnostiek voorproef of [[!DNL Data Access]  API ](https://www.adobe.io/experience-platform-apis/references/data-access/) gebruiken om foutendiagnostiek of dossiermanifest te downloaden die aan uw dataflow beantwoordt.
 
-![dataflow-run-fouten](../../images/tutorials/alerts/dataflow-run-error.png)
+![ dataflow-run-errors ](../../images/tutorials/alerts/dataflow-run-error.png)
 
-Zie de handleiding voor meer informatie over het verwerken van dataflow-fouten [gegevens van bronnen controleren in de gebruikersinterface](../../../dataflows/ui/monitor-sources.md).
+Voor meer informatie bij de behandeling van dataflow fouten, zie de gids over [ controlemiddelen dataflows in UI ](../../../dataflows/ui/monitor-sources.md).
 
 ### Per e-mail
 
 Waarschuwingen voor uw gegevensstromen worden ook via e-mail aan u verzonden. Selecteer de naam van de gegevensstroom in de hoofdtekst van de e-mail om meer informatie over uw gegevensstroom te zien.
 
-![email](../../images/tutorials/alerts/email.png)
+![ e-mail ](../../images/tutorials/alerts/email.png)
 
-Net als de gebruikersinterface-waarschuwing worden de [!UICONTROL Dataflow run overview] wordt weergegeven, zodat u een interface hebt waarmee u eventuele fouten kunt onderzoeken die aan uw gegevensstroom zijn gekoppeld.
+Net als de UI-waarschuwing wordt de pagina [!UICONTROL Dataflow run overview] weergegeven, die u een interface biedt om eventuele fouten die aan uw gegevensstroom zijn gekoppeld, te onderzoeken.
 
-![dataFlow-overzicht](../../images/tutorials/alerts/dataflow-overview.png)
+![ dataflow-overview ](../../images/tutorials/alerts/dataflow-overview.png)
 
 ## Abonneren op waarschuwingen en je abonnement opzeggen
 
-U kunt zich abonneren op meer waarschuwingen of uw abonnement opzeggen voor bestaande waarschuwingen in de [!UICONTROL Dataflows] pagina. Zoek de gegevensstroom die u maakt in de lijst en selecteer vervolgens de ovalen (`...`) om een vervolgkeuzelijst met opties weer te geven. Selecteer vervolgens **[!UICONTROL Subscribe alerts]** om de waakzame montages van uw gegevensstroom te wijzigen.
+U kunt zich abonneren op meer waarschuwingen of uw abonnement op bestaande waarschuwingen opzeggen voor een bestaande gegevensstroom op de pagina [!UICONTROL Dataflows] . Zoek de gegevensstroom die u maakt in de lijst en selecteer vervolgens de ovalen (`...`) om een vervolgkeuzemenu met opties weer te geven. Selecteer vervolgens **[!UICONTROL Subscribe alerts]** om de waarschuwingsinstellingen van uw gegevensstroom te wijzigen.
 
-![opties](../../images/tutorials/alerts/options.png)
+![ opties ](../../images/tutorials/alerts/options.png)
 
-Er wordt een pop-upvenster weergegeven met een lijst met waarschuwingen voor bronnen. Selecteer de waarschuwingen waarvan u zich wilt abonneren of hef de selectie van waarschuwingen op. Selecteer **[!UICONTROL Save]**.
+Er wordt een pop-upvenster weergegeven met een lijst met waarschuwingen voor bronnen. Selecteer de waarschuwingen waarvan u zich wilt abonneren of hef de selectie van waarschuwingen op. Selecteer **[!UICONTROL Save]** als u klaar bent.
 
-![opslaan](../../images/tutorials/alerts/save.png)
+![ sparen ](../../images/tutorials/alerts/save.png)
 
 ## Volgende stappen
 
-Dit document verstrekte een geleidelijke gids over hoe te om aan in-context alarm voor uw brongegevens in te tekenen. Zie de klasse [UI-gids voor waarschuwingen](../../../observability/alerts/ui.md).
+Dit document verstrekte een geleidelijke gids over hoe te om aan in-context alarm voor uw brongegevens in te tekenen. Voor meer informatie, zie het [ alarm UI gids ](../../../observability/alerts/ui.md).

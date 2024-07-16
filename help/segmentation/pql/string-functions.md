@@ -1,24 +1,24 @@
 ---
 solution: Experience Platform
-title: PQL-tekenreeksfuncties
-description: PQL (Profile Query Language) biedt functies om interactie met tekenreeksen eenvoudiger te maken.
+title: PQL String-functies
+description: Profile Query Language (PQL) biedt functies om interactie met tekenreeksen eenvoudiger te maken.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 3%
+source-wordcount: '815'
+ht-degree: 1%
 
 ---
 
 # Reeksfuncties
 
-[!DNL Profile Query Language] (PQL) biedt functies om interactie met tekenreeksen eenvoudiger te maken. Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
+[!DNL Profile Query Language] (PQL) biedt functies om interactie met tekenreeksen eenvoudiger te maken. Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht ](./overview.md) worden gevonden.
 
 ## leuk
 
-De `like` wordt gebruikt om te bepalen of een tekenreeks overeenkomt met een opgegeven patroon.
+De functie `like` wordt gebruikt om te bepalen of een tekenreeks overeenkomt met een opgegeven patroon.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {STRING_1} like {STRING_2}
@@ -27,7 +27,7 @@ De `like` wordt gebruikt om te bepalen of een tekenreeks overeenkomt met een opg
 | Argument | Beschrijving |
 | --------- | ----------- |
 | `{STRING_1}` | De tekenreeks die de controle moet uitvoeren. |
-| `{STRING_2}` | De expressie die moet overeenkomen met de eerste tekenreeks. Er zijn twee ondersteunde speciale tekens voor het maken van een expressie: `%` en `_`. <ul><li>`%` wordt gebruikt om nul of meer tekens te vertegenwoordigen.</li><li>`_` wordt gebruikt om precies één teken te vertegenwoordigen.</li></ul> |
+| `{STRING_2}` | De expressie die moet overeenkomen met de eerste tekenreeks. Er zijn twee ondersteunde speciale tekens voor het maken van een expressie: `%` en `_` . <ul><li>`%` wordt gebruikt om nul of meer tekens te vertegenwoordigen.</li><li>`_` wordt gebruikt om precies één teken te vertegenwoordigen.</li></ul> |
 
 **Voorbeeld**
 
@@ -37,11 +37,11 @@ Met de volgende PQL-query worden alle steden opgehaald die het patroon &quot;es&
 city like "%es%"
 ```
 
-## Starts with (Begint met)
+## Begint met
 
-De `startsWith` wordt gebruikt om te bepalen of een tekenreeks begint met een opgegeven subtekenreeks.
+De functie `startsWith` wordt gebruikt om te bepalen of een tekenreeks begint met een opgegeven subtekenreeks.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {STRING_1}.startsWith({STRING_2}, {BOOLEAN})
@@ -55,7 +55,7 @@ De `startsWith` wordt gebruikt om te bepalen of een tekenreeks begint met een op
 
 **Voorbeeld**
 
-De volgende vraag PQL bepaalt, met case gevoeligheid, als de naam van de persoon met &quot;Joe&quot;begint.
+De volgende PQL-query bepaalt, met hoofdlettergevoeligheid, of de naam van de persoon begint met &quot;Joe&quot;.
 
 ```sql
 person.name.startsWith("Joe")
@@ -63,9 +63,9 @@ person.name.startsWith("Joe")
 
 ## Begint niet met
 
-De `doesNotStartWith` wordt gebruikt om te bepalen of een tekenreeks niet begint met een opgegeven subtekenreeks.
+De functie `doesNotStartWith` wordt gebruikt om te bepalen of een tekenreeks niet begint met een opgegeven subtekenreeks.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {STRING_1}.doesNotStartWith({STRING_2}, {BOOLEAN})
@@ -79,17 +79,17 @@ De `doesNotStartWith` wordt gebruikt om te bepalen of een tekenreeks niet begint
 
 **Voorbeeld**
 
-De volgende vraag PQL bepaalt, met case gevoeligheid, als de naam van de persoon niet met &quot;Joe&quot;begint.
+De volgende PQL-query bepaalt, met hoofdlettergevoeligheid, of de naam van de persoon niet begint met &quot;Joe&quot;.
 
 ```sql
 person.name.doesNotStartWith("Joe")
 ```
 
-## Ends with (Eindigt met)
+## Eindigt met
 
-De `endsWith` wordt gebruikt om te bepalen of een tekenreeks eindigt met een opgegeven subtekenreeks.
+De functie `endsWith` wordt gebruikt om te bepalen of een tekenreeks eindigt met een opgegeven subtekenreeks.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {STRING_1}.endsWith({STRING_2}, {BOOLEAN})
@@ -103,7 +103,7 @@ De `endsWith` wordt gebruikt om te bepalen of een tekenreeks eindigt met een opg
 
 **Voorbeeld**
 
-De volgende PQL-query bepaalt, met hoofdlettergevoeligheid, of het e-mailadres van de persoon eindigt met &quot;.com&quot;.
+De volgende PQL-query bepaalt met hoofdlettergevoeligheid of het e-mailadres van de persoon eindigt op &quot;.com&quot;.
 
 ```sql
 person.emailAddress.endsWith(".com")
@@ -111,9 +111,9 @@ person.emailAddress.endsWith(".com")
 
 ## Eindigt niet met
 
-De `doesNotEndWith` wordt gebruikt om te bepalen of een tekenreeks niet eindigt met een opgegeven subtekenreeks.
+De functie `doesNotEndWith` wordt gebruikt om te bepalen of een tekenreeks niet eindigt met een opgegeven subtekenreeks.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {STRING_1}.doesNotEndWith({STRING_2}, {BOOLEAN})
@@ -127,7 +127,7 @@ De `doesNotEndWith` wordt gebruikt om te bepalen of een tekenreeks niet eindigt 
 
 **Voorbeeld**
 
-De volgende PQL-query bepaalt, met hoofdlettergevoeligheid, of het e-mailadres van de persoon niet eindigt met &quot;.com&quot;.
+De volgende PQL-query bepaalt met hoofdlettergevoeligheid of het e-mailadres van de persoon niet eindigt met &quot;.com&quot;.
 
 ```sql
 person.emailAddress.doesNotEndWith(".com")
@@ -135,9 +135,9 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Bevat
 
-De `contains` wordt gebruikt om te bepalen of een tekenreeks een opgegeven subtekenreeks bevat.
+De functie `contains` wordt gebruikt om te bepalen of een tekenreeks een opgegeven subtekenreeks bevat.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {STRING_1}.contains({STRING_2}, {BOOLEAN})
@@ -159,9 +159,9 @@ person.emailAddress.contains("2010@gm")
 
 ## Bevat niet
 
-De `doesNotContain` wordt gebruikt om te bepalen of een tekenreeks geen opgegeven subtekenreeks bevat.
+De functie `doesNotContain` wordt gebruikt om te bepalen of een tekenreeks geen opgegeven subtekenreeks bevat.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {STRING_1}.doesNotContain({STRING_2}, {BOOLEAN})
@@ -175,17 +175,17 @@ De `doesNotContain` wordt gebruikt om te bepalen of een tekenreeks geen opgegeve
 
 **Voorbeeld**
 
-De volgende PQL-query bepaalt, met hoofdlettergevoeligheid, of het e-mailadres van de persoon de tekenreeks &quot;2010@gm&quot; niet bevat.
+De volgende PQL-query bepaalt met hoofdlettergevoeligheid of het e-mailadres van de persoon de tekenreeks &quot;2010@gm&quot; niet bevat.
 
 ```sql
 person.emailAddress.doesNotContain("2010@gm")
 ```
 
-## Equals (Is gelijk aan)
+## Gelijk
 
-De `equals` wordt gebruikt om te bepalen of een tekenreeks gelijk is aan de opgegeven tekenreeks.
+De functie `equals` wordt gebruikt om te bepalen of een tekenreeks gelijk is aan de opgegeven tekenreeks.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {STRING_1}.equals({STRING_2})
@@ -198,7 +198,7 @@ De `equals` wordt gebruikt om te bepalen of een tekenreeks gelijk is aan de opge
 
 **Voorbeeld**
 
-De volgende vraag PQL bepaalt, met gevalgevoeligheid, als de naam van de persoon &quot;John&quot;is.
+De volgende PQL-query bepaalt, met hoofdlettergevoeligheid, of de naam van de persoon &quot;John&quot; is.
 
 ```sql
 person.name.equals("John")
@@ -206,9 +206,9 @@ person.name.equals("John")
 
 ## Niet gelijk aan
 
-De `notEqualTo` wordt gebruikt om te bepalen of een tekenreeks niet gelijk is aan de opgegeven tekenreeks.
+De functie `notEqualTo` wordt gebruikt om te bepalen of een tekenreeks niet gelijk is aan de opgegeven tekenreeks.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {STRING_1}.notEqualTo({STRING_2})
@@ -221,7 +221,7 @@ De `notEqualTo` wordt gebruikt om te bepalen of een tekenreeks niet gelijk is aa
 
 **Voorbeeld**
 
-De volgende vraag PQL bepaalt, met case gevoeligheid, als de naam van de persoon niet &quot;John&quot; is.
+De volgende PQL-query bepaalt, met hoofdlettergevoeligheid, of de naam van de persoon niet &quot;John&quot; is.
 
 ```sql
 person.name.notEqualTo("John")
@@ -229,9 +229,9 @@ person.name.notEqualTo("John")
 
 ## Overeenkomsten
 
-De `matches` wordt gebruikt om te bepalen of een tekenreeks overeenkomt met een specifieke reguliere expressie. Zie [dit document](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) voor meer informatie over overeenkomende patronen in reguliere expressies.
+De functie `matches` wordt gebruikt om te bepalen of een tekenreeks overeenkomt met een specifieke reguliere expressie. Gelieve te verwijzen naar [ dit document ](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) voor meer informatie over passende patronen in regelmatige uitdrukkingen.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {STRING_1}.matches(STRING_2})
@@ -239,7 +239,7 @@ De `matches` wordt gebruikt om te bepalen of een tekenreeks overeenkomt met een 
 
 **Voorbeeld**
 
-De volgende vraag PQL bepaalt, zonder case sensitive te zijn, als de naam van de persoon met &quot;John&quot;begint.
+De volgende PQL-query bepaalt, zonder onderscheid tussen hoofdletters en kleine letters, of de naam van de persoon begint met &quot;John&quot;.
 
 ```sql
 person.name.matches("(?i)^John")
@@ -247,13 +247,13 @@ person.name.matches("(?i)^John")
 
 >[!NOTE]
 >
->Als u reguliere-expressiefuncties gebruikt, zoals `\w`, u **moet** escape the backslash character. Dus in plaats van alleen maar te schrijven `\w`, moet u een extra backslash en schrijven opnemen `\\w`.
+>Als u regelmatige uitdrukkingsfuncties zoals `\w` gebruikt, moet u **** ontsnappen backslash karakter. Dus in plaats van alleen te schrijven `\w` moet u een extra backslash en schrijven `\\w` opnemen.
 
 ## Groep met reguliere expressies
 
-De `regexGroup` Deze functie wordt gebruikt om specifieke informatie te extraheren op basis van de reguliere expressie die wordt gegeven.
+De functie `regexGroup` wordt gebruikt om specifieke informatie te extraheren, gebaseerd op de reguliere expressie die wordt opgegeven.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {STRING}.regexGroup({EXPRESSION})
@@ -269,8 +269,8 @@ emailAddress.regexGroup("@(\\w+)", 1)
 
 >[!NOTE]
 >
->Als u reguliere-expressiefuncties gebruikt, zoals `\w`, u **moet** escape the backslash character. Dus in plaats van alleen maar te schrijven `\w`, moet u een extra backslash en schrijven opnemen `\\w`.
+>Als u regelmatige uitdrukkingsfuncties zoals `\w` gebruikt, moet u **** ontsnappen backslash karakter. Dus in plaats van alleen te schrijven `\w` moet u een extra backslash en schrijven `\\w` opnemen.
 
 ## Volgende stappen
 
-Nu u over koordfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).
+Nu u over koordfuncties hebt geleerd, kunt u hen binnen uw vragen van PQL gebruiken. Voor meer informatie over andere functies van PQL, te lezen gelieve het [ overzicht van Profile Query Language ](./overview.md).

@@ -1,7 +1,8 @@
 ---
 title: Veelgestelde vragen over AI Assistant
 description: Meer informatie over antwoorden op veelgestelde vragen over AI Assistant
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 17a07c11-7bc6-4cba-be0a-d75fdb567053
+source-git-commit: da5a4e099909d7994b9bbe408a70039d34c14b50
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -16,14 +17,14 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over AI Assistan
 
 De gegevens in de antwoorden van AI Assistant worden dagelijks bijgewerkt. Dit betekent dat de gegevens in reacties tot 24 uur ouder kunnen zijn dan de gegevens die u op het gebruikersinterface van het Experience Platform, op het tijdstip van de reactie kunt zien.
 
-Dezelfde beginselen gelden voor toegangscontrole. Het kan AI Medewerker tot 24 uren vergen om op om het even welke veranderingen te wijzen die in toegangsbeheer en toestemmingsconfiguraties worden aangebracht. Lees voor meer informatie de handleiding op [privacy in AI Assistant](./privacy.md).
+Dezelfde beginselen gelden voor toegangscontrole. Het kan AI Medewerker tot 24 uren vergen om op om het even welke veranderingen te wijzen die in toegangsbeheer en toestemmingsconfiguraties worden aangebracht. Voor meer informatie, lees de gids op [ privacy in AI Medewerker ](./privacy.md).
 
 ## Welke toepassingen van de Adobe steunt AI Hulp?
 
 Momenteel is het bereik van AI Assistant als volgt:
 
-* [Productkennis](./home.md#product-knowledge): AI Assistant kan vragen over productkennis voor Experience Platform, Real-time Customer Data Platform en Adobe Journey Optimizer beantwoorden. U kunt ook in de onderwerpen van de productkennis voor Customer Journey Analytics, maar slechts door de Customer Journey Analytics UI delven.
-* [Operationele inzichten](./home.md#operational-insights): U kunt AI Assistant vragen stellen over operationele inzichten met betrekking tot de volgende gegevensobjecten: attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s en bronnen.
+* [ de kennis van het Product ](./home.md#product-knowledge): De Medewerker van AI kan de vragen van de productkennis voor Experience Platform, Real-time Customer Data Platform en Adobe Journey Optimizer beantwoorden. U kunt ook in de onderwerpen van de productkennis voor Customer Journey Analytics, maar slechts door de Customer Journey Analytics UI delven.
+* [ Operationele inzichten ](./home.md#operational-insights): U kunt AI Medewerker met vragen over operationele inzichten op de volgende gegevensvoorwerpen vragen: attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s, en bronnen.
 
 ## Wat zijn de mogelijkheden van AI Assistant?
 

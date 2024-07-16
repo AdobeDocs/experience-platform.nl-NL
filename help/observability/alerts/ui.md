@@ -17,25 +17,25 @@ In de Adobe Experience Platform-gebruikersinterface kunt u een geschiedenis beki
 
 >[!NOTE]
 >
->Voor een inleiding op signaleringen in Experience Platform raadpleegt u de [waarschuwingsoverzicht](./overview.md).
+>Voor een inleiding aan alarm in Experience Platform, zie het [ alarm overzicht ](./overview.md).
 
-Selecteer **[!UICONTROL Alerts]** in de linkernavigatie.
+Selecteer **[!UICONTROL Alerts]** in de linkernavigatie om aan de slag te gaan.
 
-![Waarschuwingen op pagina markeren [!UICONTROL Alerts] in de linkernavigatie.](../images/alerts/ui/workspace.png)
+![ Alarm pagina die [!UICONTROL Alerts] in de linkernavigatie benadrukt.](../images/alerts/ui/workspace.png)
 
 ## Waarschuwingsregels beheren
 
-De **[!UICONTROL Browse]** worden de beschikbare regels weergegeven die een waarschuwing kunnen activeren.
+Het tabblad **[!UICONTROL Browse]** bevat een lijst met de beschikbare regels die een waarschuwing kunnen activeren.
 
-![Een lijst met beschikbare waarschuwingen wordt weergegeven in het gedeelte [!UICONTROL Browse] tab.](../images/alerts/ui/rules.png)
+![ een lijst van beschikbare alarm toont in [!UICONTROL Browse] tabel.](../images/alerts/ui/rules.png)
 
 Selecteer een regel in de lijst om de beschrijving en de configuratieparameters ervan in de rechtertrack weer te geven, inclusief de drempel en de ernst.
 
-![Een waarschuwingsregel die de details in de rechterspoorlijn toont.](../images/alerts/ui/rule-details.png)
+![ benadrukte een waakzame regel die details in het juiste spoor toont.](../images/alerts/ui/rule-details.png)
 
-De ovaal selecteren (**...**) naast de naam van een regel en in een vervolgkeuzelijst worden besturingselementen weergegeven om de waarschuwing in of uit te schakelen (afhankelijk van de huidige status) en om zich te abonneren op e-mailberichten voor de waarschuwing of het abonnement op te zeggen.
+Selecteer de ellips (**...**) naast de naam van een regel, en een dropdown vertoningencontroles om de alarm (afhankelijk van zijn huidige status) toe te laten of onbruikbaar te maken, en om aan e-mailberichten voor de alarm in te tekenen of af te melden.
 
-![De geselecteerde ellipsen tonen het drop-down menu.](../images/alerts/ui/disable-subscribe.png)
+![ de geselecteerde ellipsen openbaren het drop-down menu.](../images/alerts/ui/disable-subscribe.png)
 
 ## Waarschuwingsabonnees beheren
 
@@ -43,58 +43,58 @@ De ovaal selecteren (**...**) naast de naam van een regel en in een vervolgkeuze
 >
 > Als u een waarschuwing wilt toewijzen aan een gebruikers-id van een Adobe, een extern e-mailadres of een lijst met e-mailgroepen, moet u een beheerder zijn.
 
-De **[!UICONTROL Browse]** worden de beschikbare regels weergegeven die een waarschuwing kunnen activeren.
+Het tabblad **[!UICONTROL Browse]** bevat een lijst met de beschikbare regels die een waarschuwing kunnen activeren.
 
-![Een lijst met beschikbare waarschuwingsregels in het dialoogvenster [!UICONTROL Browse] tab.](../images/alerts/ui/rules.png)
+![ een lijst van beschikbare waakzame regels die in [!UICONTROL Browse] worden getoond tabel.](../images/alerts/ui/rules.png)
 
-De ovaal selecteren (**...**) naast de naam van een regel worden in een vervolgkeuzelijst besturingselementen weergegeven. Selecteer **[!UICONTROL Manage alert subscribers]**.
+Selecteer de ellips (**...**) naast de naam van een regel, een dropdown vertoningencontroles. Selecteer **[!UICONTROL Manage alert subscribers]**.
 
-![Selecteer de ellipsen om het drop-down menu te tonen. De [!UICONTROL Manage alert subscribers] wordt gemarkeerd.](../images/alerts/ui/manage-alert-subscribers.png)
+![ selecteer de ellipsen om het drop-down menu te tonen. De optie [!UICONTROL Manage alert subscribers] wordt gemarkeerd. ](../images/alerts/ui/manage-alert-subscribers.png)
 
-De [!UICONTROL Manage alert subscribers] wordt weergegeven. Als u meldingen wilt toewijzen aan specifieke gebruikers, voert u de gebruikers-id, het externe e-mailadres of een lijst met e-mailgroepen van die gebruikers in en drukt u op Enter.
+De pagina [!UICONTROL Manage alert subscribers] wordt weergegeven. Als u meldingen wilt toewijzen aan specifieke gebruikers, voert u de gebruikers-id, het externe e-mailadres of een lijst met e-mailgroepen van die gebruikers in en drukt u op Enter.
 
 >[!NOTE]
 >
 >Als u deze kennisgeving tegelijk naar meerdere gebruikers wilt verzenden, geeft u een lijst op met gebruikers-id&#39;s of e-mailadressen, gescheiden door komma&#39;s.
 
-![De pagina voor het beheren van waarschuwingsabonnees met ingevoerde e-mailadressen.](../images/alerts/ui/manage-alert-add-email.png)
+![ beheert waakzame pagina die van abonnees ingaat e-mailadressen toont.](../images/alerts/ui/manage-alert-add-email.png)
 
 De e-mailadressen worden weergegeven in de lijst met huidige abonnees. Selecteer **[!UICONTROL Update]**.
 
-![De pagina voor het beheren van waarschuwingsabonnees die abonnees markeren en [!UICONTROL Update].](../images/alerts/ui/manage-alert-subscribers-added-email.png)
+![ beheert waakzame abonnees pagina die abonnees en [!UICONTROL Update] benadrukken.](../images/alerts/ui/manage-alert-subscribers-added-email.png)
 
 U hebt gebruikers toegevoegd aan uw lijst met waarschuwingen. De verzonden gebruikers ontvangen nu e-mailmeldingen voor deze waarschuwing zoals in de onderstaande afbeelding wordt weergegeven.
 
-![Een e-mailvoorbeeld van het waarschuwingsbericht dat wordt ontvangen.](../images/alerts/ui/manage-alert-subscribers-email.png)
+![ een e-mailvoorbeeld van het waakzame bericht dat wordt ontvangen.](../images/alerts/ui/manage-alert-subscribers-email.png)
 
 ## E-mailwaarschuwingen inschakelen
 
 Waarschuwingsberichten kunnen rechtstreeks naar uw e-mail worden verzonden.
 
-Selecteer het belpictogram (![belpictogram](../images/alerts/ui/bell-icon.png)) in het bovenste lint aan de rechterkant om meldingen en aankondigingen weer te geven. Selecteer in het vervolgkeuzemenu dat wordt weergegeven het cogopictogram (![cogpictogram](../images/alerts/ui/cog-icon.png)) voor toegang tot de pagina met voorkeuren voor Experiencen Cloud.
+Selecteer het klokpictogram (![ klokpictogram ](../images/alerts/ui/bell-icon.png)) dat in het hoogste lint op het recht wordt gevestigd om berichten en aankondigingen te tonen. In dropdown die verschijnt, selecteer het cogopictogram (![ cog pictogram ](../images/alerts/ui/cog-icon.png)) om tot de de voorkeurspagina van het Experience Cloud toegang te hebben.
 
-![Een lijst met waarschuwingen die het belpictogram en het cogingspictogram markeren.](../images/alerts/ui/edit-preferences.png)
+![ een lijst van alarm die het belpictogram en het cogpictogram benadrukken wordt getoond.](../images/alerts/ui/edit-preferences.png)
 
-De **Profiel** wordt weergegeven. Selecteer de **[!UICONTROL Notifications]** in de linkernavigatie voor toegang tot de voorkeuren voor e-mailwaarschuwingen.
+De **pagina van het Profiel** wordt getoond. Selecteer **[!UICONTROL Notifications]** in de linkernavigatie om de voorkeuren voor e-mailwaarschuwingen te openen.
 
-![De paginamarkering Profiel [!UICONTROL Notifications] in de linkernavigatie.](../images/alerts/ui/profile.png)
+![ de pagina die van het Profiel [!UICONTROL Notifications] in de linkernavigatie benadrukt.](../images/alerts/ui/profile.png)
 
-Naar de **E-mails** onder aan de pagina selecteert u **[!UICONTROL Instant notifications]**
+De rol aan de **sectie van E-mail** bij de bodem van de pagina en selecteert **[!UICONTROL Instant notifications]**
 
-![De sectie E-mails wordt gemarkeerd op de pagina Profiel.](../images/alerts/ui/notifications.png)
+![ de E-mails sectie die in de pagina van het Profiel wordt benadrukt.](../images/alerts/ui/notifications.png)
 
 Alle waarschuwingen waarop je bent geabonneerd, worden nu verzonden naar het e-mailadres dat is verbonden met je Adobe ID-account.
 
 ## Berichtengeschiedenis weergeven
 
-De **[!UICONTROL History]** toont de geschiedenis van ontvangen alarm voor uw organisatie, met inbegrip van de regel die de alarm, teweeggebrachte datum, en opgeloste datum (indien van toepassing) teweegbracht.
+Het tabblad **[!UICONTROL History]** geeft de geschiedenis weer van ontvangen waarschuwingen voor uw organisatie, inclusief de regel die de waarschuwing heeft geactiveerd, de geactiveerde datum en de opgeloste datum (indien van toepassing).
 
-![Een lijst met ontvangen waarschuwingen wordt weergegeven in het dialoogvenster [!UICONTROL History] tab.](../images/alerts/ui/history.png)
+![ een lijst van ontvangen alarm toont in [!UICONTROL History] tabel.](../images/alerts/ui/history.png)
 
 Selecteer een vermeld alarm en meer details verschijnen in het juiste spoor, met inbegrip van een korte samenvatting van de gebeurtenis die de alarm teweegbracht.
 
-![Een waarschuwing met details in het rechterspoor.](../images/alerts/ui/history-details.png)
+![ een alarm benadrukte tonend details in het juiste spoor.](../images/alerts/ui/history-details.png)
 
 ## Volgende stappen
 
-Dit document biedt een overzicht van het weergeven en beheren van waarschuwingen in de gebruikersinterface van het platform. Zie het overzicht op [Waarnembaarheidsinzichten](../home.md) voor meer informatie over de mogelijkheden van de dienst.
+Dit document biedt een overzicht van het weergeven en beheren van waarschuwingen in de gebruikersinterface van het platform. Zie het overzicht op [ Inzichten van de Waarneming ](../home.md) voor meer informatie over de mogelijkheden van de dienst.

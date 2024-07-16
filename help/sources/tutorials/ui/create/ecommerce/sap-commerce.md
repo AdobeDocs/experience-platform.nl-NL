@@ -5,46 +5,46 @@ badge: Beta
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 1%
+source-wordcount: '944'
+ht-degree: 0%
 
 ---
 
-# Een [!DNL SAP Commerce] bronverbinding in de gebruikersinterface
+# Een [!DNL SAP Commerce] bronverbinding maken in de gebruikersinterface
 
 >[!NOTE]
 >
->De [!DNL SAP Commerce] De bron is in bèta. Zie de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+>De bron [!DNL SAP Commerce] is in bèta. Zie het [ overzicht van bronnen ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-De volgende zelfstudie begeleidt u door de stappen om een [!DNL SAP Commerce] bronverbinding die moet worden opgehaald [[!DNL SAP] Abonnementsfacturering](https://www.sap.com/products/financial-management/subscription-billing.html) contactpersonen en klantgegevens via de Adobe Experience Platform-gebruikersinterface.
+Het volgende leerprogramma begeleidt u door de stappen om een [!DNL SAP Commerce] bronverbinding tot stand te brengen om [[!DNL SAP]  het Factureren van het Abonnement ](https://www.sap.com/products/financial-management/subscription-billing.html) contacten en klantengegevens te brengen gebruikend het gebruikersinterface van Adobe Experience Platform.
 
 ## Aan de slag {#getting-started}
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
-   * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u al een geldige [!DNL SAP Commerce] account, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [configureren, gegevensstroom](../../dataflow/ecommerce.md).
+Als u reeds een geldige [!DNL SAP Commerce] rekening hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/ecommerce.md).
 
 ### Vereiste referenties verzamelen {#gather-credentials}
 
-Om verbinding te maken [!DNL SAP Commerce] als u een Experience Platform wilt maken, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Als u [!DNL SAP Commerce] wilt verbinden met een Experience Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Client-id | De waarde van `clientId` uit de servicesleutel. |
-| Clientgeheim | De waarde van `clientSecret` uit de servicesleutel. |
-| Punt Token | De waarde van `url` van de de dienstsleutel, zal het gelijkaardig zijn aan `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| Regio | De locatie van uw datacenter. De regio is aanwezig in de `url` en heeft een waarde vergelijkbaar met `eu10` of `us10`. Als de `url` is `https://eu10.revenue.cloud.sap/api` u hebt `eu10`. |
+| Client-id | De waarde van `clientId` in de servicetoets. |
+| Clientgeheim | De waarde van `clientSecret` in de servicetoets. |
+| Punt Token | De waarde van `url` in de servicesleutel komt overeen met `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` . |
+| Regio | De locatie van uw datacenter. Het gebied is aanwezig in de `url` en heeft een waarde vergelijkbaar met `eu10` of `us10` . Als de waarde `url` bijvoorbeeld `https://eu10.revenue.cloud.sap/api` is, hebt u `eu10` nodig. |
 
-Voor meer informatie raadpleegt u de [[!DNL SAP Commerce] documentatie](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
+Voor meer informatie, gelieve te verwijzen naar de [[!DNL SAP Commerce]  documentatie ](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
 ### Een platformschema maken {#create-platform-schema}
 
-Voordat u een [!DNL SAP Commerce] bronverbinding, moet u ook ervoor zorgen dat u eerst een schema van het Experience Platform aan gebruik voor uw bron creeert. Zie de zelfstudie aan [een platformschema maken](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
+Voordat u een [!DNL SAP Commerce] -bronverbinding maakt, moet u er ook voor zorgen dat u eerst een Experience Platform-schema maakt dat u voor de bron kunt gebruiken. Zie het leerprogramma op [ creërend een schema van het Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
 Vouw de volgende sectie uit om een voorbeeldschema weer te geven.
 
@@ -141,29 +141,29 @@ Vouw de volgende sectie uit om een voorbeeldschema weer te geven.
 
 +++
 
-## Verbind uw [!DNL SAP Commerce] account {#connect-account}
+## Sluit uw [!DNL SAP Commerce] -account aan {#connect-account}
 
-Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de *eCommerce* categorie, selecteert u **[!UICONTROL SAP Commerce]** en selecteer vervolgens **[!UICONTROL Add data]**.
+Onder de *eCommerce* categorie, selecteer **[!UICONTROL SAP Commerce]**, en selecteer dan **[!UICONTROL Add data]**.
 
-![Platform UI screenshot voor catalogus met SAP Commerce-kaart](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
+{het schermschot van het platform UI voor catalogus met de kaart van SAP Commerce ](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)![
 
-De **[!UICONTROL Connect SAP Commerce account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect SAP Commerce account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Bestaande account {#existing-account}
 
-Als u een bestaande account wilt gebruiken, selecteert u de optie [!DNL SAP Commerce] account waarmee u een nieuwe gegevensstroom wilt maken, selecteert u **[!UICONTROL Next]** om verder te gaan.
+Als u een bestaande account wilt gebruiken, selecteert u de [!DNL SAP Commerce] -account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u vervolgens **[!UICONTROL Next]** om door te gaan.
 
-![Platform UI screenshot om SAP Commerce-account te verbinden met een bestaande account](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
+{het schermschot van het platform UI om de rekening van SAP Commerce met een bestaande rekening te verbinden ](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)![
 
 ### Nieuwe account {#new-account}
 
-Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam, een optionele beschrijving en uw referenties op. Selecteer **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u een naam, een optionele beschrijving en uw referenties op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![Platform UI screenshot om SAP Commerce-account te verbinden met een nieuwe account](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
+{het schermschot van het platform UI om de rekening van SAP Commerce met een nieuwe rekening te verbinden ](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)![
 
 ### Gegevens selecteren {#select-data}
 
@@ -176,39 +176,39 @@ Tot slot moet u het objecttype selecteren dat u wilt opnemen in Platform.
 
 >[!BEGINTABS]
 
->[!TAB Klanten]
+>[!TAB  Klanten ]
 
-Als u klantgegevens wilt invoeren, selecteert u **[!UICONTROL Customers]** als het objecttype en selecteer vervolgens **[!UICONTROL Next]**.
+Als u klantgegevens wilt invoeren, selecteert u **[!UICONTROL Customers]** als objecttype en selecteert u vervolgens **[!UICONTROL Next]** .
 
-![Het schermschot van UI van het platform voor de Handel van SAP die configuratie met de geselecteerde optie van Klanten toont](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
+{het schermschot van het Platform UI voor SAP Commerce die configuratie met geselecteerde optie van Klanten toont ](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)![
 
->[!TAB Contactpersonen]
+>[!TAB  Contacten ]
 
-Als u contactgegevens wilt invoeren, selecteert u **[!UICONTROL Contacts]** als het objecttype en selecteer vervolgens **[!UICONTROL Next]**.
+Als u contactgegevens wilt invoeren, selecteert u **[!UICONTROL Contacts]** als objecttype en selecteert u vervolgens **[!UICONTROL Next]** .
 
-![Het schermschot van UI van het platform voor de Handel die van SAP configuratie met geselecteerde optie van Contacten toont](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
+{het schermschot van het platform UI voor SAP Commerce die configuratie met geselecteerde optie van Contacten toont ](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)![
 
 >[!ENDTABS]
 
 ## Volgende stappen {#next-steps}
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL SAP Commerce] account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens over te brengen naar het platform](../../dataflow/ecommerce.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL SAP Commerce] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Platform ](../../dataflow/ecommerce.md) te brengen.
 
 ## Aanvullende bronnen {#additional-resources}
 
-In de volgende secties vindt u aanvullende bronnen die u kunt raadplegen wanneer u de [!DNL SAP Commerce] bron.
+De onderstaande secties bevatten aanvullende bronnen waarnaar u kunt verwijzen wanneer u de [!DNL SAP Commerce] -bron gebruikt.
 
 ### Toewijzing {#mapping}
 
-Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie [UI-hulplijn voor gegevensvoorinstelling](../../../../../data-prep/ui/mapping.md).
+Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
 
 De configuraties van de toewijzing voor uw gegevensstroom zullen afhankelijk van uw schema en het objecten type verschillen dat u selecteert om in te voeren.
 
 >[!BEGINTABS]
 
->[!TAB Klanten]
+>[!TAB  Klanten ]
 
-Voor klantgegevens [!DNL SAP Commerce] gebruikt de [klanten](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) en de [klant-contacten verhoudingen](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) eindpunten van de [!DNL SAP Business Partners] API om de gegevens op te halen
+Voor klantengegevens, [!DNL SAP Commerce] gebruikt [ klanten ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) en [ klant-contacten verhoudingen ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) eindpunten van [!DNL SAP Business Partners] API om de gegevens terug te winnen
 
 Hieronder ziet u een voorbeeld van het toewijzen van configuraties voor [!DNL SAP Commerce] dataflow voor klantgegevens:
 
@@ -228,13 +228,13 @@ Hieronder ziet u een voorbeeld van het toewijzen van configuraties voor [!DNL SA
 | `customReferences[*].id` | Aanvullende gegevens, opgehaald als een matrixobject. |
 | `customReferences[*].typeCode` | Aanvullende gegevens, opgehaald als een matrixobject. |
 
-![De toewijzingsstap van de workflow voor bronnen.](../../../../images/tutorials/create/ecommerce/sap-commerce/mapping-customers.png)
+![ de afbeeldingsstap van het bronwerkschema.](../../../../images/tutorials/create/ecommerce/sap-commerce/mapping-customers.png)
 
->[!TAB Contactpersonen]
+>[!TAB  Contacten ]
 
-Voor contactgegevens [!DNL SAP Commerce] gebruikt de [contactpersonen](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts) het eindpunt van de [!DNL SAP Business Partners] API om de gegevens op te halen.
+Voor contactgegevens, [!DNL SAP Commerce] gebruikt het [ contact ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts) eindpunt van [!DNL SAP Business Partners] API om de gegevens terug te winnen.
 
-Hieronder ziet u een voorbeeld van het toewijzen van configuraties voor [!DNL SAP Commerce] dataflow voor contactgegevens:
+Hieronder ziet u een voorbeeld van toewijzingsconfiguraties voor [!DNL SAP Commerce] dataflow voor contactgegevens:
 
 | Doelveld | Beschrijving |
 | --- | --- |
@@ -247,6 +247,6 @@ Hieronder ziet u een voorbeeld van het toewijzen van configuraties voor [!DNL SA
 | `externalObjectReferences[*].externalId` | Aanvullende gegevens, opgehaald als een matrixobject. |
 | `externalObjectReferences[*].externalIdTypeCode` | Aanvullende gegevens, opgehaald als een matrixobject. |
 
-![De toewijzingsstap van de workflow voor bronnen.](../../../../images/tutorials/create/ecommerce/sap-commerce/mapping-contacts.png)
+![ de afbeeldingsstap van het bronwerkschema.](../../../../images/tutorials/create/ecommerce/sap-commerce/mapping-contacts.png)
 
 >[!ENDTABS]

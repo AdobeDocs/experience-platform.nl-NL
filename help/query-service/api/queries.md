@@ -16,34 +16,34 @@ ht-degree: 0%
 
 ## Voorbeeld-API-aanroepen
 
-De volgende secties lopen door vraag u kunt maken gebruikend `/queries` in de [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+In de volgende secties worden aanroepen doorlopen die u kunt maken met het eindpunt `/queries` in de [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
 ### Een lijst met query&#39;s ophalen
 
-U kunt een lijst van alle vragen voor uw organisatie terugwinnen door een verzoek van de GET tot de `/queries` eindpunt.
+U kunt een lijst van alle vragen voor uw organisatie terugwinnen door een verzoek van de GET tot het `/queries` eindpunt te richten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /queries
 GET /queries?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Optioneel*) Parameters die aan het verzoekweg worden toegevoegd die de resultaten vormen die in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven.
+- `{QUERY_PARAMETERS}`: (*Facultatieve*) Parameters die aan de verzoekweg worden toegevoegd die de resultaten vormen in de reactie zijn teruggekeerd. De veelvoudige parameters kunnen worden omvat, die door ampersands (`&`) worden gescheiden. De beschikbare parameters worden hieronder weergegeven.
 
-**Query-parameters**
+**de parameters van de Vraag**
 
 Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van query&#39;s. Al deze parameters zijn optioneel. Het maken van een vraag aan dit eindpunt zonder parameters zal alle vragen terugwinnen beschikbaar voor uw organisatie.
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. Bijvoorbeeld: `orderby=created` sorteert de resultaten in oplopende volgorde. Een `-` vóór het maken (`orderby=-created`) sorteert objecten in aflopende volgorde. |
+| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated` . `orderby=created` sorteert de resultaten bijvoorbeeld in oplopende volgorde. Wanneer u een `-` vóór het maken (`orderby=-created` ) toevoegt, worden de items in aflopende volgorde gesorteerd. |
 | `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Standaardwaarde: 20*) |
-| `start` | Geef een tijdstempel voor de ISO-indeling op om de resultaten te bestellen. Als geen begindatum wordt gespecificeerd, zal de API vraag eerst de oudste gecreeerde vraag terugkeren, dan zal blijven van recentere resultaten een lijst maken.<br> Met ISO-tijdstempels kunt u de datum en tijd korter maken. De basis ISO-tijdstempels hebben de notatie: `2020-09-07` om de datum 7 september 2020 uit te drukken. Een complexer voorbeeld zou worden geschreven zoals `2022-11-05T08:15:30-05:00` en komt overeen met 5 november 2022, 8:15:30 uur &#39;s ochtends, Amerikaanse Eastern Standard Time. Een tijdzone kan worden opgegeven met een UTC-verschuiving en wordt aangeduid met het achtervoegsel &quot;Z&quot; (`2020-01-01T01:01:01Z`). Als er geen tijdzone is opgegeven, wordt de standaardwaarde nul gebruikt. |
-| `property` | Filterresultaten op basis van velden. De filters **moet** zijn aan HTML ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created`, `updated`, `state`, en `id`. De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan), `>=` (groter dan of gelijk aan), `<=` (kleiner dan of gelijk aan), `==` (gelijk aan), `!=` (niet gelijk aan), en `~` (bevat). Bijvoorbeeld: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retourneert alle query&#39;s met de opgegeven id. |
-| `excludeSoftDeleted` | Geeft aan of een query die is verwijderd, moet worden opgenomen. Bijvoorbeeld: `excludeSoftDeleted=false` zal **include** verwijderde softquery&#39;s. (*Boolean, standaardwaarde: true*) |
-| `excludeHidden` | Geeft aan of niet-door de gebruiker gestuurde query&#39;s moeten worden weergegeven. Als deze waarde is ingesteld op false, **include** query&#39;s die niet door gebruikers worden gestuurd, zoals CURSOR-definities, FETCH of metagegevensquery&#39;s. (*Boolean, standaardwaarde: true*) |
-| `isPrevLink` | De `isPrevLink` queryparameter wordt gebruikt voor paginering. Resultaten van de API-aanroep worden gesorteerd op basis van hun `created` tijdstempel en de `orderby` eigenschap. Tijdens het navigeren door de resultatenpagina&#39;s `isPrevLink` wordt ingesteld op true wanneer achterwaarts wordt gepagineerd. Het keert de orde van de vraag om. Zie &quot;volgende&quot; en &quot;vorige&quot; koppelingen als voorbeelden. |
+| `start` | Geef een tijdstempel voor de ISO-indeling op om de resultaten te bestellen. Als geen begindatum wordt gespecificeerd, zal de API vraag eerst de oudste gecreeerde vraag terugkeren, dan zal blijven van recentere resultaten een lijst maken.<br> Met ISO-tijdstempels kunt u verschillende niveaus van granulariteit opgeven in de datum en tijd. De basis-ISO-tijdstempels hebben de notatie: `2020-09-07` voor het uitdrukken van de datum 7 september 2020. Een complexer voorbeeld zou als `2022-11-05T08:15:30-05:00` worden geschreven en beantwoordt aan 5 November, 2022, 8 :15: 30 am, de Tijd van de Norm van de V.S. Een timezone kan met een UTC compensatie worden voorzien en door het achtervoegsel &quot;Z&quot; (`2020-01-01T01:01:01Z`) wordt aangeduid. Als er geen tijdzone is opgegeven, wordt de standaardwaarde nul gebruikt. |
+| `property` | Filterresultaten op basis van velden. De filters **moeten** HTML zijn ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created` , `updated` , `state` en `id` . De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan), `>=` (groter dan of gelijk aan), `<=` (kleiner dan of gelijk aan), `==` (gelijk aan), `!=` (niet gelijk aan) en `~` (bevat). `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retourneert bijvoorbeeld alle query&#39;s met de opgegeven id. |
+| `excludeSoftDeleted` | Geeft aan of een query die is verwijderd, moet worden opgenomen. Bijvoorbeeld, `excludeSoftDeleted=false` zal **** zachte geschrapte vragen omvatten. (*Van Boole, standaardwaarde: waar*) |
+| `excludeHidden` | Geeft aan of niet-door de gebruiker gestuurde query&#39;s moeten worden weergegeven. Het hebben van deze waarde die aan vals wordt geplaatst zal **** niet-gebruiker gedreven vragen, zoals CURSOR definities, FETCH, of meta-gegevensvragen omvatten. (*Van Boole, standaardwaarde: waar*) |
+| `isPrevLink` | De query-parameter `isPrevLink` wordt gebruikt voor paginering. De resultaten van de API-aanroep worden gesorteerd op basis van hun `created` timestamp en de `orderby` -eigenschap. Wanneer u door de resultatenpagina&#39;s navigeert, wordt `isPrevLink` ingesteld op true wanneer achterwaarts wordt gepagineerd. Het keert de orde van de vraag om. Zie &quot;volgende&quot; en &quot;vorige&quot; koppelingen als voorbeelden. |
 
 **Verzoek**
 
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert HTTP status 200 met een lijst van vragen voor de gespecificeerde organisatie als JSON terug. De volgende reactie keert de recentste vraag terug die voor uw organisatie wordt gecreeerd.
 
@@ -120,9 +120,9 @@ Een succesvolle reactie keert HTTP status 200 met een lijst van vragen voor de g
 
 ### Een query maken
 
-U kunt een nieuwe vraag tot stand brengen door een verzoek van de POST aan `/queries` eindpunt.
+U kunt een nieuwe vraag tot stand brengen door een verzoek van de POST aan het `/queries` eindpunt te doen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /queries
@@ -173,14 +173,14 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | De SQL-query die u wilt maken. |
 | `name` | De naam van uw SQL-query. |
 | `description` | De beschrijving van uw SQL-query. |
-| `queryParameters` | Een sleutelwaarde die wordt geparseerd om het even welke parameters bepaalde waarden in de SQL verklaring te vervangen. Alleen vereist **indien** u gebruikt parametervervangingen binnen SQL u verstrekt. Op deze sleutelwaardeparen wordt het waardetype niet gecontroleerd. |
+| `queryParameters` | Een sleutelwaarde die wordt geparseerd om het even welke parameters bepaalde waarden in de SQL verklaring te vervangen. Het wordt slechts vereist **als** u parametervervangingen binnen SQL gebruikt u verstrekt. Op deze sleutelwaardeparen wordt het waardetype niet gecontroleerd. |
 | `templateId` | De unieke id voor een bestaande query. U kunt dit opgeven in plaats van een SQL-instructie. |
 | `insertIntoParameters` | (Optioneel) Als deze eigenschap is gedefinieerd, wordt deze query omgezet in een INSERT INTO-query. |
 | `ctasParameters` | (Optioneel) Als deze eigenschap is gedefinieerd, wordt deze query omgezet in een CTAS-query. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van de nieuwe query. Nadat de query is geactiveerd en correct is uitgevoerd, wordt de opdracht `state` verandert van `SUBMITTED` tot `SUCCESS`.
+Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van de nieuwe query. Nadat de query is geactiveerd en correct is uitgevoerd, verandert de `state` van `SUBMITTED` in `SUCCESS` .
 
 ```json
 {
@@ -223,13 +223,13 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.cancel` tot [uw gemaakte query annuleren](#cancel-a-query).
+>U kunt de waarde van `_links.cancel` gebruiken om [ uw gecreeerde vraag ](#cancel-a-query) te annuleren.
 
 ### Een query ophalen op ID
 
-U kunt gedetailleerde informatie over een specifieke vraag terugwinnen door een verzoek van de GET aan `/queries` eindpunt en het verstrekken van de vraag `id` waarde in het aanvraagpad.
+U kunt gedetailleerde informatie over een specifieke vraag terugwinnen door een verzoek van de GET tot het `/queries` eindpunt te richten en de waarde van de vraag `id` in de verzoekweg te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /queries/{QUERY_ID}
@@ -237,7 +237,7 @@ GET /queries/{QUERY_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{QUERY_ID}` | De `id` De waarde van de query die u wilt ophalen. |
+| `{QUERY_ID}` | De `id` -waarde van de query die u wilt ophalen. |
 
 **Verzoek**
 
@@ -249,7 +249,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over de gespecificeerde vraag terug.
 
@@ -294,13 +294,13 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.cancel` tot [uw gemaakte query annuleren](#cancel-a-query).
+>U kunt de waarde van `_links.cancel` gebruiken om [ uw gecreeerde vraag ](#cancel-a-query) te annuleren.
 
 ### Een query annuleren of verwijderen op een andere manier
 
-U kunt verzoeken om een opgegeven query te annuleren of te verwijderen door een PATCH-aanvraag in te dienen bij de `/queries` eindpunt en het verstrekken van de vraag `id` waarde in het aanvraagpad.
+U kunt verzoeken om een opgegeven query te annuleren of te verwijderen door een PATCH-aanvraag in te dienen bij het `/queries` -eindpunt en de waarde `id` van de query op te geven in het aanvraagpad.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /queries/{QUERY_ID}
@@ -308,7 +308,7 @@ PATCH /queries/{QUERY_ID}
 
 | Parameter | Beschrijving |
 | -------- | ----------- |
-| `{QUERY_ID}` | De `id` waarde van de vraag u de verrichting wilt uitvoeren op. |
+| `{QUERY_ID}` | De `id` -waarde van de query waarop u de bewerking wilt uitvoeren. |
 
 
 **Verzoek**
@@ -329,9 +329,9 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `op` | Het type bewerking dat op de bron moet worden uitgevoerd. Accepteerde waarden zijn `cancel` en `soft_delete`. Als u de query wilt annuleren, moet u de parameter op met de waarde instellen `cancel `. Merk op dat de zachte schrappingsverrichting de vraag tegenhoudt van zijn teruggekeerd op verzoeken van de GET maar schrapt het niet van het systeem. |
+| `op` | Het type bewerking dat op de bron moet worden uitgevoerd. Accepteerde waarden zijn `cancel` en `soft_delete` . Als u de query wilt annuleren, moet u de parameter op met de waarde `cancel ` instellen. Merk op dat de zachte schrappingsverrichting de vraag tegenhoudt van zijn teruggekeerd op verzoeken van de GET maar schrapt het niet van het systeem. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volgende bericht:
 

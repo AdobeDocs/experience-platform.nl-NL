@@ -7,35 +7,35 @@ description: Leer hoe u batch- en streaming-gegevensstromen verwijdert met de Fl
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 1%
+source-wordcount: '322'
+ht-degree: 0%
 
 ---
 
 # Een gegevensstroom verwijderen met de Flow Service API
 
-U kunt batch- en streaming-gegevensstromen verwijderen die fouten bevatten of die verouderd zijn met de opdracht [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+U kunt partij en het stromen dataflows schrappen die fouten bevatten of verouderd zijn geworden gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-In deze zelfstudie worden de stappen beschreven voor het verwijderen van gegevensstromen die zijn gemaakt met zowel batch- als streaming bronnen via [!DNL Flow Service].
+In deze zelfstudie worden de stappen beschreven voor het verwijderen van gegevensstromen die met [!DNL Flow Service] zijn gemaakt voor zowel batchbronnen als streamingbronnen.
 
 ## Aan de slag
 
-Voor deze zelfstudie hebt u een geldige stroom-id nodig. Als u geen geldige stroom-id hebt, selecteert u de gewenste connector in het menu [overzicht van bronnen](../../home.md) en voer de stappen uit die zijn beschreven voordat u deze zelfstudie uitvoert.
+Voor deze zelfstudie hebt u een geldige stroom-id nodig. Als u geen geldige stroom identiteitskaart hebt, selecteer uw schakelaar van keus van het [ overzicht van bronnen ](../../home.md) en volg de stappen die vóór het proberen van dit leerprogramma worden geschetst.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
 
 ## Een gegevensstroom verwijderen
 
 Met een bestaande stroom-id kunt u een gegevensstroom verwijderen door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /flows/{FLOW_ID}
@@ -43,7 +43,7 @@ DELETE /flows/{FLOW_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FLOW_ID}` | De unieke `id` waarde voor de gegevensstroom u wilt schrappen. |
+| `{FLOW_ID}` | De unieke `id` -waarde voor de gegevensstroom die u wilt verwijderen. |
 
 **Verzoek**
 
@@ -56,12 +56,12 @@ curl -X DELETE \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst. U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan dataflow te proberen. De API retourneert een HTTP 404 (Not Found)-fout die aangeeft dat de gegevensstroom is verwijderd.
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u de opdracht [!DNL Flow Service] API om een bestaande gegevensstroom te verwijderen.
+Door deze zelfstudie te volgen, hebt u de [!DNL Flow Service] API gebruikt om een bestaande gegevensstroom te verwijderen.
 
-Raadpleeg de zelfstudie voor informatie over het uitvoeren van deze bewerkingen in de gebruikersinterface. [verwijderen, gegevensstromen in de gebruikersinterface](../../tutorials/ui/delete.md)
+Voor stappen op hoe te om deze verrichtingen uit te voeren die het gebruikersinterface gebruiken, gelieve te verwijzen naar het leerprogramma op [ het schrappen van dataflows in UI ](../../tutorials/ui/delete.md)

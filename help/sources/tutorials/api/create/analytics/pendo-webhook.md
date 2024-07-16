@@ -1,39 +1,39 @@
 ---
-title: Creeer een Verbinding Bron en Dataflow voor Pendo gebruikend de Dienst API van de Stroom
+title: Een Source Connection en Dataflow voor Pendo maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met Pendo met behulp van de Flow Service API.
 badge: Beta
 exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1455'
+source-wordcount: '1391'
 ht-degree: 0%
 
 ---
 
-# Een bronverbinding en gegevensstroom maken voor [!DNL Pendo] de Flow Service API gebruiken
+# Een bronverbinding en gegevensstroom maken voor [!DNL Pendo] met de Flow Service API
 
 >[!NOTE]
 >
->De [!DNL Pendo] De bron is in bèta. Lees de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+>De bron [!DNL Pendo] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-Het volgende leerprogramma begeleidt u door de stappen om een bronverbinding en een dataflow tot stand te brengen [[!DNL Pendo]](https://Pendo.com/) gebeurtenisgegevens naar Adobe Experience Platform met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Het volgende leerprogramma begeleidt u door de stappen om een bronverbinding en een dataflow tot stand te brengen om [[!DNL Pendo] ](https://Pendo.com/) gebeurtenisgegevens aan Adobe Experience Platform te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag {#getting-started}
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-## Verbinden [!DNL Pendo] naar Platform met de [!DNL Flow Service] API {#connect-platform-to-flow-api}
+## Verbinding maken [!DNL Pendo] met platform met behulp van de [!DNL Flow Service] API {#connect-platform-to-flow-api}
 
-Hieronder worden de stappen beschreven die u moet uitvoeren om een bronverbinding en een gegevensstroom te maken om uw [!DNL Pendo] gebeurtenisgegevens naar Experience Platform.
+In het volgende voorbeeld worden de stappen beschreven die u moet uitvoeren om een bronverbinding en een gegevensstroom te maken om uw [!DNL Pendo] gebeurtenisgegevens naar het Experience Platform te brengen.
 
 ### Een bronverbinding maken {#source-connection}
 
-Maak een bronverbinding door een POST aan te vragen bij de [!DNL Flow Service] API, terwijl de verbindings specificatie-id van uw bron, details zoals naam en beschrijving, en het formaat van uw gegevens wordt verstrekt.
+Maak een bronverbinding door een verzoek tot POST in te dienen op de [!DNL Flow Service] API en de verbindingsspecificatie-id van uw bron, details zoals naam en beschrijving en de indeling van uw gegevens op te geven.
 
-**API-indeling**
+**API formaat**
 
 ```https
 POST /sourceConnections
@@ -41,7 +41,7 @@ POST /sourceConnections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een bronverbinding gemaakt voor [!DNL Pendo]:
+Met de volgende aanvraag wordt een bronverbinding gemaakt voor [!DNL Pendo] :
 
 ```shell
 curl -X POST \
@@ -70,11 +70,11 @@ curl -X POST \
 | `name` | De naam van de bronverbinding. Zorg ervoor dat de naam van uw bronverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw bronverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de bronverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met uw bron. |
-| `data.format` | Het formaat van de [!DNL Pendo] gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json`. |
+| `data.format` | De indeling van de [!DNL Pendo] -gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json` . |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is in een latere stap vereist om een gegevensstroom te maken.
+Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde bronverbinding terug. Deze id is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -87,23 +87,23 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van het Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doelXDM schema kan tot stand worden gebracht door een POST verzoek aan te voeren [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+Een doelXDM schema kan worden gecreeerd door een verzoek van de POST aan de [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) uit te voeren.
 
-Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
+Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [ creërend een schema gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Een doelgegevensset maken {#target-dataset}
 
-Een doeldataset kan tot stand worden gebracht door een verzoek van de POST aan [Catalogusservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), op voorwaarde dat de id van het doelschema zich binnen de payload bevindt.
+Een doeldataset kan worden gecreeerd door een verzoek van de POST aan de [ Dienst API van de Catalogus uit te voeren ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met de API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [ het creëren van een dataset gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Een doelverbinding maken {#target-connection}
 
-Een doelverbinding vertegenwoordigt de verbinding met de bestemming waar de ingesloten gegevens moeten worden opgeslagen. Om een doelverbinding tot stand te brengen, moet u vaste identiteitskaart van de verbindingsspecificatie verstrekken die aan het gegevens meer beantwoordt. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Een doelverbinding vertegenwoordigt de verbinding met de bestemming waar de ingesloten gegevens moeten worden opgeslagen. Om een doelverbinding tot stand te brengen, moet u vaste identiteitskaart van de verbindingsspecificatie verstrekken die aan het gegevens meer beantwoordt. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c` .
 
-U hebt nu de unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan het gegevensmeer. Met deze id&#39;s kunt u een doelverbinding maken met de [!DNL Flow Service] API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
+U hebt nu de unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan het gegevensmeer. Met behulp van deze id&#39;s kunt u een doelverbinding maken met de [!DNL Flow Service] API om de gegevensset op te geven die de binnenkomende brongegevens zal bevatten.
 
-**API-indeling**
+**API formaat**
 
 ```https
 POST /targetConnections
@@ -111,7 +111,7 @@ POST /targetConnections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een doelverbinding gemaakt voor [!DNL Pendo]:
+Met de volgende aanvraag wordt een doelverbinding voor [!DNL Pendo] gemaakt:
 
 ```shell
 curl -X POST \
@@ -145,13 +145,13 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | De naam van de doelverbinding. Zorg ervoor dat de naam van uw doelverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw doelverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de doelverbinding. |
-| `connectionSpec.id` | De id van de verbindingsspecificatie die correspondeert met data Lake. Deze vaste ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Het formaat van de [!DNL Pendo] gegevens die u wilt invoeren. |
+| `connectionSpec.id` | De id van de verbindingsspecificatie die correspondeert met data Lake. Deze vaste id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c` . |
+| `data.format` | De indeling van de [!DNL Pendo] -gegevens die u wilt invoeren. |
 | `params.dataSetId` | De doel dataset ID die in een vorige stap wordt teruggewonnen. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id`). Deze id is vereist in latere stappen.
+Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverbinding (`id`) terug. Deze id is vereist in latere stappen.
 
 ```json
 {
@@ -162,9 +162,9 @@ Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id
 
 ### Een toewijzing maken {#mapping}
 
-Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt. Dit wordt bereikt door een verzoek van de POST uit te voeren aan [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) met gegevenstoewijzingen die zijn gedefinieerd in de payload van het verzoek.
+Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt. Dit wordt bereikt door een verzoek van de POST aan [[!DNL Data Prep]  API ](https://www.adobe.io/experience-platform-apis/references/data-prep/) met gegevenstoewijzingen uit te voeren die binnen de verzoeklading worden bepaald.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /conversion/mappingSets
@@ -224,14 +224,14 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `outputSchema.schemaRef.id` | De id van de [doel-XDM-schema](#target-schema) gegenereerd in een eerdere stap. |
+| `outputSchema.schemaRef.id` | Identiteitskaart van het [ doelXDM- schema ](#target-schema) in een vroegere stap wordt geproduceerd. |
 | `mappings.sourceType` | Het bronkenmerktype dat wordt toegewezen. |
 | `mappings.source` | Het bronkenmerk dat moet worden toegewezen aan een XDM-doelpad. |
 | `mappings.destination` | Het doel-XDM-pad waaraan het bronkenmerk wordt toegewezen. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de unieke id (`id`). Deze waarde is in een latere stap vereist om een gegevensstroom te maken.
+Een succesvolle reactie keert details van de pas gecreëerde afbeelding met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze waarde is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -246,15 +246,15 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar het verzamelen van gegevens van [!DNL Pendo] aan Platform moet een gegevensstroom creëren. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar het verzenden van gegevens van [!DNL Pendo] naar Platform is het maken van een gegevensstroom. Momenteel zijn de volgende vereiste waarden voorbereid:
 
-* [Bronverbinding-id](#source-connection)
+* [Source-verbinding-id](#source-connection)
 * [Doel-verbindings-id](#target-connection)
 * [Toewijzing-id](#mapping)
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /flows
@@ -298,18 +298,18 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van uw gegevensstroom. Zorg ervoor dat de naam van uw gegevensstroom beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw gegevensstroom omhoog te kijken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw gegevensstroom. |
-| `flowSpec.id` | De flow specification-id die is vereist om een gegevensstroom te maken. Deze vaste ID is: `e77fde5a-22a8-11ed-861d-0242ac120002`. |
-| `flowSpec.version` | De corresponderende versie van de specificatie-id voor de stroom. Deze waarde wordt standaard ingesteld op `1.0`. |
-| `sourceConnectionIds` | De [bron-verbindings-id](#source-connection) gegenereerd in een eerdere stap. |
-| `targetConnectionIds` | De [doel-verbindings-id](#target-connection) gegenereerd in een eerdere stap. |
+| `flowSpec.id` | De flow specification-id die is vereist om een gegevensstroom te maken. Deze vaste id is: `e77fde5a-22a8-11ed-861d-0242ac120002` . |
+| `flowSpec.version` | De corresponderende versie van de specificatie-id voor de stroom. Deze waarde is standaard ingesteld op `1.0` . |
+| `sourceConnectionIds` | [ bron verbindingsidentiteitskaart ](#source-connection) die in een vroegere stap wordt geproduceerd. |
+| `targetConnectionIds` | De [ identiteitskaart van de doelverbinding ](#target-connection) die in een vroegere stap wordt geproduceerd. |
 | `transformations` | Deze eigenschap bevat de verschillende transformaties die op de gegevens moeten worden toegepast. Dit bezit wordt vereist wanneer het brengen van niet-XDM-Volgzame gegevens aan Platform. |
 | `transformations.name` | De naam die aan de transformatie is toegewezen. |
-| `transformations.params.mappingId` | De [toewijzing-id](#mapping) gegenereerd in een eerdere stap. |
-| `transformations.params.mappingVersion` | De corresponderende versie van de toewijzing-id. Deze waarde wordt standaard ingesteld op `0`. |
+| `transformations.params.mappingId` | [ afbeelding identiteitskaart ](#mapping) die in een vroegere stap wordt geproduceerd. |
+| `transformations.params.mappingVersion` | De corresponderende versie van de toewijzing-id. Deze waarde is standaard ingesteld op `0` . |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom. Met deze id kunt u uw gegevensstroom controleren, bijwerken of verwijderen.
+Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd dataflow terug. Met deze id kunt u uw gegevensstroom controleren, bijwerken of verwijderen.
 
 ```json
 {
@@ -322,9 +322,9 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom. Met
 
 Met uw gemaakte gegevensstroom, kunt u uw het stromen eindpunt URL nu terugwinnen. U zult dit eindpunt URL gebruiken om uw bron aan een webhaak in te tekenen, toestaand uw bron om met Experience Platform te communiceren.
 
-Om uw het stromen eindpunt URL terug te winnen, doe een verzoek van de GET aan `/flows` en geef de id van de gegevensstroom op.
+Om uw het stromen eindpunt URL terug te winnen, doe een verzoek van de GET aan het `/flows` eindpunt en verstrek identiteitskaart van uw gegevensstroom.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /flows/{FLOW_ID}
@@ -341,9 +341,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert informatie over uw gegevensstroom, met inbegrip van uw eindpunt URL terug, duidelijk als `inletUrl`. Zie de [Webhaak instellen](../../../ui/create/analytics/pendo-webhook.md#get-streaming-endpoint-url) pagina om de vereiste waarde te verkrijgen.
+Een geslaagde reactie retourneert informatie over de gegevensstroom, inclusief de URL van het eindpunt, gemarkeerd als `inletUrl` . Verwijs naar de [ pagina van Webhaak van de Opstelling ](../../../ui/create/analytics/pendo-webhook.md#get-streaming-endpoint-url) om de vereiste waarde te verkrijgen.
 
 ```json
 {
@@ -433,20 +433,20 @@ In de volgende sectie vindt u informatie over de stappen die u kunt uitvoeren om
 
 ### Uw gegevensstroom controleren {#monitor-dataflow}
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Lees de handleiding voor volledige API-voorbeelden op [de gegevensstroom van uw bronnen controleren met behulp van de API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor volledige API voorbeelden, lees de gids op [ controlerend uw brongegevens gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
 
 ### Uw gegevensstroom bijwerken {#update-dataflow}
 
-Werk de details van uw dataflow, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen bij door een verzoek van de PATCH aan het `/flows` eindpunt van [!DNL Flow Service] API, terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-verzoek indient, moet u de unieke gegevens van uw gegevensstroom opgeven `etag` in de `If-Match` header. Lees de handleiding voor volledige API-voorbeelden op [bronnen bijwerken met behulp van de API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Werk de details van uw gegevensstroom bij, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen door een PATCH verzoek aan het `/flows` eindpunt van [!DNL Flow Service] API te richten, terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-verzoek indient, moet u de unieke `etag` gegevens van uw gegevensstroom opgeven in de `If-Match` -header. Voor volledige API voorbeelden, lees de gids bij [ het bijwerken bronnen dataflows gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Uw account bijwerken {#update-account}
 
-Werk de naam, beschrijving en referenties van uw bronaccount bij door een PATCH-verzoek uit te voeren naar de [!DNL Flow Service] API terwijl het verstrekken van uw identiteitskaart van de basisverbinding als vraagparameter. Wanneer u een PATCH-aanvraag indient, moet u de unieke bronaccount opgeven `etag` in de `If-Match` header. Lees de handleiding voor volledige API-voorbeelden op [het bijwerken van uw bronrekening gebruikend API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Werk de naam, beschrijving en gegevens van uw bronaccount bij door een PATCH-aanvraag uit te voeren naar de [!DNL Flow Service] API en uw basis-verbindings-id op te geven als een queryparameter. Wanneer u een PATCH-aanvraag indient, moet u de unieke `etag` van uw bronaccount opgeven in de `If-Match` -header. Voor volledige API voorbeelden, lees de gids bij [ het bijwerken van uw bronrekening gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Uw gegevensstroom verwijderen {#delete-dataflow}
 
-Verwijder de gegevensstroom door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl het verstrekken van identiteitskaart van dataflow wilt u als deel van de vraagparameter schrappen. Lees de handleiding voor volledige API-voorbeelden op [verwijderen, gegevensstromen met behulp van de API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+Verwijder de gegevensstroom door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API en de id op te geven van de gegevensstroom die u wilt verwijderen als onderdeel van de queryparameter. Voor volledige API voorbeelden, lees de gids op [ schrappend uw dataflows gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
 ### Uw account verwijderen {#delete-account}
 
-Uw account verwijderen door een DELETE-verzoek uit te voeren aan de [!DNL Flow Service] API terwijl het verstrekken van de identiteitskaart van de basisverbinding van de rekening u wilt schrappen. Lees de handleiding voor volledige API-voorbeelden op [verwijderen van uw bronaccount met behulp van de API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+Verwijder uw account door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl u de basis verbinding-id opgeeft van het account dat u wilt verwijderen. Voor volledige API voorbeelden, lees de gids bij [ het schrappen van uw bronrekening gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).

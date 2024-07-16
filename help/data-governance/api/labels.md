@@ -8,27 +8,27 @@ exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '504'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 # Labels-eindpunt
 
-Met labels voor gegevensgebruik kunt u gegevens indelen volgens het gebruiksbeleid dat op die gegevens van toepassing kan zijn. De `/labels` in de [!DNL Policy Service API] kunt u gegevensgebruikslabels programmatisch beheren binnen uw ervaringstoepassing.
+Met labels voor gegevensgebruik kunt u gegevens indelen volgens het gebruiksbeleid dat op die gegevens van toepassing kan zijn. Met het `/labels` -eindpunt in de [!DNL Policy Service API] kunt u gegevensgebruikslabels programmatisch beheren in uw ervaringstoepassing.
 
 >[!NOTE]
 >
->De `/labels` het eindpunt wordt slechts gebruikt om, gegevensgebruiksetiketten terug te winnen tot stand te brengen en bij te werken. Voor stappen op hoe te om etiketten aan datasets en gebieden toe te voegen gebruikend API vraag, verwijs naar de gids op [gegevenssetlabels beheren](../labels/dataset-api.md).
+>Het `/labels` eindpunt wordt alleen gebruikt om gegevensgebruikslabels op te halen, te maken en bij te werken. Voor stappen op hoe te om etiketten aan datasets en gebieden toe te voegen die API vraag gebruiken, verwijs naar de gids op [ het beheren van datasetetiketten ](../labels/dataset-api.md).
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
+Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Policy Service API] ](https://www.adobe.io/experience-platform-apis/references/policy-service/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
 
 ## Een lijst met labels ophalen {#list}
 
-U kunt alle `core` of `custom` etiketten door een verzoek van de GET aan `/labels/core` of `/labels/custom`, respectievelijk.
+U kunt alle labels `core` en `custom` weergeven door een aanvraag voor een GET in te dienen bij `/labels/core` respectievelijk `/labels/custom` .
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /labels/core
@@ -48,9 +48,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert een lijst van douanelabels terug die van het systeem worden teruggewonnen. Aangezien de voorbeeldaanvraag hierboven is ingediend op `/labels/custom`In de onderstaande reactie worden alleen aangepaste labels weergegeven.
+Een succesvolle reactie keert een lijst van douanelabels terug die van het systeem worden teruggewonnen. Aangezien de bovenstaande voorbeeldaanvraag is ingediend bij `/labels/custom` , worden in de onderstaande reactie alleen aangepaste labels weergegeven.
 
 ```json
 {
@@ -108,9 +108,9 @@ Een succesvolle reactie keert een lijst van douanelabels terug die van het syste
 
 ## Een label opzoeken {#look-up}
 
-U kunt een specifiek label opzoeken door dat label op te nemen `name` eigenschap in het pad van een aanvraag van een GET naar de [!DNL Policy Service] API.
+U kunt een specifiek label opzoeken door de eigenschap `name` van dat label op te nemen in het pad van een GET-aanvraag naar de [!DNL Policy Service] API.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /labels/core/{LABEL_NAME}
@@ -119,11 +119,11 @@ GET /labels/custom/{LABEL_NAME}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{LABEL_NAME}` | De `name` eigenschap van het aangepaste label dat u wilt opzoeken. |
+| `{LABEL_NAME}` | De eigenschap `name` van het aangepaste label dat u wilt opzoeken. |
 
 **Verzoek**
 
-Met het volgende verzoek wordt het aangepaste label opgehaald `L2`, zoals aangegeven in het pad.
+Met de volgende aanvraag wordt het aangepaste label `L2` opgehaald, zoals aangegeven in het pad.
 
 ```shell
 curl -X GET \
@@ -134,7 +134,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Als de reactie is gelukt, worden de details van het aangepaste label geretourneerd.
 
@@ -162,9 +162,9 @@ Als de reactie is gelukt, worden de details van het aangepaste label geretournee
 
 ## Een aangepast label maken of bijwerken {#create-update}
 
-Als u een aangepast label wilt maken of bijwerken, moet u de PUT [!DNL Policy Service] API.
+Als u een aangepast label wilt maken of bijwerken, moet u een aanvraag voor een PUT indienen bij de API van [!DNL Policy Service] .
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /labels/custom/{LABEL_NAME}
@@ -172,11 +172,11 @@ PUT /labels/custom/{LABEL_NAME}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{LABEL_NAME}` | De `name` eigenschap van een aangepast label. Als er geen aangepast label met deze naam bestaat, wordt een nieuw label gemaakt. Als er een label bestaat, wordt dat label bijgewerkt. |
+| `{LABEL_NAME}` | De eigenschap `name` van een aangepast label. Als er geen aangepast label met deze naam bestaat, wordt een nieuw label gemaakt. Als er een label bestaat, wordt dat label bijgewerkt. |
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een nieuw label gemaakt. `L3`, waarin gegevens worden beschreven die informatie bevatten over de geselecteerde betalingsplannen van klanten.
+In het volgende verzoek wordt een nieuw label `L3` gemaakt dat gegevens beschrijft die informatie bevatten over de geselecteerde betaalplannen van klanten.
 
 ```shell
 curl -X PUT \
@@ -196,11 +196,11 @@ curl -X PUT \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | Een unieke tekenreeks-id voor het label. Deze waarde wordt gebruikt voor raadplegingsdoeleinden en het toepassen van het etiket op datasets en gebieden, en daarom wordt geadviseerd dat het kort en beknopt is. |
-| `category` | De categorie van het etiket. Hoewel u uw eigen categorieën voor douanelabels kunt tot stand brengen, wordt het sterk geadviseerd om te gebruiken `Custom` als u het label in de gebruikersinterface wilt weergeven. |
+| `category` | De categorie van het etiket. Hoewel u uw eigen categorieën voor douanelabels kunt tot stand brengen, adviseert men sterk dat u `Custom` gebruikt als u het etiket in UI wilt verschijnen. |
 | `friendlyName` | Een vriendelijke naam voor het label, dat wordt gebruikt voor weergavedoeleinden. |
 | `description` | (Optioneel) Een beschrijving van het label voor verdere context. |
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van het aangepaste label, met HTTP-code 200 (OK) als een bestaand label is bijgewerkt, of 201 (Gemaakt) als een nieuw label is gemaakt.
 
@@ -228,4 +228,4 @@ Een geslaagde reactie retourneert de details van het aangepaste label, met HTTP-
 
 ## Volgende stappen
 
-In deze handleiding wordt ingegaan op het gebruik van het `/labels` eindpunt in de Dienst API van het Beleid. Voor stappen op hoe te om etiketten op datasets en gebieden toe te passen, verwijs naar [API-handleiding voor gegevenssetlabels](../labels/dataset-api.md).
+Deze gids behandelde het gebruik van het `/labels` eindpunt in de Dienst API van het Beleid. Voor stappen op hoe te om etiketten op datasets en gebieden toe te passen, verwijs naar de [ dataset etiketten API gids ](../labels/dataset-api.md).

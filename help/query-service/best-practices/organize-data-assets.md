@@ -13,17 +13,17 @@ ht-degree: 0%
 
 Dit document biedt richtlijnen over aanbevolen procedures voor het ordenen van gegevenselementen, zoals gegevenssets, weergaven en tijdelijke tabellen voor gebruik met de Adobe Experience Platform Query Service. Hierin wordt beschreven hoe u uw gegevens kunt structureren en hoe u deze gegevens kunt openen, bijwerken en verwijderen.
 
-Het is belangrijk dat u uw gegevenselementen logisch ordent binnen het Platform [!DNL Data Lake] als ze groeien. De Dienst van de vraag breidt SQL constructies uit die u toelaten om gegevensactiva binnen een zandbak logisch gezien te groeperen. Deze organisatiemethode staat voor het delen van gegevensactiva tussen schema&#39;s toe zonder de behoefte om hen fysiek te bewegen.
+Het is belangrijk dat u uw gegevenselementen logisch ordent binnen het Platform [!DNL Data Lake] terwijl ze groeien. De Dienst van de vraag breidt SQL constructies uit die u toelaten om gegevensactiva binnen een zandbak logisch gezien te groeperen. Deze organisatiemethode staat voor het delen van gegevensactiva tussen schema&#39;s toe zonder de behoefte om hen fysiek te bewegen.
 
 ## Aan de slag
 
-Voordat u doorgaat met dit document, hebt u een goed inzicht in [Query-service](../home.md) functies en hebben de [gebruikersinterfacegids](../ui/user-guide.md).
+Alvorens met dit document verder te gaan, zou u een goed begrip van ](../home.md) eigenschappen van de Dienst van de Vraag moeten hebben [ en de [ gids van het gebruikersinterface ](../ui/user-guide.md) gelezen.
 
 ## Gegevens ordenen in Query Service
 
 In de volgende voorbeelden worden de constructies getoond die beschikbaar zijn via Adobe Experience Platform Query Service om uw gegevens logisch te ordenen met behulp van de standaard SQL-syntaxis. U moet eerst een database maken die fungeert als container voor uw gegevenspunten. Een gegevensbestand kan één of meerdere schema&#39;s bevatten, en elk schema kan één of meerdere verwijzingen naar een gegevenselement (datasets, meningen, tijdelijke lijsten, enz.) dan hebben. Deze verwijzingen omvatten om het even welke verhouding of associaties tussen de datasets.
 
-Zie de [Gebruikershandleiding voor de Query Editor](../ui/user-guide.md) voor gedetailleerde begeleiding op hoe te om de Dienst UI van de Vraag te gebruiken om SQL vragen tot stand te brengen.
+Zie de [ gebruikersgids van de Redacteur van de Vraag ](../ui/user-guide.md) voor gedetailleerde begeleiding op hoe te om de Dienst UI van de Vraag te gebruiken om SQL vragen tot stand te brengen.
 
 De volgende SQL-constructies om gegevenssets logisch te organiseren in een sandbox worden ondersteund.
 
@@ -36,13 +36,13 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-In het voorbeeld (iets afgekapt voor de beknoptheid) wordt deze methode getoond waar `databaseA` bevat schema `schema1`.
+Het voorbeeld (iets afgekapt voor bondigheid) demonstreert deze methode waarbij `databaseA` schema `schema1` bevat.
 
 ## Gegevenselementen aan een schema koppelen
 
 Zodra een schema is gecreeerd om als container voor de gegevensactiva te handelen, kan elke dataset met één of meerdere schema&#39;s in het gegevensbestand worden geassocieerd door standaard SQL te gebruiken ALTER syntaxis van de LIJST.
 
-In het volgende voorbeeld wordt toegevoegd `dataset1`, `dataset2`, `dataset3` en `v1` aan de `databaseA.schema1` in het vorige voorbeeld gemaakte container.
+In het volgende voorbeeld worden `dataset1` , `dataset2` , `dataset3` en `v1` toegevoegd aan de container `databaseA.schema1` die in het vorige voorbeeld is gemaakt.
 
 ```SQL
 ALTER TABLE dataset1 ADD SCHEMA databaseA.schema1;
@@ -56,11 +56,11 @@ ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 
 ## Gegevenselementen openen vanuit de gegevenscontainer
 
-Door de databasenaam op de juiste manier te kwalificeren, [!DNL PostgreSQL] client kan verbinding maken met elke gegevensstructuur die u hebt gemaakt met het trefwoord SHOW. Zie voor meer informatie over het trefwoord SHOW de [Sectie TONEN in de SQL-syntaxisdocumentatie](../sql/syntax.md#show).
+Door de databasenaam correct te kwalificeren, kan elke [!DNL PostgreSQL] -client verbinding maken met elke gegevensstructuur die u hebt gemaakt met het trefwoord SHOW. Voor meer informatie over het SHOW sleutelwoord gelieve te zien [ TONEN sectie binnen de SQL syntaxisdocumentatie ](../sql/syntax.md#show).
 
-&quot;all&quot; is de standaarddatabasenaam die elke database- en schemacontainer in een sandbox bevat. Wanneer u een [!DNL PostgreSQL] verbinding gebruiken `dbname="all"`, kunt u **alle** database en schema die u hebt gemaakt om uw gegevens logisch te ordenen.
+&quot;all&quot; is de standaarddatabasenaam die elke database- en schemacontainer in een sandbox bevat. Wanneer u een [!DNL PostgreSQL] verbinding gebruikend `dbname="all"` maakt, kunt u tot **toegang hebben om het even welk** gegevensbestand en schema dat u hebt gecreeerd om uw gegevens logisch gezien te organiseren.
 
-Alle databases weergeven onder `dbname="all"` geeft drie beschikbare databases weer.
+Als u alle databases opsomt onder `dbname="all"` , worden drie beschikbare databases weergegeven.
 
 ```sql
 SHOW DATABASES;
@@ -72,7 +72,7 @@ databaseB
 databaseC
 ```
 
-Alle schema&#39;s weergeven onder `dbname="all"` geeft de drie schema&#39;s weer die betrekking hebben op elke database in de sandbox.
+Als u alle schema&#39;s onder `dbname="all"` opgeeft, worden de drie schema&#39;s weergegeven die betrekking hebben op elke database in de sandbox.
 
 ```SQL
 SHOW SCHEMAS;
@@ -84,7 +84,7 @@ databaseA      | schema2
 databaseB      | schema3
 ```
 
-Wanneer u een [!DNL PostgreSQL] verbinding gebruiken `dbname="databaseA"`kunt u elk schema benaderen dat aan die specifieke database is gekoppeld, zoals in het onderstaande voorbeeld wordt getoond.
+Wanneer u een [!DNL PostgreSQL] verbinding maakt met `dbname="databaseA"` , kunt u elk schema openen dat aan die specifieke database is gekoppeld, zoals in het onderstaande voorbeeld wordt getoond.
 
 ```sql
 SHOW DATABASES;
@@ -102,7 +102,7 @@ databaseA      | schema1
 databaseA      | schema2
 ```
 
-Met puntnotatie hebt u toegang tot elke tabel die is gekoppeld aan een specifiek schema dat is verbonden met de gekozen database. Door verbinding te maken met `DBNAME = databaseA.schema1;`, alle tabellen die aan dat specifieke schema zijn gekoppeld (`schema1`) worden weergegeven. Dit verstrekt informatie over welke dataset bevat welke lijst.
+Met puntnotatie hebt u toegang tot elke tabel die is gekoppeld aan een specifiek schema dat is verbonden met de gekozen database. Als u verbinding maakt met `DBNAME = databaseA.schema1;` , worden alle tabellen die aan dat specifieke schema ( `schema1` ) zijn gekoppeld, weergegeven. Dit verstrekt informatie over welke dataset bevat welke lijst.
 
 ```sql
 SHOW DATABASES;
@@ -129,7 +129,7 @@ dataset3| table
 
 ## Gegevenselementen bijwerken of verwijderen uit een gegevenscontainer
 
-Naarmate de hoeveelheid gegevenselementen in uw organisatie (of sandbox) toeneemt, moet u gegevenselementen bijwerken of verwijderen uit een gegevenscontainer. Individuele elementen kunnen uit de organisatiecontainer worden verwijderd door met behulp van puntnotatie te verwijzen naar de juiste database- en schemanaam. De tabel en weergave (`t1` en `v1` respectievelijk) toegevoegd aan `databaseA.schema1` in het eerste voorbeeld worden verwijderd met behulp van de syntaxis in het volgende voorbeeld.
+Naarmate de hoeveelheid gegevenselementen in uw organisatie (of sandbox) toeneemt, moet u gegevenselementen bijwerken of verwijderen uit een gegevenscontainer. Individuele elementen kunnen uit de organisatiecontainer worden verwijderd door met behulp van puntnotatie te verwijzen naar de juiste database- en schemanaam. De tabel en weergave (`t1` respectievelijk `v1` ) die in het eerste voorbeeld aan `databaseA.schema1` zijn toegevoegd, worden verwijderd met de syntaxis in het volgende voorbeeld.
 
 ```sql
 ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
@@ -138,7 +138,7 @@ ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema2;
 
 ### Gegevenselementen verwijderen
 
-De [DROP TABLE](../sql/syntax.md#drop-table) functie verwijdert een gegevenselement alleen fysiek uit het [!DNL Data Lake] wanneer er één verwijzing naar de tabel bestaat voor alle databases in uw organisatie.
+De [ DROP TABLE ](../sql/syntax.md#drop-table) functie verwijdert slechts fysisch een gegevenselement uit [!DNL Data Lake] wanneer één enkele verwijzing naar de lijst over alle gegevensbestanden in uw organisatie bestaat.
 
 ```sql
 DROP TABLE databaseA.schema2.t1;
@@ -170,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu een beter inzicht in de beste praktijken betreffende de organisatie en de structuur van uw gegevensactiva voor gebruik met de Dienst van de Vraag van Adobe Experience Platform. Het wordt geadviseerd verder te leren over de beste praktijken van de Dienst van de Vraag door te lezen over [documentatie over gegevensdeduplicatie](../key-concepts/deduplication.md).
+Door dit document te lezen, hebt u nu een beter inzicht in de beste praktijken betreffende de organisatie en de structuur van uw gegevensactiva voor gebruik met de Dienst van de Vraag van Adobe Experience Platform. Het wordt geadviseerd verder te leren over de beste praktijken van de Dienst van de Vraag door over [ documentatie van gegevensdeduplicatie ](../key-concepts/deduplication.md) te lezen.

@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Een object in de API verwijderen
 
-U kunt een [!DNL Catalog] -object door de id op te geven in het pad van een DELETE-aanvraag.
+U kunt een [!DNL Catalog] -object verwijderen door de id ervan op te geven in het pad van een DELETE-aanvraag.
 
 >[!WARNING]
 >
->Wees extra voorzichtig bij het verwijderen van objecten, omdat dit niet ongedaan kan worden gemaakt en onduidelijke wijzigingen kan veroorzaken in andere [!DNL Experience Platform].
+>Wees voorzichtig bij het verwijderen van objecten, omdat dit niet ongedaan kan worden gemaakt en onduidelijke wijzigingen elders in [!DNL Experience Platform] kan veroorzaken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
@@ -27,11 +27,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->De `DELETE /batches/{ID}` eindpunt is afgekeurd. Als u een batch wilt verwijderen, moet u de opdracht [Batchverwerking-API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>Het eindpunt `DELETE /batches/{ID}` is vervangen. Om een partij te schrappen, zou u de [ Ingestie API van de Partij moeten gebruiken ](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te verwijderen object. Geldige objecten zijn: <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] -object dat moet worden verwijderd. Geldige objecten zijn: <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**
@@ -47,7 +47,7 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 (OK) en een array met de id van de verwijderde dataset. Deze id moet overeenkomen met de id die in de aanvraag voor DELETE is verzonden. Wanneer u een GET-verzoek uitvoert op het verwijderde object, wordt HTTP-status 404 (Niet gevonden) geretourneerd, waarmee wordt bevestigd dat de gegevensset is verwijderd.
 
@@ -59,4 +59,4 @@ Een geslaagde reactie retourneert HTTP-status 200 (OK) en een array met de id va
 
 >[!NOTE]
 >
->Indien niet [!DNL Catalog] objecten komen overeen met de id in uw aanvraag. Mogelijk ontvangt u nog steeds HTTP Status Code 200, maar de responsarray is leeg.
+>Als er geen [!DNL Catalog] -objecten overeenkomen met de id die in uw aanvraag is opgegeven, ontvangt u mogelijk nog steeds HTTP Status Code 200, maar is de responsarray leeg.

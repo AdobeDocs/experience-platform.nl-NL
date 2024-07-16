@@ -17,14 +17,14 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Alle waarden moeten op de knop [DeviceAtlas](https://deviceatlas.com) database, in licentie gegeven door Adobe.
+>Alle waarden zouden met het [ DeviceAtlas ](https://deviceatlas.com) gegevensbestand moeten worden gericht, dat door Adobe wordt vergunning gegeven.
 
 <img src="../images/data-types/environment.png" width="400" /><br />
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `_dc` | Object | Een object dat één veld bevat, `language`, waarin de taal van de omgeving wordt aangegeven die de taalkundige, geografische of culturele voorkeuren van de gebruiker voor de gegevenspresentatie vertegenwoordigt. Talen worden opgegeven in taalcode zoals gedefinieerd in [IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt). |
-| `browserDetails` | [Browserdetails](./browser-details.md) | Beschrijft de browser-specifieke details van het milieu, zoals browser naam, versie, versie JavaScript versie, userAgent koord, en keurt taal goed. |
+| `_dc` | Object | Een object dat één veld bevat, `language` , dat de taal van de omgeving aangeeft die de taalkundige, geografische of culturele voorkeuren van de gebruiker voor de gegevenspresentatie vertegenwoordigt. De talen worden gespecificeerd in taalcode zoals die in [ wordt bepaald IETF RFC 3066 ](https://www.ietf.org/rfc/rfc3066.txt). |
+| `browserDetails` | [ Browser details ](./browser-details.md) | Beschrijft browser-specifieke details van het milieu, zoals browser naam, versie, versie van JavaScript, gebruikersagent koord, en keurt taal goed. |
 | `ISP` | String | De naam van de internetprovider van de gebruiker. |
 | `carrier` | String | De naam van de mobiele netwerkprovider of MNO (ook bekend als een draadloze serviceprovider, draadloze provider, mobiel bedrijf of mobiele netwerkprovider) die communicatiediensten aan de gebruiker verkoopt en levert. |
 | `colorDepth` | Geheel | Het aantal bits dat wordt gebruikt voor elke kleurcomponent van één pixel. |
@@ -32,10 +32,10 @@ ht-degree: 0%
 | `domain` | String | Het domein van ISP van de gebruiker. |
 | `ipV4` | String | Het numerieke label dat is toegewezen aan een apparaat dat deelneemt aan een computernetwerk dat het Internet Protocol voor communicatie (32 bits) gebruikt. |
 | `ipV6` | String | Het numerieke label dat is toegewezen aan een apparaat dat deelneemt aan een computernetwerk dat het Internet Protocol voor communicatie (128 bits) gebruikt. |
-| `operatingSystem` | String | De naam van het besturingssysteem dat bij de waarneming werd gebruikt. Het kenmerk mag geen versiegegevens bevatten zoals `10.5.3`, maar bevat in plaats daarvan &quot;edition&quot;-aanduidingen zoals `Ultimate` of `Professional`. |
+| `operatingSystem` | String | De naam van het besturingssysteem dat bij de waarneming werd gebruikt. Het kenmerk mag geen versiegegevens zoals `10.5.3` bevatten, maar wel &#39;editie&#39;-aanduidingen zoals `Ultimate` of `Professional` . |
 | `operatingSystemVendor` | String | De naam van de leverancier van het besturingssysteem die is gebruikt bij de waarneming. |
 | `operatingSystemVersion` | String | De volledige versie-id voor het besturingssysteem dat bij de waarneming werd gebruikt. Versies worden meestal numeriek samengesteld, maar kunnen in een door de leverancier gedefinieerde indeling worden gebruikt. |
-| `type` | String | Het type van de toepassingsomgeving. Zie de [aanhangsel](#type) voor geaccepteerde waarden. |
+| `type` | String | Het type van de toepassingsomgeving. Zie [ bijlage ](#type) voor toegelaten waarden. |
 | `viewportHeight` | Geheel | De verticale grootte in pixels van het venster waarin de ervaring is weergegeven. Voor een webweergavegebeurtenis is dit de hoogte van de viewport van de browser. |
 | `viewPortWidth` | Geheel | De horizontale grootte in pixels van het venster waarin de ervaring is weergegeven. Voor een webweergavegebeurtenis is dit de breedte van de viewport van de browser. |
 
@@ -43,16 +43,16 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)
 
 ## Bijlage
 
-De volgende sectie bevat aanvullende informatie over de [!UICONTROL Device] gegevenstype.
+De volgende sectie bevat aanvullende informatie over het gegevenstype [!UICONTROL Device] .
 
 ## Geaccepteerde waarden voor tekst {#type}
 
-In de volgende tabel worden de toegestane waarden voor `type` en de betekenis ervan:
+In de volgende tabel worden de geaccepteerde waarden voor `type` en de bijbehorende betekenissen weergegeven:
 
 | Waarde | Beschrijving |
 | --- | --- |

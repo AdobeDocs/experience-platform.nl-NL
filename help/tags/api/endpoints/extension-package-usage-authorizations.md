@@ -11,19 +11,19 @@ ht-degree: 1%
 
 # Het eindpunt van de gebruiksautorisaties voor extensiepakketten
 
-Een extensiepakket vertegenwoordigt een [extension](./extensions.md) zoals geschreven door een extensieontwikkelaar. Aanvullende functies die beschikbaar kunnen worden gesteld aan gebruikers van tags, worden gedefinieerd door een extensiepakket. Deze mogelijkheden kunnen belangrijkste modules en gedeelde modules omvatten, hoewel zij het vaakst worden verstrekt zoals [regelcomponenten](./rule-components.md) (gebeurtenissen, voorwaarden en acties) en [gegevenselementen](./data-elements.md).
+Een uitbreidingspakket vertegenwoordigt een [ uitbreiding ](./extensions.md) zoals authored door een uitbreidingsontwikkelaar. Aanvullende functies die beschikbaar kunnen worden gesteld aan gebruikers van tags, worden gedefinieerd door een extensiepakket. Deze mogelijkheden kunnen belangrijkste modules en gedeelde modules omvatten, hoewel zij het vaakst als [ regelcomponenten ](./rule-components.md) (gebeurtenissen, voorwaarden, en acties) en [ gegevenselementen ](./data-elements.md) worden verstrekt.
 
-Een extensiepakket is eigendom van de ontwikkelaar [bedrijf](./companies.md). Eigenaars van extensiepakketten kunnen andere bedrijven toestaan hun persoonlijke versies van de pakketten te gebruiken. Elke geautoriseerde onderneming krijgt een gebruiksvergunning voor één extensiepakket, dat geldig is voor alle toekomstige en huidige privéversies van het pakket.
+Een uitbreidingspakket wordt bezeten door het bedrijf van de ontwikkelaar [ ](./companies.md). Eigenaars van extensiepakketten kunnen andere bedrijven toestaan hun persoonlijke versies van de pakketten te gebruiken. Elke geautoriseerde onderneming krijgt een gebruiksvergunning voor één extensiepakket, dat geldig is voor alle toekomstige en huidige privéversies van het pakket.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Licenties voor het gebruik van extensiepakketten ophalen voor een extensiepakket {#list}
 
 Om een lijst van gebruiksvergunningen voor een uitbreidingspakket terug te winnen, doe een verzoek van de GET aan het volgende eindpunt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authorizations
@@ -47,7 +47,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van uitbreidingspakketten terug.
 
@@ -102,9 +102,9 @@ Een succesvolle reactie keert een lijst van uitbreidingspakketten terug.
 
 ## Een gebruiksvergunning voor een extensiepakket maken {#create}
 
-Een gebruiksvergunning voor extensiepakketten maken voor elke [extensiepakket](./extension-packages.md) en `{ORG_ID}` van de organisatie die u wilt autoriseren. Om een nieuwe vergunning van het het gebruikspakket van de extensiepakket tot stand te brengen, doe een verzoek van de POST aan het hieronder eindpunt.
+Creeer een vergunning van het het gebruikspakket van de extensiepakket voor elk [ uitbreidingspakket ](./extension-packages.md) en `{ORG_ID}` van de organisatie u wilt machtigen. Om een nieuwe vergunning van het het gebruikspakket van de extensiepakket tot stand te brengen, doe een verzoek van de POST aan het hieronder eindpunt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authorizations
@@ -139,7 +139,7 @@ curl -X POST \
 | --- | --- |
 | `attributes.authorized_org_id` | De `ID` van de organisatie die u wilt autoriseren. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert de details van de nieuwe gebruiksautorisatie voor het uitbreidingspakket.
 
@@ -183,13 +183,13 @@ Een succesvolle reactie retourneert de details van de nieuwe gebruiksautorisatie
 
 >[!NOTE]
 >
->In het bovenstaande voorbeeldantwoord bevindt de autorisatie zich momenteel in het dialoogvenster `pending_approval` in het werkgebied. Alvorens het extensiepakket te gebruiken, moet de organisatie de vergunning goedkeuren. Gebruikers van de organisatie kunnen door het persoonlijke extensiepakket bladeren terwijl de autorisatie in afwachting is van goedkeuring, maar ze kunnen het niet installeren en vinden het niet in hun extensiecatalogus.
+>In het bovenstaande voorbeeldantwoord bevindt de autorisatie zich momenteel in het `pending_approval` -werkgebied. Alvorens het extensiepakket te gebruiken, moet de organisatie de vergunning goedkeuren. Gebruikers van de organisatie kunnen door het persoonlijke extensiepakket bladeren terwijl de autorisatie in afwachting is van goedkeuring, maar ze kunnen het niet installeren en vinden het niet in hun extensiecatalogus.
 
 ## Een lijst met gebruiksmachtigingen voor extensiepakketten ophalen {#list_authorizations}
 
 U kunt een lijst met gebruiksmachtigingen voor extensiepakketten ophalen door een aanvraag voor een GET in te dienen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /extension_package_usage_authorizations
@@ -207,7 +207,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van uitbreidingspakketten terug.
 
@@ -264,13 +264,13 @@ Een succesvolle reactie keert een lijst van uitbreidingspakketten terug.
 
 ## Een gebruiksvergunning voor extensiepakketten verwijderen {#delete}
 
-Als u een gebruiksvergunning voor een extensiepakket wilt verwijderen, neemt u de bijbehorende `ID` in het pad van een DELETE-verzoek. Zo voorkomt u dat de geautoriseerde organisatie de privéversies van het extensiepakket in de catalogus weergeeft en het op de eigenschappen installeert.
+Als u een gebruiksautorisatie voor extensiepakketten wilt verwijderen, neemt u de `ID` ervan op in het pad van een DELETE-aanvraag. Zo voorkomt u dat de geautoriseerde organisatie de privéversies van het extensiepakket in de catalogus weergeeft en het op de eigenschappen installeert.
 
 >[!NOTE]
 >
 >Eerder geïnstalleerde privéversies blijven werken zoals u had verwacht.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /extension_package_usage_authorizations/{ID}
@@ -278,7 +278,7 @@ DELETE /extension_package_usage_authorizations/{ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `ID` | De `ID` van de gebruiksautorisatie voor extensiepakketten die u wilt verwijderen. |
+| `ID` | De `ID` van de gebruiksmachtiging voor het extensiepakket die u wilt verwijderen. |
 
 {style="table-layout:auto"}
 
@@ -292,19 +292,19 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder hoofdtekst van de reactie. Dit geeft aan dat de extensie is verwijderd.
 
 ## Een gebruiksvergunning voor een extensiepakket bijwerken {#update}
 
-Als u een gebruiksvergunning voor extensiepakketten wilt goedkeuren of afwijzen, moet u de `ID` in het pad van een PATCH-verzoek.
+Als u een gebruiksautorisatie voor een extensiepakket wilt goedkeuren of afwijzen, neemt u de `ID` ervan op in het pad van een PATCH-aanvraag.
 
 >[!NOTE]
 >
->Als u een gebruiksvergunning voor extensiepakketten voor uw bedrijf wilt goedkeuren of afwijzen, moet u beschikken over `manage_properties` rechten.
+>U moet `manage_properties` rechten hebben om een gebruiksvergunning voor extensiepakketten voor uw bedrijf goed te keuren of af te wijzen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /extension_package_usage_authorizations/{ID}
@@ -312,7 +312,7 @@ PATCH /extension_package_usage_authorizations/{ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `ID` | De `ID` van de gebruiksautorisatie voor extensiepakketten die u wilt verwijderen. |
+| `ID` | De `ID` van de gebruiksmachtiging voor het extensiepakket die u wilt verwijderen. |
 
 {style="table-layout:auto"}
 
@@ -338,9 +338,9 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes` | De kenmerken die u wilt herzien. Voor vergunningen voor extensiepakketgebruik kunt u hun `state`. |
+| `attributes` | De kenmerken die u wilt herzien. Voor vergunningen voor het gebruik van extensiepakketten kunt u de `state` ervan herzien. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert de details van de herziene gebruiksvergunning voor extensiepakketten.
 
@@ -390,7 +390,7 @@ Een succesvolle reactie retourneert de details van de herziene gebruiksvergunnin
 
 U kunt gegevens voor het extensiepakket voor een gebruiksautorisatie voor een extensiepakket ophalen door een GET-aanvraag in te dienen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /extension_package_usage_authorizations/{ID}/extension_package
@@ -398,7 +398,7 @@ GET /extension_package_usage_authorizations/{ID}/extension_package
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `ID` | De `ID` van de gebruiksautorisatie voor extensiepakketten die u wilt ophalen. |
+| `ID` | De `ID` van de gebruiksmachtiging voor het extensiepakket die u wilt ophalen. |
 
 {style="table-layout:auto"}
 
@@ -414,7 +414,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert gegevens voor een extensiepakket voor een autorisatie van een extensiepakket.
 

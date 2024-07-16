@@ -1,13 +1,13 @@
 ---
 title: Ondersteuning voor Web In-app Messaging in Web SDK configureren
 description: Leer hoe te om de de markeringsuitbreiding van SDK van het Web te vormen om het Overseinen van het Web in-app te steunen.
-source-git-commit: bc3ae849bd7fd8a9f50ba98528adc43d7282df90
+exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 0%
 
 ---
-
 
 # Ondersteuning voor Web In-app Messaging in Web SDK configureren
 
@@ -19,9 +19,9 @@ Door in-app berichten te gebruiken, kunt u effectief met uw publiek in gesprek g
 
 >[!IMPORTANT]
 >
->Webberichten in de app zijn [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) eigenschap, die SDK van het Web gebruikt om de gepersonaliseerde inhoud te leveren.
+>Het Overseinen van het Web in-app is een [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) eigenschap, die het Web SDK gebruikt om de gepersonaliseerde inhoud te leveren.
 >
->Voor gedetailleerde instructies op hoe te om uw campagne van het Overseinen van het Web in-App te vormen, zie [Adobe Journey Optimizer-documentatie](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
+>Voor gedetailleerde instructies op hoe te om uw het Overseinen van het Web in-App campagne te vormen, zie de [ documentatie van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
 
 
 ## Vereisten {#prerequisites}
@@ -32,23 +32,23 @@ Voor de functionaliteit voor berichten via Web in-app is de nieuwste versie van 
 
 ### Een CSP configureren voor web in-app berichten {#csp}
 
-Wanneer u [Webberichten in de app](../personalization/web-in-app-messaging.md), moet u de volgende richtlijn in uw CSP opnemen:
+Wanneer u [ het Overseinen van het Web in-App ](../personalization/web-in-app-messaging.md) vormt, moet u de volgende richtlijn in uw CSP omvatten:
 
 ```
 default-src  blob:;
 ```
 
-Voor meer informatie over het vormen van CSP, zie [speciale documentatie](../use-cases/configuring-a-csp.md).
+Voor meer informatie over het vormen van CSP, zie de [ specifieke documentatie ](../use-cases/configuring-a-csp.md).
 
 ## Webberichten in de app configureren met de Web SDK-tagextensie {#tag-extension}
 
-Zie de [Web SDK-pagina voor configuratie van tags](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) om te begrijpen waar u de hieronder beschreven montages kunt vinden.
+Verwijs naar de [ pagina van de de marktextensieconfiguratie van SDK van het Web ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) om te begrijpen waar u de hieronder beschreven montages kunt vinden.
 
-Nadat u [geïnstalleerd](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) Voer de onderstaande stappen uit om de extensie voor Web SDK-tags te configureren voor Web In-app Messaging.
+Nadat u [ ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) de de markeringsuitbreiding van SDK van het Web hebt geïnstalleerd, volg de stappen hieronder om de uitbreiding voor het Berichten van het Web in-app te vormen.
 
-In de **[!UICONTROL Personalization]** sectie, controleren **[!UICONTROL Enable personalization storage]** -optie. Deze optie staat SDK van het Web toe om spoor te houden van welke ervaringen door de gebruiker over paginaladingen zijn gezien.
+Schakel in de sectie **[!UICONTROL Personalization]** de optie **[!UICONTROL Enable personalization storage]** in. Deze optie staat SDK van het Web toe om spoor te houden van welke ervaringen door de gebruiker over paginaladingen zijn gezien.
 
-![Afbeelding die de opslagoptie voor personalisatie weergeeft op de configuratiepagina voor tagextensies.](assets/web-in-app-messaging/enable-personalization-storage.png)
+![ Beeld dat de optie van de verpersoonlijkingsopslag in de de configuratiepagina van de markeringsuitbreiding toont.](assets/web-in-app-messaging/enable-personalization-storage.png)
 
 
 Het Web in-app Overseinen steunt twee types van trekkers:
@@ -58,91 +58,91 @@ Het Web in-app Overseinen steunt twee types van trekkers:
 
 Verwijs naar de volgende secties om de de marktextensie van SDK van het Web volgens de trekkers te vormen u wilt gebruiken.
 
-### Configuratiestappen voor de **[!UICONTROL Send data to Platform]** trigger {#send-data-platform}
+### Configuratiestappen voor de trigger **[!UICONTROL Send data to Platform]** {#send-data-platform}
 
-Selecteer het markeringsbezit dat uw uitbreiding van SDK van het Web bevat, en [een nieuwe regel maken](../../tags/ui/managing-resources/rules.md##create-a-rule) met de volgende instellingen:
+Selecteer het markeringsbezit dat uw uitbreiding van SDK van het Web bevat, en [ creeer een nieuwe regel ](../../tags/ui/managing-resources/rules.md##create-a-rule) met de volgende montages:
 
 1. **[!UICONTROL Extension]**: [!UICONTROL Core]
 2. **[!UICONTROL Event Type]**: [!UICONTROL Library Loaded (Page Top)]
 
-   ![Afbeelding die het scherm voor gebeurtenisconfiguratie weergeeft.](assets/web-in-app-messaging/rule-configuration.png)
+   ![ Beeld dat het scherm van de gebeurtenisconfiguratie toont.](assets/web-in-app-messaging/rule-configuration.png)
 
-3. Selecteren **[!UICONTROL Keep Changes]** om de gebeurtenisconfiguratie op te slaan.
+3. Selecteer **[!UICONTROL Keep Changes]** om de gebeurtenisconfiguratie op te slaan.
 
 Vervolgens moet u een handeling toevoegen aan de regel die u hebt gemaakt.
 
-1. In de [!DNL Actions] sectie, selecteert u **[!UICONTROL Add]**.
-   ![Afbeelding die het bewerkregelscherm weergeeft.](assets/web-in-app-messaging/add-action.png)
+1. Selecteer **[!UICONTROL Add]** in de sectie [!DNL Actions] .
+   ![ Beeld dat uitgeeft regelscherm.](assets/web-in-app-messaging/add-action.png)
 
-2. Gebruik het volgende **[!UICONTROL Action]** instellingen:
+2. Gebruik de volgende **[!UICONTROL Action]** -instellingen:
    * **[!UICONTROL Extension]**: [!UICONTROL Adobe Experience Platform Web SDK]
    * **[!UICONTROL Action Type]**: [!UICONTROL Send event]
 
-     ![Afbeelding die het actieconfiguratiescherm weergeeft.](assets/web-in-app-messaging/action-configuration.png)
+     ![ Beeld dat het scherm van de actieconfiguratie toont.](assets/web-in-app-messaging/action-configuration.png)
 
-3. Aan de rechterkant van het scherm, in **[!UICONTROL Personalization]** in, schakelt u de **[!UICONTROL Render visual personalization decisions]** -optie.
-   ![Beeld dat het scherm van de verpersoonlijkingsconfiguratie toont.](assets/web-in-app-messaging/render-visual-personalization.png)
+3. Schakel rechts in het scherm in de sectie **[!UICONTROL Personalization]** de optie **[!UICONTROL Render visual personalization decisions]** in.
+   ![ Beeld dat het scherm van de verpersoonlijkingsconfiguratie toont.](assets/web-in-app-messaging/render-visual-personalization.png)
 
-4. Aan de rechterkant van het scherm, in **[!UICONTROL Decision context]** in, definieert u de **[!UICONTROL Key]**/**[!UICONTROL Value]** paren die u in uw campagneconfiguratie hebt gebruikt om in aanmerking te komen voor het bericht in de app.
-   ![Beeld dat het scherm van de verpersoonlijkingsconfiguratie toont.](assets/web-in-app-messaging/decision-context.png)
+4. Op de rechterkant van het scherm, in de **[!UICONTROL Decision context]** sectie, bepaal de **[!UICONTROL Key]**/ **[!UICONTROL Value]** paren die u in uw campagneconfiguratie gebruikte, om voor het in-app bericht in aanmerking te komen.
+   ![ Beeld dat het scherm van de verpersoonlijkingsconfiguratie toont.](assets/web-in-app-messaging/decision-context.png)
 
-5. Selecteren **[!UICONTROL Keep Changes]** om uw configuratie op te slaan.
+5. Selecteer **[!UICONTROL Keep Changes]** om uw configuratie op te slaan.
 
 
-Vervolgens moet u de nieuwe regel toevoegen aan de bibliotheek met eigenschappen van de tag. Ga hiervoor naar **[!UICONTROL Publishing Flow]** en selecteer de regel die u eerder hebt gemaakt.
+Vervolgens moet u de nieuwe regel toevoegen aan de bibliotheek met eigenschappen van de tag. Ga hiertoe naar **[!UICONTROL Publishing Flow]** en selecteer de regel die u eerder hebt gemaakt.
 
-![Afbeelding die het bibliotheekscherm weergeeft.](assets/web-in-app-messaging/add-rule-to-library.png)
+![ Beeld dat het bibliotheekscherm toont.](assets/web-in-app-messaging/add-rule-to-library.png)
 
 Nadat u de regel aan de bibliotheek hebt toegevoegd, selecteert u **[!UICONTROL Save & Build to Development]**.
 
-![Beeld dat het scherm van de verpersoonlijkingsconfiguratie toont.](assets/web-in-app-messaging/publish-flow.png)
+![ Beeld dat het scherm van de verpersoonlijkingsconfiguratie toont.](assets/web-in-app-messaging/publish-flow.png)
 
 Het configuratieproces is nu voltooid en uw bericht is klaar om aan uw gebruikers te worden getoond.
 
 ### Configuratiestappen voor het gebruik van handmatige triggers {#manual-trigger}
 
-Selecteer het markeringsbezit dat uw uitbreiding van SDK van het Web bevat, en [een nieuwe regel maken](../../tags/ui/managing-resources/rules.md##create-a-rule) met de volgende instellingen:
+Selecteer het markeringsbezit dat uw uitbreiding van SDK van het Web bevat, en [ creeer een nieuwe regel ](../../tags/ui/managing-resources/rules.md##create-a-rule) met de volgende montages:
 
 1. **[!UICONTROL Extension]**: [!UICONTROL Core]
 2. **[!UICONTROL Event Type]**: [!UICONTROL Click]
 3. Stel de trigger voor een specifiek element op de pagina in, herkenbaar aan een CSS-kiezer van uw keuze.
 
-   ![Afbeelding die het scherm voor gebeurtenisconfiguratie weergeeft.](assets/web-in-app-messaging/event-configuration-manual.png)
+   ![ Beeld dat het scherm van de gebeurtenisconfiguratie toont.](assets/web-in-app-messaging/event-configuration-manual.png)
 
 
 Vervolgens moet u een handeling toevoegen aan de regel die u hebt gemaakt.
 
-1. In de [!DNL Actions] sectie, selecteert u **[!UICONTROL Add]**.
-   ![Afbeelding die het bewerkregelscherm weergeeft.](assets/web-in-app-messaging/add-action.png)
+1. Selecteer **[!UICONTROL Add]** in de sectie [!DNL Actions] .
+   ![ Beeld dat uitgeeft regelscherm.](assets/web-in-app-messaging/add-action.png)
 
-2. Gebruik het volgende **[!UICONTROL Action]** instellingen:
+2. Gebruik de volgende **[!UICONTROL Action]** -instellingen:
    * **[!UICONTROL Extension]**: [!UICONTROL Adobe Experience Platform Web SDK]
    * **[!UICONTROL Action Type]**: [!UICONTROL Evaluate rulesets]
 
-     ![Afbeelding die het actieconfiguratiescherm weergeeft.](assets/web-in-app-messaging/manual-trigger-action.png)
+     ![ Beeld dat het scherm van de actieconfiguratie toont.](assets/web-in-app-messaging/manual-trigger-action.png)
 
-3. Schakel rechts van het scherm de optie **[!UICONTROL Render visual personalization decisions]** -optie.
-   ![Beeld dat het scherm van de verpersoonlijkingsconfiguratie toont.](assets/web-in-app-messaging/manual-trigger-render.png)
+3. Schakel rechts van het scherm de optie **[!UICONTROL Render visual personalization decisions]** in.
+   ![ Beeld dat het scherm van de verpersoonlijkingsconfiguratie toont.](assets/web-in-app-messaging/manual-trigger-render.png)
 
 
-4. Aan de rechterkant van het scherm, in **[!UICONTROL Decision context]** in, definieert u de **[!UICONTROL Key]**/**[!UICONTROL Value]** paren die u in uw campagneconfiguratie hebt gebruikt om in aanmerking te komen voor het bericht in de app.
-   ![Beeld dat het scherm van de verpersoonlijkingsconfiguratie toont.](assets/web-in-app-messaging/manual-trigger-decision-context.png)
+4. Op de rechterkant van het scherm, in de **[!UICONTROL Decision context]** sectie, bepaal de **[!UICONTROL Key]**/ **[!UICONTROL Value]** paren die u in uw campagneconfiguratie gebruikte, om voor het in-app bericht in aanmerking te komen.
+   ![ Beeld dat het scherm van de verpersoonlijkingsconfiguratie toont.](assets/web-in-app-messaging/manual-trigger-decision-context.png)
 
-5. Selecteren **[!UICONTROL Keep Changes]** om uw configuratie op te slaan.
+5. Selecteer **[!UICONTROL Keep Changes]** om uw configuratie op te slaan.
 
-Vervolgens moet u de nieuwe regel toevoegen aan de bibliotheek met eigenschappen van de tag. Ga hiervoor naar **[!UICONTROL Publishing Flow]** en selecteer de regel die u eerder hebt gemaakt.
+Vervolgens moet u de nieuwe regel toevoegen aan de bibliotheek met eigenschappen van de tag. Ga hiertoe naar **[!UICONTROL Publishing Flow]** en selecteer de regel die u eerder hebt gemaakt.
 
-![Afbeelding die het bibliotheekscherm weergeeft.](assets/web-in-app-messaging/add-rule-to-library.png)
+![ Beeld dat het bibliotheekscherm toont.](assets/web-in-app-messaging/add-rule-to-library.png)
 
 Nadat u de regel aan de bibliotheek hebt toegevoegd, selecteert u **[!UICONTROL Save & Build to Development]**.
 
-![Beeld dat het scherm van de verpersoonlijkingsconfiguratie toont.](assets/web-in-app-messaging/publish-flow.png)
+![ Beeld dat het scherm van de verpersoonlijkingsconfiguratie toont.](assets/web-in-app-messaging/publish-flow.png)
 
 Het configuratieproces is nu voltooid en uw bericht is klaar om aan uw gebruikers te worden getoond.
 
 ## Webberichten in de app configureren met de Web SDK JavaScript-bibliotheek {#js-library}
 
-Als alternatief voor het gebruiken van de de markeringsuitbreiding van SDK van het Web, kunt u Web in-App Overseinen van het Web direct van de bibliotheek van SDK JavaScript van het Web vormen.
+Als alternatief voor het gebruiken van de de markeringsuitbreiding van SDK van het Web, kunt u Web in-App Overseinen van het Web direct van de bibliotheek van SDK van het Web vormen JavaScript.
 
 
 
@@ -150,7 +150,7 @@ U kunt binnen-app berichten van Adobe Journey Optimizer op twee manieren weergev
 
 ### Methode 1: hiermee wordt de inhoud van de personalisatie automatisch opgehaald {#automatic}
 
-Als u wilt dat Web SDK de personalisatie-inhoud automatisch ophaalt bij het laden van de pagina, gebruikt u de opdracht `sendEvent` gebruiken, zoals in het onderstaande voorbeeld wordt getoond.
+Als u wilt dat Web SDK de aanpassingsinhoud automatisch ophaalt bij het laden van de pagina, gebruikt u de opdracht `sendEvent` , zoals in het onderstaande voorbeeld wordt getoond.
 
 ```js
   alloy("sendEvent", {
@@ -163,9 +163,9 @@ Als u wilt dat Web SDK de personalisatie-inhoud automatisch ophaalt bij het lade
 
 ### Methode 2: hiermee wordt de inhoud van de personalisatie handmatig opgehaald op basis van gebruikersactie {#manual}
 
-Om de verpersoonlijkingsinhoud slechts te tonen nadat de gebruiker een specifieke actie uitvoert, gebruik `evaluateRulesets` gebruiken, zoals in het onderstaande voorbeeld wordt getoond.
+Als u de verpersoonlijkingsinhoud alleen wilt weergeven nadat de gebruiker een specifieke handeling heeft uitgevoerd, gebruikt u de opdracht `evaluateRulesets` , zoals in het onderstaande voorbeeld wordt getoond.
 
-In dit voorbeeld wordt de personalisatie-inhoud weergegeven wanneer een gebruiker op de knop **[!UICONTROL Buy Now]** op uw website.
+In dit voorbeeld wordt de personalisatie-inhoud weergegeven wanneer een gebruiker op de knop **[!UICONTROL Buy Now]** op uw website klikt.
 
 ```js
  alloy("evaluateRulesets", {
@@ -180,9 +180,9 @@ In dit voorbeeld wordt de personalisatie-inhoud weergegeven wanneer een gebruike
 
 ### Opslag voor personalisatie configureren {#personalization-storage}
 
-U kunt ervoor kiezen om in-app berichten voor een bepaald aantal keren of telkens wanneer gebruikers een pagina bezoeken, via `personalizationStorageEnabled` configuratieoptie.
+Met de configuratieoptie `personalizationStorageEnabled` kunt u ervoor kiezen om in-app berichten voor een bepaald aantal keren of telkens wanneer gebruikers een pagina bezoeken, weer te geven.
 
-In de [Web SDK-configuratie](../commands/configure/overview.md) instellen `personalizationStorageEnabled` naar behoefte:
+In de [ configuratie van SDK van het Web ](../commands/configure/overview.md) plaats de `personalizationStorageEnabled` optie volgens uw behoeften:
 
-* `personalizationStorageEnabled: true` activeert het bericht in de app met de frequentie die u in de [Adobe Journey Optimizer-campagne](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
+* `personalizationStorageEnabled: true` brengt het in-app bericht met de frequentie teweeg u in de [ campagne van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp) bepaalde.
 * `personalizationStorageEnabled: false` activeert het bericht in de app bij het laden van elke pagina.

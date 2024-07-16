@@ -1,6 +1,6 @@
 ---
-title: Advertentiedetails-schema-veldgroep
-description: Meer informatie over de veldgroep Advertising Details.
+title: Advertising Details-schema-veldgroep
+description: Meer informatie over de veldgroep Advertising Details-schema.
 exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 0%
 
 # [!UICONTROL Advertising Details] schemaveldgroep
 
-[!UICONTROL Advertising Details] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). De veldgroep bevat één `advertising` object maken voor een schema dat informatie vastlegt over advertenties, doorklikbewerkingen en attributie.
+[!UICONTROL Advertising Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md). De veldgroep biedt één `advertising` -object aan een schema dat informatie vastlegt over advertenties, doorklikbewerkingen en attributie.
 
-![Groepsstructuur van veld](../../images/field-groups/advertising-details/structure.png)
+![ de groepsstructuur van het Gebied ](../../images/field-groups/advertising-details/structure.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `adAssetReference` | Object | Hiermee legt u elementgegevens over de advertentie vast. Zie de [onderafdeling](#adAssetReference) voor meer informatie over de structuur van dit object. |
-| `adAssetViewDetails` | Object | Hiermee legt u weergavedetails voor het afspelen van de advertentie vast. Zie de [onderafdeling](#adAssetViewDetails) voor meer informatie over de structuur van dit object. |
-| `adViewability` | Object | Vangt het aantal beelden die door eind - gebruikers zoals spelervolume, bibliotheekversie, vensterstatus, en de afmetingen van de advertentiepoort worden gezien. Zie de [onderafdeling](#adViewability) voor meer informatie over de structuur van dit object. |
+| `adAssetReference` | Object | Hiermee legt u elementgegevens over de advertentie vast. Zie de [ onderafdeling hieronder ](#adAssetReference) voor meer informatie over de structuur van dit voorwerp. |
+| `adAssetViewDetails` | Object | Hiermee legt u weergavedetails voor het afspelen van de advertentie vast. Zie de [ onderafdeling hieronder ](#adAssetViewDetails) voor meer informatie over de structuur van dit voorwerp. |
+| `adViewability` | Object | Vangt het aantal beelden die door eind - gebruikers zoals spelervolume, bibliotheekversie, vensterstatus, en de afmetingen van de advertentiepoort worden gezien. Zie de [ onderafdeling hieronder ](#adViewability) voor meer informatie over de structuur van dit voorwerp. |
 | `clicks` | [[!UICONTROL Measure]](../../data-types/measure.md) | Het aantal klikhandelingen op de advertentie. |
 | `completes` | [[!UICONTROL Measure]](../../data-types/measure.md) | Het aantal keren dat een getimed media-element is gecontroleerd tot voltooiing. Dit betekent niet noodzakelijkerwijs dat de eindgebruiker de hele video heeft bekeken omdat deze mogelijk vooruit is overgeslagen. |
 | `conversions` | [[!UICONTROL Measure]](../../data-types/measure.md) | Het aantal keren dat een vooraf gedefinieerde actie (of acties) een gebeurtenis voor prestatiebeoordeling heeft geactiveerd. |
@@ -30,21 +30,21 @@ ht-degree: 0%
 | `starts` | [[!UICONTROL Measure]](../../data-types/measure.md) | Het aantal keren dat een digitale video is afgespeeld. |
 | `thirdQuartiles` | [[!UICONTROL Measure]](../../data-types/measure.md) | Het aantal keren dat een digitale video die 75% van zijn duur bij normale snelheid heeft gespeeld. |
 | `timePlayed` | [[!UICONTROL Measure]](../../data-types/measure.md) | De hoeveelheid tijd die door een eindgebruiker aan een specifiek getimed media middel wordt doorgebracht. |
-| `downloadedPlayback` | Boolean | Wanneer ingesteld op `true`, geeft aan dat de hit wordt gegenereerd omdat een gedownloade advertentiesessie wordt afgespeeld. |
+| `downloadedPlayback` | Boolean | Wanneer ingesteld op `true` , geeft dit aan dat de hit wordt gegenereerd als gevolg van het afspelen van een gedownloade advertentiesessie. |
 
 {style="table-layout:auto"}
 
 ## `adAssetReference` {#adAssetReference}
 
-De `adAssetReference` worden de elementgegevens van de advertentie vastgelegd.
+Met het `adAssetReference` -object wordt elementinformatie over de advertentie vastgelegd.
 
-![addAssetReference-structuur](../../images/field-groups/advertising-details/adAssetReference.png)
+![ adAssetReference structure ](../../images/field-groups/advertising-details/adAssetReference.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `_dc.title` | String | De vriendelijke en leesbare naam van het advertentiemiddel. |
 | `_xmpDM.duration` | Geheel | De lengte of duur van het element in seconden. |
-| `_id` | String | Een unieke id van het advertentiemiddel, na de [Advertentievorm](https://datatracker.ietf.org/doc/html/rfc8107). |
+| `_id` | String | Een uniek herkenningsteken van het advertentiemiddel, na de [ norm Ad-ID ](https://datatracker.ietf.org/doc/html/rfc8107). |
 | `advertiser` | String | De onderneming of het merk waarvan het product in de advertentie wordt vermeld. |
 | `campaign` | String | De id van de advertentiecampagne. |
 | `creativeID` | String | De id van de advertentie. |
@@ -56,23 +56,23 @@ De `adAssetReference` worden de elementgegevens van de advertentie vastgelegd.
 
 ## `adAssetViewDetails` {#adAssetViewDetails}
 
-De `adAssetViewDetails` worden weergavegegevens voor het afspelen van de advertentie vastgelegd.
+Met het `adAssetViewDetails` -object worden weergavedetails voor het afspelen van de advertentie vastgelegd.
 
-![adAssetViewDetails-structuur](../../images/field-groups/advertising-details/adAssetViewDetails.png)
+![ adAssetViewDetails structuur ](../../images/field-groups/advertising-details/adAssetViewDetails.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `adBreak` | [[!UICONTROL Ad break]](../../data-types/ad-break.md) | Beschrijft hoe een getimed advertentie in getimed media wordt opgenomen. |
-| `index` | Geheel | De index van de advertentie binnen het bovenliggende element en het einde. De eerste advertentie heeft bijvoorbeeld index `0` en de tweede advertentie heeft index `1`. |
+| `index` | Geheel | De index van de advertentie binnen het bovenliggende element en het einde. De eerste advertentie heeft bijvoorbeeld index `0` en de tweede advertentie heeft index `1` . |
 | `playerName` | String | De naam van de speler die verantwoordelijk is voor het renderen van de advertentie. |
 
 {style="table-layout:auto"}
 
 ## `adViewability` {#adViewability}
 
-De `adViewability` worden het aantal indrukken vastgelegd dat eindgebruikers kunnen zien, zoals spelervolume, bibliotheekversie, vensterstatus en viewportafmetingen van de advertentie.
+Met het `adViewability` -object wordt het aantal indrukken vastgelegd dat eindgebruikers kunnen zien, zoals spelervolume, bibliotheekversie, vensterstatus en viewportafmetingen.
 
-![adViewability-structuur](../../images/field-groups/advertising-details/adViewability.png)
+![ adViewability structuur ](../../images/field-groups/advertising-details/adViewability.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -93,11 +93,11 @@ De `adViewability` worden het aantal indrukken vastgelegd dat eindgebruikers kun
 | `adWidth` | Geheel | Het aantal horizontale pixels van de speler, gemeten bij uitvoering. Dit kan groter zijn dan de grootte van de advertentie als de speler extra besturingselementen of miniaturen heeft. |
 | `measurementEligible` | Boolean | Of de advertentie al dan niet in aanmerking kwam voor een zichtbaarheidsmeting. Een advertentie is subsidiabel als de eenheid een ondersteunde creatieve indeling en type tag heeft. |
 | `percentViewable` | Geheel | Het percentage pixels in de advertentie dat tijdens het meten zichtbaar werd geacht. |
-| `playerVolume` | Geheel | Het volumepercentage van de speler zoals tijdens runtime wordt gemeten, waarbij `0` wordt gedempt en `100` is maximumvolume. |
+| `playerVolume` | Geheel | Het volumepercentage van de speler zoals tijdens runtime wordt gemeten, waarbij `0` wordt gedempt en `100` het maximale volume is. |
 | `viewable` | Boolean | Geeft aan of de advertentie kan worden weergegeven bij uitvoering. Weergaveadvertenties worden als zichtbaar beschouwd wanneer ten minste 50% van de advertentie gedurende ten minste één seconde zichtbaar is. Videoadvertenties worden als zichtbaar beschouwd wanneer ten minste 50% van de advertentie zichtbaar is terwijl de video ten minste twee opeenvolgende seconden wordt afgespeeld. |
 | `viewportHeight` | Geheel | De verticale grootte (in pixels) van het venster dat tijdens de runtime werd weergegeven. Voor een webweergavegebeurtenis geeft deze waarde de hoogte van de viewport van de browser aan. |
 | `viewportWidth` | Geheel | De horizontale grootte (in pixels) van het venster dat tijdens de runtime werd weergegeven. Voor een webweergavegebeurtenis geeft deze waarde de breedte van de viewport van de browser aan. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json).

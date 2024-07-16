@@ -22,9 +22,9 @@ De dashboards verstrekken out-of-the-box rapportering over de gegevens van uw or
 
 ## Aan de slag met dashboards
 
-Als u dashboards wilt weergeven en beheren, navigeert u naar **[!UICONTROL Dashboards]** in de gebruikersinterface van het Experience Platform (UI) en selecteer **[!UICONTROL Browse]** voor toegang tot het dashboardoverzicht.
+Als u dashboards wilt weergeven en beheren, navigeert u naar **[!UICONTROL Dashboards]** in de gebruikersinterface van het Experience Platform (UI) en selecteert u het tabblad **[!UICONTROL Browse]** voor toegang tot het dashboardoverzicht.
 
-U kunt tot dashboards ook toegang hebben door aan de aangewezen sectie binnen UI voor het dashboard te navigeren u zou willen bekijken. Als u het dashboard voor profielen wilt weergeven, navigeert u bijvoorbeeld naar het **[!UICONTROL Profiles]** en selecteert u de **[!UICONTROL Overview]** tab.
+U kunt tot dashboards ook toegang hebben door aan de aangewezen sectie binnen UI voor het dashboard te navigeren u zou willen bekijken. Als u bijvoorbeeld het dashboard voor profielen wilt weergeven, navigeert u naar de werkruimte **[!UICONTROL Profiles]** en selecteert u de tab **[!UICONTROL Overview]** .
 
 De gegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of voorbeeld van de gegevens en de dashboards worden niet in real time bijgewerkt.
 
@@ -34,7 +34,7 @@ De gegevens in de momentopname geven de gegevens precies zo weer als op het spec
 
 ## Dashboardvoorraad
 
-Voor gedetailleerde stappen over hoe te om **[!UICONTROL Dashboards]** werkruimte om alle beschikbare dashboards te bekijken, gelieve te verwijzen naar [inventarisatiehandleiding dashboard](./inventory.md).
+Voor gedetailleerde stappen op hoe te om de **[!UICONTROL Dashboards]** werkruimte te gebruiken om alle beschikbare dashboards te bekijken, gelieve te verwijzen naar de [ gids van de dashboardinventaris ](./inventory.md).
 
 ## Beschikbare dashboards
 

@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # [!UICONTROL Product Catalog] schemaveldgroep
 
-[!UICONTROL Product Catalog] is een standaardschemagebiedgroep voor [[!UICONTROL Product] class](../../classes/product.md) waarmee eigenschappen worden vastgelegd die betrekking hebben op een productcatalogus.
+[!UICONTROL Product Catalog] is een standaardgroep van het schemagebied voor de [[!UICONTROL Product] klasse ](../../classes/product.md) die eigenschappen met betrekking tot een productcatalogus vangt.
 
 ![](../../images/field-groups/product/product-catalog.png)
 
@@ -22,4 +22,4 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).

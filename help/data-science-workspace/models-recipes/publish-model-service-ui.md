@@ -23,23 +23,23 @@ Met Adobe Experience Platform Data Science Workspace kunt u uw getrainde en geë
 
 ## Aan de slag
 
-Als u deze zelfstudie wilt voltooien, moet u toegang hebben tot [!DNL Experience Platform]. Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform], spreek gelieve met uw systeembeheerder alvorens te werk te gaan.
+U moet toegang hebben tot [!DNL Experience Platform] om deze zelfstudie te kunnen voltooien. Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform] , neemt u contact op met uw systeembeheerder voordat u verdergaat.
 
-Voor deze zelfstudie is een bestaand model met een geslaagde trainingsuitvoering vereist. Als u geen publiceerbaar model hebt, voert u de opdracht [Een model trainen en evalueren in de gebruikersinterface](./train-evaluate-model-ui.md) zelfstudie voordat u verdergaat.
+Voor deze zelfstudie is een bestaand model met een geslaagde trainingsuitvoering vereist. Als u geen publiceerbaar Model hebt, volg de [ Lijn en evalueer een Model in de UI ](./train-evaluate-model-ui.md) leerprogramma alvorens verder te gaan.
 
-Als u een model liever wilt publiceren met de API&#39;s voor leren door Sensei Machine Learning, raadpleegt u de [API-zelfstudie](./publish-model-service-api.md).
+Als u verkiest om een Model te publiceren door het Leren APIs van de Machine van Sensei te gebruiken, verwijs naar het [ API leerprogramma ](./publish-model-service-api.md).
 
 ## Publish a Model {#publish-a-model}
 
-Selecteer in Adobe Experience Platform **[!UICONTROL Models]** bevindt zich in de linkernavigatiekolom en selecteert u vervolgens de optie **[!UICONTROL Browse]** om alle bestaande modellen weer te geven. Selecteer de naam van het model dat u als service wilt publiceren.
+Selecteer in Adobe Experience Platform de optie **[!UICONTROL Models]** in de linkernavigatiekolom en selecteer vervolgens de tab **[!UICONTROL Browse]** om alle bestaande modellen weer te geven. Selecteer de naam van het model dat u als service wilt publiceren.
 
 ![](../images/models-recipes/publish-model/browse_model.png)
 
-Selecteren **[!UICONTROL Publish]** in de buurt van de rechterbovenhoek van de pagina Modeloverzicht om een proces voor het maken van services te starten.
+Selecteer **[!UICONTROL Publish]** rechtsboven op de pagina Modeloverzicht om een serviceproces te starten.
 
 ![](../images/models-recipes/publish-model/view_training.png)
 
-Voer een gewenste naam voor de service in en geef desgewenst een servicebeschrijving op en selecteer **[!UICONTROL Next]** wanneer gereed.
+Voer een gewenste naam voor de service in en geef desgewenst een servicebeschrijving op en selecteer **[!UICONTROL Next]** als u klaar bent.
 
 ![](../images/models-recipes/publish-model/configure_training.png)
 
@@ -47,32 +47,32 @@ Alle geslaagde trainingen voor het model worden weergegeven. De nieuwe Dienst za
 
 ![](../images/models-recipes/publish-model/select_training_run.png)
 
-Selecteren **[!UICONTROL Finish]** om de dienst tot stand te brengen en aan **[!UICONTROL Service Gallery]** om alle beschikbare Diensten, met inbegrip van de pas gecreëerde Dienst te tonen.
+Selecteer **[!UICONTROL Finish]** om de service te maken en om te leiden naar **[!UICONTROL Service Gallery]** om alle beschikbare services weer te geven, inclusief de zojuist gemaakte service.
 
 ![](../images/models-recipes/publish-model/service_gallery.png)
 
 ## Score met gebruik van een service {#access-a-service}
 
-Selecteer in Adobe Experience Platform de optie **[!UICONTROL Services]** tabblad in de linkernavigatiekolom voor toegang tot het dialoogvenster **[!UICONTROL Service Gallery]**. Zoek de service die u wilt gebruiken en selecteer **[!UICONTROL Open]**.
+In Adobe Experience Platform selecteert u de tab **[!UICONTROL Services]** in de navigatiekolom links om het bestand **[!UICONTROL Service Gallery]** te openen. Zoek de service die u wilt gebruiken en selecteer **[!UICONTROL Open]** .
 
 ![](../images/models-recipes/publish-model/open_service.png)
 
-Selecteer in de pagina met het serviceoverzicht de optie **[!UICONTROL Score]**.
+Selecteer **[!UICONTROL Score]** op de pagina met het serviceoverzicht.
 
 ![](../images/models-recipes/publish-model/score_service.png)
 
-Selecteer een geschikte gegevensset voor de scoring-run en selecteer vervolgens **[!UICONTROL Next]**. U wordt gevraagd om de zelfde stap voor de het scoren dataset te doen. Zodra u de input en outputdataset hebt geselecteerd, kunt u de configuraties bijwerken.
+Selecteer een geschikte invoergegevensset voor de scoring en selecteer vervolgens **[!UICONTROL Next]** . U wordt gevraagd om de zelfde stap voor de het scoren dataset te doen. Zodra u de input en outputdataset hebt geselecteerd, kunt u de configuraties bijwerken.
 
 ![](../images/models-recipes/publish-model/select_datasets.png)
 
-Wanneer een Dienst wordt gecreeerd, erft het gebrek die configuraties scoring. U kunt deze configuraties bekijken en deze naar wens aanpassen door op de waarden te dubbelklikken. Als u tevreden bent met de configuraties, selecteert u **[!UICONTROL Finish]** om de scoring te starten.
+Wanneer een Dienst wordt gecreeerd, erft het gebrek die configuraties scoring. U kunt deze configuraties bekijken en deze naar wens aanpassen door op de waarden te dubbelklikken. Als u tevreden bent met de configuraties, selecteert u **[!UICONTROL Finish]** om te beginnen met de scoring.
 
 ![](../images/models-recipes/publish-model/scoring_configs.png)
 
-Op de service **Overzicht** pagina, worden details van de nieuwe scoretaak en de voortgang ervan weergegeven. Als de taak is voltooid, wordt de opdracht **[!UICONTROL Most Recent]** koptekst in de **[!UICONTROL Scoring]** container wordt bijgewerkt.
+Op de pagina van het Overzicht van de Dienst ****, worden de details van de nieuwe het scoren baan en zijn vooruitgang getoond. Nadat de taak is voltooid, wordt de header **[!UICONTROL Most Recent]** in de container van **[!UICONTROL Scoring]** bijgewerkt.
 
 ![](../images/models-recipes/publish-model/pending_scoring.png)
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen, hebt u met succes een Model als toegankelijke Dienst gepubliceerd, en gegevens gescoord gebruikend de nieuwe Dienst door [!UICONTROL Service Gallery]. Ga verder met de volgende zelfstudie om te leren hoe u kunt [programma geautomatiseerde opleiding en het scoren looppas op de Dienst](./schedule-models-ui.md).
+Door deze zelfstudie te volgen, hebt u met succes een Model als toegankelijke Dienst gepubliceerd, en gegevens gescoord gebruikend de nieuwe Dienst door [!UICONTROL Service Gallery]. Ga aan het volgende leerprogramma verder om te leren hoe u [ geautomatiseerde opleiding en het scoren looppas op de Dienst ](./schedule-models-ui.md) kunt plannen.

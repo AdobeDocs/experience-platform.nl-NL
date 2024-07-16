@@ -36,17 +36,17 @@ Als deel van de aanvankelijke opstelling, moet de afdeling van IT van Bodea een 
 >
 >U moet de innamepatronen volgen, zoals beschreven in de documentatie bij relevante bronnen waarnaar u in deze zelfstudie verwijst. Andere kaartmethoden in het veld werken niet gegarandeerd.
 
-Met Adobe Experience Platform kunt u automatisch de schema&#39;s en naamruimten genereren die vereist zijn voor B2B-gegevensbronnen. Dit hulpmiddel zorgt ervoor dat de gecreeerde schema&#39;s de gegevens op een gestructureerde herbruikbare manier beschrijven. Volg de [B2B-naamruimten en documentatie van het hulpprogramma voor automatisch genereren van schema](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) voor een volledige verwijzing naar het installatieproces.
+Met Adobe Experience Platform kunt u automatisch de schema&#39;s en naamruimten genereren die vereist zijn voor B2B-gegevensbronnen. Dit hulpmiddel zorgt ervoor dat de gecreeerde schema&#39;s de gegevens op een gestructureerde herbruikbare manier beschrijven. Volg [ B2B namespaces en schema auto-generatie hulpdocumentatie ](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) voor een volledige verwijzing naar het opstellingsproces.
 
-In de gebruikersinterface van Adobe Experience Platform selecteert de Bodea-markeerteken **[!UICONTROL Schemas]** in het linkerspoor, gevolgd door **[!UICONTROL Browse]** tab. Aangezien zij het Marketo Engage auto-generatienut gebruikten, verschijnen de nieuwe lege schema&#39;s in de lijst en allen hebben een prefix van &quot;B2B&quot;.
+In de gebruikersinterface van Adobe Experience Platform selecteert de Bodea-markering **[!UICONTROL Schemas]** in de linkertrack, gevolgd door de tab **[!UICONTROL Browse]** . Aangezien zij het Marketo Engage auto-generatienut gebruikten, verschijnen de nieuwe lege schema&#39;s in de lijst en allen hebben een prefix van &quot;B2B&quot;.
 
-![Tabblad Bladeren in werkruimte Schema](./assets/b2b-tutorial/empty-b2b-schemas.png)
+![ de werkruimte van het Schema doorbladert lusje ](./assets/b2b-tutorial/empty-b2b-schemas.png)
 
-Het nut van de auto-generatie bepaalde de structuur van het gegevensmodel voor de schema&#39;s gebruikend standaard klassen XDM B2B (zoals [XDM Business Account](../xdm/classes/b2b/business-account.md) en [XDM Business Opportunity](../xdm/classes/b2b/business-opportunity.md)) die fundamentele B2B-gegevensentiteiten vastleggen. Bovendien hebben de automatisch gegenereerde B2B-schema&#39;s die op deze klassen zijn gebaseerd, vooraf ingestelde relaties die geavanceerde gevallen van segmentatiegebruik mogelijk maken. Eventuele extra veldgroepen die voor de gegevensstructuur nodig zijn, kunt u hier eenvoudig via de gebruikersinterface maken. Zie de [XDM UI-hulplijn: veldgroepen toevoegen aan een schemasectie](../xdm/ui/resources/schemas.md#add-field-groups) voor meer informatie .
+Het auto-generatienut bepaalde de structuur van het gegevensmodel voor de schema&#39;s gebruikend standaard klassen XDM B2B (zoals [ XDM BedrijfsRekening ](../xdm/classes/b2b/business-account.md) en [ XDM BedrijfsKans ](../xdm/classes/b2b/business-opportunity.md)) die fundamentele B2B gegevensentiteiten vangen. Bovendien hebben de automatisch gegenereerde B2B-schema&#39;s die op deze klassen zijn gebaseerd, vooraf ingestelde relaties die geavanceerde gevallen van segmentatiegebruik mogelijk maken. Eventuele extra veldgroepen die voor de gegevensstructuur nodig zijn, kunt u hier eenvoudig via de gebruikersinterface maken. Zie de [ gids XDM UI, die gebiedsgroepen aan een schemacgedeelte ](../xdm/ui/resources/schemas.md#add-field-groups) voor meer informatie toevoegt.
 
 >[!NOTE]
 > 
->Als u niet het auto-generatornut gebruikt of een nieuwe verhouding zou moeten tot stand worden gebracht, zie het leerprogramma op [relaties creëren tussen B2B-schema&#39;s](../xdm/tutorials/relationship-b2b.md).
+>Als u niet het auto-generatornut gebruikt of een nieuwe verhouding zou moeten worden gecreeerd, zie het leerprogramma op [ creërend verhoudingen tussen schema&#39;s B2B ](../xdm/tutorials/relationship-b2b.md).
 
 In realtime klantprofiel worden gegevens uit verschillende bronnen samengevoegd om geconsolideerde profielen van belangrijke B2B-entiteiten te maken. Aangezien de profielen worden geproduceerd gebaseerd op één enkele klasse, plaatst het auto-generatienut omhoog verhoudingen tussen schema&#39;s die op gemeenschappelijke bedrijfsgebruikscenario&#39;s worden gebaseerd. Dientengevolge, is het team van Bodea nu bereid om gegevens in te voeren die op hun B2B schema&#39;s worden gebaseerd.
 
@@ -54,19 +54,19 @@ In realtime klantprofiel worden gegevens uit verschillende bronnen samengevoegd 
 > 
 >Standaard identiteitsnaamruimten, primaire sleutels, en verhoudingen die voor de schema&#39;s door het auto-generatienut worden gecreeerd zijn gemakkelijk te ontdekken binnen de werkruimte van het Schema.
 >
->![standaardschema-id en -relatie, UI-weergave](./assets/b2b-tutorial/schema-identity-relationship.png)
+>![ standaardschemaidentiteit en verhoudingUI vertoning ](./assets/b2b-tutorial/schema-identity-relationship.png)
 
 ## Gegevens in Experience Platform plaatsen
 
-Vervolgens gebruikt de Bodea-markering de [Marketo Engage-aansluiting](../sources/connectors/adobe-applications/marketo/marketo.md) gegevens in Platform in te voeren voor gebruik in downstreamdiensten. U kunt ook gegevens invoeren door een van de goedgekeurde bronnen voor Real-Time CDP B2B Edition te gebruiken.
+Daarna, gebruikt de telleraar Bodea de [ schakelaar van het Marketo Engage ](../sources/connectors/adobe-applications/marketo/marketo.md) om gegevens in Platform voor gebruik in stroomafwaartse diensten in te voeren. U kunt ook gegevens invoeren door een van de goedgekeurde bronnen voor Real-Time CDP B2B Edition te gebruiken.
 
 >[!NOTE]
 > 
->Om te leren welke bronschakelaars aan uw organisatie beschikbaar zijn, kunt u de broncatalogus in Platform UI bekijken. Als u de catalogus wilt openen, selecteert u **Bronnen** in de linkernavigatie selecteert u vervolgens **Catalogus**.
+>Om te leren welke bronschakelaars aan uw organisatie beschikbaar zijn, kunt u de broncatalogus in Platform UI bekijken. Om tot de catalogus toegang te hebben, selecteer **Bronnen** in de linkernavigatie, dan uitgezochte **Catalogus**.
 
-Als u een verbinding wilt maken tussen een Marketo-account en Platform, moet u verificatiegegevens aanschaffen. Zie de [handleiding voor het verkrijgen van verificatiereferenties van Marketo-bronconnector](../sources/connectors/adobe-applications/marketo/marketo-auth.md) voor gedetailleerde instructies.
+Als u een verbinding wilt maken tussen een Marketo-account en Platform, moet u verificatiegegevens aanschaffen. Zie de [ gids bij het bereiken van de geloofsbrieven van de de bronschakelaarauthentificatie van Marketo ](../sources/connectors/adobe-applications/marketo/marketo-auth.md) voor gedetailleerde instructies.
 
-Nadat de Bodea-markering de verificatiegegevens heeft opgehaald, maakt deze een verbinding tussen de Marketo-account en de organisatie Platform. Zie de documentatie voor instructies op [hoe u verbinding maakt met een Marketo-account via de gebruikersinterface van het platform](../sources/tutorials/ui/create/adobe-applications/marketo.md).
+Nadat de Bodea-markering de verificatiegegevens heeft opgehaald, maakt deze een verbinding tussen de Marketo-account en de organisatie Platform. Zie de documentatie voor instructies op [ hoe te om een Rekening van Marketo te verbinden gebruikend Platform UI ](../sources/tutorials/ui/create/adobe-applications/marketo.md).
 
 De bronschakelaar van het Marketo Engage verstrekt een auto-toewijzingseigenschap om het proces te maken om al uw gegevensgebieden aan die van nieuw tot stand gebrachte schema&#39;s in kaart te brengen veel gemakkelijker.
 
@@ -78,31 +78,31 @@ De telleraar Bodea controleert dat alle gebiedsgroepen geschikt in kaart worden 
 
 ## Een publiek maken om uw gegevens te evalueren
 
-De volgende taak is om een publiek voor de nieuwe e-mailmarketing campagne van Bodea te creëren die op specifieke attributen van verwante entiteiten in de brongegevens wordt gebaseerd. Binnen Platform UI, selecteert de telleraar Bodea eerst **[!UICONTROL Segments]** in de linkernavigatie, dan **[!UICONTROL Create segment]**.
+De volgende taak is om een publiek voor de nieuwe e-mailmarketing campagne van Bodea te creëren die op specifieke attributen van verwante entiteiten in de brongegevens wordt gebaseerd. In de interface van het Platform selecteert de Bodea-markeerteken eerst **[!UICONTROL Segments]** in de linkernavigatie en vervolgens **[!UICONTROL Create segment]** .
 
 In dit voorbeeld vindt het publiek alle mensen die in de verkoopafdeling werken en zijn verwant aan om het even welke rekening die minstens één open kans heeft. Voor dit soort publiek is een koppeling vereist tussen de XDM-klasse Individual Profile, de XDM-klasse Business Account en de XDM-klasse Business Opportunity.
 
-![Hoofdlettersegment gebruiken](./assets/b2b-tutorial/use-case-segment.png)
+![ gevalsegment van het Gebruik ](./assets/b2b-tutorial/use-case-segment.png)
 
 >[!NOTE]
 > 
->Voor instructies over hoe u een publiek kunt maken om uw gegevens te evalueren raadpleegt u de [Handleiding voor de gebruikersinterface van Segment Builder](../segmentation/ui/segment-builder.md). Raadpleeg voor specifiekere gevallen van B2B-segmentatiegebruik de [segmentatieoverzicht voor Real-Time CDP B2B Edition](./segmentation/b2b.md).
+>Voor instructies op hoe te om publiek tot stand te brengen om uw gegevens te evalueren zie de [ gids UI van de Bouwer van het Segment ](../segmentation/ui/segment-builder.md). Voor specifiekere B2B het gebruiksgevallen van de segmentatie, verwijs naar het [ segmentatieoverzicht voor de Uitgave van Real-Time CDP B2B ](./segmentation/b2b.md).
 
 De Bouwer van het Segment staat u toe om een verhandelbaar publiek van de gegevens van het Profiel van de Klant in real time tot stand te brengen en ramingen van uw prospectief publiek te bekijken die op de combinatie attributen, gebeurtenissen, en bestaand publiek worden gebaseerd u bepaalde.
 
 ## Uw geëvalueerde gegevens naar een doel activeren
 
-Nadat het publiek is gemaakt, wordt een samenvatting weergegeven in het dialoogvenster [!UICONTROL Details] van de werkruimte. Aangezien geen bestemmingen momenteel voor de segmentdefinitie worden geactiveerd, moet de prijsmeter Bodea het publiek naar een dataset uitvoeren waar het kan worden betreden en worden gehandeld.
+Nadat het publiek is gemaakt, wordt een samenvatting weergegeven in de sectie [!UICONTROL Details] van de werkruimte. Aangezien geen bestemmingen momenteel voor de segmentdefinitie worden geactiveerd, moet de prijsmeter Bodea het publiek naar een dataset uitvoeren waar het kan worden betreden en worden gehandeld.
 
-Binnen de [!UICONTROL Segments] in de werkruimte van de interface van het platform selecteert de Bodea-markering **[!UICONTROL Activate to destination]**.
+In de [!UICONTROL Segments] -werkruimte van de gebruikersinterface van het platform selecteert de Bodea-markeerteken **[!UICONTROL Activate to destination]** .
 
-![Het publiek naar een doel activeren](./assets/b2b-tutorial/activate-to-destination.png)
+![ activeer het publiek aan een bestemming ](./assets/b2b-tutorial/activate-to-destination.png)
 
 >[!NOTE]
 > 
->Zie de zelfstudie aan [het activeren van een publiek aan een bestemming](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) voor uitvoerige stappen over hoe te om dit te verwezenlijken.
+>Zie het leerprogramma op [ activerend een publiek aan een bestemming ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) voor uitvoerige stappen op hoe te om dit te verwezenlijken.
 
-De Bodea-markeerteken activeert het publiek naar de Marketo-bestemming, zodat het publiek gegevens van Platform naar Marketo Engage kan verzenden in de vorm van een statische lijst. Zie de handleiding op de [Marketo-bestemming](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) voor meer informatie .
+De Bodea-markeerteken activeert het publiek naar de Marketo-bestemming, zodat het publiek gegevens van Platform naar Marketo Engage kan verzenden in de vorm van een statische lijst. Zie de gids op de [ bestemming van Marketo ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) voor meer informatie.
 
 ## Volgende stappen
 

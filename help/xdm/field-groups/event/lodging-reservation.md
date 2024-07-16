@@ -12,28 +12,28 @@ ht-degree: 0%
 
 # [!UICONTROL Lodging Reservation] schemaveldgroep
 
-[!UICONTROL Lodging Reservation] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) gebruikt om informatie over een boeking te verzamelen.
+[!UICONTROL Lodging Reservation] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md) wordt gebruikt om informatie betreffende een indienende reserve te vangen die.
 
-De veldgroep is een uitbreiding van de [!UICONTROL Reservation Details] veldgroep en bevat dezelfde velden onder één veld van het objecttype, `reservations`. Naast deze generieke velden, [!UICONTROL Lodging Reservation] omvat ook `lodgingReservations` array. Deze array met objecten wordt gebruikt om een of meer reserveringen te beschrijven met eigenschappen die uniek zijn voor het indienen van objecten.
+De veldgroep is een extensie van de veldgroep [!UICONTROL Reservation Details] en bevat dezelfde velden onder één objecttype, `reservations` . Naast deze algemene velden bevat [!UICONTROL Lodging Reservation] ook `lodgingReservations` array. Deze array met objecten wordt gebruikt om een of meer reserveringen te beschrijven met eigenschappen die uniek zijn voor het indienen van objecten.
 
 >[!NOTE]
 >
->In dit document worden de details van het `lodgingReservations` array. Voor informatie over de andere velden die in het kader van de `reservations` object, raadpleeg de [[!UICONTROL Reservation Details] veldgroepverwijzing](./reservation-details.md).
+>In dit document worden de details van de array `lodgingReservations` besproken. Voor informatie over de andere gebieden die onder het `reservations` voorwerp worden verstrekt, gelieve te verwijzen naar [[!UICONTROL Reservation Details] de verwijzing van de gebiedsgroep ](./reservation-details.md).
 
-![Boekingsstructuur voor indiening](../../images/field-groups/lodging-reservation/structure.png)
+![ Lodging de structuur van de Voorbehoud ](../../images/field-groups/lodging-reservation/structure.png)
 
 ## `lodgingReservations`
 
-`lodgingReservations` is een array met objecten die een lijst met reserveringen bevat. Indien bij een reserveringsgebeurtenis reserveringen worden gemaakt bij meerdere verschillende hotels langs de route van een reis, kunnen deze reserveringen bijvoorbeeld worden vermeld als afzonderlijke objecten onder `lodgingReservations` voor één gebeurtenis.
+`lodgingReservations` is een array met objecten die een lijst met reserveringen bevat. Als een reserveringsgebeurtenis reserveringen bij meerdere verschillende hotels langs de reisroute inhoudt, kunnen deze reserveringen bijvoorbeeld als afzonderlijke objecten onder `lodgingReservations` voor één gebeurtenis worden vermeld.
 
-De structuur van elk object dat wordt geleverd onder `lodgingReservations` wordt hieronder gegeven.
+Hieronder vindt u de structuur van elk object dat onder `lodgingReservations` wordt geleverd.
 
-![reserve-structuur](../../images/field-groups/lodging-reservation/lodgingReservations.png)
+![ lingReservations structuur ](../../images/field-groups/lodging-reservation/lodgingReservations.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `averageDailyPrice` | [[!UICONTROL Currency]](../../data-types/currency.md) | De gemiddelde dagprijs van de hotelkamer. |
-| `lodgingCheckIn` | Object | Een object dat het indienen van incheckgegevens beschrijft. Bevat de volgende waarden:<ul><li>`digitalKey`: (Geheel getal) Geeft aan wanneer een gast het gebruik van een digitale sleutel selecteert na het inchecken.</li><li>`earlyCheckInRequested`: (Geheel getal) Geeft aan wanneer een gast vraagt om eerder in te checken dan de normale incheckuren.</li><li>`lateCheckInRequested`: (Geheel getal) Geeft aan wanneer een gast later dan de normale incheckuren om inchecken vraagt.</li><li>`noRoomCheckIn`: (Geheel getal) Deze waarde wordt vastgelegd wanneer een gast incheckt wanneer er op dat moment geen ruimten beschikbaar zijn.</li><li>`oneRoomCheckIn`: (Geheel getal) Deze waarde wordt vastgelegd wanneer een gast klaar is met inchecken wanneer er op dat moment slechts één ruimte beschikbaar is.</li><li>`roomKeys`: (Geheel getal) Het aantal standaard kamertoetsen dat bij het inchecken wordt aangeboden.</li><li>`userSelectedRoom`: (Boolean) Geeft aan of de gast zijn of haar ruimte heeft geselecteerd tijdens het inchecken.</li></ul> |
+| `lodgingCheckIn` | Object | Een object dat het indienen van incheckgegevens beschrijft. Bevat de volgende waarden:<ul><li>`digitalKey`: (Geheel getal) Geeft aan wanneer een gast het gebruik van een digitale sleutel selecteert na het inchecken.</li><li>`earlyCheckInRequested`: (Geheel getal) Geeft aan wanneer een gast vraagt om eerder in te checken dan de normale incheckuren.</li><li>`lateCheckInRequested`: (Geheel getal) Geeft aan wanneer een gast later dan de normale incheckuren om inchecken vraagt.</li><li>`noRoomCheckIn`: (Geheel getal) Deze waarde wordt vastgelegd wanneer een gast klaar is met inchecken wanneer er op dat moment geen ruimten beschikbaar zijn.</li><li>`oneRoomCheckIn`: (Geheel getal) Deze waarde wordt vastgelegd wanneer een gast klaar is met inchecken wanneer er op dat moment slechts één ruimte beschikbaar is.</li><li>`roomKeys`: (Geheel getal) Het aantal standaard kamertoetsen dat bij het inchecken wordt aangeboden.</li><li>`userSelectedRoom`: (Boolean) Geeft aan of de gast zijn of haar ruimte heeft geselecteerd tijdens het inchecken.</li></ul> |
 | `rackrate` | [[!UICONTROL Currency]](../../data-types/currency.md) | De kosten voor een reservering op dezelfde dag zonder voorafgaande boekingsregelingen. |
 | `ID` | String | Het reserveringsnummer of de identificatiecode. |
 | `agentID` | String | De agent-id die is gekoppeld aan de hotelboeking. |
@@ -72,5 +72,5 @@ De structuur van elk object dat wordt geleverd onder `lodgingReservations` wordt
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json)

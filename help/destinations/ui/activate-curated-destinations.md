@@ -5,20 +5,20 @@ description: Leer hoe u het publiek activeert van Adobe Experience Platform naar
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
 source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
 
 # Het publiek activeren op gekrulde doelen op basis van LiveRamp-id&#39;s
 
-De Adobe Real-Time CDP-integratie gebruiken met [!DNL LiveRamp] om het publiek te activeren naar een gekrulde lijst met bestemmingen die [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) voor activering, met inbegrip van aangesloten tv- en audiobestemmingen, zoals de hieronder vermelde.
+Gebruik de Adobe Real-Time CDP-integratie met [!DNL LiveRamp] om het publiek te activeren naar een gekrulde lijst met doelen die [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) gebruiken voor activering, waaronder aangesloten tv- en audiodoelen, zoals de hieronder vermelde doelen.
 
 >[!IMPORTANT]
 >
 >U hoeft geen gegevens in te voeren of op enigerlei wijze met LiveRamp RampID&#39;s in de interface van het Experience Platform te werken.
 >
-> U kunt identiteiten vanuit Real-Time CDP exporteren, zoals op PII gebaseerde id&#39;s, bekende id&#39;s en aangepaste id&#39;s, zoals wordt beschreven in het dialoogvenster [LiveRamp-documentatie](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers). Deze identiteiten komen dan overeen met [!DNL LiveRamp RampIDs] verder in de loop van het activeringsproces.
+> U kunt identiteiten van Real-Time CDP, zoals op PII-Gebaseerde herkenningstekens, bekende herkenningstekens, en douane IDs uitvoeren, zoals die in de officiële [ documentatie LiveRamp ](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers) wordt beschreven. Deze identiteiten worden dan gevolgd door [!DNL LiveRamp RampIDs] verderop in het activeringsproces.
 
 
 * [[!DNL 4C Insights]](#insights)
@@ -46,17 +46,17 @@ In dit artikel wordt uitgelegd welke workflow nodig is om het publiek vanuit Rea
 
 ## Workflow voor activering {#workflow}
 
-U activeert het publiek naar verbonden tv- en audiodoelen door een proces in twee stappen te doorlopen en door het [LiveRamp - Onboarding](../catalog/advertising/liveramp-onboarding.md) en de [LiveRamp - Distributie](../catalog/advertising/liveramp-distribution.md) doelen, zoals weergegeven in de onderstaande afbeelding.
+U activeert publiek aan verbonden TV en audiobestemmingen door een proces in twee stappen te gaan, en door [ LiveRamp - Onboarding ](../catalog/advertising/liveramp-onboarding.md) en [ LiveRamp te gebruiken - Distributie ](../catalog/advertising/liveramp-distribution.md) bestemmingen, zoals aangetoond in het beeld hieronder.
 
-![Diagram waarin de workflow wordt weergegeven voor het activeren van het publiek van Real-Time CDP naar gekrulde doelen, via LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
+![ Diagram die het werkschema tonen voor het activeren van publiek van Real-Time CDP aan gekrulde bestemmingen, door LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
-Eerst exporteert u uw publiek van Real-Time CDP naar de [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) doel, als CSV-bestanden.
+Eerst exporteert u uw publiek van Real-Time CDP naar de [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) -bestemming, als CSV-bestanden.
 
-Nadat u uw publiek hebt geëxporteerd, activeert u deze via het dialoogvenster [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) bestemming.
+Nadat u het publiek hebt geëxporteerd, activeert u het publiek met de bestemming [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) .
 
 >[!TIP]
 >
->Met dit proces kunt u uw publiek activeren naar doelen als [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney)en meer, rechtstreeks vanuit de gebruikersinterface van Real-Time CDP, zonder dat u zich hoeft aan te melden bij [!DNL LiveRamp] account voor activering.
+>Met dit proces kunt u uw publiek rechtstreeks vanuit de gebruikersinterface van Real-Time CDP activeren naar doelen als [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku) , [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney) en meer, zonder dat u zich hoeft aan te melden bij uw [!DNL LiveRamp] -account voor activering.
 
 ### Videotutorial {#video}
 
@@ -64,53 +64,53 @@ Bekijk de onderstaande video voor een end-to-end uitleg van de workflow die in d
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
-### Stap 1: verzend uw publiek van Experience Platform naar LiveRamp, door [!DNL LiveRamp - Onboarding] doel {#onboarding}
+### Stap 1: Verzend uw publiek van Experience Platform naar LiveRamp, door de [!DNL LiveRamp - Onboarding] -bestemming {#onboarding}
 
-Het eerste wat u moet doen om uw publiek te activeren naar gekromde doelen op basis van LiveRamp-id&#39;s is: **Uw publiek exporteren van Experience Platform naar[!DNL LiveRamp]**.
+Het eerste ding dat u moet doen om uw publiek aan gekromde bestemmingen te activeren die op LiveRampIDs worden gebaseerd moet **uw publiek van Experience Platform naar[!DNL LiveRamp]** uitvoeren.
 
-U doet dit met de **[!DNL LiveRamp - Onboarding]** bestemming.
+Dit doet u met het doel **[!DNL LiveRamp - Onboarding]** .
 
-![UI-afbeelding van Experience Platform met LiveRamp - On-boarding doelkaart](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
+{het beeld van 0} Experience Platform UI die LiveRamp - Onboarding bestemmingskaart toont ](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)![
 
-Leren hoe te om te vormen [!DNL LiveRamp - Onboarding] doel en exporteer uw publiek vanuit het Experience Platform, lees de [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) doeldocumentatie.
-
->[!IMPORTANT]
->
->Wanneer u bestanden exporteert naar de [!DNL LiveRamp - Onboarding] doel, Platform genereert één CSV-bestand voor elk [beleids-id samenvoegen](../../profile/merge-policies/overview.md). Zie de [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) doeldocumentatie voor gedetailleerde informatie over hoe u de gegevensexport naar LiveRamp kunt valideren.
-
-
-Nadat u uw publiek naar LiveRamp hebt geëxporteerd, kunt u doorgaan [stap 2](#distribution).
-
->[!TIP]
->
->Voor de overgang naar [stap 2](#distribution), [validate](../catalog/advertising/liveramp-onboarding.md#exported-data) dat uw publiek is geëxporteerd naar LiveRamp. Zie de documentatie op [bewaking van doelgegevens](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) en lees de specifieke monitoringgegevens voor [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data).
-
-### Stap 2: Activeer het publiek aan boord van de computer naar aangesloten tv- en audiodoelen via de [!DNL LiveRamp - Distribution] doel {#distribution}
-
-Nadat u [gevalideerd](../catalog/advertising/liveramp-onboarding.md#exported-data) dat uw publiek is geëxporteerd naar LiveRamp, is het tijd om het publiek te activeren naar uw voorkeursdoelen, zoals [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney)en meer.
-
-U activeert het publiek (geëxporteerd in [stap 1](#onboarding)) door de **[!DNL LiveRamp - Distribution]** bestemming.
-
-![UI-afbeelding van Experience Platform met LiveRamp - Distribution-doelkaart](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
-
-Leren hoe te om te vormen **[!DNL LiveRamp - Distribution]** doel en activeer het publiek waarin u hebt geëxporteerd [stap 1](#onboarding), lees de [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) doeldocumentatie.
+Lees de [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) doeldocumentatie voor meer informatie over het configureren van de [!DNL LiveRamp - Onboarding] -bestemming en het exporteren van publiek vanuit het Experience Platform.
 
 >[!IMPORTANT]
 >
->In de **doelselectie** van de **[!DNL LiveRamp - Distribution]** doel, moet u selecteren *exact hetzelfde publiek* die u naar [LiveRamp - Onboarding](../catalog/advertising/liveramp-onboarding.md) bestemming in [stap 1](#onboarding).
+>Wanneer het uitvoeren van dossiers aan de [!DNL LiveRamp - Onboarding] bestemming, produceert het Platform één Csv- dossier voor elke [ identiteitskaart van het fusiebeleid ](../../profile/merge-policies/overview.md). Zie de doeldocumentatie van [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) voor gedetailleerde informatie over hoe u de gegevensexport naar LiveRamp kunt valideren.
 
-Wanneer u vormt **[!DNL LiveRamp - Distribution]** doel, moet u een specifieke verbinding voor elke stroomafwaartse bestemming tot stand brengen die u (Roku, Disney, etc.) wilt gebruiken.
+
+Nadat u met succes uw publiek naar LiveRamp hebt uitgevoerd, ga aan [ stap 2 ](#distribution) verder.
 
 >[!TIP]
 >
->Bij de naam van het doel raadt de Adobe u aan deze notatie te volgen: `LiveRamp - Downstream Destination Name`. Met dit naamgevingspatroon kunt u snel uw doelen identificeren in het dialoogvenster [Bladeren](../ui/destinations-workspace.md#browse) tabblad van de werkruimte Doelen.
+>Alvorens aan [ stap 2 ](#distribution) te bewegen, [ bevestigt ](../catalog/advertising/liveramp-onboarding.md#exported-data) dat uw publiek met succes naar LiveRamp is uitgevoerd. Zie de documentatie bij [ controlerende bestemmingsdataflows ](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) en lees over de specifieke controledetails voor [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data).
+
+### Stap 2: Activeer het publiek aan boord naar aangesloten tv- en audiodoelen, via de [!DNL LiveRamp - Distribution] -bestemming {#distribution}
+
+Nadat u [ ](../catalog/advertising/liveramp-onboarding.md#exported-data) hebt bevestigd dat uw publiek met succes naar LiveRamp is uitgevoerd, is het tijd om het publiek aan uw aangewezen bestemmingen, zoals [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney), en meer te activeren.
+
+U activeert het publiek (die in [ wordt uitgevoerd stap 1 ](#onboarding)) door de **[!DNL LiveRamp - Distribution]** bestemming te gebruiken.
+
+![ Experience Platform UI beeld dat LiveRamp toont - de bestemmingskaart van de Distributie ](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
+
+Leren hoe te om de **[!DNL LiveRamp - Distribution]** bestemming te vormen en het publiek te activeren dat u in [ stap 1 ](#onboarding) uitvoerde, de [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) bestemmingsdocumentatie lezen.
+
+>[!IMPORTANT]
+>
+>In de **stap van de 0} publieksselectie {van de **[!DNL LiveRamp - Distribution]**bestemming, moet u het *nauwkeurige zelfde publiek* selecteren dat u naar [ LiveRamp - Onboarding ](../catalog/advertising/liveramp-onboarding.md) bestemming in [ stap 1 ](#onboarding) hebt uitgevoerd.**
+
+Wanneer u de **[!DNL LiveRamp - Distribution]** bestemming vormt, moet u een specifieke verbinding voor elke stroomafwaartse bestemming tot stand brengen die u (Roku, Disney, etc.) wilt gebruiken.
+
+>[!TIP]
+>
+>Adobe raadt u aan de volgende notatie te gebruiken wanneer u de naam van het doel opgeeft: `LiveRamp - Downstream Destination Name` . Dit het noemen patroon helpt u snel uw bestemmingen in [ identificeren doorbladert ](../ui/destinations-workspace.md#browse) lusje van de bestemmingswerkruimte.
 ><br>
->Voorbeeld: `LiveRamp - Roku`.
+>Voorbeeld: `LiveRamp - Roku` .
 
-![Platform UI-schermafbeelding met meerdere LiveRamp-doelen.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
+{het schermschot van het platform UI die veelvoudige bestemmingen LiveRamp toont.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)![
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
-Om de succesvolle uitvoer van uw publiek naar te bevestigen [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) doel, zie de documentatie op [bewaking van doelgegevens](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) en lees de specifieke monitoringgegevens voor [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data).
+Om de succesvolle uitvoer van uw publiek naar de [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) bestemming te bevestigen, zie de documentatie over [ controlerende bestemmingsdataflows ](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) en lees over de specifieke controledetails voor [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data).
 
 Als u wilt controleren of uw publiek correct is geactiveerd voor uw favoriete advertentieplatform (zoals Roku, Disney en anderen), meldt u zich aan bij uw account voor het doelplatform en controleert u de activeringswaarden.

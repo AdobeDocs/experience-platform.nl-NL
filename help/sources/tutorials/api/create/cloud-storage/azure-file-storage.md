@@ -7,50 +7,50 @@ description: Leer hoe u Azure File Storage met Adobe Experience Platform kunt ve
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 1%
+source-wordcount: '463'
+ht-degree: 0%
 
 ---
 
-# Een [!DNL Azure File Storage] basisverbinding met de [!DNL Flow Service] API
+# Een [!DNL Azure File Storage] basisverbinding maken met de [!DNL Flow Service] API
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL Azure File Storage] met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Azure File Storage] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL Azure File Storage] met de [!DNL Flow Service] API.
+In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL Azure File Storage] via de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] om te verbinden met [!DNL Azure File Storage]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
+[!DNL Flow Service] kan alleen verbinding maken met [!DNL Azure File Storage] als u waarden opgeeft voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `host` | Het eindpunt van het [!DNL Azure File Storag]e instantie waartoe u toegang hebt. |
-| `userId` | De gebruiker heeft voldoende toegang tot de [!DNL Azure File Storage] eindpunt. |
-| `password` | Het wachtwoord voor uw [!DNL Azure File Storage] instance |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Azure File Storage] is: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
+| `host` | Het eindpunt van de [!DNL Azure File Storag] instantie u toegang hebt tot. |
+| `userId` | De gebruiker met voldoende toegang tot het [!DNL Azure File Storage] eindpunt. |
+| `password` | Het wachtwoord voor uw [!DNL Azure File Storage] -instantie |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Azure File Storage] is: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` . |
 
-Zie voor meer informatie over het aan de slag gaan [dit Azure File Storage-document](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
+Voor meer informatie over begonnen worden verwijs naar [ dit Azure document van de Opslag van het Dossier ](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Azure File Storage] verificatiereferenties als onderdeel van de aanvraagparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL Azure File Storage] -verificatiegegevens op als onderdeel van de aanvraagparameters.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /connections
@@ -58,7 +58,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Azure File Storage]:
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL Azure File Storage] gemaakt:
 
 ```shell
 curl -X POST \
@@ -88,14 +88,14 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `auth.params.host` | Het eindpunt van het [!DNL Azure File Storage] -instantie die u opent... |
-| `auth.params.userId` | De gebruiker heeft voldoende toegang tot de [!DNL Azure File Storage] eindpunt. |
-| `auth.params.password` | De [!DNL Azure File Storage] toegangstoets. |
-| `connectionSpec.id` | De [!DNL Azure File Storage] Verbindingsspecificatie-id: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
+| `auth.params.host` | Het eindpunt van de instantie [!DNL Azure File Storage] waartoe u toegang hebt. |
+| `auth.params.userId` | De gebruiker met voldoende toegang tot het [!DNL Azure File Storage] eindpunt. |
+| `auth.params.password` | De toegangssleutel van [!DNL Azure File Storage]. |
+| `connectionSpec.id` | The [!DNL Azure File Storage] connection specification ID: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` . |
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist in de volgende stap om een bronverbinding te maken.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een bronverbinding te maken.
 
 ```json
 {
@@ -106,4 +106,4 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL Azure File Storage] verbinding met de [!DNL Flow Service] API en hebben de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u [verkennen van cloudopslag van derden met behulp van de Flow Service API](../../explore/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL Azure File Storage] -verbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze identiteitskaart in het volgende leerprogramma gebruiken aangezien u leert [ een opslag van de derdewolk onderzoeken gebruikend de Dienst API van de Stroom ](../../explore/cloud-storage.md).

@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # [!UICONTROL Currency] gegevenstype
 
-[!UICONTROL Currency] is een standaard XDM gegevenstype dat een hoeveelheid valuta, met inbegrip van het munttype en de omzettingsdatum beschrijft.
+[!UICONTROL Currency] is een standaard XDM-gegevenstype dat een hoeveelheid valuta beschrijft, inclusief het valutatype en de conversiedatum.
 
 ![](../images/data-types/currency.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `amount` | Dubbel | Het bedrag aan valuta zoals gedefinieerd door de `currencyCode`. |
+| `amount` | Dubbel | Het bedrag aan valuta zoals gedefinieerd door `currencyCode`. |
 | `conversionDate` | DateTime | Een tijdstempel met het tijdstip waarop de valutaomrekening is uitgevoerd. |
 | `currencyCode` | String | Een ISO 4217-code die het type valuta aangeeft dat `amount` vertegenwoordigt. |
 
@@ -27,5 +27,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/currency.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/currency.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/currency.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/currency.schema.json)

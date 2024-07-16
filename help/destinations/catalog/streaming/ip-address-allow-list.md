@@ -16,7 +16,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > * De Adobe adviseert dat u referentie deze pagina en het om de drie maanden om de recentste IP adressen controleert. Adobe verstrekt geen bericht van nieuwe IP waaiers.
-> * De lijst van hier gedocumenteerde IPs *niet* is van toepassing op om het even welke bestemmingen u gebruikend bouwt [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
+> * De lijst van hier gedocumenteerde IPs *is niet* op om het even welke bestemmingen van toepassing u gebruikend [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md) bouwt.
 
 ## Overzicht {#overview}
 
@@ -28,7 +28,7 @@ De hier gedocumenteerde IP waaiers zijn op de volgende bestemmingen van toepassi
 
 Het uitgaande verkeer van Experience Platform aan deze bestemmingen gaat altijd door IPs op deze pagina wordt vermeld die.
 
-Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform aan uw eindpunt van HTTP veilig uit te voeren, [!DNL Amazon Kinesis], of [!DNL Azure Event Hubs] -instantie. Deze functionaliteit is vooral nuttig als uw eindpunt van HTTP achter een ondernemingsfirewall wordt gevestigd of als uw bedrijfveiligheid en nalevingsnormen een lijst van IP waaiers vereisen om worden gevoegd op lijst van gewenste personen.
+Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform naar uw eindpunt van HTTP veilig uit te voeren, [!DNL Amazon Kinesis], of [!DNL Azure Event Hubs] instantie. Deze functionaliteit is vooral nuttig als uw eindpunt van HTTP achter een ondernemingsfirewall wordt gevestigd of als uw bedrijfveiligheid en nalevingsnormen een lijst van IP waaiers vereisen om worden gevoegd op lijst van gewenste personen.
 
 U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewall. Door de aangewezen IP waaier te specificeren, kunt u verkeer voor de dienst van de gegevensoverdracht toestaan.
 

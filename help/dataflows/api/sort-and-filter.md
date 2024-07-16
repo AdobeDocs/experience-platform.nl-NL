@@ -4,33 +4,33 @@ description: Deze zelfstudie behandelt de syntaxis voor sorteren en filteren met
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
 source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 1%
+source-wordcount: '826'
+ht-degree: 0%
 
 ---
 
 # Reacties sorteren en filteren in de Flow Service API
 
-Bij het uitvoeren van aanbiedingen (GET) in het dialoogvenster [Flow Service-API](https://www.adobe.io/experience-platform-apis/references/flow-service/)kunt u queryparameters gebruiken om reacties te sorteren en te filteren. Deze handleiding bevat een referentie voor het gebruik van deze parameters voor verschillende gebruiksgevallen.
+Wanneer het uitvoeren van lijst (GET) verzoeken in de [ Dienst API van de Stroom ](https://www.adobe.io/experience-platform-apis/references/flow-service/), kunt u vraagparameters aan soort en filterreacties gebruiken. Deze handleiding bevat een referentie voor het gebruik van deze parameters voor verschillende gebruiksgevallen.
 
 ## Sorteren
 
-U kunt reacties sorteren met een `orderby` query-param. De volgende bronnen kunnen worden gesorteerd in de API:
+U kunt antwoorden sorteren met behulp van een `orderby` query-parameter. De volgende bronnen kunnen worden gesorteerd in de API:
 
-* [Verbindingen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
-* [Bronverbindingen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
-* [Doelverbindingen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Target-connections)
-* [Stromen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
-* [Runs](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
+* [ Verbindingen ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
+* [ de verbindingen van Source ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
+* [ de verbindingen van het Doel ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Target-connections)
+* [ Stromen ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
+* [ Lopen ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
 
-Als u de parameter wilt gebruiken, moet u de waarde ervan instellen op de specifieke eigenschap waarop u wilt sorteren (bijvoorbeeld `?orderby=name`). U kunt de waarde vooraf toevoegen met een plusteken (`+`) voor oplopende of minteken (`-`) voor aflopende volgorde. Als er geen voorvoegsel voor de volgorde is opgegeven, wordt de lijst standaard in oplopende volgorde gesorteerd.
+Als u de parameter wilt gebruiken, moet u de waarde ervan instellen op de specifieke eigenschap waarop u wilt sorteren (bijvoorbeeld `?orderby=name` ). U kunt de waarde met een plusteken (`+`) voor het stijgen orde of minteken (`-`) voor het dalende orde toevoegen. Als er geen voorvoegsel voor de volgorde is opgegeven, wordt de lijst standaard in oplopende volgorde gesorteerd.
 
 ```http
 GET /flows?orderby=name
 GET /flows?orderby=-name
 ```
 
-U kunt een sorteerparameter ook combineren met een filterparameter door een &quot;en&quot;-symbool (`&`).
+U kunt een sorterende parameter met een het filtreren parameter ook combineren door &quot;en&quot;symbool (`&`) te gebruiken.
 
 ```http
 GET /flows?property=state==enabled&orderby=createdAt
@@ -38,21 +38,21 @@ GET /flows?property=state==enabled&orderby=createdAt
 
 ## Filteren
 
-U kunt reacties filteren met een `property` parameter met een expressie van een sleutelwaarde. Bijvoorbeeld: `?property=id==12345` alleen bronnen retourneert waarvan `id` eigenschap is exact gelijk aan `12345`.
+U kunt reacties filteren door een parameter `property` te gebruiken met een expressie met sleutelwaarden. `?property=id==12345` retourneert bijvoorbeeld alleen bronnen waarvan de eigenschap `id` exact gelijk is aan `12345` .
 
 Filteren kan algemeen worden toegepast op elke eigenschap in een entiteit, zolang het geldige pad naar die eigenschap bekend is.
 
 >[!NOTE]
 >
->Als een eigenschap binnen een arrayitem is genest, moet u vierkante haakjes toevoegen (`[]`) aan de array in het pad. Zie de sectie over [filteren op array-eigenschappen](#arrays) voor voorbeelden.
+>Als een bezit binnen een seriepunt wordt genesteld, moet u vierkante haakjes (`[]`) aan de serie in de weg toevoegen. Zie de sectie op [ het filtreren op serieeigenschappen ](#arrays) voor voorbeelden.
 
-**Hiermee worden alle bronverbindingen geretourneerd waar de naam van de brontabel is `lead`:**
+**keer alle bronverbindingen terug waar de naam van de bronlijst `lead` is:**
 
 ```http
 GET /sourceConnections?property=params.tableName==lead
 ```
 
-**Retourneer alle stromen voor een specifieke segment-id:**
+**Terugkeer alle stromen voor specifieke segmentidentiteitskaart:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
@@ -60,9 +60,9 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### Filters combineren
 
-Meerdere `property` filters kunnen in een query worden opgenomen op voorwaarde dat ze door &#39;en&#39;-tekens worden gescheiden (`&`). Bij het combineren van filters wordt een AND-relatie verondersteld, wat betekent dat een entiteit aan alle filters moet voldoen om in de respons te worden opgenomen.
+Meerdere `property` -filters kunnen in een query worden opgenomen, op voorwaarde dat ze door &#39;en&#39;-tekens (`&`) worden gescheiden. Bij het combineren van filters wordt een AND-relatie verondersteld, wat betekent dat een entiteit aan alle filters moet voldoen om in de respons te worden opgenomen.
 
-**Retourneer alle ingeschakelde stromen voor een segment-id:**
+**Terugkeer alle toegelaten stromen voor segmentidentiteitskaart:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a&property=state==enabled
@@ -70,27 +70,27 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### Filteren op array-eigenschappen {#arrays}
 
-U kunt filteren op basis van de eigenschappen van items binnen arrays door het toevoegen `[]` naar de naam van de array-eigenschap.
+U kunt filteren op basis van de eigenschappen van items binnen arrays door `[]` aan de naam van de array-eigenschap toe te voegen.
 
-**De stromen van de terugkeer die met specifieke bronverbindingen worden geassocieerd:**
+**stromen van de Terugkeer die met specifieke bronverbindingen worden geassocieerd:**
 
 ```http
 GET /flows?property=sourceConnectionIds[]==9874984,6980696
 ```
 
-**Retourstromen met een transformatie die een specifieke id voor de selecteerwaarde bevat:**
+**stromen van de Terugkeer die een transformatie hebben die een specifieke identiteitskaart van de selecteurswaarde bevatten:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
 ```
 
-**Bronverbindingen van de terugkeer die een kolom met specifieke hebben `name` waarde:**
+**de bronverbindingen van de Terugkeer die een kolom met een specifieke `name` waarde hebben:**
 
 ```http
 GET /sourceConnections?property=params.columns[].name==firstName
 ```
 
-**Zoek omhoog identiteitskaart van de stroomlooppas voor een bestemming door op segmentidentiteitskaart te filtreren:**
+**kijkt omhoog stroom in werking stelt identiteitskaart voor een bestemming door op segmentidentiteitskaart te filtreren:**
 
 ```http
 GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id==segment:068d6e2c-b546-4c73-bfb7-9a9d33375659
@@ -98,9 +98,9 @@ GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id=
 
 ### `count`
 
-Elke filterquery kan worden toegevoegd `count` queryparameter met een waarde van `true` om het aantal resultaten te retourneren. De API-reactie bevat een `count` eigenschap waarvan de waarde het aantal totaal gefilterde items vertegenwoordigt. De daadwerkelijke gefilterde punten zijn niet teruggekeerd in deze vraag.
+Elke filterquery kan worden toegevoegd met de parameter `count` query met de waarde `true` om het aantal resultaten te retourneren. De API-reactie bevat een eigenschap `count` waarvan de waarde het aantal totaal gefilterde items vertegenwoordigt. De daadwerkelijke gefilterde punten zijn niet teruggekeerd in deze vraag.
 
-**Retourneer het aantal ingeschakelde stromen in het systeem:**
+**keer de telling van toegelaten stromen in het systeem terug:**
 
 ```http
 GET /flows?property=state==enabled&count=true
@@ -197,17 +197,17 @@ Afhankelijk van de entiteit van de Dienst van de Stroom u terugwint, kunnen de v
 
 ## Gebruiksscenario’s {#use-cases}
 
-Lees deze sectie voor sommige specifieke voorbeelden van hoe u het filtreren en het sorteren kunt gebruiken om informatie over bepaalde schakelaars terug te keren of u bij het zuiveren van kwesties te helpen. Als er nog meer gebruiksgevallen zijn die u door de Adobe wilt toevoegen, kunt u de **[!UICONTROL Detailed feedback options]** op de pagina om een aanvraag in te dienen.
+Lees deze sectie voor sommige specifieke voorbeelden van hoe u het filtreren en het sorteren kunt gebruiken om informatie over bepaalde schakelaars terug te keren of u bij het zuiveren van kwesties te helpen. Als er nog meer gebruiksgevallen zijn die u door Adobe wilt toevoegen, kunt u een aanvraag indienen met de tekst **[!UICONTROL Detailed feedback options]** op de pagina.
 
-**Filter om verbindingen naar een bepaald doel te retourneren**
+**Filter om verbindingen aan een bepaalde slechts bestemming terug te keren**
 
-U kunt filters gebruiken om verbindingen naar slechts bepaalde bestemmingen terug te keren. Eerst zoekt u de `connectionSpecs` eindpunt zoals hieronder:
+U kunt filters gebruiken om verbindingen naar slechts bepaalde bestemmingen terug te keren. Ga eerst als volgt naar het eindpunt van `connectionSpecs` :
 
 ```http
 GET /connectionSpecs
 ```
 
-Zoek vervolgens naar de gewenste `connectionSpec` door de `name` parameter. Zoek bijvoorbeeld naar Amazon Ads, of Pega, of SFTP, enzovoort in de `name` parameter. De overeenkomstige `id` is de `connectionSpec` die u kunt zoeken door in de volgende API vraag te zoeken.
+Zoek vervolgens naar de gewenste `connectionSpec` door de parameter `name` te inspecteren. Zoek bijvoorbeeld naar Amazon Ads, of Pega, of SFTP, enzovoort in de parameter `name` . Het corresponderende `id` is de `connectionSpec` waarnaar u kunt zoeken in de volgende API-aanroep.
 
 U kunt bijvoorbeeld uw doelen filteren om alleen bestaande verbindingen met Amazon S3-verbindingen te retourneren:
 
@@ -215,15 +215,15 @@ U kunt bijvoorbeeld uw doelen filteren om alleen bestaande verbindingen met Amaz
 GET /connections?property=connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
 ```
 
-**Filter om gegevensstromen te retourneren naar alleen doelen**
+**Filter om dataflows aan bestemmingen slechts terug te keren**
 
-Bij het opvragen van `/flows` eindpunt, in plaats van het terugkeren van alle bronnen en bestemmingsdataflows, kunt u een filter gebruiken om dataflows aan bestemmingen slechts terug te keren. Om dit te doen, gebruik `isDestinationFlow` als queryparameter, zoals:
+Wanneer het vragen van het `/flows` eindpunt, in plaats van het terugkeren van alle bronnen en bestemmingsdataflows, kunt u een filter gebruiken om dataflows aan bestemmingen slechts terug te keren. Hiervoor gebruikt u `isDestinationFlow` als queryparameter, zoals:
 
 ```http
 GET /flows?property=inheritedAttributes.properties.isDestinationFlow==true
 ```
 
-**Filter om gegevens alleen naar een bepaalde bron of bestemming te retourneren**
+**Filter om dataflows aan een bepaalde bron of een bestemming slechts terug te keren**
 
 U kunt dataflows filtreren om dataflows aan een bepaalde bestemming of van een bepaalde bron slechts terug te keren. U kunt bijvoorbeeld uw doelen filteren om alleen bestaande verbindingen met Amazon S3-verbindingen te retourneren:
 
@@ -231,7 +231,7 @@ U kunt dataflows filtreren om dataflows aan een bepaalde bestemming of van een b
 GET /flows?property=inheritedAttributes.targetConnections[].connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
 ```
 
-**Filter om alle runtime van een gegevensstroom voor een specifieke periode te krijgen**
+**Filter om alle looppas van een dataflow voor een specifieke tijd-periode** te krijgen
 
 U kunt dataflow looppas van een dataflow filtreren om looppas in een bepaald tijdinterval slechts te bekijken, zoals hieronder:
 
@@ -239,7 +239,7 @@ U kunt dataflow looppas van een dataflow filtreren om looppas in een bepaald tij
 GET /runs?property=flowId==<flow-id>&property=metrics.durationSummary.startedAtUTC>1593134665781&property=metrics.durationSummary.startedAtUTC<1653134665781
 ```
 
-**Filter om alleen mislukte gegevensstromen te retourneren**
+**Filter om ontbroken gegevens terug te keren slechts**
 
 Voor het zuiveren doeleinden, kunt u alle ontbroken dataflow looppas voor een bepaalde bron of bestemmingsdataflow, zoals hieronder filtreren en zien:
 
@@ -249,4 +249,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u de `orderby` en `property` De parameters van de vraag aan soort en filterreacties in de Dienst API van de Stroom. Zie de API-zelfstudies in het dialoogvenster [bronnen](../../sources/home.md) en [bestemmingen](../../destinations/home.md) documentatie.
+In deze handleiding wordt beschreven hoe u de query-parameters `orderby` en `property` kunt gebruiken om reacties in de Flow Service API te sorteren en te filteren. Voor geleidelijke gidsen op hoe te om API voor gemeenschappelijke werkschema&#39;s in Platform te gebruiken, zie de API leerprogramma&#39;s in de [ bronnen ](../../sources/home.md) en [ documentatie van bestemmingen ](../../destinations/home.md).

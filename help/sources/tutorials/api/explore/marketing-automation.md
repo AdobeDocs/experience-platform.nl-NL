@@ -6,43 +6,43 @@ description: Deze zelfstudie gebruikt de Flow Service API om op zoek te gaan naa
 exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
 
-# Een systeem voor marketingautomatisering verkennen met de [!DNL Flow Service] API
+# Een marketingautomatiseringssysteem verkennen met de API van [!DNL Flow Service]
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de [!DNL Flow Service] API voor het verkennen van systemen voor marketingautomatisering.
+In deze zelfstudie wordt de API van [!DNL Flow Service] gebruikt om systemen voor marketingautomatisering te verkennen.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxen ](../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-In de volgende secties vindt u aanvullende informatie die u nodig hebt om een verbinding met een marketingautomatiseringssysteem tot stand te brengen met het [!DNL Flow Service] API.
+De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met een marketingautomatiseringssysteem dat de [!DNL Flow Service] API gebruikt.
 
 ### Vereiste referenties verzamelen
 
-Deze zelfstudie vereist dat u een geldige verbinding hebt met de marketingtoepassing van derden waarvan u gegevens wilt invoeren. Een geldige verbinding heeft betrekking op de verbindingsspecificatie-id en de verbinding-id van uw toepassing. Meer informatie over het maken van een verbinding voor marketingautomatisering en het ophalen van deze waarden vindt u in de [een marketingautomatiseringsbron aansluiten op Platform](../../api/create/marketing-automation/hubspot.md) zelfstudie.
+Deze zelfstudie vereist dat u een geldige verbinding hebt met de marketingtoepassing van derden waarvan u gegevens wilt invoeren. Een geldige verbinding heeft betrekking op de verbindingsspecificatie-id en de verbinding-id van uw toepassing. Meer informatie over het creëren van een marketing automatiseringsverbinding en het terugwinnen van deze waarden kan in [ worden gevonden een marketing automatiseringsbron aan Platform ](../../api/create/marketing-automation/hubspot.md) leerprogramma verbinden.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform], met inbegrip van die welke [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -52,9 +52,9 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Uw gegevenstabellen verkennen
 
-Gebruikend de basisverbinding voor uw systeem van de marketing automatisering, kunt u uw gegevenslijsten onderzoeken door verzoeken van de GET uit te voeren. Gebruik de volgende vraag om de weg van de lijst te vinden u wenst om te inspecteren of in te gaan [!DNL Platform].
+Gebruikend de basisverbinding voor uw systeem van de marketing automatisering, kunt u uw gegevenslijsten onderzoeken door verzoeken van de GET uit te voeren. Gebruik de volgende aanroep om het pad te zoeken van de tabel die u wilt inspecteren of waarin u wilt opnemen [!DNL Platform].
 
-**API-indeling**
+**API formaat**
 
 ```https
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
@@ -75,9 +75,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie is een serie van lijsten van aan uw systeem van de marketing automatisering. Zoek de tabel waarin u wilt plaatsen [!DNL Platform] en neemt nota van zijn `path` eigenschap, aangezien u het in de volgende stap moet verstrekken om zijn structuur te inspecteren.
+Een succesvolle reactie is een serie van lijsten van aan uw systeem van de marketing automatisering. Zoek de tabel die u wilt opnemen in [!DNL Platform] en neem nota van de eigenschap `path` ervan, aangezien u deze in de volgende stap moet opgeven om de structuur te inspecteren.
 
 ```json
 [
@@ -116,7 +116,7 @@ Een succesvolle reactie is een serie van lijsten van aan uw systeem van de marke
 
 Om de structuur van een lijst van uw marketing automatiseringssysteem te inspecteren, voer een verzoek van de GET uit terwijl het specificeren van de weg van een lijst als vraagparameter.
 
-**API-indeling**
+**API formaat**
 
 ```https
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
@@ -138,9 +138,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de structuur van een tabel. De details betreffende elk van de kolommen van de lijst worden gevestigd binnen elementen van `columns` array.
+Een geslaagde reactie retourneert de structuur van een tabel. De details betreffende elk van de kolommen van de lijst worden gevestigd binnen elementen van de `columns` serie.
 
 ```json
 {
@@ -184,4 +184,4 @@ Een geslaagde reactie retourneert de structuur van een tabel. De details betreff
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u uw systeem voor marketingautomatisering verkend en hebt u het pad gevonden van de tabel waarnaar u wilt verwijzen [!DNL Platform]en heeft informatie over de structuur ervan verkregen. U kunt deze informatie in de volgende zelfstudie gebruiken om [gegevens van uw systeem voor marketingautomatisering verzamelen en in Platform brengen](../collect/marketing-automation.md).
+Aan de hand van deze zelfstudie hebt u uw systeem voor marketingautomatisering verkend, het pad van de tabel gevonden die u wilt doorgeven aan [!DNL Platform] en informatie gekregen over de structuur ervan. U kunt deze informatie in het volgende leerprogramma gebruiken [ gegevens van uw marketing automatiseringssysteem verzamelen en het in Platform ](../collect/marketing-automation.md) brengen.

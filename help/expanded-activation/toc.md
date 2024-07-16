@@ -8,12 +8,12 @@ role: Admin,User
 source-git-commit: 2ca2558d2bfdae9f5ba58489c8161c83909a8e27
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 53%
+ht-degree: 62%
 
 ---
 
 
-# Uitgebreide Audience Manager activering {#expanded-activation}
+# Uitgebreide activering van Audience Manager  {#expanded-activation}
 
 * [Overzicht](./overview.md)
 * [Accountbeheer](./administration.md)

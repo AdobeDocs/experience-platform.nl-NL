@@ -15,21 +15,21 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Als u Adobe Real-time Customer Data Platform B2B Edition niet gebruikt, raadpleegt u de [overzicht van bronnen](./sources-overview.md) in plaats daarvan.
+>Als u Adobe Real-time Customer Data Platform B2B Uitgave niet gebruikt, zie in plaats daarvan het [ overzicht van bronnen ](./sources-overview.md).
 
-Met Adobe Real-time Customer Data Platform B2B Edition kunt u uw B2B-gegevens via verschillende bronnen overbrengen, waaronder de [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) onder andere de bronaansluiting, Salesforce, Amazon S3 en ADLS. Deze waaier van bronnen voorziet u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten.
+Met Adobe Real-time Customer Data Platform B2B Edition kunt u uw B2B-gegevens via verschillende bronnen overbrengen, zoals de [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) bronconnector, Salesforce, Amazon S3 en ADLS. Deze waaier van bronnen voorziet u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten.
 
-Als u wilt weten hoe bronnen in uw B2B-workflow passen, raadpleegt u de [end-to-end zelfstudie](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
+Om te begrijpen hoe de bronnen in uw B2B- werkschema passen, te zien gelieve [ leerprogramma van begin tot eind ](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
-Zie de [overzicht van bronconnectors](../../sources/home.md) voor meer informatie over de soorten bronnen die in Adobe Experience Platform beschikbaar zijn.
+Zie het [ overzicht van bronschakelaars ](../../sources/home.md) voor meer informatie over de types van bronnen beschikbaar in Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->U moet toegang hebben tot [Real-time Customer Data Platform B2B Edition](../../rctcdp/../rtcdp/b2b-overview.md) om aan B2B-schema&#39;s deel te nemen [Klantprofiel in realtime](../proile/../../profile/home.md).
+>U moet toegang tot [ Real-time Customer Data Platform B2B Uitgave ](../../rctcdp/../rtcdp/b2b-overview.md) hebben opdat B2B- schema&#39;s aan [ in real time het Profiel van de Klant ](../proile/../../profile/home.md) deelnemen.
 
-De volgende documenten bevatten meer informatie over het gebruik van [!DNL Marketo] B2B-gegevens naar het platform brengen:
+De volgende documenten bieden meer informatie over het gebruik van [!DNL Marketo] om B2B-gegevens naar Platform te brengen:
 
-* Voor informatie over hoe u verbinding kunt maken met uw [!DNL Marketo] gegevens aan Platform, zie de zelfstudie over [Marketo-bronaansluiting maken in de gebruikersinterface](../../sources/tutorials/ui/create/adobe-applications/marketo.md).
-* Voor informatie over de onderliggende opstelling voor B2B namespaces en schema&#39;s, zie de documentatie voor [B2B-naamruimten en -schema&#39;s](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
-* Voor informatie over het zoeken naar uw [!DNL Marketo] Munchkin-id en het genereren van uw referenties, raadpleegt u de [[!DNL Marketo] verificatiehandleiding](../../sources/connectors/adobe-applications/marketo/marketo-auth.md).
-* Voor informatie over de specifieke toewijzingsregels die gelden voor [!DNL Marketo] datasets, zie de documentatie over [[!DNL Marketo] veldtoewijzingen](../../sources/connectors/adobe-applications//mapping/marketo.md).
+* Voor informatie over hoe te om uw [!DNL Marketo] gegevens aan Platform aan te sluiten, zie het leerprogramma op [ het creëren van een Marketo bronschakelaar in UI ](../../sources/tutorials/ui/create/adobe-applications/marketo.md).
+* Voor informatie over de onderliggende opstelling voor B2B namespaces en schema&#39;s, zie de documentatie voor [ B2B namespaces en schema&#39;s ](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
+* Voor informatie bij het vinden van uw [!DNL Marketo] identiteitskaart Munchkin en het produceren van uw geloofsbrieven, zie de [[!DNL Marketo]  authentificatiegids ](../../sources/connectors/adobe-applications/marketo/marketo-auth.md).
+* Voor informatie over de specifieke kaartregels die op [!DNL Marketo] datasets van toepassing zijn, zie de documentatie over [[!DNL Marketo]  gebiedsafbeeldingen ](../../sources/connectors/adobe-applications//mapping/marketo.md).

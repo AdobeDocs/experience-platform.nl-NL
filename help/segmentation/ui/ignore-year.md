@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->U kunt de tijdbeperking &#39;jaar negeren&#39; alleen gebruiken in een segmentdefinitie die is geëvalueerd met **batchsegmentatie**. Als u de tijdbeperking &#39;jaar negeren&#39; toevoegt aan de segmentdefinitie, wordt het resulterende publiek **niet-subsidiabel** voor streaming of randsegmentatie.
+>U kunt de &quot;negeren jaar&quot;tijdbeperking in een gesegmenteerde segmentdefinitie slechts gebruiken gebruikend **partijsegmentatie**. Toevoegend de &quot;negeren jaar&quot;tijdbeperking aan uw segmentdefinitie zal het resulterende publiek **niet in aanmerking komende** voor het stromen of randsegmentatie maken.
 
 In de release van februari 2024 voor Adobe Experience Platform zijn wijzigingen aangebracht in de Adobe Experience Platform Segmentation Service, die een probleem verhelpt met de optie &#39;jaar negeren&#39; bij het creëren en evalueren van het publiek.
 

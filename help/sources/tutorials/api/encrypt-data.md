@@ -15,10 +15,10 @@ U kunt gecodeerde gegevensbestanden via batchbronnen voor cloudopslag opnemen in
 
 De gecodeerde gegevensinvoer verloopt als volgt:
 
-1. [Een sleutelpaar maken met Experience Platform-API&#39;s](#create-encryption-key-pair). Het sleutelpaar bestaat uit een persoonlijke sleutel en een openbare sleutel. Als u een id hebt gemaakt, kunt u de openbare sleutel samen met de bijbehorende id voor de openbare sleutel en de Vervaltijd kopiëren of downloaden. Tijdens dit proces wordt de persoonlijke sleutel door het Experience Platform in een veilige kluis opgeslagen. **OPMERKING:** De openbare sleutel in de reactie is Base64-Gecodeerd en moet voorafgaand aan het gebruiken worden gedecrypteerd.
+1. [ creeer een encryptiesleutel gebruikend Experience Platform APIs ](#create-encryption-key-pair). Het sleutelpaar bestaat uit een persoonlijke sleutel en een openbare sleutel. Als u een id hebt gemaakt, kunt u de openbare sleutel samen met de bijbehorende id voor de openbare sleutel en de Vervaltijd kopiëren of downloaden. Tijdens dit proces wordt de persoonlijke sleutel door het Experience Platform in een veilige kluis opgeslagen. **NOTA:** de openbare sleutel in de reactie is Base64-Gecodeerd en moet voorafgaand aan het gebruiken worden gedecrypteerd.
 2. Gebruik de openbare sleutel om het gegevensbestand te coderen dat u wilt opnemen.
 3. Plaats het gecodeerde bestand in de cloudopslag.
-4. Zodra het gecodeerde bestand gereed is, [een bronverbinding en een gegevensstroom maken voor uw bron voor cloudopslag](#create-a-dataflow-for-encrypted-data). Tijdens de stap voor het maken van flow moet u een `encryption` en neem uw openbare sleutel-id op.
+4. Zodra het gecodeerde dossier klaar is, [ creeer een bronverbinding en een dataflow voor uw bron van de wolkenopslag ](#create-a-dataflow-for-encrypted-data). Tijdens de stap voor het maken van flow moet u een parameter `encryption` opgeven en uw openbare-sleutelid opnemen.
 5. Het Experience Platform wint de privé sleutel van de veilige kluis terug om de gegevens op het tijdstip van inname te decrypteren.
 
 >[!IMPORTANT]
@@ -31,13 +31,13 @@ Dit document bevat stappen voor het genereren van een sleutelpaar voor versleute
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
-   * [Opslagbronnen voor cloud](../api/collect/cloud-storage.md): Maak een gegevensstroom om batchgegevens van uw cloudopslagbron naar het Experience Platform te brengen.
-* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+   * [ de opslagbronnen van de Wolk ](../api/collect/cloud-storage.md): Creeer een gegevensstroom om partijgegevens van uw bron van de wolkenopslag aan Experience Platform te brengen.
+* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
 
 ### Ondersteunde bestandsextensies voor gecodeerde bestanden {#supported-file-extensions-for-encrypted-files}
 
@@ -64,9 +64,9 @@ De lijst met ondersteunde bestandsextensies voor gecodeerde bestanden is:
 
 ## Versleutelingssleutelpaar maken {#create-encryption-key-pair}
 
-De eerste stap bij het opnemen van gecodeerde gegevens in het Experience Platform is het maken van uw sleutelpaar door een verzoek van de POST aan het `/encryption/keys` het eindpunt van de [!DNL Connectors] API.
+De eerste stap bij het invoeren van gecodeerde gegevens in het Experience Platform is het maken van een sleutelpaar voor codering door een verzoek voor een POST in te dienen bij het `/encryption/keys` -eindpunt van de [!DNL Connectors] API.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /data/foundation/connectors/encryption/keys
@@ -96,12 +96,12 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `encryptionAlgorithm` | Het type van encryptiealgoritme dat u gebruikt. De ondersteunde coderingstypen zijn `PGP` en `GPG`. |
+| `encryptionAlgorithm` | Het type van encryptiealgoritme dat u gebruikt. De ondersteunde coderingstypen zijn `PGP` en `GPG` . |
 | `params.passPhrase` | Passphrase verstrekt een extra laag van bescherming voor uw encryptiesleutels. Op verwezenlijking, slaat het Experience Platform passphrase in een verschillend veilige kluis van de openbare sleutel op. U moet een niet-lege tekenreeks opgeven als een wachtwoordzin. |
 
 +++
 
-**Antwoord**
+**Reactie**
 
 +++Voorbeeldreactie van weergave
 
@@ -125,9 +125,9 @@ Een succesvolle reactie keert uw Base64-Gecodeerde openbare sleutel, openbare ze
 
 ### Coderingssleutels ophalen {#retrieve-encryption-keys}
 
-Om alle encryptiesleutels in uw organisatie terug te winnen, doe een GET verzoek aan `/encryption/keys` endpoit=nt.
+Als u alle coderingssleutels in uw organisatie wilt ophalen, vraagt u een GET aan bij `/encryption/keys` endpoit=nt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /data/foundation/connectors/encryption/keys
@@ -149,7 +149,7 @@ curl -X GET \
 
 +++
 
-**Antwoord**
+**Reactie**
 
 +++Voorbeeldreactie van weergave
 
@@ -168,9 +168,9 @@ Een geslaagde reactie retourneert uw versleutelingsalgoritme, openbare sleutel, 
 
 ### Coderingssleutels ophalen met id {#retrieve-encryption-keys-by-id}
 
-Om een specifieke reeks encryptiesleutels terug te winnen, doe een verzoek van de GET aan `/encryption/keys` eindpunt en verstrek uw openbare zeer belangrijke identiteitskaart als kopbalparameter.
+Als u een specifieke set coderingssleutels wilt ophalen, vraagt u een GET naar het `/encryption/keys` -eindpunt en geeft u uw openbare-sleutel-id op als een headerparameter.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
@@ -190,7 +190,7 @@ curl -X GET \
 
 +++
 
-**Antwoord**
+**Reactie**
 
 +++Voorbeeldreactie van weergave
 
@@ -215,9 +215,9 @@ Tijdens dit stadium, moet u uw eigen privé sleutel en openbare zeer belangrijke
 
 ### Uw openbare sleutel delen op Experience Platform
 
-Om uw openbare sleutel te delen, doe een verzoek van de POST aan `/customer-keys` eindpunt terwijl het verstrekken van uw encryptiealgoritme en uw Base64-Gecodeerde openbare sleutel.
+Om uw openbare sleutel te delen, doe een verzoek van de POST aan het `/customer-keys` eindpunt terwijl het verstrekken van uw encryptiealgoritme en uw Base64-Gecodeerde openbare sleutel.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /data/foundation/connectors/encryption/customer-keys
@@ -243,12 +243,12 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `encryptionAlgorithm` | Het type van encryptiealgoritme dat u gebruikt. De ondersteunde coderingstypen zijn `PGP` en `GPG`. |
+| `encryptionAlgorithm` | Het type van encryptiealgoritme dat u gebruikt. De ondersteunde coderingstypen zijn `PGP` en `GPG` . |
 | `publicKey` | De openbare sleutel die aan uw klant beheerde sleutels beantwoordt die voor het ondertekenen van uw gecodeerd worden gebruikt. Deze sleutel moet Base64-Gecodeerd zijn. |
 
 +++
 
-**Antwoord**
+**Reactie**
 
 +++Voorbeeldreactie van weergave
 
@@ -264,7 +264,7 @@ curl -X POST \
 
 +++
 
-## Sluit de bron voor cloudopslag aan op het Experience Platform met de [!DNL Flow Service] API
+## Sluit de bron voor cloudopslag aan op het Experience Platform met behulp van de API van [!DNL Flow Service]
 
 Nadat u de coderingssleutel hebt opgehaald, kunt u nu doorgaan en een bronverbinding voor de bron van de cloudopslag maken en uw gecodeerde gegevens naar het platform overbrengen.
 
@@ -281,7 +281,7 @@ Eerst, moet u een basisverbinding tot stand brengen om uw bron tegen Platform vo
 * [Oracle Object Storage](../api/create/cloud-storage/oracle-object-storage.md)
 * [SFTP](../api/create/cloud-storage/sftp.md)
 
-Nadat u een basisverbinding hebt gemaakt, moet u de in de zelfstudie beschreven stappen volgen voor [een bronverbinding maken voor een bron voor cloudopslag](../api/collect/cloud-storage.md) om een bronverbinding, een doelverbinding, en een afbeelding tot stand te brengen.
+Na het creëren van een basisverbinding, moet u dan de stappen volgen die in het leerprogramma voor [ worden geschetst creërend een bronverbinding voor een bron van de wolkenopslag ](../api/collect/cloud-storage.md) om een bronverbinding, een doelverbinding, en een afbeelding tot stand te brengen.
 
 ## Een gegevensstroom maken voor gecodeerde gegevens {#create-a-dataflow-for-encrypted-data}
 
@@ -289,14 +289,14 @@ Nadat u een basisverbinding hebt gemaakt, moet u de in de zelfstudie beschreven 
 >
 >U moet over het volgende beschikken om een gegevensstroom voor gecodeerde gegevensinvoer te kunnen maken:
 >
->* [Openbare sleutel-id](#create-encryption-key-pair)
->* [Bronverbinding-id](../api/collect/cloud-storage.md#source)
->* [Doel-verbindings-id](../api/collect/cloud-storage.md#target)
->* [Toewijzing-id](../api/collect/cloud-storage.md#mapping)
+>* [ Openbare zeer belangrijke identiteitskaart ](#create-encryption-key-pair)
+>* [ de verbindingsidentiteitskaart van Source ](../api/collect/cloud-storage.md#source)
+>* [ identiteitskaart van de Verbinding van het Doel ](../api/collect/cloud-storage.md#target)
+>* [ Uitwisselingsidentiteitskaart ](../api/collect/cloud-storage.md#mapping)
 
-Om een gegevensstroom tot stand te brengen, doe een verzoek van de POST aan `/flows` het eindpunt van de [!DNL Flow Service] API. Als u gecodeerde gegevens wilt invoeren, moet u een `encryption` aan de `transformations` en neemt de `publicKeyId` die in een eerdere stap is gemaakt.
+Als u een gegevensstroom wilt maken, vraagt u een POST naar het `/flows` -eindpunt van de [!DNL Flow Service] API. Als u gecodeerde gegevens wilt invoeren, moet u een `encryption` -sectie toevoegen aan de eigenschap `transformations` en de `publicKeyId` opnemen die in een eerdere stap is gemaakt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /flows
@@ -304,7 +304,7 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB Een gegevensstroom maken voor gecodeerde gegevensinvoer]
+>[!TAB  creeer een dataflow voor gecodeerde gegevensopname ]
 
 **Verzoek**
 
@@ -360,19 +360,19 @@ curl -X POST \
 | `sourceConnectionIds` | De bron-verbindings-id. Deze id vertegenwoordigt de overdracht van gegevens van bron naar Platform. |
 | `targetConnectionIds` | De doel-verbindings-id. Deze id geeft aan waar de gegevens terechtkomen nadat deze naar Platform zijn overgebracht. |
 | `transformations[x].params.mappingId` | De toewijzing-id. |
-| `transformations.name` | Wanneer u gecodeerde bestanden opgeeft, moet u `Encryption` als een aanvullende transformatieparameter voor uw gegevensstroom. |
+| `transformations.name` | Wanneer u gecodeerde bestanden invoegt, moet u `Encryption` opgeven als extra transformatieparameter voor de gegevensstroom. |
 | `transformations[x].params.publicKeyId` | De openbare sleutel-id die u hebt gemaakt. Deze id is de helft van het sleutelpaar voor codering van uw gegevens voor cloudopslag. |
 | `scheduleParams.startTime` | De begintijd voor de gegevensstroom in tijdperk. |
-| `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day`, of `week`. |
-| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie wordt ingesteld als `once` en moet groter zijn dan of gelijk zijn aan `15` voor andere frequentiewaarden. |
+| `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day` of `week` . |
+| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie is ingesteld op `once` en moet groter zijn dan of gelijk zijn aan `15` voor andere frequentiewaarden. |
 
 +++
 
-**Antwoord**
+**Reactie**
 
 +++Voorbeeldreactie van weergave
 
-Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom voor uw gecodeerde gegevens.
+Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd dataflow voor uw gecodeerde gegevens terug.
 
 ```json
 {
@@ -383,7 +383,7 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom voor
 
 +++
 
->[!TAB Een gegevensstroom maken om gecodeerde en ondertekende gegevens in te voeren]
+>[!TAB  creeer een dataflow om gecodeerde en ondertekende gegevens in te nemen ]
 
 **Verzoek**
 
@@ -438,11 +438,11 @@ curl -X POST \
 
 +++
 
-**Antwoord**
+**Reactie**
 
 +++Voorbeeldreactie van weergave
 
-Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom voor uw gecodeerde gegevens.
+Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd dataflow voor uw gecodeerde gegevens terug.
 
 ```json
 {
@@ -457,9 +457,9 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom voor
 
 ### Versleutelingssleutels verwijderen {#delete-encryption-keys}
 
-Als u de coderingssleutels wilt verwijderen, vraagt u een DELETE aan de `/encryption/keys` eindpunt en verstrek uw openbare zeer belangrijke identiteitskaart als kopbalparameter.
+Als u de coderingssleutels wilt verwijderen, vraagt u een DELETE aan bij het `/encryption/keys` -eindpunt en geeft u uw openbare-sleutel-id op als een headerparameter.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
@@ -479,13 +479,13 @@ curl -X DELETE \
 
 +++
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
 ### Coderingssleutels valideren {#validate-encryption-keys}
 
-Om uw encryptiesleutels te bevestigen, doe een verzoek van de GET aan `/encryption/keys/validate/` eindpunt en verstrek openbare zeer belangrijke identiteitskaart die u als kopbalparameter wilt bevestigen.
+Om uw encryptiesleutels te bevestigen, doe een verzoek van de GET aan het `/encryption/keys/validate/` eindpunt en verstrek openbare zeer belangrijke identiteitskaart die u als kopbalparameter wilt bevestigen.
 
 ```http
 GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
@@ -505,15 +505,15 @@ curl -X GET \
 
 +++
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord geeft een bevestiging dat je id&#39;s geldig of ongeldig zijn.
 
 >[!BEGINTABS]
 
->[!TAB Geldig]
+>[!TAB  Geldig ]
 
-Een geldige openbare sleutel-id retourneert een status van `Active` samen met uw openbare sleutel-id.
+Een geldige openbare - sleutelidentiteitskaart keert een status van `Active` samen met uw openbare belangrijkste identiteitskaart terug
 
 ```json
 {
@@ -522,9 +522,9 @@ Een geldige openbare sleutel-id retourneert een status van `Active` samen met uw
 }
 ```
 
->[!TAB Ongeldig]
+>[!TAB  ongeldig ]
 
-Een ongeldige openbare sleutel-id retourneert een status van `Expired` samen met uw openbare sleutel-id.
+Een ongeldige openbare - sleutelidentiteitskaart keert een status van `Expired` samen met uw openbare belangrijkste identiteitskaart terug
 
 ```json
 {
@@ -540,7 +540,7 @@ Een ongeldige openbare sleutel-id retourneert een status van `Expired` samen met
 
 Inname van gecodeerde gegevens ondersteunt geen inname van terugkerende of meervoudige mappen in bronnen. Alle gecodeerde bestanden moeten in één map staan. Jokertekens met meerdere mappen in één bronpad worden ook niet ondersteund.
 
-Hier volgt een voorbeeld van een ondersteunde mapstructuur, waarbij het bronpad `/ACME-customers/*.csv.gpg`.
+Hieronder ziet u een voorbeeld van een ondersteunde mapstructuur, waarbij het bronpad `/ACME-customers/*.csv.gpg` is.
 
 In dit scenario worden de vetgedrukte bestanden in het Experience Platform opgenomen.
 
@@ -551,7 +551,7 @@ In dit scenario worden de vetgedrukte bestanden in het Experience Platform opgen
    * File4.json
    * **File5.csv.gpg**
 
-Hieronder ziet u een voorbeeld van een niet-ondersteunde mapstructuur waarbij het bronpad `/ACME-customers/*`.
+Hieronder ziet u een voorbeeld van een niet-ondersteunde mapstructuur waarbij het bronpad `/ACME-customers/*` is.
 
 In dit scenario, zal de stroomlooppas ontbreken en een foutenmelding terugkeren erop wijzend dat de gegevens niet uit de bron kunnen worden gekopieerd.
 
@@ -568,4 +568,4 @@ In dit scenario, zal de stroomlooppas ontbreken en een foutenmelding terugkeren 
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een sleutelpaar voor codering van uw gegevens voor cloudopslag gemaakt en een gegevensstroom voor het opnemen van gecodeerde gegevens via de [!DNL Flow Service API]. Lees de handleiding voor statusupdates over de volledigheid, fouten en metriek van uw gegevensstroom [uw gegevensstroom controleren met de [!DNL Flow Service] API](./monitor.md).
+Aan de hand van deze zelfstudie hebt u een sleutelpaar voor codering van uw gegevens voor cloudopslag gemaakt en een gegevensstroom voor het opnemen van gecodeerde gegevens via de [!DNL Flow Service API] . Voor statusupdates op de volledigheid van uw gegevensstroom, fouten, en metriek, lees de gids op [ controle uw gegevensstroom gebruikend  [!DNL Flow Service]  API ](./monitor.md).

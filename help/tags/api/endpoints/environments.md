@@ -4,19 +4,19 @@ description: Leer hoe te om vraag aan het /environment eindpunt in Reactor API t
 exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '999'
 ht-degree: 1%
 
 ---
 
 # Het eindpunt van omgevingen
 
-Wanneer een [bibliotheek](./libraries.md) wordt gecompileerd in een [build](./builds.md) in de Reactor-API is de exacte inhoud van de build afhankelijk van de omgevingsinstellingen en de bronnen in de bibliotheek. De omgeving bepaalt met name het volgende:
+Wanneer de a [ bibliotheek ](./libraries.md) in a [ wordt gecompileerd bouwt ](./builds.md) in Reactor API, hangt de nauwkeurige inhoud van de bouwstijl van de milieumontages en de middelen inbegrepen in de bibliotheek af. De omgeving bepaalt met name het volgende:
 
-1. **Doel**: De plaats waar u de bouwstijl wilt worden opgesteld. Dit wordt bepaald door een [host](./hosts.md) voor het milieu.
-1. **Archief**: U kunt ervoor kiezen om de build op te halen als een implementeerbare set bestanden of om de build op te slaan in een archiefindeling. Dit wordt gecontroleerd door de `archive` milieu.
+1. **Bestemming**: De plaats waar u de bouwstijl wilt worden opgesteld. Dit wordt gecontroleerd door a [ gastheer ](./hosts.md) voor het milieu te selecteren om te gebruiken.
+1. **Archief**: U kunt verkiezen om de bouwstijl als plaatsbare reeks dossiers terug te winnen of het te hebben omhoog in een archiefformaat gecompileerd. Dit wordt bepaald door de instelling `archive` voor de omgeving.
 
-Het doel en archiefformaat dat door het milieu wordt gevormd verandert hoe u in uw toepassing van verwijzingen voorziet bouwt (die verwijzing is [code insluiten](../../ui/publishing/environments.md#embed-code)). Als u wijzigingen aanbrengt in de doel- of bestandsindeling, moet u een overeenkomende update uitvoeren naar uw toepassing om de nieuwe referentie te kunnen gebruiken.
+Het doel en archiefformaat dat door het milieu wordt gevormd verandert hoe u in uw toepassing (die verwijzing die een [ inbedt code ](../../ui/publishing/environments.md#embed-code) is) van verwijzingen voorziet. Als u wijzigingen aanbrengt in de doel- of bestandsindeling, moet u een overeenkomende update uitvoeren naar uw toepassing om de nieuwe referentie te kunnen gebruiken.
 
 De milieu&#39;s komen in drie types (of stadia), met elk type dat een verschillende grens van het totale aantal heeft u kunt hebben:
 
@@ -28,21 +28,21 @@ De milieu&#39;s komen in drie types (of stadia), met elk type dat een verschille
 
 {style="table-layout:auto"}
 
-Deze omgevingstypen gedragen zich op dezelfde manier, maar worden in verschillende stadia van de [publicatieworkflow voor tags](../../ui/publishing/publishing-flow.md).
+Deze omgevingstypes hebben gelijkaardig gedrag, maar worden gebruikt in verschillende stadia van het [ markering het publiceren werkschema ](../../ui/publishing/publishing-flow.md).
 
-Een omgeving behoort tot precies één [eigenschap](./properties.md).
+Een milieu behoort tot precies één [ bezit ](./properties.md).
 
-Zie de sectie over [omgevingen](../../ui/publishing/environments.md) in de publicatiedocumenten.
+Voor meer algemene informatie over milieu&#39;s, zie de sectie over [ milieu&#39;s ](../../ui/publishing/environments.md) in het publiceren documenten.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met omgevingen ophalen {#list}
 
 U kunt een lijst van milieu&#39;s voor een bezit terugwinnen door identiteitskaart van het bezit in de weg van een verzoek van de GET te omvatten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /properties/{PROPERTY_ID}/environments
@@ -56,7 +56,7 @@ GET /properties/{PROPERTY_ID}/environments
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde milieu&#39;s op de volgende attributen worden gefiltreerd:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
+>Gebruikend vraagparameters, kunnen de vermelde milieu&#39;s op de volgende attributen worden gefiltreerd:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -70,7 +70,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lijst met omgevingen voor de opgegeven eigenschap.
 
@@ -166,7 +166,7 @@ Een geslaagde reactie retourneert een lijst met omgevingen voor de opgegeven eig
 
 U kunt een omgeving opzoeken door zijn id op te geven in het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /environments/{ENVIRONMENT_ID}
@@ -190,7 +190,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert de details van de omgeving.
 
@@ -275,7 +275,7 @@ Een succesvolle reactie retourneert de details van de omgeving.
 
 U kunt een nieuwe omgeving maken door een POST aan te vragen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /properties/{PROPERTY_ID}/environments
@@ -283,13 +283,13 @@ POST /properties/{PROPERTY_ID}/environments
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) dat u de omgeving definieert onder. |
+| `PROPERTY_ID` | `id` van het [ bezit ](./properties.md) dat u het milieu onder bepaalt. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een nieuwe omgeving voor de opgegeven eigenschap gemaakt. De vraag associeert ook het milieu met een bestaande gastheer door `relationships` eigenschap. Zie de handleiding op [relaties](../guides/relationships.md) voor meer informatie .
+Met het volgende verzoek wordt een nieuwe omgeving voor de opgegeven eigenschap gemaakt. De aanroep koppelt de omgeving ook aan een bestaande host via de eigenschap `relationships` . Zie de gids op [ verhoudingen ](../guides/relationships.md) voor meer informatie.
 
 ```shell
 curl -X POST \
@@ -322,17 +322,17 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes.name` | **(Vereist)** Een door de mens leesbare naam voor het milieu. |
+| `attributes.name` | **(Vereist)** Een voor de mens leesbare naam voor het milieu. |
 | `attributes.archive` | Een booleaanse waarde die aangeeft of de build een archiefindeling heeft. |
 | `attributes.archive_passphrase` | Een tekenreekswachtwoord waarmee het archiefbestand kan worden ontgrendeld. |
 | `attributes.path` | Een pad vanaf de host-URL voor de omgeving. |
 | `attributes.stage` | Het stadium voor het milieu (ontwikkeling, staging of productie). |
-| `id` | De `id` van de omgeving die u wilt bijwerken. Dit moet overeenkomen met de `{ENVIRONMENT_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `environments`. |
+| `id` | De `id` -omgeving die u wilt bijwerken. Dit moet overeenkomen met de `{ENVIRONMENT_ID}` -waarde in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `environments` zijn. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de nieuwe omgeving.
 
@@ -417,7 +417,7 @@ Een geslaagde reactie retourneert de details van de nieuwe omgeving.
 
 U kunt een omgeving bijwerken door de bijbehorende id op te nemen in het pad van een PATCH-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /environments/{ENVIRONMENT_ID}
@@ -431,7 +431,7 @@ PATCH /environments/{ENVIRONMENT_ID}
 
 **Verzoek**
 
-De volgende aanvraag werkt de `name` voor een bestaande omgeving.
+Met de volgende aanvraag wordt `name` bijgewerkt voor een bestaande omgeving.
 
 ```shell
 curl -X PATCH \
@@ -453,13 +453,13 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de omgeving moeten worden bijgewerkt. De volgende omgevingskenmerken kunnen worden bijgewerkt: <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Zie de voorbeeldvraag voor [creëren van een omgeving](#create) voor een lijst van kenmerken en het gebruik ervan. |
-| `id` | De `id` van de omgeving die u wilt bijwerken. Dit moet overeenkomen met de `{ENVIRONMENT_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `environments`. |
+| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de omgeving moeten worden bijgewerkt. De volgende omgevingskenmerken kunnen worden bijgewerkt: <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Zie de voorbeeldvraag voor [ creërend een milieu ](#create) voor een lijst van attributen en hun gebruiksgeval. |
+| `id` | De `id` -omgeving die u wilt bijwerken. Dit moet overeenkomen met de `{ENVIRONMENT_ID}` -waarde in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `environments` zijn. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de bijgewerkte omgeving.
 
@@ -544,7 +544,7 @@ Een geslaagde reactie retourneert de details van de bijgewerkte omgeving.
 
 U kunt een omgeving verwijderen door de bijbehorende id op te nemen in het pad van een DELETE-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /environments/{ENVIRONMENT_ID}
@@ -566,21 +566,21 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder responsstructuur, wat aangeeft dat de omgeving is verwijderd.
 
 ## Gerelateerde bronnen ophalen voor een omgeving {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een milieu terug te winnen. Wanneer [een omgeving opzoeken](#lookup), worden deze relaties vermeld in het `relationships` eigenschap.
+De volgende vraag toont aan hoe te om de verwante middelen voor een milieu terug te winnen. Wanneer [ omhoog een milieu ](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
 
-Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante builds voor een omgeving weergeven {#builds}
 
-U kunt de builds die een omgeving gebruiken, weergeven door ze toe te voegen `/builds` naar het pad van een opzoekverzoek.
+U kunt een lijst maken van de builds die een omgeving gebruiken door `/builds` aan de weg van een raadplegingsverzoek toe te voegen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /environments/{ENVIRONMENT_ID}/builds
@@ -588,7 +588,7 @@ GET  /environments/{ENVIRONMENT_ID}/builds
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | De `id` van de omgeving waarvan u de builds wilt vermelden. |
+| `{ENVIRONMENT_ID}` | De `id` van de omgeving waarvan u de builds wilt weergeven. |
 
 {style="table-layout:auto"}
 
@@ -604,7 +604,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van bouwstijlen terug die het gespecificeerde milieu gebruiken.
 
@@ -691,13 +691,13 @@ Een succesvolle reactie keert een lijst van bouwstijlen terug die het gespecific
 
 ### De verwante host opzoeken voor een omgeving {#host}
 
-U kunt de host opzoeken die een omgeving gebruikt door deze toe te voegen `/host` naar het pad van een GET-aanvraag.
+U kunt de host die een omgeving gebruikt, opzoeken door `/host` toe te voegen aan het pad van een GET-aanvraag.
 
 >[!NOTE]
 >
->U kunt het hostrelatieobject zelf opzoeken via een [afzonderlijke oproep](#host-relationship).
+>U kunt omhoog het voorwerp van de gastheerverhouding zelf door a [ afzonderlijke vraag ](#host-relationship) kijken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /environments/{ENVIRONMENT_ID}/host
@@ -721,9 +721,9 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert de details van de gastheer terug die het gespecificeerde milieu gebruikt.
+Een geslaagde reactie retourneert de details van de host die de opgegeven omgeving gebruikt.
 
 ```json
 {
@@ -762,9 +762,9 @@ Een succesvolle reactie keert de details van de gastheer terug die het gespecifi
 
 ### De verwante bibliotheek opzoeken voor een omgeving {#library}
 
-U kunt de bibliotheek die een omgeving gebruikt, opzoeken door deze toe te voegen `/library` naar het pad van een GET-aanvraag.
+U kunt de bibliotheek die een omgeving gebruikt, opzoeken door `/library` toe te voegen aan het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /environments/{ENVIRONMENT_ID}/library
@@ -772,7 +772,7 @@ GET  /environments/{ENVIRONMENT_ID}/library
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | De `id` van de omgeving waarvan u de bibliotheek wilt opzoeken. |
+| `{ENVIRONMENT_ID}` | De `id` -waarde van de omgeving waarvan u de bibliotheek wilt opzoeken. |
 
 {style="table-layout:auto"}
 
@@ -788,7 +788,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert de details van de bibliotheek die de opgegeven omgeving gebruikt.
 
@@ -877,9 +877,9 @@ Een succesvol antwoord retourneert de details van de bibliotheek die de opgegeve
 
 ### Verwante eigenschap opzoeken voor een omgeving {#property}
 
-U kunt de eigenschap die eigenaar is van een omgeving opzoeken door deze toe te voegen `/property` naar het pad van een GET-aanvraag.
+U kunt de eigenschap die eigenaar is van een omgeving opzoeken door `/property` toe te voegen aan het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /environments/{ENVIRONMENT_ID}/property
@@ -903,7 +903,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de eigenschap die eigenaar is van de opgegeven omgeving.
 

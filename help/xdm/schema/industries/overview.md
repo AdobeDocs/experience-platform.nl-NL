@@ -5,7 +5,7 @@ description: Leer over de gestandaardiseerde gegevensmodellen voor diverse de in
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Het Model van Gegevens van de ervaring (XDM) staat u toe om hoogst klantgerichte
 
 >[!NOTE]
 >
->De nieuwe standaardXDM componenten worden onophoudelijk vrijgegeven aan best aangepaste consumentenbehoeften. Voor een lijst met de meest actuele componenten kunt u [bestaande bronnen in de gebruikersinterface verkennen](../../ui/explore.md) of verwijzen naar de [officiële XDM-opslagplaats](https://github.com/adobe/xdm/tree/master/components) op GitHub.
+>De nieuwe standaardXDM componenten worden onophoudelijk vrijgegeven aan best aangepaste consumentenbehoeften. Voor een lijst van de meest bijgewerkte componenten, kunt u [ bestaande middelen in UI ](../../ui/explore.md) onderzoeken of naar de [ officiële XDM bewaarplaats ](https://github.com/adobe/xdm/tree/master/components) op GitHub verwijzen.
 
 Afhankelijk van de industrie die uw zaken onder werkt, zullen sommige componenten XDM relevanter voor uw behoeften dan anderen zijn. Bovendien zullen de relaties die u tussen uw XDM-schema&#39;s tot stand brengt, afhankelijk van uw industrie variëren.
 
@@ -26,10 +26,10 @@ Om u te helpen uw gegevensmodelleringsstrategie begeleiden die op uw bepaalde in
 
 Om ERDs te lezen die in deze gids van verwijzingen wordt voorzien, moet u een werkend inzicht in hebben hoe de componenten XDM aan vormschema&#39;s en hoe XDM- schema&#39;s in Experience Platform als geheel in wisselwerking staan. Lees de volgende overzichtsdocumentatie voordat u verdergaat:
 
-* [XDM System, overzicht](../../home.md): Leer hoe XDM in het ecosysteem van het Platform werkt.
-* [Basisbeginselen van de schemacompositie](../../schema/composition.md): Leer hoe de componenten XDM (zoals de groepen van het schemagebied, klassen, en gegevenstypes) tot de structuur van een schema, evenals de rol van identiteitsgebieden bijdragen.
+* [ XDM Overzicht van het Systeem ](../../home.md): Leer hoe XDM in het ecosysteem van het Platform werkt.
+* [ Grondbeginselen van schemacompositie ](../../schema/composition.md): Leer hoe de componenten XDM (zoals de groepen van het schemagebied, klassen, en gegevenstypes) tot de structuur van een schema, evenals de rol van identiteitsgebieden bijdragen.
 
-U wordt ook aangeraden de [handleiding best practices voor gegevensmodellering](../../schema/best-practices.md) voor algemene richtlijnen voor het toewijzen van gegevens aan XDM.
+Het wordt ook geadviseerd dat u de [ gegevens modelleert best practices gids ](../../schema/best-practices.md) voor algemene richtlijnen over hoe te om uw gegevens aan XDM in kaart te brengen.
 
 ## Bedrijfs gegevensmodel ERDs {#erds}
 

@@ -6,7 +6,7 @@ exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 source-git-commit: 22477c11a977059849d9b47871a5c2aef1da4b24
 workflow-type: tm+mt
 source-wordcount: '818'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >
 >Het gebruik van Offer decisioning in de SDK van het Web van Adobe Experience Platform is beschikbaar in vroege toegang om gebruikers te selecteren. Deze functionaliteit is niet beschikbaar voor alle organisaties.
 
-Adobe Experience Platform [!DNL Web SDK] kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer decisioning worden beheerd. U kunt uw aanbiedingen en andere verwante objecten maken met de gebruikersinterface (UI) of API&#39;s van de Offer decisioning.
+Adobe Experience Platform [!DNL Web SDK] kan persoonlijke aanbiedingen die in Offer decisioning worden beheerd, aanbieden en weergeven. U kunt uw aanbiedingen en andere verwante objecten maken met de gebruikersinterface (UI) of API&#39;s van de Offer decisioning.
 
 ## Vereisten
 
@@ -26,11 +26,11 @@ Adobe Experience Platform [!DNL Web SDK] kan gepersonaliseerde aanbiedingen leve
 
 ## Terminologie
 
-Het is belangrijk om de volgende terminologie te begrijpen wanneer het werken met Offer decisioning. Ga voor meer informatie en voor meer informatie naar de [Verklarende woordenlijst offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+Het is belangrijk om de volgende terminologie te begrijpen wanneer het werken met Offer decisioning. Voor meer informatie en om extra termijnen te bekijken, gelieve de [ verklarende woordenlijst van de Offer decisioning ](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html) te bezoeken.
 
-* **Beslissingsgebieden:** Voor Offer decisioning, zijn het besluitvormingswerkingsgebied Base64 gecodeerde koorden van JSON die de activiteit en plaatsings IDs bevatten u de dienst van de offer decisioning wilt gebruiken om aanbiedingen voor te stellen.
+* **Scopes van het Besluit:** voor Offer decisioning, zijn het besluitvormingswerkingsgebied Base64 gecodeerde koorden van JSON die de activiteit en plaatsing IDs bevatten u de dienst van de offer decisioning wilt gebruiken om aanbiedingen voor te stellen.
 
-  *Reikwijdte van de beschikking JSON:*
+  *werkingsgebied JSON van het Besluit:*
 
   ```json
   {
@@ -39,7 +39,7 @@ Het is belangrijk om de volgende terminologie te begrijpen wanneer het werken me
   }
   ```
 
-  *Base64-gecodeerde tekenreeks met beslissingsbereik:*
+  *het werkingsgebied Base64 van het Besluit gecodeerde koord:*
 
   ```json
   "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
@@ -47,24 +47,24 @@ Het is belangrijk om de volgende terminologie te begrijpen wanneer het werken me
 
   >[!TIP]
   >
-  >U kunt de waarde van het beslissingsbereik kopiëren uit de **Overzicht van activiteiten** in de gebruikersinterface.
+  >U kunt de waarde van het besluitvormingswerkingsgebied van de **pagina van het Overzicht van de Activiteit** in UI kopiëren.
 
-  ![Instellingen voor beslissingskopie.](assets/decision-scope-copy.png)
+  ![ montages van het Beslissingsexemplaar.](assets/decision-scope-copy.png)
 
-* **Gegevensstromen:** Lees voor meer informatie de [datastreams](/help/datastreams/overview.md) documentatie.
+* **Datastreams:** voor meer informatie, te lezen gelieve de [ gegevensstromen ](/help/datastreams/overview.md) documentatie.
 
-* **Identiteit**: Lees voor meer informatie deze documentatie waarin wordt beschreven hoe [Platform Web SDK gebruikt Identity Service](../../identity/overview.md).
+* **Identiteit**: Voor meer informatie, te lezen gelieve deze documentatie die schetst hoe [ het Web SDK van het Platform de Dienst van de Identiteit ](../../identity/overview.md) gebruikt.
 
 ## Offer decisioning inschakelen
 
 Voer de volgende stappen uit om Offer decisioning in te schakelen:
 
-1. Adobe Experience Platform ingeschakeld in uw [datastream](/help/datastreams/overview.md) en schakel het selectievakje &quot;Offer decisioning&quot; in
+1. Toegelaten Adobe Experience Platform in uw [ datastream ](/help/datastreams/overview.md) en controleer de &quot;Offer decisioning&quot;doos
 
-   ![aanbieding-beslist-rand-config](./assets/offer-decisioning-edge-config.png)
+   ![ aanbod-besluit-rand-config ](./assets/offer-decisioning-edge-config.png)
 
-1. Volg de instructies op [de SDK installeren](/help/web-sdk/install/overview.md) (De SDK kan zelfstandig of via de gebruikersinterface worden geïnstalleerd. Zie de [snel aan de slag met tags](/help/tags/quick-start/quick-start.md)) voor meer informatie.
-1. De SDK configureren voor Offer decisioning met `personalization.decisionScopes`. Hieronder vindt u aanvullende specifieke stappen voor Offer decisioning.
+1. Volg de instructies om [ SDK ](/help/web-sdk/install/overview.md) te installeren (SDK kan standalone of door UI worden geïnstalleerd. Zie de [ snel begingids van markeringen ](/help/tags/quick-start/quick-start.md)) voor meer informatie.
+1. Configureer de SDK voor Offer decisioning met `personalization.decisionScopes` . Hieronder vindt u aanvullende specifieke stappen voor Offer decisioning.
 
    * De zelfstandige SDK installeren
 
@@ -85,30 +85,30 @@ Voer de volgende stappen uit om Offer decisioning in te schakelen:
    * De SDK installeren via tags
 
       1. [Een tag-eigenschap maken](/help/tags/ui/administration/companies-and-properties.md)
-      1. [De insluitcode toevoegen](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. Installeer en vorm de uitbreiding van SDK van het Web van het Platform met de Datstream u door de configuratie van &quot;Datasstream&quot;dropdown te selecteren creeerde. Zie de documentatie op [extensions](/help/tags/ui/managing-resources/extensions/overview.md).
+      1. [ voeg de ingebedde code ](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html) toe
+      1. Installeer en vorm de uitbreiding van SDK van het Web van het Platform met de Datstream u door de configuratie van &quot;Datasstream&quot;dropdown te selecteren creeerde. Zie de documentatie op [ uitbreidingen ](/help/tags/ui/managing-resources/extensions/overview.md).
 
-         ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
+         ![ install-a-web-sdk-uitbreiding ](./assets/install-aep-web-sdk-extension.png)
 
-         ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
+         ![ vorm-sep-web-sdk-uitbreiding ](./assets/configure-aep-web-sdk-extension.png)
 
-      1. Maak de noodzakelijke [Gegevenselementen](/help/tags/ui/managing-resources/data-elements.md). Bij het absolute minimum, moet u een Identiteitskaart van het Web SDK van het Platform en een het gegevenselement van de Objecten van XDM van het Web van het Web van het Platform tot stand brengen XDM.
+      1. Creeer de noodzakelijke [ Elementen van Gegevens ](/help/tags/ui/managing-resources/data-elements.md). Bij het absolute minimum, moet u een Identiteitskaart van het Web SDK van het Platform en een het gegevenselement van de Objecten van XDM van het Web van het Web van het Platform tot stand brengen XDM.
 
-         ![identity-map-data-element](./assets/identity-map-data-element.png)
+         ![ identiteit-kaart-gegeven-element ](./assets/identity-map-data-element.png)
 
-         ![xdm-object-data-element](./assets/xdm-object-data-element.png)
+         ![ xdm-voorwerp-gegeven-element ](./assets/xdm-object-data-element.png)
 
-      1. Maak uw [Regels](/help/tags/ui/managing-resources/rules.md).
+      1. Creeer uw [ Regels ](/help/tags/ui/managing-resources/rules.md).
 
-         * Voeg een actie van de Gebeurtenis van de Server van SDK van het Web van het Platform toe verzenden en voeg relevante toe `decisionScopes` aan de configuratie van die actie
+         * Voeg een Platform Web SDK toe verzendt de actie van de Gebeurtenis en voeg relevant `decisionScopes` aan de configuratie van die actie toe
 
-         ![send-event-action-decisionsScopes](./assets/send-event-action-decisionScopes.png)
+         ![ send-event-action-DecisionScopes ](./assets/send-event-action-decisionScopes.png)
 
-      1. [Bibliotheek maken en publiceren](/help/tags/ui/publishing/libraries.md) met alle relevante regels, gegevenselementen en extensies die u hebt geconfigureerd
+      1. [ creeer en publiceer een bibliotheek ](/help/tags/ui/publishing/libraries.md) die alle relevante Regels, Elementen van Gegevens, en Uitbreidingen bevat u hebt gevormd
 
 ## Voorbeeldverzoeken en -antwoorden
 
-### Eén `decisionScopes` value
+### Eén `decisionScopes` -waarde
 
 **Verzoek**
 
@@ -139,10 +139,10 @@ Voer de volgende stappen uit om Offer decisioning in te schakelen:
 
 | Eigenschap | Vereist | Beschrijving | Limieten | Voorbeeld |
 |---|---|---|---|---|
-| `identityMap` | Ja | Zie dit [Identiteitsdocumentatie](../../identity/overview.md). | Eén identiteit per aanvraag. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`. <br><br> Opmerking: gebruikers hoeven de `ECID` in de API-aanroep. Deze parameter wordt automatisch toegevoegd aan de vraag indien nodig. |
-| `decisionScopes` | Ja | Een array met Base64-gecodeerde tekenreeksen van JSON die de activiteit- en plaatsings-id&#39;s bevatten. | Maximaal 30 `decisionScopes` per verzoek. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
+| `identityMap` | Ja | Verwijs naar deze [ documentatie van de Dienst van de Identiteit ](../../identity/overview.md). | Eén identiteit per aanvraag. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`. <br><br> Opmerking: gebruikers hoeven de parameter `ECID` niet op te nemen in de API-aanroep. Deze parameter wordt automatisch toegevoegd aan de vraag indien nodig. |
+| `decisionScopes` | Ja | Een array met Base64-gecodeerde tekenreeksen van JSON die de activiteit- en plaatsings-id&#39;s bevatten. | Maximaal 30 `decisionScopes` per aanvraag. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
-**Antwoord**
+**Reactie**
 
 ```json
 {
@@ -236,10 +236,10 @@ Voer de volgende stappen uit om Offer decisioning in te schakelen:
 
 | Eigenschap | Vereist | Beschrijving | Limieten | Voorbeeld |
 |---|---|---|---|---|
-| `identityMap` | Ja | Zie dit [Identiteitsdocumentatie](../../identity/overview.md). | Eén identiteit per aanvraag. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`. <br><br> Opmerking: gebruikers hoeven de `ECID` in de API-aanroep. Deze parameter wordt automatisch toegevoegd aan de vraag indien nodig. |
-| `decisionScopes` | Ja | Een array met Base64-gecodeerde tekenreeksen van JSON die de activiteit- en plaatsings-id&#39;s bevatten. | Maximaal 30 `decisionScopes` per verzoek. | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
+| `identityMap` | Ja | Verwijs naar deze [ documentatie van de Dienst van de Identiteit ](../../identity/overview.md). | Eén identiteit per aanvraag. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`. <br><br> Opmerking: gebruikers hoeven de parameter `ECID` niet op te nemen in de API-aanroep. Deze parameter wordt automatisch toegevoegd aan de vraag indien nodig. |
+| `decisionScopes` | Ja | Een array met Base64-gecodeerde tekenreeksen van JSON die de activiteit- en plaatsings-id&#39;s bevatten. | Maximaal 30 `decisionScopes` per aanvraag. | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
 
-**Antwoord**
+**Reactie**
 
 ```json
 {
@@ -332,4 +332,4 @@ Voer de volgende stappen uit om Offer decisioning in te schakelen:
 
 ## Beperkingen
 
-Sommige aanbodbeperkingen worden momenteel niet ondersteund door de mobiele Edge Network-workflows, bijvoorbeeld Capping. De waarde van het gebied van de Plak specificeert het aantal tijden een aanbieding over alle gebruikers kan worden voorgesteld. Zie voor meer informatie [Aanbiedingsregels en documentatie over beperkingen](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Sommige aanbodbeperkingen worden momenteel niet ondersteund door de workflows van mobiele Edge Network, bijvoorbeeld Afdekkingen. De waarde van het gebied van de Plak specificeert het aantal tijden een aanbieding over alle gebruikers kan worden voorgesteld. Voor meer details, zie [ de geschiktheidsregels en beperkingsdocumentatie van de Aanbieding ](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).

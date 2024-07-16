@@ -1,10 +1,10 @@
 ---
-description: Leer hoe u de API voor bestemmingstests gebruikt om de uitvoer naar uw streamingdoel te valideren op basis van uw sjabloon voor berichttransformatie.
+description: Leer hoe u de API voor het testen van doelen gebruikt om de uitvoer naar uw streamingdoel te valideren op basis van uw sjabloon voor berichttransformatie.
 title: Geëxporteerde profielstructuur valideren
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
@@ -14,25 +14,25 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->**API-eindpunt**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
+>**API eindpunt**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
-Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met de `/authoring/testing/template/render` API-eindpunt, om geëxporteerde profielen te renderen die overeenkomen met de verwachte indeling van uw bestemming, op basis van uw [berichttransformatiesjabloon](../../functionality/destination-server/message-format.md#using-templating). Voor een beschrijving van de functionaliteit die door dit eindpunt wordt gesteund, lees [sjabloon maken](create-template.md).
+Deze pagina maakt een lijst en beschrijft alle API verrichtingen die u het gebruiken van het `/authoring/testing/template/render` API eindpunt kunt uitvoeren, om uitgevoerde profielen terug te geven die het verwachte formaat van uw bestemming aanpassen, die op uw [ malplaatje van de berichttransformatie ](../../functionality/destination-server/message-format.md#using-templating) wordt gebaseerd. Voor een beschrijving van de functionaliteit die door dit eindpunt wordt gesteund, lees [ creeer malplaatje ](create-template.md).
 
 ## Aan de slag met API-bewerkingen voor sjablonen {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Geëxporteerde profielen renderen op basis van de sjabloon voor berichttransformatie {#render-exported-data}
 
-U kunt geëxporteerde profielen renderen door een POST aan te vragen bij de `authoring/testing/template/render` eindpunt en het verstrekken van bestemmingsidentiteitskaart van de bestemmingsconfiguratie en het malplaatje u creeerde gebruikend [voorbeeldsjabloon-API-eindpunt](sample-template-api.md).
+U kunt uitgevoerde profielen teruggeven door een verzoek van de POST aan het `authoring/testing/template/render` eindpunt te doen en bestemmingsidentiteitskaart van de bestemmingsconfiguratie en het malplaatje te verstrekken u gebruikend het [ malplaatje API eindpunt ](sample-template-api.md) creeerde.
 
 U kunt beginnen met het gebruik van een eenvoudige sjabloon die uw Raw-profielen exporteert zonder transformaties toe te passen en vervolgens verdergaan naar een complexere sjabloon, die transformaties toepast op profielen. De syntaxis voor de eenvoudige sjabloon is: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
->* De doel-id die u hier moet gebruiken, is de `instanceId` die met een bestemmingsconfiguratie beantwoordt, die wordt gecreeerd gebruikend `/destinations` eindpunt. Zie [een doelconfiguratie ophalen](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) voor meer informatie .
+>* De doel-id die u hier moet gebruiken, is de `instanceId` die overeenkomt met een doelconfiguratie die is gemaakt met het `/destinations` -eindpunt. Verwijs naar [ een bestemmingsconfiguratie ](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) voor meer details terugwinnen.
 
-**API-indeling**
+**API formaat**
 
 
 ```http
@@ -43,21 +43,21 @@ POST authoring/testing/template/render
 | -------- | ----------- |
 | `destinationId` | De id van de doelconfiguratie waarvoor u geëxporteerde profielen rendert. |
 | `template` | De op tekens gebaseerde versie van de sjabloon waarop u geëxporteerde profielen rendert. |
-| `profiles` | *Optioneel*. U kunt profielen toevoegen aan de aanvraaginstantie. Als u geen profielen toevoegt, genereert en voegt het Experience Platform automatisch profielen toe aan de aanvraag. <br> Als u profielen aan het lichaam van de vraag zou willen toevoegen, kunt u wat produceren door te gebruiken [Voorbeeld van genereren van profiel-API](sample-profile-generation-api.md). |
+| `profiles` | *Facultatief*. U kunt profielen toevoegen aan de aanvraaginstantie. Als u geen profielen toevoegt, genereert en voegt het Experience Platform automatisch profielen toe aan de aanvraag. <br> Als u profielen aan het lichaam van de vraag zou willen toevoegen, kunt u wat produceren door de [ generatie API van de de profielgeneratie van de Steekproef te gebruiken ](sample-profile-generation-api.md). |
 
 {style="table-layout:auto"}
 
-Merk op dat de reactie die door teruggegeven malplaatje API eindpunt is teruggekeerd verschilt gebaseerd op het beleid van de bestemmingssamenvoeging. Als uw bestemming een configureerbaar samenvoegingsbeleid heeft, wordt de samenvoegingssleutel die bepaalt hoe de profielen worden bijeengevoegd ook geretourneerd in de reactie. Meer informatie [samenvoegingsbeleid](../../functionality/destination-configuration/aggregation-policy.md) voor meer informatie .
+Merk op dat de reactie die door teruggegeven malplaatje API eindpunt is teruggekeerd verschilt gebaseerd op het beleid van de bestemmingssamenvoeging. Als uw bestemming een configureerbaar samenvoegingsbeleid heeft, wordt de samenvoegingssleutel die bepaalt hoe de profielen worden bijeengevoegd ook geretourneerd in de reactie. Lees over [ samenvoegingsbeleid ](../../functionality/destination-configuration/aggregation-policy.md) voor meer details.
 
 | Responsparameter | Beschrijving |
 | -------- | ----------- |
-| `aggregationKey` | Vertegenwoordigt het beleid waardoor de profielen in de uitvoer naar uw bestemming worden samengevoegd. Deze parameter is optioneel en is alleen aanwezig als het beleid voor doelaggregatie is ingesteld op `CONFIGURABLE_AGGREGATION`. |
+| `aggregationKey` | Vertegenwoordigt het beleid waardoor de profielen in de uitvoer naar uw bestemming worden samengevoegd. Deze parameter is optioneel en is alleen aanwezig als het beleid voor doelaggregatie is ingesteld op `CONFIGURABLE_AGGREGATION` . |
 | `profiles` | Hiermee geeft u de profielen weer die in de aanvraag zijn opgegeven of de automatisch gegenereerde profielen als er geen profielen zijn opgegeven in de aanvraag. |
 | `output` | Gerenderd profiel of gerenderde profielen, als een beschermde tekenreeks, gebaseerd op de aangeboden sjabloon voor berichttransformatie |
 
 In de volgende secties worden gedetailleerde verzoeken en antwoorden gegeven voor beide hierboven beschreven gevallen.
 
-* [Beste inspanningsaggregatie en een profiel dat is opgenomen in de aanvraaginstantie](#best-effort)
+* [Beste inspanningsaggregatie en een profiel opgenomen in de aanvraaginstantie](#best-effort)
 * [Configureerbare samenvoeging en profielen opgenomen in de aanvraaginstantie](#configurable-aggregation)
 
 ### Geëxporteerde profielen renderen met de best mogelijke aggregatie en één profiel opgenomen in de aanvraagbak {#best-effort}
@@ -123,10 +123,10 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }'
 ```
 
-**Antwoord**
+**Reactie**
 
 De reactie retourneert het resultaat van het renderen van de sjabloon of eventuele gevonden fouten.
-Een geslaagde reactie retourneert HTTP-status 200 met details van de geëxporteerde gegevens. Het geëxporteerde profiel zoeken in het dialoogvenster `output` parameter, als een beschermde tekenreeks.
+Een geslaagde reactie retourneert HTTP-status 200 met details van de geëxporteerde gegevens. Zoek het geëxporteerde profiel in de parameter `output` als een beschermde tekenreeks.
 Een mislukte reactie retourneert HTTP-status 400, samen met beschrijvingen van de gevonden fouten.
 
 ```json
@@ -186,7 +186,7 @@ Een mislukte reactie retourneert HTTP-status 400, samen met beschrijvingen van d
 **Verzoek**
 
 
-In het volgende verzoek worden meerdere geëxporteerde profielen weergegeven die overeenkomen met de indeling die door uw doel wordt verwacht. In dit voorbeeld, beantwoordt bestemmingsidentiteitskaart aan een bestemmingsconfiguratie met configureerbare samenvoeging. Er zijn twee profielen opgenomen in de inhoud van het verzoek, elk met drie kwalificaties voor het publiek en vijf identiteiten. U kunt profielen produceren om op de vraag te verzenden door te gebruiken [API voor genereren van voorbeeldprofiel](sample-profile-generation-api.md).
+In het volgende verzoek worden meerdere geëxporteerde profielen weergegeven die overeenkomen met de indeling die door uw doel wordt verwacht. In dit voorbeeld, beantwoordt bestemmingsidentiteitskaart aan een bestemmingsconfiguratie met configureerbare samenvoeging. Er zijn twee profielen opgenomen in de inhoud van het verzoek, elk met drie kwalificaties voor het publiek en vijf identiteiten. U kunt profielen produceren om op de vraag te verzenden door de [ generatie API van het steekproefprofiel te gebruiken ](sample-profile-generation-api.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -304,10 +304,10 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }'
 ```
 
-**Antwoord**
+**Reactie**
 
 De reactie retourneert het resultaat van het renderen van de sjabloon of eventuele gevonden fouten.
-Een geslaagde reactie retourneert HTTP-status 200 met details van de geëxporteerde gegevens. In het antwoord ziet u hoe de profielen worden samengevoegd op basis van het lidmaatschap en de identiteit van het publiek. De geëxporteerde profielen zoeken in het dialoogvenster `output` parameter, als een beschermde tekenreeks.
+Een geslaagde reactie retourneert HTTP-status 200 met details van de geëxporteerde gegevens. In het antwoord ziet u hoe de profielen worden samengevoegd op basis van het lidmaatschap en de identiteit van het publiek. Zoek de geëxporteerde profielen in de parameter `output` als een beschermde tekenreeks.
 Een mislukte reactie retourneert HTTP-status 400, samen met beschrijvingen van de gevonden fouten.
 
 ```json
@@ -1066,8 +1066,8 @@ Een mislukte reactie retourneert HTTP-status 400, samen met beschrijvingen van d
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u de sjabloon voor berichttransformatie kunt gebruiken om geëxporteerde profielen te genereren die overeenkomen met de verwachte gegevensindeling van uw bestemming. Lezen [hoe te om Destination SDK te gebruiken om uw bestemming te vormen](../../guides/configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Nadat u dit document hebt gelezen, weet u nu hoe u de sjabloon voor berichttransformatie kunt gebruiken om geëxporteerde profielen te genereren die overeenkomen met de verwachte gegevensindeling van uw bestemming. Lees [ hoe te om Destination SDK te gebruiken om uw bestemming ](../../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

@@ -4,7 +4,7 @@ description: Meer informatie over de extensie Common Analytics in Adobe Experien
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
-Gebruik deze verwijzing voor informatie over het vormen van de Gemeenschappelijke uitbreiding van de Insteekmodules van Analytics, en de opties beschikbaar wanneer het gebruiken van deze uitbreiding om [!DNL Adobe Analytics] Extensie.
+Gebruik deze naslaggids voor informatie over het configureren van de extensie Algemene analytische plug-ins en de opties die beschikbaar zijn wanneer u deze extensie gebruikt om de extensie [!DNL Adobe Analytics] te verhogen.
 
 ## De extensie Common Analytics Plugins configureren
 
@@ -23,11 +23,11 @@ Deze sectie bevat een verwijzing naar de beschikbare opties wanneer u de extensi
 
 >[!IMPORTANT]
 >
->De uitbreiding Common Analytics Plugins breidt de [!DNL Adobe Analytics] extensie. U moet beschikken over de [!DNL Adobe Analytics] de extensie die op uw eigenschap is geïnstalleerd, werkt niet. Daarnaast moet u de tracker wereldwijd toegankelijk maken in de [!DNL Adobe Analytics] extensie.
+>De extensie Common Analytics Plugins vergroot de extensie [!DNL Adobe Analytics] . De eigenschap werkt alleen als de extensie [!DNL Adobe Analytics] op de eigenschap is geïnstalleerd. Daarnaast moet u de tracker algemeen toegankelijk maken in de extensie [!DNL Adobe Analytics] .
 
 Geen extra configuratie wordt vereist op het uitbreidingsniveau.
 
-## Plug-ins toevoegen aan de [!DNL Adobe Analytics] extension
+## Plug-ins toevoegen aan de extensie [!DNL Adobe Analytics]
 
 Als u de plug-ins in deze extensie wilt gebruiken, moet u eerst de plug-ins die u wilt gebruiken, op hun eigen regel initialiseren.
 
@@ -54,7 +54,7 @@ In deze handeling kunt u elke plug-in selecteren die u in de implementatie wilt 
 
 ### Insteekmodule initialiseren
 
-Met deze acties initialiseert u de specifieke plug-in die u afzonderlijk wilt gebruiken. Als u alle insteekmodules die u wilt gebruiken in uw eigenschap wilt initialiseren, voegt u gewoon de corresponderende actie aan uw regel toe en slaat u de regel op. Terwijl er iets meer inspanning betrokken bij het vormen van de uitbreiding deze manier is, verstrekt het grotere codeefficiency. Adobe beveelt daarom deze aanpak aan.
+Met deze acties initialiseert u de specifieke plug-in die u afzonderlijk wilt gebruiken. Als u alle insteekmodules die u wilt gebruiken in uw eigenschap wilt initialiseren, voegt u gewoon de corresponderende actie aan uw regel toe en slaat u de regel op. Terwijl er iets meer inspanning betrokken bij het vormen van de uitbreiding deze manier is, verstrekt het grotere codeefficiency. Daarom beveelt de Adobe deze aanpak aan.
 
 ## Algemene gegevenselementen van plug-ins voor Analytics
 
@@ -71,4 +71,4 @@ De volgende gegevenselementen zijn beschikbaar in de Common Analytics Plugins-ex
 
 >[!NOTE]
 >
->Voor meer informatie over de bovenstaande plug-ins raadpleegt u de [Analysedocumentatie](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html).
+>Voor meer informatie over de bovengenoemde stoppen, gelieve de [ documentatie van Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html) te raadplegen.

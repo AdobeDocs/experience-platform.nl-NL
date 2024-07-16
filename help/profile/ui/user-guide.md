@@ -12,45 +12,45 @@ ht-degree: 0%
 
 # [!DNL Real-Time Customer Profile] UI-hulplijn
 
-[!DNL Real-Time Customer Profile] leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor interactie met [!DNL Real-Time Customer Profile] gegevens in de gebruikersinterface van Adobe Experience Platform (UI).
+[!DNL Real-Time Customer Profile] maakt een holistische weergave van elk van uw individuele klanten, waarbij gegevens van meerdere kanalen worden gecombineerd, waaronder online-, offline-, CRM- en gegevens van derden. Dit document fungeert als richtlijn voor interactie met [!DNL Real-Time Customer Profile] -gegevens in de gebruikersinterface van Adobe Experience Platform (UI).
 
 ## Aan de slag
 
-Deze UI-gids vereist inzicht in de verschillende [!DNL Experience Platform] diensten die betrokken zijn bij het beheer [!DNL Real-Time Customer Profiles]. Voordat u deze handleiding leest of in de gebruikersinterface werkt, raadpleegt u de documentatie voor de volgende services:
+Deze UI-gids vereist inzicht in de verschillende [!DNL Experience Platform] -services die bij het beheren van [!DNL Real-Time Customer Profiles] betrokken zijn. Voordat u deze handleiding leest of in de gebruikersinterface werkt, raadpleegt u de documentatie voor de volgende services:
 
-* [[!DNL Real-Time Customer Profile] overzicht](../home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-* [[!DNL Identity Service]](../../identity-service/home.md): Schakelt in [!DNL Real-Time Customer Profile] door identiteiten van verschillende gegevensbronnen te overbruggen aangezien zij worden opgenomen in [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Real-Time Customer Profile]  overzicht ](../home.md): Verstrekt een verenigd, in real time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Identity Service]](../../identity-service/home.md): schakelt [!DNL Real-Time Customer Profile] in door identiteiten te overbruggen van verschillende gegevensbronnen terwijl ze worden ingesloten in [!DNL Platform] .
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt.
 
 ## [!UICONTROL Overview]
 
-Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UICONTROL Profiles]** in de linkernavigatie om de **[!UICONTROL Overview]** tabblad met het profieldashboard.
+Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UICONTROL Profiles]** in de linkernavigatie om het tabblad **[!UICONTROL Overview]** met het profieldashboard te openen.
 
 >[!NOTE]
 >
->Als uw organisatie nieuw aan Platform is en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, [!UICONTROL Profiles] het dashboard is niet zichtbaar. In plaats daarvan [!UICONTROL Overview] op het tabblad vindt u koppelingen en documentatie om u te helpen aan de slag te gaan met Real-Time Klantprofiel.
+>Als uw organisatie nieuw is aan Platform en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, is het [!UICONTROL Profiles] dashboard niet zichtbaar. In plaats daarvan geeft het tabblad [!UICONTROL Overview] koppelingen en documentatie weer om u te helpen aan de slag te gaan met Real-Time Klantprofiel.
 
 ### Profieldashboard {#profile-dashboard}
 
 Het profieldashboard bevat een overzicht van de belangrijkste maatstaven die betrekking hebben op de profielgegevens van uw organisatie.
 
-Ga voor meer informatie naar de [Handleiding voor profieldashboard](../../dashboards/guides/profiles.md).
+Meer leren, bezoek de [ gids van het profieldashboard ](../../dashboards/guides/profiles.md).
 
-![Het dashboard Profiel wordt weergegeven.](../../dashboards/images/profiles/dashboard-overview.png)
+![ het dashboard van het Profiel wordt getoond.](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## [!UICONTROL Browse] tabmetriek
 
-Selecteer de **[!UICONTROL Browse]** om verschillende metriek weer te geven die betrekking hebben op de profielgegevens van uw organisatie. U kunt dit lusje ook gebruiken om de opslag van het Profiel te doorbladeren gebruikend een samenvoegbeleid of een identiteit, zoals geschetst in de volgende sectie van deze gids.
+Selecteer het tabblad **[!UICONTROL Browse]** om verschillende metrische gegevens weer te geven die betrekking hebben op de profielgegevens van uw organisatie. U kunt dit lusje ook gebruiken om de opslag van het Profiel te doorbladeren gebruikend een samenvoegbeleid of een identiteit, zoals geschetst in de volgende sectie van deze gids.
 
-Aan de rechterkant van het **[!UICONTROL Browse]** tab is [aantal profielen](#profile-count) alsmede een lijst van [profielen op naamruimte](#profiles-by-namespace).
+Op de rechterkant van het **[!UICONTROL Browse]** lusje is de [ profieltelling ](#profile-count) evenals een lijst van [ profielen door namespace ](#profiles-by-namespace).
 
 >[!NOTE]
 >
->Deze profielwaarden kunnen afwijken van de maatstaven die worden weergegeven op het tabblad [profieldashboard](#profile-dashboard) omdat zij gebruikend het standaardsamenvoegbeleid van uw organisatie worden geëvalueerd. Voor meer informatie bij het werken met fusiebeleid, met inbegrip van hoe te om een standaard fusiebeleid te bepalen, zie [overzicht van samenvoegbeleid](../merge-policies/overview.md).
+>Deze profielmetriek kan van de metriek variëren die op het [ profiel dashboard ](#profile-dashboard) wordt getoond omdat zij gebruikend het standaardsamenvoegbeleid van uw organisatie worden geëvalueerd. Voor meer informatie bij het werken met fusiebeleid, met inbegrip van hoe te om een standaardfusiebeleid te bepalen, zie het [ overzicht van het samenvoegingsbeleid ](../merge-policies/overview.md).
 
 Naast deze metriek, verstrekt deze sectie een laatste bijgewerkte datum en tijd, die tonen wanneer de metriek het laatst werden geëvalueerd.
 
-![De maatstaven van het Profiel worden weergegeven en gemarkeerd.](../images/user-guide/browse-metrics.png)
+![ de metriek van het Profiel wordt getoond en benadrukt.](../images/user-guide/browse-metrics.png)
 
 ### Aantal profielen {#profile-count}
 
@@ -60,144 +60,144 @@ Het aantal profielen omvat ook zowel profielen met kenmerken (recordgegevens) al
 
 #### De metrische waarde voor het aantal profielen bijwerken
 
-Wanneer de opname van records in de [!DNL Profile] de opslag verhoogt of vermindert de telling met meer dan 5%, wordt een baan teweeggebracht om de telling bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om het aantal profielen bij te werken. Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal profielen bij te werken als aan de drempel van 5% verhoging of afname is voldaan.
+Wanneer de opname van records in de [!DNL Profile] store de telling met meer dan 5% verhoogt of verlaagt, wordt een baan teweeggebracht om de telling bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om het aantal profielen bij te werken. Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal profielen bij te werken als aan de drempel van 5% verhoging of afname is voldaan.
 
 ### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
 
-De **[!UICONTROL Profiles by namespace]** metrisch toont het totale aantal en de verdeling van namespaces over alle samengevoegde profielen in uw opslag van het Profiel. Het totale aantal profielen per naamruimte (d.w.z. het optellen van de waarden voor elke naamruimte) zal altijd hoger zijn dan de metrische waarde van het aantal profielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
+De metrische waarde **[!UICONTROL Profiles by namespace]** geeft het totale aantal en de totale verdeling van naamruimten over alle samengevoegde profielen in uw archief Profiel weer. Het totale aantal profielen per naamruimte (d.w.z. het optellen van de waarden voor elke naamruimte) zal altijd hoger zijn dan de metrische waarde van het aantal profielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
 
-#### De [!UICONTROL Profiles by namespace] metrisch
+#### De metrische waarde van [!UICONTROL Profiles by namespace] bijwerken
 
-Vergelijkbaar met de [aantal profielen](#profile-count) metrisch, wanneer de inname van verslagen in [!DNL Profile] de opslag verhoogt of vermindert de telling met meer dan 5%, wordt een baan teweeggebracht om de namespacemetriek bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om het aantal profielen bij te werken. Voor batch-inname, binnen 15 minuten na het met succes innemen van een batch in de [!DNL Profile] slaan, als aan de 5% verhoging of daling drempel wordt voldaan, wordt een baan in werking gesteld om de metriek bij te werken.
+Gelijkaardig aan de [ profieltelling ](#profile-count) metrisch, wanneer het opnemen van verslagen in de [!DNL Profile] opslag de telling met meer dan 5% verhoogt of vermindert, wordt een baan teweeggebracht om de namespacemetriek bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om het aantal profielen bij te werken. Voor batch-opname wordt binnen 15 minuten nadat een batch in de [!DNL Profile] store is opgenomen, een taak uitgevoerd om de metriek bij te werken als aan de drempel van 5% verhoging of verlaging is voldaan.
 
-## Gebruiken [!UICONTROL Browse] tabblad to view profiles
+## Tabblad [!UICONTROL Browse] gebruiken om profielen weer te geven
 
-Op de **[!UICONTROL Browse]** kunt u voorbeeldprofielen weergeven met behulp van een samenvoegbeleid of specifieke profielen opzoeken met behulp van een naamruimte en waarde voor identiteit.
+Op het tabblad **[!UICONTROL Browse]** kunt u voorbeeldprofielen weergeven met behulp van een samenvoegbeleid of specifieke profielen opzoeken met behulp van een naamruimte en waarde voor identiteit.
 
-![De profielen die bij de organisatie horen, worden weergegeven.](../images/user-guide/none-selected.png)
+![ de Profielen die tot de organisatie behoren worden getoond.](../images/user-guide/none-selected.png)
 
 ### Bladeren op [!UICONTROL Merge policy]
 
-De **[!UICONTROL Browse]** wordt standaard ingesteld op het standaardsamenvoegbeleid voor uw organisatie. Als u een ander samenvoegbeleid wilt kiezen, selecteert u de `X` naast de naam van het samenvoegbeleid en open vervolgens de kiezer **[!UICONTROL Select merge policy]** in.
+Het tabblad **[!UICONTROL Browse]** is standaard ingesteld op het standaardsamenvoegbeleid voor uw organisatie. Als u een ander samenvoegbeleid wilt kiezen, selecteert u de `X` naast de naam van het samenvoegbeleid en opent u het dialoogvenster **[!UICONTROL Select merge policy]** met de kiezer.
 
 >[!NOTE]
 >
->Als er geen samenvoegbeleid is geselecteerd, gebruikt u de selectieknop naast de knop **[!UICONTROL Merge policy]** om het dialoogvenster Selectie te openen.
+>Als er geen samenvoegbeleid is geselecteerd, opent u het selectiedialoogvenster met de selectieknop naast het veld **[!UICONTROL Merge policy]** .
 
-![De kiezer voor samenvoegbeleid wordt gemarkeerd.](../images/user-guide/browse-by-merge-policy.png)
+![ de selecteur van het beleid van de Fusie wordt benadrukt.](../images/user-guide/browse-by-merge-policy.png)
 
-Als u een samenvoegbeleid wilt kiezen in het menu **[!UICONTROL Select merge policy]** selecteert u het keuzerondje naast de naam van het beleid en gebruikt u **[!UICONTROL Select]** om terug te keren naar de [!UICONTROL Browse] tab. U kunt vervolgens **[!UICONTROL View]** om de steekproefprofielen te verfrissen en een steekproef van profielen te zien met het nieuwe toegepaste samenvoegbeleid.
+Als u een samenvoegbeleid wilt kiezen in het dialoogvenster **[!UICONTROL Select merge policy]** , selecteert u het keuzerondje naast de naam van het beleid en gebruikt u **[!UICONTROL Select]** om terug te keren naar het tabblad [!UICONTROL Browse] . Vervolgens kunt u **[!UICONTROL View]** selecteren om de voorbeeldprofielen te vernieuwen en een voorbeeld van profielen weer te geven waarop het nieuwe samenvoegbeleid is toegepast.
 
-![Er wordt een dialoogvenster weergegeven waarin u het samenvoegbeleid kunt selecteren waarop u wilt filteren.](../images/user-guide/select-merge-policy.png)
+![ dialoog A waar u het fusiebeleid kunt selecteren door wordt getoond te filtreren.](../images/user-guide/select-merge-policy.png)
 
 De profielen die worden getoond vertegenwoordigen een steekproef van maximaal 20 profielen van de opslag van het Profiel van uw organisatie, nadat het geselecteerde samenvoegbeleid is toegepast. De voorbeeldprofielen voor het geselecteerde samenvoegbeleid worden vernieuwd wanneer nieuwe gegevens worden toegevoegd aan de profielopslag van uw organisatie.
 
-Als u de details van een van de voorbeeldprofielen wilt weergeven, selecteert u de optie **[!UICONTROL Profile ID]**. Zie de sectie verderop in deze handleiding voor meer informatie [profieldetails weergeven](#profile-detail).
+Selecteer **[!UICONTROL Profile ID]** als u de details van een van de voorbeeldprofielen wilt weergeven. Voor meer informatie, zie de sectie later in deze gids op [ het bekijken van profieldetails ](#profile-detail).
 
-![Voorbeeldprofielen die overeenkomen met het samenvoegbeleid worden weergegeven.](../images/user-guide/sample-profiles.png)
+![ de profielen van de Steekproef die het fusiebeleid aanpassen worden getoond.](../images/user-guide/sample-profiles.png)
 
-Als u meer wilt weten over samenvoegingsbeleid en hun rol in Platform, raadpleegt u de [overzicht van samenvoegbeleid](../merge-policies/overview.md).
+Meer over fusiebeleid en hun rol binnen Platform leren, zie het [ overzicht van het fusiebeleid ](../merge-policies/overview.md).
 
 ### Bladeren op [!UICONTROL Identity] {#browse-identity}
 
-Op de **[!UICONTROL Browse]** kunt u een naamruimte gebruiken om een specifiek profiel op te zoeken aan de hand van een identiteitswaarde. Als u bladert op basis van een identiteit, moet u een samenvoegbeleid, een naamruimte voor identiteit en een identiteitswaarde opgeven.
+Op het tabblad **[!UICONTROL Browse]** kunt u een naamruimte voor identiteiten gebruiken om een specifiek profiel op te zoeken aan de hand van een identiteitswaarde. Als u bladert op basis van een identiteit, moet u een samenvoegbeleid, een naamruimte voor identiteit en een identiteitswaarde opgeven.
 
-![De kiezer voor het samenvoegbeleid wordt gemarkeerd.](../images/user-guide/browse-by-merge-policy.png)
+![ de selecteur van het fusiebeleid wordt benadrukt.](../images/user-guide/browse-by-merge-policy.png)
 
-Gebruik indien nodig de **[!UICONTROL Merge policy]** om de **[!UICONTROL Select merge policy]** en kiest u het samenvoegbeleid dat u wilt gebruiken.
+Gebruik indien nodig de kiezer van **[!UICONTROL Merge policy]** om het dialoogvenster **[!UICONTROL Select merge policy]** te openen en kies het samenvoegbeleid dat u wilt gebruiken.
 
-![Er wordt een dialoogvenster weergegeven waarin u het samenvoegbeleid kunt selecteren waarop u wilt filteren.](../images/user-guide/select-merge-policy.png)
+![ dialoog A waar u het fusiebeleid kunt selecteren door wordt getoond te filtreren.](../images/user-guide/select-merge-policy.png)
 
-Gebruik vervolgens de **[!UICONTROL Identity namespace]** om de **[!UICONTROL Select identity namespace]** en kiest u de naamruimte waarin u wilt zoeken. Als uw organisatie veel naamruimten heeft, kunt u de zoekbalk in het dialoogvenster gebruiken om de naam van een naamruimte te typen.
+Vervolgens opent u het dialoogvenster **[!UICONTROL Select identity namespace]** met de kiezer van **[!UICONTROL Identity namespace]** en kiest u de naamruimte waarin u wilt zoeken. Als uw organisatie veel naamruimten heeft, kunt u de zoekbalk in het dialoogvenster gebruiken om de naam van een naamruimte te typen.
 
-U kunt een naamruimte selecteren om aanvullende details weer te geven of het keuzerondje selecteren om een naamruimte te kiezen. U kunt vervolgens **[!UICONTROL Select]** om door te gaan.
+U kunt een naamruimte selecteren om aanvullende details weer te geven of het keuzerondje selecteren om een naamruimte te kiezen. Vervolgens kunt u **[!UICONTROL Select]** gebruiken om door te gaan.
 
-![Er wordt een dialoogvenster weergegeven waarin u de naamruimte kunt selecteren waarnaar u wilt filteren.](../images/user-guide/select-identity-namespace.png)
+![ dialoog A waar u de identiteit kunt selecteren namespace aan filter door wordt getoond.](../images/user-guide/select-identity-namespace.png)
 
-Nadat u een [!UICONTROL Identity namespace] en terugkeren naar de [!UICONTROL Browse] kunt u een **[!UICONTROL Identity value]** heeft betrekking op de naamruimte die u hebt geselecteerd.
+Nadat u een [!UICONTROL Identity namespace] hebt geselecteerd en terugkeert naar de tab [!UICONTROL Browse] , kunt u een **[!UICONTROL Identity value]** invoeren die betrekking heeft op de naamruimte die u hebt geselecteerd.
 
 >[!NOTE]
 >
 >Deze waarde is specifiek voor een individueel klantprofiel en moet een geldige waarde zijn voor de opgegeven naamruimte. Als u bijvoorbeeld de naamruimte E-mail selecteert, hebt u een identiteitswaarde nodig in de vorm van een geldig e-mailadres.
 
-![De identiteitswaarde waarop u wilt filteren, wordt gemarkeerd.](../images/user-guide/filter-identity-value.png)
+![ de identiteitswaarde die u wilt filtreren door wordt benadrukt.](../images/user-guide/filter-identity-value.png)
 
-Nadat een waarde is ingevoerd, selecteert u **[!UICONTROL View]** en er wordt één profiel geretourneerd dat overeenkomt met de waarde. Selecteer de **[!UICONTROL Profile ID]** om de profieldetails te bekijken.
+Wanneer een waarde is ingevoerd, selecteert u **[!UICONTROL View]** en geeft u één profiel dat overeenkomt met de waarde. Selecteer **[!UICONTROL Profile ID]** om de profieldetails te bekijken.
 
-![Het profiel dat overeenkomt met de identiteitswaarde wordt gemarkeerd.](../images/user-guide/filtered-identity-value.png)
+![ het profiel dat de identiteitswaarde aanpast wordt benadrukt.](../images/user-guide/filtered-identity-value.png)
 
 ## Profieldetails weergeven {#profile-detail}
 
-Nadat u een **[!UICONTROL Profile ID]** de **[!UICONTROL Detail]** wordt geopend. De profielgegevens die worden weergegeven op de **[!UICONTROL Detail]** tab is samengevoegd vanuit meerdere profielfragmenten en vormt zo één weergave van de individuele klant. Dit omvat klantgegevens zoals basiskenmerken, gekoppelde identiteiten en kanaalvoorkeuren.
+Nadat u een **[!UICONTROL Profile ID]** -tab hebt geselecteerd, wordt het tabblad **[!UICONTROL Detail]** geopend. De profielgegevens die op het tabblad **[!UICONTROL Detail]** worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van de individuele klant. Dit omvat klantgegevens zoals basiskenmerken, gekoppelde identiteiten en kanaalvoorkeuren.
 
-De weergegeven standaardvelden kunnen ook op organisatorisch niveau worden gewijzigd om de voorkeursprofielkenmerken weer te geven. Als u meer wilt weten over het aanpassen van deze velden, inclusief stapsgewijze instructies voor het toevoegen en verwijderen van kenmerken en het wijzigen van het formaat van dashboarddeelvensters, leest u de [handleiding voor het aanpassen van profieldetails](profile-customization.md).
+De weergegeven standaardvelden kunnen ook op organisatorisch niveau worden gewijzigd om de voorkeursprofielkenmerken weer te geven. Meer leren over het aanpassen van deze gebieden, met inbegrip van geleidelijke instructies voor het toevoegen van en het verwijderen van attributen en het resizing van dashboardpanelen, te lezen gelieve de [ gids van de profieldetail aanpassing ](profile-customization.md).
 
-![Het tabblad Details is gemarkeerd. De profieldetails worden getoond.](../images/user-guide/profile-detail-row-name.png)
+![ het lusje van Details wordt benadrukt. De profieldetails worden getoond.](../images/user-guide/profile-detail-row-name.png)
 
-U kunt ook schakelen tussen het weergeven van de kenmerknamen als hun weergavenamen en hun padnamen voor velden. Als u wilt schakelen tussen deze twee beeldschermen, selecteert u de optie **[!UICONTROL Show display names]** schakelen.
+U kunt ook schakelen tussen het weergeven van de kenmerknamen als hun weergavenamen en hun padnamen voor velden. Als u wilt schakelen tussen deze twee weergaven, selecteert u de schakeloptie **[!UICONTROL Show display names]** .
 
-![De schakeloptie Weergavenamen tonen wordt gemarkeerd en de weergavenamen worden onder de kenmerken weergegeven.](../images/user-guide/profile-detail.png)
+![ de knevel van vertoningsnamen van de Show wordt benadrukt, en de vertoningsnamen worden getoond onder de attributen.](../images/user-guide/profile-detail.png)
 
 Selecteer een van de andere beschikbare tabbladen om aanvullende informatie over het profiel van de individuele klant weer te geven. Deze lusjes omvatten attributen, gebeurtenissen, en het lusje van het publiekslidmaatschap dat het publiek toont waarvoor het profiel momenteel gekwalificeerd is.
 
 ### Tabblad Kenmerken
 
-De **[!UICONTROL Attributes]** bevat een lijstweergave waarin een overzicht wordt gegeven van alle kenmerken die betrekking hebben op één profiel, nadat het opgegeven samenvoegbeleid is toegepast.
+Het tabblad **[!UICONTROL Attributes]** bevat een lijstweergave met een overzicht van alle kenmerken die betrekking hebben op één profiel, nadat het opgegeven samenvoegbeleid is toegepast.
 
-Deze kenmerken kunnen ook als een JSON-object worden weergegeven door **[!UICONTROL View JSON]**. Dit is handig voor gebruikers die beter willen begrijpen hoe de profielkenmerken worden opgenomen in Platform.
+Deze kenmerken kunnen ook als een JSON-object worden weergegeven door op **[!UICONTROL View JSON]** te selecteren. Dit is handig voor gebruikers die beter willen begrijpen hoe de profielkenmerken worden opgenomen in Platform.
 
-![Het tabblad Kenmerken is gemarkeerd. De profielkenmerken worden weergegeven.](../images/user-guide/attributes.png)
+![ het lusje van Attributen wordt benadrukt. De profielkenmerken worden weergegeven.](../images/user-guide/attributes.png)
 
-Selecteer **[!UICONTROL Edge]** op de gegevenslocatieselector.
+Als u de kenmerken wilt weergeven die beschikbaar zijn op de Edge, selecteert u **[!UICONTROL Edge]** in de kiezer voor de gegevenslocatie.
 
-![De gegevenslocatieselector op het tabblad Kenmerken wordt gemarkeerd.](../images/user-guide/attributes-select.png)
+![ de selecteur van de gegevensplaats binnen het attributenlusje wordt benadrukt.](../images/user-guide/attributes-select.png)
 
-Lees voor meer informatie over randprofielen de [documentatie over Edge-profielen](../edge-profiles.md).
+Voor meer informatie over randprofielen, te lezen gelieve de [ documentatie van randprofielen ](../edge-profiles.md).
 
 ### Het tabblad Gebeurtenissen
 
-De **[!UICONTROL Events]** bevat gegevens van de 100 meest recente ExperienceEvents die aan de klant zijn gekoppeld. Deze gegevens kunnen het openen van e-mail, winkelwagentjes en paginaweergaven omvatten. Selecteren **[!UICONTROL View all]** voor elke afzonderlijke gebeurtenis worden aanvullende velden en waarden vastgelegd als onderdeel van de gebeurtenis.
+Het tabblad **[!UICONTROL Events]** bevat gegevens van de 100 meest recente ExperienceEvents die aan de klant zijn gekoppeld. Deze gegevens kunnen het openen van e-mail, winkelwagentjes en paginaweergaven omvatten. Als u **[!UICONTROL View all]** selecteert voor een afzonderlijke gebeurtenis, worden aanvullende velden en waarden vastgelegd als onderdeel van de gebeurtenis.
 
-Gebeurtenissen kunnen ook als een JSON-object worden weergegeven door **[!UICONTROL View JSON]**. Dit is handig als u wilt begrijpen hoe gebeurtenissen worden vastgelegd in Platform.
+Gebeurtenissen kunnen ook als een JSON-object worden weergegeven door op **[!UICONTROL View JSON]** te klikken. Dit is handig als u wilt begrijpen hoe gebeurtenissen worden vastgelegd in Platform.
 
-![Het tabblad Gebeurtenissen is gemarkeerd. De profielgebeurtenissen worden weergegeven.](../images/user-guide/events.png)
+![ het lusje van Gebeurtenissen wordt benadrukt. De profielgebeurtenissen worden getoond.](../images/user-guide/events.png)
 
 ### Tabblad Poortlidmaatschap
 
-De **[!UICONTROL Audience membership]** wordt een lijst weergegeven met de naam en beschrijving van het publiek waartoe het individuele klantprofiel momenteel behoort. Deze lijst wordt automatisch bijgewerkt wanneer het profiel in aanmerking komt of vervalt bij het publiek. Het totale aantal soorten publiek waarvoor het profiel momenteel is gekwalificeerd, wordt aan de rechterkant van het tabblad weergegeven.
+Op het tabblad **[!UICONTROL Audience membership]** wordt een lijst weergegeven met de naam en beschrijving van het publiek waartoe het individuele klantprofiel momenteel behoort. Deze lijst wordt automatisch bijgewerkt wanneer het profiel in aanmerking komt of vervalt bij het publiek. Het totale aantal soorten publiek waarvoor het profiel momenteel is gekwalificeerd, wordt aan de rechterkant van het tabblad weergegeven.
 
-Raadpleeg voor meer informatie over segmentering in Experience Platform de [Documentatie Adoben Experience Platform Segmentation Service](../../segmentation/home.md).
+Voor meer informatie over segmentatie in Experience Platform, gelieve te verwijzen naar de [ documentatie van de Dienst van de Segmentatie van het Experience Platform van Adoben ](../../segmentation/home.md).
 
-![Het tabblad Poortlidmaatschap is gemarkeerd. De lidmaatschapsdetails voor het publiek van het profiel worden weergegeven.](../images/user-guide/audience-membership.png)
+![ het lusje van het lidmaatschap van de Publiek wordt benadrukt. De details van het publiekslidmaatschap van het profiel worden getoond.](../images/user-guide/audience-membership.png)
 
-Selecteer **[!UICONTROL Edge]** in de gegevenslocatieselector. Meer informatie over de segmentatie van de randen vindt u in de [hulplijn voor randsegmentatie](../../segmentation/ui/edge-segmentation.md).
+Selecteer **[!UICONTROL Edge]** in de kiezer voor de gegevenslocatie om het publiekslidmaatschap van de profielen op de Edge weer te geven. Meer informatie over randsegmentatie kan in de [ gids van de randsegmentatie ](../../segmentation/ui/edge-segmentation.md) worden gevonden.
 
-![De kiezer voor de gegevenslocatie op het tabblad voor het publiekslidmaatschap wordt gemarkeerd.](../images/user-guide/audience-membership-select.png)
+![ de selecteur van de gegevensplaats binnen het lusje van het publiekslidmaatschap wordt benadrukt.](../images/user-guide/audience-membership-select.png)
 
 ## Beleid samenvoegen
 
-Van de belangrijkste **[!UICONTROL Profiles]** , selecteert u de **[!UICONTROL Merge Policies]** om een lijst weer te geven met samenvoegbeleid dat tot uw organisatie behoort. Elk vermeld beleid toont zijn naam, al dan niet het standaardsamenvoegbeleid, en de schemaklasse die het op van toepassing is.
+Selecteer in het hoofdmenu **[!UICONTROL Profiles]** de tab **[!UICONTROL Merge Policies]** om een lijst weer te geven met samenvoegbeleidsregels die bij uw organisatie horen. Elk vermeld beleid toont zijn naam, al dan niet het standaardsamenvoegbeleid, en de schemaklasse die het op van toepassing is.
 
-Zie voor meer informatie over samenvoegingsbeleid de [overzicht van samenvoegbeleid](../merge-policies/overview.md).
+Voor meer informatie over fusiebeleid, zie het [ overzicht van het fusiebeleid ](../merge-policies/overview.md).
 
-![Het tabblad Samenvoegen wordt gemarkeerd. Het samenvoegingsbeleid dat bij de organisatie hoort, wordt weergegeven.](../images/user-guide/merge-policies.png)
+![ het lusje van het Beleid van de Fusie wordt benadrukt. Het beleid van de fusie dat tot de organisatie behoort wordt getoond.](../images/user-guide/merge-policies.png)
 
 ## Unieschema {#union-schema}
 
-Van de belangrijkste **[!UICONTROL Profiles]** , selecteert u de **[!UICONTROL Union Schema]** tabblad om beschikbare samenvoegingsschema&#39;s voor uw opgenomen gegevens weer te geven. Een samenvoegingsschema is een samenvoeging van alle [!DNL Experience Data Model] (XDM) velden onder dezelfde klasse, waarvan de schema&#39;s zijn ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile].
+Selecteer in het hoofdmenu **[!UICONTROL Profiles]** het tabblad **[!UICONTROL Union Schema]** om de beschikbare samenvoegingsschema&#39;s voor uw opgenomen gegevens weer te geven. Een samenvoegingsschema is een samenvoeging van alle [!DNL Experience Data Model] (XDM) gebieden onder de zelfde klasse, waarvan schema&#39;s voor gebruik in [!DNL Real-Time Customer Profile] zijn toegelaten.
 
-Ga voor meer informatie over vakbondsschema&#39;s naar de [UI-hulplijn verenigingsschema](union-schema.md).
+Voor meer informatie over verenigingsschema&#39;s, gelieve te bezoeken de [ gids UI van het uniesschema ](union-schema.md).
 
-![Het tabblad Unieschema wordt gemarkeerd. Unieregelingen die tot de organisatie behoren, worden weergegeven.](../images/user-guide/union-schema.png)
+![ het lusje van het Schema van de Unie wordt benadrukt. De schema&#39;s van de unie die tot de organisatie behoren worden getoond.](../images/user-guide/union-schema.png)
 
 ## Berekende kenmerken {#computed-attributes}
 
-Van de belangrijkste **[!UICONTROL Profiles]** , selecteert u de **[!UICONTROL Computed attributes]** om een lijst weer te geven met berekende kenmerken die bij uw organisatie horen.
+Selecteer in het hoofdmenu **[!UICONTROL Profiles]** het tabblad **[!UICONTROL Computed attributes]** om een lijst weer te geven met berekende kenmerken die bij uw organisatie horen.
 
-![Het tabblad Berekende kenmerken is gemarkeerd.](../images/user-guide/computed-attributes.png)
+![ het Berekende attributenlusje wordt benadrukt.](../images/user-guide/computed-attributes.png)
 
-Lees voor meer informatie over berekende kenmerken de [overzicht van berekende kenmerken](../computed-attributes/overview.md). Lees voor meer informatie over het gebruik van berekende kenmerken in de interface van het platform de [UI-gids voor berekende kenmerken](../computed-attributes/ui.md).
+Voor meer informatie over gegevens verwerkte attributen, te lezen gelieve [ gegevens verwerkt attributenoverzicht ](../computed-attributes/overview.md). Voor meer informatie over hoe te om gegevens verwerkte attributen binnen het Platform UI te gebruiken, te lezen gelieve de [ gegevens verwerkte gids UI van attributen ](../computed-attributes/ui.md).
 
 ## Volgende stappen
 
-Door deze gids te lezen, weet u hoe te om de het profielgegevens van uw organisatie te bekijken en te beheren gebruikend de UI van het Experience Platform. Voor informatie over het werken met profielgegevens met Experience Platform-API&#39;s raadpleegt u de [Handleiding voor realtime gebruikersprofiel-API](../api/overview.md).
+Door deze gids te lezen, weet u hoe te om de het profielgegevens van uw organisatie te bekijken en te beheren gebruikend de UI van het Experience Platform. Voor informatie over hoe te met profielgegevens werken gebruikend Experience Platform APIs, gelieve te verwijzen naar de [ Realtime gids van het Profiel van de Klant API ](../api/overview.md).

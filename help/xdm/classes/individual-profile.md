@@ -11,21 +11,21 @@ ht-degree: 0%
 
 ---
 
-# [!DNL XDM Individual Profile] class
+# [!DNL XDM Individual Profile] -klasse
 
-[!DNL XDM Individual Profile] is een standaard XDM-klasse (Experience Data Model) die een enkelvoudige representatie (of &quot;profiel&quot;) van een individuele persoon vormt. Specifiek, vangen de klasse (en zijn compatibele gebiedsgroepen) de attributen en de belangen van zowel geïdentificeerde als gedeeltelijk geïdentificeerde individuen die met uw merk in wisselwerking staan.
+[!DNL XDM Individual Profile] is een standaard XDM-klasse (Experience Data Model) die een enkelvoudige representatie (of profiel) van een individuele persoon vormt. Specifiek, vangen de klasse (en zijn compatibele gebiedsgroepen) de attributen en de belangen van zowel geïdentificeerde als gedeeltelijk geïdentificeerde individuen die met uw merk in wisselwerking staan.
 
-Profielen kunnen variëren van anonieme gedragssignalen (zoals browsercookies) tot sterk geïdentificeerde profielen met gedetailleerde informatie zoals naam, geboortedatum, locatie en e-mailadres. Naarmate een profiel groeit, wordt het een robuuste opslagplaats voor persoonlijke gegevens, identiteiten, contactgegevens en communicatievoorkeuren voor een individu. Raadpleeg voor meer informatie op hoog niveau over het gebruik van deze klasse in het ecosysteem van het platform de [XDM-overzicht](../home.md#data-behaviors).
+Profielen kunnen variëren van anonieme gedragssignalen (zoals browsercookies) tot sterk geïdentificeerde profielen met gedetailleerde informatie zoals naam, geboortedatum, locatie en e-mailadres. Naarmate een profiel groeit, wordt het een robuuste opslagplaats voor persoonlijke gegevens, identiteiten, contactgegevens en communicatievoorkeuren voor een individu. Voor meer informatie op hoog niveau over het gebruik van deze klasse in het ecosysteem van het Platform, verwijs naar het [ XDM overzicht ](../home.md#data-behaviors).
 
-![Een schemadiagram van de klasse van het Profiel van Individuele XDM.](../images/classes/individual-profile.png)
+![ het schemadiagram van A van de individuele klasse van het Profiel XDM.](../images/classes/individual-profile.png)
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `_repo` | Een object dat het volgende bevat [!UICONTROL DateTime] velden: <ul><li>`createDate`: De datum en tijd waarop de bron in de gegevensopslag is gemaakt, bijvoorbeeld wanneer de gegevens voor het eerst zijn ingevoerd.</li><li>`modifyDate`: De datum en tijd waarop de bron voor het laatst is gewijzigd.</li></ul> |
-| `_id` | Een unieke tekenreeks-id voor de record. Dit veld wordt gebruikt om de uniciteit van een individueel record te volgen, om te voorkomen dat gegevens worden herhaald en om die record op te zoeken in downstreamservices. In sommige gevallen `_id` kan een [Universally Unique Identifier (UUID)](https://tools.ietf.org/html/rfc4122) of [Globally Unique Identifier (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>Als u gegevens streamt vanuit een bronverbinding of rechtstreeks vanuit een Parquet-bestand opgeeft, moet u deze waarde genereren door een bepaalde combinatie van velden samen te voegen die de record uniek maken, zoals een primaire id, tijdstempel, recordtype, enzovoort. De samengevoegde waarde moet een `uri-reference` geformatteerde tekenreeks: eventuele dubbele tekens moeten worden verwijderd. Daarna, zou de samengevoegde waarde moeten worden gehakt gebruikend SHA-256 of een ander algoritme van uw keus.<br><br>Het is van belang te onderscheiden dat **dit veld vertegenwoordigt geen identiteit die betrekking heeft op een individuele persoon**, maar eerder de gegevensregistratie zelf. Identiteitsgegevens betreffende een persoon moeten worden beperkt tot [identiteitsvelden](../schema/composition.md#identity) in plaats daarvan worden verstrekt door compatibele veldgroepen. |
+| `_repo` | Een object dat de volgende [!UICONTROL DateTime] -velden bevat: <ul><li>`createDate`: De datum en tijd waarop de bron in de gegevensopslag is gemaakt, bijvoorbeeld wanneer de gegevens voor het eerst werden ingevoerd.</li><li>`modifyDate`: De datum en tijd waarop de bron voor het laatst is gewijzigd.</li></ul> |
+| `_id` | Een unieke tekenreeks-id voor de record. Dit veld wordt gebruikt om de uniciteit van een individueel record te volgen, om te voorkomen dat gegevens worden herhaald en om die record op te zoeken in downstreamservices. In sommige gevallen, `_id` kan a [ Universally Unique Identifier (UUID) ](https://tools.ietf.org/html/rfc4122) of [ globally Unieke Identifier (GUID) ](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0) zijn.<br><br> als u gegevens van een bronverbinding stroomt of direct van een dossier van het Pakket inneemt, zou u deze waarde moeten produceren door een bepaalde combinatie gebieden aaneenschakelen die het verslag uniek maken, zoals primaire identiteitskaart, timestamp, verslagtype, etc. De samengevoegde waarde moet een tekenreeks met `uri-reference` opmaak zijn. Dit houdt in dat alle dubbele tekens moeten worden verwijderd. Daarna, zou de samengevoegde waarde moeten worden gehakt gebruikend SHA-256 of een ander algoritme van uw keus.<br><br> het is belangrijk om te onderscheiden dat **dit gebied geen identiteit met betrekking tot een individuele persoon** vertegenwoordigt, maar eerder het verslag van gegevens zelf. Identiteitsgegevens met betrekking tot een persoon zouden aan [ identiteitsgebieden ](../schema/composition.md#identity) moeten worden beperkt die door compatibele gebiedsgroepen in plaats daarvan worden verstrekt. |
 | `createdByBatchID` | De id van de opgenomen batch die ervoor heeft gezorgd dat de record is gemaakt. |
 | `modifiedByBatchID` | De id van de laatst opgenomen batch die ervoor zorgde dat de record werd bijgewerkt. |
-| `personID` | Een unieke id voor de individuele persoon waarop deze record betrekking heeft. Dit veld vertegenwoordigt niet noodzakelijkerwijs een identiteit die betrekking heeft op de persoon, tenzij het ook als een [identiteitsveld](../schema/composition.md#identity). |
+| `personID` | Een unieke id voor de individuele persoon waarop deze record betrekking heeft. Dit gebied vertegenwoordigt noodzakelijk geen identiteit met betrekking tot de persoon tenzij het ook als [ identiteitsgebied ](../schema/composition.md#identity) wordt aangewezen. |
 | `repositoryCreatedBy` | De id van de gebruiker die de record heeft gemaakt. |
 | `repositoryLastModifiedBy` | De id van de gebruiker die de record als laatste heeft gewijzigd. |
 
@@ -35,9 +35,9 @@ Profielen kunnen variëren van anonieme gedragssignalen (zoals browsercookies) t
 
 >[!NOTE]
 >
->De namen van verschillende veldgroepen zijn gewijzigd. Document weergeven op [veldgroepnaapupdates](../field-groups/name-updates.md) voor meer informatie .
+>De namen van verschillende veldgroepen zijn gewijzigd. Zie het document op [ de naamupdates van de gebiedsgroep ](../field-groups/name-updates.md) voor meer informatie.
 
-Adobe biedt verschillende standaardveldgroepen voor gebruik met de [!DNL XDM Individual Profile] klasse. Hieronder volgt een lijst met enkele veelgebruikte veldgroepen voor de klasse:
+Adobe biedt verschillende standaardveldgroepen voor gebruik met de [!DNL XDM Individual Profile] -klasse. Hieronder volgt een lijst met enkele veelgebruikte veldgroepen voor de klasse:
 
 * [[!UICONTROL Consents and Preferences]](../field-groups/profile/consents.md)
 * [[!UICONTROL Demographic Details]](../field-groups/profile/demographic-details.md)
@@ -50,6 +50,6 @@ Adobe biedt verschillende standaardveldgroepen voor gebruik met de [!DNL XDM Ind
 * [[!UICONTROL XDM Business Person Components]](../field-groups/profile/business-person-components.md)\*
 * [[!UICONTROL XDM Business Person Details]](../field-groups/profile/business-person-details.md)\*
 
-*\*Deze veldgroep is alleen beschikbaar voor organisaties met toegang tot de B2B-editie van Adobe Real-time Customer Data Platform.*
+*\*Deze gebiedsgroep is slechts beschikbaar aan organisaties met toegang tot B2B uitgave van Adobe Real-time Customer Data Platform.*
 
-Een volledige lijst met alle compatibele veldgroepen voor [!DNL XDM Individual Profile], verwijst u naar de [XDM GitHub-repo](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).
+Voor een volledige lijst van alle compatibele gebiedsgroepen voor [!DNL XDM Individual Profile], verwijs naar [ XDM GitHub repo ](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).

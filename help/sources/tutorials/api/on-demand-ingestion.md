@@ -5,18 +5,18 @@ description: Leer hoe te om een stroom tot stand te brengen die voor opname op b
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
 source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '797'
 ht-degree: 0%
 
 ---
 
-# Maak een doorloop die wordt uitgevoerd voor opname op aanvraag met de opdracht [!DNL Flow Service] API
+# Een stroom maken die wordt uitgevoerd voor opname op aanvraag met de API [!DNL Flow Service]
 
 De looppas van de stroom vertegenwoordigt een geval van stroomuitvoering. Bijvoorbeeld, als een stroom om uur bij 9:00 AM, 10:00 AM, en 11:00 AM gepland is te lopen, dan zou u drie instanties van een stroomlooppas hebben. De looppas van de stroom is specifiek voor uw bepaalde organisatie.
 
 Op bestelling kunt u een stroom maken die tegen een gegeven gegevensstroom wordt uitgevoerd. Dit staat uw gebruikers toe om een stroomlooppas tot stand te brengen, die op bepaalde parameters wordt gebaseerd en een opnamecyclus, zonder de diensttekenen tot stand te brengen. Ondersteuning voor inname op aanvraag is alleen beschikbaar voor batchbronnen.
 
-In deze zelfstudie worden de stappen beschreven voor het gebruik van opname op aanvraag en het maken van een flowuitvoering met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma behandelt de stappen op hoe te om op bestelling ingestie te gebruiken en een stroom tot stand te brengen die [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) gebruikt.
 
 ## Aan de slag
 
@@ -26,22 +26,22 @@ In deze zelfstudie worden de stappen beschreven voor het gebruik van opname op a
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
 
 ## Een doorloop maken die wordt uitgevoerd voor een op tabellen gebaseerde bron
 
-Om een stroom voor een op lijst-gebaseerde bron tot stand te brengen, doe een verzoek van de POST aan [!DNL Flow Service] API terwijl het verstrekken van identiteitskaart van de stroom u de looppas wilt tot stand brengen tegen, evenals waarden voor begintijd, eindtijd, en deltakolom.
+Om een stroom voor een op lijst-gebaseerde bron tot stand te brengen, doe een verzoek van de POST aan [!DNL Flow Service] API terwijl het verstrekken van identiteitskaart van de stroom u de looppas wilt tot stand brengen, evenals waarden voor begintijd, eindtijd, en deltakolom.
 
 >[!TIP]
 >
 >De op lijst-gebaseerde bronnen omvatten de volgende broncategorieën: reclame, analyses, toestemming en voorkeur, CRMs, klantensucces, gegevensbestand, marketing automatisering, betalingen, en protocollen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /runs/
@@ -49,11 +49,11 @@ POST /runs/
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een flowuitvoering voor de flow-id gemaakt `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
+Met de volgende aanvraag wordt een flowuitvoering voor de flow-id `3abea21c-7e36-4be1-bec1-d3bad0e3e0de` gemaakt.
 
 >[!NOTE]
 >
->U hoeft alleen de `deltaColumn` bij het maken van de eerste flowuitvoering. Daarna, `deltaColumn` wordt gerepareerd als onderdeel van `copy` transformatie in de stroom en zal als bron van waarheid worden behandeld. Alle pogingen om de `deltaColumn` De waarde door de parameters van de stroomlooppas zal in een fout resulteren.
+>U hoeft de `deltaColumn` alleen op te geven wanneer u de eerste flowuitvoering maakt. Hierna wordt `deltaColumn` als onderdeel van `copy` -transformatie in de flow gerepareerd en wordt het als de bron van de waarheid beschouwd. Als u probeert de waarde `deltaColumn` te wijzigen via de parameters van de flowuitvoering, treedt er een fout op.
 
 ```shell
 curl -X POST \
@@ -82,12 +82,12 @@ curl -X POST \
 | `params.startTime` | De geplande tijd van wanneer de de stroomlooppas op bestelling zal beginnen. Deze waarde wordt uitgedrukt in unieke tijd. |
 | `params.windowStartTime` | De vroegste datum en tijd waarop de gegevens worden opgehaald. Deze waarde wordt uitgedrukt in unieke tijd. |
 | `params.windowEndTime` | De datum en tijd waarop de gegevens worden opgehaald tot. Deze waarde wordt uitgedrukt in unieke tijd. |
-| `params.deltaColumn` | De deltakolom wordt vereist om de gegevens te verdelen en nieuw opgenomen gegevens van historische gegevens te scheiden. **Opmerking**: De `deltaColumn` is alleen nodig bij het maken van uw eerste flowuitvoering. |
+| `params.deltaColumn` | De deltakolom wordt vereist om de gegevens te verdelen en nieuw opgenomen gegevens van historische gegevens te scheiden. **Nota**: `deltaColumn` is slechts nodig wanneer het creëren van uw eerste stroomlooppas. |
 | `params.deltaColumn.name` | De naam van de deltakolom. |
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert de details van de pas gecreëerde stroomlooppas, met inbegrip van zijn unieke looppas terug `id`.
+Een geslaagde reactie retourneert de details van de nieuw gemaakte flow, inclusief de unieke run `id` .
 
 ```json
 {
@@ -102,7 +102,7 @@ Een succesvolle reactie keert de details van de pas gecreëerde stroomlooppas, m
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `id` | De id van de nieuwe flow-run. Zie de handleiding op [ophalen, stroomspecificaties](../api/collect/database-nosql.md#specs) voor meer informatie over op tabel-gebaseerde runtime specificaties. |
+| `id` | De id van de nieuwe flow-run. Zie de gids bij [ het terugwinnen van stroomspecificaties ](../api/collect/database-nosql.md#specs) voor meer informatie over op lijst-gebaseerde looppas specificaties. |
 | `etag` | De middelversie van de stroomlooppas. |
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
@@ -124,13 +124,13 @@ Een succesvolle reactie keert de details van de pas gecreëerde stroomlooppas, m
 
 ## Een doorloop maken voor een op een bestand gebaseerde bron
 
-Om een stroom voor een op dossier-gebaseerde bron tot stand te brengen, doe een verzoek van de POST aan [!DNL Flow Service] API terwijl het verstrekken van identiteitskaart van de stroom u de looppas tegen en waarden voor begintijd en eindtijd wilt creëren.
+Als u een stroom voor een op een bestand gebaseerde bron wilt maken, vraagt u een POST naar de [!DNL Flow Service] API en geeft u de id op van de flow waarop u de runtime en waarden voor de begintijd en eindtijd wilt maken.
 
 >[!TIP]
 >
 >Bestandsbronnen omvatten alle bronnen voor cloudopslag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /runs/
@@ -138,7 +138,7 @@ POST /runs/
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een flowuitvoering voor de flow-id gemaakt `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
+Met de volgende aanvraag wordt een flowuitvoering voor de flow-id `3abea21c-7e36-4be1-bec1-d3bad0e3e0de` gemaakt.
 
 ```shell
 curl -X POST \
@@ -165,9 +165,9 @@ curl -X POST \
 | `params.windowStartTime` | De vroegste datum en tijd waarop de gegevens worden opgehaald. Deze waarde wordt uitgedrukt in unieke tijd. |
 | `params.windowEndTime` | De datum en tijd waarop de gegevens worden opgehaald tot. Deze waarde wordt uitgedrukt in unieke tijd. |
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert de details van de pas gecreëerde stroomlooppas, met inbegrip van zijn unieke looppas terug `id`.
+Een geslaagde reactie retourneert de details van de nieuw gemaakte flow, inclusief de unieke run `id` .
 
 
 ```json
@@ -183,9 +183,9 @@ Een succesvolle reactie keert de details van de pas gecreëerde stroomlooppas, m
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `id` | De id van de nieuwe flow-run. Zie de handleiding op [ophalen, stroomspecificaties](../api/collect/database-nosql.md#specs) voor meer informatie over op tabel-gebaseerde runtime specificaties. |
+| `id` | De id van de nieuwe flow-run. Zie de gids bij [ het terugwinnen van stroomspecificaties ](../api/collect/database-nosql.md#specs) voor meer informatie over op lijst-gebaseerde looppas specificaties. |
 | `etag` | De middelversie van de stroomlooppas. |
 
 ## De stroomuitvoering controleren
 
-Zodra uw stroomlooppas is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Raadpleeg de zelfstudie voor informatie over het controleren van de stroombewerkingen met de API [gegevensstromen in de API controleren](./monitor.md). Om uw stroomlooppas te controleren gebruikend Platform UI, zie de gids op [gegevensstromen van bronnen controleren met behulp van het dashboard voor bewaking](../../../dataflows/ui/monitor-sources.md).
+Zodra uw stroomlooppas is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Om uw stroomlooppas te controleren die API gebruiken, zie het leerprogramma op [ controledataflows in API ](./monitor.md). Om uw stroomlooppas te controleren gebruikend Platform UI, zie de gids op [ controlemogelijkheden dataflows gebruikend het controledashboard ](../../../dataflows/ui/monitor-sources.md).

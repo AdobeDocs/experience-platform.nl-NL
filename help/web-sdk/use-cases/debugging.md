@@ -16,9 +16,9 @@ Wanneer het zuiveren wordt toegelaten, de outputs van SDK van het Web berichten 
 
 Foutopsporing is standaard uitgeschakeld, maar u kunt deze op vier verschillende manieren in- of uitschakelen. U kunt om het even welke combinatie van deze methodes gebruiken om het zuiveren voor uw ontwikkelingswerkschema toe te laten of onbruikbaar te maken.
 
-## Gebruiken `debugEnabled` in de `configure` command
+## `debugEnabled` gebruiken in de opdracht `configure`
 
-Stel de `debugEnabled` Booleaanse waarde waar bij het configureren van de extensie. Deze optie wordt doorgaans gebruikt voor ontwikkelomgevingen, omdat deze foutopsporing mogelijk maakt voor iedereen die een pagina op uw site bezoekt:
+Stel de Booleaanse waarde `debugEnabled` in op true wanneer u de extensie configureert. Deze optie wordt doorgaans gebruikt voor ontwikkelomgevingen, omdat deze foutopsporing mogelijk maakt voor iedereen die een pagina op uw site bezoekt:
 
 ```js
 alloy("configure", {
@@ -28,9 +28,9 @@ alloy("configure", {
 });
 ```
 
-Zie [`debugEnabled`](../commands/configure/debugenabled.md) voor meer informatie .
+Zie [`debugEnabled`](../commands/configure/debugenabled.md) voor meer informatie.
 
-## Gebruik de `setDebug` command
+## De opdracht `setDebug` gebruiken
 
 Op dezelfde manier als bovengenoemde booleaanse, laat dit bevel het zuiveren over alle bezoekers aan de pagina toe.
 
@@ -38,11 +38,11 @@ Op dezelfde manier als bovengenoemde booleaanse, laat dit bevel het zuiveren ove
 alloy("setDebug", {"enabled": true});
 ```
 
-Zie de [`setDebug`](../commands/setdebug.md) voor meer informatie.
+Zie de opdracht [`setDebug`](../commands/setdebug.md) voor meer informatie.
 
 ## Een parameter voor een queryreeks instellen
 
-U kunt foutopsporing inschakelen door de queryreeks toe te voegen `?alloy_debug=true` aan het einde van een URL. Bijvoorbeeld:
+U kunt foutopsporing inschakelen door de querytekenreeks `?alloy_debug=true` aan het einde van een URL toe te voegen. Bijvoorbeeld:
 
 `http://example.com/?alloy_debug=true`
 
@@ -52,6 +52,6 @@ Deze methode is alleen van toepassing op uw lokale computer, zodat u foutopspori
 
 Het Adobe Experience Platform Debugger is een krachtig hulpmiddel dat uw Web-pagina&#39;s onderzoekt en u helpt uw implementatie van de producten van het Experience Cloud zuiveren. U kunt het zuiveren van het configuratielusje van de sectie van SDK van het Web van AEP toelaten.
 
-![Foutopsporing inschakelen](../assets/enable-debugging.png)
+![ laat debugger ](../assets/enable-debugging.png) toe
 
-Zie [Overzicht van Adobe Experience Platform Debugger](/help/debugger/home.md) voor meer informatie .
+Zie [ overzicht van het Adobe Experience Platform Debugger ](/help/debugger/home.md) voor meer informatie.

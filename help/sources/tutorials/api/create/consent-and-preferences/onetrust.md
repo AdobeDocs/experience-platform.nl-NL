@@ -6,44 +6,44 @@ description: Leer hoe u Adobe Experience Platform met OneTrust Integration kunt 
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
 source-git-commit: 9846dc24321d7b32a110cfda9df3511b1e3a82ed
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1913'
 ht-degree: 0%
 
 ---
 
-# Een gegevensstroom maken voor een [!DNL OneTrust Integration] bron die de [!DNL Flow Service] API
+# Een gegevensstroom maken voor een [!DNL OneTrust Integration] -bron met de [!DNL Flow Service] API
 
 >[!NOTE]
 >
->De [!DNL OneTrust Integration] bron ondersteunt alleen het opnemen van toestemmings- en voorkeursgegevens en niet cookies.
+>De bron [!DNL OneTrust Integration] ondersteunt alleen het opnemen van toestemmings- en voorkeursgegevens en geen cookies.
 
-De volgende zelfstudie begeleidt u door de stappen om een bronverbinding en een dataflow tot stand te brengen om zowel historische als geplande toestemmingsgegevens van te brengen [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) naar Adobe Experience Platform met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Het volgende leerprogramma begeleidt u door de stappen om een bronverbinding en een dataflow tot stand te brengen om zowel historische als geplande toestemmingsgegevens van [[!DNL OneTrust Integration] ](https://my.onetrust.com/s/contactsupport?language=en_US) aan Adobe Experience Platform te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Vereisten
 
 >[!IMPORTANT]
 >
->De [!DNL OneTrust Integration] bronaansluiting en documentatie gemaakt door de [!DNL OneTrust Integration] team. Voor vragen of verzoeken om updates kunt u contact opnemen met de [[!DNL OneTrust] team](https://my.onetrust.com/s/contactsupport?language=en_US) rechtstreeks.
+>De [!DNL OneTrust Integration] bronconnector en documentatie zijn gemaakt door het [!DNL OneTrust Integration] -team. Voor om het even welke onderzoeken of updateverzoeken, gelieve het [[!DNL OneTrust]  team ](https://my.onetrust.com/s/contactsupport?language=en_US) direct te contacteren.
 
-Voordat u verbinding maakt [!DNL OneTrust Integration] aan Platform, moet u uw toegangstoken eerst terugwinnen. Voor gedetailleerde instructies bij het vinden van uw toegangstoken, zie [[!DNL OneTrust Integration] Handleiding OAuth 2](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
+Voordat u verbinding kunt maken met [!DNL OneTrust Integration] Platform, moet u eerst uw toegangstoken ophalen. Voor gedetailleerde instructies bij het vinden van uw toegangstoken, zie [[!DNL OneTrust Integration]  OAuth 2 gids ](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
-Het toegangstoken verfrist zich niet automatisch na het verloopt omdat het systeem-aan-systeem tokens verfrist niet door wordt gesteund [!DNL OneTrust]. Daarom is het noodzakelijk om ervoor te zorgen dat uw toegangstoken in de verbinding wordt bijgewerkt alvorens het verloopt. De maximum configureerbare levensduur voor een toegangstoken is één jaar. Voor meer informatie over het bijwerken van uw toegangstoken, zie [[!DNL OneTrust] document over het beheren van uw OAuth 2.0-clientreferenties](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
+Het toegangstoken wordt niet automatisch vernieuwd nadat het verloopt omdat de systeem-aan-systeem vernieuwingstokens niet door [!DNL OneTrust] worden gesteund. Daarom is het noodzakelijk om ervoor te zorgen dat uw toegangstoken in de verbinding wordt bijgewerkt alvorens het verloopt. De maximum configureerbare levensduur voor een toegangstoken is één jaar. Meer leren over het bijwerken van uw toegangstoken, zie het [[!DNL OneTrust]  document bij het beheren van uw OAuth 2.0 cliëntgeloofsbrieven ](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
 
-## Verbinden [!DNL OneTrust Integration] naar Platform met de [!DNL Flow Service] API
+## Verbinding maken [!DNL OneTrust Integration] met platform met behulp van de [!DNL Flow Service] API
 
 >[!NOTE]
 >
->De [!DNL OneTrust Integration] API-specificaties worden gedeeld met Adobe voor gegevensinvoer.
+>De API-specificaties van [!DNL OneTrust Integration] worden gedeeld met Adobe voor gegevensinvoer.
 
-De volgende zelfstudie begeleidt u door de stappen om een [!DNL OneTrust Integration] bronverbinding en een gegevensstroom maken om [!DNL OneTrust Integration] gegevens naar Platform met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Het volgende leerprogramma begeleidt u door de stappen om een [!DNL OneTrust Integration] bronverbinding tot stand te brengen en een dataflow tot stand te brengen om [!DNL OneTrust Integration] gegevens aan Platform te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Een basisverbinding maken {#base-connection}
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL OneTrust Integration] verificatiereferenties als onderdeel van de aanvraaginstantie.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL OneTrust Integration] -verificatiegegevens op als onderdeel van de aanvraaginstantie.
 
-**API-indeling**
+**API formaat**
 
 ```https
 POST /connections
@@ -51,7 +51,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL OneTrust Integration] :
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL OneTrust Integration] gemaakt:
 
 ```shell
 curl -X POST \
@@ -81,14 +81,14 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van uw basisverbinding. Zorg ervoor dat de naam van uw basisverbinding beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw basisverbinding te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw basisverbinding. |
-| `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat de bron is geregistreerd en goedgekeurd via het [!DNL Flow Service] API. |
-| `auth.specName` | Het authentificatietype dat u gebruikt om uw bron aan Platform voor authentiek te verklaren. |
+| `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat de bron is geregistreerd en goedgekeurd via de API van [!DNL Flow Service] . |
+| `auth.specName` | Het verificatietype dat u gebruikt om uw bron te verifiëren bij Platform. |
 | `auth.params.` | Bevat de geloofsbrieven die worden vereist om uw bron voor authentiek te verklaren, met inbegrip van het toegangstoken om met API te verbinden. |
-| `auth.params.accessToken` | Het toegangstoken dat met uw [!DNL OneTrust Integration] account. |
+| `auth.params.accessToken` | Het toegangstoken dat overeenkomt met uw [!DNL OneTrust Integration] -account. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de nieuwe basisverbinding, inclusief de unieke verbindingsidentificatie (`id`). Deze id is vereist om de bestandsstructuur en inhoud van uw bron in de volgende stap te verkennen.
+Een succesvolle reactie keert de pas gecreëerde basisverbinding, met inbegrip van zijn unieke verbindings herkenningsteken (`id`) terug. Deze id is vereist om de bestandsstructuur en inhoud van uw bron in de volgende stap te verkennen.
 
 ```json
 {
@@ -101,9 +101,9 @@ Een geslaagde reactie retourneert de nieuwe basisverbinding, inclusief de unieke
 
 Met de id van de basisverbinding die u in de vorige stap hebt gegenereerd, kunt u bestanden en mappen verkennen door GET-aanvragen uit te voeren.
 
-Gebruik de volgende vraag om de weg van het dossier te vinden u wilt brengen in [!DNL Platform]:
+Gebruik de volgende aanroepen om het pad te zoeken van het bestand dat u wilt inbrengen in [!DNL Platform] :
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}
@@ -115,9 +115,9 @@ Wanneer het uitvoeren van GET verzoeken om de het dossierstructuur en inhoud van
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | De id van de basisverbinding die in de vorige stap is gegenereerd. |
-| `objectType=rest` | Het type object dat u wilt verkennen. Deze waarde is momenteel altijd ingesteld op `rest`. |
+| `objectType=rest` | Het type object dat u wilt verkennen. Deze waarde is momenteel altijd ingesteld op `rest` . |
 | `{OBJECT}` | Deze parameter is alleen vereist wanneer een specifieke map wordt weergegeven. Zijn waarde vertegenwoordigt de weg van de folder u wenst te onderzoeken. |
-| `fileType=json` | Het bestandstype van het bestand dat u naar het Platform wilt brengen. Momenteel `json` is het enige ondersteunde bestandstype. |
+| `fileType=json` | Het bestandstype van het bestand dat u naar Platform wilt verzenden. Momenteel is `json` het enige ondersteunde bestandstype. |
 | `{PREVIEW}` | Een booleaanse waarde die definieert of de inhoud van de verbinding voorvertoning ondersteunt. |
 
 **Verzoek**
@@ -131,7 +131,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert de structuur van het bestand waarnaar wordt gevraagd.
 
@@ -565,9 +565,9 @@ Een succesvol antwoord retourneert de structuur van het bestand waarnaar wordt g
 
 ### Een bronverbinding maken {#source-connection}
 
-U kunt een bronverbinding tot stand brengen door een verzoek van de POST aan [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
+U kunt een bronverbinding maken door een aanvraag voor een POST in te dienen bij de [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
 
-**API-indeling**
+**API formaat**
 
 ```https
 POST /sourceConnections
@@ -606,11 +606,11 @@ curl -X POST \
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de bronverbinding. |
 | `baseConnectionId` | De basis verbindings-id van [!DNL OneTrust Integration]. Deze id is gegenereerd in een eerdere stap. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met uw bron. |
-| `data.format` | Het formaat van de [!DNL OneTrust Integration] gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json`. |
+| `data.format` | De indeling van de [!DNL OneTrust Integration] -gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json` . |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is later vereist om een gegevensstroom te maken.
+Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde bronverbinding terug. Deze id is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -621,25 +621,25 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 ### Een doel-XDM-schema maken {#target-schema}
 
-Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn.
+Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van het Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doel-XDM-schema kan worden gemaakt door een verzoek van de POST uit te voeren naar de [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+Een doelXDM schema kan worden gecreeerd door een verzoek van de POST aan de [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) uit te voeren.
 
-Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](../../../../../xdm/api/schemas.md).
+Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [ creërend een schema gebruikend API ](../../../../../xdm/api/schemas.md).
 
 ### Een doelgegevensset maken {#target-dataset}
 
-Een doeldataset kan tot stand worden gebracht door een verzoek van de POST aan [Catalogusservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), op voorwaarde dat de id van het doelschema zich binnen de payload bevindt.
+Een doeldataset kan worden gecreeerd door een verzoek van de POST aan de [ Dienst API van de Catalogus uit te voeren ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met behulp van de API](../../../../../catalog/api/create-dataset.md).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [ het creëren van een dataset gebruikend API ](../../../../../catalog/api/create-dataset.md).
 
 ### Een doelverbinding maken {#target-connection}
 
-Een doelverbinding vertegenwoordigt de verbinding met de bestemming waar de ingesloten gegevens moeten worden opgeslagen. Als u een doelverbinding wilt maken, moet u de vaste verbindingsspecificatie-id opgeven die overeenkomt met de [!DNL Data Lake]. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Een doelverbinding vertegenwoordigt de verbinding met de bestemming waar de ingesloten gegevens moeten worden opgeslagen. Als u een doelverbinding wilt maken, moet u de vaste verbindingsspecificatie-id opgeven die overeenkomt met de [!DNL Data Lake] . Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c` .
 
-U hebt nu unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan [!DNL Data Lake]. Met deze id&#39;s kunt u een doelverbinding maken met de [!DNL Flow Service] API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
+U hebt nu de unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan [!DNL Data Lake]. Met behulp van deze id&#39;s kunt u een doelverbinding maken met de [!DNL Flow Service] API om de gegevensset op te geven die de binnenkomende brongegevens zal bevatten.
 
-**API-indeling**
+**API formaat**
 
 ```https
 POST /targetConnections
@@ -647,7 +647,7 @@ POST /targetConnections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een doelverbinding gemaakt voor [!DNL OneTrust Integration] :
+Met de volgende aanvraag wordt een doelverbinding voor [!DNL OneTrust Integration] gemaakt:
 
 ```shell
 curl -X POST \
@@ -677,14 +677,14 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | De naam van de doelverbinding. Zorg ervoor dat de naam van uw doelverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw doelverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de doelverbinding. |
-| `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Lake]. Deze vaste ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Het formaat van de [!DNL OneTrust Integration] gegevens die u naar het Platform wilt brengen. |
+| `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Lake] . Deze vaste id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c` . |
+| `data.format` | De indeling van de [!DNL OneTrust Integration] -gegevens die u naar het platform wilt verzenden. |
 | `params.dataSetId` | De doel dataset ID die in een vorige stap wordt teruggewonnen. |
 
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id`). Deze id is vereist in latere stappen.
+Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverbinding (`id`) terug. Deze id is vereist in latere stappen.
 
 ```json
 {
@@ -695,9 +695,9 @@ Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id
 
 ### Een toewijzing maken {#mapping}
 
-Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt. Dit wordt bereikt door een verzoek van de POST uit te voeren aan [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) met gegevenstoewijzingen die zijn gedefinieerd in de payload van het verzoek.
+Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt. Dit wordt bereikt door een verzoek van de POST aan [[!DNL Data Prep]  API ](https://www.adobe.io/experience-platform-apis/references/data-prep/) met gegevenstoewijzingen uit te voeren die binnen de verzoeklading worden bepaald.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /conversion/mappingSets
@@ -765,13 +765,13 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `xdmSchema` | De id van de [doel-XDM-schema](#target-schema) gegenereerd in een eerdere stap. |
+| `xdmSchema` | Identiteitskaart van het [ doelXDM- schema ](#target-schema) in een vroegere stap wordt geproduceerd. |
 | `mappings.destinationXdmPath` | Het doel-XDM-pad waaraan het bronkenmerk wordt toegewezen. |
-| `mappings.sourceAttribute` | Het bronattribuut dat aan een bestemmingsXDM weg moet worden in kaart gebracht. |
+| `mappings.sourceAttribute` | Het bronkenmerk dat moet worden toegewezen aan een XDM-doelpad. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de unieke id (`id`). Deze waarde is in een latere stap vereist om een gegevensstroom te maken.
+Een succesvolle reactie keert details van de pas gecreëerde afbeelding met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze waarde is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -786,17 +786,17 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar de [!DNL OneTrust Integration] aan Platform moet een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar het verzenden van gegevens van [!DNL OneTrust Integration] naar Platform is het maken van een gegevensstroom. Momenteel zijn de volgende vereiste waarden voorbereid:
 
-* [Bronverbinding-id](#source-connection)
-* [Doelverbinding-id](#target-connection)
+* [Source-verbinding-id](#source-connection)
+* [Doel-verbindings-id](#target-connection)
 * [Toewijzing-id](#mapping)
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
 
-Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd in seconden. Vervolgens moet u de frequentiewaarde instellen op een van de vijf opties: `once`, `minute`, `hour`, `day`, of `week`. De intervalwaarde geeft echter de periode tussen twee opeenvolgende inname aan. Voor een eenmalige inname hoeft geen interval te worden ingesteld. Voor alle andere frequenties moet de intervalwaarde op gelijk aan of groter dan `15`.
+Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd in seconden. Vervolgens moet u de frequentiewaarde instellen op een van de vijf opties: `once`, `minute`, `hour`, `day` of `week` . De intervalwaarde geeft echter de periode tussen twee opeenvolgende inname aan. Voor een eenmalige inname hoeft geen interval te worden ingesteld. Voor alle andere frequenties moet de intervalwaarde worden ingesteld op gelijk aan of groter dan `15` .
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /flows
@@ -845,21 +845,21 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van uw gegevensstroom. Zorg ervoor dat de naam van uw gegevensstroom beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw gegevensstroom omhoog te kijken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw gegevensstroom. |
-| `flowSpec.id` | De flow specification-id die is vereist om een gegevensstroom te maken. Deze vaste ID is: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | De corresponderende versie van de flow specification-id. Deze waarde wordt standaard ingesteld op `1.0`. |
-| `sourceConnectionIds` | De [bron-verbindings-id](#source-connection) gegenereerd in een eerdere stap. |
-| `targetConnectionIds` | De [doel-verbindings-id](#target-connection) gegenereerd in een eerdere stap. |
+| `flowSpec.id` | De flow specification-id die is vereist om een gegevensstroom te maken. Deze vaste id is: `6499120c-0b15-42dc-936e-847ea3c24d72` . |
+| `flowSpec.version` | De corresponderende versie van de specificatie-id voor de stroom. Deze waarde is standaard ingesteld op `1.0` . |
+| `sourceConnectionIds` | [ bron verbindingsidentiteitskaart ](#source-connection) die in een vroegere stap wordt geproduceerd. |
+| `targetConnectionIds` | De [ identiteitskaart van de doelverbinding ](#target-connection) die in een vroegere stap wordt geproduceerd. |
 | `transformations` | Deze eigenschap bevat de verschillende transformaties die op de gegevens moeten worden toegepast. Dit bezit wordt vereist wanneer het brengen van niet-XDM-Volgzame gegevens aan Platform. |
 | `transformations.name` | De naam die aan de transformatie is toegewezen. |
-| `transformations.params.mappingId` | De [toewijzing-id](#mapping) gegenereerd in een eerdere stap. |
-| `transformations.params.mappingVersion` | De corresponderende versie van de toewijzing-id. Deze waarde wordt standaard ingesteld op `0`. |
+| `transformations.params.mappingId` | [ afbeelding identiteitskaart ](#mapping) die in een vroegere stap wordt geproduceerd. |
+| `transformations.params.mappingVersion` | De corresponderende versie van de toewijzing-id. Deze waarde is standaard ingesteld op `0` . |
 | `scheduleParams.startTime` | This property contains information on the ingestion Scheduling of the dataflow. |
-| `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day`, of `week`. |
-| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie wordt ingesteld als `once` en moet groter zijn dan of gelijk zijn aan `15` voor andere frequentiewaarden. |
+| `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day` of `week` . |
+| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie is ingesteld op `once` en moet groter zijn dan of gelijk zijn aan `15` voor andere frequentiewaarden. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom. Met deze id kunt u uw gegevensstroom controleren, bijwerken of verwijderen.
+Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd dataflow terug. Met deze id kunt u uw gegevensstroom controleren, bijwerken of verwijderen.
 
 ```json
 {
@@ -868,26 +868,26 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom. Met
 }
 ```
 
-## Aanhangsel
+## Bijlage
 
 In de volgende sectie vindt u informatie over de stappen die u kunt uitvoeren om uw gegevensstroom te controleren, bij te werken en te verwijderen.
 
 ### Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Lees de handleiding voor volledige API-voorbeelden op [de gegevensstroom van uw bronnen controleren met behulp van de API](../../monitor.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor volledige API voorbeelden, lees de gids op [ controlerend uw brongegevens gebruikend API ](../../monitor.md).
 
 ### Uw gegevensstroom bijwerken
 
-Werk de details van uw dataflow, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen bij door een verzoek van de PATCH aan het `/flows` eindpunt van [!DNL Flow Service] API, terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-verzoek indient, moet u de unieke gegevens van uw gegevensstroom opgeven `etag` in de `If-Match` header. Lees de handleiding voor volledige API-voorbeelden op [bronnen bijwerken met behulp van de API](../../update-dataflows.md).
+Werk de details van uw gegevensstroom bij, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen door een PATCH verzoek aan het `/flows` eindpunt van [!DNL Flow Service] API te richten, terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-verzoek indient, moet u de unieke `etag` gegevens van uw gegevensstroom opgeven in de `If-Match` -header. Voor volledige API voorbeelden, lees de gids bij [ het bijwerken bronnen dataflows gebruikend API ](../../update-dataflows.md).
 
 ### Uw account bijwerken
 
-Werk de naam, beschrijving en referenties van uw bronaccount bij door een PATCH-verzoek uit te voeren naar de [!DNL Flow Service] API terwijl het verstrekken van uw identiteitskaart van de basisverbinding als vraagparameter. Wanneer u een PATCH-aanvraag indient, moet u de unieke bronaccount opgeven `etag` in de `If-Match` header. Lees de handleiding voor volledige API-voorbeelden op [het bijwerken van uw bronrekening gebruikend API](../../update.md).
+Werk de naam, beschrijving en gegevens van uw bronaccount bij door een PATCH-aanvraag uit te voeren naar de [!DNL Flow Service] API en uw basis-verbindings-id op te geven als een queryparameter. Wanneer u een PATCH-aanvraag indient, moet u de unieke `etag` van uw bronaccount opgeven in de `If-Match` -header. Voor volledige API voorbeelden, lees de gids bij [ het bijwerken van uw bronrekening gebruikend API ](../../update.md).
 
 ### Uw gegevensstroom verwijderen
 
-Verwijder de gegevensstroom door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl het verstrekken van identiteitskaart van dataflow wilt u als deel van de vraagparameter schrappen. Lees de handleiding voor volledige API-voorbeelden op [verwijderen, gegevensstromen met behulp van de API](../../delete-dataflows.md).
+Verwijder de gegevensstroom door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API en de id op te geven van de gegevensstroom die u wilt verwijderen als onderdeel van de queryparameter. Voor volledige API voorbeelden, lees de gids op [ schrappend uw dataflows gebruikend API ](../../delete-dataflows.md).
 
 ### Uw account verwijderen
 
-Uw account verwijderen door een DELETE-verzoek uit te voeren aan de [!DNL Flow Service] API terwijl het verstrekken van de identiteitskaart van de basisverbinding van de rekening u wilt schrappen. Lees de handleiding voor volledige API-voorbeelden op [verwijderen van uw bronaccount met behulp van de API](../../delete.md).
+Verwijder uw account door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl u de basis verbinding-id opgeeft van het account dat u wilt verwijderen. Voor volledige API voorbeelden, lees de gids bij [ het schrappen van uw bronrekening gebruikend API ](../../delete.md).

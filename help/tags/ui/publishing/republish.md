@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 De vijf meest recente bibliotheken die aan uw productiemilieu op een bezit van het Web zijn gepubliceerd zijn beschikbaar voor recentere herwinning. Deze functie is handig wanneer u een probleem aantreft in uw productiebibliotheek en u onmiddellijk terug moet keren naar een bekende goede toestand.
 
@@ -21,11 +21,11 @@ Het ophaalproces is afhankelijk van uw omgevingsinstellingen op het moment dat d
 
 De volgende opties zijn beschikbaar:
 
-* **Host: Beheerd door Adobe, Archief: Uit:** Als u de beheerde bibliotheek door de host van Adobe gebruikt en uw bibliotheek niet archiveert, kunt u deze oudere bibliotheken opnieuw publiceren.
+* **Gastheer: Beheerd door Adobe, Archief: Van:** als u Beheerd door de gastheer van de Adobe gebruikt en u archiveert uw bibliotheek niet, kunt u deze oudere bibliotheken opnieuw publiceren.
 
-* **Host: Beheerd door Adobe, Archief: Aan:** Als u de beheerde bibliotheek van de gastheer van Adobe gebruikt en uw bibliotheek archiveert, dan kunt u deze oudere bibliotheken downloaden.
+* **Gastheer: Beheerd door Adobe, Archief: Op:** als u Beheerd door de gastheer van de Adobe gebruikt en u uw bibliotheek archiveert, dan kunt u deze oudere bibliotheken downloaden.
 
-* **Host: SFTP, archiveren: Aan of uit:** Als u de gastheer van SFTP gebruikt, wordt verondersteld dat u uw eigen archiefstrategieën op zijn plaats hebt en geen terugwinningsopties beschikbaar zijn.
+* **Gastheer: SFTP, Archief: Aan of weg:** als u de gastheer van SFTP gebruikt, wordt aangenomen dat u uw eigen archiefstrategieën op zijn plaats hebt en geen terugwinningsopties beschikbaar zijn.
 
 Ophaalopties voor mobiele eigenschappen zijn nog niet beschikbaar.
 
@@ -37,7 +37,7 @@ Wanneer u aan een ontwikkelings of het opvoeren milieu bouwt, wordt de oude bouw
 
 Deze vijf meest recente builds in uw productiemilieu zijn degenen die voor terugwinning beschikbaar zijn.
 
-Wanneer u een oudere bibliotheek opnieuw publiceert, werkt het Platform de milieuverbinding bij om aan één van deze oudere bouwstijlen te richten die nog niet is schoongemaakt.  Platform geeft ook een leegmaakverzoek uit aan de CDN-cache van randknooppunten om aan te geven dat de bibliotheek is bijgewerkt en dat een nieuwe kopie moet worden opgehaald van de oorsprong.
+Wanneer u een oudere bibliotheek opnieuw publiceert, werkt Platform de milieuverbinding bij om aan één van deze oudere bouwstijlen te richten die nog niet is schoongemaakt.  Platform geeft ook een zuiveringsverzoek aan het CDN geheime voorgeheugen van randknopen uit om erop te wijzen dat de bibliotheek is bijgewerkt en een vers exemplaar van de oorsprong zou moeten worden teruggewonnen.
 
 Dit betekent dat wanneer u een oudere bibliotheek opnieuw publiceert:
 
@@ -51,24 +51,24 @@ Om deze reden, deelt het Platform u mee dat een bezit in een opnieuw gepubliceer
 
 ### Een oudere bibliotheek opnieuw publiceren
 
-![Bibliotheek opnieuw publiceren](images/retrieve_republish.png)
+![ publiceer een bibliotheek ](images/retrieve_republish.png)
 
 Vanuit het scherm Publiceren:
 
 1. Zoek de bibliotheek in de Gepubliceerde kolom die u zou willen opnieuw publiceren.
-1. De ovaal selecteren (`...`) in de rechterbovenhoek van de Bibliotheekkaart.
+1. Selecteer de ellips (`...`) in de hoger-juiste hoek van de kaart van de Bibliotheek.
 1. Selecteer **[!UICONTROL Republish]**.
 
-## Download
+## Downloaden
 
 Het downloaden van een gearchiveerde bibliotheek is eenvoudiger. U verwijst niet direct naar deze .zip dossiers overal, zodat kunt u eenvoudig de oudere bibliotheek aan uw computer downloaden en uw normaal proces in werking stellen.
 
 ### Hoe te om een oudere bibliotheek te downloaden
 
-![Een bibliotheek downloaden](images/retrieve_download.png)
+![ Download een bibliotheek ](images/retrieve_download.png)
 
 Vanuit het scherm Publiceren:
 
 1. Zoek de bibliotheek in de kolom Published die u wilt downloaden.
-1. De ovaal selecteren (`...`) in de rechterbovenhoek van de Bibliotheekkaart.
+1. Selecteer de ellips (`...`) in de hoger-juiste hoek van de kaart van de Bibliotheek.
 1. Selecteer **[!UICONTROL Download]**.

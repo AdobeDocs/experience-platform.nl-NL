@@ -15,14 +15,14 @@ ht-degree: 0%
 
 Om het berichtformaat en profielconfiguratie en transformatieproces op de kant van de Adobe te begrijpen, gelieve zich met de volgende concepten van het Experience Platform vertrouwd te maken:
 
-* **Experience Data Model (XDM)**. [XDM-overzicht](../../../../xdm/home.md) en  [Een XDM-schema maken in Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
-* **Klasse**. [Klassen maken en bewerken in de gebruikersinterface](../../../../xdm/ui/resources/classes.md).
-* **IdentityMap**. Het identiteitsoverzicht is een kaart van alle eindgebruikersidentiteiten in Adobe Experience Platform. Zie `xdm:identityMap` in de [XDM-veldwoordenboek](../../../../xdm/schema/field-dictionary.md).
-* **SegmentLidmaatschap**. De [segmentLidmaatschap](../../../../xdm/schema/field-dictionary.md) XDM-kenmerk geeft aan welk publiek een profiel lid is van. Voor de drie verschillende waarden in de `status` veld, lees de documentatie op [Publiek Lidmaatschap Details schema groep](../../../../xdm/field-groups/profile/segmentation.md).
+* **Model van de Gegevens van de Ervaring (XDM)**. [ XDM overzicht ](../../../../xdm/home.md) en [ hoe te om een schema XDM in Adobe Experience Platform ](../../../../xdm/tutorials/create-schema-ui.md) tot stand te brengen.
+* **Klasse**. [ creeer en geef klassen in UI ](../../../../xdm/ui/resources/classes.md) uit.
+* **IdentityMap**. Het identiteitsoverzicht is een kaart van alle eindgebruikersidentiteiten in Adobe Experience Platform. Verwijs naar `xdm:identityMap` in het [ XDM gebiedswoordenboek ](../../../../xdm/schema/field-dictionary.md).
+* **SegmentMembership**. Het [ segmentMembership ](../../../../xdm/schema/field-dictionary.md) XDM attribuut deelt mee welk publiek een profiel een lid van is. Voor de drie verschillende waarden op het `status` gebied, lees de documentatie over [ het schemagroep van de Details van het Lidmaatschap van de Volheid ](../../../../xdm/field-groups/profile/segmentation.md).
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Ondersteunde integratietypen {#supported-integration-types}
 
@@ -43,9 +43,9 @@ Experience Platform kan de berichtindeling van geëxporteerde profielen aanpasse
 
 * Het XDM-bronschema (1) en doel (2) in Adobe Experience Platform
 * Het verwachte berichtformaat aan de partnerkant (3), en
-* De transformatielaag tussen XDM-schema en de verwachte berichtindeling, die u kunt definiëren door een [berichttransformatiesjabloon](#using-templating).
+* De transformatielaag tussen het schema XDM en verwacht berichtformaat, dat u kunt bepalen door het malplaatje van de a [ berichttransformatie ](#using-templating) te creëren.
 
-![Transformatie schema naar JSON](../../assets/functionality/destination-server/transformations-3-steps.png)
+![ Schema aan transformatie JSON ](../../assets/functionality/destination-server/transformations-3-steps.png)
 
 Experience Platform gebruikt XDM-schema&#39;s om de gegevensstructuur op een consistente en herbruikbare manier te beschrijven.
 
@@ -55,23 +55,23 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**Bron-XDM-schema (1)**: Dit punt verwijst naar het schema dat de klanten in Experience Platform gebruiken. In Experience Platform, in de [toewijzingsstap](../../../ui/activate-segment-streaming-destinations.md#mapping) van het activerende bestemmingswerkschema, wijzen de klanten gebieden van hun XDM schema aan het het doelschema van uw bestemming (2) in kaart.
+**Source XDM schema (1)**: Dit punt verwijst naar het schema dat de klanten in Experience Platform gebruiken. In Experience Platform, in de [ toewijzingsstap ](../../../ui/activate-segment-streaming-destinations.md#mapping) van het activerende bestemmingswerkschema, wijzen de klanten gebieden van hun XDM schema aan het het doelschema van uw bestemming (2) in kaart.
 
-**Doel-XDM-schema (2)**: Gebaseerd op het JSON standaardschema (3) van het verwachte formaat van uw bestemming en de attributen die uw bestemming kan interpreteren, kunt u profielattributen en identiteiten in uw doelXDM schema bepalen. U kunt dit in de bestemmingsconfiguratie, in [schemaConfig](../../functionality/destination-configuration/schema-configuration.md) en [identityNamespaces](../../functionality/destination-configuration/identity-namespace-configuration.md) objecten.
+**Doel XDM schema (2)**: Gebaseerd op het JSON standaardschema (3) van het verwachte formaat van uw bestemming en de attributen die uw bestemming kan interpreteren, kunt u profielattributen en identiteiten in uw doelXDM schema bepalen. U kunt dit in de bestemmingsconfiguratie doen, in [ schemaConfig ](../../functionality/destination-configuration/schema-configuration.md) en [ identityNamespaces ](../../functionality/destination-configuration/identity-namespace-configuration.md) voorwerpen.
 
-**JSON-standaardschema van uw kenmerken van het doelprofiel (3)**: Dit voorbeeld vertegenwoordigt een [JSON-schema](https://json-schema.org/learn/miscellaneous-examples.html) van alle profielkenmerken die uw platform ondersteunt en de typen kenmerken ervan (bijvoorbeeld: object, tekenreeks, array). Voorbeelden van velden die uw doel kan ondersteunen, zijn `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, enzovoort. U hebt een [berichttransformatiesjabloon](#using-templating) om de gegevens die uit Experience Platform worden geëxporteerd af te stemmen op de gewenste indeling.
+**JSON standaardschema van uw attributen van het bestemmingsprofiel (3)**: Dit voorbeeld vertegenwoordigt a [ JSON schema ](https://json-schema.org/learn/miscellaneous-examples.html) van alle profielattributen die uw platform en hun types (bijvoorbeeld: voorwerp, koord, serie) steunt. Voorbeelden van velden die uw bestemming mogelijk `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` enzovoort ondersteunt. U hebt het malplaatje van de a [ berichttransformatie ](#using-templating) nodig om de gegevens die uit Experience Platform worden uitgevoerd aan uw verwacht formaat aan te passen.
 
 Gebaseerd op de hierboven beschreven schematransformaties, is hier hoe een profielconfiguratie tussen het bronXDM schema en een steekproefschema op de partnerkant verandert:
 
-![Voorbeeld van transformatieberichten](../../assets/functionality/destination-server/transformations-with-examples.png)
+![ het berichtvoorbeeld van Transformaties ](../../assets/functionality/destination-server/transformations-with-examples.png)
 
 ## Aan de slag - drie basiskenmerken transformeren {#getting-started}
 
-In het onderstaande voorbeeld worden drie veelvoorkomende profielkenmerken in Adobe Experience Platform gebruikt om het profieltransformatieproces te demonstreren: **voornaam**, **achternaam**, en **mailadres**.
+Om het proces van de profieltransformatie aan te tonen, gebruikt het voorbeeld hieronder drie gemeenschappelijke profielattributen in Adobe Experience Platform: **voornaam**, **achternaam**, en **e-mailadres**.
 
 >[!NOTE]
 >
->De klant wijst de attributen van het bronXDM schema aan het partnerXDM schema in Adobe Experience Platform UI, in toe **Toewijzing** van de [doelworkflow activeren](../../../ui/activate-segment-streaming-destinations.md#mapping).
+>De klant brengt de attributen van het bronXDM schema aan het partnerXDM schema in Adobe Experience Platform in kaart UI, in de **stap van de Toewijzing** van het [ activeren bestemmingswerkschema ](../../../ui/activate-segment-streaming-destinations.md#mapping).
 
 Stel dat uw platform een berichtindeling kan ontvangen zoals:
 
@@ -107,16 +107,16 @@ Om de voorbeelden verder hieronder op de pagina te begrijpen, is het belangrijk 
 Profielen hebben drie secties:
 
 * `segmentMembership` (altijd aanwezig in een profiel)
-   * deze sectie bevat alle soorten publiek die in het profiel aanwezig zijn. Het publiek kan een van twee statussen hebben: `realized` of `exited`.
+   * deze sectie bevat alle soorten publiek die in het profiel aanwezig zijn. Het publiek kan een van twee statussen hebben: `realized` of `exited` .
 * `identityMap` (altijd aanwezig in een profiel)
    * deze sectie bevat alle identiteiten die in het profiel aanwezig zijn (e-mail, Google GAID, Apple IDFA, enzovoort) en die de gebruiker in kaart heeft gebracht voor exporteren in de activeringsworkflow.
 * attributen (afhankelijk van de bestemmingsconfiguratie, zouden deze op het profiel aanwezig kunnen zijn). Er is ook een klein verschil tussen vooraf gedefinieerde kenmerken en vrije-vormkenmerken:
-   * for *vrijevormkenmerken* bevatten `.value` pad als het kenmerk aanwezig is in het profiel (zie `lastName` kenmerk uit voorbeeld 1). Als ze niet aanwezig zijn in het profiel, bevatten ze geen `.value` pad (zie `firstName` kenmerk uit voorbeeld 1).
-   * for *vooraf gedefinieerde kenmerken*, bevatten geen `.value` pad. Alle toegewezen kenmerken die aanwezig zijn in een profiel, worden weergegeven in de kenmerkenkaart. De niet-bestaande versies zullen niet aanwezig zijn (zie Voorbeeld 2 - de `firstName` (bestaat niet in het profiel).
+   * voor *vrije vormattributen*, bevatten deze a `.value` weg als de attributen op het profiel (zie `lastName` attributen van voorbeeld 1) aanwezig zijn. Als ze niet aanwezig zijn in het profiel, bevatten ze niet het pad `.value` (zie `firstName` -kenmerk van voorbeeld 1).
+   * voor *vooraf bepaalde attributen*, bevatten deze geen weg a `.value`. Alle toegewezen kenmerken die aanwezig zijn in een profiel, worden weergegeven in de kenmerkenkaart. De klassen die niet aanwezig zijn, zijn niet aanwezig (zie voorbeeld 2 - het kenmerk `firstName` bestaat niet in het profiel).
 
 Zie twee voorbeelden van profielen in Experience Platform:
 
-### Voorbeeld 1 met `segmentMembership`, `identityMap` en kenmerken voor vrije-vormkenmerken {#example-1}
+### Voorbeeld 1 met `segmentMembership` , `identityMap` en kenmerken voor vrije-vormkenmerken {#example-1}
 
 ```json
 {
@@ -145,7 +145,7 @@ Zie twee voorbeelden van profielen in Experience Platform:
 }
 ```
 
-### Voorbeeld 2 met `segmentMembership`, `identityMap` en kenmerken voor vooraf gedefinieerde kenmerken {#example-2}
+### Voorbeeld 2 met `segmentMembership` , `identityMap` en kenmerken voor vooraf gedefinieerde kenmerken {#example-2}
 
 ```json
 {
@@ -172,13 +172,13 @@ Zie twee voorbeelden van profielen in Experience Platform:
 
 ## Een sjabloontaal gebruiken voor de transformaties voor identiteit, kenmerken en publieksleiding {#using-templating}
 
-Adobe gebruikt [Teersjablonen](https://pebbletemplates.io/), een sjabloontaal die lijkt op [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), om de gebieden van het Experience Platform XDM schema in een formaat om te zetten dat door uw bestemming wordt gesteund.
+De Adobe gebruikt [ Biebelmalplaatjes ](https://pebbletemplates.io/), een het malplaatjetaal gelijkend op [ Jinja ](https://jinja.palletsprojects.com/en/2.11.x/), om de gebieden van het Experience Platform XDM- schema in een formaat om te zetten dat door uw bestemming wordt gesteund.
 
 Deze sectie verstrekt verscheidene voorbeelden van hoe deze transformaties worden gemaakt - van het inputXDM schema, door het malplaatje, en output in ladingsformaten die door uw bestemming worden goedgekeurd. De onderstaande voorbeelden worden als volgt weergegeven door de toenemende complexiteit:
 
-1. Eenvoudige transformatievoorbeelden. Leer hoe sjablonen werken met eenvoudige transformaties voor [Profielkenmerken](#attributes), [Publiek lidmaatschap](#segment-membership), en [Identiteit](#identities) velden.
-2. Eenvoudigere voorbeelden van sjablonen waarin bovenstaande velden worden gecombineerd: [Een sjabloon maken die het publiek en de identiteiten verstuurt](./message-format.md#segments-and-identities) en [Een sjabloon maken die segmenten, identiteiten en profielkenmerken verstuurt](#segments-identities-attributes).
-3. Sjablonen die de aggregatietoets bevatten. Wanneer u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in de bestemmingsconfiguratie, groepeert het Experience Platform de profielen die naar uw bestemming worden uitgevoerd die op criteria zoals publiek-identiteitskaart, publieksstatus, of identiteitsnamespaces worden gebaseerd.
+1. Eenvoudige transformatievoorbeelden. Leer hoe het templating werk met eenvoudige transformaties voor [ attributen van het Profiel ](#attributes), [ het lidmaatschap van de Publiek ](#segment-membership), en [ Identiteit ](#identities) gebieden.
+2. Verhoogde ingewikkeldheidsvoorbeelden van malplaatjes die de gebieden hierboven combineren: [ creeer een malplaatje dat publiek en identiteiten ](./message-format.md#segments-and-identities) en [ verzendt een malplaatje creëren dat segmenten, identiteiten, en profielattributen ](#segments-identities-attributes) verzendt.
+3. Sjablonen die de aggregatietoets bevatten. Wanneer u [ configureerbare samenvoeging ](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in de bestemmingsconfiguratie gebruikt, groepeert het Experience Platform de profielen die naar uw bestemming worden uitgevoerd die op criteria zoals publieksidentiteitskaart, publieksstatus, of identiteit namespaces wordt gebaseerd.
 
 ### Profielkenmerken {#attributes}
 
@@ -186,10 +186,10 @@ Als u de profielkenmerken die naar uw doel zijn geëxporteerd, wilt transformere
 
 >[!IMPORTANT]
 >
->Voor een lijst met alle beschikbare profielkenmerken in Adobe Experience Platform raadpleegt u de [XDM-veldwoordenboek](../../../../xdm/schema/field-dictionary.md).
+>Voor een lijst van alle beschikbare profielattributen in Adobe Experience Platform, zie het [ XDM gebiedswoordenboek ](../../../../xdm/schema/field-dictionary.md).
 
 
-**Invoer**
+**Input**
 
 Profiel 1:
 
@@ -219,11 +219,11 @@ Profiel 2:
 }
 ```
 
-**Sjabloon**
+**Malplaatje**
 
 >[!IMPORTANT]
 >
->Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens zoals dubbele aanhalingstekens verwijderen `""` voordat u het [template](../../functionality/destination-server/templating-specs.md) in de [doelserverconfiguratie](../../authoring-api/destination-server/create-destination-server.md). Voor meer informatie over het ontsnappen van dubbele aanhalingstekens, zie Hoofdstuk 9 in [JSON-standaard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Voor alle malplaatjes die u gebruikt, moet u de illegale karakters, zoals dubbele citaten `""` ontsnappen alvorens het [ malplaatje ](../../functionality/destination-server/templating-specs.md) in de [ configuratie van de bestemmingsserver ](../../authoring-api/destination-server/create-destination-server.md) op te nemen. Voor meer informatie bij het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in de [ norm JSON ](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -265,10 +265,10 @@ Profiel 2:
 
 ### Publiek lidmaatschap {#audience-membership}
 
-De [segmentLidmaatschap](../../../../xdm/schema/field-dictionary.md) XDM-kenmerk geeft aan welk publiek een profiel lid is van.
-Voor de drie verschillende waarden in de `status` veld, lees de documentatie op [Publiek Lidmaatschap Details schema groep](../../../../xdm/field-groups/profile/segmentation.md).
+Het [ segmentMembership ](../../../../xdm/schema/field-dictionary.md) XDM attribuut deelt mee welk publiek een profiel een lid van is.
+Voor de drie verschillende waarden op het `status` gebied, lees de documentatie over [ het schemagroep van de Details van het Lidmaatschap van de Volheid ](../../../../xdm/field-groups/profile/segmentation.md).
 
-**Invoer**
+**Input**
 
 Profiel 1:
 
@@ -316,11 +316,11 @@ Profiel 2:
 }
 ```
 
-**Sjabloon**
+**Malplaatje**
 
 >[!IMPORTANT]
 >
->Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens zoals dubbele aanhalingstekens verwijderen `""` voordat u het [template](../../functionality/destination-server/templating-specs.md) in de [doelserverconfiguratie](../../authoring-api/destination-server/create-destination-server.md). Voor meer informatie over het ontsnappen van dubbele aanhalingstekens, zie Hoofdstuk 9 in [JSON-standaard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Voor alle malplaatjes die u gebruikt, moet u de illegale karakters, zoals dubbele citaten `""` ontsnappen alvorens het [ malplaatje ](../../functionality/destination-server/templating-specs.md) in de [ configuratie van de bestemmingsserver ](../../authoring-api/destination-server/create-destination-server.md) op te nemen. Voor meer informatie bij het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in de [ norm JSON ](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 
 ```python
@@ -380,9 +380,9 @@ Profiel 2:
 
 ### Identiteiten {#identities}
 
-Voor informatie over identiteiten in Experience Platform, zie [Overzicht naamruimte identiteit](../../../../identity-service/features/namespaces.md).
+Voor informatie over identiteiten in Experience Platform, zie het [ overzicht van Identiteit namespace ](../../../../identity-service/features/namespaces.md).
 
-**Invoer**
+**Input**
 
 Profiel 1:
 
@@ -420,11 +420,11 @@ Profiel 2:
 }
 ```
 
-**Sjabloon**
+**Malplaatje**
 
 >[!IMPORTANT]
 >
->Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens zoals dubbele aanhalingstekens verwijderen `""` voordat u het [template](../../functionality/destination-server/templating-specs.md) in de [doelserverconfiguratie](../../authoring-api/destination-server/create-destination-server.md). Voor meer informatie over het ontsnappen van dubbele aanhalingstekens, zie Hoofdstuk 9 in [JSON-standaard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Voor alle malplaatjes die u gebruikt, moet u de illegale karakters, zoals dubbele citaten `""` ontsnappen alvorens het [ malplaatje ](../../functionality/destination-server/templating-specs.md) in de [ configuratie van de bestemmingsserver ](../../authoring-api/destination-server/create-destination-server.md) op te nemen. Voor meer informatie bij het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in de [ norm JSON ](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -495,7 +495,7 @@ Profiel 2:
 Deze sectie verstrekt een voorbeeld van een algemeen gebruikte transformatie tussen het schema van Adobe XDM en het schema van de partnerbestemming.
 In het onderstaande voorbeeld ziet u hoe u de indeling voor het publiekslidmaatschap en de identiteiten transformeert en uitvoert naar uw bestemming.
 
-**Invoer**
+**Input**
 
 Profiel 1:
 
@@ -557,11 +557,11 @@ Profiel 2:
 }
 ```
 
-**Sjabloon**
+**Malplaatje**
 
 >[!IMPORTANT]
 >
->Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens zoals dubbele aanhalingstekens verwijderen `""` voordat u het [template](../../functionality/destination-server/templating-specs.md) in de [doelserverconfiguratie](../../authoring-api/destination-server/create-destination-server.md). Voor meer informatie over het ontsnappen van dubbele aanhalingstekens, zie Hoofdstuk 9 in [JSON-standaard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Voor alle malplaatjes die u gebruikt, moet u de illegale karakters, zoals dubbele citaten `""` ontsnappen alvorens het [ malplaatje ](../../functionality/destination-server/templating-specs.md) in de [ configuratie van de bestemmingsserver ](../../authoring-api/destination-server/create-destination-server.md) op te nemen. Voor meer informatie bij het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in de [ norm JSON ](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -609,7 +609,7 @@ Profiel 2:
 
 **Resultaat**
 
-De `json` hieronder worden de gegevens weergegeven die uit Adobe Experience Platform zijn geëxporteerd.
+In `json` hieronder worden de gegevens weergegeven die uit Adobe Experience Platform zijn geëxporteerd.
 
 ```json
 {
@@ -663,7 +663,7 @@ Deze sectie verstrekt een voorbeeld van een algemeen gebruikte transformatie tus
 
 Een ander veelvoorkomend geval van gebruik is het uitvoeren van gegevens die publieksleden, identiteiten (bijvoorbeeld: e-mailadres, telefoonaantal, reclame-id), en profielattributen bevatten. Als u gegevens op deze manier wilt exporteren, raadpleegt u het onderstaande voorbeeld:
 
-**Invoer**
+**Input**
 
 Profiel 1:
 
@@ -739,11 +739,11 @@ Profiel 2:
 }
 ```
 
-**Sjabloon**
+**Malplaatje**
 
 >[!IMPORTANT]
 >
->Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens zoals dubbele aanhalingstekens verwijderen `""` voordat u het [template](../../functionality/destination-server/templating-specs.md) in de [doelserverconfiguratie](../../authoring-api/destination-server/create-destination-server.md). Voor meer informatie over het ontsnappen van dubbele aanhalingstekens, zie Hoofdstuk 9 in [JSON-standaard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Voor alle malplaatjes die u gebruikt, moet u de illegale karakters, zoals dubbele citaten `""` ontsnappen alvorens het [ malplaatje ](../../functionality/destination-server/templating-specs.md) in de [ configuratie van de bestemmingsserver ](../../authoring-api/destination-server/create-destination-server.md) op te nemen. Voor meer informatie bij het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in de [ norm JSON ](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -801,7 +801,7 @@ Profiel 2:
 
 **Resultaat**
 
-De `json` hieronder worden de gegevens weergegeven die uit Adobe Experience Platform zijn geëxporteerd.
+In `json` hieronder worden de gegevens weergegeven die uit Adobe Experience Platform zijn geëxporteerd.
 
 ```json
 {
@@ -859,19 +859,19 @@ De `json` hieronder worden de gegevens weergegeven die uit Adobe Experience Plat
 
 ### De samenvoegingssleutel in de sjabloon opnemen voor toegang tot geëxporteerde profielen die op verschillende criteria zijn gegroepeerd {#template-aggregation-key}
 
-Wanneer u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in de bestemmingsconfiguratie, kunt u de profielen groeperen die naar uw bestemming worden uitgevoerd op criteria zoals publieksidentiteitskaart, publieksalias, publiekslidmaatschap, of identiteitsnamespaces worden gebaseerd.
+Wanneer u [ configureerbare samenvoeging ](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in de bestemmingsconfiguratie gebruikt, kunt u de profielen groeperen die naar uw bestemming worden uitgevoerd op criteria zoals publieksidentiteitskaart, publieksalias, publiekslidmaatschap, of identiteitsnamespaces worden gebaseerd.
 
 In het malplaatje van de berichttransformatie, kunt u tot de bovengenoemde samenvoegingssleutels toegang hebben, zoals aangetoond in de voorbeelden in de volgende secties. Gebruik aggregatietoetsen om het uit Experience Platform geëxporteerde HTTP-bericht te structureren, zodat dit overeenkomt met de notatie- en tarieflimieten die door de bestemming worden verwacht.
 
 #### Code voor publiek-id in de sjabloon gebruiken {#aggregation-key-segment-id}
 
-Als u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en instellen `includeSegmentId` naar true, worden de profielen in de HTTP-berichten die naar uw bestemming worden geëxporteerd, gegroepeerd op gebruikers-id. Hieronder ziet u hoe u toegang krijgt tot de gebruikers-id in de sjabloon.
+Als u [ configureerbare samenvoeging ](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en reeks `includeSegmentId` aan waar gebruikt, worden de profielen in de berichten van HTTP die naar uw bestemming worden uitgevoerd gegroepeerd door publieksidentiteitskaart. Hieronder ziet u hoe u toegang krijgt tot de gebruikers-id in de sjabloon.
 
-**Invoer**
+**Input**
 
 Houd rekening met de vier onderstaande profielen, waarbij:
 
-* de eerste twee maken deel uit van het publiek met de publiek-id `788d8874-8007-4253-92b7-ee6b6c20c6f3`
+* de eerste twee maken deel uit van het publiek met de gebruikers-id `788d8874-8007-4253-92b7-ee6b6c20c6f3`
 * het derde profiel maakt deel uit van het publiek met de gebruikers-id `8f812592-3f06-416b-bd50-e7831848a31a`
 * het vierde profiel maakt deel uit van beide bovengenoemde doelgroepen .
 
@@ -959,13 +959,13 @@ Profiel 4:
 }
 ```
 
-**Sjabloon**
+**Malplaatje**
 
 >[!IMPORTANT]
 >
->Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens zoals dubbele aanhalingstekens verwijderen `""` voordat u het [template](../../functionality/destination-server/templating-specs.md) in de [doelserverconfiguratie](../../authoring-api/destination-server/create-destination-server.md). Voor meer informatie over het ontsnappen van dubbele aanhalingstekens, zie Hoofdstuk 9 in [JSON-standaard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Voor alle malplaatjes die u gebruikt, moet u de illegale karakters, zoals dubbele citaten `""` ontsnappen alvorens het [ malplaatje ](../../functionality/destination-server/templating-specs.md) in de [ configuratie van de bestemmingsserver ](../../authoring-api/destination-server/create-destination-server.md) op te nemen. Voor meer informatie bij het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in de [ norm JSON ](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Hieronder ziet u hoe `audienceId` wordt gebruikt in het malplaatje om tot publiek IDs toegang te hebben. In dit voorbeeld wordt ervan uitgegaan dat u `audienceId` voor het lidmaatschap van het publiek in uw bestemmingtaxonomie. U kunt in plaats daarvan elke andere veldnaam gebruiken, afhankelijk van uw eigen taxonomie.
+Hieronder ziet u hoe `audienceId` in de sjabloon wordt gebruikt voor toegang tot gebruikers-id&#39;s. In dit voorbeeld wordt ervan uitgegaan dat u `audienceId` gebruikt voor publiekslidmaatschap in uw doeltaxonomie. U kunt in plaats daarvan elke andere veldnaam gebruiken, afhankelijk van uw eigen taxonomie.
 
 ```python
 {
@@ -1017,7 +1017,7 @@ Als de profielen naar uw bestemming worden geëxporteerd, worden ze in twee groe
 
 #### Aliasaggregatietoets voor het publiek gebruiken in de sjabloon {#aggregation-key-segment-alias}
 
-Als u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en instellen `includeSegmentId` naar waar (true), hebt u ook toegang tot publiekalias in de sjabloon.
+Als u [ configureerbare samenvoeging ](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en reeks `includeSegmentId` aan waar gebruikt, kunt u tot publiek alias in het malplaatje ook toegang hebben.
 
 Voeg de onderstaande regel toe aan de sjabloon voor toegang tot de geëxporteerde profielen die zijn gegroepeerd op publieksalias.
 
@@ -1027,7 +1027,7 @@ customerList={{input.aggregationKey.segmentAlias}}
 
 #### De aggregatietoets voor de status van het publiek gebruiken in de sjabloon {#aggregation-key-segment-status}
 
-Als u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en instellen `includeSegmentId` en `includeSegmentStatus` naar waar (true), hebt u toegang tot de publieksstatus in de sjabloon. Op deze manier kunt u profielen groeperen in de HTTP-berichten die naar uw bestemming worden geëxporteerd, op basis van het feit of de profielen moeten worden toegevoegd of verwijderd uit segmenten.
+Als u [ configureerbare samenvoeging ](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en reeks `includeSegmentId` en `includeSegmentStatus` aan waar gebruikt, kunt u tot de publieksstatus in het malplaatje toegang hebben. Op deze manier kunt u profielen groeperen in de HTTP-berichten die naar uw bestemming worden geëxporteerd, op basis van het feit of de profielen moeten worden toegevoegd of verwijderd uit segmenten.
 
 Mogelijke waarden zijn:
 
@@ -1043,9 +1043,9 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### Naamruimteaggregatietoets gebruiken in de sjabloon {#aggregation-key-identity}
 
-Hieronder ziet u een voorbeeld waarin de [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in de doelconfiguratie is ingesteld op het samenvoegen van geëxporteerde profielen op basis van naamruimten, in het formulier `"namespaces": ["email", "phone"]` en `"namespaces": ["GAID", "IDFA"]`. Zie de `groups` in de [doelconfiguratie maken](../../authoring-api/destination-configuration/create-destination-configuration.md) documentatie voor meer informatie over groeperen.
+Hieronder is een voorbeeld waar de [ configureerbare samenvoeging ](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in de bestemmingsconfiguratie aan gezamenlijke uitgevoerde profielen door identiteitsnamespaces, in de vorm `"namespaces": ["email", "phone"]` en `"namespaces": ["GAID", "IDFA"]` wordt geplaatst. Verwijs naar de `groups` parameter in [ creeer bestemmingsconfiguratie ](../../authoring-api/destination-configuration/create-destination-configuration.md) documentatie voor meer details over het groeperen.
 
-**Invoer**
+**Input**
 
 Profiel 1:
 
@@ -1111,13 +1111,13 @@ Profiel 2:
 }
 ```
 
-**Sjabloon**
+**Malplaatje**
 
 >[!IMPORTANT]
 >
->Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens zoals dubbele aanhalingstekens verwijderen `""` voordat u het [template](../../functionality/destination-server/templating-specs.md) in de [doelserverconfiguratie](../../authoring-api/destination-server/create-destination-server.md). Voor meer informatie over het ontsnappen van dubbele aanhalingstekens, zie Hoofdstuk 9 in [JSON-standaard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Voor alle malplaatjes die u gebruikt, moet u de illegale karakters, zoals dubbele citaten `""` ontsnappen alvorens het [ malplaatje ](../../functionality/destination-server/templating-specs.md) in de [ configuratie van de bestemmingsserver ](../../authoring-api/destination-server/create-destination-server.md) op te nemen. Voor meer informatie bij het ontsnappen van dubbele citaten, zie Hoofdstuk 9 in de [ norm JSON ](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Let op: `input.aggregationKey.identityNamespaces` wordt gebruikt in de onderstaande template
+`input.aggregationKey.identityNamespaces` wordt gebruikt in de onderstaande sjabloon
 
 ```python
 {
@@ -1199,22 +1199,22 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 
 ### Referentie: Context en functies die worden gebruikt in de transformatiesjablonen {#reference}
 
-De context die aan de sjabloon wordt gegeven, bevat `input`  (de profielen/gegevens die in deze vraag worden uitgevoerd) en `destination` (gegevens over het doel waarnaar de Adobe gegevens verzendt, geldig voor alle profielen).
+De context die aan de sjabloon wordt aangeboden, bevat `input` (de profielen/gegevens die in deze aanroep worden geëxporteerd) en `destination` (gegevens over het doel waarnaar de Adobe gegevens verzendt, geldig voor alle profielen).
 
 In de onderstaande tabel vindt u een beschrijving van de functies in de bovenstaande voorbeelden.
 
 | Functie | Beschrijving | Voorbeeld |
 |---------|----------|----------|
-| `input.profile` | Het profiel, weergegeven als een [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Volgt het partnerXDM schema dat hierboven verder op deze pagina wordt vermeld. |
-| `hasSegments` | Deze functie neemt een kaart van namespace publiek IDs als parameter. De functie retourneert `true` als er minstens één publiek op de kaart staat (ongeacht zijn status), en `false` anders. U kunt deze functie gebruiken om te beslissen of u een overzicht van het publiek doorloopt of niet. | `hasSegments(input.profile.segmentMembership)` |
+| `input.profile` | Het profiel, dat als a [ JsonNode ](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html) wordt vertegenwoordigd. Volgt het partnerXDM schema dat hierboven verder op deze pagina wordt vermeld. |
+| `hasSegments` | Deze functie neemt een kaart van namespace publiek IDs als parameter. De functie retourneert `true` wanneer ten minste één publiek op de kaart aanwezig is (ongeacht de status), en anders `false` . U kunt deze functie gebruiken om te beslissen of u een overzicht van het publiek doorloopt of niet. | `hasSegments(input.profile.segmentMembership)` |
 | `destination.namespaceSegmentAliases` | Wijs van publiek-id&#39;s in een specifieke Adobe Experience Platform-naamruimte toe aan publiekalias in het systeem van de partner. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
 | `destination.namespaceSegmentNames` | Wijs van publieksnamen in specifieke Adobe Experience Platform namespaces aan publieksnamen in het systeem van de partner toe. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
-| `destination.namespaceSegmentTimestamps` | Retourneert de tijd waarop een publiek in UNIX-tijdstempelindeling is gemaakt, bijgewerkt of geactiveerd. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: retourneert de tijd waarop het segment met de id `seg-id-1`van de `ups` naamruimte, gemaakt in UNIX-tijdstempelindeling.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: retourneert de tijd waarop het publiek de id gebruikt `seg-id-1`van de `ups` naamruimte, is bijgewerkt in UNIX-tijdstempelindeling.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: retourneert de tijd waarop het publiek de id gebruikt `seg-id-1`van de `ups` naamruimte, is geactiveerd naar de bestemming, in UNIX-tijdstempelindeling.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: retourneert de tijd waarop de publieksactivering op de bestemming is bijgewerkt, in UNIX-tijdstempelindeling.</li></ul> |
-| `addedSegments(mapOfNamespacedSegmentIds)` | Retourneert alleen het publiek dat de status heeft `realized`, in alle naamruimten. | `addedSegments(input.profile.segmentMembership)` |
-| `removedSegments(mapOfNamespacedSegmentIds)` | Retourneert alleen het publiek dat de status heeft `exited`, in alle naamruimten. | `removedSegments(input.profile.segmentMembership)` |
-| `destination.segmentAliases` | **Vervangen. Vervangen door`destination.namespaceSegmentAliases`** <br><br> Wijs van publiek IDs in Adobe Experience Platform namespace aan publiekalias in het systeem van de partner toe. | `destination.segmentAliases["seg-id-1"]` |
-| `destination.segmentNames` | **Vervangen. Vervangen door`destination.namespaceSegmentNames`** <br><br>  Wijs van publieksnamen in Adobe Experience Platform namespace aan publieksnamen in het systeem van de partner toe. | `destination.segmentNames["seg-name-1"]` |
-| `destination.segmentTimestamps` | **Vervangen. Vervangen door`destination.namespaceSegmentTimestamps`** <br><br> Retourneert de tijd waarop een publiek in UNIX-tijdstempelindeling is gemaakt, bijgewerkt of geactiveerd. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: retourneert de tijd waarop het publiek de id gebruikt `seg-id-1` is gemaakt in UNIX-tijdstempelindeling.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: retourneert de tijd waarop het publiek de id gebruikt `seg-id-1` is bijgewerkt, in UNIX-tijdstempelindeling.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: retourneert de tijd waarop het publiek de id gebruikt `seg-id-1` is geactiveerd naar de bestemming, in UNIX-tijdstempelindeling.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: retourneert de tijd waarop de publieksactivering op de bestemming is bijgewerkt, in UNIX-tijdstempelindeling.</li></ul> |
+| `destination.namespaceSegmentTimestamps` | Retourneert de tijd waarop een publiek in UNIX-tijdstempelindeling is gemaakt, bijgewerkt of geactiveerd. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: retourneert de tijd dat het segment met de id `seg-id-1` , vanuit de naamruimte `ups` , is gemaakt in UNIX-tijdstempelindeling.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: geeft de tijd weer waarop het publiek met de id `seg-id-1` , vanuit de naamruimte `ups` , is bijgewerkt in de UNIX-tijdstempelindeling.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: geeft de tijd weer waarop het publiek met de id `seg-id-1` , vanuit de naamruimte `ups` , in UNIX-tijdstempelindeling naar het doel is geactiveerd.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: retourneert de tijd waarop de publieksactivering op de bestemming is bijgewerkt, in UNIX-tijdstempelindeling.</li></ul> |
+| `addedSegments(mapOfNamespacedSegmentIds)` | Retourneert alleen het publiek met de status `realized` voor alle naamruimten. | `addedSegments(input.profile.segmentMembership)` |
+| `removedSegments(mapOfNamespacedSegmentIds)` | Retourneert alleen het publiek met de status `exited` voor alle naamruimten. | `removedSegments(input.profile.segmentMembership)` |
+| `destination.segmentAliases` | **Vervangen. Vervangen door`destination.namespaceSegmentAliases`** <br><br> Toewijzen van gebruikers-id&#39;s in de Adobe Experience Platform-naamruimte aan publieksaliassen in het systeem van de partner. | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **Vervangen. Vervangen door`destination.namespaceSegmentNames`** <br><br> Toewijzen van publieksnamen in de Adobe Experience Platform-naamruimte aan publieksnamen in het systeem van de partner. | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentTimestamps` | **Vervangen. Vervangen door`destination.namespaceSegmentTimestamps`** <br><br> Retourneert de tijd waarop een publiek in UNIX-tijdstempelindeling is gemaakt, bijgewerkt of geactiveerd. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: retourneert de tijd dat het publiek met de id `seg-id-1` is gemaakt, in UNIX-tijdstempelindeling.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: retourneert de tijd dat het publiek met de id `seg-id-1` is bijgewerkt, in UNIX-tijdstempelindeling.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: retourneert de tijd dat het publiek met de id `seg-id-1` op de bestemming is geactiveerd, in UNIX-tijdstempelindeling.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: retourneert de tijd waarop de publieksactivering op de bestemming is bijgewerkt, in UNIX-tijdstempelindeling.</li></ul> |
 
 {style="table-layout:auto"}
 

@@ -4,28 +4,28 @@ description: Leer hoe te om vraag aan het /libraries eindpunt in Reactor API te 
 exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1517'
 ht-degree: 1%
 
 ---
 
 # Einde bibliotheken
 
-Een bibliotheek is een verzameling tagbronnen ([extensions](./extensions.md), [regels](./rules.md), en [gegevenselementen](./data-elements.md)) die het gewenste gedrag van een [eigenschap](./properties.md). De `/libraries` het eindpunt in Reactor API staat u toe om bibliotheken binnen uw markeringseigenschappen programmatically te beheren.
+Een bibliotheek is een inzameling van markeringsmiddelen ([ uitbreidingen ](./extensions.md), [ regels ](./rules.md), en [ gegevenselementen ](./data-elements.md)) die het gewenste gedrag van a [ bezit ](./properties.md) vertegenwoordigen. Met het eindpunt `/libraries` in de Reactor-API kunt u bibliotheken programmatisch beheren binnen de eigenschappen van de tag.
 
 Een bibliotheek behoort tot precies één eigenschap. Een eigenschap kan veel bibliotheken bevatten.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
-Voordat u met bibliotheken gaat werken in de Reactor-API, is het belangrijk dat u de rollen begrijpt die de bibliotheekstatus en -omgevingen spelen bij het bepalen welke handelingen u op een bepaalde bibliotheek kunt uitvoeren. Zie de handleiding op de [publicatiestroom van bibliotheken](../../ui/publishing/publishing-flow.md) voor meer informatie .
+Voordat u met bibliotheken gaat werken in de Reactor-API, is het belangrijk dat u de rollen begrijpt die de bibliotheekstatus en -omgevingen spelen bij het bepalen welke handelingen u op een bepaalde bibliotheek kunt uitvoeren. Zie de gids op de [ bibliotheek het publiceren stroom ](../../ui/publishing/publishing-flow.md) voor meer informatie.
 
 ## Een lijst met bibliotheken ophalen {#list}
 
 U kunt een lijst met bibliotheken voor een eigenschap ophalen door de id van de eigenschap op te nemen in het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /properties/{PROPERTY_ID}/libraries
@@ -33,13 +33,13 @@ GET /properties/{PROPERTY_ID}/libraries
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van de eigenschap die eigenaar is van de bibliotheken. |
+| `PROPERTY_ID` | De `id` van de eigenschap die de bibliotheken bezit. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde bibliotheken op de volgende attributen worden gefiltreerd:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
+>Gebruikend vraagparameters, kunnen de vermelde bibliotheken op de volgende attributen worden gefiltreerd:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -53,7 +53,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lijst met bibliotheken voor de opgegeven eigenschap.
 
@@ -151,7 +151,7 @@ Een geslaagde reactie retourneert een lijst met bibliotheken voor de opgegeven e
 
 U kunt een bibliotheek opzoeken door de id ervan op te geven in het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /libraries/{LIBRARY_ID}
@@ -175,7 +175,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Als de reactie is gelukt, worden de details van de bibliotheek geretourneerd.
 
@@ -262,7 +262,7 @@ Als de reactie is gelukt, worden de details van de bibliotheek geretourneerd.
 
 U kunt een nieuwe bibliotheek maken door een POST aan te vragen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /properties/{PROPERTY_ID}/libraries
@@ -270,13 +270,13 @@ POST /properties/{PROPERTY_ID}/libraries
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) dat u de bibliotheek onder aan het definiëren bent. |
+| `PROPERTY_ID` | `id` van het [ bezit ](./properties.md) dat u de bibliotheek onder bepaalt. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een nieuwe bibliotheek voor de opgegeven eigenschap gemaakt. Bij het maken van een bibliotheek alleen de bijbehorende `name` attribuut kan worden gevormd. Als u gegevenselementen, extensies en regels wilt toevoegen aan de bibliotheek, moet u relaties maken. Zie de sectie over [bibliotheekbronnen beheren](#resources) voor meer informatie .
+Met de volgende aanvraag wordt een nieuwe bibliotheek voor de opgegeven eigenschap gemaakt. Wanneer u een bibliotheek maakt, kan alleen het kenmerk `name` ervan worden geconfigureerd. Als u gegevenselementen, extensies en regels wilt toevoegen aan de bibliotheek, moet u relaties maken. Zie de sectie over [ het beheren van bibliotheekmiddelen ](#resources) voor meer informatie.
 
 ```shell
 curl -X POST \
@@ -297,12 +297,12 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes.name` | **(Vereist)** Een voor mensen leesbare naam voor de bibliotheek. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `libraries`. |
+| `attributes.name` | **(Vereist)** Een voor de mens leesbare naam voor de bibliotheek. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `libraries` zijn. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert de details van de nieuwe bibliotheek.
 
@@ -410,9 +410,9 @@ De gegevenselementen, uitbreidingen, regels, en het milieu die met een bibliothe
 
 ### Bronnen toevoegen aan een bibliotheek {#add-resources}
 
-U kunt bronnen toevoegen aan een bibliotheek door deze toe te voegen `/relationships` aan de weg van een verzoek van de POST, die door het middeltype wordt gevolgd.
+U kunt bronnen toevoegen aan een bibliotheek door `/relationships` toe te voegen aan het pad van een verzoek om POST, gevolgd door het type resource.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
@@ -458,9 +458,9 @@ curl -X POST \
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie retourneert de details van de toegevoegde relaties. Een [opzoekverzoek](#lookup) voor de bibliotheek toont de toegevoegde relaties onder de `relationships` eigenschap.
+Een succesvolle reactie retourneert de details van de toegevoegde relaties. Het uitvoeren van a [ raadplegingsverzoek ](#lookup) voor de bibliotheek toont de toegevoegde verhoudingen onder het `relationships` bezit.
 
 ```json
 {
@@ -483,9 +483,9 @@ Een succesvolle reactie retourneert de details van de toegevoegde relaties. Een 
 
 ### De bronnen voor een bibliotheek vervangen {#replace-resources}
 
-U kunt alle bestaande bronnen van een bepaald type voor een bibliotheek vervangen door deze toe te voegen `/relationships` aan de weg van een verzoek van de PATCH, die door het middeltype wordt gevolgd dat u vervangt.
+U kunt alle bestaande bronnen van een bepaald type voor een bibliotheek vervangen door `/relationships` toe te voegen aan het pad van een PATCH-verzoek, gevolgd door het brontype dat u vervangt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
@@ -500,7 +500,7 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 **Verzoek**
 
-Met de volgende aanvraag worden de extensies voor een bibliotheek vervangen door de extensies in het dialoogvenster `data` array.
+De volgende aanvraag vervangt de extensies voor een bibliotheek door de extensies in de array `data` .
 
 ```shell
 curl -X PATCH \
@@ -527,9 +527,9 @@ curl -X PATCH \
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie retourneert de details van de bijgewerkte relaties. Een [opzoekverzoek](#lookup) voor de bibliotheek toont de relaties onder de `relationships` eigenschap.
+Een succesvolle reactie retourneert de details van de bijgewerkte relaties. Het uitvoeren van a [ raadplegingsverzoek ](#lookup) voor de bibliotheek toont de verhoudingen onder het `relationships` bezit.
 
 ```json
 {
@@ -548,9 +548,9 @@ Een succesvolle reactie retourneert de details van de bijgewerkte relaties. Een 
 
 ### Bronnen voor een bibliotheek verwijderen {#remove-resources}
 
-U kunt bestaande bronnen uit een bibliotheek verwijderen door deze toe te voegen `/relationships` aan de weg van een verzoek van de DELETE, die door het middeltype wordt gevolgd dat u verwijdert.
+U kunt bestaande bronnen uit een bibliotheek verwijderen door `/relationships` toe te voegen aan het pad van een DELETE-aanvraag, gevolgd door het brontype dat u verwijdert.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
@@ -565,7 +565,7 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een regel uit een bibliotheek verwijderd. Bestaande regels die niet in de `data` array wordt niet verwijderd.
+Met het volgende verzoek wordt een regel uit een bibliotheek verwijderd. Eventuele bestaande regels die niet in de array `data` zijn opgenomen, worden niet verwijderd.
 
 ```shell
 curl -X DELETE \
@@ -592,9 +592,9 @@ curl -X DELETE \
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert de details van de bijgewerkte verhoudingen voor het middeltype terug. Als er geen relaties bestaan voor dit brontype, `data` eigenschap wordt geretourneerd als een lege array. Een [opzoekverzoek](#lookup) voor de bibliotheek toont de relaties onder de `relationships` eigenschap.
+Een succesvolle reactie keert de details van de bijgewerkte verhoudingen voor het middeltype terug. Als er geen relaties bestaan voor dit type resource, wordt de eigenschap `data` geretourneerd als een lege array. Het uitvoeren van a [ raadplegingsverzoek ](#lookup) voor de bibliotheek toont de verhoudingen onder het `relationships` bezit.
 
 ```json
 {
@@ -610,9 +610,9 @@ Een succesvolle reactie keert de details van de bijgewerkte verhoudingen voor he
 
 ## Bibliotheek toewijzen aan een omgeving {#environment}
 
-U kunt een bibliotheek toewijzen aan een omgeving  `/relationships/environment` naar het pad van een POST-verzoek.
+U kunt een bibliotheek aan een milieu `/relationships/environment` aan de weg van een POST verzoek toewijzen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /libraries/{LIBRARY_ID}/relationships/environment
@@ -645,13 +645,13 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `id` | De id van de omgeving waaraan u de bibliotheek toewijst. |
-| `type` | Moet worden ingesteld op `environments`. |
+| `type` | Moet worden ingesteld op `environments` . |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie retourneert de details van de relatie. Een [opzoekverzoek](#lookup) voor de bibliotheek toont de toegevoegde verhouding onder `relationships` eigenschap.
+Een succesvolle reactie retourneert de details van de relatie. Het uitvoeren van a [ raadplegingsverzoek ](#lookup) voor de bibliotheek toont de toegevoegde verhouding onder het `relationships` bezit.
 
 ```json
 {
@@ -668,9 +668,9 @@ Een succesvolle reactie retourneert de details van de relatie. Een [opzoekverzoe
 
 ## Een bibliotheek overzetten {#transition}
 
-U kunt een bibliotheek naar een verschillende het publiceren staat overgaan door zijn identiteitskaart in de weg van een verzoek van de PATCH te omvatten en aangewezen te verstrekken `meta.action` waarde in de lading.
+U kunt een bibliotheek naar een andere publicatiestatus overbrengen door de id ervan op te nemen in het pad van een PATCH-aanvraag en een geschikte `meta.action` waarde in de payload op te geven.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /libraries/{LIBRARY_ID}
@@ -678,13 +678,13 @@ PATCH /libraries/{LIBRARY_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `LIBRARY_ID` | De `id` van de bibliotheek waarvan u een overgang wilt maken. |
+| `LIBRARY_ID` | De `id` van de bibliotheek waarvan u de overgang wilt maken. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met het volgende verzoek wordt de status van een bestaande bibliotheek gewijzigd op basis van de waarde van `meta.action` in de lading worden verstrekt. De beschikbare acties voor een bibliotheek zijn afhankelijk van de huidige publicatiestatus, zoals in het dialoogvenster [publicatiestroom](../../ui/publishing/publishing-flow.md#state).
+Met de volgende aanvraag wordt de status van een bestaande bibliotheek gewijzigd op basis van de waarde `meta.action` die in de payload wordt opgegeven. De beschikbare acties voor een bibliotheek hangen van zijn huidige het publiceren staat af, zoals die in de [ wordt geschetst het publiceren stroom ](../../ui/publishing/publishing-flow.md#state).
 
 ```shell
 curl -X PATCH \
@@ -707,12 +707,12 @@ curl -X PATCH \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `meta.action` | De specifieke overgangsactie die u in de bibliotheek wilt maken. De volgende acties zijn beschikbaar, afhankelijk van de huidige publicatiestatus van de bibliotheek: <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
-| `id` | De `id` van de bibliotheek die u wilt bijwerken. Dit moet overeenkomen met de `{LIBRARY_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `libraries`. |
+| `id` | De `id` van de bibliotheek die u wilt bijwerken. Dit moet overeenkomen met de `{LIBRARY_ID}` -waarde in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `libraries` zijn. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Als de reactie is gelukt, worden de details van de bijgewerkte bibliotheek geretourneerd.
 
@@ -798,7 +798,7 @@ Als de reactie is gelukt, worden de details van de bijgewerkte bibliotheek geret
 }
 ```
 
-## Bibliotheek publiceren {#publish}
+## Publish een bibliotheek {#publish}
 
 >[!NOTE]
 >
@@ -806,7 +806,7 @@ Als de reactie is gelukt, worden de details van de bijgewerkte bibliotheek geret
 
 Als u een bibliotheek wilt publiceren voor productie, moet u ervoor zorgen dat er een productieomgeving is toegevoegd aan de bibliotheek en maakt u vervolgens een build.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /libraries/{LIBRARY_ID}/builds
@@ -831,7 +831,7 @@ curl -X POST \
   -H 'Content-Type: application/json'
 ```
 
-**Antwoord**
+**Reactie**
 
 ```json
 {
@@ -905,19 +905,19 @@ curl -X POST \
 
 ## Notities voor een bibliotheek beheren {#notes}
 
-Bibliotheken zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [leidraad voor notitiepunten](./notes.md) voor meer informatie over hoe te om nota&#39;s voor bibliotheken en andere compatibele middelen te beheren.
+Bibliotheken zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [ gids van het Notitieeindpunt ](./notes.md) voor meer informatie over hoe te nota&#39;s voor bibliotheken en andere compatibele middelen beheren.
 
 ## Gerelateerde bronnen voor een bibliotheek ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een bibliotheek terug te winnen. Wanneer [bibliotheek zoeken](#lookup), worden deze relaties vermeld in het `relationships` eigenschap.
+De volgende vraag toont aan hoe te om de verwante middelen voor een bibliotheek terug te winnen. Wanneer [ omhoog een bibliotheek ](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
 
-Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante gegevenselementen weergeven voor een bibliotheek {#data-elements}
 
-U kunt de gegevenselementen weergeven die in een bibliotheek worden gebruikt door deze toe te voegen `/data_elements` naar het pad van een opzoekverzoek.
+U kunt een lijst maken van de gegevenselementen die een bibliotheek gebruikt door `/data_elements` aan de weg van een raadplegingsverzoek toe te voegen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /libraries/{LIBRARY_ID}/data_elements
@@ -941,7 +941,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lijst met gegevenselementen die de opgegeven bibliotheek gebruiken.
 
@@ -1056,9 +1056,9 @@ Een geslaagde reactie retourneert een lijst met gegevenselementen die de opgegev
 
 ### Verwante extensies weergeven voor een bibliotheek {#extensions}
 
-U kunt de extensies weergeven die een bibliotheek gebruikt door ze toe te voegen `/extensions` naar het pad van een opzoekverzoek.
+U kunt de extensies weergeven die een bibliotheek gebruikt door `/extensions` toe te voegen aan het pad van een opzoekaanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /libraries/{LIBRARY_ID}/extensions
@@ -1082,7 +1082,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert een lijst met extensies die de opgegeven bibliotheek gebruiken.
 
@@ -1187,9 +1187,9 @@ Een succesvol antwoord retourneert een lijst met extensies die de opgegeven bibl
 
 ### Verwante regels voor een bibliotheek weergeven {#rules}
 
-U kunt de regels weergeven die een bibliotheek gebruikt door deze toe te voegen `/rules` naar het pad van een opzoekverzoek.
+U kunt de regels weergeven die een bibliotheek gebruikt door `/rules` toe te voegen aan het pad van een opzoekaanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /libraries/{LIBRARY_ID}/rules
@@ -1213,7 +1213,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lijst met regels die de opgegeven bibliotheek gebruiken.
 
@@ -1300,9 +1300,9 @@ Een geslaagde reactie retourneert een lijst met regels die de opgegeven biblioth
 
 ### De verwante omgeving opzoeken voor een bibliotheek {#related-environment}
 
-U kunt de omgeving opzoeken waaraan een bibliotheek is toegewezen door het toevoegen `/environment` naar het pad van een GET-aanvraag.
+U kunt de omgeving opzoeken waaraan een bibliotheek is toegewezen door `/environment` toe te voegen aan het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /libraries/{LIBRARY_ID}/environment
@@ -1326,7 +1326,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de omgeving waaraan de opgegeven bibliotheek is toegewezen.
 
@@ -1412,9 +1412,9 @@ Een geslaagde reactie retourneert de details van de omgeving waaraan de opgegeve
 
 ### De verwante eigenschap voor een bibliotheek opzoeken {#property}
 
-U kunt de eigenschap die eigenaar is van een bibliotheek opzoeken door deze toe te voegen `/property` naar het pad van een GET-aanvraag.
+U kunt de eigenschap die eigenaar is van een bibliotheek opzoeken door `/property` toe te voegen aan het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /libraries/{LIBRARY_ID}/property
@@ -1422,7 +1422,7 @@ GET  /libraries/{LIBRARY_ID}/property
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan bezit u omhoog wilt kijken. |
+| `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan u de eigenschap wilt opzoeken. |
 
 {style="table-layout:auto"}
 
@@ -1438,7 +1438,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de eigenschap die eigenaar is van de opgegeven bibliotheek.
 
@@ -1535,9 +1535,9 @@ Een geslaagde reactie retourneert de details van de eigenschap die eigenaar is v
 
 ### De upstream opzoeken voor een bibliotheek {#upstream}
 
-U kunt de volgende bibliotheek upstream opzoeken vanuit een bibliotheek door deze toe te voegen `/upstream_library` naar het pad van een GET-aanvraag.
+U kunt de volgende bibliotheek upstream opzoeken vanuit een bibliotheek door `/upstream_library` toe te voegen aan het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /libraries/{LIBRARY_ID}/upstream_library
@@ -1561,7 +1561,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Wanneer de reactie is gelukt, worden de details van de upstream-bibliotheek geretourneerd.
 

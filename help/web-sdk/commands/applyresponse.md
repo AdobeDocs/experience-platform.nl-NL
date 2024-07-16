@@ -11,29 +11,29 @@ ht-degree: 0%
 
 # `applyResponse`
 
-De `applyResponse` staat u toe om diverse acties uit te voeren die op een reactie van de Edge Network worden gebaseerd. Het wordt typisch gebruikt in hybride plaatsingen waar de server een aanvankelijke vraag aan de Edge Network doet. Dit bevel neemt de reactie van die vraag en initialiseert het Web SDK in browser.
+Met de opdracht `applyResponse` kunt u verschillende handelingen uitvoeren op basis van een reactie van de Edge Network. Het wordt typisch gebruikt in hybride plaatsingen waar de server een aanvankelijke vraag aan de Edge Network doet. Dit bevel neemt de reactie van die vraag en initialiseert het Web SDK in browser.
 
 ## Reactie toepassen met de web SDK-tagextensie
 
 Het toepassen van reacties wordt uitgevoerd als een actie binnen een regel in de de etiketteninterface van de Inzameling van Gegevens van Adobe Experience Platform.
 
-1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
-1. Navigeren naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
-1. Navigeren naar **[!UICONTROL Rules]** Selecteer vervolgens de gewenste regel.
-1. Onder [!UICONTROL Actions], selecteert u een bestaande actie of maakt u een actie.
-1. Stel de [!UICONTROL Extension] vervolgkeuzeveld naar **[!UICONTROL Adobe Experience Platform Web SDK]** en stelt de [!UICONTROL Action Type] tot **[!UICONTROL Apply response]**.
+1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
+1. Selecteer onder [!UICONTROL Actions] een bestaande actie of maak een actie.
+1. Stel het vervolgkeuzeveld [!UICONTROL Extension] in op **[!UICONTROL Adobe Experience Platform Web SDK]** en stel de waarde [!UICONTROL Action Type] in op **[!UICONTROL Apply response]** .
 1. Stel de gewenste velden rechts in.
-1. Klikken **[!UICONTROL Keep Changes]** en voer vervolgens uw publicatieworkflow uit.
+1. Klik op **[!UICONTROL Keep Changes]** en voer vervolgens de publicatieworkflow uit.
 
 ## Reactie toepassen met de Web SDK JavaScript-bibliotheek
 
-Voer de `applyResponse` bevel wanneer het roepen van uw gevormde instantie van het Web SDK. Het object met configuratieopties ondersteunt de volgende velden:
+Voer het `applyResponse` bevel in werking wanneer het roepen van uw gevormde instantie van het Web SDK. Het object met configuratieopties ondersteunt de volgende velden:
 
-* **`renderDecisions`**: Een Booleaanse waarde die de Web SDK dwingt om gepersonaliseerde inhoud te renderen die in aanmerking komt voor automatische rendering. Identiek aan [`renderDecisions`](sendevent/renderdecisions.md) in de [`sendEvent`](sendevent/overview.md) gebruiken.
-* **`responseHeaders`**: Een kaart met tekenreeksheader aan tekenreeksheader.
-* **`responseBody`**: Vereist. Een JSON-antwoordinstantie van de serveraanroep naar de Edge Network.
-* **`personalization.sendDisplayEvent`**: Een Booleaanse waarde die identiek is aan [`personalization.sendDisplayEvent`](sendevent/personalization.md) in de `sendEvent` gebruiken.
+* **`renderDecisions`**: Een Booleaanse waarde die de SDK van het web dwingt om gepersonaliseerde inhoud te renderen die in aanmerking komt voor automatische rendering. Identiek aan [`renderDecisions`](sendevent/renderdecisions.md) in het [`sendEvent`](sendevent/overview.md) bevel.
+* **`responseHeaders`**: Een kaart met namen van tekenreeksheaders naar waarden van tekenreeksheaders.
+* **`responseBody`**: vereist. Een JSON-antwoordinstantie van de serveraanroep naar de Edge Network.
+* **`personalization.sendDisplayEvent`**: Een Booleaanse waarde die op dezelfde manier werkt als [`personalization.sendDisplayEvent`](sendevent/personalization.md) in de opdracht `sendEvent` .
 
 ```js
 alloy("applyResponse",{
@@ -48,8 +48,8 @@ alloy("applyResponse",{
 
 ## Object Response
 
-Als u besluit [reacties verwerken](command-responses.md) met deze opdracht zijn de volgende eigenschappen beschikbaar in het reactieobject:
+Als u besluit om [ reacties ](command-responses.md) met dit bevel te behandelen, zijn de volgende eigenschappen beschikbaar in het reactievoorwerp:
 
-* **`propositions`**: Een array met voorstellingen die door de Edge Network worden geretourneerd. Voorstellen die automatisch worden gerenderd, omvatten de markering `renderAttempted` instellen op `true`.
+* **`propositions`**: Een array met voorstellingen die door de Edge Network worden geretourneerd. Voorwaarden die automatisch worden gerenderd, zijn onder andere de markering `renderAttempted` ingesteld op `true` .
 * **`inferences`**: Een array van gebeurtenisobjecten die informatie over deze gebruiker bevatten.
-* **`destinations`**: Een array van doelobjecten die door de Edge Network worden geretourneerd.
+* **`destinations`**: een array met doelobjecten die door de Edge Network worden geretourneerd.

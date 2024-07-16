@@ -4,16 +4,16 @@ description: Leer hoe u een voorbereide trainingsdataset, gemaakt met Data Disti
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 1%
+source-wordcount: '457'
+ht-degree: 0%
 
 ---
 
 # Gegevens exporteren naar externe XML-omgevingen
 
-In dit document wordt uitgelegd hoe u een voorbereide trainingsgegevensset die is gemaakt met Data Distiller, kunt delen met een locatie voor cloudopslag die uw XML-omgeving kan lezen voor training en het scoren van uw model. Het voorbeeld hier exporteert de trainingsdataset naar de [Data Landing Zone (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). U kunt de opslagbestemming naar wens wijzigen om te werken met de leeromgeving van uw computer.
+In dit document wordt uitgelegd hoe u een voorbereide trainingsgegevensset die is gemaakt met Data Distiller, kunt delen met een locatie voor cloudopslag die uw XML-omgeving kan lezen voor training en het scoren van uw model. Het voorbeeld voert hier de trainingsdataset naar de [ Gebieden van Gegevens - Landing Zone (DLZ) ](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) uit. U kunt de opslagbestemming naar wens wijzigen om te werken met de leeromgeving van uw computer.
 
-De [Flow Service voor doelen](https://developer.adobe.com/experience-platform-apis/references/destinations/) wordt gebruikt om de eigenschappijpleiding te voltooien door een dataset van gegevens verwerkte eigenschappen in een aangewezen plaats van de wolkenopslag te landen.
+De [ Dienst van de Stroom voor Doelen ](https://developer.adobe.com/experience-platform-apis/references/destinations/) wordt gebruikt om de eigenschappijpleiding te voltooien door een dataset van gegevens verwerkte eigenschappen in een aangewezen plaats van de wolkenopslag te landen.
 
 ## De bronverbinding maken {#create-source-connection}
 
@@ -170,7 +170,7 @@ activation_res
 
 ## Gestroomlijnd delen naar Data Landing Zone
 
-Als u een gegevensset gemakkelijker wilt delen met de gegevenslandingszone, `aepp` bibliotheek biedt een `exportDatasetToDataLandingZone` functie die de bovenstaande stappen uitvoert in één functieaanroep:
+Als u een dataset gemakkelijker wilt delen met de Data Landing Zone, biedt de `aepp` -bibliotheek een `exportDatasetToDataLandingZone` -functie die de bovenstaande stappen uitvoert in één functieaanroep:
 
 ```python
 from aepp import exportDatasetToDataLandingZone

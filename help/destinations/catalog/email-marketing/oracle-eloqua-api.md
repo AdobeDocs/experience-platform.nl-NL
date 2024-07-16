@@ -13,59 +13,59 @@ ht-degree: 0%
 
 # [!DNL (API) Oracle Eloqua] verbinding
 
-[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) laat marketers toe om campagnes te plannen en uit te voeren terwijl het leveren van een gepersonaliseerde klantenervaring voor hun vooruitzichten. Dankzij geïntegreerd beheer van leads en het eenvoudig maken van campagnes, kunnen marketers op het juiste moment het juiste publiek betrekken bij de reis van hun koper en schalen ze elegant om het publiek te bereiken via verschillende kanalen, zoals e-mail, display, search, video en mobile. Verkoopteams kunnen meer deals sluiten in een sneller tempo, waardoor het marketingrendement toeneemt dankzij realtime inzicht.
+[[!DNL Oracle Eloqua] ](https://www.oracle.com/cx/marketing/automation/) laat marketers toe om campagnes te plannen en uit te voeren terwijl het leveren van een gepersonaliseerde klantenervaring voor hun vooruitzichten. Dankzij geïntegreerd beheer van leads en het eenvoudig maken van campagnes, kunnen marketers op het juiste moment het juiste publiek betrekken bij de reis van hun koper en schalen ze elegant om het publiek te bereiken via verschillende kanalen, zoals e-mail, display, search, video en mobile. Verkoopteams kunnen meer deals sluiten in een sneller tempo, waardoor het marketingrendement toeneemt dankzij realtime inzicht.
 
-Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [Een contactpersoon bijwerken](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) van de [!DNL Oracle Eloqua] REST API, waarmee u **identiteiten bijwerken** binnen een publiek in [!DNL Oracle Eloqua].
+Dit [!DNL Adobe Experience Platform] [ doel ](/help/destinations/home.md) hefboomwerkingen [ werkt een contact ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) verrichting van [!DNL Oracle Eloqua] REST API bij, die u toestaat om **identiteiten** binnen een publiek in [!DNL Oracle Eloqua] bij te werken.
 
-[!DNL Oracle Eloqua] gebruik [Basisverificatie](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) om te communiceren met [!DNL Oracle Eloqua] REST API. Instructies voor verificatie aan uw [!DNL Oracle Eloqua] de instantie is verder onderaan, in de [Verifiëren voor bestemming](#authenticate) sectie.
+[!DNL Oracle Eloqua] gebruikt [ Basisauthentificatie ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) om met [!DNL Oracle Eloqua] REST API te communiceren. De instructies om aan uw [!DNL Oracle Eloqua] instantie voor authentiek te verklaren zijn verder hieronder, in [ voor authentiek verklaren aan bestemmings ](#authenticate) sectie.
 
-## Gebruik hoofdletters {#use-cases}
+## Gebruiksscenario’s {#use-cases}
 
-De marketingafdeling van een onlineplatform wil een marketingcampagne op basis van e-mail uitzenden naar een publiek met nieuwsberichten. Het marketingteam van het platform kan bestaande informatie over leads bijwerken via Adobe Experience Platform, een publiek opbouwen op basis van hun eigen offline gegevens en deze doelgroep naar sturen [!DNL Oracle Eloqua], die vervolgens kan worden gebruikt om de marketingcampagne per e-mail te verzenden.
+De marketingafdeling van een onlineplatform wil een marketingcampagne op basis van e-mail uitzenden naar een publiek met nieuwsberichten. Het marketingteam van het platform kan bestaande informatie over leads bijwerken via Adobe Experience Platform, een publiek opbouwen op basis van hun eigen offline gegevens en deze soorten publiek doorsturen naar [!DNL Oracle Eloqua] , die vervolgens kan worden gebruikt om de marketingcampagne per e-mail te verzenden.
 
 ## Vereisten {#prerequisites}
 
 ### Voorwaarden voor Experience Platforms {#prerequisites-in-experience-platform}
 
-Voordat u gegevens activeert naar de [!DNL Oracle Eloqua] doel, u moet een [schema](/help/xdm/schema/composition.md), [gegevensset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), en [segmenten](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) gemaakt in [!DNL Experience Platform].
+Alvorens gegevens aan de [!DNL Oracle Eloqua] bestemming te activeren, moet u a [ schema ](/help/xdm/schema/composition.md), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) hebben, en [ segmenten ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) die in [!DNL Experience Platform] worden gecreeerd.
 
-Raadpleeg de documentatie bij het Experience Platform voor [Publiek Lidmaatschap Details schema groep](/help/xdm/field-groups/profile/segmentation.md) als u hulp over publieksstatus nodig hebt.
+Verwijs naar de documentatie van het Experience Platform voor [ het schemagroep van de Details van het Lidmaatschap van het Publiek ](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op publiekstoestanden nodig hebt.
 
 ### [!DNL Oracle Eloqua] voorwaarden {#prerequisites-destination}
 
-Als u gegevens van Platform naar uw wilt exporteren [!DNL Oracle Eloqua] account die u nodig hebt [!DNL Oracle Eloqua] account.
+Als u gegevens wilt exporteren van Platform naar uw [!DNL Oracle Eloqua] -account, hebt u een [!DNL Oracle Eloqua] -account nodig.
 
-Bovendien hebt u minimaal de *&quot;Advanced Users - Marketing permissions&quot;* voor uw [!DNL Oracle Eloqua] -instantie. Zie de *&quot;Beveiligingsgroepen&quot;* de [Beveiligde gebruikerstoegang](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) pagina voor hulp. De toegang wordt vereist door de bestemming programmatically [de basis-URL bepalen](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) wanneer het aanroepen van [!DNL Oracle Eloqua] API.
+Bovendien, moet u, bij een minimum, *&quot;Geavanceerde Gebruikers - de toestemmingen van de Marketing&quot;* voor uw [!DNL Oracle Eloqua] instantie. Verwijs naar de *&quot;Groepen van de Veiligheid&quot;* sectie op de [ Beveiligde gebruikerstoegang ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) pagina voor begeleiding. De toegang wordt vereist door de bestemming programmatically [ uw basis URL ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) bepalen wanneer het aanhalen van [!DNL Oracle Eloqua] API.
 
-#### Gather [!DNL Oracle Eloqua] geloofsbrieven {#gather-credentials}
+#### [!DNL Oracle Eloqua] gebruikersgegevens verzamelen {#gather-credentials}
 
-Noteer de onderstaande items voordat u deze verifieert voor de [!DNL Oracle Eloqua] bestemming:
+Noteer de onderstaande items voordat u de verificatie uitvoert naar het doel van [!DNL Oracle Eloqua] :
 
 | Credentials | Beschrijving |
 | --- | --- |
-| `Company Name` | De bedrijfsnaam die aan uw [!DNL Oracle Eloqua] account. <br>U gebruikt later de `Company Name` en [!DNL Oracle Eloqua] `Username` als een samengevoegde tekenreeks die als de **[!UICONTROL Username]** wanneer [authenticeren aan de bestemming](#authenticate). |
-| `Username` | De gebruikersnaam van uw [!DNL Oracle Eloqua] account. |
-| `Password` | Het wachtwoord van uw [!DNL Oracle Eloqua] account. |
-| `Pod` | [!DNL Oracle Eloqua] ondersteunt meerdere datacenters, elk met een unieke domeinnaam. [!DNL Oracle Eloqua] Deze worden &quot;pods&quot; genoemd. Momenteel zijn er in totaal zeven - p01, p02, p03, p04, p06, p07 en p08. Meld u aan om te bepalen welke POD u hebt ingeschakeld [!DNL Oracle Eloqua] en noteer de URL in uw browser nadat u zich met succes hebt aangemeld. Als de URL van uw browser bijvoorbeeld `secure.p01.eloqua.com` uw `pod` is `p01`. Zie de [de POD bepalen](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) pagina voor aanvullende instructies. |
+| `Company Name` | De bedrijfsnaam die aan uw [!DNL Oracle Eloqua] account is gekoppeld. <br> u zult later `Company Name` en [!DNL Oracle Eloqua] `Username` als samengevoegde koord gebruiken dat als **[!UICONTROL Username]** moet worden gebruikt wanneer [ voor authentiek verklaren aan de bestemming ](#authenticate). |
+| `Username` | De gebruikersnaam van uw [!DNL Oracle Eloqua] -account. |
+| `Password` | Het wachtwoord van uw [!DNL Oracle Eloqua] -account. |
+| `Pod` | [!DNL Oracle Eloqua] ondersteunt meerdere datacenters, elk met een unieke domeinnaam. [!DNL Oracle Eloqua] noemt deze als &quot;pods&quot;, er zijn momenteel zeven in totaal - p01, p02, p03, p04, p06, p07 en p08. Als u wilt weten welke POD u hebt ingeschakeld, meldt u zich aan bij [!DNL Oracle Eloqua] en noteert u de URL in uw browser nadat u zich met succes hebt aangemeld. Als de URL van uw browser bijvoorbeeld `secure.p01.eloqua.com` is, `pod` is `p01` . Verwijs naar [ bepalend uw POD ](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) pagina voor extra begeleiding. |
 
-Zie de [Aanmelden bij [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing) ter begeleiding.
+Verwijs naar [ het Ondertekenen binnen aan  [!DNL Oracle Eloqua] ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing) voor begeleiding.
 
 ## Guardrails {#guardrails}
 
 >[!NOTE]
 >
->* [!DNL Oracle Eloqua] aangepaste contactvelden worden automatisch gemaakt met de namen van de doelgroepen die tijdens het **[!UICONTROL Select segments]** stap.
+>* [!DNL Oracle Eloqua] aangepaste contactvelden worden automatisch gemaakt met de namen van het publiek dat tijdens de stap **[!UICONTROL Select segments]** is geselecteerd.
 
 * [!DNL Oracle Eloqua] heeft een maximale limiet van 250 aangepaste contactvelden.
 * Voordat u nieuwe doelgroepen exporteert, moet u ervoor zorgen dat het aantal doelgroepen van het platform en het aantal bestaande doelgroepen binnen [!DNL Oracle Eloqua] deze limiet niet overschrijden.
-* Als deze limiet wordt overschreden, treedt er een fout op in het Experience Platform. Dit komt omdat de [!DNL Oracle Eloqua] API kan de aanvraag niet valideren en reageert met een - *400: Er is een validatiefout opgetreden* - foutbericht met een beschrijving van het probleem.
-* Als u de hierboven opgegeven limiet hebt bereikt, moet u bestaande toewijzingen verwijderen uit uw bestemming en de bijbehorende aangepaste contactvelden in uw [!DNL Oracle Eloqua] voordat u meer segmenten kunt exporteren.
+* Als deze limiet wordt overschreden, treedt er een fout op in het Experience Platform. Dit is omdat [!DNL Oracle Eloqua] API er niet in slaagt om het verzoek te bevestigen, en met a - *400 antwoordt: Er was een bevestigingsfout* - foutenmelding beschrijvend de kwestie.
+* Als u de hierboven opgegeven limiet hebt bereikt, moet u bestaande toewijzingen verwijderen van uw bestemming en de bijbehorende aangepaste contactvelden in uw [!DNL Oracle Eloqua] -account verwijderen voordat u meer segmenten kunt exporteren.
 
-* Zie de [[!DNL Oracle Eloqua] Contactvelden maken](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) pagina voor informatie over extra limieten.
+* Verwijs naar [[!DNL Oracle Eloqua]  Creërend de pagina van de Gebieden van het Contact ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) voor informatie over extra grenzen.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Oracle Eloqua] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
+[!DNL Oracle Eloqua] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Verplicht |
 |---|---|---|
@@ -77,8 +77,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Voor elk geselecteerd publiek in Platform, het overeenkomstige [!DNL Oracle Eloqua] de segmentstatus wordt bijgewerkt met de publieksstatus van Platform.</li></ul> |
-| Exportfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)* volgens uw veldtoewijzing.</li><li> Voor elk geselecteerd publiek in Platform, wordt de overeenkomstige [!DNL Oracle Eloqua] segmentstatus bijgewerkt met zijn publieksstatus van Platform.</li></ul> |
+| Exportfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -86,27 +86,27 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
-Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** zoeken naar [!DNL (API) Oracle Eloqua]. U kunt de locatie ook onder de **[!UICONTROL Email Marketing]** categorie.
+Kies in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** Zoeken naar [!DNL (API) Oracle Eloqua] . U kunt de locatie ook in de categorie **[!UICONTROL Email Marketing]** vinden.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
 >title="Bedrijfsnaam\Gebruikersnaam"
->abstract="Vul dit gebied met uw bedrijfsnaam en gebruikersbenaming van Oracle Eloqua in de vorm in `{COMPANY_NAME}\{USERNAME}`"
+>abstract="Vul dit gebied met uw bedrijfsnaam en gebruikersbenaming van Oracle Eloqua in de vorm `{COMPANY_NAME}\{USERNAME}` in"
 
-Vul de vereiste velden hieronder in. Zie de [Gather [!DNL Oracle Eloqua] geloofsbrieven](#gather-credentials) voor eventuele richtsnoeren.
-* **[!UICONTROL Password]**: Het wachtwoord van uw [!DNL Oracle Eloqua] account.
-* **[!UICONTROL Username]**: Een samengevoegde tekenreeks die bestaat uit uw [!DNL Oracle Eloqua] Bedrijfsnaam en de [!DNL Oracle Eloqua] Gebruikersnaam<br>De samengevoegde waarde bestaat uit: `{COMPANY_NAME}\{USERNAME}`.<br> Let op: gebruik geen accolades of spaties en bewaar de `\`. <br>Als u bijvoorbeeld [!DNL Oracle Eloqua] Bedrijfsnaam is `MyCompany` en [!DNL Oracle Eloqua] Gebruikersnaam is `Username`, de samengevoegde waarde die u in het dialoogvenster **[!UICONTROL Username]** field is `MyCompany\Username`.
+Vul de vereiste velden hieronder in. Verwijs naar de [ Gather  [!DNL Oracle Eloqua]  geloofsbrieven ](#gather-credentials) sectie voor om het even welke begeleiding.
+* **[!UICONTROL Password]**: Het wachtwoord van uw [!DNL Oracle Eloqua] -account.
+* **[!UICONTROL Username]**: Een samengevoegde tekenreeks die bestaat uit uw [!DNL Oracle Eloqua] bedrijfsnaam en de [!DNL Oracle Eloqua] gebruikersnaam.<br> de samengevoegde waarde neemt de vorm van `{COMPANY_NAME}\{USERNAME}`.<br> Opmerking: gebruik geen accolades of spaties en zorg dat de `\` behouden blijft. <br> Bijvoorbeeld als uw [!DNL Oracle Eloqua] Bedrijfsnaam `MyCompany` is en [!DNL Oracle Eloqua] Gebruikersnaam `Username` is, is de samengevoegde waarde u in het **[!UICONTROL Username]** gebied zult gebruiken `MyCompany\Username`.
 
-Om voor authentiek te verklaren aan de bestemming, uitgezocht **[!UICONTROL Connect to destination]**.
-![Schermopname van de gebruikersinterface van het platform waarin wordt getoond hoe te voor authentiek te verklaren.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
+Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel.
+{het schermschot van het platform UI die tonen hoe te voor authentiek te verklaren.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)![
 
-Als de verstrekte gegevens geldig zijn, geeft de interface een **[!UICONTROL Connected]** status met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
+Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **[!UICONTROL Connected]** weer met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -118,47 +118,59 @@ Als de verstrekte gegevens geldig zijn, geeft de interface een **[!UICONTROL Con
 <!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-![Platform UI het schermschot die de bestemmingsdetails tonen.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
+{het schermschot van het platform UI die de bestemmingsdetails toont.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)![
 
-* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Pod]**: te verkrijgen `pod` u bent aan, login aan [!DNL Oracle Eloqua] en noteer de URL in uw browser nadat u zich met succes hebt aangemeld. Als de URL van uw browser bijvoorbeeld `secure.p01.eloqua.com` de `pod` waarde die u moet selecteren, is `p01`. Zie de [Gather [!DNL Oracle Eloqua] geloofsbrieven](#gather-credentials) voor aanvullende richtsnoeren.
+* **[!UICONTROL Pod]**: Als u wilt weten welke `pod` u bent ingeschakeld, meldt u zich aan bij [!DNL Oracle Eloqua] en noteert u de URL in uw browser nadat u zich hebt aangemeld. Als de URL van uw browser bijvoorbeeld `secure.p01.eloqua.com` is, moet u de waarde `pod` selecteren `p01` . Verwijs naar de [ Gather  [!DNL Oracle Eloqua]  geloofsbrieven ](#gather-credentials) sectie voor extra begeleiding.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
-Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL Oracle Eloqua] doel, moet u door de stap van de gebiedstoewijzing gaan. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming.
+Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL Oracle Eloqua] -bestemming wilt verzenden, moet u de stap voor veldtoewijzing doorlopen. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming.
 
-Uw XDM-velden toewijzen aan de [!DNL Oracle Eloqua] doelvelden, voer de volgende stappen uit:
+Voer de volgende stappen uit om uw XDM-velden toe te wijzen aan de [!DNL Oracle Eloqua] -doelvelden:
 
-1. In de **[!UICONTROL Mapping]** stap, selecteren **[!UICONTROL Add new mapping]**. Er verschijnt een nieuwe toewijzingsrij op het scherm.
-1. In de **[!UICONTROL Select source field]** venster, kiest u de **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk of kies de **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
-1. In de **[!UICONTROL Select target field]** venster, kiest u **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select custom attributes]** en typ de gewenste kenmerknaam in het dialoogvenster **[!UICONTROL Attribute name]** veld. De kenmerknaam die u opgeeft, moet overeenkomen met een bestaand contactkenmerk in [!DNL Oracle Eloqua]. Zie [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) voor de exacte kenmerknamen die u kunt gebruiken in [!DNL Oracle Eloqua].
-   * Herhaal deze stappen om de vereiste en gewenste kenmerktoewijzingen toe te voegen tussen uw XDM-profielschema en [!DNL Oracle Eloqua]: | Bronveld | Doelveld | Verplicht | |—|—|—| |`IdentityMap: Eid`|`Identity: EloquaId`| Ja | |`xdm: personalEmail.address`|`Attribute: emailAddress`| Ja | |`xdm: personName.firstName`|`Attribute: firstName`| | |`xdm: personName.lastName`|`Attribute: lastName`| | |`xdm: workAddress.street1`|`Attribute: address1`| | |`xdm: workAddress.street2`|`Attribute: address2`| | |`xdm: workAddress.street3`|`Attribute: address3`| | |`xdm: workAddress.postalCode`|`Attribute: postalCode`| | |`xdm: workAddress.country`|`Attribute: country`| | |`xdm: workAddress.city`|`Attribute: city`| |
+1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . Er verschijnt een nieuwe toewijzingsrij op het scherm.
+1. Kies in het venster **[!UICONTROL Select source field]** de categorie **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk of kies de categorie **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
+1. Kies in het venster **[!UICONTROL Select target field]** de optie **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select custom attributes]** en typ in het veld **[!UICONTROL Attribute name]** de gewenste kenmerknaam. De kenmerknaam die u opgeeft, moet overeenkomen met een bestaand contactkenmerk in [!DNL Oracle Eloqua] . Zie [[!DNL create a contact] ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) voor de nauwkeurige attributennamen die u in [!DNL Oracle Eloqua] kunt gebruiken.
+   * Herhaal deze stappen om de vereiste en gewenste kenmerktoewijzingen toe te voegen tussen uw XDM-profielschema en [!DNL Oracle Eloqua] :
+| Source-veld | Doelveld | Verplicht |
+|—|—|—|
+|`IdentityMap: Eid`|`Identity: EloquaId`| Ja |
+|`xdm: personalEmail.address`|`Attribute: emailAddress`| Ja |
+|`xdm: personName.firstName`|`Attribute: firstName`| |
+|`xdm: personName.lastName`|`Attribute: lastName`| |
+|`xdm: workAddress.street1`|`Attribute: address1`| |
+|`xdm: workAddress.street2`|`Attribute: address2`| |
+|`xdm: workAddress.street3`|`Attribute: address3`| |
+|`xdm: workAddress.postalCode`|`Attribute: postalCode`| |
+|`xdm: workAddress.country`|`Attribute: country`| |
+|`xdm: workAddress.city`|`Attribute: city`| |
 
    * Hieronder ziet u een voorbeeld met de bovenstaande toewijzingen:
-     ![Voorbeeld van schermopname voor platformgebruikersinterface met kenmerktoewijzingen.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
+     ![ het schermschot van het Platform UI met attributenafbeeldingen.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
 >
->* Kenmerken die zijn opgegeven in het dialoogvenster **[!UICONTROL Target field]** moet een naam hebben die exact overeenkomt met de naam die is opgegeven in het [[!DNL Create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) aangezien deze kenmerken de aanvraaginstantie vormen.
->* Kenmerken die zijn opgegeven in het dialoogvenster **[!UICONTROL Source field]** zich niet aan een dergelijke beperking houden. U kunt deze toewijzen op basis van uw behoefte, maar als de gegevensindeling niet correct is wanneer u naar [!DNL Oracle Eloqua] resulteert in een fout. U kunt bijvoorbeeld de **[!UICONTROL Source field]** naamruimte identity `contact key`, `ABC ID` enz. tot **[!UICONTROL Target field]** : `EloquaId` nadat de id-waarden overeenkomen met de indeling die is geaccepteerd door [!DNL Oracle Eloqua].
->* De `EloquaID` toewijzen is verplicht om kenmerken bij te werken die overeenkomen met de identiteit.
->* De `emailAddress` toewijzing is vereist. Zonder deze API genereert de API een fout zoals hieronder wordt weergegeven:
+>* Attributen die in **[!UICONTROL Target field]** worden gespecificeerd zouden precies zoals die in [[!DNL Create a contact] worden gespecificeerd ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) moeten worden genoemd aangezien deze attributen verzoeklichaam zullen vormen.
+>* Kenmerken die in **[!UICONTROL Source field]** worden opgegeven, volgen een dergelijke beperking niet. U kunt deze toewijzen op basis van uw behoefte, maar als de gegevensindeling niet correct is wanneer u naar [!DNL Oracle Eloqua] wordt geduwd, resulteert dit in een fout. U kunt bijvoorbeeld de naamruimte **[!UICONTROL Source field]** identity `contact key` , `ABC ID` enz. toewijzen. to **[!UICONTROL Target field]** : `EloquaId` zorgt u ervoor dat de id-waarden overeenkomen met de indeling die wordt geaccepteerd door [!DNL Oracle Eloqua] .
+>* De toewijzing `EloquaID` is verplicht om kenmerken bij te werken die overeenkomen met de identiteit.
+>* De toewijzing `emailAddress` is vereist. Zonder deze API genereert de API een fout zoals hieronder wordt weergegeven:
 >
 >```json
 >{
@@ -175,44 +187,44 @@ Uw XDM-velden toewijzen aan de [!DNL Oracle Eloqua] doelvelden, voer de volgende
 >}
 >```
 
-Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 >[!NOTE]
 >
->Het doel plaatst automatisch een unieke id achter aan de geselecteerde publieksnamen bij elke uitvoering wanneer het verzenden van de informatie van het contactgebied naar [!DNL Oracle Eloqua]. Dit zorgt ervoor dat de namen van de contactgebieden die overeenkomen met uw publieksnamen elkaar niet overlappen. Zie de [Gegevens exporteren valideren](#exported-data) voorbeeld van een sectiescherm van een [!DNL Oracle Eloqua] De pagina van Details van het contact met het gebied van de douanecontcontact dat gebruikend de publieksnamen wordt gecreeerd.
+>Het doel plaatst automatisch een unieke id achter de geselecteerde publieksnamen bij elke uitvoering wanneer de gegevens van het contactveld naar [!DNL Oracle Eloqua] worden verzonden. Dit zorgt ervoor dat de namen van de contactgebieden die overeenkomen met uw publieksnamen elkaar niet overlappen. Verwijs naar [ de uitvoer van gegevens ](#exported-data) van het sectiescherm van een [!DNL Oracle Eloqua] pagina van de Details van het Contact met het gebied van het douanecontact dat gebruikend de publieksnamen wordt gecreeerd bevestigen.
 
 ## Gegevens exporteren valideren {#exported-data}
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
-1. Selecteren **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en navigeer naar de lijst met bestemmingen.
-1. Selecteer vervolgens de bestemming en schakel over naar de **[!UICONTROL Activation data]** en selecteert u vervolgens de naam van een publiek.
-   ![Het het schermschot van het platform UI die de Gegevens van de Activering van Doelen toont.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
+1. Selecteer **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en navigeer naar de lijst met doelen.
+1. Selecteer vervolgens het doel en schakel over naar het tabblad **[!UICONTROL Activation data]** en selecteer een publieksnaam.
+   ![ het schermschot van het Platform UI die de Gegevens van de Activering van Doelen toont.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
 1. Controleer het publieksoverzicht en zorg ervoor dat de telling van profielen aan de telling binnen het segment beantwoordt.
-   ![Voorbeeld van schermopname van platform-UI met segment.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
+   ![ het schermschot van het Platform UI die Segment toont.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
-1. Aanmelden bij de [!DNL Oracle Eloqua] website, navigeer vervolgens naar de **[!UICONTROL Contacts Overview]** pagina om te controleren of de profielen van het publiek zijn toegevoegd. Als u de status van het publiek wilt zien, gaat u naar een **[!UICONTROL Contact Detail]** pagina en controleer of het contactveld met het geselecteerde publiek als voorvoegsel is gemaakt.
+1. Meld u aan bij de [!DNL Oracle Eloqua] -website en navigeer naar de **[!UICONTROL Contacts Overview]** -pagina om te controleren of de profielen van het publiek zijn toegevoegd. Blader omlaag naar een **[!UICONTROL Contact Detail]** -pagina en controleer of het contactveld met de naam van het geselecteerde publiek als voorvoegsel is gemaakt om de publieksstatus weer te geven.
 
-![Schermopname Eloqua UI van het oracle die de pagina van de Details van het Contact met het gebied van het douanecontact toont dat met de publieksnaam wordt gecreeerd.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
+{het schermschot UI van het Oracle Eloqua die de pagina van de Details van het Contact met het gebied van het douanecontract toont met de publieksnaam wordt gecreeerd.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)![
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
 
 ## Fouten en problemen oplossen {#errors-and-troubleshooting}
 
-Wanneer u het doel maakt, ontvangt u mogelijk een van de volgende foutberichten: `400: There was a validation error` of `400 BAD_REQUEST`. Dit gebeurt wanneer u de limiet van 250 aangepaste contactvelden overschrijdt, zoals wordt beschreven in het dialoogvenster [guardrails](#guardrails) sectie. Als u deze fout wilt corrigeren, moet u ervoor zorgen dat u de limiet van het aangepaste contactveld niet overschrijdt in [!DNL Oracle Eloqua].
-![Fout in schermopname van platforminterface.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
+Wanneer u het doel maakt, ontvangt u mogelijk een van de volgende foutberichten: `400: There was a validation error` of `400 BAD_REQUEST` . Dit gebeurt wanneer u de 250 grens van de gebieden van het douanecontact overschrijdt, zoals die in de [ wordt beschreven guardrails ](#guardrails) sectie. U kunt deze fout verhelpen door de limiet van het aangepaste contactveld in [!DNL Oracle Eloqua] niet te overschrijden.
+{het schermschot van het platform UI die fout toont.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)![
 
-Zie de [[!DNL Oracle Eloqua] HTTP-statuscodes](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPStatusCodes.html) en [[!DNL Oracle Eloqua] Validatiefouten](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPValidationErrors.html) pagina&#39;s voor een uitgebreide lijst met status- en foutcodes met uitleg.
+Verwijs naar de [[!DNL Oracle Eloqua]  de statuscodes van HTTP ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPStatusCodes.html) en [[!DNL Oracle Eloqua]  fouten van de Bevestiging ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPValidationErrors.html) pagina&#39;s voor een uitvoerige lijst van status en foutencodes met verklaringen.
 
 ## Aanvullende bronnen {#additional-resources}
 
-Zie voor meer informatie de [!DNL Oracle Eloqua] documentatie:
+Zie de documentatie van [!DNL Oracle Eloqua] voor meer informatie:
 
-* [Oracle Eloqua Marketing Automation](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
-* [REST API voor Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
+* [ de Automatisering van de Marketing van Eloqua van het Oracle ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
+* [ REST API voor de Dienst van de Marketing Cloud van de Oracle Eloqua ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
 
 ### Changelog
 
@@ -222,7 +234,7 @@ Deze sectie vangt de functionaliteit en de significante documentatieupdates aan 
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
-| April 2023 | Documentatie bijwerken | <ul><li>We hebben de [gebruikgevallen](#use-cases) een duidelijker voorbeeld van wanneer de klanten van het gebruiken van deze bestemming zouden profiteren.</li> <li>We hebben de [toewijzing](#mapping-considerations-example) met duidelijke voorbeelden van zowel verplichte als optionele toewijzingen.</li> <li>We hebben de [Verbinden met de bestemming](#connect) met een voorbeeld van hoe u de samengevoegde waarde voor de component **[!UICONTROL Username]** veld met de [!DNL Oracle Eloqua] Bedrijfsnaam en de [!DNL Oracle Eloqua] Gebruikersnaam (PLATIR-28343)</li><li>We hebben de [Gather [!DNL Oracle Eloqua] geloofsbrieven](#gather-credentials) en de [Doelgegevens invullen](#destination-details) secties met richtsnoeren over [!DNL Oracle Eloqua] **[!UICONTROL Pod]** selectie. De *&quot;Pod&quot;* De waarde wordt gebruikt door de bestemming om de basis-URL voor de API-aanroepen samen te stellen. De [[!DNL Oracle Eloqua] voorwaarden](#prerequisites-destination) dit gedeelte is ook bijgewerkt met richtlijnen voor het toewijzen van *&quot;Advanced Users - Marketing permissions&quot;* als vereist *&quot;Beveiligingsgroepen&quot;* voor uw [!DNL Oracle Eloqua] -instantie.</li></ul> |
+| April 2023 | Documentatie bijwerken | <ul><li>Wij hebben de [ gebruik-gevallen ](#use-cases) sectie met een duidelijker voorbeeld bijgewerkt van wanneer de klanten van het gebruiken van deze bestemming zouden profiteren.</li> <li>Wij hebben de [ afbeelding ](#mapping-considerations-example) sectie met duidelijke voorbeelden van zowel verplichte als facultatieve afbeeldingen bijgewerkt.</li> <li>Wij hebben [ bijgewerkt verbind met de bestemmings ](#connect) sectie met een voorbeeld op hoe te om de samengevoegde waarde voor het **[!UICONTROL Username]** gebied te construeren gebruikend de [!DNL Oracle Eloqua] Naam van het Bedrijf en [!DNL Oracle Eloqua] Gebruikersnaam. (PLATIR-28343)</li><li>Wij hebben de  [!DNL Oracle Eloqua]  geloofsbrieven ](#gather-credentials) van de Vergroting [ bijgewerkt en [ vullen in de secties van bestemmingsdetails ](#destination-details) met begeleiding op [!DNL Oracle Eloqua] **[!UICONTROL Pod]** selectie. De *&quot;Pod&quot;* waarde wordt gebruikt door de bestemming om de basis URL voor de API vraag te construeren. De [[!DNL Oracle Eloqua]  eerste vereisten ](#prerequisites-destination) sectie werd ook bijgewerkt met begeleiding bij het toewijzen van *&quot;Geavanceerde Gebruikers - de toestemmingen van de Marketing&quot;* als vereiste *&quot;Groepen van de Veiligheid&quot;* voor uw [!DNL Oracle Eloqua] instantie.</li></ul> |
 | Maart 2023 | Eerste release | Oorspronkelijke doelversie en documentatie publiceren. |
 
 {style="table-layout:auto"}

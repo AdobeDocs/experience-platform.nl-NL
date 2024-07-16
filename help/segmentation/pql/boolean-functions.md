@@ -1,24 +1,24 @@
 ---
 solution: Experience Platform
-title: Booleaanse functies PQL
-description: Booleaanse functies worden gebruikt voor het uitvoeren van Booleaanse logica op verschillende elementen in PQL (Profile Query Language).
+title: PQL Boolean-functies
+description: Booleaanse functies worden gebruikt om booleaanse logica uit te voeren op verschillende elementen in Profile Query Language (PQL).
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 2%
+source-wordcount: '239'
+ht-degree: 0%
 
 ---
 
 # Booleaanse functies
 
-Booleaanse functies worden gebruikt voor het uitvoeren van Booleaanse logica op verschillende elementen in [!DNL Profile Query Language] (PQL).  Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
+Booleaanse functies worden gebruikt om booleaanse logica uit te voeren op verschillende elementen in [!DNL Profile Query Language] (PQL).  Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht ](./overview.md) worden gevonden.
 
 ## en
 
-De `and` Deze functie wordt gebruikt om een logische combinatie te maken.
+De functie `and` wordt gebruikt om een logische combinatie te maken.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {QUERY} and {QUERY}
@@ -34,9 +34,9 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## of
 
-De `or` Deze functie wordt gebruikt om een logische scheiding te maken.
+De functie `or` wordt gebruikt om een logische scheiding te maken.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {QUERY} or {QUERY}
@@ -52,9 +52,9 @@ homeAddress.countryISO = "CA" or person.birthYear = 1985
 
 ## Niet
 
-De `not` (of `!`) wordt gebruikt om een logische negatie te maken.
+De functie `not` (of `!` ) wordt gebruikt om een logische negatie te maken.
 
-**Indeling**
+**Formaat**
 
 ```sql
 not ({QUERY})
@@ -63,7 +63,7 @@ not ({QUERY})
 
 **Voorbeeld**
 
-De volgende PQL-query retourneert alle mensen die hun thuisland niet als Canada hebben.
+De volgende PQL-query retourneert alle mensen die geen thuisland als Canada hebben.
 
 ```sql
 not (homeAddress.countryISO = "CA")
@@ -71,9 +71,9 @@ not (homeAddress.countryISO = "CA")
 
 ## Indien
 
-De `if` wordt gebruikt om een expressie op te lossen, afhankelijk van het feit of een opgegeven voorwaarde waar is.
+De functie `if` wordt gebruikt om een expressie op te lossen, afhankelijk van het feit of een opgegeven voorwaarde waar is.
 
-**Indeling**
+**Formaat**
 
 ```sql
 if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
@@ -82,12 +82,12 @@ if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
 | Argument | Beschrijving |
 | --------- | ----------- |
 | `{TEST_EXPRESSION}` | De booleaanse expressie die wordt getest. |
-| `{TRUE_EXPRESSION}` | De expressie waarvan de waarde wordt gebruikt als `{TEST_EXPRESSION}` is waar. |
-| `{FALSE_EXPRESSION}` | De expressie waarvan de waarde wordt gebruikt als `{TEST_EXPRESSION}` is false. |
+| `{TRUE_EXPRESSION}` | De expressie waarvan de waarde wordt gebruikt als `{TEST_EXPRESSION}` true is. |
+| `{FALSE_EXPRESSION}` | De expressie waarvan de waarde wordt gebruikt als `{TEST_EXPRESSION}` false is. |
 
 **Voorbeeld**
 
-De volgende PQL-query stelt de waarde in als `1` als het land van herkomst Canada is en `2` als het land van herkomst geen Canada is.
+De volgende PQL-query stelt de waarde in als `1` als het thuisland Canada is en `2` als het thuisland geen Canada is.
 
 ```sql
 if (homeAddress.countryISO = "CA", 1, 2)
@@ -95,4 +95,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## Volgende stappen
 
-Nu u over booleaanse functies hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).
+Nu u over booleaanse functies hebt geleerd, kunt u deze gebruiken binnen uw PQL-query&#39;s. Voor meer informatie over andere functies van PQL, te lezen gelieve het [ overzicht van Profile Query Language ](./overview.md).

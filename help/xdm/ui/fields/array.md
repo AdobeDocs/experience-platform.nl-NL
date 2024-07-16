@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Wanneer u een XDM-veld (Experience Data Model) in de Adobe Experience Platform-gebruikersinterface definieert, kunt u dat veld toewijzen als een array.
 
-De inhoud van de array is afhankelijk van de [!UICONTROL Type] geselecteerd voor dat veld. Als een veld bijvoorbeeld [!UICONTROL Type] is ingesteld op &quot;[!UICONTROL String]&quot;, wordt het veld door het instellen van dat veld als een array aangeduid als een array van tekenreeksen. Als het veld [!UICONTROL Type] wordt ingesteld op een gegevenstype met meerdere velden, zoals &quot;[!UICONTROL Postal address]&quot;, dan zou het een serie van post-adresvoorwerpen worden die met het gegevenstype in overeenstemming zijn.
+De inhoud van de array is afhankelijk van de geselecteerde [!UICONTROL Type] voor dat veld. Als een veld [!UICONTROL Type] bijvoorbeeld is ingesteld op &quot;[!UICONTROL String]&quot;, geeft het instellen van dat veld als een array het veld aan als een array van tekenreeksen. Als het gebied [!UICONTROL Type] aan een multi-gebiedsgegevenstype zoals &quot;[!UICONTROL Postal address]&quot;wordt geplaatst, dan zou het een serie van post-adresvoorwerpen worden die met het gegevenstype in overeenstemming zijn.
 
-Nadat u [een nieuw veld in de gebruikersinterface gedefinieerd](./overview.md#define), kunt u het als een matrixveld instellen door de optie **[!UICONTROL Array]** selectievakje in de rechterspoorstaaf.
+Nadat u [ een nieuw gebied in UI ](./overview.md#define) hebt bepaald, kunt u het als seriegebied plaatsen door **[!UICONTROL Array]** checkbox in het juiste spoor te selecteren.
 
 ![](../../images/ui/fields/special/array.png)
 
@@ -29,18 +29,18 @@ De extra configuratiecontroles voor series zijn als volgt:
 | --- | --- |
 | [!UICONTROL Minimum length] | Het minimale aantal items dat de array moet bevatten om de opname te laten slagen. |
 | [!UICONTROL Maximum length] | Het maximum aantal items dat de array moet bevatten om de opname te laten slagen. |
-| [!UICONTROL Unique items only] | Indien ingesteld op &quot;[!UICONTROL True]&quot;, moet elk item in de array uniek zijn om de opname te laten slagen. |
+| [!UICONTROL Unique items only] | Indien ingesteld op &quot;[!UICONTROL True]&quot;, moet elk item in de array uniek zijn om opname te laten slagen. |
 
 {style="table-layout:auto"}
 
-Als u klaar bent met het configureren van het veld, selecteert u **[!UICONTROL Apply]** om de wijziging op het schema toe te passen.
+Nadat u het veld hebt geconfigureerd, selecteert u **[!UICONTROL Apply]** om de wijziging toe te passen op het schema.
 
 ![](../../images/ui/fields/special/array-config.png)
 
-Het canvas wordt bijgewerkt met de wijzigingen die in het veld zijn aangebracht. Het gegevenstype dat naast de veldnaam op het canvas wordt weergegeven, wordt met twee vierkante haakjes toegevoegd (`[]`), die het veld aangeven, vertegenwoordigt een array van dat gegevenstype.
+Het canvas wordt bijgewerkt met de wijzigingen die in het veld zijn aangebracht. Merk op dat het gegevenstype dat naast de gebiedsnaam in het canvas wordt getoond met een paar vierkante haakjes (`[]`) wordt toegevoegd, die op het gebied wijzen een serie van dat gegevenstype vertegenwoordigt.
 
 ![](../../images/ui/fields/special/array-applied.png)
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u een arrayveld in de gebruikersinterface definieert. Zie het overzicht op [velden definiëren in de gebruikersinterface](./overview.md#special) leren hoe u andere XDM-veldtypen definieert in het dialoogvenster [!DNL Schema Editor].
+In deze handleiding wordt beschreven hoe u een arrayveld in de gebruikersinterface definieert. Zie het overzicht op [ bepalende gebieden in UI ](./overview.md#special) leren hoe te om andere XDM gebiedstypes in [!DNL Schema Editor] te bepalen.

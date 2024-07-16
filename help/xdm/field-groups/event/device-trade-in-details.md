@@ -15,15 +15,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De namen van verschillende groepen schemavelden zijn gewijzigd. Document weergeven op [veldgroepnaapupdates](../name-updates.md) voor meer informatie .
+>De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [ de naamupdates van de gebiedsgroep ](../name-updates.md) voor meer informatie.
 
-[!UICONTROL Device Trade-In Details] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Het biedt één veld (`deviceTradeInDetails`), waarin een transactie voor de inruil van een apparaat wordt beschreven, inclusief de inruilwaarde, de oorspronkelijke apparaat-id en de nieuwe apparaat-id.
+[!UICONTROL Device Trade-In Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md). Het verstrekt één enkel gebied (`deviceTradeInDetails`) dat een apparaat handel-binnen transactie, met inbegrip van handel-binnen waarde, originele apparatenidentiteitskaart, en nieuwe apparatenidentiteitskaart beschrijft.
 
-![Device Trade-In-detailstructuur](../../images/field-groups/device-trade-in-details.png)
+![ dossier-binnen structuur van Details van het Apparaat {](../../images/field-groups/device-trade-in-details.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `tradeInValue` | [Valuta](../../data-types/currency.md) | De waarde van het apparaat dat wordt verhandeld. |
+| `tradeInValue` | [ Valuta ](../../data-types/currency.md) | De waarde van het apparaat dat wordt verhandeld. |
 | `newDeviceID` | String | De id van het nieuwe apparaat waarvoor wordt verhandeld. |
 | `originalDeviceID` | String | De id van het apparaat dat wordt verhandeld. |
 
@@ -31,5 +31,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.schema.json)

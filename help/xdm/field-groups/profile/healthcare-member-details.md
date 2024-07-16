@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # [!UICONTROL Healthcare Member Details] schemaveldgroep
 
-[!UICONTROL Healthcare Member Details] is een standaardschemagebiedgroep voor [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) die gegevens vastlegt van een persoon die een medische dienst of zorg heeft of zal ontvangen, zoals contactinformatie, eerstelijnsarts en planningsinformatie.
+[!UICONTROL Healthcare Member Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../classes/individual-profile.md) die details van een persoon vangt die medische dienst of zorg, zoals contactinformatie, primaire zorgarts, en planinformatie heeft of zal ontvangen.
 
-![Groepsstructuur van veld](../../images/field-groups/healthcare-member-details/structure.png)
+![ de groepsstructuur van het Gebied ](../../images/field-groups/healthcare-member-details/structure.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -22,7 +22,7 @@ ht-degree: 0%
 | `homeAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Het thuisadres van de persoon. |
 | `homePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Het telefoonnummer van de persoon thuis. |
 | `mailingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Het postadres van de persoon. |
-| `memberDetails` | Object | Een object dat gedetailleerde informatie bevat over de aan gezondheidszorg gerelateerde kenmerken en relaties van de persoon. Zie de [onderafdeling](#memberDetails) voor meer informatie over de structuur van het object. |
+| `memberDetails` | Object | Een object dat gedetailleerde informatie bevat over de aan gezondheidszorg gerelateerde kenmerken en relaties van de persoon. Zie de [ onderafdeling hieronder ](#memberDetails) voor meer informatie over de structuur van de objecten. |
 | `mobilePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Het mobiele telefoonnummer van de persoon. |
 | `person` | [[!UICONTROL Person]](../../data-types/person.md) | Een individuele actor, contactpersoon of eigenaar in verband met het lidmaatschap van de gezondheidszorg van de persoon. |
 | `personalEmail` | [[!UICONTROL Email address]](../../data-types/email-address.md) | Het persoonlijke e-mailadres van de persoon. |
@@ -32,18 +32,18 @@ ht-degree: 0%
 
 ## `memberDetails` {#memberDetails}
 
-`memberDetails` is een object dat gedetailleerde informatie bevat over de gezondheidsgerelateerde kenmerken en relaties van de persoon. De structuur van `memberDetails` wordt hieronder beschreven.
+`memberDetails` is een object dat gedetailleerde informatie bevat over de kenmerken en relaties van de persoon in de gezondheidszorg. De structuur van `memberDetails` wordt hieronder beschreven.
 
-![memberDetails-structuur](../../images/field-groups/healthcare-member-details/memberDetails.png)
+![ memberDetails structuur ](../../images/field-groups/healthcare-member-details/memberDetails.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `emergencyContact` | Object | Vangt de volgende noodcontactgegevens voor de persoon: <ul><li>`fullName`: (String) De volledige naam van de contactpersoon voor noodgevallen.</li><li>`phone`: (Koord) Het telefoonaantal voor het noodcontact.</li><li>`relationshipToMember`: (String) De relatie van het noodcontact met de persoon.</li></ul> |
-| `medications` | Array van objecten | Hier worden de details weergegeven van de huidige en vroegere medicatie die aan de persoon is gerelateerd. Elk arrayitem is een object dat de volgende details vastlegt: <ul><li>`refillLocation`: ([[!UICONTROL Postal address]](../../data-types/postal-address.md)) De navullocatie voor het geneesmiddel.</li><li>`ID`: (String) Medication ID.</li><li>`isCurrent`: (Boolean) Geeft aan of de medicatie actief of ouder is.</li><li>`numberOfRefills`: (Geheel getal) Het aantal vullingen dat door de leverancier van dit geneesmiddel wordt voorgeschreven.</li><li>`startDate`: (DateTime) De datum waarop de persoon de medicatie begon in te nemen.</li></ul> |
-| `multipleBirth` | Object | Gegevens over meerlinggeboorten vastleggen: <ul><li>`isMultipleBirth`: (Boolean) Geeft aan of de persoon meerdere geboorten heeft gegeven.</li><li>`multipleBirthNumber`: (Geheel getal) Het aantal geboren baby&#39;s als `isMultipleBirth` is waar.</li></ul> |
-| `plans` | Array van objecten | Hier worden de details weergegeven van de huidige en eerdere medische plannen die bij de persoon horen. Elk arrayitem is een object dat de volgende details vastlegt: <ul><li>`coverageEndDate`: (DateTime) De datum waarop de dekking van de regeling eindigt.</li><li>`coverageStartDate`: (DateTime) De datum waarop de dekking van het plan begint.</li><li>`isActive`: (Boolean) Geeft aan of het plan actief is.</li><li>`planId`: (String) De plan-id.</li></ul> |
-| `primaryCarePhysicians` | Array van objecten | Hier worden de gegevens weergegeven van artsen in de eerstelijnszorg die bij de persoon horen. Elk arrayitem is een object dat de volgende details vastlegt: <ul><li>`endDate`: (DateTime) De datum waarop de eerstelijnsarts de zorg voor de persoon beëindigde.</li><li>`fullname`: (String) De volledige naam van de arts.</li><li>`providerId`: (String) Een unieke id voor de arts.</li><li>`startDate`: (DateTime) De datum waarop de eerstelijnsarts de zorg voor de persoon begon.</li></ul> |
-| `specialists` | Array van objecten | Hier worden de gegevens weergegeven van specialisten in de gezondheidszorg die bij de persoon horen. Elk arrayitem is een object dat de volgende details vastlegt: <ul><li>`fullname`: (String) De volledige naam van de specialist.</li><li>`providerId`: (String) Een unieke id voor de specialist.</li><li>`specialty`: (String) De specialiteit van de provider (zoals anesthesiologie, urologie, radiologie, dermatologie, enzovoort).</li></ul> |
+| `emergencyContact` | Object | Vangt de volgende noodcontactgegevens voor de persoon: <ul><li>`fullName`: (Tekenreeks) De volledige naam van de contactpersoon voor noodgevallen.</li><li>`phone`: (Koord) het telefoonaantal voor het noodcontact.</li><li>`relationshipToMember`: (Tekenreeks) De relatie van het noodcontact met de persoon.</li></ul> |
+| `medications` | Array van objecten | Hier worden de details weergegeven van de huidige en vroegere medicatie die aan de persoon is gerelateerd. Elk arrayitem is een object dat de volgende details vastlegt: <ul><li>`refillLocation`: ([[!UICONTROL Postal address]](../../data-types/postal-address.md)) De navullocatie voor de medicatie.</li><li>`ID`: (String) Medication ID.</li><li>`isCurrent`: (Boolean) Geeft aan of de medicatie actief of ouder is.</li><li>`numberOfRefills`: (Geheel getal) Het aantal vullingen dat door de leverancier van deze medicatie wordt voorgeschreven.</li><li>`startDate`: (DateTime) De datum waarop de persoon de medicatie begon in te nemen.</li></ul> |
+| `multipleBirth` | Object | Gegevens over meerlinggeboorten vastleggen: <ul><li>`isMultipleBirth`: (Boolean) Geeft aan of de persoon meerdere geboorten heeft gegeven.</li><li>`multipleBirthNumber`: (Geheel getal) Het aantal geboren baby&#39;s als `isMultipleBirth` true is.</li></ul> |
+| `plans` | Array van objecten | Hier worden de details weergegeven van de huidige en eerdere medische plannen die bij de persoon horen. Elk arrayitem is een object dat de volgende details vastlegt: <ul><li>`coverageEndDate`: (DateTime) De datum waarop de dekking van het abonnement eindigt.</li><li>`coverageStartDate`: (DateTime) De datum waarop de dekking van het abonnement begint.</li><li>`isActive`: (Boolean) Geeft aan of het abonnement actief is.</li><li>`planId`: (Tekenreeks) De plan-id.</li></ul> |
+| `primaryCarePhysicians` | Array van objecten | Hier worden de gegevens weergegeven van artsen in de eerstelijnszorg die bij de persoon horen. Elk arrayitem is een object dat de volgende details vastlegt: <ul><li>`endDate`: (DateTime) De datum waarop de eerstelijnsarts de zorg voor de persoon beëindigde.</li><li>`fullname`: (String) De volledige naam van de arts.</li><li>`providerId`: (Tekenreeks) Een unieke id voor de arts.</li><li>`startDate`: (DateTime) De datum waarop de eerstelijnsarts de zorg voor de persoon is begonnen.</li></ul> |
+| `specialists` | Array van objecten | Hier worden de gegevens weergegeven van specialisten in de gezondheidszorg die bij de persoon horen. Elk arrayitem is een object dat de volgende details vastlegt: <ul><li>`fullname`: (String) De volledige naam van de specialist.</li><li>`providerId`: (Tekenreeks) Een unieke id voor de specialist.</li><li>`specialty`: (String) De specialiteit van de provider (zoals anesthesiologie, urologie, radiologie, dermatologie, enzovoort).</li></ul> |
 | `beneficiaryRelationship` | String | De relatie van de begunstigde met het lid van de gezondheidszorg als de persoon ten laste komt (voorbeelden zijn onder meer: zelf, echtgenoot, kind, enzovoort). |
 | `billingAccountID` | String | Een unieke id voor de factureringsaccount van de persoon. |
 | `dateAgeCollected` | DateTime | De datum waarop de leeftijd van de persoon is verzameld. |
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
 
-Raadpleeg de documentatie bij het industrieschema voor meer informatie over hoe deze veldgroep kan worden gebruikt om algemene informatie te gebruiken [zorgindustrie gebruikt](../../schema/industries/healthcare.md).
+Verwijs naar de documentatie van het industrieschema voor meer informatie over hoe deze gebiedsgroep kan worden gebruikt om gemeenschappelijke [ het gebruiksgevallen van de gezondheidszorgindustrie te dienen ](../../schema/industries/healthcare.md).

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # De webSDK-tagextensie configureren
 
-De [!DNL Web SDK] de markeringsuitbreiding verzendt gegevens naar Adobe Experience Cloud van Web-eigenschappen door de Edge Network van het Experience Platform.
+Met de tagextensie [!DNL Web SDK] worden gegevens vanuit wegeigenschappen via de Edge Network Experience Platform naar Adobe Experience Cloud verzonden.
 
 Met de extensie kunt u gegevens streamen naar Platform, identiteiten synchroniseren, de toestemmingssignalen van de klant verwerken en automatisch contextgegevens verzamelen.
 
@@ -19,15 +19,15 @@ In dit document wordt uitgelegd hoe u de tagextensie configureert in de gebruike
 
 ## De extensie van de Web SDK-tag installeren {#install}
 
-De de markeringsuitbreiding van SDK van het Web moet een bezit worden geïnstalleerd. Als u dit nog niet hebt gedaan, raadpleegt u de documentatie op [een tag-eigenschap maken](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
+De de markeringsuitbreiding van SDK van het Web moet een bezit worden geïnstalleerd. Als u dit niet reeds hebt gedaan, zie de documentatie bij [ het creëren van een markeringsbezit ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
 
-Nadat u een eigenschap hebt gemaakt, opent u de eigenschap en selecteert u de **[!UICONTROL Extensions]** op de linkerzijbalk.
+Nadat u een eigenschap hebt gemaakt, opent u de eigenschap en selecteert u de tab **[!UICONTROL Extensions]** op de linkerzijbalk.
 
-Selecteer het tabblad **[!UICONTROL Catalog]**. Zoek in de lijst met beschikbare extensies naar de [!DNL Web SDK] en selecteert u **[!UICONTROL Install]**.
+Selecteer het tabblad **[!UICONTROL Catalog]**. Zoek in de lijst met beschikbare extensies naar de extensie [!DNL Web SDK] en selecteer **[!UICONTROL Install]** .
 
-![Afbeelding die de interface Tags weergeeft terwijl de Web SDK-extensie is geselecteerd](assets/web-sdk-install.png)
+![ Beeld dat de Markeringen UI met de geselecteerde uitbreiding van SDK van het Web toont ](assets/web-sdk-install.png)
 
-Na het selecteren **[!UICONTROL Install]**, moet u de de markeringsuitbreiding van SDK van het Web vormen en de configuratie opslaan.
+Nadat u **[!UICONTROL Install]** hebt geselecteerd, moet u de extensie van de Web SDK-tag configureren en de configuratie opslaan.
 
 >[!NOTE]
 >
@@ -37,11 +37,11 @@ Na het selecteren **[!UICONTROL Install]**, moet u de de markeringsuitbreiding v
 
 De configuratieopties boven aan de pagina vertellen Adobe Experience Platform waar de gegevens moeten worden gerouteerd en welke configuraties op de server moeten worden gebruikt.
 
-![Afbeelding die de algemene instellingen van de extensie van de Web SDK-tag in de gebruikersinterface voor tags weergeeft](assets/web-sdk-ext-general.png)
+![ Beeld dat de algemene montages van de de markeringsuitbreiding van SDK van het Web in de markeringen UI toont ](assets/web-sdk-ext-general.png)
 
-* **[!UICONTROL Name]**: De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. De naam wordt gebruikt om gegevens naar veelvoudige organisaties met een markeringsconfiguratie te verzenden. De instantienaam is standaard ingesteld op `alloy`. U kunt de instantienaam echter wijzigen in elke geldige JavaScript-objectnaam.
-* **[!UICONTROL IMS organization ID]**: De id van de organisatie waarnaar u de gegevens bij Adobe wilt verzenden. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
-* **[!UICONTROL Edge domain]**: Het domein waarvan de extensie gegevens verzendt en ontvangt. De Adobe adviseert gebruikend een 1st-partijdomein (CNAME) voor deze uitbreiding. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. Instructies over hoe te opstelling een eerste-partij CNAME zijn vermeld [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+* **[!UICONTROL Name]**: De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. De naam wordt gebruikt om gegevens naar veelvoudige organisaties met een markeringsconfiguratie te verzenden. De instantienaam is standaard ingesteld op `alloy` . U kunt de instantienaam echter wijzigen in elke geldige JavaScript-objectnaam.
+* **[!UICONTROL IMS organization ID]**: De id van de organisatie waarnaar u de gegevens op de Adobe wilt verzenden. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
+* **[!UICONTROL Edge domain]**: Het domein waarvan de extensie gegevens verzendt en ontvangt. De Adobe adviseert gebruikend een 1st-partijdomein (CNAME) voor deze uitbreiding. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. De instructies op hoe te opstelling zijn een eerste-partij CNAME vermeld [ hier ](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
 
 ## Gegevensstroominstellingen configureren {#datastreams}
 
@@ -49,11 +49,11 @@ Deze sectie staat u toe om de gegevensstromen te selecteren die voor elk van de 
 
 Wanneer een verzoek naar de Edge Network wordt verzonden, wordt een gegevensstroom ID gebruikt om naar de server-zijconfiguratie te verwijzen. U kunt de configuratie bijwerken zonder dat u codewijzigingen op uw website hoeft aan te brengen.
 
-Zie de handleiding op [datastreams](../../../../datastreams/overview.md) leren hoe u een gegevensstroom kunt configureren.
+Zie de gids op [ gegevensstromen ](../../../../datastreams/overview.md) leren hoe te om een gegevensstroom te vormen.
 
-U kunt een gegevensstroom kiezen in de beschikbare vervolgkeuzemenu&#39;s of **[!UICONTROL Enter values]** en voer een aangepaste gegevensstroom-id in voor elke omgeving.
+U kunt een gegevensstroom kiezen in de beschikbare vervolgkeuzemenu&#39;s of **[!UICONTROL Enter values]** selecteren en een aangepaste gegevensstroom-id invoeren voor elke omgeving.
 
-![Afbeelding die de gegevensstreaminstellingen van de Web SDK-tagextensie in de gebruikersinterface voor tags weergeeft](assets/web-sdk-ext-datastreams.png)
+![ Beeld dat de gegevensstroommontages van de de markeringsuitbreiding van SDK van het Web in de markeringen UI toont ](assets/web-sdk-ext-datastreams.png)
 
 ## Privacy-instellingen configureren {#privacy}
 
@@ -61,7 +61,7 @@ Deze sectie staat u toe om te vormen hoe de SDK van het Web de signalen van de g
 
 Het standaard toestemmingsniveau wordt niet bewaard aan het gebruikersprofiel.
 
-![Afbeelding die de privacy-instellingen van de Web SDK-tagextensie in de gebruikersinterface van Tags weergeeft](assets/web-sdk-ext-privacy.png)
+![ Beeld dat de privacymontages van de de markeringsuitbreiding van SDK van het Web in de Markeringen UI toont ](assets/web-sdk-ext-privacy.png)
 
 | [!UICONTROL Default consent level] | Beschrijving |
 | --- | --- |
@@ -72,28 +72,29 @@ Het standaard toestemmingsniveau wordt niet bewaard aan het gebruikersprofiel.
 
 >[!TIP]
 >
->Gebruiken **[!UICONTROL Out]** of **[!UICONTROL Pending]** als u expliciete gebruikerstoestemming voor uw bedrijfsverrichtingen vereist.
+>Gebruik **[!UICONTROL Out]** of **[!UICONTROL Pending]** als u expliciete toestemming van de gebruiker voor uw bedrijfsactiviteiten nodig hebt.
 
 ## Identiteitsinstellingen configureren {#identity}
 
 Deze sectie staat u toe om het gedrag van SDK van het Web te bepalen wanneer het over de behandeling van gebruikersidentificatie komt.
 
-![Afbeelding met de identiteitsinstellingen van de extensie van de Web SDK-tag in de gebruikersinterface voor tags](assets/web-sdk-ext-identity.png)
+![ Beeld dat de identiteitsmontages van de de markeringsuitbreiding van SDK van het Web in de markeringen UI toont ](assets/web-sdk-ext-identity.png)
 
-* **[!UICONTROL Migrate ECID from VisitorAPI]**: Deze optie is standaard ingeschakeld. Wanneer deze functie is ingeschakeld, kan de SDK de `AMCV` en `s_ecid` cookies en stel de `AMCV` cookie gebruikt door [!DNL Visitor.js]. Deze eigenschap is belangrijk wanneer het migreren aan Web SDK, aangezien sommige pagina&#39;s nog kunnen gebruiken [!DNL Visitor.js]. Met deze optie kan de SDK hetzelfde blijven gebruiken [!DNL ECID] zodat gebruikers niet als twee afzonderlijke gebruikers worden geïdentificeerd.
-* **[!UICONTROL Use third-party cookies]**: Wanneer deze optie wordt toegelaten, probeert SDK van het Web om een gebruikersherkenningsteken in een derdekoekje op te slaan. Als dit gelukt is, wordt de gebruiker geïdentificeerd als één gebruiker terwijl deze in meerdere domeinen navigeert en niet als een afzonderlijke gebruiker op elk domein wordt geïdentificeerd. Als deze optie is ingeschakeld, kan de SDK de gebruikersnaam nog steeds niet opslaan in een cookie van een andere fabrikant als de browser cookies van derden niet ondersteunt of door de gebruiker is geconfigureerd om cookies van derden niet toe te staan. In dit geval slaat de SDK alleen de id op in het domein van de eerste partij.
+* **[!UICONTROL Migrate ECID from VisitorAPI]**: Deze optie is standaard ingeschakeld. Wanneer deze functie is ingeschakeld, kan de SDK de `AMCV` - en `s_ecid` -cookies lezen en de `AMCV` -cookie instellen die door [!DNL Visitor.js] wordt gebruikt. Deze functie is belangrijk bij het migreren naar Web SDK, omdat sommige pagina&#39;s wellicht nog steeds [!DNL Visitor.js] gebruiken. Met deze optie kan de SDK hetzelfde [!DNL ECID] blijven gebruiken, zodat gebruikers niet worden geïdentificeerd als twee aparte gebruikers.
+* **[!UICONTROL Use third-party cookies]**: Wanneer deze optie is ingeschakeld, probeert de Web SDK een gebruikers-id op te slaan in een cookie van een andere fabrikant. Als dit gelukt is, wordt de gebruiker geïdentificeerd als één gebruiker terwijl deze in meerdere domeinen navigeert en niet als een afzonderlijke gebruiker op elk domein wordt geïdentificeerd. Als deze optie is ingeschakeld, kan de SDK de gebruikersnaam nog steeds niet opslaan in een cookie van een andere fabrikant als de browser cookies van derden niet ondersteunt of door de gebruiker is geconfigureerd om cookies van derden niet toe te staan. In dit geval slaat de SDK alleen de id op in het domein van de eerste partij.
 
   >[!IMPORTANT]
-  >>Cookies van derden zijn niet compatibel met de [apparaat-id van eerste partij](../../../../web-sdk/identity/first-party-device-ids.md) functionaliteit in Web SDK.
+  >>De koekjes van de derde zijn niet compatibel met de ](../../../../web-sdk/identity/first-party-device-ids.md) functionaliteit 1} van identiteitskaart van het eerste apparaat in Web SDK.
+[
 U kunt apparaat-id&#39;s van andere leveranciers gebruiken of cookies van andere leveranciers, maar u kunt beide functies niet tegelijkertijd gebruiken.
   >
 ## Aanpassingsinstellingen configureren {#personalization}
 
 In deze sectie kunt u configureren hoe u bepaalde delen van een pagina wilt verbergen terwijl gepersonaliseerde inhoud wordt geladen. Zo weet u zeker dat uw bezoekers alleen de gepersonaliseerde pagina zien.
 
-![Afbeelding die de verpersoonlijkingsinstellingen van de Web SDK-tagextensie in de gebruikersinterface van Tags weergeeft](assets/web-sdk-ext-personalization.png)
+![ Beeld dat de verpersoonlijkingsmontages van de de markeringsuitbreiding van SDK van het Web in de Markeringen UI toont ](assets/web-sdk-ext-personalization.png)
 
-* **[!UICONTROL Migrate Target from at.js to the Web SDK]**: Gebruik deze optie om in te schakelen [!DNL Web SDK] lezen en schrijven van de nalatenschap `mbox` en `mboxEdgeCluster` cookies die worden gebruikt door at.js `1.x` of `2.x` bibliotheken. Dit helpt u het bezoekersprofiel te houden terwijl het bewegen van een pagina die SDK van het Web aan een pagina gebruikt die at.js gebruikt `1.x` of `2.x` en omgekeerd.
+* **[!UICONTROL Migrate Target from at.js to the Web SDK]**: Gebruik deze optie om [!DNL Web SDK] in te schakelen om de verouderde `mbox` - en `mboxEdgeCluster` -cookies die door at.js `1.x` - of `2.x` -bibliotheken worden gebruikt, te lezen en te schrijven. Dit helpt u het bezoekersprofiel te houden terwijl het bewegen van een pagina die SDK van het Web aan een pagina gebruikt die at.js `1.x` of `2.x` bibliotheken en vice versa gebruikt.
 
 ### Stijl vooraf verbergen {#prehiding-style}
 
@@ -103,37 +104,37 @@ Met de preHide style editor kunt u aangepaste CSS-regels definiëren om specifie
 
 Het voorbeeldfragment is handig wanneer de Web SDK-bibliotheek asynchroon wordt geladen. In deze situatie, om het flikkeren te vermijden, adviseren wij het verbergen van de inhoud alvorens de bibliotheek van SDK van het Web wordt geladen.
 
-Als u het voorverborgen fragment wilt gebruiken, kopieert en plakt u het in het dialoogvenster `<head>` -element van uw pagina.
+Als u het voorverborgen fragment wilt gebruiken, kopieert en plakt u het in het `<head>` -element van de pagina.
 
 >[!IMPORTANT]
 >
-Als u het voorverborgen fragment gebruikt, wordt u aangeraden het zelfde fragment te gebruiken [!DNL CSS] als de regel die wordt gebruikt door de [stijl voorverbergen](#prehiding-style).
+Wanneer het gebruiken van het prehide fragment, adviseert de Adobe om de zelfde [!DNL CSS] regel te gebruiken zoals die door [ wordt gebruikt prehide stijl ](#prehiding-style).
 
 ## Instellingen voor gegevensverzameling configureren {#data-collection}
 
-Configuratieinstellingen voor gegevensverzameling beheren. Vergelijkbare instellingen in de JavaScript-bibliotheek zijn beschikbaar via de [`configure`](/help/web-sdk/commands/configure/overview.md) gebruiken.
+Configuratieinstellingen voor gegevensverzameling beheren. Vergelijkbare instellingen in de JavaScript-bibliotheek zijn beschikbaar via de opdracht [`configure`](/help/web-sdk/commands/configure/overview.md) .
 
-![Afbeelding met de instellingen voor gegevensverzameling van de extensie van de Web SDK-tag in de gebruikersinterface voor tags.](assets/web-sdk-ext-collection.png)
+![ Beeld dat de montages van de gegevensinzameling van de de markeringsuitbreiding van SDK van het Web in de Markeringen UI toont.](assets/web-sdk-ext-collection.png)
 
 * **[!UICONTROL On before event send callback]**: Een callback-functie voor het evalueren en wijzigen van de lading die naar de Adobe wordt verzonden. Gebruik de `content` variabele binnen de callback functie om de nuttige lading te wijzigen. Deze callback is gelijk aan de tag [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) in de JavaScript-bibliotheek.
-* **[!UICONTROL Collect internal link clicks]**: Een selectievakje dat de verzameling van gegevens voor het bijhouden van koppelingen intern aan uw site of eigenschap inschakelt. Wanneer u dit selectievakje inschakelt, worden opties voor gebeurtenisgroepering weergegeven:
+* **[!UICONTROL Collect internal link clicks]**: Een selectievakje waarmee de verzameling van gegevens voor het bijhouden van koppelingen binnen uw site of eigenschap wordt ingeschakeld. Wanneer u dit selectievakje inschakelt, worden opties voor gebeurtenisgroepering weergegeven:
    * **[!UICONTROL No event grouping]**: Gegevens voor het bijhouden van koppelingen worden in afzonderlijke gebeurtenissen naar de Adobe verzonden. Koppelingsklikken die in afzonderlijke gebeurtenissen worden verzonden, kunnen het contractuele gebruik van gegevens die naar Adobe Experience Platform worden verzonden verhogen.
-   * **[!UICONTROL Event grouping using session storage]**: Sla koppelingsvolggegevens op in sessieopslag tot de volgende paginagebeurtenis. Op de volgende pagina worden de opgeslagen gegevens voor het bijhouden van koppelingen en de paginaweergave tegelijkertijd naar de Adobe verzonden. Adobe raadt aan deze instelling in te schakelen bij het bijhouden van interne koppelingen.
+   * **[!UICONTROL Event grouping using session storage]**: Gegevens voor het bijhouden van koppelingen opslaan in sessieopslag tot de volgende paginagebeurtenis. Op de volgende pagina worden de opgeslagen gegevens voor het bijhouden van koppelingen en de paginaweergave tegelijkertijd naar de Adobe verzonden. Adobe raadt aan deze instelling in te schakelen bij het bijhouden van interne koppelingen.
    * **[!UICONTROL Event grouping using local object]**: Sla koppelingsvolggegevens in een lokaal object op tot de volgende paginagebeurtenis. Als een bezoeker naar een nieuwe pagina navigeert, gaan de gegevens voor het bijhouden van koppelingen verloren. Deze instelling is het meest geschikt voor toepassingen van één pagina.
 * **[!UICONTROL Collect external link clicks]**: Een selectievakje waarmee externe koppelingen kunnen worden verzameld.
 * **[!UICONTROL Collect download link clicks]**: Een selectievakje waarmee downloadkoppelingen kunnen worden verzameld.
 * **[!UICONTROL Download link qualifier]**: Een reguliere expressie die een link-URL kwalificeert als een downloadkoppeling.
-* **[!UICONTROL Filter click properties]**: Een callback-functie voor het evalueren en wijzigen van klikgerelateerde eigenschappen vóór de verzameling. Deze functie wordt uitgevoerd vóór de [!UICONTROL On before event send callback].
-* **Contextinstellingen**: Verzamel automatisch bezoekersinformatie, die specifieke XDM gebieden voor u bevolkt. U kunt **[!UICONTROL All default context information]** of **[!UICONTROL Specific context information]**. De tag komt overeen met [`context`](/help/web-sdk/commands/configure/context.md) in de JavaScript-bibliotheek.
-   * **[!UICONTROL Web]**: Verzamelt informatie over de huidige pagina.
-   * **[!UICONTROL Device]**: Verzamelt informatie over het apparaat van de gebruiker.
-   * **[!UICONTROL Environment]**: Verzamelt informatie over de browser van de gebruiker.
-   * **[!UICONTROL Place context]**: Verzamelt informatie over de locatie van de gebruiker.
-   * **[!UICONTROL High entropy user-agent hints]**: Verzamelt meer gedetailleerde informatie over het apparaat van de gebruiker.
+* **[!UICONTROL Filter click properties]**: Een callback-functie voor het evalueren en wijzigen van klikgerelateerde eigenschappen vóór de verzameling. Deze functie wordt uitgevoerd vóór de [!UICONTROL On before event send callback] .
+* **montages van de Context**: Verzamel automatisch bezoekersinformatie, die specifieke gebieden XDM voor u bevolkt. U kunt **[!UICONTROL All default context information]** of **[!UICONTROL Specific context information]** kiezen. De tag komt overeen met [`context`](/help/web-sdk/commands/configure/context.md) in de JavaScript-bibliotheek.
+   * **[!UICONTROL Web]**: verzamelt informatie over de huidige pagina.
+   * **[!UICONTROL Device]**: verzamelt informatie over het apparaat van de gebruiker.
+   * **[!UICONTROL Environment]**: verzamelt informatie over de browser van de gebruiker.
+   * **[!UICONTROL Place context]**: verzamelt informatie over de locatie van de gebruiker.
+   * **[!UICONTROL High entropy user-agent hints]**: verzamelt meer gedetailleerde informatie over het apparaat van de gebruiker.
 
 >[!TIP]
 >
-De **[!UICONTROL On before link click send]** field is een afgekeurde callback die slechts voor eigenschappen zichtbaar is die het reeds gevormd hebben. De tag komt overeen met [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) in de JavaScript-bibliotheek. Gebruik de **[!UICONTROL Filter click properties]** callback om klikgegevens te filtreren of aan te passen, of gebruik **[!UICONTROL On before event send callback]** om de totale lading te filteren of aan te passen die naar Adobe wordt verzonden. Als beide **[!UICONTROL Filter click properties]** callback en de **[!UICONTROL On before link click send]** callback wordt ingesteld, alleen de **[!UICONTROL Filter click properties]** callback-uitvoering.
+Het veld **[!UICONTROL On before link click send]** is een afgekeurde callback die alleen zichtbaar is voor eigenschappen waarvoor deze al is geconfigureerd. De tag komt overeen met [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) in de JavaScript-bibliotheek. Gebruik de callback van **[!UICONTROL Filter click properties]** om klikgegevens te filteren of aan te passen, of **[!UICONTROL On before event send callback]** te gebruiken om de algemene nuttige lading te filtreren of aan te passen die naar Adobe wordt verzonden. Wanneer zowel de callback als de callback **[!UICONTROL On before link click send]** zijn ingesteld, wordt alleen de callback **[!UICONTROL Filter click properties]** uitgevoerd.**[!UICONTROL Filter click properties]**
 
 ## Instellingen voor mediaverzamelingen configureren {#media-collection}
 
@@ -141,14 +142,14 @@ Met de functie voor het verzamelen van media kunt u gegevens verzamelen die betr
 
 De verzamelde gegevens kunnen informatie over media playbacks, pauzes, voltooiing, en andere verwante gebeurtenissen omvatten. Nadat deze gegevens zijn verzameld, kunt u deze naar Adobe Experience Platform en/of Adobe Analytics verzenden om rapporten te genereren. Deze functie biedt een uitgebreide oplossing voor het bijhouden en begrijpen van het gedrag van het mediaconsumptie op uw website.
 
-![Afbeelding die de instellingen van de mediagroep van de Web SDK-tagextensie in de gebruikersinterface Tags weergeeft](assets/media-collection.png)
+![ Beeld dat de montages van de media inzameling van de de markeringsuitbreiding van SDK van het Web in de Markeringen UI toont ](assets/media-collection.png)
 
 
-* **[!UICONTROL Channel]**: De naam van het kanaal waar de media inzameling voorkomt. Voorbeeld: `Video channel`.
+* **[!UICONTROL Channel]**: De naam van het kanaal waar de media inzameling voorkomt. Voorbeeld: `Video channel` .
 * **[!UICONTROL Player Name]**: De naam van de mediaspeler.
-* **[!UICONTROL Application Version]**: De versie van de toepassing Media Player.
-* **[!UICONTROL Main ping interval]**: Frequentie van pingelt voor hoofdinhoud, in seconden. De standaardwaarde is `10`. Waarden kunnen variëren van `10` tot `50` seconden.  Als er geen waarde is opgegeven, wordt de standaardwaarde gebruikt bij het gebruik [automatisch bijgehouden sessies](../../../../web-sdk/commands/createmediasession.md#automatic).
-* **[!UICONTROL Ad ping interval]**: Frequentie van pingelt voor advertentie-inhoud, in seconden. De standaardwaarde is `10`. Waarden kunnen variëren van `1` tot `10` seconden. Als er geen waarde is opgegeven, wordt de standaardwaarde gebruikt bij het gebruik [automatisch bijgehouden sessies](../../../../web-sdk/commands/createmediasession.md#automatic)
+* **[!UICONTROL Application Version]**: De versie van de mediaspeltoepassing.
+* **[!UICONTROL Main ping interval]**: Frequentie van pings voor hoofdinhoud, in seconden. De standaardwaarde is `10` . Waarden kunnen variëren van `10` tot `50` seconden.  Als geen waarde wordt gespecificeerd, wordt de standaardwaarde gebruikt wanneer het gebruiken van [ automatisch-gevolgde zittingen ](../../../../web-sdk/commands/createmediasession.md#automatic).
+* **[!UICONTROL Ad ping interval]**: Frequentie van pings voor advertentie-inhoud, in seconden. De standaardwaarde is `10` . Waarden kunnen variëren van `1` tot `10` seconden. Als geen waarde wordt gespecificeerd, wordt de standaardwaarde gebruikt wanneer het gebruiken van [ automatisch-gevolgd zittingen ](../../../../web-sdk/commands/createmediasession.md#automatic)
 
 ## Gegevensstroomoverschrijvingen configureren {#datastream-overrides}
 
@@ -158,10 +159,10 @@ Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbren
 
 De configuratieopheffing van gegevensstroom is een proces in twee stappen:
 
-1. Eerst moet u de configuratie van uw gegevensstroom overschrijven in het dialoogvenster [configuratiepagina gegevensstroom](/help/datastreams/configure.md).
+1. Eerst, moet u uw configuratie van de gegevensstroom met voeten treden in de [ gegevenstream configuratiepagina ](/help/datastreams/configure.md).
 2. Dan, moet u de met voeten treden naar de Edge Network of via een bevel van SDK van het Web, of door de de markeringsuitbreiding van SDK van het Web te gebruiken.
 
-Zie de gegevensstroom [documentatie bij overschrijvingen van configuratie](/help/datastreams/overrides.md) voor gedetailleerde instructies op hoe te om configuraties met betrekking tot gegevensstroom met voeten te treden.
+Zie de datastream [ configuratie met voeten treedt documentatie ](/help/datastreams/overrides.md) voor gedetailleerde instructies op hoe te om configuraties van de gegevensstroom met voeten te treden.
 
 Als alternatief voor het overgaan van de met voeten treedt door een bevel van SDK van het Web, kunt u de met voeten treden in het scherm van de markeringsuitbreiding vormen hieronder wordt getoond die.
 
@@ -169,10 +170,10 @@ Als alternatief voor het overgaan van de met voeten treedt door een bevel van SD
 >
 DataStream-overschrijvingen moeten per omgeving worden geconfigureerd. De ontwikkelings-, staging- en productieomgevingen hebben allemaal verschillende overschrijvingen. U kunt de instellingen tussen de instellingen kopiëren met behulp van de speciale opties die in het onderstaande scherm worden weergegeven.
 
-![Afbeelding die de configuratie van de gegevensstroom beschrijft, overschrijft deze met de webpagina voor de tagextensie SDK.](assets/datastream-overrides.png)
+![ Beeld dat de configuratie van de gegevensstroom toont treedt met voeten gebruikend de de marktextensiepagina van SDK van het Web.](assets/datastream-overrides.png)
 
 ## Geavanceerde instellingen configureren
 
-Gebruik de **[!UICONTROL Edge base path]** veld als u het basispad moet wijzigen dat wordt gebruikt voor interactie met de Edge Network. Dit zou niet het bijwerken moeten vereisen, maar in het geval dat u aan bèta of alpha deelneemt, zou de Adobe u kunnen vragen om dit gebied te veranderen.
+Gebruik het veld **[!UICONTROL Edge base path]** als u het basispad moet wijzigen dat wordt gebruikt voor interactie met de Edge Network. Dit zou niet het bijwerken moeten vereisen, maar in het geval dat u aan bèta of alpha deelneemt, zou de Adobe u kunnen vragen om dit gebied te veranderen.
 
-![Afbeelding die de geavanceerde instellingen weergeeft met de webpagina voor de tagextensie SDK.](assets/advanced-settings.png)
+![ Beeld dat de geavanceerde montages toont gebruikend de de marktextensiepagina van SDK van het Web.](assets/advanced-settings.png)

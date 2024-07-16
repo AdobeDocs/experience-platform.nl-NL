@@ -4,7 +4,7 @@ title: Een publiekssjabloon bijwerken
 exl-id: 8185a015-256d-46a7-af33-8475832fb6c1
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
@@ -13,27 +13,27 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om een publiekssjabloon bij te werken met de `/authoring/audience-templates` API-eindpunt.
+Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om een publiekssjabloon bij te werken met behulp van het API-eindpunt `/authoring/audience-templates` .
 
-Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [beheer van metagegevens van het publiek](../functionality/audience-metadata-management.md).
+Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [ beheer van publieksmeta-gegevens ](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Aan de slag met API-bewerkingen voor publiekssjablonen {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een publiekssjabloon bijwerken {#create}
 
-U kunt een [bestaand](create-audience-template.md) publiekssjabloon door een `PUT` verzoek aan de `/authoring/audience-templates` eindpunt met de bijgewerkte nuttige lading.
+U kunt een [ bestaand ](create-audience-template.md) publiekssjabloon bijwerken door een `PUT` verzoek aan het `/authoring/audience-templates` eindpunt met de bijgewerkte nuttige lading te doen.
 
-Een bestaande publiekssjabloon en de bijbehorende sjabloon opvragen `{INSTANCE_ID}`, zie het artikel over [ophalen van een publiekssjabloon](retrieve-audience-template.md).
+Om een bestaand publiekssjabloon en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie het artikel over [ het terugwinnen van een publiekssjabloon ](retrieve-audience-template.md).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /authoring/audience-templates/{INSTANCE_ID}
@@ -41,7 +41,7 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 
 | Parameter | Beschrijving |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | De id van de publiekssjabloon die u wilt bijwerken. Een bestaande publiekssjabloon en de bijbehorende sjabloon opvragen `{INSTANCE_ID}`, zie [Een publiekssjabloon ophalen](retrieve-audience-template.md). |
+| `{INSTANCE_ID}` | De id van de publiekssjabloon die u wilt bijwerken. Om een bestaand publiekssjabloon en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie [ een publiekssjabloon ](retrieve-audience-template.md) terugwinnen. |
 
 Het volgende verzoek werkt een bestaand malplaatje van publiekmeta-gegevens bij, dat door de parameters wordt gevormd die in de lading worden verstrekt.
 
@@ -153,8 +153,8 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw bijgewerkte
 
 ## API-foutafhandeling
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 
-Na het lezen van dit document weet u nu wanneer u publiekssjablonen gebruikt en hoe u een publiekssjabloon kunt bijwerken met de opdracht `/authoring/audience-templates` API-eindpunt. Lezen [hoe te om Destination SDK te gebruiken om uw bestemming te vormen](../guides/configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Na het lezen van dit document weet u nu wanneer u publiekssjablonen gebruikt en hoe u een publiekssjabloon kunt bijwerken met het API-eindpunt van `/authoring/audience-templates` . Lees [ hoe te om Destination SDK te gebruiken om uw bestemming ](../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!UICONTROL Experience channel] gegevenstype
 
-[!UICONTROL Experience channel] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat een ervaringskanaal beschrijft. Een ervaringskanaal vertegenwoordigt een methode of pad voor het gebruik van digitale ervaringen.
+[!UICONTROL Experience channel] is een standaard XDM-gegevenstype (Experience Data Model) waarmee een ervaringskanaal wordt beschreven. Een ervaringskanaal vertegenwoordigt een methode of pad voor het gebruik van digitale ervaringen.
 
 Er zijn veelvoudige ervaringskanalen, elk met verschillende beperkingen op hoe de inhoud wordt geleverd, en hoe de klanteninteractie kan worden waargenomen, en hoe de gegevens worden verzameld. Binnen een kanaal, kunnen de ervaringen aan specifieke plaatsen worden geleverd. De locaties en typen locaties die in een kanaal aanwezig zijn, verschillen van kanaal tot kanaal.
 
@@ -35,5 +35,5 @@ Er zijn veelvoudige ervaringskanalen, elk met verschillende beperkingen op hoe d
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.schema.json)

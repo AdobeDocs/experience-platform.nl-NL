@@ -16,21 +16,21 @@ De begeleiding is drempels die begeleiding voor gegevens en systeemgebruik, pres
 
 >[!IMPORTANT]
 >
->Controleer uw licentierechten in uw verkooporder en de bijbehorende rechten [Productbeschrijving](https://helpx.adobe.com/legal/product-descriptions.html) op de werkelijke gebruikslimieten naast deze pagina met instructies.
+>Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [ Beschrijving van het Product ](https://helpx.adobe.com/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
 
 Begin hier en volg de onderstaande links om alle instructies in de verschillende services en gebieden van Real-Time CDP te begrijpen:
 
 * [Guardrails voor gegevensinvoer](/help/ingestion/guardrails.md)
-* [Guardrails voor de [!DNL Edge Network Server API]](/help/server-api/guardrails.md)
-* [Guardrails voor [!DNL Real-Time Customer Profile] gegevens en segmentatie](/help/profile/guardrails.md)
-* [Guardrails voor [!DNL Identity Service] data](/help/identity-service/guardrails.md)
-* [Guardrails voor [!DNL Query Service]](/help/query-service/guardrails.md)
+* [Guardrails voor de  [!DNL Edge Network Server API]](/help/server-api/guardrails.md)
+* [Guardrails voor  [!DNL Real-Time Customer Profile]  gegevens en segmentatie](/help/profile/guardrails.md)
+* [Guardrails voor  [!DNL Identity Service]  gegevens](/help/identity-service/guardrails.md)
+* [Guardrails voor  [!DNL Query Service]](/help/query-service/guardrails.md)
 * [Guardrails voor gegevensactivering via bestemmingen](/help/destinations/guardrails.md)
 * [Guardrails voor Real-Time CDP B2B](/help/rtcdp/b2b-guardrails.md)
 
 >[!TIP]
 >
->Bovendien, bezoek [de blauwdrukken voor digitale ervaringen](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) voor nadere informatie, zoals [latentiediagrammen van begin tot eind](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor verschillende diensten van de Experience Platform.
+>Bovendien, bezoek [ de digitale ervaringsblauwdrukken ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) voor verdere informatie zoals [ de diagrammen van de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor de diverse diensten van het Experience Platform.
 
 ## Typen guardrail {#guardrail-types}
 
@@ -38,8 +38,8 @@ De twee soorten guardrail voor alle Real-Time CDP-gebieden en -services zijn:
 
 | Het type Guardrail | Beschrijving |
 |----------|---------|
-| **Prestatiegarantie (Zachte limiet)** | Prestatiegaranties zijn gebruikslimieten die betrekking hebben op het bereik van uw gebruiksgevallen. Als u de prestatiegaranties overschrijdt, kan de prestaties achteruitgaan en de latentie vertragen. Adobe is niet verantwoordelijk voor een dergelijke verslechtering van de prestaties. Klanten die een prestatiegarantie consequent overschrijden, kunnen ervoor kiezen om extra capaciteit te licentiëren om prestatievermindering te voorkomen. |
-| **Door het systeem afgedwongen geleiding (harde limiet)** | De door het systeem afgedwongen instructies worden afgedwongen door de gebruikersinterface of API van Real-Time CDP. Dit zijn grenzen die u niet kunt overschrijden aangezien UI en API u zal tegenhouden dit te doen of een fout zal terugkeren. |
+| **Gegarandeerde van Prestaties (Zachte grens)** | Prestatiegaranties zijn gebruikslimieten die betrekking hebben op het bereik van uw gebruiksgevallen. Als u de prestatiegaranties overschrijdt, kan de prestaties achteruitgaan en de latentie vertragen. Adobe is niet verantwoordelijk voor een dergelijke verslechtering van de prestaties. Klanten die een prestatiegarantie consequent overschrijden, kunnen ervoor kiezen om extra capaciteit te licentiëren om prestatievermindering te voorkomen. |
+| **systeem-afgedwongen grails (Harde grens)** | De door het systeem afgedwongen instructies worden afgedwongen door de gebruikersinterface of API van Real-Time CDP. Dit zijn grenzen die u niet kunt overschrijden aangezien UI en API u zal tegenhouden dit te doen of een fout zal terugkeren. |
 
 {style="table-layout:auto"}
 
@@ -47,18 +47,18 @@ De twee soorten guardrail voor alle Real-Time CDP-gebieden en -services zijn:
 
 Raadpleeg ook de onderstaande koppelingen naar productbeschrijving voor licentiegegevens en informatie over machtigingen op basis van de Real-Time CDP-editie en -laag die u hebt aangeschaft:
 
-* [Alle productbeschrijvingen van de Adobe](https://helpx.adobe.com/legal/product-descriptions.html)
-* [Real-time Customer Data Platform (B2C Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [ Alle beschrijvingen van het product van de Adobe ](https://helpx.adobe.com/legal/product-descriptions.html)
+* [ Real-time Customer Data Platform (B2C Uitgave - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [ Real-time Customer Data Platform (B2P Uitgave - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [ Real-time Customer Data Platform (B2B Uitgave - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 
 ## Guardrails voor andere toepassingen van Experience Platforms  {#guardrails-other-aep-apps}
 
 Voor andere toepassingen van Experience Platforms bestaan soortgelijke instructies. Ga naar de onderstaande koppelingen voor meer informatie:
 
-* [Adobe Journey Optimizer guardrails](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
-* [Customer Journey Analytics guardrails](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+* [ de guardrails van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
+* [ Customer Journey Analytics guardrails ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
 
 ## Volgende stappen
 
-Nadat u de instructies hebt begrepen die van toepassing zijn op verschillende gebieden en services van Real-Time CDP, kunt u [voorbeeldgebruik van een Real-Time CDP-implementatie](/help/rtcdp/get-started.md).
+Na het begrijpen van de gidsen die op diverse gebieden en de diensten van Real-Time CDP van toepassing zijn, kunt u samen met het geval van het a [ steekproefgebruik van een implementatie van Real-Time CDP ](/help/rtcdp/get-started.md) volgen.

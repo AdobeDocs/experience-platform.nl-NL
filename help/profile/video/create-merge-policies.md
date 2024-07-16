@@ -1,6 +1,6 @@
 ---
 title: Een samenvoegingsbeleid maken in Adobe Experience Platform
-description: Deze video biedt een basisbegrip van het samenvoegbeleid in Adobe Experience Platform en schetst hoe u het samenvoegbeleid kunt definiëren met behulp van de interface van het Platform.
+description: Deze video biedt een basisbegrip van het samenvoegbeleid in Adobe Experience Platform en schetst hoe u het samenvoegbeleid kunt definiëren met behulp van de interface van het platform.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -19,10 +19,10 @@ ht-degree: 0%
 
 # Een samenvoegbeleid maken in de gebruikersinterface van het Experience Platform
 
-Deze video biedt een basisbegrip van het samenvoegbeleid in Adobe Experience Platform en schetst hoe u het samenvoegbeleid kunt definiëren in de gebruikersinterface van het Platform. Als u meer wilt weten over samenvoegingsbeleid, leest u eerst de [overzicht van samenvoegbeleid](../merge-policies/overview.md).
+Deze video biedt een basisbegrip van het samenvoegbeleid in Adobe Experience Platform en schetst hoe u het samenvoegbeleid kunt definiëren met behulp van de gebruikersinterface van Platform. Om meer over fusiebeleid te leren, gelieve te beginnen door het [ overzicht van het fusiebeleid ](../merge-policies/overview.md) te lezen.
 
 >[!NOTE]
 >
->De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest actuele informatie raadpleegt u de [UI-hulplijn voor samenvoegbeleid](../merge-policies/ui-guide.md).
+>De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, gelieve te verwijzen naar de [ gids UI van het samenvoegingsbeleid ](../merge-policies/ui-guide.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/330433?quality=12&learn=on&captions=eng)

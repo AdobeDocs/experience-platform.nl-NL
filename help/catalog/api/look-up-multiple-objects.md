@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Meerdere catalogusobjecten opzoeken
 
-Als u meerdere specifieke objecten wilt weergeven in plaats van één aanvraag per object te doen, [!DNL Catalog] biedt een eenvoudige sneltoets voor het aanvragen van meerdere objecten van hetzelfde type. U kunt één aanvraag voor GET gebruiken om meerdere specifieke objecten te retourneren door een lijst met id&#39;s met komma&#39;s als scheidingsteken op te nemen.
+Als u meerdere specifieke objecten wilt weergeven in plaats van één aanvraag per object uit te voeren, biedt [!DNL Catalog] een eenvoudige sneltoets voor het aanvragen van meerdere objecten van hetzelfde type. U kunt één aanvraag voor GET gebruiken om meerdere specifieke objecten te retourneren door een lijst met id&#39;s met komma&#39;s als scheidingsteken op te nemen.
 
 >[!NOTE]
 >
->Zelfs wanneer u om specifieke [!DNL Catalog] objecten, is het nog steeds aan te raden `properties` query parameter om alleen de eigenschappen te retourneren die u nodig hebt.
+>Zelfs wanneer u specifieke [!DNL Catalog] -objecten aanvraagt, is het nog steeds aan te raden om met de parameter query `properties` alleen de eigenschappen te retourneren die u nodig hebt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | Parameter | Beschrijving |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] -object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{ID}` | Een id voor een van de specifieke objecten die u wilt ophalen. |
 
 **Verzoek**
@@ -44,13 +44,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord keert een lijst van de gespecificeerde datasets terug, die slechts de gevraagde eigenschappen bevatten (`name`, `description`, en `files`) voor elk.
+Een geslaagde reactie retourneert een lijst met de opgegeven datasets die alleen de gevraagde eigenschappen (`name`, `description` en `files`) voor elke set bevatten.
 
 >[!NOTE]
 >
->Als een geretourneerd object niet een of meer gevraagde eigenschappen bevat die door de eigenschap `properties` vraag, keert de reactie slechts de gevraagde eigenschappen terug die het omvat, zoals aangetoond in ***`Sample Dataset 3`*** en ***`Sample Dataset 4`*** hieronder.
+>Als een geretourneerd object niet meer van de gevraagde eigenschappen bevat die door de query `properties` worden aangegeven, retourneert het antwoord alleen de gevraagde eigenschappen die het wel bevat, zoals hieronder in ***`Sample Dataset 3`*** en ***`Sample Dataset 4`*** wordt getoond.
 
 ```json
 {

@@ -22,11 +22,11 @@ Wanneer u een instantie van een afspeelboek maakt, wordt mogelijk het onderstaan
 
 ![Problemen oplossen](/help/use-case-playbooks/assets/playbooks/troubleshooting/troubleshooting-ajo.png)
 
-Dit komt omdat Journey Optimizer-afspeelboeken berichten maken voor e-mail-, push- en SMS-kanalen. Lees de [Aan de slag](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) hulplijn voor het configureren van de verschillende oppervlakken.
+Dit komt omdat Journey Optimizer-afspeelboeken berichten maken voor e-mail-, push- en SMS-kanalen. Lees [ begonnen wordt ](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) gids om de verschillende oppervlakten te vormen.
 
-## Status *mislukt* bij het maken van een nieuwe instantie {#status-failed}
+## Status *ontbroken* wanneer het creëren van een nieuwe instantie {#status-failed}
 
-Als u een ontbroken bericht ziet wanneer u probeert om een geval tot stand te brengen, zou dit kunnen zijn omdat uw beheerder u niet de vereiste gebruikerstoestemmingen heeft verleend. Een afspeelboek bevat veel verschillende elementen en uw gebruiker heeft machtigingen nodig om deze elementen te maken, zodat de instantie van het afspeelboek correct kan worden gemaakt. Zie de [machtigingen](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) in deze handleiding vindt u informatie over het instellen van machtigingen.
+Als u een ontbroken bericht ziet wanneer u probeert om een geval tot stand te brengen, zou dit kunnen zijn omdat uw beheerder u niet de vereiste gebruikerstoestemmingen heeft verleend. Een afspeelboek bevat veel verschillende elementen en uw gebruiker heeft machtigingen nodig om deze elementen te maken, zodat de instantie van het afspeelboek correct kan worden gemaakt. Zie de [ toestemmingen ](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) sectie van deze gids op hoe te opstellingstoestemmingen.
 
 ## Importeren mislukt {#import-failure}
 

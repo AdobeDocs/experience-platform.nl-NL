@@ -27,14 +27,14 @@ Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiks
 
 >[!NOTE]
 >
->Er is één enkele lijst van etiketten voor een volledige organisatie. U moet een aangepast label maken **[!UICONTROL Manage Usage Labels]** machtigingen voor de productiesandbox. Verwijderen van label wordt momenteel niet ondersteund.
+>Er is één enkele lijst van etiketten voor een volledige organisatie. Als u een aangepast label wilt maken, hebt u **[!UICONTROL Manage Usage Labels]** -machtigingen nodig voor de productiesandbox. Verwijderen van label wordt momenteel niet ondersteund.
 
-Als u een nieuw label wilt maken, selecteert u het **[!UICONTROL Labels]** op de zijbalk en selecteert u **[!UICONTROL Create Label]**.
+Als u een nieuw label wilt maken, selecteert u de tab **[!UICONTROL Labels]** in het zijpaneel en selecteert u **[!UICONTROL Create Label]** .
 
-![nieuwe label](../../images/flac-ui/create-label.png)
+![ flac-new-label ](../../images/flac-ui/create-label.png)
 
-De **[!UICONTROL Create a new label]** wordt weergegeven en u wordt gevraagd een naam, een optionele vriendelijke naam en een optionele beschrijving in te voeren.
+Het dialoogvenster **[!UICONTROL Create a new label]** wordt weergegeven, waarin u wordt gevraagd een naam, een optionele vriendelijke naam en een optionele beschrijving in te voeren.
 
-![new-label-info](../../images/flac-ui/new-label-info.png)
+![ nieuw-label-info ](../../images/flac-ui/new-label-info.png)
 
-Selecteer **[!UICONTROL Confirm]**.
+Selecteer **[!UICONTROL Confirm]** als u klaar bent.

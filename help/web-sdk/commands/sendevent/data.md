@@ -12,33 +12,33 @@ ht-degree: 0%
 
 # `data`
 
-De `data` kunt u een payload naar een Adobe verzenden die niet overeenkomt met een XDM-schema. Het is handig in niet-XDM-scenario&#39;s, zoals het rechtstreeks verzenden van gegevens naar Adobe Analytics, Adobe Target of Adobe Audience Manager. Wanneer gegevens bij de gegevensstroom aankomen, kunt u [Toewijzing van gegevensvoorvoegsel](/help/data-prep/ui/mapping.md) XDM-velden toewijzen aan elk veld in het dialoogvenster `data` object.
+Met het `data` -object kunt u een payload naar een Adobe verzenden die niet overeenkomt met een XDM-schema. Het is handig in niet-XDM-scenario&#39;s, zoals het rechtstreeks verzenden van gegevens naar Adobe Analytics, Adobe Target of Adobe Audience Manager. Wanneer de gegevens bij de gegevensstroom aankomen, kunt u [ Afbeelding van de Prep van Gegevens gebruiken ](/help/data-prep/ui/mapping.md) om gebieden XDM aan elk gebied in het `data` voorwerp toe te wijzen.
 
 >[!IMPORTANT]
 >
 >Gegevens binnen dit object moeten ten minste een van de volgende handelingen hebben:
 >
->* De dienst in de gegevensstroom moet worden gevormd om gegevens van een bepaald bezit in terug te winnen `data` object.
+>* Een service in de gegevensstroom moet zijn geconfigureerd om gegevens op te halen uit een bepaalde eigenschap in het `data` -object.
 >* De opgegeven eigenschap moet aan een XDM-veld worden toegewezen met behulp van data prep.
 >
 >Als een bepaald bezit niet aan een XDM gebied in kaart wordt gebracht of door de gevormde dienst wordt gebruikt, wordt dat gegeven permanent verloren.
 
-## Gebruik de `data` object via de Web SDK-tagextensie {#tag-extension}
+## Gebruik het object `data` via de extensie van de Web SDK-tag {#tag-extension}
 
-Geef een gegevenselement op in het dialoogvenster **[!UICONTROL Data]** binnen de acties van een labelregel.
+Geef een gegevenselement op in het veld **[!UICONTROL Data]** binnen de handelingen van een labelregel.
 
-1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
-1. Navigeren naar **[!UICONTROL Rules]** Selecteer vervolgens de gewenste regel.
-1. Onder [!UICONTROL Actions], selecteert u een bestaande actie of maakt u een actie.
-1. Stel de [!UICONTROL Extension] vervolgkeuzeveld naar **[!UICONTROL Adobe Experience Platform Web SDK]** en stelt de [!UICONTROL Action Type] tot **[!UICONTROL Send event]**.
-1. Geef het gegevenselement op dat het gewenste object bevat in het dialoogvenster **[!UICONTROL Data]** veld.
-1. Klikken **[!UICONTROL Keep Changes]** en voer vervolgens uw publicatieworkflow uit.
+1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
+1. Selecteer onder [!UICONTROL Actions] een bestaande actie of maak een actie.
+1. Stel het vervolgkeuzeveld [!UICONTROL Extension] in op **[!UICONTROL Adobe Experience Platform Web SDK]** en stel de waarde [!UICONTROL Action Type] in op **[!UICONTROL Send event]** .
+1. Geef het gegevenselement met het gewenste object op in het veld **[!UICONTROL Data]** .
+1. Klik op **[!UICONTROL Keep Changes]** en voer vervolgens de publicatieworkflow uit.
 
-## Gebruik de `data` object via de Web SDK JavaScript-bibliotheek {#library}
+## Het object `data` gebruiken via de Web SDK JavaScript-bibliotheek {#library}
 
-Stel de `data` object als onderdeel van het JSON-object binnen de parameter van het object `sendEvent` gebruiken. Voor gegevens die u wilt toewijzen in de gegevensstroom, kunt u dit object structureren op de manier die u wilt. Voor gegevens die door bepaalde diensten worden gebruikt, zorg ervoor dat de objecten hiërarchie aanpast wat de dienst verwacht. U kunt beide opties opnemen `data` en de [`xdm`](xdm.md) object in hetzelfde `sendEvent` gebruiken.
+Stel het `data` -object in als onderdeel van het JSON-object binnen de parameter van de opdracht `sendEvent` . Voor gegevens die u wilt toewijzen in de gegevensstroom, kunt u dit object structureren op de manier die u wilt. Voor gegevens die door bepaalde diensten worden gebruikt, zorg ervoor dat de objecten hiërarchie aanpast wat de dienst verwacht. U kunt zowel het object `data` als het object [`xdm`](xdm.md) in dezelfde opdracht `sendEvent` opnemen.
 
 ```javascript
 alloy("sendEvent", {
@@ -46,6 +46,6 @@ alloy("sendEvent", {
 });
 ```
 
-## Gebruik de `data` object met Adobe Analytics {#analytics}
+## Het object `data` gebruiken met Adobe Analytics {#analytics}
 
-U kunt de `data` -object met Adobe Analytics om gegevens naar een rapportsuite zonder een XDM-schema te verzenden. Variabelen zijn geconfigureerd om dezelfde syntaxis te gebruiken als [!DNL AppMeasurement] variabelen, die het verbeteringsproces aan het Web SDK vereenvoudigen. Zie [Gegevensobjectvariabele toewijzen aan Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) in de Adobe Analytics-implementatiegids voor meer informatie.
+U kunt het `data` -object met Adobe Analytics gebruiken om gegevens naar een rapportsuite zonder een XDM-schema te verzenden. Variabelen zijn geconfigureerd om dezelfde syntaxis te gebruiken als [!DNL AppMeasurement] variabelen, waardoor het upgradeproces naar de SDK van het web wordt vereenvoudigd. Zie [ objecten van Gegevens veranderlijke afbeelding aan Adobe Analytics ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) in de de implementatiegids van Adobe Analytics voor meer informatie.

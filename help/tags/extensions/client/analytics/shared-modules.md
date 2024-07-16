@@ -4,7 +4,7 @@ description: Leer meer over de gedeelde bibliotheekmodules die worden geleverd d
 exl-id: f1d7cb2b-0058-46f9-983c-079079e06057
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
-De [Adobe Analytics-extensie](./overview.md) biedt twee verschillende [gedeelde modules](../../../extension-dev/web/shared.md) dat u kunt integreren in uw ervaringstoepassing. Deze modules worden behandeld in de onderstaande secties.
+De [ uitbreiding van Adobe Analytics ](./overview.md) verstrekt twee verschillende [ gedeelde modules ](../../../extension-dev/web/shared.md) die u in uw ervaringstoepassing kunt integreren. Deze modules worden behandeld in de onderstaande secties.
 
 ## [!DNL get-tracker]
 
-Voordat Adobe Analytics bakens verzendt, moet het het tracker-object initialiseren. Het initialisatieproces begint met het laden [AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html), gevolgd door het maken van een tracker-object.
+Voordat Adobe Analytics bakens verzendt, moet het het tracker-object initialiseren. Het initialisatieproces begint door [ AppMeasurement ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) te laden, die door een spoorboekvoorwerp te creëren wordt gevolgd.
 
-U kunt het tracker-object openen nadat het volledig is geïnitialiseerd met de opdracht `get-tracker` gedeelde module, als volgt:
+U kunt als volgt toegang krijgen tot het tracker-object nadat het volledig is geïnitialiseerd met de gedeelde module `get-tracker` :
 
 ```js
 var getTracker = turbine.getSharedModule('adobe-analytics', 'get-tracker');
@@ -33,7 +33,7 @@ getTracker().then(function(tracker) {
 
 ### Controleren of Adobe Analytics is geïnstalleerd
 
-Het is mogelijk dat Adobe Analytics niet is geïnstalleerd of opgenomen in dezelfde tagbibliotheek als uw extensie. Daarom wordt u ten zeerste aangeraden deze kwestie in uw code te controleren en deze op de juiste manier af te handelen. Het volgende JavaScript is een voorbeeld van hoe u dit kunt implementeren:
+Het is mogelijk dat Adobe Analytics niet is geïnstalleerd of opgenomen in dezelfde tagbibliotheek als uw extensie. Daarom wordt u ten zeerste aangeraden deze kwestie in uw code te controleren en deze op de juiste manier af te handelen. De volgende JavaScript is een voorbeeld van hoe u dit kunt implementeren:
 
 ```js
 var getTracker = turbine.getSharedModule('adobe-analytics', 'get-tracker');
@@ -47,16 +47,16 @@ if (getTracker) {
 }
 ```
 
-Indien `getTracker` is `undefined`, bestaat de extensie Adobe Analytics niet in de tagbibliotheek. U kunt het geregistreerde bericht aanpassen om nauwkeurig te wijzen op welke functionaliteit kan worden verloren als Adobe Analytics niet geïnstalleerd is.
+Als `getTracker` `undefined` is, bestaat de Adobe Analytics-extensie niet in de tagbibliotheek. U kunt het geregistreerde bericht aanpassen om nauwkeurig te wijzen op welke functionaliteit kan worden verloren als Adobe Analytics niet geïnstalleerd is.
 
 
 ## [!DNL augment-tracker]
 
-Nadat het tracker-object is geïnitialiseerd, bestaat de volgende stap in het proces uit augmentatie. Met deze stap kan uw extensie de tracker verfraaien met wat nodig is voordat er variabelen zijn toegepast vanuit de Adobe Analytics-extensieconfiguratie of voordat er bakens zijn verzonden.
+Nadat het tracker-object is geïnitialiseerd, bestaat de volgende stap in het proces uit versterking. Met deze stap kan uw extensie de tracker verfraaien met wat nodig is voordat er variabelen zijn toegepast vanuit de Adobe Analytics-extensieconfiguratie of voordat er bakens zijn verzonden.
 
 Bovendien heeft uw extensie de mogelijkheid om het initialisatieproces van de tracker te pauzeren terwijl uw extensie een eigen asynchrone taak uitvoert, zoals het ophalen van gegevens of JavaScript van een server.
 
-U kunt de `augment-tracker` op deze manier:
+U kunt de module `augment-tracker` als volgt implementeren:
 
 ```js
 var augmentTracker = turbine.getSharedModule('adobe-analytics', 'augment-tracker');
@@ -66,7 +66,7 @@ augmentTracker(function(tracker) {
 });
 ```
 
-De functie die wordt doorgegeven aan `augmentTracker()` wordt aangeroepen zodra de augmentatiefase van het initialisatieproces van de tracker is bereikt.
+De functie die in `augmentTracker()` wordt doorgegeven, wordt aangeroepen zodra de augmentatiefase van het initialisatieproces van de tracker is bereikt.
 
 Als uw extensie een asynchrone taak moet voltooien voordat de tracker wordt uitgebreid, kunt u als volgt een promise van uw functie retourneren:
 

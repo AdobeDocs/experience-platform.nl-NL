@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;ontwikkelaarshandleiding;SDK;Data Access SDK;Data Science Workspace;populaire onderwerpen
 solution: Experience Platform
-title: Modellen ontwerpen met de SDK van het Adobe Experience Platform-Platform
+title: Modellen ontwerpen met de SDK van het Adobe Experience Platform-platform
 description: Deze zelfstudie biedt u informatie over het omzetten van data_access_sdk_python in het nieuwe Python platform_sdk in zowel Python als R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 4%
+source-wordcount: '486'
+ht-degree: 0%
 
 ---
 
-# Modellen ontwerpen met de Adobe Experience Platform [!DNL Platform] SDK
+# Ontwerpmodel met de Adobe Experience Platform [!DNL Platform] SDK
 
-Deze zelfstudie biedt u informatie over het converteren `data_access_sdk_python` naar de nieuwe Python `platform_sdk` in zowel Python als R. Deze zelfstudie biedt informatie over de volgende bewerkingen:
+Deze zelfstudie biedt u informatie over het omzetten van `data_access_sdk_python` in de nieuwe Python `platform_sdk` in zowel Python als R. Deze zelfstudie biedt informatie over de volgende bewerkingen:
 
 - [Verificatie opbouwen](#build-authentication)
 - [Basislezen van gegevens](#basic-reading-of-data)
@@ -21,11 +21,11 @@ Deze zelfstudie biedt u informatie over het converteren `data_access_sdk_python`
 
 ## Verificatie opbouwen {#build-authentication}
 
-De authentificatie wordt vereist om vraag te maken aan [!DNL Adobe Experience Platform]en bestaat uit API-sleutel, organisatie-id, een gebruikerstoken en een servicetoken.
+Verificatie is vereist om aanroepen uit te voeren naar [!DNL Adobe Experience Platform] en bestaat uit API-sleutel, organisatie-id, een gebruikerstoken en een servicetoken.
 
 ### Python
 
-Als u Jupyter-laptop gebruikt, gebruikt u de onderstaande code om de `client_context`:
+Als u Jupyter-laptop gebruikt, gebruikt u de onderstaande code om de `client_context` samen te stellen:
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
@@ -43,7 +43,7 @@ client_context = ClientContext(api_key={API_KEY},
 
 ### R
 
-Als u Jupyter-laptop gebruikt, gebruikt u de onderstaande code om de `client_context`:
+Als u Jupyter-laptop gebruikt, gebruikt u de onderstaande code om de `client_context` samen te stellen:
 
 ```r
 library(reticulate)
@@ -68,7 +68,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Basislezen van gegevens {#basic-reading-of-data}
 
-Met de nieuwe [!DNL Platform] SDK, de maximale leesgrootte is 32 GB, met een maximale leestijd van 10 minuten.
+Met de nieuwe [!DNL Platform] SDK is de maximale leesgrootte 32 GB, met een maximale leestijd van 10 minuten.
 
 Als de leestijd te lang duurt, kunt u een van de volgende filteropties gebruiken:
 
@@ -79,7 +79,7 @@ Als de leestijd te lang duurt, kunt u een van de volgende filteropties gebruiken
 
 >[!NOTE]
 >
->De organisatie wordt ingesteld binnen de `client_context`.
+>De organisatie wordt ingesteld binnen de `client_context` .
 
 ### Python
 
@@ -105,7 +105,7 @@ df
 
 ## Filteren op verschuiving en limiet {#filter-by-offset-and-limit}
 
-Omdat filteren op batch-id niet meer wordt ondersteund, moet u voor het lezen van gegevens in een bereik het volgende gebruiken: `offset` en `limit`.
+Omdat filteren op batch-id niet meer wordt ondersteund, moet u `offset` en `limit` gebruiken om het lezen van gegevens in bereik te houden.
 
 ### Python
 
@@ -147,13 +147,13 @@ df2
 
 De nieuwe [!DNL Platform] SDK ondersteunt de volgende bewerkingen:
 
-| Bewerking | -functie |
+| Bewerking | Functie |
 | --------- | -------- |
 | Gelijk (`=`) | `eq()` |
-| Greater than (`>`) | `gt()` |
-| Greater than or equal to (`>=`) | `ge()` |
-| Less than (`<`) | `lt()` |
-| Less than or equal to (`<=`) | `le()` |
+| Groter dan (`>`) | `gt()` |
+| Groter dan of gelijk aan (`>=`) | `ge()` |
+| Kleiner dan (`<`) | `lt()` |
+| Kleiner dan of gelijk aan (`<=`) | `le()` |
 | En (`&`) | `And()` |
 | Of (`|`) | `Or()` |
 
@@ -195,7 +195,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->De organisatie wordt ingesteld binnen de `client_context`.
+>De organisatie wordt ingesteld binnen de `client_context` .
 
 Gebruik een van de volgende voorbeelden om gegevens in Python en R te schrijven:
 
@@ -220,4 +220,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Volgende stappen
 
-Zodra u hebt gevormd `platform_sdk` de gegevenslader, de gegevens ondergaat voorbereiding en wordt dan verdeeld aan `train` en `val` datasets. Ga voor meer informatie over het voorbereiden en ontwerpen van gegevens naar de sectie over [gegevensvoorbereiding en functietechniek](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) in de zelfstudie voor het maken van een recept met [!DNL JupyterLab] -laptops.
+Nadat u de gegevenslader van `platform_sdk` hebt geconfigureerd, worden de gegevens voorbereid en vervolgens gesplitst naar de gegevenssets `train` en `val` . Om over gegevensvoorbereiding en eigenschaptechniek te leren gelieve de sectie over [ te bezoeken gegevens voorbereiding en eigenschapengineering ](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) in het leerprogramma voor het creëren van een recept gebruikend [!DNL JupyterLab] laptops.

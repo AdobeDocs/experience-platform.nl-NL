@@ -4,21 +4,21 @@ description: Leer hoe de Adobe Experience Platform Edge Network Server API de ve
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
 source-wordcount: '131'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
 
 # Gegevensverzameling
 
-De [!DNL Server API] biedt twee typen eindpunten voor gegevensverzameling:
+[!DNL Server API] biedt twee typen eindpunten voor gegevensverzameling:
 
-* [Interactieve eindpunten voor gegevensverzameling](interactive-data-collection.md), gebruikt wanneer de client verwacht dat een reactie wordt geretourneerd door de server. Deze eindpunten kunnen inhoud van andere diensten van het Netwerk van de Rand ook terugkeren, terwijl het uitvoeren van gegevensinzameling.
-* [Niet-interactieve verzameling van gebeurtenisgegevens](non-interactive-data-collection.md), wordt gebruikt wanneer geen reactie van de server wordt verwacht. Deze eindpunten worden alleen gebruikt voor gegevensverzameling.
+* [ Interactieve eindpunten van de gegevensinzameling ](interactive-data-collection.md), gebruikt wanneer de cliënt een reactie verwacht dat door de server wordt teruggekeerd. Deze eindpunten kunnen inhoud van andere diensten van de Edge Network ook terugkeren, terwijl het uitvoeren van gegevensinzameling.
+* [ de niet-interactieve inzameling van gebeurtenisgegevens ](non-interactive-data-collection.md), wordt gebruikt wanneer geen reactie van de server wordt verwacht. Deze eindpunten worden alleen gebruikt voor gegevensverzameling.
 
-## `Event` object {#event-object}
+## `Event` -object {#event-object}
 
-Gegevens verzameld door de [!DNL Server API] is gestructureerd in de `Event` object. De structuur van dit object wordt hieronder beschreven.
+De gegevens die door [!DNL Server API] worden verzameld, zijn gestructureerd in het `Event` -object. De structuur van dit object wordt hieronder beschreven.
 
 ```json
 {
@@ -56,6 +56,6 @@ Gegevens verzameld door de [!DNL Server API] is gestructureerd in de `Event` obj
 
 | Kenmerk | Type | Beschrijving |
 | --- | --- | --- |
-| `xdm` | Object | *Vereist*. JSON-object met gegevens in XDM-indeling die overeenkomen met het schema van de gegevensset. |
-| `data` | Object | *Optioneel*. JSON-object met vrije-formuliergegevens, dat door het Edge Network aan XDM kan worden toegewezen. |
+| `xdm` | Object | *Vereiste*. JSON-object met gegevens in XDM-indeling die overeenkomen met het schema van de gegevensset. |
+| `data` | Object | *Facultatief*. JSON-object met vrije-formuliergegevens, dat door de Edge Network aan XDM kan worden toegewezen. |
 

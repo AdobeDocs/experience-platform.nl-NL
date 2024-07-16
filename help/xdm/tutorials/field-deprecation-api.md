@@ -4,37 +4,36 @@ description: Leer hoe u XDM-velden (Experience Data Model) in de Schema Registry
 exl-id: e49517c4-608d-4e05-8466-75724ca984a8
 source-git-commit: f9f783b75bff66d1bf3e9c6d1ed1c543bd248302
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
 
 # Een XDM-veld in de API verwijderen
 
-In het Model van Gegevens van de Ervaring (XDM), kunt u een gebied binnen een schema of douanemiddel verwerpen door het [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Als een veld wordt afgekeurd, wordt dit verborgen achter UI&#39;s verderop, zoals de [!UICONTROL Profiles] -werkruimte en -Customer Journey Analytics, maar dit is anders een vaste wijziging die geen negatieve invloed heeft op bestaande gegevensstromen.
+In het Model van Gegevens van de Ervaring (XDM), kunt u een gebied binnen een schema of douanemiddel verwerpen door de [ Registratie API van het Schema te gebruiken ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Als u een veld verwijdert, wordt dit verborgen in downstreamgebruikersinterface&#39;s zoals de [!UICONTROL Profiles] -werkruimte en -Customer Journey Analytics, maar anders is het een vaste wijziging die geen negatieve invloed heeft op bestaande gegevensstromen.
 
-In dit document wordt beschreven hoe velden voor verschillende XDM-bronnen moeten worden vervangen. Voor stappen bij het afgekeuren van een XDM gebied gebruikend de Redacteur van het Schema in het gebruikersinterface van het Experience Platform, zie het leerprogramma op [een XDM-veld in de gebruikersinterface vervangen](./field-deprecation-ui.md).
+In dit document wordt beschreven hoe velden voor verschillende XDM-bronnen moeten worden vervangen. Voor stappen bij het afschilderen van een XDM gebied gebruikend de Redacteur van het Schema in het gebruikersinterface van het Experience Platform, zie het leerprogramma op [ afschilderend een XDM gebied in UI ](./field-deprecation-ui.md).
 
 ## Aan de slag
 
-Deze zelfstudie vereist het maken van aanroepen naar de Schemaregistratie-API. Controleer de [ontwikkelaarsgids](../api/getting-started.md) voor belangrijke informatie die u moet weten om deze API vraag te maken. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot; en de vereiste opschriften voor het indienen van aanvragen (met bijzondere aandacht voor de `Accept` en de mogelijke waarden ervan).
+Deze zelfstudie vereist het maken van aanroepen naar de Schemaregistratie-API. Gelieve te herzien de [ ontwikkelaarsgids ](../api/getting-started.md) voor belangrijke informatie die u moet kennen om deze API vraag te maken. Dit omvat uw `{TENANT_ID}` , het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van aanvragen (met speciale aandacht voor de header `Accept` en de mogelijke waarden ervan).
 
 ## Een aangepast veld verwijderen {#custom}
 
-Als u een veld in een aangepaste klasse, veldgroep of gegevenstype wilt vervangen, werkt u de aangepaste bron bij via een PUT- of PATCH-aanvraag en voegt u het kenmerk toe `meta:status: deprecated` op het betrokken gebied.
+Als u een veld in een aangepaste klasse, veldgroep of gegevenstype wilt vervangen, werkt u de aangepaste bron bij via een PUT- of PATCH-aanvraag en voegt u het kenmerk `meta:status: deprecated` toe aan het desbetreffende veld.
 
 >[!NOTE]
 >
 >Raadpleeg de volgende documentatie voor algemene informatie over het bijwerken van aangepaste bronnen in XDM:
 >
->* [Een klasse bijwerken](../api/classes.md#patch)
->* [Een veldgroep bijwerken](../api/field-groups.md#patch)
->* [Een gegevenstype bijwerken](../api/data-types.md#patch)
-
+>* [ werk een klasse ](../api/classes.md#patch) bij
+>* [ werk een gebiedsgroep ](../api/field-groups.md#patch) bij
+>* [ werk een gegevenstype ](../api/data-types.md#patch) bij
 
 Met de API-voorbeeldaanroep hieronder wordt een veld in een aangepast gegevenstype vervangen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /tenant/datatypes/{DATA_TYPE_ID}
@@ -42,7 +41,7 @@ PATCH /tenant/datatypes/{DATA_TYPE_ID}
 
 **Verzoek**
 
-In het volgende verzoek wordt het `expansionArea` veld voor een gegevenstype dat een vastgoedeigenschap beschrijft.
+In het volgende verzoek wordt het veld `expansionArea` vervangen voor een gegevenstype dat een eigenschap real-property beschrijft.
 
 ```shell
 curl -X PATCH \
@@ -61,9 +60,9 @@ curl -X PATCH \
       ]'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de updatedetails van de aangepaste bron, waarbij het vervangen veld een `meta:status` waarde van `deprecated`. De voorbeeldreactie hieronder is afgebroken voor de ruimte.
+Een geslaagde reactie retourneert de updatedetails van de aangepaste bron, waarbij het vervangen veld de `meta:status` waarde `deprecated` bevat. De voorbeeldreactie hieronder is afgebroken voor de ruimte.
 
 ```json
 {
@@ -165,13 +164,13 @@ Een geslaagde reactie retourneert de updatedetails van de aangepaste bron, waarb
 
 ## Een standaardveld in een schema verwijderen {#standard}
 
-Velden van standaardklassen, veldgroepen en gegevenstypen kunnen niet rechtstreeks worden afgekeurd. In plaats daarvan, kunt u hun gebruik in de individuele schema&#39;s verwerpen die deze standaardmiddelen door een beschrijver gebruiken.
+Velden van standaardklassen, veldgroepen en gegevenstypen kunnen niet rechtstreeks worden vervangen. In plaats daarvan, kunt u hun gebruik in de individuele schema&#39;s verwerpen die deze standaardmiddelen door een beschrijver gebruiken.
 
 ### Een beschrijving van de veldafdrukking maken {#create-descriptor}
 
-Als u een descriptor wilt maken voor de schemavelden die u wilt vervangen, vraagt u een POST naar de `/tenant/descriptors` eindpunt.
+Als u een descriptor wilt maken voor de schemavelden die u wilt vervangen, vraagt u een POST om het `/tenant/descriptors` -eindpunt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /tenant/descriptors
@@ -197,12 +196,12 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `@type` | Het type descriptor. Voor een beschrijving van de veldafdrukking moet deze waarde worden ingesteld op `xdm:descriptorDeprecated`. |
+| `@type` | Het type descriptor. Voor een beschrijving van de gebiedsafbeelding moet deze waarde worden ingesteld op `xdm:descriptorDeprecated` . |
 | `xdm:sourceSchema` | De URI `$id` van het schema waarop u de descriptor toepast. |
-| `xdm:sourceVersion` | De versie van het schema waarop u de descriptor toepast. Moet worden ingesteld op `1`. |
-| `xdm:sourceProperty` | Het pad naar de eigenschap in het schema waarop u de descriptor toepast. Als u de descriptor op meerdere eigenschappen wilt toepassen, kunt u een lijst met paden opgeven in de vorm van een array (bijvoorbeeld `["/firstName", "/lastName"]`). |
+| `xdm:sourceVersion` | De versie van het schema waarop u de descriptor toepast. Moet worden ingesteld op `1` . |
+| `xdm:sourceProperty` | Het pad naar de eigenschap in het schema waarop u de descriptor toepast. Als u de descriptor op meerdere eigenschappen wilt toepassen, kunt u een lijst met paden opgeven in de vorm van een array (bijvoorbeeld `["/firstName", "/lastName"]` ). |
 
-**Antwoord**
+**Reactie**
 
 ```json
 {
@@ -221,13 +220,13 @@ curl -X POST \
 
 ### Het vervangen veld controleren {#verify-deprecation}
 
-Nadat de descriptor is toegepast, kunt u controleren of het veld is vervangen door het betreffende schema op te zoeken terwijl u het juiste schema gebruikt `Accept` header.
+Nadat de descriptor is toegepast, kunt u controleren of het veld is vervangen door het betreffende schema op te zoeken terwijl u de juiste `Accept` header gebruikt.
 
 >[!NOTE]
 >
 >Afgekeurde velden worden weergegeven als aanbiedingsschema&#39;s momenteel niet worden ondersteund.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /tenant/schemas
@@ -235,7 +234,7 @@ GET /tenant/schemas
 
 **Verzoek**
 
-Als u informatie over verouderde velden wilt opnemen in de API-reactie, moet u de opdracht `Accept` header naar `application/vnd.adobe.xed-deprecatefield+json; version=1`.
+Als u informatie over vervangen velden wilt opnemen in de API-reactie, moet u de header `Accept` instellen op `application/vnd.adobe.xed-deprecatefield+json; version=1` .
 
 ```shell
 curl -X GET \
@@ -247,9 +246,9 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-deprecatefield+json; version=1'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie retourneert de details van het schema, waarbij het vervangen veld een `meta:status` waarde van `deprecated`. De voorbeeldreactie hieronder is afgebroken voor de ruimte.
+Wanneer de reactie met succes is uitgevoerd, worden de details van het schema geretourneerd. Het vervangen veld bevat de waarde `meta:status` `deprecated` . De voorbeeldreactie hieronder is afgebroken voor de ruimte.
 
 ```json
 "faxPhone": {
@@ -266,4 +265,4 @@ Een succesvolle reactie retourneert de details van het schema, waarbij het verva
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u XDM-velden kunt vervangen met de API voor schemaregistratie. Voor meer informatie bij het vormen van gebieden voor douanemiddelen, zie de gids op [XDM-velden definiëren in de API](./custom-fields-api.md). Zie voor meer informatie over het beheren van descriptoren de [eindhulplijn descriptorpunt](../api/descriptors.md).
+In dit document wordt beschreven hoe u XDM-velden kunt vervangen met de API voor schemaregistratie. Voor meer informatie bij het vormen van gebieden voor douanemiddelen, zie de gids bij [ het bepalen van gebieden XDM in API ](./custom-fields-api.md). Voor meer informatie bij het beheren van beschrijvers, zie de [ gids van het beschrijvingseindpunt ](../api/descriptors.md).

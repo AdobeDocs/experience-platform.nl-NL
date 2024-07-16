@@ -10,19 +10,19 @@ ht-degree: 0%
 
 ---
 
-# Een vernieuwd rapport van gebeurtenissen maken
+# Een trended-rapport van gebeurtenissen maken
 
-Dit document bevat een voorbeeld van de SQL-code die nodig is om een trended-rapport van gebeurtenissen overdag over een bepaald datumbereik te maken. Met Adobe Experience Platform Query Service kunt u query&#39;s schrijven die worden gebruikt [!DNL Experience Events] om verschillende gebruiksgevallen vast te leggen. De Gebeurtenissen van de ervaring worden vertegenwoordigd door de klasse ExperienceEvent van het Gegevensmodel van de Ervaring (XDM), die een onveranderlijke en niet-geaggregeerde momentopname van het systeem vangt wanneer een gebruiker met een website of de dienst interactie aangaat. De Gebeurtenissen van de ervaring kunnen zelfs voor tijd-domeinanalyse worden gebruikt. Zie de [sectie Volgende stappen](#next-steps) voor meer gebruik: [!DNL Experience Events] om bezoekersrapporten te genereren.
+Dit document bevat een voorbeeld van de SQL-code die nodig is om een trended-rapport van gebeurtenissen overdag over een bepaald datumbereik te maken. Met Adobe Experience Platform Query Service kunt u query&#39;s schrijven die [!DNL Experience Events] gebruiken om verschillende gebruiksgevallen vast te leggen. De Gebeurtenissen van de ervaring worden vertegenwoordigd door de klasse ExperienceEvent van het Gegevensmodel van de Ervaring (XDM), die een onveranderlijke en niet-geaggregeerde momentopname van het systeem vangt wanneer een gebruiker met een website of de dienst interactie aangaat. De Gebeurtenissen van de ervaring kunnen zelfs voor tijd-domeinanalyse worden gebruikt. Zie [ volgende stappen sectie ](#next-steps) voor meer gebruiksgevallen die [!DNL Experience Events] impliceren om bezoekersrapporten te produceren.
 
-De rapporten geven u toegang tot uw gegevens van het Platform om de strategische bedrijfsinzichten van uw organisatie te profiteren. Met deze rapporten, kunt u uw gegevens van het Platform op een verscheidenheid van manieren onderzoeken, zeer belangrijke metriek in gemakkelijk-aan-begrijpen formaten tonen, en de resulterende inzichten delen.
+Rapporten geven u toegang tot uw gegevens van het Platform om de strategische bedrijfsinzichten van uw organisatie te profiteren. Met deze rapporten, kunt u uw gegevens van het Platform op diverse manieren onderzoeken, zeer belangrijke metriek in gemakkelijk-aan-begrijpelijke formaten tonen, en de resulterende inzichten delen.
 
-Meer informatie over XDM en [!DNL Experience Events] kunt u vinden in het dialoogvenster [[!DNL XDM System] overzicht](../../xdm/home.md). Door de Dienst van de Vraag met te combineren [!DNL Experience Events], kunt u gedragstrends onder uw gebruikers effectief volgen. Het volgende document bevat voorbeelden van query&#39;s die betrekking hebben op [!DNL Experience Events].
+Meer informatie over XDM en [!DNL Experience Events] kan in het [[!DNL XDM System]  overzicht ](../../xdm/home.md) worden gevonden. Door de Dienst van de Vraag met [!DNL Experience Events] te combineren, kunt u gedragstendensen onder uw gebruikers effectief volgen. Het volgende document bevat voorbeelden van query&#39;s die [!DNL Experience Events] betreffen.
 
 ## Doelstellingen
 
-In het volgende voorbeeld wordt een trended-rapport gemaakt van gebeurtenissen over een opgegeven datumbereik, gegroepeerd op datum. In dit SQL-voorbeeld worden diverse analysewaarden samengevat als `A`, `B`, en `C`en geeft vervolgens een overzicht van het aantal keren dat parka&#39;s in de loop van een maand zijn bekeken.
+In het volgende voorbeeld wordt een trended-rapport gemaakt van gebeurtenissen over een opgegeven datumbereik, gegroepeerd op datum. In dit SQL-voorbeeld worden diverse analysewaarden samengevat als `A` , `B` en `C` . Vervolgens wordt het aantal keren samengevat dat parka&#39;s in de loop van een maand zijn weergegeven.
 
-De tijdstempelkolom in [!DNL Experience Event] datasets heeft de UTC-indeling. In het voorbeeld wordt het `from_utc_timestamp()` om de tijdstempel te transformeren van UTC naar EDT en gebruikt vervolgens de `date_format()` gebruiken om de datum te isoleren van de rest van de tijdstempel.
+De tijdstempelkolom in gegevenssets van [!DNL Experience Event] heeft de UTC-indeling. In het voorbeeld wordt de functie `from_utc_timestamp()` gebruikt om de tijdstempel te transformeren van UTC naar EDT en wordt vervolgens de functie `date_format()` gebruikt om de datum te isoleren van de rest van de tijdstempel.
 
 ```sql
 SELECT 
@@ -84,10 +84,10 @@ De resultaten van deze query zijn hieronder te zien.
 
 ## Volgende stappen {#next-steps}
 
-Door dit document te lezen, hebt u een beter inzicht in hoe te om de Dienst van de Vraag met te gebruiken [!DNL Experience Events] om gedragstrends onder uw gebruikers effectief te volgen.
+Door dit document te lezen, hebt u een beter inzicht in hoe te om de Dienst van de Vraag met [!DNL Experience Events] te gebruiken om gedragstrends onder uw gebruikers effectief te volgen.
 
-Informatie over andere op bezoekers gebaseerde gebruiksgevallen die [!DNL Experience Events], lees de volgende documenten:
+Lees de volgende documenten voor meer informatie over andere gebruiksgevallen die op bezoekers zijn gebaseerd en die [!DNL Experience Events] gebruiken:
 
-- [Hiermee haalt u een lijst met bezoekers op, ingedeeld op basis van het aantal paginaweergaven.](./visitors-by-number-of-page-views.md)
+- [Hiermee wordt een lijst met bezoekers opgehaald die is ingedeeld op aantal paginaweergaven.](./visitors-by-number-of-page-views.md)
 - [De vorige sessies van een bezoeker weergeven.](./list-visitor-sessions.md)
 - [Een roll-uprapport van een bezoeker weergeven.](./roll-up-report-of-a-visitor.md)

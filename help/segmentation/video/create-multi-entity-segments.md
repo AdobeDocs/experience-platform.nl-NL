@@ -1,6 +1,6 @@
 ---
 title: Segmenten met meerdere entiteiten maken in Adobe Experience Platform
-description: Deze video biedt een eenvoudig inzicht in het maken van een segment met meerdere entiteiten met behulp van de interface van het Platform.
+description: Deze video biedt een basiskennis van het maken van een segment met meerdere entiteiten met behulp van de interface van het platform.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -19,10 +19,10 @@ ht-degree: 0%
 
 # Meerdere entiteitssegmenten maken in de gebruikersinterface van het Experience Platform
 
-De volgende video is bedoeld ter ondersteuning van uw begrip voor het maken van dynamische segmenten. Het toont een voorbeeld van een klantervaring gevolgd door een snelle rondleiding van belangrijke eigenschappen in het [!DNL Platform] interface. Lees de handleiding voor meer informatie over segmentatie tussen meerdere entiteiten [segmentatie van meerdere entiteiten](../multi-entity-segmentation.md).
+De volgende video is bedoeld ter ondersteuning van uw begrip voor het maken van dynamische segmenten. Hierin wordt een voorbeeld van een klantervaring weergegeven, gevolgd door een snelle rondleiding van de belangrijkste functies in de [!DNL Platform] -interface. Meer over multi-entiteitsegmentatie leren, te lezen gelieve de gids op [ multi-entiteitsegmentatie ](../multi-entity-segmentation.md).
 
 >[!NOTE]
 >
->De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest actuele informatie raadpleegt u de [Handleiding Segment Builder](../ui/segment-builder.md).
+>De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, gelieve te verwijzen naar de [ gids van de Bouwer van het Segment ](../ui/segment-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32179?quality=12&learn=on)

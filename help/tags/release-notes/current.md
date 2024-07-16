@@ -4,7 +4,7 @@ description: De nieuwste aanvullende informatie voor tags en het doorsturen van 
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '769'
 ht-degree: 2%
 
 ---
@@ -13,66 +13,66 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Het vooruit bewegen van de markeringen en de gebeurtenis door:sturen versienota&#39;s zullen niet meer op deze pagina worden verstrekt. Raadpleeg de meest recente [Opmerkingen bij de release van Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection) voor gedetailleerde tags en updates voor het doorsturen van gebeurtenissen.
+>Het vooruit bewegen van de markeringen en de gebeurtenis door:sturen versienota&#39;s zullen niet meer op deze pagina worden verstrekt. Gelieve te verwijzen naar de recentste [ de versienota&#39;s van Adobe Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection) voor gedetailleerde markeringen en gebeurtenis door:sturen updates.
 
-## 26 april 2023
+## donderdag 26 april 2023
 
-* **OAuth JWT Secret**: De [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) Hiermee kunnen klanten Adobe- en Google Service-tokens gebruiken ter ondersteuning van server-naar-server interacties bij het doorsturen van gebeurtenissen.
+* **OAuth JWT Geheim**: [ Geheime JWT ](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) staat klanten toe om Adobe en de tokens van de Dienst van Google te gebruiken om server-aan-server interactie in Gebeurtenis te steunen die door:sturen.
 
 De volgende nieuwe extensie is vrijgegeven:
 
-* **[!DNL Pinterest Conversions API]extension**: De [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) Met de extensie voor het doorsturen van gebeurtenissen kunt u gegevens die zijn vastgelegd in Adobe Experience Platform Edge Network, benutten en verzenden naar [!DNL Pinterest] in de vorm van server-side-gebeurtenissen die de [!DNL Pinterest Conversions API].
+* **[!DNL Pinterest Conversions API]extension**: De [[!DNL Pinterest Conversions API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) gebeurtenis die uitbreiding door:sturen staat u toe om gegevens te gebruiken die in de Edge Network van Adobe Experience Platform worden gevangen en het te verzenden naar [!DNL Pinterest] in de vorm van server-zijgebeurtenissen gebruikend [!DNL Pinterest Conversions API].
 
-## 29 maart 2023
+## donderdag 29 maart 2023
 
-**Quick Stark Workflows (bèta)**
+**Snelle Stark Workflows (Beta)**
 
-Toegang tot nieuwe snelstartworkflows onder &quot;Aan de slag&quot; vanuit het startscherm van de gegevensverzameling. De volgende workflows zijn nu beschikbaar voor klanten als openbare bètaversie.
-* **[API voor metaconversie](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**: Gebruikers die gebeurtenissen doorsturen kunnen snel gebeurtenisgegevens, servergegevens naar Meta voor advertentieconversies in een paar eenvoudige stappen verzamelen en doorsturen.
-* **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: Klanten kunnen de Mobile SDK snel implementeren en mobiele basisgebeurtenissen in slechts een paar eenvoudige stappen valideren.
+Toegang tot nieuwe snelstartworkflows onder &quot;Aan de slag&quot; vanuit het startscherm van de gegevensverzameling. De volgende workflows zijn nu beschikbaar voor klanten als openbare Beta.
+* **[de Conversies van Meta API ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**: De gebeurtenis die klanten door:sturen kan gebeurtenisgegevens, server-kant aan Meta voor advertentieconversies in enkel een paar eenvoudige stappen snel verzamelen en door:sturen.
+* **[Mobiele SDK ](https://developer.adobe.com/client-sdks/documentation/)**: De klanten kunnen mobiele SDK snel uitvoeren en fundamentele mobiele gebeurtenissen in enkel een paar eenvoudige stappen bevestigen.
 
 Nieuwe extensies zijn vrijgegeven:
 
-* **[!DNL Braze]extensie voor doorsturen van gebeurtenissen**: De [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) Met de extensie voor het doorsturen van gebeurtenissen kunt u gegevens die zijn vastgelegd in het Adobe Experience Platform Edge-netwerk, benutten en verzenden naar [!DNL Braze] in de vorm van server-side-gebeurtenissen die de [!DNL Braze] Gebruikerstrack-API&#39;s.
-* **[Epsilon Events API] extensie voor doorsturen van gebeurtenissen**: De [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) Met de extensie kunt u gebeurtenissen doorsturen om gebeurtenisinformatie vast te leggen in het Adobe Experience Platform Edge-netwerk en deze naar [!DNL Epsilon] met de [!DNL Epsilon] Gebeurtenis-API.
-* **[!DNL Mixpanel]extensie voor doorsturen van gebeurtenissen**: De [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) Met de extensie kunt u gebeurtenissen doorsturen om gebeurtenisinformatie vast te leggen in het Adobe Experience Platform Edge-netwerk en deze naar [!DNL Mixpanel] met de API voor gebeurtenissen bijhouden.
+* **[!DNL Braze]event Forwarding extension**: Met de [[!DNL Braze Track Events API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) event forward extension kunt u gegevens die in de Adobe Experience Platform Edge Network zijn vastgelegd, benutten en verzenden naar [!DNL Braze] in de vorm van server-side gebeurtenissen met behulp van de [!DNL Braze] User Track API&#39;s.
+* **[Epsilon Gebeurtenissen API ] gebeurtenis door:sturen uitbreiding**: De [[!DNL Epsilon Events API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) uitbreiding staat u toe aan hefboomgebeurtenis het door:sturen om gebeurtenisinformatie in de Edge Network van Adobe Experience Platform te vangen en het te verzenden naar [!DNL Epsilon] gebruikend [!DNL Epsilon] Gebeurtenis API.
+* **[!DNL Mixpanel]gebeurtenis die uitbreiding** door:sturen: De [[!DNL Mixpanel Track Events API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) uitbreiding staat u toe om gebeurtenis te hefboomwerking door:sturen om gebeurtenisinformatie in de Edge Network van Adobe Experience Platform te vangen en het te verzenden naar [!DNL Mixpanel] gebruikend de Gebeurtenissen API van het Spoor.
 
-## 25 januari 2023
+## donderdag 25 januari 2023
 
-* **Nieuw beginscherm**: De homepage voor de UI van de Inzameling van Gegevens is bijgewerkt om nuttige onboarding informatie en verbindingen te omvatten om productiviteit te stroomlijnen. Dit omvat:
+* **Nieuw homescherm**: De homepage voor UI van de Inzameling van Gegevens is bijgewerkt om nuttige onboarding informatie en verbindingen te omvatten om productiviteit te stroomlijnen. Dit omvat:
    1. Documentatie en aanbevolen workflows om aan de slag te gaan
    1. Recente eigenschappen, regels en gegevenselementen
    1. Populaire extensies
    1. Nieuwe extensies worden bijgewerkt met een functie voor snelle installatie
-* **Gegevens verzenden naar [!DNL Google Ads] gebruiken, gebeurtenis doorsturen**: U kunt nu de opdracht [[!DNL Google Ads Enhanced Conversions] API-extensie](../extensions/server/google-ads-enhanced-conversions/overview.md) voor gebeurtenis door:sturen, gecombineerd met [Google Oauth 2 geheimen](../ui/event-forwarding/secrets.md#google-oauth2), om servergegevens veilig te verzenden naar [!DNL Google Ads] in real time.
+* **verzendt gegevens naar [!DNL Google Ads] gebruikend gebeurtenis het door:sturen**: U kunt de [[!DNL Google Ads Enhanced Conversions]  API uitbreiding ](../extensions/server/google-ads-enhanced-conversions/overview.md) voor gebeurtenis nu gebruiken door:sturen, gecombineerd met [ Google Oauth 2 geheimen ](../ui/event-forwarding/secrets.md#google-oauth2), om server-zijgegevens aan [!DNL Google Ads] in real time veilig te verzenden.
 
 ## 23 november 2022
 
-* **[!DNL AWS]extensie voor het doorsturen van gebeurtenissen**: U kunt nu gegevens verzenden naar [!DNL Amazon Web Services] ([!DNL AWS]) met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL AWS] extensieoverzicht](../../tags/extensions/server/aws/overview.md) voor meer informatie .
-* **[!DNL Google Ads Enhanced Conversions]extensie voor het doorsturen van gebeurtenissen**: U kunt nu conversiegegevens verzenden naar [!DNL Google Ads] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Google Ads Enhanced Conversions] extensieoverzicht](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) voor meer informatie .
-* **[!DNL Microsoft Azure]extensie voor het doorsturen van gebeurtenissen**: U kunt nu gegevens verzenden naar [!DNL Microsoft Azure] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Microsoft Azure] extensieoverzicht](../../tags/extensions/server/azure/overview.md) voor meer informatie .
+* **[!DNL AWS]uitbreiding voor gebeurtenis door:sturen**: U kunt gegevens [!DNL Amazon Web Services] ([!DNL AWS]) nu verzenden gebruikend een [ gebeurtenis die ](../../tags/ui/event-forwarding/overview.md) uitbreiding door:sturen. Zie het [[!DNL AWS]  uitbreidingsoverzicht ](../../tags/extensions/server/aws/overview.md) voor meer informatie.
+* **[!DNL Google Ads Enhanced Conversions]uitbreiding voor gebeurtenis door:sturen**: U kunt omzettingsgegevens naar [!DNL Google Ads] nu verzenden gebruikend een [ gebeurtenis die ](../../tags/ui/event-forwarding/overview.md) uitbreiding door:sturen. Zie het [[!DNL Google Ads Enhanced Conversions]  uitbreidingsoverzicht ](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) voor meer informatie.
+* **[!DNL Microsoft Azure]uitbreiding voor gebeurtenis die** door:sturen: U kunt gegevens [!DNL Microsoft Azure] nu verzenden gebruikend een [ gebeurtenis die ](../../tags/ui/event-forwarding/overview.md) uitbreiding door:sturen. Zie het [[!DNL Microsoft Azure]  uitbreidingsoverzicht ](../../tags/extensions/server/azure/overview.md) voor meer informatie.
 
-## 26 oktober 2022
+## donderdag 26 oktober 2022
 
-* **Gevoelige gegevensverwerking voor gegevensstromen**: Data streams maken nu gebruik van verschillende platformtechnologieën om gevoelige gegevens op de juiste manier te verwerken, zoals wordt voorgeschreven door verordeningen zoals de Health Insurance Portability and Accountability Act (HIPAA). Zie de sectie over [verwerking van gevoelige gegevens in gegevensstreams](../../datastreams/overview.md#sensitive) voor meer informatie .
-* **[!DNL Splunk]extensie voor het doorsturen van gebeurtenissen**: U kunt nu gegevens verzenden naar [!DNL Splunk] met een [gebeurtenis doorsturen](../ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Splunk] extensieoverzicht](../extensions/server/splunk/overview.md) voor meer informatie .
-* **[!DNL Zendesk]extensie voor het doorsturen van gebeurtenissen**: U kunt nu gegevens verzenden naar [!DNL Zendesk] met een [gebeurtenis doorsturen](../ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Zendesk] extensieoverzicht](../extensions/server/zendesk/overview.md) voor meer informatie .
+* **Gevoelige gegevens behandeling voor gegevensstromen**: De stromen van gegevensstromen hefboomwerking nu verscheidene technologieën van het Platform om gevoelige gegevens geschikt te behandelen zoals die door verordeningen zoals de Wet van de Portabiliteit en van de Verantwoording van de Ziekteverzekering (HIPAA) worden afgedwongen. Zie de sectie over [ behandelend gevoelige gegevens in datstromen ](../../datastreams/overview.md#sensitive) voor meer informatie.
+* **[!DNL Splunk]uitbreiding voor gebeurtenis die** door:sturen: U kunt gegevens [!DNL Splunk] nu verzenden gebruikend een [ gebeurtenis die ](../ui/event-forwarding/overview.md) uitbreiding door:sturen. Zie het [[!DNL Splunk]  uitbreidingsoverzicht ](../extensions/server/splunk/overview.md) voor meer informatie.
+* **[!DNL Zendesk]uitbreiding voor gebeurtenis die** door:sturen: U kunt gegevens [!DNL Zendesk] nu verzenden gebruikend een [ gebeurtenis die ](../ui/event-forwarding/overview.md) uitbreiding door:sturen. Zie het [[!DNL Zendesk]  uitbreidingsoverzicht ](../extensions/server/zendesk/overview.md) voor meer informatie.
 
 ## 28 september 2022
 
-* **Adobe Experience Platform-integratie linker-nav**: Alle mogelijkheden die voorheen exclusief waren voor de gebruikersinterface voor gegevensverzameling (inclusief tags en het doorsturen van gebeurtenissen) zijn nu ook beschikbaar via de linkernavigatie in de gebruikersinterface van het Experience Platform, onder de categorie **[!UICONTROL Data Collection]**. Dit elimineert de behoefte om tussen UIs te schakelen wanneer het werken met de mogelijkheden van de gegevensinzameling in Platform.
-* **Toewijzing door gebruiker in tags en gebeurtenis doorsturen**: Wanneer een lijst van beschikbare eigenschappen in markeringen en gebeurtenis het door:sturen, toont elk vermeld bezit nu wanneer het het laatst werd bijgewerkt en door wie.
-* **[[!DNL Snap Conversions API] extension](https://exchange.adobe.com/apps/ec/108550) voor gebeurtenis doorsturen**: U kunt nu gegevens verzenden naar de [!DNL Snapchat Conversions API] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Voor meer informatie over het verifiëren en gebruiken van API, verwijs naar [[!DNL Snapchat Marketing API] documentatie](https://marketingapi.snapchat.com/docs/conversion.html).
+* **Adobe Experience Platform verlaten nav integratie**: Alle mogelijkheden die eerder exclusief aan de Inzameling van Gegevens UI (met inbegrip van markeringen en gebeurtenis het door:sturen) waren zijn nu ook beschikbaar door de linkernavigatie in Experience Platform UI, onder de categorie **[!UICONTROL Data Collection]**. Dit elimineert de behoefte om tussen UIs te schakelen wanneer het werken met de mogelijkheden van de gegevensinzameling in Platform.
+* **de attributie van de Gebruiker in markeringen en gebeurtenis door:sturen**: Wanneer de lijst van beschikbare eigenschappen in markeringen en gebeurtenis door:sturen, toont elk vermeld bezit nu wanneer het het laatst werd bijgewerkt en door wie.
+* **[[!DNL Snap Conversions API] uitbreiding ](https://exchange.adobe.com/apps/ec/108550) voor gebeurtenis door:sturen**: U kunt gegevens naar [!DNL Snapchat Conversions API] nu verzenden gebruikend een [ gebeurtenis die ](../../tags/ui/event-forwarding/overview.md) uitbreiding door:sturen. Voor meer informatie over hoe te voor authentiek te verklaren en API te gebruiken, verwijs naar de [[!DNL Snapchat Marketing API]  documentatie ](https://marketingapi.snapchat.com/docs/conversion.html).
 
-## 27 juli 2022
+## donderdag 27 juli 2022
 
-* De toegang tot labels en mogelijkheden voor het doorsturen van gebeurtenissen wordt nu beheerd via Adobe Admin Console onder de kaart voor Adobe Experience Platform-gegevensverzameling. Zie de handleiding op [gegevensverzamelingsmachtigingen](../../collection/permissions.md) voor meer informatie .
-* Ondersteuning voor Internet Explorer 10 en 11 is [verouderd](../ie-deprecation.md).
+* De toegang tot labels en mogelijkheden voor het doorsturen van gebeurtenissen wordt nu beheerd via Adobe Admin Console onder de kaart voor Adobe Experience Platform-gegevensverzameling. Zie de gids op [ toestemmingen van de gegevensinzameling ](../../collection/permissions.md) voor meer informatie.
+* De steun voor Internet Explorer 10 en 11 is afgekeurd [ ](../ie-deprecation.md).
 
-## 22 juni 2022
+## donderdag 22 juni 2022
 
 Nieuwe extensies zijn vrijgegeven:
 
-* [Google Data Layer-tagextensie](../extensions/client/google-data-layer/overview.md): Hiermee kunt u een Google-gegevenslaag gebruiken in de implementatie van tags.
-* [Google Ads Enhanced Conversions-gebeurtenis door:sturen extensie](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html): Hiermee kunt u uw Google Ads-conversies in real-time verbeteren.
-* [Mailchimp-gebeurtenis door:sturen, extensie](../extensions/server/mailchimp/overview.md): Verstuurt gebeurtenissen naar de Mailchimp Marketing API die e-mails kan activeren voor marketingcampagnes, reizen of transacties in Mailchimp.
+* [ de markeringsuitbreiding van de Laag van Gegevens van Google ](../extensions/client/google-data-layer/overview.md): Staat u toe om een de gegevenslaag van Google in uw markeringsimplementatie te gebruiken.
+* [ Google voegt Verbeterde gebeurtenis van Conversies toe die uitbreiding ](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) door:sturen: Staat u toe om uw omzettingen van de Advertenties van Google in real time te verbeteren.
+* [ gebeurtenis Mailchimp die uitbreiding ](../extensions/server/mailchimp/overview.md) door:sturen: verzendt gebeurtenissen naar de Marketing API van Mailchimp die e-mails voor de marketing van Mailchimp campagnes, reizen, of transacties kan teweegbrengen.

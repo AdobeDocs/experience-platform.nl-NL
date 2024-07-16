@@ -4,7 +4,7 @@ title: Opties voor bestandsindeling configureren voor op bestanden gebaseerde do
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 > 
 >De opmaakopties voor bestanden die in dit document worden beschreven, zijn momenteel alleen beschikbaar voor CSV-bestanden.
 
-De optie om verschillende opties voor de bestandsindeling van de geëxporteerde bestanden te configureren, is beschikbaar wanneer u [verbinden](/help/destinations/ui/connect-destination.md) naar een op een bestand gebaseerd doel, zoals [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect), of [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect).
+De optie om diverse dossier te vormen formatterend opties voor de uitgevoerde dossiers is beschikbaar aan u wanneer u [ ](/help/destinations/ui/connect-destination.md) met een op dossier-gebaseerde bestemming, zoals [ Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [ Azure Blob ](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) verbindt, of [ SFTP ](/help/destinations/catalog/cloud-storage/sftp.md#connect).
 
 U kunt verschillende opmaakopties voor geëxporteerde bestanden configureren met de interface van het Experience Platform. U kunt verschillende eigenschappen van de geëxporteerde bestanden aanpassen aan de vereisten van het systeem voor het ontvangen van bestanden aan uw zijde, zodat u de bestanden die u van het Experience Platform hebt ontvangen, optimaal kunt lezen en interpreteren.
 
@@ -26,15 +26,15 @@ U kunt verschillende opmaakopties voor geëxporteerde bestanden configureren met
 
 ## Configuratie van bestandsindeling voor CSV-bestanden {#file-configuration}
 
-Als u de opties voor de bestandsindeling wilt weergeven, start u de [verbinding maken met doel](/help/destinations/ui/connect-destination.md) workflow. Selecteren **Gegevenstype: Segmenten** en **Bestandstype: CSV** om de instellingen voor de bestandsindeling die beschikbaar zijn voor het geëxporteerde `CSV` bestanden.
+Om het dossier te tonen die opties formatteren, begin [ met bestemmings ](/help/destinations/ui/connect-destination.md) werkschema verbinden. Selecteer **Type van Gegevens: Segmenten** en **het type van Dossier: CSV** om de dossier te tonen formatterend montages beschikbaar voor de uitgevoerde `CSV` dossiers.
 
 >[!IMPORTANT]
 >
 >Mogelijk zijn niet al deze opties beschikbaar voor de bestemming waarmee u verbinding maakt. Het is aan de bestemmingsontwikkelaar om te bepalen welke dossier het formatteren opties zij in hun bestemming willen steunen. De bestemmingsontwikkelaar kan bepalen welke opties beschikbaar zijn wanneer het verbinden met de bestemming. De vereiste opties zijn duidelijk met een asterisk in de UI van het Experience Platform.
 > 
->De Adobe-gebouwde cloudopslagbestemmingen - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Gegevenslandingszone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - momenteel worden alleen de zes onderstaande CSV-opties ondersteund.
+>De Adobe-gebouwde bestemmingen van de cloudopslag - [ Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ Azure Blob ](/help/destinations/catalog/cloud-storage/azure-blob.md), [ Azure Gegevens Meer Gen2 van de Opslag ](/help/destinations/catalog/cloud-storage/adls-gen2.md), [ Gegevens Landing Zone ](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [ de Opslag van de Wolk van Google ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [ SFTP ](/help/destinations/catalog/cloud-storage/sftp.md) - steunt momenteel slechts de zes hieronder benadrukte opties CSV.
 
-![Afbeelding met enkele beschikbare opties voor bestandsindeling.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
+![ Beeld dat enkele beschikbare dossier het formatteren opties toont.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
 ### Scheidingsteken {#delimiter}
 
@@ -47,9 +47,9 @@ Met dit besturingselement kunt u een scheidingsteken instellen voor elk veld en 
 
 * Colon `(:)`
 * Komma `(,)`
-* Pijp `(|)`
+* Pipe `(|)`
 * Puntkomma `(;)`
-* Tabtoets `(\t)`
+* Tab `(\t)`
 
 #### Voorbeelden
 
@@ -89,7 +89,7 @@ Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden m
 
 Gebruik deze optie om één teken in te stellen voor het omzeilen van aanhalingstekens binnen een reeds geciteerde waarde. Deze optie is bijvoorbeeld handig wanneer u een tekenreeks tussen dubbele aanhalingstekens plaatst, waarbij een deel van de tekenreeks al tussen dubbele aanhalingstekens staat. Met deze optie bepaalt u welk teken de binnenste dubbele aanhalingstekens moet vervangen. Beschikbare opties zijn:
 
-* backslash `(\)`
+* Achterste schuine streep `(\)`
 * Enkel aanhalingsteken `(')`
 
 #### Voorbeelden
@@ -109,16 +109,16 @@ Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden m
 Gebruik dit besturingselement om de tekenreeksrepresentatie van een lege waarde in te stellen. Met deze optie bepaalt u hoe lege waarden worden weergegeven in uw geëxporteerde CSV-bestanden. Beschikbare opties zijn:
 
 * **[!UICONTROL Null (null)]**
-* **Lege tekenreeks in dubbele aanhalingstekens (&quot;&quot;)**
+* **Leeg Koord in Dubbele Citaten (&quot;&quot;)**
 * **[!UICONTROL Empty string]**
 
 #### Voorbeelden
 
 Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden met elk van de selecties in de gebruikersinterface.
 
-* Voorbeeld van uitvoer met **[!UICONTROL null]** geselecteerd: `male,NULL,TestLastName`. In dit geval transformeert Experience Platform de lege waarde in een null-waarde.
-* Voorbeeld van uitvoer met **&quot;&quot;** geselecteerd: `male,"",TestLastName`. In dit geval transformeert Experience Platform de lege waarde in twee dubbele aanhalingstekens.
-* Voorbeeld van uitvoer met **[!UICONTROL Empty string]** geselecteerd: `male,,TestLastName`. In dit geval behoudt het Experience Platform de lege waarde en exporteert het zoals het is (zonder dubbele aanhalingstekens).
+* Voorbeeld van uitvoer met **[!UICONTROL null]** geselecteerd: `male,NULL,TestLastName` . In dit geval transformeert Experience Platform de lege waarde in een null-waarde.
+* Voorbeeld uitvoer met **&quot;&quot;** selected: `male,"",TestLastName`. In dit geval transformeert Experience Platform de lege waarde in twee dubbele aanhalingstekens.
+* Voorbeeld van uitvoer met **[!UICONTROL Empty string]** geselecteerd: `male,,TestLastName` . In dit geval behoudt het Experience Platform de lege waarde en exporteert het zoals het is (zonder dubbele aanhalingstekens).
 
 >[!TIP]
 >
@@ -134,16 +134,16 @@ Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden m
 Gebruik dit besturingselement om de tekenreeksrepresentatie van een null-waarde in te stellen in de geëxporteerde bestanden. Met deze optie bepaalt u hoe null-waarden worden weergegeven in uw geëxporteerde CSV-bestanden. Beschikbare opties zijn:
 
 * **[!UICONTROL Null (null)]**
-* **Lege tekenreeks in dubbele aanhalingstekens (&quot;&quot;)**
+* **Leeg Koord in Dubbele Citaten (&quot;&quot;)**
 * **[!UICONTROL Empty string]**
 
 #### Voorbeelden
 
 Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden met elk van de selecties in de gebruikersinterface.
 
-* Voorbeeld van uitvoer met **[!UICONTROL null]** geselecteerd: `male,NULL,TestLastName`. In dit geval vindt geen transformatie plaats en bevat het CSV-bestand de null-waarde.
-* Voorbeeld van uitvoer met **&quot;&quot;** geselecteerd: `male,"",TestLastName`. In dit geval vervangt Experience Platform de null-waarde door dubbele aanhalingstekens om een lege tekenreeks.
-* Voorbeeld van uitvoer met **[!UICONTROL Empty string]** geselecteerd: `male,,TestLastName`. In dit geval vervangt Experience Platform de null-waarde door een lege tekenreeks (zonder dubbele aanhalingstekens).
+* Voorbeeld van uitvoer met **[!UICONTROL null]** geselecteerd: `male,NULL,TestLastName` . In dit geval vindt geen transformatie plaats en bevat het CSV-bestand de null-waarde.
+* Voorbeeld uitvoer met **&quot;&quot;** selected: `male,"",TestLastName`. In dit geval vervangt Experience Platform de null-waarde door dubbele aanhalingstekens om een lege tekenreeks.
+* Voorbeeld van uitvoer met **[!UICONTROL Empty string]** geselecteerd: `male,,TestLastName` . In dit geval vervangt Experience Platform de null-waarde door een lege tekenreeks (zonder dubbele aanhalingstekens).
 
 ### Compressie-indeling {#compression-format}
 
@@ -156,21 +156,21 @@ Hiermee stelt u in welk compressietype u wilt gebruiken bij het opslaan van gege
 
 ### Codering
 
-*Niet weergegeven in de gebruikersinterfacescherm*. Hiermee wordt de codering (charset) van opgeslagen CSV-bestanden opgegeven. De opties zijn UTF-8 of UTF-16.
+*niet getoond in het het schermschot UI*. Hiermee wordt de codering (charset) van opgeslagen CSV-bestanden opgegeven. De opties zijn UTF-8 of UTF-16.
 
 ### Char om te ontsnappen aan aanhalingsteken
 
-*Niet weergegeven in de gebruikersinterfacescherm*. Een markering die aangeeft of waarden die aanhalingstekens bevatten, altijd tussen aanhalingstekens moeten worden geplaatst.
+*niet getoond in het het schermschot UI*. Een markering die aangeeft of waarden die aanhalingstekens bevatten, altijd tussen aanhalingstekens moeten worden geplaatst.
 
 Standaard worden alle waarden met een aanhalingsteken verwijderd.
 
 ### Lijnscheidingsteken
 
-*Niet weergegeven in de gebruikersinterfacescherm*. Hiermee definieert u het lijnscheidingsteken dat moet worden gebruikt voor schrijven. De maximumlengte is 1 teken.
+*niet getoond in het het schermschot UI*. Hiermee definieert u het lijnscheidingsteken dat moet worden gebruikt voor schrijven. De maximumlengte is 1 teken.
 
 ### Voorloopspatie negeren
 
-*Niet weergegeven in de gebruikersinterfacescherm*. Een markering die aangeeft of witruimten die de regelafstand bepalen van waarden die worden geëxporteerd, moeten worden overgeslagen.
+*niet getoond in het het schermschot UI*. Een markering die aangeeft of witruimten die de regelafstand bepalen van waarden die worden geëxporteerd, moeten worden overgeslagen.
 
 Voorbeeld van uitvoer met **[!UICONTROL True]** geselecteerd: `"male","John","TestLastName"`
 Voorbeeld van uitvoer met **[!UICONTROL False]** geselecteerd: `" male","John","TestLastName"`
@@ -184,4 +184,4 @@ Voorbeeld van uitvoer met **[!UICONTROL False]** geselecteerd: `"male ","John","
 
 ### Volgende stappen {#next-steps}
 
-Na het lezen van dit document, weet u nu hoe te om dossieruitvoeropties voor uw Csv- gegevensdossiers te vormen om de dossierinhoud aan de vereisten van uw stroomafwaartse systeem van de dossierontvangst aan te passen. Vervolgens kunt u de [zelfstudie over activering van bestandsdoelen](/help/destinations/ui/activate-batch-profile-destinations.md) om bestanden naar de gewenste locatie voor cloudopslag te exporteren.
+Na het lezen van dit document, weet u nu hoe te om dossieruitvoeropties voor uw Csv- gegevensdossiers te vormen om de dossierinhoud aan de vereisten van uw stroomafwaartse systeem van de dossierontvangst aan te passen. Daarna, kunt u het [ op dossier-gebaseerde zelfstudie van de bestemmingsactivering ](/help/destinations/ui/activate-batch-profile-destinations.md) lezen beginnen dossiers naar uw aangewezen plaats van de wolkenopslag uit te voeren.

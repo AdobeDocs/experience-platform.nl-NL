@@ -16,15 +16,15 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->Accountprofielen zijn alleen beschikbaar voor Adobe Real-time Customer Data Platform B2B Edition-klanten. Als u meer wilt weten over Real-Time CDP, B2B Edition, inclusief de beschikbare functies en functionaliteit, leest u eerst de [Overzicht van Real-Time CDP, B2B Edition](../b2b-overview.md).
+>Accountprofielen zijn alleen beschikbaar voor Adobe Real-time Customer Data Platform B2B Edition-klanten. Om meer over Real-Time CDP, B2B Uitgave met inbegrip van de eigenschappen en de functionaliteit beschikbaar te leren, gelieve te beginnen door [ Real-Time CDP, B2B het overzicht van de Uitgave ](../b2b-overview.md) te lezen.
 
-Met accountprofielen kunt u accountgegevens uit meerdere bronnen verenigen. Deze verenigde mening van een rekening brengt gegevens van over uw vele marketing kanalen en de diverse systemen samen die uw organisatie momenteel gebruikt om de gegevens van de klantenrekening op te slaan. Als u meer wilt weten over de manier waarop accountprofielen worden gemaakt als onderdeel van de B2B-workflow, raadpleegt u de [end-to-end zelfstudie](../b2b-tutorial.md).
+Met accountprofielen kunt u accountgegevens uit meerdere bronnen verenigen. Deze verenigde mening van een rekening brengt gegevens van over uw vele marketing kanalen en de diverse systemen samen die uw organisatie momenteel gebruikt om de gegevens van de klantenrekening op te slaan. Om meer over te leren hoe de rekeningsprofielen als deel van het B2B- werkschema worden gecreeerd, te zien gelieve het [ leerprogramma van begin tot eind ](../b2b-tutorial.md).
 
-Door accountgegevens uit verschillende bronnen te bundelen, kunt u een volledig beeld van elk van uw klantenrekeningen en zijn verwante mogelijkheden en contacten beginnen te zien. Hierdoor kan uw organisatie uw B2B-marketingcampagnes naar een nieuw niveau tillen. Voor meer informatie over de kracht van Real-Time CDP, B2B Edition, leest u de [Real-Time CDP, B2B Edition voorbeeld use case](../b2b-use-case.md).
+Door accountgegevens uit verschillende bronnen te bundelen, kunt u een volledig beeld van elk van uw klantenrekeningen en zijn verwante mogelijkheden en contacten beginnen te zien. Hierdoor kan uw organisatie uw B2B-marketingcampagnes naar een nieuw niveau tillen. Om meer over de macht van Real-Time CDP, B2B Uitgave te leren, lees [ Real-Time CDP, B2B het voorbeeldgebruik van de Uitgave case ](../b2b-use-case.md).
 
 ## Accountprofielviewer
 
-Met Real-Time CDP, B2B Edition, kunt u de gebruikersinterface van het Experience Platform gebruiken om rekeningsprofielen te bekijken en naar specifieke rekeningen te zoeken gebruikend een rekeningsidentiteitskaart van een verbonden ondernemingsbron of door brondetails direct in te gaan. Voor meer informatie over het weergeven van accountprofielen in de interface van het platform raadpleegt u de [gebruikersgids voor accountprofiel](account-profile-ui-guide.md).
+Met Real-Time CDP, B2B Edition, kunt u de gebruikersinterface van het Experience Platform gebruiken om rekeningsprofielen te bekijken en naar specifieke rekeningen te zoeken gebruikend een rekeningsidentiteitskaart van een verbonden ondernemingsbron of door brondetails direct in te gaan. Voor meer informatie betreffende hoe te om rekeningsprofielen binnen het Platform UI te bekijken, gelieve te zien de [ gids UI van het rekeningsprofiel ](account-profile-ui-guide.md).
 
 ## Accountsoorten maken en activeren
 

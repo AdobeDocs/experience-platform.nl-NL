@@ -1,24 +1,24 @@
 ---
 solution: Experience Platform
 title: PQL-aggregatiefuncties
-description: Samenvoegfuncties worden gebruikt om meerdere waarden binnen PQL-arrays (Profile Query Language) te groeperen en één samenvattingswaarde te maken.
+description: Samenvoegfuncties worden gebruikt om meerdere waarden binnen Profile Query Language (PQL)-arrays te groeperen en één samenvattingswaarde te maken.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '227'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
 # Samenvoegingsfuncties
 
-Samenvoegfuncties worden gebruikt om meerdere waarden binnen [!DNL Profile Query Language] (PQL) tot één samenvattingswaarde. Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
+Samenvoegfuncties worden gebruikt om meerdere waarden binnen [!DNL Profile Query Language] (PQL) -arrays te groeperen en één samenvattingswaarde te maken. Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht ](./overview.md) worden gevonden.
 
 ## Aantal
 
-De `count` function retourneert het aantal elementen binnen de opgegeven array.
+De functie `count` retourneert het aantal elementen binnen de opgegeven array.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.count()
@@ -34,9 +34,9 @@ orders.count()
 
 ## Som
 
-De `sum` Deze functie retourneert de som van alle geselecteerde waarden binnen de array.
+De functie `sum` retourneert de som van alle geselecteerde waarden binnen de array.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.sum()
@@ -44,7 +44,7 @@ De `sum` Deze functie retourneert de som van alle geselecteerde waarden binnen d
 
 **Voorbeeld**
 
-De volgende vraag PQL keert de som van alle prijzen van orden terug.
+De volgende PQL-query retourneert de som van de prijzen van alle orders.
 
 ```sql
 orders.sum(order.price)
@@ -52,9 +52,9 @@ orders.sum(order.price)
 
 ## Gemiddelde
 
-De `average` Deze functie retourneert het rekenkundig gemiddelde van alle geselecteerde waarden binnen de array.
+De functie `average` retourneert het rekenkundig gemiddelde van alle geselecteerde waarden binnen de array.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.average()
@@ -62,7 +62,7 @@ De `average` Deze functie retourneert het rekenkundig gemiddelde van alle gesele
 
 **Voorbeeld**
 
-De volgende vraag PQL keert de gemiddelde prijs van alle orden terug.
+De volgende PQL-query retourneert de gemiddelde prijs van alle bestellingen.
 
 ```sql
 orders.average(order.price)
@@ -70,9 +70,9 @@ orders.average(order.price)
 
 ## Minimaal
 
-De `min` Deze functie retourneert het kleinste van alle geselecteerde waarden binnen de array.
+De functie `min` retourneert het laagste van alle geselecteerde waarden binnen de array.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.min()
@@ -80,7 +80,7 @@ De `min` Deze functie retourneert het kleinste van alle geselecteerde waarden bi
 
 **Voorbeeld**
 
-De volgende vraag PQL keert de laagste prijs van alle orden terug.
+De volgende PQL-query retourneert de laagste prijs van alle bestellingen.
 
 ```sql
 orders.min(order.price)
@@ -88,9 +88,9 @@ orders.min(order.price)
 
 ## Maximum
 
-De `max` functie retourneert de grootste van alle geselecteerde waarden binnen de array.
+De functie `max` retourneert de grootste van alle geselecteerde waarden binnen de array.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.max()
@@ -98,7 +98,7 @@ De `max` functie retourneert de grootste van alle geselecteerde waarden binnen d
 
 **Voorbeeld**
 
-De volgende vraag PQL keert de hoogste prijs van alle orden terug.
+De volgende PQL-query retourneert de hoogste prijs voor alle bestellingen.
 
 ```sql
 orders.max(order.price)
@@ -106,4 +106,4 @@ orders.max(order.price)
 
 ## Volgende stappen
 
-Nu u over samenvoegingsfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).
+Nu u over samenvoegingsfuncties hebt geleerd, kunt u hen binnen uw vragen van PQL gebruiken. Voor meer informatie over andere functies van PQL, te lezen gelieve het [ overzicht van Profile Query Language ](./overview.md).

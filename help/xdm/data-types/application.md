@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!UICONTROL Application] gegevenstype
 
-[!UICONTROL Application] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat details met betrekking tot interactie beschrijft die door een toepassing worden geproduceerd. Een toepassing verwijst naar een softwareervaring, zoals een mobiele toepassing of bureaubladtoepassing die door een eindgebruiker kan worden geïnstalleerd, uitgevoerd, gesloten of verwijderd. De eigenschappen voor dit gegevenstype zijn niet bedoeld voor het beschrijven van agents zoals chatbots, browsergebaseerde plug-ins of andere ervaringen die niet van toepassing zijn op toepassingen.
+[!UICONTROL Application] is een standaard XDM-gegevenstype (Experience Data Model) dat details beschrijft met betrekking tot interacties die door een toepassing worden gegenereerd. Een toepassing verwijst naar een softwareervaring, zoals een mobiele toepassing of bureaubladtoepassing die door een eindgebruiker kan worden geïnstalleerd, uitgevoerd, gesloten of verwijderd. De eigenschappen voor dit gegevenstype zijn niet bedoeld voor het beschrijven van agents zoals chatbots, browsergebaseerde plug-ins of andere ervaringen die niet van toepassing zijn op toepassingen.
 
 <img src="../images/data-types/application.PNG" width="500" /><br />
 
@@ -28,12 +28,12 @@ ht-degree: 0%
 | `upgrades` | [[!UICONTROL Measure]](./measure.md) | Bevat gegevens over de verbetering van een toepassing die eerder geïnstalleerd is. Dit wordt geactiveerd bij de eerste introductie na een upgrade. |
 | `id` | String | Een unieke id voor de toepassing. |
 | `name` | String | De naam van de toepassing. |
-| `userPerspective` | String | Het perspectief of de fysieke relatie tussen de gebruiker en de app of het merk op het moment dat een gebeurtenis plaatsvond. Als u het perspectief van de gebruiker ten opzichte van de app begrijpt, kunt u sessies op de juiste wijze genereren omdat het grootste deel van de tijd dat u niet wilt opnemen `background` en `detached` gebeurtenissen als onderdeel van een &quot;actieve&quot; sessie. De waarde van deze eigenschap moet gelijk zijn aan een van de onderstaande opsommingswaarden. <li> `foreground`: De gebruiker en de toepassing communiceren rechtstreeks met elkaar. </li> <li> `background`: De toepassing en de gebruiker communiceren indirect met elkaar. De app kan bijvoorbeeld een waarde meten en vernieuwen terwijl het scherm vergrendeld is of een andere app op de voorgrond wordt gebruikt.  </li> <li> `detached`: Ontkoppeld betekent dat de gebeurtenis gerelateerd was aan de app, maar niet rechtstreeks afkomstig was uit de app, zoals het verzenden van een e-mail of pushmelding vanuit een extern systeem. |
+| `userPerspective` | String | Het perspectief of de fysieke relatie tussen de gebruiker en de app of het merk op het moment dat een gebeurtenis plaatsvond. Als u het perspectief van de gebruiker ten opzichte van de app begrijpt, kunt u beter sessies op de juiste wijze genereren omdat het grootste deel van de tijd dat u `background` - en `detached` -gebeurtenissen niet wilt opnemen in een &quot;actieve&quot; sessie. De waarde van deze eigenschap moet gelijk zijn aan een van de onderstaande opsommingswaarden. <li> `foreground`: de gebruiker en de toepassing communiceren rechtstreeks met elkaar. </li> <li> `background`: de toepassing en de gebruiker communiceren indirect met elkaar. De app kan bijvoorbeeld een waarde meten en vernieuwen terwijl het scherm vergrendeld is of een andere app op de voorgrond wordt gebruikt.  </li> <li> `detached`: Ontkoppeld betekent dat de gebeurtenis aan de app is gerelateerd, maar niet rechtstreeks uit de app is gekomen, zoals het verzenden van een e-mail- of pushmelding vanuit een extern systeem. |
 | `version` | String | De versie van de toepassing. |
 
 {style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.schema.json)

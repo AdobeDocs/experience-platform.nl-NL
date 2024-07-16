@@ -22,12 +22,12 @@ ht-degree: 55%
 * Gegevensverzameling {#data-collection}
    * [Gegevensverzameling voor één gebeurtenis](interactive-data-collection.md)
    * [Batch-gebeurtenisgegevensverzameling](non-interactive-data-collection.md)
-* Interactie met andere Adobe oplossingen {#interacting-other-adobe-solutions}
+* Interactie met andere Adobe-oplossingen {#interacting-other-adobe-solutions}
    * [Interactie met Adobe Analytics](interacting-adobe-analytics.md)
 * Personalisatie {#personalization}
-   * [Overzicht van personalisatie](personalization-overview.md)
-   * [Personalisatie via Adobe Target](personalization-target.md)
-   * [Personalisatie via Offer decisioning](personalization-offer-decisioning.md)
+   * [Personalization-overzicht](personalization-overview.md)
+   * [Personalization via Adobe Target](personalization-target.md)
+   * [Personalization via Offer decisioning](personalization-offer-decisioning.md)
 * [Tips voor locatie](location-hints.md)
 * [Foutafhandeling](error-handling.md)
 * [Problemen oplossen](troubleshooting.md)

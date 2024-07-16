@@ -1,35 +1,35 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Azure Data Lake Storage Gen2;azure data Lake storage;Azure
 solution: Experience Platform
-title: Een Azure Data Lake Storage Gen2 Base Connection maken met de Flow Service API
+title: Een Azure Data Lake Storage Gen2 Base Connection maken met behulp van de Flow Service API
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met Azure Data Lake Storage Gen2 met behulp van de Flow Service API.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 1%
+source-wordcount: '502'
+ht-degree: 0%
 
 ---
 
-# Een [!DNL Azure Data Lake Storage Gen2] basisverbinding met de [!DNL Flow Service] API
+# Een [!DNL Azure Data Lake Storage Gen2] basisverbinding maken met de [!DNL Flow Service] API
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL Azure Data Lake Storage Gen2] (hierna &quot;ADLS Gen2&quot; genoemd) met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Azure Data Lake Storage Gen2] tot stand te brengen (verder die als &quot;ADLS Gen2&quot;worden bedoeld) gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele instantie van het Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxes ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om tot een bron van ADLS Gen2 te leiden verbinding gebruikend [!DNL Flow Service] API.
+De volgende secties bevatten aanvullende informatie die u moet weten om een ADLS Gen2-bronverbinding met de [!DNL Flow Service] API te kunnen maken.
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] Als u verbinding wilt maken met ADLS Gen2, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+[!DNL Flow Service] kan alleen verbinding maken met ADLS Gen2 als u waarden opgeeft voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -37,21 +37,21 @@ Om [!DNL Flow Service] Als u verbinding wilt maken met ADLS Gen2, moet u waarden
 | `servicePrincipalId` | De client-id van de toepassing. |
 | `servicePrincipalKey` | De sleutel van de toepassing. |
 | `tenant` | De huurdersinformatie die uw toepassing bevat. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor ADLS Gen2 is: `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor ADLS Gen2 is: `b3ba5556-48be-44b7-8b85-ff2b69b46dc4` . |
 
-Zie voor meer informatie over deze waarden [dit ADLS Gen2-document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
+Voor meer informatie over deze waarden, verwijs naar [ dit document van ADLS Gen2 ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw geloofsbrieven van de authentificatie ADLS Gen2 als deel van de verzoekparameters.
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw authentificatie ADLS Gen2 als deel van de verzoekparameters.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /connections
@@ -94,11 +94,11 @@ curl -X POST \
 | `auth.params.servicePrincipalId` | De service principal ID van uw ADLS Gen2-account. |
 | `auth.params.servicePrincipalKey` | De belangrijkste servicetoets van uw ADLS Gen2-account. |
 | `auth.params.tenant` | De huurdersinformatie van uw account van ADLS Gen2. |
-| `connectionSpec.id` | De ID van de ADLS Gen2-verbindingsspecificatie: `b3ba5556-48be-44b7-8b85-ff2b69b46dc41`. |
+| `connectionSpec.id` | The ADLS Gen2 connection specification ID: `b3ba5556-48be-44b7-8b85-ff2b69b46dc41`. |
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist in de volgende stap om een bronverbinding te maken.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een bronverbinding te maken.
 
 ```json
 {
@@ -109,4 +109,4 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een ADLS Gen2-verbinding gemaakt met behulp van API&#39;s en is een unieke id opgehaald als onderdeel van de responsstructuur. U kunt deze verbindings-id gebruiken om [verkennen van cloudopslag met de Flow Service API](../../explore/cloud-storage.md).
+Door deze zelfstudie te volgen, hebt u een ADLS Gen2-verbinding gemaakt met behulp van API&#39;s en is een unieke id opgehaald als onderdeel van de responsstructuur. U kunt deze verbindingsidentiteitskaart gebruiken om [ wolkenopslag te onderzoeken gebruikend de Dienst API van de Stroom ](../../explore/cloud-storage.md).

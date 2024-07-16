@@ -22,7 +22,7 @@ ht-degree: 20%
    - [Logica voor identiteitskoppeling](./features/identity-linking-logic.md)
    - [Naamgrafiekviewer](./features/identity-graph-viewer.md)
    - [Verwijderen in identiteitsservice](./features/deletion.md)
-   - Koppelingsregels voor identiteitsgrafiek {#identity-graph-linking-rules}
+   - Regels voor identiteitsgrafiek koppelen {#identity-graph-linking-rules}
       - [Overzicht van functies](./identity-graph-linking-rules/overview.md)
       - [Algoritme voor identiteitsoptimalisatie](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Prioriteit naamruimte](./identity-graph-linking-rules/namespace-priority.md)
@@ -33,7 +33,7 @@ ht-degree: 20%
    - [ECID-overzicht](./features/ecid.md)
 - [Implementatiehandleiding](implementation.md)
 - [Guardrails voor identiteitsgegevens](guardrails.md)
-- Identity Service API {#api}
+- Identiteitsservice-API {#api}
    - [Aan de slag](api/getting-started.md)
    - [Een veld als identiteit labelen](api/label-identities.md)
    - [Clusteridentiteiten weergeven](api/list-cluster-identites.md)
@@ -42,9 +42,9 @@ ht-degree: 20%
    - [Beschikbare naamruimten weergeven](api/list-namespaces.md)
    - [Een aangepaste naamruimte maken](api/create-custom-namespace.md)
    - [Native id weergeven voor een identiteit](api/list-native-id.md)
-   - [API-referentie](https://www.adobe.io/experience-platform-apis/references/identity-service)
+   - [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [Gedeelde apparaatdetectie](shared-device-detection.md)
 - [Identiteitsvelden definiëren in de gebruikersinterface](label-identities.md)
 - [Verwerking van privacyverzoeken](privacy.md)
 - [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-- [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

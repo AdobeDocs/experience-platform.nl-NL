@@ -49,7 +49,7 @@ Bepaalde velden worden rechtstreeks toegewezen vanuit Adobe Analytics naar het X
 | `ipv6` | `environment.ipV6` | string |
 | `j_jscript` | `environment.browserDetails.javaScriptVersion` | string | De versie van JavaScript die door de browser wordt ondersteund. |
 | `user_agent` | `environment.browserDetails.userAgent` | string | De userAgent-tekenreeks die in de HTTP-header wordt verzonden. |
-| `mobileappid` | `application.name` | string | De mobiele toepassings-id wordt opgeslagen in de volgende indeling: `[AppName][BundleVersion]`. |
+| `mobileappid` | `application.name` | string | De mobiele toepassings-id, opgeslagen in de volgende indeling: `[AppName][BundleVersion]`. |
 | `mobiledevice` | `device.model` | string | De naam van het mobiele apparaat. In iOS wordt de notatie opgeslagen als een door komma&#39;s gescheiden tekenreeks van 2 cijfers. Het eerste getal vertegenwoordigt de apparaatgeneratie en het tweede getal vertegenwoordigt de apparaatfamilie. |
 | `pointofinterest` | `placeContext.POIinteraction.POIDetail.`<br/>`name` | string | Wordt gebruikt door mobiele services. Vertegenwoordigt het aandachtspunt. |
 | `pointofinterestdistance` | `placeContext.POIinteraction.POIDetail.`<br/>`geoInteractionDetails.distanceToCenter` | getal | Wordt gebruikt door mobiele services. Geeft de afstand van het punt van de belangstelling aan. |
@@ -120,12 +120,12 @@ Bepaalde velden worden rechtstreeks toegewezen vanuit Adobe Analytics naar het X
 
 ## Gekoppelde toewijzingsvelden
 
-Deze velden hebben één bron, maar toewijzen aan **meerdere** XDM-locaties.
+Deze gebieden hebben één enkele bron, maar kaart aan **veelvoudige** plaatsen XDM.
 
 | Veld Analyse | XDM-veld | XDM-type | Beschrijving |
 | --------------- | --------- | -------- | ---------- |
-| `s_resolution` | `device.screenWidth`,<br/>`device.screenHeight` | integer | Numerieke id die de resolutie van de monitor vertegenwoordigt. |
-| `mobileosversion` | `environment.operatingSystem`,<br/>`environment.operatingSystemVersion` | string | Versie van mobiel besturingssysteem. |
+| `s_resolution` | `device.screenWidth`, <br/>`device.screenHeight` | integer | Numerieke id die de resolutie van de monitor vertegenwoordigt. |
+| `mobileosversion` | `environment.operatingSystem`, <br/>`environment.operatingSystemVersion` | string | Versie van mobiel besturingssysteem. |
 | `videoadlength` | `advertising.adAssetReference._xmpDM.duration` | integer | Lengte van video-advertentie. |
 
 {style="table-layout:auto"}
@@ -141,7 +141,7 @@ Selecteer velden die afkomstig zijn van ADC moeten worden getransformeerd, waarb
 | `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Aangepaste analytische lijstvariabelen. Bevat een lijst met gescheiden waarden. | {value (string), key (string)} |
 | `m_color` | `device.colorDepth` | integer | De kleurdiepte-id, die is gebaseerd op de waarde van de kolom c_color. |
 | `m_cookies` | `environment.browserDetails.cookiesEnabled` | boolean | Een variabele die in de dimensie van de Steun van het Koekje wordt gebruikt. |
-| `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | De standaard handelgebeurtenissen teweegbrachten op de slag. | {id (string), value (number)} |
+| `m_event_list` | `commerce.purchases`, <br/>`commerce.productViews`, <br/>`commerce.productListOpens`, <br/>`commerce.checkouts`, <br/>`commerce.productListAdds`, <br/>`commerce.productListRemovals`, <br/>`commerce.productListViews` | Object | De standaard handelgebeurtenissen teweegbrachten op de slag. | {id (string), value (number)} |
 | `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Aangepaste gebeurtenissen die worden geactiveerd tijdens de hit. | {id (Object), value (Object)} |
 | `m_geo_country` | `placeContext.geo.countryCode` | string | Afkorting van het land waar de treffer vandaan kwam, dat van het OT is gebaseerd. |
 | `m_geo_latitude` | `placeContext.geo._schema.latitude` | getal | <!-- MISSING --> |
@@ -155,7 +155,7 @@ Selecteer velden die afkomstig zijn van ADC moeten worden getransformeerd, waarb
 | `m_pagename_no_url` | `web.webPageDetails.name` | getal | De naam van de pagina (indien ingesteld). Als er geen pagina is opgegeven, blijft deze waarde leeg. |
 | `m_paid_search` | `search.isPaid` | boolean | Een vlag die wordt geplaatst als de treffer betaalde onderzoeksopsporing aanpast. |
 | `m_product_list` | `productListItems[].items` | array | De productlijst, zoals die door de productvariabele wordt overgegaan. | {SKU (tekenreeks), quantity (geheel getal), priceTotal (getal)} |
-| `m_ref_type` | `web.webReferrer.type` | string | Een numerieke id die het verwijzingstype voor de treffer vertegenwoordigt.<br/>`1`: In uw site<br/>`2`: Overige websites<br/>`3`: Zoekprogramma&#39;s<br/>`4`: Harde schijf<br/>`5`: USENET<br/>`6`: Typed/Bookmark (geen referentie)<br/>`7`: e-mail<br/>`8`: Geen JavaScript<br/>`9`: Sociale netwerken |
+| `m_ref_type` | `web.webReferrer.type` | string | Een numerieke id die het verwijzingstype voor de treffer vertegenwoordigt.<br/>`1`: Binnen uw plaats <br/>`2`: Andere websites <br/>`3`: de motoren van het onderzoek <br/>`4`: Harde aandrijving <br/>`5`: USENET <br/>`6`: Typed/Bladwijzer (geen verwijzer) <br/>`7`: E-mail <br/>`8`: Geen JavaScript <br/>`9`: Sociale Netwerken |
 | `m_search_engine` | `search.searchEngine` | string | De numerieke id die staat voor het zoekprogramma waarmee de bezoeker naar uw site is doorverwezen. |
 | `post_currency` | `commerce.order.currencyCode` | string | De valutacode die tijdens de transactie werd gebruikt. |
 | `post_cust_hit_time_gmt` | `timestamp` | string | Dit wordt slechts gebruikt in timestamp-Toegelaten datasets. Dit is de tijdstempel die met de hit wordt verzonden, op basis van UNIX®-tijd. |
@@ -164,8 +164,8 @@ Selecteer velden die afkomstig zijn van ADC moeten worden getransformeerd, waarb
 | `post_cust_visid` | `endUserIDs._experience.aacustomid.namespace.code` | string | De bezoeker-id van de klant. |
 | `post_visid_high` + `visid_low` | `identityMap` | object | Een unieke id voor een bezoek. |
 | `post_visid_high` + `visid_low` | `endUserIDs._experience.aaid.id` | string | Een unieke id voor een bezoek. |
-| `post_visid_high` | `endUserIDs._experience.aaid.primary` | boolean | Gebruikt met `visid_low` om een bezoek op unieke wijze te identificeren. |
-| `post_visid_high` | `endUserIDs._experience.aaid.namespace.code` | string | Gebruikt met `visid_low` om een bezoek op unieke wijze te identificeren. |
+| `post_visid_high` | `endUserIDs._experience.aaid.primary` | boolean | Wordt samen met `visid_low` gebruikt om een bezoek op unieke wijze te identificeren. |
+| `post_visid_high` | `endUserIDs._experience.aaid.namespace.code` | string | Wordt samen met `visid_low` gebruikt om een bezoek op unieke wijze te identificeren. |
 | `post_visid_low` | `identityMap` | object | Gebruikt met visid_high om een bezoek uniek te identificeren. |
 | `hit_time_gmt` | `receivedTimestamp` | string | De tijdstempel van de hit, gebaseerd op UNIX®-tijd. |
 | `hitid_high` + `hitid_low` | `_id` | string | Een unieke id om een treffer te identificeren. |
@@ -188,7 +188,7 @@ Selecteer velden die afkomstig zijn van ADC moeten worden getransformeerd, waarb
 
 Selecteer velden (ook wel &quot;postwaarden&quot; genoemd) die gegevens bevatten nadat de Adobe de waarden ervan heeft aangepast met de verwerkingsregels, de VISTA-regels en de opzoektabellen. De meeste postwaarden hebben een vooraf verwerkte tegenhanger. Uw organisatie kan beslissen of u het pre-verwerkte gebied, post-verwerkt gebied, of allebei wilt gebruiken.
 
-Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [Adobe-gedefinieerde functies](/help/query-service/sql/adobe-defined-functions.md) in de gebruikersgids van de Dienst van de Vraag.
+Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [ Adobe-bepaalde functies ](/help/query-service/sql/adobe-defined-functions.md) in de gebruikersgids van de Dienst van de Vraag.
 
 | Veld Analyse | XDM-veld | XDM-type | Beschrijving |
 | --------------- | --------- | -------- | ---------- |
@@ -227,7 +227,7 @@ Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van d
 | `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Wordt gebruikt door hiërarchievariabelen en bevat een lijst met waarden die zijn gescheiden door scheidingstekens. | {values (array), delimiter (tekenreeks)} |
 | `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Een lijst met variabelewaarden. Bevat een lijst met gescheiden waarden, afhankelijk van de implementatie. | {value (string), key (string)} |
 | `post_cookies` | `environment.browserDetails.cookiesEnabled` | boolean | Variabele die in de dimensie van de Steun van het Koekje wordt gebruikt. |
-| `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | De standaard handelgebeurtenissen teweegbrachten op de slag. | {id (string), value (number)} |
+| `post_event_list` | `commerce.purchases`, <br/>`commerce.productViews`, <br/>`commerce.productListOpens`, <br/>`commerce.checkouts`, <br/>`commerce.productListAdds`, <br/>`commerce.productListRemovals`, <br/>`commerce.productListViews` | Object | De standaard handelgebeurtenissen teweegbrachten op de slag. | {id (string), value (number)} |
 | `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Aangepaste gebeurtenissen die worden geactiveerd tijdens de hit. | {id (Object), value (Object)} |
 | `post_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | Een vlag die aangeeft of Java™ is ingeschakeld. |
 | `post_latitude` | `placeContext.geo._schema.latitude` | getal | <!-- MISSING --> |

@@ -20,15 +20,15 @@ De zelfidentificatiecode-enquête is een korte vragenlijst die wordt weergegeven
 
 Dit document verstrekt informatie over hoe u het zelf-identificatieonderzoek in het Platform UI kunt gebruiken om relevante inhoud te ontvangen die op uw doelstellingen en taken wordt gebaseerd, evenals hoe te om uw persoonlijke profielattributen opnieuw te vormen gebruikend UI.
 
-Lees voor meer informatie over Adobe Experience Platform de [Overzicht van Experience Platform](home.md).
+Om meer over Adobe Experience Platform te leren, te lezen gelieve het [ overzicht van het Experience Platform ](home.md).
 
 ## Zelfidentificatieonderzoek in de gebruikersinterface van het platform
 
 De zelfidentificatiemethode van de enquêteherinnering verschijnt in het bodemrecht van de homepage van het Platform UI wanneer het ondertekenen binnen.
 
-Als u wilt beginnen met de enquête, selecteert u **[!UICONTROL Start]**.
+Selecteer **[!UICONTROL Start]** om met de enquête te beginnen.
 
-![De homepage van UI van het Platform met het pop-upbericht die u ertoe aanzet om het zelf-identificatieonderzoek te beginnen.](./images/survey/survey-prompt.png)
+![ de homepage UI van het Platform met het pop-upbericht die u ertoe aanzetten om het zelf-identificatieonderzoek te beginnen.](./images/survey/survey-prompt.png)
 
 Voor de eerste enquêtevraag selecteert u de functie die het beste uw werk beschrijft.
 
@@ -42,11 +42,11 @@ De beschikbare opties zijn:
 
 >[!NOTE]
 >
->U kunt meerdere functies selecteren in de lijst met opties. Als u [!UICONTROL Other], wordt u gevraagd om details over uw doel op te geven.
+>U kunt meerdere functies selecteren in de lijst met opties. Als u [!UICONTROL Other] selecteert, wordt u gevraagd details over uw doel op te geven.
 
-Selecteer de functie(s) die het beste uw huidige werk beschrijft en selecteer **[!UICONTROL Next]**.
+Selecteer de functie(s) die het beste uw huidige werk beschrijft en selecteer vervolgens **[!UICONTROL Next]** om door te gaan.
 
-![De zelfidentificatiecode van de enquête waarbij twee functies zijn geselecteerd.](./images/survey/select-functions.png)
+![ het zelf-identificatieonderzoek met twee geselecteerde baanfuncties.](./images/survey/select-functions.png)
 
 Selecteer vervolgens de specifieke doelstelling(en) die het beste op uw werk van toepassing is.
 
@@ -65,13 +65,13 @@ De lijst met beschikbare doelstellingen omvat:
 * Stel dashboards in om de zakelijke impact te analyseren
 * Gegevens naar doelen activeren voor downstreamgerichte toepassingen
 
-Selecteer **[!UICONTROL Submit]**.
+Selecteer **[!UICONTROL Submit]** als u klaar bent.
 
-![De zelfidentificatiecode die een lijst met doelstellingen weergeeft die u kunt selecteren.](./images/survey/select-objectives.png)
+![ het zelf-identificatieonderzoek dat een lijst van doelstellingen toont die u van kunt selecteren.](./images/survey/select-objectives.png)
 
-Als uw zelfidentificatie-enquête is voltooid, selecteert u **[!UICONTROL Done]**.
+Selecteer **[!UICONTROL Done]** terwijl uw zelfidentificatiecode-enquête is voltooid.
 
-![De laatste, bevestigingsstap van de zelfidentificatiecode.](./images/survey/survey-complete.png)
+![ de definitieve, bevestigingsstap van het zelf-identificatieonderzoek.](./images/survey/survey-complete.png)
 
 >[!NOTE]
 >
@@ -79,18 +79,18 @@ Als uw zelfidentificatie-enquête is voltooid, selecteert u **[!UICONTROL Done]*
 
 ## Antwoorden van enquêtes bijwerken
 
-Werk uw taakfuncties en objecten bij met het voorkeurenmenu Experience Cloud. Als u het voorkeurenmenu wilt openen, selecteert u het profielpictogram in de bovenste navigatie en selecteert u vervolgens **[!UICONTROL Preferences]**.
+Werk uw taakfuncties en objecten bij met het voorkeurenmenu Experience Cloud. Als u het voorkeurenmenu wilt openen, selecteert u het profielpictogram in de bovenste navigatie en selecteert u vervolgens **[!UICONTROL Preferences]** .
 
-![De startpagina van de gebruikersinterface van het platform met het profielpictogram en de voorkeursknoppen geselecteerd.](./images/survey/preferences.png)
+![ de homepage UI van het Platform met het profielpictogram en de geselecteerde voorkeurenknoppen.](./images/survey/preferences.png)
 
-Volgende, in [!UICONTROL General] in het menu met uw profielvoorkeuren selecteert u **[!UICONTROL Update your job functions and objectives]**.
+Selecteer vervolgens **[!UICONTROL Update your job functions and objectives]** in de sectie [!UICONTROL General] van het menu met uw profielvoorkeuren.
 
-![Het algemene gedeelte van de pagina met voorkeuren voor platformgebruikersinterface](./images/survey/update.png)
+![ de algemene sectie van de het profielvoorkeur van het Platform UI pagina ](./images/survey/update.png)
 
 De zelfidentificatiecode wordt weergegeven, zodat u de reacties opnieuw kunt configureren en uw profiel kunt bijwerken.
 
-![De pagina met voorkeuren voor het gebruikersprofiel van het platform waarop de zelfidentificatie-enquête wordt weergegeven, zodat een gebruiker zijn persoonlijke profiel kan bijwerken.](./images/survey/new-survey.png)
+![ de pagina van de het profielvoorkeur van het Platform UI die het zelf-identificatieonderzoek toont om een gebruiker toe te staan om hun persoonlijk profiel bij te werken.](./images/survey/new-survey.png)
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu informatie over uw taakfuncties en -doelstellingen verzonden en bijgewerkt om meer relevante inhoud te ontvangen wanneer u de interface van het platform gebruikt. Voor meer informatie over de interface van het Platform, lees [Overzicht van Experience Platform](home.md).
+Door dit document te lezen, hebt u nu informatie over uw taakfuncties en -doelstellingen verzonden en bijgewerkt om meer relevante inhoud te ontvangen wanneer u de interface van het platform gebruikt. Voor meer informatie over Platform UI, lees het [ overzicht van het Experience Platform ](home.md).

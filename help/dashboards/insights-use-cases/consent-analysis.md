@@ -19,18 +19,18 @@ In dit document wordt beschreven hoe u een toestemmingsdashboard kunt maken voor
 
 De in deze handleiding behandelde gevallen van gebruik zijn het trenderen van de toestemming en het overlappen van de toestemming.
 
-- **Constante trending** volgt hoe de gebruikerstoestemming in tijd is geëvolueerd. Het analyseren van toestemmingsvoorkeursveranderingen helpt marketers campagnes te plannen en campagnes uit te voeren die zich aan die veranderingen van de gebruikersvoorkeur aanpassen. U kunt bijvoorbeeld gerichte educatieve campagnes, transparantie- en vertrouwenscampagnes of stimulerende campagnes voor het aansturen van toestemmingskeuzes voeren. U zou ook campagnes kunnen correleren die negatieve gevolgen kunnen hebben gehad voor de toestemming om de frequentie van die campagnes proactief te verminderen.
-- **Overlap van toestemming** gebruikt de overlapping tussen toestemmingskanalen om verenigbare gepersonaliseerde overseinen op veelvoudige kanalen voor uw klanten te leveren die aan veelvoudige kanalen hebben goedgekeurd. De verkopers kunnen aan bepaalde kanalen voorrang geven en middelen toewijzen waar een hogere graad van toestemming en gepersonaliseerd overseinen met klanten zou kunnen resoneren en hogere reactieaantallen produceren.
+- **Consent trending** volgt hoe de gebruikerstoestemming in tijd is getrand. Het analyseren van toestemmingsvoorkeursveranderingen helpt marketers campagnes te plannen en campagnes uit te voeren die zich aan die veranderingen van de gebruikersvoorkeur aanpassen. U kunt bijvoorbeeld gerichte educatieve campagnes, transparantie- en vertrouwenscampagnes of stimulerende campagnes voor het aansturen van toestemmingskeuzes voeren. U zou ook campagnes kunnen correleren die negatieve gevolgen kunnen hebben gehad voor de toestemming om de frequentie van die campagnes proactief te verminderen.
+- **overlap van de Goedkeuring** gebruikt de overlapping onder toestemmingskanalen om verenigbaar gepersonaliseerd overseinen op veelvoudige kanalen voor uw klanten te leveren die met veelvoudige kanalen hebben ingestemd. De verkopers kunnen aan bepaalde kanalen voorrang geven en middelen toewijzen waar een hogere graad van toestemming en gepersonaliseerd overseinen met klanten zou kunnen resoneren en hogere reactieaantallen produceren.
 
 ## Goedgekeurd publiek maken {#create-consent-audiences}
 
-Om een toestemmingsdashboard te bouwen, moet u eerst een publiek van alle profielen tot stand brengen die aan contact hebben goedgekeurd. Als u naar de Real-time Customer Data Platform Segment Builder wilt navigeren, selecteert u **[!UICONTROL Audiences]** in de linkernavigatie van Platform UI. Van de [!UICONTROL Customer] tabblad van het [!UICONTROL Audiences] dashboard, selecteren **[!UICONTROL Create audience]** in de rechterbovenhoek van de weergave, en vervolgens **[!UICONTROL Build rules]**.
+Om een toestemmingsdashboard te bouwen, moet u eerst een publiek van alle profielen tot stand brengen die aan contact hebben goedgekeurd. Als u naar de Real-time Customer Data Platform Segment Builder wilt navigeren, selecteert u **[!UICONTROL Audiences]** in de linkernavigatie van de gebruikersinterface van het platform. Selecteer op het tabblad [!UICONTROL Customer] van het [!UICONTROL Audiences] dashboard **[!UICONTROL Create audience]** in de rechterbovenhoek van de weergave en vervolgens **[!UICONTROL Build rules]** .
 
-![De [!UICONTROL Audiences] dashboard met [!UICONTROL Customer], [!UICONTROL Audiences], en [!UICONTROL Create segment] gemarkeerd.](../images/insights-use-cases/consent-analysis/create-audience.png)
+![ het [!UICONTROL Audiences] dashboard met [!UICONTROL Customer], [!UICONTROL Audiences], en [!UICONTROL Create segment] benadrukte.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
-De Segment Builder wordt weergegeven. Selecteer vervolgens **[!UICONTROL XDM Individual Profile]** uit de beschikbare opties. Zie de documentatie voor meer informatie over de [regelbouwcanvas](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
+De Segment Builder wordt weergegeven. Selecteer vervolgens **[!UICONTROL XDM Individual Profile]** uit de beschikbare opties. Zie de documentatie voor meer informatie over het [ canvas van de regelbouwer ](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
 
-![De Segment Builder met de [!UICONTROL XDM Individual Profile] kenmerkmap gemarkeerd.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
+![ de Bouwer van het Segment met de [!UICONTROL XDM Individual Profile] benadrukte attributenomslag.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
 
 Zoek uw toestemmingskenmerken uit de beschikbare opties. Selecteer **[!UICONTROL Consents and Preferences]**.
 
@@ -38,29 +38,29 @@ Zoek uw toestemmingskenmerken uit de beschikbare opties. Selecteer **[!UICONTROL
 >
 >Als u uw toestemming van de gebruiker in een attribuut verschillend aan de Adobe geadviseerde gebiedsgroep hebt gehandhaafd, dan moet u die attributen in plaats van hieronder getoond selecteren.
 
-Meer informatie is te vinden op de [behandeling van toestemming in segmentatie](../../segmentation/consents.md#handling-consent-in-segmentation) documentatie.
+Meer informatie kan op de [ behandeling van toestemming in segmentatie ](../../segmentation/consents.md#handling-consent-in-segmentation) documentatie worden gevonden.
 
-![De Segment Builder met de [!UICONTROL Consent and Preferences] kenmerkmap gemarkeerd.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
+![ de Bouwer van het Segment met de [!UICONTROL Consent and Preferences] benadrukte attributenomslag.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
-De verschillende toestemmings en voorkeursopties worden getoond. Aangezien deze demonstratie zich richt op toestemming om via verschillende marketingkanalen contact te maken, selecteert u **[!UICONTROL Marketing Preferences]**.
+De verschillende toestemmings en voorkeursopties worden getoond. Aangezien deze demonstratie zich richt op toestemming om via verschillende marketingkanalen contact te maken, selecteert u **[!UICONTROL Marketing Preferences]** .
 
-![De Segment Builder met de [!UICONTROL Marketing Preferences] gemarkeerde map.](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
+![ de Bouwer van het Segment met de [!UICONTROL Marketing Preferences] benadrukte omslag.](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
 
 De lijst met marketingvoorkeuren wordt weergegeven. Hoewel in dit voorbeeld gebruik wordt gemaakt van hoofdletters en kleine letters, richt u zich op e-mail, SMS en aanroepen, maar kunt u ook inzichten maken voor elke andere combinatie of voor alle opties. Voer voor elk kanaal de onderstaande stappen uit om een publiek te maken.
 
-Als u een publiek wilt configureren, selecteert u **[!UICONTROL Receive SMS]** / **[!UICONTROL Receive email]** / **[!UICONTROL Receive calls]**.
+Selecteer **[!UICONTROL Receive SMS]** / **[!UICONTROL Receive email]** / **[!UICONTROL Receive calls]** om een publiek te configureren.
 
-![De beschikbare contactkanalen voor marketing worden benadrukt in de publieksbouwer.](../images/insights-use-cases/consent-analysis/channels.png)
+![ de beschikbare contactkanalen voor marketing worden benadrukt in de publieksbouwer.](../images/insights-use-cases/consent-analysis/channels.png)
 
-De [!UICONTROL Subscriptions] wordt weergegeven. Selecteer en sleep de **[!UICONTROL Choice Value]** aan de centrumruit, dan selecteer de gewenste waarde van drop-down. In dit geval selecteert u **Ja (aanmelden)**. Geef het publiek vervolgens een naam op basis van uw zakelijke behoeften en geef een gebruikersvriendelijke beschrijving.
+De map [!UICONTROL Subscriptions] wordt weergegeven. Selecteer en sleep het kenmerk **[!UICONTROL Choice Value]** vanuit de beschikbare opties naar het middelste venster en selecteer vervolgens de gewenste waarde in het keuzemenu. In dit geval, uitgezochte **ja (opt binnen)**. Geef het publiek vervolgens een naam op basis van uw zakelijke behoeften en geef een gebruikersvriendelijke beschrijving.
 
 >[!NOTE]
 >
->Er geldt een zachte limiet voor het aantal soorten publiek dat u kunt maken. Meer informatie vindt u in de [documentatie over segmentatiegids](../../profile/guardrails.md#segmentation-guardrails).
+>Er geldt een zachte limiet voor het aantal soorten publiek dat u kunt maken. De meer informatie kan in de [ documentatie van de segmentgidsen ](../../profile/guardrails.md#segmentation-guardrails) worden gevonden.
 
-![De [!UICONTROL Choice Value] kenmerk met de [!UICONTROL Yes (opt-in)] waarde die in de segmentbouwer wordt benadrukt. De naam en beschrijving van het publiek worden ook gemarkeerd.](../images/insights-use-cases/consent-analysis/choice-value.png)
+![ het [!UICONTROL Choice Value] attribuut met de [!UICONTROL Yes (opt-in)] waarde die in de segmentbouwer wordt benadrukt. De naam en beschrijving van het publiek worden ook benadrukt.](../images/insights-use-cases/consent-analysis/choice-value.png)
 
-Nadat u het vereiste publiek hebt gemaakt, worden deze weergegeven in het dialoogvenster [!UICONTROL Audiences] [!UICONTROL Browse] tab.
+Nadat u het vereiste publiek hebt gemaakt, worden deze weergegeven op het tabblad [!UICONTROL Audiences] [!UICONTROL Browse] .
 
 >[!NOTE]
 >
@@ -68,94 +68,94 @@ Nadat u het vereiste publiek hebt gemaakt, worden deze weergegeven in het dialoo
 
 ## Inzichten consumeren {#consume-insights}
 
-Adobe heeft verschillende inzichten gemaakt die automatisch voor u beschikbaar zijn in de dashboards Profielen, Soorten publiek en Doelen. Elk publiek dat u maakt, is dan automatisch bruikbaar met deze vooraf geconfigureerde inzichten. Zie de standaardwidgetdocumentatie voor een lijst van de inzichten beschikbaar in [Profielen](../guides/profiles.md#standard-widgets), [Soorten publiek](../guides/audiences.md#standard-widgets), en [Doelen](../guides/destinations.md) dashboards.
+Adobe heeft verschillende inzichten gemaakt die automatisch voor u beschikbaar zijn in de dashboards Profielen, Soorten publiek en Doelen. Elk publiek dat u maakt, is dan automatisch bruikbaar met deze vooraf geconfigureerde inzichten. Zie de standaardwidgetdocumentatie voor een lijst van de inzichten beschikbaar in [ Profielen ](../guides/profiles.md#standard-widgets), [ Soorten publiek ](../guides/audiences.md#standard-widgets), en [ Doelen ](../guides/destinations.md) dashboards van Doelen.
 
 ## Audioverlap {#audience-overlap}
 
-Als u de overlapping tussen twee toestemmingssoorten wilt bekijken, voegt u de opdracht [!UICONTROL Audience overlap by merge policy] naar het dashboard Profielen en selecteer het gewenste publiek in de vervolgkeuzemenu&#39;s. Zie de documentatie voor instructies over het toevoegen van een widget aan het dashboard als [*Publiek overlapt door samenvoegbeleid*](../guides/profiles.md#audience-overlap-by-merge-policy) voor meer informatie over inzicht.
+Als u de overlapping tussen twee toestemmingssoorten wilt controleren, voegt u de [!UICONTROL Audience overlap by merge policy] toe aan het dashboard Profielen en selecteert u het gewenste publiek in de vervolgkeuzemenu&#39;s. Zie de documentatie voor instructies op hoe te om een widget aan uw dashboard toe te voegen de [*overlap van het Publiek door beleid*](../guides/profiles.md#audience-overlap-by-merge-policy) voor meer informatie over het inzicht samen te voegen.
 
 <!-- Image needs updating to night mode -->
 
-![Het dashboard Profielen met de Audience-overlap door de gemarkeerde widget voor samenvoegbeleid. De widgetweergave overlapt twee toestemmingssoorten.](../images/insights-use-cases/consent-analysis/audience-overlap-by-merge-policy.png)
+![ het dashboard van Profielen met het publiek overlapt door benadrukte widget van het fusiebeleid. De widgetvisulaizes overlapt tussen twee toestemmingspubliek.](../images/insights-use-cases/consent-analysis/audience-overlap-by-merge-policy.png)
 
-U kunt de overlapping van alle publiek bekijken waar de gebruikers hebben goedgekeurd om vraag over alle andere publiek te ontvangen, met het Publiek overlappend rapport in het Publiek dashboard. Navigeer eerst naar de [!UICONTROL Audiences] [!UICONTROL Overview] tab. Vanaf dat punt kunt u de [!UICONTROL Audience overlap report] widget naar het dashboard Soorten publiek. Nadat de widget is gemaakt, selecteert u de **[!UICONTROL User consented to calls]** publiek in het overzicht van het vervolgkeuzemenu voor het publiek boven aan de pagina. Selecteer vervolgens **[!UICONTROL View more]** in de widget voor het samenvattingsrapport van de doelgroep om maximaal 50 van de bovenste overlap en maximaal 50 van de minst overeenkomende overlap met betrekking tot het geselecteerde segment weer te geven.
+U kunt de overlapping van alle publiek bekijken waar de gebruikers hebben goedgekeurd om vraag over alle andere publiek te ontvangen, met het Publiek overlappend rapport in het Publiek dashboard. Navigeer eerst naar de tab [!UICONTROL Audiences] [!UICONTROL Overview] om de overlapping van het toestemmingspubliek weer te geven. Vanaf dat punt kunt u de [!UICONTROL Audience overlap report] -widget toevoegen aan het dashboard Soorten publiek. Nadat de widget is gemaakt, selecteert u het **[!UICONTROL User consented to calls]** -publiek in het overzicht van het vervolgkeuzemenu voor het publiek boven aan de pagina. Selecteer vervolgens **[!UICONTROL View more]** in de widget Audience overlap rapport om maximaal 50 van de bovenste overlap en maximaal 50 van de minst overeenkomende overlap voor het geselecteerde segment weer te geven.
 
 <!-- Image needs updating to night mode -->
 
-![Het dashboard Soorten publiek met de widget voor publiek-overlap wordt weergegeven. De gebruiker stemde toe aan vraagpubliek als vergelijkend publiek, en de Mening meer verbinding wordt allebei benadrukt.](../images/insights-use-cases/consent-analysis/audience-overlap-report-user-consent-to-calls.png)
+![ het dashboard van het publiek met de getoonde het overlappende het rapportwidget van het publiek. De Gebruiker stemde aan vraagpubliek als vergelijkend publiek toe, en de Mening meer verbinding wordt allebei benadrukt.](../images/insights-use-cases/consent-analysis/audience-overlap-report-user-consent-to-calls.png)
 
 Het dialoogvenster Audience overlap in rapporten wordt uitgebreid om extra publiek overlappende gegevens weer te geven.
 
 <!-- Image needs updating to night mode -->
 
-![Het rapport Publiek overlapt, waarbij de gebruikers ermee instemden dat het e-mailpubliek werd gemarkeerd.](../images/insights-use-cases/consent-analysis/additional-audience-overlap-reports.png)
+![ het publiek overlapt rapport, met de Gebruikers stemden aan benadrukt e-mailpubliek.](../images/insights-use-cases/consent-analysis/additional-audience-overlap-reports.png)
 
 ## Trends voor de omvang van het publiek {#audience-size-trends}
 
-Wanneer u een op toestemming-gebaseerd publiek creeert, ontwikkelt het automatisch tot 12 maanden vanaf de datum u het publiek creeerde. Voor een volledig functionele trend van uw toestemming van de klant voegt u de volgende widgets toe aan de [!UICONTROL Segments] [!UICONTROL Overview] pagina. Deze inzichten bieden een krachtig middel om te volgen hoe uw toestemming in de loop der tijd verandert. Ze correleren zelfs met campagnes die je parallel voert en die positieve of negatieve gevolgen kunnen hebben voor de toestemming. De beschrijvingen die voor deze widgets worden aangeboden, zijn van toepassing op een kwestie van het toestemmingsgebruik.
+Wanneer u een op toestemming-gebaseerd publiek creeert, ontwikkelt het automatisch tot 12 maanden vanaf de datum u het publiek creeerde. Voor een volledig functionele trend in de toestemming van de klant voegt u de volgende widgets toe aan de pagina [!UICONTROL Segments] [!UICONTROL Overview] . Deze inzichten bieden een krachtig middel om te volgen hoe uw toestemming in de loop der tijd verandert. Ze correleren zelfs met campagnes die je parallel voert en die positieve of negatieve gevolgen kunnen hebben voor de toestemming. De beschrijvingen die voor deze widgets worden aangeboden, zijn van toepassing op een kwestie van het toestemmingsgebruik.
 
-- [Ontwikkeling van de omvang van het publiek](../guides/audiences.md#audience-size-trend): Deze widget biedt een manier om te volgen hoe uw respectieve toestemming in tijd is veranderd.
-- [Ontwikkeling van de omvang van het publiek](../guides/audiences.md#audience-size-change-trend): Deze widget houdt bij hoe de toestemming van uw klant dagelijks is gewijzigd. Bijvoorbeeld, als het aantal van uw klantentoestemming door 100.000 daalde, dan kunt u zien hoe die verandering over een dagelijkse basis voorkwam.
-- [Ontwikkeling van de omvang van het publiek naar identiteit](../guides/audiences.md#audience-size-trend-by-identity): Met deze widget kunt u bijhouden hoe uw respectieve toestemming in de loop der tijd is gewijzigd, maar verder gefilterd door een specifieke identiteit, zoals een e-mail.
+- [ trend van de grootte van het publiek ](../guides/audiences.md#audience-size-trend): Deze widget biedt een manier aan om te volgen hoe uw respectieve toestemming in tijd is veranderd.
+- [ trend van de de veranderingsverandering van de grootte van het publiek ](../guides/audiences.md#audience-size-change-trend): Deze widget volgt hoe uw klantentoestemming op een dagelijkse basis is veranderd. Bijvoorbeeld, als het aantal van uw klantentoestemming door 100.000 daalde, dan kunt u zien hoe die verandering over een dagelijkse basis voorkwam.
+- [ trend van de grootte van het publiek door identiteit ](../guides/audiences.md#audience-size-trend-by-identity): Met deze widget kunt u volgen hoe uw respectieve toestemming in tijd is veranderd, maar verder gefilterd door een specifieke identiteit zoals e-mail.
 
 <!-- Image needs updating to night mode -->
 
-![Het dashboard Soorten publiek met de trend voor de omvang van het publiek, de trend voor de grootte van het publiek volgens identiteit en de trend voor de verandering van de grootte van het publiek. De gebruikers die akkoord zijn gegaan met het e-mailpubliek worden gemarkeerd.](../images/insights-use-cases/consent-analysis/three-audience-trend-widgets.png)
+![ het dashboard van het publiek met de de formaattrend van het Publiek, de trend van de grootte van het Publiek door identiteit en de getoonde de de veranderingstrend van de Poortverandering van het Publiek. De gebruikers stemden in met e-mailpubliek wordt gemarkeerd.](../images/insights-use-cases/consent-analysis/three-audience-trend-widgets.png)
 
 ## Het overzichtdashboard voor soorten publiek {#audiences-overview-dashboard}
 
-Nadat u een publiek met betrekking tot toestemming zoals &quot;Gebruikers met toestemming voor SMS&quot;hebt gecreeerd, kunt u zeer belangrijke gepersonaliseerde toestemmingsinformatie over uw publiek bekijken door de aangewezen widgets aan uw het overzichtdashboard van het Overzicht van Soorten van publiek toe te voegen. Ga naar de [!UICONTROL Audiences] [!UICONTROL Overview] en voeg uw gekozen widgets toe uit de widgetbibliotheek. Elke widget die aan uw weergave van het dashboard is toegevoegd, kan worden vergroot of verkleind en verplaatst met de opdracht [!UICONTROL Modify dashboard] gebruiken. Uw gepersonaliseerde mening kan inzichten zoals de trend in tijd (tot 12 maanden), de overlappingen met andere publiek, en de identiteitssamenstelling van het publiek bevatten. Hieronder ziet u een voorbeeldweergave.
+Nadat u een publiek met betrekking tot toestemming zoals &quot;Gebruikers met toestemming voor SMS&quot;hebt gecreeerd, kunt u zeer belangrijke gepersonaliseerde toestemmingsinformatie over uw publiek bekijken door de aangewezen widgets aan uw het overzichtdashboard van het Overzicht van Soorten van publiek toe te voegen. Navigeer naar [!UICONTROL Audiences] [!UICONTROL Overview] en voeg de widgets toe die u hebt gekozen in de widgetbibliotheek. Elke widget die aan uw weergave van het dashboard wordt toegevoegd, kan met de functie [!UICONTROL Modify dashboard] worden vergroot of verkleind en verplaatst. Uw gepersonaliseerde mening kan inzichten zoals de trend in tijd (tot 12 maanden), de overlappingen met andere publiek, en de identiteitssamenstelling van het publiek bevatten. Hieronder ziet u een voorbeeldweergave.
 
-![Het publiek dashboard met de Gebruikers stemden in met het SMS-publiek gemarkeerd in het algemene publieksvervolgkeuzemenu.](../images/insights-use-cases/consent-analysis/audience-dashboard-user-consent-to-sms.png)
+![ het publiek dashboard met de Gebruikers stemde aan het publiek van SMS toe dat in het globale die publieksdropdown menu wordt benadrukt.](../images/insights-use-cases/consent-analysis/audience-dashboard-user-consent-to-sms.png)
 
 ## Door gebruiker gedefinieerde dashboards {#usr-defined-dashboards}
 
 U kunt ook uw eigen widgets maken met door de gebruiker gedefinieerde dashboards. Door uw eigen widget te maken hebt u volledige controle over het type widget, samen met de flexibiliteit om filters en nog veel meer rechtstreeks in Adobe Real-Time CDP toe te voegen.
 
-Bijvoorbeeld, als u veelvoudige toestemmingspubliek in de zelfde grafiek wilt trenderen zodat u in tijd kunt zien hoe elk van uw toestemmingsvoorkeur is veranderd. Dit soort visualisatie is mogelijk met door de gebruiker gedefinieerde dashboards in minimale stappen en een eenmalige instelling. Eerst selecteert u **[!UICONTROL Dashboards]** in de linkernavigatie. De [!UICONTROL Dashboards] wordt weergegeven. Selecteer vervolgens **[!UICONTROL Create dashboard]**. Volledige instructies over hoe te [een dashboard en een aangepaste widget maken](../user-defined-dashboards.md) vindt u in de door de gebruiker gedefinieerde handleiding voor dashboards.
+Bijvoorbeeld, als u veelvoudige toestemmingspubliek in de zelfde grafiek wilt trenderen zodat u in tijd kunt zien hoe elk van uw toestemmingsvoorkeur is veranderd. Dit soort visualisatie is mogelijk met door de gebruiker gedefinieerde dashboards in minimale stappen en een eenmalige instelling. Selecteer eerst **[!UICONTROL Dashboards]** in de linkernavigatie. De werkruimte van [!UICONTROL Dashboards] wordt weergegeven. Selecteer vervolgens **[!UICONTROL Create dashboard]** . De volledige instructies op hoe te om [ tot een dashboard en douane widget ](../user-defined-dashboards.md) te leiden kunnen in de user-defined dashboardgids worden gevonden.
 
-![De dashboardwerkruimte met dashboards en het dashboard maken is gemarkeerd.](../images/user-defined-dashboards/create-dashboard.png)
+![ de dashboardwerkruimte met benadrukte dashboards en creeer dashboard.](../images/user-defined-dashboards/create-dashboard.png)
 
-Wanneer u [uw gegevensmodel selecteren](../user-defined-dashboards.md#select-data-model) in de widgetcomposer selecteert u `CDPInsights` gevolgd door **[!UICONTROL Next]**. De [!UICONTROL Select table] wordt weergegeven.
+Wanneer u [ uw gegevensmodel ](../user-defined-dashboards.md#select-data-model) in widgetcomposer selecteert, selecteer `CDPInsights` gevolgd door **[!UICONTROL Next]**. Het dialoogvenster [!UICONTROL Select table] wordt weergegeven.
 
-![Het dialoogvenster Gegevensmodel selecteren met het CDPInsights-model gemarkeerd.](../images/user-defined-dashboards/select-data-model-dialog.png)
+![ de Uitgezochte dialoog van het gegevensmodel met het getoonde model CDPInsights.](../images/user-defined-dashboards/select-data-model-dialog.png)
 
 In de volgende weergave wordt een lijst weergegeven met de beschikbare tabellen in de linkertrack. Selecteer `adwh_fact_profile_by_segment_and_namespace_trendlines`.
 
-![Het dialoogvenster Tabel selecteren met de tabel &#39;adwh_fact_profile_by_segment_and_namespace_trendlines&#39; gemarkeerd.](../images/insights-use-cases/consent-analysis/select-table.png)
+![ de Uitgezochte lijst dialoog met &quot;adwh_fact_profile_by_segment_and_namespace_trendlines&quot;benadrukte lijst.](../images/insights-use-cases/consent-analysis/select-table.png)
 
 Voer de onderstaande stappen uit nadat de widgetcomposer is gevuld met gegevens uit uw gekozen tabel:
 
-- [Zoeken [!UICONTROL Attributes]](../user-defined-dashboards.md#add-filter-attributes) for `[!UICONTROL date]`en voegt u vervolgens het plus-pictogram (+) toe `[!UICONTROL date]` van het vervolgkeuzemenu naar de X-as verwijzen.
-  ![De widgetcomposer met het invoegpictogram en het vervolgkeuzemenu gemarkeerd.](../images/user-defined-dashboards/attributes-dropdown.png)
-- Zoeken [!UICONTROL Attributes] for `[!UICONTROL count_of_profiles]`en voegt u vervolgens het plus-pictogram (+) toe `[!UICONTROL count_of_profiles]` van het vervolgkeuzemenu naar de Y-as verwijzen.
-- Selecteer de `...` (ovalen) in het dialoogvenster [!UICONTROL Y-axis] veld selecteert u vervolgens de [!UICONTROL SUM] statistische functie uit het vervolgkeuzemenu.
-  ![De widget-composer voor de widget voor het samenstellen van constanten met het gegevensmodel, de tabel, het vervolgkeuzemenu voor de Y-as en de SUM-functie gemarkeerd. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
-- Selecteer de [!UICONTROL Marks] vervolgkeuzelijst en wijzig het diagramtype in [!UICONTROL Line].
-- Zoeken [!UICONTROL Attributes] voor de `[!UICONTROL segment_name]`en voegt u vervolgens het plus-pictogram (+) toe `segment_name` als [!UICONTROL Filter] in het vervolgkeuzemenu. De [!UICONTROL Filter: Segment_name] wordt weergegeven. Selecteer de eerder gemaakte soorten publiek die betrekking hebben op toestemming. In dit voorbeeld selecteert u **[!UICONTROL Users Consented to Calls]**, **[!UICONTROL Users Consented to SMS]**, en **[!UICONTROL Users Consented to Email]**, gevolgd door **[!UICONTROL Apply]**.
-- Zoeken [!UICONTROL Attributes] for `[!UICONTROL segment_name]`Selecteer vervolgens het +-pictogram om toe te voegen `segment_name` als [!UICONTROL Color] in het vervolgkeuzemenu.
-- Openen [de [!UICONTROL Properties] deelvenster](../user-defined-dashboards.md#widget-properties) en een passende [!UICONTROL Widget title] en [!UICONTROL Axis label].
-  ![De widgetcomposer met het eigenschappenpictogram en de titel van de widget gemarkeerd.](../images/user-defined-dashboards/properties-panel.png)
-- Selecteren **[!UICONTROL Save and close]** om uw instellingen te bevestigen.
+- [ Onderzoek [!UICONTROL Attributes]](../user-defined-dashboards.md#add-filter-attributes) voor `[!UICONTROL date]`, dan gebruik + pictogram om het `[!UICONTROL date]` attribuut aan de X-as van het dropdown menu toe te voegen.
+  ![ Widget composer met toe:voegen-pictogram en dropdown benadrukt menu.](../images/user-defined-dashboards/attributes-dropdown.png)
+- Zoek [!UICONTROL Attributes] naar `[!UICONTROL count_of_profiles]` en gebruik vervolgens het pictogram + om het kenmerk `[!UICONTROL count_of_profiles]` toe te voegen aan de Y-as vanuit het vervolgkeuzemenu.
+- Selecteer het pictogram `...` (ellipsen) in het [!UICONTROL Y-axis] veld en selecteer vervolgens de [!UICONTROL SUM] functie voor aggregatie in het vervolgkeuzemenu.
+  ![ De widget composer stuurt de tendensen van de Toestemming met het gegevensmodel, de lijst, en de y-as dropdown menu en de benadrukte eigenschap van SUM. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
+- Selecteer het vervolgkeuzemenu [!UICONTROL Marks] en wijzig het diagramtype in [!UICONTROL Line] .
+- Zoek [!UICONTROL Attributes] naar `[!UICONTROL segment_name]` en gebruik vervolgens het pictogram + om de `segment_name` als een [!UICONTROL Filter] waarde in het vervolgkeuzemenu toe te voegen. Het dialoogvenster [!UICONTROL Filter: Segment_name] wordt weergegeven. Selecteer de eerder gemaakte soorten publiek die betrekking hebben op toestemming. Selecteer in dit voorbeeld **[!UICONTROL Users Consented to Calls]** , **[!UICONTROL Users Consented to SMS]** en **[!UICONTROL Users Consented to Email]** , gevolgd door **[!UICONTROL Apply]** .
+- Zoek [!UICONTROL Attributes] naar `[!UICONTROL segment_name]` en selecteer vervolgens het pictogram + om `segment_name` als een [!UICONTROL Color] toe te voegen in het vervolgkeuzemenu.
+- Open [ het [!UICONTROL Properties] paneel ](../user-defined-dashboards.md#widget-properties) en verstrek aangewezen [!UICONTROL Widget title] en [!UICONTROL Axis label].
+  ![ Widget composer met het eigenschappen pictogram en de benadrukte titel van Widget.](../images/user-defined-dashboards/properties-panel.png)
+- Selecteer **[!UICONTROL Save and close]** om uw instellingen te bevestigen.
 
 >[!TIP]
 >
 >U kunt de widget nu vergroten of verkleinen of naar de gewenste grootte en positie verplaatsen voordat u het dashboard opslaat.
 
 
-In de onderstaande afbeelding ziet u hoe de voltooide widget er uitziet en andere mogelijke aangepaste inzichten. Raadpleeg voor meer informatie over de typen widgets die u kunt maken de [documentatie over gegevensmodellen](../data-models/cdp-insights-data-model-b2c.md).
+In de onderstaande afbeelding ziet u hoe de voltooide widget er uitziet en andere mogelijke aangepaste inzichten. Voor meer details op de types van widgets die kunnen worden gecreeerd, verwijs naar de [ documentatie van het gegevensmodel ](../data-models/cdp-insights-data-model-b2c.md).
 
 <!-- The diagram shows straight lines due to a lack of data, however in your environment the trends will reflect the actual changes over time. -->
 
-![De voltooide widget voor trends voor aangepaste toestemming.](../images/insights-use-cases/consent-analysis/consent-trends-widget.png)
+![ de gebeëindigde widget van de tendensen van de douanetoestemming.](../images/insights-use-cases/consent-analysis/consent-trends-widget.png)
 
 ## Beleid voor het bijhouden van toestemming {#consent-policies}
 
-De toestemmingsdashboards die u creeert vangen **alleen de verdeling van toestemmings- en preferentiële kenmerken**.
+De toestemmingsdashboards die u creeert vangen de **distributie van toestemmings en voorkeurattributen slechts**.
 
 >[!NOTE]
 >
->Voor klanten van **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe**, deze dashboards **niet** een overzicht geven van het beleid inzake instemming. Beschikbaar volgen omvat het aantal gecreeerd, toegelaten beleid, en de invloed op publiekslidmaatschap.
+>Voor klanten van **het Schild van de Gezondheidszorg van de Adobe** of **de Privacy &amp; het Schild van de Veiligheid van de Adobe**, wijzen deze dashboards **niet** op het volgen van toestemmingsbeleid. Beschikbaar volgen omvat het aantal gecreeerd, toegelaten beleid, en de invloed op publiekslidmaatschap.
 
 ## Volgende stappen
 

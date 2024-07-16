@@ -18,7 +18,7 @@ Er zijn bepaalde gevallen waarin u mogelijk wilt werken met twee verschillende e
 * Relaties tussen meerdere bedrijven voor het uitwisselen van gegevens
 * Klanten die nieuwe oplossingen van de Adobe testen en hun bestaande implementatie niet willen verstoren
 
-Met de SDK kunt u een aparte instantie voor elke eigenschap maken door een andere naam toe te voegen aan de array in de basiscode. In het volgende voorbeeld worden twee namen weergegeven: `titanium` en `copper`.
+Met de SDK kunt u een aparte instantie voor elke eigenschap maken door een andere naam toe te voegen aan de array in de basiscode. In het volgende voorbeeld worden twee namen gegeven, `titanium` en `copper` .
 
 ```html
 <script>
@@ -30,9 +30,9 @@ Met de SDK kunt u een aparte instantie voor elke eigenschap maken door een ander
 <script src="alloy.js" async></script>
 ```
 
-Hierdoor worden in het script twee instanties van de SDK gemaakt. De algemene functie voor interactie met de eerste instantie wordt `titanium` en de algemene functie voor interactie met de tweede instantie wordt genoemd `copper`.
+Hierdoor worden in het script twee instanties van de SDK gemaakt. De algemene functie voor interactie met de eerste instantie krijgt de naam `titanium` en de algemene functie voor interactie met de tweede instantie krijgt de naam `copper` .
 
-Door twee afzonderlijke instanties te creëren, kan elk voor een verschillend bezit worden gevormd. Elke communicatie- of gegevenspersistentie die optreedt als gevolg van interactie met `titanium` wordt geïsoleerd gehouden van `copper`.
+Door twee afzonderlijke instanties te creëren, kan elk voor een verschillend bezit worden gevormd. Alle communicatie- of gegevenspersistentie die optreedt als gevolg van interactie met `titanium` blijft gescheiden van `copper` .
 
 In het volgende voorbeeld kunt u met elke instantie opdrachten uitvoeren:
 
@@ -60,8 +60,8 @@ copper("sendEvent", {
 });
 ```
 
-Zorg ervoor dat u de opdracht `configure` gebruiken voor elke instantie voordat andere opdrachten op dezelfde instantie worden uitgevoerd.
+Zorg ervoor dat u de opdracht `configure` voor elke instantie uitvoert voordat u andere opdrachten voor dezelfde instantie uitvoert.
 
 >[!IMPORTANT]
 >
->Om conflicten met koekjes te vermijden, moet elke instantie van SDK van het Web zijn eigen unieke hebben `edgeConfigId` en zijn eigen unieke `orgId`.
+>Om conflicten met cookies te voorkomen, moet elke Web SDK-instantie een eigen unieke `edgeConfigId` en eigen unieke `orgId` hebben.

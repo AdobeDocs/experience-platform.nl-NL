@@ -1,12 +1,12 @@
 ---
 title: Intelligente re-engagement
-description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste omzettingsmomenten om intelligent onregelmatige klanten opnieuw aan te sluiten.
+description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste conversiemomenten om op een intelligente manier opnieuw in contact te komen met onregelmatige klanten.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3869'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -22,32 +22,32 @@ U kunt real-time overwegingen gebruiken, rekening houden met alle kwaliteiten en
 
 Hieronder volgt een architectuurweergave op hoog niveau van de verschillende componenten van Real-Time CDP en Journey Optimizer. In dit diagram ziet u hoe de gegevens door de twee Experience Platform-apps lopen van gegevensverzameling tot het punt waar deze wordt geactiveerd via reizen of campagnes naar bestemmingen, om het gebruiksgeval te bereiken dat op deze pagina wordt beschreven.
 
-![Intelligent vernieuwend visueel overzicht op hoog niveau.](../intelligent-re-engagement/images/step-by-step.png)
+![ Intelligent re-engagement hoog niveau visueel overzicht.](../intelligent-re-engagement/images/step-by-step.png)
 
 ## Hoofdlettergebruik {#overview}
 
-U zult schema&#39;s, datasets, en publiek aangezien u door voorbeelden van re-betrokkenheidsscenario&#39;s werkt construeren. U zult ook de eigenschappen ontdekken nodig om de voorbeeldreizen in te stellen [!DNL Adobe Journey Optimizer] en die welke nodig zijn om betaalde mediaberichten op bestemmingen te maken. In deze handleiding worden voorbeelden gebruikt van het opnieuw betrekken van klanten bij de hieronder beschreven gebruiksritten:
+U zult schema&#39;s, datasets, en publiek aangezien u door voorbeelden van re-betrokkenheidsscenario&#39;s werkt construeren. U zult ook de functies ontdekken die nodig zijn om de voorbeeldreizen in [!DNL Adobe Journey Optimizer] in te stellen en de functies die nodig zijn om betaalde mediaberichten in bestemmingen te maken. In deze handleiding worden voorbeelden gebruikt van het opnieuw betrekken van klanten bij de hieronder beschreven gebruiksritten:
 
-* **Verlaten productbladerscenario** - Doelklanten die het bladeren door producten op zowel de website als de mobiele app hebben verlaten.
-* **Verlaten kartonscenario** - Doelklanten die producten in het winkelwagentje hebben geplaatst maar nog niet op de website en de mobiele app zijn aangeschaft.
-* **Orderbevestiging** - Focus op aankopen van producten via de website en de mobiele app.
+* **Verlaten product doorbladert scenario** - de klanten van het doel die product hebben verlaten doorbladerend op zowel de website als mobiele app.
+* **Verlaten kartscenario** - de klanten van het doel die producten in de kar hebben geplaatst maar nog niet op zowel de website als mobiele app gekocht.
+* **de bevestigingsscenario van de Orde** - concentreer zich op productaankopen die door de website en mobiele app worden gemaakt.
 
 ## Vereisten en planning {#prerequisites-and-planning}
 
-Wanneer u de stappen voor het implementeren van het hoofdlettergebruik uitvoert, maakt u gebruik van de volgende Real-Time CDP- en Adobe Journey Optimizer-functionaliteit (vermeld in de volgorde waarin u deze gaat gebruiken). Zorg ervoor dat u de benodigde [attribuut-gebaseerde toegangsbeheertoestemmingen](/help/access-control/home.md) voor al deze gebieden, of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
+Wanneer u de stappen voor het implementeren van het hoofdlettergebruik uitvoert, maakt u gebruik van de volgende Real-Time CDP- en Adobe Journey Optimizer-functionaliteit (vermeld in de volgorde waarin u deze gaat gebruiken). Zorg ervoor dat u de noodzakelijke [ op attributen-gebaseerde toegangsbeheertoestemmingen ](/help/access-control/home.md) voor al deze gebieden hebt, of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - integreert gegevens in verschillende gegevensbronnen om de campagne te voeden. Deze gegevens worden vervolgens gebruikt om het campagnepubliek te maken en gepersonaliseerde gegevenselementen aan de oppervlakte te brengen die worden gebruikt in de e-mail en de webpromo-elementen (bijvoorbeeld naam of aan account gerelateerde informatie). CDP wordt ook gebruikt om publiek over e-mail en het Web (via [!DNL Adobe Target]).
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)] ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - integreert gegevens over gegevensbronnen om de campagne te voeden. Deze gegevens worden vervolgens gebruikt om het campagnepubliek te maken en gepersonaliseerde gegevenselementen aan de oppervlakte te brengen die worden gebruikt in de e-mail en de webpromo-elementen (bijvoorbeeld naam of aan account gerelateerde informatie). CDP wordt ook gebruikt om publiek over e-mail en het Web (via [!DNL Adobe Target]) te activeren.
    * [Schema&#39;s](/help/xdm/home.md)
    * [Profielen](/help/profile/home.md)
    * [Gegevenssets](/help/catalog/datasets/overview.md)
-   * [Soorten publiek](/help/segmentation/home.md)
+   * [Doelgroepen](/help/segmentation/home.md)
    * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
    * [Doelen](/help/destinations/home.md)
 
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html) - Helpt u verbonden, contextafhankelijke en persoonlijke ervaringen aan uw klanten te leveren.
-   * [Trigger voor gebeurtenis of publiek](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
-   * [Soorten publiek/Gebeurtenissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
-   * [Reishandelingen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+* [[!DNL Adobe Journey Optimizer] ](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html) - Helpt u verbonden, contextafhankelijke, en gepersonaliseerde ervaringen aan uw klanten te leveren.
+   * [ de Trigger van de Gebeurtenis of van het Publiek ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+   * [ Soorten publiek/Gebeurtenissen ](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
+   * [ Acties van de Reis ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Hoe het gebruiksgeval te bereiken {#achieve-use-case-instruction}
 
@@ -55,38 +55,38 @@ Hieronder vindt u een overzicht op hoog niveau van de drie voorbeelden van scena
 
 >[!BEGINTABS]
 
->[!TAB Verlaten door product Bladeren Scenario]
+>[!TAB  Verlaten Product doorbladert Scenario ]
 
-Het verlaten productbladerscenario richt verlaten product het doorbladeren op zowel de website als mobiele app. Dit scenario wordt geactiveerd wanneer een product is bekeken maar niet is aangeschaft of aan de winkelwagen is toegevoegd. In dit voorbeeld wordt de betrokkenheid van het merk geactiveerd na drie dagen als er geen toevoegingen aan de lijst zijn binnen de laatste 24 uur.<p>![Het intelligente verlaten product van de klant doorbladert scenario op hoog niveau visueel overzicht.](../intelligent-re-engagement/images/re-engagement-journey.png "Het intelligente verlaten product van de klant doorbladert scenario op hoog niveau visueel overzicht."){width="1920" zoomable="yes"}</p>
+Het verlaten productbladerscenario richt verlaten product het doorbladeren op zowel de website als mobiele app. Dit scenario wordt geactiveerd wanneer een product is bekeken maar niet is aangeschaft of aan de winkelwagen is toegevoegd. In dit voorbeeld wordt de betrokkenheid van het merk geactiveerd na drie dagen als er geen toevoegingen aan de lijst zijn binnen de laatste 24 uur.<p>![ de intelligente verlaten product van de Klant doorbladert scenario op hoog niveau visueel overzicht.](../intelligent-re-engagement/images/re-engagement-journey.png " de intelligente verlaten product van de Klant doorbladert scenario op hoog niveau visueel overzicht."){width="1920" zoomable="yes"}</p>
 
-1. U creeert schema&#39;s en datasets, dan laat voor toe [!UICONTROL Profile].
-2. U voert gegevens in Experience Platform in via Web SDK, Mobile SDK of API. De verbinding van de Bron van Analytics kan ook worden gebruikt, maar kan in reisvertraging resulteren.
+1. U maakt schema&#39;s en gegevenssets en schakelt deze vervolgens in voor [!UICONTROL Profile] .
+2. U voert gegevens in Experience Platform in via Web SDK, Mobile SDK of API. De Source Connector voor Analytics kan ook worden gebruikt, maar kan leiden tot vertraging van de reis.
 3. U voegt extra profielgegevens in, die via identiteitsgrafieken kunnen worden gekoppeld aan de geverifieerde webgebruiker en de mobiele-app-bezoeker.
-4. U maakt doelgroepen in de lijst met profielen om te controleren of een **klant** heeft in de laatste drie dagen een betrokkenheid gemaakt.
-5. U creeert een verlaten product doorbladert reis binnen [!DNL Adobe Journey Optimizer].
-6. Werk zo nodig met de **gegevenspartner** voor de activering van het publiek naar de gewenste betaalmedia-bestemmingen.
-7. [!DNL Adobe Journey Optimizer] controleert de toestemming en verzendt de diverse gevormde acties.
+4. U bouwt geconcentreerd publiek van de lijst van profielen om te controleren als a **klant** een overeenkomst in de laatste drie dagen heeft gemaakt.
+5. U maakt een verlaten product door bladeren reis in [!DNL Adobe Journey Optimizer].
+6. Indien nodig, werk met de **gegevenspartner** voor de activering van publiek aan gewenste betaalde-media bestemmingen.
+7. [!DNL Adobe Journey Optimizer] controleert op toestemming en verzendt de verschillende geconfigureerde acties.
 
->[!TAB Abandoned Cart Scenario]
+>[!TAB  Verlaten Scenario van de Kar ]
 
-Het verlaten kartscenario is van toepassing wanneer de producten in het karretje zijn geplaatst maar nog niet op zowel de website als de mobiele app zijn gekocht. Bovendien worden campagnes voor betaalde media gestart en gestopt met deze methode.<p>![Door de klant verlaten kaartscenario op hoog niveau visueel overzicht.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Door de klant verlaten kaartscenario op hoog niveau visueel overzicht."){width="1920" zoomable="yes"}</p>
+Het verlaten kartscenario is van toepassing wanneer de producten in het karretje zijn geplaatst maar nog niet op zowel de website als de mobiele app zijn gekocht. Bovendien worden campagnes voor betaalde media gestart en gestopt met deze methode.<p>![ Klant verliet kaartscenario hoog niveau visueel overzicht.](../intelligent-re-engagement/images/abandoned-cart-journey.png " Klant verliet het scenario van het wortelscenario op hoog niveau visueel overzicht."){width="1920" zoomable="yes"}</p>
 
 1. U creeert schema&#39;s en datasets, toelaat voor [!UICONTROL Profile].
-2. U voert gegevens in Experience Platform in via Web SDK, Mobile SDK of API. De verbinding van de Bron van Analytics kan ook worden gebruikt, maar kan in reisvertraging resulteren.
+2. U voert gegevens in Experience Platform in via Web SDK, Mobile SDK of API. De Source Connector voor Analytics kan ook worden gebruikt, maar kan leiden tot vertraging van de reis.
 3. U voegt extra profielgegevens in, die via identiteitsgrafieken kunnen worden gekoppeld aan de geverifieerde webgebruiker en de mobiele-app-bezoeker.
-4. U maakt doelgroepen in de lijst met profielen om te controleren of een **klant** heeft een artikel in hun winkelwagentje geplaatst, maar heeft de aankoop niet voltooid. De **[!UICONTROL Add to cart]** de gebeurtenis tikt van een tijdopnemer die 30 minuten wacht, dan controleert aankoop. Als er geen aankoop is gedaan, wordt de **klant** wordt toegevoegd aan de **[!UICONTROL Abandon Cart]** publiek.
-5. Je maakt een verlaten cartooptocht in [!DNL Adobe Journey Optimizer].
-6. Werk zo nodig met de **gegevenspartner** voor de activering van het publiek naar de gewenste betaalmedia-bestemmingen.
-7. [!DNL Adobe Journey Optimizer] controleert de toestemming en verzendt de diverse gevormde acties.
+4. U bouwt geconcentreerd publiek van de lijst van profielen om te controleren als a **klant** een punt in hun kar heeft geplaatst maar niet de aankoop heeft voltooid. De gebeurtenis **[!UICONTROL Add to cart]** schakelt een timer uit die 30 minuten wacht en controleert vervolgens of deze is aangeschaft. Als geen aankoop is gemaakt, dan wordt de **klant** toegevoegd aan het **[!UICONTROL Abandon Cart]** publiek.
+5. U maakt in [!DNL Adobe Journey Optimizer] een verlaten wagentje.
+6. Indien nodig, werk met de **gegevenspartner** voor de activering van publiek aan gewenste betaalde-media bestemmingen.
+7. [!DNL Adobe Journey Optimizer] controleert op toestemming en verzendt de verschillende geconfigureerde acties.
 
->[!TAB Scenario voor orderbevestiging]
+>[!TAB  het Bevestigingsscenario van de Orde ]
 
-Het bevestigingsscenario voor bestellingen is vooral gericht op productaankopen via de website en de mobiele app.<p>![Bevestigingsscenario op hoog niveau voor bestellingen van klanten: visueel overzicht.](../intelligent-re-engagement/images/order-confirmation-journey.png "Bevestigingsscenario op hoog niveau voor bestellingen van klanten: visueel overzicht."){width="1920" zoomable="yes"}</p>
+Het bevestigingsscenario voor bestellingen is vooral gericht op productaankopen via de website en de mobiele app.<p>![ het scenario van de de ordetectie van de Klant op hoog niveau visueel overzicht.](../intelligent-re-engagement/images/order-confirmation-journey.png " het scenario van de de ordecbevestiging van de Klant hoog niveau visueel overzicht."){width="1920" zoomable="yes"}</p>
 
-1. U creeert schema&#39;s en datasets, dan laat voor toe [!UICONTROL Profile].
-2. U voert gegevens in Experience Platform in via Web SDK, Mobile SDK of API. De verbinding van de Bron van Analytics kan ook worden gebruikt, maar kan in reisvertraging resulteren.
+1. U maakt schema&#39;s en gegevenssets en schakelt deze vervolgens in voor [!UICONTROL Profile] .
+2. U voert gegevens in Experience Platform in via Web SDK, Mobile SDK of API. De Source Connector voor Analytics kan ook worden gebruikt, maar kan leiden tot vertraging van de reis.
 3. U voegt extra profielgegevens in, die via identiteitsgrafieken kunnen worden gekoppeld aan de geverifieerde webgebruiker en de mobiele-app-bezoeker.
-4. U maakt een bevestigingstraject in [!DNL Adobe Journey Optimizer].
+4. U maakt een bevestigingsreis in [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] verzendt een bericht van de ordesbevestiging gebruikend het aangewezen kanaal.
 
 >[!ENDTABS]
@@ -95,21 +95,21 @@ Lees de onderstaande secties door om alle stappen in de bovenstaande overzichten
 
 ### Schema&#39;s maken en veldgroepen opgeven {#schema-design}
 
-De middelen van het Gegevensmodel van de ervaring (XDM) worden beheerd in [!UICONTROL Schemas] werkruimte in [!DNL Adobe Experience Platform]. U kunt de belangrijkste bronnen bekijken en verkennen die door [!DNL Adobe] (bijvoorbeeld veldgroepen) en maak aangepaste bronnen en schema&#39;s voor uw organisatie.
+Bronnen van het Experience Data Model (XDM) worden beheerd in de [!UICONTROL Schemas] -werkruimte in [!DNL Adobe Experience Platform] . U kunt de belangrijkste bronnen van [!DNL Adobe] (bijvoorbeeld veldgroepen) weergeven en verkennen en aangepaste bronnen en schema&#39;s voor uw organisatie maken.
 
-Meer informatie over het maken van [schema&#39;s](/help/xdm/home.md), zie de [Schema-zelfstudie maken.](/help/xdm/tutorials/create-schema-ui.md) en [Uw klantgegevens modelleren met XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
+Voor meer informatie over het creëren van [ schema&#39;s ](/help/xdm/home.md), zie [ schema tot leerprogramma leiden.](/help/xdm/tutorials/create-schema-ui.md) en [ ModelUw Gegevens van de Ervaring van de Klant met XDM ](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
 
-Er zijn vier schemaontwerpen die voor het re-engagement gebruikscase worden gebruikt. Voor elk schema moeten specifieke velden worden ingesteld. U moet toelaten dat het schema in het Profiel van de Klant in real time wordt omvat. Voor meer informatie over het toelaten van het schema voor gebruik in het Profiel van de Klant In real time, lees [laat een schema voor het Profiel van de Klant in real time toe](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile).
+Er zijn vier schemaontwerpen die voor het re-engagement gebruikscase worden gebruikt. Voor elk schema moeten specifieke velden worden ingesteld. U moet toelaten dat het schema in het Profiel van de Klant in real time wordt omvat. Voor meer informatie over het toelaten van het schema voor gebruik in het Profiel van de Klant in real time, leest [ een schema voor het Profiel van de Klant in real time ](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile) toe.
 
 #### Klantkenmerkenschema
 
-Dit schema wordt gebruikt om de profielgegevens te structureren en van verwijzingen te voorzien die omhoog uw klanteninformatie maken. Deze gegevens worden doorgaans opgenomen in [!DNL Adobe Experience Platform] via uw CRM of vergelijkbare systeem en is noodzakelijk om te verwijzen naar klantgegevens die worden gebruikt voor personalisatie, marketingtoestemming en verbeterde publiekscapaciteiten.
+Dit schema wordt gebruikt om de profielgegevens te structureren en van verwijzingen te voorzien die omhoog uw klanteninformatie maken. Deze gegevens worden doorgaans in [!DNL Adobe Experience Platform] opgenomen via uw CRM-systeem of een vergelijkbaar systeem en zijn nodig om te verwijzen naar klantgegevens die worden gebruikt voor personalisatie, marketingtoestemming en verbeterde publieksmogelijkheden.
 
-Het schema met klantkenmerken wordt weergegeven door een [[!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md) klasse, die de volgende veldgroepen bevat:
+Het schema met klantkenmerken wordt vertegenwoordigd door een [[!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md) -klasse, die de volgende veldgroepen bevat:
 
 +++Persoonlijke Contactgegevens (Veldgroep)
 
-[Persoonlijke contactgegevens](/help/xdm/field-groups/profile/personal-contact-details.md) is een standaardschemagebiedgroep voor de klasse van het Profiel van Afzonderlijke XDM die de contactinformatie voor een individuele persoon beschrijft.
+[ Persoonlijke Details van het Contact ](/help/xdm/field-groups/profile/personal-contact-details.md) is een standaardschemagebiedgroep voor de klasse van het Profiel XDM Individual die de contactinformatie voor een individuele persoon beschrijft.
 
 | Velden | Beschrijving |
 | --- | --- |
@@ -118,15 +118,15 @@ Het schema met klantkenmerken wordt weergegeven door een [[!UICONTROL XDM Indivi
 
 +++
 
-+++Externe gegevens van de Controle van het Bronsysteem (de Groep van het Gebied)
++++Externe gegevens van Source System Audit (veldgroep)
 
-[Kenmerken externe bronsysteemcontrole](/help/xdm/data-types/external-source-system-audit-attributes.md) is een standaardgegevenstype van de Gegevens van de Ervaring Model (XDM) dat controledetails over een extern bronsysteem vangt.
+[ de Externe Attributen van de Controle van het Systeem van Source ](/help/xdm/data-types/external-source-system-audit-attributes.md) is een standaardgegevenstype van de Gegevens van de Ervaring (XDM) dat controledetails over een extern bronsysteem vangt.
 
 +++
 
 +++Groepen van het Toegelaten en van het Referentieveld (de Groep van het Gebied)
 
-De [Inhoud en voorkeuren](/help/xdm/field-groups//profile/consents.md) veldgroep biedt één objecttype veld, toestemmingen, voor het vastleggen van toestemmings- en voorkeursgegevens.
+De [ Inhoud en de 1} het gebiedsgroep van Voorkeur {verstrekt één enkel voorwerp-type gebied, toestemmingen, om toestemming en voorkeurinformatie te vangen.](/help/xdm/field-groups//profile/consents.md)
 
 | Velden | Vereiste |
 | --- | --- |
@@ -141,23 +141,23 @@ De [Inhoud en voorkeuren](/help/xdm/field-groups//profile/consents.md) veldgroep
 
 +++Details van de Test van het Profiel (de Groep van het Gebied)
 
-Met deze veldgroep kunt u uw reis testen voordat deze wordt gepubliceerd met testprofielen. Voor meer informatie over het maken van testprofielen leest u de [zelfstudie testprofielen maken](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) en [het testen van de reiszelfstudie](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html).
+Met deze veldgroep kunt u uw reis testen voordat deze wordt gepubliceerd met testprofielen. Voor meer informatie over het creëren van testprofielen, leest [ tot de leerprogramma&#39;s van testprofielen ](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) en [ het testen van de reiszelfstudie ](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html).
 
 +++
 
 #### Schema voor digitale transacties van klanten
 
-Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op uw website of bijbehorende digitale platforms voorkomt. Deze gegevens worden doorgaans opgenomen in [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) en is noodzakelijk om de diverse doorbladeren en omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, gedetailleerde online klantenanalyse, verbeterde publieksmogelijkheden, en gepersonaliseerd overseinen worden gebruikt.
+Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op uw website of bijbehorende digitale platforms voorkomt. Dit gegeven wordt typisch opgenomen in [!DNL Adobe Experience Platform] via [ Web SDK ](/help/web-sdk/home.md) en is noodzakelijk om diverse doorbladeren en omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, gedetailleerde online klantenanalyse, verbeterde publieksmogelijkheden, en gepersonaliseerd overseinen worden gebruikt.
 
-Het schema voor digitale transacties van de klant wordt vertegenwoordigd door een [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klasse.
+Het schema voor digitale transacties van de klant wordt vertegenwoordigd door een [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -klasse.
 
 +++XDM ExperienceEvent (Class)
 
-De [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klasse bevat de volgende veldgroepen:
+De klasse [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) bevat de volgende veldgroepen:
 
 | Velden | Beschrijving |
 | --- | --- |
-| `_id` | Identificeert uniek individuele gebeurtenissen die in worden opgenomen [!DNL Adobe Experience Platform]. |
+| `_id` | Hiermee worden afzonderlijke gebeurtenissen die in [!DNL Adobe Experience Platform] worden opgenomen, op unieke wijze geïdentificeerd. |
 | `timestamp` | Een tijdstempel volgens ISO 8601 van het tijdstip van de gebeurtenis, opgemaakt volgens RFC 3339, sectie 5.6. Deze tijdstempel moet in het verleden voorkomen. |
 | `eventType` | Een tekenreeks die het type categorie voor de gebeurtenis aangeeft. |
 
@@ -165,14 +165,14 @@ De [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klas
 
 +++Details eindgebruiker-id (veldgroep)
 
-De [Gegevens van eindgebruiker](/help/xdm/field-groups/event/enduserids.md) de veldgroep wordt gebruikt om de identiteitsinformatie van een individu over verscheidene toepassingen van de Adobe te beschrijven.
+De ](/help/xdm/field-groups/event/enduserids.md) het gebiedsgroep van de Details van de Gebruiker van het 0} Eind {wordt gebruikt om de identiteitsinformatie van een individu over verscheidene toepassingen van de Adobe te beschrijven.[
 
 | Velden | Beschrijving |
 | --- | --- |
 | `endUserIDs._experience.emailid.authenticatedState` | Status van e-mailadres voor eindgebruiker is geverifieerd. |
 | `endUserIDs._experience.emailid.id` | E-mailadres van eindgebruiker. |
 | `endUserIDs._experience.emailid.namespace.code` | Naamruimte-code van e-mailadres van eindgebruiker. |
-| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Status geverifieerd voor Marketing Cloud-id (MCID). De MCID wordt nu ECID (Experience Cloud-id) genoemd. |
+| `endUserIDs._experience.mcid.authenticatedState` | De status MCID (Marketing Cloud ID) is geverifieerd. [!DNL Adobe] De MCID wordt nu ECID (Experience Cloud-id) genoemd. |
 | `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud-id (MCID). De MCID wordt nu ECID (Experience Cloud-id) genoemd. |
 | `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud-id (MCID) naamruimtecode. |
 
@@ -180,7 +180,7 @@ De [Gegevens van eindgebruiker](/help/xdm/field-groups/event/enduserids.md) de v
 
 +++Commerce-details (veldgroep)
 
-De [Commerce-gegevens](/help/xdm/field-groups/event/commerce-details.md) de veldgroep wordt gebruikt om handelsgegevens zoals productinformatie (SKU, naam, hoeveelheid), en standaardkartverrichtingen (orde, checkout, verlaten) te beschrijven.
+De [ Commerce Details ](/help/xdm/field-groups/event/commerce-details.md) gebiedsgroep wordt gebruikt om handelsgegevens zoals productinformatie (SKU, naam, hoeveelheid), en standaardkartverrichtingen (orde, controle, verlaten) te beschrijven.
 
 | Velden | Beschrijving |
 | --- | --- |
@@ -197,25 +197,25 @@ De [Commerce-gegevens](/help/xdm/field-groups/event/commerce-details.md) de veld
 
 +++
 
-+++Externe gegevens van de Controle van het Bronsysteem (de Groep van het Gebied)
++++Externe gegevens van Source System Audit (veldgroep)
 
-De externe Attributen van de Controle van het Systeem van de Bron is een standaardgegevenstype van de Gegevens van de Ervaring (XDM) dat controledetails over een extern bronsysteem vangt.
+De externe Attributen van de Controle van het Systeem van Source is een standaard het gegevenstype van de Gegevens van de Ervaring (XDM) dat controledetails over een extern bronsysteem vangt.
 
 +++
 
 #### Offline transactieschema van de klant
 
-Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op platforms buiten uw website voorkomt. Deze gegevens worden doorgaans opgenomen in [!DNL Adobe Experience Platform] van een POS (of vergelijkbaar systeem) en meestal gestreamd naar Platform via een API-verbinding. Zijn doel is de diverse off-line omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, diepe online en off-line klantenanalyse, verbeterde publieksmogelijkheden en gepersonaliseerd overseinen worden gebruikt.
+Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op platforms buiten uw website voorkomt. Deze gegevens worden doorgaans in [!DNL Adobe Experience Platform] opgenomen vanuit een besturingssysteem (of een vergelijkbaar systeem) en worden meestal via een API-verbinding gestreamd naar Platform. Zijn doel is de diverse off-line omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, diepe online en off-line klantenanalyse, verbeterde publieksmogelijkheden en gepersonaliseerd overseinen worden gebruikt.
 
-Het schema voor offline transacties van de klant wordt vertegenwoordigd door een [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klasse.
+Het schema voor offlinetransacties van de klant wordt vertegenwoordigd door een [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -klasse.
 
 +++XDM ExperienceEvent (Class)
 
-De [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klasse bevat de volgende veldgroepen:
+De klasse [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) bevat de volgende veldgroepen:
 
 | Velden | Beschrijving |
 | --- | --- |
-| `_id` | Identificeert uniek individuele gebeurtenissen die in worden opgenomen [!DNL Adobe Experience Platform]. |
+| `_id` | Hiermee worden afzonderlijke gebeurtenissen die in [!DNL Adobe Experience Platform] worden opgenomen, op unieke wijze geïdentificeerd. |
 | `timestamp` | Een tijdstempel volgens ISO 8601 van het tijdstip van de gebeurtenis, opgemaakt volgens RFC 3339, sectie 5.6. Deze tijdstempel moet in het verleden voorkomen. |
 | `eventType` | Een tekenreeks die het type categorie voor de gebeurtenis aangeeft. |
 
@@ -223,7 +223,7 @@ De [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klas
 
 +++Commerce-details (veldgroep)
 
-De [Commerce-gegevens](/help/xdm/field-groups/event/commerce-details.md) de veldgroep wordt gebruikt om handelsgegevens zoals productinformatie (SKU, naam, hoeveelheid), en standaardkartverrichtingen (orde, checkout, verlaten) te beschrijven.
+De [ Commerce Details ](/help/xdm/field-groups/event/commerce-details.md) gebiedsgroep wordt gebruikt om handelsgegevens zoals productinformatie (SKU, naam, hoeveelheid), en standaardkartverrichtingen (orde, controle, verlaten) te beschrijven.
 
 | Velden | Beschrijving |
 | --- | --- |
@@ -242,7 +242,7 @@ De [Commerce-gegevens](/help/xdm/field-groups/event/commerce-details.md) de veld
 
 +++Persoonlijke Contactgegevens (Veldgroep)
 
-[Persoonlijke contactgegevens](/help/xdm/field-groups/profile/personal-contact-details.md) is een standaardschemagebiedgroep voor de klasse van het Profiel van Afzonderlijke XDM die de contactinformatie voor een individuele persoon beschrijft.
+[ Persoonlijke Details van het Contact ](/help/xdm/field-groups/profile/personal-contact-details.md) is een standaardschemagebiedgroep voor de klasse van het Profiel XDM Individual die de contactinformatie voor een individuele persoon beschrijft.
 
 | Velden | Beschrijving |
 | --- | --- |
@@ -251,9 +251,9 @@ De [Commerce-gegevens](/help/xdm/field-groups/event/commerce-details.md) de veld
 
 +++
 
-+++Externe gegevens van de Controle van het Bronsysteem (de Groep van het Gebied)
++++Externe gegevens van Source System Audit (veldgroep)
 
-De externe Attributen van de Controle van het Systeem van de Bron is een standaardgegevenstype van de Gegevens van de Ervaring (XDM) dat controledetails over een extern bronsysteem vangt.
+De externe Attributen van de Controle van het Systeem van Source is een standaard het gegevenstype van de Gegevens van de Ervaring (XDM) dat controledetails over een extern bronsysteem vangt.
 
 +++
 
@@ -261,19 +261,19 @@ De externe Attributen van de Controle van het Systeem van de Bron is een standaa
 
 >[!NOTE]
 >
->Dit is een optionele implementatie als u de [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md).
+>Dit is een optionele implementatie als u [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md) gebruikt.
 
-Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op uw website of bijbehorende digitale platforms voorkomt. Dit schema is gelijkaardig aan het schema van de Transacties van de Klant Digitale maar verschilt in die zin dat het bedoeld is om te worden gebruikt wanneer [Web SDK](/help/web-sdk/home.md) is geen optie voor gegevensverzameling; daarom is dit schema nodig wanneer u het [!DNL Adobe Analytics Source Connector] om uw online gegevens te verzenden naar [!DNL Adobe Experience Platform] hetzij als primaire of secundaire gegevensstroom.
+Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op uw website of bijbehorende digitale platforms voorkomt. Dit schema is gelijkaardig aan het Digitale schema van Transacties van de Klant maar in dat het bedoeld is om te worden gebruikt wanneer [ SDK van het Web ](/help/web-sdk/home.md) geen optie voor gegevensinzameling is; zo, is dit schema nodig wanneer u [!DNL Adobe Analytics Source Connector] gebruikt om uw online gegevens in [!DNL Adobe Experience Platform] of als primaire of secundaire gegevensstroom te verzenden.
 
-De [!DNL Adobe] het schema van de Webschakelaar wordt vertegenwoordigd door een [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klasse.
+Het schema van de [!DNL Adobe] webconnector wordt vertegenwoordigd door een [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -klasse.
 
 +++XDM ExperienceEvent (Class)
 
-De [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klasse bevat de volgende veldgroepen:
+De klasse [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) bevat de volgende veldgroepen:
 
 | Velden | Beschrijving |
 | --- | --- |
-| `_id` | Identificeert uniek individuele gebeurtenissen die in worden opgenomen [!DNL Adobe Experience Platform]. |
+| `_id` | Hiermee worden afzonderlijke gebeurtenissen die in [!DNL Adobe Experience Platform] worden opgenomen, op unieke wijze geïdentificeerd. |
 | `timestamp` | Een tijdstempel volgens ISO 8601 van het tijdstip van de gebeurtenis, opgemaakt volgens RFC 3339, sectie 5.6. Deze tijdstempel moet in het verleden voorkomen. |
 | `eventType` | Een tekenreeks die het type categorie voor de gebeurtenis aangeeft. |
 
@@ -281,22 +281,22 @@ De [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klas
 
 +++Adobe Analytics ExperienceEvent-sjabloon (veldgroep)
 
-De [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/event/analytics-full-extension.md) veldgroep legt algemene meetgegevens vast die door Adobe Analytics worden verzameld.
+De ](/help/xdm/field-groups/event/analytics-full-extension.md) het gebiedsgroep van 1} van Adobe Analytics ExperienceEvent vangt gemeenschappelijke metriek die door Adobe Analytics worden verzameld.[
 
 | Velden | Beschrijving |
 | --- | --- |
 | `endUserIDs._experience.emailid.authenticatedState` | Status van e-mailadres voor eindgebruiker is geverifieerd. |
 | `endUserIDs._experience.emailid.id` | E-mailadres van eindgebruiker. |
 | `endUserIDs._experience.emailid.namespace.code` | Naamruimte-code van e-mailadres van eindgebruiker. |
-| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Status geverifieerd voor Marketing Cloud-id (MCID). De MCID wordt nu ECID (Experience Cloud-id) genoemd. |
+| `endUserIDs._experience.mcid.authenticatedState` | De status MCID (Marketing Cloud ID) is geverifieerd. [!DNL Adobe] De MCID wordt nu ECID (Experience Cloud-id) genoemd. |
 | `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud-id (MCID). De MCID wordt nu ECID (Experience Cloud-id) genoemd. |
 | `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud-id (MCID) naamruimtecode. |
 
 +++
 
-+++Externe gegevens van de Controle van het Bronsysteem (de Groep van het Gebied)
++++Externe gegevens van Source System Audit (veldgroep)
 
-De externe Attributen van de Controle van het Systeem van de Bron is een standaardgegevenstype van de Gegevens van de Ervaring (XDM) dat controledetails over een extern bronsysteem vangt.
+De externe Attributen van de Controle van het Systeem van Source is een standaard het gegevenstype van de Gegevens van de Ervaring (XDM) dat controledetails over een extern bronsysteem vangt.
 
 +++
 
@@ -304,57 +304,57 @@ De externe Attributen van de Controle van het Systeem van de Bron is een standaa
 
 Een dataset is een opslag en beheersstructuur voor een groep gegevens. Elk schema voor intelligente scenario&#39;s van de re-engagement zou zijn eigen dataset moeten hebben.
 
-Voor meer informatie over het maken van een [gegevensset](/help/catalog/datasets/overview.md) in een schema, lees de [UI-gids voor gegevensbestanden](/help/catalog/datasets/user-guide.md).
+Voor meer informatie over hoe te om a [ dataset ](/help/catalog/datasets/overview.md) van een schema tot stand te brengen, lees de [ gids UI van Datasets ](/help/catalog/datasets/user-guide.md).
 
 >[!NOTE]
 >
->Gelijkaardig aan de stap om een schema tot stand te brengen, moet u toelaten dat de dataset in het Profiel van de Klant in real time wordt omvat. Voor meer informatie over het toelaten van de dataset voor gebruik in het Profiel van de Klant in real time, zie zelfstudie over [gegevens in realtime-klantprofiel plaatsen](https://experienceleague.adobe.com/docs/platform-learn/tutorials/profiles/bring-data-into-the-real-time-customer-profile.html).
+>Gelijkaardig aan de stap om een schema tot stand te brengen, moet u toelaten dat de dataset in het Profiel van de Klant in real time wordt omvat. Voor meer informatie over het toelaten van de dataset voor gebruik in het Profiel van de Klant in real time, zie zelfstudie over [ brengend gegevens in het Profiel van de Klant in real time ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/profiles/bring-data-into-the-real-time-customer-profile.html).
 
 ### Toestemming en gegevensbeheer {#privacy-consent}
 
 >[!IMPORTANT]
 >
->Het is een wettelijke vereiste om klanten de mogelijkheid te bieden zich niet langer te abonneren op het ontvangen van communicatie van een merk, en om ervoor te zorgen dat deze keuze wordt nagekomen. Meer informatie over de toepasselijke wetgeving vindt u in het [Overzicht van privacyregels](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>Het is een wettelijke vereiste om klanten de mogelijkheid te bieden zich niet langer te abonneren op het ontvangen van communicatie van een merk, en om ervoor te zorgen dat deze keuze wordt nagekomen. Leer meer over de toepasselijke wetgeving in het [ overzicht van de Regels van de Privacy ](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
 #### Toestemmingsbeleid
 
-Als u een pad voor opnieuw toewijzen maakt, kunt u het volgende toevoegen [toestemmingsbeleid](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html):
+Wanneer het creëren van een re-betrokkenheidspad, denk na toevoegend het volgende [ toestemmingsbeleid ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html):
 
-* Indien `consents.marketing.email.val = "Y"` vervolgens kunt u e-mailen
-* Indien `consents.marketing.sms.val = "Y"` Dan kan SMS
-* Indien `consents.marketing.push.val = "Y"` vervolgens kan duwen
-* Indien `consents.share.val = "Y"` kan vervolgens adverteren
+* Als `consents.marketing.email.val = "Y"` dan kan e-mailen
+* Indien `consents.marketing.sms.val = "Y"` dan kan SMS
+* Als `consents.marketing.push.val = "Y"` dan kan duwen
+* Als `consents.share.val = "Y"` dan reclame kan maken
 
 #### Etikettering en handhaving van gegevensbeheer
 
-Als u een pad voor opnieuw toewijzen maakt, kunt u het volgende toevoegen [Labels voor gegevensbeheer](/help/data-governance/labels/overview.md):
+Wanneer het creëren van een re-betrokkenheidspad, denk na toevoegend de volgende [ etiketten van het Beleid van Gegevens ](/help/data-governance/labels/overview.md):
 
 * Persoonlijke e-mailadressen worden gebruikt als direct identificeerbare gegevens die worden gebruikt om een specifieke persoon te identificeren of contact met hem te krijgen in plaats van met een apparaat.
    * `personalEmail.address = I1`
 
 #### Beleid voor gegevensgebruik
 
-Er zijn geen [beleid voor gegevensgebruik](/help/data-governance/policies/overview.md) vereist voor het verlaten product doorbladert scenario. U dient echter het volgende in overweging te nemen:
+Er zijn geen [ beleid van het gegevensgebruik ](/help/data-governance/policies/overview.md) wordt vereist voor het verlaten product doorbladert scenario. U dient echter het volgende in overweging te nemen:
 
 * Gevoelige gegevens beperken
-* Onsite reclame beperken
+* Onsite Advertising beperken
 * E-maildoelen beperken
 * Doelstelling voor meerdere sites beperken
 * Het combineren van rechtstreeks identificeerbare gegevens met anonieme gegevens beperken
 
 ### Soorten publiek maken {#create-audience}
 
-In de scenario&#39;s voor herbetrokkenheid wordt gebruikgemaakt van publiek om specifieke kenmerken of gedragingen te definiëren die worden gedeeld door een subset van profielen in uw profielarchief om een verhandelbare groep personen te onderscheiden van uw klantenbasis. Soorten publiek kan op meerdere manieren worden gemaakt [!DNL Adobe Experience Platform].
+In de scenario&#39;s voor herbetrokkenheid wordt gebruikgemaakt van publiek om specifieke kenmerken of gedragingen te definiëren die worden gedeeld door een subset van profielen in uw profielarchief om een verhandelbare groep personen te onderscheiden van uw klantenbasis. Soorten publiek kan op meerdere manieren worden gemaakt in [!DNL Adobe Experience Platform] .
 
-Voor meer informatie over het maken van een publiek leest u de [gebruikersinterface-handleiding voor publieksservices](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
+Voor meer informatie over hoe te om een publiek tot stand te brengen, lees de [ gids UI van de publieksdienst ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
-Voor meer informatie over hoe u direct samenstelt [Soorten publiek](/help/segmentation/home.md), lees de [Handleiding voor compositie van publiek](/help/segmentation/ui/audience-composition.md).
+Voor meer informatie over hoe te om [ Soorten publiek ](/help/segmentation/home.md) direct samen te stellen, lees de [ gids UI van de Samenstelling van het publiek ](/help/segmentation/ui/audience-composition.md).
 
-Voor meer informatie over hoe te om publiek door Platform-afgeleide publieksdefinities te bouwen, lees [Handleiding voor de gebruikersinterface van Audience Builder](/help/segmentation/ui/segment-builder.md).
+Voor meer informatie over hoe te om publiek door Platform-afgeleide publieksdefinities te bouwen, lees de [ gids UI van de Bouwer van de Publiek ](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
->[!TAB Verlaten door product Bladeren Scenario]
+>[!TAB  Verlaten Product doorbladert Scenario ]
 
 Dit publiek wordt gemaakt als een uitbreiding op het klassieke scenario &#39;Kart Abandenvironment&#39;. Terwijl het verlaten van het winkelwagentje zich doorgaans concentreert op een toevoeging van winkelwagentjes zonder een latere aankoop binnen een bepaalde periode, zoekt dit publiek naar een eerdere betrokkenheid, met name diegenen die mogelijk door een bepaald product hebben gebladerd maar het niet aan hun winkelwagentje hebben toegevoegd en binnen een bepaalde tijd geen vervolgactiviteit op uw site hadden. Dit publiek helpt om uw merk &quot;bovenaan&quot;voor klanten te houden die aan deze inclusiecriteria voldoen en kan ook voor klanten worden gebruikt waarvan digitale eigenschappen van een traditioneel e-commercemodel kunnen verschillen.
 
@@ -365,7 +365,7 @@ De volgende gebeurtenis wordt gebruikt voor het verlaten productbladerscenario w
 Voor het instellen van dit publiek zijn de volgende velden en voorwaarden vereist:
 
 * `eventType: commerce.productViews`
-* en `THEN` (opeenvolgende gebeurtenis) exclude `eventType: commerce.productListAdds` EN `application.launch` EN `web.webpagedetails.pageViews` EN `commerce.purchases` (inclusief online en offline)
+* En `THEN` (sequentiële gebeurtenis) sluit `eventType: commerce.productListAdds` AND `application.launch` AND `web.webpagedetails.pageViews` AND `commerce.purchases` uit (omvat zowel online als offline)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 
@@ -378,7 +378,7 @@ De volgende gebeurtenis wordt gebruikt voor het verlaten productbladerscenario w
 Voor het instellen van dit publiek zijn de volgende velden en voorwaarden vereist:
 
 * `eventType: commerce.productViews`
-* en `THEN` (sequentiële gebeurtenis) include `eventType: commerce.productListAdds` OF `application.launch` OF `web.webpagedetails.pageViews` OF `commerce.purchases` (inclusief online en offline)
+* En `THEN` (sequentiële gebeurtenis) bevat `eventType: commerce.productListAdds` OR `application.launch` OR `web.webpagedetails.pageViews` OR `commerce.purchases` (inclusief online en offline)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 +++
@@ -390,7 +390,7 @@ De volgende gebeurtenis wordt gebruikt voor het verlaten productbladerscenario w
 Voor het instellen van dit publiek zijn de volgende velden en voorwaarden vereist:
 
 * `eventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
-   * `Timestamp: in last 1 day` (Streaming)
+   * `Timestamp: in last 1 day` (streaming)
 
 +++
 
@@ -401,11 +401,11 @@ De volgende gebeurtenis wordt gebruikt voor het verlaten productbladerscenario w
 Voor het instellen van dit publiek zijn de volgende velden en voorwaarden vereist:
 
 * `EventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
-   * `Timestamp: in last 3 days` (Batch)
+   * `Timestamp: in last 3 days` (batch)
 
 +++
 
->[!TAB Abandoned Cart Scenario]
+>[!TAB  Verlaten Scenario van de Kar ]
 
 Dit publiek wordt gemaakt ter ondersteuning van het klassieke scenario &#39;Kart Abandenvironment&#39;. Het doel is om klanten te vinden die een product aan hun winkelwagentje hebben toegevoegd maar uiteindelijk niet met een aankoop hebben gevolgd. Dit publiek zal niet alleen uw merk &quot;bovenaan&quot;voor uw klanten houden maar ook de producten die zij zonder een verdere aankoop hebben verlaten.
 
@@ -424,7 +424,7 @@ De beschrijving voor het verlaten kartscenario verschijnt als:
 
 `Include eventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude eventType = commerce.purchases 30 minutes before now OR eventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
 
->[!TAB Scenario voor orderbevestiging]
+>[!TAB  het Bevestigingsscenario van de Orde ]
 
 Voor deze reis is geen publiek nodig.
 
@@ -434,19 +434,19 @@ Voor deze reis is geen publiek nodig.
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] omvat niet alles die in de diagrammen wordt getoond. Alles [betaalde mediasleutels](/help/destinations/catalog/social/overview.md) worden gemaakt in [!UICONTROL Destinations].
+>[!DNL Adobe Journey Optimizer] omvat niet alles die in de diagrammen wordt getoond. Alle [ betaalde media advertenties ](/help/destinations/catalog/social/overview.md) worden gecreeerd in [!UICONTROL Destinations].
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helpt u verbonden, contextafhankelijke en persoonlijke ervaringen aan uw klanten te leveren. De reis van de klant is het volledige proces van interactie van een klant met het merk. Voor elke gebruiksreis is specifieke informatie vereist. Hieronder staan de precieze gegevens die nodig zijn voor elke reis.
+[[!DNL Adobe Journey Optimizer] ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helpt u verbonden, contextafhankelijke, en gepersonaliseerde ervaringen aan uw klanten leveren. De reis van de klant is het volledige proces van interactie van een klant met het merk. Voor elke gebruiksreis is specifieke informatie vereist. Hieronder staan de precieze gegevens die nodig zijn voor elke reis.
 
 >[!BEGINTABS]
 
->[!TAB Verlaten door product Bladeren Scenario]
+>[!TAB  Verlaten Product doorbladert Scenario ]
 
-Het verlaten productbladerscenario richt verlaten product het doorbladeren op zowel de website als mobiele app.<p>![Door de klant verlaten product bladeren scenario&#39;s op hoog niveau visueel overzicht.](../intelligent-re-engagement/images/re-engagement-journey.png "Door de klant verlaten product bladeren scenario&#39;s op hoog niveau visueel overzicht."){width="1920" zoomable="yes"}</p>
+Het verlaten productbladerscenario richt verlaten product het doorbladeren op zowel de website als mobiele app.<p>![ de verlaten productdoorblader van de Klant scenario op hoog niveau visueel overzicht.](../intelligent-re-engagement/images/re-engagement-journey.png " de verlaten productdoorblader van de Klant scenario hoog niveau visueel overzicht."){width="1920" zoomable="yes"}</p>
 
 +++Gebeurtenissen
 
-Gebeurtenissen stellen u in staat om uw reizen tijdelijk te activeren en berichten in real-time te verzenden aan de persoon die de reis maakt. Lees voor meer informatie over gebeurtenissen de [Handleiding voor algemene gebeurtenissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Gebeurtenissen stellen u in staat om uw reizen tijdelijk te activeren en berichten in real-time te verzenden aan de persoon die de reis maakt. Voor meer informatie over gebeurtenissen, lees de [ algemene gebeurtenisgids ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Gebeurtenis 1: productweergaven
    * Schema: digitale transacties van klanten
@@ -553,25 +553,25 @@ De belangrijkste logica van het reiscanvas vereist u om specifieke gebeurtenisse
       * `timestamp > timestamp of product last viewed`
 
    * Voorwaarden - Selecteer het doelkanaal
-      * E-mail
+      * Email
          * `consents.marketing.email.val = y`
       * Push
          * `consents.marketing.push.val=y`
-      * SMS
+      * Sms
          * `consents.marketing.sms.val = y`
 
-   * Kanaalpersonalisatie
+   * Channel Personalization
       * Inhoud van persoonlijke kanalen op basis van de productweergave.
 
 +++
 
->[!TAB Abandoned Cart Scenario]
+>[!TAB  Verlaten Scenario van de Kar ]
 
-Het verlaten kartscenario richt producten die in de kar zijn geplaatst maar nog niet op zowel de website als de mobiele app gekocht.<p>![Door de klant verlaten kaartscenario op hoog niveau visueel overzicht.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Door de klant verlaten kaartscenario op hoog niveau visueel overzicht."){width="1920" zoomable="yes"}</p>
+Het verlaten kartscenario richt producten die in de kar zijn geplaatst maar nog niet op zowel de website als de mobiele app gekocht.<p>![ Klant verliet kaartscenario hoog niveau visueel overzicht.](../intelligent-re-engagement/images/abandoned-cart-journey.png " Klant verliet het scenario van het wortelscenario op hoog niveau visueel overzicht."){width="1920" zoomable="yes"}</p>
 
 +++Gebeurtenissen
 
-Gebeurtenissen stellen u in staat om uw reizen tijdelijk te activeren en berichten in real-time te verzenden aan de persoon die de reis maakt. Lees voor meer informatie over gebeurtenissen de [Handleiding voor algemene gebeurtenissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Gebeurtenissen stellen u in staat om uw reizen tijdelijk te activeren en berichten in real-time te verzenden aan de persoon die de reis maakt. Voor meer informatie over gebeurtenissen, lees de [ algemene gebeurtenisgids ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Gebeurtenis 2: Toevoegen aan winkelwagentje
    * Schema: digitale transacties van klanten
@@ -671,7 +671,7 @@ Gebeurtenissen stellen u in staat om uw reizen tijdelijk te activeren en bericht
 De belangrijkste logica van het reiscanvas vereist u om specifieke gebeurtenissen te identificeren en acties te vormen om te plaatsvinden nadat de gebeurtenis voorkomt.
 
 * Logica voor reizen
-   * `AddToCart` Gebeurtenis
+   * `AddToCart` Event
 
 * AuthenticatedState in authenticated
 
@@ -683,28 +683,28 @@ De belangrijkste logica van het reiscanvas vereist u om specifieke gebeurtenisse
 * Voorwaarde: winkelwagentje wordt gewist sinds de laatste keer dat het winkelwagentje werd verlaten:
    * Schema: digitale transacties van klanten
    * `eventType = commerce.cartCleared`
-   * `cartID` (ID van de kar)
+   * `cartID` (ID van het winkelwagentje)
    * `timestamp > timestamp of cart was last abandoned`
 
 * Doelkanaal selecteren (één of meerdere kanalen selecteren voor breder bereik)
-   * E-mail
+   * Email
       * `consents.marketing.email.val = y`
    * Push
       * `consents.marketing.push.val = y`
-   * SMS
+   * Sms
       * `consents.marketing.sms.val = y`
-   * Kanaalpersonalisatie
+   * Channel Personalization
       * Geef informatie over de details van het winkelwagentje weer en kan meerdere producten in een tabelindeling weergeven.
 
 +++
 
->[!TAB Scenario voor orderbevestiging]
+>[!TAB  het Bevestigingsscenario van de Orde ]
 
-Het bevestigingsscenario voor bestellingen is vooral gericht op productaankopen via de website en de mobiele app.<p>![Bevestigingsscenario op hoog niveau voor bestellingen van klanten: visueel overzicht.](../intelligent-re-engagement/images/order-confirmation-journey.png "Bevestigingsscenario op hoog niveau voor bestellingen van klanten: visueel overzicht."){width="1920" zoomable="yes"}</p>
+Het bevestigingsscenario voor bestellingen is vooral gericht op productaankopen via de website en de mobiele app.<p>![ het scenario van de de ordetectie van de Klant op hoog niveau visueel overzicht.](../intelligent-re-engagement/images/order-confirmation-journey.png " het scenario van de de ordecbevestiging van de Klant hoog niveau visueel overzicht."){width="1920" zoomable="yes"}</p>
 
 +++Gebeurtenissen
 
-Gebeurtenissen stellen u in staat om uw reizen tijdelijk te activeren en berichten in real-time te verzenden aan de persoon die de reis maakt. Lees voor meer informatie over gebeurtenissen de [Handleiding voor algemene gebeurtenissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Gebeurtenissen stellen u in staat om uw reizen tijdelijk te activeren en berichten in real-time te verzenden aan de persoon die de reis maakt. Voor meer informatie over gebeurtenissen, lees de [ algemene gebeurtenisgids ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Gebeurtenis 4: online aankopen
    * Schema: digitale transacties van klanten
@@ -744,22 +744,22 @@ De belangrijkste logica van het reiscanvas vereist u om specifieke gebeurtenisse
 * Voorwaarden
    * Selecteer Doelkanaal (selecteer een of meerdere kanalen voor een groter bereik).
       * Bevestiging van bestellingen wordt beschouwd als dienstbaar in de natuur, dus controle van de toestemming is meestal niet nodig.
-      * E-mail
+      * Email
       * Push
-      * SMS
+      * Sms
 
-   * Aanpassing kanaalinhoud
+   * Personalization voor kanaalinhoud
       * Hiermee geeft u informatie over de volgordedetails weer en kunt u een lijst met producten weergeven met een tabelindeling.
 
 +++
 
 >[!ENDTABS]
 
-Meer informatie over het maken van reizen in [!DNL Adobe Journey Optimizer], lees de [Aan de slag met reishandleiding](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
+Voor meer informatie over het creëren van reizen in [!DNL Adobe Journey Optimizer], lees [ begonnen met reisgids ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
 ### Betaalde mediadeskundigen instellen in bestemmingen {#paid-media-ads}
 
-Het bestemmingskader wordt gebruikt voor betaalde media advertenties. Zodra de toestemming is gecontroleerd verzendt het naar de diverse gevormde bestemmingen. Voor meer informatie over bestemmingen, lees [Overzicht van doelen](/help/destinations/home.md) document.
+Het bestemmingskader wordt gebruikt voor betaalde media advertenties. Zodra de toestemming is gecontroleerd verzendt het naar de diverse gevormde bestemmingen. Voor meer informatie over bestemmingen, lees het [ overzichtsdocument van Doelen ](/help/destinations/home.md).
 
 #### Vereiste gegevens voor bestemmingen
 
@@ -772,13 +772,13 @@ Streaming publiek exportbestemmingen (zoals Facebook, Google Customer Match, Goo
 U kunt verlaten productdoorbladeren activeren en het kartpubliek verlaten aan betaalde media advertenties.
 
 * Stream/activering
-   * [Reclame](/help/destinations/catalog/advertising/overview.md)/[Betaalde media en sociale media](/help/destinations/catalog/social/overview.md)
+   * [ Advertising ](/help/destinations/catalog/advertising/overview.md)/[ Betaalde Media &amp; Sociale ](/help/destinations/catalog/social/overview.md)
    * [Mobiel](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Streaming doel](/help/destinations/catalog/streaming/http-destination.md)
-   * [Aangepast doel gemaakt met Destination SDK.](/help/destinations/destination-sdk/overview.md). Als u een Real-Time CDP Ultimate-klant bent, kunt u ook een persoonlijke [aangepast doel met Destination SDK](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
+   * [ de bestemming van de Douane die door Destination SDK te gebruiken wordt gecreeerd.](/help/destinations/destination-sdk/overview.md). Als u een ultieme klant van Real-Time CDP bent, kunt u een privé [ douanebestemming ook creëren gebruikend Destination SDK ](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
 
 ## Volgende stappen {#next-steps}
 
 Door uw klanten opnieuw in dienst te nemen die een omzetting op een intelligente en verantwoordelijke manier verlieten, hebt u hopelijk omzettingen verhoogd en de waarde van het cliëntleven verhoogd.
 
-Vervolgens kunt u andere door Real-Time CDP ondersteunde gebruiksgevallen verkennen, zoals [persoonlijke inhoud weergeven aan niet-geverifieerde gebruikers](/help/rtcdp/partner-data/onsite-personalization.md) op uw wegeigenschappen.
+Daarna, kunt u andere gebruiksgevallen onderzoeken die door Real-Time CDP worden gesteund, zoals [ tonend gepersonaliseerde inhoud aan niet voor authentiek verklaarde gebruikers ](/help/rtcdp/partner-data/onsite-personalization.md) op uw Webeigenschappen.

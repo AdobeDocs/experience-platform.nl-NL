@@ -15,9 +15,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->In dit document worden de [!UICONTROL IAB TCF 2.0 Consent] schemaveldgroep voor de klasse van het Profiel Individual XDM. Raadpleeg het volgende voor de veldgroep die is bedoeld voor de klasse XDM ExperienceEvent: [document](../event/iab.md) in plaats daarvan.
+>Dit document behandelt de [!UICONTROL IAB TCF 2.0 Consent] schemagebiedgroep voor de klasse van het Profiel Individual XDM. Voor de gebiedsgroep voorgenomen voor de klasse XDM ExperienceEvent, verwijs in plaats daarvan naar het volgende [ document ](../event/iab.md).
 
-[!UICONTROL IAB TCF 2.0 Consent] is een standaardschemagebiedgroep voor [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) gebruikt voor het vastleggen van reeksen IAB-toestemmingstekenreeksen met tijdstempels, om toestemmings-veranderingspatronen in de loop van de tijd bij te houden.
+[!UICONTROL IAB TCF 2.0 Consent] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../classes/individual-profile.md) wordt gebruikt om een timestamped reeksenIAB toestemmingskoorden te vangen, om toestemming-verandering patronen in tijd te volgen die.
 
 ![](../../images/field-groups/iab-profile.png)
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Het volgende JSON demonstreert de structuur van de `identityPrivacyInfo` kaart.
+In de volgende JSON ziet u de structuur van de `identityPrivacyInfo` -kaart.
 
 ```json
 {
@@ -50,15 +50,15 @@ Het volgende JSON demonstreert de structuur van de `identityPrivacyInfo` kaart.
 }
 ```
 
-Zoals in het voorbeeld wordt getoond, geldt voor elke key op hoofdniveau van `xdm:identityPrivacyInfo` komt overeen met een naamruimte voor identiteiten die wordt herkend door Identity Service. Elke naamruimte-eigenschap moet op zijn beurt ten minste één subeigenschap hebben waarvan de sleutel overeenkomt met de overeenkomstige identiteitswaarde van de klant voor die naamruimte. In dit voorbeeld wordt de klant aangeduid met een Experience Cloud-id (`ECID`) waarde van `13782522493631189`.
+Zoals in het voorbeeld wordt getoond, komt elke key op hoofdniveau van `xdm:identityPrivacyInfo` overeen met een naamruimte voor identiteit die wordt herkend door Identity Service. Elke naamruimte-eigenschap moet op zijn beurt ten minste één subeigenschap hebben waarvan de sleutel overeenkomt met de overeenkomstige identiteitswaarde van de klant voor die naamruimte. In dit voorbeeld wordt de klant aangeduid met de waarde `ECID` (Experience Cloud-id) `13782522493631189` .
 
 >[!NOTE]
 >
 >Terwijl het bovenstaande voorbeeld één enkele namespace/waardepaar gebruikt om de identiteit van de klant te vertegenwoordigen, kunt u extra sleutels voor andere namespaces toevoegen, en elke namespace kan veelvoudige identiteitswaarden hebben, elk met hun eigen reeks toestemmingsvoorkeur TCF.
 
-Voor elke identiteitswaarde, en `identityIABConsent` moet eigenschap worden opgegeven, die de TCF-waarde voor de toestemming voor de identiteit biedt. De waarde voor deze eigenschap moet overeenkomen met de [[!UICONTROL Consent String] gegevenstype](../../data-types/consent-string.md).
+Voor elke identiteitswaarde moet een eigenschap `identityIABConsent` worden opgegeven die de TCF-toestemmingswaarde voor de identiteit biedt. De waarde voor dit bezit moet met het [[!UICONTROL Consent String] gegevenstype ](../../data-types/consent-string.md) in overeenstemming zijn.
 
-Zie de handleiding op [IAB TCF 2.0-ondersteuning in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie over het gebruik van deze veldgroep. Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep zelf:
+Zie de gids op [ IAB TCF 2.0 steun in Platform ](../../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie over het gebruiksgeval van deze gebiedsgroep. Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep zelf:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

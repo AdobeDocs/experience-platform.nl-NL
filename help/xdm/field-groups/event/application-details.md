@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # [!UICONTROL Application Details] schemaveldgroep
 
-[!UICONTROL Application Details] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). De veldgroep bevat één `application` object naar een schema waarin toepassingsgerelateerde details zoals vastlopen, gebruik van functies, opstarten en upgrades worden vastgelegd.
+[!UICONTROL Application Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md). De veldgroep biedt één `application` -object aan een schema dat toepassingsgerelateerde details zoals vastlopen, eigenschapgebruik, opstarten en upgrades vastlegt.
 
 ![](../../images/field-groups/application-details.png)
 
@@ -21,4 +21,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-application.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-application.schema.json).

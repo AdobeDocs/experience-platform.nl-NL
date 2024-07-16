@@ -15,16 +15,16 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Met de release van de [Uitgebreide Marketo V2-doelconnector](/help/release-notes/2022/july-2022.md#destinations)En nu ziet u twee Marketo-kaarten in de lijst met doelen.
->* Als u gegevens al activeert voor de **[!UICONTROL Marketo V1]** doel: Maak nieuwe gegevensstromen naar de **[!UICONTROL Marketo V2]** doel en verwijder bestaande gegevensstromen naar de **[!UICONTROL Marketo V1]** uiterlijk in februari 2023. Met ingang van die datum **[!UICONTROL Marketo V1]** de doelkaart wordt verwijderd.
->* Als u nog geen gegevens hebt gemaakt voor de **[!UICONTROL Marketo V1]** bestemming, gelieve te gebruiken nieuwe **[!UICONTROL Marketo V2]** om verbinding te maken met en gegevens te exporteren naar Marketo.
+>Met de versie van [ verbeterde de bestemmingsschakelaar van Marketo V2 ](/help/release-notes/2022/july-2022.md#destinations), ziet u nu twee kaarten van Marketo in de bestemmingscatalogus.
+>* Als u al gegevens activeert naar het **[!UICONTROL Marketo V1]** -doel: maak nieuwe gegevensstromen naar het **[!UICONTROL Marketo V2]** -doel en verwijder bestaande gegevensstromen naar het **[!UICONTROL Marketo V1]** -doel tegen februari 2023. Vanaf die datum wordt de **[!UICONTROL Marketo V1]** doelkaart verwijderd.
+>* Als u nog geen gegevensstromen naar de **[!UICONTROL Marketo V1]** bestemming hebt gemaakt, gebruikt u de nieuwe **[!UICONTROL Marketo V2]** -kaart om verbinding te maken met en gegevens te exporteren naar Marketo.
 
-![Afbeelding van de twee Marketo-doelkaarten in een weergave Naast elkaar.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
+![ Beeld van de twee de bestemmingskaarten van Marketo in een zij-aan-zij mening.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 Tot de verbeteringen in de Marketo V2-bestemming behoren:
 
-* In de **[!UICONTROL Schedule segment]** in Marketo V1 moet u handmatig een **Toewijzing-id** om gegevens naar Marketo te exporteren. Deze handmatige stap is niet meer vereist in Marketo V2.
-* In de **[!UICONTROL Mapping]** In Marketo V1 kon u in stap van de activeringsworkflow XDM-velden toewijzen aan slechts drie doelvelden in Marketo: `firstName`, `lastName`, en `companyName`. Met de Marketo V2-release kunt u nu XDM-velden toewijzen aan veel meer velden in Marketo. Lees voor meer informatie de [ondersteunde kenmerken](#supported-attributes) hieronder.
+* In de **[!UICONTROL Schedule segment]** stap van het activeringswerkschema, in Marketo V1, moest u a {**manueel toevoegen 1} Afbeelding identiteitskaart om gegevens naar Marketo met succes uit te voeren.** Deze handmatige stap is niet meer vereist in Marketo V2.
+* In de **[!UICONTROL Mapping]** -stap van de activeringsworkflow was het in Marketo V1 mogelijk om XDM-velden toe te wijzen aan slechts drie doelvelden in Marketo: `firstName` , `lastName` en `companyName` . Met de Marketo V2-release kunt u nu XDM-velden toewijzen aan veel meer velden in Marketo. Voor meer informatie, lees de [ gesteunde attributen ](#supported-attributes) sectie verder hieronder.
 
 ## Overzicht {#overview}
 
@@ -36,20 +36,20 @@ De bestemming laat marketers toe om publiek te duwen dat in Adobe Experience Pla
 
 >[!NOTE]
 >
->In de [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van de workflow voor het activeren van het doel is *verplicht* om identiteiten toe te wijzen en *optioneel* aan kaartkenmerken. Het toewijzen van e-mail- en/of ECID via het tabblad Identiteitsnaamruimte is het belangrijkste wat u moet doen om ervoor te zorgen dat de persoon gelijk is aan de persoon in Marketo. Toewijzing via e-mail zorgt voor de hoogste match-rate.
+>In de [ toewijzingsstap ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van het activerende bestemmingswerkschema, is het *verplicht* om identiteiten in kaart te brengen en *facultatief* om attributen in kaart te brengen. Het toewijzen van e-mail- en/of ECID via het tabblad Identiteitsnaamruimte is het belangrijkste wat u moet doen om ervoor te zorgen dat de persoon gelijk is aan de persoon in Marketo. Toewijzing via e-mail zorgt voor de hoogste match-rate.
 
 ### Ondersteunde identiteiten {#supported-identities}
 
 | Doelidentiteit | Beschrijving |
 |---|---|
-| ECID | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](/help/identity-service/features/ecid.md) voor meer informatie . |
+| ECID | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ ECID ](/help/identity-service/features/ecid.md) voor meer informatie. |
 | Email | Een naamruimte die een e-mailadres vertegenwoordigt. Dit type naamruimte is vaak gekoppeld aan één persoon en kan daarom worden gebruikt om die persoon op verschillende kanalen te identificeren. |
 
 {style="table-layout:auto"}
 
 ### Ondersteunde kenmerken {#supported-attributes}
 
-U kunt kenmerken van het Experience Platform toewijzen aan alle kenmerken waartoe uw organisatie toegang heeft in Marketo. In Marketo kunt u de opdracht [Beschrijf API-aanvraag](https://developers.marketo.com/rest-api/lead-database/leads/#describe) om de kenmerkvelden op te halen waartoe uw organisatie toegang heeft.
+U kunt kenmerken van het Experience Platform toewijzen aan alle kenmerken waartoe uw organisatie toegang heeft in Marketo. In Marketo, kunt u [ gebruiken beschrijf API verzoek ](https://developers.marketo.com/rest-api/lead-database/leads/#describe) om de attributengebieden terug te winnen die uw organisatie toegang heeft tot.
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -57,8 +57,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -68,8 +68,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (e-mail, ECID) die worden gebruikt in het dialoogvenster [!DNL Marketo Engage] bestemming. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (e-mail, ECID) die in de [!DNL Marketo Engage] -bestemming worden gebruikt. |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -77,10 +77,10 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 > 
->* Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions).
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>* Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig.
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Voor gedetailleerde instructies over hoe te opstelling de bestemming en activeert publiek [Een Adobe Experience Platform-publiek naar een statische Marketo-lijst duwen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) in de documentatie van Marketo.
+Voor gedetailleerde instructies op hoe te opstelling de bestemming en het publiek te activeren, lees [ duw een Push een Publiek van Adobe Experience Platform aan een Statische Lijst van Marketo ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) in de documentatie van Marketo.
 
 In de onderstaande video ziet u ook de stappen voor het configureren van een Marketo-bestemming en het activeren van het publiek.
 
@@ -88,10 +88,10 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een Mar
 >
 >De video weerspiegelt niet volledig de huidige mogelijkheden. Voor de meest actuele informatie raadpleegt u de bovenstaande handleiding. De volgende delen van de video zijn verouderd:
 > 
->* De doelkaart die u in UI van het Experience Platform zou moeten gebruiken is **[!UICONTROL Marketo V2]**.
->* De nieuwe video wordt niet weergegeven **[!UICONTROL Person creation]** in het veld Verbinding maken met doel.
+>* De doelkaart die u moet gebruiken in de gebruikersinterface van het Experience Platform is **[!UICONTROL Marketo V2]** .
+>* De video geeft het nieuwe selectieveld **[!UICONTROL Person creation]** niet weer in de workflow Verbinding maken met doel.
 >* De twee beperkingen die in de video worden aangeroepen, zijn niet meer van toepassing. U kunt nu veel andere profielkenmerkvelden toewijzen naast de lidmaatschapsgegevens voor het publiek die werden ondersteund op het moment dat de video werd opgenomen. U kunt ook publieksleden exporteren naar Marketo die nog niet in uw statische Marketo-lijsten voorkomen. Deze personen worden toegevoegd aan de lijsten.
->* In de **[!UICONTROL Schedule audience step]** In Marketo V1 moest u handmatig een **[!UICONTROL Mapping ID]** om gegevens naar Marketo te exporteren. Deze handmatige stap is niet meer vereist in Marketo V2.
+>* In **[!UICONTROL Schedule audience step]** van de activeringsworkflow moest u in Marketo V1 handmatig een **[!UICONTROL Mapping ID]** toevoegen om gegevens te kunnen exporteren naar Marketo. Deze handmatige stap is niet meer vereist in Marketo V2.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
@@ -105,7 +105,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [gegevensbeheer - overzicht](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ gegeven beheer overzicht ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 <!--
 

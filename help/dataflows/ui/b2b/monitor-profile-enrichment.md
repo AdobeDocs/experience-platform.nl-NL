@@ -1,29 +1,29 @@
 ---
-description: Gebruik de [!UICONTROL Profile Enrichment] dashboard om te begrijpen of de banen van de profielverrijking met succes liepen en voltooiden, en de basismetriek te bekijken om de doeltreffendheid van de verrijking te meten.
+description: Gebruik het dashboard van [!UICONTROL Profile Enrichment] om te begrijpen of de banen van de profielverrijking met succes liepen en voltooiden, en om de basismetriek te bekijken om de doeltreffendheid van de verrijking te meten.
 solution: Experience Platform
 title: Verbeteringstaken voor profielen controleren
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '692'
 ht-degree: 0%
 
 ---
 
 # Verbeteringstaken voor profielen controleren in de gebruikersinterface {#monitor-profile-enrichment}
 
-Gebruik de [!UICONTROL Profile Enrichment] dashboard om te begrijpen of de banen van de profielverrijking met succes liepen en voltooiden, en de basismetriek te bekijken om de doeltreffendheid van de verrijking te meten.
+Gebruik het dashboard van [!UICONTROL Profile Enrichment] om te begrijpen of de banen van de profielverrijking met succes liepen en voltooiden, en om de basismetriek te bekijken om de doeltreffendheid van de verrijking te meten.
 
-In de [UI Platform](https://platform.adobe.com), selecteert u **[!UICONTROL Monitoring]** van de linkernavigatie om tot [!UICONTROL Monitoring] dashboard. Selecteer in de weergavekiezer de optie **B2B-stroom** om de specifieke dashboardelementen voor [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  De [!UICONTROL Monitoring] dashboard bevat de basismeetgegevens van de meest recente succesvolle uitvoering en de dagelijkse taakstatus tot 90 dagen in het verleden.
+In [ Platform UI ](https://platform.adobe.com), selecteer **[!UICONTROL Monitoring]** van de linkernavigatie om tot het [!UICONTROL Monitoring] dashboard toegang te hebben. In de meningsselecteur, uitgezochte **B2B Stroom** om de dashboardelementen te zien specifiek voor [ Real-Time CDP B2B ](/help/rtcdp/b2b-overview.md).  Het dashboard van [!UICONTROL Monitoring] bevat de basismetriek van de laatste succesvolle looppas, en dagelijkse baanstatus tot 90 dagen in het verleden.
 
 ## Verrijking van het accountprofiel {#related-accounts}
 
-De [!UICONTROL Related accounts] het dashboard toont basismeetgegevens en de status van de dagelijkse baan specifiek voor [Gerelateerde accounts](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) profielverrijking.
+Het [!UICONTROL Related accounts] dashboard toont basismetriek en het statuut van de dagelijkse baan specifiek voor de [ Verwante 2} profielverrijking van Rekeningen {.](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 
-![Visuele aanwijzing van hoe te om aan het scherm van de Taakcontrole van de Verrijking van het Profiel in de UI van het Experience Platform te krijgen.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
+![ Visuele aanwijzing van hoe te om aan de de verrijking van het Profiel te krijgen banen controlerend het scherm in Experience Platform UI.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
-De gegevens in de **[!UICONTROL Metrics]** De kaart bevat de basisgegevens van de meest recente geslaagde uitvoering van de taak Verwante accounts.
+De gegevens op de **[!UICONTROL Metrics]** -kaart bevatten de basisgegevens van de meest recente succesvolle uitvoering van de taak Verwante accounts.
 
 De volgende cijfers zijn beschikbaar voor verrijkingstaken van het accountprofiel:
 
@@ -40,9 +40,9 @@ De volgende cijfers zijn beschikbaar voor verrijkingstaken van het accountprofie
 
 ## Verrijking van overeenkomende profielen voor accounts leiden {#lead-to-account-matching}
 
-De [!UICONTROL Lead to account matching] op het dashboard worden de basismaatstaven en de dagelijkse taakrun-status weergegeven die specifiek zijn voor het [Overeenkomende lead-account](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) profielverrijking.
+Het [!UICONTROL Lead to account matching] dashboard toont de basismetriek en de dagelijkse baan-in werking gestelde status specifiek voor [ Lood aan rekening passende ](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) profielverrijking.
 
-![Verrijking van overeenkomende profielen voor accounts leiden](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
+![ Lood aan rekening passende profielverrijking ](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
 
 De volgende metriek is beschikbaar voor lood aan de banen van de de profielverrijking van de rekening passende:
 
@@ -53,14 +53,14 @@ De volgende metriek is beschikbaar voor lood aan de banen van de de profielverri
 | **[!UICONTROL Existing persons with accounts]** | Hiermee wordt het aantal personen aangegeven dat al is gekoppeld aan een account uit de gegevensbronnen. |
 | **[!UICONTROL Persons matched]** | Hiermee geeft u het aantal personen aan dat aan een account is gekoppeld. |
 | **[!UICONTROL Persons unmatched]** | Hiermee geeft u het aantal personen aan dat niet aan een account is gekoppeld. |
-| **[!UICONTROL Last successful run]** | Geeft de datum en tijd aan van de laatste geslaagde poging om een overeenkomstige taak uit te voeren. |
+| **[!UICONTROL Last successful run]** | Geeft de datum en tijd aan van de laatste geslaagde poging om een overeenkomende taak uit te voeren. |
 | **[!UICONTROL Status]** | Geeft de status (geslaagd, mislukt of verwerkt) aan van de lead in de overeenkomende taak van de account. |
 
 ## Verrijking van het profiel voor lood en accountscoring {#predictive-lead-to-account-scoring}
 
-De [!UICONTROL Predictive lead and account scoring] op het dashboard worden de basismaatstaven en de dagelijkse taakrun-status weergegeven die specifiek zijn voor het [Voorspelend lood en account scoring](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) profielverrijking.
+Het [!UICONTROL Predictive lead and account scoring] dashboard toont de basismetriek en de dagelijkse baan-in werking gestelde status specifiek voor de [ Predictieve lood en rekening die ](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) profielverrijking scoren.
 
-![Verrijking van het profiel voor lood en accountscoring](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+![ Predictive lood en de verbetering van het rekeningsprofiel van de rekening ](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
 
 De volgende metriek is beschikbaar voor voorspellende lood en de banen van de de profielverrijking van de rekening:
 
@@ -77,17 +77,17 @@ De volgende metriek is beschikbaar voor voorspellende lood en de banen van de de
 
 In deze sectie worden diverse gebruikersinterface-opties (UI) in de monitoringinterface beschreven waarmee u de metriek kunt filteren die op de pagina wordt weergegeven.
 
-Het pijlpictogram gebruiken (![pijlpictogram](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) om de kaart boven aan het scherm uit te vouwen of te sluiten, waarin in één oogopslag informatie over de taken voor profielverrijking wordt weergegeven.
+Gebruik het pijlpictogram (![ pijlpictogram ](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) om de kaart bij de bovenkant van het scherm uit te breiden of te sluiten, dat informatie van de bij-a-blik over de banen van de profielverrijking toont.
 
-![De opname van het scherm die de controle UI van het pijlpictogram toont.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
+![ opname van het Scherm die de controle van het pijlpictogram UI toont.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 
-Gebruik de **[!UICONTROL Metrics and graphs]** Schakel deze optie in om de weergave met de meest recente meetgegevens te sluiten.
+Met de schakeloptie **[!UICONTROL Metrics and graphs]** kunt u de weergave met de meest recente meetgegevens negeren.
 
-![Schermopname die de schakeloptie Metriek en Grafieken toont.](/help/dataflows/assets/ui/b2b/metrics-and-graphs-toggle.gif)
+![ opname van het Scherm die de metriek en grafieken knevel toont.](/help/dataflows/assets/ui/b2b/metrics-and-graphs-toggle.gif)
 
-Gebruik de **[!UICONTROL Show failures only]** schakelen om alleen de mislukte verrijkingstaken voor profielen weer te geven.
+Gebruik de schakeloptie **[!UICONTROL Show failures only]** om alleen de mislukte taken voor profielverrijking weer te geven.
 
-![De opname van het scherm die toont tonen slechts mislukkingen knevel.](/help/dataflows/assets/ui/b2b/show-failures-only.gif)
+![ opname van het Scherm die toont tonen mislukkingen slechts knevel.](/help/dataflows/assets/ui/b2b/show-failures-only.gif)
 
 ## Volgende stappen {#next-steps}
 

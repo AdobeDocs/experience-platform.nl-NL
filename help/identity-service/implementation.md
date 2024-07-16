@@ -1,7 +1,8 @@
 ---
 title: Implementatiehandleiding voor identiteitsservice
 description: Leer hoe gegevens die aan Adobe Experience Platform zijn verstrekt worden verwerkt voordat ze door Identity Service worden gebruikt om identiteitsgrafieken samen te stellen.
-source-git-commit: f1273c1deac32559e214d1d99d10f6ca25fe4264
+exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '581'
 ht-degree: 0%
@@ -22,7 +23,7 @@ Afhankelijk van uw strategie van de de gegevensinzameling van ondernemingsgegeve
 
 ## Extra naamruimten maken
 
-Hoewel Experience Platform verschillende standaardnaamruimten biedt, moet u mogelijk extra naamruimten maken om uw identiteiten correct te categoriseren. Lees voor meer informatie de handleiding op [aangepaste naamruimten voor uw organisatie maken](./features/namespaces.md).
+Hoewel Experience Platform verschillende standaardnaamruimten biedt, moet u mogelijk extra naamruimten maken om uw identiteiten correct te categoriseren. Voor meer informatie, lees de gids bij [ het creëren van douane namespaces voor uw organisatie ](./features/namespaces.md).
 
 >[!NOTE]
 >
@@ -30,13 +31,13 @@ Hoewel Experience Platform verschillende standaardnaamruimten biedt, moet u moge
 
 ## Identiteitsgegevens opnemen in XDM (Experience Data Model)
 
-Als gestandaardiseerd kader waardoor het Experience Platform klantengegevens organiseert, laat het Model van Gegevens van de Ervaring (XDM) gegevens toe om over Experience Platform en andere diensten worden gedeeld en worden begrepen die met Experience Platform in wisselwerking staan. Lees voor meer informatie de [XDM System, overzicht](../xdm/home.md).
+Als gestandaardiseerd kader waardoor het Experience Platform klantengegevens organiseert, laat het Model van Gegevens van de Ervaring (XDM) gegevens toe om over Experience Platform en andere diensten worden gedeeld en worden begrepen die met Experience Platform in wisselwerking staan. Voor meer informatie lees het [ XDM overzicht van het Systeem ](../xdm/home.md).
 
 Zowel de verslagen als de tijdreeksschema&#39;s verstrekken de middelen om identiteitsgegevens te omvatten. Terwijl gegevens worden opgenomen, maakt de identiteitsgrafiek nieuwe relaties tussen gegevensfragmenten van verschillende naamruimten als deze gemeenschappelijke identiteitsgegevens delen.
 
 ## XDM-velden als identiteit labelen
 
-Willekeurig tekstveld `string` in schema&#39;s die of verslag of tijdreeks XDM klassen uitvoeren kunnen als identiteitsgebied worden geëtiketteerd. Als gevolg hiervan worden alle gegevens die in dat veld worden ingevoerd, beschouwd als identiteitsgegevens.
+Om het even welk gebied van type `string` in schema&#39;s die of verslag of tijdreeks XDM klassen uitvoeren kan als identiteitsgebied worden geëtiketteerd. Als gevolg hiervan worden alle gegevens die in dat veld worden ingevoerd, beschouwd als identiteitsgegevens.
 
 Identiteitsvelden maken het ook mogelijk om identiteiten te koppelen als ze gemeenschappelijke PII-gegevens delen.
 Bijvoorbeeld, door de gebieden van het telefoonaantal als identiteitsgebieden te etiketteren, grafiekt de Dienst van de Identiteit automatisch relaties met de andere individuen die worden gevonden om het zelfde telefoonaantal te gebruiken.
@@ -46,15 +47,15 @@ Bijvoorbeeld, door de gebieden van het telefoonaantal als identiteitsgebieden te
 >* Array- en toewijzingsvelden worden niet ondersteund en kunnen niet worden gemarkeerd en gelabeld als identiteitsvelden.
 >* De naamruimte van resulterende identiteiten wordt opgegeven op het moment dat het veld wordt gelabeld.
 
-Lees voor meer informatie de handleiding op [identiteitsvelden definiëren in de gebruikersinterface](../xdm/ui/fields/identity.md).
+Voor meer informatie, lees de gids op [ bepalend identiteitsgebieden in UI ](../xdm/ui/fields/identity.md).
 
 ## Een dataset voor Identiteitsservice configureren
 
-Tijdens het streamingingingproces extraheert de Identiteitsservice automatisch identiteitsgegevens uit record- en tijdreeksgegevens. Nochtans, alvorens de gegevens kunnen worden opgenomen, moet het voor de Dienst van de Identiteit worden toegelaten. Lees de zelfstudie aan  [het vormen van een dataset voor het Profiel en de Dienst van de Identiteit van de Klant in real time gebruikend APIs](../profile/tutorials/dataset-configuration.md) voor meer informatie .
+Tijdens het streamingingingproces extraheert de Identiteitsservice automatisch identiteitsgegevens uit record- en tijdreeksgegevens. Nochtans, alvorens de gegevens kunnen worden opgenomen, moet het voor de Dienst van de Identiteit worden toegelaten. Lees het leerprogramma op [ vormend een dataset voor het Profiel van de Klant in real time en de Dienst van de Identiteit gebruikend APIs ](../profile/tutorials/dataset-configuration.md) voor meer informatie.
 
 ## Gegevens opnemen in de identiteitsservice
 
-De Dienst van de identiteit verbruikt XDM-Volgzame gegevens die naar Experience Platform of door worden verzonden [batch-inname](../ingestion/batch-ingestion/overview.md) of [streaming opname](../ingestion/streaming-ingestion/overview.md).
+De Dienst van de identiteit verbruikt XDM-Volgzame gegevens die naar Experience Platform of door [ partij worden verzonden ](../ingestion/batch-ingestion/overview.md) of [ het stromen opname ](../ingestion/streaming-ingestion/overview.md).
 
 De volgende video is bedoeld om uw begrip van de Dienst van de Identiteit te steunen. In deze video ziet u hoe u gegevensvelden kunt labelen als identiteiten, identiteitsgegevens kunt invoeren en vervolgens kunt controleren of de gegevens zijn omgezet in de persoonlijke grafiek van de Adobe Experience Platform Identity Service.
 

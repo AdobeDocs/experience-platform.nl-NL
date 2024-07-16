@@ -7,25 +7,25 @@ exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '2040'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 # Planningeindpunt
 
-Planningen zijn een hulpmiddel dat kan worden gebruikt om batch-segmentatietaken één keer per dag automatisch uit te voeren. U kunt de `/config/schedules` eindpunt om een lijst van programma&#39;s terug te winnen, een nieuw programma tot stand te brengen, details van een specifiek programma terug te winnen, een specifiek programma bij te werken, of een specifiek programma te schrappen.
+Planningen zijn een hulpmiddel dat kan worden gebruikt om batch-segmentatietaken één keer per dag automatisch uit te voeren. U kunt het `/config/schedules` eindpunt gebruiken om een lijst van programma&#39;s terug te winnen, een nieuw programma tot stand te brengen, details van een specifiek programma terug te winnen, een specifiek programma bij te werken, of een specifiek programma te schrappen.
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Een lijst met schema&#39;s ophalen {#retrieve-list}
 
-U kunt een lijst van alle programma&#39;s voor uw organisatie terugwinnen door een verzoek van de GET tot de `/config/schedules` eindpunt.
+U kunt een lijst van alle programma&#39;s voor uw organisatie terugwinnen door een verzoek van de GET tot het `/config/schedules` eindpunt te richten.
 
-**API-indeling**
+**API formaat**
 
-De `/config/schedules` het eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Hoewel deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om kostbare overhead te helpen verminderen. Het maken van een vraag aan dit eindpunt zonder parameters zal alle programma&#39;s beschikbaar voor uw organisatie terugwinnen. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`).
+Het `/config/schedules` eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Hoewel deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om kostbare overhead te helpen verminderen. Het maken van een vraag aan dit eindpunt zonder parameters zal alle programma&#39;s beschikbaar voor uw organisatie terugwinnen. De veelvoudige parameters kunnen worden omvat, die door ampersands (`&`) worden gescheiden.
 
 ```http
 GET /config/schedules
@@ -50,7 +50,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met een lijst van programma&#39;s voor de gespecificeerde organisatie als JSON terug.
 
@@ -98,15 +98,15 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van programma&#3
 | `children.name` | De naam van het schema als een tekenreeks. |
 | `children.type` | Het type taak als tekenreeks. De twee ondersteunde typen zijn &quot;batch_segmentation&quot; en &quot;export&quot;. |
 | `children.properties` | Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
-| `children.properties.segments` | Gebruiken `["*"]` zorgt ervoor dat alle segmenten worden opgenomen. |
-| `children.schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Lees voor meer informatie over de cron-schema&#39;s de bijlage bij de [expressie-indeling voor uitsnijden](#appendix). In dit voorbeeld betekent &quot;0 0 1 * *&quot;dat dit programma om 1AM elke dag zal lopen. |
+| `children.properties.segments` | Als u `["*"]` gebruikt, worden alle segmenten opgenomen. |
+| `children.schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix). In dit voorbeeld betekent &quot;0 0 1 * *&quot;dat dit programma om 1AM elke dag zal lopen. |
 | `children.state` | Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn &quot;actief&quot; en &quot;inactief&quot;. De status wordt standaard ingesteld op &quot;inactief&quot;. |
 
 ## Een nieuw schema maken {#create}
 
-U kunt een nieuw programma tot stand brengen door een verzoek van de POST aan `/config/schedules` eindpunt.
+U kunt een nieuw programma tot stand brengen door een verzoek van de POST aan het `/config/schedules` eindpunt te doen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /config/schedules
@@ -139,12 +139,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | -------- | ------------ |
 | `name` | **Vereist.** De naam van het schema als een tekenreeks. |
 | `type` | **Vereist.** Het type taak als tekenreeks. De twee ondersteunde typen zijn &quot;batch_segmentation&quot; en &quot;export&quot;. |
-| `properties` | **Vereist.** Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
-| `properties.segments` | **Vereist wanneer `type` is gelijk aan &quot;batch_segmentation&quot;.** Gebruiken `["*"]` zorgt ervoor dat alle segmenten worden opgenomen. |
-| `schedule` | *Optioneel.* Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Lees voor meer informatie over de cron-schema&#39;s de bijlage bij de [expressie-indeling voor uitsnijden](#appendix). In dit voorbeeld betekent &quot;0 0 1 * *&quot;dat dit programma om 1AM elke dag zal lopen. <br><br>Als deze tekenreeks niet wordt opgegeven, wordt automatisch een door het systeem gegenereerd schema gegenereerd. |
-| `state` | *Optioneel.* Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn &quot;actief&quot; en &quot;inactief&quot;. De status wordt standaard ingesteld op &quot;inactief&quot;. |
+| `properties` | **Vereist.** Een object dat aanvullende eigenschappen bevat die gerelateerd zijn aan het schema. |
+| `properties.segments` | **vereist wanneer `type` &quot;batch_segmentation&quot;evenaart.** Met `["*"]` zorgt u ervoor dat alle segmenten worden opgenomen. |
+| `schedule` | *Facultatief.* Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix). In dit voorbeeld betekent &quot;0 0 1 * *&quot;dat dit programma om 1AM elke dag zal lopen. <br><br> als dit koord niet wordt geleverd, zal een systeem-geproduceerd programma automatisch worden geproduceerd. |
+| `state` | *Facultatief.* Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn &quot;actief&quot; en &quot;inactief&quot;. De status wordt standaard ingesteld op &quot;inactief&quot;. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs gecreeerd programma terug.
 
@@ -174,9 +174,9 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs gec
 
 ## Een specifiek schema ophalen {#get}
 
-U kunt gedetailleerde informatie over een specifiek programma terugwinnen door een verzoek van de GET aan `/config/schedules` eindpunt en het verstrekken van identiteitskaart van het programma u wenst om in de verzoekweg terug te winnen.
+U kunt gedetailleerde informatie over een specifiek programma terugwinnen door een verzoek van de GET tot het `/config/schedules` eindpunt te richten en identiteitskaart van het programma te verstrekken u in de verzoekweg wenst terug te winnen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /config/schedules/{SCHEDULE_ID}
@@ -196,7 +196,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over het gespecificeerde programma terug.
 
@@ -227,23 +227,23 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 | Eigenschap | Beschrijving |
 | -------- | ------------ |
 | `name` | De naam van het schema als een tekenreeks. |
-| `type` | Het type taak als tekenreeks. De twee ondersteunde typen zijn `batch_segmentation` en `export`. |
+| `type` | Het type taak als tekenreeks. De twee ondersteunde typen zijn `batch_segmentation` en `export` . |
 | `properties` | Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
-| `properties.segments` | Gebruiken `["*"]` zorgt ervoor dat alle segmenten worden opgenomen. |
-| `schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Lees voor meer informatie over de cron-schema&#39;s de bijlage bij de [expressie-indeling voor uitsnijden](#appendix). In dit voorbeeld betekent &quot;0 0 1 * *&quot;dat dit programma om 1AM elke dag zal lopen. |
-| `state` | Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn `active` en `inactive`. De status is standaard ingesteld op `inactive`. |
+| `properties.segments` | Als u `["*"]` gebruikt, worden alle segmenten opgenomen. |
+| `schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix). In dit voorbeeld betekent &quot;0 0 1 * *&quot;dat dit programma om 1AM elke dag zal lopen. |
+| `state` | Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn `active` en `inactive` . De status wordt standaard ingesteld op `inactive` . |
 
 ## Details bijwerken voor een specifiek schema {#update}
 
-U kunt een specifieke planning bijwerken door een PATCH-verzoek in te dienen bij de `/config/schedules` eindpunt en het verstrekken van identiteitskaart van het programma u probeert om in de verzoekweg bij te werken.
+U kunt een specifiek programma bijwerken door een verzoek van PATCH tot het `/config/schedules` eindpunt te richten en identiteitskaart van het programma te verstrekken u probeert om in de verzoekweg bij te werken.
 
-Met de PATCH-aanvraag kunt u een van de [state](#update-state) of de [uitsnijdschema](#update-schedule) voor een afzonderlijk schema.
+Het verzoek van de PATCH staat u toe om of de [ staat ](#update-state) of het [ bouwplan ](#update-schedule) voor een individueel programma bij te werken.
 
 ### Status schema bijwerken {#update-state}
 
-U kunt een JSON-patchbewerking gebruiken om de status van de planning bij te werken. Als u de status wilt bijwerken, declareert u de `path` eigenschap as `/state` en stelt de `value` hetzij `active` of `inactive`. Lees voor meer informatie over JSON Patch de [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) documentatie.
+U kunt een JSON-patchbewerking gebruiken om de status van de planning bij te werken. Als u de status wilt bijwerken, declareert u de eigenschap `path` als `/state` en stelt u de eigenschap `value` in op `active` of `inactive` . Voor meer informatie over Reparatie JSON, te lezen gelieve de ](https://datatracker.ietf.org/doc/html/rfc6902) documentatie van het Reparatie 0} JSON {.[
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /config/schedules/{SCHEDULE_ID}
@@ -251,7 +251,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` De waarde van het schema dat u wilt bijwerken. |
+| `{SCHEDULE_ID}` | De `id` waarde van het schema u wilt bijwerken. |
 
 **Verzoek**
 
@@ -273,18 +273,18 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `path` | Het pad van de waarde die u wilt repareren. In dit geval, aangezien u de staat van het programma bijwerkt, moet u de waarde van plaatsen `path` naar &quot;/state&quot;. |
-| `value` | De bijgewerkte waarde van de staat van het programma. Deze waarde kan worden ingesteld op &quot;actief&quot; of &quot;inactief&quot; om het schema te activeren of deactiveren. Let op: **kan** maak een programma onbruikbaar als de organisatie voor het stromen is toegelaten. |
+| `path` | Het pad van de waarde die u wilt repareren. In dit geval moet u, aangezien u de status van het programma bijwerkt, de waarde van `path` instellen op &quot;/state&quot;. |
+| `value` | De bijgewerkte waarde van de staat van het programma. Deze waarde kan worden ingesteld op &quot;actief&quot; of &quot;inactief&quot; om het schema te activeren of deactiveren. Gelieve te merken op dat u **niet** een programma kan onbruikbaar maken als de organisatie voor het stromen is toegelaten. |
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud).
 
 ### Uitsnijdschema bijwerken {#update-schedule}
 
-U kunt een JSON-reparatiebewerking gebruiken om het uitsnijdschema bij te werken. Om het programma bij te werken, verklaart u het `path` eigenschap as `/schedule` en stelt de `value` naar een geldig uitsnijdschema. Lees voor meer informatie over JSON Patch de [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) documentatie. Lees voor meer informatie over de cron-schema&#39;s de bijlage bij de [expressie-indeling voor uitsnijden](#appendix).
+U kunt een JSON-reparatiebewerking gebruiken om het uitsnijdschema bij te werken. Als u het schema wilt bijwerken, declareert u de eigenschap `path` als `/schedule` en stelt u de eigenschap `value` in op een geldig uitsnijdschema. Voor meer informatie over Reparatie JSON, te lezen gelieve de ](https://datatracker.ietf.org/doc/html/rfc6902) documentatie van het Reparatie 0} JSON {. [ Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /config/schedules/{SCHEDULE_ID}
@@ -292,7 +292,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` De waarde van het schema dat u wilt bijwerken. |
+| `{SCHEDULE_ID}` | De `id` waarde van het schema u wilt bijwerken. |
 
 **Verzoek**
 
@@ -314,18 +314,18 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `path` | Het pad van de waarde die u wilt bijwerken. In dit geval moet u, aangezien u het bijsnijdschema bijwerkt, de waarde instellen van `path` tot `/schedule`. |
+| `path` | Het pad van de waarde die u wilt bijwerken. In dit geval moet u, aangezien u het bijsnijdschema bijwerkt, de waarde van `path` instellen op `/schedule` . |
 | `value` | De bijgewerkte waarde van het uitsnijdschema. Deze waarde moet de vorm hebben van een uitsnijdschema. In dit voorbeeld, zal het programma op de tweede van elke maand lopen. |
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud).
 
 ## Een specifiek schema verwijderen
 
-U kunt verzoeken om een specifiek programma te schrappen door een verzoek van DELETE aan te richten `/config/schedules` eindpunt en het verstrekken van identiteitskaart van het programma u wenst om in de verzoekweg te schrappen.
+U kunt verzoeken om een specifiek programma te schrappen door een verzoek van DELETE aan het `/config/schedules` eindpunt te doen en identiteitskaart van het programma te verstrekken u wenst om in de verzoekweg te schrappen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /config/schedules/{SCHEDULE_ID}
@@ -333,7 +333,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` waarde van het programma u wilt schrappen. |
+| `{SCHEDULE_ID}` | De `id` -waarde van het schema dat u wilt verwijderen. |
 
 **Verzoek**
 
@@ -345,7 +345,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud).
 
@@ -377,20 +377,20 @@ In een expressie-tekenreeks voor een bijsnijden vertegenwoordigt het eerste veld
 
 >[!NOTE]
 >
->De namen van de maanden en de dagen van de week zijn **niet** hoofdlettergevoelig. Daarom `SUN` is gelijk aan `sun`.
+>De namen van de maanden en de namen van de dagen van de week zijn **niet** gevoelig geval. Daarom is `SUN` gelijk aan het gebruik van `sun` .
 
 De speciale tekens die zijn toegestaan, vertegenwoordigen de volgende betekenissen:
 
 | Speciaal teken | Beschrijving |
 | ----------------- | ----------- |
-| `*` | Deze waarde wordt gebruikt om **alles** waarden in een veld. Bijvoorbeeld, plaatsen `*` in de uren **elke** uur. |
-| `?` | Deze waarde betekent dat er geen specifieke waarde is vereist. Dit wordt doorgaans gebruikt om iets op te geven in het ene veld waar het teken is toegestaan, maar niet in het andere veld. Bijvoorbeeld, als u een gebeurtenis wilt teweegbrengen elke 3de van de maand, maar niet om geeft over welke dag van de week het is, zou u zetten `3` in het veld dag van de maand en `?` op de dag van de week. |
-| `-` | Deze waarde wordt gebruikt om op te geven **inclusief** bereiken voor het veld. Als u bijvoorbeeld `9-15` in het veld Uren betekent dit dat de uren 9 , 10 , 11 , 12 , 13 , 14 en 15 moeten omvatten . |
-| `,` | Deze waarde wordt gebruikt om extra waarden op te geven. Als u bijvoorbeeld `MON, FRI, SAT` op de dag van het weekgebied, zou dit betekenen de dagen van de week maandag, vrijdag, en Zaterdag omvatten. |
-| `/` | Deze waarde wordt gebruikt om toenamen op te geven. De waarde die voor de `/` bepaalt waar het van stijgt, terwijl de waarde na wordt geplaatst `/` bepaalt hoeveel het met stijgt. Als u bijvoorbeeld `1/7` in het minutenveld betekent dit dat de notulen 1 , 8 , 15 , 22 , 29 , 36 , 43 , 50 en 57 bevatten . |
-| `L` | Deze waarde wordt gebruikt om op te geven `Last`en heeft een andere betekenis, afhankelijk van het veld waarin deze wordt gebruikt. Als het met de dag van het maandgebied wordt gebruikt, vertegenwoordigt het de laatste dag van de maand. Als het op zich met de dag van het weekgebied wordt gebruikt, vertegenwoordigt het de laatste dag van de week, die Zaterdag (`SAT`). Als het samen met de dag van het weekgebied, samen met een andere waarde wordt gebruikt, vertegenwoordigt het de laatste dag van dat type voor de maand. Als u bijvoorbeeld `5L` op de dag van de week zou **alleen** omvat de laatste vrijdag van de maand. |
-| `W` | Deze waarde wordt gebruikt om de dichtste weekdag aan de bepaalde dag te specificeren. Als u bijvoorbeeld `18W` op de dag van het maandveld, en de 18e van die maand was een zaterdag, zou het op vrijdag 17e, de dichtstbijzijnde weekdag, in werking treden. Als de 18e van die maand een zondag was, zou het op maandag 19de, die dichtstbijzijnde weekdag is, in werking treden. Houd er rekening mee dat als u `1W` in de dag van het maandveld, en de dichtstbijzijnde weekdag in de voorafgaande maand, wordt de gebeurtenis nog steeds geactiveerd op de dichtstbijzijnde weekdag van de maand **huidig** maand.</br></br>Bovendien kunt u `L` en `W` om `LW`, waarin de laatste weekdag van de maand wordt vermeld. |
-| `#` | Deze waarde wordt gebruikt om de negende dag van de week in een maand te specificeren. De waarde die voor de `#` staat voor de dag van de week, terwijl de waarde na de `#` geeft aan welk exemplaar in de maand dit is. Als u bijvoorbeeld `1#3`, wordt de gebeurtenis op de derde zondag van de maand gestart. Houd er rekening mee dat als u `X#5` en er is geen vijfde van die dag van de week in die maand, zal de gebeurtenis **niet** worden geactiveerd. Als u bijvoorbeeld `1#5`en er is geen vijfde zondag in die maand, zal het evenement **niet** worden geactiveerd. |
+| `*` | Deze waarde wordt gebruikt om **alle** waarden op een gebied te selecteren. Bijvoorbeeld, zou het zetten van `*` op het urengebied **elk** uur betekenen. |
+| `?` | Deze waarde betekent dat er geen specifieke waarde is vereist. Dit wordt doorgaans gebruikt om iets op te geven in het ene veld waar het teken is toegestaan, maar niet in het andere veld. Als u bijvoorbeeld wilt dat een gebeurtenis elke drie maanden wordt geactiveerd, maar niet om de dag van de week gaat, plaatst u `3` in het veld Dag van de maand en `?` in het veld Dag van de week. |
+| `-` | Deze waarde wordt gebruikt om **inclusieve** waaiers voor het gebied te specificeren. Als u bijvoorbeeld `9-15` in het veld Uren plaatst, betekent dit dat de uren 9, 10, 11, 12, 13, 14 en 15 bevatten. |
+| `,` | Deze waarde wordt gebruikt om extra waarden op te geven. Als u bijvoorbeeld `MON, FRI, SAT` op de dag van het weekveld plaatst, betekent dit dat de dagen van de week maandag, vrijdag en zaterdag bevatten. |
+| `/` | Deze waarde wordt gebruikt om toenamen op te geven. De waarde die vóór de `/` wordt geplaatst, bepaalt waar deze wordt verhoogd, terwijl de waarde die na de `/` wordt geplaatst, bepaalt in hoeverre de waarde wordt verhoogd. Als u bijvoorbeeld `1/7` in het minutenveld plaatst, betekent dit dat de minuten 1, 8, 15, 22, 29, 36, 43, 50 en 57 bevatten. |
+| `L` | Deze waarde wordt gebruikt om `Last` op te geven en heeft een andere betekenis, afhankelijk van het veld waarin deze wordt gebruikt. Als het met de dag van het maandgebied wordt gebruikt, vertegenwoordigt het de laatste dag van de maand. Als het met de dag van het weekgebied door zich wordt gebruikt, vertegenwoordigt het de laatste dag van de week, die Zaterdag (`SAT`) is. Als het samen met de dag van het weekgebied, samen met een andere waarde wordt gebruikt, vertegenwoordigt het de laatste dag van dat type voor de maand. Bijvoorbeeld, als u `5L` op de dag van het weekgebied zet, zou het **slechts** de laatste Vrijdag van de maand omvatten. |
+| `W` | Deze waarde wordt gebruikt om de dichtste weekdag aan de bepaalde dag te specificeren. Als u bijvoorbeeld `18W` op de dag van het maandveld plaatst en de 18e van die maand op een zaterdag, wordt deze op vrijdag 17e geactiveerd, de dichtstbijzijnde weekdag. Als de 18e van die maand een zondag was, zou het op maandag 19de, die dichtstbijzijnde weekdag is, in werking treden. Gelieve te merken op dat als u `1W` op de dag van het maandgebied zet, en de dichtstbijzijnde weekdag in de vorige maand zou zijn, de gebeurtenis nog op de dichtstbijzijnde weekdag van de **huidige** maand zal teweegbrengen.</br></br> Bovendien, kunt u `L` en `W` combineren om `LW` te maken, die de laatste weekdag van de maand zou specificeren. |
+| `#` | Deze waarde wordt gebruikt om de negende dag van de week in een maand te specificeren. De waarde die vóór `#` wordt geplaatst, vertegenwoordigt de dag van de week, terwijl de waarde die na `#` wordt geplaatst, aangeeft welk exemplaar in de maand waarin het zich bevindt. Als u bijvoorbeeld `1#3` plaatst, wordt de gebeurtenis geactiveerd op de derde zondag van de maand. Gelieve te merken op dat als u `X#5` plaatst en er geen vijfde voorkomen van die dag van de week in die maand is, de gebeurtenis **niet** zal teweeggebracht worden. Bijvoorbeeld, als u `1#5` zet, en er geen vijfde Zondag in die maand is, zal de gebeurtenis **niet** worden teweeggebracht. |
 
 ### Voorbeelden
 

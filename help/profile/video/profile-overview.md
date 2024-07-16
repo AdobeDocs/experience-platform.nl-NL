@@ -1,6 +1,6 @@
 ---
 title: Video-overzicht van realtime klantprofiel
-description: Deze video biedt een basiskennis van Real-Time Customer Profile in Adobe Experience Platform en schetst hoe u door profielen in de gebruikersinterface van het Platform kunt bladeren.
+description: Deze video biedt een basiskennis van Real-Time klantprofiel in Adobe Experience Platform en schetst hoe u door profielen in de interface van het platform kunt bladeren.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -18,10 +18,10 @@ ht-degree: 0%
 
 # Overzicht van het realtime klantprofiel
 
-Deze video biedt een basiskennis van Real-Time Customer Profile in Adobe Experience Platform en schetst hoe gegevens uit meerdere bronnen worden samengebracht om een gecentraliseerd profiel voor elk van uw individuele klanten te vormen. Als u meer wilt weten over de functies en functionaliteit van het realtime klantprofiel, leest u eerst de [Overzicht van het realtime klantprofiel](../home.md).
+Deze video biedt een basiskennis van Real-Time Customer Profile in Adobe Experience Platform en schetst hoe gegevens uit meerdere bronnen worden samengevoegd tot een gecentraliseerd profiel voor elk van uw individuele klanten. Meer over de eigenschappen en de functionaliteit van het Profiel van de Klant in real time leren, gelieve te beginnen door het [ overzicht van het Profiel van de Klant in real time ](../home.md) te lezen.
 
 >[!NOTE]
 >
->De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest actuele informatie raadpleegt u de [Handleiding voor profielgebruikersinterface](../ui/user-guide.md).
+>De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, gelieve te verwijzen naar de [ gids UI van het Profiel ](../ui/user-guide.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)

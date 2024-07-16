@@ -1,61 +1,62 @@
 ---
 title: ECID-toewijzing migreren van persoon naar activiteit met de bron van het Marketo Engage
 description: Leer hoe te om uw ECID afbeelding van de persoondataset aan de activiteitendataset te migreren gebruikend de bron van het Marketo Engage.
-source-git-commit: 0c695e11e7d7c14ef7e047cd007668e1099bf127
+exl-id: bcc91c53-aeca-4d7c-89b5-cf025d0357a0
+source-git-commit: d03fcf06fb63ad2484ded3b85fc11ae45661babc
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 0%
 
 ---
 
-# ECID-toewijzing migreren vanuit [!DNL Person] gegevensset naar [!DNL Activity] gegevensset
+# ECID-toewijzing migreren van [!DNL Person] dataset naar [!DNL Activity] dataset
 
-U kunt uw ECID-toewijzing migreren vanuit uw [!DNL Marketo Engage Person] gegevensset naar uw [!DNL Activity] dataset om een stabieler gedrag van gegevensopname en identiteitsbeheer te verstrekken. Bovendien, richt deze migratie het volgende:
+U kunt uw ECID-toewijzing migreren van uw [!DNL Marketo Engage Person] -gegevensset naar uw [!DNL Activity] -gegevensset voor een stabieler gedrag bij gegevensinvoer en identiteitsbeheer. Bovendien, richt deze migratie het volgende:
 
 | Probleem | Oplossing |
 | --- | --- |
-| Wanneer uw [!DNL Marketo Person] dataset heeft verbindingen aan veelvoudige ECIDs, ontbreekt de gegevensopname wanneer [totaal aantal identiteiten in een XDM-record (Experience Data Model) groter is dan 20](../../../../identity-service/guardrails.md). | Door de ECID-veldtoewijzing te migreren naar [!DNL Activity], kunt u ervoor zorgen dat het aantal identiteiten van [!DNL Marketo Person] dataflow blijft binnen de limiet en maakt het dus mogelijk gegevens in te voeren. |
-| Telkens als [!DNL Marketo Person] dataset wordt opgenomen met ECIDs, timestamp op alle ECIDs van [!DNL Marketo Person] dataset wordt bijgewerkt met laatste bijgewerkte timestamp van het Person verslag. Dit kan leiden tot [onjuiste verwijdering van recentere identiteiten uit de identiteitsgrafiek](../../../../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated). | De ECID-veldtoewijzingen migreren naar [!DNL Activity]Identiteitsdienst kan de tijdstempel van ECID&#39;s correct weergeven en het &quot;first-in, first-out&quot; mechanisme van Identity Service zal een stabieler gedrag opleveren. |
-| Wanneer ECID&#39;s via [!DNL Marketo Person] dataflow, nieuw toegevoegde ECIDs niet in Experience Platform worden opgenomen tenzij er updates aan zijn [!DNL Person] opnemen in [!DNL Marketo]. | Wanneer een nieuwe ECID is gekoppeld aan de [!DNL Person] opnemen in [!DNL Marketo], kunt u die ECID-gegevens via een [!DNL Marketo Activity] en onmiddellijk een update van de identiteitsgrafiek op Experience Platform vragen. |
+| Wanneer uw [!DNL Marketo Person] dataset verbindingen aan veelvoudige ECIDs heeft, ontbreekt de gegevensopname wanneer het [ totale aantal identiteiten in een verslag van de Gegevens van de Ervaring van het Model (XDM) 20 ](../../../../identity-service/guardrails.md) overschrijdt. | Door de ECID-veldtoewijzing te migreren naar [!DNL Activity], kunt u ervoor zorgen dat het aantal identiteiten van de [!DNL Marketo Person] -gegevensstroom binnen de limiet blijft en dat het opnemen van gegevens daardoor lukt. |
+| Telkens wanneer de [!DNL Marketo Person] dataset met ECIDs wordt opgenomen, wordt timestamp op alle ECIDs van de [!DNL Marketo Person] dataset bijgewerkt met laatste bijgewerkte timestamp van het Person verslag. Dit kon in de [ onjuiste schrapping van recentere identiteiten van de identiteitsgrafiek ](../../../../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated) resulteren. | Door de ECID-veldtoewijzingen naar [!DNL Activity] te migreren, kan Identity Service de tijdstempel van ECID&#39;s correct weerspiegelen en het &quot;first-in, first-out&quot; mechanisme van Identity Service zal een stabieler gedrag opleveren. |
+| Wanneer ECID&#39;s via [!DNL Marketo Person] dataflow worden opgenomen, worden nieuw toegevoegde ECID&#39;s niet in het Experience Platform opgenomen, tenzij de [!DNL Person] record in [!DNL Marketo] wordt bijgewerkt. | Wanneer een nieuwe ECID is gekoppeld aan de [!DNL Person] -record in [!DNL Marketo] , kunt u die ECID-gegevens invoeren via een [!DNL Marketo Activity] -gegevensstroom en direct een update van de identiteitsgrafiek op het Experience Platform vragen. |
 
 In wezen moet u:
 
-* Werk uw [!DNL Marketo Activity] dataflow.
-* Werk uw [!DNL Marketo Person] dataflow.
+* Werk de [!DNL Marketo Activity] -gegevensstroom bij.
+* Werk de [!DNL Marketo Person] -gegevensstroom bij.
 
-## Bijwerken [!DNL Marketo Activity] dataflow {#update-activity-dataflow}
+## [!DNL Marketo Activity] -gegevensstroom bijwerken {#update-activity-dataflow}
 
-Voer de onderstaande stappen uit om uw [!DNL Marketo Activity] dataflow:
+Voer de onderstaande stappen uit om uw [!DNL Marketo Activity] -gegevensstroom bij te werken:
 
-* In Experience Platform UI, navigeer aan *Bronnen* werkruimte en zoek naar uw bestaande gegevensstroom voor [!DNL Marketo Activity] gegevens.
-* Als de gegevensstroom is ingeschakeld, selecteert u de ovalen (`...`) naast de naam van de gegevensstroom en selecteer vervolgens **[!UICONTROL Update dataflow]**.
-* Selecteer vervolgens **[!UICONTROL Next]** totdat u de *Toewijzing* interface.
-* In de *Toewijzing* interface, selecteren **[!UICONTROL New field]** en selecteer vervolgens **[!UICONTROL Add calculated field]**. Van hier, moet u het volgende toevoegen:
+* In het Experience Platform UI, navigeer aan de *Bronnen* werkruimte en vind uw bestaande dataflow voor [!DNL Marketo Activity] gegevens.
+* Aangezien de gegevensstroom wordt toegelaten, selecteer de ellipsen (`...`) naast de dataflow naam en selecteer dan **[!UICONTROL Update dataflow]**.
+* Dan, selecteer **[!UICONTROL Next]** tot u de *Afbeelding* interface bereikt.
+* In de *interface van de Toewijzing*, selecteer **[!UICONTROL New field]** en selecteer dan **[!UICONTROL Add calculated field]**. Van hier, moet u het volgende toevoegen:
 
-| Brongegevensset | XDM-doelveld |
+| Source-gegevensset | XDM-doelveld |
 | --- | --- |
 | `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` | `identityMap` |
 
 >[!NOTE]
 >
->Als u een bestaande update uitvoert [!DNL Marketo] dataflow bestaat alleen uit het toevoegen of verwijderen van het ECID-toewijzingsveld, waarna de dataflow de historische back-fill-taak automatisch overslaat. Nieuwe gegevensinvoer vindt alleen plaats wanneer activiteitstypen zoals &quot;Bezoek webpagina&quot; en &quot;Klikken webpagina&quot; plaatsvinden.
+>Als uw update naar een bestaande [!DNL Marketo] -gegevensstroom alleen bestaat uit het toevoegen of verwijderen van het ECID-toewijzingsveld, slaat de gegevensstroom automatisch de historische back-uptaak over. Nieuwe gegevensinvoer vindt alleen plaats wanneer activiteitstypen zoals &quot;Bezoek webpagina&quot; en &quot;Klikken webpagina&quot; plaatsvinden.
 
-## Bijwerken [!DNL Marketo Person] dataflow {#update-person-dataflow}
+## [!DNL Marketo Person] -gegevensstroom bijwerken {#update-person-dataflow}
 
-Voer de onderstaande stappen uit om uw [!DNL Marketo Person] dataflow:
+Voer de onderstaande stappen uit om uw [!DNL Marketo Person] -gegevensstroom bij te werken:
 
-* In Experience Platform UI, navigeer aan *Bronnen* werkruimte en zoek naar uw bestaande gegevensstroom voor [!DNL Marketo Person] gegevens.
-* Als de gegevensstroom is ingeschakeld, selecteert u de ovalen (`...`) naast de naam van de gegevensstroom en selecteer vervolgens **[!UICONTROL Update dataflow]**.
-* Selecteer vervolgens **[!UICONTROL Next]** totdat u de *Toewijzing* interface.
-* In de *Toewijzing* interface, verwijder het berekende gebied dat aan in kaart brengt `identityMap` en selecteer vervolgens **[!UICONTROL Next]** en **[!UICONTROL Save & Ingest]**.
+* In het Experience Platform UI, navigeer aan de *Bronnen* werkruimte en vind uw bestaande dataflow voor [!DNL Marketo Person] gegevens.
+* Aangezien de gegevensstroom wordt toegelaten, selecteer de ellipsen (`...`) naast de dataflow naam en selecteer dan **[!UICONTROL Update dataflow]**.
+* Dan, selecteer **[!UICONTROL Next]** tot u de *Afbeelding* interface bereikt.
+* In de *interface van de Toewijzing*, verwijder het berekende gebied dat aan `identityMap` toewijst en selecteer dan **[!UICONTROL Next]** en **[!UICONTROL Save & Ingest]**.
 
 >[!NOTE]
 >
->Als u een bestaande update uitvoert [!DNL Marketo] dataflow bestaat alleen uit het toevoegen of verwijderen van het ECID-toewijzingsveld, waarna de dataflow de historische back-fill-taak automatisch overslaat. De tijdstempel van eerder opgenomen ECID&#39;s blijft ongewijzigd. Deze worden alleen bijgewerkt wanneer nieuwe gegevens worden ingevoerd die overeenkomen met de bestaande ECID&#39;s.
+>Als uw update naar een bestaande [!DNL Marketo] -gegevensstroom alleen bestaat uit het toevoegen of verwijderen van het ECID-toewijzingsveld, slaat de gegevensstroom automatisch de historische back-uptaak over. De tijdstempel van eerder opgenomen ECID&#39;s blijft ongewijzigd. Deze worden alleen bijgewerkt wanneer nieuwe gegevens worden ingevoerd die overeenkomen met de bestaande ECID&#39;s.
 
 ## Volgende stappen
 
-Door dit document te lezen, weet u nu hoe u uw ECID-toewijzing uit uw [!DNL Marketo Person] gegevensset naar [!DNL Marketo Activity] dataset. Lees voor meer informatie het volgende: [!DNL Marketo] documenten:
+Door dit document te lezen, weet u nu hoe u uw ECID-toewijzing vanuit uw [!DNL Marketo Person] -dataset naar [!DNL Marketo Activity] -dataset kunt migreren. Lees de volgende [!DNL Marketo] -documenten voor meer informatie:
 
-* [Een gegevensstroom maken om in te voeren [!DNL Marketo] gegevens naar Experience Platform](../../../tutorials/ui/create/adobe-applications/marketo.md).
-* [Veldtoewijzingshulplijn](../mapping/marketo.md).
+* [ creeer een dataflow om  [!DNL Marketo]  gegevens aan Experience Platform ](../../../tutorials/ui/create/adobe-applications/marketo.md) in te voeren.
+* [ de afbeeldingsgids van het Gebied ](../mapping/marketo.md).

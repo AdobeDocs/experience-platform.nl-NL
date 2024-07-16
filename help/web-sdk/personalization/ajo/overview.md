@@ -10,30 +10,30 @@ ht-degree: 0%
 
 ---
 
-# Gebruiken [!DNL Adobe Journey Optimizer] met de [!DNL Platform Web SDK]
+# [!DNL Adobe Journey Optimizer] gebruiken met de [!DNL Platform Web SDK]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] kan persoonlijke ervaringen leveren en weergeven die worden beheerd in [!DNL Adobe Journey Optimizer] naar het webkanaal. U kunt een redacteur gebruiken WYSIWYG, [!DNL Adobe Journey Optimizer] [Webkanaal](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)of een niet-visuele interface, de [Experience Channel op basis van code](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) om uw [!DNL Journey Optimizer Web] campagnes en personalisatie ervaringen.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] kan persoonlijke ervaringen die in [!DNL Adobe Journey Optimizer] worden beheerd, leveren en renderen naar het webkanaal. U kunt een redacteur WYSIWYG, [!DNL Adobe Journey Optimizer] [ Kanaal van het Web ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), of een niet-visuele interface, het [ op code-gebaseerde Kanaal van de Ervaring ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) gebruiken om, uw [!DNL Journey Optimizer Web] campagnes en verpersoonlijkingservaringen tot stand te brengen te activeren en te leveren.
 
 >[!IMPORTANT]
 >
->Lees de [Adobe Journey Optimizer Web Channel-documentatie](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html) voor informatie over hoe u aan de slag gaat met [!DNL Journey Optimizer Web] het schrijven en rapporteren van ervaringen.
+>Lees de [ documentatie van het Kanaal van het Web van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html) voor informatie bij het worden begonnen met [!DNL Journey Optimizer Web] ervaring creatie en rapportering.
 
 ## Terminologie {#terminology}
 
-**[!UICONTROL Surface]**: Een weboppervlak is een webpagina of -locatie op een pagina die wordt aangeduid met een URI waarin de [!DNL Adobe Journey Optimizer] ervaringsinhoud wordt geleverd.
+**[!UICONTROL Surface]**: Een weboppervlak is een webpagina of locatie op een pagina die wordt aangeduid met een URI waar de [!DNL Adobe Journey Optimizer] -ervaringsinhoud wordt geleverd.
 
-**[!UICONTROL Propositions]**: In [!DNL Adobe Journey Optimizer], correleren voorstellen met de ervaring die is gekozen op basis van een [!DNL Journey Optimizer Campaign].
+**[!UICONTROL Propositions]**: In [!DNL Adobe Journey Optimizer] hebben de voorstellingen betrekking op de ervaring die u hebt geselecteerd in een [!DNL Journey Optimizer Campaign] .
 
-## Inschakelen [!DNL Adobe Journey Optimizer] {#enable-ajo}
+## [!DNL Adobe Journey Optimizer] inschakelen {#enable-ajo}
 
-Als u wilt beginnen met [!DNL Adobe Journey Optimizer]volgt u de onderstaande stappen.
+Voer de onderstaande stappen uit om [!DNL Adobe Journey Optimizer] te gaan gebruiken.
 
-1. Ga door de [voorwaarden](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) van de [!DNL Adobe Journey Optimizer] [Web Experience Guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), met name:
-   * Instellen [!DNL Adobe Experience Cloud Visual Editing Helper].
-   * Inschakelen [!DNL Adobe Journey Optimizer] in uw [datastream](../../../datastreams/overview.md).
-   * De optie [!UICONTROL Active-On-Edge Merge Policy] -optie.
+1. Ga door de [ eerste vereisten ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) van de [!DNL Adobe Journey Optimizer] [ Gids van de Ervaringen van het Web ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), specifiek:
+   * Instellen [!DNL Adobe Experience Cloud Visual Editing Helper] .
+   * Laat [!DNL Adobe Journey Optimizer] in uw [ datastream ](../../../datastreams/overview.md) toe.
+   * Schakel de optie [!UICONTROL Active-On-Edge Merge Policy] in.
 
-2. Voeg de `renderDecisions` aan uw gebeurtenissen. Set `renderDecisions` tot `true` voor automatische weergave van geleverde Journey Optimizer-inhoudsprofielen op de oppervlakken van uw webpagina.
+2. Voeg de optie `renderDecisions` toe aan uw gebeurtenissen. Stel `renderDecisions` in op `true` voor automatische weergave van geleverde Journey Optimizer-inhoudsprofielen op de oppervlakken van uw webpagina.
 
    ```javascript
    alloy("sendEvent", {
@@ -42,7 +42,7 @@ Als u wilt beginnen met [!DNL Adobe Journey Optimizer]volgt u de onderstaande st
    })
    ```
 
-3. Geef desgewenst extra oppervlakken op in uw gebeurtenissen. Door gebrek, zal SDK van het Web automatisch de Weboppervlakte voor de huidige Web-pagina produceren en zal het in het verzoek aan het Netwerk van de Rand omvatten. Indien nodig kunnen aanvullende oppervlakken in het verzoek worden opgenomen door deze op te geven in het dialoogvenster `personalization.surfaces` van de `sendEvent` of in de bijbehorende **[!UICONTROL Surfaces]** [[!UICONTROL Send event] action](../../../tags/extensions/client/web-sdk/action-types.md#send-event) configuratie van de extensie van Web SDK.
+3. Geef desgewenst extra oppervlakken op in uw gebeurtenissen. Door gebrek, zal SDK van het Web automatisch de Weboppervlakte voor de huidige Web-pagina produceren en zal het in het verzoek aan de Edge Network omvatten. Indien nodig, kunnen extra oppervlakten in het verzoek worden omvat door deze in de `personalization.surfaces` optie van het `sendEvent` bevel, of in de overeenkomstige **[!UICONTROL Surfaces]** [[!UICONTROL Send event] actie ](../../../tags/extensions/client/web-sdk/action-types.md#send-event) configuratie van de Uitbreiding van SDK van het Web te specificeren.
 
    ```javascript
    alloy("sendEvent", {
@@ -53,9 +53,9 @@ Als u wilt beginnen met [!DNL Adobe Journey Optimizer]volgt u de onderstaande st
    })
    ```
 
-   ![extensie-add-surface](./assets/extension-add-surface.png)
+   ![ uitbreiding-toe:voegen-oppervlakte ](./assets/extension-add-surface.png)
 
-   Gebeurtenisoppervlakken worden opgenomen in het dialoogvenster `query.personalization.surfaces` aanvraagveld:
+   Gebeurtenisoppervlakken worden opgenomen in het aanvraagveld `query.personalization.surfaces` :
 
    ```json
    {
@@ -80,17 +80,17 @@ Als u wilt beginnen met [!DNL Adobe Journey Optimizer]volgt u de onderstaande st
    }
    ```
 
-4. Net als andere personalisatiefuncties kunt u een **[fragment vooraf verbergen](../manage-flicker.md)** om alleen bepaalde delen van de pagina te verbergen terwijl u ervaringen ophaalt.
+4. Gelijkaardig aan andere verpersoonlijkingseigenschappen, kunt u a **[toevoegen prehide fragment](../manage-flicker.md)** om slechts bepaalde gedeelten van de pagina te verbergen terwijl het halen van ervaringen.
 
 ## Adobe Journey Optimizer Web-ervaringen maken {#create-ajo-web-experiences}
 
-Volg de [webcampagne ontwerpen](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) instructies van de [!DNL Adobe Journey Optimizer] [Web Experience Guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) om [!DNL Journey Optimizer Web] campagnes en ervaringen.
+Volg de ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) instructies van de [!DNL Adobe Journey Optimizer] [ Gids van de Ervaringen van het Web ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) [ campagne authoring {om [!DNL Journey Optimizer Web] campagnes en ervaringen tot stand te brengen.
 
 ## Aangepaste inhoud renderen {#rendering-personalized-content}
 
-Zie de documentatie op [weergave van personalisatie-inhoud](../rendering-personalization-content.md) voor meer informatie .
+Zie de documentatie bij [ teruggevende verpersoonlijkingsinhoud ](../rendering-personalization-content.md) voor meer informatie.
 
-Adobe Journey Optimizer-voorstellingen voor weblaten worden op vergelijkbare wijze verwerkt als de `__view__` voorstellen voor het toepassingsgebied van de beslissing. Specifiek, wanneer `renderDecisions` optie is ingesteld op `true` in de `sendEvent` bevel zullen deze automatisch door het Web SDK worden teruggegeven.
+Adobe Journey Optimizer-voorstellingen voor weblaten worden op vergelijkbare wijze verwerkt als de `__view__` -voorstellingen voor het beslissingsbereik. Als de optie `renderDecisions` is ingesteld op `true` in de opdracht `sendEvent` , worden deze automatisch gerenderd door de SDK van het web.
 
 Voorbeeld Journey Optimizer-inhoudsvoorstel:
 
@@ -145,6 +145,6 @@ Voorbeeld Journey Optimizer-inhoudsvoorstel:
 
 ## Foutopsporing {#debugging}
 
-Voor foutopsporing in Adobe Journey Optimizer-implementaties kunt u [WebSDK-foutopsporing](/help/web-sdk/use-cases/debugging.md). [!DNL Adobe Journey Optimizer] foutopsporingssporen zijn beschikbaar bij het oplossen van problemen met [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). Controleren op gebeurtenissen met de opdracht `AJO:` voorvoegsel
+Om de implementaties van de verpersoonlijking van Adobe Journey Optimizer te zuiveren, gebruik [ het zuiveren van SDK van het Web ](/help/web-sdk/use-cases/debugging.md). [!DNL Adobe Journey Optimizer] zuivert sporen zijn beschikbaar wanneer het oplossen van problemen gebruikend [[!DNL Adobe Experience Platform Assurance] ](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). Controleer op gebeurtenissen met het voorvoegsel `AJO:` .
 
-![assurance-ajo-trace](./assets/assurance-ajo-trace.png)
+![ verzekering-ajo-spoor ](./assets/assurance-ajo-trace.png)

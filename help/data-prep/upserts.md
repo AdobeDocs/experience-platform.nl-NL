@@ -10,32 +10,32 @@ ht-degree: 0%
 
 ---
 
-# Gedeeltelijke rijupdates verzenden naar [!DNL Real-Time Customer Profile] gebruiken [!DNL Data Prep]
+# gedeeltelijke rijupdates verzenden naar [!DNL Real-Time Customer Profile] met [!DNL Data Prep]
 
 >[!WARNING]
 >
->De berichten van de Update van de Entiteit van de Ingestie op het Model van de Gegevens van de Ervaring (XDM) (met verrichtingen JSON PATCH) voor de updates van het Profiel via de inlaat DCS zijn verouderd. Als alternatief kunt u [Raw-gegevens toevoegen aan de DCS-inlaat](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) en geeft u de benodigde gegevenstoewijzingen op om uw gegevens te transformeren in XDM-compatibele berichten voor profielupdates.
+>De berichten van de Update van de Entiteit van de Ingestie op het Model van de Gegevens van de Ervaring (XDM) (met verrichtingen JSON PATCH) voor de updates van het Profiel via de inlaat DCS zijn verouderd. Als alternatief, kunt u [ ruwe gegevens in de inlaat van DCS ](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) opnemen en de noodzakelijke gegevenstoewijzingen specificeren om uw gegevens in XDM-Volgzame berichten voor de updates van het Profiel om te zetten.
 
-Streaming upserts in [!DNL Data Prep] staat u toe om gedeeltelijke rijupdates te verzenden naar [!DNL Real-Time Customer Profile] gegevens te maken en nieuwe identiteitskoppelingen te maken met één API-aanvraag.
+Met streaming updates in [!DNL Data Prep] kunt u gedeeltelijke rijupdates naar [!DNL Real-Time Customer Profile] -gegevens verzenden en tegelijkertijd nieuwe identiteitskoppelingen maken en tot stand brengen met één API-aanvraag.
 
-Door upserts te streamen, kunt u het formaat van uw gegevens behouden terwijl het omzetten van die gegevens in [!DNL Real-Time Customer Profile] PATCH vraagt tijdens inname. Gebaseerd op de input u verstrekt, [!DNL Data Prep] kunt u één API-lading verzenden en de gegevens omzetten naar beide [!DNL Real-Time Customer Profile] PATCH en [!DNL Identity Service] CREEER verzoeken.
+Door upserts te streamen, kunt u het formaat van uw gegevens behouden terwijl het omzetten van die gegevens in [!DNL Real-Time Customer Profile] verzoeken van de PATCH tijdens opname. Op basis van de ingevoerde gegevens die u opgeeft, kunt u met [!DNL Data Prep] één API-payload verzenden en de gegevens omzetten naar zowel [!DNL Real-Time Customer Profile] PATCH als [!DNL Identity Service] CREATE-aanvragen.
 
 >[!NOTE]
 >
->Als u upsert-functionaliteit wilt gebruiken, kunt u XDM-compatibele configuraties tijdens gegevensinvoer uitschakelen en de inkomende lading opnieuw toewijzen met [Gegevensuitdrukking](./ui/mapping.md).
+>Aan hefboomwerking upsert functionaliteit, wordt het geadviseerd dat u XDM-compatibele configuraties tijdens gegevensopname uitzet en de inkomende nuttige lading opnieuw in kaart brengt gebruikend [ Prep Mapper van Gegevens ](./ui/mapping.md).
 
-Dit document bevat informatie over het streamen van upserts in [!DNL Data Prep].
+Dit document bevat informatie over het streamen van upserts in [!DNL Data Prep] .
 
 ## Aan de slag
 
 Voor dit overzicht is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
-* [[!DNL Data Prep]](./home.md): [!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
-* [[!DNL Identity Service]](../identity-service/home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-* [Klantprofiel in realtime](../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [Bronnen](../sources/home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
+* [[!DNL Data Prep]](./home.md): [!DNL Data Prep] stelt gegevensengineers in staat gegevens toe te wijzen, te transformeren en te valideren van en naar het XDM-model (Experience Data Model).
+* [[!DNL Identity Service]](../identity-service/home.md): verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
+* [ Real-Time Profiel van de Klant ](../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time gebaseerd op samengevoegde gegevens van veelvoudige bronnen.
+* [ Bronnen ](../sources/home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
 
-## Streaming updates gebruiken in [!DNL Data Prep] {#streaming-upserts-in-data-prep}
+## Streaming upserts gebruiken in [!DNL Data Prep] {#streaming-upserts-in-data-prep}
 
 >[!NOTE]
 >
@@ -43,26 +43,26 @@ Voor dit overzicht is een goed begrip van de volgende Adobe Experience Platform-
 
 ### Streaming zorgt voor een workflow op hoog niveau
 
-Streaming upserts in [!DNL Data Prep] werkt als volgt:
+Streaming upserts in [!DNL Data Prep] werken als volgt:
 
-* U moet eerst een dataset creëren en toelaten voor [!DNL Profile] verbruik. Zie de handleiding op [het toelaten van een dataset voor [!DNL Profile]](../catalog/datasets/enable-for-profile.md) voor meer informatie .
-* Als nieuwe identiteiten moeten worden verbonden, dan moet u ook een extra dataset creëren **met hetzelfde schema** als uw [!DNL Profile] dataset.
-* Zodra uw dataset(s) worden voorbereid, moet u een dataflow creëren om uw inkomende verzoek aan in kaart te brengen [!DNL Profile] gegevensset;
+* U moet eerst een dataset voor [!DNL Profile] consumptie creëren en toelaten. Zie de gids op [ toelatend een dataset voor  [!DNL Profile]](../catalog/datasets/enable-for-profile.md) voor meer informatie.
+* Als de nieuwe identiteiten moeten worden verbonden, dan moet u een extra dataset **met het zelfde schema** ook tot stand brengen zoals uw [!DNL Profile] dataset.
+* Zodra uw dataset(s) worden voorbereid, moet u een dataflow creëren om uw inkomende verzoek aan de [!DNL Profile] dataset in kaart te brengen;
 * Vervolgens moet u de binnenkomende aanvraag bijwerken om de benodigde koppen op te nemen. Deze kopteksten definiëren:
-   * De gegevensbewerking die moet worden uitgevoerd met [!DNL Profile]: `create`, `merge`, en `delete`.
-   * De optionele identiteitsbewerking die moet worden uitgevoerd met [!DNL Identity Service]: `create`.
+   * De gegevensbewerking die moet worden uitgevoerd met [!DNL Profile] : `create` , `merge` en `delete` .
+   * De optionele identiteitsbewerking die moet worden uitgevoerd met [!DNL Identity Service]: `create` .
 
 ### De identiteitsgegevensset configureren
 
 Als nieuwe identiteiten moeten worden verbonden, dan moet u een extra dataset in de inkomende lading creëren en overgaan. Wanneer het creëren van een identiteitsdataset, moet u ervoor zorgen dat aan de volgende vereisten wordt voldaan:
 
-* De identiteitsdataset moet zijn bijbehorend schema als [!DNL Profile] dataset. Een afwijking van schema&#39;s kan tot inconsistent systeemgedrag leiden.
-* Nochtans, moet u ervoor zorgen dat de identiteitsdataset van verschillend is [!DNL Profile] dataset. Als de datasets het zelfde zijn, dan zullen de gegevens in plaats van bijgewerkt worden beschreven.
-* Terwijl de aanvankelijke dataset moet worden toegelaten voor [!DNL Profile], de identiteitsgegevens **mag niet worden ingeschakeld** for [!DNL Profile]. Anders worden gegevens ook overschreven in plaats van bijgewerkt. Nochtans, de identiteitsdataset **moet worden ingeschakeld** for [!DNL Identity Service].
+* De identiteitsdataset moet zijn bijbehorend schema als [!DNL Profile] dataset hebben. Een afwijking van schema&#39;s kan tot inconsistent systeemgedrag leiden.
+* U moet er echter voor zorgen dat de identiteitsgegevensset anders is dan de gegevensset [!DNL Profile] . Als de datasets het zelfde zijn, dan zullen de gegevens in plaats van bijgewerkt worden beschreven.
+* Terwijl de aanvankelijke dataset voor [!DNL Profile] moet worden toegelaten, zou de identiteitsdataset **niet** voor [!DNL Profile] moeten worden toegelaten. Anders worden gegevens ook overschreven in plaats van bijgewerkt. Nochtans, zou de identiteitsdataset **** voor [!DNL Identity Service] moeten worden toegelaten.
 
 #### Vereiste gebieden in de schema&#39;s verbonden aan de identiteitsdataset {#identity-dataset-required-fileds}
 
-Als uw schema vereiste gebieden bevat, moet de bevestiging van de dataset worden onderdrukt om toe te laten [!DNL Identity Service] alleen de identiteiten te ontvangen. U kunt validatie onderdrukken door het toepassen van de `disabled` aan de `acp_validationContext` parameter. Zie het onderstaande voorbeeld:
+Als uw schema vereiste gebieden bevat, moet de bevestiging van de dataset worden onderdrukt om [!DNL Identity Service] toe te laten om slechts de identiteiten te ontvangen. U kunt de validatie onderdrukken door de waarde `disabled` toe te passen op de parameter `acp_validationContext` . Zie het onderstaande voorbeeld:
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257bef7a75461948ebcaaa' \
@@ -114,33 +114,33 @@ In het volgende voorbeeld ziet u een voorbeeld van een inkomende ladingsstructuu
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `flowId` | Een unieke id om een gegevensstroom te identificeren. Deze gegevensstroom-id moet overeenkomen met de bronverbinding die met [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], of [!DNL HTTP API]. Deze gegevensstroom moet ook een [!DNL Profile]- toegelaten dataset als doel dataset. **Opmerking**: De id van de [!DNL Profile]-enabled doeldataset wordt ook gebruikt als uw `datasetId` parameter. |
+| `flowId` | Een unieke id om een gegevensstroom te identificeren. Deze gegevensstroom-id moet overeenkomen met de bronverbinding die is gemaakt met [!DNL Amazon Kinesis] , [!DNL Azure Event Hubs] of [!DNL HTTP API] . Deze gegevensstroom zou ook een [!DNL Profile]-Toegelaten dataset als doeldataset moeten hebben. **Nota**: identiteitskaart van [!DNL Profile] - toegelaten doeldataset wordt ook gebruikt als uw `datasetId` parameter. |
 | `imsOrgId` | De id die overeenkomt met uw organisatie. |
-| `datasetId` | De id van de [!DNL Profile]- toegelaten doeldataset van uw dataflow. **Opmerking**: Dit is dezelfde id als de [!DNL Profile]- toegelaten identiteitskaart van de doeldataset die in uw gegevensstroom wordt gevonden. |
-| `operations` | Deze parameter beschrijft de acties die [!DNL Data Prep] wordt gebaseerd op de binnenkomende aanvraag. |
-| `operations.data` | Definieert de handelingen die moeten worden uitgevoerd in [!DNL Real-Time Customer Profile]. |
-| `operations.identity` | Definieert de bewerkingen die op de gegevens zijn toegestaan door [!DNL Identity Service]. |
+| `datasetId` | De id van de [!DNL Profile] -ingeschakelde doeldataset van uw gegevensstroom. **Nota**: Dit is zelfde identiteitskaart zoals [!DNL Profile] - toegelaten identiteitskaart van de doeldataset die in uw dataflow wordt gevonden. |
+| `operations` | Deze parameter schetst de acties die [!DNL Data Prep] zal nemen gebaseerd op het inkomende verzoek. |
+| `operations.data` | Definieert de handelingen die moeten worden uitgevoerd in [!DNL Real-Time Customer Profile] . |
+| `operations.identity` | Definieert de bewerkingen die op de gegevens zijn toegestaan door [!DNL Identity Service] . |
 | `operations.identityDatasetId` | (Optioneel) De id van het identiteitsgegevensbestand dat alleen vereist is als nieuwe identiteiten moeten worden gekoppeld. |
 
 #### Ondersteunde bewerkingen
 
-De volgende bewerkingen worden ondersteund door [!DNL Real-Time Customer Profile]:
+De volgende bewerkingen worden ondersteund door [!DNL Real-Time Customer Profile] :
 
 | Bewerkingen | Beschrijving |
 | --- | --- | 
-| `create` | De standaardbewerking. Dit produceert een entiteit XDM creeert methode voor [!DNL Real-Time Customer Profile]. |
-| `merge` | Hiermee wordt een updatemethode voor XDM-entiteiten gegenereerd [!DNL Real-Time Customer Profile]. |
-| `delete` | Dit produceert een XDM entiteit schrappingsmethode voor [!DNL Real-Time Customer Profile] en verwijdert de gegevens permanent uit de [!DNL Profile store]. |
+| `create` | De standaardbewerking. Hierdoor wordt een methode gemaakt voor het maken van een XDM-entiteit voor [!DNL Real-Time Customer Profile] . |
+| `merge` | Hiermee wordt een methode voor het bijwerken van XDM-entiteiten voor [!DNL Real-Time Customer Profile] gegenereerd. |
+| `delete` | Hierdoor wordt een methode voor het verwijderen van XDM-entiteiten voor [!DNL Real-Time Customer Profile] gegenereerd en worden de gegevens permanent uit [!DNL Profile store] verwijderd. |
 
-De volgende bewerkingen worden ondersteund door [!DNL Identity Service]:
+De volgende bewerkingen worden ondersteund door [!DNL Identity Service] :
 
 | Bewerkingen | Beschrijvingen |
 | --- | --- |
-| `create` | De enige toegestane bewerking voor deze parameter. Indien `create` wordt doorgegeven als waarde voor `operations.identity`vervolgens [!DNL Data Prep] genereert een XDM-entiteit die een aanvraag maakt voor [!DNL Identity Service]. Als de identiteit al bestaat, wordt de identiteit genegeerd. **Opmerking:** Indien `operations.identity` is ingesteld op `create`en vervolgens de `identityDatasetId` moet ook worden gespecificeerd. De XDM-entiteit maakt een bericht dat intern wordt gegenereerd door [!DNL Data Prep] wordt voor deze id van de gegevensset gegenereerd. |
+| `create` | De enige toegestane bewerking voor deze parameter. Als `create` wordt doorgegeven als een waarde voor `operations.identity` , genereert [!DNL Data Prep] een XDM-entiteit die een aanvraag voor [!DNL Identity Service] maakt. Als de identiteit al bestaat, wordt de identiteit genegeerd. **Nota:** als `operations.identity` aan `create` wordt geplaatst, dan moet `identityDatasetId` ook worden gespecificeerd. De XDM-entiteit maakt een bericht dat intern wordt gegenereerd door de component [!DNL Data Prep] , wordt voor deze id van de gegevensset gegenereerd. |
 
 ### Payload zonder identiteitsconfiguratie
 
-Als nieuwe identiteiten niet hoeven te worden gekoppeld, kunt u de eigenschap `identity` en `identityDatasetId` parameters in de bewerkingen. Hiermee verzendt u gegevens alleen naar [!DNL Real-Time Customer Profile] en slaat de [!DNL Identity Service]. Zie de lading hieronder voor een voorbeeld:
+Als nieuwe identiteiten niet hoeven te worden gekoppeld, kunt u de parameters `identity` en `identityDatasetId` weglaten in de bewerkingen. Als u dit doet, worden alleen gegevens verzonden naar [!DNL Real-Time Customer Profile] en wordt de [!DNL Identity Service] overgeslagen. Zie de lading hieronder voor een voorbeeld:
 
 ```shell
 {
@@ -158,14 +158,14 @@ Als nieuwe identiteiten niet hoeven te worden gekoppeld, kunt u de eigenschap `i
 
 ## Primaire identiteiten dynamisch doorgeven
 
-Voor XDM-updates moet het schema zijn ingeschakeld voor [!DNL Profile] en bevatten een primaire identiteit. U kunt de primaire identiteit van een XDM-schema op twee manieren specificeren:
+Voor XDM-updates moet het schema zijn ingeschakeld voor [!DNL Profile] en een primaire identiteit bevatten. U kunt de primaire identiteit van een XDM-schema op twee manieren specificeren:
 
 * Wijs een statisch gebied als primaire identiteit in het schema XDM aan;
 * Wijs één van de identiteitsgebieden als primaire identiteit door de het gebiedsgroep van de identiteitskaart in het XDM schema aan.
 
 ### Een statisch veld aanwijzen als primair identiteitsveld in het XDM-schema
 
-In het onderstaande voorbeeld: `state`, `homePhone.number` en andere eigenschappen worden met de respectieve gegeven waarden opgenomen in de [!DNL Profile] met de primaire identiteit van `sampleEmail@gmail.com`. Vervolgens wordt een updatebericht voor een XDM-entiteit gegenereerd door streaming [!DNL Data Prep] component. [!DNL Real-Time Customer Profile] bevestigt dan dat XDM updatebericht om het profielverslag op te nemen.
+In het onderstaande voorbeeld worden `state` , `homePhone.number` en andere kenmerken met hun respectievelijke opgegeven waarden ingevoegd in de [!DNL Profile] met de primaire identiteit `sampleEmail@gmail.com` . Vervolgens wordt een updatebericht voor een XDM-entiteit gegenereerd door de streamingcomponent [!DNL Data Prep] . [!DNL Real-Time Customer Profile] bevestigt vervolgens dat het XDM-updatebericht het profielrecord moet uploaden.
 
 >[!NOTE]
 >
@@ -214,7 +214,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 ### Wijs één van de identiteitsgebieden als primaire identiteit door de het gebiedsgroep van het identiteitskaartgebied in het XDM schema aan
 
-In dit voorbeeld bevat de header de `operations` kenmerk met de `identity` en `identityDatasetId` eigenschappen. Hierdoor kunnen gegevens worden samengevoegd met [!DNL Real-Time Customer Profile] en ook voor het doorgeven van identiteit aan [!DNL Identity Service].
+In dit voorbeeld bevat de header het kenmerk `operations` met de eigenschappen `identity` en `identityDatasetId` . Hierdoor kunnen gegevens worden samengevoegd met [!DNL Real-Time Customer Profile] en kunnen ook identiteiten worden doorgegeven aan [!DNL Identity Service] .
 
 ```shell
 curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec3583275ffce4880ffc482be5a9d810c4b' \
@@ -261,12 +261,12 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 ## Bekende beperkingen en belangrijke overwegingen
 
-In het volgende voorbeeld wordt een lijst met bekende beperkingen beschreven die in acht moeten worden genomen bij het streamen van updates met [!DNL Data Prep]:
+In het volgende voorbeeld wordt een lijst met bekende beperkingen beschreven die in acht moeten worden genomen bij het streamen van upserts met [!DNL Data Prep] :
 
-* De streaming upserts methode zou slechts moeten worden gebruikt wanneer het verzenden van gedeeltelijke rijupdates naar [!DNL Real-Time Customer Profile]. Gedeeltelijke rij-updates zijn **niet** verbruikt door data Lake.
-* De streaming upserts-methode ondersteunt het bijwerken, vervangen en verwijderen van identiteiten niet. Er worden nieuwe identiteiten gemaakt als deze niet bestaan. Vandaar dat `identity` bewerking moet altijd zijn ingesteld op maken. Als er al een identiteit bestaat, is de bewerking een no-op.
-* De streaming upserts-methode ondersteunt momenteel niet [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) en [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* De streaming upserts methode zou slechts moeten worden gebruikt wanneer het verzenden van gedeeltelijke rijupdates naar [!DNL Real-Time Customer Profile]. De gedeeltelijke rijupdates worden **niet** verbruikt door gegevens meer.
+* De streaming upserts-methode ondersteunt het bijwerken, vervangen en verwijderen van identiteiten niet. Er worden nieuwe identiteiten gemaakt als deze niet bestaan. Daarom moet de bewerking `identity` altijd zijn ingesteld op maken. Als er al een identiteit bestaat, is de bewerking een no-op.
+* De het stromen upserts methode steunt momenteel niet [ Adobe Experience Platform Web SDK ](/help/web-sdk/home.md) en [ Adobe Experience Platform Mobile SDK ](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Volgende stappen
 
-Door dit document te lezen, moet u nu begrijpen hoe u upserts kunt streamen in [!DNL Data Prep] om gedeeltelijke rijupdates naar uw te verzenden [!DNL Real-Time Customer Profile] gegevens, maar ook identiteiten maken en koppelen met één API-aanvraag. Voor meer informatie over andere [!DNL Data Prep] functies, lees de [[!DNL Data Prep] overzicht](./home.md). Leer hoe u toewijzingssets kunt gebruiken in het dialoogvenster [!DNL Data Prep] API, lees de [[!DNL Data Prep] ontwikkelaarsgids](./api/overview.md).
+Door dit document te lezen, moet u nu begrijpen hoe u upserts in [!DNL Data Prep] kunt streamen om gedeeltelijke rijupdates naar uw [!DNL Real-Time Customer Profile] -gegevens te verzenden, terwijl u tegelijkertijd identiteiten maakt en koppelt met één API-aanvraag. Voor meer informatie over andere [!DNL Data Prep] eigenschappen, te lezen gelieve het [[!DNL Data Prep]  overzicht ](./home.md). Leer hoe te om kaartreeksen binnen [!DNL Data Prep] API te gebruiken, gelieve de [[!DNL Data Prep]  ontwikkelaarsgids ](./api/overview.md) te lezen.

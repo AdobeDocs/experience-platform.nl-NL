@@ -19,6 +19,6 @@ In de volgende tabel worden de termen weergegeven die in de productdocumentatie 
 
 | Vorige termijn | Bijgewerkte termijn |
 |---|---|
-| Platform launch (clientzijde) | [Tags](./home.md) |
-| Platform launch Server-zijde | [Gebeurtenis doorsturen](./ui/event-forwarding/overview.md) |
-| Edge-configuraties | [Gegevensstromen](/help/datastreams/overview.md) |
+| Platform launch (clientzijde) | [ Markeringen ](./home.md) |
+| Platform launch Server-zijde | [ Gebeurtenis door:sturen ](./ui/event-forwarding/overview.md) |
+| Edge-configuraties | [ Datastreams ](/help/datastreams/overview.md) |

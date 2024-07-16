@@ -7,7 +7,7 @@ badge: Beta
 source-git-commit: ba72abd9febc6d9e6491748519199b54a26ae1c5
 workflow-type: tm+mt
 source-wordcount: '312'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -52,7 +52,7 @@ Algoritmconfiguratie:
 | Prioriteit | Weergavenaam | Identiteitssymbool | Identiteitstype | Uniek per grafiek |
 | ---| --- | --- | --- | --- |
 | 1 | CRM-id | CRM-id | CROSS_DEVICE | Ja |
-| 2 | E-mails (SHA256, verlaagd) | Email_LC_SHA256 | E-mail | NEE |
+| 2 | E-mails (SHA256, verlaagd) | Email_LC_SHA256 | Email | NEE |
 | 3 | ECID | ECID | COOKIE | NEE |
 
 +++Selecteren om gesimuleerde grafiek weer te geven
@@ -75,7 +75,7 @@ Algoritmconfiguratie:
 | Prioriteit | Weergavenaam | Identiteitssymbool | Identiteitstype | Uniek per grafiek |
 | ---| --- | --- | --- | --- |
 | 1 | CRM-id | CRM-id | CROSS_DEVICE | Ja |
-| 2 | E-mails (SHA256, verlaagd) | Email_LC_SHA256 | E-mail | NEE |
+| 2 | E-mails (SHA256, verlaagd) | Email_LC_SHA256 | Email | NEE |
 | 3 | Telefoon (SHA256) | Phone_SHA256 | Telefoon | NEE |
 | 4 | Google-advertentie-ID (GAID) | GAID | APPARAAT | NEE |
 | 5 | Apple IDFA (ID voor Apple) | IDFA | APPARAAT | NEE |

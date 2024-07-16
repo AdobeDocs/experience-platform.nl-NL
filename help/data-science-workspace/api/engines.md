@@ -2,7 +2,7 @@
 keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;engines;sensei machine learning api
 solution: Experience Platform
 title: Engine API-eindpunt
-description: Motoren vormen de basis voor het leren van machines Modellen in de werkruimte van de wetenschap van gegevens. Zij bevatten machinaal leeralgoritmen die specifieke problemen oplossen, eigenschappijpleidingen om eigenschapengineering uit te voeren, of allebei.
+description: Motoren vormen de basis voor machinaal leren Modellen in Data Science Workspace. Zij bevatten machinaal leeralgoritmen die specifieke problemen oplossen, eigenschappijpleidingen om eigenschapengineering uit te voeren, of allebei.
 role: Developer
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Het eindpunt Motoren
 
-Motoren vormen de basis voor het leren van machines Modellen in de werkruimte van de wetenschap van gegevens. Zij bevatten machinaal leeralgoritmen die specifieke problemen oplossen, eigenschappijpleidingen om eigenschapengineering uit te voeren, of allebei.
+Motoren vormen de basis voor machinaal leren Modellen in Data Science Workspace. Zij bevatten machinaal leeralgoritmen die specifieke problemen oplossen, eigenschappijpleidingen om eigenschapengineering uit te voeren, of allebei.
 
 ## Zoek uw registratie van de Docker
 
 >[!TIP]
 >
->Als u geen Docker-URL hebt, gaat u naar [Bronbestanden in een recept plaatsen](../models-recipes/package-source-files-recipe.md) zelfstudie voor een stapsgewijze analyse bij het creëren van een Docker gastheer URL.
+>Als u geen Docker URL hebt, bezoek de [ brondossiers van het Pakket in een recept ](../models-recipes/package-source-files-recipe.md) leerprogramma voor een geleidelijke analyse bij het creëren van een gastheer URL van de Docker.
 
 Uw Docker-registergegevens zijn vereist voor het uploaden van een pakket Recipe-bestand, inclusief de URL van de Docker-host, gebruikersnaam en wachtwoord. U kunt deze informatie opzoeken door de volgende GET-aanvraag uit te voeren:
 
-**API-indeling**
+**API Formaat**
 
 ```https
 GET /engines/dockerRegistry
@@ -40,13 +40,13 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert een nuttige lading terug die de details van uw registratie van de Dokker met inbegrip van Docker URL bevat (`host`), gebruikersnaam (`username`) en wachtwoord (`password`).
+Een succesvolle reactie keert een nuttige lading terug die de details van uw registratie van het Dokker met inbegrip van het Docker URL (`host`), gebruikersbenaming (`username`), en wachtwoord (`password`) bevat.
 
 >[!NOTE]
 >
->Het Docker-wachtwoord verandert telkens wanneer uw `{ACCESS_TOKEN}` wordt bijgewerkt.
+>Het Docker-wachtwoord verandert telkens wanneer de `{ACCESS_TOKEN}` wordt bijgewerkt.
 
 ```json
 {
@@ -60,13 +60,13 @@ Een succesvolle reactie keert een nuttige lading terug die de details van uw reg
 
 U kunt een Motor tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van zijn meta-gegevens en een Dokker URL die verwijzingen een beeld van de Dokker in meerdelige vormen.
 
-**API-indeling**
+**API Formaat**
 
 ```https
 POST /engines
 ```
 
-**Python/R aanvragen**
+**Verzoek Python/R**
 
 ```shell
 curl -X POST \
@@ -102,9 +102,9 @@ curl -X POST \
 | `artifacts.default.image.location` | De locatie van de Docker-afbeelding waarnaar een Docker-URL verwijst. |
 | `artifacts.default.image.executionType` | Het uitvoeringstype van de motor. Deze waarde komt overeen met de taal waarin de Docker-afbeelding is opgebouwd en kan &#39;Python&#39;, &#39;R&#39; of &#39;Tensorflow&#39; zijn. |
 
-**Request PySpark/Scala**
+**Verzoek PySpark/Scala**
 
-Wanneer u een aanvraag voor PySpark-recepten indient, `executionType` en `type` is &quot;PySpark&quot;. Wanneer u een aanvraag voor Scala-recepten indient, `executionType` en `type` is &quot;Spark&quot;. In het volgende Scala-receptvoorbeeld wordt Spark gebruikt:
+Wanneer u een aanvraag indient voor PySpark-recepten, zijn `executionType` en `type` &quot;PySpark&quot;. Wanneer u een aanvraag indient voor Scala-recepten, zijn `executionType` en `type` &quot;Spark&quot;. In het volgende Scala-receptvoorbeeld wordt Spark gebruikt:
 
 ```shell
 curl -X POST \
@@ -137,13 +137,13 @@ curl -X POST \
 | `name` | De gewenste naam voor de engine. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als naam van de Ontvanger moet worden getoond. |
 | `description` | Een facultatieve beschrijving voor de motor. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als beschrijving van de Ontvanger moet worden getoond. Deze eigenschap is vereist. Als u geen beschrijving wilt opgeven, stelt u de waarde in op een lege tekenreeks. |
 | `type` | Het uitvoeringstype van de motor. Deze waarde komt overeen met de taal waarop de Docker-afbeelding is gebaseerd. De waarde kan aan Vonk of PySpark worden geplaatst. |
-| `mlLibrary` | Een gebied dat wordt vereist wanneer het creëren van motoren voor PySpark en Scala recepten. Dit veld moet worden ingesteld op `databricks-spark`. |
+| `mlLibrary` | Een gebied dat wordt vereist wanneer het creëren van motoren voor PySpark en Scala recepten. Dit veld moet zijn ingesteld op `databricks-spark` . |
 | `artifacts.default.image.location` | De locatie van de Docker-afbeelding. Alleen Azure ACR of Public (niet-geverifieerd) Dockerhub wordt ondersteund. |
 | `artifacts.default.image.executionType` | Het uitvoeringstype van de motor. Deze waarde komt overeen met de taal waarop de Docker-afbeelding is gebaseerd. Dit kan &quot;Vonk&quot;of &quot;PySpark&quot;zijn. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe engine, inclusief de unieke id (`id`). De volgende voorbeeldreactie is voor een Python Engine. Alle antwoorden van de Motor volgen dit formaat:
+Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde Motor met inbegrip van zijn uniek herkenningsteken (`id`) bevat. De volgende voorbeeldreactie is voor een Python Engine. Alle antwoorden van de Motor volgen dit formaat:
 
 ```json
 {
@@ -174,7 +174,7 @@ Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe 
 
 U kunt een motor van de eigenschappijpleiding tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van zijn meta-gegevens en een Dok URL die verwijzingen een beeld van het Dokker.
 
-**API-indeling**
+**API formaat**
 
 ```https
 POST /engines
@@ -214,18 +214,18 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `type` | Het uitvoeringstype van de motor. Deze waarde komt overeen met de taal waarop de Docker-afbeelding is gebaseerd. De waarde kan aan Vonk of PySpark worden geplaatst. |
-| `algorithm` | Het algoritme dat wordt gebruikt, stelt deze waarde in op `fp` (functiepijplijn). |
+| `algorithm` | Het algoritme dat wordt gebruikt, plaatst deze waarde aan `fp` (eigenschappijpleiding). |
 | `name` | De gewenste naam voor de motor van de eigenschappijpleiding. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als naam van de Ontvanger moet worden getoond. |
 | `description` | Een facultatieve beschrijving voor de motor. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als beschrijving van de Ontvanger moet worden getoond. Deze eigenschap is vereist. Als u geen beschrijving wilt opgeven, stelt u de waarde in op een lege tekenreeks. |
-| `mlLibrary` | Een gebied dat wordt vereist wanneer het creëren van motoren voor PySpark en Scala recepten. Dit veld moet worden ingesteld op `databricks-spark`. |
+| `mlLibrary` | Een gebied dat wordt vereist wanneer het creëren van motoren voor PySpark en Scala recepten. Dit veld moet zijn ingesteld op `databricks-spark` . |
 | `artifacts.default.image.location` | De locatie van de Docker-afbeelding. Alleen Azure ACR of Public (niet-geverifieerd) Dockerhub wordt ondersteund. |
 | `artifacts.default.image.executionType` | Het uitvoeringstype van de motor. Deze waarde komt overeen met de taal waarop de Docker-afbeelding is gebaseerd. Dit kan &quot;Vonk&quot;of &quot;PySpark&quot;zijn. |
-| `artifacts.default.image.packagingType` | Het verpakkingstype van de motor. Deze waarde moet worden ingesteld op `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | Uw `pipeline.json` parameters voor configuratiebestanden. |
+| `artifacts.default.image.packagingType` | Het verpakkingstype van de motor. Deze waarde moet worden ingesteld op `docker` . |
+| `artifacts.default.defaultMLInstanceConfigs` | De parameters van het `pipeline.json` -configuratiebestand. |
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde motor van de eigenschappijpleiding met inbegrip van zijn uniek herkenningsteken bevat (`id`). De volgende voorbeeldreactie is voor een PySpark eigenschappijpleidingsmotor.
+Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde motor van de eigenschappijpleiding met inbegrip van zijn uniek herkenningsteken (`id`) bevat. De volgende voorbeeldreactie is voor een PySpark eigenschappijpleidingsmotor.
 
 ```json
 {
@@ -254,9 +254,9 @@ Een succesvolle reactie keert een lading terug die de details van de pas gecreë
 
 ## Een lijst met motoren ophalen
 
-U kunt een lijst van Motoren terugwinnen door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [queryparameters voor ophalen van elementen](./appendix.md#query).
+U kunt een lijst van Motoren terugwinnen door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [ vraagparameters voor activaherwinning ](./appendix.md#query).
 
-**API-indeling**
+**API Formaat**
 
 ```https
 GET /engines
@@ -275,7 +275,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert een lijst met engines en hun details.
 
@@ -331,7 +331,7 @@ Een succesvol antwoord retourneert een lijst met engines en hun details.
 
 U kunt de details van een specifieke Motor terugwinnen door een verzoek van de GET uit te voeren dat identiteitskaart van de gewenste Motor in de verzoekweg omvat.
 
-**API-indeling**
+**API Formaat**
 
 ```https
 GET /engines/{ENGINE_ID}
@@ -352,7 +352,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lading terug die de details van de gewenste Motor bevatten.
 
@@ -387,7 +387,7 @@ U kunt een bestaande Motor wijzigen en bijwerken door zijn eigenschappen door ee
 
 >[!NOTE]
 >
->Om het succes van dit verzoek van de PUT te verzekeren, wordt geadviseerd eerst een verzoek van de GET uit te voeren aan [winnen de Motor door identiteitskaart terug](#retrieve-specific). Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>Om het succes van dit verzoek van PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET uitvoert om [ de Motor door identiteitskaart ](#retrieve-specific) terug te winnen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 De volgende voorbeeld-API-aanroep werkt de naam en beschrijving van een engine bij terwijl deze in eerste instantie deze eigenschappen heeft:
 
@@ -408,7 +408,7 @@ De volgende voorbeeld-API-aanroep werkt de naam en beschrijving van een engine b
 }
 ```
 
-**API-indeling**
+**API Formaat**
 
 ```https
 PUT /engines/{ENGINE_ID}
@@ -444,7 +444,7 @@ curl -X PUT \
     }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lading terug die de bijgewerkte details van de Motor bevat.
 
@@ -476,7 +476,7 @@ Een succesvolle reactie keert een lading terug die de bijgewerkte details van de
 
 U kunt een Motor schrappen door een verzoek van DELETE uit te voeren terwijl het specificeren van identiteitskaart van de doelmotor in de verzoekweg. Als een engine wordt verwijderd, worden alle MLInstances die naar die engine verwijzen, met inbegrip van alle experimenten en experimentele tests die tot die MLInstances behoren, trapsgewijs verwijderd.
 
-**API-indeling**
+**API Formaat**
 
 ```https
 DELETE /engines/{ENGINE_ID}
@@ -497,7 +497,7 @@ curl -X DELETE \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 ```json
 {

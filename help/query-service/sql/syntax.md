@@ -13,11 +13,11 @@ ht-degree: 1%
 
 # SQL-syntaxis in Query Service
 
-U kunt standaard ANSI SQL gebruiken voor `SELECT` instructies en andere beperkte opdrachten in Adobe Experience Platform Query Service. In dit document wordt de SQL-syntaxis beschreven die wordt ondersteund door [!DNL Query Service].
+U kunt standaard ANSI SQL voor `SELECT` verklaringen en andere beperkte bevelen in de Dienst van de Vraag van Adobe Experience Platform gebruiken. In dit document wordt de SQL-syntaxis beschreven die wordt ondersteund door [!DNL Query Service] .
 
 ## Vragen SELECTEREN {#select-queries}
 
-De volgende syntaxis definieert een `SELECT` query ondersteund door [!DNL Query Service]:
+De volgende syntaxis definieert een query `SELECT` die wordt ondersteund door [!DNL Query Service] :
 
 ```sql
 [ WITH with_query [, ...] ]
@@ -95,7 +95,7 @@ De volgende subsecties bevatten details over extra clausules die u in uw vragen 
 
 ### component SNAPSHOT
 
-Deze clausule kan worden gebruikt om gegevens over een lijst incrementeel te lezen die op momentopname IDs wordt gebaseerd. Een momentopname identiteitskaart is een controlepuntteller die door een aantal wordt vertegenwoordigd van het type Long dat op een lijst van het gegevenshoeveeltal wordt toegepast telkens als het gegeven aan het wordt geschreven. De `SNAPSHOT` -component wordt gekoppeld aan de tabelrelatie waarmee deze wordt gebruikt.
+Deze clausule kan worden gebruikt om gegevens over een lijst incrementeel te lezen die op momentopname IDs wordt gebaseerd. Een momentopname identiteitskaart is een controlepuntteller die door een aantal wordt vertegenwoordigd van het type Long dat op een lijst van het gegevenshoeveeltal wordt toegepast telkens als het gegeven aan het wordt geschreven. De component `SNAPSHOT` koppelt zich aan de tabelrelatie waarmee deze wordt gebruikt.
 
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
@@ -128,24 +128,24 @@ In de onderstaande tabel wordt de betekenis van elke syntaxisoptie in de compone
 |-------------------------------------------------------------------|------------------------------------------------------------------------------------------|
 | `SINCE start_snapshot_id` | Leest gegevens die beginnen met de opgegeven opname-id (exclusief). |
 | `AS OF end_snapshot_id` | Gegevens worden gelezen zoals deze zich op de opgegeven opname-id bevonden (inclusief). |
-| `BETWEEN start_snapshot_id AND end_snapshot_id` | Leest gegevens tussen de opgegeven begin- en eindopname-id&#39;s. Het is exclusief van de `start_snapshot_id` en tot en met `end_snapshot_id`. |
-| `BETWEEN HEAD AND start_snapshot_id` | Leest gegevens vanaf het begin (vóór de eerste opname) tot en met de opgegeven start-opname-id. Opmerking: hiermee worden alleen rijen geretourneerd in `start_snapshot_id`. |
-| `BETWEEN end_snapshot_id AND TAIL` | Hiermee worden gegevens gelezen van net na het opgegeven `end-snapshot_id` tot het einde van de gegevensset (exclusief de opname-id). Dit betekent dat als `end_snapshot_id` is de laatste momentopname in de dataset, zal de vraag nul rijen terugkeren omdat er geen momentopnamen voorbij die laatste momentopname zijn. |
-| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Leest gegevens die beginnen met de opgegeven opname-id uit `table_to_be_queried` en voegt het met de gegevens van `table_to_be_joined` zoals bij `your_chosen_snapshot_id`. Verbinden is gebaseerd op passende IDs van de kolommen van identiteitskaart van de twee lijsten die worden aangesloten bij. |
+| `BETWEEN start_snapshot_id AND end_snapshot_id` | Leest gegevens tussen de opgegeven begin- en eindopname-id&#39;s. Deze is exclusief voor `start_snapshot_id` en inclusief de `end_snapshot_id` . |
+| `BETWEEN HEAD AND start_snapshot_id` | Leest gegevens vanaf het begin (vóór de eerste opname) tot en met de opgegeven start-opname-id. Hiermee worden alleen rijen in `start_snapshot_id` geretourneerd. |
+| `BETWEEN end_snapshot_id AND TAIL` | Leest gegevens van net na gespecificeerde `end-snapshot_id` aan het eind van de dataset (exclusief momentopname ID). Dit betekent dat als `end_snapshot_id` de laatste momentopname in de dataset is, de vraag nul rijen zal terugkeren omdat er geen momentopnamen voorbij die laatste momentopname zijn. |
+| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Leest gegevens die beginnen met de opgegeven momentopname-id uit `table_to_be_queried` en koppelt deze aan de gegevens uit `table_to_be_joined` zoals deze zich op `your_chosen_snapshot_id` bevonden. Verbinden is gebaseerd op passende IDs van de kolommen van identiteitskaart van de twee lijsten die worden aangesloten bij. |
 
-A `SNAPSHOT` clausule werkt met een lijst of lijstalias maar niet bovenop subquery of mening. A `SNAPSHOT` clausule werkt overal `SELECT` de vraag op een lijst kan worden toegepast.
+Een `SNAPSHOT` -component werkt met een tabel- of tabelalias, maar niet boven op een subquery of weergave. Een `SNAPSHOT` -component werkt overal waar een `SELECT` -query op een tabel kan worden toegepast.
 
-U kunt ook `HEAD` en `TAIL` als speciale verschuivingswaarden voor opnameclausules. Gebruiken `HEAD` verwijst naar een verschuiving vóór de eerste opname, terwijl `TAIL` verwijst naar een verschuiving na de laatste opname.
+U kunt `HEAD` en `TAIL` ook gebruiken als speciale verschuivingswaarden voor opnamen. Het gebruik van `HEAD` verwijst naar een verschuiving vóór de eerste opname, terwijl `TAIL` verwijst naar een verschuiving na de laatste opname.
 
 >[!NOTE]
 >
->Als u tussen twee momentopname IDs vraagt, kunnen de volgende twee scenario&#39;s voorkomen als de beginmomentopname is verlopen en de facultatieve fallback gedragsvlag (`resolve_fallback_snapshot_on_failure`) is ingesteld:
+>Als u tussen twee momentopname IDs vraagt, kunnen de volgende twee scenario&#39;s voorkomen als de beginmomentopname is verlopen en de facultatieve markering van het fallback gedrag (`resolve_fallback_snapshot_on_failure`) wordt geplaatst:
 >
->- Als de facultatieve fallback gedragsvlag wordt geplaatst, kiest de Dienst van de Vraag de vroegste beschikbare momentopname, plaatst het als beginmomentopname, en keert de gegevens tussen de vroegste beschikbare momentopname en de gespecificeerde eindmomentopname terug. Deze gegevens zijn **inclusief** van de vroegste beschikbare momentopname.
+>- Als de facultatieve fallback gedragsvlag wordt geplaatst, kiest de Dienst van de Vraag de vroegste beschikbare momentopname, plaatst het als beginmomentopname, en keert de gegevens tussen de vroegste beschikbare momentopname en de gespecificeerde eindmomentopname terug. Dit gegeven is **inclusief** van de vroegste beschikbare momentopname.
 
 ### WHERE-component
 
-Standaard worden overeenkomsten gemaakt door een `WHERE` clausule inzake een `SELECT` de vraag is case-sensitive. Als u wilt dat overeenkomsten hoofdlettergevoelig zijn, kunt u het trefwoord `ILIKE` in plaats van `LIKE`.
+Standaard zijn overeenkomsten die worden geproduceerd door een `WHERE` -component op een `SELECT` -query hoofdlettergevoelig. Als u wilt dat overeenkomsten niet hoofdlettergevoelig zijn, kunt u het trefwoord `ILIKE` gebruiken in plaats van `LIKE` .
 
 ```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
@@ -171,7 +171,7 @@ Deze vraag keert klanten met namen terug die in &quot;A&quot;of &quot;a&quot;beg
 
 ### VERBINDEN
 
-A `SELECT` query die gebruikmaakt van verbindingen heeft de volgende syntaxis:
+Een `SELECT` -query die gebruikmaakt van verbindingen, heeft de volgende syntaxis:
 
 ```sql
 SELECT statement
@@ -182,7 +182,7 @@ ON join condition
 
 ### UNIE, INTERSECT EN BEHALVE
 
-De `UNION`, `INTERSECT`, en `EXCEPT` de clausules worden gebruikt om als rijen van twee of meer lijsten te combineren of uit te sluiten:
+De clausules `UNION`, `INTERSECT` en `EXCEPT` worden gebruikt om vergelijkbare rijen van twee of meer tabellen te combineren of uit te sluiten:
 
 ```sql
 SELECT statement 1
@@ -192,7 +192,7 @@ SELECT statement 2
 
 ### TABEL MAKEN ALS SELECT {#create-table-as-select}
 
-De volgende syntaxis definieert een `CREATE TABLE AS SELECT` (CTAS)-query:
+De volgende syntaxis definieert een query `CREATE TABLE AS SELECT` (CTAS):
 
 ```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE') ] AS (select_query)
@@ -201,9 +201,9 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 | Parameters | Beschrijving |
 | ----- | ----- |
 | `schema` | De titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om een bestaand schema XDM voor de nieuwe dataset te gebruiken die door de vraag CTAS wordt gecreeerd. |
-| `rowvalidation` | (Optioneel) Hiermee wordt aangegeven of de gebruiker validatie op rijniveau wil toepassen voor elke nieuwe batch die wordt opgenomen voor de nieuwe dataset. De standaardwaarde is `true`. |
-| `label` | Wanneer u een dataset met een vraag CTAS creeert, gebruik dit etiket met de waarde van `profile` om uw dataset zoals toegelaten voor profiel te etiketteren. Dit betekent dat uw dataset automatisch voor profiel duidelijk wordt aangezien het wordt gecreeerd. Zie het afgeleide document van de attributenuitbreiding voor meer informatie over het gebruik van `label`. |
-| `select_query` | A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries). |
+| `rowvalidation` | (Optioneel) Hiermee wordt aangegeven of de gebruiker validatie op rijniveau wil toepassen voor elke nieuwe batch die wordt opgenomen voor de nieuwe dataset. De standaardwaarde is `true` . |
+| `label` | Wanneer u een dataset met een vraag CTAS creeert, gebruik dit etiket met de waarde van `profile` om uw dataset zoals toegelaten voor profiel te etiketteren. Dit betekent dat uw dataset automatisch voor profiel duidelijk wordt aangezien het wordt gecreeerd. Zie het afgeleide document met kenmerkextensies voor meer informatie over het gebruik van `label` . |
+| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [ UITGEZOCHTE vraagsectie ](#select-queries) worden gevonden. |
 
 **Voorbeeld**
 
@@ -217,11 +217,11 @@ CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 
 >[!NOTE]
 >
->De `SELECT` instructie moet een alias hebben voor de statistische functies, zoals `COUNT`, `SUM`, `MIN`, enzovoort. Ook de `SELECT` -instructie kan worden opgegeven met of zonder haakjes (). U kunt een `SNAPSHOT` clausule om stijgende delta&#39;s in de doellijst te lezen.
+>De instructie `SELECT` moet een alias hebben voor de statistische functies zoals `COUNT` , `SUM` , `MIN` , enzovoort. De instructie `SELECT` kan ook met of zonder haakjes () worden geleverd. U kunt een `SNAPSHOT` -component opgeven om incrementele delta&#39;s in de doeltabel te lezen.
 
 ## INVOEGEN IN
 
-De `INSERT INTO` wordt als volgt gedefinieerd:
+De opdracht `INSERT INTO` wordt als volgt gedefinieerd:
 
 ```sql
 INSERT INTO table_name select_query
@@ -230,7 +230,7 @@ INSERT INTO table_name select_query
 | Parameters | Beschrijving |
 | ----- | ----- |
 | `table_name` | De naam van de tabel waarin u de query wilt invoegen. |
-| `select_query` | A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries). |
+| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [ UITGEZOCHTE vraagsectie ](#select-queries) worden gevonden. |
 
 **Voorbeeld**
 
@@ -246,11 +246,11 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 
 >[!INFO]
 > 
->Do **niet** de `SELECT` tussen haakjes (). Ook, het schema van het resultaat van `SELECT` moet voldoen aan de tabel in het `INSERT INTO` instructie. U kunt een `SNAPSHOT` clausule om stijgende delta&#39;s in de doellijst te lezen.
+>Plaats **niet** de `SELECT` verklaring tussen haakjes (). Het schema van het resultaat van de instructie `SELECT` moet bovendien overeenkomen met het schema van de tabel die is gedefinieerd in de instructie `INSERT INTO` . U kunt een `SNAPSHOT` -component opgeven om incrementele delta&#39;s in de doeltabel te lezen.
 
-De meeste velden in een echt XDM-schema zijn niet gevonden op het hoofdniveau en SQL staat het gebruik van puntnotatie niet toe. Als u een realistisch resultaat wilt bereiken met geneste velden, moet u elk veld in uw `INSERT INTO` pad.
+De meeste velden in een echt XDM-schema zijn niet gevonden op het hoofdniveau en SQL staat het gebruik van puntnotatie niet toe. Als u een realistisch resultaat wilt bereiken met geneste velden, moet u elk veld in het `INSERT INTO` -pad toewijzen.
 
-Naar `INSERT INTO` geneste paden, gebruik de volgende syntaxis:
+Als u geneste paden wilt `INSERT INTO` , gebruikt u de volgende syntaxis:
 
 ```sql
 INSERT INTO [dataset]
@@ -268,7 +268,7 @@ INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCi
 
 ## DROP TABLE
 
-De `DROP TABLE` een bestaande tabel neerzet en de aan de tabel gekoppelde map uit het bestandssysteem verwijdert als dit geen externe tabel is. Als de tabel niet bestaat, treedt een uitzondering op.
+Met de opdracht `DROP TABLE` wordt een bestaande tabel verwijderd en wordt de aan de tabel gekoppelde map uit het bestandssysteem verwijderd als dit geen externe tabel is. Als de tabel niet bestaat, treedt een uitzondering op.
 
 ```sql
 DROP TABLE [IF EXISTS] [db_name.]table_name
@@ -276,11 +276,11 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 | Parameters | Beschrijving |
 | ------ | ------ |
-| `IF EXISTS` | Als dit wordt opgegeven, wordt geen uitzondering gegenereerd als de tabel wel **niet** bestaan. |
+| `IF EXISTS` | Als dit wordt gespecificeerd, wordt geen uitzondering geworpen als de lijst **niet** bestaat. |
 
 ## DATABASE MAKEN
 
-De `CREATE DATABASE` maakt een ADLS-database (Azure Data Lake Storage).
+Met de opdracht `CREATE DATABASE` maakt u een ADLS-database (Azure Data Lake Storage).
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -288,7 +288,7 @@ CREATE DATABASE [IF NOT EXISTS] db_name
 
 ## DATABASE DROP
 
-De `DROP DATABASE` verwijdert de database uit een instantie.
+Met de opdracht `DROP DATABASE` verwijdert u de database uit een instantie.
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -296,11 +296,11 @@ DROP DATABASE [IF EXISTS] db_name
 
 | Parameters | Beschrijving |
 | ------ | ------ |
-| `IF EXISTS` | Als dit wordt gespecificeerd, wordt geen uitzondering geworpen als het gegevensbestand doet **niet** bestaan. |
+| `IF EXISTS` | Als dit wordt gespecificeerd, wordt geen uitzondering geworpen als het gegevensbestand **niet** bestaat. |
 
 ## DROP SCHEMA
 
-De `DROP SCHEMA` een bestaand schema neerzet.
+De opdracht `DROP SCHEMA` laat een bestaand schema vallen.
 
 ```sql
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
@@ -308,15 +308,15 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 | Parameters | Beschrijving |
 | ------ | ------ |
-| `IF EXISTS` | Als deze parameter wordt opgegeven en het schema doet **niet** bestaat, wordt geen uitzondering gegenereerd. |
-| `RESTRICT` | De standaardwaarde voor de modus. Indien opgegeven, wordt het schema alleen verwijderd als dit het geval is **niet** bevatten tabellen. |
+| `IF EXISTS` | Als deze parameter wordt gespecificeerd en het schema **niet** bestaat, wordt geen uitzondering geworpen. |
+| `RESTRICT` | De standaardwaarde voor de modus. Indien gespecificeerd, daalt het schema slechts als het **** geen lijsten bevat. |
 | `CASCADE` | Indien opgegeven, wordt het schema neergezet samen met alle tabellen in het schema. |
 
 ## WEERGAVE MAKEN {#create-view}
 
-Een SQL-weergave is een virtuele tabel die is gebaseerd op de resultaatset van een SQL-instructie. Een weergave maken met de opdracht `CREATE VIEW` en geef deze een naam. U kunt die naam dan gebruiken om naar de resultaten van de vraag terug te verwijzen. Hierdoor is het gemakkelijker om complexe query&#39;s opnieuw te gebruiken.
+Een SQL-weergave is een virtuele tabel die is gebaseerd op de resultaatset van een SQL-instructie. Maak een weergave met de instructie `CREATE VIEW` en geef deze een naam. U kunt die naam dan gebruiken om naar de resultaten van de vraag terug te verwijzen. Hierdoor is het gemakkelijker om complexe query&#39;s opnieuw te gebruiken.
 
-De volgende syntaxis definieert een `CREATE VIEW` vraag voor een dataset. Deze dataset kan een ADLS of versnelde opslagdataset zijn.
+De volgende syntaxis bepaalt een `CREATE VIEW` vraag voor een dataset. Deze dataset kan een ADLS of versnelde opslagdataset zijn.
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -325,7 +325,7 @@ CREATE VIEW view_name AS select_query
 | Parameters | Beschrijving |
 | ------ | ------ |
 | `view_name` | De naam van de weergave die moet worden gemaakt. |
-| `select_query` | A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries). |
+| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [ UITGEZOCHTE vraagsectie ](#select-queries) worden gevonden. |
 
 **Voorbeeld**
 
@@ -335,7 +335,7 @@ CREATE VIEW V1 AS SELECT color, type FROM Inventory
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
 
-De volgende syntaxis definieert een `CREATE VIEW` query die een weergave maakt in de context van een database en schema.
+De volgende syntaxis definieert een query `CREATE VIEW` die een weergave maakt in de context van een database en schema.
 
 **Voorbeeld**
 
@@ -349,7 +349,7 @@ CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
 | `db_name` | De naam van de database. |
 | `schema_name` | De naam van het schema. |
 | `view_name` | De naam van de weergave die moet worden gemaakt. |
-| `select_query` | A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries). |
+| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [ UITGEZOCHTE vraagsectie ](#select-queries) worden gevonden. |
 
 **Voorbeeld**
 
@@ -377,7 +377,7 @@ SHOW VIEWS;
 
 ## DROP VIEW
 
-De volgende syntaxis definieert een `DROP VIEW` query:
+De volgende syntaxis definieert een query `DROP VIEW` :
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
@@ -385,7 +385,7 @@ DROP VIEW [IF EXISTS] view_name
 
 | Parameters | Beschrijving |
 | ------ | ------ |
-| `IF EXISTS` | Als dit wordt opgegeven, wordt geen uitzondering gegenereerd als de weergave **niet** bestaan. |
+| `IF EXISTS` | Als dit wordt gespecificeerd, wordt geen uitzondering geworpen als de mening **niet** bestaat. |
 | `view_name` | De naam van de weergave die moet worden verwijderd. |
 
 **Voorbeeld**
@@ -452,7 +452,7 @@ END IF
 
 **Voorbeeld**
 
-Het onderstaande voorbeeld wordt uitgevoerd `SELECT 200;`.
+In het onderstaande voorbeeld wordt `SELECT 200;` uitgevoerd.
 
 ```sql
 $$BEGIN
@@ -471,7 +471,7 @@ $$BEGIN
  END$$;
 ```
 
-Deze structuur kan worden gebruikt met `raise_error();` een aangepast foutbericht retourneren. Het codeblok dat hieronder wordt weergegeven, eindigt het anonieme blok met &#39;aangepast foutbericht&#39;.
+Deze structuur kan met `raise_error();` worden gebruikt om een aangepast foutbericht te retourneren. Het codeblok dat hieronder wordt weergegeven, eindigt het anonieme blok met &#39;aangepast foutbericht&#39;.
 
 **Voorbeeld**
 
@@ -537,17 +537,17 @@ EXCEPTION WHEN OTHER THEN
 
 ### Automatisch naar JSON {#auto-to-json}
 
-De Dienst van de vraag steunt een facultatieve zitting-vlakke instelling om complexe gebieden van het hoogste niveau van interactieve UITGEZOCHTE vragen als koorden van JSON terug te keren. De `auto_to_json` Met deze instelling kunnen gegevens van complexe velden worden geretourneerd als JSON en vervolgens in JSON-objecten worden geparseerd met behulp van standaardbibliotheken.
+De Dienst van de vraag steunt een facultatieve zitting-vlakke instelling om complexe gebieden van het hoogste niveau van interactieve UITGEZOCHTE vragen als koorden van JSON terug te keren. Met de instelling `auto_to_json` kunnen gegevens van complexe velden worden geretourneerd als JSON en vervolgens in JSON-objecten worden geparseerd met behulp van standaardbibliotheken.
 
-De functiemarkering instellen `auto_to_json` op true voordat u de SELECT-query met complexe velden uitvoert.
+STEL de functiemarkering `auto_to_json` in op true voordat u de SELECT-query met complexe velden uitvoert.
 
 ```sql
 set auto_to_json=true; 
 ```
 
-#### Voordat u het dialoogvenster `auto_to_json` markeren
+#### Voordat u de markering `auto_to_json` instelt
 
-De volgende tabel bevat een voorbeeld van een queryresultaat vóór de `auto_to_json` wordt ingesteld. In beide scenario&#39;s werd dezelfde SELECT-query (zoals hieronder wordt weergegeven) gebruikt die een tabel met complexe velden als doel had.
+De volgende tabel bevat een voorbeeld van een queryresultaat voordat de instelling `auto_to_json` wordt toegepast. In beide scenario&#39;s werd dezelfde SELECT-query (zoals hieronder wordt weergegeven) gebruikt die een tabel met complexe velden als doel had.
 
 ```sql
 SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
@@ -563,9 +563,9 @@ De resultaten zijn als volgt:
 (2 rows)  
 ```
 
-#### Na het instellen van de `auto_to_json` markeren
+#### Na het instellen van de markering `auto_to_json`
 
-In de volgende tabel ziet u het verschil in resultaten dat de `auto_to_json` het plaatsen heeft op de resulterende dataset. Dezelfde SELECT-query werd in beide scenario&#39;s gebruikt.
+In de volgende tabel ziet u het verschil in resultaten dat de instelling `auto_to_json` heeft op de resulterende gegevensset. Dezelfde SELECT-query werd in beide scenario&#39;s gebruikt.
 
 ```console
                 _id                |   receivedTimestamp   |       timestamp       |                                                                                                                   _experience                                                                                                                   |           application            |             commerce             |    dataSource    |                                                                  device                                                                   |                                                   endUserIDs                                                   |                                                                                                                                                                                           environment                                                                                                                                                                                            |                             identityMap                              |                                                                                            placeContext                                                                                            |      userActivityRegion      |                                                                                     web                                                                                      | _adcstageforpqs
@@ -577,15 +577,15 @@ In de volgende tabel ziet u het verschil in resultaten dat de `auto_to_json` het
 
 ### Resolve fallback snapshot on failure {#resolve-fallback-snapshot-on-failure}
 
-De `resolve_fallback_snapshot_on_failure` wordt gebruikt om het probleem van een verlopen momentopname-id op te lossen. Metagegevens voor momentopnamen verlopen na twee dagen en een verlopen momentopname kan de logica van een script ongeldig maken. Dit kan een probleem zijn wanneer anonieme blokken worden gebruikt.
+De optie `resolve_fallback_snapshot_on_failure` wordt gebruikt om het probleem van een verlopen opname-id op te lossen. Metagegevens voor momentopnamen verlopen na twee dagen en een verlopen momentopname kan de logica van een script ongeldig maken. Dit kan een probleem zijn wanneer anonieme blokken worden gebruikt.
 
-Stel de `resolve_fallback_snapshot_on_failure` -optie in op true als u een opname wilt overschrijven met een vorige opname-id.
+Stel de optie `resolve_fallback_snapshot_on_failure` in op true als u een opname wilt overschrijven met een vorige opname-id.
 
 ```sql
 SET resolve_fallback_snapshot_on_failure=true;
 ```
 
-De volgende coderegel overschrijft de `@from_snapshot_id` met de laagste beschikbare `snapshot_id` uit metagegevens.
+De volgende coderegel overschrijft de `@from_snapshot_id` met de oudste beschikbare `snapshot_id` op basis van metagegevens.
 
 ```sql
 $$ BEGIN
@@ -629,15 +629,15 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-Zie de [logische organisatie van gegevenselementen](../best-practices/organize-data-assets.md) gids voor een meer gedetailleerde verklaring over de beste praktijken van de Dienst van de Vraag.
+Zie de [ logische organisatie van gegevensactiva ](../best-practices/organize-data-assets.md) gids voor een meer gedetailleerde verklaring over de beste praktijken van de Dienst van de Vraag.
 
 ## Tabel bestaat
 
-De `table_exists` SQL bevel wordt gebruikt om te bevestigen of een lijst momenteel in het systeem bestaat. De opdracht retourneert een Booleaanse waarde: `true` if de tabel **doet** bestaan, en `false` als de tabel dat doet **niet** bestaan.
+De SQL-opdracht `table_exists` wordt gebruikt om te bevestigen of een tabel momenteel in het systeem bestaat. Het bevel keert een booleaanse waarde terug: `true` als de lijst **** bestaat, en `false` als de lijst **niet** bestaat.
 
-Door te controleren of een tabel bestaat voordat de instructies worden uitgevoerd, `table_exists` de functie vereenvoudigt het schrijven van een anoniem blok om zowel het `CREATE` en `INSERT INTO` gebruik.
+Door te controleren of een tabel bestaat voordat de instructies worden uitgevoerd, vereenvoudigt de functie `table_exists` het schrijven van een anoniem blok, zodat zowel de gebruiksgevallen `CREATE` als `INSERT INTO` worden behandeld.
 
-De volgende syntaxis definieert de `table_exists` opdracht:
+De volgende syntaxis definieert de opdracht `table_exists` :
 
 ```SQL
 $$
@@ -665,15 +665,15 @@ END $$;
 
 ## Inline {#inline}
 
-De `inline` De functie scheidt de elementen van een serie van structs en produceert de waarden in een lijst. Het kan alleen in het dialoogvenster `SELECT` lijst of een `LATERAL VIEW`.
+De functie `inline` scheidt de elementen van een array van structs en genereert de waarden in een tabel. Deze kan alleen in de lijst `SELECT` of een `LATERAL VIEW` worden geplaatst.
 
-De `inline` function **kan** worden geplaatst in een uitgezocht lijst waar er andere generatorfuncties zijn.
+De `inline` functie **kan** niet in een uitgezochte lijst worden geplaatst waar er andere generatorfuncties zijn.
 
-Door gebrek, worden de geproduceerde kolommen genoemd &quot;col1&quot;, &quot;col2&quot;, etc. Als de expressie `NULL` dan worden geen rijen geproduceerd.
+Door gebrek, worden de geproduceerde kolommen genoemd &quot;col1&quot;, &quot;col2&quot;, etc. Als de expressie `NULL` is, worden geen rijen gemaakt.
 
 >[!TIP]
 >
->De namen van kolommen kunnen worden hernoemd met de `RENAME` gebruiken.
+>U kunt de naam van kolommen wijzigen met de opdracht `RENAME` .
 
 **Voorbeeld**
 
@@ -688,9 +688,9 @@ In het voorbeeld wordt het volgende geretourneerd:
 2  b Spark SQL
 ```
 
-In dit tweede voorbeeld worden het concept en de toepassing van het `inline` functie. Het gegevensmodel voor het voorbeeld wordt in de onderstaande afbeelding weergegeven.
+In dit tweede voorbeeld wordt verder het concept en de toepassing van de functie `inline` getoond. Het gegevensmodel voor het voorbeeld wordt in de onderstaande afbeelding weergegeven.
 
-![Een schema voor productListItems.](../images/sql/productListItems.png)
+![ het schemadiagram van A voor productListItems.](../images/sql/productListItems.png)
 
 **Voorbeeld**
 
@@ -698,7 +698,7 @@ In dit tweede voorbeeld worden het concept en de toepassing van het `inline` fun
 select inline(productListItems) from source_dataset limit 10;
 ```
 
-De waarden die uit de `source_dataset` worden gebruikt om de doeltabel te vullen.
+De waarden die uit `source_dataset` zijn opgehaald, worden gebruikt om de doeltabel te vullen.
 
 | SKU | _experience | hoeveelheid | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
@@ -713,7 +713,7 @@ De onderafdeling hieronder behandelt de SQL bevelen van de Vonk die door de Dien
 
 ### SET
 
-De `SET` plaatst een bevel een bezit en of keert de waarde van een bestaand bezit terug of maakt een lijst van alle bestaande eigenschappen. Als een waarde wordt opgegeven voor een bestaande eigenschapsleutel, wordt de oude waarde overschreven.
+De opdracht `SET` stelt een eigenschap in en retourneert de waarde van een bestaande eigenschap of geeft alle bestaande eigenschappen weer. Als een waarde wordt opgegeven voor een bestaande eigenschapsleutel, wordt de oude waarde overschreven.
 
 ```sql
 SET property_key = property_value
@@ -724,19 +724,19 @@ SET property_key = property_value
 | `property_key` | De naam van de eigenschap die u wilt weergeven of wijzigen. |
 | `property_value` | De waarde waarop u de eigenschap wilt instellen. |
 
-Als u de waarde voor een instelling wilt retourneren, gebruikt u `SET [property key]` zonder `property_value`.
+Als u de waarde voor een instelling wilt retourneren, gebruikt u `SET [property key]` zonder een `property_value` .
 
 ## [!DNL PostgreSQL] opdrachten
 
-De onderstaande subsecties bestrijken de [!DNL PostgreSQL] bevelen die door de Dienst van de Vraag worden gesteund.
+De subsecties hieronder behandelen de [!DNL PostgreSQL] bevelen die door de Dienst van de Vraag worden gesteund.
 
 ### TABEL ANALYSEREN {#analyze-table}
 
-De `ANALYZE TABLE` voert het bevel een verdelingsanalyse en statistische berekeningen voor de genoemde lijst of de lijsten uit. Het gebruik van `ANALYZE TABLE` varieert afhankelijk van of de datasets op worden opgeslagen [versnelde opslag](#compute-statistics-accelerated-store) of de [gegevensmeer](#compute-statistics-data-lake). Zie de desbetreffende secties voor meer informatie over het gebruik ervan.
+De opdracht `ANALYZE TABLE` voert een distributieanalyse en statistische berekeningen uit voor de benoemde tabel of tabellen. Het gebruik van `ANALYZE TABLE` varieert afhankelijk van of de datasets op de [ versnelde opslag ](#compute-statistics-accelerated-store) of het [ gegevens meer ](#compute-statistics-data-lake) worden opgeslagen. Zie de desbetreffende secties voor meer informatie over het gebruik ervan.
 
 #### COMPUTE STATISTIEKEN OP DE versnelde opslag {#compute-statistics-accelerated-store}
 
-De `ANALYZE TABLE` het bevel berekent statistieken voor een lijst op de versnelde opslag. De statistieken worden berekend over uitgevoerde vragen CTAS of ITAS voor een bepaalde lijst op de versnelde opslag.
+Met de opdracht `ANALYZE TABLE` worden statistieken voor een tabel in de versnelde opslag berekend. De statistieken worden berekend over uitgevoerde vragen CTAS of ITAS voor een bepaalde lijst op de versnelde opslag.
 
 **Voorbeeld**
 
@@ -744,7 +744,7 @@ De `ANALYZE TABLE` het bevel berekent statistieken voor een lijst op de versneld
 ANALYZE TABLE <original_table_name>
 ```
 
-Hieronder volgt een lijst met statistische berekeningen die beschikbaar zijn na gebruik van de `ANALYZE TABLE` opdracht:-
+Hieronder volgt een lijst met statistische berekeningen die beschikbaar zijn na gebruik van de opdracht `ANALYZE TABLE` :-
 
 | Berekende waarden | Beschrijving |
 |---|---|
@@ -760,9 +760,9 @@ Hieronder volgt een lijst met statistische berekeningen die beschikbaar zijn na 
 
 #### STATISTIEKEN COMPUTEREN op het datumpeer {#compute-statistics-data-lake}
 
-U kunt nu statistieken op kolomniveau berekenen over [!DNL Azure Data Lake Storage] (ADLS) datasets met de `COMPUTE STATISTICS` SQL-opdracht. Bereid kolomstatistieken over of de volledige dataset, een ondergroep van een dataset, alle kolommen, of een ondergroep van kolommen samen.
+U kunt nu statistieken op kolomniveau over [!DNL Azure Data Lake Storage] (ADLS)-gegevenssets berekenen met de SQL-opdracht `COMPUTE STATISTICS` . Bereid kolomstatistieken over of de volledige dataset, een ondergroep van een dataset, alle kolommen, of een ondergroep van kolommen samen.
 
-`COMPUTE STATISTICS` breidt de `ANALYZE TABLE` gebruiken. De `COMPUTE STATISTICS`, `FILTERCONTEXT`, en `FOR COLUMNS` opdrachten worden niet ondersteund in versnelde opslagtabellen. Deze uitbreidingen voor de `ANALYZE TABLE` worden momenteel alleen ondersteund voor ADLS-tabellen.
+`COMPUTE STATISTICS` breidt de opdracht `ANALYZE TABLE` uit. De opdrachten `COMPUTE STATISTICS`, `FILTERCONTEXT` en `FOR COLUMNS` worden echter niet ondersteund in versnelde winkeltabellen. Deze extensies voor de opdracht `ANALYZE TABLE` worden momenteel alleen ondersteund voor ADLS-tabellen.
 
 **Voorbeeld**
 
@@ -770,11 +770,11 @@ U kunt nu statistieken op kolomniveau berekenen over [!DNL Azure Data Lake Stora
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
 ```
 
-De `FILTER CONTEXT` bevel berekent statistieken over een ondergroep van de dataset die op de verstrekte filtervoorwaarde wordt gebaseerd. De `FOR COLUMNS` richt specifieke kolommen voor analyse.
+De opdracht `FILTER CONTEXT` berekent statistieken over een subset van de gegevensset op basis van de opgegeven filtervoorwaarde. De opdracht `FOR COLUMNS` richt zich op specifieke kolommen voor analyse.
 
 >[!NOTE]
 >
->De `Statistics ID` en de geproduceerde statistieken zijn slechts geldig voor elke zitting en kunnen niet over verschillende zittingen worden betreden PSQL.<br><br>Beperkingen:<ul><li>Het genereren van statistieken wordt niet ondersteund voor array- of kaartgegevenstypen</li><li>Berekende statistieken zijn **niet** Doorgestreept in sessies.</li></ul><br><br>Opties:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>De markering is standaard ingesteld op true. Als daarom statistieken worden aangevraagd voor een gegevenstype dat niet wordt ondersteund, wordt er geen foutmelding weergegeven, maar worden velden zonder toezicht overgeslagen met de niet-ondersteunde datatypen.<br>Om meldingen over fouten in te schakelen wanneer statistieken worden aangevraagd over niet-ondersteund gegevenstype, gebruikt u: `SET skip_stats_for_complex_datatypes = false`.
+>De `Statistics ID` en de gegenereerde statistieken zijn alleen geldig voor elke sessie en kunnen niet worden geopend voor verschillende PSQL-sessies.<br><br> Beperkingen:<ul><li>Het genereren van statistieken wordt niet ondersteund voor array- of kaartgegevenstypen</li><li>De gegevens verwerkte statistieken zijn **niet** voortgeduurd over zittingen.</li></ul><br><br> Opties:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br> door gebrek, wordt de vlag geplaatst aan waar. Als daarom statistieken worden aangevraagd voor een gegevenstype dat niet wordt ondersteund, wordt er geen foutmelding weergegeven, maar worden velden zonder toezicht overgeslagen met de niet-ondersteunde datatypen.<br> om berichten over fouten toe te laten wanneer de statistieken over niet gestaafd datatype worden gevraagd, gebruik: `SET skip_stats_for_complex_datatypes = false`.
 
 De uitvoer van de console wordt weergegeven zoals hieronder wordt weergegeven.
 
@@ -785,14 +785,14 @@ De uitvoer van de console wordt weergegeven zoals hieronder wordt weergegeven.
 (1 row)
 ```
 
-U kunt de gegevens verwerkte statistieken dan direct vragen door van verwijzingen te voorzien `Statistics ID`. Gebruik de `Statistics ID` of de naam van het alias zoals hieronder in de voorbeeldverklaring wordt getoond, om de output volledig te bekijken. Voor meer informatie over deze functie raadpleegt u de [documentatie over aliasnamen](../key-concepts/dataset-statistics.md#alias-name).
+Vervolgens kunt u de berekende statistieken rechtstreeks opvragen door naar de `Statistics ID` te verwijzen. Gebruik de naam `Statistics ID` of de naam van de alias, zoals hieronder in de voorbeeldinstructie wordt getoond, om de uitvoer volledig weer te geven. Meer over deze eigenschap leren, zie de [ documentatie van de aliasnaam ](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-Gebruik de `SHOW STATISTICS` gebruiken om de metagegevens weer te geven voor alle tijdelijke statistieken die in de sessie worden gegenereerd. Met deze opdracht kunt u het bereik van uw statistische analyse verfijnen.
+Gebruik de opdracht `SHOW STATISTICS` om de metagegevens weer te geven voor alle tijdelijke statistieken die in de sessie worden gegenereerd. Met deze opdracht kunt u het bereik van uw statistische analyse verfijnen.
 
 ```sql
 SHOW STATISTICS;
@@ -808,15 +808,15 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-Zie de [Gegevenssetstatistiek](../key-concepts/dataset-statistics.md) voor meer informatie .
+Zie de [ documentatie van de datasetstatistieken ](../key-concepts/dataset-statistics.md) voor meer informatie.
 
 #### TABLESAMPLE {#tablesample}
 
 De Dienst van de Vraag van Adobe Experience Platform verstrekt steekproefdatasets als deel van zijn benaderende mogelijkheden van de vraagverwerking.
 
-Gegevenssetvoorbeelden kunnen het best worden gebruikt wanneer u geen exact antwoord nodig hebt voor een geaggregeerde bewerking via een gegevensset. Om efficiëntere verkennende vragen over grote datasets te leiden door een benaderende vraag uit te geven om een benaderend antwoord terug te keren, gebruik `TABLESAMPLE` gebruiken.
+Gegevenssetvoorbeelden kunnen het best worden gebruikt wanneer u geen exact antwoord nodig hebt voor een geaggregeerde bewerking via een gegevensset. Om efficiëntere verkennende vragen op grote datasets te leiden door een benaderende vraag uit te geven om een benaderend antwoord terug te keren, gebruik de `TABLESAMPLE` eigenschap.
 
-Voorbeeldgegevenssets worden gemaakt met uniforme willekeurige steekproeven op basis van bestaande [!DNL Azure Data Lake Storage] (ADLS) datasets, die slechts een percentage van verslagen van origineel gebruiken. De de steekproefeigenschap van de dataset breidt uit `ANALYZE TABLE` gebruiken met de `TABLESAMPLE` en `SAMPLERATE` SQL-opdrachten.
+De datasets van de steekproef worden gecreeerd met eenvormige willekeurige steekproeven van bestaande [!DNL Azure Data Lake Storage] (ADLS) datasets, gebruikend slechts een percentage verslagen van origineel. De voorbeeldfunctie van de gegevensset breidt de opdracht `ANALYZE TABLE` uit met de SQL-opdrachten `TABLESAMPLE` en `SAMPLERATE` .
 
 In het onderstaande voorbeeld demonstreert regel 1 hoe u een 5%-monster van de tabel berekent. Regel twee toont aan hoe te om een 5% steekproef van een gefilterde mening van de gegevens binnen de lijst te berekenen.
 
@@ -827,11 +827,11 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-Zie de [Documentatie met gegevenssets](../key-concepts/dataset-samples.md) voor meer informatie .
+Zie de [ documentatie van de datasetsteekproeven ](../key-concepts/dataset-samples.md) voor meer informatie.
 
 ### BEGINNEN
 
-De `BEGIN` of als alternatief de `BEGIN WORK` of `BEGIN TRANSACTION` , wordt een transactieblok gestart. Om het even welke verklaringen die na het begin bevel worden ingevoerd zullen in één enkele transactie worden uitgevoerd tot een expliciete COMMIT of bevel ROLLBACK wordt gegeven. Deze opdracht is gelijk aan `START TRANSACTION`.
+Met de opdracht `BEGIN` of de opdracht `BEGIN WORK` of `BEGIN TRANSACTION` wordt een transactiekanaal gestart. Om het even welke verklaringen die na het begin bevel worden ingevoerd zullen in één enkele transactie worden uitgevoerd tot een expliciete COMMIT of bevel ROLLBACK wordt gegeven. Deze opdracht is hetzelfde als `START TRANSACTION` .
 
 ```sql
 BEGIN
@@ -841,29 +841,29 @@ BEGIN TRANSACTION
 
 ### SLUITEN
 
-De `CLOSE` maakt de middelen vrij verbonden aan een open curseur. Nadat de cursor is gesloten, zijn er geen verdere bewerkingen meer toegestaan. Een cursor moet worden gesloten wanneer deze niet meer nodig is.
+Met de opdracht `CLOSE` maakt u de bronnen vrij die aan een open cursor zijn gekoppeld. Nadat de cursor is gesloten, zijn er geen verdere bewerkingen meer toegestaan. Een cursor moet worden gesloten wanneer deze niet meer nodig is.
 
 ```sql
 CLOSE name
 CLOSE ALL
 ```
 
-Indien `CLOSE name` wordt gebruikt, `name` vertegenwoordigt de naam van een open curseur die moet worden gesloten. Indien `CLOSE ALL` wordt gebruikt, worden alle open cursors gesloten.
+Als `CLOSE name` wordt gebruikt, vertegenwoordigt `name` de naam van een open curseur die moet worden gesloten. Als `CLOSE ALL` wordt gebruikt, worden alle open cursors gesloten.
 
 ### VERWIJDEREN
 
-Als u een eerder voorbereide SQL-instructie wilt verhandelen, gebruikt u de opdracht `DEALLOCATE` gebruiken. Als u niet expliciet een voorbereide instructie hebt gedistribueerd, wordt de toewijzing ongedaan gemaakt wanneer de sessie wordt beëindigd. Meer informatie over voorbereide instructies vindt u in het gedeelte [PREPARE, opdracht](#prepare) sectie.
+Als u een eerder voorbereide SQL-instructie wilt zoeken, gebruikt u de opdracht `DEALLOCATE` . Als u niet expliciet een voorbereide instructie hebt gedistribueerd, wordt de toewijzing ongedaan gemaakt wanneer de sessie wordt beëindigd. Meer informatie over voorbereide verklaringen kan in de [ bevelPREPARE ](#prepare) sectie worden gevonden.
 
 ```sql
 DEALLOCATE name
 DEALLOCATE ALL
 ```
 
-Indien `DEALLOCATE name` wordt gebruikt, `name` staat voor de naam van de voorbereide instructie die moet worden gedetoewijzingseerd. Indien `DEALLOCATE ALL` wordt gebruikt, worden alle voorbereide instructies gedeallocatie.
+Als `DEALLOCATE name` wordt gebruikt, vertegenwoordigt `name` de naam van de voorbereide instructie die moet worden gedeallocatie. Als `DEALLOCATE ALL` wordt gebruikt, worden alle voorbereide instructies gedeallocatie.
 
 ### VERKLAREN
 
-De `DECLARE` staat een gebruiker toe om een curseur tot stand te brengen, die kan worden gebruikt om een klein aantal rijen uit een grotere vraag terug te winnen. Nadat de cursor is gemaakt, worden er rijen uit opgehaald met `FETCH`.
+Met de opdracht `DECLARE` kan de gebruiker een cursor maken die kan worden gebruikt om een klein aantal rijen op te halen uit een grotere query. Nadat de cursor is gemaakt, worden er rijen van opgehaald met `FETCH` .
 
 ```sql
 DECLARE name CURSOR FOR query
@@ -872,13 +872,13 @@ DECLARE name CURSOR FOR query
 | Parameters | Beschrijving |
 | ------ | ------ |
 | `name` | De naam van de cursor die moet worden gemaakt. |
-| `query` | A `SELECT` of `VALUES` bevel dat de rijen verstrekt die door de curseur moeten zijn teruggekeerd. |
+| `query` | Een opdracht `SELECT` of `VALUES` die de rijen bevat die door de cursor moeten worden geretourneerd. |
 
 ### UITVOEREN
 
-De `EXECUTE` wordt gebruikt om een eerder voorbereide instructie uit te voeren. Aangezien voorbereide instructies alleen tijdens een sessie bestaan, moet de voorbereide instructie zijn gemaakt door een `PREPARE` eerder in de huidige sessie uitgevoerd. Meer informatie over het gebruik van voorbereide instructies vindt u in het gedeelte [`PREPARE` command](#prepare) sectie.
+De opdracht `EXECUTE` wordt gebruikt om een eerder voorbereide instructie uit te voeren. Aangezien voorbereide instructies alleen tijdens een sessie bestaan, moet de voorbereide instructie zijn gemaakt met een instructie `PREPARE` die eerder in de huidige sessie is uitgevoerd. Meer informatie over het gebruik van voorbereide instructies vindt u in de sectie [`PREPARE` command ](#prepare) .
 
-Als de `PREPARE` een instructie die de instructie heeft gemaakt, bepaalde parameters heeft opgegeven, moet een compatibele set parameters worden doorgegeven aan de `EXECUTE` instructie. Als deze parameters niet worden doorgegeven, treedt een fout op.
+Als de instructie `PREPARE` die de instructie heeft gemaakt enkele parameters heeft opgegeven, moet een compatibele set parameters worden doorgegeven aan de instructie `EXECUTE` . Als deze parameters niet worden doorgegeven, treedt een fout op.
 
 ```sql
 EXECUTE name [ ( parameter ) ]
@@ -891,13 +891,13 @@ EXECUTE name [ ( parameter ) ]
 
 ### VERKLAREN
 
-De `EXPLAIN` toont het bevel het uitvoeringsplan voor de geleverde verklaring. Het uitvoeringsplan toont hoe de tabellen waarnaar door de instructie wordt verwezen, worden gescand. Als er naar meerdere tabellen wordt verwezen, wordt aangegeven welke samenvoegalgoritmen worden gebruikt om de vereiste rijen van elke invoertabel samen te voegen.
+Met de opdracht `EXPLAIN` geeft u het uitvoeringsplan voor de opgegeven instructie weer. Het uitvoeringsplan toont hoe de tabellen waarnaar door de instructie wordt verwezen, worden gescand. Als er naar meerdere tabellen wordt verwezen, wordt aangegeven welke samenvoegalgoritmen worden gebruikt om de vereiste rijen van elke invoertabel samen te voegen.
 
 ```sql
 EXPLAIN statement
 ```
 
-Als u de indeling van de reactie wilt definiëren, gebruikt u de opdracht `FORMAT` trefwoord met de `EXPLAIN` gebruiken.
+Als u de indeling van de reactie wilt definiëren, gebruikt u het trefwoord `FORMAT` met de opdracht `EXPLAIN` .
 
 ```sql
 EXPLAIN FORMAT { TEXT | JSON } statement
@@ -905,16 +905,16 @@ EXPLAIN FORMAT { TEXT | JSON } statement
 
 | Parameters | Beschrijving |
 | ------ | ------ |
-| `FORMAT` | Gebruik de `FORMAT` gebruiken om de uitvoerindeling op te geven. De beschikbare opties zijn `TEXT` of `JSON`. Niet-tekstuele uitvoer bevat dezelfde informatie als de indeling voor tekstuitvoer, maar kan gemakkelijker door programma&#39;s worden geparseerd. Deze parameter wordt standaard ingesteld op `TEXT`. |
-| `statement` | Alle `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, of `CREATE MATERIALIZED VIEW AS` de verklaring, waarvan uitvoeringsplan u wilt zien. |
+| `FORMAT` | Gebruik de opdracht `FORMAT` om de uitvoerindeling op te geven. De beschikbare opties zijn `TEXT` of `JSON` . Niet-tekstuele uitvoer bevat dezelfde informatie als de indeling voor tekstuitvoer, maar kan gemakkelijker door programma&#39;s worden geparseerd. Deze parameter is standaard ingesteld op `TEXT` . |
+| `statement` | Elke instructie `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS` of `CREATE MATERIALIZED VIEW AS` waarvan u het uitvoeringsplan wilt zien. |
 
 >[!IMPORTANT]
 >
->Elke uitvoer die een `SELECT` de verklaring zou kunnen terugkeren wordt verworpen wanneer looppas met `EXPLAIN` trefwoord. Andere bijwerkingen van de instructie treden op zoals gebruikelijk.
+>De uitvoer die een instructie `SELECT` retourneert, wordt genegeerd wanneer deze wordt uitgevoerd met het trefwoord `EXPLAIN` . Andere bijwerkingen van de instructie treden op zoals gebruikelijk.
 
 **Voorbeeld**
 
-Het volgende voorbeeld toont het plan voor een eenvoudige vraag op een lijst met één enkele `integer` kolom en 10000 rijen:
+In het volgende voorbeeld wordt het plan getoond voor een eenvoudige query op een tabel met één `integer` -kolom en 10000-rijen:
 
 ```sql
 EXPLAIN SELECT * FROM foo;
@@ -929,7 +929,7 @@ EXPLAIN SELECT * FROM foo;
 
 ### FETCH
 
-De `FETCH` Hiermee worden rijen opgehaald met een eerder gemaakte cursor.
+Met de opdracht `FETCH` haalt u rijen op met behulp van een eerder gemaakte cursor.
 
 ```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
@@ -942,7 +942,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 ### PREPARE {#prepare}
 
-De `PREPARE` kunt u een voorbereide instructie maken. Een voorbereide instructie is een object aan de serverzijde dat kan worden gebruikt om vergelijkbare SQL-instructies te sjablonen.
+Met de opdracht `PREPARE` kunt u een voorbereide instructie maken. Een voorbereide instructie is een object aan de serverzijde dat kan worden gebruikt om vergelijkbare SQL-instructies te sjablonen.
 
 Bereide instructies kunnen parameters hebben. Dit zijn waarden die in de instructie worden vervangen wanneer deze wordt uitgevoerd. De parameters worden bedoeld door positie, gebruikend $1, $2, etc., wanneer het gebruiken van voorbereide verklaringen.
 
@@ -959,7 +959,7 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 
 ### ROLLBACK
 
-De `ROLLBACK` maakt het bevel de huidige transactie ongedaan en verwerpt alle updates die door de transactie worden gemaakt.
+De opdracht `ROLLBACK` maakt de huidige transactie ongedaan en verwijdert alle updates die door de transactie zijn aangebracht.
 
 ```sql
 ROLLBACK
@@ -968,7 +968,7 @@ ROLLBACK WORK
 
 ### SELECTEREN IN
 
-De `SELECT INTO` maakt een nieuwe tabel en vult deze met gegevens die door een query zijn berekend. De gegevens worden niet aan de client geretourneerd, omdat ze normaal zijn `SELECT` gebruiken. De kolommen van de nieuwe lijst hebben de namen en de gegevenstypes verbonden aan de outputkolommen van `SELECT` gebruiken.
+Met de opdracht `SELECT INTO` maakt u een nieuwe tabel en vult u deze met gegevens die door een query zijn berekend. De gegevens worden niet aan de client geretourneerd, omdat deze een normale opdracht `SELECT` hebben. De kolommen van de nieuwe lijst hebben de namen en de gegevenstypes verbonden aan de outputkolommen van het `SELECT` bevel.
 
 ```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
@@ -988,17 +988,17 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-Meer informatie over de standaard SELECT-queryparameters vindt u in het gedeelte [Query-sectie SELECTEREN](#select-queries). Deze sectie maakt alleen een lijst met parameters die exclusief zijn voor de `SELECT INTO` gebruiken.
+Meer informatie over de standaard UITGEZOCHTE vraagparameters kan in de [ UITGEZOCHTE vraagsectie ](#select-queries) worden gevonden. Deze sectie bevat alleen parameters die exclusief zijn voor de opdracht `SELECT INTO` .
 
 | Parameters | Beschrijving |
 | ------ | ------ |
 | `TEMPORARY` of `TEMP` | Een optionele parameter. Als de parameter wordt gespecificeerd, is de gecreeerde lijst een tijdelijke lijst. |
-| `UNLOGGED` | Een optionele parameter. Als de parameter wordt gespecificeerd, is de gecreeerde lijst een niet geregistreerde lijst. Meer informatie over niet-geregistreerde tabellen vindt u in de [[!DNL PostgreSQL] documentatie](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | Een optionele parameter. Als de parameter wordt gespecificeerd, is de gecreeerde lijst een niet geregistreerde lijst. Meer informatie over niet-geregistreerde lijsten kan in de [[!DNL PostgreSQL]  documentatie ](https://www.postgresql.org/docs/current/sql-createtable.html) worden gevonden. |
 | `new_table` | De naam van de tabel die moet worden gemaakt. |
 
 **Voorbeeld**
 
-Met de volgende query wordt een nieuwe tabel gemaakt `films_recent` bestaande uit alleen recente gegevens uit de tabel `films`:
+Met de volgende query wordt een nieuwe tabel `films_recent` gemaakt die alleen bestaat uit recente items in de tabel `films` :
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
@@ -1006,7 +1006,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### TONEN
 
-De `SHOW` geeft de huidige instelling van runtimeparameters weer. Deze variabelen kunnen worden ingesteld met de `SET` door de `postgresql.conf` configuratiebestand, via de `PGOPTIONS` omgevingsvariabele (bij gebruik van libpq of een libpq-toepassing) of opdrachtregelmarkeringen wanneer de Postgres-server wordt gestart.
+De opdracht `SHOW` geeft de huidige instelling van runtimeparameters weer. Deze variabelen kunnen worden ingesteld met de instructie `SET` , door het configuratiebestand van `postgresql.conf` te bewerken, via de omgevingsvariabele `PGOPTIONS` (bij het gebruik van libpq of een libpq-toepassing) of via opdrachtregelmarkeringen wanneer de Postgres-server wordt gestart.
 
 ```sql
 SHOW name
@@ -1015,12 +1015,12 @@ SHOW ALL
 
 | Parameters | Beschrijving |
 | ------ | ------ |
-| `name` | De naam van de runtimeparameter waarover u informatie wilt. Mogelijke waarden voor de runtime parameter zijn de volgende waarden:<br>`SERVER_VERSION`: Deze parameter toont het versienummer van de server.<br>`SERVER_ENCODING`: Deze parameter toont de codering van de tekenset aan de serverzijde.<br>`LC_COLLATE`: Deze parameter toont de landinstelling van de database voor sortering (tekstvolgorde).<br>`LC_CTYPE`: Deze parameter toont de landinstelling van de database voor tekenclassificatie.<br>`IS_SUPERUSER`: Deze parameter laat zien of de huidige rol supergebruikersrechten heeft. |
+| `name` | De naam van de runtimeparameter waarover u informatie wilt. Mogelijke waarden voor de runtime parameter omvatten de volgende waarden:<br>`SERVER_VERSION`: Deze parameter toont het de versieaantal van de server.<br>`SERVER_ENCODING`: deze parameter toont de codering van de tekenset aan de serverzijde.<br>`LC_COLLATE`: deze parameter toont de landinstelling van de database voor sortering (tekstvolgorde).<br>`LC_CTYPE`: deze parameter toont de landinstelling van de database voor tekenclassificatie.<br>`IS_SUPERUSER`: Deze parameter laat zien of de huidige rol supergebruikersrechten heeft. |
 | `ALL` | Toon de waarden van alle configuratieparameters met beschrijvingen. |
 
 **Voorbeeld**
 
-De volgende vraag toont het huidige plaatsen van de parameter `DateStyle`.
+De volgende query toont de huidige instelling van de parameter `DateStyle` .
 
 ```sql
 SHOW DateStyle;
@@ -1035,7 +1035,7 @@ SHOW DateStyle;
 
 ### KOPIE
 
-De `COPY` bevel dupliceert de output van om het even welk `SELECT` zoeken naar een opgegeven locatie. Deze opdracht is alleen succesvol als de gebruiker toegang heeft tot deze locatie.
+Met de opdracht `COPY` wordt de uitvoer van een `SELECT` -query naar een opgegeven locatie gedupliceerd. Deze opdracht is alleen succesvol als de gebruiker toegang heeft tot deze locatie.
 
 ```sql
 COPY query
@@ -1046,7 +1046,7 @@ COPY query
 | Parameters | Beschrijving |
 | ------ | ------ |
 | `query` | De query die u wilt kopiëren. |
-| `format_name` | De indeling waarin u de query wilt kopiëren. De `format_name` kan één van `parquet`, `csv`, of `json`. De standaardwaarde is `parquet`. |
+| `format_name` | De indeling waarin u de query wilt kopiëren. De `format_name` kan een van `parquet` , `csv` of `json` zijn. De standaardwaarde is `parquet` . |
 
 >[!NOTE]
 >
@@ -1054,13 +1054,13 @@ COPY query
 
 ### ALTER TABLE {#alter-table}
 
-De `ALTER TABLE` kunt u primaire of buitenlandse toetsbeperkingen toevoegen of verwijderen en kolommen aan de tabel toevoegen.
+Met de opdracht `ALTER TABLE` kunt u primaire of buitenlandse toetsbeperkingen toevoegen of neerzetten en kolommen aan de tabel toevoegen.
 
 #### BEPERKING TOEVOEGEN OF VERWIJDEREN
 
 De volgende SQL-query&#39;s geven voorbeelden van het toevoegen of neerzetten van beperkingen aan een tabel. De primaire sleutel en de buitenlandse zeer belangrijke beperkingen kunnen aan veelvoudige kolommen met komma-gescheiden waarden worden toegevoegd. U kunt samengestelde sleutels tot stand brengen door twee of meer kolomnaamwaarden over te gaan zoals die in de voorbeelden hieronder worden gezien.
 
-**Primaire of samengestelde toetsen definiëren**
+**bepalen primaire of samengestelde sleutels**
 
 ```sql
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE namespace
@@ -1068,7 +1068,7 @@ ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE name
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name1, column_name2 ) NAMESPACE namespace
 ```
 
-**Een relatie definiëren tussen tabellen op basis van een of meer toetsen**
+**bepaalt een verband tussen lijsten die op één of meerdere sleutels worden gebaseerd**
 
 ```sql
 ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
@@ -1076,7 +1076,7 @@ ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES ref
 ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name1, column_name2 ) REFERENCES referenced_table_name ( primary_column_name1, primary_column_name2 )
 ```
 
-**Een identiteitskolom definiëren**
+**bepaal een identiteitskolom**
 
 ```sql
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE namespace
@@ -1084,7 +1084,7 @@ ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE
 ALTER TABLE table_name ADD CONSTRAINT IDENTITY ( column_name ) NAMESPACE namespace
 ```
 
-**Een beperking/relatie/identiteit neerzetten**
+**Daling een beperking/verhouding/identiteit**
 
 ```sql
 ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
@@ -1113,7 +1113,7 @@ ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 
 #### Primaire en secundaire identiteiten toevoegen of verwijderen
 
-Om beperkingen voor zowel primaire als secundaire kolommen van de identiteitslijst toe te voegen of te schrappen, gebruik `ALTER TABLE` gebruiken.
+Als u beperkingen voor zowel de kolommen van de primaire als de secundaire identiteitstabel wilt toevoegen of verwijderen, gebruikt u de opdracht `ALTER TABLE` .
 
 De volgende voorbeelden voegen een primaire identiteit en een secundaire identiteit toe door beperkingen toe te voegen.
 
@@ -1129,7 +1129,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-Zie het document over [het plaatsen van identiteiten in een ad hoc datasets](../data-governance/ad-hoc-schema-identities.md).
+Voor meer gedetailleerde informatie, zie het document over [ plaatsende identiteiten in een ad hoc datasets ](../data-governance/ad-hoc-schema-identities.md).
 
 #### KOLOM TOEVOEGEN
 
@@ -1143,7 +1143,7 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 
 ##### Ondersteunde gegevenstypen
 
-De volgende tabel bevat de geaccepteerde gegevenstypen voor het toevoegen van kolommen aan een tabel met [!DNL Postgres SQL], XDM en de [!DNL Accelerated Database Recovery] (ADR) in Azure SQL.
+In de volgende tabel worden de geaccepteerde gegevenstypen weergegeven voor het toevoegen van kolommen aan een tabel met [!DNL Postgres SQL] , XDM en [!DNL Accelerated Database Recovery] (ADR) in Azure SQL.
 
 | — | PSQL-client | XDM | ADR | Beschrijving |
 |---|---|---|---|---|
@@ -1151,12 +1151,12 @@ De volgende tabel bevat de geaccepteerde gegevenstypen voor het toevoegen van ko
 | 2 | `integer` | `int4` | `integer` | Een numeriek gegevenstype dat wordt gebruikt om gehele getallen op te slaan, van -2.147.483.648 tot 2.147.483.647 in 4 bytes. |
 | 3 | `smallint` | `int2` | `smallint` | Een numeriek gegevenstype dat wordt gebruikt voor het opslaan van gehele getallen tussen -32.768 en 215-1 32.767 in 2 bytes. |
 | 4 | `tinyint` | `int1` | `tinyint` | Een numeriek gegevenstype dat wordt gebruikt om gehele getallen tussen 0 en 255 op te slaan in 1 byte. |
-| 5 | `varchar(len)` | `string` | `varchar(len)` | Een gegevenstype van een teken dat een variabele grootte heeft. `varchar` wordt het best gebruikt wanneer de grootte van de ingangen van kolomgegevens aanzienlijk varieert. |
-| 6 | `double` | `float8` | `double precision` | `FLOAT8` en `FLOAT` zijn geldige synoniemen voor `DOUBLE PRECISION`. `double precision` is een gegevenstype met drijvende komma. Zwevende-kommawaarden worden opgeslagen in 8 bytes. |
-| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` is een geldige synoniem voor `double precision`.`double precision` is een gegevenstype met drijvende komma. Zwevende-kommawaarden worden opgeslagen in 8 bytes. |
-| 8 | `date` | `date` | `date` | De `date` gegevenstypen zijn 4-byte opgeslagen kalenderdatumwaarden zonder tijdstempelgegevens. De geldige datumnotatie loopt van 01-01-0001 tot en met 12-31-9999. |
-| 9 | `datetime` | `datetime` | `datetime` | Een gegevenstype dat wordt gebruikt om een instant in de tijd op te slaan, uitgedrukt als een kalenderdatum en tijd van dag. `datetime` Dit omvat de kwalificatietekens van: jaar, maand, dag, uur, seconde en breuk. A `datetime` de verklaring kan om het even welke ondergroep van deze tijdeenheden omvatten die in die opeenvolging worden aangesloten, of zelfs slechts één enkele tijdeenheid omvatten. |
-| 10 | `char(len)` | `string` | `char(len)` | De `char(len)` trefwoord wordt gebruikt om aan te geven dat het item een teken met een vaste lengte is. |
+| 5 | `varchar(len)` | `string` | `varchar(len)` | Een gegevenstype van een teken dat een variabele grootte heeft. `varchar` kan het best worden gebruikt wanneer de grootte van de ingevoerde kolomgegevens aanzienlijk kan variëren. |
+| 6 | `double` | `float8` | `double precision` | `FLOAT8` en `FLOAT` zijn geldige synoniemen voor `DOUBLE PRECISION` . `double precision` is een gegevenstype met drijvende komma. Zwevende-kommawaarden worden opgeslagen in 8 bytes. |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` is een geldige synoniem voor `double precision` .`double precision` is een gegevenstype met drijvende komma. Zwevende-kommawaarden worden opgeslagen in 8 bytes. |
+| 8 | `date` | `date` | `date` | De gegevenstypen van `date` zijn 4-byte opgeslagen kalenderdatumwaarden zonder tijdstempelinformatie. De geldige datumnotatie loopt van 01-01-0001 tot en met 12-31-9999. |
+| 9 | `datetime` | `datetime` | `datetime` | Een gegevenstype dat wordt gebruikt om een instant in de tijd op te slaan, uitgedrukt als een kalenderdatum en tijd van dag. `datetime` bevat de kwalificatietekens: jaar, maand, dag, uur, seconde en fractie. Een declaratie `datetime` kan elke subset van deze tijdseenheden bevatten die in die reeks zijn samengevoegd, of bestaat zelfs uit slechts één tijdseenheid. |
+| 10 | `char(len)` | `string` | `char(len)` | Het trefwoord `char(len)` wordt gebruikt om aan te geven dat het item een teken met een vaste lengte heeft. |
 
 #### SCHEMA TOEVOEGEN
 
@@ -1194,7 +1194,7 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 
 ### PRIMAIRE TOETSEN TONEN
 
-De `SHOW PRIMARY KEYS` bevel maakt een lijst van alle primaire zeer belangrijke beperkingen voor het bepaalde gegevensbestand.
+De opdracht `SHOW PRIMARY KEYS` geeft een overzicht van alle primaire toetsbeperkingen voor de opgegeven database.
 
 ```sql
 SHOW PRIMARY KEYS
@@ -1209,7 +1209,7 @@ SHOW PRIMARY KEYS
 
 ### BUITENLANDSE TOETSEN TONEN
 
-De `SHOW FOREIGN KEYS` bevel maakt een lijst van alle buitenlandse zeer belangrijke beperkingen voor het bepaalde gegevensbestand.
+De opdracht `SHOW FOREIGN KEYS` geeft een overzicht van alle externe toetsbeperkingen voor de opgegeven database.
 
 ```sql
 SHOW FOREIGN KEYS
@@ -1225,7 +1225,7 @@ SHOW FOREIGN KEYS
 
 ### DATAGROEPEN TONEN
 
-De `SHOW DATAGROUPS` keert een lijst van alle bijbehorende gegevensbestanden terug. Voor elke database bevat de tabel een schema, groepstype, onderliggend type, onderliggende naam en onderliggende id.
+De opdracht `SHOW DATAGROUPS` retourneert een tabel met alle bijbehorende databases. Voor elke database bevat de tabel een schema, groepstype, onderliggend type, onderliggende naam en onderliggende id.
 
 ```sql
 SHOW DATAGROUPS
@@ -1243,7 +1243,7 @@ SHOW DATAGROUPS
 
 ### DATAGROEPEN TONEN VOOR tabel
 
-De `SHOW DATAGROUPS FOR 'table_name'` bevel keert een lijst van alle bijbehorende gegevensbestanden terug die de parameter als zijn kind bevatten. Voor elke database bevat de tabel een schema, groepstype, onderliggend type, onderliggende naam en onderliggende id.
+De opdracht `SHOW DATAGROUPS FOR 'table_name'` retourneert een tabel met alle gekoppelde databases die de parameter als onderliggend element bevatten. Voor elke database bevat de tabel een schema, groepstype, onderliggend type, onderliggende naam en onderliggende id.
 
 ```sql
 SHOW DATAGROUPS FOR 'table_name'

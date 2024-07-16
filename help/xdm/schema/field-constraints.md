@@ -6,8 +6,8 @@ description: Een verwijzing voor gebiedstype beperkingen in het Model van Gegeve
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
 workflow-type: tm+mt
-source-wordcount: '605'
-ht-degree: 1%
+source-wordcount: '617'
+ht-degree: 0%
 
 ---
 
@@ -17,9 +17,9 @@ In schema&#39;s van het Model van Gegevens van de Ervaring (XDM), beperkt het ty
 
 ## Aan de slag
 
-Lees voordat u deze handleiding gebruikt de [grondbeginselen van de schemacompositie](./composition.md) voor een inleiding aan schema&#39;s XDM, klassen, en groepen van het schemagebied.
+Alvorens deze gids te gebruiken, te herzien gelieve de [ grondbeginselen van schemacompositie ](./composition.md) voor een inleiding aan schema XDM, klassen, en groepen van het schemagebied.
 
-Als u van plan bent om uw eigen veldtypen in de API te definiëren, wordt u ten zeerste aangeraden om te beginnen met de [Handleiding voor ontwikkelaars van het schema Register](../api/getting-started.md) voor meer informatie over het maken van veldgroepen en gegevenstypen waarin u aangepaste velden kunt opnemen. Als u de interface van het Experience Platform gebruikt om uw schema&#39;s tot stand te brengen, zie de gids op [velden definiëren in de gebruikersinterface](../ui/fields/overview.md) leren hoe u beperkingen implementeert op velden die u definieert binnen aangepaste veldgroepen en gegevenstypen.
+Als u van plan bent om uw eigen gebiedstypes in API te bepalen, adviseert men sterk dat u met de [ de ontwikkelaarsgids van de Registratie van het Schema ](../api/getting-started.md) begint om te leren hoe te om gebiedsgroepen en gegevenstypes tot stand te brengen om uw douanegebieden in te omvatten. Als u het Experience Platform UI gebruikt om uw schema&#39;s tot stand te brengen, zie de gids op [ bepalend gebieden in UI ](../ui/fields/overview.md) hoe te leren om beperkingen op gebieden uit te voeren die u binnen de groepen van het douanegebied en gegevenstypes bepaalt.
 
 ## Basisstructuur en voorbeelden {#basic-types}
 
@@ -27,7 +27,7 @@ XDM wordt gebouwd bovenop het Schema van JSON, en daarom erven de gebieden XDM e
 
 >[!NOTE]
 >
->Zie de [Handleiding voor API-basisbeginselen](../../landing/api-fundamentals.md#json-schema) voor meer informatie over JSON-schema en andere onderliggende technologieën in platform-API&#39;s.
+>Zie de [ API grondbeginselen gids ](../../landing/api-fundamentals.md#json-schema) voor meer informatie over Schema JSON en andere onderliggende technologieën in Platform APIs.
 
 In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in JSON-schema, samen met een voorbeeldwaarde die overeenkomt met het type:
 
@@ -60,7 +60,11 @@ In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 9007199254740991, "minimum": -9007199254740991 }</pre>
+{
+  "type": "integer",
+  "maximum": 9007199254740991,
+  "minimum": -9007199254740991
+}</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -68,7 +72,11 @@ In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 2147483648, "minimum": -2147483648 }</pre>
+{
+  "type": "integer",
+  "maximum": 2147483648,
+  "minimum": -2147483648
+}</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -76,7 +84,11 @@ In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 32768, "minimum": -32768 }</pre>
+{
+  "type": "integer",
+  "maximum": 32768,
+  "minimum": -32768
+}</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -84,7 +96,11 @@ In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 128, "minimum": -128 }</pre>
+{
+  "type": "integer",
+  "maximum": 128,
+  "minimum": -128
+}</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -92,7 +108,10 @@ In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in
       <td>[!UICONTROL Date]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "string", "format": "date" }</pre>
+{
+  "type": "string",
+  "format": "date"
+}</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -100,7 +119,10 @@ In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "string", "format": "date-time" }</pre>
+{
+  "type": "string",
+  "format": "date-time"
+}</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -115,7 +137,7 @@ In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in
   </tbody>
 </table>
 
-**Alle tekenreeksen met datumnotatie moeten voldoen aan de ISO 8601-standaard ([RFC 3339, punt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
+**Alle datum-geformatteerde koorden moeten met ISO 8601 norm ([ RFC 3339, sectie 5.6 ](https://tools.ietf.org/html/rfc3339#section-5.6) in overeenstemming zijn).*
 
 ## XDM-typen toewijzen aan andere indelingen
 
@@ -127,24 +149,24 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 
 >[!NOTE]
 >
->Onder de standaard XDM types die in de lijsten hieronder worden vermeld, [!UICONTROL Map] type is ook opgenomen. Kaarten worden gebruikt in standaardschema&#39;s wanneer de gegevens als sleutels worden vertegenwoordigd die aan bepaalde waarden in kaart brengen, of waar de sleutels redelijkerwijs niet in een statisch schema kunnen worden omvat en als gegevenswaarden moeten worden behandeld.
+>Onder de standaard XDM-typen die in de onderstaande tabellen worden vermeld, wordt ook het [!UICONTROL Map] -type opgenomen. Kaarten worden gebruikt in standaardschema&#39;s wanneer de gegevens als sleutels worden vertegenwoordigd die aan bepaalde waarden in kaart brengen, of waar de sleutels redelijkerwijs niet in een statisch schema kunnen worden omvat en als gegevenswaarden moeten worden behandeld.
 >
->Vele standaardXDM componenten gebruiken kaarttypes, en u kunt ook [aangepaste kaartvelden definiëren](../tutorials/custom-fields-api.md#custom-maps) indien gewenst. De opname van het kaarttype in de onderstaande tabellen is bedoeld om u te helpen bepalen hoe u uw bestaande gegevens kunt toewijzen aan XDM als deze momenteel zijn opgeslagen in een van de hieronder vermelde indelingen.
+>Vele standaardXDM componenten gebruiken kaarttypes, en u kunt ook [ gebieden van de douanekaart ](../tutorials/custom-fields-api.md#custom-maps) bepalen indien gewenst. De opname van het kaarttype in de onderstaande tabellen is bedoeld om u te helpen bepalen hoe u uw bestaande gegevens kunt toewijzen aan XDM als deze momenteel zijn opgeslagen in een van de hieronder vermelde indelingen.
 
 ### Parquet, Spark SQL en Java {#parquet}
 
 | XDM-type | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
-| [!UICONTROL String] | Type: `BYTE_ARRAY`<br>Aantekening: `UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL String] | Type: `BYTE_ARRAY`<br> annotatie: `UTF8` | `StringType` | `java.lang.String` |
 | [!UICONTROL Number] | Type: `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Long] | Type: `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL Integer] | Type: `INT32`<br>Aantekening: `INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL Short] | Type: `INT32`<br>Aantekening: `INT_16` | `ShortType` | `java.lang.Short` |
-| [!UICONTROL Byte] | Type: `INT32`<br>Aantekening: `INT_8` | `ByteType` | `java.lang.Short` |
-| [!UICONTROL Date] | Type: `INT32`<br>Aantekening: `DATE` | `DateType` | `java.util.Date` |
-| [!UICONTROL DateTime] | Type: `INT64`<br>Aantekening: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
+| [!UICONTROL Integer] | Type: `INT32`<br> annotatie: `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Short] | Type: `INT32`<br> annotatie: `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL Byte] | Type: `INT32`<br> annotatie: `INT_8` | `ByteType` | `java.lang.Short` |
+| [!UICONTROL Date] | Type: `INT32`<br> annotatie: `DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL DateTime] | Type: `INT64`<br> annotatie: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
 | [!UICONTROL Boolean] | Type: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Map] | `MAP`-annotated group<br><br>(`<key-type>` moet `STRING`) | `MapType`<br><br>(`keyType` moet `StringType`) | `java.util.Map` |
+| [!UICONTROL Map] | `MAP` -annoated group <br><br> (`<key-type>` moet `STRING` zijn) | `MapType`<br><br> (`keyType` must be `StringType`) | `java.util.Map` |
 
 {style="table-layout:auto"}
 
@@ -175,13 +197,13 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 | [!UICONTROL Integer] | `int` | `Integer` | `int32` |
 | [!UICONTROL Short] | `int` | `Integer` | `int32` |
 | [!UICONTROL Byte] | `int` | `Integer` | `int32` |
-| [!UICONTROL Date] | `date` | `Integer`<br>(Unix milliseconds) | `int64`<br>(Unix milliseconds) |
-| [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix milliseconds) | `int64`<br>(Unix milliseconds) |
-| [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binair) | `bool` |
+| [!UICONTROL Date] | `date` | `Integer`<br> (Unix milliseconds) | `int64`<br> (Unix milliseconds) |
+| [!UICONTROL DateTime] | `timestamp` | `Integer`<br> (Unix milliseconds) | `int64`<br> (Unix milliseconds) |
+| [!UICONTROL Boolean] | `bool` | `Integer`<br> (0/1 binair) | `bool` |
 | [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
 
 {style="table-layout:auto"}
 
 ## XDM-veldtypen definiëren in de API {#define-fields}
 
-Met de API voor het schemaregister kunt u aangepaste velden definiëren met behulp van indelingen en optionele beperkingen. Zie de handleiding op [aangepaste velden definiëren in de API voor het schemaregister](../tutorials/custom-fields-api.md) voor meer informatie .
+Met de API voor het schemaregister kunt u aangepaste velden definiëren met behulp van indelingen en optionele beperkingen. Zie de gids op [ bepalend douanegebieden in de Registratie API van het Schema ](../tutorials/custom-fields-api.md) voor meer informatie.

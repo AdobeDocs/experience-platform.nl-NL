@@ -7,12 +7,12 @@ description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen t
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 1%
+source-wordcount: '1088'
+ht-degree: 0%
 
 ---
 
-# Bovenliggende gegevens uit een cloudopslagsysteem van een andere fabrikant verzamelen met behulp van het [!DNL Flow Service] API
+# Bovenliggende gegevens uit een extern cloudopslagsysteem verzamelen met de API [!DNL Flow Service]
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
@@ -22,24 +22,24 @@ Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te late
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [Bronnen](../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-- [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+- [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om Parquet-gegevens van een externe cloudopslag met succes in te voeren via de [!DNL Flow Service] API.
+De volgende secties bevatten aanvullende informatie die u moet weten om Parquet-gegevens van een externe cloudopslag met de API [!DNL Flow Service] correct te kunnen invoeren.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform], met inbegrip van die welke [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -49,7 +49,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Verbinding maken
 
-Om Parquet-gegevens in te voeren met [!DNL Platform] API&#39;s hebt u een geldige verbinding nodig voor de externe cloudopslagbron waartoe u toegang hebt. Als u nog geen verbinding hebt voor de opslag waarmee u wilt werken, kunt u een verbinding maken via de volgende zelfstudies:
+Als u Parket-gegevens wilt opnemen met [!DNL Platform] API&#39;s, moet u beschikken over een geldige verbinding voor de externe cloudopslagbron waartoe u toegang hebt. Als u nog geen verbinding hebt voor de opslag waarmee u wilt werken, kunt u een verbinding maken via de volgende zelfstudies:
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
@@ -57,15 +57,15 @@ Om Parquet-gegevens in te voeren met [!DNL Platform] API&#39;s hebt u een geldig
 - [Google Cloud Store](./create/cloud-storage/google.md)
 - [SFTP](./create/cloud-storage/sftp.md)
 
-De unieke id verkrijgen en opslaan (`$id`) van de verbinding en ga vervolgens door naar de volgende stap van deze zelfstudie.
+Haal de unieke id (`$id`) van de verbinding op en sla deze op. Ga vervolgens verder met de volgende stap van deze zelfstudie.
 
 ## Doelschema maken
 
-Om de brongegevens te kunnen gebruiken in [!DNL Platform], moet er ook een doelschema worden gemaakt om de brongegevens te structureren op basis van uw behoeften. Het doelschema wordt dan gebruikt om tot een [!DNL Platform] dataset waarin de brongegevens zijn opgenomen.
+Als u de brongegevens in [!DNL Platform] wilt gebruiken, moet u ook een doelschema maken om de brongegevens naar wens te structureren. Het doelschema wordt vervolgens gebruikt om een [!DNL Platform] dataset te maken waarin de brongegevens zich bevinden.
 
-Als u liever de gebruikersinterface gebruikt in [!DNL Experience Platform]de [Zelfstudie Schema Editor](../../../xdm/tutorials/create-schema-ui.md) verstrekt geleidelijke instructies voor het uitvoeren van gelijkaardige acties in de Redacteur van het Schema.
+Als u het gebruikersinterface in [!DNL Experience Platform] liever zou gebruiken, verstrekt het [ leerprogramma van de Redacteur van het Schema ](../../../xdm/tutorials/create-schema-ui.md) geleidelijke instructies voor het uitvoeren van gelijkaardige acties in de Redacteur van het Schema.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /schemaregistry/tenant/schemas
@@ -73,7 +73,7 @@ POST /schemaregistry/tenant/schemas
 
 **Verzoek**
 
-Met het volgende voorbeeldverzoek wordt een XDM-schema gemaakt dat de XDM uitbreidt [!DNL Individual Profile] klasse.
+Met de volgende voorbeeldaanvraag wordt een XDM-schema gemaakt dat de klasse XDM [!DNL Individual Profile] uitbreidt.
 
 ```shell
 curl -X POST \
@@ -114,9 +114,9 @@ curl -X POST \
 }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert details van het onlangs gecreëerde schema met inbegrip van zijn uniek herkenningsteken terug (`$id`). Deze id is vereist in de volgende stap om een bronverbinding te maken.
+Een succesvolle reactie keert details van het pas gecreëerde schema met inbegrip van zijn uniek herkenningsteken (`$id`) terug. Deze id is vereist in de volgende stap om een bronverbinding te maken.
 
 ```json
 {
@@ -198,9 +198,9 @@ Een succesvolle reactie keert details van het onlangs gecreëerde schema met inb
 
 ## Een bronverbinding maken {#source}
 
-Als een doel-XDM-schema is gemaakt, kan nu een bronverbinding worden gemaakt met een verzoek van de POST aan de [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbinding voor API, een indeling van brongegevens en een verwijzing naar het doel-XDM-schema dat in de vorige stap is opgehaald.
+Als een doel-XDM-schema is gemaakt, kan nu een bronverbinding worden gemaakt met behulp van een POST-aanvraag voor de [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbinding voor API, een indeling van brongegevens en een verwijzing naar het doel-XDM-schema dat in de vorige stap is opgehaald.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /sourceConnections
@@ -241,12 +241,12 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `baseConnectionId` | De verbinding voor de API die uw cloudopslag vertegenwoordigt. |
-| `data.schema.id` | The (`$id`) als het doel-xdm-schema in de vorige stap is opgehaald. |
+| `data.schema.id` | (`$id`) als het doel xdm- schema in de vorige stap wordt teruggewonnen. |
 | `params.path` | Het pad van het bronbestand. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Sla deze waarde op zoals deze in latere stappen is vereist voor het maken van een doelverbinding.
+Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde bronverbinding terug. Sla deze waarde op zoals deze in latere stappen is vereist voor het maken van een doelverbinding.
 
 ```json
 {
@@ -257,17 +257,17 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 ## Een databaseverbinding maken
 
-Om externe gegevens in te voeren in [!DNL Platform], en [!DNL Experience Platform] de gegevenssetbasisverbinding moet eerst worden verworven.
+Als u externe gegevens in [!DNL Platform] wilt opnemen, moet eerst een [!DNL Experience Platform] gegevenssetbasisverbinding worden verkregen.
 
-Om een gegevenssetbasisverbinding tot stand te brengen, volg de stappen die in worden geschetst in [Zelfstudie over gegevenssetbasisverbinding](./create-dataset-base-connection.md).
+Om een verbinding van de datasetbasis tot stand te brengen, volg de stappen die in het [ worden geschetst verbindingsleerprogramma van de datasetbasis ](./create-dataset-base-connection.md).
 
-Ga na de stappen die in de ontwikkelaarsgids worden geschetst verder tot u een verbinding van de datasetbasis hebt gecreeerd. De unieke id verkrijgen en opslaan (`$id`) en ga verder met het gebruik ervan als basis-verbindings-id in de volgende stap om een doelverbinding te maken.
+Ga na de stappen die in de ontwikkelaarsgids worden geschetst verder tot u een verbinding van de datasetbasis hebt gecreeerd. Verkrijg en sla het unieke herkenningsteken (`$id`) op en ga verder om het als identiteitskaart van de basisverbinding in de volgende stap te gebruiken om een doelverbinding tot stand te brengen.
 
 ## Een doelgegevensset maken
 
-Een doeldataset kan tot stand worden gebracht door een verzoek van de POST aan [Catalogusservice-API](https://www.adobe.io/experience-platform-apis/references/catalog/), op voorwaarde dat de id van het doelschema zich binnen de payload bevindt.
+Een doeldataset kan worden gecreeerd door een verzoek van de POST aan de [ Dienst API van de Catalogus uit te voeren ](https://www.adobe.io/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /catalog/dataSets
@@ -296,9 +296,9 @@ curl -X POST \
 | -------- | ----------- |
 | `schemaRef.id` | De id van uw doel-XDM-schema. |
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert een serie terug die identiteitskaart van de pas gecreëerde dataset in het formaat bevat `"@/datasets/{DATASET_ID}"`. De dataset ID is een read-only, systeem-geproduceerde koord dat wordt gebruikt om de dataset in API vraag van verwijzingen te voorzien. Sla identiteitskaart van de doeldataset zoals het in recentere stappen wordt vereist om een doelverbinding en een dataflow tot stand te brengen.
+Een geslaagde reactie retourneert een array met de id van de nieuwe dataset in de indeling `"@/datasets/{DATASET_ID}"` . De dataset ID is een read-only, systeem-geproduceerde koord dat wordt gebruikt om de dataset in API vraag van verwijzingen te voorzien. Sla identiteitskaart van de doeldataset zoals het in recentere stappen wordt vereist om een doelverbinding en een dataflow tot stand te brengen.
 
 ```json
 [
@@ -308,9 +308,9 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de pas ge
 
 ## Een doelverbinding maken {#target}
 
-U hebt nu de unieke herkenningstekens voor een gegevenssetbasisverbinding, een doelschema, en een doeldataset. Met deze id&#39;s kunt u een doelverbinding maken met de [!DNL Flow Service] API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
+U hebt nu de unieke herkenningstekens voor een gegevenssetbasisverbinding, een doelschema, en een doeldataset. Met behulp van deze id&#39;s kunt u een doelverbinding maken met de [!DNL Flow Service] API om de gegevensset op te geven die de binnenkomende brongegevens zal bevatten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /targetConnections
@@ -349,13 +349,13 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `baseConnectionId` | De id van de gegevenssetbasisverbinding. |
-| `data.schema.id` | De `$id` van het doel-XDM-schema. |
+| `data.schema.id` | The `$id` of the target XDM schema. |
 | `params.dataSetId` | De id van de doeldataset. |
 | `connectionSpec.id` | De verbindingsspecificatie-id voor uw cloudopslag. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id`). Sla deze waarde op zoals deze in latere stappen wordt vereist.
+Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverbinding (`id`) terug. Sla deze waarde op zoals deze in latere stappen wordt vereist.
 
 ```json
 {
@@ -368,12 +368,12 @@ Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id
 
 De laatste stap in de richting van het opnemen van Parquet-gegevens van een externe cloudopslag is het maken van een dataflow. Momenteel zijn de volgende vereiste waarden voorbereid:
 
-- [Bronverbinding-id](#source)
-- [Doelverbinding-id](#target)
+- [Source-verbinding-id](#source)
+- [Doel-verbindings-id](#target)
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /flows
@@ -414,9 +414,9 @@ curl -X POST \
 | `sourceConnectionIds` | De bronverbindings-id die in een eerdere stap is opgehaald. |
 | `targetConnectionIds` | De doel verbindings ID die in een vroegere stap wordt teruggewonnen. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom.
+Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd dataflow terug.
 
 ```json
 {
@@ -427,7 +427,7 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom.
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een bronschakelaar gecreeerd om de gegevens van het Pakket van uw systeem van de derdecloudopslag op een geplande basis te verzamelen. Binnenkomende gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u een bronschakelaar gecreeerd om de gegevens van het Pakket van uw systeem van de derdecloudopslag op een geplande basis te verzamelen. Binnenkomende gegevens kunnen nu worden gebruikt door [!DNL Platform] -services, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace] . Raadpleeg de volgende documenten voor meer informatie:
 
 - [Overzicht van het realtime klantprofiel](../../../profile/home.md)
-- [Overzicht van de Data Science Workspace](../../../data-science-workspace/home.md)
+- [Overzicht van Data Science Workspace](../../../data-science-workspace/home.md)

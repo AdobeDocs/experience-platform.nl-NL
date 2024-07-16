@@ -20,7 +20,7 @@ Een toewijzing is een verzameling van alle identiteiten in een cluster, voor een
 
 Als u een identiteit opgeeft, haalt u alle verwante identiteiten op uit dezelfde naamruimte als de identiteit in het verzoek.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
@@ -28,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **Verzoek**
 
-Optie 1: Geef de identiteit op als naamruimte (`nsId`, op ID) en ID-waarde (`id`).
+Optie 1: Verstrek de identiteit als namespace (`nsId`, door identiteitskaart) en waarde van identiteitskaart (`id`).
 
 ```shell
 curl -X GET \
@@ -39,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 2: Geef de identiteit op als naamruimte (`ns`, op naam) en ID-waarde (`id`).
+Optie 2: Verstrek de identiteit als namespace (`ns`, door naam) en waarde van identiteitskaart (`id`).
 
 ```shell
 curl -X GET \
@@ -50,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 3: Geef de identiteit op als XID (`xid`). Zie de sectie over dit document voor meer informatie over het verkrijgen van de XID van een identiteit [XID ophalen voor een identiteit](./list-native-id.md).
+Optie 3: Geef de identiteit op als XID (`xid`). Voor meer op hoe te om XID van een identiteit te verkrijgen, zie de sectie van dit document die [ behandelt die XID voor een identiteit ](./list-native-id.md) krijgen.
 
 ```shell
 curl -X GET \
@@ -63,19 +63,19 @@ curl -X GET \
 
 ### Identiteitskaarten ophalen voor meerdere identiteiten
 
-Gebruik de `POST` methode als equivalent van de partij `GET` hierboven beschreven methode om toewijzingen voor meerdere identiteiten op te halen.
+Gebruik de methode `POST` als een batchequivalent van de hierboven beschreven methode `GET` om toewijzingen voor meerdere identiteiten op te halen.
 
 >[!NOTE]
 >
 >Het verzoek mag niet meer dan 1000 identiteiten bevatten. Verzoeken die langer zijn dan 1000 identiteiten, resulteren in 400 statuscode.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST https://platform.adobe.io/data/core/identity/mappings
 ```
 
-**Aanvragingsinstantie**
+**het lichaam van het Verzoek**
 
 Optie 1: Geef een lijst op met XID&#39;s waarvoor u toewijzingen wilt ophalen.
 
@@ -86,7 +86,7 @@ Optie 1: Geef een lijst op met XID&#39;s waarvoor u toewijzingen wilt ophalen.
 }
 ```
 
-Optie 2: Geef een lijst met identiteiten op als samengestelde id&#39;s, waarbij elke naam de ID-waarde en naamruimte bevat via naamruimte-id. In dit voorbeeld wordt het gebruik van deze methode getoond terwijl de standaardwaarde wordt overschreven `graph-type` van &quot;Private Graph&quot;.
+Optie 2: Geef een lijst met identiteiten op als samengestelde id&#39;s, waarbij elke naam de ID-waarde en naamruimte bevat via naamruimte-id. In dit voorbeeld wordt het gebruik van deze methode getoond terwijl de standaardwaarde `graph-type` van &quot;Privégrafiek&quot; wordt overschreven.
 
 ```shell
 {
@@ -105,7 +105,7 @@ Optie 2: Geef een lijst met identiteiten op als samengestelde id&#39;s, waarbij 
 
 **Verzoek**
 
-**XID&#39;s gebruiken**
+**Gebruikend XIDs**
 
 ```shell
 curl -X POST \
@@ -121,7 +121,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**UID&#39;s gebruiken**
+**Gebruikend UIDs**
 
 ```shell
 curl -X POST \
@@ -145,9 +145,9 @@ curl -X POST \
       }' | json_pp
 ```
 
-Als er geen verwante identiteiten zijn gevonden met de opgegeven invoer, en `HTTP 204` antwoordcode wordt zonder inhoud geretourneerd.
+Als er geen verwante identiteiten zijn gevonden met de opgegeven invoer, wordt een `HTTP 204` -antwoordcode zonder inhoud geretourneerd.
 
-**Antwoord**
+**Reactie**
 
 ```json
 {
@@ -183,9 +183,9 @@ Als er geen verwante identiteiten zijn gevonden met de opgegeven invoer, en `HTT
 }
 ```
 
-- `lastAssociationTime`: De tijdstempel wanneer de invoeridentiteit voor het laatst aan deze identiteit is gekoppeld.
-- `regions`: levert de `regionId` en `lastAssociationTime` waar de identiteit werd gezien.
+- `lastAssociationTime`: De tijdstempel op het moment dat de invoeridentiteit voor het laatst aan deze identiteit is gekoppeld.
+- `regions` - Geeft de `regionId` en `lastAssociationTime` aan waar de identiteit werd gezien.
 
 ## Volgende stappen
 
-Ga naar de volgende zelfstudie om [lijst beschikbare naamruimten](./list-namespaces.md).
+Ga aan het volgende leerprogramma te werk aan [ lijst beschikbare namespaces ](./list-namespaces.md).

@@ -4,38 +4,38 @@ description: Meer informatie over de extensie van de Adobe Experience Cloud Iden
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '783'
 ht-degree: 0%
 
 ---
 
-# Overzicht van Adobe Experience Cloud Identity Service
+# Overzicht van de extensie Adobe Experience Cloud Identity Service
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Gebruik deze verwijzing voor informatie over het vormen van de uitbreiding van identiteitskaart van Adobe Experience Cloud, en de opties beschikbaar wanneer het gebruiken van deze uitbreiding om een regel te bouwen.
 
-Gebruik deze uitbreiding om de Dienst van de Identiteit van de Experience Cloud met uw bezit te integreren. Met de Experience Cloud Identity Service kunt u unieke en permanente id&#39;s voor bezoekers van uw site maken en opslaan.
+Gebruik deze uitbreiding om de Dienst van de Identiteit van het Experience Cloud met uw bezit te integreren. Met de Experience Cloud Identity Service kunt u unieke en permanente id&#39;s voor bezoekers van uw site maken en opslaan.
 
 ## De extensie Experience Cloud-id configureren
 
 Deze sectie bevat een verwijzing naar de beschikbare opties bij het configureren van de extensie Experience Cloud-id.
 
-Als de extensie Experience Cloud-id nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensions > Catalog]**, plaatst u de aanwijzer boven de extensie Experience Cloud-id en selecteert u **[!UICONTROL Install]**.
+Als de extensie Experience Cloud-id nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensions > Catalog]** , plaatst u de aanwijzer boven de extensie Experience Cloud-id en selecteert u **[!UICONTROL Install]** .
 
-Als u de extensie wilt configureren, opent u het tabblad Extensies, plaatst u de muisaanwijzer op de extensie en selecteert u **[!UICONTROL Configure]**.
+Als u de extensie wilt configureren, opent u het tabblad Extensies, plaatst u de muisaanwijzer op de extensie en selecteert u **[!UICONTROL Configure]** .
 
 ![](../../../images/optin.jpg)
 
 De volgende configuratieopties zijn beschikbaar:
 
-### Experience Cloud Organisatie-id
+### Organisatie-id Experience Cloud
 
-De id voor uw Experience Cloud-organisatie.
+De id voor uw organisatie van Experiencen Cloud.
 
-Uw id bestaat uit een alfanumerieke tekenreeks van 24 tekens, gevolgd door `@AdobeOrg`. Als u deze id niet kent, neemt u contact op met de klantenservice.
+De id bestaat uit een alfanumerieke tekenreeks van 24 tekens, gevolgd door `@AdobeOrg` . Als u deze id niet kent, neemt u contact op met de klantenservice.
 
 ### Specifieke paden uitsluiten
 
@@ -43,37 +43,37 @@ De Experience Cloud-id wordt niet geladen als de URL overeenkomt met een van de 
 
 (Optioneel) Schakel Regex in als dit een reguliere expressie is.
 
-Selecteren **[!UICONTROL Add]** om een ander pad uit te sluiten.
+Selecteer **[!UICONTROL Add]** om een ander pad uit te sluiten.
 
 ### Aanmelden
 
 Gebruik de opties bij Inschakelen om te bepalen of bezoekers moeten deelnemen aan Adobe-services op uw site, zoals of ze cookies moeten maken die bezoekersactiviteiten volgen.
 
-Opt In is het gecentraliseerde referentiepunt voor alle clientbibliotheken met oplossingen voor Platforms om te bepalen of cookies op het apparaat of de browser van een gebruiker kunnen worden gemaakt wanneer deze uw site bezoekt. Opt In biedt geen ondersteuning voor het verzamelen of opslaan van voorkeuren voor gebruikersmachtigingen.
+Opt In is het gecentraliseerde referentiepunt voor alle clientbibliotheken van de oplossing Platform om te bepalen of cookies kunnen worden gemaakt op het apparaat of de browser van een gebruiker wanneer deze uw site bezoekt. Opt In biedt geen ondersteuning voor het verzamelen of opslaan van voorkeuren voor gebruikersmachtigingen.
 
-**Inschakelen inschakelen?**
+**laat Opt binnen toe?**
 
 De geselecteerde optie bepaalt of uw website wacht op toestemming om de activiteiten van een bezoeker op uw website te volgen.
 
 Er zijn drie opties:
 
-* **Nee:** Wacht niet op toestemming om de bezoeker te volgen. Dit is het standaardgedrag als u geen optie selecteert.
-* **Ja:** Wacht op toestemming om de bezoeker te volgen.
-* **Tijdens uitvoering bepaald met functie:** Programmaticaal bepalen of de waarde waar of onwaar is bij uitvoering. Als u deze optie selecteert, wordt het veld Gegevenselement selecteren beschikbaar. Selecteer een gegevenselement dat kan bepalen of op toestemming moet wachten. Dit gegevenselement wordt omgezet in een booleaanse waarde. U kunt bijvoorbeeld een gegevenselement selecteren dat toestemming geeft, afhankelijk van de vraag of het land van de bezoeker zich in de EU bevindt.
+* **Nr:** wacht niet op toestemming om de bezoeker te volgen. Dit is het standaardgedrag als u geen optie selecteert.
+* **ja:** wacht op toestemming om de bezoeker te volgen.
+* **die bij runtime wordt bepaald gebruikend functie:** bepaalt programmatically of de waarde waar of vals bij runtime is. Als u deze optie selecteert, wordt het veld Gegevenselement selecteren beschikbaar. Selecteer een gegevenselement dat kan bepalen of op toestemming moet wachten. Dit gegevenselement wordt omgezet in een booleaanse waarde. U kunt bijvoorbeeld een gegevenselement selecteren dat toestemming geeft, afhankelijk van de vraag of het land van de bezoeker zich in de EU bevindt.
 
-**Is Opt In-opslag ingeschakeld?**
+**is Opt in Toegelaten opslag?**
 
 Als deze optie is ingeschakeld, wordt de toestemming opgeslagen in een cookie van de eerste fabrikant op uw domein. Als deze optie niet is ingeschakeld, worden de machtigingsinstellingen opgeslagen in uw CMP of een cookie die u beheert.
 
-**Opt in Cookie-domein?**
+**Opt in het Domein van het Koekje?**
 
 Gebruik deze optionele instelling om het domein op te geven waar de Opt in-cookie wordt opgeslagen als opslag is ingeschakeld. U kunt een domein ingaan, of een gegevenselement selecteren dat het domein bevat.
 
-**Opt in het verlopen van de opslag?**
+**Opt in de Verval van de Opslag?**
 
 Geef op wanneer het cookie Opt in vervalt wanneer opslag is ingeschakeld, in seconden.
 
-Voer een getal in en selecteer vervolgens een tijdseenheid in de vervolgkeuzelijst. Voer bijvoorbeeld 2 in en selecteer **[!UICONTROL Weeks]**. De standaardwaarde is 13 maanden.
+Voer een getal in en selecteer vervolgens een tijdseenheid in de vervolgkeuzelijst. Voer bijvoorbeeld 2 in en selecteer **[!UICONTROL Weeks]** . De standaardwaarde is 13 maanden.
 
 **Toestemmingen?**
 
@@ -83,15 +83,15 @@ Voorbeeld:
 
 `"{"aa":true,"aam":true,"ecid":true}"`
 
-**Goedkeuringen vooraf aanmelden?**
+**Vooraf kiezen in Goedkeuringen?**
 
-Bepaal welke categorieën worden goedgekeurd of geweigerd wanneer geen voorkeur door de bezoeker is geplaatst. De toestemming wordt verondersteld voor de geselecteerde oplossingen vanaf de tijd de pagina wordt geladen. Het elementtype moet een object of een JSON-tekenreeks zijn (voorbeeld: `{aam: true}`).
+Bepaal welke categorieën worden goedgekeurd of geweigerd wanneer geen voorkeur door de bezoeker is geplaatst. De toestemming wordt verondersteld voor de geselecteerde oplossingen vanaf de tijd de pagina wordt geladen. Het elementtype moet een object of een JSON-tekenreeks zijn (bijvoorbeeld: `{aam: true}`).
 
 ### Variabelen
 
-Stel naam-waardeparen in als Experience Cloud ID-instantie-eigenschappen. Gebruik de vervolgkeuzelijst om een variabele te selecteren en typ of selecteer een waarde. Voor informatie over elke variabele, verwijs naar [Experience Cloud Identiteitsservicedocumentatie](https://experiencecloud.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html).
+Stel naam-waardeparen in als Experience Cloud ID-instantie-eigenschappen. Gebruik de vervolgkeuzelijst om een variabele te selecteren en typ of selecteer een waarde. Voor informatie over elke variabele, verwijs naar de [ documentatie van de Dienst van de Identiteit van het Experience Cloud ](https://experiencecloud.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html).
 
-## Handelingstypen voor Experience Cloud-id-extensie
+## Handelingstypen voor extensie Experience Cloud-id
 
 In deze sectie worden de actietypen beschreven die beschikbaar zijn in de extensie Experience Cloud-id.
 
@@ -107,7 +107,7 @@ Stel een of meer klant-id&#39;s in.
 
 1. Selecteer een waarde.
 
-   De waarde moet een gebruikers-id zijn. Gegevenselementen zijn het meest geschikt voor dynamische waarden, zoals id&#39;s van een client-specifiek intern systeem.
+   De waarde moet een gebruikersnaam zijn. Gegevenselementen zijn het meest geschikt voor dynamische waarden, zoals id&#39;s van een client-specifiek intern systeem.
 
 1. Selecteer een verificatiestatus.
 

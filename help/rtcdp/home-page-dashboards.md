@@ -19,18 +19,18 @@ De Real-Time CDP-startpagina bevat een widget Aan de slag waarmee u snel toegang
 
 Dit document biedt een overzicht van de Real-Time CDP-startpagina en het dashboard voor meetgegevens.
 
-![De homepage van Platform UI.](assets/platform-home/home.png)
+![ De homepage van Platform UI.](assets/platform-home/home.png)
 
 ## Aan de slag-widget
 
-De [!UICONTROL Getting started with Real-Time Customer Profile] widget bestaat uit vier secties:
+De widget [!UICONTROL Getting started with Real-Time Customer Profile] bestaat uit vier secties:
 
-* **Gegevens opnemen in platform**: Deze widget stuurt u naar de broncatalogus. Gebruik de broncatalogus om een bron te selecteren en uw gegevens in te voeren in het Experience Platform. Selecteren **[Bronnen configureren]** om naar de broncatalogus te navigeren. Lees voor meer informatie de [overzicht van bronnen](../sources/home.md).
-* **Modelgegevensstructuren**: Deze widget leidt u naar het schema&#39;s-overzicht. Gebruik het schemaoverzicht om naar bestaande schema&#39;s te doorbladeren of een blauwdruk tot stand te brengen die de structuur van uw gegevens beschrijven. Selecteren **[!UICONTROL Create schema]** om naar de interface van de schemaverwezenlijking te navigeren. Lees voor meer informatie de [overzicht van schema&#39;s](../xdm/home.md).
-* **Stimulerend publiek**: Deze widget stuurt u naar de Segment Builder in de UI. Gebruik de Bouwer van het Segment om met de gegevenselementen van het Profiel in wisselwerking te staan en de criteria voor uw segmentdefinitie te bepalen. Selecteren **[!UICONTROL Create audience]** om naar de Segment Builder te navigeren. Lees voor meer informatie de [Overzicht van segmentatieservice](../segmentation/home.md).
-* **Gegevens verzenden naar doelen**: Deze widget stuurt u naar de doelcatalogus. Gebruik de bestemmingscatalogus om een bestemming te selecteren die u dan met kunt verbinden en publiek naar verzenden. Selecteren **[!UICONTROL Set up destinations]** om naar de doelcatalogus te navigeren. Lees voor meer informatie de [Overzicht van doelen](../destinations/home.md).
+* **Samenvatting gegevens in Platform**: Deze widget leidt u aan de broncatalogus. Gebruik de broncatalogus om een bron te selecteren en uw gegevens in te voeren in het Experience Platform. Selecteer **[vormen bronnen]** om aan de broncatalogus te navigeren. Voor meer informatie, lees het [ overzicht van bronnen ](../sources/home.md).
+* **Model gegevensstructuren**: Deze widget leidt u aan het schemaoverzicht. Gebruik het schemaoverzicht om naar bestaande schema&#39;s te doorbladeren of een blauwdruk tot stand te brengen die de structuur van uw gegevens beschrijven. Selecteer **[!UICONTROL Create schema]** om naar de interface voor het maken van het schema te navigeren. Voor meer informatie, lees het [ schema&#39;s overzicht ](../xdm/home.md).
+* **bouwt publiek**: Deze widget richt u aan de Bouwer van het Segment in UI. Gebruik de Bouwer van het Segment om met de gegevenselementen van het Profiel in wisselwerking te staan en de criteria voor uw segmentdefinitie te bepalen. Selecteer **[!UICONTROL Create audience]** om naar de Segment Builder te navigeren. Voor meer informatie, lees het [ overzicht van de Dienst van de Segmentatie ](../segmentation/home.md).
+* **verzendt gegevens naar bestemmingen**: Deze widget richt u aan de catalogus van bestemmingen. Gebruik de bestemmingscatalogus om een bestemming te selecteren die u dan met kunt verbinden en publiek naar verzenden. Selecteer **[!UICONTROL Set up destinations]** om naar de doelcatalogus te navigeren. Voor meer informatie, lees het [ overzicht van bestemmingen ](../destinations/home.md).
 
-![De startpagina van de platformgebruikersinterface met de widget Aan de slag](assets/platform-home/getting-started-widget.png)
+![ de homepage UI van het Platform die het worden begonnen widget ](assets/platform-home/getting-started-widget.png) toont
 
 ## Metrisch dashboard {#metrics-dashboard}
 
@@ -46,29 +46,29 @@ Op het dashboard Metrics wordt actuele informatie over de gegevens van het Exper
 
 Het leaderboard toont het huidige totale aantal schema&#39;s, datasets, profielen en soorten publiek in uw organisatie en de meest recente updatedatum.
 
-![De leaderboard-sectie in de UI-startpagina van het platform.](assets/platform-home/leaderboard.png)
+![ de leaderboard sectie in de homepage van Platform UI.](assets/platform-home/leaderboard.png)
 
-* **Totaal aantal schema&#39;s**: De **Totaal aantal schema&#39;s** de teller toont het aantal schema&#39;s in het systeem. Deze teller wordt bijgewerkt wanneer een schema wordt gecreeerd. Lees voor meer informatie de [overzicht van schema&#39;s](../xdm/home.md).
-* **Totaal aantal gegevenssets**: De **Totaal aantal gegevenssets** de teller toont het aantal datasets in het systeem en de hoeveelheid gegevens in Experience Platform. Deze teller wordt bijgewerkt wanneer een dataset wordt gecreeerd. Voor meer informatie over datasets, lees [Overzicht van gegevenssets](../catalog/datasets/overview.md).
-* **Totaal aantal profielen**: De **Profielen** het aantal toont het totale aantal profielen uw organisatie binnen Experience Platform heeft. Het bevat geen profielfragmenten. Dit is uw totaal adresseerbare publiek. Deze telling gebruikt het gebrek [samenvoegingsbeleid](profile/merge-policies.md) zoals ingesteld in de configuratie van het samenvoegbeleid in Real-Time Klantprofiel. Het aantal profielen wordt eenmaal per 24 uur bijgewerkt. Selecteren **[!UICONTROL Profiles]** om naar de overzichtspagina Profielen te navigeren en alle afmetingen van uw profiel weer te geven. Voor meer informatie over profielen leest u de [Overzicht van het realtime klantprofiel](../profile/home.md).
-* **Totaal publiek**: De **Totaal publiek** de teller toont het totale aantal publiek dat voor uw organisatie wordt gecreeerd. Dit nummer wordt bijgewerkt wanneer een nieuw publiek wordt gemaakt. Lees voor meer informatie over het publiek de [Overzicht van segmentatieservice](../segmentation/home.md).
+* **Totale schema&#39;s**: De **Totale schema&#39;s** teller toont het aantal schema&#39;s in het systeem. Deze teller wordt bijgewerkt wanneer een schema wordt gecreeerd. Voor meer informatie, lees het [ schema&#39;s overzicht ](../xdm/home.md).
+* **Totale datasets**: De **Volledige datasets** teller toont het aantal datasets in het systeem en de hoeveelheid gegevens in Experience Platform. Deze teller wordt bijgewerkt wanneer een dataset wordt gecreeerd. Voor meer informatie over datasets, lees het [ overzicht van datasets ](../catalog/datasets/overview.md).
+* **Totale profielen**: De **3} telling van Profielen {toont het totale aantal profielen uw organisatie binnen Experience Platform heeft.** Het bevat geen profielfragmenten. Dit is uw totaal adresseerbare publiek. Dit aantal gebruikt het standaard [ samenvoegbeleid ](profile/merge-policies.md) zoals die in de configuratie van het fusiebeleid in het Profiel van de Klant in real time wordt geplaatst. Het aantal profielen wordt eenmaal per 24 uur bijgewerkt. Selecteer **[!UICONTROL Profiles]** om naar de overzichtspagina Profielen te navigeren en alle maatstaven van uw profiel weer te geven. Voor meer informatie over profielen, lees het [ overzicht van het Profiel van de Klant in real time ](../profile/home.md).
+* **Totaal publiek**: Het **Totale publiek** teller toont het totale aantal publiek dat voor uw organisatie wordt gecreeerd. Dit nummer wordt bijgewerkt wanneer een nieuw publiek wordt gemaakt. Voor meer informatie over publiek, lees het [ overzicht van de Dienst van de Segmentatie ](../segmentation/home.md).
 
 ### Recente objecten
 
 Recente items geven een overzicht van de meest recente wijzigingen in uw organisatie. In het onderstaande voorbeeld hebben de meest recente wijzigingen betrekking op gegevenssets, bronnen, doelgroepen en bestemmingen.
 
-![De recente puntensectie in de homepage van UI van het Platform.](assets/platform-home/recent-items.png)
+![ de recente puntensectie in de homepage van UI van het Platform.](assets/platform-home/recent-items.png)
 
-* **Recente gegevensbestanden**: De **[!UICONTROL Recent datasets]** De kaart toont de vijf meest recente datasets die binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe dataset wordt gecreeerd. Selecteer een dataset om de details voor dat punt te bekijken, of selecteer **[!UICONTROL View all]** voor een lijst van gegevensbestanden. Van daar, kunt u een specifieke bron voor details selecteren. Voor meer informatie over datasets, zie [Overzicht van gegevenssets](../catalog/datasets/overview.md).
-* **Recente bronnen**: De **[!UICONTROL Recent sources]** De metrische kaart toont de vijf meest recente die bronnen binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe bron wordt gemaakt. Selecteer een bron om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst van bronnen. Van daar, kunt u een specifieke bron voor details selecteren. Zie voor meer informatie over bronnen [Overzicht van bronnen](../sources/home.md).
-* **Recent publiek**: De **[!UICONTROL Recent audiences]** De metrische kaart toont de vijf meest recente die publiek binnen de organisatie wordt gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuw publiek wordt gemaakt. Selecteer een publiek om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst van doelgroepen. Zie voor meer informatie over publiek [Overzicht van segmentatieservice](../segmentation/home.md).
-* **Recente bestemmingen**: De **[!UICONTROL Recent destinations]** De metrische kaart toont de vijf meest recente bestemmingen binnen de organisatie worden gecreeerd die. Deze lijst wordt bijgewerkt wanneer een nieuwe bestemming wordt gecreeerd. Selecteer een bestemming om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst van bestemmingen. Lees voor meer informatie de [Overzicht van doelen](../destinations/home.md).
+* **Recente datasets**: De **[!UICONTROL Recent datasets]** kaart toont de vijf meest recente datasets die binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe dataset wordt gecreeerd. Selecteer een dataset om de details voor dat punt te bekijken, of **[!UICONTROL View all]** voor een lijst van datasets te selecteren. Van daar, kunt u een specifieke bron voor details selecteren. Voor meer informatie over datasets, zie het [ overzicht van datasets ](../catalog/datasets/overview.md).
+* **Recente bronnen**: De **[!UICONTROL Recent sources]** metrische kaart toont de vijf meest recente die bronnen binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe bron wordt gemaakt. Selecteer een bron om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst met bronnen. Van daar, kunt u een specifieke bron voor details selecteren. Voor meer informatie over bronnen, zie [ Overzicht van Bronnen ](../sources/home.md).
+* **Recent publiek**: De **[!UICONTROL Recent audiences]** metrische kaart toont de vijf meest recente die publiek binnen de organisatie wordt gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuw publiek wordt gemaakt. Selecteer een publiek om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst met soorten publiek. Voor meer informatie over publiek, zie [ Overzicht van de Dienst van de Segmentatie ](../segmentation/home.md).
+* **Recente bestemmingen**: De **[!UICONTROL Recent destinations]** metrische kaart toont de vijf meest recente bestemmingen die binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe bestemming wordt gecreeerd. Selecteer een bestemming om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst met doelen. Voor meer informatie, lees het [ overzicht van bestemmingen ](../destinations/home.md).
 
 ## Bronnen
 
 Tot slot verstrekt de middelen widget u van extra documentatiemiddelen die u kunt verwijzen. Deze omvatten:
 
-![De middelensectie in de homepage van UI van het Platform.](assets/platform-home/resources.png)
+![ de middelensectie in de homepage UI van het Platform.](assets/platform-home/resources.png)
 
 * [Schema&#39;s begrijpen](../xdm/schema/composition.md)
 * [Bronnen verbinden](../sources/home.md)

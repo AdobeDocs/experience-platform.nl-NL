@@ -6,7 +6,7 @@ description: Verschillende extractie-, transformatie- en laadprogramma's (ETL) v
 exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,13 @@ Verschillende extractie-, transformatie- en laadprogramma&#39;s (ETL) verschille
 
 De volgende diagrammen verstrekken mock-ups van gemeenschappelijke acties ETL en een generische gebruikerservaring die op standaardinteractie wordt gebaseerd. Deze afbeeldingen kunnen eenvoudig worden aangepast voor een specifieke ETL-gebruikerservaring.
 
-De hieronder weergegeven acties worden beschreven in de stappen die worden beschreven in het dialoogvenster [Handleiding voor ETL-integratie](home.md). In sommige stappen wordt verwezen naar specifieke figuren, in andere worden vergelijkbare acties beschreven als in de hier weergegeven workflow.
+De hieronder getoonde acties worden beschreven in de stappen die binnen de [ Gids van de Integratie ETL ](home.md) worden geschetst. In sommige stappen wordt verwezen naar specifieke figuren, in andere worden vergelijkbare acties beschreven als in de hier weergegeven workflow.
 
 ### Afbeelding 1 - Nieuwe Adobe Experience Platform-connector configureren:
 
 ![](images/image2.png)
 
-### Figuur 2 - [!DNL Experience Platform] Connector geactiveerd:
+### Afbeelding 2 - [!DNL Experience Platform] Aansluiting geactiveerd:
 
 ![](images/image3.png)
 
@@ -33,11 +33,11 @@ De hieronder weergegeven acties worden beschreven in de stappen die worden besch
 
 ![](images/image4.png)
 
-### Afbeelding 4 - Nieuwe transformatie-interface selecteren [!DNL Experience Platform] Verbinding:
+### Afbeelding 4 - Nieuwe transformatie-interface, selecteren [!DNL Experience Platform] Verbinding:
 
 ![](images/image5.png)
 
-### Afbeelding 5 - Bladeren naar bron [!DNL Experience Platform] Gegevenssets:
+### Figuur 5 - het doorbladeren voor bron [!DNL Experience Platform] Datasets:
 
 ![](images/image6.png)
 
@@ -57,7 +57,7 @@ De hieronder weergegeven acties worden beschreven in de stappen die worden besch
 
 ![](images/image10.png)
 
-### Figuur 10 - het bepalen van [!DNL Experience Data Model] (XDM) doel Dataset:
+### Afbeelding 10 - De gegevensset van het doel [!DNL Experience Data Model] (XDM) definiëren:
 
 ![](images/image11.png)
 

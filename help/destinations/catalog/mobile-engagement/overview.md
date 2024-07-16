@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Ondersteunde mobiele betrokkenheidsdoelen {#supported-destinations}
 
-[!DNL Adobe Experience Platform] ondersteunt momenteel de volgende mobiele betrokkenheidsdoelen:
+[!DNL Adobe Experience Platform] biedt momenteel ondersteuning voor de volgende mobiele betrokkenheidsdoelen:
 
 * [Koppeling met kenmerken van het luchtschip](airship-attributes.md)
 * [Koppeling met vliegtuigcodes](airship-tags.md)

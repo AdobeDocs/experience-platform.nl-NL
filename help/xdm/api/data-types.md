@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Gegevenstypen eindpunt
 
-Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als velden van het verwijzingstype in klassen of schemaveldgroepen. Het belangrijkste verschil is dat gegevenstypen meerdere subvelden kunnen definiëren. Hoewel gelijkaardig aan gebiedsgroepen in zoverre zij voor het verenigbare gebruik van een multi-gebiedstructuur toestaan, zijn de gegevenstypes flexibeler omdat zij overal in de schemastructuur kunnen worden omvat terwijl de gebiedsgroepen slechts op het wortelniveau kunnen worden toegevoegd. De `/datatypes` in de [!DNL Schema Registry] Met API kunt u gegevenstypen programmatisch beheren binnen uw ervaringstoepassing.
+Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als velden van het verwijzingstype in klassen of schemaveldgroepen. Het belangrijkste verschil is dat gegevenstypen meerdere subvelden kunnen definiëren. Hoewel gelijkaardig aan gebiedsgroepen in zoverre zij voor het verenigbare gebruik van een multi-gebiedstructuur toestaan, zijn de gegevenstypes flexibeler omdat zij overal in de schemastructuur kunnen worden omvat terwijl de gebiedsgroepen slechts op het wortelniveau kunnen worden toegevoegd. Met het eindpunt `/datatypes` in de [!DNL Schema Registry] API kunt u gegevenstypen programmatisch beheren binnen uw ervaringstoepassing.
 
 >[!NOTE]
 >
@@ -21,17 +21,17 @@ Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met gegevenstypen ophalen {#list}
 
-U kunt alle gegevenstypen weergeven onder het dialoogvenster `global` of `tenant` container door een GET-aanvraag in te dienen bij `/global/datatypes` of `/tenant/datatypes`, respectievelijk.
+U kunt alle gegevenstypen weergeven onder de container `global` of `tenant` door een GET-aanvraag in te dienen bij respectievelijk `/global/datatypes` of `/tenant/datatypes` .
 
 >[!NOTE]
 >
->Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [queryparameters](./appendix.md#query) voor meer informatie.
+>Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [ vraagparameters ](./appendix.md#query) in het bijlage document voor meer informatie.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
@@ -39,14 +39,14 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container waarvan u gegevenstypen wilt ophalen: `global` voor door Adoben gecreëerde gegevenstypen of `tenant` voor gegevenstypen die eigendom zijn van uw organisatie. |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de [bijgevoegd document](./appendix.md#query) voor een lijst met beschikbare parameters. |
+| `{CONTAINER_ID}` | De container waarvan u gegevenstypen wilt ophalen: `global` voor gegevenstypen die zijn gemaakt met een Adobe of `tenant` voor gegevenstypen die eigendom zijn van uw organisatie. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [ bijlage document ](./appendix.md#query) voor een lijst van beschikbare parameters. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een lijst met gegevenstypen opgehaald uit de `tenant` container gebruiken `orderby` queryparameter om de gegevenstypen op hun te sorteren `title` kenmerk.
+Met de volgende aanvraag wordt een lijst met gegevenstypen opgehaald uit de `tenant` -container. Hierbij wordt een `orderby` query-parameter gebruikt om de gegevenstypen op hun `title` -kenmerk te sorteren.
 
 ```shell
 curl -X GET \
@@ -58,18 +58,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Het volgende `Accept` Kopteksten zijn beschikbaar voor gegevenstypen van lijsten:
+De antwoordindeling is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. De volgende `Accept` headers zijn beschikbaar voor gegevenstypen van lijsten:
 
 | `Accept` header | Beschrijving |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
-| `application/vnd.adobe.xed+json` | Retourneert het volledige JSON-gegevenstype voor elke bron, met origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
+| `application/vnd.adobe.xed+json` | Retourneert het volledige JSON-gegevenstype voor elke bron, met origineel `$ref` en `allOf` inbegrepen. (Limiet: 300) |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-In bovengenoemd verzoek werd gebruikgemaakt van de `application/vnd.adobe.xed-id+json` `Accept` header, daarom bevat de reactie alleen de `title`, `$id`, `meta:altId`, en `version` kenmerken voor elk gegevenstype. Het andere gebruiken `Accept` header (`application/vnd.adobe.xed+json`) retourneert alle kenmerken van elk gegevenstype. Selecteer de juiste `Accept` afhankelijk van de informatie die u in uw reactie nodig hebt.
+In de bovenstaande aanvraag is de header `application/vnd.adobe.xed-id+json` `Accept` gebruikt en daarom bevat de reactie alleen de kenmerken `title` , `$id` , `meta:altId` en `version` voor elk gegevenstype. Wanneer u de andere `Accept` header (`application/vnd.adobe.xed+json` ) gebruikt, worden alle kenmerken van elk gegevenstype geretourneerd. Selecteer de juiste `Accept` header, afhankelijk van de informatie die u in uw reactie nodig hebt.
 
 ```json
 {
@@ -105,7 +105,7 @@ In bovengenoemd verzoek werd gebruikgemaakt van de `application/vnd.adobe.xed-id
 
 U kunt een specifiek gegevenstype opzoeken door identiteitskaart van het gegevenstype in de weg van een verzoek van de GET op te nemen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
@@ -113,14 +113,14 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container waarin het gegevenstype is opgeslagen dat u wilt ophalen: `global` voor een door een Adobe gemaakt gegevenstype of `tenant` voor een gegevenstype dat eigendom is van uw organisatie. |
-| `{DATA_TYPE_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het gegevenstype dat u wilt opzoeken. |
+| `{CONTAINER_ID}` | De container waarin het gegevenstype is opgeslagen dat u wilt ophalen: `global` voor een door Adobe gemaakt gegevenstype of `tenant` voor een gegevenstype dat eigendom is van uw organisatie. |
+| `{DATA_TYPE_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het gegevenstype dat u wilt opzoeken. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Het volgende verzoek wint een gegevenstype door zijn terug `meta:altId` waarde opgegeven in het pad.
+Met de volgende aanvraag wordt een gegevenstype opgehaald op basis van de `meta:altId` -waarde die in het pad is opgegeven.
 
 ```shell
 curl -X GET \
@@ -132,21 +132,21 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Alle opzoekverzoeken vereisen een `version` worden opgenomen in de `Accept` header. Het volgende `Accept` Kopteksten zijn beschikbaar:
+De antwoordindeling is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. Voor alle opzoekverzoeken moet een `version` worden opgenomen in de `Accept` -koptekst. De volgende `Accept` headers zijn beschikbaar:
 
 | `Accept` header | Beschrijving |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version=1` | Onbewerkt met `$ref` en `allOf`, heeft titels en beschrijvingen. |
-| `application/vnd.adobe.xed-full+json; version=1` | `$ref` en `allOf` heeft titels en beschrijvingen. |
-| `application/vnd.adobe.xed-notext+json; version=1` | Onbewerkt met `$ref` en `allOf`, geen titels of beschrijvingen. |
+| `application/vnd.adobe.xed+json; version=1` | Met `$ref` en `allOf` heeft Raw titels en beschrijvingen. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` en `allOf` resolve, heeft titels en beschrijvingen. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Onbewerkt met `$ref` en `allOf` , geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` en `allOf` opgelost, geen titels of beschrijvingen. |
-| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en `allOf` opgelost, beschrijving inbegrepen. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en `allOf` opgelost, inclusief beschrijvingen. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de details van het gegevenstype. De geretourneerde velden zijn afhankelijk van de `Accept` in de aanvraag verzonden. Experimenteer met andere `Accept` Kopteksten om de reacties te vergelijken en te bepalen welke kopbal het beste voor uw gebruiksgeval is.
+Een geslaagde reactie retourneert de details van het gegevenstype. Welke velden worden geretourneerd, is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. Experimenteer met verschillende kopteksten van `Accept` om de reacties te vergelijken en te bepalen welke kopbal het beste voor uw gebruiksgeval is.
 
 ```json
 {
@@ -227,9 +227,9 @@ Een geslaagde reactie retourneert de details van het gegevenstype. De geretourne
 
 ## Een gegevenstype maken {#create}
 
-U kunt een aangepast gegevenstype definiëren onder het dialoogvenster `tenant` door een POST aan te vragen.
+U kunt een aangepast gegevenstype definiëren onder de `tenant` -container door een POST aan te vragen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /tenant/datatypes
@@ -237,11 +237,11 @@ POST /tenant/datatypes
 
 **Verzoek**
 
-In tegenstelling tot veldgroepen is het definiëren van een gegevenstype niet vereist `meta:extends` of `meta:intendedToExtend` velden, en velden moeten ook worden genest om conflicten te voorkomen.
+In tegenstelling tot veldgroepen vereist het definiëren van een gegevenstype niet dat `meta:extends` - of `meta:intendedToExtend` -velden zijn vereist. Velden hoeven ook niet te zijn genest om conflicten te voorkomen.
 
-Wanneer u de veldstructuur van het gegevenstype zelf definieert, kunt u primitieve typen gebruiken (zoals `string` of `object`) of u kunt verwijzen naar andere bestaande gegevenstypen via `$ref` kenmerken. Zie de handleiding op [aangepaste XDM-velden in de API definiëren](../tutorials/custom-fields-api.md) voor gedetailleerde informatie over de verwachte indeling voor verschillende XDM-veldtypen.
+Wanneer u de veldstructuur van het gegevenstype zelf definieert, kunt u primitieve typen gebruiken (zoals `string` of `object` ) of kunt u naar andere bestaande gegevenstypen verwijzen via `$ref` -kenmerken. Zie de gids op [ bepalend douaneXDM gebieden in API ](../tutorials/custom-fields-api.md) voor gedetailleerde begeleiding op het verwachte formaat voor verschillende XDM gebiedstypes.
 
-Met de volgende aanvraag wordt een gegevenstype &quot;Property Construction&quot; met subeigenschappen gemaakt `yearBuilt`, `propertyType`, en `location`:
+Met de volgende aanvraag wordt een gegevenstype &quot;Property Construction&quot; gemaakt met subeigenschappen `yearBuilt` , `propertyType` en `location` :
 
 ```SHELL
 curl -X POST \
@@ -285,9 +285,9 @@ curl -X POST \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van het nieuwe gegevenstype, inclusief de `$id`, `meta:altId`, en `version`. Deze drie waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry].
+Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van het nieuwe gegevenstype, inclusief `$id` , `meta:altId` en `version` . Deze drie waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry] .
 
 ```JSON
 {
@@ -353,17 +353,17 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die d
 }
 ```
 
-Een GET-aanvraag uitvoeren op [lijst alle gegevenstypen](#list) in de huurderscontainer zou nu het gegevenstype van de Details van het Bezit omvatten, of u kunt [een opzoekverzoek (GET) uitvoeren](#lookup) URL-gecodeerd gebruiken `$id` URI om het nieuwe gegevenstype direct te bekijken.
+Het uitvoeren van een verzoek van de GET aan [ lijst alle gegevenstypes ](#list) in de huurderscontainer zou nu het gegevenstype van de Details van het Bezit omvatten, of u kunt [ een raadpleging (GET) verzoek ](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om het nieuwe gegevenstype direct te bekijken.
 
 ## Een gegevenstype bijwerken {#put}
 
-U kunt een volledig gegevenstype door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een gegevenstype door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die wanneer zouden worden vereist [een nieuw gegevenstype maken](#create) in een verzoek van de POST.
+U kunt een volledig gegevenstype door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een gegevenstype door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [ creërend een nieuw gegevenstype ](#create) in een verzoek van de POST.
 
 >[!NOTE]
 >
->Als u slechts een deel van een gegevenstype wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [het bijwerken van een gedeelte van een gegevenstype](#patch).
+>Als u slechts een deel van een gegevenstype wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [ het bijwerken van een gedeelte van een gegevenstype ](#patch).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /tenant/datatypes/{DATA_TYPE_ID}
@@ -371,13 +371,13 @@ PUT /tenant/datatypes/{DATA_TYPE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{DATA_TYPE_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het gegevenstype dat u opnieuw wilt schrijven. |
+| `{DATA_TYPE_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het gegevenstype dat u opnieuw wilt schrijven. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een bestaand gegevenstype opnieuw geschreven en wordt een nieuw gegevenstype toegevoegd `floorSize` veld.
+Met de volgende aanvraag wordt een bestaand gegevenstype opnieuw geschreven en wordt een nieuw veld `floorSize` toegevoegd.
 
 ```SHELL
 curl -X PUT \
@@ -421,7 +421,7 @@ curl -X PUT \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van het bijgewerkte gegevenstype.
 
@@ -488,13 +488,13 @@ Een geslaagde reactie retourneert de details van het bijgewerkte gegevenstype.
 
 ## Een gedeelte van een gegevenstype bijwerken {#patch}
 
-U kunt een gedeelte van een gegevenstype bijwerken door een verzoek van PATCH te gebruiken. De [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add`, `remove`, en `replace`. Voor meer informatie over JSON Patch raadpleegt u de [Handleiding voor API-basisbeginselen](../../landing/api-fundamentals.md#json-patch).
+U kunt een gedeelte van een gegevenstype bijwerken door een verzoek van PATCH te gebruiken. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Als u een volledige bron wilt vervangen door nieuwe waarden in plaats van afzonderlijke velden bij te werken, raadpleegt u de sectie over [het vervangen van een gegevenstype gebruikend een verrichting van de PUT](#put).
+>Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [ het vervangen van een gegevenstype gebruikend een verrichting van de PUT ](#put).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /tenant/data type/{DATA_TYPE_ID} 
@@ -502,15 +502,15 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{DATA_TYPE_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van het gegevenstype dat u wilt bijwerken. |
+| `{DATA_TYPE_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van het gegevenstype dat u wilt bijwerken. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met de onderstaande voorbeeldaanvraag wordt het `description` van een bestaand gegevenstype en voegt een nieuwe `floorSize` veld.
+In de onderstaande voorbeeldaanvraag wordt de `description` van een bestaand gegevenstype bijgewerkt en wordt een nieuw `floorSize` -veld toegevoegd.
 
-De aanvraaginstantie heeft de vorm van een array, waarbij elk vermeld object een specifieke wijziging in een afzonderlijk veld vertegenwoordigt. Elk object bevat de uit te voeren bewerking (`op`), welk veld de bewerking moet worden uitgevoerd (`path`) en welke informatie in die operatie moet worden opgenomen (`value`).
+De aanvraaginstantie heeft de vorm van een array, waarbij elk vermeld object een specifieke wijziging in een afzonderlijk veld vertegenwoordigt. Elk voorwerp omvat uit te voeren verrichting (`op`), welk gebied de verrichting zou moeten worden uitgevoerd (`path`), en welke informatie in die verrichting (`value`) zou moeten worden omvat.
 
 ```SHELL
 curl -X PATCH \
@@ -538,9 +538,9 @@ curl -X PATCH \
       ]'
 ```
 
-**Antwoord**
+**Reactie**
 
-De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De `description` is bijgewerkt, en `floorSize` is toegevoegd onder `definitions`.
+De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. `description` is bijgewerkt en `floorSize` is toegevoegd onder `definitions` .
 
 ```JSON
 {
@@ -633,7 +633,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De `descr
 
 Het kan soms noodzakelijk zijn om een gegevenstype uit de Registratie van het Schema te verwijderen. Dit wordt gedaan door een verzoek van de DELETE met gegevenstype identiteitskaart uit te voeren die in de weg wordt verstrekt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /tenant/datatypes/{DATA_TYPE_ID}
@@ -641,7 +641,7 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{DATA_TYPE_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van het gegevenstype dat u wilt verwijderen. |
+| `{DATA_TYPE_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van het gegevenstype dat u wilt verwijderen. |
 
 {style="table-layout:auto"}
 
@@ -656,8 +656,8 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
-U kunt de verwijdering bevestigen door een [opzoekverzoek (GET)](#lookup) op het gegevenstype. U moet een `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the data type has been removed from the Schema Registry.
+U kunt de schrapping bevestigen door het verzoek van de a [ raadpleging (GET) ](#lookup) aan het gegevenstype te proberen. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat het gegevenstype is verwijderd uit de schemaregistratie.

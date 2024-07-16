@@ -23,7 +23,7 @@ ht-degree: 13%
 - Data Distiller {#data-distiller}
    - [Overzicht](data-distiller/overview.md)
    - [Licentiegebruik](data-distiller/license-usage.md)
-   - Afgeleide datasets {#derived-datasets}
+   - Afgeleide gegevenssets {#derived-datasets}
       - [Overzicht](data-distiller/derived-datasets/overview.md)
       - [Afgeleide datasets maken met SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Op decile gebaseerde afgeleide gegevenssets maken](data-distiller/derived-datasets/decile-based-derived-attributes.md)
@@ -32,7 +32,7 @@ ht-degree: 13%
       - [Query Pro-modus](data-distiller/customizable-insights/query-pro-mode.md)
       - [Verstuur versnelde vragen](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [Handleiding voor het rapporteringsmodel voor inzichten](data-distiller/customizable-insights/reporting-insights-data-model.md)
-   - Pijpleidingen met I/ML-functies {#ml-feature-pipelines}
+   - Pijpleidingen met functies voor AI/ML {#ml-feature-pipelines}
       - [Overzicht](data-distiller/ml-feature-pipelines/overview.md)
       - [Verbinding maken met Jupyter-laptops](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Verkennende gegevensanalyse](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
@@ -66,7 +66,7 @@ ht-degree: 13%
    - [Gegevensdeduplicatie](key-concepts/deduplication.md)
    - [Gegevenssetvoorbeelden](key-concepts/dataset-samples.md)
    - [Berekening van gegevenssetstatistieken](key-concepts/dataset-statistics.md)
-- Client verbinden met Query-service {#clients}
+- Clients verbinden met Query Service {#clients}
    - [Overzicht van clientverbindingen](clients/overview.md)
    - [SSL-modi](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
@@ -78,7 +78,7 @@ ht-degree: 13%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
-- Gebruikersinterface Query Service {#ui}
+- Gebruikersinterface van Query-service {#ui}
    - [Overzicht van gebruikersinterface](ui/overview.md)
    - [Gebruikershandleiding voor de Query Editor](ui/user-guide.md)
    - [Zoeksjablonen](ui/query-templates.md)
@@ -97,7 +97,7 @@ ht-degree: 13%
    - [Zoeksjablonen](api/query-templates.md)
    - [Versnelde query&#39;s](api/accelerated-queries.md)
    - [Waarschuwingsabonnementen](api/alert-subscriptions.md)
-- Data Governance {#data-governance}
+- Gegevensbeheer {#data-governance}
    - [Overzicht](data-governance/overview.md)
    - [Handleiding controlelogboek](data-governance/audit-log-guide.md)
    - [Identiteiten in gegevenssets van ad-hocschema](data-governance/ad-hoc-schema-identities.md)
@@ -115,5 +115,5 @@ ht-degree: 13%
    - [Vooraf voorbereide instructies](sql/prepared-statements.md)
 - [Veelgestelde vragen](troubleshooting-guide.md)
 - [IP adres lijst van gewenste personen](ip-address-allowlist.md)
-- [API-referentie](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/query-service/)
+- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

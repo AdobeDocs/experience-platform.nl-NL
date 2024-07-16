@@ -27,7 +27,7 @@ ht-degree: 21%
       * [De modus Query Pro (SQL-diagram maken)](data-distiller/customizable-insights/query-pro-mode.md)
       * Filters {#filters}
          * [Datumfilter](data-distiller/customizable-insights/filters/date-filter.md)
-         * [Globaal, filter](data-distiller/customizable-insights/filters/global-filter.md)
+         * [ Globale filter ](data-distiller/customizable-insights/filters/global-filter.md)
       * [Meer weergeven](data-distiller/customizable-insights/view-more.md)
       * [SQL weergeven](data-distiller/customizable-insights/view-sql.md)
       * [Downloaden als CSV](data-distiller/customizable-insights/download-csv.md)
@@ -42,14 +42,14 @@ ht-degree: 21%
    * [Doelgroepen](insights/audiences.md)
    * [Doelen](insights/destinations.md)
    * [Accountprofielen](insights/account-profiles.md)
-* dashboards aanpassen {#customize}
+* Dashboards aanpassen {#customize}
    * [Overzicht van aanpassingen](customize/overview.md)
    * [Dashboards wijzigen](customize/modify.md)
    * [Widget-bibliotheek](customize/widget-library.md)
    * [Standaardwidgets](customize/standard-widgets.md)
    * [Aangepaste widgets](customize/custom-widgets.md)
    * [Schema bewerken](customize/edit-schema.md)
-* Gebruiksgevallen voor inzichten {#insights-use-cases}
+* Gebruik van inzichten {#insights-use-cases}
    * [Conceptanalyse](insights-use-cases/consent-analysis.md)
 * Beschikbare gegevensmodellen {#data-models}
    * [Real-time Customer Data Platform Insights, gegevensmodel B2B, editie](data-models/cdp-insights-data-model-b2b.md)
@@ -58,4 +58,4 @@ ht-degree: 21%
    * [Power BI](integrations/power-bi.md)
 * [Gegevensbestanden van het query-dashboard](query.md)
 * [SQL met inzicht weergeven](view-sql.md)
-* [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

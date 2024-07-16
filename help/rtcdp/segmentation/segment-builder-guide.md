@@ -14,6 +14,6 @@ ht-degree: 0%
 
 # Segment Builder in Real-time Customer Data Platform
 
-Gebouwd op Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platform] kan gebruik maken van de volledige mogelijkheden van de Bouwer van het Segment die een deel van zijn [!DNL Experience Platform]. Binnen het gebruikersinterface van de Bouwer van het Segment, kunt u nieuw publiek tot stand brengen, tot bestaand publiek toegang hebben, en bestaand publiek wijzigen.
+[!DNL Adobe Real-Time Customer Data Platform] is gebaseerd op Adobe Experience Platform en maakt gebruik van alle mogelijkheden van Segment Builder die deel uitmaken van [!DNL Experience Platform] . Binnen het gebruikersinterface van de Bouwer van het Segment, kunt u nieuw publiek tot stand brengen, tot bestaand publiek toegang hebben, en bestaand publiek wijzigen.
 
-Voor een meer gedetailleerde gids op de Bouwer van het Segment, lees [Gebruikershandleiding voor Segment Builder](../../segmentation/ui/segment-builder.md).
+Voor een meer gedetailleerde gids op de Bouwer van het Segment, lees de [ gebruikersgids van de Bouwer van het Segment ](../../segmentation/ui/segment-builder.md).

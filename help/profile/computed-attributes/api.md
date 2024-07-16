@@ -4,7 +4,7 @@ description: Leer hoe u berekende kenmerken kunt maken, weergeven, bijwerken en 
 exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
 source-git-commit: 94c94b8a3757aca1a04ff4ffc3c62e84602805cc
 workflow-type: tm+mt
-source-wordcount: '1654'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -15,28 +15,28 @@ ht-degree: 0%
 >
 >De toegang tot de API is beperkt. Neem contact op met de Adobe Support voor meer informatie over het verkrijgen van toegang tot de API voor berekende kenmerken.
 
-Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. Deze handleiding bevat voorbeeld-API-aanroepen voor het uitvoeren van standaard-CRUD-bewerkingen met behulp van de `/attributes` eindpunt.
+Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. Deze handleiding bevat voorbeeld-API-aanroepen voor het uitvoeren van standaard-CRUD-bewerkingen met behulp van het `/attributes` -eindpunt.
 
-Als u meer wilt weten over berekende kenmerken, leest u eerst de [overzicht van berekende kenmerken](overview.md).
+Meer over gegevens verwerkte attributen leren, gelieve te beginnen door [ gegevens verwerkt attributenoverzicht ](overview.md) te lezen.
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [Real-Time Customer Profile API](https://www.adobe.com/go/profile-apis-en).
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Real-Time API van het Profiel van de Klant ](https://www.adobe.com/go/profile-apis-en).
 
-Controleer voordat je doorgaat de [Aan de slag-handleiding voor profiel-API](../api/getting-started.md) voor verbindingen aan geadviseerde documentatie, een gids aan het lezen van de steekproefAPI vraag die in dit document verschijnt, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Alvorens verder te gaan, te herzien gelieve [ Profiel API die begonnen gids ](../api/getting-started.md) voor verbindingen aan geadviseerde documentatie wordt begonnen, een gids aan het lezen van de steekproefAPI vraag die in dit document verschijnen, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
 
 Raadpleeg ook de documentatie bij de volgende service:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
-   - [Gids Aan de slag met schema-register](../../xdm/api/getting-started.md#know-your-tenant_id): Informatie over uw `{TENANT_ID}`, die in de reacties in deze handleiding wordt weergegeven, wordt weergegeven.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
+   - {de Registratie van 0} Schema die begonnen gids ](../../xdm/api/getting-started.md#know-your-tenant_id) wordt: De informatie over uw `{TENANT_ID}`, die in reacties door deze gids verschijnt, wordt verstrekt.[
 
 ## Een lijst met berekende kenmerken ophalen {#list}
 
-U kunt een lijst van alle gegevens verwerkte attributen voor uw organisatie terugwinnen door een verzoek van de GET aan `/attributes` eindpunt.
+U kunt een lijst van alle gegevens verwerkte attributen voor uw organisatie terugwinnen door een verzoek van de GET aan het `/attributes` eindpunt te doen.
 
-**API-indeling**
+**API formaat**
 
-De `/attributes` het eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Hoewel deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om kostbare overhead te verminderen wanneer resources worden vermeld. Als u een vraag aan dit eindpunt zonder parameters maakt, zullen alle gegevens verwerkte attributen beschikbaar voor uw organisatie worden teruggewonnen. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`).
+Het `/attributes` eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Hoewel deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om kostbare overhead te verminderen wanneer resources worden vermeld. Als u een vraag aan dit eindpunt zonder parameters maakt, zullen alle gegevens verwerkte attributen beschikbaar voor uw organisatie worden teruggewonnen. De veelvoudige parameters kunnen worden omvat, die door ampersands (`&`) worden gescheiden.
 
 ```http
 GET /attributes
@@ -49,8 +49,8 @@ De volgende queryparameters kunnen worden gebruikt bij het ophalen van een lijst
 | --------------- | ----------- | ------- |
 | `limit` | Een parameter die het maximumaantal punten specificeert die als deel van de reactie worden teruggekeerd. De minimumwaarde van deze parameter is 1 en de maximumwaarde is 40. Als deze parameter niet is opgenomen, worden standaard 20 items geretourneerd. | `limit=20` |
 | `offset` | Een parameter die het aantal punten specificeert om over te slaan alvorens de punten terug te keren. | `offset=5` |
-| `sortBy` | Een parameter die de orde specificeert waarin de teruggekeerde punten worden gesorteerd. Beschikbare opties zijn `name`, `status`, `updateEpoch`, en `createEpoch`. U kunt ook kiezen of u in oplopende of aflopende volgorde wilt sorteren door geen of door een `-` vóór de sorteeroptie. Standaard worden de items gesorteerd op `updateEpoch` in aflopende volgorde. | `sortBy=name` |
-| `property` | Een parameter waarmee u op verschillende berekende kenmerkvelden kunt filteren. Tot de ondersteunde eigenschappen behoren `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, en `status`. De ondersteunde bewerkingen zijn afhankelijk van de vermelde eigenschap. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
+| `sortBy` | Een parameter die de orde specificeert waarin de teruggekeerde punten worden gesorteerd. Beschikbare opties zijn `name` , `status` , `updateEpoch` en `createEpoch` . U kunt ook kiezen of u in oplopende of aflopende volgorde wilt sorteren door geen `-` vóór de sorteeroptie op te nemen of op te nemen. Standaard worden de items door `updateEpoch` in aflopende volgorde gesorteerd. | `sortBy=name` |
+| `property` | Een parameter waarmee u op verschillende berekende kenmerkvelden kunt filteren. Tot de ondersteunde eigenschappen behoren `name` , `createEpoch` , `mergeFunction.value` , `updateEpoch` en `status` . De ondersteunde bewerkingen zijn afhankelijk van de vermelde eigenschap. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Verzoek**
 
@@ -68,7 +68,7 @@ curl -X GET https://platform.adobe.io/data/core/ca/attributes?limit=3 \
 
 +++
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert HTTP-status 200 met een lijst van de laatste 3 bijgewerkte berekende kenmerken die bij uw organisatie en sandbox horen.
 
@@ -211,16 +211,16 @@ Een succesvolle reactie retourneert HTTP-status 200 met een lijst van de laatste
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `_links` | Een object dat de pagineringsinformatie bevat die nodig is voor toegang tot de laatste pagina met resultaten, de volgende pagina met resultaten, de vorige pagina met resultaten of de huidige pagina met resultaten. |
-| `computedAttributes` | Een array die de berekende kenmerken bevat op basis van de queryparameters. Meer informatie over de berekende kenmerkenarray vindt u in de [een specifieke berekende kenmerksectie ophalen](#get). |
+| `computedAttributes` | Een array die de berekende kenmerken bevat op basis van de queryparameters. Meer informatie over de gegevens verwerkte attributenserie kan in [ worden gevonden wint een specifieke gegevens verwerkte attributensectie ](#get) terug. |
 | `_page` | Een object dat metagegevens bevat over de geretourneerde resultaten. Dit omvat informatie over de huidige verschuiving, het aantal geretourneerde berekende kenmerken, het totale aantal berekende kenmerken en de limiet van geretourneerde berekende kenmerken. |
 
 +++
 
 ## Een berekend kenmerk maken {#create}
 
-Om een gegevens verwerkt attribuut tot stand te brengen, begin door een verzoek van de POST aan `/attributes` eindpunt met een verzoeklichaam dat de details van de gegevens verwerkte attributen bevat die u wenst om tot stand te brengen.
+Om een gegevens verwerkt attribuut tot stand te brengen, begin door een verzoek van de POST aan het `/attributes` eindpunt met een verzoeklichaam te doen dat de details van het gegevens verwerkte attribuut bevat dat u wenst om tot stand te brengen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /attributes
@@ -257,22 +257,22 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `name` | De naam van het berekende kenmerkveld, als een tekenreeks. De naam van het berekende kenmerk kan alleen bestaan uit alfanumerieke tekens zonder spaties of onderstrepingstekens. Deze waarde **moet** uniek zijn onder alle berekende kenmerken. Deze naam moet een camelCase-versie van het dialoogvenster `displayName`. |
+| `name` | De naam van het berekende kenmerkveld, als een tekenreeks. De naam van het berekende kenmerk kan alleen bestaan uit alfanumerieke tekens zonder spaties of onderstrepingstekens. Deze waarde **moet** onder alle gegevens verwerkte attributen uniek zijn. Deze naam is de beste manier om een camelCase-versie van de instructie `displayName` te gebruiken. |
 | `description` | Een beschrijving van het berekende kenmerk. Dit is vooral handig als er meerdere berekende kenmerken zijn gedefinieerd, omdat dit anderen binnen uw organisatie helpt te bepalen welk kenmerk correct moet worden berekend. |
 | `displayName` | De weergavenaam voor het berekende kenmerk. Dit is de naam die wordt weergegeven wanneer u uw berekende kenmerken weergeeft in de gebruikersinterface van Adobe Experience Platform. |
 | `expression` | Een object dat de query-expressie vertegenwoordigt van het berekende kenmerk dat u probeert te maken. |
 | `expression.type` | Het type van de expressie. Momenteel wordt alleen PQL ondersteund. |
-| `expression.format` | De indeling van de expressie. Alleen `pql/text` wordt ondersteund. |
+| `expression.format` | De indeling van de expressie. Momenteel wordt alleen `pql/text` ondersteund. |
 | `expression.value` | De waarde van de expressie. |
-| `keepCurrent` | Een Booleaanse waarde die bepaalt of de waarde van het berekende kenmerk up-to-date wordt gehouden met de functie voor snel vernieuwen. Deze waarde moet momenteel worden ingesteld op `false`. |
+| `keepCurrent` | Een Booleaanse waarde die bepaalt of de waarde van het berekende kenmerk up-to-date wordt gehouden met de functie voor snel vernieuwen. Deze waarde moet momenteel worden ingesteld op `false` . |
 | `duration` | Een object dat de terugzoekperiode voor het berekende kenmerk vertegenwoordigt. De terugkijkperiode vertegenwoordigt hoe ver terug kan worden gezocht om de gegevens verwerkte attributen te berekenen. |
-| `duration.count` | Een getal dat de duur van de terugzoekperiode vertegenwoordigt. Welke waarden mogelijk zijn, is afhankelijk van de waarde van de `duration.unit` veld. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
-| `duration.unit` | Een tekenreeks die de tijdseenheid vertegenwoordigt die voor de terugzoekperiode wordt gebruikt. Mogelijke waarden zijn: `HOURS`, `DAYS`, `WEEKS`, en `MONTHS`. |
-| `status` | De status van het berekende kenmerk. Mogelijke waarden zijn `DRAFT` en `NEW`. |
+| `duration.count` | Een getal dat de duur van de terugzoekperiode vertegenwoordigt. De mogelijke waarden zijn afhankelijk van de waarde van het veld `duration.unit` . <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
+| `duration.unit` | Een tekenreeks die de tijdseenheid vertegenwoordigt die voor de terugzoekperiode wordt gebruikt. Mogelijke waarden zijn: `HOURS` , `DAYS` , `WEEKS` en `MONTHS` . |
+| `status` | De status van het berekende kenmerk. Mogelijke waarden zijn `DRAFT` en `NEW` . |
 
 +++
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP status 200 met informatie over het nieuwe berekende kenmerk.
 
@@ -316,7 +316,7 @@ Een geslaagde reactie retourneert HTTP status 200 met informatie over het nieuwe
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | De door het systeem gegenereerde id van het nieuwe berekende kenmerk. |
-| `status` | De status van het berekende kenmerk. Dit kan `DRAFT` of `NEW`. |
+| `status` | De status van het berekende kenmerk. Dit kan `DRAFT` of `NEW` zijn. |
 | `createEpoch` | De tijd waarop het berekende attribuut werd gecreeerd, in seconden. |
 | `updateEpoch` | Het tijdstip waarop het berekende kenmerk voor het laatst is bijgewerkt, in seconden. |
 | `createdBy` | De id van de gebruiker die het berekende kenmerk heeft gemaakt. |
@@ -325,9 +325,9 @@ Een geslaagde reactie retourneert HTTP status 200 met informatie over het nieuwe
 
 ## Hiermee wordt een specifiek berekend kenmerk opgehaald {#get}
 
-U kunt gedetailleerde informatie over een specifiek gegevens verwerkt attribuut terugwinnen door een verzoek van de GET aan `/attributes` eindpunt en het verstrekken van identiteitskaart van de gegevens verwerkte attributen u wenst om in de verzoekweg terug te winnen.
+U kunt gedetailleerde informatie over een specifiek gegevens verwerkt attribuut terugwinnen door een verzoek van de GET aan het `/attributes` eindpunt te doen en identiteitskaart van de gegevens verwerkte attributen te verstrekken u in de verzoekweg wenst terug te winnen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /attributes/{ATTRIBUTE_ID}
@@ -347,7 +347,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b1
 
 +++
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie over het opgegeven berekende kenmerk.
 
@@ -396,13 +396,13 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 | `displayName` | De weergavenaam voor het berekende kenmerk. Dit is de naam die wordt weergegeven wanneer u uw berekende kenmerken weergeeft in de gebruikersinterface van Adobe Experience Platform. |
 | `description` | Een beschrijving van het berekende kenmerk. Dit is vooral handig als er meerdere berekende kenmerken zijn gedefinieerd, omdat dit anderen binnen uw organisatie helpt te bepalen welk kenmerk correct moet worden berekend. |
 | `imsOrgId` | De id van de organisatie waartoe het berekende kenmerk behoort. |
-| `sandbox` | Het sandboxobject bevat details van de sandbox waarin het berekende kenmerk is geconfigureerd. Deze informatie wordt getekend vanuit de sandboxheader die in de aanvraag wordt verzonden. Zie voor meer informatie de [sandboxen, overzicht](../../sandboxes/home.md). |
-| `path` | De `path` naar het berekende kenmerk. |
+| `sandbox` | Het sandboxobject bevat details van de sandbox waarin het berekende kenmerk is geconfigureerd. Deze informatie wordt getekend vanuit de sandboxheader die in de aanvraag wordt verzonden. Voor meer informatie, te zien gelieve het [ overzicht van zandbakken ](../../sandboxes/home.md). |
+| `path` | The `path` to the computed attribute. |
 | `keepCurrent` | Een Booleaanse waarde die bepaalt of de waarde van het berekende kenmerk up-to-date wordt gehouden met de functie voor snel vernieuwen. |
 | `expression` | Een object dat de expressie van het berekende kenmerk bevat. |
-| `mergeFunction` | Een object dat de samenvoegfunctie voor het berekende kenmerk bevat. Deze waarde is gebaseerd op de corresponderende aggregatieparameter binnen de berekende expressie van het kenmerk. Mogelijke waarden zijn `SUM`, `MIN`, `MAX`, en `MOST_RECENT`. |
-| `status` | De status van het berekende kenmerk. Dit kan een van de volgende waarden zijn: `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`, of `DISABLED`. |
-| `schema` | Een object dat informatie bevat over het schema waarin de expressie wordt geëvalueerd. Alleen `_xdm.context.profile` wordt ondersteund. |
+| `mergeFunction` | Een object dat de samenvoegfunctie voor het berekende kenmerk bevat. Deze waarde is gebaseerd op de corresponderende aggregatieparameter binnen de berekende expressie van het kenmerk. Mogelijke waarden zijn `SUM` , `MIN` , `MAX` en `MOST_RECENT` . |
+| `status` | De status van het berekende kenmerk. Dit kan een van de volgende waarden zijn: `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED` of `DISABLED` . |
+| `schema` | Een object dat informatie bevat over het schema waarin de expressie wordt geëvalueerd. Momenteel wordt alleen `_xdm.context.profile` ondersteund. |
 | `lastEvaluationTs` | Een tijdstempel die aangeeft wanneer het berekende kenmerk voor het laatst is geëvalueerd. |
 | `createEpoch` | De tijd waarop het berekende attribuut werd gecreeerd, in seconden. |
 | `updateEpoch` | Het tijdstip waarop het berekende kenmerk voor het laatst is bijgewerkt, in seconden. |
@@ -412,13 +412,13 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 
 ## Een specifiek berekend kenmerk verwijderen {#delete}
 
-U kunt een specifiek gegevens verwerkt kenmerk verwijderen door een DELETE-aanvraag in te dienen bij de `/attributes` eindpunt en het verstrekken van identiteitskaart van de gegevens verwerkte attributen u wenst om in de verzoekweg te schrappen.
+U kunt een specifiek gegevens verwerkt attribuut schrappen door een verzoek van DELETE aan het `/attributes` eindpunt te doen en identiteitskaart van de gegevens verwerkte attributen te verstrekken u in de verzoekweg wenst te schrappen.
 
 >[!IMPORTANT]
 >
->Het verwijderingsverzoek kan alleen worden gebruikt om berekende kenmerken met de status **ontwerp** (`DRAFT`). Dit eindpunt **kan** worden gebruikt om berekende kenmerken in een ander frame te verwijderen.
+>Het schrappingsverzoek kan slechts worden gebruikt om gegevens verwerkte attributen te schrappen die een status van **ontwerp** (`DRAFT`) hebben. Dit eindpunt **kan** niet worden gebruikt om gegevens verwerkte attributen in een andere staat te schrappen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /attributes/{ATTRIBUTE_ID}
@@ -426,7 +426,7 @@ DELETE /attributes/{ATTRIBUTE_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | De `id` waarde van het berekende kenmerk dat u wilt verwijderen. |
+| `{ATTRIBUTE_ID}` | De `id` -waarde van het berekende kenmerk dat u wilt verwijderen. |
 
 **Verzoek**
 
@@ -442,7 +442,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4
 
 +++
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP status 202 met details van het verwijderde berekende kenmerk.
 
@@ -487,17 +487,17 @@ Een geslaagde reactie retourneert HTTP status 202 met details van het verwijderd
 
 ## Een specifiek berekend kenmerk bijwerken
 
-U kunt een specifiek berekend kenmerk bijwerken door een PATCH-aanvraag in te dienen bij de `/attributes` eindpunt en het verstrekken van identiteitskaart van de gegevens verwerkte attributen u wenst om in de verzoekweg bij te werken.
+U kunt een specifiek gegevens verwerkt attribuut bijwerken door een verzoek van PATCH aan het `/attributes` eindpunt te doen en identiteitskaart van de gegevens verwerkte attributen te verstrekken u wenst om in de verzoekweg bij te werken.
 
 >[!IMPORTANT]
 >
 >Wanneer u een berekend kenmerk bijwerkt, kunnen alleen de volgende velden worden bijgewerkt:
 >
->- Als de huidige status `NEW`, kan de status alleen worden gewijzigd in `DISABLED`.
->- Als de huidige status `DRAFT`kunt u de waarden van de volgende velden wijzigen: `name`, `description`, `keepCurrent`, `expression`, en `duration`. U kunt de status ook wijzigen vanuit `DRAFT` tot `NEW`. Wijzigingen in door het systeem gegenereerde velden, zoals `mergeFunction` of `path` retourneert een fout.
->- Als de huidige status `PROCESSING` of `PROCESSED`, kan de status alleen worden gewijzigd in `DISABLED`.
+>- Als de huidige status `NEW` is, kan de status alleen worden gewijzigd in `DISABLED` .
+>- Als de huidige status `DRAFT` is, kunt u de waarden van de volgende velden wijzigen: `name`, `description`, `keepCurrent`, `expression` en `duration` . U kunt de status ook wijzigen van `DRAFT` in `NEW` . Wijzigingen in door het systeem gegenereerde velden, zoals `mergeFunction` of `path` , retourneren een fout.
+>- Als de huidige status `PROCESSING` of `PROCESSED` is, kan de status alleen worden gewijzigd in `DISABLED` .
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /attributes/{ATTRIBUTE_ID}
@@ -505,11 +505,11 @@ PATCH /attributes/{ATTRIBUTE_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | De `id` waarde van het berekende kenmerk dat u wilt bijwerken. |
+| `{ATTRIBUTE_ID}` | De `id` -waarde van het berekende kenmerk dat u wilt bijwerken. |
 
 **Verzoek**
 
-Met het volgende verzoek wordt de status van het berekende kenmerk bijgewerkt vanuit `DRAFT` tot `NEW`.
+In de volgende aanvraag wordt de status van het berekende kenmerk van `DRAFT` tot `NEW` bijgewerkt.
 
 +++ Een voorbeeldverzoek om een berekend kenmerk bij te werken.
 
@@ -534,7 +534,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b
 
 +++
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP status 200 met informatie over het zojuist bijgewerkte berekende kenmerk.
 
@@ -579,4 +579,4 @@ Een geslaagde reactie retourneert HTTP status 200 met informatie over het zojuis
 
 ## Volgende stappen
 
-Nu u de grondbeginselen van berekende attributen hebt geleerd, bent u klaar om te beginnen bepalend hen voor uw organisatie. Lees voor meer informatie over het gebruik van berekende kenmerken in de gebruikersinterface van het Experience Platform de [UI-gids voor berekende kenmerken](./ui.md).
+Nu u de grondbeginselen van berekende attributen hebt geleerd, bent u klaar om te beginnen bepalend hen voor uw organisatie. Leren hoe te om gegevens verwerkte attributen in het Experience Platform UI te gebruiken, te lezen gelieve de [ gegevens verwerkte gids UI van attributen ](./ui.md).

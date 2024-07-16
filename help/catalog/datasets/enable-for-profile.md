@@ -11,55 +11,55 @@ ht-degree: 0%
 
 ---
 
-# Een gegevensset inschakelen voor [!DNL Profile] en [!DNL Identity Service] gebruiken, API&#39;s
+# Een gegevensset inschakelen voor [!DNL Profile] en [!DNL Identity Service] met behulp van API&#39;s
 
-Deze zelfstudie behandelt het proces waarbij een gegevensset wordt ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile] en [!DNL Identity Service], onderverdeeld in de volgende stappen:
+Deze zelfstudie behandelt het proces waarbij een gegevensset wordt ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile] en [!DNL Identity Service] , en omvat de volgende stappen:
 
-1. Een gegevensset inschakelen voor gebruik in [!DNL Real-Time Customer Profile]met een van de volgende twee opties:
+1. Schakel een gegevensset in voor gebruik in [!DNL Real-Time Customer Profile] met behulp van een van de volgende twee opties:
    - [Een nieuwe gegevensset maken](#create-a-dataset-enabled-for-profile-and-identity)
    - [Een bestaande gegevensset configureren](#configure-an-existing-dataset)
-1. [Gegevens in de dataset opnemen](#ingest-data-into-the-dataset)
-1. [Gegevens bevestigen die door het Profiel van de Klant in real time worden opgenomen](#confirm-data-ingest-by-real-time-customer-profile)
-1. [Gegevens die door Identity Service worden ingevoerd bevestigen](#confirm-data-ingest-by-identity-service)
+1. [ Samenvatting gegevens in de dataset ](#ingest-data-into-the-dataset)
+1. [ Bevestig gegevens die door Real-Time Profiel van de Klant ](#confirm-data-ingest-by-real-time-customer-profile) worden opgenomen
+1. [ Bevestig gegevens die door de Dienst van de Identiteit worden ingesloten ](#confirm-data-ingest-by-identity-service)
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van verschillende Adobe Experience Platform-services die betrokken zijn bij het beheer van voor profielen geschikte gegevenssets. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor deze verwante onderwerpen [!DNL Platform] diensten:
+Deze zelfstudie vereist een goed begrip van verschillende Adobe Experience Platform-services die betrokken zijn bij het beheer van voor profielen geschikte gegevenssets. Lees vóór het starten van deze zelfstudie de documentatie voor deze verwante [!DNL Platform] services:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-- [[!DNL Identity Service]](../../identity-service/home.md): Schakelt in [!DNL Real-Time Customer Profile] door identiteiten te overbruggen van verschillende gegevensbronnen waarin [!DNL Platform].
-- [[!DNL Catalog Service]](../../catalog/home.md): Een RESTful API die u toestaat om datasets tot stand te brengen en hen te vormen voor [!DNL Real-Time Customer Profile] en [!DNL Identity Service].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+- [[!DNL Identity Service]](../../identity-service/home.md): schakelt [!DNL Real-Time Customer Profile] in door identiteiten te overbruggen van verschillende gegevensbronnen die in [!DNL Platform] worden opgenomen.
+- [[!DNL Catalog Service]](../../catalog/home.md): Een RESTful-API waarmee u gegevenssets kunt maken en configureren voor [!DNL Real-Time Customer Profile] en [!DNL Identity Service] .
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Platform APIs te maken.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra `Content-Type` header. De correcte waarde voor deze kopbal wordt getoond in de steekproefverzoeken waar nodig.
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra `Content-Type` kopbal. De correcte waarde voor deze kopbal wordt getoond in de steekproefverzoeken waar nodig.
 
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een `x-sandbox-name` header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt. Voor meer informatie over sandboxen in [!DNL Platform], zie de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een `x-sandbox-name` -header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt. Voor meer informatie over zandbakken in [!DNL Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
 ## Een gegevensset maken die is ingeschakeld voor profiel en identiteit {#create-a-dataset-enabled-for-profile-and-identity}
 
-U kunt een dataset voor het Profiel en de Dienst van de Identiteit van de Klant in real time onmiddellijk op verwezenlijking of op om het even welk punt toelaten nadat de dataset is gecreeerd. Als u een dataset zou willen toelaten die reeds is gecreeerd, volg de stappen voor [het vormen van een bestaande dataset](#configure-an-existing-dataset) gevonden verderop in dit document.
+U kunt een dataset voor het Profiel en de Dienst van de Identiteit van de Klant in real time onmiddellijk op verwezenlijking of op om het even welk punt toelaten nadat de dataset is gecreeerd. Als u een dataset zou willen toelaten die reeds is gecreeerd, de stappen voor [ vormend een bestaande dataset ](#configure-an-existing-dataset) volgen die later in dit document wordt gevonden.
 
 >[!NOTE]
 >
->Om een nieuwe profiel-Toegelaten dataset tot stand te brengen, moet u identiteitskaart van een bestaand schema kennen XDM dat voor Profiel wordt toegelaten. Raadpleeg de zelfstudie voor informatie over het opzoeken of maken van een schema waarvoor profiel is ingeschakeld [een schema maken met de API voor het schemaregister](../../xdm/tutorials/create-schema-api.md).
+>Om een nieuwe profiel-Toegelaten dataset tot stand te brengen, moet u identiteitskaart van een bestaand schema kennen XDM dat voor Profiel wordt toegelaten. Voor informatie over hoe te omhoog kijken of een profiel-Toegelaten schema tot stand brengen, zie het leerprogramma op [ creërend een schema gebruikend de Registratie API van het Schema ](../../xdm/tutorials/create-schema-api.md).
 
-Om een dataset tot stand te brengen die voor Profiel wordt toegelaten, kunt u een verzoek van de POST aan `/dataSets` eindpunt.
+Om een dataset tot stand te brengen die voor Profiel wordt toegelaten, kunt u een verzoek van de POST aan het `/dataSets` eindpunt gebruiken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /dataSets
@@ -67,7 +67,7 @@ POST /dataSets
 
 **Verzoek**
 
-Door `unifiedProfile` en `unifiedIdentity` krachtens `tags` in de aanvraaginstantie zal de gegevensset onmiddellijk worden ingeschakeld voor [!DNL Profile] en [!DNL Identity Service], respectievelijk. De waarden van deze tags moeten een array zijn die de tekenreeks bevat `"enabled:true"`.
+Door `unifiedProfile` en `unifiedIdentity` under `tags` op te nemen in de hoofdtekst van de aanvraag, wordt de gegevensset direct ingeschakeld voor respectievelijk [!DNL Profile] en [!DNL Identity Service] . De waarden van deze tags moeten een array zijn met de tekenreeks `"enabled:true"` .
 
 ```shell
 curl -X POST \
@@ -91,12 +91,12 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `schemaRef.id` | De id van de [!DNL Profile]- toegelaten schema waarop de dataset zal worden gebaseerd. |
-| `{TENANT_ID}` | De naamruimte binnen de [!DNL Schema Registry] die bronnen van uw organisatie bevat. Zie de [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) van de [!DNL Schema Registry] ontwikkelaarsgids voor meer informatie. |
+| `schemaRef.id` | De id van het schema waarvoor [!DNL Profile] is ingeschakeld en waarop de gegevensset wordt gebaseerd. |
+| `{TENANT_ID}` | De naamruimte in de [!DNL Schema Registry] die bronnen bevat die tot uw organisatie behoren. Zie [ TENANT_ID ](../../xdm/api/getting-started.md#know-your-tenant-id) sectie van de [!DNL Schema Registry] ontwikkelaarsgids voor meer informatie. |
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie toont een serie die identiteitskaart van de pas gecreëerde dataset in de vorm van bevat `"@/dataSets/{DATASET_ID}"`. Nadat u een gegevensset hebt gemaakt en ingeschakeld, gaat u verder met de stappen voor [gegevens uploaden](#upload-data-to-the-dataset).
+Een succesvol antwoord toont een serie die identiteitskaart van de pas gecreëerde dataset in de vorm van `"@/dataSets/{DATASET_ID}"` bevat. Zodra u met succes een dataset hebt gecreeerd en toegelaten, te werk gaan aan de stappen voor [ het uploaden gegevens ](#upload-data-to-the-dataset).
 
 ```json
 [
@@ -106,13 +106,13 @@ Een succesvolle reactie toont een serie die identiteitskaart van de pas gecreëe
 
 ## Een bestaande gegevensset configureren {#configure-an-existing-dataset}
 
-De volgende stappen behandelen hoe te om een eerder gecreeerde dataset voor toe te laten [!DNL Real-Time Customer Profile] en [!DNL Identity Service]. Als u reeds een profiel-Toegelaten dataset hebt gecreeerd, gelieve te werk te gaan aan de stappen voor [opnemen, gegevens](#ingest-data-into-the-dataset).
+In de volgende stappen wordt beschreven hoe u een eerder gemaakte dataset voor [!DNL Real-Time Customer Profile] en [!DNL Identity Service] kunt inschakelen. Als u reeds een profiel-Toegelaten dataset hebt gecreeerd, te werk gaan aan de stappen voor [ het nemen van gegevens ](#ingest-data-into-the-dataset).
 
 ### Controleren of de gegevensset is ingeschakeld {#check-if-the-dataset-is-enabled}
 
-Met de [!DNL Catalog] API, kunt u een bestaande dataset inspecteren om te bepalen of het voor gebruik binnen wordt toegelaten [!DNL Real-Time Customer Profile] en [!DNL Identity Service]. De volgende vraag wint de details van een dataset door identiteitskaart terug
+Met de API [!DNL Catalog] kunt u een bestaande dataset inspecteren om te bepalen of deze is ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile] en [!DNL Identity Service] . De volgende vraag wint de details van een dataset door identiteitskaart terug
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /dataSets/{DATASET_ID}
@@ -133,7 +133,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 ```json
 {
@@ -168,13 +168,13 @@ curl -X GET \
 }
 ```
 
-Onder de `tags` eigenschap, kunt u zien dat `unifiedProfile` en `unifiedIdentity` zijn beide aanwezig met de waarde `enabled:true`. Daarom [!DNL Real-Time Customer Profile] en [!DNL Identity Service] zijn ingeschakeld voor deze gegevensset.
+Onder de eigenschap `tags` ziet u dat `unifiedProfile` en `unifiedIdentity` beide aanwezig zijn met de waarde `enabled:true` . Daarom zijn [!DNL Real-Time Customer Profile] en [!DNL Identity Service] ingeschakeld voor deze gegevensset.
 
 ### De gegevensset inschakelen {#enable-the-dataset}
 
-Als de bestaande gegevensset niet is ingeschakeld voor [!DNL Profile] of [!DNL Identity Service], kunt u het toelaten door een verzoek van de PATCH te maken gebruikend dataset identiteitskaart
+Als de bestaande dataset niet voor [!DNL Profile] of [!DNL Identity Service] is toegelaten, kunt u het toelaten door een verzoek van de PATCH te maken gebruikend dataset identiteitskaart
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /dataSets/{DATASET_ID}
@@ -200,11 +200,11 @@ curl -X PATCH \
       ]'
 ```
 
-De verzoekende instantie omvat een `path` tot twee typen tags, `unifiedProfile` en `unifiedIdentity`. De `value` van elk zijn arrays die de tekenreeks bevatten `enabled:true`.
+De hoofdtekst van de aanvraag bevat een `path` naar twee typen tags, `unifiedProfile` en `unifiedIdentity` . De `value` van elk zijn arrays die de tekenreeks `enabled:true` bevatten.
 
-**Antwoord**
+**Reactie**
 
-Een succesvol PATCH verzoek keert de Status 200 van HTTP (O.K.) en een serie terug die identiteitskaart van de bijgewerkte dataset bevatten. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. De `unifiedProfile` en `unifiedIdentity` Er zijn nu codes toegevoegd en de gegevensset is ingeschakeld voor gebruik door de services Profiel en Identiteit.
+Een succesvol PATCH verzoek keert de Status 200 van HTTP (O.K.) en een serie terug die identiteitskaart van de bijgewerkte dataset bevatten. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. De tags `unifiedProfile` en `unifiedIdentity` zijn nu toegevoegd en de gegevensset is ingeschakeld voor gebruik door de services Profiel en Identiteit.
 
 ```json
 [
@@ -214,15 +214,15 @@ Een succesvol PATCH verzoek keert de Status 200 van HTTP (O.K.) en een serie ter
 
 ## Gegevens in de dataset opnemen {#ingest-data-into-the-dataset}
 
-Beide [!DNL Real-Time Customer Profile] en [!DNL Identity Service] verbruikt XDM gegevens aangezien het in een dataset wordt opgenomen. Raadpleeg de zelfstudie voor instructies over het uploaden van gegevens naar een gegevensset. [maken van een gegevensset met behulp van API&#39;s](../../catalog/datasets/create.md). Wanneer u plant welke gegevens u naar uw [!DNL Profile]- toegelaten dataset, overweeg de volgende beste praktijken:
+Zowel [!DNL Real-Time Customer Profile] als [!DNL Identity Service] gebruiken XDM-gegevens terwijl deze in een gegevensset worden opgenomen. Voor instructies op hoe te om gegevens in een dataset te uploaden, verwijs naar het leerprogramma op [ creërend een dataset gebruikend APIs ](../../catalog/datasets/create.md). Houd bij het plannen van de gegevens die u naar de [!DNL Profile] -gegevensset wilt verzenden rekening met de volgende aanbevolen procedures:
 
 - Neem alle gegevens op die u als segmentatiecriteria wilt gebruiken.
-- Neem zoveel id&#39;s op als u uit uw profielgegevens kunt opvragen om uw identiteitsgrafiek te maximaliseren. Dit maakt [!DNL Identity Service] om identiteiten over datasets effectiever te binden.
+- Neem zoveel id&#39;s op als u uit uw profielgegevens kunt opvragen om uw identiteitsgrafiek te maximaliseren. Hierdoor kan [!DNL Identity Service] identiteiten op effectievere wijze aan verschillende gegevenssets koppelen.
 
-## Gegevens bevestigen die worden ingevoerd door [!DNL Real-Time Customer Profile] {#confirm-data-ingest-by-real-time-customer-profile}
+## Gegevens die worden ingevoerd door [!DNL Real-Time Customer Profile] bevestigen {#confirm-data-ingest-by-real-time-customer-profile}
 
-Bij het voor het eerst uploaden van gegevens naar een nieuwe gegevensset of als onderdeel van een proces waarbij een nieuwe ETL of gegevensbron betrokken is, wordt aanbevolen de gegevens zorgvuldig te controleren om te controleren of deze op de verwachte wijze zijn geüpload. Met de [!DNL Real-Time Customer Profile] Toegang API, kunt u partijgegevens terugwinnen aangezien het in een dataset wordt geladen. Als u geen van de entiteiten kunt terugwinnen u verwacht, kan uw dataset niet worden toegelaten voor [!DNL Real-Time Customer Profile]. Na het bevestigen dat uw dataset is toegelaten, zorg ervoor dat uw brongegevensformaat en herkenningstekens uw verwachtingen steunen. Voor gedetailleerde instructies over het gebruik van de [!DNL Real-Time Customer Profile] API voor toegang [!DNL Profile] gegevens, raadpleeg de [eindgebruikershandleiding voor entiteiten](../../profile/api/entities.md), ook wel bekend als &quot;[!DNL Profile Access]&quot; API.
+Bij het voor het eerst uploaden van gegevens naar een nieuwe gegevensset of als onderdeel van een proces waarbij een nieuwe ETL of gegevensbron betrokken is, wordt aanbevolen de gegevens zorgvuldig te controleren om te controleren of deze op de verwachte wijze zijn geüpload. Met de API voor toegang van [!DNL Real-Time Customer Profile] kunt u batchgegevens ophalen terwijl deze in een gegevensset worden geladen. Als u geen van de entiteiten kunt ophalen die u verwacht, is het mogelijk dat de gegevensset niet is ingeschakeld voor [!DNL Real-Time Customer Profile] . Na het bevestigen dat uw dataset is toegelaten, zorg ervoor dat uw brongegevensformaat en herkenningstekens uw verwachtingen steunen. Voor gedetailleerde instructies op hoe te om [!DNL Real-Time Customer Profile] API te gebruiken om tot [!DNL Profile] gegevens toegang te hebben, gelieve te verwijzen naar de [ gids van het entiteitseindpunt ](../../profile/api/entities.md), die ook als &quot;[!DNL Profile Access]&quot;API wordt bekend.
 
 ## Gegevens die door Identity Service worden ingevoerd bevestigen {#confirm-data-ingest-by-identity-service}
 
-Elk opgenomen gegevensfragment dat meer dan één identiteit bevat, maakt een koppeling in uw persoonlijke identiteitsgrafiek. Voor meer informatie over identiteitsgrafieken en toegang tot identiteitsgegevens, gelieve te beginnen door gelezen [Overzicht van identiteitsservice](../../identity-service/home.md).
+Elk opgenomen gegevensfragment dat meer dan één identiteit bevat, maakt een koppeling in uw persoonlijke identiteitsgrafiek. Voor meer informatie over identiteitsgrafieken en de gegevens van de toegangsidentiteit, gelieve te beginnen door het [ overzicht van de Dienst van de Identiteit ](../../identity-service/home.md) te lezen.

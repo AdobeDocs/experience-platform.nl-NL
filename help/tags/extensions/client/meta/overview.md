@@ -4,76 +4,76 @@ description: Meer informatie over de extensie Meta Pixel in Adobe Experience Pla
 exl-id: c5127bbc-6fe7-438f-99f1-6efdbe7d092e
 source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
 
-# [!DNL Meta Pixel] extensieoverzicht
+# [!DNL Meta Pixel] overzicht van extensies
 
-[[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) is een op JavaScript gebaseerd analyseprogramma waarmee u de bezoekersactiviteit op uw website kunt volgen. Bezoekersacties die u bijhoudt (conversies genoemd) worden verzonden naar [[!DNL Ads Manager]](https://www.facebook.com/business/tools/ads-manager) waar ze kunnen worden gebruikt om de effectiviteit van advertenties, campagnes, conversietrechter en nog veel meer te meten.
+[[!DNL Meta Pixel] ](https://developers.facebook.com/docs/meta-pixel/) is een op JavaScript gebaseerd analysehulpmiddel dat u toestaat om bezoekersactiviteit op uw website te volgen. De acties van de bezoeker die u (genoemd omzettingen) volgt worden verzonden naar [[!DNL Ads Manager] ](https://www.facebook.com/business/tools/ads-manager) waar zij kunnen worden gebruikt om de doeltreffendheid van uw advertenties, campagnes, omzettingskanalen, en meer te meten.
 
-De [!DNL Meta Pixel] met de extensie van tags kunt u gebruikmaken van [!DNL Pixel] functies in de tagbibliotheken aan de clientzijde. In dit document wordt beschreven hoe u de extensie installeert en de mogelijkheden ervan kunt gebruiken in een [regel](../../../ui/managing-resources/rules.md).
+Met de tagextensie [!DNL Meta Pixel] kunt u [!DNL Pixel] -functies gebruiken in uw tagbibliotheken aan de clientzijde. Dit document behandelt hoe te om de uitbreiding te installeren en zijn mogelijkheden in a [ regel ](../../../ui/managing-resources/rules.md) te gebruiken.
 
 ## Vereisten
 
-Als u de extensie wilt gebruiken, moet u een geldige [!DNL Meta] account met toegang tot [!DNL Ads Manager]. Specifiek, moet u [een nieuwe [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) en kopieert [!DNL Pixel ID] kan de extensie dus worden geconfigureerd voor uw account. Als u al een bestaande [!DNL Meta Pixel], kunt u in plaats daarvan de id gebruiken.
+Als u de extensie wilt gebruiken, moet u een geldige [!DNL Meta] -account hebben met toegang tot [!DNL Ads Manager] . Specifiek, moet u [ een nieuw  [!DNL Meta Pixel] ](https://www.facebook.com/business/help/952192354843755) creëren en zijn kopiëren [!DNL Pixel ID] zodat kan de uitbreiding aan uw rekening worden gevormd. Als u al een bestaande [!DNL Meta Pixel] hebt, kunt u in plaats daarvan de id gebruiken.
 
-Het wordt sterk aanbevolen om [!DNL Meta Pixel] in combinatie met de [!DNL Meta Conversions API] om dezelfde gebeurtenissen te delen en te verzenden van respectievelijk de zijde van de client en de server, aangezien dit ertoe kan bijdragen gebeurtenissen te herstellen die niet zijn opgepikt door [!DNL Meta Pixel]. Zie de handleiding op de [[!DNL Meta Conversions API] extensie voor het doorsturen van gebeurtenissen](../../client/meta/overview.md) voor stappen op hoe te om het in uw server-zijimplementaties te integreren. Merk op dat uw organisatie toegang moet hebben tot [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) om de serverextensie te gebruiken.
+Het wordt ten zeerste aangeraden [!DNL Meta Pixel] in combinatie met [!DNL Meta Conversions API] te gebruiken om dezelfde gebeurtenissen te delen en te verzenden vanaf respectievelijk de client en de server, aangezien dit ertoe kan bijdragen dat gebeurtenissen worden hersteld die niet door [!DNL Meta Pixel] zijn opgehaald. Zie de gids op de [[!DNL Meta Conversions API]  uitbreiding voor gebeurtenis door:sturen ](../../client/meta/overview.md) voor stappen op hoe te om het in uw server-zijimplementaties te integreren. Merk op dat uw organisatie toegang tot [ gebeurtenis moet hebben door:sturen ](../../../ui/event-forwarding/overview.md) om de server-zijuitbreiding te gebruiken.
 
 ## De extensie installeren
 
-Als u het dialoogvenster [!DNL Meta Pixel] de extensie, navigeert u naar de gebruikersinterface van de gegevensverzameling of het Experience Platform en selecteert u **[!UICONTROL Tags]** in de linkernavigatie. Van hier, selecteer een bezit om de uitbreiding aan toe te voegen, of een nieuw bezit in plaats daarvan tot stand te brengen.
+Als u de extensie [!DNL Meta Pixel] wilt installeren, navigeert u naar de gebruikersinterface van de gegevensverzameling of het Experience Platform en selecteert u **[!UICONTROL Tags]** in de linkernavigatie. Selecteer van hieruit een eigenschap waaraan u de extensie wilt toevoegen of maak een nieuwe eigenschap.
 
-Als u de gewenste eigenschap hebt geselecteerd of gemaakt, selecteert u **[!UICONTROL Extensions]** in de linkernavigatie, dan selecteer **[!UICONTROL Catalog]** tab. Zoeken naar [!UICONTROL Meta Pixel] kaart, dan selecteren **[!UICONTROL Install]**.
+Wanneer u de gewenste eigenschap hebt geselecteerd of gemaakt, selecteert u **[!UICONTROL Extensions]** in de linkernavigatie en selecteert u vervolgens de tab **[!UICONTROL Catalog]** . Zoek de [!UICONTROL Meta Pixel] -kaart en selecteer vervolgens **[!UICONTROL Install]** .
 
-![De [!UICONTROL Install] knop die wordt geselecteerd voor de [!UICONTROL Meta Pixel] in de UI voor gegevensverzameling.](../../../images/extensions/client/meta/install.png)
+![ de [!UICONTROL Install] knoop die voor de [!UICONTROL Meta Pixel] uitbreiding in de Inzameling UI van Gegevens wordt geselecteerd.](../../../images/extensions/client/meta/install.png)
 
-In de configuratieweergave die wordt weergegeven, moet u de opdracht [!DNL Pixel] ID die u eerder hebt gekopieerd om de extensie te koppelen aan uw account. U kunt de id rechtstreeks in de invoer plakken, maar u kunt ook een bestaand gegevenselement selecteren.
+In de configuratieweergave die wordt weergegeven, moet u de [!DNL Pixel] id opgeven die u eerder hebt gekopieerd om de extensie te koppelen aan uw account. U kunt de id rechtstreeks in de invoer plakken, maar u kunt ook een bestaand gegevenselement selecteren.
 
 >[!TIP]
 >
->Als u een gegevenselement gebruikt, kunt u de optie [!DNL Pixel] ID wordt gebruikt afhankelijk van andere factoren zoals de bouwstijlomgeving. Zie het aanhangsel over [verschillend gebruiken [!DNL Pixel] ID&#39;s voor verschillende omgevingen](#id-data-element) voor meer informatie .
+>Als u een gegevenselement gebruikt, kunt u de [!DNL Pixel] -id dynamisch wijzigen, afhankelijk van andere factoren, zoals de ontwikkelomgeving. Zie de appendix sectie op [ gebruikend verschillende  [!DNL Pixel]  IDs voor verschillende milieu&#39;s ](#id-data-element) voor meer informatie.
 
-U kunt ook een gebeurtenis-id opgeven die u aan de extensie wilt koppelen. Dit wordt gebruikt om identieke gebeurtenissen tussen [!DNL Meta Pixel] en de [!DNL Meta Conversions API]. Zie de sectie over [deduplicatie van gebeurtenissen](../../server/meta/overview.md#event-deduplication) in het overzicht van de [!DNL Conversions API] extensie.
+U kunt ook een gebeurtenis-id opgeven die u aan de extensie wilt koppelen. Hiermee worden identieke gebeurtenissen tussen [!DNL Meta Pixel] en [!DNL Meta Conversions API] gedupliceerd. Voor details, zie de sectie over [ gebeurtenis deduplicatie ](../../server/meta/overview.md#event-deduplication) in overzicht voor de [!DNL Conversions API] uitbreiding.
 
-Als u klaar bent, selecteert u **[!UICONTROL Save]**
+Selecteer **[!UICONTROL Save]** wanneer u klaar bent
 
-![De [!DNL Pixel] ID verstrekt als gegevenselement in de mening van de uitbreidingsconfiguratie.](../../../images/extensions/client/meta/configure.png)
+![ identiteitskaart [!DNL Pixel] als gegevenselement in de mening van de uitbreidingsconfiguratie wordt verstrekt die.](../../../images/extensions/client/meta/configure.png)
 
 De extensie is geïnstalleerd en u kunt nu de verschillende handelingen in de labelregels uitvoeren.
 
 ## Een labelregel configureren {#rule}
 
-[!DNL Meta Pixel] accepteert een set vooraf gedefinieerde [standaardgebeurtenissen](https://www.facebook.com/business/help/402791146561655), elk met hun eigen context en aanvaarde eigenschappen. De door de [!DNL Pixel] de extensie correleert met deze gebeurtenistypen, zodat u de gebeurtenis die wordt verzonden naar gemakkelijk kunt categoriseren en configureren [!DNL Meta] afhankelijk van het type.
+[!DNL Meta Pixel] keurt een reeks vooraf bepaalde [ standaardgebeurtenissen ](https://www.facebook.com/business/help/402791146561655), elk met hun eigen contexten en toegelaten eigenschappen goed. De handelingen van de regel die door de extensie [!DNL Pixel] worden aangeboden, correleren zich met deze gebeurtenistypen, zodat u de gebeurtenis die naar [!DNL Meta] wordt verzonden gemakkelijk kunt categoriseren en configureren op basis van het type.
 
-Voor demonstratiedoeleinden toont deze sectie hoe te om een regel te bouwen die een gebeurtenis van de paginamening verzendt naar [!DNL Meta].
+Voor demonstratiedoeleinden toont deze sectie hoe u een regel bouwt die een gebeurtenis van de paginamening naar [!DNL Meta] verzendt.
 
-Begin het creëren van een nieuwe markeringsregel en vorm zijn voorwaarden zoals gewenst. Selecteer bij het selecteren van de handelingen voor de regel de optie **[!UICONTROL Meta Pixel]** voor de extensie selecteert u vervolgens **[!UICONTROL Send Page View]** voor het actietype.
+Begin het creëren van een nieuwe markeringsregel en vorm zijn voorwaarden zoals gewenst. Wanneer u de handelingen voor de regel selecteert, selecteert u **[!UICONTROL Meta Pixel]** voor de extensie en selecteert u **[!UICONTROL Send Page View]** voor het actietype.
 
-![De [!UICONTROL Send Page View] actietype dat voor een regel in de Inzameling UI van Gegevens wordt geselecteerd.](../../../images/extensions/client/meta/select-action.png)
+![ het [!UICONTROL Send Page View] actietype dat voor een regel in de Inzameling UI van Gegevens wordt geselecteerd.](../../../images/extensions/client/meta/select-action.png)
 
-Er is geen verdere configuratie vereist voor de [!UICONTROL Send Page View] handeling. Selecteren **[!UICONTROL Keep Changes]** om de actie aan de regelconfiguratie toe te voegen. Als u tevreden bent met de regel, selecteert u **[!UICONTROL Save to Library]**.
+Er is geen verdere configuratie vereist voor de [!UICONTROL Send Page View] -actie. Selecteer **[!UICONTROL Keep Changes]** om de handeling aan de regelconfiguratie toe te voegen. Selecteer **[!UICONTROL Save to Library]** als u tevreden bent met de regel.
 
-Ten slotte publiceert u een nieuwe tag [build](../../../ui/publishing/builds.md) om de wijzigingen in de bibliotheek in te schakelen.
+Tot slot publiceer een nieuwe markering [ bouwt ](../../../ui/publishing/builds.md) om de veranderingen in de bibliotheek toe te laten.
 
-## Bevestig dat [!DNL Meta] ontvangt gegevens
+## Bevestig dat [!DNL Meta] gegevens ontvangt
 
-Nadat uw bijgewerkte build op uw website is geïmplementeerd, kunt u bevestigen of gegevens naar behoren worden verzonden door conversiegebeurtenissen te genereren in uw browser en te controleren of deze gebeurtenissen worden weergegeven in [[!DNL Meta Events Manager]](https://www.facebook.com/business/help/898185560232180).
+Nadat uw bijgewerkte build is geïmplementeerd op uw website, kunt u bevestigen of gegevens naar behoren worden verzonden door conversiegebeurtenissen te genereren in uw browser en te controleren of deze gebeurtenissen worden weergegeven in [[!DNL Meta Events Manager] ](https://www.facebook.com/business/help/898185560232180) .
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe gegevens worden verzonden naar [!DNL Meta] met de [!DNL Meta Pixel] tagextensie. Als u ook servergebeurtenissen wilt verzenden naar [!DNL Meta]kunt u nu doorgaan met het installeren en configureren van de [[!DNL Conversions API] extensie voor doorsturen van gebeurtenissen](../../server/meta/overview.md).
+In deze handleiding wordt beschreven hoe u gegevens naar [!DNL Meta] kunt verzenden met de tagextensie [!DNL Meta Pixel] . Als u op het verzenden van server-zijgebeurtenissen aan [!DNL Meta] ook van plan bent, kunt u nu te werk gaan om de [[!DNL Conversions API]  gebeurtenis te installeren en te vormen door:sturen uitbreiding ](../../server/meta/overview.md).
 
-Raadpleeg voor meer informatie over tags in Experience Platform de [overzicht van tags](../../../home.md).
+Voor meer informatie over markeringen in Experience Platform, verwijs naar het [ overzicht van markeringen ](../../../home.md).
 
-## Aanhangsel: Verschil gebruiken [!DNL Pixel] ID&#39;s voor verschillende omgevingen {#id-data-element}
+## Bijlage: verschillende [!DNL Pixel] id&#39;s gebruiken voor verschillende omgevingen {#id-data-element}
 
-Als u uw implementatie wilt testen in ontwikkelings- of staging-omgevingen terwijl uw productie behouden blijft [!DNL Meta Pixel] intacte analysemogelijkheden, kunt u een gegevenselement gebruiken om dynamisch een aangewezen [!DNL Pixel] ID afhankelijk van de omgeving die wordt gebruikt.
+Als u uw implementatie wilt testen in ontwikkelings- of staging-omgevingen terwijl de [!DNL Meta Pixel] -productieanalyse intact blijft, kunt u een gegevenselement gebruiken om dynamisch een geschikte [!DNL Pixel] -id te kiezen, afhankelijk van de gebruikte omgeving.
 
-U kunt dit bereiken door een [!UICONTROL Custom Code] gegevenselement (verstrekt door de [[!UICONTROL Core] extension](../core/overview.md)) in combinatie met de [`turbine` vrije variabele](../../../extension-dev/turbine.md). In de JavaScript-code van het gegevenselement gebruikt u de opdracht `turbine` -object om het huidige milieustadium te vinden, en retourneert vervolgens een geschikt [!DNL Pixel] ID gebaseerd op het resultaat.
+U kunt dit bereiken door een [!UICONTROL Custom Code] gegevenselement (dat door [[!UICONTROL Core] wordt verstrekt uitbreiding ](../core/overview.md)) in combinatie met [`turbine` vrije variabele ](../../../extension-dev/turbine.md) te gebruiken. Gebruik in de JavaScript-code van het gegevenselement het `turbine` -object om het huidige framewerkomgeving te zoeken en retourneer vervolgens een geschikte [!DNL Pixel] -id op basis van het resultaat.
 
-In het volgende voorbeeld wordt een onechte productie-id geretourneerd `exampleProductionKey` bij gebruik in de productieomgeving en een andere id `exampleTestKey` wanneer een andere omgeving wordt gebruikt. Vervang bij het implementeren van deze code elke waarde door de werkelijke productie en test [!DNL Pixel] ID&#39;s.
+In het volgende voorbeeld wordt een nepproductie-id `exampleProductionKey` geretourneerd wanneer deze in de productieomgeving wordt gebruikt en een andere id `exampleTestKey` wanneer een andere omgeving wordt gebruikt. Vervang bij het implementeren van deze code elke waarde door de werkelijke productie- en test- [!DNL Pixel] id&#39;s.
 
 ```js
 return (turbine.environment.stage === "production" ? 'exampleProductionKey' : 'exampleTestKey');

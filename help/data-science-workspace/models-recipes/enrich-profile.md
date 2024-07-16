@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;machine het leren model;De Werkruimte van de Wetenschap van Gegevens;In real time het Profiel van de Klant;populaire onderwerpen;machine het leren inzicht
+keywords: Experience Platform;machine het leren model;De Wetenschap van gegevens Workspace;Real-time het Profiel van de Klant;populaire onderwerpen;machine het leren inzicht
 solution: Experience Platform
 title: Verrijk het Profiel van de Klant in real time met het Leren van de Machine Inzichten
 type: Tutorial
@@ -12,40 +12,40 @@ ht-degree: 0%
 
 ---
 
-# Verrijken [!DNL Real-Time Customer Profile] met kennis van machine leren
+# Verrijken [!DNL Real-Time Customer Profile] met leergegevens over computers
 
-Adobe Experience Platform [!DNL Data Science Workspace] biedt de tools en bronnen om modellen voor machinaal leren te maken, te evalueren en te gebruiken om gegevensvoorspellingen en inzichten te genereren. Wanneer inzichten van het leren van machines worden opgenomen in een [!DNL Profile]-enabled dataset, dat de zelfde gegevens ook worden opgenomen zoals [!DNL Profile] records die vervolgens kunnen worden gesegmenteerd [!DNL Adobe Experience Platform Segmentation Service].
+Adobe Experience Platform [!DNL Data Science Workspace] biedt de gereedschappen en bronnen om modellen voor machinaal leren te maken, te evalueren en te gebruiken om gegevensvoorspellingen en inzichten te genereren. Wanneer inzichten van het machinaal leren in een [!DNL Profile]-Toegelaten dataset worden opgenomen, worden die zelfde gegevens ook opgenomen zoals [!DNL Profile] verslagen die dan kunnen worden gesegmenteerd gebruikend [!DNL Adobe Experience Platform Segmentation Service].
 
-Dit document bevat koppelingen naar zelfstudies waarmee u documenten kunt verrijken [!DNL Real-Time Customer Profile] met uw computerleerinzichten.
+Dit document bevat koppelingen naar zelfstudies waarmee u [!DNL Real-Time Customer Profile] kunt verrijken met de leermogelijkheden van uw computer.
 
 ## Aan de slag
 
-Voor het voltooien van de onderstaande lesbestanden hebt u een goed inzicht in het gebruik van [!DNL Profile] gegevens en segmenten maken. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Voor het voltooien van de onderstaande lesbestanden hebt u een goed inzicht nodig in het opnemen van [!DNL Profile] -gegevens en het maken van segmenten. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een volledige, verenigde vertegenwoordiging van elke individuele klant die op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [[!DNL Identity Service]](../../identity-service/home.md): Inschakelen [!DNL Real-Time Customer Profile] door identiteiten te overbruggen van verschillende gegevensbronnen die in Platform worden opgenomen.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een volledige, uniforme representatie van elke individuele klant op basis van geaggregeerde gegevens van meerdere bronnen.
+- [[!DNL Identity Service]](../../identity-service/home.md): schakelt [!DNL Real-Time Customer Profile] in door identiteiten te overbruggen van verschillende gegevensbronnen die in Platform worden opgenomen.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee Platform gegevens voor klantervaring organiseert.
 
 Naast de bovengenoemde documenten, wordt het ten zeerste geadviseerd dat u ook de volgende gidsen op schema&#39;s en de Redacteur van het Schema bekijkt:
 
-- [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Beschrijft schema&#39;s XDM, bouwstenen, principes, en beste praktijken voor het samenstellen van schema&#39;s die binnen moeten worden gebruikt [!DNL Experience Platform].
-- [Zelfstudie Schema Editor](../../xdm/tutorials/create-schema-ui.md): Verstrekt gedetailleerde instructies voor het creëren van schema&#39;s gebruikend de Redacteur van het Schema binnen [!DNL Experience Platform].
+- [ Grondbeginselen van schemacompositie ](../../xdm/schema/composition.md): Beschrijft schema&#39;s XDM, bouwstenen, principes, en beste praktijken voor het samenstellen van schema&#39;s die in [!DNL Experience Platform] moeten worden gebruikt.
+- [ het leerprogramma van de Redacteur van het Schema ](../../xdm/tutorials/create-schema-ui.md): Verstrekt gedetailleerde instructies voor het creëren van schema&#39;s gebruikend de Redacteur van het Schema binnen [!DNL Experience Platform].
 
-## Een uitvoerschema en gegevensset maken en configureren {#create-an-output-schema-and-dataset}
+## Een uitvoerschema en een gegevensset maken en configureren {#create-an-output-schema-and-dataset}
 
-De eerste stap naar verrijking [!DNL Real-Time Customer Profile] met scorende inzichten is weten welk object in de praktijk (zoals een persoon) uw gegevens definiëren. Dankzij een goed begrip van uw gegevens kunt u een structuur beschrijven en ontwerpen om betekenis toe te voegen, vergelijkbaar met het ontwerpen van een relationele database.
+De eerste stap in de richting van verrijking van [!DNL Real-Time Customer Profile] met het schalen van inzichten is het weten van welk echt object (zoals een persoon) uw gegevens definiëren. Dankzij een goed begrip van uw gegevens kunt u een structuur beschrijven en ontwerpen om betekenis toe te voegen, vergelijkbaar met het ontwerpen van een relationele database.
 
-Het samenstellen van een schema begint door een klasse toe te wijzen. De klassen bepalen de gedragsaspecten van de gegevens het schema (verslag of tijdreeks) zal bevatten. Volg de stappen in de zelfstudie om uw eigen schema&#39;s te maken op [een schema maken met de Schema-editor](../../xdm/tutorials/create-schema-ui.md). Merk op alvorens u een dataset voor kunt toelaten [!DNL Profile], moet u het schema van de dataset vormen om een primair identiteitsgebied te hebben en dan het schema voor toe te laten [!DNL Profile]. Wanneer gegevens in een [!DNL Profile]-enabled dataset, dat de zelfde gegevens ook worden opgenomen zoals [!DNL Profile] records.
+Het samenstellen van een schema begint door een klasse toe te wijzen. De klassen bepalen de gedragsaspecten van de gegevens het schema (verslag of tijdreeks) zal bevatten. Begin makend uw eigen schema&#39;s, volg de stappen in het leerprogramma op [ creërend een schema gebruikend de Redacteur van het Schema ](../../xdm/tutorials/create-schema-ui.md). Merk op dat alvorens u een dataset voor [!DNL Profile] kunt toelaten, u het schema van de dataset moet vormen om een primair identiteitsgebied te hebben en dan het schema voor [!DNL Profile] toe te laten. Wanneer gegevens in een [!DNL Profile] -gegevensset worden opgenomen, worden dezelfde gegevens ook opgenomen als [!DNL Profile] -records.
 
-Als u liever een schema samenstelt met de opdracht [!DNL Schema Registry] API in plaats daarvan, begin door te lezen [[!DNL Schema Registry] ontwikkelaarsgids](../../xdm/api/getting-started.md) voordat u de zelfstudie hebt ingeschakeld [een schema maken met de API](../../xdm/tutorials/create-schema-api.md).
+Als u verkiest om een schema samen te stellen gebruikend [!DNL Schema Registry] API in plaats daarvan, begin door de [[!DNL Schema Registry]  ontwikkelaarsgids ](../../xdm/api/getting-started.md) te lezen alvorens de leerprogramma te proberen op [ creërend een schema gebruikend API ](../../xdm/tutorials/create-schema-api.md).
 
 Zodra uw schema en dataset worden voorbereid, kunt u het schrapen gegevens aan de dataset produceren en opnemen door het schrapen looppas uit te voeren gebruikend een aangewezen model.
 
-## Segmenten maken met de opdracht [!DNL Segment Builder] {#create-segments-using-the-segment-builder}
+## Segmenten maken met de [!DNL Segment Builder] {#create-segments-using-the-segment-builder}
 
-Nadat u uw het scoren gegevensinzichten aan uw hebt geproduceerd en gegeten [!DNL Profile]- toegelaten dataset, kunt u dynamische segmenten tot stand brengen gebruikend [!DNL Segment Builder].
+Nadat u de inzichten van uw scoringsgegevens naar uw [!DNL Profile] -gegevensset hebt gegenereerd en opgenomen, kunt u dynamische segmenten maken met de [!DNL Segment Builder] -set.
 
-De [!DNL Segment Builder] biedt een rijke werkruimte waarmee u kunt werken met [!DNL Profile] gegevenselementen. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen. Volg de [[!DNL Segment Builder] gebruikershandleiding](../../segmentation/ui/segment-builder.md) voor meer informatie over:
+[!DNL Segment Builder] biedt een rijke werkruimte waarmee u kunt werken met [!DNL Profile] -gegevenselementen. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen. Volg de [[!DNL Segment Builder]  gebruikersgids ](../../segmentation/ui/segment-builder.md) om over te leren:
 
 - Segmentdefinities maken met een combinatie van kenmerken, gebeurtenissen en bestaand publiek als bouwstenen.
 - Het gebruiken van het canvas en de containers van de regelbouwer om de orde te controleren waarin de segmentregels worden uitgevoerd.
@@ -55,6 +55,6 @@ De [!DNL Segment Builder] biedt een rijke werkruimte waarmee u kunt werken met [
 
 ## Volgende stappen {#next-steps}
 
-Meer informatie over segmenten en de [!DNL Segment Builder], lees de [Overzicht van segmentatieservice](../../segmentation/home.md).
+Meer over segmenten en [!DNL Segment Builder] leren, lees het [ overzicht van de Dienst van de Segmentatie ](../../segmentation/home.md).
 
-Meer informatie over [!DNL Real-Time Customer Profile], lees de [Overzicht van het realtime klantprofiel](../../profile/home.md)
+Om meer over [!DNL Real-Time Customer Profile] te leren, lees het [ Real-Time overzicht van het Profiel van de Klant ](../../profile/home.md)

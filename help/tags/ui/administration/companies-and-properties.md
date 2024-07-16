@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 ## Web-eigenschappen
 
@@ -49,9 +49,9 @@ Als uw gegevensinzamelingsbehoeften voor elke plaats of toepassing uniek zijn, z
 
 ### Variabelen
 
-Gelijkaardig aan gegevens, zijn de variabelen u in uw gaat plaatsen [!DNL Analytics] en andere extensies die veel op elkaar lijken, enigszins lijken of uniek zijn?
+Gelijkaardig aan gegevens, gaan de variabelen u in uw [!DNL Analytics] en andere uitbreidingen zeer gelijkaardig, enigszins gelijkaardig, of uniek plaatsen?
 
-Als eVar27 bijvoorbeeld wordt gebruikt voor dezelfde bronwaarde op al uw websites of toepassingen, kan het zinvol zijn die sites of toepassingen te groeperen, zodat u die algemene variabelen in slechts één eigenschap kunt instellen.
+Bijvoorbeeld, als eVar27 voor de zelfde bronwaarde over al uw websites of toepassingen wordt gebruikt, zou het steek kunnen zijn om die plaatsen of toepassingen samen te groeperen zodat kunt u die gemeenschappelijke variabelen in enkel één bezit plaatsen.
 
 ### Extensies, codes en systemen
 
@@ -59,17 +59,17 @@ Zijn de uitbreidingen, de markeringen, en de systemen u gaat opstellen zeer geli
 
 Als de uitbreidingen, de markeringen, en de systemen u op uw plaatsen of de toepassingen zult opstellen zeer gelijkaardig zijn, zou u hen in het zelfde bezit kunnen willen omvatten.
 
-Als u implementeert [!DNL Adobe Analytics] op slechts één site of toepassing, en uw andere extensies en tags zijn ook uniek, kunt u afzonderlijke eigenschappen maken zodat u meer controle hebt.
+Als u [!DNL Adobe Analytics] op slechts één plaats of toepassing opstelt, en uw andere uitbreidingen en markeringen ook uniek zijn, zou u afzonderlijke eigenschappen kunnen willen tot stand brengen zodat u meer controle hebt.
 
-Als u bijvoorbeeld [!DNL Adobe Analytics], [!DNL Target]en dezelfde extensies van derden voor al uw sites of toepassingen. Dat is een reden om deze extensies samen te groeperen.
+Als u bijvoorbeeld [!DNL Adobe Analytics] , [!DNL Target] en dezelfde extensies van derden implementeert voor al uw sites of toepassingen, is dat een reden om ze samen te groeperen.
 
 ### Mensen
 
 Voor de personen, teams en organisaties die in Adobe Experience Platform werken, hebben ze toegang nodig tot al uw websites en toepassingen, sommige of slechts één.
 
-De eigenschappen van het Beheer van de Gebruiker staan u toe om verschillende rollen aan verschillende mensen voor elk van uw eigenschappen, of op een per-bezitsbasis toe te wijzen. Als iemand voldoende rechten heeft, kan die persoon administratieve handelingen uitvoeren over alle eigenschappen in die organisatie van het Platform. Alle andere rollen kunnen op een per-bezitsbasis worden toegewezen. U kunt zelfs een bezit voor bepaalde gebruikers (niet-admins) verbergen door hen geen rol in dat bezit te geven.
+De eigenschappen van het Beheer van de Gebruiker staan u toe om verschillende rollen aan verschillende mensen voor elk van uw eigenschappen, of op een per-bezitsbasis toe te wijzen. Als iemand voldoende rechten heeft, kan die persoon administratieve acties uitvoeren over alle eigenschappen in die organisatie van het Platform. Alle andere rollen kunnen op een per-bezitsbasis worden toegewezen. U kunt zelfs een bezit voor bepaalde gebruikers (niet-admins) verbergen door hen geen rol in dat bezit te geven.
 
-## Pagina Eigenschappen
+## Eigenschappenpagina
 
 Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Voor het web is er slechts één code voor het insluiten van publicatie per eigenschap. Voor mobiele apparaten is er één configuratie-toepassings-id per eigenschap.
 
@@ -93,11 +93,11 @@ Deze sectie biedt richtlijnen voor het maken of configureren van een tag-eigensc
 
 >[!NOTE]
 >
->Alleen gebruikers met voldoende rechten kunnen een eigenschap maken. Zie [Gebruikersbeheer](user-permissions.md).
+>Alleen gebruikers met voldoende rechten kunnen een eigenschap maken. Zie [ Gebruikersbeheer ](user-permissions.md).
 
-Controleer voordat u begint de [Aanbevolen procedures voor het plannen van eigenschappen](companies-and-properties.md#best-practices-for-planning-properties) voor eigenschappen.
+Alvorens te beginnen, herzie [ Beste praktijken voor het plannen van eigenschappen ](companies-and-properties.md#best-practices-for-planning-properties) voor eigenschappen.
 
-Navigeer naar uw bedrijfspagina en selecteer **[!UICONTROL Add Property]** of selecteer een bestaande eigenschap in de lijst en selecteer **[!UICONTROL Configure]**.
+Navigeer naar de pagina van uw bedrijf en selecteer vervolgens **[!UICONTROL Add Property]** of selecteer een bestaande eigenschap in de lijst en selecteer **[!UICONTROL Configure]** .
 
 ![](../../images/property-settings.png)
 
@@ -107,12 +107,12 @@ Volg de instructies om een webeigenschap te maken.
 
 1. Vul de velden in:
 
-   **Naam:** De naam van uw eigenschap.
+   **Naam:** De naam van uw bezit.
 
-   **Domeinen:** De basis-URL van sites waarop u deze eigenschap wilt implementeren
+   **Domeinen:** de basis URL van om het even welke plaatsen u van plan bent om dit bezit aan op te stellen
 
-1. (Geavanceerd) **[!UICONTROL Run rule components in sequence]** Schakel dit selectievakje in als u voorwaarden en handelingen wilt laten wachten tot de vorige zijn voltooid voordat deze worden uitgevoerd
-1. (Geavanceerd) **[!UICONTROL Return an empty string for missing data elements:]** Als u naar een gegevenselement verwijst dat niet binnen een bibliotheek bestaat, zou dat normaal terugkeren `undefined`.  Schakel dit selectievakje in als u wilt dat dat scenario een lege tekenreeks retourneert.
+1. (Geavanceerd) **[!UICONTROL Run rule components in sequence]** Schakel dit selectievakje in om de voorwaarden en handelingen te laten wachten totdat de vorige zijn voltooid voordat ze worden uitgevoerd
+1. (Geavanceerd) **[!UICONTROL Return an empty string for missing data elements:]** Als u naar een gegevenselement verwijst dat niet in een bibliotheek bestaat, wordt `undefined` normaal gesproken geretourneerd.  Schakel dit selectievakje in als u wilt dat dat scenario een lege tekenreeks retourneert.
 1. (Geavanceerd) **[!UICONTROL Configure for extension development:]** Schakel dit selectievakje in als u ontwikkelextensies wilt installeren die actief door uw bedrijf worden ontwikkeld
 1. Selecteer **[!UICONTROL Save]**.
 
@@ -122,14 +122,14 @@ Volg de instructies om een eigenschap mobile te maken.
 
 1. Vul de velden in:
 
-   * **Naam:** De naam van uw eigenschap.
-   * **Privacy:** Standaard is de privacy-instelling ingesteld op Opted In (Opted In), wat betekent dat u gegevens wilt verzamelen en verzenden naar oplossingen. Als u Opted Out selecteert, verzendt de SDK standaard GEEN gegevens naar oplossingen. Als u Onbekend kiest als instelling, vereist de SDK dat de toepassing de gebruiker eerst vraagt om gegevensverzameling en -deling toe te staan.
+   * **Naam:** De naam van uw bezit.
+   * **Privacy:** Door gebrek wordt het privacy plaatsen geplaatst aan Opted binnen, betekenend dat u voor SDK gegevens aan oplossingen zou willen verzamelen en verzenden. Als u Opted Out selecteert, verzendt de SDK standaard GEEN gegevens naar oplossingen. Als u Onbekend kiest als instelling, vereist de SDK dat de toepassing de gebruiker eerst vraagt om gegevensverzameling en -deling toe te staan.
 
-      >[!NOTE]
-      >
-      >Deze instellingen kunnen verder worden beheerd via de API in de mobiele toepassing.
+     >[!NOTE]
+     >
+     >Deze instellingen kunnen verder worden beheerd via de API in de mobiele toepassing.
 
-   * **HTTPS gebruiken:** Kies of alle gegevenscommunicatie via HTTP of HTTPS moet worden verzonden.
+   * **HTTPS van het Gebruik:** kies als alle gegevensmededeling over HTTP of HTTPS zou moeten worden verzonden.
 
 1. Selecteer **[!UICONTROL Save]**.
 
@@ -147,4 +147,4 @@ Voer de onderstaande stappen uit om een eigenschap tag te verwijderen.
 
    U kunt meerdere eigenschappen selecteren om te verwijderen.
 
-1. Selecteren **[!UICONTROL Delete]** bevestig vervolgens de verwijdering van de eigenschap.
+1. Selecteer **[!UICONTROL Delete]** en bevestig vervolgens de verwijdering van de eigenschap.

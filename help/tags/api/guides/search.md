@@ -11,19 +11,19 @@ ht-degree: 0%
 
 # Bronnen zoeken in de Reactor-API
 
-De `/search` eindpunt in Reactor API staat u toe om gestructureerde vragen over opgeslagen middelen te maken. Dit document bevat voorbeelden van verschillende zoekopdrachten voor verschillende veelvoorkomende gebruiksgevallen.
+Met het `/search` -eindpunt in de Reactor-API kunt u gestructureerde query&#39;s maken voor opgeslagen bronnen. Dit document bevat voorbeelden van verschillende zoekopdrachten voor verschillende veelvoorkomende gebruiksgevallen.
 
 >[!NOTE]
 >
->Voor het lezen van deze handleiding raadpleegt u de [zoekeindpuntgids](../endpoints/search.md) voor informatie over toegelaten vraagsyntaxis en andere gebruiksrichtlijnen.
+>Alvorens deze gids te lezen, gelieve te verwijzen naar de [ gids van het onderzoekseindpunt ](../endpoints/search.md) voor informatie over toegelaten vraagsyntaxis en andere gebruiksrichtlijnen.
 
-## Basisquerystrategieën
+## Basisquery-strategieën
 
 In de volgende voorbeelden worden enkele basisbeginselen getoond voor het gebruik van de zoekfunctionaliteit van de API.
 
 ### Zoeken in meerdere velden
 
-U kunt zoeken in meerdere velden door jokertekens in de veldnaam te gebruiken. Als u bijvoorbeeld wilt zoeken in meerdere kenmerkvelden, gebruikt u `attributes.*` als de veldnaam.
+U kunt zoeken in meerdere velden door jokertekens in de veldnaam te gebruiken. Als u bijvoorbeeld wilt zoeken in meerdere kenmerkvelden, gebruikt u `attributes.*` als veldnaam.
 
 ```json
 {
@@ -39,11 +39,11 @@ U kunt zoeken in meerdere velden door jokertekens in de veldnaam te gebruiken. A
 
 >[!IMPORTANT]
 >
->Doorgaans moeten de zoekwaarden overeenkomen met het type gegevens dat wordt doorzocht. Bijvoorbeeld, een vraagwaarde van `evar7` in een veld met gehele getallen mislukt. Wanneer het zoeken over veelvoudige gebieden, wordt het vraagtype vereist om fouten te vermijden, maar kan ongewenste resultaten veroorzaken.
+>Doorgaans moeten de zoekwaarden overeenkomen met het type gegevens dat wordt doorzocht. Een querywaarde van `evar7` voor een geheel-getalveld zou bijvoorbeeld mislukken. Wanneer het zoeken over veelvoudige gebieden, wordt het vraagtype vereist om fouten te vermijden, maar kan ongewenste resultaten veroorzaken.
 
 ### De vragen van het werkingsgebied aan specifieke middeltypes
 
-U kunt een onderzoek tot een specifiek middeltype door te voorzien `resource_types` in het verzoek. Als u bijvoorbeeld wilt zoeken naar `data_elements`, en `rule_components`:
+U kunt een zoekopdracht uitbreiden naar een specifiek brontype door `resource_types` op te geven in het verzoek. Als u bijvoorbeeld wilt zoeken in `data_elements` en `rule_components` :
 
 ```json
 {
@@ -65,7 +65,7 @@ U kunt een onderzoek tot een specifiek middeltype door te voorzien `resource_typ
 
 ### Reacties sorteren
 
-De `sort` kan worden gebruikt om reacties te sorteren. Als u bijvoorbeeld wilt sorteren op `created_at` met nieuwste eerst:
+De eigenschap `sort` kan worden gebruikt om reacties te sorteren. Als u bijvoorbeeld op `created_at` wilt sorteren met Nieuwste eerst:
 
 ```json
 {

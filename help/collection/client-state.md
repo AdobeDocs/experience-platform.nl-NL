@@ -1,33 +1,33 @@
 ---
 title: Statusbeheer client
-description: Leer hoe Adobe Experience Platform Edge Network de clientstatus beheert
+description: Leer hoe de Adobe Experience Platform Edge Network de clientstatus beheert
 seo-description: Learn how the Adobe Experience Platform Edge Network  manages client state
 keywords: client;state;management;edge;network;gateway;api
 exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
 source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 1%
+source-wordcount: '825'
+ht-degree: 0%
 
 ---
 
 # Statusbeheer client
 
-Het netwerk van de Rand zelf is stateless (het handhaaft zijn eigen zitting niet). Nochtans zijn er bepaalde gebruik-gevallen die cliënt-zijstaatpersistentie vereisen, zoals:
+De Edge Network zelf is stateless (hij houdt zijn eigen sessie niet bij). Nochtans zijn er bepaalde gebruik-gevallen die cliënt-zijstaatpersistentie vereisen, zoals:
 
-* Consistent apparaat-identificatie (zie [bezoekersidentificatie](visitor-identification.md))
+* Consistente apparatenidentificatie (zie [ bezoekersidentificatie ](visitor-identification.md))
 * Gebruikerstoestemming verzamelen en afdwingen
 * Id van personalisatiesessie behouden
 
-Het netwerk van de Rand gebruikt een protocol van het staatsbeheer, dat het opslagaspect aan zijn cliënt/SDK delegeert, en omvat staatsingangen in zijn reacties. Voor browsers worden de items opgeslagen als cookies.
+De Edge Network gebruikt een protocol van het staatsbeheer, die het opslagaspect aan zijn cliënt/SDK delegeert, en omvat staatsingangen in zijn reacties. Voor browsers worden de items opgeslagen als cookies.
 
 De verantwoordelijkheid van de klant is deze op te slaan en op te nemen in alle volgende verzoeken. De cliënt moet ook zorgen voor juiste vervaldatum voor ingangen, zoals die door de gateway worden geïnstrueerd. Wanneer de items als cookies zijn opgeslagen, werkt de browser dit alles automatisch.
 
-Hoewel de statusvermeldingen altijd een normale waarde hebben `String` -waarde (zichtbaar voor de aanroeper/SDK). U mag de waarden op geen enkele manier gebruiken of wijzigen. De waardestructuur/indeling of zelfs de naam zelf kan op elk gewenst moment veranderen. Dit kan leiden tot onverwacht gedrag voor clients die de status intern gebruiken. De staat is bedoeld om altijd door de gateway zelf of andere randdiensten worden verbruikt.
+Hoewel de statusitems altijd een normale `String` -waarde hebben (zichtbaar voor de aanroeper/SDK), mag u de waarden op geen enkele manier gebruiken of wijzigen. De waardestructuur/indeling of zelfs de naam zelf kan op elk gewenst moment veranderen. Dit kan leiden tot onverwacht gedrag voor clients die de status intern gebruiken. De staat is bedoeld om altijd door de gateway zelf of andere randdiensten worden verbruikt.
 
-## De clientstatus behouden als metagegevens
+## De status van de client als metagegevens behouden
 
-De staat die door [!DNL Edge Network] in de responsinstantie `Handle` object met het type `state:store`.
+De status die wordt geretourneerd door de [!DNL Edge Network] in de hoofdtekst van de reactie is een `Handle` -object met het type `state:store` .
 
 ```json
 {
@@ -68,15 +68,15 @@ De staat die door [!DNL Edge Network] in de responsinstantie `Handle` object met
 
 | Kenmerk | Type | Beschrijving |
 | --- | --- | --- |
-| `key` | Tekenreeks | **Vereist**. De naam van het item. |
-| `value` | Tekenreeks | *Optioneel*. De invoerwaarde. |
-| `maxAge` | Geheel | *Optioneel* De tijd (in seconden) tot de ingang verloopt. Als items ontbreken, worden deze alleen voor de huidige sessie opgeslagen. |
-| `attrs` | `Map<String, String>` | *Optioneel*. Een optionele lijst met entry-attributen. Voor alle veilige verbindingen met een veilige referentie-HTTP-header, `SameSite` kenmerk is ingesteld op `None`. |
+| `key` | String | **Vereiste**. De naam van het item. |
+| `value` | String | *Facultatief*. De invoerwaarde. |
+| `maxAge` | Geheel | *Facultatieve* de tijd (in seconden) tot de ingang verloopt. Als items ontbreken, worden deze alleen voor de huidige sessie opgeslagen. |
+| `attrs` | `Map<String, String>` | *Facultatief*. Een optionele lijst met entry-attributen. Voor alle veilige verbindingen met een veilige HTTP-verwijzingsheader wordt het kenmerk `SameSite` ingesteld op `None` . |
 
 
-Voor ondersteuning van multitagging (d.w.z. meerdere SDK-instanties in dezelfde eigenschap, die mogelijk naar verschillende organisaties verwijzen), worden alle statusvermeldingen automatisch vooraf ingesteld op `kndctr_` en de URL-veilige organisatie-id.
+Voor ondersteuning van multitagging (d.w.z. meerdere SDK-instanties in dezelfde eigenschap, die mogelijk naar verschillende organisaties verwijzen), worden alle statusvermeldingen automatisch voorafgegaan door `kndctr_` en de URL-veilige organisatie-id.
 
-Wanneer de client-SDK een `state:store` in de reactie moet deze het volgende doen:
+Wanneer de client-SDK een `state:store` -greep in het antwoord ontvangt, moet deze het volgende doen:
 
 * De ingangen van de opslag cliënt-kant, die de vervaltijd eerbiedigen door de gateway wordt geleverd.
 * Laad ze vanuit de clientopslag en neem alle niet-verlopen items op in de volgende aanvragen.
@@ -104,15 +104,16 @@ Hier is een voorbeeld van een verzoek dat in de client-side opgeslagen staat ove
 
 ## De status van de client in browsercookies behouden
 
-Wanneer het werken met browser cliënten, kan het Netwerk van de Rand automatisch de ingangen als browser koekjes voortzetten. Dit staat transparante steun van de staatsopslag toe, aangezien browsers het protocol van het staatsbeheer door gebrek respecteren.
+Wanneer de Edge Network met browser cliënten werkt, kan de ingangen als browser koekjes automatisch blijven. Dit staat transparante steun van de staatsopslag toe, aangezien browsers het protocol van het staatsbeheer door gebrek respecteren.
 
-Bijna alle ingangen worden geconcretiseerd als eerste partijkoekjes wanneer toegelaten en gesteund (zie de nota hieronder), maar de gateway kon sommige derdekoekjes ook opslaan wanneer de derde partij `adobedc.demdex.net` -domein wordt gebruikt.
+Bijna alle ingangen worden materialized als eerste partijkoekjes wanneer toegelaten en gesteund (zie de nota hieronder), maar de gateway kon sommige derdekoekjes ook opslaan wanneer de derde `adobedc.demdex.net` domein wordt gebruikt.
 
-Aangezien de ingangen altijd aan een specifiek werkingsgebied (apparaat/toepassing) door hun definitie gebonden zijn, slechts zal de ondergroep die met de huidige verzoekcontext compatibel is door het Netwerk van de Rand worden geschreven. Ongeschreven items worden geretourneerd binnen een `state:store` handgreep.
+Aangezien de ingangen altijd aan een specifiek werkingsgebied (apparaat/toepassing) door hun definitie gebonden zijn, slechts zal de ondergroep die met de huidige verzoekcontext compatibel is door de Edge Network worden geschreven. Ongeschreven items zijn
+geretourneerd binnen een `state:store` -greep.
 
 Normaliter worden items met toepassingsbereik altijd geschreven als cookies van de eerste partij, terwijl items met apparaatbereik worden geschreven als cookies van derden. Het besluit is volledig transparant aan de bezoeker, beslist de gateway welke ingangen, afhankelijk van de vraagcontext kunnen worden geschreven.
 
-De aanroeper moet uitdrukkelijk steun voor het opslaan van cliëntstaat als koekjes toelaten, via `meta.state.cookiesEnabled` markering:
+De aanroeper moet expliciet ondersteuning inschakelen voor het opslaan van de clientstatus als cookies, via de markering `meta.state.cookiesEnabled` :
 
 ```json
 {
@@ -127,23 +128,23 @@ De aanroeper moet uitdrukkelijk steun voor het opslaan van cliëntstaat als koek
 
 | Kenmerk | Type | Beschrijving |
 | --- | --- | --- |
-| `cookiesEnabled` | Boolean | Als deze optie is ingesteld, wordt ondersteuning voor cookies ingeschakeld. De standaardwaarde is `false`. |
-| `domain` | Tekenreeks | Vereist wanneer `cookiesEnabled: true`. Het domein op hoofdniveau waarop de cookies moeten worden geschreven. Het Edge-netwerk gebruikt deze waarde om te bepalen of de status als cookies kan worden voortgezet. |
+| `cookiesEnabled` | Boolean | Als deze optie is ingesteld, wordt ondersteuning voor cookies ingeschakeld. De standaardwaarde is `false` . |
+| `domain` | String | Vereist als `cookiesEnabled: true` . Het domein op hoofdniveau waarop de cookies moeten worden geschreven. De Edge Network gebruikt deze waarde om te bepalen of de status kan worden voortgezet als cookies. |
 
-Zelfs als ondersteuning voor cookies is ingeschakeld via het dialoogvenster `cookiesEnabled` markering, zal het Netwerk van de Rand van Adobe Experience Platform slechts de staatsingangen schrijven als het verzoek top-level domein met `domain` opgegeven door de aanroeper. Wanneer er een probleem is, worden items geretourneerd in een `state:store` handgreep.
+Zelfs als cookies worden ondersteund via de markering `cookiesEnabled` , schrijft de Adobe Experience Platform-Edge Network alleen de statusitems als de aanvraag voor het domein op het hoogste niveau overeenkomt met de `domain` die door de aanroeper is opgegeven. Wanneer er een probleem is, worden items geretourneerd in een `state:store` -greep.
 
 U kunt de cookies van de eerste fabrikant niet schrijven (zelfs niet als ondersteuning is ingeschakeld) in de volgende gevallen:
 
-* Het verzoek is afkomstig van de derde `adobedc.demdex.net` domein.
-* Het verzoek is afkomstig van een eerste `CNAME` domein, verschillend van gespecificeerd door de bezoeker binnen `meta.state.domain`.
+* De aanvraag is afkomstig van het domein `adobedc.demdex.net` van derden.
+* De aanvraag wordt uitgevoerd op een domein van de eerste partij `CNAME` , anders dan het domein dat door de aanroeper in `meta.state.domain` wordt opgegeven.
 
 ## Koekjesbeveiliging
 
-Alle cookies hebben de [Veilige markering](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#restrict_access_to_cookies) indien mogelijk ingeschakeld.
+Alle koekjes hebben de [ Veilige vlag ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#restrict_access_to_cookies) toegelaten waar mogelijk.
 
-Alle veilige cookies hebben de [Het kenmerk SameSite](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) instellen op `None`, wat betekent dat cookies in alle contexten worden verzonden, zowel in de eerste als in de andere partij.
+Alle veilige koekjes hebben het [ attribuut SameSite ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) geplaatst aan `None`, betekenend dat de koekjes in alle contexten, zowel 1st partij als dwars-oorsprong worden verzonden.
 
-* Voor de cookies van de eerste partij (`kndcrt_*`), de `Secure` markering wordt alleen ingesteld wanneer de aanvraagcontext beveiligd is (HTTPS) en wanneer de referentie ([Verwijzer HTTP-header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)) is ook HTTPS. Als de verwijzer niet veilig (HTTP) is, `Secure` De vlag wordt weggelaten om het Web SDK toe te staan om hen te lezen. Een beveiligde cookie kan niet worden gelezen vanuit een onveilige context.
-* Voor het cookie van derden (demdex): `Secure` markering is altijd ingesteld, aangezien alle aanvragen HTTPS zijn, de aanvraagcontext veilig is en dit cookie nooit vanuit JavaScript wordt gelezen.
+* Voor de eerste-partijkoekjes (`kndcrt_*`), wordt de `Secure` vlag slechts geplaatst wanneer de verzoekcontext veilig (HTTPS) is en wanneer verwijzer ([ de Kopbal van HTTP van de Verwijzing ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)) ook HTTPS is. Als de verwijzer niet veilig (HTTP) is, wordt de `Secure` vlag weggelaten om het Web SDK toe te staan om hen te lezen. Een beveiligde cookie kan niet worden gelezen vanuit een onveilige context.
+* Voor het cookie van derden (demdex) wordt de markering `Secure` altijd ingesteld, aangezien alle aanvragen HTTPS zijn. De aanvraagcontext is dus veilig en deze cookie wordt nooit gelezen vanuit JavaScript.
 
-De `Secure` markering is niet aanwezig in de [metagegevensweergave van cookies](#state-as-metadata). Alleen de `SameSite` -kenmerk is opgenomen. In dit geval is het de verantwoordelijkheid van de klant om de `Secure` wanneer de `SameSite` is present. Cookies met `SameSite=None` moet ook de `Secure` -kenmerk, aangezien voor deze toepassingen een beveiligde context (HTTPS) is vereist.
+De `Secure` vlag is niet aanwezig in de [ meta-gegevensvertegenwoordiging van koekjes ](#state-as-metadata). Alleen het kenmerk `SameSite` wordt opgenomen. In dit geval is het de verantwoordelijkheid van de client om de markering `Secure` correct in te stellen wanneer het kenmerk `SameSite` aanwezig is. Cookies met `SameSite=None` moeten ook het kenmerk `Secure` opgeven, omdat hiervoor een beveiligde context (HTTPS) is vereist.

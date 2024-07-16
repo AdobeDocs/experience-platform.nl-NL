@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!TIP]
 >
->[AI Assistant in Experience Platform](https://platform.adobe.com) is nu beschikbaar. Gebruik AI Assistant om uw workflows in Adobe-toepassingen te versnellen. [Meer informatie](#ai-assistant) over de nieuwe functionaliteit.
+>[ AI Medewerker in Experience Platform ](https://platform.adobe.com) is nu beschikbaar. Gebruik AI Assistant om uw workflows in Adobe-toepassingen te versnellen. [ las meer ](#ai-assistant) over de nieuwe functionaliteit.
 
 Nieuwe functies in Adobe Experience Platform:
 
@@ -32,105 +32,105 @@ Nieuwe functies in Adobe Experience Platform:
 
 AI Assistant in Adobe Experience Platform is een conversatie-ervaring die u kunt gebruiken om uw workflows in Adobe-toepassingen te versnellen. U kunt AI Medewerker gebruiken om productkennis beter te begrijpen, problemen problemen op te lossen, of door informatie te zoeken en operationele inzichten te vinden. AI Assistant biedt ondersteuning voor Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics.
 
-**Nieuwe functie**
+**Nieuwe eigenschap**
 
 | Functie | Beschrijving |
 | --- | --- |
-| AI Assistant in Experience Platform | U kunt nu AI Assistant in Experience Platform gebruiken. AI Assistant ondersteunt Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics. <br> ![AI Assistant in Exprience Platform.](../2024/assets/june/ai-assistant-full.png "AI Assistant in Exprience Platform."){width="100" zoomable="yes"} <br> Voor meer informatie over deze functie leest u de [Handleiding voor AI Assistant-gebruikersinterface](../../ai-assistant/ui-guide.md). |
-| Ondersteuning voor productkennisvragen | [Productkennis](../../ai-assistant/home.md#product-knowledge) zijn concepten en onderwerpen die in de documentatie van het Experience League worden gegrond en kunnen voor gericht leren, open ontdekking, en het oplossen van problemen worden gebruikt. U kunt voor de productkennis van AI Assistant vragen stellen zoals: <ul><li>Wat zijn gewone kijkers?</li><li>Hoe wordt de rijkerheid van het Profiel berekend?</li><li> Kan ik een profiel schrappen toegelaten schema nadat de gegevens worden opgenomen?</li></ul> |
-| [!BADGE Beta]{type=Informative} Ondersteuning voor vragen over operationele inzichten | [Operationele inzichten](../../ai-assistant/home.md#operational-insights) zijn antwoorden produceert de Medewerker van AI over uw meta-gegevensvoorwerpen met inbegrip van tellingen, raadplegingen, en lijneffect. Met operationele inzichten worden geen gegevens in uw sandbox weergegeven. U kunt AI Assistant vragen stellen over operationele inzichten, zoals: <ul><li>Welke bestemmingen zijn in een actieve staat?</li><li>Hoeveel datasets heb ik?</li><li>Geef een overzicht van de soorten publiek die worden gebruikt voor rechtstreekse reizen.</li></ul> Operationele inzichten worden ondersteund op de volgende gebieden: kenmerken, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s en bronnen. |
-| AI-assistent openen | Als u de AI-assistent voor Experience Platform, Real-Time CDP en Journey Optimizer wilt openen, moet u aan een rol toevoegen die de **AI-assistent inschakelen** en **Operationele inzichten weergeven** machtigingen. Lees voor meer informatie de [toegangsgids voor functies](../../ai-assistant/access.md). U moet de Admin Console gebruiken voor [toegang in Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant?lang=en#feature-access). |
+| AI Assistant in Experience Platform | U kunt nu AI Assistant in Experience Platform gebruiken. AI Assistant ondersteunt Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics. <br> ![ AI Medewerker in het Platform van de Ervaring.](../2024/assets/june/ai-assistant-full.png " AI Medewerker in het Platform van de Ervaring."){width="100" zoomable="yes"} <br> voor meer informatie over deze eigenschap, lees de [ HulpUI UI van AI gids ](../../ai-assistant/ui-guide.md). |
+| Ondersteuning voor productkennisvragen | [ de kennis van het Product ](../../ai-assistant/home.md#product-knowledge) is concepten en onderwerpen die in de documentatie van het Experience League worden gegrond en kan voor gericht leren, open ontdekking, en het oplossen van problemen worden gebruikt. U kunt voor de productkennis van AI Assistant vragen stellen zoals: <ul><li>Wat zijn gewone kijkers?</li><li>Hoe wordt de rijkerheid van het Profiel berekend?</li><li> Kan ik een profiel schrappen toegelaten schema nadat de gegevens worden opgenomen?</li></ul> |
+| [!BADGE  Beta ] {type=Informative} Steun voor operationele inzichten vragen | [ Operationele inzichten ](../../ai-assistant/home.md#operational-insights) zijn antwoorden AI Medewerker produceert over uw meta-gegevensvoorwerpen met inbegrip van tellingen, raadplegingen, en lijneffect. Met operationele inzichten worden geen gegevens in uw sandbox weergegeven. U kunt AI Assistant vragen stellen over operationele inzichten, zoals: <ul><li>Welke bestemmingen zijn in een actieve staat?</li><li>Hoeveel datasets heb ik?</li><li>Geef een overzicht van de soorten publiek die worden gebruikt voor rechtstreekse reizen.</li></ul> Operationele inzichten worden ondersteund op de volgende gebieden: kenmerken, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s en bronnen. |
+| AI-assistent openen | Om tot AI Medewerker voor Experience Platform, Real-Time CDP, en Journey Optimizer toegang te hebben, moet u aan een rol worden toegevoegd die **toelaat AI Medewerker** en **de Operationele toestemmingen van de Mening** omvat. Voor meer informatie, lees de [ gids van de eigenschaptoegang ](../../ai-assistant/access.md). U moet de Admin Console voor [ toegang in Customer Journey Analytics ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant?lang=en#feature-access) gebruiken. |
 
-Voor meer informatie over AI Assistant leest u de [Overzicht van AI-assistent](../../ai-assistant/home.md).
+Voor meer informatie over AI Medewerker, lees het [ AI Hulpoverzicht ](../../ai-assistant/home.md).
 
 ## Verificatie van Experience Platform-API&#39;s {#authentication-platform-apis}
 
-De methode JWT om toegangstokens te verkrijgen wordt nu afgekeurd voor nieuwe integratie en door een eenvoudigere server-aan-server authentificatiemethode OAuth vervangen.<p>![Nieuwe OAuth authentificatiemethode om benadrukte toegangstokens te krijgen.](/help/landing/images/api-authentication/oauth-authentication-method.png "Nieuwe OAuth authentificatiemethode om benadrukte toegangstokens te krijgen."){width="100" zoomable="yes"}</p>
+De methode JWT om toegangstokens te verkrijgen wordt nu afgekeurd voor nieuwe integratie en door een eenvoudigere server-aan-server authentificatiemethode OAuth vervangen.<p>![ Nieuwe benadrukte authentificatiemethode OAuth om toegangstokens te krijgen.](/help/landing/images/api-authentication/oauth-authentication-method.png " Nieuwe OAuth authentificatiemethode om benadrukte toegangstokens te krijgen."){width="100" zoomable="yes"}</p>
 
-Terwijl de bestaande API integratie gebruikend de de authentificatiemethode JWT tot 1 Januari, 2025 zal blijven werken, adviseert de Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Lees de handleiding op [migreren van de credentie van de Rekening van de Dienst (JWT) aan OAuth server-aan-Server referentie](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+Terwijl de bestaande API integratie gebruikend de de authentificatiemethode JWT tot 1 Januari, 2025 zal blijven werken, adviseert de Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Lees de gids op [ migrerend van de Rekening van de Dienst (JWT) credential aan OAuth Server-aan-Server credential ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
 
 ## Gegevensvoorbereiding {#data-prep}
 
 Gegevens gebruiken prep om gegevens toe te wijzen, om te zetten en te bevestigen aan en van het Model van de Gegevens van de Ervaring (XDM).
 
-**Nieuwe of bijgewerkte functies**
+**Nieuwe of bijgewerkte eigenschappen**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Toevoegingen aan de lijst met gereserveerde trefwoorden | De volgende woorden zijn toegevoegd aan de lijst met gereserveerde trefwoorden voor gegevensvoorinstelling:<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul> Lees voor meer informatie de [handleiding voor functies voor gegevenprep](../../data-prep/functions.md). |
+| Toevoegingen aan de lijst met gereserveerde trefwoorden | De volgende woorden zijn toegevoegd aan de lijst met gereserveerde trefwoorden voor gegevensvoorinstelling:<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul> Voor meer informatie, lees de [ gegevens prep functies gids ](../../data-prep/functions.md). |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de Prep van Gegevens, lees [Overzicht van Data Prep](../../data-prep/home.md).
+Voor meer informatie over de Prep van Gegevens, lees het [ Overzicht van de Prep van Gegevens ](../../data-prep/home.md).
 
 ## Doelen {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
 **Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
 
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| Verbetering voor ad-hocexport-API om extern publiek te exporteren | U kunt nu de API voor ad-hocexport gebruiken om externe doelgroepen (aangepaste upload) te exporteren. [Meer informatie](/help/destinations/api/ad-hoc-activation-api.md) . |
+| Verbetering voor ad-hocexport-API om extern publiek te exporteren | U kunt nu de API voor ad-hocexport gebruiken om externe doelgroepen (aangepaste upload) te exporteren. [ las meer ](/help/destinations/api/ad-hoc-activation-api.md). |
 | (Beta) Aanvullende functies die worden ondersteund in de bètafase van exportarrayondersteuning | Eerder, toen het activeren van publiek aan op dossier-gebaseerde bestemmingen en het selecteren van Gebruik berekend gebied, was u beperkt tot het gebruiken van een ondergroep van de soorten publiek beschikbaar door gegevens prep. Deze beperking is nu opgeheven en klanten hebben toegang tot alle functies beschikbaar door gegevensprep wanneer het uitvoeren van publiek naar op dossier-gebaseerde bestemmingen. [Meer informatie](/help/destinations/ui/export-arrays-calculated-fields.md#supported-functions). |
-| Alleen velden met gegevens in de toewijzingsstap tonen | Wanneer u profielkenmerken toewijst aan uw doelen, kunt u nu schakelen tussen alle profielkenmerken of alleen de kenmerken die gegevens bevatten. Standaard worden alleen de velden met gegevens weergegeven. Zie de activeringshandleidingen voor [partij](../../destinations/ui/activate-batch-profile-destinations.md#mapping) en [streaming](../../destinations/ui/activate-segment-streaming-destinations.md#mapping) bestemmingen voor meer informatie. |
+| Alleen velden met gegevens in de toewijzingsstap tonen | Wanneer u profielkenmerken toewijst aan uw doelen, kunt u nu schakelen tussen alle profielkenmerken of alleen de kenmerken die gegevens bevatten. Standaard worden alleen de velden met gegevens weergegeven. Zie de activeringsgidsen voor [ partij ](../../destinations/ui/activate-batch-profile-destinations.md#mapping) en [ het stromen ](../../destinations/ui/activate-segment-streaming-destinations.md#mapping) bestemmingen voor meer details. |
 
 {style="table-layout:auto"}
 
-Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
+Voor meer algemene informatie over bestemmingen, verwijs naar het [ overzicht van bestemmingen ](../../destinations/home.md).
 
 ## Identiteitsservice {#identity-service}
 
 Gebruik Adobe Experience Platform Identity Service om een uitgebreide weergave van uw klanten en hun gedrag te maken door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 
-**Opkomende functies**
+**Komende eigenschappen**
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Regels voor identiteitsgrafieken koppelen | De deelnemers van het bètaprogramma kunnen identiteitsgrafiek gebruiken die regels verbindt om de vertegenwoordiging van de persoonentiteit in het systeem te verzekeren door &quot;gedeelde apparaat&quot;en andere scenario&#39;s van de grafiekondergang te verhinderen. Om dit doel te bereiken, zullen de deelnemers tijdens het bètaprogramma toegang tot drie eigenschappen in een milieu van de ontwikkelingszandbak hebben: <ul><li>Het grafieksimulatietool om te begrijpen hoe het grafiekalgoritme werkt.</li><li>Het scherm met identiteitsinstellingen om unieke naamruimten en naamruimtetrieprioriteiten te configureren.</li><li>Een identiteitsdashboard om inzicht te krijgen in opgenomen grafieken.</li></ul> Daarnaast bevat het bètaprogramma verbeteringen in de stabiliteit van het profielgedrag. Lees voor meer informatie de [koppelingsregels voor identiteitsgrafiek](../../identity-service/identity-graph-linking-rules/overview.md) documentatie. |
+| [!BADGE  Beta ] {type=Informative} grafiek die van de Identiteit regels verbindt | De deelnemers van het bètaprogramma kunnen identiteitsgrafiek gebruiken die regels verbindt om de vertegenwoordiging van de persoonentiteit in het systeem te verzekeren door &quot;gedeelde apparaat&quot;en andere scenario&#39;s van de grafiekondergang te verhinderen. Om dit doel te bereiken, zullen de deelnemers tijdens het bètaprogramma toegang tot drie eigenschappen in een milieu van de ontwikkelingszandbak hebben: <ul><li>Het grafieksimulatietool om te begrijpen hoe het grafiekalgoritme werkt.</li><li>Het scherm met identiteitsinstellingen om unieke naamruimten en naamruimtetrieprioriteiten te configureren.</li><li>Een identiteitsdashboard om inzicht te krijgen in opgenomen grafieken.</li></ul> Daarnaast bevat het bètaprogramma verbeteringen in de stabiliteit van het profielgedrag. Voor meer informatie, lees de [ identiteitsgrafiek die regels ](../../identity-service/identity-graph-linking-rules/overview.md) documentatie verbindt. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over Identiteitsservice leest u de [Overzicht van identiteitsservice](../../identity-service/home.md).
+Voor meer informatie over de Dienst van de Identiteit, lees het [ overzicht van de Dienst van de Identiteit ](../../identity-service/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
-Verschillende wettelijke en organisatorische regelingen geven gebruikers het recht om hun persoonsgegevens op verzoek in uw gegevensopslag te openen of te verwijderen. Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful API en een gebruikersinterface om u te helpen deze gegevensverzoeken van uw klanten beheren. Met [!DNL Privacy Service]kunt u verzoeken om toegang tot persoonlijke of persoonlijke klantgegevens van Adobe Experience Cloud-toepassingen en deze verwijderen, zodat u gemakkelijker kunt voldoen aan wettelijke en organisatorische privacyregels.
+Verschillende wettelijke en organisatorische regelingen geven gebruikers het recht om hun persoonsgegevens op verzoek in uw gegevensopslag te openen of te verwijderen. Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u deze gegevensaanvragen van uw klanten kunt beheren. Met [!DNL Privacy Service] kunt u verzoeken indienen om toegang te krijgen tot persoonlijke of persoonlijke klantgegevens en deze te verwijderen uit Adobe Experience Cloud-toepassingen, waardoor u gemakkelijker kunt voldoen aan wettelijke en organisatorische privacyregels.
 
-**Nieuwe functies**
+**Nieuwe eigenschappen**
 
 | Functie | Beschrijving |
 |--- | ---|
-| Privacy Service-ondersteuning voor Adobe Journey Optimizer | De mogelijkheden van de Privacy Service zijn nu compatibel met de protocollen van Adobe Journey Optimizer voor het verwerken van verwijderingsverzoeken. Zie de [Adobe Journey Optimizer-documentatie over privacyverzoeken](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests) voor meer informatie, of de documentatie van het Experience Platform voor een lijst van [Experience Cloud toepassingen die met Privacy Service worden geïntegreerd](../../privacy-service/experience-cloud-apps.md). |
+| Privacy Service-ondersteuning voor Adobe Journey Optimizer | De mogelijkheden van de Privacy Service zijn nu compatibel met de protocollen van Adobe Journey Optimizer voor het verwerken van verwijderingsverzoeken. Zie de [ documentatie van de de privacyverzoeken van Adobe Journey Optimizer ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests) voor meer informatie, of de documentatie van het Experience Platform voor een lijst van [ toepassingen van het Experience Cloud die met Privacy Service ](../../privacy-service/experience-cloud-apps.md) worden geïntegreerd. |
 
-Zie de [Overzicht van Privacy Service](../../privacy-service/home.md) voor meer informatie over de dienst.
+Zie het [ overzicht van de Privacy Service ](../../privacy-service/home.md) voor meer informatie over de dienst.
 
 ## Segmenteringsservice {#segmentation}
 
 [!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
 
-**Nieuwe of bijgewerkte functies**
+**Nieuwe of bijgewerkte eigenschappen**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Tijdgebonden update | Het gedrag voor &quot;Deze maand&quot; en &quot;Dit jaar&quot; is bijgewerkt en vertegenwoordigt nu respectievelijk de &quot;maand-tot-datum&quot; en &quot;jaar-tot-datum&quot;. Voor meer informatie over deze wijziging raadpleegt u de [Handleiding Segment Builder](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
+| Tijdgebonden update | Het gedrag voor &quot;Deze maand&quot; en &quot;Dit jaar&quot; is bijgewerkt en vertegenwoordigt nu respectievelijk de &quot;maand-tot-datum&quot; en &quot;jaar-tot-datum&quot;. Voor meer informatie over deze verandering, lees de [ gids van de Bouwer van het Segment ](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over [!DNL Segmentation Service], zie de [Overzicht van segmentatie](../../segmentation/home.md).
+Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het [ overzicht van de Segmentatie ](../../segmentation/home.md).
 
 ## Playbooks voor gebruiksscenario {#use-case-playbooks}
 
-[!DNL Use Case Playbooks] zijn gratis beschikbaar voor alle Adobe Experience Platform-klanten. Om tot een rijke galerij van gebruikscase playbooks in de UI van het Experience Platform toegang te hebben, kunt u nu selecteren **[!UICONTROL Playbooks]** in de linkernavigatie.
+[!DNL Use Case Playbooks] zijn zonder extra kosten beschikbaar voor alle Adobe Experience Platform-klanten. Als u een uitgebreide galerie met gebruikscase-afspeelboeken wilt openen in de gebruikersinterface van het Experience Platform, kunt u nu **[!UICONTROL Playbooks]** selecteren in de linkernavigatie.
 
 [!DNL Use Case Playbooks] zijn ontworpen om u te helpen bij het overwinnen van uitdagingen wanneer u begint met Real-time Customer Data Platform of Adobe Journey Optimizer. Zij bieden begeleiding en produceren diverse activa die u kunt testen en invoeren in productiemilieu&#39;s wanneer u klaar bent, zelfs als u niet zeker bent waar te beginnen of hoe te om de correcte activa voor uw voorgenomen gebruiksgevallen te produceren.
 
-Om aan de slag te gaan, leest u de [Overzicht van hoofdletters en kleine letters gebruiken](/help/use-case-playbooks/playbooks/overview.md), die een overzicht biedt van de functionaliteit van de afspeelboeken, hun doel en een end-to-end demonstratie, waaronder het maken van instanties en het importeren van gegenereerde elementen in andere sandboxomgevingen.
+Om begonnen te worden, lees het [ overzicht van de Playbooks van het Geval van het Gebruik ](/help/use-case-playbooks/playbooks/overview.md), dat een overzicht van de functionaliteit van playbooks, hun doel, en een demonstratie van begin tot eind, met inbegrip van hoe te om instanties tot stand te brengen en geproduceerde activa in andere zandbakmilieu&#39;s in te voeren verstrekt.
 
-Als u wilt leren hoe u een inspirerende sandbox kunt openen en instellen om verschillende gebruikscasehandboeken te experimenteren en te verkennen, raadpleegt u de [Navigeren naar Hoofdletters gebruiken](/help/use-case-playbooks/playbooks/navigate.md) document.
+Om te leren hoe u tot een inspirerende zandbak toegang hebt en opstelling kunt om diverse gebruikscase playbooks te experimenteren en te onderzoeken, [ navigeer aan het document van de Playbooks van het Geval van het Gebruik ](/help/use-case-playbooks/playbooks/navigate.md).
 
-Meer informatie over [!DNL Use Case Playbooks], lees de volgende documentatiepagina&#39;s:
+Lees voor meer informatie over [!DNL Use Case Playbooks] de volgende documentatiepagina&#39;s:
 
-- Een lijst met alle [beschikbare playbooks](/help/use-case-playbooks/playbooks/playbooks-list.md), gegroepeerd op product (Real-Time CDP of Journey Optimizer).
-- Meer informatie over [machtigingen](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) zijn noodzakelijk voor u of gebruik playbooks en de activa die zij creëren.
-- Begrijp het [functionaliteit voor gegevensbewustzijn](/help/use-case-playbooks/playbooks/data-awareness.md) Hiermee kunt u gegenereerde elementen dupliceren naar andere sandboxomgevingen.
+- Verkrijg een lijst van alle [ beschikbare playbooks ](/help/use-case-playbooks/playbooks/playbooks-list.md), die door product (Real-Time CDP of Journey Optimizer) wordt gegroepeerd.
+- Leer over welke [ toestemmingen ](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) noodzakelijk voor u zijn of playbooks en de activa gebruiken zij..
+- Begrijp de [ functionaliteit van het gegevensbewustzijn ](/help/use-case-playbooks/playbooks/data-awareness.md) die u toestaat om geproduceerde activa aan andere zandbakmilieu&#39;s te dupliceren.

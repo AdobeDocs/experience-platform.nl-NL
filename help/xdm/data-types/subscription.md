@@ -7,7 +7,7 @@ exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '383'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -24,19 +24,19 @@ ht-degree: 1%
 | `subscriber` | [[!UICONTROL Person]](./person.md) | Beschrijft een individuele persoon. Dit kan ook een persoon vertegenwoordigen die in diverse rollen, zoals een klant, een contact, of een eigenaar handelt. |
 | `SKU` | String | De voorraadeenheid (SKU), een unieke identificatiecode voor een product. |
 | `billingPeriod` | String | De duur tussen factureringen. |
-| `billingStartDate` | Datum | De datum waarop de eerste rekening verschuldigd is. De datumnotatie (zonder tijd) moet de [RFC 3339, punt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standaard. |
+| `billingStartDate` | Datum | De datum waarop de eerste rekening verschuldigd is. Het datumformaat (zonder tijd) zou [ RFC 3339, sectie 5.6 ](https://tools.ietf.org/html/rfc3339#section-5.6) norm moeten volgen. |
 | `category` | String | De belangrijkste categorisering op hoofdniveau van dit type abonnement. |
 | `chargeMethod` | String | De manier waarop de facturering wordt ingesteld om de klant in rekening te brengen. |
 | `contractID` | String | De unieke id voor het contract dat dit abonnement regelt. |
 | `country` | String | Het land waarin de contractvoorwaarden voor de inschrijving en de overeenkomst zijn geworteld. |
-| `endDate` | Datum | De datum waarop de huidige abonnementsduur afloopt. De datumnotatie (zonder tijd) moet de [RFC 3339, punt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standaard. |
+| `endDate` | Datum | De datum waarop de huidige abonnementsduur afloopt. Het datumformaat (zonder tijd) zou [ RFC 3339, sectie 5.6 ](https://tools.ietf.org/html/rfc3339#section-5.6) norm moeten volgen. |
 | `paymentMethod` | String | De betalingsmethode voor terugkerende betalingen. |
 | `paymentStatus` | String | De betalingsstatus van de rekening. |
 | `planName` | String | De leesbare naam voor het abonnement. |
 | `reason` | String | De algemene intentie van het lid voor het gebruik van het abonnement. |
 | `renew` | String | De overeengekomen manier waarop het abonnement na de einddatum kan worden voortgezet. |
 | `revision` | String | De identificatie tussen abonnementen van dezelfde naam en categoriehiërarchie. |
-| `startDate` | Datum | De datum waarop het abonnement begint. De datumnotatie (zonder tijd) moet de [RFC 3339, punt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standaard. |
+| `startDate` | Datum | De datum waarop het abonnement begint. Het datumformaat (zonder tijd) zou [ RFC 3339, sectie 5.6 ](https://tools.ietf.org/html/rfc3339#section-5.6) norm moeten volgen. |
 | `status` | String | De huidige status van het abonnement. |
 | `subCategory` | String | De specifieke subcategorisering van het abonnement. |
 | `term` | Geheel | De numerieke waarde van de abonnementstermijn. |
@@ -48,5 +48,5 @@ ht-degree: 1%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.schema.json)

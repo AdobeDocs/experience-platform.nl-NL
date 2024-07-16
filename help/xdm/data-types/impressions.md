@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # [!UICONTROL Impressions] gegevenstype
 
-[!UICONTROL Impressions] is een standaard XDM-gegevenstype dat een marketingindruk beschrijft. Dit is een maatstaf die wordt gebruikt om het aantal digitale weergaven of opdrachten voor inhoud zoals een advertentie, digitale post of webpagina te kwantificeren.
+[!UICONTROL Impressions] is een standaard-XDM-gegevenstype dat een marketingindruk beschrijft. Dit is een maatstaf die wordt gebruikt om het aantal digitale weergaven of opdrachten voor inhoud zoals een advertentie, digitale post of webpagina te kwantificeren.
 
 ![](../images/data-types/impressions.png)
 
@@ -26,5 +26,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.schema.json)

@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # Richtlijnen voor het oplossen van problemen met sandboxen
 
-Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform. Voor vragen en problemen met betrekking tot andere platformservices raadpleegt u de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
+Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere diensten van het Platform, gelieve te verwijzen naar de [ gids van het oplossen van problemenprobleem van de Experience Platform ](../landing/troubleshooting.md).
 
 Sandboxen verdelen één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s om digitale ervaringstoepassingen te ontwikkelen en te evolueren. Zie het [sandboxoverzicht](home.md) voor meer informatie.
 
@@ -31,11 +31,11 @@ Sandboxen zijn virtuele partities binnen één instantie van Experience Platform
 
 Het Experience Platform bevat twee sandboxtypen:
 
-* **Productiesandbox**: Een productiesandbox moet worden gebruikt met profielen in uw productieomgeving. Met Platform kunt u meerdere productiesandboxen maken om de juiste functionaliteit voor gegevens te bieden terwijl de operationele isolatie behouden blijft. Met deze functie kunt u specifieke productiesandboxen toewijzen aan verschillende bedrijfsonderdelen, merken, projecten of regio&#39;s. Productiesandboxen ondersteunen een volume productieprofielen tot aan uw licentie [!DNL Profile] verbintenis (cumulatief gemeten over al uw geautoriseerde productiesandboxen). U hebt het recht om een gemiddeld profiel met licentie te gebruiken per geautoriseerde [!DNL Profile] (cumulatief gemeten over al uw geoorloofde productie sandboxen).
-* **Ontwikkelingssandbox**: Een ontwikkelingssandbox is een sandbox die uitsluitend kan worden gebruikt voor ontwikkeling en testen met niet-productieprofielen. De zandbakken van de ontwikkeling steunen een hoeveelheid non-production profielen tot 10% van uw vergunning [!DNL Profile] verbintenis (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen). U hebt recht op maximaal:
+* **zandbak van de Productie**: Een productiestandaard wordt bedoeld om met profielen in uw productiemilieu te worden gebruikt. Met Platform kunt u meerdere productiesandboxen maken om de juiste functionaliteit voor gegevens te bieden terwijl de operationele isolatie behouden blijft. Met deze functie kunt u specifieke productiesandboxen toewijzen aan verschillende bedrijfsonderdelen, merken, projecten of regio&#39;s. Productiesandboxen ondersteunen een volume productieprofielen tot aan uw gelicentieerde [!DNL Profile] toezegging (cumulatief gemeten over al uw geoorloofde productie-sandboxen). U hebt het recht om een gemiddeld profiel met licentie te gebruiken per geautoriseerde [!DNL Profile] (dit profiel wordt cumulatief gemeten in al uw geautoriseerde productiesandboxen).
+* **zandbak van de Ontwikkeling**: Een ontwikkelingszandbak is een zandbak die exclusief voor ontwikkeling en het testen met niet-productieprofielen kan worden gebruikt. Ontwikkelingssandboxen ondersteunen een volume niet-productieprofielen tot 10% van uw gelicentieerde [!DNL Profile] -betrokkenheid (cumulatief gemeten in alle geautoriseerde ontwikkelingssandboxen). U hebt recht op maximaal:
    * een gemiddelde rijkheid van het non-production profiel van 75 kilobytes per geautoriseerd niet-productieprofiel (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen);
    * één batchsegmentatietaak per dag, per ontwikkelingssandbox;
-   * Gemiddeld 120 [!DNL Profile] API-aanroepen, per [!DNL Profile], per jaar (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen.
+   * Gemiddeld 120 [!DNL Profile] API-aanroepen per [!DNL Profile] per jaar (cumulatief gemeten in al uw geautoriseerde ontwikkelingssandboxen).
 
 Zie het [sandboxoverzicht](./home.md) voor meer informatie.
 
@@ -53,7 +53,7 @@ Een instantie van het Experience Platform steunt veelvoudige productie en ontwik
 
 Een standaardlicentie voor Experience Platforms kent u in totaal vijf sandboxen toe, die u kunt classificeren als productie of ontwikkeling. U kunt extra pakketten van 10 sandboxen een licentie geven tot een maximum van 75 sandboxen in totaal.
 
-De zandbakken van de productie kunnen worden teruggesteld of worden geschrapt, behalve productie zandbakken die ook door Adobe Analytics voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=nl) -functie, of als de identiteitsgrafiek die erin wordt gehost, ook door Adobe Audience Manager wordt gebruikt voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl) gebruiken.
+De zandbakken van de productie kunnen worden teruggesteld of worden geschrapt, behalve productiezandbakken die ook door Adobe Analytics voor de [ Analyse van het Apparaat kruis (CDA) ](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=nl) eigenschap worden gebruikt, of als de identiteitsgrafiek binnen het ook wordt ontvangen door Adobe Audience Manager voor de [ Mensen Gebaseerde Eigenschappen (PBD) ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl) eigenschap.
 
 U kunt de titel van een productiesandbox bijwerken. De naam van een productiesandbox kan echter niet worden gewijzigd.
 
@@ -69,8 +69,8 @@ Ontwikkelingssandboxen bieden ondersteuning voor functies voor opnieuw instellen
 
 ## Ik heb zojuist een zandbak gemaakt. Hoe kan ik machtigingen instellen voor de gebruikers die met deze sandbox gaan werken?
 
-De Adobe Admin Console koppelt gebruikers aan sandboxen en machtigingen via het gebruik van productprofielen. Nadat u een nieuwe sandbox hebt gemaakt, navigeert u naar de **Machtigingen** tabblad van het productprofiel waaraan u toegang wilt verlenen, klikt u op **Sandboxen**. Van hieruit kunt u op dezelfde manier als andere machtigingen toegang tot de nieuwe sandbox toevoegen of verwijderen.
+De Adobe Admin Console koppelt gebruikers aan sandboxen en machtigingen via het gebruik van productprofielen. Na het creëren van een nieuwe zandbak, navigeer aan het **lusje van Toestemmingen** van het productprofiel u toegang tot wenst te verlenen, dan klik **Sandboxes**. Van hieruit kunt u op dezelfde manier als andere machtigingen toegang tot de nieuwe sandbox toevoegen of verwijderen.
 
 Als u unieke machtigingen wilt toevoegen aan gebruikers van een bepaalde sandbox, moet u mogelijk een nieuw productprofiel maken met de desbetreffende sandboxen en machtigingen die zijn toegepast, en die gebruikers toewijzen aan dat profiel.
 
-Zie de [gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview.md) voor meer informatie over het beheer van sandboxen en machtigingen in de Admin Console.
+Zie de [ gebruikershandleiding van de toegangscontrole ](../access-control/ui/overview.md) voor meer informatie bij het beheren van zandbakken en toestemmingen in de Admin Console.

@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Een catalogusobject opzoeken
 
-Als u de unieke id voor een specifieke id kent [!DNL Catalog] kunt u een GET-verzoek uitvoeren om de details van dat object weer te geven.
+Als u de unieke id voor een specifiek [!DNL Catalog] -object kent, kunt u een GET-aanvraag uitvoeren om de details van dat object weer te geven.
 
 >[!NOTE]
 >
->Bij het weergeven van specifieke objecten is het nog steeds raadzaam [filteren op eigenschappen](filter-data.md) en retourneert alleen de eigenschappen waarin u geïnteresseerd bent.
+>Wanneer het bekijken van specifieke voorwerpen, is het nog beste praktijken aan [ filter door eigenschappen ](filter-data.md) en terugkeer slechts de eigenschappen u geinteresseerd bent in.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{OBJECT_TYPE}/{OBJECT_ID}
@@ -28,12 +28,12 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] -object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt ophalen. |
 
 **Verzoek**
 
-Het volgende verzoek wint een dataset door zijn identiteitskaart terug, die zijn terugkeert `name`, `description`, `tags`, en `files` eigenschappen.
+Met de volgende aanvraag wordt een gegevensset opgehaald op basis van de id en worden de eigenschappen `name` , `description` , `tags` en `files` geretourneerd.
 
 ```shell
 curl -X GET \
@@ -44,9 +44,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord keert de gespecificeerde dataset met slechts gevraagde terug `properties` in het lichaam.
+Een succesvolle reactie keert de gespecificeerde dataset met slechts gevraagde `properties` in het lichaam terug.
 
 ```json
 {
@@ -65,4 +65,4 @@ Een succesvol antwoord keert de gespecificeerde dataset met slechts gevraagde te
 
 >[!NOTE]
 >
->Eigenschappen waarvan de waarden vooraf zijn ingesteld op `@` Hiermee worden verwante objecten weergegeven. Zie het aanhangsel over [weergeven, verwante objecten](appendix.md#view-interrelated-objects) voor stappen voor het weergeven van de details van deze objecten.
+>Eigenschappen waarvan de waarden vooraf met `@` zijn ingesteld, vertegenwoordigen onderling verwante objecten. Zie de appendix sectie op [ het bekijken van onderling verwant voorwerpen ](appendix.md#view-interrelated-objects) voor stappen op hoe te om de details van deze voorwerpen te bekijken.

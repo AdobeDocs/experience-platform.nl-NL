@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform Insights-gegevensmodel B2B Edition
 
-Het Real-time Customer Data Platform Insights-gegevensmodel voor de B2B Edition stelt de gegevensmodellen en SQL beschikbaar die de inzichten van [accountprofielen](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw B2B marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw dashboards worden gebruikt.
+Het de gegevensmodel van Inzichten van Real-time Customer Data Platform voor de B2B Uitgave stelt de gegevensmodellen en SQL bloot die de inzichten voor [ rekeningsprofielen ](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) aandrijven. U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw B2B marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw dashboards worden gebruikt.
 
 >[!AVAILABILITY]
 >
->Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP-pakket Premier en Ultimate hebben aangeschaft. Zie de documentatie over de beschikbare [Real-Time CDP-edities](../../rtcdp/overview.md#rtcdp-editions) voor meer informatie, of contacteer uw Adobe vertegenwoordiger.
+>Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP-pakket Premier en Ultimate hebben aangeschaft. Zie de documentatie over beschikbare [ versies van Real-Time CDP ](../../rtcdp/overview.md#rtcdp-editions) voor meer informatie, of contacteer uw vertegenwoordiger van de Adobe.
 
 <!-- 
 See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
@@ -25,7 +25,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## Vereisten
 
-Deze handleiding vereist een goed begrip van aangepaste dashboards. Lees de documentatie op [een aangepast dashboard maken](../user-defined-dashboards.md) voordat u doorgaat met deze handleiding.
+Deze handleiding vereist een goed begrip van aangepaste dashboards. Lees de documentatie op [ hoe te om een douanedashboard ](../user-defined-dashboards.md) tot stand te brengen alvorens met deze gids verder te gaan.
 
 ## Real-Time CDP B2B-inzichtsrapporten en gebruiksgevallen {#B2B-insight-reports-and-use-cases}
 
@@ -48,17 +48,17 @@ Het model van het Profiel van de Rekening bestaat uit acht datasets:
 
 In het onderstaande diagram worden de relevante gegevensvelden in elke gegevensset weergegeven, evenals het gegevenstype ervan en de externe sleutels die de gegevenssets aan elkaar koppelen.
 
-![Het relationele diagram van de entiteit voor het accountprofielmodel.](../images/data-models/account-profile-model.png)
+![ het entiteitrelationele diagram voor het model van het Profiel van de Rekening.](../images/data-models/account-profile-model.png)
 
 #### De nieuwe rekeningen per bedrijfstak gebruiken de zaak {#accounts-by-industry}
 
-De logica die wordt gebruikt voor de [!UICONTROL New accounts by industry] inzicht geeft de top vijf industrieën terug volgens hun aantal rekeningsprofielen en hun relatieve grootte aan elkaar. Zie de [[!UICONTROL New accounts By Industry] widget-documentatie](../guides/account-profiles.md#accounts-by-industry) voor meer informatie .
+De logica die wordt gebruikt voor het [!UICONTROL New accounts by industry] inzicht retourneert de vijf belangrijkste sectoren op basis van hun aantal accountprofielen en hun relatieve grootte ten opzichte van elkaar. Zie de [[!UICONTROL New accounts By Industry] widgetdocumentatie ](../guides/account-profiles.md#accounts-by-industry) voor meer informatie.
 
 >[!TIP]
 >
 >U kunt deze SQL-query aanpassen om meer of minder dan de vijf belangrijkste bedrijfstakken te retourneren.
 
-De SQL die de [!UICONTROL New accounts by industry] inzicht is te zien in de onderste sectie die kan worden samengevouwen .
+De SQL die het [!UICONTROL New accounts by industry] inzicht produceert wordt gezien in de doen ineenstorten sectie hieronder.
 
 +++SQL-query
 
@@ -97,9 +97,9 @@ LIMIT 5000;
 
 #### Nieuwe accounts per type use case {#accounts-by-type}
 
-De logica die wordt gebruikt voor de [!UICONTROL New accounts by type] inzicht geeft de numerieke uitsplitsing van de rekeningen naar hun type weer. Dit inzicht kan helpen om bedrijfsstrategie en verrichtingen, met inbegrip van middeltoewijzing of marketing strategieën te begeleiden. Zie de [[!UICONTROL New accounts by type] widget-documentatie](../guides/account-profiles.md#accounts-by-type) voor meer informatie .
+De logica die wordt gebruikt voor het [!UICONTROL New accounts by type] inzicht retourneert de numerieke uitsplitsing van accounts op basis van hun type. Dit inzicht kan helpen om bedrijfsstrategie en verrichtingen, met inbegrip van middeltoewijzing of marketing strategieën te begeleiden. Zie de [[!UICONTROL New accounts by type] widgetdocumentatie ](../guides/account-profiles.md#accounts-by-type) voor meer informatie.
 
-De SQL die de [!UICONTROL New accounts by type] inzicht is te zien in de onderste sectie die kan worden samengevouwen .
+De SQL die het [!UICONTROL New accounts by type] inzicht produceert wordt gezien in de doen ineenstorten sectie hieronder.
 
 +++SQL-query
 
@@ -132,4 +132,4 @@ Het model van de Kans bestaat uit zeven datasets:
 
 In het onderstaande diagram worden de relevante gegevensvelden in elke gegevensset weergegeven.
 
-![Het entiteitrelationele diagram voor het model van de Kans.](../images/data-models/opportunity-model.png)
+![ het entiteitrelationele diagram voor het model van de Kans.](../images/data-models/opportunity-model.png)

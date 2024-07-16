@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Inname van gegevens controleren
 
-Met gegevensinvoer kunt u uw gegevens opnemen in Adobe Experience Platform. U kunt batch-opname gebruiken, waardoor u gegevens kunt invoegen met verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u uw gegevens kunt opnemen in [!DNL Platform] het gebruiken van het stromen eindpunten in echt - tijd.
+Met gegevensinvoer kunt u uw gegevens opnemen in Adobe Experience Platform. U kunt batch-opname gebruiken, waardoor u gegevens kunt invoegen met verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u uw gegevens in [!DNL Platform] kunt invoeren met streaming eindpunten in real-time.
 
 Deze gebruikershandleiding bevat stappen voor het controleren van gegevens in de gebruikersinterface van Adobe Experience Platform. Voor deze handleiding hebt u een Adobe ID nodig en hebt u toegang tot Adobe Experience Platform.
 
@@ -28,11 +28,11 @@ Deze gebruikershandleiding bevat stappen voor het controleren van gegevens in de
 
 >[!TIP]
 >
->Als u het totale aantal gebeurtenissen op een bepaalde datum wilt berekenen, gebruikt u de volgende expressie: `total events / day = ingestion rate * 60 * 60 * 24`.
+>Als u het totaal van de gebeurtenissen op een bepaalde datum wilt berekenen, gebruikt u de expressie: `total events / day = ingestion rate * 60 * 60 * 24` .
 
-In de [UI EXPERIENCE PLATFORM](https://platform.adobe.com), selecteert u **[!UICONTROL Monitoring]** in het navigatiemenu links, gevolgd door **[!UICONTROL Streaming end-to-end]**.
+In het [ Experience Platform UI ](https://platform.adobe.com), uitgezochte **[!UICONTROL Monitoring]** op het linkernavigatiemenu, die door **[!UICONTROL Streaming end-to-end]** wordt gevolgd.
 
-De **[!UICONTROL Streaming end-to-end]** controlepagina wordt weergegeven. Deze werkruimte biedt een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die worden ontvangen door [!DNL Platform], een grafiek die de snelheid van gestreamde gebeurtenissen weergeeft die zijn verwerkt door [[!DNL Real-Time Customer Profile]](../../profile/home.md), alsmede een gedetailleerde lijst van binnenkomende gegevens.
+De controlepagina van **[!UICONTROL Streaming end-to-end]** wordt weergegeven. Deze werkruimte biedt een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die worden ontvangen door [!DNL Platform] , een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die zijn verwerkt door [[!DNL Real-Time Customer Profile]](../../profile/home.md) , en een gedetailleerde lijst met binnenkomende gegevens.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -40,11 +40,11 @@ Standaard toont de bovenste grafiek de mate van inname in de afgelopen zeven dag
 
 ![](../images/quality/monitor-data-flows/events-received.png)
 
-De onderste grafiek toont de snelheid van gestreamde gebeurtenissen die met succes zijn verwerkt [!DNL Profile] in de afgelopen zeven dagen. U kunt dit datumbereik aanpassen om verschillende tijdsperioden weer te geven door de gemarkeerde knop te selecteren.
+In de onderste grafiek wordt de snelheid van de gestreamde gebeurtenissen van [!DNL Profile] in de afgelopen zeven dagen weergegeven. U kunt dit datumbereik aanpassen om verschillende tijdsperioden weer te geven door de gemarkeerde knop te selecteren.
 
 >[!NOTE]
 >
->Gegevens worden alleen in deze grafiek weergegeven als **expliciet** ingeschakeld voor [!DNL Profile]. Meer informatie over het inschakelen van streaming gegevens voor [!DNL Profile], lees de [gebruikershandleiding voor gegevenssets](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>Opdat de gegevens op deze grafiek verschijnen, moeten de gegevens **uitdrukkelijk** worden toegelaten voor [!DNL Profile]. Leren hoe te om het stromen gegevens voor [!DNL Profile] toe te laten, lees de [ gids van de datasetgebruiker ](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 
@@ -66,15 +66,15 @@ Bovendien bevatten mislukte records details over de fouten die zijn opgetreden t
 
 >[!NOTE]
 >
->Als er fouten in opgenomen rijen zijn, worden deze rijen **niet** vervallen tenzij het resulterende bericht in ongeldige XDM resulteert.
+>Als er fouten in opgenomen rijen zijn, zullen deze rijen **niet** worden gelaten vallen tenzij het resulterende bericht in ongeldige XDM resulteert.
 
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
 
 ## Gegevens van begin tot einde bijhouden in batch
 
-In de [[!DNL Experience Platform UI]](https://platform.adobe.com), selecteert u **[!UICONTROL Monitoring]** in het navigatiemenu aan de linkerkant.
+Selecteer **[!UICONTROL Monitoring]** in het navigatiemenu links van [[!DNL Experience Platform UI] ](https://platform.adobe.com) .
 
-De **[!UICONTROL Batch end-to-end]** de controlepagina verschijnt, tonend een lijst van de eerder opgenomen partijen. U kunt elke gewenste batch selecteren voor meer gedetailleerde informatie over die record.
+De controlepagina van **[!UICONTROL Batch end-to-end]** verschijnt, die een lijst van de eerder opgenomen partijen toont. U kunt elke gewenste batch selecteren voor meer gedetailleerde informatie over die record.
 
 ![](../images/quality/monitor-data-flows/batch-monitoring.png)
 
@@ -92,6 +92,6 @@ Bovendien bevatten mislukte batches details over de fouten die zijn opgetreden t
 
 >[!NOTE]
 >
->Als er fouten in opgenomen rijen zijn, worden deze rijen **niet** vervallen tenzij het resulterende bericht in ongeldige XDM resulteert.
+>Als er fouten in opgenomen rijen zijn, zullen deze rijen **niet** worden gelaten vallen tenzij het resulterende bericht in ongeldige XDM resulteert.
 
 ![](../images/quality/monitor-data-flows/failed-streaming-error.png)

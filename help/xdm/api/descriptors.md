@@ -17,19 +17,19 @@ De schema&#39;s bepalen een statische mening van gegevensentiteiten, maar verstr
 
 De beschrijvers van het schema zijn huurdersvlakke meta-gegevens, betekenend zij aan uw organisatie uniek zijn en alle beschrijvingsverrichtingen vinden in de huurderscontainer plaats.
 
-Op elk schema kunnen een of meer schemabeschrijvingsentiteiten zijn toegepast. Elke schemadescriptorentiteit bevat een descriptor `@type` en de `sourceSchema` waarop zij van toepassing is. Zodra toegepast, zullen deze beschrijvers op alle datasets van toepassing zijn die gebruikend het schema worden gecreeerd.
+Op elk schema kunnen een of meer schemabeschrijvingsentiteiten zijn toegepast. Elke schemadescriptorentiteit bevat een descriptor `@type` en de `sourceSchema` waarop deze van toepassing is. Zodra toegepast, zullen deze beschrijvers op alle datasets van toepassing zijn die gebruikend het schema worden gecreeerd.
 
-De `/descriptors` in de [!DNL Schema Registry] Met API kunt u beschrijvingen programmatisch beheren binnen uw ervaringstoepassing.
+Met het eindpunt `/descriptors` in de [!DNL Schema Registry] API kunt u beschrijvingen programmatisch beheren binnen uw ervaringstoepassing.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met descriptoren ophalen {#list}
 
-U kunt alle beschrijvingen weergeven die door uw organisatie zijn gedefinieerd door een GET-aanvraag in te dienen bij `/tenant/descriptors`.
+U kunt alle beschrijvingen weergeven die door uw organisatie zijn gedefinieerd door een aanvraag voor een GET in te dienen bij `/tenant/descriptors` .
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /tenant/descriptors
@@ -47,26 +47,26 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Let erop dat de `/descriptors` eindpuntgebruik `Accept` kopteksten die verschillen van alle andere eindpunten in het deelvenster [!DNL Schema Registry] API.
+De antwoordindeling is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. Het eindpunt `/descriptors` gebruikt `Accept` headers die verschillen van alle andere eindpunten in de API [!DNL Schema Registry] .
 
 >[!IMPORTANT]
 >
->Descriptors vereisen unieke `Accept` kopteksten die vervangen `xed` with `xdm`en biedt tevens een `link` -optie die uniek is voor beschrijvingen. De juiste `Accept` De kopballen zijn inbegrepen in de voorbeelden roepen hieronder, maar neem extra voorzichtigheid in acht om ervoor te zorgen dat de correcte kopballen wanneer het werken met beschrijvers worden gebruikt.
+>Descriptors vereisen unieke `Accept` headers die `xed` vervangen door `xdm` en bieden ook een `link` -optie die uniek is voor beschrijvingen. De juiste `Accept` headers zijn opgenomen in de onderstaande voorbeelden, maar Wees voorzichtig om te zorgen dat de juiste kopteksten worden gebruikt wanneer u met beschrijvingen werkt.
 
 | `Accept` header | Beschrijving |
 | -------|------------ |
 | `application/vnd.adobe.xdm-id+json` | Hiermee wordt een array met beschrijvings-id&#39;s geretourneerd |
 | `application/vnd.adobe.xdm-link+json` | Hiermee wordt een array van beschrijvende API-paden geretourneerd |
 | `application/vnd.adobe.xdm+json` | Hiermee wordt een array van uitgebreide beschrijvingsobjecten geretourneerd |
-| `application/vnd.adobe.xdm-v2+json` | Dit `Accept` header moet worden gebruikt om pagineringsmogelijkheden te gebruiken. |
+| `application/vnd.adobe.xdm-v2+json` | Deze `Accept` header moet worden gebruikt om pagineringsmogelijkheden te gebruiken. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-Het antwoord bevat een array voor elk beschrijvende type waarvoor beschrijvingen zijn gedefinieerd. Met andere woorden, als er geen beschrijvingen zijn van een bepaalde `@type` gedefinieerd, retourneert het register geen lege array voor dat descriptortype.
+Het antwoord bevat een array voor elk beschrijvende type waarvoor beschrijvingen zijn gedefinieerd. Met andere woorden, als er geen beschrijvers van een bepaalde `@type` gedefinieerd zijn, retourneert het register geen lege array voor dat beschrijvende type.
 
-Wanneer u de opdracht `link` `Accept` header, wordt elke descriptor weergegeven als een arrayitem in de indeling `/{CONTAINER}/descriptors/{DESCRIPTOR_ID}`
+Wanneer u de header `link` `Accept` gebruikt, wordt elke descriptor weergegeven als een arrayitem in de notatie `/{CONTAINER}/descriptors/{DESCRIPTOR_ID}`
 
 ```JSON
 {
@@ -86,9 +86,9 @@ Wanneer u de opdracht `link` `Accept` header, wordt elke descriptor weergegeven 
 
 ## Een descriptor opzoeken {#lookup}
 
-Als u de details van een specifieke descriptor wilt weergeven, kunt u een afzonderlijke descriptor opzoeken (GET) met behulp van de bijbehorende `@id`.
+Als u de details van een specifieke descriptor wilt bekijken, kunt u een afzonderlijke descriptor opzoeken (GET) met de bijbehorende `@id` .
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /tenant/descriptors/{DESCRIPTOR_ID}
@@ -102,7 +102,7 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Verzoek**
 
-Het volgende verzoek haalt een beschrijver door zijn terug `@id` waarde. Er is geen versienummer voor de descriptors en daarom is er geen `Accept` header is vereist in het opzoekverzoek.
+Met de volgende aanvraag wordt een descriptor opgehaald op basis van de waarde `@id` . Er is geen versiebeheer toegepast op descriptors. Daarom is geen `Accept` header vereist in het opzoekverzoek.
 
 ```SHELL
 curl -X GET \
@@ -113,9 +113,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord retourneert de details van de descriptor, inclusief zijn `@type` en `sourceSchema`en aanvullende informatie die afhankelijk is van het type descriptor. De geretourneerde `@id` moet overeenkomen met de descriptor `@id` die in het verzoek worden verstrekt.
+Een geslaagde reactie retourneert de details van de descriptor, inclusief de `@type` en `sourceSchema` , plus aanvullende informatie die afhankelijk is van het type descriptor. De geretourneerde `@id` moet overeenkomen met de beschrijving `@id` in de aanvraag.
 
 ```JSON
 {
@@ -139,13 +139,13 @@ Een succesvol antwoord retourneert de details van de descriptor, inclusief zijn 
 
 ## Een descriptor maken {#create}
 
-U kunt een nieuwe descriptor maken door een POST aan te vragen bij de `/tenant/descriptors` eindpunt.
+U kunt een nieuwe beschrijver tot stand brengen door een verzoek van de POST aan het `/tenant/descriptors` eindpunt te doen.
 
 >[!IMPORTANT]
 >
->De [!DNL Schema Registry] Hiermee kunt u verschillende beschrijvende typen definiëren. Elk beschrijvingstype vereist dat zijn eigen specifieke gebieden in het aanvraaglichaam worden verzonden. Zie de [aanhangsel](#defining-descriptors) voor een volledige lijst van beschrijvingen en de velden die nodig zijn om deze te definiëren.
+>Met [!DNL Schema Registry] kunt u verschillende beschrijvende typen definiëren. Elk beschrijvingstype vereist dat zijn eigen specifieke gebieden in het aanvraaglichaam worden verzonden. Zie [ bijlage ](#defining-descriptors) voor een volledige lijst van beschrijvers en de gebieden noodzakelijk om hen te bepalen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /tenant/descriptors
@@ -153,7 +153,7 @@ POST /tenant/descriptors
 
 **Verzoek**
 
-In het volgende verzoek wordt een identiteitsbeschrijving gedefinieerd in een veld &quot;E-mailadres&quot; in een voorbeeldschema. Dit vertelt [!DNL Experience Platform] om het e-mailadres te gebruiken als id om informatie over het individu te koppelen.
+In het volgende verzoek wordt een identiteitsbeschrijving gedefinieerd in een veld &quot;E-mailadres&quot; in een voorbeeldschema. Dit vertelt [!DNL Experience Platform] om het e-mailadres als herkenningsteken te gebruiken helpen informatie over het individu samenvoegen.
 
 ```SHELL
 curl -X POST \
@@ -175,9 +175,9 @@ curl -X POST \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de nieuwe descriptor, inclusief de bijbehorende `@id`. De `@id` is een alleen-lezen veld dat is toegewezen door de [!DNL Schema Registry] en wordt gebruikt voor het verwijzen naar de descriptor in de API.
+Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de nieuwe descriptor, inclusief de `@id` ervan. `@id` is een alleen-lezen veld dat door [!DNL Schema Registry] is toegewezen en dat wordt gebruikt voor het verwijzen naar de descriptor in de API.
 
 ```JSON
 {
@@ -195,9 +195,9 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de
 
 ## Een descriptor bijwerken {#put}
 
-U kunt een descriptor bijwerken door de bijbehorende `@id` in de weg van een verzoek van de PUT.
+U kunt een descriptor bijwerken door de `@id` ervan op te nemen in het pad van een PUT-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /tenant/descriptors/{DESCRIPTOR_ID}
@@ -211,13 +211,13 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Verzoek**
 
-Met dit verzoek wordt in feite de descriptor herschreven, zodat de aanvraaginstantie alle velden moet bevatten die vereist zijn voor het definiëren van een descriptor van dat type. Met andere woorden, de aanvraaglading om (PUT) een beschrijver bij te werken is het zelfde als nuttige lading aan [een descriptor maken (POST)](#create) van hetzelfde type.
+Met dit verzoek wordt in feite de descriptor herschreven, zodat de aanvraaginstantie alle velden moet bevatten die vereist zijn voor het definiëren van een descriptor van dat type. Met andere woorden, is de verzoeklading om (PUT) een beschrijver bij te werken het zelfde als de nuttige lading aan [ creeert (POST) een beschrijver ](#create) van het zelfde type.
 
 >[!IMPORTANT]
 >
->Net als bij het maken van beschrijvingen met behulp van POST-aanvragen, vereist elk descriptortype dat de eigen specifieke velden worden verzonden in de ladingen voor verzoeken om PUT. Zie de [aanhangsel](#defining-descriptors) voor een volledige lijst van beschrijvingen en de velden die nodig zijn om deze te definiëren.
+>Net als bij het maken van beschrijvingen met behulp van POST-aanvragen, vereist elk descriptortype dat de eigen specifieke velden worden verzonden in de ladingen voor verzoeken om PUT. Zie [ bijlage ](#defining-descriptors) voor een volledige lijst van beschrijvers en de gebieden noodzakelijk om hen te bepalen.
 
-In het volgende voorbeeld wordt een identiteitsdescriptor bijgewerkt om naar een ander voorbeeld te verwijzen `xdm:sourceProperty` (`mobile phone`) en wijzigt de `xdm:namespace` tot `Phone`.
+In het volgende voorbeeld wordt een identiteitsdescriptor bijgewerkt om naar een andere `xdm:sourceProperty` (`mobile phone` ) te verwijzen en wordt de waarde `xdm:namespace` in `Phone` gewijzigd.
 
 ```SHELL
 curl -X PUT \
@@ -238,9 +238,9 @@ curl -X PUT \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de HTTP-status 201 (Gemaakt) en de `@id` van de bijgewerkte descriptor (die moet overeenkomen met de `@id` verzonden in het verzoek).
+Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de `@id` van de bijgewerkte descriptor (die moet overeenkomen met de `@id` die in de aanvraag is verzonden).
 
 ```JSON
 {
@@ -248,13 +248,13 @@ Een geslaagde reactie retourneert de HTTP-status 201 (Gemaakt) en de `@id` van d
 }
 ```
 
-Een [opzoekverzoek (GET)](#lookup) om de beschrijver te bekijken toont aan dat de gebieden nu zijn bijgewerkt om op de veranderingen te wijzen die in het verzoek van de PUT worden verzonden.
+Het uitvoeren van a [ raadpleging (GET) verzoek ](#lookup) om de beschrijver te bekijken toont aan dat de gebieden nu zijn bijgewerkt om op de veranderingen te wijzen die in het verzoek van de PUT worden verzonden.
 
 ## Een descriptor verwijderen {#delete}
 
-Soms moet u een descriptor die u hebt gedefinieerd, verwijderen uit het dialoogvenster [!DNL Schema Registry]. Dit wordt gedaan door een verzoek van DELETE te doen van verwijzingen voorzien `@id` van de beschrijving die u wilt verwijderen.
+Soms moet u een descriptor verwijderen die u in de [!DNL Schema Registry] hebt gedefinieerd. Dit wordt gedaan door een verzoek van de DELETE te doen van verwijzingen `@id` van de beschrijver die u wenst te verwijderen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /tenant/descriptors/{DESCRIPTOR_ID}
@@ -277,15 +277,15 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
-Om te bevestigen dat de beschrijving is verwijderd, kunt u een [opzoekverzoek](#lookup) tegen de descriptor `@id`. De reactie retourneert HTTP-status 404 (Niet gevonden) omdat de descriptor is verwijderd uit het dialoogvenster [!DNL Schema Registry].
+Om de beschrijver te bevestigen is geschrapt, kunt u a [ raadplegingsverzoek ](#lookup) tegen de beschrijver `@id` uitvoeren. De reactie retourneert HTTP-status 404 (Niet gevonden) omdat de descriptor is verwijderd uit de [!DNL Schema Registry] .
 
 ## Bijlage
 
-In de volgende sectie vindt u aanvullende informatie over het werken met descriptoren in de [!DNL Schema Registry] API.
+In de volgende sectie vindt u aanvullende informatie over het werken met descriptoren in de API van [!DNL Schema Registry] .
 
 ### descriptoren definiëren {#defining-descriptors}
 
@@ -301,7 +301,7 @@ In de volgende secties vindt u een overzicht van de beschikbare descriptortypen,
 
 #### Identiteitsbeschrijving
 
-Een identiteitsbeschrijver signaleert dat &quot;[!UICONTROL sourceProperty]&quot; van de &quot;[!UICONTROL sourceSchema]&quot; is een [!DNL Identity] veld zoals beschreven door [Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Een identiteitsbeschrijver signaleert dat &quot;[!UICONTROL sourceProperty]&quot;van &quot;[!UICONTROL sourceSchema]&quot;een [!DNL Identity] gebied is zoals die door [ wordt beschreven de Dienst van de Identiteit van Adobe Experience Platform ](../../identity-service/home.md).
 
 ```json
 {
@@ -318,19 +318,19 @@ Een identiteitsbeschrijver signaleert dat &quot;[!UICONTROL sourceProperty]&quot
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een identiteitsbeschrijving moet deze waarde worden ingesteld op `xdm:descriptorIdentity`. |
+| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een identiteitsdescriptor moet deze waarde worden ingesteld op `xdm:descriptorIdentity` . |
 | `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
 | `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
 | `xdm:sourceProperty` | Het pad naar de specifieke eigenschap die de identiteit zal zijn. Het pad moet beginnen met een &quot;/&quot; en niet eindigen met een pad. Plaats geen &quot;eigenschappen&quot; in het pad (gebruik bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;) |
-| `xdm:namespace` | De `id` of `code` waarde van de naamruimte identity. Een lijst met naamruimten vindt u in het dialoogvenster [[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service). |
-| `xdm:property` | Willekeurig `xdm:id` of `xdm:code`, afhankelijk van de `xdm:namespace` gebruikt. |
+| `xdm:namespace` | De `id` - of `code` -waarde van de naamruimte identity. Een lijst van namespaces kan worden gevonden gebruikend [[!DNL Identity Service API] ](https://developer.adobe.com/experience-platform-apis/references/identity-service). |
+| `xdm:property` | Ofwel `xdm:id` of `xdm:code` , afhankelijk van de gebruikte `xdm:namespace` . |
 | `xdm:isPrimary` | Een optionele booleaanse waarde. Indien waar (true), wordt het veld als de primaire identiteit aangegeven. Schema&#39;s mogen slechts één primaire identiteit bevatten. |
 
 {style="table-layout:auto"}
 
 #### Beschrijvende naam {#friendly-name}
 
-Met beschrijvingen van familienaam kan een gebruiker de `title`, `description`, en `meta:enum` waarden van de kernvelden van het bibliotheekschema. Dit is vooral handig wanneer u werkt met &quot;eVars&quot; en andere &quot;generieke&quot; velden die u wilt labelen voor informatie die specifiek is voor uw organisatie. De gebruikersinterface kan deze gebruiken om een vriendelijkere naam weer te geven of om alleen velden weer te geven die een vriendelijke naam hebben.
+Met beschrijvingen van vriendschappelijke namen kan een gebruiker de waarden `title` , `description` en `meta:enum` van de kernvelden van het bibliotheekschema wijzigen. Dit is vooral handig wanneer u werkt met &quot;eVars&quot; en andere &quot;generieke&quot; velden die u wilt labelen voor informatie die specifiek is voor uw organisatie. De gebruikersinterface kan deze gebruiken om een vriendelijkere naam weer te geven of om alleen velden weer te geven die een vriendelijke naam hebben.
 
 ```json
 {
@@ -358,20 +358,20 @@ Met beschrijvingen van familienaam kan een gebruiker de `title`, `description`, 
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een beschrijvende naam moet deze waarde worden ingesteld op `xdm:alternateDisplayInfo`. |
+| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een beschrijvende naam moet deze waarde worden ingesteld op `xdm:alternateDisplayInfo` . |
 | `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
 | `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
-| `xdm:sourceProperty` | Het pad naar de specifieke eigenschap waarvan u de details wilt wijzigen. Het pad moet beginnen met een slash (`/`) en niet met één. Niet opnemen `properties` in het pad (bijvoorbeeld `/personalEmail/address` in plaats van `/properties/personalEmail/properties/address`). |
+| `xdm:sourceProperty` | Het pad naar de specifieke eigenschap waarvan u de details wilt wijzigen. Het pad moet beginnen met een schuine streep (`/`) en niet eindigen met een schuine streep. Neem `properties` niet op in het pad (gebruik bijvoorbeeld `/personalEmail/address` in plaats van `/properties/personalEmail/properties/address` ). |
 | `xdm:title` | De nieuwe titel die u voor dit gebied wilt tonen, die in het Geval van de Titel wordt geschreven. |
 | `xdm:description` | Een optionele beschrijving kan samen met de titel worden toegevoegd. |
-| `meta:enum` | Indien het veld wordt aangegeven door `xdm:sourceProperty` is een tekenreeksveld, `meta:enum` U kunt voorgestelde waarden toevoegen voor het veld in de Segmenteringsinterface. Het is belangrijk op te merken dat `meta:enum` declareert geen opsomming of biedt geen gegevensvalidatie voor het XDM-veld.<br><br>Deze mag alleen worden gebruikt voor de belangrijkste XDM-velden die door Adobe worden gedefinieerd. Als de broneigenschap een aangepast veld is dat door uw organisatie is gedefinieerd, moet u in plaats daarvan de veldcode `meta:enum` rechtstreeks via een PATCH-verzoek aan de bovenliggende bron van het veld. |
-| `meta:excludeMetaEnum` | Indien het veld wordt aangegeven door `xdm:sourceProperty` is een tekenreeksveld met bestaande voorgestelde waarden die zijn opgegeven onder een `meta:enum` kunt u dit object opnemen in een beschrijvingsbestand voor vriendelijke namen om sommige of al deze waarden van segmentatie uit te sluiten. De sleutel en de waarde voor elk item moeten overeenkomen met die in het origineel `meta:enum` van het veld om de vermelding uit te sluiten. |
+| `meta:enum` | Als het veld dat wordt aangegeven door `xdm:sourceProperty` een tekenreeksveld is, kan `meta:enum` worden gebruikt om voorgestelde waarden toe te voegen voor het veld in de segmenteringsinterface. Het is belangrijk om op te merken dat `meta:enum` geen opsomming verklaart of om het even welke gegevensbevestiging voor het gebied XDM verstrekt.<br><br> dit zou slechts voor kernXDM gebieden moeten worden gebruikt die door Adobe worden bepaald. Als de broneigenschap een aangepast veld is dat door uw organisatie is gedefinieerd, moet u in plaats daarvan de eigenschap `meta:enum` van het veld rechtstreeks via een PATCH-aanvraag naar de bovenliggende bron van het veld bewerken. |
+| `meta:excludeMetaEnum` | Als het veld dat wordt aangegeven door `xdm:sourceProperty` een tekenreeksveld is met bestaande voorgestelde waarden onder een `meta:enum` -veld, kunt u dit object opnemen in een beschrijvingsbestand voor een vriendelijke naam om sommige of al deze waarden uit te sluiten van segmentatie. De sleutel en waarde voor elke vermelding moeten overeenkomen met die in het oorspronkelijke `meta:enum` veld om de vermelding uit te sluiten. |
 
 {style="table-layout:auto"}
 
 #### Relatiebeschrijving
 
-Relatiebeschrijvingen beschrijven een relatie tussen twee verschillende schema&#39;s, die worden vastgehouden op de eigenschappen die worden beschreven in `sourceProperty` en `destinationProperty`. Zie de zelfstudie aan [het bepalen van een verband tussen twee schema&#39;s](../tutorials/relationship-api.md) voor meer informatie .
+Relationship-descriptors beschrijven een relatie tussen twee verschillende schema&#39;s, die u hebt afgesloten op de eigenschappen die worden beschreven in `sourceProperty` en `destinationProperty` . Zie het leerprogramma op [ bepalend een verband tussen twee schema&#39;s ](../tutorials/relationship-api.md) voor meer informatie.
 
 ```json
 {
@@ -389,11 +389,11 @@ Relatiebeschrijvingen beschrijven een relatie tussen twee verschillende schema&#
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een relatiebeschrijving moet deze waarde worden ingesteld op `xdm:descriptorOneToOne`. |
+| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een relatiebeschrijver, moet deze waarde aan `xdm:descriptorOneToOne` worden geplaatst. |
 | `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
 | `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
 | `xdm:sourceProperty` | Pad naar het veld in het bronschema waar de relatie wordt gedefinieerd. Moet beginnen met een &quot;/&quot; en niet eindigen met een &quot;/&quot;. Plaats geen &quot;eigenschappen&quot; in het pad (bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;). |
-| `xdm:destinationSchema` | De `$id` URI of the reference schema this descriptor is define a relationship with. |
+| `xdm:destinationSchema` | De `$id` URI van het verwijzingsschema deze beschrijver bepaalt een verhouding met. |
 | `xdm:destinationVersion` | De belangrijkste versie van het referentieschema. |
 | `xdm:destinationProperty` | Optioneel pad naar een doelveld binnen het referentieschema. Als deze eigenschap wordt weggelaten, wordt het doelveld afgeleid van velden die een overeenkomende ID-descriptor bevatten (zie hieronder). |
 
@@ -415,17 +415,17 @@ De identiteitsbeschrijvers van de verwijzing verstrekken een verwijzingscontext 
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een identiteitsbeschrijving van een referentie moet deze waarde worden ingesteld op `xdm:descriptorReferenceIdentity`. |
+| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een identiteitsbeschrijving van een referentie moet deze waarde worden ingesteld op `xdm:descriptorReferenceIdentity` . |
 | `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
 | `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
-| `xdm:sourceProperty` | Pad naar het veld in het bronschema dat wordt gebruikt om naar het referentieschema te verwijzen. Moet beginnen met een &quot;/&quot; en niet eindigen met een &quot;/&quot;. Plaats geen &quot;eigenschappen&quot; in het pad (bijvoorbeeld `/personalEmail/address` in plaats van `/properties/personalEmail/properties/address`). |
+| `xdm:sourceProperty` | Pad naar het veld in het bronschema dat wordt gebruikt om naar het referentieschema te verwijzen. Moet beginnen met een &quot;/&quot; en niet eindigen met een &quot;/&quot;. Plaats geen &quot;eigenschappen&quot; in het pad (bijvoorbeeld `/personalEmail/address` in plaats van `/properties/personalEmail/properties/address` ). |
 | `xdm:identityNamespace` | De naamruimtecode van de identiteit voor de eigenschap source. |
 
 {style="table-layout:auto"}
 
 #### Vervangen velddescriptor
 
-U kunt [een veld binnen een aangepaste XDM-bron vervangen](../tutorials/field-deprecation-api.md#custom) door een `meta:status` kenmerk ingesteld op `deprecated` op het betrokken gebied. Als u velden die worden verschaft door standaard XDM-bronnen in uw schema&#39;s wilt vervangen, kunt u echter een vervangen velddescriptor toewijzen aan het desbetreffende schema om hetzelfde effect te bereiken. Met de [correct `Accept` header](../tutorials/field-deprecation-api.md#verify-deprecation)kunt u vervolgens bekijken welke standaardvelden zijn vervangen voor een schema wanneer u het opzoekt in de API.
+U kunt [ een gebied binnen een douaneXDM middel ](../tutorials/field-deprecation-api.md#custom) verwerpen door a `meta:status` attributen toe te voegen die aan `deprecated` aan het betrokken gebied worden geplaatst. Als u velden die worden verschaft door standaard XDM-bronnen in uw schema&#39;s wilt vervangen, kunt u echter een vervangen velddescriptor toewijzen aan het desbetreffende schema om hetzelfde effect te bereiken. Gebruikend [ correcte `Accept` kopbal ](../tutorials/field-deprecation-api.md#verify-deprecation), kunt u dan bekijken welke standaardgebieden voor een schema verouderd zijn wanneer het omhoog kijken in API.
 
 ```json
 {
@@ -438,9 +438,9 @@ U kunt [een veld binnen een aangepaste XDM-bron vervangen](../tutorials/field-de
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `@type` | Het type descriptor. Voor een beschrijving van de veldafdrukking moet deze waarde worden ingesteld op `xdm:descriptorDeprecated`. |
+| `@type` | Het type descriptor. Voor een beschrijving van de gebiedsafbeelding moet deze waarde worden ingesteld op `xdm:descriptorDeprecated` . |
 | `xdm:sourceSchema` | De URI `$id` van het schema waarop u de descriptor toepast. |
-| `xdm:sourceVersion` | De versie van het schema waarop u de descriptor toepast. Moet worden ingesteld op `1`. |
-| `xdm:sourceProperty` | Het pad naar de eigenschap in het schema waarop u de descriptor toepast. Als u de descriptor op meerdere eigenschappen wilt toepassen, kunt u een lijst met paden opgeven in de vorm van een array (bijvoorbeeld `["/firstName", "/lastName"]`). |
+| `xdm:sourceVersion` | De versie van het schema waarop u de descriptor toepast. Moet worden ingesteld op `1` . |
+| `xdm:sourceProperty` | Het pad naar de eigenschap in het schema waarop u de descriptor toepast. Als u de descriptor op meerdere eigenschappen wilt toepassen, kunt u een lijst met paden opgeven in de vorm van een array (bijvoorbeeld `["/firstName", "/lastName"]` ). |
 
 {style="table-layout:auto"}

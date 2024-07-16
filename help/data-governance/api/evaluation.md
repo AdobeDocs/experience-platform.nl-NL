@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Eindpunten van de beleidsevaluatie
 
-Nadat u marketingacties hebt gemaakt en beleid voor gegevensgebruik hebt gedefinieerd, kunt u de opdracht [!DNL Policy Service] API om te beoordelen of beleidsregels worden overtreden door bepaalde handelingen. De geretourneerde beperkingen hebben de vorm van een reeks beleidsregels die worden overtreden door de marketingactie te proberen voor de opgegeven gegevens die labels voor gegevensgebruik bevatten.
+Nadat u marketingacties hebt gemaakt en beleid voor gegevensgebruik hebt gedefinieerd, kunt u de API van [!DNL Policy Service] gebruiken om te beoordelen of beleidsregels worden overtreden door bepaalde acties. De geretourneerde beperkingen hebben de vorm van een reeks beleidsregels die worden overtreden door de marketingactie te proberen voor de opgegeven gegevens die labels voor gegevensgebruik bevatten.
 
-Standaard worden alleen beleidsregels waarvan de status is ingesteld op `ENABLED` deelnemen aan de evaluatie. U kunt echter wel de queryparameter gebruiken `?includeDraft=true` op te nemen `DRAFT` evaluatiebeleid.
+Standaard nemen alleen beleidsregels waarvan de status is ingesteld op `ENABLED` deel aan de evaluatie. U kunt echter de queryparameter `?includeDraft=true` gebruiken om `DRAFT` -beleid op te nemen in een evaluatie.
 
 De evaluatieverzoeken kunnen op drie manieren worden ingediend:
 
@@ -26,13 +26,13 @@ De evaluatieverzoeken kunnen op drie manieren worden ingediend:
 
 ## Aan de slag
 
-De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
+De API eindpunten die in deze gids worden gebruikt maken deel uit van [[!DNL Policy Service]  API ](https://www.adobe.io/experience-platform-apis/references/policy-service/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
 
 ## Evalueren voor beleidsovertredingen met labels voor gegevensgebruik {#labels}
 
-U kunt overtredingen van het beleid evalueren op basis van de aanwezigheid van een specifieke set labels voor gegevensgebruik met de opdracht `duleLabels` queryparameter in een GET-verzoek.
+U kunt op beleidsovertredingen evalueren die op de aanwezigheid van een specifieke reeks etiketten van het gegevensgebruik door de `duleLabels` vraagparameter in een verzoek van de GET te gebruiken worden gebaseerd.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /marketingActions/core/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABELS_LIST}
@@ -41,8 +41,8 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | De naam van de marketingactie die moet worden getest op basis van een set labels voor gegevensgebruik. U kunt een lijst met beschikbare marketingacties ophalen door een [Het verzoek van de GET aan het marketing actiepunten](./marketing-actions.md#list). |
-| `{LABELS_LIST}` | Een door komma&#39;s gescheiden lijst met namen van gegevensgebruikslabels om de marketingactie te testen. Bijvoorbeeld: `duleLabels=C1,C2,C3`<br><br>Labelnamen zijn hoofdlettergevoelig. Zorg ervoor dat je de juiste kwestie gebruikt wanneer je ze in het menu `duleLabels` parameter. |
+| `{MARKETING_ACTION_NAME}` | De naam van de marketingactie die moet worden getest op basis van een set labels voor gegevensgebruik. U kunt een lijst van beschikbare marketing acties terugwinnen door het verzoek van de a [ GET tot het marketing actiepunten ](./marketing-actions.md#list) te richten. |
+| `{LABELS_LIST}` | Een door komma&#39;s gescheiden lijst met namen van gegevensgebruikslabels om de marketingactie te testen. Bijvoorbeeld: `duleLabels=C1,C2,C3`<br><br> Merk op dat de etiketnamen case-sensitive zijn. Zorg ervoor dat u het juiste hoofdlettergebruik gebruikt wanneer u deze opsomt in de parameter `duleLabels` . |
 
 **Verzoek**
 
@@ -50,7 +50,7 @@ In het onderstaande voorbeeldverzoek wordt een marketingactie geëvalueerd op de
 
 >[!IMPORTANT]
 >
->Wees op de hoogte van de `AND` en `OR` operatoren in uw beleidsexpressies. In het onderstaande voorbeeld, indien een van de`C1` of `C3`) alleen in het verzoek was verschenen, zou de marketingactie dit beleid niet hebben geschonden. Beide labels zijn nodig (`C1` en `C3`) om het geschonden beleid terug te geven. Zorg ervoor dat u het beleid zorgvuldig evalueert en dat u met gelijke zorg beleidsuitdrukkingen definieert.
+>Let op de operatoren `AND` en `OR` in uw beleidsexpressies. Als een van de labels (`C1` of `C3` ) alleen in het verzoek was weergegeven in het onderstaande voorbeeld, zou de marketingactie dit beleid niet hebben geschonden. Het kost beide labels (`C1` en `C3` ) om het overtreden beleid te retourneren. Zorg ervoor dat u het beleid zorgvuldig evalueert en dat u met gelijke zorg beleidsuitdrukkingen definieert.
 
 ```shell
 curl -X GET \
@@ -61,9 +61,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie omvat een `violatedPolicies` array, die de details bevat van het beleid dat is geschonden als gevolg van het uitvoeren van de marketingactie tegen de opgegeven labels. Als geen beleid wordt geschonden, `violatedPolicies` array zal leeg zijn.
+Een geslaagde reactie omvat een array `violatedPolicies` met daarin de details van het beleid dat is overtreden als gevolg van het uitvoeren van de marketingactie op de opgegeven labels. Wanneer geen beleid wordt overtreden, is de array `violatedPolicies` leeg.
 
 ```JSON
 {
@@ -123,9 +123,9 @@ Een geslaagde reactie omvat een `violatedPolicies` array, die de details bevat v
 
 ## Evalueren voor beleidsovertredingen die datasets gebruiken {#datasets}
 
-U kunt voor beleidsschendingen evalueren die op een reeks van één of meerdere datasets worden gebaseerd waaruit de etiketten van het gegevensgebruik kunnen worden verzameld. Dit wordt gedaan door een POST verzoek aan uit te voeren `/constraints` eindpunt voor een specifieke marketing actie en het verstrekken van een lijst van dataset IDs binnen het verzoeklichaam.
+U kunt voor beleidsschendingen evalueren die op een reeks van één of meerdere datasets worden gebaseerd waaruit de etiketten van het gegevensgebruik kunnen worden verzameld. Dit wordt gedaan door een verzoek van de POST aan het `/constraints` eindpunt voor een specifieke marketing actie uit te voeren en een lijst van dataset IDs binnen het verzoeklichaam te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
@@ -134,11 +134,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | The name of the marketing action to test against one or more datasets. U kunt een lijst met beschikbare marketingacties ophalen door een [Het verzoek van de GET aan het marketing actiepunten](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | The name of the marketing action to test against one or more datasets. U kunt een lijst van beschikbare marketing acties terugwinnen door het verzoek van de a [ GET tot het marketing actiepunten ](./marketing-actions.md#list) te richten. |
 
 **Verzoek**
 
-Het volgende verzoek voert het `crossSiteTargeting` marketing actie tegen een reeks van drie datasets om voor om het even welke beleidsschendingen te evalueren.
+Het volgende verzoek voert de `crossSiteTargeting` marketing actie tegen een reeks drie datasets uit om voor om het even welke beleidsschendingen te evalueren.
 
 ```shell
 curl -X POST \
@@ -166,12 +166,12 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `entityType` | Het type entiteit waarvan de id op de verwant is aangegeven `entityId` eigenschap. Momenteel is de enige toegestane waarde `dataSet`. |
-| `entityId` | De id van een dataset om de marketingactie tegen te testen. Een lijst met gegevensbestanden en de bijbehorende id&#39;s kan worden verkregen door een verzoek van de GET aan de `/dataSets` in de [!DNL Catalog Service] API. Zie de handleiding op [aanbieding [!DNL Catalog] objecten](../../catalog/api/list-objects.md) voor meer informatie . |
+| `entityType` | Het type entiteit waarvan de id wordt aangegeven in de eigenschap sibling `entityId` . Momenteel is de enige toegestane waarde `dataSet` . |
+| `entityId` | De id van een dataset om de marketingactie tegen te testen. Een lijst met gegevenssets en de bijbehorende id&#39;s kunt u verkrijgen door een GET-aanvraag in te dienen bij het eindpunt `/dataSets` in de [!DNL Catalog Service] API. Zie de gids op [ van de lijst  [!DNL Catalog]  voorwerpen ](../../catalog/api/list-objects.md) voor meer informatie. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie omvat een `violatedPolicies` array, die de details bevat van het beleid dat is geschonden als gevolg van het uitvoeren van de marketingactie op basis van de verstrekte datasets. Als geen beleid wordt geschonden, `violatedPolicies` array zal leeg zijn.
+Een geslaagde reactie omvat een array `violatedPolicies` die de details bevat van het beleid dat is overtreden als gevolg van het uitvoeren van de marketingactie op basis van de opgegeven datasets. Wanneer geen beleid wordt overtreden, is de array `violatedPolicies` leeg.
 
 ```JSON
 {
@@ -344,8 +344,8 @@ Een geslaagde reactie omvat een `violatedPolicies` array, die de details bevat v
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `duleLabels` | Het reactieobject bevat een `duleLabels` array die een geconsolideerde lijst bevat met alle labels die worden gevonden in de opgegeven datasets. Deze lijst omvat dataset en gebied-vlakke etiketten op alle gebieden binnen de dataset. |
-| `discoveredLabels` | Het antwoord bevat ook een `discoveredLabels` array met objecten voor elke gegevensset, weergeven `datasetLabels` uitgesplitst in labels op gegevensniveau en veldniveau. Op elk label op veldniveau wordt het pad naar het specifieke veld met dat label weergegeven. |
+| `duleLabels` | Het reactieobject bevat een array `duleLabels` die een geconsolideerde lijst bevat met alle labels die worden gevonden in de opgegeven datasets. Deze lijst omvat dataset en gebied-vlakke etiketten op alle gebieden binnen de dataset. |
+| `discoveredLabels` | De reactie omvat ook een `discoveredLabels` -array met objecten voor elke gegevensset, met daarin `datasetLabels` opgedeeld in labels op gegevensset- en veldniveau. Op elk label op veldniveau wordt het pad naar het specifieke veld met dat label weergegeven. |
 
 ## Evalueren voor beleidsovertredingen die specifieke datasetgebieden gebruiken {#fields}
 
@@ -353,10 +353,10 @@ U kunt overtredingen van het beleid evalueren die op een ondergroep van gebieden
 
 Houd rekening met het volgende wanneer u beleid beoordeelt met gegevenssetvelden:
 
-* **Veldnamen zijn hoofdlettergevoelig**: Als u velden opgeeft, moeten deze exact worden geschreven zoals ze in de gegevensset voorkomen (bijvoorbeeld `firstName` vs `firstname`).
-* **Overerving gegevenssetlabel**: Afzonderlijke velden in een gegevensset nemen alle labels over die zijn toegepast op het niveau van de gegevensset. Als uw beleidsevaluaties niet zoals verwacht terugkeren, ben zeker om het even welke etiketten te controleren die van het datasetniveau tot gebieden kunnen zijn geërft, naast die toegepast op het gebiedsniveau.
+* **de namen van het Gebied zijn gevoelig geval**: Wanneer het verstrekken van gebieden, moeten zij precies worden geschreven zoals zij in de dataset (bijvoorbeeld, `firstName` vs `firstname`) verschijnen.
+* **het etiketovererving van de Dataset**: De individuele gebieden in een dataset erven om het even welke etiketten over die op het datasetniveau zijn toegepast. Als uw beleidsevaluaties niet zoals verwacht terugkeren, ben zeker om het even welke etiketten te controleren die van het datasetniveau tot gebieden kunnen zijn geërft, naast die toegepast op het gebiedsniveau.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
@@ -365,11 +365,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | De naam van de marketingactie die moet worden uitgevoerd op basis van een subset met gegevenssetvelden. U kunt een lijst met beschikbare marketingacties ophalen door een [Het verzoek van de GET aan het marketing actiepunten](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | De naam van de marketingactie die moet worden uitgevoerd op basis van een subset met gegevenssetvelden. U kunt een lijst van beschikbare marketing acties terugwinnen door het verzoek van de a [ GET tot het marketing actiepunten ](./marketing-actions.md#list) te richten. |
 
 **Verzoek**
 
-Het volgende verzoek test de marketingactie `crossSiteTargeting` op een specifieke reeks velden die tot drie gegevensreeksen behoren. De lading is gelijkaardig aan [evaluatieverzoek dat uitsluitend betrekking heeft op gegevensbestanden](#datasets), het toevoegen van specifieke gebieden voor elke dataset om etiketten van te verzamelen.
+In het volgende verzoek wordt de marketingactie `crossSiteTargeting` getest voor een specifieke set velden die tot drie gegevenssets behoren. De nuttige lading is gelijkaardig aan een [ evaluatieverzoek die slechts datasets ](#datasets) impliceert, toevoegend specifieke gebieden voor elke dataset om etiketten van te verzamelen.
 
 ```shell
 curl -X POST \
@@ -414,15 +414,15 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `entityType` | Het type entiteit waarvan de id op de verwant is aangegeven `entityId` eigenschap. Momenteel is de enige toegestane waarde `dataSet`. |
-| `entityId` | De id van een dataset waarvan gebieden tegen de marketing actie moeten worden geëvalueerd. Een lijst met gegevensbestanden en de bijbehorende id&#39;s kan worden verkregen door een verzoek van de GET aan de `/dataSets` in de [!DNL Catalog Service] API. Zie de handleiding op [aanbieding [!DNL Catalog] objecten](../../catalog/api/list-objects.md) voor meer informatie . |
-| `entityMeta.fields` | Een array van paden naar specifieke velden binnen het schema van de gegevensset, opgegeven in de vorm van JSON-aanwijzertekenreeksen. Zie de sectie over [JSON-aanwijzer](../../landing/api-fundamentals.md#json-pointer) in de handleiding voor API-basisbeginselen voor meer informatie over de geaccepteerde syntaxis voor deze tekenreeksen. |
+| `entityType` | Het type entiteit waarvan de id wordt aangegeven in de eigenschap sibling `entityId` . Momenteel is de enige toegestane waarde `dataSet` . |
+| `entityId` | De id van een dataset waarvan gebieden tegen de marketing actie moeten worden geëvalueerd. Een lijst met gegevenssets en de bijbehorende id&#39;s kunt u verkrijgen door een GET-aanvraag in te dienen bij het eindpunt `/dataSets` in de [!DNL Catalog Service] API. Zie de gids op [ van de lijst  [!DNL Catalog]  voorwerpen ](../../catalog/api/list-objects.md) voor meer informatie. |
+| `entityMeta.fields` | Een array van paden naar specifieke velden binnen het schema van de gegevensset, opgegeven in de vorm van JSON-aanwijzertekenreeksen. Zie de sectie op [ Aanwijzer JSON ](../../landing/api-fundamentals.md#json-pointer) in de API grondbeginselen gids voor details op de toegelaten syntaxis voor deze koorden. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie omvat een `violatedPolicies` array, die de details bevat van het beleid dat is geschonden als gevolg van het uitvoeren van de marketingactie tegen de opgegeven gegevenssetvelden. Als geen beleid wordt geschonden, `violatedPolicies` array zal leeg zijn.
+Een geslaagde reactie omvat een array `violatedPolicies` die de details bevat van het beleid dat is overtreden als gevolg van het uitvoeren van de marketingactie op de opgegeven gegevenssetvelden. Wanneer geen beleid wordt overtreden, is de array `violatedPolicies` leeg.
 
-De voorbeeldreactie hieronder vergelijken met de [reactie met alleen gegevensreeksen](#datasets), merkt u op dat de lijst met verzamelde labels korter is. De `discoveredLabels` voor elke dataset zijn ook verminderd, aangezien zij alleen de velden omvatten die in de aanvraaginstantie zijn gespecificeerd. Bovendien heeft het eerder geschonden beleid `Targeting Ads or Content` beide vereist `C4 AND C6` etiketten die worden aangebracht, en daarom niet meer worden geschonden, zoals aangegeven door de lege `violatedPolicies` array.
+Vergelijkend de voorbeeldreactie hieronder aan de [ reactie die slechts datasets ](#datasets) impliceert, merk op dat de lijst van verzamelde etiketten korter is. De waarde `discoveredLabels` voor elke gegevensset is ook verminderd, omdat deze alleen de velden bevat die zijn opgegeven in de aanvraaginstantie. Bovendien vereist het eerder overtreden beleid `Targeting Ads or Content` dat beide `C4 AND C6` -labels aanwezig zijn en wordt deze daarom niet meer overtreden, zoals wordt aangegeven door de lege `violatedPolicies` -array.
 
 ```JSON
 {
@@ -524,9 +524,9 @@ De voorbeeldreactie hieronder vergelijken met de [reactie met alleen gegevensree
 
 ## Beleid bulksgewijs evalueren {#bulk}
 
-De `/bulk-eval` het eindpunt staat u toe om veelvoudige evaluatietaken in één enkele API vraag in werking te stellen.
+Met het `/bulk-eval` -eindpunt kunt u meerdere evaluatietaken uitvoeren in één API-aanroep.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /bulk-eval
@@ -534,11 +534,11 @@ POST /bulk-eval
 
 **Verzoek**
 
-De lading van een bulkevaluatieverzoek zou een serie van voorwerpen moeten zijn; voor elke uit te voeren evaluatietaak. Voor banen die op datasets en gebieden evalueren, en `entityList` array moet worden opgegeven. Voor taken die worden geëvalueerd op basis van labels voor gegevensgebruik, voert u een `labels` array moet worden opgegeven.
+De lading van een bulkevaluatieverzoek zou een serie van voorwerpen moeten zijn; voor elke uit te voeren evaluatietaak. Voor taken die worden geëvalueerd op basis van gegevenssets en velden, moet een `entityList` -array worden opgegeven. Voor taken die worden geëvalueerd op basis van labels voor gegevensgebruik, moet een `labels` -array worden opgegeven.
 
 >[!WARNING]
 >
->Als een vermelde evaluatietaak zowel een `entityList` en `labels` -array, er treedt een fout op. Als u dezelfde marketingactie wilt evalueren op basis van zowel gegevenssets als labels, moet u afzonderlijke evaluatietaken voor die marketingactie opnemen.
+>Als een vermelde evaluatietaak zowel een array `entityList` als een array `labels` bevat, treedt er een fout op. Als u dezelfde marketingactie wilt evalueren op basis van zowel gegevenssets als labels, moet u afzonderlijke evaluatietaken voor die marketingactie opnemen.
 
 ```shell
 curl -X POST \
@@ -579,14 +579,14 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `evalRef` | De URI van de marketingactie voor het testen op labels of gegevenssets voor beleidsovertredingen. |
-| `includeDraft` | Door gebrek, slechts neemt het toegelaten beleid aan evaluatie deel. Indien `includeDraft` is ingesteld op `true`, beleid in `DRAFT` de status zal ook deelnemen . |
-| `labels` | Een array met labels voor gegevensgebruik waarmee de marketingactie wordt getest.<br><br>**BELANGRIJK**: Wanneer u deze eigenschap gebruikt, wordt een `entityList` eigenschap mag NIET in hetzelfde object worden opgenomen. Als u dezelfde marketingactie wilt evalueren met behulp van gegevenssets en/of velden, moet u een afzonderlijk object in de payload van de aanvraag opnemen dat een `entityList` array. |
-| `entityList` | Een serie van datasets en (facultatief) specifieke gebieden binnen die datasets om de marketing actie tegen te testen.<br><br>**BELANGRIJK**: Wanneer u deze eigenschap gebruikt, wordt een `labels` eigenschap mag NIET in hetzelfde object worden opgenomen. Als u dezelfde marketingactie wilt evalueren met specifieke labels voor gegevensgebruik, moet u een afzonderlijk object in de payload van de aanvraag opnemen dat een `labels` array. |
-| `entityType` | Het type entiteit waarop de marketingactie moet worden getest. Alleen `dataSet` wordt ondersteund. |
+| `includeDraft` | Door gebrek, slechts neemt het toegelaten beleid aan evaluatie deel. Als `includeDraft` is ingesteld op `true` , wordt ook deelgenomen aan beleid dat de status `DRAFT` heeft. |
+| `labels` | Een array met labels voor gegevensgebruik waarmee de marketingactie wordt getest.<br><br>**BELANGRIJK**: Wanneer het gebruiken van dit bezit, moet een `entityList` bezit NIET in het zelfde voorwerp worden omvat. Als u dezelfde marketingactie wilt evalueren met behulp van gegevenssets en/of velden, moet u een afzonderlijk object in de aanvraaglading opnemen dat een array `entityList` bevat. |
+| `entityList` | Een serie van datasets en (facultatief) specifieke gebieden binnen die datasets om de marketing actie tegen te testen.<br><br>**BELANGRIJK**: Wanneer het gebruiken van dit bezit, moet een `labels` bezit NIET in het zelfde voorwerp worden omvat. Als u dezelfde marketingactie wilt evalueren met gebruik van specifieke labels voor gegevensgebruik, moet u een afzonderlijk object in de payload van de aanvraag opnemen dat een array `labels` bevat. |
+| `entityType` | Het type entiteit waarop de marketingactie moet worden getest. Momenteel wordt alleen `dataSet` ondersteund. |
 | `entityId` | De id van een dataset om de marketingactie tegen te testen. |
 | `entityMeta.fields` | (Optioneel) Een lijst met specifieke velden in de gegevensset waarop de marketingactie moet worden getest. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een serie van evaluatieresultaten terug; voor elke baan van de beleidsevaluatie die in het verzoek wordt verzonden.
 
@@ -684,4 +684,4 @@ Een succesvolle reactie keert een serie van evaluatieresultaten terug; voor elke
 
 ## Beleidsevaluatie voor [!DNL Real-Time Customer Profile]
 
-De [!DNL Policy Service] API kan ook worden gebruikt om te controleren op beleidsovertredingen waarbij het gebruik van [!DNL Real-Time Customer Profile] segmenten. Zie de zelfstudie aan [naleving van gegevensgebruik afdwingen voor publiekssegmenten](../../segmentation/tutorials/governance.md) voor meer informatie .
+De API van [!DNL Policy Service] kan ook worden gebruikt om te controleren op beleidsovertredingen waarbij [!DNL Real-Time Customer Profile] -segmenten worden gebruikt. Zie het leerprogramma op [ afdwingend de naleving van het gegevensgebruik voor publiekssegmenten ](../../segmentation/tutorials/governance.md) voor meer informatie.

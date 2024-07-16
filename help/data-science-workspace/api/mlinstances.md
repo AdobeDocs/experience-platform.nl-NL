@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # MLInstances, eindpunt
 
-Een MLInstance is het verpakken van een bestaand [Engine](./engines.md) met een geschikte set configuraties die trainingsparameters, scoringsparameters of configuraties van hardwarebronnen definiëren.
+Een instantie MLInstance is het verpakken van een bestaande [ Motor ](./engines.md) met een aangewezen reeks configuraties die om het even welke opleidingsparameters, het scoren parameters, of configuraties van het hardwaremiddel bepaalt.
 
 ## Een MLInstance maken {#create-an-mlinstance}
 
-U kunt een instantie tot stand brengen MLI door een verzoek van de POST uit te voeren terwijl het verstrekken van een verzoeklading die uit een geldige identiteitskaart van de Motor bestaat (`{ENGINE_ID}`) en een geschikte set standaardconfiguraties.
+U kunt een instantie tot stand brengen MLI door een verzoek van de POST uit te voeren terwijl het verstrekken van een verzoeklading die uit geldige identiteitskaart van de Motor (`{ENGINE_ID}`) en een aangewezen reeks standaardconfiguraties bestaat.
 
-Als identiteitskaart van de Motor verwijzingen een PySpark of de Motor van de Vonk dan hebt u de capaciteit om de hoeveelheid berekeningsmiddelen zoals het aantal kernen of de hoeveelheid geheugen te vormen. Als er naar een Python-engine wordt verwezen, kunt u kiezen tussen het gebruik van een CPU of GPU voor trainings- en scoringdoeleinden. Raadpleeg de bijlagen bij de [PySpark- en Spark-bronconfiguraties](./appendix.md#resource-config) en [Python CPU- en GPU-configuraties](./appendix.md#cpu-gpu-config) voor meer informatie .
+Als identiteitskaart van de Motor verwijzingen een PySpark of de Motor van de Vonk dan hebt u de capaciteit om de hoeveelheid berekeningsmiddelen zoals het aantal kernen of de hoeveelheid geheugen te vormen. Als er naar een Python-engine wordt verwezen, kunt u kiezen tussen het gebruik van een CPU of GPU voor trainings- en scoringdoeleinden. Verwijs naar de appendix secties op [ PySpark en het middelconfiguraties van de Vonk ](./appendix.md#resource-config) en [ Pypte cpu en configuraties GPU ](./appendix.md#cpu-gpu-config) voor meer informatie.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 POST /mlInstances
@@ -81,9 +81,9 @@ curl -X POST \
 | `engineId` | De id van een bestaande engine. |
 | `tasks` | Een reeks configuraties voor training, scoring of functiepijpleidingen. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een payload die de details bevat van de nieuwe MLInstance, inclusief de unieke id (`id`).
+Een succesvolle reactie keert een lading terug die de details van pas gecreëerde MLInstance met inbegrip van zijn uniek herkenningsteken (`id`) bevat.
 
 ```json
 {
@@ -130,9 +130,9 @@ Een geslaagde reactie retourneert een payload die de details bevat van de nieuwe
 
 ## Een lijst met MLInstances ophalen
 
-U kunt een lijst van instanties terugwinnen MLInstances door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [queryparameters voor ophalen van elementen](./appendix.md#query).
+U kunt een lijst van instanties terugwinnen MLInstances door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [ vraagparameters voor activaherwinning ](./appendix.md#query).
 
-**API-indeling**
+**API Formaat**
 
 ```http
 GET /mlInstances
@@ -142,7 +142,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Een van de [beschikbare queryparameters](./appendix.md#query) gebruikt om resultaten te filteren. |
+| `{QUERY_PARAMETER}` | Één van de [ beschikbare vraagparameters ](./appendix.md#query) die aan filterresultaten wordt gebruikt. |
 | `{VALUE}` | De waarde voor de voorafgaande vraagparameter. |
 
 **Verzoek**
@@ -156,7 +156,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van instanties MLInstances en hun details terug.
 
@@ -200,7 +200,7 @@ Een succesvolle reactie keert een lijst van instanties MLInstances en hun detail
 
 U kunt de details van een specifieke instantie terugwinnen MLI door een verzoek uit te voeren van de GET dat identiteitskaart van gewenste MLInstance in de verzoekweg omvat.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 GET /mlInstances/{MLINSTANCE_ID}
@@ -221,7 +221,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord geeft de details van MLInstance terug.
 
@@ -275,7 +275,7 @@ U kunt een bestaande instantie bijwerken door zijn eigenschappen door een verzoe
 
 >[!TIP]
 >
->Om het succes van dit verzoek van de PUT te verzekeren, wordt geadviseerd eerst een verzoek van de GET uit te voeren aan [Win MLInstance door identiteitskaart terug](#retrieve-specific). Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>Om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET uitvoert om [ MLInstance door identiteitskaart ](#retrieve-specific) terug te winnen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 De volgende voorbeeld-API-aanroep werkt de opleidings- en scoringsparameters van een MLInstance bij terwijl deze in eerste instantie beschikken over de volgende eigenschappen:
 
@@ -312,7 +312,7 @@ De volgende voorbeeld-API-aanroep werkt de opleidings- en scoringsparameters van
 }
 ```
 
-**API-indeling**
+**API Formaat**
 
 ```http
 PUT /mlInstances/{MLINSTANCE_ID}
@@ -364,7 +364,7 @@ curl -X PUT \
     }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lading terug die de bijgewerkte details van MLInstance bevat.
 
@@ -407,7 +407,7 @@ Een succesvolle reactie keert een lading terug die de bijgewerkte details van ML
 
 U kunt alle instanties schrappen MLI die de zelfde Motor delen door een verzoek uit te voeren van de DELETE dat identiteitskaart van de Motor als vraagparameter omvat.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 DELETE /mlInstances?engineId={ENGINE_ID}
@@ -428,7 +428,7 @@ curl -X DELETE \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 ```json
 {
@@ -442,7 +442,7 @@ curl -X DELETE \
 
 U kunt één enkele instantie verwijderen MLI door een verzoek van DELETE uit te voeren dat identiteitskaart van doelMLInstance in de verzoekweg omvat.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 DELETE /mlInstances/{MLINSTANCE_ID}
@@ -463,7 +463,7 @@ curl -X DELETE \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 ```json
 {

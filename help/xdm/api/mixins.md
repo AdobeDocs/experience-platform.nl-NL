@@ -6,7 +6,7 @@ description: Het /mixins eindpunt in de Registratie API van het Schema staat u t
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
@@ -16,25 +16,25 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De mengsels zijn anders genoemd aan de groepen van het schemagebied, en daarom `/mixins` Het eindpunt is vervangen door het `/fieldgroups` eindpunt.
+>De naam van mengsels is gewijzigd in schemaveldgroepen en daarom is het eindpunt `/mixins` vervangen door het eindpunt `/fieldgroups` .
 >
->while `/mixins` zal als erfeniseindpunt blijven gehandhaafd, wordt sterk geadviseerd dat u gebruikt `/fieldgroups` voor nieuwe implementaties van de Registratie API van het Schema in uw ervaringstoepassingen. Zie de [eindgids voor veldgroepen](./field-groups.md) voor meer informatie .
+>Hoewel `/mixins` als verouderd eindpunt blijft behouden, wordt u ten zeerste aangeraden `/fieldgroups` te gebruiken voor nieuwe implementaties van de API voor het schemaregister in uw ervaringstoepassingen. Zie de [ gids van het eindpunt van gebiedsgroepen ](./field-groups.md) voor meer informatie.
 
-Mixins zijn herbruikbare componenten die een of meer velden definiëren die een bepaald concept vertegenwoordigen, zoals een individuele persoon, een mailingadres of een webbrowseromgeving. Mixins zijn bedoeld om te worden opgenomen als onderdeel van een schema dat een compatibele klasse implementeert, afhankelijk van het gedrag van de gegevens die ze vertegenwoordigen (record- of tijdreeks). De `/mixins` in de [!DNL Schema Registry] Met de API kunt u via programmacode mixen in uw ervaringstoepassing beheren.
+Mixins zijn herbruikbare componenten die een of meer velden definiëren die een bepaald concept vertegenwoordigen, zoals een individuele persoon, een mailingadres of een webbrowseromgeving. Mixins zijn bedoeld om te worden opgenomen als onderdeel van een schema dat een compatibele klasse implementeert, afhankelijk van het gedrag van de gegevens die ze vertegenwoordigen (record- of tijdreeks). Met het eindpunt `/mixins` in de [!DNL Schema Registry] API kunt u via programmacode mixen beheren binnen uw ervaringstoepassing.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met mengsels ophalen {#list}
 
-U kunt alle mixen weergeven onder de `global` of `tenant` container door een GET-aanvraag in te dienen bij `/global/mixins` of `/tenant/mixins`, respectievelijk.
+U kunt alle mixen onder de `global` - of `tenant` -container weergeven door een GET-aanvraag in te dienen bij respectievelijk `/global/mixins` of `/tenant/mixins` .
 
 >[!NOTE]
 >
->Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [queryparameters](./appendix.md#query) voor meer informatie.
+>Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [ vraagparameters ](./appendix.md#query) in het bijlage document voor meer informatie.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
@@ -42,14 +42,14 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container u mengsels van wilt terugwinnen van: `global` voor door Adobe gemaakte mixen of `tenant` voor mengsels die eigendom zijn van uw organisatie. |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de [bijgevoegd document](./appendix.md#query) voor een lijst met beschikbare parameters. |
+| `{CONTAINER_ID}` | De container waarvan u mixins wilt ophalen: `global` voor door Adobe gemaakte mixins of `tenant` voor mixins die eigendom zijn van uw organisatie. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [ bijlage document ](./appendix.md#query) voor een lijst van beschikbare parameters. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een lijst met mixen opgehaald uit de `tenant` container gebruiken `orderby` queryparameter om de mixins op hun te sorteren `title` kenmerk.
+Met de volgende aanvraag wordt een lijst met mixen opgehaald uit de container `tenant` . Hierbij wordt een `orderby` query-parameter gebruikt om de mixins op hun `title` -kenmerk te sorteren.
 
 ```shell
 curl -X GET \
@@ -61,18 +61,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Het volgende `Accept` Kopteksten zijn beschikbaar voor aanbiedingsmixen:
+De antwoordindeling is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. De volgende `Accept` kopteksten zijn beschikbaar voor het vermelden van mixen:
 
 | `Accept` header | Beschrijving |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
-| `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-mix voor elke bron, met het origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
+| `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-mix voor elke bron, met origineel `$ref` en `allOf` inbegrepen. (Limiet: 300) |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-In bovengenoemd verzoek werd gebruikgemaakt van de `application/vnd.adobe.xed-id+json` `Accept` header, daarom bevat de reactie alleen de `title`, `$id`, `meta:altId`, en `version` kenmerken voor elke mix. Het andere gebruiken `Accept` header (`application/vnd.adobe.xed+json`) retourneert alle kenmerken van elke mix. Selecteer de juiste `Accept` afhankelijk van de informatie die u in uw reactie nodig hebt.
+In de bovenstaande aanvraag is de header `application/vnd.adobe.xed-id+json` `Accept` gebruikt en daarom bevat de reactie alleen de kenmerken `title` , `$id` , `meta:altId` en `version` voor elke mix. Wanneer u de andere `Accept` header (`application/vnd.adobe.xed+json` ) gebruikt, worden alle kenmerken van elke mix geretourneerd. Selecteer de juiste `Accept` header, afhankelijk van de informatie die u in uw reactie nodig hebt.
 
 ```json
 {
@@ -120,7 +120,7 @@ In bovengenoemd verzoek werd gebruikgemaakt van de `application/vnd.adobe.xed-id
 
 U kunt een specifieke mix opzoeken door de id van de mix op te nemen in het pad van een GET-verzoek.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
@@ -128,14 +128,14 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container die de mix bevat die u wilt ophalen: `global` voor een door Adobe gemaakte mix of `tenant` voor een mengsel dat eigendom is van uw organisatie. |
-| `{MIXIN_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de mix die u wilt opzoeken. |
+| `{CONTAINER_ID}` | De container waarin de mix is opgeslagen die u wilt ophalen: `global` voor een door Adobe gemaakt mengsel of `tenant` voor een mix die eigendom is van uw organisatie. |
+| `{MIXIN_ID}` | De `meta:altId` of URL-gecodeerde `$id` combinatie van de mix die u wilt opzoeken. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Het volgende verzoek wint een mengeling door zijn terug `meta:altId` waarde opgegeven in het pad.
+Met de volgende aanvraag wordt een mix opgehaald op basis van de `meta:altId` -waarde die in het pad is opgegeven.
 
 ```shell
 curl -X GET \
@@ -147,21 +147,21 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Alle opzoekverzoeken vereisen een `version` worden opgenomen in de `Accept` header. Het volgende `Accept` Kopteksten zijn beschikbaar:
+De antwoordindeling is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. Voor alle opzoekverzoeken moet een `version` worden opgenomen in de `Accept` -koptekst. De volgende `Accept` headers zijn beschikbaar:
 
 | `Accept` header | Beschrijving |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version=1` | Onbewerkt met `$ref` en `allOf`, heeft titels en beschrijvingen. |
-| `application/vnd.adobe.xed-full+json; version=1` | `$ref` en `allOf` heeft titels en beschrijvingen. |
-| `application/vnd.adobe.xed-notext+json; version=1` | Onbewerkt met `$ref` en `allOf`, geen titels of beschrijvingen. |
+| `application/vnd.adobe.xed+json; version=1` | Met `$ref` en `allOf` heeft Raw titels en beschrijvingen. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` en `allOf` resolve, heeft titels en beschrijvingen. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Onbewerkt met `$ref` en `allOf` , geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` en `allOf` opgelost, geen titels of beschrijvingen. |
-| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en `allOf` opgelost, beschrijving inbegrepen. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en `allOf` opgelost, inclusief beschrijvingen. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie retourneert de details van de mix. De geretourneerde velden zijn afhankelijk van de `Accept` in de aanvraag verzonden. Experimenteer met andere `Accept` Kopteksten om de reacties te vergelijken en te bepalen welke kopbal het beste voor uw gebruiksgeval is.
+Een succesvolle reactie retourneert de details van de mix. Welke velden worden geretourneerd, is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. Experimenteer met verschillende kopteksten van `Accept` om de reacties te vergelijken en te bepalen welke kopbal het beste voor uw gebruiksgeval is.
 
 ```json
 {
@@ -224,9 +224,9 @@ Een succesvolle reactie retourneert de details van de mix. De geretourneerde vel
 
 ## Een mix maken {#create}
 
-U kunt een aangepaste mix definiëren onder de `tenant` door een POST aan te vragen.
+U kunt een aangepaste mix definiëren onder de `tenant` -container door een POST aan te vragen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /tenant/mixins
@@ -234,11 +234,11 @@ POST /tenant/mixins
 
 **Verzoek**
 
-Wanneer u een nieuwe mix definieert, moet deze een `meta:intendedToExtend` kenmerk, de `$id` van de klassen waarmee de mix compatibel is. In dit voorbeeld is de mix compatibel met een `Property` klasse die eerder is gedefinieerd. Aangepaste velden moeten worden genest onder `_{TENANT_ID}` (zoals getoond in het voorbeeld) om botsingen met gelijkaardige gebieden te vermijden die door klassen en andere mengsels worden verstrekt.
+Wanneer u een nieuwe mix definieert, moet deze een `meta:intendedToExtend` -kenmerk bevatten dat de `$id` -klassen weergeeft waarmee de mix compatibel is. In dit voorbeeld is de mix compatibel met een klasse `Property` die eerder is gedefinieerd. Aangepaste velden moeten onder `_{TENANT_ID}` worden genest (zoals in het voorbeeld wordt getoond) om conflicten met vergelijkbare velden die door klassen en andere mengsels worden verschaft, te voorkomen.
 
 >[!NOTE]
 >
->Zie voor meer informatie over het definiëren van verschillende veldtypen die u in de mix wilt opnemen de opties in het dialoogvenster [veldbeperkingsgids](../schema/field-constraints.md#define-fields).
+>Voor details op hoe te om verschillende gebiedstypes te bepalen om in uw mengeling te omvatten, zie de [ gids van de gebiedsbeperkingen ](../schema/field-constraints.md#define-fields).
 
 ```SHELL
 curl -X POST \
@@ -305,9 +305,9 @@ curl -X POST \
 }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details van de zojuist gemaakte mix bevat, inclusief de `$id`, `meta:altId`, en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry].
+Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van de zojuist gemaakte mix, inclusief de `$id` , `meta:altId` en `version` . Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry] .
 
 ```JSON
 {
@@ -391,17 +391,17 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die d
 }
 ```
 
-Een GET-aanvraag uitvoeren op [alle mixen weergeven](#list) in de huurderscontainer zou nu de mengeling van de Details van het Bezit omvatten, of u kunt [een opzoekverzoek (GET) uitvoeren](#lookup) URL-gecodeerd gebruiken `$id` URI om de nieuwe mix rechtstreeks weer te geven.
+Het uitvoeren van een verzoek van de GET aan [ lijst alle mixins ](#list) in de huurderscontainer zou nu de mengsel van de Details van het Bezit omvatten, of u kunt [ een raadpleging (GET) verzoek ](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om de nieuwe mix direct te bekijken.
 
 ## Een mix bijwerken {#put}
 
-U kunt een volledige mix door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een mengeling door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die wanneer vereist zouden zijn [een nieuwe mix maken](#create) in een verzoek van de POST.
+U kunt een volledige mix door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een mixin door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [ creërend een nieuwe mixin ](#create) in een verzoek van de POST.
 
 >[!NOTE]
 >
->Als u slechts een deel van een mengeling wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [het bijwerken van een gedeelte van een mengeling](#patch).
+>Als u slechts een deel van een mixin in plaats van het volledig wilt bijwerken, zie de sectie op [ het bijwerken van een gedeelte van een mixin ](#patch).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /tenant/mixins/{MIXIN_ID}
@@ -409,13 +409,13 @@ PUT /tenant/mixins/{MIXIN_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{MIXIN_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de mix die u opnieuw wilt schrijven. |
+| `{MIXIN_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de mix die u opnieuw wilt schrijven. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Het volgende verzoek herschrijft een bestaande mix, die een nieuwe toevoegt `propertyCountry` veld.
+Met de volgende aanvraag wordt een bestaande mix opnieuw geschreven en wordt een nieuw veld `propertyCountry` toegevoegd.
 
 ```SHELL
 curl -X PUT \
@@ -487,7 +487,7 @@ curl -X PUT \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert de details van de bijgewerkte mix.
 
@@ -580,13 +580,13 @@ Een succesvolle reactie retourneert de details van de bijgewerkte mix.
 
 ## Een gedeelte van een mix bijwerken {#patch}
 
-U kunt een gedeelte van een mix bijwerken door een verzoek van PATCH te gebruiken. De [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add`, `remove`, en `replace`. Voor meer informatie over JSON Patch raadpleegt u de [Handleiding voor API-basisbeginselen](../../landing/api-fundamentals.md#json-patch).
+U kunt een gedeelte van een mix bijwerken door een verzoek van PATCH te gebruiken. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Als u een volledige bron wilt vervangen door nieuwe waarden in plaats van afzonderlijke velden bij te werken, raadpleegt u de sectie over [het vervangen van een meng gebruikend een verrichting van de PUT](#put).
+>Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [ het vervangen van een mixin gebruikend een verrichting van de PUT ](#put).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /tenant/mixin/{MIXIN_ID} 
@@ -594,15 +594,15 @@ PATCH /tenant/mixin/{MIXIN_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{MIXIN_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van de mix die u wilt bijwerken. |
+| `{MIXIN_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de mix die u wilt bijwerken. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met de onderstaande voorbeeldaanvraag wordt het `description` van een bestaande mix en voegt een nieuwe `propertyCity` veld.
+In de onderstaande voorbeeldaanvraag wordt de `description` van een bestaande mix bijgewerkt en wordt een nieuw `propertyCity` -veld toegevoegd.
 
-De aanvraaginstantie heeft de vorm van een array, waarbij elk vermeld object een specifieke wijziging in een afzonderlijk veld vertegenwoordigt. Elk object bevat de uit te voeren bewerking (`op`), welk veld de bewerking moet worden uitgevoerd (`path`) en welke informatie in die operatie moet worden opgenomen (`value`).
+De aanvraaginstantie heeft de vorm van een array, waarbij elk vermeld object een specifieke wijziging in een afzonderlijk veld vertegenwoordigt. Elk voorwerp omvat uit te voeren verrichting (`op`), welk gebied de verrichting zou moeten worden uitgevoerd (`path`), en welke informatie in die verrichting (`value`) zou moeten worden omvat.
 
 ```SHELL
 curl -X PATCH \
@@ -630,9 +630,9 @@ curl -X PATCH \
       ]'
 ```
 
-**Antwoord**
+**Reactie**
 
-De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De `description` is bijgewerkt, en `propertyCountry` is toegevoegd onder `definitions`.
+De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. `description` is bijgewerkt en `propertyCountry` is toegevoegd onder `definitions` .
 
 ```JSON
 {
@@ -725,7 +725,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De `descr
 
 Het kan soms nodig zijn een mengsel uit het Schemaregister te verwijderen. Dit wordt gedaan door een verzoek van de DELETE met mixin identiteitskaart uit te voeren die in de weg wordt verstrekt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /tenant/mixins/{MIXIN_ID}
@@ -733,7 +733,7 @@ DELETE /tenant/mixins/{MIXIN_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{MIXIN_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van de mix die u wilt verwijderen. |
+| `{MIXIN_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de mix die u wilt verwijderen. |
 
 {style="table-layout:auto"}
 
@@ -748,8 +748,8 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
-U kunt de verwijdering bevestigen door een [opzoekverzoek (GET)](#lookup) op de mixin. U moet een `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the mixin has been removed from the Schema Registry.
+U kunt de schrapping bevestigen door het verzoek van de a [ raadpleging (GET) ](#lookup) aan de mixin te proberen. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat de mixin uit de schemaregistratie is verwijderd.

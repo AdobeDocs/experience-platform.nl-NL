@@ -9,11 +9,11 @@ ht-degree: 0%
 
 ---
 
-# Gegevenselementstypen voor webextensies
+# Gegevenselementen voor webextensies
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 In gegevensverzamelingstags zijn gegevenselementen in feite aliassen van gegevens op een pagina. Deze gegevens zijn te vinden in parameters van queryreeksen, cookies, DOM-elementen of andere locaties. Een gegevenselement kan door regels worden van verwijzingen voorzien en als abstractie voor de toegang tot van deze stukken van gegevens dienst doen.
 
@@ -23,16 +23,16 @@ In dit document wordt beschreven hoe u gegevenselematypen voor een webextensie i
 
 >[!IMPORTANT]
 >
->Als u een randuitbreiding ontwikkelt, zie de gids op [gegevenselemetypen voor randextensies](../edge/data-element-types.md) in plaats daarvan.
+>Als u een randuitbreiding ontwikkelt, zie in plaats daarvan de gids op [ types van gegevenselement voor randuitbreidingen ](../edge/data-element-types.md).
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze in webextensies zijn geïntegreerd. Als u een inleiding nodig hebt, raadpleegt u het overzicht over [Opmaak van de module Bibliotheek](./format.md) voordat u terugkeert naar deze handleiding.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze in webextensies zijn geïntegreerd. Als u een inleiding vereist, zie het overzicht op [ het formatteren van de bibliotheekmodule ](./format.md) alvorens aan deze gids terug te keren.
 
 Gegevenselementen bestaan gewoonlijk uit de volgende elementen:
 
-1. A [weergave](./views.md) getoond binnen UI van het Experience Platform en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor het gegevenselement te wijzigen.
+1. A [ mening ](./views.md) getoond binnen het Experience Platform UI en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor het gegevenselement te wijzigen.
 2. Een bibliotheekmodule die in de tagruntimebibliotheek wordt uitgestraald om de instellingen te interpreteren en gegevens op te halen.
 
-Overweeg een situatie waarin u gebruikers wilt toestaan om gegevens op te halen uit een lokaal opslagitem met de naam `productName`. Uw module kan als volgt kijken:
+Neem bijvoorbeeld een situatie waarin u gebruikers wilt toestaan gegevens op te halen uit een lokaal opslagitem met de naam `productName` . Uw module kan als volgt kijken:
 
 ```js
 module.exports = function(settings) {
@@ -40,7 +40,7 @@ module.exports = function(settings) {
 }
 ```
 
-Als u de naam van het lokale opslagitem configureerbaar wilt maken voor de Adobe Experience Platform-gebruiker, kunt u toestaan dat de gebruiker een naam invoert en de naam vervolgens in de `settings` object. Het object kan er ongeveer als volgt uitzien:
+Als u de naam van het lokale opslagitem configureerbaar wilt maken voor de Adobe Experience Platform-gebruiker, kunt u toestaan dat de gebruiker een naam invoert en de naam vervolgens opslaat in het `settings` -object. Het object kan er ongeveer als volgt uitzien:
 
 ```js
 {
@@ -58,7 +58,7 @@ module.exports = function(settings) {
 
 ## Ondersteuning van standaardwaarden
 
-Houd er rekening mee dat gebruikers de optie hebben om een standaardwaarde voor elk gegevenselement te configureren. Als de bibliotheekmodule voor gegevenselementen een waarde retourneert van `undefined` of `null`, wordt deze automatisch vervangen door de standaardwaarde die de gebruiker voor het gegevenselement heeft geconfigureerd.
+Houd er rekening mee dat gebruikers de optie hebben om een standaardwaarde voor elk gegevenselement te configureren. Als de bibliotheekmodule voor gegevenselementen de waarde `undefined` of `null` retourneert, wordt deze automatisch vervangen door de standaardwaarde die de gebruiker voor het gegevenselement heeft geconfigureerd.
 
 ## Contextafhankelijke gebeurtenisgegevens
 
@@ -70,11 +70,11 @@ module.exports = function(settings, event) {
 };
 ```
 
-De `event` object moet de volgende eigenschappen bevatten:
+Het `event` -object moet de volgende eigenschappen bevatten:
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `$type` | Een tekenreeks die de naam van de extensie en de gebeurtenis beschrijft en waaraan een punt is toegevoegd. Bijvoorbeeld, `youtube.play`. |
+| `$type` | Een tekenreeks die de naam van de extensie en de gebeurtenis beschrijft en waaraan een punt is toegevoegd. Bijvoorbeeld `youtube.play` . |
 | `$rule` | Een object dat informatie bevat over de regel die momenteel wordt uitgevoerd. Het object moet de volgende subeigenschappen bevatten:<ul><li>`id`: De id van de regel die momenteel wordt uitgevoerd.</li><li>`name`: De naam van de regel die momenteel wordt uitgevoerd.</li></ul> |
 
-De uitbreiding die het gebeurtenistype verstrekt dat de regel teweegbracht kan andere nuttige informatie aan dit optioneel toevoegen `event` object.
+De extensie die het gebeurtenistype opgeeft dat de regel heeft geactiveerd, kan eventueel andere nuttige informatie toevoegen aan dit `event` -object.

@@ -4,18 +4,18 @@ title: Een doelconfiguratie bijwerken
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
 
 # Een doelconfiguratie bijwerken
 
-Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om een bestaande bestemmingsconfiguratie bij te werken, gebruikend `/authoring/destinations` API-eindpunt.
+Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om een bestaande doelconfiguratie bij te werken met behulp van het API-eindpunt `/authoring/destinations` .
 
 >[!TIP]
 >
->Om het even welke updateverrichting op geproduceerde/openbare bestemmingen is zichtbaar slechts nadat u gebruikt [publicatie-API](../../publishing-api/create-publishing-request.md) en dient de update in voor toetsing door de Adobe.
+>Om het even welke updateverrichting op geproduceerde/openbare bestemmingen is zichtbaar slechts nadat u [ het publiceren API ](../../publishing-api/create-publishing-request.md) gebruikt en voorlegt de update voor Adobe overzicht.
 
 Lees de volgende artikelen voor een gedetailleerde beschrijving van de mogelijkheden van een doelconfiguratie:
 
@@ -34,23 +34,23 @@ Lees de volgende artikelen voor een gedetailleerde beschrijving van de mogelijkh
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Aan de slag met API-bewerkingen voor doelconfiguratie {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een doelconfiguratie bijwerken {#update}
 
-U kunt een [bestaand](create-destination-configuration.md) doelconfiguratie door een `PUT` verzoek aan de `/authoring/destinations` eindpunt met de bijgewerkte nuttige lading.
+U kunt een [ bestaande ](create-destination-configuration.md) bestemmingsconfiguratie bijwerken door een `PUT` verzoek aan het `/authoring/destinations` eindpunt met de bijgewerkte nuttige lading te doen.
 
 >[!TIP]
 >
 >API-eindpunt: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-Om een bestaande bestemmingsconfiguratie en zijn overeenkomstige te verkrijgen `{INSTANCE_ID}`, zie het artikel over [het terugwinnen van een bestemmingsconfiguratie](retrieve-destination-configuration.md).
+Om een bestaande bestemmingsconfiguratie en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie het artikel over [ het terugwinnen van een bestemmingsconfiguratie ](retrieve-destination-configuration.md).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /authoring/destinations/{INSTANCE_ID}
@@ -58,11 +58,11 @@ PUT /authoring/destinations/{INSTANCE_ID}
 
 | Parameter | Beschrijving |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | De id van de doelconfiguratie die u wilt bijwerken. Om een bestaande bestemmingsconfiguratie en zijn overeenkomstige te verkrijgen `{INSTANCE_ID}`, zie [Een doelconfiguratie ophalen](retrieve-destination-configuration.md). |
+| `{INSTANCE_ID}` | De id van de doelconfiguratie die u wilt bijwerken. Om een bestaande bestemmingsconfiguratie en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie [ een bestemmingsconfiguratie ](retrieve-destination-configuration.md) terugwinnen. |
 
 +++verzoek
 
-Het volgende verzoek werkt de bestemming bij wij binnen creeerden [dit voorbeeld](create-destination-configuration.md#create) met andere `filenameConfig` opties.
+Het volgende verzoek werkt de bestemming bij wij in [ dit voorbeeld ](create-destination-configuration.md#create) met verschillende `filenameConfig` opties creeerden.
 
 ```shell {line-numbers="true" highlight="115-128"}
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -207,11 +207,11 @@ Een succesvolle reactie keert status 200 van HTTP met de details van uw bijgewer
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, weet u nu hoe u een doelconfiguratie kunt bijwerken via de Destination SDK `/authoring/destinations` API-eindpunt.
+Nadat u dit document hebt gelezen, weet u nu hoe u een doelconfiguratie kunt bijwerken via het API-eindpunt Destination SDK `/authoring/destinations` .
 
 Raadpleeg de volgende artikelen voor meer informatie over wat u met dit eindpunt kunt doen:
 

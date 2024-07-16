@@ -4,7 +4,7 @@ title: Een referentieconfiguratie verwijderen
 exl-id: a540e349-043c-4f04-8ca8-f650b9943492
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -13,37 +13,37 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/credentials`
+>**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om een credentiële configuratie te schrappen gebruikend `/authoring/credentials` API-eindpunt.
+Deze pagina illustreert de API-aanvraag en -lading die u kunt gebruiken om een referentieconfiguratie te verwijderen met behulp van het API-eindpunt `/authoring/credentials` .
 
-## Wanneer gebruikt u de `/credentials` API-eindpunt {#when-to-use}
+## Wanneer gebruikt u het API-eindpunt `/credentials` {#when-to-use}
 
 >[!IMPORTANT]
 >
->In de meeste gevallen ***niet*** de noodzaak `/credentials` API-eindpunt. In plaats daarvan, kunt u de authentificatieinformatie voor uw bestemming via vormen `customerAuthenticationConfigurations` parameters van de `/destinations` eindpunt.
+>In de meeste gevallen, te hoeven u ***niet*** om het `/credentials` API eindpunt te gebruiken. In plaats daarvan kunt u de verificatiegegevens voor uw doel configureren via de `customerAuthenticationConfigurations` -parameters van het `/destinations` -eindpunt.
 > 
->Lezen [Configuratie van klantverificatie](../functionality/destination-configuration/customer-authentication.md) voor gedetailleerde informatie over de ondersteunde verificatietypen.
+>Lees [ de authentificatieconfiguratie van de Klant ](../functionality/destination-configuration/customer-authentication.md) voor gedetailleerde informatie over de gesteunde authentificatietypen.
 
-Gebruik dit API eindpunt om een credentiële configuratie tot stand te brengen slechts als er een globaal authentificatiesysteem tussen Adobe en uw bestemmingsplatform is, en [!DNL Platform] de klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een referentieconfiguratie maken met de `/credentials` API-eindpunt.
+Gebruik dit API eindpunt om een credentieconfiguratie tot stand te brengen slechts als er een globaal authentificatiesysteem tussen Adobe en uw bestemmingsplatform is, en de [!DNL Platform] klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een referentieconfiguratie maken met het API-eindpunt van `/credentials` .
 
-Wanneer het gebruiken van een globaal authentificatiesysteem, moet u plaatsen `"authenticationRule":"PLATFORM_AUTHENTICATION"` in de [bestemmingslevering](../functionality/destination-configuration/destination-delivery.md) configuratie, wanneer [het creëren van een nieuwe bestemmingsconfiguratie](../authoring-api/destination-configuration/create-destination-configuration.md).
+Wanneer het gebruiken van een globaal authentificatiesysteem, moet u `"authenticationRule":"PLATFORM_AUTHENTICATION"` in de [ 2} configuratie van de bestemmingslevering plaatsen, wanneer [ creërend een nieuwe bestemmingsconfiguratie ](../authoring-api/destination-configuration/create-destination-configuration.md).](../functionality/destination-configuration/destination-delivery.md)
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Aan de slag met API-bewerkingen voor gebruikersgegevens {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een referentieconfiguratie verwijderen {#delete}
 
-U kunt een [bestaand](create-credential-configuration.md) crediteurconfiguratie door een `DELETE` verzoek aan de `/authoring/credentials` met de `{INSTANCE_ID}`van de referentieconfiguratie die u wilt verwijderen.
+U kunt een [ bestaande ](create-credential-configuration.md) credentiële configuratie schrappen door a `DELETE` verzoek aan het `/authoring/credentials` eindpunt met `{INSTANCE_ID}` van de referentie configuratie te maken die u wilt schrappen.
 
-Om een bestaande bestemmingsconfiguratie en zijn overeenkomstige te verkrijgen `{INSTANCE_ID}`, zie het artikel over [ophalen van een referentieconfiguratie](retrieve-credential-configuration.md).
+Om een bestaande bestemmingsconfiguratie en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie het artikel over [ het terugwinnen van een credentiële configuratie ](retrieve-credential-configuration.md).
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /authoring/credentials/{INSTANCE_ID}
@@ -51,9 +51,9 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | De `ID` van de referentie configuratie die u wilt verwijderen. |
+| `{INSTANCE_ID}` | De `ID` van de referentieconfiguratie die u wilt verwijderen. |
 
-Met het volgende verzoek wordt een door de `{INSTANCE_ID}` parameter.
+Met de volgende aanvraag wordt een referentieconfiguratie verwijderd die door de parameter `{INSTANCE_ID}` wordt gedefinieerd.
 
 +++verzoek
 
@@ -75,8 +75,8 @@ Een geslaagde reactie retourneert HTTP-status 200 samen met een lege HTTP-respon
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u een referentieconfiguratie kunt verwijderen met de `/authoring/credentials` API-eindpunt. Lezen [hoe te om Destination SDK te gebruiken om uw bestemming te vormen](../guides/configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Nadat u dit document hebt gelezen, weet u nu hoe u een referentieconfiguratie kunt verwijderen met behulp van het API-eindpunt van `/authoring/credentials` . Lees [ hoe te om Destination SDK te gebruiken om uw bestemming ](../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

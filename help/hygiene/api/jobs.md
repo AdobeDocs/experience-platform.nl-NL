@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Met de API voor gegevenshygiëne kunt u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch corrigeren of verwijderen.
 
-U hebt toegang tot de API via hetzelfde hoofdpad als de [Privacy Service-API](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
+U kunt tot API door de zelfde wortelweg toegang hebben zoals [ Privacy Service API ](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
 
 ## Aan de slag
 
@@ -28,7 +28,7 @@ Deze sectie verstrekt een inleiding aan de kernconcepten u moet kennen alvorens 
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan de Hygiene API van Gegevens te maken, moet u uw authentificatiegeloofsbrieven eerst verzamelen. Dit zijn dezelfde referenties die worden gebruikt voor toegang tot de Privacy Service-API. Zie de [API-overzicht](./overview.md#getting-started) om waarden voor elk van de vereiste kopballen voor de API van de Hygiëne van Gegevens te produceren, zoals hieronder getoond:
+Om vraag aan de Hygiene API van Gegevens te maken, moet u uw authentificatiegeloofsbrieven eerst verzamelen. Dit zijn dezelfde referenties die worden gebruikt voor toegang tot de Privacy Service-API. Verwijs naar het [ API overzicht ](./overview.md#getting-started) om waarden voor elk van de vereiste kopballen voor de Hygiene API van Gegevens te produceren, zoals hieronder getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -40,13 +40,13 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ### API-voorbeeldaanroepen lezen
 
-Dit document bevat een voorbeeld-API-aanroep om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/api-guide.md#sample-api) in de gids Aan de slag voor Experience Platform APIs.
+Dit document bevat een voorbeeld-API-aanroep om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/api-guide.md#sample-api) in de begonnen gids voor Experience Platform APIs te lezen.
 
 ## Een verwijdertaak maken
 
 U kunt een verwijdertaak maken door een POST aan te vragen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /jobs
@@ -54,7 +54,7 @@ POST /jobs
 
 **Verzoek**
 
-De payload van het verzoek heeft een vergelijkbare structuur als een [aanvraag verwijderen in de Privacy Service-API](../../privacy-service/api/privacy-jobs.md#access-delete). Het omvat een `users` array waarvan de objecten de gebruikers vertegenwoordigen waarvan de gegevens moeten worden verwijderd.
+De verzoeklading is gestructureerd zo aan dat van a [ schrappingsverzoek in Privacy Service API ](../../privacy-service/api/privacy-jobs.md#access-delete). Deze array bevat een array `users` waarvan de objecten de gebruikers vertegenwoordigen waarvan de gegevens moeten worden verwijderd.
 
 ```shell
 curl -X POST \
@@ -108,12 +108,12 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `companyContexts` | Een array met verificatiegegevens voor uw organisatie. Het moet één object met de volgende eigenschappen bevatten: <ul><li>`namespace`: Moet worden ingesteld op `imsOrgID`.</li><li>`value`: Uw organisatie-id. Dit is dezelfde waarde als in het dialoogvenster `x-gw-ims-org-id` header.</li></ul> |
-| `users` | Een array die een verzameling van ten minste één gebruiker bevat waarvan u de gegevens wilt verwijderen. Elk gebruikersobject bevat de volgende informatie: <ul><li>`key`: Een id voor een gebruiker die wordt gebruikt om de afzonderlijke taak-id&#39;s in de reactiegegevens te kwalificeren. Het is aan te raden een unieke, gemakkelijk identificeerbare tekenreeks voor deze waarde te kiezen, zodat er later naar kan worden verwezen of deze kan worden opgezocht.</li><li>`action`: Een array die de gewenste handelingen bevat die moeten worden uitgevoerd op de gegevens van de gebruiker. Moet één tekenreekswaarde bevatten: `delete`.</li><li>`userIDs`: Een verzameling identiteiten voor de gebruiker. Het aantal identiteiten dat één gebruiker kan hebben, is beperkt tot negen. Elke identiteit bevat de volgende eigenschappen: <ul><li>`namespace`: De [naamruimte identity](../../identity-service/features/namespaces.md) is gekoppeld aan de id. Dit kan een [standaardnaamruimte](../../privacy-service/api/appendix.md#standard-namespaces) door Platform wordt herkend, of het kan een aangepaste naamruimte zijn die door uw organisatie wordt gedefinieerd. Het type gebruikte naamruimte moet worden weerspiegeld in het dialoogvenster `type` eigenschap.</li><li>`value`: De identiteitswaarde.</li><li>`type`: Moet worden ingesteld op `standard` als een algemeen erkende naamruimte wordt gebruikt, of `custom` als u een naamruimte gebruikt die door uw organisatie is gedefinieerd.</li></ul></li></ul> |
+| `companyContexts` | Een array met verificatiegegevens voor uw organisatie. Het moet één object met de volgende eigenschappen bevatten: <ul><li>`namespace` : moet worden ingesteld op `imsOrgID` .</li><li>`value`: Uw organisatie-id. Dit is dezelfde waarde die in de `x-gw-ims-org-id` header wordt opgegeven.</li></ul> |
+| `users` | Een array die een verzameling van ten minste één gebruiker bevat waarvan u de gegevens wilt verwijderen. Elk gebruikersobject bevat de volgende informatie: <ul><li>`key`: Een id voor een gebruiker die wordt gebruikt om de afzonderlijke taak-id&#39;s in de reactiegegevens te kwalificeren. Het is aan te raden een unieke, gemakkelijk identificeerbare tekenreeks voor deze waarde te kiezen, zodat er later naar kan worden verwezen of deze kan worden opgezocht.</li><li>`action`: Een array met de acties die moeten worden uitgevoerd op basis van de gegevens van de gebruiker. Moet één tekenreekswaarde bevatten: `delete` .</li><li>`userIDs`: Een verzameling identiteiten voor de gebruiker. Het aantal identiteiten dat één gebruiker kan hebben, is beperkt tot negen. Elke identiteit bevat de volgende eigenschappen: <ul><li>`namespace`: De [ identiteit namespace ](../../identity-service/features/namespaces.md) verbonden aan identiteitskaart Dit kan a [ standaardnamespace ](../../privacy-service/api/appendix.md#standard-namespaces) zijn die door Platform wordt erkend, of het kan een douanespatie zijn door uw organisatie wordt bepaald die. Het type van gebruikte naamruimte moet worden weerspiegeld in de eigenschap `type` .</li><li>`value`: De identiteitswaarde.</li><li>`type` - Moet worden ingesteld op `standard` als u een algemeen herkende naamruimte gebruikt, of `custom` als u een naamruimte gebruikt die door uw organisatie is gedefinieerd.</li></ul></li></ul> |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord geeft de details van de gecreëerde banen terug.
 

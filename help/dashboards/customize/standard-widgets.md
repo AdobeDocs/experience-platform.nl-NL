@@ -14,44 +14,44 @@ ht-degree: 0%
 
 In Adobe Experience Platform kunt u de gegevens van uw organisatie bekijken en ermee communiceren met behulp van meerdere dashboards. U kunt bepaalde dashboards ook bijwerken door nieuwe widgets aan uw dashboardmening toe te voegen. Adobe biedt een selectie van standaardwidgets die u kunt toevoegen aan uw dashboards.
 
-De [[!UICONTROL Profiles]](../guides/profiles.md#default-widgets), [[!UICONTROL Audiences]](../guides/audiences.md#default-widgets), en [[!UICONTROL Destinations]](../guides/destinations.md#default-widgets) dashboards hebben elk een standaard widget lading-uit wanneer een nieuwe instantie van het Platform wordt gecreeerd. Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets om de [!UICONTROL Profiles], [!UICONTROL Audiences], en [!UICONTROL Destinations] dashboards in Platform UI.
+De dashboards [[!UICONTROL Profiles]](../guides/profiles.md#default-widgets) , [[!UICONTROL Audiences]](../guides/audiences.md#default-widgets) en [[!UICONTROL Destinations]](../guides/destinations.md#default-widgets) hebben elk een standaard widgetlading wanneer een nieuwe instantie van het Platform wordt gecreeerd. Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets om de dashboards [!UICONTROL Profiles] , [!UICONTROL Audiences] en [!UICONTROL Destinations] in de gebruikersinterface van het platform aan te passen.
 
 >[!NOTE]
 >
 >Alle updates van de dashboards worden uitgevoerd per organisatie en per sandbox.
 
-Raadpleeg de handleiding voor meer informatie over aangepaste widgets [aangepaste widgets maken](custom-widgets.md).
+Meer over douanewidgets leren, te verwijzen gelieve naar de gids voor [ het creëren van douane widgets ](custom-widgets.md).
 
 ## Widget-bibliotheek {#widget-library}
 
-Deze gids vereist toegang tot [!UICONTROL Widget library] in Experience Platform. Als u meer wilt weten over de widgetbibliotheek en hoe u deze kunt openen in de gebruikersinterface, leest u eerst de [Overzicht van widgetbibliotheek](widget-library.md).
+Voor deze handleiding is toegang tot [!UICONTROL Widget library] in het Experience Platform vereist. Meer over de widgetbibliotheek leren, en hoe te om tot het binnen UI toegang te hebben, gelieve te beginnen door het [ overzicht van de widgetbibliotheek te lezen ](widget-library.md).
 
 ## Aan de slag met standaardwidgets {#standard-widgets}
 
-In de widgetbibliotheek **[!UICONTROL Standard]** tab bevat widgets die zijn gemaakt door Adobe, onderverdeeld in categorieën op basis van de beschikbare dashboards.
+Het tabblad **[!UICONTROL Standard]** van de widgetbibliotheek bevat widgets die zijn gemaakt op basis van Adobe en die zijn onderverdeeld in categorieën op basis van de beschikbare dashboards.
 
-De geselecteerde categorie komt overeen met het dashboard waaruit u de widgetbibliotheek hebt ingevoerd. Met andere woorden, als u de widgetbibliotheek hebt geselecteerd vanuit de [!UICONTROL Profiles] dashboard, het [!UICONTROL Profiles] wordt geselecteerd en de andere categorieën worden grijs weergegeven.
+De geselecteerde categorie komt overeen met het dashboard waaruit u de widgetbibliotheek hebt ingevoerd. Met andere woorden, als u de widgetbibliotheek hebt geselecteerd in het dashboard van [!UICONTROL Profiles] , wordt de categorie [!UICONTROL Profiles] geselecteerd en worden de andere categorieën grijs weergegeven.
 
 De standaardwidgets voor de geselecteerde categorie worden weergegeven. Elke widget wordt weergegeven als een kaart met de titel, beschrijving en een voorbeeldvisualisatie van de metrische code.
 
 >[!NOTE]
 >
->Widgets kunnen alleen worden toegevoegd aan het dashboard dat overeenkomt met de geselecteerde categorie. Alleen widgets uit de [!UICONTROL Profiles] mag worden toegevoegd aan de [!UICONTROL Profiles] dashboard.
+>Widgets kunnen alleen worden toegevoegd aan het dashboard dat overeenkomt met de geselecteerde categorie. U kunt bijvoorbeeld alleen widgets uit de categorie [!UICONTROL Profiles] toevoegen aan het dashboard van [!UICONTROL Profiles] .
 
-![De werkruimte van de widgetbibliotheek met het tabblad Standaard en de beschikbare categorieën gemarkeerd.](../images/customization/standard-widgets.png)
+![ de werkruimte van de widgetbibliotheek met het Standaard benadrukte lusje en beschikbare categorieën.](../images/customization/standard-widgets.png)
 
 ## Standaardwidget toevoegen aan dashboard
 
-Als u een standaardwidget wilt kiezen die u aan het dashboard wilt toevoegen, markeert u de widget en schakelt u het selectievakje in. Als er ten minste één widget is geselecteerd, wordt de **[!UICONTROL Add widget]** wordt beschikbaar.
+Als u een standaardwidget wilt kiezen die u aan het dashboard wilt toevoegen, markeert u de widget en schakelt u het selectievakje in. Als er ten minste één widget is geselecteerd, wordt de knop **[!UICONTROL Add widget]** beschikbaar.
 
 >[!NOTE]
 >
 >De teller in de hoger-juiste hoek van de widgetbibliotheek toont het totale aantal geselecteerde widgets.
 
-Selecteren **[!UICONTROL Add widget]** om de geselecteerde widgets toe te voegen aan het dashboard.
+Selecteer **[!UICONTROL Add widget]** om de geselecteerde widgets aan het dashboard toe te voegen.
 
-![De werkruimte van de widgetbibliotheek met een widget geselecteerd en de widget toevoegen en Annuleren gemarkeerd.](../images/customization/add-widget.png)
+![ De widgetbibliotheekwerkruimte met geselecteerde widget en voegt widget toe en annuleert benadrukt.](../images/customization/add-widget.png)
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, kunt u de widgetbibliotheek openen en gebruiken om standaardwidgets aan een dashboard toe te voegen. Als u de grootte en locatie wilt wijzigen van de widgets die in het dashboard worden weergegeven, raadpleegt u de [hulplijn voor dashboards wijzigen](modify.md).
+Nadat u dit document hebt gelezen, kunt u de widgetbibliotheek openen en gebruiken om standaardwidgets aan een dashboard toe te voegen. Om de grootte en de plaats van widgets te wijzigen die in het dashboard verschijnen, gelieve te verwijzen naar [ wijzigen dashboardgids ](modify.md).

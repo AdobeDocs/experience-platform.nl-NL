@@ -15,14 +15,14 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
 Adobe Experience Platform ondersteunt een groot aantal bestemmingen. De workflow voor publiekactivering varieert per bestemming, op basis van het type publieksgegevens dat door de gebruikers wordt ondersteund en de frequentie waarmee de gegevens worden geëxporteerd.
 
 ## Activeringsmethoden {#activation-methods}
 
-Na u [vorm uw bestemming](connect-destination.md), kunt u het publiek op meerdere manieren activeren:
+Nadat u [ uw bestemming ](connect-destination.md) vormt, kunt u publiek op veelvoudige manieren activeren:
 
 ### Soorten publiek vanuit de catalogus met doelen activeren
 
@@ -32,19 +32,19 @@ Zie de volgende gidsen voor gedetailleerde informatie over het activeren van pub
 * [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](activate-streaming-profile-destinations.md)
 * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](activate-batch-profile-destinations.md)
 
-### Soorten publiek vanuit het deelvenster [!UICONTROL Browse] page
+### Soorten publiek vanaf de pagina [!UICONTROL Browse] activeren
 
-Voer de onderstaande stappen uit om gegevens vanuit de **[!UICONTROL Browse]** pagina.
+Voer de onderstaande stappen uit om gegevens vanaf de pagina **[!UICONTROL Browse]** naar uw doelen te activeren.
 
-1. Ga naar **[!UICONTROL Connections > Destinations]** en selecteert u de **[!UICONTROL Browse]** tab.
+1. Ga naar **[!UICONTROL Connections > Destinations]** en selecteer de tab **[!UICONTROL Browse]** .
 
-   ![Tabblad Bladeren](../assets/ui/activation-overview/browse-tab.png)
+   ![ doorbladert lusje ](../assets/ui/activation-overview/browse-tab.png)
 
-1. Zoek de doelverbinding die u wilt gebruiken om uw segmenten te activeren, selecteer de drie stippen in het dialoogvenster [!UICONTROL Name] kolom, selecteer dan **[!UICONTROL Activate audiences]**.
+1. Zoek de doelverbinding die u wilt gebruiken om uw segmenten te activeren, selecteer de drie stippen in de kolom [!UICONTROL Name] en selecteer vervolgens **[!UICONTROL Activate audiences]** .
 
-   ![Knop Soorten publiek activeren](../assets/ui/activation-overview/activate-segments.png)
+   ![ activeer publiek knoop ](../assets/ui/activation-overview/activate-segments.png)
 
-1. Voer afhankelijk van de geselecteerde bestemming de stappen uit die in de onderstaande artikelen worden beschreven, te beginnen met de **[!UICONTROL Select segments]** stap, om de activeringsworkflow te voltooien:
+1. Voer afhankelijk van het geselecteerde doel de stappen uit die in de onderstaande artikelen worden beschreven, te beginnen met de stap **[!UICONTROL Select segments]** , om de activeringsworkflow te voltooien:
 
    * [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](activate-segment-streaming-destinations.md)
    * [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](activate-streaming-profile-destinations.md)
@@ -52,7 +52,7 @@ Voer de onderstaande stappen uit om gegevens vanuit de **[!UICONTROL Browse]** p
 
 ### Soorten publiek activeren op de pagina met publieksdetails {#activate-audience-details}
 
-U kunt het publiek naar bestemmingen vanuit de pagina met publieksdetails activeren. Zie [Details publiek](../../segmentation/ui/audience-portal.md#audience-details) voor meer informatie .
+U kunt het publiek naar bestemmingen vanuit de pagina met publieksdetails activeren. Zie [ details van het publiek ](../../segmentation/ui/audience-portal.md#audience-details) voor meer informatie.
 
 Voer afhankelijk van de geselecteerde bestemming de stappen uit die in de onderstaande artikelen worden beschreven om de activeringsworkflow te voltooien:
 

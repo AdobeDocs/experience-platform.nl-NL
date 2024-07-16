@@ -18,11 +18,11 @@ Dit document bevat aanvullende informatie over het werken met de [!DNL Sandbox] 
 
 ## Query-parameters gebruiken {#query}
 
-De [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) ondersteunt het gebruik van queryparameters voor pagina- en filterresultaten bij het weergeven van sandboxen.
+[[!DNL Sandbox]  API ](https://www.adobe.io/experience-platform-apis/references/sandbox) steunt het gebruik van vraagparameters aan pagina en filterresultaten wanneer het van een lijst maken van zandbakken.
 
 >[!NOTE]
 >
->De `limit` en `offset` queryparameters moeten samen worden opgegeven. Als u slechts één specificeert, zal API een fout terugkeren. Als u geen opgeeft, is de standaardlimiet 50 en is de verschuiving 0.
+>De parameters `limit` en `offset` query moeten samen worden opgegeven. Als u slechts één specificeert, zal API een fout terugkeren. Als u geen opgeeft, is de standaardlimiet 50 en is de verschuiving 0.
 
 | Parameter | Beschrijving |
 | --- | --- |

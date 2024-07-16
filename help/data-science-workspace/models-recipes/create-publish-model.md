@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;machine het leren model;De Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;creeer en publiceer een model
+keywords: Experience Platform;machine het leren model;Gegevens Wetenschap Workspace;populaire onderwerpen;creeer en publiceer een model
 solution: Experience Platform
-title: Een leermodel voor machines maken en publiceren
+title: Een model voor machinaal leren maken en Publish
 type: Tutorial
 description: In de volgende handleiding worden de stappen beschreven die nodig zijn om een model voor machinaal leren te maken en te publiceren.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1068'
 ht-degree: 0%
 
 ---
@@ -21,49 +21,49 @@ In de volgende handleiding worden de stappen beschreven die nodig zijn om een mo
 
 Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldoen:
 
-- Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform], spreek gelieve met uw systeembeheerder alvorens te werk te gaan.
+- Toegang tot [!DNL Adobe Experience Platform] . Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform] , neemt u contact op met uw systeembeheerder voordat u verdergaat.
 
-- Alle zelfstudies in de werkruimte voor wetenschappen van gegevens maken gebruik van het model Luminantie. Als u de stappen wilt volgen, moet u de opdracht [Luminantiemodel, schema&#39;s en gegevenssets](./create-luma-data.md).
+- Alle zelfstudies van Workspace voor gegevenswetenschap gebruiken het Luminantiemodel. Om langs te volgen, moet u de [ het voorloodsmodel van de Luma schema&#39;s en datasets ](./create-luma-data.md) hebben gecreeerd.
 
 ### Ontdek de gegevens en begrijp de schema&#39;s
 
-Aanmelden bij [Adobe Experience Platform](https://platform.adobe.com/) en selecteert u **[!UICONTROL Datasets]** om van alle bestaande datasets een lijst te maken en de dataset te selecteren die u zou willen onderzoeken. Selecteer in dit geval de optie **Luminagewebgegevens** dataset.
+Login aan [ Adobe Experience Platform ](https://platform.adobe.com/) en selecteert **[!UICONTROL Datasets]** om van alle bestaande datasets een lijst te maken en de dataset te selecteren die u zou willen onderzoeken. In dit geval, zou u de **het Webgegevens van de Luma** dataset moeten selecteren.
 
-![Selecteer Luminagewebgegevensset](../images/models-recipes/model-walkthrough/luma-dataset.png)
+![ uitgezochte het Webdataset van de Luma ](../images/models-recipes/model-walkthrough/luma-dataset.png)
 
-De pagina van de datasetactiviteit opent, die informatie opsomt met betrekking tot uw dataset. U kunt **[!UICONTROL Preview Dataset]** in de buurt van de rechterbovenhoek om de voorbeeldrecords te bekijken. U kunt het schema voor de geselecteerde dataset ook bekijken.
+De pagina van de datasetactiviteit opent, die informatie opsomt met betrekking tot uw dataset. U kunt **[!UICONTROL Preview Dataset]** in de buurt van de rechterbovenhoek selecteren om voorbeeldrecords te bekijken. U kunt het schema voor de geselecteerde dataset ook bekijken.
 
-![voorvertoning van Luminantiewebgegevens](../images/models-recipes/model-walkthrough/preview-dataset.png)
+![ voorvertoning de Webgegevens van de Luma ](../images/models-recipes/model-walkthrough/preview-dataset.png)
 
-Selecteer de schemaverbinding in het juiste spoor. Er wordt een pop-up weergegeven en de koppeling onder **[!UICONTROL schema name]** Hiermee opent u het schema in een nieuw tabblad.
+Selecteer de schemaverbinding in het juiste spoor. Als u een pop-up selecteert onder **[!UICONTROL schema name]** , wordt het schema op een nieuw tabblad geopend.
 
-![voorvertoning van het lumawebgegevensschema](../images/models-recipes/model-walkthrough/preview-schema.png)
+![ voorproef het luma schema van Webgegevens ](../images/models-recipes/model-walkthrough/preview-schema.png)
 
-U kunt de gegevens verder verkennen met de geleverde EDA-laptop (Exploratory Data Analysis). Deze laptop kan worden gebruikt om inzicht te krijgen in de patronen in de Luminantiemaatgegevens, de gegevenshygiëne te controleren en een overzicht te maken van de relevante gegevens voor het voorspellende-nevenmodel. Meer over de Verkennende Analyse van Gegevens leren, bezoek [EDA-documentatie](../jupyterlab/eda-notebook.md).
+U kunt de gegevens verder verkennen met de geleverde EDA-laptop (Exploratory Data Analysis). Deze laptop kan worden gebruikt om inzicht te krijgen in de patronen in de Luminantiemaatgegevens, de gegevenshygiëne te controleren en een overzicht te maken van de relevante gegevens voor het voorspellende-nevenmodel. Meer over de Verkennende Analyse van Gegevens leren, bezoek de [ documentatie EDA ](../jupyterlab/eda-notebook.md).
 
 ## Maak het veelvuldigheidsrecept voor Luma {#author-your-model}
 
-Een hoofdcomponent van de [!DNL Data Science Workspace] De levenscyclus omvat het ontwerpen van Ontvangers en Modellen. Het model van de Luminantiemogelijkheid is ontworpen om een voorspelling te genereren over de vraag of klanten een hoge neiging hebben om een product van Luma te kopen.
+Een belangrijk onderdeel van de levenscyclus van [!DNL Data Science Workspace] is het ontwerpen van recept en modellen. Het model van de Luminantiemogelijkheid is ontworpen om een voorspelling te genereren over de vraag of klanten een hoge neiging hebben om een product van Luma te kopen.
 
 Voor het maken van het model Luma-eigenschappen wordt de sjabloon voor het maken van het recept gebruikt. Ontvangers vormen de basis voor een model, aangezien zij machine het leren algoritmen en logica bevatten die worden ontworpen om specifieke problemen op te lossen. Nog belangrijker is dat met behulp van Ontvangers u het leren van machines in uw organisatie kunt democratiseren, zodat andere gebruikers toegang hebben tot een model voor verschillende gebruiksgevallen zonder dat er code hoeft te worden geschreven.
 
-Volg de [een model maken met JupyterLab-laptops](../jupyterlab/create-a-model.md) zelfstudie voor het maken van het recept voor het model Luminantie, dat in volgende zelfstudies wordt gebruikt.
+Volg [ creeer een model gebruikend JupyterLab Notitieboekjes ](../jupyterlab/create-a-model.md) leerprogramma om het het modelrecept van de Bevolheid van de Luma tot stand te brengen dat in verdere leerprogramma&#39;s wordt gebruikt.
 
-## Een recept uit externe bronnen importeren en verpakken (*optioneel*)
+## De invoer en verpakt een recept van externe bronnen (*facultatief*)
 
-Als u een recept voor gebruik in de Werkruimte van de Wetenschap van Gegevens wilt invoeren en verpakken, moet u uw brondossiers in een archiefdossier verpakken. Volg de [bronbestanden in een recept plaatsen](./package-source-files-recipe.md) zelfstudie. Deze zelfstudie laat u zien hoe u bronbestanden in een recept kunt verpakken. Dit is de eerste vereiste stap voor het importeren van een recept in de werkruimte voor wetenschap van gegevens. Zodra de zelfstudie is voltooid, krijgt u een Docker-afbeelding in een Azure Container-register, samen met de bijbehorende afbeelding-URL, met andere woorden een archiefbestand.
+Als u een recept wilt importeren en verpakken voor gebruik in Data Science Workspace, moet u de bronbestanden in een archiefbestand plaatsen. Volg het [ pakket brondossiers in een recept ](./package-source-files-recipe.md) leerprogramma. Deze zelfstudie laat u zien hoe u bronbestanden in een recept kunt plaatsen. Dit is de eerste vereiste stap voor het importeren van een recept naar Data Science Workspace. Zodra de zelfstudie is voltooid, krijgt u een Docker-afbeelding in een Azure Container-register, samen met de bijbehorende afbeelding-URL, met andere woorden een archiefbestand.
 
-Dit archiefbestand kan worden gebruikt om een recept te maken in de Data Science Workspace door de workflow voor het importeren van recept te volgen met de [UI-workflow](./import-packaged-recipe-ui.md) of de [API-workflow](./import-packaged-recipe-api.md).
+Dit archiefdossier kan worden gebruikt om een recept in de Wetenschap van Gegevens te creëren Workspace door het recept te volgen invoerwerkschema gebruikend het [ werkschema UI ](./import-packaged-recipe-ui.md) of het [ API werkschema ](./import-packaged-recipe-api.md).
 
 ## Een model trainen en evalueren {#train-and-evaluate-your-model}
 
 Nu uw gegevens zijn voorbereid en een recept klaar is, hebt u de mogelijkheid om uw model voor het leren van machines verder te maken, te trainen en te evalueren. Terwijl u de Recipe Builder gebruikt, had u uw model al moeten opleiden, scoren en evalueren voordat u het in een recept hebt verpakt.
 
-Met de gebruikersinterface van de Data Science Workspace en de API kunt u uw recept als model publiceren. Daarnaast kunt u specifieke aspecten van uw model verder perfectioneren, zoals het toevoegen, verwijderen en wijzigen van hyperparameters.
+Met de gebruikersinterface van Data Science Workspace en de API kunt u uw recept publiceren als een model. Daarnaast kunt u specifieke aspecten van uw model verder perfectioneren, zoals het toevoegen, verwijderen en wijzigen van hyperparameters.
 
 ### Een model maken
 
-Als u meer wilt weten over het maken van een model met behulp van de gebruikersinterface, gaat u naar de trein en evalueert u een model in de werkruimte Gegevenswetenschap [UI-zelfstudie](./train-evaluate-model-ui.md) of [API-zelfstudie](./train-evaluate-model-api.md). Deze zelfstudie biedt een voorbeeld van het maken, trainen en bijwerken van hyperparameters om uw model verder aan te passen.
+Om meer over het creëren van een model te leren gebruikend UI, bezoek de trein en evalueer een model in het Workspace van de Wetenschap van Gegevens [ UI leerprogramma ](./train-evaluate-model-ui.md) of [ API leerprogramma ](./train-evaluate-model-api.md). Deze zelfstudie biedt een voorbeeld van het maken, trainen en bijwerken van hyperparameters om uw model verder aan te passen.
 
 >[!NOTE]
 >
@@ -73,19 +73,19 @@ Als u meer wilt weten over het maken van een model met behulp van de gebruikersi
 
 De volgende stap bij het maken en publiceren van een model is het operationeel maken van uw model om inzichten van het datumpeer en het Real-Time Profiel van de Klant te scoren en te verbruiken.
 
-Scores in de Werkruimte van de Wetenschap van Gegevens kunnen worden bereikt door inputgegevens in een bestaand opgeleid Model te voeren. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij.
+Scores in Data Science Workspace kunnen worden bereikt door invoergegevens in te voeren in een bestaand getraind model. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij.
 
-Ga voor meer informatie over het behalen van uw model naar de score van een model [UI-zelfstudie](./score-model-ui.md) of [API-zelfstudie](./score-model-api.md).
+Leren hoe te om uw model te scoren, bezoek de score een model [ leerprogramma UI ](./score-model-ui.md) of [ API leerprogramma ](./score-model-api.md).
 
-## Een model met een score publiceren als service
+## Publish een model met een score als service
 
-De Werkruimte van de Wetenschap van gegevens staat u toe om uw opgeleid model als dienst te publiceren. Dit laat gebruikers binnen uw organisatie toe om gegevens te scoren zonder de behoefte om hun eigen modellen tot stand te brengen.
+Met Data Science Workspace kunt u uw getrainde model publiceren als service. Dit laat gebruikers binnen uw organisatie toe om gegevens te scoren zonder de behoefte om hun eigen modellen tot stand te brengen.
 
-Ga voor meer informatie over het publiceren van een model als service naar de [UI-zelfstudie](./publish-model-service-ui.md) of [API-zelfstudie](./publish-model-service-api.md).
+Leren hoe te om een model als dienst te publiceren, bezoek het [ leerprogramma UI ](./publish-model-service-ui.md) of [ API leerprogramma ](./publish-model-service-api.md).
 
 ### Geautomatiseerde training voor een service plannen
 
-Als u een model eenmaal als service hebt gepubliceerd, kunt u geplande scoring- en trainingsprogramma&#39;s voor de leerservice voor uw computer instellen. Het automatiseren van het trainings- en scoringsproces kan de efficiëntie van een service helpen behouden en verbeteren door patronen in uw gegevens bij te houden. Ga naar [plant een model in de Werkruimte van de Wetenschap van Gegevens UI](./schedule-models-ui.md) zelfstudie.
+Als u een model eenmaal als service hebt gepubliceerd, kunt u geplande scoring- en trainingsprogramma&#39;s voor de leerservice voor uw computer instellen. Het automatiseren van het trainings- en scoringsproces kan de efficiëntie van een service helpen behouden en verbeteren door patronen in uw gegevens bij te houden. Bezoek het [ programma een model in de Wetenschap van Gegevens Workspace UI ](./schedule-models-ui.md) leerprogramma.
 
 >[!NOTE]
 >
@@ -93,8 +93,8 @@ Als u een model eenmaal als service hebt gepubliceerd, kunt u geplande scoring- 
 
 ## Volgende stappen {#next-steps}
 
-Adobe Experience Platform [!DNL Data Science Workspace] biedt de tools en bronnen om modellen voor machinaal leren te maken, te evalueren en te gebruiken om gegevensvoorspellingen en inzichten te genereren. Wanneer inzichten van het leren van machines worden opgenomen in een [!DNL Profile]-enabled dataset, dat de zelfde gegevens ook worden opgenomen zoals [!DNL Profile] records die vervolgens kunnen worden gesegmenteerd [!DNL Adobe Experience Platform Segmentation Service].
+Adobe Experience Platform [!DNL Data Science Workspace] biedt de gereedschappen en bronnen om modellen voor machinaal leren te maken, te evalueren en te gebruiken om gegevensvoorspellingen en inzichten te genereren. Wanneer inzichten van het machinaal leren in een [!DNL Profile]-Toegelaten dataset worden opgenomen, worden die zelfde gegevens ook opgenomen zoals [!DNL Profile] verslagen die dan kunnen worden gesegmenteerd gebruikend [!DNL Adobe Experience Platform Segmentation Service].
 
 Aangezien profiel en tijdreeksgegevens worden opgenomen, beslist het Profiel van de Klant in real time automatisch om die gegevens van segmenten door een aan de gang zijnde proces te omvatten of uit te sluiten die het stromen segmentatie wordt genoemd, alvorens het met bestaande gegevens samen te voegen en de verenigingsmening bij te werken. Dientengevolge, kunt u onmiddellijk berekeningen uitvoeren en besluiten nemen om verbeterde, geïndividualiseerde ervaringen aan klanten te leveren aangezien zij met uw merk in wisselwerking staan.
 
-De zelfstudie bezoeken voor [Het verrijken van Real-Time Klantprofiel met machine het leren inzichten](./enrich-profile.md) voor meer informatie over hoe u inzichten van machine-leren kunt gebruiken.
+Bezoek het leerprogramma voor [ het verrijken Real-Time Profiel van de Klant met machine het leren inzichten ](./enrich-profile.md) om meer over te leren hoe u machine het leren inzichten kunt gebruiken.

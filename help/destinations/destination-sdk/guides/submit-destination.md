@@ -25,19 +25,19 @@ ht-degree: 0%
 >
 >* De tijdlijn van de revisie en de vereiste artefacten zijn het zelfde voor nieuwe bestemmingen en bestaande bestemmingen die u bijwerkt.
 
-Voordat uw bestemming kan worden gepubliceerd naar de [Catalogus Experience Platform-doelen](/help/destinations/catalog/overview.md), moet u de Adobe bepaalde informatie geven over de bestemming en de uitgevoerde tests om ervoor te zorgen dat gebruikers de best mogelijke ervaring hebben bij het activeren van gegevens op uw platform.
+Alvorens uw bestemming aan de [ catalogus van de bestemmingen van het Experience Platform ](/help/destinations/catalog/overview.md) kan worden gepubliceerd, moet u Adobe van bepaalde informatie over de bestemming en het testen verstrekken u uitvoerde, om ervoor te zorgen dat de gebruikers van de beste mogelijke ervaring wanneer het activeren van gegevens aan uw platform genieten.
 
-Deze pagina bevat alle informatie die u moet opgeven wanneer u een bestemming verzendt of bijwerkt die u met Adobe Experience Platform Destination SDK hebt gemaakt. Als u een bestemming in Adobe Experience Platform wilt verzenden, stuurt u een e-mail naar <aepdestsdk@adobe.com> waaronder:
+Deze pagina bevat alle informatie die u moet opgeven wanneer u een bestemming verzendt of bijwerkt die u met Adobe Experience Platform Destination SDK hebt gemaakt. Als u een doel in Adobe Experience Platform wilt verzenden, stuurt u een e-mail naar <aepdestsdk@adobe.com> met daarin:
 
 * Een beschrijving van de gebruiksgevallen die uw bestemming oplost. Dit wordt slechts vereist als u een nieuwe bestemmingsconfiguratie voorlegt.
 * Een beschrijving van de reden voor het verzenden van uw bestemming. Dit wordt slechts vereist als u een bestaande bestemmingsconfiguratie bijwerkt.
 * De resultaten van de test na het gebruiken van het bestemmingsAPI eindpunt om een vraag van HTTP aan uw bestemming uit te voeren. Gelieve te delen met Adobe een API vraag die aan uw bestemmingshindpunt wordt gemaakt en de API reactie die van uw bestemmingshindpunt wordt ontvangen.
 * Aanvullende vereisten voor bestandsgebaseerde doelen:
-   * Een aanvraag en een reactievoorbeeld delen nadat de API voor testen is gebruikt [Bestandsgebaseerde bestemming testen met voorbeeldprofielen](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+   * Deel een verzoek en een reactiesteekproef na het gebruiken van het testen API aan [ test uw op dossier-gebaseerde bestemming met steekproefprofielen ](../testing-api/batch-destinations/file-based-destination-testing-api.md).
    * Koppel een voorbeeldbestand dat door uw bestemming is gegenereerd en dat naar uw opslaglocatie is geëxporteerd.
    * Verzend een of andere vorm van bewijs dat u het geëxporteerde bestand van de opslaglocatie naar uw systeem hebt ingevoerd.
-* Het bewijs dat u een bestemmings het publiceren verzoek voor uw bestemming gebruikend hebt voorgelegd [doel-publicatie-API](../publishing-api/create-publishing-request.md).
-* Een documentatie PR (trekkingsverzoek), volgens de instructies die worden beschreven in de [zelfbedieningsdocumentatie](../docs-framework/documentation-instructions.md).
+* Het bewijs dat u een bestemmings het publiceren verzoek voor uw bestemming gebruikend [ bestemmings het publiceren API ](../publishing-api/create-publishing-request.md) hebt voorgelegd.
+* Een documentatie PR (trekkingsverzoek), die de instructies volgen in het [ worden beschreven zelfbediening documentatieproces ](../docs-framework/documentation-instructions.md).
 * Een afbeeldingsbestand dat wordt weergegeven als een logo voor uw doelkaart in de catalogus met bestemmingen voor het Experience Platform.
 
 In de onderstaande secties vindt u gedetailleerde informatie over elk onderdeel:
@@ -46,8 +46,8 @@ In de onderstaande secties vindt u gedetailleerde informatie over elk onderdeel:
 
 Verstrek een beschrijving van de gebruiksgevallen die uw bestemming voor klanten van het Experience Platform oplost. Uw beschrijvingen kunnen gelijkaardig zijn aan gebruiksgevallen van bestaande partners:
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezocht of personen die al met uw inhoud hebben gewerkt op Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-API&#39;s zijn beschikbaar voor adverteerders die een specifieke doelgroep willen kiezen met e-mailadressen die in VMG (Verizon Media) zijn uitgeschakeld, zodat ze snel een nieuw publiek kunnen maken en de gewenste doelgroep kunnen duwen met de vrijwel realtime API van VMG.
+* [ Pinterest ](/help/destinations/catalog/advertising/pinterest.md): Creeer publiek van uw klantenlijsten, mensen die uw plaats of mensen hebben bezocht die reeds met uw inhoud op Pinterest in wisselwerking staan.
+* [ Gegevens X van Yahoo ](/help/destinations/catalog/advertising/datax.md#use-cases): DataX APIs is beschikbaar voor adverteerders die een specifieke publieksgroep willen richten die van e-mailadressen in de Media van de Verizon (VMG) wordt gehouden kan snel een nieuw publiek tot stand brengen en de gewenste publieksgroep duwen gebruikend VMG&#39;s dichtbij-real-time API.
 
 ## Reden voor update {#reason-for-update}
 
@@ -59,7 +59,7 @@ Geef een korte beschrijving van de kwestie die door uw verzending wordt opgelost
 
 ## Testresultaten na gebruik van de API voor testbestemming {#testing-api-response}
 
-Geef testresultaten op nadat u de [doel-API testen](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) eindpunt om een vraag van HTTP aan uw bestemming uit te voeren. Dit omvat:
+Verstrek testresultaten na het gebruiken van het [ doelAPI ](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) eindpunt om een vraag van HTTP aan uw bestemming uit te voeren. Dit omvat:
 
 * De volledige API-aanvraag (headers en body) die met de API voor testen is ingediend bij het eindpunt van de bestemming.
 * De API reactie die van uw bestemmingshindpunt wordt ontvangen.
@@ -123,7 +123,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }'
 ```
 
-**Antwoord**
+**Reactie**
 
 ```json
 {
@@ -233,11 +233,11 @@ Voor op dossier-gebaseerde bestemmingen, moet u extra bewijs verstrekken dat u c
 
 ### API-reactie testen {#testing-api-response-file-based}
 
-Neem een aanvraag en een reactievoorbeeld op nadat u de API voor testen hebt gebruikt om [Bestandsgebaseerde bestemming testen met voorbeeldprofielen](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+Omvat een verzoek en een reactiesteekproef na het gebruiken van het testen API aan [ test uw op dossier-gebaseerde bestemming met steekproefprofielen ](../testing-api/batch-destinations/file-based-destination-testing-api.md).
 
 ### Geëxporteerd bestand bijvoegen {#attach-exported-file}
 
-In uw [verzending-e-mail](#download-sample-email)voegt u een CSV-bestand toe dat naar uw opslaglocatie is geëxporteerd door het doel dat u hebt ingesteld.
+In uw [ voorleggingsE-mail ](#download-sample-email), maak een Csv- dossier vast dat in uw opslagplaats door de bestemming werd uitgevoerd die u opstelling.
 
 ### Bewijs van geslaagde inname {#proof-of-successful-ingestion}
 
@@ -249,22 +249,22 @@ Tot slot moet u een of andere vorm van bewijs verstrekken dat de gegevens met su
 
 ## Bewijs dat u een bestemmings het publiceren verzoek hebt ingediend {#destination-publishing-request-proof}
 
-Nadat u de bestemming hebt getest, moet u [doel-publicatie-API](../publishing-api/create-publishing-request.md) om de bestemming voor overzicht en publicatie naar de Adobe te verzenden.
+Na met succes het testen van uw bestemming, moet u [ bestemmings het publiceren API ](../publishing-api/create-publishing-request.md) gebruiken om de bestemming aan Adobe voor overzicht en het publiceren voor te leggen.
 
-Geef de id van de publicatieaanvraag voor uw doel op. Voor informatie over het ophalen van de id van de publicatieaanvraag leest u hoe u [doel-publicatieverzoeken ophalen](../publishing-api/retrieve-publishing-request.md).
+Geef de id van de publicatieaanvraag voor uw doel op. Voor informatie over hoe te om te terugwinnen publiceer verzoekidentiteitskaart, leest hoe te [ bestemming terugwinnen publicatieverzoeken ](../publishing-api/retrieve-publishing-request.md).
 
 ## Doeldocumentatie PR (pull-request) voor productieve integratie {#documentation-pr}
 
-Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creeert [productievere integratie](../overview.md#productized-custom-integrations), moet u de [zelfbedieningsdocumentatie](../docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming tot stand te brengen. Geef als onderdeel van het verzendproces de pull request (PR) voor de doeldocumentatie op.
+Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creërend a [ geproduceerde integratie ](../overview.md#productized-custom-integrations) bent, moet u het [ zelfbedienings documentatieproces ](../docs-framework/documentation-instructions.md) gebruiken om een pagina van de productdocumentatie voor uw bestemming tot stand te brengen. Geef als onderdeel van het verzendproces de pull request (PR) voor de doeldocumentatie op.
 
 ## Logo voor uw doel {#logo}
 
 De doelcatalogus bevat een logo voor elke doelkaart. Neem in uw e-mailbericht een afbeelding op met het logo voor uw bestemming.
 
 De afbeeldingsvereisten zijn:
-* **Indeling**: `SVG`
-* **Grootte**: minder dan 2 MB
+* **Formaat**: `SVG`
+* **Grootte**: minder dan 2MB
 
 ## Voorbeelde-mail downloaden {#download-sample-email}
 
-[Downloaden](../assets/guides/sample-email-submit-destination.rtf) een voorbeeld-e-mail met alle informatie die u aan de Adobe moet verstrekken.
+[ Download ](../assets/guides/sample-email-submit-destination.rtf) een steekproefe-mail met alle informatie die u aan Adobe moet verstrekken.

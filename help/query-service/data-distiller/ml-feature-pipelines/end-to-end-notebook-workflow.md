@@ -24,9 +24,9 @@ Met Data Distiller kunt u uw computers verrijken met leerleidingen met hoogwaard
 
 Dit document bevat een reeks cloudgebaseerde laptops voor de computerleeromgeving die een complete workflow demonstreren. In de workflow worden aangepaste gegevensmodellen gemaakt die uw gebruiksscenario&#39;s voor marketingdoeleinden ondersteunen met behulp van Experience Platforms.
 
-Voor deze workflow is het gebruik van [!DNL Python] -laptops in uw computerleeromgevingen. Instructies om met deze [!DNL Python] -laptops worden in hun respectievelijke Lees mij-bestanden opgenomen.
+Deze workflow vereist het gebruik van [!DNL Python] -laptops in een leeromgeving voor uw computer. Instructies om aan de slag te gaan met deze [!DNL Python] -laptops zijn opgenomen in de respectievelijke Lees mij-bestanden.
 
-Volg de stappen in het dialoogvenster [Overzicht AI/ML-functiepijpleidingen](./overview.md) om het gebruik mogelijk te maken van het monster Python-laptops die in deze AI/ML-functiepijpleiding worden gebruikt.
+Alvorens u met deze gids verdergaat, volg de stappen die in het [ worden geschetst AI/ML overzicht van eigenschappijpleidingen ](./overview.md) worden geschetst om het gebruik van de notitieboekjes van de steekproefPython toe te laten die in deze AI/ML de gebruiksgeval van de eigenschappijpleiding worden gebruikt.
 
 ## Laptops voor de leeromgeving van cloudmachines {#cmle-notebooks}
 

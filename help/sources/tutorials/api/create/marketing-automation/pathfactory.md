@@ -10,24 +10,24 @@ ht-degree: 1%
 
 ---
 
-# Een [!DNL PathFactory] basisverbinding met de [!DNL Flow Service] API
+# Een [!DNL PathFactory] basisverbinding maken met de [!DNL Flow Service] API
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Lees dit document voor meer informatie over het maken van een basisverbinding voor [!DNL PathFactory] met de [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Lees dit document om te leren hoe te om een basisverbinding voor [!DNL PathFactory] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
-De volgende sectie bevat aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL PathFactory] met de [!DNL Flow Service] API.
+In de volgende sectie vindt u aanvullende informatie die u moet weten als u verbinding wilt maken met [!DNL PathFactory] via de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen {#gather-credentials}
 
@@ -35,21 +35,21 @@ Om tot uw rekening PathFactory op het Platform toegang te hebben, moet u de volg
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| Gebruikersnaam | Uw [!DNL PathFactory] gebruikersnaam account. Dit is essentieel voor het identificeren van uw account in het systeem. |
-| Wachtwoord | Het wachtwoord dat aan uw [!DNL PathFactory] account. Zorg ervoor dat dit veilig blijft om ongeoorloofde toegang te voorkomen. |
-| Domein | Het domein dat aan uw [!DNL PathFactory] account. Dit verwijst doorgaans naar de unieke id in uw [!DNL PathFactory] URL. |
-| Toegangstoken | Een uniek token dat wordt gebruikt voor API-verificatie om te zorgen voor veilige communicatie tussen uw systemen en [!DNL PathFactory]. |
-| API-eindpunten | Specifieke API-eindpunten voor toegang tot gegevens: Bezoekers, Sessies en Paginaweergaven. Elk eindpunt komt overeen met verschillende gegevenssets die u kunt ophalen. **Opmerking:** Deze worden vooraf gedefinieerd door [!DNL PathFactory] en zijn specifiek voor de gegevens die u wilt gebruiken: <ul><li>**Eindpunt van bezoekers**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Sessieeindpunt**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Eindpunt van paginaweergaven**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
+| Gebruikersnaam | Uw [!DNL PathFactory] gebruikersnaam van de account. Dit is essentieel voor het identificeren van uw account in het systeem. |
+| Wachtwoord | Het wachtwoord dat aan uw [!DNL PathFactory] account is gekoppeld. Zorg ervoor dat dit veilig blijft om ongeoorloofde toegang te voorkomen. |
+| Domein | Het domein dat aan uw [!DNL PathFactory] account is gekoppeld. Dit verwijst doorgaans naar de unieke id in de [!DNL PathFactory] URL. |
+| Toegangstoken | Een uniek token dat wordt gebruikt voor API-verificatie om te zorgen voor veilige communicatie tussen uw systemen en [!DNL PathFactory] . |
+| API-eindpunten | Specifieke API-eindpunten voor toegang tot gegevens: Bezoekers, Sessies en Paginaweergaven. Elk eindpunt komt overeen met verschillende gegevenssets die u kunt ophalen. **Nota:** deze zijn vooraf bepaald door [!DNL PathFactory] en zijn specifiek voor de gegevens u van plan bent toegang te hebben: <ul><li>**Eindpunt van Bezoekers**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Eindpunt van zittingen**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Eindpunt van de Mening van de Pagina**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
 
-Voor meer informatie over het beveiligen en gebruiken van uw geloofsbrieven, en hoe te om uw toegangstoken te verkrijgen en te verfrissen, bezoek [[!DNL PathFactory] Ondersteuningscentrum](https://support.pathfactory.com/categories/adobe/). Deze bron bevat uitgebreide handleidingen voor het beheer van uw referenties en voor een effectieve en veilige API-integratie.
+Voor meer informatie over hoe te om uw geloofsbrieven te beveiligen en te gebruiken, en hoe te om uw toegangstoken te verkrijgen en te verfrissen, bezoek het [[!DNL PathFactory]  Centrum van de Steun ](https://support.pathfactory.com/categories/adobe/). Deze bron bevat uitgebreide handleidingen voor het beheer van uw referenties en voor een effectieve en veilige API-integratie.
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL PathFactory] verificatiegegevens als onderdeel van de aanvraaginstantie.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL PathFactory] -verificatiegegevens op als onderdeel van de aanvraaginstantie.
 
-**API-indeling**
+**API formaat**
 
 ```https
 POST /connections
@@ -57,7 +57,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL PathFactory]:
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL PathFactory] gemaakt:
 
 ```shell
 curl -X POST \
@@ -87,13 +87,13 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `auth.params.clientId` | De client-id die aan uw [!DNL PathFactory] toepassing. |
-| `auth.params.clientSecret` | Het clientgeheim dat aan uw [!DNL PathFactory] toepassing. |
-| `connectionSpec.id` | De [!DNL PathFactory] Verbindingsspecificatie-id: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `auth.params.clientId` | De client-id die aan uw [!DNL PathFactory] -toepassing is gekoppeld. |
+| `auth.params.clientSecret` | Het clientgeheim dat aan de toepassing [!DNL PathFactory] is gekoppeld. |
+| `connectionSpec.id` | The [!DNL PathFactory] connection specification ID: `ea1c2a08-b722-11eb-8529-0242ac130003` . |
 
-**Antwoord**
+**Reactie**
 
-Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de unieke verbindings-id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zijn unieke verbindings herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
 ```json
 {
@@ -104,7 +104,7 @@ Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL PathFactory] basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
+Aan de hand van deze zelfstudie hebt u een [!DNL PathFactory] basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
-* [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
-* [Maak een gegevensstroom om marketingautomatiseringsgegevens naar het platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/marketing-automation.md)
+* [Onderzoek de structuur en de inhoud van uw gegevenslijsten gebruikend  [!DNL Flow Service]  API](../../explore/tabular.md)
+* [Creeer een dataflow om marketing automatiseringsgegevens aan Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/marketing-automation.md)

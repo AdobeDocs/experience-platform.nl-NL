@@ -13,39 +13,39 @@ ht-degree: 0%
 
 # Creeer een segmentdefinitie gebruikend de Dienst API van de Segmentatie
 
-Dit document bevat een zelfstudie voor het ontwikkelen, testen, voorvertonen en opslaan van een segmentdefinitie met behulp van de [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
+Dit document biedt een zelfstudie voor het ontwikkelen, testen, voorvertonen en opslaan van een segmentdefinitie met de [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md) .
 
-Voor informatie over hoe te om segmentdefinities te bouwen gebruikend het gebruikersinterface, gelieve te zien [Handleiding Segment Builder](../ui/segment-builder.md).
+Voor informatie over hoe te om segmentdefinities te bouwen gebruikend het gebruikersinterface, gelieve de [ gids van de Bouwer van het Segment ](../ui/segment-builder.md) te zien.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] diensten betrokken bij het creëren van segmentdefinities. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] -services die betrokken zijn bij het maken van segmentdefinities. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Staat u toe om publiek te bouwen gebruikend segmentdefinities of andere externe bronnen van de gegevens van het Profiel van de Klant in real time.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert de gegevens van de klantenervaring. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Staat u toe om publiek te bouwen gebruikend segmentdefinities of andere externe bronnen van gegevens van het Profiel van de Klant in real time.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt. Om het beste gebruik van Segmentatie te maken, gelieve te verzekeren uw gegevens als profielen en gebeurtenissen volgens de [ beste praktijken voor gegevens modellering ](../../xdm/schema/best-practices.md) worden opgenomen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan te maken [!DNL Platform] API&#39;s.
+De volgende secties bevatten aanvullende informatie die u moet weten om aanroepen naar de API&#39;s van [!DNL Platform] te kunnen uitvoeren.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
-- Toestemming: houder `{ACCESS_TOKEN}`
+- Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Voor meer informatie over sandboxen in [!DNL Platform], zie de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -53,22 +53,22 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Een segmentdefinitie ontwikkelen
 
-De eerste stap in segmentatie is een segmentdefinitie te bepalen. Een segmentdefinitie is een object waarin een query is opgenomen [!DNL Profile Query Language] (PQL) Dit object wordt ook wel een PQL-voorspelling genoemd. PQL voorspelt de regels voor de segmentdefinitie die zijn gebaseerd op voorwaarden met betrekking tot alle record- of tijdreeksgegevens die u opgeeft aan [!DNL Real-Time Customer Profile]. Zie de [PQL-gids](../pql/overview.md) voor meer informatie over het schrijven van PQL query&#39;s.
+De eerste stap in segmentatie is een segmentdefinitie te bepalen. Een segmentdefinitie is een object dat een query omvat die is geschreven in [!DNL Profile Query Language] (PQL). Dit object wordt ook wel een PQL-voorspelling genoemd. PQL voorspelt de regels voor de segmentdefinitie op basis van voorwaarden die gerelateerd zijn aan record- of tijdreeksgegevens die u aan [!DNL Real-Time Customer Profile] opgeeft. Zie de [ gids van PQL ](../pql/overview.md) voor meer informatie bij het schrijven van de vragen van PQL.
 
-U kunt een nieuwe segmentdefinitie tot stand brengen door een verzoek van de POST aan `/segment/definitions` in de [!DNL Segmentation] API. Het volgende voorbeeld schetst hoe te om een definitieverzoek te formatteren, die welke informatie wordt vereist opdat een segmentdefinitie met succes wordt bepaald.
+U kunt een nieuwe segmentdefinitie maken door een aanvraag voor een POST in te dienen bij het eindpunt `/segment/definitions` in de [!DNL Segmentation] API. Het volgende voorbeeld schetst hoe te om een definitieverzoek te formatteren, die welke informatie wordt vereist opdat een segmentdefinitie met succes wordt bepaald.
 
-Voor een gedetailleerde uitleg van het definiëren van een segmentdefinitie leest u de [segmentdefinitiehandleiding](../api/segment-definitions.md#create).
+Voor een gedetailleerde verklaring op hoe te om een segmentdefinitie te bepalen, te lezen gelieve de [ gids van de de ontwikkelaar van de segmentdefinitie ](../api/segment-definitions.md#create).
 
 ## Een publiek schatten en voorvertonen {#estimate-and-preview-an-audience}
 
-Terwijl u de segmentdefinitie ontwikkelt, kunt u de schatting- en voorvertoningsgereedschappen gebruiken binnen [!DNL Real-Time Customer Profile] om informatie op overzichtsniveau weer te geven om ervoor te zorgen dat u het verwachte publiek isoleert. Schattingen verschaffen statistische informatie over een segmentdefinitie, zoals de geprojecteerde publieksgrootte en het betrouwbaarheidsinterval. De voorproeven verstrekken gepagineerde lijsten van kwalificerende profielen voor een segmentdefinitie, die u toestaat om de resultaten tegen te vergelijken wat u verwacht.
+Terwijl u de segmentdefinitie ontwikkelt, kunt u de schatting- en voorvertoningsgereedschappen in [!DNL Real-Time Customer Profile] gebruiken om informatie op overzichtsniveau weer te geven, zodat u zeker weet dat u het verwachte publiek isoleert. Schattingen verschaffen statistische informatie over een segmentdefinitie, zoals de geprojecteerde publieksgrootte en het betrouwbaarheidsinterval. De voorproeven verstrekken gepagineerde lijsten van kwalificerende profielen voor een segmentdefinitie, die u toestaat om de resultaten tegen te vergelijken wat u verwacht.
 
 Door een schatting en voorvertoning van uw publiek te maken, kunt u uw PQL-voorspellingen testen en optimaliseren totdat ze een gewenste uitkomst opleveren. Vervolgens kunt u deze gebruiken in een bijgewerkte segmentdefinitie.
 
 Er zijn twee vereiste stappen om een voorvertoning van uw segmentdefinitie weer te geven of een schatting van uw segmentdefinitie te krijgen:
 
 1. [Een voorbeeldtaak maken](#create-a-preview-job)
-2. [Schatting of voorvertoning weergeven](#view-an-estimate-or-preview) gebruiken van identiteitskaart van de voorproefbaan
+2. [ de schatting of voorproef van de Mening ](#view-an-estimate-or-preview) gebruikend identiteitskaart van de voorproefbaan
 
 ### Hoe schattingen worden gegenereerd
 
@@ -91,17 +91,17 @@ De schattingen lopen over het algemeen over 10-15 seconden, beginnend met een ru
 
 ### Een voorbeeldtaak maken
 
-U kunt een nieuwe voorvertoningstaak maken door een POST aan te vragen bij de `/preview` eindpunt.
+U kunt een nieuwe voorproefbaan tot stand brengen door een verzoek van de POST aan het `/preview` eindpunt te doen.
 
-Gedetailleerde instructies over het maken van een voorbeeldtaak vindt u in het gedeelte [handleiding voor voorvertoningen en schattingen van eindpunten](../api/previews-and-estimates.md#create-preview).
+De gedetailleerde instructies bij het creëren van een voorproefbaan kunnen in de [ voorproeven en de gids van ramingen eindpunten ](../api/previews-and-estimates.md#create-preview) worden gevonden.
 
 ### Een schatting of voorvertoning weergeven
 
 De schattings- en voorvertoningsprocessen worden asynchroon uitgevoerd, omdat verschillende query&#39;s verschillende tijdsduur kunnen duren. Nadat een query is gestart, kunt u API-aanroepen gebruiken om de huidige status van de schatting of voorvertoning tijdens het uitvoeren op te halen (GET).
 
-Met de [!DNL Segmentation Service] API, kunt u de huidige status van een voorvertoningstaak opzoeken aan de hand van de bijbehorende id. Als de status &quot;RESULT_READY&quot; is, kunt u de resultaten bekijken. Als u de huidige status van een voorbeeldtaak wilt opzoeken, leest u de sectie op [een sectie met een voorbeeldtaak ophalen](../api/previews-and-estimates.md#get-preview) in de leidraad voor voorvertoningen en schattingen van eindpunten. Als u de huidige status van een geschatte taak wilt opzoeken, leest u de sectie over [een geschatte taak ophalen](../api/previews-and-estimates.md#get-estimate) in de leidraad voor voorvertoningen en schattingen van eindpunten.
+Met de API [!DNL Segmentation Service] kunt u de huidige status van een voorbeeldtaak opzoeken aan de hand van de id. Als de status &quot;RESULT_READY&quot; is, kunt u de resultaten bekijken. Om omhoog de huidige staat van een voorproefbaan te kijken, te lezen gelieve de sectie op [ het terugwinnen van een sectie van de voorproefbaan ](../api/previews-and-estimates.md#get-preview) in de voorproeven en de gids van ramingen eindpunten. Om omhoog de huidige staat van een geschatte baan te kijken, te lezen gelieve de sectie over [ het terugwinnen van een geschatte baan ](../api/previews-and-estimates.md#get-estimate) in de voorproeven en de gids van schattingen eindpunten.
 
 
 ## Volgende stappen
 
-Nadat u de segmentdefinitie hebt ontwikkeld, getest en opgeslagen, kunt u een segmenttaak maken om een publiek te maken met de opdracht [!DNL Segmentation Service] API. Zie de zelfstudie aan [evalueren en tot segmentresultaten toegang hebben](./evaluate-a-segment.md) voor gedetailleerde stappen over hoe te om dit te verwezenlijken.
+Nadat u de segmentdefinitie hebt ontwikkeld, getest en opgeslagen, kunt u een segmenttaak maken om een publiek op te bouwen met de API [!DNL Segmentation Service] . Zie het leerprogramma op [ beoordelend en tot segmentresultaten ](./evaluate-a-segment.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken.

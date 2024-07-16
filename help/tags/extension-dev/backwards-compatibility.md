@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Updates van een tagextensie in Adobe Experience Platform moeten compatibel zijn met eerdere versies van de extensie. Dit betekent dat:
 
@@ -57,7 +57,7 @@ Er kunnen scenario&#39;s zijn wanneer u een geldige bedrijfsreden hebt en u denk
 1. Ik wil een optioneel veld dat vereist is, wijzigen => Maak een nieuw onderdeel waarvoor het gewenste veld is vereist en verwijder het oude veld
 1. Ik wil de API van een gedeelde module wijzigen => Maak een nieuwe gedeelde module en vervang de oude
 
-Je neemt misschien op een gewone thread.  Dat is goed.  Wanneer u een oude component vervangt, wilt u gebruikers van uw extensie op de hoogte stellen van het feit dat de extensie is vervangen en dat ze moeten overschakelen op een nieuwe extensie.  Enkele suggesties voor het communiceren met gebruikers:
+Je neemt misschien op een gewone thread.  Dat is goed.  Wanneer u een oude component vervangt, wilt u gebruikers van uw extensie op de hoogte stellen van het feit dat de extensie is vervangen en dat ze naar een nieuwe moeten overschakelen.  Enkele suggesties voor het communiceren met gebruikers:
 
 * Werk de weergavenaam van de oude component bij en voeg &quot;(Afgekeurd)&quot; toe.
 * Werk de mening voor de oude component bij om grote rode waarschuwingstekst te hebben dat deze component is afgekeurd en dat de gebruiker op de nieuwe component zou moeten schakelen.

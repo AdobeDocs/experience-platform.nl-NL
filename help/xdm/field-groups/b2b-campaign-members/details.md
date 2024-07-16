@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # [!UICONTROL XDM Business Campaign Member Details] schemaveldgroep
 
-[!UICONTROL XDM Business Campaign Member Details] is een standaardschemagebiedgroep voor [[!UICONTROL XDM Business Campaign Members] class](../../classes/b2b/business-campaign-members.md), waarin gedetailleerde informatie over een zakelijke campagne wordt vastgelegd.
+[!UICONTROL XDM Business Campaign Member Details] is een standaardgroep van het schemagebied voor de [[!UICONTROL XDM Business Campaign Members] klasse ](../../classes/b2b/business-campaign-members.md), die gedetailleerde informatie over een bedrijfscampagne vangt.
 
-![De structuur van de XDM Business Campaign Member Details gebiedsgroep zoals deze in UI wordt weergegeven](../../images/field-groups/b2b/business-campaign-member-details.png)
+![ de structuur van de XDM Business Campagne het gebiedsgroep van de Details van het Lid van de Campagne aangezien het in UI ](../../images/field-groups/b2b/business-campaign-member-details.png) verschijnt
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -22,7 +22,7 @@ ht-degree: 0%
 | `firstRespondedDate` | [!UICONTROL DateTime] | Een tijdstempel van ISO 8601 van wanneer de persoon voor het eerst op de campagne heeft gereageerd. |
 | `hasReachedSuccess` | [!UICONTROL Boolean] | Geeft aan of dit campagnerelid tot een geslaagde conversie heeft geleid. |
 | `hasResponded` | [!UICONTROL Boolean] | Geeft aan of dit campagnerelid op de campagne heeft gereageerd. |
-| `isDeleted` | [!UICONTROL Boolean] | Geeft aan of dit campagnerelid is verwijderd in Marketo Engage.<br><br>Wanneer u de opdracht [Marketo-bronaansluiting](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden alle records die in Marketo worden verwijderd, automatisch weergegeven in Real-Time klantprofiel. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door in te stellen `isDeleted` tot `true`, kunt u het gebied gebruiken om uit te filteren welke verslagen uit uw bronnen zijn geschrapt wanneer het vragen van het meer van Gegevens. |
+| `isDeleted` | [!UICONTROL Boolean] | Geeft aan of dit campagnerelid is verwijderd in Marketo Engage.<br><br> wanneer het gebruiken van de [ Marketo bronschakelaar ](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden om het even welke verslagen die in Marketo worden geschrapt automatisch weerspiegeld in Real-Time Profiel van de Klant. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door `isDeleted` in te stellen op `true` , kunt u het veld gebruiken om uit te filteren welke records uit uw bronnen zijn verwijderd wanneer u een query uitvoert op het gegevensmeer. |
 | `isExhausted` | [!UICONTROL Boolean] | Geeft aan of dit campagnerelid alle campagneinteracties heeft voltooid. |
 | `lastStatus` | [!UICONTROL String] | De laatste status voor het campagnelid. |
 | `memberStatus` | [!UICONTROL String] | De huidige status voor het campagnelid. |
@@ -38,5 +38,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign-member/campaign-member-details.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign-member/campaign-member-details.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign-member/campaign-member-details.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign-member/campaign-member-details.schema.json)

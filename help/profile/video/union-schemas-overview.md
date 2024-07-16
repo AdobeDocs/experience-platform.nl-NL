@@ -1,6 +1,6 @@
 ---
-title: Overzicht van Unieschema's
-description: Deze video verstrekt een basisinzicht in verenigingsschema's binnen Adobe Experience Platform en schetst hoe te om een verenigingsschema te onderzoeken gebruikend het Platform UI.
+title: Overzicht van uniale schema's
+description: Deze video verstrekt een basisinzicht in verenigingsschema's binnen Adobe Experience Platform en schetst hoe te om een verenigingsschema te onderzoeken gebruikend Platform UI.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -17,12 +17,12 @@ ht-degree: 0%
 
 ---
 
-# Overzicht van Unieregelingen
+# Overzicht van uniale schema&#39;s
 
-Deze video verstrekt een basisinzicht in verenigingsschema&#39;s binnen Adobe Experience Platform en schetst hoe te om een verenigingsschema te onderzoeken gebruikend het gebruikersinterface van het Platform. Ga voor meer informatie over vakbondsschema&#39;s naar de [UI-gids voor samenvoegingsschema&#39;s](../ui/union-schema.md).
+Deze video biedt een basiskennis van vakbondschema&#39;s in Adobe Experience Platform en schetst hoe u een samenvoegingsschema kunt verkennen met behulp van de gebruikersinterface van Platform. Om meer over verenigingsschema&#39;s te leren, gelieve de [ gids UI van vakbondsschema&#39;s ](../ui/union-schema.md) te bezoeken.
 
 >[!NOTE]
 >
->De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest actuele informatie raadpleegt u de [UI-gids voor samenvoegingsschema&#39;s](../ui/union-schema.md).
+>De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, gelieve te verwijzen naar de [ gids UI van vakbondsschema&#39;s ](../ui/union-schema.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/329940?quality=12&learn=on&captions=eng)

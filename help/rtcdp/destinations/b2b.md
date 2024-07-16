@@ -15,16 +15,16 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Als u Adobe Real-time Customer Data Platform B2B Edition niet gebruikt, raadpleegt u de [overzicht van de bestemmingen](../../destinations/home.md) in plaats daarvan.
+>Als u Adobe Real-time Customer Data Platform B2B Uitgave niet gebruikt, zie in plaats daarvan het [ overzicht van bestemmingen ](../../destinations/home.md).
 
 Experience Platforms doelen die volledig worden ondersteund door Real-Time CDP B2B Edition zijn onder andere Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads en Google Ad Manager.
 
-Als u wilt weten hoe doelen in uw B2B-workflow passen, raadpleegt u de [end-to-end zelfstudie](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
+Om te begrijpen hoe de bestemmingen in uw B2B- werkschema passen, gelieve te zien [ leerprogramma van begin tot eind ](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
 
 Met Adobe Real-time Customer Data Platform B2B Edition kunt u uw B2B-gegevens exporteren via de doelconnector van het Marketo Engage. Door de bestemming van het Marketo Engage te gebruiken, kunt u publiek dat in Adobe Experience Platform wordt gecreeerd aan Marketo duwen, waar zij als statische lijsten zullen verschijnen.
 
 De volgende documenten bevatten meer informatie over het gebruik van de bestemming Marketo Engage voor het exporteren van gegevens:
 
-- Blader voor meer informatie over de bestemmingen die beschikbaar zijn voor Real-time Customer Data Platform B2B Edition naar de [doelcatalogus](../../destinations/catalog/overview.md).
-- Voor informatie over de identiteiten die naar Marketo Engage kunnen worden uitgevoerd, lees [Marketo Engage Doeldocumentatie](../../destinations/catalog/adobe/marketo-engage.md).
-- Voor informatie over hoe te met de bestemming van het Marketo Engage in het Experience Platform UI te verbinden en gegevens uit te voeren, lees [&#39;Een Adobe Experience Platform-segment naar een statische Marketo-lijst duwen&#39;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html).
+- Voor informatie over om het even welke bestemmingen beschikbaar voor de Uitgave van Real-time Customer Data Platform B2B, doorblader de [ catalogus van bestemmingen ](../../destinations/catalog/overview.md).
+- Voor informatie over de identiteiten die naar Marketo Engage kunnen worden uitgevoerd, lees de [ documentatie van de Bestemming van het Marketo Engage ](../../destinations/catalog/adobe/marketo-engage.md).
+- Voor informatie over hoe te om met de bestemming van het Marketo Engage in het Experience Platform UI te verbinden en gegevens uit te voeren, lees [ &quot;Push an Adobe Experience Platform Segment to a Marketo Static List&quot;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html).

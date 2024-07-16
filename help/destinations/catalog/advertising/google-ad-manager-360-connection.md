@@ -1,5 +1,5 @@
 ---
-title: (Beta) [!DNL Google Ad Manager 360] verbinding
+title: (Beta)  [!DNL Google Ad Manager 360]  verbinding
 description: Google Ad Manager 360 is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
@@ -9,31 +9,31 @@ ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Google Ad Manager 360] verbinding
+# (Beta) [!DNL Google Ad Manager 360] -verbinding
 
 >[!IMPORTANT]
 >
-> Google brengt wijzigingen in de [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Klantenovereenkomst](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)en de [Display &amp; Video 360-API](https://developers.google.com/display-video/api/guides/getting-started/overview) ter ondersteuning van de in het kader van de [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in de Europese Unie[Beleid voor EU-gebruikerstoestemming](https://www.google.com/about/company/user-consent-policy/)). De handhaving van deze wijzigingen in de toestemmingsvereisten is vanaf 6 maart 2024 van kracht.
+> Google geeft veranderingen in de [ Adds API van Google ](https://developers.google.com/google-ads/api/docs/start), [ Overeenkomst van de Klant ](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) vrij, en [ Vertoning &amp; Video 360 API ](https://developers.google.com/display-video/api/guides/getting-started/overview) om de naleving en toestemmings-gerelateerde vereisten te steunen die onder de [ Wet van de Markten ](https://digital-markets-act.ec.europa.eu/index_en) (DMA) worden bepaald in de Europese Unie ([ EU het Beleid van de Toestemming van de Gebruiker ](https://www.google.com/about/company/user-consent-policy/)). De handhaving van deze wijzigingen in de toestemmingsvereisten is vanaf 6 maart 2024 van kracht.
 ><br/>
 >Om zich aan het EU-beleid inzake instemming van gebruikers te houden en door te gaan met het opstellen van publiekslijsten voor gebruikers in de Europese Economische Ruimte (EER), moeten adverteerders en partners ervoor zorgen dat zij toestemming van de eindgebruiker geven bij het uploaden van publieksgegevens. Als Google-partner beschikt Adobe over de benodigde instrumenten om te voldoen aan deze toestemmingsvereisten in het kader van de DMA in de Europese Unie.
 ><br/>
->Klanten die een privacyschild voor Adobe hebben aangeschaft en een [toestemmingsbeleid](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) om profielen zonder toestemming uit te filteren, hoeft u geen actie te ondernemen.
+>De klanten die de Privacy &amp; het Schild van de Veiligheid van de Adobe hebben gekocht en het beleid van de a [ toestemming ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) gevormd om niet-goedgekeurde profielen uit te filteren hoeven geen actie te ondernemen.
 ><br/>
->Klanten die geen privacyschild voor Adobe hebben aangeschaft, moeten de [segmentdefinitie](../../../segmentation/home.md#segment-definitions) mogelijkheden binnen [Segment Builder](../../../segmentation/ui/segment-builder.md) om profielen zonder toestemming uit te filteren, zodat de bestaande Real-Time CDP Google-bestemmingen zonder onderbreking kunnen worden gebruikt.
+>De klanten die geen Adobe Privacy &amp; het Schild van de Veiligheid hebben gekocht moeten de ](../../../segmentation/home.md#segment-definitions) mogelijkheden van de segmentdefinitie [ binnen [ de Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) gebruiken om uit niet-goedgekeurde profielen te filtreren, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken.
 
-De [!DNL Google Ad Manager 360] verbinding maakt batch-upload mogelijk voor [!DNL publisher provided identifiers] (PPID) in [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage].
+Met de [!DNL Google Ad Manager 360] -verbinding kunt u via [!DNL Google Cloud Storage] batchupload uitvoeren naar [!DNL publisher provided identifiers] (PPID) [!DNL Google Ad Manager 360] .
 
-Voor meer informatie over hoe de uitgever verstrekte herkenningstekens in Google Ad Manager 360 werkt, zie [officiële Google-documentatie](https://support.google.com/admanager/answer/2880055?hl=en).
+Voor meer details op hoe de uitgever verstrekte herkenningstekens in Manager 360 van Google en Advertentie werkte, zie de [ officiële documentatie van Google ](https://support.google.com/admanager/answer/2880055?hl=en).
 
 >[!IMPORTANT]
 >
->Deze bestemming is momenteel in Beta en is slechts beschikbaar voor een beperkt aantal klanten. Om toegang tot [!DNL Google Ad Manager 360] , neemt u contact op met uw Adobe en verstrekt u uw [!DNL organization ID].
+>Deze bestemming is momenteel in Beta en is slechts beschikbaar voor een beperkt aantal klanten. Als u toegang tot de [!DNL Google Ad Manager 360] -verbinding wilt aanvragen, neemt u contact op met uw Adobe en verstrekt u uw [!DNL organization ID] .
 
-De [!DNL Google Ad Manager 360] doelexport [!DNL CSV] bestanden naar uw [!DNL Google Cloud Storage] emmertje. Als u de [!DNL CSV] bestanden, moet u deze importeren in uw [!DNL Google Ad Manager 360] account.
+De [!DNL Google Ad Manager 360] -bestemming exporteert [!DNL CSV] -bestanden naar uw [!DNL Google Cloud Storage] -emmertje. Nadat u de [!DNL CSV] -bestanden hebt geëxporteerd, moet u deze importeren in uw [!DNL Google Ad Manager 360] -account.
 
 ## Doelspecificaties {#specifics}
 
-Let op de volgende details die specifiek zijn voor [!DNL Google Ad Manager 360] bestemmingen.
+Let op de volgende details die specifiek zijn voor [!DNL Google Ad Manager 360] doelen.
 
 * Geactiveerd publiek wordt met programmacode gemaakt in het Google-platform en gevuld in het CSV-bestand.
 
@@ -43,7 +43,7 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ad Manager 360] 
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| PPID | [!DNL Publisher provided ID] | Selecteer deze doelidentiteit om het publiek naar te sturen [!DNL Google Ad Manager 360] |
+| PPID | [!DNL Publisher provided ID] | Selecteer deze doelidentiteit om het publiek naar [!DNL Google Ad Manager 360] te sturen |
 
 {style="table-layout:auto"}
 
@@ -53,8 +53,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van CSV-bestanden. |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -64,8 +64,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de toepasselijke schemavelden (bijvoorbeeld uw PPID), zoals u hebt gekozen in het scherm met de kenmerken voor het geselecteerde profiel van het dialoogvenster [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment, samen met de toepasselijke schemagebieden (bijvoorbeeld uw PPID), zoals gekozen in het scherm van de uitgezochte profielkenmerken van het [ werkschema van de bestemmingsactivering ](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [ partij op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -73,82 +73,82 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ### Aanbieding toestaan {#allow-listing}
 
-Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Ad Manager 360] doel in Platform. Voltooi de hieronder beschreven procedure voor het aanbieden van objecten in een geldige plaats voordat je de bestemming maakt.
+Aanbieding toestaan is verplicht voordat u de eerste [!DNL Google Ad Manager 360] -bestemming in Platform instelt. Voltooi de hieronder beschreven procedure voor het aanbieden van objecten in een geldige plaats voordat je de bestemming maakt.
 
 >[!NOTE]
 >
->De uitzondering op deze regel geldt voor bestaande [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) klanten. Als je al een verbinding met deze Google-bestemming in Audience Manager hebt gemaakt, is het niet nodig om het proces voor het toestaan van aanbiedingen opnieuw te doorlopen en je kunt doorgaan met de volgende stappen.
+>De uitzondering op deze regel is voor bestaande [ Audience Manager ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) klanten. Als je al een verbinding met deze Google-bestemming in Audience Manager hebt gemaakt, is het niet nodig om het proces voor het toestaan van aanbiedingen opnieuw te doorlopen en je kunt doorgaan met de volgende stappen.
 
-1. Voer de stappen uit die in het dialoogvenster [Google Ad Manager-documentatie](https://support.google.com/admanager/answer/3289669?hl=en) Adobe toevoegen als een gekoppeld gegevensbeheerplatform (DMP).
-2. In de [!DNL Google Ad Manager] interface, ga naar **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]** en de **[!UICONTROL API Access]** schuifregelaar
+1. Volg de stappen in de [ documentatie van de Manager van Google Ad ](https://support.google.com/admanager/answer/3289669?hl=en) worden beschreven om Adobe als verbonden Platform van het Beheer van Gegevens (DMP) toe te voegen die.
+2. Ga in de interface [!DNL Google Ad Manager] naar **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]** en schakel de schuifregelaar **[!UICONTROL API Access]** in.
 
 
 ## Verbinden met de bestemming {#connect}
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) worden beschreven. Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
+Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
-* **[!UICONTROL Access key ID]**: Een alfanumerieke tekenreeks van 61 tekens die wordt gebruikt voor het verifiëren van uw [!DNL Google Cloud Storage] account aan Platform.
-* **[!UICONTROL Secret access key]**: Een tekenreeks van 40 tekens met de basiscode 64 die wordt gebruikt voor verificatie van uw [!DNL Google Cloud Storage] account aan Platform.
+* **[!UICONTROL Access key ID]**: Een alfanumerieke tekenreeks van 61 tekens die wordt gebruikt om uw [!DNL Google Cloud Storage] -account te verifiëren bij Platform.
+* **[!UICONTROL Secret access key]**: Een tekenreeks met een basiscode van 40 tekens die wordt gebruikt voor het verifiëren van uw [!DNL Google Cloud Storage] -account bij Platform.
 
-Voor meer informatie over deze waarden raadpleegt u de [HMAC-sleutels voor Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) hulplijn. Raadpleeg voor meer informatie over het genereren van uw eigen toegangstoets-id en geheime toegangstoets de [[!DNL Google Cloud Storage] bronoverzicht](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
+Voor meer informatie over deze waarden, zie de [ de sleutels van HMAC van de Opslag van de Wolk van Google HMAC ](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) gids. Voor stappen op hoe te om uw eigen toegangs zeer belangrijke identiteitskaart en geheime toegangssleutel te produceren, verwijs naar het [[!DNL Google Cloud Storage]  bronoverzicht ](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
 ### Doelgegevens invullen {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
 >title="Id van publiek toevoegen aan publieksnaam"
->abstract="Selecteer deze optie als u de publieksnaam in deze bestemming wilt laten opnemen in de gebruikers-id van het Experience Platform, als volgt: `Audience Name (Audience ID)`"
+>abstract="Selecteer deze optie als u de publieksnaam in deze bestemming de gebruikers-id uit het Experience Platform wilt laten opnemen, zoals in het volgende voorbeeld: `Audience Name (Audience ID)`"
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-* **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
-* **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
-* **[!UICONTROL Folder path]**: Voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
-* **[!UICONTROL Bucket name]**: Voer de naam in van de [!DNL Google Cloud Storage] emmer die door deze bestemming moet worden gebruikt.
-* **[!UICONTROL Account ID]**: Voer uw [!DNL Audience Link ID] van uw [!DNL Google] account. Dit is een specifieke id die aan uw [!DNL Google Ad Manager] netwerk (niet uw [!DNL Network code]). U vindt dit onder **[!UICONTROL Admin > Global settings]** in de [!DNL Google Ad Manager] interface.
-* **[!UICONTROL Account Type]**: Selecteer een optie, afhankelijk van uw [!DNL Google] account:
-   * Gebruiken `AdX buyer` for [!DNL Google AdX]
-   * Gebruiken `DFP by Google` for [!DNL DoubleClick] voor uitgevers
-* **[!UICONTROL Append audience ID to audience name]**: Selecteer deze optie als u in Google Ad Manager 360 de gebruikers-id uit het Experience Platform wilt opnemen. Ga hierbij als volgt te werk: `Audience Name (Audience ID)`.
+* **[!UICONTROL Name]**: vul de voorkeursnaam voor dit doel in.
+* **[!UICONTROL Description]**: optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
+* **[!UICONTROL Folder path]**: voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
+* **[!UICONTROL Bucket name]**: voer de naam in van het [!DNL Google Cloud Storage] emmertje dat door dit doel moet worden gebruikt.
+* **[!UICONTROL Account ID]**: voer uw [!DNL Audience Link ID] vanuit uw [!DNL Google] account in. Dit is een specifieke id die is gekoppeld aan uw [!DNL Google Ad Manager] -netwerk (niet aan uw [!DNL Network code] ). U vindt dit onder **[!UICONTROL Admin > Global settings]** in de [!DNL Google Ad Manager] -interface.
+* **[!UICONTROL Account Type]**: Selecteer een optie, afhankelijk van uw [!DNL Google] -account:
+   * `AdX buyer` gebruiken voor [!DNL Google AdX]
+   * `DFP by Google` gebruiken voor [!DNL DoubleClick] voor uitgevers
+* **[!UICONTROL Append audience ID to audience name]**: Selecteer deze optie als u in Google Ad Manager 360 de gebruikers-id uit het Experience Platform wilt opnemen, zoals in dit voorbeeld: `Audience Name (Audience ID)` .
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Zie [ publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](../../ui/activate-batch-profile-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
 In de stap voor identiteitstoewijzing kunt u de volgende vooraf ingevulde toewijzingen zien:
 
 | Vooraf ingevulde toewijzing | Beschrijving |
 |---------|----------|
-| `ECID` -> `ppid` | Dit is de enige door de gebruiker bewerkbare vooraf ingevulde toewijzing. U kunt al uw kenmerken of naamruimten selecteren in Platform en deze toewijzen aan `ppid`. |
+| `ECID` -> `ppid` | Dit is de enige door de gebruiker bewerkbare vooraf ingevulde toewijzing. U kunt al uw kenmerken of naamruimten selecteren in Platform en deze toewijzen aan `ppid` . |
 | `metadata.segment.alias` -> `list_id` | Hiermee wijst u publieksnamen van Experience Platforms toe aan gebruikers-id&#39;s in het Google-platform. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Vertelt het Google-platform wanneer gediskwalificeerde gebruikers uit segmenten moeten worden verwijderd. |
 
-Deze toewijzingen zijn vereist door [!DNL Google Ad Manager 360] en worden automatisch door Adobe Experience Platform voor iedereen gemaakt [!DNL Google Ad Manager 360] verbindingen.
+Deze toewijzingen zijn vereist door [!DNL Google Ad Manager 360] en worden automatisch door Adobe Experience Platform gemaakt voor alle [!DNL Google Ad Manager 360] -verbindingen.
 
-![UI-afbeelding die de toewijzingsstap voor Google Ad Manager 360 weergeeft.](../../assets/catalog/advertising/google-ad-manager-360/ad-manager-360-mapping.png)
+![ beeld UI die de afbeeldingsstap voor Manager 360 van de Advertentie van Google toont.](../../assets/catalog/advertising/google-ad-manager-360/ad-manager-360-mapping.png)
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Controleer uw [!DNL Google Cloud Storage] emmertje en zorg ervoor de uitgevoerde dossiers de verwachte profielpopulaties bevatten.
+Om te controleren of gegevens zijn geëxporteerd, controleert u het emmertje van [!DNL Google Cloud Storage] en controleert u of de geëxporteerde bestanden de verwachte profielpopulaties bevatten.
 
 ## Problemen oplossen {#troubleshooting}
 

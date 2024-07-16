@@ -15,12 +15,12 @@ ht-degree: 2%
 
 # Overzicht van Adobe Experience Platform Debugger
 
-De extensie Adobe Experience Platform Debugger voor [Chroom](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) onderzoekt uw webpagina&#39;s en helpt u problemen te vinden met de manier waarop uw Adobe Experience Cloud-oplossingen zijn geïmplementeerd.
+De uitbreiding van het Adobe Experience Platform Debugger voor [ Chrome ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) onderzoekt uw Web-pagina&#39;s en helpt u problemen met vinden hoe uw oplossingen van Adobe Experience Cloud worden uitgevoerd.
 
 U kunt Foutopsporing van het Platform met de andere oplossingen van de activering van de Adobe gebruiken om het volgende uit te voeren:
 
-1. Gebruiken [tags](../tags/home.md) code invoegen die wordt geactiveerd [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html) producten op uw pagina&#39;s.
-1. Gebruik de [**[!UICONTROL Auditor]**tab](./auditor/overview.md) in Platform Debugger om uw implementaties te testen.
+1. Gebruik [ markeringen ](../tags/home.md) om code op te nemen die [ Adobe Experience Cloud ](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html) producten op uw pagina&#39;s activeert.
+1. Gebruik het [**[!UICONTROL Auditor]**lusje ](./auditor/overview.md) in Debugger van het Platform om uw implementaties te testen.
 1. Gebruik op gebeurtenis-gebaseerde en oplossing-specifieke hulpmiddelen in Debugger van het Platform om kwesties te zuiveren die door Auditor worden gevonden of andere informatie over uw implementaties te onderzoeken.
 
 >[!NOTE]
@@ -33,9 +33,9 @@ U kunt Foutopsporing van het Platform op om het even welke Web-pagina in werking
 
 U kunt de informatie gebruiken die door Foutopsporing van het Platform wordt verzameld om beter te begrijpen hoe uw oplossingen van het Experience Cloud worden uitgevoerd. Bijvoorbeeld:
 
-* **Tags**: Zie welke eigenschap, omgeving, build op een pagina worden geïmplementeerd.
-* **Adobe Target**: Zie voor welke activiteiten u wel of niet in aanmerking komt en waarom.
-* **Adobe Analytics**: Zie welke rapportsuites actief zijn op de huidige pagina.
+* **Markeringen**: Zie welk bezit, milieu, bouwt op een pagina wordt opgesteld.
+* **Adobe Target**: Zie welke activiteiten u kwalificeert of niet voor kwalificeert en waarom.
+* **Adobe Analytics**: Zie welke rapportreeksen actief op de huidige pagina zijn.
 
 ## Videotutorial
 

@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen; meldingen
+keywords: Experience Platform;home;populaire onderwerpen; meldingen
 description: Door u te abonneren op Adobe I/O Events, kunt u webhooks gebruiken om meldingen te ontvangen over de status van uw bronverbindingen tijdens de uitvoering. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
 solution: Experience Platform
 title: Meldingen voor Flow Run
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '772'
-ht-degree: 1%
+source-wordcount: '756'
+ht-degree: 0%
 
 ---
 
 # Meldingen voor stroomuitvoering
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] diensten. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met [!DNL Platform] -services. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen te verzamelen en te centraliseren [!DNL Platform]. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) wordt gebruikt om klantengegevens van diverse verschillende bronnen binnen [!DNL Platform] te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
 Met Adobe I/O Events, kunt u op gebeurtenissen intekenen en Web gebruiken om berichten betreffende de status van uw stroomlooppas te ontvangen. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
 
@@ -23,37 +23,36 @@ In dit document worden stappen beschreven voor het abonneren op gebeurtenissen, 
 
 ## Aan de slag
 
-In deze zelfstudie wordt ervan uitgegaan dat u al ten minste één bronverbinding hebt gemaakt waarvan u de stroom wilt controleren. Als u nog geen bronverbinding hebt gevormd, begin door te bezoeken [overzicht van bronnen](./home.md) om de bron van uw keus te vormen alvorens aan deze gids terug te keren.
+In deze zelfstudie wordt ervan uitgegaan dat u al ten minste één bronverbinding hebt gemaakt waarvan u de stroom wilt controleren. Als u nog geen bronverbinding hebt gevormd, begin door het [ bronoverzicht ](./home.md) te bezoeken om de bron van uw keus te vormen alvorens aan deze gids terug te keren.
 
-Dit document vereist ook een goed begrip van webhaken en hoe te om een webhaak van één toepassing aan een andere aan te sluiten. Zie de [[!DNL I/O Events] documentatie](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) voor een inleiding tot webhaken.
+Dit document vereist ook een goed begrip van webhaken en hoe te om een webhaak van één toepassing aan een andere aan te sluiten. Verwijs naar de [[!DNL I/O Events]  documentatie ](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) voor een inleiding aan webhooks.
 
 ## Webhaak registreren voor meldingen bij uitvoering van stroom
 
-Als u meldingen over het uitvoeren van stromen wilt ontvangen, moet u Adobe Developer Console gebruiken om een webhaak te registreren bij uw [!DNL Experience Platform] integratie.
+Als u meldingen over flowuitvoering wilt ontvangen, moet u Adobe Developer Console gebruiken om een webhaak te registreren voor uw [!DNL Experience Platform] -integratie.
 
-Volg de zelfstudie op [abonneren op [!DNL I/O Event]-meldingen](../observability/alerts/subscribe.md) voor gedetailleerde stappen over hoe te om dit te verwezenlijken.
+Volg het leerprogramma op [ het intekenen aan [!DNL I/O Gebeurtenis] berichten ](../observability/alerts/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken.
 
 >[!IMPORTANT]
 >
->Zorg ervoor dat u tijdens het abonnementsproces **[!UICONTROL Platform notifications]** als gebeurtenisprovider en selecteer de volgende gebeurtenisabonnementen:
+>Zorg er tijdens het abonnementsproces voor dat u **[!UICONTROL Platform notifications]** als gebeurtenisprovider selecteert en selecteer de volgende gebeurtenisabonnementen:
 >
 >* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
 >* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
-
 
 ## Meldingen ontvangen voor uitvoering van flow
 
 Als uw webhaak is aangesloten en uw gebeurtenisabonnement is voltooid, kunt u meldingen over doorloop ontvangen via het dashboard van de webhaak.
 
-Een melding retourneert informatie zoals het aantal taken dat wordt uitgevoerd, de bestandsgrootte en fouten. Een bericht keert ook een lading terug verbonden aan uw stroom in formaat JSON in werking stelt. De antwoordlading kan als `sources_flow_run_success` of `sources_flow_run_failure`.
+Een melding retourneert informatie zoals het aantal taken dat wordt uitgevoerd, de bestandsgrootte en fouten. Een bericht keert ook een lading terug verbonden aan uw stroom in formaat JSON in werking stelt. De antwoordlading kan als `sources_flow_run_success` of `sources_flow_run_failure` worden geclassificeerd.
 
 >[!IMPORTANT]
 >
->Als gedeeltelijke ingestie tijdens het proces van de stroomverwezenlijking wordt toegelaten, zal een stroom die zowel succesvolle als ontbroken ingestie bevat duidelijk worden `sources_flow_run_success` alleen als het aantal fouten lager is dan het percentage dat tijdens het proces voor het maken van de flow is ingesteld. Als een geslaagde flowuitvoering fouten bevat, worden deze fouten nog steeds opgenomen in de geretourneerde lading.
+>Als gedeeltelijke ingestie tijdens het proces van de stroomverwezenlijking wordt toegelaten, zal een stroom die zowel succesvolle als ontbroken ingesties bevat als `sources_flow_run_success` worden gemerkt slechts als het aantal fouten onder het foutendrempelpercentage is dat tijdens het proces van de stroomverwezenlijking wordt geplaatst. Als een geslaagde flowuitvoering fouten bevat, worden deze fouten nog steeds opgenomen in de geretourneerde lading.
 
 ### Succes
 
-Een geslaagde reactie retourneert een set `metrics` die de kenmerken van een specifieke doorstroming definiëren, en `activities` dat overzicht hoe de gegevens worden getransformeerd.
+Een geslaagde reactie retourneert een set `metrics` die de kenmerken van een specifieke doorloop definieert en `activities` die omtrekken hoe gegevens worden getransformeerd.
 
 ```json
 {
@@ -312,21 +311,21 @@ De volgende reactie is een voorbeeld van een mislukte stroomuitvoering, waarbij 
 
 >[!NOTE]
 >
->Zie de [aanhangsel](#errors) voor meer informatie over foutberichten.
+>Zie [ bijlage ](#errors) voor meer informatie over foutenmeldingen.
 
 ## Volgende stappen
 
-U kunt nu een abonnement nemen op gebeurtenissen waarmee u realtime meldingen kunt ontvangen over de status van uw flowuitvoering. Voor meer informatie over stroomlooppas en bronnen, zie [overzicht van bronnen](./home.md).
+U kunt nu een abonnement nemen op gebeurtenissen waarmee u realtime meldingen kunt ontvangen over de status van uw flowuitvoering. Voor meer informatie over stroomlooppas en bronnen, zie het [ overzicht van bronnen ](./home.md).
 
-## Aanhangsel
+## Bijlage
 
 De volgende secties verstrekken extra informatie voor het werken met de berichten van de stroomlooppas.
 
 ### Foutberichten begrijpen {#errors}
 
-Er kunnen inslikingsfouten optreden wanneer gegevens van de bron worden gekopieerd of wanneer de gekopieerde gegevens naar worden verwerkt [!DNL Platform]. Zie de onderstaande tabel voor meer informatie over specifieke fouten.
+Er kunnen inslikingsfouten optreden wanneer gegevens van de bron worden gekopieerd of wanneer de gekopieerde gegevens naar [!DNL Platform] worden verwerkt. Zie de onderstaande tabel voor meer informatie over specifieke fouten.
 
 | Fout | Beschrijving |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | Er is een fout opgetreden tijdens het kopiëren van gegevens uit een bron. |
-| `CONNECTOR-2001-500` | Er is een fout opgetreden tijdens het verwerken van gekopieerde gegevens naar [!DNL Platform]. Deze fout kan betrekking hebben op parseren, valideren of transformeren. |
+| `CONNECTOR-2001-500` | Er is een fout opgetreden tijdens het verwerken van gekopieerde gegevens naar [!DNL Platform] . Deze fout kan betrekking hebben op parseren, valideren of transformeren. |

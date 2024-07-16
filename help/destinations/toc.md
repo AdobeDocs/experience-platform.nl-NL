@@ -18,12 +18,12 @@ ht-degree: 1%
 * [Overzicht van doelen](./home.md)
 * [Doeltypen en -categorieën](./destination-types.md)
 * [Garanties voor bestemmingen (activering)](./guardrails.md)
-* Hoe werken bestemmingen? {#how-destinations-work}
+* Hoe bestemmingen werken {#how-destinations-work}
    * [Configureerbare en algemene exportinstellingen in doelen](./how-destinations-work/destinations-configurations.md)
    * [Profielexportgedrag voor verschillende doeltypen](./how-destinations-work/profile-export-behavior.md)
    * [Identiteitsverwerking in de workflow voor doelactivering](./how-destinations-work/identity-handling.md)
 * API-zelfstudies {#api}
-   * [Activeer gegevens aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken](/help/destinations/api/activate-segments-file-based-destinations.md)
+   * [ activeer gegevens aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken ](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API](./api/streaming-destinations.md)
    * [Verbind met op dossier-gebaseerde e-mailmarketing bestemmingen en activeer gegevens gebruikend de Dienst API van de Stroom](./api/connect-activate-batch-destinations.md)
    * [Het publiek activeren naar batchbestemmingen via de API voor ad-hocactivering](./api/ad-hoc-activation-api.md)
@@ -32,11 +32,11 @@ ht-degree: 1%
    * [Doelaccounts verwijderen](./api/delete-destination-account.md)
    * [Doelgegevens verwijderen](./api/delete-destination-dataflow.md)
    * [Gegevensbestanden exporteren](/help/destinations/api/export-datasets.md)
-   * [API-reacties sorteren en filteren voor doelen](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
+   * [ Soort en filter API reacties voor bestemmingen ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI-hulplijnen {#ui}
    * [Werkruimte Doelen](./ui/destinations-workspace.md)
    * [Een nieuwe doelverbinding maken](./ui/connect-destination.md)
-   * Gegevens naar doelen activeren{#activate}
+   * Gegevens naar doelen activeren {#activate}
       * [Overzicht van activering](./ui/activation-overview.md)
       * [Het publiek activeren voor streaming doelpubliek voor exportdoelen](./ui/activate-segment-streaming-destinations.md)
       * [Stimulansen voor het streamen van exportdoelen voor profielen activeren](./ui/activate-streaming-profile-destinations.md)
@@ -59,13 +59,13 @@ ht-degree: 1%
    * [Abonneren op in-context-bestemmingswaarschuwingen](ui/alerts.md)
 * Doelcatalogus {#catalog}
    * [Overzicht van de doelcatalogus](./catalog/overview.md)
-   * Adobe bestemmingen{#adobe}
+   * Adobe bestemmingen {#adobe}
       * [Overzicht van Adobe doelen](./catalog/adobe/overview.md)
       * [Experience Cloud publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Verbinding met Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate-verbinding](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform publiek delen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
-   * Advertising-bestemmingen{#advertising}
+      * [ Experience Platform publiek het delen ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+   * Advertising-bestemmingen {#advertising}
       * [Overzicht Advertising-bestemmingen](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-verbinding](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud-extensie](./catalog/advertising/adobe-advertising-cloud.md)
@@ -101,7 +101,7 @@ ht-degree: 1%
       * [(Beta) De Trade Desk CRM-verbinding](./catalog/advertising/tradedesk-emails.md)
       * [Twitter van Universal Website Tag-extensie](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX-verbinding](./catalog/advertising/datax.md)
-   * Analysedoelen {#analytics}
+   * Analytische doelen {#analytics}
       * [Overzicht van analysedoelen](./catalog/analytics/overview.md)
       * [De extensie Adform Website Tracking](./catalog/analytics/adform.md)
       * [Adobe Analytics-extensie](./catalog/analytics/adobe-analytics.md)
@@ -134,17 +134,17 @@ ht-degree: 1%
       * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP-verbinding](./catalog/cloud-storage/sftp.md)
       * [IP adres lijst van gewenste personen voor op dossier-gebaseerde cloudopslagbestemmingen](./catalog/cloud-storage/ip-address-allow-list.md)
-   * Klantrelaties (CRM)-bestemmingen {#crm}
+   * CRM-bestemmingen (Customer Relationship Management) {#crm}
       * [Hubspot-verbinding](./catalog/crm/hubspot.md)
       * [Salesforce CRM-verbinding](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365-verbinding](./catalog/crm/microsoft-dynamics-365.md)
       * [Verbinding buiten bereik](catalog/crm/outreach.md)
       * [Zendesk-verbinding](catalog/crm/zendesk.md)
-   * Gebieden van het Platform voor gegevensbeheer {#data-management}
+   * Doelen van het Platform voor gegevensbeheer {#data-management}
       * [Overzicht van DMP-doelen (Data Management Platform)](./catalog/data-management/overview.md)
       * [Audience Manager DIL-extensie](./catalog/data-management/aam-dil-extension.md)
       * [Zeta Marketing Platform](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
-   * Partner gegevens en identiteit {#data-partner}
+   * Partner voor gegevens en identiteit {#data-partner}
       * [Acxiom-perspectiefonderdrukking](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Verbetering van acxiom-gegevens](./catalog/data-partner/acxiom-data-enhancement.md)
       * [Merkury Enterprise Connections](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
@@ -170,7 +170,7 @@ ht-degree: 1%
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [SendGrid-verbinding](./catalog/email-marketing/sendgrid.md)
    * Extensies labelen {#launch-extensions}
-      * [Overzicht van de extensie Tag](./catalog/launch-extensions/overview.md)
+      * [ overzicht van de de uitbreidingsuitbreiding van de Markering ](./catalog/launch-extensions/overview.md)
    * Mobiele betrokkenheidsdoelen {#mobile-engagement}
       * [Overzicht van mobiele betrokkenheidsdoelen](./catalog/mobile-engagement/overview.md)
       * [Koppeling met kenmerken van het luchtschip](./catalog/mobile-engagement/airship-attributes.md)
@@ -178,7 +178,7 @@ ht-degree: 1%
       * [Braze verbinding](./catalog/mobile-engagement/braze.md)
       * [Lijnverbinding](./catalog/mobile-engagement/line.md)
       * [Verbinding maken](./catalog/mobile-engagement/moengage.md)
-   * Personalization-bestemmingen {#personalization}
+   * Personalization-doelen {#personalization}
       * [Overzicht Personalization-bestemmingen](./catalog/personalization/overview.md)
       * [(Beperkte beschikbaarheid) Analyse publiek](./catalog/personalization/audience-analysis.md)
       * [Adobe Commerce-verbinding](./catalog/personalization/adobe-commerce.md)
@@ -194,7 +194,7 @@ ht-degree: 1%
       * [Marketo Web Personalization-extensie](./catalog/personalization/marketo-web-personalization.md)
       * [Verbinding met PEGA-client-beslissingshub](./catalog/personalization/pega.md)
       * [Verbinding met Pega-profiel](./catalog/personalization/pega-profile.md)
-   * Sociale bestemmingen{#social}
+   * Sociale doelen {#social}
       * [Overzicht van sociale bestemmingen](./catalog/social/overview.md)
       * [Facebook-verbinding](./catalog/social/facebook.md)
       * [LinkedIn-verbinding voor passend publiek](./catalog/social/linkedin.md)
@@ -203,14 +203,14 @@ ht-degree: 1%
    * Streaming doelen {#streaming}
       * [HTTP API-verbinding](./catalog/streaming/http-destination.md)
       * [IP adres lijst van gewenste personen voor het stromen bestemmingen](./catalog/streaming/ip-address-allow-list.md)
-   * Onderzoeksbestemmingen {#survey}
+   * Beoordelingsdoelen {#survey}
       * [Overzicht van de enquêtedoelen](./catalog/survey/overview.md)
       * [Doel van Qualtrict Automations](./catalog/survey/qualtrics-automations.md)
       * [Verwachte extensiebestemming](./catalog/survey/foresee.md)
       * [InMoment-extensie](./catalog/survey/inmoment.md)
       * [Qualtrics Website Feedback-extensie](./catalog/survey/qualtrics.md)
       * [Extension QuestionPro Intercept Surveys](./catalog/survey/web-intercept-surveys.md)
-   * Stem van de klantenbestemmingen {#voice}
+   * Spraak van de klantdoelen {#voice}
       * [Stem van het overzicht van de bestemmingen van de Klant](./catalog/voice/overview.md)
       * [De extensie Digitale feedback bevestigen](./catalog/voice/confirmit-digital-feedback.md)
       * [Invoc-tags, extensie](./catalog/voice/invoca.md)
@@ -250,7 +250,7 @@ ht-degree: 1%
       * [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](./destination-sdk/guides/configure-file-based-destination-instructions.md)
       * [Ter controle een bestemming verzenden die is geschreven in Destination SDK](./destination-sdk/guides/submit-destination.md)
       * Bestandsgebaseerde doelen configureren {#configure-file-based-destinations}
-         * [Opties voor bestandsindeling configureren](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
+         * [ vorm dossier het formatteren opties ](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
          * [Een Amazon S3-bestemming configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
          * [Een Amazon S3-bestemming configureren met aangepaste bestandsnaam en opmaakopties](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
          * [Een Azure Blob Storage-bestemming configureren met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnamen](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
@@ -259,13 +259,13 @@ ht-degree: 1%
          * [Een SFTP-bestemming configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
          * [Vorm een op dossier-gebaseerde bestemming om perspectiefpubliek uit te voeren](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * Referentie voor API voor doelontwerp {#authoring-api}
-      * [Referentie voor de Destination SDK-API (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [ Destination SDK (Authoring van de Bestemming) API verwijzing ](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Bestemmingsserverbewerkingen {#server-operations}
          * [Een doelserverconfiguratie maken](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
          * [De configuratie van een doelserver ophalen](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
          * [Een doelserverconfiguratie bijwerken](./destination-sdk/authoring-api/destination-server/update-destination-server.md)
          * [Een doelserverconfiguratie verwijderen](./destination-sdk/authoring-api/destination-server/delete-destination-server.md)
-      * Doelconfiguratiebewerkingen {#destination-operations}
+      * Configuratiebewerkingen van de bestemming {#destination-operations}
          * [Een doelconfiguratie maken](./destination-sdk/authoring-api/destination-configuration/create-destination-configuration.md)
          * [Een doelconfiguratie ophalen](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
          * [Een doelconfiguratie bijwerken](./destination-sdk/authoring-api/destination-configuration/update-destination-configuration.md)
@@ -280,21 +280,21 @@ ht-degree: 1%
       * [Een referentieconfiguratie ophalen](./destination-sdk/credentials-api/retrieve-credential-configuration.md)
       * [Een referentieconfiguratie bijwerken](./destination-sdk/credentials-api/update-credential-configuration.md)
       * [Een referentieconfiguratie verwijderen](./destination-sdk/credentials-api/delete-credential-configuration.md)
-   * Referentie voor API voor doeltests {#testing-api}
-      * API voor streaming doeltest {#streaming-destinations}
+   * Referentie voor API voor testen van bestemming {#testing-api}
+      * API voor streaming doel {#streaming-destinations}
          * [Overzicht van de API voor streaming-doeltests](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
          * [Voorbeeldprofielen genereren op basis van een bronschema](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
          * [Een transformatiesjabloon voor een voorbeeldbericht genereren](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
          * [Geëxporteerde profielstructuur valideren](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
          * [Streaming doel testen met voorbeeldprofielen](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
          * [Een sjabloon voor berichttransformatie maken en testen](./destination-sdk/testing-api/streaming-destinations/create-template.md)
-      * API voor doeltesten op basis van bestanden {#batch-destinations}
-         * [API-overzicht voor testen op basis van bestand](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
+      * API voor doeltesten op basis van bestand {#batch-destinations}
+         * [ Op dossier-gebaseerde bestemming het testen API overzicht ](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
          * [Voorbeeldprofielen genereren op basis van een bronschema](./destination-sdk/testing-api/batch-destinations/file-based-sample-profile-generation-api.md)
          * [Bestandsgebaseerde bestemming testen met voorbeeldprofielen](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-api.md)
          * [Gedetailleerde activeringsresultaten weergeven](./destination-sdk/testing-api/batch-destinations/file-based-destination-results-api.md)
          * [Gevalideerde klantvelden valideren](./destination-sdk/testing-api/batch-destinations/file-based-render-template-api.md)
-   * Referentie voor publicatie-API van bestemming {#publishing-api}
+   * Referentie voor doel-publicatie-API {#publishing-api}
       * [Een doelpublicatieverzoek maken](./destination-sdk/publishing-api/create-publishing-request.md)
       * [Een doelpublicatieverzoek ophalen](./destination-sdk/publishing-api/retrieve-publishing-request.md)
    * Uw doel documenteren {#document-destination}
@@ -304,4 +304,4 @@ ht-degree: 1%
       * [Zelfbedieningssjabloon voor documentatie](./destination-sdk/docs-framework/self-service-template.md)
       * [Aanbevolen werkwijzen ontwerpen](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Veelgestelde vragen](./destinations-faq.md)
-* [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

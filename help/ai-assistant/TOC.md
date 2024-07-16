@@ -20,5 +20,5 @@ ht-degree: 1%
 * [Handleiding voor AI Assistant-gebruikersinterface](ui-guide.md)
 * [Privacy, beveiliging en bestuur](privacy.md)
 * [Veelgestelde vragen](faq.md)
-* [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

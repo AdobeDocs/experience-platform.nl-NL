@@ -1,6 +1,6 @@
 ---
-title: Aanpassing op server met de Edge Network Server-API
-description: In dit artikel wordt getoond hoe u de Edge Network Server-API kunt gebruiken om serverpersonalisatie op uw wegeigenschappen te implementeren.
+title: Server-kant personalisatie die de Server API van de Edge Network gebruikt
+description: Dit artikel toont aan hoe u de server-API van de Edge Network kunt gebruiken om verpersoonlijking op de server op uw Webeigenschappen op te stellen.
 keywords: personalisatie; server-api; edge-network; server-side;
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
@@ -10,11 +10,11 @@ ht-degree: 1%
 ---
 
 
-# Aanpassing op server met de Edge Network Server-API
+# Server-kant personalisatie die de Server API van de Edge Network gebruikt
 
 ## Overzicht {#overview}
 
-De verpersoonlijking aan de serverzijde impliceert het gebruiken van [Edge Network Server-API](../../server-api/overview.md) om de klantervaring op uw Web-eigenschappen te personaliseren.
+De server-zijverpersoonlijking impliceert het gebruiken van [ de Server API van de Edge Network ](../../server-api/overview.md) om de klantenervaring op uw Webeigenschappen te personaliseren.
 
 In het voorbeeld dat in dit artikel wordt beschreven, wordt de verpersoonlijkingsinhoud teruggewonnen server-kant, gebruikend de Server API. Vervolgens wordt de HTML op de server weergegeven, op basis van de opgehaalde personalisatie-inhoud.
 
@@ -22,7 +22,7 @@ In de onderstaande tabel ziet u een voorbeeld van gepersonaliseerde en niet-gepe
 
 | Voorbeeldpagina zonder personalisatie | Voorbeeldpagina met personalisatie |
 |---|---|
-| ![Voorbeeld van webpagina zonder personalisatie](assets/plain.png) | ![Voorbeeld van webpagina met personalisatie](assets/personalized.png) |
+| ![ Web-pagina van het voorbeeld zonder verpersoonlijking ](assets/plain.png) | ![ Web-pagina van het voorbeeld met verpersoonlijking ](assets/personalized.png) |
 
 ## Overwegingen {#considerations}
 
@@ -33,11 +33,11 @@ Cookies worden gebruikt om de gebruikersidentiteit en clusterinformatie voort te
 | Cookie | Doel | Opgeslagen door | Verzonden door |
 |---|---|---|---|
 | `kndctr_AdobeOrg_identity` | Bevat identiteitsgegevens van de gebruiker. | Applicatieserver | Applicatieserver |
-| `kndctr_AdobeOrg_cluster` | Wijst op welke cluster van het Netwerk van de Rand zou moeten worden gebruikt om de verzoeken te vervullen. | Applicatieserver | Applicatieserver |
+| `kndctr_AdobeOrg_cluster` | Geeft aan welke Edge Network-cluster moet worden gebruikt om aan de aanvragen te voldoen. | Applicatieserver | Applicatieserver |
 
 ### Verzoek om plaatsing {#request-placement}
 
-Aanvragen voor personalisatie zijn vereist voor het ophalen van voorstellen en het verzenden van een weergavemelding. Wanneer u een serverimplementatie gebruikt, doet de toepassingsserver deze aanvragen aan de Edge Network Server-API.
+Personalization-verzoeken zijn vereist om voorstellen op te halen en een weergavemelding te verzenden. Wanneer het gebruiken van een server-zijimplementatie, doet de toepassingsserver deze verzoeken aan de Server API van de Edge Network.
 
 | Verzoek | Door |
 |---|---|
@@ -50,25 +50,25 @@ Het hieronder beschreven proces gebruikt een steekproeftoepassing die u als uitg
 
 U kunt dit voorbeeld downloaden en het aan uw eigen behoeften aanpassen. U kunt bijvoorbeeld omgevingsvariabelen wijzigen zodat de voorbeeld-app aanbiedingen vanuit uw eigen configuratie van het Experience Platform invoegt.
 
-Open hiertoe de `.env` bestand in de hoofdmap van de opslagplaats en wijzig de variabelen volgens uw configuratie. Start de voorbeeldtoepassing opnieuw en u kunt experimenteren met uw eigen personalisatie-inhoud.
+Open hiertoe het `.env` -bestand in de hoofdmap van de opslagplaats en wijzig de variabelen volgens uw configuratie. Start de voorbeeldtoepassing opnieuw en u kunt experimenteren met uw eigen personalisatie-inhoud.
 
 ### Het voorbeeld uitvoeren {#running-sample}
 
 Voer de onderstaande stappen uit om de voorbeeld-app uit te voeren.
 
-1. Klonen [deze opslagplaats](https://github.com/adobe/alloy-samples) naar uw lokale computer.
-2. Open een terminal en navigeer naar de `personalization-server-side` map.
-3. Uitvoeren `npm install`.
-4. Uitvoeren `npm start`.
-5. Webbrowser openen en naar `http://localhost`.
+1. Kloon [ deze bewaarplaats ](https://github.com/adobe/alloy-samples) aan uw lokale machine.
+2. Open een terminal en navigeer naar de map `personalization-server-side` .
+3. Voer `npm install` uit.
+4. Voer `npm start` uit.
+5. Open uw webbrowser en navigeer naar `http://localhost` .
 
 ## Procesoverzicht {#process}
 
 In deze sectie worden de stappen beschreven die worden gebruikt voor het ophalen van de inhoud van de personalisatie.
 
-1. [Express](https://expressjs.com/) wordt gebruikt voor een slanke server-zijimplementatie. Dit behandelt basisserververzoeken en het verpletteren.
-2. De browser vraagt om de webpagina. Alle cookies die eerder door de browser zijn opgeslagen, vooraf vastgelegd met `kndctr_`, worden opgenomen.
-3. Wanneer de pagina bij de toepassingsserver wordt aangevraagd, wordt een gebeurtenis verzonden naar [interactief eindpunt van gegevensverzameling](../../../server-api/interactive-data-collection.md) om personalisatie-inhoud op te halen. De voorbeeldtoepassing gebruikt hulpmethoden om het samenstellen en verzenden van aanvragen naar de API te vereenvoudigen (zie [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). De `POST` verzoek bevat een `event` en `query`. De cookies uit de vorige stap, indien beschikbaar, worden opgenomen in de `meta>state>entries` array.
+1. [ Uitdrukkelijke ](https://expressjs.com/) wordt gebruikt voor een lee server-kant implementatie. Dit behandelt basisserververzoeken en het verpletteren.
+2. De browser vraagt om de webpagina. Alle cookies die eerder door de browser zijn opgeslagen, vooraf ingesteld door `kndctr_` , worden opgenomen.
+3. Wanneer de pagina van de toepassingsserver wordt gevraagd, wordt een gebeurtenis verzonden naar het [ interactieve eindpunt van de gegevensinzameling ](../../../server-api/interactive-data-collection.md) om verpersoonlijkingsinhoud te halen. De steekproef app gebruikt helpermethodes om het bouwen van en het verzenden van verzoeken naar API (zie [ aepEdgeClient.js ](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)) te vereenvoudigen. De aanvraag `POST` bevat een `event` en een `query` . De cookies uit de vorige stap, indien beschikbaar, worden opgenomen in de array `meta>state>entries` .
 
    ```js
    fetch(
@@ -196,5 +196,5 @@ In deze sectie worden de stappen beschreven die worden gebruikt voor het ophalen
    }
    ```
 
-6. [!DNL Visual Experience Composer (VEC)] aanbiedingen worden genegeerd, omdat ze alleen via Web SDK kunnen worden weergegeven.
+6. [!DNL Visual Experience Composer (VEC)] -aanbiedingen worden genegeerd, omdat ze alleen via Web SDK kunnen worden gerenderd.
 7. Wanneer de HTML-reactie wordt geretourneerd, worden de identiteits- en clustercookies ingesteld op de reactie van de toepassingsserver.

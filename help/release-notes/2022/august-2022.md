@@ -32,69 +32,69 @@ Met AI/ML-services kunnen marketinganalisten en praktijkmensen gebruikmaken van 
 
 Attribution AI wordt gebruikt om credits toe te wijzen aan touchpoints die leiden tot conversiegebeurtenissen. Dit kan door marketeers worden gebruikt om de marketingimpact van elk individueel marketing-touchpoint in journeys van de klant te kwantificeren.
 
-**Bijgewerkte functies**
+**Bijgewerkte eigenschappen**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Ondersteuning voor privacy | <ul><li> Attribution AI ondersteunt nu het definiëren van gebruikersrollen en het te beheren toegangsbeleid [machtigingen](../../../help/access-control/abac/ui/permissions.md) voor functies en objecten in een producttoepassing. </li><li>De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt.</li><li> Doorheen [attribuut-based toegangsbeheer](../../access-control/abac/overview.md)kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van bepaalde kenmerken. Dit kunnen metagegevens zijn die aan een object worden toegevoegd, zoals labels. Beheerders kunnen ook gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.</li><li>Attribution AI gebruikt de datasets van het Platform. Ter ondersteuning van consumentenrechtenaanvragen die een merk kan ontvangen, moeten merken de Platform-Privacy Service gebruiken om consumentenverzoeken om toegang in te dienen en te verwijderen om hun gegevens over het datumpeer, Identity Service en Real-Time Customer Profile te verwijderen.  </li><li>Alle datasets die voor input/output van modellen worden gebruikt zullen de richtlijnen van het Platform volgen. De Encryptie van de Gegevens van het platform is voor gegevens in rust en in-transit van toepassing. Raadpleeg de documentatie voor meer informatie over [gegevenscodering](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| Ondersteuning voor privacy | <ul><li> Attribution AI steunt nu het bepalen van gebruikersrollen en toegangsbeleid om [ toestemmingen ](../../../help/access-control/abac/ui/permissions.md) voor eigenschappen en voorwerpen binnen een producttoepassing te beheren. </li><li>De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt.</li><li> Door [ op attribuut-gebaseerde toegangscontrole ](../../access-control/abac/overview.md), kunnen de beheerders toegang tot specifieke voorwerpen en/of mogelijkheden controleren die op bepaalde attributen worden gebaseerd, die meta-gegevens aan een voorwerp kunnen worden toegevoegd, zoals labels.Beheerders kunnen gebruikersrollen ook bepalen die toegang tot slechts specifieke gebieden en gegevens hebben die aan die gebieden beantwoorden.</li><li>Attribution AI gebruikt de datasets van het Platform. Ter ondersteuning van consumentenrechtenaanvragen die een merk kan ontvangen, moeten merken de Platform-Privacy Service gebruiken om consumentenverzoeken om toegang in te dienen en te verwijderen om hun gegevens over het datumpeer, Identity Service en Real-Time Customer Profile te verwijderen.  </li><li>Alle datasets die voor input/output van modellen worden gebruikt zullen de richtlijnen van het Platform volgen. De Encryptie van de Gegevens van het platform is voor gegevens in rust en in-transit van toepassing. Zie de documentatie om meer over [ gegevensencryptie ](../../../help/landing/governance-privacy-security/encryption.md) te leren.</li></ul> |
 
 {style="table-layout:auto"}
 
-**Opmerking**: Attribution AI zal niet beschikbaar zijn bij bestaande klanten van het gezondheidsschild tot nader order.
+**Nota**: Attribution AI zal niet met bestaande klanten van het Schild van de Gezondheidszorg tot verdere kennisgeving beschikbaar zijn.
 
-Zie voor meer informatie over Attribution AI de [Attribution AI](../../intelligent-services/attribution-ai/overview.md) overzicht.
+Voor meer informatie over Attribution AI, te zien gelieve het [ ](../../intelligent-services/attribution-ai/overview.md) overzicht van de Attribution AI.
 
 ### Customer AI
 
 De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren.
 
-**Bijgewerkte functies**
+**Bijgewerkte eigenschappen**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Ondersteuning voor privacy | <ul><li> De AI van de Klant steunt nu het bepalen van gebruikersrollen en toegangsbeleid om te leiden [machtigingen](../../../help/access-control/abac/ui/permissions.md) voor functies en objecten in een producttoepassing. </li><li>De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt.</li><li> Doorheen [attribuut-based toegangsbeheer](../../access-control/abac/overview.md)kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van bepaalde kenmerken. Deze kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals labels. Beheerders kunnen ook gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.</li><li>Klant-AI maakt gebruik van gegevenssets van het platform. Ter ondersteuning van consumentenrechtenaanvragen die een merk kan ontvangen, moeten merken de Platform-Privacy Service gebruiken om consumentenverzoeken om toegang in te dienen en te verwijderen om hun gegevens over het datumpeer, Identity Service en Real-Time Customer Profile te verwijderen. </li><li>Alle datasets die voor input/output van modellen worden gebruikt zullen de richtlijnen van het Platform volgen. De Encryptie van de Gegevens van het platform is voor gegevens in rust en in-transit van toepassing. Raadpleeg de documentatie voor meer informatie over [gegevenscodering](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| Ondersteuning voor privacy | <ul><li> Klant AI steunt nu het bepalen van gebruikersrollen en toegangsbeleid om [ toestemmingen ](../../../help/access-control/abac/ui/permissions.md) voor eigenschappen en voorwerpen binnen een producttoepassing te beheren. </li><li>De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt.</li><li> Door [ op attribuut-gebaseerde toegangscontrole ](../../access-control/abac/overview.md), kunnen de beheerders toegang tot specifieke voorwerpen en/of mogelijkheden controleren die op bepaalde attributen worden gebaseerd. Deze kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals labels. Beheerders kunnen ook gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.</li><li>Klant-AI maakt gebruik van gegevenssets van het platform. Ter ondersteuning van consumentenrechtenaanvragen die een merk kan ontvangen, moeten merken de Platform-Privacy Service gebruiken om consumentenverzoeken om toegang in te dienen en te verwijderen om hun gegevens over het datumpeer, Identity Service en Real-Time Customer Profile te verwijderen. </li><li>Alle datasets die voor input/output van modellen worden gebruikt zullen de richtlijnen van het Platform volgen. De Encryptie van de Gegevens van het platform is voor gegevens in rust en in-transit van toepassing. Zie de documentatie om meer over [ gegevensencryptie ](../../../help/landing/governance-privacy-security/encryption.md) te leren.</li></ul> |
 
 {style="table-layout:auto"}
 
-**Opmerking**: Klanten met AI zijn tot nader order niet bij bestaande klanten van het gezondheidszorgschild beschikbaar.
+**Nota**: De Klant AI zal niet met bestaande klanten van het Schild van de Gezondheidszorg tot verdere kennisgeving beschikbaar zijn.
 
-Voor meer informatie over AI van de Klant, gelieve te zien [Customer AI](../../intelligent-services/customer-ai/overview.md) overzicht.
+Voor meer informatie over Klant AI, gelieve te zien [ AI van de Klant ](../../intelligent-services/customer-ai/overview.md) overzicht.
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform biedt meerdere [!DNL dashboards] waardoor u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals die tijdens dagelijkse momentopnamen worden gevangen.
+Adobe Experience Platform biedt meerdere [!DNL dashboards] waarmee u belangrijke inzichten in de gegevens van uw organisatie kunt bekijken, zoals die tijdens dagelijkse momentopnamen zijn vastgelegd.
 
-**Bijgewerkte functies**
+**Bijgewerkte eigenschappen**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Geplande activeringswidget | De [!UICONTROL Scheduled activations] widget biedt een tabellarische weergave van de laatst geactiveerde doelen. Voor elk segment bevat dit de naam, het doelplatform en de begin- en einddatum van de activering. Met deze widget kunt u in één oogopslag zien waar en wanneer het publiek wordt geactiveerd en kunt u dubbele of overbodige activeringen transparanter maken. Deze geaccumuleerde informatie benadrukt ook waar om het even welke activiteiten zijn weggelaten. |
+| Geplande activeringswidget | De widget [!UICONTROL Scheduled activations] biedt een in tabelvorm weergegeven weergave van de laatst geactiveerde doelen. Voor elk segment bevat dit de naam, het doelplatform en de begin- en einddatum van de activering. Met deze widget kunt u in één oogopslag zien waar en wanneer het publiek wordt geactiveerd en kunt u dubbele of overbodige activeringen transparanter maken. Deze geaccumuleerde informatie benadrukt ook waar om het even welke activiteiten zijn weggelaten. |
 
-Voor meer informatie over [!DNL Dashboards], zie de [[!DNL Dashboards] overzicht](../../dashboards/home.md).
+Voor meer informatie over [!DNL Dashboards], gelieve te zien het [[!DNL Dashboards]  overzicht ](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
-[!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
+[!DNL Data Prep] staat gegevensingenieurs toe om gegevens in kaart te brengen, om te zetten en te bevestigen aan en van het Model van de Gegevens van de Ervaring (XDM).
 
-**Bijgewerkte functies**
+**Bijgewerkte eigenschappen**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor het opnemen van records met waarschuwingen | Met Data Prep worden nu waarschuwingen (niet-kritieke fouten) gelokaliseerd voor de velden en kan de rest van de rij worden ingevoegd. Alle maptransformatiefouten worden nu gerapporteerd als waarschuwingen en rijen die gedeeltelijk worden ingeslikt, worden als geslaagd beschouwd, met een waarschuwing.  De bewaking wordt ook ondersteund in registers met waarschuwingen en diagnostische details. Gedeeltelijke invoer van records met waarschuwingen is momenteel alleen beschikbaar voor streaming gegevens. Raadpleeg de documentatie over [opnemen, records met waarschuwingen](../../sources/tutorials/ui/monitor-streaming.md) voor meer informatie . |
+| Ondersteuning voor het opnemen van records met waarschuwingen | Met Data Prep worden nu waarschuwingen (niet-kritieke fouten) gelokaliseerd voor de velden en kan de rest van de rij worden ingevoegd. Alle maptransformatiefouten worden nu gerapporteerd als waarschuwingen en rijen die gedeeltelijk worden ingeslikt, worden als geslaagd beschouwd, met een waarschuwing.  De bewaking wordt ook ondersteund in registers met waarschuwingen en diagnostische details. Gedeeltelijke invoer van records met waarschuwingen is momenteel alleen beschikbaar voor streaming gegevens. Herzie de documentatie over [ het opnemen verslagen met waarschuwingen ](../../sources/tutorials/ui/monitor-streaming.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
-Meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md).
+Meer over [!DNL Data Prep] leren, zie het [[!DNL Data Prep]  overzicht ](../../data-prep/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
-**Nieuwe of bijgewerkte functies**
+**Nieuwe of bijgewerkte eigenschappen**
 
 | Functie | Beschrijving |
 | ----------- | ----------- |
-| (Bèta) Op attributen-gebaseerde verpersoonlijkingssteun voor verpersoonlijkingsbestemmingen | Met de bètaversie van op attribuut-gebaseerde verpersoonlijking, zult u twee nieuwe kaarten in zien [doelcatalogus](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: Deze connector bevindt zich momenteel in bèta en is alleen beschikbaar voor een geselecteerd aantal klanten. Naast de functionaliteit van de Adobe Target V1-kaart voegt de Target V2-connector een [toewijzingsstap](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) aan de activeringswerkstroom, waarmee u profielkenmerken kunt toewijzen aan Adobe Target, waardoor op kenmerken gebaseerde personalisatie op dezelfde pagina en op een volgende pagina mogelijk is.</li><li>**[!UICONTROL Custom Personalization With Attributes]**: Deze connector bevindt zich momenteel in bèta en is alleen beschikbaar voor een geselecteerd aantal klanten. Naast de door de **[!UICONTROL Custom Personalization]** de **[!UICONTROL Custom Personalization With Attributes]** connector voegt een optionele [toewijzingsstap](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) aan de activeringswerkstroom, die u toestaat om profielattributen aan uw douanebestemming van de douaneverpersoonlijking in kaart te brengen, toelatend op attribuut-gebaseerde zelfde-pagina en volgende-pagina verpersoonlijking.</li></ul> <br> Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om deze gegevens te beschermen, **[!UICONTROL Custom Personalization With Attributes]** doel vereist dat u de [Edge Network Server-API](../../server-api/overview.md) voor gegevensverzameling. Bovendien moeten alle API-aanroepen van de server in een [geverifieerde context](../../server-api/authentication.md). |
+| (Beta) Op kenmerken gebaseerde ondersteuning voor personalisatie voor verpersoonlijkingsdoelen | Met de bètaversie van op attribuut-gebaseerde verpersoonlijking, zult u twee nieuwe kaarten in de [ bestemmingscatalogus ](../../destinations/catalog/overview.md) zien: <ul><li>**[!UICONTROL Adobe Target V2]**: Deze connector bevindt zich momenteel in bèta en is alleen beschikbaar voor een beperkt aantal klanten. Naast de functionaliteit die door de kaart van Adobe Target V1 wordt verstrekt, voegt de schakelaar van het Doel V2 a [ kaartstap ](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) aan het activeringswerkschema toe, dat u toestaat om profielattributen aan Adobe Target in kaart te brengen, toelatend op attribuut-gebaseerde zelfde-pagina en volgende-pagina verpersoonlijking.</li><li>**[!UICONTROL Custom Personalization With Attributes]**: Deze connector bevindt zich momenteel in bèta en is alleen beschikbaar voor een beperkt aantal klanten. Naast de functionaliteit die door **[!UICONTROL Custom Personalization]** wordt verstrekt, voegt de **[!UICONTROL Custom Personalization With Attributes]** schakelaar een facultatieve [ toewijzingsstap ](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) aan het activeringswerkschema toe, dat u toestaat om profielattributen aan uw douaneverpersoonlijkingsbestemming in kaart te brengen, toelatend op attribuut-gebaseerde zelfde-pagina en volgende-pagina verpersoonlijking.</li></ul> <br> Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om dit gegeven te beschermen, vereist de **[!UICONTROL Custom Personalization With Attributes]** bestemming u om de [ Server API van de Edge Network ](../../server-api/overview.md) voor gegevensinzameling te gebruiken. Voorts moeten alle Server API vraag in een [ voor authentiek verklaarde context ](../../server-api/authentication.md) worden gemaakt. |
 
 {style="table-layout:auto"}
 
@@ -102,17 +102,17 @@ Meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../..
 
 | Doel | Beschrijving |
 | ----------- | ----------- |
-| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) is een Sales Execution Platform met de meeste B2B-gegevens over koper-verkoper in de wereld en aanzienlijke investeringen in merkgebonden AI-technologieën om verkoopgegevens om te zetten in intelligentie. [!DNL Outreach] helpt organisaties hun verkoopbetrokkenheid te automatiseren en op inkomstenintelligentie te handelen om hun efficiency, voorspelbaarheid, en groei te verbeteren. |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach] ](https://www.outreach.io/) is een Platform van de Uitvoering van de Verkoop met de meeste B2B koper-verkoper interactiegegevens in de wereld en significante investeringen in merkgebonden AI technologieën om verkoopgegevens in intelligentie te vertalen. [!DNL Outreach] helpt organisaties om hun verkoopbetrokkenheid te automatiseren en om hun efficiëntie, voorspelbaarheid en groei te verbeteren. |
 
 {style="table-layout:auto"}
 
-Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
+Voor meer algemene informatie over bestemmingen, verwijs naar het [ overzicht van bestemmingen ](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
 XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
 
-**Nieuwe XDM-componenten**
+**Nieuwe componenten XDM**
 
 | Componenttype | Naam | Beschrijving |
 | --- | --- | --- |
@@ -121,23 +121,23 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 {style="table-layout:auto"}
 
-**Bijgewerkte XDM-componenten**
+**Bijgewerkte componenten XDM**
 
 | Componenttype | Naam | Beschrijving |
 | --- | --- | --- |
-| Veldgroep | [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Er zijn twee nieuwe eigenschappen toegevoegd: `origTimeStamp` en `experienceID`. |
-| Veldgroep | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Naast [!UICONTROL XDM Individual Profile], kan deze veldgroep nu ook worden gebruikt in schema&#39;s die op de klasse van de Rekening van Bedrijfs XDM worden gebaseerd. |
-| Veldgroep | (Meerdere) | Verschillende veldgroepen met betrekking tot de B2B-activiteiten van Marketo zijn bijgewerkt naar een stabiele status. Zie het volgende [pull-verzoek](https://github.com/adobe/xdm/pull/1593/files) voor meer informatie. |
-| Veldgroep | (Meerdere) | Verschillende aan het weer gerelateerde veldgroepen zijn bijgewerkt om fouten op te lossen die voorkwamen voor `uvIndex` en `sunsetTime`. Zie het volgende [pull-verzoek](https://github.com/adobe/xdm/pull/1602/files) voor meer informatie. |
-| Gegevenstype | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Een nieuwe eigenschap `productImageUrl` is toegevoegd. |
-| Gegevenstype | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Een nieuwe eigenschap `framesPerSecond` is toegevoegd. |
-| Gegevenstype | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` is hernoemd naar `appVersion`. `meta:enum` en `description` de velden zijn ook bijgewerkt. |
-| Gegevenstypen en veldgroepen | (Meerdere) | Verschillende mediatypen en veldgroepen hebben nieuwe velden en bijgewerkte beschrijvingen. Zie het volgende [pull-verzoek](https://github.com/adobe/xdm/pull/1582/files) voor meer informatie. |
-| (Alle) | (Meerdere) | Alle schemaobjecten die een `enum` veld bevat nu ook een overeenkomend veld `meta:enum` veld voor het aangeven van de weergavewaarden voor elke restrictie. Zie het volgende [pull-verzoek](https://github.com/adobe/xdm/pull/1601/files) voor meer informatie. |
+| Veldgroep | [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Er zijn twee nieuwe eigenschappen toegevoegd: `origTimeStamp` en `experienceID` . |
+| Veldgroep | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Naast [!UICONTROL XDM Individual Profile] kan deze veldgroep nu ook worden gebruikt in schema&#39;s die zijn gebaseerd op de XDM Business Account-klasse. |
+| Veldgroep | (Meerdere) | Verschillende veldgroepen met betrekking tot de B2B-activiteiten van Marketo zijn bijgewerkt naar een stabiele status. Zie het volgende [ trekkingsverzoek ](https://github.com/adobe/xdm/pull/1593/files) voor details. |
+| Veldgroep | (Meerdere) | Verschillende veldgroepen met betrekking tot het weer zijn bijgewerkt om fouten te corrigeren die voorkwamen voor `uvIndex` en `sunsetTime` . Zie het volgende [ trekkingsverzoek ](https://github.com/adobe/xdm/pull/1602/files) voor details. |
+| Gegevenstype | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Er is een nieuwe eigenschap `productImageUrl` toegevoegd. |
+| Gegevenstype | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Er is een nieuwe eigenschap `framesPerSecond` toegevoegd. |
+| Gegevenstype | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | De naam van `sdkVersion` is gewijzigd in `appVersion` . `meta:enum` en `description` velden zijn ook bijgewerkt. |
+| Gegevenstypen en veldgroepen | (Meerdere) | Verschillende mediatypen en veldgroepen hebben nieuwe velden en bijgewerkte beschrijvingen. Zie het volgende [ trekkingsverzoek ](https://github.com/adobe/xdm/pull/1582/files) voor details. |
+| (Alle) | (Meerdere) | Alle schemaobjecten die een `enum` -veld bevatten, bevatten nu ook een bijbehorend `meta:enum` -veld om de weergavewaarden voor elke restrictie aan te geven. Zie het volgende [ trekkingsverzoek ](https://github.com/adobe/xdm/pull/1601/files) voor details. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md).
+Voor meer informatie over XDM in Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
 
 ## Klantprofiel in realtime {#profile}
 
@@ -145,24 +145,24 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Harde limiet voor beleid samenvoegen | Platform zal nu een harde grens opleggen aan **vijf** samenvoegbeleid per sandbox. Als uw sandbox momenteel meer dan vijf samenvoegbeleidsregels heeft, **niet** kan nieuw samenvoegbeleid maken totdat de sandbox minder dan vijf samenvoegbeleidsregels heeft. |
-| Opschonen van kenmerken van rand met zwevend profiel | Voor alle organisaties, verwijdert de Dienst van het Profiel nu randattributen van gebruikersactiviteitengebied op een dagelijkse basis om een nauwkeurigere vertegenwoordiging van uw profielen in uw systeem te geven. Deze opschoonbewerking vindt plaats nadat alle profielfragmenten voor een bepaald profiel zijn verwijderd. Dit heeft gevolgen voor profielen die worden samengevoegd in gegevenssets waarin `com_adobe_aep_profile_region_dataset` is gemarkeerd als `true`. Dit kan een daling in &quot;Adressable publiek&quot;metrisch in het dashboard van het vergunningsgebruik tonen en kan een daling in &quot;Aantal van het Profiel&quot;metrisch in het dashboard van het Profiel tonen, aangezien deze metriek de fragmenten van het de randattribuut van het leftover voorafgaand aan deze versie omvatte. |
+| Harde limiet voor beleid samenvoegen | Het platform zal nu een harde grens van **vijf** fusiebeleid per zandbak afdwingen. Als uw zandbak momenteel meer dan vijf fusiebeleid heeft, zult u **** geen nieuw fusiebeleid kunnen tot stand brengen tot de zandbak minder dan vijf fusiebeleid heeft. |
+| Opschonen van kenmerken van rand met zwevend profiel | Voor alle organisaties, verwijdert de Dienst van het Profiel nu randattributen van gebruikersactiviteitengebied op een dagelijkse basis om een nauwkeurigere vertegenwoordiging van uw profielen in uw systeem te geven. Deze opruiming vindt plaats nadat alle profielfragmenten voor een bepaald profiel zijn verwijderd en heeft invloed op profielen die worden samengevoegd uit gegevenssets waarin `com_adobe_aep_profile_region_dataset` is gemarkeerd als `true` . Dit kan een daling in &quot;Adressable publiek&quot;metrisch in het dashboard van het vergunningsgebruik tonen en kan een daling in &quot;Aantal van het Profiel&quot;metrisch in het dashboard van het Profiel tonen, aangezien deze metriek de fragmenten van het de randattribuut van het leftover voorafgaand aan deze versie omvatte. |
 
 {style="table-layout:auto"}
 
-Als u meer wilt weten over het realtime profiel van de klant, inclusief zelfstudies en aanbevolen procedures voor het werken met profielgegevens, leest u eerst de [Overzicht van het realtime klantprofiel](../../profile/home.md).
+Meer over het Profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met profielgegevens leren, gelieve te beginnen door het [ overzicht van het Profiel van de Klant in real time ](../../profile/home.md) te lezen.
 
 ## Segmenteringsservice {#segmentation}
 
 [!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
 
-**Nieuwe functies**
+**Nieuwe eigenschappen**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Ondersteuning voor 4000 segmenten | Alle organisaties met Platform kunnen nu tot 4000 segmentdefinities steunen. Voor meer informatie over hoe deze wijziging de segmenttaak-API&#39;s beïnvloedt, leest u de [segmenttaakeindgebruikershandleiding](../../segmentation/api/segment-jobs.md) |
+| Ondersteuning voor 4000 segmenten | Alle organisaties met Platform kunnen nu tot 4000 segmentdefinities steunen. Voor meer informatie over hoe deze verandering de segmentbaan APIs beïnvloedt, te lezen gelieve de [ gids van het eindpunt van de segmentbaan ](../../segmentation/api/segment-jobs.md) |
 
-Voor meer informatie over [!DNL Segmentation Service], zie de [Overzicht van segmentatie](../../segmentation/home.md).
+Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het [ overzicht van de Segmentatie ](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 
@@ -170,15 +170,15 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
-**Nieuwe functies**
+**Nieuwe eigenschappen**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Algemene beschikbaarheid van Self-Serve Bronnen (Batch SDK) | Ontwikkel, test, en integreer uw REST API-based gegevensbron om partijgegevens in Experience Platform in te voeren gebruikend gemakkelijk om bronspecificaties te vormen. Met Bronnen SDK kunt u: <ul><li>Vorm een nieuwe bron aan de catalogus van het Experience Platform.</li><li>Bepaal specificaties voor uw bron, met inbegrip van informatie betreffende gesteunde authentificatietypen, het plannen, en hoe de middelgegevens worden gehaald.</li><li>Maak gebruikersgerichte documentatie voor uw nieuwe bron.</li></ul> Lees de documentatie over [Self-Serve Sources (Batch SDK)](../../sources/sources-sdk/overview.md). |
-| Algemene beschikbaarheid van [!DNL Google BigQuery] bron | Gebruik de [!DNL Google BigQuery] bron om gegevens van uw [!DNL Google BigQuery] data-entrepot aan Experience Platform. Voor meer informatie leest u de documentatie op het tabblad [[!DNL Google BigQuery] bron](../../sources/connectors/databases/bigquery.md). |
-| [!DNL Teradata Vantage] bron (bèta) | Gebruik de [!DNL Teradata Vantage] bron voor het opnemen van gegevens van hybride multi-wolkomgevingen naar Experience Platform. Voor meer informatie leest u de documentatie op het tabblad [[!DNL Teradata Vantage] bron](../../sources/connectors/databases/teradata-vantage.md). |
-| Ondersteuning voor verschillende regio&#39;s van Adobe Analytics-bronnen | U kunt nu rapportsuites uit om het even welke regio (Verenigde Staten, Verenigd Koninkrijk, of Singapore) opnemen. Rapportsuites moeten worden toegewezen aan dezelfde organisatie als de Sandbox-instantie van het Experience Platform waarin de bronverbinding wordt gemaakt. Lees voor meer informatie de handleiding op [een Adobe Analytics-bronverbinding maken in de gebruikersinterface](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| Algemene beschikbaarheid van Self-Serve Bronnen (Batch SDK) | Ontwikkel, test, en integreer uw REST API-based gegevensbron om partijgegevens in Experience Platform in te voeren gebruikend gemakkelijk om bronspecificaties te vormen. Met Bronnen SDK kunt u: <ul><li>Vorm een nieuwe bron aan de catalogus van het Experience Platform.</li><li>Bepaal specificaties voor uw bron, met inbegrip van informatie betreffende gesteunde authentificatietypen, het plannen, en hoe de middelgegevens worden gehaald.</li><li>Maak gebruikersgerichte documentatie voor uw nieuwe bron.</li></ul> Voor meer informatie, lees de documentatie op [ Zelfbediening Bronnen (Partij SDK) ](../../sources/sources-sdk/overview.md). |
+| Algemene beschikbaarheid van [!DNL Google BigQuery] source | Gebruik de [!DNL Google BigQuery] -bron om gegevens van uw [!DNL Google BigQuery] -gegevenspakhuis in te voeren naar het Experience Platform. Voor meer informatie, lees de documentatie over de [[!DNL Google BigQuery]  bron ](../../sources/connectors/databases/bigquery.md). |
+| [!DNL Teradata Vantage] source (Beta) | Gebruik de [!DNL Teradata Vantage] -bron om gegevens van hybride multi-cloud-omgevingen in te voeren in het Experience Platform. Voor meer informatie, lees de documentatie over de [[!DNL Teradata Vantage]  bron ](../../sources/connectors/databases/teradata-vantage.md). |
+| Ondersteuning voor verschillende regio&#39;s van Adobe Analytics-bronnen | U kunt nu rapportsuites uit om het even welke regio (Verenigde Staten, Verenigd Koninkrijk, of Singapore) opnemen. Rapportsuites moeten worden toegewezen aan dezelfde organisatie als de Sandbox-instantie van het Experience Platform waarin de bronverbinding wordt gemaakt. Voor meer informatie, lees de gids bij [ het creëren van een Adobe Analytics bronverbinding in UI ](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 
 {style="table-layout:auto"}
 
-Zie voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).
+Meer over bronnen leren, zie het [ overzicht van bronnen ](../../sources/home.md).

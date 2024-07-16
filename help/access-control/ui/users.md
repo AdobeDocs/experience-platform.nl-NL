@@ -13,19 +13,19 @@ ht-degree: 0%
 
 # Gebruikers beheren voor een productprofiel
 
-Als u gebruikers wilt toewijzen aan of verwijderen uit een productprofiel, opent u de detailpagina van het profiel en gaat u naar de **[!UICONTROL Users]** tab. Van hier, selecteer **[!UICONTROL Add User]**.
+Als u gebruikers wilt toewijzen aan of verwijderen uit een productprofiel, opent u de detailpagina van het profiel en gaat u naar het tabblad **[!UICONTROL Users]** . Selecteer **[!UICONTROL Add User]** van hier.
 
-![De pagina met productprofieldetails die de gebruikers weergeeft die in het dialoogvenster [!UICONTROL Users] tab.](../images/add-user.png)
+![ de de detailpagina van het productprofiel die de gebruikers toont in [!UICONTROL Users] worden vermeld tabel.](../images/add-user.png)
 
-De **[!UICONTROL Add User]** wordt weergegeven. Met het zoekveld kunt u gebruikers opzoeken en toevoegen op naam of via e-mail. Terwijl u typt, verschijnen de overeenstemmende gebruikers in een automatisch voltooid venster onder het tekstvak.
+Het dialoogvenster **[!UICONTROL Add User]** wordt weergegeven. Met het zoekveld kunt u gebruikers opzoeken en toevoegen op naam of via e-mail. Terwijl u typt, verschijnen de overeenstemmende gebruikers in een automatisch voltooid venster onder het tekstvak.
 
 >[!NOTE]
 >
 >Als een gebruiker niet in het automatisch aanvullen venster verschijnt, ga hun volledig e-mailadres in de onderzoeksbar in. Er wordt een uitnodiging verzonden naar de e-mail met instructies voor het instellen van een Adobe ID-account.
 
-Als u een gebruiker hebt geselecteerd, selecteert u **[!UICONTROL Save]** om deze aan het productprofiel toe te voegen.
+Nadat u een gebruiker hebt geselecteerd, selecteert u **[!UICONTROL Save]** om deze aan het productprofiel toe te voegen.
 
-![Voeg gebruikers toe aan de pagina met productprofielen en geef daarbij de gebruikersgegevens weer.](../images/save-user.png)
+![ voeg gebruikers aan de pagina van het productprofiel toe die gebruikersdetails benadrukt.](../images/save-user.png)
 
 De volgende video is bedoeld als ondersteuning voor uw begrip van het beheren van beheerders voor een productprofiel.
 
@@ -33,4 +33,4 @@ De volgende video is bedoeld als ondersteuning voor uw begrip van het beheren va
 
 ## Volgende stappen
 
-Nu hebt u geleerd hoe te om toegang tot de eigenschappen van het Platform door te controleren [!DNL Admin Console], zie het aanhangsel in de [toegangsbeheeroverzicht](../home.md) om meer te leren over elke individuele toestemming en de functies van het Platform zij toegang tot verlenen.
+Nu u hebt geleerd hoe te om toegang tot de eigenschappen van het Platform door [!DNL Admin Console] te controleren, zie de bijlage sectie in het [ toegangsbeheeroverzicht ](../home.md) om meer over elke individuele toestemming en de functies van het Platform te leren zij toegang tot verlenen.

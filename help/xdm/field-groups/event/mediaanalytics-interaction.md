@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # [!UICONTROL MediaAnalytics Interaction Details] schemaveldgroep
 
-[!UICONTROL MediaAnalytics Interaction Details] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Gebruik deze veldgroep om verrijkte gegevensvelden vast te leggen die de interactie met media-inhoud op verschillende platforms of kanalen volledig controleren en analyseren.
+[!UICONTROL MediaAnalytics Interaction Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md). Gebruik deze veldgroep om verrijkte gegevensvelden vast te leggen die de interactie met media-inhoud op verschillende platforms of kanalen volledig controleren en analyseren.
 
-![Een schema van het schema [!UICONTROL MediaAnalytics Interaction Details] schemaveldgroep.](../../images/field-groups/mediaanalytics-interaction.png)
+![ het schemadiagram van A van de [!UICONTROL MediaAnalytics Interaction Details] groep van het schemagebied.](../../images/field-groups/mediaanalytics-interaction.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |---| --- | --- | --- |
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->U kunt velden verbergen die niet worden gebruikt door de Media Edge-API. Het verbergen van deze gebieden maakt het schema gemakkelijker te lezen en te begrijpen, maar het wordt niet vereist. Deze velden verwijzen alleen naar de velden in de [!UICONTROL MediaAnalytics Interaction Details] veldgroep. Volg de instructies in het dialoogvenster [Documentatie van Media Analytics over het verbergen van ongebruikte velden](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
+>U kunt velden verbergen die niet worden gebruikt door de Media Edge API. Het verbergen van deze gebieden maakt het schema gemakkelijker te lezen en te begrijpen, maar het wordt niet vereist. Deze velden verwijzen alleen naar de velden in de veldgroep [!UICONTROL MediaAnalytics Interaction Details] . Om leesbaarheid in het Platform UI te verbeteren, volg de instructies in de [ documentatie van de Analytics van Media op hoe te om ongebruikte gebieden ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform) te verbergen.
 
 <!-- 
 >[!NOTE]

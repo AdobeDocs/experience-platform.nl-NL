@@ -4,23 +4,24 @@ description: Leer hoe u gevoelige waarden versleutelt met de Reactor-API.
 exl-id: d89e7f43-3bdb-40a5-a302-bad6fd1f4596
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
 
 # Waarden versleutelen
 
-Bij het gebruik van tags in Adobe Experience Platform moeten bepaalde workflows gevoelige waarden leveren (bijvoorbeeld een persoonlijke sleutel voor het leveren van bibliotheken aan omgevingen via hosts). De gevoelige aard van die geloofsbrieven vereist veilige overdracht en opslag.
+Bij het gebruik van tags in Adobe Experience Platform moeten bepaalde workflows gevoelige waarden leveren (bijvoorbeeld een persoonlijke sleutel voor het leveren van bibliotheken aan omgevingen via hosts). De gevoelige aard van deze gegevens vereist
+veilige overdracht en opslag.
 
-In dit document wordt beschreven hoe u vertrouwelijke waarden versleutelt met [GnuPG-codering](https://www.gnupg.org/gph/en/manual/x110.html) (ook wel GPG genoemd), zodat alleen het tagsysteem deze kan lezen.
+Dit document beschrijft hoe te om gevoelige waarden te coderen gebruikend [ encryptie GnuPG ](https://www.gnupg.org/gph/en/manual/x110.html) (die ook als GPG wordt bekend) zodat slechts kan het markeringssysteem hen lezen.
 
 ## De openbare GPG-sleutel en controlesom verkrijgen
 
-Na [downloaden](https://gnupg.org/download/) en het installeren van de recentste versie van GPG moet u de openbare sleutel van GPG voor de milieu van de markeringsproductie verkrijgen:
+Na [ het downloaden ](https://gnupg.org/download/) en het installeren van de recentste versie van GPG moet u de openbare sleutel van GPG voor het milieu van de markeringsproductie verkrijgen:
 
-* [GPG-toets](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg)
-* [Checksum](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg.sum)
+* [ GPG sleutel ](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg)
+* [ Checksum ](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg.sum)
 
 ## De sleutel importeren in de sleutelketen
 
@@ -46,7 +47,7 @@ gpg --import launch@adobe.com_pub.gpg
 
 ## Waarden versleutelen
 
-Nadat u de sleutel aan uw sleutelhanger hebt toegevoegd, kunt u waarden beginnen te coderen door `--encrypt` markering. Het volgende script laat zien hoe deze opdracht werkt:
+Nadat u de sleutel aan uw sleutelhanger hebt toegevoegd, kunt u waarden beginnen te coderen door de markering `--encrypt` te gebruiken. Het volgende script laat zien hoe deze opdracht werkt:
 
 ```shell
 echo -n 'Example value' | gpg --armor --encrypt -r "Tags Data Encryption <launch@adobe.com>"
@@ -54,12 +55,12 @@ echo -n 'Example value' | gpg --armor --encrypt -r "Tags Data Encryption <launch
 
 Deze opdracht kan als volgt worden verdeeld:
 
-* Invoer wordt geleverd aan de `gpg` gebruiken.
+* Invoer wordt opgegeven voor de opdracht `gpg` .
 * `--armor` maakt uitvoer met ASCII-structuur in plaats van binair. Dit vereenvoudigt het overbrengen van de waarde via JSON.
-* `--encrypt` GPG wordt geïnstrueerd de gegevens te coderen.
-* `-r` Hiermee stelt u de ontvanger voor de gegevens in. Alleen de ontvanger (de houder van de persoonlijke sleutel die overeenkomt met de openbare sleutel) kan de gegevens ontsleutelen. De naam van de ontvanger van de gewenste sleutel kan worden gevonden door de output van te onderzoeken `gpg --list-keys`.
+* `--encrypt` instrueert GPG de gegevens te coderen.
+* `-r` stelt de ontvanger voor de gegevens in. Alleen de ontvanger (de houder van de persoonlijke sleutel die overeenkomt met de openbare sleutel) kan de gegevens ontsleutelen. De naam van de ontvanger van de gewenste sleutel kan worden gevonden door de output van `gpg --list-keys` te onderzoeken.
 
-De bovenstaande opdracht gebruikt de openbare sleutel voor `Tags Data Encryption <launch@adobe.com>` om de waarde te coderen, `Example value`, in ASCII-formaat.
+De bovenstaande opdracht gebruikt de openbare sleutel voor `Tags Data Encryption <launch@adobe.com>` om de waarde, `Example value` , in ASCII-gepantserde indeling te coderen.
 
 De output van het bevel zou op het volgende lijken:
 
@@ -83,7 +84,8 @@ OUoIPf4KxTaboHZOEy32ZBng5heVrn4i9w==
 -----END PGP MESSAGE-----
 ```
 
-Deze uitvoer kan alleen worden ontsleuteld door systemen met de persoonlijke sleutel die overeenkomt met de `Tags Data Encryption <launch@adobe.com>` openbare sleutel.
+Deze uitvoer kan alleen worden ontsleuteld door systemen met de persoonlijke sleutel die
+komt overeen met de openbare sleutel van `Tags Data Encryption <launch@adobe.com>` .
 
 Deze uitvoer is de waarde die op een computer moet worden opgegeven wanneer gegevens naar de Reactor-API worden verzonden. Het systeem slaat deze gecodeerde uitvoer op en decodeert deze tijdelijk indien nodig. Het systeem decodeert bijvoorbeeld de hostgegevens lang genoeg om een verbinding met de server te maken en verwijdert vervolgens onmiddellijk alle sporen van de gedecodeerde waarde.
 

@@ -7,8 +7,8 @@ description: Leer hoe u Adobe Experience Platform verbindt met een FTP-server (F
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 1%
+source-wordcount: '472'
+ht-degree: 0%
 
 ---
 
@@ -16,43 +16,43 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->De FTP-connector bevindt zich in bèta. De functies en documentatie kunnen worden gewijzigd. Zie de [Overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De FTP-connector bevindt zich in bèta. De functies en documentatie kunnen worden gewijzigd. Zie het [ Bronoverzicht ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL FTP] (File Transfer Protocol) met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL FTP] (het Protocol van de Overdracht van het Dossier) tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met een [!DNL FTP] server die de [!DNL Flow Service] API.
+De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met een [!DNL FTP] -server via de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] verbinding maken met [!DNL FTP]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
+[!DNL Flow Service] kan alleen verbinding maken met [!DNL FTP] als u waarden opgeeft voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `host` | De naam of IP adres verbonden aan uw [!DNL FTP] server. |
-| `username` | De gebruikersnaam met toegang tot uw [!DNL FTP] server. |
-| `password` | Het wachtwoord voor uw [!DNL FTP] server. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL FTP] is: `fb2e94c9-c031-467d-8103-6bd6e0a432f2`. |
+| `host` | De naam of het IP-adres dat aan de [!DNL FTP] -server is gekoppeld. |
+| `username` | De gebruikersnaam met toegang tot de [!DNL FTP] -server. |
+| `password` | Het wachtwoord voor uw [!DNL FTP] -server. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL FTP] is: `fb2e94c9-c031-467d-8103-6bd6e0a432f2` . |
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL FTP] verificatiereferenties als onderdeel van de aanvraagparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL FTP] -verificatiegegevens op als onderdeel van de aanvraagparameters.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /connections
@@ -60,7 +60,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL FTP]:
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL FTP] gemaakt:
 
 ```shell
 curl -X POST \
@@ -95,9 +95,9 @@ curl -X POST \
 | `auth.params.password` | Het wachtwoord dat aan uw FTP-server is gekoppeld. |
 | `connectionSpec.id` | De specificatie-id voor de FTP-serververbinding: `fb2e94c9-c031-467d-8103-6bd6e0a432f2` |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe verbinding. Deze id is vereist om uw FTP-server te verkennen in de volgende zelfstudie.
+Een succesvolle reactie keert unieke herkenningsteken (`id`) van de pas gecreëerde verbinding terug. Deze id is vereist om uw FTP-server te verkennen in de volgende zelfstudie.
 
 ```json
 {
@@ -108,4 +108,4 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe verbinding. 
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een FTP-verbinding gemaakt met de [!DNL Flow Service] API en hebben de unieke id-waarde van de verbinding verkregen. U kunt deze verbindings-id gebruiken om [verkennen van cloudopslag met de Flow Service API](../../explore/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u een FTP-verbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze verbindingsidentiteitskaart gebruiken om [ wolkenopslag te onderzoeken gebruikend de Dienst API van de Stroom ](../../explore/cloud-storage.md).

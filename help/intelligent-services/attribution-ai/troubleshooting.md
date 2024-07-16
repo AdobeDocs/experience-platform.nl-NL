@@ -19,12 +19,12 @@ Dit document geeft antwoorden op veelgestelde vragen over Attribution AI.
 
 ## Kan geen toegang krijgen tot Attribution AI in Chrome-incognito
 
-Er treden laadfouten op in de incognitomodus van Google Chrome vanwege updates in de beveiligingsinstellingen van de incognitomodus van Google Chrome. Het probleem wordt actief besproken met Chrome om experience.adobe.com tot een vertrouwd domein te maken.
+Er treden laadfouten op in de incognitomodus Google Chrome vanwege updates in de beveiligingsinstellingen van de incognitomodus Google Chrome. Dit probleem wordt momenteel actief besproken met Chrome om experience.adobe.com tot een vertrouwd domein te maken.
 
 <img src="./images/faq/error.PNG" width="500" /><br />
 
 ### Aanbevolen correctie
 
-Als u dit probleem wilt oplossen, moet u experience.adobe.com toevoegen als een site die cookies altijd kan gebruiken. Starten door te navigeren naar **chrome://settings/cookies**. Blader vervolgens omlaag naar de **Aangepast gedrag** gevolgd door het selecteren van de **Toevoegen** knop naast &quot;sites die altijd cookies kunnen gebruiken&quot;. Kopieer en plak de pop-up die wordt weergegeven `[*.]experience.adobe.com` Selecteer vervolgens de **Cookies van derden opnemen** op deze site. Selecteer **Toevoegen** en herladen van Attribution AI in incognito.
+Als u dit probleem wilt oplossen, moet u experience.adobe.com toevoegen als een site die cookies altijd kan gebruiken. Begin door aan **chrome://settings/cookies** te navigeren. Daarna, scrol neer aan de **Aangepaste gedrags** sectie die door **wordt gevolgd te selecteren voegt** knoop naast &quot;plaatsen toe die koekjes&quot;altijd kunnen gebruiken. In popover die verschijnt, kopieer en plak `[*.]experience.adobe.com` dan **Including derdekoekjes** op deze plaats checkbox. Zodra volledig, uitgezochte **voegt** toe en herlaadt Attribution AI in incognito.
 
-![aanbevolen correctie](./images/faq/cookies2.gif)
+![ geadviseerde moeilijke situatie ](./images/faq/cookies2.gif)

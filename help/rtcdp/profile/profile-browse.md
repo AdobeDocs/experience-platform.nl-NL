@@ -6,7 +6,7 @@ feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
 source-git-commit: ea785ffa1dfa0f7c684fe536796a4b7409882159
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -18,42 +18,42 @@ Het profiel van de Klant in real time leidt tot een holistische mening van elk v
 
 In de gebruikersinterface van Adobe Experience Platform kunt u deze alleen-lezen profielen bekijken en belangrijke informatie over elk van uw individuele klanten bekijken, zoals hun voorkeuren, gebeurtenissen uit het verleden, interacties en het publiek waartoe het individu behoort.
 
-Adobe Real-time Customer Data Platform is gebouwd op Adobe Experience Platform en kan daardoor gebruikmaken van de mogelijkheden voor profielweergave in de gebruikersinterface van het Experience Platform. Voor een gedetailleerde gids over het bekijken van klantenprofielen binnen het gebruikersinterface van het Platform, verwijs naar [Gebruikershandleiding voor het profiel van de klant in realtime](../../profile/ui/user-guide.md).
+Adobe Real-time Customer Data Platform is gebouwd op Adobe Experience Platform en kan daardoor gebruikmaken van de mogelijkheden voor profielweergave in de gebruikersinterface van het Experience Platform. Voor een gedetailleerde gids aan het bekijken van klantenprofielen binnen het gebruikersinterface van het Platform, verwijs naar de [ Real-Time de gebruikersgids van het Profiel van de Klant ](../../profile/ui/user-guide.md).
 
 ## Profielverbeteringen voor Real-Time CDP, B2B Edition
 
-Naast de bladermogelijkheden van het profiel die door Adobe Experience Platform worden ondersteund, kunnen gebruikers van Real-Time CDP, B2B Edition toegang krijgen tot B2B-kenmerken en -gebeurtenissen binnen het klantprofiel op het tabblad [!UICONTROL Attributes] en [!UICONTROL Events] tabs, respectievelijk. B2B-gegevens kunnen ook worden gebruikt om segmentatie uit te voeren, waarbij het publiek onder de [!UICONTROL Audience membership] naast niet-B2B-publiek.
+Naast de bladermogelijkheden van het profiel die door Adobe Experience Platform worden ondersteund, hebben gebruikers van Real-Time CDP, B2B Edition toegang tot B2B-kenmerken en -gebeurtenissen binnen het klantprofiel op respectievelijk de tabbladen [!UICONTROL Attributes] en [!UICONTROL Events] . B2B-gegevens kunnen ook worden gebruikt om segmentatie uit te voeren, waarbij de soorten publiek op het tabblad [!UICONTROL Audience membership] van de klant naast andere soorten publiek dan B2B worden weergegeven.
 
-Met Real-Time CDP, B2B Edition kunt u ook bladeren [!UICONTROL Accounts], [!UICONTROL Opportunities], en [!UICONTROL Source records] van over uw ondernemingsbronnen die met een individuele klant worden geassocieerd.
+Met Real-Time CDP, B2B Edition kunt u ook bladeren door [!UICONTROL Accounts] , [!UICONTROL Opportunities] en [!UICONTROL Source records] vanuit verschillende bedrijfsbronnen die aan een individuele klant zijn gekoppeld.
 
-Als u deze verbeteringen wilt verkennen, voert u eerst de stappen uit die in het dialoogvenster [Gebruikershandleiding voor het profiel van de klant in realtime](../../profile/ui/user-guide.md) om door een profiel te bladeren door beleid of naamruimte van de identiteit samen te voegen.
+Om deze verhogingen te onderzoeken, begin door de stappen te volgen die in de [ in real time gebruikersgids van het Profiel van de Klant ](../../profile/ui/user-guide.md) worden geschetst om een profiel door fusiebeleid of identiteitsnaamruimte te doorbladeren.
 
 ![](images/b2b-browse-profile.png)
 
-De profieldetails omvatten toegang tot [!UICONTROL Accounts], [!UICONTROL Opportunities], en [!UICONTROL Source records] tabbladen naast de standaardinformatie in het klantprofiel die ook is verbeterd met B2B-gebeurtenissen en -kenmerken.
+De profieldetails omvatten toegang tot de tabbladen [!UICONTROL Accounts] , [!UICONTROL Opportunities] en [!UICONTROL Source records] naast de standaardinformatie in het klantprofiel die ook is verbeterd met B2B-gebeurtenissen en -kenmerken.
 
 ![](images/b2b-profile-detail.png)
 
-Raadpleeg voor meer informatie over de profieldetails in de interface van het platform [sectie met details van de documentatie van het dashboard Profielen](../../dashboards/guides/profiles.md#browse-profiles).
+Meer over de profieldetails leren die in het Platform UI worden verstrekt, verwijs naar de [ detailssectie van de het dashboarddocumentatie van Profielen ](../../dashboards/guides/profiles.md#browse-profiles).
 
 ### Het tabblad Accounts
 
-Selecteren **[!UICONTROL Accounts]** om een lijst weer te geven met accounts die betrekking hebben op het profiel. Deze lijst bevat basisgegevens uit het accountprofiel, zoals de naam, website en branche van de account, en een koppeling naar het accountprofiel.
+Selecteer **[!UICONTROL Accounts]** om een lijst weer te geven met accounts die betrekking hebben op het profiel. Deze lijst bevat basisgegevens uit het accountprofiel, zoals de naam, website en branche van de account, en een koppeling naar het accountprofiel.
 
-Voor meer informatie over het weergeven en verkennen van accountprofielen begint u met het lezen van de [overzicht van accountprofielen](../accounts/account-profile-overview.md).
+Voor meer informatie bij het bekijken van en het onderzoeken van rekeningsprofielen, begin door het [ overzicht van rekeningsprofielen ](../accounts/account-profile-overview.md) te lezen.
 
 ![](images/b2b-profile-accounts.png)
 
 ### Tabblad Kansen
 
-De **[!UICONTROL Opportunities]** bevat details over open en afgesloten mogelijkheden met betrekking tot de account. Deze kansen kunnen in Experience Platform van veelvoudige bronnen worden opgenomen, nochtans maakt de Real-Time CDP, B2B Uitgave het voor marketers gemakkelijk om al deze kansen samen te zien op één plaats.
+Het tabblad **[!UICONTROL Opportunities]** bevat details over open en gesloten mogelijkheden met betrekking tot de account. Deze kansen kunnen in Experience Platform van veelvoudige bronnen worden opgenomen, nochtans maakt de Real-Time CDP, B2B Uitgave het voor marketers gemakkelijk om al deze kansen samen te zien op één plaats.
 
 Elke kans bevat informatie zoals de naam van de kans, de hoeveelheid kansen, het werkgebied en of de kans open, gesloten, gewonnen of verloren is.
 
 ![](images/b2b-profile-opportunities.png)
 
-### Tabblad Bronrecords
+### Tabblad Source-records
 
-De **[!UICONTROL Source records]** kunt u gemakkelijk de veelvoudige bronverslagen zien die uit uw ondernemingsbronnen komen die aan het enige klantenprofiel bijdragen. Naast de [!UICONTROL Person source key] en het e-mailadres, verstrekt elke bronverslag ook het type van verslag (bijvoorbeeld, een &quot;contact&quot;of &quot;lood&quot;verslag), evenals de bron.
+Op het tabblad **[!UICONTROL Source records]** kunt u eenvoudig de meerdere bronrecords zien die afkomstig zijn van uw bedrijfsbronnen en die bijdragen aan het profiel van één klant. Naast [!UICONTROL Person source key] en e-mailadres geeft elke bronrecord ook het type record (bijvoorbeeld een &#39;contact&#39;- of &#39;lead&#39;-record) en de bron.
 
 ![](images/b2b-profile-source-records.png)

@@ -18,11 +18,11 @@ ht-degree: 0%
 >
 >Als een gebruikerstoken wordt overgegaan, dan moet de gebruiker van het teken een &quot;org admin&quot;rol voor gevraagde org hebben.
 
-U kunt een lijst maken van de namen van alle toestemmingen en middeltypes door een verzoek van de GET tot de `/acl/reference` eindpunt. Deze namen kunnen vervolgens worden gebruikt in API-aanroepen naar [doeltreffend beleid voor toegangscontrole weergeven](./effective-policies.md) voor de huidige gebruiker.
+U kunt de namen van alle toestemmingen en middeltypes een lijst maken door een verzoek van de GET aan het `/acl/reference` eindpunt te richten. Deze namen kunnen dan in API vraag worden gebruikt aan [ mening efficiënt toegangsbeheerbeleid ](./effective-policies.md) voor de huidige gebruiker.
 
-Een toestemming is een beleid dat door Adobe Admin Console wordt beheerd, en kaarten aan nul of meer middel-type beleid. Een middeltype is een beleid dat gelezen toelaat, schrijft, en/of schrapt mogelijkheden voor een specifiek type van [!DNL Platform] bron (zoals datasets of schema&#39;s).
+Een toestemming is een beleid dat door Adobe Admin Console wordt beheerd, en kaarten aan nul of meer middel-type beleid. Een middeltype is een beleid dat lees toelaat, schrijft, en/of schrapt mogelijkheden voor een specifiek type van [!DNL Platform] middel (zoals datasets of schema&#39;s).
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /acl/reference
@@ -38,9 +38,9 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een `permissions` object en `resource-types` object, elk met een volledige lijst met namen voor respectievelijk toegangsmachtigingen of typen bronnen.
+Een geslaagde reactie retourneert een `permissions` -object en een `resource-types` -object, elk met een volledige lijst met namen voor respectievelijk toegangsmachtigingen en typen bronnen.
 
 ```json
 {

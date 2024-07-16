@@ -4,8 +4,8 @@ title: Een referentieconfiguratie bijwerken
 exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 4%
+source-wordcount: '588'
+ht-degree: 2%
 
 ---
 
@@ -13,37 +13,37 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/credentials`
+>**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om een bestaande referentieconfiguratie bij te werken met de `/authoring/credentials` API-eindpunt.
+Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om een bestaande referentieconfiguratie bij te werken met behulp van het API-eindpunt `/authoring/credentials` .
 
-## Wanneer gebruikt u de `/credentials` API-eindpunt {#when-to-use}
+## Wanneer gebruikt u het API-eindpunt `/credentials` {#when-to-use}
 
 >[!IMPORTANT]
 >
->In de meeste gevallen ***niet*** de noodzaak `/credentials` API-eindpunt. In plaats daarvan, kunt u de authentificatieinformatie voor uw bestemming via vormen `customerAuthenticationConfigurations` parameters van de `/destinations` eindpunt.
+>In de meeste gevallen, te hoeven u ***niet*** om het `/credentials` API eindpunt te gebruiken. In plaats daarvan kunt u de verificatiegegevens voor uw doel configureren via de `customerAuthenticationConfigurations` -parameters van het `/destinations` -eindpunt.
 > 
->Lezen [Configuratie van klantverificatie](../functionality/destination-configuration/customer-authentication.md) voor gedetailleerde informatie over de ondersteunde verificatietypen.
+>Lees [ de authentificatieconfiguratie van de Klant ](../functionality/destination-configuration/customer-authentication.md) voor gedetailleerde informatie over de gesteunde authentificatietypen.
 
-Gebruik dit API eindpunt om een credentiële configuratie tot stand te brengen slechts als er een globaal authentificatiesysteem tussen Adobe en uw bestemmingsplatform is, en [!DNL Platform] de klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een referentieconfiguratie maken met de `/credentials` API-eindpunt.
+Gebruik dit API eindpunt om een credentieconfiguratie tot stand te brengen slechts als er een globaal authentificatiesysteem tussen Adobe en uw bestemmingsplatform is, en de [!DNL Platform] klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een referentieconfiguratie maken met het API-eindpunt van `/credentials` .
 
-Wanneer het gebruiken van een globaal authentificatiesysteem, moet u plaatsen `"authenticationRule":"PLATFORM_AUTHENTICATION"` in de [bestemmingslevering](../functionality/destination-configuration/destination-delivery.md) configuratie, wanneer [het creëren van een nieuwe bestemmingsconfiguratie](../authoring-api/destination-configuration/create-destination-configuration.md).
+Wanneer het gebruiken van een globaal authentificatiesysteem, moet u `"authenticationRule":"PLATFORM_AUTHENTICATION"` in de [ 2} configuratie van de bestemmingslevering plaatsen, wanneer [ creërend een nieuwe bestemmingsconfiguratie ](../authoring-api/destination-configuration/create-destination-configuration.md).](../functionality/destination-configuration/destination-delivery.md)
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Aan de slag met API-bewerkingen voor gebruikersgegevens {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een referentieconfiguratie bijwerken {#update}
 
-U kunt een [bestaand](create-credential-configuration.md) crediteurconfiguratie door een `PUT` verzoek aan de `/authoring/credentials` eindpunt met de bijgewerkte nuttige lading.
+U kunt een [ bestaande ](create-credential-configuration.md) credentiële configuratie bijwerken door een `PUT` verzoek aan het `/authoring/credentials` eindpunt met de bijgewerkte nuttige lading te doen.
 
-Een bestaande referentieconfiguratie en de bijbehorende `{INSTANCE_ID}`, zie het artikel over [ophalen van een referentieconfiguratie](retrieve-credential-configuration.md).
+Om een bestaande credentiële configuratie en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie het artikel over [ het terugwinnen van een credentiële configuratie ](retrieve-credential-configuration.md).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /authoring/credentials/{INSTANCE_ID}
@@ -51,7 +51,7 @@ PUT /authoring/credentials/{INSTANCE_ID}
 
 | Parameter | Beschrijving |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | De id van de referentieconfiguratie die u wilt bijwerken. Een bestaande referentieconfiguratie en de bijbehorende `{INSTANCE_ID}`, zie [Een referentieconfiguratie ophalen](retrieve-credential-configuration.md). |
+| `{INSTANCE_ID}` | De id van de referentieconfiguratie die u wilt bijwerken. Om een bestaande credentiële configuratie en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie [ een credentiële configuratie ](retrieve-credential-configuration.md) terugwinnen. |
 
 De volgende verzoeken werken bestaande credentiële configuraties bij, die door de parameters worden bepaald die in de lading worden verstrekt.
 
@@ -59,9 +59,9 @@ Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB Basis]
+>[!TAB  Basis ]
 
-**Een basisconfiguratie voor referentie bijwerken**
+**werk een basiscredentiële configuratie** bij
 
 +++verzoek
 
@@ -84,9 +84,9 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `url` | Tekenreeks | URL van leverancier van machtigingen |
-| `username` | Tekenreeks | Gebruikersnaam aanmeldnaam voor configuratie van aanmeldingsgegevens |
-| `password` | Tekenreeks | Aanmeldingswachtwoord voor configuratie van referenties |
+| `url` | String | URL van leverancier van machtigingen |
+| `username` | String | Gebruikersnaam aanmeldnaam voor configuratie van aanmeldingsgegevens |
+| `password` | String | Aanmeldingswachtwoord voor configuratie van referenties |
 
 {style="table-layout:auto"}
 
@@ -100,7 +100,7 @@ Een succesvolle reactie keert status 200 van HTTP met de details van uw bijgewer
 
 >[!TAB Amazon S3]
 
-**Een update [!DNL Amazon S3] crediteurenconfiguratie**
+**werk een [!DNL Amazon S3] credentiële configuratie** bij
 
 +++verzoek
 
@@ -122,8 +122,8 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `accessId` | Tekenreeks | [!DNL Amazon S3] toegangs-id |
-| `secretKey` | Tekenreeks | [!DNL Amazon S3] geheime sleutel |
+| `accessId` | String | [!DNL Amazon S3] toegangs-id |
+| `secretKey` | String | [!DNL Amazon S3] geheime sleutel |
 
 {style="table-layout:auto"}
 
@@ -135,9 +135,9 @@ Een succesvolle reactie keert status 200 van HTTP met de details van uw bijgewer
 
 +++
 
->[!TAB SSH]
+>[!TAB  SSH ]
 
-**Een update [!DNL SSH] crediteurenconfiguratie**
+**werk een [!DNL SSH] credentiële configuratie** bij
 
 +++verzoek
 
@@ -159,8 +159,8 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `username` | Tekenreeks | Gebruikersnaam aanmeldnaam voor configuratie van aanmeldingsgegevens |
-| `sshKey` | Tekenreeks | [!DNL SSH] toets voor [!DNL SFTP] with [!DNL SSH] verificatie |
+| `username` | String | Gebruikersnaam aanmeldnaam voor configuratie van aanmeldingsgegevens |
+| `sshKey` | String | [!DNL SSH] -sleutel voor [!DNL SFTP] met [!DNL SSH] -verificatie |
 
 {style="table-layout:auto"}
 
@@ -172,9 +172,9 @@ Een succesvolle reactie keert status 200 van HTTP met de details van uw bijgewer
 
 +++
 
->[!TAB Azure Data Lake Storage]
+>[!TAB  Azure de Opslag van het meer van Gegevens ]
 
-**Een update [!DNL Azure Data Lake Storage] crediteurenconfiguratie**
+**werk een [!DNL Azure Data Lake Storage] credentiële configuratie** bij
 
 +++verzoek
 
@@ -198,10 +198,10 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `url` | Tekenreeks | URL van leverancier van machtigingen |
-| `tenant` | Tekenreeks | Azure Data Lake Storage-huurder |
-| `servicePrincipalId` | Tekenreeks | [!DNL Azure Service Principal] ID voor [!DNL Azure Data Lake Storage] |
-| `servicePrincipalKey` | Tekenreeks | [!DNL Azure Service Principal Key] for [!DNL Azure Data Lake Storage] |
+| `url` | String | URL van leverancier van machtigingen |
+| `tenant` | String | Azure Data Lake Storage-huurder |
+| `servicePrincipalId` | String | [!DNL Azure Service Principal] ID voor [!DNL Azure Data Lake Storage] |
+| `servicePrincipalKey` | String | [!DNL Azure Service Principal Key] for [!DNL Azure Data Lake Storage] |
 
 {style="table-layout:auto"}
 
@@ -213,9 +213,9 @@ Een succesvolle reactie keert status 200 van HTTP met de details van uw bijgewer
 
 +++
 
->[!TAB Azure Blob Storage]
+>[!TAB  Azure Blob Storage ]
 
-**Een update [!DNL Azure Blob] crediteurenconfiguratie**
+**werk een [!DNL Azure Blob] credentiële configuratie** bij
 
 +++verzoek
 
@@ -236,7 +236,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `connectionString` | Tekenreeks | [!DNL Azure Blob Storage] verbindingstekenreeks |
+| `connectionString` | String | [!DNL Azure Blob Storage] verbindingstekenreeks |
 
 {style="table-layout:auto"}
 
@@ -252,8 +252,8 @@ Een succesvolle reactie keert status 200 van HTTP met de details van uw bijgewer
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, kunt u nu een referentieconfiguratie bijwerken met de `/authoring/credentials` API-eindpunt. Lezen [hoe te om Destination SDK te gebruiken om uw bestemming te vormen](../guides/configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Nadat u dit document hebt gelezen, weet u nu hoe u een referentieconfiguratie kunt bijwerken met behulp van het API-eindpunt van `/authoring/credentials` . Lees [ hoe te om Destination SDK te gebruiken om uw bestemming ](../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

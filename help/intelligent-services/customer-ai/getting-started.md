@@ -16,22 +16,22 @@ ht-degree: 0%
 
 De gidsen voor AI van de Klant vereisen een werkend inzicht in de diverse diensten van het Platform betrokken bij het gebruiken van AI van de Klant. Lees de volgende documenten voordat u begint:
 
-- [Overzicht van XDM (Experience Data Model)](../../xdm/home.md): XDM is het basisframework dat [!DNL Adobe Experience Cloud], aangedreven door Experience Platform, om het juiste bericht te leveren aan de juiste persoon, op het juiste kanaal, op precies het juiste moment. De methodologie waarop het Experience Platform wordt gebouwd, het Systeem van XDM, stelt de Modelschema&#39;s van de Gegevens van de Ervaring voor gebruik door de diensten van het Platform in werking.
-- [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Dit document verstrekt een inleiding aan de schema&#39;s van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en de beste praktijken voor het samenstellen van schema&#39;s die in moeten worden gebruikt [!DNL Adobe Experience Platform].
-- [Bouwschema&#39;s](../../xdm/tutorials/create-schema-ui.md): Deze zelfstudie behandelt de stappen voor het maken van een schema met behulp van de Schema-editor in het Experience Platform.
-- [Overzicht van het realtime klantprofiel](../../rtcdp/overview.md): Gebaseerd op [!DNL Adobe Experience Platform]Adobe Real-time Customer Data Platform (Real-Time CDP) helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren met intelligente beslissingen gedurende de hele reis van de klant. Real-Time CDP combineert meerdere bedrijfsgegevensbronnen om uniforme profielen in real-time te maken die kunnen worden gebruikt om een-op-een gepersonaliseerde klantenervaring op alle kanalen en apparaten te bieden.
-- [Overzicht van segmentatieservice](../../segmentation/home.md): Segmentatie is het proces waarbij specifieke kenmerken of gedragingen worden gedefinieerd die worden gedeeld door een subset van profielen in uw profielarchief om een verhandelbare groep personen te onderscheiden van uw klantenbasis. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan. Met behulp van verschillende segmenten kunt u zich richten op uw verschillende doelgroepen en een meer aangepaste marketingervaring bieden.
-- [Gebruikershandleiding voor Segment Builder](../../segmentation/tutorials/create-a-segment.md): Met Platform kunt u eenvoudig segmenten maken en openen en kunt u verschillende bouwstenen gebruiken om uw segmenten verder te karakteriseren.
+- [ het overzicht van het Systeem van Gegevens van de Ervaring Model (XDM) ](../../xdm/home.md): XDM is het basiskader dat [!DNL Adobe Experience Cloud], aangedreven door Experience Platform, toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op precies het juiste moment te leveren. De methodologie waarop het Experience Platform wordt gebouwd, het Systeem van XDM, stelt de Modelschema&#39;s van de Gegevens van de Ervaring voor gebruik door de diensten van het Platform in werking.
+- [ Grondbeginselen van schemacompositie ](../../xdm/schema/composition.md): Dit document verstrekt een inleiding aan de schema&#39;s van het Model van Gegevens van de Ervaring (XDM) en de bouwstenen, de principes, en beste praktijken voor het samenstellen van schema&#39;s die in [!DNL Adobe Experience Platform] moeten worden gebruikt.
+- [ de schema&#39;s van de Bouw ](../../xdm/tutorials/create-schema-ui.md): Dit leerprogramma behandelt de stappen voor het creëren van een schema gebruikend de Redacteur van het Schema binnen Experience Platform.
+- [ Real-Time overzicht van het Profiel van de Klant ](../../rtcdp/overview.md): Voortgebouwd op [!DNL Adobe Experience Platform], helpt Adobe Real-time Customer Data Platform (Real-Time CDP) bedrijven bekende en onbekende gegevens samenbrengen om klantenprofielen met intelligente besluiten door de klantenreis te activeren. Real-Time CDP combineert meerdere bedrijfsgegevensbronnen om uniforme profielen in real-time te maken die kunnen worden gebruikt om een-op-een gepersonaliseerde klantenervaring op alle kanalen en apparaten te bieden.
+- [ Overzicht van de Dienst van de Segmentatie ](../../segmentation/home.md): De segmentatie is het proces om specifieke attributen of gedrag te bepalen dat door een ondergroep van profielen van uw opslag van het Profiel wordt gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan. Met behulp van verschillende segmenten kunt u zich richten op uw verschillende doelgroepen en een meer aangepaste marketingervaring bieden.
+- [ gebruikersgids van de Bouwer van het Segment ](../../segmentation/tutorials/create-a-segment.md): Het platform staat u toe om tot segmenten gemakkelijk tot stand te brengen en toegang te hebben, evenals verschillende bouwstenen te gebruiken om uw segmenten verder te karakteriseren.
 
 ## AI-scores van klanten downloaden
 
 >[!NOTE]
 >
->Als u geen RAW-scores hoeft te downloaden, kunt u deze stap overslaan en doorgaan naar de [configuratiegids](./user-guide/configure.md).
+>Als u geen ruwe scores moet downloaden, kunt u deze stap overslaan en aan de [ configuratiegids ](./user-guide/configure.md) te werk gaan.
 
-Het downloaden van AI-scores van de Klant gebeurt via een combinatie van API-aanroepen. Als u aanroepen wilt uitvoeren naar platform-API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Het downloaden van AI-scores van de Klant gebeurt via een combinatie van API-aanroepen. Om vraag aan Platform APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
-- Toestemming: houder `{ACCESS_TOKEN}`
+- Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
@@ -41,12 +41,12 @@ Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sa
 
 >[!NOTE]
 >
->Voor meer informatie over sandboxen in Platform raadpleegt u de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in Platform, zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md) in de gids voor het oplossen van problemen met Experience Platforms.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ## Volgende stappen
 
-Als u de in het bovenstaande document beschreven stappen hebt uitgevoerd, gaat u naar de [Invoer en uitvoer](./data-requirements.md) documentatie. In dit document wordt een kort overzicht gegeven van de soorten gegevens die in de AI van de Klant worden gebruikt en geproduceerd.
+Zodra u de stappen hebt voltooid die in het document hierboven worden geschetst, bezoek de [ input en documentatie van de Output ](./data-requirements.md). In dit document wordt een kort overzicht gegeven van de soorten gegevens die in de AI van de Klant worden gebruikt en geproduceerd.

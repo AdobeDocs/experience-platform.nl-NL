@@ -1,10 +1,10 @@
 ---
-title: Typen handelingen voor randextensies
+title: Typen handelingen voor Edge-extensies
 description: Leer hoe u een bibliotheekmodule van het type action definieert voor een tagextensie in een randeigenschap.
 exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '377'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 In een markeringsregel, is een actie iets dat wordt uitgevoerd nadat de regelvoorwaarden evaluatie hebben overgegaan. Actietypen worden geleverd door extensies en de effecten ervan worden volledig gedefinieerd door de auteur van de extensie.
 
@@ -23,9 +23,9 @@ In dit document wordt beschreven hoe u actietypen voor een randextensie in Adobe
 
 >[!IMPORTANT]
 >
->Als u een webextensie ontwikkelt, raadpleegt u de handleiding op [actietypen voor webextensies](../web/action-types.md) in plaats daarvan.
+>Als u een Webuitbreiding ontwikkelt, zie in plaats daarvan de gids op [ actietypen voor Webuitbreidingen ](../web/action-types.md).
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding nodig hebt, raadpleegt u het overzicht over [Opmaak van de module Bibliotheek](./format.md) voordat u terugkeert naar deze handleiding.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding vereist, zie het overzicht op [ het formatteren van de bibliotheekmodule ](./format.md) alvorens aan deze gids terug te keren.
 
 Handelingstypen bestaan doorgaans uit:
 
@@ -77,6 +77,6 @@ module.exports = (context) {
 
 ## Handelingsresultaat
 
-Het resultaat dat door een actiemodule wordt geretourneerd, kan om het even welk zijn. Als de handeling een asynchrone taak moet uitvoeren, kunt u een [beloven](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) dat het gewenste resultaat oplevert wanneer het is opgelost.
+Het resultaat dat door een actiemodule wordt geretourneerd, kan om het even welk zijn. Als de actie een asynchrone taak moet uitvoeren, kunt u a [ belofte ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) terugkeren die het resultaat terugkeert u wilt zodra het oplost.
 
-Het resultaat van de handeling wordt opgeslagen in een `ruleStash` sleutel die via de `context` parameter (`context.arc.ruleStash`). Meer informatie over `ruleStash` [hier](./context.md#rulestash).
+Het resultaat van de handeling wordt opgeslagen in een `ruleStash` -toets die via de `context` -parameter (`context.arc.ruleStash` ) beschikbaar wordt gemaakt voor alle modules. U kunt meer over `ruleStash` [ hier ](./context.md#rulestash) leren.

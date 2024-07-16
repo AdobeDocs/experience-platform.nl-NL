@@ -1,6 +1,6 @@
 ---
-description: Leer hoe u het tabblad Logs gebruikt in Adobe Experience Platform Debugger.
-keywords: foutopsporing;ervaring met Platform debugger-extensie;chroom;extensie;logs
+description: Leer hoe u het tabblad Logs in Adobe Experience Platform Debugger gebruikt.
+keywords: foutopsporing;ervaring met de extensie Foutopsporing in platform;chroom;extensie;logs
 seo-description: Experience Platform Debugger Logs screen
 seo-title: Logs
 title: Tabblad Logs
@@ -15,25 +15,25 @@ ht-degree: 0%
 
 # Tabblad Logs
 
-De **Logboeken** bevat specifieke informatie over tags en Adobe Experience Platform Web SDK-implementaties. U kunt filteren op oplossingen die zijn geïmplementeerd via de bijbehorende gereedschappen.
+Het **Logs** lusje verstrekt informatie specifiek voor markeringen en de implementaties van SDK van het Web van Adobe Experience Platform. U kunt filteren op oplossingen die zijn geïmplementeerd via de bijbehorende gereedschappen.
 
 ![](images/logs.jpg)
 
 Op het tabblad Logs wordt informatie in vier kolommen weergegeven:
 
-**[!UICONTROL Solutions]:** De pictogrammen van vertoningen voor de oplossing van de Experience Cloud die door het geregistreerde punt wordt beïnvloed. Houd de muisaanwijzer boven het pictogram voor een tekstbeschrijving.
+**[!UICONTROL Solutions]:** toont pictogrammen voor de oplossing van het Experience Cloud die door het geregistreerde punt wordt beïnvloed. Houd de muisaanwijzer boven het pictogram voor een tekstbeschrijving.
 
-**[!UICONTROL Occurred at]:** Toont wanneer de geregistreerde kwestie tijdens de zitting voorkwam.
+**[!UICONTROL Occurred at]:** toont wanneer de geregistreerde kwestie tijdens de zitting voorkwam.
 
-**[!UICONTROL Log level]:** Geeft de ernst van het probleem weer. De ernst is een van de volgende niveaus:
+**[!UICONTROL Log level]:** toont de ernst van de uitgave. De ernst is een van de volgende niveaus:
 
 * Logboek
 * Info
 * Waarschuwingen
 * Fouten
 
-**[!UICONTROL Log message]:** Beschrijft de kwestie.
+**[!UICONTROL Log message]:** beschrijft de kwestie.
 
-Sommige logboekberichten bevatten een optie Code tonen. Selecteren **[!UICONTROL Show Code]** om de voorwaardelijke code weer te geven die bepaalt of een regel moet worden geactiveerd.
+Sommige logboekberichten bevatten een optie Code tonen. Selecteer **[!UICONTROL Show Code]** om de voorwaardelijke code weer te geven die bepaalt of een regel moet worden geactiveerd.
 
-Als u het logbestand wilt wissen, selecteert u **[!UICONTROL Remove Logs]**.
+Selecteer **[!UICONTROL Remove Logs]** om het logbestand te wissen.

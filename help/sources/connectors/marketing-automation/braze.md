@@ -1,11 +1,12 @@
 ---
-title: Overzicht van Bron van Braze
+title: Braze Current Source - Overzicht
 description: Leer hoe u gegevens kunt streamen van Braze Currents naar Experience Platform.
 badge: Beta
-source-git-commit: 64975ccb6a44730489427cef745f3dbce5bcedf1
+exl-id: dd304e10-26e5-4586-ab39-8fe3294b19c9
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '357'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -13,24 +14,24 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->De [!DNL Braze Currents] De bron is in bèta. Lees de [overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+>De bron [!DNL Braze Currents] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens in streaming toepassingen. Ondersteuning voor streamingproviders omvat [!DNL Braze Currents].
+Experience Platform biedt ondersteuning voor het opnemen van gegevens in streaming toepassingen. Ondersteuning voor streamingproviders omvat [!DNL Braze Currents] .
 
-[!DNL Braze] maakt klantgerichte interacties tussen consumenten en merken in real time mogelijk. [!DNL Braze Currents] is een real-time gegevensstroom van betrokkenheidsgebeurtenissen van het platform van Braze dat de robuustste maar korrelige uitvoer uit het [!DNL Braze] platform.
+[!DNL Braze] maakt klantgerichte interacties tussen consumenten en merken in real-time mogelijk. [!DNL Braze Currents] is een realtime gegevensstroom van betrokkenheidsgebeurtenissen van het Braze-platform die de meest robuuste maar korrelige export van het [!DNL Braze] -platform is.
 
 ## Vereisten
 
 Voor het uitvoeren van de stappen in deze handleiding hebt u het volgende nodig:
 
-* Aanmelden bij [Adobe Experience Platform](https://platform.adobe.com) en toestemming om een nieuwe streamingbronverbinding te maken.
-* Een aanmelding bij uw [[!DNL Braze] dashboard](https://dashboard.braze.com/sign_in), een ongebruikte [Huidige-connectorlicentie](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)en machtigingen om een aansluiting te maken. Lees voor meer informatie de [vereisten voor het opzetten [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements).
+* Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en toestemming om een nieuwe het stromen bronverbinding tot stand te brengen.
+* Login aan uw [[!DNL Braze]  dashboard ](https://dashboard.braze.com/sign_in), een ongebruikte [ vergunning van de Schakelaar van Studenten ](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents), en toestemmingen om een schakelaar tot stand te brengen. Voor meer informatie, lees de [ vereisten aan opstelling  [!DNL Currents] ](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements).
 
 ### Vereiste referenties verzamelen
 
-Als u uw [!DNL Braze Currents] gegevens aan Experience Platform, moet u de volgende geloofsbrieven van het Experience Platform in [!DNL Braze] UI-dashboard.
+Als u de [!DNL Braze Currents] -gegevens naar het Experience Platform wilt verzenden, moet u de volgende referenties voor het Experience Platform invoeren in het [!DNL Braze] UI-dashboard.
 
 | Veld | Beschrijving |
 | --- | --- |
@@ -39,10 +40,10 @@ Als u uw [!DNL Braze Currents] gegevens aan Experience Platform, moet u de volge
 | Tenant-id | De huurder-id die aan uw bron van het Experience Platform is gekoppeld. |
 | Naam sandbox | De sandbox die aan de bron van het Experience Platform is gekoppeld. |
 | Dataflow-id | De gegevensstroom-id die aan de bron van het Experience Platform is gekoppeld. |
-| Streaming eindpunt | Het streamingeindpunt dat aan de bron van het Experience Platform is gekoppeld. **Opmerking**: [!DNL Braze] zet dit automatisch om in het batch streaming eindpunt. |
+| Streaming eindpunt | Het streamingeindpunt dat aan de bron van het Experience Platform is gekoppeld. **Nota**: [!DNL Braze] zet automatisch dit in het batch die eindpunt stromen om. |
 
-Voor informatie over het ophalen van deze waarden leest u de handleiding op [aan de slag met platform-API&#39;s](../../../landing/api-authentication.md). Voor informatie over het gebruik van de [!DNL Braze] dashboard, lees de [!DNL Braze] gids over hoe te [Navigeren naar huidige](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Voor informatie over hoe te om deze waarden terug te winnen, lees de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-authentication.md). Voor informatie bij het gebruiken van het [!DNL Braze] dashboard, lees de [!DNL Braze] gids over hoe te [ aan Huidige Bestanden ](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents) navigeren.
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u de vereiste instellingen voltooid die nodig zijn om gegevens te kunnen streamen van uw [!DNL Braze Currents] aan Experience Platform. U kunt nu doorgaan naar de handleiding op [verbinden [!DNL Braze Currents] naar Experience Platform via de gebruikersinterface](../../tutorials/ui/create/marketing-automation/braze.md).
+Door dit document te lezen, hebt u de vereiste instellingen voltooid die nodig zijn om gegevens te kunnen streamen van uw [!DNL Braze Currents] -account naar het Experience Platform. U kunt aan de gids nu te werk gaan op [ verbindend  [!DNL Braze Currents]  met Experience Platform gebruikend het gebruikersinterface ](../../tutorials/ui/create/marketing-automation/braze.md).

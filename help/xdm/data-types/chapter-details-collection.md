@@ -1,18 +1,19 @@
 ---
 title: Het gegevenstype van de verzameling van hoofddetails
 description: Leer over het de gegevenstype van de Gegevens van de Inzameling van het Hoofdstuk van het Gegevensmodel van de Gegevens (XDM).
-source-git-commit: c6108bb692c80c79e115ac7b1488d95a7039ffcf
+exl-id: 4f841f5a-3840-4da5-a3a4-ceecde87c684
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '177'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 # [!UICONTROL Chapter Details] Gegevenstype verzameling
 
-[!UICONTROL Chapter Details] De inzameling is een standaardgegevenstype van de Gegevens van de Ervaring Model (XDM) dat diverse attributen met betrekking tot hoofdstukken of segmenten binnen media inhoud beschrijft. Gebruik de [!UICONTROL Chapter Details] Het gegevenstype van de inzameling om details zoals hoofdstuknaam, compensatie, duur, en de hoofdstukindex te vangen. In velden voor het verzamelen van media worden gegevens vastgelegd en naar andere Adobe-services verzonden voor verdere verwerking.
+[!UICONTROL Chapter Details] Verzameling is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat diverse attributen met betrekking tot hoofdstukken of segmenten binnen media inhoud beschrijft. Met het gegevenstype [!UICONTROL Chapter Details] Verzameling kunt u gegevens vastleggen, zoals de hoofdstuknaam, verschuiving, duur en hoofdstukindex. In velden voor het verzamelen van media worden gegevens vastgelegd en naar andere Adobe-services verzonden voor verdere verwerking.
 
-![Een diagram van het gegevenstype van de Verzameling van de Details van het Hoofdstuk.](../images/data-types/chapter-details-collection.png)
+![ A diagram van het gegevenstype van de Inzameling van de Details van het Hoofdstuk.](../images/data-types/chapter-details-collection.png)
 
 >[!NOTE]
 >

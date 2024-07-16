@@ -7,27 +7,27 @@ exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
 source-wordcount: '290'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL Schemas] Overzicht van gebruikersinterface
+# Overzicht van de gebruikersinterface [!UICONTROL Schemas]
 
-De [!UICONTROL Schemas] In de Adobe Experience Platform-gebruikersinterface kunt u bronnen van het Experience Data Model (XDM) beheren, zoals schema&#39;s, klassen, groepen van schemavelden en gegevenstypen. U kunt kernmiddelen bekijken en onderzoeken die door Adobe worden verstrekt, en douanemiddelen en schema&#39;s voor uw organisatie tot stand brengen.
+In de [!UICONTROL Schemas] -werkruimte in de Adobe Experience Platform-gebruikersinterface kunt u bronnen van het Experience Data Model (XDM) beheren, zoals schema&#39;s, klassen, groepen van schemavelden en gegevenstypen. U kunt kernmiddelen bekijken en onderzoeken die door Adobe worden verstrekt, en douanemiddelen en schema&#39;s voor uw organisatie tot stand brengen.
 
-Als u toegang wilt tot de werkruimte in de interface van het platform, selecteert u **[!UICONTROL Schemas]** in het linkerspoor.
+Als u toegang wilt tot de werkruimte in de interface van het platform, selecteert u **[!UICONTROL Schemas]** in de linkertrack.
 
 ![](../images/ui/overview/schemas-tab.png)
 
 ## Aan de slag
 
-Als u de werkruimte voor het eerst gebruikt, begint u met de hulplijn op [onderzoek bestaande middelen in UI](./explore.md) om uzelf bekend te maken met de verschillende tabbladen en het schemacanvas.
+Als u de werkruimte voor het eerst gebruikt, begin met de gids bij [ het onderzoeken van bestaande middelen in UI ](./explore.md) om zich met de verschillende lusjes en het schemacanvas vertrouwd te maken.
 
-U wordt ook aangeraden het [zelfstudie Schema maken](../tutorials/create-schema-ui.md) om een voorbeeldschema tot stand te brengen en een volledige rondleiding van te krijgen [!DNL Schema Editor]De mogelijkheden van de klant in het proces.
+Het wordt ook geadviseerd dat u de [ zelfstudie van de schemaverwezenlijking ](../tutorials/create-schema-ui.md) volgt om een voorbeeldschema tot stand te brengen en een volledige tour van de mogelijkheden van [!DNL Schema Editor] in het proces te krijgen.
 
 ## XDM-bronnen maken en beheren
 
-De [!UICONTROL Schemas] De werkruimte biedt krachtige gereedschappen voor het maken en aanpassen van de XDM-bronnen van uw organisatie. Verwijs naar de volgende documentatie om te leren om elk middeltype in UI tot stand te brengen en uit te geven:
+De werkruimte van [!UICONTROL Schemas] biedt krachtige gereedschappen voor het maken en aanpassen van de XDM-bronnen van uw organisatie. Verwijs naar de volgende documentatie om te leren om elk middeltype in UI tot stand te brengen en uit te geven:
 
 * [Schema&#39;s](./resources/schemas.md)
 * [Klassen](./resources/classes.md)
@@ -36,8 +36,8 @@ De [!UICONTROL Schemas] De werkruimte biedt krachtige gereedschappen voor het ma
 
 ## XDM-velden definiëren
 
-Klassen, veldgroepen en gegevenstypen dragen allemaal velden bij aan een schema. U kunt uit een lijst van standaardgebiedstypes kiezen wanneer het toevoegen van gebieden aan deze middelen, en kunt gespecialiseerde gebieden voor bepaalde gebruiksgevallen ook bepalen. Raadpleeg de handleiding op [XDM-velden definiëren in de gebruikersinterface](./fields/overview.md) voor meer informatie .
+Klassen, veldgroepen en gegevenstypen dragen allemaal velden bij aan een schema. U kunt uit een lijst van standaardgebiedstypes kiezen wanneer het toevoegen van gebieden aan deze middelen, en kunt gespecialiseerde gebieden voor bepaalde gebruiksgevallen ook bepalen. Verwijs naar de gids op [ bepalend XDM gebieden in UI ](./fields/overview.md) voor meer informatie.
 
 ## Volgende stappen
 
-In dit document werd een inleiding gegeven op de [!UICONTROL Schemas] in de gebruikersinterface van het platform. Raadpleeg de documentatie bij dit overzicht voor meer informatie over het beheren van uw schema&#39;s en andere XDM-bronnen.
+Dit document bevat een inleiding tot de [!UICONTROL Schemas] -werkruimte in de gebruikersinterface van het platform. Raadpleeg de documentatie bij dit overzicht voor meer informatie over het beheren van uw schema&#39;s en andere XDM-bronnen.

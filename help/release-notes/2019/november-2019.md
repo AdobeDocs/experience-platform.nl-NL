@@ -1,20 +1,20 @@
 ---
 title: Adobe Experience Platform Release Notes November 2019
-description: De release van november 2019 bevat notities voor Adobe Experience Platform.
+description: In de releaseopmerkingen van november 2019 voor Adobe Experience Platform.
 doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1887'
-ht-degree: 2%
+source-wordcount: '1889'
+ht-degree: 1%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 18 november 2019**
+**Releasedatum: dinsdag 18 november 2019**
 
 Nieuwe functies in Adobe Experience Platform:
 * [[!DNL Real-Time Customer Data Platform]](#rtcdp)
@@ -31,7 +31,7 @@ Updates voor bestaande functies:
 
 De Real-time Customer Data Platform (Real-Time CDP) is gebaseerd op Adobe Experience Platform en helpt bedrijven om bekende en onbekende gegevens samen te brengen om klantprofielen te activeren door middel van intelligente beslissingen gedurende de hele reis van de klant. Real-Time CDP combineert meerdere bedrijfsgegevensbronnen om uniforme profielen in real-time te maken die kunnen worden gebruikt om een-op-een gepersonaliseerde klantenervaring op alle kanalen en apparaten te bieden.
 
-[!DNL Real-Time Customer Data Platform] omvat hulpmiddelen voor gegevensbeheer, identiteitsbeheer, geavanceerde segmentatie en gegevenswetenschap zodat u profielen kunt maken en het publiek kunt definiëren, en rijke inzichten kunt afleiden terwijl u strikte beleidsregels voor gegevensbeheer kunt afdwingen.
+[!DNL Real-Time Customer Data Platform] bevat gereedschappen voor gegevensbeheer, identiteitsbeheer, geavanceerde segmentatie en gegevenswetenschap, zodat u profielen kunt maken en doelgroepen kunt definiëren, en rijke inzichten kunt afleiden en tegelijkertijd een strikt beleid voor gegevensbeheer kunt toepassen.
 
 Adobe maakt verbinding met een groot ecosysteem van partners, om nog maar te zwijgen van de native integratie met Adobe Experience Cloud, zodat u deze doelgroepen naadloos kunt activeren en klanten overal goede ervaringen kunt bieden, van on-site of in-app personalisatie tot e-mail, betaalde media, callcenters, aangesloten apparaten en nog veel meer.
 
@@ -42,17 +42,17 @@ Met Real-Time CDP kunt u:
 * Maak actionable inzichten en schaal publiek met AI en machine leren aangedreven door Adobe Sensei en gebouwd voor marketers.
 * Lever gepersonaliseerde ervaringen in real time over alle kanalen en bestemmingen.
 
-Zie voor meer informatie de [Real-time Customer Data Platform-documentatie](../../rtcdp/overview.md).
+Voor meer informatie, zie de [ documentatie van Real-time Customer Data Platform ](../../rtcdp/overview.md).
 
 **Belangrijkste kenmerken**
 
 | Functie | Beschrijving |
 |---|---|
-| Doelen | Vooraf gebouwde integratie met bestemmingsplatforms die door Adobe worden gesteund [!DNL Real-Time Customer Data Platform] die gegevens op een naadloze manier aan die partners activeren. Zie [Doelen](#destinations) hieronder voor meer informatie . |
-| Metrisch dashboard voor startpagina | De startpagina van Real-time Customer Data Platform (Real-Time CDP) bevat een dashboard voor meetgegevens met informatie over profielen en segmenten. De homepage bevat ook koppelingen naar leermaterialen. Zie de sectie over [Real-time Customer Data Platform-meetgegevens](#real-time-customer-data-platform-metrics) hieronder. |
-| Bronnen | U kunt gegevens van een verscheidenheid van bronnen zoals de Oplossingen van Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw CRM opnemen. Zie de [Bronnen](#sources) hieronder voor meer informatie. |
+| Doelen | Vooraf gebouwde integratie met doelplatforms die worden ondersteund door de [!DNL Real-Time Customer Data Platform] -Adobe die gegevens naadloos voor die partners activeren. Zie [ Doelen ](#destinations) hieronder voor meer informatie. |
+| Metrisch dashboard voor startpagina | De startpagina van Real-time Customer Data Platform (Real-Time CDP) bevat een dashboard voor meetgegevens met informatie over profielen en segmenten. De homepage bevat ook koppelingen naar leermaterialen. Zie de sectie op [ metriek van Real-time Customer Data Platform ](#real-time-customer-data-platform-metrics) hieronder. |
+| Bronnen | U kunt gegevens van een verscheidenheid van bronnen zoals de Oplossingen van de Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw CRM opnemen. Zie de [ Bronnen ](#sources) hieronder sectie om meer te leren. |
 
-**[!DNL Real-Time Customer Data Platform]cijfers**
+**[!DNL Real-Time Customer Data Platform]metrics**
 
 De startpagina van Real-time Customer Data Platform (Real-Time CDP), die een dashboard voor cijfergegevens bevat, wordt weergegeven wanneer u zich aanmeldt bij Real-Time CDP.
 
@@ -60,31 +60,31 @@ De homepage is slechts een van de plaatsen waar metrische kaarten verschijnen. R
 
 Als het systeem geen gegevens bevat wanneer u zich aanmeldt bij Real-Time CDP, wordt het dashboard op de startpagina niet weergegeven. In dit geval biedt de startpagina leermateriaal voor een eerste gebruikerservaring. Terwijl gegevens worden verzameld, wordt het dashboard automatisch bijgewerkt om informatie over die gegevens weer te geven.
 
-Zie voor meer informatie de [Overzicht van Real-time Customer Data Platform-meetgegevens](../../rtcdp/home-page-dashboards.md)
+Meer leren, zie het [ metriek van Real-time Customer Data Platform overzicht ](../../rtcdp/home-page-dashboards.md)
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die door Real-time Customer Data Platform van Adobe worden gesteund die gegevens aan die partners op een naadloze manier activeren. Lees voor meer informatie de [Overzicht van doelen](../../destinations/home.md) artikel.
+[!DNL Destinations] is vooraf gebouwde integratie met bestemmingsplatforms die door Real-time Customer Data Platform van de Adobe worden gesteund die gegevens aan die partners op een naadloze manier activeren. Voor meer informatie, lees het [ overzicht van Doelen ](../../destinations/home.md) artikel.
 
 **Beschikbare bestemmingen**
 
-Met de versie van November, steunt Adobe Real-time Customer Data Platform de volgende bestemmingen:
+Met de versie van November, steunt Real-time Customer Data Platform van de Adobe de volgende bestemmingen:
 
 * Advertising: [!DNL Google]
-* E-mailmarketing: Adobe Campaign [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
+* E-mailmarketing: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
-Zie de [doelcatalogus](../../destinations/catalog/overview.md) voor informatie over elk van de bestemmingen.
+Zie de [ bestemmingscatalogus ](../../destinations/catalog/overview.md) voor informatie over elk van de bestemmingen.
 
 **Bekende beperkingen**
 
 * Het besturingselement voor aangepaste activeringsschema&#39;s in de activeringsstroom (stap Planning) is niet beschikbaar bij de eerste release.
-* Er is momenteel geen manier om een bestemmingsconfiguratie uit te geven of te schrappen. Als u deze beperking wilt omzeilen, kunt u het doel in de rechterbovenhoek van het dialoogvenster [pagina met doelgegevens](../../destinations/ui/destination-details-page.md).
+* Er is momenteel geen manier om een bestemmingsconfiguratie uit te geven of te schrappen. Om rond deze beperking te werken, kunt u de bestemming in de hoogste juiste hoek van de [ pagina van bestemmingsdetails ](../../destinations/ui/destination-details-page.md) toelaten of onbruikbaar maken.
 * Er is momenteel geen validatie voor accountdetails, paden of referenties wanneer verbinding wordt gemaakt met uw doel- of opslagaccount. Controleer of u de juiste referenties invoert en dubbelklik op spelfouten of typefouten.
 * Er zijn geen referentie-verlengingen beschikbaar bij de eerste release. Als een account is verlopen of moet worden vernieuwd, moet u een nieuwe doelverbinding maken en de eerder toegewezen segmenten opnieuw toewijzen.
 
 ## Bronnen {#sources}
 
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Platform] diensten. U kunt gegevens van een verscheidenheid van bronnen zoals de Oplossingen van Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Platform] -services. U kunt gegevens van een verscheidenheid van bronnen zoals de Oplossingen van de Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
 
 [!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om aan uw opslagsystemen en de diensten van CRM voor authentiek te verklaren, tijden voor inname looppas te plaatsen, en gegevensinvoer te beheren.
 
@@ -93,87 +93,87 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 | Functie | Beschrijving |
 | ---------- | ------------ |
 | Broninterface | Nieuwe gebruikersinterface voor het maken, weergeven en beheren van bronverbindingen. |
-| Herziene workflows voor CRM-connectors | Nieuwe intuïtieve UI-workflow voor het maken en beheren van [!DNL Microsoft Dynamics] en [!DNL Salesforce] connectors. |
-| Connectorondersteuning voor op cloud gebaseerde opslagsystemen | Connectors hebben nu toegang tot op de cloud gebaseerde opslagsystemen. Nieuwe bronnen omvatten [!DNL Amazon S3], [!DNL Azure Blob]en FTP-/SFTP-servers. |
+| Herziene workflows voor CRM-connectors | Nieuwe intuïtieve UI-workflow voor het maken en beheren van [!DNL Microsoft Dynamics] - en [!DNL Salesforce] -connectors. |
+| Connectorondersteuning voor op cloud gebaseerde opslagsystemen | Connectors hebben nu toegang tot op de cloud gebaseerde opslagsystemen. Nieuwe bronnen zijn onder andere [!DNL Amazon S3] -, [!DNL Azure Blob] - en FTP-/SFTP-servers. |
 
-**Bekende problemen**
+**Bekende kwesties**
 
-* Bronconnectors voor op cloud gebaseerde opslagsystemen ondersteunen het opnemen van gecomprimeerde bestanden niet.
+* Source-connectors voor opslag in de cloud bieden geen ondersteuning voor het opnemen van gecomprimeerde bestanden.
 
-Voor meer informatie over bronnen raadpleegt u [Overzicht van bronnen](../../sources/home.md).
+Voor meer informatie over bronnen, zie [ Overzicht van Bronnen ](../../sources/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] stelt gegevenswetenschappers in staat om naadloos inzichten van gegevens en inhoud over Adobe toepassingen en derdesystemen te produceren door de Modellen van het Leren van de Machine te bouwen en te exploiteren. [!DNL Data Science Workspace] is nauw geïntegreerd met [!DNL Platform] en maakt de levenscyclus van de end-to-end gegevenswetenschap mogelijk, inclusief de exploratie en voorbereiding van XDM-gegevens, gevolgd door de ontwikkeling en de operationele implementatie van Modellen om automatisch te verrijken [!DNL Real-Time Customer Profile] met Inzichten van het leren van de machine.
+Met Adobe Experience Platform [!DNL Data Science Workspace] kunnen wetenschappers op gegevensgebied naadloos inzichten genereren op basis van gegevens en inhoud in Adobe toepassingen en systemen van derden door Modellen voor machinaal leren te maken en te gebruiken. [!DNL Data Science Workspace] is nauw geïntegreerd met [!DNL Platform] en maakt de levenscyclus van de end-to-end gegevenswetenschap mogelijk, inclusief de exploratie en voorbereiding van XDM-gegevens, gevolgd door de ontwikkeling en de exploitatie van Modellen om [!DNL Real-Time Customer Profile] automatisch te verrijken met Inzichten voor het leren van machines.
 
-**Nieuwe functies**
+**Nieuwe eigenschappen**
 
 | Functie | Beschrijving |
 | -----------| ---------- |
-| Toegang tot gegevens met [!DNL Platform] SDK | De vooraf gebouwde Ontvangers en lanceerlaptops in [!DNL Python] nu gebruiken [!DNL Platform] SDK voor toegang tot gegevens. |
+| Toegang tot gegevens met behulp van [!DNL Platform] SDK | De vooraf gebouwde Ontvangers en lanceerlaptops in [!DNL Python] gebruiken nu [!DNL Platform] SDK voor de toegang tot van gegevens. |
 | Ondersteuning voor sandboxen | Ondersteuning voor aanstaande sandboxfunctionaliteit (momenteel in bèta), waaronder de mogelijkheid om laptops en recept te isoleren in ontwikkelings- of productiesandboxen. Zie het [sandboxoverzicht](../../sandboxes/home.md) voor meer informatie. |
 
-Zie voor meer informatie de [Overzicht van de Data Science Workspace](../../data-science-workspace/home.md).
+Voor meer informatie, zie het [ overzicht van Workspace van de Wetenschap van Gegevens ](../../data-science-workspace/home.md).
 
-## [!DNL Experience Data Model] (XDM) System {#xdm}
+## [!DNL Experience Data Model] (XDM)-systeem {#xdm}
 
-Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), gedreven door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
+Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform] . [!DNL Experience Data Model] (XDM), gedreven door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
 
 XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor om het even welke toepassing om met de diensten op Adobe Experience Platform te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier levert. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
 
-**Nieuwe functies**
+**Nieuwe eigenschappen**
 
 | Functie | Beschrijving |
 | ---------- | ------------ |
 | Meldingsschema | Nieuw schema dat berichtgegevens vertegenwoordigt die tijdens het proces van gegevensopname worden verzonden. |
-| Adobe AdCloud-DSP | Er zijn vijf nieuwe schema&#39;s toegevoegd voor de metagegevens van Adobe Advertising Cloud-platforms (DSP) voor de vraagzijde: Plaatsing, campagne, pakket, adverteerder, account. |
+| AdCloud-DSP Adoben | Er zijn vijf nieuwe schema&#39;s toegevoegd voor de metagegevens van Adobe Advertising Cloud-platforms (DSP) aan de vraagzijde: Plaatsing, Campagne, Pakket, Advertiser, Account. |
 | ExperienceEvent Implementatie - Detailschema, veldgroepen | Nieuwe ExperienceEvent-veldgroepen die een standaardveld toevoegen voor het opslaan van informatie over de software die wordt gebruikt om de gebeurtenis te verzamelen. |
-| [!DNL Profile Privacy] veldgroepen | Nieuwe profielveldgroepen die velden toevoegen voor het accepteren van algemene out- en verkoop/delen-uitschakelsignalen voor [!DNL Real-Time Customer Profile]. |
-| Opmaakbeperkingen voor `xdm:alternateDisplayInfo` | De velden Titel en Beschrijving voor `xdm:alternateDisplayInfo` moeten beide tekenreeksen zijn om validatie door te geven. |
-| Naam wijzigen: XDM [!DNL Individual Profile] | De &quot;titel&quot; van de &quot;XDM&quot; [!DNL Profile]De klasse &quot; is bijgewerkt naar &quot;XDM [!DNL Individual Profile]&quot;. De formele `$id` van de klasse is niet gewijzigd. |
+| [!DNL Profile Privacy] veldgroepen | Nieuwe profielveldgroepen die velden toevoegen voor het accepteren van algemene out- en verkoop-/deelsignalen voor [!DNL Real-Time Customer Profile] . |
+| Opmaakbeperkingen voor `xdm:alternateDisplayInfo` | De velden Titel en Beschrijving voor `xdm:alternateDisplayInfo` moeten beide tekenreeksen zijn om de validatie door te geven. |
+| Naam wijzigen: XDM [!DNL Individual Profile] | De titel van de klasse &quot;XDM [!DNL Profile]&quot; is bijgewerkt naar &quot;XDM [!DNL Individual Profile]&quot;. De formele `$id` van de klasse is niet gewijzigd. |
 
-**Bekende problemen**
+**Bekende kwesties**
 
 * Geen.
 
-Meer informatie over het werken met XDM [!DNL Schema Registry] API en [!DNL Schema Editor] gebruikersinterface, lees de [XDM System-documentatie](../../xdm/home.md).
+Om meer over het werken met XDM te leren gebruikend [!DNL Schema Registry] API en [!DNL Schema Editor] gebruikersinterface, te lezen gelieve de [ documentatie van het Systeem XDM ](../../xdm/home.md).
 
 ## [!DNL Real-Time Customer Profile] {#profile}
 
-Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met [!DNL Real-Time Customer Profile], kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. [!DNL Profile] staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
+Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met [!DNL Real-Time Customer Profile] ziet u een holistische weergave van elke individuele klant die gegevens van meerdere kanalen combineert, waaronder online, offline, CRM en gegevens van derden. Met [!DNL Profile] kunt u uw verschillende klantgegevens consolideren in een uniforme weergave die een actionabel, tijdstempelaccount voor elke klantinteractie biedt.
 
 | Functie | Beschrijving |
 | -----------| ---------- |
-| Verbeteringen voor [!DNL Profile] opzoeken | Gebruikers kunnen nu profielen opzoeken met behulp van referentiebeschrijvingen en verwante entiteiten. |
-| Gegevens voor een bepaalde gegevensset opschonen | Gebruikers kunnen nu gegevens voor een bepaalde gegevensset of batch verwijderen met behulp van de [!DNL Profile] System Jobs API. |
-| Rand [!DNL Profile] queryverbeteringen | Toepassingen kunnen nu zoeken naar Edge [!DNL Profile] door een van de identiteiten van een bepaald profiel. |
+| Verbeteringen voor [!DNL Profile] lookup | Gebruikers kunnen nu profielen opzoeken met behulp van referentiebeschrijvingen en verwante entiteiten. |
+| Gegevens voor een bepaalde gegevensset opschonen | Gebruikers kunnen nu gegevens voor een bepaalde gegevensset of batch verwijderen met de API [!DNL Profile] System Jobs. |
+| Verbeteringen in Edge [!DNL Profile] -query | Toepassingen kunnen nu een query uitvoeren op Edge [!DNL Profile] door een van de identiteiten van een bepaald profiel. |
 | Samenvoegbeleid per projectie configureren | Toepassingen kunnen nu samenvoegingsbeleid per projectie configureren om een weergave van de gegevens te genereren zoals deze wordt bepaald door een specifiek samenvoegingsbeleid. |
 | Berekende kenmerken | Berekende kenmerken berekenen automatisch de waarde van velden op basis van andere waarden, berekeningen en expressies. Op profielniveau worden de berekende kenmerken gebruikt om waarden zoals &quot;totale aankoop&quot;, &quot;levenslange waarde&quot; of &quot;treinstatus&quot; samen te voegen op basis van een binnenkomende gebeurtenis, een binnenkomende gebeurtenis en profielgegevens of een binnenkomende gebeurtenis, profielgegevens en historische gebeurtenissen. |
 
 **Bugfixes**
 
-* Vereenvoudigde lijst met beschikbare strategieën voor het stikken van id&#39;s in de workflow voor het maken van beleid voor samenvoegen.
+* Vereenvoudigde lijst met beschikbare strategieën voor id-stitching in de workflow voor het maken van beleid voor samenvoegen.
 
-**Bekende problemen**
+**Bekende kwesties**
 
 * Geen.
 
-Voor meer informatie over [!DNL Real-Time Customer Profile], met inbegrip van zelfstudies en aanbevolen procedures voor het werken met [!DNL Profile] gegevens, lees de [Real-Time overzicht van klantprofiel](../../profile/home.md).
+Voor meer informatie over [!DNL Real-Time Customer Profile], met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, te lezen gelieve het [ Real-Time Overzicht van het Profiel van de Klant ](../../profile/home.md).
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw te produceren [!DNL Real-Time Customer Profile] gegevens. Deze segmenten worden centraal geconfigureerd en onderhouden op [!DNL Platform], zodat ze gemakkelijk toegankelijk zijn voor elke Adobe-toepassing.
+Adobe Experience Platform [!DNL Segmentation Service] biedt een gebruikersinterface en RESTful-API waarmee u segmenten kunt samenstellen en doelgroepen kunt genereren op basis van uw [!DNL Real-Time Customer Profile] -gegevens. Deze segmenten worden centraal geconfigureerd en onderhouden op [!DNL Platform], zodat ze gemakkelijk toegankelijk zijn voor elke Adobe.
 
-[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
+[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
 
 | Functie | Beschrijving |
 | -----------| ---------- |
-| Geplande segmentatie | De gebruikers kunnen geplande segmentevaluatie voor alle segmenten via UI en API nu toelaten. Zodra toegelaten, zullen alle segmenten eenmaal per dag worden geëvalueerd. Dit heeft geen invloed op de segmenteringsmogelijkheden op aanvraag die nog steeds werken zoals voorheen.<br/><br/>Opmerking: De geplande segmentatiefunctie kan niet worden gebruikt in sandboxen met meer dan vijf samenvoegbeleidsregels voor [!DNL XDM Individual Profile]. |
-| Streaming segmentering | De steun voor ononderbroken evaluatie van segmenten (het stromen segmentatie) laat de meeste segmentregels toe om worden geëvalueerd aangezien de gegevens overgaan in [!DNL Platform]. Deze eigenschap betekent dat het segmentlidmaatschap bijgewerkt zal zijn zonder de behoefte om geplande segmentatietaken in werking te stellen. Sommige uitzonderingen zijn van toepassing, zoals segmenten die relaties met meerdere entiteiten gebruiken of met verrijkte nuttige lasten. |
-| Segmenten als bouwstenen | Wanneer het creëren van segmenten gebruikend de Bouwer UI van het Segment, kunnen de gebruikers eerder-bepaalde segmenten als bouwstenen voor extra segmenten nu gebruiken. <ul><li>Huidig publiekslidmaatschap van referentie: updates wanneer mensen zich binnen en buiten het publiek bewegen.</li><li>Logica kopiëren: Neem de geselecteerde segmentdefinitie en dupliceer het in het nieuwe segment.</li></ul> |
+| Geplande segmentatie | De gebruikers kunnen geplande segmentevaluatie voor alle segmenten via UI en API nu toelaten. Zodra toegelaten, zullen alle segmenten eenmaal per dag worden geëvalueerd. Dit heeft geen invloed op de segmenteringsmogelijkheden op aanvraag die nog steeds werken zoals voorheen.<br/><br/> Nota: De geplande segmenteringseigenschap kan niet in zandbakken met meer dan vijf fusiebeleid voor [!DNL XDM Individual Profile] worden gebruikt. |
+| Streaming segmentering | Dankzij ondersteuning voor doorlopende evaluatie van segmenten (streaming segmentation) kunnen de meeste segmentregels worden geëvalueerd terwijl de gegevens worden doorgegeven aan [!DNL Platform] . Deze eigenschap betekent dat het segmentlidmaatschap bijgewerkt zal zijn zonder de behoefte om geplande segmentatietaken in werking te stellen. Sommige uitzonderingen zijn van toepassing, zoals segmenten die relaties met meerdere entiteiten gebruiken of met verrijkte nuttige lasten. |
+| Segmenten als bouwstenen | Wanneer het creëren van segmenten gebruikend de Bouwer UI van het Segment, kunnen de gebruikers eerder-bepaalde segmenten als bouwstenen voor extra segmenten nu gebruiken. <ul><li>Verwijzing naar huidige publiekslidmaatschap: updates wanneer mensen zich binnen en buiten het publiek verplaatsen.</li><li>Logica kopiëren: neem de geselecteerde segmentdefinitie en dupliceer deze in het nieuwe segment.</li></ul> |
 | Segmentlidmaatschap weergeven op naamruimte ID | Segmentlidmaatschap kan nu worden weergegeven door naamruimte ID (e-mail, ECID en totale telling). |
 | RBAC-ondersteuning | De Bouwer van het segment verleent nu steun voor basisop rol-gebaseerde toegangscontroles en toestemmingen. |
-| Verbeterde ondersteuning voor het delen van externe doelgroepen tussen [!DNL Platform] en Adobe-oplossingen | Gebruikers kunnen nu externe (niet-[!DNL Experience Platform]) metagegevens voor het publiek in scenario&#39;s waarin het aantal doelgroepen groot of niet a priori bekend is. Deze release omvat toegang tot [!DNL Audience Manager] meta-gegevens voor klanten die de oplossingsschakelaar hebben geleverd. Deze publieksmeta-gegevens kunnen binnen de Bouwer van het Segment worden gebruikt om nieuwe [!DNL Experience Platform] segmenten. <br/><br/> Daarnaast worden segmenten gemaakt in [!DNL Experience Platform] is nu beschikbaar voor gebruik in geïntegreerde Adobe-oplossingen, waaronder [!DNL Audience Manager], [!DNL Target], en [!DNL Ad Cloud]. |
+| Verbeterde ondersteuning voor het delen van externe doelgroepen tussen [!DNL Platform] en Adobe-oplossingen | Gebruikers kunnen nu externe (niet- [!DNL Experience Platform]) publieksmetagegevens opnemen in scenario&#39;s waarbij het aantal doelgroepen a priori groot of onbekend is. Deze release omvat toegang tot [!DNL Audience Manager] -metagegevens voor klanten die de aansluiting voor de oplossing hebben ingericht. Deze publieksmetagegevens kunnen in Segment Builder worden gebruikt om nieuwe [!DNL Experience Platform] -segmenten te maken. <br/><br/> Bovendien zijn in [!DNL Experience Platform] gemaakte segmenten nu beschikbaar voor gebruik in geïntegreerde Adobe-oplossingen, waaronder [!DNL Audience Manager] , [!DNL Target] en [!DNL Ad Cloud] . |
 
 **Bugfixes**
 
@@ -183,8 +183,8 @@ Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersin
 * Probleem verholpen waarbij meerdere kopieën van dezelfde XDM-map werden weergegeven.
 * Het bericht wordt nu geproduceerd om een gebruiker te informeren als de segmentramingen voor het geselecteerde fusiebeleid niet beschikbaar zijn.
 
-**Bekende problemen**
+**Bekende kwesties**
 
 * Geen.
 
-Meer informatie over [!DNL Segmentation Service], lees de [Overzicht van segmentatieservice](../../segmentation/home.md).
+Meer over [!DNL Segmentation Service] leren, te lezen gelieve het [ overzicht van de Dienst van de Segmentatie ](../../segmentation/home.md).

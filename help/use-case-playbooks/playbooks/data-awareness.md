@@ -19,7 +19,7 @@ In bepaalde gevallen hebt u echter al uw eigen schema&#39;s, velden en veldgroep
 
 ## Vereisten {#prerequisites}
 
-Blader voordat u deze zelfstudie leest naar de [beschikbare use case playbook-sjablonen](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) en [een instantie maken](/help/use-case-playbooks/playbooks/create-share-reuse.md) van een voorkeursboek.
+Alvorens dit leerprogramma te lezen, doorblader de [ beschikbare malplaatjes van het gebruiksgeval playbook ](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) en [ creeer een geval ](/help/use-case-playbooks/playbooks/create-share-reuse.md) van aangewezen playbook.
 
 Wanneer u een instantie maakt, genereert u een set elementen, zoals ritten, segmenten, schema&#39;s en berichten in de inspirerende sandbox. Lees verder voor meer informatie over het kopiëren van deze elementen naar andere sandboxen.
 
@@ -29,57 +29,57 @@ Wanneer u een instantie maakt, genereert u een set elementen, zoals ritten, segm
 >
 > U kunt pakketten alleen importeren in andere ontwikkelingssandboxen. Wanneer u alle benodigde wijzigingen of updates hebt aangebracht, kunt u de elementen of pakketten uit deze ontwikkelingssandboxen in productie importeren. U kunt niet rechtstreeks van de zandbakken van de Playbooks van het Gebruik aan productie invoeren.
 
-1. Als u objecten van de inspirerende sandbox wilt importeren in een andere sandbox, bladert u naar een gewenste instantie van een afspeelboek met een use-case en selecteert u **[!UICONTROL Publish to a different sandbox]** om de artefacten als pakket uit te voeren.
+1. Als u objecten van de inspirerende sandbox wilt importeren in een andere sandbox, bladert u naar een gewenste instantie van een afspeelboek met een gebruiksscenario en selecteert u **[!UICONTROL Publish to a different sandbox]** om de artefacten als een pakket te exporteren.
 
-   ![GIF dat de verschillende instanties van het gebruiksgeval toont](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
+   ![ GIF die de verschillende instanties van het gebruiksgeval tonen ](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
 
-2. Wanneer u de **[!UICONTROL Publish to a different sandbox]** wordt een modaal weergegeven. Vul de naam en de optionele beschrijving in en selecteer **[!UICONTROL Create]**. Deze stap bundelt de gegenereerde elementen in een pakket dat kan worden geïmporteerd in een andere sandbox.
+2. Nadat u de knop **[!UICONTROL Publish to a different sandbox]** hebt geselecteerd, wordt een modaal item weergegeven. Vul de naam en de optionele beschrijving in en selecteer **[!UICONTROL Create]** . Deze stap bundelt de gegenereerde elementen in een pakket dat kan worden geïmporteerd in een andere sandbox.
 
-   ![Een modus voor het maken van een pakket](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
+   ![ modal A voor het creëren van een pakket ](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 
-3. Ga naar de **Sandboxen** pagina in de linkerzijnavigatie en selecteer de **Pakketten** , zoekt u het pakket en publiceert u het. Voer de stappen in het dialoogvenster [sandbox, gereedschap](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) document.
+3. Navigeer aan de **zandbakken** pagina in de linkerzijnavigatie en selecteer het **lusje van Pakketten**, vind uw pakket, en publiceer het. Om een pakket te publiceren dat in ontwerpstaat is, volg de stappen in het [ zandbak tooling ](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) document.
 
-   ![Pakket maken in concept of niet-gepubliceerde status](/help/use-case-playbooks/assets/playbooks/data-awareness/draft-mode.png)
+   ![ Pakket in ontwerp of unpublished staat ](/help/use-case-playbooks/assets/playbooks/data-awareness/draft-mode.png)
 
-   ![Het pakket publiceren](/help/use-case-playbooks/assets/playbooks/data-awareness/publish-draft.png)
+   ![ het Publiceren van het pakket ](/help/use-case-playbooks/assets/playbooks/data-awareness/publish-draft.png)
 
-4. Nadat de publicatie is gelukt, kunt u op de pagina met de pakketten bladeren. **+** ingeschakeld naast de naam.
+4. Nadat publiceren slaagt, op de pakketdoorbladeren pagina zou u **moeten zien +** knoop die naast de naam wordt toegelaten.
 
-   ![Het tabblad Pakketten in de pagina Sandboxen](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
+   ![ lusje van Pakketten in de pagina Sandboxes ](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
    >[!NOTE]
    >
    > Het pakket kan niet worden geïmporteerd terwijl het zich nog in de conceptmodus bevindt. Open daarom de detailpagina van het pakket en publiceer het pakket.
 
-5. Selecteer de **+** de workflow beheren en starten om de elementen die worden gegenereerd door de afspeelmap met het gebruiksscenario te importeren in de **[!UICONTROL Target sandbox]**. Selecteer een doelsandbox en bevestig de pakketnaam die u wilt importeren met de vervolgkeuzelijst. Voeg de taakdetails zoals taaknaam en taakbeschrijving toe voordat u verdergaat met de volgende stap.
+5. Selecteer **+** controle en begin het werkschema om de activa in te voeren die door het gebruikscasplaybook in **[!UICONTROL Target sandbox]** worden geproduceerd. Selecteer een doelsandbox en bevestig de pakketnaam die u wilt importeren met de vervolgkeuzelijst. Voeg de taakdetails zoals taaknaam en taakbeschrijving toe voordat u verdergaat met de volgende stap.
 
-   ![Start de importworkflow, selecteer doel, bevestig het pakket en voeg taakdetails toe.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
+   ![ begin het invoerwerkschema, uitgezochte doel, bevestig pakket, voeg baandetails toe.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
 
-6. In de **[!UICONTROL View dependencies]** stap, kunt u schema&#39;s in kaart brengen en andere activa van de inspirerende zandbak kopiëren in de doelzandbak. De **[!UICONTROL Finish]** is uitgeschakeld totdat u elk schema toewijst.
+6. In de stap **[!UICONTROL View dependencies]** kunt u schema&#39;s toewijzen en andere elementen uit de inspirerende sandbox kopiëren naar de doelsandbox. De knop **[!UICONTROL Finish]** wordt uitgeschakeld totdat u elk schema toewijst.
 
-   ![De schema&#39;s van de kaart in de &quot;Gedeelten van de Mening&quot;stap, toelatend de knoop van de Afwerking.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-view-dependencies.png)
+   ![ de schema&#39;s van de Kaart in de &quot;gebiedsdelen van de Mening&quot;stap, toelatend de knoop van de Afwerking.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-view-dependencies.png)
 
 ### Kaartschema&#39;s {#map-schemas}
 
-1. Wijs het eerste schema toe. Het dialoogvenster Schema-toewijzing geeft een vervolgkeuzelijst weer om het doelschema te selecteren. Als het bronschema een profielschema is, dan zijn er geen andere opties van het doelschema naast [individueel vakprofielschema](/help/xdm/classes/individual-profile.md). U kunt automatisch gegenereerde toewijzingsaanbevelingen tussen Brongegevens en Doelvelden zien wanneer de pagina voor het eerst wordt weergegeven. U kunt de toewijzingen bewerken door het doelveld te selecteren en vervolgens een nieuw veld te selecteren. Als u de voorgestelde toewijzingen wijzigt, gebruikt u de opdracht **Valideren** om de nieuwe toewijzingen te valideren en eventuele fouten weer te geven die aan de nieuwe toewijzingen kunnen worden gekoppeld. Selecteren **Opslaan** zodra de toewijzing is voltooid.
+1. Wijs het eerste schema toe. Het dialoogvenster Schema-toewijzing geeft een vervolgkeuzelijst weer om het doelschema te selecteren. Als het bronschema een profielschema is, dan zijn er geen andere opties van het doelschema naast het [ individuele schema van het verenigingsprofiel ](/help/xdm/classes/individual-profile.md). Wanneer de pagina voor het eerst wordt weergegeven, ziet u automatisch gegenereerde toewijzingsaanbevelingen tussen Source-gegevens en doelvelden. U kunt de toewijzingen bewerken door het doelveld te selecteren en vervolgens een nieuw veld te selecteren. Als u de voorgestelde afbeeldingen wijzigt, gebruik **bevestigen** knoop om de nieuwe afbeeldingen te bevestigen en om het even welke fouten te tonen die met de nieuwe afbeeldingen kunnen worden verbonden. Selecteer **sparen** zodra de afbeelding volledig is.
 
-   ![Dialoogvenster voor schematoewijzing met een vervolgkeuzelijst om een doelschema te selecteren.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
+   ![ de toewijzingsdialoog van het Schema met een dropdown om een doelschema te selecteren.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
 
-2. Wijs alle velden in de schema&#39;s verder toe. Als het schema een [gebeurtenisschema](/help/xdm/classes/experienceevent.md)In dit dialoogvenster wordt een vervolgkeuzelijst weergegeven waarin u alle gebeurtenisschema&#39;s in de doelsandbox kunt weergeven.
+2. Wijs alle velden in de schema&#39;s verder toe. Als het schema een [ gebeurtenisschema ](/help/xdm/classes/experienceevent.md) is, toont de dialoog een dropdown waar u alle gebeurtenisschema&#39;s in de doelzandbak kunt bekijken.
 
-   ![Doelschema selecteren in vervolgkeuzelijst](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-event-schema.png)
+   ![ selecteer een doelschema van dropdown ](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-event-schema.png)
 
-3. Selecteer een schema van beschikbare schema&#39;s in **Doelsandbox**.
+3. Selecteer een schema van beschikbare schema&#39;s in de **zandbak van het Doel**.
 
-   ![Selecteer een schema](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-available-schemas.png)
+   ![ selecteer een schema ](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-available-schemas.png)
 
-4. De toewijzing voltooien en selecteren **Opslaan**.
+4. Voltooi de afbeelding en selecteer **sparen**.
 
-   ![Toewijzing opslaan](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-modal.png)
+   ![ sparen afbeelding ](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-modal.png)
 
-5. Als u alle velden in de schema&#39;s hebt toegewezen, selecteert u **Voltooien** om de importworkflow te voltooien.
+5. Zodra u afbeelding alle gebieden in de schema&#39;s hebt voltooid, uitgezochte **Afwerking** om het de invoerwerkschema te voltooien.
 
-   ![De stroom voltooien](/help/use-case-playbooks/assets/playbooks/data-awareness/complete-flow.png)
+   ![ beëindigt de stroom ](/help/use-case-playbooks/assets/playbooks/data-awareness/complete-flow.png)
 
    >[!NOTE]
    >
@@ -87,14 +87,14 @@ Wanneer u een instantie maakt, genereert u een set elementen, zoals ritten, segm
 
 ### Importstatus {#import-status}
 
-1. U wordt automatisch omgeleid naar de [**Invoer**](/help/sandboxes/ui/sandbox-tooling.md#view-import-details) pagina waarop u de voortgang van het importeren kunt zien.
+1. U wordt automatisch opnieuw gericht aan de [**invoer**](/help/sandboxes/ui/sandbox-tooling.md#view-import-details) pagina waar u de vooruitgang van uw invoer kunt zien.
 
-   ![Pagina met voortgang bij importeren](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
+   ![ Pagina die invoervooruitgang toont ](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
 
 2. Tijdens het importeren van het pakket worden de elementen van het pakket gemaakt in de doelsandbox. Zodra deze bewerking is voltooid, verwijzen ze naar de velden die u tijdens het importeren hebt toegewezen. Het proces is nu voltooid en de elementen van de inspirerende sandbox zijn nu ook aanwezig in de doelsandbox die u kunt testen.
 
-   ![Gegenereerde elementen in de doelsandbox](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
+   ![ Gegenereerde activa in de doelzandbak ](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
 ## Volgende stappen
 
-Nadat u deze handleiding hebt gelezen, hebt u nu een beter inzicht in hoe u de afspeelboeken van hoofdletters en kleine letters samen met [sandbox, gereedschap](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) om uitvoerbare reizen tot stand te brengen die uw schema&#39;s van verwijzingen voorzien. Meer informatie over de algemene [Real-Time CDP-gebruikskwesties](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
+Na het lezen van deze gids, hebt u nu een beter inzicht in hoe te gebruik caseplaybooks samen met [ zandbak tooling ](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) om uitvoerbare reizen tot stand te brengen die uw schema&#39;s van verwijzingen voorzien. Leer meer over de gemeenschappelijke [ het gebruiksgevallen van Real-Time CDP ](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).

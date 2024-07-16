@@ -13,41 +13,41 @@ ht-degree: 0%
 
 Naarmate uw organisatie zich ontwikkelt om Adobe Real-Time CDP te gebruiken, verkent u deze overwegingen om uw gegevens voor te bereiden en zich bewust te worden van de kritieke verschillen tussen de twee technologieën. Dit artikel is gericht op een beoefenaar van een beroep.
 
-![Audience Manager naar Real-Time CDP-evolutiediagram](/help/rtcdp/assets/aam-to-rtcdp-evolution.png)
+![ Audience Manager aan Real-Time CDP evolutiediagram ](/help/rtcdp/assets/aam-to-rtcdp-evolution.png)
 
 ## 1. Overweeg gegevensarchitectuur binnen Audience Manager
 
-Als je kijkt naar de evolutie van Audience Manager naar Real-Time CDP, is het nu een cruciaal moment om je [Audience Managers](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html) en bepaalt de [signalen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html), [kenmerken](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html), en [regels](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section) zijn die de segmenten vormen.
+Aangezien u de evolutie van Audience Manager aan Real-Time CDP overweegt, is nu een kritieke tijd om uw [ segmenten van de Audience Manager ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html) te analyseren en te bepalen wat de [ signalen ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html), [ trekken ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html), en [ regels ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section) zijn die omhoog die segmenten maken.
 
 Overweeg bovendien de gegevensbronnen die u momenteel in de Audience Manager gebruikt.
 
 Adobe raadt u aan de segmenten als volgt te categoriseren:
 
-* Segmenten die via de [[!UICONTROL Audience Manager Source Connector]](/help/sources/connectors/adobe-applications/audience-manager.md), aangezien zij geen gegevensgebiedsdelen, geen bestemming of activeringsuitdagingen hebben, en hun segmenteringsregels kunnen tot stand worden gebracht door Real-Time CDP [segmentbuilder](/help/segmentation/ui/segment-builder.md) later.
+* De segmenten die via [[!UICONTROL Audience Manager Source Connector]](/help/sources/connectors/adobe-applications/audience-manager.md) naar Experience Platform kunnen worden verzonden, aangezien zij geen gegevensgebiedsdelen, geen bestemming of activeringsuitdagingen hebben, en hun segmenteringsregels kunnen door Real-Time CDP [ segmentbouwer ](/help/segmentation/ui/segment-builder.md) later worden gecreeerd.
 * Segmenten met regels die kunnen worden ondersteund, maar die gegevens bevatten die niet beschikbaar zijn in Real-Time CDP.
 * Segmenten die niet in Real-Time CDP kunnen worden gemaakt en geen functionaliteit hebben.
 
 >[!TIP]
 >
->Adobe Real-Time CDP-aanbiedingen [drie soorten segmentbeoordeling](/help/segmentation/home.md#evaluate-segments): [!UICONTROL Batch], [!UICONTROL Streaming], en [!UICONTROL Edge]. Klanten die realtime segmenten in de Audience Manager gebruiken, kunnen worden beperkt door de huidige beperking van 500 streaming segmenten in Real-Time CDP. Meer informatie over [segmentatiegeleidingen](/help/profile/guardrails.md).
+>Adobe Real-Time CDP biedt [ drie soorten segmentevaluatie ](/help/segmentation/home.md#evaluate-segments) aan: [!UICONTROL Batch], [!UICONTROL Streaming], en [!UICONTROL Edge]. Klanten die realtime segmenten in de Audience Manager gebruiken, kunnen worden beperkt door de huidige beperking van 500 streaming segmenten in Real-Time CDP. Lees meer over [ segmentatiegeleidingen ](/help/profile/guardrails.md).
 
-## 2. Welke segmenten zijn essentieel om door te sturen via [!UICONTROL Audience Manager Source Connector]?
+## 2. Welke segmenten zijn van essentieel belang om door te sturen via [!UICONTROL Audience Manager Source Connector]?
 
-Gebaseerd op hun evaluatiecriteria, kunnen de segmenten die geen gegevensgebiedsdelen, geen bestemming of activeringsuitdagingen hebben, en hun segmenteringsregels door de gegevensinzameling van Real-Time CDP zoals worden gecreeerd [Adobe Experience Platform Web SDK](/help/web-sdk/faq.md) op een recentere datum zou door de Bron van de Audience Manager Schakelaar moeten worden verzonden.
+Gebaseerd op hun evaluatiecriteria, zouden de segmenten die geen gegevensgebiedsdelen, geen bestemming of activeringsuitdagingen hebben, en hun segmentatieregels door de gegevensinzameling van Real-Time CDP zoals ](/help/web-sdk/faq.md) kunnen worden gecreeerd van het Web SDK van 0} Adobe Experience Platform op een recentere datum door de Schakelaar van Source van de Audience Manager zouden moeten worden verzonden.[
 
-## 3. Gebruikt u de [!UICONTROL Experience Cloud Audiences] bestemming om gegevens terug naar Audience Manager te brengen?
+## 3. Gebruikt u het doel [!UICONTROL Experience Cloud Audiences] om gegevens terug te brengen naar de Audience Manager?
 
-Segmenten die regels hebben die in Real-Time CDP kunnen worden ondersteund, maar die activeringsafhankelijkheden hebben voor Audience Manager, kunnen via de [Soorten publiek Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) doelkaart.
+De segmenten die regels hebben die in Real-Time CDP kunnen worden gesteund maar activeringsgebiedsdelen aan Audience Manager kunnen worden verzonden naar Audience Manager via de ](/help/destinations/catalog/adobe/experience-cloud-audiences.md) bestemmingskaart van het publiek 0} van het Experience Cloud {.[
 
 ## 4. Welke bestemmingen hebt u vandaag in Audience Manager die u kunt beginnen naar Real-Time CDP te verhuizen?
 
-Adobe raadt sterk aan dat segmenten die in Audience Manager worden geactiveerd tot [op mensen gebaseerde bestemmingen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl) via de [!UICONTROL Audience Manager Source Connector], activeren via Real-Time CDP.
+De Adobe adviseert sterk dat de segmenten die in Audience Manager aan [ op mensen-gebaseerde bestemmingen ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl) worden geactiveerd aan Real-Time CDP via [!UICONTROL Audience Manager Source Connector], dan door Real-Time CDP te activeren.
 
-Alle op mensen gebaseerde bestemmingen beschikbaar in Audience Manager - [Facebook](/help/destinations/catalog/social/facebook.md), [[!UICONTROL Google Customer Match]](/help/destinations/catalog/advertising/google-customer-match.md), [LinkedIn](/help/destinations/catalog/social/linkedin.md) - ook beschikbaar zijn in Real-Time CDP.
+Alle op mensen-gebaseerde bestemmingen beschikbaar in Audience Manager - [ Facebook ](/help/destinations/catalog/social/facebook.md), [[!UICONTROL Google Customer Match]](/help/destinations/catalog/advertising/google-customer-match.md), [ LinkedIn ](/help/destinations/catalog/social/linkedin.md) - zijn ook beschikbaar in Real-Time CDP.
 
-Extra eersteklas gegevens en media strategiepartners zoals [Pinterest](/help/destinations/catalog/advertising/pinterest.md), [Snapchat](/help/destinations/catalog/advertising/snap-inc.md), [TikTok](/help/destinations/catalog/social/tiktok.md), [Amazon Adds](/help/destinations/catalog/advertising/amazon-ads.md), en [[!UICONTROL The Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md) zijn beschikbaar.
+De extra gegevens van de eerste partij en media strategiepartners zoals [ Pinterest ](/help/destinations/catalog/advertising/pinterest.md), [ Snapchat ](/help/destinations/catalog/advertising/snap-inc.md), [ TikTok ](/help/destinations/catalog/social/tiktok.md), [ Advertentie van Amazon ](/help/destinations/catalog/advertising/amazon-ads.md), en [[!UICONTROL The Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md) zijn beschikbaar.
 
-Real-Time CDP biedt momenteel ondersteuning voor meer dan 60 native bestemmingen in de [catalogus](/help/destinations/catalog/overview.md), waarvan er meer dan 20 reclame- of sociale bestemmingen zijn die ondersteuning bieden voor het afstemmen van de eerste doelgroep.
+Real-Time CDP steunt momenteel meer dan 60 bestemmingen binnen in de [ catalogus ](/help/destinations/catalog/overview.md), meer dan 20 waarvan reclame of sociale bestemmingen zijn die de aanpassing van het eerste partijpubliek steunen.
 
 ## Volgende stappen
 

@@ -5,52 +5,52 @@ badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Amazon Kinesis] bronverbinding met behulp van de Flow Service API
+# Een [!DNL Amazon Kinesis] bronverbinding maken met de Flow Service API
 
 >[!IMPORTANT]
 >
->De [!DNL Amazon Kinesis] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+>De [!DNL Amazon Kinesis] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
-Dit leerprogramma begeleidt u door de stappen om te verbinden [!DNL Amazon Kinesis] (hierna &quot;[!DNL Kinesis]&quot;) naar Experience Platform, met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om [!DNL Amazon Kinesis] (verder als &quot;[!DNL Kinesis]&quot;worden bedoeld) met Experience Platform te verbinden, gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken [!DNL Kinesis] naar Platform met de [!DNL Flow Service] API.
+In de volgende secties vindt u aanvullende informatie die u nodig hebt om [!DNL Kinesis] met de API van [!DNL Flow Service] te kunnen verbinden met Platform.
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] om verbinding te maken met uw [!DNL Amazon Kinesis] account, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+[!DNL Flow Service] kan alleen verbinding maken met uw [!DNL Amazon Kinesis] -account als u waarden opgeeft voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `accessKeyId` | De toegangs belangrijkste identiteitskaart is één helft van het sleutelpaar dat wordt gebruikt om uw voor authentiek te verklaren [!DNL Kinesis] account aan Platform. |
-| `secretKey` | De geheime toegangstoets is de andere helft van het sleutelpaar van de toegang dat wordt gebruikt om uw voor authentiek te verklaren [!DNL Kinesis] account aan Platform. |
-| `region` | Het gebied voor uw [!DNL Kinesis] account. Zie de handleiding op [het toevoegen van IP adressen aan uw lijst van gewenste personen](../../../../ip-address-allow-list.md) voor meer informatie over de regio &#39; s . |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De [!DNL Kinesis] Verbindingsspecificatie-id is: `86043421-563b-46ec-8e6c-e23184711bf6`. |
+| `accessKeyId` | De toegangstoets-id is de helft van het sleutelpaar voor toegang dat wordt gebruikt om uw [!DNL Kinesis] -account te verifiëren bij Platform. |
+| `secretKey` | De geheime toegangstoets is de andere helft van het sleutelpaar voor toegang dat wordt gebruikt om uw [!DNL Kinesis] account te verifiëren bij Platform. |
+| `region` | Het gebied voor uw [!DNL Kinesis] account. Zie de gids op [ toevoegend IP adressen aan uw lijst van gewenste personen ](../../../../ip-address-allow-list.md) voor meer informatie over gebieden. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De [!DNL Kinesis] -id van de verbindingsspecificatie is: `86043421-563b-46ec-8e6c-e23184711bf6` . |
 
-Voor meer informatie over [!DNL Kinesis] toegang tot sleutels en hoe te om hen te produceren, verwijs dit [[!DNL AWS] gids over het beheren van toegangstoetsen voor gebruikers IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+Voor meer informatie over [!DNL Kinesis] toegangstoetsen en hoe te om hen te produceren, verwijs naar deze [[!DNL AWS]  gids over het beheren van toegangstoetsen voor gebruikers IAM ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
-De eerste stap bij het maken van een bronverbinding is het verifiëren van uw [!DNL Kinesis] bron en genereer een basis-verbindings-id. Met een basis-verbindings-id kunt u bestanden verkennen en door de bestanden navigeren vanuit de bron en specifieke items identificeren die u wilt invoeren, zoals informatie over de gegevenstypen en indelingen.
+De eerste stap bij het maken van een bronverbinding is het verifiëren van de [!DNL Kinesis] -bron en het genereren van een basis-verbindings-id. Met een basis-verbindings-id kunt u bestanden verkennen en door de bestanden navigeren vanuit de bron en specifieke items identificeren die u wilt invoeren, zoals informatie over de gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL Kinesis] verificatiereferenties als onderdeel van de aanvraagparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL Kinesis] -verificatiegegevens op als onderdeel van de aanvraagparameters.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /connections
@@ -87,14 +87,14 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | De toegangstoets-id voor uw [!DNL Kinesis] account. |
-| `auth.params.secretKey` | De geheime toegangstoets voor uw [!DNL Kinesis] account. |
+| `auth.params.accessKeyId` | De toegangstoets-id voor uw [!DNL Kinesis] -account. |
+| `auth.params.secretKey` | De geheime toegangssleutel voor uw [!DNL Kinesis] account. |
 | `auth.params.region` | Het gebied voor uw [!DNL Kinesis] account. |
-| `connectionSpec.id` | De [!DNL Kinesis] Verbindingsspecificatie-id: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `connectionSpec.id` | De [!DNL Kinesis] connection specification ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist in de volgende stap om een bronverbinding te maken.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een bronverbinding te maken.
 
 ```json
 {
@@ -107,9 +107,9 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 
 Een bronverbinding maakt en beheert de verbinding met de externe bron vanwaar gegevens worden ingevoerd. Een bronverbinding bestaat uit informatie zoals gegevensbron, gegevensformaat, en bron identiteitskaart nodig om een gegevensstroom tot stand te brengen. Een bronverbindingsinstantie is specifiek voor een huurder en organisatie.
 
-Om een bronverbinding tot stand te brengen, doe een verzoek van de POST aan `/sourceConnections` het eindpunt van de [!DNL Flow Service] API.
+Als u een bronverbinding wilt maken, vraagt u een POST naar het `/sourceConnections` -eindpunt van de [!DNL Flow Service] API.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /sourceConnections
@@ -148,16 +148,16 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van de bronverbinding. Zorg ervoor dat de naam van uw bronverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw bronverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opgeven voor meer informatie over uw bronverbinding. |
-| `baseConnectionId` | De basis verbindings-id van uw [!DNL Kinesis] bron die in de vorige stap is gegenereerd. |
-| `connectionSpec.id` | De vaste-verbindingsspecificatie-id voor [!DNL Kinesis]. Deze id is: `86043421-563b-46ec-8e6c-e23184711bf6` |
-| `data.format` | Het formaat van de [!DNL Kinesis] gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json`. |
+| `baseConnectionId` | De basis verbindings-id van de [!DNL Kinesis] -bron die in de vorige stap is gegenereerd. |
+| `connectionSpec.id` | The fixed connection specification ID for [!DNL Kinesis]. Deze id is: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `data.format` | De indeling van de [!DNL Kinesis] -gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json` . |
 | `params.stream` | De naam van de gegevensstroom waaruit records moeten worden opgehaald. |
-| `params.dataType` | Deze parameter bepaalt het type van de gegevens die worden opgenomen. Tot de ondersteunde gegevenstypen behoren: `raw` en `xdm`. |
-| `params.reset` | Deze parameter bepaalt hoe de gegevens worden gelezen. Gebruiken `latest` beginnen met lezen van de meest recente gegevens en gebruiken `earliest` om te beginnen met lezen van de eerste beschikbare gegevens in de stream. |
+| `params.dataType` | Deze parameter bepaalt het type van de gegevens die worden opgenomen. Tot de ondersteunde gegevenstypen behoren: `raw` en `xdm` . |
+| `params.reset` | Deze parameter bepaalt hoe de gegevens worden gelezen. Gebruik `latest` om te beginnen met het lezen van de meest recente gegevens en gebruik `earliest` om te beginnen met het lezen van de eerste beschikbare gegevens in de stream. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is vereist in de volgende zelfstudie om een gegevensstroom te maken.
+Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde bronverbinding terug. Deze id is vereist in de volgende zelfstudie om een gegevensstroom te maken.
 
 ```json
 {
@@ -168,4 +168,4 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL Kinesis] bronverbinding met de [!DNL Flow Service] API. U kunt deze bron-verbindings-id gebruiken in de volgende zelfstudie: [een streaming gegevensstroom maken met de opdracht [!DNL Flow Service] API](../../collect/streaming.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL Kinesis] -bronverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze bron verbindingsidentiteitskaart in het volgende leerprogramma gebruiken om [ een het stromen dataflow tot stand te brengen gebruikend  [!DNL Flow Service]  API ](../../collect/streaming.md).

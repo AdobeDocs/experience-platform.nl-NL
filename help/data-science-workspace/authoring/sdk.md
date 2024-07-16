@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;ontwikkelaarsgids;SDK;Model creatie;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;het testen
+keywords: Experience Platform;ontwikkelaarsgids;SDK;Model authoring;Data Science Workspace;populaire onderwerpen;testen
 solution: Experience Platform
 title: Model Authoring SDK
-description: De ModelAuthoring SDK stelt u in staat om aangepaste machines te ontwikkelen voor het leren van Ontvangers en functies die kunnen worden gebruikt in de Adobe Experience Platform Data Science Workspace en implementeerbare sjablonen te bieden in PySpark en Spark (Scala).
+description: De ModelAuthoring SDK stelt u in staat om aangepaste machine leerlende Ontvangers en de Leidingen van de Eigenschap te ontwikkelen die in Adobe Experience Platform Data Science Workspace kunnen worden gebruikt, die uitvoerbare malplaatjes in PySpark en Spark (Scala) verstrekken.
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 # Model Authoring SDK
 
-Met de SDK voor modelontwerp kunt u ontwikkel- en functiepijpleidingen voor aangepaste machines ontwikkelen die u kunt gebruiken in [!DNL Adobe Experience Platform] De Werkruimte van de Wetenschap van gegevens, die implementeerbare malplaatjes verstrekken in [!DNL PySpark] en [!DNL Spark (Scala)].
+Met de SDK voor modelontwerp kunt u aangepaste computers met leertoepassingen Ontvangers en functiepijpleidingen ontwikkelen die kunnen worden gebruikt in [!DNL Adobe Experience Platform] Data Science Workspace en die implementeerbare sjablonen bieden in [!DNL PySpark] en [!DNL Spark (Scala)] .
 
 Dit document bevat informatie over de verschillende klassen in de ModelontwerpSDK.
 
 ## DataLoader {#dataloader}
 
-Met de klasse DataLoader wordt alles ingekapseld wat te maken heeft met het ophalen, filteren en retourneren van onbewerkte invoergegevens. Voorbeelden van invoergegevens zijn bijvoorbeeld gegevens voor training, scoring of functietechniek. Gegevenslezers breiden de abstracte klasse uit `DataLoader` en moet de abstracte methode overschrijven `load`.
+Met de klasse DataLoader wordt alles ingekapseld wat te maken heeft met het ophalen, filteren en retourneren van onbewerkte invoergegevens. Voorbeelden van invoergegevens zijn bijvoorbeeld gegevens voor training, scoring of functietechniek. Gegevenslezers breiden de abstracte klasse `DataLoader` uit en moeten de abstracte methode `load` overschrijven.
 
 **PySpark**
 
@@ -36,12 +36,12 @@ In de volgende tabel worden de abstracte methoden van de klasse PySpark Data Loa
         <tr>
             <td>
                 <p><code>load(self, configProperties, spark)</code></p>
-                <p>Gegevens van Platforms laden en retourneren als een Pandas DataFrame</p>
+                <p>Platformgegevens laden en retourneren als een Pandas DataFrame</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: Zelfverwijzing</li>
-                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
+                    <li><code>configProperties</code>: Overzicht van configuratie-eigenschappen</li>
                     <li><code>spark</code>: Spark-sessie</li>
                 </ul>
             </td>
@@ -49,9 +49,9 @@ In de volgende tabel worden de abstracte methoden van de klasse PySpark Data Loa
     </tbody>
 </table>
 
-**Spark**
+**Vonk**
 
-In de volgende tabel worden de abstracte methoden van een [!DNL Spark] Data Loader, klasse:
+In de volgende tabel worden de abstracte methoden van een klasse [!DNL Spark] Data Loader beschreven:
 
 <table>
     <thead>
@@ -64,11 +64,11 @@ In de volgende tabel worden de abstracte methoden van een [!DNL Spark] Data Load
         <tr>
             <td>
                 <p><code>load(configProperties, sparkSession)</code></p>
-                <p>Gegevens van Platforms laden en retourneren als een DataFrame</p>
+                <p>Platformgegevens laden en retourneren als een DataFrame</p>
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
+                    <li><code>configProperties</code>: Overzicht van configuratie-eigenschappen</li>
                     <li><code>sparkSession</code>: Spark-sessie</li>
                 </ul>
             </td>
@@ -76,9 +76,9 @@ In de volgende tabel worden de abstracte methoden van een [!DNL Spark] Data Load
     </tbody>
 </table>
 
-### Gegevens laden uit een [!DNL Platform] gegevensset {#load-data-from-a-platform-dataset}
+### Gegevens laden uit een [!DNL Platform] dataset {#load-data-from-a-platform-dataset}
 
-In het volgende voorbeeld wordt opgehaald [!DNL Platform] gegevens door identiteitskaart en keert een DataFrame terug, waar dataset ID (`datasetId`) is een gedefinieerde eigenschap in het configuratiebestand.
+In het volgende voorbeeld worden [!DNL Platform] -gegevens opgehaald op ID en wordt een DataFrame geretourneerd, waarbij de gegevensset-id (`datasetId` ) een gedefinieerde eigenschap in het configuratiebestand is.
 
 **PySpark**
 
@@ -193,11 +193,11 @@ class MyDataLoader extends DataLoader {
 
 ## DataSaver {#datasaver}
 
-De klasse DataSaver kapselt om het even wat verwant met het opslaan van outputgegevens met inbegrip van die van het scoring of eigenschapengineering. Gegevensbeveiliging breidt de abstracte klasse uit `DataSaver` en moet de abstracte methode overschrijven `save`.
+De klasse DataSaver kapselt om het even wat verwant met het opslaan van outputgegevens met inbegrip van die van het scoring of eigenschapengineering. Gegevensbeveiliging breidt de abstracte klasse `DataSaver` uit en moet de abstracte methode `save` overschrijven.
 
 **PySpark**
 
-In de volgende tabel worden de abstracte methoden van een [!DNL PySpark] Gegevensopslagklasse:
+In de volgende tabel worden de abstracte methoden van een [!DNL PySpark] klasse Data Saver beschreven:
 
 <table>
     <thead>
@@ -215,7 +215,7 @@ In de volgende tabel worden de abstracte methoden van een [!DNL PySpark] Gegeven
             <td>
                 <ul>
                     <li><code>self</code>: Zelfverwijzing</li>
-                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
+                    <li><code>configProperties</code>: Overzicht van configuratie-eigenschappen</li>
                     <li><code>dataframe</code>: Gegevens die moeten worden opgeslagen in de vorm van een DataFrame</li>
                 </ul>
             </td>
@@ -225,7 +225,7 @@ In de volgende tabel worden de abstracte methoden van een [!DNL PySpark] Gegeven
 
 **Vonk (Scala)**
 
-In de volgende tabel worden de abstracte methoden van een [!DNL Spark] Gegevensopslagklasse:
+In de volgende tabel worden de abstracte methoden van een [!DNL Spark] klasse Data Saver beschreven:
 
 <table>
     <thead>
@@ -242,7 +242,7 @@ In de volgende tabel worden de abstracte methoden van een [!DNL Spark] Gegevenso
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
+                    <li><code>configProperties</code>: Overzicht van configuratie-eigenschappen</li>
                     <li><code>dataFrame</code>: Gegevens die moeten worden opgeslagen in de vorm van een DataFrame</li>
                 </ul>
             </td>
@@ -250,14 +250,14 @@ In de volgende tabel worden de abstracte methoden van een [!DNL Spark] Gegevenso
     </tbody>
 </table>
 
-### Gegevens opslaan in een [!DNL Platform] gegevensset {#save-data-to-a-platform-dataset}
+### Gegevens opslaan in een [!DNL Platform] dataset {#save-data-to-a-platform-dataset}
 
-Om gegevens op te slaan op een [!DNL Platform] dataset, moeten de eigenschappen of in het configuratiedossier worden verstrekt of worden bepaald:
+Om gegevens op een [!DNL Platform] dataset op te slaan, moeten de eigenschappen of in het configuratiedossier worden verstrekt of worden bepaald:
 
 - Een geldige [!DNL Platform] dataset-id waarop gegevens worden opgeslagen
 - De huurder-id van uw organisatie
 
-In de volgende voorbeelden worden gegevens opgeslagen (`prediction`) op een [!DNL Platform] dataset, waarbij de gegevensset-id (`datasetId`) en huurder-id (`tenantId`) zijn gedefinieerde eigenschappen in het configuratiebestand.
+In de volgende voorbeelden worden gegevens (`prediction`) opgeslagen op een [!DNL Platform] dataset, waar de dataset-id (`datasetId`) en huurder-id (`tenantId`) gedefinieerde eigenschappen zijn in het configuratiebestand.
 
 
 **PySpark**
@@ -393,7 +393,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-De klasse DatasetTransformer wijzigt en transformeert de structuur van een dataset. De [!DNL Sensei Machine Learning Runtime] vereist niet dat deze component wordt gedefinieerd en op basis van uw vereisten wordt geïmplementeerd.
+De klasse DatasetTransformer wijzigt en transformeert de structuur van een dataset. Voor [!DNL Sensei Machine Learning Runtime] hoeft deze component niet te worden gedefinieerd en deze wordt op basis van uw vereisten geïmplementeerd.
 
 Met betrekking tot een eigenschappijpleiding, kunnen de datasettransformatoren samen met een eigenschappijpleidingsfabriek worden gebruikt om gegevens voor eigenschapengineering voor te bereiden.
 
@@ -417,8 +417,8 @@ De volgende lijst beschrijft de klassenmethodes van een PySpark dataset transfor
             <td>
                 <ul>
                     <li><code>self</code>: Zelfverwijzing</li>
-                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
-                    <li><code>dataset</code>: De gegevensset voor invoer voor transformatie</li>
+                    <li><code>configProperties</code>: Overzicht van configuratie-eigenschappen</li>
+                    <li><code>dataset</code>: De gegevensset met invoergegevens voor transformatie</li>
                 </ul>
             </td>
         </tr>
@@ -427,7 +427,7 @@ De volgende lijst beschrijft de klassenmethodes van een PySpark dataset transfor
 
 **Vonk (Scala)**
 
-In de volgende tabel worden de abstracte methoden van een [!DNL Spark] gegevenssettransformatorklasse:
+In de volgende tabel worden de abstracte methoden van een klasse [!DNL Spark] dataset Transformer beschreven:
 
 <table>
     <thead>
@@ -444,8 +444,8 @@ In de volgende tabel worden de abstracte methoden van een [!DNL Spark] gegevenss
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
-                    <li><code>dataset</code>: De gegevensset voor invoer voor transformatie</li>
+                    <li><code>configProperties</code>: Overzicht van configuratie-eigenschappen</li>
+                    <li><code>dataset</code>: De gegevensset met invoergegevens voor transformatie</li>
                 </ul>
             </td>
         </tr>
@@ -476,7 +476,7 @@ In de volgende tabel worden de klassemethoden van een PySpark FeaturePipelineFac
             <td>
                 <ul>
                     <li><code>self</code>: Zelfverwijzing</li>
-                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
+                    <li><code>configProperties</code>: Overzicht van configuratie-eigenschappen</li>
                 </ul>
             </td>
         </tr>
@@ -488,7 +488,7 @@ In de volgende tabel worden de klassemethoden van een PySpark FeaturePipelineFac
             <td>
                 <ul>
                     <li><code>self</code>: Zelfverwijzing</li>
-                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>configProperties</code>: Configuration-eigenschappen</li>
                     <li><code>sparkSession</code>: Spark-sessie</li>
                 </ul>
             </td>
@@ -498,7 +498,7 @@ In de volgende tabel worden de klassemethoden van een PySpark FeaturePipelineFac
 
 **Vonk (Scala)**
 
-In de volgende tabel worden de klassemethoden van een [!DNL Spark] FeaturePipelineFactory:
+In de volgende tabel worden de klassemethoden van een [!DNL Spark] FeaturePipelineFactory beschreven:
 
 <table>
     <thead>
@@ -515,7 +515,7 @@ In de volgende tabel worden de klassemethoden van een [!DNL Spark] FeaturePipeli
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
+                    <li><code>configProperties</code>: Overzicht van configuratie-eigenschappen</li>
                 </ul>
             </td>
         </tr>
@@ -526,7 +526,7 @@ In de volgende tabel worden de klassemethoden van een [!DNL Spark] FeaturePipeli
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>configProperties</code>: Configuration-eigenschappen</li>
                     <li><code>sparkSession</code>: Spark-sessie</li>
                 </ul>
             </td>
@@ -536,7 +536,7 @@ In de volgende tabel worden de klassemethoden van een [!DNL Spark] FeaturePipeli
 
 ## PipelineFactory {#pipelinefactory}
 
-De klasse PipelineFactory omvat methoden en definities voor modeltraining en -scoring, waarbij trainingslogica en algoritmen worden gedefinieerd in de vorm van een [!DNL Spark] Pijpleiding.
+De klasse PipelineFactory omvat methodes en definities voor modelopleiding en het scoren, waar de opleidingslogica en algoritmen in de vorm van a [!DNL Spark] Pijpleiding worden bepaald.
 
 **PySpark**
 
@@ -558,7 +558,7 @@ In de volgende tabel worden de klassemethoden van een PySpark PipelineFactory be
             <td>
                 <ul>
                     <li><code>self</code>: Zelfverwijzing</li>
-                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>configProperties</code>: Configuration-eigenschappen</li>
                 </ul>
             </td>
         </tr>
@@ -570,8 +570,8 @@ In de volgende tabel worden de klassemethoden van een PySpark PipelineFactory be
             <td>
                 <ul>
                     <li><code>self</code>: Zelfverwijzing</li>
-                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
-                    <li><code>dataframe</code>: Gegevensset met functies voor trainingsinvoer</li>
+                    <li><code>configProperties</code>: Configuration-eigenschappen</li>
+                    <li><code>dataframe</code>: Eigenschapgegevensset voor trainingsinvoer</li>
                 </ul>
             </td>
         </tr>
@@ -583,7 +583,7 @@ In de volgende tabel worden de klassemethoden van een PySpark PipelineFactory be
             <td>
                 <ul>
                     <li><code>self</code>: Zelfverwijzing</li>
-                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>configProperties</code>: Configuration-eigenschappen</li>
                     <li><code>dataframe</code>: Invoergegevensset voor scoring</li>
                     <li><code>model</code>: Een getraind model dat wordt gebruikt voor scores</li>
                 </ul>
@@ -597,7 +597,7 @@ In de volgende tabel worden de klassemethoden van een PySpark PipelineFactory be
             <td>
                 <ul>
                     <li><code>self</code>: Zelfverwijzing</li>
-                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>configProperties</code>: Configuration-eigenschappen</li>
                     <li><code>sparkSession</code>: Spark-sessie</li>
                 </ul>
             </td>
@@ -607,7 +607,7 @@ In de volgende tabel worden de klassemethoden van een PySpark PipelineFactory be
 
 **Vonk (Scala)**
 
-In de volgende tabel worden de klassemethoden van een [!DNL Spark] PipelineFactory:
+In de volgende tabel worden de klassemethoden van een [!DNL Spark] PipelineFactory beschreven:
 
 <table>
     <thead>
@@ -624,7 +624,7 @@ In de volgende tabel worden de klassemethoden van een [!DNL Spark] PipelineFacto
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>configProperties</code>: Configuration-eigenschappen</li>
                 </ul>
             </td>
         </tr>
@@ -635,7 +635,7 @@ In de volgende tabel worden de klassemethoden van een [!DNL Spark] PipelineFacto
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>configProperties</code>: Configuration-eigenschappen</li>
                     <li><code>sparkSession</code>: Spark-sessie</li>
                 </ul>
             </td>
@@ -667,8 +667,8 @@ In de volgende tabel worden de klassemethoden van een PySpark MLEvaluator beschr
             <td>
                 <ul>
                     <li><code>self</code>: Zelfverwijzing</li>
-                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
-                    <li><code>dataframe</code>: Te splitsen gegevensset invoer</li>
+                    <li><code>configProperties</code>: Configuration-eigenschappen</li>
+                    <li><code>dataframe</code>: Invoergegevensset die moet worden gesplitst</li>
                 </ul>
             </td>
         </tr>
@@ -682,7 +682,7 @@ In de volgende tabel worden de klassemethoden van een PySpark MLEvaluator beschr
                     <li><code>self</code>: Zelfverwijzing</li>
                     <li><code>dataframe</code>: Een gegevenskader bestaande uit opleidings- en testgegevens</li>
                     <li><code>model</code>: Een getraind model</li>
-                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>configProperties</code>: Configuration-eigenschappen</li>
                 </ul>
             </td>
         </tr>
@@ -691,7 +691,7 @@ In de volgende tabel worden de klassemethoden van een PySpark MLEvaluator beschr
 
 **Vonk (Scala)**
 
-In de volgende tabel worden de klassemethoden van een [!DNL Spark] MLEvaluator:
+In de volgende tabel worden de klassemethoden van een [!DNL Spark] MLEvaluator beschreven:
 
 <table>
     <thead>
@@ -708,8 +708,8 @@ In de volgende tabel worden de klassemethoden van een [!DNL Spark] MLEvaluator:
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
-                    <li><code>data</code>: Te splitsen gegevensset invoer</li>
+                    <li><code>configProperties</code>: Configuration-eigenschappen</li>
+                    <li><code>data</code>: Invoergegevensset die moet worden gesplitst</li>
                 </ul>
             </td>
         </tr>
@@ -720,7 +720,7 @@ In de volgende tabel worden de klassemethoden van een [!DNL Spark] MLEvaluator:
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>configProperties</code>: Configuration-eigenschappen</li>
                     <li><code>model</code>: Een getraind model</li>
                     <li><code>data</code>: Een gegevenskader bestaande uit opleidings- en testgegevens</li>
                 </ul>

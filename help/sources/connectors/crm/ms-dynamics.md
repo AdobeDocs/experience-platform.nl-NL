@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
-title: Overzicht van Microsoft Dynamics Source Connector
+title: Overzicht Microsoft Dynamics Source Connector
 description: Leer hoe u Microsoft Dynamics verbindt met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -13,19 +13,19 @@ ht-degree: 1%
 
 # Microsoft Dynamics-connector
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] diensten. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met [!DNL Platform] -services. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
-[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een systeem van derdeCRM. Ondersteuning voor CRM-providers omvat [!DNL Microsoft Dynamics].
+[!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens van een extern CRM-systeem. Tot de ondersteuning voor CRM-providers behoren [!DNL Microsoft Dynamics] .
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
 
 ## Veldtoewijzing van [!DNL Microsoft Dynamics] naar XDM
 
-Een bronverbinding tot stand brengen tussen [!DNL Microsoft Dynamics] en Platform [!DNL Microsoft Dynamics] brongegevensvelden moeten worden toegewezen aan de juiste XDM-doelvelden voordat ze in het Platform worden opgenomen.
+Om een bronverbinding tussen [!DNL Microsoft Dynamics] en Platform tot stand te brengen, moeten de [!DNL Microsoft Dynamics] brongegevensgebieden aan hun aangewezen doelXDM gebieden worden in kaart gebracht alvorens in Platform wordt opgenomen.
 
-Zie het volgende voor gedetailleerde informatie over de regels voor het in kaart brengen van velden tussen [!DNL Microsoft Dynamics] gegevenssets en Platform:
+Zie het volgende voor gedetailleerde informatie over de regels voor het in kaart brengen van velden tussen [!DNL Microsoft Dynamics] datasets en Platform:
 
 - [Contactpersonen](../adobe-applications/mapping/dynamics.md#contacts)
 - [Leads](../adobe-applications/mapping/dynamics.md#leads)
@@ -36,15 +36,15 @@ Zie het volgende voor gedetailleerde informatie over de regels voor het in kaart
 - [Marketing](../adobe-applications/mapping/dynamics.md#marketing-list)
 - [Leden van de marketinglijst](../adobe-applications/mapping/dynamics.md#marketing-list-members)
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Microsoft Dynamics] tot [!DNL Platform] API&#39;s of de gebruikersinterface gebruiken:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Microsoft Dynamics] en [!DNL Platform] via API&#39;s of de gebruikersinterface:
 
-## Verbinden [!DNL Microsoft Dynamics] tot [!DNL Platform] gebruiken, API&#39;s
+## Verbind [!DNL Microsoft Dynamics] met [!DNL Platform] gebruikend APIs
 
 - [Een basisverbinding voor Microsoft Dynamics maken met de Flow Service API](../../tutorials/api/create/crm/ms-dynamics.md)
 - [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
-- [Creeer een dataflow voor een bron van CRM gebruikend de Dienst API van de Stroom](../../tutorials/api/collect/crm.md)
+- [Een gegevensstroom maken voor een CRM-bron met behulp van de Flow Service API](../../tutorials/api/collect/crm.md)
 
-## Verbinden [!DNL Microsoft Dynamics] tot [!DNL Platform] gebruiken van UI
+## Verbind [!DNL Microsoft Dynamics] met [!DNL Platform] gebruikend UI
 
 - [Een Microsoft Dynamics-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/crm/dynamics.md)
 - [Een gegevensstroom maken voor een CRM-verbinding in de gebruikersinterface](../../tutorials/ui/dataflow/crm.md)

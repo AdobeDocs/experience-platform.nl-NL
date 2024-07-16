@@ -20,11 +20,11 @@ De platforms van enquêtes ontdekken onderzoeksgebeurtenissen, vangen klantenter
 
 Momenteel, steunt Platform de hieronder vermelde onderzoeksbestemmingen. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
 
-**Aansluitingen bestemming**
+**de schakelaars van de Bestemming**
 
 * [Kwalitatieve automatisering](./qualtrics-automations.md)
 
-**Extensies**
+**Uitbreidingen**
 
 * [Verwachte extensie](./foresee.md)
 * [InMoment-extensie](./inmoment.md)

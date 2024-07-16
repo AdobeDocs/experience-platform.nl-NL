@@ -13,21 +13,21 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK ondersteunt het Interactive Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0). Deze gids toont u hoe te opstelling een markeringsbezit voor het verzenden van IAB TCF 2.0 toestemmingsinformatie naar Adobe gebruikend de de marktextensie van SDK van het Web van Adobe Experience Platform.
 
-Als u geen tags wilt gebruiken, raadpleegt u de handleiding op [IAB TCF 2.0 gebruiken zonder tags](./without-tags.md).
+Als u niet wenst om markeringen te gebruiken, te verwijzen gelieve naar de gids op [ gebruikend IAB TCF 2.0 zonder markeringen ](./without-tags.md).
 
 ## Aan de slag
 
 Om IAB TCF 2.0 met markeringen en de uitbreiding van SDK van het Web van het Platform te gebruiken, moet u een beschikbaar schema XDM en dataset hebben.
 
-Bovendien vereist deze handleiding dat u een goed begrip hebt van de SDK van Adobe Experience Platform Web. Lees voor een snelle vernieuwingsfunctie de [Overzicht van Adobe Experience Platform Web SDK](../../home.md) en de [Veelgestelde vragen](../../faq.md) documentatie.
+Bovendien vereist deze handleiding dat u een goed begrip hebt van de SDK van Adobe Experience Platform Web. Voor een snelle verfrisser, te lezen gelieve het [ overzicht van SDK van het Web van Adobe Experience Platform ](../../home.md) en [ vaak gestelde vragen ](../../faq.md) documentatie.
 
 ## Standaardtoestemming instellen
 
-Binnen de uitbreidingsconfiguratie, is er een het plaatsen voor standaardtoestemming. Dit beheerst het gedrag van klanten die geen toestemmingskoekje hebben. Als u de Gebeurtenissen van de Ervaring voor klanten wilt een rij vormen die geen toestemmingskoekje hebben, plaats dit aan `pending`. Als u Experience Events wilt verwijderen voor klanten die geen toestemmingscookie hebben, stelt u deze in op `out`. U kunt ook een gegevenselement gebruiken om de standaardwaarde voor toestemming dynamisch in te stellen. Zie [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) voor meer informatie .
+Binnen de uitbreidingsconfiguratie, is er een het plaatsen voor standaardtoestemming. Dit beheerst het gedrag van klanten die geen toestemmingskoekje hebben. Als u Experience Events wilt bewaren voor klanten die geen toestemmingskoekje hebben, plaats dit aan `pending`. Als u Experience Events wilt verwijderen voor klanten die geen toestemmingscookie hebben, stelt u deze in op `out` . U kunt ook een gegevenselement gebruiken om de standaardwaarde voor toestemming dynamisch in te stellen. Zie [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) voor meer informatie.
 
 ## Profiel bijwerken met toestemmingsinformatie {#consent-code-1}
 
-Om de [`setConsent`](/help/web-sdk/commands/setconsent.md) Als uw klanten hun voorkeuren voor toestemming hebben gewijzigd, maakt u een labelregel. Begin door een nieuwe gebeurtenis toe te voegen en kies het de gebeurtenistype van de &quot;Code van de Douane&quot;van de uitbreiding van de Kern.
+Als u de handeling [`setConsent`](/help/web-sdk/commands/setconsent.md) wilt aanroepen wanneer de voorkeuren van uw klanten voor toestemming zijn gewijzigd, maakt u een labelregel. Begin door een nieuwe gebeurtenis toe te voegen en kies het de gebeurtenistype van de &quot;Code van de Douane&quot;van de uitbreiding van de Kern.
 
 Gebruik het volgende codevoorbeeld voor uw nieuwe gebeurtenis:
 
@@ -53,7 +53,7 @@ addEventListener();
 
 Deze aangepaste code doet twee dingen:
 
-* Stelt twee gegevenselementen in, één met de toestemmingstekenreeks en één met de `gdprApplies` markering. Dit is handig als u de handeling &quot;Instemming instellen&quot; later invult.
+* Stelt twee gegevenselementen in, één met de toestemmingstekenreeks en één met de markering `gdprApplies` . Dit is handig als u de handeling &quot;Instemming instellen&quot; later invult.
 
 * De regel wordt geactiveerd wanneer de voorkeuren voor toestemming zijn gewijzigd. De actie &quot;Goedkeuring instellen&quot; moet worden gebruikt wanneer de voorkeuren voor toestemming zijn gewijzigd. Voeg de actie &quot;Goedkeuring instellen&quot; toe aan de extensie en vul het formulier als volgt in:
 
@@ -62,7 +62,7 @@ Deze aangepaste code doet twee dingen:
 * Waarde: &quot;%IAB TCF toestemming String%&quot;
 * GDPR is van toepassing: &quot;%IAB TCF Consent GDPR%&quot;
 
-![IAB-actie voor toestemming instellen](../../assets/consent/iab-tcf/with-launch/iab-action.png)
+![ IAB plaatste de Actie van de Toestemming ](../../assets/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
@@ -70,17 +70,17 @@ Deze aangepaste code doet twee dingen:
 
 ## Een XDM-gegevenselement maken voor Experience Events
 
-De toestemmingskoord zou in de Gebeurtenis van de Ervaring moeten worden omvat XDM. Hiervoor gebruikt u het gegevenselement XDM Object. Begin door een nieuw gegevenselement van Objecten te creëren XDM, of anders, gebruik reeds voor het verzenden van gebeurtenissen gecreeerd. Als u de het schemagroep van de Privacy van de Gebeurtenis van de Ervaring aan uw schema hebt toegevoegd, zou u een `consentStrings` in het XDM-object.
+De toestemmingskoord zou in de Gebeurtenis van de Ervaring moeten worden omvat XDM. Hiervoor gebruikt u het gegevenselement XDM Object. Begin door een nieuw gegevenselement van Objecten te creëren XDM, of anders, gebruik reeds voor het verzenden van gebeurtenissen gecreeerd. Als u de het schemagroep van de Privacy van de Gebeurtenis van de Ervaring aan uw schema hebt toegevoegd, zou u een `consentStrings` sleutel in het voorwerp XDM moeten hebben.
 
 1. Selecteer **[!UICONTROL consentStrings]**.
 
-1. Kies **[!UICONTROL Provide individual items]** en selecteert u **[!UICONTROL Add Item]**.
+1. Kies **[!UICONTROL Provide individual items]** en selecteer **[!UICONTROL Add Item]** .
 
-1. Breid uit **[!UICONTROL consentString]** en vouw het eerste item uit en vul vervolgens de volgende waarden in:
+1. Vouw de kop **[!UICONTROL consentString]** uit, vouw het eerste item uit en vul vervolgens de volgende waarden in:
 
 * `consentStandard`: IAB TCF
-* `consentStandardVersion`: 2,0
-* `consentStringValue`: %IAB TCF goedkeuring String%
+* `consentStandardVersion` : 2.0
+* `consentStringValue`: %IAB TCF toestemming String%
 * `gdprApplies`: %IAB TCF toestemming GDPR%
 
 >[!IMPORTANT]
@@ -111,7 +111,7 @@ function addEventListener() {
 addEventListener();
 ```
 
-Deze code is identiek aan de vorige aangepaste code, behalve dat beide `useractioncomplete` en `tcloaded` gebeurtenissen worden afgehandeld. De [vorige aangepaste code](#consent-code-1) wordt alleen geactiveerd wanneer de klant voor het eerst zijn voorkeuren kiest. Deze code wordt ook geactiveerd wanneer de klant al zijn voorkeuren heeft gekozen. Bijvoorbeeld op de tweede pagina laden.
+Deze code is identiek aan de vorige aangepaste code, behalve dat zowel `useractioncomplete` - als `tcloaded` -gebeurtenissen worden afgehandeld. De [ vorige douanecode ](#consent-code-1) brengt slechts teweeg wanneer de klant hun voorkeur voor het eerst kiest. Deze code wordt ook geactiveerd wanneer de klant al zijn voorkeuren heeft gekozen. Bijvoorbeeld op de tweede pagina laden.
 
 Voeg een actie &quot;Send Event&quot;van de uitbreiding van SDK van het Web van het Platform toe. Kies in het XDM-veld het XDM-gegevenselement dat u in de vorige sectie hebt gemaakt.
 
@@ -121,4 +121,4 @@ Wanneer gebeurtenissen worden geactiveerd na de initiële Experience Event, zijn
 
 ## Volgende stappen
 
-Nu u hebt geleerd hoe te om IAB TCF 2.0 met de uitbreiding van SDK van het Web van het Platform te gebruiken, kunt u ook verkiezen om met andere Adobe oplossingen zoals Adobe Analytics of Adobe Real-time Customer Data Platform te integreren. Zie de [IAB-overzicht van transparantie en instemming in framework 2.0](./overview.md) voor meer informatie .
+Nu u hebt geleerd hoe te om IAB TCF 2.0 met de uitbreiding van SDK van het Web van het Platform te gebruiken, kunt u ook verkiezen om met andere Adobe oplossingen zoals Adobe Analytics of Adobe Real-time Customer Data Platform te integreren. Zie het [ IAB overzicht van de Transparantie &amp; van de Toestemming Kader 2.0 ](./overview.md) voor meer informatie.

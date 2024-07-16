@@ -11,9 +11,9 @@ ht-degree: 1%
 
 # `appendIdentityToUrl`
 
-De `appendIdentityToUrl` kunt u een gebruiker-id aan de URL toevoegen als een queryreeks. Met deze actie kunt u de identiteit van een bezoeker tussen domeinen dragen, waardoor dubbele bezoekersaantallen voor datasets met zowel domeinen als kanalen worden voorkomen. Het is beschikbaar op versies 2.11.0 van SDK van het Web of later.
+Met de opdracht `appendIdentityToUrl` kunt u een gebruiker-id aan de URL toevoegen als een queryreeks. Met deze actie kunt u de identiteit van een bezoeker tussen domeinen dragen, waardoor dubbele bezoekersaantallen voor datasets met zowel domeinen als kanalen worden voorkomen. Het is beschikbaar op versies 2.11.0 van SDK van het Web of later.
 
-De querytekenreeks die wordt gegenereerd en aan de URL wordt toegevoegd, is `adobe_mc`. Als SDK van het Web geen ECID kan vinden, roept het ECID `/acquire` om één te produceren.
+De querytekenreeks die wordt gegenereerd en aan de URL wordt toegevoegd, is `adobe_mc` . Als de Web SDK geen ECID kan vinden, roept het `/acquire` eindpunt om te produceren.
 
 >[!NOTE]
 >
@@ -23,26 +23,26 @@ De querytekenreeks die wordt gegenereerd en aan de URL wordt toegevoegd, is `ado
 
 Het toevoegen van een identiteit aan een URL wordt uitgevoerd als een actie binnen een regel in de interface van de markeringen van de Inzameling van Gegevens van Adobe Experience Platform.
 
-1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
-1. Navigeren naar **[!UICONTROL Rules]** Selecteer vervolgens de gewenste regel.
-1. Onder [!UICONTROL Actions], selecteert u een bestaande actie of maakt u een actie.
-1. Stel de [!UICONTROL Extension] vervolgkeuzeveld naar **[!UICONTROL Adobe Experience Platform Web SDK]** en stelt de [!UICONTROL Action Type] tot **[!UICONTROL Redirect with identity]**.
-1. Klikken **[!UICONTROL Keep Changes]** en voer vervolgens uw publicatieworkflow uit.
+1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
+1. Selecteer onder [!UICONTROL Actions] een bestaande actie of maak een actie.
+1. Stel het vervolgkeuzeveld [!UICONTROL Extension] in op **[!UICONTROL Adobe Experience Platform Web SDK]** en stel de waarde [!UICONTROL Action Type] in op **[!UICONTROL Redirect with identity]** .
+1. Klik op **[!UICONTROL Keep Changes]** en voer vervolgens de publicatieworkflow uit.
 
 Dit bevel wordt typisch gebruikt met een specifieke regel die op kliks en controles gewenste domeinen let.
 
 +++Gebeurteniscriteria van de regel
 
-Triggers wanneer een ankertag met een `href` wordt geklikt.
+Triggers wanneer op een ankertag met een eigenschap `href` wordt geklikt.
 
-* **[!UICONTROL Extension]**: Core
-* **[!UICONTROL Event type]**: Klikken
-* **[!UICONTROL When the user clicks on]**: Specifieke elementen
+* **[!UICONTROL Extension]**: Kern
+* **[!UICONTROL Event type]**: klikken
+* **[!UICONTROL When the user clicks on]**: specifieke elementen
 * **[!UICONTROL Elements matching the CSS selector]**: `a[href]`
 
-![De gebeurtenis Rule](../assets/id-sharing-event-configuration.png)
+![ gebeurtenis van de Regel ](../assets/id-sharing-event-configuration.png)
 
 +++
 
@@ -51,13 +51,13 @@ Triggers wanneer een ankertag met een `href` wordt geklikt.
 Triggers worden alleen op de gewenste domeinen geactiveerd.
 
 * **[!UICONTROL Logic type]**: Standaard
-* **[!UICONTROL Extension]**: Core
-* **[!UICONTROL Condition Type]**: Value Comparison
+* **[!UICONTROL Extension]**: Kern
+* **[!UICONTROL Condition Type]**: vergelijking van waarden
 * **[!UICONTROL Left Operand]**: `%this.hostname%`
 * **[!UICONTROL Operator]**: Komt overeen met Regex
 * **[!UICONTROL Right Operand]**: Een reguliere expressie die overeenkomt met de gewenste domeinen. Bijvoorbeeld: `adobe.com$|behance.com$`
 
-![Regelvoorwaarde](../assets/id-sharing-condition-configuration.png)
+![ voorwaarde van de Regel ](../assets/id-sharing-condition-configuration.png)
 
 +++
 
@@ -68,13 +68,13 @@ Voeg de identiteit toe aan de URL.
 * **[!UICONTROL Extension]**: Adobe Experience Platform Web SDK
 * **[!UICONTROL Action Type]**: Omleiden met identiteit
 
-![Handeling regel](../assets/id-sharing-action-configuration.png)
+![ actie van de Regel ](../assets/id-sharing-action-configuration.png)
 
 +++
 
 ## Identiteit toevoegen aan URL met de Web SDK JavaScript-bibliotheek
 
-Voer de `appendIdentityToUrl` gebruiken met een URL als parameter. De methode retourneert een URL waarvan de id als queryreeks is toegevoegd.
+Voer de opdracht `appendIdentityToUrl` uit met een URL als parameter. De methode retourneert een URL waarvan de id als queryreeks is toegevoegd.
 
 ```js
 alloy("appendIdentityToUrl",document.location);
@@ -100,4 +100,4 @@ document.addEventListener("click", event => {
 
 ## Object Response
 
-Als u besluit [reacties verwerken](command-responses.md) met deze opdracht bevat het reactieobject **`url`**, de nieuwe URL met identiteitsinformatie die als parameter van het vraagkoord wordt toegevoegd.
+Als u besluit om reacties ](command-responses.md) met dit bevel [ te behandelen, bevat het reactievoorwerp **`url`**, nieuwe URL met identiteitsinformatie die als parameter van het vraagkoord wordt toegevoegd.

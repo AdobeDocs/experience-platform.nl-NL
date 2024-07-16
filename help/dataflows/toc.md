@@ -27,4 +27,4 @@ ht-degree: 23%
    - [Dataflows in doelen bewaken](./ui/monitor-destinations.md)
    - B2B-bewaking {#b2b}
       - [Verbeteringstaken voor profielen controleren](./ui/b2b/monitor-profile-enrichment.md)
-- [Flow Service-API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [ de Dienst API van de Stroom ](https://www.adobe.io/experience-platform-apis/references/flow-service/)

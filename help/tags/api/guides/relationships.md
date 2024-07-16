@@ -4,8 +4,8 @@ description: Leer hoe u bronrelaties vastlegt in de Reactor-API, inclusief de re
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 1%
+source-wordcount: '809'
+ht-degree: 0%
 
 ---
 
@@ -18,18 +18,18 @@ Afhankelijk van het soort middel in kwestie, worden sommige verhoudingen vereist
 Ongeacht of ze verplicht of optioneel zijn, worden relaties automatisch door het systeem tot stand gebracht wanneer relevante bronnen worden gemaakt, of ze moeten handmatig worden gemaakt. In het geval van het manueel creëren van verhoudingen, zijn er twee mogelijke methodes afhankelijk van de betrokken bron:
 
 * [Maken op basis van lading](#payload)
-* [Maken via URL](#url) (alleen voor bibliotheken)
+* [ creeert door URL ](#url) (voor slechts bibliotheken)
 
-Zie de sectie over [relatievereisten](#requirements) voor een lijst van de compatibele relaties voor elk middeltype, en de methodes die worden vereist om die relaties tot stand te brengen waar toepasselijk.
+Verwijs naar de sectie over [ relatievereisten ](#requirements) voor een lijst van de compatibele verhoudingen voor elk middeltype, en de methodes die worden vereist om die verhoudingen te vestigen waar toepasselijk.
 
-## Een relatie maken met een payload {#payload}
+## Een relatie maken op basis van een payload {#payload}
 
-Sommige verhoudingen moeten manueel worden gevestigd wanneer u aanvankelijk een middel creeert. Hiervoor moet u een `relationship` -object in de aanvraagpayload wanneer u de bovenliggende bron voor het eerst maakt. Voorbeelden van deze relaties zijn:
+Sommige verhoudingen moeten manueel worden gevestigd wanneer u aanvankelijk een middel creeert. Hiervoor moet u een `relationship` -object opgeven in de payload van de aanvraag wanneer u de bovenliggende bron maakt. Voorbeelden van deze relaties zijn:
 
-* [Een gegevenselement maken](../endpoints/data-elements.md#create) met de vereiste extensies
-* [Een omgeving maken](../endpoints/environments.md#create) met de vereiste gastheerverhouding
+* [ Creërend een gegevenselement ](../endpoints/data-elements.md#create) met de vereiste uitbreidingen
+* [ Creërend een milieu ](../endpoints/environments.md#create) met de vereiste gastheerverhouding
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
@@ -44,7 +44,7 @@ POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een nieuwe `rule_component`, betrekkingen aan te knopen met `rules` en `extension`.
+Met de volgende aanvraag wordt een nieuwe `rule_component` gemaakt die relaties tot stand brengt met `rules` en een `extension` .
 
 ```shell
 curl -X POST \
@@ -84,10 +84,10 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `relationships` | Een object dat moet worden opgegeven wanneer u relaties via een payload maakt. Elke sleutel in dit object vertegenwoordigt een specifiek relatietype. In het bovenstaande voorbeeld: `extension` en `rules` er relaties worden ingesteld die met name betrekking hebben op `rule_components`. Voor meer informatie over compatibele relatietypen voor verschillende middelen, zie de sectie over [relatievereisten per bron](#relationship-requirements-by-resource). |
-| `data` | Elk relatietype dat onder `relationship` object moet een `data` eigenschap, die verwijst naar de `id` en `type` van de bron waarmee een relatie tot stand wordt gebracht. U kunt een relatie maken met meerdere bronnen van hetzelfde type door de `data` eigenschap als een array van objecten, waarbij elk object het `id` en `type` van een toepasselijke bron. |
-| `id` | De unieke id van een bron. Elk `id` moet vergezeld gaan van een `type` eigenschap, met vermelding van het soort bron in kwestie. |
-| `type` | Het type resource waarnaar wordt verwezen door een zustergebruiker `id` veld. Inclusief geaccepteerde waarden `data_elements`, `rules`, `extensions`, en `environments`. |
+| `relationships` | Een object dat moet worden opgegeven wanneer u relaties via een payload maakt. Elke sleutel in dit object vertegenwoordigt een specifiek relatietype. In het bovenstaande voorbeeld worden `extension` - en `rules` -relaties tot stand gebracht, die specifiek zijn voor `rule_components` . Voor meer informatie over compatibele relatietypen voor verschillende middelen, zie de sectie over [ relatievereisten door middel ](#relationship-requirements-by-resource). |
+| `data` | Elk relatietype dat onder het `relationship` -object wordt opgegeven, moet een `data` -eigenschap bevatten, die verwijst naar de `id` en `type` van de bron waarmee een relatie wordt ingesteld. U kunt een relatie maken met meerdere bronnen van hetzelfde type door de eigenschap `data` op te maken als een array van objecten, waarbij elk object de `id` en `type` van een toepasselijke bron bevat. |
+| `id` | De unieke id van een bron. Elke `id` moet vergezeld gaan van een eigenschap `type` sibling die het type van de bron in kwestie aangeeft. |
+| `type` | Het type resource waarnaar wordt verwezen door een verwant `id` veld. Tot de toegestane waarden behoren `data_elements`, `rules`, `extensions` en `environments` . |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ In tegenstelling tot andere bronnen maken bibliotheken relaties tot stand via hu
 * [Extensies, gegevenselementen en regels toevoegen aan een bibliotheek](../endpoints/libraries.md#add-resources)
 * [Bibliotheek toewijzen aan een omgeving](../endpoints/libraries.md#environment)
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /properties/{PROPERTY_ID}/libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
@@ -108,11 +108,11 @@ POST /properties/{PROPERTY_ID}/libraries/{LIBRARY_ID}/relationships/{RESOURCE_TY
 | --- | --- |
 | `{PROPERTY_ID}` | De id van de eigenschap waartoe de bibliotheek behoort. |
 | `{LIBRARY_ID}` | De id van de bibliotheek waarvoor u een relatie wilt maken. |
-| `{RESOURCE_TYPE}` | Het type van middel de verhouding richt zich. Beschikbare waarden zijn `environment`, `data_elements`, `extensions`, en `rules`. |
+| `{RESOURCE_TYPE}` | Het type van middel de verhouding richt zich. Beschikbare waarden zijn `environment` , `data_elements` , `extensions` en `rules` . |
 
 **Verzoek**
 
-In het volgende verzoek wordt het `/relationships/environment` eindpunt voor een bibliotheek om een verhouding met een milieu tot stand te brengen.
+In het volgende verzoek wordt het eindpunt `/relationships/environment` voor een bibliotheek gebruikt om een relatie met een omgeving te maken.
 
 ```shell
 curl -X POST \
@@ -132,9 +132,9 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `data` | Een object dat verwijst naar het `id` en `type` van de doelbron voor de relatie. Als u een relatie maakt met meerdere bronnen van hetzelfde type (zoals `extensions` en `rules`), de `data` eigenschap moet worden opgemaakt als een array van objecten, waarbij elk object het `id` en `type` van een toepasselijke bron. |
-| `id` | De unieke id van een bron. Elk `id` moet vergezeld gaan van een `type` eigenschap, met vermelding van het soort bron in kwestie. |
-| `type` | Het type resource waarnaar wordt verwezen door een zustergebruiker `id` veld. Inclusief geaccepteerde waarden `data_elements`, `rules`, `extensions`, en `environments`. |
+| `data` | Een object dat verwijst naar de `id` en `type` van de doelbron voor de relatie. Wanneer u een relatie maakt met meerdere bronnen van hetzelfde type (zoals `extensions` en `rules` ), moet de eigenschap `data` worden opgemaakt als een array van objecten, waarbij elk object de `id` en `type` van een toepasselijke bron bevat. |
+| `id` | De unieke id van een bron. Elke `id` moet vergezeld gaan van een eigenschap `type` sibling die het type van de bron in kwestie aangeeft. |
+| `type` | Het type resource waarnaar wordt verwezen door een verwant `id` veld. Tot de toegestane waarden behoren `data_elements`, `rules`, `extensions` en `environments` . |
 
 {style="table-layout:auto"}
 
@@ -146,12 +146,12 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 >
 >Als een relatie niet wordt vermeld als wordt gecreeerd door lading of URL, dan wordt het automatisch toegewezen door het systeem.
 
-### Gebeurtenissen van Audit
+### Controlegebeurtenissen
 
 | Relatie | Vereist | Maken op basis van lading | Maken via URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
-| `entity` | ✓ |  |  |
+| `property` | ✓ | | |
+| `entity` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -159,12 +159,12 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 
 | Relatie | Vereist | Maken op basis van lading | Maken via URL |
 | :--- | :---: | :---: | :---: |
-| `data_elements` |  |  |  |
-| `extensions` |  |  |  |
-| `rules` |  |  |  |
-| `environment` | ✓ |  |  |
-| `library` | ✓ |  |  |
-| `property` | ✓ |  |  |
+| `data_elements` | | | |
+| `extensions` | | | |
+| `rules` | | | |
+| `environment` | ✓ | | |
+| `library` | ✓ | | |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -172,7 +172,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 
 | Relatie | Vereist | Maken op basis van lading | Maken via URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -180,7 +180,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 
 | Relatie | Vereist | Maken op basis van lading | Maken via URL |
 | :--- | :---: | :---: | :---: |
-| `properties` |  |  |  |
+| `properties` | | | |
 
 {style="table-layout:auto"}
 
@@ -188,14 +188,14 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 
 | Relatie | Vereist | Maken op basis van lading | Maken via URL |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
-| `updated_with_extension` | ✓ |  |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `extension` | ✓ | ✓ | |
+| `updated_with_extension` | ✓ | | |
+| `updated_with_extension_package` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -203,10 +203,10 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 
 | Relatie | Vereist | Maken op basis van lading | Maken via URL |
 | :--- | :---: | :---: | :---: |
-| `library` |  |  |  |
-| `builds` |  |  |  |
-| `host` | ✓ | ✓ |  |
-| `property` | ✓ |  |  |
+| `library` | | | |
+| `builds` | | | |
+| `host` | ✓ | ✓ | |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -214,13 +214,13 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 
 | Relatie | Vereist | Maken op basis van lading | Maken via URL |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension_package` | ✓ | ✓ |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `extension_package` | ✓ | ✓ | |
+| `updated_with_extension_package` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -228,7 +228,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 
 | Relatie | Vereist | Maken op basis van lading | Maken via URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -236,15 +236,15 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 
 | Relatie | Vereist | Maken op basis van lading | Maken via URL |
 | :--- | :---: | :---: | :---: |
-| `builds` |  |  |  |
-| `environment` |  |  | ✓ |
-| `data_elements` |  |  | ✓ |
-| `extensions` |  |  | ✓ |
-| `rules` |  |  | ✓ |
-| `notes` |  |  |  |
-| `upstream_library` | ✓ |  |  |
-| `property` | ✓ |  |  |
-| `last_build` |  |  |  |
+| `builds` | | | |
+| `environment` | | | ✓ |
+| `data_elements` | | | ✓ |
+| `extensions` | | | ✓ |
+| `rules` | | | ✓ |
+| `notes` | | | |
+| `upstream_library` | ✓ | | |
+| `property` | ✓ | | |
+| `last_build` | | | |
 
 {style="table-layout:auto"}
 
@@ -252,7 +252,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 
 | Relatie | Vereist | Maken op basis van lading | Maken via URL |
 | :--- | :---: | :---: | :---: |
-| `resource` | ✓ |  |  |
+| `resource` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -260,13 +260,13 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 
 | Relatie | Vereist | Maken op basis van lading | Maken via URL |
 | :--- | :---: | :---: | :---: |
-| `company` | ✓ |  |  |
-| `callbacks` |  |  |  |
-| `environments` |  |  |  |
-| `libraries` |  |  |  |
-| `data_elements` |  |  |  |
-| `extensions` |  |  |  |
-| `extensions` |  |  |  |
+| `company` | ✓ | | |
+| `callbacks` | | | |
+| `environments` | | | |
+| `libraries` | | | |
+| `data_elements` | | | |
+| `extensions` | | | |
+| `extensions` | | | |
 
 {style="table-layout:auto"}
 
@@ -274,14 +274,14 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 
 | Relatie | Vereist | Maken op basis van lading | Maken via URL |
 | :--- | :---: | :---: | :---: |
-| `updated_with_extensions_package` | ✓ |  |  |
-| `updated_with_extension` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
-| `notes` |  |  |  |
-| `origin` | ✓ |  |  |
-| `property` | ✓ |  |  |
-| `rules` | ✓ | ✓ |  |
-| `revisions` | ✓ |  |  |
+| `updated_with_extensions_package` | ✓ | | |
+| `updated_with_extension` | ✓ | | |
+| `extension` | ✓ | ✓ | |
+| `notes` | | | |
+| `origin` | ✓ | | |
+| `property` | ✓ | | |
+| `rules` | ✓ | ✓ | |
+| `revisions` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -289,17 +289,17 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 
 | Relatie | Vereist | Maken op basis van lading | Maken via URL |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `rule_components` |  |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `rule_components` | | | |
 
 ### Geheimen
 
 | Relatie | Vereist | Maken op basis van lading | Maken via URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  | ✓ |
-| `environment` | ✓ | ✓ |  |
+| `property` | ✓ | | ✓ |
+| `environment` | ✓ | ✓ | |
 

@@ -6,28 +6,28 @@ description: Het /fieldgroups eindpunt in de Registratie API van het Schema staa
 exl-id: d26257e4-c7d5-4bff-b555-7a2997c88c74
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1197'
 ht-degree: 0%
 
 ---
 
 # Het eindpunt van schemaveldgroepen
 
-De de gebiedsgroepen van het schema zijn herbruikbare componenten die één of meerdere gebieden bepalen die een bepaald concept, zoals een individuele persoon, een postadres, of een milieu van Webbrowser vertegenwoordigen. Veldgroepen moeten worden opgenomen als onderdeel van een schema dat een compatibele klasse implementeert, afhankelijk van het gedrag van de gegevens die ze vertegenwoordigen (record- of tijdreeks). De `/fieldgroups` in de [!DNL Schema Registry] Met de API kunt u via programmacode veldgroepen in uw ervaringstoepassing beheren.
+De de gebiedsgroepen van het schema zijn herbruikbare componenten die één of meerdere gebieden bepalen die een bepaald concept, zoals een individuele persoon, een postadres, of een milieu van Webbrowser vertegenwoordigen. Veldgroepen moeten worden opgenomen als onderdeel van een schema dat een compatibele klasse implementeert, afhankelijk van het gedrag van de gegevens die ze vertegenwoordigen (record- of tijdreeks). Met het eindpunt `/fieldgroups` in de [!DNL Schema Registry] API kunt u via programmacode veldgroepen beheren binnen uw ervaringstoepassing.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met veldgroepen ophalen {#list}
 
-U kunt alle veldgroepen weergeven onder de categorie `global` of `tenant` container door een GET-aanvraag in te dienen bij `/global/fieldgroups` of `/tenant/fieldgroups`, respectievelijk.
+U kunt alle veldgroepen weergeven onder de container `global` of `tenant` door een GET-aanvraag in te dienen bij respectievelijk `/global/fieldgroups` of `/tenant/fieldgroups` .
 
 >[!NOTE]
 >
->Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [queryparameters](./appendix.md#query) voor meer informatie.
+>Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [ vraagparameters ](./appendix.md#query) in het bijlage document voor meer informatie.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
@@ -35,14 +35,14 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container waaruit u veldgroepen wilt ophalen: `global` voor door Adobe gemaakte veldgroepen of `tenant` voor veldgroepen die eigendom zijn van uw organisatie. |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de [bijgevoegd document](./appendix.md#query) voor een lijst met beschikbare parameters. |
+| `{CONTAINER_ID}` | De container waarvan u veldgroepen wilt ophalen: `global` voor veldgroepen die zijn gemaakt door Adoben of `tenant` voor veldgroepen die eigendom zijn van uw organisatie. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [ bijlage document ](./appendix.md#query) voor een lijst van beschikbare parameters. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een lijst met veldgroepen opgehaald uit de `tenant` container gebruiken `orderby` queryparameter om de veldgroepen op hun te sorteren `title` kenmerk.
+Met de volgende aanvraag wordt een lijst met veldgroepen opgehaald uit de container `tenant` . Hierbij wordt een `orderby` query-parameter gebruikt om de veldgroepen op hun `title` -kenmerk te sorteren.
 
 ```shell
 curl -X GET \
@@ -54,18 +54,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Het volgende `Accept` Kopteksten zijn beschikbaar voor groepen met aanbiedingsvelden:
+De antwoordindeling is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. De volgende `Accept` kopteksten zijn beschikbaar voor groepen met lijstvelden:
 
 | `Accept` header | Beschrijving |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
-| `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-veldgroep voor elke bron, met origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
+| `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-veldgroep voor elke bron, met origineel `$ref` en `allOf` inbegrepen. (Limiet: 300) |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-In bovengenoemd verzoek werd gebruikgemaakt van de `application/vnd.adobe.xed-id+json` `Accept` header, daarom bevat de reactie alleen de `title`, `$id`, `meta:altId`, en `version` kenmerken voor elke veldgroep. Het andere gebruiken `Accept` header (`application/vnd.adobe.xed+json`) retourneert alle kenmerken van elke veldgroep. Selecteer de juiste `Accept` afhankelijk van de informatie die u in uw reactie nodig hebt.
+In de bovenstaande aanvraag is de header `application/vnd.adobe.xed-id+json` `Accept` gebruikt en daarom bevat de reactie alleen de kenmerken `title` , `$id` , `meta:altId` en `version` voor elke veldgroep. Als u de andere `Accept` header (`application/vnd.adobe.xed+json` ) gebruikt, worden alle kenmerken van elke veldgroep geretourneerd. Selecteer de juiste `Accept` header, afhankelijk van de informatie die u in uw reactie nodig hebt.
 
 ```json
 {
@@ -113,7 +113,7 @@ In bovengenoemd verzoek werd gebruikgemaakt van de `application/vnd.adobe.xed-id
 
 U kunt een specifieke veldgroep opzoeken door de id van de veldgroep op te nemen in het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
@@ -121,14 +121,14 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container die de veldgroep bevat die u wilt ophalen: `global` voor een door Adobe gemaakte veldgroep of `tenant` voor een veldgroep die eigendom is van uw organisatie. |
-| `{FIELD_GROUP_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de veldgroep die u wilt opzoeken. |
+| `{CONTAINER_ID}` | De container waarin de veldgroep is opgeslagen die u wilt ophalen: `global` voor een door Adobe gemaakte veldgroep of `tenant` voor een veldgroep die eigendom is van uw organisatie. |
+| `{FIELD_GROUP_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de veldgroep die u wilt opzoeken. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een veldgroep opgehaald op basis van de `meta:altId` waarde opgegeven in het pad.
+Met de volgende aanvraag wordt een veldgroep opgehaald op basis van de `meta:altId` -waarde die in het pad is opgegeven.
 
 ```shell
 curl -X GET \
@@ -140,21 +140,21 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Alle opzoekverzoeken vereisen een `version` worden opgenomen in de `Accept` header. Het volgende `Accept` Kopteksten zijn beschikbaar:
+De antwoordindeling is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. Voor alle opzoekverzoeken moet een `version` worden opgenomen in de `Accept` -koptekst. De volgende `Accept` headers zijn beschikbaar:
 
 | `Accept` header | Beschrijving |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Onbewerkt met `$ref` en `allOf`, heeft titels en beschrijvingen. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` en `allOf` heeft titels en beschrijvingen. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Onbewerkt met `$ref` en `allOf`, geen titels of beschrijvingen. |
+| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Met `$ref` en `allOf` heeft Raw titels en beschrijvingen. |
+| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` en `allOf` resolve, heeft titels en beschrijvingen. |
+| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Onbewerkt met `$ref` en `allOf` , geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` en `allOf` opgelost, geen titels of beschrijvingen. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` en `allOf` opgelost, beschrijving inbegrepen. |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` en `allOf` opgelost, inclusief beschrijvingen. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-Als de reactie is geslaagd, worden de details van de veldgroep geretourneerd. De geretourneerde velden zijn afhankelijk van de `Accept` in de aanvraag verzonden. Experimenteer met andere `Accept` Kopteksten om de reacties te vergelijken en te bepalen welke kopbal het beste voor uw gebruiksgeval is.
+Als de reactie is geslaagd, worden de details van de veldgroep geretourneerd. Welke velden worden geretourneerd, is afhankelijk van de header `Accept` die in de aanvraag wordt verzonden. Experimenteer met verschillende kopteksten van `Accept` om de reacties te vergelijken en te bepalen welke kopbal het beste voor uw gebruiksgeval is.
 
 ```json
 {
@@ -217,9 +217,9 @@ Als de reactie is geslaagd, worden de details van de veldgroep geretourneerd. De
 
 ## Een veldgroep maken {#create}
 
-U kunt een aangepaste veldgroep definiëren onder de categorie `tenant` door een POST aan te vragen.
+U kunt een aangepaste veldgroep definiëren onder de `tenant` -container door een POST aan te vragen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /tenant/fieldgroups
@@ -227,11 +227,11 @@ POST /tenant/fieldgroups
 
 **Verzoek**
 
-Wanneer u een nieuwe veldgroep definieert, moet deze een `meta:intendedToExtend` kenmerk, de `$id` van de klassen waarmee de veldgroep compatibel is. In dit voorbeeld is de veldgroep compatibel met een `Property` klasse die eerder is gedefinieerd. Aangepaste velden moeten worden genest onder `_{TENANT_ID}` (zoals getoond in het voorbeeld) om botsingen met gelijkaardige gebieden te vermijden die door klassen en andere gebiedsgroepen worden verstrekt.
+Wanneer u een nieuwe veldgroep definieert, moet deze een `meta:intendedToExtend` -kenmerk bevatten met een lijst van de `$id` -klassen waarmee de veldgroep compatibel is. In dit voorbeeld is de veldgroep compatibel met een klasse `Property` die eerder is gedefinieerd. Aangepaste velden moeten onder `_{TENANT_ID}` worden genest (zoals in het voorbeeld wordt getoond) om conflicten te voorkomen met vergelijkbare velden die door klassen en andere veldgroepen worden verschaft.
 
 >[!NOTE]
 >
->Zie de handleiding voor meer informatie over het definiëren van verschillende veldtypen die u in uw veldgroep wilt opnemen [aangepaste velden in de API definiëren](../tutorials/custom-fields-api.md#define-fields).
+>Voor details op hoe te om verschillende gebiedstypes te bepalen om in uw gebiedsgroep te omvatten, zie de gids op [ bepalend douanegebieden in API ](../tutorials/custom-fields-api.md#define-fields).
 
 ```SHELL
 curl -X POST \
@@ -298,9 +298,9 @@ curl -X POST \
 }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van de nieuwe veldgroep, inclusief de `$id`, `meta:altId`, en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry].
+Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een lading met de details van de nieuwe veldgroep, inclusief de `$id` , `meta:altId` en `version` . Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry] .
 
 ```JSON
 {
@@ -384,17 +384,17 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die d
 }
 ```
 
-Een GET-aanvraag uitvoeren op [alle veldgroepen weergeven](#list) in de huurderscontainer zou nu de het gebiedsgroep van de Details van het Bezit omvatten, of u kunt [een opzoekverzoek (GET) uitvoeren](#lookup) URL-gecodeerd gebruiken `$id` URI om de nieuwe veldgroep rechtstreeks weer te geven.
+Het uitvoeren van een verzoek van de GET aan [ lijst alle gebiedsgroepen ](#list) in de huurderscontainer zou nu de het gebiedsgroep van de Details van het Bezit omvatten, of u kunt [ een raadpleging (GET) verzoek ](#lookup) uitvoeren gebruikend URL-gecodeerde `$id` URI om de nieuwe gebiedsgroep direct te bekijken.
 
 ## Een veldgroep bijwerken {#put}
 
-U kunt een volledige gebiedsgroep door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een gebiedsgroep door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die wanneer vereist zouden zijn [een nieuwe veldgroep maken](#create) in een verzoek van de POST.
+U kunt een volledige gebiedsgroep door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een gebiedsgroep door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [ creërend een nieuwe gebiedsgroep ](#create) in een verzoek van de POST.
 
 >[!NOTE]
 >
->Als u slechts een deel van een gebiedsgroep wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [het bijwerken van een gedeelte van een gebiedsgroep](#patch).
+>Als u slechts een deel van een gebiedsgroep wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [ het bijwerken van een gedeelte van een gebiedsgroep ](#patch).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
@@ -402,13 +402,13 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de veldgroep die u opnieuw wilt schrijven. |
+| `{FIELD_GROUP_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de veldgroep die u opnieuw wilt schrijven. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een bestaande veldgroep opnieuw geschreven en wordt een nieuwe veldgroep toegevoegd `propertyCountry` veld.
+Met de volgende aanvraag wordt een bestaande veldgroep opnieuw geschreven en wordt een nieuw `propertyCountry` -veld toegevoegd.
 
 ```SHELL
 curl -X PUT \
@@ -480,7 +480,7 @@ curl -X PUT \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Met een geslaagde reactie worden de details van de bijgewerkte veldgroep geretourneerd.
 
@@ -573,13 +573,13 @@ Met een geslaagde reactie worden de details van de bijgewerkte veldgroep geretou
 
 ## Een gedeelte van een veldgroep bijwerken {#patch}
 
-U kunt een gedeelte van een veldgroep bijwerken met een PATCH-aanvraag. De [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add`, `remove`, en `replace`. Voor meer informatie over JSON Patch raadpleegt u de [Handleiding voor API-basisbeginselen](../../landing/api-fundamentals.md#json-patch).
+U kunt een gedeelte van een veldgroep bijwerken met een PATCH-aanvraag. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Als u een volledige bron wilt vervangen door nieuwe waarden in plaats van afzonderlijke velden bij te werken, raadpleegt u de sectie over [het vervangen van een gebiedsgroep gebruikend een verrichting van de PUT](#put).
+>Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [ het vervangen van een gebiedsgroep gebruikend een verrichting van de PUT ](#put).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /tenant/fieldgroups/{FIELD_GROUP_ID} 
@@ -587,15 +587,15 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van de veldgroep die u wilt bijwerken. |
+| `{FIELD_GROUP_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de veldgroep die u wilt bijwerken. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met de onderstaande voorbeeldaanvraag wordt het `description` van een bestaande veldgroep en voegt een nieuwe `propertyCity` veld.
+In de onderstaande voorbeeldaanvraag wordt de `description` van een bestaande veldgroep bijgewerkt en wordt een nieuw `propertyCity` -veld toegevoegd.
 
-De aanvraaginstantie heeft de vorm van een array, waarbij elk vermeld object een specifieke wijziging in een afzonderlijk veld vertegenwoordigt. Elk object bevat de uit te voeren bewerking (`op`), welk veld de bewerking moet worden uitgevoerd (`path`) en welke informatie in die operatie moet worden opgenomen (`value`).
+De aanvraaginstantie heeft de vorm van een array, waarbij elk vermeld object een specifieke wijziging in een afzonderlijk veld vertegenwoordigt. Elk voorwerp omvat uit te voeren verrichting (`op`), welk gebied de verrichting zou moeten worden uitgevoerd (`path`), en welke informatie in die verrichting (`value`) zou moeten worden omvat.
 
 ```SHELL
 curl -X PATCH \
@@ -623,9 +623,9 @@ curl -X PATCH \
       ]'
 ```
 
-**Antwoord**
+**Reactie**
 
-De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De `description` is bijgewerkt, en `propertyCountry` is toegevoegd onder `definitions`.
+De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. `description` is bijgewerkt en `propertyCountry` is toegevoegd onder `definitions` .
 
 ```JSON
 {
@@ -718,7 +718,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De `descr
 
 Soms is het nodig een veldgroep uit het schemaregister te verwijderen. Dit wordt gedaan door een verzoek van de DELETE met gebiedsgroep identiteitskaart uit te voeren die in de weg wordt verstrekt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
@@ -726,7 +726,7 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van de veldgroep die u wilt verwijderen. |
+| `{FIELD_GROUP_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de veldgroep die u wilt verwijderen. |
 
 {style="table-layout:auto"}
 
@@ -741,8 +741,8 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
-U kunt de verwijdering bevestigen door een [opzoekverzoek (GET)](#lookup) naar de veldgroep. U moet een `Accept` in de aanvraag, maar moet een HTTP-status 404 (Niet gevonden) ontvangen omdat de veldgroep uit de schemaregistratie is verwijderd.
+U kunt de schrapping bevestigen door het verzoek van de a [ raadpleging (GET) ](#lookup) aan de gebiedsgroep te proberen. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat de veldgroep uit de schemaregistratie is verwijderd.

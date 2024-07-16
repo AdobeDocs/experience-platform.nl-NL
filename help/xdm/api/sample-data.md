@@ -6,7 +6,7 @@ description: Het /sampledata eindpunt in de Registratie API van het Schema staat
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '311'
 ht-degree: 0%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 0%
 
 Om gegevens in Adobe Experience Platform in te voeren, moeten de indeling en de structuur van de gegevens voldoen aan een bestaand schema van het Experience Data Model (XDM). Afhankelijk van de ingewikkeldheid van het schema voor een bepaalde dataset, kan het moeilijk zijn om de nauwkeurige vorm van de gegevens te bepalen die de dataset op opneming verwacht.
 
-Met de `/sampledata` in de [!DNL Schema Registry] API, kunt u een voorbeeldobject voor om het even welk eerder gecreeerd schema produceren.
+Met het eindpunt `/sampledata` in de [!DNL Schema Registry] API kunt u een voorbeeldobject voor een eerder gemaakt schema genereren.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
-Het eindpunt van steekproefgegevens maakt deel uit van de verre procedurevraag (RPCs) die door wordt gesteund [!DNL Schema Registry]. Anders dan bij andere eindpunten in het deelvenster [!DNL Schema Registry] API, RPC-eindpunten vereisen geen extra headers zoals `Accept` of `Content-Type`en geen `CONTAINER_ID`. In plaats daarvan moeten ze de opdracht `/rpc` naamruimte, zoals wordt getoond in de API-aanroep hieronder.
+Het eindpunt van steekproefgegevens maakt deel uit van de verre procedurevraag (RPCs) die door [!DNL Schema Registry] wordt gesteund. In tegenstelling tot andere eindpunten in de [!DNL Schema Registry] API, vereisen RPC-eindpunten geen extra kopteksten zoals `Accept` of `Content-Type` en gebruiken ze geen `CONTAINER_ID` . In plaats daarvan moeten ze de naamruimte `/rpc` gebruiken, zoals wordt getoond in de API-aanroep hieronder.
 
 ## Voorbeeldgegevens voor een schema ophalen
 
 U kunt steekproefgegevens voor om het even welk schema binnen de Bibliotheek van het Schema terugwinnen door identiteitskaart van het schema in de weg van een verzoek van de GET aan het eindpunt te specificeren.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /rpc/sampledata/{SCHEMA_ID}
@@ -35,7 +35,7 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het schema u steekproefgegevens voor wilt produceren. |
+| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het schema waarvoor u voorbeeldgegevens wilt genereren. |
 
 {style="table-layout:auto"}
 
@@ -52,7 +52,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een voorbeeldgegevensobject voor het opgegeven schema.
 

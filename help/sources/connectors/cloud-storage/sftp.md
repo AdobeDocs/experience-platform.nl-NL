@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;SFTP;sftp
 solution: Experience Platform
-title: Overzicht van SFTP-bronconnector
+title: Overzicht SFTP Source-connector
 description: Leer hoe u een SFTP-server verbindt met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
 source-git-commit: 6c22f8243269bb304b12a4e4978ed141ed092c67
@@ -15,50 +15,50 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De [!DNL SFTP] server waarmee Adobe Experience Platform verbinding maakt, moet chunking kunnen ondersteunen, wat meerdere verbindingen met één bestand betekent. Als uw [!DNL SFTP] -server ondersteunt geen chunking, dan wordt mogelijk een fout weergegeven die voorkomt dat bestanden worden ingesloten.
+>De [!DNL SFTP] -server waarmee Adobe Experience Platform verbinding maakt, moet chunking kunnen ondersteunen. Dit betekent dat er meerdere verbindingen met één bestand zijn. Als uw [!DNL SFTP] -server geen ondersteuning biedt voor afknippen, wordt mogelijk een fout weergegeven die voorkomt dat bestanden worden ingesloten.
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform], en [!DNL Azure], zodat u uw gegevens van deze systemen kunt overbrengen.
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform] en [!DNL Azure] , zodat u gegevens van deze systemen kunt overbrengen.
 
-Opslagbronnen in de cloud kunnen uw eigen gegevens in [!DNL Platform] zonder dat het downloaden, opmaken of uploaden nodig is. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] kunt u gegevens van een FTP- of SFTP-server via batches inbrengen.
+Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar [!DNL Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met [!DNL Platform] kunt u gegevens van een FTP- of SFTP-server via batches inbrengen.
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
 
 ## Naamgevingsbeperkingen voor bestanden en mappen
 
 Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer u een naam geeft aan uw bestand of map voor cloudopslag.
 
 - Namen van mappen en bestandscomponenten mogen niet langer zijn dan 255 tekens.
-- Directory- en bestandsnamen mogen niet eindigen met een slash (`/`). Indien beschikbaar wordt deze automatisch verwijderd.
+- De folder en de dossiernamen kunnen niet met een voorwaartse schuine streep (`/`) beëindigen. Indien beschikbaar wordt deze automatisch verwijderd.
 - De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! ' ( ) ; @ & = + $ , % # [ ]`
-- De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?`.
-- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`zijn, hoewel geldig in NTFS-bestandsnamen, geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [RFC 2616, afdeling 2.2: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?` .
+- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [ RFC 2616, Sectie 2.2: BasisRegels ](https://www.ietf.org/rfc/rfc2616.txt) en [ RFC 3987 ](https://www.ietf.org/rfc/rfc3987.txt).
 - De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 
-## Stel een Base64-gecodeerde OpenSSH-privésleutel in voor [!DNL SFTP]
+## Een Base64-gecodeerde OpenSSH-privésleutel instellen voor [!DNL SFTP]
 
-De [!DNL SFTP] bronondersteuning voor verificatie met [!DNL Base64]-gecodeerde OpenSSH-persoonlijke sleutel. Zie de stappen hieronder voor informatie over hoe te om uw Base64-Gecodeerde OpenSSH privé sleutel te produceren en te verbinden [!DNL SFTP] naar Platform.
+De [!DNL SFTP] -bron ondersteunt verificatie met behulp van de [!DNL Base64] -gecodeerde OpenSSH-persoonlijke sleutel. Zie de stappen hieronder voor informatie over hoe te om uw Base64-Gecodeerde OpenSSH privé sleutel te produceren en [!DNL SFTP] met Platform te verbinden.
 
 ### [!DNL Windows] gebruikers
 
-Als u een [!DNL Windows] computer, opent u de **Start** en selecteert u **Instellingen**.
+Als u een [!DNL Windows] machine gebruikt, open omhoog het **2} menu van het Begin {en selecteer dan** Montages **.**
 
-![instellingen](../../images/tutorials/create/sftp/settings.png)
+![ montages ](../../images/tutorials/create/sftp/settings.png)
 
-Van de **Instellingen** menu dat wordt weergegeven, selecteert u **Apps**.
+Van het **menu van Montages** dat verschijnt, uitgezochte **Apps**.
 
-![apps](../../images/tutorials/create/sftp/apps.png)
+![ apps ](../../images/tutorials/create/sftp/apps.png)
 
-Selecteer vervolgens **Optionele functies**.
+Daarna, uitgezochte **Facultatieve eigenschappen**.
 
-![optionele functies](../../images/tutorials/create/sftp/optional-features.png)
+![ facultatief-eigenschappen ](../../images/tutorials/create/sftp/optional-features.png)
 
-Er wordt een lijst met optionele functies weergegeven. Indien **OpenSSH-client** al vooraf op uw computer is geïnstalleerd, wordt het onderdeel opgenomen in de **Geïnstalleerde functies** lijst onder **Optionele functies**.
+Er wordt een lijst met optionele functies weergegeven. Als **Cliënt OpenSSH** reeds vooraf geïnstalleerd in uw machine is, dan zal het in de **Geïnstalleerde 3} lijst van eigenschappen** Facultatieve eigenschappen **worden omvat.**
 
-![open-ssh](../../images/tutorials/create/sftp/open-ssh.png)
+![ open-ssh ](../../images/tutorials/create/sftp/open-ssh.png)
 
-Als deze niet is geïnstalleerd, selecteert u **Installeren** en open vervolgens **[!DNL Powershell]** en voer de volgende opdracht uit om uw persoonlijke sleutel te genereren:
+Als niet geïnstalleerd, selecteer **installeer** en open dan **[!DNL Powershell]** en stel het volgende bevel in werking om uw privé sleutel te produceren:
 
 ```shell
 PS C:\Users\lucy> ssh-keygen -t rsa -m pem
@@ -84,17 +84,17 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-Voer vervolgens de volgende opdracht uit terwijl u het bestandspad van de persoonlijke sleutel opgeeft om uw persoonlijke sleutel te coderen in [!DNL Base64]:
+Voer vervolgens de volgende opdracht uit terwijl u het bestandspad van de persoonlijke sleutel opgeeft om uw persoonlijke sleutel te coderen in [!DNL Base64] :
 
 ```shell
 C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
 ```
 
-Met de bovenstaande opdracht slaat u de opdracht [!DNL Base64]-gecodeerde persoonlijke sleutel in het bestandspad dat u hebt toegewezen. Vervolgens kunt u die persoonlijke sleutel gebruiken om te verifiëren naar [!DNL SFTP] en verbinding maken met Platform.
+Met de bovenstaande opdracht slaat u de [!DNL Base64] -gecodeerde persoonlijke sleutel op in het bestandspad dat u hebt toegewezen. Vervolgens kunt u die persoonlijke sleutel gebruiken om zich te verifiëren bij [!DNL SFTP] en verbinding te maken met Platform.
 
 ### [!DNL Mac] gebruikers
 
-Als u een [!DNL Mac], open **Terminal** en voer de volgende opdracht uit om de persoonlijke sleutel te genereren (in dit geval wordt de persoonlijke sleutel opgeslagen in `/Documents/id_rsa`):
+Als u a [!DNL Mac] gebruikt, open **Eind** en stel het volgende bevel in werking om de privé sleutel (in dit geval, zal de privé sleutel in `/Documents/id_rsa` worden bewaard) te produceren:
 
 ```shell
 ssh-keygen -t rsa -m pem -f ~/Documents/id_rsa
@@ -119,7 +119,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-Voer vervolgens de volgende opdracht uit om de persoonlijke sleutel te coderen in [!DNL Base64]:
+Voer vervolgens de volgende opdracht uit om de persoonlijke sleutel te coderen in [!DNL Base64] :
 
 ```shell
 base64 ~/Documents/id_rsa > ~/Documents/id_rsa_base64
@@ -130,7 +130,7 @@ cat ~/Documents/id_rsa_base64
 LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUJGd0FBQUFkemMyZ3RjbgpOaEFBQUFBd0VBQVFBQUFRRUF0cWFYczlXOUF1ZmtWazUwSXpwNXNLTDlOMU9VYklaYXVxbVM0Q0ZaenI1NjNxUGFuN244CmFxZWdvQTlCZnVnWDJsTVpGSFl5elEzbnp6NXdXMkdZa1hkdjFjakd0elVyNyt1NnBUeWRneGxrOGRXZWZsSzBpUlpYWW4KVFRwS0E5c2xXaHhjTXg3R2x5ejdGeDhWSzI3MmdNSzNqY1d1Q0VIU3lLSFR5SFFwekw0MEVKbGZJY1RGR1h1dW1LQjI5SwpEakhwT1grSDdGcG5Gd1pabTA4Uzc2UHJveTVaMndFalcyd1lYcTlyUDFhL0E4ejFoM1ZLdllzcG53c2tCcHFQSkQ1V3haCjczZ3M2OG9sVllIdnhWajNjS3ZsRlFqQlVFNWRNUnB2M0I5QWZ0SWlrYmNJeUNDaXV3UnJmbHk5eVNPQ2VlSEc0Z2tUcGwKL3V4YXNOT0h1d0FBQThqNnF6R1YrcXN4bFFBQUFBZHpjMmd0Y25OaEFBQUJBUUMycHBlejFiMEM1K1JXVG5Rak9ubXdvdgowM1U1UnNobHE2cVpMZ0lWbk92bnJlbzlxZnVmeHFwNkNnRDBGKzZCZmFVeGtVZGpMTkRlZlBQbkJiWVppUmQyL1Z5TWEzCk5TdnY2N3FsUEoyREdXVHgxWjUrVXJTSkZsZGlkTk9rb0QyeVZhSEZ3ekhzYVhMUHNYSHhVcmJ2YUF3cmVOeGE0SVFkTEkKb2RQSWRDbk12alFRbVY4aHhNVVplNjZZb0hiMG9PTWVrNWY0ZnNXbWNYQmxtYlR4THZvK3VqTGxuYkFTTmJiQmhlcjJzLwpWcjhEelBXSGRVcTlpeW1mQ3lRR21vOGtQbGJGbnZlQ3pyeWlWVmdlL0ZXUGR3cStVVkNNRlFUbDB4R20vY0gwQiswaUtSCnR3aklJS0s3Qkd0K1hMM0pJNEo1NGNiaUNST21YKzdGcXcwNGU3QUFBQUF3RUFBUUFBQVFBcGs0WllzMENSRnNRTk9WS0sKYWxjazlCVDdzUlRLRjFNenhrSGVydmpJYk9kL0lvRXpkcHlVa28rbm41RmpGK1hHRnNCUXZnOFdTaUlJTk1oU3BNYWI1agpvWXlka2gvd0ovWElOaDlZaE5QVXlURi9NNkFnMkNYd21KS2RxN1VKWjZyNjloV3V0VVN6U05QbkVYWTZLc29GeVUwTEFvCko0OHJMT1pMZldtMHFhWDBLNUgzNmJPaHFXSWJwMDNoZk94eno5M0MrSDM5MFJkRkp4bzJVZ0FVY3UvdHREb0REVldBdmEKVkVyMWEzak9LenVHbThrK21WeXpPZERjVFY4ckZIT0pwRnRBU3l6Q24yVld1MjV0TWtrcGRPRjNKcVdMZHdOY3loeG1URApXZGVDNWh4V0Fiano0WDZ5WXpHcFcwTmptVkFoWUVVZGNBSVlXWWM3OGEvQkFBQUFnRm8wakl4aGhwZkJ6QjF6b09FMDJBClpjTC9hcUNuYysrdmJ1a2V0aFg5Zzhlb0xQMTQyeUgzdlpLczl3c1RtbVVsZ0prZURaN2hUcklwOGY2eEwzdDRlMXByY1kKb2ZLd0gwckNGOTFyaldPbGZOUmxEempoR1NTTEVMczZoNlNzMEdBQXE2Z0ZQTVF2dTB4TDlQUTlGQ21YZVVKazJpRm1MWgpEWWJGc0NyVUxEQUFBQWdRRGF0a1pMamJaSTBFM0ZuY2dTOVF5Y3lVWmtkZ1dVNjBQcG9ud3BMQXdUdHRpOG1EQXE5cHYwClEvUlk1WE9UeGF3VXNHa0tYMjNtV1BYR0grdUlBSzhrelVVM2dGM1dRWGVkTWw4NHVCVFZCTEtUdStvVVAvZmIvMEE0dE0KSE9BSythbXZPMkZuYzFiSmVwd05USTE2cjZXWk9sZWV2ZklJQVpXcEgxVVpIdkVRQUFBSUVBMWNwcStDNUVXSFJwbnVPZQpiNHE4T0tKTlJhSUxIRUN6U0twWlFpZDFhRmJYWlVKUXpIQU85YzhINVZMcjBNUjFkcW1ORkNja2ZsZzI2Y3BEUEl3TjBYCm5HMFBxcmhKbXp0U3ZQZ3NGdkNPallncXF6U0RYUjkxd1JQTEN5cU8zcGMyM2kzZnp2WkhtMGhIdWdoNVJqV0loUlFZVkwKZUpDWHRqM08vY3p1SWdzQUFBQVJkbkpoYm1GQWRuSmhibUV0YldGalQxTUJBZz09Ci0tLS0tRU5EIE9QRU5TU0ggUFJJVkFURSBLRVktLS0tLQo=
 ```
 
-Eenmaal uw [!DNL Base64]-encoded private key wordt opgeslagen in de map die u hebt toegewezen, dan moet u de inhoud van het bestand met de openbare sleutel toevoegen aan een nieuwe regel in het dialoogvenster [!DNL SFTP] door de host geautoriseerde sleutels. Voer de volgende opdracht uit op de opdrachtregel:
+Nadat de door [!DNL Base64] gecodeerde persoonlijke sleutel is opgeslagen in de opgegeven map, moet u de inhoud van het bestand met de openbare sleutel toevoegen aan een nieuwe regel in de door de host geautoriseerde toetsen van [!DNL SFTP] . Voer de volgende opdracht uit op de opdrachtregel:
 
 ```shell
 cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
@@ -146,9 +146,9 @@ more ~/.ssh/authorized_keys
 
 >[!IMPORTANT]
 >
->Gebruikers moeten de interactieve verificatie van het toetsenbord uitschakelen in de configuratie van de SFTP-server voordat ze verbinding maken. Als u de instelling uitschakelt, kunnen wachtwoorden handmatig worden ingevoerd in plaats van via een service of programma. Zie de [Component Pro-document](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) voor meer informatie over interactieve verificatie van het toetsenbord.
+>Gebruikers moeten de interactieve verificatie van het toetsenbord uitschakelen in de configuratie van de SFTP-server voordat ze verbinding maken. Als u de instelling uitschakelt, kunnen wachtwoorden handmatig worden ingevoerd in plaats van via een service of programma. Zie het [ Pro document van de Component ](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) voor meer informatie over Interactieve Authentificatie van het Toetsenbord.
 
-De onderstaande documentatie biedt informatie over hoe u een SFTP-server kunt verbinden met [!DNL Platform] API&#39;s of de gebruikersinterface gebruiken:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen een SFTP-server en [!DNL Platform] via API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 

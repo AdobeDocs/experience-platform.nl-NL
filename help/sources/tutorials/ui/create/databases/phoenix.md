@@ -4,50 +4,50 @@ description: Leer hoe u uw Phoenix-account koppelt en gegevens uit uw Phoenix-da
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
 source-git-commit: b7e42eb180b8f16344afedadf763c33bcf22fa35
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 1%
+source-wordcount: '582'
+ht-degree: 0%
 
 ---
 
-# Verbind uw [!DNL Phoenix] account aan Experience Platform met behulp van de gebruikersinterface
+# Sluit uw [!DNL Phoenix] -account aan op het Experience Platform via de gebruikersinterface
 
-Deze zelfstudie bevat stappen voor het tot stand brengen van een verbinding met uw [!DNL Phoenix] account en gegevens van uw [!DNL Phoenix] database naar Experience Platform.
+Deze zelfstudie bevat stappen voor het tot stand brengen van een verbinding tussen uw [!DNL Phoenix] -account en het naar Experience Platform brengen van gegevens uit uw [!DNL Phoenix] -database.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u al een geverifieerde [!DNL Phoenix] -account, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [het vormen van een gegevensstroom voor een gegevensbestand](../../dataflow/databases.md).
+Als u reeds een voor authentiek verklaarde [!DNL Phoenix] rekening hebt, dan kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow voor een gegevensbestand ](../../dataflow/databases.md).
 
 ### Vereiste referenties verzamelen
 
-Voor toegang tot uw [!DNL Phoenix] account op Experience Platform, moet u de volgende waarden opgeven:
+Als u toegang wilt krijgen tot uw [!DNL Phoenix] -account op Experience Platform, moet u de volgende waarden opgeven:
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Host | Het IP adres of hostnaam van [!DNL Phoenix] server. |
-| Poort | De TCP-poort die de [!DNL Phoenix] server gebruikt om naar clientverbindingen te luisteren. Als u verbinding maakt met [!DNL Azure HDInsights]en geeft u de poort op als 443. Als deze parameter niet wordt opgegeven, wordt de standaardwaarde 8765 gebruikt. |
-| HTTP-pad | De gedeeltelijke URL die overeenkomt met de [!DNL Phoenix] server. Geef /hbasephoenix0 op als u de [!DNL Azure HDInsights] cluster. |
-| Gebruikersnaam | De gebruikersnaam die u gebruikt om toegang te krijgen tot de [!DNL Phoenix] server. |
+| Host | Het IP-adres of de hostnaam van de [!DNL Phoenix] -server. |
+| Poort | De TCP-poort die de [!DNL Phoenix] -server gebruikt om te luisteren naar clientverbindingen. Als u verbinding maakt met [!DNL Azure HDInsights] , geeft u de poort op als 443. Als deze parameter niet wordt opgegeven, wordt de standaardwaarde 8765 gebruikt. |
+| HTTP-pad | De gedeeltelijke URL die overeenkomt met de [!DNL Phoenix] -server. Geef /hbasephoenix0 op als u de [!DNL Azure HDInsights] -cluster gebruikt. |
+| Gebruikersnaam | De gebruikersnaam die u gebruikt voor toegang tot de [!DNL Phoenix] -server. |
 | Wachtwoord | Het wachtwoord dat overeenkomt met de gebruiker. |
 | SSL inschakelen | Een schakeloptie waarmee wordt opgegeven of de verbindingen met de server via SSL zijn gecodeerd. |
 
-Raadpleeg voor meer informatie over aan de slag gaan [dit [!DNL Phoenix] document](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
+Voor meer informatie over begonnen worden, verwijs naar [ dit  [!DNL Phoenix]  document ](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om verbinding te maken met uw [!DNL Phoenix] aan Experience Platform.
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL Phoenix] -account te verbinden met het Experience Platform.
 
-## Verbind uw [!DNL Phoenix] account
+## Sluit uw [!DNL Phoenix] -account aan
 
-Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot de bronwerkruimte toegang te hebben. De *[!UICONTROL Catalog]* het scherm toont een verscheidenheid van bronnen beschikbaar in de catalogus van bronnen van het Experience Platform.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte Bronnen. In het scherm *[!UICONTROL Catalog]* worden diverse bronnen weergegeven die beschikbaar zijn in de catalogus met bronnen in het Experience Platform.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook een specifieke bron zoeken met de zoekoptie.
 
-Selecteren **[!UICONTROL Databases]** in de lijst met categorieën bronnen en selecteer vervolgens **[!UICONTROL Add data]** van de [!DNL Phoenix] kaart.
+Selecteer **[!UICONTROL Databases]** in de lijst met categorieën bronnen en kies vervolgens **[!UICONTROL Add data]** in de [!DNL Phoenix] -kaart.
 
 >[!TIP]
 >
@@ -55,28 +55,28 @@ Selecteren **[!UICONTROL Databases]** in de lijst met categorieën bronnen en se
 > 
 >* **[!UICONTROL Add data]** betekent dat er bestaande geverifieerde accounts zijn gekoppeld aan de geselecteerde bron.
 >
->* **[!UICONTROL Set up]** Dit betekent dat u gebruikersgegevens moet opgeven en een nieuw account moet verifiëren om de geselecteerde bron te kunnen gebruiken.
+>* **[!UICONTROL Set up]** betekent dat u gebruikersgegevens moet opgeven en een nieuw account moet verifiëren om de geselecteerde bron te kunnen gebruiken.
 
-![De broncatalogus in de gebruikersinterface van het Experience Platform met de Phoenix-bronkaart geselecteerd.](../../../../images/tutorials/create/phoenix/catalog.png)
+![ de broncatalogus op het Experience Platform UI met de Phoenix geselecteerde bronkaart.](../../../../images/tutorials/create/phoenix/catalog.png)
 
-De **[!UICONTROL Connect to Phoenix]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to Phoenix]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 >[!BEGINTABS]
 
->[!TAB Een bestaande Phoenix-account gebruiken]
+>[!TAB  Gebruik een bestaande rekening Phoenix ]
 
-Als u een bestaande account wilt gebruiken, selecteert u [!UICONTROL Existing account] en selecteer vervolgens de account die u wilt gebruiken in de lijst die wordt weergegeven. Selecteer [!UICONTROL Next] om verder te gaan.
+Als u een bestaande account wilt gebruiken, selecteert u [!UICONTROL Existing account] en selecteert u vervolgens de account die u wilt gebruiken in de lijst die wordt weergegeven. Als u klaar bent, selecteert u [!UICONTROL Next] om door te gaan.
 
-![Een lijst met geverifieerde Phoenix-databaseaccounts die al in uw organisatie bestaan.](../../../../images/tutorials/create/phoenix/existing.png)
+![ een lijst van voor authentiek verklaarde Phoenix- gegevensbestandrekeningen die reeds in uw organisatie bestaan.](../../../../images/tutorials/create/phoenix/existing.png)
 
->[!TAB Een nieuwe Phoenix-account maken]
+>[!TAB  creeer een nieuwe rekening Phoenix ]
 
-Als u een nieuwe account wilt gebruiken, selecteert u [!UICONTROL New account] en geef een naam, beschrijving en uw [!DNL Phoenix] verificatiegegevens. Selecteer [!UICONTROL Connect to source] en wacht een paar seconden tot de nieuwe verbinding tot stand is gebracht.
+Als u een nieuwe account wilt gebruiken, selecteert u [!UICONTROL New account] en geeft u een naam, beschrijving en verificatiegegevens van [!DNL Phoenix] op. Selecteer [!UICONTROL Connect to source] als u klaar bent en wacht een paar seconden totdat de nieuwe verbinding tot stand is gebracht.
 
-![De nieuwe accountinterface waarin u verificatiegegevens kunt opgeven en een Phoenix-account kunt maken.](../../../../images/tutorials/create/phoenix/new.png)
+![ de nieuwe rekeningsinterface waar u authentificatiegeloofsbrieven kunt verstrekken en een rekening tot stand brengen Phoenix.](../../../../images/tutorials/create/phoenix/new.png)
 
 >[!ENDTABS]
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Phoenix] account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens naar het Experience Platform te brengen](../../dataflow/databases.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Phoenix] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](../../dataflow/databases.md) te brengen.

@@ -13,73 +13,73 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Bepaalde functies voor querylogbestanden bevinden zich momenteel in een beperkte versie en zijn niet beschikbaar voor alle klanten. De gebruikersinterface kan er anders uitzien zonder een bewerkingspictogram. Ook, kan het proces om een vraagnaam te selecteren aan de Redacteur van de Vraag in plaats van het [!UICONTROL Query log details] weergeven.
+>Bepaalde functies voor querylogbestanden bevinden zich momenteel in een beperkte versie en zijn niet beschikbaar voor alle klanten. De gebruikersinterface kan er anders uitzien zonder een bewerkingspictogram. Het selecteren van een querynaam kan ook naar de Query Editor gaan in plaats van naar de weergave [!UICONTROL Query log details] .
 
-Adobe Experience Platform houdt een logboek bij van alle vraaggebeurtenissen die door zowel API als UI voorkomen. Deze informatie is beschikbaar in de gebruikersinterface van de Query-service via de [!UICONTROL Logs] tab.
+Adobe Experience Platform houdt een logboek bij van alle vraaggebeurtenissen die door zowel API als UI voorkomen. Deze informatie is beschikbaar in de gebruikersinterface van de Query-service op het tabblad [!UICONTROL Logs] .
 
-De logboekdossiers worden geproduceerd automatisch door om het even welke vraaggebeurtenis en bevatten informatie met inbegrip van gebruikte SQL, de status van de vraag, hoe lang het duurde, en laatste runtime. U kunt de gegevens van het vraaglogboek als krachtig hulpmiddel voor het oplossen van problemeninefficiënt of probleemvragen gebruiken. Meer uitvoerige logboekinformatie wordt gehouden als deel van de eigenschap van het controlelogboek en kan in worden gevonden [documentatie van auditlogboek](../../landing/governance-privacy-security/audit-logs/overview.md).
+De logboekdossiers worden geproduceerd automatisch door om het even welke vraaggebeurtenis en bevatten informatie met inbegrip van gebruikte SQL, de status van de vraag, hoe lang het duurde, en laatste runtime. U kunt de gegevens van het vraaglogboek als krachtig hulpmiddel voor het oplossen van problemeninefficiënt of probleemvragen gebruiken. De uitvoerigere logboekinformatie wordt gehouden als deel van de eigenschap van het controlelogboek en kan in de [ documentatie van het controlelogboek ](../../landing/governance-privacy-security/audit-logs/overview.md) worden gevonden.
 
 ## Zoeklogs controleren {#check-query-logs}
 
-Selecteer [!UICONTROL Queries] om naar de werkruimte van de Dienst van de Vraag te navigeren en te selecteren [!UICONTROL Log] uit de beschikbare opties.
+Als u de querylogs wilt controleren, selecteert u [!UICONTROL Queries] om naar de werkruimte van de Query-service te navigeren en selecteert u [!UICONTROL Log] in de beschikbare opties.
 
 >[!NOTE]
 >
->Zowel worden de systeemvragen als de dashboardvragen uitgesloten door gebrek. Zie de [filters](#filter-logs) voor informatie over hoe u de weergegeven logboeken kunt verfijnen op basis van uw instellingen.
+>Zowel worden de systeemvragen als de dashboardvragen uitgesloten door gebrek. Zie de [ filters ](#filter-logs) sectie voor informatie over hoe te om de getoonde logboeken te verfijnen die op uw montages worden gebaseerd.
 
-![De platforminterface met query&#39;s en log gemarkeerd.](../images/ui/query-log/logs.png)
+![ Platform UI met de Vragen en het Logboek benadrukte.](../images/ui/query-log/logs.png)
 
 ## Aanpassen en zoeken {#customize-and-search}
 
-Logboeken van de Dienst van de vraag worden voorgesteld in een klantgerichte lijstformaat. Als u de tabelkolommen wilt aanpassen, selecteert u het pictogram Instellingen (![Een instellingenpictogram.](../images/ui/query-log/settings-icon.png)) rechts van het scherm. A [!UICONTROL Customize Table] wordt weergegeven waar u elke kolom kunt uitschakelen.
+Logboeken van de Dienst van de vraag worden voorgesteld in een klantgerichte lijstformaat. Om de lijstkolommen aan te passen, selecteer het montagespictogram (![ A montagespictogram.](../images/ui/query-log/settings-icon.png) ) rechts van het scherm. Er wordt een dialoogvenster [!UICONTROL Customize Table] weergegeven waarin u de selectie van elke kolom kunt opheffen.
 
 U kunt ook naar logboeken zoeken die betrekking hebben op specifieke vraagmalplaatjes door de malplaatjenaam in het onderzoeksgebied te typen.
 
-![De werkruimte van het Logboek van Vragen met de onderzoeksbar en beheert benadrukte dropdown van de kolomlijst.](../images/ui/query-log/customize-logs.png)
+![ de werkruimte van het Logboek van Vragen met de onderzoeksbar en beheert benadrukte dropdown van de kolomlijst.](../images/ui/query-log/customize-logs.png)
 
-A [beschrijving voor elk van de kolommen van de logboeklijst](./overview.md#log) vindt u in het gedeelte Logboek van het overzicht van de Query-service.
+A [ beschrijving voor elk van de kolommen van de logboeklijst ](./overview.md#log) kan in de sectie van het Logboek van het overzicht van de Dienst van de Vraag worden gevonden.
 
 ## Loggegevens detecteren
 
 Elke rij vertegenwoordigt logboekgegevens voor een vraaglooppas verbonden aan een vraagmalplaatje. Selecteer een rij in de tabel om de rechterzijbalk te vullen met loggegevens voor die uitvoering.
 
-![De werkruimte van het Logboek van Vragen met een geselecteerde rij en de logboekgegevens in juiste sidebar benadrukt.](../images/ui/query-log/log-details.png)
+![ de werkruimte van het Logboek van Vragen met een geselecteerde rij en de logboekgegevens in juiste benadrukte sidebar.](../images/ui/query-log/log-details.png)
 
 In het deelvenster met loggegevens kunt u allerlei handelingen uitvoeren. U kunt de vraag als CTAS in werking stellen, die tot een nieuwe outputdataset leidt, de volledige SQL vraag zien of kopiëren die in de looppas werd gebruikt, of de vraag schrappen.
 
 >[!NOTE]
 >
->De optie om [!UICONTROL Run as CTAS] is alleen beschikbaar voor een SELECT-query.
+>De optie voor [!UICONTROL Run as CTAS] is alleen beschikbaar voor een SELECT-query.
 
-![De werkruimte van het Logboek van Vragen met een geselecteerde rij, Looppas als CTAS, schrapt vraag en het benadrukte pictogram van het exemplaar SQL.](../images/ui/query-log/edit-output-dataset.png)
+![ de werkruimte van het Logboek van Vragen met een geselecteerde rij, Looppas als CTAS, de vraag van de Schrapping en het benadrukte pictogram van exemplaar SQL.](../images/ui/query-log/edit-output-dataset.png)
 
 >[!IMPORTANT]
 >
 >Bepaalde functies voor querylogbestanden bevinden zich momenteel in een beperkte versie en zijn niet beschikbaar voor alle klanten.
 
-U kunt ook een naam voor een querysjabloon selecteren in het menu [!UICONTROL Name] om rechtstreeks naar de [!UICONTROL Query log details] weergeven.
+U kunt ook een naam voor een querysjabloon selecteren in de kolom [!UICONTROL Name] om rechtstreeks naar de weergave [!UICONTROL Query log details] te navigeren.
 
 >[!NOTE]
 >
 >Als de query is gemaakt met de API en er tijdens de initialisatie geen sjabloonnaam is opgegeven, worden in plaats daarvan de eerste tientallen tekens van de SQL-query weergegeven.
 
-![De gedetailleerde weergave van het logboek Query.](../images/ui/query-log/query-log-details.png)
+![ de mening van de het logboekdetails van de Vraag.](../images/ui/query-log/query-log-details.png)
 
 ## Logboeken bewerken {#edit-logs}
 
-Naast de sjabloonnaam van elke rij of het SQL-fragment bevindt zich een potloodpictogram (![Een potloodpictogram.](../images/ui/query-log/edit-icon.png)) die u kunt gebruiken om naar de Redacteur van de Vraag te navigeren. De vraag wordt dan pre-bevolkt in de redacteur voor het uitgeven.
+Naast de het malplaatjenaam van elke rij of SQL fragment is een potloodpictogram (![ het potloodpictogram van A.](../images/ui/query-log/edit-icon.png)) die u kunt gebruiken om naar de Redacteur van de Vraag te navigeren. De vraag wordt dan pre-bevolkt in de redacteur voor het uitgeven.
 
-![De werkruimte van het Logboek van Vragen met een benadrukt potloodpictogram.](../images/ui/query-log/edit-query.png)
+![ de werkruimte van het Logboek van Vragen met een benadrukt potloodpictogram.](../images/ui/query-log/edit-query.png)
 
 ## Filterlogs {#filter-logs}
 
-U kunt de lijst met querylogbestanden filteren op basis van verschillende instellingen. Selecteer het filterpictogram (![Het filterpictogram.](../images/ui/query-log/filter-icon.png)) linksboven in de werkruimte om een set filteropties te openen in de linkertrack.
+U kunt de lijst met querylogbestanden filteren op basis van verschillende instellingen. Selecteer het filterpictogram (![ het filterpictogram.](../images/ui/query-log/filter-icon.png) ) linksboven in de werkruimte om een set filteropties te openen in de linkerrails.
 
-![De werkruimte van het Logboek van Vragen met het benadrukte filterpictogram.](../images/ui/query-log/log-filter.png)
+![ de werkruimte van het Logboek van Vragen met het benadrukte filterpictogram.](../images/ui/query-log/log-filter.png)
 
 De lijst met beschikbare filters wordt weergegeven.
 
-![De werkruimte van het Logboek van Vragen met de getoonde en benadrukte filteropties.](../images/ui/query-log/log-filter-settings.png)
+![ de werkruimte van het Logboek van Vragen met de getoonde en benadrukte filteropties.](../images/ui/query-log/log-filter-settings.png)
 
 In de volgende tabel vindt u een beschrijving van elk filter.
 
@@ -87,21 +87,21 @@ In de volgende tabel vindt u een beschrijving van elk filter.
 | ------ | ----------- |
 | [!UICONTROL Exclude dashboard queries] | Dit checkbox wordt toegelaten door gebrek en sluit logboeken uit die door de vragen worden geproduceerd die voor het produceren van inzichten worden gebruikt. Deze vragen zijn systeem geproduceerd en bedekken de verslagen van gebruiker geproduceerde logboeken noodzakelijk voor controle, het beheer en het oplossen van problemen. Schakel het selectievakje uit als u door het systeem gegenereerde logbestanden wilt weergeven. |
 | [!UICONTROL Exclude system queries] | Dit selectievakje is standaard ingeschakeld en sluit logbestanden uit die door het systeem zijn gegenereerd. Door het systeem gegenereerde query&#39;s omvatten vaak achtergrondtaken of onderhoudsbewerkingen die niet relevant kunnen zijn voor gebruikersbewaking, beheer of probleemoplossing. Als u door het systeem gegenereerde logboeken moet inspecteren, schakelt u dit selectievakje uit om deze in de logweergave op te nemen. |
-| [!UICONTROL Start date] | Om de logboeken voor vragen te filtreren die tijdens een specifieke periode werden gecreeerd, plaats [!UICONTROL Start] en [!UICONTROL End] in de [!UICONTROL Start date] sectie. |
-| [!UICONTROL Completed date] | Om de logboeken voor vragen te filtreren die tijdens een specifieke periode werden voltooid, plaats [!UICONTROL Start] en [!UICONTROL End] in de [!UICONTROL Completed date] sectie. |
-| [!UICONTROL Status] | Filterlogboeken op basis van de [!UICONTROL Status] Selecteer het juiste keuzerondje in de query. Tot de beschikbare opties behoren [!UICONTROL Submitted], [!UICONTROL In progress], [!UICONTROL Success], en [!UICONTROL Failed]. U kunt logbestanden alleen filteren op basis van één statusvoorwaarde tegelijk. |
-| [!UICONTROL Client] | Als u logboeken wilt filteren op basis van de gebruikte queryclient, voert u een van de volgende toegestane waarden in het vrije tekstveld in: `API`, `Adobe Query Service UI`, of `QsAccel`. |
-| [!UICONTROL My queries] | Gebruik de [!UICONTROL My queries] knevel om de logboeken voor vragen te filtreren die door u worden uitgevoerd. |
-| [!UICONTROL query log ID] | Als u wilt filteren op basis van de unieke log-id van een query, voert u de log-id in het vrije tekstveld in. Deze informatie is te vinden in het [!UICONTROL Log details]. |
+| [!UICONTROL Start date] | Als u de logs wilt filteren op query&#39;s die tijdens een bepaalde periode zijn gemaakt, stelt u de datums [!UICONTROL Start] en [!UICONTROL End] in de sectie [!UICONTROL Start date] in. |
+| [!UICONTROL Completed date] | Als u de logbestanden wilt filteren op query&#39;s die tijdens een bepaalde periode zijn voltooid, stelt u de datums [!UICONTROL Start] en [!UICONTROL End] in de sectie [!UICONTROL Completed date] in. |
+| [!UICONTROL Status] | Als u logbestanden wilt filteren op basis van de [!UICONTROL Status] van de query, selecteert u het desbetreffende keuzerondje. De beschikbare opties zijn [!UICONTROL Submitted] , [!UICONTROL In progress] , [!UICONTROL Success] en [!UICONTROL Failed] . U kunt logbestanden alleen filteren op basis van één statusvoorwaarde tegelijk. |
+| [!UICONTROL Client] | Als u logbestanden wilt filteren op basis van de gebruikte queryclient, voert u een van de volgende toegestane waarden in het vrije tekstveld in: `API`, `Adobe Query Service UI` of `QsAccel` . |
+| [!UICONTROL My queries] | Gebruik de schakeloptie [!UICONTROL My queries] om de logbestanden te filteren voor query&#39;s die door u worden uitgevoerd. |
+| [!UICONTROL query log ID] | Als u wilt filteren op basis van de unieke log-id van een query, voert u de log-id in het vrije tekstveld in. Deze informatie vindt u in [!UICONTROL Log details] . |
 
 Alle toegepaste filters worden weergegeven boven de gefilterde logresultaten.
 
-![Het tabblad Logboek van de werkruimte Query&#39;s, met de lijst met toegepaste filters gemarkeerd.](../images/ui/query-log/applied-log-filters.png)
+![ het lusje van het Logboek van de werkruimte van Vragen, met de lijst van toegepaste benadrukte filters.](../images/ui/query-log/applied-log-filters.png)
 
 ## Volgende stappen
 
 Door dit document te lezen, hebt u nu een beter inzicht in hoe de vraaglogboeken in de Dienst van de Vraag UI worden betreden en worden gebruikt.
 
-Zie de [Overzicht van gebruikersinterface](./overview.md)of de [API-handleiding voor query-service](../api/getting-started.md) om meer over de mogelijkheden van de Dienst van de Vraag te leren.
+Zie het [ overzicht UI ](./overview.md), of de [ gids van de Dienst API van de Vraag ](../api/getting-started.md) om meer over de mogelijkheden van de Dienst van de Vraag te leren.
 
-Zie de [document met query&#39;s controleren](./monitor-queries.md) leren hoe de Dienst van de Vraag de zichtbaarheid van geplande vraaglooppas verbetert.
+Zie het [ document van monitorvragen ](./monitor-queries.md) leren hoe de Dienst van de Vraag de zichtbaarheid van geplande vraaglooppas verbetert.

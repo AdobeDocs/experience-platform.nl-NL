@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # [!UICONTROL Balance Transfers] schemaveldgroep
 
-[!UICONTROL Balance Transfers] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). De veldgroep bevat één `personalFinances.balanceTransfers` object maken naar een schema dat details vastlegt over een overdracht van een financieel saldo tussen rekeningen.
+[!UICONTROL Balance Transfers] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md). De veldgroep biedt één `personalFinances.balanceTransfers` -object aan een schema, waarin details worden vastgelegd over een overdracht van een financiële balans tussen accounts.
 
 ![](../../images/field-groups/balance-transfers.png)
 
@@ -23,4 +23,4 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json).

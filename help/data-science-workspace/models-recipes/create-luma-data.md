@@ -7,21 +7,21 @@ description: Deze zelfstudie biedt u de voorwaarden en elementen die vereist zij
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
 
 # Maak de schema&#39;s en gegevenssets van het model Luminantie
 
-Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere onderdelen [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] zelfstudies. Zodra volledig, zullen de volgende schema&#39;s en datasets aan u en uw organisatie beschikbaar zijn.
+Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere zelfstudies van [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] . Zodra volledig, zullen de volgende schema&#39;s en datasets aan u en uw organisatie beschikbaar zijn.
 
 **Schema&#39;s:**
 
 - Luminagegegevensschema
 - Score resultatenschema van pop-upmodel
 
-**Gegevenssets:**
+**Datasets:**
 
 - Luminagewebgegevensset
 - Gegevensset betreffende de opleiding van het propensatiemodel
@@ -30,7 +30,7 @@ Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle a
 
 ## De middelen downloaden {#assets}
 
-In de volgende zelfstudie wordt een aangepast model voor de koopsterkte van luminantie gebruikt. Voordat u verdergaat, [de vereiste middelen downloaden](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) ZIP-map. Deze map bevat:
+In de volgende zelfstudie wordt een aangepast model voor de koopsterkte van luminantie gebruikt. Alvorens te werk te gaan, [ download de vereiste activa ](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) zip omslag. Deze map bevat:
 
 - De laptop met koopkrachtmodel
 - Een notitieboekje dat wordt gebruikt om gegevens aan een opleiding en het scoren dataset (een ondergroep van de Webgegevens van de Luma) in te voeren
@@ -43,7 +43,7 @@ In de volgende zelfstudie wordt een aangepast model voor de koopsterkte van lumi
 
 ### Maak het schema met webinhoud Luma-gegevens en voer de gegevens in
 
-Om een model te creëren, moet u een dataset in Platform hebben die wordt gebruikt om uw model te trainen en te scoren. De volgende videozelfstudie van de [Cursus over wetenschapswerkruimte](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) begeleidt u door het creëren van het schema van de Luma en het opnemen van de gegevens die door het model van de koopkrachtsverhouding worden gebruikt.
+Om een model te creëren, moet u een dataset in Platform hebben die wordt gebruikt om uw model te trainen en te scoren. Het volgende videoleerprogramma van de [ cursus van Workspace van de Wetenschap van Gegevens ](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) begeleidt u door het creëren van het schema van de Luma en het opnemen van de gegevens die door het model van de koopkrachtbron worden gebruikt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 
@@ -55,6 +55,6 @@ Als u het recept builder-notebook wilt gebruiken of de API wilt gebruiken om een
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes de vereiste schema&#39;s en datasets voor het model van de Luminantiedreiging gecreeerd. U kunt nu doorgaan met de volgende zelfstudie en het model maken met de [recept builder-notebook](../jupyterlab/create-a-model.md) zelfstudie.
+Door deze zelfstudie te volgen, hebt u met succes de vereiste schema&#39;s en datasets voor het model van de Luminantiedreiging gecreeerd. U bent nu bereid om aan het volgende leerprogramma verder te gaan en het model tot stand te brengen gebruikend het [ recept builder notitieboekje ](../jupyterlab/create-a-model.md) leerprogramma.
 
-Bovendien kunt u de gegevens verkennen met behulp van de geleverde EDA-laptop (Exploratory Data Analysis). Deze laptop kan worden gebruikt om inzicht te krijgen in de patronen in de Luminagegegevens, de gegevenshygiëne te controleren en een overzicht te geven van de relevante gegevens voor het voorspellende-heimodel. Meer over de Verkennende Analyse van Gegevens leren, bezoek [EDA-documentatie](../jupyterlab/eda-notebook.md).
+Bovendien kunt u de gegevens verkennen met behulp van de geleverde EDA-laptop (Exploratory Data Analysis). Deze laptop kan worden gebruikt om inzicht te krijgen in de patronen in de Luminagegegevens, de gegevenshygiëne te controleren en een overzicht te geven van de relevante gegevens voor het voorspellende-heimodel. Meer over de Verkennende Analyse van Gegevens leren, bezoek de [ documentatie EDA ](../jupyterlab/eda-notebook.md).

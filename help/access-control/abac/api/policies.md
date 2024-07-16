@@ -18,21 +18,21 @@ ht-degree: 0%
 >
 >Als een gebruikerstoken wordt overgegaan, dan moet de gebruiker van het teken een &quot;org admin&quot;rol voor gevraagde org hebben.
 
-Het beleid van de toegangscontrole is verklaringen die attributen samenbrengen om toelaatbare en ontoelaatbare acties te vestigen. Dit beleid kan of lokaal of globaal zijn, en kan ander beleid met voeten treden. De `/policies` eindpunt in op attribuut-gebaseerde toegangsbeheer API staat u toe om beleid, met inbegrip van informatie over de regels programmatically te beheren die hen evenals hun respectieve onderwerpvoorwaarden beheersen.
+Het beleid van de toegangscontrole is verklaringen die attributen samenbrengen om toelaatbare en ontoelaatbare acties te vestigen. Dit beleid kan of lokaal of globaal zijn, en kan ander beleid met voeten treden. Het `/policies` eindpunt in op attribuut-gebaseerde toegangsbeheer API staat u toe om beleid, met inbegrip van informatie over de regels programmatically te beheren die hen evenals hun respectieve onderwerpvoorwaarden beheersen.
 
 >[!IMPORTANT]
 >
->Dit eindpunt moet niet worden verward met het `/policies` in de [Policy Service API](../../../data-governance/api/policies.md), die wordt gebruikt voor het beheer van beleidsregels voor gegevensgebruik.
+>Dit eindpunt moet niet met het `/policies` eindpunt in de [ Dienst API van het Beleid ](../../../data-governance/api/policies.md) worden verward, dat wordt gebruikt om het beleid van het gegevensgebruik te beheren.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van op attribuut-gebaseerde toegangsbeheer API. Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van op attribuut-gebaseerde toegangsbeheer API. Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met beleidsregels ophalen {#list}
 
-Breng een verzoek van een GET aan de `/policies` eindpunt om van alle bestaand beleid in uw organisatie een lijst te maken.
+Maak een verzoek van de GET aan het `/policies` eindpunt om van al bestaand beleid in uw organisatie een lijst te maken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /policies
@@ -50,7 +50,7 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lijst met bestaande beleidsregels.
 
@@ -136,24 +136,24 @@ Een geslaagde reactie retourneert een lijst met bestaande beleidsregels.
 | `id` | De id die overeenkomt met een beleid. Deze id wordt automatisch gegenereerd en kan worden gebruikt om een beleid op te zoeken, bij te werken en te verwijderen. |
 | `imsOrgId` | De organisatie waar het betwiste beleid toegankelijk is. |
 | `createdBy` | De id van de gebruiker die het beleid heeft gemaakt. |
-| `createdAt` | Het tijdstip waarop het beleid is gemaakt. De `createdAt` eigenschap wordt weergegeven in de tijdstempel van Unix epoch. |
+| `createdAt` | Het tijdstip waarop het beleid is gemaakt. De eigenschap `createdAt` wordt weergegeven in een tijdstempel van één tijdperk. |
 | `modifiedBy` | De id van de gebruiker die het beleid voor het laatst heeft bijgewerkt. |
-| `modifiedAt` | De tijd waarop het beleid voor het laatst is bijgewerkt. De `modifiedAt` eigenschap wordt weergegeven in de tijdstempel van Unix epoch. |
+| `modifiedAt` | De tijd waarop het beleid voor het laatst is bijgewerkt. De eigenschap `modifiedAt` wordt weergegeven in een tijdstempel van één tijdperk. |
 | `name` | De naam van het beleid. |
 | `description` | (Optioneel) Een eigenschap die kan worden toegevoegd voor meer informatie over een bepaald beleid. |
-| `status` | De huidige status van een beleid. Deze eigenschap definieert of er momenteel een beleid is `active` of `inactive`. |
-| `subjectCondition` | De voorwaarden die op een onderwerp van toepassing zijn. Een onderwerp is een gebruiker met bepaalde attributen die om toegang tot een middel vragen om een actie uit te voeren. In dit geval: `subjectCondition` zijn query-achtige voorwaarden die worden toegepast op de onderwerpkenmerken. |
+| `status` | De huidige status van een beleid. Deze eigenschap definieert of een beleid momenteel `active` of `inactive` is. |
+| `subjectCondition` | De voorwaarden die op een onderwerp van toepassing zijn. Een onderwerp is een gebruiker met bepaalde attributen die om toegang tot een middel vragen om een actie uit te voeren. In dit geval is `subjectCondition` queryachtige voorwaarden die worden toegepast op de onderwerpkenmerken. |
 | `rules` | De set regels die een beleid definiëren. De regels bepalen welke kenmerkcombinaties worden geoorloofd opdat het onderwerp een actie aan het middel met succes uitvoert. |
-| `rules.effect` | Het effect dat ontstaat na het overwegen van waarden voor `action`, `condition` en `resource`. Mogelijke waarden zijn: `permit`, `deny`, of `indeterminate`. |
+| `rules.effect` | Het effect dat ontstaat na het overwegen van waarden voor `action` , `condition` en `resource` . Mogelijke waarden zijn: `permit` , `deny` of `indeterminate` . |
 | `rules.resource` | Het element dat of het object dat een onderwerp kan of kan benaderen.  Bronnen kunnen bestanden, toepassingen, servers of zelfs API&#39;s zijn. |
 | `rules.condition` | De voorwaarden die op een bron worden toegepast. Bijvoorbeeld, als een middel een schema is, dan kan een schema bepaalde etiketten hebben op het worden toegepast die tot bijdragen of een actie tegen dat schema toelaatbaar of ontoelaatbaar is. |
-| `rules.action` | De handeling die een onderwerp mag uitvoeren tegen een bron met vragen. Mogelijke waarden zijn: `read`, `create`, `edit`, en `delete`. |
+| `rules.action` | De handeling die een onderwerp mag uitvoeren tegen een bron met vragen. Mogelijke waarden zijn: `read` , `create` , `edit` en `delete` . |
 
 ## Beleidsdetails opzoeken op ID {#lookup}
 
-Breng een verzoek van een GET aan de `/policies` eindpunt terwijl het verstrekken van een beleidsidentiteitskaart in de verzoekweg om informatie over dat individueel beleid terug te winnen.
+Maak een verzoek van de GET aan het `/policies` eindpunt terwijl het verstrekken van een beleidsidentiteitskaart in de verzoekweg om informatie over dat individuele beleid terug te winnen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /policies/{POLICY_ID}
@@ -175,7 +175,7 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol verzoek keert informatie over gevraagde beleidsidentiteitskaart terug.
 
@@ -232,25 +232,25 @@ Een succesvol verzoek keert informatie over gevraagde beleidsidentiteitskaart te
 | `id` | De id die overeenkomt met een beleid. Deze id wordt automatisch gegenereerd en kan worden gebruikt om een beleid op te zoeken, bij te werken en te verwijderen. |
 | `imsOrgId` | De organisatie waar het betwiste beleid toegankelijk is. |
 | `createdBy` | De id van de gebruiker die het beleid heeft gemaakt. |
-| `createdAt` | Het tijdstip waarop het beleid is gemaakt. De `createdAt` eigenschap wordt weergegeven in de tijdstempel van Unix epoch. |
+| `createdAt` | Het tijdstip waarop het beleid is gemaakt. De eigenschap `createdAt` wordt weergegeven in een tijdstempel van één tijdperk. |
 | `modifiedBy` | De id van de gebruiker die het beleid voor het laatst heeft bijgewerkt. |
-| `modifiedAt` | De tijd waarop het beleid voor het laatst is bijgewerkt. De `modifiedAt` eigenschap wordt weergegeven in de tijdstempel van Unix epoch. |
+| `modifiedAt` | De tijd waarop het beleid voor het laatst is bijgewerkt. De eigenschap `modifiedAt` wordt weergegeven in een tijdstempel van één tijdperk. |
 | `name` | De naam van het beleid. |
 | `description` | (Optioneel) Een eigenschap die kan worden toegevoegd voor meer informatie over een bepaald beleid. |
-| `status` | De huidige status van een beleid. Deze eigenschap definieert of er momenteel een beleid is `active` of `inactive`. |
-| `subjectCondition` | De voorwaarden die op een onderwerp van toepassing zijn. Een onderwerp is een gebruiker met bepaalde attributen die om toegang tot een middel vragen om een actie uit te voeren. In dit geval: `subjectCondition` zijn query-achtige voorwaarden die worden toegepast op de onderwerpkenmerken. |
+| `status` | De huidige status van een beleid. Deze eigenschap definieert of een beleid momenteel `active` of `inactive` is. |
+| `subjectCondition` | De voorwaarden die op een onderwerp van toepassing zijn. Een onderwerp is een gebruiker met bepaalde attributen die om toegang tot een middel vragen om een actie uit te voeren. In dit geval is `subjectCondition` queryachtige voorwaarden die worden toegepast op de onderwerpkenmerken. |
 | `rules` | De set regels die een beleid definiëren. De regels bepalen welke kenmerkcombinaties worden geoorloofd opdat het onderwerp een actie aan het middel met succes uitvoert. |
-| `rules.effect` | Het effect dat ontstaat na het overwegen van waarden voor `action`, `condition` en `resource`. Mogelijke waarden zijn: `permit`, `deny`, of `indeterminate`. |
+| `rules.effect` | Het effect dat ontstaat na het overwegen van waarden voor `action` , `condition` en `resource` . Mogelijke waarden zijn: `permit` , `deny` of `indeterminate` . |
 | `rules.resource` | Het element dat of het object dat een onderwerp kan of kan benaderen.  Bronnen kunnen bestanden, toepassingen, servers of zelfs API&#39;s zijn. |
 | `rules.condition` | De voorwaarden die op een bron worden toegepast. Bijvoorbeeld, als een middel een schema is, dan kan een schema bepaalde etiketten hebben op het worden toegepast die tot bijdragen of een actie tegen dat schema toelaatbaar of ontoelaatbaar is. |
-| `rules.action` | De handeling die een onderwerp mag uitvoeren tegen een bron met vragen. Mogelijke waarden zijn: `read`, `create`, `edit`, en `delete`. |
+| `rules.action` | De handeling die een onderwerp mag uitvoeren tegen een bron met vragen. Mogelijke waarden zijn: `read` , `create` , `edit` en `delete` . |
 
 
 ## Een beleid maken {#create}
 
-Om een nieuw beleid tot stand te brengen, doe een verzoek van de POST aan `/policies` eindpunt.
+Om een nieuw beleid tot stand te brengen, doe een verzoek van de POST aan het `/policies` eindpunt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /policies
@@ -258,7 +258,7 @@ POST /policies
 
 **Verzoek**
 
-Met het volgende verzoek wordt een nieuw beleid gemaakt met de naam: `acme-integration-policy`.
+Met de volgende aanvraag wordt een nieuw beleid gemaakt met de naam `acme-integration-policy` .
 
 ```shell
 curl -X POST \
@@ -289,12 +289,12 @@ curl -X POST \
 | `description` | (Optioneel) Een eigenschap die kan worden toegevoegd voor meer informatie over een bepaald beleid. |
 | `imsOrgId` | De organisatie die het beleid bevat. |
 | `rules` | De set regels die een beleid definiëren. De regels bepalen welke kenmerkcombinaties worden geoorloofd opdat het onderwerp een actie aan het middel met succes uitvoert. |
-| `rules.effect` | Het effect dat ontstaat na het overwegen van waarden voor `action`, `condition` en `resource`. Mogelijke waarden zijn: `permit`, `deny`, of `indeterminate`. |
+| `rules.effect` | Het effect dat ontstaat na het overwegen van waarden voor `action` , `condition` en `resource` . Mogelijke waarden zijn: `permit` , `deny` of `indeterminate` . |
 | `rules.resource` | Het element dat of het object dat een onderwerp kan of kan benaderen.  Bronnen kunnen bestanden, toepassingen, servers of zelfs API&#39;s zijn. |
 | `rules.condition` | De voorwaarden die op een bron worden toegepast. Bijvoorbeeld, als een middel een schema is, dan kan een schema bepaalde etiketten hebben op het worden toegepast die tot bijdragen of een actie tegen dat schema toelaatbaar of ontoelaatbaar is. |
-| `rules.action` | De handeling die een onderwerp mag uitvoeren tegen een bron met vragen. Mogelijke waarden zijn: `read`, `create`, `edit`, en `delete`. |
+| `rules.action` | De handeling die een onderwerp mag uitvoeren tegen een bron met vragen. Mogelijke waarden zijn: `read` , `create` , `edit` en `delete` . |
 
-**Antwoord**
+**Reactie**
 
 Een succesvol verzoek keert het pas gecreëerde beleid, met inbegrip van zijn unieke beleidsidentiteitskaart en bijbehorende regels terug.
 
@@ -329,17 +329,17 @@ Een succesvol verzoek keert het pas gecreëerde beleid, met inbegrip van zijn un
 | `id` | De id die overeenkomt met een beleid. Deze id wordt automatisch gegenereerd en kan worden gebruikt om een beleid op te zoeken, bij te werken en te verwijderen. |
 | `name` | De naam van een beleid. |
 | `rules` | De set regels die een beleid definiëren. De regels bepalen welke kenmerkcombinaties worden geoorloofd opdat het onderwerp een actie aan het middel met succes uitvoert. |
-| `rules.effect` | Het effect dat ontstaat na het overwegen van waarden voor `action`, `condition` en `resource`. Mogelijke waarden zijn: `permit`, `deny`, of `indeterminate`. |
+| `rules.effect` | Het effect dat ontstaat na het overwegen van waarden voor `action` , `condition` en `resource` . Mogelijke waarden zijn: `permit` , `deny` of `indeterminate` . |
 | `rules.resource` | Het element dat of het object dat een onderwerp kan of kan benaderen.  Bronnen kunnen bestanden, toepassingen, servers of zelfs API&#39;s zijn. |
 | `rules.condition` | De voorwaarden die op een bron worden toegepast. Bijvoorbeeld, als een middel een schema is, dan kan een schema bepaalde etiketten hebben op het worden toegepast die tot bijdragen of een actie tegen dat schema toelaatbaar of ontoelaatbaar is. |
-| `rules.action` | De handeling die een onderwerp mag uitvoeren tegen een bron met vragen. Mogelijke waarden zijn: `read`, `create`, `edit`, en `delete`. |
+| `rules.action` | De handeling die een onderwerp mag uitvoeren tegen een bron met vragen. Mogelijke waarden zijn: `read` , `create` , `edit` en `delete` . |
 
 
 ## Een beleid bijwerken op basis van beleids-id {#put}
 
-Om de regels van een individueel beleid bij te werken, doe een PUT verzoek aan `/policies` eindpunt terwijl het verstrekken van identiteitskaart van het beleid dat u in de verzoekweg wilt bijwerken.
+Om de regels van een individueel beleid bij te werken, doe een verzoek van de PUT aan het `/policies` eindpunt terwijl het verstrekken van identiteitskaart van het beleid dat u in de verzoekweg wilt bijwerken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /policies/{POLICY_ID}
@@ -374,7 +374,7 @@ curl -X PUT \
   }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert het bijgewerkte beleid.
 
@@ -406,9 +406,9 @@ Een geslaagde reactie retourneert het bijgewerkte beleid.
 
 ## Beleidseigenschappen bijwerken {#patch}
 
-Als u de eigenschappen van een afzonderlijk beleid wilt bijwerken, vraagt u een PATCH aan de `/policies` eindpunt terwijl het verstrekken van identiteitskaart van het beleid dat u in de verzoekweg wilt bijwerken.
+Om de eigenschappen van een individueel beleid bij te werken, doe een verzoek van PATCH aan het `/policies` eindpunt terwijl het verstrekken van identiteitskaart van het beleid dat u in de verzoekweg wilt bijwerken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /policies/{POLICY_ID}
@@ -420,7 +420,7 @@ PATCH /policies/{POLICY_ID}
 
 **Verzoek**
 
-De waarde van `/description` in beleids-id `c3863937-5d40-448d-a7be-416e538f955e`.
+De volgende aanvraag vervangt de waarde van `/description` in beleids-id `c3863937-5d40-448d-a7be-416e538f955e`.
 
 ```shell
 curl -X PATCH \
@@ -441,11 +441,11 @@ curl -X PATCH \
 
 | Bewerkingen | Beschrijving |
 | --- | --- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de rol bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de rol bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . |
 | `path` | Het pad van de parameter die moet worden bijgewerkt. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert identiteitskaart van het gevraagd beleid met bijgewerkte beschrijving terug.
 
@@ -477,9 +477,9 @@ Een succesvolle reactie keert identiteitskaart van het gevraagd beleid met bijge
 
 ## Een beleid verwijderen {#delete}
 
-Als u een beleid wilt verwijderen, vraagt u een DELETE aan de `/policies` eindpunt terwijl het verstrekken van identiteitskaart van het beleid u wilt schrappen.
+Om een beleid te schrappen, doe een verzoek van DELETE aan het `/policies` eindpunt terwijl het verstrekken van identiteitskaart van het beleid u wilt schrappen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /policies/{POLICY_ID}
@@ -491,7 +491,7 @@ DELETE /policies/{POLICY_ID}
 
 **Verzoek**
 
-Met de volgende aanvraag wordt het beleid verwijderd met de id van `c3863937-5d40-448d-a7be-416e538f955e`.
+Met de volgende aanvraag wordt het beleid met de id `c3863937-5d40-448d-a7be-416e538f955e` verwijderd.
 
 ```shell
 curl -X DELETE \
@@ -501,7 +501,7 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 

@@ -6,16 +6,16 @@ description: Als u een tekstdocument opgeeft met de service Trefwoordtags, worde
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 2%
+source-wordcount: '444'
+ht-degree: 0%
 
 ---
 
 # Trefwoordtags
 
-Bij een tekstdocument worden trefwoorden of trefwoorden die het beste het onderwerp van het document beschrijven, automatisch door de service Trefwoordtags geëxtraheerd. Voor het uitpakken van trefwoorden wordt een combinatie van algoritmen voor herkenning van benoemde entiteit (NER) en zonder toezicht gebruikt voor trefwoordtags.
+Bij een tekstdocument worden trefwoorden of trefwoordtags die het beste het onderwerp van het document beschrijven, automatisch door de service Trefwoordtags geëxtraheerd. Voor het uitpakken van trefwoorden wordt een combinatie van algoritmen voor herkenning van benoemde entiteit (NER) en zonder toezicht gebruikt voor trefwoordtags.
 
-In de volgende tabel worden de benoemde entiteiten weergegeven [!DNL Content Tagging] kan identificeren:
+In de volgende tabel worden de benoemde entiteiten weergegeven die [!DNL Content Tagging] kan identificeren:
 
 | Entiteitsnaam | Beschrijving |
 | --- | --- |
@@ -30,7 +30,7 @@ In de volgende tabel worden de benoemde entiteiten weergegeven [!DNL Content Tag
 | WET | Benoemde documenten die in wetten zijn gemaakt. |
 | TAAL | Elke benoemde taal. |
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /services/v2/predict
@@ -42,7 +42,7 @@ In het volgende verzoek worden trefwoorden uit een document geëxtraheerd op bas
 
 Zie de tabel onder de voorbeeldlading voor meer informatie over de getoonde inputparameters.
 
-Dit [voorbeeld-PDF](../pdf-files/simple-text.pdf) bestand is gebruikt in het voorbeeld dat in dit document wordt weergegeven.
+Dit [ steekproef pdf ](../pdf-files/simple-text.pdf) dossier werd gebruikt in het voorbeeld dat in dit document wordt getoond.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -86,7 +86,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@simple-text.pdf'
 ```
 
-**Invoerparameters**
+**de parameters van de Input**
 
 | Eigenschap | Beschrijving | Verplicht |
 | --- | --- | --- |
@@ -97,18 +97,18 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `last_semantic_unit_type` | Retourneer alleen semantische eenheden tot het opgegeven niveau in de hiërarchische reactie. &quot;key_qua&quot; retourneert alleen de sleutelzinnen, &quot;linked_entity&quot; retourneert alleen de sleutelzinnen en de bijbehorende gekoppelde entiteiten, en &quot;concept&quot; retourneert toetszinnen, gekoppelde entiteiten en concepten. | Nee |
 | `entity_types` | Typen entiteiten die als sleutelzinnen moeten worden geretourneerd. | Nee |
 
-**Object Document**
+**voorwerp van het Document**
 
-| Naam | Datatype | Vereist | Standaard | Waarden | Beschrijving |
+| Naam | Gegevenstype | Vereist | Standaard | Waarden | Beschrijving |
 | -----| --------- | -------- | ------- | ------ | ----------- |
 | `repo:path` | string | - | - | - | Voorgetekende URL van het document waaruit de belangrijkste zinnen moeten worden geëxtraheerd. |
 | `sensei:repoType` | string | - | - | HTTPS | Type repo waar het document wordt opgeslagen. |
 | `sensei:multipart_field_name` | string | - | - | - | Gebruik deze optie wanneer u het document doorgeeft als een meerdelig argument in plaats van vooraf ondertekende URL&#39;s te gebruiken. |
-| `dc:format` | string | Ja | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | Documentcodering wordt gecontroleerd op basis van toegestane invoercoderingstypen voordat deze worden verwerkt. |
+| `dc:format` | string | Ja | - | &quot;text/plain&quot;,<br> &quot;application/pdf&quot;, <br> &quot;text/pdf&quot;, <br> &quot;text/html&quot;, <br> &quot;text/rtf&quot;, <br> &quot;application/rtf&quot;, <br> &quot;application/msword&quot;, <br> &quot;application/vnd.openxmlformats-officedocument.wordprocessing ingml.document&quot;, <br> &quot;application/mspowerpoint&quot;, <br> application/vnd.ms-powerpoint&quot;, <br> &quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | Documentcodering wordt gecontroleerd op basis van toegestane invoercoderingstypen voordat deze worden verwerkt. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een JSON-object dat geëxtraheerde trefwoorden bevat in het dialoogvenster `response` array.
+Een geslaagde reactie retourneert een JSON-object dat geëxtraheerde trefwoorden in de array `response` bevat.
 
 ```json
 {

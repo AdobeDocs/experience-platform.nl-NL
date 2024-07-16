@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Een catalogusobject bijwerken
 
-U kunt een deel van een [!DNL Catalog] -object door de id ervan op te nemen in het pad van een PATCH-aanvraag. In dit document worden de twee methoden beschreven voor het uitvoeren van PATCH-bewerkingen op Catalog-objecten:
+U kunt een deel van een [!DNL Catalog] -object bijwerken door de id ervan op te nemen in het pad van een PATCH-aanvraag. In dit document worden de twee methoden beschreven voor het uitvoeren van PATCH-bewerkingen op Catalog-objecten:
 
 * Velden gebruiken
 * JSON-patchnotatie gebruiken
@@ -26,7 +26,7 @@ U kunt een deel van een [!DNL Catalog] -object door de id ervan op te nemen in h
 
 In het volgende voorbeeld wordt getoond hoe u een object kunt bijwerken met behulp van velden en waarden.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /{OBJECT_TYPE}/{OBJECT_ID}
@@ -34,12 +34,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te bijwerken object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] -object dat moet worden bijgewerkt. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**
 
-De volgende aanvraag werkt de `name` en `description` velden van een gegevensset naar de waarden in de lading. Objectvelden die niet moeten worden bijgewerkt, kunnen worden uitgesloten van de laadbewerking.
+In het volgende verzoek worden de velden `name` en `description` van een gegevensset bijgewerkt naar de waarden die in de laadbewerking zijn opgegeven. Objectvelden die niet moeten worden bijgewerkt, kunnen worden uitgesloten van de laadbewerking.
 
 ```shell
 curl -X PATCH \
@@ -55,9 +55,9 @@ curl -X PATCH \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert een serie terug die identiteitskaart van de bijgewerkte dataset bevat. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. Het uitvoeren van een GET verzoek voor deze dataset toont nu dat slechts `name` en `description` zijn bijgewerkt terwijl alle andere waarden ongewijzigd blijven.
+Een succesvolle reactie keert een serie terug die identiteitskaart van de bijgewerkte dataset bevat. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. Wanneer u een GET-aanvraag voor deze gegevensset uitvoert, tonen nu dat alleen de `name` en `description` zijn bijgewerkt terwijl alle andere waarden ongewijzigd blijven.
 
 ```json
 [
@@ -67,11 +67,11 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de bijgew
 
 ## Bijwerken met JSON Patch-notatie
 
-In het volgende voorbeeld wordt getoond hoe u een object kunt bijwerken met JSON Patch, zoals in [RFC-6902](https://tools.ietf.org/html/rfc6902).
+De volgende voorbeeldvraag toont aan hoe te om een voorwerp bij te werken gebruikend Reparatie JSON, zoals die in [ wordt geschetst rFC-6902 ](https://tools.ietf.org/html/rfc6902).
 
-Zie voor meer informatie over de JSON Patch-syntaxis de [Handleiding voor API-basisbeginselen](../../landing/api-fundamentals.md#json-patch).
+Voor meer informatie over de syntaxis van het Reparatie JSON, zie de [ API grondbeginselen gids ](../../landing/api-fundamentals.md#json-patch).
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /{OBJECT_TYPE}/{OBJECT_ID}
@@ -79,12 +79,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te bijwerken object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] -object dat moet worden bijgewerkt. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**
 
-De volgende aanvraag werkt de `name` en `description` velden van een gegevensset naar de waarden in elk JSON-object Patch. Wanneer u JSON Patch gebruikt, moet u ook de header Content-Type instellen op `application/json-patch+json`.
+Met de volgende aanvraag worden de velden `name` en `description` van een gegevensset bijgewerkt naar de waarden in elk JSON-object Patch. Wanneer u JSON Patch gebruikt, moet u ook de header Content-Type instellen op `application/json-patch+json` .
 
 ```shell
 curl -X PATCH \
@@ -100,9 +100,9 @@ curl -X PATCH \
       ]'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een array met de id van het bijgewerkte object. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. Wanneer u een GET-aanvraag voor dit object uitvoert, wordt nu alleen getoond dat `name` en `description` zijn bijgewerkt terwijl alle andere waarden ongewijzigd blijven.
+Een geslaagde reactie retourneert een array met de id van het bijgewerkte object. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. Wanneer u een GET-aanvraag voor dit object uitvoert, tonen nu dat alleen de waarden `name` en `description` zijn bijgewerkt terwijl alle andere waarden ongewijzigd blijven.
 
 ```json
 [

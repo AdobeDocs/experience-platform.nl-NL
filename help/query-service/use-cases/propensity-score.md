@@ -1,10 +1,10 @@
 ---
 title: Een volheidsscore bepalen met behulp van een door een machine gegenereerd voorspellend model voor leren
-description: Leer hoe te om de Dienst van de Vraag te gebruiken om uw vooruitlopende model op Platform gegevens toe te passen. Dit document laat zien hoe u gegevens van Platforms kunt gebruiken om te voorspellen hoe de klant bij elk bezoek geneigd is om  aan te schaffen.
+description: Leer hoe te om de Dienst van de Vraag te gebruiken om uw vooruitlopende model op de gegevens van het Platform toe te passen. In dit document wordt uitgelegd hoe u de gegevens van het platform kunt gebruiken om te voorspellen of een klant bij elk bezoek geneigd is om een aankoop te doen.
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
 source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1304'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ In deze handleiding wordt uitgelegd hoe u de Query-service kunt gebruiken om geg
 
 Als onderdeel van dit proces moet u een model voor machinaal leren trainen, wordt in dit document uitgegaan van een praktische kennis van een of meer computerleeromgevingen.
 
-Dit voorbeeld gebruikt [!DNL Jupyter Notebook] als ontwikkelomgeving. Hoewel er veel opties beschikbaar zijn, [!DNL Jupyter Notebook] wordt aanbevolen omdat het een opensource webtoepassing is met lage computervereisten. Het kan [gedownload van de officiële site](https://jupyter.org/).
+In dit voorbeeld wordt [!DNL Jupyter Notebook] gebruikt als een ontwikkelomgeving. Hoewel er veel opties beschikbaar zijn, wordt [!DNL Jupyter Notebook] aanbevolen omdat het een opensource webtoepassing is die lage computervereisten heeft. Het kan [ van de officiële plaats ](https://jupyter.org/) worden gedownload.
 
-Als u dit nog niet hebt gedaan, voert u de volgende stappen uit: [verbinden [!DNL Jupyter Notebook] met Adobe Experience Platform Query Service](../clients/jupyter-notebook.md) voordat u doorgaat met deze handleiding.
+Als u dit nog niet hebt gedaan, volg de stappen [  [!DNL Jupyter Notebook]  met de Dienst van de Vraag van Adobe Experience Platform ](../clients/jupyter-notebook.md) verbinden alvorens met deze gids verder te gaan.
 
 De bibliotheken die in dit voorbeeld worden gebruikt, zijn:
 
@@ -35,19 +35,19 @@ numpy
 tqdm
 ```
 
-## Analysecontabellen importeren van Platform naar [!DNL Jupyter Notebook] {#import-analytics-tables}
+## Analytische tabellen importeren van Platform naar [!DNL Jupyter Notebook] {#import-analytics-tables}
 
-Om een model van de aandrijvingsscore te produceren, moet een projectie van de analysegegevens die in Platform worden opgeslagen worden ingevoerd in [!DNL Jupyter Notebook]. Van een [!DNL Python] 3 [!DNL Jupyter Notebook] verbonden aan de Dienst van de Vraag, voert de volgende bevelen een dataset van het klantengedrag van Luma, een fictieve kledingopslag in. Aangezien de gegevens van het Platform gebruikend het Model van de Gegevens van de Ervaring (XDM) formaat worden opgeslagen, moet een steekproefJSON voorwerp worden geproduceerd dat aan de structuur van het schema in overeenstemming is. Zie de documentatie voor instructies over hoe u kunt [het JSON-voorbeeldobject genereren](../../xdm/ui/sample.md).
+Als u een model met de dichtheid wilt genereren, moet u een projectie van de analysegegevens die in Platform zijn opgeslagen, importeren in [!DNL Jupyter Notebook] . Van een [!DNL Python] 3 [!DNL Jupyter Notebook] verbonden met de Dienst van de Vraag, voert de volgende bevelen een dataset van het klantengedrag van Luma, een fictieve kledingopslag in. Aangezien de gegevens van het Platform gebruikend het Model van de Gegevens van de Ervaring (XDM) formaat worden opgeslagen, moet een steekproefJSON voorwerp worden geproduceerd dat aan de structuur van het schema in overeenstemming is. Zie de documentatie voor instructies op hoe te [ het voorwerp van steekproefJSON ](../../xdm/ui/sample.md) produceren.
 
-![De [!DNL Jupyter Notebook] dashboard met verschillende opdrachten gemarkeerd.](../images/use-cases/jupyter-commands.png)
+![ het [!DNL Jupyter Notebook] dashboard met verscheidene benadrukte bevelen.](../images/use-cases/jupyter-commands.png)
 
-De output toont een tabulariseerde mening van alle kolommen van gedragsdataset van Luma binnen [!DNL Jupyter Notebook] dashboard.
+De uitvoer geeft een tabellarische weergave weer van alle kolommen in de gedragsgegevensset van Luma binnen het dashboard van [!DNL Jupyter Notebook] .
 
-![De tabulariseerde uitvoer van de geïmporteerde gegevensset voor klantgedrag van Luma binnen [!DNL Jupyter Notebook].](../images/use-cases/behavioural-dataset-results.png)
+![ de in tabelvorm gebrachte output van de ingevoerde dataset van het klantengedrag van Luma binnen [!DNL Jupyter Notebook].](../images/use-cases/behavioural-dataset-results.png)
 
 ## Gegevens voorbereiden voor leren van computers {#prepare-data-for-machine-learning}
 
-Een doelkolom moet worden geïdentificeerd om een model voor machinaal leren op te leiden. Aangezien de neiging om te kopen het doel voor dit gebruiksgeval is, `analytic_action` wordt gekozen als de doelkolom in de Luminantieresultaten. De waarde `productPurchase` is de indicator van een klantenaankoop. De `purchase_value` en `purchase_num` kolommen worden ook verwijderd omdat ze rechtstreeks verband houden met de actie voor productaankoop.
+Een doelkolom moet worden geïdentificeerd om een model voor machinaal leren op te leiden. Aangezien de neiging om te kopen het doel voor dit gebruiksgeval is, wordt de `analytic_action` kolom gekozen als doelkolom van de resultaten van de Luma. De waarde `productPurchase` is de indicator van een klantenaankoop. De kolommen `purchase_value` en `purchase_num` worden ook verwijderd omdat ze rechtstreeks verband houden met de actie voor het aanschaffen van het product.
 
 De opdrachten voor het uitvoeren van deze acties zijn als volgt:
 
@@ -60,7 +60,7 @@ df.drop(['analytic_action','purchase_value'],axis=1,inplace=True)
 
 Daarna, moeten de gegevens van de dataset van de Luma in aangewezen vertegenwoordiging worden omgezet. Er zijn twee stappen vereist:
 
-1. Transformeer de kolommen die getallen vertegenwoordigen in numerieke kolommen. Om dit te doen zet uitdrukkelijk het gegevenstype in `dataframe`.
+1. Transformeer de kolommen die getallen vertegenwoordigen in numerieke kolommen. Om dit te doen zet uitdrukkelijk het gegevenstype in `dataframe` om.
 1. U kunt categorische kolommen ook transformeren in numerieke kolommen.
 
 ```python
@@ -69,7 +69,7 @@ num_cols = ['purchase_num', 'value_cart', 'value_lifetime']
 df[num_cols] = df[num_cols].apply(pd.to_numeric, errors='coerce')
 ```
 
-Een techniek die *één hot encoding* wordt gebruikt om de categoriale gegevensvariabelen voor gebruik met machine en diepe het leren algoritmen om te zetten. Dit verbetert op zijn beurt de voorspellingen en de classificatienauwkeurigheid van een model. Gebruik de `Sklearn` bibliotheek die elke categoriale waarde in een afzonderlijke kolom vertegenwoordigt.
+Een techniek genoemd *één heet het coderen* wordt gebruikt om de categoriale gegevensvariabelen voor gebruik met machine en diepe het leren algoritmen om te zetten. Dit verbetert op zijn beurt de voorspellingen en de classificatienauwkeurigheid van een model. Gebruik de `Sklearn` -bibliotheek om elke categorische waarde in een aparte kolom te vertegenwoordigen.
 
 ```python
 from sklearn.preprocessing import OneHotEncoder
@@ -98,14 +98,14 @@ X = pd.DataFrame( np.concatenate((enc.transform(df_cat).toarray(),df[num_cols]),
 y = df['target']
 ```
 
-De gegevens die worden gedefinieerd als `X` wordt in tabelvorm weergegeven en ziet er als volgt uit:
+De gegevens die als `X` worden gedefinieerd, worden als volgt in tabelvorm weergegeven:
 
-![De tabulariseerde uitvoer van X binnen [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
+![ de in tabelvorm gebrachte output van X binnen [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
 
 
-Nu de noodzakelijke gegevens voor machine leren beschikbaar zijn, kan het de vooraf gevormde machine het leren modellen in passen [!DNL Python]s `sklearn` bibliotheek. [!DNL Logistics Regression] wordt gebruikt om het aandrijfmodel op te leiden en u kunt de nauwkeurigheid van de testgegevens zien. In dit geval is het ongeveer 85%.
+Nu de benodigde gegevens voor machinetlering beschikbaar zijn, kunnen de vooraf geconfigureerde modellen voor machinetlering in de [!DNL Python] `sklearn` -bibliotheek worden geplaatst. [!DNL Logistics Regression] wordt gebruikt om het aandrijfmodel op te leiden en geeft u de nauwkeurigheid van de testgegevens weer. In dit geval is het ongeveer 85%.
 
-De [!DNL Logistic Regression] algoritme en de splitsingsmethode voor treintests, die worden gebruikt om de prestaties van machinaal leeralgoritmen te ramen, worden in het onderstaande codeblok geïmporteerd:
+Het algoritme [!DNL Logistic Regression] en de splitsingsmethode voor treintests, die worden gebruikt om de prestaties van machinaal leeralgoritmen te ramen, worden in het onderstaande codeblok geïmporteerd:
 
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -155,17 +155,17 @@ plt.show()
 
 Hieronder ziet u een verticale visualisatie van de resultaten in het staafdiagram:
 
-![De visualisatie van de top 10-functies die een koopkracht definiëren.](../images/use-cases/visualized-results.png)
+![ de visualisatie van top 10 eigenschappen die een neiging om al dan niet te kopen bepalen te kopen.](../images/use-cases/visualized-results.png)
 
-Uit het staafdiagram kunnen verschillende patronen worden afgeleid. De onderwerpen van het verkooppunt (POS) en van de Vraag van het kanaal als terugbetaling zijn de belangrijkste factoren die een aankoopgedrag bepalen. Terwijl de onderwerpen van de Vraag als klachten en facturen belangrijke rollen zijn om niet het kopen gedrag te bepalen. Dit zijn kwantificeerbare, activeerbare inzichten die marketeers kunnen gebruiken om marketingcampagnes te voeren om de neiging tot aankoop van deze klanten aan te pakken.
+Uit het staafdiagram kunnen verschillende patronen worden afgeleid. De onderwerpen van het verkooppunt (POS) en van de Vraag van het kanaal als terugbetaling zijn de belangrijkste factoren die een aankoopgedrag bepalen. Terwijl de onderwerpen van de Vraag als klachten en facturen belangrijke rollen zijn om het niet het kopen gedrag te bepalen. Dit zijn kwantificeerbare, activeerbare inzichten die marketeers kunnen gebruiken om marketingcampagnes te voeren om de neiging tot aankoop van deze klanten aan te pakken.
 
 ## De Dienst van de Vraag van het gebruik om het getrainde model toe te passen {#use-query-service-to-apply-trained-model}
 
 Nadat het getrainde model is gemaakt, moet het worden toegepast op de gegevens in het Experience Platform. Om dit te doen, moet de logica van de machine het leren pijpleiding in SQL worden omgezet. De twee belangrijkste onderdelen van deze overgang zijn:
 
-- Ten eerste moet SQL de plaats innemen van de [!DNL Logistics Regression] om de waarschijnlijkheid van een voorspellingsetiket te verkrijgen. Het model dat door Logistics Regression werd gecreeerd produceerde het regressiemodel `y = wX + c`  waar gewichten `w` en onderscheppen `c` zijn de uitvoer van het model. SQL-functies kunnen worden gebruikt om de gewichten te vermenigvuldigen om een waarschijnlijkheid te verkrijgen.
+- Ten eerste moet SQL de module [!DNL Logistics Regression] vervangen om de waarschijnlijkheid van een voorspellingslabel te verkrijgen. Het model dat door Logistics Regression is gemaakt, heeft het regressiemodel `y = wX + c` opgeleverd, waarbij de gewichten `w` en intercept `c` de uitvoer van het model zijn. SQL-functies kunnen worden gebruikt om de gewichten te vermenigvuldigen om een waarschijnlijkheid te verkrijgen.
 
-- In de tweede plaats het in [!DNL Python] met één hot-codering moet ook in SQL worden opgenomen. In de oorspronkelijke database hebben we bijvoorbeeld `geo_county` kolom om het land op te slaan, maar de kolom wordt omgezet in `geo_county=Bexar`, `geo_county=Dallas`, `geo_county=DeKalb`. De volgende SQL-instructie voert dezelfde transformatie uit, waarbij `w1`, `w2`, en `w3` kan worden vervangen door de gewichten die uit het model in [!DNL Python]:
+- Ten tweede moet het engineeringproces dat in [!DNL Python] met één hot encoding wordt uitgevoerd, ook in SQL worden opgenomen. In de oorspronkelijke database hebben we bijvoorbeeld `geo_county` -kolom om het land op te slaan, maar de kolom wordt omgezet in `geo_county=Bexar` , `geo_county=Dallas` , `geo_county=DeKalb` . De volgende SQL-instructie voert dezelfde transformatie uit, waarbij `w1` , `w2` en `w3` kunnen worden vervangen door de dikten die in [!DNL Python] uit het model zijn geleerd:
 
 ```sql
 SELECT  CASE WHEN geo_state = 'Bexar' THEN FLOAT(w1) ELSE 0 END AS f1,
@@ -179,7 +179,7 @@ Voor numerieke functies kunt u de kolommen rechtstreeks vermenigvuldigen met de 
 SELECT FLOAT(purchase_num) * FLOAT(w4) AS f4,
 ```
 
-Nadat de aantallen zijn verkregen, kunnen zij aan een sigmoïdfunctie worden overgebracht waar het Logistics Regression algoritme de definitieve voorspellingen veroorzaakt. In de onderstaande verklaring: `intercept` is het getal van de onderschepping in de regressie.
+Nadat de aantallen zijn verkregen, kunnen zij aan een sigmoïdfunctie worden overgebracht waar het Logistics Regression algoritme de definitieve voorspellingen veroorzaakt. In de onderstaande instructie is `intercept` het nummer van de onderschepping in de regressie.
         
 
 ```sql
@@ -188,7 +188,7 @@ SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 T
  
 ### Een voorbeeld van begin tot eind
 
-In een situatie waarin u twee kolommen hebt (`c1` en `c2`), als `c1` heeft twee categorieën, de [!DNL Logistic Regression] algoritme wordt opgeleid met de volgende functie:
+Wanneer u twee kolommen hebt (`c1` en `c2` ) en `c1` twee categorieën heeft, wordt het algoritme [!DNL Logistic Regression] getraind met de volgende functie:
  
 
 ```python
@@ -210,7 +210,7 @@ FROM
   )
 ```
  
-De [!DNL Python] de code voor de automatisering van het vertaalproces ziet er als volgt uit :
+De code van [!DNL Python] om het vertaalproces te automatiseren is als volgt:
 
 ```python
 def generate_lr_inference_sql(ohc_columns, num_cols, clf, db):
@@ -245,9 +245,9 @@ colnames = [desc[0] for desc in cur.description]
 pd.DataFrame(samples,columns=colnames)
 ```
 
-De tabulariseerde resultaten geven de neiging aan om te kopen voor elke klantensessie met `0` geen koopkracht betekent en `1` dat wil zeggen een bevestigde koopkracht.
+De resultaten met tabularisering geven de neiging aan om te kopen voor elke klantsessie met `0` wat betekent dat er geen koopneiging is en `1` wat een bevestigde koopneiging betekent.
 
-![De in tabelvorm geschreven resultaten van de databaseconferentie met SQL.](../images/use-cases/inference-results.png)
+![ de in tabelvorm gemaakte resultaten van de gegevensbestandinvloed die SQL gebruiken.](../images/use-cases/inference-results.png)
 
 ## Werken met gesamplede gegevens: Bootstrapping {#working-on-sampled-data}
 
@@ -295,7 +295,7 @@ def end_to_end_pipeline(df):
     return clf.score(X_test, y_test)
 ```
 
-Deze functie kan vervolgens meerdere keren in een lus worden uitgevoerd, bijvoorbeeld tien keer. Het verschil met de vorige code is dat het voorbeeld nu niet uit de hele tabel wordt genomen, maar alleen uit een voorbeeld van rijen. De voorbeeldcode hieronder neemt bijvoorbeeld slechts 1000 rijen in beslag. De nauwkeurigheden voor elke herhaling kunnen worden opgeslagen.
+Deze functie kan vervolgens meerdere keren in een lus worden uitgevoerd, bijvoorbeeld tien keer. Het verschil met de vorige code is dat het voorbeeld nu niet uit de hele tabel wordt genomen, maar alleen uit een voorbeeld van rijen. De voorbeeldcode hieronder neemt bijvoorbeeld slechts 1000 rijen. De nauwkeurigheden voor elke herhaling kunnen worden opgeslagen.
 
 ```python
 from tqdm import tqdm
@@ -320,8 +320,8 @@ for i in tqdm(range(100)):
 bootstrap_accuracy = np.sort(bootstrap_accuracy)
 ```
 
-De nauwkeurigheid van het bootstrapped model wordt dan gesorteerd. Daarna worden de tiende en de negentigste kwantiteit van de nauwkeurigheid van het model een 95% betrouwbaarheidsinterval voor de nauwkeurigheid van het model met de aangegeven steekproefgrootte.
+De nauwkeurigheid van het bootstrapped model wordt dan gesorteerd. Daarna worden de 10e en 90e kwantiteit van de nauwkeurigheid van het model een 95% betrouwbaarheidsinterval voor de nauwkeurigheid van het model met de aangegeven steekproefgrootte.
 
-![De opdracht Afdrukken om het betrouwbaarheidsinterval van de densiteitsscore weer te geven.](../images/use-cases/confidence-interval.png)
+![ het drukbevel om het betrouwbaarheidsinterval van de volheidsscore te tonen.](../images/use-cases/confidence-interval.png)
 
-In het bovenstaande cijfer staat dat als u slechts 1000 rijen nodig hebt om uw modellen te trainen, u kunt verwachten dat de nauwkeurigheid tussen ongeveer 84% en 88% zal dalen. U kunt de `LIMIT` clausule in de vragen van de Dienst van de Vraag die op uw behoeften worden gebaseerd om de prestaties van de modellen te verzekeren.
+In het bovenstaande cijfer staat dat als u slechts 1000 rijen nodig hebt om uw modellen te trainen, u kunt verwachten dat de nauwkeurigheid tussen ongeveer 84% en 88% zal dalen. U kunt de `LIMIT` clausule in de vragen van de Dienst van de Vraag aanpassen die op uw behoeften worden gebaseerd om de prestaties van de modellen te verzekeren.

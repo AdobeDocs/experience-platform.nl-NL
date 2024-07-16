@@ -12,23 +12,23 @@ ht-degree: 0%
 
 # [!UICONTROL Dining Reservation] schemaveldgroep
 
-[!UICONTROL Dining Reservation] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) gebruikt om informatie over een diningsreservering vast te leggen.
+[!UICONTROL Dining Reservation] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md) wordt gebruikt om informatie betreffende een het dineren reserve te vangen die.
 
-De veldgroep is een uitbreiding van de [!UICONTROL Reservation Details] veldgroep en bevat dezelfde velden onder één veld van het objecttype, `reservations`. Naast deze generieke velden, [!UICONTROL Dining Reservation] omvat ook `diningReservations` array. Deze array met objecten wordt gebruikt om een of meer reserveringen met restaurantspecifieke eigenschappen te beschrijven.
+De veldgroep is een extensie van de veldgroep [!UICONTROL Reservation Details] en bevat dezelfde velden onder één objecttype, `reservations` . Naast deze algemene velden bevat [!UICONTROL Dining Reservation] ook `diningReservations` array. Deze array met objecten wordt gebruikt om een of meer reserveringen met restaurantspecifieke eigenschappen te beschrijven.
 
 >[!NOTE]
 >
->In dit document worden de details van het `diningReservations` array. Voor informatie over de andere velden die in het kader van de `reservations` object, raadpleeg de [[!UICONTROL Reservation Details] veldgroepverwijzing](./reservation-details.md).
+>In dit document worden de details van de array `diningReservations` besproken. Voor informatie over de andere gebieden die onder het `reservations` voorwerp worden verstrekt, gelieve te verwijzen naar [[!UICONTROL Reservation Details] de verwijzing van de gebiedsgroep ](./reservation-details.md).
 
-![Boekingsstructuur voor mijnbouw](../../images/field-groups/dining-reservation/structure.png)
+![ het Dining de structuur van de Voorbehoud ](../../images/field-groups/dining-reservation/structure.png)
 
 ## `diningReservations`
 
-`diningReservations` is een array met objecten die een lijst met diningsreserveringen vertegenwoordigt. Als bij een reserveringsgebeurtenis reserveringen worden gemaakt in meerdere verschillende restaurants op verschillende tijdstippen van de dag, kunnen deze reserveringen bijvoorbeeld als afzonderlijke objecten worden vermeld onder `diningReservations` voor één gebeurtenis.
+`diningReservations` is een array met objecten die een lijst met diningsreserveringen vertegenwoordigt. Als een reserveringsgebeurtenis reserveringen in meerdere verschillende restaurants op verschillende tijdstippen van de dag inhoudt, kunnen deze reserveringen bijvoorbeeld als afzonderlijke objecten onder `diningReservations` voor één gebeurtenis worden vermeld.
 
-De structuur van elk object dat wordt geleverd onder `diningReservations` wordt hieronder gegeven.
+Hieronder vindt u de structuur van elk object dat onder `diningReservations` wordt geleverd.
 
-![diningReservations-structuur](../../images/field-groups/dining-reservation/diningReservations.png)
+![ diningReservations structuur ](../../images/field-groups/dining-reservation/diningReservations.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -61,5 +61,5 @@ De structuur van elk object dat wordt geleverd onder `diningReservations` wordt 
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-dining-reservation.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-dining-reservation.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-dining-reservation.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-dining-reservation.schema.json)

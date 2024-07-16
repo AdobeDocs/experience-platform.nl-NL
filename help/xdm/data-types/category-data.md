@@ -1,7 +1,8 @@
 ---
 title: Gegevenstype categorie
 description: Leer over het gegevenstype van het Gegevensmodel van de Ervaring van de Categorie (XDM).
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: f8d52f2d-5fb0-4999-8b31-ddc14225b0ab
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 1%
@@ -10,9 +11,9 @@ ht-degree: 1%
 
 # [!UICONTROL Category data] gegevenstype
 
-[!UICONTROL Category data] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat informatie met betrekking tot de categorie van een product beschrijft.
+[!UICONTROL Category data] is een standaard XDM-gegevenstype (Experience Data Model) waarmee informatie wordt beschreven die betrekking heeft op de categorie van een product.
 
-![Een diagram van het gegevenstype Categorie.](../images/data-types/category-data.png)
+![ een diagram van het gegevenstype van de Categorie.](../images/data-types/category-data.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |-----------------|--------------------|-----------|------------------------------------------|
@@ -24,5 +25,5 @@ ht-degree: 1%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.schema.json)

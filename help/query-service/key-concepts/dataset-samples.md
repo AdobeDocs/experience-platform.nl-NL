@@ -4,14 +4,14 @@ description: De de steekproefdatasets van de Dienst van de vraag laten u toe om 
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
 source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
 
 # Gegevenssetvoorbeelden
 
-De Dienst van de Vraag van Adobe Experience Platform verstrekt steekproefdatasets als deel van zijn benaderende mogelijkheden van de vraagverwerking. Voorbeeldgegevenssets worden gemaakt met uniforme willekeurige steekproeven op basis van bestaande [!DNL Azure Data Lake Storage] (ADLS) datasets die slechts een percentage van verslagen van origineel gebruiken. Dit percentage staat bekend als de bemonsteringsfrequentie. Als u de samplingfrequentie aanpast om de balans tussen nauwkeurigheid en verwerkingstijd te bepalen, kunt u verkennende query&#39;s uitvoeren op grote gegevens met een aanzienlijk kortere verwerkingstijd, wat ten koste gaat van de nauwkeurigheid van de query.
+De Dienst van de Vraag van Adobe Experience Platform verstrekt steekproefdatasets als deel van zijn benaderende mogelijkheden van de vraagverwerking. De datasets van de steekproef worden gecreeerd met eenvormige willekeurige steekproeven van bestaande [!DNL Azure Data Lake Storage] (ADLS) datasets gebruikend slechts een percentage verslagen van origineel. Dit percentage staat bekend als de bemonsteringsfrequentie. Als u de samplingfrequentie aanpast om de balans tussen nauwkeurigheid en verwerkingstijd te bepalen, kunt u verkennende query&#39;s uitvoeren op grote gegevens met een aanzienlijk kortere verwerkingstijd, wat ten koste gaat van de nauwkeurigheid van de query.
 
 Aangezien vele gebruikers geen nauwkeurig antwoord voor een gezamenlijke verrichting over een dataset nodig hebben, is het uitgeven van een benaderende vraag om een benaderend antwoord terug te keren efficiënter voor verkennende vragen over grote datasets. Aangezien de steekproefdatasets slechts een percentage van de gegevens van de originele dataset bevatten, laat het u toe om vraagnauwkeurigheid voor een betere reactietijd te ruilen. Bij read-time, moet de Dienst van de Vraag minder rijen aftasten die sneller resultaten dan veroorzaakt als u de volledige dataset moest vragen.
 
@@ -26,19 +26,19 @@ Om u te helpen uw steekproeven voor benaderende vraagverwerking beheren, steunt 
 
 ## Aan de slag {#get-started}
 
-Als u de benaderende verwerkingsmogelijkheden voor query&#39;s die in dit document worden beschreven, wilt gebruiken, moet u de sessiemarkering instellen op `true`. Van de bevellijn van of de Redacteur van de Vraag of uw cliënt PSQL gaat de `SET aqp=true;` gebruiken.
+Als u de benaderende verwerkingsmogelijkheden voor query&#39;s die in dit document worden beschreven, wilt gebruiken, moet u de sessiemarkering instellen op `true` . Voer de opdracht `SET aqp=true;` in vanaf de opdrachtregel van de Query-editor of van uw PSQL-client.
 
 >[!NOTE]
 >
 >U moet de zittingsvlag toelaten telkens als u login aan Platform.
 
-![De redacteur van de Vraag met &quot;VASTGESTELDE qp=true;&quot;benadrukt bevel.](../images/essential-concepts/set-session-flag.png)
+![ de Redacteur van de Vraag met &quot;SET qp=true;&quot;benadrukt bevel.](../images/essential-concepts/set-session-flag.png)
 
 ## Een uniforme steekproef voor een willekeurige gegevensset maken {#create-a-sample}
 
-Gebruik de `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` bevel met een datasetnaam om een eenvormige willekeurige steekproef van die dataset tot stand te brengen.
+Gebruik het bevel `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` met een datasetnaam om een eenvormige willekeurige steekproef van die dataset tot stand te brengen.
 
-Het steekproeftarief is het percentage verslagen die van de originele dataset worden genomen. U kunt de samplefrequentie bepalen met de `TABLESAMPLE SAMPLERATE` trefwoorden. In dit voorbeeld komt de waarde 5,0 overeen met een bemonsteringsfrequentie van 50%. Een waarde van 2,5 komt overeen met 25% enzovoort.
+Het steekproeftarief is het percentage verslagen die van de originele dataset worden genomen. U kunt de samplefrequentie bepalen met de trefwoorden `TABLESAMPLE SAMPLERATE` . In dit voorbeeld komt de waarde 5,0 overeen met een bemonsteringsfrequentie van 50%. Een waarde van 2,5 komt overeen met 25% enzovoort.
 
 >[!IMPORTANT]
 >
@@ -68,11 +68,11 @@ ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestam
 ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
 ```
 
-In de gegeven voorbeelden is de tabelnaam `large_table`De filtervoorwaarde op de oorspronkelijke tabel is `month(to_timestamp(timestamp)) in ('8', '9')`en de bemonsteringsfrequentie (X% van de gefilterde gegevens), in dit geval, `10`.
+In de gegeven voorbeelden is de tabelnaam `large_table` , de filtervoorwaarde in de oorspronkelijke tabel is `month(to_timestamp(timestamp)) in ('8', '9')` en de bemonsteringsfrequentie (X% van de gefilterde gegevens), in dit geval `10` .
 
 ## De lijst met voorbeelden weergeven {#view-list-of-samples}
 
-Gebruik de `sample_meta()` gebruiken om de lijst met voorbeelden weer te geven die aan een ADLS-tabel zijn gekoppeld.
+Gebruik de functie `sample_meta()` om de lijst met voorbeelden weer te geven die aan een ADLS-tabel zijn gekoppeld.
 
 ```sql
 SELECT sample_meta('example_dataset_name')
@@ -89,7 +89,7 @@ De lijst van datasetsteekproeven wordt getoond in het formaat van het hieronder 
 
 ## Vraag de steekproefdataset {#query-sample-datasets}
 
-Gebruik de `{EXAMPLE_DATASET_NAME}` om steekproeflijsten direct te vragen. U kunt ook de opdracht `WITHAPPROXIMATE` sleutelwoord aan het eind van een vraag en de Dienst van de Vraag gebruikt automatisch de onlangs gecreeerd steekproef.
+Gebruik `{EXAMPLE_DATASET_NAME}` om steekproeflijsten direct te vragen. U kunt ook het trefwoord `WITHAPPROXIMATE` toevoegen aan het einde van een query en Query Service gebruikt automatisch het meest recent gemaakte voorbeeld.
 
 ```sql
 SELECT * FROM example_dataset_name WITHAPPROXIMATE;

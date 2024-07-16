@@ -11,25 +11,25 @@ ht-degree: 1%
 
 # De SDK van Adobe Experience Platform Web configureren
 
-De configuratie voor Web SDK wordt gedaan met `configure` gebruiken. Het vormen van SDK van het Web is een essentiële en vereiste stap die moet gebeuren wanneer de bibliotheek of de markeringsuitbreiding wordt gebruikt.
+De configuratie voor het Web SDK wordt gedaan met het `configure` bevel. Het vormen van SDK van het Web is een essentiële en vereiste stap die moet gebeuren wanneer de bibliotheek of de markeringsuitbreiding wordt gebruikt.
 
 ## De SDK van het web configureren met de tagextensie {#configure-tag-extension}
 
 Voer de onderstaande stappen uit om de SDK van het Web te configureren via de tagextensie.
 
-1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
-1. Navigeren naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] kaart.
-1. Ga naar de [Web SDK-pagina voor configuratie van tags](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) voor gedetailleerde informatie over alle configuratieopties.
+1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
+1. Ga naar de [ pagina van de de de taguitbreiding van SDK van het Web ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) voor gedetailleerde informatie over alle configuratieopties.
 
 Deze configuratiemontages worden geplaatst wanneer u de uitbreiding gebruikt om gegevens naar Adobe te verzenden.
 
 ## De SDK van het Web configureren met de JavaScript-bibliotheek {#configure-js}
 
-Voer de `configure` gebruiken. Dit bevel wordt vereist alvorens u een andere bevelen van SDK van het Web kunt roepen, zoals [`sendEvent`](../sendevent/overview.md).
+Voer de opdracht `configure` uit. Dit bevel wordt vereist alvorens u een andere bevelen van SDK van het Web, zoals [`sendEvent`](../sendevent/overview.md) kunt roepen.
 
-De [`edgeConfigId`](edgeconfigid.md) en [`orgId`](orgid.md) eigenschappen zijn vereist. Alle andere eigenschappen zijn optioneel, afhankelijk van de implementatievereisten van uw organisatie.
+De eigenschappen [`edgeConfigId`](edgeconfigid.md) en [`orgId`](orgid.md) zijn vereist. Alle andere eigenschappen zijn optioneel, afhankelijk van de implementatievereisten van uw organisatie.
 
 Zie de inhoudsopgave van deze gebruikershandleiding voor gedetailleerde informatie over elk van de ondersteunde opdrachten.
 

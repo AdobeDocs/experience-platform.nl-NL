@@ -4,8 +4,8 @@ title: Sjabloonspecificaties voor doelen die met Destination SDK zijn gemaakt
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 3%
+source-wordcount: '511'
+ht-degree: 0%
 
 ---
 
@@ -17,16 +17,16 @@ In een sjabloonspecificatie kunt u definiëren hoe u profielkenmerkvelden transf
 
 Sjabloonspecificaties maken deel uit van de configuratie van de doelserver voor realtime (streaming) doelen.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in [configuratieopties](../configuration-options.md) documentatie of bekijk de gids over hoe te [gebruik Destination SDK om een het stromen bestemming te vormen](../../guides/configure-destination-instructions.md#create-server-template-configuration).
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ gebruiken Destination SDK om een het stromen bestemming ](../../guides/configure-destination-instructions.md#create-server-template-configuration) te vormen.
 
-U kunt de sjabloonspecificaties voor uw bestemming configureren via de `/authoring/destination-servers` eindpunt. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
+U kunt de malplaatjespecs voor uw bestemming via het `/authoring/destination-servers` eindpunt vormen. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
 * [Een doelserverconfiguratie maken](../../authoring-api/destination-server/create-destination-server.md)
 * [Een doelserverconfiguratie bijwerken](../../authoring-api/destination-server/update-destination-server.md)
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Ondersteunde integratietypen {#supported-integration-types}
 
@@ -39,9 +39,9 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 
 ## Een sjabloonspecificatie configureren {#configure-template-spec}
 
-Adobe gebruikt een sjabloontaal die lijkt op [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) om de velden van het XDM-schema om te zetten in een indeling die door uw bestemming wordt ondersteund.
+De Adobe gebruikt een sjabloontaal gelijkend op [ Jinja ](https://jinja.palletsprojects.com/en/2.11.x/) om de gebieden van het schema XDM in een formaat om te zetten dat door uw bestemming wordt gesteund.
 
-![Sjabloonconfiguratie gemarkeerd](../../assets/functionality/destination-server/template-configuration.png)
+![ benadrukte configuratie van het Malplaatje ](../../assets/functionality/destination-server/template-configuration.png)
 
 Ga voor meer informatie over de transformatie naar de onderstaande koppelingen:
 
@@ -50,7 +50,7 @@ Ga voor meer informatie over de transformatie naar de onderstaande koppelingen:
 
 >[!TIP]
 >
->Adobe biedt een [ontwikkelaarsgereedschap](../../testing-api/streaming-destinations/create-template.md) waarmee u een sjabloon voor berichttransformatie kunt maken en testen.
+>De Adobe biedt het hulpmiddel van de a [ ontwikkelaar ](../../testing-api/streaming-destinations/create-template.md) aan dat u helpt een malplaatje van de berichttransformatie creëren en testen.
 
 Zie onder een voorbeeld van een HTTP-aanvraagsjabloon, samen met beschrijvingen van elke individuele parameter.
 
@@ -69,10 +69,10 @@ Zie onder een voorbeeld van een HTTP-aanvraagsjabloon, samen met beschrijvingen 
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `httpMethod` | Tekenreeks | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. Ondersteunde methoden: `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
-| `templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `value` | Tekenreeks | *Vereist.* Dit koord is de karakter-beschermde versie van het malplaatje dat de HTTP- verzoeken door Platform in het formaat formatteert dat door uw bestemming wordt verwacht. <br> Voor informatie over het schrijven van de sjabloon leest u de sectie over [gebruik maken van sjablonen](message-format.md#using-templating). <br> Raadpleeg voor meer informatie over het escapen van tekens de [RFC JSON-standaard, sectie 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Voor een voorbeeld van een eenvoudige transformatie raadpleegt u de [profielkenmerken](message-format.md#attributes) transformatie. |
-| `contentType` | Tekenreeks | *Vereist.* Het inhoudstype dat uw server accepteert. Afhankelijk van het type uitvoer dat uw transformatiesjabloon produceert, kan dit een van de ondersteunde uitvoerbestanden zijn [Inhoud van HTTP-toepassingen](https://www.iana.org/assignments/media-types/media-types.xhtml#application). In de meeste gevallen moet deze waarde worden ingesteld op `application/json`. |
+| `httpMethod` | String | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. Ondersteunde methoden: `GET`, `PUT`, `POST`, `DELETE`, `PATCH` . |
+| `templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `value` | String | *Vereist.* Deze tekenreeks is de op tekens gebaseerde versie van de sjabloon die de HTTP-aanvragen opmaakt die door Platform worden verzonden naar de indeling die door uw bestemming wordt verwacht. <br> voor informatie over hoe te om het malplaatje te schrijven, lees de sectie op [ gebruikend het templating ](message-format.md#using-templating). <br> voor meer informatie over karakter het ontsnappen, verwijs naar de [ norm RFC JSON, sectie zeven ](https://tools.ietf.org/html/rfc8259#section-7). <br> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [ profielattributen ](message-format.md#attributes) transformatie. |
+| `contentType` | String | *Vereist.* Het inhoudstype dat uw server accepteert. Afhankelijk van welk type van output uw transformatiemalplaatje produceert, kan dit om het even welke gesteunde [ types van de toepassingsinhoud van HTTP ](https://www.iana.org/assignments/media-types/media-types.xhtml#application) zijn. In de meeste gevallen moet deze waarde worden ingesteld op `application/json` . |
 
 {style="table-layout:auto"}
 

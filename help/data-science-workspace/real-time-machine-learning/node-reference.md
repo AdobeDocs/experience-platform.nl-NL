@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;ontwikkelaarsgids;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;Het Leren van de machine in real time;knoopverwijzing;
+keywords: Experience Platform;ontwikkelaarshandleiding;Data Science Workspace;populaire onderwerpen;Real-time Machine Learning;node reference;
 solution: Experience Platform
 title: Naslaggids voor het leren van machines in realtime
 description: Een knooppunt is de fundamentele eenheid waarvan grafieken worden gevormd. Elke knoop voert een specifieke taak uit en zij kunnen samen gebruikend verbindingen worden geketend om een grafiek te vormen die een pijpleiding van XML vertegenwoordigt. De taak die door een knoop wordt uitgevoerd vertegenwoordigt een verrichting op inputgegevens zoals een transformatie van gegevens of schema, of een machine het leren conclusie. Het knooppunt geeft de getransformeerde of afgeleide waarde uit aan de volgende node(s).
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ De volgende gids schetst de gesteunde knoopbibliotheken voor het Leren van de ma
 
 ## Het ontdekken van knopen voor gebruik in uw pijpleiding van ML
 
-De volgende code kopiëren naar een [!DNL Python] -laptop om alle knooppunten weer te geven die beschikbaar zijn voor gebruik.
+Kopieer de volgende code naar een [!DNL Python] -laptop om alle knooppunten weer te geven die beschikbaar zijn voor gebruik.
 
 ```python
 from pprint import pprint
@@ -36,7 +36,7 @@ from rtml_nodelibs.core.nodefactory import NodeFactory as nf
 pprint(nf.discover_nodes())
 ```
 
-**Voorbeeldreactie**
+**reactie van het Voorbeeld**
 
 ```json
 {'FieldOps': 'rtml_nodelibs.nodes.standard.preprocessing.fieldops.FieldOps',
@@ -57,7 +57,7 @@ Standaardknooppunten bouwen voort op open-source gegevenswetenschapsbibliotheken
 
 ### ModelUpload
 
-De ModelUpload knoop is een interne knoop van Adobe die model_path neemt en het model van de lokale modelweg uploadt aan de Echte - tijd machine Lerende blob opslag.
+Het knooppunt ModelUpload is een interne node voor Adobe die een model_path neemt en het model uploadt van het lokale modelpad naar de blob-opslag voor machines in real time.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -69,7 +69,7 @@ model_id = msg_model.model['model_id']
 
 ### ONNXNode
 
-ONNXNode is een intern knooppunt van de Adobe dat een model-id gebruikt om het vooraf opgeleide ONNX-model op te halen en het te gebruiken om op binnenkomende gegevens te score.
+ONNXNode is een interne knoop van de Adobe die een modelidentiteitskaart neemt om het vooraf opgeleide model ONNX te trekken en het gebruikt om op inkomende gegevens te score.
 
 >[!TIP]
 >
@@ -81,9 +81,9 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Pandas {#pandas}
 
-Met het volgende Pandas-knooppunt kunt u alle `pd.DataFrame` of een algemene pandasfunctie op hoofdniveau. Ga voor meer informatie over Pandas-methoden naar de [Documentatie over de Pandas-methoden](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Ga voor meer informatie over functies op het hoogste niveau naar de [Referentiegids voor Pandas API voor algemene functies](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+Met het volgende Pandas-knooppunt kunt u elke `pd.DataFrame` -methode of elke algemene pandaserfunctie op hoofdniveau importeren. Meer over de methodes van Pandas leren, bezoek de [ Pandas methodedocumentatie ](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Voor meer informatie over hoogste niveaufuncties, bezoek de [ Pandas API verwijzingsgids voor algemene functies ](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-Het knooppunt hieronder gebruikt `"import": "map"` om de methodenaam als koord in de parameters in te voeren, door de parameters als kaartfunctie in te voeren. In het onderstaande voorbeeld wordt dit gedaan door `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Nadat u de kaart hebt geplaatst, hebt u de optie om te plaatsen `inplace` als `True` of `False`. Set `inplace` als `True` of `False` op basis van de vraag of u transformatie wilt toepassen. Standaard `"inplace": False` maakt een nieuwe kolom. Ondersteuning voor het opgeven van een nieuwe kolomnaam is ingesteld om in een volgende release te worden toegevoegd. De laatste regel `cols` Dit kan een enkele kolomnaam of een lijst met kolommen zijn. Geef de kolommen op waarop u de transformatie wilt toepassen. In dit voorbeeld `device` wordt opgegeven.
+Het onderstaande knooppunt gebruikt `"import": "map"` om de methodenaam als een tekenreeks in de parameters te importeren, gevolgd door de parameters in te voeren als een kaartfunctie. In het onderstaande voorbeeld wordt dit gedaan met `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}` . Nadat u de kaart hebt geplaatst, kunt u `inplace` instellen als `True` of `False` . Stel `inplace` in als `True` of `False` op basis van of u transformatie wilt toepassen. Standaard maakt `"inplace": False` een nieuwe kolom. Ondersteuning voor het opgeven van een nieuwe kolomnaam is ingesteld om in een volgende release te worden toegevoegd. De laatste regel `cols` kan één kolomnaam of een lijst met kolommen zijn. Geef de kolommen op waarop u de transformatie wilt toepassen. In dit voorbeeld wordt `device` opgegeven.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -125,13 +125,13 @@ msg6 = model_train.process(msg5)
 | label | Naam van doelkolom (tekenreeks). |
 | mode | Trein/test (tekenreeks). |
 | model_path | Pad naar het model lokaal opslaan in onx-indeling. |
-| params.model | Absoluut importpad naar het model (tekenreeks), bijvoorbeeld: `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | Modelhyperparameters, zie [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) documentatie voor meer informatie. |
+| params.model | Absoluut importpad naar het model (tekenreeks), bijvoorbeeld: `sklearn.linear_model.LogisticRegression` . |
+| params.model_params | Model hyperparameters, zie de [ klearn API (kaart/dict) ](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) documentatie voor meer informatie. |
 | node_instance.process(data_message_from_previous_node) | De methode `process()` neemt DataMsg van de vorige knoop en past transformatie toe. Dit hangt van de huidige knoop af die wordt gebruikt. |
 
 ### Splitsen
 
-Gebruik het volgende knooppunt om uw dataframe op te splitsen in een trein en te testen door te slagen `train_size` of `test_size`. Dit retourneert een dataframe met een meervoudige index. U kunt tot trein en testgegevenskaders toegang hebben gebruikend het volgende voorbeeld: `msg5.data.xs("train")`.
+Gebruik het volgende knooppunt om uw gegevensframe in een trein te splitsen en te testen door `train_size` of `test_size` door te geven. Dit retourneert een dataframe met een meervoudige index. U hebt toegang tot dataframes van de trein en kunt deze testen met behulp van het volgende voorbeeld, `msg5.data.xs("train")` .
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -140,4 +140,4 @@ msg5 = splitter.process(msg4)
 
 ## Volgende stappen
 
-De volgende stap is knopen voor gebruik in het scoren van een Echte-tijd het Leren van de Machine model tot stand te brengen. Ga voor meer informatie naar de [Gebruikershandleiding voor laptop in realtime leren van machines](./rtml-authoring-notebook.md).
+De volgende stap is knopen voor gebruik in het scoren van een Echte-tijd het Leren van de Machine model tot stand te brengen. Voor meer informatie, bezoek de [ Echt - tijd machine die notitieboekjectgebruikershandleiding ](./rtml-authoring-notebook.md) leren.

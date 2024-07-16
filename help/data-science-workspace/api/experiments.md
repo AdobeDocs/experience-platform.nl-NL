@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;experimenten;sensei machine learningapi
+keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;experimenten;sensei machine learning api
 solution: Experience Platform
 title: API-eindpunt voor experimenten
 description: Modelontwikkeling en -training vinden plaats op het niveau van het experiment, waarbij een experiment bestaat uit een MLInstance, training en scoring-run.
@@ -24,7 +24,7 @@ U kunt een Experiment tot stand brengen door een verzoek van de POST uit te voer
 >
 >In tegenstelling tot modeltraining in de UI, leidt het creëren van een Experiment door een expliciete API vraag niet automatisch tot en voert een trainingslooppas uit.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 POST /experiments
@@ -51,9 +51,9 @@ curl -X POST \
 | `name` | De gewenste naam voor het experiment. De trainingsrun die overeenkomt met dit experiment, neemt deze waarde over die in de gebruikersinterface moet worden weergegeven als de naam van de trainingsrun. |
 | `mlInstanceId` | Een geldige MLInstance ID. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een payload die de details bevat van het nieuwe experiment, inclusief de unieke id (`id`).
+Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde Experiment met inbegrip van zijn uniek herkenningsteken (`id`) bevat.
 
 ```json
 {
@@ -73,7 +73,7 @@ Een geslaagde reactie retourneert een payload die de details bevat van het nieuw
 
 U kunt trainings- of scoring-runtime maken door een POST-aanvraag uit te voeren en een geldige experimenteerid op te geven en de uitvoertaak op te geven. Er kunnen alleen scores worden gemaakt als het Experimentprogramma een bestaande en geslaagde training heeft. Met succes zal het creëren van een trainingslooppas de model opleidingsprocedure initialiseren en zijn succesvolle voltooiing zal een getraind model produceren. Het genereren van getrainde modellen vervangt alle eerder bestaande modellen, zodat een expert op elk moment slechts één getraind model kan gebruiken.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 POST /experiments/{EXPERIMENT_ID}/runs
@@ -100,11 +100,11 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `{TASK}` | Geeft de taak van de uitvoering aan. Deze waarde instellen als een van `train` voor opleiding, `score` voor scoring, of `featurePipeline` voor eigenschappijpleiding. |
+| `{TASK}` | Geeft de taak van de uitvoering aan. Stel deze waarde in op `train` voor training, `score` voor scoring of `featurePipeline` voor functiepijplijn. |
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert een lading terug die de details van de nieuwe looppas met inbegrip van de geërfte standaardopleiding of het scoren parameters, en unieke identiteitskaart van de looppas bevat (`{RUN_ID}`).
+Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde looppas met inbegrip van de geërfte standaardopleiding of het scoren parameters, en unieke identiteitskaart van de looppas (`{RUN_ID}`) bevat.
 
 ```json
 {
@@ -133,10 +133,10 @@ Een succesvolle reactie keert een lading terug die de details van de nieuwe loop
 
 ## Een lijst met experimenten ophalen
 
-U kunt een lijst van Experimenten terugwinnen die tot een bepaalde instantie behoren door één enkel verzoek van de GET uit te voeren en geldige identiteitskaart MLInstance als vraagparameter te verstrekken. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [queryparameters voor ophalen van elementen](./appendix.md#query).
+U kunt een lijst van Experimenten terugwinnen die tot een bepaalde instantie behoren door één enkel verzoek van de GET uit te voeren en geldige identiteitskaart MLInstance als vraagparameter te verstrekken. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [ vraagparameters voor activaherwinning ](./appendix.md#query).
 
 
-**API-indeling**
+**API Formaat**
 
 ```http
 GET /experiments
@@ -158,9 +158,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een lijst met experimenten die dezelfde MLInstance-id delen (`{MLINSTANCE_ID}`).
+Een succesvolle reactie keert een lijst van Experimenten terug die zelfde identiteitskaart MLInstance (`{MLINSTANCE_ID}`) delen.
 
 ```json
 {
@@ -201,7 +201,7 @@ Een geslaagde reactie retourneert een lijst met experimenten die dezelfde MLInst
 
 U kunt de details van een specifieke Experiment terugwinnen door een verzoek van de GET uit te voeren dat gewenste identiteitskaart van de Experiment in de verzoekweg omvat.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 GET /experiments/{EXPERIMENT_ID}
@@ -222,7 +222,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een payload die de details van het gewenste experiment bevat.
 
@@ -242,13 +242,13 @@ Een geslaagde reactie retourneert een payload die de details van het gewenste ex
 
 ## Een lijst met experimentele tests ophalen
 
-U kunt een lijst ophalen met trainings- of scores die bij een bepaalde expert horen, door één aanvraag voor een GET uit te voeren en een geldige experimentele id op te geven. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een volledige lijst van beschikbare vraagparameters, zie de bijlage sectie over [queryparameters voor ophalen van elementen](./appendix.md#query).
+U kunt een lijst ophalen met trainings- of scores die bij een bepaalde expert horen, door één aanvraag voor een GET uit te voeren en een geldige experimentele id op te geven. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een volledige lijst van beschikbare vraagparameters, zie de bijlage sectie op [ vraagparameters voor activa terugwinning ](./appendix.md#query).
 
 >[!NOTE]
 >
 >Wanneer het combineren van veelvoudige vraagparameters, moeten zij door ampersands (&amp;) worden gescheiden.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 GET /experiments/{EXPERIMENT_ID}/runs
@@ -259,7 +259,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parameter | Beschrijving |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Een geldige experimentele id. |
-| `{QUERY_PARAMETER}` | Een van de [beschikbare queryparameters](./appendix.md#query) gebruikt om resultaten te filteren. |
+| `{QUERY_PARAMETER}` | Één van de [ beschikbare vraagparameters ](./appendix.md#query) die aan filterresultaten wordt gebruikt. |
 | `{VALUE}` | De waarde voor de voorafgaande vraagparameter. |
 
 **Verzoek**
@@ -275,9 +275,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een payload met daarin een lijst met uitvoeringen en alle details, inclusief de id van de experimentele uitvoering (`{RUN_ID}`).
+Een succesvolle reactie keert een lading terug die een lijst van looppas en elk van hun details met inbegrip van hun Experiment looppas identiteitskaart (`{RUN_ID}`) bevat.
 
 ```json
 {
@@ -307,7 +307,7 @@ U kunt een bestaande Experiment bijwerken door zijn eigenschappen door een verzo
 
 >[!TIP]
 >
->Om het succes van dit verzoek van de PUT te verzekeren, wordt geadviseerd eerst een verzoek van de GET uit te voeren aan [Het experimenteerprogramma ophalen op id](#retrieve-specific). Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>Om het succes van dit verzoek van PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET uitvoert om [ het Experiment door identiteitskaart ](#retrieve-specific) terug te winnen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 De volgende voorbeeld-API-aanroep werkt de naam van een expert bij terwijl deze in eerste instantie deze eigenschappen heeft:
 
@@ -323,7 +323,7 @@ De volgende voorbeeld-API-aanroep werkt de naam van een expert bij terwijl deze 
 }
 ```
 
-**API-indeling**
+**API Formaat**
 
 ```http
 PUT /experiments/{EXPERIMENT_ID}
@@ -354,7 +354,7 @@ curl -X PUT \
     }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lading die de bijgewerkte gegevens van de expert bevat.
 
@@ -376,7 +376,7 @@ Een geslaagde reactie retourneert een lading die de bijgewerkte gegevens van de 
 
 U kunt één Experiment verwijderen door een DELETE-aanvraag uit te voeren die de id van de doelexpert in het aanvraagpad bevat.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 DELETE /experiments/{EXPERIMENT_ID}
@@ -397,7 +397,7 @@ curl -X DELETE \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 ```json
 {
@@ -411,7 +411,7 @@ curl -X DELETE \
 
 U kunt alle Experimenten schrappen die tot een bepaalde instantie behoren MLI door een verzoek van de DELETE uit te voeren dat identiteitskaart MLInstance als vraagparameter omvat.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 DELETE /experiments?mlInstanceId={MLINSTANCE_ID}
@@ -432,7 +432,7 @@ curl -X DELETE \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 ```json
 {

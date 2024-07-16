@@ -1,7 +1,8 @@
 ---
-title: Gegevenstype handelsbereik
-description: Leer over het gegevenstype van het Gegevensmodel van de Ervaring van het Bereik van de Handel (XDM).
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+title: Gegevenstype Commerce-bereik
+description: Meer informatie over het gegevenstype Commerce Scope Experience Data Model (XDM).
+exl-id: c2888c3a-a49c-43c4-8d36-0a485cb76a58
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
@@ -10,9 +11,9 @@ ht-degree: 0%
 
 # [!UICONTROL Commerce Scope] gegevenstype
 
-[!UICONTROL Commerce Scope] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat herkenningstekens bepaalt voor waar een gebeurtenis binnen een handelsecosysteem voorkwam. Het onderscheidt omgevingen, websites, winkels en winkelweergaven.
+[!UICONTROL Commerce Scope] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat herkenningstekens bepaalt voor waar een gebeurtenis binnen een handels ecosysteem voorkwam. Het onderscheidt omgevingen, websites, winkels en winkelweergaven.
 
-![Een diagram van het gegevenstype Commerce Scope.](../images/data-types/commerce-scope.png)
+![ een diagram van het gegevenstype van het Bereik van Commerce.](../images/data-types/commerce-scope.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |---------------------------------|-------------------|-----------|-------------------------------------------------------|
@@ -25,5 +26,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/commercescope.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/commercescope.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/commercescope.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/commercescope.schema.json)

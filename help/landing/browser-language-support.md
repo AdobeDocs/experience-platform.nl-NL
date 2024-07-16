@@ -5,7 +5,7 @@ description: Adobe Experience Platform is het krachtigste, meest flexibele en op
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
 source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '248'
 ht-degree: 3%
 
 ---
@@ -16,13 +16,13 @@ De gebruikersinterface van Adobe Experience Platform (UI) is ontworpen om veelvo
 
 ## Browserondersteuning
 
-De interface van het platform is ontworpen om optimaal te werken in de **nieuwste versies** van Google Chrome, Safari, Firefox en Microsoft Edge. Mogelijk kunt u problemen ondervinden bij het gebruik van bepaalde functies in oudere versies van browsers.
+Het Platform UI wordt ontworpen om optimaal in de **recentste versies** van Google Chrome, Safari, Firefox, en Microsoft Edge te werken. Mogelijk kunt u problemen ondervinden bij het gebruik van bepaalde functies in oudere versies van browsers.
 
 | Besturingssysteem | Ondersteunde browsers |
 |---|---|
-| **MAC OS X** | Google Chrome, Safari, Firefox |
-| **Windows 10** | Google Chrome, Microsoft Edge, Firefox |
-| **Windows 7** | Google Chrome, Firefox |
+| **Mac OS X** | Google Chrome, Safari, Firefox |
+| **Vensters 10** | Google Chrome, Microsoft Edge, Firefox |
+| **Vensters 7** | Google Chrome, Firefox |
 
 De volgende besturingssystemen en browsers worden niet ondersteund:
 
@@ -52,10 +52,10 @@ De standaardtaal van de gebruikersinterface wordt bepaald door het gebied dat in
 De taal wijzigen:
 
 1. Meld u aan bij uw Experience Platform-account.
-1. Druk `Ctrl + i` om het menu met accountgegevens te openen.
-1. Ga naar **[!UICONTROL Preferred Languages]**.
+1. Druk op `Ctrl + i` om het menu met accountgegevens te openen.
+1. Ga naar **[!UICONTROL Preferred Languages]** .
 1. Selecteer de voorkeuren voor de eerste en de tweede taal.
-1. Selecteren **[!UICONTROL Save]** en sluit het venster.
+1. Selecteer **[!UICONTROL Save]** en sluit het venster.
 
 >[!NOTE]
 >

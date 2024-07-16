@@ -3,28 +3,28 @@ keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populair
 solution: Experience Platform
 title: Query-service in Jupyter-laptop
 type: Tutorial
-description: Met Adobe Experience Platform kunt u SQL (Structured Query Language) gebruiken in de Data Science Workspace door Query Service te integreren in JupyterLab als een standaardfunctie. In deze zelfstudie wordt een voorbeeld gegeven van SQL-query's voor veelvoorkomende gebruiksscenario's voor het verkennen, transformeren en analyseren van Adobe Analytics-gegevens.
+description: Met Adobe Experience Platform kunt u SQL (Structured Query Language) gebruiken in Data Science Workspace door Query Service in JupyterLab te integreren als een standaardfunctie. In deze zelfstudie wordt een voorbeeld gegeven van SQL-query's voor veelvoorkomende gebruiksscenario's voor het verkennen, transformeren en analyseren van Adobe Analytics-gegevens.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '809'
-ht-degree: 1%
+source-wordcount: '810'
+ht-degree: 0%
 
 ---
 
 # Query-service in Jupyter-laptop
 
-[!DNL Adobe Experience Platform] kunt u SQL (Structured Query Language) gebruiken in [!DNL Data Science Workspace] door [!DNL Query Service] in [!DNL JupyterLab] als een standaardfunctie.
+Met [!DNL Adobe Experience Platform] kunt u SQL (Structured Query Language) gebruiken in [!DNL Data Science Workspace] door [!DNL Query Service] als standaardfunctie te integreren in [!DNL JupyterLab] .
 
-Deze zelfstudie demonstreert voorbeeld van SQL-query&#39;s voor veelvoorkomende gebruiksscenario&#39;s voor het verkennen, transformeren en analyseren van bestanden [!DNL Adobe Analytics] gegevens.
+In deze zelfstudie worden voorbeelden van SQL-query&#39;s getoond voor veelvoorkomende gebruiksscenario&#39;s voor het verkennen, transformeren en analyseren van [!DNL Adobe Analytics] -gegevens.
 
 ## Aan de slag
 
 Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldoen:
 
-- Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform], raadpleeg uw systeembeheerder voordat u verdergaat
+- Toegang tot [!DNL Adobe Experience Platform] . Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform] , neemt u contact op met uw systeembeheerder voordat u verdergaat
 
-- An [!DNL Adobe Analytics] gegevensset
+- Een [!DNL Adobe Analytics] dataset
 
 - Een goed begrip van de volgende belangrijkste concepten die in deze zelfstudie worden gebruikt:
    - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
@@ -34,15 +34,15 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 
 ## Toegang [!DNL JupyterLab] en [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. In [[!DNL Experience Platform]](https://platform.adobe.com), navigeer naar **[!UICONTROL Notebooks]** in de linkernavigatiekolom. Laat JupyterLab even laden.
+1. Navigeer in [[!DNL Experience Platform] ](https://platform.adobe.com) naar **[!UICONTROL Notebooks]** vanuit de linkernavigatiekolom. Laat JupyterLab even laden.
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
-   >Als er niet automatisch een nieuw tabblad Launcher wordt weergegeven, opent u een nieuw tabblad Launcher door op **[!UICONTROL File]** Selecteer vervolgens **[!UICONTROL New Launcher]**.
+   >Als er niet automatisch een nieuw tabblad Launcher wordt weergegeven, opent u een nieuw tabblad Launcher door op **[!UICONTROL File]** te klikken en vervolgens **[!UICONTROL New Launcher]** te selecteren.
 
-2. Klik op het tabblad Launcher op het tabblad **[!UICONTROL Blank]** in een Python 3-omgeving om een lege laptop te openen.
+2. Klik op het tabblad Launcher op het pictogram **[!UICONTROL Blank]** in een Python 3-omgeving om een lege laptop te openen.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
@@ -50,21 +50,21 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
    >
    >Python 3 is momenteel de enige ondersteunde omgeving voor Query Service in laptops.
 
-3. Klik op de linkerselectieregel op de knop **[!UICONTROL Data]** en dubbelklik op **[!UICONTROL Datasets]** directory om van alle datasets een lijst te maken.
+3. Klik in de linkerselectieregel op het pictogram **[!UICONTROL Data]** en dubbelklik op de map **[!UICONTROL Datasets]** om alle gegevenssets weer te geven.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Zoeken naar [!DNL Adobe Analytics] dataset om op de lijst te onderzoeken en met de rechtermuisknop aan te klikken, klik **[!UICONTROL Query Data in Notebook]** om SQL vragen in het lege notitieboekje te produceren.
+4. Zoek een [!DNL Adobe Analytics] dataset om de lijst te onderzoeken en op de lijst met de rechtermuisknop te klikken, **[!UICONTROL Query Data in Notebook]** te klikken om SQL vragen in de lege notitie te produceren.
 
-5. Klik op de eerste cel die de functie bevat `qs_connect()` en voert u deze uit door op de afspeelknop te klikken. Met deze functie maakt u een verbinding tussen uw laptopexemplaar en de [!DNL Query Service].
+5. Klik op de eerste cel die de functie `qs_connect()` bevat en voer deze uit door op de afspeelknop te klikken. Deze functie maakt een verbinding tussen uw laptopinstantie en de [!DNL Query Service] .
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. Naar beneden kopiëren [!DNL Adobe Analytics] de naam van de dataset van de tweede geproduceerde SQL vraag, zal het de waarde na zijn `FROM`.
+6. Kopieer de naam van de [!DNL Adobe Analytics] dataset van de tweede gegenereerde SQL-query omlaag. Dit is de waarde na `FROM` .
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
-7. Voeg een nieuwe laptopcel in door op de knop **+** knop.
+7. Voeg een nieuwe laptopcel in door op de knop **+** te klikken.
 
    ![](../images/jupyterlab/query/insert_cell.gif)
 
@@ -85,10 +85,10 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
    target_day = "01"
    ```
 
-   - `target_table`: Naam van uw [!DNL Adobe Analytics] dataset.
-   - `target_year`: Specifiek jaar waarvoor de doelgegevens afkomstig zijn.
-   - `target_month`: Specifieke maand waarvan het doel afkomstig is.
-   - `target_day`: De specifieke dag waarop de doelgegevens afkomstig zijn.
+   - `target_table`: naam van uw [!DNL Adobe Analytics] dataset.
+   - `target_year`: specifiek jaar waarvan de doelgegevens afkomstig zijn.
+   - `target_month`: specifieke maand waarvan het doel afkomstig is.
+   - `target_day`: specifieke dag waarvan de doelgegevens afkomstig zijn.
 
    >[!NOTE]
    >
@@ -96,9 +96,9 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 
 ## Uw gegevens opvragen {#query-your-data}
 
-Voer de volgende SQL-query&#39;s in voor afzonderlijke laptopcellen. Voer een vraag door op zijn cel te selecteren door te selecteren gevolgd door **[!UICONTROL play]** knop. De succesvolle vraagresultaten of foutenlogboeken worden getoond onder de uitgevoerde cel.
+Voer de volgende SQL-query&#39;s in voor afzonderlijke laptopcellen. Voer een query uit door in de desbetreffende cel te selecteren, gevolgd door de knop **[!UICONTROL play]** te selecteren. De succesvolle vraagresultaten of foutenlogboeken worden getoond onder de uitgevoerde cel.
 
-Wanneer een laptop gedurende langere tijd inactief is, wordt de verbinding tussen de laptop en [!DNL Query Service] kan breken. In dergelijke gevallen start u de toepassing opnieuw op [!DNL JupyterLab] door **Opnieuw starten** knop ![knop Opnieuw starten](../images/jupyterlab/user-guide/restart_button.png) in de rechterbovenhoek naast de aan/uit-knop.
+Wanneer een laptop gedurende langere tijd inactief is, kan de verbinding tussen de laptop en [!DNL Query Service] verbroken worden. In dergelijke gevallen, nieuw begin [!DNL JupyterLab] door de **knoop van het Begin** ![ nieuwe begin knoop ](../images/jupyterlab/user-guide/restart_button.png) te selecteren die in de hoger-juiste hoek naast de machtsknoop wordt gevestigd.
 
 De notebookkernel wordt opnieuw ingesteld, maar de cellen blijven, en alle cellen worden opnieuw uitgevoerd om verder te gaan waar u was weggegaan.
 
@@ -120,9 +120,9 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-In de bovenstaande vraag, timestamp in `WHERE` -component is ingesteld als de waarde van `target_year`. Variabelen opnemen in SQL-query&#39;s door deze tussen accolades te plaatsen (`{}`).
+In de bovenstaande query wordt de tijdstempel in de `WHERE` -component ingesteld op de waarde van `target_year` . Neem variabelen op in SQL-query&#39;s door deze tussen accolades te plaatsen (`{}`).
 
-De eerste regel van de query bevat de optionele variabele `hourly_visitor`. De resultaten van de vraag zullen in deze variabele als dataframe van Pandas worden opgeslagen. Het opslaan van resultaten in een dataframe staat u toe om de vraagresultaten later te visualiseren gebruikend gewenst [!DNL Python] pakket. Het volgende uitvoeren [!DNL Python] code in een nieuwe cel om een staafgrafiek te genereren:
+De eerste regel van de query bevat de optionele variabele `hourly_visitor` . De resultaten van de vraag zullen in deze variabele als dataframe van Pandas worden opgeslagen. Als u resultaten opslaat in een dataframe, kunt u de queryresultaten later visualiseren met een gewenst [!DNL Python] -pakket. Voer de volgende [!DNL Python] code in een nieuwe cel uit om een staafgrafiek te genereren:
 
 ```python
 trace = go.Bar(
@@ -160,13 +160,13 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-Als u de bovenstaande query uitvoert, worden de resultaten opgeslagen in `hourly_actions` als een dataframe. Voer de volgende functie in een nieuwe cel uit om de resultaten te bekijken:
+Als u de bovenstaande query uitvoert, worden de resultaten in `hourly_actions` opgeslagen als een dataframe. Voer de volgende functie in een nieuwe cel uit om de resultaten te bekijken:
 
 ```python
 hourly_actions.head()
 ```
 
-De bovenstaande query kan worden gewijzigd om het aantal acties per uur te retourneren voor een opgegeven datumbereik met behulp van logische operatoren in het dialoogvenster **WAAR** clausule:
+De bovengenoemde vraag kan worden gewijzigd om de uuractietelling voor een gespecificeerde datumwaaier terug te keren gebruikend logische exploitanten in **WAAR** clausule:
 
 #### Query <!-- omit in toc -->
 
@@ -184,7 +184,7 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-Als u de gewijzigde query uitvoert, worden de resultaten opgeslagen in `hourly_actions_date_range` als een dataframe. Voer de volgende functie in een nieuwe cel uit om de resultaten te bekijken:
+Als u de gewijzigde query uitvoert, worden de resultaten in `hourly_actions_date_range` opgeslagen als een dataframe. Voer de volgende functie in een nieuwe cel uit om de resultaten te bekijken:
 
 ```python
 hourly_actions_date_rage.head()
@@ -208,7 +208,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Het volgende uitvoeren [!DNL Python] code voor het genereren van een histogram voor het aantal gebeurtenissen per bezoekerssessie:
+Voer de volgende [!DNL Python] -code uit om een histogram te genereren voor het aantal gebeurtenissen per bezoeksessie:
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -276,4 +276,4 @@ LIMIT  10;
 
 ## Volgende stappen
 
-In deze zelfstudie werden voorbeelden van gebruiksgevallen getoond [!DNL Query Service] in [!DNL Jupyter] -laptops. Volg de [Uw gegevens analyseren met Jupyter-laptops](./analyze-your-data.md) zelfstudie om te zien hoe vergelijkbare bewerkingen worden uitgevoerd met behulp van de SDK voor gegevenstoegang.
+Deze zelfstudie laat een aantal voorbeelden zien waarin gebruik wordt gemaakt van [!DNL Query Service] in [!DNL Jupyter] -laptops. Volg [ analyseert uw gegevens gebruikend Jupyter Notitieboekjes ](./analyze-your-data.md) leerprogramma om te zien hoe de gelijkaardige verrichtingen gebruikend de Toegang SDK van Gegevens worden uitgevoerd.

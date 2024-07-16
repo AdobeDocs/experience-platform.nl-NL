@@ -12,24 +12,24 @@ ht-degree: 0%
 
 # [!DNL Privacy Service] API-handleiding
 
-De Privacy Service-API bevat verschillende eindpunten waarmee u via programmacode privacytaken voor uw organisatie kunt beheren. Deze eindpunten worden hieronder beschreven. Ga naar de afzonderlijke eindpunthulplijnen voor meer informatie en raadpleeg de [gids Aan de slag](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lees steekproefAPI vraag, en meer.
+De Privacy Service-API bevat verschillende eindpunten waarmee u via programmacode privacytaken voor uw organisatie kunt beheren. Deze eindpunten worden hieronder beschreven. Gelieve te bezoeken de individuele eindpuntgidsen voor details en te verwijzen naar [ begonnen gids ](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
 
 >[!NOTE]
 >
->In deze handleiding wordt uitgelegd hoe u de [!DNL Privacy Service] API. Voor meer informatie over het gebruik van de gebruikersinterface raadpleegt u de [Overzicht van de gebruikersinterface voor Privacys Service](../ui/overview.md).
+>In deze handleiding wordt uitgelegd hoe u de API van [!DNL Privacy Service] gebruikt. Voor details op hoe te om UI te gebruiken, zie het [ overzicht van de Privacy Service UI ](../ui/overview.md).
 
-Ga naar de [Privacy Service API-naslaggids](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
+Om alle beschikbare eindpunten en verrichtingen te bekijken CRUD, bezoek de [ Privacy Service API verwijzing ](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
 
 ## Privacytaken
 
 Wanneer de Privacy Service een verzoek ontvangt om toegang te krijgen tot of de persoonsgegevens van een onderwerp te verwijderen, creëert het systeem privacytaken om aan dat verzoek te voldoen. Elke privacytaak bevat identiteitsgegevens die betrekking hebben op de betrokkene, metagegevens over het Adobe Experience Cloud-product waarop de taak van toepassing is en de verwerkingsstatus van de taak.
 
-De `/jobs` het eindpunt staat u toe om privacybanen voor uw organisatie tot stand te brengen en terug te winnen. Om te leren hoe te om dit eindpunt te gebruiken, zie [eindgebruikershandleiding voor privacytaken](./privacy-jobs.md).
+Met het `/jobs` -eindpunt kunt u privacytaken voor uw organisatie maken en ophalen. Leren hoe te om dit eindpunt te gebruiken, zie de [ gids van het de baaneindpunt van de privacy ](./privacy-jobs.md).
 
 ## Toestemming
 
-Bepaalde voorschriften vereisen uitdrukkelijke toestemming van de klant voordat de persoonsgegevens kunnen worden verzameld. De `/consent` het eindpunt staat u toe om verzoeken van de klantentoestemming te verwerken en hen in uw privacywerkschema te integreren. Zie de [leidraad voor het eindpunt van de overeenkomst](./consent.md) voor meer informatie.
+Bepaalde voorschriften vereisen uitdrukkelijke toestemming van de klant voordat de persoonsgegevens kunnen worden verzameld. Met het `/consent` -eindpunt kunt u verzoeken om toestemming van klanten verwerken en deze integreren in uw privacyworkflow. Zie de [ gids van het toestemmings eindpunt ](./consent.md) om meer te leren.
 
 ## Volgende stappen
 
-Als u begint met het maken van aanroepen met de Privacy Service-API, leest u de [gids Aan de slag](./getting-started.md) Selecteer vervolgens een van de eindpunthulplijnen om te leren hoe u specifieke eindpunten kunt gebruiken.
+Begin makend vraag gebruikend de Privacy Service API, lees [ begonnen gids ](./getting-started.md) toen selecteren één van de eindpuntgidsen om te leren hoe te om specifieke eindpunten te gebruiken.

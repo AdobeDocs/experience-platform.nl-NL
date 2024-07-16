@@ -17,19 +17,19 @@ De mbox3rdPartyId in Adobe Target is de bezoekersidentiteitskaart van uw bedrijf
 Wanneer een bezoeker zich aanmeldt bij de site van een bedrijf, maakt het bedrijf doorgaans een id die is gekoppeld aan de account, de loyaliteitskaart, het lidmaatschapsnummer of andere toepasselijke id&#39;s voor dat bedrijf. [Meer informatie](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html#)
 
 
-## Hoe wordt het gebruikt `mbox3rdPartyId` met de Web SDK
+## `mbox3rdPartyId` gebruiken met de SDK van het Web
 
-### Stap 1: Vorm `Target Third Party ID Namespace`
+### Stap 1: Configureer de `Target Third Party ID Namespace`
 
-Vorm `Target Third Party ID Namespace` in uw [DataStream](../../../datastreams/overview.md), met de id-naamruimte die u als een box-id van een andere fabrikant wilt gebruiken.
-[Meer informatie over naamruimten in id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl)
+Vorm `Target Third Party ID Namespace` in uw [ DataStream ](../../../datastreams/overview.md), gebruikend identiteitskaart Namespace u als 3de partijidentiteitskaart wilt gebruiken.
+[ Leer meer over identiteitskaart namespaces ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl)
 
-![Platform-UI die het naamruimteveld Id van derde doel weergeeft.](assets/mbox3rdpartyid.png)
+![ Platform UI die het van de Derde van het Doel namespace gebied toont.](assets/mbox3rdpartyid.png)
 
-### Stap 2: De `mbox3rdpartyId` naar doel
+### Stap 2: De `mbox3rdpartyId` naar doel verzenden
 
-Verzend de `mbox3rdpartyId` naar doel in de `sendEvent` bevel, gebruikend identiteitskaart namespace die u in Stap 1 vormde.
-[Meer informatie over het verzenden van id&#39;s](../../identity/overview.md#syncing-identities)
+Verzend `mbox3rdpartyId` naar Doel in het `sendEvent` bevel, gebruikend identiteitskaart namespace die u in Stap 1 vormde.
+[ leer meer over het verzenden van IDs ](../../identity/overview.md#syncing-identities)
 
 ```javascript
 alloy("sendEvent", {

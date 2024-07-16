@@ -16,15 +16,15 @@ ht-degree: 0%
 
 ## Voorbeeld-API-aanroepen
 
-De volgende secties beschrijven de diverse API vraag u kunt maken gebruikend [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+In de volgende secties worden de verschillende API-aanroepen beschreven die u met de API [!DNL Query Service] kunt maken. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
-Zie de [UI-query sjabloondocumentatie](../ui/query-templates.md) voor informatie over het creëren van malplaatjes door de UI van het Experience Platform.
+Zie de [ documentatie van de vraagmalplaatjes UI ](../ui/query-templates.md) voor informatie bij het creëren van malplaatjes door Experience Platform UI.
 
 ### Een lijst met querysjablonen ophalen
 
-U kunt een lijst van alle vraagmalplaatjes voor uw organisatie terugwinnen door een verzoek van de GET tot de `/query-templates` eindpunt.
+U kunt een lijst van alle vraagmalplaatjes voor uw organisatie terugwinnen door een verzoek van de GET tot het `/query-templates` eindpunt te richten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /query-templates
@@ -33,18 +33,18 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Optioneel*) Parameters die aan het verzoekweg worden toegevoegd die de resultaten vormen die in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven. |
+| `{QUERY_PARAMETERS}` | (*Facultatieve*) Parameters die aan de verzoekweg worden toegevoegd die de resultaten vormen in de reactie zijn teruggekeerd. De veelvoudige parameters kunnen worden omvat, die door ampersands (`&`) worden gescheiden. De beschikbare parameters worden hieronder weergegeven. |
 
-**Query-parameters**
+**de parameters van de Vraag**
 
 Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van querysjablonen. Al deze parameters zijn optioneel. Het maken van een vraag aan dit eindpunt zonder parameters zal alle vraagmalplaatjes beschikbaar voor uw organisatie terugwinnen.
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. Bijvoorbeeld: `orderby=created` sorteert de resultaten in oplopende volgorde. Een `-` vóór het maken (`orderby=-created`) sorteert objecten in aflopende volgorde. |
+| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated` . `orderby=created` sorteert de resultaten bijvoorbeeld in oplopende volgorde. Wanneer u een `-` vóór het maken (`orderby=-created` ) toevoegt, worden de items in aflopende volgorde gesorteerd. |
 | `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Standaardwaarde: 20*) |
-| `start` | Geef een tijdstempel voor de ISO-indeling op om de resultaten te bestellen. Als er geen begindatum is opgegeven, retourneert de API-aanroep eerst de oudste gemaakte sjablonen en worden de meest recente resultaten weergegeven.<br> Met ISO-tijdstempels kunt u de datum en tijd korter maken. De basis ISO-tijdstempels hebben de notatie: `2020-09-07` om de datum 7 september 2020 uit te drukken. Een complexer voorbeeld zou worden geschreven zoals `2022-11-05T08:15:30-05:00` en komt overeen met 5 november 2022, 8:15:30 uur &#39;s ochtends, Amerikaanse Eastern Standard Time. Een tijdzone kan worden opgegeven met een UTC-verschuiving en wordt aangeduid met het achtervoegsel &quot;Z&quot; (`2020-01-01T01:01:01Z`). Als er geen tijdzone is opgegeven, wordt de standaardwaarde nul gebruikt. |
-| `property` | Filterresultaten op basis van velden. De filters **moet** zijn aan HTML ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `name` en `userId`. De enige ondersteunde operator is `==` (gelijk aan). Bijvoorbeeld: `name==my_template` retourneert alle querysjablonen met de naam `my_template`. |
+| `start` | Geef een tijdstempel voor de ISO-indeling op om de resultaten te bestellen. Als er geen begindatum is opgegeven, retourneert de API-aanroep eerst de oudste gemaakte sjablonen en worden de meest recente resultaten weergegeven.<br> Met ISO-tijdstempels kunt u verschillende niveaus van granulariteit opgeven in de datum en tijd. De basis-ISO-tijdstempels hebben de notatie: `2020-09-07` voor het uitdrukken van de datum 7 september 2020. Een complexer voorbeeld zou als `2022-11-05T08:15:30-05:00` worden geschreven en beantwoordt aan 5 November, 2022, 8 :15: 30 am, de Tijd van de Norm van de V.S. Een timezone kan met een UTC compensatie worden voorzien en door het achtervoegsel &quot;Z&quot; (`2020-01-01T01:01:01Z`) wordt aangeduid. Als er geen tijdzone is opgegeven, wordt de standaardwaarde nul gebruikt. |
+| `property` | Filterresultaten op basis van velden. De filters **moeten** HTML zijn ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `name` en `userId` . De enige ondersteunde operator is `==` (gelijk aan). `name==my_template` retourneert bijvoorbeeld alle querysjablonen met de naam `my_template` . |
 
 **Verzoek**
 
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met een lijst van vraagmalplaatjes voor de gespecificeerde organisatie terug. De volgende reactie keert het recentste vraagmalplaatje terug dat voor uw organisatie wordt gecreeerd.
 
@@ -109,13 +109,13 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van vraagmalplaa
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` tot [verwijder uw querysjabloon](#delete-a-specified-query-template).
+>U kunt de waarde van `_links.delete` gebruiken om [ uw vraagmalplaatje ](#delete-a-specified-query-template) te schrappen.
 
 ### Een querysjabloon maken
 
-U kunt een vraagmalplaatje tot stand brengen door een verzoek van de POST aan `/query-templates` eindpunt.
+U kunt een vraagmalplaatje tot stand brengen door een verzoek van de POST aan het `/query-templates` eindpunt te doen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /query-templates
@@ -140,11 +140,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `sql` | De SQL-query die u wilt maken. U kunt standaard-SQL of parametervervanging gebruiken. Als u een parametervervanging in SQL wilt gebruiken, moet u de parametersleutel met een `$`. Bijvoorbeeld: `$key`en geef de parameters op die in de SQL als JSON-sleutelwaardeparen in de `queryParameters` veld. De waarden die hier worden doorgegeven, zijn de standaardparameters die in de sjabloon worden gebruikt. Als u deze parameters wilt met voeten treden, moet u hen in het verzoek van de POST met voeten treden. |
+| `sql` | De SQL-query die u wilt maken. U kunt standaard-SQL of parametervervanging gebruiken. Als u een parametervervanging in SQL wilt gebruiken, moet u de parametersleutel met een `$` voorafgaan. Bijvoorbeeld `$key` en geef de parameters die in de SQL als JSON-sleutelwaardeparen worden gebruikt, op in het `queryParameters` -veld. De waarden die hier worden doorgegeven, zijn de standaardparameters die in de sjabloon worden gebruikt. Als u deze parameters wilt met voeten treden, moet u hen in het verzoek van de POST met voeten treden. |
 | `name` | De naam van de querysjabloon. |
-| `queryParameters` | Een sleutelwaarde die wordt geparseerd om het even welke parameters bepaalde waarden in de SQL verklaring te vervangen. Alleen vereist **indien** u gebruikt parametervervangingen binnen SQL u verstrekt. Op deze sleutelwaardeparen wordt het waardetype niet gecontroleerd. |
+| `queryParameters` | Een sleutelwaarde die wordt geparseerd om het even welke parameters bepaalde waarden in de SQL verklaring te vervangen. Het wordt slechts vereist **als** u parametervervangingen binnen SQL gebruikt u verstrekt. Op deze sleutelwaardeparen wordt het waardetype niet gecontroleerd. |
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van de nieuw gemaakte querysjabloon.
 
@@ -176,13 +176,13 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` tot [verwijder uw querysjabloon](#delete-a-specified-query-template).
+>U kunt de waarde van `_links.delete` gebruiken om [ uw vraagmalplaatje ](#delete-a-specified-query-template) te schrappen.
 
 ### Een opgegeven querysjabloon ophalen
 
-U kunt een specifieke vraagmalplaatje terugwinnen door een verzoek van de GET aan `/query-templates/{TEMPLATE_ID}` eindpunt en het verstrekken van identiteitskaart van het vraagmalplaatje in de verzoekweg.
+U kunt een specifiek vraagmalplaatje terugwinnen door een verzoek van de GET aan het `/query-templates/{TEMPLATE_ID}` eindpunt te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /query-templates/{TEMPLATE_ID}
@@ -202,7 +202,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met details van uw gespecificeerd vraagmalplaatje terug.
 
@@ -234,13 +234,13 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw gespecifice
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` tot [verwijder uw querysjabloon](#delete-a-specified-query-template).
+>U kunt de waarde van `_links.delete` gebruiken om [ uw vraagmalplaatje ](#delete-a-specified-query-template) te schrappen.
 
 ### Een opgegeven querysjabloon bijwerken
 
-U kunt een specifieke vraagmalplaatje bijwerken door een verzoek van de PUT aan `/query-templates/{TEMPLATE_ID}` eindpunt en het verstrekken van identiteitskaart van het vraagmalplaatje in de verzoekweg.
+U kunt een specifieke vraagmalplaatje bijwerken door een verzoek van de PUT aan het `/query-templates/{TEMPLATE_ID}` eindpunt te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /query-templates/{TEMPLATE_ID}
@@ -254,7 +254,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->Voor de aanvraag van de PUT moeten zowel het veld sql als de naam worden ingevuld en **overschrijven** de huidige inhoud van die vraagmalplaatje.
+>Het verzoek van de PUT vereist zowel sql als naamgebied om worden gevuld, en zal **** de huidige inhoud van dat vraagmalplaatje beschrijven.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -273,11 +273,11 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `sql` | De SQL-query die u wilt maken. U kunt standaard-SQL of parametervervanging gebruiken. Als u een parametervervanging in SQL wilt gebruiken, moet u de parametersleutel met een `$`. Bijvoorbeeld: `$key`en geef de parameters op die in de SQL als JSON-sleutelwaardeparen in de `queryParameters` veld. De waarden die hier worden doorgegeven, zijn de standaardparameters die in de sjabloon worden gebruikt. Als u deze parameters wilt met voeten treden, moet u hen in het verzoek van de POST met voeten treden. |
+| `sql` | De SQL-query die u wilt maken. U kunt standaard-SQL of parametervervanging gebruiken. Als u een parametervervanging in SQL wilt gebruiken, moet u de parametersleutel met een `$` voorafgaan. Bijvoorbeeld `$key` en geef de parameters die in de SQL als JSON-sleutelwaardeparen worden gebruikt, op in het `queryParameters` -veld. De waarden die hier worden doorgegeven, zijn de standaardparameters die in de sjabloon worden gebruikt. Als u deze parameters wilt met voeten treden, moet u hen in het verzoek van de POST met voeten treden. |
 | `name` | De naam van de querysjabloon. |
-| `queryParameters` | Een sleutelwaarde die wordt geparseerd om het even welke parameters bepaalde waarden in de SQL verklaring te vervangen. Alleen vereist **indien** u gebruikt parametervervangingen binnen SQL u verstrekt. Op deze sleutelwaardeparen wordt het waardetype niet gecontroleerd. |
+| `queryParameters` | Een sleutelwaarde die wordt geparseerd om het even welke parameters bepaalde waarden in de SQL verklaring te vervangen. Het wordt slechts vereist **als** u parametervervangingen binnen SQL gebruikt u verstrekt. Op deze sleutelwaardeparen wordt het waardetype niet gecontroleerd. |
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met de bijgewerkte informatie voor de opgegeven querysjabloon.
 
@@ -310,13 +310,13 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met de bijgewer
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` tot [verwijder uw querysjabloon](#delete-a-specified-query-template).
+>U kunt de waarde van `_links.delete` gebruiken om [ uw vraagmalplaatje ](#delete-a-specified-query-template) te schrappen.
 
 ### Een opgegeven querysjabloon verwijderen
 
-U kunt een specifieke vraagmalplaatje schrappen door een verzoek van de DELETE aan te richten `/query-templates/{TEMPLATE_ID}` en het verstrekken van identiteitskaart van het vraagmalplaatje in de verzoekweg.
+U kunt een specifieke vraagmalplaatje schrappen door een DELETE verzoek aan `/query-templates/{TEMPLATE_ID}` te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /query-templates/{TEMPLATE_ID}
@@ -336,7 +336,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/query-templates/0
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volgende bericht.
 

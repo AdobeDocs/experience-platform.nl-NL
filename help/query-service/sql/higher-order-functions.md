@@ -1,7 +1,8 @@
 ---
 title: Array- en kaartgegevenstypen beheren met functies voor hogere volgorde
 description: Leer hoe te om serie en kaartgegevenstypes met hoger-ordefuncties in de Dienst van de Vraag te beheren. Praktische voorbeelden worden gegeven met veelvoorkomende gebruiksgevallen.
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 0%
@@ -18,7 +19,7 @@ De volgende lijst met gebruiksgevallen bevat voorbeelden van functies voor array
 
 `transform(array<T>, function<T, U>): array<U>`
 
-Het bovenstaande fragment past een functie toe op elk element van de array en retourneert een nieuwe array van getransformeerde elementen. In het bijzonder de `transform` De functie neemt een serie van type T en zet elk element van type T in type U om. Vervolgens wordt een array van het type U geretourneerd. De daadwerkelijke types T en U hangen van het specifieke gebruik van de transformatiefunctie af.
+Het bovenstaande fragment past een functie toe op elk element van de array en retourneert een nieuwe array van getransformeerde elementen. Met name de functie `transform` neemt een array van type T en converteert elk element van type T naar type U. Vervolgens wordt een array van het type U geretourneerd. De daadwerkelijke types T en U hangen van het specifieke gebruik van de transformatiefunctie af.
 
 `transform(array<T>, function<T, Int, U>): array<U>`
 
@@ -26,7 +27,7 @@ Deze arraytransformatiefunctie is vergelijkbaar met het vorige voorbeeld, maar e
 
 **Voorbeeld**
 
-In het onderstaande SQL-voorbeeld wordt dit geval geïllustreerd. De query haalt een beperkte set rijen op uit de opgegeven tabel, waarbij de `productListItems` array vermenigvuldigen met `priceTotal` kenmerk van elk item door 73. Het resultaat omvat de `_id`, `productListItems`en de getransformeerde `price_in_inr` kolommen. De selectie is gebaseerd op een specifiek tijdstempelbereik.
+In het onderstaande SQL-voorbeeld wordt dit geval geïllustreerd. De query haalt een beperkte set rijen op uit de opgegeven tabel, waarbij de array `productListItems` wordt getransformeerd door het kenmerk `priceTotal` van elk item met 73 te vermenigvuldigen. Het resultaat omvat de kolommen `_id` , `productListItems` en `price_in_inr` getransformeerd. De selectie is gebaseerd op een specifiek tijdstempelbereik.
 
 ```sql
 SELECT _id,
@@ -59,11 +60,11 @@ De resultaten voor deze SQL zouden vergelijkbaar zijn met die hieronder worden w
 
 `exists(array<T>, function<T, boolean>): boolean`
 
-In het bovenstaande fragment worden de `exists` function wordt toegepast op elk element van de array en retourneert een booleaanse waarde. De booleaanse waarde geeft aan of er een of meer elementen in de array zijn die aan een opgegeven voorwaarde voldoen. In dit geval wordt bevestigd of een product met een specifieke SKU bestaat.
+In het bovenstaande fragment wordt de functie `exists` toegepast op elk element van de array en wordt een booleaanse waarde geretourneerd. De booleaanse waarde geeft aan of er een of meer elementen in de array zijn die aan een opgegeven voorwaarde voldoen. In dit geval wordt bevestigd of een product met een specifieke SKU bestaat.
 
 **Voorbeeld**
 
-In het onderstaande SQL-voorbeeld haalt de query `productListItems` van de `geometrixxx_999_xdm_pqs_1batch_10k_rows` tabel en evalueert of een element met een SKU gelijk aan `123679` in de `productListItems` -array bestaat. Vervolgens worden de resultaten gefilterd op basis van een specifieke reeks tijdstempels en worden de uiteindelijke resultaten beperkt tot tien rijen.
+In het onderstaande SQL-voorbeeld haalt de query `productListItems` op van de `geometrixxx_999_xdm_pqs_1batch_10k_rows` -tabel en evalueert deze of een element met een SKU gelijk aan `123679` in de `productListItems` -array bestaat. Vervolgens worden de resultaten gefilterd op basis van een specifieke reeks tijdstempels en worden de uiteindelijke resultaten beperkt tot tien rijen.
 
 ```sql
 SELECT productListItems
@@ -102,7 +103,7 @@ Deze functie filtert een array met elementen op basis van een bepaalde voorwaard
 
 **Voorbeeld**
 
-Met de onderstaande query selecteert u de opdracht `productListItems` wordt een filter toegepast om alleen elementen met een SKU groter dan 100000 op te nemen en wordt het resultaat beperkt tot rijen binnen een specifiek tijdstempelbereik. De gefilterde array wordt dan als volgt gealiased `_filter` in de uitvoer.
+Met de onderstaande query wordt de kolom `productListItems` geselecteerd, wordt een filter toegepast om alleen elementen met een SKU groter dan 100000 op te nemen en wordt de resultaatset beperkt tot rijen binnen een specifiek tijdstempelbereik. De gefilterde array wordt vervolgens als `_filter` in de uitvoer gealiased.
 
 ```sql
 SELECT productListItems,
@@ -136,7 +137,7 @@ Deze statistische bewerking past een binaire operator toe op een begintoestand e
 
 **Voorbeeld**
 
-Dit vraagvoorbeeld berekent de maximumwaarde SKU van `productListItems` binnen het opgegeven tijdstempelbereik en verdubbelt het resultaat. De uitvoer bevat het origineel `productListItems` array en de berekende `max_value`.
+In dit queryvoorbeeld wordt de maximale SKU-waarde berekend uit de array `productListItems` binnen het opgegeven tijdstempelbereik en wordt het resultaat verdubbeld. De uitvoer bevat de oorspronkelijke `productListItems` -array en de berekende `max_value` .
 
 ```sql
 SELECT productListItems,
@@ -175,7 +176,7 @@ Dit fragment combineert de elementen van twee arrays tot één nieuwe array. De 
 
 **Voorbeeld**
 
-De volgende query gebruikt de opdracht `zip_with` functie voor het maken van waardeparen van twee arrays. Dit doet u door de SKU-waarden van de `productListItems` array naar een gehele reeks, die is gegenereerd met de `Sequence` functie. Het resultaat wordt samen met het origineel geselecteerd `productListItems` en is beperkt op basis van een tijdstempelbereik.
+De volgende query gebruikt de functie `zip_with` om paren waarden te maken van twee arrays. Dit gebeurt door de SKU-waarden van de array `productListItems` toe te voegen aan een reeks gehele getallen, die is gegenereerd met de functie `Sequence` . Het resultaat wordt samen met de oorspronkelijke kolom `productListItems` geselecteerd en is beperkt op basis van een tijdstempelbereik.
 
 ```sql
 SELECT productListItems,
@@ -250,7 +251,7 @@ productListItems     | map_from_entries
 
 `map_form_arrays(array<K>, array<V>): map<K, V>`
 
-De `map_form_arrays` Deze functie maakt een kaart met behulp van gekoppelde waarden uit twee arrays.
+De functie `map_form_arrays` maakt een kaart met behulp van gekoppelde waarden uit twee arrays.
 
 >[!IMPORTANT]
 >
@@ -258,7 +259,7 @@ De `map_form_arrays` Deze functie maakt een kaart met behulp van gekoppelde waar
 
 **Voorbeeld**
 
-De onderstaande SQL-code maakt een kaart waar de sleutels volgnummers zijn die zijn gegenereerd met behulp van de `Sequence` en de waarden zijn elementen van de `productListItems` array. De query selecteert de `productListItems` en gebruikt de `Map_from_arrays` gebruiken om de kaart te maken op basis van de gegenereerde reeks getallen en de elementen van de array. Het resultaat is beperkt tot tien rijen en gefilterd op basis van een tijdstempelbereik.
+In de onderstaande SQL-code wordt een kaart gemaakt waar de sleutels volgnummers zijn die met de functie `Sequence` zijn gegenereerd en de waarden elementen van de array `productListItems` zijn. De query selecteert de kolom `productListItems` en gebruikt de functie `Map_from_arrays` om de map te maken op basis van de gegenereerde reeks getallen en de elementen van de array. Het resultaat is beperkt tot tien rijen en gefilterd op basis van een tijdstempelbereik.
 
 ```sql
 SELECT productListItems,
@@ -296,11 +297,11 @@ productListItems     | map_from_entries
 
 `map_concat(map<K, V>, ...): map<K, V>`
 
-De `map_concat` in het bovenstaande fragment worden meerdere maps als argumenten gebruikt en wordt een nieuwe map geretourneerd waarin alle sleutelwaardeparen van de invoermaps worden gecombineerd. De functie voegt meerdere toewijzingen samen tot één kaart en de resulterende kaart bevat alle sleutel-waardeparen van de invoertoewijzingen.
+De functie `map_concat` in het bovenstaande fragment neemt meerdere maps als argumenten en retourneert een nieuwe map waarin alle sleutel-waardeparen van de invoermaps worden gecombineerd. De functie voegt meerdere toewijzingen samen tot één kaart en de resulterende kaart bevat alle sleutel-waardeparen van de invoertoewijzingen.
 
 **Voorbeeld**
 
-De onderstaande SQL-code maakt een kaart waarin elk item zich bevindt `productListItems` wordt gekoppeld aan een volgnummer, dat vervolgens wordt samengevoegd met een andere kaart waar toetsen worden gegenereerd in een specifiek bereik van reeksen.
+In de onderstaande SQL-code wordt een kaart gemaakt waaraan elk item in `productListItems` is gekoppeld met een volgnummer. Deze wordt vervolgens samengevoegd met een andere kaart waar toetsen in een bepaald bereik van reeksen worden gegenereerd.
 
 ```sql
 SELECT productListItems,
@@ -345,7 +346,7 @@ Voor kaarten, keert het of een waarde voor de bepaalde sleutel terug of ongeldig
 
 **Voorbeeld**
 
-De query selecteert de `identitymap` kolom uit de tabel `geometrixxx_999_xdm_pqs_1batch_10k_rows` en extraheert de waarde die aan de sleutel is gekoppeld `AAID` voor elke rij. De resultaten zijn beperkt tot rijen die binnen het opgegeven tijdstempelbereik vallen, en de query beperkt de uitvoer tot tien rijen.
+De query selecteert de `identitymap` kolom in de tabel `geometrixxx_999_xdm_pqs_1batch_10k_rows` en extraheert de waarde die aan de sleutel `AAID` voor elke rij is gekoppeld. De resultaten zijn beperkt tot rijen die binnen het opgegeven tijdstempelbereik vallen, en de query beperkt de uitvoer tot tien rijen.
 
 ```sql
 SELECT identitymap,
@@ -383,7 +384,7 @@ Dit fragment retourneert de grootte van een bepaalde array of kaart en biedt een
 
 **Voorbeeld**
 
-Met de onderstaande query wordt het `identitymap` en de `Cardinality` functie berekent het aantal elementen in elke kaart binnen de `identitymap`. De resultaten zijn beperkt tot tien rijen en worden gefilterd op basis van een opgegeven tijdstempelbereik.
+Met de onderstaande query wordt de kolom `identitymap` opgehaald en de functie `Cardinality` berekent het aantal elementen in elke kaart in de `identitymap` . De resultaten zijn beperkt tot tien rijen en worden gefilterd op basis van een opgegeven tijdstempelbereik.
 
 ```sql
 SELECT identitymap,
@@ -421,7 +422,7 @@ Het bovenstaande fragment verwijdert dubbele waarden uit de opgegeven array.
 
 **Voorbeeld**
 
-Met de onderstaande query selecteert u de opdracht `productListItems` , verwijdert dubbele items uit de arrays en beperkt de uitvoer tot tien rijen op basis van een opgegeven tijdstempelbereik.
+Met de onderstaande query wordt de kolom `productListItems` geselecteerd, worden dubbele items uit de arrays verwijderd en wordt de uitvoer beperkt tot tien rijen op basis van een opgegeven tijdstempelbereik.
 
 ```sql
 SELECT productListItems,
@@ -457,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 De volgende voorbeelden van hoger-ordefuncties worden verklaard als deel van terugwinnen gelijkaardig archiefgebruiksgeval. Een voorbeeld en uitleg van het gebruik van elke functie worden gegeven in de desbetreffende sectie van dat document.
 
-De [`transform` functievoorbeeld](../use-cases/retrieve-similar-records.md#length-adjustment) omvat de tokenisering van een productlijst.
+Het [`transform` functievoorbeeld ](../use-cases/retrieve-similar-records.md#length-adjustment) behandelt de verdeling van een productlijst.
 
-De [`filter` functievoorbeeld](../use-cases/retrieve-similar-records.md#filter-results) toont aan dat de relevante informatie nauwkeuriger en nauwkeuriger uit tekstgegevens wordt opgehaald.
+Het [`filter` functievoorbeeld ](../use-cases/retrieve-similar-records.md#filter-results) toont een verfijnde en nauwkeurige extractie van relevante informatie van tekstgegevens aan.
 
-De [`reduce` function](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) biedt een manier om cumulatieve waarden of aggregaten af te leiden, die in verschillende analytische en planningsprocessen van cruciaal belang kunnen zijn.
+De [`reduce` functie ](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) verstrekt een manier om cumulatieve waarden of aggregaten af te leiden, die in diverse analytische en planningsprocessen kunnen centraal zijn.

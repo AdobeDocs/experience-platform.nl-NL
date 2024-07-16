@@ -4,31 +4,31 @@ description: Het /import eindpunt in de Registratie API van het Schema staat u t
 exl-id: 30613535-4770-4f9c-9061-8e3efaf4de48
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
 
 # Importeindpunt
 
-De `/rpc/import` in de [!DNL Schema Registry] Met API kunt u XDM-bronnen (Experience Data Model) maken op basis van gegenereerde exportladingen. De ladingen van de uitvoer kunnen van twee bronnen worden gecreeerd:
+Met het `/rpc/import` -eindpunt in de [!DNL Schema Registry] API kunt u XDM-bronnen (Experience Data Model) maken op basis van gegenereerde exportladingen. De ladingen van de uitvoer kunnen van twee bronnen worden gecreeerd:
 
-* De [`/rpc/export` eindpunt](./export.md) maakt exportladingen op basis van bestaande XDM-bronnen, zodat u bronnen kunt delen tussen sandboxen.
-* De [`/rpc/csv2schema` eindpunt](./csv-to-schema.md) maakt exportheffingen op basis van CSV-sjablonen.
+* Het [`/rpc/export` eindpunt ](./export.md) leidt tot de uitvoerlading van bestaande middelen XDM, toestaand u om middelen tussen zandbakken te delen.
+* Het [`/rpc/csv2schema` eindpunt ](./csv-to-schema.md) leidt tot de uitvoerlading van malplaatjes CSV.
 
-Als u een exportlading hebt gemaakt, kunt u de opdracht `/rpc/import` eindpunt om het middel (en al afhankelijk middel) in de zandbak van uw keus te produceren.
+Wanneer u een exportlading hebt gemaakt, kunt u het `/rpc/import` eindpunt gebruiken om de bron (en alle afhankelijke bron) in de sandbox van uw keuze te genereren.
 
 ## Aan de slag
 
-De `/rpc/import` eindpunt maakt deel uit van [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het `/rpc/import` eindpunt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
-De `/rpc/import` het eindpunt maakt deel uit van de verre procedurevraag (RPCs) die door het [!DNL Schema Registry]. Anders dan bij andere eindpunten in het deelvenster [!DNL Schema Registry] API, RPC-eindpunten vereisen geen extra headers zoals `Accept` of `Content-Type`en geen `CONTAINER_ID`. In plaats daarvan moeten ze de opdracht `/rpc` naamruimte, zoals wordt getoond in de API-aanroepen hieronder.
+Het `/rpc/import` eindpunt maakt deel uit van de verre procedurevraag (RPCs) die door [!DNL Schema Registry] wordt gesteund. In tegenstelling tot andere eindpunten in de [!DNL Schema Registry] API, vereisen RPC-eindpunten geen extra kopteksten zoals `Accept` of `Content-Type` en gebruiken ze geen `CONTAINER_ID` . In plaats daarvan moeten ze de naamruimte `/rpc` gebruiken, zoals wordt getoond in de API-aanroepen hieronder.
 
 ## Een bron importeren {#import}
 
-Zodra u een uitvoerlading voor een middel XDM hebt geproduceerd, kunt u die nuttige lading in een verzoek van de POST aan `/import` eindpunt om dat middel in een doelorganisatie en zandbak in te voeren.
+Zodra u een de uitvoerlading voor een middel XDM hebt geproduceerd, kunt u die nuttige lading in een verzoek van de POST aan het `/import` eindpunt gebruiken om dat middel in een doelorganisatie en zandbak in te voeren.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /rpc/import
@@ -36,7 +36,7 @@ POST /rpc/import
 
 **Verzoek**
 
-Het volgende verzoek neemt de nuttige lading die van een vraag aan wordt teruggekeerd [`/rpc/export` eindpunt](./export.md) om een veldgroep te importeren (`Restaurant`) in een nieuwe organisatie en sandbox, zoals bepaald door de `x-gw-ims-org-id` en `x-sandbox-name` kop, respectievelijk.
+Het volgende verzoek neemt de nuttige lading die van een vraag aan het [`/rpc/export` eindpunt ](./export.md) is teruggekeerd om een gebiedsgroep (`Restaurant`) in een nieuwe organisatie en zandbak in te voeren, zoals die door `x-gw-ims-org-id` en `x-sandbox-name` kopballen, respectievelijk wordt bepaald.
 
 ```shell
 curl -X POST \
@@ -185,7 +185,7 @@ curl -X POST \
       ]'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van de ingevoerde middelen, met de aangewezen toegepaste huurdersidentiteitskaart en organisatiewaarden terug.
 

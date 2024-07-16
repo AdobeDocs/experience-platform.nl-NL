@@ -1,14 +1,14 @@
 ---
 audience: user
-user-guide-title: Help bij Adobe Experience Platform Source Connectors
-breadcrumb-title: Handleiding voor bronaansluitingen
-user-guide-description: Gegevens uit diverse bronnen verzamelen. Leer hoe u reeds opgenomen gegevens kunt structureren, labelen en verbeteren.
+user-guide-title: Adobe Experience Platform Source Connectors Help
+breadcrumb-title: Gids voor Source Connectors
+user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
 source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
 workflow-type: tm+mt
 source-wordcount: '1046'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 - [Overzicht van bronnen](home.md)
 - Beschikbare bronconnectors {#connectors}
-   - Adoben {#adobe-applications}
+   - Toepassingen Adoben {#adobe-applications}
       - [Bron voor analytische classificaties](connectors/adobe-applications/classifications.md)
       - [Analysebron](connectors/adobe-applications/analytics.md)
       - [Bron Audience Manager](connectors/adobe-applications/audience-manager.md)
@@ -37,14 +37,14 @@ ht-degree: 0%
          - [Handleiding voor verificatie van Marketo&#39;s Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B-naamruimten en -schema&#39;s](connectors/adobe-applications/marketo/marketo-namespaces.md)
          - [Gids voor migratie van ECID-toewijzing](connectors/adobe-applications/marketo/migration.md)
-   - Reclame {#advertising}
+   - Advertising {#advertising}
       - [Google Ads-connector](connectors/advertising/ads.md)
       - [Pinterest Adds](connectors/advertising/pinterest-ads.md)
-   - Analyse {#analytics}
+   - Analytics {#analytics}
       - [Mixpanel-aansluiting](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
       - [RainFocus](connectors/analytics/rainfocus.md)
-   - Cloud-opslag {#cloud-storage}
+   - Cloudopslag {#cloud-storage}
       - [Amazon Kinesis-connector](connectors/cloud-storage/kinesis.md)
       - [Amazon S3-connector](connectors/cloud-storage/s3.md)
       - [Apache HDFS-aansluiting](connectors/cloud-storage/hdfs.md)
@@ -102,7 +102,7 @@ ht-degree: 0%
       - [Schopify](connectors/ecommerce/shopify.md)
       - [Streaming optimaliseren](connectors/ecommerce/shopify-streaming.md)
    - Lokaal systeem {#local-system}
-      - [Aansluiting voor lokale bestandsupload](connectors/local-system/local-file-upload.md)
+      - [ Lokale dossier uploadt schakelaar ](connectors/local-system/local-file-upload.md)
    - Marketing automatiseren {#marketing-automation}
       - [Braze huidige](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -125,13 +125,13 @@ ht-degree: 0%
       - [HTTP API-connector](connectors/streaming/http.md)
 - API-zelfstudies {#api-tutorials}
    - Een basisverbinding maken {#create}
-      - Reclame {#advertising}
+      - Advertising {#advertising}
          - [Google Adds](tutorials/api/create/advertising/ads.md)
          - [Pinterest Adds](tutorials/api/create/advertising/pinterest-ads.md)
-      - Analyse {#analytics}
+      - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
          - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
-      - Cloud-opslag {#cloud-storage}
+      - Cloudopslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
@@ -237,9 +237,9 @@ ht-degree: 0%
    - [Gegevensstromen verwijderen](tutorials/api/delete-dataflows.md)
    - [Gecodeerde gegevens verzamelen](tutorials/api/encrypt-data.md)
    - [Een gegevensstroom opslaan als concept](tutorials/api/draft.md)
-- UI-zelfstudies {#ui-tutorials}
+- Zelfstudies voor gebruikersinterface {#ui-tutorials}
    - Een bronverbinding maken {#create}
-      - Adoben {#adobe-applications}
+      - Toepassingen Adoben {#adobe-applications}
          - [Adobe Analytics (rapportsuite-gegevens)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (classificatiegegevens)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -247,14 +247,14 @@ ht-degree: 0%
          - [Klantkenmerken](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Aangepaste Marketo-activiteiten](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - Reclame {#advertising}
+      - Advertising {#advertising}
          - [Google Adds](tutorials/ui/create/advertising/ads.md)
          - [Pinterest Adds](tutorials/ui/create/advertising/pinterest-ads.md)
-      - Analyse {#analytics}
+      - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
          - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
-      - Cloud-opslag {#cloud-storage}
+      - Cloudopslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
@@ -278,7 +278,7 @@ ht-degree: 0%
          - [SugarCRM-gebeurtenissen](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
-      - Klant geslaagd {#customer-success}
+      - Klantsucces {#customer-success}
          - [Cloud oracle Service](tutorials/ui/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
@@ -313,7 +313,7 @@ ht-degree: 0%
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Streaming optimaliseren](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Lokaal systeem {#local-system}
-         - [Lokale bestanden uploaden](tutorials/ui/create/local-system/local-file-upload.md)
+         - [ Lokale dossier uploadt ](tutorials/ui/create/local-system/local-file-upload.md)
       - Marketing automatiseren {#marketing-automation}
          - [Braze huidige](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
@@ -336,7 +336,7 @@ ht-degree: 0%
       - Streaming {#streaming}
          - [HTTP-API](tutorials/ui/create/streaming/http.md)
    - Een gegevensstroom configureren {#dataflow}
-      - [Gegevensstroom advertentieverbinding](tutorials/ui/dataflow/advertising.md)
+      - [Advertising-verbindingsgegevens](tutorials/ui/dataflow/advertising.md)
       - [Gegevensstroom analytische verbinding](tutorials/ui/dataflow/analytics.md)
       - [Batchopslagverbinding voor cloud](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Gegevens over streaming cloudopslagverbinding](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
@@ -367,7 +367,7 @@ ht-degree: 0%
       - [Verificatiespecificatie configureren](sources-sdk/config/authspec.md)
       - [Bronspecificatie configureren](sources-sdk/config/sourcespec.md)
       - [Specificatie voor nader onderzoek configureren](sources-sdk/config/explorespec.md)
-   - Zelfbedieningsbronnen (Batch SDK) API-handleiding {#self-serve-api}
+   - Zelfbedieningsbron (Batch SDK) API-handleiding {#self-serve-api}
       - [API-overzicht Zelfbediening (Batch SDK)](sources-sdk/api/api-overview.md)
       - [Aan de slag](sources-sdk/api/getting-started.md)
       - [Een verbindingsspecificatie maken](sources-sdk/api/create.md)
@@ -395,5 +395,5 @@ ht-degree: 0%
 - [Meldingen voor stroomuitvoering](notifications.md)
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
-- [API-referentie](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

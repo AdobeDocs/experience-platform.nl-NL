@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # [!UICONTROL XDM Business Campaign Details] schemaveldgroep
 
-[!UICONTROL XDM Business Campaign Details] is een standaardschemagebiedgroep voor [[!UICONTROL XDM Business Campaign] class](../../classes/b2b/business-campaign.md), waarin gedetailleerde informatie over een zakelijke campagne wordt vastgelegd.
+[!UICONTROL XDM Business Campaign Details] is een standaardgroep van het schemagebied voor de [[!UICONTROL XDM Business Campaign] klasse ](../../classes/b2b/business-campaign.md), die gedetailleerde informatie over een bedrijfscampagne vangt.
 
-![De structuur van de XDM Business Campagne Details gebiedsgroep zoals het in UI verschijnt](../../images/field-groups/b2b/business-campaign-details.png)
+![ de structuur van de XDM het gebiedsgroep van Details Bedrijfs van de Campagne aangezien het in UI ](../../images/field-groups/b2b/business-campaign-details.png) verschijnt
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -29,7 +29,7 @@ ht-degree: 0%
 | `expectedResponse` | [!UICONTROL String] | De verwachte reactie voor de campagne. |
 | `integrationPartnerName` | [!UICONTROL String] | De naam van de partner die met deze campagne is geïntegreerd. |
 | `isActive` | [!UICONTROL Boolean] | Geeft aan of deze campagne actief is. |
-| `isDeleted` | [!UICONTROL Boolean] | Geeft aan of deze campagne is verwijderd uit het Marketo Engage.<br><br>Wanneer u de opdracht [Marketo-bronaansluiting](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden alle records die in Marketo worden verwijderd, automatisch weergegeven in Real-Time klantprofiel. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door in te stellen `isDeleted` tot `true`, kunt u het gebied gebruiken om uit te filteren welke verslagen uit uw bronnen zijn geschrapt wanneer het vragen van het meer van Gegevens. |
+| `isDeleted` | [!UICONTROL Boolean] | Geeft aan of deze campagne is verwijderd uit het Marketo Engage.<br><br> wanneer het gebruiken van de [ Marketo bronschakelaar ](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden om het even welke verslagen die in Marketo worden geschrapt automatisch weerspiegeld in Real-Time Profiel van de Klant. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door `isDeleted` in te stellen op `true` , kunt u het veld gebruiken om uit te filteren welke records uit uw bronnen zijn verwijderd wanneer u een query uitvoert op het gegevensmeer. |
 | `lastActivityDate` | [!UICONTROL DateTime] | Een ISO 8601-tijdstempel van de laatste activiteit die aan de campagne is gekoppeld. |
 | `timeZone` | [!UICONTROL String] | De tijdzone waarin de campagne wordt uitgevoerd. |
 | `timeZoneDelivery` | [!UICONTROL String] | De tijdzone van de levering waarin de campagne werkt. |
@@ -41,4 +41,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign/campaign-details.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign/campaign-details.schema.json).

@@ -13,58 +13,58 @@ ht-degree: 0%
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL SFTP] (Secure File Transfer Protocol) met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL SFTP] (Veilig Protocol van de Overdracht van het Dossier) tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 >[!IMPORTANT]
 >
->Het wordt aanbevolen nieuwe regels of regeleinden te vermijden bij het innemen van JSON-objecten met een [!DNL SFTP] bronverbinding. Als u de beperking wilt omzeilen, gebruikt u één JSON-object per regel en gebruikt u meerdere regels voor het uitvoeren van bestanden.
+>Het wordt aangeraden nieuwe regels of regeleinden te vermijden bij het invoeren van JSON-objecten met een [!DNL SFTP] -bronverbinding. Als u de beperking wilt omzeilen, gebruikt u één JSON-object per regel en gebruikt u meerdere regels voor het uitvoeren van bestanden.
 
-De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met een [!DNL SFTP] server die de [!DNL Flow Service] API.
+De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met een [!DNL SFTP] -server via de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] verbinding maken met [!DNL SFTP]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
+[!DNL Flow Service] kan alleen verbinding maken met [!DNL SFTP] als u waarden opgeeft voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `host` | De naam of IP adres verbonden aan uw [!DNL SFTP] server. |
-| `port` | De SFTP-serverpoort waarmee u verbinding maakt. Indien niet opgegeven, wordt de waarde standaard ingesteld op `22`. |
-| `username` | De gebruikersnaam met toegang tot uw [!DNL SFTP] server. |
-| `password` | Het wachtwoord voor uw [!DNL SFTP] server. |
+| `host` | De naam of het IP-adres dat aan de [!DNL SFTP] -server is gekoppeld. |
+| `port` | De SFTP-serverpoort waarmee u verbinding maakt. Als deze waarde niet wordt opgegeven, wordt deze standaard ingesteld op `22` . |
+| `username` | De gebruikersnaam met toegang tot de [!DNL SFTP] -server. |
+| `password` | Het wachtwoord voor uw [!DNL SFTP] -server. |
 | `privateKeyContent` | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
-| `passPhrase` | De wachtwoordgroep of het wachtwoord voor het decoderen van de persoonlijke sleutel als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als de `privateKeyContent` is met een wachtwoord beveiligd, moet deze parameter worden gebruikt met passphrase van de inhoud van de persoonlijke sleutel als waarde. |
-| `maxConcurrentConnections` | Met deze parameter kunt u een maximumlimiet opgeven voor het aantal gelijktijdige verbindingen dat Platform maakt wanneer verbinding wordt gemaakt met uw SFTP-server. U moet deze waarde instellen op een waarde die kleiner is dan de limiet die door SFTP is ingesteld. **Opmerking**: Wanneer deze instelling is ingeschakeld voor een bestaande SFTP-account, heeft deze alleen invloed op toekomstige gegevensstromen en niet op bestaande gegevensstromen. |
+| `passPhrase` | De wachtwoordgroep of het wachtwoord voor het decoderen van de persoonlijke sleutel als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als de `privateKeyContent` met een wachtwoord beveiligd is, moet deze parameter worden gebruikt met de wachtwoordzin van de inhoud van de persoonlijke sleutel als waarde. |
+| `maxConcurrentConnections` | Met deze parameter kunt u een maximumlimiet opgeven voor het aantal gelijktijdige verbindingen dat Platform maakt wanneer verbinding wordt gemaakt met uw SFTP-server. U moet deze waarde instellen op een waarde die kleiner is dan de limiet die door SFTP is ingesteld. **Nota**: Wanneer dit het plaatsen voor een bestaande rekening van SFTP wordt toegelaten, zal het slechts toekomstige dataflows en niet bestaande dataflows beïnvloeden. |
 | `folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. [!DNL SFTP] bron, kunt u het omslagweg verstrekken om gebruikerstoegang tot subomslag van uw keus te specificeren. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc` . |
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 >[!TIP]
 >
->Nadat u een verificatietype hebt gemaakt, kunt u dit type van een [!DNL SFTP] basisverbinding. Als u het verificatietype wilt wijzigen, moet u een nieuwe basisverbinding maken.
+>Nadat u een [!DNL SFTP] basisverbinding hebt gemaakt, kunt u het verificatietype niet wijzigen. Als u het verificatietype wilt wijzigen, moet u een nieuwe basisverbinding maken.
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-De [!DNL SFTP] de bron steunt zowel basisauthentificatie als authentificatie via SSH openbare sleutel. Tijdens deze stap kunt u ook het pad naar de submap aangeven waartoe u toegang wilt verlenen.
+De [!DNL SFTP] -bron ondersteunt zowel basisverificatie als verificatie via de openbare SSH-sleutel. Tijdens deze stap kunt u ook het pad naar de submap aangeven waartoe u toegang wilt verlenen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL SFTP] verificatiereferenties als onderdeel van de aanvraagparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL SFTP] -verificatiegegevens op als onderdeel van de aanvraagparameters.
 
 >[!IMPORTANT]
 >
->De [!DNL SFTP] de schakelaar steunt een RSA of DSA type OpenSSH sleutel. Zorg ervoor dat de inhoud van uw sleutelbestand begint met `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` en eindigt met `"-----END [RSA/DSA] PRIVATE KEY-----"`. Als het bestand met de persoonlijke sleutel een PPK-bestand is, gebruikt u het gereedschap PuTTY om de PPK-indeling om te zetten in de OpenSSH-indeling.
+>De [!DNL SFTP] schakelaar steunt een sleutel van RSA of DSA type OpenSSH. Zorg ervoor dat de inhoud van het sleutelbestand begint met `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` en eindigt met `"-----END [RSA/DSA] PRIVATE KEY-----"` . Als het bestand met de persoonlijke sleutel een PPK-bestand is, gebruikt u het gereedschap PuTTY om de PPK-indeling om te zetten in de OpenSSH-indeling.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /connections
@@ -72,7 +72,7 @@ POST /connections
 
 >[!BEGINTABS]
 
->[!TAB Basisverificatie]
+>[!TAB  Basisauthentificatie ]
 
 +++verzoek
 
@@ -113,13 +113,13 @@ curl -X POST \
 | `auth.params.password` | Het wachtwoord dat aan uw SFTP-server is gekoppeld. |
 | `auth.params.maxConcurrentConnections` | Het maximumaantal gezamenlijke verbindingen dat is opgegeven bij het verbinden van Platform met SFTP. Wanneer deze optie is ingeschakeld, moet deze waarde op ten minste 1 worden ingesteld. |
 | `auth.params.folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. |
-| `connectionSpec.id` | De specificatie-id van de SFTP-serververbinding: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `connectionSpec.id` | De specificatie-id voor de SFTP-serververbinding: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++
 
 +++Response
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe verbinding. Deze id is vereist om uw SFTP-server te verkennen in de volgende zelfstudie.
+Een succesvolle reactie keert unieke herkenningsteken (`id`) van de pas gecreëerde verbinding terug. Deze id is vereist om uw SFTP-server te verkennen in de volgende zelfstudie.
 
 ```json
 {
@@ -130,7 +130,7 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe verbinding. 
 
 +++
 
->[!TAB SSH-verificatie met openbare sleutel]
+>[!TAB  SSH openbare zeer belangrijke authentificatie ]
 
 +++verzoek
 
@@ -166,9 +166,9 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `auth.params.host` | De hostnaam van uw [!DNL SFTP] server. |
+| `auth.params.host` | De hostnaam van de [!DNL SFTP] -server. |
 | `auth.params.port` | De poort van de SFTP-server. Deze gehele waarde is standaard ingesteld op 22. |
-| `auth.params.username` | De gebruikersnaam die aan uw [!DNL SFTP] server. |
+| `auth.params.username` | De gebruikersnaam die aan de [!DNL SFTP] -server is gekoppeld. |
 | `auth.params.privateKeyContent` | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
 | `auth.params.passPhrase` | De wachtwoordgroep of het wachtwoord voor het decoderen van de persoonlijke sleutel als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als PrivateKeyContent met een wachtwoord beveiligd is, moet deze parameter worden gebruikt met de wachtwoordzin van PrivateKeyContent als waarde. |
 | `auth.params.maxConcurrentConnections` | Het maximumaantal gezamenlijke verbindingen dat is opgegeven bij het verbinden van Platform met SFTP. Wanneer deze optie is ingeschakeld, moet deze waarde op ten minste 1 worden ingesteld. |
@@ -179,7 +179,7 @@ curl -X POST \
 
 +++Response
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe verbinding. Deze id is vereist om uw SFTP-server te verkennen in de volgende zelfstudie.
+Een succesvolle reactie keert unieke herkenningsteken (`id`) van de pas gecreëerde verbinding terug. Deze id is vereist om uw SFTP-server te verkennen in de volgende zelfstudie.
 
 ```json
 {
@@ -194,4 +194,4 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe verbinding. 
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL SFTP] verbinding met de [!DNL Flow Service] API en hebben de unieke id-waarde van de verbinding verkregen. U kunt deze verbindings-id gebruiken om [verkennen van cloudopslag met de Flow Service API](../../explore/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL SFTP] -verbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze verbindingsidentiteitskaart gebruiken om [ wolkenopslag te onderzoeken gebruikend de Dienst API van de Stroom ](../../explore/cloud-storage.md).

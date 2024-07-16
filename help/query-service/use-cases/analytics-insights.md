@@ -4,22 +4,22 @@ description: In dit document wordt uitgelegd hoe u Query Service kunt gebruiken 
 exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
 # Analyseinzichten voor web- en mobiele interacties
 
-Met Adobe Experience Platform kunt u gegevens uit Adobe Analytics-rapportreeksen invoeren met XDM-velden (Experience Data Model) voor het vullen van gegevenssets. Deze analysegegevens worden gewijzigd om te voldoen aan de [!DNL XDM ExperienceEvent] klasse. De Dienst van de vraag kan dan gebruik van deze gegevens maken door SQL vragen in werking te stellen om waardevolle inzichten van het gedrag van een gebruiker over de digitale platforms te produceren.
+Met Adobe Experience Platform kunt u gegevens uit Adobe Analytics-rapportreeksen invoeren met XDM-velden (Experience Data Model) voor het vullen van gegevenssets. Deze analysegegevens worden gewijzigd conform de klasse [!DNL XDM ExperienceEvent] . De Dienst van de vraag kan dan gebruik van deze gegevens maken door SQL vragen in werking te stellen om waardevolle inzichten van het gedrag van een gebruiker over de digitale platforms te produceren.
 
-Dit document bevat een groot aantal voorbeeld-SQL-query&#39;s die veelvoorkomende gebruiksgevallen aantonen bij het maken van inzichten van gegevens van Analytics via internet en mobiele apparatuur.
+Dit document bevat een groot aantal voorbeeld-SQL-query&#39;s die veelvoorkomende gebruiksgevallen aantonen bij het maken van inzichten op basis van gegevens van Analytics via internet en mobiele apparatuur.
 
-Zie de [Documentatie over veldtoewijzingen voor analyses](../../sources/connectors/adobe-applications/mapping/analytics.md) voor meer informatie over het opnemen en toewijzen van analysegegevens.
+Zie de [ documentatie van de het gebiedstoewijzingen van Analytics ](../../sources/connectors/adobe-applications/mapping/analytics.md) voor meer informatie bij het opnemen van en het in kaart brengen van analysegegevens.
 
 ## Aan de slag
 
-Voor elk van de volgende gebruiksgevallen wordt een geparametriseerd SQL vraagvoorbeeld verstrekt als malplaatje voor u aan te passen. Geef parameters op waar u ze ziet `{ }` in de SQL voorbeelden voor de dataset, de eVar, de gebeurtenis, of het tijdkader u in evaluatie geinteresseerd bent.
+Voor elk van de volgende gebruiksgevallen wordt een geparametriseerd SQL vraagvoorbeeld verstrekt als malplaatje voor u aan te passen. Verstrek parameters waar u `{ }` in de SQL voorbeelden voor de dataset, de eVar, de gebeurtenis, of het tijdkader ziet u in het evalueren geinteresseerd bent.
 
 ## Doelstellingen
 
@@ -49,7 +49,7 @@ ORDER BY page_views DESC
 LIMIT  10;
 ```
 
-### De tien meest actieve gebruikers identificeren
+### De 10 meest actieve gebruikers identificeren
 
 ```sql
 SELECT enduserids._experience.aaid.id AS aaid,

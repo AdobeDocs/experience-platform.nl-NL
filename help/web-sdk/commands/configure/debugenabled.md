@@ -1,7 +1,8 @@
 ---
 title: debugEnabled
 description: Gebruik code om het zuiveren mogelijkheden in het Web SDK toe te laten.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 89392d16-9a0d-427b-86b6-70005f63f440
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -10,17 +11,17 @@ ht-degree: 0%
 
 # `debugEnabled`
 
-De `debugEnabled` staat u toe om het zuiveren toe te laten of onbruikbaar te maken gebruikend de code van SDK van het Web. Het is een van de beschikbare manieren om [foutopsporing](../../use-cases/debugging.md). Het inschakelen van foutopsporing binnen uw implementatie kan handiger zijn dan andere methoden tijdens de ontwikkeling van websites wanneer u foutopsporing altijd wilt inschakelen. Deze methode van het zuiveren laat het voor alle bezoekers toe, zodat wordt het niet geadviseerd voor productiepagina&#39;s.
+Met de eigenschap `debugEnabled` kunt u foutopsporing in- of uitschakelen met behulp van Web SDK-code. Het is één van de beschikbare manieren om [ het zuiveren ](../../use-cases/debugging.md) toe te laten. Het inschakelen van foutopsporing binnen uw implementatie kan handiger zijn dan andere methoden tijdens de ontwikkeling van websites wanneer u foutopsporing altijd wilt inschakelen. Deze methode van het zuiveren laat het voor alle bezoekers toe, zodat wordt het niet geadviseerd voor productiepagina&#39;s.
 
-Zie de [Foutopsporing](../../use-cases/debugging.md) gebruik case page voor meer manieren om het zuiveren toe te laten.
+Zie [ het Zuiveren ](../../use-cases/debugging.md) gebruiken gevalpagina voor meer manieren om het zuiveren toe te laten.
 
 ## Foutopsporing inschakelen met de Web SDK-tagextensie
 
-Er zijn geen opties voor foutopsporing beschikbaar die native de SDK-tagextensie van Web gebruiken. Een [alternatieve foutopsporingsmethode](../../use-cases/debugging.md).
+Er zijn geen opties voor foutopsporing beschikbaar die native de SDK-tagextensie van Web gebruiken. Gebruik een [ afwisselende het zuiveren methode ](../../use-cases/debugging.md).
 
 ## Foutopsporing inschakelen met de Web SDK JavaScript-bibliotheek
 
-Stel de `debugEnabled` boolean naar `true` wanneer de `configure` gebruiken. Als u deze eigenschap weglaat bij het configureren van de SDK, wordt standaard ingesteld op `false`.
+Stel `debugEnabled` boolean in op `true` wanneer u de opdracht `configure` uitvoert. Als u deze eigenschap weglaat bij het configureren van de SDK, wordt standaard `false` gebruikt.
 
 ```js
 alloy("configure", {

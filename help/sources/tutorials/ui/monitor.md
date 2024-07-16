@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;monitorrekeningen;monitordataflows;dataflows
-description: De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het bekijken van bestaande gegevensstromen van de werkruimte van Bronnen.
+description: Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Dit leerprogramma verstrekt stappen voor het bekijken van bestaande gegevensstromen van de werkruimte van Bronnen.
 solution: Experience Platform
 title: Gegevensstromen van de monitor in UI
 type: Tutorial
@@ -14,6 +14,6 @@ ht-degree: 0%
 
 # Gegevens controleren in de gebruikersinterface
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren.
+Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren.
 
-Voor meer informatie over het controleren van dataflows voor bronschakelaars, gelieve te lezen [gegevensstromen in bronnen controleren](../../../dataflows/ui/monitor-sources.md) zelfstudie.
+Meer over het controleren van dataflows voor bronschakelaars, te lezen gelieve [ controledataflows in bronnen ](../../../dataflows/ui/monitor-sources.md) leerprogramma.

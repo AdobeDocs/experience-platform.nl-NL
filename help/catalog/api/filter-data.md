@@ -11,23 +11,23 @@ ht-degree: 0%
 
 ---
 
-# Filter [!DNL Catalog] gegevens gebruiken met queryparameters
+# [!DNL Catalog] -gegevens filteren met behulp van queryparameters
 
-De [!DNL Catalog Service] API staat reactiegegevens toe om door het gebruik van de parameters van de verzoekvraag worden gefiltreerd. Deel van aanbevolen procedures voor [!DNL Catalog] is om filters in alle API vraag te gebruiken, aangezien zij de lading op API verminderen en helpen algemene prestaties verbeteren.
+Met de API [!DNL Catalog Service] kunnen reactiegegevens worden gefilterd met behulp van queryparameters voor aanvragen. Een van de beste werkwijzen voor [!DNL Catalog] is het gebruik van filters in alle API-aanroepen, aangezien deze de belasting van de API verminderen en de algehele prestaties verbeteren.
 
-In dit document worden de meest gebruikte filtermethoden beschreven [!DNL Catalog] objecten in de API. U wordt aangeraden naar dit document te verwijzen als u het [Handleiding voor ontwikkelaars van catalogi](getting-started.md) voor meer informatie over hoe u kunt werken met de [!DNL Catalog] API. Meer algemene informatie over [!DNL Catalog Service], zie de [[!DNL Catalog] overzicht](../home.md).
+In dit document worden de meest gebruikte methoden voor het filteren van [!DNL Catalog] -objecten in de API beschreven. Men adviseert dat u dit document terwijl het lezen van de [ de ontwikkelaarsgids van de Catalogus ](getting-started.md) van verwijzingen voorziet om meer over te leren hoe te met [!DNL Catalog] API in wisselwerking te staan. Voor meer algemene informatie over [!DNL Catalog Service], zie het [[!DNL Catalog]  overzicht ](../home.md).
 
 ## Teruggestuurde objecten beperken
 
-De `limit` queryparameter beperkt het aantal objecten dat in een reactie wordt geretourneerd. [!DNL Catalog] de reacties worden automatisch gemeten volgens geconfigureerde limieten:
+Met de query-parameter `limit` beperkt u het aantal objecten dat in een reactie wordt geretourneerd. [!DNL Catalog] reacties worden automatisch gemeten volgens de geconfigureerde limieten:
 
-* Indien een `limit` parameter niet is opgegeven, is het maximumaantal objecten per antwoordlading 20.
-* Voor gegevenssetquery&#39;s, als `observableSchema` wordt gevraagd `properties` de vraagparameter, is het maximumaantal teruggekeerde datasets 20.
+* Wanneer geen parameter `limit` wordt opgegeven, is het maximumaantal objecten per antwoordlading 20.
+* Als voor datasetquery&#39;s `observableSchema` wordt aangevraagd met de parameter `properties` query, is het maximale aantal geretourneerde datasets 20.
 * De algemene limiet voor alle andere catalogusquery&#39;s is 100 objecten.
-* Ongeldig `limit` parameters (inclusief `limit=0`) resulteert in foutreacties op 400-niveau met een overzicht van juiste bereiken.
+* Ongeldige `limit` -parameters (inclusief `limit=0` ) resulteren in foutreacties op 400-niveau met een overzicht van juiste bereiken.
 * Limieten of verschuivingen die worden doorgegeven als queryparameters hebben voorrang op parameters die als kopteksten worden doorgegeven.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{OBJECT_TYPE}?limit={LIMIT}
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] -object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{LIMIT}` | Een geheel getal dat aangeeft hoeveel objecten moeten worden geretourneerd, van 1 tot en met 100. |
 
 **Verzoek**
@@ -51,9 +51,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert een lijst van datasets terug, die tot het aantal wordt beperkt door wordt vermeld `limit` queryparameter.
+Een succesvolle reactie keert een lijst van datasets terug, die tot het aantal wordt beperkt door de `limit` vraagparameter wordt vermeld.
 
 ```json
 {
@@ -75,11 +75,11 @@ Een succesvolle reactie keert een lijst van datasets terug, die tot het aantal w
 
 ## Weergegeven eigenschappen beperken
 
-Zelfs wanneer het filtreren van het aantal voorwerpen teruggekeerd gebruikend `limit` parameter, kunnen de teruggekeerde voorwerpen zelf vaak meer informatie bevatten dan u eigenlijk nodig hebt. Als u de belasting van het systeem verder wilt verminderen, kunt u het beste reacties filteren en alleen de gewenste eigenschappen opnemen.
+Zelfs bij het filteren van het aantal objecten dat wordt geretourneerd met de parameter `limit` , kunnen de geretourneerde objecten zelf vaak meer informatie bevatten dan u eigenlijk nodig hebt. Als u de belasting van het systeem verder wilt verminderen, kunt u het beste reacties filteren en alleen de gewenste eigenschappen opnemen.
 
-De `properties` parameterfilters reageren op objecten om alleen een set opgegeven eigenschappen te retourneren. De parameter kan worden ingesteld om een of meerdere eigenschappen te retourneren.
+De `properties` -parameterfilters reageren op objecten om alleen een set opgegeven eigenschappen te retourneren. De parameter kan worden ingesteld om een of meerdere eigenschappen te retourneren.
 
-De `properties` parameter kan om het even welke eigenschappen van niveauobjecten goedkeuren. `sampleKey` kan worden geëxtraheerd met `?properties=subItem.sampleKey`.
+De parameter `properties` kan alle objecteigenschappen op niveau accepteren. `sampleKey` kan worden geëxtraheerd met `?properties=subItem.sampleKey` .
 
 ```json
 {
@@ -93,7 +93,7 @@ De `properties` parameter kan om het even welke eigenschappen van niveauobjecten
 }
 ```
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{OBJECT_TYPE}?properties={PROPERTY}
@@ -103,13 +103,13 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] -object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY}` | The name of an attribute to include in the response body. |
-| `{OBJECT_ID}` | De unieke id van een specifieke [!DNL Catalog] object dat wordt opgehaald. |
+| `{OBJECT_ID}` | De unieke id van een specifiek [!DNL Catalog] -object dat wordt opgehaald. |
 
 **Verzoek**
 
-Het volgende verzoek wint een lijst van datasets terug. De door komma&#39;s gescheiden lijst met eigenschapsnamen die wordt geleverd onder de `properties` parameter geeft de eigenschappen aan die in de reactie moeten worden geretourneerd. A `limit` parameter is ook inbegrepen, die het aantal teruggekeerde datasets beperkt. Indien het verzoek geen `limit` parameter, bevat de reactie maximaal 20 objecten.
+Het volgende verzoek wint een lijst van datasets terug. De door komma&#39;s gescheiden lijst met namen van eigenschappen die wordt geleverd onder de parameter `properties` geeft de eigenschappen aan die moeten worden geretourneerd in de reactie. Er wordt ook een parameter `limit` opgenomen die het aantal geretourneerde gegevenssets beperkt. Als de aanvraag geen parameter `limit` bevat, bevat de reactie maximaal 20 objecten.
 
 ```shell
 curl -X GET \
@@ -120,9 +120,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een lijst met [!DNL Catalog] objecten waarbij alleen de gevraagde eigenschappen worden weergegeven.
+Een succesvol antwoord retourneert een lijst met [!DNL Catalog] -objecten waarbij alleen de gevraagde eigenschappen worden weergegeven.
 
 ```json
 {
@@ -156,15 +156,15 @@ Op basis van bovenstaande reactie kan het volgende worden afgeleid:
 
 >[!NOTE]
 >
->In de `schemaRef` eigenschap voor elke gegevensset, geeft het versienummer de laatste secundaire versie van het schema aan. Zie de sectie over [schemaversie](../../xdm/api/getting-started.md#versioning) in de XDM API-handleiding voor meer informatie.
+>In het `schemaRef` bezit voor elke dataset, wijst het versieaantal op de recentste minder belangrijke versie van het schema. Zie de sectie over [ schema versioning ](../../xdm/api/getting-started.md#versioning) in de gids XDM API voor meer informatie.
 
 ## Beginindex van verschuiving van reactielijst
 
-De `start` De vraagparameter compenseert voorwaarts de reactielijst met een gespecificeerd aantal, gebruikend op nul-gebaseerde nummering. Bijvoorbeeld: `start=2` zou de reactie op het begin van het derde vermelde object verschuiven.
+Met de query-parameter `start` verschuift u de lijst met reacties met een opgegeven getal door op nul gebaseerde nummering te gebruiken. `start=2` verschuift bijvoorbeeld de reactie naar het begin van het derde weergegeven object.
 
-Als de `start` parameter is niet gekoppeld aan een `limit` parameter, is het maximumaantal geretourneerde objecten 20.
+Wanneer de parameter `start` niet aan een parameter `limit` is gekoppeld, is het maximale aantal geretourneerde objecten 20.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{OBJECT_TYPE}?start={OFFSET}
@@ -177,7 +177,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 **Verzoek**
 
-Het volgende verzoek wint een lijst van datasets terug, die aan het vijfde voorwerp (`start=4`) en het beperken van de respons op twee geretourneerde gegevenssets (`limit=2`).
+Het volgende verzoek wint een lijst van datasets terug, die aan het vijfde voorwerp (`start=4`) compenseren en de reactie beperken tot twee teruggekeerde datasets (`limit=2`).
 
 ```shell
 curl -X GET \
@@ -188,9 +188,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Het antwoord bevat een JSON-object dat twee items op hoofdniveau bevat (`limit=2`), één voor elke gegevensset en de details ervan (in het voorbeeld zijn de details versmald). De respons wordt met vier verschoven (`start=4`), wat betekent dat de vermelde gegevensreeksen chronologisch de nummer vijf en zes zijn.
+De reactie omvat een voorwerp JSON dat twee top-level punten (`limit=2`) bevat, voor elke dataset en hun details (details zijn versmald in het voorbeeld). De reactie wordt verschoven door vier (`start=4`), betekenend zijn de getoonde datasets aantal vijf en zes chronologisch.
 
 ```json
 {
@@ -201,18 +201,18 @@ Het antwoord bevat een JSON-object dat twee items op hoofdniveau bevat (`limit=2
 
 ## Filteren op tag
 
-Sommige catalogusobjecten ondersteunen het gebruik van een `tags` kenmerk. Tags kunnen informatie aan een object koppelen en later worden gebruikt om dat object op te halen. De keuze van de tags die u wilt gebruiken en hoe u deze wilt toepassen, is afhankelijk van uw organisatieprocessen.
+Sommige catalogusobjecten ondersteunen het gebruik van een `tags` -kenmerk. Tags kunnen informatie aan een object koppelen en later worden gebruikt om dat object op te halen. De keuze van de tags die u wilt gebruiken en hoe u deze wilt toepassen, is afhankelijk van uw organisatieprocessen.
 
 Er zijn enkele beperkingen waarmee u rekening kunt houden bij het gebruik van tags:
 
 * De enige voorwerpen van de Catalogus die momenteel markeringen steunen zijn datasets, partijen, en verbindingen.
 * Tagnamen zijn uniek voor uw organisatie.
 * Adobe processen kunnen voor bepaalde gedragingen tags gebruiken. De namen van deze tags worden standaard voorafgegaan door &quot;adobe&quot;. Daarom moet u deze conventie vermijden bij het declareren van labelnamen.
-* De volgende tagnamen zijn gereserveerd voor gebruik in [!DNL Experience Platform]en kan daarom niet worden gedeclareerd als tagnaam voor uw organisatie:
-   * `unifiedProfile`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden ingevoerd door [[!DNL Real-Time Customer Profile]](../../profile/home.md).
-   * `unifiedIdentity`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden ingevoerd door [[!DNL Identity Service]](../../identity-service/home.md).
+* De volgende tagnamen zijn gereserveerd voor gebruik in [!DNL Experience Platform] en kunnen daarom niet worden gedeclareerd als tagnaam voor uw organisatie:
+   * `unifiedProfile`: Deze tagnaam is gereserveerd voor gegevenssets die door [[!DNL Real-Time Customer Profile]](../../profile/home.md) worden ingevoerd.
+   * `unifiedIdentity`: Deze tagnaam is gereserveerd voor gegevenssets die door [[!DNL Identity Service]](../../identity-service/home.md) worden ingevoerd.
 
-Hieronder ziet u een voorbeeld van een gegevensset die een `tags` eigenschap. De tags binnen die eigenschap hebben de vorm van sleutel-waardeparen, waarbij elke tagwaarde wordt weergegeven als een array met één tekenreeks:
+Hieronder ziet u een voorbeeld van een gegevensset die een eigenschap `tags` bevat. De tags binnen die eigenschap hebben de vorm van sleutel-waardeparen, waarbij elke tagwaarde wordt weergegeven als een array met één tekenreeks:
 
 ```json
 {
@@ -238,11 +238,11 @@ Hieronder ziet u een voorbeeld van een gegevensset die een `tags` eigenschap. De
 }
 ```
 
-**API-indeling**
+**API formaat**
 
-Waarden voor de `tags` parameter heeft de vorm van sleutel-waardeparen, gebruikend het formaat `{TAG_NAME}:{TAG_VALUE}`. U kunt meerdere sleutelwaardeparen opgeven in de vorm van een lijst met komma&#39;s als scheidingsteken. Wanneer veelvoudige markeringen worden verstrekt, wordt een EN verhouding verondersteld.
+Waarden voor de parameter `tags` hebben de vorm van sleutel-waardeparen, die het formaat `{TAG_NAME}:{TAG_VALUE}` gebruiken. U kunt meerdere sleutelwaardeparen opgeven in de vorm van een lijst met komma&#39;s als scheidingsteken. Wanneer veelvoudige markeringen worden verstrekt, wordt een EN verhouding verondersteld.
 
-De parameter ondersteunt jokertekens (`*`) voor tagwaarden. Bijvoorbeeld een zoekreeks met `test*` Hiermee wordt een object geretourneerd waarvan de tagwaarde begint met &#39;&#39;test&#39;&#39;. Een zoektekenreeks die alleen uit een jokerteken bestaat, kan worden gebruikt om objecten te filteren op basis van het feit of ze een specifieke tag bevatten, ongeacht de waarde ervan.
+De parameter steunt vervangingskarakters (`*`) voor markeringswaarden. Een zoektekenreeks van `test*` retourneert bijvoorbeeld een object waar de tagwaarde begint met &#39;test&#39;. Een zoektekenreeks die alleen uit een jokerteken bestaat, kan worden gebruikt om objecten te filteren op basis van het feit of ze een specifieke tag bevatten, ongeacht de waarde ervan.
 
 ```http
 GET /{OBJECT_TYPE}?tags={TAG_NAME}:{TAG_VALUE}
@@ -253,9 +253,9 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] -object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | De naam van de tag waarop moet worden gefilterd. |
-| `{TAG_VALUE}` | De waarde van de tag waarop moet worden gefilterd. Ondersteunt jokertekens (`*`). |
+| `{TAG_VALUE}` | De waarde van de tag waarop moet worden gefilterd. Steunt vervangingskarakters (`*`). |
 
 **Verzoek**
 
@@ -270,9 +270,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert een lijst van datasets terug die bevatten `sampleTag` met de waarde &quot;123456&quot;, EN `secondTag` met een willekeurige waarde. Tenzij ook een limiet is opgegeven, bevat het antwoord maximaal 20 objecten.
+Een succesvol antwoord retourneert een lijst met gegevenssets die `sampleTag` met de waarde &quot;123456&quot; EN `secondTag` bevatten, met een willekeurige waarde. Tenzij ook een limiet is opgegeven, bevat het antwoord maximaal 20 objecten.
 
 ```json
 {
@@ -320,9 +320,9 @@ Een succesvolle reactie keert een lijst van datasets terug die bevatten `sampleT
 
 ## Filteren op datumbereik
 
-Sommige eindpunten in het dialoogvenster [!DNL Catalog] API heeft vraagparameters die voor gerangschikte vragen, het vaakst in het geval van data toestaan.
+Sommige eindpunten in de API van [!DNL Catalog] hebben vraagparameters die voor gerangschikte vragen, het vaakst in het geval van data toestaan.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /batches?createdAfter={TIMESTAMP_1}&createdBefore={TIMESTAMP_2}
@@ -345,9 +345,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord bevat een lijst met [!DNL Catalog] objecten die binnen het opgegeven datumbereik vallen. Tenzij ook een limiet is opgegeven, bevat het antwoord maximaal 20 objecten.
+Een geslaagde reactie bevat een lijst met [!DNL Catalog] -objecten die binnen het opgegeven datumbereik vallen. Tenzij ook een limiet is opgegeven, bevat het antwoord maximaal 20 objecten.
 
 ```json
 {
@@ -376,14 +376,14 @@ Een succesvol antwoord bevat een lijst met [!DNL Catalog] objecten die binnen he
 
 ## Sorteren op eigenschap
 
-De `orderBy` Met de queryparameter kunt u (volgorde)antwoordgegevens sorteren op basis van een opgegeven eigenschapswaarde. Deze parameter vereist een &quot;direction&quot; (`asc` voor oplopende of `desc` voor aflopend), gevolgd door een dubbele punt (`:`) en vervolgens een eigenschap om de resultaten te sorteren. Als er geen richting is opgegeven, wordt de standaardrichting oplopend.
+Met de parameter `orderBy` query kunt u reactiegegevens sorteren (ordenen) op basis van een opgegeven eigenschapswaarde. Deze parameter vereist een &quot;richting&quot; (`asc` voor het stijgen of `desc` voor het dalen), gevolgd door een dubbelepunt (`:`) en dan een bezit om de resultaten door te sorteren. Als er geen richting is opgegeven, wordt de standaardrichting oplopend.
 
 U kunt meerdere sorteereigenschappen opgeven in een lijst met komma&#39;s als scheidingsteken. Als de eerste sorteereigenschap meerdere objecten produceert die dezelfde waarde voor die eigenschap bevatten, wordt de tweede sorteereigenschap gebruikt om die overeenkomende objecten verder te sorteren.
 
-Neem bijvoorbeeld de volgende query: `orderBy=name,desc:created`. De resultaten worden in oplopende volgorde gesorteerd op basis van de eerste sorteereigenschap. `name`. In gevallen waarin meerdere records hetzelfde delen `name` eigenschap, deze overeenkomende records worden vervolgens gesorteerd op de tweede sorteereigenschap; `created`. Als er geen geretourneerde records zijn die hetzelfde delen `name`de `created` eigenschap wordt niet in de sortering meegenomen.
+Neem bijvoorbeeld de volgende query: `orderBy=name,desc:created` . De resultaten worden in oplopende volgorde gesorteerd op basis van de eerste sorteereigenschap, `name` . Wanneer meerdere records dezelfde `name` -eigenschap delen, worden die overeenkomende records vervolgens gesorteerd op de tweede sorteereigenschap, `created` . Als geen geretourneerde records dezelfde `name` delen, wordt de sortering niet beïnvloed door de eigenschap `created` .
 
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{OBJECT_TYPE}?orderBy=asc:{PROPERTY_NAME}
@@ -398,7 +398,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 **Verzoek**
 
-Het volgende verzoek wint een lijst van datasets terug die door hun worden gesorteerd `name` eigenschap. Als een dataset het zelfde deelt `name`, zullen deze gegevensbestanden op hun beurt door hun `updated` in aflopende volgorde.
+Met het volgende verzoek wordt een lijst opgehaald met gegevenssets die zijn gesorteerd op hun eigenschap `name` . Als om het even welke datasets het zelfde `name` delen, zullen die datasets beurtelings door hun `updated` bezit in dalende orde worden bevolen.
 
 ```shell
 curl -X GET \
@@ -409,9 +409,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord bevat een lijst met [!DNL Catalog] objecten die worden gesorteerd op basis van de `orderBy` parameter. Tenzij ook een limiet is opgegeven, bevat het antwoord maximaal 20 objecten.
+Een geslaagde reactie bevat een lijst met [!DNL Catalog] -objecten die worden gesorteerd op basis van de parameter `orderBy` . Tenzij ook een limiet is opgegeven, bevat het antwoord maximaal 20 objecten.
 
 ```json
 {
@@ -450,20 +450,20 @@ Een succesvol antwoord bevat een lijst met [!DNL Catalog] objecten die worden ge
 
 ## Filteren op eigenschap
 
-[!DNL Catalog] biedt twee methoden voor filteren op eigenschap, die nader worden beschreven in de volgende secties:
+[!DNL Catalog] biedt twee methoden voor het filteren op eigenschap, die nader worden beschreven in de volgende secties:
 
-* [Eenvoudige filters gebruiken](#using-simple-filters): Filter op of een specifieke eigenschap overeenkomt met een specifieke waarde.
-* [De parameter property gebruiken](#using-the-property-parameter): Gebruik voorwaardelijke expressies om te filteren op basis van het feit of een eigenschap bestaat of als de waarde van een eigenschap overeenkomt met, benadert of vergelijkt met een andere opgegeven waarde of reguliere expressie.
+* [ Gebruikend eenvoudige filters ](#using-simple-filters): Filter door of een specifiek bezit een specifieke waarde aanpast.
+* [ Gebruikend de bezitsparameter ](#using-the-property-parameter): Gebruik voorwaardelijke uitdrukkingen aan filter gebaseerd of een bezit bestaat, of als de waarde van een bezit aanpast, benadert, of met een andere gespecificeerde waarde of regelmatige uitdrukking vergelijkt.
 
 ### Eenvoudige filters gebruiken {#using-simple-filters}
 
 Met eenvoudige filters kunt u reacties filteren op basis van specifieke eigenschapswaarden. Een eenvoudig filter heeft de vorm van `{PROPERTY_NAME}={VALUE}`.
 
-De query `name=exampleName` retourneert alleen objecten waarvan `name` eigenschap bevat de waarde &quot;exampleName&quot;. De query daarentegen `name=!exampleName` retourneert alleen objecten waarvan `name` eigenschap is **niet** &quot;exampleName&quot;.
+De query `name=exampleName` retourneert bijvoorbeeld alleen objecten waarvan de eigenschap `name` de waarde &#39;exampleName&#39; bevat. Door contrast, keert de vraag `name=!exampleName` slechts voorwerpen terug het waarvan `name` bezit **niet** &quot;exampleName&quot; is.
 
-Bovendien ondersteunen eenvoudige filters de mogelijkheid om te zoeken naar meerdere waarden voor één eigenschap. Wanneer er meerdere waarden zijn opgegeven, retourneert het antwoord objecten waarvan de eigenschap overeenkomt **alle** van de waarden in de opgegeven lijst. U kunt een query met meerdere waarden omkeren door een voorvoegsel te maken `!` teken in de lijst, alleen objecten retourneren waarvan de eigenschapswaarde **niet** in de lijst (bijvoorbeeld `name=!exampleName,anotherName`).
+Bovendien ondersteunen eenvoudige filters de mogelijkheid om te zoeken naar meerdere waarden voor één eigenschap. Wanneer de veelvoudige waarden worden verstrekt, keert de reactie voorwerpen terug het waarvan bezit **om het even welk** van de waarden in de verstrekte lijst aanpast. U kunt een multi-waardevraag omkeren door a `!` karakter aan de lijst vooraf te bepalen, terugkerend slechts voorwerpen de waarvan bezitswaarde **niet** in de verstrekte lijst is (bijvoorbeeld, `name=!exampleName,anotherName`).
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{OBJECT_TYPE}?{PROPERTY_NAME}={VALUE}
@@ -474,13 +474,13 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] -object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY_NAME}` | De naam van de eigenschap waarop u wilt filteren. |
 | `{VALUE}` | Een eigenschapwaarde die bepaalt welke resultaten moeten worden opgenomen (of uitgesloten, afhankelijk van de query). |
 
 **Verzoek**
 
-Het volgende verzoek wint een lijst van datasets terug, gefiltreerd om slechts datasets te omvatten waarvan `name` eigenschap heeft de waarde &quot;exampleName&quot; of &quot;anotherName&quot;.
+Het volgende verzoek wint een lijst van datasets terug, gefiltreerd om slechts datasets te omvatten de waarvan `name` bezit een waarde van &quot;exampleName&quot;of &quot;anotherName&quot;heeft.
 
 ```shell
 curl -X GET \
@@ -491,9 +491,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord bevat een lijst met gegevenssets, met uitzondering van gegevenssets waarvan `name` is &quot;exampleName&quot; of &quot;anotherName&quot;. Tenzij ook een limiet is opgegeven, bevat het antwoord maximaal 20 objecten.
+Een geslaagde reactie bevat een lijst met gegevenssets, exclusief gegevenssets waarvan `name` &quot;exampleName&quot; of &quot;anotherName&quot; is. Tenzij ook een limiet is opgegeven, bevat het antwoord maximaal 20 objecten.
 
 ```json
 {
@@ -520,11 +520,11 @@ Een succesvol antwoord bevat een lijst met gegevenssets, met uitzondering van ge
 }
 ```
 
-### Met de `property` parameter {#using-the-property-parameter}
+### De parameter `property` gebruiken {#using-the-property-parameter}
 
-De `property` De vraagparameter verstrekt meer flexibiliteit voor op bezit-gebaseerd filtreren dan eenvoudige filters. Naast het filtreren gebaseerd op of een bezit een specifieke waarde heeft, `property` parameter kan andere vergelijkingsexploitanten (zoals &quot;meer dan&quot;(`>`) en &quot;kleiner dan&quot; (`<`)) en reguliere expressies om te filteren op eigenschapswaarden. Het kan ook filteren door of een eigenschap bestaat, ongeacht de waarde ervan.
+De query-parameter `property` biedt meer flexibiliteit voor op eigenschappen gebaseerde filtering dan eenvoudige filters. Naast het filtreren gebaseerd op of een bezit een specifieke waarde heeft, kan de `property` parameter andere vergelijkingsexploitanten (zoals &quot;meer-dan&quot; (`>`) en &quot;minder-dan&quot; (`<`)) evenals regelmatige uitdrukkingen gebruiken om door bezitswaarden te filtreren. Het kan ook filteren door of een eigenschap bestaat, ongeacht de waarde ervan.
 
-De `property` parameter kan om het even welke eigenschappen van niveauobjecten goedkeuren. `sampleKey` kan voor het filtreren worden gebruikt `?properties=subItem.sampleKey`.
+De parameter `property` kan alle objecteigenschappen op niveau accepteren. `sampleKey` kan worden gebruikt voor filtering met `?properties=subItem.sampleKey` .
 
 ```json
 {
@@ -538,7 +538,7 @@ De `property` parameter kan om het even welke eigenschappen van niveauobjecten g
 }
 ```
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{OBJECT_TYPE}?property={CONDITION}
@@ -546,18 +546,18 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] -object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{CONDITION}` | Een voorwaardelijke expressie die aangeeft voor welke eigenschap query moet worden uitgevoerd en hoe de waarde ervan moet worden geëvalueerd. Hieronder vindt u voorbeelden. |
 
-De waarde van `property` parameter ondersteunt verschillende soorten voorwaardelijke expressies. In de volgende tabel wordt de basissyntaxis voor ondersteunde expressies beschreven:
+De waarde van de parameter `property` ondersteunt verschillende soorten voorwaardelijke expressies. In de volgende tabel wordt de basissyntaxis voor ondersteunde expressies beschreven:
 
 | Symbool(en) | Beschrijving | Voorbeeld |
 | --- | --- | --- |
 | (Geen) | Wanneer de eigenschapnaam wordt opgegeven zonder operator, worden alleen objecten geretourneerd waar de eigenschap bestaat, ongeacht de waarde ervan. | `property=name` |
-| ! | Een &quot;`!`&quot; aan de waarde van een `property` parameter retourneert alleen objecten waar de eigenschap dit doet **niet** bestaan. | `property=!name` |
-| ~ | Retourneert alleen objecten waarvan de eigenschapswaarden (tekenreeks) overeenkomen met een reguliere expressie die wordt opgegeven na de tilde (`~`). | `property=name~^example` |
-| == | Hiermee worden alleen objecten geretourneerd waarvan de eigenschapswaarden exact overeenkomen met de tekenreeks die wordt opgegeven na het symbool double equals (`==`). | `property=name==exampleName` |
-| != | Hiermee worden alleen objecten geretourneerd waarvan de eigenschapswaarden wel **niet** overeenkomende tekenreeks opgegeven na het symbool not equals (`!=`). | `property=name!=exampleName` |
+| ! | Het voorschrijven van &quot;`!`&quot;aan de waarde van a `property` parameter keert slechts voorwerpen terug waar het bezit **niet** bestaat. | `property=!name` |
+| ~ | Retourneert alleen objecten waarvan de eigenschapswaarden (tekenreeks) overeenkomen met een reguliere expressie die wordt opgegeven na het tilde-symbool (`~`). | `property=name~^example` |
+| == | Retourneert alleen objecten waarvan de eigenschapswaarden exact overeenkomen met de tekenreeks die wordt opgegeven na het symbool double-equals (`==`). | `property=name==exampleName` |
+| != | Keert slechts voorwerpen terug de waarvan bezitswaarden **niet** koord aanpassen dat na het symbool niet-evenaart (`!=`) wordt verstrekt. | `property=name!=exampleName` |
 | &lt; | Retourneert alleen objecten waarvan de eigenschapswaarden kleiner zijn dan (maar niet gelijk zijn aan) een opgegeven hoeveelheid. | `property=version<1.0.0` |
 | &lt;= | Retourneert alleen objecten waarvan de eigenschapswaarden kleiner zijn dan (of gelijk zijn aan) een opgegeven hoeveelheid. | `property=version<=1.0.0` |
 | > | Retourneert alleen objecten waarvan de eigenschapswaarden groter zijn dan (maar niet gelijk zijn aan) een opgegeven hoeveelheid. | `property=version>1.0.0` |
@@ -565,7 +565,7 @@ De waarde van `property` parameter ondersteunt verschillende soorten voorwaardel
 
 >[!NOTE]
 >
->De `name` eigenschap ondersteunt het gebruik van een jokerteken `*`, als de volledige zoektekenreeks of als onderdeel ervan. Jokertekens komen overeen met lege tekens, zodat de zoekreeks `te*st` komt overeen met de waarde &quot;test&quot;. Sterretjes worden gevrijwaard door ze te verdubbelen (`**`). Een dubbele asterisk in een zoektekenreeks staat voor één sterretje als letterlijke tekenreeks.
+>De eigenschap `name` ondersteunt het gebruik van een jokerteken `*` als de volledige zoektekenreeks of als onderdeel ervan. Jokertekens komen overeen met lege tekens, zodat de zoektekenreeks `te*st` overeenkomt met de waarde &#39;test&#39;. Sterretjes worden voorkomen door ze te verdubbelen (`**`). Een dubbele asterisk in een zoektekenreeks staat voor één sterretje als letterlijke tekenreeks.
 
 **Verzoek**
 
@@ -580,7 +580,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie bevat een lijst met datasets waarvan de versienummers groter zijn dan 1.0.3. Tenzij ook een limiet is opgegeven, bevat het antwoord maximaal 20 objecten.
 
@@ -621,9 +621,9 @@ Een succesvolle reactie bevat een lijst met datasets waarvan de versienummers gr
 
 ## Meerdere filters combineren
 
-Een en-teken gebruiken (`&`), kunt u meerdere filters combineren in één aanvraag. Wanneer de extra voorwaarden aan een verzoek worden toegevoegd, EN verhouding wordt verondersteld.
+Met een en-teken (`&`) kunt u meerdere filters combineren in één aanvraag. Wanneer de extra voorwaarden aan een verzoek worden toegevoegd, EN verhouding wordt verondersteld.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{OBJECT_TYPE}?{FILTER_1}={VALUE}&{FILTER_2}={VALUE}&{FILTER_3}={VALUE}

@@ -19,20 +19,20 @@ Deze pagina beschrijft hoe te om Destination SDK te gebruiken om dossier het for
 
 ## Vereisten {#prerequisites}
 
-Lees voordat u verdergaat met de onderstaande stappen de [Aan de slag met Destination SDK](../../getting-started.md) pagina voor informatie over het verkrijgen van de vereiste autorisatiegeloofsbrieven van de Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
+Alvorens aan de hieronder geschetste stappen vooruit te gaan, te lezen gelieve de [ Destination SDK begonnen ](../../getting-started.md) pagina voor informatie over het verkrijgen van de noodzakelijke de authentificatiegeloofsbrieven van de Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
 
 Adobe raadt u ook aan de volgende documentatie te lezen en bekend te maken voordat u verdergaat:
 
-* Elke beschikbare optie voor bestandsindeling wordt in het gedeelte [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) sectie.
-* Stappen voltooien om [een op een bestand gebaseerde bestemming configureren](../../guides/configure-file-based-destination-instructions.md) met Destination SDK.
+* Elke beschikbare dossier het formatteren optie wordt gedocumenteerd bij lengte in de [ dossier het formatteren configuratie ](../../functionality/destination-server/file-formatting.md) sectie.
+* Voltooi stappen om [ een op dossier-gebaseerde bestemming ](../../guides/configure-file-based-destination-instructions.md) te vormen gebruikend Destination SDK.
 
 ## Een server- en bestandsconfiguratie maken {#create-server-file-configuration}
 
-Begin met het gebruik van de `/destination-server` eindpunt om te bepalen welke dossier het formatteren configuratieopties u opstelling voor de uitgevoerde dossiers wilt.
+Begin door het `/destination-server` eindpunt te gebruiken om te bepalen welke dossier het formatteren configuratieopties u opstelling voor de uitgevoerde dossiers wilt.
 
-Hieronder ziet u een voorbeeld van een configuratie van een doelserver voor een [!DNL Amazon S3] doel, met verschillende opties voor bestandsindeling geselecteerd.
+Hieronder ziet u een voorbeeld van een doelserverconfiguratie voor een [!DNL Amazon S3] -doel, met verschillende opties voor bestandsindeling geselecteerd.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST platform.adobe.io/data/core/activation/authoring/destination-servers
@@ -102,23 +102,23 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!TIP]
 >
->**De gebruikersinterface van het Experience Platform controleren**. Als u de opties voor bestandsindeling configureert met de configuraties die in de onderstaande secties worden getoond, moet u de interface van het Experience Platform controleren op de manier waarop deze opties worden weergegeven.
+>**verifieer het Experience Platform UI**. Als u de opties voor bestandsindeling configureert met de configuraties die in de onderstaande secties worden getoond, moet u de interface van het Experience Platform controleren op de manier waarop deze opties worden weergegeven.
 
-Nadat u de gewenste opties voor bestandsindeling in de vorige stap hebt toegevoegd aan de configuratie voor de doelserver en bestandsindeling, kunt u nu de opdracht `/destinations` API eindpunt om de gewenste gebieden als gebieden van klantengegevens aan de bestemmingsconfiguratie toe te voegen.
+Nadat u de gewenste opties voor bestandsindeling in de vorige stap hebt toegevoegd aan de configuratie voor de doelserver en bestandsindeling, kunt u nu het API-eindpunt `/destinations` gebruiken om de gewenste velden als gegevensvelden van de klant toe te voegen aan de doelconfiguratie.
 
 >[!IMPORTANT]
 >
->Deze stap is optioneel en bepaalt alleen welke opties voor bestandsindeling gebruikers in de gebruikersinterface van het Experience Platform moeten krijgen. Als u geen opmaakopties voor bestanden instelt als gegevensvelden van de klant, wordt het bestand geëxporteerd met de standaardwaarden die zijn geconfigureerd in het dialoogvenster [server- en bestandsconfiguratie](#create-server-file-configuration).
+>Deze stap is optioneel en bepaalt alleen welke opties voor bestandsindeling gebruikers in de gebruikersinterface van het Experience Platform moeten krijgen. Als u opstellings dossier formatterende opties niet als gebieden van klantengegevens formatteert, zal de dossieruitvoer met de standaardwaarden te werk gaan die in de [ worden gevormd server en dossierconfiguratie ](#create-server-file-configuration).
 
 In deze stap kunt u de weergegeven opties groeperen in elke gewenste volgorde, u kunt aangepaste groepen, vervolgkeuzelijsten en voorwaardelijke groepen maken op basis van de geselecteerde bestandstypen. Al deze instellingen worden weergegeven in de opname en in de volgende secties.
 
-![Schermopname met verschillende opties voor de bestandsindeling van batchbestanden.](../../assets/guides/batch/file-formatting-options.gif)
+![ het registreren van het scherm die diverse dossier het formatteren opties voor partijdossiers tonen.](../../assets/guides/batch/file-formatting-options.gif)
 
 ### De opties voor de bestandsindeling bepalen {#ordering}
 
-De volgorde waarin u de opmaakopties voor bestanden toevoegt als gegevensvelden van klanten in de doelconfiguratie, wordt weerspiegeld in de gebruikersinterface. De onderstaande configuratie wordt bijvoorbeeld dienovereenkomstig weerspiegeld in de gebruikersinterface, waarbij de opties in de volgorde worden weergegeven **[!UICONTROL Delimiter]**, **[!UICONTROL Quote Character]**, **[!UICONTROL Escape Character]**, **[!UICONTROL Empty Value]**, **[!UICONTROL Null Value]**.
+De volgorde waarin u de opmaakopties voor bestanden toevoegt als gegevensvelden van klanten in de doelconfiguratie, wordt weerspiegeld in de gebruikersinterface. De onderstaande configuratie wordt bijvoorbeeld dienovereenkomstig weergegeven in de gebruikersinterface, waarbij de opties worden weergegeven in de volgorde **[!UICONTROL Delimiter]**, **[!UICONTROL Quote Character]**, **[!UICONTROL Escape Character]**, **[!UICONTROL Empty Value]**, **[!UICONTROL Null Value]** .
 
-![Afbeelding met de volgorde van opties voor bestandsindeling in de gebruikersinterface van het Experience Platform.](../../assets/guides/batch/file-formatting-order.png)
+![ Beeld dat de orde van dossier het formatteren opties in Experience Platform UI toont.](../../assets/guides/batch/file-formatting-order.png)
 
 ```json
         {
@@ -241,7 +241,7 @@ De volgorde waarin u de opmaakopties voor bestanden toevoegt als gegevensvelden 
 
 U kunt meerdere opmaakopties voor bestanden groeperen in één sectie. Wanneer u de verbinding met het doel instelt in de gebruikersinterface, kan de gebruiker een visuele groepering van vergelijkbare velden zien en hiervan profiteren.
 
-Om dit te doen, gebruik `"type": "object"` om de groep te maken en de gewenste opties voor bestandsindeling te verzamelen binnen een `properties` parameter, zoals in het onderstaande voorbeeld wordt getoond, waarbij de groepering **[!UICONTROL CSV Options]** wordt gemarkeerd.
+Hiertoe maakt u met `"type": "object"` de groep en verzamelt u de gewenste opties voor bestandsindeling in een `properties` -parameter, zoals in het onderstaande voorbeeld wordt getoond, waar de groepering **[!UICONTROL CSV Options]** wordt gemarkeerd.
 
 ```json {line-numbers="true" start-number="100" highlight="106-128"}
 "customerDataFields":[
@@ -279,13 +279,13 @@ Om dit te doen, gebruik `"type": "object"` om de groep te maken en de gewenste o
 ]
 ```
 
-![Afbeelding met de CSV-opties in de gebruikersinterface.](../../assets/guides/batch/file-formatting-grouping.png)
+![ Beeld die de opties tonen CSV groeperen in UI.](../../assets/guides/batch/file-formatting-grouping.png)
 
 ### Vervolgkeuzekiezers maken voor de opties voor de bestandsindeling {#dropdown-selectors}
 
 In situaties waarin u gebruikers de keuze wilt laten tussen verschillende opties, bijvoorbeeld met welk teken de velden in CSV-bestanden worden afgebakend, kunt u vervolgkeuzelijsten toevoegen aan de gebruikersinterface.
 
-Om dit te doen, gebruik `namedEnum` object als hieronder weergegeven en een `default` waarde voor de opties die de gebruiker kan selecteren.
+Hiervoor gebruikt u het `namedEnum` -object zoals hieronder wordt weergegeven en configureert u een `default` -waarde voor de opties die de gebruiker kan selecteren.
 
 ```json {line-numbers="true" start-number="100" highlight="114-124"}
 [...]
@@ -324,13 +324,13 @@ Om dit te doen, gebruik `namedEnum` object als hieronder weergegeven en een `def
 ]
 ```
 
-![Het registreren van het scherm die een voorbeeld van dropdown selecteurs tonen die met de hierboven getoonde configuratie worden gecreeerd.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
+![ het registreren van het Scherm die een voorbeeld van dropdown selecteurs tonen die met de hierboven getoonde configuratie worden gecreeerd.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
 ### Voorwaardelijke opties voor bestandsindeling maken {#conditional-options}
 
 U kunt opties voor voorwaardelijke bestandsindeling maken, die alleen in de activeringsworkflow worden weergegeven wanneer de gebruiker een bepaald bestandstype selecteert om te exporteren. In de onderstaande configuratie wordt bijvoorbeeld een voorwaardelijke groepering gemaakt voor CSV-bestandsopties. De CSV-bestandsopties worden alleen weergegeven wanneer de gebruiker CSV selecteert als het gewenste bestandstype voor exporteren.
 
-Als u een veld als voorwaardelijk wilt instellen, gebruikt u de optie `conditional` parameter zoals hieronder getoond:
+Als u een veld als voorwaardelijk wilt instellen, gebruikt u de parameter `conditional` zoals hieronder wordt weergegeven:
 
 ```json
             "conditional": {
@@ -340,7 +340,7 @@ Als u een veld als voorwaardelijk wilt instellen, gebruikt u de optie `condition
             }
 ```
 
-In een bredere context kunt u de `conditional` veld dat wordt gebruikt in de onderstaande doelconfiguratie, naast de `fileType` en de `csvOptions` object waarin het is gedefinieerd.
+In een bredere context ziet u het veld `conditional` dat wordt gebruikt in de doelconfiguratie hieronder, naast de `fileType` tekenreeks en het object `csvOptions` waarin deze is gedefinieerd.
 
 ```json
         {
@@ -485,7 +485,7 @@ In een bredere context kunt u de `conditional` veld dat wordt gebruikt in de ond
 
 Hieronder ziet u het resulterende UI-scherm op basis van de bovenstaande configuratie. Wanneer de gebruiker het bestandstype CSV selecteert, worden aanvullende opties voor bestandsindeling die verwijzen naar het CSV-bestandstype weergegeven in de gebruikersinterface.
 
-![Schermopname met de optie voor voorwaardelijke bestandsindeling voor CSV-bestanden.](../../assets/guides/batch/conditional-file-formatting.gif)
+![ het registreren van het scherm die de voorwaardelijke dossier het formatteren optie voor Csv- dossiers tonen.](../../assets/guides/batch/conditional-file-formatting.gif)
 
 ### Volledige API-aanvraag die alle hierboven weergegeven opties bevat
 
@@ -711,7 +711,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-Een succesvolle reactie keert de bestemmingsconfiguratie, met inbegrip van uniek herkenningsteken terug (`instanceId`) van de configuratie.
+Een succesvolle reactie keert de bestemmingsconfiguratie, met inbegrip van het unieke herkenningsteken (`instanceId`) van de configuratie terug.
 
 ## Bekende beperkingen {#known-limitations}
 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## Volgende stappen {#next-steps}
 
-Door dit artikel te lezen, weet u nu hoe u aangepaste opmaakopties voor bestanden voor geëxporteerde bestanden kunt instellen met behulp van Destination SDK. Vervolgens kan uw team de opdracht [activeringsworkflow voor op bestanden gebaseerde doelen](../../../ui/activate-batch-profile-destinations.md) om gegevens naar het doel te exporteren.
+Door dit artikel te lezen, weet u nu hoe u aangepaste opmaakopties voor bestanden voor geëxporteerde bestanden kunt instellen met behulp van Destination SDK. Daarna, kan uw team het [ activeringswerkschema voor op dossier-gebaseerde bestemmingen ](../../../ui/activate-batch-profile-destinations.md) gebruiken om gegevens naar de bestemming uit te voeren.

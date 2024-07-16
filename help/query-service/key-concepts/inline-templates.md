@@ -4,8 +4,8 @@ description: Leer hoe te om veelvoudige voorwaarden in talrijke vragen met geali
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
 source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 1%
+source-wordcount: '486'
+ht-degree: 0%
 
 ---
 
@@ -17,11 +17,11 @@ Dit document behandelt het gebruik en de beperkingen van gealigneerde malplaatje
 
 ## Vereisten
 
-Inlinesjablonen worden ondersteund door zowel de UI als de API van de Query Service. Lees voordat u verdergaat met deze handleiding de documentatie over hoe u [een querysjabloon maken via de API](../api/query-templates.md#create-a-query-template) of met de [Query-editor](../ui/user-guide.md#query-authoring).
+Inlinesjablonen worden ondersteund door zowel de UI als de API van de Query Service. Alvorens met deze gids verder te gaan, lees de documentatie over hoe te [ een vraagmalplaatje door API ](../api/query-templates.md#create-a-query-template) of met de [ Redacteur van de Vraag ](../ui/user-guide.md#query-authoring) creëren.
 
 ## Inline sjabloonsyntaxis {#syntax}
 
-Als een query eenmaal is opgeslagen, wordt deze een sjabloon genoemd. Wanneer de sjabloon naar een andere sjabloon binnen de instructie verwijst, wordt deze een inline sjabloon genoemd. Inline sjablonen worden in uw SQL aangegeven met het hashsymbool (#) gevolgd door de sjabloonnaam. Een voorbeeld van deze syntaxis is `#YOUR_TEMPLATE_NAME`.
+Als een query eenmaal is opgeslagen, wordt deze een sjabloon genoemd. Wanneer de sjabloon naar een andere sjabloon binnen de instructie verwijst, wordt deze een inline sjabloon genoemd. Inline sjablonen worden in uw SQL aangegeven met het hashsymbool (#) gevolgd door de sjabloonnaam. Een voorbeeld van deze syntaxis is is `#YOUR_TEMPLATE_NAME` .
 
 ## Gebruiksscenario {#use-case}
 
@@ -40,14 +40,14 @@ Wanneer het uitvoeren van de vraag, vervangt de Dienst van de Vraag de malplaatj
 >
 >Zoeksjablonen kunnen een willekeurig aantal andere inlinesjablonen aanroepen. Er is geen beperking op het aantal gealigneerde malplaatjes die u van één enkele vraag kunt aanhalen. Sjablonen kunnen ook worden genest binnen andere inlinesjablonen.
 
-U kunt sjablonen gebruiken om een of meerdere voorwaarden op te slaan. Ze hoeven op zich geen volledige query te zijn. Als uw malplaatje een geldige vraag bevat, kunt u de vraag eenvoudig uitvoeren door de malplaatjenaam te roepen die met een knoeiboelsymbool wordt voorafgegaan. Als u bijvoorbeeld `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` als een sjabloon met de naam `JUNE_2023_LOYALTY_MEMBERS`, de opdracht  `#JUNE_2023_LOYALTY_MEMBERS;` wordt de geldige query in de sjabloon uitgevoerd.
+U kunt sjablonen gebruiken om een of meerdere voorwaarden op te slaan. Ze hoeven op zich geen volledige query te zijn. Als uw malplaatje een geldige vraag bevat, kunt u de vraag eenvoudig uitvoeren door de malplaatjenaam te roepen die met een knoeiboelsymbool wordt voorafgegaan. Als u `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` bijvoorbeeld hebt opgeslagen als een sjabloon met de naam `JUNE_2023_LOYALTY_MEMBERS` , voert de opdracht `#JUNE_2023_LOYALTY_MEMBERS;` de geldige query uit die zich in de sjabloon bevindt.
 
 >
 >
->In de gebruikersinterface van Adobe Experience Platform worden inlinesjablonen in de vorm van geparameteriiseerde query&#39;s alleen op het hoofdniveau ondersteund. Dit betekent dat de parameters bepaalde vragen slechts werken wanneer gebruikt in het originele malplaatje. Het kindmalplaatje moet een statisch malplaatje zijn en kan geen dynamische parameters hebben. Zie de [parameterized vragen documentatie](../ui/parameterized-queries.md) voor meer informatie.
+>In de gebruikersinterface van Adobe Experience Platform worden inlinesjablonen in de vorm van geparameteriiseerde query&#39;s alleen op het hoofdniveau ondersteund. Dit betekent dat de parameters bepaalde vragen slechts werken wanneer gebruikt in het originele malplaatje. Het kindmalplaatje moet een statisch malplaatje zijn en kan geen dynamische parameters hebben. Zie de [ parameters bepaalde vragen documentatie ](../ui/parameterized-queries.md) om meer te leren.
 
 ## Volgende stappen
 
 Na het lezen van dit document, weet u nu hoe te om andere malplaatjes binnen uw SQL, of in de Redacteur van de Vraag of door de Dienst API van de Vraag van verwijzingen te voorzien.
 
-Bovendien moet u de [anonieme blokgids](./anonymous-block.md), waarin wordt uitgelegd hoe u ontwikkelingsoverheadkosten kunt minimaliseren door een of meer SQL-instructies in een keten te koppelen die op volgorde worden uitgevoerd.
+Bovendien, zou u de [ anonieme blokgids ](./anonymous-block.md) moeten lezen, die verklaart hoe te om ontwikkelingsoverheadkosten te minimaliseren door één of meerdere SQL verklaringen te ketenen die in opeenvolging worden uitgevoerd.

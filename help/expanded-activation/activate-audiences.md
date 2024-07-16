@@ -1,13 +1,13 @@
 ---
 title: Soorten publiek van Audience Manager activeren door Uitgebreide activering
 description: Leer hoe u het publiek van de Audience Manager activeert naar sociale en advertentiebestemmingen, via Uitgebreide activering van de Audience Manager.
-source-git-commit: 19fb369a7faa0c5ac27a34db7b848b0332cb8695
+exl-id: 4105f5c5-db69-414f-9ee4-8630b0a86da7
+source-git-commit: 2222e9fbf75f3082d331868f820247e0c0ce3ba2
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 0%
 
 ---
-
 
 # Het publiek activeren via uitgebreide activering van Audience Manager
 
@@ -15,61 +15,61 @@ Deze pagina beschrijft de werkstroom van begin tot eind die u moet volgen om pub
 
 ## Voordat u begint {#before-you-begin}
 
-De stappen die in deze gids worden beschreven veronderstellen u hebt gelezen [Overzicht van uitgebreide activering](overview.md) en u hebt bevestigd dat u aan de voorwaarden voor publieksactivering voldoet.
+De stappen die in deze gids worden beschreven veronderstellen u de [ Uitgebreide het overzichtspagina van de Activering ](overview.md) hebben gelezen en u hebt bevestigd dat u aan de eerste vereisten voor publieksactivering voldoet.
 
 >[!IMPORTANT]
 >
->Het publiek activeren via [!DNL Expanded Activation], zorg ervoor dat uw publiek van de Audience Manager op **gehashte e-mailadressen**. Zie de [voorwaarden](overview.md#prerequisites) voor meer informatie .
+>Om publiek door [!DNL Expanded Activation] te activeren, zorg ervoor uw publiek van de Audience Manager op **gehakt e-mailadressen** gebaseerd is. Zie de [ eerste vereisten ](overview.md#prerequisites) voor meer details.
 
 ## Stap 1: Vorm de Audience Manager bronverbinding {#configure-source}
 
-De [Audience Manager-bronaansluiting](../sources/connectors/adobe-applications/audience-manager.md) verzendt publieksgegevens die in Adobe Audience Manager zijn verzameld voor activering op de doelplatforms die worden ondersteund door Uitgebreide activering.
+De [ Audience Manager bronschakelaar ](../sources/connectors/adobe-applications/audience-manager.md) verzendt publieksgegevens die in Adobe Audience Manager voor activering in de bestemmingsplatforms worden verzameld die door Uitgebreide Activering worden gesteund.
 
-Volg de handleiding voor hoe u [een Audience Manager-bronverbinding maken](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) om uw bronschakelaar te vormen.
+Volg de gids op hoe te [ een Audience Manager bronverbinding ](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) tot stand brengen om uw bronschakelaar te vormen.
 
-![De beeld van UI van het platform die het Bronlusje met de Audience Manager bronverbinding toont.](assets/sources-tab.png)
+![ beeld UI van het Platform dat het Bronlusje met de Audience Manager bronverbinding toont.](assets/sources-tab.png)
 
 >[!TIP]
 >
 >De Adobe Audience Manager-bronaansluiting is de enige bronaansluiting die beschikbaar is in Uitgebreide activering.
 >
->Als u een publiek wilt innemen op basis van aanvullende id&#39;s, moet u een editie van [Real-Time CDP](../rtcdp/overview.md). Neem voor meer informatie contact op met uw Adobe.
+>Als u publiek wilt opnemen dat op extra herkenningstekens wordt gebaseerd, moet u een uitgave van [ Real-Time CDP ](../rtcdp/overview.md) kopen. Neem voor meer informatie contact op met uw Adobe.
 
 ### Ingeten publiek weergeven en controleren {#view-audiences}
 
-Het publiek dat u vanuit de Audience Manager naar de uitgebreide activering brengt, kunt u bekijken in het dialoogvenster **[!UICONTROL Audiences]** dashboard.
+Het publiek dat u via Audience Manager naar de uitgebreide activering stuurt, kunt u bekijken op het dashboard van **[!UICONTROL Audiences]** .
 
-Ga naar **[!UICONTROL Customer]** -> **[!UICONTROL Audiences]** -> **[!UICONTROL Browse]**.
+Ga naar **[!UICONTROL Customer]** -> **[!UICONTROL Audiences]** -> **[!UICONTROL Browse]** om uw publiek weer te geven.
 
-![Platform UI-afbeelding die de pagina Soorten publiek weergeeft.](assets/audiences-browse.png)
+![ beeld UI van het Platform dat de pagina van het publiek toont.](assets/audiences-browse.png)
 
 >[!IMPORTANT]
 >
 >* Het kan tot 48 uur duren voordat het publiek volledig kan worden geactiveerd. Dit geldt ook voor updates van bestaande Audience Managers.
 >* Nieuw gemaakt publiek van Audience Manager wordt niet automatisch weergegeven in Uitgebreide activering. Om nieuwe segmenten in Uitgebreide Activering in te voeren, moet u hen door de bronschakelaar van de Audience Manager toevoegen.
 
-Nadat u uw bronschakelaar van de Audience Manager hebt gevormd, beweging aan [stap 2](#create-destination-connection).
+Nadat u uw Audience Manager bronschakelaar hebt gevormd, beweging aan [ stap 2 ](#create-destination-connection).
 
 ## Stap 2: Een nieuwe doelverbinding maken {#create-destination-connection}
 
 Voordat u het publiek van de Audience Manager naar keuze kunt sturen, moet u eerst een verbinding naar een doelplatform maken.
 
-Ga in de linkerzijbalk naar **[!UICONTROL Connections]** -> **[!UICONTROL Destinations]** -> **[!UICONTROL Catalog]**.
+Ga in de linkerzijbalk naar **[!UICONTROL Connections]** -> **[!UICONTROL Destinations]** -> **[!UICONTROL Catalog]** .
 
-De beschikbare doelcategorieën voor [!DNL Expanded Activation] zijn [reclame](../destinations/catalog/advertising/overview.md) en [sociaal](../destinations/catalog/social/overview.md).
+De beschikbare bestemmingscategorieën voor [!DNL Expanded Activation] zijn [ reclame ](../destinations/catalog/advertising/overview.md) en [ sociaal ](../destinations/catalog/social/overview.md).
 
-![Platform UI-afbeelding die de doelcatalogus voor uitgebreide activering weergeeft.](assets/destination-catalog.png)
+![ beeld UI van het Platform die de bestemmingscatalogus voor Uitgebreide Activering tonen.](assets/destination-catalog.png)
 
-Als u een nieuwe verbinding met een doelplatform wilt maken, volgt u de handleiding op [hoe te om een nieuwe bestemmingsverbinding te creëren](../destinations/ui/connect-destination.md). Ga vervolgens naar [stap 3](#activate-audiences).
+Om een nieuwe verbinding aan een bestemmingsplatform tot stand te brengen, volg de gids op [ hoe te om een nieuwe bestemmingsverbinding ](../destinations/ui/connect-destination.md) tot stand te brengen. Dan, beweging aan [ stap 3 ](#activate-audiences).
 
 ## Stap 3: Activeer publiek naar uw bestemming {#activate-audiences}
 
-Nadat u [publiek van ingeslikte Audience Manager](#configure-source) en [een nieuwe doelverbinding gemaakt](#create-destination-connection), kunt u uw publiek nu activeren naar het doelplatform van uw keuze.
+Nadat u met succes [ ingebed Audience Manager publiek ](#configure-source) en [ een nieuwe bestemmingsverbinding ](#create-destination-connection) hebt gecreeerd, kunt u uw publiek aan het bestemmingsplatform van uw keus nu activeren.
 
-![Platform UI-afbeelding die de doelcatalogus voor uitgebreide activering weergeeft.](assets/activate-audiences.png)
+![ beeld UI van het Platform die de bestemmingscatalogus voor Uitgebreide Activering tonen.](assets/activate-audiences.png)
 
-Om publiek aan uw bestemming te activeren, volg de gids op [hoe te om publiek aan het stromen bestemmingen te activeren](../destinations/ui/activate-segment-streaming-destinations.md).
+Om publiek aan uw bestemming te activeren, volg de gids op [ hoe te om publiek aan het stromen bestemmingen ](../destinations/ui/activate-segment-streaming-destinations.md) te activeren.
 
 ## Activering van publiek controleren {#verify}
 
-Controleer de [doelcontroledocumentatie](../dataflows/ui/monitor-destinations.md) voor gedetailleerde informatie over hoe te om de stroom van gegevens aan uw bestemmingen te controleren.
+Controleer de [ documentatie van de bestemmings controle ](../dataflows/ui/monitor-destinations.md) voor gedetailleerde informatie over hoe te om de stroom van gegevens aan uw bestemmingen te controleren.

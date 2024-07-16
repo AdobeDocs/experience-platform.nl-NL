@@ -20,7 +20,7 @@ ht-degree: 0%
 
 U kunt een lijst maken van de sandboxen die beschikbaar zijn voor de huidige gebruiker door een GET-aanvraag in te dienen bij het beschikbare sandboxeindpunt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{QUERY_PARAMS}
@@ -28,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de [bijgevoegd document](./appendix.md#query) voor een lijst met beschikbare parameters. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [ bijlage document ](./appendix.md#query) voor een lijst van beschikbare parameters. |
 
 **Verzoek**
 
@@ -40,9 +40,9 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord retourneert een lijst met sandboxen die beschikbaar zijn voor de huidige gebruiker, inclusief details zoals `name`, `title`, `state`, en `type`.
+Een succesvol antwoord retourneert een lijst met sandboxen die beschikbaar zijn voor de huidige gebruiker, inclusief details zoals `name` , `title` , `state` en `type` .
 
 ```json
 {
@@ -104,7 +104,7 @@ Een succesvol antwoord retourneert een lijst met sandboxen die beschikbaar zijn 
 | --- | --- |
 | `name` | De naam van de sandbox. Wordt gebruikt voor opzoekdoeleinden in API-aanroepen. |
 | `title` | De weergavenaam voor de sandbox. |
-| `state` | De huidige verwerkingsstatus van de sandbox. De status van een sandbox kan een van de volgende zijn: <ul><li>`creating`: De sandbox is gemaakt, maar wordt nog steeds door het systeem ingericht.</li><li>`active`: De sandbox wordt gemaakt en actief.</li><li>`failed`: Vanwege een fout kon de sandbox niet worden ingericht door het systeem en is deze uitgeschakeld.</li><li>`deleted`: De sandbox is handmatig uitgeschakeld.</li></ul> |
+| `state` | De huidige verwerkingsstatus van de sandbox. De status van een sandbox kan een van de volgende zijn: <ul><li>`creating`: De sandbox is gemaakt, maar wordt nog steeds geleverd door het systeem.</li><li>`active`: De sandbox wordt gemaakt en actief.</li><li>`failed`: Als gevolg van een fout kon de sandbox niet door het systeem worden ingericht en is deze uitgeschakeld.</li><li>`deleted`: De sandbox is handmatig uitgeschakeld.</li></ul> |
 | `type` | Het type sandbox, &#39;development&#39; of &#39;production&#39;. |
 | `isDefault` | Een Booleaanse eigenschap die aangeeft of deze sandbox de standaardproductiesandbox voor de organisatie is. |
 | `eTag` | Een id voor een specifieke versie van de sandbox. Deze waarde wordt gebruikt voor versiebeheer en caching-efficiëntie en wordt telkens bijgewerkt wanneer een wijziging in de sandbox wordt aangebracht. |

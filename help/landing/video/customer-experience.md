@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Een klantervaring met Experience Platform
 
-Bekijk hoe Experience Platform een rijke, relevante en real-time ervaring voor klanten creëert door deze video te bekijken die een hypothetische ervaring volgt die met Platform is opgebouwd, zoals vanuit het perspectief van een klant wordt gezien.
+Bekijk hoe Experience Platform een rijke, relevante en real-time ervaring voor klanten creëert door deze video te bekijken die een hypothetische ervaring volgt die met Platform wordt gebouwd, zoals vanuit het perspectief van een klant wordt gezien.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12&learn=on)

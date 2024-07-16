@@ -10,121 +10,121 @@ ht-degree: 0%
 
 ---
 
-# Een bronverbinding en gegevensstroom maken *UURBRON* gegevens die de UI gebruiken
+# Creeer een bronverbinding en dataflow aan stroom *JUURSOURCE* gegevens gebruikend UI
 
-*Terwijl u deze sjabloon doorloopt, vervangt of verwijdert u alle cursief gedrukte alinea&#39;s (te beginnen met deze alinea).*
+*aangezien u door dit malplaatje gaat, vervang of schrap alle paragrafen in cursief (beginnend met dit).*
 
-*Begin door de meta-gegevens (titel en beschrijving) bij te werken bij de bovenkant van de pagina. Negeer alle exemplaren van UICONTROL op deze pagina. Dit is een label waarmee de pagina in de verschillende talen die wij ondersteunen correct wordt vertaald in onze computervertaalprocessen. Nadat u de documentatie hebt verzonden, voegen we codes aan de documentatie toe.*
+*Begin door de meta-gegevens (titel en beschrijving) bij te werken bij de bovenkant van de pagina. Negeer alle exemplaren van UICONTROL op deze pagina. Dit is een label waarmee de pagina in de verschillende talen die wij ondersteunen correct wordt vertaald in onze computervertaalprocessen. Wij zullen markeringen aan uw documentatie toevoegen nadat u het voorlegt.*
 
-Deze zelfstudie bevat stappen voor het maken van een *UURBRON* bronschakelaar die het gebruikersinterface van het Platform gebruikt.
+Dit leerprogramma verstrekt stappen voor het creëren van a ** bronschakelaar van de JONGE bron gebruikend het gebruikersinterface van het Platform.
 
 ## Overzicht
 
-*Geef een kort overzicht van uw bedrijf, inclusief de waarde die het aan klanten biedt. Voeg een koppeling toe naar de startpagina van de productdocumentatie voor meer informatie.*
+*verstrek een kort overzicht van uw bedrijf, met inbegrip van de waarde het aan klanten verstrekt. Neem een koppeling op naar de startpagina van de productdocumentatie voor meer informatie.*
 
 >[!IMPORTANT]
 >
->Deze bronschakelaar en documentatiepagina worden gecreeerd en gehandhaafd door *UURBRON* team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *Koppeling of e-mailadres invoegen waar u voor updates kunt komen*.
+>Deze bronschakelaar en documentatiepagina worden gecreeerd en door het ** team van de JONGE {gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct bij *verbinding of e-mailadres van het Tussenvoegsel te contacteren waar u voor updates* kunt worden bereikt.
 
 ## Vereisten
 
-*Voeg in deze sectie informatie toe over alles waar klanten zich van bewust moeten zijn voordat ze de bron instellen in de Adobe Experience Platform-gebruikersinterface. Dit kan over zijn:*
+*voegt informatie in deze sectie over om het even wat toe dat de klanten zich van bewust moeten zijn alvorens aan opstelling de bron in het gebruikersinterface van Adobe Experience Platform te beginnen. Dit kan over zijn:*
 
 * *moet aan een lijst van gewenste personen worden toegevoegd*
 * *vereisten voor e-mailhashing*
-* *accountdetails aan je kant*
+* *om het even welke rekeningsspecificaties op uw kant*
 * *hoe te om de authentificatiegeloofsbrieven te verkrijgen om met uw platform te verbinden*
 
 ### Vereiste referenties verzamelen
 
-Om verbinding te maken *UURBRON* aan Platform, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
+Om *UURSOURCE* aan Platform te verbinden, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| *referentie één* | *Voeg hier een korte beschrijving toe aan de verificatiegegevens van uw bron* | *Voeg hier een voorbeeld van de verificatiereferentie van uw bron toe* |
-| *referentie twee* | *Voeg hier een korte beschrijving toe aan de verificatiegegevens van uw bron* | *Voeg hier een voorbeeld van de verificatiereferentie van uw bron toe* |
-| *referentie drie* | *Voeg hier een korte beschrijving toe aan de verificatiegegevens van uw bron* | *Voeg hier een voorbeeld van de verificatiereferentie van uw bron toe* |
+| *referentie één* | *Gelieve te voegen een korte beschrijving aan de authentificatiereferentie van uw bron hier* toe | *gelieve een voorbeeld van de authentificatiereferentie van uw bron hier toe te voegen* |
+| *referentie twee* | *Gelieve te voegen een korte beschrijving aan de authentificatiereferentie van uw bron hier* toe | *gelieve een voorbeeld van de authentificatiereferentie van uw bron hier toe te voegen* |
+| *referentie drie* | *Gelieve te voegen een korte beschrijving aan de authentificatiereferentie van uw bron hier* toe | *gelieve een voorbeeld van de authentificatiereferentie van uw bron hier toe te voegen* |
 
-Voor meer informatie over deze geloofsbrieven, zie *UURBRON* verificatiedocumentatie. *Voeg hier een koppeling naar de verificatiedocumentatie van uw platform toe*.
+Voor meer informatie over deze geloofsbrieven, zie *JONGE* authentificatiedocumentatie. *gelieve verbinding aan de authentificatiedocumentatie van uw platform toe te voegen hier*.
 
-### Integreren *UURBRON* met uw webhaak
+### Integreer *JUURSOURCE* met uw webhaak
 
-*Voor Streaming SDK is uw bron vereist om webhaken te kunnen ondersteunen voor communicatie met het Experience Platform. In deze sectie moet u de stappen opgeven die uw gebruikers moeten uitvoeren om uw BRON met een webhaak te integreren.*
+*het stromen SDK vereist uw bron om websites te kunnen steunen om met Experience Platform te communiceren. In deze sectie, moet u de stappen verstrekken die uw gebruikers zullen moeten volgen om Uw BRON met een webhaak te integreren.*
 
-## Verbind uw *UURBRON* account
+## Verbind uw ** rekening van de JUURBRON
 
-Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de **Streaming** categorie, selecteert u *UURBRON* en selecteer vervolgens **[!UICONTROL Add data]**.
+Onder de **Streaming** categorie, selecteer *JUURSOURCE*, en selecteer dan **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->De onderstaande schermafbeeldingen zijn voorbeelden. Vervang de afbeeldingen bij het maken van de documentatie door schermafbeeldingen van de werkelijke bron. U kunt hetzelfde patroon en dezelfde kleur en dezelfde bestandsnamen gebruiken. Zorg ervoor dat uw schermafbeelding het gehele UI-scherm van het platform vastlegt. Zie de handleiding voor informatie over het uploaden van uw screenshots [de documentatie ter controle verzenden](../documentation/github.md).
+>De onderstaande schermafbeeldingen zijn voorbeelden. Vervang de afbeeldingen bij het maken van de documentatie door schermafbeeldingen van de werkelijke bron. U kunt hetzelfde patroon en dezelfde kleur en dezelfde bestandsnamen gebruiken. Zorg ervoor dat uw schermafbeelding het gehele UI-scherm van het platform vastlegt. Voor informatie over hoe te om uw screenshots te uploaden, zie de gids bij [ het voorleggen van uw documentatie voor overzicht ](../documentation/github.md).
 
-![De catalogus met bronnen voor Experience Platforms](../assets/streaming/catalog.png)
+![ de catalogus van bronnen van het Experience Platform ](../assets/streaming/catalog.png)
 
 ## Gegevens selecteren
 
-De **[!UICONTROL Select data]** wordt weergegeven, zodat u een interface hebt waarmee u de gegevens kunt selecteren die u naar Platform verzendt.
+De stap **[!UICONTROL Select data]** wordt weergegeven en biedt een interface waarmee u de gegevens kunt selecteren die u naar Platform verzendt.
 
 * Het linkergedeelte van de interface is een browser waarmee u de beschikbare gegevensstromen binnen uw account kunt bekijken.
 * In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een JSON-bestand voorvertonen.
 
-Selecteren **[!UICONTROL Upload files]** om een JSON-bestand vanaf uw lokale systeem te uploaden. U kunt ook het JSON-bestand dat u wilt uploaden, slepen naar het [!UICONTROL Drag and drop files] deelvenster.
+Selecteer **[!UICONTROL Upload files]** om een JSON-bestand van uw lokale systeem te uploaden. U kunt ook het JSON-bestand dat u wilt uploaden naar het deelvenster [!UICONTROL Drag and drop files] slepen.
 
-![De stap Gegevens toevoegen van de bronwerkstroom.](../assets/streaming/add-data.png)
+![ voegt gegevensstap van het bronwerkschema toe.](../assets/streaming/add-data.png)
 
-Nadat het bestand is geüpload, wordt de voorbeeldinterface bijgewerkt en wordt een voorvertoning weergegeven van het schema dat u hebt geüpload. Met de voorvertoningsinterface kunt u de inhoud en structuur van een bestand controleren. U kunt ook de opdracht [!UICONTROL Search field] nut om tot specifieke punten van binnen uw schema toegang te hebben.
+Nadat het bestand is geüpload, wordt de voorbeeldinterface bijgewerkt en wordt een voorvertoning weergegeven van het schema dat u hebt geüpload. Met de voorvertoningsinterface kunt u de inhoud en structuur van een bestand controleren. U kunt het hulpprogramma [!UICONTROL Search field] ook gebruiken om toegang te krijgen tot specifieke items binnen uw schema.
 
-Selecteer **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![De voorbeeldstap van de bronworkflow.](../assets/streaming/preview.png)
+![ de voorproefstap van het bronwerkschema.](../assets/streaming/preview.png)
 
 ## Gegevens
 
-De **Gegevens** de stap verschijnt, die u van opties voorzien om een bestaande dataset te gebruiken of een nieuwe dataset voor uw gegevensstroom te vestigen, evenals een kans om een naam en een beschrijving voor uw gegevensstroom te verstrekken. Tijdens deze stap kunt u ook instellingen configureren voor het opnemen van profielen, foutdiagnose, gedeeltelijke inname en waarschuwingen.
+De **Dataflow detailstap** verschijnt, die u van opties voorzien om een bestaande dataset te gebruiken of een nieuwe dataset voor uw dataflow te vestigen, evenals een kans om een naam en een beschrijving voor uw dataflow te verstrekken. Tijdens deze stap kunt u ook instellingen configureren voor het opnemen van profielen, foutdiagnose, gedeeltelijke inname en waarschuwingen.
 
-Selecteer **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![De gegevensstroom-detailstap van het bronwerkschema.](../assets/streaming/dataflow-detail.png)
+![ dataflow-detail stap van het bronwerkschema.](../assets/streaming/dataflow-detail.png)
 
 ## Toewijzing
 
-De [!UICONTROL Mapping] de stap verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
+De stap [!UICONTROL Mapping] verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
-Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie [UI-hulplijn voor gegevensvoorinstelling](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
-Als de brongegevens zijn toegewezen, selecteert u **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Next]** wanneer de brongegevens correct zijn toegewezen.
 
-![De toewijzingsstap van de workflow voor bronnen.](../assets/streaming/mapping.png)
+![ de afbeeldingsstap van het bronwerkschema.](../assets/streaming/mapping.png)
 
 ## Controleren
 
-De **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
+De stap **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt bekijken voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-* **[!UICONTROL Connection]**: Hiermee geeft u het brontype, het relevante pad van het gekozen bronbestand en de hoeveelheid kolommen in dat bronbestand weer.
-* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset volgt.
+* **[!UICONTROL Connection]**: geeft het brontype, het relevante pad van het gekozen bronbestand en de hoeveelheid kolommen in dat bronbestand weer.
+* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset volgt aan.
 
-Nadat u de gegevensstroom hebt gecontroleerd, klikt u op **[!UICONTROL Finish]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
+Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Finish]** en laat u enige tijd over tot de gegevensstroom.
 
-![De revisiestap van de workflow voor bronnen.](../assets/streaming/review.png)
+![ de overzichtsstap van het bronwerkschema.](../assets/streaming/review.png)
 
 ## Uw URL voor het streamingeindpunt ophalen
 
 Wanneer uw streaminggegevens zijn gemaakt, kunt u nu de URL van het streamingeindpunt ophalen. Dit eindpunt zal worden gebruikt om aan uw webhaak in te tekenen, toestaand uw het stromen bron om met Experience Platform te communiceren.
 
-Ga naar het tabblad [!UICONTROL Dataflow activity] pagina van de gegevensstroom die u enkel creeerde en het eindpunt van de bodem kopieert [!UICONTROL Properties] deelvenster.
+Als u het streamingeindpunt wilt ophalen, gaat u naar de [!UICONTROL Dataflow activity] -pagina van de gegevensstroom die u net hebt gemaakt en kopieert u het eindpunt van de onderkant van het deelvenster [!UICONTROL Properties] .
 
-![Het het stromen eindpunt in dataflow activiteit.](../assets/testing/endpoint-test.png)
+![ het stromen eindpunt in dataflow activiteit.](../assets/testing/endpoint-test.png)
 
 ## Volgende stappen
 
-*Workflows voor de overige stappen voor het maken van een gegevensstroom worden gemoduleerd. Als er om het even welke specifieke vraag-outs zijn u betreffende uw bron wilt maken, gelieve de extra middelensectie hieronder te zien.*
+*de Werkschema&#39;s voor de resterende stappen van het creëren van een dataflow worden gemoduleerd. Als er om het even welke specifieke vraag-outs zijn u betreffende uw bron wilt maken, gelieve de extra middelensectie hieronder te zien.*
 
-Door deze zelfstudie te volgen, hebt u een verbinding tot stand gebracht met uw *UURBRON* account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens over te brengen naar het platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR {gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Platform ](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) te brengen.
 
 ## Aanvullende bronnen
 
-*Dit is een optionele sectie waar u verdere koppelingen naar de productdocumentatie of andere stappen, screenshots en nuances kunt toevoegen die u belangrijk vindt voor de klant om succesvol te zijn. U kunt deze sectie gebruiken om informatie over of tips voor de volledige workflow van uw bron toe te voegen, vooral als er bepaalde gotchas zijn die een eindgebruiker kan tegenkomen.*
+*dit is een facultatieve sectie waar u verdere verbindingen aan uw productdocumentatie of om het even welke andere stappen, screenshots, nuances kunt verstrekken u belangrijk voor de klant om vindt succesvol te zijn. U kunt deze sectie gebruiken om informatie over of uiteinden op het volledige werkschema van uw bron toe te voegen, vooral als er bijzondere &quot;gotchas&quot;zijn die een eindgebruiker zou kunnen ontmoeten.*

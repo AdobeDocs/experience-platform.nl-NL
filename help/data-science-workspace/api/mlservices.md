@@ -16,13 +16,13 @@ ht-degree: 0%
 
 Een dienst MLService is een gepubliceerd opgeleid model dat uw organisatie van de capaciteit voorziet om tot eerder ontwikkelde modellen toegang te hebben en te hergebruiken. Een belangrijk kenmerk van MLServices is de mogelijkheid om training en scoring op een geplande basis te automatiseren. De geplande trainingslooppas kan helpen de efficiency en nauwkeurigheid van een model handhaven, terwijl de geplande scoring looppas kan ervoor zorgen dat de nieuwe inzichten constant worden geproduceerd.
 
-Geautomatiseerde trainings- en scoreschema&#39;s worden gedefinieerd met een begintijdstempel, een eindtijdstempel en een frequentie die wordt weergegeven als een [uitsnijdexpressie](https://en.wikipedia.org/wiki/Cron). Planningen kunnen worden gedefinieerd wanneer [creëren van een dienst MLService](#create-an-mlservice) of toegepast door [bestaande MLService bijwerken](#update-an-mlservice).
+De geautomatiseerde opleiding en het scoren programma&#39;s worden bepaald met beginnende timestamp, beëindigend timestamp, en een frequentie die als a [ wordt vertegenwoordigd cron uitdrukking ](https://en.wikipedia.org/wiki/Cron). De programma&#39;s kunnen worden bepaald wanneer [ creërend een MLService ](#create-an-mlservice) of toegepast door [ het bijwerken van een bestaande MLService ](#update-an-mlservice).
 
 ## Een MLService maken {#create-an-mlservice}
 
 U kunt een dienst tot stand brengen MLService door een verzoek van de POST en een lading uit te voeren die een naam voor de dienst en een geldige identiteitskaart MLInstance verstrekt. De MLInstance die wordt gebruikt om een dienst te creëren MLService wordt vereist geen bestaande trainingsexperimenten te hebben maar u kunt verkiezen om de dienst MLService met een bestaand opgeleid model tot stand te brengen door overeenkomstige Deskundige identiteitskaart en opleidingsuitloopidentiteitskaart te verstrekken.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 POST /mlServices
@@ -75,9 +75,9 @@ curl -X POST \
 | `scoringSchedule.endTime` | Een tijdstempel waarvoor de geplande scoring-runtime wordt beëindigd. |
 | `scoringSchedule.cron` | Een uitsnijdexpressie die de frequentie van automatische scoring definieert. |
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde dienst MLService met inbegrip van zijn uniek herkenningsteken (`id`), Experimentele id voor training (`trainingExperimentId`), Experimentele id voor scoring (`scoringExperimentId`) en de gegevensset-id voor de inputopleiding (`trainingDataSetId`).
+Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde dienst MLService met inbegrip van zijn uniek herkenningsteken (`id`), Experiment identiteitskaart voor opleiding (`trainingExperimentId`), Experiment identiteitskaart voor het scoring (`scoringExperimentId`), en identiteitskaart van de inputopleiding (`trainingDataSetId`) bevat.
 
 ```json
 {
@@ -108,9 +108,9 @@ Een succesvolle reactie keert een lading terug die de details van de pas gecreë
 
 ## Een lijst met MLServices ophalen {#retrieve-a-list-of-mlservices}
 
-U kunt een lijst van diensten terugwinnen MLServices door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [queryparameters voor ophalen van elementen](./appendix.md#query).
+U kunt een lijst van diensten terugwinnen MLServices door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [ vraagparameters voor activaherwinning ](./appendix.md#query).
 
-**API-indeling**
+**API Formaat**
 
 ```http
 GET /mlServices
@@ -120,12 +120,12 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Een van de [beschikbare queryparameters](./appendix.md#query) gebruikt om resultaten te filteren. |
+| `{QUERY_PARAMETER}` | Één van de [ beschikbare vraagparameters ](./appendix.md#query) die aan filterresultaten wordt gebruikt. |
 | `{VALUE}` | De waarde voor de voorafgaande vraagparameter. |
 
 **Verzoek**
 
-Het volgende verzoek bevat een vraag en wint een lijst van diensten terug MLS die zelfde identiteitskaart MLInstance ( delen`{MLINSTANCE_ID}`).
+Het volgende verzoek bevat een vraag en wint een lijst van diensten terug MLS die zelfde identiteitskaart MLInstance (`{MLINSTANCE_ID}`) delen.
 
 ```shell
 curl -X GET \
@@ -136,9 +136,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert een lijst van diensten MLS en hun details met inbegrip van hun MLService ID terug (`{MLSERVICE_ID}`), Experimentele id voor training (`{TRAINING_ID}`), Experimentele id voor scoring (`{SCORING_ID}`) en de gegevensset-id voor de inputopleiding (`{DATASET_ID}`).
+Een succesvolle reactie keert een lijst van diensten MLServices en hun details met inbegrip van hun identiteitskaart MLService (`{MLSERVICE_ID}`), Experiment identiteitskaart voor opleiding (`{TRAINING_ID}`), Experiment ID voor het scoring (`{SCORING_ID}`), en input opleidings dataset identiteitskaart (`{DATASET_ID}`) terug.
 
 ```json
 {
@@ -169,7 +169,7 @@ Een succesvolle reactie keert een lijst van diensten MLS en hun details met inbe
 
 U kunt de details van een specifiek Experiment terugwinnen door een verzoek van de GET uit te voeren dat gewenste identiteitskaart MLService in de verzoekweg omvat.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 GET /mlServices/{MLSERVICE_ID}
@@ -188,7 +188,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lading terug die de details van de gevraagde MLService bevat.
 
@@ -215,9 +215,9 @@ U kunt een bestaande dienst bijwerken MLService door zijn eigenschappen door een
 
 >[!TIP]
 >
->Om het succes van dit verzoek van de PUT te verzekeren, wordt geadviseerd eerst een verzoek van de GET uit te voeren aan [wint de dienst MLS door identiteitskaart terug](#retrieve-a-specific-mlservice). Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>Om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET [ uitvoert om de dienst MLService door identiteitskaart ](#retrieve-a-specific-mlservice) terug te winnen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 PUT /mlServices/{MLSERVICE_ID}
@@ -255,7 +255,7 @@ curl -X PUT \
     }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lading terug die de bijgewerkte details van MLService bevat.
 
@@ -290,7 +290,7 @@ Een succesvolle reactie keert een lading terug die de bijgewerkte details van ML
 
 U kunt één enkele dienst schrappen MLService door een verzoek van de DELETE uit te voeren dat identiteitskaart van doelMLService in de verzoekweg omvat.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 DELETE /mlServices/{MLSERVICE_ID}
@@ -311,7 +311,7 @@ curl -X DELETE \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 ```json
 {
@@ -325,7 +325,7 @@ curl -X DELETE \
 
 U kunt alle diensten schrappen MLServices die tot een bepaalde instantie behoren door een verzoek van de DELETE uit te voeren die een identiteitskaart MLInstance als vraagparameter specificeert.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 DELETE /mlServices?mlInstanceId={MLINSTANCE_ID}
@@ -346,7 +346,7 @@ curl -X DELETE \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 ```json
 {

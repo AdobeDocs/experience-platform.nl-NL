@@ -52,4 +52,4 @@ De AI van de klant werkt door bestaande gegevens van de Gebeurtenis van de Consu
 
 ## Volgende stappen
 
-U kunt beginnen door [aan de slag](./getting-started.md) hulplijn. Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor Klant AI. Als u al uw gegevens en gegevens hebt, gaat u naar  [configureren van een Customer AI-exemplaar](./user-guide/configure.md). Het biedt stappen voor het gebruik van AI van de Klant.
+U kunt beginnen door [ te volgen begonnen wordt ](./getting-started.md) gids. Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor Klant AI. Als u al uw geloofsbrieven en gegevens klaar hebt, bezoek [ vormend een instantie van de Klant AI ](./user-guide/configure.md). Het biedt stappen voor het gebruik van AI van de Klant.

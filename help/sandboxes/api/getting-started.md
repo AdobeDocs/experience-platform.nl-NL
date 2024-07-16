@@ -8,7 +8,7 @@ exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '372'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -20,17 +20,17 @@ Deze handleiding voor ontwikkelaars bevat stappen waarmee u sandbox-API kunt geb
 
 ## Vereisten
 
-Voor het beheren van sandboxen voor uw organisatie hebt u beheerdersrechten nodig voor sandboxen. Gebruikers zonder toegangsrechten kunnen alleen de [beschikbaar sandboxeindpunt](./available.md) actieve sandboxen voor de huidige gebruiker weergeven. Zie de [toegangsbeheeroverzicht](../../access-control/home.md) voor meer informatie over het toewijzen van sandboxmachtigingen voor Experience Platform.
+Voor het beheren van sandboxen voor uw organisatie hebt u beheerdersrechten nodig voor sandboxen. De gebruikers zonder toegangstoestemmingen kunnen het [ beschikbare zandbakeneindpunt ](./available.md) slechts gebruiken om van actieve zandbakken voor de huidige gebruiker een lijst te maken. Zie het [ overzicht van de toegangscontrole ](../../access-control/home.md) voor meer informatie over hoe te om zandbaktoestemmingen voor Experience Platform toe te wijzen.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in de documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de gids voor het oplossen van problemen met Experience Platforms.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in de documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Voor deze handleiding is het vereist dat u de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) om met succes vraag aan Platform APIs te maken. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Deze gids vereist u om het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) te hebben voltooid om vraag aan Platform APIs met succes te maken. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
-* Toestemming: houder `{ACCESS_TOKEN}`
+* Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 

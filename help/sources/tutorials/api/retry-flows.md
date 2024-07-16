@@ -4,7 +4,7 @@ description: Leer hoe u mislukte dataflow-uitvoering opnieuw kunt proberen met d
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
 source-git-commit: d4dba26a151619a555a69287e182ff8398cca7b4
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '269'
 ht-degree: 1%
 
 ---
@@ -15,24 +15,24 @@ ht-degree: 1%
 >
 >Ondersteuning voor het opnieuw proberen van mislukte dataflow-run is beschikbaar voor batchbronnen. U kunt alleen dataflow-runtime opnieuw proberen als deze is mislukt.
 
-In deze zelfstudie worden de stappen beschreven voor het opnieuw proberen van mislukte dataflow-uitvoering met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma behandelt stappen op hoe te om ontbroken dataflow looppas opnieuw te proberen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met [!DNL Platform] diensten.
-* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
+* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
 
 ## Een mislukte gegevensstroomuitvoering opnieuw proberen
 
-Als u een mislukte gegevensstroomuitvoering opnieuw wilt proberen, vraagt u een POST aan de `/runs` eindpunt terwijl het verstrekken van runtime identiteitskaart van uw gegevensstroom en `re-trigger` bewerking als onderdeel van uw queryparameters.
+Als u een mislukte gegevensstroomuitvoering opnieuw wilt proberen, vraagt u een POST naar het `/runs` -eindpunt terwijl u de runtime-id van de gegevensstroom en de `re-trigger` -bewerking opgeeft als onderdeel van de queryparameters.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /runs/{RUN_ID}/action?op=re-trigger
@@ -41,15 +41,15 @@ POST /runs/{RUN_ID}/action?op=re-trigger
 | Parameter | Beschrijving |
 | --- | --- |
 | `{RUN_ID}` | De runtime-id die overeenkomt met de dataflow-run die u opnieuw wilt proberen. |
-| `op` | Een bewerking die de uit te voeren actie bepaalt. Als u een mislukte gegevensstroomuitvoering opnieuw wilt proberen, moet u `re-trigger` als uw bewerking. |
+| `op` | Een bewerking die de uit te voeren actie bepaalt. Als u een mislukte gegevensstroomuitvoering opnieuw wilt proberen, moet u `re-trigger` opgeven als uw bewerking. |
 
 **Verzoek**
 
 >[!NOTE]
 >
->U kunt de `re-trigger` De verrichting om succesvolle dataflow opnieuw te proberen loopt eveneens, gegeven dat de succesvolle dataflow looppas nul ingebed verslagen heeft.
+>U kunt de `re-trigger` verrichting gebruiken om succesvolle dataflow looppas ook opnieuw te proberen, aangezien de succesvolle dataflow looppas nul ingebed verslagen heeft.
 
-De volgende aanvraag probeert de dataflow-run opnieuw voor de runtime-id `4fb0418e-1804-45d6-8d56-dd51f05c0baf`.
+Met de volgende aanvraag wordt de uitvoering van de gegevensstroom voor de uitvoerings-id `4fb0418e-1804-45d6-8d56-dd51f05c0baf` opnieuw uitgevoerd.
 
 ```shell
 curl -X POST \
@@ -61,7 +61,7 @@ curl -X POST \
   -H 'Content-Type: application/json'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een nieuw gemaakte flow-id en de bijbehorende etag-versie.
 

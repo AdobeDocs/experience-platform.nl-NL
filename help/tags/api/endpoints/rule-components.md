@@ -4,24 +4,24 @@ description: Leer hoe te om vraag aan het /rule_components eindpunt in Reactor A
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1146'
 ht-degree: 1%
 
 ---
 
 # Het eindpunt van componenten van de regel
 
-Tags voor gegevensverzameling [regels](./rules.md) controleert het gedrag van de middelen in opgesteld [bibliotheek](./libraries.md). **Regelcomponenten** Dit zijn de afzonderlijke onderdelen die een regel vormen. Als een regel een recept is, dan is een regelcomponent een van de ingrediënten. De `/rule_components` eindpunt in Reactor API staat u toe om regelcomponenten programmatically te beheren.
+In de markeringen van de gegevensinzameling, [ regels ](./rules.md) controleren het gedrag van de middelen in een opgestelde [ bibliotheek ](./libraries.md). **de componenten van de Regel** zijn de individuele delen die omhoog een regel maken. Als een regel een recept is, dan is een regelcomponent een van de ingrediënten. Het `/rule_components` eindpunt in Reactor API staat u toe om regelcomponenten programmatically te beheren.
 
 >[!NOTE]
 >
->In dit document wordt beschreven hoe u regelcomponenten in de Reactor-API beheert. Voor details over hoe te met regels en regelcomponenten in UI in wisselwerking te staan, gelieve te verwijzen naar [UI-hulplijn](../../ui/managing-resources/rules.md).
+>In dit document wordt beschreven hoe u regelcomponenten in de Reactor-API beheert. Voor details op hoe te met regels en regelcomponenten in UI in wisselwerking te staan, gelieve te verwijzen naar de [ gids UI ](../../ui/managing-resources/rules.md).
 
 Regelcomponenten hebben drie basistypen:
 
 | Type component Rule | Beschrijving |
 | --- | --- |
-| Gebeurtenissen | Een gebeurtenis is de trigger voor een regel. De regel wordt gestart wanneer de gebeurtenis plaatsvindt bij uitvoering op het clientapparaat. &quot;[!UICONTROL Library Load]&quot;, &quot;[!UICONTROL Page Top]&quot;, en &quot;[!UICONTROL Click]&quot; zijn voorbeelden van gebeurtenissen . |
+| Gebeurtenissen | Een gebeurtenis is de trigger voor een regel. De regel wordt gestart wanneer de gebeurtenis plaatsvindt bij uitvoering op het clientapparaat. &quot;[!UICONTROL Library Load]&quot;, &quot;[!UICONTROL Page Top]&quot;, en &quot;[!UICONTROL Click]&quot; zijn voorbeelden van gebeurtenissen. |
 | Voorwaarden | Een voorwaarde is een evaluatie van de vraag of aan bepaalde criteria is voldaan voordat enige actie wordt uitgevoerd. Wanneer een gebeurtenis plaatsvindt, worden de voorwaarden geëvalueerd. De handelingen van de regel worden alleen uitgevoerd als aan alle voorwaarden is voldaan. |
 | Acties | Dit zijn de acties u de regel eigenlijk wilt uitvoeren, zoals het verzenden van een baken van Adobe Analytics, het terugwinnen van een identiteitskaart van de douanebezoeker, of het vuren van een bepaalde mbox. |
 
@@ -29,17 +29,17 @@ Regelcomponenten hebben drie basistypen:
 
 Een regelcomponent behoort tot exact één regel. Een regel kan (en zou) vele regelcomponenten moeten hebben.
 
-Een component rule wordt door exact één gegeven [extension](./extensions.md). Extensies kunnen vele typen regelcomponenten bevatten.
+Een regelcomponent wordt verstrekt door precies één [ uitbreiding ](./extensions.md). Extensies kunnen vele typen regelcomponenten bevatten.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met regelcomponenten ophalen {#list}
 
 U kunt een lijst van regelcomponenten terugwinnen die tot een regel behoren door identiteitskaart van de regel in de weg van een verzoek van de GET te omvatten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /rules/{RULE_ID}/rule_components
@@ -53,7 +53,7 @@ GET /rules/{RULE_ID}/rule_components
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde regelcomponenten worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
+>Gebruikend vraagparameters, kunnen de vermelde regelcomponenten worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -67,7 +67,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van regelcomponenten voor de gespecificeerde regel terug.
 
@@ -178,7 +178,7 @@ Een succesvolle reactie keert een lijst van regelcomponenten voor de gespecifice
 
 U kunt een regelcomponent opzoeken door zijn identiteitskaart in de weg van een verzoek van de GET te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /rule_components/{RULE_COMPONENT_ID}
@@ -202,7 +202,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van de regelcomponent terug.
 
@@ -302,7 +302,7 @@ Een succesvolle reactie keert de details van de regelcomponent terug.
 
 U kunt een nieuwe regelcomponent tot stand brengen door een verzoek van de POST te doen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /properties/{PROPERTY_ID}/rule_components
@@ -310,13 +310,13 @@ POST /properties/{PROPERTY_ID}/rule_components
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van het bezit dat u de regelcomponent onder bepaalt. |
+| `PROPERTY_ID` | The `id` of the property that you are define the rule component under. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een nieuwe regelcomponent gemaakt. In de lading, `relationships` de eigenschap koppelt de component aan een of meer specifieke regels en een bestaande extensie. Zie de handleiding op [relaties](../guides/relationships.md) voor meer informatie .
+Met de volgende aanvraag wordt een nieuwe regelcomponent gemaakt. In de payload koppelt de eigenschap `relationships` de component aan een of meer specifieke regels en een bestaande extensie. Zie de gids op [ verhoudingen ](../guides/relationships.md) voor meer informatie.
 
 ```shell
 curl -X POST \
@@ -359,19 +359,19 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes.delegate_descriptor_id` | **(Vereist)** De typen regelcomponenten die u kunt definiëren, worden geleverd door [extensiepakket](./extension-packages.md). Wanneer u een nieuwe regelcomponent creeert, moet u een identiteitskaart van de afgevaardigde van de beschrijver verstrekken om op te wijzen op welk uitbreidingspakket deze regelcomponent gebaseerd is, het type van de component (gebeurtenis, voorwaarde, of actie), en de naam van de specifieke component zoals die door de uitbreiding (zoals de gebeurtenis &quot;Klik&quot;in de uitbreiding van de Kern wordt bepaald).<br><br>Zie de handleiding op [id&#39;s gedelegeerde descriptor](../guides/delegate-descriptor-ids.md) voor meer informatie . |
-| `attributes.name` | **(Vereist)** Een voor mensen leesbare naam voor de regelcomponent. |
+| `attributes.delegate_descriptor_id` | **(Vereist)** de types van regelcomponenten die u kunt bepalen worden verstrekt door [ uitbreidingspakketten ](./extension-packages.md). Wanneer u een nieuwe regelcomponent creeert, moet u een identiteitskaart van de afgevaardigde van de beschrijver verstrekken om op te wijzen op welk uitbreidingspakket deze regelcomponent gebaseerd is, het type van de component (gebeurtenis, voorwaarde, of actie), en de naam van de specifieke component zoals die door de uitbreiding (zoals de gebeurtenis &quot;Klik&quot;in de uitbreiding van de Kern wordt bepaald).<br><br> zie de gids op [ de beschrijver IDs van de afgevaardigde ](../guides/delegate-descriptor-ids.md) voor meer informatie. |
+| `attributes.name` | **(Vereist)** Een voor de mens leesbare naam voor de regelcomponent. |
 | `attributes.delay_next` | Een Booleaanse waarde die aangeeft of latere handelingen moeten worden vertraagd. |
 | `attributes.order` | Een geheel getal dat de volgorde aangeeft waarin de component op type moet worden geladen. |
 | `attributes.rule_order` | Een geheel dat op de prioriteit voor de bijbehorende regel wijst in brand te steken. |
 | `attributes.settings` | A settings JSON object represented as a string. |
 | `attributes.timeout` | Een geheel getal dat de time-out aangeeft van de actie die achtereenvolgens wordt uitgevoerd. |
-| `relationships` | Een voorwerp dat de noodzakelijke verhoudingen voor de regelcomponent vestigt. Er moeten twee relaties worden aangegaan: <ol><li>`extension`: De extensie die deze regelcomponent definieert. Dit moet dezelfde extensie zijn waarvan het extensiepakket wordt aangegeven door de `delegate_descriptor_id`.</li><li>`rules`: De regel waaronder deze component wordt gedefinieerd.</li></ol>Voor meer algemene informatie over relaties raadpleegt u de [relatiehulplijn](../guides/relationships.md). |
-| `type` | Het type resource dat wordt gemaakt. Voor dit eindpunt, moet de waarde `rule_components`. |
+| `relationships` | Een voorwerp dat de noodzakelijke verhoudingen voor de regelcomponent vestigt. Er moeten twee relaties worden aangegaan: <ol><li>`extension`: De extensie die deze regelcomponent definieert. Dit moet dezelfde extensie zijn waarvan het extensiepakket wordt aangegeven door de extensie `delegate_descriptor_id` .</li><li>`rules`: de regel waaronder deze component wordt gedefinieerd.</li></ol>Voor meer algemene informatie over verhoudingen, verwijs naar de [ verhoudingsgids ](../guides/relationships.md). |
+| `type` | Het type resource dat wordt gemaakt. Voor dit eindpunt moet de waarde `rule_components` zijn. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van de onlangs gecreeerde regelcomponent terug.
 
@@ -473,9 +473,9 @@ U kunt een regelcomponent bijwerken door zijn identiteitskaart in de weg van een
 
 >[!NOTE]
 >
->Wanneer u een regelcomponent bijwerkt, worden ook de bovenliggende regels bijgewerkt `updated_at` tijdstempel.
+>Wanneer u een regelcomponent bijwerkt, wordt ook de tijdstempel van de bovenliggende regel `updated_at` bijgewerkt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /rule_components/{RULE_COMPONENT_ID}
@@ -489,7 +489,7 @@ PATCH /rule_components/{RULE_COMPONENT_ID}
 
 **Verzoek**
 
-De volgende aanvraag werkt de `order` en `settings` attributen voor een bestaande regelcomponent.
+Met de volgende aanvraag worden de kenmerken `order` en `settings` voor een bestaande regelcomponent bijgewerkt.
 
 ```shell
 curl -X PATCH \
@@ -513,12 +513,12 @@ curl -X PATCH \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `attributes` | Een object waarvan de regelcomponenten de kenmerken vertegenwoordigen die voor de regelcomponent moeten worden bijgewerkt. De volgende attributen kunnen voor een regelcomponent worden bijgewerkt: <ul><li>`delay_next`</li><li>`delegate_descriptor_id`</li><li>`name`</li><li>`order`</li><li>`rule_order`</li><li>`settings`</li><li>`timeout`</li></ul> |
-| `id` | De `id` van de regelcomponent die u wilt bijwerken. Dit moet overeenkomen met de `{RULE_COMPONENT_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `rule_components`. |
+| `id` | De `id` van de regelcomponent die u wilt bijwerken. Dit moet overeenkomen met de `{RULE_COMPONENT_ID}` -waarde in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `rule_components` zijn. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van de bijgewerkte regelcomponent terug.
 
@@ -618,7 +618,7 @@ Een succesvolle reactie keert de details van de bijgewerkte regelcomponent terug
 
 U kunt een regelcomponent schrappen door zijn identiteitskaart in de weg van een verzoek van de DELETE te omvatten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /rule_components/{RULE_COMPONENT_ID}
@@ -640,25 +640,25 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert HTTP status 204 (Geen Inhoud) zonder reactiekarakter terug, erop wijzend dat de regelcomponent is geschrapt.
 
 ## Notities beheren voor een regelcomponent {#notes}
 
-De componenten van de regel zijn &quot;notable&quot;middelen, betekenend kunt u op tekst-gebaseerde nota&#39;s op elk individueel middel tot stand brengen en terugwinnen. Zie de [leidraad voor notitiepunten](./notes.md) voor meer informatie over hoe te om nota&#39;s voor regelcomponenten en andere compatibele middelen te beheren.
+De componenten van de regel zijn &quot;notable&quot;middelen, betekenend kunt u op tekst-gebaseerde nota&#39;s op elk individueel middel tot stand brengen en terugwinnen. Zie de [ gids van het Notitieeindpunt ](./notes.md) voor meer informatie over hoe te nota&#39;s voor regelcomponenten en andere compatibele middelen beheren.
 
 ## Verwante middelen voor een regelcomponent ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een regelcomponent terug te winnen. Wanneer [het zoeken van een regelcomponent](#lookup), worden deze relaties vermeld in het `relationships` regelcomponent.
+De volgende vraag toont aan hoe te om de verwante middelen voor een regelcomponent terug te winnen. Wanneer [ omhoog een regelcomponent ](#lookup) kijkt, zijn deze verhoudingen vermeld onder de `relationships` regelcomponent.
 
-Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante regels weergeven voor een regelcomponent {#rules}
 
-U kunt een lijst maken van de regels die een bepaalde regelcomponent door toe te voegen gebruiken `/rules` naar het pad van een opzoekverzoek.
+U kunt een lijst maken van de regels die een bepaalde regelcomponent gebruiken door `/rules` aan de weg van een raadplegingsverzoek toe te voegen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /rule_components/{RULE_COMPONENT_ID}/rules
@@ -666,7 +666,7 @@ GET  /rule_components/{RULE_COMPONENT_ID}/rules
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | De `id` van de regelcomponent waarvan u de regels wilt weergeven. |
+| `{RULE_COMPONENT_ID}` | De `id` van de component rule waarvan u de regels wilt weergeven. |
 
 {style="table-layout:auto"}
 
@@ -682,7 +682,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van regels terug die de gespecificeerde regelcomponent gebruiken.
 
@@ -760,9 +760,9 @@ Een succesvolle reactie keert een lijst van regels terug die de gespecificeerde 
 
 ### De verwante extensie voor een regelcomponent opzoeken {#extension}
 
-U kunt de extensie die een regelcomponent biedt, opzoeken door deze toe te voegen `/extension` naar het pad van een opzoekverzoek.
+U kunt de extensie met een regelcomponent opzoeken door `/extension` toe te voegen aan het pad van een opzoekaanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /rule_components/{RULE_COMPONENT_ID}/extension
@@ -770,7 +770,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/extension
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | De `id` van de regelcomponent waarvan u de extensie wilt opzoeken. |
+| `{RULE_COMPONENT_ID}` | De `id` van de component rule waarvan u de extensie wilt opzoeken. |
 
 {style="table-layout:auto"}
 
@@ -786,7 +786,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van de gespecificeerde uitbreiding van de regelcomponent terug.
 
@@ -880,9 +880,9 @@ Een succesvolle reactie keert de details van de gespecificeerde uitbreiding van 
 
 ### De verwante oorsprong van een regelcomponent opzoeken {#origin}
 
-U kunt de oorsprong (vorige revisie) voor een regelcomponent opzoeken door toe te voegen `/origin` naar het pad van een opzoekverzoek.
+U kunt de oorsprong (vorige revisie) voor een regelcomponent opzoeken door `/origin` aan de weg van een raadplegingsverzoek toe te voegen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /rule_components/{RULE_COMPONENT_ID}/origin
@@ -906,7 +906,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van de gespecificeerde oorsprong van de regelcomponent terug.
 

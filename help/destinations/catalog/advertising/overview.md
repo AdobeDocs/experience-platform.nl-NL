@@ -1,6 +1,6 @@
 ---
 keywords: reclamebestemmingen;bestemmingen;platformbestemmingen
-title: Overzicht van advertentiebestemmingen
+title: Overzicht Advertising-bestemmingen
 description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
 source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
@@ -10,7 +10,7 @@ ht-degree: 0%
 
 ---
 
-# Overzicht van advertentiebestemmingen {#advertising-destinations}
+# Overzicht Advertising-bestemmingen {#advertising-destinations}
 
 ## Overzicht {#overview}
 
@@ -22,13 +22,13 @@ Wanneer het verbinden met een reclamebestemming, worden uw publiek verzonden als
 
 Momenteel ondersteunt Experience Platform de onderstaande reclamebestemmingen.
 
-Zie voor meer informatie over het verschil tussen verbindingen en extensies de [Verbindingen](../../destination-types.md#connections) op de pagina Doeltypen en -categorieën.
+Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbindingen ](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
 
 ### Verbindingen
 
 * [Adobe Advertising Cloud-verbinding](adobe-advertising-cloud-connection.md)
-* [(bèta) Amazon Ads-verbinding](amazon-ads.md)
-* [(bèta) Criteo-verbinding](criteo.md)
+* [(Beta) Amazon Ads-verbinding](amazon-ads.md)
+* [(Beta) Creditverbinding](criteo.md)
 * [Google Display &amp; Video 360-verbinding](google-dv360.md)
 * [Google Ads-verbinding](google-ads-destination.md)
 * [Google Ad Manager-verbinding](google-ad-manager.md)
@@ -37,16 +37,16 @@ Zie voor meer informatie over het verschil tussen verbindingen en extensies de [
 * [Microsoft Bing-verbinding](bing.md)
 * [Verbinding met pinterest Customer List](pinterest.md)
 * [PubMatic Connect-doel](pubmatic.md)
-* [(bèta) Snapchat Ads-verbinding](snap-inc.md)
+* [(Beta) Verbinding Snapchat Ads](snap-inc.md)
 * [De verbinding van de handelsbureau](tradedesk.md)
-* [(bèta) De verbinding van de handelsbank CRM](tradedesk-emails.md)
+* [(Beta) De Trade Desk CRM-verbinding](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### Extensies
 
 * [Adobe Advertising Cloud-extensie](adobe-advertising-cloud.md)
-* [Advertising Conversion Tag-extensie](awin-conversiontag.md)
-* [Mastertag-extensie Advertising](awin-mastertag.md)
+* [Awin Advertising Conversion-tagextensie](awin-conversiontag.md)
+* [Awin Advertising Mastertag-extensie](awin-mastertag.md)
 * [Bing Ads Universal Event Tracking extension](bing-ads.md)
 * [Vertakkingsextensie](branch.md)
 * [DoubleClick-extensie Floodlight](doubleclick-floodlight.md)
@@ -60,4 +60,4 @@ Zie voor meer informatie over het verschil tussen verbindingen en extensies de [
 
 ## Verbinding maken met een nieuwe advertentiebestemming {#connect-destination}
 
-Als u een publiek naar advertentiebestemmingen voor uw campagnes wilt sturen, moet Platform eerst verbinding maken met de bestemming. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
+Als u een publiek naar advertentiebestemmingen voor uw campagnes wilt sturen, moet Platform eerst verbinding maken met de bestemming. Zie het [ leerprogramma van de bestemmingsverwezenlijking ](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.

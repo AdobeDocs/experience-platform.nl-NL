@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Kenmerkscores analyseren met gebruik van Query-service
 
-Elke rij in de gegevens vertegenwoordigt een conversie, waarbij informatie voor verwante aanraakpunten wordt opgeslagen als een array met instructies onder de `touchpointsDetail` kolom.
+Elke rij in de gegevens vertegenwoordigt een conversie, waarbij informatie voor verwante aanraakpunten wordt opgeslagen als een array van structs onder de kolom `touchpointsDetail` .
 
 | Informatie over aanraakpunten | Kolom |
 | ---------------------- | ------ |
@@ -23,49 +23,49 @@ Elke rij in de gegevens vertegenwoordigt een conversie, waarbij informatie voor 
 
 ## Gegevenspaden zoeken
 
-Selecteer in de gebruikersinterface van Adobe Experience Platform de optie **[!UICONTROL Datasets]** in de linkernavigatie. De **[!UICONTROL Datasets]** wordt weergegeven. Selecteer vervolgens de **[!UICONTROL Browse]** en zoek de gegevensset met uitvoergegevens voor uw Attribution AI-scores.
+Selecteer **[!UICONTROL Datasets]** in de gebruikersinterface van Adobe Experience Platform in de linkernavigatie. De pagina **[!UICONTROL Datasets]** wordt weergegeven. Selecteer vervolgens het tabblad **[!UICONTROL Browse]** en zoek de uitvoergegevensset voor uw Attribution AI-scores.
 
-![Uw model openen](./images/aai-query/datasets_browse.png)
+![ Toegang hebbend tot uw model ](./images/aai-query/datasets_browse.png)
 
 Selecteer uw uitvoerdataset. De pagina met gegevenssetactiviteiten wordt weergegeven.
 
-![pagina met gegevenssetactiviteiten](./images/aai-query/select_preview.png)
+![ de activiteitenpagina van de dataset ](./images/aai-query/select_preview.png)
 
-Selecteer binnen de pagina met gegevenssetactiviteiten de optie **[!UICONTROL Preview dataset]** in de rechterbovenhoek om een voorvertoning van uw gegevens weer te geven en te controleren of de gegevens op de juiste wijze zijn ingevoerd.
+Selecteer **[!UICONTROL Preview dataset]** in de rechterbovenhoek van de activiteitenpagina van de gegevensset om een voorvertoning van uw gegevens weer te geven en ervoor te zorgen dat de gegevens op de verwachte manier zijn opgenomen.
 
-![voorvertoningsgegevensset](./images/aai-query/preview_dataset.JPG)
+![ voorproefdataset ](./images/aai-query/preview_dataset.JPG)
 
 Nadat u een voorvertoning van uw gegevens hebt weergegeven, selecteert u het schema in de rechtertrack. Er verschijnt een pop-up met de schemanaam en de beschrijving. Selecteer de hyperlink naar de schemanaam om deze om te leiden naar het scoreschema.
 
-![selecteer het schema](./images/aai-query/select_schema.png)
+![ selecteer het schema ](./images/aai-query/select_schema.png)
 
-Met het scoreschema kunt u een waarde selecteren of zoeken. Als deze optie is geselecteerd, wordt **[!UICONTROL Field properties]** zijspoor opent u die u toestaat om de weg voor gebruik in het creëren van vragen te kopiëren.
+Met het scoreschema kunt u een waarde selecteren of zoeken. Als deze optie is geselecteerd, wordt de **[!UICONTROL Field properties]** side-rail geopend, waarmee u het pad kunt kopiëren en query&#39;s kunt maken.
 
-![het pad kopiëren](./images/aai-query/copy_path.png)
+![ kopieer de weg ](./images/aai-query/copy_path.png)
 
 ## Access Query Service
 
-Om tot de Dienst van de Vraag van binnen UI van het Platform toegang te hebben, begin door te selecteren **[!UICONTROL Queries]** in de linkernavigatie, dan selecteer **[!UICONTROL Browse]** tab. Er wordt een lijst met eerder opgeslagen query&#39;s geladen.
+Als u Query Service wilt openen vanuit de platformgebruikersinterface, selecteert u **[!UICONTROL Queries]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Browse]** . Er wordt een lijst met eerder opgeslagen query&#39;s geladen.
 
-![queryservice-browser](./images/aai-query/query_tab.png)
+![ doorbladeren van de vraagdienst ](./images/aai-query/query_tab.png)
 
 Selecteer vervolgens **[!UICONTROL Create query]** in de rechterbovenhoek. De Query-editor wordt geladen. Met behulp van de Query-editor kunt u query&#39;s maken met behulp van uw score-gegevens.
 
-![queryeditor](./images/aai-query/query_example.png)
+![ vraagredacteur ](./images/aai-query/query_example.png)
 
-Voor meer informatie over de Redacteur van de Vraag, bezoek [Gebruikershandleiding voor de Query Editor](../../query-service/ui/user-guide.md).
+Voor meer informatie over de Redacteur van de Vraag, bezoek de [ gebruikersgids van de Redacteur van de Vraag ](../../query-service/ui/user-guide.md).
 
 ## Zoeksjablonen voor analyse van de toewijzingsscore
 
-De hieronder vragen kunnen als malplaatje voor verschillende scenario&#39;s van de scoreanalyse worden gebruikt. U moet de opdracht `_tenantId` en `your_score_output_dataset` met de juiste waarden die in het scoringsuitvoerschema worden gevonden.
+De hieronder vragen kunnen als malplaatje voor verschillende scenario&#39;s van de scoreanalyse worden gebruikt. U moet de waarden `_tenantId` en `your_score_output_dataset` vervangen door de juiste waarden in het schema voor het uitvoeren van scores.
 
 >[!NOTE]
 >
-> Afhankelijk van de manier waarop uw gegevens zijn opgenomen, worden de hieronder gebruikte waarden, zoals `timestamp` kan een andere indeling hebben.
+> Afhankelijk van de manier waarop uw gegevens zijn ingevoerd, hebben de hieronder gebruikte waarden, zoals `timestamp` , mogelijk een andere indeling.
 
 ### Validatievoorbeelden
 
-**Totaal aantal conversies via conversiegebeurtenis (binnen in een conversievenster)**
+**Totaal aantal omzettingen door omzettingsgebeurtenis (binnen in een omzettingsvenster)**
 
 ```sql
     SELECT conversionName,
@@ -88,7 +88,7 @@ De hieronder vragen kunnen als malplaatje voor verschillende scenario&#39;s van 
         conversionName
 ```
 
-**Het totale aantal conversie-enige gebeurtenissen (binnen in een conversievenster)**
+**Totaal aantal conversie-slechts gebeurtenissen (binnen in een omzettingsvenster)**
 
 ```sql
     SELECT
@@ -129,7 +129,7 @@ De hieronder vragen kunnen als malplaatje voor verschillende scenario&#39;s van 
 
 ### Voorbeeld van distributie-analyse
 
-**Hoeveelheid aanraakpunten op conversiepaden op gedefinieerde tekst (in een conversievenster)**
+**Hoeveelheid touchpoints op omzettingswegen door bepaald type (binnen in een omzettingsvenster)**
 
 ```sql
     SELECT conversionName,
@@ -155,7 +155,7 @@ De hieronder vragen kunnen als malplaatje voor verschillende scenario&#39;s van 
 
 ### Voorbeelden van het genereren van inzicht
 
-**Uitsplitsing van incrementele eenheden naar aanraakpunt en conversiedatum (binnen een conversievenster)**
+**Incrementele eenheden onderbreking door touchpoint en omzettingsdatum (binnen in een omzettingsvenster)**
 
 ```sql
     SELECT conversionName,
@@ -180,7 +180,7 @@ De hieronder vragen kunnen als malplaatje voor verschillende scenario&#39;s van 
         conversionName, touchpointName, DATE(conversion_timestamp)
 ```
 
-**Uitsplitsing van incrementele eenheden naar aanraakpunt en aanraakpunt (binnen een conversievenster)**
+**Incrementele eenheden onderbreking door touchpoint en touchpoint datum (binnen in een omzettingsvenster)**
 
 ```sql
     SELECT conversionName,
@@ -206,7 +206,7 @@ De hieronder vragen kunnen als malplaatje voor verschillende scenario&#39;s van 
     LIMIT 20
 ```
 
-**Geaggregeerde scores voor een bepaald type aanraakpunt voor alle scoremodellen (in een conversievenster)**
+**Geaggregeerde scores voor een bepaald type van touchpoint voor alle het scoren modellen (binnen in een omzettingsvenster)**
 
 ```sql
     SELECT
@@ -237,7 +237,7 @@ De hieronder vragen kunnen als malplaatje voor verschillende scenario&#39;s van 
         conversionName, touchpointName
 ```
 
-**Geavanceerd - analyse van padlengte**
+**Geavanceerd - de analyse van de weglengte**
 
 Hiermee wordt een verdeling over padlengte opgehaald voor elk type conversiegebeurtenis:
 
@@ -268,9 +268,9 @@ Hiermee wordt een verdeling over padlengte opgehaald voor elk type conversiegebe
         conversionName, path_length
 ```
 
-**Geavanceerd - verschillend aantal aanraakpunten op de analyse van omzettingspaden**
+**Geavanceerd - verschillend aantal aanraakpunten op de analyse van omzettingswegen**
 
-Haal de distributie voor het aantal verschillende aanraakpunten op een conversiepad voor elk conversiegebeurtenistype:
+Hiermee wordt de distributie voor het aantal verschillende aanraakpunten op een conversiepad opgehaald voor elk conversiegebeurtenistype:
 
 ```sql
     WITH agg_path AS (
@@ -305,7 +305,7 @@ Met deze query wordt de struct-kolom samengevoegd tot meerdere aparte kolommen e
 
 >[!TIP]
 >
-> In dit voorbeeld moet u vervangen `{COLUMN_NAME}` naast `_tenantId` en `your_score_output_dataset`. De `COLUMN_NAME` De variabele kan de waarden van facultatieve overgaan door kolomnamen (rapporterend kolommen) nemen die tijdens het vormen van uw model van Attribution AI werden toegevoegd. Controleer het uitvoerschema voor het zoeken naar de `{COLUMN_NAME}` waarden nodig om deze query te voltooien.
+> In dit voorbeeld moet u `{COLUMN_NAME}` vervangen in aanvulling op `_tenantId` en `your_score_output_dataset` . De `COLUMN_NAME` variabele kan de waarden van facultatieve pas door kolomnamen (het melden van kolommen) nemen die tijdens het vormen van uw model van Attribution AI werden toegevoegd. Controleer het uitvoerschema voor de score om de `{COLUMN_NAME}` -waarden te vinden die nodig zijn om deze query uit te voeren.
 
 ```sql
 SELECT 

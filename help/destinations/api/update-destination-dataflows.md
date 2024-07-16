@@ -14,42 +14,42 @@ ht-degree: 0%
 
 # Doelgegevens bijwerken met de Flow Service API
 
-Deze zelfstudie behandelt de stappen voor het bijwerken van een doelgegevensstroom. Leer hoe u de gegevensstroom in- of uitschakelt, de basisgegevens bijwerkt of soorten publiek en kenmerken toevoegt en verwijdert met de opdracht [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Voor informatie over het bewerken van doelgegevensstromen met behulp van de interface van het Experience Platform, leest u [Activeringsstromen bewerken](/help/destinations/ui/edit-activation.md).
+Deze zelfstudie behandelt de stappen voor het bijwerken van een doelgegevensstroom. Leer hoe te om dataflow toe te laten of onbruikbaar te maken, zijn basisinformatie bij te werken, of publiek en attributen toe te voegen en te verwijderen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/). Voor informatie bij het uitgeven van bestemmingsdataflows die het Experience Platform UI gebruiken, lees [ activeringsstromen ](/help/destinations/ui/edit-activation.md) uitgeven.
 
 ## Aan de slag {#get-started}
 
-Voor deze zelfstudie hebt u een geldige stroom-id nodig. Als u geen geldige stroom-id hebt, selecteert u het gewenste doel in het menu [doelcatalogus](../catalog/overview.md) en voert u de volgende stappen uit: [verbinden met de bestemming](../ui/connect-destination.md) en [gegevens activeren](../ui/activation-overview.md) voordat u deze zelfstudie probeert.
+Voor deze zelfstudie hebt u een geldige stroom-id nodig. Als u geen geldige stroom identiteitskaart hebt, selecteer uw bestemming van keus van de [ bestemmingscatalogus ](../catalog/overview.md) en volg de stappen die aan [ worden geschetst verbinden met de bestemming ](../ui/connect-destination.md) en [ activeren gegevens ](../ui/activation-overview.md) alvorens dit leerprogramma te proberen.
 
 >[!NOTE]
 >
-> De voorwaarden *stroom* en *dataflow* worden onderling verwisselbaar gebruikt in deze zelfstudie. In de context van deze zelfstudie hebben ze dezelfde betekenis.
+> De termen *stroom* en *dataflow* worden gebruikt onderling verwisselbaar in dit leerprogramma. In de context van deze zelfstudie hebben ze dezelfde betekenis.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Doelen](../home.md): [!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Doelen ](../home.md): [!DNL Destinations] zijn pre-gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+* [ Sandboxes ](../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om uw gegevensstroom met succes bij te werken met de [!DNL Flow Service] API.
+De volgende secties bevatten aanvullende informatie die u moet weten om uw gegevensstroom met de [!DNL Flow Service] API te kunnen bijwerken.
 
 ### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de gids voor het oplossen van problemen met Experience Platforms.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste koppen {#gather-values-for-required-headers}
 
-Als u aanroepen wilt uitvoeren naar platform-API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle middelen in Experience Platform, met inbegrip van die welke toebehoren aan [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in Experience Platform, inclusief die van [!DNL Flow Service], zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Als de `x-sandbox-name` header is niet opgegeven, aanvragen worden opgelost onder de `prod` sandbox.
+>Als de header `x-sandbox-name` niet is opgegeven, worden aanvragen opgelost onder de sandbox `prod` .
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
@@ -57,9 +57,9 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Gegevens over gegevensstroom opzoeken {#look-up-dataflow-details}
 
-De eerste stap in het bijwerken van uw bestemmingsgegevensstroom is dataflow details terug te winnen gebruikend uw stroom ID. U kunt de huidige details van een bestaande gegevensstroom bekijken door een verzoek van de GET aan `/flows` eindpunt.
+De eerste stap in het bijwerken van uw bestemmingsgegevensstroom is dataflow details terug te winnen gebruikend uw stroom ID. U kunt de huidige details van een bestaande gegevensstroom bekijken door een verzoek van de GET aan het `/flows` eindpunt te richten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /flows/{FLOW_ID}
@@ -82,9 +82,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord retourneert de huidige details van uw gegevensstroom inclusief de versie, unieke id (`id`) en andere relevante informatie.
+Een succesvolle reactie keert de huidige details van uw gegevensstroom met inbegrip van zijn versie, uniek herkenningsteken (`id`), en andere relevante informatie terug.
 
 ```json
 {
@@ -345,13 +345,13 @@ Een succesvol antwoord retourneert de huidige details van uw gegevensstroom incl
 
 ## Naam en beschrijving van gegevensstroom bijwerken {#update-dataflow}
 
-Als u de naam en beschrijving van uw gegevensstroom wilt bijwerken, moet u een PATCH-aanvraag uitvoeren bij de [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en de nieuwe waarden u wilt gebruiken.
+Als u de naam en beschrijving van uw gegevensstroom wilt bijwerken, moet u een aanvraag voor PATCH uitvoeren naar de API van [!DNL Flow Service] en tegelijkertijd de stroom-id, -versie en de nieuwe waarden opgeven die u wilt gebruiken.
 
 >[!IMPORTANT]
 >
->De `If-Match` header is required when making a PATCH request. De waarde voor deze kopbal is de unieke versie van dataflow u wilt bijwerken. De labelwaarde wordt bijgewerkt bij elke geslaagde update van een gegevensstroom.
+>De header `If-Match` is vereist wanneer een PATCH-aanvraag wordt ingediend. De waarde voor deze kopbal is de unieke versie van dataflow u wilt bijwerken. De labelwaarde wordt bijgewerkt bij elke geslaagde update van een gegevensstroom.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /flows/{FLOW_ID}
@@ -385,13 +385,13 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . |
 | `path` | Definieert het deel van de flow dat moet worden bijgewerkt. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw stroom-id opgeeft.
+Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek om GET te richten aan de [!DNL Flow Service] API, terwijl het verstrekken van uw stroom ID.
 
 ```json
 {
@@ -404,9 +404,9 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 
 Wanneer toegelaten, voert een dataflow profielen naar de bestemming uit. Gegevensstromen zijn standaard ingeschakeld, maar kunnen worden uitgeschakeld om het exporteren van het profiel te pauzeren.
 
-U kunt een bestaande bestemmingsgegevensstroom toelaten of onbruikbaar maken door een verzoek van de POST aan [!DNL Flow Service] API en de desbetreffende status waarnaar u de flow wilt bijwerken.
+U kunt een bestaande doelgegevensstroom in- of uitschakelen door een POST-aanvraag in te dienen bij de [!DNL Flow Service] API en een status op te geven waarnaar u de stroom wilt bijwerken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /flows/{FLOW_ID}/action?op=enable or disable
@@ -436,9 +436,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw stroom-id opgeeft.
+Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek om GET te richten aan de [!DNL Flow Service] API, terwijl het verstrekken van uw stroom ID.
 
 ```json
 {
@@ -449,9 +449,9 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 
 ## Een publiek toevoegen aan een gegevensstroom {#add-segment}
 
-Om een publiek aan de bestemmingsdataflow toe te voegen, voer een verzoek van PATCH aan [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en het publiek u wilt toevoegen.
+Als u een publiek wilt toevoegen aan de doelgegevensstroom, voert u een PATCH-verzoek uit naar de [!DNL Flow Service] -API terwijl u uw stroom-id, versie en publiek opgeeft die u wilt toevoegen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /flows/{FLOW_ID}
@@ -494,22 +494,22 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek aan een gegevensstroom wilt toevoegen, gebruikt u de opdracht `add` -bewerking. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . Als u een publiek aan een gegevensstroom wilt toevoegen, gebruikt u de bewerking `add` . |
 | `path` | Definieert het deel van de flow dat moet worden bijgewerkt. Wanneer u een publiek aan een gegevensstroom toevoegt, gebruikt u het pad dat in het voorbeeld is opgegeven. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 | `id` | Geef de id op van het publiek dat u aan de doelgegevensstroom toevoegt. |
-| `name` | **(Optioneel)**. Geef de naam op van het publiek dat u aan de doelgegevensstroom toevoegt. Dit veld is niet verplicht en u kunt een publiek toevoegen aan de doelgegevensstroom zonder de naam ervan op te geven. |
-| `filenameTemplate` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Dit veld bepaalt de bestandsnaamindeling van de bestanden die naar uw doel worden geëxporteerd. <br> De volgende opties zijn beschikbaar: <br> <ul><li>`%DESTINATION_NAME%`: Verplicht. De geëxporteerde bestanden bevatten de doelnaam.</li><li>`%SEGMENT_ID%`: Verplicht. De geëxporteerde bestanden bevatten de id van het geëxporteerde publiek.</li><li>`%SEGMENT_NAME%`: **(Optioneel)**. De geëxporteerde bestanden bevatten de naam van het geëxporteerde publiek.</li><li>`DATETIME(YYYYMMdd_HHmmss)` of `%TIMESTAMP%`: **(Optioneel)**. Selecteer één van deze twee opties voor uw dossiers om de tijd te omvatten wanneer zij door Experience Platform worden geproduceerd.</li><li>`custom-text`: **(Optioneel)**. Vervang deze tijdelijke aanduiding door aangepaste tekst die u aan het einde van de bestandsnamen wilt toevoegen.</li></ul> <br> Raadpleeg voor meer informatie over het configureren van bestandsnamen de [bestandsnamen configureren](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) in de activeringszelfstudie voor batchbestemmingen. |
-| `exportMode` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteren `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"`. Raadpleeg voor meer informatie over de twee opties [volledige bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [incrementele bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in de activeringszelfstudie voor batchbestemmingen. |
+| `name` | **(Facultatief)**. Geef de naam op van het publiek dat u aan de doelgegevensstroom toevoegt. Dit veld is niet verplicht en u kunt een publiek toevoegen aan de doelgegevensstroom zonder de naam ervan op te geven. |
+| `filenameTemplate` | Voor *partijbestemmingen* slechts. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Dit veld bepaalt de bestandsnaamindeling van de bestanden die naar uw doel worden geëxporteerd. <br> De volgende opties zijn beschikbaar: <br> <ul><li>`%DESTINATION_NAME%`: verplicht. De geëxporteerde bestanden bevatten de doelnaam.</li><li>`%SEGMENT_ID%`: verplicht. De geëxporteerde bestanden bevatten de id van het geëxporteerde publiek.</li><li>`%SEGMENT_NAME%`: **(Facultatief)**. De geëxporteerde bestanden bevatten de naam van het geëxporteerde publiek.</li><li>`DATETIME(YYYYMMdd_HHmmss)` of `%TIMESTAMP%`: **(Optioneel)** . Selecteer één van deze twee opties voor uw dossiers om de tijd te omvatten wanneer zij door Experience Platform worden geproduceerd.</li><li>`custom-text`: **(Facultatief)**. Vervang deze tijdelijke aanduiding door aangepaste tekst die u aan het einde van de bestandsnamen wilt toevoegen.</li></ul> <br> voor meer informatie over het vormen van dossiernamen, verwijs naar [ vormen dossiernamen ](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) sectie in de de activeringsleerprogramma van partijbestemmingen. |
+| `exportMode` | Voor *partijbestemmingen* slechts. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. |
 | `startDate` | Selecteer de datum waarop het publiek moet beginnen met het exporteren van profielen naar uw bestemming. |
-| `frequency` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. <br> <ul><li>Voor de `"DAILY_FULL_EXPORT"` u kunt de exportmodus `ONCE` of `DAILY`.</li><li>Voor de `"FIRST_FULL_THEN_INCREMENTAL"` u kunt de exportmodus `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
-| `triggerType` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist als u de optie `"DAILY_FULL_EXPORT"` in de `frequency` kiezer. <br> Verplicht. <br> <ul><li>Selecteren `"AFTER_SEGMENT_EVAL"` om de activeringstaak onmiddellijk uit te voeren nadat de dagelijkse batchsegmentatietaak van het Platform is voltooid. Dit zorgt ervoor dat wanneer de activeringstaak wordt uitgevoerd, de meest recente profielen naar uw bestemming worden uitgevoerd.</li><li>Selecteren `"SCHEDULED"` om de activeringstaak op een vast tijdstip uit te voeren. Dit zorgt ervoor dat de gegevens van het Experience Platform profielgegevens tezelfdertijd elke dag worden uitgevoerd, maar de profielen u uitvoert kunnen niet de meest bijgewerkte zijn, afhankelijk van of de batch-segmentatietaak heeft voltooid alvorens de activeringstaak begint. Als u deze optie selecteert, moet u ook een `startTime` aangeven op welk tijdstip in UTC de dagelijkse uitvoer moet plaatsvinden.</li></ul> |
-| `endDate` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Niet van toepassing bij selectie `"exportMode":"DAILY_FULL_EXPORT"` en `"frequency":"ONCE"`. <br> Hiermee stelt u de datum in waarop publieksleden stoppen met exporteren naar de bestemming. |
-| `startTime` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteer het tijdstip waarop bestanden met leden van het publiek moeten worden gegenereerd en geëxporteerd naar uw bestemming. |
+| `frequency` | Voor *partijbestemmingen* slechts. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. <br> <ul><li>Voor de exportmodus `"DAILY_FULL_EXPORT"` kunt u `ONCE` of `DAILY` selecteren.</li><li>Voor de exportmodus `"FIRST_FULL_THEN_INCREMENTAL"` kunt u `"DAILY"` , `"EVERY_3_HOURS"` , `"EVERY_6_HOURS"` , `"EVERY_8_HOURS"` en `"EVERY_12_HOURS"` selecteren.</li></ul> |
+| `triggerType` | Voor *partijbestemmingen* slechts. Dit veld is alleen vereist wanneer u de modus `"DAILY_FULL_EXPORT"` in de kiezer van `frequency` selecteert. <br> Verplicht. <br> <ul><li>Selecteer `"AFTER_SEGMENT_EVAL"` om de activeringstaak direct uit te voeren nadat de dagelijkse batchsegmentatietaak van het Platform is voltooid. Dit zorgt ervoor dat wanneer de activeringstaak wordt uitgevoerd, de meest recente profielen naar uw bestemming worden uitgevoerd.</li><li>Selecteer `"SCHEDULED"` om de activeringstaak op een vast tijdstip uit te voeren. Dit zorgt ervoor dat de gegevens van het Experience Platform profielgegevens tezelfdertijd elke dag worden uitgevoerd, maar de profielen u uitvoert kunnen niet de meest bijgewerkte zijn, afhankelijk van of de batch-segmentatietaak heeft voltooid alvorens de activeringstaak begint. Als u deze optie selecteert, moet u ook een `startTime` toevoegen om aan te geven op welk tijdstip in UTC de dagelijkse export moet plaatsvinden.</li></ul> |
+| `endDate` | Voor *partijbestemmingen* slechts. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Niet van toepassing bij het selecteren van `"exportMode":"DAILY_FULL_EXPORT"` en `"frequency":"ONCE"` . <br> Hiermee stelt u de datum in waarop publieksleden stoppen met exporteren naar het doel. |
+| `startTime` | Voor *partijbestemmingen* slechts. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteer het tijdstip waarop bestanden met leden van het publiek moeten worden gegenereerd en geëxporteerd naar uw bestemming. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw stroom-id opgeeft.
+Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek om GET te richten aan de [!DNL Flow Service] API, terwijl het verstrekken van uw stroom ID.
 
 ```json
 {
@@ -520,9 +520,9 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 
 ## Een publiek verwijderen uit een gegevensstroom {#remove-segment}
 
-Om een publiek uit een bestaande bestemmingsdataflow te verwijderen, voer een verzoek van PATCH aan [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en de indexselecteur van het publiek u wilt verwijderen. Indexering begint bij `0`. Het voorbeeldverzoek hieronder verwijdert bijvoorbeeld het eerste en het tweede publiek uit de dataflow.
+Als u een publiek wilt verwijderen uit een bestaande doelgegevensstroom, voert u een PATCH-verzoek uit naar de [!DNL Flow Service] -API en geeft u uw flow-id, versie en de indexkiezer op van het publiek dat u wilt verwijderen. Indexering begint bij `0` . Het voorbeeldverzoek hieronder verwijdert bijvoorbeeld het eerste en het tweede publiek uit de dataflow.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /flows/{FLOW_ID}
@@ -564,13 +564,13 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek uit een gegevensstroom wilt verwijderen, gebruikt u de opdracht `remove` -bewerking. |
-| `path` | Geeft aan welk bestaand publiek uit de doelgegevensstroom moet worden verwijderd op basis van de index van de publiekskiezer. Om de orde van publiek in een dataflow terug te winnen, voer een vraag van de GET aan `/flows` en inspecteer de `transformations.segmentSelectors` eigenschap. Als u het eerste publiek in de gegevensstroom wilt verwijderen, gebruikt u `"path":"/transformations/0/params/segmentSelectors/selectors/0"`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . Als u een publiek uit een gegevensstroom wilt verwijderen, gebruikt u de bewerking `remove` . |
+| `path` | Geeft aan welk bestaand publiek uit de doelgegevensstroom moet worden verwijderd op basis van de index van de publiekskiezer. Als u de volgorde van het publiek in een gegevensstroom wilt opvragen, voert u een aanroep van de GET naar het eindpunt `/flows` uit en inspecteert u de eigenschap `transformations.segmentSelectors` . Als u het eerste publiek in de gegevensstroom wilt verwijderen, gebruikt u `"path":"/transformations/0/params/segmentSelectors/selectors/0"` . |
 
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw stroom-id opgeeft.
+Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek om GET te richten aan de [!DNL Flow Service] API, terwijl het verstrekken van uw stroom ID.
 
 ```json
 {
@@ -581,9 +581,9 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 
 ## Componenten van een publiek in een gegevensstroom bijwerken {#update-segment}
 
-U kunt componenten van een publiek in een bestaande bestemmingsgegevensstroom bijwerken. U kunt bijvoorbeeld de exportfrequentie wijzigen of de sjabloon voor de bestandsnaam bewerken. Om dit te doen, doe een verzoek van de PATCH aan [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en de indexselecteur van het publiek u wilt bijwerken. Indexering begint bij `0`. Met de onderstaande aanvraag wordt bijvoorbeeld het negende publiek in een dataflow bijgewerkt.
+U kunt componenten van een publiek in een bestaande bestemmingsgegevensstroom bijwerken. U kunt bijvoorbeeld de exportfrequentie wijzigen of de sjabloon voor de bestandsnaam bewerken. Hiervoor voert u een PATCH-verzoek uit naar de [!DNL Flow Service] API en verstrekt u uw stroom-id, versie en de indexkiezer van het publiek dat u wilt bijwerken. Indexering begint bij `0` . Met de onderstaande aanvraag wordt bijvoorbeeld het negende publiek in een dataflow bijgewerkt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /flows/{FLOW_ID}
@@ -626,12 +626,12 @@ curl -X PATCH \
 ]'
 ```
 
-Raadpleeg de sectie voor beschrijvingen van de eigenschappen in de payload [Een publiek toevoegen aan een gegevensstroom](#add-segment).
+Voor beschrijvingen van de eigenschappen in de nuttige lading, verwijs naar de sectie [ voegt een publiek aan een dataflow ](#add-segment) toe.
 
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw stroom-id opgeeft.
+Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek om GET te richten aan de [!DNL Flow Service] API, terwijl het verstrekken van uw stroom ID.
 
 ```json
 {
@@ -748,9 +748,9 @@ De geëxporteerde bestanden bevatten de doelnaam, de gebruikers-id van het Exper
 
 ## Een profielkenmerk toevoegen aan een gegevensstroom {#add-profile-attribute}
 
-Als u een profielkenmerk aan de doelgegevensstroom wilt toevoegen, voert u een PATCH-verzoek uit aan de [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en het profielattribuut u wilt toevoegen.
+Als u een profielkenmerk aan de doelgegevensstroom wilt toevoegen, voert u een PATCH-aanvraag uit naar de [!DNL Flow Service] -API terwijl u uw flow-id, versie en profielkenmerk opgeeft die u wilt toevoegen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /flows/{FLOW_ID}
@@ -784,13 +784,13 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een profielkenmerk aan een gegevensstroom wilt toevoegen, gebruikt u de opdracht `add` -bewerking. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . Gebruik de bewerking `add` om een profielkenmerk aan een gegevensstroom toe te voegen. |
 | `path` | Definieert het deel van de flow dat moet worden bijgewerkt. Wanneer u een profielkenmerk aan een gegevensstroom toevoegt, gebruikt u het pad dat in het voorbeeld is opgegeven. |
 | `value.path` | De waarde van het profielkenmerk dat u toevoegt aan de gegevensstroom. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw stroom-id opgeeft.
+Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek om GET te richten aan de [!DNL Flow Service] API, terwijl het verstrekken van uw stroom ID.
 
 ```json
 {
@@ -801,10 +801,10 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 
 ## Een profielkenmerk verwijderen uit een gegevensstroom {#remove-profile-attribute}
 
-Als u een profielkenmerk wilt verwijderen uit een bestaande doelgegevensstroom, voert u een PATCH-verzoek uit naar de [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en de indexselecteur van het profielattribuut u wilt verwijderen. Indexering begint bij `0`. Met de voorbeeldaanvraag hieronder verwijdert u bijvoorbeeld het vijfde profielkenmerk van de gegevensstroom.
+Als u een profielkenmerk wilt verwijderen uit een bestaande doelgegevensstroom, voert u een PATCH-aanvraag uit naar de [!DNL Flow Service] -API terwijl u uw flow-id, versie en de indexkiezer opgeeft van het profielkenmerk dat u wilt verwijderen. Indexering begint bij `0` . Met de voorbeeldaanvraag hieronder verwijdert u bijvoorbeeld het vijfde profielkenmerk van de gegevensstroom.
 
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /flows/{FLOW_ID}
@@ -838,13 +838,13 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek uit een gegevensstroom wilt verwijderen, gebruikt u de opdracht `remove` -bewerking. |
-| `path` | Geeft aan welk bestaand profielkenmerk uit de doelgegevensstroom moet worden verwijderd op basis van de index van de publiekskiezer. Om de orde van profielattributen in een dataflow terug te winnen, voer een vraag van de GET aan `/flows` en inspecteer de `transformations.profileSelectors` eigenschap. Als u het eerste publiek in de gegevensstroom wilt verwijderen, gebruikt u `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . Als u een publiek uit een gegevensstroom wilt verwijderen, gebruikt u de bewerking `remove` . |
+| `path` | Geeft aan welk bestaand profielkenmerk uit de doelgegevensstroom moet worden verwijderd op basis van de index van de publiekskiezer. Als u de volgorde van profielkenmerken in een gegevensstroom wilt ophalen, voert u een aanroep van de GET naar het eindpunt `/flows` uit en inspecteert u de eigenschap `transformations.profileSelectors` . Als u het eerste publiek in de gegevensstroom wilt verwijderen, gebruikt u `"path":"transformations/0/params/segmentSelectors/selectors/0/"` . |
 
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl u uw stroom-id opgeeft.
+Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek om GET te richten aan de [!DNL Flow Service] API, terwijl het verstrekken van uw stroom ID.
 
 ```json
 {
@@ -855,8 +855,8 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform voor meer informatie over het interpreteren van foutenreacties.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Verwijs naar [ API statuscodes ](/help/landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform voor meer informatie bij het interpreteren van foutenreacties.
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen hebt u geleerd hoe u verschillende componenten van een doelgegevensstroom kunt bijwerken, zoals het toevoegen of verwijderen van soorten publiek of profielkenmerken met gebruik van [!DNL Flow Service] API. Voor meer informatie over bestemmingen, zie [Overzicht van doelen](../home.md).
+Aan de hand van deze zelfstudie hebt u geleerd hoe u verschillende componenten van een doelgegevensstroom kunt bijwerken, zoals het toevoegen of verwijderen van soorten publiek of profielkenmerken met de API [!DNL Flow Service] . Voor meer informatie over bestemmingen, zie het [ overzicht van bestemmingen ](../home.md).

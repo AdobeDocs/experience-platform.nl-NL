@@ -13,11 +13,11 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Adobe Analytics-gegevensverzameling werkt door XDM-gegevens te vertalen naar een indeling die Adobe Analytics kan begrijpen. Verschillende XDM-velden zijn [automatisch toegewezen](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html) naar variabelen Analytics. U kunt ook handmatig XDM-waarden toewijzen aan verouderde analytische variabelen.
+Adobe Analytics-gegevensverzameling werkt door XDM-gegevens te vertalen naar een indeling die Adobe Analytics kan begrijpen. Verscheidene gebieden XDM worden [ automatisch in kaart gebracht ](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html) aan de variabelen van Analytics. U kunt ook handmatig XDM-waarden toewijzen aan verouderde analytische variabelen.
 
-Om Adobe Analytics in staat te stellen gegevens van server API te ontvangen, moet u [configureren, gegevensstroom](../datastreams/overview.md#adobe-analytics-settings) om gebeurtenissen naar Adobe Analytics door te sturen, door de rapportsuite-id in te voeren in de configuratiepagina van de gegevensstroom.
+Om Adobe Analytics toe te laten om gegevens van Server API te ontvangen, moet u uw datastream ](../datastreams/overview.md#adobe-analytics-settings) vormen om gebeurtenissen aan Adobe Analytics door:sturen, door de identiteitskaart van de rapportreeks in te gaan in de de configuratiepagina van de gegevensstroom.[
 
-![Adobe Analytics DataStream-configuratie](assets/analytics-datastream.png)
+![ Configuratie van Adobe Analytics DataStream ](assets/analytics-datastream.png)
 
 ## Interactie met Adobe Analytics {#interacting-analytics}
 
@@ -29,7 +29,7 @@ POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### Verzoek {#request}
 
-Het onderstaande voorbeeld bevat verschillende automatisch toegewezen waarden uit de `_experience.analytics` veldgroep. De klasse bevat ook op JSON gebaseerde gegevenslagen. Hoewel deze gegevenslagen niet automatisch kunnen worden toegewezen, is het mogelijk [Gegevensvoorvoegsel voor gegevensverzameling](../datastreams/data-prep.md) om deze waarden toe te wijzen aan een schema dat gebiedsgroepen bevat hierboven van verwijzingen voorzien.
+Het onderstaande voorbeeld bevat verschillende automatisch toegewezen waarden uit de veldgroep `_experience.analytics` . De klasse bevat ook op JSON gebaseerde gegevenslagen. Terwijl deze gegevenslagen niet automatisch kunnen worden in kaart gebracht, is het mogelijk om [ Prep van Gegevens voor de Inzameling van Gegevens ](../datastreams/data-prep.md) te gebruiken om deze waarden aan een schema in kaart te brengen dat hierboven van verwijzingen voorzien gebiedsgroepen bevat.
 
 Alle waarden die gebruikers toewijzen aan die velden, worden automatisch toegewezen aan de juiste analysewaarden, alsof deze zijn opgenomen in de API-aanvraag.
 

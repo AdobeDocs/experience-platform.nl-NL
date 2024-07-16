@@ -11,13 +11,13 @@ ht-degree: 3%
 
 # CSV-sjabloon naar API-eindpunt voor schemaconversie
 
-De `/rpc/csv2schema` in de [!DNL Schema Registry] Met API kunt u automatisch een XDM-schema (Experience Data Model) maken met een CSV-bestand als sjabloon. Met behulp van dit eindpunt kunt u sjablonen maken voor het bulksgewijs importeren van schemavelden en voor handmatige API- of UI-bewerkingen.
+Met het eindpunt `/rpc/csv2schema` in de [!DNL Schema Registry] API kunt u automatisch een XDM-schema (Experience Data Model) maken met een CSV-bestand als sjabloon. Met behulp van dit eindpunt kunt u sjablonen maken voor het bulksgewijs importeren van schemavelden en voor handmatige API- of UI-bewerkingen.
 
 ## Aan de slag
 
-De `/rpc/csv2schema` eindpunt maakt deel uit van [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Adobe Experience Platform API te kunnen uitvoeren.
+Het `/rpc/csv2schema` eindpunt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Adobe Experience Platform API met succes te maken.
 
-De `/rpc/csv2schema` het eindpunt maakt deel uit van de verre procedurevraag (RPCs) die door het [!DNL Schema Registry]. Anders dan bij andere eindpunten in het deelvenster [!DNL Schema Registry] API, RPC-eindpunten vereisen geen extra headers, zoals `Accept` of `Content-Type`en gebruikt geen `CONTAINER_ID`. In plaats daarvan moeten ze de opdracht `/rpc` naamruimte, zoals wordt getoond in de API-aanroepen hieronder.
+Het `/rpc/csv2schema` eindpunt maakt deel uit van de verre procedurevraag (RPCs) die door [!DNL Schema Registry] wordt gesteund. In tegenstelling tot andere eindpunten in de [!DNL Schema Registry] API, vereisen RPC-eindpunten geen extra kopteksten zoals `Accept` of `Content-Type` en gebruiken ze geen `CONTAINER_ID` . In plaats daarvan moeten ze de naamruimte `/rpc` gebruiken, zoals wordt getoond in de API-aanroepen hieronder.
 
 ## CSV-bestandsvereisten
 
@@ -25,18 +25,18 @@ Als u van dit eindpunt gebruik wilt maken, moet u eerst een CSV-bestand maken me
 
 | CSV-koppositie | CSV-kopnaam | Vereist/optioneel | Beschrijving |
 | --- | --- | --- | --- |
-| 1 | `isIgnored` | Optioneel | Indien inbegrepen en ingesteld op `true`, geeft aan dat het veld niet gereed is voor API-upload en moet worden genegeerd. |
+| 1 | `isIgnored` | Optioneel | Wanneer het veld is opgenomen en is ingesteld op `true` , wordt hiermee aangegeven dat het veld niet gereed is voor API-upload en moet worden genegeerd. |
 | 2 | `isCustom` | Vereist | Hiermee wordt aangegeven of het veld een aangepast veld is. |
 | 3 | `fieldGroupId` | Optioneel | De id van de veldgroep waaraan een aangepast veld moet worden gekoppeld. |
-| 4 | `fieldGroupName` | (Zie beschrijving) | De naam van de veldgroep waaraan dit veld moet worden gekoppeld.<br><br>Optioneel voor aangepaste velden die bestaande standaardvelden niet uitbreiden. Als deze optie leeg blijft, wijst het systeem automatisch de naam toe.<br><br>Vereist voor standaardvelden of aangepaste velden die standaardveldgroepen uitbreiden. Deze worden gebruikt om query&#39;s uit te voeren op de `fieldGroupId`. |
-| 5 | `fieldPath` | Vereist | Het volledige XED-puntnotatiepad voor het veld. Alle velden van een standaardveldgroep opnemen (zoals aangegeven onder `fieldGroupName`), de waarde instellen op `ALL`. |
+| 4 | `fieldGroupName` | (Zie beschrijving) | De naam van de veldgroep waaraan dit veld moet worden gekoppeld.<br><br> Facultatief voor douanevelden die bestaande standaardgebieden niet uitbreiden. Als deze optie leeg blijft, wijst het systeem automatisch de naam toe.<br><br> Vereist voor standaardgebieden of douanegebieden die standaardgebiedsgroepen uitbreiden, die wordt gebruikt om `fieldGroupId` te vragen. |
+| 5 | `fieldPath` | Vereist | Het volledige XED-puntnotatiepad voor het veld. Als u alle velden uit een standaardveldgroep wilt opnemen (zoals aangegeven onder `fieldGroupName`), stelt u de waarde in op `ALL` . |
 | 6 | `displayName` | Optioneel | De titel of de vriendelijke weergavenaam voor het veld. Kan ook een alias voor de titel zijn als er een bestaat. |
 | 7 | `fieldDescription` | Optioneel | Een beschrijving voor het veld. Kan ook een alias voor de beschrijving zijn als er een bestaat. |
-| 8 | `dataType` | (Zie beschrijving) | Hiermee wordt de [basistype](../schema/field-constraints.md#basic-types) voor het veld. Vereist voor alle aangepaste velden.<br><br>Indien `dataType` is ingesteld op `object`hetzij `properties` of `$ref` moet ook voor dezelfde rij worden gedefinieerd, maar niet voor beide. |
+| 8 | `dataType` | (Zie beschrijving) | Wijst op het [ basistype van gegevens ](../schema/field-constraints.md#basic-types) voor het gebied. Vereist voor alle aangepaste velden.<br><br> Als `dataType` is ingesteld op `object` , moet `properties` of `$ref` ook voor dezelfde rij worden gedefinieerd, maar niet voor beide. |
 | 9 | `isRequired` | Optioneel | Geeft aan of het veld verplicht is voor gegevensinvoer. |
-| 10 | `isArray` | Optioneel | Geeft aan of het veld een array is van de aangegeven waarden `dataType`. |
+| 10 | `isArray` | Optioneel | Geeft aan of het veld een array is van de aangegeven `dataType` . |
 | 11 | `isIdentity` | Optioneel | Geeft aan of het veld een identiteitsveld is. |
-| 12 | `identityNamespace` | Vereist indien `isIdentity` waar | De [naamruimte identity](../../identity-service/features/namespaces.md) voor het identiteitsveld. |
+| 12 | `identityNamespace` | Vereist als `isIdentity` true is | De [ identiteit namespace ](../../identity-service/features/namespaces.md) voor het identiteitsgebied. |
 | 13 | `isPrimaryIdentity` | Optioneel | Geeft aan of het veld de primaire identiteit voor het schema is. |
 | 14 | `minimum` | Optioneel | (Alleen voor numerieke velden) De minimumwaarde voor het veld. |
 | 15 | `maximum` | Optioneel | (Alleen voor numerieke velden) De maximumwaarde voor het veld. |
@@ -45,19 +45,19 @@ Als u van dit eindpunt gebruik wilt maken, moet u eerst een CSV-bestand maken me
 | 18 | `format` | Optioneel | (Alleen voor tekenreeksvelden) De indeling voor het tekenreeksveld. |
 | 19 | `minLength` | Optioneel | (Alleen voor tekenreeksvelden) De minimumlengte van het tekenreeksveld. |
 | 20 | `maxLength` | Optioneel | (Alleen voor tekenreeksvelden) De maximumlengte van het tekenreeksveld. |
-| 21 | `properties` | (Zie beschrijving) | Vereist indien `dataType` is ingesteld op `object` en `$ref` is niet gedefinieerd. Hiermee definieert u de hoofdtekst van het object als een JSON-tekenreeks (bijvoorbeeld `{"myField": {"type": "string"}}`). |
-| 22 | `$ref` | (Zie beschrijving) | Vereist indien `dataType` is ingesteld op `object` en `properties` is niet gedefinieerd. Hiermee wordt het `$id` van het object waarnaar wordt verwezen voor het objecttype (bijvoorbeeld `https://ns.adobe.com/xdm/context/person`). |
-| 23 | `comment` | Optioneel | Wanneer `isIgnored` is ingesteld op `true`, wordt deze kolom gebruikt om de de kopbalinformatie van het schema te verstrekken. |
+| 21 | `properties` | (Zie beschrijving) | Vereist als `dataType` is ingesteld op `object` en `$ref` niet is gedefinieerd. Dit definieert de hoofdtekst van het object als een JSON-tekenreeks (bijvoorbeeld `{"myField": {"type": "string"}}` ). |
+| 22 | `$ref` | (Zie beschrijving) | Vereist als `dataType` is ingesteld op `object` en `properties` niet is gedefinieerd. Hiermee wordt de `$id` van het object waarnaar wordt verwezen, gedefinieerd voor het objecttype (bijvoorbeeld `https://ns.adobe.com/xdm/context/person` ). |
+| 23 | `comment` | Optioneel | Wanneer `isIgnored` is ingesteld op `true` , wordt deze kolom gebruikt om de headerinformatie van het schema op te geven. |
 
 {style="table-layout:auto"}
 
-Raadpleeg het volgende: [CSV-sjabloon](../assets/sample-csv-template.csv) om te bepalen hoe uw CSV-bestand moet worden opgemaakt.
+Verwijs naar het volgende [ malplaatje CSV ](../assets/sample-csv-template.csv) om te bepalen hoe uw Csv- dossier zou moeten worden geformatteerd.
 
 ## Een exportlading maken van een CSV-bestand
 
-Nadat u de CSV-sjabloon hebt ingesteld, kunt u het bestand naar de `/rpc/csv2schema` en zet deze om in een exportlading.
+Nadat u de CSV-sjabloon hebt ingesteld, kunt u het bestand naar het `/rpc/csv2schema` -eindpunt verzenden en het naar een exportlading omzetten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /rpc/csv2schema
@@ -83,11 +83,11 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `csv-file` | Het pad naar de CSV-sjabloon die op uw lokale computer is opgeslagen. |
-| `schema-class-id` | De `$id` van de XDM [class](../schema/composition.md#class) dat dit schema zal gebruiken. |
+| `schema-class-id` | `$id` van de XDM [ klasse ](../schema/composition.md#class) dat dit schema zal aanwenden. |
 | `schema-name` | Een weergavenaam voor het schema. |
 | `schema-description` | Een beschrijving voor het schema. |
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een exportlading die uit het CSV-bestand is gegenereerd. De payload heeft de vorm van een array en elk arrayitem is een object dat een afhankelijke XDM-component voor het schema vertegenwoordigt. Selecteer de onderstaande sectie om een volledig voorbeeld weer te geven van een exportlading die uit een CSV-bestand is gegenereerd.
 
@@ -360,6 +360,6 @@ Een geslaagde reactie retourneert een exportlading die uit het CSV-bestand is ge
 
 ## De payload van het schema importeren
 
-Nadat u de laadgegevens voor exporteren vanuit het CSV-bestand hebt gegenereerd, kunt u die laadgegevens naar de `/rpc/import` eindpunt om het schema te produceren.
+Na het produceren van de de uitvoerlading van het Csv- dossier, kunt u die lading naar het `/rpc/import` eindpunt verzenden om het schema te produceren.
 
-Zie de [hulplijn voor importeindpunt](./import.md) voor details over hoe te om schema&#39;s van de ladingen van de uitvoer te produceren.
+Zie de [ de gids van het de invoereindpunt ](./import.md) voor details op hoe te schema&#39;s van de uitvoerladingen produceren.

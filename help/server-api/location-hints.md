@@ -1,10 +1,10 @@
 ---
 title: Tips voor locatie
-description: Dit artikel verklaart hoe plaatswenken in de Server API van het Netwerk van Edge werken, zodat de eindgebruikerverzoeken altijd aan de zelfde server kunnen worden verpletterd.
+description: Dit artikel verklaart hoe plaatswenken in de Server API van de Edge Network werken, zodat de eindgebruikerverzoeken altijd aan de zelfde server kunnen worden verpletterd.
 exl-id: 8cd2f8e2-2065-4b7e-8d35-4ed1a716f1b3
 source-git-commit: 2c7a5f007189d897ed32302a2a80c1e16af6af80
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
@@ -13,17 +13,17 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-De [!DNL Adobe Experience Platform Edge Network] gebruikt verschillende globaal gedistribueerde servers om snelle responstijden te garanderen, ongeacht de locatie van de eindgebruiker. Het gebruikt ook op DNS-Gebaseerd verpletteren om ervoor te zorgen dat de verzoeken altijd aan de plaats van het Netwerk van de Rand worden verpletterd die aan het eind - gebruikers het dichtst is.
+In [!DNL Adobe Experience Platform Edge Network] worden verschillende globaal gedistribueerde servers gebruikt voor snelle responstijden, ongeacht de locatie van de eindgebruiker. Het gebruikt ook op DNS-Gebaseerd verpletteren om ervoor te zorgen dat de verzoeken altijd aan de plaats van de Edge Network worden verpletterd die aan het eind - gebruikers het dichtst is.
 
-Als de eindgebruikers met VPN verbinden, of netwerktypes op hun mobiele apparaten tijdens een zitting schakelen, kunnen de verzoeken van het Netwerk van de Rand vaak aan een verschillende plaats worden verpletterd. Het kan problematisch zijn om de routering halverwege de sessie tussen servers uit te voeren, aangezien Adobe Experience Platform- en Adobe Experience Cloud-oplossingen informatie over het eindgebruikersprofiel opslaan op het Edge-netwerk.
+Als eind - de gebruikers met VPN verbinden, of netwerktypes op hun mobiele apparaten tijdens een zitting schakelen, kunnen de verzoeken van de Edge Network vaak aan een verschillende plaats worden verpletterd. Het kan problematisch zijn om de routering halverwege de sessie tussen servers uit te voeren, aangezien Adobe Experience Platform- en Adobe Experience Cloud-oplossingen informatie over het gebruikersprofiel op de Edge Network opslaan.
 
 Hier worden locatietips weergegeven.
 
-Om ervoor te zorgen dat eindgebruikers altijd met de regionale server van het Netwerk van Edge in wisselwerking staan die hun huidige profielgegevens bevat, zorgt de functionaliteit van plaatswenken ervoor dat alle verzoeken aan het Netwerk van de Rand worden verzonden naar de zelfde server waar het eerste verzoek van een zitting werd gedaan. Dit helpt gebruikers een verenigbare ervaring hebben, ongeacht welke netwerkveranderingen zij tijdens een zitting kunnen ervaren.
+Om ervoor te zorgen dat eindgebruikers altijd met de Edge Network regionale server in wisselwerking staan die hun huidige profielgegevens bevat, zorgt de functionaliteit van plaatswenken ervoor dat alle verzoeken aan de Edge Network worden verzonden naar de zelfde server waar het eerste verzoek van een zitting werd gemaakt. Dit helpt gebruikers een verenigbare ervaring hebben, ongeacht welke netwerkveranderingen zij tijdens een zitting kunnen ervaren.
 
 ## Gebruik van locatiepunten
 
-De wenken van de plaats zijn inbegrepen in het antwoord van het aanvankelijke verzoek van het Netwerk van de Rand, en in alle verdere verzoeken, zoals aangetoond in het hieronder voorbeeld:
+De wenken van de plaats zijn inbegrepen in het antwoord van het aanvankelijke verzoek van de Edge Network, en in alle verdere verzoeken, zoals aangetoond in het hieronder voorbeeld:
 
 ```json
 {
@@ -38,9 +38,9 @@ De wenken van de plaats zijn inbegrepen in het antwoord van het aanvankelijke ve
 }
 ```
 
-De `EdgeNetwork` Het bereik bevat alle relevante informatie die het Edge-netwerk nodig heeft om verdere verzoeken dienovereenkomstig te kunnen verzenden. In de reactie op het eerste en elk volgend verzoek aan het Edge-netwerk wordt een sectie in de greep weergegeven met een type van `locationHint:result`.
+Het bereik `EdgeNetwork` bevat alle relevante informatie die de Edge Network nodig heeft om volgende aanvragen dienovereenkomstig te verzenden. Als reactie op het eerste en volgende verzoek aan het Edge-netwerk, bevat de greep een sectie met een type `locationHint:result` .
 
-De aan de `EdgeNetwork` bereik kan een van de volgende waarden bevatten:
+De tip die aan het bereik `EdgeNetwork` is gekoppeld, kan een van de volgende waarden bevatten:
 
 * `or2`
 * `va6`
@@ -50,9 +50,9 @@ De aan de `EdgeNetwork` bereik kan een van de volgende waarden bevatten:
 * `sgp3`
 * `aus3`
 
-**API-indeling**
+**API formaat**
 
-Om ervoor te zorgen dat volgende aanvragen correct worden gerouteerd, voegt u de locatiehint in het URL-pad van volgende API-aanroepen tussen het basispad in, meestal `ee`, en `v2` API-versie.
+Om ervoor te zorgen dat volgende aanvragen correct worden gerouteerd, voegt u de locatiehint in het URL-pad in van volgende API-aanroepen tussen het basispad (doorgaans `ee` en de `v2` API-versie).
 
 ```http
 POST 'https://edge.adobedc.net/ee/{LOCATION_HINT}/v2/interact?dataStreamId={DataStream_ID}'
@@ -60,6 +60,6 @@ POST 'https://edge.adobedc.net/ee/{LOCATION_HINT}/v2/interact?dataStreamId={Data
 
 ## Locatiepunten opslaan in cookies {#storing-hints-in-cookies}
 
-Om ervoor te zorgen dat de plaatswenk door het Netwerk van de Rand voor de duur van de zitting is teruggekeerd, kunt u de waarde van de plaatswenk in een koekje, samen met het koekjesleven opslaan, dat in bevat is `ttlSeconds` veld (doorgaans 1800 seconden).
+Om ervoor te zorgen dat de door de Edge Network geretourneerde locatiehint gedurende de sessie blijft bestaan, kunt u de waarde van de locatiehint in een cookie opslaan, samen met de levensduur van het cookie, die zich in het veld `ttlSeconds` bevindt (doorgaans 1800 seconden).
 
-Net als bij de meeste cookies dient u de levensduur van deze cookie te verlengen telkens wanneer er een reactie van het Edge-netwerk wordt ontvangen. Gebruik de cookienaam om maximale compatibiliteit met de Web SDK te garanderen `kndctr_{IMSORG}_AdobeOrg_cluster`. Organisatie-id&#39;s eindigen doorgaans met `@AdobeOrg`. De `@` Deze waarde moet worden omgezet in een onderstrepingsteken om ervoor te zorgen dat de cookie de juiste notatie heeft.
+Net als bij de meeste cookies dient u de levensduur van deze cookie te verlengen telkens wanneer de Edge Network reageert. Gebruik de cookienaam `kndctr_{IMSORG}_AdobeOrg_cluster` om maximale compatibiliteit met de SDK van het web te garanderen. Organisatie-id&#39;s eindigen doorgaans met `@AdobeOrg` . De waarde `@` moet worden omgezet in een onderstrepingsteken om ervoor te zorgen dat de cookie de juiste notatie heeft.

@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Aan de slag met Adobe Experience Platform
 
-Deze video biedt een snelle inleiding op [!DNL Experience Platform] en schetst enkele bedrijfsuitdagingen het oplost.
+Deze video biedt een korte inleiding op [!DNL Experience Platform] en schetst enkele bedrijfsuitdagingen die erin worden opgelost.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)

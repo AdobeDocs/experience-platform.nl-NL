@@ -5,12 +5,12 @@ badge: Beta
 exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '756'
 ht-degree: 0%
 
 ---
 
-# Een bronverbinding en gegevensstroom maken voor [!DNL Shopify Streaming] gegevens die de UI gebruiken
+# Een bronverbinding en gegevensstroom maken voor [!DNL Shopify Streaming] -gegevens met behulp van de interface
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Shopify Streaming] bronverbinding en gegevensstroom via de gebruikersinterface van Platform.
 
@@ -18,79 +18,79 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Shopify Streaming] br
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
-   * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 >[!IMPORTANT]
 >
->Voor deze zelfstudie moet u de vereiste installatie voor uw [!DNL Shopify Streaming] account. Voor stappen voor het instellen van uw account, leest u de [[!DNL Shopify Streaming] overzicht](../../../../connectors/ecommerce/shopify-streaming.md).
+>Deze zelfstudie vereist dat u de vereiste instellingen voor uw [!DNL Shopify Streaming] -account hebt voltooid. Voor stappen bij vestiging uw rekening, lees het [[!DNL Shopify Streaming]  overzicht ](../../../../connectors/ecommerce/shopify-streaming.md).
 
-## Verbind uw [!DNL Shopify Streaming] account
+## Sluit uw [!DNL Shopify Streaming] -account aan
 
-Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de **eCommerce** categorie, selecteert u [!DNL Shopify Streaming]en selecteer vervolgens **[!UICONTROL Add data]**.
+Onder de **eCommerce** categorie, selecteer [!DNL Shopify Streaming], en selecteer dan **[!UICONTROL Add data]**.
 
-![De catalogus met bronnen voor Experience Platforms](../../../../images/tutorials/create/shopify-streaming/catalog.png)
+![ de catalogus van bronnen van het Experience Platform ](../../../../images/tutorials/create/shopify-streaming/catalog.png)
 
 ## Gegevens selecteren
 
-De **[!UICONTROL Select data]** wordt weergegeven, zodat u een interface hebt waarmee u de gegevens kunt selecteren die u naar Platform verzendt.
+De stap **[!UICONTROL Select data]** wordt weergegeven en biedt een interface waarmee u de gegevens kunt selecteren die u naar Platform verzendt.
 
 * Het linkergedeelte van de interface is een browser waarmee u de beschikbare gegevensstromen binnen uw account kunt bekijken.
 * In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een JSON-bestand voorvertonen.
 
-Selecteren **[!UICONTROL Upload files]** om een JSON-bestand vanaf uw lokale systeem te uploaden. U kunt ook het JSON-bestand dat u wilt uploaden, slepen naar het [!UICONTROL Drag and drop files] deelvenster.
+Selecteer **[!UICONTROL Upload files]** om een JSON-bestand van uw lokale systeem te uploaden. U kunt ook het JSON-bestand dat u wilt uploaden naar het deelvenster [!UICONTROL Drag and drop files] slepen.
 
-![De stap Gegevens toevoegen van de bronwerkstroom.](../../../../images/tutorials/create/shopify-streaming/select-data.png)
+![ voegt gegevensstap van het bronwerkschema toe.](../../../../images/tutorials/create/shopify-streaming/select-data.png)
 
-Nadat het bestand is geüpload, wordt de voorbeeldinterface bijgewerkt en wordt een voorvertoning weergegeven van het schema dat u hebt geüpload. Met de voorvertoningsinterface kunt u de inhoud en structuur van een bestand controleren. U kunt ook de opdracht [!UICONTROL Search field] nut om tot specifieke punten van binnen uw schema toegang te hebben.
+Nadat het bestand is geüpload, wordt de voorbeeldinterface bijgewerkt en wordt een voorvertoning weergegeven van het schema dat u hebt geüpload. Met de voorvertoningsinterface kunt u de inhoud en structuur van een bestand controleren. U kunt het hulpprogramma [!UICONTROL Search field] ook gebruiken om toegang te krijgen tot specifieke items binnen uw schema.
 
-Selecteer **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![De voorbeeldstap van de bronworkflow.](../../../../images/tutorials/create/shopify-streaming/preview.png)
+![ de voorproefstap van het bronwerkschema.](../../../../images/tutorials/create/shopify-streaming/preview.png)
 
 ## Gegevens
 
-De **Gegevens** de stap verschijnt, die u van opties voorzien om een bestaande dataset te gebruiken of een nieuwe dataset voor uw gegevensstroom te vestigen, evenals een kans om een naam en een beschrijving voor uw gegevensstroom te verstrekken. Tijdens deze stap kunt u ook instellingen configureren voor het opnemen van profielen, foutdiagnose, gedeeltelijke inname en waarschuwingen.
+De **Dataflow detailstap** verschijnt, die u van opties voorzien om een bestaande dataset te gebruiken of een nieuwe dataset voor uw dataflow te vestigen, evenals een kans om een naam en een beschrijving voor uw dataflow te verstrekken. Tijdens deze stap kunt u ook instellingen configureren voor het opnemen van profielen, foutdiagnose, gedeeltelijke inname en waarschuwingen.
 
-Selecteer **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![De gegevensstroom-detailstap van het bronwerkschema.](../../../../images/tutorials/create/shopify-streaming/dataflow-detail.png)
+![ dataflow-detail stap van het bronwerkschema.](../../../../images/tutorials/create/shopify-streaming/dataflow-detail.png)
 
 ## Toewijzing
 
-De [!UICONTROL Mapping] de stap verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
+De stap [!UICONTROL Mapping] verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
-Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u selecteert. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie [UI-hulplijn voor gegevensvoorinstelling](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u selecteert. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
-Als de brongegevens zijn toegewezen, selecteert u **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Next]** wanneer de brongegevens correct zijn toegewezen.
 
-![De toewijzingsstap van de workflow voor bronnen.](../../../../images/tutorials/create/shopify-streaming/mapping.png)
+![ de afbeeldingsstap van het bronwerkschema.](../../../../images/tutorials/create/shopify-streaming/mapping.png)
 
 ## Controleren
 
-De **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
+De stap **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt bekijken voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-* **[!UICONTROL Connection]**: Hiermee geeft u het brontype, het relevante pad van het gekozen bronbestand en het aantal kolommen in dat bronbestand weer.
-* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset volgt.
+* **[!UICONTROL Connection]**: geeft het brontype, het relevante pad van het gekozen bronbestand en het aantal kolommen in dat bronbestand weer.
+* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset volgt aan.
 
-Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Finish]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
+Nadat u de gegevensstroom hebt gereviseerd, selecteert u **[!UICONTROL Finish]** en laat u enige tijd over om de gegevensstroom te maken.
 
-![De revisiestap van de workflow voor bronnen.](../../../../images/tutorials/create/shopify-streaming/review.png)
+![ de overzichtsstap van het bronwerkschema.](../../../../images/tutorials/create/shopify-streaming/review.png)
 
 ## Uw URL voor het streamingeindpunt ophalen
 
 Wanneer uw streaminggegevens zijn gemaakt, kunt u nu de URL van het streamingeindpunt ophalen. Dit eindpunt zal worden gebruikt om aan uw webhaak in te tekenen, toestaand uw het stromen bron om met Experience Platform te communiceren.
 
-Ga naar het tabblad [!UICONTROL Dataflow activity] pagina van de gegevensstroom die u enkel creeerde en het eindpunt van de bodem kopieert [!UICONTROL Properties] deelvenster.
+Als u het streamingeindpunt wilt ophalen, gaat u naar de [!UICONTROL Dataflow activity] -pagina van de gegevensstroom die u net hebt gemaakt en kopieert u het eindpunt van de onderkant van het deelvenster [!UICONTROL Properties] .
 
-![Het het stromen eindpunt in dataflow activiteit.](../../../../images/tutorials/create/shopify-streaming/endpoint.png)
+![ het stromen eindpunt in dataflow activiteit.](../../../../images/tutorials/create/shopify-streaming/endpoint.png)
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een bronverbinding en gegevensstroom tot stand gebracht [!DNL Shopify Streaming] account. Voor instructies over hoe te om uw te verbinden [!DNL Shopify Streaming] -account met de API, lees de zelfstudie op [een bronverbinding en gegevensstroom maken [!DNL Shopify] gegevens die de Flow Service API gebruiken](../../../api/create/ecommerce/shopify-streaming.md).
+Aan de hand van deze zelfstudie hebt u een bronverbinding en gegevensstroom tot stand gebracht voor uw [!DNL Shopify Streaming] -account. Voor instructies op hoe te om uw [!DNL Shopify Streaming] rekening te verbinden gebruikend API, te lezen gelieve het leerprogramma op [ creërend een bronverbinding en dataflow aan stroom  [!DNL Shopify]  gegevens gebruikend de Dienst API van de Stroom ](../../../api/create/ecommerce/shopify-streaming.md).

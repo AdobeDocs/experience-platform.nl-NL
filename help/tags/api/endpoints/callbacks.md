@@ -4,8 +4,8 @@ description: Leer hoe te om vraag aan het /callbacks eindpunt in Reactor API te 
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 1%
+source-wordcount: '606'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Een callback is een bericht dat de Reactor API naar een specifieke URL verzendt (gewoonlijk één die door uw organisatie wordt ontvangen).
 
-Callbacks zijn bedoeld om samen met [auditgebeurtenissen](./audit-events.md) de activiteiten in de Reactor-API volgen. Telkens wanneer een controlegebeurtenis van een bepaald type wordt geproduceerd, kan een callback een passend bericht naar gespecificeerde URL verzenden.
+Callbacks zijn bedoeld om samen met [ controlegebeurtenissen ](./audit-events.md) aan spooractiviteiten in Reactor API worden gebruikt. Telkens wanneer een controlegebeurtenis van een bepaald type wordt geproduceerd, kan een callback een passend bericht naar gespecificeerde URL verzenden.
 
 De service achter de URL die in de callback is opgegeven, moet reageren met HTTP-statuscode 200 (OK) of 201 (Gemaakt). Als de dienst niet met één van beiden van deze statuscodes antwoordt, wordt de berichtlevering opnieuw geprobeerd met de volgende intervallen:
 
@@ -31,17 +31,17 @@ De service achter de URL die in de callback is opgegeven, moet reageren met HTTP
 
 Als alle leveringspogingen zijn mislukt, wordt het bericht genegeerd.
 
-Een callback behoort tot precies één [eigenschap](./properties.md). Een eigenschap kan vele callbacks hebben.
+Een callback behoort tot precies één [ bezit ](./properties.md). Een eigenschap kan vele callbacks hebben.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Callbacks weergeven {#list}
 
 U kunt van alle callbacks onder een bezit een lijst maken door een verzoek van de GET te doen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /properties/{PROPERTY_ID}/callbacks
@@ -49,13 +49,13 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{PROPERTY_ID}` | De `id` van het bezit waarvan callbacks u wilt een lijst maken. |
+| `{PROPERTY_ID}` | De `id` van de eigenschap waarvan u de callbacks wilt weergeven. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde callbacks op de volgende attributen worden gefiltreerd:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
+>Gebruikend vraagparameters, kunnen de vermelde callbacks op de volgende attributen worden gefiltreerd:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -69,7 +69,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van callbacks voor het gespecificeerde bezit terug.
 
@@ -120,7 +120,7 @@ Een succesvolle reactie keert een lijst van callbacks voor het gespecificeerde b
 
 U kunt omhoog callback kijken door zijn identiteitskaart in de weg van een verzoek van de GET te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /callbacks/{CALLBACK_ID}
@@ -144,7 +144,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van callback terug.
 
@@ -184,7 +184,7 @@ Een succesvolle reactie keert de details van callback terug.
 
 U kunt een nieuwe callback tot stand brengen door een verzoek van de POST te doen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /properties/{PROPERTY_ID}/callbacks
@@ -192,7 +192,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) dat u de callback onder bepaalt. |
+| `PROPERTY_ID` | `id` van het [ bezit ](./properties.md) dat u callback bepaalt onder. |
 
 {style="table-layout:auto"}
 
@@ -221,11 +221,11 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `url` | De bestemming URL voor het callback bericht. De URL moet de HTTPS-protocolextensie gebruiken. |
-| `subscriptions` | Een array van tekenreeksen die de gebeurtenistypen van de audit aangeven die de callback zullen activeren. Zie de [eindhandleiding voor auditgebeurtenissen](./audit-events.md) voor een lijst met mogelijke gebeurtenistypen. |
+| `subscriptions` | Een array van tekenreeksen die de gebeurtenistypen van de audit aangeven die de callback activeren. Zie de [ gids van het de controlegebeurtenissen eindpunt ](./audit-events.md) voor een lijst van mogelijke gebeurtenistypen. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van pas gecreëerde callback terug.
 
@@ -265,7 +265,7 @@ Een succesvolle reactie keert de details van pas gecreëerde callback terug.
 
 U kunt een callback bijwerken door zijn identiteitskaart in de weg van een verzoek van de PATCH te omvatten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /callbacks/{CALLBACK_ID}
@@ -279,7 +279,7 @@ PATCH /callbacks/{CALLBACK_ID}
 
 **Verzoek**
 
-De volgende aanvraag werkt de `subscriptions` array voor een bestaande callback.
+Met de volgende aanvraag wordt de array `subscriptions` voor een bestaande callback bijgewerkt.
 
 ```shell
 curl -X PATCH \
@@ -306,13 +306,13 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de callback moeten worden bijgewerkt. Elke sleutel vertegenwoordigt het bepaalde callback attribuut dat moet worden bijgewerkt, samen met de overeenkomstige waarde het zou moeten worden bijgewerkt aan.<br><br>De volgende attributen kunnen voor callbacks worden bijgewerkt:<ul><li>`subscriptions`</li><li>`url`</li></ul> |
-| `id` | De `id` van de callback die u wilt bijwerken. Dit moet overeenkomen met de `{CALLBACK_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `callbacks`. |
+| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de callback moeten worden bijgewerkt. Elke sleutel vertegenwoordigt het bepaalde callback attribuut dat moet worden bijgewerkt, samen met de overeenkomstige waarde het zou moeten worden bijgewerkt aan.<br><br> de volgende attributen kunnen voor callbacks worden bijgewerkt:<ul><li>`subscriptions`</li><li>`url`</li></ul> |
+| `id` | De `id` van de callback die u wilt bijwerken. Dit moet overeenkomen met de `{CALLBACK_ID}` -waarde in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `callbacks` zijn. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van bijgewerkte callback terug.
 
@@ -353,7 +353,7 @@ Een succesvolle reactie keert de details van bijgewerkte callback terug.
 
 U kunt een callback schrappen door zijn identiteitskaart in de weg van een verzoek van de DELETE te omvatten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /callbacks/{CALLBACK_ID}
@@ -361,7 +361,7 @@ DELETE /callbacks/{CALLBACK_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `CALLBACK_ID` | De `id` van de callback die u wilt schrappen. |
+| `CALLBACK_ID` | De `id` van de callback die u wilt verwijderen. |
 
 {style="table-layout:auto"}
 
@@ -377,6 +377,6 @@ curl -X DELETE \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder antwoord, wat aangeeft dat de callback is verwijderd.

@@ -4,8 +4,8 @@ title: Een publiekssjabloon verwijderen
 exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 1%
+source-wordcount: '288'
+ht-degree: 0%
 
 ---
 
@@ -13,27 +13,27 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om een publiekssjabloon te verwijderen met de `/authoring/audience-templates` API-eindpunt.
+Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om een publiekssjabloon te verwijderen met behulp van het API-eindpunt `/authoring/audience-templates` .
 
-Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [beheer van metagegevens van het publiek](../functionality/audience-metadata-management.md).
+Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [ beheer van publieksmeta-gegevens ](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Aan de slag met API-bewerkingen voor publiekssjablonen {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een publiekssjabloon verwijderen {#delete}
 
-U kunt een [bestaand](create-audience-template.md) publiekssjabloon door een `DELETE` verzoek aan de `/authoring/audience-templates` met de `{INSTANCE_ID}`van de publiekssjabloon die u wilt verwijderen.
+U kunt een [ bestaand ](create-audience-template.md) publiekssjabloon schrappen door a `DELETE` verzoek aan het `/authoring/audience-templates` eindpunt met `{INSTANCE_ID}` van het publiekssjabloon te maken dat u wilt schrappen.
 
-Een bestaande publiekssjabloon en de bijbehorende sjabloon opvragen `{INSTANCE_ID}`, zie het artikel over [ophalen van een publiekssjabloon](retrieve-audience-template.md).
+Om een bestaand publiekssjabloon en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie het artikel over [ het terugwinnen van een publiekssjabloon ](retrieve-audience-template.md).
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /authoring/audience-templates/{INSTANCE_ID}
@@ -63,8 +63,8 @@ Een geslaagde reactie retourneert HTTP-status 200 samen met een lege HTTP-respon
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u een publiekssjabloon kunt verwijderen met de opdracht `/authoring/audience-templates` API-eindpunt. Lezen [hoe te om Destination SDK te gebruiken om uw bestemming te vormen](../guides/configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Nadat u dit document hebt gelezen, weet u nu hoe u een publiekssjabloon kunt verwijderen met behulp van het API-eindpunt van `/authoring/audience-templates` . Lees [ hoe te om Destination SDK te gebruiken om uw bestemming ](../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

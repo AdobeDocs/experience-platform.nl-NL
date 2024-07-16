@@ -18,7 +18,7 @@ ht-degree: 2%
 
 B2B-ondernemingen hebben vaak hun klantgegevens opgeslagen in meerdere systemen, elk met inbegrip van slechts gedeeltelijke of zelfs conflicterende gegevens voor dezelfde reële bedrijfsentiteit. Dit zorgt voor een enorme uitdaging om tot een accuraat beeld van hun klanten te komen, waardoor de efficiëntie en effectiviteit van hun B2B-marketing- en -verkoopinspanningen afnemen.
 
-| ID | Naam | Website | Industrie | Staat | Telefoon | Heeft open kans met bedrag > `$1 million` |
+| ID | Naam | Website | Industrie | Staat | Telefoon | Heeft open mogelijkheid met bedrag > `$1 million` |
 |---|---|---|---|---|---|---|
 | 1 | Acme | acme.com | Software | CA | (408)536-6000 |   |
 | 2 | Acme | acm.com | Software | CA | 4085366000 | x |
@@ -28,21 +28,21 @@ B2B-ondernemingen hebben vaak hun klantgegevens opgeslagen in meerdere systemen,
 
 {style="table-layout:auto"}
 
-Met bijbehorende rekeningen, [!DNL Real-Time CDP B2B] Hier ziet u een lijst met accounts die vergelijkbaar zijn met het account waarin u bladert.
+Met verwante accounts geeft [!DNL Real-Time CDP B2B] nu een lijst weer met accounts die lijken op de account waarin u bladert.
 
-![Scherm met verwante accounts in de gebruikersinterface van het Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
+![ het Scherm dat Verwante rekeningen in het Experience Platform UI toont.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 Met deze functie kunt u verwante accountprofielen voor een accountprofiel weergeven in de gebruikersinterface van het Experience Platform. Vervolgens neemt u de verwante accounts op in uw segmentdefinities om uw bereik te vergroten of om bredere criteria toe te passen bij uw publiek.
 
 ## De verwante accountservice inschakelen {#enable}
 
-Selecteer **[!UICONTROL Profiles]** op de zijbalk, gevolgd door **[!UICONTROL Settings]**.
+Als u de service wilt inschakelen, selecteert u **[!UICONTROL Profiles]** in het zijpaneel gevolgd door **[!UICONTROL Settings]** .
 
-![Gebruikersinterface van Experience Platform markeert profielen en instellingen.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+![ Experience Platform UI die profielen en montages benadrukt.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
-De schakeloptie naast elkaar selecteren [!UICONTROL Enable related accounts] om de dienst toe te laten, en dan te selecteren **[!UICONTROL Save]**.
+Selecteer de schakeloptie naast [!UICONTROL Enable related accounts] om de service in te schakelen en selecteer vervolgens **[!UICONTROL Save]** .
 
-![Het scherm met accountinstellingen waarin de schakeloptie wordt gemarkeerd en opgeslagen.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
+![ het scherm van de montages van de Rekening het benadrukken van knevel en sparen.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## Werking {#how-it-works}
 
@@ -52,18 +52,18 @@ Taken voor het dagelijks leren van machines gebruiken een hiërarchisch algoritm
 * Webdomein
 * Accountnaam
 
-Na een geslaagde verwerkingstaak wordt elk lid van de accountprofielgroep gelabeld met de lijst Verwante accounts. U kunt de lijst weergeven in het dialoogvenster **Gerelateerde accounts** op de pagina Accountprofiel en gebruik de bijbehorende accounts in segmentdefinities.
+Na een geslaagde verwerkingstaak wordt elk lid van de accountprofielgroep gelabeld met de lijst Verwante accounts. U kunt de lijst in de **Verwante Rekeningen** tabel van de pagina van het Profiel van de Rekening bekijken, en de verwante rekeningen in segmentdefinities gebruiken.
 
-Zie de documentatie voor meer informatie over de [banen met betrekking tot profielverrijkingsaccounts](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Zie de documentatie voor meer informatie over de [ profielverrijking verwante rekeningenbanen ](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
 
 ## Verwante accounts bekijken {#how-to-view}
 
 U kunt verwante accounts bekijken voor een account waarin u bladert in de gebruikersinterface van het Experience Platform.
 
-Zie de documentatie voor meer informatie over de [hoe te om verwante rekeningen in UI te vinden](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab).
+Zie de documentatie voor meer informatie over [ hoe te om verwante rekeningen in UI ](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab) te vinden.
 
 ## Hoe u verwante accounts kunt gebruiken {#how-to-use}
 
 U kunt accounts en verwante accounts segmenteren. Het besluit om verwante rekeningen in uw segmentdefinities te gebruiken hangt van uw marketing gebruiksgeval af. U kunt bijvoorbeeld verwante accounts gebruiken voor marketing- of advertentiecampagnes waarin u een lagere nauwkeurigheid accepteert in ruil voor een groter bereik.
 
-Zie een [segmenteringsvoorbeeld](/help/rtcdp/segmentation/b2b.md#related-accounts) dat gebruik maakt van verwante accounts.
+Zie a [ segmentatievoorbeeld ](/help/rtcdp/segmentation/b2b.md#related-accounts) dat verwante rekeningen gebruikt.

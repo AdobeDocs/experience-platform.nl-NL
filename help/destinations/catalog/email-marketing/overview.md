@@ -7,7 +7,7 @@ exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
 workflow-type: tm+mt
 source-wordcount: '376'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platform ondersteunt de volgende e-mailmarketingdoelen:
 * [Mailchimp-rentecategorieën](mailchimp-interest-categories.md)
 * [Mailchimp-tags](mailchimp-tags.md)
 * [(API) Oracle Eloqua](oracle-eloqua-api.md)
-* [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
+* [ (API)  [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [(Bestanden) Eloqua Oracle](oracle-eloqua.md)
 * [(Bestanden) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
 * [[!DNL Salesforce Marketing Cloud Account Engagement]](salesforce-marketing-cloud-account-engagement.md)
@@ -35,13 +35,13 @@ Adobe Experience Platform ondersteunt de volgende e-mailmarketingdoelen:
 
 ## Verbinding maken met een nieuwe marketingbestemming voor e-mail {#connect-destination}
 
-Als u een publiek naar marketingdoelen voor uw campagnes via e-mail wilt sturen, moet Platform eerst verbinding maken met de bestemming. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
+Als u een publiek naar marketingdoelen voor uw campagnes via e-mail wilt sturen, moet Platform eerst verbinding maken met de bestemming. Zie het [ leerprogramma van de bestemmingsverwezenlijking ](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
 
 ## Tips en trucs bij het activeren van het publiek naar marketingbestemmingen via e-mail {#best-practices}
 
 ### Identiteitsselectie {#identity}
 
-Adobe raadt u aan een unieke id te selecteren in uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas). Dit is het veld waarvan de gebruikers-id&#39;s zijn weggefilterd. Meestal is dit veld het e-mailadres, maar het kan ook een id voor een loyaliteitsprogramma of een telefoonnummer zijn. Raadpleeg de onderstaande tabel voor de meest gangbare unieke id&#39;s en hun XDM-veld in het schema.
+De Adobe adviseert dat u een uniek herkenningsteken van uw [ verenigingsschema ](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Dit is het veld waarvan de gebruikers-id&#39;s zijn weggefilterd. Meestal is dit veld het e-mailadres, maar het kan ook een id voor een loyaliteitsprogramma of een telefoonnummer zijn. Raadpleeg de onderstaande tabel voor de meest gangbare unieke id&#39;s en hun XDM-veld in het schema.
 
 | Unieke id | XDM-veld in Unified Schema |
 |----------------- | ---------------------------|
@@ -74,7 +74,7 @@ Sommige e-mailmarketingdoelen in de catalogus exporteren profielen op streamingw
 
 Andere doelen exporteren bestanden naar een locatie voor cloudopslag. Nadat het exporteren is voltooid, moet u gegevens importeren van de opslaglocatie van de cloud naar uw marketingbestemming voor e-mail.
 
-Volg de koppelingen in het dialoogvenster [ondersteunde e-mailmarketingdoelen](#supported-destinations) sectie leren hoe u het publiek activeert voor elke e-mailmarketingbestemming.
+Volg de verbindingen in de [ gesteunde e-mail marketing bestemmingen ](#supported-destinations) sectie leren hoe te om publiek aan elke e-mail marketing bestemming te activeren.
 
 ## Aanvullende bronnen {#additional-resources}
 

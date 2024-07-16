@@ -12,23 +12,23 @@ ht-degree: 0%
 
 ---
 
-# Foutopsporing Platform configureren
+# Foutopsporing van platform configureren
 
-U kunt bepaalde aspecten configureren van hoe Adobe Experience Platform Debugger eruitziet en werkt.
+U kunt bepaalde aspecten van vormen hoe het Adobe Experience Platform Debugger kijkt en werkt.
 
 ![](images/settings.jpg)
 
-## Licht of donker
+## Licht- of donkermodus
 
-Nadat Foutopsporing Platform is geopend, kunt u de gewenste weergave selecteren door naar **[!UICONTROL Settings]** en selecteert u **Donkere modus** (standaardwaarde) of **Lichtmodus**.
+Na Debugger van het Platform opent, kunt u uw aangewezen verschijning selecteren door **[!UICONTROL Settings]** te gaan en of **Donkere Wijze** (gebrek) of **Lichte Wijze** te selecteren.
 
 ## Herstellen
 
-Selecteren **[!UICONTROL Reset all Data and Settings]** om alle gegevens te wissen en terug te keren naar de standaardinstellingen.
+Selecteer **[!UICONTROL Reset all Data and Settings]** als u alle gegevens wilt wissen en de standaardinstellingen wilt herstellen.
 
 ## Foutopsporing Experience Platform op één pagina vergrendelen
 
-Als u pagina&#39;s op uw site wijzigt, wordt het venster Foutopsporing Experience Platform bijgewerkt en wordt de informatie voor die pagina weergegeven. De naam van de pagina waarmee u verbinding hebt, wordt onder in het scherm weergegeven. Als u foutopsporing van Experience Platform op één pagina vergrendeld wilt houden, selecteert u **[!UICONTROL Lock]** in de rechterbenedenhoek van het venster Foutopsporing Platform.
+Als u pagina&#39;s op uw site wijzigt, wordt het venster Foutopsporing Experience Platform bijgewerkt en wordt de informatie voor die pagina weergegeven. De naam van de pagina waarmee u verbinding hebt, wordt onder in het scherm weergegeven. Als u foutopsporing van Experience Platform op één pagina vergrendeld wilt houden, selecteert u **[!UICONTROL Lock]** in de rechteronderhoek van het venster Platform Foutopsporing.
 
 ![](images/lock.jpg)
 

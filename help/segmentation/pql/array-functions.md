@@ -1,24 +1,24 @@
 ---
 solution: Experience Platform
-title: Array, List en Set PQL-functies
-description: PQL (Profile Query Language) biedt functies om interactie met arrays, lijsten en tekenreeksen eenvoudiger te maken.
+title: Array-, List- en PQL-functies instellen
+description: Profile Query Language (PQL) biedt functies om interactie met arrays, lijsten en tekenreeksen eenvoudiger te maken.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 3%
+source-wordcount: '753'
+ht-degree: 0%
 
 ---
 
 # Array, list en set-functies
 
-[!DNL Profile Query Language] (PQL) biedt functies om interactie met arrays, lijsten en tekenreeksen eenvoudiger te maken. Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
+[!DNL Profile Query Language] (PQL) biedt functies om interactie met arrays, lijsten en tekenreeksen eenvoudiger te maken. Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht ](./overview.md) worden gevonden.
 
 ## In
 
-De `in` wordt gebruikt om te bepalen of een punt een lid van een serie of een lijst is.
+De functie `in` wordt gebruikt om te bepalen of een item lid is van een array of lijst.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {VALUE} in {ARRAY}
@@ -26,7 +26,7 @@ De `in` wordt gebruikt om te bepalen of een punt een lid van een serie of een li
 
 **Voorbeeld**
 
-De volgende vraag PQL bepaalt mensen met verjaardagen in Maart, Juni, of September.
+De volgende PQL-query definieert personen met verjaardagen in maart, juni of september.
 
 ```sql
 person.birthMonth in [3, 6, 9]
@@ -34,13 +34,13 @@ person.birthMonth in [3, 6, 9]
 
 ## Niet in
 
-De `notIn` wordt gebruikt om te bepalen of een punt geen lid van een serie of een lijst is.
+De functie `notIn` wordt gebruikt om te bepalen of een item geen lid is van een array of lijst.
 
 >[!NOTE]
 >
->De `notIn` function *ook* zorgt ervoor dat geen van beide waarden gelijk is aan null. Daarom zijn de resultaten geen exacte ontkenning van de `in` functie.
+>De `notIn` functie ** zorgt ook ervoor dat geen van beide waarde aan ongeldig is. Daarom zijn de resultaten geen exacte negatie van de functie `in` .
 
-**Indeling**
+**Formaat**
 
 ```sql
 {VALUE} notIn {ARRAY}
@@ -48,7 +48,7 @@ De `notIn` wordt gebruikt om te bepalen of een punt geen lid van een serie of ee
 
 **Voorbeeld**
 
-De volgende vraag PQL bepaalt mensen met verjaardagen die niet in Maart, Juni, of September zijn.
+De volgende PQL-query definieert personen met verjaardagen die zich niet in maart, juni of september bevinden.
 
 ```sql
 person.birthMonth notIn [3, 6, 9]
@@ -56,9 +56,9 @@ person.birthMonth notIn [3, 6, 9]
 
 ## Doorsnede
 
-De `intersects` functie wordt gebruikt om te bepalen of twee series of lijsten minstens één gemeenschappelijk lid hebben.
+De functie `intersects` wordt gebruikt om te bepalen of twee arrays of lijsten ten minste één gemeenschappelijk lid hebben.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.intersects({ARRAY})
@@ -74,9 +74,9 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Doorsnede
 
-De `intersection` wordt gebruikt om de gemeenschappelijke leden van twee series of lijsten te bepalen.
+De functie `intersection` wordt gebruikt om de algemene leden van twee arrays of lijsten te bepalen.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.intersection({ARRAY})
@@ -92,9 +92,9 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Subset van
 
-De `subsetOf` wordt gebruikt om te bepalen of een specifieke array (array A) een subset is van een andere array (array B). Met andere woorden, alle elementen in array A zijn elementen van array B.
+De functie `subsetOf` wordt gebruikt om te bepalen of een specifieke array (array A) een subset is van een andere array (array B). Met andere woorden, alle elementen in array A zijn elementen van array B.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.subsetOf({ARRAY})
@@ -102,7 +102,7 @@ De `subsetOf` wordt gebruikt om te bepalen of een specifieke array (array A) een
 
 **Voorbeeld**
 
-De volgende vraag PQL bepaalt mensen die elk van hun favoriete steden hebben bezocht.
+De volgende PQL-query definieert mensen die al hun favoriete steden hebben bezocht.
 
 ```sql
 person.favoriteCities.subsetOf(person.visitedCities)
@@ -110,9 +110,9 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Superset van
 
-De `supersetOf` wordt gebruikt om te bepalen of een specifieke array (array A) een superset is van een andere array (array B). Met andere woorden, die array A bevat alle elementen in array B.
+De functie `supersetOf` wordt gebruikt om te bepalen of een specifieke array (array A) een superset is van een andere array (array B). Met andere woorden, die array A bevat alle elementen in array B.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.supersetOf({ARRAY})
@@ -128,9 +128,9 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Inclusief
 
-De `includes` wordt gebruikt om te bepalen of een array of lijst een bepaald item bevat.
+De functie `includes` wordt gebruikt om te bepalen of een array of lijst een bepaald item bevat.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.includes({ITEM})
@@ -138,7 +138,7 @@ De `includes` wordt gebruikt om te bepalen of een array of lijst een bepaald ite
 
 **Voorbeeld**
 
-De volgende PQL-query definieert personen met de favoriete kleur rood.
+De volgende PQL-query definieert personen van wie de favoriete kleur rood bevat.
 
 ```sql
 person.favoriteColors.includes("red")
@@ -146,9 +146,9 @@ person.favoriteColors.includes("red")
 
 ## Afzonderlijk
 
-De `distinct` wordt gebruikt om dubbele waarden uit een array of lijst te verwijderen.
+De functie `distinct` wordt gebruikt om dubbele waarden uit een array of lijst te verwijderen.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.distinct()
@@ -156,7 +156,7 @@ De `distinct` wordt gebruikt om dubbele waarden uit een array of lijst te verwij
 
 **Voorbeeld**
 
-De volgende vraag PQL specificeert mensen die orden in meer dan één opslag hebben geplaatst.
+Met de volgende PQL-query worden personen opgegeven die orders in meer dan één winkel hebben geplaatst.
 
 ```sql
 person.orders.storeId.distinct().count() > 1
@@ -164,9 +164,9 @@ person.orders.storeId.distinct().count() > 1
 
 ## Groeperen op
 
-De `groupBy` Deze functie wordt gebruikt om waarden van een array of lijst op te delen in een groep op basis van de waarde van de expressie.
+De functie `groupBy` wordt gebruikt om waarden van een array of lijst op te delen in een groep op basis van de waarde van de expressie.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.groupBy({EXPRESSION)
@@ -179,7 +179,7 @@ De `groupBy` Deze functie wordt gebruikt om waarden van een array of lijst op te
 
 **Voorbeeld**
 
-De volgende vraag PQL groepeert alle orden waardoor opslag de orde werd geplaatst bij.
+De volgende PQL-query groepeert alle bestellingen waarmee de bestelling is opgeslagen.
 
 ```sql
 orders.groupBy(storeId)
@@ -187,9 +187,9 @@ orders.groupBy(storeId)
 
 ## Filter
 
-De `filter` wordt gebruikt om een array of lijst te filteren op basis van een expressie.
+De functie `filter` wordt gebruikt om een array of lijst te filteren op basis van een expressie.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.filter({EXPRESSION})
@@ -202,7 +202,7 @@ De `filter` wordt gebruikt om een array of lijst te filteren op basis van een ex
 
 **Voorbeeld**
 
-De volgende vraag PQL bepaalt alle mensen die 21 of ouder zijn.
+De volgende PQL-query definieert alle personen die 21 jaar of ouder zijn.
 
 ```sql
 person.filter(age >= 21)
@@ -210,9 +210,9 @@ person.filter(age >= 21)
 
 ## Kaart
 
-De `map` wordt gebruikt om een nieuwe array te maken door een expressie toe te passen op elk item in een bepaalde array.
+De functie `map` wordt gebruikt om een nieuwe array te maken door een expressie toe te passen op elk item in een bepaalde array.
 
-**Indeling**
+**Formaat**
 
 ```sql
 array.map(expression)
@@ -220,7 +220,7 @@ array.map(expression)
 
 **Voorbeeld**
 
-Met de volgende PQL-query wordt een nieuwe array met getallen gemaakt en wordt de waarde van de oorspronkelijke getallen in vierkantjes geplaatst.
+Met de volgende PQL-query wordt een nieuwe array met getallen gemaakt en wordt de waarde van de oorspronkelijke getallen in vierkantjes weergegeven.
 
 ```sql
 numbers.map(square)
@@ -228,9 +228,9 @@ numbers.map(square)
 
 ## Eerste `n` in array {#first-n}
 
-De `topN` function wordt gebruikt om de eerste te retourneren `N` items in een array, indien gesorteerd in oplopende volgorde op basis van de opgegeven numerieke expressie.
+De functie `topN` wordt gebruikt om de eerste `N` -items in een array te retourneren, wanneer deze in oplopende volgorde worden gesorteerd op basis van de opgegeven numerieke expressie.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.topN({VALUE}, {AMOUNT})
@@ -244,7 +244,7 @@ De `topN` function wordt gebruikt om de eerste te retourneren `N` items in een a
 
 **Voorbeeld**
 
-De volgende vraag PQL keert de hoogste vijf orden met de hoogste prijs terug.
+De volgende PQL-query retourneert de bovenste vijf bestellingen met de hoogste prijs.
 
 ```sql
 orders.topN(price, 5)
@@ -252,9 +252,9 @@ orders.topN(price, 5)
 
 ## Laatste `n` in array
 
-De `bottomN` function wordt gebruikt om de laatste te retourneren `N` items in een array, indien gesorteerd in oplopende volgorde op basis van de opgegeven numerieke expressie.
+De functie `bottomN` wordt gebruikt om de laatste `N` -items in een array te retourneren, wanneer deze in oplopende volgorde worden gesorteerd op basis van de opgegeven numerieke expressie.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.bottomN({VALUE}, {AMOUNT})
@@ -268,7 +268,7 @@ De `bottomN` function wordt gebruikt om de laatste te retourneren `N` items in e
 
 **Voorbeeld**
 
-De volgende vraag PQL keert de hoogste vijf orden met de laagste prijs terug.
+De volgende PQL-query retourneert de bovenste vijf bestellingen met de laagste prijs.
 
 ```sql
 orders.bottomN(price, 5)
@@ -276,9 +276,9 @@ orders.bottomN(price, 5)
 
 ## Eerste object
 
-De `head` functie wordt gebruikt om het eerste item in de array of lijst te retourneren.
+De functie `head` wordt gebruikt om het eerste item in de array of lijst te retourneren.
 
-**Indeling**
+**Formaat**
 
 ```sql
 {ARRAY}.head()
@@ -286,7 +286,7 @@ De `head` functie wordt gebruikt om het eerste item in de array of lijst te reto
 
 **Voorbeeld**
 
-De volgende vraag PQL keert eerste van de hoogste vijf orden met de hoogste prijs terug. Meer informatie over de `topN` kan worden gevonden in de [first `n` in array](#first-n) sectie.
+De volgende PQL-query retourneert de eerste van de bovenste vijf bestellingen met de hoogste prijs. Meer informatie over de `topN` functie kan in [ eerst `n` in serie ](#first-n) sectie worden gevonden.
 
 ```sql
 orders.topN(price, 5).head()
@@ -294,4 +294,4 @@ orders.topN(price, 5).head()
 
 ## Volgende stappen
 
-Nu u over serie, lijst, en vastgestelde functies hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).
+Nu u over serie, lijst, en vastgestelde functies hebt geleerd, kunt u hen binnen uw vragen van PQL gebruiken. Voor meer informatie over andere functies van PQL, te lezen gelieve het [ overzicht van Profile Query Language ](./overview.md).

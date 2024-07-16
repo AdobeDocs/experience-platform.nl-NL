@@ -13,35 +13,35 @@ ht-degree: 0%
 
 # Eindpunt segmenttaken
 
-Een segmentbaan is een asynchroon proces dat tot een publiekssegment op bestelling leidt. Het verwijst naar een [segmentdefinitie](./segment-definitions.md), alsmede alle [beleid samenvoegen](../../profile/api/merge-policies.md) bepalen hoe [!DNL Real-Time Customer Profile] Hiermee voegt u overlappende kenmerken samen in uw profielfragmenten. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen.
+Een segmentbaan is een asynchroon proces dat tot een publiekssegment op bestelling leidt. Het verwijzingen a [ segmentdefinitie ](./segment-definitions.md), evenals om het even welk [ samenvoegbeleid ](../../profile/api/merge-policies.md) controlerend hoe [!DNL Real-Time Customer Profile] overlappende attributen over uw profielfragmenten samenvoegt. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen.
 
 Deze handleiding bevat informatie die u helpt segmenttaken beter te begrijpen en voorbeelden van API-aanroepen voor het uitvoeren van basishandelingen met de API.
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Een lijst met segmenttaken ophalen {#retrieve-list}
 
-U kunt een lijst van alle segmentbanen voor uw organisatie terugwinnen door een verzoek van de GET aan te dienen `/segment/jobs` eindpunt.
+U kunt een lijst van alle segmentbanen voor uw organisatie terugwinnen door een verzoek van de GET tot het `/segment/jobs` eindpunt te richten.
 
-**API-indeling**
+**API formaat**
 
-De `/segment/jobs` het eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Hoewel deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om kostbare overhead te helpen verminderen. Het maken van een vraag aan dit eindpunt zonder parameters zal alle uitvoerbanen beschikbaar voor uw organisatie terugwinnen. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`).
+Het `/segment/jobs` eindpunt steunt verscheidene vraagparameters helpen uw resultaten filtreren. Hoewel deze parameters optioneel zijn, wordt het gebruik ervan sterk aanbevolen om kostbare overhead te helpen verminderen. Het maken van een vraag aan dit eindpunt zonder parameters zal alle uitvoerbanen beschikbaar voor uw organisatie terugwinnen. De veelvoudige parameters kunnen worden omvat, die door ampersands (`&`) worden gescheiden.
 
 ```http
 GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-**Query-parameters**
+**de parameters van de Vraag**
 
 | Parameter | Beschrijving | Voorbeeld |
 | --------- | ----------- | ------- |
 | `start` | Geeft de beginverschuiving aan voor de geretourneerde segmenttaken. | `start=1` |
 | `limit` | Geeft het aantal segmenttaken op dat per pagina wordt geretourneerd. | `limit=20` |
 | `status` | Hiermee filtert u de resultaten op basis van de status. De ondersteunde waarden zijn NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELING, CANCELING | `status=NEW` |
-| `sort` | Hiermee worden de geretourneerde segmenttaken gesorteerd. Is geschreven in de notatie `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
+| `sort` | Hiermee worden de geretourneerde segmenttaken gesorteerd. Wordt geschreven in de indeling `[attributeName]:[desc|asc]` . | `sort=creationTime:desc` |
 | `property` | Hiermee filtert u segmenttaken en haalt u exacte overeenkomsten op voor het opgegeven filter. Deze kan in een van de volgende indelingen worden geschreven: <ul><li>`[jsonObjectPath]==[value]` - filteren op de objecttoets</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filteren binnen de array</li></ul> | `property=segments~segmentId==workInUS` |
 
 **Verzoek**
@@ -54,13 +54,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met een lijst van segmentbanen voor de gespecificeerde organisatie als JSON terug. Nochtans, zal de reactie, afhankelijk van het aantal segmentdefinities binnen de segmentbaan verschillen.
 
-**Minder dan of gelijk aan 1500 segmentdefinities in uw segmentbaan**
+**minder dan of gelijk aan 1500 segmentdefinities in uw segmentbaan**
 
-Als u minder dan 1500 segmentdefinities hebt die in uw segmentbaan worden in werking gesteld, zal een volledige lijst van alle segmentdefinities binnen worden getoond `children.segments` kenmerk.
+Als u minder dan 1500 segmentdefinities hebt die in uw segmentbaan in werking worden gesteld, zal een volledige lijst van alle segmentdefinities binnen de `children.segments` attributen worden getoond.
 
 >[!NOTE]
 >
@@ -166,9 +166,9 @@ Als u minder dan 1500 segmentdefinities hebt die in uw segmentbaan worden in wer
 }
 ```
 
-**Meer dan 1500 segmentdefinities**
+**meer dan 1500 segmentdefinities**
 
-Als u meer dan 1500 segmentdefinities hebt die in uw segmentbaan worden in werking gesteld, `children.segments` kenmerk wordt weergegeven `*`, die erop wijzen dat alle segmentdefinities worden geëvalueerd.
+Als u meer dan 1500 segmentdefinities hebt die in uw segmentbaan in werking worden gesteld, zal het `children.segments` attribuut `*` tonen die, erop wijzen dat alle segmentdefinities worden geëvalueerd.
 
 >[!NOTE]
 >
@@ -278,9 +278,9 @@ Als u meer dan 1500 segmentdefinities hebt die in uw segmentbaan worden in werki
 
 ## Een nieuwe segmenttaak maken {#create}
 
-U kunt een nieuwe segmentbaan tot stand brengen door een verzoek van de POST aan `/segment/jobs` eindpunt en het opnemen in het lichaam identiteitskaart van de segmentdefinitie waarvan u een nieuw publiek zou willen tot stand brengen.
+U kunt een nieuwe segmentbaan tot stand brengen door een verzoek van de POST aan het `/segment/jobs` eindpunt te doen en in het lichaam identiteitskaart van de segmentdefinitie te omvatten waarvan u een nieuw publiek zou willen tot stand brengen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /segment/jobs
@@ -288,7 +288,7 @@ POST /segment/jobs
 
 Wanneer het creëren van een nieuwe segmentbaan, zullen het verzoek en de reactie afhankelijk van het aantal segmentdefinities binnen de segmentbaan verschillen.
 
-**Minder dan of gelijk aan 1500 segmentdefinities in uw segmentbaan**
+**minder dan of gelijk aan 1500 segmentdefinities in uw segmentbaan**
 
 **Verzoek**
 
@@ -308,9 +308,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `segmentId` | De id van de segmentdefinitie waarvoor u een segmenttaak wilt maken. Deze segmentdefinities kunnen tot verschillende samenvoegbeleidsregels behoren. Meer informatie over segmentdefinities vindt u in de [eindhulplijn segmentdefinitie](./segment-definitions.md). |
+| `segmentId` | De id van de segmentdefinitie waarvoor u een segmenttaak wilt maken. Deze segmentdefinities kunnen tot verschillende samenvoegbeleidsregels behoren. Meer informatie over segmentdefinities kan in de [ gids van het eindpunt van de segmentdefinitie ](./segment-definitions.md) worden gevonden. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met informatie over uw pas gecreëerde segmentbaan terug.
 
@@ -411,13 +411,13 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over uw pas gec
 | `segments.segment.id` | De id van de segmentdefinitie die u hebt opgegeven. |
 | `segments.segment.expression` | Een object dat informatie bevat over de expressie van de segmentdefinitie, geschreven in PQL. |
 
-**Meer dan 1500 segmentdefinities**
+**meer dan 1500 segmentdefinities**
 
 **Verzoek**
 
 >[!NOTE]
 >
->Terwijl u een segmentbaan met meer dan 1500 segmentdefinities kunt tot stand brengen, is dit **sterk niet aanbevolen**.
+>Terwijl u een segmentbaan met meer dan 1500 segmentdefinities kunt tot stand brengen, wordt dit **hoogst geadviseerd niet**.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -441,9 +441,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `schema.name` | De naam van het schema voor de segmentdefinities. |
-| `segments.segmentId` | Wanneer het runnen van een segmentbaan met meer dan 1500 segmenten, zult u moeten overgaan `*` als segment-id om aan te geven dat u een segmentatietaak met alle segmenten wilt uitvoeren. |
+| `segments.segmentId` | Wanneer u een segmenttaak uitvoert met meer dan 1500 segmenten, moet u `*` als segment-id doorgeven om aan te geven dat u een segmentatietaak wilt uitvoeren met alle segmenten. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde segmentbaan terug.
 
@@ -526,15 +526,15 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde alleen-lezen-id voor de nieuwe segmenttaak. |
-| `status` | De huidige status voor de segmenttaak. Aangezien de segmentbaan nieuw wordt gecreeerd, zal de status altijd zijn `NEW`. |
+| `status` | De huidige status voor de segmenttaak. Aangezien de segmenttaak pas is gemaakt, is de status altijd `NEW` . |
 | `segments` | Een object dat informatie bevat over de segmentdefinities waarop deze segmenttaak wordt uitgevoerd. |
-| `segments.segment.id` | De `*` betekent dat deze segmentbaan voor alle segmentdefinities binnen uw organisatie loopt. |
+| `segments.segment.id` | `*` betekent dat deze segmentbaan voor alle segmentdefinities binnen uw organisatie loopt. |
 
 ## Een specifieke segmenttaak ophalen {#get}
 
-U kunt gedetailleerde informatie over een specifieke segmentbaan terugwinnen door een verzoek van de GET aan `/segment/jobs` eindpunt en het verstrekken van identiteitskaart van de segmentbaan u wenst om in de verzoekweg terug te winnen.
+U kunt gedetailleerde informatie over een specifieke segmentbaan terugwinnen door een verzoek van de GET aan het `/segment/jobs` eindpunt te doen en identiteitskaart van de segmentbaan te verstrekken u in de verzoekweg wenst terug te winnen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /segment/jobs/{SEGMENT_JOB_ID}
@@ -542,7 +542,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | De `id` waarde van de segmentbaan u wilt terugwinnen. |
+| `{SEGMENT_JOB_ID}` | De `id` -waarde van de segmenttaak die u wilt ophalen. |
 
 **Verzoek**
 
@@ -554,13 +554,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over de gespecificeerde segmentbaan terug.  Nochtans, zal de reactie afhankelijk van het aantal segmentdefinities binnen de segmentbaan verschillen.
 
-**Minder dan of gelijk aan 1500 segmentdefinities in uw segmentbaan**
+**minder dan of gelijk aan 1500 segmentdefinities in uw segmentbaan**
 
-Als u minder dan 1500 segmentdefinities hebt die in uw segmentbaan worden in werking gesteld, zal een volledige lijst van alle segmentdefinities binnen worden getoond `children.segments` kenmerk.
+Als u minder dan 1500 segmentdefinities hebt die in uw segmentbaan in werking worden gesteld, zal een volledige lijst van alle segmentdefinities binnen de `children.segments` attributen worden getoond.
 
 ```json
 {
@@ -622,9 +622,9 @@ Als u minder dan 1500 segmentdefinities hebt die in uw segmentbaan worden in wer
 }
 ```
 
-**Meer dan 1500 segmentdefinities**
+**meer dan 1500 segmentdefinities**
 
-Als u meer dan 1500 segmentdefinities hebt die in uw segmentbaan worden in werking gesteld, `children.segments` kenmerk wordt weergegeven `*`, die erop wijzen dat alle segmentdefinities worden geëvalueerd.
+Als u meer dan 1500 segmentdefinities hebt die in uw segmentbaan in werking worden gesteld, zal het `children.segments` attribuut `*` tonen die, erop wijzen dat alle segmentdefinities worden geëvalueerd.
 
 ```json
 {
@@ -713,9 +713,9 @@ Als u meer dan 1500 segmentdefinities hebt die in uw segmentbaan worden in werki
 
 ## Ophaalsegmenttaken bulksgewijs opvragen {#bulk-get}
 
-U kunt gedetailleerde informatie over veelvoudige segmentbanen terugwinnen door een verzoek van de POST aan `/segment/jobs/bulk-get` en het verstrekken van  `id` waarden van de segmentbanen in de aanvraaginstantie.
+U kunt gedetailleerde informatie over veelvoudige segmentbanen terugwinnen door een verzoek van de POST aan het `/segment/jobs/bulk-get` eindpunt te doen en de `id` waarden van de segmentbanen in het verzoeklichaam te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /segment/jobs/bulk-get
@@ -742,9 +742,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
     }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen terug. De waarde van `children.segments` attribuut verschilt afhankelijk als de segmentbaan voor meer dan 1500 segmentdefinities loopt.
+Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen terug. De waarde van het kenmerk `children.segments` verschilt echter, afhankelijk van het feit of de segmenttaak wordt uitgevoerd voor meer dan 1500 segmentdefinities.
 
 >[!NOTE]
 >
@@ -806,13 +806,13 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen 
 
 ## Een specifieke segmenttaak annuleren of verwijderen {#delete}
 
-U kunt een specifieke segmentbaan schrappen door een verzoek van DELETE aan de `/segment/jobs` eindpunt en het verstrekken van identiteitskaart van de segmentbaan u wenst om in de verzoekweg te schrappen.
+U kunt een specifieke segmentbaan schrappen door een verzoek van DELETE aan het `/segment/jobs` eindpunt te doen en identiteitskaart van de segmentbaan te verstrekken u wenst om in de verzoekweg te schrappen.
 
 >[!NOTE]
 >
 >De API-reactie op de verwijderaanvraag is onmiddellijk. Nochtans, is de daadwerkelijke schrapping van de segmentbaan asynchroon. Met andere woorden, er is een tijdverschil tussen wanneer het schrappingsverzoek aan de segmentbaan wordt gemaakt en wanneer het wordt toegepast.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /segment/jobs/{SEGMENT_JOB_ID}
@@ -820,7 +820,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | De `id` waarde van de segmenttaak die u wilt verwijderen. |
+| `{SEGMENT_JOB_ID}` | De `id` -waarde van de segmenttaak die u wilt verwijderen. |
 
 **Verzoek**
 
@@ -832,7 +832,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert HTTP-status 204 met de volgende informatie.
 

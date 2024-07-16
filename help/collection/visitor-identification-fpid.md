@@ -1,6 +1,6 @@
 ---
 title: Visitor-identificatie via FPID
-description: Leer hoe u bezoekers consistent kunt identificeren via de server-API, met behulp van de FPID
+description: Leer hoe u bezoekers consistent kunt identificeren via de server-API met de FPID
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
 keywords: edge network;gateway;api;bezoeker;identificatie;fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Visitor-identificatie via FPID
 
-[!DNL First-party IDs] (`FPIDs`) zijn apparaat-id&#39;s die door klanten worden gegenereerd, beheerd en opgeslagen. Dit geeft klanten controle over het identificeren van gebruikersapparaten. Door verzenden `FPIDs`, genereert het Edge-netwerk geen gloednieuwe `ECID` voor een aanvraag die er geen bevat.
+[!DNL First-party IDs] (`FPIDs`) is apparaat IDs die door klanten wordt geproduceerd, wordt geleid en wordt opgeslagen. Dit geeft klanten controle over het identificeren van gebruikersapparaten. Door `FPIDs` te verzenden, genereert de Edge Network geen gloednieuw `ECID` voor een aanvraag die er geen bevat.
 
-De `FPID` kan als onderdeel van de `identityMap` of kan worden verzonden als een cookie.
+`FPID` kan als onderdeel van `identityMap` in de aanvraagtekst van de API worden opgenomen of als cookie worden verzonden.
 
-An `FPID` kan definitief worden omgezet in een `ECID` door Edge Network, dus `FPID` identiteiten zijn volledig compatibel met Experience Cloud oplossingen. Een `ECID` van een specifieke `FPID` geeft altijd hetzelfde resultaat, zodat gebruikers een consistente ervaring hebben.
+Een `FPID` kan deterministisch worden omgezet in een `ECID` door de Edge Network, zodat `FPID` -identiteiten volledig compatibel zijn met oplossingen voor Experiencen Cloud. Het verkrijgen van een `ECID` van een specifieke `FPID` geeft altijd hetzelfde resultaat, zodat gebruikers een consistente ervaring hebben.
 
-De `ECID` op deze manier verkregen `identity.fetch` query:
+De op deze manier verkregen `ECID` kan worden opgehaald via een `identity.fetch` -query:
 
 ```json
 {
@@ -33,15 +33,15 @@ De `ECID` op deze manier verkregen `identity.fetch` query:
 }
 ```
 
-Voor aanvragen die zowel een `FPID` en `ECID`de `ECID` reeds in het verzoek aanwezig is, heeft voorrang op het verzoek dat uit het `FPID`. Met andere woorden, het Edge-netwerk gebruikt de `ECID` en de `FPID` wordt genegeerd. Een nieuwe `ECID` alleen wordt gegenereerd wanneer een `FPID` wordt alleen verstrekt.
+Voor aanvragen die zowel een `FPID` als een `ECID` bevatten, heeft de eigenschap `ECID` die al in de aanvraag aanwezig is, voorrang op de aanvraag die kan worden gegenereerd vanuit de `FPID` . Met andere woorden, de Edge Network gebruikt de `ECID` die al is opgegeven en de `FPID` wordt genegeerd. Een nieuwe `ECID` wordt alleen gegenereerd wanneer een `FPID` op zichzelf wordt geleverd.
 
-In termen van apparaat-id&#39;s worden de `server` gegevensstromen moeten `FPID` als apparaat-id. Andere identiteiten (d.w.z. `EMAIL`) kan ook worden verstrekt binnen het verzoeklichaam, maar het Netwerk van de Rand vereist dat een primaire identiteit uitdrukkelijk wordt verstrekt. Primaire identiteit is de basisidentiteit waarin de profielgegevens worden opgeslagen.
+Wat apparaat-id&#39;s betreft, moeten de `server` gegevensstromen `FPID` gebruiken als apparaat-id. Andere identiteiten (d.w.z. `EMAIL`) kunnen ook binnen de aanvraaginstantie worden verstrekt, maar de Edge Network vereist dat een primaire identiteit uitdrukkelijk wordt verstrekt. Primaire identiteit is de basisidentiteit waarin de profielgegevens worden opgeslagen.
 
 >[!NOTE]
 >
 >Verzoeken die geen identiteit hebben, respectievelijk geen primaire identiteit die uitdrukkelijk binnen de aanvraaginstantie wordt geplaatst, zullen ontbreken.
 
-Het volgende `identityMap` veldgroep is correct ingesteld voor een `server` gegevensstroomverzoek:
+De volgende `identityMap` -veldgroep wordt correct gevormd voor een `server` -gegevensstroomaanvraag:
 
 ```json
 {
@@ -63,7 +63,7 @@ Het volgende `identityMap` veldgroep is correct ingesteld voor een `server` gege
 }
 ```
 
-Het volgende `identityMap` veldgroep resulteert in een foutreactie als deze wordt ingesteld op een `server` gegevensstroomverzoek:
+De volgende `identityMap` -veldgroep resulteert in een foutreactie wanneer deze wordt ingesteld op een `server` -gegevensstroomaanvraag:
 
 ```json
 {
@@ -84,7 +84,7 @@ Het volgende `identityMap` veldgroep resulteert in een foutreactie als deze word
 }
 ```
 
-De foutenreactie die door het Netwerk van Edge in dit geval wordt teruggekeerd is gelijkaardig aan het volgende:
+De foutreactie die in dit geval door de Edge Network wordt geretourneerd, is vergelijkbaar met de volgende:
 
 ```json
 {
@@ -102,7 +102,7 @@ De foutenreactie die door het Netwerk van Edge in dit geval wordt teruggekeerd i
 
 ## Visitor-identificatie met `FPID`
 
-Gebruikers identificeren via `FPID`ervoor te zorgen dat de `FPID` cookie is verzonden voordat aanvragen zijn ingediend bij het Edge-netwerk. De `FPID` kan worden doorgegeven in een cookie of als onderdeel van de `identityMap` in de inhoud van het verzoek.
+Als u gebruikers wilt identificeren via `FPID` , moet u ervoor zorgen dat het `FPID` -cookie is verzonden voordat u aanvragen bij de Edge Network indient. `FPID` kan in een koekje of als deel van `identityMap` in het lichaam van het verzoek worden overgegaan.
 
 <!--
 
@@ -167,9 +167,9 @@ curl -X POST 'https://edge.adobedc.net/v2/interact?dataStreamId={Data Stream ID}
 ```
 -->
 
-## Aanvragen met `FPID` doorgegeven als `identityMap` field
+## Verzoek met `FPID` doorgegeven als `identityMap` -veld
 
-In het onderstaande voorbeeld wordt het [!DNL FPID] als `identityMap` parameter.
+In het onderstaande voorbeeld wordt de parameter [!DNL FPID] als een parameter `identityMap` doorgegeven.
 
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"

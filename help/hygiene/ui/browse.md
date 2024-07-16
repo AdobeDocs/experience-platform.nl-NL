@@ -23,17 +23,17 @@ In deze handleiding wordt uitgelegd hoe u bestaande werkorders in de gebruikersi
 
 ## Bestaande werkorders weergeven en filteren
 
-Wanneer u voor het eerst toegang krijgt tot **[!UICONTROL Data Lifecycle]** in de UI, wordt een lijst van bestaande het werkorden getoond samen met hun basisdetails.
+Wanneer u de **[!UICONTROL Data Lifecycle]** -werkruimte voor het eerst opent in de gebruikersinterface, wordt een lijst met bestaande werkorders weergegeven, samen met de basisgegevens.
 
-![Afbeelding die de [!UICONTROL Data Lifecycle] werkruimte in de gebruikersinterface van het platform](../images/ui/browse/work-order-list.png)
+![ Beeld dat de [!UICONTROL Data Lifecycle] werkruimte in het Platform UI ](../images/ui/browse/work-order-list.png) toont
 
-In de lijst worden alleen de werkorders voor één categorie tegelijk weergegeven. Selecteren **[!UICONTROL Consumer]** een lijst met taken voor het verwijderen van records weergeven, en **[!UICONTROL Dataset]** om een lijst van geplande datasettermijnen te bekijken.
+In de lijst worden alleen de werkorders voor één categorie tegelijk weergegeven. Selecteer **[!UICONTROL Consumer]** om een lijst met record-delete-taken weer te geven en **[!UICONTROL Dataset]** om een lijst met geplande gegevenssetvervaldatums weer te geven.
 
-![Afbeelding die de [!UICONTROL Dataset] tab](../images/ui/browse/dataset-tab.png)
+![ Beeld die het [!UICONTROL Dataset] lusje ](../images/ui/browse/dataset-tab.png) tonen
 
-Selecteer het trechter-pictogram (![Afbeelding van het trechter-pictogram](../images/ui/browse/funnel-icon.png)) om een lijst weer te geven met filters voor de weergegeven werkorders.
+Selecteer het kanaalpictogram (![ Beeld van het kanaalpictogram ](../images/ui/browse/funnel-icon.png)) om een lijst van filters voor de getoonde het werkorden te bekijken.
 
-![Afbeelding van de weergegeven werkorderfilters](../images/ui/browse/filters.png)
+![ Beeld van de getoonde filters van de het werkorde ](../images/ui/browse/filters.png)
 
 Afhankelijk van het type werkorder dat u bekijkt, zijn verschillende filteropties beschikbaar.
 
@@ -43,7 +43,7 @@ De volgende filters zijn van toepassing op recordverwijderingsverzoeken:
 
 | Filter | Beschrijving |
 | --- | --- |
-| [!UICONTROL Status] | Filter op basis van de huidige status van de werkorder:<ul><li>**[!UICONTROL Completed]**: De taak is voltooid.</li><li>**[!UICONTROL Failed]**: De taak heeft een fout aangetroffen en kan niet worden voltooid.</li><li>**[!UICONTROL Processing]**: Het verzoek is gestart en wordt momenteel verwerkt.</li></ul> |
+| [!UICONTROL Status] | Filter op basis van de huidige status van de werkorder:<ul><li>**[!UICONTROL Completed]**: De taak is voltooid.</li><li>**[!UICONTROL Failed]**: de taak heeft een fout aangetroffen en kan niet worden voltooid.</li><li>**[!UICONTROL Processing]**: De aanvraag is gestart en wordt momenteel verwerkt.</li></ul> |
 | [!UICONTROL Date created] | Filter op basis van de datum waarop de werkorder is gemaakt. |
 | [!UICONTROL Date updated] | Filter op basis van de datum waarop de werkorder voor het laatst is bijgewerkt. Creaties worden geteld als updates. |
 
@@ -53,7 +53,7 @@ De volgende filters zijn van toepassing op verzoeken om gegevenssetvervaldatum:
 
 | Filter | Beschrijving |
 | --- | --- |
-| [!UICONTROL Status] | Filter op basis van de huidige status van de werkorder:<ul><li>**[!UICONTROL Completed]**: De taak is voltooid.</li><li>**[!UICONTROL Pending]**: De taak is gemaakt, maar is nog niet uitgevoerd. A [Vervalaanvraag gegevensset](./dataset-expiration.md) neemt deze status aan vóór de geplande verwijderingsdatum. Zodra de verwijderingsdatum is bereikt, wordt de status bijgewerkt naar [!UICONTROL Executing] tenzij de taak vooraf wordt geannuleerd.</li><li>**[!UICONTROL Executing]**: Het verzoek om de gegevensset te vervalsen is gestart en wordt momenteel verwerkt.</li><li>**[!UICONTROL Cancelled]**: De taak is geannuleerd als onderdeel van een handmatig gebruikersverzoek.</li></ul> |
+| [!UICONTROL Status] | Filter op basis van de huidige status van de werkorder:<ul><li>**[!UICONTROL Completed]**: De taak is voltooid.</li><li>**[!UICONTROL Pending]**: De taak is gemaakt, maar is nog niet uitgevoerd. Het verzoek van de a [ datasetvervaldatum ](./dataset-expiration.md) veronderstelt deze status vóór de geplande schrappingsdatum. Zodra de verwijderingsdatum is bereikt, wordt de status bijgewerkt naar [!UICONTROL Executing] , tenzij de taak vooraf is geannuleerd.</li><li>**[!UICONTROL Executing]**: Het verzoek om de gegevensset te vervalsen is gestart en wordt momenteel verwerkt.</li><li>**[!UICONTROL Cancelled]**: De taak is geannuleerd als onderdeel van een handmatig gebruikersverzoek.</li></ul> |
 | [!UICONTROL Date created] | Filter op basis van de datum waarop de werkorder is gemaakt. |
 | [!UICONTROL Expiration date] | Verzoeken voor de vervaldatum van de gegevensset voor filters op basis van de geplande verwijderingsdatum voor de gegevensset in kwestie. |
 | [!UICONTROL Date updated] | Filter op basis van de datum waarop de werkorder voor het laatst is bijgewerkt. Ontwerpen en vervaldatums worden als updates geteld. |
@@ -75,25 +75,25 @@ De volgende filters zijn van toepassing op verzoeken om gegevenssetvervaldatum:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Reactie record verwijderen"
->abstract="Wanneer een record-verwijderingsproces een reactie van het systeem ontvangt, worden deze berichten onder het **[!UICONTROL Result]** sectie. Als er een probleem optreedt terwijl een werkorder wordt verwerkt, worden in deze sectie foutberichten weergegeven die u helpen bij het oplossen van het probleem. Raadpleeg de gebruikershandleiding bij de gegevenslevenscyclus voor meer informatie."
+>abstract="Wanneer een recordverwijderingsproces een reactie van het systeem ontvangt, worden deze berichten weergegeven onder de sectie **[!UICONTROL Result]** . Als er een probleem optreedt terwijl een werkorder wordt verwerkt, worden in deze sectie foutberichten weergegeven die u helpen bij het oplossen van het probleem. Raadpleeg de gebruikershandleiding bij de gegevenslevenscyclus voor meer informatie."
 
 Selecteer de id van een vermelde werkorder om de details ervan weer te geven.
 
-![Afbeelding met een werkorder-id die is geselecteerd](../images/ui/browse/select-work-order.png)
+![ Beeld dat een identiteitskaart van de het werkorde toont die wordt geselecteerd ](../images/ui/browse/select-work-order.png)
 
 Afhankelijk van het type geselecteerde werkorder, worden verschillende informatie en controles verstrekt. Deze worden behandeld in de onderstaande secties.
 
 ### Gegevens opnemen {#record-delete}
 
-De details van een verzoek om een record te schrappen omvatten zijn huidige status en de tijd die is verstreken sinds het verzoek werd gemaakt. Elke aanvraag bevat ook een **[!UICONTROL Status by service]** sectie die individuele statusdetails over elke stroomafwaartse dienst verstrekt die bij de schrapping betrokken is. Op het juiste spoor, kunt u controles gebruiken om de naam en beschrijving van de het werkorde bij te werken.
+De details van een verzoek om een record te schrappen omvatten zijn huidige status en de tijd die is verstreken sinds het verzoek werd gemaakt. Elk verzoek bevat ook een **[!UICONTROL Status by service]** -sectie die individuele statusgegevens bevat voor elke downstream-service die bij de verwijdering is betrokken. Op het juiste spoor, kunt u controles gebruiken om de naam en beschrijving van de het werkorde bij te werken.
 
-![Afbeelding met de detailpagina voor een werkvolgorde voor het verwijderen van records](../images/ui/browse/record-delete-details.png)
+![ Beeld dat de detailspagina voor een verslag toont schrapt werkorde ](../images/ui/browse/record-delete-details.png)
 
 ### Gegevens betreffende de vervaldatum van de gegevensset {#dataset-expiration}
 
 De detailspagina voor een datasetvervaldatum verstrekt informatie over zijn basisattributen, met inbegrip van de geplande vervaldatum op de dagen die resteren alvorens de schrapping voorkomt. In het rechterspoor, kunt u controles gebruiken om de vervaldatum uit te geven of te annuleren.
 
-![Afbeelding die de detailpagina voor een werkorder voor het verlopen van een gegevensset weergeeft](../images/ui/browse/ttl-details.png)
+![ Beeld dat de detailspagina voor een orde van het het werkproces van de datasetvervalsing toont ](../images/ui/browse/ttl-details.png)
 
 ## Volgende stappen
 

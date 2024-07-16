@@ -4,14 +4,14 @@ description: Leer hoe te om vraag aan het /properties eindpunt in Reactor API te
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1100'
 ht-degree: 1%
 
 ---
 
 # Het eindpunt Eigenschappen
 
-Een eigenschap is een containerconstructie die de meeste andere bronnen bevat die beschikbaar zijn in de Reactor-API. U beheert via programmacode de eigenschappen `/properties` eindpunt.
+Een eigenschap is een containerconstructie die de meeste andere bronnen bevat die beschikbaar zijn in de Reactor-API. U beheert eigenschappen programmatically gebruikend het `/properties` eindpunt.
 
 In de middelhiërarchie, is een bezit de eigenaar van het volgende:
 
@@ -25,19 +25,19 @@ In de middelhiërarchie, is een bezit de eigenaar van het volgende:
 * [Regelcomponenten](./rule-components.md)
 * [Regels](./rules.md)
 
-Een eigenschap behoort tot exact één eigenschap [bedrijf](./companies.md). Een bedrijf kan vele eigenschappen hebben.
+Een bezit behoort tot precies één [ bedrijf ](./companies.md). Een bedrijf kan vele eigenschappen hebben.
 
-Voor meer algemene informatie over eigenschappen en hun rol in markeringsbeheer, zie het overzicht over [bedrijven en eigendommen](../../ui/administration/companies-and-properties.md).
+Voor meer algemene informatie over eigenschappen en hun rol in markeringsbeheer, zie het overzicht op [ bedrijven en eigenschappen ](../../ui/administration/companies-and-properties.md).
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met eigenschappen ophalen {#list}
 
 U kunt een lijst van eigenschappen terugwinnen die tot bedrijf door bedrijfsidentiteitskaart in de weg van een verzoek van de GET te omvatten behoren.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /companies/{COMPANY_ID}/properties
@@ -45,13 +45,13 @@ GET /companies/{COMPANY_ID}/properties
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `COMPANY_ID` | De `id` van het bedrijf dat eigenaar is van de eigenschappen die u wilt vermelden. |
+| `COMPANY_ID` | De `id` van het bedrijf dat eigenaar is van de eigenschappen die u wilt weergeven. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde eigenschappen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
+>Gebruikend vraagparameters, kunnen de vermelde eigenschappen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -65,7 +65,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van eigenschappen voor het gespecificeerde bedrijf terug.
 
@@ -261,7 +261,7 @@ Een succesvolle reactie keert een lijst van eigenschappen voor het gespecificeer
 
 U kunt een eigenschap opzoeken door de id ervan op te geven in het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /properties/{PROPERTY_ID}
@@ -285,7 +285,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de eigenschap.
 
@@ -384,7 +384,7 @@ Een geslaagde reactie retourneert de details van de eigenschap.
 
 U kunt een nieuwe eigenschap maken door een POST-aanvraag in te dienen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /company/{COMPANY_ID}/properties
@@ -398,7 +398,7 @@ POST /company/{COMPANY_ID}/properties
 
 **Verzoek**
 
-Met het volgende verzoek wordt een nieuwe eigenschap voor de opgegeven eigenschap gemaakt. De vraag associeert ook het bezit met een bestaande uitbreiding door `relationships` eigenschap. Zie de handleiding op [relaties](../guides/relationships.md) voor meer informatie .
+Met het volgende verzoek wordt een nieuwe eigenschap voor de opgegeven eigenschap gemaakt. De aanroep koppelt de eigenschap ook aan een bestaande extensie via de eigenschap `relationships` . Zie de gids op [ verhoudingen ](../guides/relationships.md) voor meer informatie.
 
 ```shell
 curl -X POST \
@@ -427,19 +427,19 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes.name` | **(Vereist)** Een leesbare naam voor de eigenschap. |
-| `attributes.platform` | **(Vereist)** Het platform voor de eigenschap. Kan `web` voor wegeigenschappen, of `mobile` of `edge` voor mobiele eigenschappen. |
-| `attributes.domains` | **(Vereist voor westeigenschappen)** Een array van URL-domeinen voor de eigenschap. |
+| `attributes.name` | **(Vereist)** Een voor de mens leesbare naam voor het bezit. |
+| `attributes.platform` | **(Vereist)** Het platform voor het bezit. Kan `web` zijn voor wegeigenschappen of `mobile` of `edge` voor mobiele eigenschappen. |
+| `attributes.domains` | **(Vereist voor Web-eigenschappen)** Een serie van domeinen URL voor het bezit. |
 | `attributes.development` | Een Booleaanse waarde die aangeeft of dit een ontwikkeleigenschap is. |
 | `attributes.privacy` | Een tekenreeks die kan worden gebruikt om te verwijzen naar privacygerelateerde overwegingen voor de eigenschap. |
 | `attributes.rule_component_sequencing_enabled` | Een Booleaanse waarde voor of regelcomponentsequencing moet worden ingeschakeld voor deze eigenschap. |
 | `attributes.ssl_enabled` | Een Booleaanse waarde die aangeeft of SSL (Secure Sockets Layer) moet worden ingeschakeld voor deze eigenschap. |
 | `attributes.undefined_vars_return_empty` | Een Booleaanse waarde die aangeeft of ongedefinieerde variabelen als leeg moeten worden geretourneerd voor deze eigenschap. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `properties`. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `properties` zijn. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de nieuwe eigenschap.
 
@@ -538,7 +538,7 @@ Een geslaagde reactie retourneert de details van de nieuwe eigenschap.
 
 U kunt een eigenschap bijwerken door de id ervan op te nemen in het pad van een PATCH-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /properties/{PROPERTY_ID}
@@ -552,7 +552,7 @@ PATCH /properties/{PROPERTY_ID}
 
 **Verzoek**
 
-De volgende aanvraag werkt de `name` en `domains` voor een bestaande eigenschap.
+Met de volgende aanvraag worden de `name` en `domains` voor een bestaande eigenschap bijgewerkt.
 
 ```shell
 curl -X PATCH \
@@ -578,12 +578,12 @@ curl -X PATCH \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de eigenschap moeten worden bijgewerkt. De volgende kenmerken kunnen worden bijgewerkt voor een eigenschap: <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
-| `id` | De `id` van de eigenschap die u wilt bijwerken. Dit moet overeenkomen met de `{PROPERTY_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `properties`. |
+| `id` | De `id` van de eigenschap die u wilt bijwerken. Dit moet overeenkomen met de `{PROPERTY_ID}` -waarde in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `properties` zijn. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de bijgewerkte eigenschap.
 
@@ -682,7 +682,7 @@ Een geslaagde reactie retourneert de details van de bijgewerkte eigenschap.
 
 U kunt een eigenschap verwijderen door de id ervan op te nemen in het pad van een DELETE-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /properties/{PROPERTY_ID}
@@ -704,25 +704,25 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder responstekst om aan te geven dat de eigenschap is verwijderd.
 
 ## Notities voor een eigenschap beheren {#notes}
 
-Eigenschappen zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [leidraad voor notitiepunten](./notes.md) voor meer informatie over hoe te om nota&#39;s voor eigenschappen en andere compatibele middelen te beheren.
+Eigenschappen zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [ gids van het Notitieeindpunt ](./notes.md) voor meer informatie over hoe te nota&#39;s voor eigenschappen en andere compatibele middelen beheren.
 
 ## Gerelateerde bronnen voor een eigenschap ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een bezit terug te winnen. Wanneer [zoeken, eigenschap](#lookup), worden deze relaties vermeld in het `relationships` eigenschap.
+De volgende vraag toont aan hoe te om de verwante middelen voor een bezit terug te winnen. Wanneer [ omhoog een bezit ](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
 
-Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante callbacks voor een eigenschap weergeven {#callbacks}
 
-U kunt de lijst [callbacks](./callbacks.md) die op een eigenschap zijn geregistreerd door toevoegen `/callbacks` naar het pad van een opzoekverzoek.
+U kunt van [ callbacks ](./callbacks.md) een lijst maken die op een bezit door `/callbacks` aan de weg van een raadplegingsverzoek toe te voegen worden geregistreerd.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /properties/{PROPERTY_ID}/callbacks
@@ -730,7 +730,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{PROPERTY_ID}` | De `id` van het bezit waarvan callbacks u wilt een lijst maken. |
+| `{PROPERTY_ID}` | De `id` van de eigenschap waarvan u de callbacks wilt weergeven. |
 
 {style="table-layout:auto"}
 
@@ -746,7 +746,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van callbacks terug die door het gespecificeerde bezit worden bezeten.
 
@@ -795,9 +795,9 @@ Een succesvolle reactie keert een lijst van callbacks terug die door het gespeci
 
 ### Verwante gegevenselementen weergeven voor een eigenschap {#data-elements}
 
-U kunt de lijst [gegevenselementen](./data-elements.md) die eigendom zijn van een eigendom door bijvoegen `/data_elements` naar het pad van een opzoekverzoek.
+U kunt van de [ gegevenselementen ](./data-elements.md) een lijst maken die door een bezit door `/data_elements` aan de weg van een raadplegingsverzoek toe te voegen worden bezeten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /properties/{PROPERTY_ID}/data_elements
@@ -821,7 +821,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lijst met gegevenselementen die het eigendom zijn van de opgegeven eigenschap.
 
@@ -936,9 +936,9 @@ Een geslaagde reactie retourneert een lijst met gegevenselementen die het eigend
 
 ### Verwante omgevingen weergeven voor een eigenschap {#environments}
 
-U kunt de lijst [omgevingen](./environments.md) die eigendom zijn van een eigendom door bijvoegen `/environments` naar het pad van een opzoekverzoek.
+U kunt van de [ milieu&#39;s ](./environments.md) een lijst maken die door een bezit door `/environments` aan de weg van een raadplegingsverzoek toe te voegen worden bezeten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /properties/{PROPERTY_ID}/environments
@@ -962,7 +962,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lijst met omgevingen die eigendom zijn van de opgegeven eigenschap.
 
@@ -1056,9 +1056,9 @@ Een geslaagde reactie retourneert een lijst met omgevingen die eigendom zijn van
 
 ### Verwante extensies weergeven voor een eigenschap {#extensions}
 
-U kunt de lijst [extensions](./extensions.md) die eigendom zijn van een eigendom door bijvoegen `/extensions` naar het pad van een opzoekverzoek.
+U kunt van de [ uitbreidingen ](./extensions.md) een lijst maken die door een bezit door `/extensions` aan de weg van een raadplegingsverzoek toe te voegen worden bezeten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /properties/{PROPERTY_ID}/extensions
@@ -1082,7 +1082,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert een lijst met extensies die eigendom zijn van de opgegeven eigenschap.
 
@@ -1187,9 +1187,9 @@ Een succesvol antwoord retourneert een lijst met extensies die eigendom zijn van
 
 ### Verwante hosts voor een eigenschap weergeven {#hosts}
 
-U kunt de lijst [gastheren](./hosts.md) die door een eigenschap worden gebruikt door toevoegen `/hosts` naar het pad van een opzoekverzoek.
+U kunt van de [ gastheren ](./hosts.md) een lijst maken die door een bezit door `/hosts` aan de weg van een raadplegingsverzoek toe te voegen worden gebruikt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /properties/{PROPERTY_ID}/hosts
@@ -1197,7 +1197,7 @@ GET  /properties/{PROPERTY_ID}/hosts
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{PROPERTY_ID}` | De `id` van de eigenschap waarvan u de hosts wilt vermelden. |
+| `{PROPERTY_ID}` | De `id` van de eigenschap waarvan u de hosts wilt weergeven. |
 
 {style="table-layout:auto"}
 
@@ -1213,7 +1213,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van gastheren terug die door het gespecificeerde bezit worden gebruikt.
 
@@ -1265,9 +1265,9 @@ Een succesvolle reactie keert een lijst van gastheren terug die door het gespeci
 
 ### Verwante regels voor een eigenschap weergeven {#rules}
 
-U kunt de lijst [regels](./rules.md) die door een eigenschap worden gebruikt door toevoegen `/rules` naar het pad van een opzoekverzoek.
+U kunt van de [ regels ](./rules.md) een lijst maken die door een bezit door `/rules` aan de weg van een raadplegingsverzoek toe te voegen worden gebruikt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /properties/{PROPERTY_ID}/rules
@@ -1291,7 +1291,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van regels terug die door een gespecificeerde bezit worden gebruikt.
 
@@ -1378,9 +1378,9 @@ Een succesvolle reactie keert een lijst van regels terug die door een gespecific
 
 ### Verwante onderneming opzoeken voor een onroerend goed {#company}
 
-U kunt het bedrijf opzoeken dat een bezit door toe te voegen bezit `/company` naar het pad van een opzoekverzoek.
+U kunt het bedrijf dat eigenaar is van een eigenschap opzoeken door `/company` toe te voegen aan het pad van een opzoekverzoek.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /properties/{PROPERTY_ID}/company
@@ -1388,7 +1388,7 @@ GET /properties/{PROPERTY_ID}/company
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{PROPERTY_ID}` | De `id` van het bezit het waarvan bedrijf u wilt opzoeken. |
+| `{PROPERTY_ID}` | De `id` van de eigenschap waarvan u het bedrijf wilt opzoeken. |
 
 {style="table-layout:auto"}
 
@@ -1404,7 +1404,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van het gespecificeerde bedrijf van het bezit terug.
 

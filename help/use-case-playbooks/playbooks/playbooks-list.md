@@ -38,7 +38,7 @@ Lees deze pagina voor een overzicht van alle beschikbare afspeelboeken die u kun
 | De aankoop van producten verhogen tijdens het bezoek aan de winkel | Laat winkeliers hun producten kopen terwijl ze in de buurt van de winkel zijn. |
 | De aankoop van producten en services tijdens het verblijf verhogen | Vraag gasten om producten en services te kopen terwijl ze zich in het onroerend goed bevinden. |
 | Aankopen voor één game verhogen | Doelventilatoren om herhaalde aankopen van één game te stimuleren. |
-| Beoordeling en stimuleringsmaatregelen na gebeurtenis | De ventilatoren van de duim om op een post-gebeurtenisonderzoek te antwoorden door een aansporingsaansporing aan te bieden. |
+| Post Event Survey en Incentive Promo | De ventilatoren van de duim om op een post-gebeurtenisonderzoek te antwoorden door een aansporingsaansporing aan te bieden. |
 | Post-Trip Survey | Vraag gasten om te reageren op een posttrip-enquête door een stimulerende actie aan te bieden. |
 | Productpromotie | Vraag kopers om producten te kopen tijdens een doorlopende productpromotiecampagne. |
 | Bevestiging van aankoop: koopwaar | Bevestig een nieuwe koopwaar die Fan koopt. |
@@ -77,4 +77,4 @@ Lees deze pagina voor een overzicht van alle beschikbare afspeelboeken die u kun
 
 ## Volgende stappen
 
-Nu u de beschikbare playbooks kent, lees dit [hulplijn](/help/use-case-playbooks/playbooks/choose.md) om te begrijpen hoe u aan de slag gaat met de afspeelboeken en de juiste voor u te kiezen in de gebruikersinterface.
+Nu u zich van de beschikbare playbooks bewust bent, leest deze [ gids ](/help/use-case-playbooks/playbooks/choose.md) om te begrijpen hoe te beginnen met playbooks en juiste voor u in het gebruikersinterface te kiezen.

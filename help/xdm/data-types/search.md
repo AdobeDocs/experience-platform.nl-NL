@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!UICONTROL Search] gegevenstype
 
-[!UICONTROL Search] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat informatie over Webonderzoeksactiviteit bevat.
+[!UICONTROL Search] is een standaard XDM-gegevenstype (Experience Data Model) dat informatie bevat over zoekactiviteiten op het web.
 
 <img src="../images/data-types/search.PNG" width="500" /><br />
 
@@ -25,11 +25,11 @@ ht-degree: 0%
 | `position` | Geheel | De positie of rang van de aanbieding op de pagina met zoekresultaten. |
 | `searchEngine` | String | Het zoekprogramma dat door de zoekopdracht wordt gebruikt. |
 | `searchEngineID` | String | De toepassingsspecifieke id die wordt gebruikt om het zoekprogramma te identificeren. |
-| `slot` | String | De benoemde sectie van de pagina waar het zoekresultaat werd weergegeven. De waarde van deze eigenschap moet gelijk zijn aan een van de bekende opsommingswaarden die u definieert, zoals `top`, `side`, of `bottom`. |
+| `slot` | String | De benoemde sectie van de pagina waar het zoekresultaat werd weergegeven. De waarde van deze eigenschap moet gelijk zijn aan een van de bekende opsommingswaarden die u definieert, zoals `top` , `side` of `bottom` . |
 
 {style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/search.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/search.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/search.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/search.schema.json)

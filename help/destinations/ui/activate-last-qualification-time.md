@@ -18,23 +18,23 @@ ht-degree: 0%
 
 ## Vereisten {#prerequisites}
 
-De laatste kwalificatietijd gebruiken (`lastQualificationTime`) XDM-kenmerk, moet u gegevens exporteren naar een van de zes hieronder vermelde cloudopslagdoelen:
+Om de laatste kwalificatietijd (`lastQualificationTime`) XDM attribuut te gebruiken, moet u gegevens naar één van de zes hieronder vermelde bestemmingen van de wolkenopslag uitvoeren:
 
 * [[!DNL ADLS Gen 2]](/help/destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md)
 * [[!DNL Azure Blob]](/help/destinations/catalog/cloud-storage/azure-blob.md)
-* [[!DNL Data Landing Zon]e](/help/destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Data Landing Zon] e](/help/destinations/catalog/cloud-storage/data-landing-zone.md)
 * [[!DNL Google Cloud Storage]](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)
 * [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)
 
 ## Hoe te om de laatste kwalificatietijd XDM attributen te gebruiken {#how-to-use}
 
-Als u een van de zes hierboven vermelde cloudopslagconnectors gebruikt, kunt u de laatste kwalificatietijd-XDM-attribuut in de [toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) van de activeringsworkflow om een kolom in het geëxporteerde bestand te maken met de nieuwste tijdstempel van wanneer een profiel in aanmerking komt voor een segment. Dit kan u helpen bij het gebruik van bepaalde maateenheden of analysemogelijkheden en u een beter idee geven van wanneer u bepaalde soorten publiek moet activeren.
+Als u één van de zes hierboven vermelde schakelaars van de wolkenopslag gebruikt, kunt u de laatste attributen van de kwalificatietijd XDM in de [ toewijzingsstap ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) van het activeringswerkschema gebruiken om een kolom in het uitgevoerde dossier met recentste timestamp van te creëren wanneer een profiel voor een segment kwalificeerde. Dit kan u helpen bij het gebruik van bepaalde maateenheden of analysemogelijkheden en u een beter idee geven van wanneer u bepaalde soorten publiek moet activeren.
 
-Opmerking: toevoegen `lastQualificationTime` naar het geëxporteerde bestand moet u de waarde momenteel handmatig invoegen `xdm: segmentMembership.ups.seg_id.lastQualificationTime` in het bronveld, zoals hieronder wordt weergegeven. U kunt het doelveld ook bewerken tot `lastQualificationTime` of een andere waarde die u deze kolom een naam wilt geven. Aangezien dit een bètafunctionaliteit is, is de syntaxis van de `xdm: segmentMembership.ups.seg_id.lastQualificationTime` De waarde kan in de toekomst veranderen.
+Als u `lastQualificationTime` wilt toevoegen aan het exporteren van een bestand, moet u de waarde `xdm: segmentMembership.ups.seg_id.lastQualificationTime` momenteel handmatig in het bronveld invoegen, zoals hieronder wordt weergegeven. U kunt het doelveld ook bewerken in `lastQualificationTime` of een andere waarde die u een naam voor deze kolom wilt geven. Aangezien dit een bètafunctionaliteit is, kan de syntaxis van de waarde `xdm: segmentMembership.ups.seg_id.lastQualificationTime` in de toekomst veranderen.
 
-![De opname die van het scherm het laatste attribuut van de kwalificatietijd XDM in de toewijzingsstap toont](/help/destinations/ui/last-qualification-time.gif)
+![ het registreren van het Scherm die de laatste attribuut van de kwalificatietijdXDM in de afbeeldingsstap ](/help/destinations/ui/last-qualification-time.gif) tonen
 
 ## Meer informatie {#more-information}
 
-Voor uitgebreide informatie over het activeren van gegevens aan op dossier-gebaseerde bestemmingen met inbegrip van alle stappen in het werkschema en noodzakelijke toestemmingen, lees [zelfstudie over op bestanden gebaseerde doelen activeren](/help/destinations/ui/activate-batch-profile-destinations.md).
+Voor uitgebreide informatie over het activeren van gegevens aan op dossier-gebaseerde bestemmingen met inbegrip van alle stappen in het werkschema en noodzakelijke toestemmingen, lees [ op dossier-gebaseerde bestemmingsleerprogramma ](/help/destinations/ui/activate-batch-profile-destinations.md) activeren.

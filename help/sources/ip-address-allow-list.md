@@ -2,7 +2,7 @@
 keywords: Experience Platform;huis;de populaire onderwerpen;ip adres;ip adressen;ip de lijst van gewenste personen van het adresadres; lijst van gewenste personen
 description: IP de adressen moeten aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken.
 solution: Experience Platform
-title: IP de Lijst van gewenste personen van het Adres voor BronVerbindingen
+title: IP de Lijst van gewenste personen van het Adres voor Source Verbindingen
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 source-git-commit: bcd74083169c40966d7de8ba7b79082931a6744d
 workflow-type: tm+mt
@@ -69,11 +69,11 @@ U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewal
 
 ## IP adres lijst van gewenste personen voor het stromen bronnen {#streaming}
 
-U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om verkeer voor de dienst van de gegevensoverdracht voor het stromen bronnen zoals toe te staan [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md), en [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om verkeer voor de gegevensoverdrachtservice voor streamingbronnen zoals [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md) , [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md) , [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) en [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md) toe te staan.
 
 >[!BEGINTABS]
 
->[!TAB VA7]
+>[!TAB  VA7 ]
 
 - `52.254.106.240/28`
 - `52.254.107.144/28`
@@ -98,7 +98,7 @@ U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om v
 - `52.254.107.80/28`
 - `20.186.185.227`
 
->[!TAB NLD2]
+>[!TAB  NLD2 ]
 
 - `51.138.17.0/28`
 - `51.138.16.176/28`
@@ -123,7 +123,7 @@ U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om v
 - `51.138.16.192/28`
 - `51.138.12.100`
 
->[!TAB AUS5]
+>[!TAB  AUS5 ]
 
 - `20.40.188.194`
 - `20.53.206.128`
@@ -151,7 +151,7 @@ U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om v
 - `20.227.35.177`
 - `20.43.104.48/28`
 
->[!TAB CAN2]
+>[!TAB  CAN2 ]
 
 - `20.200.70.240/28`
 - `20.200.94.116`
@@ -179,7 +179,7 @@ U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om v
 - `20.200.70.192/28`
 - `20.200.71.144/28`
 
->[!TAB GBR9]
+>[!TAB  GBR9 ]
 
 - `20.254.2.128/28`
 - `20.26.131.71`

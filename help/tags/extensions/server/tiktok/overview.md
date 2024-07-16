@@ -10,87 +10,87 @@ ht-degree: 1%
 
 ---
 
-# [!DNL TikTok] API-extensie voor webgebeurtenissen
+# [!DNL TikTok] API-extensieoverzicht van webgebeurtenissen
 
-De [!DNL TikTok] events API is beveiligd [Edge Network Server-API](/help/server-api/overview.md) interface die u toestaat om informatie met te delen [!DNL TikTok] rechtstreeks informatie over gebruikersacties op uw websites. U kunt de regels voor het doorsturen van gebeurtenissen gebruiken om gegevens te verzenden vanuit de [!DNL Adobe Experience Platform Edge Network] tot [!DNL TikTok] door de [!DNL TikTok] Web Events API-extensie.
+De [!DNL TikTok] gebeurtenissen API is een veilige [ API van de Server van de Edge Network ](/help/server-api/overview.md) interface die u toestaat om informatie met [!DNL TikTok] direct over gebruikersacties op uw websites te delen. U kunt de regels voor het doorsturen van gebeurtenissen gebruiken om gegevens van [!DNL Adobe Experience Platform Edge Network] naar [!DNL TikTok] te verzenden met de API-extensie [!DNL TikTok] Webgebeurtenissen.
 
 ## [!DNL TikTok] voorwaarden {#prerequisites}
 
-Om te vormen [!DNL TikTok] webgebeurtenissen met de API [!DNL TikTok] gebeurtenissen-API, moet u een [!DNL TikTok] pixelcode en toegangstoken.
+Als u de API voor webgebeurtenissen van [!DNL TikTok] wilt configureren voor het gebruik van de API voor [!DNL TikTok] events, moet u een [!DNL TikTok] pixelcode en toegangstoken genereren.
 
-U moet een geldige [!DNL TikTok] voor zakelijke account om een [!DNL TikTok] pixel die de partneropstelling gebruiken. Ga naar de [[!DNL TikTok] voor de registratiepagina voor bedrijven](https://www.tiktok.com/business/en-US/solutions/business-account) als u nog geen account hebt, kunt u zich registreren en een account maken.
+U moet een geldige [!DNL TikTok] voor een zakelijke account hebben om een [!DNL TikTok] pixel te kunnen maken met behulp van de partnerinstellingen. Ga naar [[!DNL TikTok]  voor bedrijfs registratiepagina ](https://www.tiktok.com/business/en-US/solutions/business-account) om een rekening te registreren en tot stand te brengen als u niet reeds hebt.
 
-U moet zijn aangemeld bij uw zakelijke account om te kunnen worden ingesteld [!DNL TikTok] Pixel die partneropstelling gebruikt. Hiervoor voert u de volgende stappen uit:
+U moet in uw bedrijfsrekening worden geregistreerd aan opstelling [!DNL TikTok] Pixel gebruikend partneropstelling. Hiervoor voert u de volgende stappen uit:
 
-1. Ga naar de **[!UICONTROL Assets]** en selecteert u **[!UICONTROL Event]**.
-2. Selecteer onder Webgebeurtenissen de optie **[!UICONTROL Manage]**.
+1. Navigeer naar de tab **[!UICONTROL Assets]** en selecteer **[!UICONTROL Event]** .
+2. Selecteer onder Webgebeurtenissen de optie **[!UICONTROL Manage]** .
 3. Selecteer **[!UICONTROL Set Up Web Events]**.
-4. Selecteren **[!UICONTROL Partner Setup]** als verbindingsmethode.
+4. Selecteer **[!UICONTROL Partner Setup]** als verbindingsmethode.
 
-Zie de [Aan de slag met pixels](https://ads.tiktok.com/help/article/get-started-pixel) voor meer informatie over het instellen van de [!DNL TikTok] pixel.
+Zie [ Begonnen met Pixel ](https://ads.tiktok.com/help/article/get-started-pixel) gids voor meer informatie over hoe te opstelling het [!DNL TikTok] pixel.
 
-U kunt een toegangstoken genereren zodra de pixel is gemaakt. Navigeer hiertoe naar de pixel en selecteer de **[!UICONTROL Settings]** tab. Selecteer onder Gebeurtenissen-API **[!UICONTROL Generate Access Token]**.
+U kunt een toegangstoken genereren zodra de pixel is gemaakt. Navigeer hiertoe naar de pixel en selecteer de tab **[!UICONTROL Settings]** . Selecteer onder Gebeurtenissen-API **[!UICONTROL Generate Access Token]** .
 
-Zie de [[!DNL TikTok] gids Aan de slag](https://business-api.tiktok.com/portal/docs?id=1739584855420929) voor meer informatie over het instellen van de pixelcode en het toegangstoken.
+Zie [[!DNL TikTok]  begonnen gids ](https://business-api.tiktok.com/portal/docs?id=1739584855420929) voor meer informatie over hoe te opstelling de pixelcode en toegangstoken.
 
-## Installeer en configureer de [!DNL TikTok] API-extensie voor webgebeurtenissen {#install}
+## De API-extensie voor [!DNL TikTok] webgebeurtenissen installeren en configureren {#install}
 
-Selecteer **[!UICONTROL Extensions]** in de linkernavigatie. In de **[!UICONTROL Catalog]** selecteert u de **[!UICONTROL TikTok Web Events API Extension]** en selecteer vervolgens **[!UICONTROL Install]**.
+Selecteer **[!UICONTROL Extensions]** in de linkernavigatie als u de extensie wilt installeren. Selecteer op het tabblad **[!UICONTROL Catalog]** de **[!UICONTROL TikTok Web Events API Extension]** en selecteer vervolgens **[!UICONTROL Install]** .
 
-![De extensiecatalogus die de [!DNL TikTok] installatie van markering voor extensiekaart.](../../../images/extensions/server/tiktok/install-extension.png)
+![ de uitbreidingscatalogus die [!DNL TikTok] uitbreidingskaart tonen die installeert benadrukt.](../../../images/extensions/server/tiktok/install-extension.png)
 
-Voer in het volgende scherm de volgende configuratiewaarden in die u eerder hebt gegenereerd [!DNL TikTok] Advertentiebeheer:
+Voer in het volgende scherm de volgende configuratiewaarden in die u eerder hebt gegenereerd via [!DNL TikTok] Advertentiebeheer:
 
 * **[!UICONTROL Pixel Code]**
 * **[!UICONTROL Access Token]**
 
-Selecteer **[!UICONTROL Save]**.
+Selecteer **[!UICONTROL Save]** als u klaar bent.
 
-![[!DNL TikTok] configuratiescherm voor de [!DNL TikTok] API-extensie voor webgebeurtenissen.](../../../images/extensions/server/tiktok/configure.png)
+![[!DNL TikTok] configuratiescherm voor de [!DNL TikTok] API-extensie voor webgebeurtenissen. ](../../../images/extensions/server/tiktok/configure.png)
 
 ## Vorm een gebeurtenis door:sturen regel {#config-rule}
 
-Zodra al uw gegevenselementen opstelling zijn, kunt u gebeurtenis beginnen tot stand te brengen door:sturen regels die bepalen wanneer en hoe uw gebeurtenissen zullen worden verzonden naar [!DNL TikTok].
+Zodra al uw gegevenselementen opstelling zijn, kunt u gebeurtenis beginnen tot stand te brengen die regels bepaalt wanneer en hoe uw gebeurtenissen naar [!DNL TikTok] zullen worden verzonden.
 
-Een nieuwe [regel](../../../ui/managing-resources/rules.md) in uw gebeurtenis die bezit door:sturen. Onder **[!UICONTROL Actions]** voegt u een nieuwe handeling toe en stelt u de extensie in op **[!UICONTROL TikTok Web Events API Extension]**. Edge Network-gebeurtenissen verzenden naar [!DNL TikTok], stelt u de **[!UICONTROL Action Type]** tot **[!UICONTROL Send TikTok Web Events API Event].**
+Creeer een nieuwe [ regel ](../../../ui/managing-resources/rules.md) in uw gebeurtenis door:sturen bezit. Voeg onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL TikTok Web Events API Extension]** . Als u Edge Network-gebeurtenissen naar [!DNL TikTok] wilt verzenden, stelt u de waarde **[!UICONTROL Action Type]** in op **[!UICONTROL Send TikTok Web Events API Event].**
 
-![De [!UICONTROL Send TikTok Web Events API Event] handelingstype dat wordt geselecteerd voor een [!DNL TikTok] regel in de UI van de Inzameling van Gegevens.](../../../images/extensions/server/tiktok/select-action.png)
+![ het [!UICONTROL Send TikTok Web Events API Event] actietype dat voor een [!DNL TikTok] regel in de Inzameling UI van Gegevens wordt geselecteerd.](../../../images/extensions/server/tiktok/select-action.png)
 
-Na de selectie worden extra besturingselementen weergegeven om de gebeurtenis verder te configureren, zoals hieronder wordt beschreven. Selecteer **[!UICONTROL Keep Changes]** om de regel op te slaan.
+Na de selectie worden extra besturingselementen weergegeven om de gebeurtenis verder te configureren, zoals hieronder wordt beschreven. Nadat de regel is voltooid, selecteert u **[!UICONTROL Keep Changes]** om deze op te slaan.
 
 **[!UICONTROL Web Events and Parameters]**
 
-Webgebeurtenissen en -parameters bevatten algemene informatie over de gebeurtenis. Standaardgebeurtenissen worden ondersteund in alle [!DNL TikTok] de integratiehulpmiddelen en kunnen voor rapportering worden gebruikt, optimaliserend voor omzettingen, en bouwend publiek.
+Webgebeurtenissen en -parameters bevatten algemene informatie over de gebeurtenis. Standaardgebeurtenissen worden ondersteund door alle [!DNL TikTok] -integratieprogramma&#39;s en kunnen worden gebruikt voor rapportage, optimalisatie voor conversies en het opbouwen van doelgroepen.
 
 | Invoer | Beschrijving |
 | --- | --- |
-| Gebeurtenisnaam | De naam van de gebeurtenis. Dit zijn handelingen met vooraf gedefinieerde namen die zijn gemaakt door [!DNL TikTok] en is een verplicht veld. Zie de [[!DNL TikTok] Marketing-API](https://business-api.tiktok.com/portal/docs?id=1741601162187777) documentatie voor meer informatie over ondersteunde gebeurtenissen. |
-| Gebeurtenistijd | Datum/tijd als tekenreeks in ISO 8601 of in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` gebruiken. Dit is een verplicht veld. |
+| Gebeurtenisnaam | De naam van de gebeurtenis. Dit zijn handelingen met vooraf gedefinieerde namen die door [!DNL TikTok] zijn gemaakt en die een verplicht veld zijn. Verwijs naar de [[!DNL TikTok]  Marketing API ](https://business-api.tiktok.com/portal/docs?id=1741601162187777) documentatie voor meer informatie over gesteunde gebeurtenissen. |
+| Gebeurtenistijd | Datum en tijd als tekenreeks in ISO 8601 of in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` indeling. Dit is een verplicht veld. |
 | Gebeurtenis-id | De unieke id die door adverteerders wordt gegenereerd om elke gebeurtenis aan te geven. Dit is een optioneel veld en wordt gebruikt voor deduplicatie. |
 
 {style="table-layout:auto"}
 
-![De [!DNL Web Events and Parameters] sectie met voorbeeldgegevens die in de velden worden ingevoerd.](../../../images/extensions/server/tiktok/configure-web-events-parameters.png)
+![ de [!DNL Web Events and Parameters] sectie die voorbeeldgegevensinput in de gebieden toont.](../../../images/extensions/server/tiktok/configure-web-events-parameters.png)
 
 **[!UICONTROL User Context Parameters]**
 
-De parameters van de gebruikerscontext bevatten klanteninformatie die wordt gebruikt om de gebeurtenissen van de Webbezoeker met te passen [!DNL TikTok] gebruikers. Door meerdere typen overeenkomende gegevens op te nemen, kunt u de nauwkeurigheid van doelmodellen en optimalisatiemodellen verhogen.
+De parameters van de gebruikerscontext bevatten klantinformatie die wordt gebruikt om de gebeurtenissen van de Webbezoeker met [!DNL TikTok] gebruikers aan te passen. Door meerdere typen overeenkomende gegevens op te nemen, kunt u de nauwkeurigheid van doelmodellen en optimalisatiemodellen verhogen.
 
 | Invoer | Beschrijving |
 | --- | --- |
 | IP-adres | Niet-gehakt openbaar IP adres van browser. Er wordt ondersteuning geboden voor IPv4- en IPv6-adressen. Zowel worden de volledige als de samengeperste vormen van IPv6 adressen erkend. |
-| User Agent | De niet-gehashte gebruikersagent van het apparaat van de gebruiker. |
+| Gebruikersagent | De niet-gehashte gebruikersagent van het apparaat van de gebruiker. |
 | Email | E-mailadres van de contactpersoon die aan de conversiegebeurtenis is gekoppeld. |
-| Telefoon | Het telefoonnummer moet de E164-notatie [+][landcode] hebben[netnummer][local phone number] voordat u gaat hashen. |
-| Cookie-id | Als u de SDK van Pixel gebruikt, wordt automatisch een unieke id opgeslagen in het dialoogvenster `_ttp` cookie, als cookies zijn ingeschakeld. De `_ttp` Deze waarde kan voor dit veld worden geëxtraheerd en gebruikt. |
+| Telefoon | Het telefoonaantal moet in formaat E164 zijn [+] [landcode] [ gebiedscode ][local phone number] alvorens het hakken. |
+| Cookie-id | Als u de SDK van Pixel gebruikt, wordt automatisch een unieke id opgeslagen in het cookie van `_ttp` als cookies zijn ingeschakeld. De waarde `_ttp` kan voor dit veld worden geëxtraheerd en gebruikt. |
 | Externe id | Om het even welk uniek herkenningsteken zoals gebruiker IDs, externe koekjesidentiteitskaarts etc. en moet met SHA256 worden gehakt. |
-| TikTok Click ID | De `ttclid` Deze wordt toegevoegd aan de URL van de bestemmingspagina telkens wanneer een advertentie wordt geselecteerd op [!DNL TikTok]. |
+| TikTok Click ID | De `ttclid` die aan de URL van de bestemmingspagina wordt toegevoegd telkens als een advertentie op [!DNL TikTok] wordt geselecteerd. |
 | Pagina-URL | De pagina-URL op het moment van de gebeurtenis. |
 | URL paginaverwijzing | De URL van de paginaverwijzing. |
 
 {style="table-layout:auto"}
 
-![De [!DNL User Context Parameters] sectie met voorbeeldgegevens die in de velden worden ingevoerd.](../../../images/extensions/server/tiktok/configure-user-context-parameters.png)
+![ de [!DNL User Context Parameters] sectie die voorbeeldgegevensinput in de gebieden toont.](../../../images/extensions/server/tiktok/configure-user-context-parameters.png)
 
 **[!UICONTROL Properties Parameters]**
 
@@ -100,7 +100,7 @@ Gebruik de parameters van eigenschappen om extra gesteunde eigenschappen te vorm
 | --- | --- |
 | Prijs | De kosten van één object. |
 | Aantal | Het aantal items dat in de gebeurtenis wordt aangeschaft. Dit moet een positief getal zijn dat groter is dan 0. |
-| Inhoudstype | Een waarde van of `product` of `product_group` moet worden toegewezen aan de content_type objecteigenschap, afhankelijk van hoe u uw gegevensinvoer zult vormen wanneer u opstelling uw productcatalogus. |
+| Inhoudstype | De waarde `product` of `product_group` moet worden toegewezen aan de eigenschap content_type object, afhankelijk van de manier waarop u de gegevensinvoer configureert wanneer u de productcatalogus instelt. |
 | Inhoud-id | Een unieke id van het item. |
 | Inhoudscategorie | Categorie van de pagina/het product. |
 | Inhoudsnaam | Naam van de pagina/het product. |
@@ -112,18 +112,18 @@ Gebruik de parameters van eigenschappen om extra gesteunde eigenschappen te vorm
 
 {style="table-layout:auto"}
 
-![De [!DNL Properties Parameters] sectie met voorbeeldgegevens die in de velden worden ingevoerd.](../../../images/extensions/server/tiktok/configure-properties-parameters.png)
+![ de [!DNL Properties Parameters] sectie die voorbeeldgegevensinput in de gebieden toont.](../../../images/extensions/server/tiktok/configure-properties-parameters.png)
 
 ## Gebeurtenisdeduplicatie {#deduplication}
 
-[!DNL TikTok] pixel zal opstelling voor deduplicatie moeten zijn als u zowel [!DNL TikTok] pixel SDK en de [!DNL TikTok] webgebeurtenissen: API-extensie voor het verzenden van dezelfde gebeurtenissen naar [!DNL TikTok].
+[!DNL TikTok] pixel moet worden ingesteld voor deduplicatie als u zowel de [!DNL TikTok] pixel SDK als de [!DNL TikTok] web events API-extensie gebruikt om dezelfde gebeurtenissen naar [!DNL TikTok] te verzenden.
 
-Deduplicatie is niet vereist als verschillende gebeurtenistypen zonder overlapping van de client en server worden verzonden. Om ervoor te zorgen dat uw rapport niet negatief wordt beïnvloed, moet u ervoor zorgen dat om het even welke enige gebeurtenis die door wordt gedeeld [!DNL TikTok] pixel SDK en de [!DNL TikTok] API-extensie voor webgebeurtenissen is gededupliceerd.
+Deduplicatie is niet vereist als verschillende gebeurtenistypen zonder overlapping van de client en server worden verzonden. Om ervoor te zorgen dat uw rapportage geen negatieve gevolgen heeft, moet u ervoor zorgen dat elke afzonderlijke gebeurtenis die wordt gedeeld door de [!DNL TikTok] pixel SDK en de [!DNL TikTok] web events API-extensie, wordt gededupliceerd.
 
 Wanneer u gedeelde gebeurtenissen verzendt, moet u ervoor zorgen dat elke gebeurtenis een pixel-id, gebeurtenis-id en naam bevat. Gedupliceerde gebeurtenissen die binnen vijf minuten na elkaar aankomen, worden samengevoegd. Als het gegevensveld niet aanwezig was in de eerste gebeurtenis, wordt dit gecombineerd met de volgende gebeurtenis. Eventuele dubbele gebeurtenissen die binnen 48 uur zijn ontvangen, worden verwijderd.
 
-Zie de [!DNL TikTok] documentatie over [Gebeurtenis dedupliceren](https://ads.tiktok.com/help/article/event-deduplication) voor meer informatie over dit proces.
+Zie de [!DNL TikTok] documentatie over [ de Deduplicatie van de Gebeurtenis ](https://ads.tiktok.com/help/article/event-deduplication) voor meer details over dit proces.
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u gebeurtenisgegevens op de server kunt verzenden naar [!DNL TikTok] met de [!DNL TikTok] API-extensie voor webgebeurtenissen. Voor meer informatie over gebeurtenis die mogelijkheden door:sturen in [!DNL Adobe Experience Platform], verwijst u naar de [overzicht van gebeurtenissen doorsturen](../../../ui/event-forwarding/overview.md).
+In deze handleiding wordt beschreven hoe u gebeurtenisgegevens aan de serverzijde naar [!DNL TikTok] kunt verzenden met de API-extensie voor [!DNL TikTok] webgebeurtenissen. Voor meer informatie over gebeurtenis die mogelijkheden in [!DNL Adobe Experience Platform] door:sturen, verwijs naar de [ gebeurtenis die overzicht ](../../../ui/event-forwarding/overview.md) door:sturen.

@@ -14,48 +14,48 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[[!DNL Outreach]](https://www.outreach.io/) is een Sales Execution Platform met de meeste B2B-gegevens over koper-verkoper in de wereld en aanzienlijke investeringen in merkgebonden AI-technologieën om verkoopgegevens om te zetten in intelligentie. [!DNL Outreach] helpt organisaties hun verkoopbetrokkenheid te automatiseren en op inkomstenintelligentie te handelen om hun efficiency, voorspelbaarheid, en groei te verbeteren.
+[[!DNL Outreach] ](https://www.outreach.io/) is een Platform van de Uitvoering van de Verkoop met de meeste B2B koper-verkoper interactiegegevens in de wereld en significante investeringen in merkgebonden AI technologieën om verkoopgegevens in intelligentie te vertalen. [!DNL Outreach] helpt organisaties om hun verkoopbetrokkenheid te automatiseren en om hun efficiëntie, voorspelbaarheid en groei te verbeteren.
 
-Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [Resource-API voor Output Update](https://api.outreach.io/api/v2/docs#update-an-existing-resource), zodat u de identiteiten binnen een publiek kunt bijwerken die aan vooruitzichten in [!DNL Outreach].
+Dit [!DNL Adobe Experience Platform] [ bestemmings ](/help/destinations/home.md) hefboomwerkingen [ het Middel API van de Update van de Outreach ](https://api.outreach.io/api/v2/docs#update-an-existing-resource), die u toestaat om identiteiten binnen een publiek bij te werken die aan vooruitzichten in [!DNL Outreach] beantwoorden.
 
-[!DNL Outreach] gebruikt OAuth 2 met de Vergunning van de Vergunning als authentificatiemechanisme om met het te communiceren [!DNL Outreach] [!DNL Update Resource API]. Instructies voor verificatie aan uw [!DNL Outreach] instantie bevindt zich verderop, binnen [Verifiëren voor bestemming](#authenticate) sectie.
+[!DNL Outreach] gebruikt OAuth 2 met de Vergunning als authentificatiemechanisme om met [!DNL Outreach] te communiceren [!DNL Update Resource API]. De instructies om aan uw [!DNL Outreach] instantie voor authentiek te verklaren zijn verder hieronder, binnen [ voor authentiek verklaren aan bestemmings ](#authenticate) sectie.
 
 ## Gebruiksscenario’s {#use-cases}
 
-Als marketeer kunt u persoonlijke ervaringen aan uw vooruitzichten bieden op basis van kenmerken uit hun Adobe Experience Platform-profielen. U kunt een publiek maken op basis van uw offline gegevens en deze soorten publiek verzenden naar [!DNL Outreach], om in de voeding van de vooruitzichten weer te geven zodra het publiek en de profielen in Adobe Experience Platform worden bijgewerkt.
+Als marketeer kunt u persoonlijke ervaringen aan uw vooruitzichten bieden op basis van kenmerken uit hun Adobe Experience Platform-profielen. U kunt publiek maken van uw offline gegevens en deze soorten publiek naar [!DNL Outreach] sturen, zodat ze in de feeds van het perspectief worden weergegeven zodra het publiek en de profielen in Adobe Experience Platform worden bijgewerkt.
 
 ## Vereisten {#prerequisites}
 
 ### Voorwaarden voor Experience Platforms {#prerequisites-in-experience-platform}
 
-Voordat u gegevens activeert naar de [!DNL Outreach] doel, u moet een [schema](/help/xdm/schema/composition.md), [gegevensset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), en [segmenten](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) gemaakt in [!DNL Experience Platform].
+Alvorens gegevens aan de [!DNL Outreach] bestemming te activeren, moet u a [ schema ](/help/xdm/schema/composition.md), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) hebben, en [ segmenten ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) die in [!DNL Experience Platform] worden gecreeerd.
 
-Raadpleeg de documentatie van de Adobe voor [Publiek Lidmaatschap Details schema groep](/help/xdm/field-groups/profile/segmentation.md) als u hulp over publieksstatus nodig hebt.
+Verwijs naar de documentatie van de Adobe voor [ het schemagroep van de Details van het Lidmaatschap van de Publiek ](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op publieksstatistieken nodig hebt.
 
 ### Voorwaarden voor bereiken {#prerequisites-destination}
 
-Houd rekening met de volgende voorwaarden in [!DNL Outreach]om gegevens van Platform naar uw [!DNL Outreach] account:
+Als u gegevens wilt exporteren van Platform naar uw [!DNL Outreach] -account, moet u rekening houden met de volgende voorwaarden in [!DNL Outreach] :
 
 #### U moet een Outreach-account hebben {#prerequisites-account}
 
-Ga naar de [!DNL Outreach] [aanmelden](https://accounts.outreach.io/users/sign_in) pagina om te registreren en een account te maken, als u er nog geen hebt. Zie ook de [!DNL Outreach] ondersteuning [page](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account) voor meer informatie .
+Ga naar de [!DNL Outreach] [ teken binnen ](https://accounts.outreach.io/users/sign_in) pagina om een rekening te registreren en tot stand te brengen, als u niet reeds hebt. Zie ook de [!DNL Outreach] steun [ pagina ](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account) voor meer details.
 
-Noteer de onderstaande items voordat u deze verifieert voor de [!DNL Outreach] CRM-bestemming:
+Noteer de onderstaande items voordat u verifieert voor de bestemming [!DNL Outreach] CRM:
 
 | Credentials | Beschrijving |
 |---|---|
-| Email | Uw [!DNL Outreach] accounemail |
-| Wachtwoord | Uw [!DNL Outreach] accountwachtwoord |
+| Email | Uw [!DNL Outreach] -account-e-mail |
+| Wachtwoord | Wachtwoord voor uw [!DNL Outreach]-account |
 
 #### Aangepaste veldlabels instellen {#prerequisites-custom-fields}
 
-[!DNL Outreach] ondersteunt aangepaste velden voor [vooruitzichten](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Zie [Een aangepast veld toevoegen in bereik](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) voor aanvullende richtsnoeren. Voor een eenvoudige identificatie is het raadzaam de labels handmatig bij te werken naar de desbetreffende publieksnamen in plaats van de standaardwaarden te behouden. Bijvoorbeeld zoals hieronder:
+[!DNL Outreach] steunt douanegebieden voor [ vooruitzichten ](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Verwijs naar [ hoe te om een douanegebied in Uitzicht ](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) voor extra begeleiding toe te voegen. Voor een eenvoudige identificatie is het raadzaam de labels handmatig bij te werken naar de desbetreffende publieksnamen in plaats van de standaardwaarden te behouden. Bijvoorbeeld zoals hieronder:
 
 [!DNL Outreach] instellingenpagina voor vooruitzichten met aangepaste velden.
-![Het schermschot van het bereiken UI die de douanevelden op de montagespagina toont.](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
+![ het schermschot van het bereik UI die de douanegebieden op de montagespagina toont.](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
 
-[!DNL Outreach] instellingenpagina voor vooruitzichten waarin aangepaste velden worden weergegeven *gebruiksvriendelijk* labels die overeenkomen met de namen van de doelgroepen. U kunt de publieksstatus op de perspectiefpagina tegen deze etiketten bekijken.
-![De het schermschot van het bereik UI die douanevelden met bijbehorende etiketten op de montagespagina toont.](../../assets/catalog/crm/outreach/outreach-custom-field-labels.png)
+[!DNL Outreach] montagespagina voor vooruitzichten die douanegebieden met *gebruikersvriendelijke* etiketten tonen die aan de publieksnamen aanpassen. U kunt de publieksstatus op de perspectiefpagina tegen deze etiketten bekijken.
+![ het schermschot van het bereik UI die douanegebieden met bijbehorende etiketten op de montagespagina toont.](../../assets/catalog/crm/outreach/outreach-custom-field-labels.png)
 
 >[!NOTE]
 >
@@ -63,19 +63,19 @@ Noteer de onderstaande items voordat u deze verifieert voor de [!DNL Outreach] C
 
 ## Guardrails
 
-De [!DNL Outreach] API heeft een snelheidsgrens van 10.000 verzoeken per uur per gebruiker. Als u deze limiet bereikt, ontvangt u een `429` antwoord met het volgende bericht: `You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.`.
+De API van [!DNL Outreach] heeft een tariefgrens van 10.000 verzoeken per uur per gebruiker. Als u deze limiet bereikt, ontvangt u een `429` -reactie met het volgende bericht: `You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.` .
 
 Als u dit bericht hebt ontvangen, moet u het programma voor het exporteren van het publiek bijwerken om aan de tariefdrempel te voldoen.
 
-Zie de [[!DNL Outreach] documentatie](https://api.outreach.io/api/v2/docs#rate-limiting) voor meer informatie.
+Verwijs naar de [[!DNL Outreach]  documentatie ](https://api.outreach.io/api/v2/docs#rate-limiting) voor extra details.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Outreach] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
+[!DNL Outreach] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| `OutreachId` | <ul><li>[!DNL Outreach] id. Dit is een numerieke waarde die overeenkomt met het perspectiefprofiel.</li><li>De id moet overeenkomen met de id in het dialoogvenster [!DNL Outreach] URL voor het vooruitzicht dat wordt bijgewerkt.</li><li>Zie de [[!DNL Outreach] documentatie](https://api.outreach.io/api/v2/docs#update-an-existing-resource) voor nadere bijzonderheden.</li></ul> | Verplicht |
+| `OutreachId` | <ul><li>[!DNL Outreach] identifier. Dit is een numerieke waarde die overeenkomt met het perspectiefprofiel.</li><li>De id moet overeenkomen met de id in de URL van [!DNL Outreach] , anders wordt het vooruitzicht niet bijgewerkt.</li><li>Verwijs naar de [[!DNL Outreach]  documentatie ](https://api.outreach.io/api/v2/docs#update-an-existing-resource) voor verdere details.</li></ul> | Verplicht |
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -83,8 +83,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | <ul><li> U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Elke segmentstatus in [!DNL Outreach] wordt bijgewerkt met de corresponderende publieksstatus van Platform, gebaseerd op de [!UICONTROL Mapping ID] waarde die tijdens de [publieksplanning](#schedule-segment-export-example) stap.</li></ul> |
-| Exportfrequentie | **[!UICONTROL Streaming]** | <ul><li> Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li> U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)* volgens uw veldtoewijzing.</li><li> Elke segmentstatus in [!DNL Outreach] wordt bijgewerkt met de overeenkomstige publieksstatus van Platform, die op de [!UICONTROL Mapping ID] waarde wordt gebaseerd die tijdens de [ publiek wordt verstrekt die ](#schedule-segment-export-example) stap plant.</li></ul> |
+| Exportfrequentie | **[!UICONTROL Streaming]** | <ul><li> Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -92,131 +92,138 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 > 
-> Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+> Om met de bestemming te verbinden, hebt u de **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
-Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** zoeken naar [!DNL Outreach]. U kunt het ook vinden onder de categorie CRM.
+Kies in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** Zoeken naar [!DNL Outreach] . U kunt het ook vinden onder de categorie CRM.
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Om voor authentiek te verklaren aan de bestemming, uitgezocht **[!UICONTROL Connect to destination]**.
+Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel.
 
-![Schermopname van de UI van het platform die tonen hoe te om aan Uitzicht voor authentiek te verklaren.](../../assets/catalog/crm/outreach/authenticate-destination.png)
+{het schermschot van het platform UI die tonen hoe te om aan Uitzicht voor authentiek te verklaren.](../../assets/catalog/crm/outreach/authenticate-destination.png)![
 
-U wordt de [!DNL Outreach] aanmeldingspagina Geef uw e-mail op.
+De aanmeldingspagina van [!DNL Outreach] wordt weergegeven. Geef uw e-mail op.
 
-![Webinterface-screenshot waarin het veld wordt weergegeven waarin e-mail moet worden ingevoerd voor verificatie bij Outreach.](../../assets/catalog/crm/outreach/authenticate-destination-login-email.png)
+![ het schermschot van het bereik UI die het gebied toont om e-mail in te voeren om aan Uitzicht voor authentiek te verklaren.](../../assets/catalog/crm/outreach/authenticate-destination-login-email.png)
 
 Geef vervolgens uw wachtwoord op.
 
-![De het schermschot van het bereiken UI die het gebied aan de stap van het inputwachtwoord toont om aan Uitzicht voor authentiek te verklaren.](../../assets/catalog/crm/outreach/authenticate-destination-login-password.png)
+![ het schermschot van het bereik UI die het gebied toont om wachtwoordstap in te voeren om aan Uitzicht voor authentiek te verklaren.](../../assets/catalog/crm/outreach/authenticate-destination-login-password.png)
 
-* **[!UICONTROL Username]**: Uw [!DNL Outreach] e-mail account.
-* **[!UICONTROL Password]**: Uw [!DNL Outreach] wachtwoord account.
+* **[!UICONTROL Username]**: Uw [!DNL Outreach] -account-e-mail.
+* **[!UICONTROL Password]**: Het wachtwoord van uw [!DNL Outreach] -account.
 
-Als de verstrekte gegevens geldig zijn, geeft de interface een **Verbonden** status met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
+Als de verstrekte details geldig zijn, toont UI a **Verbonden** status met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-![Het schermschot van UI van het platform die tonen hoe te om details voor de bestemming van het Uitzicht in te vullen.](../../assets/catalog/crm/outreach/destination-details.png)
+{het schermschot van het platform UI die tonen hoe te om details voor de Uitstekende bestemming in te vullen.](../../assets/catalog/crm/outreach/destination-details.png)![
 
-* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
-Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL Outreach] doel, moet u door de stap van de gebiedstoewijzing gaan. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming. Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL Outreach] doelvelden, voer de volgende stappen uit:
+Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL Outreach] -bestemming wilt verzenden, moet u de stap voor veldtoewijzing doorlopen. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming. Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL Outreach] -doelvelden:
 
-1. In de [!UICONTROL Mapping] stap, klik op **[!UICONTROL Add new mapping]**. Er verschijnt een nieuwe toewijzingsrij op het scherm.
-   ![Platform UI-schermafbeelding tonen hoe u nieuwe toewijzing kunt toevoegen](../../assets/catalog/crm/outreach/add-new-mapping.png)
+1. Klik in de stap [!UICONTROL Mapping] op **[!UICONTROL Add new mapping]** . Er verschijnt een nieuwe toewijzingsrij op het scherm.
+   ![ het schermschot van het Platform UI die hoe te om nieuwe afbeelding toe te voegen ](../../assets/catalog/crm/outreach/add-new-mapping.png) toont
 
-1. In de [!UICONTROL Select source field] venster, kiest u de **[!UICONTROL Select identity namespace]** en voeg de gewenste toewijzingen toe.
-   ![Platform UI-screenshot met brontoewijzing](../../assets/catalog/crm/outreach/source-mapping.png)
+1. Kies in het venster [!UICONTROL Select source field] de categorie **[!UICONTROL Select identity namespace]** en voeg de gewenste toewijzingen toe.
+   ![ het schermschot van het Platform UI die de afbeelding van Source ](../../assets/catalog/crm/outreach/source-mapping.png) toont
 
-1. In de [!UICONTROL Select target field] selecteert u het type doelveld waaraan u het bronveld wilt toewijzen.
+1. Selecteer in het [!UICONTROL Select target field] -venster het type doelveld waaraan u het bronveld wilt toewijzen.
    * **[!UICONTROL Select identity namespace]**: selecteer deze optie om het bronveld toe te wijzen aan een naamruimte in de lijst.
-     ![Het schermschot van het platform UI die van het Doel afbeelding toont gebruikend OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
+     {het schermschot van het platform UI die van het Doel afbeelding toont die OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)![
 
-   * Voeg de volgende afbeelding toe tussen uw XDM-profielschema en uw [!DNL Outreach] -instantie: |XDM-profielschema|[!DNL Outreach] Instance| Verplicht| |—|—|—| |`Oid`|`OutreachId`| Ja |
+   * Voeg de volgende toewijzing toe tussen uw XDM-profielschema en uw [!DNL Outreach] -instantie:
+|XDM-profielschema|[!DNL Outreach] Instantie| Verplicht|
+|—|—|—|
+|`Oid`|`OutreachId`| Ja |
 
-   * **[!UICONTROL Select custom attributes]**: selecteer deze optie om het bronveld toe te wijzen aan een aangepast kenmerk dat u in het dialoogvenster [!UICONTROL Attribute name] veld. Zie [[!DNL Outreach] prospectiedocumentatie](https://api.outreach.io/api/v2/docs#prospect) voor een uitgebreide lijst met ondersteunde kenmerken.
-     ![Platform UI-screenshot met doeltoewijzing via LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
+   * **[!UICONTROL Select custom attributes]**: selecteer deze optie om het bronveld toe te wijzen aan een aangepast kenmerk dat u in het veld [!UICONTROL Attribute name] definieert. Verwijs naar [[!DNL Outreach]  perspectiefdocumentatie ](https://api.outreach.io/api/v2/docs#prospect) voor een uitvoerige lijst van gesteunde attributen.
+     {het schermschot van het platform UI die van het Doel afbeelding toont gebruikend LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)![
 
-   * Afhankelijk van de waarden die u wilt bijwerken, voegt u bijvoorbeeld de volgende toewijzing toe tussen uw XDM-profielschema en uw [!DNL Outreach] -instantie: |XDM-profielschema|[!DNL Outreach] Instance| |—|—| |`person.name.firstName`|`firstName`| |`person.name.lastName`|`lastName`|
+   * Afhankelijk van de waarden die u wilt bijwerken, voegt u bijvoorbeeld de volgende toewijzing toe tussen uw XDM-profielschema en uw [!DNL Outreach] -instantie:
+|XDM-profielschema|[!DNL Outreach] Instantie|
+|—|—|
+|`person.name.firstName`|`firstName`|
+|`person.name.lastName`|`lastName`|
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
-     ![Voorbeeld van schermopname van platformgebruikersinterface met doeltoewijzingen.](../../assets/catalog/crm/outreach/mappings.png)
+     ![ het schermschot van het Platform UI die de afbeeldingen van het Doel tonen.](../../assets/catalog/crm/outreach/mappings.png)
 
 ### Het publiek van het programma uitvoeren en voorbeeld {#schedule-segment-export-example}
 
-* Bij het uitvoeren van de [Het exporteren van publiek plannen](../../ui/activate-segment-streaming-destinations.md) stap u moet het publiek van het Platform aan het attribuut van het douanegebied manueel in kaart brengen in [!DNL Outreach].
+* Wanneer het uitvoeren van de [ stap van de de publieksuitvoer van het Programma ](../../ui/activate-segment-streaming-destinations.md) u moet het publiek van het Platform aan het attribuut van het douanegebied in kaart brengen [!DNL Outreach].
 
-* Hiervoor selecteert u elk segment en voert u de bijbehorende numerieke waarde in die overeenkomt met de *Aangepast veld `N` Label* veld van [!DNL Outreach] in de **[!UICONTROL Mapping ID]** veld.
+* Om dit te doen, selecteer elk segment, dan ga de overeenkomstige numerieke waarde in die aan het `N` Etiket *gebied van het Gebied van de Douane* {van [!DNL Outreach] op het **[!UICONTROL Mapping ID]** gebied beantwoordt.
 
   >[!IMPORTANT]
   >
-  > * De numerieke waarde *(`N`)* worden gebruikt in de [!UICONTROL Mapping ID] moet overeenkomen met de aangepaste kenmerksleutel met het achtervoegsel numeriek binnen [!DNL Outreach]. Voorbeeld: *Aangepast veld `N` Label*.
+  > * De numerieke waarde *(`N`)* die binnen [!UICONTROL Mapping ID] wordt gebruikt zou de sleutel van het douanekenmerk met achtervoegsel met de numerieke waarde binnen [!DNL Outreach] moeten aanpassen. Voorbeeld: `N` Etiket *van het Gebied van de Douane 0}.*
   > * U hoeft alleen de numerieke waarde op te geven, niet het hele aangepaste veldlabel.
   > * [!DNL Outreach] ondersteunt maximaal 150 aangepaste labelvelden.
-  > * Zie [[!DNL Outreach] prospectiedocumentatie](https://api.outreach.io/api/v2/docs#prospect) voor meer informatie.
+  > * Verwijs naar [[!DNL Outreach]  perspectiefdocumentatie ](https://api.outreach.io/api/v2/docs#prospect) voor details.
 
    * Bijvoorbeeld:
 
      | [!DNL Outreach] Veld | Id voor platformtoewijzing |
      |---|---|
-     | Aangepast veld `4` Label | `4` |
+     | Aangepast veld `4` label | `4` |
 
-     ![Het schermschot van UI van het platform die een voorbeeldToewijzing Identiteitskaart tijdens de het publieksuitvoer van het Programma tonen.](../../assets/catalog/crm/outreach/schedule-segment-export.png)
+     {het schermschot van het platform UI die een voorbeeldToewijzing Identiteitskaart tijdens de uitvoer van het het publiek van het Programma tonen.](../../assets/catalog/crm/outreach/schedule-segment-export.png)![
 
 ## Gegevens exporteren valideren {#exported-data}
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
-1. Selecteren **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** om naar de lijst met bestemmingen te navigeren.
-   ![Platform UI het schermschot die Browse Doelen toont.](../../assets/catalog/crm/outreach/browse-destinations.png)
+1. Selecteer **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** om naar de lijst met doelen te navigeren.
+   ![ het schermschot van het Platform UI die door Doelen toont.](../../assets/catalog/crm/outreach/browse-destinations.png)
 
-1. Selecteer het doel en controleer of de status **[!UICONTROL enabled]**.
-   ![Platform UI het schermschot die de Looppas van Doelen Dataflow voor de geselecteerde bestemming toont.](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
+1. Selecteer het doel en bevestig dat de status **[!UICONTROL enabled]** is.
+   ![ het schermschot van het Platform UI die de Looppas van Doelen Dataflow voor de geselecteerde bestemming toont.](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
-1. Schakel over naar de **[!DNL Activation data]** en selecteert u vervolgens de naam van een publiek.
-   ![Platform UI-schermafbeelding met gegevens van Doelen Activation.](../../assets/catalog/crm/outreach/destinations-activation-data.png)
+1. Ga naar het tabblad **[!DNL Activation data]** en selecteer vervolgens een publieksnaam.
+   {het schermschot van het platform UI die de gegevens van de Activering van Doelen toont.](../../assets/catalog/crm/outreach/destinations-activation-data.png)![
 
 1. Controleer het publieksoverzicht en zorg ervoor dat de telling van profielen aan de telling beantwoordt die binnen het segment wordt gecreeerd.
-   ![Platform UI screenshot die overzicht van Segment toont.](../../assets/catalog/crm/outreach/segment.png)
+   ![ het schermschot van het Platform UI die de samenvatting van het Segment toont.](../../assets/catalog/crm/outreach/segment.png)
 
-1. Aanmelden bij de [!DNL Outreach] website, navigeer vervolgens naar de [!DNL Apps] > [!DNL Contacts] en controleer of de profielen van het publiek zijn toegevoegd. U kunt zien dat elke publieksstatus in [!DNL Outreach] werd bijgewerkt met de overeenkomstige publieksstatus van Platform, gebaseerd op [!UICONTROL Mapping ID] waarde die tijdens de [publieksplanning](#schedule-segment-export-example) stap.
+1. Meld u aan bij de [!DNL Outreach] -website, navigeer naar de pagina [!DNL Apps] > [!DNL Contacts] en controleer of de profielen van het publiek zijn toegevoegd. U kunt zien dat elke publieksstatus in [!DNL Outreach] met de overeenkomstige publieksstatus van Platform werd bijgewerkt, dat op de [!UICONTROL Mapping ID] waarde wordt gebaseerd die tijdens de [ publiek wordt verstrekt die ](#schedule-segment-export-example) stap plant.
 
-![Het schermschot van het bereik UI die de pagina van de Vooruitzichten van het Bereik met de bijgewerkte publieksstatus toont.](../../assets/catalog/crm/outreach/outreach-prospect.png)
+![ het schermschot van het bereik UI die de pagina van de Vooruitzichten van het Bereik met de bijgewerkte publieksstatussen toont.](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
 
 ## Fouten en problemen oplossen {#errors-and-troubleshooting}
 
-Bij het controleren van een gegevensstroomuitvoering wordt mogelijk het volgende foutbericht weergegeven: `Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
+Wanneer u een gegevensstroomuitvoering controleert, wordt mogelijk het volgende foutbericht weergegeven: `Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
 
-![Platform UI screenshot die de Onjuiste aanvraagfout toont.](../../assets/catalog/crm/outreach/error.png)
+{het schermschot van het platform UI die de Onjuiste verzoekFout toont.](../../assets/catalog/crm/outreach/error.png)![
 
-Om deze fout te bevestigen, verifieer dat [!UICONTROL Mapping ID] u hebt opgegeven in Platform voor uw [!DNL Outreach] publiek is geldig en bestaat in [!DNL Outreach].
+U kunt deze fout verhelpen door te controleren of de [!UICONTROL Mapping ID] die u in Platform hebt opgegeven voor uw [!DNL Outreach] -publiek geldig is en voorkomt in [!DNL Outreach] .
 
 ## Aanvullende bronnen {#additional-resources}
 
-De [[!DNL Outreach] documentatie](https://api.outreach.io/api/v2/docs/) bevat informatie over [Foutreacties](https://api.outreach.io/api/v2/docs#error-responses) die u kunt gebruiken om het even welke kwesties te zuiveren.
+De [[!DNL Outreach]  documentatie ](https://api.outreach.io/api/v2/docs/) heeft details op [ Reacties van de Fout ](https://api.outreach.io/api/v2/docs#error-responses) die u kunt gebruiken om het even welke kwesties te zuiveren.

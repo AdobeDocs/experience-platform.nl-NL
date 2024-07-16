@@ -15,11 +15,11 @@ Gebruik de Advanced Data Lifecycle Management UI en de Data Hygiene API om opsch
 
 ## Vereisten {#prerequisites}
 
-Deze handleiding vereist een goed begrip van de werkruimte van de levenscyclus van gegevens en de [API voor gegevenshygiëne](./api/overview.md). Voordat u doorgaat met dit document, moet u bekend zijn met de hulplijnen op [Geavanceerd levenscyclusbeheer van gegevens](./home.md) en [maken, aanvragen voor het verwijderen van records](./ui/record-delete.md) of [gegevenssetvervaltijden in UI](./ui/dataset-expiration.md)of via de API.
+Deze gids vereist een werkend begrip van de werkruimte van de Levenscyclus van Gegevens en [ Hygiene API van Gegevens ](./api/overview.md). Alvorens dit document voort te zetten, vertrouwt u met de gidsen op [ het Geavanceerde Beheer van de Levenscyclus van Gegevens ](./home.md) en [ creërend verslagen schrapt verzoeken ](./ui/record-delete.md) of [ datasettermijnen in UI ](./ui/dataset-expiration.md), of door API.
 
 ## Richtlijnen voor het maken van werkorders {#work-order-creation-guidelines}
 
-U kunt de `/workorder` eindpunt in de Hygiene API van Gegevens om verslagen te beheren schrapt verzoeken in Experience Platform. Met dit eindpunt, kunt u een schrappingsverzoek tot stand brengen, zijn status controleren, of een bestaand verzoek bijwerken. Zie de [Document met het eindpunt van de werkorder](./api/workorder.md) om te leren hoe u deze handelingen uitvoert met de API.
+U kunt het `/workorder` eindpunt in de API van de Hygiëne van Gegevens gebruiken om verslagen te beheren schrapt verzoeken in Experience Platform. Met dit eindpunt, kunt u een schrappingsverzoek tot stand brengen, zijn status controleren, of een bestaand verzoek bijwerken. Zie het [ document van het de ordeeindpunt van het Werk ](./api/workorder.md) leren hoe te om deze acties uit te voeren gebruikend API.
 
 >[!TIP]
 >
@@ -27,27 +27,27 @@ U kunt de `/workorder` eindpunt in de Hygiene API van Gegevens om verslagen te b
 
 Volg de onderstaande richtlijnen om uw opmerkingen voor opschoonverzoeken te optimaliseren:
 
-1. **Identiteiten maximaliseren per aanvraag:** Omvat tot 100.000 identiteiten per schoonmaakbeurtverzoek om efficiency te verbeteren. Door meerdere identiteiten in één aanvraag op te nemen, vermindert u de frequentie van API-aanroepen en minimaliseert u het risico op prestatieproblemen als gevolg van buitensporige Single-identity-aanvragen. Verzend aanvragen met maximale aantallen identiteitsgegevens voor een snellere verwerking, aangezien werkorders batchgewijs worden verwerkt.
-2. **Afzonderlijke gegevenssets opgeven:** Geef voor maximale efficiëntie de afzonderlijke gegevensset op die moet worden verwerkt.
-3. **Overwegingen bij het vertragen van API&#39;s:** Houd rekening met de snelheid van de API om te voorkomen dat de toepassing langzaam afneemt. Kleinere aanvragen (&lt; 100 IDs) bij hogere frequenties kunnen resulteren in 429 reacties en moeten opnieuw worden ingediend met aanvaardbare snelheden.
+1. **maximaliseer identiteiten per verzoek:** omvat tot 100.000 identiteiten per schoonmaakbeurtverzoek om efficiency te verbeteren. Door meerdere identiteiten in één aanvraag op te nemen, vermindert u de frequentie van API-aanroepen en minimaliseert u het risico op prestatieproblemen als gevolg van buitensporige Single-identity-aanvragen. Verzend aanvragen met maximale aantallen identiteitsgegevens voor een snellere verwerking, aangezien werkorders batchgewijs worden verwerkt.
+2. **specificeer individuele datasets:** voor maximumefficiency, specificeer de individuele dataset die moet worden verwerkt.
+3. **API throttling overwegingen:** ben bedacht van API throttling om langzame-verduisteringen te verhinderen. Kleinere aanvragen (&lt; 100 IDs) bij hogere frequenties kunnen resulteren in 429 reacties en moeten opnieuw worden ingediend met aanvaardbare snelheden.
 
 ### 429 fouten beheren {#manage-429-errors}
 
 Als u een fout van 429 ontvangt, wijst het erop dat u het toegestane aantal verzoeken binnen een bepaalde tijdspanne hebt overschreden. Volg deze best practices om 429 fouten effectief te beheren:
 
-- **De koptekst &#39;Opnieuw proberen-Na&#39; lezen**: Wanneer een fout van 429 wordt geretourneerd, controleert u de antwoordheader &#39;Opnieuw-Na&#39;. Deze kopbal specificeert de tijd te wachten alvorens het verzoek opnieuw te proberen.
-- **Opnieuw proberen-logica implementeren**: Gebruik de waarde &#39;Opnieuw proberen-na&#39; om logica voor opnieuw proberen in uw toepassing te implementeren, zodat opnieuw wordt geprobeerd na de opgegeven tijd om volgende 429 fouten te voorkomen.
-- **Batch uw verzoeken**: Vermijd het snel achter elkaar indienen van talrijke kleine verzoeken. In plaats daarvan plaatst u meerdere identiteiten in één aanvraag om de frequentie van oproepen te verminderen en het risico van het bereiken van tarieflimieten tot een minimum te beperken.
+- **las &quot;opnieuw-na&quot;kopbal**: Wanneer een 429 fout is teruggekeerd, controleer de &quot;opnieuw-na&quot;antwoordkopbal. Deze kopbal specificeert de tijd te wachten alvorens het verzoek opnieuw te proberen.
+- **voert logica opnieuw uit**: Gebruik de &quot;opnieuw proberen-na&quot;waarde om opnieuw te proberen logica in uw toepassing uit te voeren, die ervoor zorgt dat de pogingen na de gespecificeerde tijd worden geprobeerd om verdere 429 fouten te vermijden.
+- **Batch uw verzoeken**: Vermijd het voorleggen van talrijke kleine verzoeken snel achtereenvolgens. In plaats daarvan plaatst u meerdere identiteiten in één aanvraag om de frequentie van oproepen te verminderen en het risico van het bereiken van tarieflimieten tot een minimum te beperken.
 
 ## Vervaldatum gegevensset {#dataset-expiration}
 
-Stel automatische gegevensset opschonen in voor gegevens van korte duur. Gebruik de `/ttl` eindpunt op de API van de Hygiëne van Gegevens om vervaldata voor datasets voor schoonmaak te plannen die op een gespecificeerde tijd of een datum wordt gebaseerd. Zie de het eindpuntgids van de Vervaldatum van de Dataset leren hoe te [een gegevensset maken die vervalt](./api/dataset-expiration.md) en de [geaccepteerde queryparameters](./api/dataset-expiration.md#query-params).
+Stel automatische gegevensset opschonen in voor gegevens van korte duur. Gebruik het `/ttl` eindpunt op de API van de Hygiëne van Gegevens om vervaldata voor datasets voor schoonmaakbeurt te plannen die op een gespecificeerde tijd of een datum wordt gebaseerd. Zie de het eindpuntgids van de Vervaldatum van de Dataset leren hoe te [ een datasetvervaldatum ](./api/dataset-expiration.md) en [ toegelaten vraagparameters ](./api/dataset-expiration.md#query-params) creëren.
 
 ## Bewaking van werkorder en vervalstatus van gegevensset {#monitor}
 
-U kunt de voortgang van uw gegevenslevenscyclusbeheer efficiënt controleren door **I/O-gebeurtenissen**. Een I/O-gebeurtenis is een mechanisme voor het ontvangen van realtime meldingen over wijzigingen of updates in verschillende services binnen het platform.
+U kunt de vooruitgang van uw beheer van de gegevenslevenscyclus efficiënt controleren door het gebruik van **I/O Gebeurtenissen**. Een I/O-gebeurtenis is een mechanisme voor het ontvangen van realtime meldingen over wijzigingen of updates in verschillende services binnen het platform.
 
-I/O-gebeurteniswaarschuwingen kunnen naar een geconfigureerde webhaak worden verzonden om de automatisering van activiteitencontrole mogelijk te maken. Als u waarschuwingen wilt ontvangen via een webhaak, moet u uw webhaak registreren voor Platformwaarschuwingen in de Adobe Developer Console. Zie de handleiding op [abonneren op Adobe I/O Event-berichten](../observability/alerts/subscribe.md) voor de gedetailleerde instructies.
+I/O-gebeurteniswaarschuwingen kunnen naar een geconfigureerde webhaak worden verzonden om de automatisering van activiteitencontrole mogelijk te maken. Als u waarschuwingen wilt ontvangen via een webhaak, moet u uw webhaak registreren voor Platformwaarschuwingen in de Adobe Developer Console. Zie de gids op [ het intekenen aan de berichten van de Gebeurtenis van Adobe I/O ](../observability/alerts/subscribe.md) voor de gedetailleerde instructies.
 
 Gebruik de volgende methoden en richtlijnen voor de levenscyclus van gegevens om taakstatussen effectief op te halen en te controleren:
 
@@ -63,7 +63,7 @@ U kunt de voortgang van uw taken tijdens de levenscyclus van gegevens op effici�
 
 Voor diepgaande informatie over individuele werkorders, gebruik de volgende benadering:
 
-- Breng een verzoek van een GET aan de `/workorder/{work_order_id}` eindpunt voor gedetailleerde reactiegegevens.
+- Vraag het `/workorder/{work_order_id}` -eindpunt om een GET voor gedetailleerde reactiegegevens.
 - Haal productspecifieke reacties en succesberichten op.
 - Vermijd het gebruik van deze methode voor regelmatige opiniepeilingsactiviteiten.
 

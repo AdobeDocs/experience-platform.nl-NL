@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;analyseren gegevenslaptops;eda;verkennende gegevensanalyse;gegevenswetenschap
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;populaire onderwerpen;analyse gegevenslaptops;eda;verkennende gegevensanalyse;gegevenswetenschap
 solution: Experience Platform
 title: EDA-laptop (Exploration Data Analysis)
 type: Tutorial
@@ -7,7 +7,7 @@ description: Deze gids concentreert zich op hoe te om het Verkennende Notitieboe
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '2760'
+source-wordcount: '2766'
 ht-degree: 0%
 
 ---
@@ -18,15 +18,15 @@ De EDA-laptop (Exploratory Data Analysis) is ontworpen om u te helpen patronen i
 
 Het EDA-laptopvoorbeeld is geoptimaliseerd met gegevens voor het web en bestaat uit twee onderdelen. Deel één begint met het gebruiken van de Dienst van de Vraag om tendensen en gegevensmomentopnamen te bekijken. Vervolgens worden de gegevens geaggregeerd op profiel- en bezoekersniveau, met het oog op de verkennende gegevensanalyse.
 
-Deel twee begint met een beschrijvende analyse van de geaggregeerde gegevens met behulp van Python-bibliotheken. Deze laptop toont visualisaties zoals histogrammen, verstrooiingspunten, vakpercelen en een correlatiematrix om actioneerbare inzichten af te leiden die worden gebruikt om te bepalen welke eigenschappen het meest waarschijnlijk nuttig zijn om een doel te voorspellen.
+Deel twee begint met een beschrijvende analyse van de geaggregeerde gegevens met behulp van Python-bibliotheken. Deze laptop toont visualisaties zoals histogrammen, verstrooiingspunten, vakpercelen en een correlatiematrix om actioneerbare inzichten af te leiden die worden gebruikt om te bepalen welke eigenschappen het meest waarschijnlijk nuttig zullen zijn om een doel te voorspellen.
 
 ## Aan de slag
 
-Lees deze handleiding voordat u deze leest. [[!DNL JupyterLab] gebruikershandleiding](./overview.md) voor een introductie op hoog niveau van [!DNL JupyterLab] en zijn rol binnen de Werkruimte van de Wetenschap van Gegevens. Als u uw eigen gegevens gebruikt, raadpleegt u bovendien de documentatie voor [gegevenstoegang in [!DNL Jupyterlab] notebooks](./access-notebook-data.md). Deze handleiding bevat belangrijke informatie over de gegevenslimieten van laptops.
+Alvorens deze gids te lezen, te herzien gelieve de [[!DNL JupyterLab]  gebruikersgids ](./overview.md) voor een inleiding op hoog niveau aan [!DNL JupyterLab] en zijn rol binnen de Wetenschap van Gegevens Workspace. Bovendien, als u uw eigen gegevens gebruikt, te herzien gelieve de documentatie voor [ gegevenstoegang in  [!DNL Jupyterlab]  laptops ](./access-notebook-data.md). Deze handleiding bevat belangrijke informatie over de gegevenslimieten van laptops.
 
-Deze laptop gebruikt een gegevensset met gemiddelde waarden in de vorm van Adobe Analytics Experience Events-gegevens in de Analytics Analysis Workspace. Als u de EDA-laptop wilt gebruiken, moet u de gegevenstabel met de volgende waarden definiëren `target_table` en `target_table_id`. Om het even welke middelwaarden dataset kan worden gebruikt.
+Deze laptop gebruikt een gegevensset met gemiddelde waarden in de vorm van Adobe Analytics Experience Events-gegevens in de Analytics Analysis Workspace. Als u de EDA-laptop wilt gebruiken, moet u de gegevenstabel met de volgende waarden definiëren `target_table` en `target_table_id` . Om het even welke middelwaarden dataset kan worden gebruikt.
 
-Als u deze waarden wilt zoeken, volgt u de stappen in het dialoogvenster [schrijven aan een dataset in python](./access-notebook-data.md#write-python) van de JupyterLab-gids voor gegevenstoegang. De naam van de gegevensset (`target_table`) bevindt zich in de map met gegevenssets. Nadat u met de rechtermuisknop op de gegevensset hebt geklikt om gegevens in een notitieboekje te verkennen of te schrijven, wordt een gegevensset-id (`target_table_id`) wordt opgegeven in het item voor uitvoerbare code.
+Om deze waarden te vinden, volg de stappen die in [ worden geschetst schrijven aan een dataset in python ](./access-notebook-data.md#write-python) sectie van de JupyterLab gids van de gegevenstoegang. De naam van de dataset (`target_table`) wordt gevestigd in de datasetfolder. Zodra u de dataset met de rechtermuisknop aanklikt om gegevens in een notitieboekje te onderzoeken of te schrijven, wordt een dataset identiteitskaart (`target_table_id`) verstrekt in de uitvoerbare codeingang.
 
 ## Gegevensdetectie
 
@@ -34,7 +34,7 @@ Deze sectie bevat configuratiestappen en voorbeeldvragen die worden gebruikt om 
 
 ### Configuratie van bibliotheken
 
-JupyterLab ondersteunt meerdere bibliotheken. De volgende code kan in een codecel worden geplakt en uitgevoerd om alle vereiste pakketten te verzamelen en te installeren die in dit voorbeeld worden gebruikt. U kunt extra of alternatieve pakketten buiten dit voorbeeld voor uw eigen gegevensanalyse gebruiken. Kopieer en plak voor een lijst met ondersteunde pakketten `!pip list --format=columns` in een nieuwe cel.
+JupyterLab ondersteunt meerdere bibliotheken. De volgende code kan in een codecel worden geplakt en uitgevoerd om alle vereiste pakketten te verzamelen en te installeren die in dit voorbeeld worden gebruikt. U kunt extra of alternatieve pakketten buiten dit voorbeeld voor uw eigen gegevensanalyse gebruiken. Kopieer en plak `!pip list --format=columns` in een nieuwe cel voor een lijst met ondersteunde pakketten.
 
 ```python
 !pip install colorama
@@ -64,11 +64,11 @@ pd.set_option('display.max_colwidth', -1)
 
 ### Verbinding maken met Adobe Experience Platform [!DNL Query Service]
 
-[!DNL JupyterLab] op Platform kunt u SQL gebruiken in een [!DNL Python] laptop voor toegang tot gegevens via [Query-service](https://www.adobe.com/go/query-service-home-en). Toegang tot gegevens via [!DNL Query Service] kan nuttig zijn om grote datasets wegens zijn superieure lopende tijden te behandelen. Houd er rekening mee dat u gegevens kunt opvragen met [!DNL Query Service] heeft een verwerkingstijd van tien minuten.
+[!DNL JupyterLab] op Platform staat u toe om SQL in a [!DNL Python] notitieboekje te gebruiken om tot gegevens door [ de Dienst van de Vraag ](https://www.adobe.com/go/query-service-home-en) toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan handig zijn voor het verwerken van grote gegevenssets vanwege de superieure runtime. Houd er rekening mee dat het opvragen van gegevens met [!DNL Query Service] een verwerkingstijd van tien minuten heeft.
 
-Wat u moet weten voordat u gaat gebruiken [!DNL Query Service] in [!DNL JupyterLab]zorgt u ervoor dat u een goed begrip hebt van de [[!DNL Query Service] SQL-syntaxis](https://www.adobe.com/go/query-service-sql-syntax-en).
+Alvorens u [!DNL Query Service] in [!DNL JupyterLab] gebruikt, zorg ervoor u een werkend begrip van de [[!DNL Query Service]  SQL syntaxis ](https://www.adobe.com/go/query-service-sql-syntax-en) hebt.
 
-Om de Dienst van de Vraag in JupyterLab te gebruiken, moet u eerst een verbinding tussen uw werkende Notitieboekje Python en de Dienst van de Vraag tot stand brengen. Dit kan worden bereikt door de volgende cel uit te voeren.
+Als u Query Service wilt gebruiken in JupyterLab, moet u eerst een verbinding maken tussen uw werkende Python-laptop en Query-service. Dit kan worden bereikt door de volgende cel uit te voeren.
 
 ```python
 qs_connect()
@@ -76,7 +76,7 @@ qs_connect()
 
 ### De gegevensset met middentonen definiëren voor exploratie
 
-Om met het vragen van en het onderzoeken van gegevens te beginnen, moet een midvalues datasetlijst worden verstrekt. Kopieer en vervang de `table_name` en `table_id` waarden met uw eigen waarden voor de gegevenstabel.
+Om met het vragen van en het onderzoeken van gegevens te beginnen, moet een midvalues datasetlijst worden verstrekt. Kopieer en vervang de waarden `table_name` en `table_id` door uw eigen waarden voor de gegevenstabel.
 
 ```python
 target_table = "table_name"
@@ -92,7 +92,7 @@ target_table_id = "5f7c40ef488de5194ba0157a"
 
 ### De dataset voor beschikbare data verkennen
 
-Met de onderstaande cel kunt u het datumbereik weergeven dat in de tabel wordt behandeld. Het doel van het onderzoeken van het aantal dagen, eerste datum, en laatste datum, is om bij het selecteren van een datumwaaier voor verdere analyse te helpen.
+Met de onderstaande cel kunt u het datumbereik weergeven dat in de tabel wordt behandeld. Het doel van het verkennen van het aantal dagen, de eerste datum en de laatste datum is om u te helpen bij het selecteren van een datumbereik voor verdere analyse.
 
 ```python
 %%read_sql -c QS_CONNECTION
@@ -104,7 +104,7 @@ order by Year, Month;
 
 Als u de cel uitvoert, wordt de volgende uitvoer geproduceerd:
 
-![uitvoer querydatum](../images/jupyterlab/eda/query-date-output.PNG)
+![ output van de vraagdatum ](../images/jupyterlab/eda/query-date-output.PNG)
 
 ### Datums configureren voor detectie van gegevenssets
 
@@ -118,7 +118,7 @@ target_day = "(01,02,03)" ## The target days
 
 ### Detectie gegevensset
 
-Zodra u al uw parameters hebt gevormd, begonnen [!DNL Query Service]En u hebt een datumbereik. U kunt nu gegevensrijen beginnen te lezen. U moet het aantal rijen dat u leest, beperken.
+Zodra u al uw parameters hebt gevormd, begonnen [!DNL Query Service], en een datumwaaier hebt, bent u klaar beginnen lezend rijen van gegevens. U moet het aantal rijen dat u leest, beperken.
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -140,7 +140,7 @@ Gebruik de volgende cel om de rijen van de gegevensset weer te geven. In dit voo
 Table.head(5)
 ```
 
-![uitvoer tabelrij](../images/jupyterlab/eda/data-table-overview.PNG)
+![ uitvoer van de lijstrij ](../images/jupyterlab/eda/data-table-overview.PNG)
 
 Zodra u een idee hebt van welke gegevens in de dataset bevat, kan het waardevol zijn om de dataset verder te verdelen. In dit voorbeeld worden de kolomnamen en gegevenstypen voor elk van de kolommen weergegeven, terwijl de uitvoer wordt gebruikt om te controleren of het gegevenstype correct is of niet.
 
@@ -151,13 +151,13 @@ ColumnNames_Types.columns = ["Column_Name", "Data_Type"]
 ColumnNames_Types
 ```
 
-![kolomnaam en lijst met gegevenstypen](../images/jupyterlab/eda/data-columns.PNG)
+![ kolomnaam en gegevenstypes lijst ](../images/jupyterlab/eda/data-columns.PNG)
 
-### Verkenning gegevenssettrend
+### Verkenning van trends in gegevenssets
 
 De volgende sectie bevat vier voorbeeldvragen die worden gebruikt om tendensen en patronen in gegevens te onderzoeken. De onderstaande voorbeelden zijn niet uitputtend, maar hebben betrekking op een aantal van de meer algemeen bekeken kenmerken.
 
-**Aantal uren activiteit voor een bepaalde dag**
+**Aantal van de Uuractiviteit voor een bepaalde dag**
 
 Deze vraag analyseert het aantal acties en klikt door de dag. De output wordt vertegenwoordigd in de vorm van een lijst die metriek op het activiteitenaantal voor elk uur van de dag bevat.
 
@@ -174,7 +174,7 @@ GROUP  BY Hour
 ORDER  BY Hour;
 ```
 
-![query 1-uitvoer](../images/jupyterlab/eda/hour-count-raw.PNG)
+![ vraag 1 output ](../images/jupyterlab/eda/hour-count-raw.PNG)
 
 Na bevestiging van de vraagwerken, kunnen de gegevens in een univariate histogram van het plot voor visuele duidelijkheid worden voorgesteld.
 
@@ -197,11 +197,11 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![staafgrafiekuitvoer voor query 1](../images/jupyterlab/eda/activity-count-by-hour-of-day.png)
+![ de grafiekoutput van de bar voor vraag 1 ](../images/jupyterlab/eda/activity-count-by-hour-of-day.png)
 
-**De bovenste tien weergegeven pagina&#39;s voor een bepaalde dag**
+**Hoogste 10 bekeken pagina&#39;s voor een bepaalde dag**
 
-Deze vraag analyseert welke pagina&#39;s het meest voor een bepaalde dag worden bekeken. De uitvoer wordt weergegeven in de vorm van een tabel met meetgegevens voor de paginanaam en het aantal pagina&#39;s.
+Deze vraag analyseert welke pagina&#39;s het meest voor een bepaalde dag worden bekeken. De uitvoer wordt weergegeven in de vorm van een tabel met meetgegevens voor de paginanaam en het aantal pagina&#39;s in de weergave.
 
 ```sql
 %%read_sql query_4_df -c QS_CONNECTION
@@ -238,9 +238,9 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![tien weergegeven pagina&#39;s bovenaan](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.png)
+![ bovenkant tien bekeken pagina&#39;s ](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.png)
 
-**Tien steden bovenaan gegroepeerd op gebruikersactiviteit**
+**Hoogste tien steden die door gebruikersactiviteit** worden gegroepeerd
 
 Deze vraag analyseert welke steden de gegevens uit voortkomen.
 
@@ -279,11 +279,11 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![top tien steden](../images/jupyterlab/eda/top-ten-cities-by-user-activity.png)
+![ top tien steden ](../images/jupyterlab/eda/top-ten-cities-by-user-activity.png)
 
-**De tien meest bekeken producten**
+**Hoogste tien bekeken producten**
 
-Deze vraag verstrekt een lijst van de hoogste tien bekeken producten. In het onderstaande voorbeeld wordt `Explode()` functie wordt gebruikt om elk product in terug te keren `productlistitems` object naar zijn eigen rij. Dit staat u toe om een genestelde vraag te doen om productmeningen voor verschillende SKU&#39;s samen te voegen.
+Deze vraag verstrekt een lijst van de hoogste tien bekeken producten. In het onderstaande voorbeeld wordt de functie `Explode()` gebruikt om elk product in het `productlistitems` -object naar een eigen rij te retourneren. Dit staat u toe om een genestelde vraag te doen om productmeningen voor verschillende SKU&#39;s samen te voegen.
 
 ```sql
 %%read_sql query_7_df -c QS_CONNECTION
@@ -323,7 +323,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![tien beste productweergaven](../images/jupyterlab/eda/top-ten-viewed-products.png)
+![ top tien productmeningen ](../images/jupyterlab/eda/top-ten-viewed-products.png)
 
 Na het onderzoeken van de tendensen en de patronen van de gegevens, zou u een goed idee moeten hebben over welke eigenschappen u voor een voorspelling van een doel wilt bouwen. Skimming through lijsten kan snel de vorm van elk gegevensattribuut, duidelijke misvertegenwoordiging, en grote outliers in de waarden benadrukken en beginnen kandidaat verhoudingen voor te stellen om tussen attributen te onderzoeken.
 
@@ -331,7 +331,7 @@ Na het onderzoeken van de tendensen en de patronen van de gegevens, zou u een go
 
 De verkennende gegevensanalyse wordt gebruikt om uw begrip van de gegevens te verfijnen en een intuïtie voor dwingende vragen te bouwen die als basis voor uw modellering kunnen worden gebruikt.
 
-Nadat u de stap voor het detecteren van gegevens hebt voltooid, hebt u de gegevens op gebeurtenisniveau verkend met enkele aggregaties op het niveau van de gebeurtenis, stad of gebruikers-id om trends voor een dag te zien. Hoewel deze gegevens belangrijk zijn, geven ze geen volledig beeld. U begrijpt nog steeds niet wat de drijvende kracht achter een aankoop op uw website is.
+Nadat u de stap voor het detecteren van gegevens hebt voltooid, hebt u de gegevens op gebeurtenisniveau verkend met enkele aggregaties op het niveau van de gebeurtenis, de stad of de gebruikers-id om trends voor een dag te zien. Hoewel deze gegevens belangrijk zijn, geven ze geen volledig beeld. U begrijpt nog steeds niet wat de drijvende kracht achter een aankoop op uw website is.
 
 Om dit te begrijpen, moet u gegevens op een profiel/bezoekersniveau samenvoegen, een aankoopdoel bepalen, en statistische concepten zoals correlatie, kaderpercelen, en verstrooiingspunten toepassen. Deze methoden worden gebruikt om patronen van activiteiten voor kopers te vergelijken met niet-kopers in het voorspellingsvenster dat u definieert.
 
@@ -340,11 +340,11 @@ De volgende functies worden gemaakt en onderzocht in deze sectie:
 - `COUNT_UNIQUE_PRODUCTS_PURCHASED`: Het aantal unieke producten dat is aangeschaft.
 - `COUNT_CHECK_OUTS`: Het aantal uitchecken.
 - `COUNT_PURCHASES`: Het aantal aankopen.
-- `COUNT_INSTANCE_PRODUCTADDS`: Het aantal exemplaren van het product dat wordt toegevoegd.
+- `COUNT_INSTANCE_PRODUCTADDS`: Het aantal exemplaren dat door het product wordt toegevoegd.
 - `NUMBER_VISITS`: Het aantal bezoeken.
 - `COUNT_PAID_SEARCHES`: Het aantal betaalde zoekopdrachten.
 - `DAYS_SINCE_VISIT`: Het aantal dagen sinds het laatste bezoek.
-- `TOTAL_ORDER_REVENUE`: De totale inkomsten uit bestellingen.
+- `TOTAL_ORDER_REVENUE`: De totale opbrengsten van bestellingen.
 - `DAYS_SINCE_PURCHASE`: Het aantal dagen sinds de vorige aankoop.
 - `AVG_GAP_BETWEEN_ORDERS_DAYS`: Het gemiddelde verschil tussen aankopen in dagen.
 - `STATE_CITY`: Bevat de staat en de stad.
@@ -367,7 +367,7 @@ threshold = 1
 
 ### Gegevenssamenvoeging voor functie en doel maken
 
-Om met verkennende analyse te beginnen, moet u een doel op het profielniveau tot stand brengen, door uw dataset te groeperen wordt gevolgd. In dit voorbeeld worden twee query&#39;s opgegeven. De eerste vraag bevat de verwezenlijking van een doel. De tweede vraag moet worden bijgewerkt om het even welke variabelen buiten degenen in de eerste vraag te omvatten. U kunt de `limit` voor uw query. Nadat u de volgende query&#39;s hebt uitgevoerd, zijn de samengevoegde gegevens nu beschikbaar voor verkenning.
+Om met verkennende analyse te beginnen, moet u een doel op het profielniveau tot stand brengen, door uw dataset te groeperen wordt gevolgd. In dit voorbeeld worden twee query&#39;s opgegeven. De eerste vraag bevat de verwezenlijking van een doel. De tweede vraag moet worden bijgewerkt om het even welke variabelen buiten degenen in de eerste vraag te omvatten. U kunt `limit` voor uw vraag willen bijwerken. Nadat u de volgende query&#39;s hebt uitgevoerd, zijn de samengevoegde gegevens nu beschikbaar voor verkenning.
 
 ```sql
 %%read_sql target_df -d -c QS_CONNECTION
@@ -451,19 +451,19 @@ Data['TARGET'].fillna(0, inplace=True)
 
 De volgende drie voorbeeldcellen worden gebruikt om ervoor te zorgen dat de samenvoeging is gelukt.
 
-`Data.shape` Geeft als resultaat het aantal kolommen gevolgd door het aantal rijen, bijvoorbeeld: (11913, 12).
+`Data.shape` retourneert het aantal kolommen gevolgd door het aantal rijen, bijvoorbeeld: (11913, 12).
 
 ```python
 Data.shape
 ```
 
-`Data.head(5)` Hiermee wordt een tabel met 5 rijen gegevens geretourneerd. De geretourneerde tabel bevat alle 12 kolommen met geaggregeerde gegevens die zijn toegewezen aan een profiel-id.
+`Data.head(5)` retourneert een tabel met 5 rijen gegevens. De geretourneerde tabel bevat alle 12 kolommen met geaggregeerde gegevens die zijn toegewezen aan een profiel-id.
 
 ```python
 Data.head(5)
 ```
 
-![voorbeeldtabel](../images/jupyterlab/eda/raw-aggregate-data.PNG)
+![ voorbeeldlijst ](../images/jupyterlab/eda/raw-aggregate-data.PNG)
 
 In deze cel wordt het aantal unieke profielen afgedrukt.
 
@@ -507,7 +507,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![Ontbrekende waarden](../images/jupyterlab/eda/missing-values.png)
+![ Ontbrekende waarden ](../images/jupyterlab/eda/missing-values.png)
 
 Na het ontdekken van ontbrekende waarden, is het kritiek om uitschieters te identificeren. Parametrische statistieken zoals het gemiddelde, standaardafwijking en correlatie zijn zeer gevoelig voor uitschieters. Daarnaast zijn de aannames van gemeenschappelijke statistische procedures, zoals lineaire regressies, ook gebaseerd op deze statistieken. Dit betekent dat uitschieters een analyse echt kunnen verknoeien.
 
@@ -515,7 +515,7 @@ In dit voorbeeld wordt interkwartielbereik gebruikt om uitschieters te identific
 
 >[!TIP]
 >
->Het verbeteren van outliers vereist u om een inzicht in de zaken en de industrie te hebben u binnen werkt. Soms kun je een observatie niet neerzetten, alleen omdat het een uitbijter is. Uitschieters kunnen legitieme observaties zijn en zijn vaak de interessantste. Ga voor meer informatie over het neerzetten van uitschieters naar de [optionele stap voor gegevensreiniging](#optional-data-clean).
+>Het verbeteren van outliers vereist u om een inzicht in de zaken en de industrie te hebben u binnen werkt. Soms kun je een observatie niet neerzetten, alleen omdat het een uitbijter is. Uitschieters kunnen legitieme observaties zijn en zijn vaak de interessantste. Meer over het laten vallen van uitschieters leren, bezoek de [ facultatieve stap van de gegevensschoonmaak ](#optional-data-clean).
 
 ```python
 TARGET = Data.TARGET
@@ -556,11 +556,11 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![uitschieters, grafiek](../images/jupyterlab/eda/outliers.png)
+![ outliers grafiek ](../images/jupyterlab/eda/outliers.png)
 
 ### Univariële analyse
 
-Nadat de gegevens zijn gecorrigeerd voor ontbrekende waarden en uitschieters, kunt u de analyse starten. Er zijn drie soorten analyses: analyse van de univariatie, bivariatie en multivariatie. De univariate analyse neemt gegevens, vat samen, en vindt patronen in de gegevens gebruikend enige veranderlijke verhoudingen. De analyse van de bivariatie kijkt naar meer dan één variabele tegelijkertijd, terwijl de multivariate analyse drie of meer variabelen tegelijkertijd bekijkt.
+Nadat de gegevens zijn gecorrigeerd voor ontbrekende waarden en uitschieters, kunt u de analyse starten. Er zijn drie soorten analyses: univariate, bivariate en multivariate analyse. De univariate analyse neemt gegevens, vat samen, en vindt patronen in de gegevens gebruikend enige veranderlijke verhoudingen. De analyse van de bivariatie kijkt naar meer dan één variabele tegelijkertijd, terwijl de multivariate analyse drie of meer variabelen tegelijkertijd bekijkt.
 
 In het volgende voorbeeld wordt een tabel gemaakt om de distributie van de functies te visualiseren.
 
@@ -574,7 +574,7 @@ distribution.columns = ['Count', 'Mean', 'Min', '1st_perc','5th_perc','25th_perc
 distribution
 ```
 
-![verspreiding van de kenmerken](../images/jupyterlab/eda/distribution-of-features.PNG)
+![ distributie van de eigenschappen ](../images/jupyterlab/eda/distribution-of-features.PNG)
 
 Als u de functies eenmaal hebt gedistribueerd, kunt u visualiseerde gegevensgrafieken maken met behulp van een array. De volgende cellen worden gebruikt om de bovenstaande tabel te visualiseren met numerieke gegevens.
 
@@ -589,7 +589,7 @@ for column in Data_numerical.columns[0:]:
     sns.distplot(Data_numerical[column], color = A, kde=False, bins=6, hist_kws={'alpha': 0.4});
 ```
 
-![numerieke gegevensgrafieken](../images/jupyterlab/eda/univaiate-graphs.png)
+![ numerieke gegevensgrafieken ](../images/jupyterlab/eda/univaiate-graphs.png)
 
 ### Categorische gegevens
 
@@ -610,7 +610,7 @@ for column in Data_categorical.columns[0:]:
         sns.countplot(x=column, data = Data_categorical, palette="Set2");
 ```
 
-![catagorische kolommen](../images/jupyterlab/eda/graph-category.PNG)
+![ catagorische kolommen ](../images/jupyterlab/eda/graph-category.PNG)
 
 ### Kolommen met slechts één afzonderlijke waarde verwijderen
 
@@ -628,14 +628,14 @@ for col in Data.columns:
             Data.drop(col,inplace=True,axis=1)
 ```
 
-Als u kolommen met één waarde hebt verwijderd, controleert u de overige kolommen op fouten met de opdracht `Data.columns` in een nieuwe cel.
+Nadat u kolommen met één waarde hebt verwijderd, controleert u de overige kolommen op fouten met de opdracht `Data.columns` in een nieuwe cel.
 
 ### Correct voor ontbrekende waarden
 
 De volgende sectie bevat enkele voorbeeldbenaderingen voor het corrigeren van ontbrekende waarden. Hoewel in de bovenstaande gegevens slechts één kolom een ontbrekende waarde had, hadden de voorbeeldcellen onder correcte waarden voor alle gegevenstypen. Deze omvatten:
 
-- Numerieke gegevenstypen: input 0 of max, indien van toepassing
-- Categorische gegevenstypen: input modal value
+- Numerieke gegevenstypen: invoer 0 of max, indien van toepassing
+- Categorische gegevenstypen: modale invoerwaarde
 
 ```python
 #### Select only numerical data
@@ -674,17 +674,17 @@ Na voltooiing zijn de schone gegevens gereed voor bivariumanalyse.
 
 Bivariate-analyse wordt gebruikt om inzicht te krijgen in de relatie tussen twee sets waarden, zoals de functies en een doelvariabele. Aangezien verschillende percelen betrekking hebben op categorieën en numerieke gegevenstypen, moet deze analyse voor elk gegevenstype afzonderlijk worden uitgevoerd. De volgende grafieken worden aanbevolen voor bivariumanalyse:
 
-- **Correlatie**: Een correlatiecoëfficiënt is de maat voor de sterkte van een relatie tussen twee eigenschappen. Correlatie heeft waarden tussen -1 en 1, waarbij: 1 wijst op een sterke positieve verhouding, -1 wijst op een sterke negatieve verhouding, en een resultaat van nul wijst op helemaal geen verhouding.
-- **Paarplot**: Paarten zijn een eenvoudige manier om relaties tussen elke variabele te visualiseren. Het produceert een matrijs van verhoudingen tussen elke variabele in de gegevens.
-- **Heatmap**: Heatmaps zijn de correlatiecoëfficiënt voor alle variabelen in de gegevensset.
-- **Vakpercelen**: De percelen van de doos zijn een gestandaardiseerde manier om gegevensdistributie te tonen die op een vijf aantalsamenvatting (minimum, eerste kwartiel (Q1), mediaan, derde kwartiel (Q3), en maximum) wordt gebaseerd.
-- **Telplot**: Een telplot is als een histogram of een staafgrafiek voor sommige categorische eigenschappen. Hier wordt het aantal exemplaren van een item weergegeven op basis van een bepaald type categorie.
+- **Correlatie**: Een correlatiecoëfficiënt is de maat van de sterkte van een verband tussen twee eigenschappen. De correlatie heeft waarden tussen -1 en 1, waar: 1 wijst op een sterke positieve verhouding, -1 wijst op een sterke negatieve verhouding, en een resultaat van nul wijst op helemaal geen verband.
+- **Paar plot**: De percelen van het paar zijn een eenvoudige manier om verhoudingen tussen elke variabele te visualiseren. Het produceert een matrijs van verhoudingen tussen elke variabele in de gegevens.
+- **Heatmap**: Heatmaps zijn de correlatiecoëfficiënt voor alle variabelen in de dataset.
+- **de percelen van de Doos**: De percelen van de doos zijn een gestandaardiseerde manier om gegevensdistributie te tonen die op een vijf aantalsamenvatting (minimum, eerste kwartiel (Q1), mediaan, derde kwartiel (Q3), en maximum) wordt gebaseerd.
+- **Grafiek van de Telling**: Een grafiekplot is als een histogram of een staafgrafiek voor sommige categoriale eigenschappen. Hier wordt het aantal exemplaren van een item weergegeven op basis van een bepaald type categorie.
 
 Om het verband tussen de &quot;doel&quot;variabele en de voorspellers/de eigenschappen te begrijpen, worden de grafieken gebruikt gebaseerd op datatypes. Voor numerieke eigenschappen, zou u een doosplot moeten gebruiken als de &quot;doel&quot;variabele categorisch is, evenals, een pairplot en een heatmap als de &quot;doel&quot;variabele numeriek is.
 
 Voor categorische eigenschappen, zou u een countplot moeten gebruiken als de &quot;doel&quot;variabele categorisch is, evenals, een kaderplot als de &quot;doel&quot;variabele numeriek is. Het gebruiken van deze methodes helpt met begrip van verhoudingen. Deze relaties kunnen de vorm aannemen van eigenschappen, of voorspellers en een doel.
 
-**Numerieke voorspellers**
+**Numerieke predikers**
 
 ```python
 if len(Data) == 1:
@@ -721,11 +721,11 @@ else:
 
 Als u de cel uitvoert, worden de volgende uitvoerbestanden gegenereerd:
 
-![percelen](../images/jupyterlab/eda/bivariant-graphs.png)
+![ percelen ](../images/jupyterlab/eda/bivariant-graphs.png)
 
-![heatmap](../images/jupyterlab/eda/bi-graph10.PNG)
+![ heatmap ](../images/jupyterlab/eda/bi-graph10.PNG)
 
-**Categorische voorspellers**
+**Categorische predikers**
 
 Het volgende voorbeeld wordt gebruikt om de frequentiepunten voor de bovenste tien categorieën van elke categoriale variabele te plotten en te bekijken.
 
@@ -763,7 +763,7 @@ else:
 
 Als u de cel uitvoert, wordt de volgende uitvoer geproduceerd:
 
-![categorierelatie](../images/jupyterlab/eda/categorical-predictor.PNG)
+![ categorieverhouding ](../images/jupyterlab/eda/categorical-predictor.PNG)
 
 ### Belangrijke numerieke functies
 
@@ -784,7 +784,7 @@ else:
     print(Imp_features)
 ```
 
-![belangrijke kenmerken](../images/jupyterlab/eda/important-feature-model.PNG)
+![ belangrijke eigenschappen ](../images/jupyterlab/eda/important-feature-model.PNG)
 
 ### Voorbeeld van inzicht
 
@@ -800,15 +800,15 @@ else:
     sns.lmplot("DAYS_SINCE_VISIT", "TOTAL_ORDER_REVENUE", Data, hue="TARGET", fit_reg=False);
 ```
 
-![voorbeeldinzicht](../images/jupyterlab/eda/insight.PNG)
+![ voorbeeldinzicht ](../images/jupyterlab/eda/insight.PNG)
 
 ## Optionele stap voor gegevensreiniging {#optional-data-clean}
 
 Het verbeteren van outliers vereist u om een inzicht in de zaken en de industrie te hebben u binnen werkt. Soms kun je een observatie niet neerzetten, alleen omdat het een uitbijter is. Uitschieters kunnen legitieme observaties zijn en zijn vaak de interessantste.
 
-Voor meer informatie over uitschieters en of ze moeten worden neergezet, leest u deze vermelding in het dialoogvenster [analysemethode](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
+Voor meer informatie over uitschieters en of om hen of niet te laten vallen, lees deze ingang van de [ analysemfactor ](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
 
-De volgende gegevenspunten van voorbeeldcellen en vloeren die outliers gebruiken [interkwartielbereik](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
+De volgende hoofdletters van voorbeeldcel en de punten van vloergegevens die uitschieters zijn gebruikend [ interkwartielwaaier ](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
 
 ```python
 TARGET = Data.TARGET
@@ -828,6 +828,6 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 ## Volgende stappen
 
-Nadat u uw verkennende gegevensanalyse hebt voltooid, bent u klaar om met het creëren van een model te beginnen. U kunt ook de gegevens en inzichten gebruiken die u hebt afgeleid om een dashboard te maken met gereedschappen zoals Power BI.
+Nadat u uw verkennende gegevensanalyse hebt voltooid, bent u bereid beginnen creërend een model. U kunt ook de gegevens en inzichten gebruiken die u hebt afgeleid om een dashboard te maken met gereedschappen zoals Power BI.
 
-Adobe Experience Platform scheidt het proces voor het maken van modellen in twee verschillende fasen: Recipes (een modelinstantie) en Modellen. Als u het proces voor het maken van het recept wilt starten, raadpleegt u de documentatie voor [een recept maken voor JupyerLab-laptops](./create-a-model.md). Dit document bevat informatie en voorbeelden voor het maken, opleiden en scoren van een recept in [!DNL JupyterLab] Laptops.
+Adobe Experience Platform scheidt het proces voor het maken van modellen in twee verschillende fasen: Recipes (een modelinstantie) en Modellen. Om met het proces van de recept verwezenlijking te beginnen, bezoek de documentatie voor [ creërend een recept in Notities JupyerLab ](./create-a-model.md). Dit document bevat informatie en voorbeelden voor het maken, trainen en scoren van een recept in [!DNL JupyterLab] -laptops.

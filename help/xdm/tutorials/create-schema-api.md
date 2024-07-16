@@ -7,47 +7,47 @@ description: Deze zelfstudie gebruikt de API voor schemaregistratie om u door de
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '2574'
+source-wordcount: '2569'
 ht-degree: 0%
 
 ---
 
-# Een schema maken met de opdracht [!DNL Schema Registry] API
+# Een schema maken met de API van [!DNL Schema Registry]
 
-De [!DNL Schema Registry] wordt gebruikt om toegang te krijgen tot [!DNL Schema Library] in Adobe Experience Platform. De [!DNL Schema Library] bevat middelen die door Adobe aan u ter beschikking worden gesteld, [!DNL Experience Platform] partners, en verkopers waarvan toepassingen u gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
+[!DNL Schema Registry] wordt gebruikt om [!DNL Schema Library] binnen Adobe Experience Platform te openen. [!DNL Schema Library] bevat middelen die aan u door Adobe, [!DNL Experience Platform] partners, en verkopers ter beschikking worden gesteld waarvan toepassingen u gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
 
-Deze zelfstudie gebruikt de [!DNL Schema Registry] API om u door de stappen te lopen om een schema samen te stellen gebruikend een standaardklasse. Als u liever de gebruikersinterface gebruikt in [!DNL Experience Platform]de [Zelfstudie Schema-editor](create-schema-ui.md) verstrekt geleidelijke instructies voor het uitvoeren van gelijkaardige acties in de schemaredacteur.
+Deze zelfstudie gebruikt de [!DNL Schema Registry] API om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse. Als u het gebruikersinterface in [!DNL Experience Platform] liever zou gebruiken, verstrekt het [ Zelfstudie van de Redacteur van het Schema ](create-schema-ui.md) geleidelijke instructies voor het uitvoeren van gelijkaardige acties in de schemaredacteur.
 
 >[!NOTE]
 >
->Als u CSV-gegevens in het Platform opgeeft, kunt u [kaart die gegevens aan een schema XDM dat door AI-Gegenereerde aanbevelingen wordt gecreeerd](../../ingestion/tutorials/map-csv/recommendations.md) (momenteel in bèta) zonder het schema zelf manueel te moeten creëren.
+>Als u CSV gegevens in Platform opneemt, kunt u [ kaart dat gegevens aan een XDM schema dat door AI-Gegenereerde aanbevelingen ](../../ingestion/tutorials/map-csv/recommendations.md) wordt gecreeerd (momenteel in bèta) zonder het moeten manueel het schema creëren zelf.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
-   * [Basisbeginselen van de schemacompositie](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
+   * [ Grondbeginselen van schemacompositie ](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-Lees voordat u deze zelfstudie start de [ontwikkelaarsgids](../api/getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan te maken [!DNL Schema Registry] API. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot; en de vereiste opschriften voor het indienen van aanvragen (met bijzondere aandacht voor de `Accept` en de mogelijke waarden ervan).
+Alvorens dit leerprogramma te beginnen, te herzien gelieve de [ ontwikkelaarsgids ](../api/getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan [!DNL Schema Registry] API met succes te maken. Dit omvat uw `{TENANT_ID}` , het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van aanvragen (met speciale aandacht voor de header `Accept` en de mogelijke waarden ervan).
 
-Deze zelfstudie doorloopt de stappen voor het samenstellen van een schema voor leden van Loyalty&#39;s dat gegevens beschrijft die betrekking hebben op de leden van een programma voor loyaliteit in de detailhandel. Voordat u begint, kunt u een voorvertoning weergeven van het dialoogvenster [Volledig schema voor leden van Loyalty](#complete-schema) in het aanhangsel.
+Deze zelfstudie doorloopt de stappen voor het samenstellen van een schema voor leden van Loyalty&#39;s dat gegevens beschrijft die betrekking hebben op de leden van een programma voor loyaliteit in de detailhandel. Alvorens te beginnen, kunt u aan voorproef het [ volledige schema van de Leden van de Loyalty ](#complete-schema) in het bijlage wensen.
 
 ## Een schema met een standaardklasse samenstellen
 
-Een schema kan worden beschouwd als de blauwdruk voor de gegevens waarin u wilt opnemen [!DNL Experience Platform]. Elk schema bestaat uit een klasse en nul of meer groepen schemavelden. Met andere woorden, u hoeft geen veldgroep toe te voegen om een schema te definiëren, maar in de meeste gevallen wordt ten minste één veldgroep gebruikt.
+Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u wilt invoeren in [!DNL Experience Platform] . Elk schema bestaat uit een klasse en nul of meer groepen schemavelden. Met andere woorden, u hoeft geen veldgroep toe te voegen om een schema te definiëren, maar in de meeste gevallen wordt ten minste één veldgroep gebruikt.
 
 ### Een klasse toewijzen
 
 Het proces van de schemacompositie begint met de selectie van een klasse. De klasse definieert de belangrijkste gedragsaspecten van de gegevens (record- versus tijdreeks) en de minimale velden die vereist zijn om de gegevens te beschrijven die worden ingevoerd.
 
-Het schema dat u in deze zelfstudie maakt, gebruikt de [!DNL XDM Individual Profile] klasse. [!DNL XDM Individual Profile] is een standaardklasse die door Adobe wordt verstrekt voor het bepalen van verslaggedrag. Meer informatie over gedrag vindt u in [grondbeginselen van de schemacompositie](../schema/composition.md).
+Het schema dat u in deze zelfstudie maakt, gebruikt de klasse [!DNL XDM Individual Profile] . [!DNL XDM Individual Profile] is een standaardklasse die door Adobe wordt verstrekt voor het bepalen van verslaggedrag. Meer informatie over gedrag kan in [ grondbeginselen van schemacompositie ](../schema/composition.md) worden gevonden.
 
 Om een klasse toe te wijzen, wordt een API vraag gemaakt om (POST) een nieuw schema in de huurderscontainer tot stand te brengen. Deze vraag omvat de klasse het schema zal uitvoeren. Elk schema mag slechts één klasse implementeren.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /tenant/schemas
@@ -55,7 +55,7 @@ POST /tenant/schemas
 
 **Verzoek**
 
-Het verzoek moet een `allOf` kenmerk dat verwijst naar het `$id` van een klasse. Dit attribuut bepaalt de &quot;basisklasse&quot;die het schema zal uitvoeren. In dit voorbeeld is de basisklasse de [!DNL XDM Individual Profile] klasse. De `$id` van de [!DNL XDM Individual Profile] wordt gebruikt als de waarde van de klasse `$ref` in het `allOf` array hieronder.
+De aanvraag moet een `allOf` -kenmerk bevatten dat naar de `$id` van een klasse verwijst. Dit attribuut bepaalt de &quot;basisklasse&quot;die het schema zal uitvoeren. In dit voorbeeld is de basisklasse de [!DNL XDM Individual Profile] -klasse. De `$id` van de [!DNL XDM Individual Profile] -klasse wordt gebruikt als de waarde van het `$ref` -veld in de onderstaande `allOf` -array.
 
 ```SHELL
 curl -X POST \
@@ -77,9 +77,9 @@ curl -X POST \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van het nieuwe schema, inclusief de `$id`, `meta:altIt`, en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry].
+Een geslaagde aanvraag retourneert HTTP Response Status 201 (Gemaakt) met een hoofdtekst van de reactie die de details bevat van het nieuwe schema, inclusief `$id`, `meta:altIt` en `version` . Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry] .
 
 ```JSON
 {
@@ -129,9 +129,9 @@ Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een ant
 
 ### Een schema opzoeken
 
-Voer een opzoekverzoek (GET) uit met het gereedschap `meta:altId` of de URL gecodeerd `$id` URI voor het schema.
+Als u het nieuwe schema wilt weergeven, voert u een opzoekaanvraag (GET) uit met de URI `meta:altId` of de URL-gecodeerde `$id` voor het schema.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /tenant/schemas/{SCHEMA_ID}
@@ -139,7 +139,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het schema dat u wilt opzoeken. |
+| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het schema dat u wilt opzoeken. |
 
 **Verzoek**
 
@@ -153,9 +153,9 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-**Antwoord**
+**Reactie**
 
-De responsindeling is afhankelijk van `Accept` koptekst die met de aanvraag is verzonden. Experimenteer met andere `Accept` kopteksten om te zien welke het beste aan uw behoeften voldoet.
+De antwoordindeling is afhankelijk van de header `Accept` die met de aanvraag is verzonden. Experimenteer met verschillende kopteksten in `Accept` om te zien welke het beste aan uw behoeften voldoen.
 
 ```JSON
 {
@@ -205,11 +205,11 @@ De responsindeling is afhankelijk van `Accept` koptekst die met de aanvraag is v
 
 Nu het schema Loyalty-leden is gemaakt en bevestigd, kunnen er veldgroepen aan worden toegevoegd.
 
-Er zijn verschillende standaardveldgroepen beschikbaar voor gebruik, afhankelijk van de geselecteerde schemaklasse. Elke veldgroep bevat een `intendedToExtend` veld dat de klasse(n) definieert waarmee die veldgroep compatibel is.
+Er zijn verschillende standaardveldgroepen beschikbaar voor gebruik, afhankelijk van de geselecteerde schemaklasse. Elke veldgroep bevat een `intendedToExtend` -veld dat de klasse(n) definieert waarmee die veldgroep compatibel is.
 
 Veldgroepen definiëren concepten, zoals &quot;naam&quot; of &quot;adres&quot;, die opnieuw kunnen worden gebruikt in elk schema dat dezelfde informatie moet vastleggen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /tenant/schemas/{SCHEMA_ID}
@@ -217,13 +217,13 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het schema waaraan u de veldgroep toevoegt. |
+| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het schema waaraan u de veldgroep toevoegt. |
 
 **Verzoek**
 
-Met dit verzoek wordt het schema Loyalty-leden bijgewerkt en worden de velden in het schema [[!UICONTROL Demographic Details] veldgroep](../field-groups/profile/demographic-details.md) (`profile-person-details`).
+Dit verzoek werkt het schema van de Leden van de Loyalty bij om de gebieden binnen de [[!UICONTROL Demographic Details] gebiedsgroep ](../field-groups/profile/demographic-details.md) (`profile-person-details`) te omvatten.
 
-Door de `profile-person-details` in de veldgroep legt het schema Loyalty-leden nu demografische informatie vast voor leden van het loyaliteitsprogramma, zoals hun voornaam, achternaam en geboortedatum.
+Door de `profile-person-details` gebiedsgroep toe te voegen, vangt het schema van de Leden van de Loyalty nu demografische informatie voor de leden van het loyaliteitsprogramma zoals hun voornaam, familienaam, en verjaardag.
 
 ```SHELL
 curl -X PATCH \
@@ -238,9 +238,9 @@ curl -X PATCH \
       ]'
 ```
 
-**Antwoord**
+**Reactie**
 
-In het antwoord wordt de nieuwe veldgroep weergegeven in de `meta:extends` array en bevat een `$ref` aan de veldgroep in de `allOf` kenmerk.
+In het antwoord wordt de zojuist toegevoegde veldgroep weergegeven in de array `meta:extends` en wordt een `$ref` weergegeven voor de veldgroep in het kenmerk `allOf` .
 
 ```JSON
 {
@@ -304,15 +304,14 @@ Voor de schema&#39;s van Loyalty-leden zijn nog twee standaardveldgroepen vereis
 
 >[!TIP]
 >
->Het is nuttig om alle beschikbare gebiedsgroepen te herzien om zich met de gebieden vertrouwd te maken inbegrepen in elk. U kunt (GET) alle gebiedsgroepen vermelden beschikbaar voor gebruik met een bepaalde klasse door een verzoek tegen elk van &quot;globale&quot;en &quot;huurder&quot;containers uit te voeren, die slechts die gebiedsgroepen terugkeren waar het &quot;meta:intendedToExtend&quot;gebied de klasse aanpast u gebruikt. In dit geval is het [!DNL XDM Individual Profile] klasse, dus [!DNL XDM Individual Profile] `$id` wordt gebruikt:
+>Het is nuttig om alle beschikbare gebiedsgroepen te herzien om zich met de gebieden vertrouwd te maken inbegrepen in elk. U kunt (GET) alle gebiedsgroepen vermelden beschikbaar voor gebruik met een bepaalde klasse door een verzoek tegen elk van &quot;globale&quot;en &quot;huurder&quot;containers uit te voeren, die slechts die gebiedsgroepen terugkeren waar het &quot;meta:intendedToExtend&quot;gebied de klasse aanpast u gebruikt. In dit geval is het de [!DNL XDM Individual Profile] -klasse, dus wordt [!DNL XDM Individual Profile] `$id` gebruikt:
 >
->
-```http
+>```http
 >GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 >GET /tenant/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 >```
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /tenant/schemas/{SCHEMA_ID}
@@ -320,14 +319,14 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het schema dat u bijwerkt. |
+| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het schema dat u bijwerkt. |
 
 **Verzoek**
 
 Met dit verzoek wordt het schema Loyalty-leden bijgewerkt en worden de velden in de volgende standaardveldgroepen opgenomen:
 
-* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`): Hiermee voegt u contactgegevens toe, zoals het adres van de woning, het e-mailadres en het telefoonnummer van de woning.
-* [[!UICONTROL Loyalty Details]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`): Hiermee voegt u contactgegevens toe, zoals het adres van de woning, het e-mailadres en het telefoonnummer van de woning.
+* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`): Voegt contactinformatie zoals huisadres, e-mailadres, en huistelefoon toe.
+* [[!UICONTROL Loyalty Details]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`): Voegt contactinformatie zoals huisadres, e-mailadres, en huistelefoon toe.
 
 ```SHELL
 curl -X PATCH \
@@ -343,11 +342,11 @@ curl -X PATCH \
       ]'  
 ```
 
-**Antwoord**
+**Reactie**
 
-In het antwoord worden de nieuwe veldgroepen weergegeven in het dialoogvenster `meta:extends` array en bevat een `$ref` aan de veldgroep in de `allOf` kenmerk.
+In het antwoord worden de zojuist toegevoegde veldgroepen weergegeven in de array `meta:extends` en wordt een `$ref` weergegeven voor de veldgroep in het kenmerk `allOf` .
 
-Het schema voor leden van de getrouwheid moet nu vier `$ref` waarden in de `allOf` array: `profile`, `profile-person-details`, `profile-personal-details`, en `profile-loyalty-details` zoals hieronder weergegeven.
+Het schema Loyalty-leden moet nu vier `$ref` -waarden in de `allOf` array: `profile` , `profile-person-details` , `profile-personal-details` en `profile-loyalty-details` bevatten, zoals hieronder wordt weergegeven.
 
 ```JSON
 {
@@ -421,15 +420,15 @@ Het schema voor leden van de getrouwheid moet nu vier `$ref` waarden in de `allO
 
 ### Een nieuwe veldgroep definiëren
 
-Terwijl de norm [!UICONTROL Loyalty Details] de gebiedsgroep verstrekt nuttige loyaliteits-verwante gebieden aan het schema, zijn er extra loyaliteitsgebieden die niet inbegrepen in om het even welke standaardgebiedsgroepen zijn.
+Hoewel de standaardveldgroep [!UICONTROL Loyalty Details] nuttige aan loyaliteit gerelateerde velden aan het schema biedt, zijn er aanvullende loyaliteitsvelden die niet in standaardveldgroepen zijn opgenomen.
 
-Als u deze velden wilt toevoegen, kunt u uw eigen aangepaste veldgroepen definiëren in het dialoogvenster `tenant` container. Deze veldgroepen zijn uniek voor uw organisatie en zijn niet zichtbaar of bewerkbaar voor iedereen buiten uw organisatie.
+Als u deze velden wilt toevoegen, kunt u uw eigen aangepaste veldgroepen definiëren in de container van `tenant` . Deze veldgroepen zijn uniek voor uw organisatie en zijn niet zichtbaar of bewerkbaar voor iedereen buiten uw organisatie.
 
-Als u een nieuwe veldgroep wilt maken (POSTEN), moet uw aanvraag een `meta:intendedToExtend` veld met de `$id` voor de basisklasse(n) waarmee de veldgroep compatibel is, samen met de eigenschappen die de veldgroep zal bevatten.
+Als u een nieuwe veldgroep wilt maken (POSTEN), moet uw aanvraag een `meta:intendedToExtend` -veld bevatten dat de `$id` bevat voor de basisklasse(n) waarmee de veldgroep compatibel is, samen met de eigenschappen die de veldgroep zal bevatten.
 
-Alle aangepaste eigenschappen moeten onder uw `TENANT_ID` om conflicten met andere veldgroepen of velden te voorkomen.
+Aangepaste eigenschappen moeten onder `TENANT_ID` worden genest om conflicten met andere veldgroepen of velden te voorkomen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /tenant/fieldgroups
@@ -437,7 +436,7 @@ POST /tenant/fieldgroups
 
 **Verzoek**
 
-Met deze aanvraag maakt u een nieuwe veldgroep met een `loyaltyTier` object dat vier specifieke gebieden van het specifieke loyaliteitsprogramma van een onderneming bevat: `id`, `effectiveDate`, `currentThreshold`, en `nextThreshold`.
+Met deze aanvraag wordt een nieuwe veldgroep gemaakt die een `loyaltyTier` -object bevat dat vier velden bevat die specifiek zijn voor het specifieke loyaliteitsprogramma van een bedrijf: `id` , `effectiveDate` , `currentThreshold` en `nextThreshold` .
 
 ```SHELL
 curl -X POST\
@@ -499,9 +498,9 @@ curl -X POST\
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van de nieuwe veldgroep, inclusief de `$id`, `meta:altIt`, en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry].
+Een geslaagde aanvraag retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van de nieuwe veldgroep, inclusief de `$id` , `meta:altIt` en `version` . Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry] .
 
 ```JSON
 {
@@ -589,9 +588,9 @@ Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een ant
 
 ### De aangepaste veldgroep toevoegen aan het schema
 
-U kunt nu dezelfde stappen uitvoeren voor [een standaardveldgroep toevoegen](#add-a-field-group) om deze nieuwe veldgroep aan uw schema toe te voegen.
+U kunt de zelfde stappen voor [ nu volgen toevoegend een standaardgebiedsgroep ](#add-a-field-group) om deze pas gecreëerde gebiedsgroep aan uw schema toe te voegen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /tenant/schemas/{SCHEMA_ID}
@@ -599,7 +598,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het schema. |
+| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het schema. |
 
 **Verzoek**
 
@@ -618,9 +617,9 @@ curl -X PATCH \
       ]'
 ```
 
-**Antwoord**
+**Reactie**
 
-U ziet dat de veldgroep is toegevoegd omdat in het antwoord nu de nieuwe veldgroep wordt weergegeven in het dialoogvenster `meta:extends` array en bevat een `$ref` aan de veldgroep in de `allOf` kenmerk.
+U ziet dat de veldgroep is toegevoegd omdat de reactie nu de nieuwe veldgroep in de array `meta:extends` weergeeft en een `$ref` aan de veldgroep in het kenmerk `allOf` bevat.
 
 ```JSON
 {
@@ -703,7 +702,7 @@ U ziet dat de veldgroep is toegevoegd omdat in het antwoord nu de nieuwe veldgro
 
 U kunt nu een verzoek van de GET uitvoeren om het huidige schema te bekijken en te zien hoe de toegevoegde gebiedsgroepen aan de algemene structuur van het schema hebben bijgedragen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /tenant/schemas/{SCHEMA_ID}
@@ -711,7 +710,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het schema. |
+| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het schema. |
 
 **Verzoek**
 
@@ -725,11 +724,11 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-full+json; version=1'
 ```
 
-**Antwoord**
+**Reactie**
 
-Met de `application/vnd.adobe.xed-full+json; version=1` `Accept` koptekst, kunt u het volledige schema zien die alle eigenschappen toont. Deze eigenschappen zijn de gebieden die door de klasse en de gebiedsgroepen worden bijgedragen die zijn gebruikt om het schema samen te stellen. In het onderstaande voorbeeldantwoord worden alleen de onlangs toegevoegde velden weergegeven voor de ruimte. U kunt het volledige schema, met inbegrip van alle eigenschappen en hun attributen, in bekijken [aanhangsel](#appendix) aan het einde van dit document.
+Door de header `application/vnd.adobe.xed-full+json; version=1` `Accept` te gebruiken, ziet u het volledige schema met alle eigenschappen. Deze eigenschappen zijn de gebieden die door de klasse en de gebiedsgroepen worden bijgedragen die zijn gebruikt om het schema samen te stellen. In het onderstaande voorbeeldantwoord worden alleen de onlangs toegevoegde velden weergegeven voor de ruimte. U kunt het volledige schema, met inbegrip van alle eigenschappen en hun attributen, in [ bijlage ](#appendix) aan het eind van dit document bekijken.
 
-Onder `"properties"`kunt u de `_{TENANT_ID}` naamruimte die is gemaakt toen u de aangepaste veldgroep toevoegde. Binnen die naamruimte bevindt zich de `loyaltyTier` -object en de velden die zijn gedefinieerd toen de veldgroep werd gemaakt.
+Onder `"properties"` ziet u de naamruimte `_{TENANT_ID}` die is gemaakt toen u de aangepaste veldgroep toevoegde. Binnen die naamruimte bevinden zich het `loyaltyTier` -object en de velden die zijn gedefinieerd toen de veldgroep werd gemaakt.
 
 ```JSON
 {
@@ -823,7 +822,7 @@ Met gegevenstypen kunt u één keer een objecthiërarchie definiëren en ernaar 
 
 Met andere woorden, staan de gegevenstypes voor het verenigbare gebruik van multi-gebiedsstructuren, met meer flexibiliteit dan gebiedsgroepen toe omdat zij overal in een schema kunnen worden omvat door hen als &quot;type&quot;van een gebied toe te voegen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /tenant/datatypes
@@ -831,7 +830,7 @@ POST /tenant/datatypes
 
 **Verzoek**
 
-Voor het definiëren van een gegevenstype is geen `meta:extends` of `meta:intendedToExtend` de gebieden, en de gebieden hoeven niet onder uw huurdersidentiteitskaart worden genest om botsingen te vermijden.
+Als u een gegevenstype definieert, hebt u geen velden `meta:extends` of `meta:intendedToExtend` nodig en hoeven de velden niet onder de gebruikers-id te zijn genest om conflicten te voorkomen.
 
 ```SHELL
 curl -X POST \
@@ -881,9 +880,9 @@ curl -X POST \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van het nieuwe gegevenstype, inclusief de `$id`, `meta:altIt`, en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry].
+Een geslaagde aanvraag retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van het nieuwe gegevenstype, inclusief `$id`, `meta:altIt` en `version` . Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry] .
 
 ```JSON
 {
@@ -956,13 +955,13 @@ Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een ant
 }
 ```
 
-U kunt een opzoekverzoek (GET) uitvoeren met de URL-codering `$id` URI om het nieuwe gegevenstype direct te bekijken. Zorg ervoor dat u de `version` in uw `Accept` header voor een opzoekverzoek.
+U kunt een opzoekverzoek (GET) uitvoeren met de URL-gecodeerde `$id` URI om het nieuwe gegevenstype rechtstreeks weer te geven. Zorg ervoor dat u de header `version` opneemt in de `Accept` -header voor een opzoekaanvraag.
 
 ### Gegevenstype gebruiken in schema
 
-Nu het gegevenstype Loyalty Tier is gemaakt, kunt u het gegevenstype (PATCH) bijwerken `loyaltyTier` in de veldgroep die u hebt gemaakt, wordt verwezen naar het gegevenstype in plaats van de velden die er voorheen waren.
+Nu het gegevenstype Loyalty Tier is gemaakt, kunt u het veld `loyaltyTier` in de veldgroep die u hebt gemaakt bijwerken (PATCH) en verwijzen naar het gegevenstype in plaats van de velden die er eerder waren.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
@@ -970,7 +969,7 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de veldgroep die moet worden bijgewerkt. |
+| `{FIELD_GROUP_ID}` | De `meta:altId` of URL gecodeerd `$id` van de veldgroep die moet worden bijgewerkt. |
 
 **Verzoek**
 
@@ -997,9 +996,9 @@ curl -X PATCH \
       ]'
 ```
 
-**Antwoord**
+**Reactie**
 
-Het antwoord bevat nu een verwijzing (`$ref`) naar het gegevenstype in de `loyaltyTier` in plaats van de eerder gedefinieerde velden.
+Het antwoord bevat nu een verwijzing (`$ref`) naar het gegevenstype in het `loyaltyTier` -object in plaats van de velden die eerder waren gedefinieerd.
 
 ```JSON
 {
@@ -1066,7 +1065,7 @@ Het antwoord bevat nu een verwijzing (`$ref`) naar het gegevenstype in de `loyal
 }
 ```
 
-Als u een verzoek van de GET om het schema nu te zoeken uitvoert, `loyaltyTier` eigenschap geeft de verwijzing naar het gegevenstype onder aan `meta:referencedFrom`:
+Als u een GET-verzoek uitvoert om het schema nu op te zoeken, geeft de eigenschap `loyaltyTier` de verwijzing naar het gegevenstype onder `meta:referencedFrom` weer:
 
 ```JSON
 "_{TENANT_ID}": {
@@ -1113,15 +1112,15 @@ Als u een verzoek van de GET om het schema nu te zoeken uitvoert, `loyaltyTier` 
 
 ### Een identiteitsdescriptor definiëren
 
-Schema&#39;s worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform]. Dit gegeven wordt uiteindelijk gebruikt over de veelvoudige diensten om één enkele, verenigde mening van een individu tot stand te brengen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;Identiteit&quot;worden gemerkt en, bij gegevensinvoer, worden de gegevens in die gebieden opgenomen in de Grafiek van de Identiteit voor dat individu. De grafiekgegevens zijn vervolgens toegankelijk via [[!DNL Real-Time Customer Profile]](../../profile/home.md) en andere [!DNL Experience Platform] de diensten om een verbonden mening van elke individuele klant te verstrekken.
+Schema&#39;s worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform] . Dit gegeven wordt uiteindelijk gebruikt over de veelvoudige diensten om één enkele, verenigde mening van een individu tot stand te brengen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;Identiteit&quot;worden gemerkt en, bij gegevensinvoer, worden de gegevens in die gebieden opgenomen in de Grafiek van de Identiteit voor dat individu. De grafiekgegevens kunnen vervolgens worden benaderd door [[!DNL Real-Time Customer Profile]](../../profile/home.md) en andere [!DNL Experience Platform] -services voor een aan elkaar gekoppelde weergave van elke afzonderlijke klant.
 
-Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM-id of andere unieke id-velden. Houd rekening met alle unieke id&#39;s die specifiek zijn voor uw organisatie, omdat dit ook goede identiteitsvelden kunnen zijn.
+Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonaantal, [[!DNL Experience Cloud ID (ECID)] ](https://experienceleague.adobe.com/docs/id-service/using/home.html), identiteitskaart van CRM, of andere unieke gebieden van identiteitskaart Houd rekening met alle unieke id&#39;s die specifiek zijn voor uw organisatie, omdat dit ook goede identiteitsvelden kunnen zijn.
 
-Identiteitsbeschrijvingen geven aan dat de `sourceProperty` van de `sourceSchema` is een unieke id die als een identiteit moet worden beschouwd.
+Identiteitsdescriptors geven aan dat de `sourceProperty` van de `sourceSchema` een unieke id is die als een identiteit moet worden beschouwd.
 
-Raadpleeg voor meer informatie over het werken met descriptoren de [Handleiding voor ontwikkelaars van het schema Register](../api/getting-started.md).
+Voor meer informatie bij het werken met beschrijvers, zie de [ de ontwikkelaarsgids van de Registratie van het Schema ](../api/getting-started.md).
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /tenant/descriptors
@@ -1129,7 +1128,7 @@ POST /tenant/descriptors
 
 **Verzoek**
 
-In het volgende verzoek wordt een identiteitsdescriptor gedefinieerd voor de `personalEmail.address` veld voor het schema Loyalty-leden. Dit vertelt [!DNL Experience Platform] het e-mailadres van het loyaliteitslid gebruiken als id om informatie over het individu te helpen samenvoegen. Deze vraag plaatst dit gebied ook als primaire identiteit voor het schema door te plaatsen `xdm:isPrimary` tot `true`, hetgeen een vereiste is voor [het toelaten van het schema voor gebruik in het Profiel van de Klant In real time](#profile).
+In het volgende verzoek wordt een identiteitsbeschrijving gedefinieerd in het veld `personalEmail.address` voor het schema Loyalty-leden. Dit vertelt [!DNL Experience Platform] om het e-mailadres van het loyaliteitslid als herkenningsteken te gebruiken helpen informatie over het individu verenigen. Deze vraag plaatst ook dit gebied als primaire identiteit voor het schema door `xdm:isPrimary` aan `true` te plaatsen, dat een vereiste voor [ toelatend het schema voor gebruik in het Profiel van de Klant in real time ](#profile) is.
 
 ```SHELL
 curl -X POST \
@@ -1152,11 +1151,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->U kunt beschikbare waarden voor &quot;xdm:namespace&quot; weergeven of nieuwe waarden maken met de opdracht [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). De waarde voor &quot;xdm:property&quot; kan &quot;xdm:code&quot; of &quot;xdm:id&quot; zijn, afhankelijk van de gebruikte &quot;xdm:namespace&quot;.
+>U kunt beschikbare &quot;xdm:namespace&quot;waarden een lijst maken, of nieuwe degenen creëren, gebruikend [[!DNL Identity Service API] ](https://www.adobe.io/experience-platform-apis/references/identity-service). De waarde voor &quot;xdm:property&quot; kan &quot;xdm:code&quot; of &quot;xdm:id&quot; zijn, afhankelijk van de gebruikte &quot;xdm:namespace&quot;.
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van de nieuwe descriptor, inclusief de bijbehorende `@id`. De `@id` is een alleen-lezen veld dat is toegewezen door de [!DNL Schema Registry] en wordt gebruikt voor het verwijzen naar de descriptor in de API.
+Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van de zojuist gemaakte descriptor, inclusief de `@id` . `@id` is een alleen-lezen veld dat door [!DNL Schema Registry] is toegewezen en wordt gebruikt voor het verwijzen naar de descriptor in de API.
 
 ```JSON
 {
@@ -1178,17 +1177,17 @@ Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) met een antwoordinst
 
 ## Schema inschakelen voor gebruik in [!DNL Real-Time Customer Profile] {#profile}
 
-Zodra het schema een primaire toegepaste identiteitsbeschrijver heeft, kunt u het schema van Leden Loyalty voor gebruik toelaten door [!DNL Real-Time Customer Profile] door een `union` aan de `meta:immutableTags` kenmerk.
+Wanneer op het schema een primaire identiteitsbeschrijving is toegepast, kunt u het schema Loyalty-leden voor gebruik door [!DNL Real-Time Customer Profile] inschakelen door een `union` -tag toe te voegen aan het `meta:immutableTags` -kenmerk.
 
 >[!NOTE]
 >
->Zie de sectie over [vakbonden](../api/unions.md) in de [!DNL Schema Registry] ontwikkelaarshandleiding.
+>Voor meer informatie bij het werken met vakbondsmeningen, zie de sectie over [ vakbonden ](../api/unions.md) in de [!DNL Schema Registry] ontwikkelaarsgids.
 
-### Voeg een `union` tag
+### Een tag `union` toevoegen
 
-Om een schema in de samengevoegde verenigingsmening te omvatten, `union` -tag moet worden toegevoegd aan de `meta:immutableTags` kenmerk van het schema. Dit wordt gedaan door een verzoek van de PATCH om het schema bij te werken en toe te voegen `meta:immutableTags` array met een waarde van `union`.
+Als u een schema wilt opnemen in de verenigingsweergave, moet de tag `union` worden toegevoegd aan het kenmerk `meta:immutableTags` van het schema. Dit gebeurt aan de hand van een PATCH-aanvraag om het schema bij te werken en een `meta:immutableTags` -array met de waarde `union` toe te voegen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /tenant/schemas/{SCHEMA_ID}
@@ -1196,7 +1195,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het schema u voor Profiel toelaat. |
+| `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het schema dat u inschakelt voor Profiel. |
 
 **Verzoek**
 
@@ -1213,9 +1212,9 @@ curl -X PATCH \
       ]'
 ```
 
-**Antwoord**
+**Reactie**
 
-De reactie toont aan dat de verrichting met succes werd uitgevoerd, en het schema bevat nu een top-level attribuut, `meta:immutableTags`Dit is een array met de waarde &quot;union&quot;.
+De reactie toont aan dat de bewerking is uitgevoerd en het schema bevat nu een kenmerk op hoofdniveau, `meta:immutableTags` , dat een array is met de waarde &#39;union&#39;.
 
 ```JSON
 {
@@ -1299,11 +1298,11 @@ De reactie toont aan dat de verrichting met succes werd uitgevoerd, en het schem
 
 ### Schema&#39;s weergeven in een union
 
-U hebt nu uw schema aan de [!DNL XDM Individual Profile] vakbond. Om een lijst van alle schema&#39;s te zien die een deel van de zelfde unie zijn, kunt u een verzoek uitvoeren van de GET gebruikend vraagparameters om de reactie te filtreren.
+Het schema is nu toegevoegd aan de samenvoeging van [!DNL XDM Individual Profile] . Om een lijst van alle schema&#39;s te zien die een deel van de zelfde unie zijn, kunt u een verzoek uitvoeren van de GET gebruikend vraagparameters om de reactie te filtreren.
 
-Met de `property` queryparameter, kunt u opgeven dat alleen schema&#39;s met een `meta:immutableTags` veld met een `meta:class` gelijk aan `$id` van de [!DNL XDM Individual Profile] worden geretourneerd.
+Met de query-parameter `property` kunt u opgeven dat alleen schema&#39;s worden geretourneerd die een `meta:immutableTags` -veld bevatten met een `meta:class` -waarde die gelijk is aan `$id` van de [!DNL XDM Individual Profile] -klasse.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLASS_ID}
@@ -1311,7 +1310,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **Verzoek**
 
-Het voorbeeldverzoek keert hieronder alle schema&#39;s terug die deel van zijn [!DNL XDM Individual Profile] vakbond.
+In het onderstaande voorbeeld worden alle schema&#39;s geretourneerd die deel uitmaken van de [!DNL XDM Individual Profile] union.
 
 ```SHELL
 curl -X GET \
@@ -1323,9 +1322,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Het antwoord is een gefilterde lijst van schema&#39;s die alleen schema&#39;s bevatten die aan beide eisen voldoen. Herinner dat wanneer het gebruiken van veelvoudige vraagparameters, EN verhouding wordt verondersteld. De indeling van de reactie in de lijst is afhankelijk van de `Accept` in de aanvraag verzonden.
+Het antwoord is een gefilterde lijst van schema&#39;s die alleen schema&#39;s bevatten die aan beide eisen voldoen. Herinner dat wanneer het gebruiken van veelvoudige vraagparameters, EN verhouding wordt verondersteld. De indeling van het antwoord op de lijst is afhankelijk van de `Accept` -header die in de aanvraag wordt verzonden.
 
 ```JSON
 {
@@ -1375,9 +1374,9 @@ Door deze zelfstudie te volgen, hebt u een schema samengesteld met gebruik van z
 
 Het volledige schema van de Leden van de Loyalty, zoals die door dit leerprogramma wordt gecreeerd, is beschikbaar in het bijlage dat volgt. Als u het schema bekijkt, kunt u zien hoe de veldgroepen bijdragen aan de algemene structuur en welke velden beschikbaar zijn voor gegevensinvoer.
 
-Zodra u meer dan één schema hebt gecreeerd, kunt u verhoudingen tussen hen door het gebruik van relatiebeschrijvers bepalen. Zie de zelfstudie voor [het bepalen van een verband tussen twee schema&#39;s](relationship-api.md) voor meer informatie . Voor gedetailleerde voorbeelden van hoe te om alle verrichtingen (GET, POST, PUT, PATCH, en DELETE) in het register uit te voeren, gelieve te verwijzen naar [Handleiding voor ontwikkelaars van het schema Register](../api/getting-started.md) terwijl u met de API werkt.
+Zodra u meer dan één schema hebt gecreeerd, kunt u verhoudingen tussen hen door het gebruik van relatiebeschrijvers bepalen. Zie het leerprogramma voor [ bepalend een verband tussen twee schema&#39;s ](relationship-api.md) voor meer informatie. Voor gedetailleerde voorbeelden van hoe te om alle verrichtingen (GET, POST, PUT, PATCH, en DELETE) in de registratie uit te voeren, gelieve te verwijzen naar de [ de ontwikkelaarsgids van de Registratie van het Schema ](../api/getting-started.md) terwijl het werken met API.
 
-## Aanhangsel {#appendix}
+## Bijlage {#appendix}
 
 De volgende informatie vormt een aanvulling op de API-zelfstudie.
 
@@ -1385,7 +1384,7 @@ De volgende informatie vormt een aanvulling op de API-zelfstudie.
 
 Door dit leerprogramma, wordt een schema samengesteld om de leden van een programma van de kleinhandelsloyaliteit te beschrijven.
 
-Het schema implementeert het [!DNL XDM Individual Profile] en combineert meerdere veldgroepen. Het vangt informatie over de loyaliteitsleden gebruikend de norm [!DNL Demographic Details], [!UICONTROL Personal Contact Details], en [!UICONTROL Loyalty Details] veldgroepen, alsmede via een aangepaste geldigheidsitegroep die tijdens de zelfstudie is gedefinieerd.
+Het schema implementeert de klasse [!DNL XDM Individual Profile] en combineert meerdere veldgroepen. Deze legt informatie over de loyaliteitsleden vast met behulp van de standaardveldgroepen [!DNL Demographic Details] , [!UICONTROL Personal Contact Details] en [!UICONTROL Loyalty Details] , alsmede via een aangepaste geldigheidslandgroep die tijdens de zelfstudie is gedefinieerd.
 
 In het volgende voorbeeld ziet u het voltooide schema Loyalty-leden in JSON-indeling:
 

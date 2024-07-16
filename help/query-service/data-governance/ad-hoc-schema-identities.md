@@ -11,28 +11,28 @@ ht-degree: 0%
 
 # Primaire id&#39;s instellen in een ad-hocgegevensset
 
-De Dienst van de Vraag van Adobe Experience Platform staat u toe om datasetkolommen als of primaire of secundaire identiteiten te merken gebruikend beperkingen voor SQL `ALTER TABLE` gebruiken. U kunt deze functie gebruiken om ervoor te zorgen dat gemarkeerde velden voldoen aan de privacyvereisten voor gegevens. Dit bevel staat u toe om beperkingen voor zowel primaire als secundaire kolommen van de identiteitslijst direct door SQL toe te voegen of te schrappen.
+Met Adobe Experience Platform Query Service kunt u gegevenssetkolommen markeren als primaire of secundaire identiteiten met behulp van beperkingen voor de SQL-opdracht `ALTER TABLE` . U kunt deze functie gebruiken om ervoor te zorgen dat gemarkeerde velden voldoen aan de privacyvereisten voor gegevens. Dit bevel staat u toe om beperkingen voor zowel primaire als secundaire kolommen van de identiteitslijst direct door SQL toe te voegen of te schrappen.
 
 ## Aan de slag
 
-De kolommen van de gegevensreeks van het etiket als primaire of secundaire identiteit vereisen een begrip van het `ALTER TABLE` SQL-opdracht en een goed begrip van de privacyvereisten voor gegevens. Lees de volgende documentatie voordat u doorgaat met dit document:
+Voor het labelen van gegevenssetkolommen als primaire of secundaire identiteit is een goed begrip van de SQL-opdracht van `ALTER TABLE` en van de privacyvereisten voor gegevens vereist. Lees de volgende documentatie voordat u doorgaat met dit document:
 
-* [De SQL-syntaxishandleiding voor de `ALTER TABLE` command](../sql/syntax.md).
-* [Overzicht van gegevensbeheer](../../data-governance/home.md) voor meer informatie .
+* [ de SQL syntaxisgids voor het `ALTER TABLE` bevel ](../sql/syntax.md).
+* [ het overzicht van het Beleid van Gegevens ](../../data-governance/home.md) voor meer informatie.
 
 ## Beperkingen toevoegen {#add-constraints}
 
-De `ALTER TABLE` staat u toe om een datasetkolom als identiteit van een persoon te etiketteren en dan dat etiket als primaire identiteit te gebruiken door de bijbehorende meta-gegevens bij te werken gebruikend SQL. Dit is vooral nuttig wanneer de datasets door SQL eerder dan direct van een schema door het Platform UI worden gecreeerd. De opdracht kan worden gebruikt om ervoor te zorgen dat uw gegevensbewerkingen in het Platform compatibel zijn met het beleid voor gegevensgebruik.
+Met de opdracht `ALTER TABLE` kunt u een gegevenssetkolom labelen als de identiteit van een persoon en dat label vervolgens gebruiken als een primaire identiteit door de bijbehorende metagegevens bij te werken met SQL. Dit is vooral nuttig wanneer de datasets door SQL eerder dan direct van een schema door Platform UI worden gecreeerd. De opdracht kan worden gebruikt om ervoor te zorgen dat uw gegevensbewerkingen in het Platform compatibel zijn met het beleid voor gegevensgebruik.
 
 **Voorbeelden**
 
-In het volgende voorbeeld wordt een beperking toegevoegd aan het bestaande `t1` tabel. De waarden van de `id` de kolom is nu gemarkeerd als primaire identiteiten onder de `IDFA` naamruimte. Een naamruimte van een identiteit is een trefwoord dat het type identiteitsgegevens declareert dat het veld vertegenwoordigt.
+In het volgende voorbeeld wordt een beperking toegevoegd aan de bestaande `t1` -tabel. De waarden van de kolom `id` worden nu gemarkeerd als primaire identiteiten onder de naamruimte `IDFA` . Een naamruimte van een identiteit is een trefwoord dat het type identiteitsgegevens declareert dat het veld vertegenwoordigt.
 
 ```sql
 ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
 ```
 
-Het tweede voorbeeld zorgt ervoor dat de `id` wordt gemarkeerd als een secundaire identiteit.
+Het tweede voorbeeld zorgt ervoor dat de kolom `id` als secundaire identiteit duidelijk is.
 
 ```sql
 ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
@@ -40,11 +40,11 @@ ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
 
 ## Beperkingen voor neerzetten {#drop-constraints}
 
-Restricties kunnen ook uit tabelkolommen worden verwijderd met de opdracht `ALTER TABLE` gebruiken.
+Restricties kunnen ook uit tabelkolommen worden verwijderd met de opdracht `ALTER TABLE` .
 
 **Voorbeelden**
 
-In het volgende voorbeeld wordt de vereiste dat de `c1` een primaire identiteit in de bestaande kolom `t1` tabel.
+In het volgende voorbeeld wordt de vereiste verwijderd dat de kolom `c1` een primaire identiteit in de bestaande `t1` -tabel krijgt.
 
 ```sql
 ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
@@ -58,7 +58,7 @@ ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 
 ## Identiteiten tonen
 
-De opdracht Metagegevens gebruiken `show identities` van de interface van de bevellijn om een lijst met elke attributen te tonen die als identiteit wordt toegewezen.
+Gebruik de opdracht Metagegevens `show identities` in de opdrachtregelinterface om een tabel weer te geven met alle kenmerken die als identiteit zijn toegewezen.
 
 ```shell
 > show identities;
@@ -76,6 +76,6 @@ Hieronder wordt een voorbeeld van een geretourneerde tabel weergegeven.
 
 In de volgende lijst worden belangrijke overwegingen beschreven voor het bijwerken van identiteiten in bestaande gegevenssets bij het gebruik van XDM.
 
-* Als u een kolom als een identiteit wilt opgeven, **moet** Definieer ook de naamruimte die als metagegevens voor de kolom moet worden behouden.
+* Om een kolom als identiteit te specificeren, moet u **** ook namespace bepalen die als meta-gegevens voor de kolom moet worden bewaard.
 * XDM ondersteunt het opgeven van een kolomnaam in het naamruimtekenmerk niet.
-* Als uw schema het `identityMap` XDM-veld, hoofdveld of hoofdniveau `identityMap` object **moet** als identiteit of primaire identiteit worden geëtiketteerd.
+* Als uw schema het `identityMap` XDM gebied gebruikt, moet het wortel of top-level `identityMap` voorwerp **** als identiteit of primaire identiteit worden geëtiketteerd.

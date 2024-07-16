@@ -1,5 +1,5 @@
 ---
-title: Personalisatie via Adobe Target
+title: Personalization via Adobe Target
 description: Leer hoe u de server-API gebruikt om persoonlijke ervaringen die in Adobe Target zijn gemaakt, te leveren en te renderen.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
 source-git-commit: ddffe9bf30741b457f7de1099b50ac1624fca927
@@ -9,29 +9,29 @@ ht-degree: 0%
 
 ---
 
-# Personalisatie via Adobe Target
+# Personalization via Adobe Target
 
 ## Overzicht {#overview}
 
-De Edge Network Server-API kan gepersonaliseerde ervaringen die in Adobe Target zijn gemaakt, met behulp van de [Formuliergebaseerde Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
+De server API van de Edge Network kan gepersonaliseerde ervaringen leveren en teruggeven die in Adobe Target, met de hulp van [ worden gecreeerd vorm-Gebaseerde Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
 >[!IMPORTANT]
 >
->Persoonlijke ervaringen die zijn gemaakt via de [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) niet volledig worden ondersteund door de server-API. De server-API kan **ophalen** activiteiten gemaakt door VEC, maar server API kan niet **renderen** door VEC gecreëerde activiteiten. Als u activiteiten wilt teruggeven die door VEC worden gecreeerd, gelieve uit te voeren [hybride personalisatie](../web-sdk/personalization/hybrid-personalization.md) het gebruiken van de SDK van het Web en de Server API van het Netwerk van Edge.
+>De ervaringen van Personalization die door [ worden gecreeerd Visual Experience Composer (VEC) ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) worden niet volledig gesteund door de Server API. De server API kan **** activiteiten terugwinnen die door VEC worden gecreeerd, maar de Server API kan **** activiteiten niet teruggeven die door VEC worden gecreeerd. Als u activiteiten wilt teruggeven die door VEC worden gecreeerd, gelieve [ hybride verpersoonlijking ](../web-sdk/personalization/hybrid-personalization.md) uit te voeren gebruikend het Web SDK en de Server API van de Edge Network.
 
 ## Uw gegevensstroom configureren {#configure-your-datastream}
 
 Voordat u de server-API in combinatie met Adobe Target kunt gebruiken, moet u Adobe Target-personalisatie in uw configuratie van de gegevensstroom inschakelen.
 
-Zie de [gids over het toevoegen van de diensten aan een gegevensstroom](../datastreams/overview.md#adobe-target-settings), voor gedetailleerde informatie over hoe Adobe Target kan worden ingeschakeld.
+Zie de [ gids bij het toevoegen van de diensten aan een datastream ](../datastreams/overview.md#adobe-target-settings), voor gedetailleerde informatie over hoe te om Adobe Target toe te laten.
 
-Bij het configureren van de gegevensstroom kunt u (optioneel) waarden opgeven voor [!DNL Property Token], [!DNL Target Environment ID], en [!DNL Target Third Party ID Namespace].
+Wanneer u de gegevensstroom configureert, kunt u (optioneel) waarden opgeven voor [!DNL Property Token] , [!DNL Target Environment ID] en [!DNL Target Third Party ID Namespace] .
 
-![UI-afbeelding die het configuratiescherm van de datastream-service weergeeft, waarbij Adobe Target is geselecteerd](assets/target-datastream.png)
+![ beeld UI die het scherm van de de dienstconfiguratie van de gegevensstroom toont, met Adobe Target selecteerde ](assets/target-datastream.png)
 
 ## Aangepaste parameters {#custom-parameters}
 
-De meeste velden in de [!DNL XDM] deel van elk verzoek wordt geserialiseerd in puntnotatie en dan verzonden naar Doel als douane of [!DNL mbox] parameters.
+De meeste velden in het [!DNL XDM] -gedeelte van elke aanvraag worden geserialiseerd in puntnotatie en vervolgens verzonden naar Target als aangepaste of [!DNL mbox] -parameters.
 
 
 ### Voorbeeld {#custom-parameters-example}
@@ -56,7 +56,7 @@ Bij het maken van doelgroepen zijn de volgende waarden beschikbaar als aangepast
 
 ## Updates van doelprofiel {#profile-update}
 
-De [!DNL Server API] Hiermee kunt u het doelprofiel bijwerken. Als u een doelprofiel wilt bijwerken, moet u ervoor zorgen dat de profielgegevens worden doorgegeven in het dialoogvenster `data` deel van het verzoek in het volgende formaat:
+Met [!DNL Server API] kunt u updates uitvoeren naar het doelprofiel. Als u een doelprofiel wilt bijwerken, moet u ervoor zorgen dat de profielgegevens worden doorgegeven in het `data` -gedeelte van de aanvraag in de volgende indeling:
 
 ```json
 "data":  {
@@ -71,26 +71,26 @@ De [!DNL Server API] Hiermee kunt u het doelprofiel bijwerken. Als u een doelpro
 
 ### Schema&#39;s {#schemas}
 
-Het vraaggedeelte van het verzoek bepaalt welke inhoud door Doel is teruggekeerd. Onder de `personalization` object, `schemas` bepaalt het type inhoud dat door Doel moet worden geretourneerd.
+Het vraaggedeelte van het verzoek bepaalt welke inhoud door Doel is teruggekeerd. Onder het `personalization` -object bepaalt `schemas` het type inhoud dat door Target moet worden geretourneerd.
 
-In situaties waar u van welke soort aanbiedingen onzeker bent u zult terugwinnen, zou u alle vier schema&#39;s in uw verpersoonlijkingsvraag aan het Netwerk van de Rand moeten omvatten:
+In situaties waar u van welke soort aanbiedingen onzeker bent u zult terugwinnen, zou u alle vier schema&#39;s in uw verpersoonlijkingsvraag aan de Edge Network moeten omvatten:
 
-* **Op HTML gebaseerde aanbiedingen:**
+* **op HTML-Gebaseerde aanbiedingen:**
 https://ns.adobe.com/personalization/html-content-item
-* **Op JSON gebaseerde aanbiedingen:**
+* **op JSON-Gebaseerde aanbiedingen:**
 https://ns.adobe.com/personalization/json-content-item
-* **Doelgerichte omleiding**
+* **Redirect aanbiedingen van het Doel**
 https://ns.adobe.com/personalization/redirect-item
-* **Aanbiedingen voor DOM-manipulatie**
+* **DOM van het Doel Manipulation aanbiedingen**
 https://ns.adobe.com/personalization/dom-action
 
 ### Beslissingsbereik {#decision-scopes}
 
-Adobe Target [!DNL mbox] de namen moeten worden opgenomen in de `decisionScopes` -array om de juiste inhoud te retourneren.
+Adobe Target [!DNL mbox] -namen moeten in de `decisionScopes` -array worden opgenomen om de juiste inhoud te retourneren.
 
 #### Voorbeeld {#decision-scopes-example}
 
-In het onderstaande voorbeeld worden alle vier de aanbiedingstypen opgevraagd samen met een doelactiviteit die wordt aangeroepen `serverapimbox`.
+In het onderstaande voorbeeld worden alle vier de aanbiedingstypen opgevraagd, samen met een doelactiviteit met de naam `serverapimbox` .
 
 ```json
 "query":{
@@ -110,7 +110,7 @@ In het onderstaande voorbeeld worden alle vier de aanbiedingstypen opgevraagd sa
 
 ## API-aanroepvoorbeeld {#api-example}
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /ee/v2/interact
@@ -199,7 +199,7 @@ curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### Antwoord {#response}
 
-Het Edge-netwerk retourneert een vergelijkbare reactie als hieronder.
+De Edge Network zal een reactie teruggeven gelijkend op hieronder.
 
 ```json
 {
@@ -270,9 +270,9 @@ Het Edge-netwerk retourneert een vergelijkbare reactie als hieronder.
 }
 ```
 
-Als de bezoeker in aanmerking komt voor een verpersoonlijkingsactiviteit op basis van de gegevens die naar Adobe Target zijn verzonden, wordt de relevante activiteiteninhoud gevonden onder de `handle` object, waarbij het type `personalization:decisions`.
+Als de bezoeker in aanmerking komt voor een verpersoonlijkingsactiviteit op basis van de gegevens die naar Adobe Target zijn verzonden, wordt de relevante activiteitsinhoud gevonden onder het `handle` -object, waarbij het type `personalization:decisions` is.
 
-Andere inhoud wordt soms geretourneerd onder `handle` ook. Andere inhoudstypen zijn niet relevant voor de doelpersonalisatie. Als de bezoeker in aanmerking komt voor meerdere activiteiten, wordt elke activiteit afzonderlijk uitgevoerd `personalization` -object in de array.
+Andere inhoud wordt soms ook onder `handle` geretourneerd. Andere inhoudstypen zijn niet relevant voor de doelpersonalisatie. Als de bezoeker voor meerdere activiteiten in aanmerking komt, wordt elke activiteit een afzonderlijk `personalization` -object in de array.
 
 In de onderstaande tabel worden de belangrijkste elementen van dat gedeelte van het antwoord uitgelegd.
 
@@ -290,6 +290,6 @@ In de onderstaande tabel worden de belangrijkste elementen van dat gedeelte van 
 
 ## Voorbeeld van personalisatie aan de serverzijde {#sample}
 
-De voorbeeldtoepassing is gevonden op [deze URL](https://github.com/adobe/alloy-samples/tree/main/target/personalization-server-side) demonstreert het gebruik van Adobe Experience Platform om personalisatie-inhoud van Adobe Target te krijgen. De webpagina verandert op basis van de geretourneerde personalisatie-inhoud.
+De steekproeftoepassing die bij [ wordt gevonden dit URL ](https://github.com/adobe/alloy-samples/tree/main/target/personalization-server-side) toont het gebruiken van Adobe Experience Platform aan om verpersoonlijkingsinhoud van Adobe Target te krijgen. De webpagina verandert op basis van de geretourneerde personalisatie-inhoud.
 
-Dit voorbeeld _niet_ vertrouwen op client-side bibliotheken zoals de [!DNL Web SDK] om personalisatie-inhoud te krijgen. In plaats daarvan worden de Adobe Experience Platform API&#39;s gebruikt om personalisatie-inhoud op te halen. Dan produceert de implementatie de HTML server-kant die op de teruggekeerde verpersoonlijkingsinhoud wordt gebaseerd.
+Deze steekproef baseert zich _niet_ op cliënt-zijbibliotheken zoals [!DNL Web SDK] om verpersoonlijkingsinhoud te krijgen. In plaats daarvan worden de Adobe Experience Platform API&#39;s gebruikt om personalisatie-inhoud op te halen. Dan produceert de implementatie de HTML server-kant die op de teruggekeerde verpersoonlijkingsinhoud wordt gebaseerd.

@@ -16,15 +16,15 @@ ht-degree: 49%
 # Geavanceerd levenscyclusbeheer van gegevens {#data-lifecycle}
 
 * [Overzicht van geavanceerd gegevenslevenscyclusbeheer](./home.md)
-* UI van gegevenslevenscyclus {#ui}
+* Interface voor gegevenslevenscyclus {#ui}
    * [Overzicht](./ui/overview.md)
    * [Verlopen van geautomatiseerde gegevenssets](./ui/dataset-expiration.md)
-   * [(bèta) Records verwijderen](./ui/record-delete.md)
+   * [(Beta) Records verwijderen](./ui/record-delete.md)
    * [Zoeken naar werkorders tijdens de gegevenslevenscyclus](./ui/browse.md)
 * API voor gegevenshygiëne {#api}
    * [Overzicht](./api/overview.md)
    * [Verlopen gegevensset](./api/dataset-expiration.md)
    * [Opnemen wordt verwijderd](./api/jobs.md)
-   * [(bèta) Record wordt verwijderd](./api/workorder.md)
+   * [(Beta) Record wordt verwijderd](./api/workorder.md)
    * [Quota](./api/quota.md)
 * [Best practices](./best-practices.md)

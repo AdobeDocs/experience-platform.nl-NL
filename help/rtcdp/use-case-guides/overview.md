@@ -2,7 +2,8 @@
 title: Gebruiksscenario's in Real-Time CDP
 description: Bekijk voorbeelden van gebruiksgevallen voor verschillende services om optimaal gebruik te maken van uw Real-Time CDP-implementatie.
 feature: Use Cases
-source-git-commit: a58476e0a52cce763a114b2b4f4314fdb2e3f4c9
+exl-id: 2d92a9d3-7648-4241-904e-48f5b2e16023
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -35,11 +36,11 @@ De voorbeelden van het steekproefgebruik kunnen in klantenverwerving en profielv
     </a>
     <div>
       <a href="../partner-data/prospecting.md">
-    <strong>Nieuwe klant aanschaffen</strong>
+    <strong> Nieuwe klantenverwerving </strong>
     </a>
     </div>
     <p>
-    <em>Nieuwe klanten aantrekken en aanschaffen zonder afhankelijk te zijn van cookies van derden</em>
+    <em> neemt en verwerft nieuwe klanten zonder gebiedsdeel op derdekoekjes </em> aan
     <p>
   </td>
   <td>
@@ -48,11 +49,11 @@ De voorbeelden van het steekproefgebruik kunnen in klantenverwerving en profielv
     </a>
     <div>
       <a href="../partner-data/onsite-personalization.md">
-    <strong>Onsite personalisatie</strong>
+    <strong> Onsite verpersoonlijking </strong>
     </a>
     </div>
     <p>
-    <em>Onsite ervaringen voor onbekende bezoekers personaliseren met de erkenning van bezoekers met hulp van partners</em>
+    <em> Personaliseer onsite ervaringen voor onbekende bezoekers gebruikend partner-gesteunde bezoekerserkenning </em>
     <p>
   </td>
   <td>
@@ -61,11 +62,11 @@ De voorbeelden van het steekproefgebruik kunnen in klantenverwerving en profielv
     </a>
     <div>
       <a href="../partner-data/offsite-retargeting.md">
-    <strong>Offsite opnieuw oprichten van niet-geverifieerde bezoekers</strong>
+    <strong> Offsite het opnieuw samenbrengen van Niet voor authentiek verklaarde Bezoekers </strong>
     </a>
     </div>
     <p>
-    <em>Leer hoe u een publiek van niet-geverifieerde bezoekers kunt maken en deze opnieuw kunt richten met behulp van door de partner geleverde duurzame id's.</em>
+    <em> Leer hoe te om een publiek van niet voor authentiek verklaarde bezoekers te bouwen en hen opnieuw te richten gebruikend partner verstrekte duurzame IDs.</em>
     <p>
   </td>
   </tr>
@@ -81,17 +82,17 @@ De voorbeelden van het steekproefgebruik kunnen in klantenverwerving en profielv
     </a>
     <div>
       <a href="../partner-data/supplement-first-party-profiles.md">
-    <strong>Voeg eerste-partijprofielen met partner-verstrekte attributen toe</strong>
+    <strong> Supplement eerste-partijprofielen met partner-verstrekte attributen </strong>
     </a>
     </div>
     <p>
-    <em>Voeg eerst-partijprofielen met attributen van vertrouwde op gegevenspartners toe om uw gegevensstichting te verbeteren, nieuwe inzichten in uw klantenbasis, en betere publieksoptimalisering te bereiken.</em>
+    <em> Supplement eerste-partijprofielen met attributen van vertrouwde op gegevenspartners om uw gegevensstichting te verbeteren, nieuwe inzichten in uw klantenbasis, en betere publieksoptimalisering te verkrijgen.</em>
     <p>
   </td>
   </tr>
   </table>
 
-## Personalisatie, inzichten, betrokkenheid {#personalization-insights-engagement}
+## Personalization, inzichten, betrokkenheid {#personalization-insights-engagement}
 
 <table style="margin-top: 0 !important">
 <tr>
@@ -101,11 +102,11 @@ De voorbeelden van het steekproefgebruik kunnen in klantenverwerving en profielv
     </a>
     <div>
       <a href="../partner-data/prospecting.md">
-    <strong>Intelligente re-engagement</strong>
+    <strong> Intelligente re-engagement </strong>
     </a>
     </div>
     <p>
-    <em>Neem klanten opnieuw in dienst die een omzetting op een intelligente en verantwoordelijke manier hebben verlaten. Verloren klanten met ervaringen aantrekken om de conversie te verhogen en de waarde van de levensduur van de client te verhogen.</em>
+    <em> herhaal klanten die een omzetting op een intelligente en verantwoordelijke manier hebben verlaten. Moed klanten met ervaring aan om omzetting te verhogen en de waarde van het cliëntleven te verhogen.</em>
     <p>
   </td>
   </tr>

@@ -26,65 +26,65 @@ Adobe Experience Platform biedt een groot aantal standaardveldgroepen die een gr
 
 ## Vereisten {#prerequisites}
 
-Deze handleiding vereist een goed begrip van XDM System. Zie de [XDM-overzicht](../../home.md) voor een inleiding op de rol van XDM binnen het ecosysteem van het Experience Platform, en [grondbeginselen van de schemacompositie](../../schema/composition.md) voor hoe de gebiedsgroepen aan schema&#39;s XDM bijdragen.
+Deze handleiding vereist een goed begrip van XDM System. Verwijs naar het [ XDM overzicht ](../../home.md) voor een inleiding aan de rol van XDM binnen het Experience Platform ecosysteem, en de [ grondbeginselen van schemacompositie ](../../schema/composition.md) voor hoe de gebiedsgroepen tot XDM schema&#39;s bijdragen.
 
-Hoewel dit niet nodig is voor deze handleiding, wordt u aangeraden de zelfstudie ook op te volgen [samenstellen van een schema in UI](../../tutorials/create-schema-ui.md) om vertrouwd te maken met de verschillende mogelijkheden van de [!DNL Schema Editor].
+Terwijl niet vereist voor deze gids, wordt het geadviseerd dat u ook het leerprogramma volgt op [ samenstellend een schema in UI ](../../tutorials/create-schema-ui.md) om zich met de diverse mogelijkheden van [!DNL Schema Editor] vertrouwd te maken.
 
 ## Een nieuwe veldgroep maken {#create}
 
-Als u een nieuwe veldgroep wilt maken, moet u eerst een schema selecteren waaraan de veldgroep wordt toegevoegd. U kunt ervoor kiezen [een nieuw schema maken](./schemas.md#create) of [een bestaand schema selecteren om te bewerken](./schemas.md#edit).
+Als u een nieuwe veldgroep wilt maken, moet u eerst een schema selecteren waaraan de veldgroep wordt toegevoegd. U kunt verkiezen om [ een nieuw schema ](./schemas.md#create) tot stand te brengen of [ een bestaand schema selecteren om uit te geven ](./schemas.md#edit).
 
-Als u het schema eenmaal hebt geopend in het dialoogvenster [!DNL Schema Editor], selecteert u **[!UICONTROL Add]** naast de [!UICONTROL Field groups] in het linkerspoor.
+Als u het schema hebt geopend in de [!DNL Schema Editor] , selecteert u **[!UICONTROL Add]** naast de [!UICONTROL Field groups] -sectie in de linkertrack.
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-Selecteer in het dialoogvenster dat verschijnt **[!UICONTROL Create new field group]**. Hier kunt u een **[!UICONTROL Display name]** en **[!UICONTROL Description]** voor de veldgroep. Selecteer **[!UICONTROL Add field groups]**.
+Selecteer **[!UICONTROL Create new field group]** in het dialoogvenster dat wordt weergegeven. Hier kunt u een **[!UICONTROL Display name]** en **[!UICONTROL Description]** opgeven voor de veldgroep. Selecteer **[!UICONTROL Add field groups]** als u klaar bent.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
-De [!DNL Schema Editor] komt opnieuw voor, met de nieuwe veldgroep die in de linkerspoorlijn wordt vermeld. Aangezien dit een gloednieuwe veldgroep is, biedt deze momenteel geen velden aan het schema en blijft het canvas daarom ongewijzigd. U kunt nu beginnen [velden toevoegen aan de veldgroep](#add-fields).
+De lus [!DNL Schema Editor] verschijnt weer, terwijl de nieuwe veldgroep in de linkertrack wordt weergegeven. Aangezien dit een gloednieuwe veldgroep is, biedt deze momenteel geen velden aan het schema en blijft het canvas daarom ongewijzigd. U kunt [ nu beginnen toevoegend gebieden aan de gebiedsgroep ](#add-fields).
 
 ![](../../images/ui/resources/field-groups/field-group-added.png)
 
 ## Veldgroepen filteren {#filter}
 
-De lijst met beschikbare veldgroepen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Met de standaardinstelling worden de veldgroepen weergegeven die door Adobe worden gedefinieerd. Nochtans, kunt u de lijst ook filtreren om die te tonen die door uw organisatie worden gecreeerd. Selecteer het keuzerondje dat u wilt kiezen tussen de [!UICONTROL Standard] en [!UICONTROL Custom] opties. De [!UICONTROL Standard] toont entiteiten die zijn gemaakt door Adobe en de optie [!UICONTROL Custom] geeft entiteiten weer die binnen uw organisatie zijn gemaakt.
+De lijst met beschikbare veldgroepen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Met de standaardinstelling worden de veldgroepen weergegeven die door Adobe worden gedefinieerd. Nochtans, kunt u de lijst ook filtreren om die te tonen die door uw organisatie worden gecreeerd. Selecteer het keuzerondje dat u wilt kiezen tussen de opties [!UICONTROL Standard] en [!UICONTROL Custom] . De optie [!UICONTROL Standard] toont entiteiten die zijn gemaakt door Adobe en de optie [!UICONTROL Custom] geeft entiteiten weer die binnen uw organisatie zijn gemaakt.
 
-![De [!UICONTROL Field groups] tabblad van het [!UICONTROL Schemas] werkruimte met [!UICONTROL Standard] en [!UICONTROL Custom] gemarkeerd.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+![ het [!UICONTROL Field groups] lusje van de [!UICONTROL Schemas] werkruimte met [!UICONTROL Standard] en [!UICONTROL Custom] benadrukte.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## Een bestaande veldgroep bewerken {#edit}
 
 >[!NOTE]
 >
->Alleen aangepaste veldgroepen die door uw organisatie zijn gedefinieerd, kunnen volledig worden bewerkt en aangepast. Voor de belangrijkste veldgroepen die door Adobe worden gedefinieerd, kunnen alleen de weergavenamen voor de bijbehorende velden worden bewerkt binnen de context van de afzonderlijke schema&#39;s. Ze worden in de Schema-editor aangeduid met een hangslotpictogram (![Een hangslotpictogram.](../../images/ui/explore/padlock-icon.png)). Zie de sectie over [weergavenamen voor schemavelden bewerken](./schemas.md#display-names) voor meer informatie.
+>Alleen aangepaste veldgroepen die door uw organisatie zijn gedefinieerd, kunnen volledig worden bewerkt en aangepast. Voor de belangrijkste veldgroepen die door Adobe worden gedefinieerd, kunnen alleen de weergavenamen voor de bijbehorende velden worden bewerkt binnen de context van de afzonderlijke schema&#39;s. Zij worden vermeld in de Redacteur van het Schema door een hangslotpictogram (![ A hangslotpictogram.](../../images/ui/explore/padlock-icon.png)). Zie de sectie op [ het uitgeven vertoningsnamen voor schemagebieden ](./schemas.md#display-names) voor details.
 >
->Nadat een aangepaste veldgroep is opgeslagen en in een schema voor gegevensinvoer is gebruikt, kunnen daarna alleen additieve wijzigingen in de veldgroep worden aangebracht. Zie de [regels voor schemaontwikkeling](../../schema/composition.md#evolution) voor meer informatie .
+>Nadat een aangepaste veldgroep is opgeslagen en in een schema voor gegevensinvoer is gebruikt, kunnen daarna alleen additieve wijzigingen in de veldgroep worden aangebracht. Zie de [ regels van schemaevolutie ](../../schema/composition.md#evolution) voor meer informatie.
 
-Als u een bestaande veldgroep wilt bewerken, moet u eerst een schema openen waarin de veldgroep in het dialoogvenster [!DNL Schema Editor]. U kunt [een bestaand schema selecteren om te bewerken](./schemas.md#edit)of u kunt [een nieuw schema maken](./schemas.md#create) en voeg de veldgroep in kwestie toe.
+Als u een bestaande veldgroep wilt bewerken, moet u eerst een schema openen waarin de veldgroep in de [!DNL Schema Editor] wordt gebruikt. U kunt [ een bestaand schema selecteren om uit te geven ](./schemas.md#edit), of u kunt [ een nieuw schema ](./schemas.md#create) tot stand brengen en de gebiedsgroep in kwestie toevoegen.
 
-Zodra u het schema in de redacteur hebt geopend, kunt u beginnen [velden toevoegen aan de veldgroep](#add-fields).
+Zodra u het schema open in de redacteur hebt, kunt u [ beginnen toevoegend gebieden aan de gebiedsgroep ](#add-fields).
 
 ## Velden toevoegen aan een veldgroep {#add-fields}
 
 >[!NOTE]
 >
->Deze sectie richt zich op het toevoegen van velden aan aangepaste veldgroepen. Voor informatie over het toevoegen van aangepaste velden aan standaardveldgroepen raadpleegt u de [UI-hulplijn voor schema&#39;s](./schemas.md#custom-fields-for-standard-groups).
+>Deze sectie richt zich op het toevoegen van velden aan aangepaste veldgroepen. Voor informatie over hoe te om douanegebieden aan standaardgebiedsgroepen toe te voegen, verwijs naar de [ schema&#39;s UI gids ](./schemas.md#custom-fields-for-standard-groups).
 
-Als u velden wilt toevoegen aan een aangepaste veldgroep, selecteert u eerst de optie **plus (+)** op het canvas naast de naam van het schema.
+Om gebieden aan een groep van het douanegebied toe te voegen, begin door **plus (+) te selecteren** pictogram naast de naam van het schema in het canvas.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-An **[!UICONTROL Untitled Field]** wordt de tijdelijke aanduiding weergegeven in het canvas en wordt de rechterrails bijgewerkt om besturingselementen weer te geven waarmee de eigenschappen van het veld worden geconfigureerd. Zie de handleiding op [velden definiëren in de gebruikersinterface](../fields/overview.md#define) voor specifieke stappen op hoe te om verschillende gebiedstypes te vormen.
+Er verschijnt een tijdelijke aanduiding **[!UICONTROL Untitled Field]** in het canvas en de rechterrails worden bijgewerkt om besturingselementen weer te geven waarmee de eigenschappen van het veld worden geconfigureerd. Zie de gids op [ definiërend gebieden in UI ](../fields/overview.md#define) voor specifieke stappen op hoe te om verschillende gebiedstypes te vormen.
 
-Onder **[!UICONTROL Assign to]**, selecteert u de **[!UICONTROL Field Group]** gebruikt u vervolgens het vervolgkeuzemenu om de gewenste veldgroep in de lijst te selecteren. U kunt beginnen in naam van de gebiedsgroep in te typen om benedenresultaten te beperken.
-
-![](../../images/ui/resources/field-groups/select-field-group.png)
-
-Onder **[!UICONTROL Assign to]**, selecteert u de **[!UICONTROL Field Group]** gebruikt u vervolgens het vervolgkeuzemenu om de gewenste veldgroep in de lijst te selecteren. U kunt beginnen in naam van de gebiedsgroep in te typen om benedenresultaten te beperken.
+Selecteer onder **[!UICONTROL Assign to]** de optie **[!UICONTROL Field Group]** en gebruik vervolgens het vervolgkeuzemenu om de gewenste veldgroep in de lijst te selecteren. U kunt beginnen in naam van de gebiedsgroep in te typen om benedenresultaten te beperken.
 
 ![](../../images/ui/resources/field-groups/select-field-group.png)
 
-Nadat het veld aan het schema is toegevoegd, wordt het toegewezen aan de geselecteerde veldgroep. Voeg zo veel velden toe aan de veldgroep. Selecteer **[!UICONTROL Save]** om zowel het schema als de veldgroep op te slaan.
+Selecteer onder **[!UICONTROL Assign to]** de optie **[!UICONTROL Field Group]** en gebruik vervolgens het vervolgkeuzemenu om de gewenste veldgroep in de lijst te selecteren. U kunt beginnen in naam van de gebiedsgroep in te typen om benedenresultaten te beperken.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+Nadat het veld aan het schema is toegevoegd, wordt het toegewezen aan de geselecteerde veldgroep. Voeg zo veel velden toe aan de veldgroep. Als u klaar bent, selecteert u **[!UICONTROL Save]** om zowel het schema als de veldgroep op te slaan.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 
@@ -92,6 +92,6 @@ Als dezelfde veldgroep al in andere schema&#39;s wordt gebruikt, worden de toege
 
 ## Volgende stappen {#next-steps}
 
-In deze handleiding wordt beschreven hoe u veldgroepen kunt maken en bewerken met behulp van de interface van het platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie de [[!UICONTROL Schemas] werkruimte - overzicht](../overview.md).
+In deze handleiding wordt beschreven hoe u veldgroepen kunt maken en bewerken met behulp van de interface van het platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie het [[!UICONTROL Schemas] overzicht van de werkruimte ](../overview.md).
 
-Leren hoe u veldgroepen kunt beheren met de opdracht [!DNL Schema Registry] API, zie [eindgids voor veldgroepen](../../api/field-groups.md).
+Leren hoe te om gebiedsgroepen te beheren gebruikend [!DNL Schema Registry] API, zie de [ gids van het gebiedsgroepseindpunt van groepen ](../../api/field-groups.md).

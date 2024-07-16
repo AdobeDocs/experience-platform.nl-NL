@@ -14,20 +14,20 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="Status van aanvraag voor een gegevenslevenscyclus"
->abstract="Deze widget geeft de totale aantallen van gemaakte, mislukte en voltooide taken voor het verwijderen van records tijdens de gegevenslevenscyclus weer. Voor meer informatie over uw processen van de gegevenslevenscyclus, selecteer **Levenscyclus gegevens** in de linkernavigatie."
+>abstract="Deze widget geeft de totale aantallen van gemaakte, mislukte en voltooide taken voor het verwijderen van records tijdens de gegevenslevenscyclus weer. Voor meer informatie over uw processen van de gegevenslevenscyclus, uitgezochte **Levenscyclus van Gegevens** in de linkernavigatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
 >title="Recente werkorders voor de levenscyclus van gegevens"
->abstract="Deze widget geeft de vijf meest recente werkorders voor de gegevenslevenscyclus weer, afhankelijk van de optie die u in de rechterbovenhoek selecteert. Voor meer informatie over uw processen van de gegevenslevenscyclus, selecteer **Levenscyclus gegevens** in de linkernavigatie."
+>abstract="Deze widget geeft de vijf meest recente werkorders voor de gegevenslevenscyclus weer, afhankelijk van de optie die u in de rechterbovenhoek selecteert. Voor meer informatie over uw processen van de gegevenslevenscyclus, uitgezochte **Levenscyclus van Gegevens** in de linkernavigatie."
 
-De **[!UICONTROL Data Lifecycle]** De werkruimte in Adobe Experience Platform UI staat u toe om diverse taken van het het levenscyclusbeheer van gegevens tot stand te brengen en te controleren, met inbegrip van het schrappen van verslagen en het plannen van datasetvervalsing.
+Met de werkruimte van **[!UICONTROL Data Lifecycle]** in de gebruikersinterface van Adobe Experience Platform kunt u verschillende beheertaken voor de gegevenslevenscyclus maken en controleren, zoals het verwijderen van records en het plannen van gegevenssetvervaldatums.
 
-In deze handleiding wordt beschreven hoe u taken in de levenscyclus van gegevens kunt beheren in de interface van het platform. Voor informatie over hoe te om deze taken uit te voeren gebruikend API vraag, zie [Handleiding voor API voor gegevenshygiëne](../api/overview.md).
+In deze handleiding wordt beschreven hoe u taken in de levenscyclus van gegevens kunt beheren in de interface van het platform. Voor informatie over hoe te om deze taken uit te voeren gebruikend API vraag, zie de [ gids van de Hygiëne van Gegevens ](../api/overview.md).
 
-Als u de werkruimte wilt openen, selecteert u **Levenscyclus gegevens** in de linkernavigatie.
+Om tot de werkruimte toegang te hebben, selecteer **Levenscyclus van Gegevens** in de linkernavigatie.
 
-![De [!UICONTROL Data Lifecycle] in de gebruikersinterface van het platform, met [!UICONTROL Data Lifecycle] gemarkeerd in de linkernavigatie.](../images/ui/overview/home.png)
+![ de [!UICONTROL Data Lifecycle] werkruimte in Platform UI, met [!UICONTROL Data Lifecycle] benadrukt in de linkernavigatie.](../images/ui/overview/home.png)
 
 Van hier, kunt u bestaande het werkorden doorbladeren en nieuwe verrichtingen van de gegevenslevenscyclus vormen. Raadpleeg de volgende secties van deze handleiding voor meer informatie:
 

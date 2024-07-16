@@ -4,7 +4,7 @@ title: Een publiekssjabloon ophalen
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -13,25 +13,25 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om een malplaatje van publieksmeta-gegevens terug te winnen, gebruikend `/authoring/audience-templates` API-eindpunt.
+Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om een sjabloon voor publieksmetagegevens op te halen met het API-eindpunt `/authoring/audience-templates` .
 
-Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [beheer van metagegevens van het publiek](../functionality/audience-metadata-management.md).
+Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [ beheer van publieksmeta-gegevens ](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Aan de slag met API-bewerkingen voor publiekssjablonen {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een publiekssjabloon ophalen {#retrieve}
 
-U kunt een bestaande publiekssjabloon ophalen door een `GET` verzoek aan de `/authoring/audience-templates` eindpunt.
+U kunt een bestaande publiekssjabloon ophalen door een `GET` -aanvraag in te dienen bij het `/authoring/audience-templates` -eindpunt.
 
-**API-indeling**
+**API formaat**
 
 Gebruik de volgende API-indeling om alle publiekssjablonen voor uw account op te halen.
 
@@ -39,21 +39,21 @@ Gebruik de volgende API-indeling om alle publiekssjablonen voor uw account op te
 GET /authoring/audience-templates
 ```
 
-Gebruik de volgende API-indeling om een specifieke publiekssjabloon op te halen, gedefinieerd door de `{INSTANCE_ID}` parameter.
+Gebruik de volgende API-indeling om een specifieke publiekssjabloon op te halen, gedefinieerd door de parameter `{INSTANCE_ID}` .
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}
 ```
 
-De volgende twee verzoeken winnen alle publiekssjablonen voor uw IMS Organisatie, of een specifiek publiekssjabloon terug, afhankelijk van of u overgaan `INSTANCE_ID` in de aanvraag.
+Met de volgende twee verzoeken worden alle publiekssjablonen voor uw IMS-organisatie of een specifieke publiekssjabloon opgehaald, afhankelijk van het feit of u de parameter `INSTANCE_ID` in de aanvraag doorgeeft.
 
 Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB Alle publiekssjablonen ophalen]
+>[!TAB  wint alle publieksmalplaatjes ] terug
 
-Het volgende verzoek zal de lijst van publiekssjablonen terugwinnen die u toegang hebt, gebaseerd op [!DNL IMS Org ID] en sandboxconfiguratie.
+Met de volgende aanvraag wordt de lijst met publiekssjablonen opgehaald die u kunt gebruiken op basis van de configuratie van [!DNL IMS Org ID] en de sandbox.
 
 +++verzoek
 
@@ -69,7 +69,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++Response
 
-Een geslaagde reactie retourneert HTTP-status 200 met een lijst van publiekssjablonen waartoe u toegang hebt, op basis van de [!DNL IMS Org ID] en naam van sandbox die u hebt gebruikt. Eén `instanceId` komt overeen met één publiekssjabloon.
+Een geslaagde reactie geeft HTTP-status 200 weer met een lijst van publiekssjablonen waartoe u toegang hebt, op basis van de naam van de [!DNL IMS Org ID] en de sandbox die u hebt gebruikt. Eén `instanceId` komt overeen met één publiekssjabloon.
 
 ```json
 {
@@ -180,9 +180,9 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van publiekssjab
 
 +++
 
->[!TAB Een specifieke publiekssjabloon ophalen]
+>[!TAB  wint een specifiek publiekssjabloon ] terug
 
-Het volgende verzoek zal de lijst van publiekssjablonen terugwinnen die u toegang hebt, gebaseerd op [!DNL IMS Org ID] en sandboxconfiguratie.
+Met de volgende aanvraag wordt de lijst met publiekssjablonen opgehaald die u kunt gebruiken op basis van de configuratie van [!DNL IMS Org ID] en de sandbox.
 
 +++verzoek
 
@@ -202,7 +202,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++Response
 
-Een geslaagde reactie retourneert HTTP-status 200 met de details van de publiekssjabloon die overeenkomen met de `{INSTANCE_ID}` verstrekt op de vraag.
+Een succesvolle reactie keert status 200 van HTTP met de details van het publiekssjabloon terug die aan `{INSTANCE_ID}` beantwoorden op de vraag wordt verstrekt.
 
 ```json
 {
@@ -317,8 +317,8 @@ Een geslaagde reactie retourneert HTTP-status 200 met de details van de publieks
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u details over de configuratie van de doelserver kunt ophalen met de `/authoring/destination-servers` API-eindpunt. Lezen [hoe te om Destination SDK te gebruiken om uw bestemming te vormen](../guides/configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Nadat u dit document hebt gelezen, weet u nu hoe u details over de configuratie van de doelserver kunt ophalen met behulp van het API-eindpunt van `/authoring/destination-servers` . Lees [ hoe te om Destination SDK te gebruiken om uw bestemming ](../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

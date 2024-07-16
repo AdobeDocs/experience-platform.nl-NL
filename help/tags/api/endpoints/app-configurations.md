@@ -1,29 +1,29 @@
 ---
-title: Punt voor App-configuraties
+title: Het eindpunt van de App-configuraties
 description: Leer hoe te om vraag aan het /app_configuration eindpunt in Reactor API te maken.
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
 source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '550'
 ht-degree: 1%
 
 ---
 
-# Punt voor App-configuraties
+# Het eindpunt van de App-configuraties
 
 >[!WARNING]
 >
->De uitvoering van de `/app_configurations` Het eindpunt is in flits aangezien de eigenschappen worden toegevoegd, verwijderd, en herwerkt.
+>De implementatie van het `/app_configurations` eindpunt is in flits aangezien de eigenschappen worden toegevoegd, verwijderd, en herwerkt.
 
-Met toepassingsconfiguraties kunnen referenties worden opgeslagen en opgehaald voor later gebruik. De `/app_configurations` kunt u toepassingsconfiguraties programmatisch beheren binnen uw ervaringstoepassing.
+Toepassingsconfiguraties staan toe dat referenties worden opgeslagen en opgehaald voor later gebruik. Met het `/app_configurations` -eindpunt in de Reactor-API kunt u toepassingsconfiguraties programmatisch beheren binnen uw ervaringstoepassing.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met toepassingsconfiguraties ophalen {#list}
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /companies/{COMPANY_ID}/app_configurations
@@ -31,13 +31,13 @@ GET /companies/{COMPANY_ID}/app_configurations
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `COMPANY_ID` | De `id` van de [bedrijf](./companies.md) die eigenaar is van de toepassingsconfiguraties. |
+| `COMPANY_ID` | `id` van het [ bedrijf ](./companies.md) dat de toepassingsconfiguraties bezit. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Met behulp van queryparameters kunnen de weergegeven toepassingsconfiguraties worden gefilterd op basis van de volgende kenmerken:<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
+>Met behulp van queryparameters kunnen de weergegeven toepassingsconfiguraties worden gefilterd op basis van de volgende kenmerken:<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -51,7 +51,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lijst met toepassingsconfiguraties.
 
@@ -103,7 +103,7 @@ Een geslaagde reactie retourneert een lijst met toepassingsconfiguraties.
 
 U kunt een toepassingsconfiguratie opzoeken door zijn identiteitskaart in de weg van een verzoek van de GET te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /app_configurations/{APP_CONFIGURATION_ID}
@@ -127,7 +127,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert de details van de toepassingsconfiguratie.
 
@@ -168,7 +168,7 @@ Een succesvol antwoord retourneert de details van de toepassingsconfiguratie.
 
 U kunt een nieuwe toepassingsconfiguratie tot stand brengen door een verzoek van de POST te doen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /companies/{COMPANY_ID}/app_configurations
@@ -176,7 +176,7 @@ POST /companies/{COMPANY_ID}/app_configurations
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `COMPANY_ID` | De `id` van de [bedrijf](./companies.md) dat u de toepassingsconfiguratie onder definieert. |
+| `COMPANY_ID` | `id` van het [ bedrijf ](./companies.md) dat u de toepassingsconfiguratie onder bepaalt. |
 
 {style="table-layout:auto"}
 
@@ -213,13 +213,13 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `platform` | Het platform waarop de toepassing wordt uitgevoerd (web of mobiel). Dit bepaalt welke overseinendiensten beschikbaar zijn. |
-| `messaging_service` | De berichtenservice die aan de app is gekoppeld, zoals [APN&#39;s (Apple Push Notification service)](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) en [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging). Hiermee bepaalt u welke sleuteltypen kunnen worden gebruikt. |
-| `key_type` | Vertegenwoordigt het protocol dat een duw-dienst verkoper steunt en bepaalt het formaat van `push_credential` object. Aangezien de protocollen voor overseinendiensten evolueren, nieuw `key_type` waarden worden gecreeerd om de bijgewerkte protocollen te steunen. |
+| `messaging_service` | De overseinendienst verbonden aan app, zoals [ de dienst van het Bericht van de Duw van Apple (APNs) ](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) en [ het Overseinen van de Wolk van de Vuurbasis (FCM) ](https://firebase.google.com/docs/cloud-messaging). Hiermee bepaalt u welke sleuteltypen kunnen worden gebruikt. |
+| `key_type` | Vertegenwoordigt het protocol dat een leverancier van de drukkerij steunt en bepaalt het formaat van het `push_credential` voorwerp. Naarmate protocollen evolueren voor berichtenservices, worden nieuwe `key_type` -waarden gemaakt ter ondersteuning van de bijgewerkte protocollen. |
 | `push_credential` | De eigenlijke credentiewaarde, die in rust wordt gecodeerd. Dit veld wordt gewoonlijk niet gedecodeerd of opgenomen in API-reacties. Alleen bepaalde Adobe-services kunnen een antwoord krijgen met een gedecodeerde pushreferentie. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de nieuwe toepassingsconfiguratie.
 
@@ -260,7 +260,7 @@ Een geslaagde reactie retourneert de details van de nieuwe toepassingsconfigurat
 
 U kunt een toepassingsconfiguratie bijwerken door zijn identiteitskaart in de weg van een PATCH verzoek te omvatten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /app_configurations/{APP_CONFIGURATION_ID}
@@ -274,7 +274,7 @@ PATCH /app_configurations/{APP_CONFIGURATION_ID}
 
 **Verzoek**
 
-De volgende aanvraag werkt de `app_id` voor een bestaande toepassingsconfiguratie.
+Met de volgende aanvraag wordt `app_id` bijgewerkt voor een bestaande toepassingsconfiguratie.
 
 ```shell
 curl -X PATCH \
@@ -297,13 +297,13 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de toepassingsconfiguratie moeten worden bijgewerkt. Elke sleutel vertegenwoordigt het specifieke attribuut van de toepassingsconfiguratie dat moet worden bijgewerkt, samen met de overeenkomstige waarde het zou moeten worden bijgewerkt aan.<br><br>De volgende kenmerken kunnen worden bijgewerkt voor toepassingsconfiguraties:<ul><li>`app_id`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`push_credential`</li></ul> |
-| `id` | De `id` van de toepassingsconfiguratie die u wilt bijwerken. Dit moet overeenkomen met de `{APP_CONFIGURATION_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `app_configurations`. |
+| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de toepassingsconfiguratie moeten worden bijgewerkt. Elke sleutel vertegenwoordigt het specifieke attribuut van de toepassingsconfiguratie dat moet worden bijgewerkt, samen met de overeenkomstige waarde het zou moeten worden bijgewerkt aan.<br><br> de volgende attributen kunnen voor toepassingsconfiguraties worden bijgewerkt:<ul><li>`app_id`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`push_credential`</li></ul> |
+| `id` | De `id` van de toepassingsconfiguratie die u wilt bijwerken. Dit moet overeenkomen met de `{APP_CONFIGURATION_ID}` -waarde in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `app_configurations` zijn. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert de details van de bijgewerkte toepassingsconfiguratie.
 
@@ -344,7 +344,7 @@ Een succesvol antwoord retourneert de details van de bijgewerkte toepassingsconf
 
 U kunt een toepassingsconfiguratie schrappen door zijn identiteitskaart in de weg van een verzoek van de DELETE op te nemen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /app_configurations/{APP_CONFIGURATION_ID}
@@ -368,6 +368,6 @@ curl -X DELETE \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder responsiehoofdtekst om aan te geven dat de toepassingsconfiguratie is verwijderd.

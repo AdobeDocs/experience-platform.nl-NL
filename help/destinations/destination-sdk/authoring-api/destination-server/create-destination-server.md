@@ -4,16 +4,16 @@ title: Een doelserverconfiguratie maken
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '2039'
-ht-degree: 5%
+source-wordcount: '2036'
+ht-degree: 1%
 
 ---
 
 # Een doelserverconfiguratie maken
 
-Het creëren van een bestemmingsserver is de eerste stap in het creëren van uw eigen bestemming met Destination SDK. De doelserver bevat configuratieopties voor de [server](../../functionality/destination-server/server-specs.md) en [sjablonen](../../functionality/destination-server/templating-specs.md) specs [berichtindeling](../../functionality/destination-server/message-format.md)en de [bestandsindeling](../../functionality/destination-server/file-formatting.md) opties (voor op bestanden gebaseerde doelen).
+Het creëren van een bestemmingsserver is de eerste stap in het creëren van uw eigen bestemming met Destination SDK. De bestemmingsserver omvat configuratieopties voor de [ server ](../../functionality/destination-server/server-specs.md) en [ het templating ](../../functionality/destination-server/templating-specs.md) specs, het [ berichtformaat ](../../functionality/destination-server/message-format.md), en [ dossier het formatteren ](../../functionality/destination-server/file-formatting.md) opties (voor op dossier-gebaseerde bestemmingen).
 
-Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om uw eigen bestemmingsserver tot stand te brengen gebruikend `/authoring/destination-servers` API-eindpunt.
+Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om uw eigen doelserver te maken met behulp van het API-eindpunt `/authoring/destination-servers` .
 
 Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, lees de volgende artikelen:
 
@@ -24,21 +24,21 @@ Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpun
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Aan de slag met API-bewerkingen voor doelserver {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een doelserverconfiguratie maken {#create}
 
-U kunt een nieuwe configuratie van de bestemmingsserver tot stand brengen door te maken `POST` verzoek aan de `/authoring/destination-servers` eindpunt.
+U kunt een nieuwe configuratie voor de doelserver maken door een `POST` -aanvraag in te dienen bij het `/authoring/destination-servers` -eindpunt.
 
 >[!TIP]
 >
->**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
+>**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /authoring/destination-servers
@@ -48,7 +48,7 @@ Afhankelijk van het bestemmingstype dat u creeert, moet u een lichtjes verschill
 
 ### Statische schema-doelservers maken {#static-destination-servers}
 
-Zie in de lusjes hieronder voorbeelden van bestemmingsservers voor bestemmingen die gebruiken [statische schema&#39;s](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
+Zie in de lusjes onder voorbeelden van bestemmingsservers voor bestemmingen die [ statische schema&#39;s ](../../functionality/destination-configuration/schema-configuration.md#attributes-schema) gebruiken.
 
 De onderstaande voorbeeldladingen bevatten alle parameters die door elk type doelserver worden ondersteund. U hoeft niet alle parameters in uw verzoek op te nemen. De lading is klantgericht op uw behoeften.
 
@@ -56,9 +56,9 @@ Selecteer hieronder elk tabblad om de bijbehorende API-aanvragen weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB Real-time (streaming)]
+>[!TAB  Real-time (het stromen) ]
 
-**Een realtime (streaming) doelserver maken**
+**creeer een (het stromen) bestemmingsserver in real time**
 
 U moet een real-time (het stromen) bestemmingsserver tot stand brengen gelijkend op hieronder getoond wanneer u een (het stromen) op API-Gebaseerde integratie in real time vormt.
 
@@ -94,14 +94,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `name` | Tekenreeks | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server`. |
-| `destinationServerType` | Tekenreeks | *Vereist.* Instellen op `URL_BASED` voor realtime (streaming) doelen. |
-| `urlBasedDestination.url.templatingStrategy` | Tekenreeks | *Vereist.* <ul><li>Gebruiken `PEBBLE_V1` als de Adobe de URL in het dialoogvenster `value` veld hieronder. Gebruik deze optie als u een eindpunt als `https://api.moviestar.com/data/{{customerData.region}}/items`, waarbij de `region` onderdelen kunnen per klant verschillen. In dit geval moet u ook configureren `region` als [klantgegevensveld](../../functionality/destination-configuration/customer-data-fields.md) in de [doelconfiguratie](../destination-configuration/create-destination-configuration.md. </li><li> Gebruiken `NONE` als er aan de zijde van de Adobe geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | Tekenreeks | *Vereist.* Vul het adres van het API eindpunt in dat Experience Platform zou moeten verbinden met. |
-| `httpTemplate.httpMethod` | Tekenreeks | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. Opties zijn `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
-| `httpTemplate.requestBody.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Tekenreeks | *Vereist.* Dit koord is karakter-beschermde versie die de gegevens van de klanten van het Platform aan het formaat omzet uw dienst verwacht. <br> <ul><li> Voor informatie over het schrijven van de sjabloon leest u de [Sjabloonsectie gebruiken](../../functionality/destination-server/message-format.md#using-templating). </li><li> Raadpleeg voor meer informatie over het escapen van tekens de [RFC JSON-standaard, sectie 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie raadpleegt u de [Profielkenmerken](../../functionality/destination-server/message-format.md#attributes) transformatie. </li></ul> |
-| `httpTemplate.contentType` | Tekenreeks | *Vereist.* Het inhoudstype dat uw server accepteert. Deze waarde is zeer waarschijnlijk `application/json`. |
+| `name` | String | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server` . |
+| `destinationServerType` | String | *Vereist.* Ingesteld op `URL_BASED` voor realtime (streaming) doelen. |
+| `urlBasedDestination.url.templatingStrategy` | String | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als de Adobe de URL in het onderstaande veld `value` moet transformeren. Gebruik deze optie als u een eindpunt als `https://api.moviestar.com/data/{{customerData.region}}/items` hebt, waar het `region` -onderdeel kan verschillen tussen klanten. In dit geval moet u `region` ook vormen als gebied van a [ klantengegevens ](../../functionality/destination-configuration/customer-data-fields.md) in de [ bestemmingsconfiguratie ] (../destination-configuration/create-destination-configuration.md. </li><li> Gebruik `NONE` als er aan de zijde van de Adobe geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items` .</li></ul> |
+| `urlBasedDestination.url.value` | String | *Vereist.* Vul het adres in van het API-eindpunt waarmee het Experience Platform verbinding moet maken. |
+| `httpTemplate.httpMethod` | String | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. De opties zijn `GET`, `PUT`, `POST`, `DELETE`, `PATCH` . |
+| `httpTemplate.requestBody.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `httpTemplate.requestBody.value` | String | *Vereist.* Deze tekenreeks is de op tekens gebaseerde versie die de gegevens van Platformklanten omzet in de indeling die uw service verwacht. <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [ Gebruikend het malplaatjesectie ](../../functionality/destination-server/message-format.md#using-templating). </li><li> Voor meer informatie over karakter het ontsnappen, verwijs naar de [ norm RFC JSON, sectie zeven ](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [ transformatie van de Attributen van het Profiel ](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.contentType` | String | *Vereist.* Het inhoudstype dat uw server accepteert. Deze waarde is zeer waarschijnlijk `application/json` . |
 
 {style="table-layout:auto"}
 
@@ -115,9 +115,9 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 >[!TAB Amazon S3]
 
-**Een Amazon S3-doelserver maken**
+**creeer een Amazon S3 bestemmingsserver**
 
-U moet een [!DNL Amazon S3] doelserver, vergelijkbaar met de server die hieronder wordt weergegeven wanneer u een bestand configureert [!DNL Amazon S3] bestemming.
+U moet een [!DNL Amazon S3] doelserver maken die vergelijkbaar is met de hieronder weergegeven server wanneer u een op een bestand gebaseerde [!DNL Amazon S3] -bestemming configureert.
 
 +++verzoek
 
@@ -207,13 +207,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `name` | Tekenreeks | De naam van de doelverbinding. |
-| `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Amazon S3], stelt u deze in op `FILE_BASED_S3`. |
-| `fileBasedS3Destination.bucket.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedS3Destination.bucket.value` | Tekenreeks | De naam van [!DNL Amazon S3] emmer die door deze bestemming moet worden gebruikt. |
-| `fileBasedS3Destination.path.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedS3Destination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
-| `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
+| `name` | String | De naam van de doelverbinding. |
+| `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel deze waarde voor [!DNL Amazon S3] in op `FILE_BASED_S3` . |
+| `fileBasedS3Destination.bucket.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedS3Destination.bucket.value` | String | De naam van de [!DNL Amazon S3] emmer die door dit doel moet worden gebruikt. |
+| `fileBasedS3Destination.path.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedS3Destination.path.value` | String | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
+| `fileConfigurations` | N.v.t. | Zie [ dossier het formatteren configuratie ](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
 
 {style="table-layout:auto"}
 
@@ -227,9 +227,9 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 >[!TAB SFTP]
 
-**Een [!DNL SFTP] doelserver**
+**creeer een [!DNL SFTP] bestemmingsserver**
 
-U moet een [!DNL SFTP] doelserver, vergelijkbaar met de server die hieronder wordt weergegeven wanneer u een bestand configureert [!DNL SFTP] bestemming.
+U moet een [!DNL SFTP] doelserver maken die vergelijkbaar is met de hieronder weergegeven server wanneer u een op een bestand gebaseerde [!DNL SFTP] -bestemming configureert.
 
 +++verzoek
 
@@ -317,15 +317,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `name` | Tekenreeks | De naam van de doelverbinding. |
-| `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL SFTP] doelen, stel deze in op `FILE_BASED_SFTP`. |
-| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedSFTPDestination.rootDirectory.value` | Tekenreeks | De hoofdmap van de doelopslag. |
-| `fileBasedSFTPDestination.hostName.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedSFTPDestination.hostName.value` | Tekenreeks | De hostnaam van de bestemmingsopslag. |
+| `name` | String | De naam van de doelverbinding. |
+| `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel dit voor [!DNL SFTP] -doelen in op `FILE_BASED_SFTP` . |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedSFTPDestination.rootDirectory.value` | String | De hoofdmap van de doelopslag. |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedSFTPDestination.hostName.value` | String | De hostnaam van de bestemmingsopslag. |
 | `port` | Geheel | De SFTP-serverpoort. |
-| `encryptionMode` | Tekenreeks | Geeft aan of bestandsversleuteling moet worden gebruikt. Ondersteunde waarden: <ul><li>PGP</li><li>Geen</li></ul> |
-| `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
+| `encryptionMode` | String | Geeft aan of bestandsversleuteling moet worden gebruikt. Ondersteunde waarden: <ul><li>PGP</li><li>Geen</li></ul> |
+| `fileConfigurations` | N.v.t. | Zie [ dossier het formatteren configuratie ](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
 
 {style="table-layout:auto"}
 
@@ -337,11 +337,11 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 +++
 
->[!TAB Azure Data Lake Storage]
+>[!TAB  Azure de Opslag van het meer van Gegevens ]
 
-**Een [!DNL Azure Data Lake Storage] doelserver**
+**creeer een [!DNL Azure Data Lake Storage] bestemmingsserver**
 
-U moet een [!DNL Azure Data Lake Storage] doelserver, vergelijkbaar met de server die hieronder wordt weergegeven wanneer u een bestand configureert [!DNL Azure Data Lake Storage] bestemming.
+U moet een [!DNL Azure Data Lake Storage] doelserver maken die vergelijkbaar is met de hieronder weergegeven server wanneer u een op een bestand gebaseerde [!DNL Azure Data Lake Storage] -bestemming configureert.
 
 +++verzoek
 
@@ -427,11 +427,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `name` | Tekenreeks | De naam van de doelverbinding. |
-| `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Azure Data Lake Storage] doelen, stel deze in op `FILE_BASED_ADLS_GEN2`. |
-| `fileBasedAdlsGen2Destination.path.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedAdlsGen2Destination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
-| `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
+| `name` | String | De naam van de doelverbinding. |
+| `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel dit voor [!DNL Azure Data Lake Storage] -doelen in op `FILE_BASED_ADLS_GEN2` . |
+| `fileBasedAdlsGen2Destination.path.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedAdlsGen2Destination.path.value` | String | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
+| `fileConfigurations` | N.v.t. | Zie [ dossier het formatteren configuratie ](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
 
 {style="table-layout:auto"}
 
@@ -443,11 +443,11 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 +++
 
->[!TAB Azure Blob Storage]
+>[!TAB  Azure Blob Storage ]
 
-**Een [!DNL Azure Blob Storage] doelserver**
+**creeer een [!DNL Azure Blob Storage] bestemmingsserver**
 
-U moet een [!DNL Azure Blob Storage] doelserver, vergelijkbaar met de server die hieronder wordt weergegeven wanneer u een bestand configureert [!DNL Azure Blob Storage] bestemming.
+U moet een [!DNL Azure Blob Storage] doelserver maken die vergelijkbaar is met de hieronder weergegeven server wanneer u een op een bestand gebaseerde [!DNL Azure Blob Storage] -bestemming configureert.
 
 +++verzoek
 
@@ -537,13 +537,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `name` | Tekenreeks | De naam van de doelverbinding. |
-| `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Azure Blob Storage] doelen, stel deze in op `FILE_BASED_AZURE_BLOB`. |
-| `fileBasedAzureBlobDestination.path.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedAzureBlobDestination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
-| `fileBasedAzureBlobDestination.container.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedAzureBlobDestination.container.value` | Tekenreeks | De naam van [!DNL Azure Blob Storage] container die door deze bestemming moet worden gebruikt. |
-| `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
+| `name` | String | De naam van de doelverbinding. |
+| `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel dit voor [!DNL Azure Blob Storage] -doelen in op `FILE_BASED_AZURE_BLOB` . |
+| `fileBasedAzureBlobDestination.path.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedAzureBlobDestination.path.value` | String | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
+| `fileBasedAzureBlobDestination.container.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedAzureBlobDestination.container.value` | String | De naam van de [!DNL Azure Blob Storage] -container die door dit doel moet worden gebruikt. |
+| `fileConfigurations` | N.v.t. | Zie [ dossier het formatteren configuratie ](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
 
 {style="table-layout:auto"}
 
@@ -555,11 +555,11 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 +++
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB  Gegevens Landing Zone (DLZ) ]
 
-**Een [!DNL Data Landing Zone (DLZ)] doelserver**
+**creeer a [!DNL Data Landing Zone (DLZ)] bestemmingsserver**
 
-U moet een [!DNL Data Landing Zone (DLZ)] doelserver, vergelijkbaar met de server die hieronder wordt weergegeven wanneer u een bestand configureert [!DNL Data Landing Zone (DLZ)] bestemming.
+U moet een [!DNL Data Landing Zone (DLZ)] doelserver maken die vergelijkbaar is met de hieronder weergegeven server wanneer u een op een bestand gebaseerde [!DNL Data Landing Zone (DLZ)] -bestemming configureert.
 
 +++verzoek
 
@@ -646,11 +646,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `name` | Tekenreeks | De naam van de doelverbinding. |
-| `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Data Landing Zone] doelen, stel deze in op `FILE_BASED_DLZ`. |
-| `fileBasedDlzDestination.path.templatingStrategy` | Tekenreeks | *Vereist.*  Gebruik `PEBBLE_V1`. |
-| `fileBasedDlzDestination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
-| `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
+| `name` | String | De naam van de doelverbinding. |
+| `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel dit voor [!DNL Data Landing Zone] -doelen in op `FILE_BASED_DLZ` . |
+| `fileBasedDlzDestination.path.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedDlzDestination.path.value` | String | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
+| `fileConfigurations` | N.v.t. | Zie [ dossier het formatteren configuratie ](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
 
 {style="table-layout:auto"}
 
@@ -662,11 +662,11 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 +++
 
->[!TAB Google Cloud Storage]
+>[!TAB  Google Cloud Storage ]
 
-**Een [!DNL Google Cloud Storage] doelserver**
+**creeer a [!DNL Google Cloud Storage] bestemmingsserver**
 
-U moet een [!DNL Google Cloud Storage] doelserver, vergelijkbaar met de server die hieronder wordt weergegeven wanneer u een bestand configureert [!DNL Google Cloud Storage] bestemming.
+U moet een [!DNL Google Cloud Storage] doelserver maken die vergelijkbaar is met de hieronder weergegeven server wanneer u een op een bestand gebaseerde [!DNL Google Cloud Storage] -bestemming configureert.
 
 +++verzoek
 
@@ -756,13 +756,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `name` | Tekenreeks | De naam van de doelverbinding. |
-| `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Google Cloud Storage] doelen, stel deze in op `FILE_BASED_GOOGLE_CLOUD`. |
-| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | Tekenreeks | *Vereist.*  Gebruik `PEBBLE_V1`. |
-| `fileBasedGoogleCloudStorageDestination.bucket.value` | Tekenreeks | De naam van [!DNL Google Cloud Storage] emmer die door deze bestemming moet worden gebruikt. |
-| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedGoogleCloudStorageDestination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
-| `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
+| `name` | String | De naam van de doelverbinding. |
+| `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel dit voor [!DNL Google Cloud Storage] -doelen in op `FILE_BASED_GOOGLE_CLOUD` . |
+| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedGoogleCloudStorageDestination.bucket.value` | String | De naam van de [!DNL Google Cloud Storage] emmer die door dit doel moet worden gebruikt. |
+| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `fileBasedGoogleCloudStorageDestination.path.value` | String | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
+| `fileConfigurations` | N.v.t. | Zie [ dossier het formatteren configuratie ](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
 
 {style="table-layout:auto"}
 
@@ -780,17 +780,17 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 Met dynamische schema&#39;s kunt u dynamisch de ondersteunde doelkenmerken ophalen en schema&#39;s genereren op basis van uw eigen API. U moet een bestemmingsserver voor dynamische schema&#39;s vormen alvorens u het schema kunt vormen.
 
-Zie in het lusje onder een voorbeeld van een bestemmingsserver voor bestemmingen die gebruiken [dynamische schema&#39;s](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
+Zie in het lusje onder een voorbeeld van een bestemmingsserver voor bestemmingen die [ dynamische schema&#39;s ](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration) gebruiken.
 
 De nuttige voorbeeldlading hieronder omvat alle parameters die voor een dynamische schemaserver worden vereist.
 
 >[!BEGINTABS]
 
->[!TAB Dynamische schemaserver]
+>[!TAB  Dynamische schemaserver ]
 
-**Een dynamische schemaserver maken**
+**creeer een dynamische schemaserver**
 
-U moet een dynamische schemaserver tot stand brengen gelijkend op hieronder getoond wanneer u een bestemming vormt die zijn profielschema van uw eigen API eindpunt terugwint. In tegenstelling tot een statisch schema gebruikt een dynamisch schema geen `profileFields` array. In plaats daarvan gebruiken dynamische schema&#39;s een dynamische schemaserver die met uw eigen API verbindt van waar het de schemaconfiguratie terugwint.
+U moet een dynamische schemaserver tot stand brengen gelijkend op hieronder getoond wanneer u een bestemming vormt die zijn profielschema van uw eigen API eindpunt terugwint. In tegenstelling tot een statisch schema gebruikt een dynamisch schema geen `profileFields` -array. In plaats daarvan gebruiken dynamische schema&#39;s een dynamische schemaserver die met uw eigen API verbindt van waar het de schemaconfiguratie terugwint.
 
 +++verzoek
 
@@ -826,13 +826,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `name` | Tekenreeks | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw dynamische schemaserver, zichtbaar slechts aan Adobe. |
-| `destinationServerType` | Tekenreeks | *Vereist.* Instellen op `URL_BASED` voor dynamische schemaservers. |
-| `urlBasedDestination.url.templatingStrategy` | Tekenreeks | *Vereist.* <ul><li>Gebruiken `PEBBLE_V1` als de Adobe de URL in het dialoogvenster `value` veld hieronder. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Gebruiken `NONE` als er aan de zijde van de Adobe geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | Tekenreeks | *Vereist.* Vul het adres van het API eindpunt in dat Experience Platform met zou moeten verbinden en de schemagebieden zou moeten terugwinnen om als doelgebieden in de afbeeldingsstap van het activeringswerkschema te bevolken. |
-| `httpTemplate.httpMethod` | Tekenreeks | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. Voor dynamische schemaservers, gebruik `GET`. |
-| `responseFields.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `responseFields.value` | Tekenreeks | *Vereist.* Dit koord is het karakter-ontsnapte transformatiemalplaatje dat de reactie omzet die van partner API in het partnerschema wordt ontvangen dat in Platform UI zal worden getoond. <br> <ul><li> Voor informatie over het schrijven van de sjabloon leest u de [Sjabloonsectie gebruiken](../../functionality/destination-server/message-format.md#using-templating). </li><li> Raadpleeg voor meer informatie over het escapen van tekens de [RFC JSON-standaard, sectie 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie raadpleegt u de [Profielkenmerken](../../functionality/destination-server/message-format.md#attributes) transformatie. </li></ul> |
+| `name` | String | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw dynamische schemaserver, zichtbaar slechts aan Adobe. |
+| `destinationServerType` | String | *Vereist.* Ingesteld op `URL_BASED` voor dynamische schema-servers. |
+| `urlBasedDestination.url.templatingStrategy` | String | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als de Adobe de URL in het onderstaande veld `value` moet transformeren. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items` hebt. </li><li> Gebruik `NONE` als er aan de zijde van de Adobe geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items` .</li></ul> |
+| `urlBasedDestination.url.value` | String | *Vereist.* Vul het adres van het API-eindpunt in dat Experience Platform moet verbinden met de schemavelden en wint deze op om te vullen als doelvelden in de toewijzingsstap van de activeringsworkflow. |
+| `httpTemplate.httpMethod` | String | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. Gebruik `GET` voor dynamische schemaservers. |
+| `responseFields.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `responseFields.value` | String | *Vereist.* Deze tekenreeks is de transformatiesjabloon met escape-teken waarmee de reactie die van de partner-API is ontvangen, wordt getransformeerd naar het partnerschema dat wordt weergegeven in de interface van het platform. <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [ Gebruikend het malplaatjesectie ](../../functionality/destination-server/message-format.md#using-templating). </li><li> Voor meer informatie over karakter het ontsnappen, verwijs naar de [ norm RFC JSON, sectie zeven ](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [ transformatie van de Attributen van het Profiel ](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -850,7 +850,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 ### Dynamische vervolgkeuzelijstservers maken {#dynamic-dropdown-servers}
 
-Gebruiken [dynamische dropdowns](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) om dropdown de gegevensgebieden van de klantenklant dynamisch terug te winnen en te bevolken, gebaseerd op uw eigen API. U kunt bijvoorbeeld een lijst ophalen met bestaande gebruikersaccounts die u wilt gebruiken voor een doelverbinding.
+Het gebruik [ dynamische dropdowns ](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) om dropdown gebieden van klantengegevens dynamisch terug te winnen en te bevolken, die op uw eigen API worden gebaseerd. U kunt bijvoorbeeld een lijst ophalen met bestaande gebruikersaccounts die u wilt gebruiken voor een doelverbinding.
 
 U moet een bestemmingsserver voor dynamische dropdowns vormen alvorens u het dynamische dropwdown gebied van de klantengegevens kunt vormen.
 
@@ -860,9 +860,9 @@ De nuttige voorbeeldlading hieronder omvat alle parameters die voor een dynamisc
 
 >[!BEGINTABS]
 
->[!TAB Dynamische dropdown-server]
+>[!TAB  Dynamische dropdown server ]
 
-**Een dynamische vervolgkeuzeserver maken**
+**creeer een dynamische dropdown server**
 
 U moet een dynamische dropdown server tot stand brengen gelijkend op hieronder getoond wanneer u een bestemming vormt die de waarden voor een dropdown gebied van de klantengegevens van uw eigen API eindpunt terugwint.
 
@@ -923,14 +923,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `name` | Tekenreeks | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw dynamische dropdown server, zichtbaar slechts aan Adobe. |
-| `destinationServerType` | Tekenreeks | *Vereist.* Instellen op `URL_BASED` voor dynamische dropdown servers. |
-| `urlBasedDestination.url.templatingStrategy` | Tekenreeks | *Vereist.* <ul><li>Gebruiken `PEBBLE_V1` als de Adobe de URL in het dialoogvenster `value` veld hieronder. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Gebruiken `NONE` als er aan de zijde van de Adobe geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | Tekenreeks | *Vereist.* Vul het adres van het API eindpunt in dat Experience Platform met zou moeten verbinden en de dropwdown waarden terugwinnen. |
-| `httpTemplate.httpMethod` | Tekenreeks | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. Voor dynamische dropdown servers, gebruik `GET`. |
-| `httpTemplate.headers` | Object | *Optiona.l* Neem alle vereiste headers op om verbinding te maken met de dynamische vervolgkeuzeserver. |
-| `responseFields.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `responseFields.value` | Tekenreeks | *Vereist.* Deze tekenreeks is de transformatiesjabloon met escape-teken waarmee de reactie die u van uw API hebt ontvangen, wordt omgezet in de waarden die worden weergegeven in de interface van het platform. <br> <ul><li> Voor informatie over het schrijven van de sjabloon leest u de [Sjabloonsectie gebruiken](../../functionality/destination-server/message-format.md#using-templating). </li><li> Raadpleeg voor meer informatie over het escapen van tekens de [RFC JSON-standaard, sectie 7](https://tools.ietf.org/html/rfc8259#section-7). |
+| `name` | String | *Vereist.* Vertegenwoordigt een vriendelijke naam van uw dynamische dropdown server, zichtbaar slechts aan Adobe. |
+| `destinationServerType` | String | *Vereist.* Ingesteld op `URL_BASED` voor dynamische vervolgkeuzeservers. |
+| `urlBasedDestination.url.templatingStrategy` | String | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als de Adobe de URL in het onderstaande veld `value` moet transformeren. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items` hebt. </li><li> Gebruik `NONE` als er aan de zijde van de Adobe geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items` .</li></ul> |
+| `urlBasedDestination.url.value` | String | *Vereist.* Vul het adres in van het API-eindpunt dat Experience Platform moet verbinden met de dropwdown-waarden en wint deze op. |
+| `httpTemplate.httpMethod` | String | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. Gebruik `GET` voor dynamische dropdown-servers. |
+| `httpTemplate.headers` | Object | *Optiona.l* omvat om het even welke kopballen die worden vereist om met de dynamische dropdown server te verbinden. |
+| `responseFields.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
+| `responseFields.value` | String | *Vereist.* Deze tekenreeks is de transformatiesjabloon met escape-teken waarmee de reactie die u van uw API hebt ontvangen, wordt omgezet in de waarden die worden weergegeven in de gebruikersinterface van het platform. <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [ Gebruikend het malplaatjesectie ](../../functionality/destination-server/message-format.md#using-templating). </li><li> Voor meer informatie over karakter het ontsnappen, verwijs naar de [ norm RFC JSON, sectie zeven ](https://tools.ietf.org/html/rfc8259#section-7). |
 
 {style="table-layout:auto"}
 
@@ -946,11 +946,11 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u een nieuwe doelserver kunt maken via de Destination SDK `/authoring/destination-servers` API-eindpunt.
+Nadat u dit document hebt gelezen, weet u nu hoe u een nieuwe doelserver kunt maken via het API-eindpunt Destination SDK `/authoring/destination-servers` .
 
 Raadpleeg de volgende artikelen voor meer informatie over wat u met dit eindpunt kunt doen:
 

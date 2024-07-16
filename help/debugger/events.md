@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Het tabblad Gebeurtenissen
 
-De **Gebeurtenissen** biedt een grafische weergave van de gebeurtenissen die plaatsvinden en worden weergegeven op een tijdlijn.
+Het **lusje van Gebeurtenissen** verstrekt een grafische mening van de gebeurtenissen die voorkomen, die op een chronologie worden getoond.
 
 ![](images/events.jpg)
 
@@ -37,8 +37,8 @@ Wijzigingen in gegevenslagen bijhouden in de tijdlijn inschakelen:
 
 1. Selecteer **[!UICONTROL Save]**.
 
-De gegevens van de de veranderingsdetails van de gegevenslaag tonen om het even wat die is geschrapt of toegevoegd. U kunt **{}** om dieper in de gegevenslaag te kijken.
+De gegevens van de de veranderingsdetails van de gegevenslaag tonen om het even wat die is geschrapt of toegevoegd. U kunt **selecteren {}** om dieper in de gegevenslaag te kijken.
 
 ## Gebeurtenisgegevens downloaden
 
-Selecteren **[!UICONTROL Download]** om een dossier van Excel te downloaden dat informatie over uw paginavraag toont.
+Selecteer **[!UICONTROL Download]** om een dossier van Excel te downloaden dat informatie over uw paginavraag toont.

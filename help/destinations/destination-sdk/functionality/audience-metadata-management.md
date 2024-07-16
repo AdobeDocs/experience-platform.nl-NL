@@ -13,17 +13,17 @@ ht-degree: 0%
 
 Gebruik publieksmetagegevenssjablonen om publiek in uw bestemming programmatisch te maken, bij te werken of te verwijderen. Adobe verstrekt een verlengbaar malplaatje van publieksmeta-gegevens, dat u kunt vormen gebaseerd op de specificaties van uw marketing API. Nadat u bepaalt, test, en voorlegt de configuratie, zal het door Adobe worden gebruikt om de API vraag aan uw bestemming te structureren.
 
-U kunt de in dit document beschreven functionaliteit configureren met de opdracht `/authoring/audience-templates` API-eindpunt. Lezen [een sjabloon voor metagegevens maken](../metadata-api/create-audience-template.md) voor een volledige lijst van verrichtingen kunt u op het eindpunt uitvoeren.
+U kunt de in dit document beschreven functionaliteit configureren met behulp van het API-eindpunt van `/authoring/audience-templates` . Lees [ creeer een meta-gegevensmalplaatje ](../metadata-api/create-audience-template.md) voor een volledige lijst van verrichtingen u op het eindpunt kunt uitvoeren.
 
 ## Wanneer om het het beheerseindpunt van publiekmeta-gegevens te gebruiken {#when-to-use}
 
 Afhankelijk van uw API configuratie, kunt u of niet het beheerseindpunt van publieksmeta-gegevens moeten gebruiken aangezien u uw bestemming in Experience Platform vormt. Gebruik het hieronder diagram van de beslissingsboom om te begrijpen wanneer om het eindpunt van publieksmeta-gegevens te gebruiken en hoe te om een malplaatje van publieksmeta-gegevens voor uw bestemming te vormen.
 
-![Beslissingsboomdiagram](../assets/functionality/audience-metadata-decision-tree.png)
+![ diagram van de de boomstructuur van het Besluit ](../assets/functionality/audience-metadata-decision-tree.png)
 
 ## Gebruik gevallen die worden ondersteund door het metagegevensbeheer van het publiek {#use-cases}
 
-Met de steun van publieksmeta-gegevens in Destination SDK, wanneer u uw bestemming van het Experience Platform vormt, kunt u de gebruikers van het Platform één van verscheidene opties geven wanneer zij in kaart brengen en publiek activeren aan uw bestemming. U kunt de opties bepalen die beschikbaar zijn voor de gebruiker via de parameters in het dialoogvenster [Configuratie van metagegevens voor publiek](../functionality/destination-configuration/audience-metadata-configuration.md) sectie van de bestemmingsconfiguratie.
+Met de steun van publieksmeta-gegevens in Destination SDK, wanneer u uw bestemming van het Experience Platform vormt, kunt u de gebruikers van het Platform één van verscheidene opties geven wanneer zij in kaart brengen en publiek activeren aan uw bestemming. U kunt de opties controleren beschikbaar aan de gebruiker via de parameters in de [ sectie van de de meta-gegevensconfiguratie van het publiek ](../functionality/destination-configuration/audience-metadata-configuration.md) van de bestemmingsconfiguratie.
 
 ### Hoofdlettergebruik 1 - U hebt een API van derden en gebruikers hoeven geen toewijzings-id&#39;s in te voeren
 
@@ -35,7 +35,7 @@ Wanneer het activeren van publiek aan uw bestemming in het gebruikersinterface v
 
 Als het publiek en andere meta-gegevens door partners of gebruikers manueel in uw bestemming moeten worden gecreeerd, dan moeten de gebruikers het gebied van identiteitskaart van de publiekstoewijzing in het activeringswerkschema manueel invullen om de publiekMeta-gegevens tussen uw bestemming en Experience Platform te synchroniseren.
 
-![Invoer-toewijzing-id](../assets/functionality/input-mapping-id.png)
+![ identiteitskaart van de Afbeelding van de Input ](../assets/functionality/input-mapping-id.png)
 
 ### Hoofdlettergebruik 3 - Uw doel accepteert de gebruikers-id van het Experience Platform, gebruikers hoeven de toewijzing-id niet handmatig in te voeren
 
@@ -45,7 +45,7 @@ Als uw bestemmingssysteem de identiteitskaart van het publiek van het Experience
 
 Ter ondersteuning van de hierboven vermelde gebruiksgevallen beschikt de Adobe over een algemene sjabloon die kan worden aangepast aan uw API-specificaties.
 
-U kunt de generieke sjabloon gebruiken om [een nieuwe publiekssjabloon maken](../metadata-api/create-audience-template.md) als uw API ondersteuning biedt voor:
+U kunt het generische malplaatje gebruiken om [ een nieuw publiekssjabloon ](../metadata-api/create-audience-template.md) tot stand te brengen als uw API steunt:
 
 * De HTTP-methoden: POST, GET, PUT, DELETE, PATCH
 * De authentificatietypen: OAuth 1, OAuth 2 met verfrist teken, OAuth 2 met dragertoken
@@ -57,7 +57,7 @@ Het technische team van de Adobe kan met u werken om het generische malplaatje m
 
 Deze sectie omvat drie voorbeelden van generische configuraties van publieksmeta-gegevens, voor uw verwijzing, samen met beschrijvingen van de belangrijkste secties van de configuratie. U ziet dat de URL, kopteksten, verzoeken en antwoorden verschillen tussen de drie voorbeeldconfiguraties. Dit komt door de verschillende specificaties van de marketing-API van de drie voorbeeldplatforms.
 
-Merk op dat in sommige voorbeelden macrogebieden zoals `{{authData.accessToken}}` of `{{segment.name}}` worden gebruikt in de URL, en in andere voorbeelden worden deze gebruikt in de kopballen of het verzoeklichaam. Dit hangt echt af van uw API-specificaties voor marketing.
+In sommige voorbeelden worden macrovelden zoals `{{authData.accessToken}}` of `{{segment.name}}` gebruikt in de URL. In andere voorbeelden worden deze gebruikt in de kopteksten of in de aanvraagtekst. Dit hangt echt af van uw API-specificaties voor marketing.
 
 | Sjabloonsectie | Beschrijving |
 |--- |--- |
@@ -521,7 +521,7 @@ Merk op dat in sommige voorbeelden macrogebieden zoals `{{authData.accessToken}}
 }
 ```
 
-Beschrijvingen van alle parameters in de sjabloon zoeken in het dialoogvenster [Een publiekssjabloon maken](../metadata-api/create-audience-template.md) API-referentie.
+De beschrijvingen van de vondst van alle parameters in het malplaatje in [ leiden tot een kijkmalplaatje ](../metadata-api/create-audience-template.md) API verwijzing.
 
 ## Macro&#39;s die in publieksmeta-gegevensmalplaatjes worden gebruikt {#macros}
 
@@ -534,8 +534,8 @@ Om informatie zoals publiek IDs, toegangstoken, foutenmeldingen, en meer tussen 
 | `{{segment.id}}` | Hiermee hebt u toegang tot de gebruikers-id in het Experience Platform. |
 | `{{customerData.accountId}}` | Staat u toe om tot het gebied van accountIdentiteitskaart toegang te hebben dat u opstelling in de bestemmingsconfiguratie. |
 | `{{oauth2ServiceAccessToken}}` | Staat u toe om een toegangstoken dynamisch te produceren die op uw configuratie OAuth 2 wordt gebaseerd. |
-| `{{authData.accessToken}}` | Staat u toe om het toegangstoken tot uw API eindpunt over te gaan. Gebruiken `{{authData.accessToken}}` als het Experience Platform niet-vervallende tokens zou moeten gebruiken om met uw bestemming te verbinden, anders gebruik `{{oauth2ServiceAccessToken}}` om een toegangstoken te produceren. |
-| `{{body.segments[0].segment.id}}` | Hiermee wordt de unieke id van het gemaakte publiek geretourneerd als de waarde van de sleutel `externalAudienceId`. |
+| `{{authData.accessToken}}` | Staat u toe om het toegangstoken tot uw API eindpunt over te gaan. Gebruik `{{authData.accessToken}}` als Experience Platform niet-vervallende tokens moet gebruiken om verbinding te maken met uw doel, anders gebruikt u `{{oauth2ServiceAccessToken}}` om een toegangstoken te genereren. |
+| `{{body.segments[0].segment.id}}` | Retourneert de unieke id van het gemaakte publiek als de waarde van de sleutel `externalAudienceId` . |
 | `{{error.message}}` | Retourneert een foutbericht dat wordt weergegeven aan gebruikers in de gebruikersinterface van het Experience Platform. |
 
 {style="table-layout:auto"}

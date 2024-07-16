@@ -15,17 +15,17 @@ ht-degree: 1%
 
 Met berekende velden kunnen waarden worden gemaakt op basis van de kenmerken in het invoerschema. Deze waarden kunnen vervolgens aan kenmerken in het doelschema worden toegewezen en een naam en beschrijving worden gegeven om de referentie eenvoudiger te maken.
 
-Als u een berekend veld wilt maken, selecteert u **[!UICONTROL Add calculated field]**.
+Selecteer **[!UICONTROL Add calculated field]** om een berekend veld te maken.
 
 ![](./images/calculated-fields/add-calculated-field.png)
 
-De **[!UICONTROL Create calculated field]** wordt weergegeven. Het linkerdialoogvenster bevat de velden, functies en operatoren die in berekende velden worden ondersteund. Selecteer een van de tabbladen om functies, velden of operatoren toe te voegen aan de expressie-editor.
+Het deelvenster **[!UICONTROL Create calculated field]** wordt weergegeven. Het linkerdialoogvenster bevat de velden, functies en operatoren die in berekende velden worden ondersteund. Selecteer een van de tabbladen om functies, velden of operatoren toe te voegen aan de expressie-editor.
 
 ![](./images/calculated-fields/create-calculated-field.png)
 
 | Tabtoets | Beschrijving |
 | --- | ----------- |
-| -functie | Op het tabblad Functies staan de functies die beschikbaar zijn voor het transformeren van de gegevens. Lees de handleiding voor meer informatie over de functies die u binnen berekende velden kunt gebruiken [functies Data Prep (Mapper) gebruiken](./functions.md). |
+| Functie | Op het tabblad Functies staan de functies die beschikbaar zijn voor het transformeren van de gegevens. Om meer over de functies te leren u binnen berekende gebieden kunt gebruiken, te lezen gelieve de gids op [ gebruikend de functies van de Prep van Gegevens (Mapper) ](./functions.md). |
 | Veld | Het tabblad Veld bevat velden en kenmerken die beschikbaar zijn in het bronschema. |
 | Operator | Het tabblad Operatoren bevat een lijst met operatoren die beschikbaar zijn om de gegevens te transformeren. |
 
@@ -33,7 +33,7 @@ U kunt handmatig velden, functies en operatoren toevoegen met de expressieeditor
 
 ![](./images/calculated-fields/write-calculated-field.png)
 
-Selecteren **[!UICONTROL Save]** om verder te gaan.
+Selecteer **[!UICONTROL Save]** om door te gaan.
 
 Het kaartscherm verschijnt weer met het nieuwe bronveld. Pas het desbetreffende doelveld toe en selecteer **[!UICONTROL Finish]** om de toewijzing te voltooien.
 

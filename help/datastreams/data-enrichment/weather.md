@@ -1,42 +1,42 @@
 ---
 title: Verbeter gegevensverzameling met weersgegevens van DNL het Weather Channel
 description: Verbeter de gegevens die u via gegevensstromen met weersgegevens van DNL het Weather Kanaal verzamelt.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
+source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 1%
 
 ---
 
-
 # Verbeter gegevensverzameling met weersgegevens van [!DNL The Weather Channel]
 
-Adobe heeft samengewerkt met [!DNL [The Weather Company]](https://www.ibm.com/weather) om de extra context van het weer in de Verenigde Staten te brengen aan de gegevens die via gegevensstromen worden verzameld. U kunt deze gegevens gebruiken voor analyses, het richten, en publieksverwezenlijking in Experience Platform.
+Adobe heeft met [!DNL [The Weather Company]](https://www.ibm.com/weather) samengewerkt om de extra context van het weer in de Verenigde Staten te brengen aan de gegevens die via gegevensstromen worden verzameld. U kunt deze gegevens gebruiken voor analyses, het richten, en publieksverwezenlijking in Experience Platform.
 
-Er zijn drie soorten gegevens die beschikbaar zijn vanuit [!DNL The Weather Channel]:
+Er zijn drie typen gegevens beschikbaar via [!DNL The Weather Channel] :
 
 * **[!UICONTROL Current Weather]**: De huidige weersomstandigheden van de gebruiker, op basis van hun locatie. Dit omvat de huidige temperatuur, neerslag, wolkendekking en meer.
-* **[!UICONTROL Forecasted Weather]**: De prognose omvat de prognose 1, 2, 3, 5, 7 en 10 dagen voor de locatie van de gebruiker.
+* **[!UICONTROL Forecasted Weather]**: De voorspelling omvat de voorspelling van 1, 2, 3, 5, 7 en 10 dagen voor de gebruikerslocatie.
 * **[!UICONTROL Triggers]**: Triggers zijn specifieke combinaties die zijn toegewezen aan verschillende semantische weersomstandigheden. Er zijn drie verschillende soorten weertriggers:
 
    * **[!UICONTROL Weather Triggers]**: semantisch betekenisvolle omstandigheden, zoals koud of regenachtig weer. Deze kunnen in de definities verschillen tussen de verschillende klimatologische omstandigheden.
-   * **[!UICONTROL Product Triggers]**: Voorwaarden die tot de aankoop van verschillende soorten producten zouden leiden. Voorbeelden hiervan zijn koudweerprognoses die kunnen betekenen dat de aankoop van regenjassen waarschijnlijker wordt.
-   * **[!UICONTROL Severe Weather Triggers]**: Ernstige weerswaarschuwingen, zoals winterstorm of orkaanwaarschuwingen.
+   * **[!UICONTROL Product Triggers]**: voorwaarden die tot de aankoop van verschillende soorten producten zouden leiden. Voorbeelden hiervan zijn koudweerprognoses die kunnen betekenen dat de aankoop van regenjassen waarschijnlijker wordt.
+   * **[!UICONTROL Severe Weather Triggers]**: Ernstige weerswaarschuwingen, zoals winterstorm- of orkaanwaarschuwingen.
 
 ## Vereisten {#prerequisites}
 
 Voordat u weergegevens gebruikt, moet u controleren of aan de volgende voorwaarden is voldaan:
 
-* U moet een licentie geven voor de weergegevens die u gebruikt [!DNL The Weather Channel]. Ze zullen het dan inschakelen op je account.
-* Weer-gegevens zijn alleen beschikbaar via gegevensstreams. Als u weergegevens wilt gebruiken, moet u [!DNL Web SDK], [!DNL Mobile Edge Extension] of de [Server-API](../../server-api/overview.md) om deze gegevens op te nemen.
-* Uw gegevensstroom moet [[!UICONTROL Geo Location]](../configure.md#advanced-options) ingeschakeld.
-* Voeg de [weer, veldgroep](#schema-configuration) aan het schema dat u gebruikt.
+* U moet een licentie geven voor de weergegevens die u gebruikt vanuit [!DNL The Weather Channel] . Ze zullen het dan inschakelen op je account.
+* Weer-gegevens zijn alleen beschikbaar via gegevensstreams. Om weergegevens te gebruiken, moet u [!DNL Web SDK] gebruiken, [!DNL Mobile Edge Extension] of [ Server API ](../../server-api/overview.md) om deze gegevens te omvatten.
+* Voor uw gegevensstroom moet [[!UICONTROL Geo Location]](../configure.md#advanced-options) zijn ingeschakeld.
+* Voeg de [ groep van het weergebied ](#schema-configuration) aan het schema toe dat u gebruikt.
 
 ## Inrichting {#provisioning}
 
-Nadat u de gegevens van [!DNL The Weather Channel], zullen uw account toegang krijgen tot de gegevens. Vervolgens moet u de klantenservice van de Adobe bereiken om de gegevens op uw gegevensstroom te kunnen inschakelen. Als deze optie is ingeschakeld, worden de gegevens automatisch toegevoegd.
+Nadat u een licentie voor de gegevens van [!DNL The Weather Channel] hebt verkregen, kan uw account toegang krijgen tot de gegevens. Vervolgens moet u de klantenservice van de Adobe bereiken om de gegevens op uw gegevensstroom te kunnen inschakelen. Als deze optie is ingeschakeld, worden de gegevens automatisch toegevoegd.
 
-U kunt bevestigen dat het door een randspoor met debugger in werking te stellen of door Verzekering te gebruiken wordt toegevoegd om een slag door te vinden [!DNL Edge Network].
+U kunt bevestigen dat het door een randspoor met debugger in werking te stellen of door Verzekering te gebruiken wordt toegevoegd om een klap door [!DNL Edge Network] te vinden.
 
 ### Schema-configuratie {#schema-configuration}
 
@@ -54,34 +54,34 @@ Zodra u beschikt over een licentie en de gegevens beschikbaar zijn, kunt u deze 
 
 ### Adobe Analytics {#analytics}
 
-In [!DNL Adobe Analytics], zijn de weergegevens beschikbaar om via verwerkingsregels en de rest van uw [!DNL XDM] schema.
+In [!DNL Adobe Analytics] zijn de weergegevens beschikbaar voor toewijzing via verwerkingsregels, samen met de rest van het [!DNL XDM] -schema.
 
-U kunt de lijst met velden vinden die u kunt toewijzen in het dialoogvenster [weerreferentie](weather-reference.md) pagina. Zoals bij alles [!DNL XDM] schema&#39;s, de sleutels worden vooraf bepaald met `a.x`. Een veld met de naam `weather.current.temperature.farenheit` zou verschijnen binnen [!DNL Analytics] als `a.x.weather.current.temperature.farenheit`.
+U kunt de lijst van gebieden vinden die u in de [ Web van de weerverwijzing ](weather-reference.md) pagina kunt in kaart brengen. Net als bij alle schema&#39;s van [!DNL XDM] , worden de toetsen voorafgegaan door `a.x` . Een veld met de naam `weather.current.temperature.farenheit` wordt bijvoorbeeld weergegeven in [!DNL Analytics] as `a.x.weather.current.temperature.farenheit` .
 
-![Interface van verwerkingsregel](../assets/data-enrichment/weather/processing-rules.png)
+![ Interface van de Regel van de Verwerking ](../assets/data-enrichment/weather/processing-rules.png)
 
 ### Adobe Customer Journey Analytics {#cja}
 
-In [!DNL Adobe Customer Journey Analytics], zijn de weergegevens beschikbaar in de dataset die in de gegevensstroom wordt gespecificeerd. Zolang de weerkenmerken [toegevoegd aan uw schema](#prerequisites-prerequisites), kunnen [toevoegen aan een gegevensweergave](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html) in [!DNL Customer Journey Analytics].
+In [!DNL Adobe Customer Journey Analytics] zijn de weergegevens beschikbaar in de gegevensset die in de gegevensstroom is opgegeven. Zolang de weerattributen [ aan uw schema ](#prerequisites-prerequisites) worden toegevoegd, zijn zij beschikbaar aan [ toevoegen aan een gegevensmening ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html) in [!DNL Customer Journey Analytics].
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-Weezelgegevens zijn beschikbaar in het dialoogvenster [Real-time Customer Data Platform](../../rtcdp/overview.md), voor gebruik bij het publiek. Weezelgegevens worden gekoppeld aan gebeurtenissen.
+De gegevens van het Weer zijn beschikbaar in [ Real-time Customer Data Platform ](../../rtcdp/overview.md), voor gebruik in publiek. Weezelgegevens worden gekoppeld aan gebeurtenissen.
 
-![Segement Builder met weersomstandigheden](../assets/data-enrichment/weather/schema-builder.png)
+![ de Bouwer van het Element die Weer Gebeurtenissen ](../assets/data-enrichment/weather/schema-builder.png) toont
 
 Aangezien de weersomstandigheden vaak veranderen, adviseert de Adobe dat u tijdbeperkingen op het publiek, zoals aangetoond in het bovenstaande voorbeeld plaatst. Een koude dag in de laatste twee is veel impacter dan een koude dag zes maanden geleden.
 
-Zie de [weerreferentie](weather-reference.md) voor de beschikbare velden.
+Zie [ weerverwijzing ](weather-reference.md) voor de beschikbare gebieden.
 
 ### Adobe Target {#target}
 
-In [!DNL Adobe Target], kunt u weergegevens gebruiken om personalisatie in real time te bevorderen. Weezelgegevens worden doorgegeven aan [!DNL Target] als [!UICONTROL mBox] parameters en u kunt deze openen via een aangepaste [!UICONTROL mBox] parameter.
+In [!DNL Adobe Target] kunt u weergegevens gebruiken om in real-time te personaliseren. Weezelgegevens worden doorgegeven aan [!DNL Target] als [!UICONTROL mBox] -parameters en u kunt deze benaderen via een aangepaste [!UICONTROL mBox] -parameter.
 
-![Doelpubliek Builder](../assets/data-enrichment/weather/target-audience-builder.png)
+![ de Bouwer van het publiek van het Doel ](../assets/data-enrichment/weather/target-audience-builder.png)
 
-De parameter is [!DNL XDM] pad naar een specifiek veld. Zie de [weerreferentie](weather-reference.md) voor de beschikbare velden en de bijbehorende paden.
+De parameter is het [!DNL XDM] -pad naar een specifiek veld. Zie de [ weerverwijzing ](weather-reference.md) voor de beschikbare gebieden en hun overeenkomstige wegen.
 
 ## Volgende stappen {#next-steps}
 
-Na het lezen van dit document hebt u nu een beter inzicht in hoe u weergegevens kunt gebruiken voor verschillende Adobe-oplossingen. Als u meer wilt weten over de toewijzing van weersgegevens, raadpleegt u de [veldtoewijzingsverwijzing](weather-reference.md).
+Na het lezen van dit document hebt u nu een beter inzicht in hoe u weergegevens kunt gebruiken voor verschillende Adobe-oplossingen. Meer over de afbeelding van het het gebied van weergegevens leren, zie de [ verwijzing van de gebiedstoewijzing ](weather-reference.md).

@@ -1,7 +1,8 @@
 ---
 title: Gegevenstype verzending
 description: Meer informatie over het gegevenstype XDM (Shipping Experience Data Model).
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: c3a58e46-c80e-4896-b21c-47dc5a6c869b
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
@@ -10,10 +11,10 @@ ht-degree: 0%
 
 # [!UICONTROL Shipping] gegevenstype
 
-[!UICONTROL Shipping] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat details met betrekking tot de verzending van één of meerdere producten verstrekt. Het bevat details over de logistiek en bijzonderheden met betrekking tot de levering van bestelde voorwerpen.
+[!UICONTROL Shipping] is een standaard XDM-gegevenstype (Experience Data Model) dat details biedt met betrekking tot de verzending van een of meer producten. Het bevat details over de logistiek en bijzonderheden met betrekking tot de levering van bestelde voorwerpen.
 
 
-![Een schema van de [!UICONTROL Shipping] gegevenstype.](../images/data-types/shipping.png)
+![ een diagram van het [!UICONTROL Shipping] gegevenstype.](../images/data-types/shipping.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |----------------------|-----------------------|-----------|------------------------------------------------------|
@@ -30,5 +31,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json)

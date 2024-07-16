@@ -16,13 +16,13 @@ ht-degree: 0%
 
 ## Voorbeeld-API-aanroepen
 
-Nu u begrijpt welke kopballen aan gebruik zijn, bent u bereid beginnen het richten van vraag aan [!DNL Query Service] API. De volgende secties lopen door diverse API vraag u kunt maken gebruikend [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+Nu u begrijpt welke headers u moet gebruiken, bent u klaar om aanroepen uit te voeren naar de [!DNL Query Service] API. De volgende secties doorlopen de verschillende API-aanroepen die u met de [!DNL Query Service] API kunt maken. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
 ### Hiermee wordt een lijst met geplande query&#39;s opgehaald
 
-U kunt een lijst van alle geplande vragen voor uw organisatie terugwinnen door een verzoek van de GET aan te dienen `/schedules` eindpunt.
+U kunt een lijst van alle geplande vragen voor uw organisatie terugwinnen door een verzoek van de GET tot het `/schedules` eindpunt te richten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /schedules
@@ -31,18 +31,18 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Optioneel*) Parameters die aan het verzoekweg worden toegevoegd die de resultaten vormen die in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven. |
+| `{QUERY_PARAMETERS}` | (*Facultatieve*) Parameters die aan de verzoekweg worden toegevoegd die de resultaten vormen in de reactie zijn teruggekeerd. De veelvoudige parameters kunnen worden omvat, die door ampersands (`&`) worden gescheiden. De beschikbare parameters worden hieronder weergegeven. |
 
-**Query-parameters**
+**de parameters van de Vraag**
 
 Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van geplande query&#39;s. Al deze parameters zijn optioneel. Het maken van een vraag aan dit eindpunt zonder parameters zal alle geplande vragen terugwinnen beschikbaar voor uw organisatie.
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. Bijvoorbeeld: `orderby=created` sorteert de resultaten in oplopende volgorde. Een `-` vóór het maken (`orderby=-created`) sorteert objecten in aflopende volgorde. |
+| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated` . `orderby=created` sorteert de resultaten bijvoorbeeld in oplopende volgorde. Wanneer u een `-` vóór het maken (`orderby=-created` ) toevoegt, worden de items in aflopende volgorde gesorteerd. |
 | `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Standaardwaarde: 20*) |
-| `start` | Geef een tijdstempel voor de ISO-indeling op om de resultaten te bestellen. Als geen begindatum wordt gespecificeerd, zal de API vraag eerst de oudste gecreeerde geplande vraag terugkeren, dan zal blijven van recentere resultaten een lijst maken.<br> Met ISO-tijdstempels kunt u de datum en tijd korter maken. De basis ISO-tijdstempels hebben de notatie: `2020-09-07` om de datum 7 september 2020 uit te drukken. Een complexer voorbeeld zou worden geschreven zoals `2022-11-05T08:15:30-05:00` en komt overeen met 5 november 2022, 8:15:30 uur &#39;s ochtends, Amerikaanse Eastern Standard Time. Een tijdzone kan worden opgegeven met een UTC-verschuiving en wordt aangeduid met het achtervoegsel &quot;Z&quot; (`2020-01-01T01:01:01Z`). Als er geen tijdzone is opgegeven, wordt de standaardwaarde nul gebruikt. |
-| `property` | Filterresultaten op basis van velden. De filters **moet** zijn aan HTML ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created`, `templateId`, en `userId`. De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan), en `==` (gelijk aan). Bijvoorbeeld: `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` retourneert alle geplande query&#39;s waarbij de gebruikersnaam is opgegeven. |
+| `start` | Geef een tijdstempel voor de ISO-indeling op om de resultaten te bestellen. Als geen begindatum wordt gespecificeerd, zal de API vraag eerst de oudste gecreeerde geplande vraag terugkeren, dan zal blijven van recentere resultaten een lijst maken.<br> Met ISO-tijdstempels kunt u verschillende niveaus van granulariteit opgeven in de datum en tijd. De basis-ISO-tijdstempels hebben de notatie: `2020-09-07` voor het uitdrukken van de datum 7 september 2020. Een complexer voorbeeld zou als `2022-11-05T08:15:30-05:00` worden geschreven en beantwoordt aan 5 November, 2022, 8 :15: 30 am, de Tijd van de Norm van de V.S. Een timezone kan met een UTC compensatie worden voorzien en door het achtervoegsel &quot;Z&quot; (`2020-01-01T01:01:01Z`) wordt aangeduid. Als er geen tijdzone is opgegeven, wordt de standaardwaarde nul gebruikt. |
+| `property` | Filterresultaten op basis van velden. De filters **moeten** HTML zijn ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created` , `templateId` en `userId` . De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan) en `==` (gelijk aan). `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` retourneert bijvoorbeeld alle geplande query&#39;s waarbij de gebruiker-id overeenkomt met de opgegeven waarde. |
 
 **Verzoek**
 
@@ -56,7 +56,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met een lijst van geplande vragen voor de gespecificeerde organisatie terug. De volgende reactie keert de recentste geplande vraag terug die voor uw organisatie wordt gecreeerd.
 
@@ -124,9 +124,9 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van geplande vra
 
 ### Nieuwe geplande query maken
 
-U kunt een nieuwe geplande vraag tot stand brengen door een verzoek van de POST aan `/schedules` eindpunt. Wanneer u een geplande query maakt in de API, kunt u deze ook zien in de Query-editor. Voor meer informatie over geplande vragen in UI, gelieve te lezen [Documentatie van de Query-editor](../ui/user-guide.md#scheduled-queries).
+U kunt een nieuwe geplande vraag tot stand brengen door een verzoek van de POST aan het `/schedules` eindpunt te doen. Wanneer u een geplande query maakt in de API, kunt u deze ook zien in de Query-editor. Voor meer informatie over geplande vragen in UI, te lezen gelieve de [ documentatie van de Redacteur van de Vraag ](../ui/user-guide.md#scheduled-queries).
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /schedules
@@ -161,12 +161,12 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | De naam van de database waarvoor u een geplande query maakt. |
 | `query.sql` | De SQL-query die u wilt maken. |
 | `query.name` | De naam van de geplande query. |
-| `schedule.schedule` | Het uitsnijdschema voor de query. Lees voor meer informatie over de cron-schema&#39;s de [expressie-indeling voor uitsnijden](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie. In dit voorbeeld betekent &quot;30 * * *&quot;dat de vraag elk uur bij het minteken van 30 minuten zal lopen.<br><br>U kunt ook de volgende steno-expressies gebruiken:<ul><li>`@once`: De query wordt slechts eenmaal uitgevoerd.</li><li>`@hourly`: De query wordt elk uur uitgevoerd aan het begin van het uur. Dit is gelijk aan de expressie voor uitsnijden `0 * * * *`.</li><li>`@daily`: De query wordt eenmaal per dag om middernacht uitgevoerd. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * *`.</li><li>`@weekly`: De query wordt één keer per week uitgevoerd, op zondag, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * 0`.</li><li>`@monthly`: De query wordt één keer per maand uitgevoerd, op de eerste dag van de maand, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 1 * *`.</li><li>`@yearly`: De query wordt één keer per jaar uitgevoerd, op 1 januari, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `1 0 0 1 1 *`. |
+| `schedule.schedule` | Het uitsnijdschema voor de query. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het [ formaat van de cron uitdrukking ](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie. In dit voorbeeld betekent &quot;30 * * *&quot;dat de vraag elk uur bij het minteken van 30 minuten zal lopen.<br><br> Alternatief, kunt u de volgende steno uitdrukkingen gebruiken:<ul><li>`@once`: de query wordt slechts één keer uitgevoerd.</li><li>`@hourly`: de query wordt elk uur uitgevoerd aan het begin van het uur. Dit is gelijk aan de expressie voor uitsnijden `0 * * * *` .</li><li>`@daily`: De query wordt eenmaal per dag om middernacht uitgevoerd. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * *` .</li><li>`@weekly`: de query wordt één keer per week uitgevoerd, op zondag, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * 0` .</li><li>`@monthly`: De query wordt één keer per maand uitgevoerd, op de eerste dag van de maand, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 1 * *` .</li><li>`@yearly`: De query wordt één keer per jaar uitgevoerd, op 1 januari om middernacht. Dit is gelijk aan de expressie voor uitsnijden `1 0 0 1 1 *` . |
 | `schedule.startDate` | De begindatum voor uw geplande query, geschreven als een UTC-tijdstempel. |
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert status 202 (Toegelaten) van HTTP met details van uw onlangs gecreeerde geplande vraag terug. Nadat de geplande query is geactiveerd, wordt de opdracht `state` verandert van `REGISTERING` tot `ENABLED`.
+Een succesvolle reactie keert status 202 (Toegelaten) van HTTP met details van uw onlangs gecreeerde geplande vraag terug. Nadat de geplande query is geactiveerd, verandert de `state` van `REGISTERING` in `ENABLED` .
 
 ```json
 {
@@ -219,13 +219,13 @@ Een succesvolle reactie keert status 202 (Toegelaten) van HTTP met details van u
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` tot [verwijder uw gemaakte geplande query](#delete-a-specified-scheduled-query).
+>U kunt de waarde van `_links.delete` gebruiken om [ uw gecreeerde geplande vraag ](#delete-a-specified-scheduled-query) te schrappen.
 
 ### Gegevens van een opgegeven geplande query aanvragen
 
-U kunt informatie voor een specifieke geplande vraag terugwinnen door een verzoek van de GET aan `/schedules` eindpunt en het verstrekken van zijn identiteitskaart in de verzoekweg.
+U kunt informatie voor een specifieke geplande vraag terugwinnen door een verzoek van de GET tot het `/schedules` eindpunt te richten en zijn identiteitskaart in de verzoekweg te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /schedules/{SCHEDULE_ID}
@@ -233,7 +233,7 @@ GET /schedules/{SCHEDULE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` De waarde van de geplande query die u wilt ophalen. |
+| `{SCHEDULE_ID}` | De `id` -waarde van de geplande query die u wilt ophalen. |
 
 **Verzoek**
 
@@ -245,7 +245,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met details van de gespecificeerde geplande vraag terug.
 
@@ -302,19 +302,19 @@ Een succesvolle reactie keert status 200 van HTTP met details van de gespecifice
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` tot [verwijder uw gemaakte geplande query](#delete-a-specified-scheduled-query).
+>U kunt de waarde van `_links.delete` gebruiken om [ uw gecreeerde geplande vraag ](#delete-a-specified-scheduled-query) te schrappen.
 
 ### Details van een opgegeven geplande query bijwerken
 
-U kunt de details voor een gespecificeerde geplande vraag bijwerken door een verzoek van de PATCH aan `/schedules` en door zijn identiteitskaart in de verzoekweg te verstrekken.
+U kunt de details voor een gespecificeerde geplande vraag bijwerken door een verzoek van PATCH aan het `/schedules` eindpunt en door zijn identiteitskaart in de verzoekweg te verstrekken.
 
-De PATCH-aanvraag ondersteunt twee verschillende paden: `/state` en `/schedule/schedule`.
+De aanvraag PATCH ondersteunt twee verschillende paden: `/state` en `/schedule/schedule` .
 
 ### Geplande querystatus bijwerken
 
-U kunt de status van de geselecteerde geplande query bijwerken door het dialoogvenster `path` eigenschap aan `/state` en de `value` eigenschap als ofwel `enable` of `disable`.
+U kunt de status van de geselecteerde geplande query bijwerken door de eigenschap `path` in te stellen op `/state` en de eigenschap `value` op `enable` of `disable` .
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /schedules/{SCHEDULE_ID}
@@ -322,7 +322,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` De waarde van de geplande query die u wilt PATCH. |
+| `{SCHEDULE_ID}` | De `id` -waarde van de geplande query die u wilt PATCH. |
 
 
 **Verzoek**
@@ -348,11 +348,11 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `op` | De bewerking die op het queryprogramma moet worden uitgevoerd. De geaccepteerde waarde is `replace`. |
-| `path` | Het pad van de waarde die u wilt repareren. In dit geval, aangezien u de geplande staat van de vraag bijwerkt, moet u de waarde van plaatsen `path` tot `/state`. |
-| `value` | De bijgewerkte waarde van de `/state`. Deze waarde kan worden ingesteld als `enable` of `disable` om de geplande query in of uit te schakelen. |
+| `op` | De bewerking die op het queryprogramma moet worden uitgevoerd. De geaccepteerde waarde is `replace` . |
+| `path` | Het pad van de waarde die u wilt repareren. In dit geval moet u de waarde `path` instellen op `/state` , aangezien u de status van de geplande query bijwerkt. |
+| `value` | De bijgewerkte waarde van de `/state` . Deze waarde kan worden ingesteld als `enable` of `disable` om de geplande query in of uit te schakelen. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volgende bericht.
 
@@ -365,9 +365,9 @@ Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volge
 
 ### Geplande queryplanning bijwerken
 
-U kunt het bijsnijdschema van de geplande query bijwerken door het dialoogvenster `path` eigenschap aan `/schedule/schedule` in de verzoekende instantie. Lees voor meer informatie over de cron-schema&#39;s de [expressie-indeling voor uitsnijden](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie.
+U kunt het bijsnijdschema van de geplande query bijwerken door de eigenschap `path` in te stellen op `/schedule/schedule` in de hoofdtekst van de aanvraag. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het [ formaat van de cron uitdrukking ](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /schedules/{SCHEDULE_ID}
@@ -375,7 +375,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` De waarde van de geplande query die u wilt PATCH. |
+| `{SCHEDULE_ID}` | De `id` -waarde van de geplande query die u wilt PATCH. |
 
 **Verzoek**
 
@@ -400,11 +400,11 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `op` | De bewerking die op het queryprogramma moet worden uitgevoerd. De geaccepteerde waarde is `replace`. |
-| `path` | Het pad van de waarde die u wilt repareren. In dit geval, aangezien u het geplande programma van de vraag bijwerkt, moet u de waarde van plaatsen `path` tot `/schedule/schedule`. |
-| `value` | De bijgewerkte waarde van de `/schedule`. Deze waarde moet de vorm hebben van een uitsnijdschema. Dus, in dit voorbeeld, zal de geplande vraag elk uur bij het 45 minieme teken in werking stellen. |
+| `op` | De bewerking die op het queryprogramma moet worden uitgevoerd. De geaccepteerde waarde is `replace` . |
+| `path` | Het pad van de waarde die u wilt repareren. In dit geval moet u de waarde `path` instellen op `/schedule/schedule` , aangezien u het schema van de geplande query bijwerkt. |
+| `value` | De bijgewerkte waarde van de `/schedule` . Deze waarde moet de vorm hebben van een uitsnijdschema. Dus, in dit voorbeeld, zal de geplande vraag elk uur bij het 45 minieme teken in werking stellen. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volgende bericht.
 
@@ -417,13 +417,13 @@ Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volge
 
 ### Opgegeven geplande query verwijderen
 
-U kunt een gespecificeerde geplande vraag schrappen door een verzoek van de DELETE aan `/schedules` eindpunt en het verstrekken van identiteitskaart van de geplande vraag wilt u in de verzoekweg schrappen.
+U kunt een gespecificeerde geplande vraag schrappen door een verzoek van DELETE aan het `/schedules` eindpunt te doen en identiteitskaart van de geplande vraag te verstrekken u in de verzoekweg wilt schrappen.
 
 >[!NOTE]
 >
->Het schema **moet** moet worden uitgeschakeld voordat u deze verwijdert.
+>Het programma **moet** worden onbruikbaar gemaakt alvorens wordt geschrapt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /schedules/{SCHEDULE_ID}
@@ -431,7 +431,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` De waarde van de geplande query die u wilt DELETE. |
+| `{SCHEDULE_ID}` | De `id` -waarde van de geplande query die u wilt DELETE. |
 
 **Verzoek**
 
@@ -443,7 +443,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/schedules/e95186d
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volgende bericht.
 

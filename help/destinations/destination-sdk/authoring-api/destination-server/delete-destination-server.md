@@ -4,14 +4,14 @@ title: Een doelserverconfiguratie verwijderen
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 1%
+source-wordcount: '330'
+ht-degree: 0%
 
 ---
 
 # Een doelserverconfiguratie verwijderen
 
-Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om een bestaande configuratie van de bestemmingsserver te schrappen, gebruikend `/authoring/destination-servers` API-eindpunt.
+Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om een bestaande configuratie van de doelserver te verwijderen met behulp van het API-eindpunt `/authoring/destination-servers` .
 
 Lees de volgende artikelen voor een gedetailleerde beschrijving van de mogelijkheden die u via dit eindpunt kunt verwijderen:
 
@@ -22,23 +22,23 @@ Lees de volgende artikelen voor een gedetailleerde beschrijving van de mogelijkh
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Aan de slag met API-bewerkingen voor doelserver {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een doelserverconfiguratie verwijderen {#delete}
 
-U kunt een [bestaand](create-destination-server.md) doelserverconfiguratie door een `DELETE` verzoek aan de `/authoring/destination-servers` met de `{INSTANCE_ID}`van de configuratie van de bestemmingsserver die u wilt schrappen.
+U kunt een [ bestaande ](create-destination-server.md) configuratie van de bestemmingsserver schrappen door a `DELETE` verzoek aan het `/authoring/destination-servers` eindpunt met `{INSTANCE_ID}` van de configuratie van de bestemmingsserver te maken die u wilt schrappen.
 
 >[!TIP]
 >
->**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
+>**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-Om een bestaande configuratie van de bestemmingsserver en zijn overeenkomstige te verkrijgen `{INSTANCE_ID}`, zie het artikel over [ophalen, configuratie van doelserver](retrieve-destination-server.md).
+Om een bestaande configuratie van de bestemmingsserver en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie het artikel over [ het terugwinnen van een configuratie van de bestemmingsserver ](retrieve-destination-server.md).
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /authoring/destination-servers/{INSTANCE_ID}
@@ -64,11 +64,11 @@ Een geslaagde reactie retourneert HTTP-status 200 samen met een lege HTTP-respon
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u een bestaande doelserver kunt verwijderen via de Destination SDK `/authoring/destination-servers` API-eindpunt.
+Nadat u dit document hebt gelezen, weet u nu hoe u een bestaande doelserver kunt verwijderen via het API-eindpunt Destination SDK `/authoring/destination-servers` .
 
 Raadpleeg de volgende artikelen voor meer informatie over wat u met dit eindpunt kunt doen:
 

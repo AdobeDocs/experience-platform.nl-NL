@@ -8,7 +8,7 @@ exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '450'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -20,22 +20,22 @@ De op attribuut-gebaseerde toegangsbeheer API wordt gebruikt om tot rollen, prod
 
 >[!IMPORTANT]
 >
->Op attributen-gebaseerde toegangscontrole moet niet met de mogelijkheden van het gegevensbeheer van het Experience Platform worden verward, die u toestaan om etiketten en beleid te gebruiken om te controleren hoe het gegeven in Platform eerder wordt gebruikt dan welke gebruikers in uw organisatie toegang tot het hebben. Zie de [Handleiding Beleidsservice-API](../../../data-governance/api/overview.md) voor stappen over hoe te om programmatically hefboomwerking deze mogelijkheden te gebruiken.
+>Op attributen-gebaseerde toegangscontrole moet niet met de mogelijkheden van het gegevensbeheer van het Experience Platform worden verward, die u toestaan om etiketten en beleid te gebruiken om te controleren hoe het gegeven in Platform eerder wordt gebruikt dan welke gebruikers in uw organisatie toegang tot het hebben. Zie de [ gids van de Dienst API van het Beleid ](../../../data-governance/api/overview.md) voor stappen op hoe te hefboomwerking programmatically deze mogelijkheden.
 
-Deze eindpunten worden hieronder beschreven. Ga naar de afzonderlijke eindpunthulplijnen voor meer informatie en raadpleeg de [gids Aan de slag](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lees steekproefAPI vraag, en meer.
+Deze eindpunten worden hieronder beschreven. Gelieve te bezoeken de individuele eindpuntgidsen voor details en te verwijzen naar [ begonnen gids ](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
 
 ## Rollen
 
-De rollen bepalen de toegang die een beheerder, een specialist, of een eindgebruiker aan middelen in uw organisatie moet hebben. In een op rol-gebaseerd milieu van het toegangsbeheer, is de levering van de gebruikerstoegang groepering door gemeenschappelijke verantwoordelijkheden en behoeften. Een rol heeft een bepaalde reeks toestemmingen en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van mening worden toegewezen of toegang schrijven zij nodig hebben. Zie de [hulplijn voor roleindpunt](./roles.md) voor meer informatie over het werken met rollen in API.
+De rollen bepalen de toegang die een beheerder, een specialist, of een eindgebruiker aan middelen in uw organisatie moet hebben. In een op rol-gebaseerd milieu van het toegangsbeheer, is de levering van de gebruikerstoegang groepering door gemeenschappelijke verantwoordelijkheden en behoeften. Een rol heeft een bepaalde reeks toestemmingen en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van mening worden toegewezen of toegang schrijven zij nodig hebben. Zie de [ gids van het roleindpunt ](./roles.md) voor meer informatie bij het werken met rollen in API.
 
 ## Beleid
 
-Het beleid is verklaringen die attributen samenbrengen om toegelaten en ontoelaatbare acties te vestigen. Het beleid kan of lokaal of globaal zijn, en kan ander beleid met voeten treden. De `/policies` het eindpunt staat u toe om beleid in uw organisatie programmatically te beheren. Zie de [leidraad voor beleidseindpunten](./policies.md) voor meer informatie over het werken met beleid in API.
+Het beleid is verklaringen die attributen samenbrengen om toegelaten en ontoelaatbare acties te vestigen. Het beleid kan of lokaal of globaal zijn, en kan ander beleid met voeten treden. Het `/policies` eindpunt staat u toe om beleid in uw organisatie programmatically te beheren. Zie de [ gids van het beleidseindpunt ](./policies.md) voor meer informatie bij het werken met beleid in API.
 
 ## Producten
 
-De `/products` eindpunt in op attribuut-gebaseerde toegangsbeheer API staat u toe om producten evenals toestemmingscategorieën en toestemmingsreeksen programmatically te beheren verbonden aan producten in uw organisatie. Zie de [eindgebruikergids voor producten](./products.md) voor meer informatie over het werken met producten en hun overeenkomstige toestemmingscategorieën en toestemmingsreeksen in API.
+Het `/products` eindpunt in op attribuut-gebaseerde toegangsbeheer API staat u toe om producten evenals toestemmingscategorieën en toestemmingsreeksen programmatically te beheren verbonden aan producten in uw organisatie. Zie de [ gids van het producteindpunt ](./products.md) voor meer informatie bij het werken met producten en hun overeenkomstige toestemmingscategorieën en toestemmingsreeksen in API.
 
 ## Volgende stappen
 
-Beginnen het maken van vraag gebruikend op attribuut-gebaseerde toegangsbeheer API, lees [gids Aan de slag](./getting-started.md) Selecteer vervolgens een van de eindpunthulplijnen om te leren hoe u specifieke eindpunten kunt gebruiken.
+Begin makend vraag gebruikend op attribuut-gebaseerde toegangscontrole API, lees [ begonnen gids ](./getting-started.md) dan één van de eindpuntgidsen om te leren hoe te om specifieke eindpunten te gebruiken.

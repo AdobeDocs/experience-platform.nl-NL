@@ -5,8 +5,8 @@ description: Dit document biedt een werkvoorbeeld voor het verwerken en transfor
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
 source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 1%
+source-wordcount: '789'
+ht-degree: 0%
 
 ---
 
@@ -14,21 +14,21 @@ ht-degree: 1%
 
 Adobe Experience Platform Query Service ondersteunt het gebruik van geneste gegevensvelden. De complexiteit van bedrijfsgegevensstructuren kan het transformeren of verwerken van deze gegevens ingewikkeld maken. Dit document verstrekt voorbeelden van om, datasets met complexe gegevenstypes met inbegrip van genestelde gegevensstructuren tot stand te brengen te verwerken of om te zetten.
 
-Query Service biedt een [!DNL PostgreSQL] interface om SQL vragen op alle datasets in werking te stellen die door Experience Platform worden beheerd. Het platform steunt het gebruik van of primitieve of complexe gegevenstypes in lijstkolommen zoals struct, series, kaarten, en diep genestelde struct, series, en kaarten. Datasets kunnen ook geneste structuren bevatten waarbij het gegevenstype van de kolom zo complex kan zijn als een array van geneste structuren, of een kaart met kaarten waarin de waarde van een sleutelwaardepaar een structuur met meerdere nestniveaus kan zijn.
+De Dienst van de vraag verstrekt een [!DNL PostgreSQL] interface om SQL vragen op alle datasets in werking te stellen die door Experience Platform worden beheerd. Het platform steunt het gebruik van of primitieve of complexe gegevenstypes in lijstkolommen zoals struct, series, kaarten, en diep genestelde struct, series, en kaarten. Datasets kunnen ook geneste structuren bevatten waarbij het gegevenstype van de kolom zo complex kan zijn als een array van geneste structuren, of een kaart met kaarten waarin de waarde van een sleutelwaardepaar een structuur met meerdere nestniveaus kan zijn.
 
 ## Aan de slag
 
-Deze zelfstudie vereist het gebruik van een externe PSQL-client of het hulpmiddel Query Editor om query&#39;s te schrijven, te valideren en uit te voeren in de gebruikersinterface van het Experience Platform (UI). Volledige details over hoe te om vragen door UI in werking te stellen kunnen in worden gevonden [Handleiding voor de Query Editor](../ui/user-guide.md). Voor een gedetailleerde lijst waarop de derdeDesktopcliënten met de Dienst van de Vraag kunnen verbinden, zie [Overzicht van clientverbindingen](../clients/overview.md).
+Deze zelfstudie vereist het gebruik van een externe PSQL-client of het hulpmiddel Query Editor om query&#39;s te schrijven, te valideren en uit te voeren in de gebruikersinterface van het Experience Platform (UI). De volledige details op hoe te om vragen door UI in werking te stellen kunnen in de [ gids UI van de Redacteur van de Vraag ](../ui/user-guide.md) worden gevonden. Voor een gedetailleerde lijst waarop de derdeDesktopcliënten met de Dienst van de Vraag kunnen verbinden, zie het [ overzicht van cliëntverbindingen ](../clients/overview.md).
 
-U zou ook een goed begrip van moeten hebben `INSERT INTO` en `CTAS` syntaxis. Specifieke informatie over het gebruik ervan is te vinden in het [`INSERT INTO`](../sql/syntax.md#insert-into) en [`CTAS`](../sql/syntax.md#create-table-as-select) van de [Referentiedocumentatie voor SQL-syntaxis](../sql/syntax.md).
+U moet ook een goed inzicht hebben in de syntaxis `INSERT INTO` en `CTAS` . De specifieke informatie over hun gebruik kan in de [`INSERT INTO`](../sql/syntax.md#insert-into) en [`CTAS`](../sql/syntax.md#create-table-as-select) secties van de [ SQL documentatie van de syntaxisverwijzing ](../sql/syntax.md) worden gevonden.
 
 ## Een gegevensset maken
 
-De dienst van de vraag verstrekt Create Lijst als Uitgezocht (`CTAS`) gebruiken om een tabel te maken op basis van de uitvoer van een `SELECT` -instructie, of zoals in dit geval, door een verwijzing naar een bestaand XDM-schema in Adobe Experience Platform te gebruiken. Hieronder wordt het XDM-schema weergegeven voor `Final_subscription` gemaakt voor dit voorbeeld.
+De dienst van de vraag verstrekt de Create Lijst als Uitgezochte (`CTAS`) functionaliteit om een lijst tot stand te brengen die op de output van een `SELECT` verklaring wordt gebaseerd, of zoals in dit geval, door een verwijzing naar een bestaand schema XDM in Adobe Experience Platform te gebruiken. Hieronder wordt het XDM-schema voor `Final_subscription` weergegeven dat voor dit voorbeeld is gemaakt.
 
-![Een diagram van het final_subscription schema.](../images/best-practices/final-subscription-schema.png)
+![ A diagram van het final_subscription schema.](../images/best-practices/final-subscription-schema.png)
 
-In het volgende voorbeeld ziet u hoe de SQL wordt gebruikt om de `final_subscription_test2` dataset. `final_subscription_test2` wordt gemaakt met de `Final_subscription` schema. Gegevens worden uit de bron geëxtraheerd met een `SELECT` component om enkele rijen te vullen.
+In het volgende voorbeeld ziet u hoe SQL wordt gebruikt om de gegevensset `final_subscription_test2` te maken. `final_subscription_test2` wordt gemaakt met het schema `Final_subscription` . Gegevens worden uit de bron geëxtraheerd met een `SELECT` -component om bepaalde rijen te vullen.
 
 ```sql
 CREATE TABLE final_subscription_test2 with(schema='Final_subscription') AS (
@@ -62,11 +62,11 @@ CREATE TABLE final_subscription_test2 with(schema='Final_subscription') AS (
        ) GROUP BY userid)
 ```
 
-In de oorspronkelijke gegevensset `final_subscription_test2`, wordt het gegevenstype struct gebruikt voor het bevatten van zowel de `subscription` en de `userid` Dit is uniek voor elke gebruiker. De `subscription` in dit veld worden de productabonnementen voor een gebruiker beschreven. Er kunnen meerdere abonnementen zijn, maar een tabel kan slechts de gegevens voor één abonnement per rij bevatten.
+In de eerste dataset `final_subscription_test2` wordt het gegevenstype struct gebruikt voor zowel het `subscription` veld als het `userid` , dat uniek is voor elke gebruiker. In het veld `subscription` worden de productabonnementen voor een gebruiker beschreven. Er kunnen meerdere abonnementen zijn, maar een tabel kan slechts de gegevens voor één abonnement per rij bevatten.
 
 ## Geneste gegevensvelden bijwerken met INVOEGEN IN
 
-Na de `final_subscription_test2` dataset is gecreeerd, `INSERT INTO` wordt gebruikt om aanvullende gegevens aan de tabel toe te voegen. Bij het kopiëren van gegevens moeten de gegevenstypen in bron en doel overeenkomen. Het gegevenstype van de bron moet ook `CAST` naar het doelgegevenstype. De stijgende gegevens worden dan toegevoegd in de doeldataset gebruikend volgende SQL.
+Nadat de `final_subscription_test2` dataset is gecreeerd, wordt de `INSERT INTO` verklaring gebruikt om extra gegevens aan de lijst toe te voegen. Bij het kopiëren van gegevens moeten de gegevenstypen in bron en doel overeenkomen. Het gegevenstype van de bron moet ook `CAST` tot het gegevenstype van het doel zijn. De stijgende gegevens worden dan toegevoegd in de doeldataset gebruikend volgende SQL.
 
 ```sql
 INSERT INTO final_subscription_test
@@ -103,29 +103,29 @@ INSERT INTO final_subscription_test
 
 Om de lijst van actieve abonnementen van een gebruiker van een dataset te weten te komen, moet u een vraag schrijven die de elementen van een serie in veelvoudige rijen en kolommen scheidt. Hiervoor moet u eerst de vorm van het gegevensmodel begrijpen, aangezien de abonnementsgegevens binnen een array worden bewaard die in de dataset is genest.
 
-De PSQL `\d` wordt gebruikt om niveau door niveau aan de vereiste abonnementsgegevens te navigeren. In de tabellen wordt de structuur van de `final_subscription_test2` dataset. Complexe gegevenstypen kunnen in één oogopslag worden herkend, omdat het geen standaardtekstwaarden zijn, zoals tekst, booleaanse waarden, tijdstempels, enz.
+De opdracht PSQL `\d` wordt gebruikt om op niveau naar de vereiste abonnementsgegevens te navigeren. De tabellen illustreren de structuur van de `final_subscription_test2` dataset. Complexe gegevenstypen kunnen in één oogopslag worden herkend, omdat het geen standaardtekstwaarden zijn, zoals tekst, booleaanse waarden, tijdstempels, enz.
 
 | Kolom | Type |
 |--------|-------|
 | `_lumaservices3` | final_subscription_test2_lumaservices3 |
 
-De velden van de volgende kolom worden weergegeven met de `\d final_subscription_test2__lumaservices3` gebruiken.
+De velden van de volgende kolom worden weergegeven met de opdracht `\d final_subscription_test2__lumaservices3` .
 
 | Kolom | Type |
 |---------|-------|
 | `userid` | text |
 | `subscription` | _lumaservices3_subscription_e[] |
 
-`subscription` is een array van struct-elementen. De velden worden weergegeven met de `\d _lumaservices3_subscription_e[]` gebruiken.
+`subscription` is een array van struct-elementen. De velden worden weergegeven met de opdracht `\d _lumaservices3_subscription_e[]` .
 
 | Kolom | Type |
 |---------|-------|
-| `last_eventtime` | timestamp |
+| `last_eventtime` | tijdstempel |
 | `last_status` | text |
 | `offer_id` | text |
 | `subscription_id` | text |
 
-Als u de geneste velden van het abonnement wilt opvragen, moet u eerst de elementen van het `subscription` in meerdere rijen te plaatsen en de resultaten te retourneren met de exploderfunctie. In het volgende SQL-voorbeeld wordt het actieve abonnement voor een gebruiker geretourneerd op `userid`.
+Als u de geneste velden van het abonnement wilt opvragen, moet u eerst de elementen van de array `subscription` in meerdere rijen scheiden en de resultaten retourneren met de functie exploderen. In het volgende SQL-voorbeeld wordt het actieve abonnement voor een gebruiker geretourneerd op basis van `userid` .
 
 ```sql
 SELECT userid, subs AS active_subscription FROM (
@@ -148,8 +148,8 @@ WHERE subs.last_status='Active'
 GROUP BY userid ;
 ```
 
-Ondanks de toenemende complexiteit van dit SQL-voorbeeld, `collect_list` voor actieve abonnementen garandeert niet dat de uitvoer in dezelfde volgorde zal zijn als de bron. Als u een lijst met actieve abonnementen voor een gebruiker wilt maken, moet u GROUP BY gebruiken of de volgorde wijzigen om de resultaten van de lijst samen te voegen.
+Ondanks de toenemende complexiteit van dit SQL-voorbeeld, garandeert `collect_list` voor actieve abonnementen niet dat de uitvoer in dezelfde volgorde zal zijn als de bron. Als u een lijst met actieve abonnementen voor een gebruiker wilt maken, moet u GROUP BY gebruiken of de volgorde wijzigen om de resultaten van de lijst samen te voegen.
 
 ## Volgende stappen
 
-Door dit document te lezen, begrijpt u nu hoe te om datasets te verwerken of om te zetten die complexe gegevenstypes in de Dienst van de Vraag van Adobe Experience Platform gebruiken. Zie de [query-uitvoeringsrichtlijnen](../best-practices/writing-queries.md) voor meer informatie over het runnen van SQL vragen over datasets binnen het meer van Gegevens.
+Door dit document te lezen, begrijpt u nu hoe te om datasets te verwerken of om te zetten die complexe gegevenstypes in de Dienst van de Vraag van Adobe Experience Platform gebruiken. Gelieve te zien de [ leidraad van de vraaguitvoering ](../best-practices/writing-queries.md) voor meer informatie over het runnen van SQL vragen over datasets binnen het meer van Gegevens.

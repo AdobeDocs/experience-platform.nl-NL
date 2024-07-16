@@ -1,7 +1,8 @@
 ---
 title: Deelvenstergegevens (voorbeeld)
 description: Leer over de het schemagebiedgroep van de de Details van het Vooruitzicht van de Partner (Steekproef) (XDM).
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: 2de1eb7a-2e44-4417-9bdd-7a8a4b2d3a7f
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 0%
@@ -10,11 +11,11 @@ ht-degree: 0%
 
 # [!UICONTROL Partner Prospect Details (Sample)] veldgroep
 
-[!UICONTROL Partner Prospect Details (Sample)] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). De [!UICONTROL Partner Prospect Details (Sample)] verstrekt een steekproefkader voor diverse details met betrekking tot het profiel van een vooruitzicht. Dit kader stroomlijnt het proces van het organiseren en beheren van diverse informatie met betrekking tot het vooruitzicht.
+[!UICONTROL Partner Prospect Details (Sample)] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md). [!UICONTROL Partner Prospect Details (Sample)] verstrekt een steekproefkader voor diverse details met betrekking tot het profiel van een vooruitzicht. Dit kader stroomlijnt het proces van het organiseren en beheren van diverse informatie met betrekking tot het vooruitzicht.
 
-Deze veldgroep breidt de [Afzonderlijke klasse van het Profiel van het Vooruitzicht](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html) binnen de context van een partner.
+Deze gebiedsgroep breidt de [ Individuele klasse van het Profiel van het Vooruitzicht ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html) binnen de context van een partner uit.
 
-![Een schema van de [!UICONTROL Partner Prospect Details (Sample)] veldgroep.](../../images/field-groups/partner/partner-prospect-details-sample.png)
+![ A diagram van de [!UICONTROL Partner Prospect Details (Sample)] gebiedsgroep.](../../images/field-groups/partner/partner-prospect-details-sample.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |---------------------------------------|-----------------------------|-----------|--------------------------------------------------|
@@ -49,4 +50,4 @@ Deze veldgroep breidt de [Afzonderlijke klasse van het Profiel van het Vooruitzi
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de veldgroep raadpleegt u de [volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-prospect/merkle/prospect-details-partner-sample.schema.json) in de openbare XDM-opslagplaats.
+Voor meer details op de gebiedsgroep, verwijs naar het [ volledige schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-prospect/merkle/prospect-details-partner-sample.schema.json) op de openbare bewaarplaats XDM.

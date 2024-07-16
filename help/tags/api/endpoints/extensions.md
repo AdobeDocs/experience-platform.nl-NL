@@ -4,26 +4,26 @@ description: Leer hoe te om vraag aan het /extensions eindpunt in Reactor API te
 exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 1%
 
 ---
 
 # Extensies, eindpunt
 
-In de Reactor-API vertegenwoordigt een extensie de geïnstalleerde instantie van een [extensiepakket](./extension-packages.md). Met een extensie worden de functies die door een extensiepakket worden gedefinieerd, beschikbaar gemaakt voor een [eigenschap](./properties.md). Deze functies worden gebruikt bij het maken van [extensions](./data-elements.md) en [regelcomponenten](./rule-components.md).
+In Reactor API, vertegenwoordigt een uitbreiding de geïnstalleerde instantie van een [ uitbreidingspakket ](./extension-packages.md). Een uitbreiding maakt de eigenschappen die door een uitbreidingspakket worden bepaald beschikbaar aan a [ bezit ](./properties.md). Deze eigenschappen worden leveraged wanneer het creëren van [ uitbreidingen ](./data-elements.md) en [ regelcomponenten ](./rule-components.md).
 
 Een extensie behoort tot exact één eigenschap. Een eigenschap kan vele extensies hebben, maar niet meer dan één geïnstalleerde instantie van een opgegeven extensiepakket.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met extensies ophalen {#list}
 
 U kunt een lijst met extensies voor een eigenschap ophalen door een GET-aanvraag in te dienen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET properties/{PROPERTY_ID}/extensions
@@ -37,7 +37,7 @@ GET properties/{PROPERTY_ID}/extensions
 
 >[!NOTE]
 >
->Met behulp van queryparameters kunnen weergegeven extensies worden gefilterd op basis van de volgende kenmerken:<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
+>Met behulp van queryparameters kunnen weergegeven extensies worden gefilterd op basis van de volgende kenmerken:<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -51,7 +51,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lijst met extensies die zijn gedefinieerd onder de opgegeven eigenschap.
 
@@ -160,9 +160,9 @@ U kunt een extensie opzoeken door de id op te geven in het pad van een GET-aanvr
 
 >[!NOTE]
 >
->Wanneer extensies worden verwijderd, worden ze gemarkeerd als verwijderd in het systeem, maar worden ze niet daadwerkelijk verwijderd. Het is daarom mogelijk een verwijderde extensie op te halen. Verwijderde extensies kunnen worden geïdentificeerd door een `deleted_at` eigenschap in de `meta` van de geretourneerde extensiegegevens.
+>Wanneer extensies worden verwijderd, worden ze gemarkeerd als verwijderd in het systeem, maar worden ze niet daadwerkelijk verwijderd. Het is daarom mogelijk een verwijderde extensie op te halen. Verwijderde extensies kunnen worden geïdentificeerd door de aanwezigheid van een eigenschap `deleted_at` in de `meta` van de geretourneerde extensiegegevens.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /extensions/{EXTENSION_ID}
@@ -170,7 +170,7 @@ GET /extensions/{EXTENSION_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `EXTENSION_ID` | De `id` van de extensie die u wilt opzoeken. |
+| `EXTENSION_ID` | De `id` extensie die u wilt opzoeken. |
 
 {style="table-layout:auto"}
 
@@ -186,7 +186,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de extensie.
 
@@ -280,9 +280,9 @@ Een geslaagde reactie retourneert de details van de extensie.
 
 ## Een extensie maken of bijwerken {#create}
 
-Extensies worden gemaakt door te verwijzen naar een [extensiepakket](./extension-packages.md) en de geïnstalleerde extensie toevoegen aan een eigenschap. Wanneer de installatietaak is voltooid, wordt een antwoord geretourneerd dat aangeeft of de extensie is geïnstalleerd.
+De uitbreidingen worden gecreeerd door een [ uitbreidingspakket ](./extension-packages.md) van verwijzingen te voorzien en de geïnstalleerde uitbreiding toe te voegen aan een bezit. Wanneer de installatietaak is voltooid, wordt een antwoord geretourneerd dat aangeeft of de extensie is geïnstalleerd.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /properties/{PROPERTY_ID}/extensions
@@ -290,7 +290,7 @@ POST /properties/{PROPERTY_ID}/extensions
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van de eigenschap waarop u de extensie wilt installeren. |
+| `PROPERTY_ID` | De `id` van de eigenschap waaronder u de extensie wilt installeren. |
 
 {style="table-layout:auto"}
 
@@ -325,14 +325,14 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `relationships.extension_package` | **(Vereist)** Een object dat verwijst naar de id van het extensiepakket dat wordt geïnstalleerd. |
-| `attributes.delegate_descriptor_id` | Als uw extensie aangepaste instellingen nodig heeft, is ook een id voor de gedelegeerde descriptor vereist. Zie de handleiding op [id&#39;s gedelegeerde descriptor](../guides/delegate-descriptor-ids.md) voor meer informatie . |
+| `relationships.extension_package` | **(Vereist)** Een voorwerp dat verwijzingen identiteitskaart van het uitbreidingspakket dat wordt geïnstalleerd. |
+| `attributes.delegate_descriptor_id` | Als uw extensie aangepaste instellingen nodig heeft, is ook een id voor de gedelegeerde descriptor vereist. Zie de gids op [ de beschrijver IDs van de afgevaardigde ](../guides/delegate-descriptor-ids.md) voor meer informatie. |
 | `attributes.enabled` | Een Booleaanse waarde die aangeeft of de extensie is ingeschakeld. |
 | `attributes.settings` | A settings JSON object represented as a string. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de zojuist gemaakte extensie.
 
@@ -428,7 +428,7 @@ Een geslaagde reactie retourneert de details van de zojuist gemaakte extensie.
 
 U kunt een extensie herzien door de id ervan op te nemen in het pad van een PATCH-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /extensions/{EXTENSION_ID}
@@ -442,7 +442,7 @@ PATCH /extensions/{EXTENSION_ID}
 
 **Verzoek**
 
-Zoals met [een extensie maken](#create), moet een lokale versie van het herziene pakket via formuliergegevens worden geüpload.
+Zoals met [ het creëren van een uitbreiding ](#create), moet een lokale versie van het herziene pakket via vormgegevens worden geupload.
 
 ```shell
 curl -X PATCH \
@@ -467,14 +467,14 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes` | De kenmerken die u wilt herzien. Voor extensies kunt u hun `delegate_descriptor_id`, `enabled`, en `settings` kenmerken. |
-| `meta.action` | Moet worden opgenomen met een waarde van `revise` bij een herziening. |
+| `attributes` | De kenmerken die u wilt herzien. Voor extensies kunt u de kenmerken `delegate_descriptor_id` , `enabled` en `settings` ervan wijzigen. |
+| `meta.action` | Moet bij het maken van een revisie worden opgenomen met de waarde `revise` . |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
-Een succesvol antwoord geeft de details van de herziene verlenging terug, met zijn `meta.latest_revision_number` eigenschap verhoogd met 1.
+Een geslaagde reactie retourneert de details van de herziene extensie, waarbij de eigenschap `meta.latest_revision_number` met 1 is verhoogd.
 
 ```json
 {
@@ -568,7 +568,7 @@ Een succesvol antwoord geeft de details van de herziene verlenging terug, met zi
 
 U kunt een extensie verwijderen door de id ervan op te nemen in het pad van een DELETE-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /extensions/{EXTENSION_ID}
@@ -590,25 +590,25 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder hoofdtekst van de reactie om aan te geven dat de extensie is verwijderd.
 
 ## Notities voor een extensie beheren {#notes}
 
-Extensies zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [leidraad voor notitiepunten](./notes.md) voor meer informatie over hoe u notities voor extensies en andere compatibele bronnen kunt beheren.
+Extensies zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [ gids van het Notitieeindpunt ](./notes.md) voor meer informatie over hoe te nota&#39;s voor uitbreidingen en andere compatibele middelen beheren.
 
 ## Gerelateerde bronnen ophalen voor een extensie {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een uitbreiding terug te winnen. Wanneer [zoeken naar een extensie](#lookup), worden deze relaties vermeld in het `relationships` eigenschap.
+De volgende vraag toont aan hoe te om de verwante middelen voor een uitbreiding terug te winnen. Wanneer [ omhoog kijkt een uitbreiding ](#lookup), zijn deze verhoudingen vermeld onder het `relationships` bezit.
 
-Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante bibliotheken weergeven voor een extensie {#libraries}
 
-U kunt de bibliotheken die een extensie gebruiken, weergeven door ze toe te voegen `/libraries` naar het pad van een opzoekverzoek.
+U kunt een lijst maken van de bibliotheken die een uitbreiding gebruiken door `/libraries` aan de weg van een raadplegingsverzoek toe te voegen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /extensions/{EXTENSION_ID}/libraries
@@ -632,7 +632,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lijst met bibliotheken die de opgegeven extensie gebruiken.
 
@@ -728,9 +728,9 @@ Een geslaagde reactie retourneert een lijst met bibliotheken die de opgegeven ex
 
 ### Verwante revisies weergeven voor een extensie {#revisions}
 
-U kunt de vorige revisies van een extensie weergeven door deze toe te voegen `/revisions` naar het pad van een opzoekverzoek.
+U kunt de vorige revisies van een extensie weergeven door `/revisions` toe te voegen aan het pad van een opzoekaanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /extensions/{EXTENSION_ID}/revisions
@@ -754,7 +754,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert een lijst met revisies voor de opgegeven extensie.
 
@@ -942,9 +942,9 @@ Een succesvol antwoord retourneert een lijst met revisies voor de opgegeven exte
 
 ### Het verwante extensiepakket voor een extensie opzoeken {#extension}
 
-U kunt het extensiepakket opzoeken waarop een extensie is gebaseerd door het toevoegen `/extension_package` naar het pad van een GET-aanvraag.
+U kunt het extensiepakket waarop een extensie is gebaseerd, opzoeken door `/extension_package` toe te voegen aan het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /extensions/{EXTENSION_ID}/extension_package
@@ -968,7 +968,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van het extensiepakket waarop de opgegeven extensie is gebaseerd. De voorbeeldreactie hieronder is afgebroken voor de ruimte.
 
@@ -1177,9 +1177,9 @@ Een geslaagde reactie retourneert de details van het extensiepakket waarop de op
 
 ### De verwante oorsprong opzoeken voor een extensie {#origin}
 
-U kunt de oorsprong van een extensie opzoeken door deze toe te voegen `/origin` naar het pad van een GET-aanvraag. De oorsprong van een extensie is de vorige revisie die is bijgewerkt om de huidige revisie te maken.
+U kunt de oorsprong van een extensie opzoeken door `/origin` toe te voegen aan het pad van een GET-aanvraag. De oorsprong van een extensie is de vorige revisie die is bijgewerkt om de huidige revisie te maken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /extensions/{EXTENSION_ID}/origin
@@ -1203,7 +1203,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de oorsprong van de opgegeven extensie.
 
@@ -1297,9 +1297,9 @@ Een geslaagde reactie retourneert de details van de oorsprong van de opgegeven e
 
 ### De verwante eigenschap voor een extensie opzoeken {#property}
 
-U kunt de eigenschap die eigenaar is van een extensie opzoeken door het toevoegen `/property` naar het pad van een GET-aanvraag.
+U kunt de eigenschap die eigenaar is van een extensie opzoeken door `/property` toe te voegen aan het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /extensions/{EXTENSION_ID}/property
@@ -1323,7 +1323,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de eigenschap die eigenaar is van de opgegeven extensie.
 

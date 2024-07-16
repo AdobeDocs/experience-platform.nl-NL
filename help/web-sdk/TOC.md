@@ -24,7 +24,7 @@ ht-degree: 19%
    * [De SDK van het web installeren met de JavaScript-bibliotheek](install/library.md)
    * [De SDK van het web installeren met behulp van het NPM-pakket](install/npm.md)
 * Opdrachten {#commands}
-   * vormen {#configure}
+   * configure {#configure}
       * [Overzicht](commands/configure/overview.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)
@@ -80,7 +80,7 @@ ht-degree: 19%
       * [Toegang krijgen tot reactietokens](personalization/adobe-target/accessing-response-tokens.md)
       * [Dbox-id van derden gebruiken](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [Het vergelijken van de bibliotheek at.js met het Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
-      * Analyses voor logboekregistratie van doel (A4T) {#a4t}
+      * Analytics for Target (A4T) logging {#a4t}
          * [Overzicht](personalization/adobe-target/analytics-logging/overview.md)
          * [Logboekregistratie op de client](personalization/adobe-target/analytics-logging/client-side.md)
          * [Logboekregistratie op de server](personalization/adobe-target/analytics-logging/server-side.md)

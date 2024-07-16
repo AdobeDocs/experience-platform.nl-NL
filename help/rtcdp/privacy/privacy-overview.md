@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Privacy in Real-time Customer Data Platform
 
-[!DNL Adobe Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) helpt marketers gegevens van meerdere bedrijfssystemen samen te brengen, zodat ze hun klanten beter kunnen identificeren, begrijpen en betrekken. Adobe beschouwt de privacy van consumentengegevens als een fundamenteel ontwerpbeginsel en biedt verschillende controles om marketers te helpen de privacy van gegevens van hun klanten te beheren.
+[!DNL Adobe Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) helpt marketers gegevens van veelvoudige ondernemingssystemen samen te brengen, die hen toestaan om, hun klanten beter te identificeren te begrijpen en te betrekken. Adobe beschouwt de privacy van consumentengegevens als een fundamenteel ontwerpbeginsel en biedt verschillende controles om marketers te helpen de privacy van gegevens van hun klanten te beheren.
 
-De meerderheid van [!DNL Real-Time CDP] De mogelijkheden worden aangedreven door Adobe Experience Platform. Dit document bevat informatie over de verschillende technologieën voor privacyverbetering die worden ondersteund door [!DNL Real-Time CDP], met koppelingen naar [!DNL Experience Platform] documentatie voor meer informatie.
+De meeste [!DNL Real-Time CDP] -mogelijkheden worden aangestuurd door Adobe Experience Platform. Dit document bevat informatie over de verschillende technologieën voor privacyverbetering die worden ondersteund door [!DNL Real-Time CDP] , met koppelingen naar [!DNL Experience Platform] -documentatie voor meer informatie.
 
 ## Toegang tot en verwijderen van verzoeken van klanten respecteren
 
-Wettelijke privacyvoorschriften zoals [!DNL General Data Protection Regulation] (GDPR) en [!DNL California Consumer Privacy Act] (CCPA) geeft klanten het recht om toegang te vragen tot, of de schrapping van, de persoonsgegevens die u van hen verzamelt. Sinds [!DNL Real-Time CDP] hefboomwerkingen [!DNL Experience Platform] mogelijkheden voor gegevensverzameling en -opslag, verzoeken van klanten om toegang tot en verwijdering van hun persoonlijke gegevens moeten binnen [!DNL Platform]. Zie het overzicht op [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) voor meer informatie .
+Wettelijke privacyregels zoals de [!DNL General Data Protection Regulation] (GDPR) en de [!DNL California Consumer Privacy Act] (CCPA) geven klanten het recht om toegang te vragen tot of te verwijderen van de persoonsgegevens die u van hen verzamelt. Aangezien [!DNL Real-Time CDP] gebruikmaakt van [!DNL Experience Platform] -mogelijkheden voor gegevensverzameling en -opslag, moeten verzoeken van klanten om toegang tot en verwijdering van hun persoonlijke gegevens binnen [!DNL Platform] worden beheerd. Zie het overzicht op [ Adobe Experience Platform Privacy Service ](../../privacy-service/home.md) voor meer informatie.
 
 >[!IMPORTANT]
 >
@@ -27,16 +27,16 @@ Wettelijke privacyvoorschriften zoals [!DNL General Data Protection Regulation] 
 
 ## Mogelijkheden voor uitschakelen
 
-[!DNL Real-Time CDP] kunnen klanten ervoor kiezen hun persoonsgegevens niet in gevallen van segmentatiegebruik op te nemen. De voorkeuren voor de optie om te weigeren van klanten worden vastgelegd en opgeslagen door [!DNL Real-Time Customer Profile], en kan worden afgedwongen door gebruikers uit te sluiten die uit een publiek gebruikend booleaanse logica (&quot;EN NIET&quot;) in het segment voorspellen.
+Met [!DNL Real-Time CDP] kunnen klanten ervoor kiezen hun persoonlijke gegevens niet op te nemen in gevallen waarin segmentatie wordt gebruikt. De voorkeuren voor de optie-uit van klanten worden vastgelegd en opgeslagen door [!DNL Real-Time Customer Profile] en kunnen worden afgedwongen door gebruikers uit te sluiten die met behulp van de Booleaanse logica (&quot;AND NOT&quot;) in de segmentvoorspelling hebben gekozen voor een publiek.
 
-Document weergeven op [naleven van opt-out-verzoeken](../../segmentation/consents.md) in de documentatie van de Adobe Experience Platform Segmentation Service voor meer informatie.
+Zie het document op [ het ontvangen opt-out verzoeken ](../../segmentation/consents.md) in de documentatie van de Dienst van de Segmentatie van Adobe Experience Platform voor meer informatie.
 
 ## IAB TCF 2.0-ondersteuning
 
-[!DNL Real-Time CDP] is gebouwd op Adobe Experience Platform, dat deel uitmaakt van de geregistreerde [leverancierslijst](https://iabeurope.eu/vendor-list-tcf/) voor de [!DNL Transparency & Consent Framework (TCF)], zoals uiteengezet door de [!DNL Interactive Advertising Bureau (IAB)]. In overeenstemming met de TCF 2.0-vereisten, kunt u met Platform gedetailleerde gegevens over de toestemming van klanten verzamelen en deze integreren in uw opgeslagen klantprofielen. Deze gegevens over toestemming kunnen vervolgens worden meegenomen in de vraag of bepaalde profielen worden opgenomen in geëxporteerde soorten publiek, afhankelijk van het geval waarin ze worden gebruikt.
+[!DNL Real-Time CDP] wordt voortgebouwd op Adobe Experience Platform, die deel van de geregistreerde [ verkoperslijst ](https://iabeurope.eu/vendor-list-tcf/) voor [!DNL Transparency & Consent Framework (TCF)] uitmaakt, zoals die door [!DNL Interactive Advertising Bureau (IAB)] wordt geschetst. In overeenstemming met de TCF 2.0-vereisten, kunt u met Platform gedetailleerde gegevens over de toestemming van klanten verzamelen en deze integreren in uw opgeslagen klantprofielen. Deze gegevens over toestemming kunnen vervolgens worden meegenomen in de vraag of bepaalde profielen worden opgenomen in geëxporteerde soorten publiek, afhankelijk van het geval waarin ze worden gebruikt.
 
-Zie het overzicht op [IAB TCF 2.0-ondersteuning in Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie .
+Zie het overzicht op [ IAB TCF 2.0 steun in Experience Platform ](../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie.
 
 ## Volgende stappen
 
-In dit document wordt een korte inleiding gegeven op de privacymogelijkheden van [!DNL Real-Time CDP]. Raadpleeg de documentatie bij deze handleiding voor meer informatie over elke functie.
+In dit document wordt kort ingegaan op de mogelijkheden van [!DNL Real-Time CDP] op het gebied van privacy. Raadpleeg de documentatie bij deze handleiding voor meer informatie over elke functie.

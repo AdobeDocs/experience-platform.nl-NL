@@ -20,17 +20,17 @@ ht-degree: 1%
 
 De rollen bepalen de toegang die een beheerder, een specialist, of een eindgebruiker aan middelen in uw organisatie moet hebben. In een op rol-gebaseerd milieu van het toegangsbeheer, is de levering van de gebruikerstoegang groepering door gemeenschappelijke verantwoordelijkheden en behoeften. Een rol heeft een bepaalde reeks toestemmingen en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van mening worden toegewezen of toegang schrijven zij nodig hebben.
 
-De `/roles` eindpunt in op attribuut-gebaseerde toegangsbeheer API staat u toe om rollen in uw organisatie programmatically te beheren.
+Het `/roles` eindpunt in op attribuut-gebaseerde toegangsbeheer API staat u toe om rollen in uw organisatie programmatically te beheren.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van op attribuut-gebaseerde toegangsbeheer API. Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van op attribuut-gebaseerde toegangsbeheer API. Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met rollen ophalen {#list}
 
-U kunt alle bestaande rollen weergeven die tot uw organisatie behoren door een GET-aanvraag in te dienen bij de `/roles` eindpunt.
+U kunt alle bestaande rollen die tot uw organisatie behoren, weergeven door een aanvraag voor een GET in te dienen bij het `/roles` eindpunt.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /roles/
@@ -48,7 +48,7 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van rollen in uw organisatie, met inbegrip van informatie over hun respectieve roltype, toestemmingsreeksen, en onderwerpattributen terug.
 
@@ -105,7 +105,7 @@ Een succesvolle reactie keert een lijst van rollen in uw organisatie, met inbegr
 | `id` | De id die overeenkomt met de rol. Deze id wordt automatisch gegenereerd. |
 | `name` | De naam van uw rol. |
 | `description` | Het beschrijvingsbezit verstrekt extra informatie over uw rol. |
-| `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor roltype zijn: `user-defined` en `system-defined`. |
+| `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor het roltype zijn: `user-defined` en `system-defined` . |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
 | `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
@@ -113,9 +113,9 @@ Een succesvolle reactie keert een lijst van rollen in uw organisatie, met inbegr
 
 ## Rol opzoeken {#lookup}
 
-U kunt een individuele rol opzoeken door een verzoek van de GET te doen die het overeenkomstige omvat `roleId` in het aanvraagpad.
+U kunt een individuele rol omhoog zoeken door een verzoek van de GET te doen die het overeenkomstige `roleId` in de verzoekweg omvat.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /roles/{ROLE_ID}
@@ -127,7 +127,7 @@ GET /roles/{ROLE_ID}
 
 **Verzoek**
 
-Met het volgende verzoek wordt informatie opgehaald voor `{ROLE_ID}`.
+Met de volgende aanvraag wordt informatie voor `{ROLE_ID}` opgehaald.
 
 ```shell
 curl -X GET \
@@ -137,7 +137,7 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert details voor gevraagde rol identiteitskaart, met inbegrip van informatie over zijn roltype, toestemmingsreeksen, en onderwerpattributen terug.
 
@@ -172,7 +172,7 @@ Een succesvolle reactie keert details voor gevraagde rol identiteitskaart, met i
 | `id` | De id die overeenkomt met de rol. Deze id wordt automatisch gegenereerd. |
 | `name` | De naam van uw rol. |
 | `description` | Het beschrijvingsbezit verstrekt extra informatie over uw rol. |
-| `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor roltype zijn: `user-defined` en `system-defined`. |
+| `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor het roltype zijn: `user-defined` en `system-defined` . |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
 | `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
@@ -180,9 +180,9 @@ Een succesvolle reactie keert details voor gevraagde rol identiteitskaart, met i
 
 ## Onderwerpen opzoeken op rol-id
 
-U kunt onderwerpen ook ophalen door een GET-verzoek in te dienen bij de `/roles` eindpunt terwijl het verstrekken van een {ROLE_ID}.
+U kunt onderwerpen ook ophalen door een GET-aanvraag in te dienen bij het eindpunt van `/roles` terwijl u een {ROLE_ID} opgeeft.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /roles/{ROLE_ID}/subjects
@@ -194,7 +194,7 @@ GET /roles/{ROLE_ID}/subjects
 
 **Verzoek**
 
-Met het volgende verzoek worden onderwerpen opgehaald die aan `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
+Met de volgende aanvraag worden onderwerpen opgehaald die aan `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809` zijn gekoppeld.
 
 ```shell
 curl -X GET \
@@ -204,7 +204,7 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert de onderwerpen die aan de betrokken rol-id zijn gekoppeld, inclusief de overeenkomstige onderwerp-id en het bijbehorende onderwerptype.
 
@@ -256,9 +256,9 @@ Een succesvolle reactie retourneert de onderwerpen die aan de betrokken rol-id z
 
 ## Een rol maken {#create}
 
-Om een nieuwe rol tot stand te brengen, doe een verzoek van de POST aan `/roles` eindpunt terwijl het verstrekken van waarden voor de naam, beschrijving van uw rol, en roltype.
+Om een nieuwe rol tot stand te brengen, doe een verzoek van de POST aan het `/roles` eindpunt terwijl het verstrekken van waarden voor de naam van uw rol, beschrijving, en roltype.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /roles/
@@ -283,9 +283,9 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van uw rol. Zorg ervoor dat de naam van uw rol beschrijvend is aangezien u dit kunt gebruiken om informatie over uw rol op te zoeken. |
 | `description` | (Optioneel) Een beschrijvende waarde die u kunt opnemen voor meer informatie over uw rol. |
-| `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor roltype zijn: `user-defined` en `system-defined`. |
+| `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor het roltype zijn: `user-defined` en `system-defined` . |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert uw onlangs gecreëerde rol, met zijn overeenkomstige rol identiteitskaart, evenals informatie over zijn roltype, toestemmingsreeksen, en onderwerpattributen terug.
 
@@ -320,7 +320,7 @@ Een succesvolle reactie keert uw onlangs gecreëerde rol, met zijn overeenkomsti
 | `id` | De id die overeenkomt met de rol. Deze id wordt automatisch gegenereerd. |
 | `name` | De naam van uw rol. |
 | `description` | Het beschrijvingsbezit verstrekt extra informatie over uw rol. |
-| `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor roltype zijn: `user-defined` en `system-defined`. |
+| `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor het roltype zijn: `user-defined` en `system-defined` . |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
 | `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
@@ -328,9 +328,9 @@ Een succesvolle reactie keert uw onlangs gecreëerde rol, met zijn overeenkomsti
 
 ## Een rol bijwerken {#patch}
 
-U kunt de eigenschappen van een rol bijwerken door een PATCH-verzoek in te dienen bij de `/roles` eindpunt terwijl het verstrekken van overeenkomstige rolidentiteitskaart en waarden voor de verrichtingen u wilt toepassen.
+U kunt de eigenschappen van een rol bijwerken door een verzoek van PATCH aan het `/roles` eindpunt te doen terwijl het verstrekken van overeenkomstige rol identiteitskaart en waarden voor de verrichtingen u wilt toepassen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /roles/{ROLE_ID}
@@ -361,11 +361,11 @@ curl -X PATCH \
 
 | Bewerkingen | Beschrijving |
 | --- | --- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de rol bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de rol bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . |
 | `path` | Het pad van de parameter die moet worden bijgewerkt. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de bijgewerkte rol, inclusief nieuwe waarden voor de eigenschappen die u wilt bijwerken.
 
@@ -400,7 +400,7 @@ Een geslaagde reactie retourneert de bijgewerkte rol, inclusief nieuwe waarden v
 | `id` | De id die overeenkomt met de rol. Deze id wordt automatisch gegenereerd. |
 | `name` | De naam van uw rol. |
 | `description` | Het beschrijvingsbezit verstrekt extra informatie over uw rol. |
-| `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor roltype zijn: `user-defined` en `system-defined`. |
+| `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor het roltype zijn: `user-defined` en `system-defined` . |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
 | `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
@@ -408,9 +408,9 @@ Een geslaagde reactie retourneert de bijgewerkte rol, inclusief nieuwe waarden v
 
 ## Rollen bijwerken op rol-id {#put}
 
-U kunt een rol bijwerken door een verzoek van de PUT aan `/roles` eindpunt en het specificeren van de rol identiteitskaart die aan de rol beantwoordt u wilt bijwerken.
+U kunt een rol bijwerken door een verzoek van de PUT aan het `/roles` eindpunt te richten en rolidentiteitskaart te specificeren die aan de rol beantwoordt u wilt bijwerken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /roles/{ROLE_ID}
@@ -418,7 +418,7 @@ PUT /roles/{ROLE_ID}
 
 **Verzoek**
 
-De volgende aanvraag werkt de naam, beschrijving en het roltype voor rol-id bij: `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
+Met de volgende aanvraag worden de naam, beschrijving en het roltype voor rol-id bijgewerkt: `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809` .
 
 ```shell
 curl -X PUT \
@@ -437,9 +437,9 @@ curl -X PUT \
 | --- | --- |
 | `name` | De bijgewerkte naam van een rol. |
 | `description` | De bijgewerkte beschrijving van een rol. |
-| `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor roltype zijn: `user-defined` en `system-defined`. |
+| `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor het roltype zijn: `user-defined` en `system-defined` . |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert uw bijgewerkte rol, met inbegrip van nieuwe waarden voor zijn naam, beschrijving, en roltype terug.
 
@@ -474,7 +474,7 @@ Een succesvolle reactie keert uw bijgewerkte rol, met inbegrip van nieuwe waarde
 | `id` | De id die overeenkomt met de rol. Deze id wordt automatisch gegenereerd. |
 | `name` | De naam van uw rol. |
 | `description` | Het beschrijvingsbezit verstrekt extra informatie over uw rol. |
-| `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor roltype zijn: `user-defined` en `system-defined`. |
+| `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor het roltype zijn: `user-defined` en `system-defined` . |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
 | `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
@@ -482,9 +482,9 @@ Een succesvolle reactie keert uw bijgewerkte rol, met inbegrip van nieuwe waarde
 
 ## Onderwerp bijwerken op rol-id
 
-Om de onderwerpen bij te werken verbonden aan een rol, doe een verzoek van de PATCH aan `/roles` eindpunt terwijl het verstrekken van rolidentiteitskaart van de onderwerpen u wilt bijwerken.
+Om de onderwerpen bij te werken verbonden aan een rol, doe een verzoek van PATCH aan het `/roles` eindpunt terwijl het verstrekken van rolidentiteitskaart van de onderwerpen u wilt bijwerken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /roles/{ROLE_ID}/subjects
@@ -496,7 +496,7 @@ PATCH /roles/{ROLE_ID}/subjects
 
 **Verzoek**
 
-De volgende aanvraag werkt de onderwerpen bij die aan `{ROLE_ID}`.
+De volgende aanvraag werkt de onderwerpen bij die aan `{ROLE_ID}` zijn gekoppeld.
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
@@ -515,11 +515,11 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 | Bewerkingen | Beschrijving |
 | --- | --- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de rol bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de rol bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . |
 | `path` | Het pad van de parameter die moet worden bijgewerkt. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert uw bijgewerkte rol, inclusief nieuwe waarden voor de onderwerpen.
 
@@ -552,9 +552,9 @@ Een succesvolle reactie retourneert uw bijgewerkte rol, inclusief nieuwe waarden
 
 ## Een rol verwijderen {#delete}
 
-Als u een rol wilt verwijderen, vraagt u een DELETE aan de `/roles` eindpunt terwijl het specificeren van identiteitskaart van de rol u wilt schrappen.
+Als u een rol wilt verwijderen, vraagt u een DELETE aan het `/roles` -eindpunt terwijl u de id opgeeft van de rol die u wilt verwijderen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /roles/{ROLE_ID}
@@ -566,7 +566,7 @@ DELETE /roles/{ROLE_ID}
 
 **Verzoek**
 
-Met het volgende verzoek wordt de rol met de id van `{ROLE_ID}`.
+Met het volgende verzoek wordt de rol met de id `{ROLE_ID}` verwijderd.
 
 ```shell
 curl -X DELETE \
@@ -576,7 +576,7 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
@@ -584,9 +584,9 @@ U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan de rol te
 
 ## API-referentie toevoegen {#apicredential}
 
-Als u API-referentie wilt toevoegen, vraagt u een PATCH aan `/roles` eindpunt terwijl het verstrekken van rolidentiteitskaart van de onderwerpen.
+Als u API-referentie wilt toevoegen, vraagt u een PATCH-aanvraag naar het eindpunt van `/roles` en geeft u de rol-id van de onderwerpen op.
 
-**API-indeling**
+**API formaat**
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
@@ -605,10 +605,10 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 | Bewerkingen | Beschrijving |
 | --- | --- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de rol bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de rol bij te werken. Bewerkingen zijn: `add` , `replace` en `remove` . |
 | `path` | Het pad van de parameter die moet worden toegevoegd. |
 | `value` | De waarde waarmee u de parameter wilt toevoegen. |
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.

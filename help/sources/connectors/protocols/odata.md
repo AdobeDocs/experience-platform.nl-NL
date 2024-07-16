@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;OData;odata;oData;Generic OData;generic odata
 solution: Experience Platform
-title: Generic OData Source Overview
+title: Generic OData Source - Overzicht
 description: Leer hoe u Generic OData met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -13,23 +13,23 @@ ht-degree: 0%
 
 # [!DNL Generic OData] bron
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] diensten. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met [!DNL Platform] -services. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
-[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een toepassing van derdeprotocollen. De steun van protocolleveranciers omvat [!DNL Generic OData].
+[!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens uit een toepassing met protocollen van derden. Tot de ondersteuning voor protocolproviders behoren [!DNL Generic OData] .
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Generic OData] tot [!DNL Platform] API&#39;s of de gebruikersinterface gebruiken:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Generic OData] en [!DNL Platform] via API&#39;s of de gebruikersinterface:
 
-## Verbinden [!DNL Generic OData] tot [!DNL Platform] gebruiken, API&#39;s
+## Verbind [!DNL Generic OData] met [!DNL Platform] gebruikend APIs
 
 - [Een algemene OData-basisverbinding maken met de Flow Service API](../../tutorials/api/create/protocols/odata.md)
 - [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Creeer een dataflow voor een protocolbron gebruikend de Dienst API van de Stroom](../../tutorials/api/collect/protocols.md)
 
-## Verbinden [!DNL Generic OData] tot [!DNL Platform] gebruiken van UI
+## Verbind [!DNL Generic OData] met [!DNL Platform] gebruikend UI
 
 - [Een Generic OData-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/protocols/odata.md)
 - [Creeer een dataflow voor een verbinding van de protocolbron in UI](../../tutorials/ui/dataflow/protocols.md)

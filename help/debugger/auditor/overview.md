@@ -5,21 +5,21 @@ keywords: foutopsporing;ervaring met platformfoutopsporingsextensie;chroom;exten
 exl-id: 409094f8-a7d9-45f7-ba12-b5e6250abc0f
 source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
 workflow-type: tm+mt
-source-wordcount: '358'
-ht-degree: 9%
+source-wordcount: '363'
+ht-degree: 10%
 
 ---
 
 # Tabblad Auditor
 
-In Adobe Experience Platform Debugger kunt u de opdracht **[!UICONTROL Auditor]** om een reeks controletests op uw pagina uit te voeren.
+In Adobe Experience Platform Debugger, kunt u het **[!UICONTROL Auditor]** lusje gebruiken om een reeks controletests op uw pagina in werking te stellen.
 
 Deze functie gebruiken:
 
-1. Selecteren **[!UICONTROL Auditor]** in de linkernavigatie.
-1. Selecteer **[!UICONTROL Run Auditor Tests]**. Zodra de tests zijn voltooid, worden de resultaten hieronder weergegeven.
+1. Selecteer **[!UICONTROL Auditor]** in de linkernavigatie.
+1. Selecteer **[!UICONTROL Run Auditor Tests]**. Zodra de tests zijn voltooid, worden de resultaten ervan hieronder weergegeven.
 
-![Screenshot van testresultaten op het tabblad Auditor](../images/auditor-results.png)
+![ Schermafbeelding van testresultaten op het lusje van de Auditor ](../images/auditor-results.png)
 
 In de resultatenlijst worden de test en het resultaat weergegeven en staan suggesties om eventuele problemen op te lossen.
 
@@ -42,9 +42,9 @@ Het wordt **ten zeerste aanbevolen** om resultaten van niveau 4 of 5 te corriger
 
 Het wordt **aanbevolen** om resultaten van niveau 1 tot 3 te corrigeren.
 
-## Ondersteunde Adobe-technologieën
+## Ondersteunde technologieën voor Adobe
 
-De controleeigenschap kan de volgende technologieën van Adobe beoordelen:
+De controleeigenschap kan de volgende technologieën van de Adobe beoordelen:
 
 * Adobe Advertising Cloud DSP
 * Adobe Advertising Cloud Search

@@ -6,7 +6,7 @@ badge: Beta
 source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
 source-wordcount: '163'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Self-Serve Sources Streaming SDK bevindt zich in bèta. Lees de [overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+>Self-Serve Sources Streaming SDK bevindt zich in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 U kunt de eigenschappen van een verbindingsspecificatie bijwerken via een PUT-bewerking. Wanneer het bijwerken van een verbindingsspecificatie door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer het creëren van een nieuwe verbindingsspecificatie in een verzoek van de POST.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /connectionSpecs/{CONNECTION_SPEC_ID}
@@ -108,7 +108,7 @@ PUT -X GET \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle vraag keert de bijgewerkte details van de verbindingsspecificatie, met inbegrip van zijn bijgewerkte naam terug.
 
@@ -196,4 +196,4 @@ Een succesvolle vraag keert de bijgewerkte details van de verbindingsspecificati
 
 ## Volgende stappen
 
-Nadat u de updates van uw verbindingsspecificatie hebt voltooid, kunt u nu doorgaan naar [test en verzend uw bron voor integratie](./submit.md).
+Zodra u uw updates aan uw verbindingsspecificatie hebt voltooid, kunt u nu aan [ test te werk gaan en uw bron voor integratie ](./submit.md) voorleggen.

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Soms is het handig om een nieuwe bron te maken met behulp van de instellingen van een bestaande bron. In deze gevallen kunt u een kopie maken.
 
@@ -23,13 +23,13 @@ Het kopiëren van een middel leidt tot een duplicaat van dat middel in de gespec
 
 ## Een kopie starten
 
-U kunt een kopie van een extensie starten door de geïnstalleerde extensies te bekijken en de vervolgkeuzepijl te selecteren op de knop **[!UICONTROL Configure]** en selecteren **[!UICONTROL Copy]**.
+U kunt een kopie van een extensie starten door de geïnstalleerde extensies te bekijken, de vervolgkeuzepijl op de knop **[!UICONTROL Configure]** te selecteren en **[!UICONTROL Copy]** te selecteren.
 
-![De extensie Analytics kopiëren](../../images/copy-initiate-extension.png)
+![ het Kopiëren van de uitbreiding van Analytics ](../../images/copy-initiate-extension.png)
 
-Voor eigenschappen, regels, en gegevenselementen, selecteer eenvoudig de bron u wilt kopiëren en dan selecteren **[!UICONTROL Copy]** in het menu Handelingen.
+Voor eigenschappen, regels, en gegevenselementen, selecteer eenvoudig de bron u wilt kopiëren en dan **[!UICONTROL Copy]** in het actiemenu selecteren.
 
-![Mijn regel voor Analytics kopiëren](../../images/copy-initiate-rule.png)
+![ Kopend mijn regel van Analytics ](../../images/copy-initiate-rule.png)
 
 Als u een regel of een gegevenselement kopieert, kunt u in het dialoogvenster Kopiëren het vervolgkeuzemenu gebruiken om een eigenschap Doel te selecteren waarnaar u wilt kopiëren (standaardinstelling is de huidige eigenschap). Extensies kunnen niet naar dezelfde eigenschap worden gekopieerd, zodat deze optie niet beschikbaar is.
 
@@ -37,7 +37,7 @@ Als u een regel of een gegevenselement kopieert, kunt u in het dialoogvenster Ko
 >
 >Het is niet mogelijk om middelen aan een ander bezit te kopiëren als één bezit voor uitbreidingsontwikkeling wordt gevormd en het andere bezit niet is.
 
-Nadat u het gewenste gedrag hebt geconfigureerd, selecteert u **[!UICONTROL Copy]**.
+Selecteer **[!UICONTROL Copy]** nadat u het gewenste gedrag hebt geconfigureerd.
 
 ## Eigenschappen kopiëren
 
@@ -60,12 +60,12 @@ Wanneer u een extensie naar een andere eigenschap kopieert, zijn er een paar din
 
 ## Regels en gegevenselementen kopiëren
 
-Alle regels en gegevenselementen worden verstrekt door een uitbreiding, zodat wanneer u over eigenschappen kopieert, Platform deze onderliggende uitbreidingen moet rekenschap geven.
+Alle regels en gegevenselementen worden verstrekt door een uitbreiding, zodat wanneer u over eigenschappen kopieert, moet het Platform deze onderliggende uitbreidingen rekenschap geven.
 
-![Een regel kopiëren naar mijn demo-eigenschap](../../images/copy-rules-dialog1.png)
+![ het kopiëren van een Regel aan mijn Bezit van de Demo ](../../images/copy-rules-dialog1.png)
 
 Het dialoogvenster Kopiëren bevat een uitleg van wat er precies zal gebeuren voordat u begint met kopiëren. Het bovenstaande dialoogvenster is bedoeld voor een regel, maar hetzelfde geldt voor gegevenselementen.
 
-1. **Extensies die door deze regels worden vereist, worden gekopieerd.** Dit laat u weten dat de vereiste uitbreidingen samen met de regel zullen gaan.  Deze kopieën volgen dezelfde regels als een kopie van een reguliere extensie die hierboven wordt beschreven.
-1. **Extensie-instellingen worden NIET gekopieerd als de extensie al is geïnstalleerd.** Dit betekent dat als de vereiste extensies al bestaan op de eigenschap destination, de extensie ongewijzigd blijft.  Als u de extensie-instellingen ook wilt kopiëren, kunt u de opdracht **Extensie-instellingen vervangen voor doeleigenschap** schakelt en wordt de uitleg dienovereenkomstig bijgewerkt.
-1. **Gegevenselementen die door deze regels worden vereist, worden NIET gekopieerd.** Deze uitleg geldt alleen voor regels.  Regels vertrouwen vaak op gegevenselementen om correct te functioneren.  Als u een regel naar een nieuwe eigenschap kopieert, moet u ook alle vereiste gegevenselementen als een afzonderlijke actie kopiëren.
+1. **Extensies die door deze regels worden vereist worden gekopieerd.** Dit laat u weten dat de vereiste uitbreidingen met de regel zullen gaan.  Deze kopieën volgen dezelfde regels als een kopie van een reguliere extensie die hierboven wordt beschreven.
+1. **de montages van de Uitbreiding zullen NIET worden gekopieerd als de uitbreiding reeds geïnstalleerd is.** Dit betekent dat als de vereiste extensies al bestaan op de eigenschap destination, de extensie ongewijzigd blijft.  Als u wenst om de uitbreidingsmontages eveneens te kopiëren, kunt u **gebruiken vervangt uitbreidingsmontages op bestemmingsBezit** knevel en de verklaring wordt dienovereenkomstig bijgewerkt.
+1. **Elementen van Gegevens die door deze Regels worden vereist zullen NIET worden gekopieerd.** Deze uitleg is alleen van toepassing op regels.  Regels vertrouwen vaak op gegevenselementen om correct te functioneren.  Als u een regel naar een nieuwe eigenschap kopieert, moet u ook alle vereiste gegevenselementen als een afzonderlijke actie kopiëren.

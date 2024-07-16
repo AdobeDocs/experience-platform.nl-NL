@@ -20,11 +20,11 @@ Leer hoe te om fouten problemen op te lossen wanneer het werken met de Hoofdlett
 
 Er worden een aantal bekende beperkingen weergegeven wanneer u een instantie van een afspeelboek maakt en elementen genereert.
 
-* Voor gegenereerde schema&#39;s geldt dat als een schema wordt gegenereerd in één instantie van een afspeelboek en u het bewerkt, een ander schema *niet* wordt gegenereerd als u een andere instantie van het afspeelboek inschakelt. Gebruik in plaats daarvan ook het schema dat u in de instantie hebt bewerkt.
+* Voor geproduceerde schema&#39;s, als een schema in één geval van playbook wordt geproduceerd, en u het uitgeeft, dan zal een ander schema *niet* worden geproduceerd als u een andere instantie van playbook toelaat. Gebruik in plaats daarvan ook het schema dat u in de instantie hebt bewerkt.
 
-* Wanneer u de opdracht [functionaliteit voor gegevensbewustzijn](/help/use-case-playbooks/playbooks/data-awareness.md) om het schema van de inspirerende zandbak aan de ontwikkelingszandbak te bevorderen, zou u sommige fouten kunnen zien gelijkend op hieronder:
+* Wanneer het gebruiken van de [ functionaliteit van het gegevensbewustzijn ](/help/use-case-playbooks/playbooks/data-awareness.md) om het schema van de inspirerende zandbak aan de ontwikkelingszandbak te bevorderen, zou u sommige fouten kunnen zien gelijkend op hieronder:
 
-![Fouten weergegeven in de workflow voor schematoewijzing.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
+![ Fouten die in het werkschema van de schemaafbeelding worden getoond.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 Dit komt doordat sommige velden die zijn gegenereerd vanuit uw schema, niet aanwezig zijn in het schema in de ontwikkelingssandbox waarnaar u kopieert. Kijk eens wat die velden zijn. Ga vervolgens terug naar de ontwikkelingssandbox waar u kunt:
 

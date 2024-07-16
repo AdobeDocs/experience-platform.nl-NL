@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 **Vereisten**
 
@@ -23,13 +23,13 @@ Elke markeringseigenschap in Adobe Experience Platform vereist dat de volgende e
 * Experience Cloud Visitor ID Service
 * Kernextensie
 
-Gebruik de [&quot;Een speler insluiten met een \&lt;iframe> tag&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) codefragment van de ontwikkelaar van Google documenteert in de HTML van elke Web-pagina waar een videospeler moet teruggeven.
+Gebruik [ &quot;bed een speler in gebruikend een \ &lt;iframe \> markering&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) codefragment van de de ontwikkelaarsdocs van Google in de HTML van elke Web-pagina waar een videospeler moet teruggeven.
 
-Deze extensie, versie 2.0.1, ondersteunt het insluiten van een of meer YouTube-video&#39;s op één webpagina door een `id` kenmerk met een unieke waarde in de scripttag iframe, en toevoegen `enablejsapi=1` en `rel=0` tot het einde van de `src` kenmerkwaarde, als deze nog niet is opgenomen. Bijvoorbeeld:
+Deze extensie, versie 2.0.1, ondersteunt het insluiten van een of meer YouTube-video&#39;s op één webpagina door een `id` -kenmerk in te voegen met een unieke waarde in de iFrame-scripttag en `enablejsapi=1` en `rel=0` toe te voegen aan het einde van de `src` -kenmerkwaarde, als dit nog niet het geval is. Bijvoorbeeld:
 
 `<iframe id="player1" width="560" height="315" src="https://www.youtube.com/embed/xpatB77BzYE?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 
-Deze extensie is ook ontworpen om dynamisch te controleren op een unieke ID-kenmerkwaarde, zoals `player1`, ongeacht of de `enablejsapi` en `rel` de parameters van het vraagkoord bestaan en als hun verwachte waarden correct zijn. Als gevolg hiervan kan de YouTube-scripttag met of zonder de `id` en of de `enablejsapi` en `rel` parameters van queryreeksen worden wel of niet opgenomen.
+Deze extensie is ook ontworpen om dynamisch te controleren op een unieke ID-kenmerkwaarde, zoals `player1` , ongeacht of de parameters van de queryreeks `enablejsapi` en `rel` bestaan en of de verwachte waarden juist zijn. Als gevolg hiervan kan de YouTube-scripttag worden toegevoegd aan een webpagina met of zonder het kenmerk `id` en of de parameters van de queryreeks `enablejsapi` en `rel` worden opgenomen of niet.
 
 >[!NOTE]
 >
@@ -48,25 +48,25 @@ Er is dus een kleine flikkering nadat de pagina is geladen. Dit gedrag wordt ver
 
 Er zijn zes gegevenselementen beschikbaar binnen de uitbreiding, geen waarvan configuratie vereist.
 
-* **Positie afspeelkop:** Registreert de plaats, in seconden, van de playhead positie op de videochronologie, wanneer het binnen een markeringsregel wordt geroepen.
-* **Video-id:** Hiermee wordt de YouTube-id opgegeven die aan de video is gekoppeld.
-* **Videonaam:** Hiermee geeft u de beschrijvende of vriendelijke naam van de video op.
-* **Video-URL:** Retourneert de YouTube.com URL voor de video die momenteel is geladen/afgespeeld.
-* **Videoduur:** Registreert de totale duur, in seconden, van de videoinhoud.
-* **Extensieversie:** In dit gegevenselement wordt bijvoorbeeld de versie van YouTube Tracking Extension vastgelegd, zoals &quot;Video Tracking_YouTube_2.0.0&quot;.
+* **Positie van de Playhead:** registreert de plaats, in seconden, van de playhead positie op de videochronologie, wanneer het binnen een markeringsregel wordt geroepen.
+* **Video identiteitskaart:** specificeert identiteitskaart van YouTube verbonden aan de video.
+* **de Naam van de Video:** specificeert de beschrijvende, of vriendschappelijke naam van de video.
+* **Video URL:** keert YouTube.com URL voor momenteel geladen/speel video terug.
+* **VideoDuur:** registreert de totale duur, in seconden, van de videoinhoud.
+* **Versie van de Uitbreiding:** Dit gegevenselement registreert de volgende versie van de Uitbreiding van YouTube, zoals &quot;Video Tracking_YouTube_2.0.0,&quot;bijvoorbeeld.
 
 ## Gebeurtenissen
 
 Er zijn acht gebeurtenissen beschikbaar binnen de uitbreiding, slechts vereist het Volgen van het Actiepunt van de Douane configuratie.
 
-* **Video gereed:** De gebeurtenis wordt geactiveerd wanneer de video wordt begeleid en kan worden afgespeeld.
-* **Start video:** Triggers wanneer de video voor het eerst wordt gestart en wanneer `player.getCurrentTime() === 0`
-* **Video opnieuw afspelen:** De gebeurtenis wordt geactiveerd wanneer de video wordt afgespeeld en wordt opnieuw afgespeeld nadat de video is gestart. Deze trigger wordt bij elke replay geactiveerd.
-* **Video pauzeren:** Triggers wanneer de video wordt gepauzeerd.
-* **Video hervatten:** Triggers wanneer de video wordt hervat en wanneer `player.getCurrentTime() !== 0`
-* **Aangepaste actiedraging:** Triggers wanneer de video het gespecificeerde videodrempelpercentage bereikt. Wanneer een video bijvoorbeeld 60 seconden is en het opgegeven actiepunt 50% is, wordt de gebeurtenis geactiveerd wanneer de positie van de afspeelkop gelijk is aan 30 seconden. Actiepunttracering is van toepassing op zowel het eerste afspelen als het opnieuw afspelen. Wanneer de gebruiker een actiepunt zoekt, wordt de gebeurtenis niet gestart. Actiepuntgebeurtenissen worden alleen geactiveerd wanneer de afspeelkop de berekende actiepuntlocatie op de tijdlijn overschrijdt en de videospeler wordt afgespeeld.
-* **Videobuffer:** De gebeurtenis wordt geactiveerd wanneer de speler een bepaalde hoeveelheid gegevens downloadt voordat de video wordt afgespeeld.
-* **Video beëindigd:** Triggers wanneer een video volledig is voltooid.
+* **Video Klaar:** Trekkers wanneer de video wordt begeleid, en klaar om te spelen.
+* **VideoBegin:** Trekkers wanneer de video eerst is begonnen, en wanneer `player.getCurrentTime() === 0`
+* **Video Replay:** Trekkers wanneer de video wordt begeleid, en na het aanvankelijke begin opnieuw gespeeld. Deze trigger wordt bij elke replay geactiveerd.
+* **VideoPauze:** Trekkers wanneer de video wordt gepauzeerd.
+* **Video hervat:** Trekkers wanneer de video wordt hervat, en wanneer `player.getCurrentTime() !== 0`
+* **het Volgen van het Richtsnoer van de Douane:** Trekkers wanneer de video het gespecificeerde videodrempelpercentage bereikt. Wanneer een video bijvoorbeeld 60 seconden is en het opgegeven actiepunt 50% is, wordt de gebeurtenis geactiveerd wanneer de positie van de afspeelkop gelijk is aan 30 seconden. Actiepunttracering is van toepassing op zowel het eerste afspelen als het opnieuw afspelen. Wanneer de gebruiker een actiepunt zoekt, wordt de gebeurtenis niet gestart. Actiepuntgebeurtenissen worden alleen geactiveerd wanneer de afspeelkop de berekende actiepuntlocatie op de tijdlijn overschrijdt en de videospeler wordt afgespeeld.
+* **Videobuffer:** Trekkers wanneer de speler een bepaalde hoeveelheid gegevens downloadt alvorens het begint speel de video.
+* **Video beëindigde:** Trekkers wanneer een video volledig voltooit.
 
 ## Gebruik
 
@@ -74,19 +74,19 @@ Er kan één tagregel worden ingesteld voor elke videogebeurtenis (de zeven hier
 
 Regels hebben drie acties:
 
-* **Variabelen instellen:** Stel de Adobe Analytics-variabelen in (kaart met alle of sommige opgenomen gegevenselementen).
-* **Baken verzenden:** Verzend het baken van Adobe Analytics als een douane verbinding het volgen vraag, en verstrek een waarde &quot;van de Naam van de Verbinding&quot;.
-* **Variabelen wissen:** Wis de Adobe Analytics-variabelen.
+* **Vastgestelde variabelen:** plaats de variabelen van Adobe Analytics (kaart aan alle of sommige inbegrepen gegevenselementen).
+* **verzend baken:** verzend het baken van Adobe Analytics als douane verbinding het volgen vraag, en verstrek een waarde &quot;van de Naam van de Verbinding&quot;.
+* **Duidelijke variabelen:** ontruim de variabelen van Adobe Analytics.
 
 ## Voorbeeld van labelregel voor &quot;Video Start&quot;
 
 De volgende video-extensieobjecten moeten worden opgenomen.
 
-* **Gebeurtenissen**: &quot;Video starten&quot; (Deze gebeurtenis zorgt dat de regel wordt geactiveerd wanneer de bezoeker een YouTube-video begint af te spelen.)
+* **Gebeurtenissen**: &quot;Het VideoBegin&quot; (Deze gebeurtenis veroorzaakt de regel om te ontslaan wanneer de bezoeker begint een video van YouTube te spelen.)
 
-* **Voorwaarde**: Geen
+* **Voorwaarde**: niets
 
-* **Handelingen**: Gebruik de **Extensie Analytics** om de actie &quot;Variabelen instellen&quot; toe te wijzen:
+* **Acties**: Gebruik de **uitbreiding van de Analyse** aan &quot;Reeks Variabelen&quot;actie, om in kaart te brengen:
 
    * De gebeurtenis voor het starten van de video,
    * Een eigenschap/eVar voor het gegevenselement Videoduur
@@ -94,11 +94,11 @@ De volgende video-extensieobjecten moeten worden opgenomen.
    * A prop/eVar for the Video Name data element
    * Een eigenschap/eVar voor het URL-gegevenselement Video
 
-  Dan omvat de &quot;Send Beacon&quot;actie (`s.tl`) met de naam &quot;video start&quot;, gevolgd door de actie &quot;Variabelen wissen&quot;.
+  Dan, omvat de &quot;Send Beacon&quot;actie (`s.tl`) met verbindingsnaam &quot;videobegin,&quot;door een &quot;Duidelijke actie van Variabelen&quot;wordt gevolgd.
 
 >[!TIP]
 > 
->Voor implementaties waarbij meerdere eVars of props voor elk video-element niet kunnen worden gebruikt, kunnen gegevenselementwaarden binnen Platform worden samengevoegd, geparseerd in classificatierapporten met behulp van het gereedschap Classificatieregel Builder, zoals wordt uitgelegd in [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)en vervolgens toegepast als een segment in Analysis Workspace.
+>Voor implementaties waar de veelvoudige steunen of eVars voor elk videoelement niet kunnen worden gebruikt, kunnen de waarden van het gegevenselement binnen Platform worden samengevoegd, in classificatierapporten worden ontleed gebruikend het hulpmiddel van de Bouwer van de Regel van de Classificatie, zoals die in [ https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html ](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) wordt verklaard, en dan als segment in Analysis Workspace worden toegepast.
 
 Als u videogegevenswaarden wilt samenvoegen, maakt u een nieuw gegevenselement met de naam &quot;Videometagegevens&quot; en programmeert u dit om alle videogegevenselementen (hierboven vermeld) te verzamelen en samen te voegen. Bijvoorbeeld:
 
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Lees voor meer informatie over het maken en benutten van gegevenselementen in Platform de [gegevenselementen](../../../ui/managing-resources/data-elements.md) documentatie.
+Voor meer informatie over hoe te om en hefboomwerking gegevenselementen effectief binnen Platform tot stand te brengen, lees de [ elementen van gegevenselementen ](../../../ui/managing-resources/data-elements.md) documentatie.

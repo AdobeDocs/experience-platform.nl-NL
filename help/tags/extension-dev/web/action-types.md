@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 In de context van de markeringen van de gegevensinzameling, is een actie iets dat wordt uitgevoerd nadat een regelgebeurtenis is voorgekomen en alle voorwaarden evaluatie hebben overgegaan.
 
@@ -23,13 +23,13 @@ In dit document wordt beschreven hoe u actietypen voor een webextensie in Adobe 
 
 >[!IMPORTANT]
 >
->In dit document worden actietypen voor webextensies besproken. Als u een randuitbreiding ontwikkelt, zie de gids op [actietypen voor randextensies](../edge/action-types.md) in plaats daarvan.
+>In dit document worden actietypen voor webextensies besproken. Als u een randuitbreiding ontwikkelt, zie in plaats daarvan de gids op [ actietypen voor randuitbreidingen ](../edge/action-types.md).
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze in webextensies zijn geïntegreerd. Als u een inleiding nodig hebt, raadpleegt u het overzicht over [Opmaak van de module Bibliotheek](./format.md) voordat u terugkeert naar deze handleiding.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze in webextensies zijn geïntegreerd. Als u een inleiding vereist, zie het overzicht op [ het formatteren van de bibliotheekmodule ](./format.md) alvorens aan deze gids terug te keren.
 
 Handelingstypen bestaan doorgaans uit:
 
-1. A [weergave](./views.md) getoond binnen UI van het Experience Platform en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor de actie te wijzigen.
+1. A [ mening ](./views.md) getoond binnen het Experience Platform UI en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor de actie te wijzigen.
 2. Een bibliotheekmodule die in de tagruntimebibliotheek wordt uitgestraald om de instellingen te interpreteren en een actie uit te voeren.
 
 ```js
@@ -64,11 +64,11 @@ module.exports = function(settings, event) {
 };
 ```
 
-De `event` object moet de volgende eigenschappen bevatten:
+Het `event` -object moet de volgende eigenschappen bevatten:
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `$type` | Een tekenreeks die de naam van de extensie en de gebeurtenis beschrijft en waaraan een punt is toegevoegd. Bijvoorbeeld, `youtube.play`. |
+| `$type` | Een tekenreeks die de naam van de extensie en de gebeurtenis beschrijft en waaraan een punt is toegevoegd. Bijvoorbeeld `youtube.play` . |
 | `$rule` | Een object dat informatie bevat over de regel die momenteel wordt uitgevoerd. Het object moet de volgende subeigenschappen bevatten:<ul><li>`id`: De id van de regel die momenteel wordt uitgevoerd.</li><li>`name`: De naam van de regel die momenteel wordt uitgevoerd.</li></ul> |
 
-De uitbreiding die het gebeurtenistype verstrekt dat de regel teweegbracht kan andere nuttige informatie aan dit optioneel toevoegen `event` object.
+De extensie die het gebeurtenistype opgeeft dat de regel heeft geactiveerd, kan eventueel andere nuttige informatie toevoegen aan dit `event` -object.

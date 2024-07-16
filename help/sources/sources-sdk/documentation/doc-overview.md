@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 solution: Experience Platform
-title: Uw bron documenteren
+title: Uw Source documenteren
 description: De laatste stap voordat je nieuwe bron live kan worden gemaakt in Adobe Experience Platform is het documenteren van je nieuwe bron.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
@@ -19,15 +19,15 @@ Deze handleiding bevat:
 
 * Een zelfstudie die u kunt volgen om een documentatiepagina voor uw nieuwe bron te maken;
 * Een documentatiesjabloon dat u kunt invullen voor uw nieuwe bron.
-* [Instructies voor het gebruik van Markdown voor het schrijven van technische documentatie](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
-* [Instructies voor het begrijpen van Adobe Markdown-aroma](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
+* [ Instructies op hoe te om Markering voor het schrijven van technische documentatie ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) te gebruiken;
+* [ Instructies bij het begrip van de aroma van de Prijsverhoging van de Adobe ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
 
 ## Vereisten
 
 De volgende items zijn vereist voordat u de nieuwe bron kunt documenteren:
 
-* **Een geldige GitHub-gebruikersaccount**: Als u geen bestaande rekening GitHub hebt, dan moet u één door creëren [GitHub-aanmeldingspagina](https://github.com/);
-* **Toegang tot GitHub Desktop**: U moet de opdracht [GitHub Desktop-app](https://desktop.github.com/) om uw brondocumentatie in uw lokale milieu te creëren;
+* **Een geldige GitHub gebruikersrekening**: Als u geen bestaande rekening GitHub hebt, dan moet u één door de [ GitHub ondertekenen pagina ](https://github.com/) tot stand brengen;
+* **Toegang tot Desktop GitHub**: U moet de [ Desktop gebruiken GitHub app ](https://desktop.github.com/) om uw brondocumentatie in uw lokaal milieu tot stand te brengen;
 * Uw integratie met Adobe moet zich in een testfase bevinden met uw bron die in een testomgeving in Platform wordt geïmplementeerd.
 
 ## Instructies op hoog niveau om documentatie voor uw bron in Platform te maken
@@ -36,7 +36,7 @@ Op hoog niveau, om documentatie voor uw bron tot stand te brengen, moet u een vo
 
 ## Documentatiesjabloon
 
-U kunt een voorgevulde spuit gebruiken [documentatiesjabloon](./template.md) om u te helpen bij het maken van documentatie voor uw bron. Hieronder vindt u instructies voor het bewerken van de sjabloon en het openen van een pull-verzoek. De ingediende documentatie voor uw nieuwe bron zal door het de documentatieteam van de Adobe worden herzien en worden gepubliceerd.
+U kunt een vooraf ingevuld [ documentatiemalplaatje ](./template.md) gebruiken om in het creëren van documentatie voor uw bron bij te wonen. Hieronder vindt u instructies voor het bewerken van de sjabloon en het openen van een pull-verzoek. De ingediende documentatie voor uw nieuwe bron zal door het de documentatieteam van de Adobe worden herzien en worden gepubliceerd.
 
 U kunt ook de onderstaande documentatiesjablonen downloaden:
 

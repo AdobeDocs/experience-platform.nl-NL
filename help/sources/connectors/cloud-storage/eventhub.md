@@ -14,39 +14,39 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De [!DNL Azure Event Hubs] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+>De [!DNL Azure Event Hubs] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform], en [!DNL Azure]. U kunt uw gegevens van deze systemen overbrengen naar Platform.
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform] en [!DNL Azure] . U kunt uw gegevens van deze systemen overbrengen naar Platform.
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met Platform kunt u gegevens van [!DNL Event Hubs] in real time.
+Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met Platform kunt u gegevens uit [!DNL Event Hubs] in real-time invoeren.
 
 ## Schalen met [!DNL Event Hubs]
 
-De schaalfactor van uw [!DNL Event Hubs] De instantie moet worden verhoogd als u gegevens met een hoog volume moet invoeren, parallellisme moet vergroten of de snelheid van het innameplatform moet verhogen.
+De schaalfactor van uw [!DNL Event Hubs] -instantie moet worden verhoogd als u gegevens met een hoog volume moet invoeren, de parallellisme moet vergroten of de snelheid van het innameplatform moet verhogen.
 
 ### Hoger volume-gegevens opnemen
 
-Het maximale gegevensvolume dat u van uw [!DNL Event Hubs] account aan Platform is 2000 records per seconde. Neem contact op met uw Adobe als u de schaal wilt verhogen en meer gegevens over het volume wilt invoeren.
+Het maximale gegevensvolume dat u van uw [!DNL Event Hubs] -account naar Platform kunt verzenden, is momenteel 2000 records per seconde. Neem contact op met uw Adobe als u de schaal wilt verhogen en meer gegevens over het volume wilt invoeren.
 
-### parallellisme vergroten op [!DNL Event Hubs] en platform
+### Parallelisme vergroten op [!DNL Event Hubs] en Platform
 
-Parallelisme verwijst naar de gelijktijdige uitvoering van dezelfde taken op meerdere verwerkingseenheden om de snelheid en prestaties te verhogen. U kunt het parallellisme van de [!DNL Event Hubs] naast elkaar door verdeling te verhogen of door meer verwerkingseenheden voor uw [!DNL Event Hubs] account. Zie dit [[!DNL Event Hubs] document over schalen](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) voor meer informatie .
+Parallelisme verwijst naar de gelijktijdige uitvoering van dezelfde taken op meerdere verwerkingseenheden om de snelheid en prestaties te verhogen. U kunt het parallellisme aan de [!DNL Event Hubs] zijde verhogen door verdeling te verhogen of door meer verwerkingseenheden voor uw [!DNL Event Hubs] rekening te verwerven. Zie dit [[!DNL Event Hubs]  document op het schrapen ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) voor meer informatie.
 
-Om de snelheid van opname op de kant van het Platform te verhogen, moet het Platform het aantal taken in de bronschakelaar verhogen om van uw te lezen [!DNL Event Hubs] partities. Als u eenmaal een verhoogd parallellisme hebt op de [!DNL Event Hubs] Neem contact op met uw vertegenwoordiger van de Adobe om de platformtaken op basis van uw nieuwe partitie te schalen. Dit proces is momenteel niet geautomatiseerd.
+Om de snelheid van opname op de kant van het Platform te verhogen, moet het Platform het aantal taken in de bronschakelaar verhogen om van uw [!DNL Event Hubs] verdelingen te lezen. Nadat u het parallellisme aan de [!DNL Event Hubs] zijde hebt vergroot, neemt u contact op met uw Adobe om de taken van het Platform te schalen op basis van uw nieuwe partitie. Dit proces is momenteel niet geautomatiseerd.
 
-## Een virtueel netwerk gebruiken om verbinding te maken met [!DNL Event Hubs] naar platform
+## Een virtueel netwerk gebruiken om verbinding te maken met [!DNL Event Hubs] Platform
 
-U kunt een virtueel netwerk instellen om verbinding te maken [!DNL Event Hubs] aan Platform terwijl het hebben van uw firewallmaatregelen toegelaten. Aan opstelling een virtueel netwerk, hoofd aan dit [[!DNL Event Hubs] netwerkregelsetdocument](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) en voert u de volgende stappen uit:
+U kunt een virtueel netwerk instellen om [!DNL Event Hubs] te verbinden met Platform terwijl uw firewallmaatregelen worden ingeschakeld. Aan opstelling een virtueel netwerk, hoofd aan dit [[!DNL Event Hubs]  document van de de netwerkregelreeks ](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) en volg de hieronder vermelde stappen:
 
-* Selecteren **Probeer het** vanuit het REST API-deelvenster;
-* Verifieer uw [!DNL Azure] account met uw referenties in dezelfde browser;
-* Selecteer de [!DNL Event Hubs] namespace, middelgroep, en abonnement dat u aan Platform wilt brengen en dan selecteren **RUN**;
-* In het lichaam JSON dat verschijnt, voeg volgende subnet van het Platform onder toe `virtualNetworkRules` binnenkant `properties`:
+* Selecteer **probeert het** van het REST API paneel;
+* Verifieer uw [!DNL Azure] rekening gebruikend uw geloofsbrieven in zelfde browser;
+* Selecteer [!DNL Event Hubs] namespace, middelgroep, en abonnement dat u aan Platform wilt brengen en dan **RUN** selecteren;
+* Voeg in de JSON-hoofdtekst die wordt weergegeven de volgende subnetonderdelen van het platform toe onder `virtualNetworkRules` inside `properties` :
 
 
 >[!IMPORTANT]
 >
->Maak een back-up van de JSON-instantie die u ontvangt voordat u de update uitvoert `virtualNetworkRules` met subnet van het Platform aangezien het uw bestaande IP het filtreren regels bevat. Anders, zullen de regels na de vraag worden geschrapt.
+>U moet een steun van het lichaam maken JSON dat u ontvangt, alvorens `virtualNetworkRules` met subnet van het Platform bij te werken aangezien het uw bestaande IP het filtreren regels bevat. Anders, zullen de regels na de vraag worden geschrapt.
 
 
 ```json
@@ -117,11 +117,11 @@ Zie de lijst hieronder voor verschillende gebieden van Platform subnets:
 }
 ```
 
-Zie het volgende [[!DNL Event Hubs] document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) voor meer informatie over de reeksen van de netwerkregel.
+Zie het volgende [[!DNL Event Hubs]  document ](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) voor meer informatie over de reeksen van de netwerkregel.
 
-## Verbinden [!DNL Event Hubs] naar platform
+## Verbinden [!DNL Event Hubs] met platform
 
-In de onderstaande documentatie vindt u informatie over de verbinding [!DNL Event Hubs] naar Platform met API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Event Hubs] en Platform via API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 

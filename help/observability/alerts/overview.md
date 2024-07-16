@@ -6,8 +6,8 @@ feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 3%
+source-wordcount: '792'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 >
 >Waarschuwingen worden niet ondersteund in niet-productiesandboxen. Als u zich wilt abonneren op waarschuwingen, moet u ervoor zorgen dat u een productiesandbox gebruikt. Alle waarschuwingen voor abonnementen worden opnieuw ingesteld wanneer de sandbox opnieuw wordt ingesteld. Alle abonnementswaarschuwingen worden eveneens gewist wanneer een sandbox wordt verwijderd.
 
-Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Waarschuwingen verminderen of elimineren de noodzaak om de [[!DNL Observability Insights] API](../api/overview.md) om na te gaan of een baan is voltooid, of een bepaalde mijlpaal in een werkstroom is bereikt of of er fouten zijn opgetreden.
+Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Het alarm vermindert of elimineert de behoefte om [[!DNL Observability Insights]  API ](../api/overview.md) te peilen om te controleren als een baan heeft voltooid, als een bepaalde mijlpaal binnen een werkschema is bereikt, of als om het even welke fouten zijn voorgekomen.
 
 Wanneer een bepaalde reeks voorwaarden in uw verrichtingen van het Platform wordt bereikt (zoals een potentieel probleem wanneer het systeem een drempel) schendt, kan het Platform waakzame berichten aan om het even welke gebruikers in uw organisatie leveren die aan hen hebben ingetekend. Deze berichten kunnen over een vooraf bepaald tijdinterval herhalen tot het alarm is opgelost.
 
@@ -41,7 +41,7 @@ Een alarm kan in de volgende componenten worden verdeeld:
 
 | Component | Beschrijving |
 | --- | --- |
-| **Metrisch** | Waarneming [metrisch](../api/metrics.md#available-metrics) waarvan de waarde de waarschuwing activeert, zoals het aantal mislukte batch-insluitingen (`timeseries.ingestion.dataset.batchfailed.count`). |
+| **Metrisch** | Een metrische van de Waarneming [ ](../api/metrics.md#available-metrics) de waarvan waarde het alarm, zoals het aantal ontbroken partijingestitiegebeurtenissen teweegbrengt (`timeseries.ingestion.dataset.batchfailed.count`). |
 | **Condition** | Een voorwaarde met betrekking tot metrisch die het alarm teweegbrengt als het aan waar, zoals telmetrisch die een bepaald aantal overschrijdt. Deze voorwaarde kan aan een vooraf bepaald tijdvenster worden geassocieerd. |
 | **Venster** | (Optioneel) De voorwaarde voor een waarschuwing kan worden beperkt tot een vooraf gedefinieerd tijdvenster. Een waarschuwing kan bijvoorbeeld worden geactiveerd afhankelijk van het aantal mislukte batches in de afgelopen vijf minuten. |
 | **Actie** | Wanneer een alarm wordt teweeggebracht, wordt een actie uitgevoerd. Specifiek, worden de berichten verzonden naar toepasselijke ontvangers door een leveringskanaal, zoals een pre-gevormde webhaak of Experience Platform UI. |
@@ -58,7 +58,7 @@ U kunt waarschuwingen ontvangen en beheren via twee kanalen:
 
 ### I/O-gebeurtenissen {#events}
 
-U kunt waarschuwingen verzenden naar een geconfigureerde webhaak om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken. Als u waarschuwingen wilt ontvangen via webhaak, moet u uw webhaak registreren voor platformwaarschuwingen in Adobe Developer Console. Zie de handleiding op [abonneren op Adobe I/O Event-berichten](./subscribe.md) voor specifieke stappen.
+U kunt waarschuwingen verzenden naar een geconfigureerde webhaak om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken. Als u waarschuwingen wilt ontvangen via webhaak, moet u uw webhaak registreren voor Platformwaarschuwingen in Adobe Developer Console. Zie de gids op [ het intekenen aan de berichten van de Gebeurtenis van Adobe I/O ](./subscribe.md) voor specifieke stappen.
 
 ### Platforminterface {#ui}
 
@@ -71,19 +71,19 @@ Als u met waarschuwingen wilt werken in de interface van het platform, moet u de
 | Machtiging | Beschrijving |
 | --- | --- |
 | Waarschuwingen weergeven | Hiermee kunt u ontvangen waarschuwingsberichten weergeven. |
-| Geschiedenis van waarschuwingen weergeven* | Hiermee kunt u een geschiedenis van ontvangen berichten bekijken via de [!UICONTROL Alerts] tab. |
-| Waarschuwingen beheren* | Hiermee kunt u waarschuwingsregels in- en uitschakelen via het dialoogvenster [!UICONTROL Alerts] tab. |
-| Waarschuwingen oplossen* | Hiermee kunt u getriggerde waarschuwingen oplossen via het dialoogvenster [!UICONTROL Alerts] tab. |
+| Geschiedenis van waarschuwingen weergeven* | Hiermee kunt u een geschiedenis van ontvangen waarschuwingen weergeven via het tabblad [!UICONTROL Alerts] . |
+| Waarschuwingen beheren* | Hiermee kunt u waarschuwingsregels in- en uitschakelen via de tab [!UICONTROL Alerts] . |
+| Waarschuwingen oplossen* | Hiermee kunt u getriggerde waarschuwingen oplossen via het tabblad [!UICONTROL Alerts] . |
 
 {style="table-layout:auto"}
 
-**Voor toegang tot [!UICONTROL Alerts] , moet u ook de toestemming van het Alarm van de Mening in combinatie met één van de andere toestemmingen worden verleend.*
+**om tot het [!UICONTROL Alerts] lusje toegang te hebben, moet u ook de toestemming van het Alarm van de Mening in combinatie met één van de andere toestemmingen worden verleend.*
 
 >[!NOTE]
 >
->Voor meer informatie over hoe te om toestemmingen in Platform te beheren, verwijs naar [toegangsbeheerdocumentatie](../../access-control/ui/overview.md).
+>Voor meer informatie over hoe te om toestemmingen in Platform te beheren, verwijs naar de [ documentatie van de toegangscontrole ](../../access-control/ui/overview.md).
 
-Met de machtiging Waarschuwingen weergeven kunt u ontvangen waarschuwingen weergeven door het belpictogram te selecteren (![Bell Icon](../images/alerts/overview/icon.png)) rechtsboven.
+Met de toestemming van het Alarm van de Mening, kan ontvangen alarm bekijken door het klokpictogram (![ Pictogram van de Telling ](../images/alerts/overview/icon.png)) in de hoger-juiste hoek te selecteren.
 
 ![](../images/alerts/overview/ui.png)
 
@@ -91,7 +91,7 @@ Met de machtiging Waarschuwingen weergeven kunt u ontvangen waarschuwingen weerg
 >
 > Selecteer een waarschuwing om naar een verwant dashboard te navigeren voor meer gedetailleerde informatie over waarom de alarm is teweeggebracht.
 
-Bovendien [!UICONTROL Alerts] in UI staat individuele gebruikers toe om aan specifieke waakzame types in te tekenen, en staat beheerders toe om waakzame regels geheel toe te laten of onbruikbaar te maken. Zie de [UI-hulplijn](./ui.md) voor meer informatie over het beheer van waarschuwingen.
+Bovendien staat het [!UICONTROL Alerts] lusje in UI individuele gebruikers toe om aan specifieke waakzame types in te tekenen, en staat beheerders toe om waakzame regels geheel toe te laten of onbruikbaar te maken. Zie de [ gids UI ](./ui.md) voor meer informatie bij het beheren van alarm.
 
 ## Volgende stappen
 

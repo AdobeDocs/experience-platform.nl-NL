@@ -4,7 +4,7 @@ description: De onderstaande tabellen bevatten de toewijzingen tussen de bronvel
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 
 ## Contactpersonen {#contacts}
 
-| Bronveld | Doel XDM-veld | Notities |
+| Source-veld | Doel XDM-veld | Notities |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |
 | `address1_city` | `workAddress.city` |
@@ -60,7 +60,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 
 ## Leads {#leads}
 
-| Bronveld | Doel XDM-veld | Notities |
+| Source-veld | Doel XDM-veld | Notities |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |
 | `address1_city` | `workAddress.city` |
@@ -99,7 +99,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 
 ## Accounts {#accounts}
 
-| Bronveld | Doel XDM-veld | Notities |
+| Source-veld | Doel XDM-veld | Notities |
 | --- | --- | --- |
 | `"Dynamics"` | `accountKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
@@ -136,7 +136,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 
 ## Kansen {#opportunities}
 
-| Bronveld | Doel XDM-veld | Notities |
+| Source-veld | Doel XDM-veld | Notities |
 | --- | --- | --- |
 | `name` | `opportunityName` |
 | `"Dynamics"` | `opportunityKey.sourceType` |
@@ -160,7 +160,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 
 ## Contactrollen opportunity {#opportunity-contact-roles}
 
-| Bronveld | Doel XDM-veld | Notities |
+| Source-veld | Doel XDM-veld | Notities |
 | --- | --- | --- |
 | `"Dynamics"` | `opportunityPersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
@@ -171,14 +171,14 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
 | `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `connectionrole1.name` | `personRole` |
-| `record1objecttypecode` | *Een aangepaste veldgroep moet worden gedefinieerd als een doelschema.* Zie de appendix sectie voor stappen op [hoe te om een het type van picklist brongebied aan een doelXDM schema in kaart te brengen](#picklist-type-fields) voor meer informatie . | Voor een lijst met mogelijke waarden en labels voor de `record1objecttypecode` bronveld, zie deze [[!DNL Microsoft Dynamics] referentiedocument van verbindingsentiteit](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
-| `record2objecttypecode` | *Een aangepaste veldgroep moet worden gedefinieerd als een doelschema.* Zie de appendix sectie voor stappen op [hoe te om een het type van picklist brongebied aan een doelXDM schema in kaart te brengen](#picklist-type-fields) voor meer informatie . | Voor een lijst met mogelijke waarden en labels voor de `record2objecttypecode` bronveld, zie deze [[!DNL Microsoft Dynamics] referentiedocument van verbindingsentiteit](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
+| `record1objecttypecode` | *de groep van het douanegebied van A moet als doelschema worden bepaald.* Zie de appendix sectie voor stappen op [ hoe te om een picklist type brongebied aan een doelXDM schema ](#picklist-type-fields) voor meer informatie in kaart te brengen. | Voor een lijst van mogelijke en waarden en etiketten voor het `record1objecttypecode` brongebied, zie dit [[!DNL Microsoft Dynamics]  document van de verbindingsentiteit ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
+| `record2objecttypecode` | *de groep van het douanegebied van A moet als doelschema worden bepaald.* Zie de appendix sectie voor stappen op [ hoe te om een picklist type brongebied aan een doelXDM schema ](#picklist-type-fields) voor meer informatie in kaart te brengen. | Voor een lijst van mogelijke en waarden en etiketten voor het `record2objecttypecode` brongebied, zie dit [[!DNL Microsoft Dynamics]  document van de verbindingsentiteit ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
 
 {style="table-layout:auto"}
 
 ## Campagnes {#campaigns}
 
-| Bronveld | Doel XDM-veld | Notities |
+| Source-veld | Doel XDM-veld | Notities |
 | --- | --- | --- |
 | `campaignid` | `campaignKey.sourceID` |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
@@ -203,7 +203,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 
 ## Marketinglijst {#marketing-list}
 
-| Bronveld | Doel XDM-veld | Notities |
+| Source-veld | Doel XDM-veld | Notities |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `marketingListKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
@@ -218,7 +218,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 
 ## Leden van de marketinglijst {#marketing-list-members}
 
-| Bronveld | Doel XDM-veld | Notities |
+| Source-veld | Doel XDM-veld | Notities |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
@@ -232,37 +232,37 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 
 ## Bijlage
 
-De onderstaande secties bieden aanvullende informatie die u kunt gebruiken bij het configureren van B2B-toewijzingen voor uw [!DNL Microsoft] Bron dynamiek.
+De onderstaande secties bevatten aanvullende informatie die u kunt gebruiken bij het configureren van B2B-toewijzingen voor uw bron voor [!DNL Microsoft] dynamiek.
 
 ### Tekstvelden voor keuzelijst {#picklist-type-fields}
 
-U kunt [berekende velden](../../../../data-prep/ui/mapping.md#calculated-fields) om een bronveld van het type picklist toe te wijzen van [!DNL Microsoft Dynamics] naar een doel-XDM-veld.
+U kunt [ berekende gebieden ](../../../../data-prep/ui/mapping.md#calculated-fields) gebruiken om een picklist type brongebied van [!DNL Microsoft Dynamics] aan een doelXDM gebied in kaart te brengen.
 
-Bijvoorbeeld de `genderCode` veld bevat twee opties:
+Het veld `genderCode` bevat bijvoorbeeld twee opties:
 
 | Waarde | Label |
 | --- | --- |
 | 1 | `male` |
 | 2 | `female` |
 
-U kunt de volgende opties gebruiken om de `genderCode` bronveld naar `person.gender` doelveld:
+U kunt de volgende opties gebruiken om het bronveld `genderCode` toe te wijzen aan het doelveld `person.gender` :
 
 #### Een logische operator gebruiken
 
-| Bronveld | Doel XDM-veld |
+| Source-veld | Doel XDM-veld |
 | --- | --- |
 | `decode(genderCode, "1", "male", "2", "female", "default")` | `person.gender` |
 
-In dit scenario komt de waarde overeen met de sleutel, als de sleutel wordt gevonden in opties, of `default`, als `default` is aanwezig en de sleutel is niet gevonden. De waarde komt overeen met `null` als opties `null` of er geen `default` en de sleutel is niet gevonden.
+In dit scenario komt de waarde overeen met de sleutel, als de sleutel wordt gevonden in opties, of `default` als `default` aanwezig is en de sleutel niet wordt gevonden. De waarde komt overeen met `null` als de opties `null` zijn of er geen `default` is en de toets niet wordt gevonden.
 
 #### Een berekend veld gebruiken
 
-| Bronveld | Doel XDM-veld |
+| Source-veld | Doel XDM-veld |
 | --- | --- |
 | `iif(gendercode.equals("1"),"male",iif(gendercode.equals("2"),"female",null))` | `person.gender` |
 
 >[!TIP]
 >
->Een geneste herhaling van de bovenstaande bewerking lijkt op: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
+>Een geneste herhaling van de bovenstaande bewerking lijkt op: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))` .
 
-Voor meer informatie wordt de [document over logische operatoren in [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
+Voor meer informatie is het [ document over logische exploitanten in  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)

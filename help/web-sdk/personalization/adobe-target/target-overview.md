@@ -5,76 +5,76 @@ exl-id: 021171ab-0490-4b27-b350-c37d2a569245
 source-git-commit: 69406293dce5fdfc832adff801f1991626dafae0
 workflow-type: tm+mt
 source-wordcount: '1338'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
-# Gebruiken [!DNL Adobe Target] en [!DNL Web SDK] voor personalisatie
+# [!DNL Adobe Target] en [!DNL Web SDK] gebruiken voor personalisatie
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] kan persoonlijke ervaringen leveren en weergeven die worden beheerd in [!DNL Adobe Target] naar het webkanaal. U kunt een redacteur gebruiken WYSIWYG, genoemd [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC) of een niet-visuele interface [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), om uw activiteiten en personaliservaringen te maken, te activeren en te leveren.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] kan persoonlijke ervaringen die in [!DNL Adobe Target] worden beheerd, leveren en renderen naar het webkanaal. U kunt een redacteur gebruiken WYSIWYG, genoemd de [ Visuele Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), of een niet-visuele interface, de [ Op vorm-gebaseerde Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), om, uw activiteiten en verpersoonlijkingservaringen tot stand te brengen te activeren en te leveren.
 
 >[!IMPORTANT]
 >
->Leer hoe te om uw implementatie van het Doel aan het Web SDK van het Platform met te migreren [Doel migreren van at.js 2.x naar Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) zelfstudie.
+>Leer hoe te om uw implementatie van het Doel aan het Web SDK van het Platform met [ te migreren Migrate Doel van at.js 2.x aan het Web SDK van het Platform ](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) leerprogramma.
 >
->Leer hoe te om Doel voor het eerst uit te voeren met [Adobe Experience Cloud implementeren met Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) zelfstudie. Voor informatie specifiek voor Doel, zie de sectie van de zelfstudie getiteld [Doel instellen met Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+>Leer hoe te om Doel voor het eerst met [ uit te voeren Adobe Experience Cloud met het leerprogramma van SDK van het Web ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) uitvoert. Voor informatie specifiek voor Doel, zie de tutorial sectie getiteld [ Vastgestelde Doel van de Opstelling met het Web SDK van het Platform ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
 
 
-De volgende functies zijn getest en worden momenteel ondersteund in [!DNL Target]:
+De volgende functies zijn getest en worden momenteel ondersteund in [!DNL Target] :
 
-* [A/B-tests](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [A4T Rapportage van indrukking en conversie](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
-* [Automated Personalization-activiteiten](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [Gerichte ervaring](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [MVT (Multivariate Tests)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
-* [Recommendations-activiteiten](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
-* [Native doelindruk en conversiemelding](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
-* [VEC-ondersteuning](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
+* [ Tests A/B ](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [ A4T Indruk en omzetting rapporterend ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
+* [ de activiteiten van Automated Personalization ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [ Ervaring richtend activiteiten ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [ Multivariate Tests (MVT) ](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [ de activiteiten van Recommendations ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
+* [ Inheemse de indruk en omzetting van het Doel rapporterend ](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
+* [ Steun VEC ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
 ## [!DNL Web SDK] systeemdiagram
 
-Het volgende diagram helpt u het werkschema van begrijpen [!DNL Target] en [!DNL Web SDK] randbeslissing.
+In het volgende diagram krijgt u inzicht in de workflow voor het bepalen van randen in [!DNL Target] en [!DNL Web SDK] .
 
-![Diagram van de randbeslissing van Adobe Target met het Web SDK van het Platform](assets/target-platform-web-sdk-new.png)
+![ Diagram van de randbeslissing van Adobe Target met het Web SDK van het Platform ](assets/target-platform-web-sdk-new.png)
 
 | Bellen | Details |
 | --- | --- |
-| 1 | Het apparaat laadt de [!DNL Web SDK]. De [!DNL Web SDK] verzendt een verzoek naar de Edge Network met XDM- gegevens, milieu-id van Datastreams, overgegaan parameters, en (facultatieve) identiteitskaart van de Klant. De pagina (of containers) is vooraf verborgen. |
+| 1 | Het apparaat laadt de [!DNL Web SDK] . [!DNL Web SDK] verzendt een verzoek naar de Edge Network met XDM gegevens, milieu-id van Datastreams, overgegaan parameters, en (facultatieve) identiteitskaart van de Klant. De pagina (of containers) is vooraf verborgen. |
 | 2 | De Edge Network stuurt het verzoek naar de Edge-services om deze te verrijken met de informatie over de bezoeker-id, toestemming en andere bezoekerscontext, zoals geolocatie en apparaatvriendelijke namen. |
-| 3 | De Edge Network verzendt het verrijkte verpersoonlijkingsverzoek naar de [!DNL Target] rand met de parameters Visitor ID en passed-in. |
-| 4 | Profielscripts worden uitgevoerd en vervolgens toegevoegd aan [!DNL Target] profielopslag. De opslag van het profiel haalt segmenten van uit [!UICONTROL Audience Library] (bijvoorbeeld segmenten die worden gedeeld vanuit [!DNL Adobe Analytics], [!DNL Adobe Audience Manager]de [!DNL Adobe Experience Platform]). |
-| 5 | Gebaseerd op parameters en profielgegevens van het URL-verzoek, [!DNL Target] bepaalt welke activiteiten en ervaringen voor de bezoeker voor de huidige paginamening en voor toekomstige vooraf ingestelde meningen moeten tonen. [!DNL Target] stuurt dit vervolgens terug naar de Edge Network. |
-| 6 | a. De Edge Network stuurt de verpersoonlijkingsreactie terug naar de pagina, eventueel met inbegrip van profielwaarden voor extra verpersoonlijking. Gepersonaliseerde inhoud op de huidige pagina wordt zo snel mogelijk weergegeven zonder flikkering van de standaardinhoud.<br>b. De gepersonaliseerde inhoud voor meningen die als resultaat van gebruikersacties in een Enige Toepassing van de Pagina (SPA) worden getoond wordt caching zodat kan het onmiddellijk zonder een extra servervraag worden toegepast wanneer de meningen worden teweeggebracht. <br>c. De Edge Network verzendt de bezoeker-id en andere waarden in cookies, zoals toestemming, sessie-id, identiteit, cookie-controle, personalisatie. |
+| 3 | De Edge Network verzendt het verrijkte verpersoonlijkingsverzoek naar de [!DNL Target] rand met de bezoeker-id en doorgegeven parameters. |
+| 4 | Profielscripts worden uitgevoerd en vervolgens opgenomen in de profielopslag van [!DNL Target] . De opslag van het profiel haalt segmenten van [!UICONTROL Audience Library] (bijvoorbeeld, segmenten die van [!DNL Adobe Analytics] worden gedeeld, [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]). |
+| 5 | Op basis van URL-aanvraagparameters en -profielgegevens bepaalt [!DNL Target] welke activiteiten en ervaringen moeten worden weergegeven voor de bezoeker voor de huidige paginaweergave en voor toekomstige vooraf ingestelde weergaven. [!DNL Target] stuurt dit vervolgens terug naar de Edge Network. |
+| 6 | a. De Edge Network stuurt de verpersoonlijkingsreactie terug naar de pagina, eventueel met inbegrip van profielwaarden voor extra verpersoonlijking. Gepersonaliseerde inhoud op de huidige pagina wordt zo snel mogelijk weergegeven zonder flikkering van de standaardinhoud.<br> b. De gepersonaliseerde inhoud voor meningen die als resultaat van gebruikersacties in Één enkele Toepassing van de Pagina (SPA) worden getoond wordt in het voorgeheugen ondergebracht zodat kan het onmiddellijk zonder een extra servervraag worden toegepast wanneer de meningen worden teweeggebracht. <br> c. De Edge Network verzendt de bezoeker-id en andere waarden in cookies, zoals toestemming, sessie-id, identiteit, cookie-controle, personalisatie. |
 | 7 | De SDK van het Web verzendt het bericht van het apparaat naar de Edge Network. |
-| 8 | De Edge Network [!UICONTROL Analytics for Target] (A4T) Gegevens (metagegevens over activiteit, ervaring en conversie) naar de [!DNL Analytics] rand. |
+| 8 | De Edge Network stuurt [!UICONTROL Analytics for Target] (A4T) gegevens (metagegevens over activiteit, ervaring en omzetting) door naar de [!DNL Analytics] edge. |
 
-## Inschakelen [!DNL Adobe Target]
+## [!DNL Adobe Target] inschakelen
 
-Inschakelen [!DNL Target]Ga als volgt te werk:
+Ga als volgt te werk om [!DNL Target] in te schakelen:
 
-1. Inschakelen [!DNL Target] in uw [datastream](../../../datastreams/overview.md) met de juiste clientcode.
-1. Voeg de `renderDecisions` aan uw gebeurtenissen.
+1. Laat [!DNL Target] in uw [ datastream ](../../../datastreams/overview.md) met de aangewezen cliëntcode toe.
+1. Voeg de optie `renderDecisions` toe aan uw gebeurtenissen.
 
 Vervolgens kunt u desgewenst ook de volgende opties toevoegen:
 
-* **`decisionScopes`**: Haal specifieke activiteiten op (handig voor activiteiten die zijn gemaakt met de op formulieren gebaseerde composer) door deze optie aan uw gebeurtenissen toe te voegen.
-* **[Fragment vooraf verbergen](../manage-flicker.md)**: Verberg alleen bepaalde delen van de pagina.
+* **`decisionScopes`**: haal specifieke activiteiten op (handig voor activiteiten die zijn gemaakt met de op formulieren gebaseerde composer) door deze optie aan uw gebeurtenissen toe te voegen.
+* **[PreHide fragment](../manage-flicker.md)**: Verberg slechts bepaalde gedeelten van de pagina.
 
 ## Adobe Target VEC gebruiken
 
-Als u de VEC met een [!DNL Web SDK] de implementatie, installatie en activeer [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) of [Chroom](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
+Om VEC met a [!DNL Web SDK] implementatie te gebruiken, installeer en activeer of [ Firefox ](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) of [ de HelperUitbreiding van Chrome ](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC.
 
-Zie voor meer informatie [Helpextensie Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) in de *Adobe Target-gids*.
+Voor meer informatie, zie [ de helperuitbreiding van de Composer van de Visuele Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) in de *gids van Adobe Target*.
 
 ## Aangepaste inhoud renderen
 
-Zie [Renderen van personalisatie-inhoud](../rendering-personalization-content.md) voor meer informatie .
+Zie [ teruggevend verpersoonlijkingsinhoud ](../rendering-personalization-content.md) voor meer informatie.
 
 ## Soorten publiek in XDM
 
-Wanneer u een publiek voor uw [!DNL Target] activiteiten die via de [!DNL Web SDK], [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl) moeten worden gedefinieerd en gebruikt. Nadat u XDM schema&#39;s, klassen, en de groepen van het schemagebied bepaalt, kunt u tot een [!DNL Target] publieksregel gedefinieerd door XDM-gegevens voor doelversie. Within [!DNL Target], XDM-gegevens worden weergegeven in de [!UICONTROL Audience Builder] als een aangepaste parameter. XDM wordt geserialiseerd gebruikend puntaantekening (bijvoorbeeld) `web.webPageDetails.name`).
+Wanneer het bepalen van publiek voor uw [!DNL Target] activiteiten die via [!DNL Web SDK] worden geleverd, [ XDM ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl) moet worden bepaald en worden gebruikt. Nadat u XDM schema&#39;s, klassen, en de groepen van het schemagebied bepaalt, kunt u een [!DNL Target] publieksregel tot stand brengen die door XDM gegevens voor het richten wordt bepaald. Binnen [!DNL Target] worden XDM-gegevens in de [!UICONTROL Audience Builder] weergegeven als een aangepaste parameter. De XDM wordt geserialiseerd met behulp van puntnotatie (bijvoorbeeld `web.webPageDetails.name` ).
 
-Als u [!DNL Target] activiteiten met vooraf gedefinieerde doelgroepen die aangepaste parameters of een gebruikersprofiel gebruiken, worden niet correct via de SDK geleverd. In plaats van aangepaste parameters of het gebruikersprofiel te gebruiken, moet u in plaats daarvan XDM gebruiken. Er is echter een out-of-the-box-publiek voor doelgebieden die worden ondersteund via de [!DNL Web SDK] die geen XDM vereisen. Deze velden zijn beschikbaar in het dialoogvenster [!DNL Target] UI die geen XDM vereist:
+Als u [!DNL Target] -activiteiten hebt met vooraf gedefinieerd publiek dat aangepaste parameters of een gebruikersprofiel gebruikt, worden deze niet correct via de SDK geleverd. In plaats van aangepaste parameters of het gebruikersprofiel te gebruiken, moet u in plaats daarvan XDM gebruiken. Er is echter een out-of-the-box publiek dat zich richt op velden die worden ondersteund via de [!DNL Web SDK] en die geen XDM vereisen. Deze velden zijn beschikbaar in de gebruikersinterface van [!DNL Target] waarvoor geen XDM vereist is:
 
 * Doelbibliotheek
 * Geo
@@ -85,11 +85,12 @@ Als u [!DNL Target] activiteiten met vooraf gedefinieerde doelgroepen die aangep
 * verkeersbronnen
 * Tijdschema
 
-Zie voor meer informatie [Categorieën voor soorten publiek](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html) in de *Adobe Target-gids*.
+Voor meer informatie, zie [ Categorieën voor publiek ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html) in de *gids van Adobe Target*.
 
 ### Reactietokens
 
-Reactietokens worden gebruikt om metagegevens naar derden, zoals Google of Facebook, te verzenden. De tokens van de reactie zijn teruggekeerd in `meta` veld binnen `propositions` -> `items`. Hier volgt een voorbeeld:
+Reactietokens worden gebruikt om metagegevens naar derden, zoals Google of Facebook, te verzenden. Respontokens worden geretourneerd
+in het `meta` -veld in `propositions` -> `items` . Hier volgt een voorbeeld:
 
 ```json
 {
@@ -112,9 +113,9 @@ Reactietokens worden gebruikt om metagegevens naar derden, zoals Google of Faceb
 }
 ```
 
-Als u de reactietokens wilt verzamelen, moet u zich abonneren op `alloy.sendEvent` beloven, doorlopen `propositions`en haalt de gegevens uit `items` -> `meta`.
+Als u de reactietokens wilt verzamelen, moet u zich abonneren op `alloy.sendEvent` promise, `propositions` doorlopen en de details uit `items` -> `meta` extraheren.
 
-Elke `proposition` heeft een `renderAttempted` Booleaans veld dat aangeeft of de `proposition` is weergegeven of niet. Zie het onderstaande voorbeeld:
+Elke `proposition` heeft een `renderAttempted` booleaans veld dat aangeeft of de `proposition` is gerenderd of niet. Zie het onderstaande voorbeeld:
 
 ```js
 alloy("sendEvent",
@@ -146,31 +147,31 @@ Wanneer automatische rendering is ingeschakeld, bevat de proposities-array:
 
 #### Bij laden van pagina:
 
-* Op formulier gebaseerde composer `propositions` with `renderAttempted` markering ingesteld op `false`
-* Op Visual Experience Composer gebaseerde voorstellingen met `renderAttempted` markering ingesteld op `true`
-* Op Visual Experience Composer gebaseerde voorstellingen voor de weergave Eén pagina met `renderAttempted` markering ingesteld op `true`
+* Op formulier gebaseerde composer `propositions` met `renderAttempted` -markering ingesteld op `false`
+* Op Visual Experience Composer gebaseerde voorstellingen waarbij de markering `renderAttempted` is ingesteld op `true`
+* Op Visual Experience Composer gebaseerde voorstellingen voor een weergave van één pagina-toepassing waarbij de markering `renderAttempted` is ingesteld op `true`
 
 #### Bij weergave - wijzigen (voor weergaven in cache):
 
-* Op Visual Experience Composer gebaseerde voorstellingen voor de weergave Eén pagina met `renderAttempted` markering ingesteld op `true`
+* Op Visual Experience Composer gebaseerde voorstellingen voor een weergave van één pagina-toepassing waarbij de markering `renderAttempted` is ingesteld op `true`
 
 Wanneer automatische rendering is uitgeschakeld, bevat de proposities-array:
 
 #### Bij laden van pagina:
 
-* [!DNL Form-based Composer]-gebaseerd `propositions` with `renderAttempted` markering ingesteld op `false`
-* [!DNL Visual Experience Composer]op basis van voorstellen met `renderAttempted` markering ingesteld op `false`
-* [!DNL Visual Experience Composer]-gebaseerde voorstellingen voor een weergave van één pagina-toepassing met `renderAttempted` markering ingesteld op `false`
+* [!DNL Form-based Composer] -based `propositions` with `renderAttempted` -markering ingesteld op `false`
+* [!DNL Visual Experience Composer] -gebaseerde voorstellingen waarvoor de markering `renderAttempted` is ingesteld op `false`
+* Op [!DNL Visual Experience Composer] gebaseerde voorstellingen voor een toepassingsweergave van één pagina met de markering `renderAttempted` ingesteld op `false`
 
 #### Bij weergave - wijzigen (voor weergaven in cache):
 
-* Op composer gebaseerde voorstellingen voor visuele ervaring voor een weergave van één pagina-toepassing met `renderAttempted` markering ingesteld op `false`
+* Op Visual Experience Composer gebaseerde voorstellingen voor een weergave van één pagina-toepassing waarbij de markering `renderAttempted` is ingesteld op `false`
 
 ### Eén profiel bijwerken
 
-De [!DNL Web SDK] Hiermee kunt u het profiel bijwerken naar de [!DNL Target] en de [!DNL Web SDK] als een ervaringsgebeurtenis.
+Met [!DNL Web SDK] kunt u het profiel als een ervaringsgebeurtenis bijwerken naar het [!DNL Target] -profiel en [!DNL Web SDK] .
 
-Als u een [!DNL Target] , zorgt u ervoor dat de profielgegevens worden doorgegeven met het volgende:
+Als u een [!DNL Target] -profiel wilt bijwerken, moet u ervoor zorgen dat de profielgegevens worden doorgegeven met het volgende:
 
 * Onder `"data {"`
 * Onder `"__adobe.target"`
@@ -181,15 +182,15 @@ Als u een [!DNL Target] , zorgt u ervoor dat de profielgegevens worden doorgegev
 | `renderDecisions` | Boolean | Instrueert de personaliseringscomponent of het DOM acties zou moeten interpreteren |
 | `decisionScopes` | Array `<String>` | Een lijst van werkingsgebied om besluiten voor terug te winnen |
 | `xdm` | Object | Gegevens geformatteerd in XDM die in Web SDK als ervaringsgebeurtenis landen |
-| `data` | Object | Arbitraire sleutel/waardeparen verzonden naar [!DNL Target] oplossingen onder de doelklasse. |
+| `data` | Object | Willekeurige sleutel/waardeparen die naar [!DNL Target] oplossingen onder de doelklasse worden verzonden. |
 
 <!--Typical [!DNL Web SDK] code using this command looks like the following:-->
 
-**Opslagprofiel of entiteitsparameters vertragen totdat de inhoud aan de eindgebruiker is weergegeven**
+**de reddingsProfiel van de vertraging of entiteitsparameters tot de inhoud aan het eind - gebruiker** is getoond
 
-Als u de opnamekenmerken in het profiel wilt vertragen totdat de inhoud is weergegeven, stelt u `data.adobe.target._save=false` in uw verzoek.
+Als u opnamekenmerken in het profiel wilt vertragen totdat de inhoud is weergegeven, stelt u `data.adobe.target._save=false` in uw verzoek in.
 
-Uw website bevat bijvoorbeeld drie beslissingsbereiken die overeenkomen met drie categorielink op de website (Men, Vrouwen en Kinderen) en u wilt de categorie bijhouden die de gebruiker uiteindelijk heeft bezocht. Deze aanvragen verzenden met de `__save` markering ingesteld op `false` om te voorkomen dat de categorie blijft bestaan op het moment dat de inhoud wordt opgevraagd. Nadat de inhoud is weergegeven, verzendt u de juiste lading (inclusief de `eventToken` en `stateToken`) voor de desbetreffende kenmerken die moeten worden opgenomen.
+Uw website bevat bijvoorbeeld drie beslissingsbereiken die overeenkomen met drie categorielink op de website (Men, Vrouwen en Kinderen) en u wilt de categorie bijhouden die de gebruiker uiteindelijk heeft bezocht. Verzend deze aanvragen met de markering `__save` ingesteld op `false` om te voorkomen dat de categorie blijft bestaan op het moment dat de inhoud wordt opgevraagd. Nadat de inhoud is weergegeven, verzendt u de juiste lading (inclusief de `eventToken` en `stateToken` ) voor de overeenkomende kenmerken die moeten worden opgenomen.
 
 <!--Save profile or entity attributes by default with:
 
@@ -235,7 +236,7 @@ alloy ( "sendEvent" , {
 
 >[!NOTE]
 >
->Als de `__save` instructie wordt weggelaten , zodat het opslaan van de profiel - en entiteitskenmerken onmiddellijk plaatsvindt , alsof het verzoek is uitgevoerd , zelfs als de rest van het verzoek een prefetch van personalisatie is . De `__save` aanwijzing is alleen relevant voor profiel - en entiteitskenmerken . Als het spoorvoorwerp aanwezig is, `__save` de richtlijn wordt genegeerd . De gegevens worden onmiddellijk opgeslagen en het bericht wordt geregistreerd.
+>Als de instructie `__save` wordt weggelaten, gebeurt het opslaan van de profiel- en entiteitskenmerken direct, alsof de aanvraag is uitgevoerd, zelfs als de rest van de aanvraag een prefetch van personalisatie is. De aanwijzing `__save` is alleen relevant voor profiel- en entiteitskenmerken. Wanneer het trackobject aanwezig is, wordt de aanwijzing `__save` genegeerd. De gegevens worden onmiddellijk opgeslagen en het bericht wordt geregistreerd.
 
 **`sendEvent`met profielgegevens**
 
@@ -247,7 +248,7 @@ alloy("sendEvent", {
 });
 ```
 
-**Profielkenmerken verzenden naar Adobe Target:**
+**hoe te om de attributen van het Profiel naar Adobe Target te verzenden:**
 
 ```js
 alloy("sendEvent", {
@@ -265,7 +266,7 @@ alloy("sendEvent", {
 
 ## Aanbevelingen aanvragen
 
-De volgende tabellijsten [!DNL Recommendations] kenmerken en of elk kenmerk wordt ondersteund via de [!DNL Web SDK]:
+In de volgende tabel worden de [!DNL Recommendations] -kenmerken weergegeven en wordt aangegeven of elk kenmerk wordt ondersteund via [!DNL Web SDK] :
 
 | Categorie | Kenmerk | Ondersteuningsstatus |
 | --- | --- | --- |
@@ -286,7 +287,7 @@ De volgende tabellijsten [!DNL Recommendations] kenmerken en of elk kenmerk word
 |  | productPurchasedId | Ondersteund |
 | Pagina of itemcategorie voor categorie affiniteit | user.categoryId | Ondersteund |
 
-**Recommendations-kenmerken verzenden naar Adobe Target:**
+**hoe te om de attributen van Recommendations naar Adobe Target te verzenden:**
 
 ```js
 alloy("sendEvent", {
@@ -304,14 +305,14 @@ alloy("sendEvent", {
 
 ## Foutopsporing
 
-mboxTrace en mboxDebug zijn vervangen. Een methode gebruiken [WebSDK-foutopsporing](/help/web-sdk/use-cases/debugging.md) in plaats daarvan.
+mboxTrace en mboxDebug zijn vervangen. Gebruik in plaats hiervan een methode van [ het zuiveren van SDK van het Web ](/help/web-sdk/use-cases/debugging.md).
 
 ## Terminologie
 
-__Voorstellen:__ In [!DNL Adobe Target], correleren met de ervaring die is geselecteerd uit een activiteit.
+__Voorstellen:__ in [!DNL Adobe Target], correleert de voorstellen met de ervaring die van een Activiteit wordt geselecteerd.
 
-__Schema:__ Het schema van een besluit is het soort aanbod in [!DNL Adobe Target].
+__Schema:__ het schema van een besluit is het type van aanbieding in [!DNL Adobe Target].
 
-__Toepassingsgebied:__ De reikwijdte van het besluit. In [!DNL Adobe Target], het bereik is de mBox. De algemene mBox is de `__view__` bereik.
+__Reikwijdte:__ het werkingsgebied van het besluit. In [!DNL Adobe Target] is het bereik de mBox. De algemene mBox is het `__view__` bereik.
 
-__XDM:__ XDM wordt geserialiseerd in puntnotatie en dan gezet in [!DNL Adobe Target] als mBox-parameters.
+__XDM:__ XDM wordt geserialiseerd in puntaantekening en dan gezet in [!DNL Adobe Target] als parameters mBox.

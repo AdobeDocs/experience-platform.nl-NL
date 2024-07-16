@@ -6,8 +6,8 @@ description: Het /behavior eindpunt in de Registratie API van het Schema staat u
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '423'
-ht-degree: 1%
+source-wordcount: '415'
+ht-degree: 0%
 
 ---
 
@@ -15,26 +15,26 @@ ht-degree: 1%
 
 In het Model van Gegevens van de Ervaring (XDM), bepalen het gedrag de aard van gegevens die een schema beschrijft. Elke klasse XDM moet naar een specifiek gedrag verwijzen, dat alle schema&#39;s die die klasse gebruiken zullen erven. Voor bijna alle gebruiksgevallen in Platform zijn er twee beschikbare gedragingen:
 
-* **[!UICONTROL Record]**: Verstrekt informatie over de attributen van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
-* **[!UICONTROL Time-series]**: Biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
+* **[!UICONTROL Record]**: biedt informatie over de kenmerken van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
+* **[!UICONTROL Time-series]**: biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
 
 >[!NOTE]
 >
->Er zijn sommige gebruiksgevallen in Platform die het gebruik van schema vereisen dat geen van de bovenstaande gedragingen gebruikt. In deze gevallen is een derde &quot;ad-hocgedrag&quot; beschikbaar. Zie de zelfstudie aan [een ad-hocschema maken](../tutorials/ad-hoc.md) voor meer informatie .
+>Er zijn sommige gebruiksgevallen in Platform die het gebruik van schema vereisen dat geen van de bovenstaande gedragingen gebruikt. In deze gevallen is een derde &quot;ad-hocgedrag&quot; beschikbaar. Zie het leerprogramma op [ creërend een ad hoc schema ](../tutorials/ad-hoc.md) voor meer informatie.
 >
->Voor meer algemene informatie over gegevensgedrag in termen van hoe zij schemacompositie beïnvloeden, verwijs naar de gids over [grondbeginselen van de schemacompositie](../schema/composition.md).
+>Voor meer algemene informatie over gegevensgedrag in termen van hoe zij schemacompositie beïnvloeden, verwijs naar de gids op de [ grondbeginselen van schemacompositie ](../schema/composition.md).
 
-De `/behaviors` in de [!DNL Schema Registry] Met API kunt u beschikbaar gedrag weergeven in het dialoogvenster `global` container.
+Met het eindpunt `/behaviors` in de [!DNL Schema Registry] API kunt u beschikbare gedragingen in de `global` -container weergeven.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met gedragingen ophalen {#list}
 
-U kunt een lijst met alle beschikbare gedragingen ophalen door een GET-aanvraag in te dienen bij de `/behaviors` eindpunt.
+U kunt een lijst met alle beschikbare gedragingen ophalen door een GET-aanvraag in te dienen bij het eindpunt van `/behaviors` .
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /global/behaviors
@@ -52,7 +52,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
-**Antwoord**
+**Reactie**
 
 ```json
 {
@@ -89,9 +89,9 @@ curl -X GET \
 
 ## Gedrag opzoeken {#lookup}
 
-U kunt een specifiek gedrag opzoeken door zijn identiteitskaart in de weg van een verzoek van de GET aan te geven `/behaviors` eindpunt.
+U kunt een specifiek gedrag opzoeken door zijn identiteitskaart in de weg van een verzoek van de GET aan het `/behaviors` eindpunt te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /global/behaviors/{BEHAVIOR_ID}
@@ -99,13 +99,13 @@ GET /global/behaviors/{BEHAVIOR_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{BEHAVIOR_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het gedrag dat u wilt opzoeken. |
+| `{BEHAVIOR_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het gedrag dat u wilt opzoeken. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met het volgende verzoek worden de details van het recordgedrag opgehaald door het volgende op te geven `meta:altId` in het aanvraagpad.
+Met het volgende verzoek worden de details van het recordgedrag opgehaald door de waarde `meta:altId` op te geven in het aanvraagpad.
 
 ```shell
 curl -X GET \
@@ -117,7 +117,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json;version=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van het gedrag, inclusief de versie, beschrijving en de kenmerken die het gedrag verschaft aan de klassen die het gedrag toepassen.
 
@@ -172,4 +172,4 @@ Een geslaagde reactie retourneert de details van het gedrag, inclusief de versie
 
 ## Volgende stappen
 
-In deze handleiding wordt ingegaan op het gebruik van het `/behaviors` in de [!DNL Schema Registry] API. Zie voor meer informatie over het toewijzen van gedrag aan een klasse met behulp van de API [hulplijn voor klassen eindpunt](./classes.md).
+Deze handleiding behandelde het gebruik van het eindpunt `/behaviors` in de API van [!DNL Schema Registry] . Leren hoe te om een gedrag aan een klasse toe te wijzen die API gebruiken, zie de [ gids van het klassen eindpunt ](./classes.md).

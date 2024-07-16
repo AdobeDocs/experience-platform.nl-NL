@@ -9,11 +9,11 @@ ht-degree: 0%
 
 ---
 
-# Weergaven op apparaat
+# Weergaven op het apparaat
 
 ## Verbonden
 
-(aangeduid met rode Adobe &quot;A&quot;)
+(aangeduid met de rode Adobe &quot;A&quot;)
 
 ![](./images/on-device-views/connected.png)
 

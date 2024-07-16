@@ -13,10 +13,10 @@ ht-degree: 0%
 
 # Azure Blob- en Amazon S3-connectors
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform], en [!DNL Azure]. U kunt uw gegevens van deze systemen overbrengen naar [!DNL Platform].
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform] en [!DNL Azure] . U kunt uw gegevens van deze systemen overbrengen naar [!DNL Platform] .
 
-Opslagbronnen in de cloud kunnen uw eigen gegevens overbrengen naar [!DNL Platform] zonder dat het downloaden, opmaken of uploaden nodig is. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] stelt u in staat gegevens over te brengen van [!DNL Azure Blob] en S3 door partijen.
+Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar [!DNL Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met [!DNL Platform] kunt u gegevens uit [!DNL Azure Blob] en S3 doorhalen in batches.
 
-Voor meer informatie over de [!DNL Azure Blob] aansluiting, lees de [[!DNL Azure Blob] connectoroverzicht](./blob.md).
+Voor meer informatie over de [!DNL Azure Blob] schakelaar, te lezen gelieve het [[!DNL Azure Blob]  schakelaaroverzicht ](./blob.md).
 
-Voor meer informatie over de [!DNL Amazon S3] aansluiting, lees de [[!DNL Amazon S3] connectoroverzicht](./s3.md).
+Voor meer informatie over de [!DNL Amazon S3] schakelaar, te lezen gelieve het [[!DNL Amazon S3]  schakelaaroverzicht ](./s3.md).

@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevenstoegang;python sdk;gegevenstoegang api;read python;write python
 solution: Experience Platform
-title: Toegang verkrijgen tot gegevens met Python in de werkruimte van de wetenschap van gegevens
+title: Toegang verkrijgen tot gegevens met Python in Data Science Workspace
 type: Tutorial
-description: Het volgende document bevat voorbeelden over hoe u toegang kunt krijgen tot gegevens in Python voor gebruik in de werkruimte voor wetenschap van gegevens.
+description: Het volgende document bevat voorbeelden over hoe u toegang kunt krijgen tot gegevens in Python voor gebruik in Data Science Workspace.
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
 
-# Toegang verkrijgen tot gegevens met Python in de werkruimte voor wetenschap van gegevens
+# Toegang verkrijgen tot gegevens met Python in Data Science Workspace
 
-Het volgende document bevat voorbeelden over hoe u toegang kunt krijgen tot gegevens met gebruik van Python voor gebruik in de werkruimte van de wetenschap van gegevens. Ga voor informatie over toegang tot gegevens met JupyterLab-laptops naar de [Toegang tot gegevens van JupyterLab-laptops](../jupyterlab/access-notebook-data.md) documentatie.
+Het volgende document bevat voorbeelden over hoe u toegang kunt krijgen tot gegevens met Python voor gebruik in Data Science Workspace. Voor informatie bij de toegang tot van gegevens die laptops gebruiken JupyterLab, bezoek de [ JupyterLab toegang van notitieboekjes tot ](../jupyterlab/access-notebook-data.md) documentatie.
 
 ## Een gegevensset lezen
 
@@ -53,7 +53,7 @@ partitions = dataset.get_partitions_info()
 
 Met de component DISTINCT kunt u alle afzonderlijke waarden op rij-/kolomniveau ophalen, waarbij alle dubbele waarden uit de reactie worden verwijderd.
 
-Een voorbeeld van het gebruik van de `distinct()` Deze functie is hieronder te zien:
+Hieronder ziet u een voorbeeld van het gebruik van de functie `distinct()` :
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
@@ -85,9 +85,9 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY-component
 
-Met de ORDER BY-component kunnen ontvangen resultaten worden gesorteerd met een opgegeven kolom in een bepaalde volgorde (oplopend of aflopend). Dit wordt gedaan door te gebruiken `sort()` functie.
+Met de ORDER BY-component kunnen ontvangen resultaten worden gesorteerd met een opgegeven kolom in een bepaalde volgorde (oplopend of aflopend). Dit wordt gedaan door de functie `sort()` te gebruiken.
 
-Een voorbeeld van het gebruik van de `sort()` Deze functie is hieronder te zien:
+Hieronder ziet u een voorbeeld van het gebruik van de functie `sort()` :
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
@@ -97,7 +97,7 @@ df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 
 De clausule LIMIT staat u toe om het aantal verslagen te beperken die van de dataset worden ontvangen.
 
-Een voorbeeld van het gebruik van de `limit()` Deze functie is hieronder te zien:
+Hieronder ziet u een voorbeeld van het gebruik van de functie `limit()` :
 
 ```python
 df = dataset_reader.limit(100).read()
@@ -107,7 +107,7 @@ df = dataset_reader.limit(100).read()
 
 Met de component OFFSET kunt u rijen vanaf het begin overslaan en vanaf een later punt beginnen met het retourneren van rijen. In combinatie met LIMIT, kan dit worden gebruikt om rijen in blokken te herhalen.
 
-Een voorbeeld van het gebruik van de `offset()` Deze functie is hieronder te zien:
+Hieronder ziet u een voorbeeld van het gebruik van de functie `offset()` :
 
 ```python
 df = dataset_reader.offset(100).read()
@@ -117,7 +117,7 @@ df = dataset_reader.offset(100).read()
 
 Om aan een dataset te schrijven, moet u het pandas dataframe aan uw dataset leveren.
 
-### Het schrijven van het dataframe van de panda&#39;s
+### Schrijven van het dataframe van de panda&#39;s
 
 ```python
 client_context = get_client_context(config_properties)
@@ -136,7 +136,7 @@ Voor langere actieve taken moet u mogelijk tussenliggende stappen opslaan. In de
 
 >[!NOTE]
 >
->Paden naar de gegevens zijn **niet** opgeslagen. U moet het overeenkomstige pad naar de desbetreffende gegevens opslaan.
+>De wegen aan de gegevens worden **niet** opgeslagen. U moet het overeenkomstige pad naar de desbetreffende gegevens opslaan.
 
 ### Schrijven naar gebruikersruimte
 
@@ -158,4 +158,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## Volgende stappen
 
-De Werkruimte van de Wetenschap van Gegevens van Adobe Experience Platform verstrekt een recept steekproef die de bovengenoemde codesteekproeven gebruikt om gegevens te lezen en te schrijven. Als u meer wilt weten over het gebruik van Python om toegang te krijgen tot uw gegevens, raadpleegt u de [Data Science Workspace Python GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
+Adobe Experience Platform Data Science Workspace levert een recept-voorbeeld waarin de bovenstaande codevoorbeelden worden gebruikt voor het lezen en schrijven van gegevens. Als u meer over wilt leren hoe te om Python voor de toegang tot van uw gegevens te gebruiken, te herzien gelieve de [ Gegevens Wetenschap Workspace Python GitHub Bewaarplaats ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).

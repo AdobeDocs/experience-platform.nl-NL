@@ -4,14 +4,14 @@ description: Dit document biedt een overzicht van het gebruik van Query Service 
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '909'
 ht-degree: 5%
 
 ---
 
-# Bot filteren in [!DNL Query Service] met leren van machines
+# Bot filteren in [!DNL Query Service] met leren van computers
 
-Beide activiteiten kunnen invloed hebben op de meetwaarden van de analyse en de gegevensintegriteit schaden. Adobe Experience Platform [!DNL Query Service] kan worden gebruikt om uw gegevenskwaliteit te handhaven door beide te filtreren.
+Beide activiteiten kunnen invloed hebben op de meetwaarden van de analyse en de gegevensintegriteit schaden. Adobe Experience Platform [!DNL Query Service] kan worden gebruikt om uw gegevenskwaliteit te behouden door beide te filteren.
 
 Door het beide filteren kunt u de gegevenskwaliteit behouden door gegevensverontreiniging die het gevolg is van niet-menselijke interactie met uw website, grotendeels te verwijderen. Dit proces wordt bereikt door de combinatie van SQL-query&#39;s en het leren van machines.
 
@@ -23,18 +23,18 @@ Dit document biedt een overzicht en gedetailleerde voorbeelden van de SQL bot fi
 
 Als onderdeel van dit proces moet u een model voor machinaal leren trainen, wordt in dit document uitgegaan van een praktische kennis van een of meer computerleeromgevingen.
 
-Dit voorbeeld gebruikt [!DNL Jupyter Notebook] als ontwikkelomgeving. Hoewel er veel opties beschikbaar zijn, [!DNL Jupyter Notebook] wordt aanbevolen omdat het een opensource webtoepassing is met lage computervereisten. Het kan [gedownload van de officiële site](https://jupyter.org/).
+In dit voorbeeld wordt [!DNL Jupyter Notebook] gebruikt als een ontwikkelomgeving. Hoewel er veel opties beschikbaar zijn, wordt [!DNL Jupyter Notebook] aanbevolen omdat het een opensource webtoepassing is die lage computervereisten heeft. Het kan [ van de officiële plaats ](https://jupyter.org/) worden gedownload.
 
-## Gebruiken [!DNL Query Service] om een drempel voor beide activiteit te bepalen
+## Gebruik [!DNL Query Service] om een drempel voor beide activiteit te definiëren
 
 De twee kenmerken die worden gebruikt om gegevens voor beide detectie te extraheren, zijn:
 
-* Experience Cloud Bezoeker-ID (ECID, ook bekend als MCID): Dit biedt een universele, permanente id die uw bezoekers identificeert voor alle Adobe-oplossingen.
-* Tijdstempel: Dit geeft de tijd en datum in UTC-indeling wanneer een activiteit op de website is opgetreden.
+* Bezoeker-id voor Experience Cloud (ECID, ook wel MCID genoemd): hiermee beschikt u over een universele, permanente id die uw bezoekers identificeert voor alle oplossingen voor Adobe.
+* Tijdstempel: geeft de tijd en datum in UTC-indeling op wanneer een activiteit op de website is opgetreden.
 
 >[!NOTE]
 >
->Het gebruik van `mcid` wordt nog steeds gevonden in naamruimteverwijzingen naar de Experience Cloud Visitor-id, zoals in het onderstaande voorbeeld wordt getoond.
+>Het gebruik van `mcid` wordt nog steeds gevonden in naamruimteverwijzingen naar de Experience Cloud Bezoeker-id, zoals in het onderstaande voorbeeld wordt getoond.
 
 De volgende SQL-instructie biedt een eerste voorbeeld om beide activiteiten te identificeren. De instructie gaat ervan uit dat als een bezoeker binnen één minuut 50 klikken uitvoert, de gebruiker een bot is.
 
@@ -49,7 +49,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-De expressie filtert de ECID&#39;s (`mcid`) van alle bezoekers die aan de drempelwaarde voldoen, maar die zich niet bezighouden met verkeersopstoppingen van andere intervallen.
+De uitdrukking filtert ECIDs (`mcid`) van alle bezoekers die de drempel ontmoeten maar richt geen pieken in verkeer van andere intervallen.
 
 ## De beide detectie verbeteren door machines te leren
 
@@ -57,7 +57,7 @@ De eerste SQL-instructie kan worden verfijnd tot een extractiequery voor functie
 
 De voorbeeldverklaring wordt uitgebreid van één minuut met maximaal 60 klikken, om vijf minuten en 30 minuten periodes met kliktellingen van respectievelijk 300, en 1800 te omvatten.
 
-De voorbeeldinstructie verzamelt het maximumaantal klikken voor elke ECID (`mcid`) over de verschillende perioden. De eerste instructie is uitgebreid met een minuut (60 seconden), 5 minuten (300 seconden) en een uur (1800 seconden).
+De voorbeeldverklaring verzamelt het maximumaantal kliks voor elke ECID (`mcid`) over de diverse duur. De eerste instructie is uitgebreid met een minuut (60 seconden), 5 minuten (300 seconden) en een uur (1800 seconden).
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 
@@ -116,11 +116,11 @@ Het resultaat van deze expressie kan er ongeveer zo uitzien als in de onderstaan
 
 ## Nieuwe spookdrempels identificeren aan de hand van computerleren
 
-Daarna, voer de resulterende vraagdataset in formaat CSV uit en voer het in [!DNL Jupyter Notebook]. Vanuit die omgeving kun je een model voor machinetraining trainen met behulp van de huidige bibliotheken voor machinaal leren. Raadpleeg de handleiding voor probleemoplossing voor meer informatie over [hoe te om gegevens van uit te voeren [!DNL Query Service] in CSV-indeling](../troubleshooting-guide.md#export-csv)
+Exporteer vervolgens de resulterende querygegevensset naar de CSV-indeling en importeer deze vervolgens naar [!DNL Jupyter Notebook] . Vanuit die omgeving kun je een model voor machinetraining trainen met behulp van de huidige bibliotheken voor machinaal leren. Zie de het oplossen van problemengids voor meer details op [ hoe te om gegevens van  [!DNL Query Service]  in formaat uit te voeren CSV ](../troubleshooting-guide.md#export-csv)
 
-De aanvankelijk vastgestelde ad-hocdrempels voor spinnen zijn niet gebaseerd op gegevens en zijn daarom niet nauwkeurig. De modellen van het leren van de machine kunnen worden gebruikt om parameters als drempels op te leiden. Dientengevolge, kunt u de vraagefficiency verhogen door het aantal te verminderen `GROUP BY` trefwoorden door overbodige functies te verwijderen.
+De aanvankelijk vastgestelde ad-hocdrempels voor spinnen zijn niet gebaseerd op gegevens en zijn daarom niet nauwkeurig. De modellen van het leren van de machine kunnen worden gebruikt om parameters als drempels op te leiden. Hierdoor kunt u de query-efficiëntie verhogen door het aantal trefwoorden van `GROUP BY` te verminderen door overbodige functies te verwijderen.
 
-In dit voorbeeld wordt de Scikit-Learn-bibliotheek voor machinaal leren gebruikt, die standaard met [!DNL Jupyter Notebook]. De pythonbibliotheek &quot;pandas&quot; wordt ook geïmporteerd voor gebruik hier. De volgende opdrachten worden ingevoerd in [!DNL Jupyter Notebook].
+In dit voorbeeld wordt de Scikit-Learn-bibliotheek voor machinaal leren gebruikt, die standaard met [!DNL Jupyter Notebook] is geïnstalleerd. De pythonbibliotheek &quot;pandas&quot; wordt ook geïmporteerd voor gebruik hier. De volgende opdrachten worden ingevoerd in [!DNL Jupyter Notebook] .
 
 ```shell
 import pandas as ps
@@ -153,22 +153,22 @@ tree.plot_tree(clf,feature_names=X.columns)
 plt.show()
 ```
 
-De waarden die door [!DNL Jupyter Notebook] voor dit voorbeeld zijn de volgende voorbeelden van toepassing.
+De waarden die door [!DNL Jupyter Notebook] voor dit voorbeeld worden geretourneerd, zijn als volgt.
 
 ```text
 Model Accuracy: 0.99935
 ```
 
-![Statistische output van [!DNL Jupyter Notebook] model voor machinaal leren.](../images/use-cases/jupiter-notebook-output.png)
+![ Statistische output van [!DNL Jupyter Notebook] machine het leren model.](../images/use-cases/jupiter-notebook-output.png)
 
 De resultaten voor het model in het bovenstaande voorbeeld zijn meer dan 99% nauwkeurig.
 
-Aangezien de klasser van de beslissingsboom kan worden getraind met behulp van gegevens van [!DNL Query Service] op een regelmatige ervaring die de geplande vragen gebruikt, kunt u gegevensintegriteit verzekeren door beide activiteit met een hoge graad van nauwkeurigheid te filtreren. Door de parameters te gebruiken die uit het machine het leren model worden afgeleid, kunnen de originele vragen met de hoogst nauwkeurige parameters worden bijgewerkt die door het model worden gecreeerd.
+Aangezien de klassfier van de beslissingsstructuur kan worden opgeleid met behulp van gegevens van [!DNL Query Service] op een reguliere ervaring met gebruik van geplande query&#39;s, kunt u gegevensintegriteit garanderen door beide activiteiten met een hoge mate van nauwkeurigheid te filteren. Door de parameters te gebruiken die uit het machine het leren model worden afgeleid, kunnen de originele vragen met de hoogst nauwkeurige parameters worden bijgewerkt die door het model worden gecreeerd.
 
 Het voorbeeldmodel bepaalde met een hoge mate van nauwkeurigheid dat om het even welke bezoekers met meer dan 130 interactie in vijf minuten bots zijn. Deze informatie kan nu worden gebruikt om uw bot te verfijnen die SQL vragen filtreren.
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u een beter inzicht in hoe te gebruiken [!DNL Query Service] en het leren van machines om beide activiteit te bepalen en te filteren.
+Door dit document te lezen, hebt u een beter inzicht in hoe u [!DNL Query Service] kunt gebruiken en machine leren om beide activiteiten te bepalen en te filteren.
 
-Andere documenten die de voordelen van [!DNL Query Service] volgens de strategische bedrijfsinzichten van uw organisatie [In de steek gelaten gebruikt geval](./abandoned-browse.md) voorbeeld.
+Andere documenten die de voordelen van [!DNL Query Service] aan de strategische bedrijfsinzichten van uw organisatie aantonen zijn [ verlaten doorblazen gebruiksgeval ](./abandoned-browse.md) voorbeeld.

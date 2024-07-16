@@ -1,15 +1,15 @@
 ---
-title: Opmerkingen bij de release Adobe Client Data Layer Extension
-description: De recentste versienota's voor de de markeringsuitbreiding van de Laag van Gegevens van de Adobe Cliënt in Adobe Experience Platform.
+title: Opmerkingen bij de release Adobe voor de extensie Gegevenslaag client
+description: De recentste versienota's voor de de markeringsuitbreiding van de Laag van de Gegevens van de Cliënt van de Adobe in Adobe Experience Platform.
 exl-id: 8fa3a210-6c85-4162-84cf-15c6e3cfcb9e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 1%
+source-wordcount: '178'
+ht-degree: 0%
 
 ---
 
-# Opmerkingen bij de release Adobe Client Data Layer-extensie
+# Opmerkingen bij de release Adobe Client Data Layer Extension
 
 ## Versie 2.0.2
 
@@ -32,8 +32,8 @@ De volgende functionaliteit wordt bij de eerste release door de extensie geboden
    * Luisteren naar een specifieke geduwde gebeurtenis
    * Er kan naar alle gebeurtenissen worden geluisterd bij verschillende bereiken
 * Gegevenselementen:
-   * Berekende status: Algemene of specifieke staat
+   * Berekende status: algemene of specifieke status
    * Grootte gegevenslaag
-* Acties:
+* Handelingen:
    * De grootte van de gegevenslaag opnieuw instellen (de nieuwste computerstatus behouden)
    * Object naar gegevenslaag duwen

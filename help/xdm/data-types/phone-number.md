@@ -20,8 +20,8 @@ ht-degree: 0%
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `extension` | Het interne kiesnummer dat wordt gebruikt om te bellen van een persoonlijke uitwisseling, operator of switchboard. |
-| `number` | Het telefoonnummer. Het telefoonnummer is een tekenreeks en kan betekenisvolle tekens bevatten, zoals vierkante haakjes `()`, koppeltekens `-`of tekens om subdialing-id&#39;s aan te geven, zoals extensies `x` bijvoorbeeld: `1-353(0)18391111` of `+613 9403600x1234`. |
-| `primary` | Een Booleaanse waarde die aangeeft of dit het primaire telefoonnummer van de persoon is. In tegenstelling tot adres of e-mailadres, kunnen er veelvoudige primaire telefoonaantallen zijn; één per communicatiekanaal. Het communicatiekanaal wordt gedefinieerd door het type (aangegeven door de naam van de bovenliggende eigenschap): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown`, en `fax`. |
+| `number` | Het telefoonnummer. Het telefoonnummer is een tekenreeks en kan betekenisvolle tekens bevatten, zoals vierkante haakjes `()` , afbreekstreepjes `-` of tekens om subdialing-id&#39;s aan te geven, zoals extensies `x` , bijvoorbeeld `1-353(0)18391111` of `+613 9403600x1234` . |
+| `primary` | Een Booleaanse waarde die aangeeft of dit het primaire telefoonnummer van de persoon is. In tegenstelling tot adres of e-mailadres, kunnen er veelvoudige primaire telefoonaantallen zijn; één per communicatiekanaal. Het communicatiekanaal wordt gedefinieerd door het type (aangegeven door de naam van de bovenliggende eigenschap): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown` en `fax` . |
 | `status` | Geeft aan of het telefoonnummer momenteel kan worden gebruikt. |
 | `statusReason` | Een beschrijving van de huidige status. |
 | `validity` | Een niveau van technische correctheid van het telefoonaantal. |
@@ -30,5 +30,5 @@ ht-degree: 0%
 
 Voor meer details op het gegevenstype van het telefoonaantal, verwijs naar de openbare bewaarplaats XDM:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.schema.json)

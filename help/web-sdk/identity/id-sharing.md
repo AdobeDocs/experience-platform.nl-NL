@@ -20,7 +20,7 @@ De Adobe Experience Platform Web SDK ondersteunt mogelijkheden voor het delen va
 
 ### Lever consistente personalisatie tussen mobiele apps en mobiele websites
 
-Een kledingbedrijf wil de ervaring van hun klanten personaliseren die op hun belangen wordt gebaseerd, en de verpersoonlijking nauwkeurig houden in een mobiele toepassing die ook WebViews laadt. Met de functie voor het delen van mobiele tot webid kunnen ze ervoor zorgen dat de meest nauwkeurige aanbiedingen aan klanten worden gepresenteerd met dezelfde bezoeker-id in de app en mobiele webinhoud door te geven [!DNL ECID] naar de URL van het mobiele web.
+Een kledingbedrijf wil de ervaring van hun klanten personaliseren die op hun belangen wordt gebaseerd, en de verpersoonlijking nauwkeurig houden in een mobiele toepassing die ook WebViews laadt. Met de functie voor het delen van mobiele-web-id&#39;s kunnen ze ervoor zorgen dat de meest nauwkeurige aanbiedingen aan klanten worden getoond, met dezelfde bezoeker-id in de app en mobiele webinhoud, door de [!DNL ECID] door te geven aan de mobiele URL.
 
 ### Zorg voor consistente personalisatie in verschillende domeinen
 
@@ -32,29 +32,29 @@ Een technologieverkoper wil zijn bezoekersactiviteit rapporteren met informatie 
 
 ## Vereisten {#prerequisites}
 
-Als u de id&#39;s van mobiel naar web en tussen domeinen wilt delen, moet u [!DNL Web SDK] versie 2.11.0 of hoger.
+Gebruik [!DNL Web SDK] versie 2.11.0 of hoger als u id&#39;s van mobiele naar webapparaten en andere domeinen wilt delen.
 
-Voor mobiele Edge Network-implementaties wordt deze functie ondersteund in het dialoogvenster [Identiteit voor Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) extensie die begint met versie 1.1.0 (iOS en Android).
+Voor mobiele implementaties van de Edge Network, wordt deze eigenschap gesteund in de [ Identiteit voor Edge Network ](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) uitbreiding die met versie 1.1.0 (iOS en Android) begint.
 
 Deze functie is ook compatibel met [!DNL VisitorAPI.js] versie 1.7.0 of hoger.
 
 ## Id&#39;s delen via mobiele apparaten {#mobile-to-web}
 
-Gebruik de `getUrlVariables` API van de [Identiteit voor Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) extensie om de id&#39;s op te halen als queryparameters en deze aan uw URL te koppelen bij het openen van de URL [!DNL webViews].
+Gebruik `getUrlVariables` API van de [ Identiteit voor Edge Network ](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) uitbreiding om de herkenningstekens als vraagparameters terug te winnen en hen aan uw URL vast te maken wanneer het openen [!DNL webViews].
 
-Geen extra configuratie wordt vereist voor Web SDK om goed te keuren `ECID` waarden in de queryreeks.
+Er is geen aanvullende configuratie vereist voor de Web SDK om `ECID` -waarden in de queryreeks te accepteren.
 
 De parameter van het vraagkoord omvat:
 
 * `MCID`: De Experience Cloud-id (`ECID`)
-* `MCORGID`: Het Experience Cloud `orgID` dat moet overeenkomen met `orgID` geconfigureerd in het dialoogvenster [!DNL Web SDK].
-* `TS`: Een tijdstempelparameter die niet ouder dan vijf minuten mag zijn.
+* `MCORGID`: Het Experience Cloud `orgID` dat moet overeenkomen met de `orgID` die is geconfigureerd in de [!DNL Web SDK] .
+* `TS`: een tijdstempelparameter die niet ouder dan vijf minuten mag zijn.
 
 
-Bij het delen van een mobiele id naar een web wordt gebruikgemaakt van de `adobe_mc` parameter. Wanneer de `adobe_mc` parameter aanwezig en geldig is, `ECID` van het vraagkoord wordt automatisch toegevoegd aan de identiteitskaart in het eerste verzoek dat aan het Netwerk van de Rand wordt gemaakt. Alle volgende Edge Network-interacties gebruiken `ECID`.
+Bij het delen van een id van mobiel naar web wordt de parameter `adobe_mc` gebruikt. Wanneer de parameter `adobe_mc` aanwezig en geldig is, wordt `ECID` van het vraagkoord automatisch toegevoegd aan de identiteitskaart in het eerste verzoek aan de Edge Network wordt gemaakt die. Alle volgende Edge Network-interacties gebruiken die `ECID` .
 
-Raadpleeg de documentatie voor meer informatie over het doorgeven van gebruikers-id&#39;s van een mobiele app aan een WebView [webweergaven verwerken](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
+Voor meer informatie over hoe te om bezoekers IDs van een mobiele app tot een WebView over te gaan, zie de documentatie over [ behandelend WebViews ](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
 
 ## Id&#39;s delen naar andere domeinen implementeren {#cross-domain-sharing}
 
-Zie de [`appendIdentityToUrl`](../commands/appendidentitytourl.md) bevel voor implementatieinstructies die zowel de de markeringsuitbreiding van SDK van het Web als de bibliotheek van JavaScript van SDK van het Web gebruiken.
+Zie het bevel [`appendIdentityToUrl`](../commands/appendidentitytourl.md) voor implementatieinstructies die zowel de de marktextensie van SDK van het Web als de bibliotheek van SDK van het Web gebruiken JavaScript.

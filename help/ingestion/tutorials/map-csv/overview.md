@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Een CSV-bestand toewijzen aan een XDM-schema
 
-Om CSV-gegevens in te nemen [!DNL Adobe Experience Platform], moeten de gegevens worden toegewezen aan een [!DNL Experience Data Model] (XDM) schema. De volgende zelfstudies laten zien hoe u CSV-bestanden kunt toewijzen aan XDM-schema&#39;s met behulp van de [!DNL Platform] gebruikersinterface:
+Als u CSV-gegevens in [!DNL Adobe Experience Platform] wilt invoeren, moeten de gegevens worden toegewezen aan een [!DNL Experience Data Model] (XDM)-schema. In de volgende zelfstudies wordt beschreven hoe u CSV-bestanden kunt toewijzen aan XDM-schema&#39;s met behulp van de gebruikersinterface van [!DNL Platform] :
 
 * [Een CSV-bestand toewijzen aan een bestaand XDM-schema](./existing-schema.md)
-* [Een CSV-bestand toewijzen aan een nieuw XDM-schema met behulp van door AI gegenereerde aanbevelingen](./recommendations.md) (momenteel in bèta)
+* [ Kaart een Csv- dossier aan een nieuw schema XDM gebruikend AI-Gegenereerde aanbevelingen ](./recommendations.md) (momenteel in bèta)

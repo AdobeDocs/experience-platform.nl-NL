@@ -4,7 +4,7 @@ description: Leer hoe te om vraag aan het /hosts eindpunt in Reactor API te make
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '793'
 ht-degree: 1%
 
 ---
@@ -13,25 +13,25 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->In dit document wordt beschreven hoe u hosts in de Reactor-API beheert. Voor meer algemene informatie over gastheren voor markeringen, zie de gids op [Overzicht van hosts](../../ui/publishing/hosts/hosts-overview.md) in de publicatiedocumentatie.
+>In dit document wordt beschreven hoe u hosts in de Reactor-API beheert. Voor meer algemene informatie over gastheren voor markeringen, zie de gids op [ gastheren overzicht ](../../ui/publishing/hosts/hosts-overview.md) in de het publiceren documentatie.
 
-In de Reactor-API definieert een host een bestemming waarbij een [build](./builds.md) kan worden geleverd.
+In Reactor API, bepaalt een gastheer een bestemming waar de a [ bouwt ](./builds.md) kan worden geleverd.
 
-Wanneer een taggebruiker in Adobe Experience Platform om een build heeft gevraagd, controleert het systeem de Library om te bepalen welke [milieu](./environments.md) de bibliotheek moet worden gemaakt . Elke omgeving heeft een relatie met een host die aangeeft waar de build moet worden geleverd.
+Wanneer een bouwstijl door een markeringsgebruiker in Adobe Experience Platform wordt gevraagd, controleert het systeem de Bibliotheek om te bepalen welk [ milieu ](./environments.md) de bibliotheek zou moeten worden gebouwd aan. Elke omgeving heeft een relatie met een host die aangeeft waar de build moet worden geleverd.
 
-Een host behoort tot exact één host [eigenschap](./properties.md), terwijl een eigenschap veel hosts kan hebben. Een eigenschap moet ten minste één host hebben voordat u deze kunt publiceren.
+Een gastheer behoort tot precies één [ bezit ](./properties.md), terwijl een bezit vele gastheren kan hebben. Een eigenschap moet ten minste één host hebben voordat u deze kunt publiceren.
 
 Een host kan door meerdere omgevingen binnen een eigenschap worden gebruikt. Het is gemeenschappelijk om één enkele gastheer op een bezit te hebben, en alle milieu&#39;s op dat bezit te hebben gebruiken de zelfde gastheer.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met hosts ophalen {#list}
 
 U kunt een lijst van gastheren voor een bezit terugwinnen door identiteitskaart van het bezit in de weg van een verzoek van de GET te omvatten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /properties/{PROPERTY_ID}/hosts
@@ -39,13 +39,13 @@ GET /properties/{PROPERTY_ID}/hosts
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van het bezit dat de gastheren bezit. |
+| `PROPERTY_ID` | De `id` van de eigenschap die eigenaar is van de hosts. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde gastheren worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
+>Gebruikend vraagparameters, kunnen de vermelde gastheren worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -59,7 +59,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van gastheren voor het gespecificeerde bezit terug.
 
@@ -113,7 +113,7 @@ Een succesvolle reactie keert een lijst van gastheren voor het gespecificeerde b
 
 U kunt een gastheer opzoeken door zijn identiteitskaart in de weg van een verzoek van de GET te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /hosts/{HOST_ID}
@@ -137,7 +137,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de host.
 
@@ -180,7 +180,7 @@ Een geslaagde reactie retourneert de details van de host.
 
 U kunt een nieuwe gastheer tot stand brengen door een verzoek van de POST te doen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /properties/{PROPERTY_ID}/hosts
@@ -188,13 +188,13 @@ POST /properties/{PROPERTY_ID}/hosts
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) dat u de host onder definieert. |
+| `PROPERTY_ID` | `id` van het [ bezit ](./properties.md) dat u de gastheer onder bepaalt. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een nieuwe host voor de opgegeven eigenschap gemaakt. De vraag associeert ook de gastheer met een bestaande uitbreiding door `relationships` eigenschap. Zie de handleiding op [relaties](../guides/relationships.md) voor meer informatie .
+Met het volgende verzoek wordt een nieuwe host voor de opgegeven eigenschap gemaakt. De aanroep koppelt de host ook aan een bestaande extensie via de eigenschap `relationships` . Zie de gids op [ verhoudingen ](../guides/relationships.md) voor meer informatie.
 
 ```shell
 curl -X POST \
@@ -222,19 +222,19 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes.name` | **(Vereist)** Een leesbare naam voor de host. |
-| `attributes.type_of` | **(Vereist)** Het type host. U kunt uit twee opties kiezen: <ul><li>`akamai` for [Door Adobe beheerde hosts](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` for [SFTP-hosts](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
+| `attributes.name` | **(Vereist)** Een voor de mens leesbare naam voor de gastheer. |
+| `attributes.type_of` | **(Vereist)** Het type van gastheer. U kunt uit twee opties kiezen: <ul><li>`akamai` voor [ Adobe-geleide gastheren ](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` voor [ gastheren SFTP ](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
 | `attributes.encrypted_private_key` | Een optionele persoonlijke sleutel die moet worden gebruikt voor hostverificatie. |
-| `attributes.path` | Het pad dat aan de `server` URL. |
+| `attributes.path` | Het pad dat moet worden toegevoegd aan de `server` URL. |
 | `attributes.port` | Een geheel getal dat de specifieke serverpoort aangeeft die moet worden gebruikt. |
 | `attributes.server` | De host-URL voor de server. |
-| `attributes.skip_symlinks`<br><br>(Alleen voor SFTP-hosts) | Standaard gebruiken alle SFTP-hosts symbolische koppelingen (symbolische koppelingen) om te verwijzen naar bibliotheekbuilds die op de server zijn opgeslagen. Niet alle servers ondersteunen echter het gebruik van symlinks. Wanneer dit kenmerk wordt opgenomen en ingesteld op `true`, gebruikt de gastheer een exemplaarverrichting om de bouwstijlactiva direct bij te werken in plaats van symlinks te gebruiken. |
+| `attributes.skip_symlinks`<br><br> (Alleen voor SFTP-hosts) | Standaard gebruiken alle SFTP-hosts symbolische koppelingen (symbolische koppelingen) om te verwijzen naar bibliotheekbuilds die op de server zijn opgeslagen. Niet alle servers ondersteunen echter het gebruik van symlinks. Wanneer dit kenmerk is opgenomen en op `true` is ingesteld, gebruikt de host een kopieerbewerking om de build-elementen rechtstreeks bij te werken in plaats van symlinks te gebruiken. |
 | `attributes.username` | Een optionele gebruikersnaam voor verificatie. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `hosts`. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `hosts` zijn. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de zojuist gemaakte host.
 
@@ -282,7 +282,7 @@ Een geslaagde reactie retourneert de details van de zojuist gemaakte host.
 
 U kunt een gastheer bijwerken door zijn identiteitskaart in de weg van een verzoek van de PATCH te omvatten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /hosts/{HOST_ID}
@@ -296,7 +296,7 @@ PATCH /hosts/{HOST_ID}
 
 **Verzoek**
 
-De volgende aanvraag werkt de `name` voor een bestaande host.
+Met de volgende aanvraag wordt de `name` voor een bestaande host bijgewerkt.
 
 ```shell
 curl -X PATCH \
@@ -319,12 +319,12 @@ curl -X PATCH \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de host moeten worden bijgewerkt. De volgende kenmerken kunnen voor een host worden bijgewerkt: <ul><li>`encrypted_private_key`</li><li>`name`</li><li>`path`</li><li>`port`</li><li>`server`</li><li>`type_of`</li><li>`username`</li></ul> |
-| `id` | De `id` van de gastheer wilt bijwerken. Dit moet overeenkomen met de `{HOST_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `hosts`. |
+| `id` | De `id` van de host die u wilt bijwerken. Dit moet overeenkomen met de `{HOST_ID}` -waarde in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `hosts` zijn. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van de bijgewerkte host.
 
@@ -368,7 +368,7 @@ Een geslaagde reactie retourneert de details van de bijgewerkte host.
 
 U kunt een gastheer schrappen door zijn identiteitskaart in de weg van een verzoek van de DELETE op te nemen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /hosts/{HOST_ID}
@@ -390,21 +390,21 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder antwoord, wat aangeeft dat de host is verwijderd.
 
 ## Verwante bronnen voor een host ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een gastheer terug te winnen. Wanneer [zoeken naar een host](#lookup), worden deze relaties vermeld in het `relationships` eigenschap.
+De volgende vraag toont aan hoe te om de verwante middelen voor een gastheer terug te winnen. Wanneer [ omhoog een gastheer ](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
 
-Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### De verwante eigenschap voor een host opzoeken {#property}
 
-U kunt de eigenschap die eigenaar is van een host opzoeken door deze toe te voegen `/property` naar het pad van een opzoekverzoek.
+U kunt de eigenschap die eigenaar is van een host opzoeken door `/property` toe te voegen aan het pad van een opzoekverzoek.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /hosts/{HOST_ID}/property
@@ -428,7 +428,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van het gespecificeerde bezit van de gastheer terug.
 

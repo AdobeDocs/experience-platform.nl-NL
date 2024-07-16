@@ -4,22 +4,22 @@ description: Leer hoe u voorgestelde waarden toevoegt aan een tekenreeksveld in 
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
 
 # Aanbevolen waarden beheren in de API
 
-Voor elk tekenreeksveld in het XDM (Experience Data Model) kunt u een **enum** dat de waarden die het veld kan invoeren, beperkt tot een vooraf gedefinieerde set. Als u probeert gegevens in te voeren in een opsommingsveld en de waarde niet overeenkomt met een van de gedefinieerde waarden in de configuratie, wordt invoer geweigerd.
+Voor om het even welk koordgebied in het Model van de Gegevens van de Ervaring (XDM), kunt u een **opsomming** bepalen die de waarden beperkt die het gebied aan een vooraf bepaalde reeks kan opnemen. Als u probeert gegevens in te voeren in een opsommingsveld en de waarde niet overeenkomt met een van de gedefinieerde waarden in de configuratie, wordt invoer geweigerd.
 
-In tegenstelling tot opsommingen, toevoegen **voorgestelde waarden** aan een tekenreeksveld te koppelen, beperkt niet de waarden die het kan invoeren. De voorgestelde waarden hebben daarentegen invloed op de beschikbare vooraf gedefinieerde waarden in het dialoogvenster [Segmenteringsinterface](../../segmentation/ui/overview.md) wanneer het tekenreeksveld wordt opgenomen als een kenmerk.
+In tegenstelling tot opsommingen, beperkt het toevoegen van **gesuggereerde waarden** aan een koordgebied niet de waarden die het kan opnemen. In plaats daarvan, beïnvloeden de voorgestelde waarden welke vooraf bepaalde waarden in [ Segmentatie UI ](../../segmentation/ui/overview.md) beschikbaar zijn wanneer het omvatten van het koordgebied als attribuut.
 
 >[!NOTE]
 >
 >Er is een ongeveer vijf-minieme vertraging voor de bijgewerkte voorgestelde waarden van een gebied om in de Segmentatie UI worden weerspiegeld.
 
-In deze handleiding wordt beschreven hoe u voorgestelde waarden kunt beheren met de [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Raadpleeg voor meer informatie over hoe u dit kunt doen in de gebruikersinterface van Adobe Experience Platform de [UI-handleiding voor opsommingen en voorgestelde waarden](../ui/fields/enum.md).
+Deze gids behandelt hoe te om voorgestelde waarden te beheren gebruikend de [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Voor stappen op hoe te om dit in het gebruikersinterface van Adobe Experience Platform te doen, zie de [ gids UI op aantallen en voorgestelde waarden ](../ui/fields/enum.md).
 
 ## Vereisten
 
@@ -28,11 +28,11 @@ Deze gids veronderstelt u met de elementen van schemacompositie in XDM vertrouwd
 * [Basisbeginselen van de schemacompositie](../schema/composition.md)
 * [Handleiding Schema Registry API](../api/overview.md)
 
-U wordt ook ten zeerste aangeraden de [evolutieregels voor nummers en voorgestelde waarden](../ui/fields/enum.md#evolution) als u bestaande velden bijwerkt. Als u voorgestelde waarden voor schema&#39;s beheert die aan een unie deelnemen, zie [regels voor het samenvoegen van opsommingen en voorgestelde waarden](../ui/fields/enum.md#merging).
+Het wordt ook sterk geadviseerd dat u de [ evolutieregels voor aantallen en gesuggereerde waarden ](../ui/fields/enum.md#evolution) herziet als u bestaande gebieden bijwerkt. Als u voorgestelde waarden voor schema&#39;s beheert die aan een unie deelnemen, zie de [ regels voor het samenvoegen van lijsten en voorgestelde waarden ](../ui/fields/enum.md#merging).
 
 ## Samenstelling
 
-In de API kunnen de beperkte waarden voor een **enum** veld wordt weergegeven door een `enum` array, terwijl een `meta:enum` -object biedt vriendelijke weergavenamen voor deze waarden:
+In API, worden de beperkte waarden voor een **enum** gebied vertegenwoordigd door een `enum` serie, terwijl een `meta:enum` voorwerp vriendschappelijke vertoningsnamen voor die waarden verstrekt:
 
 ```json
 "exampleStringField": {
@@ -51,9 +51,9 @@ In de API kunnen de beperkte waarden voor een **enum** veld wordt weergegeven do
 }
 ```
 
-Voor opsommingsvelden is het schemaregister niet toegestaan `meta:enum` die verder gaan dan de in `enum`, omdat pogingen om tekenreekswaarden buiten deze beperkingen in te voeren geen validatie zouden doorstaan.
+Voor opsommingsvelden staat het schemaregister niet toe dat `meta:enum` wordt uitgebreid tot meer dan de waarden in `enum` , omdat pogingen om tekenreekswaarden buiten deze beperkingen in te voeren, geen validatie zouden doorstaan.
 
-U kunt ook een tekenreeksveld definiëren dat geen `enum` -array en gebruikt alleen de `meta:enum` aan te duiden object **voorgestelde waarden**:
+Alternatief, kunt u een koordgebied bepalen dat geen `enum` serie bevat en slechts het `meta:enum` voorwerp gebruikt om **gesuggereerde waarden** aan te duiden:
 
 ```json
 "exampleStringField": {
@@ -67,7 +67,7 @@ U kunt ook een tekenreeksveld definiëren dat geen `enum` -array en gebruikt all
 }
 ```
 
-Aangezien de tekenreeks geen `enum` array om beperkingen te definiëren, `meta:enum` Deze eigenschap kan worden uitgebreid met nieuwe waarden.
+Aangezien de tekenreeks geen `enum` -array heeft om beperkingen te definiëren, kan de eigenschap `meta:enum` worden uitgebreid met nieuwe waarden.
 
 <!-- ## Manage suggested values for standard fields
 
@@ -75,13 +75,13 @@ For existing standard fields, you can [add suggested values](#add-suggested-stan
 
 ## Voorgestelde waarden toevoegen aan een standaardveld {#add-suggested-standard}
 
-De `meta:enum` van een standaardtekenreeksveld kunt u een [beschrijvingsbestand vriendelijke naam](../api/descriptors.md#friendly-name) voor het betrokken veld in een bepaald schema.
+Om `meta:enum` van een standaardkoordgebied uit te breiden, kunt u a [ vriendschappelijke naambeschrijver ](../api/descriptors.md#friendly-name) voor het gebied in kwestie in een bepaald schema tot stand brengen.
 
 >[!NOTE]
 >
->Voorgestelde waarden voor tekenreeksvelden kunnen alleen op schemaniveau worden toegevoegd. Met andere woorden, de uitbreiding van de `meta:enum` van een standaardgebied in één schema beïnvloedt geen andere schema&#39;s die het zelfde standaardgebied gebruiken.
+>Voorgestelde waarden voor tekenreeksvelden kunnen alleen op schemaniveau worden toegevoegd. Met andere woorden, het uitbreiden van `meta:enum` van een standaardveld in één schema heeft geen invloed op andere schema&#39;s die hetzelfde standaardveld gebruiken.
 
-In het volgende verzoek worden voorgestelde waarden aan de norm toegevoegd `eventType` veld (verstrekt door de [XDM ExperienceEvent, klasse](../classes/experienceevent.md)) voor het schema dat onder `sourceSchema`:
+Het volgende verzoek voegt gesuggereerde waarden aan het standaard `eventType` gebied (door de [ klasse XDM ExperienceEvent ](../classes/experienceevent.md) wordt verstrekt) voor het schema toe dat onder `sourceSchema` wordt geïdentificeerd:
 
 ```curl
 curl -X POST \
@@ -134,10 +134,9 @@ Nadat de descriptor is toegepast, reageert de schemaregistratie met het volgende
 
 >[!NOTE]
 >
->Als het standaardveld al waarden bevat onder `meta:enum`De nieuwe waarden van de descriptor overschrijven de bestaande velden niet en worden in plaats daarvan toegevoegd:
+>Als het standaardveld al waarden onder `meta:enum` bevat, overschrijven de nieuwe waarden van het descriptorbestand de bestaande velden niet en worden deze toegevoegd:
 >
->
-```json
+>```json
 >"standardField": {
 >   "type":"string",
 >   "title": "Example standard enum field",
@@ -215,18 +214,17 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 
 ## Voorgestelde waarden voor een aangepast veld beheren {#suggested-custom}
 
-Om het `meta:enum` van een aangepast veld kunt u de bovenliggende klasse, veldgroep of het gegevenstype van het veld bijwerken via een PATCH-aanvraag.
+Als u de `meta:enum` van een aangepast veld wilt beheren, kunt u de bovenliggende klasse, veldgroep of het gegevenstype van het veld bijwerken via een PATCH-aanvraag.
 
 >[!WARNING]
 >
->In tegenstelling tot standaardvelden, kunt u de `meta:enum` van een aangepast veld beïnvloedt alle andere schema&#39;s waarin dat veld wordt gebruikt. Als u geen veranderingen over schema&#39;s wilt verspreiden, denk in plaats daarvan na creërend een nieuwe douanemiddel:
+>In tegenstelling tot standaardvelden heeft het bijwerken van de `meta:enum` van een aangepast veld invloed op alle andere schema&#39;s waarin dat veld wordt gebruikt. Als u geen veranderingen over schema&#39;s wilt verspreiden, denk in plaats daarvan na creërend een nieuwe douanemiddel:
 >
->* [Een aangepaste klasse maken](../api/classes.md#create)
->* [Een aangepaste veldgroep maken](../api/field-groups.md#create)
->* [Een aangepast gegevenstype maken](../api/data-types.md#create)
+>* [ creeer een douaneklasse ](../api/classes.md#create)
+>* [ creeer een groep van het douanegebied ](../api/field-groups.md#create)
+>* [ creeer een type van douanegegevens ](../api/data-types.md#create)
 
-
-De volgende aanvraag werkt de `meta:enum` van een &quot;loyaliteitsniveau&quot;gebied dat door een type van douanegegevens wordt verstrekt:
+Met de volgende aanvraag wordt de `meta:enum` van een veld voor een &quot;loyaliteitsniveau&quot; bijgewerkt dat door een aangepast gegevenstype wordt verschaft:
 
 ```curl
 curl -X PATCH \
@@ -276,4 +274,4 @@ Na het toepassen van de verandering, antwoordt de Registratie van het Schema met
 
 ## Volgende stappen
 
-Deze gids behandelde hoe te om voorgestelde waarden voor koordgebieden in de Registratie API van het Schema te beheren. Zie de handleiding op [aangepaste velden in de API definiëren](./custom-fields-api.md) voor meer informatie over het maken van verschillende veldtypen.
+Deze gids behandelde hoe te om voorgestelde waarden voor koordgebieden in de Registratie API van het Schema te beheren. Zie de gids op [ bepalend douanegebieden in API ](./custom-fields-api.md) voor meer informatie over hoe te om verschillende gebiedstypes tot stand te brengen.

@@ -17,4 +17,4 @@ ht-degree: 0%
 - [Ontwikkeling van ETL-integratie](home.md)
 - [ETL-transformatie](transformations.md)
 - [ETL-workflow](workflow.md)
-- [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

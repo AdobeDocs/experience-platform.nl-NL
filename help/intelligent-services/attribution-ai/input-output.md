@@ -6,36 +6,36 @@ description: In het volgende document worden de verschillende invoer- en uitvoer
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
-source-wordcount: '2497'
+source-wordcount: '2460'
 ht-degree: 0%
 
 ---
 
 # Invoer en uitvoer in [!DNL Attribution AI]
 
-In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die worden gebruikt in [!DNL Attribution AI].
+In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in [!DNL Attribution AI] worden gebruikt.
 
 ## [!DNL Attribution AI] invoergegevens
 
 Attribution AI werkt door de volgende datasets te analyseren om algoritmische scores te berekenen:
 
-- Adobe Analytics-gegevenssets die gebruikmaken van de [Bronconnector voor analyse](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- Gegevenssets van Experience Event (EE) in het algemeen op basis van het Adobe Experience Platform-schema
-- Gegevenssets met consumentenervaringen (CEE)
+- De datasets van Adobe Analytics die de [ bron van Analytics schakelaar ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruiken
+- Gegevenssets van Experience Event (EE) in het algemeen uit het Adobe Experience Platform-schema
+- Gegevenssets over de consumentenervaringsgebeurtenis (CEE)
 
-U kunt nu meerdere datasets toevoegen van verschillende bronnen op basis van de **identiteitsbewijs** (veld) als elk van de gegevenssets hetzelfde identiteitstype (naamruimte) heeft, zoals een ECID. Nadat u een identiteit en een naamruimte hebt geselecteerd, worden maatstaven voor de volledigheid van de kolom van de id weergegeven die het volume aangeven van de gegevens die worden vastgezet. Ga voor meer informatie over het toevoegen van meerdere datasets naar de [Gebruikershandleiding voor Attribution AI](./user-guide.md#identity).
+U kunt veelvoudige datasets van verschillende bronnen nu toevoegen die op de **identiteitstoewijzing** (gebied) worden gebaseerd als elk van de datasets het zelfde identiteitstype (namespace) zoals ECID deelt. Nadat u een identiteit en een naamruimte hebt geselecteerd, worden maatstaven voor de volledigheid van de kolom van de id weergegeven die het volume aangeven van de gegevens die worden vastgezet. Meer leren over het toevoegen van veelvoudige datasets, bezoek de [ gebruikersgids van de Attribution AI ](./user-guide.md#identity).
 
-De kanaalgegevens worden niet altijd standaard toegewezen. In sommige gevallen, als mediaChannel (gebied) leeg is, zou u niet kunnen &quot;verdergaan&quot;tot u een gebied aan mediaChannel toewijst aangezien het een vereiste kolom is. Als het kanaal in de dataset wordt ontdekt, wordt het in kaart gebracht aan mediaChannel door gebrek. De andere kolommen, zoals **mediatype** en **media, actie** zijn nog steeds optioneel.
+De kanaalgegevens worden niet altijd standaard toegewezen. In sommige gevallen, als mediaChannel (gebied) leeg is, zou u niet kunnen &quot;verdergaan&quot;tot u een gebied aan mediaChannel toewijst aangezien het een vereiste kolom is. Als het kanaal in de dataset wordt ontdekt, wordt het in kaart gebracht aan mediaChannel door gebrek. De andere kolommen zoals **media type** en **media actie** zijn nog facultatief.
 
 Nadat u het kanaalveld hebt toegewezen, gaat u verder naar de stap &#39;Gebeurtenissen definiëren&#39;, waar u de conversiegebeurtenissen kunt selecteren, aanraakpuntgebeurtenissen kunt kiezen en specifieke velden kunt kiezen uit afzonderlijke datasets.
 
 >[!IMPORTANT]
 >
->De Adobe Analytics-bronaansluiting kan maximaal vier weken duren om back-ups van gegevens te maken. Als u onlangs opstelling een schakelaar, zou u moeten verifiëren dat de dataset de minimumlengte van gegevens heeft die voor Attribution AI wordt vereist. Controleer de [historische gegevens](#data-requirements) om te controleren of u voldoende gegevens hebt om nauwkeurige algoritmische scores te berekenen.
+>De Adobe Analytics-bronaansluiting kan maximaal vier weken duren om back-ups van gegevens te maken. Als u onlangs opstelling een schakelaar, zou u moeten verifiëren dat de dataset de minimumlengte van gegevens heeft die voor Attribution AI wordt vereist. Gelieve te herzien de [ historische gegevens ](#data-requirements) sectie om te verifiëren u genoeg gegevens hebt om nauwkeurige algoritmische scores te berekenen.
 
-Voor meer informatie over het instellen van de [!DNL Consumer Experience Event] (CEE) schema, gelieve te verwijzen naar [Intelligente services voor het verzamelen van gegevens](../data-preparation.md) hulplijn. Ga voor meer informatie over het toewijzen van Adobe Analytics-gegevens naar de [Toewijzingen van analytische velden](../../sources/connectors/adobe-applications/analytics.md) documentatie.
+Voor meer details bij vestiging het [!DNL Consumer Experience Event] (CEE) schema, gelieve te verwijzen naar de [ Intelligente gids van de de gegevensvoorbereiding van de Diensten ](../data-preparation.md). Voor meer informatie bij het in kaart brengen van de gegevens van Adobe Analytics, bezoek de [ het gebiedsafbeeldingen van Analytics ](../../sources/connectors/adobe-applications/analytics.md) documentatie.
 
-Niet alle kolommen in de [!DNL Consumer Experience Event] (CEE) schema is verplicht voor Attribution AI.
+Niet alle kolommen in het schema [!DNL Consumer Experience Event] (CEE) zijn verplicht voor Attribution AI.
 
 U kunt de aanraakpunten configureren met de velden die hieronder in het schema of de geselecteerde gegevensset worden aanbevolen.
 
@@ -51,13 +51,13 @@ U kunt de aanraakpunten configureren met de velden die hieronder in het schema o
 | Marketing.campaigngroup | Aanraakpunt |
 | Commerce | Conversie |
 
-Over het algemeen wordt de toewijzing uitgevoerd bij conversiekolommen zoals bestelling, aankopen en kassa&#39;s onder &quot;handel&quot;. De kolommen voor &quot;channel&quot; en &quot;marketing&quot; worden gebruikt om aanraakpunten voor Attribution AI te definiëren (bijvoorbeeld `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Voor optimale resultaten en inzichten verdient het aanbeveling zoveel mogelijk conversie- en aanraakpuntkolommen op te nemen. Bovendien hoeft u niet alleen de bovenstaande kolommen te gebruiken. U kunt andere aanbevolen of aangepaste kolommen opnemen als een conversie- of aanraakpuntdefinitie.
+Over het algemeen wordt de toewijzing uitgevoerd bij conversiekolommen zoals bestelling, aankopen en kassa&#39;s onder &quot;handel&quot;. De kolommen voor &quot;channel&quot; en &quot;marketing&quot; worden gebruikt om aanraakpunten voor Attribution AI (bijvoorbeeld `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'` ) te definiëren. Voor optimale resultaten en inzichten verdient het aanbeveling zoveel mogelijk conversie- en aanraakpuntkolommen op te nemen. Bovendien hoeft u niet alleen de bovenstaande kolommen te gebruiken. U kunt andere aanbevolen of aangepaste kolommen opnemen als een conversie- of aanraakpuntdefinitie.
 
 Datasets van de de gebeurtenisgebeurtenis van de ervaring (EE) te hoeven niet uitdrukkelijk om Kanaal en Marketing te hebben mengt zolang de kanaal of campagneinformatie relevant om een touchpoint te vormen in één van het mengen of door gebieden aanwezig is.
 
 >[!TIP]
 >
->Als u Adobe Analytics-gegevens gebruikt in uw CEE-schema, worden de aanraakpuntgegevens voor Analytics meestal opgeslagen in `channel.typeAtSource` (bijvoorbeeld `channel.typeAtSource = 'email'`).
+>Als u Adobe Analytics-gegevens gebruikt in uw CEE-schema, wordt de aanraakpuntinformatie voor Analytics meestal opgeslagen in `channel.typeAtSource` (bijvoorbeeld `channel.typeAtSource = 'email'` ).
 
 ## Historische gegevens {#data-requirements}
 
@@ -67,10 +67,9 @@ Datasets van de de gebeurtenisgebeurtenis van de ervaring (EE) te hoeven niet ui
 > - U moet minstens 3 maanden (90 dagen) gegevens verstrekken om een goed model in werking te stellen.
 > - U hebt minstens 1000 conversies nodig.
 
+Attribution AI vereist historische gegevens als input voor modeltraining. De vereiste gegevensduur wordt hoofdzakelijk bepaald door twee sleutelfactoren: opleidingsvenster en terugkijkvenster. De input met kortere opleidingsvensters is gevoeliger voor recente tendensen, terwijl de langere trainingsvensters helpen stabielere en nauwkeurigere modellen produceren. Het is belangrijk om het doel met historische gegevens te modelleren die uw bedrijfsdoelstellingen het best vertegenwoordigen.
 
-Attribution AI vereist historische gegevens als input voor modeltraining. De vereiste gegevensduur wordt hoofdzakelijk bepaald door twee sleutelfactoren: trainingsvenster en terugkijkvenster. De input met kortere opleidingsvensters is gevoeliger voor recente tendensen, terwijl de langere trainingsvensters helpen stabielere en nauwkeurigere modellen produceren. Het is belangrijk om het doel met historische gegevens te modelleren die uw bedrijfsdoelstellingen het best vertegenwoordigen.
-
-De [configuratie van trainingsvensters](./user-guide.md#training-window) filterconversiegebeurtenissen die moeten worden opgenomen voor modeltraining op basis van de voorvaltijd. Momenteel is het minimale trainingsvenster 1 kwart (90 dagen). De [lookback-venster](./user-guide.md#lookback-window) biedt een tijdkader waarin wordt aangegeven hoeveel dagen vóór de conversiegebeurtenis de aanraakpunten met betrekking tot deze conversiegebeurtenis moeten worden opgenomen. Deze twee concepten bepalen samen de hoeveelheid inputgegevens (die door dagen wordt gemeten) die voor een toepassing wordt vereist.
+De ](./user-guide.md#training-window) de filteromzettingsgebeurtenissen van de de vensterconfiguratie van de 0} training {worden geplaatst om voor modelopleiding te worden omvat die op voorvaltijd wordt gebaseerd. [ Momenteel is het minimale trainingsvenster 1 kwart (90 dagen). Het [ raadplegingsvenster ](./user-guide.md#lookback-window) verstrekt een tijdkader dat erop wijst hoeveel dagen voorafgaand aan de omzettingsgebeurtenis touchpoints met betrekking tot deze omzettingsgebeurtenis zou moeten worden omvat. Deze twee concepten bepalen samen de hoeveelheid inputgegevens (die door dagen wordt gemeten) die voor een toepassing wordt vereist.
 
 Standaard definieert Attribution AI het trainingsvenster als de meest recente 2 kwartalen (6 maanden) en terugkijkvenster als 56 dagen. Met andere woorden, het model houdt rekening met alle gedefinieerde conversiegebeurtenissen die zich in de afgelopen twee kwartalen hebben voorgedaan en zoekt naar alle aanraakpunten die zich hebben voorgedaan binnen 56 dagen vóór de bijbehorende conversiegebeurtenis(sen).
 
@@ -84,7 +83,7 @@ Minimale lengte van vereiste gegevens = trainingsvenster + terugkijkvenster
 
 Voorbeeld:
 
-- U wilt conversiegebeurtenissen die zich in de laatste 90 dagen (3 maanden) hebben voorgedaan, toewijzen en alle aanraakpunten bijhouden die binnen 4 weken vóór de conversiegebeurtenis zijn opgetreden. De gegevensduur van de invoer moet zich uitstrekken over de afgelopen 90 dagen + 28 dagen (4 weken). Het trainingsvenster is 90 dagen en het terugkijkvenster is 28 dagen in totaal 118 dagen.
+- U wilt conversiegebeurtenissen die zich in de laatste 90 dagen (3 maanden) hebben voorgedaan, toewijzen en alle aanraakpunten bijhouden die binnen 4 weken vóór de conversiegebeurtenis zijn opgetreden. De gegevensduur van de invoer moet de afgelopen 90 dagen + 28 dagen (4 weken) bestrijken. Het trainingsvenster is 90 dagen en het terugkijkvenster is 28 dagen in totaal 118 dagen.
 
 ## Uitvoergegevens Attribution AI
 
@@ -93,13 +92,13 @@ Attribution AI geeft de volgende uitvoer:
 - [Ruw granulaat](#raw-granular-scores)
 - [Geaggregeerde scores](#aggregated-attribution-scores)
 
-**Voorbeeld van uitvoerschema:**
+**schema van de uitvoeroutput van het Voorbeeld:**
 
 ![](./images/input-output/schema_output.gif)
 
 ### Ruw granulaat {#raw-granular-scores}
 
-Attribution AI geeft de toewijzingsscores in het meest granulaire niveau weer, zodat u de scores met elke gewenste scorekolom kunt segmenteren en dichten. Als u deze scores in de gebruikersinterface wilt weergeven, leest u de sectie op [onbewerkte muziekpaden weergeven](#raw-score-path). Als u de scores wilt downloaden met de API, gaat u naar de [scores downloaden in Attribution AI](./download-scores.md) document.
+Attribution AI geeft de toewijzingsscores in het meest granulaire niveau weer, zodat u de scores met elke gewenste scorekolom kunt segmenteren en dichten. Om deze scores in UI te bekijken, lees de sectie op [ het bekijken ruwe scorepaden ](#raw-score-path). Om de scores te downloaden gebruikend API bezoek de [ downloadende scores in Attribution AI ](./download-scores.md) document.
 
 >[!NOTE]
 >
@@ -107,56 +106,55 @@ Attribution AI geeft de toewijzingsscores in het meest granulaire niveau weer, z
 > - De rapportkolom is inbegrepen in de configuratiepagina of als deel van touchpoint of configuratie van de omzettingsdefinitie.
 > - De rapportkolom is inbegrepen in de extra kolommen van de scoredataset.
 
-
 In de volgende tabel worden de schemavelden in de voorbeelduitvoer van onbewerkte scores weergegeven:
 
 | Kolomnaam (gegevenstype) | Niet invulbaar | Beschrijving |
 | --- | --- | --- |
-| timestamp (DateTime) | Onwaar | Het tijdstip waarop een conversiegebeurtenis of -waarneming heeft plaatsgevonden. <br> **Voorbeeld:** 2020-06-09T00:01:51.000Z |
+| timestamp (DateTime) | Onwaar | Het tijdstip waarop een conversiegebeurtenis of -waarneming heeft plaatsgevonden. <br> **Voorbeeld:** 2020-06-09T00 :01: 51.000Z |
 | identityMap (Map) | Waar | identityMap van de gebruiker, vergelijkbaar met de CEE XDM-indeling. |
-| eventType (String) | Waar | Het primaire gebeurtenistype voor deze tijdreeksverslag. <br> **Voorbeeld:** &quot;Order&quot;, &quot;Purchase&quot;, &quot;Visit&quot; |
-| eventMergeId (String) | Waar | Een id om meerdere te correleren of samen te voegen [!DNL Experience Events] samen die in wezen dezelfde gebeurtenis zijn of moeten worden samengevoegd. Dit is bedoeld om vóór inname door de gegevensproducent te worden ingevuld. <br> **Voorbeeld:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-| _id (String) | Onwaar | Een unieke id voor de gebeurtenis time-series. <br> **Voorbeeld:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-| _huurderId (Object) | Onwaar | De objectcontainer op het hoogste niveau die correspondeert met uw tentant-id. <br> **Voorbeeld:** _atsdsnrmmsv2 |
-| your_schema_name (Object) | Onwaar | De rij van de score met omzettingsgebeurtenis alle touchpoint gebeurtenissen verbonden aan het en hun meta-gegevens. <br> **Voorbeeld:** Scores Attribution AI - modelnaam__2020 |
-| segmentation (String) | Waar | Conversiesegment zoals geo-segmentatie waarop het model is gebouwd. Als segmenten ontbreken, is het segment gelijk aan conversionName. <br> **Voorbeeld:** ORDER_US |
-| conversionName (String) | Waar | Naam van de omzetting die tijdens opstelling werd gevormd. <br> **Voorbeeld:** Bestellen, Lead, Bezoek |
+| eventType (String) | Waar | Het primaire gebeurtenistype voor deze tijd-reeksverslag. <br> **Voorbeeld:** &quot;Orde&quot;, &quot;Inkoop&quot;, &quot;Bezoek&quot; |
+| eventMergeId (String) | Waar | Een id voor het samenvoegen of correleren van meerdere [!DNL Experience Events] items die in wezen dezelfde gebeurtenis zijn of moeten worden samengevoegd. Dit is bedoeld om vóór inname door de gegevensproducent te worden ingevuld. <br> **Voorbeeld:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| _id (String) | Onwaar | Een unieke id voor de gebeurtenis in de tijdreeks. <br> **Voorbeeld:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| _huurderId (Object) | Onwaar | De objectcontainer op het hoogste niveau die correspondeert met uw tentant-id. <br> **Voorbeeld:** _atsdsnrmsv2 |
+| your_schema_name (Object) | Onwaar | De rij van de score met omzettingsgebeurtenis alle touchpoint gebeurtenissen verbonden aan het en hun meta-gegevens. <br> **Voorbeeld:** Scores van de Attribution AI - ModelNaam__2020 |
+| segmentatie (String) | Waar | Conversiesegment zoals geo-segmentatie waarop het model is gebouwd. Als segmenten ontbreken, is het segment gelijk aan conversionName. <br> **Voorbeeld:** ORDER_US |
+| conversionName (String) | Waar | Naam van de omzetting die tijdens opstelling werd gevormd. <br> **Voorbeeld:** Orde, Lood, Bezoek |
 | conversie (Object) | Onwaar | Kolommen met omzettingsmetagegevens. |
 | dataSource (String) | Waar | Globaal unieke identificatie van een gegevensbron. <br> **Voorbeeld:** Adobe Analytics |
 | eventSource (String) | Waar | De bron op het moment dat de werkelijke gebeurtenis plaatsvond. <br> **Voorbeeld:** Adobe.com |
-| eventType (String) | Waar | Het primaire gebeurtenistype voor deze tijdreeksverslag. <br> **Voorbeeld:** Volgorde |
-| geo (String) | Waar | De geografische locatie waar de conversie heeft plaatsgevonden `placeContext.geo.countryCode`. <br> **Voorbeeld:** VS |
-| priceTotal (dubbel) | Waar | Door omrekening verkregen inkomsten <br> **Voorbeeld:** 99,9 |
+| eventType (String) | Waar | Het primaire gebeurtenistype voor deze tijd-reeksverslag. <br> **Voorbeeld:** Orde |
+| geo (String) | Waar | De geografische locatie waar de conversie is uitgevoerd `placeContext.geo.countryCode` . <br> **Voorbeeld:** US |
+| priceTotal (dubbel) | Waar | Door de conversie verkregen inkomsten <br> **Voorbeeld:** 99.9 |
 | product (String) | Waar | De XDM-id van het product zelf. <br> **Voorbeeld:** RX 1080 ti |
 | productType (String) | Waar | De weergavenaam van het product zoals deze aan de gebruiker wordt getoond voor deze productweergave. <br> **Voorbeeld:** Gpus |
-| hoeveelheid (geheel getal) | Waar | Tijdens de conversie aangekochte hoeveelheid. <br> **Voorbeeld:** 1 1080 ti |
-| receiveTimestamp (DateTime) | Waar | Tijdstempel van de conversie ontvangen. <br> **Voorbeeld:** 2020-06-09T00:01:51.000Z |
-| skuId (String) | Waar | Stock keeping unit (SKU), de unieke identificator voor een product dat door de verkoper wordt gedefinieerd. <br> **Voorbeeld:** MJ-03-XS-Black |
-| timestamp (DateTime) | Waar | Tijdstempel van de conversie. <br> **Voorbeeld:** 2020-06-09T00:01:51.000Z |
+| hoeveelheid (geheel getal) | Waar | Tijdens de conversie aangekochte hoeveelheid. <br> **Voorbeeld:** 1080 ti |
+| receiveTimestamp (DateTime) | Waar | Tijdstempel van de conversie ontvangen. <br> **Voorbeeld:** 2020-06-09T00 :01: 51.000Z |
+| skuId (String) | Waar | Stock keeping unit (SKU), de unieke identificator voor een product dat door de verkoper wordt gedefinieerd. <br> **Voorbeeld:** MJ-03-XS-Zwart |
+| timestamp (DateTime) | Waar | Tijdstempel van de conversie. <br> **Voorbeeld:** 2020-06-09T00 :01: 51.000Z |
 | passThrough (Object) | Waar | De extra die de gegevensreeks van de Score Kolommen door gebruiker worden gespecificeerd terwijl het vormen van het model. |
-| commerce_order_purchaseCity (String) | Waar | De extra Kolom van de dataset van de Score. <br> **Voorbeeld:** stad: San Jose |
+| commerce_order_purchaseCity (String) | Waar | De extra Kolom van de Score dataset. <br> **Voorbeeld:** stad: San Jose |
 | customerProfile (Object) | Onwaar | Identiteitsgegevens van de gebruiker die wordt gebruikt om het model te bouwen. |
 | identity (Object) | Onwaar | Bevat de details van de gebruiker die wordt gebruikt om het model te bouwen zoals `id` en `namespace`. |
-| id (String) | Waar | Identiteitskaart van de gebruiker zoals koekje identiteitskaart, identiteitskaart van Adobe Analytics (HULP), of identiteitskaart van de Experience Cloud (ECID, ook gekend als MCID of als bezoekersidentiteitskaart) enz. <br> **Voorbeeld:** 1734876272540865634468320891369597404 |
+| id (String) | Waar | Identiteitskaart van de gebruiker zoals koekje identiteitskaart, identiteitskaart van Adobe Analytics (HULP), of Experience Cloud identiteitskaart (ECID, ook gekend als MCID of als bezoekersidentiteitskaart) etc. <br> **Voorbeeld:** 1734876272540865634468320891369597404 |
 | namespace (String) | Waar | Naamruimte die wordt gebruikt om de paden en daardoor het model samen te stellen. <br> **Voorbeeld:** steun |
 | touchpointsDetail (Object Array) | Waar | De lijst met gegevens van aanraakpunten die leiden tot de conversie die is besteld door | aanraakpunt of tijdstempel. |
 | touchpointName (String) | Waar | Naam van touchpoint dat tijdens opstelling werd gevormd. <br> **Voorbeeld:** PAID_SEARCH_CLICK |
-| scores (Object) | Waar | Aanraakpuntbijdrage voor deze conversie als score. Voor meer informatie over de scores die in dit object worden geproduceerd, raadpleegt u de [geaggregeerde delingscores](#aggregated-attribution-scores) sectie. |
-| touchPoint (Object) | Waar | Metagegevens aanraakpunt. Voor meer informatie over de scores die in dit object worden geproduceerd, raadpleegt u de [geaggregeerde scores](#aggregated-scores) sectie. |
+| scores (Object) | Waar | Aanraakpuntbijdrage voor deze conversie als score. Voor meer informatie over de scores die binnen dit voorwerp worden geproduceerd, zie de [ samengevoegde attributiesscores ](#aggregated-attribution-scores) sectie. |
+| touchPoint (Object) | Waar | Metagegevens aanraakpunt. Voor meer informatie over de scores die binnen dit voorwerp worden geproduceerd, zie de [ samengevoegde scores ](#aggregated-scores) sectie. |
 
 ### Onbewerkte muziekpaden weergeven (UI) {#raw-score-path}
 
-U kunt het pad naar de onbewerkte scores weergeven in de gebruikersinterface. Begin door te selecteren **[!UICONTROL Schemas]** in de gebruikersinterface van het Platform zoekt en selecteert u vervolgens in het gedeelte **[!UICONTROL Browse]** tab.
+U kunt het pad naar de onbewerkte scores weergeven in de gebruikersinterface. Selecteer eerst **[!UICONTROL Schemas]** in de gebruikersinterface van het platform en zoek en selecteer vervolgens in het tabblad **[!UICONTROL Browse]** het schema voor de toewijzing van AI-scores.
 
-![Schema kiezen](./images/input-output/schemas_browse.png)
+![ kies uw schema ](./images/input-output/schemas_browse.png)
 
-Selecteer vervolgens een veld in het dialoogvenster **[!UICONTROL Structure]** het venster van de UI, **[!UICONTROL Field properties]** wordt geopend. Within **[!UICONTROL Field properties]** Dit is het padveld dat wordt toegewezen aan de onbewerkte scores.
+Selecteer vervolgens een veld in het **[!UICONTROL Structure]** -venster van de gebruikersinterface. Het tabblad **[!UICONTROL Field properties]** wordt geopend. Binnen **[!UICONTROL Field properties]** bevindt zich het padveld dat wordt toegewezen aan de onbewerkte scores.
 
-![Een schema kiezen](./images/input-output/field_properties.png)
+![ kies een Schema ](./images/input-output/field_properties.png)
 
 ### Geaggregeerde delingsscores {#aggregated-attribution-scores}
 
-Geaggregeerde scores kunnen in CSV-indeling worden gedownload via de gebruikersinterface van het Platform als het datumbereik minder dan 30 dagen bedraagt.
+Geaggregeerde scores kunnen in CSV-indeling worden gedownload via de interface van het platform als het datumbereik minder dan 30 dagen bedraagt.
 
 Attribution AI ondersteunt twee categorieën attributiescore, algoritmische en op regels gebaseerde scores.
 
@@ -178,9 +176,9 @@ Zie de tabel hieronder voor meer informatie over elk van deze toewijzingsscores:
 | U-vorm | Op regels gebaseerde attributiescore die 40% van het krediet toewijst aan het eerste aanraakpunt en 40% van het krediet aan het laatste aanraakpunt, waarbij de andere aanraakpunten de resterende 20% gelijkmatig verdelen. |
 | Tijdverlies | Op regels gebaseerde attributiescore waarbij aanraakpunten die dichter bij de conversie liggen, meer krediet krijgen dan aanraakpunten die verder van de conversie verwijderd zijn. |
 
-**Verwijzing naar ruwe score (toewijzingsscores)**
+**Ruwe verwijzing van de Score (attributiesscores)**
 
-In de onderstaande tabel worden de toewijzingsscores toegewezen aan de onbewerkte scores. Als u de onbewerkte scores wilt downloaden, gaat u naar de [scores downloaden in Attribution AI](./download-scores.md) documentatie.
+In de onderstaande tabel worden de toewijzingsscores toegewezen aan de onbewerkte scores. Als u wenst om uw ruwe scores te downloaden, bezoek de [ downloadende scores in Attribution AI ](./download-scores.md) documentatie.
 
 | Attributiescores | Referentiekolom ruwe score |
 | --- | --- |
@@ -194,32 +192,32 @@ In de onderstaande tabel worden de toewijzingsscores toegewezen aan de onbewerkt
 
 ### Geaggregeerde scores {#aggregated-scores}
 
-Geaggregeerde scores kunnen in CSV-indeling worden gedownload via de gebruikersinterface van het Platform als het datumbereik minder dan 30 dagen bedraagt. Zie de tabel hieronder voor meer informatie over elk van deze geaggregeerde kolommen.
+Geaggregeerde scores kunnen in CSV-indeling worden gedownload via de interface van het platform als het datumbereik minder dan 30 dagen bedraagt. Zie de tabel hieronder voor meer informatie over elk van deze geaggregeerde kolommen.
 
 | Kolomnaam | Restrictie | Niet invulbaar | Beschrijving |
 | --- | --- | --- | --- |
 | customerevents_date (DateTime) | Door gebruiker gedefinieerde en vaste indeling | Onwaar | Datum van klantgebeurtenis in de notatie JJJJ-MM-DD. <br> **Voorbeeld**: 2016-05-02 |
-| mediatouchpoints_date (DateTime) | Door gebruiker gedefinieerde en vaste indeling | Waar | Datum aanraakpunt voor media in de notatie JJJJ-MM-DD <br> **Voorbeeld**: 21-04-2017 |
+| mediatouchpoints_date (DateTime) | Door gebruiker gedefinieerde en vaste indeling | Waar | Datum aanraakpunt voor media in de notatie JJJJ-MM-DD <br> **Voorbeeld**: 2017-04-21 |
 | segment (String) | Berekend | Onwaar | Conversiesegment zoals geo-segmentatie waarop het model is gebouwd. In het geval van afwezigheid van segmenten, is het segment gelijk aan conversion_scope. <br> **Voorbeeld**: ORDER_AMER |
-| conversion_scope (String) | Door gebruiker gedefinieerd | Onwaar | Naam van de Conversie zoals die door de gebruiker wordt gevormd. <br> **Voorbeeld**: VOLGORDE |
-| touchpoint_scope (String) | Door gebruiker gedefinieerd | Waar | Naam van het aanraakpunt zoals geconfigureerd door de gebruiker <br> **Voorbeeld**: PAID_SEARCH_CLICK |
+| conversion_scope (String) | Door gebruiker gedefinieerd | Onwaar | Naam van de Conversie zoals die door de gebruiker wordt gevormd. <br> **Voorbeeld**: ORDER |
+| touchpoint_scope (String) | Door gebruiker gedefinieerd | Waar | Naam van het aanraakpunt zoals deze door de gebruiker is geconfigureerd <br> **Voorbeeld**: PAID_SEARCH_CLICK |
 | product (String) | Door gebruiker gedefinieerd | Waar | De XDM-id van het product. <br> **Voorbeeld**: CC |
 | product_type (String) | Door gebruiker gedefinieerd | Waar | De weergavenaam van het product zoals deze aan de gebruiker wordt getoond voor deze productweergave. <br> **Voorbeeld**: gpus, laptops |
-| geo (String) | Door gebruiker gedefinieerd | Waar | De geografische locatie waar de conversie is uitgevoerd (placeContext.geo.countryCode) <br> **Voorbeeld**: VS |
-| event_type (String) | Door gebruiker gedefinieerd | Waar | Het primaire gebeurtenistype voor deze tijdreeksrecord <br> **Voorbeeld**: Betaalde omzetting |
-| media_type (String) | ENUM | Onwaar | Beschrijft of het mediatype betaald, bezeten of verdiend is. <br> **Voorbeeld**: BETAALD, EIGENAAR |
-| kanaal (String) | ENUM | Onwaar | De `channel._type` eigenschap die wordt gebruikt voor een ruwe classificatie van kanalen met vergelijkbare eigenschappen in [!DNL Consumer Experience Event] XDM. <br> **Voorbeeld**: ZOEKEN |
-| action (String) | ENUM | Onwaar | De `mediaAction` eigenschap wordt gebruikt om een type &#39;experience&#39;-mediakactie te bieden. <br> **Voorbeeld**: KLIKKEN |
-| campagne_group (String) | Door gebruiker gedefinieerd | Waar | Naam van de campagnegroep waarbij meerdere campagnes zijn gegroepeerd, zoals &#39;50%_DISCOUNT&#39;. <br> **Voorbeeld**: COMMERCIEEL |
-| campagne_name (String) | Door gebruiker gedefinieerd | Waar | Naam van de campagne die wordt gebruikt om marketingcampagne zoals &#39;50%_DISCOUNT_USA&#39; of &#39;50%_DISCOUNT_ASIA&#39; te identificeren. <br> **Voorbeeld**: Thanksgiving Sale |
+| geo (String) | Door gebruiker gedefinieerd | Waar | De geografische locatie waar de conversie is uitgevoerd (placeContext.geo.countryCode) <br> **Voorbeeld**: US |
+| event_type (String) | Door gebruiker gedefinieerd | Waar | Het primaire gebeurtenistype voor deze tijdreeksrecord <br> **Voorbeeld**: Betaalde Omzetting |
+| media_type (String) | ENUM | Onwaar | Beschrijft of het mediatype betaald, bezeten of verdiend is. <br> **Voorbeeld**: BETAALD, BEZIT |
+| kanaal (String) | ENUM | Onwaar | De eigenschap `channel._type` die wordt gebruikt om een ruwe classificatie van kanalen met gelijkaardige eigenschappen in [!DNL Consumer Experience Event] XDM <br> te verstrekken. **Voorbeeld**: ZOEKEN |
+| action (String) | ENUM | Onwaar | De eigenschap `mediaAction` wordt gebruikt om een type ervaringsactie voor media te bieden. <br> **Voorbeeld**: KLIK |
+| campagne_group (String) | Door gebruiker gedefinieerd | Waar | Naam van de campagnegroep waarin meerdere campagnes zijn gegroepeerd, zoals &#39;50%_DISCOUNT&#39;. <br> **Voorbeeld**: COMMERCIAL |
+| campagne_name (String) | Door gebruiker gedefinieerd | Waar | Naam van de campagne die wordt gebruikt voor het identificeren van een marketingcampagne zoals &#39;50%_DISCOUNT_USA&#39; of &#39;50%_DISCOUNT_ASIA&#39;. <br> **Voorbeeld**: Verkoop Thanksgiving |
 
-**Verwijzing naar ruwe score (geaggregeerd)**
+**Ruwe (bijeengevoegde) Referentie van de Score**
 
-In de onderstaande tabel worden de geaggregeerde scores toegewezen aan de onbewerkte scores. Als u de onbewerkte scores wilt downloaden, gaat u naar de [scores downloaden in Attribution AI](./download-scores.md) documentatie. Ga naar het gedeelte over [onbewerkte muziekpaden weergeven](#raw-score-path) in dit document.
+In de onderstaande tabel worden de geaggregeerde scores toegewezen aan de onbewerkte scores. Als u wenst om uw ruwe scores te downloaden, bezoek de [ downloadende scores in Attribution AI ](./download-scores.md) documentatie. Om de ruwe scorepaden van binnen UI te bekijken, bezoek de sectie op [ het bekijken ruwe scorepaden ](#raw-score-path) binnen dit document.
 
 | Kolomnaam | Referentiekolom Onbewerkte score |
 | --- | --- |
-| customerevents_date | timestamp |
+| customerevents_date | tijdstempel |
 | mediatouchpoints_date | _huurderID.your_schema_name.touchpointsDetail.element.touchpoint.timestamp |
 | segment | _huurderID.your_schema_name.segmentation |
 | conversion_scope | _huurderID.your_schema_name.conversion.conversionName |
@@ -229,7 +227,7 @@ In de onderstaande tabel worden de geaggregeerde scores toegewezen aan de onbewe
 | geo | _huurderID.your_schema_name.conversion.geo |
 | event_type | eventType |
 | media_type | _huurderID.your_schema_name.touchpointsDetail.element.touchpoint.mediaType |
-| channel | _huurderID.your_schema_name.touchpointsDetail.element.touchpoint.mediaChannel |
+| kanaal | _huurderID.your_schema_name.touchpointsDetail.element.touchpoint.mediaChannel |
 | action | _huurderID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
 | campagne_groep | _huurderID.your_schema_name.touchpointsDetail.element.touchpoint.campagneGroup |
 | campagne_naam | _huurderID.your_schema_name.touchpointsDetail.element.touchpoint.campagneName |
@@ -237,10 +235,9 @@ In de onderstaande tabel worden de geaggregeerde scores toegewezen aan de onbewe
 >[!IMPORTANT]
 >
 > - Attribution AI gebruikt alleen bijgewerkte gegevens voor verdere training en scoring. Op dezelfde manier geldt dat als u gegevens wilt verwijderen, de AI van de Klant de verwijderde gegevens niet meer gebruikt.
-> - Attribution AI gebruikt Platform datasets. Ter ondersteuning van consumentenrechtenaanvragen die een merk kan ontvangen, moeten merken de Privacy Service van het Platform gebruiken om verzoeken van de consument om toegang in te dienen en te verwijderen om hun gegevens over het datumpeer, de Identiteitsservice en het Real-Time Klantprofiel te verwijderen.
-> - Alle datasets die wij voor input/output van modellen gebruiken zullen de richtlijnen van het Platform volgen. De Encryptie van Gegevens van het Platform is op gegevens in rust en in-transit van toepassing. Raadpleeg de documentatie voor meer informatie over [gegevenscodering](../../../help/landing/governance-privacy-security/encryption.md)
-
+> - Attribution AI gebruikt de datasets van het Platform. Ter ondersteuning van consumentenrechtenaanvragen die een merk kan ontvangen, moeten merken de Platform-Privacy Service gebruiken om consumentenverzoeken om toegang in te dienen en te verwijderen om hun gegevens over het datumpeer, Identity Service en Real-Time Customer Profile te verwijderen.
+> - Alle datasets die wij voor input/output van modellen gebruiken zullen de richtlijnen van het Platform volgen. De Encryptie van de Gegevens van het platform is voor gegevens in rust en in-transit van toepassing. Zie de documentatie meer over [ gegevensencryptie ](../../../help/landing/governance-privacy-security/encryption.md) leren
 
 ## Volgende stappen {#next-steps}
 
-Nadat u de gegevens hebt voorbereid en al uw gegevens en schema&#39;s hebt geïnstalleerd, begint u met het volgende: [Gebruikershandleiding voor Attribution AI](./user-guide.md). Deze gids begeleidt u door het creëren van een geval voor Attribution AI.
+Zodra u uw gegevens hebt voorbereid en al uw geloofsbrieven en schema&#39;s op zijn plaats hebt, begin door de [ gebruikersgids van de Attribution AI ](./user-guide.md) te volgen. Deze gids begeleidt u door het creëren van een geval voor Attribution AI.

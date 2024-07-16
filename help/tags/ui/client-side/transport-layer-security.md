@@ -1,7 +1,8 @@
 ---
 title: TLS-informatie (Transport Layer Security)
 description: Informatie over de TLS-versies en -ciphers
-source-git-commit: 35ee2aca2b92cb8abe1fc69ad6cbc66b0e241e89
+exl-id: 04948cd8-6cf0-4159-a9d3-3130b97af106
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -12,11 +13,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Zie voor een geconsolideerde referentie van de terminologische wijzigingen de [termijnupdates](../../term-updates.md) document.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Voor een geconsolideerde verwijzing van de terminologieveranderingen, verwijs naar het [ term updates ](../../term-updates.md) document.
 
-TLS (Transport Layer Security) is een cryptografisch protocol dat end-to-end beveiliging biedt voor gegevens die via internet tussen toepassingen worden verzonden. Lees voor meer informatie over TLS de [Basisbegrippen voor TLS](https://www.internetsociety.org/deploy360/tls/basics/) documentatie.
+TLS (Transport Layer Security) is een cryptografisch protocol dat end-to-end beveiliging biedt voor gegevens die via internet tussen toepassingen worden verzonden. Voor meer gedetailleerde informatie over TLS, lees de [ basisbeginselen van TLS ](https://www.internetsociety.org/deploy360/tls/basics/) documentatie.
 
-Tags in Adobe Experience Platform zijn een systeem voor tagbeheer dat is ontworpen om scripts op uw website dynamisch te laden. TLS beveiligt de communicatie tussen de Adobe host `assets.adobedtm.com` en uw website wanneer deze scripts zijn geladen.
+Tags in Adobe Experience Platform zijn een systeem voor tagbeheer dat is ontworpen om scripts op uw website dynamisch te laden. TLS beveiligt de communicatie tussen de host van de Adobe `assets.adobedtm.com` en uw website wanneer deze scripts worden geladen.
 
 Er zijn meerdere TLS-versies beschikbaar en deze ondersteunen een aantal verschillende ciphers. Niet alle versies en ciphers zijn het zelfde aangezien sommige als minder of veiliger dan andere worden beschouwd.
 
@@ -50,7 +51,7 @@ PORT    STATE SERVICE
 
 ### Zelfhosting
 
-Als u [zelfhosting](../publishing/hosts/self-hosting-libraries.md) de ondersteunde TLS-versies worden bepaald door uw eigen hostingservice.
+Als u [ zelf-gastheer ](../publishing/hosts/self-hosting-libraries.md) uw bibliotheek bent, dan zullen de gesteunde versies TLS door uw eigen het ontvangen dienst worden bepaald.
 
 ## Op 1 mei 2024 te verwijderen TLS-cifers
 

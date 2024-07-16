@@ -13,6 +13,6 @@ ht-degree: 2%
 
 # Nuttige artikelen
 
-* [Implementatiepunten voor implementatie oplossen met Adobe Experience Platform Web SDK en Edge Network](https://medium.com/adobetech/solving-implementation-pain-points-with-adobe-experience-platform-web-sdk-and-edge-network-880b635e6819)
-* [Websiteprestaties verhogen met Adobe Experience Platform Web SDK en Edge Network](https://medium.com/adobetech/boosting-website-performance-with-adobe-experience-platform-web-sdk-and-edge-network-329fcf70fdf9)
-* [Hulplijn voor het implementeren van Adobe Experience Platform Web SDK met behulp van tags](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html)
+* [ Oplossende Punten van het Pijn van de Implementatie met het Web SDK van Adobe Experience Platform en Edge Network ](https://medium.com/adobetech/solving-implementation-pain-points-with-adobe-experience-platform-web-sdk-and-edge-network-880b635e6819)
+* [ het Van begin maken van de Prestaties van de Website met het Web SDK van Adobe Experience Platform en Edge Network ](https://medium.com/adobetech/boosting-website-performance-with-adobe-experience-platform-web-sdk-and-edge-network-329fcf70fdf9)
+* [ Gids aan het uitvoeren van SDK van het Web van Adobe Experience Platform gebruikend Markeringen ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html)

@@ -14,9 +14,9 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[SendGrid](https://www.sendgrid.com) is een populair platform voor klantcommunicatie voor transactie en marketing e-mails.
+[ SendGrid ](https://www.sendgrid.com) is een populair platform van de klantenmededeling voor transactie en marketing e-mails.
 
-Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), zodat u uw e-mailprofielen van de eerste partij kunt exporteren en deze kunt activeren in een nieuw SendGrid-publiek voor uw bedrijfsbehoeften.
+Dit [!DNL Adobe Experience Platform] [ bestemmings ](/help/destinations/home.md) hefboomwerkingen [[!DNL SendGrid Marketing Contacts API] ](https://api.sendgrid.com/v3/marketing/contacts), die u toestaat om uw eerste-partij e-mailprofielen uit te voeren en hen binnen een nieuw publiek te activeren SendGrid voor uw bedrijfsbehoeften.
 
 SendGrid gebruikt API dragertokens als authentificatiemechanisme om met SendGrid API te communiceren.
 
@@ -25,30 +25,30 @@ SendGrid gebruikt API dragertokens als authentificatiemechanisme om met SendGrid
 De volgende punten worden vereist alvorens u begint de bestemming te vormen.
 
 1. U moet een SendGrid-account hebben.
-   * Naar SendGrid [inschrijving](https://signup.sendgrid.com/) pagina om een SendGrid-account te registreren en te maken, als u er nog geen hebt.
+   * Ga naar SendGrid [ signaleren ](https://signup.sendgrid.com/) pagina om een rekening te registreren SendGrid tot stand te brengen, als u niet reeds hebt.
 1. Nadat u zich hebt aangemeld bij de portal SendGrid, moet u ook een API-token genereren.
-1. Navigeer naar de SendGrid-website en open de **[!DNL Settings]** > **[!DNL API Keys]** pagina. U kunt ook verwijzen naar de [SendGrid-documentatie](https://app.sendgrid.com/settings/api_keys) om de juiste sectie te openen in de SendGrid-app.
-1. Tot slot selecteert u **[!DNL Create API Key]** knop.
-   * Zie de [SendGrid-documentatie](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key), als u hulp nodig hebt over welke handelingen moeten worden uitgevoerd.
-   * Als u de API-sleutel programmatisch wilt genereren, raadpleegt u de [SendGrid-documentatie](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
+1. Ga naar de SendGrid-website en open de pagina **[!DNL Settings]** > **[!DNL API Keys]** . Alternatief, verwijs naar de [ documentatie SendGrid ](https://app.sendgrid.com/settings/api_keys) om tot de aangewezen sectie in SendGrid toegang te hebben app.
+1. Selecteer ten slotte de knop **[!DNL Create API Key]** .
+   * Verwijs naar de [ documentatie SendGrid ](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key), als u begeleiding op nodig hebt welke acties uit te voeren.
+   * Als u uw API Sleutel programmatically zou willen produceren, gelieve te verwijzen naar de [ documentatie SendGrid ](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Voordat u gegevens naar de SendGrid-bestemming kunt activeren, moet u een [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), [gegevensset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), en [segmenten](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) gemaakt in [!DNL Experience Platform]. Verwijs ook naar [limieten](#limits) verderop op op deze pagina.
+Alvorens gegevens aan de bestemming te activeren SendGrid, moet u a [ schema ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), en [ segmenten ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) hebben die in [!DNL Experience Platform] worden gecreeerd. Verwijs ook naar de [ grenzen ](#limits) sectie verder hieronder op deze pagina.
 
 >[!IMPORTANT]
 >
->* Voor de SendGrid-API die wordt gebruikt voor het maken van de mailinglijst vanuit e-mailprofielen, moeten binnen elk profiel unieke e-mailadressen worden opgegeven. Dit ongeacht of het wordt gebruikt als waarde voor *email* of *alternatieve e-mail*. Omdat de SendGrid-verbinding toewijzingen ondersteunt voor e-mailwaarden en alternatieve e-mailwaarden, moet u ervoor zorgen dat alle gebruikte e-mailadressen uniek zijn in elk profiel van het *Gegevensset*. Als de e-mailprofielen naar SendGrid worden verzonden, resulteert dit in een fout en is dat e-mailprofiel niet aanwezig in de gegevensexport.
+>* Voor de SendGrid-API die wordt gebruikt voor het maken van de mailinglijst vanuit e-mailprofielen, moeten binnen elk profiel unieke e-mailadressen worden opgegeven. Dit is ongeacht of het als waarde voor *e-mail* of *afwisselende e-mail* wordt gebruikt. Omdat de verbinding SendGrid afbeeldingen voor zowel e-mail als afwisselende e-mailwaarden steunt, gelieve ervoor te zorgen dat alle gebruikte e-mailadressen binnen elk profiel van de *Dataset* uniek zouden moeten zijn. Als de e-mailprofielen naar SendGrid worden verzonden, resulteert dit in een fout en is dat e-mailprofiel niet aanwezig in de gegevensexport.
 >
 >* Er is momenteel geen functionaliteit beschikbaar om profielen uit SendGrid te verwijderen wanneer ze uit het publiek in het Experience Platform worden verwijderd.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-SendGrid ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
+SendGrid ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| email | E-mailadres | Merk op dat zowel onbewerkte tekst als SHA256 gehashte e-mailadressen worden ondersteund door [!DNL Adobe Experience Platform]. Als het bronveld van het Experience-platform hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen.<br/><br/> Let op: **SendGrid** Hashed-e-mailadressen worden niet ondersteund, dus alleen onbewerkte tekstgegevens zonder transformatie worden naar de bestemming verzonden. |
+| email | E-mailadres | Onbewerkte tekst en gehashte e-mailadressen van SHA256 worden ondersteund door [!DNL Adobe Experience Platform] . Als het bronveld van het Experience-platform hashed-kenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering.<br/><br/> Merk op dat **SendGrid** geen gehakt e-mailadressen steunt, zodat slechts worden de gewone tekstgegevens zonder transformatie verzonden naar de bestemming. |
 
 {style="table-layout:auto"}
 
@@ -58,14 +58,14 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met de kenmerken voor het geselecteerde profiel van het dialoogvenster [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment, samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm van de uitgezochte profielkenmerken van het [ werkschema van de bestemmingsactivering ](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Gebruiksscenario’s {#use-cases}
 
-Om u beter te helpen begrijpen hoe en wanneer u de bestemming SendGrid zou moeten gebruiken, zijn hier voorbeelden van gebruiksgevallen die [!DNL Experience Platform] klanten kunnen oplossen door deze bestemming te gebruiken.
+Om u beter te helpen begrijpen hoe en wanneer u de bestemming zou moeten gebruiken SendGrid, zijn hier de gevallen van het steekproefgebruik die [!DNL Experience Platform] klanten kunnen oplossen door deze bestemming te gebruiken.
 
 ### Een marketinglijst maken voor meerdere marketingactiviteiten
 
@@ -75,82 +75,82 @@ Marketing teams die SendGrid gebruiken, kunnen een mailinglijst maken in SendGri
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
-1. Binnen de [!DNL Adobe Experience Platform] console, navigeren naar **Doelen**.
+1. Binnen de [!DNL Adobe Experience Platform] console, navigeer aan **Doelen**.
 
-1. Selecteer de **Catalogus** tabblad en zoeken naar *SendGrid*. Selecteer vervolgens **Instellen**. Nadat u een verbinding aan de bestemming hebt gevestigd, verandert het etiket UI in **Segmenten activeren**.
+1. Selecteer het **lusje van de Catalogus** en onderzoek naar *SendGrid*. Dan selecteer **Opstelling**. Nadat u een verbinding aan de bestemming hebt gevestigd, verandert het etiket UI in **Activate Segmenten**.
    ![](../../assets/catalog/email-marketing/sendgrid/02-catalog.jpg)
 
-1. U wordt getoond een tovenaar die u in het vormen van de bestemming SendGrid bijstaat. Maak het nieuwe doel door **Nieuwe bestemming configureren**.
+1. U wordt getoond een tovenaar die u in het vormen van de bestemming SendGrid bijstaat. Creeer de nieuwe bestemming door **te selecteren vorm nieuwe bestemming**.
    ![](../../assets/catalog/email-marketing/sendgrid/03.jpg)
 
-1. Selecteer de **Nieuw account** en vult de **Dragertoken** waarde. Deze waarde is de SendGrid *API-sleutel* die eerder in het [sectie voorwaarden](#prerequisites).
+1. Selecteer de **Nieuwe optie van de Rekening** en vul de **Symbolische** waarde van de Token van de Drager in. Deze waarde is SendGrid *API Sleutel* eerder vermeld in de [ eerste vereisten sectie ](#prerequisites).
    ![](../../assets/catalog/email-marketing/sendgrid/04.jpg)
 
-1. Selecteren **Verbinden met doel**. Als de SendGrid *API-sleutel* u hebt opgegeven, is geldig. **Verbonden** als u een groen vinkje hebt, gaat u verder naar de volgende stap om extra informatievelden in te vullen.
+1. Selecteer **verbinden met bestemming**. Als SendGrid *API Sleutel* u verstrekt geldig is, toont UI a **Verbonden** status met een groen vinkje, kunt u aan de volgende stap dan te werk gaan om extra informatiegebieden in te vullen.
 
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
 ### Doelgegevens invullen {#destination-details}
 
-while [opzetten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) voor deze bestemming moet u de volgende informatie opgeven:
+Terwijl [ vestiging ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) deze bestemming, u de volgende informatie moet verstrekken:
 
-* **[!UICONTROL Name]**: De naam waarmee u dit doel in de toekomst wilt herkennen.
+* **[!UICONTROL Name]**: De naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een optionele beschrijving waarmee u deze bestemming in de toekomst kunt identificeren.
 
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
-Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
+Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 Raadpleeg de onderstaande afbeeldingen voor meer informatie over deze bestemming.
 
 1. Selecteer een of meer soorten publiek dat u wilt exporteren naar SendGrid.
    ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
-1. In de **[!UICONTROL Mapping]** stap, na het selecteren **[!UICONTROL Add new mapping]**, wordt u getoond de toewijzingspagina om de bronXDM gebieden aan de SendGrid API doelgebieden in kaart te brengen. In de onderstaande afbeeldingen ziet u hoe u naamruimten kunt toewijzen tussen Experience Platform en SendGrid. Zorg ervoor dat **[!UICONTROL Source field]** *E-mail* moet worden toegewezen aan de **[!UICONTROL Target field]** *external_id* zoals hieronder weergegeven.
+1. In de stap **[!UICONTROL Mapping]** wordt na het selecteren van **[!UICONTROL Add new mapping]** de toewijzingspagina weergegeven om de XDM-bronvelden toe te wijzen aan de SendGrid API-doelvelden. In de onderstaande afbeeldingen ziet u hoe u naamruimten kunt toewijzen tussen Experience Platform en SendGrid. Gelieve te verzekeren **[!UICONTROL Source field]** *E-mail* aan **[!UICONTROL Target field]** *external_id* zoals hieronder getoond zou moeten worden in kaart gebracht.
    ![](../../assets/catalog/email-marketing/sendgrid/13.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/16.jpg)
 
-1. Wijs op dezelfde manier de gewenste afbeelding toe [!DNL Adobe Experience Platform] attributen die u naar de bestemming wilt uitvoeren SendGrid.
+1. Wijs op dezelfde manier de gewenste [!DNL Adobe Experience Platform] attributen toe die u naar de bestemming wilt uitvoeren SendGrid.
    ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
-1. Na het voltooien van de toewijzingen selecteert u **[!UICONTROL Next]** naar het revisiescherm gaan.
+1. Nadat u de toewijzingen hebt voltooid, selecteert u **[!UICONTROL Next]** om naar het revisiescherm te gaan.
    ![](../../assets/catalog/email-marketing/sendgrid/22.png)
 
-1. Selecteren **[!UICONTROL Finish]** om de installatie te voltooien.
+1. Selecteer **[!UICONTROL Finish]** om de installatie te voltooien.
    ![](../../assets/catalog/email-marketing/sendgrid/23.jpg)
 
-De uitgebreide lijst met ondersteunde kenmerktoewijzingen die kan worden ingesteld voor de [SendGrid-marketingcontactpersonen > Contactpersoon-API toevoegen of bijwerken](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) is lager dan.
+De uitvoerige lijst van gesteunde attributenafbeeldingen die opstelling voor [ SendGrid Marketing Contacten > toevoegen of Update Contact API ](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) kan zijn is hieronder.
 
-| Bronveld | Doelveld | Type | Beschrijving | Limieten |
+| Source-veld | Doelveld | Type | Beschrijving | Limieten |
 |---|---|---|---|---|
 | xdm:<br/> homeAddress.street1 | xdm:<br/> address_line_1 | String | De eerste regel van het adres. | Max. lengte:<br/> 100 tekens |
 | xdm:<br/> homeAddress.street2 | xdm:<br/> address_line_2 | String | Een optionele tweede regel voor het adres. | Max. lengte:<br/> 100 tekens |
-| xdm:<br/> _extcondev.alternatieve_e-mails | xdm:<br/> alternatieve_e-mails | Array van tekenreeks | Extra e-mailberichten die aan de contactpersoon zijn gekoppeld. | <ul><li>Max. 5 items</li><li>Min.: 0 items</li></ul> |
-| xdm:<br/> homeAddress.city | xdm:<br/> stad | String | De stad van de contactpersoon. | Max. lengte:<br/> 60 tekens |
+| xdm:<br/> _extcondev.alternate_e-mails | xdm:<br/> alternate_emails | Array van tekenreeks | Extra e-mailberichten die aan de contactpersoon zijn gekoppeld. | <ul><li>Max. 5 items</li><li>Min.: 0 items</li></ul> |
+| xdm:<br/> homeAddress.city | xdm:<br/> city | String | De stad van de contactpersoon. | Max. lengte:<br/> 60 tekens |
 | xdm:<br/> homeAddress.country | xdm:<br/> land | String | Het land van de contactpersoon. Kan een volledige naam of een afkorting zijn. | Max. lengte:<br/> 50 tekens |
-| identityMap:<br/> E-mail | Identiteit:<br/> external_id | String | Het primaire e-mailadres van de contactpersoon. Dit is een geldige e-mail. | Max. lengte:<br/> 254 tekens |
+| identityMap:<br/> Email | Identiteit:<br/> external_id | String | Het primaire e-mailadres van de contactpersoon. Dit is een geldige e-mail. | Max. lengte:<br/> 254 tekens |
 | xdm:<br/> person.name.firstName | xdm:<br/> first_name | String | De naam van de contactpersoon | Max. lengte:<br/> 50 tekens |
 | xdm:<br/> person.name.lastName | xdm:<br/> last_name | String | De familienaam van de contactpersoon | Max. lengte:<br/> 50 tekens |
 | xdm:<br/> homeAddress.postalCode | xdm:<br/> postal_code | String | De postcode of andere postcode van de contactpersoon. | |
@@ -160,19 +160,19 @@ De uitgebreide lijst met ondersteunde kenmerktoewijzingen die kan worden ingeste
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
-1. Selecteren **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** om naar de lijst met bestemmingen te navigeren.
+1. Selecteer **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** om naar de lijst met doelen te navigeren.
    ![](../../assets/catalog/email-marketing/sendgrid/25.jpg)
 
-1. Selecteer het doel en controleer of de status **[!UICONTROL enabled]**.
+1. Selecteer het doel en bevestig dat de status **[!UICONTROL enabled]** is.
    ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
-1. Schakel over naar de **[!DNL Activation data]** en selecteert u vervolgens de naam van een publiek.
+1. Ga naar het tabblad **[!DNL Activation data]** en selecteer vervolgens een publieksnaam.
    ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
 1. Controleer de publiekssamenvatting en controleer de telling van profielen aan de telling beantwoordt die binnen de dataset wordt gecreeerd.
    ![](../../assets/catalog/email-marketing/sendgrid/28.jpg)
 
-1. De [SendGrid-marketinglijsten > Create List API](https://docs.sendgrid.com/api-reference/lists/create-list) wordt gebruikt om unieke contactlijsten binnen SendGrid tot stand te brengen door de waarde van samen te voegen *list_name* en het tijdstempel van de gegevensexport. Navigeer naar de SendGrid-site en controleer of de nieuwe lijst met contactpersonen die overeenkomen met het naampatroon is gemaakt.
+1. De [ SendGrid Marketing Lists > creëren Lijst API ](https://docs.sendgrid.com/api-reference/lists/create-list) wordt gebruikt om unieke contactlijsten binnen SendGrid tot stand te brengen door tot de waarde van het *list_name* attribuut en timestamp van de gegevensuitvoer toe te treden. Navigeer naar de SendGrid-site en controleer of de nieuwe lijst met contactpersonen die overeenkomen met het naampatroon is gemaakt.
    ![](../../assets/catalog/email-marketing/sendgrid/29.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/30.jpg)
 
@@ -184,14 +184,14 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] handhaaft gegevensbeheer, zie [Overzicht van gegevensbeheer](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
 Deze SendGrid-bestemming gebruikt de onderstaande API&#39;s:
-* [SendGrid-marketinglijsten > Create List API](https://docs.sendgrid.com/api-reference/lists/create-list)
-* [SendGrid-marketingcontactpersonen > Contactpersoon-API toevoegen of bijwerken](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact)
+* [ SendGrid Marketing Lists > Create Lijst API ](https://docs.sendgrid.com/api-reference/lists/create-list)
+* [ SendGrid Marketing Contacten > voeg toe of werk Contact API ](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) bij
 
 ### Limieten {#limits}
 
-* De [SendGrid-marketingcontactpersonen > Contactpersoon-API toevoegen of bijwerken](https://api.sendgrid.com/v3/marketing/contacts) kan 30.000 contacten, of 6MB van gegevens goedkeuren, welke lager is.
+* De [ SendGrid Marketing Contacten > voegen toe of werken contact API ](https://api.sendgrid.com/v3/marketing/contacts) kan 30.000 contacten, of 6MB van gegevens goedkeuren, welke lager is.

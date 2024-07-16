@@ -11,15 +11,15 @@ ht-degree: 1%
 
 # `context`
 
-De `context` eigenschap is een array van tekenreeksen die bepaalt wat de SDK van het Web automatisch kan verzamelen. Hoewel deze gegevens een grote waarde kunnen hebben, kan het nuttig zijn om sommige van deze gegevens weg te laten, zodat u zich kunt houden aan het privacybeleid van uw organisatie.
+De eigenschap `context` is een array van tekenreeksen die bepaalt wat de Web SDK automatisch kan verzamelen. Hoewel deze gegevens een grote waarde kunnen hebben, kan het nuttig zijn om sommige van deze gegevens weg te laten, zodat u zich kunt houden aan het privacybeleid van uw organisatie.
 
 ## Contexttrefwoorden en XDM-elementen
 
-Als u een bepaald contextsleutelwoord omvat, bevolkt SDK van het Web automatisch al zijn bijbehorende elementen XDM. Als u een specifiek XDM-element wilt weglaten terwijl u andere elementen toestaat, kunt u waarden uit het gebruik wissen [`onBeforeEventSend`](onbeforeeventsend.md). Als u veelvoudige gebeurtenissen op een pagina verzendt, omvat SDK van het Web deze gebieden op elke `SendEvent` vraag.
+Als u een bepaald contextsleutelwoord omvat, bevolkt SDK van het Web automatisch al zijn bijbehorende elementen XDM. Als u een specifiek XDM-element wilt weglaten terwijl u andere elementen toestaat, kunt u waarden wissen met [`onBeforeEventSend`](onbeforeeventsend.md) . Als u veelvoudige gebeurtenissen op een pagina verzendt, omvat SDK van het Web deze gebieden op elke `SendEvent` vraag.
 
 ### Web
 
-De `"web"` trefwoord verzamelt informatie over de huidige pagina.
+Het trefwoord `"web"` verzamelt informatie over de huidige pagina.
 
 | Dimension | Beschrijving | XDM-pad | Voorbeeldwaarde |
 | --- | --- | --- | --- |
@@ -30,7 +30,7 @@ De `"web"` trefwoord verzamelt informatie over de huidige pagina.
 
 ### Apparaat
 
-De `"device"` het sleutelwoord verzamelt informatie over het apparaat van de gebruiker.
+Het trefwoord `"device"` verzamelt informatie over het apparaat van de gebruiker.
 
 | Dimension | Beschrijving | XDM-pad | Voorbeeldwaarde |
 | --- | --- | --- | --- |
@@ -42,7 +42,7 @@ De `"device"` het sleutelwoord verzamelt informatie over het apparaat van de geb
 
 ### Omgeving
 
-De `"environment"` het sleutelwoord verzamelt informatie over browser van de gebruiker.
+Het trefwoord `"environment"` verzamelt informatie over de browser van de gebruiker.
 
 | Dimension | Beschrijving | XDM-pad | Voorbeeldwaarde |
 | --- | --- | --- | --- |
@@ -54,11 +54,11 @@ De `"environment"` het sleutelwoord verzamelt informatie over browser van de geb
 
 ### Context plaatsen
 
-De `"placeContext"` het sleutelwoord verzamelt informatie over de plaats van de gebruiker.
+Het trefwoord `"placeContext"` verzamelt informatie over de locatie van de gebruiker.
 
 | Dimension | Beschrijving | XDM-pad | Voorbeeldwaarde |
 | --- | --- | --- | --- |
-| Lokale tijd | Lokale tijdstempel voor de eindgebruiker in vereenvoudigde uitgebreide versie [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) gebruiken. | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
+| Lokale tijd | Lokale timestamp voor het eind - gebruiker in het vereenvoudigde uitgebreide [ formaat van ISO 8601 ](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
 | Verschuiving lokale tijdzone | Het aantal minuten dat de gebruiker wordt verschoven ten opzichte van GMT. | `xdm.placeContext.localTimezoneOffset` | `360` |
 | Landcode | De landcode van de eindgebruiker. | `xdm.placeContext.geo.countryCode` | `US` |
 | Provincie | De provinciecode van de eindgebruiker. | `xdm.placeContext.geo.stateProvince` | `CA` |
@@ -70,30 +70,30 @@ De `"placeContext"` het sleutelwoord verzamelt informatie over de plaats van de 
 
 ### Tijdstempel
 
-De `timestamp` trefwoord verzamelt informatie over de tijdstempel van de gebeurtenis. Dit gedeelte van context kan niet worden verwijderd.
+Het trefwoord `timestamp` verzamelt informatie over de tijdstempel van de gebeurtenis. Dit gedeelte van context kan niet worden verwijderd.
 
 | Dimension | Beschrijving | XDM-pad | Voorbeeldwaarde |
 | --- | --- | --- | --- |
-| Tijdstempel van de gebeurtenis | UTC-tijdstempel voor de eindgebruiker in vereenvoudigde uitgebreide versie [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) gebruiken. | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
+| Tijdstempel van de gebeurtenis | UTC timestamp voor het eind - gebruiker in het vereenvoudigde uitgebreide [ formaat van ISO 8601 ](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
 
 {style="table-layout:auto"}
 
 ### Implementatiedetails
 
-De `implementationDetails` het sleutelwoord verzamelt informatie over de versie SDK die wordt gebruikt om de gebeurtenis te verzamelen.
+Het trefwoord `implementationDetails` verzamelt informatie over de SDK-versie die wordt gebruikt om de gebeurtenis te verzamelen.
 
 | Dimension | Beschrijving | XDM-pad | Voorbeeldwaarde |
 | --- | --- | --- | --- |
-| Naam | De id van de Software Development Kit (SDK). In dit veld wordt een URI gebruikt om de unieke id&#39;s van verschillende softwarebibliotheken te verbeteren. | `xdm.implementationDetails.name` | Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde `https://ns.adobe.com/experience/alloy`. Wanneer de bibliotheek wordt gebruikt als onderdeel van de tagextensie, is de waarde `https://ns.adobe.com/experience/alloy+reactor`. |
-| Versie | De versie van de Software Development Kit (SDK). | `xdm.implementationDetails.version` | Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde de bibliotheekversie. Wanneer de bibliotheek wordt gebruikt als onderdeel van de tagextensie, is de waarde de bibliotheekversie en wordt de versie van de tagextensie gekoppeld aan een `+`. Als de bibliotheekversie bijvoorbeeld `2.1.0` en de versie van de tagextensie is `2.1.3`de waarde `2.1.0+2.1.3`. |
-| Omgeving | De omgeving waarin de gegevens zijn verzameld. Dit is altijd ingesteld op `browser`. | `xdm.implementationDetails.environment` | `browser` |
+| Naam | De id van de Software Development Kit (SDK). In dit veld wordt een URI gebruikt om de unieke id&#39;s van verschillende softwarebibliotheken te verbeteren. | `xdm.implementationDetails.name` | Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde `https://ns.adobe.com/experience/alloy`. Wanneer de bibliotheek wordt gebruikt als onderdeel van de tagextensie, is de waarde `https://ns.adobe.com/experience/alloy+reactor` . |
+| Versie | De versie van de Software Development Kit (SDK). | `xdm.implementationDetails.version` | Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde de bibliotheekversie. Wanneer de bibliotheek wordt gebruikt als onderdeel van de tagextensie, is de waarde de bibliotheekversie en wordt de versie van de tagextensie gekoppeld aan een `+` . Als de bibliotheekversie bijvoorbeeld `2.1.0` is en de versie van de tagextensie `2.1.3` is, is de waarde `2.1.0+2.1.3` . |
+| Omgeving | De omgeving waarin de gegevens zijn verzameld. Deze wordt altijd ingesteld op `browser` . | `xdm.implementationDetails.environment` | `browser` |
 
 
 ### Hoog entropieclienthints
 
-De `"highEntropyUserAgentHints"` het sleutelwoord verzamelt gedetailleerde informatie over het apparaat van de gebruiker. Deze gegevens worden opgenomen in de HTTP-header van het verzoek dat naar de Adobe wordt verzonden. Nadat de gegevens binnen het netwerk van de Rand zijn aangekomen, bevolkt het voorwerp XDM zijn respectieve weg XDM. Als u het respectievelijke XDM-pad instelt in uw `sendEvent` aanroepen heeft deze voorrang op de HTTP-headerwaarde.
+Het trefwoord `"highEntropyUserAgentHints"` verzamelt gedetailleerde informatie over het apparaat van de gebruiker. Deze gegevens worden opgenomen in de HTTP-header van het verzoek dat naar de Adobe wordt verzonden. Nadat de gegevens binnen het netwerk van Edge zijn aangekomen, bevolkt het voorwerp XDM zijn respectieve weg XDM. Als u het respectieve pad XDM in uw `sendEvent` vraag plaatst, neemt het belangrijkheid over de kopbalwaarde van HTTP.
 
-Als u apparaatlookups gebruikt wanneer [configureren, gegevensstroom](/help/datastreams/configure.md)gegevens kunnen worden gewist ten gunste van de opzoekwaarden van het apparaat. Bepaalde velden voor client-hint en opzoekvelden van apparaten kunnen niet bestaan in dezelfde hit.
+Als u apparatenraadplegingen gebruikt wanneer [ vormend uw datastream ](/help/datastreams/configure.md), kunnen de gegevens worden ontruimd ten gunste van de waarden van de apparatenraadpleging. Bepaalde velden voor client-hint en opzoekvelden van apparaten kunnen niet bestaan in dezelfde hit.
 
 | Dimension | Beschrijving | HTTP-header | XDM-pad | Voorbeeldwaarde |
 | --- | --- | --- | --- | --- |
@@ -101,31 +101,31 @@ Als u apparaatlookups gebruikt wanneer [configureren, gegevensstroom](/help/data
 | Architectuur | De onderliggende CPU-architectuur. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | |
 | Apparaatmodel | De naam van het gebruikte apparaat. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | |
 | Bitsheid | Het aantal beetjes dat de onderliggende architectuur van cpu steunt. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | |
-| Browserleverancier | Het bedrijf dat de browser heeft gemaakt. De lage entropiehint `Sec-CH-UA` verzamelt dit element ook. | `Sec-CH-UA-Full-Version-List` | | |
-| Browsernaam | De gebruikte browser. De lage entropiehint `Sec-CH-UA` verzamelt dit element ook. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | |
-| Browserversie | De significante versie van de browser. De lage entropiehint `Sec-CH-UA` verzamelt dit element ook. Exacte browserversie wordt niet automatisch verzameld. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | |
+| Browserleverancier | Het bedrijf dat de browser heeft gemaakt. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . | `Sec-CH-UA-Full-Version-List` | | |
+| Browsernaam | De gebruikte browser. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | |
+| Browserversie | De significante versie van de browser. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . Exacte browserversie wordt niet automatisch verzameld. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | |
 
 {style="table-layout:auto"}
 
 ## Verzamel contextinformatie gebruikend de de markeringsuitbreiding van SDK van het Web
 
-De instelling voor contextinformatie is een combinatie van keuzerondjes en selectievakjes wanneer [configureren van de tagextensie](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Elk selectievakje verwijst naar een contexttrefwoord.
+Het plaatsen van contextinformatie is een combinatie radioknopen en controledozen wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Elk selectievakje verwijst naar een contexttrefwoord.
 
-1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
-1. Navigeren naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] kaart.
-1. Omlaag schuiven naar de [!UICONTROL Data Collection] en selecteert u vervolgens een van de **[!UICONTROL All default context information]** of **[!UICONTROL Specific context information]**.
-1. Als u **[!UICONTROL Specific context information]** schakelt u het selectievakje in naast elk gewenst element met contextgegevens.
-1. Klikken **[!UICONTROL Save]** publiceert u vervolgens uw wijzigingen.
+1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
+1. Blader omlaag naar de sectie [!UICONTROL Data Collection] en selecteer vervolgens **[!UICONTROL All default context information]** of **[!UICONTROL Specific context information]** .
+1. Als u **[!UICONTROL Specific context information]** selecteert, schakelt u het selectievakje in naast elk gewenst element met contextgegevens.
+1. Klik op **[!UICONTROL Save]** en publiceer de wijzigingen.
 
-## Informatie over context verzamelen met de Web SDK JavaScript-bibliotheek
+## Verzamel contextinformatie gebruikend de bibliotheek van SDK van het Web JavaScript
 
-Stel de `context` array van tekenreeksen wanneer de `configure` gebruiken. Als u deze eigenschap weglaat tijdens het configureren van de SDK, wordt alle contextinformatie weergegeven, behalve `"highEntropyUserAgentHints"` wordt standaard verzameld. Stel deze eigenschap in als u hoge entropieclientiptips wilt verzamelen of als u andere contextgegevens uit gegevensverzameling wilt weglaten. Tekenreeksen kunnen in elke willekeurige volgorde worden opgenomen.
+Stel de array `context` van tekenreeksen in wanneer u de opdracht `configure` uitvoert. Als u deze eigenschap weglaat bij het configureren van de SDK, worden standaard alle contextgegevens behalve `"highEntropyUserAgentHints"` verzameld. Stel deze eigenschap in als u hoge entropieclientiptips wilt verzamelen of als u andere contextgegevens uit gegevensverzameling wilt weglaten. Tekenreeksen kunnen in elke willekeurige volgorde worden opgenomen.
 
 >[!NOTE]
 >
->Als u alle contextinformatie wilt verzamelen, inclusief hoge entropieclienthints, moet u elke waarde in de `context` array string. De standaardwaarde `context` waarde weglaten `highEntropyUserAgentHints`en als u de `context` eigenschap, worden geen gegevens verzameld door weggelaten waarden.
+>Als u alle contextinformatie wilt verzamelen, inclusief hoge entropieclienthints, moet u elke waarde in de array-tekenreeks `context` opnemen. Bij de standaardwaarde van `context` wordt `highEntropyUserAgentHints` weggelaten en bij de instelling van de eigenschap `context` worden geen gegevens verzameld door weggelaten waarden.
 
 ```js
 alloy("configure", {

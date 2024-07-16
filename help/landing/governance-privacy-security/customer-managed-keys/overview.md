@@ -21,19 +21,19 @@ Dit document biedt een overzicht op hoog niveau van het proces voor het inschake
 
 >[!NOTE]
 >
->Voor klanten van de Customer Journey Analytics gelieve de instructies in te volgen [Documentatie Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html).
+>Voor de klanten van de Customer Journey Analytics, te volgen gelieve de instructies in de [ documentatie van de Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html).
 
 ## Vereisten
 
-Ga naar de [!UICONTROL Encryption] in Adobe Experience Platform moet u een rol hebben gemaakt en de [!UICONTROL Manage Customer Managed Key] toestemming voor die rol. Om het even welke gebruiker die heeft [!UICONTROL Manage Customer Managed Key] U kunt CMK inschakelen voor hun organisatie.
+Als u de sectie [!UICONTROL Encryption] in Adobe Experience Platform wilt weergeven en bezoeken, moet u een rol hebben gemaakt en [!UICONTROL Manage Customer Managed Key] toestemming aan die rol hebben toegewezen. Elke gebruiker met de machtiging [!UICONTROL Manage Customer Managed Key] kan CMK inschakelen voor zijn of haar organisatie.
 
-Voor meer informatie over het toewijzen van rollen en toestemmingen in Experience Platform, verwijs naar [machtigingendocumentatie configureren](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+Voor meer informatie bij het toewijzen van rollen en toestemmingen in Experience Platform, verwijs naar [ vormen toestemmingendocumentatie ](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
-Als u CMK wilt inschakelen, moet u [!DNL Azure] Key Vault moet worden geconfigureerd met de volgende instellingen:
+Als u CMK wilt inschakelen, moet de [!DNL Azure] Key Vault zijn geconfigureerd met de volgende instellingen:
 
-* [Reinigingsbeveiliging inschakelen](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
-* [soft-delete inschakelen](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [Toegang configureren met [!DNL Azure] rolgebaseerd toegangsbeheer](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+* [ laat purgebescherming ](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection) toe
+* [ laat zachte schrapping ](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) toe
+* [ vorm toegang gebruikend  [!DNL Azure]  op rol-gebaseerde toegangscontrole ](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
 Lees de gekoppelde documentatie om het proces beter te begrijpen.
 
@@ -43,31 +43,31 @@ CMK is opgenomen in het gezondheidsschild en het aanbod van privacy en beveiligi
 
 >[!WARNING]
 >
->Nadat u CMK hebt ingesteld, kunt u niet terugkeren naar de toetsen die door het systeem worden beheerd. U bent verantwoordelijk voor het veilig beheren van uw sleutels en het bieden van toegang tot uw Key Vault-, Key- en CMK-app binnen [!DNL Azure] om te voorkomen dat toegang tot uw gegevens verloren gaat.
+>Nadat u CMK hebt ingesteld, kunt u niet terugkeren naar de toetsen die door het systeem worden beheerd. U bent verantwoordelijk voor het veilig beheren van uw sleutels en het bieden van toegang tot uw Key Vault-, Key- en CMK-app binnen [!DNL Azure] om te voorkomen dat u toegang tot uw gegevens verliest.
 
 Het proces is als volgt:
 
-1. [Een [!DNL Azure] Key Vault](./azure-key-vault-config.md) op basis van het beleid van uw organisatie [een coderingssleutel genereren](./azure-key-vault-config.md#generate-a-key) dat zal uiteindelijk met Adobe worden gedeeld .
-1. Stel de CMK-toepassing in met uw [!DNL Azure] pachter door [API-aanroepen](./api-set-up.md#register-app) of de [UI](./ui-set-up.md#register-app).
-1. Verstuur uw encryptie zeer belangrijke identiteitskaart naar Adobe en begin het enablement proces voor de eigenschap of [in de gebruikersinterface](./ui-set-up.md#send-to-adobe) of met een [API-aanroep](./api-set-up.md#send-to-adobe).
-1. Controleer de status van de configuratie om te controleren of CMK is ingeschakeld of [in de gebruikersinterface](./ui-set-up.md#check-status) of met een [API-aanroep](./api-set-up.md#check-status).
+1. [ vorm een  [!DNL Azure]  Zeer belangrijke die vault ](./azure-key-vault-config.md) op het beleid van uw organisatie wordt gebaseerd, dan [ produceert een encryptiesleutel ](./azure-key-vault-config.md#generate-a-key) die uiteindelijk met Adobe zal worden gedeeld.
+1. Opstelling CMK app met uw [!DNL Azure] huurder door of [ API vraag ](./api-set-up.md#register-app) of [ UI ](./ui-set-up.md#register-app).
+1. Verzend uw encryptie zeer belangrijke identiteitskaart aan Adobe en begin het enablement proces voor de eigenschap of [ in UI ](./ui-set-up.md#send-to-adobe) of met een [ API vraag ](./api-set-up.md#send-to-adobe).
+1. Controleer de status van de configuratie om te verifiëren of CMK of [ in UI ](./ui-set-up.md#check-status) of met een [ API vraag ](./api-set-up.md#check-status) is toegelaten.
 
-Zodra het installatieproces is voltooid, worden alle gegevens die in het platform worden ingevoerd in alle sandboxen gecodeerd met uw [!DNL Azure] toetsinstelling. Als u CMK wilt gebruiken, gebruikt u [!DNL Microsoft Azure] functionaliteit die deel kan uitmaken van hun [openbaar voorvertoningsprogramma](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+Zodra het installatieproces is voltooid, worden alle gegevens die in het platform worden ingevoerd voor alle sandboxen versleuteld met behulp van de toetsencombinatie [!DNL Azure] . Om CMK te gebruiken, zult u hefboomwerking [!DNL Microsoft Azure] functionaliteit die deel van hun [ openbaar voorproefprogramma ](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) kan uitmaken.
 
 ## Toegang intrekken {#revoke-access}
 
-Als u de toegang van het Platform tot uw gegevens wilt intrekken, kunt u de gebruikersrol verbonden aan de toepassing uit de sleutelkluis binnen verwijderen [!DNL Azure].
+Als u de toegang van het Platform tot uw gegevens wilt intrekken, kunt u de gebruikersrol verbonden aan de toepassing uit de sleutelkluis binnen [!DNL Azure] verwijderen.
 
 >[!WARNING]
 >
 >Als u de sleutelvault-, toets- of CMK-toepassing uitschakelt, kan dit resulteren in een regeleindewijziging. Wanneer de sleutelvault-, sleutel- of CMK-toepassing is uitgeschakeld en de gegevens niet meer toegankelijk zijn in Platform, zijn downstreambewerkingen met betrekking tot die gegevens niet meer mogelijk. Zorg ervoor dat u de downstreameffecten begrijpt van het intrekken van de toegang van het Platform tot uw sleutel voordat u wijzigingen aanbrengt in uw configuratie.
 
-Nadat u de toegang tot de sleutel hebt verwijderd of de sleutel uit uw [!DNL Azure] zeer belangrijke vault, kan het van een paar minuten, tot 24 uren voor deze configuratie overal vergen om aan primaire gegevensopslag te verspreiden. De werkstromen van het platform omvatten ook caching en transient gegevensopslag die voor prestaties en kerntoepassingsfunctionaliteit wordt vereist. Het doorgeven van CMK-intrekking via dergelijke opgeslagen en tijdelijke opslagplaatsen kan maximaal zeven dagen in beslag nemen, zoals wordt bepaald door de gegevensverwerkingsworkflows. Dit betekent bijvoorbeeld dat het dashboard Profiel gegevens uit de opslag van cachegegevens bewaart en weergeeft en dat het zeven dagen duurt voordat de gegevens in de opslagruimten voor cachegegevens verlopen als onderdeel van de vernieuwingscyclus. Dezelfde tijdvertraging geldt voor gegevens die weer beschikbaar komen wanneer de toegang tot de toepassing opnieuw wordt ingeschakeld.
+Na het verwijderen van toetstoegang of het onbruikbaar maken/het schrappen van de sleutel van uw [!DNL Azure] zeer belangrijke kluis, kan het van een paar minuten, tot 24 uren voor deze configuratie vergen om aan primaire gegevensopslag te verspreiden. De werkstromen van het platform omvatten ook caching en transient gegevensopslag die voor prestaties en kerntoepassingsfunctionaliteit wordt vereist. Het doorgeven van CMK-intrekking via dergelijke opgeslagen en tijdelijke opslagplaatsen kan maximaal zeven dagen in beslag nemen, zoals wordt bepaald door de gegevensverwerkingsworkflows. Dit betekent bijvoorbeeld dat het dashboard Profiel gegevens uit de opslag van cachegegevens bewaart en weergeeft en dat het zeven dagen duurt voordat de gegevens in de opslagruimten voor cachegegevens verlopen als onderdeel van de vernieuwingscyclus. Dezelfde tijdvertraging geldt voor gegevens die weer beschikbaar komen wanneer de toegang tot de toepassing opnieuw wordt ingeschakeld.
 
 >[!NOTE]
 >
->Er zijn twee gebruik-geval-specifieke uitzonderingen op de zeven dagen datasetvervaldatum op niet primaire (caching/transient) gegevens. Raadpleeg de documentatie bij deze pagina voor meer informatie over deze functies.<ul><li>[Adobe Journey Optimizer URL Shortener](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[Edge-projecties](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>Er zijn twee gebruik-geval-specifieke uitzonderingen op de zeven dagen datasetvervaldatum op niet primaire (caching/transient) gegevens. Raadpleeg de documentatie bij deze pagina voor meer informatie over deze functies.<ul><li>[ Adobe Journey Optimizer URL Shortener ](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[ de Projecties van Edge ](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
 
 ## Volgende stappen
 
-Als u het proces wilt starten, begint u met [configureren en [!DNL Azure] Key Vault](./azure-key-vault-config.md) en [een coderingssleutel genereren](./azure-key-vault-config.md#generate-a-key) delen met Adobe.
+Om met het proces te beginnen, begin door [ het vormen van een  [!DNL Azure]  Zeer belangrijke Vult ](./azure-key-vault-config.md) en [ produceren een encryptiesleutel ](./azure-key-vault-config.md#generate-a-key) om met Adobe te delen.

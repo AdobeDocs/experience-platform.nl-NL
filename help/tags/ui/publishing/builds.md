@@ -4,7 +4,7 @@ description: Leer meer over het concept van builds en hoe ze binnen Adobe Experi
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '784'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Een build is de set bestanden met alle code die op het clientapparaat wordt uitgevoerd.
 
@@ -32,9 +32,9 @@ Builds worden verdeeld in het hoofdbibliotheekbestand en mogelijk veel kleinere 
 * De regelengine
 * Alle extensieconfiguraties
 * Alle code en configuratie van gegevenselement
-* Alle code en configuratie van de Gebeurtenis van de Regel
+* Alle code en configuratie van regelgebeurtenissen
 * Alle voorwaardencode en configuratie
-* De code en de configuratie van de gebeurtenis voor om het even welke regels die Bibliotheek Geladen of Pagina onderaan als gebeurtenis hebben (aangezien wij weten wij dat onmiddellijk zullen vereisen).
+* De code en de configuratie van de gebeurtenis voor om het even welke regels die Bibliotheek Geladen of Pagina onderaan als gebeurtenis hebben (aangezien wij weten wij dat onmiddellijk zullen nodig hebben).
 
 De kleinere bestanden bevatten code en configuratie voor afzonderlijke handelingen die naar wens op de pagina worden geladen. Wanneer een Regel wordt teweeggebracht en zijn Voorwaarden worden geëvalueerd zodat de Acties moeten worden uitgevoerd, worden de noodzakelijke code en de configuratie voor die specifieke actie teruggewonnen van één van de kleinere dossiers. Dit betekent dat alleen de code die nodig is om de vereiste handelingen uit te voeren, ooit op de pagina wordt geladen, waardoor de hoofdbibliotheek zo klein mogelijk wordt.
 
@@ -42,7 +42,7 @@ De kleinere bestanden bevatten code en configuratie voor afzonderlijke handeling
 
 De standaardbestandsindeling voor builds is een pakket bestanden met alle vereiste code voor extensies, gegevenselementen en regels die op de gewenste manier worden uitgevoerd.
 
-In bepaalde gevallen hebt u echter de voorkeur aan een zip-archief van de bestanden in plaats van aan het uitvoerbare bestand met code op de client. Bijvoorbeeld, zou u een archief kunnen willen tot stand brengen als u uw bouwstijl zelf host en de bouwstijl in een andere plaatsing wilt gebruiken. Als u iets opgeeft in het zelfgehoste pad naar het bibliotheekveld, kunt u uw omgeving opslaan. Samen met uw nieuwe code, wordt een verbinding aan de gearchiveerde download beschikbaar. Nadat de bibliotheek is gemaakt, kunt u een zip-bestand naar Akamai implementeren en dit downloaden van `assets.adobedtm.com/...`.
+In bepaalde gevallen hebt u echter de voorkeur aan een zip-archief van de bestanden in plaats van aan het uitvoerbare bestand met code op de client. Bijvoorbeeld, zou u een archief kunnen willen tot stand brengen als u uw bouwstijl zelf host en de bouwstijl in een andere plaatsing wilt gebruiken. Als u iets opgeeft in het zelfgehoste pad naar het bibliotheekveld, kunt u uw omgeving opslaan. Samen met uw nieuwe code, wordt een verbinding aan de gearchiveerde download beschikbaar. Nadat de bibliotheek is gemaakt, kunt u een zip-bestand naar Akamai implementeren en dit downloaden van `assets.adobedtm.com/...` .
 
 >[!NOTE]
 >
@@ -56,15 +56,15 @@ Om een bouwstijl te voltooien, selecteer een bibliotheek en selecteer de optie v
 
 Minificatie verlaagt de bandbreedtekosten en verbetert de snelheid door gegevens te verwijderen die niet vereist zijn voor uitvoering vanuit een bestand.
 
-Om de prestaties te verbeteren, beperkt het Platform alles, met inbegrip van:
+Om de prestaties te verbeteren, beperkt Platform alles, met inbegrip van:
 
 * De hoofdtagbibliotheek
 * Modulecode die door extensieontwikkelaars is opgegeven als onderdeel van een extensie
-* Aangepaste code verstrekt door gebruikers van Platforms
+* Aangepaste code verstrekt door Platformgebruikers
 
 >[!NOTE]
 >
->Als uw modulecode en douanecode reeds worden geminiatuurd, vermindert het Platform het opnieuw. Deze tweede minificatie biedt geen extra voordelen, maar het veroorzaakt geen schade en maakt het Platform minder complex en eenvoudiger te onderhouden.
+>Als uw modulecode en douanecode reeds worden geminificeerd, minificeert het Platform het opnieuw. Deze tweede minificatie biedt geen extra voordelen, maar het veroorzaakt geen schade en maakt Platform minder complex en eenvoudiger te onderhouden.
 
 Alle gegeven code aan de clientzijde verwijst naar de geminificeerde versie van de code. Dit wordt weergegeven in de bestandsnamen die de standaardnaamgevingsconventie voor geminificeerde bestanden volgen:
 
@@ -74,8 +74,8 @@ Als u de niet-geminiaterde code wilt zien, verwijdert u .min uit de bestandsnaam
 
 `launch-%environment_id%.js`
 
-Als een extensieontwikkelaar geminificeerde code met de extensie levert, biedt Platform geen niet-geminiateerde code in de niet-geminiateerde build. Op dezelfde manier als een gebruiker van het Platform geminificeerde code in een doos van de douanecode zet, wordt die code nog geminiatuurd in niet-geminiatuurde bouwstijlen. Platform maakt niets uit.
+Als een extensieontwikkelaar geminificeerde code met de extensie levert, biedt Platform geen niet-geminiateerde code in de niet-geminiateerde build. Op dezelfde manier als een gebruiker van het Platform geminificeerde code in een doos van de douanecode zet, wordt die code nog minified in niet-geminificeerde bouwt. Platform maakt niets uit.
 
-Voor meer informatie over minificatie raadpleegt u [dit stapelpadartikel](https://blog.stackpath.com/glossary/minification/).
+Voor meer informatie over minificatie, zie [ dit stapelpadartikel ](https://blog.stackpath.com/glossary/minification/).
 
 Wanneer het uitvoeren van een bouwstijl zal het eerst de niet-geminiateerde bibliotheek construeren, dan de volledige bibliotheek in één keer minieme.

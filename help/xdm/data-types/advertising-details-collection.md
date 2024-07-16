@@ -1,19 +1,20 @@
 ---
-title: Gegevenstype van verzameling advertentiedetails
-description: Leer over het gegevenstype Advertising Details Collection Experience Data Model (XDM).
-source-git-commit: fe239bee3c853d43c04200092f59537dfeb00c87
+title: Gegevenstype Advertising Details Collection
+description: Meer informatie over het gegevenstype Advertising Details Collection Experience Data Model (XDM).
+exl-id: 3f6bf1f9-c728-46af-804a-cb41eb29951b
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '303'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 # [!UICONTROL Advertising Details] Gegevenstype verzameling
 
-[!UICONTROL Advertising Details] Verzameling is een standaard XDM-gegevenstype (Experience Data Model) waarmee belangrijke kenmerken met betrekking tot advertenties worden vastgelegd. Het bevat informatie zoals de advertentie-id, adverteerder en campagne-id&#39;s, lengte, positie binnen een reeks, details over de speler die de advertentie rendert, enzovoort. U kunt dit gegevenstype gebruiken om verschillende aspecten van de prestaties en betrokkenheid van advertenties te volgen en te analyseren, en inzichten te verschaffen in de interactie van het publiek met en de reactie op verschillende advertenties. Deze gegevens worden gebruikt om uw streaminggegevens bij te houden.
+[!UICONTROL Advertising Details] Verzameling is een standaard XDM-gegevenstype (Experience Data Model) waarmee de belangrijkste kenmerken van advertenties worden vastgelegd. Het bevat informatie zoals de advertentie-id, adverteerder en campagne-id&#39;s, lengte, positie binnen een reeks, details over de speler die de advertentie rendert, enzovoort. U kunt dit gegevenstype gebruiken om verschillende aspecten van de prestaties en betrokkenheid van advertenties te volgen en te analyseren, en inzichten te verschaffen in de interactie van het publiek met en de reactie op verschillende advertenties. Deze gegevens worden gebruikt om uw streaminggegevens bij te houden.
 
-+++Selecteer om een diagram van het gegevenstype Reclamedetails van de Inzameling te tonen.
-![Een diagram van het gegevenstype Advertising Details Collection.](../images/data-types/advertising-details-collection.png)
++++Select om een diagram van het gegevenstype van de Verzameling van Details van Advertising te tonen.
+![ A diagram van het gegevenstype van de Inzameling van de Details van Advertising.](../images/data-types/advertising-details-collection.png)
 +++
 
 >[!NOTE]

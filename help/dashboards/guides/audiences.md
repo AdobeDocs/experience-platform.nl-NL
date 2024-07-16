@@ -13,47 +13,47 @@ ht-degree: 0%
 
 # [!UICONTROL Audiences] dashboard {#audiences-dashboard}
 
-De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over uw publiek kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. In deze handleiding wordt beschreven hoe u de [!UICONTROL Audiences] dashboard in UI en verstrekt meer informatie over de visualisaties die in het dashboard worden getoond.
+De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over uw publiek kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. In deze handleiding wordt beschreven hoe u het dashboard [!UICONTROL Audiences] in de gebruikersinterface kunt openen en gebruiken en wordt meer informatie gegeven over de visualisaties die in het dashboard worden weergegeven.
 
-Voor een overzicht van alle Adobe Experience Platform Segmentation Service-functies in de gebruikersinterface van het Platform gaat u naar de [Handleiding voor segmentatieservice](../../segmentation/ui/overview.md).
+Voor een overzicht van alle eigenschappen van de Dienst van de Segmentatie van Adobe Experience Platform binnen het gebruikersinterface van het Platform, gelieve te bezoeken de [ gids UI van de Dienst van de Segmentatie UI ](../../segmentation/ui/overview.md).
 
 ## [!UICONTROL Audiences] dashboardgegevens
 
-De [!UICONTROL Audiences] Het dashboard toont een momentopname van de attributen (verslag) gegevens die uw organisatie binnen de opslag van het Profiel in Experience Platform heeft. De momentopname bevat geen gebeurtenis (tijdreeks)-gegevens.
+Het dashboard van [!UICONTROL Audiences] toont een momentopname van de attributen (verslag) gegevens die uw organisatie binnen de opslag van het Profiel in Experience Platform heeft. De momentopname bevat geen gebeurtenis (tijdreeks)-gegevens.
 
-De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of voorbeeld van de gegevens en de [!UICONTROL Audiences] Het dashboard wordt niet in real-time bijgewerkt.
+De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of voorbeeld van de gegevens en het dashboard van [!UICONTROL Audiences] wordt niet in real-time bijgewerkt.
 
 >[!NOTE]
 >
 >Wijzigingen of updates die zijn aangebracht in de gegevens nadat de momentopname is gemaakt, worden pas in het dashboard weergegeven als de volgende momentopname is gemaakt.
 
-## Ontdek de [!UICONTROL Audiences] dashboard {#explore}
+## Het dashboard van [!UICONTROL Audiences] verkennen {#explore}
 
-Ga naar de [!UICONTROL Audiences] het dashboard binnen UI van het Platform, uitgezocht **[!UICONTROL Audiences]** in de linkerspoorstaaf, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
+Als u naar het [!UICONTROL Audiences] -dashboard in de gebruikersinterface van het platform wilt navigeren, selecteert u **[!UICONTROL Audiences]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overview]** om het dashboard weer te geven.
 
 >[!NOTE]
 >
->Als uw organisatie nieuw aan Platform is en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, [!UICONTROL Audiences] het dashboard is niet zichtbaar. In plaats daarvan [!UICONTROL Overview] het lusje toont verbindingen en documentatie om u te helpen met segmentatie beginnen.
+>Als uw organisatie nieuw is aan Platform en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, is het [!UICONTROL Audiences] dashboard niet zichtbaar. In plaats daarvan geeft het tabblad [!UICONTROL Overview] koppelingen en documentatie weer om u te helpen aan de slag te gaan met segmentatie.
 
-![De [!UICONTROL Audiences] dashboard [!UICONTROL Overview] tab met [!UICONTROL Audiences] en [!UICONTROL Overview] gemarkeerd.](../images/audiences/dashboard-overview.png)
+![ het [!UICONTROL Audiences] dashboard [!UICONTROL Overview] lusje met [!UICONTROL Audiences] en [!UICONTROL Overview] benadrukte.](../images/audiences/dashboard-overview.png)
 
-### Wijzig de [!UICONTROL Audiences] dashboard {#modify}
+### Het dashboard [!UICONTROL Audiences] wijzigen {#modify}
 
-U kunt de weergave van het dialoogvenster [!UICONTROL Audiences] dashboard door **[!UICONTROL Modify dashboard]**. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en toegang krijgen tot de **[!UICONTROL Widget library]** om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
+U kunt de weergave van het dashboard van [!UICONTROL Audiences] wijzigen door **[!UICONTROL Modify dashboard]** te selecteren. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en toegang krijgen tot **[!UICONTROL Widget library]** om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
 
-Raadpleeg de [wijzigen, dashboards](../customize/modify.md) en [Overzicht van widgetbibliotheek](../customize/widget-library.md) documentatie voor meer informatie.
+Gelieve te verwijzen naar de [ wijzigende dashboards ](../customize/modify.md) en [ de bibliotheekdocumentatie van Widget ](../customize/widget-library.md) om meer te leren.
 
 ### Widgets toevoegen {#add-widget}
 
-Selecteren **[!UICONTROL Add widget]** om naar de widgetbibliotheek te navigeren en een lijst met de beschikbare widgets te bekijken die aan uw dashboard moeten worden toegevoegd.
+Selecteer **[!UICONTROL Add widget]** om naar de widgetbibliotheek te navigeren en een lijst met de beschikbare widgets weer te geven die u aan het dashboard wilt toevoegen.
 
-![De [!UICONTROL Audiences] dashboard-overzicht met [!UICONTROL Add widget] gemarkeerd.](../images/audiences/audiences-overview-add-widget.png)
+![ het [!UICONTROL Audiences] dashboardoverzicht met [!UICONTROL Add widget] benadrukte.](../images/audiences/audiences-overview-add-widget.png)
 
-In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste publiekswidgets. Raadpleeg de documentatie bij de widgetbibliotheek voor informatie over het toevoegen van widgets [Een widget toevoegen](../customize/widget-library.md#add-widgets).
+In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste publiekswidgets. Voor informatie over hoe te om widgets toe te voegen, te zien gelieve de documentatie van de widgetbibliotheek over hoe te [ een widget ](../customize/widget-library.md#add-widgets) toevoegen.
 
 ### SQL weergeven {#view-sql}
 
-U kunt SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op worden gevisualiseerd [!UICONTROL Overview] werkruimte. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten uit de gegevens van het Platform voortbrengen die op uw bedrijfsbehoeften worden gebaseerd. Voor meer informatie over deze functie raadpleegt u de [SQL UI-handleiding weergeven](../view-sql.md).
+U kunt de SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op de [!UICONTROL Overview] werkruimte worden visualiseerd. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten uit de gegevens van het Platform voortbrengen die op uw bedrijfsbehoeften worden gebaseerd. Om meer over deze eigenschap te leren, zie de [ SQL gids van de Mening UI ](../view-sql.md).
 
 ## Een publiek selecteren {#select-audience}
 
@@ -65,17 +65,17 @@ Als u een ander publiek wilt kiezen, selecteert u het vervolgkeuzemenu naast de 
 >
 >Alleen publiek met een profielaantal boven nul wordt weergegeven in de lijst met selecteerbare soorten publiek.
 
-![Het dashboardoverzicht Soorten publiek met het algemene vervolgkeuzemenu voor het publiek gemarkeerd.](../images/audiences/change-audience.png)
+![ het het dashboardoverzicht van het publiek met het globale benadrukte publiek dropdown menu.](../images/audiences/change-audience.png)
 
-![De [!UICONTROL Select audience] een dialoogvenster waarin alle beschikbare soorten publiek worden weergegeven.](../images/audiences/select-audience-dialog.png)
+![ de dialoog [!UICONTROL Select audience] die alle beschikbare publiek toont.](../images/audiences/select-audience-dialog.png)
 
 ## Widgets en metriek {#widgets-and-metrics}
 
-De [!UICONTROL Audiences] Het dashboard bestaat uit widgets. Dit zijn alleen-lezen metriek die belangrijke informatie over het geselecteerde publiek verschaft.
+Het dashboard van [!UICONTROL Audiences] bestaat uit widgets. Dit zijn alleen-lezen metriek die belangrijke informatie over het geselecteerde publiek bieden.
 
-De datum en tijd van de meest recente momentopname worden getoond bij de bovenkant van [!UICONTROL Overview] naast de publieksvervolgkeuzelijst. Alle widgetgegevens zijn nauwkeurig vanaf die datum en tijd. De tijdstempel van de momentopname wordt opgegeven in UTC; deze bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
+De datum en tijd van de meest recente momentopname worden getoond bij de bovenkant van het [!UICONTROL Overview] lusje naast het publieksdrop-down. Alle widgetgegevens zijn nauwkeurig vanaf die datum en tijd. De tijdstempel van de momentopname wordt opgegeven in UTC; deze bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
 
-![Het tabblad Overzicht van soorten publiek met een widgettijdstempel gemarkeerd.](../images/audiences/widget-timestamp.png)
+![ het lusje van het Overzicht van het publiek met een benadrukt widgettimestamp.](../images/audiences/widget-timestamp.png)
 
 ## Standaardwidgets {#default-widgets}
 
@@ -88,12 +88,12 @@ Voor alle nieuwe Adobe Experience Platform-instanties wordt een standaardwidgetb
 
 >[!NOTE]
 >
->Vanaf 26 juli 2023 [!UICONTROL Profiles], [!UICONTROL Audiences], en [!UICONTROL Destinations] De overzichtdashboards zijn teruggesteld aan een nieuwe gebrek widget lading-uit voor alle gebruikers die hun meningen in de voorafgaande zes maanden niet veranderden.
->Raadpleeg de documentatie in het dialoogvenster [Profielen](./profiles.md#default-widgets) en [Doelen](./destinations.md#default-widgets) standaardwidgetsecties voor details waarop widgets zijn opgenomen als onderdeel van de standaard-widget-taaktaken. U kunt uw dashboardwidgets op dezelfde manier blijven aanpassen als voorheen.
+>Vanaf 26 juli 2023 zijn [!UICONTROL Profiles] , [!UICONTROL Audiences] en [!UICONTROL Destinations] overzichtsdashboards opnieuw ingesteld op een nieuwe standaardwidgetbelasting voor alle gebruikers die hun weergaven in de afgelopen zes maanden niet hebben gewijzigd.
+>Verwijs naar de documentatie in de [ Profielen ](./profiles.md#default-widgets) en [ 3} standaardwidgetsecties van Doelen {voor details waarop widgets als deel van standaard widget lading-outs inbegrepen zijn. ](./destinations.md#default-widgets) U kunt uw dashboardwidgets op dezelfde manier blijven aanpassen als voorheen.
 
 ## AI-widgets van klant {#customer-ai-audiences-widgets}
 
-Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie voor individuele profielen op schaal te genereren. De AI van de klant doet dit door bestaande gegevens van de Gebeurtenis van de Consumentenervaring te analyseren om te voorspellen **scores voor churn- of conversiedichtheid**. Deze zeer nauwkeurige modellen van de klantenneiging staan voor nauwkeurigere segmentatie en het richten toe. De [verdeling van scores](#customer-ai-distribution-of-scores) en [overzicht van scores](#customer-ai-scoring-summary) inzichten tonen de verdeeldheid in uw publiek aan . Ze benadrukken welke profielen de hoge/lage/gemiddelde dichtheid zijn en hoe deze over het aantal profielen worden verdeeld.
+Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie voor individuele profielen op schaal te genereren. De klant AI doet dit door de bestaande gegevens van de Gebeurtenis van de Ervaring van de consument te analyseren om **te voorspellen de dun of de scores van de omzetsingsvolheid**. Deze zeer nauwkeurige modellen van de klantenneiging staan voor nauwkeurigere segmentatie en het richten toe. De [ distributie van scores ](#customer-ai-distribution-of-scores) en [ het scoren samenvatting ](#customer-ai-scoring-summary) inzichten tonen de afdeling in uw publiek aan. Ze benadrukken welke profielen de hoge/lage/gemiddelde dichtheid zijn en hoe deze over het aantal profielen worden verdeeld.
 
 * [[!UICONTROL Customer AI scoring summary]](#customer-ai-scoring-summary)
 * [[!UICONTROL Customer AI distribution of scores]](#customer-ai-distribution-of-scores)
@@ -105,27 +105,27 @@ Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie 
 >title="Verdeling van scores"
 >abstract="Deze widget visualiseert de verdeling van het totale aantal profielen aan de hand van hun eigenschapscores in stappen van 5 procent. De verdeling van het profielaantal wordt bepaald door het AI-model en het geselecteerde samenvoegbeleid. U kunt het AI-model wijzigen in het vervolgkeuzemenu onder de titel van de widget."
 
-De [!UICONTROL Customer AI distribution of scores] widget categoriseert het totale aantal profielen op basis van hun populatiescore . De verdeling van het profielaantal wordt bepaald door het AI model en het geselecteerde fusiebeleid, dan visualiseerd in vijf percententoename die op hun neiging wijzen. Het aantal profielen wordt opgegeven langs de Y-as en de dichtheidsscores langs de X-as.
+De [!UICONTROL Customer AI distribution of scores] -widget categoriseert het totale aantal profielen op basis van hun densiteitsscores. De verdeling van het profielaantal wordt bepaald door het AI model en het geselecteerde fusiebeleid, dan visualiseerd in vijf percententoename die op hun neiging wijzen. Het aantal profielen wordt opgegeven langs de Y-as en de dichtheidsscores langs de X-as.
 
 >[!NOTE]
 >
 >Als de visualisatie een conversiesnelheidsscore is, worden de hoge scores groen en de lage scores rood weergegeven. Als je de eigenheid van de kroon voorspelt, wordt deze gespiegeld, dan zijn de hoge scores rood en zijn de lage scores groen. Het gemiddelde emmertje blijft geel ongeacht welk aandrijvingstype u kiest.
 
-Het AI-model waarmee de densiteitsscores worden bepaald, wordt gekozen uit de vervolgkeuzelijst onder de titel van de widget. Het vervolgkeuzemenu bevat een lijst met alle geconfigureerde AI-modellen van de Klant. Selecteer het juiste AI-model voor uw analyse in de lijst met beschikbare modellen. Als er geen AI-model van de Klant beschikbaar is, geeft een bericht in de widget u de opdracht ten minste één AI-model van de Klant te configureren en wordt een hyperlink naar de configuratiepagina van het AI-model van de Klant weergegeven. Zie de documentatie voor instructies op [hoe te om een instantie van de KlantAI te vormen](../../intelligent-services/customer-ai/user-guide/configure.md).
+Het AI-model waarmee de densiteitsscores worden bepaald, wordt gekozen uit de vervolgkeuzelijst onder de titel van de widget. Het vervolgkeuzemenu bevat een lijst met alle geconfigureerde AI-modellen van de Klant. Selecteer het juiste AI-model voor uw analyse in de lijst met beschikbare modellen. Als er geen AI-model van de Klant beschikbaar is, geeft een bericht in de widget u de opdracht ten minste één AI-model van de Klant te configureren en wordt een hyperlink naar de configuratiepagina van het AI-model van de Klant weergegeven. Zie de documentatie voor instructies op [ hoe te om een instantie van AI van de Klant te vormen ](../../intelligent-services/customer-ai/user-guide/configure.md).
 
 >[!NOTE]
 >
->Selecteer de vervolgkeuzelijst direct onder het tabblad Overzicht om het samenvoegbeleid te wijzigen dat bepaalt welke profielen in de analyse worden opgenomen. Zie de sectie over [beleid samenvoegen](#merge-policies) voor een korte beschrijving, of [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md) voor meer informatie .
+>Selecteer de vervolgkeuzelijst direct onder het tabblad Overzicht om het samenvoegbeleid te wijzigen dat bepaalt welke profielen in de analyse worden opgenomen. Zie de sectie over [ fusiebeleid ](#merge-policies) voor een korte beschrijving, of het [ overzicht van het fusiebeleid ](../../profile/merge-policies/overview.md) voor meer details.
 
-Als u naar de pagina Gedetailleerde inzichten voor het geselecteerde AI-model van de Klant wilt navigeren, selecteert u **[!UICONTROL View model details]**.
+Selecteer **[!UICONTROL View model details]** om naar de pagina met gedetailleerde inzichten voor het geselecteerde AI-model van de Klant te navigeren.
 
-![Het Experience Platform Soorten publiek dashboard met het [!UICONTROL Customer AI distribution of scores] widget en [!UICONTROL View model details] gemarkeerd.](../images/segments/customer-ai-distribution-of-scores.png)
+![ het dashboard van het Soorten Soorten publiek van het Experience Platform met [!UICONTROL Customer AI distribution of scores] wordt benadrukt widget en [!UICONTROL View model details].](../images/segments/customer-ai-distribution-of-scores.png)
 
 De gedetailleerde pagina met modelinzichten wordt weergegeven.
 
-![De pagina met inzichten voor de AI van de Klant.](../images/profiles/customer-ai-insights-page.png)
+![ de pagina van Inzichten voor Klant AI.](../images/profiles/customer-ai-insights-page.png)
 
-Meer informatie over de AI van de Klant vindt u op de [Dreamweaver-handleiding voor inzichten](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+Meer informatie over Klant AI kan op [ worden gevonden ontdek de gids van inzicht UI ](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ### [!UICONTROL Customer AI scoring summary] {#customer-ai-scoring-summary}
 
@@ -140,19 +140,19 @@ Deze widget geeft het totale aantal profielen met een score weer en categoriseer
 >
 >Als de visualisatie een conversiesnelheidsscore is, worden de hoge scores groen en de lage scores rood weergegeven. Als je de eigenheid van de kroon voorspelt, wordt deze gespiegeld, dan zijn de hoge scores rood en zijn de lage scores groen. Het gemiddelde emmertje blijft geel ongeacht welk aandrijvingstype u kiest.
 
-Het vervolgkeuzemenu onder de widgettitel bevat een lijst met alle geconfigureerde AI-modellen van de Klant. Selecteer het juiste AI-model voor uw analyse in de lijst met beschikbare modellen. Als er geen AI-model van de Klant beschikbaar is, geeft een bericht in de widget u de opdracht ten minste één AI-model van de Klant te configureren en wordt een hyperlink naar de configuratiepagina van het AI-model van de Klant weergegeven. Zie de documentatie op [hoe te om een instantie van de KlantAI te vormen](../../intelligent-services/customer-ai/user-guide/configure.md) voor gedetailleerde instructies.
+Het vervolgkeuzemenu onder de widgettitel bevat een lijst met alle geconfigureerde AI-modellen van de Klant. Selecteer het juiste AI-model voor uw analyse in de lijst met beschikbare modellen. Als er geen AI-model van de Klant beschikbaar is, geeft een bericht in de widget u de opdracht ten minste één AI-model van de Klant te configureren en wordt een hyperlink naar de configuratiepagina van het AI-model van de Klant weergegeven. Zie de documentatie op [ hoe te om een instantie van AI van de Klant ](../../intelligent-services/customer-ai/user-guide/configure.md) voor gedetailleerde instructies te vormen.
 
 >[!NOTE]
 >
->Het totale aantal berekende profielen is afhankelijk van het gekozen samenvoegingsbeleid. Als u het gebruikte samenvoegingsbeleid wilt wijzigen, selecteert u de vervolgkeuzelijst direct onder het tabblad Overzicht. Zie de sectie over [beleid samenvoegen](#merge-policies) voor een korte beschrijving, of [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md) voor meer informatie .
+>Het totale aantal berekende profielen is afhankelijk van het gekozen samenvoegingsbeleid. Als u het gebruikte samenvoegingsbeleid wilt wijzigen, selecteert u de vervolgkeuzelijst direct onder het tabblad Overzicht. Zie de sectie over [ fusiebeleid ](#merge-policies) voor een korte beschrijving, of het [ overzicht van het fusiebeleid ](../../profile/merge-policies/overview.md) voor meer details.
 
-![Het dashboard Soorten publiek van het Experience Platform met de overzichtswidget voor scores van de Klant AI gemarkeerd.](../images/segments/customer-ai-scoring-summary.png)
+![ het dashboard van de Soorten Soorten Soorten publiek van het Experience Platform met de benadrukte het scoren van de Klant AI summiere widget.](../images/segments/customer-ai-scoring-summary.png)
 
-Selecteren **[!UICONTROL View model details]** om naar de gedetailleerde pagina met inzichten voor het geselecteerde AI-model van de Klant te navigeren. Meer informatie over de AI van de Klant vindt u op de [Dreamweaver-handleiding voor inzichten](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+Selecteer **[!UICONTROL View model details]** om naar de gedetailleerde pagina met inzichten voor het geselecteerde AI-model van de Klant te navigeren. Meer informatie over Klant AI kan op [ worden gevonden ontdek de gids van inzicht UI ](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ## Standaardwidgets {#standard-widgets}
 
-Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens voor uw publiek. U kunt ook aangepaste widgets maken die u met uw organisatie kunt delen met de [!UICONTROL Widget library]. Als u meer wilt weten over het maken van aangepaste widgets, leest u eerst de [Overzicht van widgetbibliotheek](../customize/widget-library.md).
+Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens voor uw publiek. U kunt ook aangepaste widgets maken die u met uw organisatie wilt delen met de [!UICONTROL Widget library] . Om meer over het creëren van douanewidgets te leren, gelieve te beginnen door het [ overzicht van de bibliotheek van Widget ](../customize/widget-library.md) te lezen.
 
 Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
@@ -174,48 +174,48 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 >title="Grootte publiek"
 >abstract="Deze widget geeft het totale aantal samengevoegde profielen in het geselecteerde publiek weer. Dit getal is afhankelijk van het samenvoegbeleid dat op de gegevens wordt toegepast en is correct op het moment van de meest recente opname."
 
-De **[!UICONTROL Audience size]** widget geeft het totale aantal samengevoegde profielen weer binnen het geselecteerde publiek op het moment dat de opname werd gemaakt. Dit aantal is het resultaat van het toepassen van het beleid van de publiekssamenvoeging op uw gegevens van het Profiel om profielfragmenten samen te voegen en één enkel profiel voor elk individu in het publiek te vormen.
+De **[!UICONTROL Audience size]** -widget geeft het totale aantal samengevoegde profielen weer binnen het geselecteerde publiek op het moment dat de momentopname werd gemaakt. Dit aantal is het resultaat van het toepassen van het beleid van de publiekssamenvoeging op uw gegevens van het Profiel om profielfragmenten samen te voegen en één enkel profiel voor elk individu in het publiek te vormen.
 
-Raadpleeg voor meer informatie over fragmenten en samengevoegde profielen de [Overzicht van het realtime klantprofiel](../../profile/home.md).
+Voor meer informatie over fragmenten en samengevoegde profielen, verwijs naar het [ Real-Time overzicht van het Profiel van de Klant ](../../profile/home.md).
 
-![De [!UICONTROL Audiences] dashboard-overzicht met de [!UICONTROL Audience size] widget gemarkeerd.](../images/audiences/audience-size.png)
+![ het [!UICONTROL Audiences] dashboardoverzicht met [!UICONTROL Audience size] benadrukte widget.](../images/audiences/audience-size.png)
 
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesizetrend"
 >title="Ontwikkeling van de omvang van het publiek"
->abstract="Deze widget bevat informatie over het totale aantal profielen dat voldoet aan de criteria van **alle** segmentdefinitie, zoals vastgelegd tijdens de dagelijkse momentopname, gedurende de laatste 30 dagen, 90 dagen, of 12 maanden."
+>abstract="Deze widget verstrekt informatie betreffende het totale aantal profielen die aan de criteria van **om het even welke** segmentdefinitie voldoen, zoals die tijdens de dagelijkse momentopname, voor de laatste 30 dagen, 90 dagen, of 12 maanden wordt gevangen."
 
-De **[!UICONTROL Audience size trend]** widget geeft een lijngrafiek voor het totale aantal profielen die in aanmerking komen voor **alle** publiek gedurende een bepaalde periode. De trend van de publieksgrootte kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. De publieksgrootte wordt weerspiegeld op de y-as en de tijd op de x-as.
+De **[!UICONTROL Audience size trend]** widget verstrekt een illustratie van de lijngrafiek voor het totale aantal profielen die voor **om het even welk** publiek over een bepaalde periode kwalificeren. De trend van de publieksgrootte kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. De publieksgrootte wordt weerspiegeld op de y-as en de tijd op de x-as.
 
-Deze widget bevat ook de automatische [!UICONTROL Captions] waar een machine het leren model de grafiek en publieksgegevens analyseert en automatisch titels produceert om de belangrijkste tendensen en de belangrijke gebeurtenissen te beschrijven. Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
+Deze widget bevat ook de automatische functie [!UICONTROL Captions] , waarmee een model voor machinaal leren de diagrammen en de gegevens van het publiek analyseert en automatisch bijschriften genereert om de belangrijkste trends en belangrijke gebeurtenissen te beschrijven. Selecteer **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
 
-![De [!UICONTROL Audiences] In het overzicht ziet u de widget voor de trend om de omvang van de doelgroep te bepalen.](../images/audiences/audience-size-trend-captions.png)
+![ het [!UICONTROL Audiences] overzicht toont de de trendwidget van de grootte van de Publiek.](../images/audiences/audience-size-trend-captions.png)
 
 Het dialoogvenster voor automatische bijschriften wordt geopend en verschaft inzicht in uw gegevens.
 
-![Het dialoogvenster voor automatische bijschriften voor de trendwidget voor de doelgrootte.](../images/audiences/audience-size-trend-automatic-captions-dialog.png)
+![ de automatische dialoog van titels voor de de fotoment van de grootte van het Publiek widget.](../images/audiences/audience-size-trend-automatic-captions-dialog.png)
 
-Raadpleeg voor meer informatie over de evaluatie van het publiek en over de manier waarop profielen in aanmerking komen en het publiek verlaten de [Documentatie voor segmentatieservice](../../segmentation/home.md).
+Meer over de evaluatie van publiek leren en hoe de profielen kwalificeren en van publiek weggaan, gelieve te verwijzen naar de [ documentatie van de Dienst van de Segmentatie ](../../segmentation/home.md).
 
 ### [!UICONTROL Audience size change trend] {#audience-size-change-trend}
 
 Deze widget geeft een lijngrafiekillustratie van het verschil tussen de meest recente dagelijkse momentopnamen in het totale aantal profielen dat voor een bepaald publiek is gekwalificeerd. Het publiek dat u voor analyse kiest, wordt geselecteerd in het keuzemenu met het overzicht. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. De publieksgrootte wordt weerspiegeld op de y-as en de tijd op de x-as.
 
-![De widget voor het wijzigen van trends bij het bereik van publiek.](../images/audiences/audience-size-change-trend.png)
+![ de de veranderingstrend widget van de de verandering van de Poortgrootte.](../images/audiences/audience-size-change-trend.png)
 
 ### [!UICONTROL Audience size trend by identity] {#audience-size-trend-by-identity}
 
 Deze widget illustreert de trend van de publieksgrootte voor een bepaald publiek op basis van het gekozen type identiteit in het vervolgkeuzemenu van de widget. Het publiek dat voor analyse wordt gebruikt wordt geselecteerd van het overzichtsdrop-down. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget.
 
-![De trend voor de omvang van de doelgroep op identiteitswidget.](../images/audiences/audience-size-trend-by-identity.png)
+![ de trend van de grootte van de Publiek door identiteit widget.](../images/audiences/audience-size-trend-by-identity.png)
 
 ### [!UICONTROL Audience activation order] {#audience-activation-order}
 
-De [!UICONTROL Audience activation order] widget verstrekt een drie-kolom lijst die van de bestemmingsnaam, het platform, en de activeringsdatum van het publiek een lijst maakt. De lijst wordt geordend van hoog tot laag afhankelijk van recentie en kan maximaal 10 rijen bevatten.
+De widget [!UICONTROL Audience activation order] biedt een tabel met drie kolommen met de doelnaam, het platform en de activeringsdatum van het publiek. De lijst wordt geordend van hoog tot laag afhankelijk van recentie en kan maximaal 10 rijen bevatten.
 
-![De widget voor de activeringsvolgorde van het publiek.](../images/audiences/audience-activation-order.png)
+![ de widget van de de activeringsorde van het publiek.](../images/audiences/audience-activation-order.png)
 
 ### [!UICONTROL Audience overlap] {#audience-overlap}
 
@@ -223,35 +223,35 @@ Deze widget gebruikt een Venn-diagram om het aantal mensen te visualiseren dat v
 
 Met deze widget kunt u uw segmentatiestrategie optimaliseren door de gelijkenissen in de resultaten van uw segmentdefinities te visualiseren.
 
-![De widget publiek overlapt.](../images/audiences/audience-overlap.png)
+![ de Audience overlappende widget.](../images/audiences/audience-overlap.png)
 
 ### [!UICONTROL Audience overlap report] {#audience-overlap-report}
 
-Met deze widget wordt een tabel gemaakt waarin het profiel gegevens voor een bepaald publiek overlapt. Er wordt een lijst met vijf soorten publiek weergegeven, van de hoogste tot de laagste overlappende percentages, die wordt gekozen in het vervolgkeuzemenu boven in het scherm. Voor alle duidelijkheid wordt het gekozen publiek vermeld in het dialoogvenster [!UICONTROL AUDIENCE A NAME] kolom. Er wordt een analyse van de overlappende publiek gegeven voor het tweede publiek dat wordt vermeld in het dialoogvenster [!UICONTROL AUDIENCE B NAME] kolom. De procentuele overlapping wordt vermeld in de derde kolom, tot op twaalf decimalen nauwkeurig.
+Met deze widget wordt een tabel gemaakt waarin het profiel gegevens voor een bepaald publiek overlapt. Er wordt een lijst met vijf soorten publiek weergegeven, van de hoogste tot de laagste overlappende percentages, die wordt gekozen in het vervolgkeuzemenu boven in het scherm. Voor de duidelijkheid wordt het gekozen publiek vermeld in de kolom [!UICONTROL AUDIENCE A NAME] . De publiek overlappende analyse wordt verstrekt voor het tweede publiek dat in de [!UICONTROL AUDIENCE B NAME] kolom wordt vermeld. De procentuele overlapping wordt vermeld in de derde kolom, tot op twaalf decimalen nauwkeurig.
 
 Het publiek overlapt rapport helpt u om nieuwe, krachtige soorten publiek te bouwen. Wanneer u een hoog percentage van de overlappingen observeert, kunt u het publiek onderdrukken en voorkomen dat hetzelfde publiek naar andere bestemmingen wordt gestuurd. Ze helpen u ook verborgen inzichten te identificeren die kunnen helpen met betere segmentatie. Met een laag percentage overlappingen kunt u unieke profielen zoeken.
 
-Selecteren **[!UICONTROL View more]** om een dialoogvenster op volledig scherm te openen dat meer publiek overlappende gegevens bevat.
+Selecteer **[!UICONTROL View more]** om een dialoogvenster op volledig scherm te openen dat meer publiek overlappende gegevens bevat.
 
-![De publiek overlapt rapport widget met View meer benadrukt.](../images/audiences/audience-overlap-report.png)
+![ De publiek overlapt rapport widget met meer benadrukte Mening.](../images/audiences/audience-overlap-report.png)
 
-De [!UICONTROL Audience overlap report] wordt weergegeven. Dit dialoogvenster kan tot 50 rijen publiek bevatten die analyses overlappen die in zes kolommen zijn opgedeeld. Selecteer het instellingenpictogram (![Het instellingenpictogram.](../images/audiences/settings-icon.png)) om kolommen uit de tabel te verwijderen of toe te voegen.
+Het dialoogvenster [!UICONTROL Audience overlap report] wordt weergegeven. Dit dialoogvenster kan tot 50 rijen publiek bevatten die analyses overlappen die in zes kolommen zijn opgedeeld. Selecteer het montagespictogram (![ het montagespictogram.](../images/audiences/settings-icon.png)) om kolommen uit de tabel te verwijderen of toe te voegen.
 
-![Het dialoogvenster Publiek overlapt het rapport.](../images/audiences/audience-overlap-report-dialog.png)
+![ het publiek overlapt rapportdialoog.](../images/audiences/audience-overlap-report-dialog.png)
 
 >[!NOTE]
 >
->Selecteer de **[!UICONTROL Overlapping]** kolomkop om de volgorde van de resultaten te wijzigen van het hoogste naar het laagste of het laagste naar het hoogste.
+>Selecteer de kolomkop **[!UICONTROL Overlapping]** om de volgorde van de resultaten te wijzigen van het hoogste naar het laagste of het laagste naar het hoogste.
 
-Als u het volledige rapport in de indeling PDF wilt downloaden, selecteert u het optiemenu (**`...`**) gevolgd door **[!UICONTROL Download]**.
+Als u het volledige rapport in de indeling PDF wilt downloaden, selecteert u het optiemenu (**`...`**) gevolgd door **[!UICONTROL Download]** .
 
-![Het publiek overlapt het rapportdialoogvenster met de gemarkeerde ovalen en downloadoptie.](../images/audiences/audience-overlap-report-dialog-download.png)
+![ het publiek overlapt rapportdialoog met de ellipsen en benadrukte optie van de Download.](../images/audiences/audience-overlap-report-dialog-download.png)
 
 Selecteer een rij in het rapport om een Venn-diagram van de overlappende analyse te openen. Houd de muisaanwijzer boven een gedeelte van het Venn-diagram om het aantal profielen in een dialoogvenster weer te geven.
 
-![Het publiek overlapt rapportdialoog met een diagram van de Venn en een benadrukte rij.](../images/audiences/audience-overlap-report-dialog-venn.png)
+![ het publiek overlapt rapportdialoog met een diagram van de Venn en een benadrukte rij.](../images/audiences/audience-overlap-report-dialog-venn.png)
 
-Selecteren **[!UICONTROL Close]** om terug te keren naar de [!UICONTROL Audiences] dashboard.
+Selecteer **[!UICONTROL Close]** om terug te keren naar het [!UICONTROL Audiences] -dashboard.
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
@@ -260,15 +260,15 @@ Selecteren **[!UICONTROL Close]** om terug te keren naar de [!UICONTROL Audience
 >title="Identiteitsoverlapping"
 >abstract="Deze widget toont de overlapping van profielen in uw publiek die beide gekozen identiteiten bevatten. De cirkels geven de relatieve grootte van elke identiteit weer. Het aantal profielen met beide naamruimten wordt weergegeven door de overlapping tussen de cirkels."
 
-De **[!UICONTROL Identity overlap]** widget geeft een Venn-diagram weer of stelt een diagram in waarin de overlapping van profielen in uw publiek met meerdere identiteiten wordt getoond.
+De widget **[!UICONTROL Identity overlap]** geeft een Venn-diagram weer of stelt een diagram in waarin de overlapping van profielen in uw publiek met meerdere identiteiten wordt getoond.
 
 Gebruik de vervolgkeuzemenu&#39;s op de widget om de identiteiten te selecteren die u wilt vergelijken. De cirkels geven de relatieve grootte van elke gekozen identiteit weer, waarbij het aantal profielen dat beide naamruimten bevat, wordt weergegeven door de grootte van de overlapping tussen de cirkels.
 
 Als een klant op meer dan één kanaal met uw merk communiceert, zullen de veelvoudige identiteiten met die individuele klant worden geassocieerd. Hierdoor is het waarschijnlijk dat in uw organisatie meerdere profielen met fragmenten van meerdere identiteiten voorkomen.
 
-Ga voor meer informatie over identiteiten naar de [Identiteitsdocumentatie](../../identity-service/home.md).
+Om meer over identiteiten te leren, gelieve de [ documentatie van de Dienst van de Identiteit ](../../identity-service/home.md) te bezoeken.
 
-![De [!UICONTROL Audiences] Overzicht van het dashboard waarbij de widget Identiteitsoverlap gemarkeerd is.](../images/audiences/identity-overlap.png)
+![ het [!UICONTROL Audiences] dashboardoverzicht met de benadrukte overlap van de Identiteit widget.](../images/audiences/identity-overlap.png)
 
 ### [!UICONTROL Profiles by identity] {#profiles-by-identity}
 
@@ -277,24 +277,24 @@ Ga voor meer informatie over identiteiten naar de [Identiteitsdocumentatie](../.
 >title="Profielen op identiteit"
 >abstract="Deze widget geeft de indeling van de identiteiten in elk samengevoegd profiel in het geselecteerde publiek weer."
 
-De **[!UICONTROL Profiles by identity]** widget geeft de indeling van de identiteiten in elk samengevoegd profiel in het geselecteerde publiek weer. Het totale aantal profielen per identiteit kan hoger zijn dan het totale aantal profielen in het publiek, omdat aan één profiel meerdere identiteiten kunnen zijn gekoppeld. Met andere woorden, het optellen van de waarden die voor elke identiteit worden getoond kan meer dan de totale publieksgrootte totaal. Dit komt omdat als een klant op meer dan één kanaal met uw merk in wisselwerking staat, veelvoudige identiteiten met die individuele klant kunnen worden geassocieerd.
+De widget **[!UICONTROL Profiles by identity]** geeft de indeling van de identiteiten in elk samengevoegd profiel in het geselecteerde publiek weer. Het totale aantal profielen per identiteit kan hoger zijn dan het totale aantal profielen in het publiek, omdat aan één profiel meerdere identiteiten kunnen zijn gekoppeld. Met andere woorden, het optellen van de waarden die voor elke identiteit worden getoond kan meer dan de totale publieksgrootte totaal. Dit komt omdat als een klant op meer dan één kanaal met uw merk in wisselwerking staat, veelvoudige identiteiten met die individuele klant kunnen worden geassocieerd.
 
-Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
+Selecteer **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
 
-![De [!UICONTROL Audiences] dashboardoverzicht met de optie Profielen op identiteitswidget en Bijschriften gemarkeerd.](../images/audiences/profiles-by-identity.png)
+![ het [!UICONTROL Audiences] dashboardoverzicht met de Gebenadrukte Profielen door identiteit widget en de optie van Bijschriften.](../images/audiences/profiles-by-identity.png)
 
 Een machine-leermodel produceert automatisch gegevensinzichten door de algemene distributie en belangrijkste dimensies van de gegevens te analyseren.
 
-Ga voor meer informatie over identiteiten naar de [Identiteitsdocumentatie](../../identity-service/home.md).
+Om meer over identiteiten te leren, gelieve de [ documentatie van de Dienst van de Identiteit ](../../identity-service/home.md) te bezoeken.
 
 ### Geplande activeringen {#scheduled-activations}
 
-De [!UICONTROL Scheduled activations] widget biedt een tabellarische weergave van de laatst geactiveerde doelen. De tabel bevat het doelplatform, de naam van de activeringsstroom naar dit doel en de begin- en einddatum van de activering voor het geselecteerde publiek. Als er geen einddatum voor de activering is opgegeven, wordt deze weergegeven als [!UICONTROL Ongoing]. Het publiek voor analyse wordt geselecteerd van dropdown bij de bovenkant van de pagina.
+De widget [!UICONTROL Scheduled activations] biedt een in tabelvorm weergegeven weergave van de laatst geactiveerde doelen. De tabel bevat het doelplatform, de naam van de activeringsstroom naar dit doel en de begin- en einddatum van de activering voor het geselecteerde publiek. Als er geen einddatum voor de activering is opgegeven, wordt deze weergegeven als [!UICONTROL Ongoing] . Het publiek voor analyse wordt geselecteerd van dropdown bij de bovenkant van de pagina.
 
 Met de widget kunt u in één oogopslag zien waar en wanneer het publiek wordt geactiveerd en kunt u dubbele of overbodige activeringen transparanter maken. Deze geaccumuleerde informatie benadrukt ook waar om het even welke activiteiten zijn weggelaten.
 
-![De widget Geplande activeringen.](../images/audiences/scheduled-activations.png)
+![ Geplande activeringswidget.](../images/audiences/scheduled-activations.png)
 
 ## Volgende stappen
 
-Als u dit document volgt, kunt u nu de locatie [!UICONTROL Audiences] dashboard en selecteer het publiek dat u wilt weergeven. U moet ook weten welke maatstaven worden weergegeven in de beschikbare widgets. Als u meer wilt weten over het werken met doelgroepen in de gebruikersinterface van het Experience Platform, raadpleegt u de [Handleiding voor segmentatieservice](../../segmentation/ui/overview.md).
+Als u dit document volgt, kunt u nu het dashboard van [!UICONTROL Audiences] vinden en een publiek selecteren om te bekijken. U moet ook weten welke maatstaven worden weergegeven in de beschikbare widgets. Meer leren over het werken met publiek in het Experience Platform UI, gelieve te verwijzen naar de [ gids UI van de Dienst van de Segmentatie ](../../segmentation/ui/overview.md).

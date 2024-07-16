@@ -16,48 +16,48 @@ ht-degree: 0%
 
 ## Aan de slag
 
-Om met het publiek en de segmentdefinities te kunnen werken, is een goed begrip van de verschillende [!DNL Experience Platform] diensten in verband met segmentatie. Lees de documentatie voor de volgende services voordat u deze gebruikershandleiding leest:
+Als u met doelgroepen en segmentdefinities werkt, hebt u inzicht nodig in de verschillende [!DNL Experience Platform] -services die met segmentatie te maken hebben. Lees de documentatie voor de volgende services voordat u deze gebruikershandleiding leest:
 
-- [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] staat u toe om gegevens te segmenteren die in worden opgeslagen [!DNL Experience Platform] dat betrekking heeft op individuen (zoals klanten, vooruitzichten, gebruikers, of organisaties) in kleinere groepen.
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Schakelt het maken van klantprofielen in door identiteiten te overbruggen van verschillende gegevensbronnen waarin deze worden opgenomen [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert de gegevens van de klantenervaring. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
+- [[!DNL Segmentation Service]](../home.md) [!DNL Segmentation Service] : hiermee kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, vooruitzichten, gebruikers of organisaties), segmenteren in kleinere groepen.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Schakelt het maken van klantprofielen in door identiteiten te overbruggen van verschillende gegevensbronnen die in [!DNL Platform] worden opgenomen.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt. Om het beste gebruik van Segmentatie te maken, gelieve te verzekeren uw gegevens als profielen en gebeurtenissen volgens de [ beste praktijken voor gegevens modellering ](../../xdm/schema/best-practices.md) worden opgenomen.
 
 U moet ook de volgende belangrijke termen begrijpen die in dit document worden gebruikt en het verschil tussen deze termen begrijpen:
 
-- **Publiek**: Een verzameling personen die vergelijkbare gedragingen en/of kenmerken delen. Deze inzameling van mensen kan of door Adobe Experience Platform worden geproduceerd gebruikend segmentdefinities (Platform-geproduceerde publiek), publiekssamenstelling, of uit externe bronnen zoals douane uploads (extern geproduceerd publiek).
-- **Segmentdefinitie**: De regels die Adobe Experience Platform gebruikt om sleutelkenmerken of gedrag van een doelpubliek te beschrijven.
-- **Segment**: Het scheiden van profielen in publiek.
+- **Publiek**: Een inzameling van mensen die gelijkaardig gedrag en/of kenmerken delen. Deze inzameling van mensen kan of door Adobe Experience Platform worden geproduceerd gebruikend segmentdefinities (Platform-geproduceerde publiek), publiekssamenstelling, of uit externe bronnen zoals douane uploads (extern geproduceerd publiek).
+- **definitie van het Segment**: De regels Adobe Experience Platform gebruikt om zeer belangrijke kenmerken of gedrag van een doelpubliek te beschrijven.
+- **Segment**: Het besluit om Profielen in publiek te scheiden.
 
 ## Overzicht
 
-Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UICONTROL Audiences]** in de linkernavigatie om de **[!UICONTROL Overview]** tabblad met het tabblad [!UICONTROL Audiences] dashboard.
+Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UICONTROL Audiences]** in de linkernavigatie om het tabblad **[!UICONTROL Overview]** met het dashboard van [!UICONTROL Audiences] te openen.
 
 >[!NOTE]
 >
->Als uw organisatie nieuw aan Platform is en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, [!UICONTROL Audiences] het dashboard is niet zichtbaar. In plaats daarvan [!UICONTROL Overview] op het tabblad vindt u koppelingen en documentatie waarmee u aan de slag kunt gaan met het publiek.
+>Als uw organisatie nieuw is aan Platform en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, is het [!UICONTROL Audiences] dashboard niet zichtbaar. In plaats daarvan geeft het tabblad [!UICONTROL Overview] koppelingen en documentatie weer om u te helpen aan de slag te gaan met het publiek.
 
 ### [!UICONTROL Audiences] dashboard {#segments-dashboard}
 
-De **[!UICONTROL Audiences]** het dashboard schetst belangrijke metriek met betrekking tot de publieksgegevens van uw organisatie.
+Het dashboard van **[!UICONTROL Audiences]** beschrijft zeer belangrijke metriek met betrekking tot de publieksgegevens van uw organisatie.
 
-Ga voor meer informatie naar de [gebruikershandleiding in dashboard](../../dashboards/guides/audiences.md).
+Meer leren, bezoek de [ gids van het publiek dashboard ](../../dashboards/guides/audiences.md).
 
-![Het doeldashboard wordt weergegeven. Er worden verschillende widgets weergegeven, zoals de omvang van het publiek, profielen op basis van identiteit, identiteitsoverlapping en de trend om de omvang van het publiek te wijzigen.](../../dashboards/images/segments/dashboard-overview.png)
+![ het publieksdashboard wordt getoond. Het toont diverse widgets, met inbegrip van de publieksgrootte, profielen door identiteit, identiteitsoverlapping, en de de veranderingstrend van de publieksgrootte.](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Bladeren {#browse}
 
-Selecteer de **[!UICONTROL Browse]** om het Poort van het Publiek te zien. Het Portaal van de Publiek verstrekt een lijst van alle publiek dat tot uw organisatie en zandbak behoort, en omvat details zoals het profielaantal, de oorsprong, de gecreeerde datum, de laatst gewijzigde datum, de markeringen, en de mislukking.
+Selecteer het tabblad **[!UICONTROL Browse]** om de portal Poorten publiek weer te geven. Het Portaal van de Publiek verstrekt een lijst van alle publiek dat tot uw organisatie en zandbak behoort, en omvat details zoals het profielaantal, de oorsprong, de gecreeerde datum, de laatst gewijzigde datum, de markeringen, en de mislukking.
 
 Daarnaast kunt u met Poort publiek nieuwe doelgroepen maken met Segment Builder of Audience Composition en extern gegenereerde doelgroepen importeren in Platform.
 
-Voor meer informatie over de portal Poorten publiek, lees de [Overzicht van het portal Publiek](./audience-portal.md).
+Voor meer informatie over het Portaal van het Publiek, gelieve het [ Poortoverzicht van het Poortpubliek van het Publiek ](./audience-portal.md) te lezen.
 
 ## Composities {#compositions}
 
-Selecteer de **[!UICONTROL Compositions]** om een lijst van alle publiek te zien dat door de Samenstelling van het Publiek voor uw organisatie wordt geproduceerd.
+Selecteer het tabblad **[!UICONTROL Compositions]** om een lijst weer te geven met alle soorten publiek dat via Audience Composition voor uw organisatie wordt gegenereerd.
 
-![Een lijst van publiek dat in de Samenstelling van het Publiek voor uw organisatie wordt gecreeerd.](../images/ui/overview/compositions.png)
+![ een lijst van publiek dat in de Samenstelling van het Publiek voor uw organisatie wordt gecreeerd.](../images/ui/overview/compositions.png)
 
 Standaard wordt in deze weergave informatie weergegeven over het publiek, zoals de naam, status, gemaakte datum, gemaakt op, laatst bijgewerkte datum en laatst bijgewerkt op.
 
@@ -66,45 +66,45 @@ Naast elk publiek bevindt zich een ellipspictogram. Als u deze optie selecteert,
 | Actie | Beschrijving |
 | ------ | ----------- |
 | Dupliceren | Kopieert het geselecteerde publiek. |
-| Toegang beheren | Beheert de toegangslabels die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [beheren, labels](../../access-control/abac/ui/labels.md). |
-| Verwijderen | Hiermee verwijdert u het geselecteerde publiek. Soorten publiek dat wordt gebruikt in downstreambestemmingen of dat afhankelijk is van ander publiek **kan** worden geschrapt. Lees voor meer informatie over het verwijderen van het publiek de [Veelgestelde vragen over segmentatie](../faq.md#lifecycle-states). |
+| Toegang beheren | Beheert de toegangslabels die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [ het leiden etiketten ](../../access-control/abac/ui/labels.md). |
+| Verwijderen | Hiermee verwijdert u het geselecteerde publiek. Het publiek dat in stroomafwaartse bestemmingen wordt gebruikt of gebiedsdelen in andere soorten publiek **zijn kan** niet worden geschrapt. Voor meer informatie over publieksschrapping, te lezen gelieve [ segmentatie FAQ ](../faq.md#lifecycle-states). |
 
-U kunt de ![Tabel aanpassen](../images/ui/overview/customize-table.png) om te wijzigen welke velden worden weergegeven.
+U kunt ![ selecteren past lijst ](../images/ui/overview/customize-table.png) pictogram aan om te veranderen welke gebieden worden getoond.
 
-![De knop Tabel aanpassen is gemarkeerd. Als u deze knop selecteert, kunt u de velden aanpassen die op de pagina Soorten publiek worden weergegeven.](../images/ui/overview/compositions-select-customize-table.png)
+![ de aanpasbare lijstknoop wordt benadrukt. Het selecteren van deze knoop staat u toe om de gebieden aan te passen die op de de samenstellingspagina van het publiek worden getoond.](../images/ui/overview/compositions-select-customize-table.png)
 
 Er wordt een pop-up weergegeven met alle velden die in de tabel kunnen worden weergegeven.
 
-![De kenmerken die kunnen worden weergegeven voor de sectie Compositie.](../images/ui/overview/compositions-customize-table.png)
+![ de attributen die voor de sectie van de Samenstelling kunnen worden getoond.](../images/ui/overview/compositions-customize-table.png)
 
 | Veld | Beschrijving |
 | ----- | ----------- | 
 | [!UICONTROL Name] | De naam van het publiek. |
-| [!UICONTROL Status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft`, `Inactive`, en `Published`. |
+| [!UICONTROL Status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft` , `Inactive` en `Published` . |
 | [!UICONTROL Created] | De tijd en datum waarop het publiek is gemaakt. |
 | [!UICONTROL Created by] | De naam van de persoon die het publiek heeft gemaakt. |
 | [!UICONTROL Updated] | De tijd en datum waarop het publiek voor het laatst is bijgewerkt. |
 | [!UICONTROL Updated by] | De naam van de persoon die het publiek het laatst heeft bijgewerkt. |
 
-Als u wilt zien hoe het publiek wordt samengesteld, selecteert u de naam van een publiek in het dialoogvenster [!UICONTROL Audiences] tab.
+Als u wilt zien hoe de doelgroep wordt samengesteld, selecteert u de naam van een publiek in het tabblad [!UICONTROL Audiences] .
 
-De pagina van de Samenstelling van het Publiek verschijnt met de bouwstenen die uw publiek vormen. Voor meer informatie over het gebruik van Audience Composition raadpleegt u de [Handleiding voor compositie van publiek](./audience-composition.md).
+De pagina van de Samenstelling van het Publiek verschijnt met de bouwstenen die uw publiek vormen. Voor meer details over hoe te om de Samenstelling van het Publiek te gebruiken, te lezen gelieve de [ gids UI van de Samenstelling van het Publiek ](./audience-composition.md).
 
 ## Streaming segmentering {#streaming-segmentation}
 
-Streaming segmentatie is de mogelijkheid om segmentatie uit te voeren op [!DNL Platform] in bijna real time, terwijl het concentreren op gegevensrijkdom. Met streamingsegmentatie gebeurt kwalificatie voor segmentatie nu als gegevens binnenkomen [!DNL Platform], om de noodzaak om segmentatietaken te plannen en uit te voeren te verlichten.
+Streaming segmentatie is de mogelijkheid om segmentatie uit te voeren op [!DNL Platform] in bijna real-time, terwijl de nadruk ligt op gegevensrijkheid. Met streamingsegmentatie gebeurt er nu segmentering als gegevens in [!DNL Platform] terechtkomen, waardoor de noodzaak om segmentatietaken te plannen en uit te voeren, wordt verminderd.
 
-Meer informatie over streamingsegmentatie vindt u in het gedeelte [gebruikershandleiding voor streamingsegmentatie](./streaming-segmentation.md).
+Meer informatie over het stromen segmentatie kan in de [ het stromen gebruikershandleiding van de segmentatie ](./streaming-segmentation.md) worden gevonden.
 
 >[!NOTE]
 >
->Opdat het stromen segmentatie aan het werk is, zult u geplande segmentatie voor de organisatie moeten toelaten. Raadpleeg voor meer informatie over het inschakelen van geplande segmentatie [het gedeelte voor streamingsegmentatie in deze gebruikershandleiding](#scheduled-segmentation).
+>Opdat het stromen segmentatie aan het werk is, zult u geplande segmentatie voor de organisatie moeten toelaten. Voor details bij het toelaten van geplande segmentatie, gelieve te verwijzen naar [ de het stromen segmentatiesectie in deze gebruikersgids ](#scheduled-segmentation).
 
 ## Edge-segmentatie {#edge-segmentation}
 
 Edge-segmentatie is de mogelijkheid om het publiek in Platform ogenblikkelijk aan de rand te evalueren, zodat dezelfde pagina en de volgende pagina-personalisatie gebruikstoepassingen mogelijk maken.
 
-Meer informatie over de segmentatie van de randen vindt u in de [gebruikersgids voor randsegmentatie](./edge-segmentation.md)
+Meer informatie over randsegmentatie kan in de [ gids van de randsegmentatie UI worden gevonden ](./edge-segmentation.md)
 
 ## Beleidsovertredingen
 
@@ -112,12 +112,12 @@ Meer informatie over de segmentatie van de randen vindt u in de [gebruikersgids 
 >
 >Beleidsovertredingen zijn alleen van toepassing als u een publiek maakt dat aan een doel is toegewezen.
 
-Als u klaar bent met het maken van uw publiek, wordt het publiek geanalyseerd door Adobe Experience Platform Data Governance om ervoor te zorgen dat er geen beleidsovertredingen binnen het publiek plaatsvinden. Zie de [Overzicht van gegevensbeheer](../../data-governance/home.md) voor meer informatie .
+Als u klaar bent met het maken van uw publiek, wordt het publiek geanalyseerd door Adobe Experience Platform Data Governance om ervoor te zorgen dat er geen beleidsovertredingen binnen het publiek plaatsvinden. Zie het [ overzicht van het Beleid van Gegevens ](../../data-governance/home.md) voor meer informatie.
 
-![De beleidsovertredingen voor het publiek worden weergegeven.](../images/ui/overview/audience-dule-policy-violations.png)
+![ de beleidsschendingen voor het publiek worden getoond.](../images/ui/overview/audience-dule-policy-violations.png)
 
 ## Volgende stappen en extra bronnen {#next-steps}
 
-De [!DNL Segmentation Service] UI verstrekt een rijk werkschema dat u toestaat om verhandelbare soorten publiek van te creëren [!DNL Real-Time Customer Profile] gegevens.
+De gebruikersinterface van [!DNL Segmentation Service] biedt een rijke workflow waarmee u commercieel publiek kunt maken op basis van [!DNL Real-Time Customer Profile] -gegevens.
 
-Meer informatie over [!DNL Segmentation Service], doorgaat u met het lezen van de documentatie. Leren hoe u de [!DNL Segmentation Service] API, lees de [[!DNL Segmentation Service] ontwikkelaarsgids](../api/overview.md).
+Lees de documentatie voor meer informatie over [!DNL Segmentation Service] . Leren hoe te om [!DNL Segmentation Service] API te gebruiken, te lezen gelieve de [[!DNL Segmentation Service]  ontwikkelaarsgids ](../api/overview.md).

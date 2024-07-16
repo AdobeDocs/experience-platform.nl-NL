@@ -16,26 +16,26 @@ In het Model van de Gegevens van de Ervaring (XDM), wijst een vereist gebied ero
 
 >[!IMPORTANT]
 >
->Ongeacht of een schemagebied wordt vereist of niet, keurt het Platform niet goed `null` of lege waarden voor een ingesloten veld. Als er geen waarde is voor een bepaald veld in een record of gebeurtenis, moet de sleutel voor dat veld worden uitgesloten van de opname-lading.
+>Ongeacht of een schemaveld wordt vereist of niet, accepteert Platform geen `null` of lege waarden voor een ingesloten veld. Als er geen waarde is voor een bepaald veld in een record of gebeurtenis, moet de sleutel voor dat veld worden uitgesloten van de opname-lading.
 
-Wanneer [een nieuw veld definiëren](./overview.md#define) in de Adobe Experience Platform-gebruikersinterface kunt u deze als een vereist veld instellen door de **[!UICONTROL Required]** selectievakje in de rechterspoorstaaf. Selecteren **[!UICONTROL Apply]** om de wijziging op het schema toe te passen.
+Wanneer [ het bepalen van een nieuw gebied ](./overview.md#define) in het gebruikersinterface van Adobe Experience Platform, kunt u het als vereist gebied plaatsen door **[!UICONTROL Required]** checkbox in het juiste spoor te selecteren. Selecteer **[!UICONTROL Apply]** om de wijziging op het schema toe te passen.
 
-![Selectievakje vereist](../../images/ui/fields/required/root.png)
+![ Vereiste checkbox ](../../images/ui/fields/required/root.png)
 
-Als het veld een kenmerk op hoofdniveau is onder het ID-object van de huurder, verschijnt het pad onmiddellijk onder **[!UICONTROL Required fields]** in het linkerspoor.
+Als het veld een kenmerk op hoofdniveau onder het ID-object voor huurders is, wordt het pad direct onder **[!UICONTROL Required fields]** in de linkertrack weergegeven.
 
-![Vereist veld op basisniveau](../../images/ui/fields/required/applied.png)
+![ wortel-niveau vereist gebied ](../../images/ui/fields/required/applied.png)
 
-Als een vereist veld echter is genest in een object dat zelf niet is gemarkeerd als vereist, wordt het geneste veld niet weergegeven onder **[!UICONTROL Required fields]** in het linkerspoor.
+Als een vereist veld echter is genest binnen een object dat zelf niet is gemarkeerd als vereist, wordt het geneste veld niet weergegeven onder **[!UICONTROL Required fields]** in de linkertrack.
 
-In het onderstaande voorbeeld wordt `internalSKU` veld wordt ingesteld als vereist, maar het bovenliggende object `SKUs` is niet. In dit geval treden er geen validatiefouten op als `SKUs` wordt uitgesloten bij het invoeren van gegevens, ook al wordt het onderliggende veld `internalSKU` is gemarkeerd als vereist. Met andere woorden: `SKUs` is optioneel; bevat een `internalSKU` in het geval dat het wordt opgenomen.
+In het onderstaande voorbeeld wordt het veld `internalSKU` ingesteld als vereist, maar het bovenliggende object `SKUs` niet. In dit geval treden er geen validatiefouten op als `SKUs` wordt uitgesloten bij het invoeren van gegevens, ook al is het onderliggende veld `internalSKU` gemarkeerd als vereist. Met andere woorden, terwijl `SKUs` optioneel is, moet het een `internalSKU` -veld bevatten voor het geval het wordt opgenomen.
 
-![Genest vereist veld](../../images/ui/fields/required/nested.png)
+![ Genest vereist gebied ](../../images/ui/fields/required/nested.png)
 
 Als u een genest gebied altijd in een schema wilt worden vereist, moet u alle oudergebieden zoals vereist (met uitzondering van het voorwerp van huurderidentiteitskaart) ook plaatsen.
 
-![Vereiste velden voor bovenliggende en onderliggende elementen](../../images/ui/fields/required/parent-and-child.png)
+![ Ouder en kind vereiste gebieden ](../../images/ui/fields/required/parent-and-child.png)
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u een vereist veld in de gebruikersinterface definieert. Zie het overzicht op [velden definiëren in de gebruikersinterface](./overview.md#special) leren hoe u andere XDM-veldtypen definieert in het dialoogvenster [!DNL Schema Editor].
+In deze handleiding wordt beschreven hoe u een vereist veld in de gebruikersinterface definieert. Zie het overzicht op [ bepalende gebieden in UI ](./overview.md#special) leren hoe te om andere XDM gebiedstypes in [!DNL Schema Editor] te bepalen.

@@ -14,26 +14,26 @@ ht-degree: 0%
 
 # Een voorvertoning weergeven van het detailhandelsschema en de dataset
 
-Na succesvolle voltooiing van het laarzentrekken manuscript van het [detailhandelschema en gegevensset](./create-retails-sales-dataset.md) zelfstudie. Uitvoerschema&#39;s en datasets kunnen worden bekeken [!DNL Experience Platform]. Volg onderstaande stappen om de schema&#39;s en datasets weer te geven:
+Op succesvolle voltooiing van het laarzentrekkermanuscript van het [ detailhandelschema en dataset ](./create-retails-sales-dataset.md) leerprogramma. Uitvoerschema&#39;s en gegevenssets kunnen worden weergegeven op [!DNL Experience Platform] . Volg onderstaande stappen om de schema&#39;s en datasets weer te geven:
 
-Selecteer **[!UICONTROL Schemas]** die in de linkernavigatie wordt gevestigd en het inputschema vinden door het laarzentrekkermanuscript wordt gecreeerd. De naam van het schema komt overeen met de naam die is gedefinieerd in `config.yaml` uit de vorige stap. Bekijk de schemadetails en het is samenstelling door in het te klikken.
+Selecteer het tabblad **[!UICONTROL Schemas]** in de linkernavigatie en zoek het invoerschema dat door het bootstrap-script is gemaakt. De naam van het schema komt overeen met de naam die in `config.yaml` van de vorige stap is gedefinieerd. Bekijk de schemadetails en het is samenstelling door in het te klikken.
 
 ![](../images/models-recipes/access-data/schema.PNG)
 
-Selecteer **[!UICONTROL Datasets]** die in de linkernavigatie wordt gevestigd en open de inputdataset die door de naam van de dataset werd gecreeerd te selecteren. De naam van de gegevensset komt overeen met de naam die is gedefinieerd in `config.yaml` uit de vorige stap.
+Selecteer het tabblad **[!UICONTROL Datasets]** in de linkernavigatie en open de gegevensset die is gemaakt door de naam van de gegevensset te selecteren. De naam van de gegevensset komt overeen met de naam die is gedefinieerd in `config.yaml` van de vorige stap.
 
 ![](../images/models-recipes/access-data/dataset.PNG)
 
-Selecteren **[!UICONTROL Preview Dataset]** bevindt zich rechtsboven om een voorvertoning van een subset van de dataset weer te geven.
+Selecteer **[!UICONTROL Preview Dataset]** in de rechterbovenhoek om een voorvertoning weer te geven van een subset van de gegevensset.
 
 ![](../images/models-recipes/access-data/preview.PNG)
 
 ## Volgende stappen
 
-Je hebt met succes voorbeeldgegevens voor detailhandel opgenomen in [!DNL Experience Platform] het gebruiken van het verstrekte laarsmanuscript.
+U hebt nu met succes de gegevens van de steekproef van de Verkoop van de Handel in [!DNL Experience Platform] gegeconsumeerd gebruikend het verstrekte laarzentrekwescript.
 
 U kunt als volgt met de opgenomen gegevens blijven werken:
 - [Uw gegevens analyseren met Jupyter-laptops](../jupyterlab/analyze-your-data.md)
-   - Jupyter-laptops gebruiken in [!DNL Data Science Workspace] om toegang te krijgen tot uw gegevens, deze te verkennen, te visualiseren en te begrijpen.
+   - Gebruik Jupyter-laptops in [!DNL Data Science Workspace] om toegang te krijgen tot uw gegevens, deze te verkennen, te visualiseren en inzicht in uw gegevens te krijgen.
 - [Bronbestanden in een pakket plaatsen in een ontvanger](./package-source-files-recipe.md)
-   - Volg deze zelfstudie om te leren hoe u uw eigen model in kunt brengen [!DNL Data Science Workspace] door bronbestanden te verpakken in een importeerbaar Recipe-bestand.
+   - Volg deze zelfstudie om te leren hoe u uw eigen model in [!DNL Data Science Workspace] kunt plaatsen door bronbestanden in een importeerbaar Recipe-bestand te verpakken.

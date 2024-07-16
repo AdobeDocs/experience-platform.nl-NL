@@ -19,37 +19,37 @@ Dit document biedt een overzicht van hoe u de gegevensbewerkingen van uw platfor
 
 >[!NOTE]
 >
->Dit document richt zich op het verwerken van toestemmingsgegevens die de norm van de Adobe gebruiken. Als u toestemmingsgegevens in overeenstemming met IAB Transparantie en het Kader van de Toestemming (TCF) 2.0 verwerkt, zie de gids op [TCF 2.0-ondersteuning in Adobe Real-time Customer Data Platform](../iab/overview.md).
+>Dit document richt zich op het verwerken van toestemmingsgegevens die de norm van de Adobe gebruiken. Als u toestemmingsgegevens in overeenstemming met IAB Transparantie en het Kader van de Toestemming (TCF) 2.0 verwerkt, zie de gids op [ TCF 2.0 steun in Adobe Real-time Customer Data Platform ](../iab/overview.md).
 
 ## Vereisten
 
 Deze handleiding vereist een goed begrip van de verschillende diensten van de Experience Platform die betrokken zijn bij de verwerking van gegevens over de toestemming:
 
-* [Experience Data Model (XDM)](/help/xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-* [Adobe Experience Platform Identity Service](/help/identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
-* [Klantprofiel in realtime](/help/profile/home.md): Gebruikt [!DNL Identity Service] mogelijkheden om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. Het profiel van de Klant in real time trekt gegevens van het meer van Gegevens en handhaaft klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
-* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): Een JavaScript-bibliotheek aan de clientzijde waarmee u verschillende platformservices kunt integreren in uw klantgerichte website.
-   * [Opdrachten voor SDK-toestemming](../../../../web-sdk/commands/setconsent.md): Een gebruiksscenario-overzicht van de toestemmingsgerelateerde SDK-opdrachten die in deze handleiding worden getoond.
-* [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md): Hiermee kunt u gegevens in het realtime-klantprofiel opsplitsen in groepen personen die vergelijkbare kenmerken delen en op vergelijkbare wijze reageren op marketingstrategieën.
+* [ Model van de Gegevens van de Ervaring (XDM) ](/help/xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [ de Dienst van de Identiteit van Adobe Experience Platform ](/help/identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
+* [ Real-Time het Profiel van de Klant ](/help/profile/home.md): Gebruikt [!DNL Identity Service] mogelijkheden om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. Het profiel van de Klant in real time trekt gegevens van het meer van Gegevens en handhaaft klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
+* [ SDK van het Web van Adobe Experience Platform ](/help/web-sdk/home.md): Een cliënt-kant bibliotheek van JavaScript die u toestaat om de diverse diensten van het Platform in uw klant-onder ogen ziet website te integreren.
+   * [ SDK toestemmingsbevelen ](../../../../web-sdk/commands/setconsent.md): Een gebruik-geval overzicht van de toestemming-verwante bevelen SDK die in deze gids worden getoond.
+* [ de Dienst van de Segmentatie van Adobe Experience Platform ](/help/segmentation/home.md): Staat u toe om gegevens van het Profiel van de Klant in real time in groepen individuen te verdelen die gelijkaardige eigenschappen delen en op gelijkaardige wijze aan marketing strategieën zullen antwoorden.
 
 ## Samenvatting van de verwerkingsstroom van de toestemming {#summary}
 
 Hieronder wordt beschreven hoe toestemmingsgegevens worden verwerkt nadat het systeem correct is geconfigureerd:
 
 1. Een klant geeft via een dialoogvenster op uw website zijn voorkeuren voor het verzamelen van gegevens weer.
-1. Bij elke pagina die wordt geladen (of wanneer uw CMP een wijziging in de voorkeuren voor toestemming detecteert), wijst een aangepast script op uw site de huidige voorkeuren toe aan een standaard XDM-object. Dit voorwerp wordt dan overgegaan tot het Web SDK van het Platform `setConsent` gebruiken.
+1. Bij elke pagina die wordt geladen (of wanneer uw CMP een wijziging in de voorkeuren voor toestemming detecteert), wijst een aangepast script op uw site de huidige voorkeuren toe aan een standaard XDM-object. Dit object wordt vervolgens doorgegeven aan de opdracht Platform Web SDK `setConsent` .
 1. Wanneer `setConsent` wordt geroepen, controleert het Web SDK van het Platform of de toestemmingswaarden van die verschillend zijn het laatst ontving. Als de waarden verschillend zijn (of er geen vorige waarde is), worden de gestructureerde toestemmings/voorkeursgegevens verzonden naar Adobe Experience Platform.
-1. De toestemmings/voorkeursgegevens worden opgenomen in een [!DNL Profile]-enabled dataset het waarvan schema toestemmings/voorkeur gebieden bevat.
+1. De toestemmings-/voorkeursgegevens worden opgenomen in een gegevensset waarvoor [!DNL Profile] is ingeschakeld en waarvan het schema toestemmings-/voorkeursvelden bevat.
 
-Naast SDK-opdrachten die worden geactiveerd door de haken voor wijziging van de CMP-toestemming, kunnen toestemmingsgegevens ook in het Experience Platform stromen via door de klant gegenereerde XDM-gegevens die rechtstreeks naar een [!DNL Profile]-enabled dataset.
+Naast SDK-opdrachten die worden geactiveerd door de haken voor wijziging van CMP-toestemming, kunnen gegevens over toestemming ook in het Experience Platform stromen via door de klant gegenereerde XDM-gegevens die rechtstreeks naar een [!DNL Profile] -gegevensset worden geüpload.
 
 ### Goedkeuring
 
-In de huidige versie van de steun van de toestemmingsverwerking in Platform, slechts de toestemming van de gegevensinzameling (`collect.val`) wordt automatisch afgedwongen door de Platform Web SDK. Terwijl meer korrelige toestemmingen en voorkeur in klantenprofielen kunnen worden verzameld en worden voortgeduurd, moeten deze extra signalen manueel in uw eigen stroomafwaartse processen worden afgedwongen.
+In de huidige versie van de steun van de toestemmingsverwerking in Platform, slechts wordt de toestemming van de gegevensinzameling (`collect.val`) automatisch afgedwongen door het Web SDK van het Platform. Terwijl meer korrelige toestemmingen en voorkeur in klantenprofielen kunnen worden verzameld en worden voortgeduurd, moeten deze extra signalen manueel in uw eigen stroomafwaartse processen worden afgedwongen.
 
 >[!NOTE]
 >
->Raadpleeg voor meer informatie over de structuur van de hierboven vermelde XDM toestemmingsvelden de handleiding op de pagina [[!UICONTROL Consents and Preferences] gegevenstype](/help/xdm/data-types/consents.md).
+>Raadpleeg de handleiding over het [[!UICONTROL Consents and Preferences] gegevenstype ](/help/xdm/data-types/consents.md) voor meer informatie over de structuur van de bovenstaande XDM-toestemmingsvelden.
 
 Zodra het systeem is gevormd, interpreteert het Web SDK van het Platform de waarde van de gegevensinzamelingstoestemming voor de huidige gebruiker om te bepalen als het gegeven naar de Edge Network van Adobe Experience Platform zou moeten worden verzonden, van de cliënt, zou moeten worden gelaten vallen of tot de toestemming van de gegevensinzameling aan of ja of nr wordt geplaatst.
 
@@ -59,23 +59,23 @@ Aangezien elk CMP-systeem uniek is, moet u de beste manier bepalen om uw klanten
 
 ![](../../../images/governance-privacy-security/consent/adobe/overview/consent-dialog.png)
 
-In dit dialoogvenster kan de klant kiezen of hij of zij voor zijn of haar gegevens gebruikmaakt van specifieke gevallen voor marketing en personalisatie. Deze toestemmingen en voorkeur zouden aan het gegevensmodel moeten in overeenstemming zijn dat u voor [!DNL Profile]- toegelaten dataset in de volgende stap.
+In dit dialoogvenster kan de klant kiezen of hij of zij voor zijn of haar gegevens gebruikmaakt van specifieke gevallen voor marketing en personalisatie. Deze toestemmingen en voorkeur zouden aan het gegevensmodel moeten in overeenstemming zijn dat u voor [!DNL Profile] - toegelaten dataset in de volgende stap bepaalt.
 
-## Velden met standaardmachtigingen toevoegen aan een [!DNL Profile]-gegevensset {#dataset}
+## Standaardtoestemmingsvelden toevoegen aan een gegevensset met [!DNL Profile] mogelijkheden {#dataset}
 
-De gegevens van de toestemming van de klant moeten naar een [!DNL Profile]-enabled dataset het waarvan schema toestemmingsgebieden bevat. Deze gebieden moeten in het zelfde schema en de dataset worden omvat die u gebruikt om attributeninformatie over individuele klanten te vangen.
+De gegevens van de toestemming van de klant moeten naar een [!DNL Profile]-Toegelaten dataset worden verzonden het waarvan schema toestemmingsgebieden bevat. Deze gebieden moeten in het zelfde schema en de dataset worden omvat die u gebruikt om attributeninformatie over individuele klanten te vangen.
 
-Raadpleeg de zelfstudie op [het vormen van een dataset voor het vangen van toestemmingsgegevens](./dataset.md) voor gedetailleerde stappen over het toevoegen van deze vereiste velden aan een [!DNL Profile]-enabled dataset alvorens met deze gids verder te gaan.
+Verwijs naar het leerprogramma op [ vormend een dataset voor het vangen van toestemmingsgegevens ](./dataset.md) voor gedetailleerde stappen op hoe te om deze vereiste gebieden aan a [!DNL Profile]-Toegelaten dataset toe te voegen alvorens met deze gids verder te gaan.
 
-## Bijwerken [!DNL Profile] beleid samenvoegen om toestemmingsgegevens op te nemen {#merge-policies}
+## Beleid voor samenvoegen van [!DNL Profile] bijwerken en gegevens over toestemming opnemen {#merge-policies}
 
-Als u eenmaal een [!DNL Profile]- toegelaten dataset voor de gegevens van de verwerkingstoestemming, moet u ervoor zorgen dat uw samenvoegbeleid is gevormd om toestemmingsgebieden in elk klantenprofiel altijd te omvatten. Dit impliceert het plaatsen van datasetbelangrijkheid zodat uw toestemmingsdataset boven andere potentieel conflicterende datasets voorrang krijgt.
+Zodra u een [!DNL Profile]-Toegelaten dataset voor de gegevens van de verwerkingstoestemming hebt gecreeerd, moet u ervoor zorgen dat uw samenvoegbeleid is gevormd om toestemmingsgebieden in elk klantenprofiel altijd te omvatten. Dit impliceert het plaatsen van datasetbelangrijkheid zodat uw toestemmingsdataset boven andere potentieel conflicterende datasets voorrang krijgt.
 
 >[!NOTE]
 >
 >Als u geen conflicterende datasets hebt, zou u timestamp belangrijkheid voor uw samenvoegbeleid in plaats daarvan moeten plaatsen. Dit helpt ervoor te zorgen dat de recentste toestemming die door een klant wordt gespecificeerd de toestemmingsinstelling is die wordt gebruikt.
 
-Voor meer informatie over hoe u met het samenvoegbeleid kunt werken, begint u met het lezen van de [overzicht van samenvoegbeleid](../../../../profile/merge-policies/overview.md). Wanneer u het samenvoegbeleid instelt, moet u ervoor zorgen dat in uw profielen alle vereiste toestemmingskenmerken zijn opgenomen die door de [!UICONTROL Consents and Preferences] schemaveldgroep, zoals beschreven in de handleiding [opstelling van gegevenssets](./dataset.md).
+Voor meer informatie over hoe te met fusiebeleid te werken, begin door het [ overzicht van het samenvoegingsbeleid ](../../../../profile/merge-policies/overview.md) te lezen. Wanneer vestiging moet uw samenvoegbeleid, u ervoor zorgen dat uw profielen alle vereiste toestemmingsattributen omvatten die door de [!UICONTROL Consents and Preferences] groep van het schemagebied worden verstrekt, zoals die in de gids over [ wordt geschetst datasetvoorbereiding ](./dataset.md).
 
 ## Goedkeuringsgegevens in platform plaatsen
 
@@ -87,23 +87,23 @@ Nadere bijzonderheden over elk van deze methoden zijn te vinden in de onderstaan
 
 ### Vorm het Web SDK van het Experience Platform om toestemmingsgegevens te verwerken {#web-sdk}
 
-Zodra u uw CMP hebt gevormd om op toestemmings-verandering gebeurtenissen op uw website te luisteren, kunt u het Web SDK van het Experience Platform integreren om de bijgewerkte toestemmingsmontages te ontvangen en hen te verzenden naar Platform op elke paginading en wanneer de toestemming-verandering gebeurtenissen voorkomt. Zie de handleiding op [het vormen van SDK van het Web om de gegevens van de klantentoestemming te verwerken](../sdk.md) voor meer informatie .
+Zodra u uw CMP hebt gevormd om op toestemmings-verandering gebeurtenissen op uw website te luisteren, kunt u het Web SDK van het Experience Platform integreren om de bijgewerkte toestemmingsmontages te ontvangen en hen te verzenden naar Platform op elke paginading en wanneer de toestemming-verandering gebeurtenissen voorkomt. Zie de gids bij [ vormend het Web SDK om de gegevens van de klantentoestemming ](../sdk.md) voor meer informatie te verwerken.
 
 ### De Experience Platform Mobile SDK configureren voor het verwerken van toestemmingsgegevens {#mobile-sdk}
 
 Als in uw mobiele toepassing de voorkeursinstellingen voor toestemming van de klant zijn vereist, kunt u de Experience Platform Mobile SDK integreren om toestemmingsinstellingen op te halen en bij te werken en deze naar Platform te verzenden wanneer de API voor toestemming wordt aangeroepen.
 
-Raadpleeg de documentatie bij de Mobile SDK voor [configureren van de mobiele extensie voor toestemming](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) en [de API voor toestemming gebruiken](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Raadpleeg de sectie voor meer informatie over het omgaan met privacyproblemen met de Mobile SDK [Privacy en GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/).
+Zie de Mobiele documentatie van SDK voor [ het vormen van de Mobiele uitbreiding van de Toestemming ](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) en [ gebruikend toestemmings API ](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Voor meer details op hoe te om privacyzorgen te behandelen die Mobiele SDK gebruiken, gelieve te verwijzen naar de sectie [ Privacy en GDPR ](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/).
 
 ### Gegevens met XDM-compatibele machtigingen direct invoeren {#batch}
 
 U kunt XDM-Volgzame toestemmingsgegevens van een Csv- dossier door batch-opname in te voeren. Dit kan nuttig zijn als u een achterstand van eerder verzamelde toestemmingsgegevens hebt die nog in uw klantenprofielen moet worden geïntegreerd.
 
-Volg de zelfstudie op [toewijzen van een CSV-bestand aan XDM](../../../../ingestion/tutorials/map-csv/overview.md) om te leren hoe u uw gegevensvelden kunt omzetten in XDM en deze kunt opnemen in Platform. Wanneer u de [!UICONTROL Destination] voor de toewijzing, zorg ervoor dat u selecteert **[!UICONTROL Use existing dataset]** en kiest u [!DNL Profile]-enabled toestemmingsdataset u eerder creeerde.
+Volg het leerprogramma op [ in kaart brengen een Csv- dossier aan XDM ](../../../../ingestion/tutorials/map-csv/overview.md) om te leren hoe te om uw gegevensgebieden in XDM om te zetten en hen in Platform in te voeren. Wanneer u [!UICONTROL Destination] selecteert voor de toewijzing, moet u de optie **[!UICONTROL Use existing dataset]** selecteren en de gegevensset met [!DNL Profile] ingeschakelde toestemming kiezen die u eerder hebt gemaakt.
 
 ## Implementatie testen {#test-implementation}
 
-Nadat u de gegevens van de klantentoestemming in uw hebt opgenomen [!DNL Profile]-enabled dataset, kunt u uw bijgewerkte profielen controleren om te zien of zij toestemmingsattributen bevatten.
+Nadat u gegevens over klanttoestemming in uw [!DNL Profile]-Toegelaten dataset hebt opgenomen, kunt u uw bijgewerkte profielen controleren om te zien of zij toestemmingsattributen bevatten.
 
 >[!IMPORTANT]
 >
@@ -111,9 +111,9 @@ Nadat u de gegevens van de klantentoestemming in uw hebt opgenomen [!DNL Profile
 >
 >Als u geen toegang hebt tot deze informatie, kunt u ervoor kiezen om uw eigen gegevens over de testtoestemming in te voeren en deze te koppelen aan een identiteitswaarde/naamruimte die u bekend is.
 
-Zie de sectie over [bladeren door profielen op identiteit](../../../../profile/ui/user-guide.md#browse) in de [!DNL Profile] UI-handleiding voor specifieke stappen voor het opzoeken van de details van een profiel.
+Zie de sectie over [ het doorbladeren profielen door identiteit ](../../../../profile/ui/user-guide.md#browse) in de [!DNL Profile] gids UI voor specifieke stappen op hoe te omhoog de details van een profiel te kijken.
 
-De nieuwe toestemmingsattributen zullen niet op het dashboard van een profiel door gebrek verschijnen. Daarom moet u naar de **[!UICONTROL Attributes]** op de detailpagina van een profiel om te bevestigen dat zij zoals verwacht zijn opgenomen. Zie de handleiding op de [profieldashboard](../../../../profile/ui/profile-dashboard.md) om te leren hoe u het dashboard aan uw behoeften kunt aanpassen.
+De nieuwe toestemmingsattributen zullen niet op het dashboard van een profiel door gebrek verschijnen. Daarom moet u naar het tabblad **[!UICONTROL Attributes]** op de detailpagina van een profiel navigeren om te bevestigen dat de gegevens zijn ingevoerd zoals u had verwacht. Zie de gids op het [ profieldashboard ](../../../../profile/ui/profile-dashboard.md) leren hoe te om het dashboard aan uw behoeften aan te passen.
 
 <!-- (To be included once CJM is GA)
 ## Handling consent in Customer Journey Management
@@ -127,4 +127,4 @@ Customer Journey Management can also send consent-change signals back to Platfor
 
 Deze gids behandelde hoe te om uw verrichtingen van het Platform te vormen om de gegevens van de klantentoestemming te verwerken gebruikend de norm van de Adobe, en die attributen te hebben die in klantenprofielen worden vertegenwoordigd. U kunt de voorkeur van de klantentoestemming nu als bepalende factor in segmentkwalificatie en andere downstreamgebruiksgevallen integreren.
 
-Voor meer informatie over de privacy-gerelateerde mogelijkheden van Experience Platform raadpleegt u het overzicht over [governance, privacy en beveiliging in het platform](../../overview.md).
+Voor meer informatie over de privacy-verwante mogelijkheden van het Experience Platform, zie het overzicht over [ bestuur, privacy, en veiligheid in Platform ](../../overview.md).

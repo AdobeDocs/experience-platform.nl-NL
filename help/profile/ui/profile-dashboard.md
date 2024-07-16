@@ -13,10 +13,10 @@ ht-degree: 0%
 
 # [!UICONTROL Profiles] dashboard {#profile-dashboard}
 
-De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over uw kunt bekijken [!DNL Real-Time Customer Profile] gegevens, zoals vastgelegd tijdens een dagelijkse momentopname.
+De gebruikersinterface van Adobe Experience Platform (UI) biedt een dashboard waarmee u belangrijke informatie over uw [!DNL Real-Time Customer Profile] gegevens kunt bekijken, zoals vastgelegd tijdens een dagelijkse momentopname.
 
-Voor gedetailleerde instructies over hoe te om tot en met [!UICONTROL Profiles] het dashboard in UI, evenals meer over de beschikbare metriek die in het dashboard wordt getoond, gelieve te bezoeken [[!UICONTROL Profiles] dashboardhulplijn](../../dashboards/guides/profiles.md).
+Voor gedetailleerde instructies op om tot het [!UICONTROL Profiles] dashboard in UI toegang te hebben en in wisselwerking te staan, evenals meer over de beschikbare metriek te leren die in het dashboard wordt getoond, gelieve de [[!UICONTROL Profiles] dashboardgids ](../../dashboards/guides/profiles.md) te bezoeken.
 
-Voor een overzicht van alle dashboardfuncties in de gebruikersinterface van het Experience Platform, begin door te lezen [overzicht van dashboards](../../dashboards/home.md).
+Voor een overzicht van alle dashboardeigenschappen binnen het gebruikersinterface van het Experience Platform, gelieve te beginnen door het [ overzicht van dashboards ](../../dashboards/home.md) te lezen.
 
-![Het dashboard Profiel wordt weergegeven.](../images/profile-dashboard/dashboard-overview.png)
+![ het dashboard van het Profiel wordt getoond.](../images/profile-dashboard/dashboard-overview.png)

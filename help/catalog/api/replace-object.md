@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Een catalogusobject vervangen
 
-U kunt de inhoud van een [!DNL Catalog] object dat gebruikmaakt van een verzoek om PUT, waarbij de volledige bron wordt vervangen door de lading van het verzoek.
+U kunt de inhoud van een [!DNL Catalog] -object overschrijven met behulp van een verzoek om PUT, waarbij de volledige bron wordt vervangen door de payload van de aanvraag.
 
 >[!NOTE]
 >
->Als u slechts een paar specifieke gebieden binnen a moet bijwerken [!DNL Catalog] -object, is het gebruik van een PATCH-verzoek wellicht efficiënter.
+>Als u slechts een paar specifieke gebieden binnen een voorwerp [!DNL Catalog] moet bijwerken, kan het gebruiken van een verzoek van de PATCH efficiënter zijn.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /{OBJECT_TYPE}/{OBJECT_ID}
@@ -27,7 +27,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te vervangen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] -object dat moet worden vervangen. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**
@@ -54,7 +54,7 @@ curl -X PUT \
     }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een array die de id van het overschreven object bevat. Deze id moet overeenkomen met de id die in de aanvraag voor PUT is verzonden. Wanneer u een GET-verzoek voor dit object uitvoert, wordt nu aangegeven dat de gegevens zijn vervangen door de gegevens die zijn opgegeven in de payload van het vorige verzoek om PUT.
 

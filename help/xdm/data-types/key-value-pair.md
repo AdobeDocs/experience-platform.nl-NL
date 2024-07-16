@@ -11,9 +11,9 @@ ht-degree: 1%
 
 # [!UICONTROL Key Value Pair] gegevenstype
 
-[!UICONTROL Key Value Pair] is een standaardgegevenstype van de Gegevens van de Ervaring Model (XDM) dat de details van een generisch zeer belangrijk-waardepaar vangt. Dit gegevenstype wordt gebruikt in het dialoogvenster [[!UICONTROL Adobe Analytics ExperienceEvent Full Extension] veldgroep](../field-groups/event/analytics-full-extension.md) om de arrayitems van een lijstvariabele te beschrijven.
+[!UICONTROL Key Value Pair] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat de details van een generisch zeer belangrijk-waardepaar vangt. Dit gegevenstype wordt gebruikt in de [[!UICONTROL Adobe Analytics ExperienceEvent Full Extension] gebiedsgroep ](../field-groups/event/analytics-full-extension.md) om de seriepunten van een lijstvariabele te beschrijven.
 
-![Hoofdwaardestructuur](../images/data-types/key-value-pair.png)
+![ Zeer belangrijke Structuur van het Paar van de Waarde ](../images/data-types/key-value-pair.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -22,4 +22,4 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-Raadpleeg voor meer informatie over het gegevenstype [de openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/keyvalue.schema.json).
+Voor meer details op het gegevenstype, verwijs naar [ de openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/keyvalue.schema.json).

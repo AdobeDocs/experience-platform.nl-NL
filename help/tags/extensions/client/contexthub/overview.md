@@ -1,6 +1,6 @@
 ---
-title: Adobe ContextHub-extensie - overzicht
-description: Leer over de de marktextensie van Adobe ContextHub in Adobe Experience Platform.
+title: Overzicht van ContextHub-extensie voor Adobe
+description: Leer over de de marktextensie van ContextHub van de Adobe in Adobe Experience Platform.
 exl-id: 90700ce2-14fd-4d15-bbb8-98a8bbca5005
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
@@ -9,21 +9,21 @@ ht-degree: 0%
 
 ---
 
-# Adobe ContextHub-extensieoverzicht
+# Overzicht van ContextHub-extensie voor Adobe
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
-Gebruik deze verwijzing voor informatie over het vormen van de uitbreiding van Adobe ContextHub, en de opties beschikbaar wanneer het gebruiken van deze uitbreiding om een regel te bouwen.
+Gebruik deze verwijzing voor informatie over het vormen van de uitbreiding van ContextHub van de Adobe, en de opties beschikbaar wanneer het gebruiken van deze uitbreiding om een regel te bouwen.
 
-## De Adobe ContextHub-extensie configureren
+## Vorm de uitbreiding van ContextHub van de Adobe
 
-Deze sectie verstrekt een verwijzing voor de beschikbare opties wanneer het vormen van de uitbreiding van Adobe ContextHub.
+Deze sectie verstrekt een verwijzing voor de beschikbare opties wanneer het vormen van de uitbreiding van ContextHub van de Adobe.
 
-Als de uitbreiding van Adobe ContextHub nog niet geïnstalleerd is, open uw bezit, dan uitgezocht **[!UICONTROL Extensions > Catalog]**, beweegt over de uitbreiding van Adobe ContextHub, en selecteert **[!UICONTROL Install]**.
+Als de uitbreiding van ContextHub van de Adobe nog niet geïnstalleerd is, open uw bezit, dan uitgezochte **[!UICONTROL Extensions > Catalog]**, over de uitbreiding van ContextHub van de Adobe, en selecteer **[!UICONTROL Install]**.
 
-Als u de extensie wilt configureren, opent u de [!UICONTROL Extensions] , plaatst u de cursor boven de extensie en selecteert u vervolgens **[!UICONTROL Configure]**.
+Als u de extensie wilt configureren, opent u het tabblad [!UICONTROL Extensions] , plaatst u de muisaanwijzer op de extensie en selecteert u **[!UICONTROL Configure]** .
 
 ![](../../../images/ext-contexthub-config.png)
 

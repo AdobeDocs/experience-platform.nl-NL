@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Native id ophalen voor een identiteit
 
-Identiteitsgegevens worden doorgaans verstrekt als een ID-tekenreekswaarde en naamruimte in opgenomen XDM-gegevens en wanneer een identiteit wordt opgegeven voor gebruik in een API-aanroep. Wanneer identiteiten behouden blijven in [!DNL Identity Service], wordt een id gegenereerd en toegewezen aan die identiteit, genaamd de native XID. [!DNL Platform] API&#39;s die ondersteuning voor identiteitsgegevens vereisen, gebruiken dit compactere formulier voor de samengevoegde id en naamruimte. XID is een base64-gecodeerde tekenreeks.
+Identiteitsgegevens worden doorgaans verstrekt als een ID-tekenreekswaarde en naamruimte in opgenomen XDM-gegevens en wanneer een identiteit wordt opgegeven voor gebruik in een API-aanroep. Wanneer id&#39;s in [!DNL Identity Service] worden herhaald, wordt een id gegenereerd en toegewezen aan die identiteit, de native XID genaamd. [!DNL Platform] API&#39;s die ondersteuning voor identiteitsgegevens vereisen, gebruiken dit compactere formulier voor de samengevoegde id en naamruimte. XID is een base64-gecodeerde tekenreeks.
 
 >[!NOTE]
 >
->Dit formaat is hoofdzakelijk voor gebruik binnen de Adobe. Native XID als een enkelvoudige waarde is ruimteefficiënter en is wat intern binnen wordt gebruikt [!DNL Platform] oplossingen voor opslag en serialisatie. Het is echter niet leesbaar voor mensen, het is ondoorzichtig en vereist een aparte aanroep om het te gebruiken.
+>Dit formaat is hoofdzakelijk voor gebruik binnen de Adobe. Native XID is een unieke waarde voor meer ruimte en is wat intern wordt gebruikt binnen [!DNL Platform] -oplossingen voor opslag en serialisatie. Het is echter niet leesbaar voor mensen, het is ondoorzichtig en vereist een aparte aanroep om het te gebruiken.
 
 Verkrijg XID voor een bepaalde waarde van identiteitskaart en namespace gebruikend de dienst die in deze sectie wordt beschreven.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET https://platform-{REGION}.adobe.io/data/core/identity/identity?namespace={NAMESPACE}&id={ID_VALUE}
@@ -39,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 ```json
 {

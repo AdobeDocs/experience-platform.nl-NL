@@ -11,23 +11,23 @@ ht-degree: 0%
 
 # `sendEvent`
 
-De `sendEvent` bevel is de primaire manier om gegevens naar Adobe te verzenden, om gepersonaliseerde inhoud, identiteiten, en publieksbestemmingen terug te winnen. Gebruik de [`xdm`](xdm.md) -object om gegevens te verzenden die zijn toegewezen aan uw Adobe Experience Platform-schema. Gebruik de [`data`](data.md) -object om niet-XDM-gegevens te verzenden. Met de datastroommapper kunt u gegevens binnen dit object uitlijnen op schemavelden.
+De opdracht `sendEvent` is de primaire manier om gegevens naar Adobe te verzenden, om gepersonaliseerde inhoud, identiteiten en publieksdoelen op te halen. Met het [`xdm`](xdm.md) -object kunt u gegevens verzenden die zijn toegewezen aan uw Adobe Experience Platform-schema. Gebruik het [`data`](data.md) -object om niet-XDM-gegevens te verzenden. Met de datastroommapper kunt u gegevens binnen dit object uitlijnen op schemavelden.
 
 ## Gebeurtenisgegevens verzenden met de webSDK-tagextensie
 
 Het verzenden van gebeurtenisgegevens wordt uitgevoerd als een handeling binnen een regel in de interface met Adobe Experience Platform-tags voor gegevensverzameling.
 
-1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
-1. Navigeren naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
-1. Navigeren naar **[!UICONTROL Rules]** Selecteer vervolgens de gewenste regel.
-1. Onder [!UICONTROL Actions], selecteert u een bestaande actie of maakt u een actie.
-1. Stel de [!UICONTROL Extension] vervolgkeuzeveld naar **[!UICONTROL Adobe Experience Platform Web SDK]** en stelt de [!UICONTROL Action Type] tot **[!UICONTROL Send event]**.
-1. Stel de gewenste velden in en klik op **[!UICONTROL Keep Changes]** en voer vervolgens uw publicatieworkflow uit.
+1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
+1. Selecteer onder [!UICONTROL Actions] een bestaande actie of maak een actie.
+1. Stel het vervolgkeuzeveld [!UICONTROL Extension] in op **[!UICONTROL Adobe Experience Platform Web SDK]** en stel de waarde [!UICONTROL Action Type] in op **[!UICONTROL Send event]** .
+1. Stel de gewenste velden in, klik op **[!UICONTROL Keep Changes]** en voer vervolgens de publicatieworkflow uit.
 
 ## Gebeurtenisgegevens verzenden met de Web SDK JavaScript-bibliotheek
 
-Voer de `sendEvent` bevel wanneer het roepen van uw gevormde instantie van het Web SDK. Zorg ervoor dat u de [`configure`](../configure/overview.md) bevel alvorens te roepen `sendEvent` gebruiken.
+Voer het `sendEvent` bevel in werking wanneer het roepen van uw gevormde instantie van het Web SDK. Roep de opdracht [`configure`](../configure/overview.md) aan voordat u de opdracht `sendEvent` aanroept.
 
 ```js
 alloy("sendEvent", {
@@ -42,8 +42,8 @@ alloy("sendEvent", {
 
 ## Object Response
 
-Als u besluit [reacties verwerken](../command-responses.md) met deze opdracht zijn de volgende eigenschappen beschikbaar in het reactieobject:
+Als u besluit om [ reacties ](../command-responses.md) met dit bevel te behandelen, zijn de volgende eigenschappen beschikbaar in het reactievoorwerp:
 
-* **`propositions`**: Een array met voorstellingen die door de Edge Network worden geretourneerd. Voorstellen die automatisch worden gerenderd, omvatten de markering `renderAttempted` instellen op `true`.
+* **`propositions`**: Een array met voorstellingen die door de Edge Network worden geretourneerd. Voorwaarden die automatisch worden gerenderd, zijn onder andere de markering `renderAttempted` ingesteld op `true` .
 * **`inferences`**: Een array van gebeurtenisobjecten die informatie over deze gebruiker bevatten.
-* **`destinations`**: Een array van doelobjecten die door de Edge Network worden geretourneerd.
+* **`destinations`**: een array met doelobjecten die door de Edge Network worden geretourneerd.

@@ -23,14 +23,14 @@ Met behulp van invloedrijke factoren kan de AI van de Klant u vertellen wat een 
 * Klantenprofielen verbeteren met invloedrijke factoren voor populatiescore.
 * Het creëren van een publiek van klanten op basis van invloedrijke factoren en nevenscores.
 
-AI van de klant bevindt zich in de **[!UICONTROL Services]** tab onder **[!UICONTROL Adobe services]**.
+AI van de klant bevindt zich op het tabblad **[!UICONTROL Services]** onder **[!UICONTROL Adobe services]** .
 
-![AI-locatie van klant](../assets/overview/rtcdp-customer-ai.png)
+](../assets/overview/rtcdp-customer-ai.png) de plaats van AI van de Klant 0}![
 
 ## Aan de slag met Customer AI
 
-Om aan de slag te gaan met Customer AI moet u de [zelfstudie over gegevensprestatie](../../intelligent-services/data-preparation.md) en vorm het inputschema dat op uw gebruiksgeval wordt gebaseerd. Nu moet u [een AI-instantie van een klant configureren](../../intelligent-services/customer-ai/user-guide/configure.md). Na het vormen van een instantie, wordt een model geproduceerd waar u kunt [uw inzichten en scores bekijken](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Met behulp van de gegevens die op basis van uw model worden gegenereerd, kunt u een publiek maken dat gegevens activeert.
+Om met Klant AI begonnen te worden moet u het [ leerprogramma van de gegevensprestatie volgen ](../../intelligent-services/data-preparation.md) en het inputschema vormen dat op uw gebruiksgeval wordt gebaseerd. Daarna, zult u een instantie van de Klant moeten [ vormen AI ](../../intelligent-services/customer-ai/user-guide/configure.md). Na het vormen van een instantie, wordt een model geproduceerd waar u uw inzichten en scores [ kunt bekijken ](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Met behulp van de gegevens die op basis van uw model worden gegenereerd, kunt u een publiek maken dat gegevens activeert.
 
-Als u meer wilt weten over AI van klanten, kunt u beginnen met een bezoek aan de [AI-overzicht van klant](../../intelligent-services/customer-ai/overview.md). Bovendien toont de volgende video hoe de AI van de Klant klantenprofielen met op AI-Gebaseerde eigenschappen verrijkt en klantensegmentatie en gerichte inspanningen toelaat.
+Om meer over Klant AI te leren, begin door het [ overzicht van AI van de Klant ](../../intelligent-services/customer-ai/overview.md) te bezoeken. Bovendien toont de volgende video hoe de AI van de Klant klantenprofielen met op AI-Gebaseerde eigenschappen verrijkt en klantensegmentatie en gerichte inspanningen toelaat.
 
 >[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)

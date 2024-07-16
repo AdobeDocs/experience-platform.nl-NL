@@ -15,9 +15,9 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 
 ## Contact {#contact}
 
-Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [XDM Business Person Details schema, veldgroep](../../../../xdm/field-groups/profile/business-person-details.md) gids en [XDM Business Person Components Schema, veldgroep](../../../../xdm/field-groups/profile/business-person-components.md) hulplijn.
+Lees het [ XDM Individuele overzicht van het Profiel ](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de ](../../../../xdm/field-groups/profile/business-person-details.md) gids van de het schemagroep van de Details van de BedrijfsPersoon van 0} XDM {en [ XDM van de BedrijfsPersoon de het schemagroep van Componenten van de Componenten ](../../../../xdm/field-groups/profile/business-person-components.md).[
 
-| Bronveld | Doel XDM-veldpad | Notities |
+| Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
 | `AccountId` | `b2b.accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `b2b.accountKey` |
@@ -75,9 +75,9 @@ Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individu
 
 ## Lood {#lead}
 
-Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [XDM Business Person Details schema, veldgroep](../../../../xdm/field-groups/profile/business-person-details.md) gids en [XDM Business Person Components Schema, veldgroep](../../../../xdm/field-groups/profile/business-person-components.md) hulplijn.
+Lees het [ XDM Individuele overzicht van het Profiel ](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de ](../../../../xdm/field-groups/profile/business-person-details.md) gids van de het schemagroep van de Details van de BedrijfsPersoon van 0} XDM {en [ XDM van de BedrijfsPersoon de het schemagroep van Componenten van de Componenten ](../../../../xdm/field-groups/profile/business-person-components.md).[
 
-| Bronveld | Doel XDM-veldpad | Notities |
+| Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
 | `ConvertedDate` | `b2b.convertedDate` |
@@ -126,9 +126,9 @@ Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individu
 
 ## Account {#account}
 
-Lees de [Overzicht van XDM Business Account](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
+Lees het [ XDM overzicht van de details van de BedrijfsRekening ](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
 
-| Bronveld | Doel XDM-veldpad | Notities |
+| Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
 | `"Salesforce"` | `accountKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
@@ -182,9 +182,9 @@ Lees de [Overzicht van XDM Business Account](../../../../xdm/classes/b2b/busines
 
 ## Opportunity {#opportunity}
 
-Lees de [Overzicht van XDM Business Opportunity](../../../../xdm/classes/b2b/business-opportunity.md) voor meer informatie over de klasse XDM.
+Lees het [ XDM overzicht van de BedrijfsKans ](../../../../xdm/classes/b2b/business-opportunity.md) voor meer informatie over de klasse XDM.
 
-| Bronveld | Doel XDM-veldpad | Notities |
+| Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
@@ -223,9 +223,9 @@ Lees de [Overzicht van XDM Business Opportunity](../../../../xdm/classes/b2b/bus
 
 ## Contactrol opportunity {#opportunity-contact-role}
 
-Lees de [Overzicht van de XDM Business Opportunity Person Relatie-klasse](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) voor meer informatie over de klasse XDM.
+Lees [ XDM de klassenoverzicht van de Verhouding van de Onderneming van de Opportunity ](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) voor meer informatie over de klasse XDM.
 
-| Bronveld | Doel XDM-veldpad | Notities |
+| Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
@@ -249,9 +249,9 @@ Lees de [Overzicht van de XDM Business Opportunity Person Relatie-klasse](../../
 
 ## Campaign {#campaign}
 
-Lees de [Overzicht van de klasse XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [XDM Business Campagne details schema groep](../../../../xdm/field-groups/b2b-campaign/details.md) hulplijn.
+Lees het [ XDM BedrijfsCampagne klassenoverzicht ](../../../../xdm/classes/b2b/business-campaign.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de ](../../../../xdm/field-groups/b2b-campaign/details.md) gids van het de detailsschema van de BedrijfsCampagne van de 0} XDM van de de detailhandel van de Campagne groep {.[
 
-| Bronveld | Doel XDM-veldpad | Notities |
+| Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
@@ -280,9 +280,9 @@ Lees de [Overzicht van de klasse XDM Business Campaign](../../../../xdm/classes/
 
 ## Campagnelid {#campaign-member}
 
-Lees de [Overzicht van XDM Business Campaign-leden](../../../../xdm/classes/b2b/business-campaign-members.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [XDM Business Campagne Member Details schema groep](../../../../xdm/field-groups/b2b-campaign/details.md) document.
+Lees het [ XDM overzicht van de Leden Bedrijfs van de Campagne ](../../../../xdm/classes/b2b/business-campaign-members.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees het [ XDM Van Bedrijfs het detailsschemagebied van het Lid van de Campagne ](../../../../xdm/field-groups/b2b-campaign/details.md) document.
 
-| Bronveld | Doel XDM-veldpad | Notities |
+| Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
@@ -306,9 +306,9 @@ Lees de [Overzicht van XDM Business Campaign-leden](../../../../xdm/classes/b2b/
 
 ## Contactpersoon account {#account-contact-relation}
 
-Lees de [XDM Business Account Person Relatie-klasse](../../../../xdm/classes/b2b/business-account-person-relation.md) voor meer informatie over de klasse XDM.
+Lees de [ klasse van de Verhouding van de Person van de BedrijfsRekening XDM ](../../../../xdm/classes/b2b/business-account-person-relation.md) voor meer informatie over de klasse XDM.
 
-| Bronveld | Doel XDM-veldpad | Notities |
+| Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
 | `AccountId` | `accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` |
@@ -331,4 +331,4 @@ Lees de [XDM Business Account Person Relatie-klasse](../../../../xdm/classes/b2b
 
 ## Volgende stappen
 
-Door dit document te lezen hebt u meer inzicht gekregen in de relatie tussen [!DNL Salesforce] bronvelden en de bijbehorende XDM-velden. Zie de documentatie op [een [!DNL Salesforce] bronverbinding](../../../connectors/crm/salesforce.md) voor meer informatie .
+Door dit document te lezen, hebt u meer inzicht gekregen in de toewijzingsrelatie tussen [!DNL Salesforce] bronvelden en de bijbehorende XDM-velden. Zie de documentatie bij [ het creëren van a  [!DNL Salesforce]  bronverbinding ](../../../connectors/crm/salesforce.md) voor meer informatie.

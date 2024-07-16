@@ -19,9 +19,9 @@ Met het dashboard voor bewaking in de gebruikersinterface van Adobe Experience P
 
 Het controledashboard ondersteunt de weergave van verschillende gegevenstypen:
 
-* **Klant en account**: Gegevens van de klant hebben betrekking op de gegevens die worden gebruikt in [Real-time Customer Data Platform](../../rtcdp/home.md), terwijl accountgegevens betrekking hebben op [accountprofielgegevens](../../rtcdp/accounts/account-profile-overview.md) dat toegankelijk is wanneer geabonneerd op [Real-Time CDP, B2B Edition](../../rtcdp/b2b-overview.md). Als uw Real-Time CDP-licentie Real-Time CDP, B2B Edition niet bevat, kunt u het dashboard voor bewaking alleen gebruiken om de klantgegevens te controleren.
-* **Perspectief**: [Prospectieprofielen](../../profile/ui/prospect-profile.md) worden gebruikt om mensen te vertegenwoordigen die nog niet met uw bedrijf in dienst hebben maar u wilt bereiken. Met perspectiefprofielen, kunt u uw klantenprofielen met attributen van vertrouwde op derdepartners aanvullen. U moet een licentie hebben met Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate om het gegevenstype voor perspectiefgegevens te kunnen bekijken.
-* **Verbetering van accountprofiel**: Met accountprofielen kunt u accountgegevens uit meerdere bronnen verenigen. U moet een licentie hebben voor de Real-Time CDP B2B-editie om de gegevens over het verrijken van accountprofielen te kunnen controleren.
+* **Klant &amp; Rekening**: De gegevens van de Klant verwijzen naar de gegevens die in [ Real-time Customer Data Platform ](../../rtcdp/home.md) worden gebruikt, terwijl de rekeningsgegevens naar [ gegevens van rekeningsprofielen ](../../rtcdp/accounts/account-profile-overview.md) verwijzen die wanneer geabonneerd aan [ Real-Time CDP, B2B Uitgave ](../../rtcdp/b2b-overview.md) toegankelijk zijn. Als uw Real-Time CDP-licentie Real-Time CDP, B2B Edition niet bevat, kunt u het dashboard voor bewaking alleen gebruiken om de klantgegevens te controleren.
+* **Vooruitzicht**: [ de profielen van het Vooruitzicht ](../../profile/ui/prospect-profile.md) worden gebruikt om mensen te vertegenwoordigen die nog niet met uw bedrijf in dienst hebben genomen maar u wilt bereiken. Met perspectiefprofielen, kunt u uw klantenprofielen met attributen van vertrouwde op derdepartners aanvullen. U moet een licentie hebben met Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate om het gegevenstype voor perspectiefgegevens te kunnen bekijken.
+* **de profielverrijking van de Rekening**: De profielen van de rekening laten u toe om rekeningsinformatie uit veelvoudige bronnen te verenigen. U moet een licentie hebben voor de Real-Time CDP B2B-editie om de gegevens over het verrijken van accountprofielen te kunnen controleren.
 
 Lees dit document om te leren hoe u het dashboard voor bewaking kunt gebruiken om de reis van uw gegevens over verschillende services van Experience Platforms te controleren.
 
@@ -29,20 +29,20 @@ Lees dit document om te leren hoe u het dashboard voor bewaking kunt gebruiken o
 
 Voor dit document is een goed begrip van de volgende onderdelen van het Experience Platform vereist:
 
-* [Gegevensstromen](../home.md): Dataflows are representations of data jobs that move data across Experience Platform. U kunt de werkruimte van bronnen gebruiken om gegevensstromen tot stand te brengen die gegevens van een bepaalde bron aan Experience Platform opnemen.
-* [Bronnen](../../sources/home.md): Gebruik bronnen in Experience Platform om gegevens van een Adobe of een gegevensbron van derden in te voeren.
-* [Identiteitsservice](../../identity-service/home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-* [Klantprofiel in realtime](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-* [Segmentering](../../segmentation/home.md): Gebruik de Segmentatieservice om segmenten en publiek te maken op basis van uw gegevens van het profiel van de klant in realtime.
-* [Doelen](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Platform voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen toestaan.
+* [ Dataflows ](../home.md): Dataflows zijn vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. U kunt de werkruimte van bronnen gebruiken om gegevensstromen tot stand te brengen die gegevens van een bepaalde bron aan Experience Platform opnemen.
+* [ Bronnen ](../../sources/home.md): De bronnen van het gebruik in Experience Platform om gegevens van een toepassing van de Adobe of een derdegegevensbron in te voeren.
+* [ Dienst van de Identiteit ](../../identity-service/home.md): Verkrijg een betere mening van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
+* [ Real-Time Profiel van de Klant ](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [ Segmentatie ](../../segmentation/home.md): Gebruik de Dienst van de Segmentatie om segmenten en publiek van uw gegevens van het Profiel van de Klant in real time tot stand te brengen.
+* [ Doelen ](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Platform voor dwars-kanaal marketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen toestaan.
 
 ## Handleiding voor het controledashboard
 
-Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UICONTROL Monitoring]** krachtens [!UICONTROL Data Management] in de linkernavigatie.
+Selecteer in de gebruikersinterface van het Experience Platform **[!UICONTROL Monitoring]** onder [!UICONTROL Data Management] in de linkernavigatie.
 
-![Het controledashboard in Experience Platform UI.](../assets/ui/monitor-overview/monitoring.png)
+![ het controledashboard in het Experience Platform UI.](../assets/ui/monitor-overview/monitoring.png)
 
-Selecteren **[!UICONTROL Data Type]** en gebruikt u vervolgens het vervolgkeuzemenu om het type gegevens te selecteren dat u wilt weergeven. De gegevenstypes worden bepaald door het schemaklassen van het Model van de Gegevens van de Ervaring (XDM) om ervoor te zorgen dat hun gegevens een standaardformaat wanneer ingebed in Experience Platform volgen. Raadpleeg de volgende documentatie voor meer informatie:
+Selecteer **[!UICONTROL Data Type]** en gebruik vervolgens het vervolgkeuzemenu om het type gegevens te selecteren dat u wilt weergeven. De gegevenstypes worden bepaald door het schemaklassen van het Model van de Gegevens van de Ervaring (XDM) om ervoor te zorgen dat hun gegevens een standaardformaat wanneer ingebed in Experience Platform volgen. Raadpleeg de volgende documentatie voor meer informatie:
 
 * [B2B-rekeninggegevenstype](../../rtcdp/b2b-tutorial.md)
 * [Gegevenstype prospectie](../../rtcdp/partner-data/prospecting.md)
@@ -51,29 +51,29 @@ U kunt de weergave filteren op basis van de volgende gegevenstypen:
 
 >[!BEGINTABS]
 
->[!TAB Alles]
+>[!TAB  allen ]
 
-Selecteren **[!UICONTROL All]** om uw dashboard bij te werken en metriek op alle gegevens te tonen die aan Experience Platform in de loop van een bepaalde periode zijn opgenomen.
+Selecteer **[!UICONTROL All]** om het dashboard bij te werken en metriek weer te geven voor alle gegevens die gedurende een bepaalde periode aan het Experience Platform zijn toegevoegd.
 
-![Het gegevenstype voor bewaking is ingesteld op Alles.](../assets/ui/monitor-overview/all.png)
+![ het type van controlegegevens dat aan &quot;allen&quot;wordt geplaatst.](../assets/ui/monitor-overview/all.png)
 
->[!TAB Klant en account]
+>[!TAB  Klant &amp; Rekening ]
 
-Selecteren **[!UICONTROL Customer & Account]** om uw dashboard bij te werken en metriek weer te geven op gegevens van klanten en accounts die gedurende een bepaalde periode aan Experience Platform zijn toegevoegd.
+Selecteer **[!UICONTROL Customer & Account]** om uw dashboard bij te werken en metriek weer te geven op Customer &amp; Account-gegevens die gedurende een bepaalde periode aan het Experience Platform zijn doorgegeven.
 
-![Het gegevenstype voor bewaking is ingesteld op &quot;Klant &amp; Account&quot;.](../assets/ui/monitor-overview/customer-account.png)
+![ het type van controlegegevens dat aan &quot;Klant &amp; Rekening&quot;wordt geplaatst.](../assets/ui/monitor-overview/customer-account.png)
 
->[!TAB Perspectief]
+>[!TAB  Vooruitziendheid ]
 
-Selecteren **[!UICONTROL Prospect]** om uw dashboard en vertoningsmetriek op het prospecteren van gegevens bij te werken die aan Experience Platform in de loop van een bepaalde periode zijn opgenomen. **Opmerking**: U kunt activiteiten van het type van vooruitlopende gegevens alleen bekijken als u [recht op prospectiegegevens](../../rtcdp/partner-data/prospecting.md).
+Selecteer **[!UICONTROL Prospect]** om het dashboard bij te werken en metriek weer te geven bij het zoeken naar gegevens die gedurende een bepaalde periode aan het Experience Platform zijn toegevoegd. **Nota**: U kunt de activiteiten van het vooruitgangsgegevenstype slechts bekijken als u [ gerechtigd bent om gegevens ](../../rtcdp/partner-data/prospecting.md) te voorzien.
 
-![Het gegevenstype van de controle is ingesteld op &quot;Prospect&quot;.](../assets/ui/monitor-overview/prospect.png)
+![ het type van controlegegevens dat aan &quot;Vooruitzicht&quot;wordt geplaatst.](../assets/ui/monitor-overview/prospect.png)
 
->[!TAB Verbetering van accountprofiel]
+>[!TAB  de profielverrijking van de Rekening ]
 
-Selecteren **[!UICONTROL Account profile enrichment]** om uw dashboard bij te werken en metriek op de gegevens van de profielverrijking te tonen. **Opmerking**: U kunt de cijfers voor het verrijken van accountprofielen alleen weergeven als u gemachtigd bent om [B2B-gegevens](../../rtcdp/b2b-tutorial.md).
+Selecteer **[!UICONTROL Account profile enrichment]** om het dashboard bij te werken en metriek weer te geven op de gegevens voor profielverrijking. **Nota**: U kunt de metriek van de de profielverrijking van de rekening slechts bekijken als u [ B2B- gegevens ](../../rtcdp/b2b-tutorial.md) gerechtigd bent.
 
-![Het gegevenstype voor bewaking is ingesteld op &quot;Verrijking accountprofiel&quot;.](../assets/ui/monitor-overview/account-profile-enrichment.png)
+![ het type van controlegegevens dat aan &quot;de profielverrijking van de Rekening&quot;wordt geplaatst.](../assets/ui/monitor-overview/account-profile-enrichment.png)
 
 >[!ENDTABS]
 
@@ -81,43 +81,43 @@ Gebruik de bovenste koptekst van het dashboard voor een ervaring van cross-servi
 
 >[!BEGINTABS]
 
->[!TAB Bronnen]
+>[!TAB  Bronnen ]
 
-Selecteren **[!UICONTROL Sources]** om de metriek van uw bronopname tarief te bekijken. Lees de handleiding op [gegevens over monitoringbronnen](monitor-sources.md) voor meer informatie .
+Selecteer **[!UICONTROL Sources]** om de metriek van uw bronopname te bekijken tarief. Lees de gids over [ controlemiddel gegevens ](monitor-sources.md) voor meer informatie.
 
-![Het controledashboard in UI met de geselecteerde bronkaart.](../assets/ui/monitor-overview/sources.png)
+![ het controledashboard in UI met de geselecteerde bronkaart.](../assets/ui/monitor-overview/sources.png)
 
->[!TAB Identiteiten]
+>[!TAB  Identiteiten ]
 
-Selecteren **[!UICONTROL Identities]** om de snelheid van het verwerken van uw identiteitsgegevens te bekijken. Lees de handleiding op [identiteitsgegevens controleren](monitor-identities.md) voor meer informatie .
+Selecteer **[!UICONTROL Identities]** om de snelheid te bekijken waarmee uw identiteitsgegevens zijn verwerkt. Lees de gids over [ controleidentiteitsgegevens ](monitor-identities.md) voor meer informatie.
 
-![Het controledashboard in UI met de geselecteerde identiteitskaart](../assets/ui/monitor-overview/identities.png)
+![ het controledashboard in UI met geselecteerde identiteitskaart.](../assets/ui/monitor-overview/identities.png)
 
->[!TAB Profielen]
+>[!TAB  Profielen ]
 
-Selecteren **[!UICONTROL Profiles]** om de snelheid van het verwerken van uw profielgegevens weer te geven. Lees de handleiding op [profielgegevens controleren](monitor-profiles.md) voor meer informatie .
+Selecteer **[!UICONTROL Profiles]** om de successnelheid van de verwerking van uw profielgegevens weer te geven. Lees de gids over [ controleprofielgegevens ](monitor-profiles.md) voor meer informatie.
 
-![Het controledashboard in UI met de geselecteerde profielkaart.](../assets/ui/monitor-overview/profiles.png)
+![ het controledashboard in UI met de geselecteerde profielkaart.](../assets/ui/monitor-overview/profiles.png)
 
 >[!TAB Doelgroepen]
 
-Selecteren **[!UICONTROL Audiences]** om metriek op uw publiek en segmentatietaken te bekijken. Lees de handleiding op [gegevens voor het publiek controleren](monitor-audiences.md) voor meer informatie .
+Selecteer **[!UICONTROL Audiences]** om metriek op uw publiek en segmentatietaken weer te geven. Lees de gids over [ controlerende publieksgegevens ](monitor-audiences.md) voor meer informatie.
 
-![Het dashboard voor bewaking in de gebruikersinterface met de geselecteerde geluidskaart.](../assets/ui/monitor-overview/audiences.png)
+![ het controledashboard in de UI met de geselecteerde publiekskaart.](../assets/ui/monitor-overview/audiences.png)
 
 >[!TAB Doelen]
 
-Selecteren **[!UICONTROL Destinations]** om metriek op uw [!UICONTROL Streaming activate rate] en [!UICONTROL Batch failed dataflow runs]. Lees de handleiding op [gegevens over controledoelen](monitor-destinations.md) voor meer informatie .
+Selecteer **[!UICONTROL Destinations]** om metriek op uw [!UICONTROL Streaming activate rate] en [!UICONTROL Batch failed dataflow runs] weer te geven. Lees de gids over [ controledoelgegevens ](monitor-destinations.md) voor meer informatie.
 
-![Het controledashboard in UI met de geselecteerde bestemmingskaart.](../assets/ui/monitor-overview/destinations.png)
+![ het controledashboard in UI met de geselecteerde bestemmingskaart.](../assets/ui/monitor-overview/destinations.png)
 
 >[!ENDTABS]
 
 ### Bewakingstijdframe configureren {#configure-monitoring-time-frame}
 
-Standaard worden op het dashboard voor bewaking meetgegevens weergegeven over gegevens die in de afgelopen 24 uur zijn ingevoerd. Als u het tijdkader wilt bijwerken, selecteert u **[!UICONTROL Last 24 hours]**.
+Standaard worden op het dashboard voor bewaking meetgegevens weergegeven over gegevens die in de afgelopen 24 uur zijn ingevoerd. Selecteer **[!UICONTROL Last 24 hours]** als u het tijdframe wilt bijwerken.
 
-![Het controledashboard in UI met de geselecteerde tijdconfiguratie.](../assets/ui/monitor-overview/select-time.png)
+![ het controledashboard in UI met de geselecteerde tijdconfiguratie.](../assets/ui/monitor-overview/select-time.png)
 
 U kunt een nieuw tijdkader voor uw gegevens controlemening in het dialoogvenster vormen dat verschijnt. U kunt een aangepast tijdframe maken of een keuze maken in de lijst met vooraf geconfigureerde opties:
 
@@ -125,16 +125,16 @@ U kunt een nieuw tijdkader voor uw gegevens controlemening in het dialoogvenster
 * [!UICONTROL Last 7 days]
 * [!UICONTROL Last 30 days]
 
-Selecteer **[!UICONTROL Apply]**.
+Selecteer **[!UICONTROL Apply]** als u klaar bent.
 
-![De configuratie van het tijdkader pop - op venster in het controledashboard.](../assets/ui/monitor-overview/update-time.png)
+![ de configuratie van het tijdkader pop - op venster in het controledashboard.](../assets/ui/monitor-overview/update-time.png)
 
 ## Volgende stappen
 
 Door dit document te lezen, kunt u nu door het controledashboard in UI navigeren. Lees de onderstaande documentatie voor informatie over hoe u gegevens voor een specifieke service van het Experience Platform kunt controleren:
 
-* [Brongegevens controleren](monitor-sources.md).
-* [Identiteitsgegevens controleren](monitor-identities.md).
-* [Profielgegevens controleren](monitor-profiles.md).
-* [publieksgegevens controleren](monitor-audiences.md).
-* [Gegevens van doelen controleren](monitor-destinations.md).
+* [ de bronnen van de Monitor gegevens ](monitor-sources.md).
+* [ de identiteitsgegevens van de Monitor ](monitor-identities.md).
+* [ de profielgegevens van de Monitor ](monitor-profiles.md).
+* [ de publieksgegevens van de Monitor ](monitor-audiences.md).
+* [ de bestemmingsgegevens van de Monitor ](monitor-destinations.md).

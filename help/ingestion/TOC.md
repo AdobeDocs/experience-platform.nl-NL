@@ -20,7 +20,7 @@ ht-degree: 17%
    - [Overzicht](streaming-ingestion/overview.md)
    - [Kafka-connector](streaming-ingestion/kafka.md)
    - [Problemen oplossen](streaming-ingestion/troubleshooting.md)
-- Inname in batch{#batch}
+- Batchopname {#batch}
    - [Aan de slag met batch-opname-API&#39;s](batch-ingestion/getting-started.md)
    - [API-overzicht](batch-ingestion/overview.md)
    - [API-ontwikkelaarsgids](batch-ingestion/api-overview.md)
@@ -38,7 +38,7 @@ ht-degree: 17%
    - [Opnamegegevens streamen](tutorials/streaming-record-data.md)
    - [Streaming tijdreeksgegevens](tutorials/streaming-time-series-data.md)
    - [Meerdere berichten streamen](tutorials/streaming-multiple-messages.md)
-- Gegevenskwaliteit en toezicht{#quality}
+- Kwaliteit en controle van gegevens {#quality}
    - [Overzicht](quality/overview.md)
    - [Gegevens bijhouden](quality/monitor-data-ingestion.md)
    - [Foutendiagnostiek ophalen](quality/error-diagnostics.md)
@@ -46,7 +46,7 @@ ht-degree: 17%
    - [Validatie van gestreamde invoer](quality/streaming-validation.md)
    - [Meldingen voor gegevensinvoer](quality/subscribe-events.md)
 - [Guardrails voor gegevensinvoer](guardrails.md)
-- [Bronaansluitingen](source-connectors.md)
-- [Referentie voor API voor batchverwerking](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
-- [Referentie voor API voor streaming](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Opmerkingen bij de release van Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Source-connectors](source-connectors.md)
+- [ Verwijzing van de Opname API van de Partij ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [ Streaming Ingestie API verwijzing ](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
+- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

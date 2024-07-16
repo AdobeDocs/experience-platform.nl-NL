@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # Google Data Layer-extensie
 
-Met de extensie Google-gegevenslaag kunt u een Google-gegevenslaag gebruiken in de implementatie van Tags. De extensie kan onafhankelijk of gelijktijdig worden gebruikt met Google-oplossingen en met open source uit Google [Helpbibliotheek gegevenslaag](https://github.com/google/data-layer-helper).
+Met de extensie Google-gegevenslaag kunt u een Google-gegevenslaag gebruiken in de implementatie van Tags. De uitbreiding kan onafhankelijk of gelijktijdig met de oplossingen van Google en met Google worden gebruikt open bron [ de Bibliotheek van de Helper van de Laag van Gegevens 0} ](https://github.com/google/data-layer-helper).
 
-De Helperbibliotheek verstrekt gelijkaardige gebeurtenis-gedreven functionaliteit aan de Laag van de Gegevens van de Cliënt van de Adobe (ACDL). De gegevenselementen, regels en handelingen van de extensie Google Data Layer bieden vergelijkbare functionaliteit als in de [ACDL-extensie](../client-data-layer/overview.md).
+De Helperbibliotheek verstrekt gelijkaardige gebeurtenis-gedreven functionaliteit aan de Laag van de Gegevens van de Cliënt van de Adobe (ACDL). De gegevenselementen, de regels, en de acties van de uitbreiding van de Laag van de Gegevens van Google verstrekken gelijkaardige functionaliteit aan die in de [ uitbreiding ACDL ](../client-data-layer/overview.md).
 
 ## Installatie
 
-Als u de extensie wilt installeren, navigeert u naar de extensiecatalogus in de gebruikersinterface voor gegevensverzameling en selecteert u **[!UICONTROL Google Data Layer]**.
+Als u de extensie wilt installeren, navigeert u naar de extensiecatalogus in de gebruikersinterface voor gegevensverzameling en selecteert u **[!UICONTROL Google Data Layer]** .
 
 Nadat de extensie is geïnstalleerd, wordt een gegevenslaag gemaakt of geopend bij elke keer dat de Adobe Experience Platform-tagbibliotheek wordt geladen.
 
@@ -25,7 +25,7 @@ Nadat de extensie is geïnstalleerd, wordt een gegevenslaag gemaakt of geopend b
 
 De extensieconfiguratie kan worden gebruikt om de naam te definiëren van de gegevenslaag die de extensie gebruikt. Als geen gegevenslaag met de gevormde naam aanwezig is wanneer de Markeringen van Adobe Experience Platform wordt geladen, leidt de uitbreiding tot één.
 
-De standaardnaam van de gegevenslaag is de Google-standaardnaam `dataLayer`.
+De standaardinstelling voor de naam van de gegevenslaag is de Google-standaardnaam `dataLayer` .
 
 >[!NOTE]
 >
@@ -35,27 +35,27 @@ De standaardnaam van de gegevenslaag is de Google-standaardnaam `dataLayer`.
 
 >[!NOTE]
 >
->Het woord _event_ wordt overgeladen wanneer een gebeurtenisgestuurde gegevenslaag wordt gebruikt in Adobe Experience Platform-tags. _Gebeurtenissen_ kan:
+>Het woord _gebeurtenis_ wordt overbelast wanneer een gebeurtenis-gedreven gegevenslaag in de Markeringen van Adobe Experience Platform wordt gebruikt. _Gebeurtenissen_ kunnen zijn:
 > - Gebeurtenissen van Adobe Experience Platform-tags (Bibliotheek geladen enzovoort).
 > - JavaScript-gebeurtenissen.
-> - Gegevens die met de _event_ trefwoord.
+> - Gegevens die aan de gegevenslaag met het _worden geduwd gebeurtenis_ sleutelwoord.
 
 De extensie biedt u de mogelijkheid te luisteren naar wijzigingen in de gegevenslaag.
 
 >[!NOTE]
 >
->Het is belangrijk om het gebruik van het _event_ sleutelwoord wanneer het gegeven aan een de gegevenslaag van Google, gelijkaardig aan de Laag van de Gegevens van de Cliënt van de Adobe wordt geduwd. De _event_ wijzigt het gedrag van de Google-gegevenslaag en dus ook deze extensie.\
+>Het is belangrijk om het gebruik van het _gebeurtenis_ sleutelwoord te begrijpen wanneer het gegeven aan een de gegevenslaag van Google wordt geduwd, gelijkaardig aan de Laag van de Gegevens van de Cliënt van de Adobe. Het _gebeurtenis_ sleutelwoord verandert het gedrag van de de gegevenslaag van Google en daarom deze uitbreiding.\
 > Lees de documentatie van Google of doe onderzoek als u op dit punt onzeker bent.
 
 ### Google-gebeurtenistypen
 
-Google ondersteunt twee manieren om gebeurtenissen te verdringen: Google Tag Manager, met de `push()` methode en Googles Analytics 4, waarbij de `gtag()` methode.
+Google ondersteunt twee manieren om gebeurtenissen te verdringen: Google Tag Manager, met de methode `push()` en Googles Analytics 4, met de methode `gtag()` .
 
-Google Data Layer extension versies vóór 1.2.1 die alleen door gebeurtenissen worden ondersteund die zijn gemaakt door `push()`, zoals wordt weergegeven in de codevoorbeelden op deze pagina.
+Google Data Layer extension versions before 1.2.1 supported only events created by `push()`, as displayed in the code examples on this page.
 
-Versies 1.2.1 en hoger ondersteunen gebeurtenissen die zijn gemaakt met `gtag()`.  Dit is optioneel en kan worden ingeschakeld in het dialoogvenster voor extensieconfiguratie.
+Versies 1.2.1 en hoger ondersteunen gebeurtenissen die met `gtag()` zijn gemaakt.  Dit is optioneel en kan worden ingeschakeld in het dialoogvenster voor extensieconfiguratie.
 
-Voor meer informatie over `push()` en `gtag()` gebeurtenissen, zie [Google-documentatie](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  De informatie wordt ook verstrekt in de configuratie en regeldialogen van de uitbreiding.
+Voor meer informatie over `push()` en `gtag()` gebeurtenissen, zie de [ documentatie van Google ](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  De informatie wordt ook verstrekt in de configuratie en regeldialogen van de uitbreiding.
 
 ### Luisteren naar alle markeringen op de gegevenslaag
 
@@ -99,7 +99,7 @@ dataLayer.push({"data":"something"})
 
 Als u een gebeurtenis opgeeft, houdt de gebeurtenislistener alle gebeurtenissen bij die overeenkomen met een bepaalde tekenreeks.
 
-Stel bijvoorbeeld `myEvent` wanneer u deze configuratie gebruikt, wordt in de listener alleen de volgende pushgebeurtenis bijgehouden:
+Als u bijvoorbeeld `myEvent` instelt wanneer u deze configuratie gebruikt, wordt in de listener alleen de volgende pushgebeurtenis gevolgd:
 
 ```js
 dataLayer.push({"event":"myEvent"})
@@ -107,7 +107,7 @@ dataLayer.push({"event":"myEvent"})
 
 Een regex (ECMAScript / JavaScript) kan worden gebruikt om gebeurtenisnamen aan te passen.
 
-Als u bijvoorbeeld &#39;myEvent\d&#39; instelt, wordt bijgehouden `myEvent` met een cijfer (\d):
+Als u bijvoorbeeld &#39;myEvent\d&#39; instelt, wordt `myEvent` gevolgd door een cijfer (\d):
 
 ```js
 dataLayer.push({"event":"myEvent1"})
@@ -122,7 +122,7 @@ De extensie biedt u twee acties om JSON naar de gegevenslaag te duwen, een vrij 
 
 #### Vrije tekst JSON
 
-Met de actie Vrije tekst kunt u gegevenselementen rechtstreeks in de JSON gebruiken. Binnen de redacteur JSON, gegevenselementen zouden moeten worden van verwijzingen voorzien gebruikend percentenaantekening. Bijvoorbeeld: `%dataElementName%`.
+Met de actie Vrije tekst kunt u gegevenselementen rechtstreeks in de JSON gebruiken. Binnen de redacteur JSON, gegevenselementen zouden moeten worden van verwijzingen voorzien gebruikend percentenaantekening. Bijvoorbeeld `%dataElementName%` .
 
 ```json
 {
@@ -157,4 +157,4 @@ Het gegevenselement kan daarom worden geretourneerd:
 
 Het gegevenselement en de gebeurtenisdialoogvensters van de extensie bevatten gedetailleerde gebruiksinformatie en voorbeelden.
 
-Aanvullende algemene informatie vindt u in het gedeelte [project README](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
+De extra algemene informatie is in [ project README ](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)

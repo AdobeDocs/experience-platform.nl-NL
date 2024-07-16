@@ -14,11 +14,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Deze callback is vervangen. Gebruiken [`filterClickDetails`](clickcollection.md) in plaats daarvan.
+>Deze callback is vervangen. Gebruik in plaats hiervan [`filterClickDetails`](clickcollection.md) .
 
-De `onBeforeLinkClickSend` Met callback kunt u een JavaScript-functie registreren die de gegevens voor het bijhouden van koppelingen die u verzendt, kan wijzigen voordat de gegevens naar de Adobe worden verzonden. Met deze callback kunt u de `xdm` of `data` -object, inclusief de mogelijkheid om elementen toe te voegen, te bewerken of te verwijderen. U kunt het verzenden van gegevens ook voorwaardelijk annuleren, zoals met ontdekt cliënt-zijbot verkeer. Deze functie wordt ondersteund op Web SDK 2.15.0 of hoger.
+Met de callback van `onBeforeLinkClickSend` kunt u een JavaScript-functie registreren die de gegevens voor het bijhouden van koppelingen die u verzendt, kan wijzigen vlak voordat de gegevens naar de Adobe worden verzonden. Met deze callback kunt u het object `xdm` of `data` bewerken, inclusief de mogelijkheid om elementen toe te voegen, te bewerken of te verwijderen. U kunt het verzenden van gegevens ook voorwaardelijk annuleren, zoals met ontdekt cliënt-zijbot verkeer. Deze functie wordt ondersteund op Web SDK 2.15.0 of hoger.
 
-Deze callback loopt slechts wanneer [`clickCollectionEnabled`](clickcollectionenabled.md) is ingeschakeld en [`filterClickDetails`](clickcollection.md) bevat geen geregistreerde functie. Indien `clickCollectionEnabled` is uitgeschakeld of als `filterClickDetails` bevat een geregistreerde functie, dan wordt deze callback niet uitgevoerd. Indien `onBeforeEventSend` en `onBeforeLinkClickSend` beide geregistreerde functies bevatten, `onBeforeLinkClickSend` wordt eerst uitgevoerd.
+Deze callback wordt alleen uitgevoerd wanneer [`clickCollectionEnabled`](clickcollectionenabled.md) is ingeschakeld en [`filterClickDetails`](clickcollection.md) geen geregistreerde functie bevat. Als `clickCollectionEnabled` is uitgeschakeld of als `filterClickDetails` een geregistreerde functie bevat, wordt deze callback niet uitgevoerd. Als `onBeforeEventSend` en `onBeforeLinkClickSend` allebei geregistreerde functies bevatten, wordt `onBeforeLinkClickSend` eerst uitgevoerd.
 
 >[!WARNING]
 >
@@ -26,26 +26,26 @@ Deze callback loopt slechts wanneer [`clickCollectionEnabled`](clickcollectionen
 
 ## Vorm vóór verbinding klikken verzend callback gebruikend de de markeringsuitbreiding van SDK van het Web {#tag-extension}
 
-Selecteer de **[!UICONTROL Provide on before link click event send callback code]** knop wanneer [configureren van de tagextensie](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Met deze knop opent u een modaal venster waarin u de gewenste code kunt invoegen.
+Selecteer de **[!UICONTROL Provide on before link click event send callback code]** knoop wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Met deze knop opent u een modaal venster waarin u de gewenste code kunt invoegen.
 
-1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
-1. Navigeren naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] kaart.
-1. Omlaag schuiven naar de [!UICONTROL Data Collection] en selecteert u vervolgens het selectievakje **[!UICONTROL Enable click data collection]**.
-1. Selecteer de knop met het label **[!UICONTROL Provide on before link click event send callback code]**.
-1. Met deze knop opent u een modaal venster met een code-editor. Voeg de gewenste code in en klik vervolgens op **[!UICONTROL Save]** om het modale venster te sluiten.
-1. Klikken **[!UICONTROL Save]** publiceert u de wijzigingen onder extensie-instellingen.
+1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
+1. Schuif omlaag naar de sectie [!UICONTROL Data Collection] en schakel vervolgens het selectievakje **[!UICONTROL Enable click data collection]** in.
+1. Selecteer de knop met het label **[!UICONTROL Provide on before link click event send callback code]** .
+1. Met deze knop opent u een modaal venster met een code-editor. Voeg de gewenste code in en klik op **[!UICONTROL Save]** om het modale venster te sluiten.
+1. Klik op **[!UICONTROL Save]** onder extensie-instellingen en publiceer uw wijzigingen.
 
 In de code-editor hebt u toegang tot de volgende variabelen:
 
 * **`content.clickedElement`**: Het DOM-element waarop is geklikt.
 * **`content.xdm`**: De XDM-lading voor de gebeurtenis.
 * **`content.data`**: De payload van het gegevensobject voor de gebeurtenis.
-* **`return true`**: Sluit de callback onmiddellijk af met de huidige variabelewaarden. De `onBeforeEventSend` callback wordt uitgevoerd als het een geregistreerde functie bevat.
-* **`return false`**: Sluit de callback onmiddellijk af en sluit het verzenden van gegevens naar de Adobe af. De `onBeforeEventSend` callback wordt niet uitgevoerd.
+* **`return true`**: Sluit de callback onmiddellijk af met de huidige variabelewaarden. De callback van `onBeforeEventSend` wordt uitgevoerd als deze een geregistreerde functie bevat.
+* **`return false`**: Sluit de callback onmiddellijk af en abort het verzenden van gegevens naar de Adobe. De callback `onBeforeEventSend` wordt niet uitgevoerd.
 
-Willekeurige variabelen die buiten `content` kunnen worden gebruikt, maar worden niet opgenomen in de lading die naar de Adobe wordt verzonden.
+Variabelen die buiten `content` worden gedefinieerd, kunnen worden gebruikt, maar worden niet opgenomen in de lading die naar de Adobe wordt verzonden.
 
 ```js
 // Set an already existing value to something else
@@ -65,11 +65,11 @@ content.xdm._experience.analytics.customDimensions.eVars.eVar1 = content.clicked
 if(content.xdm.web?.webInteraction?.type === "other") content.xdm.web.webInteraction.type = "download";
 ```
 
-Op dezelfde manier als [`onBeforeEventSend`](onbeforeeventsend.md), kunt u `return true` om de functie onmiddellijk te voltooien, of `return false` om het verzenden van gegevens naar de Adobe te annuleren. Als u het verzenden van gegevens afbreekt in `onBeforeLinkClickSend` wanneer beide `onBeforeEventSend` en `onBeforeLinkClickSend` bevat geregistreerde functies, de `onBeforeEventSend` functie wordt niet uitgevoerd.
+Net als [`onBeforeEventSend`](onbeforeeventsend.md) kunt u `return true` de functie direct voltooien of `return false` het verzenden van gegevens naar de Adobe afbreken. Als u het verzenden van gegevens afbreekt in `onBeforeLinkClickSend` wanneer zowel `onBeforeEventSend` als `onBeforeLinkClickSend` geregistreerde functies bevatten, wordt de functie `onBeforeEventSend` niet uitgevoerd.
 
 ## Configureer op voordat de koppeling klikt en stuur callback met behulp van de Web SDK JavaScript-bibliotheek {#library}
 
-Registreer de `onBeforeLinkClickSend` callback wanneer de `configure` gebruiken. U kunt de `content` de naam van een variabele in een willekeurige waarde door de parametervariabele binnen de inline functie te wijzigen.
+Registreer de callback `onBeforeLinkClickSend` wanneer u de opdracht `configure` uitvoert. U kunt de naam van de variabele `content` wijzigen in elke gewenste waarde door de parametervariabele binnen de inline functie te wijzigen.
 
 ```js
 alloy("configure", {

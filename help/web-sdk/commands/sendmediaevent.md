@@ -1,24 +1,24 @@
 ---
 title: sendMediaEvent
 description: Leer hoe te om het sendMediaEvent bevel te gebruiken om media zittingen in Web SDK te volgen.
-source-git-commit: 83d3de67e7680369dc890f58b16d9668058e221c
+exl-id: a38626fd-4810-40a0-8893-e98136634fac
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 0%
 
 ---
 
-
 # `sendMediaEvent`
 
-De `sendMediaEvent` bevel maakt deel uit van SDK van het Web `streamingMedia` component. Met deze component kunt u gegevens verzamelen die betrekking hebben op mediasessies op uw website. Zie de `streamingMedia` [documentatie](configure/streamingmedia.md) om te leren hoe te om deze component te vormen.
+De opdracht `sendMediaEvent` maakt deel uit van de Web SDK `streamingMedia` -component. Met deze component kunt u gegevens verzamelen die betrekking hebben op mediasessies op uw website. Zie `streamingMedia` [ documentatie ](configure/streamingmedia.md) leren hoe te om deze component te vormen.
 
-Gebruik de `sendMediaEvent` gebruiken om het afspelen van media, pauzes, voltooiing, updates van de spelerstatus en andere verwante gebeurtenissen bij te houden.
+Gebruik de opdracht `sendMediaEvent` om het afspelen van media, pauzes, voltooiing, updates van de spelerstatus en andere gerelateerde gebeurtenissen bij te houden.
 
 De SDK van het Web kan media gebeurtenissen behandelen die op het type van media zitting het volgen worden gebaseerd:
 
-* **Gebeurtenisafhandeling voor automatisch bijgehouden sessies**. In deze modus hoeft u het `sessionID` aan de media-gebeurtenis of de waarde van de afspeelkop. De SDK van het Web zal dit voor u behandelen, die op speleridentiteitskaart wordt gebaseerd en verstrekt `getPlayerDetails` callback functie verstrekt wanneer het beginnen van de media zitting.
-* **Gebeurtenisafhandeling voor handmatig bijgehouden sessies**. In deze modus moet u de opdracht `sessionID` aan de media-gebeurtenis toe, samen met de waarde van de afspeelkop (geheel getal). Indien nodig kunt u ook de gegevens over de kwaliteit van de ervaring doorgeven.
+* **Gebeurtenis behandeling voor automatisch-gevolgde zittingen**. In deze modus hoeft u de waarde `sessionID` niet door te geven aan de media-gebeurtenis of aan de afspeelkop. De SDK van het Web zal dit voor u behandelen, die op speleridentiteitskaart wordt gebaseerd die en de `getPlayerDetails` callback functie wordt verstrekt wanneer het beginnen van de media zitting wordt verstrekt.
+* **Gebeurtenis behandeling voor manueel-gevolgde zittingen**. In deze modus moet u de waarde `sessionID` aan de media-gebeurtenis doorgeven, samen met de waarde van de afspeelkop (geheel getal). Indien nodig kunt u ook de gegevens over de kwaliteit van de ervaring doorgeven.
 
 ## Media-gebeurtenissen op type afhandelen {#handle-by-type}
 
@@ -27,11 +27,11 @@ Selecteer de tabbladen hieronder om voorbeelden weer te geven van gebeurtenistyp
 
 ### Afspelen {#play}
 
-De `media.play` Het gebeurtenistype wordt gebruikt om te volgen wanneer media playback begint. Deze gebeurtenis moet worden verzonden wanneer de afspeelstatus van de speler verandert in een andere status. Andere toestanden waarvan de speler overgaat op &#39;afspelen&#39; zijn &#39;buffering&#39;, het hervatten van &#39;gepauzeerd&#39;, het herstellen van een fout of het automatisch afspelen van de speler.
+Het gebeurtenistype `media.play` wordt gebruikt om te volgen wanneer het afspelen van media begint. Deze gebeurtenis moet worden verzonden wanneer de afspeelstatus van de speler verandert in een andere status. Andere toestanden waarvan de speler overgaat op &#39;afspelen&#39; zijn &#39;buffering&#39;, het hervatten van &#39;gepauzeerd&#39;, het herstellen van een fout of het automatisch afspelen van de speler.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -42,7 +42,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -63,11 +63,11 @@ sessionPromise.then(sessionID => {
 
 ### Pauzeren {#pause}
 
-De `media.pauseStart` Het gebeurtenistype wordt gebruikt om te volgen wanneer een media playback wordt gepauzeerd. Deze gebeurtenis moet worden verzonden wanneer de gebruiker op **[!UICONTROL Pause]**. Er is geen type hervattingsgebeurtenis. Een samenvatting wordt afgeleid wanneer u een verzendt `media.play` gebeurtenis na een `media.pauseStart`.
+Het gebeurtenistype `media.pauseStart` wordt gebruikt om bij te houden wanneer het afspelen van media is gepauzeerd. Deze gebeurtenis moet worden verzonden wanneer de gebruiker op **[!UICONTROL Pause]** drukt. Er is geen type hervattingsgebeurtenis. Er wordt een resume gegenereerd wanneer u een `media.play` -gebeurtenis na een `media.pauseStart` verzendt.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -78,7 +78,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -99,11 +99,11 @@ sessionPromise.then(sessionID => {
 
 ### Fout {#error}
 
-De `media.error` Het gebeurtenistype wordt gebruikt om te volgen wanneer een fout tijdens media playback voorkomt. Deze gebeurtenis moet worden verzonden wanneer een fout optreedt.
+Het gebeurtenistype `media.error` wordt gebruikt om bij te houden wanneer een fout optreedt tijdens het afspelen van media. Deze gebeurtenis moet worden verzonden wanneer een fout optreedt.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -120,7 +120,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -145,11 +145,11 @@ sessionPromise.then(sessionID => {
 
 ### Begin van einde toevoegen {#ad-break-start}
 
-De `media.adBreakStart` Het gebeurtenistype wordt gebruikt om te volgen wanneer een advertentie-einde begint. Deze gebeurtenis moet worden verzonden wanneer een advertentie-einde begint.
+Het gebeurtenistype `media.adBreakStart` wordt gebruikt om te volgen wanneer een advertentie-einde begint. Deze gebeurtenis moet worden verzonden wanneer een advertentie-einde begint.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -167,7 +167,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -193,11 +193,11 @@ sessionPromise.then(sessionID => {
 
 ### Einde van advertentie voltooid {#ad-break-complete}
 
-De `media.adBreakComplete` Het gebeurtenistype wordt gebruikt om te volgen wanneer een afbreking van de advertentie voltooit. Deze gebeurtenis moet worden verzonden wanneer een advertentie-einde is voltooid.
+Het gebeurtenistype `media.adBreakComplete` wordt gebruikt om bij te houden wanneer een advertentie-einde is voltooid. Deze gebeurtenis moet worden verzonden wanneer een advertentie-einde is voltooid.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -208,7 +208,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -229,11 +229,11 @@ sessionPromise.then(sessionID => {
 
 ### Begin advertentie {#ad-start}
 
-De `media.adStart` Het gebeurtenistype wordt gebruikt om te volgen wanneer een advertentie begint. Deze gebeurtenis moet worden verzonden wanneer een advertentie wordt gestart.
+Het gebeurtenistype `media.adStart` wordt gebruikt om te volgen wanneer een advertentie begint. Deze gebeurtenis moet worden verzonden wanneer een advertentie wordt gestart.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -272,7 +272,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -319,11 +319,11 @@ sessionPromise.then(sessionID => {
 
 ### Toevoegen voltooid {#ad-complete}
 
-De `media.adComplete` Het gebeurtenistype wordt gebruikt om te volgen wanneer een advertentie voltooit. Deze gebeurtenis moet worden verzonden wanneer een advertentie is voltooid.
+Het gebeurtenistype `media.adComplete` wordt gebruikt om te volgen wanneer een advertentie is voltooid. Deze gebeurtenis moet worden verzonden wanneer een advertentie is voltooid.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -334,7 +334,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -355,11 +355,11 @@ sessionPromise.then(sessionID => {
 
 ### Overslaan van advertentie {#ad-skip}
 
-De `media.adSkip` gebeurtenistype wordt gebruikt om bij te houden wanneer een advertentie wordt overgeslagen. Deze gebeurtenis moet worden verzonden wanneer een advertentie wordt overgeslagen.
+Het gebeurtenistype `media.adSkip` wordt gebruikt om te volgen wanneer een advertentie wordt overgeslagen. Deze gebeurtenis moet worden verzonden wanneer een advertentie wordt overgeslagen.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -370,7 +370,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -391,11 +391,11 @@ sessionPromise.then(sessionID => {
 
 ### Begin hoofdstuk {#chapter-start}
 
-De `media.chapterStart` Het gebeurtenistype wordt gebruikt om te volgen wanneer een hoofdstuk begint. Deze gebeurtenis moet worden verzonden wanneer een hoofdstuk begint.
+Het gebeurtenistype `media.chapterStart` wordt gebruikt om te volgen wanneer een hoofdstuk begint. Deze gebeurtenis moet worden verzonden wanneer een hoofdstuk begint.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -428,7 +428,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -469,11 +469,11 @@ sessionPromise.then(sessionID => {
 
 ### Hoofdstuk voltooid {#chapter-complete}
 
-De `media.chapterComplete` Het gebeurtenistype wordt gebruikt om te volgen wanneer een hoofdstuk voltooit. Deze gebeurtenis moet worden verzonden wanneer een hoofdstuk is voltooid.
+Het gebeurtenistype `media.chapterComplete` wordt gebruikt om te volgen wanneer een hoofdstuk voltooit. Deze gebeurtenis moet worden verzonden wanneer een hoofdstuk is voltooid.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -484,7 +484,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -505,11 +505,11 @@ sessionPromise.then(sessionID => {
 
 ### Hoofdstukoverslaan {#chapter-skip}
 
-De `media.chapterSkip` Het gebeurtenistype wordt gebruikt om te volgen wanneer een hoofdstuk wordt overgeslagen. Deze gebeurtenis moet worden verzonden wanneer een hoofdstuk wordt overgeslagen.
+Het gebeurtenistype `media.chapterSkip` wordt gebruikt om bij te houden wanneer een hoofdstuk wordt overgeslagen. Deze gebeurtenis moet worden verzonden wanneer een hoofdstuk wordt overgeslagen.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -520,7 +520,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -541,11 +541,11 @@ sessionPromise.then(sessionID => {
 
 ### Begin buffer {#buffer-start}
 
-De `media.bufferStart` gebeurtenistype wordt gebruikt om bij te houden wanneer het bufferen begint. Deze gebeurtenis moet worden verzonden wanneer het bufferen begint. Er is `bufferResume` gebeurtenistype. A `bufferResume` wordt afgeleid wanneer u een afspeelgebeurtenis verzendt na `bufferStart`.
+Het gebeurtenistype `media.bufferStart` wordt gebruikt om bij te houden wanneer het bufferen begint. Deze gebeurtenis moet worden verzonden wanneer het bufferen begint. Er is geen gebeurtenistype `bufferResume` . Een `bufferResume` wordt afgeleid wanneer u een afspeelgebeurtenis verzendt na `bufferStart` .
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -556,7 +556,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -577,11 +577,11 @@ sessionPromise.then(sessionID => {
 
 ### Wijziging van bitsnelheid {#bitrate-change}
 
-De `media.bitrateChange` Het gebeurtenistype wordt gebruikt om te volgen wanneer de bitsnelheid verandert. Deze gebeurtenis moet worden verzonden wanneer de bitsnelheid verandert.
+Het gebeurtenistype `media.bitrateChange` wordt gebruikt om te volgen wanneer de bitsnelheid verandert. Deze gebeurtenis moet worden verzonden wanneer de bitsnelheid verandert.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -600,7 +600,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -626,11 +626,11 @@ sessionPromise.then(sessionID => {
 
 ### Statusupdates {#state-updates}
 
-De `media.stateUpdate` Het gebeurtenistype wordt gebruikt om bij te houden wanneer de spelerstatus verandert. Deze gebeurtenis moet worden verzonden wanneer de status van de speler verandert.
+Het gebeurtenistype `media.stateUpdate` wordt gebruikt om te volgen wanneer de spelerstatus verandert. Deze gebeurtenis moet worden verzonden wanneer de status van de speler verandert.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -653,7 +653,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -684,13 +684,13 @@ sessionPromise.then(sessionID => {
 
 ### Einde sessie {#session-end}
 
-De `media.sessionEnd` Het gebeurtenistype wordt gebruikt om de achtergrond van Media Analytics op de hoogte te brengen om de sessie onmiddellijk te sluiten wanneer de gebruiker zijn weergave van de inhoud heeft beëindigd en het onwaarschijnlijk is dat deze zal terugkeren.
+Het gebeurtenistype `media.sessionEnd` wordt gebruikt om de achtergrond van Media Analytics op de hoogte te brengen om de sessie onmiddellijk te sluiten wanneer de gebruiker de weergave van de inhoud heeft beëindigd en deze waarschijnlijk niet meer zal terugkeren.
 
-Als u geen `sessionEnd` -gebeurtenis, wordt een verlaten sessie beëindigd nadat gedurende 10 minuten geen gebeurtenissen zijn ontvangen of wanneer er gedurende 30 minuten geen beweging van de afspeelkop plaatsvindt. De sessie wordt automatisch verwijderd.
+Als u geen `sessionEnd` -gebeurtenis verzendt, wordt een verlaten sessie beëindigd nadat gedurende 10 minuten geen gebeurtenissen zijn ontvangen of wanneer gedurende 30 minuten geen beweging van de afspeelkop plaatsvindt. De sessie wordt automatisch verwijderd.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -701,7 +701,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -722,11 +722,11 @@ sessionPromise.then(sessionID => {
 
 ### Sessie voltooid {#session-complete}
 
-De `media.sessionComplete` gebeurtenistype wordt gebruikt om te volgen wanneer een mediasessie is voltooid. Deze gebeurtenis moet worden verzonden wanneer het einde van de hoofdinhoud is bereikt.
+Het gebeurtenistype `media.sessionComplete` wordt gebruikt om te volgen wanneer een mediasessie is voltooid. Deze gebeurtenis moet worden verzonden wanneer het einde van de hoofdinhoud is bereikt.
 
 >[!BEGINTABS]
 
->[!TAB Automatische sessietracering]
+>[!TAB  Automatische zitting het volgen ]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -737,7 +737,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Handmatige sessietracering]
+>[!TAB  Handmatige zitting het volgen ]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -754,6 +754,3 @@ sessionPromise.then(sessionID => {
 ```
 
 >[!ENDTABS]
-
-
-

@@ -19,13 +19,13 @@ ht-degree: 0%
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `campaignGroup` | String | De naam van de campagnegroep (wanneer meerdere campagnes op dezelfde manier worden gegroepeerd) `50%_DISCOUNT`). |
-| `campaignName` | String | De naam van de marketingcampagne, zoals `50%_DISCOUNT_USA` of `50%_DISCOUNT_ASIA`. |
+| `campaignGroup` | String | De naam van de campagnegroep (wanneer meerdere campagnes zijn gegroepeerd, zoals `50%_DISCOUNT` ). |
+| `campaignName` | String | De naam van de marketingcampagne, zoals `50%_DISCOUNT_USA` of `50%_DISCOUNT_ASIA` . |
 | `trackingCode` | String | De code voor bijhouden die kan worden gebruikt om de marketingcampagne te identificeren waaraan de gebeurtenis is gekoppeld. |
 
 {style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/marketing.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/marketing.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/marketing.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/marketing.schema.json)

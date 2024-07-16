@@ -18,9 +18,9 @@ Inzichten bevatten meetgegevens die worden gebruikt om een gegevenswetenschapper
 
 ## Een lijst met inzichten ophalen
 
-U kunt een lijst van Inzichten terugwinnen door één enkel verzoek van GET tot het inzichten eindpunt uit te voeren.  Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [queryparameters voor ophalen van elementen](./appendix.md#query).
+U kunt een lijst van Inzichten terugwinnen door één enkel verzoek van GET tot het inzichten eindpunt uit te voeren.  Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [ vraagparameters voor activaherwinning ](./appendix.md#query).
 
-**API-indeling**
+**API Formaat**
 
 ```http
 GET /insights
@@ -37,9 +37,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie retourneert een payload die een lijst met inzichten bevat en elk inzicht heeft een unieke id ( `id` ). Bovendien ontvangt u `context` die de unieke id&#39;s bevat die zijn gekoppeld aan dat bepaalde inzicht dat volgt op de gebeurtenissen Insights en metrische gegevens.
+Een geslaagde reactie retourneert een payload die een lijst met inzichten bevat en waarbij elk inzicht een unieke id heeft ( `id` ). Bovendien ontvangt u `context` dat de unieke id&#39;s bevat die zijn gekoppeld aan dat bepaalde inzicht dat volgt op de gebeurtenissen Insights en metrische gegevens.
 
 ```json
 {
@@ -108,9 +108,9 @@ Een succesvolle reactie retourneert een payload die een lijst met inzichten beva
 
 ## Een specifiek inzicht ophalen
 
-Als u een bepaald inzicht wilt opzoeken, vraagt u een GET aan en geeft u een geldige `{INSIGHT_ID}` in het aanvraagpad. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [queryparameters voor ophalen van elementen](./appendix.md#query).
+Als u een bepaald inzicht wilt opzoeken, vraagt u een GET aan en geeft u een geldige `{INSIGHT_ID}` op in het aanvraagpad. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [ vraagparameters voor activaherwinning ](./appendix.md#query).
 
-**API-indeling**
+**API Formaat**
 
 ```http
 GET /insights/{INSIGHT_ID}
@@ -131,9 +131,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een payload die de unieke id voor inzichten bevat (`id`). Bovendien ontvangt u `context` die de unieke id&#39;s bevat die zijn gekoppeld aan het specifieke inzicht dat volgt op de gebeurtenissen Insights en metrische gegevens.
+Een succesvolle reactie keert een lading terug die de inzichten unieke herkenningsteken (`id`) omvat. Bovendien ontvangt u `context` dat de unieke id&#39;s bevat die zijn gekoppeld aan het bepaalde inzicht dat volgt op de gebeurtenissen Insights en metrische gegevens.
 
 ```json
 {
@@ -186,7 +186,7 @@ U kunt een nieuw Modelinzicht tot stand brengen door een verzoek van de POST en 
   }
 ```
 
-**API-indeling**
+**API Formaat**
 
 ```http
 POST /insights
@@ -227,9 +227,9 @@ curl -X POST \
 }
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een lading die een `{INSIGHT_ID}` en alle parameters die u in het oorspronkelijke verzoek hebt opgegeven.
+Een geslaagde reactie retourneert een payload met een `{INSIGHT_ID}` en parameters die u in de eerste aanvraag hebt opgegeven.
 
 ```json
 {
@@ -264,9 +264,9 @@ Een geslaagde reactie retourneert een lading die een `{INSIGHT_ID}` en alle para
 
 ## Hiermee wordt een lijst met standaardmetriek voor algoritmen opgehaald
 
-U kunt een lijst van al uw algoritme en standaardmetriek terugwinnen door één enkel verzoek van de GET aan het metrieke eindpunt uit te voeren. Om bepaalde metrisch te vragen doe een verzoek van de GET en verstrek geldig `{ALGORITHM}` in het aanvraagpad.
+U kunt een lijst van al uw algoritme en standaardmetriek terugwinnen door één enkel verzoek van de GET aan het metrieke eindpunt uit te voeren. Als u een query op een bepaalde metrische waarde wilt uitvoeren, vraagt u een GET aan en geeft u een geldige `{ALGORITHM}` op in het aanvraagpad.
 
-**API-indeling**
+**API Formaat**
 
 ```http
 GET /insights/metrics
@@ -279,7 +279,7 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 **Verzoek**
 
-Het volgende verzoek bevat een vraag en wint specifieke metrisch door het algoritmeherkenningsteken te gebruiken terug `{ALGORITHM}`
+Het volgende verzoek bevat een query en haalt een specifieke metrische waarde op met de algoritme-id `{ALGORITHM}`
 
 ```shell
 curl -X GET \
@@ -290,9 +290,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert een payload die de `algorithm` unieke id en een array van standaardmeetgegevens.
+Een geslaagde reactie retourneert een payload die de `algorithm` unieke id en een array van standaardmeetgegevens bevat.
 
 ```json
 {

@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;query-service;Query-service;adobe defined functies;sql;
 solution: Experience Platform
-title: Adobe-Gedefinieerde SQL Functies in de Dienst van de Vraag
-description: Dit document bevat informatie over door Adobe gedefinieerde functies die beschikbaar zijn in Adobe Experience Platform Query Service.
+title: Adobe-bepaalde SQL Functies in de Dienst van de Vraag
+description: Dit document bevat informatie over door de Adobe gedefinieerde functies die beschikbaar zijn in Adobe Experience Platform Query Service.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
-source-wordcount: '1486'
-ht-degree: 2%
+source-wordcount: '1468'
+ht-degree: 1%
 
 ---
 
-# Adobe bepaalde SQL functies in de Dienst van de Vraag
+# Adobe-bepaalde SQL functies in de Dienst van de Vraag
 
-Adobe-bepaalde functies, hier genoemd ADFs, zijn prebuilt functies in de Dienst van de Vraag van Adobe Experience Platform die helpen gemeenschappelijke zaken-gerelateerde taken op uitvoeren [!DNL Experience Event] gegevens. Hieronder vallen functies voor [Sessionering](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) en [Attributie](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) zoals in Adobe Analytics.
+Adobe-bepaalde functies, hier genoemd ADFs, zijn prebuilt functies in de Dienst van de Vraag van Adobe Experience Platform die helpen gemeenschappelijke zaken-gerelateerde taken op [!DNL Experience Event] gegevens uitvoeren. Deze omvatten functies voor [ Sessionisatie ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) en [ Attributie ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) als die gevonden in Adobe Analytics.
 
-Dit document bevat informatie over door Adobe gedefinieerde functies die beschikbaar zijn in [!DNL Query Service].
+Dit document bevat informatie over door de Adobe gedefinieerde functies die beschikbaar zijn in [!DNL Query Service] .
 
 >[!NOTE]
 >
@@ -23,13 +23,13 @@ Dit document bevat informatie over door Adobe gedefinieerde functies die beschik
 
 ## Vensterfuncties {#window-functions}
 
-De meerderheid van de bedrijfslogica vereist het verzamelen van de aanraakpunten voor een klant en het opdracht geven tot hen tegen tijd. Deze steun wordt verleend door [!DNL Spark] SQL in de vorm van vensterfuncties. Vensterfuncties maken deel uit van standaard-SQL en worden ondersteund door vele andere SQL-engines.
+De meerderheid van de bedrijfslogica vereist het verzamelen van de aanraakpunten voor een klant en het opdracht geven tot hen tegen tijd. Deze ondersteuning wordt geleverd door [!DNL Spark] SQL in de vorm van vensterfuncties. Vensterfuncties maken deel uit van standaard-SQL en worden ondersteund door vele andere SQL-engines.
 
-Een vensterfunctie werkt een samenvoeging bij en retourneert één item voor elke rij in de geordende subset. De eenvoudigste aggregatiefunctie is `SUM()`. `SUM()` neemt uw rijen en geeft u één totaal. Als u in plaats daarvan `SUM()` aan een venster, dat het in een vensterfunctie verandert, ontvangt u een cumulatief bedrag met elke rij.
+Een vensterfunctie werkt een samenvoeging bij en retourneert één item voor elke rij in de geordende subset. De eenvoudigste aggregatiefunctie is `SUM()` . `SUM()` neemt uw rijen en geeft u één totaal. Als u in plaats daarvan `SUM()` toepast op een venster en het vervolgens omzet in een vensterfunctie, ontvangt u bij elke rij een cumulatief bedrag.
 
-De meerderheid van de [!DNL Spark] SQL helpers zijn vensterfuncties die elke rij in uw venster bijwerken, met de staat van die rij toegevoegde.
+De meeste [!DNL Spark] SQL helpers zijn vensterfuncties die elke rij in uw venster bijwerken, met de staat van die toegevoegde rij.
 
-**Zoeksyntaxis**
+**syntaxis van de Vraag**
 
 ```sql
 OVER ({PARTITION} {ORDER} {FRAME})
@@ -43,13 +43,13 @@ OVER ({PARTITION} {ORDER} {FRAME})
 
 ## Sessionering
 
-Wanneer u met werkt [!DNL Experience Event] gegevens die afkomstig zijn van een website, mobiele toepassing, interactief spraakreactiesysteem of een ander kanaal voor klantinteractie, helpen bij het groeperen van gebeurtenissen rond een verwante periode van activiteit. Doorgaans hebt u een specifieke intentie om uw activiteiten te sturen, zoals het zoeken naar een product, het betalen van een rekening, het controleren van de balans, het invullen van een toepassing, enzovoort.
+Wanneer u werkt met [!DNL Experience Event] -gegevens die afkomstig zijn van een website, mobiele toepassing, interactief spraakreactiesysteem of een ander kanaal voor klantinteractie, is het nuttig als gebeurtenissen kunnen worden gegroepeerd rond een verwante periode. Doorgaans hebt u een specifieke intentie om uw activiteiten te sturen, zoals het zoeken naar een product, het betalen van een rekening, het controleren van de balans, het invullen van een toepassing, enzovoort.
 
 Deze groepering, of zitting van gegevens, helpt de gebeurtenissen associëren om meer context over de klantenervaring te ontdekken.
 
-Zie de documentatie over [contextbewuste sessies](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Voor meer informatie over zittingssessie in Adobe Analytics, zie de documentatie over [ context-bewuste zittingen ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
-**Zoeksyntaxis**
+**syntaxis van de Vraag**
 
 ```sql
 SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FRAME})
@@ -60,9 +60,9 @@ SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FR
 | `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
 | `{EXPIRATION_IN_SECONDS}` | Het aantal seconden dat nodig is tussen gebeurtenissen om het einde van de huidige sessie en het begin van een nieuwe sessie te kwalificeren. |
 
-Een uitleg van de parameters binnen de `OVER()` kan worden gevonden in de [sectie vensterfuncties](#window-functions).
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
 
-**Voorbeeldquery**
+**vraag van het Voorbeeld**
 
 ```sql
 SELECT 
@@ -96,7 +96,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in het dialoogvenster `session` kolom. De `session` de kolom bestaat uit de volgende onderdelen:
+Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in de kolom `session` . De kolom `session` bestaat uit de volgende componenten:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -105,7 +105,7 @@ Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in het di
 | Parameters | Beschrijving |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | Het verschil in tijd, in seconden, tussen de huidige record en de vorige record. |
-| `{NUM}` | Een uniek sessienummer, dat begint bij 1, voor de sleutel die is gedefinieerd in het dialoogvenster `PARTITION BY` van de vensterfunctie. |
+| `{NUM}` | Een uniek sessienummer, te beginnen bij 1, voor de sleutel die is gedefinieerd in de `PARTITION BY` van de vensterfunctie. |
 | `{IS_NEW}` | Een Booleaanse waarde die wordt gebruikt om te bepalen of een record de eerste van een sessie is. |
 | `{DEPTH}` | De diepte van de huidige record in de sessie. |
 
@@ -113,7 +113,7 @@ Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in het di
 
 Deze query retourneert de status van de sessie voor de huidige rij, gebaseerd op de huidige tijdstempel en de opgegeven expressie, en start een nieuwe sessie met de huidige rij.
 
-**Zoeksyntaxis**
+**syntaxis van de Vraag**
 
 ```sql
 SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
@@ -122,11 +122,11 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
-| `{TEST_EXPRESSION}` | Een expressie waarmee u de velden van de gegevens wilt controleren. Bijvoorbeeld, `application.launches > 0`. |
+| `{TEST_EXPRESSION}` | Een expressie waarmee u de velden van de gegevens wilt controleren. Bijvoorbeeld `application.launches > 0` . |
 
-Een uitleg van de parameters binnen de `OVER()` kan worden gevonden in de [sectie vensterfuncties](#window-functions).
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
 
-**Voorbeeldquery**
+**vraag van het Voorbeeld**
 
 ```sql
 SELECT
@@ -161,7 +161,7 @@ SELECT
 (10 rows)
 ```
 
-Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in het dialoogvenster `session` kolom. De `session` de kolom bestaat uit de volgende onderdelen:
+Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in de kolom `session` . De kolom `session` bestaat uit de volgende componenten:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -170,7 +170,7 @@ Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in het di
 | Parameters | Beschrijving |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | Het verschil in tijd, in seconden, tussen de huidige record en de vorige record. |
-| `{NUM}` | Een uniek sessienummer, dat begint bij 1, voor de sleutel die is gedefinieerd in het dialoogvenster `PARTITION BY` van de vensterfunctie. |
+| `{NUM}` | Een uniek sessienummer, te beginnen bij 1, voor de sleutel die is gedefinieerd in de `PARTITION BY` van de vensterfunctie. |
 | `{IS_NEW}` | Een Booleaanse waarde die wordt gebruikt om te bepalen of een record de eerste van een sessie is. |
 | `{DEPTH}` | De diepte van de huidige record in de sessie. |
 
@@ -178,7 +178,7 @@ Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in het di
 
 Deze query retourneert de status van de sessie voor de huidige rij, gebaseerd op de huidige tijdstempel en de opgegeven expressie, beëindigt de huidige sessie en start een nieuwe sessie op de volgende rij.
 
-**Zoeksyntaxis**
+**syntaxis van de Vraag**
 
 ```sql
 SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
@@ -187,11 +187,11 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
-| `{TEST_EXPRESSION}` | Een expressie waarmee u de velden van de gegevens wilt controleren. Bijvoorbeeld, `application.launches > 0`. |
+| `{TEST_EXPRESSION}` | Een expressie waarmee u de velden van de gegevens wilt controleren. Bijvoorbeeld `application.launches > 0` . |
 
-Een uitleg van de parameters binnen de `OVER()` kan worden gevonden in de [sectie vensterfuncties](#window-functions).
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
 
-**Voorbeeldquery**
+**vraag van het Voorbeeld**
 
 ```sql
 SELECT
@@ -226,7 +226,7 @@ SELECT
 (10 rows)
 ```
 
-Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in het dialoogvenster `session` kolom. De `session` de kolom bestaat uit de volgende onderdelen:
+Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in de kolom `session` . De kolom `session` bestaat uit de volgende componenten:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -235,12 +235,12 @@ Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in het di
 | Parameters | Beschrijving |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | Het verschil in tijd, in seconden, tussen de huidige record en de vorige record. |
-| `{NUM}` | Een uniek sessienummer, dat begint bij 1, voor de sleutel die is gedefinieerd in het dialoogvenster `PARTITION BY` van de vensterfunctie. |
+| `{NUM}` | Een uniek sessienummer, te beginnen bij 1, voor de sleutel die is gedefinieerd in de `PARTITION BY` van de vensterfunctie. |
 | `{IS_NEW}` | Een Booleaanse waarde die wordt gebruikt om te bepalen of een record de eerste van een sessie is. |
 | `{DEPTH}` | De diepte van de huidige record in de sessie. |
 
 
-## Padcontrole
+## Plakken
 
 Pathing kan worden gebruikt om inzicht te krijgen in de diepte van de service van de klant, om te bevestigen dat de bedoelde stappen van een ervaring werken zoals deze zijn ontworpen, en om mogelijke pijnpunten te identificeren die gevolgen hebben voor de klant.
 
@@ -248,9 +248,9 @@ De volgende ADFs steunt het vestigen van het kleven meningen van hun vorige en v
 
 ### Vorige pagina
 
-Hiermee bepaalt u de vorige waarde van een bepaald veld met een opgegeven aantal stappen buiten het venster. Let in het voorbeeld op het volgende: `WINDOW` functie is geconfigureerd met een frame van `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` het plaatsen ADF om de huidige rij en alle verdere rijen te bekijken.
+Hiermee bepaalt u de vorige waarde van een bepaald veld met een opgegeven aantal stappen buiten het venster. In het voorbeeld wordt de functie `WINDOW` geconfigureerd met een frame van `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` dat de ADF instelt om naar de huidige rij en alle volgende rijen te kijken.
 
-**Zoeksyntaxis**
+**syntaxis van de Vraag**
 
 ```sql
 PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
@@ -260,11 +260,11 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | --------- | ----------- |
 | `{KEY}` | De kolom of het veld van de gebeurtenis. |
 | `{SHIFT}` | (Optioneel) Het aantal gebeurtenissen dat zich niet bij de huidige gebeurtenis bevindt. De standaardwaarde is 1. |
-| `{IGNORE_NULLS}` | (Optioneel) Een Booleaanse waarde die aangeeft of deze null is `{KEY}` waarden moeten worden genegeerd. De standaardwaarde is `false`. |
+| `{IGNORE_NULLS}` | (Optioneel) Een Booleaanse waarde die aangeeft of `{KEY}` -waarden moeten worden genegeerd. De standaardwaarde is `false` . |
 
-Een uitleg van de parameters binnen de `OVER()` kan worden gevonden in de [sectie vensterfuncties](#window-functions).
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
 
-**Voorbeeldquery**
+**vraag van het Voorbeeld**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, web.webPageDetails.name
@@ -295,13 +295,13 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in het dialoogvenster `previous_page` kolom. De waarde binnen de `previous_page` de kolom is gebaseerd op de `{KEY}` gebruikt in de ADF.
+Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in de kolom `previous_page` . De waarde in de kolom `previous_page` is gebaseerd op de waarde `{KEY}` die in de ADF wordt gebruikt.
 
 ### Volgende pagina
 
-Hiermee bepaalt u de volgende waarde van een bepaald veld met een opgegeven aantal stappen buiten het venster. Let in het voorbeeld op het volgende: `WINDOW` functie is geconfigureerd met een frame van `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` het plaatsen ADF om de huidige rij en alle verdere rijen te bekijken.
+Hiermee bepaalt u de volgende waarde van een bepaald veld met een opgegeven aantal stappen buiten het venster. In het voorbeeld wordt de functie `WINDOW` geconfigureerd met een frame van `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` dat de ADF instelt om naar de huidige rij en alle volgende rijen te kijken.
 
-**Zoeksyntaxis**
+**syntaxis van de Vraag**
 
 ```sql
 NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
@@ -311,11 +311,11 @@ NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | --------- | ----------- |
 | `{KEY}` | De kolom of het veld van de gebeurtenis. |
 | `{SHIFT}` | (Optioneel) Het aantal gebeurtenissen dat zich niet bij de huidige gebeurtenis bevindt. De standaardwaarde is 1. |
-| `{IGNORE_NULLS}` | (Optioneel) Een Booleaanse waarde die aangeeft of deze null is `{KEY}` waarden moeten worden genegeerd. De standaardwaarde is `false`. |
+| `{IGNORE_NULLS}` | (Optioneel) Een Booleaanse waarde die aangeeft of `{KEY}` -waarden moeten worden genegeerd. De standaardwaarde is `false` . |
 
-Een uitleg van de parameters binnen de `OVER()` kan worden gevonden in de [sectie vensterfuncties](#window-functions).
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
 
-**Voorbeeldquery**
+**vraag van het Voorbeeld**
 
 ```sql
 SELECT endUserIds._experience.aaid.id, timestamp, web.webPageDetails.name,
@@ -347,7 +347,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in het dialoogvenster `previous_page` kolom. De waarde binnen de `previous_page` de kolom is gebaseerd op de `{KEY}` gebruikt in de ADF.
+Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in de kolom `previous_page` . De waarde in de kolom `previous_page` is gebaseerd op de waarde `{KEY}` die in de ADF wordt gebruikt.
 
 ## Tijd-tussen
 
@@ -357,7 +357,7 @@ De tijd-tussen staat u toe om latent klantengedrag binnen een bepaalde tijdspann
 
 Deze vraag keert een aantal terug dat de eenheid van tijd vertegenwoordigt aangezien de vorige passende gebeurtenis werd gezien. Als er geen overeenkomende gebeurtenis is gevonden, wordt null geretourneerd.
 
-**Zoeksyntaxis**
+**syntaxis van de Vraag**
 
 ```sql
 TIME_BETWEEN_PREVIOUS_MATCH(
@@ -371,9 +371,9 @@ TIME_BETWEEN_PREVIOUS_MATCH(
 | `{EVENT_DEFINITION}` | De expressie die de vorige gebeurtenis moet kwalificeren. |
 | `{TIME_UNIT}` | De eenheid van output. Mogelijke waarden zijn dagen, uren, minuten en seconden. De standaardwaarde is seconden. |
 
-Een uitleg van de parameters binnen de `OVER()` kan worden gevonden in de [sectie vensterfuncties](#window-functions).
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
 
-**Voorbeeldquery**
+**vraag van het Voorbeeld**
 
 ```sql
 SELECT 
@@ -415,13 +415,13 @@ LIMIT 10
 (10 rows)
 ```
 
-Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in het dialoogvenster `average_minutes_since_registration` kolom. De waarde binnen de `average_minutes_since_registration` kolom is het tijdsverschil tussen de huidige en vorige gebeurtenissen. De tijdseenheid is eerder gedefinieerd in de `{TIME_UNIT}`.
+Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in de kolom `average_minutes_since_registration` . De waarde in de kolom `average_minutes_since_registration` is het tijdsverschil tussen de huidige en vorige gebeurtenissen. De tijdseenheid is eerder gedefinieerd in de `{TIME_UNIT}` .
 
 ### Tijd tussen volgende overeenkomst
 
 Deze query retourneert een negatief getal dat de tijdseenheid achter de volgende overeenkomende gebeurtenis vertegenwoordigt. Als er geen overeenkomende gebeurtenis wordt gevonden, wordt null geretourneerd.
 
-**Zoeksyntaxis**
+**syntaxis van de Vraag**
 
 ```sql
 TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PARTITION} {ORDER} {FRAME})
@@ -433,9 +433,9 @@ TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PAR
 | `{EVENT_DEFINITION}` | De expressie waarmee de volgende gebeurtenis wordt gekwalificeerd. |
 | `{TIME_UNIT}` | (Optioneel) De uitvoereenheid. Mogelijke waarden zijn dagen, uren, minuten en seconden. De standaardwaarde is seconden. |
 
-Een uitleg van de parameters binnen de `OVER()` kan worden gevonden in de [sectie vensterfuncties](#window-functions).
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
 
-**Voorbeeldquery**
+**vraag van het Voorbeeld**
 
 ```sql
 SELECT 
@@ -477,14 +477,14 @@ LIMIT 10
 (10 rows)
 ```
 
-Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in het dialoogvenster `average_minutes_until_order_confirmation` kolom. De waarde binnen de `average_minutes_until_order_confirmation` kolom is het tijdsverschil tussen de huidige en volgende gebeurtenissen. De tijdseenheid is eerder gedefinieerd in de `{TIME_UNIT}`.
+Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in de kolom `average_minutes_until_order_confirmation` . De waarde in de kolom `average_minutes_until_order_confirmation` is het tijdsverschil tussen de huidige en volgende gebeurtenissen. De tijdseenheid is eerder gedefinieerd in de `{TIME_UNIT}` .
 
 ## Volgende stappen
 
-Met de hier beschreven functies kunt u query&#39;s schrijven voor toegang tot uw eigen functies [!DNL Experience Event] gegevenssets met [!DNL Query Service]. Voor meer informatie over het schrijven van vragen in [!DNL Query Service], zie de documentatie op [query&#39;s maken](../best-practices/writing-queries.md).
+Met de hier beschreven functies kunt u query&#39;s schrijven voor toegang tot uw eigen [!DNL Experience Event] datasets met [!DNL Query Service] . Voor meer informatie over auteursvragen in [!DNL Query Service], zie de documentatie bij [ het creëren van vragen ](../best-practices/writing-queries.md).
 
 ## Aanvullende bronnen
 
-In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Platform-interface en in een PSQL-client. Bovendien gebruikt de video ook voorbeelden met afzonderlijke eigenschappen in een XDM-object, met gebruik van door Adobe gedefinieerde functies en met gebruik van CREATE TABLE AS SELECT (CTAS).
+In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Platform-interface en in een PSQL-client. Bovendien gebruikt de video ook voorbeelden met afzonderlijke eigenschappen in een XDM-object, waarbij gebruik wordt gemaakt van door Adobe gedefinieerde functies en waarbij gebruik wordt gemaakt van CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)

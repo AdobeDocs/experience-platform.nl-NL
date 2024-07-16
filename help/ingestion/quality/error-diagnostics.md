@@ -6,14 +6,14 @@ description: Dit document bevat informatie over het controleren van batch-inname
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 1%
+source-wordcount: '976'
+ht-degree: 0%
 
 ---
 
 # Diagnostische gegevens voor gegevensinvoer ophalen
 
-Adobe Experience Platform biedt twee methoden voor het uploaden en opnemen van gegevens. U kunt batch-opname gebruiken, waardoor u gegevens kunt invoegen met verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u de gegevens kunt invoegen op [!DNL Platform] het gebruiken van het stromen eindpunten in echt - tijd.
+Adobe Experience Platform biedt twee methoden voor het uploaden en opnemen van gegevens. U kunt batch-opname gebruiken, waarmee u gegevens kunt invoegen met verschillende bestandstypen (zoals CSV&#39;s) of streaming opname, waardoor u de gegevens in [!DNL Platform] kunt invoegen met streaming eindpunten in real-time.
 
 Dit document bevat informatie over het controleren van batch-inname, het beheren van fouten bij gedeeltelijke batch-inname en een verwijzing naar typen partiële batch-inname.
 
@@ -21,38 +21,38 @@ Dit document bevat informatie over het controleren van batch-inname, het beheren
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
-- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): De methoden waarmee gegevens kunnen worden verzonden naar [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): de methoden waarmee gegevens naar [!DNL Experience Platform] kunnen worden verzonden.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform], met inbegrip van die welke tot de [!DNL Schema Registry], geïsoleerd naar specifieke virtuele sandboxen. Alle verzoeken aan [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DNL Schema Registry] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Voor meer informatie over sandboxen in [!DNL Platform], zie de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
 ## Foutendiagnostiek downloaden {#download-diagnostics}
 
-Met Adobe Experience Platform kunnen gebruikers de foutdiagnose van de invoerbestanden downloaden. De diagnostiek blijft binnen [!DNL Platform] gedurende maximaal 30 dagen.
+Met Adobe Experience Platform kunnen gebruikers de foutdiagnose van de invoerbestanden downloaden. De diagnostiek blijft maximaal 30 dagen binnen [!DNL Platform].
 
 ### Invoerbestanden weergeven {#list-files}
 
 Het volgende verzoek wint een lijst van alle dossiers terug die in een gefinaliseerde partij worden verstrekt.
 
-**API-indeling**
+**API formaat**
 
 ```shell
 GET /batches/{BATCH_ID}/meta?path=input_files
@@ -72,7 +72,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert JSON-objecten waarin wordt aangegeven waar de diagnostiek is opgeslagen.
 
@@ -105,11 +105,11 @@ Een succesvolle reactie retourneert JSON-objecten waarin wordt aangegeven waar d
 }
 ```
 
-### Diagnose invoerbestand ophalen {#retrieve-diagnostics}
+### Diagnostiek van invoerbestanden ophalen {#retrieve-diagnostics}
 
 Nadat u een lijst met alle verschillende invoerbestanden hebt opgehaald, kunt u de diagnostiek van het afzonderlijke bestand ophalen met de volgende aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```shell
 GET /batches/{BATCH_ID}/meta?path=input_files/{FILE}
@@ -130,9 +130,9 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
-Als de reactie succesvol is, worden JSON-objecten geretourneerd die `path` objecten waarin wordt aangegeven waar de diagnostiek is opgeslagen. De reactie retourneert de `path` objecten in [JSON Lines](https://jsonlines.readthedocs.io/en/latest/) gebruiken.
+Een succesvol antwoord retourneert JSON-objecten die `path` -objecten bevatten waarin wordt aangegeven waar de diagnostiek is opgeslagen. De reactie zal de `path` voorwerpen in [ JSON Lijnen ](https://jsonlines.readthedocs.io/en/latest/) formaat terugkeren.
 
 ```json
 {"path": "F1.json"}
@@ -145,9 +145,9 @@ Als de partijen mislukkingen bevatten, zou u fouteninformatie over deze mislukki
 
 ### Status controleren {#check-status}
 
-Als u de status van de ingesloten batch wilt controleren, moet u de id van de batch opgeven in het pad van een GET-aanvraag. Voor meer informatie over het gebruik van deze API-aanroep leest u de [hulplijn voor eindpunt van catalogus](../../catalog/api/list-objects.md).
+Als u de status van de ingesloten batch wilt controleren, moet u de id van de batch opgeven in het pad van een GET-aanvraag. Om meer over het gebruiken van deze API vraag te leren, te lezen gelieve de [ gids van het cataloguseindpunt ](../../catalog/api/list-objects.md).
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /catalog/batches/{BATCH_ID}
@@ -156,8 +156,8 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{BATCH_ID}` | De `id` De waarde van de partij u de status van wilt controleren. |
-| `{FILTER}` | Een queryparameter die wordt gebruikt om de resultaten te filteren die in de reactie worden geretourneerd. Meerdere parameters worden gescheiden door ampersands (`&`). Lees voor meer informatie de handleiding op [catalogusgegevens filteren](../../catalog/api/filter-data.md). |
+| `{BATCH_ID}` | De `id` -waarde van de batch waarvan u de status wilt controleren. |
+| `{FILTER}` | Een queryparameter die wordt gebruikt om de resultaten te filteren die in de reactie worden geretourneerd. De veelvoudige parameters worden gescheiden door ampersands (`&`). Voor meer informatie, te lezen gelieve de gids over [ het filtreren gegevens van de Catalogus ](../../catalog/api/filter-data.md). |
 
 **Verzoek**
 
@@ -169,7 +169,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Respons zonder fouten**
+**Reactie zonder fouten**
 
 Een geslaagde reactie retourneert met gedetailleerde informatie over de status van de batch.
 
@@ -214,9 +214,9 @@ Een geslaagde reactie retourneert met gedetailleerde informatie over de status v
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Het aantal rijen dat niet kon worden verwerkt vanwege parseren, omzetten of valideren. Deze waarde kan worden afgeleid door de `inputRecordCount` van de `outputRecordCount`. Deze waarde wordt op alle batches gegenereerd, ongeacht of `errorDiagnostics` is ingeschakeld. |
+| `metrics.failedRecordCount` | Het aantal rijen dat niet kon worden verwerkt vanwege parseren, omzetten of valideren. Deze waarde kan worden afgeleid door `inputRecordCount` van `outputRecordCount` af te trekken. Deze waarde wordt op alle batches gegenereerd, ongeacht of `errorDiagnostics` is ingeschakeld. |
 
-**Reageren met fouten**
+**Reactie met fouten**
 
 Als de partij één of meerdere fouten heeft en toegelaten foutendiagnostiek heeft, keert de reactie meer informatie over de fouten, zowel binnen de nuttige lading zelf als een downloadbaar foutendossier terug. De status van een batch met fouten kan nog steeds succesvol zijn.
 
@@ -277,12 +277,12 @@ Als de partij één of meerdere fouten heeft en toegelaten foutendiagnostiek hee
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Het aantal rijen dat niet kon worden verwerkt vanwege parseren, omzetten of valideren. Deze waarde kan worden afgeleid door de `inputRecordCount` van de `outputRecordCount`. Deze waarde wordt op alle batches gegenereerd, ongeacht of `errorDiagnostics` is ingeschakeld. |
-| `errors.recordCount` | Het aantal rijen dat is mislukt voor de opgegeven foutcode. Deze waarde is **alleen** gegenereerd als `errorDiagnostics` is ingeschakeld. |
+| `metrics.failedRecordCount` | Het aantal rijen dat niet kon worden verwerkt vanwege parseren, omzetten of valideren. Deze waarde kan worden afgeleid door `inputRecordCount` van `outputRecordCount` af te trekken. Deze waarde wordt op alle batches gegenereerd, ongeacht of `errorDiagnostics` is ingeschakeld. |
+| `errors.recordCount` | Het aantal rijen dat is mislukt voor de opgegeven foutcode. Deze waarde wordt **slechts** geproduceerd als `errorDiagnostics` wordt toegelaten. |
 
 >[!NOTE]
 >
->Als foutdiagnostiek niet beschikbaar is, wordt in plaats daarvan het volgende foutbericht weergegeven:
+>Als de foutdiagnostiek niet beschikbaar is, wordt in plaats daarvan het volgende foutbericht weergegeven:
 >
 ```json
 >{
@@ -295,9 +295,9 @@ Als de partij één of meerdere fouten heeft en toegelaten foutendiagnostiek hee
 
 ## Volgende stappen {#next-steps}
 
-Deze zelfstudie besprak hoe u fouten met gedeeltelijke inname van batch kunt controleren. Lees voor meer informatie over het gebruik van batch [handleiding voor het ontwikkelen van batch-inhoud](../batch-ingestion/api-overview.md).
+Deze zelfstudie besprak hoe u fouten met gedeeltelijke inname van batch kunt controleren. Voor meer informatie over partijingestie, te lezen gelieve de [ gids van de partijontwikkelaar ](../batch-ingestion/api-overview.md).
 
-## Aanhangsel {#appendix}
+## Bijlage {#appendix}
 
 Deze sectie verstrekt aanvullende informatie over de types van inname fout.
 
@@ -311,17 +311,17 @@ Gedeeltelijke batch-opname heeft drie verschillende fouttypen bij het invoeren v
 
 ### Onleesbare bestanden {#unreadable}
 
-Als de ingesloten batch onleesbare bestanden bevat, worden de fouten van de batch toegevoegd aan de batch zelf. Meer informatie over het ophalen van de mislukte batch vindt u in de [hulplijn voor mislukte batches ophalen](../quality/retrieve-failed-batches.md).
+Als de ingesloten batch onleesbare bestanden bevat, worden de fouten van de batch toegevoegd aan de batch zelf. Meer informatie bij het terugwinnen van de ontbroken partij kan in [ worden gevonden het terugwinnen ontbroken partijgids ](../quality/retrieve-failed-batches.md).
 
 ### Ongeldige schema&#39;s of kopteksten {#schemas-headers}
 
-Als de partij ingesloten een ongeldig schema of ongeldige kopballen heeft, zullen de fouten van de partij op de partij zelf worden vastgemaakt. Meer informatie over het ophalen van de mislukte batch vindt u in de [hulplijn voor mislukte batches ophalen](../quality/retrieve-failed-batches.md).
+Als de partij ingesloten een ongeldig schema of ongeldige kopballen heeft, zullen de fouten van de partij op de partij zelf worden vastgemaakt. Meer informatie bij het terugwinnen van de ontbroken partij kan in [ worden gevonden het terugwinnen ontbroken partijgids ](../quality/retrieve-failed-batches.md).
 
 ### Onscheidbare rijen {#unparsable}
 
 Als de batch die u hebt ingevoegd onscheidbare rijen bevat, kunt u de volgende aanvraag gebruiken om een lijst weer te geven met bestanden die fouten bevatten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /export/batches/{BATCH_ID}/meta?path=row_errors
@@ -329,7 +329,7 @@ GET /export/batches/{BATCH_ID}/meta?path=row_errors
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{BATCH_ID}` | De `id` waarde van de batch waarvan u foutgegevens ophaalt. |
+| `{BATCH_ID}` | De `id` -waarde van de batch waarvan u foutgegevens ophaalt. |
 
 **Verzoek**
 
@@ -341,7 +341,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203P
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lijst met bestanden met fouten.
 
@@ -374,7 +374,7 @@ Een geslaagde reactie retourneert een lijst met bestanden met fouten.
 }
 ```
 
-U kunt dan gedetailleerde informatie over de fouten terugwinnen gebruikend [diagnostische eindpunt van de herwinning](#retrieve-diagnostics).
+U kunt gedetailleerde informatie over de fouten dan terugwinnen gebruikend het [ diagnostische herwinningseindpunt ](#retrieve-diagnostics).
 
 Hieronder ziet u een voorbeeldreactie van het ophalen van het foutbestand:
 

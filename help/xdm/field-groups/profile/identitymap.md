@@ -14,13 +14,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De namen van verschillende groepen schemavelden zijn gewijzigd. Document weergeven op [veldgroepnaapupdates](../name-updates.md) voor meer informatie .
+>De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [ de naamupdates van de gebiedsgroep ](../name-updates.md) voor meer informatie.
 
-[!UICONTROL IdentityMap] is een standaardschemagebiedgroep voor [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). De veldgroep bevat één kaartveld dat een set gebruikersidentiteiten bevat die door naamruimte worden vastgehouden.
+[!UICONTROL IdentityMap] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../classes/individual-profile.md). De veldgroep bevat één kaartveld dat een set gebruikersidentiteiten bevat die door naamruimte worden vastgehouden.
 
-![Een schema van de [!UICONTROL IdentityMap] schemaveldgroep](../../images/field-groups/identitymap.png)
+![ A diagram van de [!UICONTROL IdentityMap] groep van het schemagebied ](../../images/field-groups/identitymap.png)
 
-Zie de sectie over identiteitskaarten in het dialoogvenster [grondbeginselen van de schemacompositie](../../schema/composition.md#identityMap) voor meer informatie over het gebruik ervan , waaronder de voordelen en nadelen .
+Zie de sectie over identiteitskaarten in de [ grondbeginselen van schemacompositie ](../../schema/composition.md#identityMap) voor meer informatie over hun gebruiksgeval, met inbegrip van hun voordelen en nadelen.
 
 **voorbeeld**
 
@@ -38,4 +38,4 @@ Zie de sectie over identiteitskaarten in het dialoogvenster [grondbeginselen van
 }
 ```
 
-Voor meer informatie over de veldgroep raadpleegt u de [volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) in de openbare XDM-opslagplaats.
+Voor meer details op de gebiedsgroep, verwijs naar het [ volledige schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) in de openbare bewaarplaats XDM.

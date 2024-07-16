@@ -4,8 +4,8 @@ title: Bestandsgebaseerde bestemming testen met voorbeeldprofielen
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
 source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 1%
+source-wordcount: '829'
+ht-degree: 0%
 
 ---
 
@@ -13,30 +13,30 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-Op deze pagina wordt uitgelegd hoe u de `/testing/destinationInstance` API eindpunt om te testen als uw op dossier-gebaseerde bestemming correct wordt gevormd en om de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren.
+Deze pagina verklaart hoe te om het `/testing/destinationInstance` API eindpunt te gebruiken om te testen als uw op dossier-gebaseerde bestemming correct wordt gevormd en om de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren.
 
-U kunt verzoeken aan het testende eindpunt met of zonder het toevoegen van [voorbeeldprofielen](file-based-sample-profile-generation-api.md) aan de vraag. Als u geen profielen verzendt op de aanvraag, genereert de API automatisch een voorbeeldprofiel en voegt deze toe aan de aanvraag.
+U kunt verzoeken aan het het testen eindpunt met of zonder [ steekproefprofielen ](file-based-sample-profile-generation-api.md) aan de vraag toe te voegen. Als u geen profielen verzendt op de aanvraag, genereert de API automatisch een voorbeeldprofiel en voegt deze toe aan de aanvraag.
 
-De automatisch gegenereerde voorbeeldprofielen bevatten algemene gegevens. Als u uw doel wilt testen met aangepaste, intuïtievere profielgegevens, gebruikt u de opdracht [API voor genereren van voorbeeldprofiel](file-based-sample-profile-generation-api.md) om een steekproefprofiel te produceren, dan zijn reactie aan te passen en het op te nemen in het verzoek aan `/testing/destinationInstance` eindpunt.
+De automatisch gegenereerde voorbeeldprofielen bevatten algemene gegevens. Als u uw bestemming met douane, intuïtievere profielgegevens wilt testen, gebruik [ de generatie API van het steekproefprofiel ](file-based-sample-profile-generation-api.md) om een steekproefprofiel te produceren, dan zijn reactie aan te passen en het te omvatten in het verzoek aan het `/testing/destinationInstance` eindpunt.
 
 ## Aan de slag {#getting-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Vereisten {#prerequisites}
 
-Voordat u de `/testing/destinationInstance` aan, zorg ervoor u aan de volgende voorwaarden voldoet:
+Voordat u het eindpunt `/testing/destinationInstance` kunt gebruiken, moet u controleren of aan de volgende voorwaarden is voldaan:
 
-* U hebt een bestaande op dossier-gebaseerde bestemming die door de Destination SDK wordt gecreeerd en u kunt het in uw zien [doelcatalogus](../../../ui/destinations-workspace.md).
+* U hebt een bestaande op dossier-gebaseerde bestemming die door de Destination SDK wordt gecreeerd en u kunt het in uw [ catalogus van bestemmingen ](../../../ui/destinations-workspace.md) zien.
 * U hebt minstens één activeringsstroom voor uw bestemming in de gebruikersinterface van het Experience Platform gemaakt.
 * Als u de API-aanvraag met succes wilt uitvoeren, hebt u de id van de doelinstantie nodig die overeenkomt met de doelinstantie die u wilt testen. Krijg bestemmingsidentiteitskaart die u in de API vraag, van URL zou moeten gebruiken, wanneer het doorbladeren van een verbinding met uw bestemming in Platform UI.
 
-  ![UI-afbeelding die laat zien hoe u de id van de doelinstantie opgehaald kunt krijgen via de URL.](../../assets/testing-api/get-destination-instance-id.png)
-* *Optioneel*: Als u uw bestemmingsconfiguratie met een steekproefprofiel wilt testen dat aan de API vraag wordt toegevoegd, gebruik [/sample-profiles](file-based-sample-profile-generation-api.md) eindpunt om een steekproefprofiel te produceren dat op uw bestaand bronschema wordt gebaseerd. Als u geen voorbeeldprofiel opgeeft, genereert de API er een en retourneert deze in de reactie.
+  ![ beeld UI die hoe te om bestemmingsidentiteitskaart van URL te krijgen toont.](../../assets/testing-api/get-destination-instance-id.png)
+* *Facultatief*: Als u uw bestemmingsconfiguratie met een steekproefprofiel wilt testen dat aan de API vraag wordt toegevoegd, gebruik het [ /sample-profiles ](file-based-sample-profile-generation-api.md) eindpunt om een steekproefprofiel te produceren dat op uw bestaand bronschema wordt gebaseerd. Als u geen voorbeeldprofiel opgeeft, genereert de API er een en retourneert deze in de reactie.
 
 ## Test uw bestemmingsconfiguratie zonder profielen aan de vraag toe te voegen {#test-without-adding-profiles}
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
@@ -55,9 +55,9 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | Padparameters | Beschrijving |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | De id van de doelinstantie waarvoor u voorbeeldprofielen genereert. Zie de [voorwaarden](#prerequisites) voor meer informatie over het verkrijgen van deze id. |
+| `{DESTINATION_INSTANCE_ID}` | De id van de doelinstantie waarvoor u voorbeeldprofielen genereert. Zie de [ eerste vereisten ](#prerequisites) sectie voor details op hoe te om deze identiteitskaart te verkrijgen. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert HTTP status 200 samen met de antwoordlading terug.
 
@@ -111,17 +111,17 @@ Een succesvolle reactie keert HTTP status 200 samen met de antwoordlading terug.
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `activations` | Retourneert de gebruikers-id en de flow-run-id voor elk geactiveerd publiek. Het aantal activeringsitems (en de bijbehorende gegenereerde bestanden) is gelijk aan het aantal soorten publiek dat is toegewezen aan de doelinstantie. <br><br> Voorbeeld: Als u twee soorten publiek hebt toegewezen aan de doelinstantie, wordt `activations` array bevat twee items. Elk geactiveerd publiek komt overeen met één geëxporteerd bestand. |
-| `results` | Retourneert de ID van de doelinstantie en de ID&#39;s van de flowuitvoering die u kunt gebruiken om de [resultatenAPI](file-based-destination-results-api.md)om de integratie verder te testen. |
+| `activations` | Retourneert de gebruikers-id en de flow-run-id voor elk geactiveerd publiek. Het aantal activeringsitems (en de bijbehorende gegenereerde bestanden) is gelijk aan het aantal soorten publiek dat is toegewezen aan de doelinstantie. <br><br> Voorbeeld: als u twee soorten publiek aan de doelinstantie toewijst, bevat de `activations` -array twee items. Elk geactiveerd publiek komt overeen met één geëxporteerd bestand. |
+| `results` | Keert bestemmingsidentiteitskaart en de stroom in werking gestelde IDs terug die u kunt gebruiken om [ resultaten API ](file-based-destination-results-api.md) te roepen, om de integratie verder te testen. |
 | `inputProfiles` | Retourneert de voorbeeldprofielen die automatisch door de API worden gegenereerd. |
 
 {style="table-layout:auto"}
 
 ## Test uw bestemmingsconfiguratie met profielen die aan de vraag worden toegevoegd {#test-with-added-profiles}
 
-Als u uw bestemming wilt testen met aangepaste, intuïtievere profielgegevens, kunt u de reactie aanpassen die wordt verkregen via het dialoogvenster [/sample-profiles](file-based-sample-profile-generation-api.md) eindpunt met waarden van uw keus, en omvat het douaneprofiel in het verzoek aan `/testing/destinationInstance` eindpunt.
+Om uw bestemming met douane, meer intuïtieve profielgegevens te testen, kunt u de reactie aanpassen die van het [ wordt verkregen/steekproef-profielen ](file-based-sample-profile-generation-api.md) eindpunt met waarden van uw keus, en het douaneprofiel in het verzoek aan het `/testing/destinationInstance` eindpunt omvatten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST  /testing/destinationInstance/{DESTINATION_INSTANCE_ID}
@@ -175,10 +175,10 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | Parameter | Beschrijving |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | De doel-instantie-id van het doel dat u test.  De id van de doelinstantie waarvoor u voorbeeldprofielen genereert. Zie de [voorwaarden](#prerequisites) voor meer informatie over het verkrijgen van deze id. |
-| `profiles` | Array die een of meerdere profielen kan bevatten. Gebruik de [API-eindpunt van voorbeeldprofiel](file-based-sample-profile-generation-api.md) om profielen te genereren voor gebruik in deze API-aanroep. |
+| `{DESTINATION_INSTANCE_ID}` | De doel-instantie-id van het doel dat u test.  De id van de doelinstantie waarvoor u voorbeeldprofielen genereert. Zie de [ eerste vereisten ](#prerequisites) sectie voor details op hoe te om deze identiteitskaart te verkrijgen. |
+| `profiles` | Array die een of meerdere profielen kan bevatten. Gebruik het [ eindpunt van steekproefAPI van het profiel ](file-based-sample-profile-generation-api.md) om profielen te produceren in deze API vraag te gebruiken. |
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert HTTP status 200 samen met de antwoordlading terug.
 
@@ -232,18 +232,18 @@ Een succesvolle reactie keert HTTP status 200 samen met de antwoordlading terug.
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `activations` | Retourneert de gebruikers-id en de flow-run-id voor elk geactiveerd publiek. Het aantal activeringsitems (en de bijbehorende gegenereerde bestanden) is gelijk aan het aantal soorten publiek dat is toegewezen aan de doelinstantie. <br><br> Voorbeeld: Als u twee soorten publiek hebt toegewezen aan de doelinstantie, wordt `activations` array bevat twee items. Elk geactiveerd publiek komt overeen met één geëxporteerd bestand. |
-| `results` | Retourneert de ID van de doelinstantie en de ID&#39;s van de flowuitvoering die u kunt gebruiken om de [resultatenAPI](file-based-destination-results-api.md)om de integratie verder te testen. |
+| `activations` | Retourneert de gebruikers-id en de flow-run-id voor elk geactiveerd publiek. Het aantal activeringsitems (en de bijbehorende gegenereerde bestanden) is gelijk aan het aantal soorten publiek dat is toegewezen aan de doelinstantie. <br><br> Voorbeeld: als u twee soorten publiek aan de doelinstantie toewijst, bevat de `activations` -array twee items. Elk geactiveerd publiek komt overeen met één geëxporteerd bestand. |
+| `results` | Keert bestemmingsidentiteitskaart en de stroom in werking gestelde IDs terug die u kunt gebruiken om [ resultaten API ](file-based-destination-results-api.md) te roepen, om de integratie verder te testen. |
 | `inputProfiles` | Retourneert de aangepaste voorbeeldprofielen die u hebt doorgegeven in de API-aanvraag. |
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 
 Na het lezen van dit document, weet u nu hoe te om uw op dossier-gebaseerde bestemmingsconfiguratie te testen.
 
-Als u een geldige API-reactie hebt ontvangen, werkt de bestemming correct. Als u meer gedetailleerde informatie over uw activeringsstroom wilt zien, kunt u de `results` eigenschap van het antwoord op [gedetailleerde activeringsresultaten weergeven](file-based-destination-results-api.md).
+Als u een geldige API-reactie hebt ontvangen, werkt de bestemming correct. Als u meer gedetailleerde informatie over uw activeringsstroom wilt zien, kunt u het `results` bezit van de reactie op [ mening gedetailleerde activeringsresultaten ](file-based-destination-results-api.md) gebruiken.
 
-Als u een openbare bestemming bouwt, kunt u nu [Verzend uw doelconfiguratie](../../guides/submit-destination.md) naar Adobe ter controle.
+Als u een openbare bestemming bouwt, kunt u [ uw bestemmingsconfiguratie ](../../guides/submit-destination.md) aan Adobe voor overzicht nu voorleggen.

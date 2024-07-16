@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # Een roll-uprapport voor een specifieke bezoeker weergeven
 
-Dit document verstrekt een SQL voorbeeld om gegevens van veelvoudige analytische eigenschappen voor een specifieke gebruiker samen te voegen en die gegevens samen in één rapport te zien. Met Adobe Experience Platform Query Service kunt u query&#39;s schrijven die worden gebruikt [!DNL Experience Events] om verschillende gebruiksgevallen vast te leggen. De Gebeurtenissen van de ervaring worden vertegenwoordigd door de klasse ExperienceEvent van het Gegevensmodel van de Ervaring (XDM), die een onveranderlijke en niet-geaggregeerde momentopname van het systeem vangt wanneer een gebruiker met een website of de dienst interactie aangaat. De Gebeurtenissen van de ervaring kunnen zelfs voor tijd-domeinanalyse worden gebruikt. Zie de [sectie Volgende stappen](#next-steps) voor meer gebruik: [!DNL Experience Events] om bezoekersrapporten te genereren.
+Dit document verstrekt een SQL voorbeeld om gegevens van veelvoudige analytische eigenschappen voor een specifieke gebruiker samen te voegen en die gegevens samen in één rapport te zien. Met Adobe Experience Platform Query Service kunt u query&#39;s schrijven die [!DNL Experience Events] gebruiken om verschillende gebruiksgevallen vast te leggen. De Gebeurtenissen van de ervaring worden vertegenwoordigd door de klasse ExperienceEvent van het Gegevensmodel van de Ervaring (XDM), die een onveranderlijke en niet-geaggregeerde momentopname van het systeem vangt wanneer een gebruiker met een website of de dienst interactie aangaat. De Gebeurtenissen van de ervaring kunnen zelfs voor tijd-domeinanalyse worden gebruikt. Zie [ volgende stappen sectie ](#next-steps) voor meer gebruiksgevallen die [!DNL Experience Events] impliceren om bezoekersrapporten te produceren.
 
-Meer informatie over XDM en [!DNL Experience Events] kunt u vinden in het dialoogvenster [[!DNL XDM System] overzicht](../../xdm/home.md). Door de Dienst van de Vraag met te combineren [!DNL Experience Events], kunt u gedragstrends onder uw gebruikers effectief volgen. Het volgende document bevat voorbeelden van query&#39;s die betrekking hebben op [!DNL Experience Events].
+Meer informatie over XDM en [!DNL Experience Events] kan in het [[!DNL XDM System]  overzicht ](../../xdm/home.md) worden gevonden. Door de Dienst van de Vraag met [!DNL Experience Events] te combineren, kunt u gedragstendensen onder uw gebruikers effectief volgen. Het volgende document bevat voorbeelden van query&#39;s die [!DNL Experience Events] betreffen.
 
 ## Doelstelling
 
-In het volgende SQL-voorbeeld ziet u hoe u een geaggregeerd rapport van verschillende analysewaarden voor een opgegeven gebruiker bekijkt.
+In het volgende SQL-voorbeeld ziet u hoe u een geaggregeerd rapport van verschillende analysewaarden voor een opgegeven gebruiker kunt weergeven.
 
 ```sql
 SELECT 
@@ -49,10 +49,10 @@ De resultaten van de query worden weergegeven in de onderstaande tabel.
 
 ## Volgende stappen {#next-steps}
 
-Door dit document te lezen, hebt u een beter inzicht in hoe te om de Dienst van de Vraag met te gebruiken [!DNL Experience Events] om een geaggregeerd rapport weer te geven van analysewaarden voor een opgegeven gebruiker.
+Door dit document te lezen, hebt u een beter inzicht in hoe te om de Dienst van de Vraag met [!DNL Experience Events] te gebruiken om een samengevouwen rapport van analysewaarden voor een gespecificeerde gebruiker te bekijken.
 
 Raadpleeg de volgende gebruiksgevallen voor meer informatie over andere gebruikte gevallen die door bezoekers worden gebruikt:
 
-- [Hiermee haalt u een lijst met bezoekers op, ingedeeld op basis van het aantal paginaweergaven.](./visitors-by-number-of-page-views.md)
+- [Hiermee wordt een lijst met bezoekers opgehaald die is ingedeeld op aantal paginaweergaven.](./visitors-by-number-of-page-views.md)
 - [De vorige sessies van een bezoeker weergeven.](./list-visitor-sessions.md)
 - [Maak een verouderd rapport van gebeurtenissen per dag.](./trended-report-of-events.md)

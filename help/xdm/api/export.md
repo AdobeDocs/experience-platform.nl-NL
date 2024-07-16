@@ -4,26 +4,26 @@ description: Het /export eindpunt in de Registratie API van het Schema staat u t
 exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
 
 # Exporteindpunt
 
-Alle bronnen binnen de [!DNL Schema Library] bevinden zich in een specifieke sandbox in Adobe Experience Platform. In sommige gevallen wilt u wellicht XDM-bronnen (Experience Data Model) delen tussen sandboxen en organisaties. De `/rpc/export` in de [!DNL Schema Registry] API staat u toe om een de uitvoerlading voor om het even welk schema, de groep van het schemagebied of gegevenstype in te produceren [!DNL Schema Library]en gebruik vervolgens die payload om die bron (en alle afhankelijke bronnen) in een doelsandbox en -organisatie te importeren via de [`/rpc/import` eindpunt](./import.md).
+Alle bronnen in de [!DNL Schema Library] bevinden zich in een specifieke sandbox in Adobe Experience Platform. In sommige gevallen wilt u wellicht XDM-bronnen (Experience Data Model) delen tussen sandboxen en organisaties. Het `/rpc/export` eindpunt in [!DNL Schema Registry] API staat u toe een de uitvoerlading voor om het even welk schema, de groep van het schemagebied, of gegevenstype in [!DNL Schema Library] produceren, en dan die nuttige lading gebruiken om dat middel (en alle afhankelijke middelen) in een doelzandbak en organisatie door het [`/rpc/import` eindpunt ](./import.md) in te voeren.
 
 ## Aan de slag
 
-De `/rpc/export` eindpunt maakt deel uit van [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het `/rpc/export` eindpunt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
-De `/rpc/export` het eindpunt maakt deel uit van de verre procedurevraag (RPCs) die door het [!DNL Schema Registry]. Anders dan bij andere eindpunten in het deelvenster [!DNL Schema Registry] API, RPC-eindpunten vereisen geen extra headers zoals `Accept` of `Content-Type`en geen `CONTAINER_ID`. In plaats daarvan moeten ze de opdracht `/rpc` naamruimte, zoals wordt getoond in de API-aanroepen hieronder.
+Het `/rpc/export` eindpunt maakt deel uit van de verre procedurevraag (RPCs) die door [!DNL Schema Registry] wordt gesteund. In tegenstelling tot andere eindpunten in de [!DNL Schema Registry] API, vereisen RPC-eindpunten geen extra kopteksten zoals `Accept` of `Content-Type` en gebruiken ze geen `CONTAINER_ID` . In plaats daarvan moeten ze de naamruimte `/rpc` gebruiken, zoals wordt getoond in de API-aanroepen hieronder.
 
 ## Een exportlading genereren voor een bron {#export}
 
-Voor een bestaand schema, een bestaande veldgroep of een bestaand gegevenstype in het dialoogvenster [!DNL Schema Library], kunt u een exportheffing genereren door een verzoek tot GET aan de `/export` eindpunt, verstrekkend identiteitskaart van het middel in de weg.
+Voor om het even welk bestaand schema, gebiedsgroep, of gegevenstype in [!DNL Schema Library], kunt u een de uitvoerlading produceren door een verzoek van de GET aan het `/export` eindpunt te richten, verstrekkend identiteitskaart van het middel in de weg.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /rpc/export/{RESOURCE_ID}
@@ -31,13 +31,13 @@ GET /rpc/export/{RESOURCE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RESOURCE_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de XDM-bron die u wilt exporteren. |
+| `{RESOURCE_ID}` | De `meta:altId` of URL-gecodeerde `$id` van de XDM-bron die u wilt exporteren. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een exportlading opgehaald voor een `Restaurant` veldgroep.
+Met de volgende aanvraag wordt een exportlading opgehaald voor een veldgroep `Restaurant` .
 
 ```shell
 curl -X GET \
@@ -49,11 +49,11 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-**Antwoord**
+**Reactie**
 
-Een succesvolle reactie keert een serie van voorwerpen terug, die het doelXDM middel en al zijn afhankelijke middelen vertegenwoordigen. In dit voorbeeld is het eerste object in de array een door de gebruiker gemaakt object `Property` gegevenstype dat `Restaurant` veldgroep werkt, terwijl het tweede object het `Restaurant` veldgroep zelf. Deze lading kan dan worden gebruikt aan [de bron importeren](#import) in een andere sandbox of organisatie.
+Een succesvolle reactie keert een serie van voorwerpen terug, die het doelXDM middel en al zijn afhankelijke middelen vertegenwoordigen. In dit voorbeeld is het eerste object in de array een door de gebruiker gemaakt gegevenstype `Property` dat door de veldgroep `Restaurant` wordt gebruikt, terwijl het tweede object de veldgroep `Restaurant` zelf is. Deze nuttige lading kan dan worden gebruikt om het middel ](#import) in een verschillende zandbak of organisatie in te voeren [.
 
-Merk op dat alle instanties van huurder ID van het middel met worden vervangen `<XDM_TENANTID_PLACEHOLDER>`. Dit staat de Registratie van het Schema toe om correcte huurdersidentiteitskaart op de middelen automatisch toe te passen afhankelijk van waar zij in de verdere de invoervraag worden verzonden.
+Merk op dat alle instanties van de huurder ID van het middel door `<XDM_TENANTID_PLACEHOLDER>` worden vervangen. Dit staat de Registratie van het Schema toe om correcte huurdersidentiteitskaart op de middelen automatisch toe te passen afhankelijk van waar zij in de verdere de invoervraag worden verzonden.
 
 ```json
 [
@@ -195,6 +195,6 @@ Merk op dat alle instanties van huurder ID van het middel met worden vervangen `
 
 ## De bron importeren {#import}
 
-Nadat u de laadgegevens voor exporteren vanuit het CSV-bestand hebt gegenereerd, kunt u die laadgegevens naar de `/rpc/import` eindpunt om het schema te produceren.
+Na het produceren van de de uitvoerlading van het Csv- dossier, kunt u die lading naar het `/rpc/import` eindpunt verzenden om het schema te produceren.
 
-Zie de [hulplijn voor importeindpunt](./import.md) voor details over hoe te om schema&#39;s van de ladingen van de uitvoer te produceren.
+Zie de [ de gids van het de invoereindpunt ](./import.md) voor details op hoe te schema&#39;s van de uitvoerladingen produceren.

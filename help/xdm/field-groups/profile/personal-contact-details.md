@@ -16,23 +16,23 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De namen van verschillende groepen schemavelden zijn gewijzigd. Document weergeven op [veldgroepnaapupdates](../name-updates.md) voor meer informatie .
+>De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [ de naamupdates van de gebiedsgroep ](../name-updates.md) voor meer informatie.
 
-[!UICONTROL Personal Contact Details] is een standaardschemagebiedgroep voor [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) waarin de contactgegevens voor een individuele persoon worden beschreven.
+[!UICONTROL Personal Contact Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../classes/individual-profile.md) die de contactinformatie voor een individuele persoon beschrijft.
 
 ![](../../images/field-groups/personal-contact-details.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `faxPhone` | [Telefoonnummer](../../data-types/phone-number.md) | Beschrijft het faxnummer van de persoon. |
-| `homeAddress` | [Postadres](../../data-types/postal-address.md) | Beschrijft het woonadres van de persoon. |
-| `homePhone` | [Telefoonnummer](../../data-types/phone-number.md) | Beschrijft het huistelefoonaantal van de persoon. |
-| `mobilePhone` | [Telefoonnummer](../../data-types/phone-number.md) | Beschrijft het mobiele telefoonnummer van de persoon. |
-| `personalEmail` | [E-mailadres](../../data-types/email-address.md) | Beschrijft het e-mailadres van de persoon. |
+| `faxPhone` | [ Aantal van de Telefoon ](../../data-types/phone-number.md) | Beschrijft het faxnummer van de persoon. |
+| `homeAddress` | [ Postadres ](../../data-types/postal-address.md) | Beschrijft het woonadres van de persoon. |
+| `homePhone` | [ Aantal van de Telefoon ](../../data-types/phone-number.md) | Beschrijft het huistelefoonaantal van de persoon. |
+| `mobilePhone` | [ Aantal van de Telefoon ](../../data-types/phone-number.md) | Beschrijft het mobiele telefoonnummer van de persoon. |
+| `personalEmail` | [ E-mailadres ](../../data-types/email-address.md) | Beschrijft het e-mailadres van de persoon. |
 
 {style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)

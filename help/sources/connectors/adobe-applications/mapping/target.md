@@ -5,7 +5,7 @@ description: Leer hoe u Adobe Target-gebeurtenisvelden kunt toewijzen aan een XD
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '431'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ In de volgende tabel worden de velden van een XDM-ervaringsgebeurtenisschema (Ex
 | **`dataSource`** | | Gevormd aan &quot;1&quot;voor alle cliënten. |
 | `dataSource._id` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | De unieke id van deze gegevensbron. Dit zou worden verstrekt door het individu of het systeem dat de gegevensbron creeerde. |
 | `dataSource.code` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | Een sneltoets naar de volledige @id. U kunt ten minste een van de code of @id gebruiken. Soms wordt deze code de integratiecode van de gegevensbron genoemd. |
-| `dataSource.tags` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | Tags worden gebruikt om aan te geven hoe aliassen die door een bepaalde gegevensbron worden vertegenwoordigd, door toepassingen met die aliassen moeten worden geïnterpreteerd.<br><br>Voorbeelden:<br><ul><li>`isAVID`: Gegevensbronnen die analytische bezoeker-id&#39;s vertegenwoordigen.</li><li>`isCRSKey`: Gegevensbronnen die aliassen vertegenwoordigen die als sleutels in CRS zouden moeten worden gebruikt.</li></ul>De markeringen worden geplaatst wanneer de gegevensbron wordt gecreeerd maar zij zijn ook inbegrepen in pijpleidingsberichten wanneer het van verwijzingen voorzien van een bepaalde gegevensbron. |
+| `dataSource.tags` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | Tags worden gebruikt om aan te geven hoe aliassen die door een bepaalde gegevensbron worden vertegenwoordigd, door toepassingen met die aliassen moeten worden geïnterpreteerd.<br><br> Voorbeelden:<br><ul><li>`isAVID`: gegevensbronnen die analytische bezoeker-id&#39;s vertegenwoordigen.</li><li>`isCRSKey`: gegevensbronnen die aliassen vertegenwoordigen die als sleutels in CRS zouden moeten worden gebruikt.</li></ul>De markeringen worden geplaatst wanneer de gegevensbron wordt gecreeerd maar zij zijn ook inbegrepen in pijpleidingsberichten wanneer het van verwijzingen voorzien van een bepaalde gegevensbron. |
 | **`timestamp`** | Tijdstempel voor gebeurtenis |
 | **`channel`** | `context.channel` | Werkt alleen met weergave. De opties zijn &quot;web&quot; en &quot;mobiel&quot;, waarbij &quot;web&quot; de standaardwaarde is. |
 | **`endUserIds`** |
@@ -41,7 +41,7 @@ In de volgende tabel worden de velden van een XDM-ervaringsgebeurtenisschema (Ex
 | `environment.colorDepth` | `mboxRequest.colorDepth` |
 | `environment.carrier` | De naam van de mobiele provider is opgelost op basis van het IP-adres van het verzoek. |
 | `environment.ipV4` | `mboxRequest.ipAddress` (indien in V4-indeling) |
-| `environment.ipV6` | `mboxRequest.ipAddress` (indien in V6-indeling) |
+| `environment.ipV6` | `mboxRequest.ipAddress` (als in de indeling V6) |
 | **`experience`** |
 | `experience.target.clientCode` | `mboxRequest.client` |
 | `experience.target.mboxName` | `mboxRequest.mboxName` |

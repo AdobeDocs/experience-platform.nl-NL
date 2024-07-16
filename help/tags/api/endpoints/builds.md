@@ -1,37 +1,37 @@
 ---
-title: Buildeindpunt
+title: Build-eindpunt
 description: Leer hoe te om vraag aan het /builds eindpunt in Reactor API te maken.
 exl-id: 476abea0-efff-478a-b87f-ef6b91bfcca5
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '799'
 ht-degree: 1%
 
 ---
 
-# Buildeindpunt
+# Build-eindpunt
 
-Extensies, regels en gegevenselementen zijn de bouwstenen van tags in Adobe Experience Platform. Wanneer u wilt dat uw toepassing iets doet, worden deze bouwstenen toegevoegd aan een [bibliotheek](./libraries.md). Om een bibliotheek op uw ervaringstoepassing op te stellen, wordt de bibliotheek gecompileerd in een bouwstijl. De `/builds` Het eindpunt in Reactor API staat u toe om bouwstijlen binnen uw ervaringstoepassing programmatically te beheren.
+Extensies, regels en gegevenselementen zijn de bouwstenen van tags in Adobe Experience Platform. Wanneer u uw toepassing wilt maken iets doen, worden deze bouwstenen toegevoegd aan a [ bibliotheek ](./libraries.md). Om een bibliotheek op uw ervaringstoepassing op te stellen, wordt de bibliotheek gecompileerd in een bouwstijl. Met het `/builds` -eindpunt in de Reactor-API kunt u builds programmatisch beheren binnen uw ervaringstoepassing.
 
 Een build is het feitelijke bestand (of de bestanden) die in uw web- en mobiele toepassing zijn geladen. De inhoud van elke build varieert op basis van de volgende factoren:
 
 * De bronnen die in de bibliotheek zijn opgenomen
-* De configuratie van de [milieu](./environments.md) waarin de bibliotheek is gebouwd
-* Het platform van de [eigenschap](./properties.md) waarvan de build deel uitmaakt
+* De configuratie van het [ milieu ](./environments.md) waarin de bibliotheek wordt gebouwd
+* Het platform van het [ bezit ](./properties.md) waartot de bouwstijl behoort
 
 Een build behoort tot precies één bibliotheek. Een bibliotheek kan veel builds bevatten.
 
-Voor meer algemene informatie over builds en hoe deze passen in de publicatieworkflow voor tags raadpleegt u de [publicatieoverzicht](../../ui/publishing/overview.md).
+Voor meer algemene informatie over bouwt en hoe zij in het publiceren werkschema voor markeringen passen, gelieve te verwijzen naar het [ het publiceren overzicht ](../../ui/publishing/overview.md).
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met builds ophalen {#list}
 
 U kunt de builds voor een bepaalde bibliotheek weergeven door de id van de bibliotheek op te nemen in het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /libraries/{LIBRARY_ID}/builds
@@ -45,7 +45,7 @@ GET /libraries/{LIBRARY_ID}/builds
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde bouwstijlen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
+>Gebruikend vraagparameters, kunnen de vermelde bouwstijlen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -59,7 +59,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert een lijst met builds voor de opgegeven bibliotheek.
 
@@ -148,7 +148,7 @@ Een geslaagde reactie retourneert een lijst met builds voor de opgegeven bibliot
 
 U kunt een build opzoeken door de id ervan op te geven in het pad van een GET-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /builds/{BUILD_ID}
@@ -172,7 +172,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van de bouwstijl terug.
 
@@ -250,7 +250,7 @@ Een succesvolle reactie keert de details van de bouwstijl terug.
 
 U kunt een build voor een bibliotheek maken, inclusief de id van de bibliotheek in het pad van een POST-aanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /libraries/{LIBRARY_ID}/builds
@@ -274,7 +274,7 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van nieuw gecreeerd bouwstijl terug.
 
@@ -350,9 +350,9 @@ Een succesvolle reactie keert de details van nieuw gecreeerd bouwstijl terug.
 
 ## Een build opnieuw publiceren {#republish}
 
-U kunt een build opnieuw publiceren op basis van een [gepubliceerde bibliotheek](./libraries.md#publish) door zijn identiteitskaart in de weg van een verzoek van de PATCH op te nemen.
+U kunt opnieuw publiceren bouwt van a [ gepubliceerde bibliotheek ](./libraries.md#publish) door zijn identiteitskaart in de weg van een verzoek van de PATCH te omvatten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /builds/{BUILD_ID}
@@ -366,7 +366,7 @@ PATCH /builds/{BUILD_ID}
 
 **Verzoek**
 
-De volgende aanvraag werkt de `app_id` voor een bestaande toepassingsconfiguratie.
+Met de volgende aanvraag wordt `app_id` bijgewerkt voor een bestaande toepassingsconfiguratie.
 
 ```shell
 curl -X PATCH \
@@ -388,13 +388,13 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `id` | De `id` van de build die u wilt bijwerken. Dit moet overeenkomen met de `{BUILD_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `builds`. |
-| `meta.action` | Het type PATCH-actie dat moet worden uitgevoerd. Moet worden ingesteld op `republish`. |
+| `id` | De `id` van de build die u wilt bijwerken. Dit moet overeenkomen met de `{BUILD_ID}` -waarde in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `builds` zijn. |
+| `meta.action` | Het type PATCH-actie dat moet worden uitgevoerd. Moet worden ingesteld op `republish` . |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van opnieuw gepubliceerde bouwstijl terug.
 
@@ -471,15 +471,15 @@ Een succesvolle reactie keert de details van opnieuw gepubliceerde bouwstijl ter
 
 ## Verwante middelen voor een build ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een bouwstijl terug te winnen. Wanneer [zoeken naar een build](#lookup), worden deze relaties vermeld in het `relationships` eigenschap.
+De volgende vraag toont aan hoe te om de verwante middelen voor een bouwstijl terug te winnen. Wanneer [ kijkt omhoog bouwt ](#lookup), zijn deze verhoudingen vermeld onder het `relationships` bezit.
 
-Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
+Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante gegevenselementen weergeven voor een build {#data-elements}
 
-U kunt de verwante gegevenselementen voor een bouwstijl van een lijst maken door toe te voegen `/data_elements` naar het pad van een opzoekverzoek.
+U kunt de gerelateerde gegevenselementen voor een build weergeven door `/data_elements` toe te voegen aan het pad van een opzoekaanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /builds/{BUILD_ID}/data_elements
@@ -503,7 +503,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van gegevenselementen terug die met de bouwstijl verwant zijn.
 
@@ -618,9 +618,9 @@ Een succesvolle reactie keert een lijst van gegevenselementen terug die met de b
 
 ### Verwante extensies weergeven voor een build {#extensions}
 
-U kunt de verwante extensies weergeven voor een build door deze toe te voegen `/extensions` naar het pad van een opzoekverzoek.
+U kunt de verwante extensies voor een build weergeven door `/extensions` toe te voegen aan het pad van een opzoekaanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /builds/{BUILD_ID}/extensions
@@ -644,7 +644,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert een lijst met extensies die verwant zijn aan de build.
 
@@ -749,9 +749,9 @@ Een succesvol antwoord retourneert een lijst met extensies die verwant zijn aan 
 
 ### Verwante regels voor een build weergeven {#rules}
 
-U kunt de verwante regels voor een bouwstijl vermelden door toe te voegen `/rules` naar het pad van een opzoekverzoek.
+U kunt de verwante regels voor een build weergeven door `/rules` toe te voegen aan het pad van een opzoekaanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /builds/{BUILD_ID}/rules
@@ -775,7 +775,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van regels terug die met de bouwstijl verwant zijn.
 
@@ -862,9 +862,9 @@ Een succesvolle reactie keert een lijst van regels terug die met de bouwstijl ve
 
 ### De verwante bibliotheek opzoeken voor een build {#library}
 
-U kunt de verwante bibliotheek voor een bouwstijl terugwinnen door toe te voegen `/library` naar het pad van een opzoekverzoek.
+U kunt de verwante bibliotheek voor een bouwstijl terugwinnen door `/library` aan de weg van een raadplegingsverzoek toe te voegen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /builds/{BUILD_ID}/library
@@ -888,7 +888,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 ```json
 {
@@ -975,9 +975,9 @@ curl -X GET \
 
 ### De verwante omgeving opzoeken voor een build {#environment}
 
-U kunt het verwante milieu voor een bouwstijl terugwinnen door toe te voegen `/environment` naar het pad van een opzoekverzoek.
+U kunt de verwante omgeving voor een build ophalen door `/environment` toe te voegen aan het pad van een opzoekaanvraag.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET  /builds/{BUILD_ID}/environment
@@ -1001,7 +1001,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 ```json
 {

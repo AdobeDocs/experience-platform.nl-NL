@@ -1,6 +1,6 @@
 ---
 title: Rondleiding gebruikersinterface Experience Platform
-description: Deze video geeft een korte rondleiding door de gebruikersinterface van Adobe Experience Platform om u te tonen hoe te om aan Experience Platform van Experience Cloud, het homepage dashboard, de de enablement eigenschappen van de interface, de zandbakschakelaar en navigatie elementen te navigeren.
+description: Deze video geeft een snelle rondleiding van de gebruikersinterface van Adobe Experience Platform om u te tonen hoe te om aan Experience Platform van Experience Cloud, het homepage dashboard, de de enablement eigenschappen van de interface, de zandbakschakelaar en navigatie elementen te navigeren.
 kt: 4821
 audience: all
 doc-type: video
@@ -20,7 +20,7 @@ Deze video biedt een snelle rondleiding van de gebruikersinterface van Adobe Exp
 
 >[!NOTE]
 >
->De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest actuele informatie gaat u naar de [Handleiding Adobe Experience Platform UI](../ui-guide.md).
+>De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, gelieve te bezoeken de [ gids UI van Adobe Experience Platform ](../ui-guide.md).
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)

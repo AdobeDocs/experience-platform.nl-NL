@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Account Details] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat details met betrekking tot een bedrijfsorganisatie beschrijft.
 
-![Gegevenstypestructuur](../images/data-types/account-details.png)
+![ het typestructuur van Gegevens ](../images/data-types/account-details.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -25,15 +25,15 @@ ht-degree: 0%
 | `SICDescription` | String | Een korte beschrijving van de branche van een organisatie, die op zijn SIC code wordt gebaseerd. |
 | `companyProductAndServices` | String | De producten en diensten die de organisatie behandelt of zaken doet in. |
 | `facebookPageUrl` | String | Een websitekoppeling naar de Facebook-account van de organisatie. |
-| `industry` | String | De industrie waarvan deze organisatie deel uitmaakt. Dit is een vrije-vormgebied, en het is raadzaam om een gestructureerde waarde voor vragen te gebruiken of het `xdm:classifier` eigenschap. |
+| `industry` | String | De industrie waarvan deze organisatie deel uitmaakt. Dit is een vrije-vormgebied, en het is raadzaam om een gestructureerde waarde voor vragen te gebruiken of het `xdm:classifier` bezit te gebruiken. |
 | `jigsaw` | String | De sleutel Data.com voor de organisatie. |
 | `linkedinPageUrl` | String | Een websitekoppeling naar de LinkedIn-account van de organisatie. |
-| `logoUrl` | String | Een pad dat moet worden gecombineerd met de URL van een instantie Salesforce (bijvoorbeeld `https://yourInstance.salesforce.com/`) om een URL te genereren voor het aanvragen van de afbeelding van het sociale netwerkprofiel die aan de organisatie is gekoppeld. De gegenereerde URL retourneert een HTTP-omleiding (code 302) naar de afbeelding van het sociale netwerkprofiel voor de organisatie. |
-| `marketSegment` | String | Het benoemde marktpubliek waaraan de organisatie deelneemt. Dit is een vrije-vormgebied, en het is raadzaam om een gestructureerde waarde voor vragen te gebruiken of het `xdm:identifier` eigenschap. |
+| `logoUrl` | String | Een pad dat moet worden gecombineerd met de URL van een Salesforce-instantie (bijvoorbeeld `https://yourInstance.salesforce.com/` ) om een URL te genereren voor het aanvragen van de afbeelding van het profiel van het sociale netwerk die aan de organisatie is gekoppeld. De gegenereerde URL retourneert een HTTP-omleiding (code 302) naar de afbeelding van het sociale netwerkprofiel voor de organisatie. |
+| `marketSegment` | String | Het benoemde marktpubliek waaraan de organisatie deelneemt. Dit is een vrije-vormgebied, en het is raadzaam om een gestructureerde waarde voor vragen te gebruiken of het `xdm:identifier` bezit te gebruiken. |
 | `numberOfEmployees` | Geheel | Het aantal werknemers in de organisatie. |
 | `organizationType` | String | Een label dat het type organisatie beschrijft. |
 | `primaryEmailDomain` | String | Het primaire e-maildomein dat de organisatie voor haar personeel gebruikt. |
-| `rating` | Dubbel | De berekende score of sterwaardering voor deze organisatie. `1` de maximaal mogelijke rating aangeeft, en `0` de minimaal mogelijke rating is. |
+| `rating` | Dubbel | De berekende score of sterwaardering voor deze organisatie. `1` geeft de maximale mogelijke classificatie aan en `0` is de minimale mogelijke classificatie. |
 | `tickerSymbol` | String | Het beurssymbool voor deze rekening. Maximaal 20 tekens. |
 | `twitterHandleUrl` | String | Een websitekoppeling naar de greep van de twitter van de organisatie. |
 | `website` | String | De URL van de website van de organisatie. |
@@ -42,5 +42,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.schema.json)

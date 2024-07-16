@@ -12,47 +12,47 @@ ht-degree: 0%
 
 # Doelgroepen
 
-Adobe Experience Platform biedt u de mogelijkheid om de meest eenvoudige en geavanceerde segmentatieervaring die markeringsvriendelijk is, naar [perspectiefprofielen](../../profile/ui/prospect-profile.md). U kunt de tijd die het assembleren van publiek wordt doorgebracht drastisch verminderen door uw eigen perspectiefpubliek te creëren terwijl het verantwoord gebruiken van partnergegevens.
+Adobe Experience Platform staat u toe om het volledige gemak en de verfijning van de marketer-vriendschappelijke segmentatieervaring aan [ perspectiefprofielen ](../../profile/ui/prospect-profile.md) te brengen. U kunt de tijd die het assembleren van publiek wordt doorgebracht drastisch verminderen door uw eigen perspectiefpubliek te creëren terwijl het verantwoord gebruiken van partnergegevens.
 
 ## Bladeren {#browse}
 
-Als u een publiek met perspectieven wilt openen, selecteert u **[!UICONTROL Audiences]** in de **[!UICONTROL Prospects]** sectie.
+Selecteer **[!UICONTROL Audiences]** in de **[!UICONTROL Prospects]** -sectie voor toegang tot mogelijke doelgroepen.
 
-![De [!UICONTROL Audiences] knop wordt gemarkeerd in het dialoogvenster [!UICONTROL Prospects] sectie.](../images/ui/prospect-audience/prospect-audiences.png)
+![ de [!UICONTROL Audiences] knoop wordt benadrukt binnen de [!UICONTROL Prospects] sectie.](../images/ui/prospect-audience/prospect-audiences.png)
 
 De pagina Bladeren wordt weergegeven. Een lijst van alle perspectiefpubliek voor de organisatie wordt getoond.
 
-![Het potentiële publiek van de organisatie wordt benadrukt.](../images/ui/prospect-audience/browse-audiences.png)
+![ het potentiële publiek dat tot de organisatie behoort wordt benadrukt.](../images/ui/prospect-audience/browse-audiences.png)
 
 Deze weergave bevat informatie over het publiek, zoals de naam, het aantal profielen, de oorsprong, de levenscyclusstatus, de datum waarop het is gemaakt, de datum waarop het laatst is bijgewerkt en de indeling.
 
-U kunt extra velden aan deze weergave toevoegen door ![het pictogram van het filterkenmerk](../images/ui/prospect-audience/filter-attribute.png). Deze extra velden bevatten de updatefrequentie en de laatste update door.
+U kunt extra gebieden aan deze vertoning toevoegen door ![ het pictogram van het filterattribuut ](../images/ui/prospect-audience/filter-attribute.png) te selecteren. Deze extra velden bevatten de updatefrequentie en de laatste update door.
 
-Meer informatie over de pagina Bladeren, inclusief gedetailleerde informatie over de weergegeven velden, vindt u in de [Overzicht van het portal Publiek](./audience-portal.md#list).
+Meer informatie over doorbladert pagina, met inbegrip van gedetailleerde informatie over de vermelde gebieden, kan in het [ Poortoverzicht van het Poortpubliek van het Publiek ](./audience-portal.md#list) worden gevonden.
 
 ## Details publiek {#details}
 
-Als u details over een bepaald publiek wilt weergeven, selecteert u een publiek in het deelvenster [!UICONTROL Browse] pagina.
+Als u details wilt weergeven over een bepaald publiek, selecteert u een publiek op de pagina [!UICONTROL Browse] .
 
-![Er wordt een specifiek publiek gemarkeerd.](../images/ui/prospect-audience/select-specific-audience.png)
+![ een specifiek perspectiefpubliek wordt benadrukt.](../images/ui/prospect-audience/select-specific-audience.png)
 
 De pagina met informatie over het beoogde publiek wordt weergegeven. De informatie, met inbegrip van de samenvatting van het perspectiefpubliek, het publiekstotaal, en de geactiveerde bestemmingen worden getoond.
 
-![De pagina met informatie over het beoogde publiek wordt weergegeven.](../images/ui/prospect-audience/audience-details.png)
+![ de pagina van de vooruitgangspublieksdetails wordt getoond.](../images/ui/prospect-audience/audience-details.png)
 
-Lees voor meer informatie over de pagina met publieksdetails de [sectie met publieksdetails van het overzicht van het portal Poorten publiek](./audience-portal.md#audience-details).
+Voor meer informatie over de pagina van de publieksdetails, gelieve de [ sectie van publieksdetails van het Poortoverzicht van het Poort van het Publiek ](./audience-portal.md#audience-details) te lezen.
 
 ## publiek maken {#create}
 
-Als u een publiek met perspectief wilt maken, gaat u naar [!UICONTROL Browse] pagina, selecteert u **[!UICONTROL Create audience]**.
+Als u een publiek met perspectief wilt maken, selecteert u **[!UICONTROL Create audience]** op de pagina [!UICONTROL Browse] .
 
-![De [!UICONTROL Create audience] de knoop wordt benadrukt op het publiek van het vooruitzicht doorbladert pagina.](../images/ui/prospect-audience/select-create-audience.png)
+![ de [!UICONTROL Create audience] knoop wordt benadrukt op het potentiële publiek doorbladert pagina.](../images/ui/prospect-audience/select-create-audience.png)
 
 De Segment Builder wordt weergegeven. De kenmerken van het perspectiefprofiel worden weergegeven op de linkernavigatiebalk.
 
-![De Segment Builder wordt weergegeven. De enige beschikbare kenmerken zijn voor de klasse Prospect Profile.](../images/ui/prospect-audience/segment-builder.png)
+![ de Bouwer van het Segment wordt getoond. Merk op dat de enige beschikbare attributen voor de klasse van het Profiel van het Vooruitzicht zijn.](../images/ui/prospect-audience/segment-builder.png)
 
-Voor meer informatie over het gebruik van de Segment Builder leest u de [Handleiding voor de gebruikersinterface van Segment Builder](./segment-builder.md).
+Voor meer informatie bij het gebruiken van de Bouwer van het Segment, te lezen gelieve de [ gids UI van de Bouwer van het Segment ](./segment-builder.md).
 
 ## Aanbevolen gebruiksgevallen {#use-cases}
 
@@ -62,4 +62,4 @@ Lees de volgende documentatie over het gebruiksscenario voor meer informatie ove
 
 ## Volgende stappen
 
-Nadat u deze handleiding hebt gelezen, weet u hoe u uw perspectiefpubliek in Adobe Experience Platform kunt maken en beheren. Lees de handleiding voor meer informatie over het activeren van een publiek in het vooruitzicht voor andere downstreamservices [activeren, publiek](../../destinations/ui/activate-prospect-audiences.md).
+Nadat u deze handleiding hebt gelezen, weet u hoe u uw perspectiefpubliek in Adobe Experience Platform kunt maken en beheren. Leren hoe te om een perspectiefpubliek aan andere stroomafwaartse diensten te activeren, te lezen gelieve de gids op [ activerend perspectiefpubliek ](../../destinations/ui/activate-prospect-audiences.md).

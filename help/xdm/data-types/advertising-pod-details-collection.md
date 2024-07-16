@@ -1,18 +1,19 @@
 ---
-title: Gegevenstype van verzameling advertentiepod Details
-description: Leer meer over het gegevenstype van het XDM-gegevensmodel (Experience Data Model) voor verzamelingen in advertentiepod.
-source-git-commit: a604dc8b541784ace8aedef42030e5bd8b646c28
+title: Gegevenstype verzameling Advertising Pod Details
+description: Meer informatie over het gegevenstype Advertising Pod Details Collection Experience Data Model (XDM).
+exl-id: 401c393f-aeda-4ecd-89f4-458833190ced
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '142'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 # [!UICONTROL Advertising Pod Details] Gegevenstype verzameling
 
-[!UICONTROL Advertising Pod Details] De inzameling is een standaardgegevenstype van de Gegevens van de Ervaring Model (XDM). Hiermee definieert u een reeks of groep advertenties die normaal gesproken achtereenvolgens worden afgespeeld tijdens inhoudeinden. Gebruik de [!UICONTROL Advertising Pod Details] Het gegevenstype van een verzameling voor het vastleggen van details, zoals de id van het advertentie-einde, een vriendelijke naam voor het advertentiespoor, de index van advertenties binnen het einde en de verschuiving van het advertentiespoor binnen de tijdlijn van de inhoud in seconden.
+[!UICONTROL Advertising Pod Details] Verzameling is een standaard XDM-gegevenstype (Experience Data Model). Hiermee definieert u een reeks of groep advertenties die normaal gesproken achtereenvolgens worden afgespeeld tijdens inhoudeinden. Gebruik het gegevenstype [!UICONTROL Advertising Pod Details] Verzameling om details vast te leggen, zoals de id van het advertentie-einde, een vriendelijke naam voor het advertentieeinde, de index van advertenties binnen het einde en de verschuiving van het advertentierak binnen de tijdlijn van de inhoud in seconden.
 
-![Een diagram van het gegevenstype Informatie over verzameling van gegevens over advertentiepod.](../images/data-types/advertising-pod-details-collection.png)
+![ een diagram van het de gegevenstype van de Inzameling van de Informatie van de Peul van Advertising.](../images/data-types/advertising-pod-details-collection.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Vereist | Beschrijving |
 |-----------------------------------------|-----------------|-----------|--------------------------------------------------------------------|

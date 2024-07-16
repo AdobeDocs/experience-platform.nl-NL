@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een veld labelen als een identiteit in de gebruikersinterface
 
-Velden met PII-gegevens (Persoonlijk identificeerbaar) kunnen als identiteitsvelden worden gemarkeerd. Een waarde die in een identiteitsveld wordt opgegeven, wordt door [!DNL Identity Service]. De naamruimte van de identiteit wordt opgegeven als onderdeel van het labelen van het veld.
+Velden met PII-gegevens (Persoonlijk identificeerbaar) kunnen als identiteitsvelden worden gemarkeerd. Een waarde die in een identiteitsveld wordt opgegeven, wordt als een identiteit geïnterpreteerd door [!DNL Identity Service] . De naamruimte van de identiteit wordt opgegeven als onderdeel van het labelen van het veld.
 
 Een veld met het opschrift identity mag alleen aan de volgende criteria voldoen:
 
@@ -22,8 +22,8 @@ Een veld met het opschrift identity mag alleen aan de volgende criteria voldoen:
 * Identificaties worden alleen opgenomen in gegevens uit records- en tijdreeksen
 * Alleen PII-velden moeten als identiteit worden gemarkeerd. Als u een veld met meer generieke gegevens kiest, worden relaties minder nauwkeurig en kunnen er fouten optreden bij de toegang tot verwante identiteiten in de identiteitsgrafiek
 
-Voor instructies over hoe te om identiteitsgebieden in UI te etiketteren, zie de gids op [identiteitsvelden definiëren in de gebruikersinterface](../xdm/ui/fields/identity.md).
+Voor instructies op hoe te om identiteitsgebieden in UI te etiketteren, zie de gids op [ bepalende identiteitsgebieden in UI ](../xdm/ui/fields/identity.md).
 
 ## Volgende stappen
 
-Voor meer informatie over [!DNL Identity Service], zie de [[!DNL Identity Service] overzicht](./home.md).
+Voor meer informatie over [!DNL Identity Service], zie het [[!DNL Identity Service]  overzicht ](./home.md).

@@ -5,7 +5,7 @@ exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
 source-git-commit: f8434746c4a023ec895d23a59e04fca4baecfc36
 workflow-type: tm+mt
 source-wordcount: '179'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -17,9 +17,9 @@ De interactieve eindpunten van de gegevensinzameling ontvangen één enkele gebe
 
 >[!IMPORTANT]
 >
->De `/interact` het eindpunt wordt hoofdzakelijk ontworpen om door de Experience Platform SDKs te worden gebruikt. Dit eindpunt is onderhevig aan additieve veranderingen en zijn gedrag kan zonder bericht evolueren. Nieuwe items kunnen bijvoorbeeld in de toekomst worden toegevoegd aan de antwoordlading.
+>Het `/interact` eindpunt wordt hoofdzakelijk ontworpen om door de Experience Platform SDKs te worden gebruikt. Dit eindpunt is onderhevig aan additieve veranderingen en zijn gedrag kan zonder bericht evolueren. Nieuwe items kunnen bijvoorbeeld in de toekomst worden toegevoegd aan de antwoordlading.
 
-De serverreactie omvat een of meer `Handle` objecten, zoals hieronder weergegeven.
+De serverreactie bevat een of meer `Handle` -objecten, zoals hieronder wordt weergegeven.
 
 ## API-aanroepvoorbeeld
 
@@ -67,11 +67,11 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | Parameter | Type | Vereist | Beschrijving |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Ja. | DataStream-id. |
-| `requestId` | `String` | Nee | Geef een willekeurige client-id op voor correlerende interne serveraanvragen. Als niets wordt verstrekt, zal het Netwerk van de Rand één produceren en zal het in de reactie terugkeren. |
+| `requestId` | `String` | Nee | Geef een willekeurige client-id op voor correlerende interne serveraanvragen. Als niets wordt verstrekt, zal de Edge Network één produceren en zal het in de reactie terugkeren. |
 
 ### Antwoord {#response}
 
-Een geslaagde reactie retourneert de HTTP-status `200 OK`, met een of meer `Handle` objecten, afhankelijk van de Edge-services in real time die in de configuratie van de gegevensstroom zijn ingeschakeld.
+Een geslaagde reactie retourneert de HTTP-status `200 OK` met een of meer `Handle` -objecten, afhankelijk van de realtime Edge-services die in de configuratie van de gegevensstroom zijn ingeschakeld.
 
 ```json
 {

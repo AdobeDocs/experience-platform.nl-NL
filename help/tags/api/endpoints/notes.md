@@ -4,7 +4,7 @@ description: Leer hoe te om vraag aan het /notes eindpunt in Reactor API te make
 exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '512'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ In de Reactor-API zijn notities tekstuele annotaties die u aan bepaalde bronnen 
 * Instructies geven aan andere teamleden
 * Historische context opnemen
 
-De `/notes` Het eindpunt in Reactor API staat u toe om deze nota&#39;s programmatically te beheren.
+Met het eindpunt `/notes` in de Reactor-API kunt u deze notities programmatisch beheren.
 
 De nota&#39;s kunnen de volgende middelen worden toegepast:
 
@@ -41,13 +41,13 @@ Deze zes types zijn collectief gekend als &quot;opmerkelijke&quot;middelen. Wann
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met notities ophalen {#list}
 
-U kunt een lijst met notities voor een bron ophalen door deze toe te voegen `/notes` op het pad van een GET-verzoek om de betrokken bron.
+U kunt een lijst met notities voor een bron ophalen door `/notes` toe te voegen aan het pad van een GET-aanvraag voor de bron in kwestie.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
@@ -56,7 +56,7 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | Parameter | Beschrijving |
 | --- | --- |
 | `RESOURCE_TYPE` | Het type bron waarvoor u notities ophaalt. Moet een van de volgende waarden zijn: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | De `id` van de specifieke bron waarvan u de notities wilt weergeven. |
+| `RESOURCE_ID` | De `id` van de specifieke bron waarvan u notities wilt weergeven. |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een lijst van nota&#39;s terug in bijlage aan het gespecificeerde middel.
 
@@ -123,7 +123,7 @@ Een succesvolle reactie keert een lijst van nota&#39;s terug in bijlage aan het 
 
 U kunt een nota opzoeken door zijn identiteitskaart in de weg van een verzoek van de GET te verstrekken.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /notes/{NOTE_ID}
@@ -147,7 +147,7 @@ curl -X GET \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
-**Antwoord**
+**Reactie**
 
 Als de reactie succesvol was, worden de details van de notitie geretourneerd.
 
@@ -187,9 +187,9 @@ Als de reactie succesvol was, worden de details van de notitie geretourneerd.
 >
 >Voordat u een nieuwe notitie maakt, moet u er rekening mee houden dat notities niet bewerkbaar zijn. U kunt ze alleen verwijderen door de bijbehorende bron te verwijderen.
 
-U kunt een nieuwe notitie maken door deze toe te voegen `/notes` op het pad van een POST-aanvraag voor de betrokken bron.
+U kunt een nieuwe notitie maken door `/notes` toe te voegen aan het pad van een POST-aanvraag voor de desbetreffende bron.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
@@ -225,12 +225,12 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `type` | **(Vereist)** Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `notes`. |
-| `attributes.text` | **(Vereist)** De tekst die de notitie bevat. Elke notitie is beperkt tot 512 Unicode-tekens. |
+| `type` | **(Vereist)** Het type van middel dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `notes` zijn. |
+| `attributes.text` | **(Vereist)** De tekst die uit de nota bestaat. Elke notitie is beperkt tot 512 Unicode-tekens. |
 
 {style="table-layout:auto"}
 
-**Antwoord**
+**Reactie**
 
 Een succesvol antwoord retourneert de details van de nieuwe notitie.
 

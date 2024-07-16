@@ -14,21 +14,21 @@ ht-degree: 0%
 
 # Het eindpunt van beleid samenvoegen
 
-Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Bij het samenvoegen van deze gegevens gelden als samenvoegbeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens voorrang krijgen en welke gegevens worden gecombineerd om een verenigde mening tot stand te brengen.
+Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer u deze gegevens samenbrengt, zijn samenvoegbeleidsregels de regels die [!DNL Platform] gebruikt om te bepalen hoe de prioriteit van gegevens wordt bepaald en welke gegevens worden gecombineerd om een uniforme weergave te maken.
 
 Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken. Wanneer de gegevens van veelvoudige bronnen conflicten (bijvoorbeeld één fragment maakt een lijst van de klant als &quot;enig&quot;terwijl de andere klant als &quot;gehuwd&quot;een lijst maakt) bepaalt het fusiebeleid welke informatie om in het profiel voor het individu te omvatten.
 
 Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Deze handleiding bevat stappen voor het werken met de API voor samenvoegbeleid.
 
-Als u met een UI voor het samenvoegen wilt werken, raadpleegt u de [UI-hulplijn voor samenvoegbeleid](../merge-policies/ui-guide.md). Als u meer wilt weten over samenvoegingsbeleid in het algemeen en hun rol in het Experience Platform, leest u eerst de [overzicht van samenvoegbeleid](../merge-policies/overview.md).
+Om met samenvoegbeleid te werken gebruikend UI, gelieve te verwijzen naar de [ gids UI van het samenvoegingsbeleid ](../merge-policies/ui-guide.md). Meer over samenvoegingsbeleid in het algemeen, en hun rol binnen Experience Platform leren, gelieve te beginnen door het [ overzicht van het samenvoegingsbeleid ](../merge-policies/overview.md) te lezen.
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
+Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-Time Customer Profile API] ](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
 
 ## Componenten van samenvoegingsbeleid {#components-of-merge-policies}
 
-Het beleid van de fusie is privé aan uw organisatie, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manieren samen te voegen die u nodig hebt. API-toegang [!DNL Profile] de gegevens vereisen een fusiebeleid, hoewel een gebrek zal worden gebruikt als niet uitdrukkelijk wordt verstrekt. [!DNL Platform] voorziet organisaties van een standaardsamenvoegbeleid, of u kunt een fusiebeleid voor een specifieke het schemaklasse van de Gegevens van de Ervaring van het Model (XDM) tot stand brengen en het merken als gebrek voor uw organisatie.
+Het beleid van de fusie is privé aan uw organisatie, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manieren samen te voegen die u nodig hebt. Voor elke API die toegang wil tot [!DNL Profile] -gegevens, is een samenvoegbeleid vereist, maar er wordt een standaard gebruikt als dit niet expliciet wordt opgegeven. [!DNL Platform] voorziet organisaties van een standaardsamenvoegbeleid, of u kunt een fusiebeleid voor een specifieke het schemaklasse van de Gegevens van de Ervaring van het Model (XDM) tot stand brengen en het merken als gebrek voor uw organisatie.
 
 Hoewel elke organisatie mogelijk meerdere samenvoegbeleidsregels per schemaklasse kan hebben, kan elke klasse slechts één standaardsamenvoegbeleid hebben. Om het even welk samenvoegbeleid dat als gebrek wordt geplaatst zal worden gebruikt in gevallen waar de naam van de schemacategorie wordt verstrekt en een fusiebeleid wordt vereist maar niet verstrekt.
 
@@ -36,15 +36,15 @@ Hoewel elke organisatie mogelijk meerdere samenvoegbeleidsregels per schemaklass
 >
 >Wanneer u een nieuw fusiebeleid als gebrek plaatst, zal om het even welk bestaand fusiebeleid dat eerder als gebrek werd geplaatst automatisch worden bijgewerkt om niet meer als gebrek te worden gebruikt.
 
-Om ervoor te zorgen dat alle profielgebruikers met dezelfde weergave aan de randen werken, kan het samenvoegbeleid als actief aan de rand worden gemarkeerd. Een publiek kan alleen aan de rand worden geactiveerd (gemarkeerd als een randpubliek) als het is gekoppeld aan een samenvoegbeleid dat als actief aan de rand is gemarkeerd. Als een publiek **niet** gekoppeld aan een samenvoegbeleid dat aan de rand is gemarkeerd als actief, wordt het publiek niet gemarkeerd als actief aan de rand en wordt het gemarkeerd als een streaming publiek.
+Om ervoor te zorgen dat alle profielgebruikers met dezelfde weergave aan de randen werken, kan het samenvoegbeleid als actief aan de rand worden gemarkeerd. Een publiek kan alleen aan de rand worden geactiveerd (gemarkeerd als een randpubliek) als het is gekoppeld aan een samenvoegbeleid dat als actief aan de rand is gemarkeerd. Als een publiek **niet** gebonden aan een fusiebeleid is dat als actief op rand duidelijk is, zal het publiek niet als actief op rand worden gemerkt, en zal als het stromen publiek worden gemerkt.
 
-Bovendien kan elke organisatie alleen **één** samenvoegbeleid dat op rand actief is. Als een samenvoegbeleid op rand actief is, kan het voor andere systemen op rand, zoals het Profiel van de Rand, de Segmentatie van de Rand, en Doelen op Rand worden gebruikt.
+Bovendien, kan elke organisatie **slechts één** fusiebeleid hebben dat op rand actief is. Als een samenvoegbeleid op rand actief is, kan het voor andere systemen op rand, zoals het Profiel van Edge, de Segmentatie van Edge, en Doelen op Edge worden gebruikt.
 
 ### Object voor samenvoegbeleid voltooien
 
 Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee aspecten van het samenvoegen van profielfragmenten worden beheerd.
 
-**Beleidsobject samenvoegen**
+**het beleidsvoorwerp van de Fusie**
 
 ```json
     {
@@ -72,15 +72,15 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 | `id` | Door het systeem gegenereerde unieke id die tijdens het maken is toegewezen |
 | `name` | Vriendelijke naam waarmee het samenvoegbeleid kan worden geïdentificeerd in lijstweergaven. |
 | `imsOrgId` | Organisatie-id waartoe dit samenvoegbeleid behoort |
-| `schema.name` | Deel van de [`schema`](#schema) object, de `name` bevat de XDM-schemaklasse waarop het samenvoegbeleid betrekking heeft. Lees voor meer informatie over schema&#39;s en klassen de [XDM-documentatie](../../xdm/home.md). |
-| `version` | [!DNL Platform] onderhouden versie van samenvoegingsbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
-| `identityGraph` | [Identiteitsgrafiek](#identity-graph) object dat de identiteitsgrafiek aangeeft waarvan gerelateerde identiteiten worden verkregen. Profielfragmenten die voor alle verwante identiteiten worden gevonden, worden samengevoegd. |
-| `attributeMerge` | [Kenmerk samenvoegen](#attribute-merge) object dat aangeeft hoe in het samenvoegbeleid bij gegevensconflicten voorrang wordt gegeven aan profielkenmerken. |
-| `isActiveOnEdge` | Een Booleaanse waarde die aangeeft of dit samenvoegbeleid aan de rand kan worden gebruikt. Deze waarde is standaard `false`. |
+| `schema.name` | Het veld `name` bevat een deel van het object [`schema`](#schema) dat de XDM-schemaklasse bevat waarop het samenvoegbeleid betrekking heeft. Voor meer informatie over schema&#39;s en klassen, te lezen gelieve de [ documentatie XDM ](../../xdm/home.md). |
+| `version` | [!DNL Platform] bijgewerkte versie van het samenvoegbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
+| `identityGraph` | [ de grafiekvoorwerp van de Identiteit ](#identity-graph) die op de identiteitsgrafiek wijst waarvan verwante identiteiten zullen worden verkregen. Profielfragmenten die voor alle verwante identiteiten worden gevonden, worden samengevoegd. |
+| `attributeMerge` | [ de fusie van Attributen ](#attribute-merge) die op de manier wijzen waarop het fusiebeleid profielattributen in het geval van gegevensconflicten voorrang zal geven. |
+| `isActiveOnEdge` | Een Booleaanse waarde die aangeeft of dit samenvoegbeleid aan de rand kan worden gebruikt. Deze waarde is standaard `false` . |
 | `default` | Een Booleaanse waarde die aangeeft of dit samenvoegbeleid de standaardinstelling is voor het opgegeven schema. |
 | `updateEpoch` | Datum van de laatste update van het samenvoegbeleid. |
 
-**Voorbeeld van samenvoegingsbeleid**
+**Samenvoegbeleid van het Voorbeeld**
 
 ```json
     {
@@ -105,9 +105,9 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 
 ### Identiteitsgrafiek {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) beheert de identiteitsgrafieken die globaal en voor elke organisatie worden gebruikt op [!DNL Experience Platform]. De `identityGraph` kenmerk van het samenvoegbeleid definieert hoe de verwante identiteiten voor een gebruiker moeten worden bepaald.
+[ de Dienst van de Identiteit van Adobe Experience Platform ](../../identity-service/home.md) beheert de identiteitsgrafieken die globaal en voor elke organisatie op [!DNL Experience Platform] worden gebruikt. Het kenmerk `identityGraph` van het samenvoegbeleid definieert hoe de verwante identiteiten voor een gebruiker moeten worden bepaald.
 
-**identityGraph-object**
+**identityGraph voorwerp**
 
 ```json
     "identityGraph": {
@@ -115,10 +115,10 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
     }
 ```
 
-Wanneer `{IDENTITY_GRAPH_TYPE}` is één van het volgende:
+Waar `{IDENTITY_GRAPH_TYPE}` een van de volgende is:
 
-* **&quot;none&quot;:** Geen identiteitsstitching uitvoeren.
-* **&quot;pdg&quot;:** Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek.
+* **&quot;none&quot;:** voer geen identiteitsstitching uit.
+* **&quot;pdg&quot;:** voer identiteitsstitching uit op basis van uw persoonlijke identiteitsgrafiek.
 
 **Voorbeeld`identityGraph`**
 
@@ -130,9 +130,9 @@ Wanneer `{IDENTITY_GRAPH_TYPE}` is één van het volgende:
 
 ### Kenmerk samenvoegen {#attribute-merge}
 
-Een profielfragment is de profielinformatie voor slechts één identiteit uit de lijst van identiteiten die voor een bepaalde gebruiker bestaan. Wanneer het gebruikte type identiteitsgrafiek meer dan één identiteit resulteert, is er een potentieel voor conflicterende profielattributen en de prioriteit moet worden gespecificeerd. Gebruiken `attributeMerge`, kunt u specificeren welke profielattributen om voorrang te geven in het geval van een fusieconflict tussen Zeer belangrijke het type datasets van de Waarde (verslaggegevens).
+Een profielfragment is de profielinformatie voor slechts één identiteit uit de lijst van identiteiten die voor een bepaalde gebruiker bestaan. Wanneer het gebruikte type identiteitsgrafiek meer dan één identiteit resulteert, is er een potentieel voor conflicterende profielattributen en de prioriteit moet worden gespecificeerd. Met `attributeMerge` kunt u opgeven welke profielkenmerken prioriteit moeten krijgen in geval van een samenvoegconflict tussen gegevenssets van het type Key Value (recordgegevens).
 
-**Object attributeMerge**
+**attributeMerge voorwerp**
 
 ```json
     "attributeMerge": {
@@ -140,13 +140,13 @@ Een profielfragment is de profielinformatie voor slechts één identiteit uit de
     }
 ```
 
-Wanneer `{ATTRIBUTE_MERGE_TYPE}` is één van het volgende:
+Waar `{ATTRIBUTE_MERGE_TYPE}` een van de volgende is:
 
-* **`timestampOrdered`**: (standaard) Geef prioriteit aan het profiel dat het laatst is bijgewerkt. Met dit samenvoegtype `data` attribuut is not required.
-* **`dataSetPrecedence`**: Geef prioriteit aan profielfragmenten op basis van de gegevensset waaruit ze afkomstig zijn. Dit zou kunnen worden gebruikt wanneer de informatie aanwezig in één dataset over gegevens in een andere dataset wordt aangewezen of wordt vertrouwd. Wanneer u dit samenvoegtype gebruikt, wordt `order` attribuut wordt vereist, aangezien het van de datasets in de orde van prioriteit een lijst maakt.
-   * **`order`**: Wanneer &quot;dataSetPrecision&quot; wordt gebruikt, wordt een `order` array moet worden voorzien van een lijst met gegevenssets. Gegevenssets die niet in de lijst zijn opgenomen, worden niet samengevoegd. Met andere woorden, gegevenssets moeten expliciet worden vermeld om te worden samengevoegd in een profiel. De `order` De serie maakt een lijst van IDs van de datasets in orde van prioriteit.
+* **`timestampOrdered`**: (standaard) Geef prioriteit aan het profiel dat het laatst is bijgewerkt. Met dit samenvoegtype is het kenmerk `data` niet vereist.
+* **`dataSetPrecedence`**: geef prioriteit aan profielfragmenten die zijn gebaseerd op de gegevensset waaruit ze afkomstig zijn. Dit zou kunnen worden gebruikt wanneer de informatie aanwezig in één dataset over gegevens in een andere dataset wordt aangewezen of wordt vertrouwd. Wanneer het gebruiken van dit fusietype, wordt het `order` attribuut vereist, aangezien het van de datasets in de orde van prioriteit een lijst maakt.
+   * **`order`**: Wanneer &quot;dataSetPriority&quot; wordt gebruikt, moet een `order` -array worden voorzien van een lijst met gegevenssets. Gegevenssets die niet in de lijst zijn opgenomen, worden niet samengevoegd. Met andere woorden, gegevenssets moeten expliciet worden vermeld om te worden samengevoegd in een profiel. De array `order` geeft de id&#39;s van de gegevenssets weer in volgorde van prioriteit.
 
-#### Voorbeeld `attributeMerge` object gebruiken `dataSetPrecedence` type
+#### Voorbeeld `attributeMerge` -object met `dataSetPrecedence` type
 
 ```json
     "attributeMerge": {
@@ -160,7 +160,7 @@ Wanneer `{ATTRIBUTE_MERGE_TYPE}` is één van het volgende:
     }
 ```
 
-#### Voorbeeld `attributeMerge` object gebruiken `timestampOrdered` type
+#### Voorbeeld `attributeMerge` -object met `timestampOrdered` type
 
 ```json
     "attributeMerge": {
@@ -180,7 +180,7 @@ Het schemavoorwerp specificeert de het schemaklasse van de Gegevens van de Ervar
     }
 ```
 
-Wanneer de waarde van `name` is de naam van de klasse XDM waarop het schema verbonden aan het fusiebeleid wordt gebaseerd.
+Waar de waarde van `name` de naam van de klasse XDM is waarop het schema verbonden aan het fusiebeleid wordt gebaseerd.
 
 **Voorbeeld`schema`**
 
@@ -190,17 +190,17 @@ Wanneer de waarde van `name` is de naam van de klasse XDM waarop het schema verb
     }
 ```
 
-Om meer over XDM en het werken met schema&#39;s in Experience Platform te leren, begin door te lezen [XDM System, overzicht](../../xdm/home.md).
+Om meer over XDM en het werken met schema&#39;s in Experience Platform te leren, begin door het [ overzicht van het Systeem XDM ](../../xdm/home.md) te lezen.
 
 ## Beleid voor samenvoegen openen {#access-merge-policies}
 
-Met de [!DNL Real-Time Customer Profile] API, de `/config/mergePolicies` het eindpunt staat u toe een raadplegingsverzoek uitvoert om een specifiek fusiebeleid door zijn identiteitskaart te bekijken, of toegang tot elk van het fusiebeleid in uw organisatie, gefilterd door specifieke criteria. U kunt ook de opdracht `/config/mergePolicies/bulk-get` eindpunt om veelvoudige samenvoegbeleid door hun IDs terug te winnen. De stappen voor het uitvoeren van elk van deze vraag worden geschetst in de volgende secties.
+Met behulp van de [!DNL Real-Time Customer Profile] API kunt u aan de hand van het `/config/mergePolicies` -eindpunt een opzoekverzoek uitvoeren om een specifiek samenvoegbeleid op basis van de id weer te geven, of hebt u toegang tot alle samenvoegbeleidsregels in uw organisatie, gefilterd op specifieke criteria. U kunt het `/config/mergePolicies/bulk-get` eindpunt ook gebruiken om veelvoudige samenvoegbeleid door hun IDs terug te winnen. De stappen voor het uitvoeren van elk van deze vraag worden geschetst in de volgende secties.
 
 ### Heb toegang tot één enkel fusiebeleid door identiteitskaart
 
-U kunt tot één enkel fusiebeleid door zijn identiteitskaart toegang hebben door een verzoek van de GET tot `/config/mergePolicies` en met inbegrip van de `mergePolicyId` in het aanvraagpad.
+U kunt tot één enkel fusiebeleid door zijn identiteitskaart toegang hebben door een verzoek van de GET tot het `/config/mergePolicies` eindpunt en het omvatten van `mergePolicyId` in de verzoekweg te richten.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /config/mergePolicies/{mergePolicyId}
@@ -221,7 +221,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie retourneert de details van het samenvoegingsbeleid.
 
@@ -245,13 +245,13 @@ Een succesvolle reactie retourneert de details van het samenvoegingsbeleid.
 }
 ```
 
-Zie de [componenten van samenvoegingsbeleid](#components-of-merge-policies) aan het begin van dit document voor meer informatie over de afzonderlijke elementen die samen een samenvoegbeleid vormen.
+Zie de [ componenten van het beleid van de fusie ](#components-of-merge-policies) sectie aan het begin van dit document voor details op elk van de individuele elementen die omhoog een fusiebeleid maken.
 
 ### Hiermee worden meerdere samenvoegbeleidsregels via de id&#39;s opgehaald
 
-U kunt meerdere samenvoegbeleidsregels ophalen door een POST aan te vragen bij de `/config/mergePolicies/bulk-get` eindpunt en met inbegrip van IDs van het fusiebeleid u in het verzoeklichaam wenst terug te winnen.
+U kunt veelvoudige fusiebeleid terugwinnen door een verzoek van de POST aan het `/config/mergePolicies/bulk-get` eindpunt en met inbegrip van identiteitskaarts van het fusiebeleid te doen u in het verzoeklichaam wenst terug te winnen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /config/mergePolicies/bulk-get
@@ -281,7 +281,7 @@ curl -X POST \
       }'
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de Status 207 van HTTP (multi-Status) en de details van het fusiebeleid terug waarvan IDs in het verzoek van de POST werd verstrekt.
 
@@ -344,13 +344,13 @@ Een succesvolle reactie keert de Status 207 van HTTP (multi-Status) en de detail
 }
 ```
 
-Zie de [componenten van samenvoegingsbeleid](#components-of-merge-policies) aan het begin van dit document voor meer informatie over de afzonderlijke elementen die samen een samenvoegbeleid vormen.
+Zie de [ componenten van het beleid van de fusie ](#components-of-merge-policies) sectie aan het begin van dit document voor details op elk van de individuele elementen die omhoog een fusiebeleid maken.
 
 ### Meerdere vormen van samenvoegingsbeleid weergeven op basis van criteria
 
-U kunt meerdere samenvoegbeleidsregels binnen uw organisatie weergeven door een verzoek om GET aan de `/config/mergePolicies` eindpunt en het gebruiken van facultatieve vraagparameters aan filter, orde, en pagineren de reactie. U kunt meerdere parameters opnemen, gescheiden door ampersands (&amp;). Het maken van een vraag aan dit eindpunt zonder parameters zal al samenvoegbeleid beschikbaar voor uw organisatie terugwinnen.
+U kunt een lijst maken van veelvoudige samenvoegbeleid binnen uw organisatie door een verzoek van de GET tot het `/config/mergePolicies` eindpunt uit te geven en facultatieve vraagparameters te gebruiken om, de reactie te filtreren te orde te geven en te pagineren. U kunt meerdere parameters opnemen, gescheiden door ampersands (&amp;). Het maken van een vraag aan dit eindpunt zonder parameters zal al samenvoegbeleid beschikbaar voor uw organisatie terugwinnen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 GET /config/mergePolicies?{QUERY_PARAMS}
@@ -360,7 +360,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 |---|---|
 | `default` | Een Booleaanse waarde die het resultaat is van filters, ongeacht of het samenvoegbeleid de standaardinstelling voor een schemaklasse is. |
 | `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. Standaardwaarde: 20 |
-| `orderBy` | Hiermee geeft u het veld op waarin de resultaten moeten worden geordend als in `orderBy=name` of `orderBy=+name` op naam in oplopende volgorde te sorteren, of `orderBy=-name`om in aflopende volgorde te sorteren. Als u deze waarde weglaat, wordt de standaardsortering van `name` in oplopende volgorde |
+| `orderBy` | Hiermee geeft u het veld op waarin de resultaten moeten worden geordend, zoals in `orderBy=name` of `orderBy=+name` bij het sorteren op naam in oplopende volgorde (of `orderBy=-name` bij het sorteren in aflopende volgorde). Als u deze waarde weglaat, wordt `name` standaard oplopend gesorteerd. |
 | `isActiveOnEdge` | Een booleaanse waarde die filtert, bepaalt of het samenvoegbeleid al dan niet actief is op de rand. |
 | `schema.name` | Naam van het schema waarvoor om beschikbaar samenvoegbeleid terug te winnen. |
 | `identityGraph.type` | Hiermee filtert u de resultaten op basis van het type identiteitsgrafiek. Mogelijke waarden zijn &quot;none&quot; en &quot;pdg&quot; (privégrafiek). |
@@ -368,7 +368,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 | `start` | Paginaverschuiving - geef de eerste id op voor de gegevens die moeten worden opgehaald. Standaardwaarde: 0 |
 | `version` | Geef dit op als u een specifieke versie van het samenvoegbeleid wilt gebruiken. Standaard wordt de nieuwste versie gebruikt. |
 
-Voor meer informatie over `schema.name`, `identityGraph.type`, en `attributeMerge.type`, verwijst u naar de [componenten van samenvoegingsbeleid](#components-of-merge-policies) in deze handleiding.
+Voor meer informatie betreffende `schema.name`, `identityGraph.type`, en `attributeMerge.type`, verwijs naar de [ componenten van de sectie van het fusiebeleid ](#components-of-merge-policies) vroeger in deze gids wordt verstrekt.
 
 
 **Verzoek**
@@ -384,7 +384,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert een gepagineerde lijst van fusiebeleid terug dat aan de criteria voldoet die door de vraagparameters worden gespecificeerd die in het verzoek worden verzonden.
 
@@ -462,9 +462,9 @@ Een succesvolle reactie keert een gepagineerde lijst van fusiebeleid terug dat a
 
 ## Samenvoegbeleid maken
 
-U kunt een nieuw samenvoegbeleid voor uw organisatie tot stand brengen door een verzoek van de POST aan `/config/mergePolicies` eindpunt.
+U kunt een nieuw samenvoegbeleid voor uw organisatie tot stand brengen door een verzoek van de POST aan het `/config/mergePolicies` eindpunt te doen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /config/mergePolicies
@@ -510,9 +510,9 @@ curl -X POST \
 | `isActiveOnEdge` | Geeft aan of dit samenvoegbeleid op de rand actief is. |
 | `default` | Geeft aan of dit samenvoegbeleid het standaardbeleid voor het schema is. |
 
-Zie de [componenten van samenvoegingsbeleid](#components-of-merge-policies) voor meer informatie.
+Verwijs naar de [ componenten van de sectie van het samenvoegbeleid ](#components-of-merge-policies) voor meer informatie.
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van het nieuwe samenvoegbeleid.
 
@@ -547,7 +547,7 @@ Een geslaagde reactie retourneert de details van het nieuwe samenvoegbeleid.
 }
 ```
 
-Zie de [componenten van samenvoegingsbeleid](#components-of-merge-policies) aan het begin van dit document voor meer informatie over de afzonderlijke elementen die samen een samenvoegbeleid vormen.
+Zie de [ componenten van het beleid van de fusie ](#components-of-merge-policies) sectie aan het begin van dit document voor details op elk van de individuele elementen die omhoog een fusiebeleid maken.
 
 ## Een samenvoegingsbeleid bijwerken {#update}
 
@@ -555,9 +555,9 @@ U kunt een bestaand samenvoegingsbeleid wijzigen door individuele attributen (PA
 
 ### Afzonderlijke velden voor samenvoegbeleid bewerken
 
-U kunt afzonderlijke velden voor een samenvoegbeleid bewerken door een PATCH-aanvraag in te dienen bij de `/config/mergePolicies/{mergePolicyId}` eindpunt:
+U kunt afzonderlijke velden voor een samenvoegbeleid bewerken door een PATCH-aanvraag in te dienen bij het eindpunt `/config/mergePolicies/{mergePolicyId}` :
 
-**API-indeling**
+**API formaat**
 
 ```http
 PATCH /config/mergePolicies/{mergePolicyId}
@@ -569,7 +569,7 @@ PATCH /config/mergePolicies/{mergePolicyId}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een opgegeven samenvoegingsbeleid bijgewerkt door de waarde van het samenvoegbeleid te wijzigen `default` eigenschap aan `true`:
+Met de volgende aanvraag wordt een opgegeven samenvoegingsbeleid bijgewerkt door de waarde van de eigenschap `default` te wijzigen in `true` :
 
 ```shell
 curl -X PATCH \
@@ -588,14 +588,14 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `op` | Geeft de bewerking aan die moet worden uitgevoerd. Voorbeelden van andere PATCH-bewerkingen vindt u in het gedeelte [JSON-patchdocumentatie](https://datatracker.ietf.org/doc/html/rfc6902) |
+| `op` | Geeft de bewerking aan die moet worden uitgevoerd. De voorbeelden van andere verrichtingen van PATCH kunnen in de [ documentatie van het Reparatie JSON ](https://datatracker.ietf.org/doc/html/rfc6902) worden gevonden |
 | `path` | Het pad van het veld dat moet worden bijgewerkt. Accepteerde waarden zijn: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot;, &quot;/isActiveOnEdge&quot; |
 | `value` | De waarde waarop het opgegeven veld moet worden ingesteld. |
 
-Zie de [componenten van samenvoegingsbeleid](#components-of-merge-policies) voor meer informatie.
+Verwijs naar de [ componenten van de sectie van het samenvoegbeleid ](#components-of-merge-policies) voor meer informatie.
 
 
-**Antwoord**
+**Reactie**
 
 Een succesvolle reactie keert de details van het onlangs bijgewerkte fusiebeleid terug.
 
@@ -634,7 +634,7 @@ Een succesvolle reactie keert de details van het onlangs bijgewerkte fusiebeleid
 
 Een andere manier om een fusiebeleid te wijzigen is een verzoek van de PUT te gebruiken, dat het volledige fusiebeleid beschrijft.
 
-**API-indeling**
+**API formaat**
 
 ```http
 PUT /config/mergePolicies/{mergePolicyId}
@@ -688,9 +688,9 @@ curl -X PUT \
 | `isActiveOnEdge` | Geeft aan of dit samenvoegbeleid op de rand actief is. |
 | `default` | Geeft aan of dit samenvoegbeleid het standaardbeleid voor het schema is. |
 
-Zie de [componenten van samenvoegingsbeleid](#components-of-merge-policies) voor meer informatie.
+Verwijs naar de [ componenten van de sectie van het samenvoegbeleid ](#components-of-merge-policies) voor meer informatie.
 
-**Antwoord**
+**Reactie**
 
 Een geslaagde reactie retourneert de details van het bijgewerkte samenvoegingsbeleid.
 
@@ -727,13 +727,13 @@ Een geslaagde reactie retourneert de details van het bijgewerkte samenvoegingsbe
 
 ## Een samenvoegingsbeleid verwijderen
 
-Een samenvoegingsbeleid kan worden verwijderd door een DELETE-verzoek in te dienen bij de `/config/mergePolicies` eindpunt en met inbegrip van identiteitskaart van het fusiebeleid dat u wenst om in de verzoekweg te schrappen.
+Een samenvoegingsbeleid kan worden geschrapt door een verzoek van de DELETE aan het `/config/mergePolicies` eindpunt en met inbegrip van identiteitskaart van het fusiebeleid te doen dat u wenst om in de verzoekweg te schrappen.
 
 >[!NOTE]
 >
->Als het samenvoegbeleid `isActiveOnEdge` ingesteld op true, het samenvoegbeleid **kan** worden geschrapt. Gebruik een van de [PATCH](#edit-individual-merge-policy-fields) of [PUT](#overwrite-a-merge-policy) eindpunten om het samenvoegbeleid bij te werken voordat het wordt verwijderd.
+>Als het fusiebeleid `isActiveOnEdge` aan waar heeft, kan het fusiebeleid **niet** worden geschrapt. Gebruik of de [ PATCH ](#edit-individual-merge-policy-fields) of [ PUT ](#overwrite-a-merge-policy) eindpunten om het fusiebeleid bij te werken alvorens het te schrappen.
 
-**API-indeling**
+**API formaat**
 
 ```http
 DELETE /config/mergePolicies/{mergePolicyId}
@@ -756,12 +756,12 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**Antwoord**
+**Reactie**
 
 Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege antwoordinstantie. Om de schrapping te bevestigen succesvol was, kunt u een verzoek van de GET uitvoeren om het fusiebeleid door zijn identiteitskaart te bekijken. Als het samenvoegbeleid is verwijderd, ontvangt u een HTTP Status 404 (Not Found)-fout.
 
 ## Volgende stappen
 
-Nu u weet om samenvoegbeleid voor uw organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om de mening van klantenprofielen binnen Platform aan te passen en publiek van uw te creëren [!DNL Real-Time Customer Profile] gegevens.
+Nu u weet om samenvoegbeleid voor uw organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om de mening van klantenprofielen binnen Platform aan te passen en publiek van uw [!DNL Real-Time Customer Profile] gegevens tot stand te brengen.
 
-Zie de [Adobe Experience Platform Segmentation Service-documentatie](../../segmentation/home.md) beginnen met het definiëren en werken met het publiek.
+Gelieve te zien de [ documentatie van de Dienst van de Segmentatie van Adobe Experience Platform ](../../segmentation/home.md) beginnen bepalend en werkend met publiek.

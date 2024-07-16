@@ -1,7 +1,8 @@
 ---
 title: downloadLinkQualifier
 description: Hiermee kunt u bepalen hoe automatische koppelingen bijhouden downloadkoppelingen kwalificeert.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: ef4f0ed4-83fc-485f-866d-f9ca15447ac8
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -10,25 +11,25 @@ ht-degree: 0%
 
 # `downloadLinkQualifier`
 
-Als u automatische koppeling bijhouden inschakelt met [`clickCollectionEnabled`](clickcollectionenabled.md)de `downloadLinkQualifier` helpt bij het bepalen van de criteria voor een URL die als een downloadkoppeling moet worden beschouwd.
+Als u automatische koppeling bijhouden inschakelt met [`clickCollectionEnabled`](clickcollectionenabled.md) , kunt u aan de hand van de eigenschap `downloadLinkQualifier` bepalen aan welke criteria een URL als downloadkoppeling moet worden beschouwd.
 
-Deze eigenschap is een regex-tekenreeks. Als de aangeklikte URL met deze regex overeenkomt, `xdm.web.webInteraction.type` is ingesteld op `"download"`. Koppelingen worden ook direct geclassificeerd als een downloadlink als ze een `download` HTML, kenmerk. Indien `clickCollectionEnabled` is niet ingeschakeld, heeft deze eigenschap geen effect.
+Deze eigenschap is een regex-tekenreeks. Als de aangeklikte URL overeenkomt met deze regex, wordt `xdm.web.webInteraction.type` ingesteld op `"download"` . Koppelingen worden ook direct geclassificeerd als een downloadkoppeling als deze het kenmerk `download` HTML bevatten. Wanneer `clickCollectionEnabled` niet is ingeschakeld, doet deze eigenschap niets.
 
 ## Koppelingskwalificatie downloaden met de webSDK-tagextensie
 
-De optie **[!UICONTROL Enable click data collection]** selectievakje en voer vervolgens de gewenste tekst in onder **[!UICONTROL Download link qualifier]** wanneer [configureren van de tagextensie](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Laat **[!UICONTROL Enable click data collection]** checkbox toe, dan ga de gewenste tekst onder **[!UICONTROL Download link qualifier]** in wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Aanmelden bij [experience.adobe.com](https://experience.adobe.com) je Adobe ID-gebruikersgegevens gebruiken.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
-1. Navigeren naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] kaart.
-1. Omlaag schuiven naar de [!UICONTROL Data Collection] en selecteert u vervolgens het selectievakje **[!UICONTROL Enable click data collection]**.
-1. Wanneer deze optie is ingeschakeld, wordt de **[!UICONTROL Download link qualifier]** wordt weergegeven. Voer de gewenste waarde in. Er zijn ook knoppen beschikbaar om de regex te testen en de standaardwaarde te herstellen.
-1. Klikken **[!UICONTROL Save]** publiceert u vervolgens uw wijzigingen.
+1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
+1. Schuif omlaag naar de sectie [!UICONTROL Data Collection] en schakel vervolgens het selectievakje **[!UICONTROL Enable click data collection]** in.
+1. Zodra deze optie is ingeschakeld, wordt het tekstvak **[!UICONTROL Download link qualifier]** weergegeven. Voer de gewenste waarde in. Er zijn ook knoppen beschikbaar om de regex te testen en de standaardwaarde te herstellen.
+1. Klik op **[!UICONTROL Save]** en publiceer de wijzigingen.
 
 ## Koppelingskwalificatie downloaden met de Web SDK JavaScript-bibliotheek
 
-Stel de `downloadLinkQualifier` tekenreeks bij het uitvoeren van de `configure` gebruiken. Als u deze eigenschap weglaat, wordt standaard de volgende waarde gebruikt:
+Stel de tekenreeks `downloadLinkQualifier` in wanneer u de opdracht `configure` uitvoert. Als u deze eigenschap weglaat, wordt standaard de volgende waarde gebruikt:
 
 `\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$`
 

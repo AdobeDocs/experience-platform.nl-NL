@@ -7,7 +7,7 @@ description: Leer hoe u Generic REST API met de Flow Service API kunt verbinden 
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
@@ -16,39 +16,39 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De [!DNL Generic REST API] De bron is in bèta. Zie de [Overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De bron [!DNL Generic REST API] is in bèta. Zie het [ Bronoverzicht ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL Generic REST API] met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Generic REST API] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] om te verbinden met [!DNL Generic REST API], moet u geldige geloofsbrieven voor het authentificatietype van uw keus verstrekken. [!DNL Generic REST API] steunt zowel OAuth 2 vernieuwt code en basisauthentificatie. Zie de volgende lijsten voor informatie over de geloofsbrieven voor de twee gesteunde authentificatietypen.
+Als u wilt dat [!DNL Flow Service] verbinding maakt met [!DNL Generic REST API] , moet u geldige referenties opgeven voor het gewenste verificatietype. [!DNL Generic REST API] ondersteunt zowel OAuth 2 om code te vernieuwen als basisverificatie. Zie de volgende lijsten voor informatie over de geloofsbrieven voor de twee gesteunde authentificatietypen.
 
 #### Code voor 2 vernieuwen
 
 | Credentials | Beschrijving |
 | --- | --- |
-| `host` | De host-URL van de bron waarnaar u een verzoek indient. Deze waarde is vereist en kan niet worden omzeild met `requestParameterOverride`. |
+| `host` | De host-URL van de bron waarnaar u een verzoek indient. Deze waarde is vereist en kan niet worden overgeslagen met `requestParameterOverride` . |
 | `authorizationTestUrl` | (Optioneel) De autorisatietest-URL wordt gebruikt om referenties te valideren bij het maken van een basisverbinding. Als deze optie niet is opgegeven, worden de referenties automatisch gecontroleerd tijdens het maken van de bronverbinding. |
 | `clientId` | (Optioneel) De client-id die aan uw gebruikersaccount is gekoppeld. |
 | `clientSecret` | (Optioneel) Het clientgeheim dat aan uw gebruikersaccount is gekoppeld. |
-| `accessToken` | De primaire verificatiereferentie die wordt gebruikt voor toegang tot uw toepassing. Het toegangstoken vertegenwoordigt de toestemming van uw toepassing, om tot bepaalde aspecten van de gegevens van een gebruiker toegang te hebben. Deze waarde is vereist en kan niet worden omzeild met `requestParameterOverride`. |
+| `accessToken` | De primaire verificatiereferentie die wordt gebruikt voor toegang tot uw toepassing. Het toegangstoken vertegenwoordigt de toestemming van uw toepassing, om tot bepaalde aspecten van de gegevens van een gebruiker toegang te hebben. Deze waarde is vereist en kan niet worden overgeslagen met `requestParameterOverride` . |
 | `refreshToken` | (Optioneel) Een token dat wordt gebruikt om een nieuw toegangstoken te genereren wanneer het toegangstoken is verlopen. |
 | `expirationDate` | (Optioneel) Een verborgen waarde die de vervaldatum van uw toegangstoken definieert. |
 | `accessTokenUrl` | (Optioneel) Het URL-eindpunt dat wordt gebruikt om uw toegangstoken op te halen. |
 | `requestParameterOverride` | (Optioneel) Een eigenschap waarmee u kunt opgeven welke referentie-parameters moeten worden overschreven. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Generic REST API] is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Generic REST API] is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62` . |
 
 #### Basisverificatie
 
@@ -57,19 +57,19 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Generic REST API], moet u geldi
 | `host` | De host-URL van de bron waarnaar u een verzoek indient. |
 | `username` | De gebruikersnaam die overeenkomt met uw gebruikersaccount. |
 | `password` | Het wachtwoord dat overeenkomt met uw gebruikersaccount. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Generic REST API] is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Generic REST API] is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62` . |
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-[!DNL Generic REST API] steunt zowel basisauthentificatie als OAuth 2 verfrist code. Zie de volgende voorbeelden voor begeleiding op hoe te met één van beide authentificatietypen voor authentiek te verklaren.
+[!DNL Generic REST API] ondersteunt zowel basisverificatie als OAuth 2-vernieuwingscode. Zie de volgende voorbeelden voor begeleiding op hoe te met één van beide authentificatietypen voor authentiek te verklaren.
 
-### Een [!DNL Generic REST API] basisverbinding met OAuth 2-vernieuwingscode
+### Een [!DNL Generic REST API] basisverbinding maken met OAuth 2-vernieuwingscode
 
-Om een identiteitskaart van de basisverbinding tot stand te brengen gebruikend OAuth 2 verfrist code, doe een POST verzoek aan `/connections` eindpunt terwijl het verstrekken van uw OAuth 2 geloofsbrieven.
+Om een identiteitskaart van de basisverbinding tot stand te brengen gebruikend OAuth 2 verfrist code, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw OAuth 2 geloofsbrieven.
 
-**API-indeling**
+**API formaat**
 
 ```http
 POST /connections
@@ -77,7 +77,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Generic REST API]:
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL Generic REST API] gemaakt:
 
 ```shell
 curl -X POST \
@@ -108,14 +108,14 @@ curl -X POST \
 | --------- | ----------- |
 | `name` | De naam van uw basisverbinding. Zorg ervoor dat de naam van uw basisverbinding beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw basisverbinding te zoeken. |
 | `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de basisverbinding. |
-| `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan [!DNL Generic REST API]. Deze vaste ID is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `connectionSpec.id` | De verbindingsspecificatie-id die aan [!DNL Generic REST API] is gekoppeld. Deze vaste id is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62` . |
 | `auth.specName` | Het verificatietype dat u gebruikt om uw bron te verifiëren bij Platform. |
-| `auth.params.host` | De basis-URL waarmee u verbinding maakt met uw [!DNL Generic REST API] bron. |
+| `auth.params.host` | De basis-URL waarmee verbinding wordt gemaakt met de [!DNL Generic REST API] -bron. |
 | `auth.params.accessToken` | Het overeenkomstige toegangstoken dat wordt gebruikt om uw bron voor authentiek te verklaren. Dit is vereist voor verificatie op basis van OAuth. |
 
-**Antwoord**
+**Reactie**
 
-Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de unieke verbindings-id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zijn unieke verbindings herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
 ```json
 {
@@ -124,11 +124,11 @@ Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de
 }
 ```
 
-### Een [!DNL Generic REST API] basisverbinding met basisverificatie
+### Een [!DNL Generic REST API] basisverbinding maken met behulp van basisverificatie
 
-Een [!DNL Generic REST API] basisverbinding die basisauthentificatie gebruikt, doe een verzoek van de POST aan `/connections` eindpunt van [!DNL Flow Service] API terwijl het verstrekken van uw basisauthentificatiegeloofsbrieven.
+Als u een [!DNL Generic REST API] -basisverbinding wilt maken met behulp van basisverificatie, vraagt u een POST naar het `/connections` eindpunt van de [!DNL Flow Service] API en geeft u uw basisverificatiegegevens op.
 
-**API-indeling**
+**API formaat**
 
 ```https
 POST /connections
@@ -136,7 +136,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Generic REST API]:
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL Generic REST API] gemaakt:
 
 ```shell
 curl -X POST \
@@ -168,15 +168,15 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van uw basisverbinding. Zorg ervoor dat de naam van uw basisverbinding beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw basisverbinding te zoeken. |
 | `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de basisverbinding. |
-| `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan [!DNL Generic REST API]. Deze vaste ID is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `connectionSpec.id` | De verbindingsspecificatie-id die aan [!DNL Generic REST API] is gekoppeld. Deze vaste id is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62` . |
 | `auth.specName` | Het verificatietype dat u gebruikt om uw bron te verbinden met Platform. |
-| `auth.params.host` | De basis-URL waarmee u verbinding maakt met uw [!DNL Generic REST API] bron. |
-| `auth.params.username` | De gebruikersnaam die overeenkomt met uw [!DNL Generic REST API] bron. Dit is vereist voor basisverificatie. |
-| `auth.params.password` | Het wachtwoord dat overeenkomt met uw [!DNL Generic REST API] bron. Dit is vereist voor basisverificatie. |
+| `auth.params.host` | De basis-URL waarmee verbinding wordt gemaakt met de [!DNL Generic REST API] -bron. |
+| `auth.params.username` | De gebruikersnaam die overeenkomt met uw [!DNL Generic REST API] -bron. Dit is vereist voor basisverificatie. |
+| `auth.params.password` | Het wachtwoord dat overeenkomt met uw [!DNL Generic REST API] -bron. Dit is vereist voor basisverificatie. |
 
-**Antwoord**
+**Reactie**
 
-Een geslaagde reactie retourneert de nieuwe basisverbinding, inclusief de unieke verbindingsidentificatie (`id`). Deze id is vereist om de bestandsstructuur en inhoud van uw bron in de volgende stap te verkennen.
+Een succesvolle reactie keert de pas gecreëerde basisverbinding, met inbegrip van zijn unieke verbindings herkenningsteken (`id`) terug. Deze id is vereist om de bestandsstructuur en inhoud van uw bron in de volgende stap te verkennen.
 
 ```json
 {
@@ -187,7 +187,7 @@ Een geslaagde reactie retourneert de nieuwe basisverbinding, inclusief de unieke
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL Generic REST API] basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
+Aan de hand van deze zelfstudie hebt u een [!DNL Generic REST API] basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
-* [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
-* [Creeer een dataflow om protocolgegevens aan Platform te brengen gebruikend [!DNL Flow Service] API](../../collect/protocols.md)
+* [Onderzoek de structuur en de inhoud van uw gegevenslijsten gebruikend  [!DNL Flow Service]  API](../../explore/tabular.md)
+* [Creeer een dataflow om protocolgegevens aan Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/protocols.md)

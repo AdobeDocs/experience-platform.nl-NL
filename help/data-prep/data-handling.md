@@ -6,8 +6,8 @@ description: Dit document geeft een overzicht van hoe de verschillende gegevenst
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 9%
+source-wordcount: '602'
+ht-degree: 3%
 
 ---
 
@@ -19,9 +19,9 @@ Data Prep kan op krachtige wijze verschillende gegevensindelingen verwerken die 
 
 Als het brontype een tekenreeks is en het doeltype een Booleaanse waarde is, kan de waarde automatisch worden geparseerd met Data Prep en kan de bronwaarde worden omgezet in een booleaanse waarde.
 
-De waarden `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true`, en `TRUE` automatisch worden geparseerd `true`.
+De waarden `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true` en `TRUE` worden automatisch geparseerd om `true` te zijn.
 
-De waarden `n`, `N`, `no`, `NO`, `off`, `OFF`, `false`, en `FALSE` automatisch worden geparseerd `false`.
+De waarden `n`, `N`, `no`, `NO`, `off`, `OFF`, `false` en `FALSE` worden automatisch geparseerd om `false` te zijn.
 
 ## Datums {#dates}
 
@@ -31,7 +31,7 @@ Data Prep ondersteunt datumfuncties, zowel als tekenreeksen als als datetime-obj
 
 De datumfunctie zet tekenreeksen en datetime-objecten om in een ISO 8601-opgemaakt ZonedDateTime-object.
 
-**Indeling**
+**Formaat**
 
 ```http
 date({DATE}, {FORMAT}, {DEFAULT_DATE})
@@ -40,10 +40,10 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{DATE}` | Vereist. De tekenreeks die de datum vertegenwoordigt. |
-| `{FORMAT}` | Optioneel. De tekenreeks die staat voor de indeling van de brondatum. Meer informatie over tekenreeksindeling vindt u in het gedeelte [String-sectie voor datum-/tijdnotatie](#format). |
+| `{FORMAT}` | Optioneel. De tekenreeks die staat voor de indeling van de brondatum. Meer informatie over koord het formatteren kan in de [ de sectie van het datum/tijdformaat koord ](#format) worden gevonden. |
 | `{DEFAULT_DATE}` | Optioneel. De standaarddatum die moet worden geretourneerd als de opgegeven datum null is. |
 
-De expressie `date(orderDate, "yyyy-MM-dd")` converteert een `orderDate` waarde &quot;31 december 2020&quot; in de datetime-waarde &quot;2020-12-31&quot;.
+Met de expressie `date(orderDate, "yyyy-MM-dd")` wordt bijvoorbeeld de `orderDate` waarde &quot;31 december 2020&quot; omgezet in de datetime-waarde &quot;2020-12-31&quot;.
 
 ### Datumfunctie converteert
 
@@ -72,7 +72,7 @@ Wanneer de koordgebieden van inkomende gegevens aan datumgebieden in schema&#39;
 
 >[!IMPORTANT]
 >
-> Met Data Prep wordt geprobeerd tekenreeksen zo goed mogelijk om te zetten in datums. Deze omzettingen kunnen echter tot ongewenste resultaten leiden. De tekenreekswaarde &quot;12112020&quot; komt bijvoorbeeld overeen met het patroon &quot;MMddyy&quot;, maar de gebruiker kan de datum hebben willen lezen met het patroon &quot;ddMMyyyy&quot;. Daarom moeten gebruikers expliciet de datumnotatie voor tekenreeksen vermelden.
+> Met Data Prep worden tekenreeksen zo goed mogelijk omgezet in datums. Deze omzettingen kunnen echter tot ongewenste resultaten leiden. De tekenreekswaarde &quot;12112020&quot; komt bijvoorbeeld overeen met het patroon &quot;MMddyy&quot;, maar de gebruiker kan de datum hebben willen lezen met het patroon &quot;ddMMyyyy&quot;. Daarom moeten gebruikers expliciet de datumnotatie voor tekenreeksen vermelden.
 
 ### Tekenreeksen voor datum-/tijdnotatie {#format}
 
@@ -80,16 +80,16 @@ In de volgende tabel wordt aangegeven welke patroonletters zijn gedefinieerd voo
 
 | Symbool | Betekenis | Presentatie | Voorbeeld |
 | ------ | ------- | ------------ | ------- |
-| G | Het tijdperk | Tekst | AD; Anno Domini A |
+| G | Het tijdperk | Tekst | AD; Anno Domini; A |
 | Y | Jaar op basis van de ISO-week | Getal | 1996; 96 |
 | y | Het jaar | Getal | 2004; 04 |
-| M/L | Maand van het jaar | Getal/tekst | 7; 07; jul. juli; J |
+| M/L | Maand van het jaar | Getal/tekst | 7; 07; juli; J |
 | w | Week in het jaar | Getal | 27 |
 | W | Week van de maand | Getal | 3 |
 | D | Dag van het jaar | Getal | 189 |
 | d | Dag van de maand | Getal | 10 |
 | F | Dag van de week in een maand | Getal | 2 |
-| E | Naam van de dag van de week | Tekst | Dinsdag Kleurtoon |
+| E | Naam van de weekdag | Tekst | Dinsdag; Kleurtoon |
 | u | Dag van de week, als een getal. 1 staat voor maandag, ..., 7 staat voor zondag | Getal | 1 |
 | a | AM/PM-markering | Tekst | PM |
 | H | Uur in dag (0-23) | Getal | 0 |
@@ -104,8 +104,8 @@ In de volgende tabel wordt aangegeven welke patroonletters zijn gedefinieerd voo
 | X | Tijdzone | Tijdzone ISO 8601 | -08; -0800; -08:00 |
 | V | Tijdzone-id | Tekst | America/Los_Angeles |
 | O | Verschuiving tijdzone | Tekst | GMT+8 |
-| Q/q | Kwartaal van het jaar | Getal/tekst | 3. 03; Q3; 3de kwartaal |
+| Q/q | Kwartaal van het jaar | Getal/tekst | 3; 03; Q3; 3de kwartaal |
 
 ## Kaarten {#maps}
 
-Kaarten worden momenteel niet ondersteund in [!DNL Data Prep].
+Kaarten worden momenteel niet ondersteund in [!DNL Data Prep] .

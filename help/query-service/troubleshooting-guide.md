@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Veelgestelde vragen
 
-Dit document verstrekt antwoorden op vaak gestelde vragen over de Dienst van de Vraag en verstrekt een lijst van algemeen gezien foutencodes wanneer het gebruiken van de Dienst van de Vraag. Voor vragen en problemen met betrekking tot andere services in Adobe Experience Platform raadpleegt u de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
+Dit document verstrekt antwoorden op vaak gestelde vragen over de Dienst van de Vraag en verstrekt een lijst van algemeen gezien foutencodes wanneer het gebruiken van de Dienst van de Vraag. Voor vragen en het oplossen van problemen met betrekking tot andere diensten in Adobe Experience Platform, gelieve te verwijzen naar de [ gids van de het oplossen van problemenoplossing van het Experience Platform ](../landing/troubleshooting.md).
 
 De volgende lijst met antwoorden op veelgestelde vragen is onderverdeeld in de volgende categorieën:
 
@@ -29,37 +29,44 @@ Deze sectie bevat informatie over prestaties, beperkingen en processen.
 
 ### Kan ik de auto-volledige eigenschap in de Redacteur van de Dienst van de Vraag uitzetten?
 
-+++Antwoord nr. Het uitschakelen van de functie voor automatisch aanvullen wordt momenteel niet ondersteund door de editor.
++++Antwoord
+Nee. Het uitschakelen van de functie voor automatisch aanvullen wordt momenteel niet ondersteund door de editor.
 +++
 
 ### Waarom wordt de Redacteur van de Vraag soms langzaam wanneer ik in een vraag typ?
 
-+++Antwoord Een mogelijke oorzaak is de functie voor automatisch aanvullen. De eigenschap verwerkt bepaalde meta-gegevensbevelen die de redacteur tijdens vraag het uitgeven soms kunnen vertragen.
++++Antwoord
+Een mogelijke oorzaak is de functie voor automatisch aanvullen. De eigenschap verwerkt bepaalde meta-gegevensbevelen die de redacteur tijdens vraag het uitgeven soms kunnen vertragen.
 +++
 
-### Kan ik gebruiken [!DNL Postman] voor de API van de Query-service?
+### Kan ik [!DNL Postman] gebruiken voor de API van de Query-service?
 
-+++Antwoord ja, u kunt visualiseren en met alle Adobe API diensten in wisselwerking staan gebruikend [!DNL Postman] (een gratis toepassing van derden). Kijk naar de [[!DNL Postman] installatiehandleiding](https://video.tv.adobe.com/v/28832) voor stapsgewijze instructies voor het instellen van een project in Adobe Developer Console en het verkrijgen van alle vereiste referenties voor gebruik met [!DNL Postman]. Zie de officiële documentatie voor [richtlijnen voor het starten, uitvoeren en delen [!DNL Postman] verzamelingen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Antwoord
+Ja, u kunt alle Adobe API-services visualiseren en interactief gebruiken met [!DNL Postman] (een gratis toepassing van derden). Bekijk de [[!DNL Postman]  opstellingsgids ](https://video.tv.adobe.com/v/28832) voor geleidelijke instructies op hoe te opstelling een project in Adobe Developer Console en alle noodzakelijke geloofsbrieven voor gebruik met [!DNL Postman] te verkrijgen. Zie de officiële documentatie voor [ begeleiding bij het beginnen, het lopen, en het delen van  [!DNL Postman]  inzamelingen ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Is er een grens aan het maximumaantal rijen die van een vraag door UI zijn teruggekeerd?
 
-++ antwoord ja, de Dienst van de Vraag past intern een grens van 50.000 rijen toe tenzij een expliciete grens extern wordt gespecificeerd. Zie de leidraad voor [interactieve query-uitvoering](./best-practices/writing-queries.md#interactive-query-execution) voor meer informatie .
++++Antwoord
+Ja, past de Dienst van de Vraag intern een grens van 50.000 rijen toe tenzij een expliciete grens extern wordt gespecificeerd. Zie de begeleiding bij [ interactieve vraaguitvoering ](./best-practices/writing-queries.md#interactive-query-execution) voor meer details.
 +++
 
 ### Kan ik query&#39;s gebruiken om rijen bij te werken?
 
-+++Antwoord in partijvragen, wordt het bijwerken van een rij binnen de dataset niet gesteund.
++++Antwoord
+In partijvragen, wordt het bijwerken van een rij binnen de dataset niet gesteund.
 +++
 
 ### Is er een grens van de gegevensgrootte voor de resulterende output van een vraag?
 
-+++Antwoord nr. De gegevensgrootte is niet beperkt, maar er geldt een time-outlimiet van 10 minuten voor de query voor een interactieve sessie. Als de vraag als partij CTAS wordt uitgevoerd dan is een 10 minieme onderbreking niet van toepassing. Zie de leidraad voor [interactieve query-uitvoering](./best-practices/writing-queries.md#interactive-query-execution) voor meer informatie .
++++Antwoord
+Nee. De gegevensgrootte is niet beperkt, maar er geldt een time-outlimiet van 10 minuten voor de query voor een interactieve sessie. Als de vraag als partij CTAS wordt uitgevoerd dan is een 10 minieme onderbreking niet van toepassing. Zie de begeleiding bij [ interactieve vraaguitvoering ](./best-practices/writing-queries.md#interactive-query-execution) voor meer details.
 +++
 
 ### Hoe mijd ik de grens op het outputaantal rijen van een UITGEZOCHTE vraag?
 
-+++Antwoord om de grens van de outputrij te mijden, pas &quot;LIMIT 0&quot;in de vraag toe. Bijvoorbeeld:
++++Antwoord
+Als u de limiet voor de uitvoerrij wilt overslaan, past u LIMIT 0 toe in de query. Bijvoorbeeld:
 
 ```sql
 SELECT * FROM customers LIMIT 0;
@@ -69,104 +76,114 @@ SELECT * FROM customers LIMIT 0;
 
 ### Hoe kan ik voorkomen dat mijn vragen over 10 minuten worden uitgesteld?
 
-+++Antwoord Één of meerdere van de volgende oplossingen worden geadviseerd in het geval van vraagtiming uit.
++++Antwoord
+Één of meerdere van de volgende oplossingen worden geadviseerd in het geval van vraagtiming uit.
 
-- [De query converteren naar een CTAS-query](./sql/syntax.md#create-table-as-select) en plant de uitvoering. Het plannen van een looppas kan of worden gedaan [via de gebruikersinterface](./ui/user-guide.md#scheduled-queries) of de [API](./api/scheduled-queries.md#create).
-- Voer de vraag op een kleiner gegevenssegment uit door extra toe te passen [filtervoorwaarden](https://spark.apache.org/docs/latest/api/sql/index.html#filter).
-- [De opdracht EXPLAIN uitvoeren](./sql/syntax.md#explain) voor meer informatie.
+- [ zet de vraag in een vraag CTAS ](./sql/syntax.md#create-table-as-select) om en plant de looppas. Het plannen van een looppas kan of [ door UI ](./ui/user-guide.md#scheduled-queries) of [ worden gedaan API ](./api/scheduled-queries.md#create).
+- Voer de vraag op een kleiner gegevenssegment uit door extra [ filtervoorwaarden ](https://spark.apache.org/docs/latest/api/sql/index.html#filter) toe te passen.
+- [ voert het bevel EXPLAIN ](./sql/syntax.md#explain) uit om meer details te verzamelen.
 - Herzie de statistieken van de gegevens binnen de dataset.
-- De query converteren naar een vereenvoudigd formulier en opnieuw uitvoeren met [voorbereide instructies](./sql/prepared-statements.md).
+- Zet de vraag in een vereenvoudigde vorm om en re-looppas gebruikend [ voorbereide verklaringen ](./sql/prepared-statements.md).
 +++
 
 ### Is er om het even welke kwestie of effect op de prestaties van de Dienst van de Vraag als de veelvoudige vragen gelijktijdig lopen?
 
-+++Antwoord nr. De Dienst van de vraag heeft een autoscaling vermogen dat gezamenlijke vragen verzekert geen merkbaar effect op de prestaties van de dienst hebben.
++++Antwoord
+Nee. De Dienst van de vraag heeft een autoscaling vermogen dat gezamenlijke vragen verzekert geen merkbaar effect op de prestaties van de dienst hebben.
 +++
 
 ### Kan ik gereserveerde trefwoorden als kolomnaam gebruiken?
 
-+++Antwoord Er zijn bepaalde gereserveerde trefwoorden die niet als kolomnaam zoals kunnen worden gebruikt, `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. Als u deze sleutelwoorden wilt gebruiken, dan moet u deze kolommen ontsnappen.
++++Antwoord
+Er zijn bepaalde gereserveerde trefwoorden die niet als kolomnaam kunnen worden gebruikt, zoals `ORDER` , `GROUP BY` , `WHERE` en `DISTINCT` . Als u deze sleutelwoorden wilt gebruiken, dan moet u deze kolommen ontsnappen.
 +++
 
 ### Hoe vind ik een kolomnaam van een hiërarchische dataset?
 
-+++Antwoord De volgende stappen beschrijven hoe te om een tabelmening van een dataset door UI, met inbegrip van alle genestelde gebieden en kolommen in een samengevoegde vorm te tonen.
++++Antwoord
+De volgende stappen beschrijven hoe te om een tabelmening van een dataset door UI, met inbegrip van alle genestelde gebieden en kolommen in een samengevoegde vorm te tonen.
 
-- Nadat u zich hebt aangemeld bij Experience Platform, selecteert u **[!UICONTROL Datasets]** in de linkernavigatie van UI om te navigeren naar [!UICONTROL Datasets] dashboard.
-- De datasets [!UICONTROL Browse] wordt geopend. Met de zoekbalk kunt u de beschikbare opties verfijnen. Selecteer een dataset van de getoonde lijst.
+- Nadat u zich hebt aangemeld bij het Experience Platform, selecteert u **[!UICONTROL Datasets]** in de linkernavigatie van de gebruikersinterface om naar het [!UICONTROL Datasets] -dashboard te navigeren.
+- Het tabblad Gegevenssets [!UICONTROL Browse] wordt geopend. Met de zoekbalk kunt u de beschikbare opties verfijnen. Selecteer een dataset van de getoonde lijst.
 
-![Het dashboard van Datasets in Platform UI met de onderzoeksbar en een dataset benadrukte.](./images/troubleshooting/dataset-selection.png)
+![ het dashboard van Datasets in Platform UI met de onderzoeksbar en een benadrukt dataset.](./images/troubleshooting/dataset-selection.png)
 
-- De [!UICONTROL Datasets activity] wordt weergegeven. Selecteren **[!UICONTROL Preview dataset]** om een dialoog van het schema XDM en in tabelvorm mening van samengevoegde gegevens van de geselecteerde dataset te openen. Meer informatie vindt u in het gedeelte [een voorbeeld bekijken van een gegevenssetdocumentatie](../catalog/datasets/user-guide.md#preview-a-dataset)
+- Het scherm [!UICONTROL Datasets activity] wordt weergegeven. Selecteer **[!UICONTROL Preview dataset]** om een dialoog van het schema XDM en tabelmening van samengevoegde gegevens van de geselecteerde dataset te openen. Meer details kunnen in de [ voorproef worden gevonden een documentatie van de dataset ](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![Het de activiteitslusje van de Dataset van het dashboard van Datasets met benadrukte dataset van de Voorproef.](./images/troubleshooting/dataset-preview.png)
+![ het de activiteitenlusje van de Dataset van het dashboard van Datasets met benadrukte dataset van de Voorproef.](./images/troubleshooting/dataset-preview.png)
 
 - Selecteer een veld in het schema om de inhoud ervan in een samengevoegde kolom weer te geven. De naam van de kolom wordt boven de inhoud weergegeven aan de rechterkant van de pagina. Kopieer deze naam voor het opvragen van deze gegevensset.
 
-![Het XDM-schema en de tabelweergave van de samengevoegde gegevens. De kolomnaam van een genestelde dataset wordt benadrukt in UI.](./images/troubleshooting/column-name.png)
+![ het schema XDM en de tabelvormige mening van de samengevoegde gegevens. De kolomnaam van een genestelde dataset wordt benadrukt in UI.](./images/troubleshooting/column-name.png)
 
-Zie de documentatie voor meer informatie over [hoe te werken met geneste gegevensstructuren](./key-concepts/nested-data-structures.md) het gebruiken van de Redacteur van de Vraag of een derde cliënt.
+Zie de documentatie voor volledige begeleiding op [ hoe te met genestelde gegevensstructuren ](./key-concepts/nested-data-structures.md) werken gebruikend de Redacteur van de Vraag of een derdecliënt.
 +++
 
 ### Hoe kan ik een vraag over een dataset versnellen die series bevat?
 
-+++Antwoord om de prestaties van vragen op datasets te verbeteren die series bevatten, zou u moeten [de array exploderen](https://spark.apache.org/docs/latest/api/sql/index.html#explode) als [CTAS-query](./sql/syntax.md#create-table-as-select) tijdens runtime, en dan het voor mogelijkheden verder te onderzoeken om zijn verwerkingstijd te verbeteren.
++++Antwoord
+Om de prestaties van vragen op datasets te verbeteren die series bevatten, zou u de serie ](https://spark.apache.org/docs/latest/api/sql/index.html#explode) als vraag van a [ CTAS ](./sql/syntax.md#create-table-as-select) op runtime moeten ontploffen, en dan het voor verdere kansen onderzoeken om zijn verwerkingstijd te verbeteren.[
 +++
 
 ### Waarom verwerkt mijn vraag CTAS nog na vele uren voor slechts een klein aantal rijen?
 
-+++Antwoord als de vraag lange tijd op een zeer kleine dataset heeft geduurd, gelieve klantensteun te contacteren.
++++Antwoord
+Als de vraag lange tijd op een zeer kleine dataset heeft geduurd, gelieve klantensteun te contacteren.
 
-Een query kan om het even welk aantal redenen vastlopen tijdens de verwerking. Om de precieze oorzaak te bepalen, is een grondige analyse per geval nodig. [Contact opnemen met de klantenondersteuning van de Adobe](#customer-support) om dit proces te zijn.
+Een query kan om het even welk aantal redenen vastlopen tijdens de verwerking. Om de precieze oorzaak te bepalen, is een grondige analyse per geval nodig. [ de klantensteun van de Adobe van het Contact ](#customer-support) aan het zijn van dit proces.
 +++
 
 ### Hoe neem ik contact op met de klantenondersteuning van de Adobe? {#customer-support}
 
 +++Antwoord
-[Een volledige lijst met telefoonnummers voor klantenondersteuning van de Adobe](https://helpx.adobe.com/ca/contact/phone.html) is beschikbaar op de pagina Help bij de Adobe. U kunt de Help ook online vinden door de volgende stappen uit te voeren:
+[ een volledige lijst van de telefoonaantallen van de klantensteun van de Adobe ](https://helpx.adobe.com/ca/contact/phone.html) is beschikbaar op de pagina van de Hulp van de Adobe. U kunt de Help ook online vinden door de volgende stappen uit te voeren:
 
-- Navigeren naar [https://www.adobe.com/](https://www.adobe.com/) in uw webbrowser.
-- Selecteer rechts van de bovenste navigatiebalk de optie **[!UICONTROL Sign In]**.
+- Navigeer aan [ https://www.adobe.com/ ](https://www.adobe.com/) in uw Webbrowser.
+- Selecteer **[!UICONTROL Sign In]** rechts van de bovenste navigatiebalk.
 
-![De Adobe-website met Sign in gemarkeerd.](./images/troubleshooting/adobe-sign-in.png)
+![ de website van de Adobe met Onderteken binnen benadrukt.](./images/troubleshooting/adobe-sign-in.png)
 
 - Gebruik uw Adobe ID en wachtwoord die bij uw Adobe licentie zijn geregistreerd.
-- Selecteren **[!UICONTROL Help & Support]** in de bovenste navigatiebalk.
+- Selecteer **[!UICONTROL Help & Support]** in de bovenste navigatiebalk.
 
-![Het bovenste vervolgkeuzemenu op de navigatiebalk met Help en ondersteuning, Enterprise-ondersteuning en Contact met ons gemarkeerd.](./images/troubleshooting/help-and-support.png)
+![ het hoogste drop-down menu van de navigatiebar met Hulp en steun, de steun van de Onderneming en het Contact ons benadrukte.](./images/troubleshooting/help-and-support.png)
 
-Een vervolgkeuzelijst wordt weergegeven met een [!UICONTROL Help and support] sectie. Selecteren **[!UICONTROL Contact us]** om de Virtuele Medewerker van de Zorg van de Klant van de Adobe te openen, of selecteer **[!UICONTROL Enterprise support]** voor specifieke hulp voor grote organisaties.
+Er wordt een vervolgkeuzelijst met een sectie [!UICONTROL Help and support] weergegeven. Selecteer **[!UICONTROL Contact us]** om de Adobe Customer Care Virtual Assistant te openen of selecteer **[!UICONTROL Enterprise support]** voor speciale hulp voor grote organisaties.
 +++
 
 ### Hoe kan ik een sequentiële reeks taken uitvoeren, zonder dat ik vervolgens taken moet uitvoeren als de vorige taak niet succesvol is voltooid?
 
-+++Antwoord Met de functie Anonieme blokken kunt u een of meer SQL-instructies ketenen die op volgorde worden uitgevoerd. Zij bieden ook de mogelijkheid om uitzonderingen af te handelen.
++++Antwoord
+Met de functie voor anonieme blokken kunt u een of meer SQL-instructies ketenen die op volgorde worden uitgevoerd. Zij bieden ook de mogelijkheid om uitzonderingen af te handelen.
 
-Zie de [anonieme blokdocumentatie](./key-concepts/anonymous-block.md) voor meer informatie .
+Zie de [ anonieme blokdocumentatie ](./key-concepts/anonymous-block.md) voor meer details.
 +++
 
 ### Hoe voer ik douaneattributie in de Dienst van de Vraag uit?
 
-+++Antwoord Er zijn twee manieren om aangepaste toewijzing te implementeren:
++++Antwoord
+Er zijn twee manieren om aangepaste toewijzing te implementeren:
 
-1. Een combinatie van bestaande [Adobe-gedefinieerde functies](./sql/adobe-defined-functions.md) om na te gaan of aan de gebruiksbehoeften is voldaan.
-1. Als de bovenstaande suggestie niet voldoet aan uw gebruiksaanwijzing, dient u een combinatie van [vensterfuncties](./sql/adobe-defined-functions.md#window-functions). Vensterfuncties kijken naar alle gebeurtenissen in een reeks. Met deze gegevens kunt u ook de historische gegevens beoordelen en deze kunnen in elke combinatie worden gebruikt.
+1. Gebruik een combinatie bestaande [ Adobe-bepaalde functies ](./sql/adobe-defined-functions.md) om te identificeren als de gebruik-geval behoeften worden voldaan aan.
+1. Als de vorige suggestie uw gebruiksgeval niet tevredenstelt, zou u een combinatie [ vensterfuncties ](./sql/adobe-defined-functions.md#window-functions) moeten gebruiken. Vensterfuncties kijken naar alle gebeurtenissen in een reeks. Met deze gegevens kunt u ook de historische gegevens beoordelen en deze kunnen in elke combinatie worden gebruikt.
 +++
 
 ### Mag ik mijn vragen templatiseren zodat ik ze gemakkelijk kan hergebruiken?
 
-++ + Antwoord ja, kunt u vragen door het gebruik van voorbereide verklaringen templatiseren. Bereide instructies kunnen de prestaties optimaliseren en voorkomen dat een query herhaaldelijk wordt geparseerd. Zie de [documentatie over voorbereide instructies](./sql/prepared-statements.md) voor meer informatie .
++++Antwoord
+Ja, u kunt vragen door het gebruik van voorbereide verklaringen templatiseren. Bereide instructies kunnen de prestaties optimaliseren en voorkomen dat een query herhaaldelijk wordt geparseerd. Zie de [ voorbereide verklaringen documentatie ](./sql/prepared-statements.md) voor meer details.
 +++
 
 ### Hoe wint ik foutenlogboeken voor een vraag terug? {#error-logs}
 
-+++Antwoord om foutenlogboeken voor een specifieke vraag terug te winnen, moet u eerst de Dienst API van de Vraag gebruiken om de details van het vraaglogboek te halen. De reactie van HTTP bevat vraag IDs die worden vereist om een vraagfout te onderzoeken.
++++Antwoord
+Om foutenlogboeken voor een specifieke vraag terug te winnen, moet u eerst de Dienst API van de Vraag gebruiken om de details van het vraaglogboek te halen. De reactie van HTTP bevat vraag IDs die worden vereist om een vraagfout te onderzoeken.
 
-Gebruik het bevel van de GET om veelvoudige vragen terug te winnen. Informatie over het aanroepen van de API vindt u in de [voorbeeld-API-aanroepdocumentatie](./api/queries.md#sample-api-calls).
+Gebruik het bevel van de GET om veelvoudige vragen terug te winnen. De informatie over hoe te om een vraag aan API te maken kan in de [ steekproefAPI vraagdocumentatie ](./api/queries.md#sample-api-calls) worden gevonden.
 
-Van de reactie, identificeer de vraag u wilt onderzoeken en een ander verzoek van de GET maken gebruikend zijn `id` waarde. Volledige instructies vindt u in het gedeelte [vraag door de documentatie van identiteitskaart terugwinnen](./api/queries.md#retrieve-a-query-by-id).
+Van de reactie, identificeer de vraag u wilt onderzoeken en een ander verzoek van de GET doen gebruikend zijn `id` waarde. De volledige instructies kunnen in [ worden gevonden wint een vraag door identiteitskaart documentatie ](./api/queries.md#retrieve-a-query-by-id) terug.
 
-Een geslaagde reactie retourneert HTTP-status 200 en bevat de eigenschap `errors` array. De reactie is verkort vanwege de beknoptheid.
+Een geslaagde reactie retourneert HTTP-status 200 en bevat de array `errors` . De reactie is verkort vanwege de beknoptheid.
 
 ```json
 {
@@ -189,12 +206,13 @@ Een geslaagde reactie retourneert HTTP-status 200 en bevat de eigenschap `errors
 }
 ```
 
-De [Referentiedocumentatie voor Query Service API](https://www.adobe.io/experience-platform-apis/references/query-service/) biedt meer informatie over alle beschikbare eindpunten.
+De [ de verwijzingsdocumentatie van de Dienst API van de Vraag ](https://www.adobe.io/experience-platform-apis/references/query-service/) verstrekt meer informatie over alle beschikbare eindpunten.
 +++
 
 ### Wat betekent &quot;Fout bij valideren van schema&quot;?
 
-++ Antwoord Het bericht &quot;Fout die schema&quot;bevestigt betekent dat het systeem van een gebied binnen het schema niet kan de plaats bepalen. Lees het document met aanbevolen procedures voor [gegevenselementen organiseren in Query Service](./best-practices/organize-data-assets.md) gevolgd door de [Tabel maken als geselecteerde documentatie](./sql/syntax.md#create-table-as-select).
++++Antwoord
+Het bericht &#39;Fout bij het valideren van het schema&#39; betekent dat het systeem een veld in het schema niet kan vinden. U zou het beste praktijkdocument voor [ moeten lezen organiserend gegevensactiva in de Dienst van de Vraag ](./best-practices/organize-data-assets.md) die door [ wordt gevolgd creeert Lijst als Uitgezochte documentatie ](./sql/syntax.md#create-table-as-select).
 
 In het volgende voorbeeld wordt het gebruik van een CTAS-syntaxis en een struct-gegevenstype getoond:
 
@@ -226,12 +244,14 @@ AS SELECT '1' as _id,
 
 ### Hoe kan ik de nieuwe gegevens die dagelijks in het systeem komen, snel verwerken?
 
-++ beantwoord [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) De clausule kan worden gebruikt om gegevens over een lijst incrementeel te lezen die op een momentopname identiteitskaart wordt gebaseerd. Dit is ideaal voor gebruik met de [incrementele belasting](./key-concepts/incremental-load.md) ontwerppatroon dat slechts informatie in de dataset verwerkt die sinds de laatste ladingsuitvoering is gecreeerd of gewijzigd. Hierdoor neemt de verwerkingsefficiëntie toe en kan deze zowel bij het streamen als bij het verwerken van batchgegevens worden gebruikt.
++++Antwoord
+De [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) -component kan worden gebruikt voor het incrementeel lezen van gegevens in een tabel op basis van een opname-id. Dit is ideaal voor gebruik met het [ stijgende ladings ](./key-concepts/incremental-load.md) ontwerppatroon dat slechts informatie in de dataset verwerkt die sinds de laatste ladingsuitvoering is gecreeerd of gewijzigd. Hierdoor neemt de verwerkingsefficiëntie toe en kan deze zowel bij het streamen als bij het verwerken van batchgegevens worden gebruikt.
 +++
 
 ### Waarom is er een verschil tussen de aantallen die in Profiel UI worden getoond en de aantallen die van de dataset van de profieluitvoer worden berekend?
 
-+++Antwoord De getallen die worden weergegeven in het profieldashboard zijn nauwkeurig vanaf de laatste opname. De getallen die in de profielexporttabel worden gegenereerd, zijn volledig afhankelijk van de exportquery. Daarom is het vragen van het aantal profielen dat in aanmerking komt voor een bepaald publiek een algemene oorzaak van deze discrepantie.
++++Antwoord
+De getallen die in het profieldashboard worden weergegeven, zijn nauwkeurig vanaf de laatste opname. De getallen die in de profielexporttabel worden gegenereerd, zijn volledig afhankelijk van de exportquery. Daarom is het vragen van het aantal profielen dat in aanmerking komt voor een bepaald publiek een algemene oorzaak van deze discrepantie.
 
 >[!NOTE]
 >
@@ -241,7 +261,8 @@ AS SELECT '1' as _id,
 
 ### Waarom retourneerde mijn query een lege subset en wat moet ik doen?
 
-+++Antwoord De meest waarschijnlijke oorzaak is dat uw vraag in werkingsgebied te smal is. U moet systematisch een gedeelte van het dialoogvenster `WHERE` clausule tot u begint te zien wat gegevens.
++++Antwoord
+De meest waarschijnlijke oorzaak is dat uw vraag in werkingsgebied te smal is. Verwijder systematisch een gedeelte van de component `WHERE` totdat u gegevens ziet.
 
 U kunt ook bevestigen dat uw dataset gegevens door een kleine vraag zoals te gebruiken bevat:
 
@@ -253,46 +274,54 @@ SELECT count(1) FROM myTableName
 
 ### Kan ik mijn gegevens bemonsteren?
 
-+++Antwoord Deze functie is momenteel een werk in uitvoering. Details worden beschikbaar gesteld in [releaseopmerkingen](../release-notes/latest/latest.md) en via de dialoogvensters van de gebruikersinterface van het platform als de functie gereed is voor release.
++++Antwoord
+Deze functie is momenteel in uitvoering. De details zullen beschikbaar in [ versienota&#39;s ](../release-notes/latest/latest.md) en door de dialogen van UI van het Platform worden gemaakt zodra de eigenschap klaar voor versie is.
 +++
 
 ### Welke hulpfuncties worden gesteund door de Dienst van de Vraag?
 
-+++De Dienst van de Vraag van het Antwoord verstrekt verscheidene ingebouwde SQL helperfuncties om SQL functionaliteit uit te breiden. Zie het document voor een volledige lijst van [SQL-functies die worden ondersteund door Query Service](./sql/spark-sql-functions.md).
++++Antwoord
+De Dienst van de vraag verstrekt verscheidene ingebouwde SQL helperfuncties om SQL functionaliteit uit te breiden. Zie het document voor een volledige lijst van de [ SQL functies die door de Dienst van de Vraag ](./sql/spark-sql-functions.md) worden gesteund.
 +++
 
-### Alles native [!DNL Spark SQL] ondersteunde functies of zijn gebruikers beperkt tot alleen de wrapper [!DNL Spark SQL] functies van de Adobe?
+### Worden alle native [!DNL Spark SQL] functies ondersteund of zijn gebruikers beperkt tot alleen de omvattende [!DNL Spark SQL] -functies die door de Adobe worden geboden?
 
-+++Antwoord tot nog toe, niet alle open-bron [!DNL Spark SQL] functies zijn getest op data Lake data. Nadat de tests en bevestigingen zijn uitgevoerd, worden ze toegevoegd aan de lijst met ondersteunde items. Raadpleeg de [lijst met ondersteunde [!DNL Spark SQL] functies](./sql/spark-sql-functions.md) om te controleren op een specifieke functie.
++++Antwoord
+Tot nu toe zijn niet alle open-source [!DNL Spark SQL] -functies getest op data Lake data. Nadat de tests en bevestigingen zijn uitgevoerd, worden ze toegevoegd aan de lijst met ondersteunde items. Gelieve te verwijzen de [ lijst van gesteunde  [!DNL Spark SQL]  functies ](./sql/spark-sql-functions.md) om voor een specifieke functie te controleren.
 +++
 
 ### Kunnen de gebruikers hun eigen user-defined functies (UDF) bepalen die over andere vragen kunnen worden gebruikt?
 
-+++Antwoord wegens overwegingen van de gegevensveiligheid, wordt de douanedefinitie van UDFs niet toegestaan.
++++Antwoord
+Vanwege gegevensbeveiligingsoverwegingen is de aangepaste definitie van UDF&#39;s niet toegestaan.
 +++
 
 ### Wat moet ik doen als mijn geplande query mislukt?
 
-+++Antwoord eerst, controleer de logboeken om de details van de fout te weten te komen. De sectie Veelgestelde vragen over [fouten in logbestanden zoeken](#error-logs) biedt meer informatie over hoe u dit kunt doen.
++++Antwoord
+Controleer eerst de logboeken om de details van de fout te achterhalen. De sectie FAQ op [ het vinden fouten binnen logboeken ](#error-logs) verstrekt meer informatie over hoe te om dit te doen.
 
-U moet ook de documentatie controleren voor richtlijnen over het uitvoeren van [geplande vragen in UI](./ui/user-guide.md#scheduled-queries) en via [de API](./api/scheduled-queries.md).
+U zou de documentatie voor begeleiding ook moeten controleren hoe te om [ geplande vragen in UI ](./ui/user-guide.md#scheduled-queries) en door [ API ](./api/scheduled-queries.md) uit te voeren.
 
-Let op: wanneer u de [!DNL Query Editor] u kunt alleen een schema toevoegen aan een query die al is gemaakt en opgeslagen. Dit geldt niet voor de [!DNL Query Service] API.
+Houd er rekening mee dat u bij het gebruik van de [!DNL Query Editor] alleen een schema kunt toevoegen aan een query die al is gemaakt en opgeslagen. Dit is niet van toepassing op de [!DNL Query Service] API.
 +++
 
 ### Wat betekent de fout &quot;Sessiebeperking bereikt&quot;?
 
-+++Antwoord &quot;De Grens van de Zitting&quot;betekent bereikt dat het maximumaantal zittingen van de Dienst van de Vraag die voor uw organisatie wordt toegestaan is bereikt. Maak verbinding met de Adobe Experience Platform-beheerder van uw organisatie.
++++Antwoord
+&quot;Sessielimiet bereikt&quot; betekent dat het maximumaantal sessies van Query Service dat is toegestaan voor uw organisatie, is bereikt. Maak verbinding met de Adobe Experience Platform-beheerder van uw organisatie.
 +++
 
 ### Hoe behandelt het vraaglogboek vragen met betrekking tot een geschrapte dataset?
 
-+++De Dienst van de Vraag van het Antwoord schrapt nooit vraaggeschiedenis. Dit betekent dat om het even welke vragen die naar een geschrapte dataset verwijzen &quot;Geen geldige dataset&quot;als resultaat zouden terugkeren.
++++Antwoord
+De Dienst van de vraag schrapt nooit vraaggeschiedenis. Dit betekent dat om het even welke vragen die naar een geschrapte dataset verwijzen &quot;Geen geldige dataset&quot;als resultaat zouden terugkeren.
 +++
 
 ### Hoe kan ik slechts de meta-gegevens voor een vraag krijgen?
 
-+++Antwoord U kunt een vraag in werking stellen die nul rijen terugkeert om slechts de meta-gegevens in antwoord te krijgen. Deze voorbeeldquery retourneert alleen de metagegevens voor de opgegeven tabel.
++++Antwoord
+U kunt een vraag in werking stellen die nul rijen terugkeert om slechts de meta-gegevens in antwoord te krijgen. Deze voorbeeldquery retourneert alleen de metagegevens voor de opgegeven tabel.
 
 ```sql
 SELECT * FROM <table> WHERE 1=0
@@ -302,7 +331,8 @@ SELECT * FROM <table> WHERE 1=0
 
 ### Hoe kan ik snel op een vraag herhalen CTAS (Creeer Lijst zoals Uitgezochte) zonder het materialiseren?
 
-+++Antwoord U kunt tot tijdelijke lijsten leiden om op een vraag snel te herhalen en te experimenteren alvorens het voor gebruik materialiseert. U kunt tijdelijke lijsten ook gebruiken om te bevestigen als een vraag functioneel is.
++++Antwoord
+U kunt tijdelijke lijsten tot stand brengen om een vraag snel te herhalen en te experimenteren alvorens het voor gebruik materializing. U kunt tijdelijke lijsten ook gebruiken om te bevestigen als een vraag functioneel is.
 
 U kunt bijvoorbeeld een tijdelijke tabel maken:
 
@@ -330,18 +360,19 @@ LIMIT 100;
 
 ### Hoe kan ik de tijdzone wijzigen van en naar een UTC-tijdstempel?
 
-+++Antwoord Adobe Experience Platform houdt gegevens in UTC (Coordinated Universal Time) timestamp formaat voort. Een voorbeeld van de UTC-indeling is `2021-12-22T19:52:05Z`
++++Antwoord
+Adobe Experience Platform zet gegevens voort in de tijdstempelindeling UTC (Coordinated Universal Time). Een voorbeeld van de UTC-indeling is `2021-12-22T19:52:05Z`
 
-De Dienst van de vraag steunt ingebouwde SQL functies om een bepaalde timestamp in en van formaat om te zetten UTC. Beide `to_utc_timestamp()` en de `from_utc_timestamp()` methoden hebben twee parameters: tijdstempel en tijdzone.
+De Dienst van de vraag steunt ingebouwde SQL functies om een bepaalde timestamp in en van formaat om te zetten UTC. Zowel de methode `to_utc_timestamp()` als de methode `from_utc_timestamp()` hebben twee parameters: tijdstempel en tijdzone.
 
 | Parameter | Beschrijving |
 |-----------|---------------|
-| Tijdstempel | De tijdstempel kan in UTC- of eenvoudig worden geschreven `{year-month-day}` gebruiken. Als er geen tijd is opgegeven, is de standaardwaarde middernacht op de ochtend van de opgegeven dag. |
-| Tijdzone | De tijdzone wordt geschreven in een `{continent/city})` gebruiken. Dit moet een van de erkende tijdzonecodes zijn, zoals die in de [public-domain TZ-database](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+| Tijdstempel | De tijdstempel kan in UTC- of eenvoudige `{year-month-day}` -indeling worden geschreven. Als er geen tijd is opgegeven, is de standaardwaarde middernacht op de ochtend van de opgegeven dag. |
+| Tijdzone | De tijdzone wordt geschreven in een `{continent/city})` -indeling. Het moet één van de erkende timezone codes zijn zoals die in het [ publiek-domeinTZ gegevensbestand ](https://data.iana.org/time-zones/tz-link.html#tzdb) worden gevonden. |
 
 #### Omzetten in UTC-tijdstempel
 
-De `to_utc_timestamp()` methode interpreteert de opgegeven parameters en converteert deze **naar het tijdstempel van uw lokale tijdzone** in UTC-indeling. De tijdzone in Seoul, Zuid-Korea, is bijvoorbeeld UTC/GMT +9 uur. Door een datum-enige timestamp te verstrekken, gebruikt de methode een standaardwaarde van middernacht in de ochtend. De tijdstempel en tijdzone worden vanuit dat gebied omgezet in de UTC-indeling in een UTC-tijdstempel van uw lokale regio.
+De `to_utc_timestamp()` methode interpreteert de bepaalde parameters en zet het **in timestamp van uw lokale timezone** in formaat UTC om. De tijdzone in Seoul, Zuid-Korea, is bijvoorbeeld UTC/GMT +9 uur. Door een datum-enige timestamp te verstrekken, gebruikt de methode een standaardwaarde van middernacht in de ochtend. De tijdstempel en tijdzone worden vanuit dat gebied omgezet in de UTC-indeling in een UTC-tijdstempel van uw lokale regio.
 
 ```SQL
 SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
@@ -353,7 +384,7 @@ De query retourneert een tijdstempel in de lokale tijd van de gebruiker. In dit 
 2021-08-30 15:00:00
 ```
 
-Als een ander voorbeeld, als de opgegeven tijdstempel `2021-07-14 12:40:00.0` voor de `Asia/Seoul` timezone, de geretourneerde UTC-tijdstempel is `2021-07-14 03:40:00.0`
+Als een ander voorbeeld is dat de opgegeven tijdstempel `2021-07-14 12:40:00.0` is voor de `Asia/Seoul` tijdzone, wordt de geretourneerde UTC-tijdstempel `2021-07-14 03:40:00.0`
 
 De consoleoutput die in de Dienst UI van de Vraag wordt verstrekt is een meer mens-leesbaar formaat:
 
@@ -363,7 +394,7 @@ De consoleoutput die in de Dienst UI van de Vraag wordt verstrekt is een meer me
 
 #### Omzetten vanuit de UTC-tijdstempel
 
-De `from_utc_timestamp()` methode interpreteert de opgegeven parameters **van de tijdstempel van uw lokale tijdzone** en geeft het equivalente tijdstempel van het gewenste gebied in UTC-indeling. In het onderstaande voorbeeld is het uur 2:40PM in de lokale tijdzone van de gebruiker. De tijdzone van Seoul die als variabele wordt overgegaan is negen uur vóór lokale timezone.
+De `from_utc_timestamp()` methode interpreteert de bepaalde parameters **van timestamp van uw lokale timezone** en verstrekt gelijkwaardige timestamp van het gewenste gebied in formaat UTC. In het onderstaande voorbeeld is het uur 2:40PM in de lokale tijdzone van de gebruiker. De tijdzone van Seoul die als variabele wordt overgegaan is negen uur vóór lokale timezone.
 
 ```SQL
 SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
@@ -377,11 +408,12 @@ De query retourneert een tijdstempel in UTC-indeling voor de tijdzone die als pa
 
 ### Hoe moet ik mijn tijdreeksgegevens filteren?
 
-+++Antwoord wanneer het vragen met tijd-reeksgegevens, zou u het timestamp filter waar mogelijk voor nauwkeurigere analyse moeten gebruiken.
++++Antwoord
+Wanneer u gegevens uit tijdreeksen opvraagt, moet u het tijdstempelfilter gebruiken wanneer dat mogelijk is voor nauwkeurigere analyse.
 
 >[!NOTE]
 >
-> De datumtekenreeks **moet** heeft de notatie `yyyy-mm-ddTHH24:MM:SS`.
+> Het datumkoord **moet** in het formaat `yyyy-mm-ddTHH24:MM:SS` zijn.
 
 Hieronder ziet u een voorbeeld van het gebruik van het tijdstempelfilter:
 
@@ -396,9 +428,10 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 
 +++
 
-### Hoe gebruik ik de `CAST` operator om mijn tijdstempels om te zetten in SQL query&#39;s?
+### Hoe gebruik ik de operator `CAST` correct om mijn tijdstempels om te zetten in SQL-query&#39;s?
 
-+++Antwoord wanneer het gebruiken van `CAST` om een tijdstempel om te zetten, moet u beide datums opnemen **en** tijd.
++++Antwoord
+Wanneer het gebruiken van de `CAST` exploitant om een timestamp om te zetten, moet u zowel de datum **als** tijd omvatten.
 
 Als bijvoorbeeld de tijdcomponent ontbreekt, zoals hieronder wordt weergegeven, resulteert dit in een fout:
 
@@ -407,7 +440,7 @@ SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021' AS timestamp)
 ```
 
-Het juiste gebruik van de `CAST` operator wordt hieronder weergegeven:
+Het correcte gebruik van de operator `CAST` wordt hieronder weergegeven:
 
 ```sql
 SELECT * FROM ABC
@@ -418,14 +451,16 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 
 ### Moet ik vervangingen, zoals * gebruiken om alle rijen van mijn datasets te krijgen?
 
-+++Antwoord U kunt geen vervangingen gebruiken om alle gegevens van uw rijen te krijgen, aangezien de Dienst van de Vraag als a zou moeten worden behandeld **columnar-store** in plaats van een traditioneel opslagsysteem op basis van rijen.
++++Antwoord
+U kunt geen vervangingen gebruiken om alle gegevens van uw rijen te krijgen, aangezien de Dienst van de Vraag als a **zou moeten worden behandeld column-store** eerder dan een traditioneel op rij-gebaseerd opslagsysteem.
 +++
 
-### Moet ik gebruiken `NOT IN` in mijn SQL-query?
+### Moet ik `NOT IN` gebruiken in mijn SQL-query?
 
-++ beantwoord `NOT IN` wordt vaak gebruikt om rijen op te halen die niet in een andere lijst of SQL verklaring worden gevonden. Deze operator kan de prestaties vertragen en onverwachte resultaten opleveren als de kolommen die worden vergeleken, accepteren `NOT NULL`of u hebt een groot aantal records.
++++Antwoord
+De operator `NOT IN` wordt vaak gebruikt om rijen op te halen die niet in een andere tabel of SQL-instructie worden gevonden. Deze operator kan de prestaties vertragen en onverwachte resultaten opleveren als de kolommen die worden vergeleken `NOT NULL` accepteren of als u een groot aantal records hebt.
 
-In plaats van `NOT IN`kunt u beide `NOT EXISTS` of `LEFT OUTER JOIN`.
+In plaats van `NOT IN` te gebruiken, kunt u `NOT EXISTS` of `LEFT OUTER JOIN` gebruiken.
 
 Als u bijvoorbeeld de volgende tabellen hebt gemaakt:
 
@@ -439,7 +474,7 @@ INSERT INTO T2 VALUES (1)
 INSERT INTO T2 VALUES (2)
 ```
 
-Als u het `NOT EXISTS` -operator, kunt u repliceren met de `NOT IN` operator door de volgende query te gebruiken:
+Als u de operator `NOT EXISTS` gebruikt, kunt u het repliceren met de operator `NOT IN` met de volgende query:
 
 ```sql
 SELECT ID FROM T1
@@ -447,7 +482,7 @@ WHERE NOT EXISTS
 (SELECT ID FROM T2 WHERE T1.ID = T2.ID)
 ```
 
-U kunt ook de opdracht `LEFT OUTER JOIN` -operator, kunt u repliceren met de `NOT IN` operator door de volgende query te gebruiken:
+Als u de operator `LEFT OUTER JOIN` gebruikt, kunt u het repliceren met de operator `NOT IN` met behulp van de volgende query:
 
 ```sql
 SELECT T1.ID FROM T1
@@ -457,29 +492,34 @@ WHERE T2.ID IS NULL
 
 +++
 
-### Kan ik een dataset tot stand brengen gebruikend een vraag CTAS met een dubbel onderstreeptekennaam zoals die getoond in UI? Bijvoorbeeld: `test_table_001`.
+### Kan ik een dataset tot stand brengen gebruikend een vraag CTAS met een dubbel onderstreeptekennaam zoals die getoond in UI? Bijvoorbeeld: `test_table_001` .
 
-+++Antwoord nr, is dit een opzettelijke beperking over Experience Platform die op alle diensten van Adobe, met inbegrip van de Dienst van de Vraag van toepassing is. Een naam met twee onderstrepingstekens is aanvaardbaar als schema en datasetnaam, maar de lijstnaam voor de dataset kan slechts één enkel onderstrepingsteken bevatten.
++++Antwoord
+Nee, dit is een opzettelijke beperking in het hele Experience Platform die van toepassing is op alle Adobe-services, inclusief Query Service. Een naam met twee onderstrepingstekens is aanvaardbaar als schema en datasetnaam, maar de lijstnaam voor de dataset kan slechts één enkel onderstrepingsteken bevatten.
 +++
 
 ### Hoeveel gezamenlijke vragen kunt u tegelijkertijd lopen?
 
-+++Antwoord Er is geen grens van de vraaggelijktijdig aangezien de partijvragen als achterste deelbanen in werking worden gesteld. Er is echter een time-outlimiet voor de query ingesteld op 24 uur.
++++Antwoord
+Er is geen grens van de vraaggelijktijdig aangezien de partijvragen als achterste deelbanen in werking worden gesteld. Er is echter een time-outlimiet voor de query ingesteld op 24 uur.
 +++
 
 ### Is er een activiteitendashboard waar u vraagactiviteiten en status kunt zien?
 
-+++Antwoord Er zijn controle en alarmeringsmogelijkheden om vraagactiviteiten en statussen te controleren. Zie de [Integratie van controlelogbestand voor Query Service](./data-governance/audit-log-guide.md) en de [querylogs](./ui/overview.md#log) documenten voor meer informatie.
++++Antwoord
+Er zijn controle en alarmeringsmogelijkheden om vraagactiviteiten en statussen te controleren. Zie de [ integratie van het de controlelogboek van de Dienst van de Vraag ](./data-governance/audit-log-guide.md) en [ vraaglogboeken ](./ui/overview.md#log) documenten voor meer informatie.
 +++
 
 ### Is er een manier om updates terug te draaien? Bijvoorbeeld, als er een fout is of sommige berekeningen moeten aanpassen wanneer het schrijven van gegevens terug naar Platform, hoe zou dat scenario moeten worden behandeld?
 
-+++Antwoord Momenteel steunen wij geen terugdraaiversies of updates op die manier.
++++Antwoord
+Op dit moment ondersteunen we op die manier geen terugdraaiversies of updates.
 +++
 
 ### Hoe kunt u query&#39;s optimaliseren in Adobe Experience Platform?
 
-+++Antwoord Het systeem heeft geen indexen aangezien het geen gegevensbestand is maar het heeft andere optimalisaties op zijn plaats verbonden aan de gegevensopslag. De volgende opties zijn beschikbaar om uw vragen te stemmen:
++++Antwoord
+Het systeem heeft geen indexen aangezien het geen gegevensbestand is maar het heeft andere optimalisaties op zijn plaats verbonden aan de gegevensopslag. De volgende opties zijn beschikbaar om uw vragen te stemmen:
 
 - Een op tijd gebaseerd filter op tijdlijngegevens.
 - Geoptimaliseerde onderdruk voor het struct gegevenstype.
@@ -490,17 +530,20 @@ WHERE T2.ID IS NULL
 
 ### Kunnen logins tot bepaalde aspecten van de Dienst van de Vraag worden beperkt of is het een &quot;alle of niets&quot;oplossing?
 
-+++De Dienst van de Vraag van het Antwoord is een &quot;al of niets&quot;oplossing. Gedeeltelijke toegang kan niet worden opgegeven.
++++Antwoord
+De Dienst van de vraag is een &quot;alle of niets&quot;oplossing. Gedeeltelijke toegang kan niet worden opgegeven.
 +++
 
 ### Kan ik beperken welke dienst van de gegevensVraag kan gebruiken, of heeft het eenvoudig toegang tot het volledige de gegevens van Adobe Experience Platform meer?
 
-+++Antwoord ja, kunt u het vragen tot datasets met read-only toegang beperken.
++++Antwoord
+Ja, kunt u het vragen tot datasets met read-only toegang beperken.
 +++
 
 ### Welke andere opties zijn er voor het beperken van de gegevens die de Dienst van de Vraag kan toegang hebben?
 
-+++Antwoord Er zijn drie benaderingen om toegang te beperken. Deze zijn als volgt:
++++Antwoord
+Er zijn drie manieren om de toegang te beperken. Deze zijn als volgt:
 
 - Gebruik alleen de instructies SELECT en geef gegevenssets alleen-lezen toegang. Wijs ook de machtiging voor query beheren toe.
 - Gebruik de instructies SELECT/INSERT/CREATE en geef datasets schrijftoegang. Wijs ook de machtiging voor query-beheer toe.
@@ -514,42 +557,50 @@ WHERE T2.ID IS NULL
 
 ### Kan ik een SSL-modus opgeven voor de verbinding met een externe client? Kan ik bijvoorbeeld &#39;verify-full&#39; gebruiken met Power BI?
 
-+++Antwoord ja, worden de SSL wijzen gesteund. Zie de [Documentatie over SSL-modi](./clients/ssl-modes.md) voor een uitsplitsing van de verschillende beschikbare SSL-modi en het beschermingsniveau dat zij bieden.
++++Antwoord
+Ja, SSL-modi worden ondersteund. Zie de [ SSL wijzedocumentatie ](./clients/ssl-modes.md) voor een uitsplitsing van de verschillende beschikbare SSL wijzen en het niveau van bescherming zij verstrekken.
 +++
 
 ### Gebruiken wij TLS 1.2 voor alle verbindingen van Power BI cliënten aan de vraagdienst?
 
-++ + Antwoord Ja. Doorvoergegevens zijn altijd compatibel met HTTPS. De momenteel ondersteunde versie is TLS1.2.
++++Antwoord
+Ja. Doorvoergegevens zijn altijd compatibel met HTTPS. De momenteel ondersteunde versie is TLS1.2.
 +++
 
 ### Gebruikt een verbinding gemaakt op poort 80 nog https?
 
-++ + Antwoord ja, een verbinding die op haven 80 wordt gemaakt gebruikt nog SSL. U kunt ook poort 5432 gebruiken.
++++Antwoord
+Ja, een verbinding gemaakt op poort 80 gebruikt nog steeds SSL. U kunt ook poort 5432 gebruiken.
 +++
 
 ### Kan ik toegang tot specifieke datasets en kolommen voor een bepaalde verbinding controleren? Hoe wordt dit gevormd?
 
-+++Antwoord ja, op attribuut-gebaseerde toegangsbeheer wordt afgedwongen als gevormd. Zie de [op attributen-gebaseerd toegangsbeheeroverzicht](../access-control/abac/overview.md) voor meer informatie .
++++Antwoord
+Ja, op attribuut-gebaseerde toegangsbeheer wordt afgedwongen als gevormd. Zie het [ op attributen-gebaseerde overzicht van de toegangscontrole ](../access-control/abac/overview.md) voor meer informatie.
 +++
 
 ### Steunt de Dienst van de Vraag het &quot;TUSSENVOEGSEL OVERSCHRIJVEN IN&quot;bevel?
 
-+++Antwoord nr, de Dienst van de Vraag steunt niet het &quot;TUSSENVOEGSEL OVERSCHRIJVEN IN&quot;bevel.
++++Antwoord
+Nr, de Dienst van de Vraag steunt niet het &quot;TUSSENVOEGSEL OVERSCHRIJVEN IN&quot;bevel.
 +++
 
 ### Hoe vaak worden de gebruiksgegevens op het dashboard voor het gebruiksgebruik van licenties bijgewerkt voor Data Distiller?
 
-++ + Antwoord Het dashboard voor het gebruiksadres van de Distiller-computer van de vergunning voor Gegevens wordt vier keer per dag bijgewerkt, om de zes uur.
++++Antwoord
+Het licentiegebruiksdashboard voor Data Distiller-computeruren wordt vier keer per dag bijgewerkt, elke zes uur.
 +++
 
 ### Kan ik het CREATE bevel van de MENING zonder de toegang van Distiller van Gegevens gebruiken?
 
-++ + Antwoord ja, u kunt gebruiken `CREATE VIEW` zonder Data Distiller-toegang. Dit bevel verstrekt een logische mening van gegevens maar schrijft het niet terug naar het gegevens meer.
++++Antwoord
+Ja, u kunt de opdracht `CREATE VIEW` gebruiken zonder Data Distiller-toegang. Dit bevel verstrekt een logische mening van gegevens maar schrijft het niet terug naar het gegevens meer.
 +++
 
 ### Kan ik anonieme blokken gebruiken in DbVisualizer?
 
-++ + Antwoord Ja. Hoewel, bepaalde derdecliënten, zoals DbVisualizer, een afzonderlijke herkenningsteken voor en na een SQL blok kunnen vereisen om erop te wijzen dat een deel van een manuscript als één enkele verklaring zou moeten worden behandeld. Meer informatie vindt u in het gedeelte [anonieme blokdocumentatie](./key-concepts/anonymous-block.md) of in [de officiële documentatie van DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
++++Antwoord
+Ja. Hoewel, bepaalde derdecliënten, zoals DbVisualizer, een afzonderlijke herkenningsteken voor en na een SQL blok kunnen vereisen om erop te wijzen dat een deel van een manuscript als één enkele verklaring zou moeten worden behandeld. Meer details kunnen in de [ anonieme blokdocumentatie ](./key-concepts/anonymous-block.md) of in [ de officiële documentatie DbVisualizer ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect) worden gevonden.
 +++
 
 ## Gegevens exporteren {#exporting-data}
@@ -558,9 +609,10 @@ Deze sectie bevat informatie over het exporteren van gegevens en beperkingen.
 
 ### Is er een manier om gegevens uit de Dienst van de Vraag na vraagverwerking te halen en de resultaten in een Csv- dossier te bewaren? {#export-csv}
 
-++ + Antwoord Ja. De gegevens kunnen uit de Dienst van de Vraag worden gehaald en er is ook de optie om de resultaten in formaat CSV via een SQL bevel op te slaan.
++++Antwoord
+Ja. De gegevens kunnen uit de Dienst van de Vraag worden gehaald en er is ook de optie om de resultaten in formaat CSV via een SQL bevel op te slaan.
 
-Er zijn twee manieren om de resultaten van een vraag te bewaren wanneer het gebruiken van een cliënt PSQL. U kunt de `COPY TO` gebruiken of een instructie maken met de volgende indeling:
+Er zijn twee manieren om de resultaten van een vraag te bewaren wanneer het gebruiken van een cliënt PSQL. U kunt de opdracht `COPY TO` gebruiken of een instructie maken met de volgende indeling:
 
 ```sql
 SELECT column1, column2 
@@ -568,17 +620,19 @@ FROM <table_name>
 \g <table_name>.out
 ```
 
-[Richtsnoeren voor het gebruik van de `COPY TO` command](./sql/syntax.md#copy) vindt u in de documentatie bij de SQL-syntaxisverwijzing.
+[ Begeleiding op het gebruik van het `COPY TO` bevel ](./sql/syntax.md#copy) kan in de SQL documentatie van de syntaxisverwijzing worden gevonden.
 +++
 
 ### Kan ik de inhoud van de definitieve dataset halen die door CTAS vragen is opgenomen (veronderstellend zijn deze grotere hoeveelheden gegevens zoals Terabytes)?
 
-+++Antwoord nr. Er is momenteel geen functie beschikbaar voor het ophalen van opgenomen gegevens.
++++Antwoord
+Nee. Er is momenteel geen functie beschikbaar voor het ophalen van opgenomen gegevens.
 +++
 
 ### Waarom retourneert de gegevensconnector Analytics geen gegevens?
 
-+++Antwoord Een algemene oorzaak voor dit probleem is het opvragen van tijdreeksgegevens zonder tijdfilter. Bijvoorbeeld:
++++Antwoord
+Een veelvoorkomende oorzaak van dit probleem is het opvragen van gegevens uit de tijdreeks zonder tijdfilter. Bijvoorbeeld:
 
 ```sql
 SELECT * FROM prod_table LIMIT 1;
@@ -601,33 +655,39 @@ Deze sectie bevat informatie over het gebruik van hulpmiddelen van derden, zoals
 
 ### Kan ik de Dienst van de Vraag met een derdehulpmiddel verbinden?
 
-++ Antwoord ja, kunt u veelvoudige derdeDesktopcliënten met de Dienst van de Vraag verbinden. Zie de documentatie voor [volledige details over de beschikbare cliënten en hoe te om hen met de dienst van de Vraag te verbinden](./clients/overview.md).
++++Antwoord
+Ja, u kunt veelvoudige derdeDesktopcliënten met de Dienst van de Vraag verbinden. Zie de documentatie voor [ volledige details over de beschikbare cliënten en hoe te om hen met de dienst van de Vraag ](./clients/overview.md) te verbinden.
 +++
 
 ### Is er een manier om de Dienst van de Vraag eenmaal voor ononderbroken gebruik met een derdehulpmiddel aan te sluiten?
 
-++ antwoord ja, kunnen de derdeDesktopcliënten met de Dienst van de Vraag door een eenmalig opstelling van niet-vervallende geloofsbrieven worden verbonden. Niet-vervallende gegevens kunnen worden gegenereerd door een geautoriseerde gebruiker en worden ontvangen in een JSON-bestand dat automatisch wordt gedownload naar de lokale computer. Volledig [richtlijnen voor het maken en downloaden van niet-vervallende referenties](./ui/credentials.md#non-expiring-credentials) te vinden in de documentatie.
++++Antwoord
+Ja, kunnen de derdeDesktopcliënten met de Dienst van de Vraag door een éénmalige opstelling van niet-vervallende geloofsbrieven worden verbonden. Niet-vervallende gegevens kunnen worden gegenereerd door een geautoriseerde gebruiker en worden ontvangen in een JSON-bestand dat automatisch wordt gedownload naar de lokale computer. De volledige [ begeleiding op hoe te om niet-vervallende geloofsbrieven ](./ui/credentials.md#non-expiring-credentials) tot stand te brengen en te downloaden kan in de documentatie worden gevonden.
 +++
 
 ### Waarom werken mijn niet-vervallende geloofsbrieven niet?
 
-+++Antwoord De waarde voor niet vervallende geloofsbrieven is de samengevoegde argumenten van `technicalAccountID` en de `credential` uit de configuratie-JSON-bestand. De wachtwoordwaarde heeft de vorm: `{{technicalAccountId}:{credential}}`.
-Raadpleeg de documentatie voor meer informatie over hoe u [Verbinding maken met externe clients met gebruikersgegevens](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
++++Antwoord
+De waarde voor niet-verlopen referenties zijn de samengevoegde argumenten van de `technicalAccountID` en de `credential` die uit het JSON-configuratiebestand zijn genomen. De wachtwoordwaarde heeft de notatie: `{{technicalAccountId}:{credential}}`.
+Zie de documentatie voor meer informatie over hoe te [ met externe cliënten met geloofsbrieven ](./ui/credentials.md#using-credentials-to-connect-to-external-clients) verbinden.
 +++
 
 ### Welk soort redacteurs van derdeSQL kan ik met de Redacteur van de Dienst van de Vraag verbinden?
 
-++ Antwoord om het even welke derdeSQL redacteur die PSQL of is [!DNL Postgres] cliënt volgzaam kan met de Redacteur van de Dienst van de Vraag worden verbonden. Zie de documentatie voor [clients verbinden met Query Service](./clients/overview.md) voor een lijst met beschikbare instructies.
++++Antwoord
+Om het even welke derde SQL redacteur die PSQL of [!DNL Postgres] cliënt volgzaam is kan met de Redacteur van de Dienst van de Vraag worden verbonden. Zie de documentatie voor [ verbindend cliënten met de Dienst van de Vraag ](./clients/overview.md) voor een lijst van beschikbare instructies.
 +++
 
 ### Kan ik het hulpmiddel van de Power BI met de Dienst van de Vraag verbinden?
 
-++ antwoord ja, kunt u Power BI met de Dienst van de Vraag verbinden. Zie de documentatie voor [instructies voor het aansluiten van de Power BI desktop-app op Query Service](./clients/power-bi.md).
++++Antwoord
+Ja, u kunt Power BI met de Dienst van de Vraag verbinden. Zie de documentatie voor [ instructies bij het aansluiten van de Desktop app van Power BI aan de Dienst van de Vraag ](./clients/power-bi.md).
 +++
 
 ### Waarom duurt het lang om de dashboards te laden wanneer verbonden met de Dienst van de Vraag?
 
-+++Antwoord Wanneer het systeem met de Dienst van de Vraag wordt verbonden, wordt het verbonden met een interactieve of partijverwerkingsmotor. Dit kan resulteren in langere laadtijden voor de verwerkte gegevens.
++++Antwoord
+Wanneer het systeem met de Dienst van de Vraag wordt verbonden, wordt het verbonden met een interactieve of partijverwerkingsmotor. Dit kan resulteren in langere laadtijden voor de verwerkte gegevens.
 
 Als u de reactietijden voor uw dashboards zou willen verbeteren, zou u een server van de Business Intelligence (BI) als caching laag tussen de Dienst van de Vraag en de hulpmiddelen van BI moeten uitvoeren. Over het algemeen, hebben de meeste hulpmiddelen van BI een extra aanbieding voor een server.
 
@@ -636,7 +696,8 @@ Het doel om de laag van de geheim voorgeheugenserver toe te voegen is de gegeven
 
 ### Is het mogelijk om tot de Dienst van de Vraag toegang te hebben gebruikend het pgAdmin verbindingshulpmiddel?
 
-+++Antwoord nr., wordt de connectiviteit pgAdmin niet gesteund. A [lijst van beschikbare derde cliënten en instructies op hoe te om hen met de Dienst van de Vraag te verbinden](./clients/overview.md) te vinden in de documentatie.
++++Antwoord
+Nee, pgAdmin-connectiviteit wordt niet ondersteund. A [ lijst van beschikbare derdecliënten en instructies op hoe te om hen met de Dienst van de Vraag te verbinden ](./clients/overview.md) kan in de documentatie worden gevonden.
 +++
 
 ## PostSQL API-fouten {#postgresql-api-errors}
@@ -647,7 +708,7 @@ De volgende tabel bevat PSQL-foutcodes en de mogelijke oorzaken ervan.
 |------------|---------------------------|-------------|----------------|
 | **08P01** | N.v.t. | Niet-ondersteund berichttype | Niet-ondersteund berichttype |
 | **28P01** | Opstarten - verificatie | Ongeldig wachtwoord | Ongeldig verificatietoken |
-| **28000** | Opstarten - verificatie | Ongeldig autorisatietype | Ongeldig autorisatietype. Moet `AuthenticationCleartextPassword`. |
+| **28000** | Opstarten - verificatie | Ongeldig autorisatietype | Ongeldig autorisatietype. Moet `AuthenticationCleartextPassword` zijn. |
 | **42P12** | Opstarten - verificatie | Geen tabellen gevonden | Geen tabellen gevonden voor gebruik |
 | **42601** | Query | Syntaxisfout | Ongeldige opdracht- of syntaxisfout |
 | **42P01** | Query | Tabel niet gevonden | Tabel die is opgegeven in de query, is niet gevonden |
@@ -656,14 +717,15 @@ De volgende tabel bevat PSQL-foutcodes en de mogelijke oorzaken ervan.
 | **53400** | Query | Time-out instructie | De ingediende liveverklaring nam meer dan maximaal 10 minuten in beslag |
 | **58000** | Query | Systeemfout | Interne systeemfout |
 | **0A000** | Query/opdracht | Niet ondersteund | De functie/functionaliteit in de query/opdracht wordt niet ondersteund |
-| **42501** | DROP TABLE-query | Droptable not created by Query Service | De lijst die wordt gelaten vallen werd niet gecreeerd door de Dienst van de Vraag gebruikend `CREATE TABLE` statement |
+| **42501** | DROP TABLE-query | Droptable not created by Query Service | De lijst die wordt gelaten vallen werd niet gecreeerd door de Dienst van de Vraag gebruikend de `CREATE TABLE` verklaring |
 | **42501** | DROP TABLE-query | Tabel niet gemaakt door de geverifieerde gebruiker | De tabel die wordt verwijderd, is niet gemaakt door de momenteel aangemelde gebruiker |
 | **42P01** | DROP TABLE-query | Tabel niet gevonden | De tabel die in de query is opgegeven, is niet gevonden |
 | **42P12** | DROP TABLE-query | Geen tabel gevonden voor `dbName`: controleer de `dbName` | Geen tabellen gevonden in de huidige database |
 
 ### Waarom ontving ik een 58000 foutcode toen het gebruiken van de history_meta () methode op mijn lijst?
 
-++ beantwoord `history_meta()` De methode wordt gebruikt om tot een momentopname van een dataset toegang te hebben. Eerder, als u een vraag op een lege dataset in Azure Data Lake Storage (ADLS) moest in werking stellen, zou u een 58000 foutencode ontvangen die zegt dat de gegevensreeks niet bestaat. Hieronder wordt een voorbeeld van de oude systeemfout weergegeven.
++++Antwoord
+De methode `history_meta()` wordt gebruikt om tot een momentopname van een dataset toegang te hebben. Eerder, als u een vraag op een lege dataset in Azure Data Lake Storage (ADLS) moest in werking stellen, zou u een 58000 foutencode ontvangen die zegt dat de gegevensreeks niet bestaat. Hieronder wordt een voorbeeld van de oude systeemfout weergegeven.
 
 ```shell
 ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]

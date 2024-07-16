@@ -5,7 +5,7 @@ exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '214'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 1%
 
 Alle bestemmingen die door Destination SDK worden gecreeerd steunen historische profielkwalificaties door gebrek. Dit betekent dat wanneer de gebruikers eerst opstelling een activeringsgegevensstroom aan uw bestemmingen, de eerste uitvoer alle leden van het publiek bevat die ooit voor dat segment hebben gekwalificeerd.
 
-Dit gedrag wordt gedefinieerd door de `"backfillHistoricalProfileData":true` parameter in de bestemmingsconfiguratie.
+Dit gedrag wordt gedefinieerd door de parameter `"backfillHistoricalProfileData":true` in de doelconfiguratie.
 
 >[!IMPORTANT]
 >
->Historische profielkwalificaties worden ingeschakeld voor alle doelen die zijn gemaakt met Destination SDK en de `backfillHistoricalProfileData` parameter kan niet door de gebruiker worden geconfigureerd.
+>Historische profielkwalificaties worden ingeschakeld voor alle doelen die met Destination SDK worden gemaakt en de parameter `backfillHistoricalProfileData` kan niet door de gebruiker worden geconfigureerd.
 
 ## Ondersteunde integratietypen {#supported-integration-types}
 

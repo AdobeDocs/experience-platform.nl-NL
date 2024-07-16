@@ -1,84 +1,84 @@
 ---
 keywords: gebeurtenis door:sturen uitbreiding;mixpanel;mixpanel gebeurtenis door:sturen uitbreiding
 title: Mixpanel Track Events API Event Forwarding Extension
-description: Deze Adobe Experience Platform-gebeurtenis die een extensie doorstuurt, verzendt Edge Network-gebeurtenissen naar het deelvenster Mixer.
+description: Deze Adobe Experience Platform-gebeurtenis die een extensie doorstuurt, verzendt Edge Network-gebeurtenissen naar Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '922'
-ht-degree: 1%
+source-wordcount: '868'
+ht-degree: 0%
 
 ---
 
-# [!DNL Mixpanel Track Events] API-extensie voor doorsturen van gebeurtenissen
+# [!DNL Mixpanel Track Events] API-gebeurtenis die extensie doorstuurt
 
-[[!DNL Mixpanel]](https://www.mixpanel.com) is een hulpprogramma voor productanalyse waarmee u gegevens kunt vastleggen over de manier waarop gebruikers met een digitaal product werken. U kunt productgegevens analyseren met eenvoudige, interactieve rapporten die u de gegevens laten vragen en visualiseren met slechts een paar klikken. [!DNL Mixpanel] ontworpen om teams efficiënter te maken door iedereen toe te staan om gebruikersgegevens in echt te analyseren - tijd om tendensen te identificeren, gebruikersgedrag te begrijpen, en besluiten over uw product te nemen.
+[[!DNL Mixpanel] ](https://www.mixpanel.com) is een hulpmiddel van de productanalyse dat u toestaat om gegevens te vangen over hoe de gebruikers met een digitaal product in wisselwerking staan. U kunt productgegevens analyseren met eenvoudige, interactieve rapporten die u de gegevens laten vragen en visualiseren met slechts een paar klikken. [!DNL Mixpanel] is ontworpen om teams efficiënter te maken door iedereen in staat te stellen gebruikersgegevens in real time te analyseren om tendensen te identificeren, gebruikersgedrag te begrijpen en besluiten over uw product te nemen.
 
-[!DNL Mixpanel] Gebruikt een op gebeurtenis-gebaseerd, gebruiker-centric model dat elke interactie met één enkele gebruiker verbindt. De [!DNL Mixpanel] het gegevensmodel wordt voortgebouwd op de concepten gebruikers, gebeurtenissen, en eigenschappen.
+[!DNL Mixpanel] maakt gebruik van een op gebeurtenissen gebaseerd, gebruikersgericht model dat elke interactie met één gebruiker verbindt. Het gegevensmodel van [!DNL Mixpanel] is gebaseerd op de concepten gebruikers, gebeurtenissen en eigenschappen.
 
 >[!NOTE]
 >
->Zie de [!DNL Mixpanel] documentatie over [identiteitsbeheer](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management) om te begrijpen hoe [!DNL Mixpanel] Voegt gebeurtenissen samen om identiteitsclusters te maken. U wordt ook aangeraden het document te controleren op [afzonderlijke id&#39;s](https://help.mixpanel.com/hc/en-us/articles/115004509426-Distinct-ID-Creation-JavaScript-iOS-Android-) om te begrijpen hoe ze worden gebruikt om gebruikers in gebeurtenisgegevens te identificeren.
+>Verwijs naar de [!DNL Mixpanel] documentatie over [ identiteitsbeheer ](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management) om te begrijpen hoe [!DNL Mixpanel] gebeurtenissen samenvoegt om identiteitsclusters tot stand te brengen. Het wordt ook geadviseerd dat u het document op [ verschillende IDs ](https://help.mixpanel.com/hc/en-us/articles/115004509426-Distinct-ID-Creation-JavaScript-iOS-Android-) herziet om te begrijpen hoe zij worden gebruikt om gebruikers in gebeurtenisgegevens te identificeren.
 
 ## Gebruiksscenario’s
 
-Deze extensie moet worden gebruikt als u gegevens van het Edge-netwerk wilt gebruiken in [!DNL Mixpanel] om te profiteren van de mogelijkheden voor productanalyse.
+Deze extensie moet worden gebruikt als u gegevens van de Edge Network in [!DNL Mixpanel] wilt gebruiken om te profiteren van de mogelijkheden voor productanalyse.
 
-Neem bijvoorbeeld een detailhandelsorganisatie met meerdere kanalen (website en mobiel). De organisatie vangt transactie of gespreksinvoer als gebeurtenisgegevens van hun platforms en laadt het in [!DNL Mixpanel] het gebruiken van de gebeurtenis die uitbreiding door:sturen.
+Neem bijvoorbeeld een detailhandelsorganisatie met meerdere kanalen (website en mobiel). De organisatie vangt transactie of gespreksinvoer als gebeurtenisgegevens van hun platforms en laadt het in [!DNL Mixpanel] gebruikend de gebeurtenis door:sturen uitbreiding.
 
-De analyseteams kunnen vervolgens gebruikmaken van [!DNL Mixpanel's] mogelijkheden om de datasets te verwerken en bedrijfsinzichten af te leiden, die kunnen worden gebruikt om grafieken, dashboards, of andere visualisaties te produceren om bedrijfsbelanghebbenden te informeren.
+De analyseteams kunnen vervolgens gebruikmaken van [!DNL Mixpanel's] -mogelijkheden om de gegevenssets te verwerken en bedrijfsinzichten af te leiden, die kunnen worden gebruikt om grafieken, dashboards of andere visualisaties te genereren om zakelijke belanghebbenden te informeren.
 
-Voor meer informatie over gebruiksgevallen die specifiek zijn voor [!DNL Mixpanel]Raadpleeg de volgende documentatie:
+Raadpleeg de volgende documentatie voor meer informatie over gebruiksgevallen die specifiek zijn voor [!DNL Mixpanel] :
 
-* [Nieuw bij [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
+* [ Nieuw aan  [!DNL Mixpanel] ](https://docs.mixpanel.com/docs)
 * [Wat is [!DNL Mixpanel]?](https://developer.mixpanel.com/docs)
-* [12 moet-try [!DNL Mixpanel] functies](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
+* [ 12 moet-probeer  [!DNL Mixpanel]  eigenschappen ](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
 ## [!DNL Mixpanel] voorwaarden {#prerequisites-mixpanel}
 
-U moet een geldige [!DNL Mixpanel] om deze extensie te gebruiken. Ga naar de [[!DNL Mixpanel] registratiepagina](https://mixpanel.com/register/) als u nog geen account hebt, kunt u zich registreren en een account maken.
+U moet een geldige [!DNL Mixpanel] -account hebben om deze extensie te kunnen gebruiken. Ga naar de [[!DNL Mixpanel]  registratiepagina ](https://mixpanel.com/register/) om een rekening te registreren en tot stand te brengen als u niet reeds hebt.
 
-Zorg ervoor dat de [[!DNL Identity Merge]](https://help.mixpanel.com/hc/en-us/articles/9648680824852-ID-Merge-Implementation-Best-Practices) het plaatsen wordt toegelaten voor uw project. Navigeren naar **[!DNL Settings]** > **[!DNL Project Setting]** > **[!DNL Identity Merge]** en schakelt u de instelling in.
+Zorg ervoor dat het [[!DNL Identity Merge] ](https://help.mixpanel.com/hc/en-us/articles/9648680824852-ID-Merge-Implementation-Best-Practices) plaatsen voor uw project wordt toegelaten. Navigeer naar **[!DNL Settings]** > **[!DNL Project Setting]** > **[!DNL Identity Merge]** en schakel de instelling in of uit.
 
 ### Identiteitsclusters begrijpen in [!DNL Mixpanel]
 
-In [!DNL Mixpanel], bevat een identiteitscluster een verzameling van `distinct_id` waarden die verbinding maken met een individuele gebruiker. [!DNL Mixpanel] handelt de cluster van identiteiten voor elke gebruiker af, die één enkel canonicaal oplost `distinct_id` van elke cluster die bij de rapportage moet worden gebruikt. U kunt ook uw eigen id (ook wel een lokale id genoemd) opnemen `distinct_id`) voor anonieme gebeurtenissen die vóór een gebruikersidentificatie plaatsvinden.
+In [!DNL Mixpanel] bevat een identiteitscluster een verzameling `distinct_id` -waarden die verbinding maken met een individuele gebruiker. [!DNL Mixpanel] handelt de cluster met identiteiten voor elke gebruiker af, waarbij één canonicale `distinct_id` oplossing wordt gevonden voor elke cluster die bij de rapportage moet worden gebruikt. U kunt ook uw eigen id (ook wel een lokale `distinct_id` genoemd) opnemen voor anonieme gebeurtenissen die plaatsvinden vóór een gebruikersidentificatie-gebeurtenis.
 
-[!DNL Mixpanel] Hiermee worden identiteitsclusters op twee manieren opgelost:
+[!DNL Mixpanel] verhelpt identiteitsclusters op twee manieren:
 
-* **Identificeren** : [!DNL Mixpanel] verbindt uw gekozen herkenningsteken met anoniem `distinct_id`. Als uw website de [!DNL Mixpanel] SDK ingeschakeld, Platform gebruikt de `distinct_id` toegewezen aan de gebruiker die momenteel is aangemeld.
-* **Alias**: [!DNL Mixpanel] combineert twee niet-anonieme `distinct id`s samen als aan extra fusiecriteria wordt voldaan.
+* **identificeer**: [!DNL Mixpanel] verbindt uw gekozen herkenningsteken met anoniem `distinct_id`. Als de [!DNL Mixpanel] SDK van uw website is ingeschakeld, gebruikt Platform de `distinct_id` die is toegewezen aan de gebruiker die momenteel is aangemeld.
+* **Alias**: [!DNL Mixpanel] combineert twee niet-anonieme `distinct id` s samen als de extra fusiecriteria worden voldaan.
 
 >[!NOTE]
 >
->Zie de [!DNL Mixpanel] document op [identiteitsbeheer](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification) voor meer informatie over deze methoden .
+>Verwijs naar het [!DNL Mixpanel] document op [ identiteitsbeheer ](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification) voor meer details op deze methodes.
 >
->Bevestig dat u de [[!DNL Mixpanel] samenvoegfunctie voor identiteit](#prerequisites-mixpanel) ervoor te zorgen dat identiteitsclusters op passende wijze worden opgelost.
+>Bevestig dat u de [[!DNL Mixpanel]  eigenschap van de identiteitssamenvoeging ](#prerequisites-mixpanel) hebt toegelaten om ervoor te zorgen dat de identiteitsclusters geschikt worden opgelost.
 
 ### Verzamel vereiste configuratiedetails {#configuration-details}
 
-Als u Experience Platform wilt verbinden met [!DNL Mixpanel] u moet de volgende input hebben:
+Als u Experience Platform wilt verbinden met [!DNL Mixpanel] , moet u over de volgende invoeren beschikken:
 
 | Type toets | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| Projecttoken | Het projecttoken dat aan uw [!DNL Mixpanel] account. Zie de [!DNL Mixpanel] documentatie over [zoeken, projecttoken](https://help.mixpanel.com/hc/en-us/articles/115004502806-Find-Project-Token-) ter begeleiding. | `25470xxxxxxxxxxxxxxxxxxx1289` |
+| Projecttoken | Het projecttoken dat aan uw [!DNL Mixpanel] -account is gekoppeld. Verwijs naar de [!DNL Mixpanel] documentatie op [ het vinden van uw projectteken ](https://help.mixpanel.com/hc/en-us/articles/115004502806-Find-Project-Token-) voor begeleiding. | `25470xxxxxxxxxxxxxxxxxxx1289` |
 
-## Installeer en configureer de [!DNL Mixpanel] extension {#install}
+## De extensie [!DNL Mixpanel] installeren en configureren {#install}
 
-Als u de extensie wilt installeren, [een eigenschap voor het doorsturen van gebeurtenissen maken](../../../ui/event-forwarding/overview.md#properties) of kies een bestaande eigenschap die u wilt bewerken.
+Om de uitbreiding te installeren, [ creeer een gebeurtenis door:sturen bezit ](../../../ui/event-forwarding/overview.md#properties) of kies een bestaand bezit in plaats daarvan uit te geven.
 
-Selecteren **[!UICONTROL Extensions]** in de linkernavigatie. In de **[!UICONTROL Catalog]** tab, selecteert u **[!UICONTROL Install]** op de kaart voor de [!DNL Mixpanel] extensie.
+Selecteer **[!UICONTROL Extensions]** in de linkernavigatie. Selecteer op het tabblad **[!UICONTROL Catalog]** **[!UICONTROL Install]** op de kaart voor de extensie [!DNL Mixpanel] .
 
-![De installatie van de [!DNL Mixpanel] extensie.](../../../images/extensions/server/mixpanel/install-extension.png)
+![ Installerend de [!DNL Mixpanel] uitbreiding.](../../../images/extensions/server/mixpanel/install-extension.png)
 
-## Een [!DNL Send Event] regel
+## Een [!DNL Send Event] -regel maken
 
-Begin creërend een nieuwe regel in uw gebeurtenis door:sturen bezit. Onder **[!UICONTROL Actions]** voegt u een nieuwe handeling toe en stelt u de extensie in op **[!UICONTROL Mixpanel]**. Stel vervolgens het handelingstype in op **[!UICONTROL Track Event]** om Edge Network-gebeurtenissen naar [!DNL Mixpanel].
+Begin creërend een nieuwe regel in uw gebeurtenis door:sturen bezit. Voeg onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL Mixpanel]** . Stel vervolgens het actietype in op **[!UICONTROL Track Event]** om Edge Network-gebeurtenissen naar [!DNL Mixpanel] te verzenden.
 
 | Invoer | Beschrijving | Vereist |
 | --- | --- | --- |
-| [!UICONTROL Project Token] | Dit gebied zou aan het projectteken verbonden aan uw moeten in kaart worden gebracht [!DNL Mixpanel] account. | Ja |
+| [!UICONTROL Project Token] | Dit veld moet worden toegewezen aan het projecttoken dat is gekoppeld aan uw [!DNL Mixpanel] -account. | Ja |
 | [!UICONTROL Event Type] | De gebeurtenisnaam. | Ja |
 | [!UICONTROL Event Time] | De gebeurtenistijd. | |
 | [!UICONTROL Mixpanel Distinct ID] | De unieke id van de gebruiker die de gebeurtenis heeft uitgevoerd. | |
@@ -87,27 +87,27 @@ Begin creërend een nieuwe regel in uw gebeurtenis door:sturen bezit. Onder **[!
 
 >[!NOTE]
 >
->Voor meer informatie over de standaardvelden voor een [!DNL Mixpanel] gebeurtenis, raadpleegt u de [officiële documentatie](https://developer.mixpanel.com/reference/import-events#event).
+>Voor meer informatie over de standaardgebieden voor a [!DNL Mixpanel] gebeurtenis, verwijs naar de [ officiële documentatie ](https://developer.mixpanel.com/reference/import-events#event).
 
-![Voeg een gebeurtenis toe die de configuratie van de regelactie door:sturen.](../../../images/extensions/server/mixpanel/track-event-action.png)
+![ voeg een gebeurtenis toe door:sturen de configuratie van de regelactie.](../../../images/extensions/server/mixpanel/track-event-action.png)
 
-Wanneer de [!UICONTROL Track Event] de actie wordt toegevoegd aan de regel, kunt u de voorwaarden van de regel vormen zodat het slechts voor bepaalde gebeurtenissen brandt, of u kunt de voorwaardesectie leeg verlaten om de regelbrand voor alle gebeurtenissen te maken.
+Zodra de [!UICONTROL Track Event] actie aan de regel wordt toegevoegd, kunt u de voorwaarden van de regel vormen zodat het slechts voor bepaalde gebeurtenissen brandt, of u kunt de voorwaardesectie leeg verlaten om de regelbrand voor alle gebeurtenissen te maken.
 
 >[!IMPORTANT]
 >
->Als uw website de [!DNL Mixpanel] SDK, kunt u aan de volgende stap van verdergaan [valideren, uw gegevens binnen [!DNL Mixpanel]](#validate). Als u het [!DNL Mixpanel] SDK, u moet [een afzonderlijke regel voor het bijhouden van identiteiten maken](#create-an-identity-tracking-rule) ervoor te zorgen dat passende gebeurtenissen en `distinct_id` waarden worden verzonden naar [!DNL Mixpanel] wanneer een gebruikersidentificatie-gebeurtenis plaatsvindt.
+>Als uw website [!DNL Mixpanel] SDK gebruikt, kunt u aan de volgende stap van [ blijven valideren uw gegevens binnen  [!DNL Mixpanel]](#validate). Als u niet [!DNL Mixpanel] SDK gebruikt, moet u [ een afzonderlijke het volgen van identiteit ](#create-an-identity-tracking-rule) tot stand brengen om ervoor te zorgen dat de aangewezen gebeurtenissen en `distinct_id` waarden naar [!DNL Mixpanel] worden verzonden wanneer een gebeurtenis van de gebruikersidentificatie voorkomt.
 
 ## Gegevens valideren binnen [!DNL Mixpanel] {#validate}
 
-Als uw implementatie succesvol is en gebeurtenissen worden verzameld, ziet u gebeurtenissen in het dialoogvenster [[!DNL Mixpanel] console](https://help.mixpanel.com/hc/en-us/articles/4402837164948).
+Als uw implementatie succesvol is en de gebeurtenissen worden verzameld, zult u gebeurtenissen binnen de [[!DNL Mixpanel]  console ](https://help.mixpanel.com/hc/en-us/articles/4402837164948) zien.
 
-Controleren of [!DNL Mixpanel] heeft de gebeurtenissen voor na aanmelding samengevoegd met e-mailwaarden en de gebeurtenissen die bij het gebruik zijn gemaakt **[!UICONTROL Send Event]**. Indien correct geïmplementeerd, [!DNL Mixpanel] zal hen met één enkele associëren [gebruikersprofiel](https://help.mixpanel.com/hc/en-us/articles/115004501966).
+Controleer of [!DNL Mixpanel] de gebeurtenissen voor na aanmelding heeft samengevoegd die zijn gevuld met e-mailwaarden en de gebeurtenissen die zijn gemaakt bij het gebruik van **[!UICONTROL Send Event]** . Indien correct uitgevoerd, [!DNL Mixpanel] zal hen met één enkel [ gebruikersprofiel ](https://help.mixpanel.com/hc/en-us/articles/115004501966) associëren.
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe conversiegebeurtenissen naar [!DNL Mixpanel] het gebruiken van gebeurtenis door:sturen. Deze gebeurtenis die uitbreiding door:sturen hefboomwerkingen [!DNL Mixpanel] SDK en JavaScript API. Raadpleeg de officiële documentatie voor meer informatie over deze onderliggende technologieën:
+In deze handleiding wordt beschreven hoe conversiegebeurtenissen naar [!DNL Mixpanel] kunnen worden verzonden via het doorsturen van gebeurtenissen. Deze extensie voor het doorsturen van gebeurtenissen maakt gebruik van de [!DNL Mixpanel] SDK en de JavaScript API. Raadpleeg de officiële documentatie voor meer informatie over deze onderliggende technologieën:
 
-* [[!DNL Mixpanel] SDK](https://developer.mixpanel.com/docs/nodejs)
-* [[!DNL Mixpanel] JavaScript-API](https://developer.mixpanel.com/docs/javascript-full-api-reference#mixpanelidentify)
+* [[!DNL Mixpanel]  SDK ](https://developer.mixpanel.com/docs/nodejs)
+* [[!DNL Mixpanel]  JavaScript API ](https://developer.mixpanel.com/docs/javascript-full-api-reference#mixpanelidentify)
 
-Voor meer informatie over gebeurtenis die mogelijkheden in Experience Platform door:sturen, verwijs naar [overzicht van gebeurtenissen doorsturen](../../../ui/event-forwarding/overview.md).
+Voor meer informatie over gebeurtenis die mogelijkheden in Experience Platform door:sturen, verwijs naar de [ gebeurtenis die overzicht ](../../../ui/event-forwarding/overview.md) door:sturen.

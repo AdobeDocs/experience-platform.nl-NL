@@ -11,13 +11,13 @@ ht-degree: 0%
 
 ---
 
-# [!DNL HTTP API] connector
+# [!DNL HTTP API] -connector
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] diensten. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met [!DNL Platform] -services. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
-U kunt de [!DNL HTTP API] bronaansluiting om uw gegevens te streamen naar het Platform. De [!DNL HTTP API] bron wordt ondersteund door [!DNL Data Prep] functies, die u toestaan om het even welke niet XDM-Volgzame gegevens aan een XDM-Volgzame dataset in kaart te brengen.
+U kunt de [!DNL HTTP API] bronconnector gebruiken om uw gegevens te streamen naar Platform. De [!DNL HTTP API] -bron wordt ondersteund door [!DNL Data Prep] -functies, zodat u eventuele niet XDM-compatibele gegevens kunt toewijzen aan een XDM-compatibele gegevensset.
 
-In de onderstaande documentatie vindt u informatie over het maken van een HTTP API-streamingconnector voor verbinding met [!DNL Platform] API&#39;s of de gebruikersinterface gebruiken:
+In de onderstaande documentatie vindt u informatie over het maken van een HTTP API-streamingconnector voor verbinding met [!DNL Platform] via API&#39;s of de gebruikersinterface:
 
 ## Een HTTP API-streamingconnector met API&#39;s maken
 

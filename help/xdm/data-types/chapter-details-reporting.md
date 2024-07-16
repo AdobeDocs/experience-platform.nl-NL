@@ -1,7 +1,8 @@
 ---
 title: Hoofdstuk - Gegevens die Gegevenstype rapporteren
 description: Leer over het het gegevenstype van de Gegevens van de Rapportering van de Ervaring van het Hoofdstuk Model (XDM).
-source-git-commit: fe239bee3c853d43c04200092f59537dfeb00c87
+exl-id: 73ebfbe3-66c3-4ef9-9944-d9cb5772127b
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
@@ -10,9 +11,9 @@ ht-degree: 0%
 
 # [!UICONTROL Chapter Details] Gegevenstype rapporteren
 
-[!UICONTROL Chapter Details] De rapportering is een standaard het gegevenstype van de Gegevens van de Ervaring Model (XDM) dat diverse attributen met betrekking tot hoofdstukken of segmenten binnen media inhoud beschrijft. Gebruik de [!UICONTROL Chapter Details] Gegevenstype rapporteren om details vast te leggen, zoals hoofdstuknaam, duur, positie, id, afspeelstatus (gestart/voltooid) en de tijd die aan elk hoofdstuk is besteed. Media-rapportvelden worden door Adobe-services gebruikt voor het analyseren van de velden Media Collection die door gebruikers worden verzonden. Deze gegevens worden, samen met andere specifieke maatstaven voor gebruikers, berekend en gerapporteerd.
+[!UICONTROL Chapter Details] Rapportering is een standaard XDM-gegevenstype (Experience Data Model) waarmee verschillende kenmerken worden beschreven die betrekking hebben op hoofdstukken of segmenten binnen media-inhoud. Gebruik het gegevenstype [!UICONTROL Chapter Details] Rapporteert om details vast te leggen, zoals de hoofdstuknaam, de duur, de positie, de id, de afspeelstatus (gestart/voltooid) en de tijd die aan elk hoofdstuk is besteed. Media-rapportvelden worden door Adobe-services gebruikt voor het analyseren van de velden Media Collection die door gebruikers worden verzonden. Deze gegevens worden, samen met andere specifieke maatstaven voor gebruikers, berekend en gerapporteerd.
 
-![Een diagram van het gegevenstype Rapportage van hoofdstukdetails.](../images/data-types/chapter-details-reporting.png)
+![ A diagram van de Details van het Hoofdstuk die gegevenstype melden.](../images/data-types/chapter-details-reporting.png)
 
 >[!NOTE]
 >

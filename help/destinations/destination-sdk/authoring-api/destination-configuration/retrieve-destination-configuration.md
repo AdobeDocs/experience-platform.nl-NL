@@ -4,33 +4,33 @@ title: Een doelconfiguratie ophalen
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
 
 # Een doelconfiguratie ophalen
 
-Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om informatie over een bestaande bestemmingsconfiguratie terug te winnen, gebruikend `/authoring/destination` API-eindpunt.
+Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om informatie over een bestaande bestemmingsconfiguratie terug te winnen, gebruikend het `/authoring/destination` API eindpunt.
 
 >[!IMPORTANT]
 >
->Alle parameternamen en -waarden die door Destination SDK worden ondersteund, zijn **hoofdlettergevoelig**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
+>Alle parameternamen en waarden die door Destination SDK worden gesteund zijn **gevoelig geval**. Om fouten in hoofdlettergevoeligheid te voorkomen, gebruikt u de namen en waarden van parameters exact zoals in de documentatie wordt getoond.
 
 ## Aan de slag met API-bewerkingen voor doelconfiguratie {#get-started}
 
-Controleer voordat je doorgaat de [gids Aan de slag](../../getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings creatie en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een doelconfiguratie ophalen {#retrieve}
 
-U kunt een [bestaand](create-destination-configuration.md) doelconfiguratie door een `GET` verzoek aan de `/authoring/destination` eindpunt.
+U kunt een [ bestaande ](create-destination-configuration.md) bestemmingsconfiguratie terugwinnen door een `GET` verzoek aan het `/authoring/destination` eindpunt te doen.
 
 >[!TIP]
 >
->**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/destinations`
+>**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
 
-**API-indeling**
+**API formaat**
 
 Gebruik de volgende API-indeling om alle doelconfiguraties voor uw account op te halen.
 
@@ -38,19 +38,19 @@ Gebruik de volgende API-indeling om alle doelconfiguraties voor uw account op te
 GET /authoring/destinations
 ```
 
-Gebruik de volgende API-indeling om een specifieke doelconfiguratie op te halen, gedefinieerd door de `{INSTANCE_ID}` parameter.
+Gebruik de volgende API-indeling om een specifieke doelconfiguratie op te halen, gedefinieerd door de parameter `{INSTANCE_ID}` .
 
 ```http
 GET /authoring/destinations/{INSTANCE_ID}
 ```
 
-De volgende twee verzoeken winnen alle bestemmingsconfiguraties voor uw IMS Organisatie, of een specifieke bestemmingsconfiguratie terug, afhankelijk van of u overgaat `INSTANCE_ID` in de aanvraag.
+De volgende twee verzoeken winnen alle bestemmingsconfiguraties voor uw IMS Organisatie, of een specifieke bestemmingsconfiguratie terug, afhankelijk van of u de `INSTANCE_ID` parameter in het verzoek overgaat.
 
 Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB Alle bestemmingsconfiguraties ophalen]
+>[!TAB  wint alle bestemmingsconfiguraties ] terug
 
 +++verzoek
 
@@ -66,7 +66,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Response
 
-Een succesvolle reactie keert status 200 van HTTP met een lijst van bestemmingsconfiguraties terug die u toegang tot hebt, die op wordt gebaseerd [!DNL IMS Org ID] en naam van sandbox die u hebt gebruikt. Eén `instanceId` komt overeen met één doelconfiguratie.
+Een succesvol antwoord retourneert HTTP-status 200 met een lijst van doelconfiguraties waartoe u toegang hebt, op basis van de naam van de [!DNL IMS Org ID] en de sandbox die u hebt gebruikt. Eén `instanceId` komt overeen met één doelconfiguratie.
 
 ```json
 {
@@ -174,7 +174,7 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van bestemmingsc
 
 +++
 
->[!TAB Hiermee wordt een specifieke doelconfiguratie opgehaald]
+>[!TAB  wint een specifieke bestemmingsconfiguratie ] terug
 
 +++verzoek
 
@@ -194,7 +194,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Response
 
-Een succesvolle reactie keert HTTP status 200 met de details van de bestemmingsconfiguratie terug die aan `{INSTANCE_ID}` verstrekt in de vraag.
+Een succesvolle reactie keert status 200 van HTTP met de details van de bestemmingsconfiguratie terug die aan `{INSTANCE_ID}` beantwoordt die in de vraag wordt verstrekt.
 
 ```json
 {
@@ -306,11 +306,11 @@ Een succesvolle reactie keert HTTP status 200 met de details van de bestemmingsc
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 
-Na het lezen van dit document, weet u nu hoe te om een bestemmingsconfiguratie door de Destination SDK terug te winnen `/authoring/destinations` API-eindpunt.
+Nadat u dit document hebt gelezen, weet u nu hoe u een doelconfiguratie kunt ophalen via het API-eindpunt Destination SDK `/authoring/destinations` .
 
 Raadpleeg de volgende artikelen voor meer informatie over wat u met dit eindpunt kunt doen:
 

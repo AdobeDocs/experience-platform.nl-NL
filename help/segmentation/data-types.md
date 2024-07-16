@@ -5,8 +5,8 @@ description: Alle gegevenstypes van het Model van de Gegevens van de Ervaring (X
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 1%
+source-wordcount: '478'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +28,7 @@ Tekenreeksgegevens worden opgenomen in segmentdefinities met behulp van logische
 
 ## Datumgegevens
 
-Met datumgegevens kunt u op tijd gebaseerde context toewijzen aan uw segmentdefinities door specifieke begin- en einddatums te gebruiken of door datumrelevante instructies te gebruiken, zoals in de onderstaande tabel wordt getoond. Eén implementatie zou een publiek kunnen maken van klanten die op elk moment met uw merk hebben gewerkt *dit jaar* en is ook actief *binnen* de laatste dagen.
+Met datumgegevens kunt u op tijd gebaseerde context toewijzen aan uw segmentdefinities door specifieke begin- en einddatums te gebruiken of door datumrelevante instructies te gebruiken, zoals in de onderstaande tabel wordt getoond. Één implementatie zou een publiek van klanten kunnen creëren die met uw merk op elk ogenblik *dit jaar* hebben gecommuniceerd en ook actief *binnen* de laatste paar dagen geweest.
 
 | Voorbeeldveld | Datum-relevante verklaringen | Tijdlijn |
 | ------------- | ------------------------ | --------- |
@@ -37,26 +37,26 @@ Met datumgegevens kunt u op tijd gebaseerde context toewijzen aan uw segmentdefi
 
 ## Experience Events
 
-Als Adobe Experience Platform-schema: [!DNL XDM ExperienceEvents] expliciete en impliciete klanteninteractie registreren met [!DNL Platform]- geïntegreerde toepassingen, met inbegrip van een momentopname van het systeem op het tijdstip dat de interactie plaatsvond. [!DNL ExperienceEvents] Dit zijn feiten. Als dusdanig, zijn zij een gegevensbron beschikbaar aan u tijdens segmentdefinitie.
+Als Adobe Experience Platform-schema registreert [!DNL XDM ExperienceEvents] expliciete en impliciete klanteninteractie met [!DNL Platform] geïntegreerde toepassingen, met inbegrip van een momentopname van het systeem op het tijdstip dat de interactie plaatsvond. [!DNL ExperienceEvents] zijn feitenrecords. Als dusdanig, zijn zij een gegevensbron beschikbaar aan u tijdens segmentdefinitie.
 
 Zoals in de onderstaande tabel wordt getoond, worden gebeurtenisgegevens weergegeven met behulp van trefwoorden die het gedrag van gebeurtenissen verfijnen en gebeurteniskenmerken opgeven.
 
-| Trefwoord | Gebruik |
+| Trefwoord | Gebruiken |
 | ------- | --- |
 | Opnemen/uitsluiten | Beschrijft het gedrag van de gebeurtenis door het opnemen of weglaten van gegevens. |
 | Alle | Helpt het aantal kwalificerende segmentdefinities te bepalen. |
 | Knop Tijdregel toepassen | Bevat datumgegevens. |
 | Gelijk aan, niet gelijk aan, begint met, niet met, eindigt niet met, eindigt niet met, bevat, bevat, niet bevat, bestaat, niet bestaat | Bevat tekenreeksgegevens. |
 
-### Doelgroepen delen
+### Delen van publiek
 
 Het externe publiek kan ook als componenten van een nieuwe segmentdefinitie worden gebruikt, toevoegend hun attributenregels aan de nieuwe segmentdefinities.
 
-Momenteel wordt alleen Adobe Audience Manager ondersteund als een extern publiek, waarbij in de toekomst extra bronnen worden ingeschakeld. Meer informatie over het gebruik van Adobe Audience Manager-soorten publiek met Platform vindt u in de [Handleiding voor het delen van publiek in de Adobe Audience Manager-documentatie](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+Momenteel wordt alleen Adobe Audience Manager ondersteund als een extern publiek, waarbij in de toekomst extra bronnen worden ingeschakeld. Meer informatie over het gebruiken van het publiek van Adobe Audience Manager met Platform kan in de [ publiek worden gevonden delend gids binnen de documentatie van Adobe Audience Manager ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### Delen van segmentdefinitie
 
-Segmentdefinities die in Platform zijn gemaakt, kunnen binnen andere definities worden gebruikt [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). Om deze functie in te schakelen, dient u contact op te nemen met uw oplossingsarchitect of uw consultant.
+De definities van het segment die in Platform worden gecreeerd kunnen binnen andere [ de Diensten van de Kern van Adobe Experience Cloud worden gebruikt ](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). Om deze functie in te schakelen, dient u contact op te nemen met uw oplossingsarchitect of uw consultant.
 
 ## Andere gegevenstypen
 

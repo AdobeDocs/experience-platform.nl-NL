@@ -10,20 +10,20 @@ ht-degree: 0%
 
 ---
 
-# Guardrails voor [!DNL Identity Service] data
+# Afbeeldingen voor [!DNL Identity Service] -gegevens
 
-Dit document bevat informatie over het gebruik en de tarieflimieten voor [!DNL Identity Service] gegevens die u helpen het gebruik van de identiteitsgrafiek te optimaliseren. Bij het bekijken van de volgende instructies wordt aangenomen dat u de gegevens correct hebt gemodelleerd. Als u vragen hebt over het modelleren van uw gegevens, neemt u contact op met uw medewerker van de klantenservice.
+Dit document bevat informatie over het gebruik en de tarieflimieten voor [!DNL Identity Service] -gegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken. Bij het bekijken van de volgende instructies wordt aangenomen dat u de gegevens correct hebt gemodelleerd. Als u vragen hebt over het modelleren van uw gegevens, neemt u contact op met uw medewerker van de klantenservice.
 
 >[!IMPORTANT]
 >
->Controleer uw licentierechten in uw verkooporder en de bijbehorende rechten [Productbeschrijving](https://helpx.adobe.com/legal/product-descriptions.html) op de werkelijke gebruikslimieten naast deze pagina met instructies.
+>Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [ Beschrijving van het Product ](https://helpx.adobe.com/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
 
 ## Aan de slag
 
 De volgende diensten van het Experience Platform zijn betrokken bij het modelleren van de Gegevens van de Identiteit:
 
-* [Identiteiten](home.md): Bridge-id&#39;s van verschillende gegevensbronnen worden opgenomen in Platform.
-* [[!DNL Real-Time Customer Profile]](../profile/home.md): Maak geharmoniseerde consumentenprofielen met behulp van gegevens uit meerdere bronnen.
+* [ Identiteiten ](home.md): De identiteiten van Bridge van verschillende gegevensbronnen aangezien zij in Platform worden opgenomen.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Maak uniforme consumentenprofielen met behulp van gegevens uit meerdere bronnen.
 
 ## Gegevensmodellimieten
 
@@ -35,7 +35,7 @@ In de volgende tabel worden de statische limieten weergegeven die worden toegepa
 
 | Guardrail | Limiet | Notities |
 | --- | --- | --- |
-| Aantal identiteiten in een grafiek | 50 | Wanneer een grafiek met 50 verbonden identiteiten wordt bijgewerkt, zal de Dienst van de Identiteit een &quot;eerste-binnen, eerste-uit&quot;mechanisme toepassen en de oudste identiteit schrapt om ruimte voor de nieuwste identiteit voor deze grafiek te maken (**Opmerking**: Het profiel Real-Time van de Klant wordt niet beïnvloed). Verwijderen is gebaseerd op het type identiteit en het tijdstempel. De limiet wordt toegepast op sandboxniveau. Lees voor meer informatie de sectie over [begrip van de verwijderingslogica](#deletion-logic). |
+| Aantal identiteiten in een grafiek | 50 | Wanneer een grafiek met 50 verbonden identiteiten wordt bijgewerkt, zal de Dienst van de Identiteit een &quot;eerste-binnen, eerste-uit&quot;mechanisme toepassen en de oudste identiteit schrapt om ruimte voor de nieuwste identiteit voor deze grafiek te maken (**Nota**: Het Profiel van de Klant in real time wordt onaangetast). Verwijderen is gebaseerd op het type identiteit en het tijdstempel. De limiet wordt toegepast op sandboxniveau. Voor meer informatie, lees de sectie over [ het begrijpen van de schrappingslogica ](#deletion-logic). |
 | Aantal koppelingen naar een identiteit voor één batch-opname | 50 | Eén batch kan afwijkende identiteiten bevatten die tot ongewenste samenvoegingen van grafieken leiden. Om dit te voorkomen, zal de Identiteitsdienst geen identiteiten opnemen die reeds met 50 of meer identiteiten verbonden zijn. |
 | Aantal identiteiten in een XDM-record | 20 | Het minimum aantal vereiste XDM-records is twee. |
 | Aantal aangepaste naamruimten | Geen | Het aantal aangepaste naamruimten dat u kunt maken, is niet beperkt. |
@@ -56,7 +56,7 @@ In de volgende tabel worden de bestaande regels beschreven die u moet volgen om 
 
 ### Naamnaamruimte-opname
 
-Vanaf 31 maart 2023 blokkeert Identity Service de inname van Adobe Analytics ID (AID) voor nieuwe klanten. Deze identiteit wordt doorgaans opgenomen via het dialoogvenster [Adobe Analytics-bron](../sources/connectors/adobe-applications/analytics.md) en de [Adobe Audience Manager-bron](../sources//connectors/adobe-applications/audience-manager.md) en is overbodig omdat de ECID dezelfde webbrowser vertegenwoordigt. Neem contact op met het accountteam van de Adobe als u deze standaardconfiguratie wilt wijzigen.
+Vanaf 31 maart 2023 blokkeert Identity Service de inname van Adobe Analytics ID (AID) voor nieuwe klanten. Deze identiteit wordt typisch opgenomen door de [ bron van Adobe Analytics ](../sources/connectors/adobe-applications/analytics.md) en de [ bron van Adobe Audience Manager ](../sources//connectors/adobe-applications/audience-manager.md) en is overtollig omdat ECID zelfde Webbrowser vertegenwoordigt. Neem contact op met het accountteam van de Adobe als u deze standaardconfiguratie wilt wijzigen.
 
 ## Begrijpen met de verwijderingslogica wanneer een identiteitsgrafiek op capaciteit wordt bijgewerkt {#deletion-logic}
 
@@ -98,52 +98,52 @@ Als deze functie eenmaal beschikbaar is, worden grafieken die de limiet van 50 i
 Verwijderen gebeurt alleen met gegevens in de Identiteitsservice en niet in realtime klantprofiel.
 
 * Hierdoor kunnen er meer profielen met één ECID worden gemaakt, omdat de ECID geen deel meer uitmaakt van de identiteitsgrafiek.
-* Om binnen uw adresseerbare aantallen van de publieksrechten te blijven, wordt het geadviseerd om toe te laten [vervaldatum van pseudoniem profielgegevens](../profile/pseudonymous-profiles.md) om uw oude profielen te verwijderen.
+* Opdat u binnen uw adresseerbare aantallen van de publieksrechten blijft, wordt het geadviseerd om [ pseudoniem de vervaldatum van profielgegevens ](../profile/pseudonymous-profiles.md) toe te laten om uw oude profielen te schrappen.
 
 #### Real-Time profiel en WebSDK van klant: primaire identiteitsverwijdering
 
 Als u uw voor authentiek verklaarde gebeurtenissen tegen identiteitskaart van CRM wilt bewaren, dan wordt geadviseerd dat u uw primaire IDs van ECID in identiteitskaart van CRM verandert. Lees de volgende documenten voor stappen over hoe te om deze verandering uit te voeren:
 
-* [Identiteitskaart voor Experience Platform-tags configureren](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
+* [ vorm identiteitskaart voor de markeringen van het Experience Platform ](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Identiteitsgegevens in het Web SDK van het Experience Platform](../web-sdk/identity/overview.md#using-identitymap)
 
 ### Voorbeeldscenario&#39;s
 
 #### Voorbeeld één: standaard grote grafiek
 
-*Opmerkingen bij het diagram:*
+*de nota&#39;s van het Diagram:*
 
 * `t` = tijdstempel.
-* De waarde van een tijdstempel komt overeen met de frequentie van een bepaalde identiteit. Bijvoorbeeld: `t1` de eerste gekoppelde identiteit (oudste) vertegenwoordigt en `t51` zou de nieuwste gekoppelde identiteit vertegenwoordigen.
+* De waarde van een tijdstempel komt overeen met de frequentie van een bepaalde identiteit. `t1` vertegenwoordigt bijvoorbeeld de eerste gekoppelde identiteit (oudste) en `t51` zou de nieuwste gekoppelde identiteit vertegenwoordigen.
 
-In dit voorbeeld verwijdert Identiteitsservice eerst de bestaande identiteit met de oudste tijdstempel voordat de grafiek aan de linkerkant kan worden bijgewerkt. Nochtans, omdat de oudste identiteit een apparatenidentiteitskaart is, slaat de Dienst van de Identiteit die identiteit over tot het aan namespace met een type krijgt dat hoger op de schrappingspriorlijst is, die in dit geval is `ecid-3`. Zodra de oudste identiteit met een hoger type van schrappingsprioriteit wordt verwijderd, wordt de grafiek dan bijgewerkt met een nieuwe verbinding, `ecid-51`.
+In dit voorbeeld verwijdert Identiteitsservice eerst de bestaande identiteit met de oudste tijdstempel voordat de grafiek aan de linkerkant kan worden bijgewerkt. Nochtans, omdat de oudste identiteit een apparatenidentiteitskaart is, slaat de Dienst van de Identiteit die identiteit over tot het aan namespace met een type krijgt dat hoger op de schrappingspriorlijst is, die in dit geval `ecid-3` is. Nadat de oudste identiteit met een hogere prioriteit voor verwijderen is verwijderd, wordt de grafiek vervolgens bijgewerkt met een nieuwe koppeling, `ecid-51` .
 
-* In het zeldzame geval dat er twee identiteiten met het zelfde timestamp en identiteitstype zijn, zal de Dienst van de Identiteit de identiteitskaart sorteren op [XID](./api/list-native-id.md) en het schrappen van regels uitvoeren.
+* In het zeldzame geval dat er twee identiteiten met zelfde timestamp en identiteitstype zijn, zal de Dienst van de Identiteit IDs sorteren die op [ wordt gebaseerd XID ](./api/list-native-id.md) en zal schrapping leiden.
 
-![Een voorbeeld van de oudste identiteit die wordt geschrapt om de recentste identiteit aan te passen](./images/graph-limits-v3.png)
+![ een voorbeeld van de oudste identiteit die wordt geschrapt om de recentste identiteit ](./images/graph-limits-v3.png) aan te passen
 
 #### Voorbeeld twee: &quot;grafieksplitsing&quot;
 
 >[!BEGINTABS]
 
->[!TAB Binnenkomende gebeurtenis]
+>[!TAB  Binnenkomende gebeurtenis ]
 
-*Opmerkingen bij het diagram:*
+*de nota&#39;s van het Diagram:*
 
-* In het volgende diagram wordt ervan uitgegaan dat bij `timestamp=50`, 50 identiteiten bestaan in de identiteitsgrafiek.
-* `(...)` Hiermee worden de andere identiteiten aangegeven die al zijn gekoppeld in de grafiek.
+* In het volgende diagram wordt ervan uitgegaan dat bij `timestamp=50` er 50 identiteiten voorkomen in de identiteitsgrafiek.
+* `(...)` geeft de andere identiteiten aan die al zijn gekoppeld in de grafiek.
 
 In dit voorbeeld wordt ECID:32110 opgenomen en gekoppeld aan een grote grafiek bij `timestamp=51`, waardoor de limiet van 50 identiteiten wordt overschreden.
 
 ![](./images/guardrails/before-split.png)
 
->[!TAB Verwijderingsproces]
+>[!TAB  proces van de Schrapping ]
 
 Dientengevolge, schrapt de Dienst van de Identiteit de oudste identiteit die op timestamp en identiteitstype wordt gebaseerd. In dit geval wordt ECID:35577 alleen verwijderd uit het identiteitsdiagram.
 
 ![](./images/guardrails/during-split.png)
 
->[!TAB Grafiekuitvoer]
+>[!TAB  Uitvoer van de Grafiek ]
 
 Als gevolg van het verwijderen van ECID:35577 worden ook de randen die aan CRM-id:60013 en CRM-id:25212 zijn gekoppeld met de nu verwijderde ECID:35577 verwijderd. Door dit verwijderingsproces wordt de grafiek opgesplitst in twee kleinere grafieken.
 
@@ -155,12 +155,12 @@ Als gevolg van het verwijderen van ECID:35577 worden ook de randen die aan CRM-i
 
 >[!BEGINTABS]
 
->[!TAB Binnenkomende gebeurtenis]
+>[!TAB  Binnenkomende gebeurtenis ]
 
-*Opmerkingen bij het diagram:*
+*de nota&#39;s van het Diagram:*
 
-* In het volgende diagram wordt ervan uitgegaan dat bij `timestamp=50`, 50 identiteiten bestaan in de identiteitsgrafiek.
-* `(...)` Hiermee worden de andere identiteiten aangegeven die al zijn gekoppeld in de grafiek.
+* In het volgende diagram wordt ervan uitgegaan dat bij `timestamp=50` er 50 identiteiten voorkomen in de identiteitsgrafiek.
+* `(...)` geeft de andere identiteiten aan die al zijn gekoppeld in de grafiek.
 
 Door middel van de verwijderingslogica kunnen sommige &quot;hub&quot;-identiteiten ook worden verwijderd. Deze hubidentiteiten verwijzen naar knopen die aan verscheidene individuele identiteiten verbonden zijn die anders losgemaakt zouden zijn.
 
@@ -168,16 +168,16 @@ In het onderstaande voorbeeld wordt ECID:21011 opgenomen en gekoppeld aan de gra
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
->[!TAB Verwijderingsproces]
+>[!TAB  proces van de Schrapping ]
 
 Dientengevolge, schrapt de Dienst van de Identiteit de oudste identiteit slechts uit de identiteitsgrafiek, die in dit geval ECID:35577 is. De schrapping van ECID:35577 leidt ook tot de schrapping van het volgende:
 
 * Het verband tussen CRM-ID: 60013 en de nu verwijderde ECID:35577, wat resulteert in een grafieksplitsingsscenario.
-* IDFA: 32110, IDFA: 02383, en de overige identiteiten vertegenwoordigd door `(...)`. Deze identiteiten worden verwijderd omdat ze individueel niet aan andere identiteiten zijn gekoppeld en daarom niet in een grafiek kunnen worden weergegeven.
+* IDFA: 32110, IDFA: 02383, en de overige identiteiten die worden vertegenwoordigd door `(...)`. Deze identiteiten worden verwijderd omdat ze individueel niet aan andere identiteiten zijn gekoppeld en daarom niet in een grafiek kunnen worden weergegeven.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
 
->[!TAB Grafiekuitvoer]
+>[!TAB  Uitvoer van de Grafiek ]
 
 Ten slotte levert het verwijderingsproces twee kleinere grafieken op.
 
@@ -187,7 +187,7 @@ Ten slotte levert het verwijderingsproces twee kleinere grafieken op.
 
 ## Volgende stappen
 
-Zie de volgende documentatie voor meer informatie over [!DNL Identity Service]:
+Raadpleeg de volgende documentatie voor meer informatie over [!DNL Identity Service] :
 
 * [[!DNL Identity Service]-overzicht](home.md)
 * [Naamgrafiekviewer](features/identity-graph-viewer.md)
@@ -195,7 +195,7 @@ Zie de volgende documentatie voor meer informatie over [!DNL Identity Service]:
 Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platforms services guardrails, over end-to-end latentie-informatie en licentiegegevens uit Real-Time CDP Product Description-documenten:
 
 * [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
-* [Diagrammen met latentie van begin tot eind](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor verschillende diensten van de Experience Platform.
-* [Real-time Customer Data Platform (B2C Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [ De diagrammen van de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van het Experience Platform.
+* [ Real-time Customer Data Platform (B2C Uitgave - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [ Real-time Customer Data Platform (B2P - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [ Real-time Customer Data Platform (B2B - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

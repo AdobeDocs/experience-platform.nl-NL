@@ -24,26 +24,26 @@ ht-degree: 0%
 | `model` | String | De naam van het model voor het apparaat. Dit is de algemene, leesbare of marketingnaam voor het apparaat. De &quot;iPhone 6S&quot; is bijvoorbeeld een bepaald model voor mobiele telefoons. |
 | `modelNumber` | String | De unieke modelnummeraanduiding die door de fabrikant voor deze voorziening is toegekend. Modelnummers zijn geen versies, maar unieke id&#39;s die een bepaalde modelconfiguratie identificeren. |
 | `screenHeight` | Geheel | Het aantal verticale pixels van de actieve weergave van het apparaat in de standaardoriëntatie. |
-| `screenOrientation` | String | De huidige schermstand. Inclusief geaccepteerde waarden `portrait` en `landscape`. |
+| `screenOrientation` | String | De huidige schermstand. Tot de geaccepteerde waarden behoren `portrait` en `landscape` . |
 | `screenWidth` | String | Het aantal horizontale pixels van de actieve weergave van het apparaat in de standaardoriëntatie. |
 | `type` | String | Het type apparaat dat wordt bijgehouden. Tot de geaccepteerde waarden behoren: <ul><li>`mobile`</li><li>`tablet`</li><li>`desktop`</li><li>`ereader`</li><li>`gaming`</li><li>`television`</li><li>`settop`</li><li>`mediaplayer`</li><li>`computers`</li><li>`tv screens`</li></ul> |
 | `typeID` | String | Een id voor het apparaat. Dit kan een herkenningsteken van DeviceAtlas of een andere dienst zijn die de hardware identificeert die wordt gebruikt. |
-| `typeIDService` | String | De naamruimte van de service die wordt gebruikt om het apparaattype te identificeren. Zie de [aanhangsel](#typeIDService) voor meer informatie over geaccepteerde waarden. |
+| `typeIDService` | String | De naamruimte van de service die wordt gebruikt om het apparaattype te identificeren. Zie [ bijlage ](#typeIDService) voor details op toegelaten waarden. |
 
 {style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/device.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/device.schema.json)
 
 ## Bijlage
 
-De volgende sectie bevat aanvullende informatie over de [!UICONTROL Device] gegevenstype.
+De volgende sectie bevat aanvullende informatie over het gegevenstype [!UICONTROL Device] .
 
 ## Geaccepteerde waarden voor typeIDService {#typeIDService}
 
-In de volgende tabel worden de toegestane waarden voor `typeIDService` en de betekenis ervan:
+In de volgende tabel worden de geaccepteerde waarden voor `typeIDService` en de bijbehorende betekenissen weergegeven:
 
 | Waarde | Beschrijving |
 | --- | --- |

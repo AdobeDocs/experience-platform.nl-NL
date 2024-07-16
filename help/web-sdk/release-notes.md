@@ -1,6 +1,6 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
-description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
+description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 source-git-commit: 060f6bb0ff6f57a84698a27bd9f640c0178e5b51
@@ -14,47 +14,47 @@ ht-degree: 0%
 # Aanvullende informatie
 
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK besproken.
-Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie [Opmerkingen bij de release Web SDK-tag](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie de [ nota&#39;s van de de marktextensie van SDK van het Web ](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
 >[!IMPORTANT]
 >
->Google [heeft aangekondigd](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) is van plan de Chrome-ondersteuning voor cookies van derden in de tweede helft van 2024 te beëindigen. Daarom worden cookies van derden niet meer ondersteund in de belangrijkste browsers.
+>Google [ heeft ](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) plannen aangekondigd om de steun van Chrome voor derdekoekjes in de tweede helft van 2024 te beëindigen. Daarom worden cookies van derden niet meer ondersteund in de belangrijkste browsers.
 >
->Wanneer deze wijziging wordt doorgevoerd, zal de Adobe de steun voor de `demdex` cookie die momenteel wordt ondersteund in de Web SDK.
+>Wanneer deze wijziging is geïmplementeerd, stopt de Adobe de ondersteuning voor het cookie `demdex` dat momenteel wordt ondersteund in de SDK van het web.
 
 ## Versie 2.20.0 - 21 mei 2024
 
-**Nieuwe functies**
+**Nieuwe eigenschappen**
 
-* Extra ondersteuning voor [Streaming media-verzameling](../web-sdk/commands/configure/streamingmedia.md).
+* Toegevoegde steun voor [ Streaming de Inzameling van Media ](../web-sdk/commands/configure/streamingmedia.md).
 
-**Oplossingen en verbeteringen**
+**Bevestigingen en verbeteringen**
 
 * Het probleem waarbij de standaardinhoud werd verborgen door het voorverborgen fragment, is opgelost door een fout te voorkomen toen de toestemming werd geweigerd.
 
 ## Versie 2.19.2 - 10 januari 2024
 
-**Oplossingen en verbeteringen**
+**Bevestigingen en verbeteringen**
 
 * Probleem verholpen waarbij identiteitsfouten andere fouten maskeerden en identiteitsfouten veranderden in waarschuwingen.
-* Probleem verholpen waarbij de onderzijde van de paginanummers nooit zou worden verzonden als er een bovenzijde van de paginanroep was met `renderDecisions` instellen op `false`.
-* Probleem verholpen waarbij Web SDK geen interdomein-identiteiten kon lezen als er meerdere waren. Dit probleem is nu opgelost. `adobe_mc` querytekenreeksparameters.
+* Probleem verholpen waarbij de onderzijde van pagina-aanroepen nooit zouden worden verzonden wanneer de bovenkant van de pagina-aanroep was ingesteld op `renderDecisions` `false` .
+* Probleem verholpen waarbij de web SDK geen interdomeinidentiteiten kon lezen als er meerdere `adobe_mc` queryreeksparameters waren.
 
 ## Versie 2.19.1 - 10 november 2023
 
-**Oplossingen en verbeteringen**
+**Bevestigingen en verbeteringen**
 
-* Probleem verholpen waarbij de array proposities werd geretourneerd van `sendEvent` de vraag was altijd leeg.
+* Probleem verholpen waarbij de array proposities die door `sendEvent` aanroepen werd geretourneerd, altijd leeg was.
 
 ## Versie 2.19.0 - 1 november 2023
 
-**Nieuwe functies**
+**Nieuwe eigenschappen**
 
 * Extra ondersteuning voor het renderen van berichten in de app van Adobe Journey Optimizer.
-* Extra ondersteuning voor [boven- en onderzijde van paginagebeurtenissen](use-cases/top-bottom-page-events.md).
-* Toegevoegd [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) aan de `sendEvent` gebruiken om het opvragen van het bereik en het standaardoppervlak voor de hele pagina te besturen.
+* Toegevoegde steun voor [ bovenkant en bodem van paginagebeurtenissen ](use-cases/top-bottom-page-events.md).
+* Optie [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) toegevoegd aan de opdracht `sendEvent` om het opvragen van het bereik en het standaardoppervlak voor de hele pagina te besturen.
 
-**Oplossingen en verbeteringen**
+**Bevestigingen en verbeteringen**
 
 * Gecombineerde verpersoonlijkingsvertoningsgebeurtenissen samen wanneer het teruggeven van veelvoudige types van verpersoonlijking.
 * Probleem verholpen waarbij de weergavenamen van toepassingen van één pagina hoofdlettergevoelig waren.
@@ -62,90 +62,90 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 ## Versie 2.18.0 - 31 juli 2023
 
-**Nieuwe functies**
+**Nieuwe eigenschappen**
 
-* Extra ondersteuning voor [per-opdracht overschrijvingen van de gegevensstroom-id](../datastreams/overrides.md).
+* Toegevoegde steun voor [ per-bevel treedt van datastream identiteitskaart ](../datastreams/overrides.md) met voeten.
 
-**Oplossingen en verbeteringen**
+**Bevestigingen en verbeteringen**
 
 * Afsluitkoppelingen kwamen niet in aanmerking omdat het domein deel uitmaakte van een query. Dit probleem is nu opgelost.
-* Vervangen `edgeConfigId` ten gunste van `datastreamId` in de configuratie van Web SDK.
+* Vervangen `edgeConfigId` in de Web SDK-configuratie door `datastreamId` .
 
 ## Versie 2.17.0 - 17 mei 2023
 
-**Oplossingen en verbeteringen**
+**Bevestigingen en verbeteringen**
 
-* De SDK van het Web codeert nu de bestemmingswaarden van het koekje van de Audience Manager, gelijkend op [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
+* SDK van het Web codeert nu de de bestemmingswaarden van het koekje van de Audience Manager, gelijkend op de [ Data Integration Library (DIL) ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
 
 ## Versie 2.16.0 - 25 april 2023
 
-**Nieuwe functies**
+**Nieuwe eigenschappen**
 
-* Extra ondersteuning voor [gegevensstroomconfiguratie overschrijft](../datastreams/overrides.md).
+* Toegevoegde steun voor [ datastream configuratie treedt met voeten ](../datastreams/overrides.md).
 
 ## Versie 2.15.0 - 30 maart 2023
 
-**Nieuwe functies**
+**Nieuwe eigenschappen**
 
-* Extra ondersteuning voor [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) koppeling klikken op callback.
+* Toegevoegde ondersteuning voor [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) link click callback.
 * Extra ondersteuning voor Adobe Journey Optimizer klik tracking.
 
-**Oplossingen en verbeteringen**
+**Bevestigingen en verbeteringen**
 
 * De koppelingsverzameling bevat nu de naam van de koppeling en het bezoekersgebied.
 * Fout met betrekking tot console verwijderd voor mislukte URL-doelen.
 
 ## Versie 2.14.0 - 25 januari 2023
 
-* (bèta) Extra ondersteuning voor Adobe Journey Optimizer-oppervlakken en -voorstellingen.
+* (Beta) Extra ondersteuning voor Adobe Journey Optimizer-oppervlakken en -voorstellingen.
 
-**Oplossingen en verbeteringen**
+**Bevestigingen en verbeteringen**
 
-* Probleem verholpen met aangepaste code-acties voor Adobe Target VEC waarbij de code op een andere locatie werd geïnjecteerd dan met [!DNL at.js].
+* Probleem verholpen met aangepaste code-acties voor Adobe Target VEC waarbij de code op een andere locatie werd geïnjecteerd dan met [!DNL at.js] .
 * Probleem verholpen waarbij de koptekst van de &quot;referentie&quot; in sommige randgevallen niet correct was ingesteld op aanvragen bij de Edge Network.
-* Probleem verholpen waarbij [client-tip voor gebruikersagent](/help/web-sdk/use-cases/client-hints.md) eigenschappen kunnen op een onjuist type worden ingesteld.
-* Probleem verholpen waarbij `placeContext.localTime` komt niet overeen met het schema.
+* Vaste een kwestie waar [ de wenk van de gebruikersagent ](/help/web-sdk/use-cases/client-hints.md) eigenschappen aan een onjuist type konden worden geplaatst.
+* Correctie van een probleem waarbij `placeContext.localTime` niet overeenkwam met het schema.
 
 ## Versie 2.13.1 - 13 oktober 2022
 
 * Probleem verholpen waarbij bezoekersmigratie niet werkt als window.Visitor na het configureren wordt gedefinieerd. Dit is vooral een probleem wanneer u met Adobe-tags werkt.
-* Probleem verholpen waarbij `device.screenWidth` en `device.screenHeight` werden in sommige omgevingen als tekenreeksen gevuld.
+* Probleem verholpen waarbij `device.screenWidth` en `device.screenHeight` in sommige omgevingen als tekenreeksen werden gevuld.
 
 ## Versie 2.13.0 - 28 september 2022
 
-**Nieuwe functies**
+**Nieuwe eigenschappen**
 
-* Extra ondersteuning voor [Volledige migratie pagina voor pagina](home.md#migrating-to-web-sdk). Het Adobe Target-profiel blijft nu behouden wanneer een bezoeker zich tussen de pagina&#39;s at.js en Web SDK verplaatst.
-* Toegevoegde configureerbare ondersteuning voor [hoge entropgebruiker-Agent de wenken van de Cliënt](/help/web-sdk/use-cases/client-hints.md).
-* Extra ondersteuning voor de [`applyResponse`](/help/web-sdk/commands/applyresponse.md) gebruiken. Hierdoor is een hybride personalisatie mogelijk via de [Edge Network Server-API](../server-api/overview.md).
+* Toegevoegde steun voor [ Pagina door Volledige Migratie van de Pagina ](home.md#migrating-to-web-sdk). Het Adobe Target-profiel blijft nu behouden wanneer een bezoeker zich tussen de pagina&#39;s at.js en Web SDK verplaatst.
+* Toegevoegde configureerbare steun voor [ high entropy gebruiker-Agent de Hints van de Cliënt ](/help/web-sdk/use-cases/client-hints.md).
+* Extra ondersteuning voor de opdracht [`applyResponse`](/help/web-sdk/commands/applyresponse.md) . Dit laat hybride verpersoonlijking via de [ Server API van de Edge Network ](../server-api/overview.md) toe.
 * Koppelingen in de QA-modus werken nu op meerdere pagina&#39;s.
 
-**Oplossingen en verbeteringen**
+**Bevestigingen en verbeteringen**
 
 * Correctie van een probleem waarbij de gegevens voor bijhouden van koppelingen niet werden bijgewerkt nadat de functie voor het bijhouden van koppelingen was uitgeschakeld.
 * Bijgewerkte opdrachten om een validatiefout te genereren wanneer onbekende opties worden opgegeven.
-* De `_experience.decisioning.propositionEventType` Deze eigenschap wordt nu gevuld wanneer automatisch weergave- en interactiepitalisatiegebeurtenissen worden verzonden.
-* Toegevoegde gedupliceerde naamruimtevalidatie voor de `getIdentity` gebruiken.
-* Toegevoegde gedupliceerde validatie van beslissingsbereik voor de `sendEvent` gebruiken.
+* De eigenschap `_experience.decisioning.propositionEventType` wordt nu gevuld wanneer automatisch weergave- en interactiepersonalisatie-gebeurtenissen worden verzonden.
+* Toegevoegde gedupliceerde naamruimtevalidatie voor de opdracht `getIdentity` .
+* Toegevoegde gedupliceerde validatie van beslissingsbereik voor de opdracht `sendEvent` .
 
 ## Versie 2.12.0 - 29 juni 2022
 
-* Verander de verzoeken aan de Edge Network om te gebruiken `cluster` de locatie van de cookie als onderdeel van de URL. Dit zorgt ervoor dat gebruikers die hun locatie wijzigen (bijvoorbeeld via een VPN of rijden met mobiele apparaten, enz.), halverwege de sessie dezelfde kant op gaan en hetzelfde personalisatieprofiel hebben.
+* Wijzig de aanvragen aan de Edge Network om de `cluster` cookie locatiehint te gebruiken als onderdeel van de URL. Dit zorgt ervoor dat gebruikers die hun locatie wijzigen (bijvoorbeeld via een VPN of rijden met mobiele apparaten, enz.), halverwege de sessie dezelfde kant op gaan en hetzelfde personalisatieprofiel hebben.
 * Hiermee worden de geconfigureerde functies in de opdrachtreactie van getLibraryInfo gerenderd.
 
 ## Versie 2.11.0 - 13 juni 2022
 
-**Nieuwe functies**
+**Nieuwe eigenschappen**
 
-* U kunt nu nauwkeuriger persoonlijke ervaringen bieden door gebruikers-id&#39;s te delen tussen mobiele apps en mobiele webinhoud, en tussen domeinen. Zie de [speciale documentatie](identity/id-sharing.md) voor meer informatie.
-* U kunt nu een array met voorstellingen renderen of uitvoeren vanuit [!DNL Adobe Target] in toepassingen van één pagina, zonder de analytische meetgegevens te verhogen. Dit vermindert rapportagefouten en vergroot de nauwkeurigheid van de analyse. Zie de [speciale documentatie](personalization/rendering-personalization-content.md#applypropositions) voor meer informatie.
-* Aanvullende informatie toegevoegd aan de `getLibraryInfo` bevel met inbegrip van beschikbare bevelen en de definitieve configuratie voor de instantie.
+* U kunt nu nauwkeuriger persoonlijke ervaringen bieden door gebruikers-id&#39;s te delen tussen mobiele apps en mobiele webinhoud, en tussen domeinen. Zie [ specifieke documentatie ](identity/id-sharing.md) om meer te leren.
+* U kunt nu een array met voorstellingen van [!DNL Adobe Target] renderen of uitvoeren in toepassingen van één pagina, zonder de analytische meetgegevens te verhogen. Dit vermindert rapportagefouten en vergroot de nauwkeurigheid van de analyse. Zie [ specifieke documentatie ](personalization/rendering-personalization-content.md#applypropositions) om meer te leren.
+* Extra informatie toegevoegd aan de opdracht `getLibraryInfo` , inclusief beschikbare opdrachten en de uiteindelijke configuratie voor de instantie.
 
-**Oplossingen en verbeteringen**
+**Bevestigingen en verbeteringen**
 
-* Te gebruiken bijgewerkte cookie-instellingen `sameSite="none"` en `secure` markering op [!DNL HTTPS] pagina&#39;s.
-* Correctie van een probleem waarbij gepersonaliseerde inhoud niet correct werd toegepast tijdens het gebruik van de `eq` pseudo-kiezer.
-* Probleem verholpen waarbij `localTimezoneOffset` kan de validatie van het Experience Platform niet voltooien.
+* Bijgewerkte cookie-instellingen die moeten worden gebruikt `sameSite="none"` en `secure` markering op [!DNL HTTPS] pagina&#39;s.
+* Correctie van een probleem waarbij gepersonaliseerde inhoud niet correct werd toegepast bij gebruik van de pseudo-kiezer van `eq` .
+* Het probleem waarbij `localTimezoneOffset` de validatie van het Experience Platform kon mislukken, is opgelost.
 
 ## Versie 2.10.1 - 3 mei 2022
 
@@ -154,14 +154,14 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 ## Versie 2.10.0 - 22 april 2022
 
 * Gebruik een blijvend iframe voor alle ID syncs en segmentbestemmingen.
-* Oplossing voor een probleem waarbij samengevoegde metrische profielen werden gedupliceerd in de `sendEvent` resultaat.
+* Probleem verholpen waarbij samengevoegde metrische profielen werden gedupliceerd in het `sendEvent` resultaat.
 
 ## Versie 2.9.0 - 10 maart 2022
 
-* Toegevoegde ondersteuning voor tekstspatiëring [!DNL control (default)] Adobe Target ervaart.
+* Extra ondersteuning voor het bijhouden van Adobe Target-ervaringen van [!DNL control (default)] .
 * De gebeurtenis view-change is geoptimaliseerd voor toepassingen op één pagina. Het weergavebericht wordt nu opgenomen in de gebeurtenis view-change wanneer persoonlijke ervaringen worden weergegeven.
-* Waarschuwing van console is verwijderd als dit niet het geval is `eventType` aanwezig is.
-* Het probleem waarbij de `propositions` eigenschap is alleen geretourneerd door een `sendEvent` gebruiken wanneer ervaringen zijn opgevraagd of opgehaald uit de cache. De `propositions` eigenschap wordt nu altijd gedefinieerd als een array.
+* Waarschuwing van console is verwijderd als er geen `eventType` aanwezig is.
+* Probleem verholpen waarbij de eigenschap `propositions` alleen werd geretourneerd van een `sendEvent` -opdracht wanneer er ervaringen werden opgevraagd of opgehaald uit de cache. De eigenschap `propositions` wordt nu altijd gedefinieerd als een array.
 * Probleem verholpen waarbij verborgen containers niet werden weergegeven als er een fout was geretourneerd van de Edge Network.
 * Probleem verholpen waarbij de interactieve gebeurtenissen niet in Adobe Target werden meegeteld. Dit probleem is opgelost door de weergavenaam toe te voegen aan de XDM op web.webPageDetails.viewName.
 * Los gebroken documentatiekoppelingen in consoleberichten op.
@@ -174,69 +174,69 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 ## Versie 2.7.0 - 26 oktober 2021
 
-* Maak extra informatie van de Edge Network in de terugkeerwaarde van bloot `sendEvent`, inclusief `inferences` en `destinations`. Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Bèta rollen.
+* Maak aanvullende informatie van de Edge Network beschikbaar in de geretourneerde waarde van `sendEvent` , inclusief `inferences` en `destinations` . Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Beta uitrollen.
 
 ## Versie 2.6.4 - 7 september 2021
 
-* Probleem verholpen waarbij ingestelde HTML Adobe Target-acties werden toegepast op de `head` element vervangt het gehele `head` inhoud. Stel nu HTML-handelingen in die worden toegepast op de `head` -element wordt gewijzigd en voegt HTML toe.
+* Probleem verholpen waarbij de HTML Adobe Target-acties die waren ingesteld op het `head` -element de volledige `head` -inhoud hadden vervangen. Stel nu HTML-handelingen in die worden toegepast op het `head` -element, en die worden gewijzigd in HTML toevoegen.
 
 ## Versie 2.6.3 - 16 augustus 2021
 
-* Probleem verholpen waarbij objecten die niet voor openbaar gebruik bestemd waren, werden blootgesteld via de opgeloste belofte van de `configure` gebruiken.
+* Probleem verholpen waarbij objecten die niet voor openbaar gebruik zijn bedoeld, werden blootgesteld via de opgeloste belofte van de opdracht `configure` .
 
 ## Versie 2.6.2 - 4 augustus 2021
 
-* Probleem verholpen waarbij een waarschuwing over de afgekeurde versie van `result.decisions` (verstrekt door de `sendEvent` bevel) zou aan de console worden geregistreerd zelfs wanneer `result.decisions` eigenschap werd niet benaderd. Er wordt geen waarschuwing geregistreerd wanneer u het dialoogvenster opent `result.decisions` eigenschap, maar de eigenschap is nog steeds vervangen.
+* Probleem verholpen waarbij een waarschuwing over de afschrijving van `result.decisions` (opgegeven door de opdracht `sendEvent` ) zou worden geregistreerd bij de console, zelfs als de eigenschap `result.decisions` niet werd benaderd. Er wordt geen waarschuwing geregistreerd wanneer de eigenschap `result.decisions` wordt benaderd, maar de eigenschap is nog steeds afgekeurd.
 
 ## Versie 2.6.1 - 29 juli 2021
 
-* Probleem verholpen waarbij het renderen van de personalisatie voor een app-weergave van één pagina zonder personalisatie-inhoud een fout zou veroorzaken en de belofte zou doen terugkomen van de `sendEvent` te verwerpen opdracht.
+* Probleem verholpen waarbij het renderen van een app-weergave van één pagina zonder inhoud voor personalisatie een fout zou opleveren en de belofte die door de opdracht `sendEvent` is geretourneerd, zou worden afgewezen.
 
 ## Versie 2.6.0 - 27 juli 2021
 
-* Verstrekt meer verpersoonlijkingsinhoud in `sendEvent` opgelost belofte, inclusief Adobe Target response tokens. Wanneer de `sendEvent` bevel wordt uitgevoerd, wordt een belofte teruggegeven, die uiteindelijk met een wordt opgelost `result` object met informatie die van de server is ontvangen. Eerder bevatte dit resultaatobject een eigenschap met de naam `decisions`. Dit `decisions` eigenschap is vervangen. Een nieuwe eigenschap, `propositions`, is toegevoegd. Deze nieuwe eigenschap biedt klanten toegang tot meer personalisatie-inhoud, waaronder [reactietokens](/help/web-sdk/personalization/adobe-target/accessing-response-tokens.md).
+* Verstrekt meer verpersoonlijkingsinhoud in de `sendEvent` opgeloste belofte, met inbegrip van de reactietekenen van Adobe Target. Wanneer de opdracht `sendEvent` wordt uitgevoerd, wordt een promise geretourneerd die uiteindelijk wordt opgelost met een `result` -object dat informatie bevat die van de server is ontvangen. Eerder bevatte dit resultaatobject een eigenschap met de naam `decisions` . Deze eigenschap `decisions` is vervangen. Er is een nieuwe eigenschap, `propositions` , toegevoegd. Dit nieuwe bezit voorziet klanten van toegang tot meer verpersoonlijkingsinhoud, met inbegrip van [ reactietokens ](/help/web-sdk/personalization/adobe-target/accessing-response-tokens.md).
 
 ## Versie 2.5.0 - juni 2021
 
 * Toegevoegde ondersteuning voor aanpassingsmogelijkheden.
 * Automatisch verzamelde viewport breedten en hoogten die negatieve waarden zijn zullen niet meer naar de server worden verzonden.
-* Wanneer een gebeurtenis wordt geannuleerd door terug te keren `false` van een `onBeforeEventSend` callback, wordt een bericht nu geregistreerd.
+* Wanneer een gebeurtenis wordt geannuleerd door `false` vanuit een `onBeforeEventSend` callback te retourneren, wordt nu een bericht geregistreerd.
 * Probleem verholpen waarbij specifieke onderdelen van XDM-gegevens die bestemd waren voor één gebeurtenis, waren opgenomen in meerdere gebeurtenissen.
 
 ## Versie 2.4.0 - maart 2021
 
-* De SDK kan nu als een [NPM-pakket](/help/web-sdk/install/npm.md).
-* Extra ondersteuning voor een `out` optie wanneer [standaardgoedkeuring configureren](/help/web-sdk/commands/configure/defaultconsent.md), waardoor alle gebeurtenissen worden gestopt totdat toestemming is ontvangen (de bestaande `pending` de optie vormt gebeurtenissen een rij en verzendt hen zodra de toestemming wordt ontvangen).
-* De [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) callback kan nu worden gebruikt om te voorkomen dat een gebeurtenis wordt verzonden.
-* Gebruikt nu een XDM-schemaveldgroep in plaats van `meta.personalization` wanneer het verzenden van gebeurtenissen over gepersonaliseerde inhoud die wordt teruggegeven of geklikt.
-* De [`getIdentity`](/help/web-sdk/commands/getidentity.md) retourneert nu de id van het randgebied naast de identiteit.
+* SDK kan nu als [ NPM pakket ](/help/web-sdk/install/npm.md) worden geïnstalleerd.
+* Toegevoegde steun voor een `out` optie wanneer [ vormend standaardtoestemming ](/help/web-sdk/commands/configure/defaultconsent.md), die alle gebeurtenissen laat vallen tot de toestemming wordt ontvangen (de bestaande `pending` optie maakt gebeurtenissen een rij en verzendt hen zodra de toestemming wordt ontvangen).
+* De callback van [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) kan nu worden gebruikt om te voorkomen dat een gebeurtenis wordt verzonden.
+* Er wordt nu een XDM-schemaveldgroep gebruikt in plaats van `meta.personalization` bij het verzenden van gebeurtenissen over gepersonaliseerde inhoud die wordt gerenderd of waarop wordt geklikt.
+* De opdracht [`getIdentity`](/help/web-sdk/commands/getidentity.md) retourneert nu de id van het randgebied naast de identiteit.
 * Waarschuwingen en fouten die van de server zijn ontvangen, zijn verbeterd en worden op een geschiktere manier afgehandeld.
-* Toegevoegde ondersteuning voor de norm Goedkeuring 2.0 van de Adobe voor de [`setConsent`](/help/web-sdk/commands/setconsent.md) gebruiken.
-* De voorkeur van de toestemming, wanneer ontvangen, wordt gehakt en in lokale opslag voor een geoptimaliseerde integratie onder CMPs, het Web SDK van het Platform, en de Edge Network van het Platform opgeslagen. Als u toestemmingsvoorkeur verzamelt, moedigen wij u nu aan om te roepen `setConsent` op elke pagina die wordt geladen.
-* Twee [toezicht op haken](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` en `onCommandRejected`, zijn toegevoegd.
-* Bug Fix: de gebeurtenissen van het de interactiebericht van de Personalisatie zouden dubbele informatie over de zelfde activiteit bevatten wanneer een gebruiker aan een nieuwe single-page toepassingsmening, terug naar de originele mening navigeerde, en een element in aanmerking voor omzetting klikte.
-* Bug Fix: als de eerste gebeurtenis die door de SDK is verzonden `documentUnloading` instellen op `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) wordt gebruikt om de gebeurtenis te verzenden, wat resulteert in een fout betreffende een identiteit die niet wordt vastgesteld.
+* Toegevoegde ondersteuning voor de norm Consent 2.0 van de Adobe voor de opdracht [`setConsent`](/help/web-sdk/commands/setconsent.md) .
+* De voorkeur van de toestemming, wanneer ontvangen, wordt gehakt en in lokale opslag voor een geoptimaliseerde integratie onder CMPs, het Web SDK van het Platform, en de Edge Network van het Platform opgeslagen. Als u toestemmingsvoorkeur verzamelt, moedigen wij u nu aan om `setConsent` op elke paginading te roepen.
+* Twee [ controlerende haken ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` en `onCommandRejected`, zijn toegevoegd.
+* Bug Fix: de gebeurtenissen van het de interactiebericht van Personalization zouden dubbele informatie over de zelfde activiteit bevatten wanneer een gebruiker aan een nieuwe single-page toepassingsmening, terug naar de originele mening navigeerde, en een element in aanmerking voor omzetting klikte.
+* Opgeloste problemen: als voor de eerste gebeurtenis die door de SDK wordt verzonden `documentUnloading` is ingesteld op `true` , wordt [`sendBeacon` ](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) gebruikt om de gebeurtenis te verzenden, wat resulteert in een fout betreffende een identiteit die niet wordt vastgesteld.
 
 ## Versie 2.3.0 - november 2020
 
 * Nonce-ondersteuning toegevoegd om een strenger beleid voor inhoudsbeveiliging mogelijk te maken.
 * Extra ondersteuning voor personalisatie voor toepassingen van één pagina.
-* Verbeterde compatibiliteit met andere JavaScript-code op de pagina die mogelijk wordt overschreven `window.console` API&#39;s.
-* Opgeloste problemen: `sendBeacon` niet werd gebruikt toen `documentUnloading` is ingesteld op `true` of wanneer de koppeling kliks automatisch is bijgehouden.
+* Verbeterde compatibiliteit met andere JavaScript-code op de pagina die mogelijk `window.console` -API&#39;s overschrijft.
+* Bug Fix: `sendBeacon` werd niet gebruikt toen `documentUnloading` was ingesteld op `true` of wanneer de koppelingenklikken automatisch werden bijgehouden.
 * Bug Fix: Een koppeling wordt niet automatisch bijgehouden als het ankerelement HTML-inhoud bevat.
-* Bug Fix: Certain browser errors containing a read-only `message` eigenschap is niet correct verwerkt, waardoor een andere fout aan de klant wordt gemeld.
+* Bug Fix: Bepaalde browserfouten die een alleen-lezen `message` eigenschap bevatten, zijn niet correct verwerkt, waardoor een andere fout aan de klant wordt gemeld.
 * Bug Fix: Als de SDK binnen een iframe wordt uitgevoerd, treedt een fout op als de HTML-pagina van het iframe afkomstig is uit een ander subdomein dan de HTML van het bovenliggende venster.
 
 ## Versie 2.2.0 - oktober 2020
 
-* Bug Fix: Het Opt-in voorwerp blokkeerde Web SDK om vraag te maken wanneer `idMigrationEnabled` is `true`.
+* Bug Fix: Het Opt-in-object blokkeerde Web SDK om aanroepen uit te voeren wanneer `idMigrationEnabled` `true` is.
 * Bug Fix: Maak Web SDK zich van verzoeken bewust die verpersoonlijkingsaanbiedingen zouden moeten terugkeren om een het flikkeren kwestie te verhinderen.
 
 ## Versie 2.1.0 - augustus 2020
 
-* Verwijder de `syncIdentity` opdracht en ondersteuning voor het doorgeven van die id&#39;s in het dialoogvenster `sendEvent` gebruiken.
+* Verwijder de opdracht `syncIdentity` en ondersteun het doorgeven van die id&#39;s in de opdracht `sendEvent` .
 * Ondersteuning voor IAB 2.0 Consent Standard.
-* Ondersteuning voor het doorgeven van aanvullende id&#39;s in het dialoogvenster `setConsent` gebruiken.
-* Ondersteuning voor het overschrijven van de `datasetId` in de `sendEvent` gebruiken.
-* Support Monitoring Hooks ([Meer informatie](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
-* Voldoende `environment: browser` in de implementatie de contextgegevens.
+* Ondersteuning voor het doorgeven van aanvullende id&#39;s in de opdracht `setConsent` .
+* Ondersteuning voor het overschrijven van de opdracht `datasetId` in de opdracht `sendEvent` .
+* Steun die Hooks controleert ([ las meer ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
+* Geef `environment: browser` door in de contextgegevens van de implementatiedetails.

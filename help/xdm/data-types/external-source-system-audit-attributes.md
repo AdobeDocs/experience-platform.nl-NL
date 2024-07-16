@@ -1,6 +1,6 @@
 ---
-title: Kenmerken voor externe bronsysteemcontrole Gegevenstype
-description: Leer over het Externe gegevenstype van de Attributen van de Controle van het Bronsysteem de Gegevensmodel van de Ervaring (XDM).
+title: Gegevenstype externe Source System Audit Attributes
+description: Meer informatie over het gegevenstype External Source System Audit Attributes Experience Data Model (XDM).
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # [!UICONTROL External Source System Audit Attributes] gegevenstype
 
-[!UICONTROL External Source System Audit Attributes] is een standaardgegevenstype van de Gegevens van de Ervaring Model (XDM) dat controledetails over een extern bronsysteem vangt.
+[!UICONTROL External Source System Audit Attributes] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat controledetails over een extern bronsysteem vangt.
 
 ![](../images/data-types/external-source-system-audit-attributes.png)
 
@@ -31,5 +31,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.schema.json)

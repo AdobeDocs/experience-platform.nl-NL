@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;ontwikkelaarsgids;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;In real time machine het leren;
+keywords: Experience Platform;ontwikkelaarshandleiding;Data Science Workspace;populaire onderwerpen;In real time machinaal leren;
 solution: Experience Platform
 title: Aan de slag met het leren van machines in real time
 description: In het volgende document worden de stappen beschreven die nodig zijn om een real-time model voor machinetolken in Adobe Experience Platform te maken.
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -17,36 +17,36 @@ ht-degree: 0%
 >
 >Het leren van de machine in real time is niet beschikbaar aan alle gebruikers nog. Deze functie bevindt zich in alfa en wordt nog steeds getest. Dit document kan worden gewijzigd.
 
-Als u Real-Time Machine Learning wilt gebruiken, hebt u toegang nodig tot een organisatie die is ingericht voor Adobe Experience Platform en [!DNL Data Science Workspace]. Bovendien, moet u een volledige dataset voor gebruik in opleiding en het scoren hebben.
+Als u Real-Time Machine Learning wilt gebruiken, hebt u toegang nodig tot een organisatie die is ingericht voor Adobe Experience Platform en [!DNL Data Science Workspace] . Bovendien, moet u een volledige dataset voor gebruik in opleiding en het scoren hebben.
 
-De gidsen voor het Leren van de machine in real time vereisen een werkend begrip van Python 3, [Jupyter-laptops](../jupyterlab/overview.md), gegevenswetenschap en machinaal leren.
+De gidsen voor het Leren van de machine in real time vereisen een werkend begrip van Python 3, [ Jupyter Blocbooks ](../jupyterlab/overview.md), gegevenswetenschap, en machine het leren.
 
-**Belangrijkste voorwaarden:**
+**Zeer belangrijke Termen:**
 
-- **DSL:** Domeinspecifieke taal.
-- **Rand:** In real time de functie van de het het Leren van de machine van de machine kan op de clusters van Edge dichter aan uw activiteiten en toepassingen worden in werking gesteld.
-- **Hub:** De huidige alpha stelt de Echte het Leren van de machine het Leren van de Echte - tijd in werking de dienst op de Hub van Adobe Experience Platform terwijl het Netwerk van de Rand in ontwikkeling is.
-- **Knooppunt:** Een knooppunt is de basiseenheid waarvan grafieken worden gevormd. Elke knoop voert een specifieke taak uit en zij kunnen samen gebruikend verbindingen worden geketend om een grafiek te vormen die een pijpleiding van XML vertegenwoordigt. De taak die door een knoop wordt uitgevoerd vertegenwoordigt een verrichting op inputgegevens zoals een transformatie van gegevens of schema, of een machine het leren conclusie. Het knooppunt geeft de getransformeerde of afgeleide waarde uit aan de volgende node(s).
+- **DSL:** Specifieke Taal van het Domein.
+- **Edge:** Echte machine het Leren van de machine het scoren van de dienst kan op de clusters van Edge dichter aan uw activeringen en toepassingen worden in werking gesteld.
+- **Hub:** huidige alpha stelt de Echte machine in werking die de dienst scoring op de Hub van Adobe Experience Platform leert terwijl de Edge Network in ontwikkeling is.
+- **Knoop:** Een Knoop is de fundamentele eenheid waarvan de grafieken worden gevormd. Elke knoop voert een specifieke taak uit en zij kunnen samen gebruikend verbindingen worden geketend om een grafiek te vormen die een pijpleiding van XML vertegenwoordigt. De taak die door een knoop wordt uitgevoerd vertegenwoordigt een verrichting op inputgegevens zoals een transformatie van gegevens of schema, of een machine het leren conclusie. Het knooppunt geeft de getransformeerde of afgeleide waarde uit aan de volgende node(s).
 
 ## Datasets in Adobe Experience Platform
 
-Om te beginnen het Leren van de Machine in real time te gebruiken, moet u toegang tot een dataset hebben. U hebt de optie om een externe dataset te gebruiken en het te uploaden aan uw [!DNL JupyterLab] milieu of creeer een nieuwe dataset binnen Platform als u dit nog niet hebt gedaan.
+Om te beginnen het Leren van de Machine in real time te gebruiken, moet u toegang tot een dataset hebben. U hebt de optie om een externe dataset te gebruiken en het te uploaden aan uw [!DNL JupyterLab] milieu of een nieuwe dataset binnen Platform tot stand te brengen als u dit nog niet hebt gedaan.
 
 >[!NOTE]
 >
->Als u reeds een dataset hebt u wenst te gebruiken, kunt u overslaan aan [Volgende stappen](#next-steps).
+>Als u reeds een dataset hebt u wenst om te gebruiken, kunt u aan [ Volgende stappen ](#next-steps) overslaan.
 
 ### Een externe gegevensset gebruiken
 
-Meer informatie over het gebruiken van een externe dataset zoals het uploaden van gegevens aan uw [!DNL JupyterLab] omgeving, bezoek de zelfstudie op [uw gegevens analyseren met behulp van notebooks](../jupyterlab/analyze-your-data.md#external-data).
+Meer leren over het gebruiken van een externe dataset zoals het uploaden van gegevens aan uw [!DNL JupyterLab] milieu, bezoek het leerprogramma op [ het analyseren van uw gegevens gebruikend laptops ](../jupyterlab/analyze-your-data.md#external-data).
 
 ### Een nieuwe gegevensset maken
 
-Om een nieuwe dataset voor gebruik in het Leren van de machine in real time tot stand te brengen, hebt u een gegeven-schema voor uw dataset nodig. Vervolgens moet u gegevens invoeren met het schema dat u hebt gemaakt. Gebruik de volgende zelfstudies om een dataset te creëren en te bevolken voor [!DNL Platform]:
+Om een nieuwe dataset voor gebruik in het Leren van de machine in real time tot stand te brengen, hebt u een gegeven-schema voor uw dataset nodig. Vervolgens moet u gegevens invoeren met het schema dat u hebt gemaakt. Gebruik de volgende zelfstudies om een gegevensset voor [!DNL Platform] te maken en te vullen:
 
 - [Een gegevensset maken en vullen met de API](../../catalog/datasets/create.md)
 - [Creeer en bevolk een dataset in UI](../../ingestion/tutorials/ingest-batch-data.md)
 
 ## Volgende stappen {#next-steps}
 
-Nadat u uw gegevens hebt voorbereid voor Real-time Machine Learning, begint u met het volgen van de [Gebruikershandleiding voor laptop in realtime leren van machines](./rtml-authoring-notebook.md) leren om een model te creëren en te uploaden ONNX aan de Echte - tijd machine het Leren modelopslag.
+Zodra u uw gegevens voor het Leren van de Machine in real time hebt voorbereid, begin door de [ Echt - tijd machine te volgen die notitieboekjectgebruikershandleiding ](./rtml-authoring-notebook.md) leren hoe te om een model ONNX tot stand te brengen en te uploaden aan de het leren modelopslag in real time van de Machine.

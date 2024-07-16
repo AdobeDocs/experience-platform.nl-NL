@@ -1,7 +1,8 @@
 ---
 title: Gegevenstype aanvraaglijst
 description: Leer over het gegevenstype van de Ervaring van de Lijst van de Aanvraag het Model (XDM).
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: cbea6b08-9d4d-4cbe-b0c5-506bccc6df67
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%
@@ -10,9 +11,9 @@ ht-degree: 0%
 
 # [!UICONTROL Requisition List] gegevenstype
 
-[!UICONTROL Requisition List] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat een gebogen inzameling van punten voor aankoop of aankoop beschrijft. Gebruik de [!UICONTROL Requisition List] gegevenstype voor identificatie en beschrijving van aanvraaglijsten.
+[!UICONTROL Requisition List] is een standaard XDM-gegevenstype (Experience Data Model) waarmee een curated verzameling items voor aankoop of aankoop wordt beschreven. Gebruik het gegevenstype [!UICONTROL Requisition List] om aanvraaglijsten te identificeren en te beschrijven.
 
-![Een schema van de [!UICONTROL Requisition List] gegevenstype.](../images/data-types/requisition-list.png)
+![ een diagram van het [!UICONTROL Requisition List] gegevenstype.](../images/data-types/requisition-list.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |---------------------------|-------------------|-----------|--------------------------------------------------|
@@ -24,5 +25,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/requisitionlist.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/requisitionlist.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/requisitionlist.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/requisitionlist.schema.json)

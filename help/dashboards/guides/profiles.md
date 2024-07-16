@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # [!UICONTROL Profiles] dashboard
 
-De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over uw kunt bekijken [!DNL Real-Time Customer Profile] gegevens, zoals vastgelegd tijdens een dagelijkse momentopname. In deze handleiding wordt beschreven hoe u het dashboard Profielen in de gebruikersinterface kunt openen en gebruiken en wordt informatie gegeven over de metriek die in het dashboard wordt weergegeven.
+De gebruikersinterface van Adobe Experience Platform (UI) biedt een dashboard waarmee u belangrijke informatie over uw [!DNL Real-Time Customer Profile] gegevens kunt bekijken, zoals vastgelegd tijdens een dagelijkse momentopname. In deze handleiding wordt beschreven hoe u het dashboard Profielen in de gebruikersinterface kunt openen en gebruiken en wordt informatie gegeven over de metriek die in het dashboard wordt weergegeven.
 
-Zie de [Gebruikershandleiding voor realtime gebruikersprofiel van klanten](../../profile/ui/user-guide.md) voor een overzicht van de eigenschappen van het Profiel binnen het gebruikersinterface van het Experience Platform.
+Verwijs naar de [ Realtime gids UI van het Profiel van de Klant ](../../profile/ui/user-guide.md) voor een overzicht van de eigenschappen van het Profiel binnen het gebruikersinterface van het Experience Platform.
 
 ## Profieldashboardgegevens
 
@@ -29,31 +29,31 @@ De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op h
 
 ## Het dashboard Profielen verkennen {#explore-dashboard}
 
-Als u naar het dashboard Profielen in de interface van het platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** in de linkerspoorstaaf, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
+Als u naar het dashboard Profielen in de gebruikersinterface van het platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overview]** om het dashboard weer te geven.
 
 >[!NOTE]
 >
->Als uw organisatie nieuw aan Platform is en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, is het dashboard van Profielen niet zichtbaar. In plaats daarvan [!UICONTROL Overview] op het tabblad vindt u koppelingen en documentatie om u te helpen aan de slag te gaan met Real-Time Klantprofiel.
+>Als uw organisatie nieuw aan Platform is en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, is het dashboard van Profielen niet zichtbaar. In plaats daarvan geeft het tabblad [!UICONTROL Overview] koppelingen en documentatie weer om u te helpen aan de slag te gaan met Real-Time Klantprofiel.
 
-![Het dashboard Profielen Experience Platform met profielen en overzicht gemarkeerd.](../images/profiles/dashboard-overview.png)
+![ het dashboard van Profielen van het Experience Platform met Gemarkeerde Profielen en Overzicht.](../images/profiles/dashboard-overview.png)
 
 ### Het dashboard Profielen wijzigen {#modify-dashboard}
 
-U kunt de weergave van het dashboard Profielen wijzigen door **[!UICONTROL Modify dashboard]**. U kunt widgets verplaatsen, toevoegen, vergroten, verkleinen en verwijderen van het dashboard en toegang krijgen tot de **[!UICONTROL Widget library]** om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
+U kunt de weergave van het dashboard Profielen wijzigen door **[!UICONTROL Modify dashboard]** te selecteren. U kunt widgets verplaatsen, toevoegen, vergroten, verkleinen en verwijderen van het dashboard, en **[!UICONTROL Widget library]** openen om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
 
-Raadpleeg voor meer informatie de [wijzigen, dashboards](../customize/modify.md) en [Overzicht van widgetbibliotheek](../customize/widget-library.md) documentatie.
+Meer leren, verwijs naar [ wijzigend dashboards ](../customize/modify.md) en [ het overzicht van de bibliotheek van Widget ](../customize/widget-library.md) documentatie.
 
 ### Widgets toevoegen {#add-widget}
 
-Selecteren **[!UICONTROL Add widget]** om naar de widgetbibliotheek te navigeren en een lijst met de beschikbare widgets te bekijken die aan uw dashboard moeten worden toegevoegd.
+Selecteer **[!UICONTROL Add widget]** om naar de widgetbibliotheek te navigeren en een lijst met de beschikbare widgets weer te geven die u aan het dashboard wilt toevoegen.
 
-![Het dashboardoverzicht Profielen met de toegevoegde widget gemarkeerd.](../images/profiles/profiles-overview-add-widget.png)
+![ het het dashboardoverzicht van Profielen met toegevoegde benadrukte widget.](../images/profiles/profiles-overview-add-widget.png)
 
-In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste publiekswidgets. Raadpleeg de documentatie bij de widgetbibliotheek voor informatie over het toevoegen van widgets [Een widget toevoegen](../customize/widget-library.md#add-widgets).
+In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste publiekswidgets. Voor informatie over hoe te om widgets toe te voegen, te zien gelieve de documentatie van de widgetbibliotheek over hoe te [ een widget ](../customize/widget-library.md#add-widgets) toevoegen.
 
 ### SQL weergeven {#view-sql}
 
-U kunt SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op worden gevisualiseerd [!UICONTROL Overview] werkruimte. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten uit de gegevens van het Platform voortbrengen die op uw bedrijfsbehoeften worden gebaseerd. Voor meer informatie over deze functie raadpleegt u de [SQL UI-handleiding weergeven](../view-sql.md).
+U kunt de SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op de [!UICONTROL Overview] werkruimte worden visualiseerd. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten uit de gegevens van het Platform voortbrengen die op uw bedrijfsbehoeften worden gebaseerd. Om meer over deze eigenschap te leren, zie de [ SQL gids van de Mening UI ](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -71,17 +71,17 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## Bladeren door profielen {#browse-profiles}
 
-De [!UICONTROL Browse] kunt u de alleen-lezen profielen die in uw organisatie worden opgenomen, doorzoeken en bekijken. Van hieruit kunt u belangrijke informatie zien die tot het profiel behoort met betrekking tot hun voorkeuren, gebeurtenissen uit het verleden, interacties en doelgroepen.
+Op het tabblad [!UICONTROL Browse] kunt u zoeken naar de alleen-lezen profielen die in uw organisatie worden opgenomen. Van hieruit kunt u belangrijke informatie zien die tot het profiel behoort met betrekking tot hun voorkeuren, gebeurtenissen uit het verleden, interacties en doelgroepen.
 
 ## Profieldetails {#profile-details}
 
-Als u het dialoogvenster [!UICONTROL Profiles] [!UICONTROL Detail] werkruimte, selecteert u een [!UICONTROL Profile ID] in de lijst.
+Als u de [!UICONTROL Profiles] [!UICONTROL Detail] -werkruimte wilt openen, selecteert u een [!UICONTROL Profile ID] in de lijst.
 
-![Op het tabblad Profielen bladeren wordt een profiel-id gemarkeerd.](../images/profiles/profile-id.png)
+![ Profielen doorbladeren lusje met een benadrukte profielidentiteitskaart.](../images/profiles/profile-id.png)
 
-De [!UICONTROL Profiles] [!UICONTROL Detail] in de werkruimte worden verschillende vooraf geconfigureerde widgets weergegeven die specifieke informatie over dat profiel overbrengen. Met deze informatie kunt u in één oogopslag de belangrijkste kenmerken van het profiel begrijpen. U kunt ook uw [!UICONTROL Profiles] [!UICONTROL Detail] door uw eigen widgets te maken. Zie de sectie over [hoe u widgets kunt toevoegen](#add-widgets) voor meer informatie .
+In de werkruimte [!UICONTROL Profiles] [!UICONTROL Detail] worden verschillende vooraf geconfigureerde widgets weergegeven die specifieke informatie over dat profiel overbrengen. Met deze informatie kunt u in één oogopslag de belangrijkste kenmerken van het profiel begrijpen. U kunt de [!UICONTROL Profiles] [!UICONTROL Detail] -werkruimte ook aanpassen door uw eigen widgets te maken. Zie de sectie op [ hoe te om widgets ](#add-widgets) voor meer details toe te voegen.
 
-![De [!UICONTROL Profiles] [!UICONTROL Detail] werkruimte met de [!UICONTROL Detail] gemarkeerd.](../images/profiles/profile-details-workspace.png)
+![ de [!UICONTROL Profiles] [!UICONTROL Detail] werkruimte met het [!UICONTROL Detail] benadrukte lusje.](../images/profiles/profile-details-workspace.png)
 
 ### Profieldetails, widgets {#widgets}
 
@@ -89,95 +89,95 @@ De vooraf geconfigureerde profieldetails-widgets zijn als volgt:
 
 #### Klantprofiel {#customer-profile}
 
-De [!UICONTROL Customer profile] widget geeft de voor- en achternaam weer van de gebruiker die aan het profiel is gekoppeld, alsmede hun [!UICONTROL Profile ID]. Een profiel-id is een automatisch gegenereerde id die is gekoppeld aan een identiteitstype en die een profiel vertegenwoordigt. Voor meer informatie over identiteiten en naamruimten raadpleegt u de [overzicht van identiteiten](../../rtcdp/profile/identities-overview.md).
+De [!UICONTROL Customer profile] -widget geeft de voor- en achternaam weer van de gebruiker die aan het profiel is gekoppeld, alsmede hun [!UICONTROL Profile ID] . Een profiel-id is een automatisch gegenereerde id die is gekoppeld aan een identiteitstype en die een profiel vertegenwoordigt. Meer over identiteiten en identiteitsnamespaces leren, zie het [ overzicht van identiteiten ](../../rtcdp/profile/identities-overview.md).
 
-![De profielwidget van de klant.](../images/profiles/customer-profile.png)
+![ De het profielwidget van de Klant.](../images/profiles/customer-profile.png)
 
 #### Basiskenmerken {#basic-attributes}
 
-De [!UICONTROL Basic attributes] widget geeft de meestgebruikte kenmerken weer die worden gebruikt om een afzonderlijk profiel te definiëren.
+De widget [!UICONTROL Basic attributes] geeft de meestgebruikte kenmerken weer die worden gebruikt om een afzonderlijk profiel te definiëren.
 
-![De widget Standaardkenmerken.](../images/profiles/basic-attributes.png)
+![ De Basis attributen widget.](../images/profiles/basic-attributes.png)
 
 #### Gekoppelde identiteiten {#linked-identities}
 
-De [!UICONTROL Linked identities] widget geeft alle andere identiteiten weer die aan het profiel zijn gekoppeld.
+De [!UICONTROL Linked identities] -widget geeft alle andere identiteiten weer die aan het profiel zijn gekoppeld.
 
-Als u de identiteitsgegevens van het profiel in meer detail wilt weergeven en naar het dialoogvenster [!UICONTROL Identities] werkruimte, selecteert u **[!UICONTROL View identity graph]**.
+Selecteer **[!UICONTROL View identity graph]** als u de identiteitsgegevens van het profiel diepgaander wilt weergeven en naar de werkruimte van [!UICONTROL Identities] wilt navigeren.
 
-![De widget Gekoppelde identiteiten.](../images/profiles/linked-identities.png)
+![ Linked identiteiten widget.](../images/profiles/linked-identities.png)
 
 #### Kanaalvoorkeuren {#channel-preferences}
 
-De [!UICONTROL Channel preferences] widget geeft de communicatiekanalen weer waarvan de gebruiker toestemming heeft gegeven om communicatie van te ontvangen. Een vinkje geeft elk kanaal aan dat de gebruiker heeft geaccepteerd om communicatie van te ontvangen.
+De widget [!UICONTROL Channel preferences] geeft de communicatiekanalen weer waarvan de gebruiker toestemming heeft gegeven om communicatie van te ontvangen. Een vinkje geeft elk kanaal aan dat de gebruiker heeft geaccepteerd om communicatie van te ontvangen.
 
 <!-- image needs a blue tick added below -->
 
-![De widget Kanaalvoorkeuren.](../images/profiles/channel-preferences.png)
+![ de voorkeur widget van het Kanaal.](../images/profiles/channel-preferences.png)
 
 De toestemming van de klant en de contactvoorkeur zijn complexe onderwerpen. Als u wilt weten hoe toestemmings- en contextvoorkeuren kunnen worden verzameld, verwerkt en gefilterd in Experience Platform, kunt u het beste de volgende documenten lezen:
 
-* Om over de groepen van het schemagebied te leren die worden vereist om [gegevens over de toestemming verzamelen overeenkomstig de norm voor Adobe](../../landing/governance-privacy-security/consent/adobe/overview.md), zie de documentatie op deze profiel-Toegelaten groepen van het schemagebied.
+* Om over de groepen van het schemagebied te leren die worden vereist om [ toestemmingsgegevens volgens de norm van de Adobe ](../../landing/governance-privacy-security/consent/adobe/overview.md) te verzamelen, zie de documentatie over deze profiel-Toegelaten groepen van het schemagebied.
    * [[!UICONTROL Consent and Preference Details]](../../xdm/field-groups/profile/consents.md)
    * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (vereist als het gebruiken van het Web van het Platform of Mobiele SDK om toestemmingssignalen te verzenden)
-* Als u wilt leren hoe u toestemming van klanten en voorkeursgegevens kunt verwerken met de standaard Adobe, raadpleegt u het overzicht over [verwerking van toestemming in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
-* Een gecombineerd beleid voor gegevensbeheer en instemming kan worden gebruikt om profielen voor segmentatie te filteren op basis van hun voorkeuren voor toestemming en uw vastgestelde organisatorische regels. Om te leren om dit gecombineerde beleid tot stand te brengen en te gebruiken, zie de gebruikersgids op [beleid voor gegevensgebruik beheren](../../data-governance/policies/user-guide.md#combine-policies).
+* Leren hoe te om klantentoestemming en voorkeursgegevens te verwerken gebruikend de norm van de Adobe, zie het overzicht over [ toestemmingsverwerking in Experience Platform ](../../landing/governance-privacy-security/consent/adobe/overview.md).
+* Een gecombineerd beleid voor gegevensbeheer en instemming kan worden gebruikt om profielen voor segmentatie te filteren op basis van hun voorkeuren voor toestemming en uw vastgestelde organisatorische regels. Leren om dit gecombineerde beleid tot stand te brengen en te gebruiken, zie de gebruikersgids over [ het beheren van het beleid van het gegevensgebruik ](../../data-governance/policies/user-guide.md#combine-policies).
 
 ### Widgets toevoegen {#add-widgets}
 
-Aangepaste widgets toevoegen aan uw [!UICONTROL Profiles] [!UICONTROL Detail] werkruimte, selecteert u **[!UICONTROL Customize profile details]**.
+Als u aangepaste widgets wilt toevoegen aan uw [!UICONTROL Profiles] [!UICONTROL Detail] -werkruimte, selecteert u **[!UICONTROL Customize profile details]** .
 
-![De werkruimte Profielgegevens met [!UICONTROL Customize profile details] gemarkeerd.](../images/profiles/customize-profile-details.png)
+![ de werkruimte van het Detail van Profielen met [!UICONTROL Customize profile details] benadrukt.](../images/profiles/customize-profile-details.png)
 
-U kunt de werkruimte nu bewerken door de widgets te vergroten of te verkleinen of te verplaatsen. Selecteren **[!UICONTROL Add widget]** om een widget met aangepaste kenmerken te maken.
+U kunt de werkruimte nu bewerken door de widgets te vergroten of te verkleinen of te verplaatsen. Selecteer **[!UICONTROL Add widget]** om een widget met aangepaste kenmerken te maken.
 
-![De profielen [!UICONTROL Detail] werkruimte met [!UICONTROL Add widget] gemarkeerd.](../images/profiles/add-widget.png)
+![ de profielen [!UICONTROL Detail] werkruimte met [!UICONTROL Add widget] benadrukte.](../images/profiles/add-widget.png)
 
-De maker van de widget wordt weergegeven. Voer een beschrijvende naam voor de widget in het dialoogvenster [!UICONTROL Card title] tekstveld en selecteer **[!UICONTROL Add attributes]**.
+De maker van de widget wordt weergegeven. Voer in het tekstveld [!UICONTROL Card title] een beschrijvende naam voor de widget in en selecteer **[!UICONTROL Add attributes]** .
 
-![Het canvas van de widget-maker met de [!UICONTROL Card title] veld en [!UICONTROL Add attributes] gemarkeerd.](../images/profiles/widget-creator.png)
+![ het widgetcreatorcanvas met het [!UICONTROL Card title] gebied en [!UICONTROL Add attributes] benadrukte.](../images/profiles/widget-creator.png)
 
-Er wordt een dialoogvenster weergegeven met een visualisatie van het samenvoegingsschema van het profiel. Gebruik het zoekveld of de schuifbalk om te zoeken naar de kenmerken waarover u met de widget wilt rapporteren. Schakel het selectievakje in voor alle kenmerken die u wilt opnemen. Selecteren **[!UICONTROL Select]** om door te gaan met de aanmaakworkflow.
+Er wordt een dialoogvenster weergegeven met een visualisatie van het samenvoegingsschema van het profiel. Gebruik het zoekveld of de schuifbalk om te zoeken naar de kenmerken waarover u met de widget wilt rapporteren. Schakel het selectievakje in voor alle kenmerken die u wilt opnemen. Selecteer **[!UICONTROL Select]** om door te gaan met de ontwerpworkflow.
 
 >[!TIP]
 >
 >Een selectie van het bovenste selectievakje bevat eventuele onderliggende elementen.
 
-![Het schema van de unie met het vakje van de loyaliteitsattributen en [!UICONTROL Select] gemarkeerd.](../images/profiles/union-schema-attributes.png)
+![ het diagram van het unieschema met het vakje van de loyaliteitattributen en [!UICONTROL Select] benadrukte.](../images/profiles/union-schema-attributes.png)
 
-Er wordt een voorvertoning van de voltooide widget weergegeven op het canvas. Als u tevreden bent met de door u gekozen kenmerken, selecteert u **[!UICONTROL Save]** om je keuzes te bevestigen en terug te keren naar de [!UICONTROL Profiles] [!UICONTROL Detail] werkruimte. De nieuwe widget is nu zichtbaar in de werkruimte.
+Er wordt een voorvertoning van de voltooide widget weergegeven op het canvas. Als u tevreden bent met de gekozen kenmerken, selecteert u **[!UICONTROL Save]** om uw keuzes te bevestigen en terug te keren naar de [!UICONTROL Profiles] [!UICONTROL Detail] -werkruimte. De nieuwe widget is nu zichtbaar in de werkruimte.
 
-![Het canvas van de maker van de widget met Opslaan gemarkeerd en de voorvertoning van de widget weergeven.](../images/profiles/widget-preview.png)
+![ het canvas van de de creator widget met sparen benadrukte en tonend de widgetvoorproef.](../images/profiles/widget-preview.png)
 
 ## Beleid samenvoegen {#merge-policies}
 
 De metriek die in het dashboard van Profielen wordt getoond is gebaseerd op samenvoegbeleid dat op uw gegevens van het Profiel van de Klant in real time wordt toegepast. Wanneer gegevens uit meerdere bronnen worden samengevoegd om het klantprofiel te maken, kunnen de gegevens conflicterende waarden bevatten. Bijvoorbeeld, kan één dataset een klant als &quot;enig&quot;vermelden terwijl een andere dataset de klant als &quot;gehuwd&quot;kan vermelden. Het is de taak van het fusiebeleid om te bepalen welke gegevens aan prioriteit en vertoning als deel van het profiel moeten.
 
-Voor meer informatie over fusiebeleid, met inbegrip van hoe te om, een standaard fusiebeleid voor uw organisatie tot stand te brengen uit te geven uit te voeren, verwijs naar [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md).
+Voor meer informatie over fusiebeleid, met inbegrip van hoe te om, een standaardfusiebeleid voor uw organisatie tot stand te brengen uit te geven en te verklaren, verwijs naar het [ overzicht van het fusiebeleid ](../../profile/merge-policies/overview.md).
 
 Op het dashboard wordt automatisch een samenvoegbeleid geselecteerd dat moet worden gebruikt. Het toegepaste samenvoegbeleid kan worden gewijzigd via het vervolgkeuzemenu naast de naam van het samenvoegbeleid.
 
 >[!NOTE]
 >
->Het vervolgkeuzemenu bevat alleen samenvoegbeleidsregels die gebruikmaken van de `_xdm.context.profile` schema. Nochtans, als uw organisatie veelvoudige samenvoegingsbeleid heeft gecreeerd, kan het betekenen dat u moet scrollen om de volledige lijst van beschikbare samenvoegingsbeleid te bekijken.
+>In het vervolgkeuzemenu ziet u alleen samenvoegbeleidsregels die gebruikmaken van het schema `_xdm.context.profile` . Nochtans, als uw organisatie veelvoudige samenvoegingsbeleid heeft gecreeerd, kan het betekenen dat u moet scrollen om de volledige lijst van beschikbare samenvoegingsbeleid te bekijken.
 
-![Het tabblad Profielen met de vervolgkeuzelijst Samenvoegbeleid gemarkeerd.](../images/profiles/select-merge-policy.png)
+![ het het overzichtslusje van Profielen met de benadrukte dropdown van het samenvoegbeleid.](../images/profiles/select-merge-policy.png)
 
 ## Unieregelingen
 
-De [!UICONTROL Union Schema] Het dashboard geeft het samenvoegingsschema voor een specifieke XDM-klasse weer. Als u **[!UICONTROL Class]** in het vervolgkeuzemenu kunt u de samenvoegingsschema&#39;s voor verschillende XDM-klassen weergeven.
+Het dashboard van [!UICONTROL Union Schema] toont het verenigingsschema voor een specifieke klasse XDM. Door het vervolgkeuzemenu **[!UICONTROL Class]** te selecteren, kunt u de samenvoegingsschema&#39;s voor verschillende XDM-klassen bekijken.
 
 De schema&#39;s van de unie zijn samengesteld uit veelvoudige schema&#39;s die de zelfde klasse delen en voor Profiel toegelaten. Ze stellen u in staat om in één weergave een samenvoeging te zien van elk veld in elk schema dat dezelfde klasse deelt.
 
-Meer informatie over [Unieschema&#39;s weergeven in de interface van het platform](../../profile/ui/union-schema.md#view-union-schemas), raadpleegt u de UI-handleiding voor het samenvoegingsschema.
+Meer over [ het bekijken verenigingsschema&#39;s binnen het Platform UI ](../../profile/ui/union-schema.md#view-union-schemas) leren, verwijs naar de gids van het unieschema UI.
 
 ## Widgets en metriek
 
 Het dashboard bestaat uit widgets. Dit zijn alleen-lezen metriek die belangrijke informatie over uw profielgegevens verschaft.
 
-De datum en tijd van de meest recente opname worden boven aan het dialoogvenster [!UICONTROL Overview] naast de vervolgkeuzelijst Samenvoegingsbeleid. Alle widgetgegevens zijn nauwkeurig vanaf die datum en tijd. De tijdstempel van de momentopname wordt opgegeven in UTC; deze bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
+De datum en tijd van de meest recente momentopname worden getoond bij de bovenkant van het [!UICONTROL Overview] lusje naast de dropdown van het fusiebeleid. Alle widgetgegevens zijn nauwkeurig vanaf die datum en tijd. De tijdstempel van de momentopname wordt opgegeven in UTC; deze bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
 
-![Het tabblad Overzicht van het dashboard Profielen met de meest recente tijdstempel voor momentopnamen gemarkeerd.](../images/profiles/snapshot-timestamp.png)
+![ het lusje van het het overzichtsoverzicht van Profielen met de meest recente benadrukte momentopname timestamp.](../images/profiles/snapshot-timestamp.png)
 
 ## Standaardwidgets {#default-widgets}
 
@@ -191,11 +191,11 @@ Voor alle nieuwe Adobe Experience Platform-instanties wordt een standaardwidgetb
 
 >[!NOTE]
 >
->Vanaf 26 juli 2023 [!UICONTROL Profiles], [!UICONTROL Audiences], en [!UICONTROL Destinations] De overzichtdashboards zijn teruggesteld aan een nieuwe gebrek widget lading-uit voor alle gebruikers die hun meningen in de voorafgaande zes maanden niet veranderden. Raadpleeg de documentatie in het dialoogvenster [Doelen](./destinations.md#default-widgets) en [Soorten publiek](./audiences.md#default-widgets) standaardwidgetsecties voor details waarop widgets zijn opgenomen als onderdeel van de standaard-widget-taaktaken. U kunt uw dashboardwidgets op dezelfde manier blijven aanpassen als voorheen.
+>Vanaf 26 juli 2023 zijn de dashboards met het overzicht [!UICONTROL Profiles] , [!UICONTROL Audiences] en [!UICONTROL Destinations] opnieuw ingesteld op een nieuwe standaardwidgetbelasting voor alle gebruikers die hun weergaven in de afgelopen zes maanden niet hebben gewijzigd. Verwijs naar de documentatie in de [ Doelen ](./destinations.md#default-widgets) en [ de 3} standaardwidgetsecties van het publiek {voor details waarop widgets als deel van standaard widget lading-outs inbegrepen zijn. ](./audiences.md#default-widgets) U kunt uw dashboardwidgets op dezelfde manier blijven aanpassen als voorheen.
 
 ## AI-widgets van klant {#customer-ai-profiles-widgets}
 
-Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie voor individuele profielen op schaal te genereren. De AI van de klant doet dit door bestaande gegevens van de Gebeurtenis van de Consumentenervaring te analyseren om te voorspellen **scores voor churn- of conversiedichtheid**. Deze zeer nauwkeurige modellen van de klantenneiging staan voor nauwkeurigere segmentatie en het richten toe. De [verdeling van scores](#customer-ai-distribution-of-scores) en [overzicht van scores](#customer-ai-scoring-summary) inzichten tonen de verdeeldheid in uw publiek aan . Ze benadrukken welke profielen de hoge/lage/gemiddelde dichtheid zijn en hoe deze over het aantal profielen worden verdeeld.
+Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie voor individuele profielen op schaal te genereren. De klant AI doet dit door de bestaande gegevens van de Gebeurtenis van de Ervaring van de consument te analyseren om **te voorspellen de dun of de scores van de omzetsingsvolheid**. Deze zeer nauwkeurige modellen van de klantenneiging staan voor nauwkeurigere segmentatie en het richten toe. De [ distributie van scores ](#customer-ai-distribution-of-scores) en [ het scoren samenvatting ](#customer-ai-scoring-summary) inzichten tonen de afdeling in uw publiek aan. Ze benadrukken welke profielen de hoge/lage/gemiddelde dichtheid zijn en hoe deze over het aantal profielen worden verdeeld.
 
 * [[!UICONTROL Customer AI scoring summary]](#customer-ai-scoring-summary)
 * [[!UICONTROL Customer AI distribution of scores]](#customer-ai-distribution-of-scores)
@@ -207,27 +207,27 @@ Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie 
 >title="Verdeling van scores"
 >abstract="Deze widget visualiseert de verdeling van het totale aantal profielen aan de hand van hun eigenschapscores in stappen van 5 procent. De verdeling van het profielaantal wordt bepaald door het AI-model en het geselecteerde samenvoegbeleid. U kunt het AI-model wijzigen in het vervolgkeuzemenu onder de titel van de widget."
 
-De [!UICONTROL Customer AI distribution of scores] widget categoriseert het totale aantal profielen op basis van hun populatiescore . De verdeling van het profielaantal wordt bepaald door het AI model en het geselecteerde fusiebeleid, dan visualiseerd in vijf percententoename die op hun neiging wijzen. Het aantal profielen wordt opgegeven langs de Y-as en de dichtheidsscores langs de X-as.
+De [!UICONTROL Customer AI distribution of scores] -widget categoriseert het totale aantal profielen op basis van hun densiteitsscores. De verdeling van het profielaantal wordt bepaald door het AI model en het geselecteerde fusiebeleid, dan visualiseerd in vijf percententoename die op hun neiging wijzen. Het aantal profielen wordt opgegeven langs de Y-as en de dichtheidsscores langs de X-as.
 
 >[!NOTE]
 >
 >Als de visualisatie een conversiesnelheidsscore is, worden de hoge scores groen en de lage scores rood weergegeven. Als je de eigenheid van de kroon voorspelt, wordt deze gespiegeld, dan zijn de hoge scores rood en zijn de lage scores groen. Het gemiddelde emmertje blijft geel ongeacht welk aandrijvingstype u kiest.
 
-Het AI-model waarmee de densiteitsscores worden bepaald, wordt gekozen uit de vervolgkeuzelijst onder de titel van de widget. Het vervolgkeuzemenu bevat een lijst met alle geconfigureerde AI-modellen van de Klant. Selecteer het juiste AI-model voor uw analyse in de lijst met beschikbare modellen. Als er geen AI-model van de Klant beschikbaar is, geeft een bericht in de widget u de opdracht ten minste één AI-model van de Klant te configureren en wordt een hyperlink naar de configuratiepagina van het AI-model van de Klant weergegeven. Zie de documentatie voor instructies op [hoe te om een instantie van de KlantAI te vormen](../../intelligent-services/customer-ai/user-guide/configure.md).
+Het AI-model waarmee de densiteitsscores worden bepaald, wordt gekozen uit de vervolgkeuzelijst onder de titel van de widget. Het vervolgkeuzemenu bevat een lijst met alle geconfigureerde AI-modellen van de Klant. Selecteer het juiste AI-model voor uw analyse in de lijst met beschikbare modellen. Als er geen AI-model van de Klant beschikbaar is, geeft een bericht in de widget u de opdracht ten minste één AI-model van de Klant te configureren en wordt een hyperlink naar de configuratiepagina van het AI-model van de Klant weergegeven. Zie de documentatie voor instructies op [ hoe te om een instantie van AI van de Klant te vormen ](../../intelligent-services/customer-ai/user-guide/configure.md).
 
 >[!NOTE]
 >
->Selecteer de vervolgkeuzelijst direct onder het tabblad Overzicht om het samenvoegbeleid te wijzigen dat bepaalt welke profielen in de analyse worden opgenomen. Zie de sectie over [beleid samenvoegen](#merge-policies) voor een korte beschrijving, of [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md) voor meer informatie .
+>Selecteer de vervolgkeuzelijst direct onder het tabblad Overzicht om het samenvoegbeleid te wijzigen dat bepaalt welke profielen in de analyse worden opgenomen. Zie de sectie over [ fusiebeleid ](#merge-policies) voor een korte beschrijving, of het [ overzicht van het fusiebeleid ](../../profile/merge-policies/overview.md) voor meer details.
 
-Als u naar de pagina Gedetailleerde inzichten voor het geselecteerde AI-model van de Klant wilt navigeren, selecteert u **[!UICONTROL View model details]**.
+Selecteer **[!UICONTROL View model details]** om naar de pagina met gedetailleerde inzichten voor het geselecteerde AI-model van de Klant te navigeren.
 
-![Het Experience Platform Soorten publiek dashboard met het [!UICONTROL Customer AI distribution of scores] widget en [!UICONTROL View model details] gemarkeerd.](../images/segments/customer-ai-distribution-of-scores.png)
+![ het dashboard van het Soorten Soorten publiek van het Experience Platform met [!UICONTROL Customer AI distribution of scores] wordt benadrukt widget en [!UICONTROL View model details].](../images/segments/customer-ai-distribution-of-scores.png)
 
 De gedetailleerde pagina met modelinzichten wordt weergegeven.
 
-![De pagina met inzichten voor de AI van de Klant.](../images/profiles/customer-ai-insights-page.png)
+![ de pagina van Inzichten voor Klant AI.](../images/profiles/customer-ai-insights-page.png)
 
-Meer informatie over de AI van de Klant vindt u op de [Dreamweaver-handleiding voor inzichten](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+Meer informatie over Klant AI kan op [ worden gevonden ontdek de gids van inzicht UI ](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ### [!UICONTROL Customer AI scoring summary] {#customer-ai-scoring-summary}
 
@@ -242,19 +242,19 @@ Deze widget geeft het totale aantal profielen met een score weer en categoriseer
 >
 >Als de visualisatie een conversiesnelheidsscore is, worden de hoge scores groen en de lage scores rood weergegeven. Als je de eigenheid van de kroon voorspelt, wordt deze gespiegeld, dan zijn de hoge scores rood en zijn de lage scores groen. Het gemiddelde emmertje blijft geel ongeacht welk aandrijvingstype u kiest.
 
-Het vervolgkeuzemenu onder de widgettitel bevat een lijst met alle geconfigureerde AI-modellen van de Klant. Selecteer het juiste AI-model voor uw analyse in de lijst met beschikbare modellen. Als er geen AI-model van de Klant beschikbaar is, geeft een bericht in de widget u de opdracht ten minste één AI-model van de Klant te configureren en wordt een hyperlink naar de configuratiepagina van het AI-model van de Klant weergegeven. Zie de documentatie op [hoe te om een instantie van de KlantAI te vormen](../../intelligent-services/customer-ai/user-guide/configure.md) voor gedetailleerde instructies.
+Het vervolgkeuzemenu onder de widgettitel bevat een lijst met alle geconfigureerde AI-modellen van de Klant. Selecteer het juiste AI-model voor uw analyse in de lijst met beschikbare modellen. Als er geen AI-model van de Klant beschikbaar is, geeft een bericht in de widget u de opdracht ten minste één AI-model van de Klant te configureren en wordt een hyperlink naar de configuratiepagina van het AI-model van de Klant weergegeven. Zie de documentatie op [ hoe te om een instantie van AI van de Klant ](../../intelligent-services/customer-ai/user-guide/configure.md) voor gedetailleerde instructies te vormen.
 
 >[!NOTE]
 >
->Het totale aantal berekende profielen is afhankelijk van het gekozen samenvoegingsbeleid. Als u het gebruikte samenvoegingsbeleid wilt wijzigen, selecteert u de vervolgkeuzelijst direct onder het tabblad Overzicht. Zie de sectie over [beleid samenvoegen](#merge-policies) voor een korte beschrijving, of [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md) voor meer informatie .
+>Het totale aantal berekende profielen is afhankelijk van het gekozen samenvoegingsbeleid. Als u het gebruikte samenvoegingsbeleid wilt wijzigen, selecteert u de vervolgkeuzelijst direct onder het tabblad Overzicht. Zie de sectie over [ fusiebeleid ](#merge-policies) voor een korte beschrijving, of het [ overzicht van het fusiebeleid ](../../profile/merge-policies/overview.md) voor meer details.
 
-![Het dashboard Soorten publiek van het Experience Platform met de overzichtswidget voor scores van de Klant AI gemarkeerd.](../images/segments/customer-ai-scoring-summary.png)
+![ het dashboard van de Soorten Soorten Soorten publiek van het Experience Platform met de benadrukte het scoren van de Klant AI summiere widget.](../images/segments/customer-ai-scoring-summary.png)
 
-Als u naar de pagina Gedetailleerde inzichten voor het geselecteerde AI-model van de Klant wilt navigeren, selecteert u **[!UICONTROL View model details]**. Meer informatie over de AI van de Klant vindt u op de [Dreamweaver-handleiding voor inzichten](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+Selecteer **[!UICONTROL View model details]** om naar de pagina met gedetailleerde inzichten voor het geselecteerde AI-model van de Klant te navigeren. Meer informatie over Klant AI kan op [ worden gevonden ontdek de gids van inzicht UI ](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ## Standaardwidgets {#standard-widgets}
 
-Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op de profielgegevens. U kunt ook aangepaste widgets maken die u met uw organisatie kunt delen met de [!UICONTROL Widget library]. Als u meer wilt weten over het maken van aangepaste widgets, leest u eerst de [Overzicht van widgetbibliotheek](../customize/widget-library.md).
+Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op de profielgegevens. U kunt ook aangepaste widgets maken die u met uw organisatie wilt delen met de [!UICONTROL Widget library] . Meer leren over het creëren van douanewidgets, begin door het [ overzicht van de bibliotheek van Widget ](../customize/widget-library.md) te lezen.
 
 Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
@@ -283,38 +283,38 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 >title="Aantal profielen"
 >abstract="Deze widget geeft het totale aantal samengevoegde profielen weer in de profielenwinkel op het moment dat de momentopname werd gemaakt. Het getal is afhankelijk van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens."
 
-De **[!UICONTROL Profile count]** widget geeft het totale aantal samengevoegde profielen weer in de profielenwinkel op het moment dat de momentopname werd gemaakt. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
+De **[!UICONTROL Profile count]** -widget geeft het totale aantal samengevoegde profielen weer in de profielenwinkel op het moment dat de momentopname werd gemaakt. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
 
-Zie de [sectie over samenvoegbeleid eerder in dit document](#merge-policies) voor meer informatie.
+Zie de [ sectie over samenvoegbeleid vroeger in dit document ](#merge-policies) om meer te leren.
 
 >[!NOTE]
 >
->De [!UICONTROL Profile count] widget kan een ander getal weergeven dan het aantal profielen dat wordt weergegeven op het tabblad [!UICONTROL Browse] in de [!UICONTROL Profiles] om meerdere redenen. De meest voorkomende reden voor dit verschil is dat [!UICONTROL Browse] tabblad verwijst naar het totale aantal samengevoegde profielen dat is gebaseerd op het standaardsamenvoegbeleid van uw organisatie, terwijl de [!UICONTROL Profile count] widget verwijst naar het totale aantal samengevoegde profielen op basis van het samenvoegbeleid dat u hebt geselecteerd voor weergave op het dashboard.
+>De [!UICONTROL Profile count] -widget kan om meerdere redenen een ander getal weergeven dan het aantal profielen dat wordt weergegeven op het tabblad [!UICONTROL Browse] in de sectie [!UICONTROL Profiles] van de gebruikersinterface. De meest gebruikelijke reden voor dit verschil is dat het tabblad [!UICONTROL Browse] verwijst naar het totale aantal samengevoegde profielen dat is gebaseerd op het standaardsamenvoegbeleid van uw organisatie, terwijl de [!UICONTROL Profile count] -widget verwijst naar het totale aantal samengevoegde profielen dat is gebaseerd op het samenvoegbeleid dat u hebt geselecteerd om te bekijken in het dashboard.
 >
->Een andere algemene reden is dat er verschillen zijn tussen de tijd waarop de dashboardmomentopname wordt gemaakt en de tijd waarop de voorbeeldtaak voor de [!UICONTROL Browse] tab. U kunt zien wanneer de [!UICONTROL Profile count] widget is voor het laatst bijgewerkt door naar de tijdstempel op de widget te kijken. Meer informatie over de manier waarop de voorbeeldtaak wordt geactiveerd op het tabblad [!UICONTROL Browse] tabblad, zie de [de sectie van het profielaantal in de Realtime gids van het Profiel van de Klant UI](../../profile/ui/user-guide.md#profile-count).
+>Een andere algemene reden is dat er verschillen zijn tussen de tijd waarop de dashboardmomentopname wordt gemaakt en de tijd waarop de voorbeeldtaak voor het tabblad [!UICONTROL Browse] wordt uitgevoerd. U kunt zien wanneer de [!UICONTROL Profile count] -widget voor het laatst is bijgewerkt door de tijdstempel op de widget te bekijken. Meer over leren hoe de steekproefbaan op het [!UICONTROL Browse] lusje wordt teweeggebracht, zie de [ sectie van de profieltelling in de Realtime gids UI van het Profiel van de Klant ](../../profile/ui/user-guide.md#profile-count).
 
-![Het dashboard Profielen Experience Platform met de widget Aantal profielen gemarkeerd.](../images/profiles/profile-count.png)
+![ het dashboard van Profielen van het Experience Platform met benadrukte de tellings van het Profiel widget.](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Profile count trend] {#profile-count-trend}
 
-De [!UICONTROL Profile count trend] widget gebruikt een lijngrafiek om de trend in het totale aantal profielen in het systeem in tijd te illustreren. Dit totale aantal bevat alle profielen die sinds de laatste dagelijkse momentopname in het systeem zijn geïmporteerd. De gegevens kunnen gedurende perioden van 30 dagen, 90 dagen en 12 maanden worden weergegeven. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget.
+De widget [!UICONTROL Profile count trend] gebruikt een lijngrafiek om de trend in het totale aantal profielen in het systeem in de loop van de tijd te illustreren. Dit totale aantal bevat alle profielen die sinds de laatste dagelijkse momentopname in het systeem zijn geïmporteerd. De gegevens kunnen gedurende perioden van 30 dagen, 90 dagen en 12 maanden worden weergegeven. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget.
 
-![De trendwidget Aantal profielen.](../images/profiles/profile-count-trend.png)
+![ de trendwidget van de Aantal van het Profiel.](../images/profiles/profile-count-trend.png)
 
 ### [!UICONTROL Profile count change] {#profile-count-change}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescountchange"
 >title="Wijziging van aantal profielen"
->abstract="Deze widget geeft het totale aantal samengevoegde profielen weer **added** naar de profielenwinkel op het moment van de laatste opname. Het getal is afhankelijk van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens."
+>abstract="Deze widget toont het totale aantal samengevoegde profielen **** toegevoegd aan de opslag van het Profiel op het tijdstip van de laatste momentopname. Het getal is afhankelijk van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens."
 
-De **[!UICONTROL Profile count change]** wordt het aantal samengevoegde profielen weergegeven dat sinds de vorige momentopname aan de profielopslag is toegevoegd. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon. U kunt de keuzekiezer gebruiken om het aantal toegevoegde profielen weer te geven in de afgelopen 30 dagen, 90 dagen of 12 maanden.
+De **[!UICONTROL Profile count change]** -widget geeft het aantal samengevoegde profielen weer dat sinds de vorige momentopname aan de profielopslag is toegevoegd. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon. U kunt de keuzekiezer gebruiken om het aantal toegevoegde profielen weer te geven in de afgelopen 30 dagen, 90 dagen of 12 maanden.
 
 >[!NOTE]
 >
->De [!UICONTROL Profile count change] widget geeft het aantal toegevoegde profielen aan **na** de eerste configuratie van de profielopname en het profielarchief. Met andere woorden, als uw organisatie de opslag van het Profiel opstelde en 4.000.000 op Dag 1 innam, zou het dashboard binnen 24 uur beschikbaar zijn, nochtans het [!UICONTROL Profile count change] widget wordt ingesteld op 0. Deze telmethode wordt gebruikt om een piek te voorkomen die verband houdt met de eerste opname van profielen in het systeem. In de komende 30 dagen, neemt uw organisatie een extra 1.000.000 profielen in de opslag van het Profiel op. Nadat de volgende opname wordt genomen, [!UICONTROL Profile count change] widget zou in totaal 1.000.000 toegevoegde profielen weergeven, terwijl de widget [!UICONTROL Profile count] widget zou in totaal 5.000.000 profielen weergeven.
+>De [!UICONTROL Profile count change] widget wijst op het aantal toegevoegde profielen **na** de aanvankelijke profielopname en de opslagopstelling van het Profiel. Met andere woorden, als uw organisatie de opslag van het Profiel opstelde en 4.000.000 op Dag 1 innam, zou het dashboard binnen 24 uur beschikbaar zijn, nochtans [!UICONTROL Profile count change] widget aan 0 worden geplaatst. Deze telmethode wordt gebruikt om een piek te voorkomen die verband houdt met de eerste opname van profielen in het systeem. In de komende 30 dagen, neemt uw organisatie een extra 1.000.000 profielen in de opslag van het Profiel op. Nadat de volgende opname is gemaakt, geeft de [!UICONTROL Profile count change] -widget in totaal 1.000.000 toegevoegde profielen weer, terwijl de [!UICONTROL Profile count] -widget in totaal 5.000.000 profielen zou weergeven.
 
-![Het UI-profieldashboard van het platform met de widget voor het wijzigen van het aantal profielen gemarkeerd.](../images/profiles/profile-count-change.png)
+![ het Platform UI Profielt dashboard met de benadrukte de veranderingswidget van het Aantal van het Profiel.](../images/profiles/profile-count-change.png)
 
 ### [!UICONTROL Profiles count change trend] {#profiles-count-change-trend}
 
@@ -323,17 +323,17 @@ De **[!UICONTROL Profile count change]** wordt het aantal samengevoegde profiele
 >title="Ontwikkeling van aantal profielen"
 >abstract="Deze widget geeft het aantal samengevoegde profielen weer dat de afgelopen 30 dagen, 90 dagen of 12 maanden dagelijks aan de profielopslag is toegevoegd. Het nummer hangt ook af van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens."
 
-De **[!UICONTROL Profiles count change trend]** widget geeft het totale aantal samengevoegde profielen weer dat de afgelopen 30 dagen, 90 dagen of 12 maanden dagelijks is toegevoegd aan de profielopslag. Dit aantal wordt bijgewerkt elke dag wanneer de momentopname wordt genomen, daarom als u profielen in Platform zou moeten opnemen, zou het aantal profielen niet worden weerspiegeld tot de volgende momentopname wordt genomen. Het aantal toegevoegde profielen is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op uw profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
+De **[!UICONTROL Profiles count change trend]** -widget geeft het totale aantal samengevoegde profielen weer dat de afgelopen 30 dagen, 90 dagen of 12 maanden dagelijks is toegevoegd aan de profielopslag. Dit aantal wordt bijgewerkt elke dag wanneer de momentopname wordt genomen, daarom als u profielen in Platform zou moeten opnemen, zou het aantal profielen niet worden weerspiegeld tot de volgende momentopname wordt genomen. Het aantal toegevoegde profielen is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op uw profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
 
-Raadpleeg voor meer informatie de [sectie over samenvoegbeleid eerder in dit document](#merge-policies).
+Meer leren, verwijs naar de [ sectie over fusiebeleid vroeger in dit document ](#merge-policies).
 
-De **[!UICONTROL Profiles count change trend]** widget geeft een &#39;bijschriftknop&#39; in de rechterbovenhoek van de widget weer. Selecteer **[!UICONTROL Captions]**.
+De widget **[!UICONTROL Profiles count change trend]** geeft een knop &#39;Bijschriften&#39; weer, rechtsboven in de widget. Selecteer **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
 
-![Het tabblad Profieloverzicht waarin de trendwijzigingswidget voor het aantal profielen wordt weergegeven met de knop Bijschriften gemarkeerd.](../images/profiles/profiles-count-change-trend-captions.png)
+![ het het overzichtslusje dat van het Profiel de trendwidget toont van de verandering van het Aantal Profielen met de benadrukte titelknoop.](../images/profiles/profiles-count-change-trend-captions.png)
 
 Een machine het leren model produceert automatisch titels voor het beschrijven van de belangrijkste tendensen en belangrijke gebeurtenissen door de grafiek en de gegevens te analyseren. Annotaties worden op basis van de bijschriften toegevoegd aan het diagram. Selecteer een bijschrift waarop u de bijbehorende annotatie wilt toepassen.
 
-![Het dialoogvenster met automatische bijschriften voor de trendwidget voor het aantal profielen verandert.](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
+![ de automatische dialoog van titels voor de Van de de tellingverandering van Profielen widget.](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
 
 ### [!UICONTROL Profiles count change trend by identity] {#profiles-count-change-trend-by-identity}
 
@@ -343,7 +343,7 @@ Deze widget filtert het aantal profielen op basis van een geselecteerde broniden
 
 Met deze widget kunt u de behoeften voor doelactivering beheren door het groeipatroon van profielen aan te tonen die met een vereiste identiteit zijn gefilterd.
 
-![De trend in het aantal profielen verandert per identiteitswidget.](../images/profiles/profiles-count-change-trend-by-identity.png)
+![ de trend van de verandering van het aantal Profielen door identiteit widget.](../images/profiles/profiles-count-change-trend-by-identity.png)
 
 ### [!UICONTROL Profiles by identity] {#profiles-by-identity}
 
@@ -352,19 +352,19 @@ Met deze widget kunt u de behoeften voor doelactivering beheren door het groeipa
 >title="Profielen op identiteit"
 >abstract="Deze widget geeft de indeling van alle samengevoegde profielen in uw profielenarchief op identiteiten weer."
 
-De **[!UICONTROL Profiles by identity]** De widget geeft de indeling van de identiteiten weer in alle samengevoegde profielen in de winkel Profiel. Het totale aantal profielen op basis van identiteit (met andere woorden, door de waarden voor elke naamruimte bij elkaar op te tellen) kan hoger zijn dan het totale aantal samengevoegde profielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zouden de veelvoudige namespaces met die individuele klant worden geassocieerd.
+De **[!UICONTROL Profiles by identity]** -widget geeft de indeling van de identiteiten weer in alle samengevoegde profielen in uw profielenarchief. Het totale aantal profielen op basis van identiteit (met andere woorden, door de waarden voor elke naamruimte bij elkaar op te tellen) kan hoger zijn dan het totale aantal samengevoegde profielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zouden de veelvoudige namespaces met die individuele klant worden geassocieerd.
 
-Raadpleeg voor meer informatie de [sectie over samenvoegbeleid eerder in dit document](#merge-policies).
+Meer leren, verwijs naar de [ sectie over fusiebeleid vroeger in dit document ](#merge-policies).
 
-![Het overzichtdashboard Profielen met de widget Profielen op identiteit gemarkeerd.](../images/profiles/profiles-by-identity.png)
+![ het het overzichtdashboard van Profielen met de Profielen door benadrukte identiteitswidget.](../images/profiles/profiles-by-identity.png)
 
-Selecteer **[!UICONTROL Captions]**.
+Selecteer **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
 
-![De profielen op dialoogvenster voor identiteitsondertitels.](../images/profiles/profiles-by-identity-captions.png)
+![ de profielen door de dialoog van identiteitstitels.](../images/profiles/profiles-by-identity-captions.png)
 
 Een machine-leermodel produceert automatisch gegevensinzichten door de algemene distributie en belangrijkste dimensies van de gegevens te analyseren.
 
-Raadpleeg voor meer informatie over identiteiten de [Documentatie bij Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Meer over identiteiten leren, verwijs naar de [ documentatie van de Dienst van de Identiteit van Adobe Experience Platform ](../../identity-service/home.md).
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
@@ -373,15 +373,15 @@ Raadpleeg voor meer informatie over identiteiten de [Documentatie bij Adobe Expe
 >title="Identiteitsoverlapping"
 >abstract="Deze widget gebruikt een Venn-diagram om de overlapping weer te geven van profielen in uw profielarchief die de twee geselecteerde identiteiten bevatten."
 
-De **[!UICONTROL Identity overlap]** widget gebruikt een Venn-diagram, of een setdiagram, om de overlapping weer te geven van profielen in uw Profile Store die de twee geselecteerde identiteiten bevatten.
+De widget **[!UICONTROL Identity overlap]** gebruikt een Venn-diagram of een insteldiagram om de overlapping weer te geven van profielen in uw profielarchief die de twee geselecteerde identiteiten bevatten.
 
 Gebruik de widgetvervolgkeuzemenu&#39;s om de identiteiten te selecteren die u wilt vergelijken. De cirkels tonen het relatieve totale aantal profielen die elke identiteit bevatten. Het aantal profielen met beide identiteiten wordt weergegeven door de grootte van de overlapping tussen de cirkels. Als een klant op meer dan één kanaal met uw merk communiceert, zouden veelvoudige identiteiten met die individuele klant worden geassocieerd. In dit geval is het waarschijnlijk dat uw organisatie meerdere profielen heeft die fragmenten van meer dan één identiteit bevatten.
 
-Raadpleeg de sectie over profielfragmenten voor meer informatie over profielfragmenten [profielfragmenten versus samengevoegde profielen](../../profile/home.md#profile-fragments-vs-merged-profiles) in het overzicht van het profiel van de Klant in real time.
+Voor meer informatie over profielfragmenten, verwijs naar de sectie over [ profielfragmenten vs samengevoegde profielen ](../../profile/home.md#profile-fragments-vs-merged-profiles) in het overzicht van het Profiel van de Klant in real time.
 
-Raadpleeg voor meer informatie over identiteiten de [Documentatie bij Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Meer over identiteiten leren, verwijs naar de [ documentatie van de Dienst van de Identiteit van Adobe Experience Platform ](../../identity-service/home.md).
 
-![Het dashboardoverzicht van Profielen met de widget Identiteitsoverlap gemarkeerd.](../images/profiles/identity-overlap.png)
+![ het dashboardoverzicht van Profielen met de benadrukte overlap van de Identiteit.](../images/profiles/identity-overlap.png)
 
 ### [!UICONTROL Single identity profiles] {#single-identity-profiles}
 
@@ -390,9 +390,9 @@ Raadpleeg voor meer informatie over identiteiten de [Documentatie bij Adobe Expe
 >title="Eén identiteitsprofiel"
 >abstract="Deze widget bevat een aantal profielen van uw organisatie die slechts één type id hebben waarmee hun identiteit wordt gemaakt. Dit id-type kan een e-mail of een ECID zijn."
 
-De [!UICONTROL Single Identity Profiles] widget bevat een aantal profielen van uw organisatie die slechts één type id hebben waarmee hun identiteit wordt gemaakt. Dit id-type kan een e-mail of een ECID zijn. Het aantal profielen wordt gegenereerd op basis van de gegevens in de meest recente momentopname.
+De [!UICONTROL Single Identity Profiles] -widget bevat een aantal profielen van uw organisatie die slechts één type id hebben waarmee hun identiteit wordt gemaakt. Dit id-type kan een e-mail of een ECID zijn. Het aantal profielen wordt gegenereerd op basis van de gegevens in de meest recente momentopname.
 
-![Widget Single Identity Profiles.](../images/profiles/single-identity-profiles.png)
+![ Enige widget van de Profielen van de Identiteit.](../images/profiles/single-identity-profiles.png)
 
 ### [!UICONTROL Single identity profiles by identity] {#single-identity-profiles-by-identity}
 
@@ -400,7 +400,7 @@ Deze widget gebruikt een staafdiagram om het totale aantal profielen te illustre
 
 Als u een dialoogvenster wilt weergeven waarin het totale aantal profielen voor een identiteit wordt weergegeven, houdt u de cursor boven afzonderlijke balken.
 
-![De widget Single Identity-profielen op basis van identiteit.](../images/profiles/single-identity-profiles-by-identity.png)
+![ de Enige identiteitsprofielen door identiteitswidget.](../images/profiles/single-identity-profiles-by-identity.png)
 
 ### [!UICONTROL Unsegmented profiles] {#unsegmented-profiles}
 
@@ -409,9 +409,9 @@ Als u een dialoogvenster wilt weergeven waarin het totale aantal profielen voor 
 >title="Niet-gesegmenteerde profielen"
 >abstract="Deze widget geeft het totale aantal profielen weer dat niet aan een publiek is gekoppeld en biedt de mogelijkheid om profielen in uw hele organisatie te activeren."
 
-De [!UICONTROL Unsegmented Profiles] widget geeft het totale aantal profielen weer dat niet aan een publiek is gekoppeld. Het gegenereerde nummer is nauwkeurig vanaf de laatste momentopname en biedt de mogelijkheid om het profiel in uw organisatie te activeren. Het wijst ook op de kans om profielen uit te sluiten die geen adequate ROI verstrekken.
+De [!UICONTROL Unsegmented Profiles] -widget geeft het totale aantal profielen weer dat niet aan een publiek is gekoppeld. Het gegenereerde nummer is nauwkeurig vanaf de laatste momentopname en biedt de mogelijkheid om het profiel in uw organisatie te activeren. Het wijst ook op de kans om profielen uit te sluiten die geen adequate ROI verstrekken.
 
-![De widget Niet-gesegmenteerde profielen.](../images/profiles/unsegmented-profiles.png)
+![ de Unsegmented widget van Profielen.](../images/profiles/unsegmented-profiles.png)
 
 ### [!UICONTROL Unsegmented profiles change trend] {#unsegmented-profiles-change-trend}
 
@@ -420,9 +420,9 @@ De [!UICONTROL Unsegmented Profiles] widget geeft het totale aantal profielen we
 >title="Trend voor niet-gesegmenteerde profielen"
 >abstract="Deze widget bevat een lijngrafiekillustratie voor het aantal profielen dat gedurende een bepaalde tijdsperiode niet aan een publiek is gekoppeld. De trend van profielen die niet aan een publiek zijn gekoppeld, kan worden weergegeven over perioden van 30 dagen, 90 dagen en 12 maanden."
 
-De [!UICONTROL Unsegmented profiles change trend] widget gebruikt een lijngrafiek om het aantal profielen te illustreren dat sinds de laatste dagmomentopname wordt toegevoegd die niet aan om het even welk publiek in bijlage zijn. De veranderende trend van profielen die niet aan om het even welk publiek worden verbonden kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. Het aantal profielen wordt weerspiegeld op de y-as en de tijd op de x-as.
+De widget [!UICONTROL Unsegmented profiles change trend] gebruikt een lijngrafiek om het aantal toegevoegde profielen sinds de laatste dagelijkse momentopname te illustreren die niet aan om het even welk publiek in bijlage zijn. De veranderende trend van profielen die niet aan om het even welk publiek worden verbonden kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. Het aantal profielen wordt weerspiegeld op de y-as en de tijd op de x-as.
 
-![De trendwidget voor niet-gesegmenteerde profielen verandert.](../images/profiles/unsegmented-profiles-change-trend.png)
+![ de Unsegmented profielen veranderen trendwidget.](../images/profiles/unsegmented-profiles-change-trend.png)
 
 ### [!UICONTROL Unsegmented profiles by identity] {#unsegmented-profiles-by-identity}
 
@@ -445,9 +445,9 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 Deze widget geeft het totale aantal soorten publiek weer dat gereed is om te worden geactiveerd, afhankelijk van het gekozen samenvoegbeleid dat op de profielgegevens wordt toegepast.
 
-Selecteren **[!UICONTROL Audiences]** om naar de [!UICONTROL Audiences] dashboard [!UICONTROL Browse] tab. Van daar, kunt u een lijst van alle segmentdefinities voor uw organisatie zien.
+Selecteer **[!UICONTROL Audiences]** om naar het tabblad [!UICONTROL Audiences] dashboard [!UICONTROL Browse] te navigeren. Van daar, kunt u een lijst van alle segmentdefinities voor uw organisatie zien.
 
-![De widget Soorten publiek.](../images/profiles/audiences.png)
+![ de widget van het publiek.](../images/profiles/audiences.png)
 
 <!-- https://jira.corp.adobe.com/browse/PLAT-115291 -->
 
@@ -462,51 +462,51 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL Audience overlap report] {#audience-overlap-report}
 
-Deze widget maakt een tabularisatie van de gegevensoverlapping van alle beschikbare soorten publiek die door samenvoegbeleid worden gefilterd. Een lijst van vijf publiek dat van hoogste tot laagste overlappende percentages wordt gerangschikt wordt verstrekt voor het fusiebeleid dat van het dropdown menu bij de bovenkant van het scherm wordt gekozen. De twee geanalyseerde doelgroepen worden vermeld in de [!UICONTROL AUDIENCE A NAME] en [!UICONTROL AUDIENCE B NAME] kolommen. De procentuele overlapping wordt vermeld in de derde kolom, tot op twaalf decimalen nauwkeurig.
+Deze widget maakt een tabularisatie van de gegevensoverlapping van alle beschikbare soorten publiek die door samenvoegbeleid worden gefilterd. Een lijst van vijf publiek dat van hoogste tot laagste overlappende percentages wordt gerangschikt wordt verstrekt voor het fusiebeleid dat van het dropdown menu bij de bovenkant van het scherm wordt gekozen. De twee geanalyseerde soorten publiek worden vermeld in de kolommen [!UICONTROL AUDIENCE A NAME] en [!UICONTROL AUDIENCE B NAME] . De procentuele overlapping wordt vermeld in de derde kolom, tot op twaalf decimalen nauwkeurig.
 
 Het publiek overlapt rapport helpt u om nieuwe, krachtige soorten publiek te bouwen. Wanneer u een hoog percentage van de overlappingen observeert, kunt u het publiek onderdrukken en voorkomen dat hetzelfde publiek naar andere bestemmingen wordt gestuurd. Ze helpen u ook verborgen inzichten te identificeren die kunnen helpen met betere segmentatie. Met een laag percentage overlappingen kunt u unieke profielen zoeken.
 
-Selecteren **[!UICONTROL View more]** om een dialoogvenster op volledig scherm te openen dat meer publiek overlappende gegevens bevat.
+Selecteer **[!UICONTROL View more]** om een dialoogvenster op volledig scherm te openen dat meer publiek overlappende gegevens bevat.
 
-![De publiek overlapt rapport widget met View meer benadrukt.](../images/profiles/profiles-audience-overlap-report.png)
+![ De publiek overlapt rapport widget met meer benadrukte Mening.](../images/profiles/profiles-audience-overlap-report.png)
 
-De [!UICONTROL Audience overlap report] wordt weergegeven. Dit dialoogvenster kan tot 50 rijen publiek bevatten die analyses overlappen die in zes kolommen zijn opgedeeld. Als u kolommen uit de tabel wilt verwijderen of toevoegen, selecteert u het instellingenpictogram (![Het instellingenpictogram.](../images/profiles/settings-icon.png)).
+Het dialoogvenster [!UICONTROL Audience overlap report] wordt weergegeven. Dit dialoogvenster kan tot 50 rijen publiek bevatten die analyses overlappen die in zes kolommen zijn opgedeeld. Om kolommen uit de lijst te verwijderen of toe te voegen, selecteer het montagespictogram (![ het montagespictogram.](../images/profiles/settings-icon.png)).
 
-![Het dialoogvenster Publiek overlapt het rapport.](../images/profiles/profiles-audience-overlap-report-dialog.png)
+![ het publiek overlapt rapportdialoog.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
 >
->Als u de rangschikking van de resultaten wilt wijzigen van het hoogste naar het laagste naar het hoogste, selecteert u de optie **[!UICONTROL Overlapping]** kolomkop.
+>Selecteer de kolomkop **[!UICONTROL Overlapping]** als u de volgorde van de resultaten wilt wijzigen van het hoogste naar het laagste en het laagste naar het hoogste.
 
-Als u het volledige rapport in de indeling PDF wilt downloaden, selecteert u het optiemenu (**`...`**) gevolgd door **[!UICONTROL Download]**.
+Als u het volledige rapport in de indeling PDF wilt downloaden, selecteert u het optiemenu (**`...`**) gevolgd door **[!UICONTROL Download]** .
 
-![Het publiek overlapt het rapportdialoogvenster met de gemarkeerde ovalen en downloadoptie.](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
+![ het publiek overlapt rapportdialoog met de ellipsen en benadrukte optie van de Download.](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
 
 Om een diagram van Venn van de overlappende analyse te openen, selecteer een rij van het rapport. Houd de muisaanwijzer boven een gedeelte van het Venn-diagram om het aantal profielen in een dialoogvenster weer te geven.
 
-![Het publiek overlapt rapportdialoog met een diagram van de Venn en een benadrukte rij.](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
+![ het publiek overlapt rapportdialoog met een diagram van de Venn en een benadrukte rij.](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
 
-Selecteren **[!UICONTROL Close]** om terug te keren naar de [!UICONTROL Profiles] dashboard.
+Selecteer **[!UICONTROL Close]** om terug te keren naar het [!UICONTROL Profiles] -dashboard.
 
 ### [!UICONTROL Audiences mapped to destination status] {#audiences-mapped-to-destination-status}
 
-De [!UICONTROL Audiences mapped to destination status] widget geeft het totale aantal in kaart gebrachte en niet in kaart gebrachte doelgroepen in één meting weer en gebruikt een donutgrafiek om het proportionele verschil tussen hun totalen aan te geven. De berekende aantallen zijn afhankelijk van het gekozen samenvoegbeleid.
+De widget [!UICONTROL Audiences mapped to destination status] geeft het totale aantal in kaart gebrachte en niet-toegewezen doelgroepen in één meting weer en gebruikt een donutdiagram om het proportionele verschil tussen de totalen aan te geven. De berekende aantallen zijn afhankelijk van het gekozen samenvoegbeleid.
 
 Individuele tellingen voor of in kaart gebracht of unmapped publiek worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
 
-![Het publiek dat is toegewezen aan de doelstatuswidget.](../images/profiles/audiences-mapped-to-destination-status.png)
+![ het publiek dat aan de widget van de bestemmingsstatus in kaart wordt gebracht.](../images/profiles/audiences-mapped-to-destination-status.png)
 
 ### [!UICONTROL Audiences size] {#audiences-size}
 
-De [!UICONTROL Audiences size] widget biedt een tabel met twee kolommen met de namen van maximaal 20 soorten publiek en het totale aantal profielen in elk publiek. De lijst wordt geordend van hoog tot laag op basis van het totale aantal profielen in het publiek. De totale telling van de doelgrootte is afhankelijk van het toegepaste samenvoegingsbeleid.
+De widget [!UICONTROL Audiences size] biedt een tabel met twee kolommen met de namen van maximaal 20 soorten publiek en het totale aantal profielen in elk publiek. De lijst wordt geordend van hoog tot laag op basis van het totale aantal profielen in het publiek. De totale telling van de doelgrootte is afhankelijk van het toegepaste samenvoegingsbeleid.
 
-![De widget voor soorten publiek.](../images/profiles/audiences-size.png)
+![ de grootte widget van Soorten publiek.](../images/profiles/audiences-size.png)
 
-Als u uitgebreide informatie over een publiek wilt weergeven, selecteert u een publieksnaam in de lijst die wordt weergegeven om naar het deelvenster [!UICONTROL Audiences] [!UICONTROL Detail] pagina. Ook door **[!UICONTROL View all audiences]** vanaf het einde van de widget kunt u naar het [!UICONTROL Audiences] [!UICONTROL Browse] om een bestaand publiek te zoeken.
+Als u uitgebreide informatie over een publiek wilt weergeven, selecteert u een publieksnaam in de lijst die wordt weergegeven om naar de pagina [!UICONTROL Audiences] [!UICONTROL Detail] te navigeren. Door **[!UICONTROL View all audiences]** te selecteren vanaf het einde van de widget, kunt u naar het tabblad [!UICONTROL Audiences] [!UICONTROL Browse] navigeren om een bestaand publiek te zoeken.
 
-![De widget voor soorten publiek met een publieksnaam en de tekst voor alle soorten publiek weergeven zijn gemarkeerd.](../images/profiles/audiences-size-view-all-audiences.png)
+![ de grootte van het publiek widget met een publieksnaam en de Mening alle benadrukte publiekstekst.](../images/profiles/audiences-size-view-all-audiences.png)
 
-Meer informatie over publieksdetails vindt u in het gedeelte [Poortdocumentatie voor publiek](../../segmentation/ui/audience-portal.md).
+Meer informatie over publieksdetails kan in de [ Poortdocumentatie van het Poort van het Publiek ](../../segmentation/ui/audience-portal.md) worden gevonden.
 
 ### [!UICONTROL Audience overlap by merge policy] {#audience-overlap-by-merge-policy}
 
@@ -514,7 +514,7 @@ Deze widget gebruikt een Venn-diagram om de overlapping van twee geselecteerde d
 
 Aangezien widget de visuele oversteekplaats van segmentdefinities toont, kunt u uw segmenteringsstrategie optimaliseren door gelijkenissen tussen uw segmentdefinities te bestuderen.
 
-![Het dashboard Profielen van het Platform UI met de dropdown van het fusiebeleid en widgetpublieksdropdowns benadrukt.](../images/profiles/audience-overlap-by-merge-policy.png)
+![ het Platform UI Profielen dashboard met de dropdown van het fusiebeleid en de benadrukte widgetpublieksdropdowns.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
@@ -587,4 +587,4 @@ The three levels of completeness are:
 
 ## Volgende stappen
 
-Als u dit document volgt, kunt u nu het dashboard voor profielen vinden en begrijpen welke maatstaven worden weergegeven in de beschikbare widgets. Meer informatie over werken met [!DNL Profile] gegevens in Experience Platform UI, verwijs naar [Gebruikershandleiding voor realtime gebruikersprofiel van klanten](../../profile/ui/user-guide.md).
+Als u dit document volgt, kunt u nu het dashboard voor profielen vinden en begrijpen welke maatstaven worden weergegeven in de beschikbare widgets. Meer over het werken met [!DNL Profile] gegevens in het Experience Platform UI leren, verwijs naar de [ gids UI van het Profiel van de Klant in real time ](../../profile/ui/user-guide.md).
