@@ -4,9 +4,9 @@ description: Leer hoe u een gegevensstroom maakt voor uw Braze-account met de ge
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 59600165328181e41750b9b2a1f4fbf162dd1df5
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,21 @@ Dit leerprogramma vereist ook een werkend begrip van [[!DNL Braze]  Huidige teks
 
 Als u reeds een [!DNL Braze] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/marketing-automation.md).
 
-## Sluit uw [!DNL Braze] -account aan op het Experience Platform
+## Een XDM-schema maken
+
+>[!TIP]
+>
+>U moet een XDM-schema (Experience Data Model) maken als dit de eerste keer is dat u een [!DNL Braze Currents] -verbinding maakt. Als u reeds een schema voor [!DNL Braze Currents] hebt gecreeerd, dan kunt u deze stap overslaan en aan [ verdergaan verbindend uw rekening met Experience Platform ](#connect).
+
+Gebruik in de gebruikersinterface van het platform de linkernavigatie en selecteer vervolgens **[!UICONTROL Schemas]** om de werkruimte van [!UICONTROL Schemas] te openen. Selecteer vervolgens **[!UICONTROL Create schema]** en selecteer **[!UICONTROL Experience Event]** . Selecteer **[!UICONTROL Next]** om door te gaan.
+
+![ A voltooid schema.](../../../../images/tutorials/create/braze/schema.png)
+
+Geef een naam en beschrijving op voor uw schema. Gebruik vervolgens het deelvenster [!UICONTROL Composition] om uw schemakenmerken te configureren. Selecteer onder [!UICONTROL Field groups] de optie **[!UICONTROL Add]** en voeg de veldgroep [!UICONTROL Braze Currents User Event] toe. Selecteer **[!UICONTROL Save]** als u klaar bent.
+
+Voor meer informatie over schema&#39;s, lees de gids aan [ creërend schema&#39;s in UI ](../../../../../xdm/tutorials/create-schema-ui.md).
+
+## Sluit uw [!DNL Braze] -account aan op het Experience Platform {#connect}
 
 Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -53,18 +67,30 @@ Daarna, upload het verstrekte [ de steekproefdossier van de Studenten van de Bod
 
 ![ het scherm &quot;voegt Gegevens&quot;toe.](../../../../images/tutorials/create/braze/select-data.png)
 
-Zodra uw dossier wordt geupload, moet u uw gegevens verstrekken gegevensstroom, met inbegrip van informatie over uw dataset en het schema dat u aan in kaart brengt.
+Zodra uw dossier wordt geupload, moet u uw gegevens verstrekken gegevensstroom, met inbegrip van informatie over uw dataset en het schema dat u aan in kaart brengt.  Als dit uw eerste keer is verbindend een bron van de Huidige Bestanden van de Rooi, dan creeer een nieuwe dataset.  Anders kunt u om het even welke bestaande dataset gebruiken die verwijzingen het schema van de Rimpel.  Als het creëren van een nieuwe dataset, gebruik het schema dat wij in de vorige sectie creeerden.
 ![ het scherm &quot;Dataflow Details&quot;het benadrukken van &quot;de details van de Dataset.&quot;](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 Dan, vorm afbeelding voor uw gegevens gebruikend de toewijzingsinterface.
 
-![ het scherm van de &quot;Afbeelding&quot;.](../../../../images/tutorials/create/braze/mapping.png)
+![ het scherm van de &quot;Afbeelding&quot;.](../../../../images/tutorials/create/braze/mapping_errors.png)
+
+De toewijzing zal de volgende kwesties hebben die moeten worden opgelost.
+
+In de brongegevens, *identiteitskaart* zal verkeerd aan *_braze.appID* worden in kaart gebracht. U moet het gebied van de doelafbeelding in *_id* op het wortelniveau van het schema veranderen. Daarna, zorg ervoor dat *properties.is_amp* aan *_braze.messaging.email.isAMP* in kaart wordt gebracht.
+
+Daarna, schrap de *tijd* aan *timestamp* afbeelding, dan selecteer toevoegen (`+`) pictogram en dan selecteren **[!UICONTROL Add calculated field]**. In de verstrekte doos, input *tijd \* 1000* en selecteer **[!UICONTROL Save]**.
+
+Zodra het nieuwe berekende gebied wordt toegevoegd, uitgezocht **[!UICONTROL Map target field]** naast het nieuwe brongebied en het in kaart brengen aan *timestamp* op het wortelniveau van het schema. Selecteer vervolgens **[!UICONTROL Validate]** om ervoor te zorgen dat er geen fouten meer optreden.
 
 >[!IMPORTANT]
 >
 >Tijdstempels voor rasteren worden niet uitgedrukt in milliseconden, maar in seconden. Als u de tijdstempels in het Experience Platform nauwkeurig wilt weergeven, moet u berekende velden maken in milliseconden. Een berekening van &quot;tijd * 1000&quot; wordt correct omgezet in milliseconden, die geschikt zijn voor toewijzing aan een tijdstempelveld binnen Experience Platform.
 >
 >![ Creërend een berekend gebied voor timestamp ](../../../../images/tutorials/create/braze/create-calculated-field.png)
+
+![ de afbeelding zonder fouten.](../../../../images/tutorials/create/braze/completed_mapping.png)
+
+Selecteer **[!UICONTROL Next]** als u klaar bent. Gebruik de overzichtspagina om de details van uw gegevensstroom te bevestigen en selecteer dan **[!UICONTROL Finish]**.
 
 ### Vereiste referenties verzamelen
 
