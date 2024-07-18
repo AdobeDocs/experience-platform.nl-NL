@@ -3,7 +3,7 @@ keywords: crm;CRM;crm bestemmingen;salesforce crm;salesforce crm bestemming
 title: Salesforce CRM-verbinding
 description: Met de Salesforce CRM-bestemming kunt u uw accountgegevens exporteren en deze activeren in Salesforce CRM voor uw zakelijke behoeften.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: d9ff92138a5de774f011dd9b2e5f1cdc3371bacf
 workflow-type: tm+mt
 source-wordcount: '2712'
 ht-degree: 0%
@@ -134,7 +134,7 @@ Als uw [!DNL Salesforce] rekeningsbeheerder IP beperkingen heeft afgedwongen, zu
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
----------|----------|---------|
+|---------|----------|---------|
 | Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)* volgens uw veldtoewijzing.</li><li> Elke publieksstatus in [!DNL Salesforce CRM] wordt bijgewerkt met de overeenkomstige publieksstatus van Platform, die op de **[!UICONTROL Mapping ID]** waarde wordt gebaseerd die tijdens de [ publiek wordt verstrekt die ](#schedule-segment-export-example) stap plant.</li></ul> |
 | Exportfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
@@ -153,10 +153,11 @@ Kies in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** Zoeken naar [!D
 ### Verifiëren voor bestemming {#authenticate}
 
 Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden hieronder in en selecteert u **[!UICONTROL Connect to destination]** . Verwijs naar de [ Gather  [!DNL Salesforce CRM]  geloofsbrieven ](#gather-credentials) sectie voor om het even welke begeleiding.
+
 | Credentials | Beschrijving |
-| — | — |
-| **[!UICONTROL Username]** | Uw [!DNL Salesforce] -accountgebruikersnaam. |
-| **[!UICONTROL Password]** | Een samengevoegde tekenreeks die bestaat uit het wachtwoord van uw [!DNL Salesforce] -account dat is toegevoegd met uw [!DNL Salesforce] -beveiligingstoken.<br> de samengevoegde waarde neemt de vorm van `{PASSWORD}{TOKEN}`.<br> Opmerking: gebruik geen accolades of spaties.<br> Bijvoorbeeld als uw [!DNL Salesforce] Wachtwoord `MyPa$$w0rd123` is en [!DNL Salesforce] Beveiligingstoken `TOKEN12345....0000` is, is de samengevoegde waarde die u in het **[!UICONTROL Password]** veld zult gebruiken `MyPa$$w0rd123TOKEN12345....0000` . |
+| --- | --- |
+| **[!UICONTROL Username]** | Uw [!DNL Salesforce] gebruikersnaam van de account. |
+| **[!UICONTROL Password]** | Een samengevoegde tekenreeks die bestaat uit het wachtwoord voor uw [!DNL Salesforce] -account dat is toegevoegd met uw [!DNL Salesforce] beveiligingstoken.<br> de samengevoegde waarde neemt de vorm van `{PASSWORD}{TOKEN}`.<br> Opmerking: gebruik geen accolades of spaties.<br> Bijvoorbeeld als uw [!DNL Salesforce] Wachtwoord `MyPa$$w0rd123` is en [!DNL Salesforce] Beveiligingstoken `TOKEN12345....0000` is, is de samengevoegde waarde die u in het **[!UICONTROL Password]** veld zult gebruiken `MyPa$$w0rd123TOKEN12345....0000` . |
 | **[!UICONTROL Custom Domain]** | Het domeinvoorvoegsel [!DNL Salesforce] . <br> Bijvoorbeeld als uw domein *`d5i000000isb4eak-dev-ed`.my.salesforce.com* is, moet u `d5i000000isb4eak-dev-ed` als waarde verstrekken. |
 | **[!UICONTROL Client ID]** | De [!DNL Salesforce] verbonden app `Consumer Key` . |
 | **[!UICONTROL Client Secret]** | De [!DNL Salesforce] verbonden app `Consumer Secret` . |
@@ -212,12 +213,13 @@ Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL
    * Als u met *Contacten* binnen uw segment werkt, verwijs naar de Verwijzing van Objecten in Salesforce voor [ Contact ](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) om afbeeldingen voor de gebieden te bepalen die moeten worden bijgewerkt.
    * U kunt verplichte gebieden identificeren door naar het woord *Vereiste* te zoeken, dat in gebiedsbeschrijvingen in de verbinding hierboven wordt vermeld.
    * Afhankelijk van de velden die u wilt exporteren of bijwerken, voegt u toewijzingen toe tussen het XDM-profielschema en [!DNL (API) Salesforce CRM] :
-|Source-veld|Doelveld| Notities |
-| — | — | — |
-|`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-|`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory` . Achternaam van de contactpersoon mag maximaal 80 tekens bevatten. |\
-     |`xdm: person.name.firstName`|`Attribute: FirstName`| De voornaam van de contactpersoon mag maximaal 40 tekens bevatten. |
-|`xdm: personalEmail.address`|`Attribute: Email`| Het e-mailadres van de contactpersoon |
+
+     | Source-veld | Doelveld | Notities |
+     | --- | --- | --- |
+     | `IdentityMap: crmID` | `Identity: SalesforceId` | `Mandatory` |
+     | `xdm: person.name.lastName` | `Attribute: LastName` | `Mandatory`. Achternaam van de contactpersoon mag maximaal 80 tekens bevatten. |
+     | `xdm: person.name.firstName` | `Attribute: FirstName` | De voornaam van de contactpersoon mag maximaal 40 tekens bevatten. |
+     | `xdm: personalEmail.address` | `Attribute: Email` | Het e-mailadres van de contactpersoon |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
      ![ het schermschot van het Platform UI die de afbeeldingen van het Doel tonen.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
@@ -227,12 +229,13 @@ Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL
    * Als u met *Leads* binnen uw segment werkt, verwijs naar de Verwijzing van Objecten in Salesforce voor [ Lood ](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) om afbeeldingen voor de gebieden te bepalen die moeten worden bijgewerkt.
    * U kunt verplichte gebieden identificeren door naar het woord *Vereiste* te zoeken, dat in gebiedsbeschrijvingen in de verbinding hierboven wordt vermeld.
    * Afhankelijk van de velden die u wilt exporteren of bijwerken, voegt u toewijzingen toe tussen het XDM-profielschema en [!DNL (API) Salesforce CRM] :
-|Source-veld|Doelveld| Notities |
-| — | — | — |
-|`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-|`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory` . Achternaam van de lead mag maximaal 80 tekens bevatten. |\
-     |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory` . Het bedrijf van de leider. |
-|`xdm: personalEmail.address`|`Attribute: Email`| Het e-mailadres van de lead. |
+
+     | Source-veld | Doelveld | Notities |
+     | --- | --- | --- |
+     | `IdentityMap: crmID` | `Identity: SalesforceId` | `Mandatory` |
+     | `xdm: person.name.lastName` | `Attribute: LastName` | `Mandatory`. Achternaam van de lead mag maximaal 80 tekens bevatten. |
+     | `xdm: b2b.companyName` | `Attribute: Company` | `Mandatory`. Het bedrijf van de leider. |
+     | `xdm: personalEmail.address` | `Attribute: Email` | Het e-mailadres van de lead. |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
      ![ het schermschot van het Platform UI die de afbeeldingen van het Doel tonen.](../../assets/catalog/crm/salesforce/mappings-leads.png)
@@ -256,8 +259,9 @@ Hieronder ziet u een voorbeeld van de locatie van [!DNL Salesforce CRM] **[!UICO
 Zoals hierboven wordt weergegeven, komt [!DNL Salesforce] **[!UICONTROL Field Name]** exact overeen met de waarde die is opgegeven binnen [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** .
 
 Afhankelijk van het gebruik dat u maakt, kunnen alle geactiveerde soorten publiek worden toegewezen aan hetzelfde [!DNL Salesforce] aangepaste veld of aan een ander **[!UICONTROL Field Name]** in [!DNL Salesforce CRM] . Een typisch voorbeeld op basis van de bovenstaande afbeelding zou kunnen zijn.
+
 | [!DNL Salesforce CRM] segmentnaam | [!DNL Salesforce] **[!UICONTROL Field Name]** | [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** |
-| — | — | — |
+| --- | --- | --- |
 | crm_1_seg | `crm_1_seg` | `crm_1_seg` |
 | crm_2_seg | `crm_2_seg` | `crm_2_seg` |
 

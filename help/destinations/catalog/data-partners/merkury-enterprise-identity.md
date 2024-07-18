@@ -1,7 +1,7 @@
 ---
 title: Merkury Enterprise Identity Destination
 description: Leer hoe u een Merkury Enterprise Identity-doelverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
 workflow-type: tm+mt
 source-wordcount: '1465'
 ht-degree: 0%
@@ -75,10 +75,11 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 ## Type en frequentie exporteren
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
-|**Publiek**|**Gesteunde**|**Oorsprong van de Beschrijving**|\
-|—|—|—|\
-|De Dienst van de segmentatie|✓|Soorten die door het Experience Platform [ worden geproduceerd [de Dienst van de Segmentatie] ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
-Aangepast uploadt|X|Soorten publiek [ [geïmporteerd] ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) naar Experience Platform van CSV-bestanden.
+
+| **Doelgroep** | **Gesteund** | **Oorsprong van de Beschrijving** |
+|---|---|---|      
+| Segmenteringsservice | ✓ | Soorten publiek door het Experience Platform [ wordt geproduceerd [de Dienst van de Segmentatie] ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Aangepaste uploads | X | Soorten publiek [ [ingevoerde] ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
