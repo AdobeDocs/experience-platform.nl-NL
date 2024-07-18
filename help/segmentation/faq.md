@@ -2,9 +2,9 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '4076'
+source-wordcount: '4072'
 ht-degree: 0%
 
 ---
@@ -317,7 +317,7 @@ Voor meer details over het gebruiken van de Samenstelling van het Publiek, gelie
 
 Soorten publiek worden automatisch opgeslagen tijdens het maken ervan in Audience Composition. De aanmaaktijd van het publiek is de eerste keer dat deze automatische opslag plaatsvindt.
 
-Nadat het publiek is gemaakt, kan het tot 24 uur duren om te worden geëvalueerd.
+Nadat de publiekssamenstelling is gecreeerd, kan het tot 48 uren voor het worden geëvalueerd en geactiveerd voor gebruik in stroomafwaartse diensten zoals een bestemming van Real-Time CDP of een kanaal van Adobe Journey Optimizer.
 
 ### Wanneer kan ik het publiek gebruiken dat ik heb gemaakt?
 
@@ -337,11 +337,7 @@ Door het publiek te splitsen kunt u het publiek verder onderbrengen in kleinere 
 
 Bij splitsing naar kenmerk is er sprake van wederzijdse exclusiviteit tussen de groepen. Dit betekent dat als een verslag aan de criteria van veelvoudige gespleten wegen voldoet, het **eerste** weg van de linkerzijde zal worden toegewezen en **niet** toegewezen aan om het even welke andere wegen.
 
-Wanneer het splitsen door percentage, worden de spleten **willekeurig** gedaan. Dit betekent dat de profielen willekeurig worden toegewezen aan elk pad. De gespleten **is** blijvend, zo betekent het profiel in het zelfde sub-publiek op elke evaluatie zal zijn.
-
->[!NOTE]
->
->Eerder, waren de splitsingen in de Samenstelling van het Publiek **niet** blijvend.
+Wanneer het splitsen door percentage, worden de spleten **willekeurig** gedaan. Dit betekent dat de profielen willekeurig worden toegewezen aan elk pad.
 
 Voor meer informatie over het Gesplitste blok, te lezen gelieve de [ gids UI van de Samenstelling van het publiek ](./ui/audience-composition.md#split).
 

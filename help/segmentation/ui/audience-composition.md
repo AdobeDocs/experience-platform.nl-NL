@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '1801'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
@@ -268,14 +268,18 @@ Bovendien kunt u de schakeloptie **[!UICONTROL Other profiles]** inschakelen om 
 
 ## Uw publiek publiceren
 
-Nadat u de doelgroep hebt samengesteld, kunt u deze opslaan en publiceren door **[!UICONTROL Publish]** te selecteren.
+>[!IMPORTANT]
+>
+>Wanneer u de publiekscompositie publiceert, moet u er rekening mee houden dat het maximaal 48 uur kan duren voordat de compositie wordt geëvalueerd en geactiveerd voor gebruik in downstreamservices zoals een Real-Time CDP-bestemming of Adobe Journey Optimizer-kanaal.
 
-![ de knoop van Publish wordt benadrukt, tonend u om uw publiek te bewaren en te publiceren.](../images/ui/audience-composition/publish.png)
+Nadat u de compositie hebt gemaakt, kunt u deze opslaan en publiceren door **[!UICONTROL Publish]** te selecteren.
+
+![ de knoop van Publish wordt benadrukt, tonend u om uw samenstelling te bewaren en te publiceren.](../images/ui/audience-composition/publish.png)
 
 Als er fouten optreden bij het maken van het publiek, verschijnt er een waarschuwing met de informatie over het oplossen van het probleem.
 
-![ de knoop van Publish wordt benadrukt, tonend u om uw publiek te bewaren en te publiceren.](../images/ui/audience-composition/audience-alert.png)
+![ de knoop van Publish wordt benadrukt, tonend u om uw samenstelling te bewaren en te publiceren.](../images/ui/audience-composition/audience-alert.png)
 
 ## Volgende stappen
 
-De Samenstelling van het publiek verstrekt een rijke werkschema toelatend u om publiek van de verschillende bloktypes tot stand te brengen. Om meer over andere delen van de Dienst UI van de Segmentatie te leren, te lezen gelieve de [ gebruikersgids van de Dienst van de Segmentatie ](./overview.md).
+De Samenstelling van het publiek verstrekt een rijke werkschema toelatend u om samenstellingen van de verschillende bloktypes tot stand te brengen. Om meer over andere delen van de Dienst UI van de Segmentatie te leren, te lezen gelieve de [ gebruikersgids van de Dienst van de Segmentatie ](./overview.md).

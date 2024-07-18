@@ -1,9 +1,9 @@
 ---
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
-source-git-commit: c724baba6972e1a033c18b63ab824149567d20fb
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '3478'
+source-wordcount: '3498'
 ht-degree: 0%
 
 ---
@@ -258,6 +258,10 @@ Als u **[!UICONTROL Edit properties]** selecteert, kunt u de basisgegevens van h
 ### Totaal publiek {#audience-total}
 
 In de sectie **[!UICONTROL Audience total]** wordt het totale aantal profielen weergegeven dat in aanmerking komt voor het publiek.
+
+>[!NOTE]
+>
+>Het kan tot 30 minuten duren voordat het totale aantal gebruikers is bijgewerkt nadat de exporttaak is voltooid.
 
 Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de samplegegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt; voor 1 tot 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5% van de totale entiteiten gebruikt. Meer informatie over het produceren van ramingen kan in de [ sectie van de schatingengeneratie ](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van het leerprogramma van de publieksverwezenlijking worden gevonden.
 
