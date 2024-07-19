@@ -2,9 +2,9 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 5e677e53677cd28787004043e9fcc9b94e631fc8
 workflow-type: tm+mt
-source-wordcount: '4072'
+source-wordcount: '4167'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Wanneer u een extern gegenereerd publiek uploadt, worden de volgende items gemaa
 
 Tijdens de invoer externe publiekswerkschema, moet u specificeren welke kolom in het Csv- dossier met de **Primaire Identiteit** beantwoordt. Een voorbeeld van een primaire identiteit is e-mailadres, ECID of een naamruimte die specifiek is voor de organisatie.
 
-De gegevens verbonden aan deze primaire identiteitskolom de **slechts** gegevens die aan het profiel in bijlage zijn. Als er geen bestaande profielen zijn die overeenkomen met de gegevens in de primaire identiteitskolom, wordt een nieuw profiel gemaakt. Nochtans, is dit profiel hoofdzakelijk een weeshuis profiel aangezien **geen** attributen of ervaringsgebeurtenissen met dit profiel worden geassocieerd.
+De gegevens verbonden aan deze primaire identiteitskolom zijn **slechts** gegevens die aan het profiel in bijlage zijn. Als er geen bestaande profielen zijn die overeenkomen met de gegevens in de primaire identiteitskolom, wordt een nieuw profiel gemaakt. Nochtans, is dit profiel hoofdzakelijk een weeshuis profiel aangezien **geen** attributen of ervaringsgebeurtenissen met dit profiel worden geassocieerd.
 
 Alle andere gegevens binnen het extern geproduceerde publiek worden beschouwd als **ladingsattributen**. Deze attributen kunnen **slechts** voor verpersoonlijking en verrijking tijdens activering worden gebruikt, en zijn **** niet verbonden aan een profiel. Deze kenmerken worden echter opgeslagen in het datumpigment.
 
@@ -59,6 +59,10 @@ Ja, het extern gegenereerde publiek wordt samengevoegd met het bestaande profiel
 ### Kan ik een extern gegenereerd publiek gebruiken om andere soorten publiek op te bouwen?
 
 Ja, zal om het even welk extern geproduceerd publiek binnen de publieksinventaris verschijnen en kan worden gebruikt wanneer het bouwen van publiek binnen de [ Bouwer van het Segment ](./ui/segment-builder.md).
+
+### Hoe vaak worden extern gegenereerde doelgroepen geëvalueerd?
+
+Extern geproduceerd publiek wordt **slechts** geëvalueerd tijdens de tijd van de invoer. Aangezien de bijbehorende attributen aan deze de invoersoorten publiek niet-duurzaam zijn en **** geen deel van de opslag van het Profiel zijn, zal de enige tijd een extern geproduceerd publiek worden bijgewerkt zijn als het bestaande publiek manueel wordt bijgewerkt.
 
 ### Kan ik extern geüploade kenmerken gebruiken als onderdeel van segmentatie?
 
@@ -97,6 +101,10 @@ Als u per ongeluk een extern gegenereerd publiek hebt geüpload en u de gegevens
 De huidige gegevensvervaldatum voor extern geproduceerd publiek is **30 dagen**. Deze gegevensvervaldatum is gekozen om de hoeveelheid overtollige gegevens te verminderen die binnen uw organisatie worden opgeslagen.
 
 Na de periode van de gegevensvervalsing gaat over, zal de bijbehorende dataset nog binnen de datasetinventaris zichtbaar zijn, maar u **** zal niet het publiek kunnen activeren en de profieltelling zal als nul tonen.
+
+### Is er een maximum aantal extern gegenereerde soorten publiek dat ik kan importeren?
+
+Er is geen limiet voor het aantal extern gegenereerde soorten publiek dat u kunt importeren. Nochtans, gelieve nota te nemen dat het ingevoerde publiek **** tegen de algemene publieksgrens doet tellen.
 
 ### Hoe zal het Portaal van het Publiek en de Samenstelling van het Publiek met de versie van de Gegevens van de Partner van Real-Time CDP in wisselwerking staan?
 
