@@ -3,9 +3,9 @@ title: Google Cloud Storage-verbinding
 description: Leer hoe u verbinding maakt met Google Cloud Storage en een publiek activeert of gegevenssets exporteert.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 679c1723965271b6a9c1b5b873cf8ac8de67458d
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1170'
 ht-degree: 0%
 
 ---
@@ -114,6 +114,22 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
+
+### Vereiste [!DNL Google Cloud Storage] machtigingen {#required-google-cloud-storage-permission}
+
+Als u gegevens met succes wilt verbinden en exporteren naar de opslaglocatie van [!DNL Google Cloud Storage] , hebt u de volgende [!DNL Google Cloud Storage] -machtigingen voor uw emmers nodig:
+
+*`orgpolicy.policy.get`
+*`resourcemanager.projects.get`
+*`resourcemanager.projects.list`
+*`storage.managedFolders.create`
+*`storage.multipartUploads.abort`
+*`storage.multipartUploads.create`
+*`storage.multipartUploads.listParts`
+*`storage.objects.create`
+*`storage.objects.list`
+
+Lees meer over [ toegangsbeheer en toestemmingen ](https://cloud.google.com/storage/docs/access-control/iam-permissions) in [!DNL Google Cloud Storage].
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
