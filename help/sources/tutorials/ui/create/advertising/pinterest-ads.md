@@ -131,7 +131,7 @@ U kunt de gegevens verifiëren op basis van de tellingen die zichtbaar zijn op d
 
 ![ Pinterest Campaigns pagina.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-campaigns.png)
 
->[!TAB  voeg groepen ] toe
+>[!TAB  voeg groepen  toe]
 
 ![ Pinterest en groepenpagina.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ad-groups.png)
 
