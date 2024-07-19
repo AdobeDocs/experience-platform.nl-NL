@@ -3,9 +3,9 @@ title: API-eindpunt gegevensset vervaldatum
 description: Het /ttl eindpunt in de Hygiene API van Gegevens staat u toe om datasettermijnen in Adobe Experience Platform programmatically te plannen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
+source-git-commit: 911089ec641d9fbb436807b04dd38e00fd47eecf
 workflow-type: tm+mt
-source-wordcount: '2217'
+source-wordcount: '1964'
 ht-degree: 0%
 
 ---
@@ -388,88 +388,6 @@ curl -X DELETE \
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en het kenmerk `status` van de vervaldatum wordt ingesteld op `cancelled` .
 
-## Haal de geschiedenis van de vervalstatus van een dataset terug {#retrieve-expiration-history}
-
-Als u de verloopstatusgeschiedenis van een specifieke gegevensset wilt opzoeken, gebruikt u de parameters `{DATASET_ID}` en `include=history` query in een opzoekverzoek. Het resultaat omvat informatie over de verwezenlijking van de dataset vervaldatum, om het even welke updates die zijn toegepast, en zijn annulering of uitvoering (indien van toepassing). U kunt `{DATASET_EXPIRATION_ID}` ook gebruiken om de de statusgeschiedenis van de datasetvervaldatum terug te winnen.
-
-**API formaat**
-
-```http
-GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{DATASET_EXPIRATION_ID}?include=history
-```
-
-| Parameter | Beschrijving |
-| --- | --- |
-| `{DATASET_ID}` | Identiteitskaart van de dataset de waarvan vervalgeschiedenis u omhoog wilt zoeken. |
-| `{DATASET_EXPIRATION_ID}` | De id van de vervaldatum van de gegevensset. Opmerking: dit wordt de `ttlId` genoemd in het antwoord. |
-
-{style="table-layout:auto"}
-
-**Verzoek**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14?include=history \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Reactie**
-
-Een succesvol antwoord geeft de details van de vervaldatum van de gegevensset, met een `history` -array die de details van de attributen `status`, `expiry`, `updatedAt` en `updatedBy` opgeeft voor elk van de opgenomen updates.
-
-```json
-{
-  "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
-  "datasetId": "62759f2ede9e601b63a2ee14",
-  "datasetName": "Example Dataset",
-  "sandboxName": "prod",
-  "displayName": "Expiration Request 123",
-  "description": "Expiration Request 123 Description",
-  "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
-  "status": "cancelled",
-  "expiry": "2022-05-09T23:47:30.071186Z",
-  "updatedAt": "2022-05-09T23:47:30.071186Z",
-  "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-  "history": [
-    {
-      "status": "created",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:38:40.393115Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    },
-    {
-      "status": "updated",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    },
-    {
-      "status": "cancelled",
-      "expiry": "2022-05-09T23:47:30.071186Z",
-      "updatedAt": "2022-05-09T23:47:30.071186Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    }
-  ]
-}
-```
-
-| Eigenschap | Beschrijving |
-| --- | --- |
-| `ttlId` | De id van de vervaldatum van de gegevensset. |
-| `datasetId` | De id van de gegevensset waarop deze vervaldatum van toepassing is. |
-| `datasetName` | De vertoningsnaam voor de dataset is deze vervaldatum van toepassing op. |
-| `sandboxName` | De naam van de sandbox waarin de doelgegevensset zich bevindt. |
-| `displayName` | De weergavenaam voor de vervalaanvraag. |
-| `description` | Een beschrijving van de vervalaanvraag. |
-| `imsOrg` | De id van uw organisatie. |
-| `history` | Hiermee geeft u de geschiedenis van updates voor de vervaldatum weer als een array van objecten, waarbij elk object de kenmerken `status` , `expiry` , `updatedAt` en `updatedBy` bevat voor de vervaldatum op het moment van de update. |
-
-{style="table-layout:auto"}
-
 ## Bijlage
 
 ### Geaccepteerde queryparameters {#query-params}
@@ -482,18 +400,14 @@ De volgende lijst schetst de beschikbare vraagparameters wanneer [ van de lijst 
 
 | Parameter | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| `author` | Komt overeen met verlopen waarvan `created_by` een overeenkomst is voor de zoektekenreeks. Als de zoektekenreeks begint met `LIKE` of `NOT LIKE` , wordt het resterende gedeelte behandeld als een SQL-zoekpatroon. Anders wordt de gehele zoektekenreeks beschouwd als een letterlijke tekenreeks die exact moet overeenkomen met de volledige inhoud van een `created_by` -veld. | `author=LIKE %john%`, `author=John Q. Public` |
-| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Komt overeen met verlopen die op elk moment in het aangegeven interval zijn geannuleerd. Dit geldt ook als de vervaldatum later opnieuw is geopend (door een nieuwe vervaldatum in te stellen voor dezelfde gegevensset). | `updatedDate=2022-01-01` |
-| `completedDate` / `completedToDate` / `completedFromDate` | Komt overeen met verlopen die tijdens het opgegeven interval zijn voltooid. | `completedToDate=2021-11-11-06:00` |
-| `createdDate` | Komt overeen met verlopen die in het venster van 24 uur zijn gemaakt, te beginnen bij het opgegeven tijdstip.<br><br> Merk op dat de data zonder een tijd (als `2021-12-07`) datetime aan het begin van die dag vertegenwoordigen. Zo verwijst `createdDate=2021-12-07` naar elke vervaldatum die op 7 december 2021 is gemaakt, van `00:00:00` tot en met `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
-| `createdFromDate` | Komt overeen met verlopen die op of na de aangegeven tijd zijn gemaakt. | `createdFromDate=2021-12-07T00:00:00Z` |
-| `createdToDate` | Komt overeen met verlopen die op of voor de aangegeven tijd zijn gemaakt. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
+| `author` | Gebruik de `author` vraagparameter om de persoon te vinden die onlangs de datasetvervaldatum bijwerkte. Als er sinds het maken geen updates zijn uitgevoerd, komt deze overeen met de oorspronkelijke maker van de vervaldatum. Deze parameter komt overeen met vervaltijden waarbij het veld `created_by` overeenkomt met de zoektekenreeks.<br> als het onderzoekskoord met `LIKE` of `NOT LIKE` begint, wordt het resterende behandeld als SQL onderzoekspatroon. Anders wordt de gehele zoektekenreeks beschouwd als een letterlijke tekenreeks die exact moet overeenkomen met de volledige inhoud van een `created_by` -veld. | `author=LIKE %john%`, `author=John Q. Public` |
 | `datasetId` | Komt overeen met verlopen die van toepassing zijn op specifieke dataset. | `datasetId=62b3925ff20f8e1b990a7434` |
 | `datasetName` | Komt overeen met verlopen waarvan de naam van de gegevensset de opgegeven zoekreeks bevat. De overeenkomst is niet hoofdlettergevoelig. | `datasetName=Acme` |
 | `description` |   | `description=Handle expiration of Acme information through the end of 2024.` |
 | `displayName` | Komt overeen met verlopen waarvan de weergavenaam de opgegeven zoekreeks bevat. De overeenkomst is niet hoofdlettergevoelig. | `displayName=License Expiry` |
 | `executedDate` / `executedFromDate` / `executedToDate` | Hiermee filtert u de resultaten op basis van een exacte uitvoeringsdatum, een einddatum voor de uitvoering of een begindatum voor de uitvoering. Zij worden gebruikt om gegevens of verslagen terug te winnen verbonden aan de uitvoering van een verrichting op een specifieke datum, vóór een bepaalde datum, of na een bepaalde datum. | `executedDate=2023-02-05T19:34:40.383615Z` |
-| `expiryDate` / `expiryToDate` / `expiryFromDate` | Komt overeen met vervaldata die moeten worden uitgevoerd, of reeds zijn uitgevoerd, tijdens het opgegeven interval. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
+| `expiryDate` | Komt overeen met verlopen die in het 24-uurvenster van de gespecificeerde datum voorkwamen. | `2024-01-01` |
+| `expiryToDate` / `expiryFromDate` | Komt overeen met vervaldata die moeten worden uitgevoerd, of reeds zijn uitgevoerd, tijdens het opgegeven interval. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 | `limit` | Een geheel getal in het bereik van 1 tot en met 100 dat het maximale aantal retourneringen aangeeft. De standaardwaarde is 25. | `limit=50` |
 | `orderBy` | De `orderBy` query parameter specificeert de sorteervolgorde van de resultaten die door API worden geretourneerd. Gebruik dit schema om de gegevens te rangschikken op basis van een of meer velden, in oplopende (ASC) of aflopende (DESC) volgorde. Gebruik + of - prefix om ASC, DESC respectievelijk te betekenen. De volgende waarden worden geaccepteerd: `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status` . | `-datasetName` |
 | `orgId` | Komt datasets vervaldagen met de organisatie ID aan die van de parameter. Deze waarde is standaard ingesteld op de waarde van de headers van `x-gw-ims-org-id` en wordt genegeerd, tenzij de aanvraag een servicetoken levert. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
@@ -502,7 +416,8 @@ De volgende lijst schetst de beschikbare vraagparameters wanneer [ van de lijst 
 | `search` | Komt verlopen overeen waar het gespecificeerde koord een nauwkeurige gelijke voor vervalidentiteitskaart is, of **bevat** op om het even welk van deze gebieden is:<br><ul><li>auteur</li><li>weergavenaam</li><li>beschrijving</li><li>weergavenaam</li><li>naam gegevensset</li></ul> | `search=TESTING` |
 | `status` | Een door komma&#39;s gescheiden lijst met statussen. Wanneer inbegrepen, past de reactie datasettermijnen aan de waarvan huidige status onder die vermeld is. | `status=pending,cancelled` |
 | `ttlId` | Komt overeen met het vervalverzoek met de opgegeven id. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
-| `updatedDate` / `updatedToDate` / `updatedFromDate` | Net als `createdDate` / `createdFromDate` / `createdToDate` , maar voor overeenkomsten met de updatetijd van een gegevensset die vervalt in plaats van de aanmaaktijd.<br><br> een vervaldatum wordt beschouwd als bijgewerkt op elke geef uit, met inbegrip van wanneer het wordt gecreeerd, geannuleerd, of uitgevoerd. | `updatedDate=2022-01-01` |
+| `updatedDate` | Komt overeen met verlopen die in het 24-uurvenster van de gespecificeerde datum werden bijgewerkt. | `2024-01-01` |
+| `updatedToDate` / `updatedFromDate` | Komt overeen met verlopen die in het 24-uursvenster werden bijgewerkt en die bij het aangegeven tijdstip begonnen.<br><br> een vervaldatum wordt beschouwd als bijgewerkt op elke geef uit, met inbegrip van wanneer het wordt gecreeerd, geannuleerd, of uitgevoerd. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
 
