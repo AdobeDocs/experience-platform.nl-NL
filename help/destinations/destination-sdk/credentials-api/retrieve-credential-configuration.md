@@ -61,7 +61,7 @@ Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB  wint alle credentiële configuraties ] terug
+>[!TAB  wint alle credentiële configuraties  terug]
 
 +++verzoek
 
@@ -107,7 +107,7 @@ Een succesvol antwoord retourneert HTTP-status 200 met een lijst van referentiec
 
 +++
 
->[!TAB  wint een specifieke credentieconfiguratie ] terug
+>[!TAB  wint een specifieke credentieconfiguratie  terug]
 
 +++verzoek
 
