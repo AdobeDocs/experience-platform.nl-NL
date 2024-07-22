@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5086e6419c14356b47963b8445389a0048ad11d7
+source-git-commit: e874459cd3018e0cf2358e590c6ec5eb0f7b4c98
 workflow-type: tm+mt
-source-wordcount: '2145'
+source-wordcount: '2179'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,15 @@ ht-degree: 0%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de recentste versienota&#39;s op SDK zelf, zie de [ de versienota&#39;s van SDK van het Web van het Platform ](/help/web-sdk/release-notes.md).
+
+## Versie 2.25.0 - 18 juli 2024
+
+**Nieuwe eigenschappen**
+
+* Extra ondersteuning voor automatisch bijhouden van personalisatie in Adobe Journey Optimizer.
+* Introduceerde nieuwe montages om verbeterde klikinzameling te beheren.
+
+Bevat versie 2.21.1 van het Web SDK van Adobe Experience Platform.
 
 ## Versie 2.24.0 - 5 juni 2024
 
