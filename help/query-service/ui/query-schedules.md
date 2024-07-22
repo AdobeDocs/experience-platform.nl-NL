@@ -2,9 +2,9 @@
 title: Zoekplanningen
 description: Leer hoe te om geplande vraaglooppas te automatiseren, een vraagprogramma te schrappen of onbruikbaar te maken, en de beschikbare het plannen opties door de UI van Adobe Experience Platform te gebruiken.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
 workflow-type: tm+mt
-source-wordcount: '1741'
+source-wordcount: '1767'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ De werkruimte Planningen wordt weergegeven. UI toont een lijst van om het even w
 ### Plan-details toevoegen {#schedule-details}
 
 De pagina met planningsdetails wordt weergegeven. Op deze pagina kunt u diverse details voor de geplande query bewerken. De details omvatten de [ frequentie en weekdag van de geplande vraag ](#scheduled-query-frequency) looppas, de begin en einddatum, de dataset om de resultaten naar uit te voeren, en [ alarm van de vraagstatus ](#alerts-for-query-status).
+
+>[!IMPORTANT]
+>
+>De UI van de vraagplanner steunt niet onbepaalde of onbepaalde planning. Er moet een einddatum worden opgegeven. Er is geen bovengrens voor de einddatum.
 
 ![ het benadrukte paneel van de Details van het Programma.](../images/ui/query-schedules/schedule-details.png)
 

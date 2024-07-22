@@ -4,14 +4,18 @@ solution: Experience Platform
 title: API-handleiding voor gegevenstoegang
 description: De API van de Toegang van Gegevens steunt Adobe Experience Platform door ontwikkelaars van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen Experience Platform wordt geconcentreerd.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: d8694c094ae4a7284e4a3ed0ae5bc3dc198e501a
+source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '554'
 ht-degree: 1%
 
 ---
 
 # API-handleiding voor gegevenstoegang
+
+>[!IMPORTANT]
+>
+>De Toegang API van Gegevens is nu verouderd ****. U wordt aangeraden Doelen te gebruiken voor het exporteren van gegevens uit Adobe Experience Platform. Voor meer informatie, gelieve te verwijzen naar de [ documentatie van de de uitvoerbestemmingen van de dataset ](../destinations/destination-types.md#dataset-export-destinations).
 
 De API voor gegevenstoegang ondersteunt Adobe Experience Platform door gebruikers een RESTful-interface te bieden die is gericht op de detecteerbaarheid en toegankelijkheid van opgenomen datasets binnen [!DNL Experience Platform] .
 
@@ -19,7 +23,7 @@ De API voor gegevenstoegang ondersteunt Adobe Experience Platform door gebruiker
 
 ## API-specificatieverwijzing
 
-De de verwijzingsdocumentatie van Tagger API kan [ hier ](https://developer.adobe.com/experience-platform-apis/references/data-access/) worden gevonden.
+De OpenAPI verwijzingsdocumentatie kan [ hier ](https://developer.adobe.com/experience-platform-apis/references/data-access/) worden gevonden.
 
 ## Terminologie {#terminology}
 
