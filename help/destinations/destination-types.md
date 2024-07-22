@@ -3,9 +3,9 @@ keywords: doelen;doel;doeltypen
 title: Doeltypen en -categorieën
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ In Adobe Experience Platform maken we onderscheid tussen verschillende doeltypen
 
 Ten slotte kan ook een onderscheid worden gemaakt tussen openbare bestemmingen die beschikbaar zijn in alle organisaties in de lijst met bestemmingen, en particuliere bestemmingen die Real-Time CDP Ultimate-klanten kunnen maken om aan hun specifieke gevallen van exportgebruik te voldoen.
 
-![ Types van bestemmingsdiagram.](./assets/destination-types/types-of-destinations-no-highlight.png)
+![ Types van bestemmingsdiagram.](./assets/destination-types/types-of-destinations-no-highlight.png " Types van bestemmingsdiagram."){zoomable="yes"}
 
 ## Verbindingen {#connections}
 
@@ -33,17 +33,17 @@ Profielexportdoelen ontvangen onbewerkte gegevens, vaak met e-mailadres als prim
 * [Streaming profiel exportdoelen (ondernemingsdoelen)](#streaming-profile-export)
 * [Batchbestemmingen (op basis van bestanden)](#file-based)
 
-### Streaming profiel exportdoelen (ondernemingsdoelen) {#streaming-profile-export}
+### Geavanceerde zakelijke doelen (streamingprofielexportdoelen) {#streaming-profile-export}
 
 >[!IMPORTANT]
 >
->De bestemmingen van de onderneming, of het stromen profiel de uitvoerbestemmingen, zijn beschikbaar aan [ Adobe Real-time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) slechts klanten.
+>De geavanceerde ondernemingsbestemmingen, of het stromen de uitvoerbestemmingen van het profiel, zijn beschikbaar aan [ Adobe Real-time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) slechts klanten.
 
-Gebruik gegevensconnectors voor bedrijfsdoelgegevens om Adobe Real-time Customer Data Platform-profielen in bijna realtime te leveren aan interne systemen of aan andere systemen van derden voor gegevenssynchronisatie, analyse en verdere gebruiksscenario&#39;s voor profielverrijking.
+Gebruik de geavanceerde gegevensconnectors voor bedrijfsdoelgegevens om Adobe Real-time Customer Data Platform-profielen in bijna realtime te leveren aan interne systemen of aan andere systemen van derden voor gegevenssynchronisatie, analyse en verdere gebruiksscenario&#39;s voor profielverrijking.
 
 Deze doelen ontvangen publiek- en profielgegevens als gegevensstromen van Experience Platforms.
 
-De bestemmingen van de onderneming omvatten:
+De geavanceerde ondernemingsbestemmingen omvatten:
 
 * [HTTP API-bestemming](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
@@ -81,7 +81,7 @@ Leer meer over de [ diverse publiekstypes ](/help/segmentation/ui/account-audien
 
 Een symbool op de doelkaart geeft aan welke soorten publiek u naar elk doel kunt exporteren.
 
-![ de bestemmingskaart van het Voorbeeld met symbolen die tonen welke publiekstypes kunnen worden uitgevoerd.](/help/destinations/assets/destination-types/types-of-audiences.png)
+![ de bestemmingskaart van het voorbeeld met symbolen die tonen welke publiekstypes kunnen worden uitgevoerd.](/help/destinations/assets/destination-types/types-of-audiences.png " de bestemmingskaart van het Voorbeeld met symbolen die tonen welke publiekstypes kunnen worden uitgevoerd."){zoomable="yes"}
 
 
 ## Dataset-exportdoelen {#dataset-export-destinations}
@@ -114,4 +114,4 @@ Extensies zijn handig wanneer gebeurtenisgegevens worden gebruikt om een handeli
 
 De verbindingen en de uitbreidingen in de [ bestemmingscatalogus ](https://platform.adobe.com/destination/catalog) worden gegroepeerd door bestemmingscategorie (**Advertising**, **de opslag van de Wolk**, **platforms van het Onderzoek**, **E-mail marketing**, enz.), afhankelijk van de marketing actie die zij u helpen bereiken. Voor meer informatie over elk van de categorieën, evenals de bestemmingen inbegrepen in elke categorie, zie de [ catalogusdocumentatie van Doelen ](./catalog/overview.md).
 
-![ categorieën van de Bestemming die in de cataloguspagina worden benadrukt.](./assets/destination-types/destination-categories-menu.png)
+![ categorieën van de Bestemming die in de cataloguspagina worden benadrukt.](./assets/destination-types/destination-categories-menu.png " categorieën van de Bestemming die in de cataloguspagina worden benadrukt."){zoomable="yes"}

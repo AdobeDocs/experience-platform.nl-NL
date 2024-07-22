@@ -1,34 +1,34 @@
 ---
-title: Batchbestemming Magnite Streaming
+title: Doel van toerietbatch
 description: Gebruik deze bestemming om Adobe CDP publiek aan het platform van de Streaming van de Magnite in partij te leveren.
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
 workflow-type: tm+mt
-source-wordcount: '1653'
+source-wordcount: '1631'
 ht-degree: 0%
 
 ---
 
 
-# Magnietstreaming: Batch-verbinding {#magnite-streaming-batch}
+# Magneet: Batch-verbinding {#magnite-streaming-batch}
 
 ## Overzicht {#overview}
 
-In dit document wordt de Magnite Streaming: Batch-bestemming beschreven en worden voorbeelden gegeven van het gebruik van voorbeelden voor een beter begrip van het activeren en exporteren van soorten publiek.
+In dit document wordt de toverstaf beschreven: doel in batch en worden voorbeelden gegeven van het gebruik van voorbeelden om u te helpen begrijpen hoe u het publiek kunt activeren en exporteren.
 
-Het Adobe Real-Time CDP-publiek kan op twee manieren aan de Magnite worden geleverd: het streamingplatform - het kan één keer per dag worden geleverd, of het kan in real-time worden geleverd:
+Het Adobe Real-Time CDP-publiek kan op twee manieren op het Magnite Streaming-platform worden geleverd: het kan één keer per dag worden geleverd of het kan in real-time worden geleverd:
 
-1. Als u slechts één keer per dag een publiek wilt en/of moet leveren, kunt u de Magnite: Streaming Batch-bestemming gebruiken, die een publiek naar Magnite levert: Streaming via een dagelijkse levering van S3-batchbestanden. Deze Batchdoelgroepen worden voor onbepaalde tijd opgeslagen in ons platform, in tegenstelling tot real-time doelgroepen, die slechts een paar dagen worden opgeslagen.
+1. Als u slechts één keer per dag een publiek wilt en/of wilt leveren, kunt u de Magnite: Batch-bestemming gebruiken, die het publiek via een dagelijkse levering van S3-batchbestanden naar Magnite Streaming stuurt. Dit publiek van de Partij wordt opgeslagen voor onbepaalde tijd in het platform van Magnite, in tegenstelling tot publiek in real time, die slechts voor een paar dagen worden opgeslagen.
 
-2. Nochtans, als u wilt en/of het publiek in real time moet leveren, zult u Magnite moeten gebruiken: het stromen bestemming in real time. Wanneer het gebruiken van de bestemming in real time, Magnite: Het stromen zal publiek in real time ontvangen, maar wij kunnen slechts publiek in real time tijdelijk in ons platform opslaan, en zij zullen uit ons systeem binnen een paar dagen worden verwijderd. Om deze reden, als u Magnite wilt gebruiken: het stromen bestemming in real time, zult u ook de Magneet moeten gebruiken: het stromen bestemming van de Partij - elk publiek dat u aan de bestemming in real time activeert, moet u ook aan de bestemming van de Partij activeren.
+2. Nochtans, als u wilt of moet om publiek vaker leveren, zult u [ Magnite in real time ](/help/destinations/catalog/advertising/magnite-streaming.md) bestemming moeten gebruiken. Wanneer het gebruiken van de bestemming in real time, zal de Streaming van de Magnite publiek in real time ontvangen, maar de Magnite kan tijdelijk publiek in real time slechts opslaan in hun platform, en zij zullen uit het systeem binnen een paar dagen worden verwijderd. Om deze reden, als u de Magnite in real time bestemming wilt gebruiken, zult u *ook* moeten gebruiken Magnite: de bestemming van de partij - elk publiek dat u aan de bestemming in real time activeert, moet u ook aan de bestemming van de Partij activeren.
 
-Om opnieuw te kunnen samenvatten: als u slechts één keer per dag Adobe Real-Time CDP-publiek wilt leveren, gebruikt u de toeriet: Alleen streamingbatchbestemming en het publiek wordt één keer per dag geleverd. Als u het publiek van Adobe Real-Time CDP in Echt - tijd wilt leveren, zult u zowel de Magniet gebruiken: het stromen bestemming van de Partij, als de Magniet: Het stromen bestemming in real time. Neem voor meer informatie contact op met Magnite: Streaming.
+Om opnieuw op te nemen: Als u Adobe Real-Time CDP-publiek slechts eenmaal per dag wilt leveren, gebruikt u de Magnite: Alleen batchbestemming en het publiek wordt eenmaal per dag geleverd. Als u het publiek van Adobe Real-Time CDP in real time wilt leveren, zult u *zowel* Magnite gebruiken: De bestemming van de partij, en de bestemming van de Magnite Real-Time. Neem voor meer informatie contact op met Magnite: Streaming.
 
 
-Lees verder voor meer informatie over de Magnite: Streaming Batch-bestemming, hoe u er verbinding mee kunt maken en hoe u het Adobe Real-Time CDP-publiek activeert.
-Voor meer informatie over de bestemming in real time, zie [ dit doc ](magnite-streaming.md) in plaats daarvan.
+Lees verder hieronder voor meer informatie over de Magnite: Batch-bestemming, hoe u er verbinding mee kunt maken en hoe u het Adobe Real-Time CDP-publiek activeert.
+Voor meer informatie over de bestemming in real time, zie [ deze documentatiepagina ](magnite-streaming.md) in plaats daarvan.
 
 >[!IMPORTANT]
 >
@@ -38,31 +38,31 @@ Voor meer informatie over de bestemming in real time, zie [ dit doc ](magnite-st
 
 ## Gebruiksscenario’s {#use-cases}
 
-Om u beter te helpen begrijpen hoe en wanneer u de Magnite Streaming: de bestemming van de partij zou moeten gebruiken, zijn hier de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen gebruikend deze bestemming.
+Om u beter te helpen begrijpen hoe en wanneer u Magnite zou moeten gebruiken: De bestemming van de partij, hier zijn de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen gebruikend deze bestemming.
 
 ### Hoofdletters gebruiken #1 {#use-case-1}
 
-U hebt een publiek geactiveerd op de Magnite Streaming: Real-Time bestemming.
+U hebt een publiek op de bestemming van de Magnite Real-Time geactiveerd.
 
-Elk publiek dat via Magnite Streaming wordt geactiveerd: Real-Time bestemming moet ook de Magnite Streaming: Batch-bestemming gebruiken, aangezien de gegevens van de Batch-levering bedoeld zijn om de gegevens van de Real-Time levering binnen het Magnite Streaming platform te vervangen of aan te houden.
+Om het even welk publiek dat via de Magnite Real-Time bestemming wordt geactiveerd moet ook de Magnite gebruiken: de bestemming van de partij, aangezien de gegevens van de levering van de Partij worden bedoeld om de gegevens van de levering in real time binnen het platform van de Streaming van de Magnite te vervangen/voort te zetten.
 
 ### Hoofdletters gebruiken #2 {#use-case-2}
 
 U wilt een publiek alleen activeren in een batch-/dagcursus voor het Magnite Streaming-platform.
 
-Elk publiek dat via de Magnite Streaming wordt geactiveerd: de batchbestemming wordt geleverd in een batch-/dagcadence en zal vervolgens op het Magnite Streaming-platform worden gericht.
+Elk publiek dat via de toeriet wordt geactiveerd: de batchbestemming wordt in een batch-/dagcadence geleverd en is vervolgens beschikbaar voor gebruik op het Magnite Streaming-platform.
 
 ## Vereisten {#prerequisites}
 
-Als u de Magnite-doelen in Adobe Experience Platform wilt gebruiken, moet u eerst een Magnite Streaming-account hebben. Als u een [!DNL Magnite Streaming] -account hebt, vraagt u uw [!DNL Magnite] accountmanager om referenties voor toegang tot [!DNL Magnite's] -doelen. Als u geen [!DNL Magnite Streaming] -account hebt, kunt u contact opnemen met adobe-tech@magnite.com
+Als u de [!DNL Magnite] -doelen in Adobe Experience Platform wilt gebruiken, moet u eerst een Magnite Streaming-account hebben. Als u een [!DNL Magnite Streaming] -account hebt, vraagt u uw [!DNL Magnite] accountmanager om referenties voor toegang tot [!DNL Magnite's] -doelen. Als u geen [!DNL Magnite Streaming] -account hebt, kunt u contact opnemen met adobe-tech@magnite.com
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-De toeristenstroom: De bestemming van de partij kan *om het even welke* identiteitsbronnen van de Adobe CDP ontvangen. Deze bestemming heeft momenteel drie doelidentiteitsvelden waarnaar u de koppeling wilt maken.
+Magnite: De bestemming van de partij kan *om het even welke* identiteitsbronnen van de Adobe CDP ontvangen. Deze bestemming heeft momenteel drie doelidentiteitsvelden waarnaar u de koppeling wilt maken.
 
 >[!NOTE]
 >
->*Om het even welke* identiteitsbronnen kunnen aan om het even welk van het doel magnite_deviceId in kaart brengen.
+>*Om het even welke* identiteitsbronnen kunnen aan om het even welke `magnite_deviceId` doelidentiteiten in kaart brengen.
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
@@ -85,7 +85,7 @@ De toeristenstroom: De bestemming van de partij kan *om het even welke* identite
 
 | Item | Type | Notities |
 |-----------------------------|----------|----------|
-| Exporttype | Publiek exporteren | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in Magnite Streaming: Batchbestemming. |
+| Exporttype | Publiek exporteren | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in de Magnite: Batchbestemming. |
 | Exportfrequentie | Batch | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over partij [ op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md). |
 
 {style="table-layout:auto"}
@@ -96,7 +96,7 @@ Zodra uw bestemmingsgebruik is goedgekeurd en de Streaming van de Magnite uw gel
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Zoek de Magnite Streaming: Batchbestemming in de Adobe Experience-catalogus. Klik op de knop Extra opties (\...) en configureer vervolgens de doelverbinding/doelinstantie.
+Zoek de toverstaf: batchbestemming in de Adobe Experience-catalogus. Klik op de knop Extra opties (\...) en configureer vervolgens de doelverbinding/doelinstantie.
 
 Als u al een bestaand account hebt, kunt u dit vinden door de optie Account te wijzigen in &quot;Existing account&quot;. Anders maakt u hieronder een account:
 
@@ -126,7 +126,7 @@ doelverbinding/-instantie in de toekomst.
 
 U kunt vervolgens doorgaan door **[!UICONTROL Next]** te selecteren
 
-Op het volgende scherm, getiteld &quot;Governance Policy and Enforcement Actions (Optional)&quot;, kunt u naar keuze om het even welk relevant beleid van het gegevensbeheer selecteren. &quot;Gegevens exporteren&quot; wordt over het algemeen geselecteerd voor de bestemming Magnite Streaming Batch.
+Op het volgende scherm, getiteld &quot;Governance Policy and Enforcement Actions (Optional)&quot;, kunt u naar keuze om het even welk relevant beleid van het gegevensbeheer selecteren. De &quot;Uitvoer van Gegevens&quot;wordt over het algemeen geselecteerd voor Magneet: de bestemming van de partij.
 
 ![ Facultatief beleid van het bestuur en handhavingsacties ](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
@@ -175,11 +175,11 @@ Op het scherm &quot;Vorm filename en de uitvoerplanning voor elk publiek&quot;, 
 
 Nadat uw publiek is geüpload, kunt u controleren of uw publiek op de juiste wijze is gemaakt en geüpload.
 
-* De Magnite Streaming Batch-bestemming levert S3-bestanden naar Magnite Streaming op een dagelijkse snelheid. Na levering en opname, zullen de soorten publiek/segmenten naar verwachting in het Streamen van de Magnite verschijnen, en kunnen op een overeenkomst worden toegepast. U kunt dit bevestigen door de segment-id of segmentnaam te zoeken die tijdens de activeringsstappen in de Adobe Experience Platform is gedeeld.
+* De toeriet: De bestemming van de partij levert S3 dossiers aan de Streaming van de Magnite bij een dagelijkse kadentie. Na levering en opname, zullen de soorten publiek/segmenten naar verwachting in het Streamen van de Magnite verschijnen, en kunnen op een overeenkomst worden toegepast. U kunt dit bevestigen door de segment-id of segmentnaam te zoeken die tijdens de activeringsstappen in de Adobe Experience Platform is gedeeld.
 
 >[!NOTE]
 >
->Het publiek activeerde/geleverde aan de Magnite die Batch bestemming stroomt zal ** het zelfde publiek vervangen dat via de Magnite die in real time bestemming stroomt werd geactiveerd/geleverd. Als u omhoog een segment gebruikend de segmentnaam kijkt, kunt u niet het segment in real time vinden, tot de partij is opgenomen en door het platform van de Streaming van de Magnite verwerkt.
+>Het publiek activeerde/leverde aan Magnite: De bestemming van de partij zal ** het zelfde publiek vervangen dat via de Magnite in real time bestemming werd geactiveerd/geleverd. Als u omhoog een segment gebruikend de segmentnaam kijkt, kunt u niet het segment in real time vinden, tot de partij is opgenomen en door het platform van de Streaming van de Magnite verwerkt.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

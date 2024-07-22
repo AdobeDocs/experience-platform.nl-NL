@@ -1,31 +1,31 @@
 ---
-title: Magnite Streaming Real-Time doelverbinding
+title: Real-Time doelverbinding Magnite
 description: Gebruik deze bestemming om Adobe CDP publiek aan het platform van de Streaming van de Magnite in real time te leveren.
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1256'
 ht-degree: 0%
 
 ---
 
 
-# (Beta) Magnite Streaming: Real-Time bestemmingsverbinding
+# (Beta) Magnite: Real-Time bestemmingsverbinding
 
 ## Overzicht {#overview}
 
-Met de [!DNL Magnite Streaming: Real-Time] en de Magnite Streaming: Batch-doelen in Adobe Experience Platform kunt u doelgroepen toewijzen en exporteren en activeren op het Magnite Streaming-platform.
+[!DNL Magnite: Real-Time] en [ Magnite: De bestemmingen van de partij ](/help/destinations/catalog/advertising/magnite-batch.md) in Adobe Experience Platform helpen u toehoorden in kaart brengen en uitvoeren voor het richten en de activering op het Magnite Streaming platform.
 
-Het activeren van het publiek voor het [!DNL Magnite Streaming] -platform is een proces in twee stappen waarbij u zowel de Magnite Streaming: Real-Time als de Magnite Streaming: Batch-doelen moet gebruiken.
+Het activeren van het publiek voor het [!DNL Magnite Streaming] -platform is een proces in twee stappen waarbij u zowel de Magnite als Real-Time en de Magnite: Batch-doelen moet gebruiken.
 
 Als u uw publiek wilt activeren naar [!DNL Magnite Streaming] , moet u:
 
-* Activeer het publiek op de bestemming [!DNL Magnite Streaming: Real-Time], zoals weergegeven op deze pagina.
-* Activeer hetzelfde publiek bij Magnite Streaming: Batch-bestemming. Het doel van [!DNL Magnite Streaming: Batch] is een verplichte component. Als u het publiek niet activeert op de batchbestemming [!DNL Magnite Streaming] , resulteert dit in een mislukte integratie en wordt het publiek niet geactiveerd.
+* Activeer het publiek op de bestemming [!DNL Magnite: Real-Time], zoals weergegeven op deze pagina.
+* Activeer hetzelfde publiek op de toeriet: Batch-bestemming. Het doel van [!DNL Magnite: Batch] is een verplichte component. Als u het publiek niet activeert op de batchbestemming [!DNL Magnite Streaming] , resulteert dit in een mislukte integratie en wordt het publiek niet geactiveerd.
 
-Opmerking: als u de Real-Time bestemming gebruikt, ontvangt [!DNL Magnite: Streaming] een publiek in real-time, maar we kunnen het publiek in real-time alleen tijdelijk in ons platform opslaan. Binnen enkele dagen worden ze van ons systeem verwijderd. Om deze reden, als u Magnite wilt gebruiken: Het stromen bestemming in real time, zult u *ook* moeten gebruiken het Stromen van de Magnite: de bestemming van de Partij - elk publiek dat u aan de bestemming in real time activeert, moet u ook aan de bestemming van de Partij activeren.
+Opmerking: wanneer u de bestemming Real-Time gebruikt, ontvangt [!DNL Magnite Streaming] een publiek in real-time, maar Magnite kan alleen realtime publiek tijdelijk in het platform opslaan en binnen een paar dagen worden verwijderd uit het systeem. Om deze reden, als u Magnite wilt gebruiken: In real time bestemming, zult u *ook* moeten gebruiken Magnite: de bestemming van de partij - elk publiek dat u aan de bestemming in real time activeert, moet u ook aan de bestemming van de Partij activeren.
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ Opmerking: als u de Real-Time bestemming gebruikt, ontvangt [!DNL Magnite: Strea
 
 ## Gebruiksscenario’s {#use-cases}
 
-Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Magnite Streaming: Real-Time] bestemming zou moeten gebruiken, is hier een geval van het steekproefgebruik dat de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
+Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Magnite: Real-Time] bestemming zou moeten gebruiken, is hier een geval van het steekproefgebruik dat de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
 ### Activering en doelversie {#activation-and-targeting}
 
@@ -48,11 +48,11 @@ Als u geen [!DNL Magnite Streaming] -account hebt, kunt u contact opnemen met ad
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-Het doel van [!DNL Magnite Streaming: Real-Time] ondersteunt de activering van de identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
+Het doel van [!DNL Magnite: Real-Time] ondersteunt de activering van de identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |-------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| device_id | Een unieke id voor een apparaat of identiteit. We accepteren alle apparaat-id&#39;s en de eerste-partijid, ongeacht het type. | Identiteitstypen die wij ondersteunen, zijn onder andere PPUID-, GAID-, IDFA- en tv-apparaat-id&#39;s. |
+| device_id | Een unieke id voor een apparaat of identiteit. We accepteren alle apparaat-id&#39;s en de eerste-partijid, ongeacht het type. | Identiteitstypen die door Magnite worden ondersteund, zijn onder andere PPUID-, GAID-, IDFA- en TV-apparaat-id&#39;s. |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 |------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die in de [!DNL Magnite Streaming: Real-Time] -bestemming worden gebruikt. |
+| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die in de [!DNL Magnite: Real-Time] -bestemming worden gebruikt. |
 | Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -162,13 +162,13 @@ Nadat uw publiek is geüpload, kunt u met de volgende stappen controleren of uw 
 
 -->
 
-* Post-ingest, publiek zal naar verwachting binnen een paar minuten verschijnen in [!DNL Magnite Streaming] en kan op een overeenkomst worden toegepast. U kunt dit bevestigen door de segment-id op te zoeken die tijdens de activeringsstappen in de Adobe Experience Platform is gedeeld.
+* Na-ingest, zullen het publiek naar verwachting binnen [!DNL Magnite Streaming] binnen een paar minuten verschijnen en kunnen op een overeenkomst worden toegepast. U kunt dit bevestigen door de segment-id op te zoeken die tijdens de activeringsstappen in de Adobe Experience Platform is gedeeld.
 
-## Activeer het zelfde publiek door de [!DNL Magnite Streaming: Batch] bestemming
+## Activeer het zelfde publiek door de [!DNL Magnite: Batch] bestemming
 
-Soorten publiek dat met [!DNL Magnite Streaming] wordt gedeeld met gebruik van de Real-Time bestemming moet ook worden gedeeld met gebruik van de Magnite Streaming: Batch-bestemming. Als de segmentnamen correct zijn geconfigureerd in de gebruikersinterface van [!DNL Magnite Streaming] , worden deze bijgewerkt met de segmentnamen die worden gebruikt in de Adobe Experience Platform-update na de dag.
+Soorten publiek dat met [!DNL Magnite Streaming] wordt gedeeld met gebruik van de bestemming Real-Time, moeten ook worden gedeeld met gebruik van de Magnite: Batch-bestemming. Als de segmentnamen correct zijn geconfigureerd in de gebruikersinterface van [!DNL Magnite Streaming] , worden deze bijgewerkt met de segmentnamen die worden gebruikt in de Adobe Experience Platform-update na de dag.
 
-Tot slot als een bestemming van de Partij niet voor uw integratie is gevormd, opstelling het nu via de Magnite Streaming: het bestemmingsdocument van de Partij.
+Tot slot als een bestemming van de Partij niet voor uw integratie is gevormd, plaats het nu via Magnite: het bestemmingsdocument van de Partij.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
