@@ -2,9 +2,9 @@
 title: Adobe Target gebruiken met Web SDK voor personalisatie
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 69406293dce5fdfc832adff801f1991626dafae0
+source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1357'
 ht-degree: 1%
 
 ---
@@ -192,77 +192,31 @@ Als u opnamekenmerken in het profiel wilt vertragen totdat de inhoud is weergege
 
 Uw website bevat bijvoorbeeld drie beslissingsbereiken die overeenkomen met drie categorielink op de website (Men, Vrouwen en Kinderen) en u wilt de categorie bijhouden die de gebruiker uiteindelijk heeft bezocht. Verzend deze aanvragen met de markering `__save` ingesteld op `false` om te voorkomen dat de categorie blijft bestaan op het moment dat de inhoud wordt opgevraagd. Nadat de inhoud is weergegeven, verzendt u de juiste lading (inclusief de `eventToken` en `stateToken` ) voor de overeenkomende kenmerken die moeten worden opgenomen.
 
-<!--Save profile or entity attributes by default with:
-
-```js
-alloy ( "sendEvent" , {
-  renderDecisions : true,
-  data : {
-    __adobe : {
-      target : {
-        "__save" : true // Optional. __save=true is the default 
-        "profile.gender" : "female",
-        "profile.age" : 30,
-        "entity.name" : "T-shirt",
-        "entity.id" : "1234",
-      }
-    }
-  }
-} ) ; 
-```
--->
-
 In het onderstaande voorbeeld wordt een bericht in de stijl trackEvent verzonden, worden profielscripts uitgevoerd, worden kenmerken opgeslagen en wordt de gebeurtenis direct vastgelegd.
 
 ```js
-alloy ( "sendEvent" , {
-  renderDecisions : true,
-  data : {
-    __adobe : {
-      target : {
-        "profile.gender" : "female",
-        "profile.age" : 30,
-        "entity.name" : "T-shirt" ,
-        "entity.id" : "1234" ,
-        "track": {
-          "scopes": [ "mbox1", "mbox2"],
-          "type": "display|click|..."
+alloy("sendEvent", {
+    "renderDecisions": true,
+    "data": {
+        "xdm": { // Experience Event XDM data },
+            "__adobe": {
+                "target": {
+                    " __save": true|false,
+                    //defaults to true if omitted 
+                    "profile.gender": "female",
+                    "profile.age": 30,
+                    "entity.name": "T-shirt",
+                    "entity.id": "1234"
+                }
+            }
         }
-      }
     }
-  }
-} ) ;
+})
 ```
 
 >[!NOTE]
 >
->Als de instructie `__save` wordt weggelaten, gebeurt het opslaan van de profiel- en entiteitskenmerken direct, alsof de aanvraag is uitgevoerd, zelfs als de rest van de aanvraag een prefetch van personalisatie is. De aanwijzing `__save` is alleen relevant voor profiel- en entiteitskenmerken. Wanneer het trackobject aanwezig is, wordt de aanwijzing `__save` genegeerd. De gegevens worden onmiddellijk opgeslagen en het bericht wordt geregistreerd.
-
-**`sendEvent`met profielgegevens**
-
-```js
-alloy("sendEvent", {
-   renderDecisions: true|false,
-   xdm: { // Experience Event XDM data },
-   data: { // Freeform data }
-});
-```
-
-**hoe te om de attributen van het Profiel naar Adobe Target te verzenden:**
-
-```js
-alloy("sendEvent", {
-  "renderDecisions": true,
-  "data": {
-    "__adobe": {
-      "target": {
-        "profile.gender": "female",
-        "profile.age": 30
-      }
-    }
-  }
-});
-```
+>Als de aanwijzing `__save` wordt weggelaten, gebeurt het opslaan van de profiel- en entiteitskenmerken direct. De instructie `__save` is alleen relevant voor profielkenmerken en entiteitsdetails.
 
 ## Aanbevelingen aanvragen
 
@@ -302,6 +256,34 @@ alloy("sendEvent", {
   }
 });
 ```
+
+## Mbox-omzettingscijfers weergeven {#display-mbox-conversion-metrics}
+
+In het onderstaande voorbeeld ziet u hoe u de conversies van weergavekaders kunt bijhouden en profielparameters naar Adobe Target kunt verzenden zonder dat u hiervoor in aanmerking hoeft te komen.
+
+```js
+alloy("sendEvent", {
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "conversion-step-1" //example scope name
+                }],
+                "propositionEventType": {
+                    "display": 1
+                }
+            }
+        },
+        "eventType": "decisioning.propositionDisplay"
+    }
+});
+```
+
+
+| Eigenschap | Beschrijving |
+|---------|----------|
+| `xdm._experience.decisioning.propositions[x].scope` | Het werkingsgebied om succesmetrisch met te associëren (die het aan een specifieke activiteit aan de kant van het Doel zal toeschrijven). |
+| `xdm._experience.decisioning.propositions[x].eventType` | Een tekenreeks die het bedoelde gebeurtenistype beschrijft. Stel dit in op `"decisioning.propositionDisplay"` voor dit gebruik. |
 
 ## Foutopsporing
 
