@@ -5,7 +5,7 @@ title: API-eindpunt voor privacytaken
 description: Leer hoe u privacytaken voor Experiencen Cloud-toepassingen beheert met de Privacy Service-API.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: e8e8a9267ddcf7ee9d1d199da8d157ed5f36d344
+source-git-commit: 341cc4cb150717f08b2e59412ef58fbd6f7b3450
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 0%
@@ -42,7 +42,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`gdpr` - Nota: Dit wordt ook gebruikt voor verzoeken met betrekking tot **ccpa** verordeningen.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br> zie het overzicht op [ gesteunde verordeningen ](../regulations/overview.md) voor meer informatie over de privacyverordeningen die de bovengenoemde waarden vertegenwoordigen. |
+| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`fdbr_usa`</li><li>`gdpr` - Nota: Dit wordt ook gebruikt voor verzoeken met betrekking tot **ccpa** verordeningen.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br> zie het overzicht op [ gesteunde verordeningen ](../regulations/overview.md) voor meer informatie over de privacyverordeningen die de bovengenoemde waarden vertegenwoordigen. |
 | `{PAGE}` | De pagina met gegevens die moet worden weergegeven met een op 0 gebaseerde nummering. De standaardwaarde is `0` . |
 | `{SIZE}` | Het aantal resultaten dat op elke pagina moet worden weergegeven. De standaardwaarde is `100` en het maximum is `1000` . Als het maximum wordt overschreden, retourneert de API een fout van 400 code. |
 | `{status}` | Standaard worden alle statussen opgenomen. Als u een statustype opgeeft, worden alleen privacytaken geretourneerd die overeenkomen met dat statustype. De toegestane waarden zijn onder meer: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -51,10 +51,6 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 | `{filterDate}` | Deze parameter beperkt de resultaten tot de resultaten die op een bepaalde datum worden verwerkt. De notatie YYYY-MM-DD wordt geaccepteerd. Het systeem kan de afgelopen 45 dagen terugkijken. |
 
 {style="table-layout:auto"}
-
-<!-- Not released yet:
-<li>`pdpd_vnm`</li> 
- -->
 
 **Verzoek**
 

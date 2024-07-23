@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologie van de privacyregels
 description: Dit document bevat definities voor belangrijke termen met betrekking tot privacyregels die worden ondersteund door Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: be219530f33209cb4f3fe70425bb293edff4b309
 workflow-type: tm+mt
-source-wordcount: '1842'
+source-wordcount: '2020'
 ht-degree: 0%
 
 ---
@@ -71,6 +71,8 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 
 **het filtreren systeem**: Om het even welke specifieke reeks persoonlijke gegevens die volgens specifieke criteria toegankelijk zijn, of kunnen worden gevraagd.
 
+**FDBR**: [!DNL Florida Digital Bill of Rights] (FDBR) is wetgeving die inwoners van Florida de rechten verleent om tot hun persoonlijke gegevens toegang te hebben, te verbeteren, te schrappen en te kopiëren. Het verplicht tot transparantie in gegevenspraktijken, maakt opt-outs voor verkoop van gegevens of gerichte reclame mogelijk en verbiedt ongeoorloofd toezicht. Het departement Juridische Zaken van Florida handhaaft deze rechten en eist dat de voor de verwerking verantwoordelijke personen binnen 45 dagen reageren op verzoeken.
+
 ## G
 
 **GDPR**: [!DNL General Data Protection Regulation] (GDPR) is een wettelijk kader dat richtlijnen voor de inzameling en de verwerking van persoonlijke informatie van individuen binnen de Europese Economische Ruimte (EER) plaatst. In de GDPR worden de beginselen voor gegevensbeheer en de rechten van het individu uiteengezet en worden boetes opgelegd die op inkomsten kunnen worden gebaseerd. GDPR geldt voor alle ondernemingen die zich bezighouden met de gegevens van EER-burgers, zodat het een kritische regeling is voor met de naleving van de regelgeving belaste bedrijven bij banken, verzekeraars en andere financiële ondernemingen.
@@ -107,13 +109,11 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 
 ## O
 
+**OCPA**: De Oregon Consumer Privacy Act (OCPA) wetgeving verleent ingezetenen van Oregon zeer belangrijke rechten over hun persoonlijke gegevens, met inbegrip van de rechten om, een exemplaar van hun gegevens te kennen te verbeteren te schrappen en te verkrijgen. Het legt ondernemingen strenge verplichtingen op, die hen verplichten gedetailleerde privacymededelingen te verstrekken, toestemming te verkrijgen voor bepaalde gegevenstoepassingen en verhoogde bescherming voor gevoelige informatie toe te passen. De wetgeving is erop gericht de privacy van de consument in evenwicht te brengen met de belangen van het bedrijfsleven.
+
 ## P
 
 **PDPA**: [!DNL Personal Data Protection Act] van Thailand (PDPA) werd geïntroduceerd om Thaise gegevenseigenaars van de illegale inzameling, het gebruik, of de bekendmaking van hun persoonlijke gegevens te beschermen. De verordening is geïnspireerd door de GDPR van de Europese Unie en verleent Thaise burgers het recht om toegang te vragen tot of te verwijderen van hun opgeslagen persoonsgegevens.
-
-<!-- Not yet released:
-**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
--->
 
 **Persoonlijke gegevens**: Om het even welke informatie met betrekking tot een natuurlijke persoon of &quot;Onderwerp van Gegevens&quot;, die kunnen worden gebruikt om de persoon direct of indirect te identificeren.
 
@@ -152,6 +152,8 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 **Toezichtautoriteit**: Een openbare autoriteit die door een lidstaat overeenkomstig artikel 46 wordt gevestigd.
 
 ## T
+
+**TDPSA**: De Texas Data Privacy and Security Act (TDPSA) is een uitvoerige wetgeving die de rechten van de persoonsgegevens van de inwoners van Texas beschermt. Het verleent particulieren het recht om toegang te krijgen tot, te verbeteren, te verwijderen en kopieën van hun gegevens te verkrijgen en zich te onthouden van de verkoop van gegevens en gerichte reclame. Bedrijven die deze wetgeving overtreden, kunnen worden bestraft.
 
 **Trialogen**: De trialogen zijn informele onderhandelingen tussen de Europese Commissie, het Europees Parlement, en de Raad van de Europese Unie. Deze onderhandelingen vinden doorgaans plaats na de eerste lezing van de voorgestelde wetgeving, zodat er sneller overeenstemming kan worden bereikt over een compromistekst die moet worden aangenomen.
 overeenstemming te bereiken over een snellere aanneming van een compromistekst .
