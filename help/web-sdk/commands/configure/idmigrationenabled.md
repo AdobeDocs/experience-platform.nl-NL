@@ -2,7 +2,7 @@
 title: idMigrationEnabled
 description: Hiermee kan de Web SDK AMCV-cookies lezen.
 exl-id: 33b9d645-0fbe-4fe4-8847-e6f9e78557b6
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 0%
@@ -32,8 +32,8 @@ Stel de Booleaanse waarde `idMigrationEnabled` in wanneer u de opdracht `configu
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "idMigrationEnabled": false
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  idMigrationEnabled: false
 });
 ```

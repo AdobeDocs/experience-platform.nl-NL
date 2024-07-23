@@ -1,11 +1,11 @@
 ---
 title: Meerdere Web SDK-instanties gebruiken
 description: Leer hoe te met de veelvoudige eigenschappen van SDK van het Web van het Experience Platform in wisselwerking te staan.
-keywords: meerdere eigenschappen;configure;sendEvent;edgeConfigId;orgId;
+keywords: meerdere eigenschappen
 exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
@@ -38,24 +38,24 @@ In het volgende voorbeeld kunt u met elke instantie opdrachten uitvoeren:
 
 ```javascript
 titanium("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
 titanium("sendEvent", {
-  "data": {
-    "key": "value"
+  data: {
+    key: "value"
   }
 });
 
 copper("configure", {
-  "edgeConfigId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
-  "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
+  datastreamId: "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
+  orgId: "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
 copper("sendEvent", {
-  "data": {
-    "key": "value"
+  data: {
+    key: "value"
   }
 });
 ```
@@ -64,4 +64,4 @@ Zorg ervoor dat u de opdracht `configure` voor elke instantie uitvoert voordat u
 
 >[!IMPORTANT]
 >
->Om conflicten met cookies te voorkomen, moet elke Web SDK-instantie een eigen unieke `edgeConfigId` en eigen unieke `orgId` hebben.
+>Om conflicten met cookies te voorkomen, moet elke Web SDK-instantie een eigen unieke `datastreamId` en eigen unieke `orgId` hebben.

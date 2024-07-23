@@ -5,7 +5,7 @@ seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: doel;a4t;registreren;web sdk;ervaring;platform;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 0%
@@ -519,7 +519,7 @@ Hieronder ziet u hoe `onBeforeEventSent` kan worden geconfigureerd om analyses u
 
 ```javascript
 alloy("configure", {
-  edgeConfigId: "datastream configuration ID",
+  datastreamId: "datastream configuration ID",
   orgId: "adobe ORG ID",
   onBeforeEventSend: function(options) {
     const xdm = options.xdm;

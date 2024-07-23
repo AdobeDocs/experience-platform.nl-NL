@@ -2,7 +2,7 @@
 title: De SDK van Adobe Experience Platform Web configureren
 description: Gebruik vormen bevel om vereiste montages te plaatsen wanneer het gebruiken van het Web SDK.
 exl-id: 05ba98ae-c004-4b7b-b55b-38290ca62cfa
-source-git-commit: 1c614ef525d55d7476d037c6838b35c3471e4501
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 1%
@@ -29,13 +29,13 @@ Deze configuratiemontages worden geplaatst wanneer u de uitbreiding gebruikt om 
 
 Voer de opdracht `configure` uit. Dit bevel wordt vereist alvorens u een andere bevelen van SDK van het Web, zoals [`sendEvent`](../sendevent/overview.md) kunt roepen.
 
-De eigenschappen [`edgeConfigId`](edgeconfigid.md) en [`orgId`](orgid.md) zijn vereist. Alle andere eigenschappen zijn optioneel, afhankelijk van de implementatievereisten van uw organisatie.
+De eigenschappen [`datastreamId`](datastreamid.md) en [`orgId`](orgid.md) zijn vereist. Alle andere eigenschappen zijn optioneel, afhankelijk van de implementatievereisten van uw organisatie.
 
 Zie de inhoudsopgave van deze gebruikershandleiding voor gedetailleerde informatie over elk van de ondersteunde opdrachten.
 
 ```js
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: true,
   clickCollection: {

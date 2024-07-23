@@ -1,13 +1,13 @@
 ---
 title: clickCollectionEnabled
 description: Leer hoe te om Web SDK te vormen om te bepalen als de verbinding gegevens klikt automatisch wordt verzameld.
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
-
 
 # `clickCollectionEnabled`
 
@@ -33,14 +33,13 @@ In alle gevallen wordt `xdm.web.webInteraction.name` ingesteld op het label van 
 
 ## Automatisch koppelingen bijhouden inschakelen met de webSDK-tagextensie {#tag-extension}
 
-Selecteer **[!UICONTROL Enable click data collection]** checkbox wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Deze variabele wordt automatisch beheerd door de tagextensie. U hoeft deze niet expliciet in te stellen. Als om het even welk van het volgende wordt geselecteerd wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md), wordt de toepasselijke verbinding volgende gegevens verzameld:
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
-1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Selecteer de gewenste eigenschap tag.
-1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
-1. Schuif omlaag naar de sectie [!UICONTROL Data Collection] en schakel vervolgens het selectievakje **[!UICONTROL Enable click data collection]** in.
-1. Klik op **[!UICONTROL Save]** en publiceer de wijzigingen.
+* [!UICONTROL Collect internal link clicks]
+* [!UICONTROL Collect external link clicks]
+* [!UICONTROL Collect download link clicks]
+
+Zie [`clickCollection`](clickcollection.md) voor meer informatie.
 
 ## Automatisch koppelingen bijhouden inschakelen met de Web SDK JavaScript-bibliotheek {#library}
 
@@ -48,7 +47,7 @@ Stel de Booleaanse waarde `clickCollectionEnabled` in wanneer u de opdracht `con
 
 ```js
 alloy(configure, {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: false
 });

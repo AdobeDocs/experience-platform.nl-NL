@@ -1,13 +1,13 @@
 ---
 title: clickCollection
 description: Stel de instellingen van de klikverzameling nauwkeurig in.
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: 5a128b4a-4727-4415-87b4-4ae87a7e1750
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
-
 
 # `clickCollection`
 
@@ -25,26 +25,27 @@ De volgende variabelen zijn beschikbaar in het object `clickCollection` :
 * **`clickCollection.eventGroupingEnabled`**: Een Booleaanse waarde die bepaalt of de bibliotheek tot de volgende pagina wacht om gegevens voor het bijhouden van koppelingen te verzenden. Wanneer de volgende pagina wordt geladen, combineert u de gegevens voor het bijhouden van koppelingen met de gebeurtenis page load. Als u deze optie inschakelt, verkleint u het aantal gebeurtenissen dat u naar de Adobe verzendt. Als `internalLinkEnabled` is uitgeschakeld, heeft deze variabele geen effect.
 * **`clickCollection.sessionStorageEnabled`**: Een Booleaanse waarde die bepaalt of de gegevens voor het bijhouden van koppelingen worden opgeslagen in de sessieopslag in plaats van in lokale variabelen. Als `internalLinkEnabled` of `eventGroupingEnabled` zijn uitgeschakeld, heeft deze variabele geen effect.
 
-  Adobe raadt sterk aan deze variabele in te schakelen wanneer u `eventGroupingEnabled` gebruikt. Als `eventGroupingEnabled` is ingeschakeld terwijl `sessionStorageEnabled` is uitgeschakeld, leidt het klikken op een nieuwe pagina tot het verlies van gegevens voor het bijhouden van koppelingen, omdat deze gegevens niet behouden blijven in de sessieopslag. `sessionStorageEnabled` kan wel worden uitgeschakeld in toepassingen van één pagina, maar dit is niet ideaal voor niet-SPA pagina&#39;s.
+  Adobe raadt ten zeerste aan deze variabele in te schakelen wanneer u `eventGroupingEnabled` buiten toepassingen van één pagina gebruikt. Als `eventGroupingEnabled` is ingeschakeld terwijl `sessionStorageEnabled` is uitgeschakeld, leidt het klikken op een nieuwe pagina tot het verlies van gegevens voor het bijhouden van koppelingen, omdat deze gegevens niet behouden blijven in de sessieopslag. Aangezien toepassingen van één pagina typisch niet aan een nieuwe pagina navigeren, wordt de zittingsopslag niet vereist voor SPA pagina&#39;s.
 * **`filterClickDetails`**: Een callback-functie die volledige besturingselementen biedt voor koppelingsgegevens die u verzamelt. U kunt deze callback functie gebruiken om het verzenden van verbinding het volgen gegevens te veranderen, te verduisteren of te breken. Deze callback is nuttig wanneer u specifieke informatie, zoals persoonlijk identificeerbare informatie binnen verbindingen wilt weglaten.
 
 ## Klik inzamelingsmontages gebruikend de de markeringsuitbreiding van SDK van het Web
 
-Selecteer **[!UICONTROL Enable click data collection]** checkbox wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Als u dit selectievakje inschakelt, worden de volgende opties weergegeven met betrekking tot het klikken op verzameling:
+Selecteer om het even welke volgende opties wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md):
 
-* [!UICONTROL Internal links]
-   * [!UICONTROL Enable event grouping]
-   * [!UICONTROL Enable session storage]
-* [!UICONTROL External links]
-* [!UICONTROL Download links]
+* [!UICONTROL Collect internal links]
+   * [!UICONTROL Event grouping options]:
+      * [!UICONTROL No event grouping]
+      * [!UICONTROL Event grouping using session storage]
+      * [!UICONTROL Event grouping using local object]
+* [!UICONTROL Collect external links]
+* [!UICONTROL Collect download links]
 * [!UICONTROL Filter click properties]
 
 1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
-1. Schuif omlaag naar de sectie [!UICONTROL Data Collection] en schakel vervolgens het selectievakje **[!UICONTROL Enable click data collection]** in.
-1. Selecteer de gewenste montages van de klikinzameling.
+1. Blader omlaag naar de sectie [!UICONTROL Data Collection] en selecteer vervolgens de gewenste instellingen voor de klikverzameling.
 1. Klik op **[!UICONTROL Save]** en publiceer de wijzigingen.
 
 Met de callback van [!UICONTROL Filter click properties] wordt een aangepaste code-editor geopend waarmee u de gewenste code kunt invoegen. In de code-editor hebt u toegang tot de volgende variabelen:
@@ -72,11 +73,11 @@ Stel de gewenste variabelen in het object `clickCollection` in wanneer u de opdr
 * `filterClickDetails`: bevat geen functie; moet expliciet worden geregistreerd
 
 >[!TIP]
->Adobe raadt u aan `eventGroupingEnabled` in te schakelen, omdat dit het aantal gebeurtenissen vermindert dat telt voor contractueel gebruik.
+>Adobe raadt aan `eventGroupingEnabled` in te schakelen wanneer `internalLinkEnabled` is ingeschakeld, aangezien dit het aantal gebeurtenissen vermindert dat telt voor gebruik in een overeenkomst.
 
 ```js
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: true,
   clickCollection: {
