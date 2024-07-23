@@ -6,9 +6,9 @@ user-guide-description: Leer analyses, marketing en advertenties te implementere
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
+source-git-commit: 5cbc2f6809156bc1a554154527ff2c5e35d3a922
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '773'
 ht-degree: 15%
 
 ---
@@ -316,6 +316,7 @@ ht-degree: 15%
       * [Id&#39;s van beschrijvingsbestanden delegeren](./api/guides/delegate-descriptor-ids.md)
       * [Waarden versleutelen](./api/guides/encrypting-values.md)
       * [Foutafhandeling](./api/guides/error-handling.md)
+      * [Persoonlijke extensiepakketten delen](./api/guides/extension-packages.md)
       * [Reacties filteren](./api/guides/filtering.md)
       * [Antwoorden pagineren](./api/guides/pagination.md)
       * [Reacties sorteren](./api/guides/sorting.md)

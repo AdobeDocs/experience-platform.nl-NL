@@ -1,13 +1,13 @@
 ---
 title: Eindpunt voor autorisaties voor extensiepakket
 description: Leer hoe te om vraag aan het /extension_package_usage toestemmingeneindpunt in Reactor API te maken.
-source-git-commit: fdf01451527e2fab8eb6e6f9d7b4901a85381450
+exl-id: ad3fb704-7d2f-45ec-b80b-ea4d327f2205
+source-git-commit: 9cdd349e0eccb4498d88f24a84b0f1c116b0adfe
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 1%
 
 ---
-
 
 # Het eindpunt van de gebruiksautorisaties voor extensiepakketten
 
@@ -185,7 +185,7 @@ Een succesvolle reactie retourneert de details van de nieuwe gebruiksautorisatie
 >
 >In het bovenstaande voorbeeldantwoord bevindt de autorisatie zich momenteel in het `pending_approval` -werkgebied. Alvorens het extensiepakket te gebruiken, moet de organisatie de vergunning goedkeuren. Gebruikers van de organisatie kunnen door het persoonlijke extensiepakket bladeren terwijl de autorisatie in afwachting is van goedkeuring, maar ze kunnen het niet installeren en vinden het niet in hun extensiecatalogus.
 
-## Een lijst met gebruiksmachtigingen voor extensiepakketten ophalen {#list_authorizations}
+## Een lijst met gebruiksmachtigingen voor extensiepakketten ophalen {#list-authorizations}
 
 U kunt een lijst met gebruiksmachtigingen voor extensiepakketten ophalen door een aanvraag voor een GET in te dienen.
 
@@ -386,7 +386,7 @@ Een succesvolle reactie retourneert de details van de herziene gebruiksvergunnin
 >
 >Zodra de vergunning wordt goedgekeurd, kan uw organisatie het uitbreidingspakket op uw eigenschappen installeren.
 
-## Gegevens ophalen voor het extensiepakket voor een gebruiksvergunning voor een extensiepakket {#retrieve_data}
+## Gegevens ophalen voor het extensiepakket voor een gebruiksvergunning voor een extensiepakket {#retrieve-data}
 
 U kunt gegevens voor het extensiepakket voor een gebruiksautorisatie voor een extensiepakket ophalen door een GET-aanvraag in te dienen.
 
