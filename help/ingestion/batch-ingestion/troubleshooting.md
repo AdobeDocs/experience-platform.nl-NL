@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor het oplossen van problemen met inslikken
 description: Deze documentatie helpt veelgestelde vragen over Adobe Experience Platform Batch Data Ingestie-API's te beantwoorden.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
@@ -212,11 +212,11 @@ Wanneer een batch wordt geladen, betekent dit dat de API van CompleteBatch niet 
 
 ### Is er een manier om te weten of een partij met succes is opgenomen?
 
-Als de batchstatus &quot;Actief&quot; is, is de batch ingeslikt. Om het statuut van de partij te weten te komen, volg de stappen die [ vroeger ](#how-is-batch-ingestion-monitored) worden gedetailleerd.
+Ja, zodra de batchstatus &quot;Actief&quot; is, is de batch ingeslikt. Om het statuut van de partij te weten te komen, volg de stappen die [ vroeger ](#how-is-batch-ingestion-monitored) worden gedetailleerd.
 
-### Wat gebeurt er als een batch mislukt?
+### Wat gebeurt er als een batch mislukt? {#what-if-a-batch-fails}
 
-Wanneer een batch mislukt, kan de oorzaak hiervan worden geïdentificeerd in de sectie `errors` van de payload. Hieronder vindt u voorbeelden van fouten:
+Wanneer een batch mislukt, wordt de status `Failure` gestopt en geretourneerd. De reden dat dit mislukt, kan worden geïdentificeerd in de sectie `errors` van de payload. Hieronder vindt u voorbeelden van fouten:
 
 ```json
     "errors":[

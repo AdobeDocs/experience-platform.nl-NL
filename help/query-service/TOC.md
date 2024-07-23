@@ -5,10 +5,10 @@ breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
+source-git-commit: 3e4fe58deb48622129c919b8c4a93ba4e57c4338
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 13%
+source-wordcount: '323'
+ht-degree: 12%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 13%
       - [Engineer-functies voor ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Gegevens exporteren naar XML-omgevingen](data-distiller/ml-feature-pipelines/export-data.md)
       - [Verrijking van end-to-end workflow voor de AI/ML-gegevenspijpleiding](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- Gebruiksscenario’s {#use-cases}
+- Praktische voorbeelden {#use-cases}
    - [Overzicht](use-cases/overview.md)
    - [Verlaten browsers](use-cases/abandoned-browse.md)
    - [Attributieanalyse](use-cases/attribution-analysis.md)
@@ -47,6 +47,7 @@ ht-degree: 13%
    - [Een trended-rapport van gebeurtenissen maken](use-cases/trended-report-of-events.md)
    - [Conceptanalyse](use-cases/consent-analysis.md)
    - [Levensduurwaarde van klant](use-cases/customer-lifetime-value.md)
+   - [Gegevensexploratie](./use-cases/data-exploration.md)
    - [Op decile gebaseerde afgeleide datasets](use-cases/deciles-use-case.md)
    - [Fuzzy match](use-cases/fuzzy-match.md)
    - [De paginaweergaven van een gebruiker weergeven](use-cases/list-visitor-sessions.md)
