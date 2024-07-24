@@ -3,9 +3,9 @@ title: Overzicht van regels voor identiteitsgrafiek
 description: Leer over de Regels van de Vereniging van de Grafiek van Identiteit in de Dienst van de Identiteit.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -14,12 +14,16 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Deze functie is nog niet beschikbaar. Het bètaprogramma voor koppelingsregels voor identiteitsgrafieken zal naar verwachting in juli van start gaan voor ontwikkelingssandboxen. Neem contact op met het accountteam van de Adobe voor meer informatie over de deelnemingscriteria.
+>De regels voor identiteitsgrafiekkoppelingen staan momenteel in bèta. Neem contact op met het accountteam van de Adobe voor meer informatie over de deelnemingscriteria. De functie en documentatie kunnen worden gewijzigd.
 
 ## Inhoudsopgave
 
 * [Overzicht](./overview.md)
 * [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
+* [Prioriteit naamruimte](./namespace-priority.md)
+* [UI voor grafieksimulatie](./graph-simulation.md)
+* [Gebruikersinterface voor identiteitsinstellingen](./identity-settings-ui.md)
+* [Voorbeelden van grafiekconfiguraties](./configuration.md)
 * [Voorbeeldscenario&#39;s](./example-scenarios.md)
 
 Met Adobe Experience Platform Identity Service en Real-Time Customer Profile is het eenvoudig om aan te nemen dat uw gegevens perfect zijn opgenomen en dat alle samengevoegde profielen één persoon vertegenwoordigen via een personenteken, zoals een CRM-id. Er zijn echter scenario&#39;s waarin bepaalde gegevens kunnen proberen meerdere verschillende profielen samen te voegen tot één profiel (grafiek samenvouwen). Om deze ongewenste samenvoegingen te verhinderen, kunt u configuraties gebruiken die door identiteitsgrafiek worden verstrekt die regels verbindt en voor nauwkeurige verpersoonlijking voor uw gebruikers toestaan.

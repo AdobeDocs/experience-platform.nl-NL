@@ -1,16 +1,16 @@
 ---
-title: Voorbeeldscenario's voor het configureren van identiteitsinstellingen
-description: Leer over voorbeeldscenario's voor het vormen van de Montages van de Identiteit.
+title: Voorbeeld van scenario's voor klanten die zijn opgelost door regels voor identiteitsgrafiekkoppeling
+description: Leer over de scenario's van de voorbeeldklant die door identiteitsgrafiek die regels verbinden worden opgelost.
 badge: Beta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: f1779ee75c877649a69f9fa99f3872aea861beca
+source-git-commit: be6fdb7e23ed4769ab4ee7ef72532296f020f4a4
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 0%
 
 ---
 
-# Voorbeeldscenario&#39;s voor het configureren van identiteitsgrafiek-koppelingsregels
+# Voorbeeld van klantscenario&#39;s die worden opgelost door regels voor identiteitsgrafiek koppelen
 
 >[!AVAILABILITY]
 >
@@ -30,22 +30,22 @@ Er zijn gevallen waarin meerdere aanmeldingen op één apparaat kunnen plaatsvin
 
 ![ delen-apparaten ](../images/identity-settings/shared-devices.png)
 
-In deze gevallen, vanuit een grafiekstandpunt, zonder toegelaten grenzen, zal één enkele ECID met veelvoudige CRM IDs worden verbonden.
+In deze gevallen, vanuit grafiekstandpunt, zonder toegelaten grenzen, zal één enkele ECID met veelvoudige CRMIDs worden verbonden.
 
 Met de regels voor identiteitsgrafieken kunt u:
 
-* Vorm identiteitskaart die voor login als uniek herkenningsteken wordt gebruikt. Bijvoorbeeld, kunt u een grafiek beperken om enkel één identiteit met een identiteitskaart van CRM op te slaan namespace, en zo die identiteitskaart van CRM als unieke herkenningsteken van een gedeeld apparaat te bepalen.
-   * Op deze manier kunt u ervoor zorgen dat CRM-id&#39;s niet worden samengevoegd met de ECID.
+* Vorm identiteitskaart die voor login als uniek herkenningsteken wordt gebruikt. U kunt bijvoorbeeld een grafiek beperken tot het opslaan van slechts één identiteit met een CRMID-naamruimte en zo die CRMID definiëren als de unieke id van een gedeeld apparaat.
+   * Op deze manier kunt u ervoor zorgen dat CRMID&#39;s niet worden samengevoegd met de ECID.
 
 ## Ongeldige scenario&#39;s voor e-mail/telefoon
 
-Er zijn ook instanties van gebruikers die valse waarden als telefoonaantallen en/of e-mailadressen verstrekken wanneer het registreren. In deze gevallen, als de grenzen niet worden toegelaten, dan zal telefoon/e-mail verwante identiteiten uiteindelijk worden verbonden met veelvoudige verschillende CRM IDs.
+Er zijn ook instanties van gebruikers die valse waarden als telefoonaantallen en/of e-mailadressen verstrekken wanneer het registreren. In deze gevallen, als de grenzen niet worden toegelaten, dan zal telefoon/e-mail verwante identiteiten uiteindelijk worden verbonden met veelvoudige verschillende CRMIDs.
 
 ![ ongeldig-e-mail-telefoon ](../images/identity-settings/invalid-email-phone.png)
 
 Met de regels voor identiteitsgrafieken kunt u:
 
-* Vorm of identiteitskaart van CRM, telefoonaantal, of e-mailadres als unieke herkenningsteken en beperkt zo één persoon tot enkel identiteitskaart van CRM, telefoonaantal, en/of e-mailadres verbonden aan hun rekening.
+* Configureer de CRMID, het telefoonnummer of het e-mailadres als de unieke id en beperkt zo één persoon tot slechts één CRMID, telefoonnummer en/of e-mailadres dat aan zijn account is gekoppeld.
 
 ## Onjuiste of onjuiste identiteitswaarden
 
@@ -56,11 +56,11 @@ Er zijn gevallen waarin niet-unieke, onjuiste identiteitswaarden in het systeem 
 * Naamruimte voor telefoonnummers met de identiteitswaarde &quot;not-specified&quot;.
    * Telefoonnummers mogen geen alfabet bevatten.
 
-Deze identiteiten kunnen resulteren in de volgende grafieken, waarbij meerdere CRM-id&#39;s samen met de &#39;slechte&#39; identiteit worden samengevoegd:
+Deze identiteiten zouden in de volgende grafieken kunnen resulteren, waar veelvoudige CRMIDs samen met de &quot;slechte&quot;identiteit worden samengevoegd:
 
 ![ slecht-gegevens ](../images/identity-settings/bad-data.png)
 
-Met de verbindingsregels van de identiteitsgrafiek kunt u identiteitskaart van CRM als unieke herkenningsteken vormen om ongewenste profiel te verhinderen die als gevolg van dit type van gegevens ineenstorten.
+Met identiteitsgrafiek die regels verbindt kunt u CRMID als unieke herkenningsteken vormen om ongewenste profiel te verhinderen die als gevolg van dit type gegevens ineenstorten.
 
 ## Volgende stappen
 

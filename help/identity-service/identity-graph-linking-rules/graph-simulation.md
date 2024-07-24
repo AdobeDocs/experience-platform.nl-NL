@@ -3,9 +3,9 @@ title: UI-gids voor grafieksimulatie
 description: Leer hoe te om de Simulatie van de Grafiek in de Dienst UI van de Identiteit te gebruiken.
 badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 4c49bec7974dafe18d18deded6ddc936ece47dc3
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1399'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Deze functie is nog niet beschikbaar. Het bètaprogramma voor koppelingsregels voor identiteitsgrafieken zal naar verwachting in juli van start gaan voor ontwikkelingssandboxen. Neem contact op met het accountteam van de Adobe voor meer informatie over de deelnemingscriteria.
+>De regels voor identiteitsgrafiekkoppelingen staan momenteel in bèta. Neem contact op met het accountteam van de Adobe voor meer informatie over de deelnemingscriteria. De functie en documentatie kunnen worden gewijzigd.
 
 [!DNL Graph Simulation] is een hulpmiddel in de Dienst UI van de Identiteit die u kunt gebruiken om te simuleren hoe een identiteitsgrafiek zich op een bepaalde combinatie van identiteiten gedraagt en hoe u het [ algoritme van de identiteitsoptimalisering ](./identity-optimization-algorithm.md) vormt.
 
@@ -172,6 +172,8 @@ In de onderstaande voorbeeldgrafiek bestaat een stippellijn tussen `{Email: tom@
 
 Door dit document te lezen, weet u nu hoe u het gereedschap [!DNL Graph Simulation] kunt gebruiken om beter te begrijpen hoe uw identiteitsgegevens worden behandeld op basis van een bepaalde set regels en configuraties. Lees de volgende documenten voor meer informatie:
 
-* [Koppelingsregels voor identiteitsgrafiek](overview.md)
-* [Algoritme voor identiteitsoptimalisatie](identity-optimization-algorithm.md)
-* [Prioriteit naamruimte](namespace-priority.md)
+* [Koppelingsregels voor identiteitsgrafiek](./overview.md)
+* [Configuratiegids](./configuration.md)
+* [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
+* [Prioriteit naamruimte](./namespace-priority.md)
+* [Voorbeelden van grafiekconfiguraties](./example-configurations.md)

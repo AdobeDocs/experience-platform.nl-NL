@@ -2,14 +2,19 @@
 title: Configuratie-hulplijn voor identiteitsgrafiek met koppelingsregels
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 badge: Beta
-source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
+exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
+source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '1304'
 ht-degree: 0%
 
 ---
 
 # Configuratie-hulplijn voor identiteitsgrafiek met koppelingsregels
+
+>[!AVAILABILITY]
+>
+>De regels voor identiteitsgrafiekkoppelingen staan momenteel in bèta. Neem contact op met het accountteam van de Adobe voor meer informatie over de deelnemingscriteria. De functie en documentatie kunnen worden gewijzigd.
 
 Lees dit document voor een stapsgewijze uitleg die u kunt volgen bij het implementeren van uw gegevens met Adobe Experience Platform Identity Service.
 
@@ -67,6 +72,11 @@ Voor instructies op hoe te om een dataset tot stand te brengen, lees de [ gids U
 
 ## Gegevens verzamelen {#ingest}
 
+>[!WARNING]
+>
+>* Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek verklaarde gebeurtenissen die uw systeem naar Experience Platform zal verzenden altijd een persoonsidentificatie, zoals CRMID bevatten.
+>* Tijdens de implementatie moet u ervoor zorgen dat de unieke naamruimte met de hoogste prioriteit altijd aanwezig is in elk profiel. Zie [ bijlage ](#appendix) voor voorbeelden van grafiekscenario&#39;s die door ervoor te zorgen worden opgelost dat elk profiel unieke namespace met de hoogste prioriteit bevat.
+
 Op dit punt, zou u het volgende moeten hebben:
 
 * De noodzakelijke toestemmingen om tot de eigenschappen van de Dienst van de Identiteit toegang te hebben.
@@ -86,3 +96,55 @@ Zodra u alle hierboven vermelde punten hebt, kunt u beginnen uw gegevens aan Exp
 >Als uw gegevens eenmaal zijn ingevoerd, verandert de XDM Raw-gegevenslading niet meer. U kunt uw primaire identiteitsconfiguraties in UI nog zien. Deze configuraties worden echter overschreven door identiteitsinstellingen.
 
 Gebruik voor alle feedback de optie **[!UICONTROL Beta feedback]** in de gebruikersinterface van de identiteitsservice.
+
+## Bijlage {#appendix}
+
+Lees deze sectie voor extra informatie die u kunt verwijzen wanneer het uitvoeren van uw identiteitsmontages en unieke namespaces.
+
+### scenario voor gedeeld apparaat {#shared-device-scenario}
+
+U moet ervoor zorgen dat één naamruimte wordt gebruikt voor alle profielen die een persoon vertegenwoordigen. Hiermee kan de identiteitsdienst de juiste persoon-id in een bepaalde grafiek detecteren.
+
+>[!BEGINTABS]
+
+>[!TAB  zonder een enige persoon herkenningsteken namespace ]
+
+Zonder een unieke naamruimte die uw persoon-id vertegenwoordigt, kunt u eindigen met een grafiek die een koppeling bevat naar verschillende personen-id&#39;s voor dezelfde ECID. In dit voorbeeld zijn zowel B2BCRM als B2CCRM tegelijkertijd gekoppeld aan dezelfde ECID. Deze grafiek suggereert dat Tom, met zijn B2C-aanmeldingsaccount, een apparaat deelde met Summer, met haar B2B-aanmeldingsaccount. Het systeem herkent echter dat dit één profiel is (grafiek samenvouwen).
+
+![ de grafiekscenario van A waar twee persoonherkenningstekens met zelfde ECID verbonden zijn.](../images/graph-examples/multi_namespaces.png)
+
+>[!TAB  met een enige persoonsherkenningsnamespace ]
+
+Op basis van een unieke naamruimte (in dit geval een CRMID in plaats van twee verschillende naamruimten) kan de identiteitsdienst de persoon-id zien die het laatst aan de ECID is gekoppeld. In dit voorbeeld, omdat een unieke CRMID bestaat, kan de Dienst van de Identiteit een &quot;gedeeld apparaat&quot;scenario erkennen, waar twee entiteiten het zelfde apparaat delen.
+
+![ een gedeeld scenario van de apparatengrafiek, waar twee persoonherkenningstekens met zelfde ECID verbonden zijn, maar de oudere verbinding wordt verwijderd.](../images/graph-examples/crmid_only_multi.png)
+
+>[!ENDTABS]
+
+### LoginID-scenario van Dangling {#dangling-loginid-scenario}
+
+De volgende grafiek simuleert een &quot;gevaarlijk&quot;loginID scenario. In dit voorbeeld zijn twee verschillende loginID&#39;s gebonden aan dezelfde ECID. `{loginID: ID_C}` is echter niet gekoppeld aan de CRMID. Daarom is er geen manier voor de Dienst van de Identiteit om te ontdekken dat deze twee loginIDs twee verschillende entiteiten vertegenwoordigen.
+
+>[!BEGINTABS]
+
+>[!TAB  Ambiguous loginID ]
+
+In dit voorbeeld blijft `{loginID: ID_C}` gevaarlijk en is het niet gekoppeld aan een CRMID. Aldus, wordt de persoonentiteit waaraan deze loginID zou moeten worden geassocieerd dubbelzinnig verlaten.
+
+![ een voorbeeld van een grafiek met een &quot;gevaarlijk&quot;loginID scenario.](../images/graph-examples/dangling_example.png)
+
+>[!TAB  loginID is verbonden met een CRMID ]
+
+In dit voorbeeld is `{loginID: ID_C}` gekoppeld aan `{CRMID: Tom}` . Daarom kan het systeem vaststellen dat deze loginID aan Tom is gekoppeld.
+
+![ LoginID is verbonden met een CRMID.](../images/graph-examples/id_c_tom.png)
+
+>[!TAB  loginID is verbonden met een andere CRMID ]
+
+In dit voorbeeld is `{loginID: ID_C}` gekoppeld aan `{CRMID: Summer}` . Daarom kan het systeem opmerken dat deze loginID met een andere persoonentiteit, in dit geval, Summer wordt geassocieerd.
+
+In dit voorbeeld wordt ook getoond dat Tom en Summer verschillende persoonentiteiten moeten hebben die een apparaat delen, dat wordt vertegenwoordigd door `{ECID: 111}` .
+
+![ LoginID is verbonden met een andere CRMID.](../images/graph-examples/id_c_summer.png)
+
+>[!ENDTABS]

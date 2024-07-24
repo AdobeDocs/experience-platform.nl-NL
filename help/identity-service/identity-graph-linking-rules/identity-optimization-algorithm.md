@@ -3,9 +3,9 @@ title: Algoritme voor identiteitsoptimalisatie
 description: Leer over het Algoritme van de Optimalisering van de Identiteit in de Dienst van de Identiteit.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 5d19a22dc8d1b7f0151008d14b2f5bf89c85c638
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1565'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Deze functie is nog niet beschikbaar. Het bètaprogramma voor koppelingsregels voor identiteitsgrafieken zal naar verwachting in juli van start gaan voor ontwikkelingssandboxen. Neem contact op met het accountteam van de Adobe voor meer informatie over de deelnemingscriteria.
+>De regels voor identiteitsgrafiekkoppelingen staan momenteel in bèta. Neem contact op met het accountteam van de Adobe voor meer informatie over de deelnemingscriteria. De functie en documentatie kunnen worden gewijzigd.
 
 Het algoritme voor identiteitsoptimalisatie is een grafiekalgoritme voor Identiteitsservice dat ervoor zorgt dat een identiteitsgrafiek representatief is voor één persoon, en dat daardoor ongewenste samenvoeging van identiteiten in Real-Time Klantprofiel voorkomt.
 
@@ -162,6 +162,7 @@ Bekijk het onderstaande diagram om beter te begrijpen hoe anonieme gebeurtenisas
 Lees de volgende documentatie voor meer informatie over koppelingsregels voor identiteitsgrafieken:
 
 * [Overzicht van regels voor identiteitsgrafiek](./overview.md)
+* [Prioriteit naamruimte](./namespace-priority.md)
 * [Voorbeeldscenario&#39;s voor het configureren van identiteitsgrafiek-koppelingsregels](./example-scenarios.md)
 * [Logica voor identiteitskoppeling](../features/identity-linking-logic.md)
 * [Identiteitsservice en realtime klantprofiel](../identity-and-profile.md)

@@ -5,7 +5,7 @@ breadcrumb-title: Gids Platform Identity Service
 user-guide-description: Overbrug klantidentiteiten op verschillende apparaten en systemen om gepersonaliseerde digitale ervaringen te bieden.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 30e19f53bb29977cf4255cb2dba688d8bbbf6b2b
+source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 20%
@@ -24,12 +24,13 @@ ht-degree: 20%
    - [Verwijderen in identiteitsservice](./features/deletion.md)
    - Regels voor identiteitsgrafiek koppelen {#identity-graph-linking-rules}
       - [Overzicht van functies](./identity-graph-linking-rules/overview.md)
+      - [Configuratiegids](./identity-graph-linking-rules/configuration.md)
       - [Algoritme voor identiteitsoptimalisatie](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Prioriteit naamruimte](./identity-graph-linking-rules/namespace-priority.md)
-      - [Voorbeeldscenario&#39;s](./identity-graph-linking-rules/example-scenarios.md)
       - [UI grafieksimulatie](./identity-graph-linking-rules/graph-simulation.md)
-      - [Configuratie-hulplijn voor identiteitsgrafiek met koppelingsregels](./identity-graph-linking-rules/configuration.md)
       - [Identiteitsinstellingen](./identity-graph-linking-rules/identity-settings-ui.md)
+      - [Voorbeeld van klantscenario&#39;s](./identity-graph-linking-rules/example-scenarios.md)
+      - [Voorbeelden van grafiekconfiguraties](./identity-graph-linking-rules/example-configurations.md)
    - [ECID-overzicht](./features/ecid.md)
 - [Implementatiehandleiding](implementation.md)
 - [Guardrails voor identiteitsgegevens](guardrails.md)
