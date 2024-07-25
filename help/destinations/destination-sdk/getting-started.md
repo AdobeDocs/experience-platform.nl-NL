@@ -2,9 +2,9 @@
 description: Op deze pagina wordt beschreven hoe u Adobe Experience Platform Destination SDK kunt verifiëren en gebruiken. Het omvat instructies op hoe te om de authentificatiegeloofsbrieven van de Adobe I/O, een zandbaknaam, en de toestemming van de bestemmings auteurstoegang te verkrijgen.
 title: Aan de slag met Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
+source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Op deze pagina wordt beschreven hoe u Adobe Experience Platform Destination SDK 
 
 ## Terminologie {#terminology}
 
-Deze gids gebruikt Platform-specifieke concepten, zoals organisatie en zandbakken. Raadpleeg de [ verklarende woordenlijst van het Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) voor definities van deze en andere termijnen.
+Deze gids gebruikt Platform-specifieke concepten, zoals organisatie en zandbakken. Raadpleeg de [ verklarende woordenlijst van het Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) voor definities van deze termijnen. Raadpleeg de [ verklarende woordenlijst van de Destination SDK ](/help/destinations/destination-sdk/glossary.md) voor termijnen direct met betrekking tot deze functionaliteit.
 
 ## Verkrijg vereiste authentificatiegeloofsbrieven {#obtain-authentication-credentials}
 

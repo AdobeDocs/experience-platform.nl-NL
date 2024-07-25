@@ -2,7 +2,7 @@
 description: De bestemmingsdienst in Adobe Experience Platform gebruikt configuratieeindpunten voor verscheidene componenten die omhoog de bestemmingsfunctionaliteit bouwen. Leer hoe deze componenten gecombineerd Experience Platform toestaan om met bestemmingspartners te verbinden, douaneberichten te verzenden, en profielgegevens over het digitale ecosysteem te activeren.
 title: Configuratieopties in Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%
@@ -17,7 +17,11 @@ Samen staan deze componenten Experience Platform toe om met bestemmingsplatforms
 
 Het diagram toont hieronder een overzicht op hoog niveau van de componenten die u door Destination SDK kunt vormen om uw eigen bestemming te bouwen. Deze componenten worden hieronder nader beschreven.
 
-![ Diagram die de componenten van de Destination SDK, configuratieeindpunten, en de verrichtingen tonen door hen worden gesteund.](../assets/functionality/destination-sdk-components-diagram.png)
+>[!BEGINSHADEBOX]
+
+![ Diagram die de componenten van de Destination SDK, configuratieeindpunten, en de verrichtingen tonen door hen worden gesteund.](../assets/functionality/destination-sdk-components-diagram.png){zoomable="yes"}
+
+>[!ENDSHADEBOX]
 
 ## Serverconfiguratie {#server-configuration}
 
