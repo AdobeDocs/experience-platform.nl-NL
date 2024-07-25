@@ -1,9 +1,10 @@
 ---
 title: Ontdek, los problemen op en verifieer Batchverwerking met SQL
-description: Leer hoe u het proces voor gegevensinvoer in Adobe Experience Platform begrijpt en beheert. In dit document wordt beschreven hoe u batches kunt verifiëren, fouten kunt afhandelen en ingesloten gegevens kunt opvragen.
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+description: Leer hoe u het proces voor gegevensinvoer in Adobe Experience Platform begrijpt en beheert. In dit document wordt beschreven hoe u batches kunt verifiëren en ingesloten gegevens kunt opvragen.
+exl-id: 8f49680c-42ec-488e-8586-50182d50e900
+source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,6 @@ ht-degree: 0%
 
 In dit document wordt uitgelegd hoe u records in ingesloten batches met SQL kunt verifiëren en valideren. In dit document wordt uitgelegd hoe u:
 
-- Fouten afhandelen die zich tijdens het innameproces kunnen voordoen
 - Batchmetagegevens voor toegang
 - Los en verzeker gegevensintegriteit door partijen te vragen problemen op
 
@@ -26,7 +26,6 @@ Om uw begrip van de concepten te helpen die in dit document worden besproken, zo
 
 - **Inname van Gegevens**: Zie het [ overzicht van de gegevensopname ](../../ingestion/home.md) om de grondbeginselen te leren van hoe het gegeven in het Platform, met inbegrip van de verschillende methodes en processen in kwestie wordt opgenomen.
 - **Inname van de Partij**: Zie [ partij ingestition API overzicht ](../../ingestion/batch-ingestion/overview.md) om de basisconcepten van partijingestitie te leren. Specifiek, wat een &quot;partij&quot;is en hoe het binnen het proces van de gegevensopname van Platform functioneert.
-- **de behandeling van de Fout in gegevensopname**: Leer over de [ verschillende soorten fouten die ](../../ingestion/quality/error-diagnostics.md#retrieve-errors) tijdens gegevensopname kunnen voorkomen en [ hoe te om hen ](../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails) te behandelen.
 - **meta-gegevens van het Systeem in datasets**: Zie het [ overzicht van de Dienst van de Catalogus ](../../catalog/home.md) leren hoe de gebieden van systeemmeta-gegevens worden gebruikt om opgenomen gegevens te volgen en te vragen.
 - **Model van de Gegevens van de Ervaring (XDM)**: Zie het [ schema&#39;s overzicht UI ](../../xdm/ui/overview.md) en de [ basisbeginselen van schemacompositie&#39; ](../../xdm/schema/composition.md) om over XDM schema&#39;s te leren en hoe zij de structuur en het formaat van gegevens vertegenwoordigen en bevestigen die in Platform worden opgenomen.
 
@@ -57,11 +56,7 @@ De resultaten van deze zoekopdracht worden weergegeven in de onderstaande afbeel
 
 Deze resultaten tonen aan dat het aantal inputpartijen niet noodzakelijk het aantal outputpartijen aanpast, aangezien het systeem de meest efficiënte manier bepaalt om de gegevens in het gegevensmeer in batch te slaan en op te slaan.
 
-In het volgende voorbeeld wordt een andere gegevensset gebruikt om dit punt te illustreren.
-
->[!NOTE]
->
->Als u dit voorbeeld wilt uitproberen, kunt u het verstrekte steekproefdossier ([`drug_checkout_data`](../images/use-cases/drug_checkout_data.zip)) in Platform opnemen en uw schemaafbeelding vormen.
+In dit voorbeeld wordt aangenomen dat u een CSV-bestand hebt ingesloten in Platform en een gegevensset met de naam `drug_checkout_data` hebt gemaakt.
 
 Het `drug_checkout_data` -bestand is een diepgeneste set van 35.000 records. Gebruik de SQL-instructie `SELECT * FROM drug_orders;` om een voorvertoning weer te geven van de eerste set records in de op JSON gebaseerde `drug_orders` -dataset.
 
@@ -97,7 +92,7 @@ Daarna, bevestig en verifieer de verslagen die in de dataset met SQL zijn opgeno
 
 >[!TIP]
 >
->Als u de batch-id en queryrecords wilt ophalen die aan die batch-id zijn gekoppeld, moet u eerst een batch maken in Platform. Als u het proces zelf wilt testen, kunt u CSV-gegevens invoeren in Platform. Lees de gids op hoe te [ een Csv- dossier aan een bestaand schema in kaart brengen XDM gebruikend AI-Gegenereerde aanbevelingen ](../../ingestion/tutorials/map-csv/recommendations.md). Het dossier van CSV van het A [ steekproefprofiel ](../images/use-cases/sample-profiles.csv) is hier voor uw gemak beschikbaar.
+>Als u de batch-id en queryrecords wilt ophalen die aan die batch-id zijn gekoppeld, moet u eerst een batch maken in Platform. Als u het proces zelf wilt testen, kunt u CSV-gegevens invoeren in Platform. Lees de gids op hoe te [ een Csv- dossier aan een bestaand schema in kaart brengen XDM gebruikend AI-Gegenereerde aanbevelingen ](../../ingestion/tutorials/map-csv/recommendations.md).
 
 Nadat u een batch hebt ingepakt, moet u naar de [!UICONTROL Datasets activity tab] navigeren voor de gegevensset waarin u gegevens hebt ingevoerd.
 
