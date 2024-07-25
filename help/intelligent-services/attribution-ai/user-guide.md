@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Handleiding voor Attribution AI UI
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2392'
 ht-degree: 0%
@@ -63,7 +63,7 @@ Nadat u de gegevenssets hebt geselecteerd die u wilt gebruiken, selecteert u de 
 
 ![ Uitgezochte datasets ](./images/user-guide/select-datasets.png)
 
-Het selecteren van het infopictogram ![ infopictogram ](./images/user-guide/info-icon.png) naast een dataset opent de datasetvoorproefpopover.
+Het selecteren van het infopictogram ![ infopictogram ](/help/images/icons/info.png) naast een dataset opent de datasetvoorproefpopover.
 
 ![ Uitgezocht en onderzoek naar dataset ](./images/user-guide/dataset-preview.png)
 

@@ -3,7 +3,7 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 305aa7f44cd64d9a0ae704fe9aa01d2d1c536ade
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3664'
 ht-degree: 0%
@@ -141,7 +141,7 @@ Als u een waarde in deze lijst met nummers selecteert, krijgt de waarde een effe
 
 ![ een waarschuwing die wordt getoond als u een waarde opneemt die geen deel van de enumlijst uitmaakt.](../images/ui/segment-builder/enum-warning.png)
 
-Als u meerdere waarden maakt, kunt u deze allemaal tegelijk toevoegen door de bulkupload te gebruiken. Selecteer het ![ plus pictogram ](../images/ui/segment-builder/plus-icon.png) om **[!UICONTROL Add values in bulk]** popover te tonen.
+Als u meerdere waarden maakt, kunt u deze allemaal tegelijk toevoegen door de bulkupload te gebruiken. Selecteer het ![ plus pictogram ](/help/images/icons/add-circle.png) om **[!UICONTROL Add values in bulk]** popover te tonen.
 
 ![ het plus pictogram wordt benadrukt, tonend de knoop die u kunt selecteren om tot bulkupload toegang te hebben popover.](../images/ui/segment-builder/add-bulk-values.png)
 
@@ -287,7 +287,7 @@ Terwijl u de segmentdefinitie verder ontwikkelt, kunt u een gepagineerde voorver
 >
 >Meer informatie over het produceren van ramingen voor segmentdefinities kan in de [ sectie van de schatingengeneratie ](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van het de creatieleerprogramma van de segmentdefinitie worden gevonden.
 
-U kunt ook uw evaluatiemethode selecteren. Als u weet welke evaluatiemethode u wilt gebruiken, kunt u de gewenste evaluatiemethode selecteren of gebruikend dropdown lijst. Als u wilt weten welke evaluatietypen deze segmentdefinitie voor kwalificeert, kunt u het doorbladerpictogram ![ omslagpictogram met een vergrootglas ](../images/ui/segment-builder/segment-evaluation-select-icon.png) selecteren om een lijst van de beschikbare de evaluatiemethodes van de segmentdefinitie te zien.
+U kunt ook uw evaluatiemethode selecteren. Als u weet welke evaluatiemethode u wilt gebruiken, kunt u de gewenste evaluatiemethode selecteren of gebruikend dropdown lijst. Als u wilt weten welke evaluatietypen deze segmentdefinitie voor kwalificeert, kunt u het doorbladerpictogram ![ omslagpictogram met een vergrootglas ](/help/images/icons/folder-search.png) selecteren om een lijst van de beschikbare de evaluatiemethodes van de segmentdefinitie te zien.
 
 De pop-up [!UICONTROL Evaluation method eligibility] wordt weergegeven. Deze popover toont de beschikbare evaluatiemethodes, die partij, het stromen, en rand zijn. Uit de pop-up blijkt welke evaluatiemethoden subsidiabel en niet-subsidiabel zijn. Afhankelijk van de parameters u in uw segmentdefinitie gebruikte, kan het niet voor bepaalde evaluatiemethodes kwalificeren. Voor meer informatie over de vereisten voor elke evaluatiemethode, te lezen gelieve de [ het stromen segmentatie ](./streaming-segmentation.md#query-types) of de [ randsegmentatie ](./edge-segmentation.md#query-types) overzichten.
 

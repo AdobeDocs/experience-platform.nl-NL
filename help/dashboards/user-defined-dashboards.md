@@ -2,7 +2,7 @@
 title: Aangepaste dashboards
 description: Leer hoe u aangepaste dashboards kunt maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metriek zichtbaar te maken.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Voordat u een aangepast dashboard toevoegt, is de dashboardvoorraad leeg en word
 
 <!-- >[!NOTE]
 >
->To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
 >![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 Het dialoogvenster [!UICONTROL Create dashboard] wordt weergegeven. Voer een beschrijvende, mensvriendelijke naam in voor de verzameling widgets die u wilt maken en selecteer **[!UICONTROL Save]** .
@@ -68,7 +68,7 @@ Het dialoogvenster [!UICONTROL Select data model] wordt weergegeven. Selecteer e
 
 >[!TIP]
 >
->Selecteer het informatiepictogram (![ een informatiepictogram.](./images/user-defined-dashboards/info-icon.png)) om de volledige naam van het gegevensmodel weer te geven als het te lang is om in de gegevensrails weer te geven.
+>Selecteer het informatiepictogram (![ een informatiepictogram.](/help/images/icons/info.png)) om de volledige naam van het gegevensmodel weer te geven als het te lang is om in de gegevensrails weer te geven.
 
 ![ de Uitgezochte gegevensdialoog.](./images/user-defined-dashboards/select-data-model-dialog.png)
 
@@ -94,17 +94,17 @@ Selecteer een tabel in de lijst in de linkertrack om gegevens voor de widget op 
 
 De widgetcomposer is nu gevuld met gegevens uit de door u gekozen tabel.
 
-Het gegevensmodel en de geselecteerde tabel worden boven aan de linkertrack weergegeven. De kenmerken die beschikbaar zijn om de widget te maken, worden in de kolom [!UICONTROL Attributes] weergegeven. U kunt de onderzoeksbar gebruiken om attributen te zoeken in plaats van het scrollen van de lijst, of het gekozen gegevensmodel te veranderen door het potloodpictogram (![ pictogram van het Potlood te selecteren.](./images/user-defined-dashboards/edit-icon.png) ) in de linkerspoorstaaf.
+Het gegevensmodel en de geselecteerde tabel worden boven aan de linkertrack weergegeven. De kenmerken die beschikbaar zijn om de widget te maken, worden in de kolom [!UICONTROL Attributes] weergegeven. U kunt de onderzoeksbar gebruiken om attributen te zoeken in plaats van het scrollen van de lijst, of het gekozen gegevensmodel te veranderen door het potloodpictogram (![ pictogram van het Potlood te selecteren.](/help/images/icons/edit.png) ) in de linkerspoorstaaf.
 
 ![ widget van A bevolkt met gegevens binnen widgetcomposer.](./images/user-defined-dashboards/populated-widget-composer.png)
 
 #### Kenmerken toevoegen en filteren {#add-and-filter-attributes}
 
-Selecteer het add pictogram (![ en voeg pictogram toe.](./images/user-defined-dashboards/add-icon.png) ) naast een kenmerknaam om een kenmerk aan uw widget toe te voegen. In het vervolgkeuzemenu dat wordt weergegeven, kunt u een kenmerk toevoegen als de X-as, de Y-as, een kleur of een filter voor de widget. Met het kenmerk [!UICONTROL Color] kunt u de resultaten van de markeringen op de X- en Y-as onderscheiden op basis van kleur. Dit wordt gedaan door de resultaten in verschillende kleuren te verdelen die op hun samenstelling van een derde attribuut worden gebaseerd.
+Selecteer het add pictogram (![ en voeg pictogram toe.](/help/images/icons/add-circle.png) ) naast een kenmerknaam om een kenmerk aan uw widget toe te voegen. In het vervolgkeuzemenu dat wordt weergegeven, kunt u een kenmerk toevoegen als de X-as, de Y-as, een kleur of een filter voor de widget. Met het kenmerk [!UICONTROL Color] kunt u de resultaten van de markeringen op de X- en Y-as onderscheiden op basis van kleur. Dit wordt gedaan door de resultaten in verschillende kleuren te verdelen die op hun samenstelling van een derde attribuut worden gebaseerd.
 
 >[!TIP]
 >
->Als u de regeling van de as van X en van Y wilt omdraaien, selecteer omhoog en benedenpijlpictogram (![ omhoog en benedenpijlpictogram.](./images/user-defined-dashboards/switch-axis-icon.png)) om de rangschikking te wijzigen.
+>Als u de regeling van de as van X en van Y wilt omdraaien, selecteer omhoog en benedenpijlpictogram (![ omhoog en benedenpijlpictogram.](/help/images/icons/switch.png)) om de rangschikking te wijzigen.
 
 ![ Widget composer met toe:voegen-pictogram benadrukt dropdown.](./images/user-defined-dashboards/attributes-dropdown.png)
 
@@ -132,7 +132,7 @@ U kunt ook een aangepaste periode maken om de gegevens op te filteren. Selecteer
 
 ### Eigenschappen van Widget
 
-Selecteer het eigenschappen pictogram (![ het eigenschappen pictogram.](./images/user-defined-dashboards/properties-icon.png) ) in de rechterrail om het deelvenster Eigenschappen te openen. Typ in het deelvenster [!UICONTROL Properties] een naam voor de widget in het tekstveld [!UICONTROL Widget title] .
+Selecteer het eigenschappen pictogram (![ het eigenschappen pictogram.](/help/images/icons/properties.png) ) in de rechterrail om het deelvenster Eigenschappen te openen. Typ in het deelvenster [!UICONTROL Properties] een naam voor de widget in het tekstveld [!UICONTROL Widget title] .
 
 ![ het eigenschappen paneel met het eigenschappen pictogram en het benadrukte gebied van de Titel van Widget.](./images/user-defined-dashboards/properties-panel.png)
 
@@ -146,7 +146,7 @@ Als u de widget opslaat in de widgetcomposer, wordt de widget lokaal op het dash
 
 >[!TIP]
 >
->Selecteer het eigenschappen pictogram (![ het eigenschappen pictogram.](./images/user-defined-dashboards/properties-icon.png) ) naast de naam van het dashboard voor meer informatie over het maken ervan. U kunt de naam van het dashboard wijzigen in het dialoogvenster dat verschijnt.
+>Selecteer het eigenschappen pictogram (![ het eigenschappen pictogram.](/help/images/icons/properties.png) ) naast de naam van het dashboard voor meer informatie over het maken ervan. U kunt de naam van het dashboard wijzigen in het dialoogvenster dat verschijnt.
 
 U kunt widgets opnieuw rangschikken en de grootte ervan wijzigen in deze werkruimte. Selecteer **[!UICONTROL Save]** om de naam en de geconfigureerde indeling van het dashboard te behouden.
 
@@ -162,7 +162,7 @@ Nadat u een widget hebt gemaakt, kunt u volledige widgets uit uw aangepaste dash
 >
 >Als u wilt schakelen tussen een van uw bestaande aangepaste dashboards, selecteert u Dashboards in de linkernavigatiebalk en selecteert u vervolgens de dashboardnaam in de inventarislijst.
 
-Selecteer het potloodpictogram (![ het potloodpictogram van A.](./images/user-defined-dashboards/edit-icon.png) ) rechtsboven in het aangepaste dashboard om de bewerkingsmodus te activeren.
+Selecteer het potloodpictogram (![ het potloodpictogram van A.](/help/images/icons/edit.png) ) rechtsboven in het aangepaste dashboard om de bewerkingsmodus te activeren.
 
 ![ A douanedashboard met het benadrukte potloodpictogram.](./images/user-defined-dashboards/edit-mode.png)
 

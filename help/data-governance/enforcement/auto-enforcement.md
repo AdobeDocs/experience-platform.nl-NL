@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Automatische beleidscontrole
 description: In dit document wordt beschreven hoe beleidsregels voor gegevensgebruik automatisch worden toegepast wanneer gebruikers naar bestemmingen in Experience Platform worden geactiveerd.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2089'
 ht-degree: 0%
@@ -104,7 +104,7 @@ Een grafiek van de gegevenslijn wordt getoond onder de schendingssamenvatting, t
 
 ![ dialoog van de beleidsschending van A met de benadrukte grafiek van de gegevenslijn.](../images/enforcement/data-lineage.png)
 
-U kunt het **[!UICONTROL Filter]** pictogram (![ ook gebruiken A filterpictogram.](../images/enforcement/filter.png)) om de weergegeven entiteiten op categorie te filteren. U moet ten minste twee categorieën selecteren om de gegevens weer te geven.
+U kunt het **[!UICONTROL Filter]** pictogram (![ ook gebruiken A filterpictogram.](/help/images/icons/filter.png)) om de weergegeven entiteiten op categorie te filteren. U moet ten minste twee categorieën selecteren om de gegevens weer te geven.
 
 ![ dialoog van de beleidsschending van A met de benadrukte filter en drop-down menu van de gegevenslijn.](../images/enforcement/lineage-filter.png)
 

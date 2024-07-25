@@ -3,7 +3,7 @@ title: Google Cloud Platform Event Forwarding Extension
 description: Deze Adobe Experience Platform-gebeurtenis die een extensie doorstuurt, verzendt Edge Network-gebeurtenissen naar het Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: c5da1889-f917-42aa-b3a4-9557c31d6ee8
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 0%
@@ -47,8 +47,8 @@ Zodra de uitbreiding wordt geïnstalleerd, creeer een nieuwe gebeurtenis door:st
 | Invoer | Beschrijving |
 | --- | --- |
 | [!UICONTROL Topic] | Het onderwerp dat de gebeurtenissen van Gebeurtenis door:sturen zal ontvangen. De waarde moet de notatie `projects/{projectName}/topics/{topicName}` hebben. |
-| [!UICONTROL Data] | Dit veld bevat de gegevens die in JSON-indeling naar het [!DNL Cloud Pub/Sub] -onderwerp moeten worden doorgestuurd.<br><br> onder de **[!UICONTROL Raw]** optie, kunt u het voorwerp JSON in het verstrekte tekstgebied direct kleven, of u kunt het pictogram van het gegevenselement (![ pictogram Dataset ](../../../images/extensions/server/aws/data-element-icon.png)) selecteren uit een lijst van bestaande gegevenselementen om de gegevens te vertegenwoordigen.<br><br> u kunt de **[!UICONTROL JSON Key-Value Pairs Editor]** optie ook gebruiken om elk zeer belangrijk-waardepaar door een redacteur manueel toe te voegen UI. Elke waarde kan worden vertegenwoordigd door een onbewerkte invoer, maar in plaats daarvan kan ook een gegevenselement worden geselecteerd. |
-| [!UICONTROL Attributes] | Dit veld bevat het JSON-object met extra kenmerken die samen met het bericht moeten worden verzonden.<br><br> onder de **[!UICONTROL Raw]** optie, kunt u het voorwerp JSON in het verstrekte tekstgebied direct kleven, of u kunt het pictogram van het gegevenselement (![ pictogram Dataset ](../../../images/extensions/server/aws/data-element-icon.png)) selecteren uit een lijst van bestaande gegevenselementen om de gegevens te vertegenwoordigen.<br><br> u kunt de **[!UICONTROL JSON Key-Value Pairs Editor]** optie ook gebruiken om elk zeer belangrijk-waardepaar door een redacteur manueel toe te voegen UI. Elke waarde kan worden vertegenwoordigd door een onbewerkte invoer, maar in plaats daarvan kan ook een gegevenselement worden geselecteerd. |
+| [!UICONTROL Data] | Dit veld bevat de gegevens die in JSON-indeling naar het [!DNL Cloud Pub/Sub] -onderwerp moeten worden doorgestuurd.<br><br> onder de **[!UICONTROL Raw]** optie, kunt u het voorwerp JSON in het verstrekte tekstgebied direct kleven, of u kunt het pictogram van het gegevenselement (![ pictogram Dataset ](/help/images/icons/database.png)) selecteren uit een lijst van bestaande gegevenselementen om de gegevens te vertegenwoordigen.<br><br> u kunt de **[!UICONTROL JSON Key-Value Pairs Editor]** optie ook gebruiken om elk zeer belangrijk-waardepaar door een redacteur manueel toe te voegen UI. Elke waarde kan worden vertegenwoordigd door een onbewerkte invoer, maar in plaats daarvan kan ook een gegevenselement worden geselecteerd. |
+| [!UICONTROL Attributes] | Dit veld bevat het JSON-object met extra kenmerken die samen met het bericht moeten worden verzonden.<br><br> onder de **[!UICONTROL Raw]** optie, kunt u het voorwerp JSON in het verstrekte tekstgebied direct kleven, of u kunt het pictogram van het gegevenselement (![ pictogram Dataset ](/help/images/icons/database.png)) selecteren uit een lijst van bestaande gegevenselementen om de gegevens te vertegenwoordigen.<br><br> u kunt de **[!UICONTROL JSON Key-Value Pairs Editor]** optie ook gebruiken om elk zeer belangrijk-waardepaar door een redacteur manueel toe te voegen UI. Elke waarde kan worden vertegenwoordigd door een onbewerkte invoer, maar in plaats daarvan kan ook een gegevenselement worden geselecteerd. |
 
 {style="table-layout:auto"}
 

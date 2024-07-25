@@ -4,7 +4,7 @@ title: Overzicht van waarschuwingen
 description: Meer informatie over waarschuwingen in Adobe Experience Platform, inclusief de structuur van hoe waarschuwingsregels worden gedefinieerd.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 2%
@@ -31,7 +31,7 @@ Platformwaarschuwingen kunnen één keer worden verzonden of worden herhaald ged
 | --- | --- |
 | Geeft niet noodzakelijkerwijs een probleem aan. | Geeft een mogelijk ongewenste status aan. |
 | Wordt niet herhaald. | Kan herhalen als de afwijkende situatie aanhoudt. |
-| Voorbeelden zijn:<ul><li>Gegevens zijn ingevoerd.</li><li>De uitvoering van een query is voltooid.</li><li>Gegevens zijn verwijderd.</li></ul> | Voorbeelden zijn:<ul><li>De insluitingsduur overschrijdt de service-level overeenkomst (SLA).</li><li>Dagelijkse inname vond niet plaats in de afgelopen 24 uur.</li><li>De foutensnelheid van de stroombewerker is boven de gevormde drempel.</li><li>Het totale aantal profielen overschrijdt de machtiging.</li></ul> |
+| Voorbeelden zijn:<ul><li>Gegevens zijn ingevoerd.</li><li>De uitvoering van een query is voltooid.</li><li>Gegevens zijn verwijderd.</li></ul> | Voorbeelden zijn:<ul><li>De duur van de inname overschrijdt de service-level overeenkomst (SLA).</li><li>Dagelijkse inname vond niet plaats in de afgelopen 24 uur.</li><li>De foutensnelheid van de stroombewerker is boven de gevormde drempel.</li><li>Het totale aantal profielen overschrijdt de machtiging.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -83,7 +83,7 @@ Als u met waarschuwingen wilt werken in de interface van het platform, moet u de
 >
 >Voor meer informatie over hoe te om toestemmingen in Platform te beheren, verwijs naar de [ documentatie van de toegangscontrole ](../../access-control/ui/overview.md).
 
-Met de toestemming van het Alarm van de Mening, kan ontvangen alarm bekijken door het klokpictogram (![ Pictogram van de Telling ](../images/alerts/overview/icon.png)) in de hoger-juiste hoek te selecteren.
+Met de toestemming van het Alarm van de Mening, kan ontvangen alarm bekijken door het klokpictogram (![ Pictogram van de Telling ](/help/images/icons/bell.png)) in de hoger-juiste hoek te selecteren.
 
 ![](../images/alerts/overview/ui.png)
 

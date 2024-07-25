@@ -4,7 +4,7 @@ title: Activeringsgegevens bewerken
 type: Tutorial
 description: Voer de stappen in dit artikel uit om een bestaande activeringsgegevensstroom in Adobe Experience Platform te bewerken.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Voer de onderstaande stappen uit om bestaande activeringsgegevens te bewerken:
 
    ![ doorbladert bestemmingen ](../assets/ui/edit-activation/browse-destinations.png)
 
-2. Selecteer het filterpictogram ![ filter-pictogram ](../assets/ui/edit-activation/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
+2. Selecteer het filterpictogram ![ filter-pictogram ](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
 
    ![ bestemmingen van de Filter ](../assets/ui/edit-activation/filter-destinations.png)
 

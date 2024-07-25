@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2351'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Een instellingenpictogram boven het invoerveld van de Query Editor bevat opties 
 >
 >U kunt [!UICONTROL Disable syntax auto complete] tijdens het ontwerpen van een query gebruiken zonder dat dit uw voortgang verliest.
 
-Om donkere of lichte thema&#39;s toe te laten, selecteer het montagespictogram (![ A montagespictogram.](../images/ui/query-editor/settings-icon.png)) gevolgd door de optie in het vervolgkeuzemenu dat wordt weergegeven.
+Om donkere of lichte thema&#39;s toe te laten, selecteer het montagespictogram (![ A montagespictogram.](/help/images/icons/settings.png)) gevolgd door de optie in het vervolgkeuzemenu dat wordt weergegeven.
 
 ![ de Redacteur van de Vraag met het montagespictogram en laat donkere benadrukte optie van het themdropdown menu toe.](../images/ui/query-editor/query-editor-settings.png)
 

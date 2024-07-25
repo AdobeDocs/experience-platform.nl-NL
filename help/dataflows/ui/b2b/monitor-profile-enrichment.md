@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verbeteringstaken voor profielen controleren
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '692'
 ht-degree: 0%
@@ -77,7 +77,7 @@ De volgende metriek is beschikbaar voor voorspellende lood en de banen van de de
 
 In deze sectie worden diverse gebruikersinterface-opties (UI) in de monitoringinterface beschreven waarmee u de metriek kunt filteren die op de pagina wordt weergegeven.
 
-Gebruik het pijlpictogram (![ pijlpictogram ](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) om de kaart bij de bovenkant van het scherm uit te breiden of te sluiten, dat informatie van de bij-a-blik over de banen van de profielverrijking toont.
+Gebruik het pijlpictogram (![ pijlpictogram ](/help/images/icons/chevron-up.png)) om de kaart bij de bovenkant van het scherm uit te breiden of te sluiten, dat informatie van de bij-a-blik over de banen van de profielverrijking toont.
 
 ![ opname van het Scherm die de controle van het pijlpictogram UI toont.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 

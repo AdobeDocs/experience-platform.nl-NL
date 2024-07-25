@@ -2,7 +2,7 @@
 title: Gegevensvoorvoegsel voor gegevensverzameling
 description: Leer hoe u uw gegevens aan een XDM-gebeurtenisschema (Experience Data Model) toewijst bij het configureren van een gegevensstroom voor Adobe Experience Platform Web en Mobile SDK's.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 0%
@@ -173,11 +173,11 @@ Selecteer **[!UICONTROL Add new mapping]** om een toewijzingsregel te maken.
 
 ![ Toevoegend een nieuwe afbeelding.](assets/data-prep/add-new-mapping.png)
 
-Selecteer het bronpictogram (![ het pictogram van Source ](assets/data-prep/source-icon.png)), en in de dialoog die verschijnt selecteer het brongebied dat u in kaart wilt brengen in het verstrekte canvas. Nadat u een veld hebt gekozen, drukt u op de knop **[!UICONTROL Select]** om door te gaan.
+Selecteer het bronpictogram (![ het pictogram van Source ](/help/images/icons/source.png)), en in de dialoog die verschijnt selecteer het brongebied dat u in kaart wilt brengen in het verstrekte canvas. Nadat u een veld hebt gekozen, drukt u op de knop **[!UICONTROL Select]** om door te gaan.
 
 ![ Selecterend het gebied dat in het bronschema moet worden in kaart gebracht.](assets/data-prep/source-mapping.png)
 
-Daarna, selecteer het schemapictogram (![ pictogram van het Schema ](assets/data-prep/schema-icon.png)) om een gelijkaardige dialoog voor het schema van de doelgebeurtenis te openen. Kies het veld waaraan u de gegevens wilt toewijzen voordat u bevestigt met **[!UICONTROL Select]** .
+Daarna, selecteer het schemapictogram (![ pictogram van het Schema ](/help/images/icons/schema.png)) om een gelijkaardige dialoog voor het schema van de doelgebeurtenis te openen. Kies het veld waaraan u de gegevens wilt toewijzen voordat u bevestigt met **[!UICONTROL Select]** .
 
 ![ Selecterend het gebied dat in het doelschema moet worden in kaart gebracht.](assets/data-prep/target-mapping.png)
 

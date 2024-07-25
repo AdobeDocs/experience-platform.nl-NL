@@ -3,7 +3,7 @@ title: Overzicht AWS-extensie
 description: Meer informatie over de AWS-extensie voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Het rechterdeelvenster wordt bijgewerkt om configuratieopties weer te geven voor
 
 | Invoer | Beschrijving |
 | --- | --- |
-| [!UICONTROL Payload] | Dit veld bevat de gegevens die in JSON-indeling naar de [!DNL Kinesis] -gegevensstroom worden doorgestuurd.<br><br> onder de **[!UICONTROL Raw]** optie, kunt u het voorwerp JSON in het verstrekte tekstgebied direct kleven, of u kunt het pictogram van het gegevenselement (![ pictogram Dataset ](../../../images/extensions/server/aws/data-element-icon.png)) selecteren uit een lijst van bestaande gegevenselementen om de nuttige lading te vertegenwoordigen.<br><br> u kunt de **[!UICONTROL JSON Key-Value Pairs Editor]** optie ook gebruiken om elk zeer belangrijk-waardepaar door een redacteur manueel toe te voegen UI. Elke waarde kan worden vertegenwoordigd door een onbewerkte invoer, maar in plaats daarvan kan ook een gegevenselement worden geselecteerd. |
+| [!UICONTROL Payload] | Dit veld bevat de gegevens die in JSON-indeling naar de [!DNL Kinesis] -gegevensstroom worden doorgestuurd.<br><br> onder de **[!UICONTROL Raw]** optie, kunt u het voorwerp JSON in het verstrekte tekstgebied direct kleven, of u kunt het pictogram van het gegevenselement (![ pictogram Dataset ](/help/images/icons/database.png)) selecteren uit een lijst van bestaande gegevenselementen om de nuttige lading te vertegenwoordigen.<br><br> u kunt de **[!UICONTROL JSON Key-Value Pairs Editor]** optie ook gebruiken om elk zeer belangrijk-waardepaar door een redacteur manueel toe te voegen UI. Elke waarde kan worden vertegenwoordigd door een onbewerkte invoer, maar in plaats daarvan kan ook een gegevenselement worden geselecteerd. |
 
 {style="table-layout:auto"}
 

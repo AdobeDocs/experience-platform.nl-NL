@@ -3,7 +3,7 @@ description: Leer hoe u sjablonen in de gebruikersinterface van Adobe Experience
 title: Een gegevensstroom voor bronnen maken met sjablonen in de gebruikersinterface
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2198'
 ht-degree: 0%
@@ -174,7 +174,7 @@ In de volgende tabel worden de B2C-sjablonen weergegeven die beschikbaar zijn vo
 
 +++
 
-Afhankelijk van het geselecteerde bedrijfstype, verschijnt een lijst van malplaatjes. Selecteer het voorproefpictogram ![ voorproefpictogram ](../../images/tutorials/templates/preview-icon.png) naast een malplaatjenaam aan voorproefgegevens van het malplaatje.
+Afhankelijk van het geselecteerde bedrijfstype, verschijnt een lijst van malplaatjes. Selecteer het voorproefpictogram ![ voorproefpictogram ](/help/images/icons/preview.png) naast een malplaatjenaam aan voorproefgegevens van het malplaatje.
 
 ![ een lijst van malplaatjes met het voorproefpictogram benadrukte.](../../images/tutorials/templates/templates.png)
 

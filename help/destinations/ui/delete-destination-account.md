@@ -4,7 +4,7 @@ title: Doelaccounts verwijderen
 type: Tutorial
 description: Deze zelfstudie bevat een overzicht van de stappen die moeten worden gezet om bestemmingsaccounts te verwijderen in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%
@@ -33,11 +33,11 @@ Voer de onderstaande stappen uit om bestaande doelaccounts te verwijderen.
 
    ![ Rekeningen tabel ](../assets/ui/delete-accounts/accounts-tab.png)
 
-2. Selecteer het filterpictogram ![ filter-pictogram ](../assets/ui/update-accounts/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van rekeningen te zien verbonden aan de geselecteerde bestemmingen.
+2. Selecteer het filterpictogram ![ filter-pictogram ](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van rekeningen te zien verbonden aan de geselecteerde bestemmingen.
 
    ![ bestemmingen van de Filter ](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. Selecteer de ovalen (`...`) naast de naam van de account die u wilt verwijderen. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate audiences]** , **[!UICONTROL Edit details]** en **[!UICONTROL Delete]** de account. Selecteer de ![ knoop van de Schrapping ](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Delete]** knoop om de gewenste rekening te schrappen.
+3. Selecteer de ovalen (`...`) naast de naam van de account die u wilt verwijderen. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate audiences]** , **[!UICONTROL Edit details]** en **[!UICONTROL Delete]** de account. Selecteer de ![ knoop van de Schrapping ](/help/images/icons/delete.png) **[!UICONTROL Delete]** knoop om de gewenste rekening te schrappen.
 
    ![ de bestemmingsrekening van de Schrapping ](../assets/ui/delete-accounts/delete-accounts.png)
 

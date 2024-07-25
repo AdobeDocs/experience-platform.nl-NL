@@ -2,7 +2,7 @@
 title: Einde-tot-eindoverzicht gegevensverzameling
 description: Een overzicht op hoog niveau van hoe u gebeurtenisgegevens naar Adobe Experience Cloud-oplossingen kunt verzenden met behulp van Adobe Experience Platform-mogelijkheden voor gegevensverzameling.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2534'
 ht-degree: 0%
@@ -228,7 +228,7 @@ De pagina voor actieconfiguratie wordt weergegeven. Als u de regel wilt gebruike
 
 ![ Type van Actie ](./images/e2e/action-type.png)
 
-Het scherm wordt bijgewerkt om extra opties te tonen om de send gebeurtenisactie te vormen. Onder **[!UICONTROL Type]** kunt u een aangepaste typewaarde opgeven om het `eventType` XDM-veld te vullen. Onder **[!UICONTROL XDM data]**, verstrek de naam van het XDM gegevenstype u vroeger (omringd door percententekens) creeerde, of selecteer het gegevensbestandpictogram (![ pictogram van het Gegevensbestand ](./images/e2e/database-symbol.png)) om het van een lijst te selecteren. Dit zijn de gegevens die uiteindelijk naar de Edge Network worden verzonden.
+Het scherm wordt bijgewerkt om extra opties te tonen om de send gebeurtenisactie te vormen. Onder **[!UICONTROL Type]** kunt u een aangepaste typewaarde opgeven om het `eventType` XDM-veld te vullen. Onder **[!UICONTROL XDM data]**, verstrek de naam van het XDM gegevenstype u vroeger (omringd door percententekens) creeerde, of selecteer het gegevensbestandpictogram (![ pictogram van het Gegevensbestand ](/help/images/icons/database.png)) om het van een lijst te selecteren. Dit zijn de gegevens die uiteindelijk naar de Edge Network worden verzonden.
 
 Selecteer **[!UICONTROL Keep Changes]** wanneer u klaar bent.
 

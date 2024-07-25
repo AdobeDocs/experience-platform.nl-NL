@@ -5,7 +5,7 @@ title: De Middelen van het Schema in UI onderzoeken
 description: Leer hoe te om bestaande schema's, klassen, de groepen van het schemagebied, en gegevenstypes in het gebruikersinterface van de Experience Platform te onderzoeken.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Selecteer **[!UICONTROL Schemas]** in de gebruikersinterface van het platform in
 
 ![](../images/ui/explore/tabs.png)
 
-Het filterpictogram (![ Beeld van het Pictogram van de Filter ](../images/ui/explore/icon.png)) openbaart controles in het linkerspoor om onderaan vermelde resultaten te versmallen. De weergegeven besturingselementen verschillen afhankelijk van het type bron dat wordt vermeld.
+Het filterpictogram (![ Beeld van het Pictogram van de Filter ](/help/images/icons/filter.png)) openbaart controles in het linkerspoor om onderaan vermelde resultaten te versmallen. De weergegeven besturingselementen verschillen afhankelijk van het type bron dat wordt vermeld.
 
 Als u bijvoorbeeld de lijst wilt filteren om alleen standaardgegevenstypen weer te geven die door Adobe worden aangeboden, selecteert u respectievelijk **[!UICONTROL Datatype]** en **[!UICONTROL Adobe]** onder de secties **[!UICONTROL Type]** en **[!UICONTROL Owner]** .
 
@@ -56,7 +56,7 @@ Alle objecten-type gebieden die sub-eigenschappen bevatten worden doen ineenstor
 
 ### Standaardklasse- en veldgroepindicator {#standard-class-and-field-group-indicator}
 
-Binnen de Redacteur van het Schema, worden de standaard (Adobe-geproduceerde) klassen en de gebiedsgroepen vermeld met het hangslotpictogram (![ A hangslotpictogram.](../images/ui/explore/padlock-icon.png). Het hangslot verschijnt in de linkerspoorstaaf naast de klasse of de naam van de gebiedsgroep, evenals naast om het even welk gebied in het schemadiagram dat een deel van een systeem-geproduceerde middel is.
+Binnen de Redacteur van het Schema, worden de standaard (Adobe-geproduceerde) klassen en de gebiedsgroepen vermeld met het hangslotpictogram (![ A hangslotpictogram.](/help/images/icons/lock-closed.png). Het hangslot verschijnt in de linkerspoorstaaf naast de klasse of de naam van de gebiedsgroep, evenals naast om het even welk gebied in het schemadiagram dat een deel van een systeem-geproduceerde middel is.
 
 ![ de Redacteur van het Schema met het gemarkeerde hangslotpictogram ](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -94,7 +94,7 @@ Als het veld dat u inspecteert een opsommingsveld is, geeft de rechterspoorstaaf
 
 Wanneer het inspecteren van schema&#39;s die identiteitsgebieden bevatten, zijn deze gebieden vermeld in het linkerspoor onder de klasse of de gebiedsgroep die hen aan het schema verstrekt. Selecteer de naam van het identiteitsveld in de linkerrail om het veld op het canvas weer te geven, ongeacht hoe diep het veld is genest.
 
-De gebieden van de identiteit worden benadrukt in het canvas met een vingerafdrukpictogram (![ Beeld van het Pictogram van de Vingerprint ](../images/ui/explore/identity-symbol.png)). Als u de naam van het identiteitsgebied selecteert, kunt u extra informatie zoals [ identiteitsnamespace ](../../identity-service/features/namespaces.md) bekijken en of het gebied al dan niet de primaire identiteit voor het schema is.
+De gebieden van de identiteit worden benadrukt in het canvas met een vingerafdrukpictogram (![ Beeld van het Pictogram van de Vingerprint ](/help/images/icons/identity-service.png)). Als u de naam van het identiteitsgebied selecteert, kunt u extra informatie zoals [ identiteitsnamespace ](../../identity-service/features/namespaces.md) bekijken en of het gebied al dan niet de primaire identiteit voor het schema is.
 
 ![](../images/ui/explore/identity-field.png)
 

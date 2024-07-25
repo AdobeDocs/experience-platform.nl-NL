@@ -6,7 +6,7 @@ hide: true
 hidefromtoc: true
 role: Developer, Admin, User
 exl-id: 85944720-8551-491c-8991-dd9668beb0ca
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '937'
 ht-degree: 0%
@@ -59,7 +59,7 @@ Met voorwerp-vlakke toegangsbeheer voor bestemmingen, beperk specifieke teams va
 Om toegangslabels op een specifieke gegevensstroom toe te passen:
 
 1. Navigeer naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en zoek de doelgegevensstroom waartoe u de toegang van gebruikers wilt beperken.
-1. Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ uitgeven detailcontrole ](/help/access-control/images/olac/key-icon.svg) **[!UICONTROL Apply access labels]** controle om nieuwe etiketten toe te voegen en de bestaande etiketten voor dataflow te beheren.
+1. Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ uitgeven detailcontrole ](/help/images/icons/key.png) **[!UICONTROL Apply access labels]** controle om nieuwe etiketten toe te voegen en de bestaande etiketten voor dataflow te beheren.
    ![ uitgezocht pas toegangsetiketten in Browse mening van bestemmingswerkruimte toe.](/help/access-control/images/olac/apply-access-labels.png)
 1. Selecteer de labels die u aan de doelgegevensstroom wilt toevoegen en selecteer **[!UICONTROL Save]**.
    ![ selecteer de toegangslabels binnen die op de bestemmingsdataflow zouden moeten van toepassing zijn.](/help/access-control/images/olac/view-access-labels.png)

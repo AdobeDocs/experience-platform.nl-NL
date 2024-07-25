@@ -4,7 +4,7 @@ description: In real time het Profiel van de Klant laat u een holistische mening
 title: Dataflows for Profiles in de UI controleren
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '999'
 ht-degree: 0%
@@ -63,7 +63,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | **[!UICONTROL Total Profile fragments]** | Het totale aantal records dat in [!DNL Profile] is geschreven, inclusief alle bestaande [!DNL Profile] fragmenten die zijn bijgewerkt en nieuwe [!DNL Profile] fragmenten die zijn gemaakt. |
 | **[!UICONTROL Total failed dataflows]** | Het aantal dataflow wordt uitgevoerd dat is mislukt. |
 
-U kunt het pictogram van de filter ![ Filter ](../assets/ui/monitor-profiles/filter.png) naast de bronnaam selecteren om de verwerkingsinformatie van het Profiel voor de dataflows van die geselecteerde bron te zien.
+U kunt het pictogram van de filter ![ Filter ](/help/images/icons/filter.png) naast de bronnaam selecteren om de verwerkingsinformatie van het Profiel voor de dataflows van die geselecteerde bron te zien.
 
 ![ het filterpictogram wordt benadrukt. Als u dit pictogram selecteert, kunt u de gegevensstromen van de geselecteerde bron weergeven.](../assets/ui/monitor-profiles/sources-filter.png)
 
@@ -86,7 +86,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | **[!UICONTROL Total failed flow runs]** | Het aantal dataflow wordt uitgevoerd dat is mislukt. |
 | **[!UICONTROL Last active]** | De tijdstempel die de gegevensstroom het laatst heeft uitgevoerd. |
 
-Selecteer het filterpictogram ![ filter ](../assets/ui/monitor-profiles/filter.png) naast de dataflow runtime begintijd om meer informatie over uw [!DNL Profile] dataflow looppas te zien.
+Selecteer het filterpictogram ![ filter ](/help/images/icons/filter.png) naast de dataflow runtime begintijd om meer informatie over uw [!DNL Profile] dataflow looppas te zien.
 
 ![ het filterpictogram wordt benadrukt. Als u dit pictogram selecteert, kunt u details over de geselecteerde gegevensstroom weergeven.](../assets/ui/monitor-profiles/dataflows-filter.png)
 

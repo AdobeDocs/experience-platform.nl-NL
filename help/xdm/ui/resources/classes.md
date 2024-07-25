@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Klassen maken en bewerken in de gebruikersinterface
 description: Leer hoe u klassen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 0%
@@ -74,7 +74,7 @@ Selecteer een keuzerondje om de klassen te filteren op basis van het feit of ze 
 
 ![ het [!UICONTROL Create schema] werkschema met de onderzoeksbar, [!UICONTROL Custom], en [!UICONTROL Industries] benadrukte.](../../images/ui/resources/classes/filter-and-search.png)
 
-Om u te helpen op de aangewezen klasse beslissen, zijn er info (![ een infopictogram.](../../images/ui/resources/classes/info.png)) en voorproef (![ een voorproefpictogram.](../../images/ui/resources/classes/preview.png) ) voor elke klasse. Het infopictogram opent een dialoogvenster met een beschrijving van de klasse en de industrie waaraan deze is gekoppeld. Het voorproefpictogram opent een voorproefdialoog voor de klasse die een schemadiagram en zijn eigenschappen bevat.
+Om u te helpen op de aangewezen klasse beslissen, zijn er info (![ een infopictogram.](/help/images/icons/info.png)) en voorproef (![ een voorproefpictogram.](/help/images/icons/preview.png) ) voor elke klasse. Het infopictogram opent een dialoogvenster met een beschrijving van de klasse en de industrie waaraan deze is gekoppeld. Het voorproefpictogram opent een voorproefdialoog voor de klasse die een schemadiagram en zijn eigenschappen bevat.
 
 ![ een voorproef van de geselecteerde klasse met het schemadiagram en de benadrukte klasseneigenschappen.](../../images/ui/resources/classes/class-preview.png)
 

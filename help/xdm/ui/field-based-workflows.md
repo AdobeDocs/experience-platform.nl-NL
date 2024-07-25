@@ -2,7 +2,7 @@
 title: Op velden gebaseerde workflows in de Schema-editor
 description: Leer hoe u velden van bestaande veldgroepen afzonderlijk kunt toevoegen aan uw XDM-schema's (Experience Data Model).
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 19e0a26958ec57ccbc614be53b5aaacce7ce9450
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1269'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Typ onder **[!UICONTROL Field name]** de naam van het veld dat u wilt toevoegen.
 
 Sommige standaardvelden hebben dezelfde naam, maar de structuur van deze velden kan afhankelijk zijn van de veldgroep waaruit ze afkomstig zijn. Als een standaardveld is genest in een bovenliggend object in de veldgroepsstructuur, wordt het bovenliggende veld ook opgenomen in het schema als het onderliggende veld wordt toegevoegd.
 
-Selecteer het voorproefpictogram (![ pictogram van de Voorproef ](../images/ui/field-based-workflows/preview-icon.png)) naast een standaardgebied om de structuur van zijn gebiedsgroep te bekijken en beter te begrijpen hoe het zou kunnen worden genest. Om het standaardgebied aan het schema toe te voegen, selecteer het plusteken (![ plus pictogram ](../images/ui/field-based-workflows/add-icon.png)).
+Selecteer het voorproefpictogram (![ pictogram van de Voorproef ](/help/images/icons/preview.png)) naast een standaardgebied om de structuur van zijn gebiedsgroep te bekijken en beter te begrijpen hoe het zou kunnen worden genest. Om het standaardgebied aan het schema toe te voegen, selecteer het plusteken (![ plus pictogram ](/help/images/icons/add-circle.png)).
 
 ![ voegt pictogram toe dat op een punt van de voorgestelde standaardgebieden wordt benadrukt.](../images/ui/field-based-workflows/add-standard-field.png)
 

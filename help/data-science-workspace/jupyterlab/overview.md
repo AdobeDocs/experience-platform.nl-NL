@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van de gebruikersinterface van JupyterLab
 description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het verstrekt een interactieve ontwikkelomgeving voor gegevenswetenschappers om met Notities Jupyter, code, en gegevens te werken. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies om algemene handelingen uit te voeren.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1806'
 ht-degree: 0%
@@ -116,9 +116,9 @@ In [!DNL JupyterLab] selecteer het tandwielpictogram in de hoogste juiste hoek o
 
 ### Beëindigen en opnieuw starten [!DNL JupyterLab]
 
-In [!DNL JupyterLab] kunt u uw sessie beëindigen om te voorkomen dat meer bronnen worden gebruikt. Begin door het **machtspictogram** ![ machtspictogram ](../images/jupyterlab/user-guide/power_button.png) te selecteren, dan uitgezocht **[!UICONTROL Shut Down]** van popover die lijkt om uw zitting te eindigen. Laptopsessies worden automatisch beëindigd na 12 uur geen activiteit.
+In [!DNL JupyterLab] kunt u uw sessie beëindigen om te voorkomen dat meer bronnen worden gebruikt. Begin door het **machtspictogram** ![ machtspictogram ](/help/images/icons/power.png) te selecteren, dan uitgezocht **[!UICONTROL Shut Down]** van popover die lijkt om uw zitting te eindigen. Laptopsessies worden automatisch beëindigd na 12 uur geen activiteit.
 
-Om [!DNL JupyterLab] opnieuw te beginnen, selecteer het **pictogram van het nieuwe begin** ![ herstart pictogram ](../images/jupyterlab/user-guide/restart_button.png) dat direct aan de linkerzijde van het machtspictogram wordt gevestigd, dan uitgezocht **[!UICONTROL Restart]** van popover die verschijnt.
+Om [!DNL JupyterLab] opnieuw te beginnen, selecteer het **pictogram van het nieuwe begin** ![ herstart pictogram ](/help/images/icons/restart.png) dat direct aan de linkerzijde van het machtspictogram wordt gevestigd, dan uitgezocht **[!UICONTROL Restart]** van popover die verschijnt.
 
 ![ beëindigt jupyterlab ](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 

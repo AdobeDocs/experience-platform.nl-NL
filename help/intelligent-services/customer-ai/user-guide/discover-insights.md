@@ -5,7 +5,7 @@ feature: Customer AI
 title: Inzichten met Customer AI ontdekken
 description: Dit document fungeert als hulpmiddel bij de interactie met de inzichten van serviceversies in de Intelligent Services Customer AI-gebruikersinterface.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2035'
 ht-degree: 1%
@@ -180,7 +180,7 @@ Als u de muis boven de regels houdt, worden de datum en de werkelijke/verwachte 
 
 ![ Voorbeeld van het Emmertje ](../images/insights/churn_tab.png)
 
-U kunt het tijdkader filteren voor de verwachte en daadwerkelijke tarieven die worden getoond. Selecteer het **kalenderpictogram** ![ pictogram ](../images/insights/calendar_icon.png) dan selecteren een nieuwe datumwaaier. De resultaten in elk van de emmers worden bijgewerkt om binnen het nieuwe datumbereik weer te geven.
+U kunt het tijdkader filteren voor de verwachte en daadwerkelijke tarieven die worden getoond. Selecteer het **kalenderpictogram** ![ pictogram ](/help/images/icons/calendar.png) dan selecteren een nieuwe datumwaaier. De resultaten in elk van de emmers worden bijgewerkt om binnen het nieuwe datumbereik weer te geven.
 
 ![ de selecteur van de Datum ](../images/insights/date_selector.png)
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Enum Fields en voorgestelde waarden in UI bepalen
 description: Leer hoe u opsommingen en voorgestelde waarden voor tekenreeksvelden definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1221'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Selecteer **[!UICONTROL Enums and Suggested Values]** en selecteer vervolgens **
 
 Onder de kolom **[!UICONTROL Value]** moet u de exacte waarde opgeven waarnaar u het veld wilt beperken. U kunt optioneel ook een gebruiksvriendelijke **[!UICONTROL Display Name]** versie van de beperking opgeven, die bepaalt hoe de waarde in de segmentatie wordt weergegeven.
 
-Ga verder om **[!UICONTROL Add row]** te gebruiken om de gewenste beperkingen en facultatieve etiketten aan de opsomming toe te voegen, of het schrappingspictogram (![ Beeld van het schrappingspictogram ](../../images/ui/fields/enum/remove-icon.png)) naast een eerder toegevoegde rij te selecteren om het te verwijderen. Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
+Ga verder om **[!UICONTROL Add row]** te gebruiken om de gewenste beperkingen en facultatieve etiketten aan de opsomming toe te voegen, of het schrappingspictogram (![ Beeld van het schrappingspictogram ](/help/images/icons/remove-circle.png)) naast een eerder toegevoegde rij te selecteren om het te verwijderen. Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
 
 ![ Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld ](../../images/ui/fields/enum/enum-confirm.png)
 
@@ -52,7 +52,7 @@ Selecteer **[!UICONTROL Enums and Suggested Values]** en selecteer vervolgens **
 
 ![ Beeld dat de Voorgestelde optie van Waarden toont die in UI wordt geselecteerd ](../../images/ui/fields/enum/suggested-add-row.png)
 
-Geef onder de kolom **[!UICONTROL Display Name]** een mensvriendelijke naam voor de waarde op zoals u deze wilt weergeven in de segmenteringsinterface. Als u meer gesuggereerde waarden wilt toevoegen, selecteert u **[!UICONTROL Add row]** nogmaals en herhaalt u zo nodig het proces. Om een eerder toegevoegde rij te verwijderen, selecteer ![ het schrappingspictogram ](../../images/ui/fields/enum/remove-icon.png) naast de rij in kwestie.
+Geef onder de kolom **[!UICONTROL Display Name]** een mensvriendelijke naam voor de waarde op zoals u deze wilt weergeven in de segmenteringsinterface. Als u meer gesuggereerde waarden wilt toevoegen, selecteert u **[!UICONTROL Add row]** nogmaals en herhaalt u zo nodig het proces. Om een eerder toegevoegde rij te verwijderen, selecteer ![ het schrappingspictogram ](/help/images/icons/remove-circle.png) naast de rij in kwestie.
 
 Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
 
@@ -68,7 +68,7 @@ Sommige gebieden van standaardXDM componenten bevatten hun eigen gesuggereerde w
 
 ![ Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld ](../../images/ui/fields/enum/suggested-standard.png)
 
-Selecteer **[!UICONTROL Add row]** als u nieuwe voorgestelde waarden voor een standaardveld wilt toevoegen. Om een gesuggereerde waarde te verwijderen die eerder door uw organisatie werd toegevoegd, selecteer ![ het schrappingspictogram ](../../images/ui/fields/enum/remove-icon.png) naast de rij in kwestie.
+Selecteer **[!UICONTROL Add row]** als u nieuwe voorgestelde waarden voor een standaardveld wilt toevoegen. Om een gesuggereerde waarde te verwijderen die eerder door uw organisatie werd toegevoegd, selecteer ![ het schrappingspictogram ](/help/images/icons/remove-circle.png) naast de rij in kwestie.
 
 ![ Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld ](../../images/ui/fields/enum/suggested-standard-add.png)
 

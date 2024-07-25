@@ -2,7 +2,7 @@
 title: Door de klant beheerde toetsen instellen en configureren met behulp van de interface van het platform
 description: Leer hoe u uw CMK-app instelt met uw Azure-medewerker en uw coderingssleutel-id verzendt naar Adobe Experience Platform.
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Selecteer **[!UICONTROL Configure]** om de weergave [!UICONTROL Customer Managed
 
 Als u het registratieproces wilt starten, kopieert u de URL van de toepassingsverificatie voor uw organisatie vanuit de [!UICONTROL Customer Managed Keys configuration] -weergave en plakt u deze in uw [!DNL Azure] -omgeving **[!DNL Key Vault Crypto Service Encryption User]** . De details op hoe te om [ een rol ](#assign-to-role) toe te wijzen worden verstrekt in de volgende sectie.
 
-Selecteer het exemplaarpictogram (![ het exemplaarpictogram.](../../images/governance-privacy-security/customer-managed-keys/copy-icon.png) ) door de [!UICONTROL Application authentication url] .
+Selecteer het exemplaarpictogram (![ het exemplaarpictogram.](/help/images/icons/copy.png) ) door de [!UICONTROL Application authentication url] .
 
 ![ de [!UICONTROL Customer Managed Keys configuration] mening met de benadrukte sectie van de de authentificatieurl van de Toepassing.](../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 

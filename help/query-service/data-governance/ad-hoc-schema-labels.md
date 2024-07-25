@@ -2,7 +2,7 @@
 title: Op kenmerken gebaseerde ondersteuning voor toegangsbeheer voor ad-hocschema's
 description: Een handleiding voor het beperken van toegang tot gegevensvelden in ad-hocschema's die via Adobe Experience Platform Query Service worden gegenereerd.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1001'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Als u een gegevenslabel wilt toevoegen, navigeert u naar het tabblad Bladeren va
 
 ## Ontdek ad-hocschema&#39;s in de schemainventaris van de UI van het Platform {#discover-ad-hoc-schemas}
 
-Om de vertoning van ad hoc schema&#39;s in Platform UI toe te laten, selecteer het filterpictogram (![ het filterpictogram van A.](../images/data-governance/filter.png)) links van het onderzoeksgebied, en selecteer dan ** [!UICONTROL Show adhoc schemas] in de linkerspoorlijn die verschijnt.
+Om de vertoning van ad hoc schema&#39;s in Platform UI toe te laten, selecteer het filterpictogram (![ het filterpictogram van A.](/help/images/icons/filter.png)) links van het onderzoeksgebied, en selecteer dan ** [!UICONTROL Show adhoc schemas] in de linkerspoorlijn die verschijnt.
 
 ![ de optie van het de filterfilter van het Schema linkerspoor met toegelaten de knevel van het &quot;Wijs adhoc schema&quot;toe.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -56,7 +56,7 @@ Als u gegevenslabels voor uw ad-hocschema wilt bewerken, selecteert u de tab [!U
 
 ## Labels voor het schema of veld bewerken
 
-Om de etiketten voor het volledige schema uit te geven, selecteer het potloodpictogram (![ het potloodpictogram van A.](../images/data-governance/edit-icon.png) ) aan de kant van de naam van het schema onder de tab [!UICONTROL Labels] .
+Om de etiketten voor het volledige schema uit te geven, selecteer het potloodpictogram (![ het potloodpictogram van A.](/help/images/icons/edit.png) ) aan de kant van de naam van het schema onder de tab [!UICONTROL Labels] .
 
 ![ de etiketmening in de schemawerkruimte met het benadrukte potloodpictogram.](../images/data-governance/edit-entire-schema-labels.png)
 

@@ -2,7 +2,7 @@
 title: SQL Insight weergeven
 description: Bekijk SQL achter uw Profiel, Publiek, Doel, en aangepaste inzichten en voer de vraag op bestelling door de Redacteur van de Vraag uit.
 exl-id: fd728926-c113-4593-92b1-916a02d09d41
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Er wordt een dialoogvenster weergegeven met de titel van het inzicht en de SQL d
 
 >[!TIP]
 >
->U kunt de volledige SQL verklaring aan uw klembord kopiëren door het exemplaarpictogram te selecteren (![ het exemplaarpictogram.](./images/view-sql/copy-icon.png) ) rechtsboven in het dialoogvenster.
+>U kunt de volledige SQL verklaring aan uw klembord kopiëren door het exemplaarpictogram te selecteren (![ het exemplaarpictogram.](/help/images/icons/copy.png) ) rechtsboven in het dialoogvenster.
 
 ![ een inzicht dialoog met de SQL benadrukte verklaring.](./images/view-sql/sql-dialog.png)
 

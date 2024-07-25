@@ -2,7 +2,7 @@
 title: Een Marketo Engage maken voor Source Connection en Dataflow voor Custom Activity Data in de gebruikersinterface
 description: Deze zelfstudie biedt stappen voor het maken van een Marketo Engage-bronverbinding en gegevensstroom in de gebruikersinterface om gegevens van aangepaste activiteiten over te brengen naar Adobe Experience Platform.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1417'
 ht-degree: 0%
@@ -127,7 +127,7 @@ Navigeer door de brongegevensstructuur en zoek het veld voor aangepaste activite
 
 ![ de brongegevensstructuur.](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
 
-Om een doelgebied toe te voegen, selecteer het schemapictogram ![ schemapictogram ](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) en selecteer dan de gebieden van de douaneactiviteit van het doelschema.
+Om een doelgebied toe te voegen, selecteer het schemapictogram ![ schemapictogram ](/help/images/icons/schema.png) en selecteer dan de gebieden van de douaneactiviteit van het doelschema.
 
 ![ de structuur van het doelschema.](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
 

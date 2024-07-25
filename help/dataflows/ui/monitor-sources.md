@@ -2,7 +2,7 @@
 description: Leer hoe te om het controledashboard te gebruiken om gegevens te controleren die van bronnen worden ingebed.
 title: De Dataflows van de monitor voor Bronnen in UI
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1229'
 ht-degree: 0%
@@ -83,13 +83,13 @@ U kunt uw gegevens verder filteren met de opties boven de metrieke tabel:
 
 {style="table-layout:auto"}
 
-Om de gegevens te controleren die in een specifieke dataflow worden opgenomen, selecteer het filterpictogram ![ filter ](../assets/ui/monitor-sources/filter.png) naast een bron.
+Om de gegevens te controleren die in een specifieke dataflow worden opgenomen, selecteer het filterpictogram ![ filter ](/help/images/icons/filter-add.png) naast een bron.
 
 ![ Monitor een specifieke dataflow door het filterpictogram naast een bepaalde bron te selecteren.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 De metrietabel werkt aan een lijst van actieve gegevens bij die aan de bron beantwoorden die u selecteerde. Tijdens deze stap, kunt u extra informatie over uw gegevensstromen, met inbegrip van hun overeenkomstige dataset en gegevenstype, evenals een tijdstempel bekijken om erop te wijzen wanneer zij het laatst actief waren.
 
-Om een dataflow verder te inspecteren, selecteer het filterpictogram ![ filter ](../assets/ui/monitor-sources/filter.png) naast een dataflow.
+Om een dataflow verder te inspecteren, selecteer het filterpictogram ![ filter ](/help/images/icons/filter-add.png) naast een dataflow.
 
 ![ de dataflows lijst in het controledashboard.](../assets/ui/monitor-sources/select-dataflow.png)
 
@@ -97,7 +97,7 @@ Daarna, wordt u genomen aan een interface die van alle dataflow looplooploopherh
 
 Dataflow-uitvoering is een instantie van de uitvoering van de gegevensstroom. Bijvoorbeeld, als een dataflow om 09:00 AM, 10:00 AM, en 11:00 AM gepland is te lopen, dan zou u drie instanties van een stroomlooppas hebben. De looppas van de stroom is specifiek voor uw bepaalde organisatie.
 
-Om metriek van een specifieke dataflow looploopherhaling te inspecteren, selecteer het filterpictogram ![ filter ](../assets/ui/monitor-sources/filter.png) naast uw dataflow.
+Om metriek van een specifieke dataflow looploopherhaling te inspecteren, selecteer het filterpictogram ![ filter ](/help/images/icons/filter-add.png) naast uw dataflow.
 
 ![ de dataflow looppas metrische pagina.](../assets/ui/monitor-sources/dataflow-page.png)
 

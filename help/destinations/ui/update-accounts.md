@@ -4,7 +4,7 @@ title: Doelaccounts bijwerken
 type: Tutorial
 description: Deze zelfstudie bevat een overzicht van de stappen voor het bijwerken van bestemmingsaccounts in de gebruikersinterface van Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 0%
@@ -33,11 +33,11 @@ Voer de onderstaande stappen uit om verbindingsgegevens bij te werken naar besta
 
    ![ Rekeningen tabel ](../assets/ui/update-accounts/accounts-tab.png)
 
-2. Selecteer het filterpictogram ![ filter-pictogram ](../assets/ui/update-accounts/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van rekeningen te zien verbonden aan de geselecteerde bestemmingen.
+2. Selecteer het filterpictogram ![ filter-pictogram ](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van rekeningen te zien verbonden aan de geselecteerde bestemmingen.
 
    ![ de bestemmingsrekeningen van de Filter ](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Selecteer de ovalen (`...`) naast de naam van de account die u wilt bijwerken. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate audiences]** , **[!UICONTROL Edit details]** en **[!UICONTROL Delete]** de account. Selecteer ![ uitgeven detailknoop ](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Edit details]** knoop om de rekeningsinformatie uit te geven.
+3. Selecteer de ovalen (`...`) naast de naam van de account die u wilt bijwerken. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate audiences]** , **[!UICONTROL Edit details]** en **[!UICONTROL Delete]** de account. Selecteer ![ uitgeven detailknoop ](/help/images/icons/edit.png) **[!UICONTROL Edit details]** knoop om de rekeningsinformatie uit te geven.
 
    ![ geef rekening ](../assets/ui/update-accounts/accounts-edit.png) uit
 

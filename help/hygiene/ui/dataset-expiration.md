@@ -2,7 +2,7 @@
 title: Geautomatiseerde gegevensset verlopen
 description: Leer hoe te om een datasetvervaldatum in Adobe Experience Platform UI te plannen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '835'
 ht-degree: 0%
@@ -55,11 +55,11 @@ De workflow voor het maken van aanvragen wordt weergegeven. Selecteer onder de s
 
 ### Selecteer een datum en een dataset {#select-date-and-dataset}
 
-Selecteer onder de sectie **[!UICONTROL Requested Action]** een datum waarop u de gegevensset wilt verwijderen. U kunt de datum manueel ingaan (in het formaat `mm/dd/yyyy`) of het kalenderpictogram (![ A kalenderpictogram selecteren.](../images/ui/ttl/calendar-icon.png) ) om de datum in een dialoogvenster te selecteren.
+Selecteer onder de sectie **[!UICONTROL Requested Action]** een datum waarop u de gegevensset wilt verwijderen. U kunt de datum manueel ingaan (in het formaat `mm/dd/yyyy`) of het kalenderpictogram (![ A kalenderpictogram selecteren.](/help/images/icons/calendar.png) ) om de datum in een dialoogvenster te selecteren.
 
 ![ de kalenderdialoog van A met een geselecteerde en benadrukte vervaldatum voor de dataset.](../images/ui/ttl/select-date.png)
 
-Daarna, onder **[!UICONTROL Dataset Details]**, selecteer het gegevensbestandpictogram (![ het gegevensbestandpictogram.](../images/ui/ttl/database-icon.png)) om een dialoogvenster voor de selectie van gegevenssets te openen. Kies een dataset in de lijst waarop u de vervaldatum wilt toepassen en selecteer vervolgens **[!UICONTROL Done]** .
+Daarna, onder **[!UICONTROL Dataset Details]**, selecteer het gegevensbestandpictogram (![ het gegevensbestandpictogram.](/help/images/icons/database.png)) om een dialoogvenster voor de selectie van gegevenssets te openen. Kies een dataset in de lijst waarop u de vervaldatum wilt toepassen en selecteer vervolgens **[!UICONTROL Done]** .
 
 ![ de [!UICONTROL Select dataset] dialoog met een geselecteerde dataset en [!UICONTROL Done] benadrukte.](../images/ui/ttl/select-dataset.png)
 

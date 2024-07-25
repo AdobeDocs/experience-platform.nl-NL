@@ -3,7 +3,7 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Op kenmerken gebaseerde toegangsbeheerfuncties voor rolmachtigingen beheren
 description: Dit document bevat informatie over het configureren van machtigingen voor een rol via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '919'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Onmiddellijk nadat [ creërend een nieuwe rol ](#create-a-new-role), bent u teru
 
 ## Filterrollen
 
-Selecteer het kanaalpictogram (![ pictogram van de Filter ](../../images/icon.png)) om een lijst van filtercontroles te tonen om smalle resultaten te helpen.
+Selecteer het kanaalpictogram (![ pictogram van de Filter ](/help/images/icons/filter.png)) om een lijst van filtercontroles te tonen om smalle resultaten te helpen.
 
 ![ flc-filters ](../../images/flac-ui/flac-filters.png)
 

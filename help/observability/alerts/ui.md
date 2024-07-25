@@ -4,7 +4,7 @@ title: UI-gids voor waarschuwingen
 description: Leer hoe u waarschuwingen beheert in de gebruikersinterface van het Experience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 8d63e9fa4c7eb09ffb90edca612a6e6d44dd18fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%
@@ -71,7 +71,7 @@ U hebt gebruikers toegevoegd aan uw lijst met waarschuwingen. De verzonden gebru
 
 Waarschuwingsberichten kunnen rechtstreeks naar uw e-mail worden verzonden.
 
-Selecteer het klokpictogram (![ klokpictogram ](../images/alerts/ui/bell-icon.png)) dat in het hoogste lint op het recht wordt gevestigd om berichten en aankondigingen te tonen. In dropdown die verschijnt, selecteer het cogopictogram (![ cog pictogram ](../images/alerts/ui/cog-icon.png)) om tot de de voorkeurspagina van het Experience Cloud toegang te hebben.
+Selecteer het klokpictogram (![ klokpictogram ](/help/images/icons/bell.png)) dat in het hoogste lint op het recht wordt gevestigd om berichten en aankondigingen te tonen. In dropdown die verschijnt, selecteer het cogopictogram (![ cog pictogram ](/help/images/icons/settings.png)) om tot de de voorkeurspagina van het Experience Cloud toegang te hebben.
 
 ![ een lijst van alarm die het belpictogram en het cogpictogram benadrukken wordt getoond.](../images/alerts/ui/edit-preferences.png)
 

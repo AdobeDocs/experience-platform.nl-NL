@@ -2,7 +2,7 @@
 title: Overzicht van de extensie Meta Conversions API
 description: Meer informatie over de API-extensie Meta Conversions voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2437'
 ht-degree: 0%
@@ -160,7 +160,7 @@ Wacht enkele minuten tot het initiële installatieproces is voltooid en selectee
 
 ![ Aanvankelijke opstelling voltooide bevestigingsscherm ](../../../images/extensions/server/meta/setup-complete.png)
 
-Van de **[!UICONTROL Add Code on Your Site]** dialoog kopieert de code die wordt verstrekt gebruikend de functie van het exemplaar ![ Exemplaar ](../../../images/extensions/server/meta/copy-icon.png) en kleeft dit in `<head>` van uw bronwebsite. Selecteer na implementatie **[!UICONTROL Start Validation]**
+Van de **[!UICONTROL Add Code on Your Site]** dialoog kopieert de code die wordt verstrekt gebruikend de functie van het exemplaar ![ Exemplaar ](/help/images/icons/copy.png) en kleeft dit in `<head>` van uw bronwebsite. Selecteer na implementatie **[!UICONTROL Start Validation]**
 
 ![ voeg code op uw plaatsdialoog toe ](../../../images/extensions/server/meta/add-code-on-your-site.png)
 

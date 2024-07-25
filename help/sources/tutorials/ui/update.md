@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Gegevens Source Connection-account bijwerken in de gebruikersinterface
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Login aan het [ Experience Platform UI ](https://platform.adobe.com) en selectee
 
 De pagina **[!UICONTROL Accounts]** wordt weergegeven. Op deze pagina vindt u een lijst met weer te geven accounts, waaronder informatie over de bron, gebruikersnaam, het aantal gegevensstromen en de aanmaakdatum.
 
-Selecteer het filter ![ filter ](../../images/tutorials/update/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren.
+Selecteer het filter ![ filter ](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren.
 
 ![ rekeningen-lijst ](../../images/tutorials/update/accounts-list.png)
 

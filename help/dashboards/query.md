@@ -4,7 +4,7 @@ title: Datasets van het dashboard verkennen, verifiëren en verwerken met de Que
 type: Documentation
 description: Leer hoe te om de Dienst van de Vraag te gebruiken om ruwe datasets te onderzoeken en te verwerken die profiel, publiek, en bestemmingsdashboards in Experience Platform aandrijven.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 0%
@@ -33,7 +33,7 @@ U kunt [!DNL Query Service] gebruiken om onbewerkte datasets voor profiel, publi
 >
 >Door het systeem gegenereerde gegevenssets worden standaard verborgen. Standaard bevat het tabblad [!UICONTROL Browse] alleen gegevenssets waarin u gegevens hebt ingevoerd.
 
-Om systeem-geproduceerde datasets te bekijken, selecteer het filterpictogram (![ A filterpictogram.](./images/query/filter.png) ) links van de zoekbalk.
+Om systeem-geproduceerde datasets te bekijken, selecteer het filterpictogram (![ A filterpictogram.](/help/images/icons/filter.png) ) links van de zoekbalk.
 
 ![ de Datasets doorbladeren lusje met het benadrukte filterpictogram.](./images/query/filter-datasets.png)
 

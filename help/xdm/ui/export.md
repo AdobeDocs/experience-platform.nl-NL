@@ -4,7 +4,7 @@ title: XDM-schema's exporteren in de gebruikersinterface
 description: Leer hoe u een bestaand schema exporteert naar een andere sandbox of organisatie in de Adobe Experience Platform-gebruikersinterface.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Selecteer **[!UICONTROL Schemas]** in de linkernavigatie om een payload voor exp
 >
 >Zie de gids op [ het onderzoeken van middelen XDM ](./explore.md) voor details op hoe te om het middel te vinden XDM u zoekt.
 
-Daarna, selecteer het **[!UICONTROL Copy JSON]** pictogram (![ Pictogram van het Exemplaar ](../images/ui/export/icon.png)) van de beschikbare opties.
+Daarna, selecteer het **[!UICONTROL Copy JSON]** pictogram (![ Pictogram van het Exemplaar ](/help/images/icons/copy.png)) van de beschikbare opties.
 
 ![ de werkruimte van Schema&#39;s met een schemarij en [!UICONTROL Copy to JSON] benadrukte.](../images/ui/export/copy-json.png)
 

@@ -4,7 +4,7 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2009'
 ht-degree: 0%
@@ -101,7 +101,7 @@ Om **een bepaald gebruik metrisch van een specifieke zandbak** te zien, navigeer
 
 ![ het lusje van Details van het het gebruiksdashboard van de Vergunning.](../images/license-usage/details-tab.png)
 
-Van deze mening, kunt u ![ selecteren inspecteert pictogram.](../images/license-usage/inspect-icon.png) naast de naam van een sandbox om de visualisatie voor die metrische waarde weer te geven. Er wordt een dialoogvenster geopend met een visualisatie voor die metrische waarde.
+Van deze mening, kunt u ![ selecteren inspecteert pictogram.](/help/images/icons/inspect.png) naast de naam van een sandbox om de visualisatie voor die metrische waarde weer te geven. Er wordt een dialoogvenster geopend met een visualisatie voor die metrische waarde.
 
 ### Visualisaties {#visualizations}
 

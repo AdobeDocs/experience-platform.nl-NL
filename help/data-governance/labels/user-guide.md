@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Labels voor gegevensgebruik beheren in de gebruikersinterface
 description: In deze handleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Labels kunnen worden toegepast op de gehele gegevensset vanaf het tabblad **[!UI
 
 ![ het [!UICONTROL Data Governance] lusje van de [!UICONTROL Datasets] werkruimte met benadrukte het Beleid van Gegevens.](../images/labels/dataset-governance.png)
 
-Om de etiketten van het gegevensgebruik op het datasetniveau uit te geven, begin door het potloodpictogram te selecteren (![ het potloodpictogram van A.](../images/labels/edit-icon.png)) in de rij van de naam van de gegevensset.
+Om de etiketten van het gegevensgebruik op het datasetniveau uit te geven, begin door het potloodpictogram te selecteren (![ het potloodpictogram van A.](/help/images/icons/edit.png)) in de rij van de naam van de gegevensset.
 
 ![ het [!UICONTROL Data Governance] lusje van de [!UICONTROL Datasets] werkruimte met uitgeeft benadrukt potloodpictogram.](../images/labels/dataset-level-edit.png)
 

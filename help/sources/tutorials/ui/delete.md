@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Gegevensstromen verwijderen in de gebruikersinterface
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '358'
 ht-degree: 0%
@@ -33,7 +33,7 @@ In het [ Experience Platform UI ](https://platform.adobe.com), selecteer **[!UIC
 
 De pagina **[!UICONTROL Dataflows]** wordt weergegeven. Op deze pagina is een lijst van viewable gegevensstromen, met inbegrip van informatie over hun doeldataset, bron, rekeningsnaam, en datum van verwezenlijking.
 
-Selecteer het filterpictogram (![ filter-pictogram ](../../images/tutorials/delete/filter.png)) op de bovenkant verlaten om het soortpaneel te lanceren.
+Selecteer het filterpictogram (![ filter-pictogram ](/help/images/icons/filter.png)) op de bovenkant verlaten om het soortpaneel te lanceren.
 
 ![ dataflows ](../../images/tutorials/delete/dataflows.png)
 

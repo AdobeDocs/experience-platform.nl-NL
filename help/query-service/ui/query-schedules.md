@@ -2,7 +2,7 @@
 title: Zoekplanningen
 description: Leer hoe te om geplande vraaglooppas te automatiseren, een vraagprogramma te schrappen of onbruikbaar te maken, en de beschikbare het plannen opties door de UI van Adobe Experience Platform te gebruiken.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '1767'
 ht-degree: 0%
@@ -75,7 +75,7 @@ Selecteer **[!UICONTROL Create and append into new dataset]** om een gegevensset
 
 ![ het paneel van de Details van het Programma met de details van de Dataset en de [!UICONTROL Create and append into new dataset] benadrukte opties.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-Alternatief, uitgezochte **[!UICONTROL Append into existing dataset]** die door het datasetpictogram (![ wordt gevolgd het datasetpictogram.](../images/ui/query-schedules/dataset-icon.png)).
+Alternatief, uitgezochte **[!UICONTROL Append into existing dataset]** die door het datasetpictogram (![ wordt gevolgd het datasetpictogram.](/help/images/icons/database.png)).
 
 ![ het paneel van de Details van het Programma met de details van de Dataset en voegt in bestaande benadrukte dataset toe.](../images/ui/query-schedules/dataset-details-existing.png)
 

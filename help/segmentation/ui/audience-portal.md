@@ -1,13 +1,13 @@
 ---
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
+source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
 workflow-type: tm+mt
 source-wordcount: '3498'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van het portal Publiek
 
@@ -90,7 +90,7 @@ Het cirkeldiagram wordt weergegeven met een uitsplitsing van het publiek naar pu
 
 ### Aanpassen {#customize}
 
-U kunt extra gebieden aan het Portaal van het Publiek toevoegen door ![ het pictogram van de filterattributen ](../images/ui/audience-portal/filter-attribute.png) te selecteren. Deze extra velden bevatten de levenscyclusstatus, updatefrequentie, laatst bijgewerkt door, beschrijving, gemaakt door en toegangslabels.
+U kunt extra gebieden aan het Portaal van het Publiek toevoegen door ![ het pictogram van de filterattributen ](/help/images/icons/column-settings.png) te selecteren. Deze extra velden bevatten de levenscyclusstatus, updatefrequentie, laatst bijgewerkt door, beschrijving, gemaakt door en toegangslabels.
 
 | Veld | Beschrijving |
 | ----- | ----------- |
@@ -116,7 +116,7 @@ Als er een splitsing is geselecteerd, wordt in de weergave een staafgrafiek weer
 | [!UICONTROL Existing] | De telling van profielen die **** in het segment in de laatste 24 uren sinds de laatste baan van het partijsegment bleven lopen. |
 | [!UICONTROL Exiting] | De telling van profielen die **** het segment in de laatste 24 uren sindsdien de laatste baan van het partijsegment verliet. |
 
-Nadat u de velden hebt geselecteerd die u wilt weergeven, kunt u ook de breedte van de weergegeven kolommen vergroten of verkleinen. U kunt of dit doen door het gebied tussen de kolommen te slepen of door het ![ pijlpictogram ](../images/ui/audience-portal/arrow-icon.png) van de kolom te selecteren u wilt re-size, die door **[!UICONTROL Resize column]** wordt gevolgd.
+Nadat u de velden hebt geselecteerd die u wilt weergeven, kunt u ook de breedte van de weergegeven kolommen vergroten of verkleinen. U kunt of dit doen door het gebied tussen de kolommen te slepen of door het ![ pijlpictogram ](/help/images/icons/chevron-down.png) van de kolom te selecteren u wilt re-size, die door **[!UICONTROL Resize column]** wordt gevolgd.
 
 ![ de Resize kolomknoop wordt benadrukt.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
@@ -177,7 +177,7 @@ Als het publiek zich in een map bevindt, kunt u ervoor kiezen alleen het publiek
 
 U kunt uw publiek ook filteren op basis van verschillende instellingen.
 
-Om het beschikbare publiek te filtreren, selecteer het ![ filterpictogram ](../images/ui/audience-portal/filter-icon.png).
+Om het beschikbare publiek te filtreren, selecteer het ![ filterpictogram ](/help/images/icons/filter.png).
 
 ![ doorbladert de pagina van het publiek wordt getoond, met het benadrukte filterpictogram.](../images/ui/audience-portal/browse-select-filter.png)
 

@@ -2,7 +2,7 @@
 title: Parameterized Vragen
 description: Leer hoe u geparametereerde query's kunt gebruiken in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 0%
@@ -47,7 +47,7 @@ SELECT
 
 Navigeer naar de Query-editor om de geparametereerde query in de UI te maken. Zie de sectie op [ die tot de Redacteur van de Vraag ](./user-guide.md#accessing-query-editor) voor meer instructies toegang hebben.
 
-Gebruik de voorkeuren van `'$'` om een queryparameter in te voeren in uw query in de teksteditor. Selecteer vervolgens het tabblad **[!UICONTROL Query parameters]** naast [!UICONTROL Console] de ontbrekende waarde voor de toets toevoegen. De query kan niet worden uitgevoerd als u geen waarde toevoegt aan een van de vereiste toetsen. Een waakzaam pictogram (![ een waakzaam pictogram.](../images/ui/parameterized-queries/alert-icon.png)) wordt weergegeven in de sectie Query Parameters naast lege [!UICONTROL Value] -invoervelden.
+Gebruik de voorkeuren van `'$'` om een queryparameter in te voeren in uw query in de teksteditor. Selecteer vervolgens het tabblad **[!UICONTROL Query parameters]** naast [!UICONTROL Console] de ontbrekende waarde voor de toets toevoegen. De query kan niet worden uitgevoerd als u geen waarde toevoegt aan een van de vereiste toetsen. Een waakzaam pictogram (![ een waakzaam pictogram.](/help/images/icons/alert.png)) wordt weergegeven in de sectie Query Parameters naast lege [!UICONTROL Value] -invoervelden.
 
 >[!NOTE]
 >

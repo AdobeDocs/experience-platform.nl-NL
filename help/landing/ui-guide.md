@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht gebruikersinterface Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1735'
 ht-degree: 0%
@@ -75,17 +75,17 @@ Als u de schakeloptie selecteert, wordt een vervolgkeuzemenu geopend met organis
 
 ### Overschakelen op toepassingen
 
-Het volgende punt op de rechterkant van de hoogste navigatie is de **toepassingsschakelaar**, die door het ![ wordt vertegenwoordigd toepassingenschakelaar ](./images/user-guide/app-switcher-icon.png) pictogram. Wanneer u dit pictogram selecteert, kunt u schakelen tussen Adobe-toepassingen waartoe uw organisatie toegang heeft, zoals Experience Platform, Analytics, Assets en andere.
+Het volgende punt op de rechterkant van de hoogste navigatie is de **toepassingsschakelaar**, die door het ![ wordt vertegenwoordigd toepassingenschakelaar ](/help/images/icons/apps.png) pictogram. Wanneer u dit pictogram selecteert, kunt u schakelen tussen Adobe-toepassingen waartoe uw organisatie toegang heeft, zoals Experience Platform, Analytics, Assets en andere.
 
 ### Help
 
-Aan het recht van de toepassingsschakelaar is de **hulp en steunmenu**, die door het ![ vraagteken/hulp ](./images/user-guide/help-icon.png) pictogram wordt vertegenwoordigd. Wanneer u dit pictogram selecteert, wordt een pop-upmenu weergegeven dat verschillende Help- en ondersteuningsbronnen bevat. Het tabblad **[!UICONTROL Help]** bevat een lijst met relevante documentatie voor de pagina die u momenteel hebt ingeschakeld. Op het tabblad **[!UICONTROL Support]** kunt u een ondersteuningsticket maken met het ondersteuningsteam voor Adoben. Op het tabblad **[!UICONTROL Feedback]** kunt u feedback over Platform verzenden naar Adobe.
+Aan het recht van de toepassingsschakelaar is de **hulp en steunmenu**, die door het ![ vraagteken/hulp ](/help/images/icons/help.png) pictogram wordt vertegenwoordigd. Wanneer u dit pictogram selecteert, wordt een pop-upmenu weergegeven dat verschillende Help- en ondersteuningsbronnen bevat. Het tabblad **[!UICONTROL Help]** bevat een lijst met relevante documentatie voor de pagina die u momenteel hebt ingeschakeld. Op het tabblad **[!UICONTROL Support]** kunt u een ondersteuningsticket maken met het ondersteuningsteam voor Adoben. Op het tabblad **[!UICONTROL Feedback]** kunt u feedback over Platform verzenden naar Adobe.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
 ### Meldingen en aankondigingen
 
-In de **berichten sectie**, die door ![ bel/Meldingen en het pictogram van Mededelingen ](images/user-guide/notification-icon.png) wordt vertegenwoordigd. Het tabblad **[!UICONTROL Notifications]** bevat belangrijke informatie over het product en andere relevante updates, terwijl op het tabblad **[!UICONTROL Announcements]** informatie over onderhoud van de service wordt weergegeven.
+In de **berichten sectie**, die door ![ bel/Meldingen en het pictogram van Mededelingen ](/help/images/icons/bell.png) wordt vertegenwoordigd. Het tabblad **[!UICONTROL Notifications]** bevat belangrijke informatie over het product en andere relevante updates, terwijl op het tabblad **[!UICONTROL Announcements]** informatie over onderhoud van de service wordt weergegeven.
 
 ### Gebruikersprofiel
 

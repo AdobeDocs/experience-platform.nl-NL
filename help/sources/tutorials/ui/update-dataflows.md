@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Een Source Connection Dataflow bijwerken in de gebruikersinterface
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: cef5c203acf3318445399669336166e6627ebe66
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sour
 
 De pagina [!UICONTROL Dataflows] bevat een lijst van alle bestaande gegevensstromen, met inbegrip van informatie over hun overeenkomstige doeldataset, bron, en rekeningsnaam.
 
-Om door de lijst te sorteren, selecteer de filter ![ filter ](../../images/tutorials/update/filter.png) op de bovenkant verlaten om het soortpaneel te gebruiken.
+Om door de lijst te sorteren, selecteer de filter ![ filter ](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te gebruiken.
 
 ![ filter-dataflows ](../../images/tutorials/update-dataflows/filter-dataflows.png)
 

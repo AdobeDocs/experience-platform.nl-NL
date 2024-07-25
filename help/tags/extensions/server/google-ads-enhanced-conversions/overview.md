@@ -3,7 +3,7 @@ title: Extensie Google Ads Enhanced Conversies
 description: Meer informatie over de extensie Google Ads Enhanced Conversions voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 0%
@@ -103,7 +103,7 @@ Zoek de extensie [!UICONTROL Google Ads Enhanced Conversions] in de door:sturen 
 Als u de extensie wilt configureren, moet u de twee vereiste velden invullen:
 
 1. **[!UICONTROL Customer ID]**: De id die uw [!DNL Google Ads] -account uniek identificeert. U kunt deze waarde zoeken door u aan te melden bij [!DNL Google Ads] en naar **[!DNL Help]** > **[!DNL Customer ID]** te navigeren.
-1. **[!UICONTROL Access Token Data Element]**: Selecteer het pictogram van het gegevenselement (![ het elementenpictogram van Gegevens ](../../../images/extensions/server/google-ads-enhanced-conversions/data-element-icon.png)) en kies Google OAuth 2 geheim gegevenselement dat u [ in de vorige stap ](#create-secret-data-element) van het menu vormde.
+2. **[!UICONTROL Access Token Data Element]**: Selecteer het pictogram van het gegevenselement (![ het elementenpictogram van Gegevens ](/help/images/icons/database.png)) en kies Google OAuth 2 geheim gegevenselement dat u [ in de vorige stap ](#create-secret-data-element) van het menu vormde.
 
 Als u klaar bent, selecteert u **[!UICONTROL Save]** om de extensie te installeren.
 

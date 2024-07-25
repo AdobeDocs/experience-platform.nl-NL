@@ -2,7 +2,7 @@
 title: Query Pro-modus
 description: Leer hoe u SQL-query's gebruikt in de gebruikersinterface van Adobe Experience Platform om grafieken te maken voor uw aangepaste dashboards.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Om [ globale ](./filters/global-filter.md) of [ datumfilters ](./filters/date-fi
 >
 >Als u een algemeen filter wilt gebruiken, moet u een vraagparameter in uw SQL plaatsen en dan die vraagparameter verbinden met het globale filter in widgetcomposer. In de onderstaande schermafbeelding wordt `CONSENT_VALUE_FILTER` in de SQL gebruikt als een queryparameter voor een algemeen filter. Zie de [ globale filterdocumentatie ](./filters/global-filter.md#enable-global-filter) voor meer informatie over hoe te om dit te doen.
 
-Om uw vraag uit te voeren, selecteer het looppaspictogram (![ het looppaspictogram.](../../images/customizable-insights/run-icon.png)). De Redacteur van de Vraag toont de resultaten tabel. Selecteer vervolgens **[!UICONTROL Select]** om uw configuratie te bevestigen en de widgetcomposer te openen.
+Om uw vraag uit te voeren, selecteer het looppaspictogram (![ het looppaspictogram.](/help/images/icons/play.png)). De Redacteur van de Vraag toont de resultaten tabel. Selecteer vervolgens **[!UICONTROL Select]** om uw configuratie te bevestigen en de widgetcomposer te openen.
 
 >[!TIP]
 >
@@ -45,7 +45,7 @@ Om uw vraag uit te voeren, selecteer het looppaspictogram (![ het looppaspictogr
 
 ## Widget vullen {#populate-widget}
 
-De widgetcomposer wordt nu gevuld met de kolommen van de uitgevoerde SQL. Het type dashboard wordt linksboven aangegeven, in dit geval [!UICONTROL Manual SQL Entry] . Selecteer het potloodpictogram (![ het potloodpictogram van A.](../../images/customizable-insights/edit-icon.png) ) om de SQL op elk gewenst moment te bewerken.
+De widgetcomposer wordt nu gevuld met de kolommen van de uitgevoerde SQL. Het type dashboard wordt linksboven aangegeven, in dit geval [!UICONTROL Manual SQL Entry] . Selecteer het potloodpictogram (![ het potloodpictogram van A.](/help/images/icons/edit.png) ) om de SQL op elk gewenst moment te bewerken.
 
 >[!TIP]
 >
@@ -57,13 +57,13 @@ Als u een widget wilt maken, gebruikt u de kenmerken in de kolom [!UICONTROL Att
 
 ### Kenmerken toevoegen {#add-attributes}
 
-Om een attribuut aan uw widget toe te voegen, selecteer het plusteken (![ A plus pictogram.](../../images/customizable-insights/add-icon.png) ) naast een kenmerknaam. In het vervolgkeuzemenu dat wordt weergegeven, kunt u een kenmerk aan het diagram toevoegen op basis van de opties die door de SQL worden bepaald. Verschillende diagramtypen hebben verschillende opties, zoals een vervolgkeuzelijst op de X- en Y-as.
+Om een attribuut aan uw widget toe te voegen, selecteer het plusteken (![ A plus pictogram.](/help/images/icons/add-circle.png) ) naast een kenmerknaam. In het vervolgkeuzemenu dat wordt weergegeven, kunt u een kenmerk aan het diagram toevoegen op basis van de opties die door de SQL worden bepaald. Verschillende diagramtypen hebben verschillende opties, zoals een vervolgkeuzelijst op de X- en Y-as.
 
 In dit voorbeeld van het donutdiagram zijn de opties grootte en kleur. Kleuren worden verdeeld in de resultaten van het donutdiagram en de grootte is de werkelijk gebruikte metrische waarde. Voeg een attribuut aan het [!UICONTROL Color] gebied toe om de resultaten in verschillende kleuren te verdelen die op hun samenstelling van dat attribuut worden gebaseerd.
 
 >[!TIP]
 >
->Selecteer omhoog en benedenpijlpictogram (![ het omhoog en benedenpijlpictogram.](../../images/customizable-insights/switch-axis-icon.png)) om de rangschikking van de X- en Y-as op staaf- of lijngrafieken te wijzigen.
+>Selecteer omhoog en benedenpijlpictogram (![ het omhoog en benedenpijlpictogram.](/help/images/icons/switch.png)) om de rangschikking van de X- en Y-as op staaf- of lijngrafieken te wijzigen.
 
 ![ Widget composer met toe:voegen-pictogram dropdown en schakelaar gemarkeerde pijlen.](../../images/customizable-insights/add-icon-and-switch-arrows.png)
 
@@ -73,7 +73,7 @@ Als u het type grafiek of grafiek van de widget wilt wijzigen, selecteert u een 
 
 ## Eigenschappen van Widget {#properties}
 
-Selecteer het eigenschappen pictogram (![ het eigenschappen pictogram.](../../images/customizable-insights/properties-icon.png) ) in de rechterrail om het deelvenster Eigenschappen te openen. Typ in het deelvenster [!UICONTROL Properties] een naam voor de widget in het tekstveld **[!UICONTROL Widget title]** . U kunt ook de naam wijzigen van verschillende aspecten van uw diagram.
+Selecteer het eigenschappen pictogram (![ het eigenschappen pictogram.](/help/images/icons/properties.png) ) in de rechterrail om het deelvenster Eigenschappen te openen. Typ in het deelvenster [!UICONTROL Properties] een naam voor de widget in het tekstveld **[!UICONTROL Widget title]** . U kunt ook de naam wijzigen van verschillende aspecten van uw diagram.
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ Selecteer **[!UICONTROL Edit]** om het hele dashboard of een van uw inzichten te
 
 ![ A douanedashboard met Edit benadrukte.](../../images/customizable-insights/edit-dashboard.png)
 
-Selecteer **[!UICONTROL Add filter]** om een [[!UICONTROL Date filter]](#create-date-filter) of een [[!UICONTROL Global filter]](#create-global-filter) -element te maken. Zodra gecreeerd, zijn alle globale en datumfilters beschikbaar van [ het filterpictogram ](#select-global-filter) (![ het filterpictogram van A.](../../images/customizable-insights/filter.png) ) van het dashboard.
+Selecteer **[!UICONTROL Add filter]** om een [[!UICONTROL Date filter]](#create-date-filter) of een [[!UICONTROL Global filter]](#create-global-filter) -element te maken. Zodra gecreeerd, zijn alle globale en datumfilters beschikbaar van [ het filterpictogram ](#select-global-filter) (![ het filterpictogram van A.](/help/images/icons/filter.png) ) van het dashboard.
 
 ![ A douanedashboard met Add benadrukt het drop-down menu van de filter.](../../images/customizable-insights/add-filter.png)
 

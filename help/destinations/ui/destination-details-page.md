@@ -3,7 +3,7 @@ keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
 description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, publiek in kaart gebracht aan de bestemming, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: de867c1747fcdb14d8eb72bd3432c177e680c4fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1136'
 ht-degree: 0%
@@ -28,19 +28,19 @@ Voer de onderstaande stappen uit om meer informatie over een bestaand doel weer 
 
    ![ doorbladert bestemmingen ](../assets/ui/details-page/browse-destinations.png)
 
-1. Selecteer het filterpictogram ![ filter-pictogram ](../assets/ui/details-page/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
+2. Selecteer het filterpictogram ![ filter-pictogram ](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
 
    ![ bestemmingen van de Filter ](../assets/ui/details-page/filter-destinations.png)
 
-1. Selecteer de rij van de bestemming waarvoor u meer informatie wilt omhoog brengen. Dit brengt omhoog een juiste spoorlijn met informatie over de bestemming, met inbegrip van bestemmingsidentiteitskaart, de gebruiker die de bestemmingsverbinding creeerde, en andere informatie.
+3. Selecteer de rij van de bestemming waarvoor u meer informatie wilt omhoog brengen. Dit brengt omhoog een juiste spoorlijn met informatie over de bestemming, met inbegrip van bestemmingsidentiteitskaart, de gebruiker die de bestemmingsverbinding creeerde, en andere informatie.
 
    ![ identiteitskaart van de Bestemming in juiste spoor ](../assets/ui/details-page/right-rail-info-including-destination-id.png)
 
-1. Alternatief, kunt u andere informatie over de bestemming omhoog brengen door *de naam van de bestemming* te selecteren die u wilt bekijken.
+4. Alternatief, kunt u andere informatie over de bestemming omhoog brengen door *de naam van de bestemming* te selecteren die u wilt bekijken.
 
    ![ Uitgezochte bestemming ](../assets/ui/details-page/destination-select.png)
 
-1. De detailpagina voor de bestemming verschijnt in het juiste spoor, die zijn beschikbare controles toont.
+5. De detailpagina voor de bestemming verschijnt in het juiste spoor, die zijn beschikbare controles toont.
 
    ![ de details van de Bestemming ](../assets/ui/details-page/destination-details.png)
 

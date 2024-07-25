@@ -2,7 +2,7 @@
 title: Query-logbestanden
 description: Logboeken van de vraag worden automatisch geproduceerd telkens als een vraag wordt uitgevoerd en beschikbaar door UI om met het oplossen van problemen te helpen. Dit document schetst hoe te om de sectie van de Logboeken van de Dienst van de Vraag van UI te gebruiken en te navigeren.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '962'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Als u de querylogs wilt controleren, selecteert u [!UICONTROL Queries] om naar d
 
 ## Aanpassen en zoeken {#customize-and-search}
 
-Logboeken van de Dienst van de vraag worden voorgesteld in een klantgerichte lijstformaat. Om de lijstkolommen aan te passen, selecteer het montagespictogram (![ A montagespictogram.](../images/ui/query-log/settings-icon.png) ) rechts van het scherm. Er wordt een dialoogvenster [!UICONTROL Customize Table] weergegeven waarin u de selectie van elke kolom kunt opheffen.
+Logboeken van de Dienst van de vraag worden voorgesteld in een klantgerichte lijstformaat. Om de lijstkolommen aan te passen, selecteer het montagespictogram (![ A montagespictogram.](/help/images/icons/column-settings.png) ) rechts van het scherm. Er wordt een dialoogvenster [!UICONTROL Customize Table] weergegeven waarin u de selectie van elke kolom kunt opheffen.
 
 U kunt ook naar logboeken zoeken die betrekking hebben op specifieke vraagmalplaatjes door de malplaatjenaam in het onderzoeksgebied te typen.
 
@@ -67,13 +67,13 @@ U kunt ook een naam voor een querysjabloon selecteren in de kolom [!UICONTROL Na
 
 ## Logboeken bewerken {#edit-logs}
 
-Naast de het malplaatjenaam van elke rij of SQL fragment is een potloodpictogram (![ het potloodpictogram van A.](../images/ui/query-log/edit-icon.png)) die u kunt gebruiken om naar de Redacteur van de Vraag te navigeren. De vraag wordt dan pre-bevolkt in de redacteur voor het uitgeven.
+Naast de het malplaatjenaam van elke rij of SQL fragment is een potloodpictogram (![ het potloodpictogram van A.](/help/images/icons/edit.png)) die u kunt gebruiken om naar de Redacteur van de Vraag te navigeren. De vraag wordt dan pre-bevolkt in de redacteur voor het uitgeven.
 
 ![ de werkruimte van het Logboek van Vragen met een benadrukt potloodpictogram.](../images/ui/query-log/edit-query.png)
 
 ## Filterlogs {#filter-logs}
 
-U kunt de lijst met querylogbestanden filteren op basis van verschillende instellingen. Selecteer het filterpictogram (![ het filterpictogram.](../images/ui/query-log/filter-icon.png) ) linksboven in de werkruimte om een set filteropties te openen in de linkerrails.
+U kunt de lijst met querylogbestanden filteren op basis van verschillende instellingen. Selecteer het filterpictogram (![ het filterpictogram.](/help/images/icons/filter.png) ) linksboven in de werkruimte om een set filteropties te openen in de linkerrails.
 
 ![ de werkruimte van het Logboek van Vragen met het benadrukte filterpictogram.](../images/ui/query-log/log-filter.png)
 

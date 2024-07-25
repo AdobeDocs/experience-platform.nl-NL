@@ -2,7 +2,7 @@
 title: Geplande query's controleren
 description: Leer hoe te om vragen door de Dienst UI van de Vraag te controleren.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2333'
 ht-degree: 0%
@@ -25,7 +25,7 @@ In de onderstaande tabel wordt elke beschikbare kolom beschreven.
 
 >[!NOTE]
 >
->Het waakzame abonnementspictogram (![ een waakzaam abonnementspictogram.](../images/ui/monitor-queries/alert-subscription-icon.png)) bevindt zich in elke rij in een kolom zonder titel. Zie de [ waakzame abonnementen ](#alert-subscription) sectie voor meer informatie.
+>Het waakzame abonnementspictogram (![ een waakzaam abonnementspictogram.](/help/images/icons/alert-add.png)) bevindt zich in elke rij in een kolom zonder titel. Zie de [ waakzame abonnementen ](#alert-subscription) sectie voor meer informatie.
 
 | Kolom | Beschrijving |
 |---|---|
@@ -45,7 +45,7 @@ In de onderstaande tabel wordt elke beschikbare kolom beschreven.
 
 ## Tabelinstellingen aanpassen voor geplande query&#39;s {#customize-table}
 
-U kunt de kolommen op het tabblad [!UICONTROL Scheduled Queries] naar wens aanpassen. Om het [!UICONTROL Customize table] montagedialoog te openen en beschikbare kolommen uit te geven, selecteer het montagespictogram (![ A montagespictogram.](../images/ui/monitor-queries/settings-icon.png) ) vanaf de rechterbovenhoek van het scherm.
+U kunt de kolommen op het tabblad [!UICONTROL Scheduled Queries] naar wens aanpassen. Om het [!UICONTROL Customize table] montagedialoog te openen en beschikbare kolommen uit te geven, selecteer het montagespictogram (![ A montagespictogram.](/help/images/icons/column-settings.png) ) vanaf de rechterbovenhoek van het scherm.
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ Als u looppas voor dat vraagmalplaatje wilt plannen, selecteer de malplaatjenaam
 
 ### Abonneren op waarschuwingen {#alert-subscription}
 
-Om aan alarm voor geplande vraaglooppas in te tekenen, selecteer of `...` (ellipse) of waakzaam pictogram van het abonnement (![ een waakzaam abonnementspictogram.](../images/ui/monitor-queries/alert-subscription-icon.png) ) voor de geplande query die u wilt beheren. Het vervolgkeuzemenu Handelingen inline wordt weergegeven. Selecteer vervolgens **[!UICONTROL Subscribe]** uit de beschikbare opties.
+Om aan alarm voor geplande vraaglooppas in te tekenen, selecteer of `...` (ellipse) of waakzaam pictogram van het abonnement (![ een waakzaam abonnementspictogram.](/help/images/icons/alert-add.png) ) voor de geplande query die u wilt beheren. Het vervolgkeuzemenu Handelingen inline wordt weergegeven. Selecteer vervolgens **[!UICONTROL Subscribe]** uit de beschikbare opties.
 
 ![ de geplande vraagwerkruimte met een ellips, waakzaam het abonnementspictogram, en het gealigneerde benadrukte menu van actities.](../images/ui/monitor-queries/subscribe.png)
 
@@ -115,7 +115,7 @@ Zie de [ waakzame API documentatie van abonnementen ](../api/alert-subscriptions
 
 ### De query-details weergeven {#query-details}
 
-Selecteer het informatiepictogram (![ een informatiepictogram.](../images/ui/monitor-queries/information-icon.png)) om het deelvenster Details voor de query te bekijken. Het detailspaneel bevat alle relevante informatie over de vraag voorbij de feiten inbegrepen in de geplande vraaglijst. De extra informatie omvat vraagidentiteitskaart, de laatste gewijzigde datum, SQL van de vraag, planningsidentiteitskaart, en het huidige vastgestelde programma.
+Selecteer het informatiepictogram (![ een informatiepictogram.](/help/images/icons/info.png)) om het deelvenster Details voor de query te bekijken. Het detailspaneel bevat alle relevante informatie over de vraag voorbij de feiten inbegrepen in de geplande vraaglijst. De extra informatie omvat vraagidentiteitskaart, de laatste gewijzigde datum, SQL van de vraag, planningsidentiteitskaart, en het huidige vastgestelde programma.
 
 ![ het Geplande lusje van Vragen met het informatiepictogram en het benadrukte detailspaneel.](../images/ui/monitor-queries/details-panel.png)
 
@@ -151,7 +151,7 @@ Zie intekenen aan alarm sectie leren hoe te [ intekenen aan [!UICONTROL Query Ru
 
 ## Filterquery&#39;s {#filter}
 
-U kunt vragen filteren op runtime frequentie. Van het [!UICONTROL Scheduled Queries] lusje, selecteer het filterpictogram (![ A filterpictogram ](../images/ui/monitor-queries/filter-icon.png)) om de filterzijbalk te openen.
+U kunt vragen filteren op runtime frequentie. Van het [!UICONTROL Scheduled Queries] lusje, selecteer het filterpictogram (![ A filterpictogram ](/help/images/icons/filter.png)) om de filterzijbalk te openen.
 
 ![ het geplande vraaglusje met het benadrukte filterpictogram.](../images/ui/monitor-queries/filter-queries.png)
 

@@ -3,7 +3,7 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 8bc03889ff108630bd20fe47f2c2920ceba5069b
 workflow-type: tm+mt
 source-wordcount: '1839'
 ht-degree: 0%
@@ -20,7 +20,7 @@ De Samenstelling van het publiek verstrekt een werkruimte om publiek te bouwen e
 
 ![ de Samenstelling UI van de Publiek.](../images/ui/audience-composition/audience-composition.png)
 
-Om de details van de samenstelling, met inbegrip van de titel en de beschrijving te veranderen, selecteer de ![ schuif ](../images/ui/audience-composition/sliders.png) knoop.
+Om de details van de samenstelling, met inbegrip van de titel en de beschrijving te veranderen, selecteer de ![ schuif ](/help/images/icons/properties.png) knoop.
 
 De pop-up **[!UICONTROL Composition properties]** wordt weergegeven. U kunt hier details van uw samenstelling, met inbegrip van de titel en de beschrijving opnemen.
 
@@ -114,7 +114,7 @@ Er wordt een lijst met doelgroepen weergegeven. Selecteer **[!UICONTROL Add]** o
 
 ### Uitsluiten op kenmerk {#exclude-attribute}
 
-Als u door attribuut uitsluit, kunt u selecteren welke attributen u wilt uitsluiten door het ![ filter ](../images/ui/audience-composition/filter-attribute.png) pictogram binnen de **[!UICONTROL Exclusion rule]** sectie te selecteren.
+Als u door attribuut uitsluit, kunt u selecteren welke attributen u wilt uitsluiten door het ![ filter ](/help/images/icons/project-edit.png) pictogram binnen de **[!UICONTROL Exclusion rule]** sectie te selecteren.
 
 ![ de attributensectie wordt benadrukt, tonend u waar te selecteren om de attributen te kiezen om uit te sluiten.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -140,7 +140,7 @@ Als u een **[!UICONTROL Enrich]** -blok wilt toevoegen, selecteert u het pictogr
 
 Het blok **[!UICONTROL Enrich]** wordt toegevoegd. Wanneer dit blok wordt geselecteerd, verschijnen de details over de verrijking in het juiste spoor. Dit omvat het etiket van het blok en de verrijkingsdataset.
 
-Om de dataset te selecteren om het publiek met te verrijken, selecteer het ![ filter ](../images/ui/audience-composition/filter-attribute.png) pictogram.
+Om de dataset te selecteren om het publiek met te verrijken, selecteer het ![ filter ](/help/images/icons/project-edit.png) pictogram.
 
 ![ de filterknoop wordt benadrukt. Als u dit selecteert, gaat u naar de [!UICONTROL Select dataset] popover. ](../images/ui/audience-composition/enrich-select-dataset.png)
 
@@ -160,7 +160,7 @@ Het gedeelte **[!UICONTROL Enrichment criteria]** wordt nu weergegeven op de rec
 
 ![ het [!UICONTROL Enrichment criteria] gebied wordt benadrukt.](../images/ui/audience-composition/enrichment-criteria.png)
 
-Om **[!UICONTROL Source join key]** te selecteren, selecteer het ![ filter ](../images/ui/audience-composition/filter-attribute.png) pictogram.
+Om **[!UICONTROL Source join key]** te selecteren, selecteer het ![ filter ](/help/images/icons/project-edit.png) pictogram.
 
 ![ het filterpictogram voor [!UICONTROL Source join key] wordt benadrukt.](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
@@ -168,7 +168,7 @@ De pop-up **[!UICONTROL Select a profile attribute]** wordt weergegeven. Selecte
 
 ![ het attribuut u als bron wilt gebruiken toetreedt sleutel wordt benadrukt.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-Om **[!UICONTROL Enrichment dataset join key]** te selecteren, selecteer het ![ filter ](../images/ui/audience-composition/filter-attribute.png) pictogram.
+Om **[!UICONTROL Enrichment dataset join key]** te selecteren, selecteer het ![ filter ](/help/images/icons/project-edit.png) pictogram.
 
 ![ het filterpictogram voor [!UICONTROL Enrichment dataset join key] wordt benadrukt.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
 
@@ -216,7 +216,7 @@ Wanneer u het blok selecteert, worden de details over het rangschikken getoond i
 
 ![ het rangtelblok wordt benadrukt, evenals de details van het rangtelblok.](../images/ui/audience-composition/rank.png)
 
-Om te selecteren welk attribuut om het publiek door te rangschikken, selecteer het ![ filter ](../images/ui/audience-composition/filter-attribute.png) pictogram.
+Om te selecteren welk attribuut om het publiek door te rangschikken, selecteer het ![ filter ](/help/images/icons/project-edit.png) pictogram.
 
 ![ het filterpictogram wordt benadrukt, die u tonen wat te selecteren om tot het scherm van de profielkenmerkselectie toegang te hebben.](../images/ui/audience-composition/select-rank-attribute.png)
 
@@ -250,7 +250,7 @@ U kunt bijvoorbeeld drie paden hebben, elk met een ander percentage profielen.
 
 ### Splitsen op kenmerk {#split-attribute}
 
-Bij splitsen op kenmerk wordt het publiek gesplitst op basis van de opgegeven kenmerken. Om de attributen te selecteren door te splitsen, selecteer het **[!UICONTROL Split]** blok, dat door het ![ filter ](../images/ui/audience-composition/filter-attribute.png) pictogram wordt gevolgd.
+Bij splitsen op kenmerk wordt het publiek gesplitst op basis van de opgegeven kenmerken. Om de attributen te selecteren door te splitsen, selecteer het **[!UICONTROL Split]** blok, dat door het ![ filter ](/help/images/icons/project-edit.png) pictogram wordt gevolgd.
 
 ![ de filterknoop wordt geselecteerd, tonend hoe te door attribuut te filtreren.](../images/ui/audience-composition/select-split-attribute.png)
 

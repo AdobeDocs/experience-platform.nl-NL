@@ -3,7 +3,7 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '3807'
 ht-degree: 0%
@@ -529,14 +529,14 @@ Verrijkingskenmerken komen overeen met het aangepaste geüploade publiek dat in 
 
 Voer de onderstaande stappen uit om verrijkingskenmerken voor elk extern publiek te selecteren:
 
-1. In de **[!UICONTROL Enrichment attributes]** kolom, selecteer ![ uitgeven knoop ](../assets/ui/activate-batch-profile-destinations/edit-button.svg) (geef uit) knoop.
-2. Selecteer **[!UICONTROL Add enrichment attribute]**. Er wordt een nieuw leeg schemaveld weergegeven.
+1. In de **[!UICONTROL Enrichment attributes]** kolom, selecteer ![ uitgeven knoop ](/help/images/icons/edit.png) (geef uit) knoop.
+1. Selecteer **[!UICONTROL Add enrichment attribute]**. Er wordt een nieuw leeg schemaveld weergegeven.
    ![ beeld UI die het verrijkingsattributen modaal scherm tonen.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
-3. Selecteer de knop rechts van het lege veld om het selectiescherm van het veld te openen.
-4. Selecteer de kenmerken die u voor het publiek wilt exporteren.
+1. Selecteer de knop rechts van het lege veld om het selectiescherm van het veld te openen.
+1. Selecteer de kenmerken die u voor het publiek wilt exporteren.
    ![ beeld UI die de lijst van de verrijkingsattributen toont.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
-5. Nadat u alle kenmerken hebt toegevoegd die u wilt exporteren, selecteert u **[!UICONTROL Save and close]** .
-6. Herhaal deze stappen voor elk extern publiek.
+1. Nadat u alle kenmerken hebt toegevoegd die u wilt exporteren, selecteert u **[!UICONTROL Save and close]** .
+1. Herhaal deze stappen voor elk extern publiek.
 
 Als u een extern publiek naar uw doelen wilt activeren zonder kenmerken te exporteren, schakelt u de schakeloptie **[!UICONTROL Exclude enrichment attributes]** in. Met deze optie exporteert u de profielen van het externe publiek, maar de bijbehorende kenmerken worden niet naar uw bestemming verzonden.
 

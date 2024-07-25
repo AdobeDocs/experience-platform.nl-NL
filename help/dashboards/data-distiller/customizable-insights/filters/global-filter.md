@@ -2,7 +2,7 @@
 title: Een globaal filter maken
 description: Leer hoe u uw gegevensinzichten kunt filteren met een aangepast, globaal toegepast filter.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Als u een algemeen filter wilt maken, selecteert u eerst **[!UICONTROL Add filte
 
 U kunt de inzichten die door uw SQL met aangepaste globale filters worden verstrekt snel veranderen.
 
-Het dialoogvenster [!UICONTROL Create a global filter] wordt geopend. Het maken van een algemeen filter volgt hetzelfde proces als het maken van inzicht in SQL. Eerst, selecteer een gegevensbestand (het gegevensmodel van inzichten) aan vraag, dan input uw douane SQL in de Redacteur van de Vraag, en selecteer definitief het looppaspictogram (![ A looppas pictogram.](../../../images/customizable-insights/run-icon.png)).
+Het dialoogvenster [!UICONTROL Create a global filter] wordt geopend. Het maken van een algemeen filter volgt hetzelfde proces als het maken van inzicht in SQL. Eerst, selecteer een gegevensbestand (het gegevensmodel van inzichten) aan vraag, dan input uw douane SQL in de Redacteur van de Vraag, en selecteer definitief het looppaspictogram (![ A looppas pictogram.](/help/images/icons/play.png)).
 
 >[!IMPORTANT]
 >
@@ -57,6 +57,6 @@ Nadat u het algemene filter voor het dashboard hebt gemaakt, wordt de schakelopt
 
 ## Een algemeen filter selecteren {#select-global-filter}
 
-Om de [!UICONTROL Filters] dialoog te openen die van elk van uw douanefilters een lijst maakt, selecteer het filterpictogram (![ het filterpictogram van A.](../../../images/customizable-insights/filter.png) ) links van het dashboard. Als u vervolgens de effecten op uw dashboardinzichten wilt toepassen, kiest u een optie in het vervolgkeuzemenu van het algemene filter en selecteert u vervolgens **[!UICONTROL Apply]** .
+Om de [!UICONTROL Filters] dialoog te openen die van elk van uw douanefilters een lijst maakt, selecteer het filterpictogram (![ het filterpictogram van A.](/help/images/icons/filter.png) ) links van het dashboard. Als u vervolgens de effecten op uw dashboardinzichten wilt toepassen, kiest u een optie in het vervolgkeuzemenu van het algemene filter en selecteert u vervolgens **[!UICONTROL Apply]** .
 
 ![ A douanedashboard met de benadrukte filterdialoog.](../../../images/customizable-insights/custom-filters.png)

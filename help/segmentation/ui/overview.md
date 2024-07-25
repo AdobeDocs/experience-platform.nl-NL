@@ -3,7 +3,7 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: acfe91144175e136955ffd9f0cdae2c351217c16
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Naast elk publiek bevindt zich een ellipspictogram. Als u deze optie selecteert,
 | Toegang beheren | Beheert de toegangslabels die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [ het leiden etiketten ](../../access-control/abac/ui/labels.md). |
 | Verwijderen | Hiermee verwijdert u het geselecteerde publiek. Het publiek dat in stroomafwaartse bestemmingen wordt gebruikt of gebiedsdelen in andere soorten publiek **zijn kan** niet worden geschrapt. Voor meer informatie over publieksschrapping, te lezen gelieve [ segmentatie FAQ ](../faq.md#lifecycle-states). |
 
-U kunt ![ selecteren past lijst ](../images/ui/overview/customize-table.png) pictogram aan om te veranderen welke gebieden worden getoond.
+U kunt ![ selecteren past lijst ](/help/images/icons/column-settings.png) pictogram aan om te veranderen welke gebieden worden getoond.
 
 ![ de aanpasbare lijstknoop wordt benadrukt. Het selecteren van deze knoop staat u toe om de gebieden aan te passen die op de de samenstellingspagina van het publiek worden getoond.](../images/ui/overview/compositions-select-customize-table.png)
 

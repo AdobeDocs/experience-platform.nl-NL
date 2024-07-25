@@ -3,7 +3,7 @@ description: Leer hoe u gegevens tijdens segmentatie kunt controleren gebruikend
 title: Gegevensstromen van de monitor voor publiek in UI
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 716c14f29be24d084111864053e3e4ae884003f0
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1708'
 ht-degree: 0%
@@ -64,7 +64,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | **[!UICONTROL Last activation identities]** | Het aantal identiteiten dat is geactiveerd in de laatste activeringstaak van het publiek. |
 | **[!UICONTROL Last activation destination]** | De naam van de bestemming waarop de laatste activeringstaak van het publiek is geactiveerd. |
 
-U kunt de resultaten aan een specifiek publiek filtreren en zijn segmentatietaken bekijken door het filterpictogram (![ te selecteren het filterpictogram.](../assets/ui/monitor-audiences/filter-icon.png)). De segmentatietaken worden gesorteerd in chronologische volgorde, waarbij de meest recente segmentatietaken bovenaan worden weergegeven.
+U kunt de resultaten aan een specifiek publiek filtreren en zijn segmentatietaken bekijken door het filterpictogram (![ te selecteren het filterpictogram.](/help/images/icons/filter-add.png)). De segmentatietaken worden gesorteerd in chronologische volgorde, waarbij de meest recente segmentatietaken bovenaan worden weergegeven.
 
 ![ het filterpictogram wordt benadrukt. Het selecteren van dit staat u toe om de segmentatietaken voor het gespecificeerde publiek te bekijken.](../assets/ui/monitor-audiences/filter-audience.png)
 
@@ -89,7 +89,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | **[!UICONTROL Identity activated]** | Het aantal identiteiten dat de segmentatietaak activeert. Elk profiel kan meerdere identiteiten hebben. Een profiel kan bijvoorbeeld een e-mail, telefoonnummer en een loyaliteitsnummer als identiteiten hebben. |
 | **[!UICONTROL Destination name]** | De naam van het doel waarop de segmentatietaak wordt geactiveerd. |
 
-U kunt aan een specifieke segmentatietaak verder filtreren en zijn details zien door het filterpictogram (![ te selecteren het filterpictogram.](../assets/ui/monitor-audiences/filter-icon.png)). Er zijn twee verschillende soorten segmentatietaken die gefilterd kunnen worden: activeringsbanen en evaluatietaken.
+U kunt aan een specifieke segmentatietaak verder filtreren en zijn details zien door het filterpictogram (![ te selecteren het filterpictogram.](/help/images/icons/filter.png)). Er zijn twee verschillende soorten segmentatietaken die gefilterd kunnen worden: activeringsbanen en evaluatietaken.
 
 ### Gegevens activeringstaak {#activation-job-details}
 

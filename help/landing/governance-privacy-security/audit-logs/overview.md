@@ -2,7 +2,7 @@
 title: Overzicht controlelogboeken
 description: Leer hoe u met auditlogboeken kunt zien wie welke acties in Adobe Experience Platform heeft uitgevoerd.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1261'
 ht-degree: 1%
@@ -94,7 +94,7 @@ Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te g
 >Aangezien dit een nieuwe eigenschap is, gaan de getoonde gegevens slechts terug tot maart 2022. Afhankelijk van de geselecteerde bron kunnen eerdere gegevens beschikbaar zijn vanaf januari 2022.
 
 
-Selecteer het kanaalpictogram (![ pictogram van de Filter ](../../images/audit-logs/icon.png)) om een lijst van filtercontroles te tonen om smalle resultaten te helpen. Alleen de laatste 1000 records worden weergegeven, ongeacht de verschillende geselecteerde filters.
+Selecteer het kanaalpictogram (![ pictogram van de Filter ](/help/images/icons/filter.png)) om een lijst van filtercontroles te tonen om smalle resultaten te helpen. Alleen de laatste 1000 records worden weergegeven, ongeacht de verschillende geselecteerde filters.
 
 ![ het dashboard van Audits met het gefiltreerde benadrukte activiteitenlogboek.](../../images/audit-logs/filters.png)
 

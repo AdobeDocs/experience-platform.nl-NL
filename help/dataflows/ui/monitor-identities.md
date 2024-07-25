@@ -4,7 +4,7 @@ description: De Adobe Experience Platform Identity Service biedt u een uitgebrei
 title: Gegevensstromen van de monitor voor Identiteiten in UI
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1071'
 ht-degree: 0%
@@ -62,7 +62,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | **[!UICONTROL Graphs updated]** | Het aantal bestaande identiteitsgrafieken dat met nieuwe randen is bijgewerkt. |
 | **[!UICONTROL Total failed dataflows]** | Het aantal dataflow wordt uitgevoerd dat is mislukt. |
 
-U kunt het pictogram van de filter ![ Filter ](../assets/ui/monitor-identities/filter.png) naast de bronnaam selecteren om de verwerkingsinformatie van de Identiteit voor de dataflows van die geselecteerde bron te zien.
+U kunt het pictogram van de filter ![ Filter ](/help/images/icons/filter.png) naast de bronnaam selecteren om de verwerkingsinformatie van de Identiteit voor de dataflows van die geselecteerde bron te zien.
 
 ![ het filterpictogram wordt benadrukt. Als u dit pictogram selecteert, kunt u de gegevensstromen van de geselecteerde bron weergeven.](../assets/ui/monitor-identities/sources-filter.png)
 
@@ -87,7 +87,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | **[!UICONTROL Graphs updated]** | Het aantal bestaande identiteitsgrafieken dat met nieuwe randen is bijgewerkt. |
 | **[!UICONTROL Total failed dataflows]** | Het aantal dataflow wordt uitgevoerd dat is mislukt. |
 
-Selecteer het filterpictogram ![ filter ](../assets/ui/monitor-identities/filter.png) naast de dataflow runtime begintijd om meer informatie over uw [!DNL Identity] dataflow looppas te zien.
+Selecteer het filterpictogram ![ filter ](/help/images/icons/filter.png) naast de dataflow runtime begintijd om meer informatie over uw [!DNL Identity] dataflow looppas te zien.
 
 ![ het filterpictogram wordt benadrukt. Als u dit pictogram selecteert, kunt u details over de geselecteerde gegevensstroom weergeven.](../assets/ui/monitor-identities/dataflows-filter.png)
 

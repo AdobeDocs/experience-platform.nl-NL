@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
-source-wordcount: '3584'
+source-wordcount: '3588'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ Schakel het selectievakje in naast de naam van de veldgroep die u aan het schema
 
 >[!TIP]
 >
->Voor om het even welke vermelde gebiedsgroep, kunt u houden of zich op het informatiepictogram (![](../../images/ui/resources/schemas/info-icon.png)) concentreren om een korte beschrijving van het soort gegevens te bekijken de gebiedsgroep vangt. U kunt ook het voorvertoningspictogram (![](../../images/ui/resources/schemas/preview-icon.png)) selecteren om de structuur van de velden die de veldgroep bevat weer te geven voordat u besluit deze aan het schema toe te voegen.
+>Voor om het even welke vermelde gebiedsgroep, kunt u op het informatiepictogram (![ info pictogram ](/help/images/icons/info.png)) bewegen of concentreren om een korte beschrijving van het soort gegevens te bekijken de gebiedsgroep vangt. U kunt het voorproefpictogram (![ voorproefpictogram ](/help/images/icons/preview.png)) ook selecteren om de structuur van de gebieden te bekijken die de gebiedsgroep verstrekt alvorens u besluit om het aan het schema toe te voegen.
 
 Nadat u de veldgroepen hebt gekozen, selecteert u **[!UICONTROL Add field groups]** om deze aan het schema toe te voegen.
 
@@ -129,7 +129,7 @@ De [!DNL Schema Editor] wordt weer weergegeven met de velden die door de veldgro
 
 >[!NOTE]
 >
->Binnen de Redacteur van het Schema, worden de standaard (Adobe-geproduceerde) klassen en de gebiedsgroepen vermeld met het hangslotpictogram (![ A hangslotpictogram.](../../images/ui/explore/padlock-icon.png). Het hangslot verschijnt in de linkerspoorstaaf naast de klasse of de naam van de gebiedsgroep, evenals naast om het even welk gebied in het schemadiagram dat een deel van een systeem-geproduceerde middel is.
+>Binnen de Redacteur van het Schema, worden de standaard (Adobe-geproduceerde) klassen en de gebiedsgroepen vermeld met het hangslotpictogram (![ A hangslotpictogram.](/help/images/icons/lock-closed.png). Het hangslot verschijnt in de linkerspoorstaaf naast de klasse of de naam van de gebiedsgroep, evenals naast om het even welk gebied in het schemadiagram dat een deel van een systeem-geproduceerde middel is.
 >
 >![ de Redacteur van het Schema met het gemarkeerde hangslotpictogram ](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -189,7 +189,7 @@ Typ onder **[!UICONTROL Field name]** de naam van het veld dat u wilt toevoegen.
 
 Sommige standaardvelden hebben dezelfde naam, maar de structuur van deze velden kan afhankelijk zijn van de veldgroep waaruit ze afkomstig zijn. Als een standaardveld is genest in een bovenliggend object in de veldgroepsstructuur, wordt het bovenliggende veld ook opgenomen in het schema als het onderliggende veld wordt toegevoegd.
 
-Selecteer het voorproefpictogram (![ pictogram van de Voorproef ](../../images/ui/resources/schemas/preview-icon.png)) naast een standaardgebied om de structuur van zijn gebiedsgroep te bekijken en beter te begrijpen hoe het zou kunnen worden genest. Om het standaardgebied aan het schema toe te voegen, selecteer het plusteken (![ plus pictogram ](../../images/ui/resources/schemas/add-icon.png)).
+Selecteer het voorproefpictogram (![ pictogram van de Voorproef ](/help/images/icons/preview.png)) naast een standaardgebied om de structuur van zijn gebiedsgroep te bekijken en beter te begrijpen hoe het zou kunnen worden genest. Om het standaardgebied aan het schema toe te voegen, selecteer het plusteken (![ plus pictogram ](/help/images/icons/add-circle.png)).
 
 ![ voeg standaardgebied ](../../images/ui/resources/schemas/add-standard-field.png) toe
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding Query Service Credentials
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt om query's te schrijven en uit te voeren, eerder uitgevoerde query's weer te geven en query's te openen die zijn opgeslagen door gebruikers binnen uw organisatie.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1759'
 ht-degree: 0%
@@ -36,7 +36,7 @@ De sectie **[!UICONTROL Expiring credentials]** bevat de volgende informatie:
 - **[!UICONTROL Port]**: Het poortnummer van de host waarmee verbinding moet worden gemaakt.
 - **[!UICONTROL Database]**: De naam van de database waarmee een client verbinding moet maken.
 - **[!UICONTROL Username]**: De gebruikersnaam die wordt gebruikt om verbinding te maken met Query Service.
-- **[!UICONTROL Password]**: Het wachtwoord dat wordt gebruikt om verbinding te maken met Query Service. De wachtwoorden in UI zijn gehakt voor veiligheid. Selecteer het exemplaarpictogram (![ het exemplaarpictogram.](../images/ui/credentials/copy-icon.png) ) om uw volledige, niet-gehashte gegevens naar het klembord te kopiëren.
+- **[!UICONTROL Password]**: Het wachtwoord dat wordt gebruikt om verbinding te maken met Query Service. De wachtwoorden in UI zijn gehakt voor veiligheid. Selecteer het exemplaarpictogram (![ het exemplaarpictogram.](/help/images/icons/copy.png) ) om uw volledige, niet-gehashte gegevens naar het klembord te kopiëren.
 - **[!UICONTROL PSQL command]**: Een bevel dat automatisch alle relevante informatie voor u om met de Dienst van de Vraag gebruikend PSQL op de bevellijn heeft opgenomen te verbinden.
 - **[!UICONTROL Expires]**: De verloopdatum en -tijd voor de verloopgegevens. De standaard geldigheidstermijn van het token is 24 uur, maar deze kan worden gewijzigd in de geavanceerde instellingen van de Admin Console.
 
@@ -126,7 +126,7 @@ Nadat u de gegenereerde gegevens hebt opgeslagen, selecteert u **[!UICONTROL Clo
 
 ![ het lusje van Referenties van het dashboard van Vragen met de niet-vervallende benadrukte sectie van Referenties.](../images/ui/credentials/list-credentials.png)
 
-U kunt uw niet-vervallende gegevens bewerken of verwijderen. Om een niet-verkennende referentie uit te geven, selecteer het potloodpictogram (![ het potloodpictogram van A.](../images/ui/credentials/edit-icon.png)). Om een niet-expirerende referentie te schrappen, selecteer het schrappingspictogram (![ het afval van A kan pictogram.](../images/ui/credentials/delete-icon.png)).
+U kunt uw niet-vervallende gegevens bewerken of verwijderen. Om een niet-verkennende referentie uit te geven, selecteer het potloodpictogram (![ het potloodpictogram van A.](/help/images/icons/edit.png)). Om een niet-expirerende referentie te schrappen, selecteer het schrappingspictogram (![ het afval van A kan pictogram.](/help/images/icons/delete.png)).
 
 Wanneer u een niet-verkennende referentie bewerkt, wordt een modaal veld weergegeven. U kunt de volgende gegevens opgeven om bij te werken:
 

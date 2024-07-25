@@ -2,7 +2,7 @@
 title: Identity Graph Viewer
 description: Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1374'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Als u een identiteitsgrafiek wilt weergeven, geeft u een naamruimte en de bijbeh
 
 >[!TIP]
 >
->Selecteer het lijstpictogram ![ lijstpictogram ](../images/identity-graph-viewer/table-icon.png) om een paneel met een lijst van alle identiteit te zien namespaces beschikbaar in uw organisatie. U kunt alle naamruimten gebruiken zolang er een geldige identiteitswaarde aan is gekoppeld. Voor meer informatie, lees de [ gids van de identiteitsnaamruimte ](./namespaces.md).
+>Selecteer het lijstpictogram ![ lijstpictogram ](/help/images/icons/table.png) om een paneel met een lijst van alle identiteit te zien namespaces beschikbaar in uw organisatie. U kunt alle naamruimten gebruiken zolang er een geldige identiteitswaarde aan is gekoppeld. Voor meer informatie, lees de [ gids van de identiteitsnaamruimte ](./namespaces.md).
 
 ![ een identiteit namespace en zijn overeenkomstige waarde, die in het de raadplegingsscherm van de Grafiek van de Identiteit wordt verstrekt.](../images/graph-viewer/namespace-and-value.png)
 

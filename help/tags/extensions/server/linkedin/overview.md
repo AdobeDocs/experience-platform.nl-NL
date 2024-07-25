@@ -3,7 +3,7 @@ title: LinkIn Conversions API-gebeurtenis die extensie doorsturen
 description: Deze Adobe Experience Platform gebeurtenis die uitbreiding door:sturen staat u toe om de prestaties van uw LinkedIn marketing campagne te meten.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Na selectie, schijnen de extra controles om de gebeurtenis verder te vormen. Sel
 | --- | --- |
 | [!UICONTROL Email] | E-mailadres van de contactpersoon die aan de conversiegebeurtenis is gekoppeld. De e-mailwaarde wordt gecodeerd door de extensiecode in SHA256, tenzij de opgegeven waarde al een SHA256-tekenreeks is. |
 | [!UICONTROL LinkedIn First Party Ads Tracking UUID] | Dit is een eerste cookie-id. Adverteerders moeten de verbeterde omzetting het volgen van [[!DNL LinkedIn Campaign Manager] ](https://www.linkedin.com/help/lms/answer/a423304/enable-first-party-cookies-on-a-linkedin-insight-tag) toelaten om eerste partijkoekjes te activeren die een klikparameter van identiteitskaart `li_fat_id` aan klikURLs toevoegen. |
-| [!UICONTROL Customer Information Data] | Dit veld bevat een JSON-object met extra kenmerken die samen met het bericht worden verzonden.<br><br> onder de **[!UICONTROL Raw]** optie, kunt u het voorwerp JSON in het verstrekte tekstgebied direct kleven, of u kunt het pictogram van het gegevenselement (![ pictogram Dataset ](../../../images/extensions/server/aws/data-element-icon.png)) selecteren uit een lijst van bestaande gegevenselementen om de gegevens te vertegenwoordigen.<br><br> u kunt de **[!UICONTROL JSON Key-Value Pairs Editor]** optie ook gebruiken om elk zeer belangrijk-waardepaar door een redacteur manueel toe te voegen UI. Elke waarde kan worden vertegenwoordigd door een onbewerkte invoer, maar in plaats daarvan kan ook een gegevenselement worden geselecteerd. De toegestane toetswaarden zijn: `firstName`, `lastName`, `companyName`, `title` en `country` . |
+| [!UICONTROL Customer Information Data] | Dit veld bevat een JSON-object met extra kenmerken die samen met het bericht worden verzonden.<br><br> onder de **[!UICONTROL Raw]** optie, kunt u het voorwerp JSON in het verstrekte tekstgebied direct kleven, of u kunt het pictogram van het gegevenselement (![ pictogram Dataset ](/help/images/icons/database.png)) selecteren uit een lijst van bestaande gegevenselementen om de gegevens te vertegenwoordigen.<br><br> u kunt de **[!UICONTROL JSON Key-Value Pairs Editor]** optie ook gebruiken om elk zeer belangrijk-waardepaar door een redacteur manueel toe te voegen UI. Elke waarde kan worden vertegenwoordigd door een onbewerkte invoer, maar in plaats daarvan kan ook een gegevenselement worden geselecteerd. De toegestane toetswaarden zijn: `firstName`, `lastName`, `companyName`, `title` en `country` . |
 
 {style="table-layout:auto"}
 

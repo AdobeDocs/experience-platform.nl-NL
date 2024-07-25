@@ -3,7 +3,7 @@ title: Soorten publiek
 description: Leer hoe te om perspectiefpubliek tot stand te brengen en te gebruiken om onbekende klanten te richten gebruikend derdeinformatie.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -26,7 +26,7 @@ De pagina Bladeren wordt weergegeven. Een lijst van alle perspectiefpubliek voor
 
 Deze weergave bevat informatie over het publiek, zoals de naam, het aantal profielen, de oorsprong, de levenscyclusstatus, de datum waarop het is gemaakt, de datum waarop het laatst is bijgewerkt en de indeling.
 
-U kunt extra gebieden aan deze vertoning toevoegen door ![ het pictogram van het filterattribuut ](../images/ui/prospect-audience/filter-attribute.png) te selecteren. Deze extra velden bevatten de updatefrequentie en de laatste update door.
+U kunt extra gebieden aan deze vertoning toevoegen door ![ het pictogram van het filterattribuut ](/help/images/icons/column-settings.png) te selecteren. Deze extra velden bevatten de updatefrequentie en de laatste update door.
 
 Meer informatie over doorbladert pagina, met inbegrip van gedetailleerde informatie over de vermelde gebieden, kan in het [ Poortoverzicht van het Poortpubliek van het Publiek ](./audience-portal.md#list) worden gevonden.
 

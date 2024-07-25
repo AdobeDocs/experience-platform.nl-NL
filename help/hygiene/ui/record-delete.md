@@ -3,7 +3,7 @@ title: Records verwijderen
 description: Leer hoe u records verwijdert in de gebruikersinterface van Adobe Experience Platform.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1500'
 ht-degree: 0%
@@ -51,7 +51,7 @@ De workflow voor het maken van aanvragen wordt weergegeven. Standaard is de opti
 
 De volgende stap is te bepalen of u verslagen van één enkele dataset of alle datasets wilt schrappen. Als deze optie niet beschikbaar aan u is, ga aan [ blijven verstrekken identiteiten ](#provide-identities) sectie van de gids.
 
-Gebruik onder de sectie **[!UICONTROL Record Details]** het keuzerondje om te selecteren tussen een specifieke gegevensset en alle gegevenssets. Als u **[!UICONTROL Select dataset]** kiest, ga te werk om het gegevensbestandpictogram (![ het gegevensbestandpictogram ](../images/ui/record-delete/database-icon.png)) te selecteren om een dialoog te openen die een lijst van beschikbare datasets verstrekt. Selecteer de gewenste gegevensset in de lijst gevolgd door **[!UICONTROL Done]** .
+Gebruik onder de sectie **[!UICONTROL Record Details]** het keuzerondje om te selecteren tussen een specifieke gegevensset en alle gegevenssets. Als u **[!UICONTROL Select dataset]** kiest, ga te werk om het gegevensbestandpictogram (![ het gegevensbestandpictogram ](/help/images/icons/database.png)) te selecteren om een dialoog te openen die een lijst van beschikbare datasets verstrekt. Selecteer de gewenste gegevensset in de lijst gevolgd door **[!UICONTROL Done]** .
 
 ![ de [!UICONTROL Select dataset] dialoog met een geselecteerde dataset en [!UICONTROL Done] benadrukte.](../images/ui/record-delete/select-dataset.png)
 
@@ -130,7 +130,7 @@ Er worden besturingselementen weergegeven waarmee u de identiteiten een voor een
 
 ![ het werkschema van de verzoekverwezenlijking met manueel toegevoegd identiteitsgebied.](../images/ui/record-delete/identity-added.png)
 
-Om meer identiteiten toe te voegen, selecteer het plusteken (![ A plus pictogram.](../images/ui/record-delete/plus-icon.png) ) naast een van de rijen of selecteer **[!UICONTROL Add identity]** .
+Om meer identiteiten toe te voegen, selecteer het plusteken (![ A plus pictogram.](/help/images/icons/tree-expand-all.png) ) naast een van de rijen of selecteer **[!UICONTROL Add identity]** .
 
 ![ het werkschema van de verzoekverwezenlijking met het plusteken en toevoegt benadrukte identiteitspictogram.](../images/ui/record-delete/more-identities.png)
 

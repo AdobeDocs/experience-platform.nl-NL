@@ -2,9 +2,9 @@
 title: Power BI rapportsjablonen voor platformdashboards
 description: Gebruik rapportsjablonen om gegevens van Experience Platforms te verkennen met behulp van Power BI.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1438'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ Zodra uw dashboard de aangewezen metriek en de attributen bevat binnen douane wi
 
 ## De integratie van de Power BI-toepassing verwijderen
 
-Als u het dashboard wilt verwijderen, navigeert u naar het dashboardoverzicht en selecteert u het verwijderingspictogram ( ![](../images/power-bi/delete-icon.png) ) naast de naam van het dashboard.
+Om het dashboard te schrappen, navigeer aan de dashboardinventaris en selecteer het schrappingspictogram (![ schrappingspictogram ](/help/images/icons/delete.png)) naast de dashboardnaam.
 
 >[!NOTE]
 >

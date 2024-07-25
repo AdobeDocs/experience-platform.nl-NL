@@ -4,7 +4,7 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het realtime klantprofiel van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '4669'
 ht-degree: 0%
@@ -470,7 +470,7 @@ Selecteer **[!UICONTROL View more]** om een dialoogvenster op volledig scherm te
 
 ![ De publiek overlapt rapport widget met meer benadrukte Mening.](../images/profiles/profiles-audience-overlap-report.png)
 
-Het dialoogvenster [!UICONTROL Audience overlap report] wordt weergegeven. Dit dialoogvenster kan tot 50 rijen publiek bevatten die analyses overlappen die in zes kolommen zijn opgedeeld. Om kolommen uit de lijst te verwijderen of toe te voegen, selecteer het montagespictogram (![ het montagespictogram.](../images/profiles/settings-icon.png)).
+Het dialoogvenster [!UICONTROL Audience overlap report] wordt weergegeven. Dit dialoogvenster kan tot 50 rijen publiek bevatten die analyses overlappen die in zes kolommen zijn opgedeeld. Om kolommen uit de lijst te verwijderen of toe te voegen, selecteer het montagespictogram (![ het montagespictogram.](/help/images/icons/settings.png)).
 
 ![ het publiek overlapt rapportdialoog.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 

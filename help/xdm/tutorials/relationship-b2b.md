@@ -2,7 +2,7 @@
 title: Een relatie definiëren tussen twee schema's in Real-time Customer Data Platform B2B Edition
 description: Leer hoe u een vele-op-één relatie tussen twee schema's in Adobe Real-time Customer Data Platform B2B Edition definieert.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1332'
 ht-degree: 0%
@@ -97,7 +97,7 @@ Om een verhouding tussen twee schema&#39;s te bepalen, moet het bronschema een s
 >
 >Momenteel, slechts kunnen vele-aan-één en één-aan-één verhoudingen van een bronschema aan een verwijzingsschema worden bepaald. Voor één-aan-vele verhoudingen, moet u het relatiegebied in het schema bepalen dat &quot;velen&quot;vertegenwoordigt.
 
-Om een relatiegebied te plaatsen, selecteer het pijlpictogram (![ Pictogram van de Pijl ](../images/tutorials/relationship-b2b/arrow.png)) naast het gebied in kwestie binnen het canvas. In het geval van het [!DNL Opportunities] schema, is dit het `accountKey.sourceKey` gebied aangezien het doel een vele-aan-één verhouding met een rekening is te vestigen.
+Om een relatiegebied te plaatsen, selecteer het pijlpictogram (![ Pictogram van de Pijl ](/help/images/icons/alias.png)) naast het gebied in kwestie binnen het canvas. In het geval van het [!DNL Opportunities] schema, is dit het `accountKey.sourceKey` gebied aangezien het doel een vele-aan-één verhouding met een rekening is te vestigen.
 
 ![ Knoop van de Verhouding ](../images/tutorials/relationship-b2b/relationship-button.png)
 

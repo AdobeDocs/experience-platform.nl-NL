@@ -2,7 +2,7 @@
 title: Een datumfilter maken
 description: Leer hoe u uw eigen inzichten op datum kunt filteren.
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 0%
@@ -94,6 +94,6 @@ Zodra u een datumbereik van het dashboard hebt geselecteerd, worden de datumfilt
 
 ## Een datumfilter verwijderen {#delete-date-filter}
 
-Om uw datumfilter te verwijderen selecteer het pictogram van de schrappingsfilter (![ het schrap filterpictogram.](../../../images/customizable-insights/delete-filter-icon.png)).
+Om uw datumfilter te verwijderen selecteer het pictogram van de schrappingsfilter (![ het schrap filterpictogram.](/help/images/icons/filter-delete.png)).
 
 ![ A douanedashboard met het benadrukte pictogram van de filterschrapping.](../../../images/customizable-insights/delete-date-filter.png)

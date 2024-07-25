@@ -2,7 +2,7 @@
 title: Integratie van auditlogboek voor query-service
 description: De controlelogboeken van de Dienst van de vraag handhaven verslagen voor diverse gebruikersacties om een controletraject voor het oplossen van problemenkwesties te vormen of het naleven van het beleid van het collectieve gegevensbeheer en regelgevende vereisten. Dit leerprogramma verstrekt een overzicht van de eigenschappen van het controlelogboek specifiek voor de Dienst van de Vraag.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 0%
@@ -31,7 +31,7 @@ De categorieën van het controlelogboek die door [!DNL Query Service] worden ver
 
 ## Een [!DNL Query Service] controlelogboek uitvoeren {#perform-an-audit-log}
 
-Om een controle voor [!DNL Query Service] activiteiten uit te voeren, selecteer **[!UICONTROL Audits]** van de linkernavigatie, die door het kanaalpictogram wordt gevolgd (![ het filterpictogram van A.](../images/audit-log/filter.png)) om een lijst met filterbesturingselementen weer te geven om de resultaten te beperken.
+Om een controle voor [!DNL Query Service] activiteiten uit te voeren, selecteer **[!UICONTROL Audits]** van de linkernavigatie, die door het kanaalpictogram wordt gevolgd (![ het filterpictogram van A.](/help/images/icons/filter.png)) om een lijst met filterbesturingselementen weer te geven om de resultaten te beperken.
 
 ![ het dashboard van het de controlelogboek van het Platform UI met &quot;Audits&quot;in de linkernavigatie en filtercontroles benadrukte.](../images/audit-log/filter-controls.png)
 

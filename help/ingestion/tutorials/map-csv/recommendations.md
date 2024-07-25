@@ -2,7 +2,7 @@
 title: Een CSV-bestand toewijzen aan een XDM-schema met behulp van door AI gegenereerde Recommendations
 description: In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand met behulp van door AI gegenereerde aanbevelingen kunt toewijzen aan een XDM-schema.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -74,7 +74,7 @@ De modellen van XML worden in werking gesteld om een nieuw schema te produceren 
 
 >[!NOTE]
 >
->U kunt alle velden in uw schema filteren op basis van verschillende criteria tijdens de toewijzingsworkflow van bron naar doel voor velden. Standaard worden alle toegewezen velden weergegeven. Om de getoonde gebieden te veranderen, selecteer het filterpictogram naast het gebied van de onderzoeksinput en kies van de dropdown opties.<br> ![ het kaartingsstadium van CSV aan het werkschema van de het schemaverwezenlijking XDM met het filterpictogram en dropdown benadrukt menu.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png " het kaartingsstadium van CSV aan het werkschema van de het schemaverwezenlijking XDM met het benadrukte filterpictogram en dropdown menu."){width="100" zoomable="yes"}
+>U kunt alle velden in uw schema filteren op basis van verschillende criteria tijdens de toewijzingsworkflow van bron naar doel voor velden. Standaard worden alle toegewezen velden weergegeven. Om de getoonde gebieden te veranderen, selecteer het filterpictogram naast het gebied van de onderzoeksinput en kies van de dropdown opties.<br> ![ het kaartingsstadium van CSV aan het werkschema van de het schemaverwezenlijking XDM met het benadrukte filterpictogram en dropdown menu.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png " het kaartingsstadium van CSV aan het werkschema van de het schemaverwezenlijking XDM met het benadrukte filterpictogram en dropdown menu."){width="100" zoomable="yes"}
 
 Van hier, kunt u naar keuze [ de gebiedstoewijzingen ](#edit-mappings) of [ uitgeven de gebiedsgroepen zij met ](#edit-schema) volgens uw behoeften worden geassocieerd. Selecteer **[!UICONTROL Finish]** als u tevreden bent om de toewijzing te voltooien en de dataflow die u eerder hebt geconfigureerd, te starten. De gegevens CSV wordt opgenomen in het systeem en bevolkt een dataset die op de geproduceerde schemastructuur wordt gebaseerd, klaar om door de stroomafwaartse diensten van het Platform worden verbruikt.
 
@@ -90,7 +90,7 @@ De CSV-velden worden automatisch toegewezen aan bestaande XDM-veldgroepen met be
 
 ![ de [!UICONTROL Edit] knoop die naast de schemaboom wordt geselecteerd.](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
-Er wordt een dialoogvenster weergegeven waarin u de weergavenaam, het gegevenstype en de veldgroep voor een veld in de toewijzing kunt bewerken. Selecteer uitgeven pictogram (![ geeft pictogram ](../../images/tutorials/map-csv-recommendations/edit-icon.png) uit) naast een brongebied om zijn details in de juiste kolom uit te geven alvorens **[!UICONTROL Apply]** te selecteren.
+Er wordt een dialoogvenster weergegeven waarin u de weergavenaam, het gegevenstype en de veldgroep voor een veld in de toewijzing kunt bewerken. Selecteer uitgeven pictogram (![ geeft pictogram ](/help/images/icons/edit.png) uit) naast een brongebied om zijn details in de juiste kolom uit te geven alvorens **[!UICONTROL Apply]** te selecteren.
 
 ![ de geadviseerde gebiedsgroep voor een brongebied dat wordt veranderd.](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 

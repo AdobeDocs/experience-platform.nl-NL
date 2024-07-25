@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Dataflows voor Doelen in UI controleren
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '3183'
 ht-degree: 0%
@@ -178,7 +178,7 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 >title="Activering"
 >abstract="De weergave voor doelactivering bevat informatie over de activeringsstatus van een publiek en maatstaven die vanuit het realtime-klantprofiel zijn genomen om unieke identiteiten te genereren."
 
-Om tot het [!UICONTROL Monitoring] dashboard toegang te hebben, selecteer **[!UICONTROL Monitoring]** (![ controlepictogram ](../assets/ui/monitor-destinations/monitoring-icon.png)) in de linkernavigatie. Selecteer [!UICONTROL Destinations] eenmaal op de [!UICONTROL Monitoring] -pagina. Het dashboard van [!UICONTROL Monitoring] bevat metriek en informatie over de banen van de bestemmingslooppas.
+Om tot het [!UICONTROL Monitoring] dashboard toegang te hebben, selecteer **[!UICONTROL Monitoring]** (![ controlepictogram ](/help/images/icons/monitoring.png)) in de linkernavigatie. Selecteer [!UICONTROL Destinations] eenmaal op de [!UICONTROL Monitoring] -pagina. Het dashboard van [!UICONTROL Monitoring] bevat metriek en informatie over de banen van de bestemmingslooppas.
 
 Gebruik het dashboard van [!UICONTROL Destinations] om een algemeen idee van de gezondheid van uw activeringsstromen te krijgen. Begin door inzichten op een bijeengevoegd niveau voor alle partij en het stromen bestemmingen te krijgen en dan neer in gedetailleerde meningen voor dataflows, dataflow looppas, en geactiveerd publiek voor een diepgaande blik op uw activeringsgegevens te boren. De schermen in het dashboard van [!UICONTROL Monitoring] verstrekken actionable inzichten door metriek en foutenbeschrijvingen om u te helpen om het even welke problemen oplossen die zich in uw activeringsscenario&#39;s zouden kunnen voordoen.
 
@@ -199,7 +199,7 @@ Standaard bevatten de weergegeven gegevens de activeringsgegevens van de laatste
 
 ![ de controle van de terugkijkdatumwaaier van de Verandering voor geactiveerde bestemmingen ](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png) wordt benadrukt
 
-Gebruik het pijlpictogram (![ pijlpictogram ](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) om de kaarten bij de bovenkant van het scherm uit te breiden of te verwerpen, die bij-a-blik informatie over de activeringsdetails tonen, die op het bestemmingstype - het stromen of partij wordt gebaseerd:
+Gebruik het pijlpictogram (![ pijlpictogram ](/help/images/icons/chevron-up.png)) om de kaarten bij de bovenkant van het scherm uit te breiden of te verwerpen, die bij-a-blik informatie over de activeringsdetails tonen, die op het bestemmingstype - het stromen of partij wordt gebaseerd:
 
 - **[!UICONTROL Streaming activation rate]**: geeft het percentage aan van de ontvangen identiteiten die zijn geactiveerd of overgeslagen. De formule die wordt gebruikt om dit percentage te berekenen wordt hierboven beschreven verder op deze pagina, in de [ looppas Dataflow voor het stromen bestemmingen ](#dataflow-runs-for-streaming-destinations) sectie.
 - **[!UICONTROL Batch failed dataflow runs]**: vertegenwoordigt het aantal mislukte dataflow looppas in het geselecteerde tijdinterval.
@@ -226,13 +226,13 @@ U kunt uw lijst van bestemmingen ook filtreren om slechts de geselecteerde categ
 
 ![ bestemmingen van de Filter gebruikend dropdown selecteur ](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-Bovendien kunt u een bestemming in de onderzoeksbar ingaan om aan één enkele bestemming te isoleren. Als u de dataflows van de bestemming wilt zien kunt u de filter ![ filter ](../assets/ui/monitor-destinations/filter-add.png) naast het selecteren om een lijst van zijn actieve dataflows te zien.
+Bovendien kunt u een bestemming in de onderzoeksbar ingaan om aan één enkele bestemming te isoleren. Als u de dataflows van de bestemming wilt zien kunt u de filter ![ filter ](/help/images/icons/filter-add.png) naast het selecteren om een lijst van zijn actieve dataflows te zien.
 
 ![ bestemmingen die van de Filter de onderzoeksbar gebruiken in de controlemening wordt benadrukt.](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 Selecteer **[!UICONTROL Dataflows]** als u alle bestaande gegevensstromen voor alle doelen wilt weergeven.
 
-Er wordt een lijst met gegevensstromen weergegeven, gesorteerd op de laatste dataflow-run. U kunt extra details voor een specifieke dataflow zien door van de bestemming de plaats te bepalen wilt u controleren, die de filter ![ filter ](../assets/ui/monitor-destinations/filter-add.png) naast het selecteren, en dan het filter ![ filter ](../assets/ui/monitor-destinations/filter-add.png) naast dataflow selecteren u meer informatie over wilt.
+Er wordt een lijst met gegevensstromen weergegeven, gesorteerd op de laatste dataflow-run. U kunt extra details voor een specifieke dataflow zien door van de bestemming de plaats te bepalen wilt u controleren, die de filter ![ filter ](/help/images/icons/filter-add.png) naast het selecteren, en dan het filter ![ filter ](/help/images/icons/filter-add.png) naast dataflow selecteren u meer informatie over wilt.
 
 ![ Alle die dataflows in het controledashboard worden benadrukt.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
@@ -269,7 +269,7 @@ U activeert bijvoorbeeld een publiek met de naam &#39;Loyalty Member States in C
 ![ publiek dat in het dataflow paneel wordt benadrukt.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 In de publiek-vlakke mening, worden de metriek bijeengevoegd over veelvoudige dataflow looppas binnen de geselecteerde tijdwaaier. Als er veelvoudige dataflow looppas zijn, kunt u neer van het publieksniveau boren om de uitsplitsing voor elke dataflow looppas te zien, die door het geselecteerde publiek wordt gefiltreerd.
-Gebruik de filterknoop ![ filter ](../assets/ui/monitor-destinations/filter-add.png) om neer in de dataflow looppas mening voor elk publiek in dataflow te boren.
+Gebruik de filterknoop ![ filter ](/help/images/icons/filter-add.png) om neer in de dataflow looppas mening voor elk publiek in dataflow te boren.
 
 ### DataFlow-uitvoerpagina {#dataflow-runs-page}
 
@@ -283,7 +283,7 @@ Wanneer u neer in de dataflow looppas pagina van de [ publiek-vlakke mening ](#s
 
 ![ Keuzerondjes die tonen hoe te om dataflow looppas voor publiek te filtreren.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
-Om meer details over een specifieke dataflow looppas te zien, selecteer de filter ![ filter ](../assets/ui/monitor-destinations/filter-add.png) naast de dataflow runtime begintijd om de dataflow looppas detailpagina te zien.
+Om meer details over een specifieke dataflow looppas te zien, selecteer de filter ![ filter ](/help/images/icons/filter-add.png) naast de dataflow runtime begintijd om de dataflow looppas detailpagina te zien.
 
 ![ Dataflow stelt filter in controle dashboard in werking om in meer informatie voor bepaalde dataflow in werking te stellen.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 

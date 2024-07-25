@@ -4,7 +4,7 @@ title: Doelen verwijderen
 type: Tutorial
 description: Deze zelfstudie bevat een overzicht van de stappen waarmee een bestaand doel in de gebruikersinterface van Adobe Experience Platform kan worden verwijderd
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 0%
@@ -32,11 +32,11 @@ Voer de onderstaande stappen uit om een doel te verwijderen van het tabblad [!UI
 
    ![ doorbladert bestemmingen ](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Selecteer het filterpictogram ![ filter-pictogram ](../assets/ui/delete-destinations/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
+2. Selecteer het filterpictogram ![ filter-pictogram ](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
 
    ![ bestemmingen van de Filter ](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Selecteer de ![ Meer knoop ](../assets/ui/delete-destinations/more-icon.png) in de kolom van de Naam en selecteer dan ![ knoop van de Schrapping ](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** om een bestaande bestemmingsverbinding te verwijderen.
+3. Selecteer de ![ Meer knoop ](/help/images/icons/more.png) in de kolom van de Naam en selecteer dan ![ knoop van de Schrapping ](/help/images/icons/delete.png) **[!UICONTROL Delete]** om een bestaande bestemmingsverbinding te verwijderen.
    ![ schrapt bestemmingen ](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Selecteer **[!UICONTROL Delete]** om het verwijderen van de bestemmingsverbinding te bevestigen.
@@ -51,7 +51,7 @@ Voer de onderstaande stappen uit om een bestemming te verwijderen van de pagina 
 
    ![ doorbladert bestemmingen ](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Selecteer het filterpictogram ![ filter-pictogram ](../assets/ui/delete-destinations/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
+2. Selecteer het filterpictogram ![ filter-pictogram ](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
 
    ![ bestemmingen van de Filter ](../assets/ui/delete-destinations/filter-destinations.png)
 

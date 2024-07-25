@@ -2,7 +2,7 @@
 title: Gebruikershandleiding berekende kenmerken
 description: Leer hoe u berekende kenmerken maakt, weergeeft en bijwerkt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UIC
 
 ![ de [!UICONTROL Profile] sectie en de [!UICONTROL Computed attributes] lusjes worden benadrukt, die gebruikers tonen hoe te om tot de gegevens verwerkte attributen toegang te hebben doorbladert pagina.](./images/ui/browse.png)
 
-Om te selecteren welke gebieden zichtbaar zijn, kunt u ![ selecteren vormt kolompictogram ](./images/ui/configure-icon.png) om toe te voegen of te verwijderen welke gebieden u wilt worden getoond.
+Om te selecteren welke gebieden zichtbaar zijn, kunt u ![ selecteren vormt kolompictogram ](/help/images/icons/column-settings.png) om toe te voegen of te verwijderen welke gebieden u wilt worden getoond.
 
 | Veld | Beschrijving |
 | ----- | ----------- |
@@ -47,7 +47,7 @@ Om te selecteren welke gebieden zichtbaar zijn, kunt u ![ selecteren vormt kolom
 | [!UICONTROL Created] | Een tijdstempel met de datum en tijd waarop het berekende kenmerk is gemaakt. |
 | [!UICONTROL Last modified] | Een tijdstempel met de datum en tijd waarop het berekende kenmerk voor het laatst is gewijzigd. |
 
-U kunt de weergegeven berekende kenmerken ook filteren op basis van de levenscyclusstatus. Selecteer het ![ trechter ](./images/ui/filter-icon.png) pictogram.
+U kunt de weergegeven berekende kenmerken ook filteren op basis van de levenscyclusstatus. Selecteer het ![ trechter ](/help/images/icons/filter.png) pictogram.
 
 ![ het filterpictogram wordt benadrukt.](./images/ui/select-filter.png)
 

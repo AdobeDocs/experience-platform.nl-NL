@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2896'
 ht-degree: 0%
@@ -161,11 +161,11 @@ Het dialoogvenster [!UICONTROL Move] Gegevensset naar map wordt weergegeven. Sel
 
 >[!TIP]
 >
->U kunt mappen ook rechtstreeks maken vanuit het dialoogvenster Gegevensset verplaatsen. Om een omslag tot stand te brengen, selecteer het creeer omslagpictogram (![ creeer omslagpictogram.](../images/datasets/user-guide/create-folder-icon.png) ) rechtsboven in het dialoogvenster.
+>U kunt mappen ook rechtstreeks maken vanuit het dialoogvenster Gegevensset verplaatsen. Om een omslag tot stand te brengen, selecteer het creeer omslagpictogram (![ creeer omslagpictogram.](/help/images/icons/folder-add.png) ) rechtsboven in het dialoogvenster.
 >
 >![ de [!UICONTROL Move] dialoog van de dataset met creeer benadrukt omslagpictogram.](/help/catalog/images/datasets/user-guide/create-folder.png)
 
-Zodra de dataset in een omslag is, kunt u verkiezen om datasets slechts te tonen die tot een specifieke omslag behoren. Om uw omslagstructuur te openen, selecteer het pictogram van showomslagen (![ het pictogram van showomslagen ](../images/datasets/user-guide/show-folders-icon.png)). Vervolgens selecteert u de gekozen map om alle bijbehorende gegevenssets weer te geven.
+Zodra de dataset in een omslag is, kunt u verkiezen om datasets slechts te tonen die tot een specifieke omslag behoren. Om uw omslagstructuur te openen, selecteer het pictogram van showomslagen (![ het pictogram van showomslagen ](/help/images/icons/rail-left.png)). Vervolgens selecteert u de gekozen map om alle bijbehorende gegevenssets weer te geven.
 
 ![ de [!UICONTROL Datasets] dashboards met de getoonde de omslagstructuur van datasets, het pictogram van showomslagen, en een geselecteerde benadrukte omslag.](../images/datasets/user-guide/folder-structure.png)
 
@@ -197,7 +197,7 @@ U kunt profielgegevens die zijn gekoppeld aan een gegevensset verwijderen uit de
 
 ## Gegevensbestanden zoeken en filteren {#search-and-filter}
 
-Om de lijst van beschikbare datasets te zoeken of te filtreren, selecteer het filterpictogram (![ het filterpictogram.](../images/datasets/user-guide/icon.png) ) linksboven in de werkruimte. Er wordt een set filteropties weergegeven in de linkertrack. Er zijn verscheidene methodes om uw beschikbare datasets te filtreren. Deze omvatten: [[!UICONTROL Show System Datasets]](#show-system-datasets), [[!UICONTROL Included in profile]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Creation date]](#filter-by-creation-date), [[!UICONTROL Modified date], [!UICONTROL Created by]](#filter-by-creation-date) en [[!UICONTROL Schema]](#filter-by-schema) .
+Om de lijst van beschikbare datasets te zoeken of te filtreren, selecteer het filterpictogram (![ het filterpictogram.](/help/images/icons/filter.png) ) linksboven in de werkruimte. Er wordt een set filteropties weergegeven in de linkertrack. Er zijn verscheidene methodes om uw beschikbare datasets te filtreren. Deze omvatten: [[!UICONTROL Show System Datasets]](#show-system-datasets), [[!UICONTROL Included in profile]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Creation date]](#filter-by-creation-date), [[!UICONTROL Modified date], [!UICONTROL Created by]](#filter-by-creation-date) en [[!UICONTROL Schema]](#filter-by-schema) .
 
 De lijst met toegepaste filters wordt boven de gefilterde resultaten weergegeven.
 

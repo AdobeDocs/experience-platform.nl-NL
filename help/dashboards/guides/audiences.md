@@ -4,7 +4,7 @@ title: Sitepagina
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het publiek dat uw organisatie heeft gemaakt.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2951'
 ht-degree: 0%
@@ -235,7 +235,7 @@ Selecteer **[!UICONTROL View more]** om een dialoogvenster op volledig scherm te
 
 ![ De publiek overlapt rapport widget met meer benadrukte Mening.](../images/audiences/audience-overlap-report.png)
 
-Het dialoogvenster [!UICONTROL Audience overlap report] wordt weergegeven. Dit dialoogvenster kan tot 50 rijen publiek bevatten die analyses overlappen die in zes kolommen zijn opgedeeld. Selecteer het montagespictogram (![ het montagespictogram.](../images/audiences/settings-icon.png)) om kolommen uit de tabel te verwijderen of toe te voegen.
+Het dialoogvenster [!UICONTROL Audience overlap report] wordt weergegeven. Dit dialoogvenster kan tot 50 rijen publiek bevatten die analyses overlappen die in zes kolommen zijn opgedeeld. Selecteer het montagespictogram (![ het montagespictogram.](/help/images/icons/settings.png)) om kolommen uit de tabel te verwijderen of toe te voegen.
 
 ![ het publiek overlapt rapportdialoog.](../images/audiences/audience-overlap-report-dialog.png)
 

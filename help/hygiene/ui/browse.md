@@ -2,7 +2,7 @@
 title: Door werkorders voor de levenscyclus van gegevens bladeren
 description: Leer hoe u bestaande werkorders voor de levenscyclus van gegevens kunt weergeven en beheren in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -31,7 +31,7 @@ In de lijst worden alleen de werkorders voor één categorie tegelijk weergegeve
 
 ![ Beeld die het [!UICONTROL Dataset] lusje ](../images/ui/browse/dataset-tab.png) tonen
 
-Selecteer het kanaalpictogram (![ Beeld van het kanaalpictogram ](../images/ui/browse/funnel-icon.png)) om een lijst van filters voor de getoonde het werkorden te bekijken.
+Selecteer het kanaalpictogram (![ Beeld van het kanaalpictogram ](/help/images/icons/filter.png)) om een lijst van filters voor de getoonde het werkorden te bekijken.
 
 ![ Beeld van de getoonde filters van de het werkorde ](../images/ui/browse/filters.png)
 
