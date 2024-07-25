@@ -5,9 +5,9 @@ title: Verrijk het Profiel van de Klant in real time met het Leren van de Machin
 type: Tutorial
 description: Dit document biedt een handleiding voor het verrijken van Real-Time Customer Profile met inzichten in computerleren.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: afa27069c7490848398c92973dd77810564b5993
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,13 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Data Science Workspace] biedt de gereedschappen en bronnen om modellen voor machinaal leren te maken, te evalueren en te gebruiken om gegevensvoorspellingen en inzichten te genereren. Wanneer inzichten van het machinaal leren in een [!DNL Profile]-Toegelaten dataset worden opgenomen, worden die zelfde gegevens ook opgenomen zoals [!DNL Profile] verslagen die dan kunnen worden gesegmenteerd gebruikend [!DNL Adobe Experience Platform Segmentation Service].
 
+Het segmenteringsproces hangt van de evaluatiemethode voor het publiek af. Als een publiek als **het stromen** wordt gevormd, zal het alle nieuwe updates verwerken die door het model in het profiel in real time worden geschreven. Nochtans, als een publiek voor **partij** evaluatie wordt gevormd, zullen de nieuwe waarden in de volgende partij worden geëvalueerd.
+
 Dit document bevat koppelingen naar zelfstudies waarmee u [!DNL Real-Time Customer Profile] kunt verrijken met de leermogelijkheden van uw computer.
 
 ## Aan de slag
 
-Voor het voltooien van de onderstaande lesbestanden hebt u een goed inzicht nodig in het opnemen van [!DNL Profile] -gegevens en het maken van segmenten. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Als u de onderstaande lesbestanden wilt voltooien, hebt u een goed begrip nodig van het invoeren van [!DNL Profile] -gegevens en het maken van soorten publiek. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een volledige, uniforme representatie van elke individuele klant op basis van geaggregeerde gegevens van meerdere bronnen.
 - [[!DNL Identity Service]](../../identity-service/home.md): schakelt [!DNL Real-Time Customer Profile] in door identiteiten te overbruggen van verschillende gegevensbronnen die in Platform worden opgenomen.
@@ -41,20 +43,20 @@ Als u verkiest om een schema samen te stellen gebruikend [!DNL Schema Registry] 
 
 Zodra uw schema en dataset worden voorbereid, kunt u het schrapen gegevens aan de dataset produceren en opnemen door het schrapen looppas uit te voeren gebruikend een aangewezen model.
 
-## Segmenten maken met de [!DNL Segment Builder] {#create-segments-using-the-segment-builder}
+## Soorten publiek maken met de [!DNL Segment Builder] {#create-audiences-using-the-segment-builder}
 
-Nadat u de inzichten van uw scoringsgegevens naar uw [!DNL Profile] -gegevensset hebt gegenereerd en opgenomen, kunt u dynamische segmenten maken met de [!DNL Segment Builder] -set.
+Nadat u de inzichten van uw scoringsgegevens naar uw [!DNL Profile] -gegevensset hebt gegenereerd en ingepakt, kunt u een dynamisch publiek maken met de [!DNL Segment Builder] -gegevensset.
 
 [!DNL Segment Builder] biedt een rijke werkruimte waarmee u kunt werken met [!DNL Profile] -gegevenselementen. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen. Volg de [[!DNL Segment Builder]  gebruikersgids ](../../segmentation/ui/segment-builder.md) om over te leren:
 
 - Segmentdefinities maken met een combinatie van kenmerken, gebeurtenissen en bestaand publiek als bouwstenen.
-- Het gebruiken van het canvas en de containers van de regelbouwer om de orde te controleren waarin de segmentregels worden uitgevoerd.
+- Het gebruiken van het canvas en de containers van de regelbouwer om de orde te controleren waarin de publieksregels worden uitgevoerd.
 - Het bekijken van ramingen van uw prospectief publiek, toestaand u om uw segmentdefinities zonodig aan te passen.
 - Het toelaten van alle segmentdefinities voor geplande segmentatie.
 - Opgegeven segmentdefinities voor streaming segmentatie inschakelen.
 
 ## Volgende stappen {#next-steps}
 
-Meer over segmenten en [!DNL Segment Builder] leren, lees het [ overzicht van de Dienst van de Segmentatie ](../../segmentation/home.md).
+Meer over publiek en [!DNL Segment Builder] leren, lees het [ overzicht van de Dienst van de Segmentatie ](../../segmentation/home.md).
 
 Om meer over [!DNL Real-Time Customer Profile] te leren, lees het [ Real-Time overzicht van het Profiel van de Klant ](../../profile/home.md)
