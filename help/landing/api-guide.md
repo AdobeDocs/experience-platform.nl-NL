@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aan de slag met Adobe Experience Platform API's
 description: Adobe Experience Platform biedt API-services die nauw met elkaar zijn verbonden. Deze handleiding bevat informatie over de beschikbare services, vereiste headers voor CRUD-bewerkingen, foutberichten, Postman-verzamelingen en voorbeeld-API-aanroepen.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: c728d63c22593ca56999dd0bb6679dea7de0e00a
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1446'
 ht-degree: 0%
 
 ---
@@ -124,8 +124,10 @@ Voor meer informatie over specifieke eindpunten in Platform APIs, met inbegrip v
 | [[!DNL Catalog Service]  API gids ](.././catalog/api/getting-started.md) | Met de API van [!DNL Catalog Service] kunnen ontwikkelaars metagegevens van gegevenssets beheren in Adobe Experience Platform. Dit omvat gegevenslocaties, verwerkingsfasen, fouten die tijdens de verwerking zijn opgetreden en gegevensrapporten. |
 | [[!DNL Data Access]  API gids ](.././data-access/api.md) | Met de API van [!DNL Data Access] kunnen ontwikkelaars informatie ophalen over ingesloten gegevenssets binnen het Experience Platform. Hiertoe behoren het openen en downloaden van gegevenssetbestanden, het ophalen van koptekstgegevens, het opgeven van mislukte en opvolgende batches en het downloaden van voorvertoningen van CSV-/Parquet-bestanden. |
 | [[!DNL Dataset Service]  API gids ](.././data-governance/labels/dataset-api.md) | Met de Dataset Service API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Deze klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API van de Catalogusservice die metagegevens van gegevenssets beheert. |
+| [[!DNL Data Hygiene API guide]](../hygiene/api/overview.md) | Met de API van [!DNL Data Hygiene] kunt u via programmacode de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform corrigeren of verwijderen. Ook kunt u de vervaldatums voor gegevenssets plannen. |
 | [[!DNL Edge Network Server]  API gids ](../server-api/overview.md) | [!DNL Edge Network Server API] kan voor een verscheidenheid van gegevensinzameling, verpersoonlijking, reclame en marketing gebruiksgevallen worden gebruikt. [!DNL Server API] kan op servers, [!DNL IoT] apparaten, reeks-hoogste dozen, en een verscheidenheid van andere apparaten worden gebruikt. |
 | [[!DNL Identity Service]  API gids ](.././identity-service/api/getting-started.md) | Met de API van [!DNL Identity Service] kunnen ontwikkelaars de identificatie van uw klanten via verschillende apparaten, kanalen en in de buurt van realtime beheren met behulp van identiteitsgrafieken in Adobe Experience Platform. |
+| [[!DNL MTLS Service API guide]](../data-governance/mtls-api/overview.md) | Met de API van [!DNL MTLS Service] kunt u openbare certificaten die zijn uitgegeven door Adobe voor uw organisatie veilig ophalen. |
 | [[!DNL Observability Insights]  API gids ](.././observability/api/overview.md) | [!DNL Observability Insights] is een RESTful API die ontwikkelaars toestaat om zeer belangrijke waarneembaarheidsmetriek in Adobe Experience Platform bloot te stellen. Deze metriek verstrekt inzicht in het gebruiksstatistieken van het Platform, gezondheid-controles voor de diensten van het Platform, historische tendensen, en prestatiesindicatoren voor diverse functies van het Platform. |
 | [[!DNL Policy Service]  API gids ](.././data-governance/api/overview.md) <br> (het Beheer van Gegevens) | Met de API van [!DNL Policy Service] kunt u labels en beleidsregels voor gegevensgebruik maken en beheren om te bepalen welke marketingacties kunnen worden uitgevoerd tegen gegevens die bepaalde labels voor gegevensgebruik bevatten. Om etiketten op datasets en gebieden toe te passen, verwijs naar [[!DNL Dataset Service]  API ](.././data-governance/labels/dataset-api.md) gids |
 | [[!DNL Privacy Service]  API gids ](.././privacy-service/api/getting-started.md) | Met de API van [!DNL Privacy Service] kunnen ontwikkelaars klantverzoeken maken en beheren om toegang te krijgen tot of gegevens te verwijderen uit verschillende Experiencen Cloud, in overeenstemming met de wettelijke privacyregels. |

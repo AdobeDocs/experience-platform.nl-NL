@@ -2,9 +2,9 @@
 title: Gegevensversleuteling in Adobe Experience Platform
 description: Leer hoe gegevens worden gecodeerd tijdens de doorvoer en in rust in Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,8 @@ Als u de CN of SAN wilt controleren voor aanvullende validatie door derden, kunt
 
 - [ het openbare certificaat van Adobe Journey Optimizer ](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
 - [ het openbare certificaat van de Dienst van Doelen ](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
+
+U kunt openbare certificaten ook veilig terugwinnen door een verzoek van de GET tot het eindpunt MTLS te richten. Zie de [ openbare documentatie van het certificaateindpunt ](../../data-governance/mtls-api/public-certificate-endpoint.md) voor meer informatie.
 
 ## Gegevens in rust {#at-rest}
 

@@ -4,9 +4,9 @@ title: HTTP API-verbinding
 description: Gebruik de HTTP API bestemming in Adobe Experience Platform om profielgegevens naar derdeeindpunt van HTTP te verzenden om uw eigen analyses in werking te stellen of andere verrichtingen uit te voeren u op profielgegevens kunt nodig hebben die uit Experience Platform worden uitgevoerd.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: fffeb2221c4e25bae8386419de1646c89aa93a06
 workflow-type: tm+mt
-source-wordcount: '2555'
+source-wordcount: '2580'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,8 @@ Als u [!DNL mTLS] met [!DNL HTTP API] bestemmingen wilt gebruiken, moet het serv
 Als u [!DNL Common Name] (CN) en [!DNL Subject Alternative Names] (SAN) wilt controleren voor extra validatie door derden, kunt u het volgende certificaat downloaden:
 
 * [HTTP API mTLS, openbaar certificaat](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
+
+U kunt openbare certificaten ook veilig terugwinnen door een verzoek van de GET tot het eindpunt MTLS te richten. Zie de [ openbare documentatie van het certificaateindpunt ](../../../data-governance/mtls-api/public-certificate-endpoint.md) voor meer informatie.
 
 ## IP adres lijst van gewenste personen {#ip-address-allowlist}
 
