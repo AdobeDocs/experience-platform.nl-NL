@@ -4,14 +4,20 @@ description: De nieuwste aanvullende informatie voor Adobe Experience Platform D
 keywords: foutopsporing;ervaring met de extensie Foutopsporing in platform;chroom;extensie;releaseopmerkingen
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: c99234cf3f5af9abe590c90fbdefc7d50c1539da
+source-git-commit: 877e38154f6959d50bd0620290c2dce9decfc2b5
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '781'
 ht-degree: 1%
 
 ---
 
 # Opmerkingen bij de release Adobe Experience Platform Debugger
+
+## Versie 1.6.1 - 25 juli 2024
+
+### Oplossingen en verbeteringen
+
+* Probleem verholpen waarbij gebruikers geen nieuwe tags konden toevoegen die codes insloten op pagina&#39;s zonder deze codes.
 
 ## Versie 1.6.0 - 11 juli 2024
 
@@ -31,7 +37,7 @@ ht-degree: 1%
 ### Oplossingen en verbeteringen
 
 * Probleem verholpen waarbij instellingen niet werden behouden.
-* Probleem verholpen waarbij Foutopsporing vastliep tijdens het bekijken van door Analytics Post verwerkte hits.
+* Probleem verholpen waarbij Foutopsporing vastliep tijdens het bekijken van Analytics Nabewerkte hits.
 
 ## Versie 1.5.3 - 6 december 2023
 
