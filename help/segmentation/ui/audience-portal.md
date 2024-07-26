@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
+source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
 workflow-type: tm+mt
-source-wordcount: '3498'
+source-wordcount: '3530'
 ht-degree: 0%
 
 ---
@@ -391,7 +391,9 @@ Nadat u hebt bevestigd dat de gegevens juist zijn, selecteert u **[!UICONTROL Fi
 >
 >Extern gegenereerde doelgroepen hebben standaard een gegevensvervaldatum van 30 dagen. De gegevensvervaldatum wordt opnieuw ingesteld als het publiek op om het even welke manier wordt bijgewerkt of gewijzigd.
 >
->Bovendien, als uw extern geproduceerd publiek gevoelige en/of op gezondheidszorg betrekking hebbende informatie bevat, moet u **** de noodzakelijke etiketten van het gegevensgebruik toepassen alvorens het aan om het even welke bestemming te activeren. Aangezien de variabelen van extern geproduceerd publiek in het gegevensmeer eerder dan binnen het Profiel van de Klant in real time worden opgeslagen, zou u **niet** toestemmingsgegevens binnen uw Csv- dossier moeten omvatten. Voor meer informatie bij het toepassen van de etiketten van het gegevensgebruik, te lezen gelieve de documentatie over [ het leiden etiketten ](../../access-control/abac/ui/labels.md).
+>Bovendien, als uw extern geproduceerd publiek gevoelige en/of op gezondheidszorg betrekking hebbende informatie bevat, moet u **** de noodzakelijke etiketten van het gegevensgebruik toepassen alvorens het aan om het even welke bestemming te activeren. Aangezien de variabelen van extern geproduceerd publiek in het gegevensmeer eerder dan binnen het Profiel van de Klant in real time worden opgeslagen, zou u **niet** toestemmingsgegevens binnen uw Csv- dossier moeten omvatten.
+>
+>Voor meer informatie bij het toepassen van de etiketten van het gegevensgebruik, te lezen gelieve de documentatie over [ het leiden etiketten ](../../access-control/abac/ui/labels.md). Om over de etiketten van het gegevensgebruik op Platform in het algemeen te leren, te lezen gelieve het [ overzicht van de etiketten van het gegevensgebruik ](../../data-governance/labels/overview.md). Om over te leren hoe de toestemming in extern geproduceerd publiek werkt, te lezen gelieve [ FAQ van het publiek ](../faq.md#consent).
 
 ## Volgende stappen
 

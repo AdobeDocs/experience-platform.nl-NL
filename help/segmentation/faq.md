@@ -2,9 +2,9 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 5e677e53677cd28787004043e9fcc9b94e631fc8
+source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
 workflow-type: tm+mt
-source-wordcount: '4167'
+source-wordcount: '4342'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,16 @@ Terwijl het extern geproduceerde publiek kan worden van verwijzingen voorzien wa
 
 Ja, het extern gegenereerde publiek wordt samengevoegd met het bestaande profiel in Platform als de primaire id&#39;s overeenkomen. Het kan 24 uur duren voordat deze gegevens met elkaar in overeenstemming zijn. Als profielgegevens nog niet bestaan, wordt een nieuw profiel gemaakt wanneer de gegevens worden ingevoerd.
 
+### Hoe worden de voorkeur van de klantentoestemming voor extern geproduceerd publiek geëerd dat in het Portaal van het Publiek wordt ingevoerd?{#consent}
+
+Aangezien de klantengegevens van veelvoudige kanalen worden gevangen, staat het identiteit stitching en verenigingsbeleid deze gegevens toe om in één enkel Real-Time Profiel van de Klant te worden geconsolideerd. Informatie over de voorkeuren voor toestemming van klanten wordt opgeslagen en geëvalueerd op profielniveau.
+
+De stroomafwaartse bestemmingen controleren elk profiel toestemmingsinformatie voorafgaand aan activering. De toestemmingsinformatie van elk profiel wordt vergeleken met de toestemmingsvereisten voor een bepaalde bestemming. Als het profiel niet aan de vereisten voldoet, wordt dat profiel niet verzonden naar een bestemming.
+
+Wanneer een extern publiek in het Portaal van de Publiek wordt opgenomen, worden zij aangesloten bij bestaande profielen gebruikend primaire identiteitskaart zoals e-mail of ECID. Als gevolg daarvan zal het bestaande beleid inzake instemming gedurende de hele activering van kracht blijven.
+
+Gelieve te merken op u **** toestemmingsinformatie met een extern geproduceerd publiek niet zou moeten omvatten, aangezien de ladingsvariabelen **niet** in de opslag van het Profiel maar in het gegevensmeer worden opgeslagen. In plaats daarvan, moet u **** een innamekanalen van Adobe Experience Platform gebruiken waar de profielgegevens worden ingevoerd.
+
 ### Kan ik een extern gegenereerd publiek gebruiken om andere soorten publiek op te bouwen?
 
 Ja, zal om het even welk extern geproduceerd publiek binnen de publieksinventaris verschijnen en kan worden gebruikt wanneer het bouwen van publiek binnen de [ Bouwer van het Segment ](./ui/segment-builder.md).
@@ -80,7 +90,7 @@ Het organisatiespecifieke standaard samenvoegingsbeleid wordt automatisch toegep
 
 ### Waar kan ik extern gegenereerde publiek activeren?
 
-Een extern gegenereerd publiek kan aan elke RTCDP-bestemming worden toegewezen en kan in Adobe Journey Optimizer-campagnes worden gebruikt.
+Een extern gegenereerd publiek kan aan elke bestemming worden toegewezen en kan in Adobe Journey Optimizer-campagnes worden gebruikt.
 
 ### Hoe snel zijn extern gegenereerde doelgroepen klaar voor activering?
 
