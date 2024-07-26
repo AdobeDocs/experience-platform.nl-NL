@@ -3,16 +3,16 @@ title: Analytische gebeurtenissen 2.0 in betrouwbaarheid
 description: In deze handleiding wordt uitgelegd hoe u de weergave Adobe Analytics en Analytics Edge kunt gebruiken met Adobe Experience Platform Assurance.
 badgeBeta: label="Beta" type="Informative"
 exl-id: faaa2c1d-3471-4d86-9a25-03265b996e31
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: fcef41a1cf3f082a437e2ceeb9203793c6a20c36
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '918'
 ht-degree: 0%
 
 ---
 
 # Analytische gebeurtenissen 2.0 in betrouwbaarheid
 
-Analytics Events 2.0 verstrekken een rijkere mening van gebeurtenissen SDK aan gebruikers die en hun implementatie van Adobe Analytics zuiveren valideren. De mening toont gebeurtenissen die naar Adobe Analytics van [ worden verzonden Mobiele SDK van Adobe Experience Platform ](https://developer.adobe.com/client-sdks/solution/adobe-analytics/) evenals [ Adobe Experience Platform Edge Network SDK ](https://developer.adobe.com/client-sdks/edge/edge-network/). De weergave bevat ook een deelvenster met details waarin wordt uitgelegd hoe de gebeurtenis is verwerkt door de client-SDK en door de upstreamservices nadat deze het apparaat hebben verlaten.
+Analytics Events 2.0 verstrekt een rijkere mening van gebeurtenissen SDK aan gebruikers die en hun implementatie van Adobe Analytics zuiveren bevestigen. De mening toont gebeurtenissen die naar Adobe Analytics van [ worden verzonden de Edge Network SDK van Adobe Experience Platform ](https://developer.adobe.com/client-sdks/edge/edge-network/) evenals [ Mobiele SDK van Adobe Experience Platform ](https://developer.adobe.com/client-sdks/solution/adobe-analytics/). De weergave bevat ook een deelvenster met details waarin wordt uitgelegd hoe de gebeurtenis is verwerkt door de client-SDK en door de upstream-services nadat het apparaat is verlaten.
 
 ## Aan de slag
 
@@ -22,13 +22,49 @@ Voer de volgende stappen uit om deze weergave te gebruiken:
 2. [ creeer en verbind met een zitting van de Verzekering ](../tutorials/using-assurance.md).
 3. In de Verzekering UI van het linkernavigatie **1} meningsmenu van het Huis {, uitgezochte** Gebeurtenissen 2.0 van de Analyse (Beta) **.** Als u deze optie niet ziet, vormt de uitgezochte **** in de bodem linksonder van het venster, voegt de **Gebeurtenissen 2.0 van de Analyse toe (Beta)**, en selecteert **sparen**.
 
+## Analyse Edge
+
+Gebruik de mening van Edge van Analytics als u **Edge Network** of **Edge Bridge** mobiele uitbreidingen gebruikt. Deze weergave wordt ingeschakeld wanneer de schakeloptie &quot;Analytics Edge (Beta)&quot; rechtsboven wordt geactiveerd en de Analytics-gebeurtenissen worden weergegeven die in de huidige sessie via het Edge-netwerk worden verzonden. Dit omvat alle gebeurtenissen die zijn geactiveerd door de extensie Lifecycle, Edge en/of Edge Bridge.
+
+![ een beeld dat knevel toont die aan de Mening van Edge van Analytics schakelde.](./images/adobe-analytics-edge/edge-analytics-view-toggle.png)
+
+De Edge-weergave Analytics bevat informatie over aan Analytics gerelateerde Edge-gebeurtenissen en Lifecycle-gebeurtenissen die door de client worden verzonden. Door een gebeurtenis in de lijst te kiezen, toont het paneel van de mening van het gebeurtenisdetail op het recht de gebeurtenissen die door de cliënt SDK en door de stroomopwaartse dienst werden verwerkt nadat zij het apparaat verlieten. Dit staat u toe om de ketting van gebeurtenissen gemakkelijk te bekijken die uit een vraag voortvloeiden.
+
+![ een beeld dat verschillende componenten in de Mening van Edge van Analytics voor het scenario van Bridge van Edge aantoont.](./images/adobe-analytics-edge/edgebridge-analytics-events.png)
+
+De **post-Verwerkte gebeurtenis van Gegevens** in de lijst bevestigt dat de gegevens met succes zijn verwerkt en naar Adobe Analytics verzonden. Als deze gebeurtenis of verwerkte gegevens ontbreken, kunnen gebruikers elke gebeurtenis in de lijst uitvouwen om gedetailleerde foutopsporingsinformatie weer te geven.
+
+### De gedetailleerde weergave van Edge-gebeurtenissen analyseren
+
+Voor een Edge request-gebeurtenis of een Analytics-trackgebeurtenis bevat de gedetailleerde weergave de volgende onderdelen:
+
+* Gebeurtenisdetails: een oorspronkelijke SDK-gebeurtenis voor randverzoeken.
+* Edge Bridge Request: een gebeurtenis die uitsluitend bedoeld is voor de Edge Bridge Extension-workflow.
+* DataStream: een gebeurtenis die voor datastream voor deze sessie wordt vertegenwoordigd.
+* Edge Hit Received: Vertegenwoordig de hit die van Edge is ontvangen.
+* Edge Hit Verwerkt: vertegenwoordigt de hit die in Edge is verwerkt.
+* Analytics Hit: Vertegenwoordigt de hit die is ontvangen van Analytics.
+* Analytische toewijzing: de status van de gegevenstoewijzing in Analytics.
+* Analytics Responsed: The response status from Analytics.
+* Nabewerkingsgegevens: informatie over de gebeurtenis die het in kaart brengen van revars, evars en props bevat.
+
+### Analytics Edge Validation
+
+In de validatieweergave van Analytics Edge kunt u de resultaten van validatiescripts voor Analytics Edge eenvoudig zien. Fouten die door validators worden weergegeven, kunnen koppelingen bevatten naar de locatie waar ze moeten worden hersteld of naar weergavegebeurtenissen in een foutstatus.
+
+![ een beeld dat het validatorlusje in de mening van Edge van Analytics toont.](./images/adobe-analytics-edge/edge-analytics-validation-view.png)
+
 ## Weergave Analytische gebeurtenissen
 
-Gebruik de Mening van de Gebeurtenis van de Analyse als u de **mobiele uitbreiding van Adobe Analytics** gebruikt. In deze weergave kunt u gemakkelijk de gebeurtenissen Analytics weergeven die u van de verbonden client hebt verzonden, zoals gebeurtenissen Track Action, Track State en Lifecycle. Als u een van de Analytics-gebeurtenissen in de tabel selecteert, kunt u in het rechterdeelvenster details bekijken over de manier waarop de gebeurtenis is verwerkt.
+Gebruik de Mening van de Gebeurtenis van de Analyse als u de **mobiele uitbreiding van Adobe Analytics** gebruikt. In deze weergave kunt u gemakkelijk de gebeurtenissen Analytics zien die van uw verbonden client zijn verzonden, waaronder gebeurtenissen Track Action, Track State en Lifecycle. Deze weergave is actief terwijl de schakeloptie Analytics Edge (Beta) rechtsboven is uitgeschakeld.
+
+![ een beeld dat knevel toont die aan de Mening van Analytics schakelde.](./images/adobe-analytics-edge/direct-analytics-view-toggle-button.png)
+
+Als u een van de Analytics-gebeurtenissen in de gebeurtenissentabel selecteert, kunt u in het rechterdeelvenster details bekijken over de manier waarop de gebeurtenis is verwerkt.
 
 ![ een beeld dat verschillende componenten in de Mening van de Gebeurtenissen van Analytics aantoont.](./images/adobe-analytics-edge/analytics-events.png)
 
-### Post-status
+### Status na verwerking
 
 Nadat SDK een netwerkverzoek indient met Adobe Analytics, zal de status u vertellen als de Verzekering de naverwerkingsinformatie voor het verzoek van Adobe Analytics kon terugwinnen. De weergave Analytische gebeurtenissen moet actief blijven terwijl de status nabewerking actief is nadat het verzoek is geactiveerd.
 
@@ -49,28 +85,12 @@ Houd er rekening mee dat de aangemelde gebruiker toegang moet hebben tot de bijb
 
 Voor een gebeurtenis in de track Analytics bevat de gedetailleerde weergave de volgende onderdelen:
 
-- Een oorspronkelijke SDK Analytics-aanvraaggebeurtenis.
-- Meta- en contextgegevens van de aanvraag, zoals id van de rapportsuite, SDK-extensieversies en contextgegevens.
-- Post-verwerkte informatie over de gebeurtenis Analytics die het in kaart brengen van revars, evars, en props bevat.
+* Een oorspronkelijke SDK Analytics-aanvraaggebeurtenis.
+* Meta- en contextgegevens van de aanvraag, zoals id van de rapportsuite, SDK-extensieversies en contextgegevens.
+* Nabewerkte informatie over de gebeurtenis Analytics die het in kaart brengen van revars, evars, en props bevat.
 
 ### Validatie van analyseweergave
 
 In de validatieweergave kunt u gemakkelijk de resultaten bekijken van validatiescripts die betrekking hebben op Analytics. Fouten die door validators worden weergegeven, kunnen koppelingen bevatten naar de locatie waar ze moeten worden hersteld of naar weergavegebeurtenissen in een foutstatus.
 
 ![ een beeld dat het validatorlusje in de mening van Analytics toont.](./images/adobe-analytics-edge/analytics-validation-view.png)
-
-## Analyse Edge
-
-Gebruik de mening van Edge van Analytics als u **Edge Network** of **Edge Bridge** mobiele uitbreidingen gebruikt. U schakelt deze weergave in door de schakeloptie &quot;Analytics Edge (Beta)&quot; in de rechterbovenhoek te selecteren om de Analytics-gebeurtenissen te bekijken die via het Edge-netwerk in de huidige sessie zijn verzonden. Dit omvat alle gebeurtenissen die zijn geactiveerd door de Lifecycle-extensie, Edge-verzoeken en/of Edge Bridge-gebeurtenissen op basis van Actie bijhouden en Status bijhouden.
-
-![ een beeld dat knevel toont die voor omschakeling tussen de Mening van de Analyse en de Mening van Edge van Analytics gebruikte.](./images/adobe-analytics-edge/analytics-view-toggle.png)
-
-De weergave Analytics Edge bevat informatie over Edge-verzoeken en levenscyclusmethoden die door de client worden verzonden en die betrekking hebben op Analytics. Door een gebeurtenis in de lijst te kiezen, toont het juiste paneel de gebeurtenissen die door de cliënt SDK, evenals door de stroomopwaartse dienst werden verwerkt nadat zij het apparaat verlieten, zodat kunt u de ketting van gebeurtenissen gemakkelijk bekijken die uit een vraag voortkwamen.
-
-![ een beeld dat verschillende componenten in de Mening van Edge van Analytics aantoont.](./images/adobe-analytics-edge/edge-analytics-events.png)
-
-### Analytics Edge Validation
-
-In de validatieweergave van Analytics Edge kunt u de resultaten van validatiescripts voor Analytics Edge eenvoudig bekijken. Fouten die door validators worden weergegeven, kunnen koppelingen bevatten naar de locatie waar ze moeten worden hersteld of naar weergavegebeurtenissen in een foutstatus.
-
-![ een beeld dat het validatorlusje in de mening van Edge van Analytics toont.](./images/adobe-analytics-edge/edge-analytics-validation-view.png)
