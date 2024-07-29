@@ -3,9 +3,9 @@ title: Overzicht Snowflake Source Connector
 description: Leer hoe u Snowflake met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 8b0f6eca87deedd8090830e3375d5099bfb0dfc0
+source-git-commit: 8d6baef1549498e137d336ac2c8a42428496dedf
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,82 @@ ht-degree: 0%
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
 Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Het platform kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. Ondersteuning voor databaseproviders is onder andere [!DNL Snowflake] .
+
+## Vereisten {#prerequisites}
+
+In deze sectie worden de instellingstaken beschreven die u moet uitvoeren voordat u de [!DNL Snowflake] -bron kunt verbinden met het Experience Platform.
+
+### Uw account-id ophalen {#retrieve-your-account-identifier}
+
+U moet uw account-id ophalen van het [!DNL Snowflake] UI-dashboard omdat u de account-id gebruikt om uw [!DNL Snowflake] -instantie op het Experience Platform te verifiëren.
+
+Uw account-id ophalen:
+
+* Navigeer aan uw rekening op het [[!DNL Snowflake]  toepassingsUI dashboard ](https://app.snowflake.com/).
+* Selecteer in de linkernavigatie **[!DNL Accounts]** , gevolgd door **[!DNL Active Accounts]** in de koptekst.
+* Selecteer vervolgens het informatiepictogram en selecteer en kopieer de domeinnaam van de huidige URL.
+
+![ het dashboard van Snowflake UI met de geselecteerde domeinnaam.](../../images/tutorials/create/snowflake/snowflake-dashboard.png)
+
+### Persoonlijke sleutel ophalen {#retrieve-your-private-key}
+
+Als u sleutelparverificatie gebruikt voor uw [!DNL Snowflake] -verbinding, moet u ook uw persoonlijke sleutel genereren voordat u verbinding maakt met het Experience Platform.
+
+>[!BEGINTABS]
+
+>[!TAB  creeer een gecodeerde privé sleutel ]
+
+Voer de volgende opdracht op uw terminal uit om de gecodeerde [!DNL Snowflake] persoonlijke sleutel te genereren:
+
+```shell
+openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
+```
+
+Als dit lukt, ontvangt u de persoonlijke sleutel in de PEM-indeling.
+
+```shell
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+MIIE6T...
+-----END ENCRYPTED PRIVATE KEY-----
+```
+
+>[!TAB  creeer een niet gecodeerde privé sleutel ]
+
+Als u de niet-gecodeerde [!DNL Snowflake] persoonlijke sleutel wilt genereren, voert u de volgende opdracht uit op uw terminal:
+
+```shell
+openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
+```
+
+Als dit lukt, ontvangt u de persoonlijke sleutel in de PEM-indeling.
+
+```shell
+-----BEGIN PRIVATE KEY-----
+MIIE6T...
+-----END PRIVATE KEY-----
+```
+
+>[!ENDTABS]
+
+Neem vervolgens uw persoonlijke sleutel en codeer deze in [!DNL Base64] . Zorg ervoor dat u geen transformaties of opmaakconversies uitvoert op de persoonlijke sleutel van [!DNL Snowflake] . Bovendien moet u ervoor zorgen dat er geen navolgende nieuwe-regeltekens aan het einde van de persoonlijke sleutel staan voordat u deze codeert in [!DNL Base64] .
+
+### Configuraties verifiëren
+
+Voordat u een bronverbinding voor uw [!DNL Snowflake] gegevens kunt maken, moet u ook controleren of aan de volgende configuraties is voldaan:
+
+* Het standaardpakhuis dat aan een bepaalde gebruiker wordt toegewezen moet het zelfde zijn als het pakhuis dat u wanneer het voor authentiek verklaren aan Experience Platform invoert.
+* De standaardrol die aan een bepaalde gebruiker wordt toegewezen moet toegang tot het zelfde gegevensbestand hebben dat u wanneer het voor authentiek verklaren aan Experience Platform invoert.
+
+Om uw rol en pakhuis te verifiëren:
+
+* Selecteer **[!DNL Admin]** in de linkernavigatie en selecteer vervolgens **[!DNL Users & Roles]** .
+* Selecteer de juiste gebruiker en selecteer vervolgens de ellipsen (`...`) in de rechterbovenhoek.
+* Navigeer in het [!DNL Edit user] -venster dat wordt weergegeven naar [!DNL Default Role] om de rol weer te geven die aan de opgegeven gebruiker is gekoppeld.
+* Navigeer in hetzelfde venster naar [!DNL Default Warehouse] om het pakhuis weer te geven dat aan de opgegeven gebruiker is gekoppeld.
+
+![ de Snowflake UI waar u uw rol en pakhuis kunt verifiëren.](../../images/tutorials/create/snowflake/snowflake-configs.png)
+
+Nadat de codering is voltooid, kunt u die [!DNL Base64] gecodeerde persoonlijke sleutel op het Experience Platform gebruiken om uw [!DNL Snowflake] -account te verifiëren.
 
 ## IP adres lijst van gewenste personen
 

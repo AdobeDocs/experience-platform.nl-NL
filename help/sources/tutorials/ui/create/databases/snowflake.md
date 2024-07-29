@@ -4,10 +4,10 @@ type: Tutorial
 description: Leer hoe u een Snowflake-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 4de2193a45fc2925af310b5e2475eabe26d13adc
+source-git-commit: d89e0c81bd250e41a863b8b28d358cc6ddea1c37
 workflow-type: tm+mt
-source-wordcount: '768'
-ht-degree: 0%
+source-wordcount: '774'
+ht-degree: 2%
 
 ---
 
@@ -36,7 +36,7 @@ U moet waarden opgeven voor de volgende referentie-eigenschappen om de [!DNL Sno
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| Account | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor verschillende [!DNL Snowflake] -organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name` . Voor meer informatie over rekeningsnamen, lees de [!DNL Snowflake] documentatie over [ rekeningsherkenningstekens ](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| Account | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor verschillende [!DNL Snowflake] -organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name` . Lees de gids bij [ het terugwinnen van uw  [!DNL Snowflake]  rekeningsherkenningsteken ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) voor extra begeleiding. Raadpleeg voor meer informatie de [[!DNL Snowflake] documentatie](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | Warehouse | Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd wanneer u gegevens naar Platform overbrengt. |
 | Database | De [!DNL Snowflake] -database bevat de gegevens die u voor het platform wilt gebruiken. |
 | Gebruikersnaam | De gebruikersnaam voor de [!DNL Snowflake] -account. |
@@ -50,9 +50,9 @@ Als u sleutelparverificatie wilt gebruiken, moet u een 2048-bits RSA-sleutelpaar
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Account | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor verschillende [!DNL Snowflake] -organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name` . Voor meer informatie over rekeningsnamen, lees de [!DNL Snowflake] documentatie over [ rekeningsherkenningstekens ](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| Account | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor verschillende [!DNL Snowflake] -organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name` . Lees de gids bij [ het terugwinnen van uw  [!DNL Snowflake]  rekeningsherkenningsteken ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) voor extra begeleiding. Raadpleeg voor meer informatie de [[!DNL Snowflake] documentatie](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | Gebruikersnaam | De gebruikersnaam van uw [!DNL Snowflake] -account. |
-| Persoonlijke sleutel | De [!DNL Base64-] gecodeerde privé sleutel van uw [!DNL Snowflake] rekening. U kunt gecodeerde of niet-gecodeerde persoonlijke sleutels genereren. Als u een gecodeerde persoonlijke sleutel gebruikt, moet u ook een persoonlijke-sleutelwachtwoord opgeven wanneer u verificatie uitvoert op basis van een Experience Platform. |
+| Persoonlijke sleutel | De [!DNL Base64-] gecodeerde privé sleutel van uw [!DNL Snowflake] rekening. U kunt gecodeerde of niet-gecodeerde persoonlijke sleutels genereren. Als u een gecodeerde persoonlijke sleutel gebruikt, moet u ook een persoonlijke-sleutelwachtwoord opgeven wanneer u verificatie uitvoert op basis van een Experience Platform. Lees de gids op [ het terugwinnen van uw  [!DNL Snowflake]  privé sleutel ](../../../../connectors/databases/snowflake.md) voor meer informatie. |
 | Wachtwoordgroep voor persoonlijke sleutel | Persoonlijke sleutel passphrase is een extra laag van veiligheid die u moet gebruiken wanneer het voor authentiek verklaren met een gecodeerde privé sleutel. U hoeft de wachtwoordzin niet op te geven als u een niet-gecodeerde persoonlijke sleutel gebruikt. |
 | Database | De [!DNL Snowflake] -database die de gegevens bevat die u aan het Experience Platform wilt toevoegen. |
 | Warehouse | Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd wanneer u gegevens naar Platform overbrengt. |
@@ -60,8 +60,6 @@ Als u sleutelparverificatie wilt gebruiken, moet u een 2048-bits RSA-sleutelpaar
 Voor meer informatie over deze waarden, verwijs naar [ dit document van Snowflake ](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 >[!ENDTABS]
-
-Om tot uw rekening van de Snowflake op Experience Platform toegang te hebben, moet u de volgende authentificatiewaarde verstrekken:
 
 >[!NOTE]
 >
