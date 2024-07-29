@@ -2,9 +2,9 @@
 description: Gebruik publieksmetagegevenssjablonen om publiek in uw bestemming programmatisch te maken, bij te werken of te verwijderen. Adobe verstrekt een verlengbaar malplaatje van publieksmeta-gegevens, dat u kunt vormen gebaseerd op de specificaties van uw marketing API. Nadat u het malplaatje bepaalt, test en voorlegt, zal het door Adobe worden gebruikt om de API vraag aan uw bestemming te structureren.
 title: Metagegevensbeheer voor het publiek
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
+source-git-commit: 6c4a2f9f6b338ec03b99ee1d7e91f7d9c0347b08
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
@@ -53,11 +53,10 @@ U kunt het generische malplaatje gebruiken om [ een nieuw publiekssjabloon ](../
 
 Het technische team van de Adobe kan met u werken om het generische malplaatje met douanevelden uit te breiden als uw gebruiksgevallen het vereisen.
 
-## Configuratievoorbeelden {#configuration-examples}
 
-Deze sectie omvat drie voorbeelden van generische configuraties van publieksmeta-gegevens, voor uw verwijzing, samen met beschrijvingen van de belangrijkste secties van de configuratie. U ziet dat de URL, kopteksten, verzoeken en antwoorden verschillen tussen de drie voorbeeldconfiguraties. Dit komt door de verschillende specificaties van de marketing-API van de drie voorbeeldplatforms.
+## Ondersteunde sjabloongebeurtenissen {#supported-events}
 
-In sommige voorbeelden worden macrovelden zoals `{{authData.accessToken}}` of `{{segment.name}}` gebruikt in de URL. In andere voorbeelden worden deze gebruikt in de kopteksten of in de aanvraagtekst. Dit hangt echt af van uw API-specificaties voor marketing.
+In de onderstaande tabel worden de gebeurtenissen beschreven die door publiekmetagegevenssjablonen worden ondersteund.
 
 | Sjabloonsectie | Beschrijving |
 |--- |--- |
@@ -66,10 +65,21 @@ In sommige voorbeelden worden macrovelden zoals `{{authData.accessToken}}` of `{
 | `delete` | Omvat alle vereiste componenten (URL, methode HTTP, kopballen, verzoek en reactielichaam) om een vraag van HTTP aan uw API te maken, segmenten/publiek in uw platform programmatically te schrappen. |
 | `validate` | Voert bevestigingen voor om het even welke gebieden in de malplaatjeconfiguratie in werking alvorens een vraag aan partner API te maken. U kunt bijvoorbeeld controleren of de account-id van de gebruiker correct is ingevoerd. |
 | `notify` | Is alleen van toepassing op doelen die op bestanden zijn gebaseerd. Bevat alle vereiste componenten (URL, HTTP-methode, headers, request en response body) om een HTTP-aanroep naar de API uit te voeren, zodat u op de hoogte wordt gebracht van het exporteren van bestanden. |
+| `createDestination` | Bevat alle vereiste componenten (URL, HTTP-methode, headers, request en response body) om een HTTP-aanroep naar uw API uit te voeren, om programmatisch een dataflow in uw platform te maken en de informatie weer te synchroniseren naar Adobe Experience Platform. |
+| `updateDestination` | Bevat alle vereiste componenten (URL, HTTP-methode, headers, request en response body) om een HTTP-aanroep naar uw API uit te voeren, een gegevensstroom in uw platform programmatisch bij te werken en de informatie weer te synchroniseren naar Adobe Experience Platform. |
+| `deleteDestination` | Bevat alle vereiste componenten (URL, HTTP-methode, headers, request en response body) om een HTTP-aanroep naar de API uit te voeren, om een gegevensstroom via programmacode van het platform te verwijderen. |
 
 {style="table-layout:auto"}
 
-### Streaming voorbeeld 1 {#example-1}
+## Configuratievoorbeelden {#configuration-examples}
+
+Deze sectie omvat voorbeelden van generische configuraties van publieksmeta-gegevens, voor uw verwijzing.
+
+U ziet dat de URL, kopteksten en aanvraagorganen verschillen tussen de drie voorbeeldconfiguraties. Dit komt door de verschillende specificaties van de marketing-API van de drie voorbeeldplatforms.
+
+In sommige voorbeelden worden macrovelden zoals `{{authData.accessToken}}` of `{{segment.name}}` gebruikt in de URL. In andere voorbeelden worden deze gebruikt in de kopteksten of in de aanvraagtekst. Het gebruik ervan hangt af van uw API-specificaties voor marketing.
+
++++Streaming, voorbeeld 1
 
 ```json
 {
@@ -178,7 +188,9 @@ In sommige voorbeelden worden macrovelden zoals `{{authData.accessToken}}` of `{
 }
 ```
 
-### Streaming voorbeeld 2 {#example-2}
++++
+
++++Streaming, voorbeeld 2
 
 ```json
 {
@@ -272,7 +284,9 @@ In sommige voorbeelden worden macrovelden zoals `{{authData.accessToken}}` of `{
 }
 ```
 
-### Streaming voorbeeld 3 {#example-3}
++++
+
++++Streaming, voorbeeld 3
 
 ```json
 {
@@ -374,8 +388,9 @@ In sommige voorbeelden worden macrovelden zoals `{{authData.accessToken}}` of `{
 }
 ```
 
++++
 
-### Voorbeeld op basis van bestand {#example-file-based}
++++Op bestand gebaseerd voorbeeld
 
 ```json
 {
@@ -521,6 +536,8 @@ In sommige voorbeelden worden macrovelden zoals `{{authData.accessToken}}` of `{
 }
 ```
 
++++
+
 De beschrijvingen van de vondst van alle parameters in het malplaatje in [ leiden tot een kijkmalplaatje ](../metadata-api/create-audience-template.md) API verwijzing.
 
 ## Macro&#39;s die in publieksmeta-gegevensmalplaatjes worden gebruikt {#macros}
@@ -537,5 +554,12 @@ Om informatie zoals publiek IDs, toegangstoken, foutenmeldingen, en meer tussen 
 | `{{authData.accessToken}}` | Staat u toe om het toegangstoken tot uw API eindpunt over te gaan. Gebruik `{{authData.accessToken}}` als Experience Platform niet-vervallende tokens moet gebruiken om verbinding te maken met uw doel, anders gebruikt u `{{oauth2ServiceAccessToken}}` om een toegangstoken te genereren. |
 | `{{body.segments[0].segment.id}}` | Retourneert de unieke id van het gemaakte publiek als de waarde van de sleutel `externalAudienceId` . |
 | `{{error.message}}` | Retourneert een foutbericht dat wordt weergegeven aan gebruikers in de gebruikersinterface van het Experience Platform. |
+| `{{{segmentEnrichmentAttributes}}}` | Hiermee krijgt u toegang tot alle verrijkingskenmerken voor een bepaald publiek.  Deze macro wordt ondersteund door de gebeurtenissen `create` , `update` en `delete` . De attributen van de verrijking zijn beschikbaar slechts voor [ douane uploadt publiek ](destination-configuration/schema-configuration.md#external-audiences). Zie de [ gids van de de activering van het partijpubliek ](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) om te zien hoe de selectie van de verrijkingsattributen werkt. |
+| `{{destination.name}}` | Retourneert de naam van uw doel. |
+| `{{destination.sandboxName}}` | Retourneert de naam van de sandbox van het Experience Platform waarin uw doel is geconfigureerd. |
+| `{{destination.id}}` | Keert identiteitskaart van uw bestemmingsconfiguratie terug. |
+| `{{destination.imsOrgId}}` | Retourneert de IMS Org-id waar uw doel is geconfigureerd. |
+| `{{destination.enrichmentAttributes}}` | Hiermee krijgt u toegang tot alle verrijkingskenmerken voor alle soorten publiek die aan een doel zijn toegewezen. Deze macro wordt ondersteund door de gebeurtenissen `createDestination` , `updateDestination` en `deleteDestination` . De attributen van de verrijking zijn beschikbaar slechts voor [ douane uploadt publiek ](destination-configuration/schema-configuration.md#external-audiences). Zie de [ gids van de de activering van het partijpubliek ](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) om te zien hoe de selectie van de verrijkingsattributen werkt. |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Hiermee krijgt u toegang tot verrijkingskenmerken voor specifieke externe doelgroepen. De attributen van de verrijking zijn beschikbaar slechts voor [ douane uploadt publiek ](destination-configuration/schema-configuration.md#external-audiences). Zie de [ gids van de de activering van het partijpubliek ](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) om te zien hoe de selectie van de verrijkingsattributen werkt. |
 
 {style="table-layout:auto"}
