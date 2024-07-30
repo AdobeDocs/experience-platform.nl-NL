@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Overzicht van segmentatieservice
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1700'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,14 @@ Voor informatie bij de bouw van segmentdefinities die API gebruiken, zie het lee
 >Als een schema wordt uitgebreid, moeten alle toekomstige uploads nieuwe toegevoegde gebieden dienovereenkomstig bijwerken. Voor meer informatie bij het aanpassen [!DNL Experience Data Model] (XDM), bezoek het [ leerprogramma van de Redacteur van het Schema ](../xdm/tutorials/create-schema-ui.md).
 >
 >Bovendien, als een de vervalwaarde van de Gebeurtenis van de Ervaring op de dataset wordt toegelaten, zou dit het lidmaatschap van de gecreeerde segmentdefinitie kunnen beïnvloeden. Gelieve te lezen de gids over [ Verlopen van de Gebeurtenis van de Ervaring ](../profile/event-expirations.md) voor meer informatie over hoe deze eigenschap segmentatie kan beïnvloeden.
+
+### Federale compositie publiek {#fac}
+
+Naast publiekssamenstellingen en segmentdefinities, kunt u Adobe Federated Audience Composition gebruiken om nieuwe doelgroepen van ondernemingsdatasets te bouwen zonder onderliggende gegevens te kopiëren en die doelgroepen op te slaan in het Portaal van het Publiek van Adobe Experience Platform. U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+>[!AVAILABILITY]
+>
+>Federated Audience Composition is momenteel alleen beschikbaar voor een set organisaties (beperkte beschikbaarheid). Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger.
 
 ## Soorten publiek evalueren {#evaluate-segments}
 

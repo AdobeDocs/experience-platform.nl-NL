@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
 workflow-type: tm+mt
-source-wordcount: '3530'
+source-wordcount: '3631'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,7 @@ Binnen het Portaal van de Publiek, kunt u de volgende taken verwezenlijken:
 - [Een publiek maken](#create-audience)
    - [Gebruik Segment Builder om een publiek te maken](#segment-builder)
    - [Gebruik Audience Composition om een publiek te maken](#audience-composition)
+   - [ De Federatieve Samenstelling van het publiek van het Gebruik om een publiek tot stand te brengen gebruikend gegevens van uw bestaand gegevenspakhuis ](#fac) (Beperkte beschikbaarheid)
 - [Extern gegenereerde soorten publiek importeren](#import-audience)
 
 Als u Poort publiek wilt openen, selecteert u het tabblad **[!UICONTROL Browse]** in de sectie Segmentatie.
@@ -339,6 +340,12 @@ Als u **[!UICONTROL Compose audiences]** selecteert, gaat u naar Audience Compos
 Als u **[!UICONTROL Build rule]** selecteert, gaat u naar de Segment Builder. Deze werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van segmentdefinities, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen. Om meer over het creëren van segmentdefinities te leren, te lezen gelieve de [ gids van de Bouwer van het Segment ](./segment-builder.md)
 
 ![ de werkruimte van de Bouwer van het Segment wordt getoond.](../images/ui/audience-portal/segment-builder.png)
+
+### Federale compositie publiek {#fac}
+
+Naast publiekssamenstellingen en segmentdefinities, kunt u Adobe Federated Audience Composition gebruiken om nieuwe doelgroepen van ondernemingsdatasets te bouwen zonder onderliggende gegevens te kopiëren en die doelgroepen op te slaan in het Portaal van het Publiek van Adobe Experience Platform. U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+![ een lijst van publiek dat in Federatieve Samenstelling van het Publiek voor uw organisatie wordt gecreeerd.](../images/ui/overview/federated-audience-composition.png)
 
 ## Een publiek importeren {#import-audience}
 

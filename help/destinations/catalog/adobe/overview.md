@@ -3,9 +3,9 @@ keywords: bestemmingen;ervaring cloudoplossingen; doel;doelbestemming; en wolk; 
 title: Overzicht van Adobe doelen
 description: Beheer uw klantervaring door uw gegevens in Platform te verbinden met andere Adobe Experience Cloud-oplossingen voor doelgerichte toepassingen, personalisatie, automatisering van marketing en meer
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,7 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbind
 * [(Beta) Experience Cloud publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Verbinding met Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md)
 * [Marketo Measure Ultimate-verbinding](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
+* [ Federated de verbinding van de Samenstelling van het publiek ](https://www.adobe.com/go/destinations-federated-audience-composition) {target="_blank"} (Beperkte beschikbaarheid)
 
 ### Extensies
 

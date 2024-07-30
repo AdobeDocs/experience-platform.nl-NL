@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '1025'
 ht-degree: 0%
 
 ---
@@ -89,6 +89,12 @@ Er wordt een pop-up weergegeven met alle velden die in de tabel kunnen worden we
 Als u wilt zien hoe de doelgroep wordt samengesteld, selecteert u de naam van een publiek in het tabblad [!UICONTROL Audiences] .
 
 De pagina van de Samenstelling van het Publiek verschijnt met de bouwstenen die uw publiek vormen. Voor meer details over hoe te om de Samenstelling van het Publiek te gebruiken, te lezen gelieve de [ gids UI van de Samenstelling van het Publiek ](./audience-composition.md).
+
+## Federale compositie publiek {#fac}
+
+Naast publiekssamenstellingen en segmentdefinities, kunt u Adobe Federated Audience Composition gebruiken om nieuwe doelgroepen van ondernemingsdatasets te bouwen zonder onderliggende gegevens te kopiëren en die doelgroepen op te slaan in het Portaal van het Publiek van Adobe Experience Platform. U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+![ een lijst van publiek dat in Federatieve Samenstelling van het Publiek voor uw organisatie wordt gecreeerd.](../images/ui/overview/federated-audience-composition.png)
 
 ## Streaming segmentering {#streaming-segmentation}
 

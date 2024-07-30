@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 82e9263293462a223b635e828b95cb2b098886c7
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1248'
 ht-degree: 1%
 
 ---
@@ -65,6 +65,7 @@ ht-degree: 1%
       * [Verbinding met Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate-verbinding](./catalog/adobe/marketo-measure-ultimate.md)
       * [ Experience Platform publiek het delen ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [ Federated de verbinding van de Samenstelling van het publiek (Beperkte beschikbaarheid) ](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising-bestemmingen {#advertising}
       * [Overzicht Advertising-bestemmingen](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-verbinding](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -141,7 +142,7 @@ ht-degree: 1%
       * [Verbinding buiten bereik](catalog/crm/outreach.md)
       * [Zendesk-verbinding](catalog/crm/zendesk.md)
    * Doelen van het Platform voor gegevensbeheer {#data-management}
-      * [Overzicht van DMP-doelen (Data Management Platform)](./catalog/data-management/overview.md)
+      * [Overzicht van bestemmingen in het Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Audience Manager DIL-extensie](./catalog/data-management/aam-dil-extension.md)
       * [Zeta Marketing Platform](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
    * Partner voor gegevens en identiteit {#data-partner}
