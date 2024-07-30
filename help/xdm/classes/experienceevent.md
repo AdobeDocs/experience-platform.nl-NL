@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent-klasse
 description: Leer meer over de klasse XDM ExperienceEvent en best practices voor het modelleren van gebeurtenisgegevens.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 5537485206c1625ca661d6b33f7bba08538a0fa3
 workflow-type: tm+mt
-source-wordcount: '2623'
+source-wordcount: '2712'
 ht-degree: 0%
 
 ---
@@ -105,6 +105,7 @@ In de volgende tabel worden de toegestane waarden voor `eventType` weergegeven, 
 | `advertising.timePlayed` | Deze gebeurtenis houdt de hoeveelheid tijd bij die een gebruiker aan een specifiek getimed media middel doorbrengt. |
 | `application.close` | Deze gebeurtenis volgt wanneer een toepassing werd gesloten of op de achtergrond werd verzonden. |
 | `application.launch` | Deze gebeurtenis wordt bijgehouden wanneer een toepassing werd gestart of op de voorgrond werd geplaatst. |
+| `click` | **Vervangen** Gebruik in plaats daarvan `decisioning.propositionInteract`. |
 | `commerce.backofficeCreditMemoIssued` | Deze gebeurtenis volgt wanneer een kredietkennisgeving aan een klant is uitgegeven. |
 | `commerce.backofficeOrderCancelled` | Deze gebeurtenis volgt wanneer een eerder geïnitieerd aankoopproces vóór voltooiing is geëindigd. |
 | `commerce.backofficeOrderItemsShipped` | Deze gebeurtenis volgt wanneer de aangeschafte items fysiek naar de klant zijn verzonden. |
@@ -119,11 +120,12 @@ In de volgende tabel worden de toegestane waarden voor `eventType` weergegeven, 
 | `commerce.productViews` | Deze gebeurtenis wordt bijgehouden wanneer een product een of meer weergaven heeft ontvangen. |
 | `commerce.purchases` | Deze gebeurtenis volgt wanneer een bestelling is geaccepteerd. Dit is de enige vereiste actie in een commerciële omschakeling. Er moet naar een aankoopgebeurtenis worden verwezen in een productlijst. |
 | `commerce.saveForLaters` | Deze gebeurtenis wordt bijgehouden wanneer een productlijst voor toekomstig gebruik is opgeslagen, zoals een verlanglijst van het product. |
-| `decisioning.propositionDisplay` | Deze gebeurtenis volgt wanneer een beslissingsvoorstel aan een persoon werd getoond. |
-| `decisioning.propositionDismiss` | Deze gebeurtenis volgt wanneer is besloten om zich niet aan de voorgestelde aanbieding te houden. |
-| `decisioning.propositionInteract` | Deze gebeurtenis volgt wanneer een persoon met een beslissingsvoorstel interactie heeft gehad. |
+| `decisioning.propositionDisplay` | Deze gebeurtenis wordt gebruikt wanneer SDK van het Web automatisch informatie over verzendt wat op een pagina wordt getoond. U hebt dit gebeurtenistype echter niet nodig als u al op andere manieren weergavegegevens opneemt, zoals bij boven- en onderaan pagina-hits. Onder aan pagina-hits kunt u elk gewenst gebeurtenistype kiezen. |
+| `decisioning.propositionDismiss` | Dit gebeurtenistype wordt gebruikt wanneer een Adobe Journey Optimizer-bericht in de toepassing of een inhoudskaart wordt gesloten. |
+| `decisioning.propositionFetch` | Wordt gebruikt om aan te geven dat een gebeurtenis voornamelijk bedoeld is om beslissingen op te halen. Adobe Analytics zet deze gebeurtenis automatisch neer. |
+| `decisioning.propositionInteract` | Dit gebeurtenistype wordt gebruikt om interacties, zoals kliks, op gepersonaliseerde inhoud te volgen. |
 | `decisioning.propositionSend` | Deze gebeurtenis volgt wanneer is besloten om een aanbeveling of een aanbieding onder bezwarende titel naar een potentiële klant te sturen. |
-| `decisioning.propositionTrigger` | Deze gebeurtenis houdt de activering van een propositieproces bij. Er is een bepaalde voorwaarde of handeling opgetreden om de presentatie van een aanbieding te vragen. |
+| `decisioning.propositionTrigger` | De gebeurtenissen van dit type worden opgeslagen in lokale opslag door [ Web SDK ](../../web-sdk/home.md) maar worden niet verzonden naar de Ervaring Edge. Telkens wanneer aan een liniaal wordt voldaan, wordt een gebeurtenis gegenereerd en lokaal opgeslagen (als die instelling is ingeschakeld). |
 | `delivery.feedback` | Deze gebeurtenis houdt feedbackgebeurtenissen bij voor een levering, zoals een e-maillevering. |
 | `directMarketing.emailBounced` | Deze gebeurtenis wordt bijgehouden wanneer een e-mail naar een persoon wordt teruggestuurd. |
 | `directMarketing.emailBouncedSoft` | Deze gebeurtenis wordt bijgehouden wanneer een e-mail naar een persoon met een elektronische vorm wordt verzonden. |
@@ -132,6 +134,7 @@ In de volgende tabel worden de toegestane waarden voor `eventType` weergegeven, 
 | `directMarketing.emailOpened` | Deze gebeurtenis wordt bijgehouden wanneer een persoon een marketingbericht heeft geopend. |
 | `directMarketing.emailSent` | Deze gebeurtenis wordt bijgehouden wanneer een marketingbericht naar een persoon is verzonden. |
 | `directMarketing.emailUnsubscribed` | Deze gebeurtenis wordt bijgehouden wanneer een persoon zich niet meer heeft geabonneerd op een marketingmail. |
+| `display` | **Vervangen** Gebruik in plaats daarvan `decisioning.propositionDisplay`. |
 | `inappmessageTracking.dismiss` | Deze gebeurtenis wordt bijgehouden wanneer een bericht in de app is gesloten. |
 | `inappmessageTracking.display` | Deze gebeurtenis wordt bijgehouden wanneer een bericht in de app werd weergegeven. |
 | `inappmessageTracking.interact` | Deze gebeurtenis wordt bijgehouden wanneer er interactie plaatsvindt tussen een bericht in de app. |
@@ -146,33 +149,34 @@ In de volgende tabel worden de toegestane waarden voor `eventType` weergegeven, 
 | `leadOperation.statusInCampaignProgressionChanged` | Deze gebeurtenis wordt bijgehouden wanneer de status van een lead in een campagne is gewijzigd. |
 | `listOperation.addToList` | Deze gebeurtenis volgt wanneer een persoon aan een marketing lijst werd toegevoegd. |
 | `listOperation.removeFromList` | Deze gebeurtenis volgt wanneer een persoon uit een marketinglijst werd verwijderd. |
-| `media.adBreakComplete` | Deze gebeurtenis volgt wanneer een `adBreakComplete` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis wordt geactiveerd aan het begin van een advertentie-einde. |
-| `media.adBreakStart` | Deze gebeurtenis volgt wanneer een `adBreakStart` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis wordt geactiveerd aan het einde van een advertentie-einde. |
-| `media.adComplete` | Deze gebeurtenis volgt wanneer een `adComplete` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis wordt geactiveerd wanneer een advertentie is voltooid. |
-| `media.adSkip` | Deze gebeurtenis volgt wanneer een `adSkip` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis wordt geactiveerd wanneer een advertentie is overgeslagen. |
-| `media.adStart` | Deze gebeurtenis volgt wanneer een `adStart` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis wordt geactiveerd wanneer een advertentie is gestart. |
-| `media.bitrateChange` | Deze gebeurtenis volgt wanneer een `bitrateChange` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis wordt geactiveerd wanneer de bitsnelheid wordt gewijzigd. |
-| `media.bufferStart` | Deze gebeurtenis volgt wanneer een `bufferStart` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis wordt geactiveerd wanneer media beginnen te bufferen. |
-| `media.chapterComplete` | Deze gebeurtenis volgt wanneer een `chapterComplete` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis wordt geactiveerd wanneer een hoofdstuk in de media is voltooid. |
-| `media.chapterSkip` | Deze gebeurtenis volgt wanneer een `chapterSkip` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis wordt geactiveerd wanneer een gebruiker een ander gedeelte of hoofdstuk binnen de media-inhoud naar voren of achteren overslaat. |
-| `media.chapterStart` | Deze gebeurtenis volgt wanneer een `chapterStart` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis wordt geactiveerd aan het begin van een specifieke sectie of een specifiek hoofdstuk in de media-inhoud. |
+| `media.adBreakComplete` | Deze gebeurtenis geeft aan dat een advertentie-einde is voltooid. |
+| `media.adBreakStart` | Deze gebeurtenis geeft het begin van een advertentie-einde aan. |
+| `media.adComplete` | Deze gebeurtenis geeft aan dat een advertentie is voltooid. |
+| `media.adSkip` | Deze gebeurtenis geeft aan wanneer een advertentie is overgeslagen. |
+| `media.adStart` | Deze gebeurtenis geeft het begin van een advertentie aan. |
+| `media.bitrateChange` | Deze gebeurtenis geeft aan wanneer de bitsnelheid wordt gewijzigd. |
+| `media.bufferStart` | Het gebeurtenistype `media.bufferStart` wordt verzonden wanneer het bufferen begint. Er is geen specifiek gebeurtenistype `bufferResume` . Het bufferen wordt verondersteld te zijn hervat wanneer een `play` -gebeurtenis wordt verzonden na een `bufferStart` -gebeurtenis. |
+| `media.chapterComplete` | Deze gebeurtenis geeft de voltooiing van een hoofdstuk aan. |
+| `media.chapterSkip` | Deze gebeurtenis wordt geactiveerd wanneer een gebruiker een andere sectie of een ander hoofdstuk naar voren of achteren overslaat. |
+| `media.chapterStart` | Deze gebeurtenis geeft het begin van een hoofdstuk aan. |
 | `media.downloaded` | Deze gebeurtenis houdt bij wanneer media gedownloade inhoud heeft plaatsgevonden. |
-| `media.error` | Deze gebeurtenis volgt wanneer een `error` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis wordt geactiveerd wanneer een fout of probleem optreedt tijdens het afspelen van media. |
-| `media.pauseStart` | Deze gebeurtenis volgt wanneer een `pauseStart` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis wordt geactiveerd wanneer een gebruiker een pauze instelt in het afspelen van media. |
-| `media.ping` | Deze gebeurtenis volgt wanneer een `ping` -gebeurtenis heeft plaatsgevonden. Dit verifieert de beschikbaarheid van een media middel. |
-| `media.play` | Deze gebeurtenis volgt wanneer een `play` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis wordt geactiveerd wanneer de media-inhoud wordt afgespeeld, wat een actief verbruik door de gebruiker aangeeft. |
-| `media.sessionComplete` | Deze gebeurtenis volgt wanneer een `sessionComplete` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis markeert het einde van een mediaflaysessie. |
-| `media.sessionEnd` | Deze gebeurtenis volgt wanneer een `sessionEnd` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis geeft het einde van een mediasessie aan. Deze conclusie kan inhouden dat de mediaspeler wordt gesloten of dat het afspelen wordt gestopt. |
-| `media.sessionStart` | Deze gebeurtenis volgt wanneer een `sessionStart` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis markeert het begin van een mediaflaysessie. Deze wordt geactiveerd wanneer een gebruiker een mediabestand begint af te spelen. |
-| `media.statesUpdate` | Deze gebeurtenis volgt wanneer een `statesUpdate` -gebeurtenis heeft plaatsgevonden. De mogelijkheden voor het bijhouden van de spelerstatus kunnen worden gekoppeld aan een audio- of videostream. De standaardstatussen zijn: volledig scherm, dempen, closedCaptioning, pictureInPicture, en inFocus. |
+| `media.error` | Deze gebeurtenis geeft aan dat er een fout is opgetreden tijdens het afspelen van media. |
+| `media.pauseStart` | Deze gebeurtenis volgt wanneer een `pauseStart` -gebeurtenis heeft plaatsgevonden. Deze gebeurtenis wordt geactiveerd wanneer een gebruiker een pauze instelt in het afspelen van media. Er is geen type hervattingsgebeurtenis. Er wordt een resume gegenereerd wanneer u een afspeelgebeurtenis na een `pauseStart` verzendt. |
+| `media.ping` | Het gebeurtenistype `media.ping` wordt gebruikt om de doorlopende afspeelstatus aan te geven. Voor hoofdinhoud moet deze gebeurtenis om de 10 seconden tijdens het afspelen worden verzonden, te beginnen 10 seconden nadat het afspelen is gestart. Voor advertentie-inhoud moet deze elke seconde worden verzonden tijdens het bijhouden van de advertentie. Pingel gebeurtenissen zouden niet de paramentenkaart in het verzoeklichaam moeten omvatten. |
+| `media.play` | Het gebeurtenistype `media.play` wordt verzonden wanneer de speler van een andere status naar de status `playing` overschakelt, zoals `buffering,` `paused` (wanneer deze wordt hervat door de gebruiker) of `error` (wanneer deze wordt hersteld), inclusief scenario&#39;s zoals automatisch afspelen. Deze gebeurtenis wordt geactiveerd door de callback van de speler `on('Playing')` . |
+| `media.sessionComplete` | Deze gebeurtenis wordt verzonden wanneer het einde van de hoofdinhoud is bereikt. |
+| `media.sessionEnd` | Het gebeurtenistype `media.sessionEnd` geeft een melding aan de achtergrond van Media Analytics om een sessie onmiddellijk te sluiten wanneer een gebruiker de weergave beëindigt en deze waarschijnlijk niet zal retourneren. Als deze gebeurtenis niet wordt verzonden, wordt de sessie beëindigd na 10 minuten inactiviteit of 30 minuten zonder beweging van de afspeelkop. Alle volgende mediaquery&#39;s met die sessie-id worden genegeerd. |
+| `media.sessionStart` | Het gebeurtenistype `media.sessionStart` wordt verzonden met de vraag van de zittingsopening. Bij het ontvangen van een reactie, wordt identiteitskaart van de Zitting gehaald uit de kopbal van de Plaats en gebruikt voor alle verdere gebeurtenisvraag aan de server van de Inzameling. |
+| `media.statesUpdate` | Deze gebeurtenis volgt wanneer een `statesUpdate` -gebeurtenis heeft plaatsgevonden. De mogelijkheden voor het bijhouden van de spelerstatus kunnen worden gekoppeld aan een audio- of videostream. De standaardstatussen zijn: `fullscreen`, `mute`, `closedCaptioning`, `pictureInPicture` en `inFocus` . |
 | `opportunityEvent.addToOpportunity` | Deze gebeurtenis volgt wanneer een persoon aan een kans werd toegevoegd. |
 | `opportunityEvent.opportunityUpdated` | Deze gebeurtenis wordt bijgehouden wanneer een opportuniteit is bijgewerkt. |
 | `opportunityEvent.removeFromOpportunity` | Deze gebeurtenis wordt bijgehouden wanneer een persoon uit een opportuniteit is verwijderd. |
+| `personalization.request` | **Vervangen** Gebruik in plaats daarvan `decisioning.propositionFetch`. |
 | `pushTracking.applicationOpened` | Deze gebeurtenis wordt bijgehouden wanneer een persoon een toepassing heeft geopend via een pushmelding. |
 | `pushTracking.customAction` | Deze gebeurtenis wordt bijgehouden wanneer een persoon een aangepaste actie in een pushmelding heeft geselecteerd. |
 | `web.formFilledOut` | Deze gebeurtenis volgt wanneer een persoon een formulier op een webpagina heeft ingevuld. |
-| `web.webinteraction.linkClicks` | Deze gebeurtenis houdt bij wanneer een koppeling een of meer keren is geselecteerd. |
-| `web.webpagedetails.pageViews` | Deze gebeurtenis wordt bijgehouden wanneer een webpagina een of meer weergaven heeft ontvangen. |
+| `web.webinteraction.linkClicks` | De gebeurtenissignalen dat een verbindingsklik automatisch door het Web SDK is geregistreerd. |
+| `web.webpagedetails.pageViews` | Dit gebeurtenistype is de standaardmethode voor het markeren van de hit als paginaweergave. |
 | `location.entry` | Deze gebeurtenis houdt de ingang van een persoon of een apparaat op een specifieke plaats bij. |
 | `location.exit` | Deze gebeurtenis houdt het afsluiten van een persoon of apparaat vanaf een specifieke locatie bij. |
 

@@ -2,7 +2,7 @@
 title: Gegevenssetvoorbeelden
 description: De de steekproefdatasets van de Dienst van de vraag laten u toe om verkennende vragen over grote gegevens met zeer gereduceerde verwerkingstijd ten koste van vraagnauwkeurigheid te leiden. Deze gids verstrekt informatie over hoe te om uw steekproeven voor benaderende vraagverwerking te beheren
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 28fe8ec5a589b8d181ba2f888d50fa9d2d7d4996
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 0%
@@ -100,7 +100,7 @@ SELECT * FROM example_dataset_name WITHAPPROXIMATE;
 De schrappingsverrichting staat u toe om nieuwe steekproeven tot stand te brengen zodra de maximumgrens van vijf datasetsteekproeven is bereikt.
 
 ```sql
-DROP TABLE SAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
+DROP TABLESAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
 ```
 
 >[!NOTE]
