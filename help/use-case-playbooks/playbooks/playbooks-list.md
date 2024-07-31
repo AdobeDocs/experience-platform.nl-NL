@@ -4,9 +4,9 @@ title: Beschikbare Use Case Playbooks voor Real-time Customer Data Platform en A
 description: Een lijst met alle afspeelboeken in Real-time Customer Data Platform en Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 5b1209ed96c78810b6bd7489825b19496d8b0b6a
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '965'
 ht-degree: 0%
 
 ---
@@ -25,10 +25,12 @@ Lees deze pagina voor een overzicht van alle beschikbare afspeelboeken die u kun
 | Naam van afspeelboek | Beschrijving |
 | ------------- |  ----------- |
 | Verlaten browser: Merchandies | Laat fans na het bladeren door een product weer aan de slag nadat ze uw website of app hebben verlaten. |
+| Verlaten surfen: product | Blader naar de winkel nadat je de website of app hebt verlaten. |
+| Verlaten bladeren: reservering | Vraag gasten opnieuw aan om contact op te nemen nadat ze uw website of app hebben verlaten nadat ze door een mogelijk reserveringsbestand hebben gebladerd. |
 | Verlaten winkelwagen: koopwaar | Vul ventilatoren aan om opnieuw contact op te nemen nadat ze uw website of app hebben verlaten nadat ze artikelen aan de winkelwagen hebben toegevoegd. |
 | Verlaten auto&#39;s: Product | Kopers onder druk zetten om opnieuw contact op te nemen nadat ze uw website of app hebben verlaten nadat ze producten aan de winkelwagen hebben toegevoegd. |
 | Verlaten winkelwagen: reservering | Gasten onder druk zetten om zich opnieuw aan te melden nadat ze uw website of app hebben verlaten nadat ze een nieuwe reserve aan de kar hebben toegevoegd. |
-| Herinnering voor inchecken met CTA voor downloaden van app | Gasten herinneren aan inchecken en hen aanmoedigen de app te downloaden om gemakkelijk toegang te krijgen tot informatie. |
+| Herinnering voor inchecken met App Download CTA | Gasten herinneren aan inchecken en hen aanmoedigen de app te downloaden om gemakkelijk toegang te krijgen tot informatie. |
 | Doelbevordering | Vraag gasten om een nieuw voorbehoud te maken tijdens een doorlopende promotiecampagne voor toeristische bestemmingen. |
 | Gamepromotie | Stem fans aan om tickets te kopen voor een toekomstig spel. |
 | Welkom in de app voor ventilatoren | Welkom nieuwe ventilatoren. |
@@ -38,12 +40,15 @@ Lees deze pagina voor een overzicht van alle beschikbare afspeelboeken die u kun
 | De aankoop van producten verhogen tijdens het bezoek aan de winkel | Laat winkeliers hun producten kopen terwijl ze in de buurt van de winkel zijn. |
 | De aankoop van producten en services tijdens het verblijf verhogen | Vraag gasten om producten en services te kopen terwijl ze zich in het onroerend goed bevinden. |
 | Aankopen voor één game verhogen | Doelventilatoren om herhaalde aankopen van één game te stimuleren. |
-| Post Event Survey en Incentive Promo | De ventilatoren van de duim om op een post-gebeurtenisonderzoek te antwoorden door een aansporingsaansporing aan te bieden. |
+| Beoordeling en stimuleringsmaatregelen na gebeurtenis | De ventilatoren van de duim om op een post-gebeurtenisonderzoek te antwoorden door een aansporingsaansporing aan te bieden. |
 | Post-Trip Survey | Vraag gasten om te reageren op een posttrip-enquête door een stimulerende actie aan te bieden. |
 | Productpromotie | Vraag kopers om producten te kopen tijdens een doorlopende productpromotiecampagne. |
 | Bevestiging van aankoop: koopwaar | Bevestig een nieuwe koopwaar die Fan koopt. |
 | Bevestiging van aankoop: product | Bevestig een nieuwe winkelier voor productaankoop. |
 | Aankoopbevestiging: reservering | Bevestig een nieuwe Reserveringsgast. |
+| Nieuwe ventilatoren | Schakel intelligent en verantwoord opnieuw fans in die een conversie hebben stopgezet voordat deze werd voltooid. Doe met intelligentie en empathie om ervaringen voor uw fans te creëren, en niet alleen herinneringen. |
+| Gasten opnieuw inschakelen | Gasten die een reservering hebben verlaten, moeten op intelligente en verantwoorde wijze opnieuw worden aangesproken voordat ze het hebben voltooid. Doe met intelligentie en empathie om ervaringen voor uw gasten te creëren, en niet alleen herinneringen. |
+| Winkels opnieuw inschakelen | Neem intelligent en verantwoord klanten opnieuw in dienst die een aankoop hebben verlaten alvorens het te voltooien. Doe met intelligentie en empathie om ervaringen voor uw klanten te creëren, en niet alleen herinneringen. |
 | Verzenden van een verjaardagsbericht naar ventilatoren | Greet fans op hun verjaardag met een exclusief voorstel. |
 | Verstuur een verjaardagsbericht naar gasten | Gegroet gasten op hun verjaardag met een exclusief aanbod. |
 | Verstuur een geboortedag naar kopers | Groetwinkels op hun verjaardag met een exclusief voorstel. |
@@ -60,7 +65,10 @@ Lees deze pagina voor een overzicht van alle beschikbare afspeelboeken die u kun
 
 | Naam van afspeelboek | Beschrijving |
 | ------------- | ----------- |
-| Afgewezen winkelwagentje: Merchandise—voor activering | Zoek ventilatoren opnieuw nadat ze uw website of app hebben verlaten nadat ze de artikelen aan het winkelwagentje hebben toegevoegd. |
+| Verlaten bladeren: Merchandise—voor activering | Zoek ventilatoren opnieuw nadat ze uw website of app hebben verlaten nadat ze de artikelen aan het winkelwagentje hebben toegevoegd. |
+| Verlaten browser: product—voor activering | Winkelaars ophalen nadat ze uw website of app hebben verlaten nadat ze de producten aan de winkelwagen hebben toegevoegd. |
+| Verlaten bladeren: reservering—voor activering | Gasten opnieuw oppakken nadat ze uw website of app hebben verlaten en een nieuwe reservering aan het winkelwagentje hebben toegevoegd. |
+| Afgewezen winkelwagentje: Merchandise—voor activering | Zoek fans op nadat ze uw website of app hebben verlaten nadat ze de sportartikelen aan het winkelwagentje hebben toegevoegd. |
 | Afgewezen winkelwagen: product—voor activering | Winkelaars ophalen nadat ze uw website of app hebben verlaten nadat ze producten aan de winkelwagen hebben toegevoegd. |
 | Afgewezen winkelwagentje: reservering—voor activering | Gasten opnieuw oppakken nadat ze uw website of app hebben verlaten en een nieuwe reservering aan het winkelwagentje hebben toegevoegd. |
 | Doelbevordering—Voor activering | Gasten van het doel om een reserve tijdens een aan de gang zijnde reisbestemmingsbevordering te maken. |
