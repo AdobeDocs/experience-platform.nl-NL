@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 3e465803b6c8fe11cef1633c0f0624465086c2a3
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '2209'
 ht-degree: 0%
 
 ---
@@ -64,6 +64,7 @@ Op dit dashboard worden al uw Adobe Experience Platform-producten met licentie, 
 | **[!UICONTROL License Amount]** | De gecontracteerde waarde voor het maximale bedrag van de primaire metrische waarde zoals overeengekomen in uw productlicentieovereenkomst. |
 | **[!UICONTROL Usage]** | De hoeveelheid primaire metrisch die wordt gebruikt. Deze waarde geeft het totale gebruik van die metrische waarde voor alle sandboxen aan, productie of ontwikkeling. |
 | **[!UICONTROL Usage %]** | Het percentage van de primaire metrische waarde dat wordt gebruikt op basis van uw licentiehoeveelheid. |
+| **[!UICONTROL Prediction Usage]** | (**Beta**) het voorspelde gebruikspercentage van uw primaire metrisch volgens uw vergunningsbedrag. |
 
 >[!NOTE]
 >
@@ -71,29 +72,57 @@ Op dit dashboard worden al uw Adobe Experience Platform-producten met licentie, 
 
 De lijst wijst op primaire metrisch voor elk product, aangezien elk product talrijke metriek kan volgen.
 
+### [!BADGE  Beta ] {type=Informative} Voorspeld gebruik {#predicted-usage}
+
+>[!AVAILABILITY]
+>
+De functionaliteit om toekomstig vergunningsgebruik te voorspellen is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
+
+Beheer en optimaliseer proactief uw licentiemiddelen op basis van inzichtelijke gebruiksvoorspellingen. De kolom [!UICONTROL Predicted Usage] voorspelt nauwkeurig toekomstig vergunningsgebruik op het zandbakniveau, over alle productie en ontwikkelingszandbakken, voor al uw gekochte producten. Deze alarmeringscapaciteit verstrekt een prognose van vergunningsgebruik voor zes weken in de toekomst, gebaseerd op uw gebruik tot de 15e van deze kalendermaand. Voorspellingen worden geleverd met een ondergrens &amp; bovengrens.
+
+>[!IMPORTANT]
+>
+De voorspellingen worden maandelijks vernieuwd. De datum van verfrist zich is inbegrepen in een infopictogram (![ Dit infopictogram.](../images/license-usage/info-icon.png) ) boven de kolomtitel.
+
+Als u een overzicht wilt zien van het gebruik van een productmachtiging, selecteert u een product in de lijst [!UICONTROL Overview] .
+
+![ [!UICONTROL License usage] [!UICONTROL Overview] met een product en de voorspelde benadrukte gebruikskolom.](../images/license-usage/product-predicted-usage.png)
+
+Het tabblad Samenvatting wordt weergegeven. U kunt de korrelige voorspellingen gebruiken die beschikbaar zijn op de tabbladen [!UICONTROL Summary] en [!UICONTROL Details] voor een geïnformeerde besluitvorming voor efficiënt gebruik van de licentie.
+
+![ de summiere mening van een Product van het Platform met de voorspelde benadrukte gebruikskolom.](../images/license-usage/summary-predicted-usage.png)
+
+De voorspelde gebruiksfunctie ondersteunt de volgende meetgegevens:
+
+- [!UICONTROL Addressable audience]
+- [!UICONTROL Average profile richness]
+- [!UICONTROL Compute hours]
+- [!UICONTROL Customer Journey Audience number of rows]
+- [!UICONTROL Total storage]
+
 ## [!UICONTROL Summary] tab {#summary-tab}
 
 Als u meer cijfers en gedetailleerd inzicht in het gebruik van uw productlicentie wilt bekijken, selecteert u een productnaam in de lijst. De weergave [!UICONTROL Summary] voor dat product wordt weergegeven. Alle beschikbare metriek worden weergegeven op het tabblad [!UICONTROL Summary] . De beschikbare maatstaven zijn afhankelijk van het product met licentie. Deze mening verstrekt **een geconsolideerde mening van alle metriek over alle productie of ontwikkelingszandbakken**. Hetzelfde analyseniveau geldt voor zowel productie- als ontwikkelingssandboxen.
 
 ![ de summiere mening van een Product van het Platform dat alle beschikbare metriek voor dat product toont.](../images/license-usage/summary-tab.png)
 
-Op het tabblad Overzicht bevat de tabel de kolom [!UICONTROL Metric] . Deze beschrijvingen die leesbaar zijn voor mensen, geven alle metriek aan die voor dat type sandbox wordt gebruikt.
+Op het tabblad Overzicht bevat de tabel de kolom [!UICONTROL Metric] . Deze door mensen leesbare beschrijvingen geven alle metriek aan die voor dat type wordt gebruikt of sandbox.
 
 ### Een sandbox selecteren {#select-sandbox}
 
-Selecteer [!UICONTROL Production sandboxes] of [!UICONTROL Development sandboxes] als u de weergave tussen de typen productie- en ontwikkelingssandbox wilt wijzigen. Het geselecteerde type sandbox wordt aangegeven door het keuzerondje naast de naam van de sandbox.
+De weergave wijzigen tussen de typen productie- en ontwikkelingssandbox select [!UICONTROL Production sandboxes] of [!UICONTROL Development sandboxes] . Het geselecteerde type sandbox is wordt aangegeven door het keuzerondje naast de naam van de sandbox.
 
-Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetzelfde type. Met andere woorden: als u [!UICONTROL Production] of [!UICONTROL Development] selecteert, worden verbruiksrapporten weergegeven voor respectievelijk alle productie- of ontwikkelingssandboxen.
+Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetzelfde type. In Met andere woorden: als u [!UICONTROL Production] of [!UICONTROL Development] selecteert, worden verbruiksrapporten weergegeven voor respectievelijk alle productie- of ontwikkelingssandboxen.
 
 ![ de summiere mening van een Product van het Platform met benadrukte zandbakken van de Productie en van de Ontwikkeling.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
->Toestemming om het dashboard voor het gebruiksbewijs van licenties weer te geven, moet worden opgegeven op sandboxniveau. Voeg machtigingen toe aan elke afzonderlijke sandbox om deze in het dashboard weer te geven. Deze beperking wordt in een toekomstige release opgelost. Ondertussen is de volgende oplossing beschikbaar:
+Toestemming om het dashboard voor het gebruiksbewijs van licenties weer te geven, moet worden opgegeven op sandboxniveau. Voeg machtigingen toe aan elke afzonderlijke sandbox om deze in het dashboard weer te geven. Deze beperking wordt in een toekomstige release opgelost. Ondertussen is de volgende oplossing beschikbaar:
 >
->1. Maak een productprofiel in de Adobe Admin Console.
->2. Voeg onder Machtiging in de categorie Sandbox alle sandboxen toe die u wilt weergeven in het dashboard voor licentiegebruik.
->3. Voeg onder de categorie Machtiging voor dashboard van gebruiker de machtiging &#39;Licentiegebruiksdashboard weergeven&#39; toe.
+1. Maak een productprofiel in de Adobe Admin Console.
+2. Voeg onder Machtiging in de categorie Sandbox alle sandboxen toe die u wilt weergeven in het dashboard voor licentiegebruik.
+3. Voeg onder de categorie Machtiging voor dashboard van gebruiker de machtiging &#39;Licentiegebruiksdashboard weergeven&#39; toe.
 
 ## Het tabblad [!UICONTROL Details] {#details-tab}
 
@@ -154,7 +183,7 @@ Het dashboard van het vergunningsgebruik rapporteert over verscheidene unieke me
 
 >[!TIP]
 >
->U kunt uw licentierechten in uw verkooporder controleren om meetgegevens te berekenen, zoals uw &#39;opslagvergoeding&#39;.<br> Bijvoorbeeld,<ul><li>Opslagruimte = het aantal &quot;geoorloofde profielen&quot; in uw contract X Gemiddelde rijkheid van profiel</li></ul>
+U kunt uw licentierechten in uw verkooporder controleren om meetgegevens te berekenen, zoals uw &#39;opslagvergoeding&#39;.<br> Bijvoorbeeld,<ul><li>Opslagruimte = het aantal &quot;geoorloofde profielen&quot; in uw contract X Gemiddelde rijkheid van profiel</li></ul>
 
 De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze cijfers variëren afhankelijk van de licenties die uw organisatie heeft aangeschaft. Raadpleeg de desbetreffende documentatie bij de productbeschrijving voor gedetailleerde definities van elke metrische waarde:
 
@@ -169,7 +198,7 @@ De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze 
 
 >[!WARNING]
 >
->Het dashboard voor het gebruiksgemak rapporteert alleen over de nieuwste licentie die voor uw organisatie is ingericht. Als de meest recente licentie die voor uw organisatie is ingesteld, niet in de bovenstaande tabel wordt weergegeven, wordt het licentiegebruiksdashboard mogelijk niet correct weergegeven. Ondersteuning voor extra licenties en meerdere licenties in één organisatie is gepland voor een toekomstige release.
+Het dashboard voor het gebruiksgemak rapporteert alleen over de nieuwste licentie die voor uw organisatie is ingericht. Als de meest recente licentie die voor uw organisatie is ingesteld, niet in de bovenstaande tabel wordt weergegeven, wordt het licentiegebruiksdashboard mogelijk niet correct weergegeven. Ondersteuning voor extra licenties en meerdere licenties in één organisatie is gepland voor een toekomstige release.
 
 ## Volgende stappen
 
