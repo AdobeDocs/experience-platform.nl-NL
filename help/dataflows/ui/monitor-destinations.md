@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Dataflows voor Doelen in UI controleren
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: ee63f5ee6cca98e0b5838dc2de656d1d615a0b3a
+source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
 workflow-type: tm+mt
-source-wordcount: '3385'
+source-wordcount: '3377'
 ht-degree: 0%
 
 ---
@@ -110,13 +110,13 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 
 #### (Beta) Publiek-niveau dataflow run monitoring voor streamingdoelen {#audience-level-dataflow-runs-for-streaming-destinations}
 
-U kunt informatie bekijken over de geactiveerde, uitgesloten of mislukte identiteiten uitgesplitst op publieksniveau, voor elk publiek dat deel van dataflow uitmaakt. Dit kan u helpen publiek-vlakke controle voor het stromen bestemmingen begrijpen is momenteel beschikbaar voor de [[!DNL Google Customer Match + Display & Video 360]  bestemming ](/help/destinations/catalog/advertising/google-customer-match-dv360.md) slechts.
+U kunt informatie bekijken over de geactiveerde, uitgesloten of mislukte identiteiten uitgesplitst op publieksniveau, voor elk publiek dat deel van dataflow uitmaakt. De publiek-vlakke controle voor het stromen bestemmingen is momenteel beschikbaar voor de [[!DNL Google Customer Match + Display & Video 360]  bestemming ](/help/destinations/catalog/advertising/google-customer-match-dv360.md) slechts.
 
 ![ publiek-vlakke controle voor het stromen bestemmingen.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
 >[!NOTE]
 >
->Het **[!UICONTROL Profiles received]** -getal op het tabblad Soorten publiek komt mogelijk niet altijd overeen met het aantal profielen dat is ontvangen voor de uitvoering van de gegevensstroom. Dit komt omdat een bepaald profiel deel van meer dan één publiek zou kunnen uitmaken dat in de dataflow looppas wordt geactiveerd.
+>Het **[!UICONTROL Profiles received]** -getal op het tabblad **[!UICONTROL Audiences]** komt mogelijk niet altijd overeen met het aantal profielen dat is ontvangen voor de uitvoering van de gegevensstroom. Dit komt omdat een bepaald profiel deel van meer dan één publiek zou kunnen uitmaken dat in de dataflow looppas wordt geactiveerd.
 
 ### Dataflow wordt uitgevoerd voor batchdoelen {#dataflow-runs-for-batch-destinations}
 

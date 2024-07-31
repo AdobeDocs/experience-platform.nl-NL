@@ -3,7 +3,7 @@ title: Google Customer Match + Display & Video 360-verbinding
 description: Met de Google Customer Match + Display & Video 360-doelconnector kunt u uw online- en offline gegevens van Experience Platform gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere, door Google bediende en bediende eigenschappen, zoals Zoeken, Winkelen, Gmail en YouTube.
 badgeBeta: label="Beta" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: c3de72a0f90578803b969f32cc484047089099bd
+source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
 workflow-type: tm+mt
 source-wordcount: '1960'
 ht-degree: 0%
@@ -223,11 +223,11 @@ Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld hashin
 
 ![ pas transformatiecontrole toe die in de stap van de Afbeelding van het activeringswerkschema wordt benadrukt.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
 
-## Doel van monitor
+## Doel van monitor {#monitor-destination}
 
 Na het verbinden met de bestemming en het vestigen van een bestemmingsdataflow, kunt u de [ controlefunctionaliteit ](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP gebruiken om uitgebreide informatie over de profielverslagen te krijgen die aan uw bestemming in elke dataflow in werking worden gesteld.
 
-De monitoringinformatie voor de [!DNL Google Customer Match + Display & Video 360] -verbinding bevat informatie op publieksniveau over geactiveerde, uitgesloten en mislukte identiteiten in elke dataflow en dataflow die worden uitgevoerd. Lees meer over de functionaliteit.
+De monitoringinformatie voor de [!DNL Google Customer Match + Display & Video 360] -verbinding bevat informatie op publieksniveau over geactiveerde, uitgesloten en mislukte identiteiten in elke dataflow en dataflow die worden uitgevoerd. [ las meer ](/help/dataflows/ui/monitor-destinations.md#segment-level-view) over de functionaliteit.
 
 ## Controleren of publieksactivering is gelukt {#verify-activation}
 
