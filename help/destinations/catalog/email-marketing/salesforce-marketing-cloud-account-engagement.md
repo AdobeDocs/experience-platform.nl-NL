@@ -3,7 +3,7 @@ title: Salesforce-accountservice voor Marketing Cloud
 description: Leer hoe u de Salesforce Marketing Cloud Account Engagement (voorheen Pardot genoemd)-bestemming kunt gebruiken om uw accountgegevens te exporteren en deze te activeren in Salesforce Marketing Cloud Account Engagement voor uw zakelijke behoeften.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1474'
 ht-degree: 0%
@@ -153,11 +153,12 @@ Voer de onderstaande stappen uit om uw XDM-velden correct toe te wijzen aan de [
 1. Kies in het **[!UICONTROL Select target field]** -venster de **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select custom attributes]** -categorie en geef een waarde op in de lijst met [[!DNL Prospect API fields] ](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#fields) in het beschikbare schema.
 
    * Herhaal deze stappen om toewijzingen toe te voegen tussen uw XDM-profielschema en [!DNL Marketing Cloud Account Engagement] :
-| Source-veld | Doelveld | Verplicht |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: email`| Ja |
-|`xdm: MailingAddress.city`|`xdm: city`| |
-|`xdm: person.name.firstName`|`Attribute: firstName`| |
+
+     | Source-veld | Doelveld | Verplicht |
+     | --- | --- | --- |
+     | `IdentityMap: Email` | `Identity: email` | Ja |
+     | `xdm: MailingAddress.city` | `xdm: city` | |
+     | `xdm: person.name.firstName` | `Attribute: firstName` | |
 
    * Hieronder ziet u een voorbeeld met de bovenstaande toewijzingen:
      ![ het schermschot van het Platform UI die de afbeeldingen van het Doel tonen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)

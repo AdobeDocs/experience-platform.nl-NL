@@ -3,7 +3,7 @@ title: Mailchimp-tags
 description: De bestemming van de Markeringen van Mailchimp staat u toe om uw rekeningsgegevens uit te voeren en het binnen Mailchimp te activeren om met contacten in wisselwerking te staan.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1590'
 ht-degree: 0%
@@ -175,9 +175,10 @@ Voer de onderstaande stappen uit om uw XDM-velden correct toe te wijzen aan de [
    {het schermschot van het platform UI met het gebied van het Doel als E-mail van identiteitsnamespace.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)![
 
    De toewijzingen tussen uw XDM-profielschema en [!DNL Mailchimp Tags] zijn als volgt:
-| Source-veld | Doelveld | Verplicht |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: Email`| Ja |
+
+   | Source-veld | Doelveld | Verplicht |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: Email` | Ja |
 
    Hieronder ziet u een voorbeeld met de voltooide toewijzingen:
    ![ het schermschot van het Platform UI die gebiedsafbeeldingen toont.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)

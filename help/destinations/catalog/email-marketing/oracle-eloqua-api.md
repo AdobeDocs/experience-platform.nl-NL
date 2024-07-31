@@ -3,7 +3,7 @@ title: (API) Oracle Eloqua-verbinding
 description: Met de Eloqua-bestemming (API) van het Oracle kunt u uw accountgegevens exporteren en activeren binnen Oracle Eloqua voor uw bedrijfsbehoeften.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: cf7ad18fa3d8f074371a0f03e09e218d37be5e01
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1956'
 ht-degree: 0%
@@ -148,19 +148,21 @@ Voer de volgende stappen uit om uw XDM-velden toe te wijzen aan de [!DNL Oracle 
 1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . Er verschijnt een nieuwe toewijzingsrij op het scherm.
 1. Kies in het venster **[!UICONTROL Select source field]** de categorie **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk of kies de categorie **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
 1. Kies in het venster **[!UICONTROL Select target field]** de optie **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select custom attributes]** en typ in het veld **[!UICONTROL Attribute name]** de gewenste kenmerknaam. De kenmerknaam die u opgeeft, moet overeenkomen met een bestaand contactkenmerk in [!DNL Oracle Eloqua] . Zie [[!DNL create a contact] ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) voor de nauwkeurige attributennamen die u in [!DNL Oracle Eloqua] kunt gebruiken.
+
    * Herhaal deze stappen om de vereiste en gewenste kenmerktoewijzingen toe te voegen tussen uw XDM-profielschema en [!DNL Oracle Eloqua] :
-| Source-veld | Doelveld | Verplicht |
-|—|—|—|
-|`IdentityMap: Eid`|`Identity: EloquaId`| Ja |
-|`xdm: personalEmail.address`|`Attribute: emailAddress`| Ja |
-|`xdm: personName.firstName`|`Attribute: firstName`| |
-|`xdm: personName.lastName`|`Attribute: lastName`| |
-|`xdm: workAddress.street1`|`Attribute: address1`| |
-|`xdm: workAddress.street2`|`Attribute: address2`| |
-|`xdm: workAddress.street3`|`Attribute: address3`| |
-|`xdm: workAddress.postalCode`|`Attribute: postalCode`| |
-|`xdm: workAddress.country`|`Attribute: country`| |
-|`xdm: workAddress.city`|`Attribute: city`| |
+
+     | Source-veld | Doelveld | Verplicht |
+     |---|---|---|
+     | `IdentityMap: Eid` | `Identity: EloquaId` | Ja |
+     | `xdm: personalEmail.address` | `Attribute: emailAddress` | Ja |
+     | `xdm: personName.firstName` | `Attribute: firstName` | |
+     | `xdm: personName.lastName` | `Attribute: lastName` | |
+     | `xdm: workAddress.street1` | `Attribute: address1` | |
+     | `xdm: workAddress.street2` | `Attribute: address2` | |
+     | `xdm: workAddress.street3` | `Attribute: address3` | |
+     | `xdm: workAddress.postalCode` | `Attribute: postalCode` | |
+     | `xdm: workAddress.country` | `Attribute: country` | |
+     | `xdm: workAddress.city` | `Attribute: city` | |
 
    * Hieronder ziet u een voorbeeld met de bovenstaande toewijzingen:
      ![ het schermschot van het Platform UI met attributenafbeeldingen.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)

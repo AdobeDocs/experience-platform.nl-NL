@@ -2,7 +2,7 @@
 title: (API) Verbinding met Salesforce-Marketing Cloud
 description: Met de Salesforce-Marketing Cloud (voorheen ExactTarget genoemd) kunt u uw accountgegevens exporteren en activeren binnen de Salesforce-Marketing Cloud voor uw zakelijke behoeften.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2803'
 ht-degree: 0%
@@ -242,15 +242,17 @@ Hieronder ziet u een voorbeeldkenmerk van [!DNL Salesforce Marketing Cloud] :
 ![ het schermschot van de Marketing Cloud UI van Salesforce die een attribuut toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
 Hieronder ziet u een voorbeeld van de locatie van [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** :
-![ het screenshot voorbeeld van het Platform UI die het publiek van het Programma tonen uitvoer.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
+
+{het screenshot voorbeeld van het Platform UI die het publiek van het Programma tonen uitvoer.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)![
 
 Zoals u ziet, moet [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** exact overeenkomen met de waarde die is opgegeven binnen [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** .
 
 Herhaal deze sectie voor elk geactiveerd platformsegment.
 
 Een typisch voorbeeld op basis van de bovenstaande afbeelding zou kunnen zijn.
+
 | [!DNL (API) Salesforce Marketing Cloud] segmentnaam | [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** |
-| — | — | — |
+| --- | --- | --- |
 | salesforce mc publiek 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc publiek 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
 

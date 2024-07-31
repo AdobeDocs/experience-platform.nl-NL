@@ -4,7 +4,7 @@ title: LINE-verbinding
 description: De bestemming van de LIJN staat u toe om profielen aan uw publiek van het Platform toe te voegen en gepersonaliseerde ervaringen aan verbonden gebruikers te leveren.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 0%
@@ -121,8 +121,9 @@ Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen
 Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL LINE] -bestemming wilt verzenden, moet u de stap voor veldtoewijzing doorlopen. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming. Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL LINE] -doelvelden:
 
 Afhankelijk van uw bronidentiteit moeten de volgende naamruimten voor de doelidentiteit worden toegewezen:
+
 | Doelidentiteit | Source-veld | Doelveld |
-| — | — | — |
+| --- | --- | --- |
 | Id voor adverteerders (IFA&#39;s) | `IDFA` of `GAID` | `LineId` |
 | Gebruiker-id&#39;s voor LIJN | `UserID` | `LineId` |
 

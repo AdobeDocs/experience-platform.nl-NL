@@ -3,7 +3,7 @@ title: Mailchimp-rentecategorieën
 description: Mailchimp (ook wel Intuit Mailchimp genoemd) is een populair marketingplatform voor automatisering en marketing via e-mail dat door bedrijven wordt gebruikt om contactpersonen (klanten, klanten of andere belanghebbenden) te beheren en met hen te spreken via mailinglijsten en marketingcampagnes via e-mail. Gebruik deze schakelaar om uw contacten te sorteren die op hun belangen en voorkeur worden gebaseerd.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2205'
 ht-degree: 0%
@@ -168,12 +168,13 @@ Voer de onderstaande stappen uit om uw XDM-velden correct toe te wijzen aan de [
 1. Kies in het **[!UICONTROL Select target field]** -venster de **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select attributes]** -categorie en selecteer een van de kenmerken die zijn ingevuld in de [!DNL Mailchimp] API. *om het even welke douanekenmerken die u aan het geselecteerde [!DNL Mailchimp] publiek hebt toegevoegd zullen ook voor selectie als doelgebieden beschikbaar zijn.*
 
    De toewijzingen tussen uw XDM-profielschema en [!DNL Mailchimp Interest Categories] zijn als volgt:
-| Source-veld | Doelveld | Notities |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: email`| Verplicht: Ja |
-|`xdm: person.name.firstName`|`Attribute: FNAME`| |
-|`xdm: person.name.lastName`|`Attribute: LNAME`| |
-|`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
+
+   | Source-veld | Doelveld | Notities |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: email` | Verplicht: Ja |
+   | `xdm: person.name.firstName` | `Attribute: FNAME` | |
+   | `xdm: person.name.lastName` | `Attribute: LNAME` | |
+   | `xdm: person.birthDayAndMonth` | `Attribute: BIRTHDAY` | |
 
    Daarnaast is `ADDRESS` een speciaal doelveld dat `merge field` binnen uw publiek [!DNL Mailchimp] wordt genoemd. De [[!DNL Mailchimp]  documentatie ](https://mailchimp.com/developer/marketing/docs/merge-fields/) bepaalt de vereiste sleutels zoals `addr1`, `city`, `state`, en `zip`, en de facultatieve sleutels `addr2` en `country`. De waarden voor deze velden moeten tekenreeksen zijn. Als een van de `ADDRESS` -veldtoewijzingen aanwezig is, geeft de bestemming het `ADDRESS` -object door aan de [!DNL Mailchimp] API voor update. Voor alle `ADDRESS` -velden die niet worden toegewezen, wordt de standaardwaarde `NULL` gebruikt, behalve voor het land dat standaard op `US` is ingesteld.
 

@@ -3,7 +3,7 @@ title: Zendesk-verbinding
 description: Met de Zendesk-bestemming kunt u uw accountgegevens exporteren en activeren in Zendesk voor uw zakelijke behoeften.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1398'
 ht-degree: 0%
@@ -121,12 +121,14 @@ Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL
 1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . Er verschijnt een nieuwe toewijzingsrij op het scherm.
 1. Kies in het venster **[!UICONTROL Select source field]** de categorie **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk of kies de categorie **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
 1. Kies in het venster **[!UICONTROL Select target field]** de categorie **[!UICONTROL Select identity namespace]** en selecteer een doelidentiteit of kies de categorie **[!UICONTROL Select attributes]** en selecteer een van de ondersteunde schemakenmerken.
+
    * Herhaal deze stappen om de volgende verplichte toewijzingen toe te voegen, kunt u ook andere kenmerken toevoegen die u wilt bijwerken tussen het XDM-profielschema en uw [!DNL Zendesk] -instantie:
-|Source-veld|Doelveld| Verplicht|
-|—|—|—|
-|`xdm: person.name.lastName`|`xdm: last_name`| Ja |
-|`IdentityMap: Email`|`Identity: email`| Ja |
-|`xdm: person.name.firstName`|`xdm: first_name`| |
+
+     | Source-veld | Doelveld | Verplicht |
+     |---|---|---|
+     | `xdm: person.name.lastName` | `xdm: last_name` | Ja |
+     | `IdentityMap: Email` | `Identity: email` | Ja |
+     | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
      ![ het schermschot van het Platform UI met attributenafbeeldingen.](../../assets/catalog/crm/zendesk/mappings.png)

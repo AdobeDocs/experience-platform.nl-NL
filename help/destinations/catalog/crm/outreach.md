@@ -3,7 +3,7 @@ keywords: crm;CRM;crm bestemmingen;Outreach;Outreach crm destination
 title: Verbinding buiten bereik
 description: Met de Outreach-bestemming kunt u uw accountgegevens exporteren en deze activeren binnen Outreach voor uw bedrijfsbehoeften.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1619'
 ht-degree: 0%
@@ -155,18 +155,20 @@ Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL
      {het schermschot van het platform UI die van het Doel afbeelding toont die OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)![
 
    * Voeg de volgende toewijzing toe tussen uw XDM-profielschema en uw [!DNL Outreach] -instantie:
-|XDM-profielschema|[!DNL Outreach] Instantie| Verplicht|
-|—|—|—|
-|`Oid`|`OutreachId`| Ja |
+
+     | XDM-profielschema | [!DNL Outreach] Instantie | Verplicht |
+     |---|---|---|
+     | `Oid` | `OutreachId` | Ja |
 
    * **[!UICONTROL Select custom attributes]**: selecteer deze optie om het bronveld toe te wijzen aan een aangepast kenmerk dat u in het veld [!UICONTROL Attribute name] definieert. Verwijs naar [[!DNL Outreach]  perspectiefdocumentatie ](https://api.outreach.io/api/v2/docs#prospect) voor een uitvoerige lijst van gesteunde attributen.
      {het schermschot van het platform UI die van het Doel afbeelding toont gebruikend LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)![
 
    * Afhankelijk van de waarden die u wilt bijwerken, voegt u bijvoorbeeld de volgende toewijzing toe tussen uw XDM-profielschema en uw [!DNL Outreach] -instantie:
-|XDM-profielschema|[!DNL Outreach] Instantie|
-|—|—|
-|`person.name.firstName`|`firstName`|
-|`person.name.lastName`|`lastName`|
+
+     | XDM-profielschema | [!DNL Outreach] Instantie |
+     |---|---|
+     | `person.name.firstName` | `firstName` |
+     | `person.name.lastName` | `lastName` |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
      ![ het schermschot van het Platform UI die de afbeeldingen van het Doel tonen.](../../assets/catalog/crm/outreach/mappings.png)

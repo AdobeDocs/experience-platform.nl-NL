@@ -3,7 +3,7 @@ title: SAP Commerce-verbinding
 description: Gebruik de SAP Commerce-doelconnector om de klantgegevens in uw SAP-account bij te werken.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2155'
 ht-degree: 0%
@@ -194,6 +194,7 @@ Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL
 #### Wijs de `customerNumberSAP` identiteit toe
 
 De identiteit van `customerNumberSAP` is een verplichte toewijzing voor dit doel. Voer de onderstaande stappen uit om deze toe te wijzen:
+
 1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . U ziet nu een nieuwe toewijzingsrij op het scherm.
    {het schermschot van het platform UI met toevoegen nieuwe benadrukte toewijzingsknoop.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)![
 1. Kies in het **[!UICONTROL Select source field]** -venster de **[!UICONTROL Select identity namespace]** en selecteer `customerNumberSAP` .
@@ -211,6 +212,7 @@ Hieronder ziet u een voorbeeld met de identiteitstoewijzing:
 #### Toewijzingskenmerken
 
 Herhaal de onderstaande stappen om andere kenmerken toe te voegen die u tussen het XDM-profielschema en uw [!DNL SAP Subscription Billing] -account wilt bijwerken:
+
 1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . U ziet nu een nieuwe toewijzingsrij op het scherm.
    {het schermschot van het platform UI met toevoegen nieuwe benadrukte toewijzingsknoop.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)![
 1. Kies in het venster **[!UICONTROL Select source field]** de categorie **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk.
@@ -302,8 +304,9 @@ Zoals u ziet, moet de waarde in het veld **[!UICONTROL Mapping ID]** exact overe
 Herhaal deze sectie voor elk geactiveerd publiek van het Platform.
 
 Op basis van de bovenstaande afbeelding waarin u twee soorten publiek hebt geselecteerd, wordt de afbeelding als volgt toegewezen:
+
 | [!DNL SAP Commerce] publieksnaam | [!DNL SAP Subscription Billing] **[!UICONTROL Reference Type]** | [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** value |
-| — | — | — |
+| --- | --- | --- |
 | sap_publiek1 | `SAP_1` | `SAP_1` |
 | SAP-publiek2 | `SAP_2` | `SAP_2` |
 

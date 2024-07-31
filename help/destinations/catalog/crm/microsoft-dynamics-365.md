@@ -4,7 +4,7 @@ title: Microsoft Dynamics 365-verbinding
 description: Met de bestemming Microsoft Dynamics 365 kunt u uw accountgegevens exporteren en activeren in Microsoft Dynamics 365 voor uw zakelijke behoeften.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1940'
 ht-degree: 0%
@@ -170,9 +170,10 @@ Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL
      {het schermschot van het platform UI die van het Doel afbeelding voor contact tonen.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)![
 
    * Voeg de volgende toewijzing toe tussen uw XDM-profielschema en uw [!DNL Dynamics 365] -instantie:
-|XDM-profielschema|[!DNL Dynamics 365] Instantie| Verplicht|
-|—|—|—|
-|`contactid`|`contactid`| Ja |
+
+     | XDM-profielschema | [!DNL Dynamics 365] Instantie | Verplicht |
+     |---|---|---|
+     | `contactid` | `contactid` | Ja |
 
    * **[!UICONTROL Select custom attributes]**: selecteer deze optie om het bronveld toe te wijzen aan een aangepast kenmerk dat u in het veld **[!UICONTROL Attribute name]** definieert. Verwijs naar [[!DNL Dynamics 365]  documentatie ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) voor een uitvoerige lijst van gesteunde attributen.
      {het schermschot van het platform UI die van het Doel afbeelding voor e-mail toont.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)![
@@ -183,14 +184,16 @@ Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL
      > * Bovendien, als u een datum of timestamp brongebied hebt dat aan a [!DNL Dynamics 365] [ datum of timestamp ](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) doelgebied in kaart wordt gebracht, zorg ervoor dat de in kaart gebrachte waarde niet leeg is. Als de geëxporteerde veldwaarde leeg is, wordt een *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* -foutbericht weergegeven en worden de gegevens niet bijgewerkt. Dit is een [!DNL Dynamics 365] -beperking.
 
    * Afhankelijk van de waarden die u wilt bijwerken, voegt u bijvoorbeeld de volgende toewijzing toe tussen uw XDM-profielschema en uw [!DNL Dynamics 365] -instantie:
-|XDM-profielschema|[!DNL Dynamics 365] Instantie|
-|—|—|
-|`person.name.firstName`|`firstname`|
-|`person.name.lastName`|`lastname`|
-|`personalEmail.address`|`emailaddress1`|
+
+     | XDM-profielschema | [!DNL Dynamics 365] Instantie |
+     |---|---|
+     | `person.name.firstName` | `firstname` |
+     | `person.name.lastName` | `lastname` |
+     | `personalEmail.address` | `emailaddress1` |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
-     ![ het schermschot van het Platform UI die de afbeeldingen van het Doel tonen.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+
+   ![ het schermschot van het Platform UI die de afbeeldingen van het Doel tonen.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
 ### Het publiek van het programma uitvoeren en voorbeeld {#schedule-audience-export-example}
 
