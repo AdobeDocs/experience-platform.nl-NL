@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Labels voor gegevensgebruik voor gegevenssets beheren met API's
 description: Met de Dataset Service API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Deze klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API van de Catalogusservice die metagegevens van gegevenssets beheert.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 8db484e4a65516058d701ca972fcbcb6b73abb31
+source-git-commit: 9eda7068eb2a3fd5e59fbeff69c85abfad5ccf39
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1340'
 ht-degree: 0%
 
 ---
@@ -166,6 +166,10 @@ Een succesvolle reactie keert de bijgewerkte reeks etiketten voor de dataset ter
 ## Labels uit een gegevensset verwijderen {#remove}
 
 U kunt eerder toegepaste veldlabels verwijderen door de bestaande `optionalLabels` -waarde(n) bij te werken met een subset van de bestaande veldlabels of door een lege lijst om deze volledig te verwijderen. Voer een verzoek van de PUT in op de [!DNL Dataset Service] API om eerder toegepaste labels bij te werken of te verwijderen.
+
+>[!NOTE]
+>
+>U kunt de labels van een gegevensset volledig verwijderen door een lege lijst voor de parameter `labels` op te geven. Het is niet verplicht dat een gegevensset labels behoudt.
 
 **API formaat**
 
