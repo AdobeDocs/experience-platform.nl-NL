@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Hiermee krijgt u antwoorden op veelgestelde vragen over de Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 002a57d1d5cfb2e7bdbd9b587e77ca4487a28f65
+source-git-commit: cd2ac132c77d5d2e90c0f881d7b89a3c339fed6f
 workflow-type: tm+mt
-source-wordcount: '2268'
+source-wordcount: '2184'
 ht-degree: 1%
 
 ---
@@ -198,16 +198,6 @@ Als u hebt bepaald dat u moet polyfill `window.Promise` , neemt u de volgende sc
 ```
 
 Met deze tag wordt een script geladen waarmee wordt gecontroleerd of `window.Promise` een geldige Promise-implementatie is.
-
->[!NOTE]
->
->Als u een andere Promise-implementatie wilt laden, moet u ervoor zorgen dat deze `Promise.prototype.finally` ondersteunt.
-
-### Ondersteuning voor Internet Explorer
-
-De Adobe Experience Platform SDK gebruikt beloftes, die een manier zijn om de voltooiing van asynchrone taken mee te delen. De [ Promise ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementatie die door SDK wordt gebruikt wordt native gesteund door alle doelbrowsers behalve [!DNL Internet Explorer]. Om SDK op [!DNL Internet Explorer] te gebruiken, moet u `window.Promise` [ hebben gepolyvullend ](https://remysharp.com/2010/10/08/what-is-a-polyfill).
-
-Eén bibliotheek die u kunt gebruiken voor veelvuldige beloftes is promise-polyfill. Zie [ belofte-polyfill documentatie ](https://www.npmjs.com/package/promise-polyfill) voor meer informatie over hoe te met NPM installeren.
 
 >[!NOTE]
 >
