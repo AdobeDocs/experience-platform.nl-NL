@@ -6,9 +6,9 @@ title: Gegevensvereisten in AI van de Klant
 topic-legacy: Getting started
 description: Meer informatie over de vereiste gebeurtenissen, invoer en uitvoer die door de AI van de Klant worden gebruikt.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 63bdb48936070d23d1801d8e6143db3aefad5f6e
 workflow-type: tm+mt
-source-wordcount: '2492'
+source-wordcount: '2532'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ U kunt de Gebeurtenis van de Ervaring of de Gebeurtenis XDM schema&#39;s van de 
 
 ### Door de AI van de Klant gebruikte standaardveldgroepen {#standard-events}
 
-De Gebeurtenissen van de ervaring worden gebruikt om diverse klantengedrag te bepalen. Afhankelijk van hoe uw gegevens gestructureerd zijn, omvatten de hieronder vermelde gebeurtenistypen mogelijk niet alle gedragingen van uw klant. Het is aan u om te bepalen welke gebieden de noodzakelijke gegevens hebben die nodig zijn om Web of andere kanaal-specifieke gebruikersactiviteit duidelijk en ondubbelzinnig te identificeren. Afhankelijk van uw voorspellingsdoel, kunnen de vereiste gebieden veranderen die nodig zijn.
+De Gebeurtenissen van de ervaring worden gebruikt om diverse klantengedrag te bepalen. Afhankelijk van de structuur van uw gegevens, omvatten de hieronder vermelde gebeurtenistypen mogelijk niet alle gedragingen van uw klant. Het is aan u om te bepalen welke gebieden de noodzakelijke gegevens hebben die nodig zijn om Web of andere kanaal-specifieke gebruikersactiviteit duidelijk en ondubbelzinnig te identificeren. Afhankelijk van uw voorspellingsdoel, kunnen de vereiste gebieden veranderen die nodig zijn.
 
 >[!NOTE]
 >
@@ -158,6 +158,8 @@ Voor modeltraining zijn historische gegevens vereist. De vereiste duur voor het 
 Standaard zoekt de AI van de Klant naar een gebruiker die in de laatste 45 dagen activiteit heeft gehad als er geen definitie van de in aanmerking komende populatie is opgegeven tijdens de toepassingsconfiguratie. Daarnaast vereist de AI van de Klant minimaal 500 gekwalificeerde en 500 niet-kwalificerende gebeurtenissen (in totaal 1000) op basis van historische gegevens op basis van een voorspelde doeldefinitie.
 
 In de volgende voorbeelden wordt het gebruik van een eenvoudige formule getoond waarmee u de minimale hoeveelheid vereiste gegevens kunt bepalen. Als u meer gegevens hebt dan minimaal vereist, levert uw model waarschijnlijk nauwkeurigere resultaten op. Als u minder dan het vereiste minimumbedrag hebt, zal het model ontbreken, aangezien er niet genoeg gegevens voor modelopleiding zijn.
+
+De AI van de Klant gebruikt een overlevingsmodel om de waarschijnlijkheid te schatten van een gebeurtenis die op een bepaald ogenblik voorkomt en beïnvloedende factoren te identificeren, naast onder toezicht leren die positieve en negatieve populaties bepaalt, en op besluit-gebaseerde bomen zoals `lightgbm` om een kansscore te produceren.
 
 **Formule**:
 
