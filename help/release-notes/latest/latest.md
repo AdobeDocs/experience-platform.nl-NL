@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, juli 2024
 description: De release van juli 2024 bevat opmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8d25e396fc816546348268b8b4f2bb16175b4513
+source-git-commit: c38f6845a4819b648abacea2c36a576dac61f38f
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 1%
+source-wordcount: '1225'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,9 @@ Updates van bestaande functies en documentatie in Experience Platform:
 - [Gegevensverzameling](#data-collection)
 - [Gegevensbeheer](#data-governance)
 - [Doelen](#destinations)
+- [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
+- [Uniforme tags](#unified-tags)
 
 ## Federale compositie publiek {#federated-audience-composition}
 
@@ -105,6 +107,18 @@ Voor meer informatie, lees het [ overzicht van het gegevensbeheer ](../../data-g
 
 Voor meer informatie, lees het [ overzicht van bestemmingen ](../../destinations/home.md).
 
+## Segmenteringsservice {#segmentation}
+
+Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, vooruitzichten, gebruikers of organisaties) segmenteren naar het publiek. U kunt een publiek maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile] -gegevens. Deze soorten publiek worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn gemakkelijk toegankelijk voor elke Adobe.
+
+**Nieuwe documentatie**
+
+| Nieuwe documentatie | Beschrijving |
+| ----------------- | ----------- | 
+| [ Portaal van het Publiek ](../../segmentation/ui/audience-portal.md) | Leer hoe u Poort publiek kunt gebruiken, waarmee u het publiek in Adobe Experience Platform in een gecentraliseerde hub kunt weergeven, beheren en maken. |
+
+{style="table-layout:auto"}
+
 ## Bronnen
 
 Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
@@ -113,10 +127,25 @@ Gebruik bronnen in Experience Platform om gegevens van een Adobe of een gegevens
 
 **Bijgewerkte documentatie**
 
-| Bijgewerkte documentatie | beschrijving |
+| Bijgewerkte documentatie | Beschrijving |
 | --- | --- |
 | Uitgebreide verificatiegids voor [[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md) | Lees de uitgebreide authentificatiegids voor [!DNL Snowflake] leren hoe te om uw [ rekeningsherkenningsteken ](../../sources/connectors/databases/snowflake.md#retrieve-your-account-identifier) en [ privé sleutel ](../../sources/connectors/databases/snowflake.md#retrieve-your-private-key) voor authentificatie terug te winnen. Bovendien, gebruik de uitgebreide authentificatiegids voor stappen op hoe te [ uw pakhuis en rolconfiguraties ](../../sources/connectors/databases/snowflake.md#verify-configurations) verifiëren. |
 
 {style="table-layout:auto"}
 
 Voor meer informatie, lees het [ overzicht van bronnen ](../../sources/home.md).
+
+## Uniforme tags
+
+Met Unified Tags kunt u uw bedrijfsobjecten in Adobe Experience Platform indelen en beheren. Met de Verenigde Markeringen API, kunt u zowel omslagen als markeringen tot stand brengen om de voorwerpen van het Platform zoals publiek of datasets beter te organiseren.
+
+**Nieuwe documentatie**
+
+| Nieuwe documentatie | Beschrijving |
+| ----------------- | ----------- |
+| [ Verenigde Tags API gids ](../../administrative-tags/api/overview.md) | Lees de Unified Tags API-handleiding om te leren hoe u mappen en tags kunt maken om uw zakelijke objecten te sorteren. |
+| [ Verenigde Tags API verwijzing ](https://developer.adobe.com/experience-platform-apis/references/unified-tags/) | Gebruik de Verenigde Tags API verwijzing om de Verenigde tags-eindpunten op interactieve wijze uit te proberen. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie, lees het [ Verenigde overzicht van Markeringen ](../../administrative-tags/overview.md).
