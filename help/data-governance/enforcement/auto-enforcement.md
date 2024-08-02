@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Automatische beleidscontrole
 description: In dit document wordt beschreven hoe beleidsregels voor gegevensgebruik automatisch worden toegepast wanneer gebruikers naar bestemmingen in Experience Platform worden geactiveerd.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b0c4a26c2e8bb90a3494fcd6eb76c4d0d7421219
 workflow-type: tm+mt
-source-wordcount: '2089'
+source-wordcount: '2096'
 ht-degree: 0%
 
 ---
@@ -70,8 +70,8 @@ Elke fase in de bovenstaande tijdlijn vertegenwoordigt een entiteit die kan bijd
 | --- | --- |
 | Gegevensset | Datasets bevatten gegevensgebruikslabels (toegepast op het niveau van het schemagebied of het volledige datasetniveau) die bepalen welke gebruiksgevallen de volledige dataset of specifieke gebieden kunnen worden gebruikt voor. Beleidsovertredingen treden op als een dataset of veld met bepaalde labels wordt gebruikt voor een doel dat door een beleid wordt beperkt.<br><br> om het even welke toestemmingsattributen die van uw klanten worden verzameld worden ook opgeslagen in datasets. Als u toegang tot toestemmingsbeleid hebt, zullen om het even welke profielen die niet aan de vereisten van de toestemmingsattributen van uw beleid voldoen van publiek worden uitgesloten die aan een bestemming worden geactiveerd. |
 | Samenvoegbeleid | Het beleid van de fusie is de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven wanneer het samenvoegen van fragmenten van veelvoudige datasets. De schendingen van het beleid zullen voorkomen als uw samenvoegbeleid wordt gevormd zodat de datasets met beperkte etiketten aan een bestemming worden geactiveerd. Zie het [ overzicht van het samenvoegingsbeleid ](../../profile/merge-policies/overview.md) voor meer informatie. |
-| Doelgroep | De regels van de segmentatie bepalen welke attributen van klantenprofielen zouden moeten worden omvat. Afhankelijk van de velden die een segmentdefinitie bevat, neemt het publiek alle toegepaste gebruikslabels voor die velden over. Beleidsovertredingen treden op als u een publiek activeert waarvan de geërfte labels worden beperkt door het toepasselijke beleid van de doelbestemming, op basis van het geval van marketinggebruik. |
-| Doel | Bij het instellen van een bestemming kan een marketingactie (ook wel een marketingcase genoemd) worden gedefinieerd. Dit gebruiksgeval correleert met een marketingactie zoals gedefinieerd in een beleid. Met andere woorden, de marketingactie die u voor een bestemming definieert, bepaalt welk beleid voor gegevensgebruik en toestemmingsbeleid van toepassing zijn op die bestemming.<br><br> de schendingen van het het gebruiksbeleid van Gegevens komen voor als u een publiek activeert de waarvan gebruiksetiketten voor de marketing van de doelbestemming actie beperkt zijn.<br><br> (Beta) Wanneer een publiek wordt geactiveerd, worden profielen die niet de vereiste toestemmingskenmerken voor de marketingactie bevatten (zoals gedefinieerd in uw toestemmingsbeleid), uitgesloten van het geactiveerde publiek. |
+| Doelgroep | De regels van de segmentatie bepalen welke attributen van klantenprofielen zouden moeten worden omvat. Afhankelijk van de velden die een segmentdefinitie bevat, neemt het publiek alle toegepaste gebruikslabels voor die velden over. Beleidsovertredingen treden op als u een publiek probeert te activeren waarvan de geërfte labels worden beperkt door het toepasselijke beleid van de doelbestemming, op basis van de Gebruiksscenario&#39;s voor marketingdoeleinden. |
+| Doel | Bij het instellen van een bestemming kan een marketingactie (ook wel een marketingcase genoemd) worden gedefinieerd. Dit gebruiksgeval correleert met een marketingactie zoals gedefinieerd in een beleid. Met andere woorden, de marketingactie die u voor een bestemming definieert, bepaalt welk beleid voor gegevensgebruik en toestemmingsbeleid van toepassing zijn op die bestemming.<br><br> de schendingen van het het gebruiksbeleid van Gegevens komen voor als u probeert om een publiek te activeren de waarvan gebruiksetiketten voor de marketing van de doelbestemming actie beperkt zijn.<br><br> (Beta) Wanneer een publiek wordt geactiveerd, worden profielen die niet de vereiste toestemmingskenmerken voor de marketingactie bevatten (zoals gedefinieerd in uw toestemmingsbeleid), uitgesloten van het geactiveerde publiek. |
 
 >[!IMPORTANT]
 >
@@ -122,7 +122,7 @@ Gebruik het diagram van de gegevenslijn om te begrijpen welke andere configurati
 
 ### Goedkeuring van het beleid {#consent-policy-evaluation}
 
-Wanneer het activeren van een publiek aan een bestemming, kunt u zien hoe uw [ toestemmingsbeleid ](../policies/user-guide.md#consent-policy) verschillende percentages van profielen inbegrepen in de activering beïnvloedt.
+Wanneer het activeren van een publiek aan een bestemming, kunt u zien hoe uw [ toestemmingsbeleid ](../policies/user-guide.md) het bereik van uw publiek tijdens het [ overzichtsstadium van het [!UICONTROL Activate Destinations] werkschema ](#pre-activation-evaluation) beïnvloedt.
 
 >[!NOTE]
 >
@@ -138,13 +138,13 @@ Deze verbeteringen staan voor groter vertrouwen in uw marketing strategie toe aa
 >
 >Er zijn geen wijzigingen in de gebruikersinterface als gevolg van deze verbetering.
 
-#### Evaluatie vóór activering
+#### Evaluatie vóór activering {#pre-activation-evaluation}
 
-Zodra u bij de **[!UICONTROL Review]** stap bereikt wanneer [ het activeren van een bestemming ](../../destinations/ui/activation-overview.md), uitgezocht **[!UICONTROL View applied policies]**.
+Zodra u de **[!UICONTROL Review]** stap bereikt wanneer [ het activeren van een bestemming ](../../destinations/ui/activation-overview.md), selecteer **[!UICONTROL View applied policies]**.
 
 ![ Mening toegepaste beleidsknoop in activeert bestemmingswerkschema ](../images/enforcement/view-applied-policies.png)
 
-Er wordt een dialoogvenster voor beleidscontrole weergegeven waarin u een voorbeeld kunt zien van de invloed die het beleid voor uw toestemming heeft op het publiek met toestemming van het geactiveerde publiek.
+Er wordt een dialoogvenster voor beleidscontrole weergegeven waarin u een voorbeeld kunt zien van de invloed die het beleid voor uw toestemming heeft op het publiek met instemming van het publiek dat moet worden geactiveerd.
 
 ![ de dialoog van de de beleidscontrole van de toestemming in Platform UI ](../images/enforcement/consent-policy-check.png)
 
