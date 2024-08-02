@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Labels voor gegevensgebruik beheren in de gebruikersinterface
 description: In deze handleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: c1722c59c437215ce578a1a44cf0cad3b03ceca9
+source-git-commit: a5efc45f0043cd6eb4a209737b9e430c85ea2f14
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1491'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ U kunt labels rechtstreeks toevoegen aan een schema of aan velden binnen dat sch
 >
 >![ de schending van het gegevensbeheer ontdekte dialoog met de samenvatting van de schending en het diagram van de gegevenslijn benadrukte.](../images/labels/policy-violation-dialog.png)
 >
->Zie de [ documentatie van de de schending van het beleid van het gegevensgebruik ](../enforcement/auto-enforcement.md#data-usage-violation) voor meer informatie over gedeeltelijke beleidsschendingen.
+>Zie de [ documentatie van de de schending van het beleid van het gegevensgebruik ](../enforcement/auto-enforcement.md#data-usage-violation) voor meer informatie over beleidsschendingen.
 
 Als u labels voor gegevensgebruik op schemaniveau wilt beheren, moet u een bestaand schema selecteren of een nieuw schema maken. Nadat u zich hebt aangemeld bij Adobe Experience Platform, selecteert u **[!UICONTROL Schemas]** in de linkernavigatie om de werkruimte van **[!UICONTROL Schemas]** te openen. Deze pagina bevat een overzicht van alle gemaakte schema&#39;s die tot uw organisatie behoren, samen met nuttige details over elk schema.
 
