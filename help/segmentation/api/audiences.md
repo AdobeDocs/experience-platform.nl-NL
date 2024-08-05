@@ -3,9 +3,9 @@ title: API-eindpunt voor soorten publiek
 description: Gebruik het publiek eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform om, publiek voor uw organisatie programmatically tot stand te brengen te beheren en bij te werken.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 87b491339469e69653cad79b657bd1edfbca1de9
+source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1869'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,6 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van soorten publ
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 60,
             "profileInstanceId": "ups",
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
@@ -236,8 +235,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
         },
         "labels": [
           "core/C1"
-        ],
-        "ttlInDays": 60
+        ]
     }'
 ```
 
@@ -249,7 +247,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `expression` | De Profile Query Language (PQL)-expressie van het publiek. Meer informatie over de uitdrukkingen van PQL kan in de [ uitdrukkingengids van PQL ](../pql/overview.md) worden gevonden. |
 | `schema` | Het schema van de Gegevens van de Ervaring Model (XDM) van het publiek. |
 | `labels` | Gegevensgebruik op objectniveau en op kenmerk gebaseerde toegangsbeheerlabels die relevant zijn voor het publiek. |
-| `ttlInDays` | Geeft de waarde aan voor de gegevensvervaldatum voor het publiek, in dagen. |
 
 +++
 
@@ -317,7 +314,6 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over uw pas gec
      "schema": {
       "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -462,7 +458,6 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over het gespec
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -619,7 +614,6 @@ Een geslaagde reactie geeft HTTP status 200 met informatie over uw onlangs bijge
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -845,7 +839,6 @@ Een succesvolle reactie retourneert HTTP-status 207 met informatie voor het gevr
          "schema": {
             "name": "_xdm.context.profile"
          },
-         "ttlInDays": 30,
          "imsOrgId": "{ORG_ID}",
          "sandbox": {
             "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",

@@ -4,7 +4,7 @@ title: Naleving van gegevensgebruik afdwingen voor een publiekssegment met behul
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het afdwingen van definities van compatibiliteitssegmenten voor gegevensgebruik met API's.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 0%
@@ -91,7 +91,6 @@ Een succesvolle reactie keert de details van de segmentdefinitie terug.
     "schema": { 
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 90,
     "imsOrgId": "{ORG_ID}",
     "name": "Cart abandons in CA",
     "description": "",
