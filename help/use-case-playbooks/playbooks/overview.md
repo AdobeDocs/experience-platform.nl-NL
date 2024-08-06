@@ -4,10 +4,10 @@ title: Overzicht van afspeelboeken gebruiken
 description: Ontdek hoe u de functie Playbooks voor gebruiksscenario in Experience Platform kunt gebruiken om aan de slag te gaan met verschillende situaties voor marketingdoeleinden
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 3%
+source-wordcount: '523'
+ht-degree: 4%
 
 ---
 
@@ -29,10 +29,12 @@ Wat u in deze documentatiehandleiding zult vinden:
 
 ## Overzicht {#overview}
 
-[!UICONTROL Use Case Playbooks] kan u helpen het probleem te verhelpen wanneer u aan de slag gaat met Real-Time CDP of Adobe Journey Optimizer wanneer u wellicht niet precies weet met welke middelen u moet beginnen of hoe u de juiste middelen moet maken om de gewenste gebruiksproblemen te bereiken. Gebruik de hoofdletters en kleine letters om u hier te helpen:
+[!UICONTROL Use Case Playbooks] kan u helpen het probleem te verhelpen wanneer u aan de slag gaat met Real-Time CDP of Adobe Journey Optimizer wanneer u wellicht niet precies weet met welke middelen u moet beginnen of hoe u de juiste middelen moet maken om de gewenste gebruiksproblemen te bereiken.
 
-* Gebruiksscenario&#39;s voor inspiratie weergeven
-* Verschillende elementen maken die u kunt gebruiken, testen en promoten tot productie wanneer u klaar bent.
+Gebruik de hoofdletters en kleine letters om u hier te helpen:
+
+* [Maak kennis met een catalogus met beschikbare afspeelboeken om sneller aan de slag te gaan met de gebruikte toepassingen](../playbooks/playbooks-list.md)
+* [Verschillende elementen maken](../playbooks/create-share-reuse.md)
 
 ![ Mening van alle playbooks ](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 
