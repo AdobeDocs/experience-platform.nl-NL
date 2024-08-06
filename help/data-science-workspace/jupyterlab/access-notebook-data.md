@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Toegang tot gegevens in Jupyterlab-laptops
 description: Deze gids concentreert zich op hoe te om Notities van Jupyter te gebruiken, die binnen de Wetenschap van Gegevens Workspace worden gebouwd om tot uw gegevens toegang te hebben.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '3250'
+source-wordcount: '3273'
 ht-degree: 2%
 
 ---
 
 # Toegang tot gegevens in [!DNL Jupyterlab] laptops
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Elke ondersteunde kernel biedt ingebouwde functies waarmee u de gegevens van het platform kunt lezen vanuit een gegevensset in een laptop. JupyterLab in Adobe Experience Platform Data Science Workspace ondersteunt momenteel laptops voor [!DNL Python] , R, PySpark en Scala. Ondersteuning voor paginering van gegevens is echter beperkt tot [!DNL Python] - en R-laptops. Deze handleiding is gericht op het gebruik van JupyterLab-laptops voor toegang tot uw gegevens.
 

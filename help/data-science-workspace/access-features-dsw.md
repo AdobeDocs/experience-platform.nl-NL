@@ -1,23 +1,29 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;populaire onderwerpen;toegangscontrole;sandbox;inlichtingenpakket;dsw-functies;dsw-toegang;Adobe Experience Platform Intelligence;intelligence;aep-informatiepakket
+keywords: Experience Platform;home;Data Science Workspace;populaire onderwerpen;toegangsbeheer;sandbox;intelligence pack;dsw-functies;dsw-toegang;Adobe Experience Platform Intelligence;intelligence;aep intelligence-pakket
 solution: Experience Platform
 title: Data Science Workspace Access en functies
 description: Het volgende document schetst de toestemmingen van Workspace van de Wetenschap van Gegevens en toegang tot eigenschappen.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
 
 # Toegang tot en functies van Data Science Workspace
 
-Het volgende document schetst de toestemmingen van Workspace van de Wetenschap van Gegevens en toegang tot eigenschappen.
+>[!NOTE]
+>
+>Data Science Workspace is niet meer verkrijgbaar.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten voor Data Science Workspace.
 
-![ de lusjes van DSW ](./images/access/platform-tabs.png)
+In het volgende document worden machtigingen voor Data Science Workspace en toegang tot functies beschreven.
 
-- **Notitieboekjes:** verstrekt een interactieve ontwikkelomgeving ([ JupyterLab ](./jupyterlab/overview.md)) om, uw gegevens op Experience Platform te onderzoeken te analyseren en te modelleren.
+![ DSW lusjes ](./images/access/platform-tabs.png)
+
+- **Notities:** verstrekt een interactieve ontwikkelomgeving ([ JupyterLab ](./jupyterlab/overview.md)) om, uw gegevens te onderzoeken te analyseren en te modelleren over Experience Platform.
 - **Modellen:** verstrekt hulpmiddelen die worden gebruikt om, geavanceerde machine het leren recepten en modellen tot stand te brengen te publiceren en op te slaan. Voor meer informatie, bezoek [ creeer en publiceer een machine het leren model ](./models-recipes/create-publish-model.md) leerprogramma.
 - **de Diensten:** bevat zowel de Adobe-Verstrekte diensten zoals [ AI/ML diensten ](../intelligent-services/home.md) en om het even welke douanediensten u met de Wetenschap Workspace van Gegevens creeerde.
 
@@ -39,9 +45,9 @@ In de volgende tabel worden enkele belangrijke verschillen beschreven voor Data 
 
 | Workspace-machtiging gegevenswetenschap | Alleen Adobe Experience Platform Intelligence Package | Adobe Experience Platform Intelligence plus Advanced Intelligence Pack Add-on |
 | --- | :---: | :---: |
-| Aantal ondersteunde laptopgebruikers. | 5 gelijktijdige gebruikers | Met het eerste pakket worden 5 gelijktijdige gebruikers toegevoegd en met extra aankopen worden 10 gelijktijdige gebruikers per pakket toegevoegd. |
-| Biedt geïntegreerde Jupyter-laptops voor verkennende gegevensanalyse en modelontwerpdoeleinden. | X (Ondersteunt R-, Python- en Scala-bibliotheken) | X (Voegt PySpark en de bibliotheken van XML van de Vonk toe) |
-| Geïntegreerde integratie met Query-service. Mogelijkheid om gegevenssets te verkennen en vorm te geven met SQL in notebooks. | X | X |
+| Aantal ondersteunde notebookgebruikers. | 5 gelijktijdige gebruikers | Met het eerste pakket worden 5 gelijktijdige gebruikers toegevoegd en met extra aankopen worden 10 gelijktijdige gebruikers per pakket toegevoegd. |
+| Biedt geïntegreerde Jupyter-laptops voor verkennende gegevensanalyse en modelontwerpdoeleinden. | X (Ondersteunt R-, Python- en Scala-bibliotheken) | X (voegt PySpark- en Spark ML-bibliotheken toe) |
+| Native integratie met Query Service. Mogelijkheid om datasets te verkennen en vorm te geven met SQL in notebooks. | X | X |
 | Toegang tot vooraf gebouwde laptopsjablonen voor voorspellende analyse. | X | X |
 | Teken handmatig modellen met Jupyter-laptops en scoren deze. | X | X |
 | Implementeer en operationele modellen met de mogelijkheid om trainingen te plannen en taken te evalueren. | | X |
@@ -62,14 +68,14 @@ Als u Data Science Workspace wilt gebruiken, moet de machtiging &quot;Manage Dat
 
 ## Sandbox-ondersteuning
 
-Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke instantie van het Platform steunt veelvoudige productie en niet productie zandbakken, elk die zijn eigen bibliotheek van de middelen van het Platform handhaven. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op uw productiesandboxen. Voor meer informatie over zandbakken, zie het [ overzicht van zandbakken ](../sandboxes/home.md).
+Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke Platform-instantie ondersteunt meerdere productie- en niet-productie-sandboxen, elk met behoud van een eigen bibliotheek met platformbronnen. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op uw productiesandboxen. Voor meer informatie over zandbakken, zie het [ overzicht van zandbakken ](../sandboxes/home.md).
 
 Data Science Workspace heeft momenteel de volgende sandboxbeperking:
 
-- Compute resources worden gedeeld door de productie- en niet-productie-sandboxen.
+- Compute resources worden gedeeld door de productie- en niet-productiesandboxen.
 
 ## Volgende stappen
 
 In dit document worden de verschillende soorten toegang en functies beschreven die beschikbaar zijn in Data Science Workspace.
 
-Om meer over de Wetenschap van Gegevens Workspace, zoals een volledig dagelijks werkschema te leren, gelieve te beginnen door de ](./walkthrough.md) documentatie van Workspace van de Wetenschap van 0} Gegevens te lezen. [ Voor meer algemene informatie, bezoek het [ overzicht van Workspace van de Wetenschap van Gegevens ](./home.md).
+Om meer over de Werkruimte van de Wetenschap van Gegevens, zoals een volledig werkschema van dag tot dag te leren, gelieve te beginnen door de ](./walkthrough.md) documentatie van de Werkruimte van de Wetenschap van 0} Gegevens te lezen. [ Voor meer algemene informatie, bezoek het [ overzicht van de Werkruimte van de Wetenschap van Gegevens ](./home.md).

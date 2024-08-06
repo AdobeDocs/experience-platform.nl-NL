@@ -5,14 +5,20 @@ title: EDA-laptop (Exploration Data Analysis)
 type: Tutorial
 description: Deze gids concentreert zich op hoe te om het Verkennende Notitieboekje van de gegevensanalyse (EDA) te gebruiken om patronen in Webgegevens te ontdekken, gebeurtenissen met een voorspelingsdoel, schone samengevoegde gegevens te groeperen, en het verband tussen predikers en een doel te begrijpen.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '2766'
+source-wordcount: '2789'
 ht-degree: 0%
 
 ---
 
 # Webgegevens verkennen voor voorspellende modellen met behulp van de EDA-laptop (exploratory Data Analysis)
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 De EDA-laptop (Exploratory Data Analysis) is ontworpen om u te helpen patronen in gegevens te ontdekken, de gegevenshygiëne te controleren en de relevante gegevens voor voorspellende modellen samen te vatten.
 

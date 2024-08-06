@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Workspace-gids voor probleemoplossing in gegevenswetenschappen
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over Adobe Experience Platform Data Science Workspace.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1495'
 ht-degree: 0%
 
 ---
 
 # [!DNL Data Science Workspace] gids voor probleemoplossing
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Data Science Workspace] . Voor vragen en het oplossen van problemen betreffende [!DNL Platform] APIs in het algemeen, zie de [ het oplossen van problemengids van Adobe Experience Platform API ](../landing/troubleshooting.md).
 
@@ -33,23 +39,23 @@ In de gebeurtenis u de maximumhoeveelheid geheugen (RAM) toewijst en nog steeds 
 
 >[!IMPORTANT]
 >
->Dit probleem is opgelost, maar is mogelijk nog wel aanwezig in de Google Chrome 80.x-browser. Controleer of je Chrome-browser up-to-date is.
+>Dit probleem is opgelost, maar is mogelijk nog wel aanwezig in de Google Chrome 80.x-browser. Zorg ervoor dat uw Chrome-browser up-to-date is.
 
-Met [!DNL Google Chrome] browser versie 80.x, worden alle derdekoekjes geblokkeerd door gebrek. Met dit beleid kan worden voorkomen dat [!DNL JupyterLab] wordt geladen in Adobe Experience Platform.
+Met [!DNL Google Chrome] browserversie 80.x worden standaard alle cookies van derden geblokkeerd. Dit beleid kan voorkomen dat [!DNL JupyterLab] wordt geladen in Adobe Experience Platform.
 
-Voer de volgende stappen uit om dit probleem op te lossen:
+Ga als volgt te werk om dit probleem op te lossen:
 
-In uw [!DNL Chrome] browser, navigeer aan top-right en selecteer **Montages** (alternatief kunt u &quot;chrome://settings/&quot;in de adresbar kopiëren en kleven). Daarna, scrol aan de bodem van de pagina en klik **Geavanceerde** dropdown.
+In uw [!DNL Chrome] browser, navigeer aan het hoogste recht en selecteer **Montages** (alternatief kunt u &quot;chrome://settings/&quot;in de adresbar kopiëren en kleven). Daarna, scrol aan de bodem van de pagina en klik **Geavanceerde** dropdown.
 
 ![ geavanceerd chroom ](./images/faq/chrome-advanced.png)
 
-De **privacy en veiligheid** sectie verschijnt. Daarna, klik op **montages van de Plaats** die door **Cookies en plaatsgegevens** worden gevolgd.
+De **privacy en veiligheid** sectie verschijnt. Daarna, klik op **montages van de Plaats** gevolgd door **Koekjes en plaatsgegevens**.
 
 ![ geavanceerd chroom ](./images/faq/privacy-security.png)
 
 ![ geavanceerd chroom ](./images/faq/cookies.png)
 
-Schakel ten slotte &quot;Cookies van derden blokkeren&quot; in op &quot;UIT&quot;.
+Schakel ten slotte &quot;Cookies van derden blokkeren&quot; in op &quot;OFF&quot;.
 
 ![ geavanceerd chroom ](./images/faq/toggle-off.png)
 
@@ -146,15 +152,15 @@ Als u transformaties uitvoert op gegevens, zoals met `fit()` , kunnen de transfo
 Als u een van de volgende fouten ontvangt:
 
 - Taak afgebroken vanwege een fout in het werkgebied... Kan alleen RDD&#39;s met hetzelfde aantal elementen in elke partitie comprimeren.
-- Externe RPC-client uitgeschakeld en andere geheugenfouten.
+- Externe RPC-client heeft geen koppeling en andere geheugenfouten.
 - Slechte prestaties bij het lezen en schrijven van datasets.
 
-Controleer of u de gegevens in de cache plaatst (`df.cache()`) voordat u de gegevens schrijft. Bij het uitvoeren van code in notebooks kan het gebruik van `df.cache()` vóór een handeling als `fit()` de prestaties van een laptop aanzienlijk verbeteren. Als u `df.cache()` gebruikt voordat u een gegevensset schrijft, weet u zeker dat de transformaties slechts één keer worden uitgevoerd in plaats van meerdere keren.
+Controleer of u de gegevens in de cache plaatst (`df.cache()`) voordat u de gegevens schrijft. Bij het uitvoeren van code in notebooks kan het gebruik van `df.cache()` vóór een handeling als `fit()` de prestaties van een notebook aanzienlijk verbeteren. Als u `df.cache()` gebruikt voordat u een gegevensset schrijft, weet u zeker dat de transformaties slechts één keer worden uitgevoerd in plaats van meerdere keren.
 
 ## [!DNL Docker Hub] beperkingen beperken in Data Science Workspace
 
-Vanaf 20 november, 2020, gingen de tariefgrenzen voor anoniem en vrij voor authentiek verklaard gebruik van de Hub van de Dokker van kracht. Gebruikers met anonieme of gratis [!DNL Docker Hub] zijn beperkt tot 100 aanvragen om de afbeelding elke zes uur opnieuw te laten ophalen. Als deze wijzigingen gevolgen hebben, ontvangt u het volgende foutbericht: `ERROR: toomanyrequests: Too Many Requests.` of `You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limits.` .
+Vanaf 20 November, 2020, gingen de tariefgrenzen voor anoniem en vrij voor authentiek verklaard gebruik van de Hub van de Docker van kracht. Anonieme en Free [!DNL Docker Hub] -gebruikers kunnen maximaal om de zes uur 100 aanvragen voor het ophalen van afbeeldingen in de container ontvangen. Als deze wijzigingen op u van toepassing zijn, ontvangt u het volgende foutbericht: `ERROR: toomanyrequests: Too Many Requests.` of `You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limits.` .
 
-Momenteel, zal deze grens slechts uw organisatie beïnvloeden als u probeert om 100 Notitieboekje aan Ontvangers binnen de periode van zes uur te bouwen of als u op Vonk gebaseerde Notities binnen de Wetenschap van Gegevens Workspace gebruikt die vaak omhoog en neer schrapen. Dit is echter onwaarschijnlijk, aangezien de cluster deze twee uur actief blijft voordat ze uitvallen. Hierdoor wordt het aantal vereiste pulls verminderd wanneer de cluster actief is. Als u een van de bovenstaande fouten ontvangt, moet u wachten tot de limiet van [!DNL Docker] opnieuw is ingesteld.
+Momenteel, zal deze grens slechts uw organisatie beïnvloeden als u probeert om 100 Notitieboekje aan Ontvangers binnen de periode van zes uur te bouwen of als u op Spark gebaseerde Notities binnen de Werkruimte van de Wetenschap van Gegevens gebruikt die vaak omhoog en neer schrapen. Dit is echter onwaarschijnlijk, aangezien de cluster actief blijft gedurende twee uur voordat deze uitgaat. Dit vermindert het aantal vereiste pulls wanneer de cluster actief is. Als u een van de bovenstaande fouten ontvangt, moet u wachten tot de limiet van [!DNL Docker] is hersteld.
 
-Voor meer informatie over [!DNL Docker Hub] tariefgrenzen, bezoek de [ documentatie DockerHub ](https://www.docker.com/increase-rate-limits). Hieraan wordt gewerkt en in een volgende release wordt een oplossing verwacht.
+Voor meer informatie over [!DNL Docker Hub] tariefgrenzen, bezoek de [ documentatie DockerHub ](https://www.docker.com/increase-rate-limits). Er wordt gewerkt aan een oplossing hiervoor en deze wordt verwacht in een volgende release.

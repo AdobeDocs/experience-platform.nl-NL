@@ -1,17 +1,23 @@
 ---
-keywords: Experience Platform;ontwikkelaarshandleiding;Data Science Workspace;populaire onderwerpen;In real time machine leren;knoopverwijzing;
+keywords: Experience Platform;ontwikkelaarshandleiding;Data Science Workspace;populaire onderwerpen;Real-time machine learning;node reference;
 solution: Experience Platform
-title: Real-time Machine Learning-laptops beheren
-description: In de volgende handleiding worden de stappen beschreven die nodig zijn om een toepassing voor het leren van machines in realtime te maken in Adobe Experience Platform JupyterLab.
+title: Real-time machine learning-laptops beheren
+description: In de volgende handleiding worden de stappen beschreven die nodig zijn om een Real-Time Machine Learning-toepassing te maken in Adobe Experience Platform JupyterLab.
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
 
 # Real-time Machine Learning-laptops beheren (Alpha)
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 >[!IMPORTANT]
 >
@@ -25,7 +31,7 @@ In Adobe Experience Platform UI, selecteer **[!UICONTROL Notebooks]** van binnen
 
 ![ open JupyterLab ](../images/rtml/open-jupyterlab.png)
 
-De [!DNL JupyterLab] -startprogramma wordt weergegeven. De rol neer aan *het Leren van de machine in real time* en selecteert de **[!UICONTROL Real-time ML]** notitieboekje. Er wordt een sjabloon geopend met voorbeeldlaptopcellen met een voorbeeldgegevensset.
+De [!DNL JupyterLab] -startprogramma wordt weergegeven. De rol neer aan *het Leren van de machine in real time* en selecteert de **[!UICONTROL Real-time ML]** notitieboekje. Er wordt een sjabloon geopend met voorbeelden van notebookcellen met een voorbeeldgegevensset.
 
 ![ lege python ](../images/rtml/authoring-notebook.png)
 
@@ -111,15 +117,15 @@ config_properties = {
 
 ### Uw model voorbereiden
 
-Met behulp van de sjabloon **[!UICONTROL Real-time ML]** moet u uw XML-model analyseren, vooraf verwerken, trainen en evalueren. Dit wordt gedaan door gegevenstransformaties toe te passen en een opleidingspijpleiding te bouwen.
+Met de sjabloon van **[!UICONTROL Real-time ML]** moet u uw XML-model analyseren, vooraf verwerken, trainen en evalueren. Dit gebeurt door datatransformaties toe te passen en een trainingspijplijn te bouwen.
 
-**de transformaties van Gegevens**
+**transformaties van Gegevens**
 
-De **[!UICONTROL Real-time ML]** malplaatjes **de Transformaties van Gegevens** cel moet worden gewijzigd om met uw eigen dataset te werken. Doorgaans gaat het hier om het wijzigen van de naam van kolommen, rollup van gegevens en het voorbereiden en bewerken van gegevens.
+De **[!UICONTROL Real-time ML]** malplaatjes **cel van de Transformaties van Gegevens** moet worden gewijzigd om met uw eigen dataset te werken. Meestal gaat het om het wijzigen van de naam van kolommen, gegevensrollup en gegevensvoorbereiding/functietechniek.
 
 >[!NOTE]
 >
->Het volgende voorbeeld is voor leesbaarheidsdoeleinden gecondenseerd met `[ ... ]` . Gelieve te bekijken en uit te breiden *in real time ML* sectie van malplaatjegegevens voor de volledige codecel.
+>Het volgende voorbeeld is versmald ten behoeve van leesbaarheid met `[ ... ]` . Gelieve te bekijken en uit te breiden *in real time de sectie van XML* malplaatjegegevens transformaties voor de volledige codecel.
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid': 'ecid',
@@ -252,7 +258,7 @@ model_path = "model.onnx"
 
 >[!NOTE]
 >
->De volgende cel is niet bewerkbaar of kan worden verwijderd en is vereist voor het werken van uw toepassing voor het leren van machines in realtime.
+>De volgende cel kan niet worden bewerkt of kan worden verwijderd en is vereist voor het werken van uw Real-time Machine Learning-toepassing.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -264,11 +270,11 @@ print("Model ID: ", model_id)
 
 ![ ONNX model ](../images/rtml/onnx-model-rail.png)
 
-### Uw eigen vooraf opgeleide ONNX-model uploaden {#pre-trained-model-upload}
+### Uw eigen vooraf getrainde ONNX-model uploaden {#pre-trained-model-upload}
 
-Met de uploadknop in [!DNL JupyterLab] -laptops uploadt u uw vooraf opgeleide ONNX-model naar de [!DNL Data Science Workspace] -laptopomgeving.
+Met de uploadknop in [!DNL JupyterLab] -laptops kunt u uw vooraf getrainde ONNX-model uploaden naar de omgeving van de [!DNL Data Science Workspace] -laptops.
 
-![ uploadt pictogram ](../images/rtml/upload.png)
+![ uploadpictogram ](../images/rtml/upload.png)
 
 Daarna, verander de `model_path` koordwaarde in *in real time ML* notitieboekje om uw ONNX modelnaam aan te passen. Zodra volledig, stel de *reeks modelweg* in werking en stel dan *in werking uploadt uw model aan RTML ModelCel van de Opslag*. Uw modellocatie en model-id worden beide geretourneerd in de reactie als de bewerking succesvol was.
 
@@ -276,7 +282,7 @@ Daarna, verander de `model_path` koordwaarde in *in real time ML* notitieboekje 
 
 ## Maken van domeinspecifieke taal (DSL)
 
-Deze sectie schetst het creëren van een DSL. U gaat de knopen schrijven die om het even welke voorverwerking van gegevens samen met knoop ONNX omvatten. Vervolgens wordt een DSL-grafiek gemaakt met knooppunten en randen. Randen verbinden knooppunten met behulp van een op twee gebaseerde indeling (node_1, node_2). De grafiek moet geen cycli hebben.
+Deze sectie schetst het creëren van een DSL. U gaat de knooppunten ontwerpen die een voorbehandeling van gegevens samen met het ONNX-knooppunt bevatten. Vervolgens wordt een DSL-grafiek gemaakt met knooppunten en randen. Randen verbinden knooppunten met behulp van een op twee gebaseerde indeling (node_1, node_2). De grafiek moet geen cycli hebben.
 
 >[!IMPORTANT]
 >
@@ -288,7 +294,7 @@ Deze sectie schetst het creëren van een DSL. U gaat de knopen schrijven die om 
 >
 > U hebt waarschijnlijk meerdere knooppunten op basis van het type gegevens dat wordt gebruikt. Het volgende voorbeeld schetst slechts één enkele knoop in het *in real time ML* malplaatje. Gelieve te bekijken de *malplaatjes* Authoring van de Knoop *sectie in real time van XML {voor de volledige codecel.*
 
-Het onderstaande Pandas-knooppunt gebruikt `"import": "map"` om de methodenaam als een tekenreeks in de parameters te importeren, gevolgd door de parameters in te voeren als een toewijzingsfunctie. In het onderstaande voorbeeld wordt dit gedaan met `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}` . Nadat u de kaart hebt geplaatst, kunt u `inplace` instellen als `True` of `False` . Stel `inplace` in als `True` of `False` op basis van of u transformatie wilt toepassen. Standaard maakt `"inplace": False` een nieuwe kolom. Ondersteuning voor het opgeven van een nieuwe kolomnaam is ingesteld om in een volgende release te worden toegevoegd. De laatste regel `cols` kan één kolomnaam of een lijst met kolommen zijn. Geef de kolommen op waarop u de transformatie wilt toepassen. In dit voorbeeld wordt `leasing` opgegeven. Voor meer informatie over de beschikbare knopen en hoe te om hen te gebruiken, bezoek de [ gids van de knoopverwijzing ](./node-reference.md).
+Het onderstaande Pandas-knooppunt gebruikt `"import": "map"` om de methodenaam als een tekenreeks in de parameters te importeren, gevolgd door het invoeren van de parameters als een kaartfunctie. In het onderstaande voorbeeld wordt dit gedaan met `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}` . Nadat u de kaart hebt geplaatst, kunt u `inplace` instellen als `True` of `False` . Stel `inplace` in als `True` of `False` op basis van of u transformatie wilt toepassen. Standaard maakt `"inplace": False` een nieuwe kolom. Ondersteuning voor het opgeven van een nieuwe kolomnaam is ingesteld om in een volgende release te worden toegevoegd. De laatste regel `cols` kan één kolomnaam of een lijst met kolommen zijn. Geef de kolommen op waarop u de transformatie wilt toepassen. In dit voorbeeld wordt `leasing` opgegeven. Voor meer informatie over de beschikbare knopen en hoe te om hen te gebruiken, bezoek de [ gids van de knoopverwijzing ](./node-reference.md).
 
 ```python
 # Renaming leasing column using Pandas Node
@@ -441,7 +447,7 @@ services = edge_utils.list_deployed_services()
 print(services)
 ```
 
-De teruggekeerde reactie is een serie van uw opgestelde diensten.
+De geretourneerde reactie is een array van uw geïmplementeerde services.
 
 ```json
 [
@@ -459,7 +465,7 @@ De teruggekeerde reactie is een serie van uw opgestelde diensten.
 
 >[!CAUTION]
 >
->Deze cel wordt gebruikt om uw geïmplementeerde Edge-toepassing te verwijderen. Gebruik de volgende cel alleen als u een geïmplementeerde [!DNL Edge] toepassing moet verwijderen.
+>Deze cel wordt gebruikt om uw geïmplementeerde Edge-toepassing te verwijderen. Gebruik de volgende cel niet tenzij u een geïmplementeerde [!DNL Edge] -toepassing moet verwijderen.
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
@@ -470,4 +476,4 @@ else:
 
 ## Volgende stappen
 
-Door de bovenstaande zelfstudie te volgen, hebt u een ONNX-model getraind en geüpload naar de modelwinkel voor het leren van machines in realtime. Bovendien, hebt u uw in real time het Leren model van de Machine gescoord en opgesteld. Als u wenst om meer over de knopen beschikbaar voor model creatie te leren, bezoek de [ gids van de knoopverwijzing ](./node-reference.md).
+Door de bovenstaande zelfstudie te volgen, hebt u een ONNX-model getraind en geüpload naar de real-time Machine Learning Modelstore. Bovendien, hebt u uw in real time het Leren model van de Machine gescoord en opgesteld. Als u wenst om meer over de knopen beschikbaar voor model creatie te leren, bezoek de [ gids van de knoopverwijzing ](./node-reference.md).

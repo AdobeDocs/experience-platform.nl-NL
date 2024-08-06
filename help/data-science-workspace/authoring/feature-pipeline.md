@@ -4,14 +4,20 @@ title: Creeer een Pijpleiding van de Eigenschap Gebruikend de ModelAuthoring SDK
 type: Tutorial
 description: Met Adobe Experience Platform kunt u aangepaste functiepijpleidingen maken en maken om op schaal functionaliteit te ontwerpen via de Sensei Machine Learning Framework Runtime. Dit document beschrijft de diverse klassen die in een eigenschappijpleiding worden gevonden, en verstrekt een geleidelijke zelfstudie voor het creëren van een pijpleiding van de douaneeigenschap gebruikend ModelAuthoring SDK in PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1438'
 ht-degree: 0%
 
 ---
 
 # Creeer een eigenschappijpleiding gebruikend ModelAuthoring SDK
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 >[!IMPORTANT]
 >

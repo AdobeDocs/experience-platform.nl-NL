@@ -3,16 +3,22 @@ keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populair
 solution: Experience Platform
 title: Samenwerken in JupyterLab met behulp van kit
 type: Tutorial
-description: Git is een gedistribueerd versiecontrolesysteem voor het bijhouden van wijzigingen in broncode tijdens softwareontwikkeling. Git is vooraf geïnstalleerd in de Data Science Workspace JupyterLab-omgeving.
+description: Git is een gedistribueerd versiebeheersysteem voor het bijhouden van wijzigingen in broncode tijdens softwareontwikkeling. Git is vooraf geïnstalleerd in de Data Science Workspace JupyterLab-omgeving.
 exl-id: d7b766f7-b97d-4007-bc53-b83742425047
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '300'
 ht-degree: 0%
 
 ---
 
 # Samenwerken in [!DNL JupyterLab] met [!DNL Git]
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 [!DNL Git] is een gedistribueerd versiebeheersysteem voor het bijhouden van wijzigingen in broncode tijdens softwareontwikkeling. Git wordt vooraf geïnstalleerd in de [!DNL Data Science Workspace JupyterLab] -omgeving.
 
@@ -50,7 +56,7 @@ Vervolgens kloont u de opslagplaats die u wilt gebruiken met de opdracht `git cl
 
 >[!NOTE]
 >
-> Om om het even welke schrijfverrichtingen (`git push` bijvoorbeeld) uit te voeren moeten de volgende configuratiebevelen voor elke nieuwe zitting worden in werking gesteld. Houd er ook rekening mee dat een pushopdracht vraagt om een gebruikersnaam en wachtwoord.
+> Om schrijfbewerkingen uit te voeren (`git push` bijvoorbeeld), moeten de volgende configuratieopdrachten voor elke nieuwe sessie worden uitgevoerd. Houd er ook rekening mee dat een pushopdracht vraagt om een gebruikersnaam en wachtwoord.
 >
 >`git config --global user.email "you@example.com"`
 >

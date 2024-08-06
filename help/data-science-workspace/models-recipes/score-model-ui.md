@@ -5,14 +5,20 @@ title: Een model score in de gebruikersinterface van Data Science Workspace
 type: Tutorial
 description: Scores in Adobe Experience Platform Data Science Workspace kunnen worden bereikt door invoergegevens in te voeren in een bestaand getraind model. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '641'
 ht-degree: 0%
 
 ---
 
 # Score een model in de UI van de Wetenschap van Gegevens
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Scores in Adobe Experience Platform [!DNL Data Science Workspace] kunnen worden bereikt door invoergegevens in te voeren in een bestaand getraind model. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij.
 

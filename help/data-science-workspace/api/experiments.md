@@ -5,14 +5,20 @@ title: API-eindpunt voor experimenten
 description: Modelontwikkeling en -training vinden plaats op het niveau van het experiment, waarbij een experiment bestaat uit een MLInstance, training en scoring-run.
 role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
 
 # Eind van het experiment
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Modelontwikkeling en -training vinden plaats op het niveau van het experiment, waarbij een experiment bestaat uit een MLInstance, training en scoring-run.
 

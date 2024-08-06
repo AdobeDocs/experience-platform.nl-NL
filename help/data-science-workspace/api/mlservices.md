@@ -1,26 +1,32 @@
 ---
-keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;mlservices;sensei machine learning api
+keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;mlservices;sensei machine learning-API
 solution: Experience Platform
-title: XMLServices API-eindpunt
-description: Een dienst MLService is een gepubliceerd opgeleid model dat uw organisatie van de capaciteit voorziet om tot eerder ontwikkelde modellen toegang te hebben en te hergebruiken. Een belangrijk kenmerk van MLServices is de mogelijkheid om training en scoring op een geplande basis te automatiseren. De geplande trainingslooppas kan helpen de efficiency en nauwkeurigheid van een model handhaven, terwijl de geplande scoring looppas kan ervoor zorgen dat de nieuwe inzichten constant worden geproduceerd.
+title: XMLServices-API-eindpunt
+description: Een MLService is een gepubliceerd opgeleid model dat uw organisatie de mogelijkheid biedt om toegang te krijgen tot en gebruik te maken van eerder ontwikkelde modellen. Een belangrijk kenmerk van MLServices is de mogelijkheid om training en scores op een geplande basis te automatiseren. Gepland trainingsprogramma's kunnen de efficiëntie en nauwkeurigheid van een model helpen behouden, terwijl geplande scores ervoor kunnen zorgen dat er consistent nieuwe inzichten worden gegenereerd.
 role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
 
 # MLServices-eindpunt
 
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
+
 Een dienst MLService is een gepubliceerd opgeleid model dat uw organisatie van de capaciteit voorziet om tot eerder ontwikkelde modellen toegang te hebben en te hergebruiken. Een belangrijk kenmerk van MLServices is de mogelijkheid om training en scoring op een geplande basis te automatiseren. De geplande trainingslooppas kan helpen de efficiency en nauwkeurigheid van een model handhaven, terwijl de geplande scoring looppas kan ervoor zorgen dat de nieuwe inzichten constant worden geproduceerd.
 
-De geautomatiseerde opleiding en het scoren programma&#39;s worden bepaald met beginnende timestamp, beëindigend timestamp, en een frequentie die als a [ wordt vertegenwoordigd cron uitdrukking ](https://en.wikipedia.org/wiki/Cron). De programma&#39;s kunnen worden bepaald wanneer [ creërend een MLService ](#create-an-mlservice) of toegepast door [ het bijwerken van een bestaande MLService ](#update-an-mlservice).
+De geautomatiseerde opleiding en het schrapen programma&#39;s worden bepaald met beginnende timestamp, het beëindigen timestamp, en een frequentie die als a [ wordt vertegenwoordigd cron uitdrukking ](https://en.wikipedia.org/wiki/Cron). De programma&#39;s kunnen worden bepaald wanneer [ creërend een MLService ](#create-an-mlservice) of toegepast door [ het bijwerken van een bestaande MLService ](#update-an-mlservice).
 
 ## Een MLService maken {#create-an-mlservice}
 
-U kunt een dienst tot stand brengen MLService door een verzoek van de POST en een lading uit te voeren die een naam voor de dienst en een geldige identiteitskaart MLInstance verstrekt. De MLInstance die wordt gebruikt om een dienst te creëren MLService wordt vereist geen bestaande trainingsexperimenten te hebben maar u kunt verkiezen om de dienst MLService met een bestaand opgeleid model tot stand te brengen door overeenkomstige Deskundige identiteitskaart en opleidingsuitloopidentiteitskaart te verstrekken.
+U kunt een dienst tot stand brengen MLService door een verzoek van de POST en een lading uit te voeren die een naam voor de dienst en een geldige identiteitskaart MLInstance verstrekt. De instantie die wordt gebruikt om een MLService te maken, hoeft geen bestaande trainingsexperimenten te hebben, maar u kunt ervoor kiezen om de MLService te maken met een bestaand getraind model door de bijbehorende id van de Experiment en de trainingsrun-id op te geven.
 
 **API Formaat**
 
@@ -60,19 +66,19 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `name` | De gewenste naam voor de dienst MLService. De dienst die aan deze dienst MLSerft deze waarde die in de UI van de Galerij van de Dienst als naam van de dienst moet worden getoond. |
-| `description` | Een optionele beschrijving voor de MLService. De dienst die aan deze dienst MLSerft deze waarde die in de UI van de Galerij van de Dienst als beschrijving van de dienst moet worden getoond. |
+| `name` | De gewenste naam voor de MLService. De dienst die aan deze dienst MLSerft deze waarde om in UI van de Galerij van de Dienst als naam van de dienst te worden getoond. |
+| `description` | Een optionele beschrijving voor de MLService. De service die overeenkomt met deze MLService, neemt deze waarde over die in de gebruikersinterface van de servicegalerie moet worden weergegeven als de beschrijving van de service. |
 | `mlInstanceId` | Een geldige MLInstance ID. |
 | `trainingDataSetId` | Een identiteitskaart van de opleidingsdataset die indien verstrekt de standaard dataset ID van MLInstance zal met voeten treden. Als MLInstance die wordt gebruikt om tot de dienst te leiden MLService geen trainingsdataset bepaalt, moet u een aangewezen identiteitskaart van de opleidingsdataset verstrekken. |
-| `trainingExperimentId` | Een experimentele id die u desgewenst kunt opgeven. Als deze waarde niet wordt verstrekt, zal het creëren van de dienst MLService ook tot een nieuwe Experiment leiden gebruikend de standaardconfiguraties van MLInstance. |
-| `trainingExperimentRunId` | Een trainingsrun-id die u optioneel kunt opgeven. Als deze waarde niet wordt verstrekt, zal het creëren van MLService ook een trainingslooppas creëren en uitvoeren gebruikend de standaard opleidingsparameters van MLInstance. |
+| `trainingExperimentId` | Een experimentele id die u desgewenst kunt opgeven. Als deze waarde niet wordt opgegeven, maakt het maken van de MLService ook een nieuwe Experiment met de standaardconfiguraties van de MLInstance. |
+| `trainingExperimentRunId` | Een trainingsrun-id die u optioneel kunt opgeven. Als deze waarde niet wordt verstrekt, zal het creëren van MLService ook een trainingslooppas creëren en uitvoeren gebruikend de standaard trainingsparameters van MLInstance. |
 | `trainingSchedule` | Een schema voor geautomatiseerde trainingen. Als dit bezit wordt bepaald, dan zal MLService automatisch trainingslooppas op een geplande basis uitvoeren. |
 | `trainingSchedule.startTime` | Een tijdstempel waarvoor de geplande training wordt gestart. |
 | `trainingSchedule.endTime` | Een tijdstempel waarvoor de geplande training wordt beëindigd. |
 | `trainingSchedule.cron` | Een uitsnede die de frequentie van automatische trainingen bepaalt. |
 | `scoringSchedule` | Een schema voor automatische scoring. Als dit bezit wordt bepaald, dan zal MLService automatisch het scoren looppas op een geplande basis uitvoeren. |
-| `scoringSchedule.startTime` | Een tijdstempel waarvoor de geplande scoring wordt uitgevoerd. |
-| `scoringSchedule.endTime` | Een tijdstempel waarvoor de geplande scoring-runtime wordt beëindigd. |
+| `scoringSchedule.startTime` | Een tijdstempel waarvoor geplande scores worden uitgevoerd. |
+| `scoringSchedule.endTime` | Een tijdstempel waarvan de geplande scores eindigen. |
 | `scoringSchedule.cron` | Een uitsnijdexpressie die de frequentie van automatische scoring definieert. |
 
 **Reactie**
@@ -108,7 +114,7 @@ Een succesvolle reactie keert een lading terug die de details van de pas gecreë
 
 ## Een lijst met MLServices ophalen {#retrieve-a-list-of-mlservices}
 
-U kunt een lijst van diensten terugwinnen MLServices door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [ vraagparameters voor activaherwinning ](./appendix.md#query).
+U kunt een lijst van diensten terugwinnen MLServices door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie op [ vraagparameters voor activaherwinning ](./appendix.md#query).
 
 **API Formaat**
 
@@ -121,11 +127,11 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{QUERY_PARAMETER}` | Één van de [ beschikbare vraagparameters ](./appendix.md#query) die aan filterresultaten wordt gebruikt. |
-| `{VALUE}` | De waarde voor de voorafgaande vraagparameter. |
+| `{VALUE}` | De waarde voor de voorafgaande queryparameter. |
 
 **Verzoek**
 
-Het volgende verzoek bevat een vraag en wint een lijst van diensten terug MLS die zelfde identiteitskaart MLInstance (`{MLINSTANCE_ID}`) delen.
+Het volgende verzoek bevat een vraag en wint een lijst van MLServices terug die zelfde ID MLInstance (`{MLINSTANCE_ID}`) delen.
 
 ```shell
 curl -X GET \
@@ -167,7 +173,7 @@ Een succesvolle reactie keert een lijst van diensten MLServices en hun details m
 
 ## Een specifieke MLService ophalen {#retrieve-a-specific-mlservice}
 
-U kunt de details van een specifiek Experiment terugwinnen door een verzoek van de GET uit te voeren dat gewenste identiteitskaart MLService in de verzoekweg omvat.
+U kunt de details van een specifieke Experiment terugwinnen door een verzoek van de GET uit te voeren dat gewenste identiteitskaart MLService in de verzoekweg omvat.
 
 **API Formaat**
 
@@ -190,7 +196,7 @@ curl -X GET \
 
 **Reactie**
 
-Een succesvolle reactie keert een lading terug die de details van de gevraagde MLService bevat.
+Een succesvolle reactie retourneert een lading die de details van de aangevraagde MLService bevat.
 
 ```json
 {
@@ -211,11 +217,11 @@ Een succesvolle reactie keert een lading terug die de details van de gevraagde M
 
 ## Een MLService bijwerken {#update-an-mlservice}
 
-U kunt een bestaande dienst bijwerken MLService door zijn eigenschappen door een verzoek van de PUT te beschrijven dat identiteitskaart van doelMLService in de verzoekweg omvat en een nuttige lading te verstrekken JSON die bijgewerkte eigenschappen bevat.
+U kunt een bestaande MLService bijwerken door zijn eigenschappen door een verzoek van de PUT te beschrijven dat identiteitskaart van doelMLService in de verzoekweg omvat en een lading JSON verstrekt die bijgewerkte eigenschappen bevat.
 
 >[!TIP]
 >
->Om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET [ uitvoert om de dienst MLService door identiteitskaart ](#retrieve-a-specific-mlservice) terug te winnen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een GET verzoek uitvoert om [ MLService door identiteitskaart ](#retrieve-a-specific-mlservice) terug te winnen. Vervolgens past u het geretourneerde JSON-object aan en werkt u het bij en past u het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 **API Formaat**
 
@@ -321,7 +327,7 @@ curl -X DELETE \
 }
 ```
 
-## MLServices verwijderen op MLInstance ID
+## MLServices verwijderen op basis van MLInstance ID
 
 U kunt alle diensten schrappen MLServices die tot een bepaalde instantie behoren door een verzoek van de DELETE uit te voeren die een identiteitskaart MLInstance als vraagparameter specificeert.
 

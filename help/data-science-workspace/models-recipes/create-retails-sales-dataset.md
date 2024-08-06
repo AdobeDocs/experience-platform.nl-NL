@@ -5,15 +5,21 @@ title: Het detailhandelsschema en de gegevensset maken
 type: Tutorial
 description: Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere zelfstudies van Adobe Experience Platform Data Science Workspace. Na voltooiing, zullen het Retailschema en de datasets van de Verkoop voor u en leden van uw organisatie op Experience Platform beschikbaar zijn.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
 
 
 # Het detailhandelschema en de dataset maken
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere zelfstudies van [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] . Na voltooiing, zullen het Retailschema en de datasets van de Verkoop voor u en leden van uw organisatie op [!DNL Experience Platform] beschikbaar zijn.
 

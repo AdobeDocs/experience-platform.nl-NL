@@ -5,14 +5,20 @@ title: Insights API Endpoint
 description: Inzichten bevatten meetgegevens die worden gebruikt om een gegevenswetenschapper in staat te stellen optimale XML-modellen te evalueren en te kiezen door relevante evaluatiemetriek weer te geven.
 role: Developer
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
 
 # Beginpunt
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Inzichten bevatten meetgegevens die worden gebruikt om een gegevenswetenschapper in staat te stellen optimale XML-modellen te evalueren en te kiezen door relevante evaluatiemetriek weer te geven.
 
@@ -165,11 +171,11 @@ Een succesvolle reactie keert een lading terug die de inzichten unieke herkennin
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `id` | The ID corresponding to the Insight. |
-| `experimentId` | Een geldige experimentele id. |
-| `experimentRunId` | Een geldige uitvoerings-id voor Experimenten. |
+| `experimentId` | Een geldige experiment-id. |
+| `experimentRunId` | Een geldige uitvoerings-id voor experimenten. |
 | `modelId` | Een geldige model-id. |
 
-## Nieuw modelinzicht toevoegen
+## Een nieuw modelinzicht toevoegen
 
 U kunt een nieuw Modelinzicht tot stand brengen door een verzoek van de POST en een nuttige lading uit te voeren die context, gebeurtenissen, en metriek voor het nieuwe Modelinzicht verstrekt. Het contextgebied dat wordt gebruikt om een nieuw Model inzicht tot stand te brengen wordt niet vereist om de bestaande diensten in bijlage aan het te hebben maar u kunt verkiezen om het nieuwe Model inzicht met de bestaande diensten tot stand te brengen door één of meerdere overeenkomstige IDs te verstrekken:
 

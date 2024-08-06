@@ -5,14 +5,20 @@ title: Een voorvertoning weergeven van het detailhandelsschema en de gegevensset
 type: Tutorial
 description: Het volgende document schetst het voorvertonen van schema's en datasets op Adobe Experience Platform.
 exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '255'
 ht-degree: 0%
 
 ---
 
 # Een voorvertoning weergeven van het detailhandelsschema en de dataset
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Op succesvolle voltooiing van het laarzentrekkermanuscript van het [ detailhandelschema en dataset ](./create-retails-sales-dataset.md) leerprogramma. Uitvoerschema&#39;s en gegevenssets kunnen worden weergegeven op [!DNL Experience Platform] . Volg onderstaande stappen om de schema&#39;s en datasets weer te geven:
 

@@ -1,24 +1,30 @@
 ---
-keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;modellen;sensei machine learning api
+keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;modellen;sensei machine learning-API
 solution: Experience Platform
-title: Modellen-API-eindpunt
-description: Een model is een geval van een machine het leren recept dat gebruikend historische gegevens en configuraties wordt opgeleid om voor een bedrijfs geval op te lossen.
+title: Modellen API-eindpunt
+description: Een model is een exemplaar van een machine-learningrecept dat is opgeleid met behulp van historische data en configuraties om een oplossing te vinden voor een bedrijfscase.
 role: Developer
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '887'
 ht-degree: 1%
 
 ---
 
 # Het eindpunt van modellen
 
-Een model is een geval van een machine het leren recept dat gebruikend historische gegevens en configuraties wordt opgeleid om voor een bedrijfs geval op te lossen.
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten voor Data Science Workspace.
+
+Een model is een exemplaar van een machine-learningrecept dat is opgeleid met behulp van historische data en configuraties om een oplossing te vinden voor een bedrijfscase.
 
 ## Een lijst met modellen ophalen
 
-U kunt een lijst van Modeldetails terugwinnen die tot alle Modellen behoren door één enkel verzoek van de GET aan /models uit te voeren. Standaard wordt in deze lijst de volgorde van het oudste gemaakte model gewijzigd en worden de resultaten beperkt tot 25. U kunt verkiezen om resultaten te filtreren door sommige vraagparameters te specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [ vraagparameters voor activaherwinning ](./appendix.md#query).
+U kunt een lijst met Modeldetails ophalen die bij alle Modellen horen door één enkele GET-aanvraag bij /modellen uit te voeren. Standaard wordt in deze lijst de volgorde van het oudste gemaakte model bepaald en worden de resultaten beperkt tot 25. U kunt resultaten filteren door enkele queryparameters op te geven. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie op [ vraagparameters voor activaherwinning ](./appendix.md#query).
 
 **API formaat**
 
@@ -193,7 +199,7 @@ curl -X POST \
 | Parameter | Beschrijving |
 | --- | --- |
 | `modelArtifact` | De locatie van het volledige modelartefact dat u wilt opnemen. |
-| `model` | De formuliergegevens van het Modelobject dat moet worden gemaakt. |
+| `model` | De formuliergegevens van het modelobject dat moet worden gemaakt. |
 
 **Reactie**
 
@@ -232,7 +238,7 @@ PUT /models/{MODEL_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{MODEL_ID}` | De id van het opgeleide of gepubliceerde model. |
+| `{MODEL_ID}` | De id van het getrainde of gepubliceerde model. |
 
 **Verzoek**
 
@@ -261,7 +267,7 @@ curl -X PUT \
 
 **Reactie**
 
-Een geslaagde reactie retourneert een lading die de bijgewerkte gegevens van de expert bevat.
+Als de reactie is gelukt, wordt een lading geretourneerd met de bijgewerkte gegevens van de Experiment.
 
 ```json
 {
@@ -281,7 +287,7 @@ Een geslaagde reactie retourneert een lading die de bijgewerkte gegevens van de 
 
 ## Model op id verwijderen
 
-U kunt één enkel Model schrappen door een verzoek van de DELETE uit te voeren dat identiteitskaart van het doelModel in de verzoekweg omvat.
+U kunt één model verwijderen door een DELETE-aanvraag uit te voeren die de id van het doelmodel bevat in het aanvraagpad.
 
 **API Formaat**
 
@@ -433,7 +439,7 @@ Een geslaagde reactie retourneert een payload die een JSON-object bevat met een 
 
 ## Een specifiek getranscodeerd model ophalen {#retrieve-transcoded-model}
 
-U kunt een specifiek getranscodeerd Model terugwinnen door een verzoek van de GET met uw `{MODEL_ID}` en identiteitskaart van een getranscodeerd model uit te voeren.
+U kunt een specifiek getranscodeerd model ophalen door een GET-aanvraag uit te voeren met uw `{MODEL_ID}` en de id van een getranscodeerd model.
 
 **API Formaat**
 

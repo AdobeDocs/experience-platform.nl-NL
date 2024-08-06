@@ -1,24 +1,30 @@
 ---
-keywords: Experience Platform;Score a model;Data Science Workspace;populaire onderwerpen;sensei machine learning api
+keywords: Experience Platform;Score een model;Data Science Workspace;populaire onderwerpen;sensei machine learning API
 solution: Experience Platform
-title: Score een model met de Sensei Machine Learning-API
+title: Score een model met de Sensei Machine Learning API
 type: Tutorial
-description: Deze zelfstudie laat u zien hoe u de API's voor leren van Sensei Machine Learning kunt gebruiken om een expert en een experimentele run te maken.
+description: In deze zelfstudie leert u hoe u de Sensei Machine Learning-API's kunt gebruiken om een expert en een experimentele run te maken.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
 
 # Score een model gebruikend [!DNL Sensei Machine Learning API]
 
-Deze zelfstudie laat u zien hoe u de API&#39;s kunt gebruiken om een experimenteerprogramma en een experimentele versie te maken. Voor een lijst van alle eindpunten in de het Leren API van de Machine van Sensei, gelieve te verwijzen naar [ dit document ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
+>[!NOTE]
+>
+>Data Science Workspace is niet meer verkrijgbaar.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten voor Data Science Workspace.
 
-## Een geplande expert voor scoring maken
+Deze zelfstudie laat zien hoe u de API&#39;s kunt gebruiken om een experiment en een experimentele uitvoering te maken. Voor een lijst van alle eindpunten in de het Leren API van de Machine van Sensei, gelieve te verwijzen naar [ dit document ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
-Net als voor geplande trainingsexperimenten wordt het maken van een gepland experiment voor scoring ook uitgevoerd door een `template` -sectie op te nemen in de parameter body. Daarnaast wordt het veld `name` onder `tasks` in de hoofdtekst ingesteld op `score` .
+## Een geplande expert voor scores maken
+
+Net als bij geplande experimenten voor training, wordt het maken van een gepland experiment voor scores ook gedaan door een `template` -sectie op te nemen in de parameter body. Daarnaast wordt het veld `name` onder `tasks` in de hoofdtekst ingesteld op `score` .
 
 Hieronder ziet u een voorbeeld van het maken van een experiment dat elke 20 minuten start vanaf `startTime` en wordt uitgevoerd tot `endTime` .
 
@@ -34,8 +40,8 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: Uw organisatiereferenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
-`{ACCESS_TOKEN}`: De specifieke tokenwaarde voor toonder die na verificatie wordt opgegeven.\
+`{ORG_ID}`: uw organisatiegegevens zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ACCESS_TOKEN}`: uw specifieke togertokenwaarde die u na verificatie opgeeft.\
 `{API_KEY}`: uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: Experimenteel Run-object dat moet worden verzonden. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
 
@@ -103,12 +109,12 @@ Hier volgt de reactie na het maken van het geplande experiment.
 ```
 
 `{EXPERIMENT_ID}`: De id die het experiment vertegenwoordigt.\
-`{INSTANCE_ID}`: De id die de MLInstance vertegenwoordigt.
+`{INSTANCE_ID}`: De id die de instantie MLInstance vertegenwoordigt.
 
 
-### Een experimentele score maken
+### Een experimentele score maken voor scores
 
-Met het getrainde model kunnen we nu een Experimentele run voor scoring maken. De waarde van de parameter `modelId` is de `id` -parameter die in de bovenstaande aanvraag voor het model GET is geretourneerd.
+Met het getrainde model kunnen we nu een Experiment Run voor scores maken. De waarde van de parameter `modelId` is de `id` -parameter die in de bovenstaande modelaanvraag is geretourneerd.
 
 **Verzoek**
 
@@ -122,11 +128,11 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: Uw organisatiereferenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
-`{ACCESS_TOKEN}`: De specifieke tokenwaarde voor toonder die na verificatie wordt opgegeven.\
+`{ORG_ID}`: uw organisatiegegevens zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ACCESS_TOKEN}`: uw specifieke togertokenwaarde die u na verificatie opgeeft.\
 `{API_KEY}`: uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{EXPERIMENT_ID}`: De id die overeenkomt met het experiment dat u als doel wilt instellen. Dit vindt u in het antwoord bij het maken van uw experiment.\
-`{JSON_PAYLOAD}`: Gegevens die moeten worden gepost. Het voorbeeld dat we in onze zelfstudie gebruiken is:
+`{JSON_PAYLOAD}`: gegevens die moeten worden gepost. Het voorbeeld dat we in onze zelfstudie gebruiken is:
 
 ```JSON
 {
@@ -168,7 +174,7 @@ De reactie van het project Experiment Run wordt hieronder weergegeven:
 }
 ```
 
-`{EXPERIMENT_ID}`: De id die correspondeert met het experiment dat de Run uitvoert.\
+`{EXPERIMENT_ID}`: De id die overeenkomt met het experiment dat de run uitvoert.\
 `{EXPERIMENT_RUN_ID}`: De id die overeenkomt met de proefversie die u zojuist hebt gemaakt.
 
 
@@ -187,9 +193,9 @@ curl -X GET \
 
 `{EXPERIMENT_ID}`: De id die correspondeert met het experiment dat de Run uitvoert.\
 `{ACCESS_TOKEN}`: De specifieke tokenwaarde voor toonder die na verificatie wordt opgegeven.\
-`{ORG_ID}`: Uw organisatiereferenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+`{ORG_ID}`: uw organisatiegegevens zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 
-Aangezien er meerdere experimentele runtime&#39;s zijn voor een specifiek experiment, heeft het gegeven antwoord een array van run-id&#39;s.
+Aangezien er meerdere experimentele runtime&#39;s zijn voor een specifieke experiment, heeft de geretourneerde reactie een array van run-id&#39;s.
 
 **Reactie**
 
@@ -212,8 +218,8 @@ Aangezien er meerdere experimentele runtime&#39;s zijn voor een specifiek experi
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: De id die overeenkomt met de proefversie.\
-`{EXPERIMENT_ID}`: De id die correspondeert met het experiment dat de Run uitvoert.
+`{EXPERIMENT_RUN_ID}`: De id die overeenkomt met de proefrun.\
+`{EXPERIMENT_ID}`: De id die overeenkomt met het experiment dat de run uitvoert.
 
 ### Een geplande expert stoppen en verwijderen
 
@@ -229,8 +235,8 @@ curl -X DELETE \
 ```
 
 `{EXPERIMENT_ID}`: De id die overeenkomt met het experiment.\
-`{ACCESS_TOKEN}`: De specifieke tokenwaarde voor toonder die na verificatie wordt opgegeven.\
-`{ORG_ID}`: Uw organisatiereferenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+`{ACCESS_TOKEN}`: uw specifieke togertokenwaarde die u na verificatie opgeeft.\
+`{ORG_ID}`: uw organisatiegegevens zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 
 >[!NOTE]
 >

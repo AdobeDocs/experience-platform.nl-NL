@@ -1,27 +1,33 @@
 ---
-keywords: Experience Platform;product aanbeveling recept;Data Science Workspace;populaire onderwerpen;recepten;pre-build recept
+keywords: Experience Platform;product aanbeveling recept;Data Science Workspace;populaire onderwerpen;recepten;pre-build recipe
 solution: Experience Platform
 title: Recipe productaanbeveling
-description: Met het product Recommendations-recept kunt u op maat gemaakte productaanbevelingen doen die zijn afgestemd op de behoeften en belangen van uw klant. Met een accuraat voorspellingsmodel kan de aankoopgeschiedenis van een klant u inzicht verschaffen in welke producten zij geïnteresseerd kunnen zijn.
+description: Met het product Recommendations-recept kun je gepersonaliseerde productaanbevelingen bieden die zijn afgestemd op de behoeften en interesses van je klant. Met een accuraat voorspellingsmodel kan de aankoopgeschiedenis van een klant u inzicht verschaffen in welke producten zij geïnteresseerd kunnen zijn.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
 
 # Recept voor productaanbevelingen
 
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
+
 Met het product Recommendations-recept kunt u op maat gemaakte productaanbevelingen doen die zijn afgestemd op de behoeften en belangen van uw klant. Met een accuraat voorspellingsmodel kan de aankoopgeschiedenis van een klant u inzicht verschaffen in welke producten zij geïnteresseerd kunnen zijn.
 
 ## Voor wie is dit recept gebouwd?
 
-In de moderne tijd kan een detailhandelaar een veelheid van producten aanbieden, die hun klanten een heleboel keuzen geven die ook hun klanten kunnen hinderen zoeken. Vanwege tijd- en inspanningsbeperkingen kunnen klanten het gewenste product wellicht niet vinden, wat leidt tot aankopen met een hoog niveau van cognitieve dissonantie of helemaal geen aankoop.
+In de moderne tijd kan een detailhandelaar een groot aantal producten aanbieden, waardoor zijn klanten een heleboel keuzemogelijkheden hebben die ook het zoeken van klanten kunnen belemmeren. Vanwege tijd- en inspanningsbeperkingen kunnen klanten het product dat ze willen niet vinden, wat leidt tot aankopen met een hoog cognitieve dissonantie of helemaal geen aankoop.
 
 ## Wat doet dit recept?
 
-Het product-Recommendations-recept gebruikt automatisch leren om de interactie van een klant met producten in het verleden te analyseren en snel en moeiteloos een persoonlijke lijst met productaanbevelingen te genereren. Dit optimaliseert het productontdekkingsproces en elimineert lange, onproductieve, irrelevante onderzoeken naar uw klanten. Als gevolg hiervan kan het Product Recommendations-recept de algehele aankoopervaring van een klant verbeteren, wat leidt tot meer betrokkenheid en een sterkere merkloyaliteit.
+Het Product Recommendations-recept maakt gebruik van machine learning om de interacties van klanten met producten in het verleden te analyseren en snel en moeiteloos een gepersonaliseerde lijst met productaanbevelingen te genereren. Zo optimaliseert u het proces voor productontdekking en voorkomt u lange, onproductieve, irrelevante zoekopdrachten voor uw klanten. Als gevolg hiervan kan het Product Recommendations-recept de algehele aanschafervaring van een klant verbeteren, wat leidt tot meer betrokkenheid en een sterkere merkloyaliteit.
 
 ## Hoe begin ik?
 
@@ -38,22 +44,22 @@ Dit recept gebruikt douane [ XDM schema&#39;s ](../../xdm/schema/field-dictionar
 
 | Veldnaam | Type |
 | --- | --- |
-| itemId | String |
+| itemId | Tekenreeks |
 | interactionType | String |
 | tijdstempel | String |
-| userId | String |
+| userId | Tekenreeks |
 
 ### Uitvoergegevensschema
 
 | Veldnaam | Type |
 | --- | --- |
-| aanbevelingen | String |
+| aanbevelingen | Tekenreeks |
 | userId | Geheel |
 
 ## Algorithm
 
 Het product Recommendations-recept maakt gebruik van collectieve filtering om een gepersonaliseerde lijst met productaanbevelingen voor uw klanten te genereren. Bij collectieve filtering is, in tegenstelling tot een op inhoud gebaseerde benadering, geen informatie over een specifiek product vereist, maar worden de historische voorkeuren van een klant voor een set producten gebruikt. Deze krachtige aanbeveling gebruikt twee eenvoudige veronderstellingen:
-* Er zijn klanten met vergelijkbare belangen, en deze kunnen worden gegroepeerd door hun aankoop en het bladeren te vergelijken.
-* Een klant is meer geïnteresseerd in een aanbeveling die is gebaseerd op soortgelijke klanten wat betreft hun aankoop- en browsergedrag.
+* Er zijn klanten met vergelijkbare interesses, en deze kunnen worden gegroepeerd door hun aankoop- en browsergedrag te vergelijken.
+* Een klant is eerder geïnteresseerd in een aanbeveling op basis van soortgelijke klanten in termen van aankoop- en browsergedrag.
 
-Dit proces wordt opgesplitst in twee hoofdstappen. Eerst definieert u een subset van vergelijkbare klanten. Dan, binnen die reeks, identificeer gelijkaardige eigenschappen onder die klanten om een aanbeveling voor de doelklant terug te keren.
+Dit proces is onderverdeeld in twee hoofdstappen. Definieer eerst een subset van vergelijkbare klanten. Vervolgens identificeert u binnen die set vergelijkbare functies onder die klanten om een aanbeveling voor de doelklant te retourneren.

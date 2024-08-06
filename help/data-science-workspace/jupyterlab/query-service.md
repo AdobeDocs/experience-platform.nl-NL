@@ -5,14 +5,20 @@ title: Query-service in Jupyter-laptop
 type: Tutorial
 description: Met Adobe Experience Platform kunt u SQL (Structured Query Language) gebruiken in Data Science Workspace door Query Service in JupyterLab te integreren als een standaardfunctie. In deze zelfstudie wordt een voorbeeld gegeven van SQL-query's voor veelvoorkomende gebruiksscenario's voor het verkennen, transformeren en analyseren van Adobe Analytics-gegevens.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
 
 # Query-service in Jupyter-laptop
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Met [!DNL Adobe Experience Platform] kunt u SQL (Structured Query Language) gebruiken in [!DNL Data Science Workspace] door [!DNL Query Service] als standaardfunctie te integreren in [!DNL JupyterLab] .
 
@@ -96,7 +102,7 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 
 ## Uw gegevens opvragen {#query-your-data}
 
-Voer de volgende SQL-query&#39;s in voor afzonderlijke laptopcellen. Voer een query uit door in de desbetreffende cel te selecteren, gevolgd door de knop **[!UICONTROL play]** te selecteren. De succesvolle vraagresultaten of foutenlogboeken worden getoond onder de uitgevoerde cel.
+Voer de volgende SQL-query&#39;s in afzonderlijke notebookcellen in. Voer een query uit door in de desbetreffende cel te selecteren, gevolgd door de knop **[!UICONTROL play]** te selecteren. De succesvolle vraagresultaten of foutenlogboeken worden getoond onder de uitgevoerde cel.
 
 Wanneer een laptop gedurende langere tijd inactief is, kan de verbinding tussen de laptop en [!DNL Query Service] verbroken worden. In dergelijke gevallen, nieuw begin [!DNL JupyterLab] door de **knoop van het Begin** ![ nieuwe begin knoop ](/help/images/icons/restart.png) te selecteren die in de hoger-juiste hoek naast de machtsknoop wordt gevestigd.
 

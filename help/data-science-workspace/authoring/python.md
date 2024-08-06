@@ -5,14 +5,20 @@ title: Toegang verkrijgen tot gegevens met Python in Data Science Workspace
 type: Tutorial
 description: Het volgende document bevat voorbeelden over hoe u toegang kunt krijgen tot gegevens in Python voor gebruik in Data Science Workspace.
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
 
 # Toegang verkrijgen tot gegevens met Python in Data Science Workspace
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Het volgende document bevat voorbeelden over hoe u toegang kunt krijgen tot gegevens met Python voor gebruik in Data Science Workspace. Voor informatie bij de toegang tot van gegevens die laptops gebruiken JupyterLab, bezoek de [ JupyterLab toegang van notitieboekjes tot ](../jupyterlab/access-notebook-data.md) documentatie.
 

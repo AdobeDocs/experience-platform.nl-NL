@@ -5,14 +5,20 @@ title: Verrijk het Profiel van de Klant in real time met het Leren van de Machin
 type: Tutorial
 description: Dit document biedt een handleiding voor het verrijken van Real-Time Customer Profile met inzichten in computerleren.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: afa27069c7490848398c92973dd77810564b5993
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
 
 # Verrijken [!DNL Real-Time Customer Profile] met leergegevens over computers
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Adobe Experience Platform [!DNL Data Science Workspace] biedt de gereedschappen en bronnen om modellen voor machinaal leren te maken, te evalueren en te gebruiken om gegevensvoorspellingen en inzichten te genereren. Wanneer inzichten van het machinaal leren in een [!DNL Profile]-Toegelaten dataset worden opgenomen, worden die zelfde gegevens ook opgenomen zoals [!DNL Profile] verslagen die dan kunnen worden gesegmenteerd gebruikend [!DNL Adobe Experience Platform Segmentation Service].
 

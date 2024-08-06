@@ -5,14 +5,20 @@ title: XMLInstances API Endpoint
 description: Een MLInstance is een huur van een bestaande Motor met een aangewezen reeks configuraties die om het even welke trainingsparameters, het scoren parameters, of configuraties van hardwaremiddelen bepalen.
 role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
 
-# MLInstances, eindpunt
+# MLInstances-eindpunt
+
+>[!NOTE]
+>
+>Data Science Workspace is niet meer verkrijgbaar.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Een instantie MLInstance is het verpakken van een bestaande [ Motor ](./engines.md) met een aangewezen reeks configuraties die om het even welke opleidingsparameters, het scoren parameters, of configuraties van het hardwaremiddel bepaalt.
 
@@ -20,7 +26,7 @@ Een instantie MLInstance is het verpakken van een bestaande [ Motor ](./engines.
 
 U kunt een instantie tot stand brengen MLI door een verzoek van de POST uit te voeren terwijl het verstrekken van een verzoeklading die uit geldige identiteitskaart van de Motor (`{ENGINE_ID}`) en een aangewezen reeks standaardconfiguraties bestaat.
 
-Als identiteitskaart van de Motor verwijzingen een PySpark of de Motor van de Vonk dan hebt u de capaciteit om de hoeveelheid berekeningsmiddelen zoals het aantal kernen of de hoeveelheid geheugen te vormen. Als er naar een Python-engine wordt verwezen, kunt u kiezen tussen het gebruik van een CPU of GPU voor trainings- en scoringdoeleinden. Verwijs naar de appendix secties op [ PySpark en het middelconfiguraties van de Vonk ](./appendix.md#resource-config) en [ Pypte cpu en configuraties GPU ](./appendix.md#cpu-gpu-config) voor meer informatie.
+Als identiteitskaart van de Motor verwijzingen een PySpark of de Motor van de Vonk dan hebt u de capaciteit om de hoeveelheid berekeningsmiddelen zoals het aantal kernen of de hoeveelheid geheugen te vormen. Als er naar een Python-engine wordt verwezen, kunt u kiezen tussen het gebruik van een CPU of GPU voor trainings- en scoringdoeleinden. Verwijs naar de appendix secties op [ PySpark en de het middelconfiguraties van de Vonk ](./appendix.md#resource-config) en [ Pypthon cpu en GPU configuraties ](./appendix.md#cpu-gpu-config) voor meer informatie.
 
 **API Formaat**
 
@@ -76,10 +82,10 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `name` | De gewenste naam voor de MLInstance. Het model dat aan dit MLInstance beantwoordt zal deze waarde erven die in UI als naam van het Model moet worden getoond. |
-| `description` | Een optionele beschrijving voor de MLInstance. Het model dat aan dit MLInstance beantwoordt zal deze waarde erven die in UI als beschrijving van het Model moet worden getoond. Deze eigenschap is vereist. Als u geen beschrijving wilt opgeven, stelt u de waarde in op een lege tekenreeks. |
+| `name` | De gewenste naam voor de instantie. Het model dat overeenkomt met deze instantie neemt deze waarde over die in de gebruikersinterface moet worden weergegeven als de naam van het model. |
+| `description` | Een optionele beschrijving voor de MLInstance. Het model dat overeenkomt met deze instantie neemt deze waarde over die in de gebruikersinterface moet worden weergegeven als de beschrijving van het model. Deze eigenschap is vereist. Als u geen beschrijving wilt opgeven, stelt u de waarde ervan in op een lege tekenreeks. |
 | `engineId` | De id van een bestaande engine. |
-| `tasks` | Een reeks configuraties voor training, scoring of functiepijpleidingen. |
+| `tasks` | Een set configuraties voor training, scores of functiepijplijnen. |
 
 **Reactie**
 
@@ -130,7 +136,7 @@ Een succesvolle reactie keert een lading terug die de details van pas gecreëerd
 
 ## Een lijst met MLInstances ophalen
 
-U kunt een lijst van instanties terugwinnen MLInstances door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [ vraagparameters voor activaherwinning ](./appendix.md#query).
+U kunt een lijst van instanties terugwinnen MLInstances door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie op [ vraagparameters voor activaherwinning ](./appendix.md#query).
 
 **API Formaat**
 
@@ -196,9 +202,9 @@ Een succesvolle reactie keert een lijst van instanties MLInstances en hun detail
 }
 ```
 
-## Een specifieke MLInstance ophalen {#retrieve-specific}
+## Hiermee wordt een specifieke MLInstance opgehaald {#retrieve-specific}
 
-U kunt de details van een specifieke instantie terugwinnen MLI door een verzoek uit te voeren van de GET dat identiteitskaart van gewenste MLInstance in de verzoekweg omvat.
+U kunt de details van een specifieke instantie terugwinnen door een verzoek uit te voeren van de GET dat identiteitskaart van gewenste MLInstance in de verzoekweg omvat.
 
 **API Formaat**
 
@@ -208,7 +214,7 @@ GET /mlInstances/{MLINSTANCE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{MLINSTANCE_ID}` | De id van de gewenste MLInstance. |
+| `{MLINSTANCE_ID}` | De id van de gewenste instantie. |
 
 **Verzoek**
 
@@ -223,7 +229,7 @@ curl -X GET \
 
 **Reactie**
 
-Een succesvol antwoord geeft de details van MLInstance terug.
+Een succesvolle reactie retourneert de details van de MLInstance.
 
 ```json
 {
@@ -271,13 +277,13 @@ Een succesvol antwoord geeft de details van MLInstance terug.
 
 ## Een MLInstance bijwerken
 
-U kunt een bestaande instantie bijwerken door zijn eigenschappen door een verzoek van de PUT te beschrijven dat identiteitskaart van doelMLInstance in de verzoekweg omvat en een nuttige lading te verstrekken JSON die bijgewerkte eigenschappen bevat.
+U kunt een bestaande HTMLInstance bijwerken door zijn eigenschappen door een verzoek van de PUT te beschrijven dat identiteitskaart van doelMLInstance in de verzoekweg omvat en een nuttige lading JSON verstrekt die bijgewerkte eigenschappen bevat.
 
 >[!TIP]
 >
->Om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET uitvoert om [ MLInstance door identiteitskaart ](#retrieve-specific) terug te winnen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET om [ uitvoert MLInstance door identiteitskaart ](#retrieve-specific) terug te winnen. Vervolgens past u het geretourneerde JSON-object aan en werkt u het bij en past u het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
-De volgende voorbeeld-API-aanroep werkt de opleidings- en scoringsparameters van een MLInstance bij terwijl deze in eerste instantie beschikken over de volgende eigenschappen:
+De volgende voorbeeld-API-aanroep werkt de trainings- en scoringsparameters van een instantie bij terwijl deze eigenschappen in eerste instantie worden gebruikt:
 
 ```json
 {
@@ -405,7 +411,7 @@ Een succesvolle reactie keert een lading terug die de bijgewerkte details van ML
 
 ## MLInstances by Engine ID verwijderen
 
-U kunt alle instanties schrappen MLI die de zelfde Motor delen door een verzoek uit te voeren van de DELETE dat identiteitskaart van de Motor als vraagparameter omvat.
+U kunt alle instanties schrappen die de zelfde Motor delen door een verzoek uit te voeren van de DELETE dat identiteitskaart van de Motor als vraagparameter omvat.
 
 **API Formaat**
 
@@ -440,7 +446,7 @@ curl -X DELETE \
 
 ## Een MLInstance verwijderen
 
-U kunt één enkele instantie verwijderen MLI door een verzoek van DELETE uit te voeren dat identiteitskaart van doelMLInstance in de verzoekweg omvat.
+U kunt één enkele instantie schrappen MLI door een verzoek uit te voeren van de DELETE dat doelID MLInstance in de verzoekweg omvat.
 
 **API Formaat**
 

@@ -5,14 +5,20 @@ title: API-handleiding voor Sensei Machine Learning
 description: Met de API voor leren van Sensei Machine Learning kunnen ontwikkelaars CRUD-bewerkingen uitvoeren op verschillende Data Science Workspace-bronnen. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 6%
+source-wordcount: '255'
+ht-degree: 5%
 
 ---
 
 # [!DNL Sensei Machine Learning] API-handleiding
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 De API van [!DNL Sensei Machine Learning] verstrekt een mechanisme voor gegevenswetenschappers om machine het leren diensten te organiseren en te beheren, van algoritme op het instappen door experimenteren en aan de dienstplaatsing.
 

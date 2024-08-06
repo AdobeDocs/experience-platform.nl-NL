@@ -1,18 +1,24 @@
 ---
 keywords: Experience Platform;pakket bronbestanden;Data Science Workspace;populaire onderwerpen;Docker;docker-afbeelding
 solution: Experience Platform
-title: Source-bestanden verpakken naar een ontvanger
+title: Bronbestanden in een ontvanger verpakken
 type: Tutorial
-description: Deze zelfstudie bevat instructies voor het verpakken van de voorbeeldbronbestanden voor de detailhandel in een archiefbestand. Deze kan worden gebruikt om een recept te maken in Adobe Experience Platform Data Science Workspace door de workflow voor het importeren van recept in de gebruikersinterface of met de API uit te voeren.
+description: Deze zelfstudie bevat instructies voor het verpakken van de voorbeeldbestanden voor retailverkoop in een archiefbestand. U kunt een recept maken in Adobe Experience Platform Data Science Workspace door de workflow voor het importeren van recept in de gebruikersinterface of via de API te volgen.
 exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1153'
 ht-degree: 0%
 
 ---
 
-# Bronbestanden in een recept plaatsen
+# Bronbestanden in een recept verpakken
+
+>[!NOTE]
+>
+>Data Science Workspace is niet meer verkrijgbaar.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Deze zelfstudie bevat instructies voor het verpakken van de voorbeeldbronbestanden voor de detailhandel in een archiefbestand. U kunt dit bestand gebruiken om een recept te maken in Adobe Experience Platform [!DNL Data Science Workspace] door de workflow voor het importeren van recept op te volgen in de gebruikersinterface of met de API.
 
@@ -30,19 +36,19 @@ Concepten om te begrijpen:
 
 ## Ontvanger maken
 
-Het maken van recept begint met het verpakken van bronbestanden om een archiefbestand te maken. Source-bestanden definiëren de computerleerlogica en algoritmen die worden gebruikt om een specifiek probleem op te lossen en worden geschreven in [!DNL Python] , R, PySpark of Scala. Gebouwde archiefbestanden hebben de vorm van een Docker-afbeelding. Zodra gebouwd, wordt het verpakte archiefdossier ingevoerd in [!DNL Data Science Workspace] om een recept [ in UI ](./import-packaged-recipe-ui.md) tot stand te brengen of [ gebruikend API ](./import-packaged-recipe-api.md).
+Het maken van ontvangers begint met het verpakken van bronbestanden om een archiefbestand te maken. Source-bestanden definiëren de computerleerlogica en algoritmen die worden gebruikt om een specifiek probleem op te lossen en worden geschreven in [!DNL Python] , R, PySpark of Scala. Gebouwde archiefbestanden hebben de vorm van een Docker-afbeelding. Zodra gebouwd, wordt het verpakte archiefdossier ingevoerd in [!DNL Data Science Workspace] om een recept [ in UI ](./import-packaged-recipe-ui.md) tot stand te brengen of [ gebruikend API ](./import-packaged-recipe-api.md).
 
 ### Ontwerpmodel gebaseerd op docker {#docker-based-model-authoring}
 
 Met een Docker-afbeelding kan een ontwikkelaar een toepassing verpakken met alle benodigde onderdelen, zoals bibliotheken en andere afhankelijkheden, en deze als één pakket verzenden.
 
-De ingebouwde afbeelding van de Docker wordt geduwd aan de Azure Registratie van de Container gebruikend geloofsbrieven die aan u tijdens de het creatieve werkschema van het recept worden geleverd.
+De ingebouwde Docker-afbeelding wordt naar het Azure Container-register gepusht met behulp van referenties die aan u worden geleverd tijdens de workflow voor het maken van het recept.
 
-Om uw Azure geloofsbrieven van de Registratie van de Container te verkrijgen, logboek in [ Adobe Experience Platform ](https://platform.adobe.com). Navigeer in de linkernavigatiekolom naar **[!UICONTROL Workflows]** . Selecteer **[!UICONTROL Import Recipe]** gevolgd door **[!UICONTROL Launch]** te selecteren. Zie de schermafbeelding hieronder ter referentie.
+Om uw Azure geloofsbrieven van de Registratie van de Container te verkrijgen, login in [ Adobe Experience Platform ](https://platform.adobe.com). Navigeer in de linkernavigatiekolom naar **[!UICONTROL Workflows]** . Selecteer **[!UICONTROL Import Recipe]** gevolgd door **[!UICONTROL Launch]** te selecteren. Zie de schermafbeelding hieronder ter referentie.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-De pagina **[!UICONTROL Configure]** wordt geopend. Geef bijvoorbeeld het juiste **[!UICONTROL Recipe Name]** recept voor de detailhandel op en geef desgewenst een beschrijving of documentatie-URL op. Klik op **[!UICONTROL Next]** als de bewerking is voltooid.
+De pagina **[!UICONTROL Configure]** wordt geopend. Geef het juiste **[!UICONTROL Recipe Name]** op, bijvoorbeeld &quot;Detailhandelrecept&quot;, en geef desgewenst een beschrijving of documentatie-URL op. Klik op **[!UICONTROL Next]** als u klaar bent.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
@@ -50,13 +56,13 @@ Selecteer aangewezen *Runtime*, dan kies a **[!UICONTROL Classification]** voor 
 
 >[!NOTE]
 >
->*Type* is de klasse van machine het leren probleem het recept wordt ontworpen voor en na opleiding gebruikt helpen de opleidingslooppas evalueren.
+>*Type* is de klasse van machine het leren probleem het recept wordt ontworpen voor en na opleiding gebruikt helpen evaluerend de opleidingslooppas aanpassen.
 
 >[!TIP]
 >
->- Selecteer de **[!UICONTROL Python]** -runtime voor [!DNL Python] -recepten.
->- Selecteer de **[!UICONTROL R]** -runtime voor R-recepten.
->- Selecteer voor PySpark-recepten de **[!UICONTROL PySpark]** -runtime. Een artefacttype dat automatisch wordt gevuld.
+>- Selecteer voor [!DNL Python] -recepten de **[!UICONTROL Python]** -runtime.
+>- Voor R-ontvangers selecteert u de **[!UICONTROL R]** -runtime.
+>- Voor PySpark-recepten selecteert u de **[!UICONTROL PySpark]** -runtime. Een artefacttype dat automatisch wordt gevuld.
 >- Selecteer voor Scala-recepten de **[!UICONTROL Spark]** -runtime. Een artefacttype dat automatisch wordt gevuld.
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
@@ -78,13 +84,13 @@ Begin door de steekproefcodebase te verkrijgen die in de <a href="https://github
 
 ### [!DNL Python] Docker-afbeelding samenstellen {#python-docker}
 
-Als u dit nog niet hebt gedaan, kloont de [!DNL GitHub] gegevensopslagruimte op uw lokale systeem met de volgende opdracht:
+Als u dit nog niet hebt gedaan, kloont u de [!DNL GitHub] -opslagplaats op uw lokale systeem met de volgende opdracht:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigeer naar de map `experience-platform-dsw-reference/recipes/python/retail` . Hier vindt u de scripts `login.sh` en `build.sh` die worden gebruikt om u aan te melden bij Docker en de [!DNL Python Docker] -afbeelding te maken. Als u uw [ geloofsbrieven van de Dokker ](#docker-based-model-authoring) klaar hebt, ga de volgende bevelen in orde in:
+Navigeer naar de map `experience-platform-dsw-reference/recipes/python/retail` . Hier vindt u de scripts `login.sh` en `build.sh` die worden gebruikt om u aan te melden bij Docker en de [!DNL Python Docker] -afbeelding te maken. Als u uw ](#docker-based-model-authoring) klaar geloofsbrieven van het 0} Dock hebt, ga de volgende bevelen in orde in:[
 
 ```BASH
 # for logging in to Docker
@@ -94,7 +100,7 @@ Navigeer naar de map `experience-platform-dsw-reference/recipes/python/retail` .
 ./build.sh
 ```
 
-Merk op dat wanneer het uitvoeren van het login manuscript, u de gastheer van de Docker, gebruikersbenaming, en wachtwoord moet verstrekken. Tijdens het bouwen, moet u de gastheer van de Dokker en een versietag voor de bouwstijl verstrekken.
+Wanneer u het aanmeldingsscript uitvoert, moet u de Docker-host, de gebruikersnaam en het wachtwoord opgeven. Tijdens het bouwen, moet u de gastheer van de Dokker en een versietag voor de bouwstijl verstrekken.
 
 Zodra het bouwstijlmanuscript volledig is, wordt u gegeven een van het brondossier van de Docker URL in uw consoleoutput. Voor dit specifieke voorbeeld ziet het er ongeveer als volgt uit:
 
@@ -113,7 +119,7 @@ Als u dit nog niet hebt gedaan, kloont de [!DNL GitHub] gegevensopslagruimte op 
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigeer naar de map `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` in de gekloonde opslagplaats. Hier vindt u de bestanden `login.sh` en `build.sh` die u wilt gebruiken om u aan te melden bij Docker en de R Docker-afbeelding te maken. Als u uw [ geloofsbrieven van de Dokker ](#docker-based-model-authoring) klaar hebt, ga de volgende bevelen in orde in:
+Navigeer naar de map `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` in uw gekloonde opslagplaats. Hier vindt u de bestanden `login.sh` en `build.sh` waarmee u zich aanmeldt bij Docker en de R Docker-afbeelding maakt. Als u uw ](#docker-based-model-authoring) klaar geloofsbrieven van het 0} Dock hebt, ga de volgende bevelen in orde in:[
 
 ```BASH
 # for logging in to Docker
@@ -123,7 +129,7 @@ Navigeer naar de map `experience-platform-dsw-reference/recipes/R/Retail - Gradi
 ./build.sh
 ```
 
-Merk op dat wanneer het uitvoeren van het login manuscript, u de gastheer van de Docker, gebruikersbenaming, en wachtwoord moet verstrekken. Tijdens het bouwen, moet u de gastheer van de Dokker en een versietag voor de bouwstijl verstrekken.
+Wanneer u het aanmeldingsscript uitvoert, moet u de Docker-host, de gebruikersnaam en het wachtwoord opgeven. Tijdens het bouwen, moet u de gastheer van de Dokker en een versietag voor de bouwstijl verstrekken.
 
 Zodra het bouwstijlmanuscript volledig is, wordt u gegeven een van het brondossier van de Docker URL in uw consoleoutput. Voor dit specifieke voorbeeld ziet het er ongeveer als volgt uit:
 
@@ -132,9 +138,9 @@ Zodra het bouwstijlmanuscript volledig is, wordt u gegeven een van het brondossi
 {DOCKER_HOST}/ml-retail-r:{VERSION_TAG}
 ```
 
-Kopieer dit URL en ga op [ volgende stappen ](#next-steps).
+Kopieer dit URL en ga naar de [ volgende stappen ](#next-steps).
 
-### Afbeelding van PySpark Docker maken {#pyspark-docker}
+### Afbeelding van PySpark Docker samenstellen {#pyspark-docker}
 
 Begin met het klonen van de [!DNL GitHub] -opslagplaats op uw lokale systeem met de volgende opdracht:
 
@@ -142,7 +148,7 @@ Begin met het klonen van de [!DNL GitHub] -opslagplaats op uw lokale systeem met
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigeer naar de map `experience-platform-dsw-reference/recipes/pyspark/retail` . De scripts `login.sh` en `build.sh` bevinden zich hier en worden gebruikt om u aan te melden bij Docker en om de Docker-afbeelding te maken. Als u uw [ geloofsbrieven van de Dokker ](#docker-based-model-authoring) klaar hebt, ga de volgende bevelen in orde in:
+Navigeer naar de map `experience-platform-dsw-reference/recipes/pyspark/retail` . De scripts `login.sh` en `build.sh` bevinden zich hier en worden gebruikt om u aan te melden bij Docker en om de Docker-afbeelding te maken. Als u uw ](#docker-based-model-authoring) klaar geloofsbrieven van het 0} Dock hebt, ga de volgende bevelen in orde in:[
 
 ```BASH
 # for logging in to Docker
@@ -152,20 +158,20 @@ Navigeer naar de map `experience-platform-dsw-reference/recipes/pyspark/retail` 
 ./build.sh
 ```
 
-Merk op dat wanneer het uitvoeren van het login manuscript, u de gastheer van de Docker, gebruikersbenaming, en wachtwoord moet verstrekken. Tijdens het bouwen, moet u de gastheer van de Dokker en een versietag voor de bouwstijl verstrekken.
+Wanneer u het aanmeldingsscript uitvoert, moet u de Docker-host, de gebruikersnaam en het wachtwoord opgeven. Tijdens het bouwen moet u de Docker-host en een versietag voor de build opgeven.
 
-Zodra het bouwstijlmanuscript volledig is, wordt u gegeven een van het brondossier van de Docker URL in uw consoleoutput. Voor dit specifieke voorbeeld ziet het er ongeveer als volgt uit:
+Zodra het bouwstijlmanuscript volledig is, wordt u gegeven een van het brondossier van de Docker URL in uw consoleoutput. In dit specifieke voorbeeld ziet het er ongeveer als volgt uit:
 
 ```BASH
 # URL format: 
 {DOCKER_HOST}/ml-retailsales-pyspark:{VERSION_TAG}
 ```
 
-Kopieer dit URL en ga op [ volgende stappen ](#next-steps).
+Kopieer dit URL en ga naar de [ volgende stappen ](#next-steps).
 
 ### Afbeelding van Scala Docker maken {#scala-docker}
 
-Begin met het klonen van de [!DNL GitHub] dataopslag op uw lokale systeem met de volgende opdracht in terminal:
+Begin met het klonen van de [!DNL GitHub] repository op uw lokale systeem met de volgende opdracht in het terminale domein:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -194,11 +200,11 @@ Zodra het bouwstijlmanuscript volledig is, wordt u gegeven een van het brondossi
 {DOCKER_HOST}/ml-retailsales-spark:{VERSION_TAG}
 ```
 
-Kopieer dit URL en ga op [ volgende stappen ](#next-steps).
+Kopieer dit URL en ga naar de [ volgende stappen ](#next-steps).
 
 ## Volgende stappen {#next-steps}
 
 Deze zelfstudie ging over het verpakken van bronbestanden naar een recept, de noodzakelijke stap voor het importeren van een recept naar [!DNL Data Science Workspace] . U moet nu een Docker-afbeelding in het Azure Container-register hebben, samen met de bijbehorende afbeelding-URL. U kunt nu beginnen met de zelfstudie over het importeren van een verpakt recept in [!DNL Data Science Workspace] . Selecteer een van de onderstaande koppelingen voor zelfstudie om aan de slag te gaan:
 
 - [Een verpakte ontvanger importeren in de gebruikersinterface](./import-packaged-recipe-ui.md)
-- [Een gecomprimeerde ontvanger importeren met de API](./import-packaged-recipe-api.md)
+- [Een verpakte ontvanger importeren met de API](./import-packaged-recipe-api.md)

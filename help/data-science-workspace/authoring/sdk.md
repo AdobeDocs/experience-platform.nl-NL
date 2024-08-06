@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Model Authoring SDK
 description: De ModelAuthoring SDK stelt u in staat om aangepaste machine leerlende Ontvangers en de Leidingen van de Eigenschap te ontwikkelen die in Adobe Experience Platform Data Science Workspace kunnen worden gebruikt, die uitvoerbare malplaatjes in PySpark en Spark (Scala) verstrekken.
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '1000'
 ht-degree: 1%
 
 ---
 
 # Model Authoring SDK
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Met de SDK voor modelontwerp kunt u aangepaste computers met leertoepassingen Ontvangers en functiepijpleidingen ontwikkelen die kunnen worden gebruikt in [!DNL Adobe Experience Platform] Data Science Workspace en die implementeerbare sjablonen bieden in [!DNL PySpark] en [!DNL Spark (Scala)] .
 

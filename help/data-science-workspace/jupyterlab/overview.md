@@ -1,17 +1,23 @@
 ---
 keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;jupyterlab
 solution: Experience Platform
-title: Overzicht van de gebruikersinterface van JupyterLab
-description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het verstrekt een interactieve ontwikkelomgeving voor gegevenswetenschappers om met Notities Jupyter, code, en gegevens te werken. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies om algemene handelingen uit te voeren.
+title: Overzicht van JupyterLab-gebruikersinterface
+description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het biedt een interactieve ontwikkelomgeving voor datawetenschappers om te werken met Jupyter-laptops, -code en -data. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, plus instructies voor het uitvoeren van veelvoorkomende handelingen.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1829'
 ht-degree: 0%
 
 ---
 
-# Overzicht van de gebruikersinterface [!DNL JupyterLab]
+# Overzicht van de gebruikersinterface van [!DNL JupyterLab]
+
+>[!NOTE]
+>
+>Data Science Workspace is niet meer verkrijgbaar.
+>
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 [!DNL JupyterLab] is een web-based gebruikersinterface voor [ Jupyter van het Project ](https://jupyter.org/) en is strak geïntegreerd in Adobe Experience Platform. Het verstrekt een interactieve ontwikkelomgeving voor gegevenswetenschappers om met Notities Jupyter, code, en gegevens te werken.
 
@@ -81,7 +87,7 @@ De menubalk boven aan de interface heeft menu&#39;s op hoofdniveau die acties be
 * **Kernel:** Acties voor het beheren van kernels
 * **Lusjes:** een lijst van open documenten en activiteiten
 * **Montages:** Gemeenschappelijke montages en een geavanceerde montagesredacteur
-* **Hulp:** een lijst van [!DNL JupyterLab] en kernel hulpverbindingen
+* **Hulp:** een lijst van [!DNL JupyterLab] en kernel de verbindingen van de hulp
 
 **Linkerzijbalk**
 
@@ -134,7 +140,7 @@ Vaak voorkomende celhandelingen worden hieronder beschreven:
 
 * **Beweeg een cel:** Plaats uw curseur rechts van de cel u wenst te bewegen, dan klik en sleep de cel aan een nieuwe plaats. Als u bovendien een cel van het ene notebook naar het andere verplaatst, wordt de cel met de inhoud gerepliceerd.
 
-* **voert een cel uit:** klik op het lichaam van de cel u wenst uit te voeren en dan het **spel** pictogram (**▶**) van het notitieboekjecomenu te klikken. Een asterisk (**\***) wordt getoond in de uitvoerteller van de cel wanneer de kernel de uitvoering verwerkt, en met een geheel na voltooiing vervangen.
+* **voer een cel uit:** klik op het lichaam van de cel u wenst uit te voeren en dan het **spel** pictogram (**▶**) van het notitieboekjecomenu klikken. Een asterisk (**\***) wordt getoond in de uitvoerteller van de cel wanneer de kernel de uitvoering verwerkt, en met een geheel na voltooiing vervangen.
 
 * **Schrap een cel:** klik op het lichaam van de cel u wenst om dan het **schaar** pictogram te schrappen en te klikken.
 
@@ -169,9 +175,9 @@ De aangepaste *Lanceerinrichting* voorziet u van nuttige notitieboekjecalplaatje
 | Sjabloon | Beschrijving |
 | --- | --- |
 | Leeg | Een leeg laptopbestand. |
-| Starter | Een voorgevulde laptop die de gegevensexploratie aantoont met behulp van voorbeeldgegevens. |
-| Detailhandel | Een voorgevuld notitieboekje dat het [ detailhandelrecept ](../pre-built-recipes/retail-sales.md) kenmerkt gebruikend steekproefgegevens. |
-| Recipe Builder | Een laptopsjabloon voor het maken van een recept in [!DNL JupyterLab] . De voorgevulde code en opmerkingen tonen en beschrijven het proces voor het maken van recept. Verwijs naar de [ notitieboekje aan recept zelfstudie ](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) voor een gedetailleerde analyse. |
+| Starter | Een voorgevuld notebook dat dataverkenning aantoont met behulp van voorbeelddata. |
+| Detailhandel | Een voorgevuld notitieboekje met het [ detailhandels recept ](../pre-built-recipes/retail-sales.md) gebruikend steekproefgegevens. |
+| Recipe Builder | Een laptopsjabloon voor het maken van een recept in [!DNL JupyterLab] . Het is vooraf ingevuld met code en commentaar waarin het proces voor het maken van het recept wordt geïllustreerd en beschreven. Verwijs naar de [ notitieboekje aan recept zelfstudie ](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) voor een gedetailleerde analyse. |
 | [!DNL Query Service] | Een voorgevulde laptop die het gebruik van [!DNL Query Service] rechtstreeks in [!DNL JupyterLab] aantoont, beschikt over voorbeeldworkflows waarmee gegevens op schaal worden geanalyseerd. |
 | XDM-gebeurtenissen | Een voorgevulde laptop waarin de gegevensverkenning op postvalue Experience-gebeurtenisgegevens wordt gedemonstreerd, waarbij de nadruk ligt op functies die gemeenschappelijk zijn in de gegevensstructuur. |
 | XDM-query&#39;s | Een voorgevulde laptop met voorbeelden van zakelijke vragen over Experience Event-gegevens. |
@@ -237,13 +243,13 @@ Sommige laptopsjablonen zijn beperkt tot bepaalde kernels. De beschikbaarheid va
         <td >nee</td>
         <td >nee</td>
         <td >nee</td>
-        <td >nee</td>
-        <td >nee</td>
+        <td >no</td>
+        <td >no</td>
         <td >ja</td>
     </tr>
 </table>
 
-Om een nieuwe *Lanceerinrichting* te openen, klik **Dossier > Nieuwe Lanceerinrichting**. Alternatief, breid browser van het **Dossier** van linkerzijbalk uit en klik het plus symbool (**+**):
+Om een nieuwe *Lanceerprogramma* te openen, klik **Dossier > Nieuwe Lanceerinrichting**. Alternatief, breid browser van het **Dossier** van linkerzijbalk uit en klik het plus symbool (**+**):
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
