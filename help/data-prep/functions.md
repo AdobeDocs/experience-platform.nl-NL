@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Toewijzingsfuncties voor gegevenspremies
 description: Dit document introduceert de toewijzingsfuncties die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 6509447ff2e67eac7b6b41754981cd18eb52562e
+source-git-commit: 5a4e0b3c97d315262ded35ca5bfada3612ed6db4
 workflow-type: tm+mt
 source-wordcount: '5805'
 ht-degree: 1%
@@ -130,7 +130,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | set_date_part | Hiermee vervangt u een component in een bepaalde datum. De volgende componenten worden goedgekeurd: <br><br> &quot;jaar&quot;<br> &quot;jjjj&quot;<br> &quot;yy&quot;<br><br> &quot;maand&quot;<br> &quot;mm&quot;<br> &quot;m&quot;<br><br> &quot;dag&quot;<br> &quot;dd&quot;<br> &quot;d&quot;<br><br> &quot;uur&quot;<br> &quot;hh&quot;<br><br> &quot;minuut&quot;<br> &quot;mi&quot;<br> &quot;n&quot;<br><br> &quot;seconde&quot;<br> &quot;ss&quot;<br> &quot;s&quot; | <ul><li>COMPONENT: **Vereiste** een koord dat het deel van de datum vertegenwoordigt. </li><li>WAARDE: **Vereiste** de waarde voor de component voor een bepaalde datum te plaatsen.</li><li>DATUM: **Vereiste** de datum, in een standaardformaat.</li></ul> | set_date_part &#x200B;(COMPONENT, VALUE, DATE) | set_date_part (&quot;m&quot;, 4, date (&quot;2016-11-09T11 :44: 44.797&quot;) | &quot;2016-04-09T11 :44: 44Z&quot; |
 | make_date_time | Hiermee maakt u een datum op basis van onderdelen. Deze functie kan ook worden geïnduceerd met make_timestamp. | <ul><li>JAAR: **Vereiste** het jaar, die in vier cijfers wordt geschreven.</li><li>MAAND: **vereiste** de maand. De toegestane waarden zijn 1 tot 12.</li><li>DAG: **Vereiste** de dag. De toegestane waarden zijn 1 tot 31.</li><li>HOUR: **Vereiste** het uur. De toegestane waarden zijn 0 tot 23.</li><li>MINUUT: **Vereiste** de minuut. De toegestane waarden zijn 0 tot en met 59.</li><li>NANOSECOND: **Vereiste** de nanotweede waarden. De toegestane waarden zijn 0 tot en met 999999999.</li><li>TIMEZONE: **Vereiste** de timezone voor de datumtijd.</li></ul> | make_date_time &#x200B;(JAAR, MAAND, DAG, UUR, MINUTE, SECOND, NANOSECOND, TIMEZONE) | make_date_time &#x200B;(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | Converteert een datum in een tijdzone naar een datum in UTC. | <ul><li>DATUM: **Vereiste** de datum die u probeert om te zetten.</li></ul> | zone_date_to_utc &#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
-| zone_date_to_zone | Converteert een datum van de ene tijdzone naar een andere tijdzone. | <ul><li>DATUM: **Vereiste** de datum die u probeert om te zetten.</li><li>ZONE: **Vereiste** de timezone die u probeert om de datum in om te zetten.</li></ul> | zone_date_to_zone &#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
+| zone_date_to_zone | Converteert een datum van de ene tijdzone naar een andere tijdzone. | <ul><li>DATUM: **Vereiste** de datum die u probeert om te zetten.</li><li>ZONE: **Vereiste** de timezone die u probeert om de datum in om te zetten.</li></ul> | zone_date_to_zone &#x200B;(DATE, ZONE) | `zone_date_to_zone(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
 {style="table-layout:auto"}
 
