@@ -4,7 +4,7 @@ type: Tutorial
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door een publiek naar streaming op profiel gebaseerde doelen te sturen.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Dit artikel verklaart het werkschema dat wordt vereist om publieksgegevens in Adobe Experience Platform aan het stromen op profiel-gebaseerde bestemmingen (die ook als [ ondernemingsbestemmingen ](/help/destinations/destination-types.md#streaming-profile-export) worden bedoeld) te activeren.
+Dit artikel verklaart het werkschema dat wordt vereist om publieksgegevens in Adobe Experience Platform aan het stromen op profiel-gebaseerde bestemmingen (die ook als [ ondernemingsbestemmingen ](/help/destinations/destination-types.md#advanced-enterprise-destinations) worden bedoeld) te activeren.
 
 Dit artikel is van toepassing op de volgende drie bestemmingen:
 

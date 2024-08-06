@@ -2,7 +2,7 @@
 title: Exportgedrag profiel
 description: Leer hoe het gedrag van de profieluitvoer tussen de verschillende integratiepatronen varieert die in de bestemmingen van het Experience Platform worden gesteund.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Het samenvoegingsbeleid is configureerbaar, en de bestemmingsontwikkelaars kunne
 >
 > De bestemmingen van de onderneming zijn beschikbaar slechts aan [ Adobe Real-time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
-De [ ondernemingsbestemmingen ](/help/destinations/destination-types.md#streaming-profile-export) in Experience Platform zijn Amazon Kinesis, Azure Event Hubs, en HTTP API.
+De [ ondernemingsbestemmingen ](/help/destinations/destination-types.md#advanced-enterprise-destinations) in Experience Platform zijn Amazon Kinesis, Azure Event Hubs, en HTTP API.
 
 Experience Platform optimaliseert het gedrag van de profieluitvoer naar uw ondernemingsbestemming, om gegevens naar uw API eindpunt slechts uit te voeren wanneer de relevante updates aan een profiel na publiekskwalificatie of andere significante gebeurtenissen zijn voorgekomen. In de volgende situaties worden profielen naar uw doel geëxporteerd:
 

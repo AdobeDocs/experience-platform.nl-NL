@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform Januari 2023
 description: Aanvullende informatie van januari 2023 voor Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2150'
 ht-degree: 3%
@@ -173,9 +173,9 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 
 Om overtolligheid in de levenscyclus van het segmentlidmaatschap te verwijderen, zal de `Existing` status van de [ kaart van het segmentlidmaatschap ](../../xdm/field-groups/profile/segmentation.md) aan het eind van Maart 2023 worden afgekeurd. Een vervolgaankondiging zal de exacte vervaldatum bevatten.
 
-Post-afgekeurde profielen, profielen die in een segment zijn gekwalificeerd, worden weergegeven als `Realized` en profielen die zijn gediskwalificeerd, worden wel weergegeven als `Exited` . Dit zorgt voor pariteit met op bestanden gebaseerde doelen met `Active` - en `Expired` -segmentstatussen.
+Na de afgekeurde versie worden profielen die in een segment zijn gekwalificeerd, weergegeven als `Realized` en worden profielen die zijn uitgeschakeld, ook weergegeven als `Exited` . Dit zorgt voor pariteit met op bestanden gebaseerde doelen met `Active` - en `Expired` -segmentstatussen.
 
-Deze verandering zou u kunnen beïnvloeden als u [ ondernemingsbestemmingen ](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) gebruikt en stroomafwaartse processen op zijn plaats, gebaseerd op de `Existing` status geautomatiseerd hebt. Gelieve te herzien uw downstreamintegratie als dit voor u het geval is. Als u pas gekwalificeerde profielen wilt identificeren na een bepaalde tijd, kunt u overwegen een combinatie van de status `Realized` en de status `lastQualificationTime` in uw overzicht van segmentlidmaatschap te gebruiken. Neem voor meer informatie contact op met uw Adobe.
+Deze verandering zou u kunnen beïnvloeden als u [ ondernemingsbestemmingen ](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Azure Event Hubs, HTTP API) gebruikt en stroomafwaartse processen op zijn plaats, gebaseerd op de `Existing` status geautomatiseerd hebt. Gelieve te herzien uw downstreamintegratie als dit voor u het geval is. Als u pas gekwalificeerde profielen wilt identificeren na een bepaalde tijd, kunt u overwegen een combinatie van de status `Realized` en de status `lastQualificationTime` in uw overzicht van segmentlidmaatschap te gebruiken. Neem voor meer informatie contact op met uw Adobe.
 
 Meer over het Profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met profielgegevens leren, gelieve te beginnen door het [ overzicht van het Profiel van de Klant in real time ](../../profile/home.md) te lezen.
 

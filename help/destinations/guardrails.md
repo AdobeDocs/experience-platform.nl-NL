@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Meer informatie over het standaardgebruik en de tarieflimieten van gegevensactivering.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1680'
 ht-degree: 1%
@@ -92,7 +92,7 @@ De hieronder gidsen zijn op de [ ad-hoc activering ](/help/destinations/api/ad-h
 
 ### Activering van Edge-personalisatiedoelen {#edge-destinations-activation}
 
-De hieronder begeleiding is van toepassing op activering door [ de bestemmingen van de randverpersoonlijking ](/help/destinations/destination-types.md#streaming-profile-export).
+De hieronder begeleiding is van toepassing op activering door [ de bestemmingen van de randverpersoonlijking ](/help/destinations/destination-types.md#advanced-enterprise-destinations).
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |

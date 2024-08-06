@@ -3,7 +3,7 @@ keywords: doelen;doel;doeltypen
 title: Doeltypen en -categorieën
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 13ceaa53b53f17457c8d2c914b3fd05f6af2441b
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '800'
 ht-degree: 0%
@@ -35,9 +35,9 @@ Ten slotte kan ook een onderscheid worden gemaakt tussen openbare bestemmingen d
 Profielexportdoelen ontvangen onbewerkte gegevens, vaak met e-mailadres als primaire sleutel. Experience Platform ondersteunt momenteel twee typen exportdoelen voor profielen:
 
 * [Batchbestemmingen (op basis van bestanden)](#file-based)
-* [Geavanceerde zakelijke doelen (streamingprofielexportdoelen)](#streaming-profile-export)
+* [Geavanceerde zakelijke doelen (streamingprofielexportdoelen)](#advanced-enterprise-destinations)
 
-### Geavanceerde zakelijke doelen (streamingprofielexportdoelen) {#streaming-profile-export}
+### Geavanceerde zakelijke doelen (streamingprofielexportdoelen) {#advanced-enterprise-destinations}
 
 >[!IMPORTANT]
 >

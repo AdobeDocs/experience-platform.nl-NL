@@ -2,7 +2,7 @@
 title: Identiteitsverwerking in de workflow voor doelactivering
 description: Leer hoe identiteitsexport wordt verwerkt in de activeringsworkflow, afhankelijk van het doeltype
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1134'
 ht-degree: 0%
@@ -92,7 +92,7 @@ Wanneer u een gegevensstroom configureert zoals wordt beschreven in de bovenstaa
 
 ## Enterprise-bestemmingen {#enterprise-destinations}
 
-[ de bestemmingen van de Onderneming ](/help/destinations/destination-types.md#streaming-profile-export) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP API) vereisen geen specifieke IDs in de gegevensuitvoer, aangezien deze voor de gebruiksgevallen van de ondernemingsintegratie worden ontworpen. Nochtans, kunt u identiteiten als attributen XDM of van de identiteitskaart uitvoeren, als u wenst. Bekijk een [ voorbeeld van uitgevoerde gegevens aan de bestemming van HTTP ](/help/destinations/catalog/streaming/http-destination.md#exported-data), die zowel het `personalEmail.address` attribuut XDM, als de identiteiten `ECID` en `email_lc_sha256` (gehakt e-mailadres) van de identiteitskaart omvat.
+[ de bestemmingen van de Onderneming ](/help/destinations/destination-types.md#advanced-enterprise-destinations) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP API) vereisen geen specifieke IDs in de gegevensuitvoer, aangezien deze voor de gebruiksgevallen van de ondernemingsintegratie worden ontworpen. Nochtans, kunt u identiteiten als attributen XDM of van de identiteitskaart uitvoeren, als u wenst. Bekijk een [ voorbeeld van uitgevoerde gegevens aan de bestemming van HTTP ](/help/destinations/catalog/streaming/http-destination.md#exported-data), die zowel het `personalEmail.address` attribuut XDM, als de identiteiten `ECID` en `email_lc_sha256` (gehakt e-mailadres) van de identiteitskaart omvat.
 
 ## Personalization-bestemmingen {#personalization-destinations}
 
