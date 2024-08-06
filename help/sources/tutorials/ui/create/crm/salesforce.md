@@ -2,9 +2,9 @@
 title: Uw Salesforce-account aansluiten via de gebruikersinterface van het Experience Platform
 description: Leer hoe u uw Salesforce-account koppelt en uw CRM-gegevens via de gebruikersinterface naar het Experience Platform brengt.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
+source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ U moet waarden opgeven voor de volgende referenties om uw [!DNL Salesforce] -acc
 
 | Credentials | Beschrijving |
 | --- | --- |
-| URL van omgeving | De URL van de broninstantie [!DNL Salesforce] . |
+| URL van omgeving | De URL van de broninstantie [!DNL Salesforce] . De indeling voor omgeving-URL is `https://[domain].my.salesforce.com` . |
 | Gebruikersnaam | De gebruikersnaam voor de gebruikersaccount van [!DNL Salesforce] . |
 | Wachtwoord | Het wachtwoord voor de [!DNL Salesforce] -gebruikersaccount. |
 | Beveiligingstoken | Het beveiligingstoken voor de gebruikersaccount van [!DNL Salesforce] . |
@@ -50,7 +50,7 @@ U moet waarden opgeven voor de volgende referenties om uw [!DNL Salesforce] -acc
 
 | Credentials | Beschrijving |
 | --- | --- |
-| URL van omgeving | De URL van de broninstantie [!DNL Salesforce] . |
+| URL van omgeving | De URL van de broninstantie [!DNL Salesforce] . De indeling voor omgeving-URL is `https://[domain].my.salesforce.com` . |
 | Client-id | De client-id wordt gebruikt in combinatie met het clientgeheim als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing aan te duiden op [!DNL Salesforce] . |
 | Clientgeheim | Het clientgeheim wordt gebruikt in combinatie met de client-id als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing aan te duiden op [!DNL Salesforce] . |
 | API-versie | De REST API-versie van de instantie [!DNL Salesforce] die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie `52` gebruikt, moet u de waarde invoeren als `52.0` . Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |

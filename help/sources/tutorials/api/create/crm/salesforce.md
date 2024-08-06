@@ -2,9 +2,9 @@
 title: Een Salesforce Base-verbinding maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met een Salesforce-account met behulp van de Flow Service API.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 7d450ba3357389a2934f187e4838e534d698dd4a
+source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Als u uw [!DNL Salesforce] -account wilt verbinden met [!DNL Flow Service] via b
 
 | Credentials | Beschrijving |
 | --- | --- |
-| `environmentUrl` | De URL van de broninstantie [!DNL Salesforce] . |
+| `environmentUrl` | De URL van de broninstantie [!DNL Salesforce] . De notatie voor `environmentUrl` is `https://[domain].my.salesforce.com` . |
 | `username` | De gebruikersnaam voor de gebruikersaccount van [!DNL Salesforce] . |
 | `password` | Het wachtwoord voor de [!DNL Salesforce] -gebruikersaccount. |
 | `securityToken` | Het beveiligingstoken voor de gebruikersaccount van [!DNL Salesforce] . |
@@ -51,7 +51,7 @@ Als u uw [!DNL Salesforce] -account wilt verbinden met [!DNL Flow Service] via O
 
 | Credentials | Beschrijving |
 | --- | --- |
-| `environmentUrl` | De URL van de broninstantie [!DNL Salesforce] . |
+| `environmentUrl` | De URL van de broninstantie [!DNL Salesforce] . De notatie voor `environmentUrl` is `https://[domain].my.salesforce.com` |
 | `clientId` | De client-id wordt gebruikt in combinatie met het clientgeheim als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing aan te duiden op [!DNL Salesforce] . |
 | `clientSecret` | Het clientgeheim wordt gebruikt in combinatie met de client-id als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing aan te duiden op [!DNL Salesforce] . |
 | `apiVersion` | De REST API-versie van de instantie [!DNL Salesforce] die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie `52` gebruikt, moet u de waarde invoeren als `52.0` . Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. Deze waarde is verplicht voor OAuth2 Client Credential-verificatie. |
