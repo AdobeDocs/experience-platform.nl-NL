@@ -4,16 +4,16 @@ title: Kiezen uit een selectie afspeelboeken
 description: Leer hoe u de juiste afspeelboek kunt kiezen voor uw gebruiksscenario's en hoe u afspeelboeken inschakelt.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ea735c486ca88de05f2ee2a8e40c68e3ef29c4fd
+source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
 
 # Kiezen uit een selectie afspeelboeken
 
-Als u een afspeelboek wilt gebruiken, navigeert u naar **[!UICONTROL Use Case Playbooks]>[!UICONTROL Playbooks]** . Blader en gebruik de verschillende zoek- en filteropties op de pagina om een bepaald afspeelboek te selecteren en aan de slag te gaan.
+Als u een afspeelboek wilt gebruiken, selecteert u **[!UICONTROL Playbooks]** in de linkernavigatie. Blader en gebruik de verschillende zoek- en filteropties op de pagina om een bepaald afspeelboek te selecteren en aan de slag te gaan.
 
 ## Zoeken en filteren {#search-and-filter}
 

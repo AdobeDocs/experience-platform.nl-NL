@@ -4,7 +4,7 @@ title: Ga aan de slag met Hoofdletters gebruiken
 description: Leer hoe u aan de slag gaat met de functie Hoofdletters gebruiken.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
+source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
 workflow-type: tm+mt
 source-wordcount: '929'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Leer hoe u uw account instelt voor Use Case Playbooks, die zijn ontworpen voor R
 * Gebruikersmachtigingen configureren
 * Journey Optimizer-kanaaloppervlakken configureren voor e-mail-, push- en SMS-berichten (als u Journey Optimizer-afspeelboeken wilt gebruiken)
 
-Als u een uitgebreide galerie met gebruikscase-afspeelboeken wilt openen in de gebruikersinterface van het Experience Platform, selecteert u **[!UICONTROL Playbooks]** in de linkernavigatie. Lees de documentatie op hoe te [ om Hoofdlettergebruik te navigeren Playbooks ](../playbooks/navigate.md) en begonnen te worden met een [ inspirerende zandbak ](../playbooks/navigate.md).
+Als u een uitgebreide galerie met gebruikscase-afspeelboeken wilt openen in de gebruikersinterface van het Experience Platform, selecteert u **[!UICONTROL Playbooks]** in de linkernavigatie. Lees de documentatie op hoe te [ om Hoofdletters van het Gebruik ](../playbooks/navigate.md) te navigeren en begonnen te worden met een [ inspirerende zandbak ](../playbooks/navigate.md).
 
 ## Configureer Use Case Playbooks - Video Walthrough {#video}
 
