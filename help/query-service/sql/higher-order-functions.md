@@ -1,10 +1,10 @@
 ---
 title: Array- en kaartgegevenstypen beheren met functies voor hogere volgorde
-description: Leer hoe te om serie en kaartgegevenstypes met hoger-ordefuncties in de Dienst van de Vraag te beheren. Praktische voorbeelden worden gegeven met veelvoorkomende gebruiksgevallen.
+description: Leer hoe te om serie en kaartgegevenstypes met hoger-ordefuncties in de Dienst van de Vraag te beheren. Voorbeelden worden gegeven met veelvoorkomende gebruiksgevallen.
 exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---

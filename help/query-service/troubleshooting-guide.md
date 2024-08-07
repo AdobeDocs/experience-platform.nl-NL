@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Veelgestelde vragen
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot de Query-service. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 84f30a47102a51b40d6811cd4815c36f6ffd34b5
 workflow-type: tm+mt
-source-wordcount: '4407'
+source-wordcount: '4546'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,11 @@ Dit document verstrekt antwoorden op vaak gestelde vragen over de Dienst van de 
 De volgende lijst met antwoorden op veelgestelde vragen is onderverdeeld in de volgende categorieën:
 
 - [Algemeen](#general)
+- [ Vragen UI ](#queries-ui) 
+- [Gegevenssetvoorbeelden](#dataset-samples)
 - [Gegevens exporteren](#exporting-data)
+- [ SQL Syntaxis ](#sql-syntax) 
+- [ ITAS Vragen ](#itas-queries)
 - [Gereedschappen van derden](#third-party-tools)
 - [PostSQL API-fouten](#postgresql-api-errors)
 - [REST API-fouten](#rest-api-errors)
@@ -603,6 +607,22 @@ Ja, u kunt de opdracht `CREATE VIEW` gebruiken zonder Data Distiller-toegang. Di
 Ja. Hoewel, bepaalde derdecliënten, zoals DbVisualizer, een afzonderlijke herkenningsteken voor en na een SQL blok kunnen vereisen om erop te wijzen dat een deel van een manuscript als één enkele verklaring zou moeten worden behandeld. Meer details kunnen in de [ anonieme blokdocumentatie ](./key-concepts/anonymous-block.md) of in [ de officiële documentatie DbVisualizer ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect) worden gevonden.
 +++
 
+## Gebruikersinterface voor query&#39;s
+
+### De &quot;Create query&quot; zit vast &quot;Initializing connection...&quot; wanneer u probeert verbinding te maken met Query Service. Hoe los ik het probleem op?
+
++++Antwoord
+Als de &quot;Create query&quot; vastzit op &quot;Initializing connection...&quot;, is dit waarschijnlijk een verbindings- of sessieprobleem. Vernieuw browser als u de UI van het Platform gebruikt en probeer opnieuw.
++++
+
+## Gegevenssetvoorbeelden
+
+### Kan ik steekproeven op een systeemdataset tot stand brengen?
+
++++Antwoord
+Nee. Schrijf toestemmingen worden beperkt op systeemdatasets zodat kunt u geen steekproeven tot stand brengen.
++++
+
 ## Gegevens exporteren {#exporting-data}
 
 Deze sectie bevat informatie over het exporteren van gegevens en beperkingen.
@@ -647,6 +667,22 @@ timestamp >= to_timestamp('2022-07-22')
 and timestamp < to_timestamp('2022-07-23');
 ```
 
++++
+
+## SQL-syntaxis
+
+### Wordt SAMENVOEGEN IN ondersteund door Data Distiller of Query Service?
+
++++Antwoord
+De SAMENVOEGING IN SQL-constructie wordt niet ondersteund door Data Distiller of Query Service.
++++
+
+## ITAS-query&#39;s
+
+### Wat zijn ITAS query&#39;s?
+
++++Antwoord
+HET INVOEGEN IN vragen wordt genoemd ITAS vragen. Merk op dat CREATE de vragen van de LIJST als vragen van CTAS worden bedoeld.
 +++
 
 ## Gereedschappen van derden {#third-party-tools}

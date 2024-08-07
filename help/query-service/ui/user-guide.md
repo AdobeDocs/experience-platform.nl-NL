@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
 workflow-type: tm+mt
-source-wordcount: '2351'
+source-wordcount: '2349'
 ht-degree: 0%
 
 ---
@@ -223,9 +223,9 @@ Nadat een query is voltooid, worden de resultaten weergegeven op het tabblad **[
 
 ![ het lusje van Resultaten van de console die van de Redacteur van de Vraag de resultaten van een vraaglooppas toont.](../images/ui/query-editor/query-results.png)
 
-## Gebruiksscenario’s {#use-cases}
+## Voorbeelden {#examples}
 
-De Dienst van de vraag verstrekt oplossingen aan een verscheidenheid van gebruiksgevallen over industrieën en bedrijfsscenario&#39;s. Deze praktische voorbeelden tonen de flexibiliteit en het effect van de dienst in het aanpakken van diverse behoeften aan. Om [ te ontdekken hoe de Dienst van de Vraag waarde aan uw specifieke bedrijfsbehoeften ](../use-cases/overview.md) kan brengen, de uitvoerige inzameling van gebruiksgevaldocumenten onderzoeken. Leer hoe te om de Dienst van de Vraag te gebruiken om inzichten en oplossingen voor verbeterde operationele efficiency en bedrijfssucces te verstrekken.
+De Dienst van de vraag verstrekt oplossingen aan een verscheidenheid van gebruiksgevallen over industrieën en bedrijfsscenario&#39;s. Deze voorbeelden tonen de flexibiliteit en het effect van de dienst in het aanpakken van diverse behoeften aan. Om [ te ontdekken hoe de Dienst van de Vraag waarde aan uw specifieke bedrijfsbehoeften ](../use-cases/overview.md) kan brengen, de uitvoerige inzameling van gebruiksgevaldocumenten onderzoeken. Leer hoe te om de Dienst van de Vraag te gebruiken om inzichten en oplossingen voor verbeterde operationele efficiency en bedrijfssucces te verstrekken.
 
 <!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
 
