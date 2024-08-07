@@ -3,9 +3,9 @@ title: Handelingstypen in de Adobe Experience Platform Web SDK Extension
 description: Leer meer over de verschillende actietypen die door de de marktextensie van SDK van het Web van Adobe Experience Platform worden verstrekt.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: c3b05dfd57b3335230e9abb40de6f2e1ee5ee6fa
+source-git-commit: 760484bb7f95df97701f81f78783f0214aecaf5b
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1969'
 ht-degree: 0%
 
 ---
@@ -93,10 +93,6 @@ Gebruik de kiezer van **[!UICONTROL Instance]** om de Web SDK-instantie te kieze
 
 * **[!UICONTROL Instance]**: Selecteer de instantie van SDK van het Web die u wilt vormen. Als u slechts één instantie hebt, wordt deze vooraf geselecteerd.
 * **[!UICONTROL Use guided events]**: Schakel deze optie in om bepaalde velden automatisch in te vullen of te verbergen om een bepaald geval van gebruik in te schakelen. Als u deze optie inschakelt, worden de volgende instellingen weergegeven.
-
-  >[!NOTE]
-  >
-  >De geleide hieronder getoonde gebeurtenissen zijn verwant met [ bovenkant en bodem van paginagebeurtenissen ](../../../../web-sdk/use-cases/top-bottom-page-events.md).
    * **[!UICONTROL Request personalization]**: Deze gebeurtenis moet boven aan de pagina worden aangeroepen. Wanneer deze gebeurtenis is geselecteerd, worden de volgende velden ingesteld:
       * **[!UICONTROL Type]**: **[!UICONTROL Decisioning Proposition Fetch]**
       * **[!UICONTROL Automatically send a display event]**: **[!UICONTROL false]**
@@ -104,6 +100,10 @@ Gebruik de kiezer van **[!UICONTROL Instance]** om de Web SDK-instantie te kieze
    * **[!UICONTROL Collect analytics]**: deze gebeurtenis moet onder aan de pagina worden aangeroepen. Wanneer deze gebeurtenis is geselecteerd, worden de volgende velden ingesteld:
       * **[!UICONTROL Include rendered propositions]**: **[!UICONTROL true]**
       * De **[!UICONTROL Personalization]** -instellingen zijn verborgen
+
+  >[!NOTE]
+  >
+  >De geleide gebeurtenissen zijn verwant met [ bovenkant en bodem van paginagebeurtenissen ](../../../../web-sdk/use-cases/top-bottom-page-events.md).
 
 
 ### Gegevens {#data}
