@@ -5,9 +5,9 @@ title: Een gegevensstroom maken voor Cloud Storage-bronnen met behulp van de Flo
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een externe cloudopslag en het inbrengen van gegevens naar het platform met behulp van bronconnectors en API's.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1741'
+source-wordcount: '1742'
 ht-degree: 0%
 
 ---
@@ -661,7 +661,7 @@ curl -X POST \
 | `transformations.params.mappingId` | [ afbeelding identiteitskaart ](#mapping) die in een vroegere stap wordt teruggewonnen. |
 | `scheduleParams.startTime` | De begintijd voor de gegevensstroom in tijdperk. |
 | `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day` of `week` . |
-| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie is ingesteld op `once` en moet groter zijn dan of gelijk zijn aan `15` voor andere frequentiewaarden. |
+| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. De minimaal toegestane intervalwaarde voor elke frequentie is als volgt:<ul><li>**Eenmaal**: n/a</li><li>**Minuut**: 15</li><li>**Uur**: 1</li><li>**Dag**: 1</li><li>**Week**: 1</li></ul> |
 
 **Reactie**
 

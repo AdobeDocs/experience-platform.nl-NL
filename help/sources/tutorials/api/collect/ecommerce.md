@@ -5,9 +5,9 @@ title: Creeer een Dataflow voor E-commercebronnen gebruikend de Dienst API van d
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een eCommerce-systeem van derden en het opnemen van gegevens in Platform met behulp van bronconnectors en API's.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1306'
 ht-degree: 0%
 
 ---
@@ -628,7 +628,7 @@ curl -X POST \
 | `transformations.params.mappingId` | De toewijzings-id die aan uw e-commercebron is gekoppeld. |
 | `scheduleParams.startTime` | De begintijd voor de gegevensstroom in tijdperk. |
 | `scheduleParams.frequency` | De `frequency` waarbij de gegevensstroom gegevens verzamelt. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day` of `week` . |
-| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Er is geen interval vereist wanneer `frequency` is ingesteld als `once` en groter dan of gelijk aan `15` moet zijn voor andere `frequency` -waarden. |
+| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. De minimaal toegestane intervalwaarde voor elke frequentie is als volgt:<ul><li>**Eenmaal**: n/a</li><li>**Minuut**: 15</li><li>**Uur**: 1</li><li>**Dag**: 1</li><li>**Week**: 1</li></ul> |
 
 **Reactie**
 

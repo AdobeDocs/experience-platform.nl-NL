@@ -5,9 +5,9 @@ title: Een DataFlow maken met een Payments Source in de gebruikersinterface
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van het Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een betalingsbron met behulp van de interface van het platform.
 exl-id: 7355435b-c038-4310-b04a-8ac6b6723b9b
-source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
+source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
 workflow-type: tm+mt
-source-wordcount: '1404'
+source-wordcount: '1532'
 ht-degree: 0%
 
 ---
@@ -107,12 +107,12 @@ Tijdens deze stap, kunt u **backfill** ook toelaten en een kolom voor de stijgen
 
 Zie de lijst hieronder voor meer informatie over het plannen van configuraties.
 
-| Veld | Beschrijving |
+| Configuratie plannen | Beschrijving |
 | --- | --- |
-| Frequentie | De frequentie waarin inname plaatsvindt. Selecteerbare frequenties zijn `Once` , `Minute` , `Hour` , `Day` en `Week` . |
-| Interval | Een geheel getal dat het interval voor de geselecteerde frequentie instelt. De waarde van het interval moet een geheel getal anders dan nul zijn en moet worden ingesteld op groter dan of gelijk aan 15. |
-| Begintijd | Een UTC-tijdstempel die aangeeft wanneer de eerste opname wordt uitgevoerd. De begintijd moet groter zijn dan of gelijk zijn aan de huidige UTC-tijd. |
-| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als backfill is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande inname opgenomen. Als terugvullen is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de begintijd worden geladen. Bestanden die vóór de begintijd zijn geladen, worden niet opgenomen. |
+| Frequentie | Vorm frequentie om erop te wijzen hoe vaak dataflow zou moeten lopen. U kunt de frequentie instellen op: <ul><li>**Eenmaal**: Plaats uw frequentie aan `once` om eenmalig te creëren. Configuraties voor interval en backfill zijn niet beschikbaar wanneer u een eenmalige gegevensstroom maakt. Standaard wordt de planningsfrequentie ingesteld op één keer.</li><li>**Minuut**: Plaats uw frequentie aan `minute` om uw gegevensstroom te plannen om gegevens op een per-minieme basis in te voeren.</li><li>**Uur**: Plaats uw frequentie aan `hour` om uw gegevensstroom te plannen om gegevens op een per-uurbasis in te voeren.</li><li>**Dag**: Plaats uw frequentie aan `day` om uw gegevensstroom te plannen om gegevens op een per-dagbasis in te voeren.</li><li>**Week**: Plaats uw frequentie aan `week` om uw gegevensstroom te plannen om gegevens op een per-weekbasis in te voeren.</li></ul> |
+| Interval | Zodra u een frequentie selecteert, kunt u het interval dat dan vormen om het tijdkader tussen elke opname te vestigen. Bijvoorbeeld, als u uw frequentie aan dag plaatst en het interval aan 15 vormt, dan zal uw dataflow om de 15 dagen lopen. U kunt het interval niet instellen op nul. De minimaal toegestane intervalwaarde voor elke frequentie is als volgt:<ul><li>**Eenmaal**: n/a</li><li>**Minuut**: 15</li><li>**Uur**: 1</li><li>**Dag**: 1</li><li>**Week**: 1</li></ul> |
+| Begintijd | Het tijdstempel voor de geprojecteerde run, weergegeven in UTC-tijdzone. |
+| Achtergrond | Met Backfill wordt bepaald welke gegevens in eerste instantie worden ingevoerd. Als backfill is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande inname opgenomen. Als terugvullen is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de begintijd worden geladen. Bestanden die vóór de begintijd zijn geladen, worden niet opgenomen. |
 | Incrementele gegevens laden met | Een optie met een gefilterde reeks gebieden van het bronschema van type, datum, of tijd. Het veld waarvoor u **[!UICONTROL Load incremental data by]** selecteert, moet zijn datum-tijdwaarden in UTC-tijdzone hebben om de incrementele gegevens correct te laden. Alle op lijst-gebaseerde partijbronnen kiezen stijgende gegevens door een waarde van de de tijdstempeltijd van de deltakolom met de overeenkomstige tijd van het venster UTC van de stroomlooppas te vergelijken, en dan het kopiëren van de gegevens van de bron, als om het even welke nieuwe gegevens binnen het tijdvenster UTC wordt gevonden. |
 
 ![ backfill ](../../../images/tutorials/dataflow/table-based/backfill.png)

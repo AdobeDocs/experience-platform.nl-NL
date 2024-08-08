@@ -5,9 +5,9 @@ title: Een gegevensstroom maken voor de succesbronnen van de Klant met behulp va
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een systeem van klantensucces en het opnemen van gegevens in Platform met behulp van bronconnectors en API's.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1258'
 ht-degree: 0%
 
 ---
@@ -604,7 +604,7 @@ Een succesvolle reactie keert de details van de dataflow specificatie verantwoor
 | `transformations.params.mappingId` | De toewijzing-id die aan uw database is gekoppeld. |
 | `scheduleParams.startTime` | De begintijd voor de gegevensstroom in tijdperk. |
 | `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day` of `week` . |
-| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie is ingesteld op `once` en moet groter zijn dan of gelijk zijn aan `15` voor andere frequentiewaarden. |
+| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. De minimaal toegestane intervalwaarde voor elke frequentie is als volgt:<ul><li>**Eenmaal**: n/a</li><li>**Minuut**: 15</li><li>**Uur**: 1</li><li>**Dag**: 1</li><li>**Week**: 1</li></ul> |
 
 **Reactie**
 
