@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 14c534abe51a43d45f8709657a6049a463f35045
+source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
 workflow-type: tm+mt
-source-wordcount: '3856'
+source-wordcount: '3901'
 ht-degree: 0%
 
 ---
@@ -32,8 +32,13 @@ Om publiek aan bestemmingen te activeren, moet u met succes [ verbonden aan een 
 ## Ondersteunde bestandsindelingen voor export {#supported-file-formats-export}
 
 >[!CONTEXTUALHELP]
->id="legacy_dataflow_needs_schedule_end_date"
+>id="dataset_dataflow_needs_schedule_end_date_header"
 >title="De einddatum voor deze gegevensstroom bijwerken"
+>abstract="Vanwege recente updates voor deze bestemming is voor de gegevensstroom nu een einddatum vereist. Adobe heeft een standaardeinddatum ingesteld op 1 maart 2025. Werk de gegevens bij naar de gewenste einddatum. Anders worden de gegevens niet meer geëxporteerd op de standaarddatum."
+
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="De einddatum voor deze gegevensstroominhoud bijwerken"
 >abstract="Vanwege recente updates voor deze bestemming is voor de gegevensstroom nu een einddatum vereist. Adobe heeft een standaardeinddatum ingesteld op 1 maart 2025. Werk de gegevens bij naar de gewenste einddatum. Anders worden de gegevens niet meer geëxporteerd op de standaarddatum."
 
 De volgende bestandsindelingen worden ondersteund bij het exporteren van soorten publiek:
@@ -522,7 +527,6 @@ Het exporteren van bestanden kan op de volgende manieren variëren, afhankelijk 
 id="platform_destinations_activate_exclude_enrichment_attributes"
 title="Verrijkingskenmerken uitsluiten"
 abstract="Schakel deze optie in om de profielen van het geselecteerde aangepaste geüploade publiek naar uw bestemming te exporteren, zonder alle kenmerken ervan uit te sluiten."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="Meer informatie in documentatie"
 
 >[!IMPORTANT]
 >
