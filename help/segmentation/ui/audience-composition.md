@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 8bc03889ff108630bd20fe47f2c2920ceba5069b
+source-git-commit: 44848a250cb6020744b51dc0d0247f5fa91ab2ef
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1840'
 ht-degree: 0%
 
 ---
@@ -232,7 +232,7 @@ Bovendien kunt u het aantal geretourneerde profielen beperken door de schakelopt
 
 ## [!UICONTROL Split] {#split-block}
 
-Met het bloktype **[!UICONTROL Split]** kunt u uw nieuwe publiek opsplitsen in verschillende deelsoorten. U kunt dit publiek splitsen op basis van een percentage of op basis van een kenmerk. Wanneer het splitsen van uw publiek in sub-publiek, is deze splitsing **blijvend**. Dit betekent dat het profiel bij elke evaluatie in hetzelfde subpubliek wordt weergegeven.
+Met het bloktype **[!UICONTROL Split]** kunt u uw nieuwe publiek opsplitsen in verschillende deelsoorten. U kunt dit publiek splitsen op basis van een percentage of op basis van een kenmerk. Wanneer het splitsen van uw publiek in sub-publiek, is deze splitsing **niet** blijvend. Dit betekent dat de profielen bij elke evaluatie in de verschillende deelsoorten kunnen worden opgenomen.
 
 Als u een **[!UICONTROL Split]** -blok wilt toevoegen, selecteert u het pictogram **+** , gevolgd door **[!UICONTROL Split]** .
 
