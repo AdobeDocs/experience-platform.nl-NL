@@ -3,14 +3,18 @@ title: Aan de slag met het doorsturen van gebeurtenissen
 description: Volg deze stapsgewijze zelfstudie om te beginnen met het doorsturen van gebeurtenissen in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
+source-git-commit: 0a95d09eb1ce59e45d52372c4b08725c009001c3
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '849'
 ht-degree: 1%
 
 ---
 
 # Aan de slag met het doorsturen van gebeurtenissen
+
+>[!NOTE]
+>
+>Het door:sturen van gebeurtenissen is een betaalde eigenschap die als deel van het de Verbindingen van Adobe Real-time Customer Data Platform, eerste, of Ultimate dienstenaanbod inbegrepen is.
 
 >[!NOTE]
 >
