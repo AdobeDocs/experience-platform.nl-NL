@@ -80,7 +80,7 @@ Als u uw eerste bestemming met [!DNL Google Ad Manager] wilt tot stand brengen e
 
 Aanbieding toestaan is verplicht voordat u de eerste [!DNL Google Ad Manager] -bestemming in Platform instelt. Voltooi de hieronder beschreven procedure voor het aanbieden van objecten in een geldige plaats voordat je de bestemming maakt.
 
-1. Volg de stappen in de [ documentatie van de Manager van Google Ad ](https://support.google.com/admanager/answer/3289669?hl=en) worden beschreven om Adobe als verbonden Platform van het Beheer van Gegevens (DMP) toe te voegen die.
+1. Volg de stappen in de [ documentatie van de Manager van Google en van de Manager ](https://support.google.com/admanager/answer/3289669?hl=en) worden beschreven om Adobe als verbonden Platform van het Beheer van Gegevens toe te voegen (DMP).
 2. Ga in de interface [!DNL Google Ad Manager] naar **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]** en schakel de schuifregelaar **[!UICONTROL API Access]** in.
 
 ## Verbinden met de bestemming {#connect}

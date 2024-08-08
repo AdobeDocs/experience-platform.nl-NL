@@ -79,7 +79,7 @@ Aanbieding toestaan is verplicht voordat u de eerste [!DNL Google Ad Manager 360
 >
 >De uitzondering op deze regel is voor bestaande [ Audience Manager ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) klanten. Als je al een verbinding met deze Google-bestemming in Audience Manager hebt gemaakt, is het niet nodig om het proces voor het toestaan van aanbiedingen opnieuw te doorlopen en je kunt doorgaan met de volgende stappen.
 
-1. Volg de stappen in de [ documentatie van de Manager van Google Ad ](https://support.google.com/admanager/answer/3289669?hl=en) worden beschreven om Adobe als verbonden Platform van het Beheer van Gegevens (DMP) toe te voegen die.
+1. Volg de stappen in de [ documentatie van de Manager van Google en van de Manager ](https://support.google.com/admanager/answer/3289669?hl=en) worden beschreven om Adobe als verbonden Platform van het Beheer van Gegevens toe te voegen (DMP).
 2. Ga in de interface [!DNL Google Ad Manager] naar **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]** en schakel de schuifregelaar **[!UICONTROL API Access]** in.
 
 
