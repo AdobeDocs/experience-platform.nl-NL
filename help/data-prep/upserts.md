@@ -3,22 +3,28 @@ keywords: Experience Platform;home;populaire onderwerpen;voorvoegsel van gegeven
 title: Gedeeltelijke rijupdates naar realtime klantprofiel verzenden met Data Prep
 description: Leer hoe u updates van gedeeltelijke rijen naar Real-Time klantprofiel verzendt met Data Prep.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: d62a61f44b27c0be882b5f29bfad5e423af7a1ca
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
 
 # gedeeltelijke rijupdates verzenden naar [!DNL Real-Time Customer Profile] met [!DNL Data Prep]
 
->[!WARNING]
+>[!IMPORTANT]
 >
->De berichten van de Update van de Entiteit van de Ingestie op het Model van de Gegevens van de Ervaring (XDM) (met verrichtingen JSON PATCH) voor de updates van het Profiel via de inlaat DCS zijn verouderd. Als alternatief, kunt u [ ruwe gegevens in de inlaat van DCS ](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) opnemen en de noodzakelijke gegevenstoewijzingen specificeren om uw gegevens in XDM-Volgzame berichten voor de updates van het Profiel om te zetten.
+>* De berichten van de Update van de Entiteit van het Model van de Gegevens van de Ervaring (XDM) (met verrichtingen JSON PATCH) voor de updates van het Profiel via de inlaat DCS zijn verouderd. Volg de stappen in deze handleiding als alternatief.
+>
+>* U kunt de bron van HTTP ook gebruiken API aan [ binnengaan ruwe gegevens in de inlaat DCS ](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) en de noodzakelijke gegevenstoewijzingen specificeren om uw gegevens in XDM-Volgzame berichten voor de updates van het Profiel om te zetten.
+>
+>* Wanneer u arrays gebruikt in streaming upserts, moet u expliciet `upsert_array_append` of `upsert_array_replace` gebruiken om een duidelijke intentie van de bewerking te definiëren. Er kunnen fouten optreden als deze functies ontbreken.
 
-Met streaming updates in [!DNL Data Prep] kunt u gedeeltelijke rijupdates naar [!DNL Real-Time Customer Profile] -gegevens verzenden en tegelijkertijd nieuwe identiteitskoppelingen maken en tot stand brengen met één API-aanvraag.
+Gebruik streaming upserts in [!DNL Data Prep] om gedeeltelijke rij-updates naar [!DNL Real-Time Customer Profile] -gegevens te verzenden en tegelijkertijd nieuwe identiteitskoppelingen te maken en tot stand te brengen met één API-aanvraag.
 
 Door upserts te streamen, kunt u het formaat van uw gegevens behouden terwijl het omzetten van die gegevens in [!DNL Real-Time Customer Profile] verzoeken van de PATCH tijdens opname. Op basis van de ingevoerde gegevens die u opgeeft, kunt u met [!DNL Data Prep] één API-payload verzenden en de gegevens omzetten naar zowel [!DNL Real-Time Customer Profile] PATCH als [!DNL Identity Service] CREATE-aanvragen.
+
+[!DNL Data Prep] gebruikt headerparameters om onderscheid te maken tussen invoegen en invoegen. Alle rijen die upserts gebruiken, moeten een kopbal hebben. U kunt updates met of zonder identiteitsbeschrijvingen gebruiken. Als u updates met identiteiten gebruikt, moet u de configuratiestappen volgen die in de sectie op [ worden geschetst vormend de identiteitsdataset ](#configure-the-identity-dataset). Als u updates zonder identiteiten gebruikt, dan te hoeven u niet om identiteitsconfiguraties in uw verzoek te verstrekken. Lees de sectie over [ het stromen upserts zonder identiteiten ](#payload-without-identity-configuration) voor meer informatie.
 
 >[!NOTE]
 >
@@ -52,7 +58,7 @@ Streaming upserts in [!DNL Data Prep] werken als volgt:
    * De gegevensbewerking die moet worden uitgevoerd met [!DNL Profile] : `create` , `merge` en `delete` .
    * De optionele identiteitsbewerking die moet worden uitgevoerd met [!DNL Identity Service]: `create` .
 
-### De identiteitsgegevensset configureren
+### De identiteitsgegevensset configureren {#configure-the-identity-dataset}
 
 Als nieuwe identiteiten moeten worden verbonden, dan moet u een extra dataset in de inkomende lading creëren en overgaan. Wanneer het creëren van een identiteitsdataset, moet u ervoor zorgen dat aan de volgende vereisten wordt voldaan:
 
@@ -138,7 +144,7 @@ De volgende bewerkingen worden ondersteund door [!DNL Identity Service] :
 | --- | --- |
 | `create` | De enige toegestane bewerking voor deze parameter. Als `create` wordt doorgegeven als een waarde voor `operations.identity` , genereert [!DNL Data Prep] een XDM-entiteit die een aanvraag voor [!DNL Identity Service] maakt. Als de identiteit al bestaat, wordt de identiteit genegeerd. **Nota:** als `operations.identity` aan `create` wordt geplaatst, dan moet `identityDatasetId` ook worden gespecificeerd. De XDM-entiteit maakt een bericht dat intern wordt gegenereerd door de component [!DNL Data Prep] , wordt voor deze id van de gegevensset gegenereerd. |
 
-### Payload zonder identiteitsconfiguratie
+### Payload zonder identiteitsconfiguratie {#payload-without-identity-configuration}
 
 Als nieuwe identiteiten niet hoeven te worden gekoppeld, kunt u de parameters `identity` en `identityDatasetId` weglaten in de bewerkingen. Als u dit doet, worden alleen gegevens verzonden naar [!DNL Real-Time Customer Profile] en wordt de [!DNL Identity Service] overgeslagen. Zie de lading hieronder voor een voorbeeld:
 
