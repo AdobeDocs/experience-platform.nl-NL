@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
+source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
 workflow-type: tm+mt
-source-wordcount: '3901'
+source-wordcount: '3944'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,16 @@ Om publiek aan bestemmingen te activeren, moet u met succes [ verbonden aan een 
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="De einddatum voor deze gegevensstroominhoud bijwerken"
 >abstract="Vanwege recente updates voor deze bestemming is voor de gegevensstroom nu een einddatum vereist. Adobe heeft een standaardeinddatum ingesteld op 1 maart 2025. Werk de gegevens bij naar de gewenste einddatum. Anders worden de gegevens niet meer geëxporteerd op de standaarddatum."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template"
+>title="Mappad bewerken"
+>abstract="Gebruik verschillende beschikbare macro&#39;s om het mappad aan te passen waarin de gegevensset wordt geëxporteerd."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template_preview"
+>title="Padvoorvertoning gegevensmap"
+>abstract="Bekijk een voorvertoning van de mapstructuur die op uw opslaglocatie wordt gemaakt op basis van de macro&#39;s die u in dit venster hebt toegevoegd."
 
 De volgende bestandsindelingen worden ondersteund bij het exporteren van soorten publiek:
 

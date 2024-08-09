@@ -4,9 +4,9 @@ description: Ga aan de slag met Adobe Real-Time CDP, begrijp de uitgebreide func
 solution: Real-Time Customer Data Platform
 product: Real Time CDP
 exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
-source-git-commit: c9a954d2a78abcea67e68e5ae9563e6db1ae706c
+source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
 workflow-type: tm+mt
-source-wordcount: '1108'
+source-wordcount: '1169'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,13 @@ Bekijk de nieuwste verbeteringen in Real-Time CDP-producten en -documentatie. Be
 
 >[!BEGINTABS]
 
->[!TAB Van het Geval gebruik Playbooks]
+>[!TAB  Federated Audience Composition ]
+
+De Federated Audience Composition staat ondernemingen toe om gegevens voor betere toepassing over diverse gebruiksgevallen samen te stellen. Met deze nieuwe benadering, als Adobe Real-time Customer Data Platform en/of gebruiker van Adobe Journey Optimizer, kunt u datasets van uw bestaand gegevenspakhuis direct federeren om het publiek en de attributen van Adobe Experience Platform tot stand te brengen en te verrijken allen in één systeem.
+
+[![ beeld ](assets/do-not-localize/learn-more-button.svg) ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+
+>] Van het Geval gebruik Playbooks [!TAB 
 
 De [!UICONTROL Use Case Playbooks] -functionaliteit is nu algemeen beschikbaar voor alle Real-Time CDP- en Adobe Journey Optimizer-klanten. [!UICONTROL Use Case Playbooks] zijn ontworpen om gebruikers te helpen bij het overwinnen van uitdagingen wanneer ze met Real-time Customer Data Platform of Adobe Journey Optimizer beginnen. Als u niet zeker weet waar u moet beginnen of hoe u de juiste middelen voor uw gewenste gebruiksscenario&#39;s kunt maken, kunt u met Afspeelboeken voor hoofdletters en kleine letters inspiratie bieden en verschillende middelen maken die u kunt testen en importeren in productieomgevingen wanneer u klaar bent.
 
