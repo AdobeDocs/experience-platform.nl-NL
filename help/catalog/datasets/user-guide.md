@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
 workflow-type: tm+mt
-source-wordcount: '2896'
+source-wordcount: '2927'
 ht-degree: 0%
 
 ---
@@ -92,6 +92,10 @@ U kunt voorbeeldgegevens van gegevenssets voorvertonen via zowel de inlineopties
 ![ het Browse lusje van de werkruimte van Datasets met de ellips en de optie van de dataset van de Voorproef die voor de gekozen dataset wordt benadrukt.](../images/datasets/user-guide/preview-dataset-option.png)
 
 Dit opent het voorproefvenster, waar de hiërarchische mening van het schema voor de dataset op het recht wordt getoond.
+
+>[!NOTE]
+>
+>Het schemadiagram op de linkerkant van de mening toont slechts gebieden die gegevens bevatten. Velden zonder gegevens worden automatisch verborgen om de interface te stroomlijnen en de focus op relevante informatie te richten.
 
 ![ de dialoog van de datasetvoorproef met informatie over de structuur, evenals steekproefwaarden, voor de dataset wordt getoond.](../images/datasets/user-guide/preview-dataset.png)
 
