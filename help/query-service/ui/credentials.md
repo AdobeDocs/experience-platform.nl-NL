@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding Query Service Credentials
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt om query's te schrijven en uit te voeren, eerder uitgevoerde query's weer te geven en query's te openen die zijn opgeslagen door gebruikers binnen uw organisatie.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1780'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,11 @@ U kunt niet-verlopen geloofsbrieven gebruiken aan opstelling een duurdere verbin
 
 >[!NOTE]
 >
->Niet-vervallende geloofsbrieven hebben de volgende beperkingen:<br><ul><li>Gebruikers moeten zich aanmelden met hun gebruikersnaam en wachtwoord uit `{technicalAccountId}:{credential}` . Meer informatie kan in [ worden gevonden produceert geloofsbrieven ](#generate-credentials) sectie.</li><li>Op de verwezenlijking van het verlopen geloofsbrieven, wordt een nieuwe rol met een reeks basistoestemmingen gecreeerd die gebruikers toestaat om schema&#39;s en datasets te bekijken. De toestemming &quot;beheert vragen&quot;wordt ook toegewezen aan deze rol voor gebruik met de Dienst van de Vraag.</li><li>Externe clients kunnen anders presteren dan u had verwacht bij het weergeven van queryobjecten. Sommige clients van derden, zoals [!DNL DB Visualizer] , geven de weergavenaam bijvoorbeeld niet weer in het linkerdeelvenster. De weergavenaam is echter toegankelijk als deze wordt aangeroepen binnen een SELECT-query. Op dezelfde manier geeft [!DNL PowerUI] mogelijk geen lijst weer van de tijdelijke weergaven die zijn gemaakt via de SQL die moeten worden geselecteerd voor het maken van het dashboard.</li></ul>
+>Niet-vervallende referenties hebben de volgende beperkingen:
+>
+>- Gebruikers moeten zich aanmelden met hun gebruikersnaam en wachtwoord in de notatie `{technicalAccountId}:{credential}` . Meer informatie kan in [ worden gevonden produceert geloofsbrieven ](#generate-credentials) sectie.
+>- Standaard krijgen niet-verlopen referenties machtigingen om alleen `SELECT` query&#39;s uit te voeren. Als u `CTAS` - of `ITAS` -query&#39;s wilt uitvoeren, voegt u de machtigingen Gegevensset beheren en Schema&#39;s beheren handmatig toe aan de rol die is gekoppeld aan de niet-vervallende referentie. De &quot;Manage Schemas&quot;toestemming kan onder de &quot;Modeling van Gegevens&quot;sectie worden gevonden, en de &quot;Manage toestemmingen van Datasets&quot;wordt gevestigd onder de &quot;sectie van het Beheer van Gegevens&quot;van [ Adobe Developer Console ](<https://developer.adobe.com/console/>).
+>- Externe clients kunnen anders presteren dan u had verwacht bij het weergeven van queryobjecten. Sommige clients van derden, zoals [!DNL DB Visualizer] , geven de weergavenaam bijvoorbeeld niet weer in het linkerdeelvenster. De weergavenaam is echter toegankelijk als deze wordt aangeroepen binnen een query `SELECT` . Op dezelfde manier geeft [!DNL PowerUI] mogelijk geen lijst weer van de tijdelijke weergaven die met SQL zijn gemaakt voor selectie in het maken van dashboard.
 
 ### Vereisten
 
