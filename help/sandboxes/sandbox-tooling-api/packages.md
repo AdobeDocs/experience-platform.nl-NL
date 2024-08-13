@@ -2,9 +2,9 @@
 title: API-eindpunt voor sandbox Tooling Packages
 description: Het /packages eindpunt in Sandbox Tooling API staat u toe om pakketten in Adobe Experience Platform programmatically te beheren.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
+source-git-commit: f81e15ccfd89e2d0cb450f596743341264187f52
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1621'
 ht-degree: 1%
 
 ---
@@ -138,8 +138,23 @@ curl -X PUT \
 | --- | --- | --- | --- |
 | `id` | De id van het pakket dat moet worden bijgewerkt. | String | Ja |
 | `action` | Om artefacten in het pakket toe te voegen, zou de actiewaarde **moeten zijn ADD**. Deze actie wordt gesteund voor slechts **GEDEELTELIJKE** pakkettypes. | String | Ja |
-| `artifacts` | Een lijst met artefacten die in het pakket moeten worden toegevoegd. Er zou geen verandering in het pakket zijn als de lijst **ongeldig** of **leeg** is. Artefacten worden gedupliceerd voordat ze aan het pakket worden toegevoegd. | Array | Nee |
+| `artifacts` | Een lijst met artefacten die in het pakket moeten worden toegevoegd. Er zou geen verandering in het pakket zijn als de lijst **ongeldig** of **leeg** is. Artefacten worden gedupliceerd voordat ze aan het pakket worden toegevoegd. Zie de onderstaande tabel voor een volledige lijst met ondersteunde artefacten. | Array | Nee |
 | `expiry` | Het tijdstempel dat de vervaldatum voor het pakket definieert. De standaardwaarde is 90 dagen vanaf het moment dat de PUT-API wordt aangeroepen als de vervaldatum niet is opgegeven in de payload. Het veld voor het verstrijken van de reactie is een tijdperk in UTC-tijd. | Tekenreeks (UTC-tijdstempelindeling) | Nee |
+
+De volgende artefacttypen worden momenteel ondersteund.
+
+| Artefact | Platform | Object | Partiële stroom | Volledige sandbox |
+| --- | --- | --- | --- | --- |
+| `JOURNEY` | Adobe Journey Optimizer | Journeys | Ja | Nee |
+| `ID_NAMESPACE` | Klantgegevensplatform | Identiteiten | Ja | Ja |
+| `REGISTRY_DATATYPE` | Klantgegevensplatform | Gegevenstype | Ja | Ja |
+| `REGISTRY_CLASS` | Klantgegevensplatform | Klasse | Ja | Ja |
+| `REGISTRY_MIXIN` | Klantgegevensplatform | Veldgroep | Ja | Ja |
+| `REGISTRY_SCHEMA` | Klantgegevensplatform | Schema&#39;s | Ja | Ja |
+| `CATALOG_DATASET` | Klantgegevensplatform | Gegevenssets | Ja | Ja |
+| `DULE_CONSENT_POLICY` | Klantgegevensplatform | Beleid inzake instemming en bestuur | Ja | Ja |
+| `PROFILE_SEGMENT` | Klantgegevensplatform | Doelgroepen | Ja | Ja |
+| `FLOW` | Klantgegevensplatform | Bronnen, gegevensstroom | Ja | Ja |
 
 **Reactie**
 
