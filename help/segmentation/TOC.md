@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Segmentation Service
 user-guide-description: Stel doelgroepen samen op basis van uw gegevens voor realtimeklantprofielen met behulp van door Adobe Experience Platform gegenereerde segmentdefinities of externe bronnen.
 feature: Segments
 role: User
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '194'
 ht-degree: 21%
 
 ---
@@ -73,6 +73,7 @@ ht-degree: 21%
    - [Extern publiek importeren en gebruiken](tutorials/using-external-audiences.md)
    - [Een gegevensset maken om gegevens te exporteren](tutorials/create-dataset-export-segment.md)
    - [Compatibiliteit met gegevensgebruik voor segmenten afdwingen](tutorials/governance.md)
+- [Update voor kwalificatiecriteria](./eligibility-criteria-update.md)
 - [Veelgestelde vragen](./faq.md)
 - [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
