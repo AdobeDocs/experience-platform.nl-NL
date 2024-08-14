@@ -3,9 +3,9 @@ title: API-eindpunt voor soorten publiek
 description: Gebruik het publiek eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform om, publiek voor uw organisatie programmatically tot stand te brengen te beheren en bij te werken.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
@@ -207,10 +207,6 @@ POST /audiences
 
 **Verzoek**
 
->[!BEGINTABS]
-
->[!TAB  Platform-geproduceerde publiek ]
-
 +++ Een voorbeeldverzoek om een door het platform gegenereerd publiek te maken
 
 ```shell
@@ -222,7 +218,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
         "name": "People who ordered in the last 30 days",
-        "profileInstanceId": "ups",
+        "profileInstanceId": "AEPSegments",
         "description": "Last 30 days",
         "type": "SegmentDefinition",
         "expression": {
@@ -250,60 +246,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 +++
 
->[!TAB  Extern geproduceerd publiek ]
-
-+++ Een voorbeeldverzoek voor het maken van een extern gegenereerd publiek
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/audiences
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
- -d '{
-        "audienceId":"test-external-audience-id",
-        "name":"externalAudience",
-        "namespace":"aam",
-        "description":"Last 30 days",
-        "type":"ExternalSegment",
-        "originName":"CUSTOM_UPLOAD",
-        "lifecycleState":"published",
-        "datasetId":"6254cf3c97f8e31b639fb14d",
-        "labels":[
-            "core/C1"
-        ],
-        "linkedAudienceRef":{
-            "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
-        }
-    }'
-```
-
-| Eigenschap | Beschrijving |
-| -------- | ----------- | 
-| `audienceId` | Een door de gebruiker opgegeven id voor het publiek. |
-| `name` | De naam van het publiek. |
-| `namespace` | De naamruimte voor het publiek. |
-| `description` | Een beschrijving van het publiek. |
-| `type` | Een veld waarin wordt weergegeven of het publiek door het platform wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalSegment` . Een `SegmentDefinition` verwijst naar een publiek dat is gegenereerd in Platform, terwijl een `ExternalSegment` verwijst naar een publiek dat niet is gegenereerd in Platform. |
-| `originName` | De naam van de oorsprong van het publiek. Voor extern gegenereerde soorten publiek is de standaardwaarde `CUSTOM_UPLOAD` . Andere ondersteunde waarden zijn `REAL_TIME_CUSTOMER_PROFILE` , `CUSTOM_UPLOAD` , `AUDIENCE_ORCHESTRATION` en `AUDIENCE_MATCH` . |
-| `lifecycleState` | Een optioneel veld dat de begintoestand bepaalt van het publiek dat u wilt maken. Tot de ondersteunde waarden behoren `draft` , `published` en `inactive` . |
-| `datasetId` | De id van de dataset waar de gegevens worden gevonden die het publiek omvatten. |
-| `labels` | Gegevensgebruik op objectniveau en op kenmerk gebaseerde toegangsbeheerlabels die relevant zijn voor het publiek. |
-| `audienceMeta` | Metagegevens die bij het extern gegenereerde publiek horen. |
-| `linkedAudienceRef` | Een object dat id&#39;s bevat voor andere publieksgerelateerde systemen. Dit kan het volgende omvatten: <ul><li>`flowId`: Deze id wordt gebruikt om het publiek te verbinden met de dataflow die werd gebruikt om de publieksgegevens te brengen. Meer informatie over vereiste IDs kan in [ worden gevonden leidt tot een dataflow gids ](../../sources/tutorials/api/collect/cloud-storage.md).</li><li>`aoWorkflowId`: Deze id wordt gebruikt om het publiek te verbinden met een verwante compositie van de Orchestratie van de Publiek.&lt;/li/> <li>`payloadFieldGroupRef`: Deze id wordt gebruikt om naar het schema van de Groep van het Gebied XDM te verwijzen dat de structuur van het publiek beschrijft. Meer informatie over de waarde van dit gebied kan in de [ XDM het eindpuntgids van de Groep van het Gebied ](../../xdm/api/field-groups.md) worden gevonden.</li><li>`audienceFolderId`: Deze id wordt gebruikt om naar de map-id in Adobe Audience Manager voor het publiek te verwijzen. Meer informatie over deze API kan in de [ Adobe Audience Manager API gids ](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API) worden gevonden.</ul> |
-
-+++
-
->[!ENDTABS]
-
 **Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met informatie over uw pas gecreeerd publiek terug.
-
->[!BEGINTABS]
-
->[!TAB  Platform-geproduceerde publiek ]
 
 +++Een voorbeeldreactie bij het creëren van een Platform-geproduceerd publiek.
 
@@ -373,46 +318,6 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over uw pas gec
 
 +++
 
->[!TAB  Extern geproduceerd publiek ]
-
-+++Een voorbeeldreactie bij het maken van een extern gegenereerd publiek.
-
-```json
-{
-   "id": "322f9f62-cd27-11ec-9d64-0242ac120002",
-   "audienceId": "test-external-audience-id",
-   "name": "externalAudience",
-   "namespace": "aam",
-   "imsOrgId": "{ORG_ID}",
-   "sandbox":{
-      "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-      "sandboxName": "prod",
-      "type": "production",
-      "default": true
-   },
-   "isSystem": false,
-   "description": "Last 30 days",
-   "type": "ExternalSegment",
-   "originName": "CUSTOM_UPLOAD",
-   "lifecycleState": "published",
-   "createdBy": "{CREATED_BY_ID}",
-   "datasetId": "6254cf3c97f8e31b639fb14d",
-   "labels": [
-      "core/C1"
-   ],
-   "linkedAudienceRef": {
-      "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
-   },
-   "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
-   "creationTime": 1650251290000,
-   "updateEpoch": 1650251290,
-   "updateTime": 1650251290000,
-   "createEpoch": 1650251290
-}
-```
-
-+++
-
 ## Een bepaald publiek opzoeken {#get}
 
 U kunt gedetailleerde informatie over een specifiek publiek omhoog kijken door een verzoek van de GET tot het `/audiences` eindpunt te richten en identiteitskaart van het publiek te verstrekken u wenst om in de verzoekweg terug te winnen.
@@ -443,11 +348,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 **Reactie**
 
-Een succesvolle reactie keert status 200 van HTTP met informatie over het gespecificeerde publiek terug. De reactie is anders, afhankelijk van of het publiek wordt gegenereerd met Adobe Experience Platform of externe bronnen.
-
->[!BEGINTABS]
-
->[!TAB  Platform-geproduceerde publiek ]
+Een succesvolle reactie keert status 200 van HTTP met informatie over het gespecificeerde publiek terug.
 
 +++A steekproefreactie wanneer het terugwinnen van een Platform-geproduceerd publiek.
 
@@ -516,161 +417,6 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over het gespec
 
 +++
 
->[!TAB  Extern geproduceerd publiek ]
-
-+++Een voorbeeldreactie bij het ophalen van een extern gegenereerd publiek.
-
-```json
-{
-    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "audienceId": "test-external-audience-id",
-    "name": "externalAudience",
-    "namespace": "aam",
-    "imsOrgId": "{ORG_ID}",
-    "sandbox": {
-        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "isSystem": false,
-    "description": "Last 30 days",
-    "type": "ExternalSegment",
-    "lifecycleState": "active",
-    "createdBy": "{CREATED_BY_ID}",
-    "datasetId": "6254cf3c97f8e31b639fb14d",
-    "labels": [
-        "core/C1"
-    ],
-    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
-    "creationTime": 1650251290000,
-    "updateEpoch": 1650251290,
-    "updateTime": 1650251290000,
-    "createEpoch": 1650251290
-}
-```
-
-+++
-
->[!ENDTABS]
-
-## Een veld bijwerken voor een publiek {#update-field}
-
-U kunt de gebieden van specifiek publiek bijwerken door een verzoek van PATCH aan het `/audiences` eindpunt te richten en identiteitskaart van het publiek te verstrekken u wenst om in de verzoekweg bij te werken.
-
-**API formaat**
-
-```http
-PATCH /audiences/{AUDIENCE_ID}
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `{AUDIENCE_ID}` | De id van het publiek dat u wilt bijwerken. Gelieve te merken op dat dit het `id` gebied is, en **niet** het `audienceId` gebied is. |
-
-**Verzoek**
-
-+++Een voorbeeldverzoek om een gebied in een publiek bij te werken.
-
-```shell
-curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '
-     [
-        {
-            "op": "add",
-            "path": "/expression",
-            "value": {
-                "type": "PQL",
-                "format": "pql/text",
-                "value": "workAddress.country = \"CA\""
-            }
-        }
-      ]'
-```
-
-| Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `op` | Voor het bijwerken van soorten publiek is deze waarde altijd `add` . |
-| `path` | Het pad van het veld dat u wilt bijwerken. |
-| `value` | De waarde waaraan u het veld wilt bijwerken. |
-
-+++
-
-**Reactie**
-
-Een geslaagde reactie geeft HTTP status 200 met informatie over uw onlangs bijgewerkte publiek terug.
-
-+++A voorbeeldreactie wanneer het bijwerken van een gebied in een publiek.
-
-```json
-{
-    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "profileInstanceId": "ups",
-    "imsOrgId": "{ORG_ID}",
-    "sandbox": {
-        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "name": "People who ordered in the last 30 days",
-    "description": "Last 30 days",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "workAddress.country = \"CA\""
-    },
-    "mergePolicyId": "ef006bbe-750e-4e81-85f0-0c6902192dcc",
-    "evaluationInfo": {
-        "batch": {
-          "enabled": false
-        },
-        "continuous": {
-          "enabled": true
-        },
-        "synchronous": {
-          "enabled": false
-        }
-    },
-    "dataGovernancePolicy": {
-      "excludeOptOut": true
-    },
-    "creationTime": 1650374572000,
-    "updateEpoch": 1650374573,
-    "updateTime": 1650374573000,
-    "createEpoch": 1650374572,
-    "_etag": "\"33120d7c-0000-0200-0000-625eb7ad0000\"",
-    "dependents": [],
-    "definedOn": [
-        {
-          "meta:resourceType": "unions",
-          "meta:containerId": "tenant",
-          "$ref": "https://ns.adobe.com/xdm/context/profile__union"
-        }
-    ],
-    "dependencies": [],
-    "type": "SegmentDefinition",
-    "overridePerformanceWarnings": false,
-    "createdBy": "{CREATED_BY_ID}",
-    "lifecycleState": "active",
-    "labels": [
-      "core/C1"
-    ],
-    "namespace": "AEPSegments"
-}
-```
-
-+++
-
 ## Een publiek bijwerken {#put}
 
 U kunt een specifiek publiek bijwerken (overschrijven) door een verzoek van de PUT aan het `/audiences` eindpunt te richten en identiteitskaart van het publiek te verstrekken u wenst om in de verzoekweg bij te werken.
@@ -697,11 +443,11 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-    "audienceId": "test-external-audience-id",
-    "name": "New external audience",
-    "namespace": "aam",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
     "description": "Last 30 days",
-    "type": "ExternalSegment",
+    "type": "SegmentDefinition",
     "lifecycleState": "published",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -732,9 +478,9 @@ Een geslaagde reactie retourneert HTTP status 200 met details over uw onlangs bi
 ```json
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-    "audienceId": "test-external-audience-id",
-    "name": "New external audience",
-    "namespace": "aam",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
@@ -743,7 +489,7 @@ Een geslaagde reactie retourneert HTTP status 200 met details over uw onlangs bi
         "default": true
     },
     "description": "Last 30 days",
-    "type": "ExternalSegment",
+    "type": "SegmentDefinition",
     "lifecycleState": "published",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
