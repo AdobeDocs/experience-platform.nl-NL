@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3e465803b6c8fe11cef1633c0f0624465086c2a3
+source-git-commit: 090b870dcfb16e59831f1e03eb46b22da4f24f0f
 workflow-type: tm+mt
-source-wordcount: '2209'
+source-wordcount: '2310'
 ht-degree: 0%
 
 ---
@@ -91,6 +91,16 @@ Als u een overzicht wilt zien van het gebruik van een productmachtiging, selecte
 Het tabblad Samenvatting wordt weergegeven. U kunt de korrelige voorspellingen gebruiken die beschikbaar zijn op de tabbladen [!UICONTROL Summary] en [!UICONTROL Details] voor een geïnformeerde besluitvorming voor efficiënt gebruik van de licentie.
 
 ![ de summiere mening van een Product van het Platform met de voorspelde benadrukte gebruikskolom.](../images/license-usage/summary-predicted-usage.png)
+
+Het percentage van het voorspelde gebruik wordt als volgt bepaald:
+
+- Als de onder- en bovengrenzen aanzienlijk verschillen, worden deze weergegeven als een bereik (bijvoorbeeld 32% - 35%).
+- Als de onder- en bovengrenzen bijna identiek zijn en niet nul, worden ze weergegeven als een geschatte waarde (bijvoorbeeld ~34%).
+- Als de onder- en bovengrenzen bijna gelijk en nul zijn, worden ze weergegeven als exact 0%.
+
+>[!NOTE]
+>
+&quot;Bijna identiek&quot; betekent in deze context dat de waarden statistisch significant zijn tot twee decimalen (een ondergrens van 0,342 en een bovengrens van 0,344 worden bijvoorbeeld beide afgerond tot 34%).
 
 De voorspelde gebruiksfunctie ondersteunt de volgende meetgegevens:
 
