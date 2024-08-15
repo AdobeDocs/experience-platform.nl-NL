@@ -2,7 +2,7 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: Aanvullende informatie van april 2024 voor Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 3%
@@ -74,7 +74,7 @@ Meer over gegevensinzamelingen leren, lees het [ overzicht van de gegevensinzame
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
 | `isRequired` nu beschikbaar voor geneste gegevensvelden van klanten in Destination SDK | Wanneer het vormen van een bestemming in Destination SDK, kunt u [ genestelde gebieden van klantengegevens nu plaatsen zoals vereist ](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). Op deze manier kunnen gebruikers die uw bestemming instellen, pas verdergaan met hun activeringsstroom als ze een waarde voor dat veld selecteren. |
-| De segmentatie van Edge is niet meer verplicht wanneer het opzetten van een Adobe Target-bestemming met Web SDK | Eerder, toen het vormen van een [ bestemming van Adobe Target ](/help/destinations/catalog/personalization/adobe-target-connection.md) met Web SDK, moest de gegevensstroom voor verpersoonlijking en randsegmentatie worden toegelaten. Het vereiste dat de gegevensstroom voor randsegmentatie [ wordt toegelaten is nu verwijderd ](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Met dit integratiepatroon kunt u alleen profiteren van een subset van gevallen waarin u gebruikmaakt van personalisatie wanneer u Adobe Target met Real-Time CDP gebruikt. Lees meer over de [ gebruiksgevallen die door integratietype ](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters) worden toegelaten. |
+| De segmentatie van Edge is niet meer verplicht wanneer het opzetten van een Adobe Target-bestemming met Web SDK | Eerder, toen het vormen van een [ bestemming van Adobe Target ](/help/destinations/catalog/personalization/adobe-target-connection.md) met Web SDK, moest de gegevensstroom voor verpersoonlijking en randsegmentatie worden toegelaten. Het vereiste dat de gegevensstroom voor randsegmentatie [ wordt toegelaten is nu verwijderd ](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Met dit integratiepatroon kunt u alleen profiteren van een subset van gevallen waarin u gebruikmaakt van personalisatie wanneer u Adobe Target met Real-Time CDP gebruikt. Lees meer over de [ gebruiksgevallen die door integratietype ](/help/destinations/catalog/personalization/adobe-target-connection.md#supported-use-cases) worden toegelaten. |
 | [!BADGE  Beta ] {type=Informative} verwijdert veelvoudige publiek en datasets uit activeringsstromen | U kunt nu meerdere soorten publiek en gegevenssets selecteren en verwijderen uit doelactiveringsstromen. Zie de [ bestemmingsdetails ](../../destinations/ui/destination-details-page.md#bulk-remove) en [ datasetuitvoer ](../../destinations/ui/export-datasets.md) documentatie voor meer details. |
 
 {style="table-layout:auto"}

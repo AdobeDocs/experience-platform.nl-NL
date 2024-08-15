@@ -3,9 +3,9 @@ keywords: doelpersonalisatie; bestemming; ervaring doelbestemming platform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1726'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,15 @@ Bekijk de onderstaande video voor een kort overzicht van het configureren van de
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
+## Ondersteunde gebruiksgevallen op basis van implementatietype {#supported-use-cases}
+
+De lijst toont hieronder de gesteunde gebruiksgevallen voor de bestemming van Adobe Target, die op uw implementatietype wordt gebaseerd, met of zonder [ SDK van het Web ](/help/web-sdk/home.md) en met of zonder [ toegelaten randsegmentatie ](/help/segmentation/home.md#edge).
+
+| Adobe Target implementatie *zonder* SDK van het Web | Adobe Target implementatie *met* Web SDK | De implementatie van Adobe Target *met* Web SDK *en* randsegmentatie van |
+|---|---|---|
+| <ul><li>Een gegevensstroom is niet vereist. Adobe Target kan door [ at.js ](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [ server-kant ](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), of [ hybride ](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) implementatiemethodes worden opgesteld.</li><li>[ de segmentatie van Edge ](../../../segmentation/ui/edge-segmentation.md) wordt niet gesteund.</li><li>[ Zelfde-pagina en volgende-pagina verpersoonlijking ](../../ui/activate-edge-personalization-destinations.md) worden niet gesteund.</li><li>U kunt publiek en profielattributen aan de verbinding van Adobe Target voor de *standaardproductiestandaard* en niet-standaardzandbakken delen.</li><li>Om volgende-zittingsverpersoonlijking te vormen zonder een gegevensstroomidentiteitskaart te gebruiken, gebruik [ at.js ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Een gegevensstroom met Adobe Target en Experience Platform die als diensten wordt gevormd wordt vereist.</li><li>Edge-segmentatie werkt zoals verwacht.</li><li>[ zelfde-pagina en volgende-pagina verpersoonlijking ](../../ui/activate-edge-personalization-destinations.md#use-cases) worden gesteund.</li><li>Het delen van publiek- en profielkenmerken van andere sandboxen wordt ondersteund.</li></ul> | <ul><li>Een gegevensstroom met Adobe Target en Experience Platform die als diensten wordt gevormd wordt vereist.</li><li>Wanneer [ vormend de datastream ](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), selecteer niet het **de segmentatie van Edge** checkbox.</li><li>[ volgende-zittingsverpersoonlijking ](../../ui/activate-edge-personalization-destinations.md#next-session) wordt gesteund.</li><li>Het delen van publiek- en profielkenmerken van andere sandboxen wordt ondersteund.</li></ul> |
+
+
 ## Vereisten {#prerequisites}
 
 ### DataStream-id {#datastream-id}
@@ -54,7 +63,7 @@ In Adobe Target moet je ervoor zorgen dat de gebruiker:
 * Toegang tot de [ standaardwerkruimte ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#default-workspace);
 * De **Approver** [ rol ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#roles-and-permissions).
 
-Lees meer over het verlenen van toestemmingen voor [ Premium van het Doel ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) en voor [ Target Standard ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions).
+Lees meer over het verlenen van toestemmingen voor [ Target Premium ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) en voor [ Target Standard ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions).
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -62,7 +71,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 >[!IMPORTANT]
 >
->Wanneer het activeren van *randpubliek voor zelfde-pagina en volgende-pagina het gebruikscase van de verpersoonlijking*, moet het publiek ** een [ actief-op-rand fusiebeleid ](../../../segmentation/ui/segment-builder.md#merge-policies) gebruiken. Het [!DNL active-on-edge] fusiebeleid zorgt ervoor dat het publiek constant [ op de rand ](../../../segmentation/ui/edge-segmentation.md) wordt geëvalueerd en beschikbaar voor real time en volgende-pagina het gebruikscase van de verpersoonlijking is.  Lees over [ alle beschikbare gebruiksgevallen ](#parameter), die op implementatietype wordt gebaseerd.
+>Wanneer het activeren van *randpubliek voor zelfde-pagina en volgende-pagina het gebruikscase van de verpersoonlijking*, moet het publiek ** een [ actief-op-rand fusiebeleid ](../../../segmentation/ui/segment-builder.md#merge-policies) gebruiken. Het [!DNL active-on-edge] fusiebeleid zorgt ervoor dat het publiek constant [ op de rand ](../../../segmentation/ui/edge-segmentation.md) wordt geëvalueerd en beschikbaar voor real time en volgende-pagina het gebruikscase van de verpersoonlijking is.  Lees over [ alle beschikbare gebruiksgevallen ](#parameters), die op implementatietype wordt gebaseerd.
 >Als u randpubliek toewijst dat een verschillend fusiebeleid aan de bestemmingen van Adobe Target gebruikt, zullen die publiek niet voor real time en volgende-paginagebeurtenissen worden geëvalueerd.
 >Volg de instructies op [ creërend een fusiebeleid ](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy), en zorg ervoor om **[!UICONTROL Active-On-Edge Merge Policy]** knevel toe te laten.
 
@@ -119,7 +128,7 @@ Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de vol
   >
   >De gegevensstroom-id is uniek voor elke Adobe Target-doelverbinding. Als u het zelfde publiek aan veelvoudige gegevensstromen in kaart moet brengen, moet u [ een nieuwe bestemmingsverbinding ](../../ui/connect-destination.md) voor elke gegevensstroom identiteitskaart tot stand brengen, en door de [ stroom van de publiekactivering ](#activate) gaan.
 
-   * **[!UICONTROL None]**: Selecteer deze optie als u de verpersoonlijking van Adobe Target moet vormen maar u kunt niet [ SDK van het Web van het Experience Platform ](/help/web-sdk/home.md) uitvoeren. Wanneer u deze optie gebruikt, worden soorten publiek die van Experience Platform naar Doel zijn geëxporteerd, alleen ondersteuning voor verpersoonlijking in de volgende sessie en wordt randsegmentatie uitgeschakeld. Verwijs de lijst hieronder voor een vergelijking van beschikbare gebruiksgevallen per implementatietype.
+   * **[!UICONTROL None]**: Selecteer deze optie als u de verpersoonlijking van Adobe Target moet vormen maar u kunt niet [ SDK van het Web van het Experience Platform ](/help/web-sdk/home.md) uitvoeren. Wanneer u deze optie gebruikt, worden soorten publiek die van Experience Platform naar Doel zijn geëxporteerd, alleen ondersteuning voor verpersoonlijking in de volgende sessie en wordt randsegmentatie uitgeschakeld. Verwijzing de lijst in de [ gesteunde gebruikscase ](#supported-use-cases) sectie voor een vergelijking van beschikbare gebruiksgevallen per implementatietype.
 
   | Adobe Target implementatie *zonder* SDK van het Web | Adobe Target implementatie *met* Web SDK | De implementatie van Adobe Target *met* Web SDK *en* randsegmentatie van |
   |---|---|---|

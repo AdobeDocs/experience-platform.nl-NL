@@ -3,7 +3,7 @@ title: Het publiek activeren voor verpersoonlijkingsdoelen van randen
 description: Leer hoe u het publiek activeert van Adobe Experience Platform naar Edge-verpersoonlijkingsbestemmingen voor gebruiksgevallen van verpersoonlijking op dezelfde pagina en op de volgende pagina.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Bekijk de onderstaande video voor een kort overzicht van hoe u doelgroepen en pr
 
 ## Gebruiksscenario’s {#use-cases}
 
-De oplossingen van de verpersoonlijking van de Adobe, zoals Adobe Target, of uw eigen platforms van de verpersoonlijkingspartner van het gebruik (bijvoorbeeld, [!DNL Optimizely], [!DNL Pega]), evenals merkgebonden systemen (bijvoorbeeld, in-huis CMS) aan macht een diepere klantenverpersoonlijkingservaring via de [ 3} bestemming van de Douane Personalization {. ](../catalog/personalization/custom-personalization.md) Dit alles terwijl ook de gegevensverzameling en segmenteringsmogelijkheden van de Edge Network van het Experience Platform worden gebruikt.
+De oplossingen van de verpersoonlijking van de Adobe, zoals Adobe Target, of uw eigen platforms van de verpersoonlijkingspartner van het gebruik (bijvoorbeeld, [!DNL Optimizely], [!DNL Pega]), evenals merkgebonden systemen (bijvoorbeeld, in-huis CMS) om een diepere klantenverpersoonlijkingservaring via de [ 3} bestemming van de Douane van Personalization {aan te drijven. ](../catalog/personalization/custom-personalization.md) Dit alles terwijl ook de gegevensverzameling en segmenteringsmogelijkheden van de Edge Network van het Experience Platform worden gebruikt.
 
 De hieronder beschreven gebruiksgevallen omvatten zowel personalisatie van de site als gerichte on-site reclame.
 
@@ -112,7 +112,7 @@ Volg het [ leerprogramma van de de schepping van de bestemmingsverbinding ](../u
 Afhankelijk van de bestemming die u vormt, verwijs naar de volgende artikelen voor bestemmings-specifieke eerste vereisten en verwante informatie:
 
 * [Adobe Target-verbinding](../catalog/personalization/adobe-target-connection.md#parameters)
-* [Aangepaste verpersoonlijkingsverbinding](../catalog/personalization/custom-personalization.md##parameters)
+* [Aangepaste verpersoonlijkingsverbinding](../catalog/personalization/custom-personalization.md#parameters)
 
 ## Kies uw bestemming {#select-destination}
 
