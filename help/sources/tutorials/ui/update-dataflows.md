@@ -1,24 +1,21 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;update dataflows;geef programma uit
-description: Dit leerprogramma behandelt de stappen voor het bijwerken van een gegevensstroomprogramma, met inbegrip van zijn innamefrequentie en intervalsnelheid, gebruikend de Bronwerkruimte.
-solution: Experience Platform
+description: Leer hoe u een bestaande gegevensstroom voor bronnen bijwerkt in de gebruikersinterface van het Experience Platform.
 title: Een Source Connection Dataflow bijwerken in de gebruikersinterface
-type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: c3082a8769f317407197b3fd05b36cfe00b36470
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
 
 # Dataflows bijwerken in de gebruikersinterface
 
-Deze zelfstudie biedt u stappen voor het bijwerken van een bestaande gegevensstroom, inclusief het schema en de toewijzing ervan, aan de hand van de werkruimte voor bronnen.
+Lees deze zelfstudie voor stappen over het bijwerken van een bestaande gegevensstroom, inclusief de planning en toewijzingsconfiguraties, met gebruik van de werkruimte Bronnen in de Adobe Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
 * [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
 * [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
@@ -30,83 +27,59 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 >title="Vervaldatum gegevensset"
 >abstract="Deze kolom wijst op het aantal dagen dat de doeldataset heeft verlaten alvorens het automatisch verloopt.<br> A dataflow zal ontbreken als de doeldataset is verlopen. Om dataflow te verhinderen te ontbreken, zorg ervoor dat een doeldataset wordt geplaatst om op de correcte datum te verlopen. Raadpleeg de documentatie voor informatie over het bijwerken van vervaldatums."
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . Selecteer **[!UICONTROL Dataflows]** in de bovenste koptekst om een lijst met bestaande gegevensstromen weer te geven.
+Selecteer in de gebruikersinterface van het Experience Platform **[!UICONTROL Sources]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Dataflows]** in de bovenste koptekst.
 
-![ catalogus ](../../images/tutorials/update-dataflows/catalog.png)
+![ de broncatalogus met de gegevens geselecteerde kopbaltabel.](../../images/tutorials/update-dataflows/catalog.png)
 
-De pagina [!UICONTROL Dataflows] bevat een lijst van alle bestaande gegevensstromen, met inbegrip van informatie over hun overeenkomstige doeldataset, bron, en rekeningsnaam.
+>[!TIP]
+>
+>Met filtermogelijkheden kunt u uw gegevensstromen sorteren en filteren. Lees de gids over [ het filtreren bronvoorwerpen in UI ](./filter.md) voor meer informatie.
 
-Om door de lijst te sorteren, selecteer de filter ![ filter ](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te gebruiken.
+Op de pagina [!UICONTROL Dataflows] wordt een lijst weergegeven met alle bestaande gegevensstromen in uw organisatie. Zoek de gegevensstroom die u wilt bijwerken en selecteer dan de ellipsen (`...`) naast het. Er wordt een vervolgkeuzemenu weergegeven met een lijst opties waaruit u kunt kiezen. Hiermee kunt u aanvullende configuraties toevoegen aan de bestaande gegevensstroom.
 
-![ filter-dataflows ](../../images/tutorials/update-dataflows/filter-dataflows.png)
+Selecteer **[!UICONTROL Update dataflow]** als u de gegevensstroom wilt bijwerken.
 
-Het deelvenster Sorteren bevat een lijst met alle beschikbare bronnen. U kunt meer dan één bron in de lijst selecteren om tot een gefilterde selectie van gegevensstromen toegang te hebben die tot verschillende bronnen behoren.
+![ dropdown menu waar de opties om dataflows bij te werken vermeld zijn.](../../images/tutorials/update-dataflows/dropdown_update.png)
 
-Selecteer de bron waarmee u wilt werken om een lijst met de bestaande gegevensstromen weer te geven. Nadat u de gegevensstroom hebt geïdentificeerd die u wilt bijwerken, selecteert u de ovalen (`...`) naast de naam van de gegevensstroom.
+U wordt doorgestuurd naar de workflow voor bronnen waar u verder kunt gaan met het bijwerken van aspecten van uw gegevensstroom, inclusief de details in de stap [!UICONTROL Provide dataflow details] .
 
-![ geef-bron uit ](../../images/tutorials/update-dataflows/edit-source.png)
-
-Er wordt een vervolgkeuzemenu weergegeven waarin u opties kunt opgeven om de gegevensstroom die u hebt geselecteerd bij te werken. Van hier, kunt u verkiezen om de de kaartreeksen van een dataflow en innameprogramma bij te werken. U kunt ook opties selecteren om de gegevensstroom te inspecteren in het controledashboard, u te abonneren op waarschuwingen en de gegevensstroom uit te schakelen of te verwijderen.
-
-Selecteer **[!UICONTROL Update dataflow]** als u de gegevens van uw gegevensstroom wilt bijwerken.
-
-![ update-dataflow ](../../images/tutorials/update-dataflows/update-dataflow.png)
-
-### Gegevens toevoegen
-
-De stap [!UICONTROL Add data] wordt weergegeven. Selecteer de juiste gegevensindeling om de inhoud van de geselecteerde gegevens te bekijken en selecteer vervolgens **[!UICONTROL Next]** om door te gaan.
-
-![ toe:voegen-gegevens ](../../images/tutorials/update-dataflows/add-data.png)
-
-### Gegevens
-
-In de [!UICONTROL Dataflow detail] pagina, kunt u een bijgewerkte naam en een beschrijving voor uw gegevensstroom verstrekken evenals de de foutendrempel van uw gegevensstroom aanpassen. Tijdens deze stap, kunt u montages voor uw waakzaam abonnement ook vormen of wijzigen.
-
-Als u de bijgewerkte waarden hebt opgegeven, selecteert u **[!UICONTROL Next]** .
-
-![ dataflow-detail ](../../images/tutorials/update-dataflows/dataflow-detail.png)
-
-### Toewijzing
+### Toewijzing bijwerken {#update-mapping}
 
 >[!NOTE]
 >
 >De bewerkingstoewijzingsfunctie wordt momenteel niet ondersteund voor de volgende bronnen: Adobe Analytics, Adobe Audience Manager, HTTP API en [!DNL Marketo Engage] .
 
-De pagina [!UICONTROL Mapping] biedt u een interface waarin u aan uw gegevensstroom gekoppelde sets kunt toevoegen en verwijderen.
+Tijdens dit proces kunt u ook de sets met toewijzingen bijwerken die aan uw gegevensstroom zijn gekoppeld.  De toewijzingsinterface toont de bestaande afbeelding van uw gegevensstroom en geen nieuwe geadviseerde toewijzingsreeks. De updates van de toewijzing worden slechts toegepast op dataflow looppas die in de toekomst wordt gepland. Voor een dataflow die was gepland voor eenmalige invoer, kunnen de sets met toewijzingen niet worden bijgewerkt.
 
-De toewijzingsinterface toont de bestaande de afbeeldingsreeks van uw gegevensstroom en niet een nieuwe geadviseerde toewijzingsreeks. De updates van de toewijzing worden slechts toegepast op dataflow looppas die in de toekomst wordt gepland. Voor een dataflow die was gepland voor eenmalige invoer, kunnen de sets met toewijzingen niet worden bijgewerkt.
+Gebruik de toewijzingsinterface om de toewijzingssets te wijzigen die op de gegevensstroom zijn toegepast. Voor uitvoerige stappen op hoe te om de kaartinterface te gebruiken, zie de [ gids UI van de gegevens prep ](../../../data-prep/ui/mapping.md) voor meer informatie.
 
-Van hier, kunt u de toewijzingsinterface gebruiken om de afbeeldingsreeksen te wijzigen die op uw gegevensstroom worden toegepast. Voor uitvoerige stappen op hoe te om de kaartinterface te gebruiken, zie de [ gids UI van de gegevens prep ](../../../data-prep/ui/mapping.md) voor meer informatie.
+![ de afbeeldingsstap van het bronwerkschema. Gebruik deze stap om de afbeeldingen bij te werken verbonden aan uw dataflow.](../../images/tutorials/update-dataflows/mapping.png)
 
-![ afbeelding ](../../images/tutorials/update-dataflows/mapping.png)
+### Tijdschema bijwerken
 
-### Planning
-
-De stap [!UICONTROL Scheduling] verschijnt, die u toestaat om het de innameschema van uw gegevensstroom bij te werken en automatisch de geselecteerde brongegevens met de bijgewerkte afbeeldingen in te nemen.
-
->[!NOTE]
->
->U kunt geen dataflow opnieuw plannen die voor eenmalig opnemen was gepland.
-
-![ nieuw-programma ](../../images/tutorials/update-dataflows/new-schedule.png)
+Zodra u de afbeeldingen van uw gegevensstroom hebt bijgewerkt, kunt u dan verdergaan om uw innameschema bij te werken om uw gegevensstroom met zijn nieuwe toewijzingsgegevens in te voeren. U kunt het innameschema van gegevensstromen slechts bijwerken die aan inname op een terugkerend programma werden gevormd. U kunt geen dataflow opnieuw plannen die voor eenmalig opnemen werd gevormd.
 
 U kunt ook het schema voor inname van uw gegevensstroom bijwerken met behulp van de optie voor inlineupdate die is opgegeven op de pagina met gegevensstromen.
 
 Selecteer op de pagina met gegevensstromen de ovalen (`...`) naast de naam van de gegevensstroom en selecteer vervolgens **[!UICONTROL Edit schedule]** in het vervolgkeuzemenu dat wordt weergegeven.
 
-![ uitgeven-programma ](../../images/tutorials/update-dataflows/edit-schedule.png)
+![ de het plannen stap van het bronwerkschema. Gebruik deze stap om het programma van uw gegevensstroom bij te werken.](../../images/tutorials/update-dataflows/dropdown_edit.png)
 
 Het dialoogvenster **[!UICONTROL Edit schedule]** bevat opties waarmee u de invoerfrequentie en de intervalsnelheid van uw gegevensstroom kunt bijwerken. Selecteer **[!UICONTROL Save]** als u de bijgewerkte frequentie- en intervalwaarden hebt ingesteld.
 
-![ programma-pop-up ](../../images/tutorials/update-dataflows/schedule-pop-up.png)
+![ pop-up venster van A dat u kunt gebruiken om het de innameschema van uw gegevensstroom uit te geven.](../../images/tutorials/update-dataflows/edit_schedule.png)
 
-### Controleren
+### Gegevensstroom uitschakelen
 
-De stap **[!UICONTROL Review]** wordt weergegeven, zodat u uw gegevensstroom kunt controleren voordat deze wordt bijgewerkt.
+U kunt de gegevensstroom uitschakelen met hetzelfde vervolgkeuzemenu. Selecteer **[!UICONTROL Disable dataflow]** om de gegevensstroom uit te schakelen.
 
-Nadat u de gegevensstroom hebt gereviseerd, selecteert u **[!UICONTROL Finish]** en laat u enige tijd over voor de gegevensstroom met de nieuwe toewijzingssets die worden gemaakt.
+![ dropdown menu met de optie om dataflow onbruikbaar te maken.](../../images/tutorials/update-dataflows/dropdown_disable.png)
 
-![ overzicht ](../../images/tutorials/update-dataflows/review.png)
+Selecteer vervolgens [!UICONTROL Disable] in het pop-upvenster dat wordt weergegeven.
+
+![ het pop-up venster waar u moet bevestigen dat u uw gegevensstroom wilt onbruikbaar maken.](../../images/tutorials/update-dataflows/disable_dataflow.png)
+
+Als en wanneer u later dit dataflow opnieuw toelaat, zal het Experience Platform automatisch terugvullinglooppas plannen om de periode te behandelen waarin dataflow werd onbruikbaar gemaakt. Bijvoorbeeld, als dataflow werd gevormd om te lopen uur en onbruikbaar gemaakt voor 48 uren, op re-toelatend dit dataflow, zal het Experience Platform 48 backfill looppas tot stand brengen om de gemiste intervallen te verwerken.
 
 ## Volgende stappen
 
