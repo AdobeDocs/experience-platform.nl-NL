@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM System Troubleshooting Guide
 description: Hier vindt u antwoorden op veelgestelde vragen over het XDM (Experience Data Model), inclusief stappen voor het oplossen van veelvoorkomende API-fouten.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 83d3d31b2d24fd01876ff7b0f1c03a5670ed3845
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '2436'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ Dit document bevat antwoorden op veelgestelde vragen over [!DNL Experience Data 
 ## Veelgestelde vragen
 
 Hieronder volgt een lijst met antwoorden op veelgestelde vragen over XDM System en het gebruik van de [!DNL Schema Registry] API.
+
+## Basisbeginselen van schema
+
+In deze sectie vindt u antwoorden op fundamentele vragen over schemastructuur, veldgebruik en identificatie in het XDM-systeem.
 
 ### Hoe voeg ik velden toe aan een schema?
 
@@ -39,15 +43,59 @@ Alle [!DNL Schema Registry] -bronnen (schema&#39;s, veldgroepen, gegevenstypen, 
 
 Voor meer informatie, zie de [ middelidentificatie ](api/getting-started.md#resource-identification) sectie in de [!DNL Schema Registry] API gids.
 
-### Wanneer begint een schema het breken van veranderingen te verhinderen?
-
-Er kunnen verbluffende wijzigingen in een schema worden aangebracht zolang het schema nog nooit is gebruikt bij het maken van een gegevensset of is ingeschakeld voor gebruik in [[!DNL Real-Time Customer Profile]](../profile/home.md) . Zodra een schema in datasetverwezenlijking of toegelaten voor gebruik met [!DNL Real-Time Customer Profile] is gebruikt, worden de regels van [ Evolutie van het Schema ](schema/composition.md#evolution) strikt afgedwongen door het systeem.
-
 ### Wat is de maximumgrootte van een lang gebiedstype?
 
 Een lang veldtype is een geheel getal met een maximale grootte van 53(+1) bits, waardoor het een mogelijk bereik heeft tussen -9007199254740992 en 900719925474092. Dit is te wijten aan een beperking van de manier waarop JavaScript-implementaties van JSON lange gehele getallen vertegenwoordigen.
 
 Voor meer informatie over gebiedstypes, zie het document op [ XDM gebied typegrenzen ](./schema/field-constraints.md).
+
+### Wat is meta:AltId, en hoe kan ik het terugwinnen?
+
+`meta:altId` is een unieke id voor een schema. `meta:altId` verstrekt gemakkelijk om identiteitskaart voor gebruik in API vraag van verwijzingen te voorzien. Met deze id vermijdt u dat deze telkens moet worden gecodeerd/gedecodeerd als deze wordt gebruikt, net als bij de JSON URI-indeling.
+<!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
+
+<!-- ### How can I generate a sample payload for a schema? -->
+
+<!-- No Answer available.  -->
+<!-- INCOMPLETE ... -->
+
+### Kan ik een voorbeeld-JSON-representatie verkrijgen om een gegevenstype te maken?
+
+U kunt zowel de Registratie API van het Schema als Platform UI gebruiken om een gegevenstype tot stand te brengen. Zie de documentatie voor instructies over hoe te:
+
+- [Een gegevenstype maken met de API](./api/data-types.md#create)
+- [Een gegevenstype maken met de gebruikersinterface](./ui/resources/data-types.md#create)
+
+### Wat zijn de gebruiksbeperkingen voor een gegevenstype van een kaart?
+
+XDM plaatst de volgende beperkingen op het gebruik van dit gegevenstype:
+
+- Kaarttypen MOETEN van het type object zijn.
+- Voor typen toewijzingen MOET GEEN eigenschap zijn gedefinieerd (met andere woorden, ze definiëren &quot;lege&quot; objecten).
+- De types van kaart MOETEN een extraProperties.type gebied omvatten dat de waarden beschrijft die binnen de kaart, of koord of geheel kunnen worden geplaatst.
+- Segmentatie tussen meerdere entiteiten kan alleen worden gedefinieerd op basis van de kaarttoetsen en niet op basis van de waarden.
+- Kaarten worden niet ondersteund voor accountpubliek.
+
+Zie de [ gebruiksbeperkingen voor kaartvoorwerpen ](./ui/fields/map.md#restrictions) voor meer details.
+
+>[!NOTE]
+>
+>Kaarten op meerdere niveaus of kaarten worden niet ondersteund.
+
+<!-- You cannot create a complex map object. However, you can define map fields in the Schema Editor. See the guide on [defining map fields in the UI](./ui/fields/map.md) for more information. -->
+
+<!-- ### How do I create a complex map object using APIs? -->
+
+<!-- You cannot create a complex map object. -->
+
+<!-- ### How can I manage schema inheritance in Adobe Experience Platform? -->
+
+<!-- No Answer available.  -->
+<!-- INCOMPLETE ... -->
+
+## Schema Identity Management
+
+Deze sectie bevat antwoorden op veelgestelde vragen over het definiëren en beheren van identiteiten binnen uw schema&#39;s.
 
 ### Hoe definieer ik identiteiten voor mijn schema?
 
@@ -55,7 +103,7 @@ In [!DNL Experience Platform] worden identiteiten gebruikt om een onderwerp (doo
 
 Velden kunnen als id&#39;s worden gemarkeerd met de API of de gebruikersinterface.
 
-#### Identiteiten definiëren in de API
+### Identiteiten definiëren in de API
 
 In de API worden identiteiten vastgesteld door identiteitsbeschrijvers te maken. Identiteitsbeschrijvers geven aan dat een bepaalde eigenschap voor een schema een unieke id is.
 
@@ -63,7 +111,7 @@ De beschrijvers van de identiteit worden gecreeerd door een verzoek van de POST 
 
 Voor meer details bij het creëren van identiteitsbeschrijvers in API, zie het document op [ beschrijvers ](api/descriptors.md) sectie in de [!DNL Schema Registry] ontwikkelaarsgids.
 
-#### Identiteiten definiëren in de gebruikersinterface
+### Identiteiten definiëren in de gebruikersinterface
 
 Open het schema in de Schema-editor en selecteer het veld in de sectie **[!UICONTROL Structure]** van de editor dat u als identiteit wilt markeren. Selecteer onder **[!UICONTROL Field Properties]** aan de rechterkant het selectievakje **[!UICONTROL Identity]** .
 
@@ -73,22 +121,49 @@ Voor meer details bij het beheren van identiteiten in UI, zie de sectie over [ h
 
 Primaire identiteiten zijn optioneel, omdat schema&#39;s ofwel nul ofwel één ervan kunnen hebben. Een schema moet echter een primaire identiteit hebben voordat het schema kan worden ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile] . Zie de [ identiteit ](./tutorials/create-schema-ui.md#identity-field) sectie van het leerprogramma van de Redacteur van het Schema voor meer informatie.
 
+## Schema profiel inschakelen
+
+Deze sectie verstrekt begeleiding bij het toelaten van schema&#39;s voor gebruik met het Profiel van de Klant in real time.
+
 ### Hoe kan ik een schema inschakelen voor gebruik in [!DNL Real-Time Customer Profile]?
 
 Schema&#39;s kunnen in [[!DNL Real-Time Customer Profile]](../profile/home.md) worden gebruikt door een tag &quot;union&quot; toe te voegen binnen het kenmerk `meta:immutableTags` van het schema. U kunt een schema inschakelen voor gebruik met [!DNL Profile] via de API of de gebruikersinterface.
 
-#### Een bestaand schema voor [!DNL Profile] inschakelen met de API
+### Een bestaand schema voor [!DNL Profile] inschakelen met de API
 
 Voer een PATCH-verzoek in om het schema bij te werken en het kenmerk `meta:immutableTags` toe te voegen als een array met de waarde &quot;union&quot;. Als de update succesvol is, zal de reactie het bijgewerkte schema tonen dat nu de verenigingsmarkering bevat.
 
 Voor meer informatie bij het gebruiken van API om een schema voor gebruik in [!DNL Real-Time Customer Profile] toe te laten, zie het [ vakbonden ](./api/unions.md) document van de [!DNL Schema Registry] ontwikkelaarsgids.
 
-#### Bezig met inschakelen van een bestaand schema voor [!DNL Profile] via de gebruikersinterface
+### Bezig met inschakelen van een bestaand schema voor [!DNL Profile] via de gebruikersinterface
 
 Selecteer **[!UICONTROL Schemas]** in [!DNL Experience Platform] in de linkernavigatie en selecteer in de lijst met schema&#39;s de naam van het schema dat u wilt inschakelen. Selecteer vervolgens aan de rechterkant van de editor onder **[!UICONTROL Schema Properties]** de optie **[!UICONTROL Profile]** om deze in of uit te schakelen.
 
-
 Voor meer informatie, zie de sectie over [ gebruik in het Profiel van de Klant in real time ](./tutorials/create-schema-ui.md#profile) in het [!UICONTROL Schema Editor] leerprogramma.
+
+### Wanneer Adobe Analytics-gegevens als bron worden geïmporteerd, wordt het automatisch gemaakte schema ingeschakeld voor Profiel?
+
+Het schema wordt niet automatisch toegelaten voor het Profiel van de Klant in real time. U moet uitdrukkelijk de dataset voor Profiel toelaten dat wordt gebaseerd op welk schema voor Profiel wordt toegelaten. Zie de documentatie om de [ stappen en vereisten te leren nodig om een dataset voor gebruik in het Profiel van de Klant in real time ](../catalog/datasets/user-guide.md#enable-profile) toe te laten.
+
+### Kan ik profiel-toegelaten schema&#39;s schrappen?
+
+U kunt geen schema schrappen nadat het voor het Profiel van de Klant in real time is toegelaten. Als een schema eenmaal is ingeschakeld voor Profiel, kan het niet worden uitgeschakeld of verwijderd en kunnen velden niet uit het schema worden verwijderd. Daarom is het essentieel om de schemaconfiguratie zorgvuldig te plannen en te verifiëren alvorens het voor Profiel toe te laten. U kunt een profiel-Toegelaten dataset echter schrappen. Hier vindt u informatie: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+
+>[!IMPORTANT]
+>
+>Om een profiel-toegelaten schema te verwijderen zou u de hulp van het Team van de Steun van het Platform van XDM nodig hebben en moet deze stappen volgen:
+>
+> 1. Alle datasets verwijderen die zijn gekoppeld aan het schema (dat is ingeschakeld voor Profiel)
+> 2. Verwijder de profielexportmomentopname uit de sandbox (hiervoor is de hulp van het XDM Platform Support Team vereist)
+> 3. Schema verwijderen van de sandbox forceren (dit kan alleen worden gedaan door het XDM Platform Support Team)
+
+## Wijziging en beperkingen van het schema
+
+Deze sectie verstrekt verduidelijkingen over de regels van de schemawijziging en de preventie van het breken van veranderingen.
+
+### Wanneer begint een schema het breken van veranderingen te verhinderen?
+
+Er kunnen verbluffende wijzigingen in een schema worden aangebracht zolang het schema nog nooit is gebruikt bij het maken van een gegevensset of is ingeschakeld voor gebruik in [[!DNL Real-Time Customer Profile]](../profile/home.md) . Zodra een schema in datasetverwezenlijking of toegelaten voor gebruik met [!DNL Real-Time Customer Profile] is gebruikt, worden de regels van [ Evolutie van het Schema ](schema/composition.md#evolution) strikt afgedwongen door het systeem.
 
 ### Kan ik een samenvoegingsschema direct uitgeven?
 
@@ -99,6 +174,10 @@ Voor meer informatie over unies in XDM, zie de [ vakbonden ](./api/unions.md) se
 ### Hoe moet ik mijn gegevensbestand formatteren om gegevens in mijn schema in te voeren?
 
 [!DNL Experience Platform] accepteert gegevensbestanden in [!DNL Parquet] - of JSON-indeling. De inhoud van deze dossiers moet met het schema in overeenstemming zijn dat door de dataset van verwijzingen wordt voorzien. Voor details over beste praktijken voor datafile ingestie, zie het [ overzicht van partijingestitie ](../ingestion/home.md).
+
+### Hoe kan ik een schema in een read-only schema omzetten?
+
+U kunt een schema momenteel niet omzetten in alleen-lezen.
 
 ## Fouten en problemen oplossen
 
@@ -127,14 +206,14 @@ Deze fout wordt weergegeven wanneer het systeem een bepaalde bron niet kan vinde
 >
 >Afhankelijk van het brontype dat wordt opgehaald, kan deze fout elk van de volgende `type` URI&#39;s gebruiken:
 >
->* `http://ns.adobe.com/aep/errors/XDM-1010-404`
->* `http://ns.adobe.com/aep/errors/XDM-1011-404`
->* `http://ns.adobe.com/aep/errors/XDM-1012-404`
->* `http://ns.adobe.com/aep/errors/XDM-1013-404`
->* `http://ns.adobe.com/aep/errors/XDM-1014-404`
->* `http://ns.adobe.com/aep/errors/XDM-1015-404`
->* `http://ns.adobe.com/aep/errors/XDM-1016-404`
->* `http://ns.adobe.com/aep/errors/XDM-1017-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1010-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1011-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1012-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1013-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1014-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1015-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1016-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
 Voor meer informatie bij het construeren van raadplegingswegen in API, zie de [ container ](./api/getting-started.md#container) en [ middelidentificatie ](api/getting-started.md#resource-identification) secties in de [!DNL Schema Registry] ontwikkelaarsgids.
 
@@ -182,17 +261,17 @@ De middelen die door uw organisatie worden bepaald moeten hun gebieden onder uw 
 >
 >Afhankelijk van de specifieke aard van de naamruimtefout kan deze fout een van de volgende `type` URI&#39;s gebruiken samen met verschillende berichtdetails:
 >
->* `http://ns.adobe.com/aep/errors/XDM-1020-400`
->* `http://ns.adobe.com/aep/errors/XDM-1021-400`
->* `http://ns.adobe.com/aep/errors/XDM-1022-400`
->* `http://ns.adobe.com/aep/errors/XDM-1023-400`
->* `http://ns.adobe.com/aep/errors/XDM-1024-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1020-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1021-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1022-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1023-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
 Gedetailleerde voorbeelden van juiste gegevensstructuren voor XDM-bronnen vindt u in de handleiding Schema Registry API:
 
-* [Een aangepaste klasse maken](./api/classes.md#create)
-* [Een aangepaste veldgroep maken](./api/field-groups.md#create)
-* [Een aangepast gegevenstype maken](./api/data-types.md#create)
+- [Een aangepaste klasse maken](./api/classes.md#create)
+- [Een aangepaste veldgroep maken](./api/field-groups.md#create)
+- [Een aangepast gegevenstype maken](./api/data-types.md#create)
 
 ### Koptekst accepteren is ongeldig
 
@@ -219,10 +298,10 @@ Afhankelijk van het eindpunt dat u gebruikt, geeft de eigenschap `detailed-messa
 >
 >Afhankelijk van het eindpunt dat wordt gebruikt, kan deze fout om het even welke volgende `type` URIs gebruiken:
 >
->* `http://ns.adobe.com/aep/errors/XDM-1006-400`
->* `http://ns.adobe.com/aep/errors/XDM-1007-400`
->* `http://ns.adobe.com/aep/errors/XDM-1008-400`
->* `http://ns.adobe.com/aep/errors/XDM-1009-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1006-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1007-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1008-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1009-400`
 
 Voor lijsten van compatibele Accepteer kopballen voor verschillende API verzoeken, gelieve naar hun overeenkomstige secties in de [ de ontwikkelaarsgids van de Registratie van het Schema ](./api/overview.md) te verwijzen.
 
