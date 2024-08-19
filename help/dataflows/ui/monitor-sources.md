@@ -2,9 +2,9 @@
 description: Leer hoe te om het controledashboard te gebruiken om gegevens te controleren die van bronnen worden ingebed.
 title: De Dataflows van de monitor voor Bronnen in UI
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9d9ae58997ec1c23af2a9124321fdfd9f03b7c4e
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1293'
 ht-degree: 0%
 
 ---
@@ -62,9 +62,9 @@ Het onderste gedeelte van het dashboard toont een lijst die het huidige metriekr
 
 | Metrics | Beschrijving |
 | --- | --- |
-| Ontvangen records | Het totale aantal records dat van de bron is ontvangen. |
+| Ontvangen records | Het totale aantal records dat van een bepaalde bron is ontvangen. |
 | Opgenomen records | Het totale aantal records dat aan data Lake wordt ingesloten. |
-| Records overgeslagen | Het totale aantal overgeslagen records. |
+| Records overgeslagen | Het totale aantal overgeslagen records. Een overgeslagen record verwijst naar velden die zijn overgeslagen omdat ze niet vereist waren voor inname. Bijvoorbeeld, als u een bronnen dataflow met gedeeltelijke toegelaten opname creeert, kunt u een aanvaardbare drempel van het foutentarief vormen. Tijdens het insluiten proces, zal de inname verslagen van gebieden overslaan die niet worden vereist, zoals identiteitsgebieden, zolang zij binnen de foutendrempel zijn. |
 | Records mislukt | Het totale aantal records dat niet kan worden opgenomen vanwege fouten. |
 | Verhoogde snelheid | Het percentage records dat is opgenomen, is gebaseerd op het totale aantal records dat is ontvangen. |
 | Totaal aantal mislukte gegevensstromen | Het totale aantal mislukte gegevensstromen. |
