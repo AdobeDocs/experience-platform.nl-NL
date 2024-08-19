@@ -2,9 +2,9 @@
 title: Toegang tot de ECID
 description: Leer hoe u de Experience Cloud-id kunt openen met Data Prep of Tags
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: e01dfcf3cccea589083a23171f4b8d9ecad58233
+source-git-commit: e53ae6053a4b00e7e75242b95496c6795953005a
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ De [!DNL Experience Cloud Identity (ECID)] is een permanente id die aan een gebr
 U kunt tot ECID of via [ Prep van Gegevens voor de Inzameling van Gegevens ](../../../../datastreams/data-prep.md) (geadviseerd) of via markeringen toegang hebben.
 
 ## Toegang tot de ECID via Data Prep (voorkeursmethode) {#accessing-ecid-data-prep}
+
+Deze methode gebruikt [ Prep van Gegevens voor de Inzameling van Gegevens ](../../../../datastreams/data-prep.md) om een douanetoewijzing voor `ECID` te vormen.
+
+Zie [ Prep van Gegevens voor de documentatie van de Inzameling van Gegevens ](../../../../datastreams/data-prep.md) leren hoe te om deze eigenschap te gebruiken.
 
 Als u de ECID wilt instellen in een aangepast XDM-veld, kunt u deze niet alleen in het identiteitsoverzicht opnemen, maar u kunt dit ook doen door de `source` in te stellen op het volgende pad:
 
