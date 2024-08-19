@@ -2,7 +2,7 @@
 title: Adobe Target gebruiken met Web SDK voor personalisatie
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
+source-git-commit: 116db0808835c548c21635148b81b3e884b5cebd
 workflow-type: tm+mt
 source-wordcount: '1357'
 ht-degree: 1%
@@ -197,17 +197,16 @@ In het onderstaande voorbeeld wordt een bericht in de stijl trackEvent verzonden
 ```js
 alloy("sendEvent", {
     "renderDecisions": true,
+    "xdm": { /* Experience Event XDM data */ },
     "data": {
-        "xdm": { // Experience Event XDM data },
-            "__adobe": {
-                "target": {
-                    " __save": true|false,
-                    //defaults to true if omitted 
-                    "profile.gender": "female",
-                    "profile.age": 30,
-                    "entity.name": "T-shirt",
-                    "entity.id": "1234"
-                }
+        "__adobe": {
+            "target": {
+                " __save": true|false,
+                //defaults to true if omitted
+                "profile.gender": "female",
+                "profile.age": 30,
+                "entity.name": "T-shirt",
+                "entity.id": "1234"
             }
         }
     }
