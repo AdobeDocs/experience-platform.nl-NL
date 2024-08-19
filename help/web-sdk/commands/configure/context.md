@@ -2,9 +2,9 @@
 title: context
 description: Automatisch apparaat-, omgeving- of locatiegegevens verzamelen.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '892'
 ht-degree: 1%
 
 ---
@@ -89,21 +89,25 @@ Het trefwoord `implementationDetails` verzamelt informatie over de SDK-versie di
 | Omgeving | De omgeving waarin de gegevens zijn verzameld. Deze wordt altijd ingesteld op `browser` . | `xdm.implementationDetails.environment` | `browser` |
 
 
-### Hoog entropieclienthints
+### Hoog entropieclienthints {#high-entropy-client-hints}
+
+>[!TIP]
+>
+>Zie de documentatie over [ de wenken van de gebruikersagent ](../../use-cases/client-hints.md) voor gedetailleerde informatie over hoe te om hen te vormen.
 
 Het trefwoord `"highEntropyUserAgentHints"` verzamelt gedetailleerde informatie over het apparaat van de gebruiker. Deze gegevens worden opgenomen in de HTTP-header van het verzoek dat naar de Adobe wordt verzonden. Nadat de gegevens binnen het netwerk van Edge zijn aangekomen, bevolkt het voorwerp XDM zijn respectieve weg XDM. Als u het respectieve pad XDM in uw `sendEvent` vraag plaatst, neemt het belangrijkheid over de kopbalwaarde van HTTP.
 
 Als u apparatenraadplegingen gebruikt wanneer [ vormend uw datastream ](/help/datastreams/configure.md), kunnen de gegevens worden ontruimd ten gunste van de waarden van de apparatenraadpleging. Bepaalde velden voor client-hint en opzoekvelden van apparaten kunnen niet bestaan in dezelfde hit.
 
-| Dimension | Beschrijving | HTTP-header | XDM-pad | Voorbeeldwaarde |
+| Eigenschap | Beschrijving | HTTP-header | XDM-pad | Voorbeeld |
 | --- | --- | --- | --- | --- |
-| Versie besturingssysteem | De versie van het besturingssysteem. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | |
-| Architectuur | De onderliggende CPU-architectuur. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | |
-| Apparaatmodel | De naam van het gebruikte apparaat. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | |
-| Bitsheid | Het aantal beetjes dat de onderliggende architectuur van cpu steunt. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | |
-| Browserleverancier | Het bedrijf dat de browser heeft gemaakt. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . | `Sec-CH-UA-Full-Version-List` | | |
-| Browsernaam | De gebruikte browser. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | |
-| Browserversie | De significante versie van de browser. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . Exacte browserversie wordt niet automatisch verzameld. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | |
+| Versie besturingssysteem | De versie van het besturingssysteem. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` |
+| Architectuur | De onderliggende CPU-architectuur. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` |
+| Apparaatmodel | De naam van het gebruikte apparaat. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` |
+| Bitsheid | Het aantal beetjes dat de onderliggende architectuur van cpu steunt. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` |
+| Browserleverancier | Het bedrijf dat de browser heeft gemaakt. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` |
+| Browsernaam | De gebruikte browser. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
+| Browserversie | De significante versie van de browser. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . Exacte browserversie wordt niet automatisch verzameld. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
 {style="table-layout:auto"}
 

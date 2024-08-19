@@ -3,10 +3,10 @@ title: Client-tips voor gebruikersagent
 description: Leer hoe de wenken van de gebruikersagentencliënt in Web SDK werken. Met clienttips hebben eigenaars van websites toegang tot veel van dezelfde gegevens die beschikbaar zijn in de userAgent-tekenreeks, maar op een meer privacyvriendelijke manier.
 keywords: user-agent;client hints; tekenreeks; user-agent tekenreeks; lage entropie; hoge entropie
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 0%
+source-wordcount: '1245'
+ht-degree: 1%
 
 ---
 
@@ -98,13 +98,16 @@ De lage wenken van de entropycliënt worden toegelaten door gebrek in Web SDK, e
 
 Hoog entropy cliëntwenken zijn meer gedetailleerde informatie over het cliëntapparaat, zoals platformversie, architectuur, model, bitness (met 64 bits of met 32 bits platforms), of volledige werkend systeemversie. Deze informatie kan mogelijk worden gebruikt bij het nemen van vingerafdrukken.
 
-| HTTP-header | JavaScript | Standaard opgenomen in gebruikersagent | Standaard opgenomen in clienttips |
-|---|---|---|---|
-| `Sec-CH-UA-Platform-Version` | `platformVersion` | Ja | Nee |
-| `Sec-CH-UA-Arc` | `architecture` | Ja | Nee |
-| `Sec-CH-UA-Model` | `model` | Ja | Nee |
-| `Sec-CH-UA-Bitness` | `Bitness` | Ja | Nee |
-| `Sec-CH-UA-Full-Version-List` | `fullVersionList` | Ja | Nee |
+| Eigenschap | Beschrijving | HTTP-header | XDM-pad | Voorbeeld | Standaard opgenomen in gebruikersagent | Standaard opgenomen in clienttips |
+| --- | --- | --- | --- | --- |---|---|
+| Versie besturingssysteem | De versie van het besturingssysteem. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | Ja | Nee |
+| Architectuur | De onderliggende CPU-architectuur. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | Ja | Nee |
+| Apparaatmodel | De naam van het gebruikte apparaat. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | Ja | Nee |
+| Bitsheid | Het aantal beetjes dat de onderliggende architectuur van cpu steunt. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | Ja | Nee |
+| Browserleverancier | Het bedrijf dat de browser heeft gemaakt. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` | Ja | Nee |
+| Browsernaam | De gebruikte browser. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | Ja | Nee |
+| Browserversie | De significante versie van de browser. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . Exacte browserversie wordt niet automatisch verzameld. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | Ja | Nee |
+
 
 Hoog de wenken van de entropiecliënt worden onbruikbaar gemaakt door gebrek in Web SDK. Om hen toe te laten moet u SDK van het Web manueel vormen om hoge entropy cliëntwenken te verzoeken.
 
