@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 938e4875318f07b296fc884487ca1c664be659ef
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1784'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Begrijp van de lijst hieronder welke datasettypes u afhankelijk van uw toepassin
   <tr>
     <td>Customer Journey Analytics</td>
     <td>Alles</td>
-    <td> De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd.  <br> <p> <b> Nota op beschikbaarheid:</b> de capaciteit om datasets naar de wolk uit te voeren is in de Beperkte het Testen fase van versie en zou niet nog in uw milieu beschikbaar kunnen zijn. Deze notitie wordt verwijderd wanneer de functionaliteit algemeen beschikbaar is. Voor informatie over het de versieproces van de Customer Journey Analytics, zie <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> de eigenschapversies van de Customer Journey Analytics </a>. </p> </td>
+    <td> De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd.</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
@@ -215,7 +215,7 @@ Om datasets uit een bestaande gegevensstroom te verwijderen, volg de stappen hie
 
    >[!NOTE]
    >
-   >Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen.
+Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen.
 
    ![ verwijder datasetdialoog die de Remove datasetcontrole in het juiste spoor toont.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
