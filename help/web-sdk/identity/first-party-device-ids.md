@@ -2,7 +2,7 @@
 title: Eerste-partij apparaat IDs in Web SDK
 description: Leer hoe u FPID's (First-party device ID's) voor de Adobe Experience Platform Web SDK configureert.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 9f10d48357b7fb28dc54375a4d077d0a1961a746
+source-git-commit: b35a4316ca4ef82e545a7718f1b986f978003a0e
 workflow-type: tm+mt
 source-wordcount: '1986'
 ht-degree: 0%
@@ -77,7 +77,7 @@ Wanneer u een cookie instelt met een server die u bezit, kunt u verschillende me
 
 * Cookies genereren met scripttalen op de server
 * Cookies instellen als reactie op een API-aanvraag die is uitgevoerd naar een subdomein of ander eindpunt op de site
-* Cookies genereren met behulp van een CMS
+* Cookies genereren met een CMS
 * Cookies genereren met behulp van een CDN
 
 >[!IMPORTANT]
@@ -153,7 +153,7 @@ Net als bij andere identiteitstypen kunt u de FPID opnemen met andere identiteit
       {
         "id": "123e4567-e89b-42d3-9456-426614174000",
         "authenticatedState": "ambiguous",
-        "primary": true
+        "primary": false
       }
     ],
     "EMAIL": [
