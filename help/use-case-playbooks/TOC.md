@@ -5,10 +5,10 @@ breadcrumb-title: Adobe Experience Platform Use Case Playbooks
 user-guide-description: Gebruik de afspeelboeken in Adobe Experience Platform om elementen te genereren en aan de slag te gaan met verschillende gevallen van marketinggebruik.
 feature: Playbooks
 role: User
-source-git-commit: 7f4ce404836bb9df4ff203db74c1bd17431c5b96
+source-git-commit: 44956c2c658ff2e0a5673f2898b344a6221d79b3
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 4%
+source-wordcount: '76'
+ht-degree: 1%
 
 ---
 
@@ -17,8 +17,8 @@ ht-degree: 4%
 
 * Afspeelboeken {#playbooks}
    * [Overzicht](/help/use-case-playbooks/playbooks/overview.md)
-   * [Aan de slag](/help/use-case-playbooks/playbooks/get-started.md)
    * [Navigeren naar Hoofdletters gebruiken](/help/use-case-playbooks/playbooks/navigate.md)
+   * [Alternatieve manier om aan de slag te gaan](/help/use-case-playbooks/playbooks/get-started.md)
    * [Beschikbaar voor gebruik als hoofdletters](/help/use-case-playbooks/playbooks/playbooks-list.md)
    * [Kiezen uit een selectie afspeelboeken](/help/use-case-playbooks/playbooks/choose.md)
    * [Afspeelboekinstanties maken, delen en opnieuw gebruiken](/help/use-case-playbooks/playbooks/create-share-reuse.md)
