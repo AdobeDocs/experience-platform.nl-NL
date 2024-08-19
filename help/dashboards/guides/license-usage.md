@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 090b870dcfb16e59831f1e03eb46b22da4f24f0f
+source-git-commit: 41c2d8e28536a140136c7eb20c2a4c3dc343f5fa
 workflow-type: tm+mt
-source-wordcount: '2310'
+source-wordcount: '2347'
 ht-degree: 0%
 
 ---
@@ -89,6 +89,10 @@ Als u een overzicht wilt zien van het gebruik van een productmachtiging, selecte
 ![ [!UICONTROL License usage] [!UICONTROL Overview] met een product en de voorspelde benadrukte gebruikskolom.](../images/license-usage/product-predicted-usage.png)
 
 Het tabblad Samenvatting wordt weergegeven. U kunt de korrelige voorspellingen gebruiken die beschikbaar zijn op de tabbladen [!UICONTROL Summary] en [!UICONTROL Details] voor een geïnformeerde besluitvorming voor efficiënt gebruik van de licentie.
+
+>[!NOTE]
+>
+Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe.
 
 ![ de summiere mening van een Product van het Platform met de voorspelde benadrukte gebruikskolom.](../images/license-usage/summary-predicted-usage.png)
 

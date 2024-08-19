@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
+source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
 workflow-type: tm+mt
-source-wordcount: '2927'
+source-wordcount: '3019'
 ht-degree: 0%
 
 ---
@@ -38,6 +38,22 @@ Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen va
 >id="platform_datasets_browse_daysRemaining"
 >title="Vervaldatum gegevensset"
 >abstract="Deze kolom wijst op het aantal dagen dat de doeldataset heeft verlaten alvorens het automatisch verloopt."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_datalakeretention"
+>title="Behoud van gegevensopslag"
+>abstract="Toont het huidige bewaarbeleid voor elke dataset. Deze waarde kan in de bewaarmontages van elke dataset worden gewijzigd. U kunt retentietijd alleen instellen voor de ExperienceEvent-gegevensset."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_profileretention"
+>title="Behoud van profiel"
+>abstract="Toont het huidige bewaarbeleid voor elke dataset. Deze waarde kan in de bewaarmontages van elke dataset worden gewijzigd. U kunt retentietijd alleen instellen voor een ExperienceEvent-gegevensset."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_datalakesettings_datasetretention"
+>title="Bewaring van gegevensset"
+>abstract="Datalake bewaart regels voor hoe lang gegevens worden opgeslagen en wanneer het in de verschillende diensten zou moeten worden geschrapt. Dit zorgt voor naleving van de regelgeving, het beheer van opslagkosten en het behoud van de gegevenskwaliteit."
+
 
 Selecteer in de gebruikersinterface van [!DNL Experience Platform] de optie **[!UICONTROL Datasets]** in de linkernavigatie om het dashboard van **[!UICONTROL Datasets]** te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en status van de meest recente versiereeks houdt.
 
