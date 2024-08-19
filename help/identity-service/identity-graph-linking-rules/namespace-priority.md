@@ -3,10 +3,10 @@ title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: c9610f935a074adf82d96c1eb824c159b18f2837
 workflow-type: tm+mt
-source-wordcount: '1563'
-ht-degree: 1%
+source-wordcount: '1635'
+ht-degree: 0%
 
 ---
 
@@ -78,13 +78,13 @@ Voor relatief complexe grafiekstructuren speelt naamruimteprioriteit een belangr
 * Voor ervaringsgebeurtenissen, zodra u Identiteitsinstellingen voor een bepaalde sandbox hebt geconfigureerd, wordt de primaire identiteit bepaald door de hoogste naamruimteprioriteit.
    * Dit komt omdat ervaringsgebeurtenissen dynamisch van aard zijn. Een identiteitskaart kan drie of meer identiteiten bevatten, en namespace prioriteit zorgt ervoor dat belangrijkste namespace aan de ervaringsgebeurtenis wordt geassocieerd.
 * Dientengevolge, zullen de volgende configuraties **niet meer door Real-Time Profiel van de Klant** worden gebruikt:
-   * &quot;Primair&quot; selectievakje op gegevenselementtype in WebSDK.
+   * Het selectievakje &quot;Primair&quot; op het elementtype data in WebSDK (dat naar `primary=true` in identityMap vertaalt). **Nota**: De naamruimte van de identiteit en de identiteitswaarde zullen in Profiel blijven worden gebruikt. Bovendien moet u nog uw &quot;Primaire&quot;checkbox montages vormen omdat de diensten buiten het Profiel van de Klant in real time naar deze configuratie zullen blijven verwijzen.
    * Alle velden die als primaire identiteit zijn gemarkeerd in een schema van de klasse Event van de XDM-ervaring.
    * Standaard primaire identiteitsinstellingen in de Adobe Analytics-bronconnector (ECID of AID).
 * Anderzijds, **namespace de prioriteit bepaalt geen primaire identiteit voor profielverslagen**.
    * Voor profielverslagen, kunt u de schemawerkruimte in de UI van het Experience Platform gebruiken om uw identiteitsgebieden, met inbegrip van de primaire identiteit te bepalen. Lees de gids op [ bepalend identiteitsgebieden in UI ](../../xdm/ui/fields/identity.md) voor meer informatie.
 
->[!NOTE]
+>[!TIP]
 >
 >* De prioriteit van Namespace is **een bezit van een namespace**. Het is een numerieke waarde die aan een naamruimte wordt toegewezen om het relatieve belang ervan aan te geven.
 >
@@ -183,3 +183,7 @@ Voor meer informatie over, lees de documenten op [ Attribution AI ](../../intell
 * Gegevensmeer: hiermee verwijdert u alle records met de opgegeven identiteit als primaire of secundaire identiteit.
 
 Voor meer informatie, lees het [ de dienstoverzicht van de Privacy ](../../privacy-service/home.md).
+
+### Adobe Target en randpersonalisatie
+
+[ de verpersoonlijking van Edge ](../../server-api/personalization-target.md) zal blijven verwijzen naar hoe u uw &quot;Primaire&quot;checkbox op het type van gegevenselement in WebSDK vormde (die aan `primary=true` in identityMap vertaalt).
