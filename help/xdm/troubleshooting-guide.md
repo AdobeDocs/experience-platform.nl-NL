@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM System Troubleshooting Guide
 description: Hier vindt u antwoorden op veelgestelde vragen over het XDM (Experience Data Model), inclusief stappen voor het oplossen van veelvoorkomende API-fouten.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 83d3d31b2d24fd01876ff7b0f1c03a5670ed3845
+source-git-commit: ae98a185fdfad5b6ba787e78ad17296928216d08
 workflow-type: tm+mt
-source-wordcount: '2436'
+source-wordcount: '2380'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Een lang veldtype is een geheel getal met een maximale grootte van 53(+1) bits, 
 
 Voor meer informatie over gebiedstypes, zie het document op [ XDM gebied typegrenzen ](./schema/field-constraints.md).
 
-### Wat is meta:AltId, en hoe kan ik het terugwinnen?
+### Wat is meta:AltId?
 
 `meta:altId` is een unieke id voor een schema. `meta:altId` verstrekt gemakkelijk om identiteitskaart voor gebruik in API vraag van verwijzingen te voorzien. Met deze id vermijdt u dat deze telkens moet worden gecodeerd/gedecodeerd als deze wordt gebruikt, net als bij de JSON URI-indeling.
 <!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
@@ -58,13 +58,6 @@ Voor meer informatie over gebiedstypes, zie het document op [ XDM gebied typegre
 
 <!-- No Answer available.  -->
 <!-- INCOMPLETE ... -->
-
-### Kan ik een voorbeeld-JSON-representatie verkrijgen om een gegevenstype te maken?
-
-U kunt zowel de Registratie API van het Schema als Platform UI gebruiken om een gegevenstype tot stand te brengen. Zie de documentatie voor instructies over hoe te:
-
-- [Een gegevenstype maken met de API](./api/data-types.md#create)
-- [Een gegevenstype maken met de gebruikersinterface](./ui/resources/data-types.md#create)
 
 ### Wat zijn de gebruiksbeperkingen voor een gegevenstype van een kaart?
 
