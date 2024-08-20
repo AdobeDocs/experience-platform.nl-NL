@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
+source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
 workflow-type: tm+mt
-source-wordcount: '3631'
+source-wordcount: '3926'
 ht-degree: 0%
 
 ---
@@ -254,17 +254,39 @@ Als u **[!UICONTROL Edit audience]** selecteert, kunt u uw publiek bewerken in d
 
 Als u **[!UICONTROL Edit properties]** selecteert, kunt u de basisgegevens van het publiek bewerken, zoals de naam, beschrijving en tags.
 
-![](../images/ui/audience-portal/audience-details-edit-properties.png)
+![ uitgeeft wordt de knoop eigenschappen benadrukt binnen de pagina van publieksdetails.](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### Totaal publiek {#audience-total}
 
-In de sectie **[!UICONTROL Audience total]** wordt het totale aantal profielen weergegeven dat in aanmerking komt voor het publiek.
+Voor publiek en composities die via een platform worden gegenereerd, wordt in de sectie **[!UICONTROL Audience total]** het totale aantal profielen weergegeven dat voor het publiek in aanmerking komt.
 
 >[!NOTE]
 >
 >Het kan tot 30 minuten duren voordat het totale aantal gebruikers is bijgewerkt nadat de exporttaak is voltooid.
 
 Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de samplegegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt; voor 1 tot 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5% van de totale entiteiten gebruikt. Meer informatie over het produceren van ramingen kan in de [ sectie van de schatingengeneratie ](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van het leerprogramma van de publieksverwezenlijking worden gevonden.
+
+### Inktdetails {#ingestion-details}
+
+Voor soorten publiek met de oorsprong **[!UICONTROL Custom upload]** geeft de sectie **[!UICONTROL Ingestion details]** zowel het totale profiel als de gegevens van de gegevensset weer waarin het extern gegenereerde publiek werd opgenomen.
+
+![ de sectie van de ingangsdetails voor de pagina van publieksdetails wordt getoond.](../images/ui/audience-portal/audience-details-ingestion-details.png)
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| Aantal profielen | Het totale aantal profielen dat voor het publiek in aanmerking komt. |
+| Naam gegevensset | De naam van de dataset waarin het publiek werd opgenomen. U kunt de naam van de dataset voor meer informatie over de dataset selecteren. Meer over datasets leren, leest de [ gids UI van de dataset ](../../catalog/datasets/user-guide.md). |
+| Gegevenssetbatch | De id van de gegevensset waarin het publiek werd ingesloten. U kunt de id van de batch selecteren voor meer informatie over de batch. Meer over partijen leren, lees de [ gids van de controlegegevensopname ](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Profielbatch | De id van de batch waarmee de profielen op Platform zijn gemaakt. U kunt de id van de batch selecteren voor meer informatie over de batch. Meer over partijen leren, lees de [ gids van de controlegegevensopname ](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Schema | De naam van het schema waartoe het publiek behoort. U kunt de naam van het schema selecteren om informatie over de structuur van het schema te bekijken en labels voor gegevensgebruik toe te passen. Voor meer informatie, lees [ de etiketten van het gegevensgebruik voor een schemagids ](../../xdm/tutorials/labels.md) leiden. |
+| Opgenomen records | Het aantal verslagen die in de dataset worden opgenomen. |
+| Records mislukt | Het aantal verslagen die niet in de dataset konden worden opgenomen. |
+| Nieuwe profielfragmenten | Het aantal nieuwe profielen dat is gemaakt. |
+| Bestaande profielfragmenten | Het aantal bestaande profielen dat is bijgewerkt. |
+
+>[!NOTE]
+>
+>Het toepassen van labels voor gegevensgebruik op het schema is de beste manier. U **kunt niet** een etiket van het gegevensgebruik rechtstreeks op het publiek toepassen.
 
 ### Geactiveerde doelen {#activated-destinations}
 
