@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '3588'
+source-wordcount: '3705'
 ht-degree: 0%
 
 ---
@@ -29,13 +29,23 @@ Deze handleiding vereist een goed begrip van XDM System. Verwijs naar het [ XDM 
 
 >[!NOTE]
 >
->In deze sectie wordt beschreven hoe u handmatig een nieuw schema maakt in de gebruikersinterface. Als u CSV gegevens in Platform opneemt, kunt u aan [ kaart kiezen die gegevens aan een schema XDM dat door AI-Gegenereerde aanbevelingen ](../../../ingestion/tutorials/map-csv/recommendations.md) wordt gecreeerd (momenteel in bèta) zonder het moeten manueel het schema creëren zelf.
+>In deze sectie wordt beschreven hoe u handmatig een nieuw schema maakt in de gebruikersinterface. Als u CSV gegevens in Platform opneemt, kunt u het Leren van de Machine (ML) algoritmen gebruiken aan **een schema van steekproefCSV gegevens** produceren. Deze workflow komt overeen met uw gegevensindeling en maakt automatisch een nieuw schema op basis van de structuur en inhoud van uw CSV-bestand. Zie de [ ML-Begeleidde van de schemaverwezenlijking ](../ml-assisted-schema-creation.md) voor meer informatie over dit werkschema.
 
 Selecteer in de werkruimte [!UICONTROL Schemas] de optie **[!UICONTROL Create schema]** in de rechterbovenhoek.
 
 ![ de werkruimte van Schema&#39;s met [!UICONTROL Create Schema] benadrukte.](../../images/ui/resources/schemas/create-schema.png)
 
-De [!UICONTROL Create schema] -workflow wordt weergegeven. U kunt een basisklasse voor het schema kiezen door **[!UICONTROL Individual Profile]** , **[!UICONTROL Experience Event]** of **[!UICONTROL Other]** te selecteren, gevolgd door **[!UICONTROL Next]** om uw keuze te bevestigen. Zie [ XDM individueel profiel ](../../classes/individual-profile.md) en [ XDM ExperienceEvent ](../../classes/experienceevent.md) documentatie voor meer informatie over deze klassen.
+Het dialoogvenster [!UICONTROL Create a schema] wordt weergegeven. In dit dialoogvenster kunt u kiezen of u handmatig een schema wilt maken door velden en veldgroepen toe te voegen, of u kunt een CSV-bestand uploaden en XML-algoritmen gebruiken om een schema te genereren. Selecteer een workflow voor het maken van een schema in het dialoogvenster.
+
+![ creeer een schemadialoog met de werkschemaopties en selecteer benadrukt.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### Handmatig of met ML ondersteund schema maken {#manual-or-assisted}
+
+Leren hoe u een algoritme van XML kunt gebruiken om een schemastructuur te adviseren die op een csv- dossier wordt gebaseerd, zie de [ machine het leren-bijgewoonde gids van de schemaverwezenlijking ](../ml-assisted-schema-creation.md). Deze UI-handleiding is gericht op de workflow voor handmatig maken.
+
+### Handmatig schema maken {#manual-creation}
+
+De [!UICONTROL Create schema] -workflow wordt weergegeven. U kunt een basisklasse voor het schema kiezen door **[!UICONTROL Individual Profile]** , **[!UICONTROL Experience Event]** of **[!UICONTROL Other]** te selecteren, gevolgd door **[!UICONTROL Next]** om uw keuze te bevestigen. Zie de documentatie [[!UICONTROL XDM individual profile]](../../classes/individual-profile.md) en [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) voor meer informatie over deze klassen.
 
 ![ het [!UICONTROL Create schema] werkschema met de drie klassenopties en [!UICONTROL Next] benadrukte.](../../images/ui/resources/schemas/schema-class-options.png)
 

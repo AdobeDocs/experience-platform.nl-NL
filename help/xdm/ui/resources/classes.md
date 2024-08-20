@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Klassen maken en bewerken in de gebruikersinterface
 description: Leer hoe u klassen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1469'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,15 @@ De klasse die u hebt gemaakt, is beschikbaar en wordt weergegeven in de weergave
 
 ### Een klasse maken of bewerken {#create-or-edit}
 
-Als u **[!UICONTROL Create schema]** selecteert, wordt de [!UICONTROL Create schema] -workflow ook weergegeven. Selecteer **[!UICONTROL Other]** in de sectie [!UICONTROL Schema details] . Er wordt een lijst met beschikbare klassen weergegeven. Vanaf dit punt kunt u door bestaande klassen bladeren en filteren waarop u de nieuwe klasse wilt baseren.
+Als u handmatig een schema wilt maken, kunt u ook een bestaande klasse maken of bewerken als onderdeel van die workflow. Selecteer **[!UICONTROL Create schema]** gevolgd door **[!UICONTROL Manual]** in het dialoogvenster [!UICONTROL Create a schema] dat wordt weergegeven.
+
+>[!NOTE]
+>
+>Als u de workflow voor het maken van een schema met XML-ondersteuning gebruikt, kunt u een bestand uploaden en XML-algoritmen gebruiken om een aanbevolen schema te genereren. In dat schema creatiewerkschema, te hoeven u niet om de basisklasse voor uw schema te specificeren. Leren hoe ML een schemastructuur kan adviseren die op een csv- dossier wordt gebaseerd, zie de [ machine het leren-bijgewoonde gids van de schemaverwezenlijking ](../ml-assisted-schema-creation.md).
+
+![ creeer een schemadialoog met de werkschemaopties en selecteer benadrukt.](../../images/ui/resources/classes/manually-create-a-schema.png)
+
+De workflow voor het maken van schema&#39;s wordt weergegeven. Selecteer **[!UICONTROL Other]** in de sectie [!UICONTROL Schema details] . Er wordt een lijst met beschikbare klassen weergegeven. Vanaf dit punt kunt u door bestaande klassen bladeren en filteren waarop u de nieuwe klasse wilt baseren.
 
 >[!NOTE]
 >

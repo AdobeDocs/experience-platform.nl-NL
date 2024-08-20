@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van gegevensinscriptie
 description: In dit document worden de drie belangrijkste manieren geïntroduceerd waarop gegevens worden opgenomen in Platform. De koppelingen naar de bijbehorende overzichtsdocumentatie bevatten meer gedetailleerde informatie.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: cde8db1f75cf83451e240f32a877b9d6d26a0e18
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,12 @@ Met [!DNL Experience Platform] kunt u bronverbindingen instellen met verschillen
 Source-verbindingen kunnen worden geconfigureerd om gegevens te verzamelen van andere Adobe-toepassingen (zoals Adobe Analytics en Adobe Audience Manager), bronnen voor cloudopslag van derden (zoals [!DNL Azure Blob] , [!DNL Amazon] S3, FTP-servers en SFTP-servers) en CRM-systemen van derden (zoals [!DNL Microsoft Dynamics] en [!DNL Salesforce] ).
 
 Zie het [ Overzicht van Bronnen ](../sources/home.md) voor meer informatie.
+
+### Met ML ondersteund schema maken {#ml-assisted-schema-creation}
+
+Om nieuwe gegevensbronnen snel te integreren, kunt u machine het leren algoritmen nu gebruiken om een schema van steekproefgegevens te produceren. Deze automatisering vereenvoudigt het creëren van nauwkeurige schema&#39;s, vermindert fouten, en versnelt het proces van gegevensinzameling aan analyse en inzichten.
+
+Zie de [ ML-Geassisteerde gids van de schemaverwezenlijking ](../xdm/ui/ml-assisted-schema-creation.md) voor meer informatie over dit werkschema.
 
 ## Volgende stappen en extra bronnen
 

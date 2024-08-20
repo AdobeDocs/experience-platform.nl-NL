@@ -5,9 +5,9 @@ title: Een CSV-bestand toewijzen aan een bestaand XDM-schema
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand via de Adobe Experience Platform-gebruikersinterface toewijst aan een bestaand XDM-schema.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
@@ -121,3 +121,7 @@ Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens controleren d
 ## Volgende stappen
 
 Aan de hand van deze zelfstudie hebt u een standaard CSV-bestand toegewezen aan een XDM-schema en het ingepakt in [!DNL Platform] . Deze gegevens kunnen nu worden gebruikt door downstream [!DNL Platform] -services, zoals [!DNL Real-Time Customer Profile] . Zie het overzicht voor [[!DNL Real-Time Customer Profile]](../../../profile/home.md) voor meer informatie.
+
+>[!TIP]
+>
+>U kunt machine het leren (ML) algoritmen ook gebruiken om **een schema van steekproefgegevens** van de werkruimte van het Schema te produceren. Deze workflow maakt automatisch een nieuw schema op basis van de structuur en inhoud van het bestand. Het schema moet overeenkomen met de indeling van uw gegevens. Zo bespaart u tijd en vergroot u de nauwkeurigheid bij het definiëren van de structuur, velden en gegevenstypen voor grote complexe gegevenssets. Zie de [ ML-Begeleidde van de schemaverwezenlijking ](../../../xdm/ui/ml-assisted-schema-creation.md) voor meer informatie over dit werkschema.

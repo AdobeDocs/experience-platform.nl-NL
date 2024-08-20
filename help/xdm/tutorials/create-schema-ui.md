@@ -5,9 +5,9 @@ title: Een schema maken met de Schema-editor
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met behulp van de Schema-editor in het Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '4567'
+source-wordcount: '4668'
 ht-degree: 0%
 
 ---
@@ -46,14 +46,23 @@ Als u wilt beginnen met het samenstellen van een schema, selecteert u **[!UICONT
 
 ![ het [!UICONTROL Schemas] werkruimte [!UICONTROL Browse] lusje met [!UICONTROL Create schema] benadrukte.](../images/tutorials/create-schema/create-schema-button.png)
 
+Het dialoogvenster [!UICONTROL Create a schema] wordt weergegeven. In dit dialoogvenster kunt u kiezen of u handmatig een schema wilt maken door velden en veldgroepen toe te voegen, of u kunt een CSV-bestand uploaden en XML-algoritmen gebruiken om een schema te genereren. Selecteer een workflow voor het maken van een schema in het dialoogvenster.
+
+![ creeer een schemadialoog met de werkschemaopties en selecteer benadrukt.](../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### Handmatig of met ML ondersteund schema maken {#manual-or-assisted}
+
+Leren hoe u een algoritme van XML kunt gebruiken om een schemastructuur te adviseren die op een geupload dossier wordt gebaseerd, zie de [ machine het leren-bijgewoonde gids van de schemaverwezenlijking ](../ui/ml-assisted-schema-creation.md). Deze UI-handleiding is gericht op de workflow voor handmatig maken.
+
+### Een basisklasse kiezen {#choose-a-class}
+
 De [!UICONTROL Create schema] -workflow wordt weergegeven. Kies vervolgens een basisklasse voor het schema. U kunt kiezen tussen de kernklassen [!UICONTROL XDM Individual Profile] en [!UICONTROL XDM ExperienceEvent] , of [!UICONTROL Other] als deze klassen niet geschikt zijn voor uw doeleinden. De [!UICONTROL Other] klassenoptie staat u toe om of [ een nieuwe klasse ](#create-new-class) tot stand te brengen of van andere reeds bestaande klassen te kiezen.
 
-Zie [ XDM individueel profiel ](../classes/individual-profile.md) en [ XDM ExperienceEvent ](../classes/experienceevent.md) documentatie voor meer informatie over deze klassen. In deze zelfstudie selecteert u **[!UICONTROL XDM Individual Profile]** gevolgd door **[!UICONTROL Next]** .
-
-<!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
-
+Zie de documentatie [[!UICONTROL XDM individual profile]](../classes/individual-profile.md) en [[!UICONTROL XDM ExperienceEvent]](../classes/experienceevent.md) voor meer informatie over deze klassen. In deze zelfstudie selecteert u **[!UICONTROL XDM Individual Profile]** gevolgd door **[!UICONTROL Next]** .
 
 ![ het [!UICONTROL Create schema] werkschema met de [!UICONTROL XDM individual profile] opties en [!UICONTROL Next] benadrukte.](../images/tutorials/create-schema/individual-profile-base-class.png)
+
+### Naam en revisie {#name-and-review}
 
 Nadat u een klasse hebt geselecteerd, wordt de sectie [!UICONTROL Name and review] weergegeven. In deze sectie geeft u een naam en beschrijving op om uw schema te identificeren. Er zijn verscheidene belangrijke overwegingen om te maken wanneer het beslissen over een naam voor uw schema:
 
@@ -68,6 +77,8 @@ Dit leerprogramma stelt een schema samen om gegevens in te gaan met betrekking t
 Voer in het tekstveld een mensvriendelijke [!UICONTROL Schema display name] in. Voer vervolgens een geschikte beschrijving in om uw schema te identificeren. Wanneer u de schemastructuur hebt herzien en met uw montages gelukkig bent, uitgezocht **[!UICONTROL Finish]** om uw schema tot stand te brengen.
 
 ![ de [!UICONTROL Name and review] sectie van het [!UICONTROL Create schema] werkschema met [!UICONTROL Schema display name], [!UICONTROL Description], en [!UICONTROL Finish] benadrukte.](../images/ui/resources/schemas/name-and-review.png)
+
+### Uw schema samenstellen {#compose-your-schema}
 
 De lus [!DNL Schema Editor] wordt weergegeven. Dit is het canvas waarop u het schema wilt samenstellen. Het schema met eigen naam wordt automatisch gemaakt in de **[!UICONTROL Structure]** -sectie van het canvas wanneer u in de editor aankomt, samen met de standaardvelden die zijn opgenomen in de basisklasse die u hebt geselecteerd. De toegewezen klasse voor het schema wordt ook vermeld onder **[!UICONTROL Class]** in **[!UICONTROL Composition]** -sectie.
 

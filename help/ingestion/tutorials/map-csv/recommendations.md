@@ -2,9 +2,9 @@
 title: Een CSV-bestand toewijzen aan een XDM-schema met behulp van door AI gegenereerde Recommendations
 description: In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand met behulp van door AI gegenereerde aanbevelingen kunt toewijzen aan een XDM-schema.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: cbebee894d68f60f82e1154f41dcecc76c706a3b
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1106'
 ht-degree: 0%
 
 ---
@@ -101,3 +101,5 @@ Wanneer u klaar bent met het aanpassen van de schemaaanbevelingen voor uw bronge
 Deze gids behandelde hoe te om een Csv- dossier aan een XDM- schema in kaart te brengen gebruikend AI-Gegenereerde aanbevelingen, die u toestaan om die gegevens in Platform door partijingesetion te brengen.
 
 Voor stappen bij het in kaart brengen van een Csv- dossier aan een bestaand schema, verwijs naar het [ bestaande schema in kaart brengende werkschema ](./existing-schema.md). Voor informatie bij het stromen gegevens aan Platform in real time door prebuilt bronverbindingen, verwijs naar het [ overzicht van bronnen ](../../../sources/home.md).
+
+U kunt het Leren van de Machine (ML) algoritmen ook gebruiken om **een schema van steekproefCSV gegevens** te produceren. Deze workflow maakt automatisch een nieuw schema op basis van de structuur en inhoud van het CSV-bestand. Dit nieuwe schema past het formaat van uw gegevens aan om u tijd te besparen en nauwkeurigheid te verhogen wanneer het bepalen van de structuur, de gebieden, en de gegevenstypes voor grote complexe datasets. Zie de [ ML-Begeleidde van de schemaverwezenlijking ](../../../xdm/ui/ml-assisted-schema-creation.md) voor meer informatie over dit werkschema.

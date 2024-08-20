@@ -5,9 +5,9 @@ breadcrumb-title: Handleiding voor Experience Data Model (XDM)
 user-guide-description: Verken een overzicht van het systeem van Experience Data Model (XDM) binnen het Experience Platform en leer hoe u klassen en schemaveldgroepen kunt gebruiken om ervaringsgegevens te standaardiseren.
 feature: Schemas
 role: Developer
-source-git-commit: 948a86f78ca6a6305adaf3232ca98a5437d701a6
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '636'
 ht-degree: 8%
 
 ---
@@ -205,6 +205,7 @@ ht-degree: 8%
       * [Relatievelden](./ui/fields/relationship.md)
       * [Vereiste velden](./ui/fields/required.md)
    * [Workflows op basis van velden](./ui/field-based-workflows.md)
+   * [Machine leren-ondersteund schema maken](./ui/ml-assisted-schema-creation.md)
    * [Voorbeeld-XDM-gegevens genereren](./ui/sample.md)
    * [XDM-schema&#39;s exporteren](./ui/export.md)
 * Schemaregister-API {#api}
