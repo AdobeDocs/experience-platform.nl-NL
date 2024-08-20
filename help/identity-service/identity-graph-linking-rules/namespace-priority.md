@@ -3,9 +3,9 @@ title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: c9610f935a074adf82d96c1eb824c159b18f2837
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1622'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 Elke klantenimplementatie is uniek en gemaakt om de doelstellingen van een bepaalde organisatie te ontmoeten, en als dusdanig, varieert het belang van bepaalde namespace van klant tot klant. Voorbeelden in de praktijk zijn:
 
-* Aan de ene kant zou u de naamruimte E-mail kunnen beschouwen als een persoonentiteit en dus uniek per persoon. Anderzijds, zou een andere klant e-mailnamespace als onbetrouwbare herkenningsteken kunnen beschouwen en daarom kunnen zij één enkele identiteitskaart van CRM toestaan om aan veelvoudige identiteiten met e-mailnamespace worden geassocieerd.
-* U kunt online gedrag verzamelen met behulp van een naamruimte &quot;Aanmeldings-id&quot;. Deze login identiteitskaart kon een 1:1 verhouding met identiteitskaart van CRM hebben, die dan attributen van een systeem van CRM opslaat en als belangrijkste namespace kan worden beschouwd. In dit geval, bepaalt u dan dat identiteitskaart van CRM namespace een nauwkeurigere vertegenwoordiging van een persoon is, terwijl login identiteitskaart namespace het tweede belangrijkste is.
+* Aan de ene kant zou u de naamruimte E-mail kunnen beschouwen als een persoonentiteit en dus uniek per persoon. Anderzijds, zou een andere klant e-mailnamespace als onbetrouwbare herkenningsteken kunnen beschouwen en daarom kunnen zij één enkele CRMID toestaan om aan veelvoudige identiteiten met e-mailnamespace worden geassocieerd.
+* U kunt online gedrag verzamelen met behulp van een naamruimte &quot;Aanmeldings-id&quot;. Deze login identiteitskaart kon een 1:1 verhouding met CRMID hebben, die dan attributen van een systeem van CRM opslaat en als belangrijkste namespace kan worden beschouwd. In dit geval, bepaalt u dan dat CRMID namespace een nauwkeurigere vertegenwoordiging van een persoon is, terwijl Login ID namespace de tweede belangrijkste is.
 
 U moet configuraties maken in Identiteitsservice die het belang van uw naamruimten weerspiegelen, aangezien dit van invloed is op de manier waarop profielen worden gevormd en gesegmenteerd.
 
@@ -49,7 +49,7 @@ Een identiteit vertegenwoordigt een echt object. Er zijn drie objecten die in de
 
 Naamruimten voor personen zijn relatief onveranderlijk in vergelijking met hardwareapparaten (zoals IDFA, GAID), die relatief onveranderlijk zijn in vergelijking met webbrowsers. In principe zult u (persoon) altijd één eenheid zijn, die meerdere hardwareapparaten kan hebben (telefoon, laptop, tablet, enz.) en meerdere browsers (Google Chrome, Safari, FireFox, enz.)
 
-Een andere manier om dit onderwerp te benaderen is door kardinaliteit. Hoeveel identiteiten worden er voor een bepaalde personenentiteit gecreëerd? In de meeste gevallen zal een persoon één CRM-id hebben, een handvol hardware-id&#39;s (IDFA/GAID-voorinstellingen mogen niet vaak voorkomen) en nog meer cookies (een individu zou zich op meerdere apparaten kunnen begeven, de incognitomodus kunnen gebruiken of cookies op een bepaald moment kunnen herstellen). Over het algemeen, **lagere kardinaliteit wijst op een namespace met een hogere waarde**.
+Een andere manier om dit onderwerp te benaderen is door kardinaliteit. Hoeveel identiteiten worden er voor een bepaalde personenentiteit gecreëerd? In de meeste gevallen zal een persoon één CRMID, een handvol herkenningstekens van het hardwareapparaat (het zou niet vaak moeten gebeuren IDFA/GAID), en zelfs meer koekjes hebben (een individu zou op veelvoudige apparaten kunnen aantrekken, incognitomodus gebruiken, of koekjes op elk bepaald ogenblik terugstellen). Over het algemeen, **lagere kardinaliteit wijst op een namespace met een hogere waarde**.
 
 ## Valideer uw instellingen voor naamruimteprioriteit
 
@@ -112,9 +112,9 @@ Gezien de bovenstaande configuraties, zullen gebruikersacties en bepaling van de
 | --- | --- | --- | --- | --- |
 | Pagina met creditcardaanbiedingen weergeven | Niet geverifieerd (anoniem) | Web SDK | {ECID} | ECID |
 | Help-pagina weergeven | Niet geverifieerd | Mobiele SDK | {ECID, IDFA} | IDFA |
-| Accountbalans bekijken | Geverifieerd | Web SDK | {CRM ID, ECID} | CRM-id |
-| Aanmelden voor thuislening | Geverifieerd | Bronconnector voor analyse | {CRM ID, ECID, HULP} | CRM-id |
-| Breng $1.000 van controle aan besparingen over | Geverifieerd | Mobiele SDK | {CRM ID, GAID, ECID} | CRM-id |
+| Accountbalans bekijken | Geverifieerd | Web SDK | {CRMID, ECID} | CRMID |
+| Aanmelden voor thuislening | Geverifieerd | Bronconnector voor analyse | {CRMID, ECID, AID} | CRMID |
+| Breng $1.000 van controle aan besparingen over | Geverifieerd | Mobiele SDK | {CRMID, GAID, ECID} | CRMID |
 
 {style="table-layout:auto"}
 
@@ -148,7 +148,7 @@ Voor meer informatie, lees het [ geavanceerde overzicht van het levenscyclusbehe
 
 ### Berekende kenmerken
 
-Berekende kenmerken gebruiken geen naamruimteprioriteit voor het berekenen van waarden. Als u gegevens verwerkte attributen gebruikt, moet u ervoor zorgen dat identiteitskaart van CRM als uw primaire identiteit voor WebSDK wordt aangewezen. Deze beperking zal naar verwachting in augustus 2024 worden opgelost.
+Berekende kenmerken gebruiken geen naamruimteprioriteit voor het berekenen van waarden. Als u gegevens verwerkte attributen gebruikt, moet u ervoor zorgen dat CRMID als uw primaire identiteit voor WebSDK wordt aangewezen. Deze beperking zal naar verwachting in augustus 2024 worden opgelost.
 
 Voor meer informatie, lees de [ gegevens verwerkte handleiding van attributen UI ](../../profile/computed-attributes/ui.md).
 
@@ -168,8 +168,8 @@ Voor meer informatie over schema&#39;s XDM, lees het [ schema&#39;s overzicht ](
 
 Wanneer u uw gegevens selecteert, moet u een naamruimte opgeven die wordt gebruikt om de gebeurtenissen te bepalen die de scores berekenen en de gebeurtenissen die de berekende scores opslaan. U wordt aangeraden de naamruimte te selecteren die een persoon vertegenwoordigt.
 
-* Als u gegevens van het Webgedrag gebruikend WebSDk verzamelt, wordt u geadviseerd om identiteitskaart van CRM te kiezen namespace binnen de identiteitskaart.
-* Als u gegevens over webgedrag verzamelt via de bronconnector van Analytics, moet u de identiteitsdescriptor (CRM-id) selecteren.
+* Als u gegevens van het Webgedrag gebruikend WebSDk verzamelt, wordt u geadviseerd om CRMID te kiezen namespace binnen de identiteitskaart.
+* Als u gegevens over webgedrag verzamelt via de bronconnector van Analytics, moet u de identiteitsdescriptor (CRMID) selecteren.
 
 Deze configuratie resulteert in computerscores die alleen gebruikmaken van geverifieerde gebeurtenissen.
 

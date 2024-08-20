@@ -5,9 +5,9 @@ description: De gedeelde Detectie van het Apparaat identificeert verschillende v
 hide: true
 hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
-source-git-commit: d7c7bed74d746aba2330ecba62f9f810fbaf0d63
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Het is belangrijk de volgende terminologie te begrijpen wanneer het werken met
 [!DNL Shared Device Detection] werkt door twee namespaces te vestigen: **Gedeelde Namespace van de Identiteit** en **Namespace van de Identiteit van de Gebruiker**.
 
 * De naamruimte Gedeelde identiteit vertegenwoordigt het apparaat dat door meerdere gebruikers kan worden gebruikt. Adobe raadt klanten aan ECID te gebruiken als de gedeelde apparaat-id.
-* De naamruimte voor de gebruikersnaam wordt toegewezen aan de naamruimte voor de identiteit die overeenkomt met de aanmeldings-id van een gebruiker. Dit kan de CRM-id, het e-mailadres, de gehashte e-mail of het telefoonnummer van de gebruiker zijn.
+* De naamruimte voor de gebruikersnaam wordt toegewezen aan de naamruimte voor de identiteit die overeenkomt met de aanmeldings-id van een gebruiker. Dit kan de CRMID, het e-mailadres, de gehashte e-mail of het telefoonnummer van de gebruiker zijn.
 
 Een gedeeld apparaat, als een tablet, heeft één enkele **Gedeelde Namespace van de Identiteit**. Anderzijds, heeft elke gebruiker van een gedeeld apparaat hun eigen aangewezen **Namespace van de Identiteit van de Gebruiker** die met hun respectieve login IDs beantwoordt. Een tablet die Kevin en Nora bijvoorbeeld delen voor e-commerce gebruik heeft een eigen ECID van `1234`, terwijl Kevin zijn eigen naamruimte voor de gebruikersnaam heeft die is toegewezen aan zijn `kevin@email.com` -account en Nora haar eigen naamruimte voor de gebruikersnaam heeft toegewezen aan haar `nora@email.com` -account.
 
@@ -72,17 +72,17 @@ Neem het volgende voorbeeld om u te helpen begrijpen hoe [!DNL Shared Device Det
 
 >[!NOTE]
 >
->In dit diagram, wordt de Gedeelde Namespace van de Identiteit gevormd aan ECID en de Namespace van de Identiteit van de Gebruiker wordt gevormd aan identiteitskaart CRM
+>In dit diagram, wordt de Gedeelde Namespace van de Identiteit gevormd aan ECID en de Namespace van de Identiteit van de Gebruiker wordt gevormd aan CRMID.
 
 ![ diagram ](./images/shared-device/diagram.png)
 
 * Kevin en Nora delen een tablet om een e-commercewebsite te bezoeken. Ze beschikken echter allebei over hun eigen onafhankelijke accounts waarmee ze online kunnen bladeren en winkelen.
    * Als gedeeld apparaat heeft de tablet een bijbehorende ECID, die de webbrowser cookie-id van de tablet vertegenwoordigt;
-* Veronderstel dat Kevin de tablet en **login** aan zijn e-commercerekening gebruikt om voor hoofdtelefoons te doorbladeren, betekent dit dan dat identiteitskaart van CRM van Kevin (**Identiteitskaart Namespace van de Gebruiker**) nu met ECID van de tablet (**Gedeelde Identiteitskaart Namespace**) wordt verbonden. De browsergegevens van het tablet zijn nu opgenomen in Kevin&#39;s identiteitsgrafiek.
-   * Als Kevin **zich** afmeldt en Nora de tablet en **login** aan haar eigen rekening gebruikt en een camera koopt, dan is haar identiteitskaart van CRM nu verbonden met ECID van de tablet. De browsergegevens van de tablet zijn daarom opgenomen in de identiteitsgrafiek van Nora.
-   * Als Nora **niet logout** en Kevin het tablet gebruikt, maar **login niet**, dan zijn de het doorbladeren van de tablet gegevens nog opgenomen met Nora, omdat zij als voor authentiek verklaarde gebruiker blijft en haar identiteitskaart van CRM is nog verbonden met ECID van de tablet.
-   * Als Nora **logout** en Kevin het tablet gebruikt, maar **login niet**, dan zijn de het doorbladeren van de tablet gegevens nog opgenomen met de identiteitsgrafiek van Nora, omdat als **laatst voor authentiek verklaarde gebruiker**, haar identiteitskaart van CRM verbonden met ECID van de tablet blijft.
-   * Als Kevin **opnieuw** het programma opent, dan wordt zijn identiteitskaart van CRM nu verbonden met ECID van de tablet, omdat hij nu de laatste voor authentiek verklaarde gebruiker is en de het doorbladeren gegevens van de tablet nu met zijn identiteitsgrafiek worden opgenomen.
+* Veronderstel dat Kevin de tablet en **login** aan zijn e-commercerekening gebruikt om voor hoofdtelefoons te doorbladeren, betekent dit dan dat Koude van Kevin&#39;s (**Naamruimte van de Identiteit van de Gebruiker**) nu met ECID van de tablet (**Gedeelde Namespace van de Identiteit**) wordt verbonden. De browsergegevens van het tablet zijn nu opgenomen in Kevin&#39;s identiteitsgrafiek.
+   * Als Kevin **zich** afmeldt en Nora het tablet en **login** aan haar eigen rekening gebruikt en een camera koopt, dan is haar CRMID nu verbonden met ECID van de tablet. De browsergegevens van de tablet zijn daarom opgenomen in de identiteitsgrafiek van Nora.
+   * Als Nora **niet logout** en Kevin het tablet gebruikt, maar **login niet**, dan zijn de het doorbladeren van de tablet gegevens nog opgenomen met Nora, omdat zij als voor authentiek verklaarde gebruiker blijft en haar CRMID nog verbonden is met ECID van de tablet.
+   * Als Nora **logout** en Kevin het tablet gebruikt, maar **login niet**, dan zijn de het doorbladeren van de tablet gegevens nog opgenomen met de identiteitsgrafiek van Nora, omdat als **laatst voor authentiek verklaarde gebruiker**, haar CRMID verbonden met ECID van de tablet blijft.
+   * Als Kevin **opnieuw** het programma opent, dan wordt zijn CRMID nu verbonden met ECID van de tablet, omdat hij nu de laatste voor authentiek verklaarde gebruiker is en de het doorbladeren van de tablet gegevens nu met zijn identiteitsgrafiek worden opgenomen.
 
 ### Hoe [!DNL Profile Service] profielfragmenten samenvoegt met [!DNL Shared Device Detection] ingeschakeld
 

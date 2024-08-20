@@ -2,9 +2,9 @@
 title: Verwijderen in identiteitsservice
 description: Dit document biedt een overzicht van de verschillende methoden waarmee u uw identiteitsgegevens in Experience Platform kunt verwijderen en om duidelijk te maken hoe identiteitsgrafieken worden beïnvloed.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1194'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ In het onderstaande document wordt verwezen naar de volgende kenmerken van Exper
 
 * [ Dienst van de Identiteit ](../home.md): Verkrijg een betere mening van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
    * [ Grafiek van de Identiteit ](./identity-graph-viewer.md): Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging voorziet van hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
-   * [ Identiteitsnaamruimten ](./namespaces.md): Identiteitsnaamruimten zijn een component van de Dienst van de Identiteit die als indicatoren van de context dienen waarop een identiteit betrekking heeft. Bijvoorbeeld, onderscheiden zij een waarde van &quot;naam <span>@email.com&quot;als e-mailadres of &quot;443522&quot;als numerieke identiteitskaart van CRM
+   * [ Identiteitsnaamruimten ](./namespaces.md): Identiteitsnaamruimten zijn een component van de Dienst van de Identiteit die als indicatoren van de context dienen waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld een waarde van &quot;name<span>@email.com&quot; als e-mailadres of &quot;443522&quot; als een numerieke CRMID.
 * [ de Dienst van de Catalogus ](../../catalog/home.md): Onderzoek de gegevenslijn, meta-gegevens, dossierbeschrijvingen, folders, en datasets binnen het gegevensmeer.
 * [ de hygiëne van Gegevens ](../../hygiene/home.md): Beheer uw opgeslagen consumentengegevens door geautomatiseerde datasettermijnen te plannen of individuele verslagen van één dataset of alle datasets te schrappen.
 * [ Adobe Experience Platform Privacy Service ](../../privacy-service/home.md): Beheer klantenverzoeken om tot toegang te hebben, uit verkoop te kiezen, of hun persoonlijke gegevens over de toepassingen van Adobe Experience Cloud te schrappen.

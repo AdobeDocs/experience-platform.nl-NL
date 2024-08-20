@@ -2,9 +2,9 @@
 title: Overzicht van id-naamruimte
 description: Meer informatie over naamruimten in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 59ac3d8b7fee0327396c990ef309ca3a4f292a77
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1850'
+source-wordcount: '1846'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Naamruimten vereisen inzicht in verschillende Adobe Experience Platform-services
 >abstract="Een identiteitswaarde is een herkenningsteken die een uniek individu, een organisatie, of een middel vertegenwoordigt. De context of het type van identiteit die de waarde vertegenwoordigt wordt bepaald door een overeenkomstige identiteitsnaamruimte. Wanneer recordgegevens worden vergeleken met profielfragmenten, moeten de naamruimte en de identiteitswaarde overeenkomen. Wanneer recordgegevens worden vergeleken met profielfragmenten, moeten de naamruimte en de identiteitswaarde overeenkomen."
 >text="Learn more in documentation"
 
-Een volledig gekwalificeerde identiteit omvat twee componenten: een **identiteitswaarde** en een **identiteit namespace**. Als de waarde van een identiteit bijvoorbeeld `scott@acme.com` is, biedt een naamruimte context aan deze waarde door deze te onderscheiden als een e-mailadres. Op dezelfde manier kan een naamruimte `555-123-456` herkennen als een telefoonnummer en `3126ABC` als een CRM-id. Hoofdzakelijk, **verstrekt a namespace context aan een bepaalde identiteit**. Bij het afstemmen van recordgegevens over profielfragmenten, zoals wanneer [!DNL Real-Time Customer Profile] profielgegevens samenvoegt, moeten zowel de identiteitswaarde als de naamruimte overeenkomen.
+Een volledig gekwalificeerde identiteit omvat twee componenten: een **identiteitswaarde** en een **identiteit namespace**. Als de waarde van een identiteit bijvoorbeeld `scott@acme.com` is, biedt een naamruimte context aan deze waarde door deze te onderscheiden als een e-mailadres. Op dezelfde manier kan een naamruimte `555-123-456` als een telefoonnummer herkennen en `3126ABC` als een CRMID. Hoofdzakelijk, **verstrekt a namespace context aan een bepaalde identiteit**. Bij het afstemmen van recordgegevens over profielfragmenten, zoals wanneer [!DNL Real-Time Customer Profile] profielgegevens samenvoegt, moeten zowel de identiteitswaarde als de naamruimte overeenkomen.
 
 Twee profielfragmenten kunnen bijvoorbeeld verschillende primaire id&#39;s bevatten, maar ze hebben dezelfde waarde voor de naamruimte E-mail, zodat Experience Platform kan zien dat deze fragmenten in feite dezelfde persoon zijn en de gegevens samenbrengt in de identiteitsgrafiek voor de persoon.
 
@@ -47,8 +47,8 @@ Een andere manier om het concept van naamruimte beter te begrijpen, is het overw
 
 Dezelfde logica toepassen op Identity Service:
 
-* In één oogopslag kan de identiteitswaarde van: `1-234-567-8900` er uitzien als een telefoonnummer. Nochtans, vanuit een systeemperspectief, kon deze waarde als identiteitskaart van CRM worden gevormd. De Dienst van de identiteit zou geen manier hebben om de noodzakelijke context op deze identiteitswaarde zonder overeenkomstige namespace toe te passen.
-* Een ander voorbeeld is de identiteitswaarde van: `john@gmail.com`. Terwijl deze identiteitswaarde gemakkelijk kan worden verondersteld om een E-mail te zijn, is het volledig mogelijk dat het als identiteitskaart van douane namespace CRM wordt gevormd. Met naamruimte kunt u `Email:john@gmail.com` onderscheiden van `CRM ID:john@gmail.com` .
+* In één oogopslag kan de identiteitswaarde van: `1-234-567-8900` er uitzien als een telefoonnummer. Nochtans, vanuit een systeemperspectief, kon deze waarde als CRMID worden gevormd. De Dienst van de identiteit zou geen manier hebben om de noodzakelijke context op deze identiteitswaarde zonder overeenkomstige namespace toe te passen.
+* Een ander voorbeeld is de identiteitswaarde van: `john@gmail.com`. Hoewel deze identiteitswaarde gemakkelijk kan worden verondersteld om een E-mail te zijn, is het volledig mogelijk dat het als douane namespace CRMID wordt gevormd. Met naamruimte kunt u `Email:john@gmail.com` onderscheiden van `CRMID:john@gmail.com` .
 
 >[!ENDSHADEBOX]
 
@@ -81,7 +81,7 @@ De volgende identiteitstypen zijn beschikbaar in het Experience Platform:
 | Identiteitstype | Beschrijving |
 | --- | --- |
 | Cookie-id | Cookie-id&#39;s identificeren webbrowsers. Deze identiteiten zijn essentieel voor uitbreiding en vormen het grootste deel van de identiteitsgrafiek. Maar door de natuur verval ze snel en verliezen hun waarde in de loop der tijd. |
-| Apparaatoverschrijdende id | Apparaatoverschrijdende id&#39;s identificeren een individu en koppelen gewoonlijk andere id&#39;s aan elkaar. Voorbeelden zijn een aanmeldings-id, CRM-id en een loyale-id. Dit is een aanwijzing voor [!DNL Identity Service] om de waarde gevoelig af te handelen. |
+| Apparaatoverschrijdende id | Apparaatoverschrijdende id&#39;s identificeren een individu en koppelen gewoonlijk andere id&#39;s aan elkaar. Voorbeelden zijn een aanmeldings-id, een CRMID en een loyale-id. Dit is een aanwijzing voor [!DNL Identity Service] om de waarde gevoelig af te handelen. |
 | Apparaat-id | Apparaat-id&#39;s identificeren hardwareapparaten, zoals IDFA (iPhone en iPad), GAID (Android) en RIDA (Roku), en kunnen door meerdere personen in huishoudens worden gedeeld. |
 | E-mailadres | E-mailadressen zijn vaak gekoppeld aan één persoon en kunnen daarom worden gebruikt om die persoon op verschillende kanalen te identificeren. Tot dit type identiteiten behoren ook PII&#39;s (Persoonlijke identificeerbare informatie). Dit is een aanwijzing voor [!DNL Identity Service] om de waarde gevoelig af te handelen. |
 | Id van niet-personen | Niet-persoonlijke id&#39;s worden gebruikt voor het opslaan van id&#39;s die naamruimten vereisen maar niet zijn verbonden met een personencluster. Bijvoorbeeld een product-SKU, gegevens met betrekking tot producten, organisaties of winkels. |

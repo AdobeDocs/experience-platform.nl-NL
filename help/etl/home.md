@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ontwikkeling van ETL-integratie voor Adobe Experience Platform
 description: De ETL-integratiehandleiding beschrijft algemene stappen voor het maken van krachtige, veilige connectors voor Experience Platform en het opnemen van gegevens in Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '3978'
+source-wordcount: '3977'
 ht-degree: 0%
 
 ---
@@ -789,5 +789,5 @@ Adobe Experience Platform identificeert momenteel geen uitgestelde gegevens, zod
 | ---- | ------ | ----------- |
 | 2019-01-19 | Eigenschap &quot;fields&quot; uit gegevenssets verwijderd | Datasets bevatten eerder een eigenschap &quot;fields&quot; die een kopie van het schema bevatte. Deze mogelijkheid mag niet meer worden gebruikt. Als de eigenschap &quot;fields&quot; wordt gevonden, moet deze worden genegeerd en wordt in plaats daarvan &quot;ObservedSchema&quot; of &quot;schemaRef&quot; gebruikt. |
 | 2019-03-15 | &quot;schemaRef&quot;-eigenschap toegevoegd aan gegevenssets | Het &quot;schemaRef&quot;bezit van een dataset bevat URI die naar het XDM schema verwijst waarop de dataset gebaseerd is en vertegenwoordigt alle potentiële gebieden die door de dataset zouden kunnen worden gebruikt. |
-| 2019-03-15 | Alle eindgebruikersidentificatoren wijzen de eigenschap &quot;identityMap&quot; toe | De &quot;identityMap&quot;is een inkapseling van alle unieke herkenningstekens van een onderwerp, zoals identiteitskaart van CRM, ECID, of identiteitskaart van het loyaliteitsprogramma Deze kaart wordt door [[!DNL Identity Service]](../identity-service/home.md) gebruikt om alle bekende en anonieme identiteiten van een onderwerp op te lossen en vormt één identiteitsgrafiek voor elke eindgebruiker. |
+| 2019-03-15 | Alle eindgebruikersidentificatoren wijzen de eigenschap &quot;identityMap&quot; toe | De &quot;identityMap&quot;is een inkapseling van alle unieke herkenningstekens van een onderwerp, zoals CRMID, ECID, of identiteitskaart van het loyaliteitsprogramma. Deze kaart wordt door [[!DNL Identity Service]](../identity-service/home.md) gebruikt om alle bekende en anonieme identiteiten van een onderwerp op te lossen en vormt één identiteitsgrafiek voor elke eindgebruiker. |
 | 2019-05-30 | EOL en verwijder &quot;schema&quot;bezit uit datasets | De dataset &quot;schema&quot;bezit verstrekte een verwijzingsverbinding aan het schema gebruikend het afgekeurde `/xdms` eindpunt in [!DNL Catalog] API. Deze is vervangen door een &quot;schemaRef&quot; die de &quot;id&quot;, &quot;version&quot; en &quot;contentType&quot; van het schema biedt, zoals vermeld in de nieuwe [!DNL Schema Registry] API. |

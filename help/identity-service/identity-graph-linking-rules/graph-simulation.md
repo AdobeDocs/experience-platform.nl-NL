@@ -3,9 +3,9 @@ title: UI-gids voor grafieksimulatie
 description: Leer hoe te om de Simulatie van de Grafiek in de Dienst UI van de Identiteit te gebruiken.
 badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1399'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
@@ -142,7 +142,7 @@ Er wordt een lege configuratieregel weergegeven. Voer eerst dezelfde naamruimte 
 
 Herhaal vervolgens dezelfde stappen en voeg uw tweede naamruimte toe, in dit geval de ECID. Zodra al uw namespaces zijn ingegaan, kunt u beginnen hun prioriteiten en uniciteit te vormen.
 
-* **prioriteit Namespace**: De prioriteit van een namespace bepaalt zijn relatieve belang vergeleken met andere namespaces in een bepaalde identiteitsgrafiek. Als uw identiteitsgrafiek bijvoorbeeld vier verschillende naamruimten heeft: CRM ID, ECID, Email en Apple IDFA, kunt u prioriteiten configureren om een volgorde van belang voor de vier naamruimten te bepalen.
+* **prioriteit Namespace**: De prioriteit van een namespace bepaalt zijn relatieve belang vergeleken met andere namespaces in een bepaalde identiteitsgrafiek. Als uw identiteitsgrafiek bijvoorbeeld vier verschillende naamruimten heeft: CRMID, ECID, Email en Apple IDFA, kunt u prioriteiten configureren om een volgorde van belang voor de vier naamruimten te bepalen.
 * **Unieke namespace**: Als een namespace als uniek wordt aangewezen, dan zal de Dienst van de Identiteit grafieken met het geheim produceren dat slechts één identiteit met bepaalde unieke namespace kan bestaan. Als de naamruimte E-mail bijvoorbeeld is aangewezen als een unieke naamruimte, kan een grafiek slechts één identiteit hebben met e-mail. Als er meer dan één identiteit is met de naamruimte E-mail, wordt de oudste koppeling verwijderd.
 
 Om namespace prioriteit te vormen, selecteer en sleep de namespace rijen aan de prioritaire orde die u wilt, met de hoogste rij die hogere prioriteit vertegenwoordigt en de onderste rij die lagere prioriteit vertegenwoordigt. Als u een naamruimte als uniek wilt aanmerken, schakelt u het selectievakje **[!UICONTROL Unique Per Graph]** in.

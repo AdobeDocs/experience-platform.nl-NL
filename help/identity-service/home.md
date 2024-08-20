@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van identiteitsservice
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1555'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Om relevante digitale ervaringen te kunnen bieden, hebt u een uitgebreide en nauwkeurige weergave nodig van de echte entiteiten waaruit uw klantenbestand bestaat.
 
-Organisaties en bedrijven hebben tegenwoordig te maken met een groot aantal verschillende datasets: uw individuele klanten worden vertegenwoordigd door een verscheidenheid aan verschillende id&#39;s. Uw klant kan worden gekoppeld aan verschillende webbrowsers (Safari, Google Chrome), hardwareapparaten (telefoons, laptops) en andere personen-id&#39;s (CRM-id&#39;s, e-mailaccounts). Zo ontstaat een onsamenhangende weergave van uw klant.
+Organisaties en bedrijven hebben tegenwoordig te maken met een groot aantal verschillende datasets: uw individuele klanten worden vertegenwoordigd door een verscheidenheid aan verschillende id&#39;s. Uw klant kan worden gekoppeld aan verschillende webbrowsers (Safari, Google Chrome), hardwareapparaten (telefoons, laptops) en andere id&#39;s (CRMID&#39;s, e-mailaccounts). Zo ontstaat een onsamenhangende weergave van uw klant.
 
 U kunt deze uitdagingen met de Dienst van de Identiteit van Adobe Experience Platform en zijn mogelijkheden oplossen:
 
@@ -78,20 +78,20 @@ Er wordt een koppeling tussen twee identiteiten tot stand gebracht wanneer de na
 
 Een typische login gebeurtenis **verzendt twee identiteiten** in Experience Platform:
 
-* De persoonsidentificatie (zoals een CRM-id) die een geverifieerde gebruiker vertegenwoordigt.
+* De persoon-id (zoals een CRMID) die een geverifieerde gebruiker vertegenwoordigt.
 * De browser-id (bijvoorbeeld een ECID) die de webbrowser vertegenwoordigt.
 
 Bekijk het volgende voorbeeld:
 
-* U kunt zich met uw laptop aanmelden met uw gebruikersnaam en wachtwoord voor een e-commercewebsite. Deze gebeurtenis kwalificeert u als voor authentiek verklaarde gebruiker, zodat erkent de Dienst van de Identiteit uw identiteitskaart van CRM
+* U kunt zich met uw laptop aanmelden met uw gebruikersnaam en wachtwoord voor een e-commercewebsite. Deze gebeurtenis kwalificeert u als voor authentiek verklaarde gebruiker, zodat erkent de Dienst van de Identiteit uw CRMID.
 * Uw gebruik van een browser om tot de e-commercewebsite toegang te hebben wordt ook erkend door de Dienst van de Identiteit als gebeurtenis. Deze gebeurtenis wordt via een ECID vertegenwoordigd in Identity Service.
 * Achter de schermen verwerkt Identity Service de twee gebeurtenissen als: `CRM_ID:ABC, ECID:123` .
-   * CRM-id: ABC is de naamruimte en waarde die u als geverifieerde gebruiker vertegenwoordigt.
+   * CRMID: ABC is de naamruimte en waarde die u als geverifieerde gebruiker vertegenwoordigt.
    * ECID: 123 is de naamruimte en waarde die het webbrowsergebruik op uw laptop vertegenwoordigt.
 * Als u zich vervolgens met dezelfde gegevens aanmeldt bij dezelfde e-commercewebsite, maar de webbrowser op uw telefoon gebruikt in plaats van de webbrowser op uw laptop, wordt een nieuwe ECID geregistreerd in Identity Service.
 * Achter de schermen verwerkt Identity Service deze nieuwe gebeurtenis als `{CRM_ID:ABC, ECID:456}` , waarbij CRM_ID: ABC uw geverifieerde klant-id en ECID:456 de webbrowser op uw mobiele apparaat vertegenwoordigt.
 
-Gezien de bovenstaande scenario&#39;s legt Identity Service een koppeling tot stand tussen `{CRM_ID:ABC, ECID:123}` en `{CRM_ID:ABC, ECID:456}` . Dit resulteert in een identiteitsgrafiek waarbij u drie identiteiten &quot;bezit&quot;: één voor persoon-id (CRM-id) en twee voor cookie-id&#39;s (ECID&#39;s).
+Gezien de bovenstaande scenario&#39;s legt Identity Service een koppeling tot stand tussen `{CRM_ID:ABC, ECID:123}` en `{CRM_ID:ABC, ECID:456}` . Dit resulteert in een identiteitsgrafiek waarbij u drie identiteiten &quot;bezit&quot;: één voor persoon-id (CRMID) en twee voor cookie-id&#39;s (ECID&#39;s).
 
 Voor meer informatie, lees de gids op [ hoe de Dienst van de Identiteit identiteiten ](./features/identity-linking-logic.md) verbindt.
 

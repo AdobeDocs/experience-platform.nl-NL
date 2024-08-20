@@ -3,9 +3,9 @@ title: Overzicht van regels voor identiteitsgrafiek
 description: Leer over de Regels van de Vereniging van de Grafiek van Identiteit in de Dienst van de Identiteit.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1170'
 ht-degree: 0%
 
 ---
@@ -26,13 +26,13 @@ ht-degree: 0%
 * [Voorbeelden van grafiekconfiguraties](./configuration.md)
 * [Voorbeeldscenario&#39;s](./example-scenarios.md)
 
-Met Adobe Experience Platform Identity Service en Real-Time Customer Profile is het eenvoudig om aan te nemen dat uw gegevens perfect zijn opgenomen en dat alle samengevoegde profielen één persoon vertegenwoordigen via een personenteken, zoals een CRM-id. Er zijn echter scenario&#39;s waarin bepaalde gegevens kunnen proberen meerdere verschillende profielen samen te voegen tot één profiel (grafiek samenvouwen). Om deze ongewenste samenvoegingen te verhinderen, kunt u configuraties gebruiken die door identiteitsgrafiek worden verstrekt die regels verbindt en voor nauwkeurige verpersoonlijking voor uw gebruikers toestaan.
+Met Adobe Experience Platform Identity Service en Real-Time Customer Profile is het eenvoudig om aan te nemen dat uw gegevens perfect zijn opgenomen en dat alle samengevoegde profielen één persoon vertegenwoordigen via een personenteken, zoals een CRMID. Er zijn echter scenario&#39;s waarin bepaalde gegevens kunnen proberen meerdere verschillende profielen samen te voegen tot één profiel (grafiek samenvouwen). Om deze ongewenste samenvoegingen te verhinderen, kunt u configuraties gebruiken die door identiteitsgrafiek worden verstrekt die regels verbindt en voor nauwkeurige verpersoonlijking voor uw gebruikers toestaan.
 
 ## Voorbeeldscenario&#39;s waarbij een grafiek kan samenvouwen
 
 * **Gedeeld apparaat**: Het gedeelde apparaat verwijst naar apparaten die door meer dan één individu worden gebruikt. Voorbeelden van een gedeeld apparaat zijn tablets, bibliotheekcomputers en kiosken.
 * **Onjuiste e-mail en telefoonaantallen**: De slechte e-mail en telefoonaantallen verwijzen naar eind - gebruikers die ongeldige contactinformatie registreren, zoals &quot;test <span>@test.com&quot;voor e-mail, en &quot;+1-111-111-111&quot;voor telefoonaantal.
-* **Onjuiste of slechte identiteitswaarden**: De onjuiste of slechte identiteitswaarden verwijzen naar niet-unieke identiteitswaarden die CRM IDs konden samenvoegen. Terwijl IDFA&#39;s bijvoorbeeld 36 tekens moeten hebben (32 alfanumerieke tekens en vier afbreekstreepjes), zijn er scenario&#39;s waarin een IDFA met de identiteitswaarde &quot;user_null&quot; kan worden opgenomen. Op dezelfde manier steunen de telefoonaantallen slechts numerieke karakters, maar een telefoonnamespace met een identiteitswaarde van &quot;niet-gespecificeerd&quot;kan worden opgenomen.
+* **Onjuiste of slechte identiteitswaarden**: De onjuiste of slechte identiteitswaarden verwijzen naar niet-unieke identiteitswaarden die CRMIDs konden samenvoegen. Terwijl IDFA&#39;s bijvoorbeeld 36 tekens moeten hebben (32 alfanumerieke tekens en vier afbreekstreepjes), zijn er scenario&#39;s waarin een IDFA met de identiteitswaarde &quot;user_null&quot; kan worden opgenomen. Op dezelfde manier steunen de telefoonaantallen slechts numerieke karakters, maar een telefoonnamespace met een identiteitswaarde van &quot;niet-gespecificeerd&quot;kan worden opgenomen.
 
 Voor meer informatie over gebruiksgevalscenario&#39;s voor identiteitsgrafiek die regels verbindt, lees het document op [ voorbeeldscenario&#39;s ](./example-scenarios.md).
 
@@ -60,15 +60,15 @@ Overweeg het volgende scenario:
 * Scott gebruikt een tablet en opent zijn browser van Google Chrome om naar nike <span>.com te gaan, waar hij binnen ondertekent en voor nieuwe basketbalschoenen doorbladert.
    * In dit scenario worden achter de schermen de volgende identiteiten geregistreerd:
       * Een ECID-naamruimte en -waarde die het gebruik van de browser vertegenwoordigen
-      * Een CRM ID namespace en waarde om de voor authentiek verklaarde gebruiker te vertegenwoordigen (Scott die binnen met zijn gebruikersbenaming en wachtwoordcombinatie wordt ondertekend).
+      * Een CRMID-naamruimte en -waarde die de geverifieerde gebruiker vertegenwoordigen (Scott is aangemeld met zijn combinatie van gebruikersnaam en wachtwoord).
 * Zijn zoon Peter gebruikt dan hetzelfde tablet en gebruikt Google Chrome ook om naar nike <span>.com te gaan, waar hij zich aanmeldt voor zijn eigen rekening om naar voetbalapparatuur te zoeken.
    * In dit scenario worden achter de schermen de volgende identiteiten geregistreerd:
       * Dezelfde ECID-naamruimte en -waarde die de browser vertegenwoordigen.
-      * Een nieuwe CRM-id-naamruimte en -waarde die de geverifieerde gebruiker vertegenwoordigen.
+      * Een nieuwe CRMID-naamruimte en -waarde die de geverifieerde gebruiker vertegenwoordigen.
 
-Als CRM-id is geconfigureerd als een unieke naamruimte, worden de CRM-id&#39;s door het algoritme voor identiteitsoptimalisatie gesplitst in twee afzonderlijke identiteitsgrafieken, in plaats van ze samen te voegen.
+Als CRMID als unieke namespace werd gevormd, dan verdeelt het algoritme van de identiteitsoptimalisering CRMIDs afzonderlijk in twee afzonderlijke identiteitsgrafieken, in plaats van hen samen te voegen.
 
-Als u geen unieke naamruimte configureert, kan het gebeuren dat er ongewenste grafieksamenvoegingen plaatsvinden, zoals twee identiteiten met dezelfde naamruimte voor CRM-id, maar verschillende identiteitswaarden (scenario&#39;s als deze vertegenwoordigen vaak twee verschillende persoonentiteiten in dezelfde grafiek).
+Als u geen unieke naamruimte configureert, kan het gebeuren dat er ongewenste grafieksamenvoegingen plaatsvinden, zoals twee identiteiten met dezelfde CRMID-naamruimte, maar verschillende identiteitswaarden (scenario&#39;s zoals deze vertegenwoordigen vaak twee verschillende persoonentiteiten in dezelfde grafiek).
 
 U moet een unieke naamruimte configureren om het algoritme voor identiteitsoptimalisatie te informeren en beperkingen in te stellen op de identiteitsgegevens die in een bepaalde identiteitsgrafiek worden opgenomen.
 

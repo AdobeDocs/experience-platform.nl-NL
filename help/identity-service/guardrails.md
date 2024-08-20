@@ -3,9 +3,9 @@ keywords: Experience Platform;identiteit;identiteitsdienst;het oplossen van prob
 title: Guardrails voor identiteitsservice
 description: Dit document bevat informatie over het gebruik en de tarieflimieten voor identiteitsservicegegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1585'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ De volgende secties schetsen de implicaties die de schrappingslogica aan de Dien
 
 Neem contact op met het accountteam van uw Adobe om een wijziging in het type identiteit aan te vragen als uw productiessandbox het volgende bevat:
 
-* Een aangepaste naamruimte waarin de personen-id&#39;s (zoals CRM-id&#39;s) zijn geconfigureerd als cookie-/apparaatidentiteitstype.
+* Een aangepaste naamruimte waarin de personen-id&#39;s (zoals CRMID&#39;s) zijn geconfigureerd als type cookie-/apparaatidentiteit.
 * Een aangepaste naamruimte waarin cookie-/apparaat-id&#39;s zijn geconfigureerd als identiteitstype voor verschillende apparaten.
 
 Als deze functie eenmaal beschikbaar is, worden grafieken die de limiet van 50 identiteiten overschrijden, verkleind tot maximaal 50 identiteiten. Voor Real-Time CDP B2C Edition kan dit resulteren in een minimale toename van het aantal profielen dat in aanmerking komt voor een publiek, aangezien deze profielen voorheen werden genegeerd door Segmentering en Activering.
@@ -106,7 +106,7 @@ Verwijderen gebeurt alleen met gegevens in de Identiteitsservice en niet in real
 
 #### Real-Time profiel en WebSDK van klant: primaire identiteitsverwijdering
 
-Als u uw voor authentiek verklaarde gebeurtenissen tegen identiteitskaart van CRM wilt bewaren, dan wordt geadviseerd dat u uw primaire IDs van ECID in identiteitskaart van CRM verandert. Lees de volgende documenten voor stappen over hoe te om deze verandering uit te voeren:
+Als u geverifieerde gebeurtenissen wilt behouden voor de CRMID, kunt u het beste uw primaire id&#39;s wijzigen van ECID in CRMID. Lees de volgende documenten voor stappen over hoe te om deze verandering uit te voeren:
 
 * [ vorm identiteitskaart voor de markeringen van het Experience Platform ](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Identiteitsgegevens in het Web SDK van het Experience Platform](../web-sdk/identity/overview.md#using-identitymap)
@@ -149,7 +149,7 @@ Dientengevolge, schrapt de Dienst van de Identiteit de oudste identiteit die op 
 
 >[!TAB  Uitvoer van de Grafiek ]
 
-Als gevolg van het verwijderen van ECID:35577 worden ook de randen die aan CRM-id:60013 en CRM-id:25212 zijn gekoppeld met de nu verwijderde ECID:35577 verwijderd. Door dit verwijderingsproces wordt de grafiek opgesplitst in twee kleinere grafieken.
+Als gevolg van het verwijderen van ECID:35577 worden ook de randen die aan CRMID:60013 en CRMID:25212 zijn gekoppeld met de nu verwijderde ECID:35577 verwijderd. Door dit verwijderingsproces wordt de grafiek opgesplitst in twee kleinere grafieken.
 
 ![](./images/guardrails/after-split.png)
 
@@ -176,7 +176,7 @@ In het onderstaande voorbeeld wordt ECID:21011 opgenomen en gekoppeld aan de gra
 
 Dientengevolge, schrapt de Dienst van de Identiteit de oudste identiteit slechts uit de identiteitsgrafiek, die in dit geval ECID:35577 is. De schrapping van ECID:35577 leidt ook tot de schrapping van het volgende:
 
-* Het verband tussen CRM-ID: 60013 en de nu verwijderde ECID:35577, wat resulteert in een grafieksplitsingsscenario.
+* Het verband tussen CRMID: 60013 en de nu verwijderde ECID:35577, wat resulteert in een grafieksplitsingsscenario.
 * IDFA: 32110, IDFA: 02383, en de overige identiteiten die worden vertegenwoordigd door `(...)`. Deze identiteiten worden verwijderd omdat ze individueel niet aan andere identiteiten zijn gekoppeld en daarom niet in een grafiek kunnen worden weergegeven.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
