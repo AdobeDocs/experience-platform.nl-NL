@@ -2,9 +2,9 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 29d9445e6e71c60f4b596a5e645a56d2b70e133c
 workflow-type: tm+mt
-source-wordcount: '4342'
+source-wordcount: '4215'
 ht-degree: 0%
 
 ---
@@ -33,14 +33,7 @@ Als u extern gegenereerde soorten publiek wilt uploaden, hebt u de machtigingen 
 
 ### Wat gebeurt er als ik een extern gegenereerd publiek upload?
 
-Wanneer u een extern gegenereerd publiek uploadt, worden de volgende items gemaakt:
-
-- Gegevensset
-   - De dataset zal binnen de datasetinventaris zichtbaar zijn, en de naam van de dataset zal **het zelfde** zijn zoals de naam van het extern geproduceerde publiek u uploadde.
-- Batchtaak
-   - Een partijbaan zal **** automatisch in werking stellen wanneer u een extern geproduceerd publiek uploadt. Dit betekent dat u **niet** op de dagelijkse segmentatietaak moet wachten om het extern geproduceerde publiek te activeren.
-- Ad-hocschema
-   - A **nieuw** XDM schema zal voor gebruik met het extern geproduceerde publiek worden gecreeerd. De velden in dit XDM-schema worden benoemd voor gebruik met de gegevensset die ook is gemaakt.
+Wanneer u een extern geproduceerd publiek uploadt, zal een dataset worden gecreeerd en binnen de datasetinventaris zichtbaar zijn. De naam van de dataset zal **het zelfde** zijn zoals de naam van het extern geproduceerde publiek u uploadde.
 
 ### Wat is een extern gegenereerd publiek dat bestaat uit deze gegevens en wat gebeurt er met deze gegevens als het wordt geïmporteerd naar Platform?
 
@@ -91,12 +84,6 @@ Het organisatiespecifieke standaard samenvoegingsbeleid wordt automatisch toegep
 ### Waar kan ik extern gegenereerde publiek activeren?
 
 Een extern gegenereerd publiek kan aan elke bestemming worden toegewezen en kan in Adobe Journey Optimizer-campagnes worden gebruikt.
-
-### Hoe snel zijn extern gegenereerde doelgroepen klaar voor activering?
-
-Als de gegevens van het extern gegenereerde publiek worden geactiveerd voor een streamingdoel, zijn deze binnen twee uur beschikbaar.
-
-Als de gegevens worden geactiveerd voor een batchbestemming, worden de gegevens van het extern gegenereerde publiek gesynchroniseerd met de volgende segmentatietaak van 24 uur.
 
 ### Kan ik een extern gegenereerd publiek verwijderen?
 

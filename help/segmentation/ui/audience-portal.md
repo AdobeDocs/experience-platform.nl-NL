@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
+source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
 workflow-type: tm+mt
-source-wordcount: '3926'
+source-wordcount: '3963'
 ht-degree: 0%
 
 ---
@@ -386,6 +386,10 @@ De **[!UICONTROL Import audience CSV]** -workflow wordt weergegeven. U kunt een 
 >[!NOTE]
 >
 >Het externe geproduceerde publiek **moet** in formaat CSV zijn, a **maximum** van 25 kolommen hebben, en zijn minder dan 1GB.
+>
+>Bovendien, kunt u **niet** ruimten of streepjes in de eerste rij of de bijbehorende kolommen van CSV gebruiken.
+>
+>De waarde van de eerste rij kan bijvoorbeeld &quot;FirstName&quot; of &quot;First_Name&quot; zijn, maar dit kan niet &quot;First Name&quot; of &quot;First-Name&quot; zijn.
 
 Nadat u het CSV-bestand hebt geselecteerd dat u wilt importeren, wordt een lijst met voorbeeldgegevens weergegeven voor dit extern gegenereerde publiek. Selecteer **[!UICONTROL Next]** nadat u hebt bevestigd dat de voorbeeldgegevens juist zijn.
 
