@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2024
 description: De release van augustus 2024 bevat opmerkingen over Adobe Experience Platform.
-source-git-commit: b586edb3f8fc866c2bc0f8c387740490173174a0
+source-git-commit: 6d8c785a1e876ed6a729efbe01ad8fb4507bda0d
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 3%
+source-wordcount: '1022'
+ht-degree: 2%
 
 ---
 
@@ -12,10 +12,53 @@ ht-degree: 3%
 
 **Releasedatum: woensdag 20 augustus 2024**
 
+>[!TIP]
+>
+>Bekijk een [ overzicht van de gevallendocumentatie van het steekproefgebruik ](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/overview) om over diverse gebruiksgevallen zoals het prospecteren, de verwerving, en meer te leren die uw organisatie met Real-Time CDP kan bereiken.
+
 Updates van bestaande functies en documentatie in Experience Platform:
 
+- [Doelen](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
+- [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
+
+## Doelen {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
+
+| Functie | Beschrijving |
+| ----------- | ----------- |
+| Het exporteren van bestanden op aanvraag naar batchbestemmingen is nu over het algemeen beschikbaar. | De optie om dossiers op bestelling naar partijbestemmingen uit te voeren is nu beschikbaar aan alle klanten. Zie de [ specifieke documentatie ](../../destinations/ui/export-file-now.md) voor meer details. |
+| Bewerk de uitvoerprogramma&#39;s voor veelvoudige uitgevoerde publiek in [ het plannen stap ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | De optie om de exportschema&#39;s voor meerdere geëxporteerde doelgroepen rechtstreeks vanuit de planningsstap van de workflow voor publieksactivering te bewerken, is nu beschikbaar voor alle klanten. ![ Beeld van het gebruikersinterface van het Experience Platform die de Edit planningsoptie in de het plannen stap benadrukt.](assets/august/edit-schedule.png) {width="250" align="center" zoomable="yes"} |
+| Bewerk dossiernamen voor veelvoudige uitgevoerde publiek in [ plannend stap ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | De optie om de namen van meerdere geëxporteerde bestanden rechtstreeks te bewerken vanuit de planningsstap van de workflow voor publieksactivering is nu beschikbaar voor alle klanten. ![ Beeld van het gebruikersinterface van het Experience Platform die de Edit dossiernaamoptie in de het plannen stap benadrukt.](assets/august/edit-file-name.png) {width="250" align="center" zoomable="yes"} |
+| Verwijder veelvoudige publiek uit een dataflow van de [ pagina van de Details van de Bestemming ](../../destinations/ui/destination-details-page.md#bulk-remove). | De optie om meerdere soorten publiek te verwijderen uit bestaande gegevensstromen van de pagina **[!UICONTROL Destination Details]** is nu beschikbaar voor alle klanten. ![ Beeld van het gebruikersinterface van het Experience Platform die de Remove publieksoptie in de pagina van de Details van de Bestemming benadrukt.](assets/august/bulk-remove-audiences.png) {width="250" align="center" zoomable="yes"} |
+| De uitvoer veelvoudige dossiers op bestelling aan partijbestemmingen van de [ pagina van de Details van de Bestemming ](../../destinations/ui/destination-details-page.md#bulk-export). | De optie om meerdere bestanden op aanvraag naar batchbestemmingen te exporteren vanaf de pagina **[!UICONTROL Destination Details]** is nu beschikbaar voor alle klanten. ![ Beeld van het gebruikersinterface van het Experience Platform die het dossier van de Uitvoer nu optie in de pagina van de Details van de Bestemming benadrukt.](assets/august/bulk-export-file-now.png) {width="250" align="center" zoomable="yes"} |
+| Bewerk dossiernamen voor veelvoudige uitgevoerde publiek van de [ pagina van de Details van de Bestemming ](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | U kunt de namen van meerdere geëxporteerde bestanden nu rechtstreeks vanaf de pagina **[!UICONTROL Destination Details]** bewerken. ![ Beeld van het gebruikersinterface van het Experience Platform die de uitgeeft optie van de dossiernaam in de pagina van bestemmingsdetails benadrukken.](assets/august/edit-file-name-destination-details.png) {width="250" align="center" zoomable="yes"} |
+| Verwijder veelvoudige datasets uit een dataflow van de [ pagina van de Details van de Bestemming ](../../destinations/ui/export-datasets.md#remove-dataset). | De optie om veelvoudige datasets uit een dataflow te verwijderen is nu beschikbaar aan alle klanten. ![ Beeld van het gebruikersinterface van het Experience Platform die de Remove optie van datasets in de pagina van bestemmingsdetails benadrukt.](assets/august/bulk-remove-datasets.png) {width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+Voor meer informatie, lees het [ overzicht van bestemmingen ](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+
+**Nieuwe eigenschappen**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Maken van een ML-ondersteund schema | Gebruik geavanceerde computerleeralgoritmen om uw voorbeeld-CSV-gegevensbestanden te analyseren en automatisch geoptimaliseerde schema&#39;s te maken met standaard- en aangepaste velden.<br> Zeer belangrijke Eigenschappen:<br><ul><li>Sneller schema maken: Genereer schema&#39;s rechtstreeks vanuit voorbeeldgegevensbestanden met behulp van door ML aanbevolen en gegenereerde XDM-velden.</li><li>Flexibele evolutie van schema: voeg gemakkelijk gebieden in het geproduceerde schema toe of werk gebieden bij.</li><li>Naadloze integratie: volledig geïntegreerd met de stroom van het kernschema creëren in het Schema Ul, die een vlotte en samenhangende gebruikerservaring verzekert.</li><li>Efficiënte revisie en bewerking: bekijk en werk uw schema snel bij met de Platte weergave-editor, zodat het ontwerpproces efficiënter en gebruiksvriendelijker wordt.</li></ul> |
+
+{style="table-layout:auto"}
+
+<!-- To learn more, read the [ML-assisted schema creation overview](../../xdm/ui/ml-assisted-schema-creation.md)  -->
+
+Voor meer informatie over XDM in Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
 
 ## Identiteitsservice {#identity-service}
 
@@ -30,6 +73,20 @@ Gebruik Adobe Experience Platform Identity Service om een uitgebreide weergave v
 {style="table-layout:auto"}
 
 Voor meer informatie over de Dienst van de Identiteit, lees het [ overzicht van de Dienst van de Identiteit ](../../identity-service/home.md).
+
+## Segmenteringsservice {#segmentation}
+
+Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, vooruitzichten, gebruikers of organisaties) segmenteren naar het publiek. U kunt een publiek maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile] -gegevens. Deze soorten publiek worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn gemakkelijk toegankelijk voor elke Adobe.
+
+**Bijgewerkte eigenschappen**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Inktdetails | Voor publiek met de Aangepaste upload oorsprong, kunt u vollediger details van de opname van het publiek binnen de pagina van publieksdetails bekijken. Bovendien kunt u labels toepassen op de payload-kenmerken door het schema te selecteren en de gewenste kenmerken voor de labels te selecteren. Meer informatie over de sectie van de ingangsdetails kan in de [ Poortgids van het Poortaal van het Publiek ](../../segmentation/ui/audience-portal.md#ingestion-details) worden gevonden. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het [ overzicht van de Segmentatie ](../../segmentation/home.md).
 
 ## Bronnen
 
