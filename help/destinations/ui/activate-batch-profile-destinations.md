@@ -3,7 +3,7 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: dab3b432cac4ad416576f9d3d35e679d9483c816
+source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
 workflow-type: tm+mt
 source-wordcount: '3909'
 ht-degree: 0%
@@ -346,7 +346,7 @@ Laten we eens kijken naar de volgende twee profielen.
         "id": "johndoe_1@example.com"
       },
       {
-        "id": "johndoe_2@example.com"
+        "id": "doejohn_1@example.com"
       }
     ]
   },
@@ -377,10 +377,10 @@ Laten we eens kijken naar de volgende twee profielen.
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_1@example.com"
+        "id": "johndoe_2@example.com"
       },
       {
-        "id": "johndoe_2@example.com"
+        "id": "doejohn_2@example.com"
       }
     ]
   },
@@ -420,8 +420,8 @@ Als deduplicatie wordt verondersteld door de naamruimte [!DNL Email] , bevat het
 
 | E-mail* | PersonalEmail | firstName | lastName |
 |---|---|---|---|
-| johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
+| doejohn_2@example.com | johndoe@example.com | John | D |
 
 ### Gebruiksscenario voor deduplicatie 3: deduplicatie op basis van één profielkenmerk {#deduplication-use-case-3}
 
