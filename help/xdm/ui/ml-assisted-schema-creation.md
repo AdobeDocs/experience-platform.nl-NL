@@ -1,14 +1,19 @@
 ---
 title: Machine Learning-Assisted Schema maken
 description: Leer hoe u een schema maakt in de gebruikersinterface van het Experience Platform.
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+badgeBeta: label="Beta" type="Informative"
+source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
 
 # Machine leren-ondersteund schema maken
+
+>[!AVAILABILITY]
+>
+>* Het maken van schema&#39;s met leerondersteuning voor machines staat momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 Gebruik ML-algoritmen om een schema te genereren op basis van voorbeeldgegevens. Dit proces bespaart tijd en verhoogt nauwkeurigheid wanneer het bepalen van de structuur, de gebieden, en de gegevenstypes voor grote complexe datasets.
 

@@ -5,9 +5,9 @@ title: Een schema maken met de Schema-editor
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met behulp van de Schema-editor in het Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
 workflow-type: tm+mt
-source-wordcount: '4668'
+source-wordcount: '4660'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Het dialoogvenster [!UICONTROL Create a schema] wordt weergegeven. In dit dialoo
 
 ![ creeer een schemadialoog met de werkschemaopties en selecteer benadrukt.](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### Handmatig of met ML ondersteund schema maken {#manual-or-assisted}
+### [!BADGE  Beta ] {type=Informative} Handboek of ML-bijgestaan schemaverwezenlijking {#manual-or-assisted}
 
 Leren hoe u een algoritme van XML kunt gebruiken om een schemastructuur te adviseren die op een geupload dossier wordt gebaseerd, zie de [ machine het leren-bijgewoonde gids van de schemaverwezenlijking ](../ui/ml-assisted-schema-creation.md). Deze UI-handleiding is gericht op de workflow voor handmatig maken.
 
@@ -84,13 +84,13 @@ De lus [!DNL Schema Editor] wordt weergegeven. Dit is het canvas waarop u het sc
 
 >[!NOTE]
 >
->U kunt de weergavenaam en de optionele beschrijving voor het schema bijwerken via de zijbalk van **[!UICONTROL Schema properties]** . Zodra een nieuwe naam is ingegaan, werkt het canvas automatisch bij om op de nieuwe naam van het schema te wijzen.
+U kunt de weergavenaam en de optionele beschrijving voor het schema bijwerken via de zijbalk van **[!UICONTROL Schema properties]** . Zodra een nieuwe naam is ingegaan, werkt het canvas automatisch bij om op de nieuwe naam van het schema te wijzen.
 
 ![ de Redacteur van het Schema met de benadrukte basisklasse en schemadiagram.](../images/tutorials/create-schema/loyalty-members-schema-editor.png)
 
 >[!NOTE]
 >
->U kunt [ de klasse van een schema ](#change-class) op om het even welk punt tijdens het aanvankelijke samenstellingsproces veranderen alvorens het schema is bewaard, maar dit zou met extreme voorzichtigheid moeten worden gedaan. Veldgroepen zijn alleen compatibel met bepaalde klassen. Als u de klasse wijzigt, worden het canvas en alle velden die u hebt toegevoegd opnieuw ingesteld.
+U kunt [ de klasse van een schema ](#change-class) op om het even welk punt tijdens het aanvankelijke samenstellingsproces veranderen alvorens het schema is bewaard, maar dit zou met extreme voorzichtigheid moeten worden gedaan. Veldgroepen zijn alleen compatibel met bepaalde klassen. Als u de klasse wijzigt, worden het canvas en alle velden die u hebt toegevoegd opnieuw ingesteld.
 
 ## Een veldgroep toevoegen {#field-group}
 
@@ -126,17 +126,17 @@ Het schemacanvas verschijnt opnieuw. De sectie **[!UICONTROL Field groups]** bev
 
 >[!NOTE]
 >
->Binnen de Redacteur van het Schema, worden de standaard (Adobe-geproduceerde) klassen en de gebiedsgroepen vermeld met het hangslotpictogram (![ A hangslotpictogram.](/help/images/icons/lock-closed.png). Het hangslot verschijnt in de linkerspoorstaaf naast de klasse of de naam van de gebiedsgroep, evenals naast om het even welk gebied in het schemadiagram dat een deel van een systeem-geproduceerde middel is.
+Binnen de Redacteur van het Schema, worden de standaard (Adobe-geproduceerde) klassen en de gebiedsgroepen vermeld met het hangslotpictogram (![ A hangslotpictogram.](/help/images/icons/lock-closed.png). Het hangslot verschijnt in de linkerspoorstaaf naast de klasse of de naam van de gebiedsgroep, evenals naast om het even welk gebied in het schemadiagram dat een deel van een systeem-geproduceerde middel is.
 >
->![ de Redacteur van het Schema met het gemarkeerde hangslotpictogram ](../images/ui/explore/padlock-icon-highlight.png)
+![ de Redacteur van het Schema met het gemarkeerde hangslotpictogram ](../images/ui/explore/padlock-icon-highlight.png)
 
-Deze veldgroep draagt verschillende velden onder de naam op hoofdniveau `person` bij met het gegevenstype &quot;[!UICONTROL Person]&quot;. In deze groep velden wordt informatie over een individu beschreven, zoals naam, geboortedatum en geslacht.
+Deze veldgroep voegt verschillende velden onder de naam op hoofdniveau `person` toe aan het gegevenstype "[!UICONTROL Person]&quot;. In deze groep velden wordt informatie over een individu beschreven, zoals naam, geboortedatum en geslacht.
 
 >[!NOTE]
 >
->Vergeet niet dat in velden scalaire typen kunnen worden gebruikt (zoals een tekenreeks, geheel getal, array of datum), en ook elk gegevenstype (een groep velden die een algemeen concept vertegenwoordigen) dat in de [!DNL Schema Registry] is gedefinieerd.
+Vergeet niet dat velden scalaire typen kunnen gebruiken (such als tekenreeks, geheel getal, array of datum) en elk gegevenstype (a groep velden die een algemeen concept vertegenwoordigen) gedefinieerd in [!DNL Schema Registry] .
 
-Het veld `name` heeft het gegevenstype &quot;[!UICONTROL Full name]&quot;. Dit houdt in dat het ook een algemeen concept beschrijft en aan namen gerelateerde subvelden bevat, zoals voornaam, achternaam, hoffelijkheidstitel en achtervoegsel.
+Het veld `name` heeft een gegevenstype of &quot;[!UICONTROL Full name]&quot;, wat betekent dat het ook een algemeen concept beschrijft en aan naam gerelateerde subvelden bevat zoals voornaam, achternaam, beleefdheidstitel en achtervoegsel.
 
 Selecteer de verschillende velden op het canvas om extra velden weer te geven die worden toegevoegd aan de schemastructuur.
 
@@ -154,7 +154,7 @@ Het canvas verschijnt weer met de toegevoegde veldgroepen die onder **[!UICONTRO
 
 ## Een aangepaste veldgroep definiëren {#define-field-group}
 
-Het schema [!UICONTROL Loyalty Members] is bedoeld om gegevens te vangen met betrekking tot de leden van een loyaliteitsprogramma, en de standaard [!UICONTROL Loyalty Details] gebiedsgroep die u aan het schema toevoegde verstrekt de meesten van deze, met inbegrip van het programmatype, de punten, de verbindingsdatum, en meer.
+Het schema [!UICONTROL Loyalty Members] is bedoeld om gegevens vast te leggen die betrekking hebben op de leden van een loyaliteitsprogramma. De standaardveldgroep van [!UICONTROL Loyalty Details] die u aan het schema hebt toegevoegd, bevat de meeste hiervan, inclusief het programmatype. points, join-datum en meer.
 
 Er kan echter een scenario zijn waarin u extra aangepaste velden wilt opnemen die niet door standaardveldgroepen worden gedekt om uw gebruiksgevallen te bereiken. Als u velden voor aangepaste loyaliteit toevoegt, hebt u twee opties:
 
@@ -167,7 +167,7 @@ Als u een nieuwe veldgroep wilt maken, selecteert u **[!UICONTROL Add]** in de *
 
 >[!NOTE]
 >
->Net als bij klassennamen moet de naam van de veldgroep kort en eenvoudig zijn en beschrijven wat de veldgroep aan het schema zal bijdragen. Ook deze zijn uniek, dus u kunt de naam niet opnieuw gebruiken en moet er dus voor zorgen dat deze voldoende specifiek is.
+Net als bij klassennamen moet de naam van de veldgroep kort en eenvoudig zijn en beschrijven wat de veldgroep aan het schema zal bijdragen. Ook deze zijn uniek, dus u kunt de naam niet opnieuw gebruiken en moet er dus voor zorgen dat deze voldoende specifiek is.
 
 &quot;[!DNL Custom Loyalty Details]&quot; moet nu worden weergegeven onder **[!UICONTROL Field groups]** aan de linkerkant van het canvas, maar er zijn nog geen velden aan gekoppeld en daarom verschijnen er geen nieuwe velden onder **[!UICONTROL Structure]** .
 
@@ -183,7 +183,7 @@ De tijdelijke aanduiding &quot;[!UICONTROL Untitled Field]&quot; wordt weergegev
 
 ![ de Redacteur van het Schema met [!UICONTROL Untitled Field] en het benadrukte schema [!UICONTROL Field properties].](../images/tutorials/create-schema/untitled-field.png)
 
-In dit scenario, moet het schema een voorwerp-type gebied hebben dat de huidige loyaliteitsrij van de persoon in detail beschrijft. Gebruikend de controles in het juiste spoor, begin een `loyaltyTier` gebied met type &quot;[!UICONTROL Object]&quot;te creëren dat zal worden gebruikt om uw verwante gebieden te houden.
+In dit scenario moet het schema een objecttype hebben field dat een gedetailleerde beschrijving geeft van de huidige loyaliteitslaag van de persoon . Start met de besturingselementen in de rechtertrack een `loyaltyTier` -veld met tekst. "[!UICONTROL Object] &quot; die wordt gebruikt voor de weergave van verwante velden.
 
 Onder **[!UICONTROL Assign to]** moet u een veldgroep selecteren waaraan u het veld wilt toewijzen. Houd er rekening mee dat alle schemavelden tot een klasse of een veldgroep behoren. Aangezien in dit schema een standaardklasse wordt gebruikt, kunt u alleen een veldgroep selecteren. Begin in de naam &quot;[!DNL Custom Loyalty Details]&quot; te typen, dan selecteer de gebiedsgroep van de lijst.
 
@@ -197,9 +197,9 @@ De wijzigingen worden toegepast en het nieuwe `loyaltyTier` -object wordt weerge
 
 >[!NOTE]
 >
->De aanwezigheid van het voorwerp van huurderidentiteitskaart wijst erop dat de gebieden u toevoegt in namespace van uw organisatie bevat zijn.
+De aanwezigheid van het voorwerp van huurderidentiteitskaart wijst erop dat de gebieden u toevoegt in namespace van uw organisatie bevat zijn.
 >
->Met andere woorden, de velden die u toevoegt, zijn uniek voor uw organisatie en worden opgeslagen in de [!DNL Schema Registry] in een specifiek gebied dat alleen voor uw organisatie toegankelijk is. De gebieden u bepaalt moeten altijd aan uw huurdersnamespace worden toegevoegd om botsingen met namen van andere standaardklassen, gebiedsgroepen, gegevenstypes, en gebieden te verhinderen.
+Met andere woorden, de velden die u toevoegt, zijn uniek voor uw organisatie en worden opgeslagen in de [!DNL Schema Registry] in een specifiek gebied dat alleen voor uw organisatie toegankelijk is. De gebieden u bepaalt moeten altijd aan uw huurdersnamespace worden toegevoegd om botsingen met namen van andere standaardklassen, gebiedsgroepen, gegevenstypes te verhinderen, and velden.
 
 Selecteer **plus (+)** pictogram naast het `loyaltyTier` voorwerp beginnen subfields toe te voegen. Er wordt een nieuwe plaatsaanduiding voor velden weergegeven en de sectie **[!UICONTROL Field properties]** wordt aan de rechterkant van het canvas weergegeven.
 
@@ -211,10 +211,10 @@ Voor elk veld is de volgende informatie vereist:
    * Voorbeeld: loyaltyLevel
 * **[!UICONTROL Display Name]:** De naam van het gebied, geschreven in titelgeval. Dit is de naam die op het canvas wordt weergegeven wanneer u het schema weergeeft of bewerkt.
    * Voorbeeld: Loyaliteitsniveau
-* **[!UICONTROL Type]:** Het gegevenstype van het veld. Dit zijn elementaire scalaire typen en alle gegevenstypen die in de [!DNL Schema Registry] zijn gedefinieerd. Voorbeelden: [!UICONTROL String] , [!UICONTROL Integer] , [!UICONTROL Boolean] , [!UICONTROL Person] , [!UICONTROL Address] , [!UICONTROL Phone number] , enzovoort.
+* **[!UICONTROL Type]:** Het gegevenstype of het veld. Dit omvat fundamentele scalaire types and alle gegevenstypen defined in de [!DNL Schema Registry] . Voorbeelden: [!UICONTROL String] , [!UICONTROL Integer] , [!UICONTROL Boolean] , [!UICONTROL Person] , [!UICONTROL Address] , [!UICONTROL Phone number] , enzovoort.
 * **[!UICONTROL Description]:** Een optionele beschrijving van het veld moet maximaal 200 tekens bevatten.
 
-Het eerste veld voor het `loyaltyTier` -object is een tekenreeks met de naam `id` die de id van de huidige laag van het loyaliteitslid vertegenwoordigt. Identiteitskaart van de rij zal uniek voor elk loyaliteitlid zijn, aangezien dit bedrijf verschillende die puntdrempels van de loyaliteitsrij voor elke klant plaatst op verschillende factoren wordt gebaseerd. Stel het type van het nieuwe veld in op &quot;[!UICONTROL String]&quot; en de sectie **[!UICONTROL Field properties]** wordt gevuld met verschillende opties voor het toepassen van beperkingen, zoals standaardwaarde, opmaak en maximumlengte. Zie de documentatie over [ beste praktijken voor de gebieden van de gegevensbevestiging ](../schema/best-practices.md#data-validation-fields) om meer te leren.
+Het eerste veld voor het `loyaltyTier` -object is een tekenreeks met de naam `id` die de id van de huidige laag van het loyaliteitslid vertegenwoordigt. Identiteitskaart van de rij zal uniek voor elk loyaliteitlid zijn, aangezien dit bedrijf verschillende die puntdrempels van de loyaliteitsrij voor elke klant plaatst op verschillende factoren wordt gebaseerd. Het type van het nieuwe veld instellen to &quot;[!UICONTROL String]&quot; en de sectie **[!UICONTROL Field properties]** wordt gevuld met verschillende opties voor het toepassen van beperkingen, zoals standaardwaarde, opmaak en maximumlengte. Zie de documentatie over [ beste praktijken voor de gebieden van de gegevensbevestiging ](../schema/best-practices.md#data-validation-fields) om meer te leren.
 
 ![ de Redacteur van het Schema met de waarden van het gebiedsbezit voor het nieuwe benadrukte gebied van identiteitskaart.](../images/tutorials/create-schema/string-constraints.png)
 
@@ -238,12 +238,12 @@ Wanneer dit is voltooid, bevat het object `loyaltyTier` velden voor `id` , `curr
 
 ## Een opsommingsveld toevoegen aan de veldgroep {#enum}
 
-Wanneer u velden in de [!DNL Schema Editor] definieert, zijn er enkele aanvullende opties die u kunt toepassen op standaardveldtypen om verdere beperkingen op te leggen aan de gegevens die het veld kan bevatten. De gebruiksgevallen voor deze beperkingen worden in de volgende tabel uitgelegd:
+Bij het definiëren van velden in de [!DNL Schema Editor] zijn er enkele extra opties die u kunt toepassen op standaardveldtypen in om verdere beperkingen te bieden aan de gegevens die het veld kan bevatten. De gebruiksgevallen voor deze beperkingen worden in de volgende tabel uitgelegd:
 
 | Restrictie | Beschrijving |
 | --- | --- |
 | [!UICONTROL Required] | Geeft aan dat het veld verplicht is voor gegevensinvoer. Om het even welke gegevens die aan een dataset worden geupload die op dit schema wordt gebaseerd dat dit gebied niet bevat zullen op opname ontbreken. |
-| [!UICONTROL Array] | Geeft aan dat het veld een array van waarden bevat, elk met het opgegeven gegevenstype. Bijvoorbeeld, gebruikend deze beperking op een gebied met een gegevenstype van &quot;[!UICONTROL String]&quot;specificeert dat het gebied een serie van koorden zal bevatten. |
+| [!UICONTROL Array] | Geeft aan dat het veld een array van waarden bevat, elk met het gegevenstype specified. Deze beperking bijvoorbeeld gebruiken voor een veld met een gegevenstype of &quot;[!UICONTROL String]&quot; specificeert dat het gebied een serie van koorden zal bevatten. |
 | [!UICONTROL Enum & Suggested Values] | Een opsomming geeft aan dat dit veld een van de waarden uit een opsommingslijst met mogelijke waarden moet bevatten. U kunt deze optie ook gebruiken om alleen een lijst met voorgestelde waarden voor een tekenreeksveld op te geven zonder het veld tot die waarden te beperken. |
 | [!UICONTROL Identity] | Geeft aan dat dit veld een identiteitsveld is. Meer informatie betreffende identiteitsgebieden wordt verstrekt [ later in dit leerprogramma ](#identity-field). |
 | [!UICONTROL Relationship] | Hoewel schemarelaties kunnen worden afgeleid door het gebruik van het samenvoegingsschema en [!DNL Real-Time Customer Profile] , geldt dit alleen voor schema&#39;s die dezelfde klasse delen. De beperking [!UICONTROL Relationship] geeft aan dat dit veld verwijst naar de primaire identiteit van een schema op basis van een andere klasse, wat een relatie tussen de twee schema&#39;s impliceert. Zie het leerprogramma op [ bepalend een verhouding ](./relationship-ui.md) voor meer informatie. |
@@ -284,7 +284,7 @@ In een toekomstig schema, kon u een gebied als &quot;[!DNL Loyalty Tier]&quot;ty
 
 >[!NOTE]
 >
->U kunt ook aangepaste gegevenstypen maken en bewerken, onafhankelijk van het bewerken van schema&#39;s. Zie de gids bij [ het creëren van en het uitgeven van gegevenstypes ](../ui/resources/data-types.md) voor meer informatie.
+U kunt ook aangepaste gegevenstypen maken en bewerken, onafhankelijk van het bewerken van schema&#39;s. Zie de gids bij [ het creëren van en het uitgeven van gegevenstypes ](../ui/resources/data-types.md) voor meer informatie.
 
 ## Schema-velden zoeken en filteren
 
@@ -298,7 +298,7 @@ Als u een specifiek veld in uw schema zoekt, kunt u ook de zoekbalk gebruiken om
 
 >[!IMPORTANT]
 >
->De zoekfunctie houdt bij het weergeven van overeenkomende velden rekening met alle geselecteerde veldgroepfilters. Als een zoekquery de resultaten die u verwacht niet weergeeft, moet u mogelijk twee keer controleren of er geen relevante veldgroepen worden uitgefilterd.
+De zoekfunctie houdt bij het weergeven van overeenkomende velden rekening met alle geselecteerde veldgroepfilters. Als een zoekquery de resultaten die u verwacht niet weergeeft, moet u mogelijk twee keer controleren of er geen relevante veldgroepen worden uitgefilterd.
 
 ## Een schemaveld instellen als een identiteitsveld {#identity-field}
 
@@ -310,15 +310,15 @@ Bijvoorbeeld, kunnen er duizenden leden van het loyaliteitsprogramma tot het zel
 
 >[!IMPORTANT]
 >
->De stappen hieronder beschrijven hoe te om een identiteitsbeschrijver aan een bestaand schemagebied toe te voegen. Als alternatief voor het definiëren van identiteitsvelden binnen de structuur van het schema zelf, kunt u ook een `identityMap` -veld gebruiken voor het bevatten van identiteitsgegevens.
+De stappen hieronder beschrijven hoe te om een identiteitsbeschrijver aan een bestaand schemagebied toe te voegen. Als alternatief voor het definiëren van identiteitsvelden binnen de structuur van het schema zelf, kunt u ook een `identityMap` -veld gebruiken voor het bevatten van identiteitsgegevens.
 >
->Als u `identityMap` wilt gebruiken, moet u er rekening mee houden dat elke primaire identiteit die u rechtstreeks aan het schema toevoegt, hierdoor wordt overschreven. Zie de sectie over `identityMap` in de [ grondbeginselen van de gids van de schemacompositie ](../schema/composition.md#identityMap) voor meer informatie.
+Als u `identityMap` wilt gebruiken, moet u er rekening mee houden dat elke primaire identiteit die u rechtstreeks aan het schema toevoegt, hierdoor wordt overschreven. Zie de sectie over `identityMap` in de [ grondbeginselen van de gids van de schemacompositie ](../schema/composition.md#identityMap) voor meer informatie.
 
 Selecteer het veld `personalEmail.address` op het canvas en schakel het selectievakje **[!UICONTROL Identity]** onder **[!UICONTROL Field properties]** in. Schakel het selectievakje in en kies de optie om deze in te stellen terwijl de **[!UICONTROL Primary identity]** wordt weergegeven. Selecteer dit vak ook.
 
 >[!NOTE]
 >
->Elk schema mag slechts één primair identiteitsveld bevatten. Zodra een schemagebied als primaire identiteit is geplaatst, zult u een foutenmelding ontvangen als u later probeert om een ander identiteitsgebied in het schema als primaire identiteit te plaatsen.
+Elk schema mag slechts één primair identiteitsveld bevatten. Zodra een schemagebied als primaire identiteit is geplaatst, zult u een foutenmelding ontvangen als u later probeert om een ander identiteitsgebied in het schema als primaire identiteit te plaatsen.
 
 Vervolgens moet u een **[!UICONTROL Identity namespace]** opgeven uit de lijst met vooraf gedefinieerde naamruimten in het vervolgkeuzemenu. Aangezien dit veld het e-mailadres van de klant is, selecteert u &quot;[!UICONTROL Email]&quot; in de vervolgkeuzelijst. Selecteer **[!UICONTROL Apply]** om de updates voor het veld `personalEmail.address` te bevestigen.
 
@@ -326,7 +326,7 @@ Vervolgens moet u een **[!UICONTROL Identity namespace]** opgeven uit de lijst m
 
 >[!NOTE]
 >
->Voor een lijst van standaard namespaces en hun definities, zie de [[!DNL Identity Service]  documentatie ](../../identity-service/troubleshooting-guide.md#standard-namespaces).
+Voor een lijst van standaard namespaces en hun definities, zie de [[!DNL Identity Service]  documentatie ](../../identity-service/troubleshooting-guide.md#standard-namespaces).
 
 Nadat de wijziging is toegepast, wordt op het pictogram voor `personalEmail.address` een vingerafdruksymbool weergegeven om aan te geven dat het nu een identiteitsveld is. Het veld wordt ook weergegeven in de linkertrack onder **[!UICONTROL Identities]** .
 
@@ -354,7 +354,7 @@ Selecteer **[!UICONTROL Profile]** en er verschijnt een pop-up met de vraag of u
 
 >[!WARNING]
 >
->Als een schema eenmaal is ingeschakeld voor [!DNL Real-Time Customer Profile] en opgeslagen, kan het niet worden uitgeschakeld.
+Als een schema eenmaal is ingeschakeld voor [!DNL Real-Time Customer Profile] en opgeslagen, kan het niet worden uitgeschakeld.
 
 Selecteer **[!UICONTROL Enable]** om uw keuze te bevestigen. U kunt desgewenst de schakeloptie **[!UICONTROL Profile]** opnieuw selecteren om het schema uit te schakelen, maar als het schema is opgeslagen terwijl [!DNL Profile] is ingeschakeld, kan het niet meer worden uitgeschakeld.
 
@@ -366,20 +366,20 @@ In de Schema-editor kunt u ook snel handelingen uitvoeren om de JSON-structuur v
 
 ### Schema verwijderen {#delete-a-schema}
 
->[!CONTEXTUALHELP]
->id="platform_schemas_delete_profileenabledwithdatasets"
->title="Kan schema niet verwijderen"
->abstract="Het schema kan niet worden geschrapt omdat het voor Profiel is toegelaten en bijbehorende datasets heeft."
+[!CONTEXTUALHELP]
+id="platform_schemas_delete_profileenabledwithdatasets"
+title="Kan schema niet verwijderen"
+abstract="Het schema kan niet worden geschrapt omdat het voor Profiel is toegelaten en bijbehorende datasets heeft."
 
->[!CONTEXTUALHELP]
->id="platform_schemas_delete_profileenablednodatasets"
->title="Kan schema niet verwijderen"
->abstract="Het schema kan niet worden verwijderd omdat het is ingeschakeld voor Profiel."
+[!CONTEXTUALHELP]
+id="platform_schemas_delete_profileenablednodatasets"
+title="Kan schema niet verwijderen"
+abstract="Het schema kan niet worden verwijderd omdat het is ingeschakeld voor Profiel."
 
->[!CONTEXTUALHELP]
->id="platform_schemas_delete_withdatasetsnotprofileenabled"
->title="Kan schema niet verwijderen"
->abstract="Het schema kan niet worden geschrapt omdat het bijbehorende datasets heeft."
+[!CONTEXTUALHELP]
+id="platform_schemas_delete_withdatasetsnotprofileenabled"
+title="Kan schema niet verwijderen"
+abstract="Het schema kan niet worden geschrapt omdat het bijbehorende datasets heeft."
 
 Een schema kan binnen UI van de Redacteur van het Schema worden geschrapt gebruikend [!UICONTROL More] acties en ook van de schemadetails op het [!UICONTROL Browse] lusje. Er zijn bepaalde voorwaarden die voorkomen dat een schema wordt verwijderd. Een schema kan niet worden verwijderd als:
 
@@ -405,7 +405,7 @@ Het schema &quot;Loyalty Member&quot; is ook beschikbaar voor weergave en beheer
 
 >[!WARNING]
 >
->De gebruikersinterface van [!DNL Platform] in de volgende video&#39;s is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+De gebruikersinterface van [!DNL Platform] in de volgende video&#39;s is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 
 In de volgende video ziet u hoe u een eenvoudig schema maakt in de gebruikersinterface van [!DNL Platform] .
 
@@ -429,6 +429,6 @@ U kunt de klasse van een schema op om het even welk punt tijdens het aanvankelij
 
 >[!WARNING]
 >
->Het opnieuw toewijzen van de klasse voor een schema zou met uiterste voorzichtigheid moeten worden gedaan. Veldgroepen zijn alleen compatibel met bepaalde klassen. Als u de klasse wijzigt, worden het canvas en alle velden die u hebt toegevoegd opnieuw ingesteld.
+Het opnieuw toewijzen van de klasse voor een schema zou met uiterste voorzichtigheid moeten worden gedaan. Veldgroepen zijn alleen compatibel met bepaalde klassen. Als u de klasse wijzigt, worden het canvas en alle velden die u hebt toegevoegd opnieuw ingesteld.
 
 Leren hoe te om de klasse van een schema te veranderen, zie de gids op [ het leiden schema&#39;s in UI ](../ui/resources/schemas.md#change-class).

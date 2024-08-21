@@ -2,9 +2,9 @@
 title: Gegevenstype verzameling sessiegegevens
 description: Leer over het gegevenstype Sessiedetails Collection Data Model (XDM).
 exl-id: ffe6bcf7-61e1-4f7a-ba95-7fcb78683cc9
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,6 @@ ht-degree: 0%
 | [[!UICONTROL Broadcast Content Type]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-type) | `contentType` | String | Ja | De [!UICONTROL Broadcast Content Type] van de levering van de stream. Beschikbare waarden per [!UICONTROL Stream Type] omvatten:<br> Audio: &quot;lied&quot;, &quot;podcast&quot;, &quot;audiobook&quot;, en &quot;radio&quot;;<br> Video: &quot;VoD&quot;, &quot;Levend&quot;, &quot;Lineair&quot;, &quot;UGC&quot;, en &quot;DVoD&quot;.<br> Klanten kunnen douanewaarden voor deze parameter verstrekken. |
 | [[!UICONTROL Broadcast Network]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#network) | `network` | String | Nee | De netwerk-/kanaalnaam. |
 | [[!UICONTROL Content Channel]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-channel) | `channel` | String | Ja | De [!UICONTROL Content Channel] is het distributiekanaal van waaruit de inhoud is afgespeeld. |
-| [[!UICONTROL Content Completes]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-complete) | `isCompleted` | Boolean | Nee | [!UICONTROL Content Completes] geeft aan of een getimede media-element is gecontroleerd op voltooiing. Deze gebeurtenis betekent niet noodzakelijkerwijs dat de viewer de hele video heeft bekeken. De viewer heeft mogelijk een voorsprong overgeslagen. |
 | [!UICONTROL Content Delivery Network] | `cdn` | String | Nee | De [!UICONTROL Content Delivery Network] van de afgespeelde inhoud. |
 | [[!UICONTROL Content ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-id) | `name` | string | Ja | [!UICONTROL Content ID] is een unieke id van de inhoud. Het kan worden gebruikt om terug naar andere industrie of CMS IDs te verbinden. |
 | [[!UICONTROL Content Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-name-(variable)) | `friendlyName` | String | Nee | De [!UICONTROL Content Name] is de &#39;vriendelijke&#39; (leesbare) naam van de inhoud. |
@@ -45,7 +44,6 @@ ht-degree: 0%
 | [[!UICONTROL Genre]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#genre) | `genre` | String | Nee | Het type of de groep inhoud zoals gedefinieerd door de inhoudsproducent. Waarden moeten door komma&#39;s worden gescheiden in een variabele implementatie. |
 | [[!UICONTROL Media Authorized]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#authorized) | `authorized` | String | Nee | Bevestigt of de gebruiker via de authentificatie van de Adobe is toegelaten. |
 | [[!UICONTROL Media Content Length]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-length-(variable)) | `length` | Geheel | Ja | [!UICONTROL Media Content Length] bevat de lengte/runtime van de clip. Dit is de maximale lengte (of duur) van de inhoud die wordt verbruikt (in seconden). |
-| [[!UICONTROL Media Starts]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#media-starts) | `isViewed` | Boolean | Nee | De gebeurtenis load voor de media. Dit gebeurt wanneer de viewer de afspeelknop selecteert. Dit telt zelfs als er pre-roladvertenties, het bufferen, fouten, etc. zijn. |
 | [[!UICONTROL MVPD Identifier]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#mvpd) | `mvpd` | String | Nee | De MVPD-id (Multi-channel Video Programming Distributor) die via verificatie van de Adobe is opgegeven. |
 | [[!UICONTROL Publisher]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#publisher) | `publisher` | String | Nee | De naam van de uitgever van de audio-inhoud. |
 | [[!UICONTROL Radio Station]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#station) | `station` | String | Nee | De naam van het radiostation waarop de audio wordt afgespeeld. |
@@ -60,10 +58,3 @@ ht-degree: 0%
 | [[!UICONTROL Version]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#sdk-version) | `appVersion` | String | Nee | De SDK-versie die door de speler wordt gebruikt. Dit kan elke aangepaste waarde hebben die voor uw speler zinnig is. |
 
 {style="table-layout:auto"}
-
-<!-- This is required for sessionStart. 
-Q) How do I indicate that?
-Q) Do you know where to link for:
-Ad Load Type
-Content Delivery Network
- -->

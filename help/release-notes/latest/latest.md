@@ -1,7 +1,7 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2024
 description: De release van augustus 2024 bevat opmerkingen over Adobe Experience Platform.
-source-git-commit: 67152524c9448ad1c6cd1f25437e5ed69900ef84
+source-git-commit: d01e16938485f6648cc02ce1674e0e9e84d78147
 workflow-type: tm+mt
 source-wordcount: '1294'
 ht-degree: 1%
@@ -69,11 +69,9 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 | Functie | Beschrijving |
 | --- | --- |
-| Maken van een ML-ondersteund schema | Gebruik geavanceerde computerleeralgoritmen om uw voorbeeld-CSV-gegevensbestanden te analyseren en automatisch geoptimaliseerde schema&#39;s te maken met standaard- en aangepaste velden.<br> Zeer belangrijke Eigenschappen:<br><ul><li>Sneller schema maken: Genereer schema&#39;s rechtstreeks vanuit voorbeeldgegevensbestanden met behulp van door ML aanbevolen en gegenereerde XDM-velden.</li><li>Flexibele evolutie van schema: voeg gemakkelijk gebieden in het geproduceerde schema toe of werk gebieden bij.</li><li>Naadloze integratie: volledig geïntegreerd met de stroom van het kernschema creëren in het Schema Ul, die een vlotte en samenhangende gebruikerservaring verzekert.</li><li>Efficiënte revisie en bewerking: bekijk en werk uw schema snel bij met de Platte weergave-editor, zodat het ontwerpproces efficiënter en gebruiksvriendelijker wordt.</li></ul> |
+| Maken van een ML-ondersteund schema | Gebruik geavanceerde computerleeralgoritmen om uw bestanden met voorbeeldgegevens te analyseren en automatisch geoptimaliseerde schema&#39;s te maken met standaard- en aangepaste velden.<br> Zeer belangrijke Eigenschappen:<br><ul><li>Sneller schema maken: Genereer schema&#39;s rechtstreeks vanuit voorbeeldgegevensbestanden met behulp van door ML aanbevolen en gegenereerde XDM-velden.</li><li>Flexibele evolutie van schema: voeg gemakkelijk gebieden in het geproduceerde schema toe of werk gebieden bij.</li><li>Naadloze integratie: volledig geïntegreerd met de stroom van het kernschema creëren in het Schema Ul, die een vlotte en samenhangende gebruikerservaring verzekert.</li><li>Efficiënte revisie en bewerking: bekijk en werk uw schema snel bij met de Platte weergave-editor, zodat het ontwerpproces efficiënter en gebruiksvriendelijker wordt.</li></ul><br> om meer te leren, leest de [ ML-Bijgewerkte gids van het schemaverwezenlijking ](../../xdm/ui/ml-assisted-schema-creation.md). |
 
 {style="table-layout:auto"}
-
-Om meer te leren, lees het [ ML-Bijgewerkte overzicht van de schemaverwezenlijking ](../../xdm/ui/ml-assisted-schema-creation.md)
 
 Voor meer informatie over XDM in Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
 
