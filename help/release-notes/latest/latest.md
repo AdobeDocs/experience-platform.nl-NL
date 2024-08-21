@@ -1,7 +1,7 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2024
 description: De release van augustus 2024 bevat opmerkingen over Adobe Experience Platform.
-source-git-commit: f3004071f7e023cc3ddc8b5a4c8fefd5636fd9a8
+source-git-commit: cbfbac0ad2e43424b22a283d1a2f55bdcb11159b
 workflow-type: tm+mt
 source-wordcount: '1080'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Updates van bestaande functies en documentatie in Experience Platform:
 
 [!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
-**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
+**Nieuwe of bijgewerkte functionaliteit**
 
 | Functie | Beschrijving |
 | ----------- | ----------- |
