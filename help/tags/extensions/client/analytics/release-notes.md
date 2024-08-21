@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Analytics Extension
 description: De meest recente release bevat informatie over de Adobe Analytics-tagextensie in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: fbb8e2e7944fc6ef5be6fb0c6dc0ef256ca65b77
+source-git-commit: c783906b20db2b86d58aea7b3a94bde007c0a465
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1451'
 ht-degree: 1%
 
 ---
@@ -16,6 +16,14 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 >[!NOTE]
 >
 >De de markeringsuitbreiding van de Analyse als vaak bijgewerkt in antwoord op updates aan de [ bibliotheek van JavaScript van het AppMeasurement ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html). Verwijs naar de [ nota&#39;s van de de versieversie van het AppMeasurement ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) voor details op de specifieke hieronder vermelde versies.
+
+## dinsdag 12 augustus 2024
+
+**Uitbreiding 1.9.5 van Adobe Analytics**
+
+**Eigenschappen**:
+
+* Geüpgraded aan [ AppMeasurement aan v2.27.0 ](https://github.com/adobe/appmeasurement/releases/tag/v2.27.0).
 
 ## dinsdag 4 maart 2024
 
