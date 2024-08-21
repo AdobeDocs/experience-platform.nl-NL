@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2024
 description: De release van augustus 2024 bevat opmerkingen over Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6d8c785a1e876ed6a729efbe01ad8fb4507bda0d
+source-git-commit: d6eb2050cdc3d51cf8ff4189c6b9f78469f14fa9
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1031'
 ht-degree: 2%
 
 ---
@@ -57,7 +57,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 {style="table-layout:auto"}
 
-<!-- To learn more, read the [ML-assisted schema creation overview](../../xdm/ui/ml-assisted-schema-creation.md)  -->
+Om meer te leren, lees het [ ML-Bijgewerkte overzicht van de schemaverwezenlijking ](../../xdm/ui/ml-assisted-schema-creation.md)
 
 Voor meer informatie over XDM in Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
 
