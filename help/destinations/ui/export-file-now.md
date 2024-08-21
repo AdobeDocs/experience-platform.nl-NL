@@ -3,20 +3,15 @@ title: De dossiers van de uitvoer op bestelling aan partijbestemmingen gebruiken
 type: Tutorial
 description: Leer hoe u bestanden op aanvraag exporteert naar batchbestemmingen met behulp van de interface van het Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 97ae720fa4d081fcf8d6b84c81a2131e55b9b1b5
+source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '649'
 ht-degree: 0%
 
 ---
 
 
 # De dossiers van de uitvoer op bestelling aan partijbestemmingen gebruikend Experience Platform UI
-
->[!IMPORTANT]
->
->De optie **[!UICONTROL Export file now]** in Adobe Experience Platform bevindt zich momenteel in Beta. De documentatie en functionaliteit kunnen worden gewijzigd.
->Neem contact op met uw Adobe voor toegang tot deze functie.
 
 >[!IMPORTANT]
 > 

@@ -3,9 +3,9 @@ keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
 description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, publiek in kaart gebracht aan de bestemming, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9ebdf6e675ddfe03f43b56ed10f625a7d000a662
+source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1226'
 ht-degree: 0%
 
 ---
@@ -144,11 +144,7 @@ Als u meerdere soorten publiek wilt verwijderen uit bestaande activeringsstromen
 
 ![ het scherm van de Gegevens van de Activering die de Remove publieksoptie benadrukken.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### [!BADGE  Beta ] {type=Informative} de veelvoudige dossiers van de Uitvoer op bestelling aan partijbestemmingen {#bulk-export}
-
->[!NOTE]
->
-Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen.
+### Meerdere bestanden op aanvraag exporteren naar batchbestemmingen {#bulk-export}
 
 U kunt [ veelvoudige dossiers op bestelling ](../ui/export-file-now.md) van de **[!UICONTROL Activation data]** pagina uitvoeren. Hiervoor selecteert u het publiek waarvoor u bestanden op aanvraag wilt exporteren en selecteert u het besturingselement **[!UICONTROL Export file now]** om een eenmalige export te activeren waarmee een bestand voor elk geselecteerd publiek naar uw batchdoel wordt verzonden.
 
@@ -162,7 +158,7 @@ Als u het bestaande activeringsschema van meerdere soorten publiek tegelijk wilt
 
 >[!NOTE]
 >
-Voor details bij het onderzoeken van de detailspagina van een publiek, verwijs naar het [ Poortoverzicht van het Poort van het Publiek ](../../segmentation/ui/audience-portal.md#segment-details).
+>Voor details bij het onderzoeken van de detailspagina van een publiek, verwijs naar het [ Poortoverzicht van het Poort van het Publiek ](../../segmentation/ui/audience-portal.md#segment-details).
 
 ### Bestandsnamen bewerken voor meerdere soorten publiek die naar batchbestemmingen worden geëxporteerd {#bulk-edit-file-names}
 
