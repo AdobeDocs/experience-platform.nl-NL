@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
+source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
 workflow-type: tm+mt
-source-wordcount: '3909'
+source-wordcount: '4029'
 ht-degree: 0%
 
 ---
@@ -110,6 +110,10 @@ Experience Platform stelt automatisch een standaardschema in voor elke bestandsu
 
 ![ geeft programmacontrole uit die in de Plannende stap wordt benadrukt.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
+Als u meerdere schema&#39;s tegelijk wilt bewerken, selecteert u het publiek met de selectievakjes aan de linkerkant van het scherm en selecteert u vervolgens **[!UICONTROL Edit schedule]** . Het schema u vormt zal dan op alle uitgevoerde dossiers voor het geselecteerde publiek worden toegepast.
+
+![ Beeld van het gebruikersinterface van het Experience Platform die uitgeeft planningsoptie voor veelvoudige geselecteerde publiek tonen.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+
 >[!TIP]
 >
 >U kunt de activeringsschema&#39;s voor het publiek voor bestaande activeringsstromen bewerken via de pagina **[!UICONTROL Activation data]** . Zie de documentatie op [ bulkhet uitgeven activeringsprogramma&#39;s ](../ui/destination-details-page.md#bulk-edit-schedule) voor details.
@@ -200,7 +204,7 @@ Selecteer **[!UICONTROL Export incremental files]** om een exportbewerking te st
 
 4. Selecteer **[!UICONTROL Create]** om het schema op te slaan.
 
-### Bestandsnamen configureren
+### Bestandsnamen configureren {#configure-file-names}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
@@ -234,6 +238,10 @@ De doelnaam en de gebruikers-id kunnen niet uit bestandsnamen worden verwijderd.
 | **[!UICONTROL Sandbox name]** | De id van de sandbox die u gebruikt om het publiek te exporteren. |
 
 {style="table-layout:auto"}
+
+Als u meerdere bestandsnamen tegelijk wilt bewerken, selecteert u het publiek met de selectievakjes aan de linkerkant van het scherm en selecteert u vervolgens **[!UICONTROL Edit file name]** . De bestandsnaamopties die u configureert, worden vervolgens toegepast op alle geëxporteerde bestanden voor het geselecteerde publiek.
+
+![ Beeld van het gebruikersinterface van het Experience Platform die uitgeeft dossier - noem optie voor veelvoudige geselecteerde publiek tonen.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 Selecteer **[!UICONTROL Apply changes]** om uw selectie te bevestigen.
 

@@ -3,9 +3,9 @@ keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
 description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, publiek in kaart gebracht aan de bestemming, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9ebdf6e675ddfe03f43b56ed10f625a7d000a662
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1250'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Voer de onderstaande stappen uit om meer informatie over een bestaand doel weer 
 
    ![ doorbladert bestemmingen ](../assets/ui/details-page/browse-destinations.png)
 
-2. Selecteer het filterpictogram ![ filter-pictogram ](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
+2. Selecteer het filterpictogram ![ filter-pictogram ](../../images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
 
    ![ bestemmingen van de Filter ](../assets/ui/details-page/filter-destinations.png)
 
@@ -103,33 +103,52 @@ Voor meer informatie, lees over [ dataflow looppas aan het stromen bestemmingen 
 
 Voor dataflow wordt uitgevoerd naar op bestanden gebaseerde doelen, is de waarde **[!UICONTROL Processing duration]** afhankelijk van de grootte van de gegevens die worden geëxporteerd en het laden van het systeem. Bericht ook dat de dataflow looppas aan op dossier-gebaseerde bestemmingen uitgesplitst per publiek is.
 
-![ Beeld van de looppas Dataflow pagina met de kolom van de tijd van de Verwerking die voor een op dossier-gebaseerde bestemming wordt benadrukt.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+![ Beeld van de looppas Dataflow pagina met de kolom van de tijd van de Verwerking die voor een op dossier-gebaseerde bestemming wordt benadrukt.](../assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
 Voor meer informatie, lees over [ dataflow looppas aan partij (op dossier-gebaseerde) bestemmingen ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) in de controledocumentatie.
 
 ## [!UICONTROL Activation data] {#activation-data}
 
-Op het tabblad [!UICONTROL Activation data] wordt een lijst weergegeven met soorten publiek die aan de bestemming zijn toegewezen, inclusief de begindatum en einddatum (indien van toepassing) en andere relevante informatie voor de gegevensexport, zoals het exporttype, de planning en de frequentie. Als u de details over een bepaald publiek wilt weergeven, selecteert u de naam in de lijst.
+Op het tabblad **[!UICONTROL Activation data]** wordt een lijst weergegeven met soorten publiek die aan de bestemming zijn toegewezen, inclusief de begindatum en einddatum (indien van toepassing) en andere relevante informatie voor de gegevensexport, zoals het exporttype, de planning en de frequentie. Als u de details over een bepaald publiek wilt weergeven, selecteert u de naam in de lijst.
 
 >[!TIP]
 >
 >Om details over de attributen en de identiteiten uit te geven en uit te geven die aan een bestemming worden in kaart gebracht, selecteer **[!UICONTROL Activate audiences]** in de [ juiste spoorstaaf ](#right-rail).
 
+>[!BEGINSHADEBOX]
+
+Het tabblad **[!UICONTROL Activation data]** voor een doel op basis van een bestand.
+
 ![ de partijbestemming van de de meningspartij van de Gegevens van de Activering ](../assets/ui/details-page/activation-data-batch.png)
+
+>[!ENDSHADEBOX]
+
+
+>[!BEGINSHADEBOX]
+
+Het tabblad **[!UICONTROL Activation data]** voor een streamingdoel.
 
 ![ de gegevensmening die van de Activering bestemming ](../assets/ui/details-page/activation-data-streaming.png) stromen
 
-### [!BADGE  Beta ] {type=Informative} verwijdert veelvoudige publiek uit activeringsstromen {#bulk-remove}
+>[!ENDSHADEBOX]
 
->[!NOTE]
->
-Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen.
+### Actieve doelgroepen filteren {#filter-audiences}
+
+Als u wilt filteren door de lijst met soorten publiek die aan een doel zijn geactiveerd, voert u een publieksnaam in het zoekvak in. De lijst met doelgroepen wordt automatisch bijgewerkt met de zoekresultaten.
+
+![ vakje van het Onderzoek voor het filtreren publiek.](../assets/ui/details-page/filter-audiences.png)
+
+### Meerdere soorten publiek verwijderen uit activeringsstromen {#bulk-remove}
 
 Als u meerdere soorten publiek wilt verwijderen uit bestaande activeringsstromen, selecteert u het gewenste publiek en selecteert u vervolgens **[!UICONTROL Remove audiences]** .
 
 ![ het scherm van de Gegevens van de Activering die de Remove publieksoptie benadrukken.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### Meerdere bestanden op aanvraag exporteren naar batchbestemmingen {#bulk-export}
+### [!BADGE  Beta ] {type=Informative} de veelvoudige dossiers van de Uitvoer op bestelling aan partijbestemmingen {#bulk-export}
+
+>[!NOTE]
+>
+Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen.
 
 U kunt [ veelvoudige dossiers op bestelling ](../ui/export-file-now.md) van de **[!UICONTROL Activation data]** pagina uitvoeren. Hiervoor selecteert u het publiek waarvoor u bestanden op aanvraag wilt exporteren en selecteert u het besturingselement **[!UICONTROL Export file now]** om een eenmalige export te activeren waarmee een bestand voor elk geselecteerd publiek naar uw batchdoel wordt verzonden.
 
@@ -144,3 +163,9 @@ Als u het bestaande activeringsschema van meerdere soorten publiek tegelijk wilt
 >[!NOTE]
 >
 Voor details bij het onderzoeken van de detailspagina van een publiek, verwijs naar het [ Poortoverzicht van het Poort van het Publiek ](../../segmentation/ui/audience-portal.md#segment-details).
+
+### Bestandsnamen bewerken voor meerdere soorten publiek die naar batchbestemmingen worden geëxporteerd {#bulk-edit-file-names}
+
+Als u de geëxporteerde bestandsnamen van meerdere soorten publiek tegelijk wilt bewerken, selecteert u het gewenste publiek en selecteert u vervolgens **[!UICONTROL Edit file name]** . Voor gedetailleerde informatie over hoe te om een dossier te bepalen of uit te geven - noem, lees de sectie over hoe te [ te vormen dossiernamen ](../ui/activate-batch-profile-destinations.md#configure-file-names) sectie.
+
+![ het gegevensscherm van de Activering die de optie benadrukt om dossiernamen voor veelvoudige publiek uit te geven.](../assets/ui/details-page/bulk-edit-file-name.png)

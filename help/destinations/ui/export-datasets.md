@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 938e4875318f07b296fc884487ca1c664be659ef
+source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
 workflow-type: tm+mt
-source-wordcount: '1784'
+source-wordcount: '1762'
 ht-degree: 0%
 
 ---
@@ -211,10 +211,7 @@ Om datasets uit een bestaande gegevensstroom te verwijderen, volg de stappen hie
 
    ![ de beschikbare optie van de datasetnavigatie die in de kolom van de Gegevens van de Activering wordt benadrukt.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-3. [!BADGE  Beta ] de **[!UICONTROL Activation data]** pagina voor de bestemming verschijnt. Gebruik de selectievakjes aan de linkerkant van de lijst met gegevenssets om de gegevenssets te selecteren die u wilt verwijderen en selecteer vervolgens **[!UICONTROL Remove datasets]** in de rechterrail om het dialoogvenster voor het bevestigen van gegevenssets te openen.
-
-   >[!NOTE]
-   >Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen.
+3. De pagina **[!UICONTROL Activation data]** voor het doel wordt weergegeven. Gebruik de selectievakjes aan de linkerkant van de lijst met gegevenssets om de gegevenssets te selecteren die u wilt verwijderen en selecteer vervolgens **[!UICONTROL Remove datasets]** in de rechterrail om het dialoogvenster voor het bevestigen van gegevenssets te openen.
 
    ![ verwijder datasetdialoog die de Remove datasetcontrole in het juiste spoor toont.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
