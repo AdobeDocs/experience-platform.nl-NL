@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2024
 description: De release van augustus 2024 bevat opmerkingen over Adobe Experience Platform.
-source-git-commit: a44b7d5351168094041438c357dc47328975f70d
+source-git-commit: ab26566cb7f2586d709147686180625db4e920ec
 workflow-type: tm+mt
-source-wordcount: '1080'
-ht-degree: 2%
+source-wordcount: '1294'
+ht-degree: 1%
 
 ---
 
@@ -18,11 +18,28 @@ ht-degree: 2%
 
 Updates van bestaande functies en documentatie in Experience Platform:
 
+- [Toegangsbeheer op basis van kenmerken](#abac)
 - [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
+
+## Toegangsbeheer op basis van kenmerken {#abac}
+
+Toegangsbeheer op basis van kenmerken is een mogelijkheid van Adobe Experience Platform die privacybewuste merken meer flexibiliteit biedt om gebruikerstoegang te beheren. Afzonderlijke objecten zoals schemavelden en segmenten kunnen worden toegewezen aan gebruikersrollen. Met deze functie kunt u toegang tot afzonderlijke objecten verlenen of intrekken voor specifieke platformgebruikers in uw organisatie.
+
+Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisatie gebruikers&#39; toegang tot gevoelige persoonlijke gegevens (SPD) controleren, persoonlijk identificeerbare informatie (PII), en ander aangepast type van gegevens over alle werkschema&#39;s en middelen van het Platform. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.
+
+**Nieuwe eigenschap**
+
+| Functie-update | Beschrijving |
+| --- | --- |
+| Nieuwe functie voor machtigingenbeheer | U kunt [ Manager van de Toestemming ](../../access-control/abac/permission-manager/overview.md) nu gebruiken om rapporten te produceren gebruikend eenvoudige vragen, die u toegangsbeheer zullen begrijpen en tijd zullen bewaren controlerend toegangstoestemmingen over verscheidene werkschema&#39;s en granulariteitsniveaus. Voor meer informatie bij het creëren van rapporten voor gebruikers en rollen, zie de [ gebruikersgids van de Manager van de Toestemming ](../../access-control/abac/permission-manager/permissions.md). ![ gebruikersinterface die van het Experience Platform van het Beeld de Manager van de Toestemming in linkernav benadrukt.](assets/august/permission-manager-rn.png " Manager van de Toestemming in het gebruikersinterface."){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, zie het [ op attributen-gebaseerde toegangsbeheeroverzicht ](../../access-control/abac/overview.md). Voor een uitvoerige gids over het op attribuut-gebaseerde toegangsbeheerwerkschema, lees de [ op attribuut-gebaseerde gids van begin tot eind van de toegangscontrole ](../../access-control/abac/end-to-end-guide.md).
 
 ## Doelen {#destinations}
 
