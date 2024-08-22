@@ -3,9 +3,9 @@ keywords: reclame, bureau voor de handel, reclamebureau
 title: De verbinding van de handelsbureau
 description: De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en mobiele inventarisatiebronnen.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 916c56cf8fa25c40c061b3bddc57ba2fa59cbbb1
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[!DNL The Trade Desk] -doel helpt u profielgegevens naar [!DNL The Trade Desk] te verzenden.
+Gebruik deze doelconnector om profielgegevens naar [!DNL The Trade Desk] te verzenden. Deze schakelaar verzendt gegevens naar het [!DNL The Trade Desk] eerste partijeindpunt. De integratie tussen Adobe Experience Platform en [!DNL The Trade Desk] biedt geen ondersteuning voor het exporteren van gegevens naar het eindpunt van derden voor [!DNL The Trade Desk] .
 
-[!DNL The Trade Desk] is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen uitvoeren voor verschillende soorten weergave, video en mobiele inventarisatiebronnen.
+[!DNL The Trade Desk] is een zelfbedieningsplatform dat kopers van advertenties in staat stelt doelgerichte digitale campagnes uit te voeren voor alle weergave-, video- en mobiele-inventarisbronnen.
 
-Als u profielgegevens naar [!DNL Trade Desk] wilt verzenden, moet u eerst verbinding maken met het doel.
+Als u profielgegevens naar [!DNL Trade Desk] wilt verzenden, moet u eerst verbinding maken met het doel, zoals wordt beschreven in de volgende secties van deze pagina.
 
 ## Gebruiksscenario’s {#use-cases}
 
-Als een markeerteken wil ik publiek dat is opgebouwd uit [!DNL Trade Desk IDs] of apparaat-id&#39;s kunnen gebruiken om doelgerichte digitale campagnes te maken.
+Als markator, wil ik publiek kunnen gebruiken dat van [!DNL Trade Desk IDs] of apparaat IDs wordt gebouwd om het richten of publiek-gerichte digitale campagnes te creëren.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -62,7 +62,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming met [!DNL The Trade Desk] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in de Dienst van identiteitskaart van het Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebt toegelaten, gelieve uit te reiken aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL The Trade Desk] -integratie hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
+>Als u uw eerste bestemming met [!DNL The Trade Desk] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) in de Dienst van identiteitskaart van het Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebt toegelaten, gelieve uit te reiken aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL The Trade Desk] -integratie hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -79,7 +79,7 @@ Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de vol
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Account ID]**: Uw [!DNL Trade Desk] [!UICONTROL Account ID] .
-* **[!UICONTROL Server Location]**: Vraag uw [!DNL Trade Desk] -vertegenwoordiger welke regionale server u moet gebruiken. Dit zijn de beschikbare regionale servers waaruit u kunt kiezen:
+* **[!UICONTROL Server Location]**: Vraag uw [!DNL Trade Desk] -vertegenwoordiger welke regionale server u moet gebruiken. Hieronder ziet u de beschikbare regionale servers waaruit u kunt kiezen:
    * **[!UICONTROL Europe]**
    * **[!UICONTROL Singapore]**
    * **[!UICONTROL Tokyo]**
@@ -104,7 +104,7 @@ Zie [ publieksgegevens aan het stromen publiek de uitvoerbestemmingen ](../../ui
 
 In het [ programma van het Publiek ](../../ui/activate-segment-streaming-destinations.md#scheduling) stap, moet u uw publiek aan hun overeenkomstige identiteitskaart of vriendschappelijke naam in het bestemmingsplatform manueel in kaart brengen.
 
-Wanneer het in kaart brengen van segmenten, adviseren wij u de het publieksnaam van het Platform of een kortere vorm van het, voor gebruiksgemak gebruiken. De gebruikers-id of naam in uw bestemming hoeft echter niet overeen te komen met de naam in uw platformaccount. Elke waarde die u in het toewijzingsveld invoegt, wordt weerspiegeld door het doel.
+Bij het toewijzen van publiek, adviseert de Adobe dat u de het publieksnaam van het Platform of een kortere vorm van het gebruikt, voor gemak van gebruik. De gebruikers-id of naam in uw bestemming hoeft echter niet overeen te komen met de naam in uw platformaccount. Elke waarde die u in het toewijzingsveld invoegt, wordt weerspiegeld door het doel.
 
 Als u meerdere apparaattoewijzingen gebruikt (cookie-id&#39;s, [!DNL IDFA], [!DNL GAID] ), moet u voor alle drie toewijzingen dezelfde toewijzingswaarde gebruiken. [!DNL The Trade Desk] zal alle hen in één enkel segment, met een apparaat-vlakke onderbreking bijeenvoegen.
 
@@ -112,4 +112,4 @@ Als u meerdere apparaattoewijzingen gebruikt (cookie-id&#39;s, [!DNL IDFA], [!DN
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Controleer uw [!DNL Trade Desk] -account om te controleren of gegevens zijn geëxporteerd naar [!DNL The Trade Desk] -doel. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
+Controleer uw [!DNL Trade Desk] -account om te controleren of gegevens naar de [!DNL The Trade Desk] -bestemming zijn geëxporteerd. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.

@@ -3,9 +3,9 @@ title: (Beta) Trade Desk - CRM connection
 description: Activeer profielen aan uw rekening van het Bureau van de Handel voor publiek gericht en onderdrukking die op de gegevens van CRM wordt gebaseerd.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 3c645ccf5b9dd17e4c3cc1267b60a9c4f1131668
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1114'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,8 @@ ht-degree: 0%
 ## Overzicht {#overview}
 
 Dit document is ontworpen om u te helpen profielen naar uw [!DNL Trade Desk] -account activeren voor publiek dat zich richt op en onderdrukt op basis van CRM-gegevens.
+
+Deze schakelaar verzendt gegevens naar het [!DNL The Trade Desk] eerste partijeindpunt. De integratie tussen Adobe Experience Platform en [!DNL The Trade Desk] biedt geen ondersteuning voor het exporteren van gegevens naar het eindpunt van derden voor [!DNL The Trade Desk] .
 
 [!DNL The Trade Desk(TTD)] handelt het geüploade bestand met e-mailadressen nooit rechtstreeks af en [!DNL The Trade Desk] slaat uw onbewerkte (ongehashte) e-mails niet op.
 
@@ -138,9 +140,9 @@ Doelvelden selecteren:
 
 ## Gegevens exporteren valideren {#validate}
 
-Als u wilt controleren of gegevens correct vanuit het Experience Platform naar [!DNL The Trade Desk] worden geëxporteerd, zoekt u het publiek onder de gegevenstegel Adobe 1PD in het [!DNL The Trade Desk] Data Management Platform (DMP). Hier volgen de stappen voor het zoeken van de bijbehorende id in de gebruikersinterface van [!DNL Trade Desk] :
+Als u wilt controleren of gegevens correct vanuit het Experience Platform naar [!DNL The Trade Desk] worden geëxporteerd, zoekt u het publiek onder de datatielabel Adobe 1PD in het [!DNL The Trade Desk] Data Management Platform (DMP). Hier volgen de stappen voor het zoeken van de bijbehorende id in de gebruikersinterface van [!DNL Trade Desk] :
 
-1. Klik eerst op het tabblad **[!UICONTROL Data]** en revisie **[!UICONTROL First-Party]** .
+1. Selecteer eerst de tab **[!UICONTROL Data]** en bekijk de sectie **[!UICONTROL First-Party]** .
 2. Schuif omlaag op de pagina, onder **[!UICONTROL Imported Data]** , zoekt u de **[!UICONTROL Adobe 1PD Tile]** .
 3. Klik op de tegel** [!UICONTROL Adobe 1PD]** en hierin worden alle soorten publiek weergegeven die zijn geactiveerd voor de [!DNL Trade Desk] -bestemming voor uw adverteerder. U kunt ook de zoekfunctie gebruiken.
 4. Segment-id # van Experience Platform wordt weergegeven als Segmentnaam in de gebruikersinterface van [!DNL Trade Desk] .
