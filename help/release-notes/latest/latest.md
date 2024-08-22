@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2024
 description: De release van augustus 2024 bevat opmerkingen over Adobe Experience Platform.
-source-git-commit: d01e16938485f6648cc02ce1674e0e9e84d78147
+source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1343'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,16 @@ Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, zie het [ op a
 
 [!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
-**Nieuwe of bijgewerkte functionaliteit**
+**Nieuwe of bijgewerkte bestemmingen** {#new-updated-destinations}
+
+| Doel | Beschrijving |
+| ----------- | ----------- |
+| [ Ruw ](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] beheert een aantal verschillende exemplaren voor hun dashboard en REST eindpunten. [!UICONTROL Braze] klanten zouden het correcte die Eindpunt van REST moeten gebruiken op welke instantie wordt gebaseerd u provisioned aan. Deze versie voegt een nieuw eindpunt toe US-07 dat u kunt selecteren wanneer het verbinden met [!UICONTROL Braze]. |
+
+{style="table-layout:auto"}
+
+**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
+
 
 | Functie | Beschrijving |
 | ----------- | ----------- |
