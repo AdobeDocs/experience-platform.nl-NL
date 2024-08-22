@@ -3,9 +3,9 @@ title: Configuratie-hulplijn voor identiteitsgrafiek met koppelingsregels
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: e3568aa925661f4f519daf6572fd2df40b163cb5
+source-git-commit: 3d96e057123a4dd0b4f6f34a64a93c756b583c9b
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1350'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Voor instructies op hoe te om een dataset tot stand te brengen, lees de [ gids U
 >
 >* Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek verklaarde gebeurtenissen die uw systeem naar Experience Platform zal verzenden altijd een persoonsidentificatie, zoals CRMID bevatten.
 >* Tijdens de implementatie moet u ervoor zorgen dat de unieke naamruimte met de hoogste prioriteit altijd aanwezig is in elk profiel. Zie [ bijlage ](#appendix) voor voorbeelden van grafiekscenario&#39;s die door ervoor te zorgen worden opgelost dat elk profiel unieke namespace met de hoogste prioriteit bevat.
->* Als u de [ bronVerbinding van Adobe Analytics ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruikt om gegevens in te voeren, dan moet u uw ECIDs een hogere prioriteit geven dan STEUN omdat de Dienst van de Identiteit HULP blokkeert. Door ECID als prioriteit toe te wijzen, kunt u de Dienst van de Identiteit opdracht geven om niet-geverifieerde gebeurtenissen op te slaan aan ECID in plaats van HULP.
+>* Als u de [ bronVerbinding van Adobe Analytics ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruikt om gegevens in te voeren, dan moet u uw ECIDs een hogere prioriteit geven dan STEUN omdat de Dienst van de Identiteit HULP blokkeert. Door ECID een prioriteit te geven, kunt u Real-Time Klantprofiel de opdracht geven om niet-geverifieerde gebeurtenissen op te slaan naar ECID in plaats van naar HULP.
 
 Op dit punt, zou u het volgende moeten hebben:
 
