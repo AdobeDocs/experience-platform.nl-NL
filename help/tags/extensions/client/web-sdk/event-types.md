@@ -3,9 +3,9 @@ title: Gebeurtenistypen in de Adobe Experience Platform Web SDK-extensie
 description: Leer hoe u gebeurtenistypen gebruikt die door de Adobe Experience Platform Web SDK-extensie in Adobe Experience Platform Launch worden geleverd.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
@@ -260,3 +260,14 @@ if (propositions) {
   // them in some other way.
 }
 ```
+
+## [!UICONTROL Subscribe ruleset items] {#subscribe-ruleset-items}
+
+Met het gebeurtenistype **[!UICONTROL Subscribe ruleset items]** kunt u zich abonneren op Adobe Journey Optimizer-inhoudskaarten voor een oppervlak. Telkens wanneer de regels worden geëvalueerd, ontvangt de callback die aan dit bevel wordt verstrekt een resultaatvoorwerp met voorstellen die de gegevens van de inhoudskaart houden.
+
+![ Beeld van het gebruikersinterface van de markeringen van het Experience Platform die het de puntgebeurtenistype van de Linialen van het Abonneren tonen.](assets/subscribe-ruleset-items.png)
+
+Dit gebeurtenistype ondersteunt de volgende configureerbare eigenschappen:
+
+* **[!UICONTROL Schemas]**: Een array van schema&#39;s waarvoor u zich op inhoudskaarten wilt abonneren. U kunt de schema&#39;s manueel ingaan of door een gegevenselement te verstrekken.
+* **[!UICONTROL Surfaces]**: een array met oppervlakken waarvoor u zich wilt abonneren op inhoudskaarten. U kunt de oppervlakken handmatig invoeren of een gegevenselement opgeven.
