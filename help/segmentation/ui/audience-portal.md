@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
+source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
 workflow-type: tm+mt
-source-wordcount: '3963'
+source-wordcount: '4046'
 ht-degree: 0%
 
 ---
@@ -161,6 +161,18 @@ Voor meer informatie bij het creëren van en het leiden van markeringen, te leze
 #### Mappen {#folders}
 
 U kunt een publiek in mappen plaatsen voor een beter publieksbeheer.
+
+Selecteer **[!UICONTROL Create folder]** als u een map wilt maken waarin uw publiek zich kan bevinden.
+
+![ de Create omslagknoop wordt benadrukt.](../images/ui/audience-portal/create-folder.png)
+
+>[!NOTE]
+>
+>U kunt alleen een map maken als u zich in een andere map bevindt. Dit betekent u **niet** een omslag kan tot stand brengen als u **[!UICONTROL All Audiences]** op de linkernavigatiebar hebt geselecteerd.
+
+Er wordt een pop-up weergegeven, waarin u de nieuwe map een naam kunt geven. Selecteer **[!UICONTROL Save]** na de naam van de map om het maken van de map te voltooien. Gelieve te merken op dat de namen **** aan de ouderomslag uniek moeten zijn.
+
+![ sparen knoop op creeert de omslagdialoog wordt benadrukt.](../images/ui/audience-portal/create-folder-dialog.png)
 
 Als u een publiek naar een map wilt verplaatsen, selecteert u **[!UICONTROL Move to folder]** voor het publiek dat u wilt verplaatsen.
 
