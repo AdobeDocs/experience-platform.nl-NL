@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2024
 description: De release van augustus 2024 bevat opmerkingen over Adobe Experience Platform.
-source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
+source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1493'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 1%
 Updates van bestaande functies en documentatie in Experience Platform:
 
 - [Toegangsbeheer op basis van kenmerken](#abac)
+- [Gegevensopname](#data-ingestion)
 - [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
@@ -40,6 +41,19 @@ Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisat
 {style="table-layout:auto"}
 
 Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, zie het [ op attributen-gebaseerde toegangsbeheeroverzicht ](../../access-control/abac/overview.md). Voor een uitvoerige gids over het op attribuut-gebaseerde toegangsbeheerwerkschema, lees de [ op attribuut-gebaseerde gids van begin tot eind van de toegangscontrole ](../../access-control/abac/end-to-end-guide.md).
+
+## Gegevensinname (bijgewerkt op 23 augustus) {#data-ingestion}
+
+Adobe Experience Platform biedt een uitgebreide reeks functies voor het invoeren van elk type en elke vertraging van gegevens. U kunt opnemen met de API&#39;s Batch of Streaming via Adobe, partners voor gegevensintegratie of de interface van Adobe Experience Platform.
+
+**Update tot datum formatteren behandeling in batch gegevens opnemen**
+
+Deze versie richt een kwestie met de *behandeling van het datumformaat* in partij gegevensopname. Eerder transformeerde het systeem datumvelden die door clients waren ingevoegd als `Date` in `DateTime` -indeling. Dit betekende dat de tijdzone automatisch werd toegevoegd aan velden en dat dit problemen opriep voor gebruikers die de `Date` -indeling wensten of nodig hadden. Als u doorgaat, wordt de tijdzone niet automatisch toegevoegd aan velden van het type `Date` . Deze update zorgt ervoor dat de geëxporteerde indeling van gegevens overeenkomt met de indeling die op verzoek van klanten wordt weergegeven in het profiel voor dat veld.
+
+`Date` velden vóór de release : `"birthDate": "2018-01-12T00:00:00Z"`
+`Date` velden na de release: `"birthDate": "2018-01-12"`
+
+Lees meer over [ partij ingestie ](/help/ingestion/batch-ingestion/overview.md).
 
 ## Doelen {#destinations}
 
