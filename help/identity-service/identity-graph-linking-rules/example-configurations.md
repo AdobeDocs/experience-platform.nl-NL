@@ -2,9 +2,9 @@
 title: Handleiding Grafiekconfiguraties
 description: Leer over gemeenschappelijke grafiekscenario's die u zou kunnen ontmoeten wanneer het werken met identiteitsgrafiek die regels en identiteitsgegevens verbindt.
 badge: Beta
-source-git-commit: a1f12f266b74bd88fbb1c1a095bb6f6eb565612b
+source-git-commit: 90faa4079d8a58898774c1fbbae2adae01f7e0a2
 workflow-type: tm+mt
-source-wordcount: '2757'
+source-wordcount: '2749'
 ht-degree: 1%
 
 ---
@@ -478,7 +478,7 @@ In dit scenario is er één CRMID die een persoonentiteit vertegenwoordigt. Een 
 
 | Gebruikte naamruimten | Webgedragsverzamelingsmethode |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics bron schakelaar **Nota:** Door gebrek, wordt AIDs geblokkeerd in de Dienst van de Identiteit, daarom moet u een hogere prioriteit op uw ECIDs over AID plaatsen, wanneer het gebruiken van de bron van Analytics. Lees de [ implementatiegids ](configuration.md#ingest-your-data) voor meer informatie. |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics-bronaansluiting. <br> **Nota:** Door gebrek, wordt AIDs geblokkeerd in de Dienst van de Identiteit, daarom moet u een hogere prioriteit op uw ECIDs plaatsen dan AIDs, wanneer het gebruiken van de bron van Analytics. Lees de [ implementatiegids ](configuration.md#ingest-your-data) voor meer informatie.</br> |
 
 **Gebeurtenissen:**
 
@@ -488,11 +488,11 @@ U kunt dit scenario in grafieksimulatie tot stand brengen door de volgende gebeu
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID: ID_A
 CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111, AAID: AAA
+loginID: ID_A, ECID: 111
 CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
 CRMID: Summer, loginID: ID_C
 CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222, AAID: BBB
+loginID: ID_C, ECID: 222
 ```
 
 **configuratie van het Algoritme:**
@@ -532,7 +532,7 @@ Hieronder ziet u een voorbeeld van twee single-person-grafieken met elk één CR
 
 >[!TAB  multi-persoongrafiek: gedeeld apparaat 1 ]
 
-Hieronder ziet u een gezamenlijk apparaatscenario voor meerdere personen waarbij `{ECID:111, AAID:AAA}` zowel is gekoppeld aan `{loginID:ID_A}` als aan `{loginID:ID_C}` . In dit geval worden de oudere, gevestigde koppelingen verwijderd ten gunste van de meer recent gevestigde koppelingen.
+Hieronder ziet u een gezamenlijk apparaatscenario voor meerdere personen waarbij `{ECID:111}` is gekoppeld aan zowel `{loginID:ID_A}` als `{loginID:ID_C}` . In dit geval worden de oudere, gevestigde koppelingen verwijderd ten gunste van de meer recent gevestigde koppelingen.
 
 ![ Meerpersoonsgedeeld scenario van de apparatengrafiek.](../images/graph-examples/complex_shared_device_one.png)
 
@@ -634,9 +634,9 @@ CRMID: Summer, Phone_SHA256: 111-1111
 
 >[!ENDTABS]
 
-## Gebruik in andere Adoben
+## Gebruik in andere Adobe Commerce
 
-In de voorbeelden van grafiekconfiguratie in deze sectie worden voorbeelden beschreven van het gebruik van gevallen voor Real-time Customer Data Platform, Adobe Journey Optimizer en Adobe Commerce. De voorbeelden hieronder zijn gericht op retailklanten met twee gebruikerstypen:
+In de voorbeelden van grafiekconfiguratie in deze sectie worden gebruiksscenario&#39;s voor Adobe Commerce beschreven. De voorbeelden hieronder zijn gericht op retailklanten met twee gebruikerstypen:
 
 * Geregistreerde gebruiker (gebruikers die een account hebben gemaakt)
 * Gastgebruikers (gebruikers die alleen een e-mailadres hebben)
