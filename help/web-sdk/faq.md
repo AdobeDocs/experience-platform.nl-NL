@@ -1,10 +1,9 @@
 ---
 title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Hiermee krijgt u antwoorden op veelgestelde vragen over de Adobe Experience Platform Web SDK.
-exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: cd2ac132c77d5d2e90c0f881d7b89a3c339fed6f
+source-git-commit: ed22c76b2805f1baab2ae3c82e1133e1fd8c9f72
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2033'
 ht-degree: 1%
 
 ---
@@ -172,33 +171,9 @@ Als u momenteel zowel beveiligde als niet-beveiligde secties op uw website hebt,
 
 ## Welke browsers steunt het Web SDK van Adobe Experience Platform?
 
-De SDK van Adobe Experience Platform Web is ontworpen om optimaal te werken in de nieuwste versies van Google Chrome, Safari, Firefox, Internet Explorer 11 en Microsoft Edge Chromium. Het kan lastig zijn om bepaalde functies te gebruiken in oudere versies van browsers.
+De SDK van Adobe Experience Platform Web is ontworpen om optimaal te werken in de nieuwste versies van Google Chrome, Safari, Firefox en Microsoft Edge Chromium. Het kan lastig zijn om bepaalde functies te gebruiken in oudere versies van browsers of verouderde browsers, zoals Internet Explorer.
 
 ## Waar kan ik meer informatie krijgen over Adobe Experience Platform Web SDK?
 
 * [Documentatie](/help/web-sdk/home.md)
 * [ de Code van Source ](https://github.com/adobe/alloy)
-
-### Ondersteuning voor Internet Explorer {#support-internet-explore}
-
-Deze SDK gebruikt beloftes, die een methode zijn om de voltooiing van asynchrone taken mee te delen. De [ Promise ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementatie die door SDK wordt gebruikt wordt native gesteund door alle doelbrowsers behalve [!DNL Internet Explorer]. Om SDK op [!DNL Internet Explorer] te gebruiken, moet u `window.Promise` [ hebben gepolyvullend ](https://remysharp.com/2010/10/08/what-is-a-polyfill).
-
-Bepalen of u `window.Promise` al hebt opgevuld:
-
-1. Open uw website in [!DNL Internet Explorer] .
-1. Open de foutopsporingsconsole van de browser.
-1. Typ `window.Promise` in de console en druk op Enter.
-
-Als er iets anders dan `undefined` wordt weergegeven, hebt u waarschijnlijk al een polyvulling `window.Promise` . Een andere manier om te bepalen of `window.Promise` gevuld is, is door uw website te laden nadat u de bovenstaande installatie-instructies hebt voltooid. Als de SDK een fout genereert die iets over een belofte vermeldt, hebt u waarschijnlijk niet gepolymeerd `window.Promise` .
-
-Als u hebt bepaald dat u moet polyfill `window.Promise` , neemt u de volgende scripttag op boven de eerder opgegeven basiscode:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
-```
-
-Met deze tag wordt een script geladen waarmee wordt gecontroleerd of `window.Promise` een geldige Promise-implementatie is.
-
->[!NOTE]
->
->Als u een andere Promise-implementatie wilt laden, moet u ervoor zorgen dat deze `Promise.prototype.finally` ondersteunt.
