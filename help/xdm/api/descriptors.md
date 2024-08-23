@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Descriptors API-eindpunt
 description: Het /descriptors eindpunt in de Registratie API van het Schema staat u toe om XDM beschrijvers binnen uw ervaringstoepassing programmatically te beheren.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 44355aa2ddf03b20aca64c6675414b73682bc2b5
+source-git-commit: 866e00459c66ea4678cd98d119a7451fd8e78253
 workflow-type: tm+mt
-source-wordcount: '1917'
+source-wordcount: '1918'
 ht-degree: 0%
 
 ---
@@ -291,7 +291,7 @@ In de volgende sectie vindt u aanvullende informatie over het werken met descrip
 
 >[!NOTE]
 >
->Het maximumaantal beschrijvingen dat op een schema kan worden toegepast is 4000.
+>Het maximumaantal descriptors dat op de sandbox van een organisatie kan worden toegepast, is 4000.
 
 In de volgende secties vindt u een overzicht van de beschikbare descriptortypen, inclusief de vereiste velden voor het definiëren van een descriptor voor elk type.
 
