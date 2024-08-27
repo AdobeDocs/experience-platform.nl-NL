@@ -2,7 +2,7 @@
 title: Gegevenssignalen bijhouden om de levenswaarde van uw klant te genereren
 description: Deze gids verstrekt een demonstratie van begin tot eind op hoe te om Gegevens Distiller en user-defined dashboards met Real-time Customer Data Platform te gebruiken om de waarde van het klantenleven te meten en te visualiseren.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -47,7 +47,7 @@ De eerste stap in het vestigen van uw CLV is een afgeleide dataset van de gegeve
 
 ## Het gegevensmodel en de planningsupdates van inzichten uitbreiden {#extend-data-model-and-set-refresh-schedule}
 
-Vervolgens moet u een aangepast gegevensmodel maken of een bestaand Adobe Real-Time CDP-gegevensmodel uitbreiden voor de toepassing van uw CLV-rapporteringsinzichten. Zie de documentatie leren hoe te [ een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards ](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model) bouwen. De zelfstudie behandelt de volgende stappen:
+Vervolgens moet u een aangepast gegevensmodel maken of een bestaand Adobe Real-Time CDP-gegevensmodel uitbreiden voor de toepassing van uw CLV-rapporteringsinzichten. Zie de documentatie leren hoe te [ een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards ](../data-distiller/sql-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model) bouwen. De zelfstudie behandelt de volgende stappen:
 
 * Een model maken voor het rapporteren van inzichten met Data Distiller.
 * Tabellen, relaties en gegevens vullen.

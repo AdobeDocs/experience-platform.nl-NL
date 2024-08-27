@@ -2,9 +2,9 @@
 title: Labels voor gegevensgebruik voor een schema beheren
 description: Leer hoe u labels voor gegevensgebruik toevoegt aan XDM-schemavelden (Experience Data Model) in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 37395e5762c8d54e6fca5c3502bdbf56f5b5472c
+source-git-commit: 22233d2bda488aa223555f85215be31d007eaa37
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '779'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Alle gegevens die in Adobe Experience Platform worden gebracht worden beperkt do
 
 Een label dat wordt toegepast op een schemaveld, geeft het gebruiksbeleid aan dat van toepassing is op de gegevens in dat specifieke veld.
 
-Labels kunnen worden toegepast op afzonderlijke schema&#39;s en op velden binnen die schema&#39;s. Wanneer de etiketten rechtstreeks op een schema worden toegepast, worden die etiketten verspreid aan alle bestaande en toekomstige datasets die op dat schema gebaseerd zijn.
+De etiketten kunnen op individuele schema&#39;s, en gebieden binnen die schema&#39;s worden toegepast. Wanneer de etiketten rechtstreeks op een schema worden toegepast, worden die etiketten verspreid aan alle bestaande en toekomstige datasets die op dat schema gebaseerd zijn.
 
 Bovendien verspreidt om het even welk gebiedsetiket dat u in één schema toevoegt aan alle andere schema&#39;s die het zelfde gebied van een gedeelde klasse of een gebiedsgroep in dienst nemen. Zo zorgt u ervoor dat de gebruiksregels voor vergelijkbare velden consistent zijn in het gehele gegevensmodel.
 

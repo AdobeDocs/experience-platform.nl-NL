@@ -4,7 +4,7 @@ description: Leer hoe u SQL-query's kunt gebruiken met de Real-time Customer Dat
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1061'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform Insights-gegevensmodel B2C Edition
 
-Het model van Gegevens van Real-time Customer Data Platform van Inzichten voor de [ B2C Uitgave ](../../rtcdp/overview.md#rtcdp-b2c) stelt de gegevensmodellen en SQL bloot die de inzichten voor diverse profiel, bestemming, en segmentatiewidgets aandrijven. U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw user-defined dashboards worden gebruikt. Zie de vraag versnelde opslag die inzichten documentatie rapporteert om [ te leren hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards ](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md) te bouwen.
+Het model van Gegevens van Real-time Customer Data Platform van Inzichten voor de [ B2C Uitgave ](../../rtcdp/overview.md#rtcdp-b2c) stelt de gegevensmodellen en SQL bloot die de inzichten voor diverse profiel, bestemming, en segmentatiewidgets aandrijven. U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw user-defined dashboards worden gebruikt. Zie de vraag versnelde opslag die inzichten documentatie rapporteert om [ te leren hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards ](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md) te bouwen.
 
 >[!NOTE]
 >

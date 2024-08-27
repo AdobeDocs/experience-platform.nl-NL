@@ -2,7 +2,7 @@
 title: Aangepaste dashboards
 description: Leer hoe u aangepaste dashboards kunt maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metriek zichtbaar te maken.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2ddfa221ecdebad81343516935e81691021e1fbc
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Het dialoogvenster [!UICONTROL Create dashboard] wordt weergegeven. Voer een bes
 
 ![ de Create dashboarddialoog.](./images/user-defined-dashboards/create-dashboard-dialog.png)
 
-Gebruikers die de Data Distiller SKU hebben aangeschaft, kunnen aangepaste SQL-query&#39;s gebruiken om hun inzichten te maken. Zie de [ Aanpasbare gids van de verwezenlijking van het Inzicht ](./data-distiller/customizable-insights/overview.md) voor instructies op dit werkschema.
+Gebruikers die de Data Distiller SKU hebben aangeschaft, kunnen aangepaste SQL-query&#39;s gebruiken om hun inzichten te maken. Zie de [ SQL de creatiegids van het Inzicht ](./data-distiller/sql-insights/overview.md) voor instructies op dit werkschema.
 
 Het nieuwe lege dashboard wordt met de door u gekozen naam weergegeven in de linkerbovenhoek van de weergave.
 

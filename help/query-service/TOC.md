@@ -5,7 +5,7 @@ breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 12%
@@ -27,11 +27,11 @@ ht-degree: 12%
       - [Overzicht](data-distiller/derived-datasets/overview.md)
       - [Afgeleide datasets maken met SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Op decile gebaseerde afgeleide gegevenssets maken](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - Aanpasbare inzichten voor uitgebreide toepassingsrapportage {#customizable-insights}
-      - [Overzicht](data-distiller/customizable-insights/overview.md)
-      - [Query Pro-modus](data-distiller/customizable-insights/query-pro-mode.md)
-      - [Verstuur versnelde vragen](data-distiller/customizable-insights/send-accelerated-queries.md)
-      - [Handleiding voor het rapporteringsmodel voor inzichten](data-distiller/customizable-insights/reporting-insights-data-model.md)
+   - SQL-inzichten voor uitgebreide toepassingsrapportage {#sql-insights}
+      - [Overzicht](data-distiller/sql-insights/overview.md)
+      - [Query Pro-modus](data-distiller/sql-insights/query-pro-mode.md)
+      - [Verstuur versnelde vragen](data-distiller/sql-insights/send-accelerated-queries.md)
+      - [Handleiding voor het rapporteringsmodel voor inzichten](data-distiller/sql-insights/reporting-insights-data-model.md)
    - Pijpleidingen met functies voor AI/ML {#ml-feature-pipelines}
       - [Overzicht](data-distiller/ml-feature-pipelines/overview.md)
       - [Verbinding maken met Jupyter-laptops](data-distiller/ml-feature-pipelines/establish-connection.md)

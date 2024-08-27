@@ -5,10 +5,10 @@ breadcrumb-title: Handleiding voor dashboards
 user-guide-description: Leer hoe u gegevens in Experience Platform kunt visualiseren via aanpasbare dashboards.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 21%
+source-wordcount: '133'
+ht-degree: 22%
 
 ---
 
@@ -22,15 +22,17 @@ ht-degree: 21%
 * [Dashboards downloaden naar PDF](download.md)
 * Data Distiller {#data-distiller}
    * [Overzicht](data-distiller/overview.md)
-   * Aanpasbare inzichten voor uitgebreide toepassingsrapportage {#customizable-insights}
-      * [Overzicht](data-distiller/customizable-insights/overview.md)
-      * [De modus Query Pro (SQL-diagram maken)](data-distiller/customizable-insights/query-pro-mode.md)
+   * SQl-inzichten voor uitgebreide app-rapportage {#sql-insights}
+      * [Overzicht](data-distiller/sql-insights/overview.md)
+   * Modus Query Pro {#query-pro-mode}
+      * [Overzicht](data-distiller/query-pro-mode/overview.md)
       * Filters {#filters}
-         * [Datumfilter](data-distiller/customizable-insights/filters/date-filter.md)
-         * [ Globale filter ](data-distiller/customizable-insights/filters/global-filter.md)
-      * [Meer weergeven](data-distiller/customizable-insights/view-more.md)
-      * [SQL weergeven](data-distiller/customizable-insights/view-sql.md)
-      * [Downloaden als CSV](data-distiller/customizable-insights/download-csv.md)
+         * [Datumfilter](data-distiller/query-pro-mode/filters/date-filter.md)
+         * [ Globale filter ](data-distiller/query-pro-mode/filters/global-filter.md)
+      * [Meer weergeven](data-distiller/query-pro-mode/view-more.md)
+      * [SQL weergeven](data-distiller/query-pro-mode/view-sql.md)
+      * [Downloaden als CSV](data-distiller/query-pro-mode/download-csv.md)
+      * [Exporteren als PDF](data-distiller/query-pro-mode/export-pdf.md)
 * Beschikbare dashboards {#guides}
    * [Profielen](guides/profiles.md)
    * [Accountprofielen](guides/account-profiles.md)
