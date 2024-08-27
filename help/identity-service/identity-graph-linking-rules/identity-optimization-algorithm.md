@@ -3,7 +3,7 @@ title: Algoritme voor identiteitsoptimalisatie
 description: Leer over het Algoritme van de Optimalisering van de Identiteit in de Dienst van de Identiteit.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 8762ea655399fbc82c63c87310337b8e875bd5bc
+source-git-commit: 84ad4a5f522b04430ee304f1a812da25e26f6954
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Wanneer de unieke naamruimtebeperking wordt overtreden, worden de koppelingen op
 * De grafiek zou op basis van de bovenstaande volgorde opnieuw tot stand komen. Als het toevoegen van de koppeling de limietbeperking schendt (de grafiek bevat bijvoorbeeld twee of meer identiteiten met een unieke naamruimte), worden de koppelingen verwijderd.
 * De resulterende grafiek zal dan volgzaam met de unieke namespace beperking zijn die u vormde.
 
-![ A diagram dat identiteitsoptimaliseringsalgoritme visualiseert.](../images/ido.png)
+![ A diagram dat identiteitsoptimaliseringsalgoritme visualiseert.](../images/ido_algorithm.png)
 
 ## Voorbeeldscenario&#39;s voor algoritme voor identiteitsoptimalisatie
 
