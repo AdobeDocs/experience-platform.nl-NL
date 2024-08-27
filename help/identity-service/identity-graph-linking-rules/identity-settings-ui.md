@@ -3,9 +3,9 @@ title: Gebruikersinterface Identiteitsinstellingen
 description: Leer hoe u de gebruikersinterface voor identiteitsinstellingen gebruikt.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 04b04807196bb5902e398403612429eae0de3988
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Wanneer u klaar bent met uw configuraties, selecteert u **[!UICONTROL Next]** . 
 
 ![ de bevestigingspagina met benadrukte Einde.](../images/rules/finish.png)
 
-Er wordt een waarschuwing weergegeven dat uw nieuwe instellingen geen gevolgen hebben voor bestaande koppelingen in een identiteitsgrafiek en dat er gebeurtenisprofielfragmenten optreden die al zijn opgenomen. Bovendien, wordt u meegedeeld dat het tot zes uren zal duren voor uw nieuwe montages in het systeem worden weerspiegeld. Voer de naam van de sandbox in en selecteer vervolgens **[!UICONTROL Confirm]** om dit te bevestigen.
+Een waarschuwingsbericht verschijnt, erop wijzend dat de bestaande grafieken slechts door het grafiekalgoritme zullen worden beïnvloed slechts als de grafieken **na het opslaan van uw montages** worden bijgewerkt, en dat de primaire identiteit van gebeurtenisfragmenten op het Profiel van de Klant in real time niet zal worden bijgewerkt zelfs na namespace prioritaire veranderingen. Bovendien, wordt u meegedeeld dat het tot **zes uren** voor uw nieuwe montages zal duren om van kracht te worden. Voer de naam van de sandbox in en selecteer vervolgens **[!UICONTROL Confirm]** om dit te bevestigen.
 
 ![ het bevestigingsvenster dat een waarschuwing over een vertraging van zes uur toont alvorens de configuraties worden verwerkt.](../images/rules/confirm-settings.png)
 
