@@ -2,9 +2,9 @@
 title: Exportgedrag profiel
 description: Leer hoe het gedrag van de profieluitvoer tussen de verschillende integratiepatronen varieert die in de bestemmingen van het Experience Platform worden gesteund.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
 workflow-type: tm+mt
-source-wordcount: '2931'
+source-wordcount: '2930'
 ht-degree: 0%
 
 ---
@@ -145,9 +145,11 @@ In alle bovenstaande exportsituaties bevatten de geëxporteerde bestanden de pro
 
 ### Incrementele bestandsuitvoer {#incremental-file-exports}
 
-Niet alle updates op een profiel kwalificeren een profiel dat moet worden opgenomen in incrementele bestandsexport. Als bijvoorbeeld een kenmerk is toegevoegd aan of verwijderd uit een profiel, wordt het profiel niet opgenomen in de exportbewerking. Alleen profielen waarvoor het kenmerk `segmentMembership` is gewijzigd, worden opgenomen in geëxporteerde bestanden. Met andere woorden, alleen als het profiel onderdeel wordt van het publiek of uit het publiek wordt verwijderd, wordt het opgenomen in incrementele exportbewerkingen.
+Niet alle updates op een profiel kwalificeren een profiel dat moet worden opgenomen in incrementele bestandsexport. Als bijvoorbeeld een kenmerk is toegevoegd aan of verwijderd uit een profiel, wordt het profiel niet opgenomen in de exportbewerking.
 
-Op dezelfde manier als wordt een nieuwe identiteit (nieuw e-mailadres, telefoonaantal, ECID, etc.) toegevoegd aan een profiel in de [ identiteitsgrafiek ](/help/identity-service/features/identity-graph-viewer.md), die geen reden vertegenwoordigt om het profiel in een nieuwe stijgende dossieruitvoer te omvatten.
+Wanneer het `segmentMembership` -kenmerk van een profiel echter verandert, wordt het profiel opgenomen in geëxporteerde bestanden. Met andere woorden, als het profiel onderdeel wordt van het publiek of uit het publiek wordt verwijderd, wordt het opgenomen in incrementele exportbewerkingen.
+
+Op dezelfde manier als wordt een nieuwe identiteit (nieuw e-mailadres, telefoonaantal, ECID, etc.) toegevoegd aan een profiel in de [ identiteitsgrafiek ](/help/identity-service/features/identity-graph-viewer.md), die het profiel zal teweegbrengen om in een nieuwe stijgende dossieruitvoer worden omvat.
 
 Als een nieuw publiek aan een bestemmingstoewijzing wordt toegevoegd, beïnvloedt dat geen kwalificaties en de uitvoer voor een ander segment. De programma&#39;s van de uitvoer worden gevormd individueel per publiek en de dossiers worden afzonderlijk uitgevoerd voor elk segment, zelfs als het publiek aan de zelfde bestemmingsdataflow is toegevoegd.
 
@@ -157,10 +159,10 @@ Als een publiek bijvoorbeeld incrementele bestandsupdates exporteert in de hiero
 
 ![ de Uitvoer die met verscheidene geselecteerde attributen plaatst.](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
 
-* Een profiel wordt opgenomen in een incrementele bestandsuitvoer wanneer het voor het segment in aanmerking komt of niet.
-* Een profiel is *niet* inbegrepen in een stijgende dossieruitvoer wanneer een nieuw telefoonaantal aan de identiteitsgrafiek wordt toegevoegd.
-* Een profiel is ** inbegrepen niet in een stijgende dossieruitvoer wanneer de waarde van om het even welke in kaart gebrachte gebieden XDM zoals `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address` op een profiel wordt bijgewerkt.
-* Telkens wanneer het `segmentMembership.status` XDM-veld wordt toegewezen in de workflow voor doelactivering, worden profielen die het publiek verlaten, ook opgenomen in geëxporteerde incrementele bestanden, met de status `exited` .
+* Een profiel *is* inbegrepen in een stijgende dossieruitvoer wanneer het voor het segment kwalificeert of diskwalificeert.
+* Een profiel *is* inbegrepen in een stijgende dossieruitvoer wanneer een nieuw telefoonaantal aan de identiteitsgrafiek wordt toegevoegd.
+* Een profiel *is niet* inbegrepen in een stijgende dossieruitvoer wanneer de waarde van om het even welke in kaart gebrachte gebieden XDM zoals `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address` op een profiel wordt bijgewerkt.
+* Wanneer het `segmentMembership.status` XDM gebied in het werkschema van de bestemmingsactivering in kaart wordt gebracht, zijn de profielen die het publiek *verlaten ook inbegrepen* in uitgevoerde stijgende dossiers, met een `exited` status.
 
 >[!ENDSHADEBOX]
 
@@ -184,7 +186,7 @@ In de eerste bestandsuitvoer na het instellen van de activeringsworkflow wordt d
 
 | Wat bepaalt de doelexport | Wat is opgenomen in het geëxporteerde bestand |
 |---------|----------|
-| <ul><li>Het exportschema dat is ingesteld in de UI of API bepaalt het begin van een doelexport.</li><li>Eventuele wijzigingen in het aantal gebruikers dat deel uitmaakt van een profiel, ongeacht of het in aanmerking komt voor of niet in aanmerking komt voor het segment, komen in aanmerking voor een profiel dat wordt opgenomen in incrementele exportbewerkingen. De veranderingen in attributen of in identiteitskaarten voor een profiel *kwalificeren niet* een profiel dat in stijgende uitvoer moet worden omvat.</li></ul> | <p>De profielen waarvoor het publiekslidmaatschap is gewijzigd, samen met de meest recente informatie voor elk XDM-kenmerk dat is geselecteerd voor export.</p><p>Profielen met de verlaten status worden opgenomen in de doelexport als het `segmentMembership.status` XDM-veld is geselecteerd in de toewijzingsstap.</p> |
+| <ul><li>Het exportschema dat is ingesteld in de UI of API bepaalt het begin van een doelexport.</li><li>Wijzigingen in het aantal gebruikers dat deel uitmaakt van een profiel, ongeacht of het om het segment gaat of niet, of wijzigingen in identiteitskaarten, kwalificeren een profiel dat moet worden opgenomen in incrementele exportbewerkingen. De veranderingen in attributen voor een profiel *kwalificeren* geen profiel dat in stijgende uitvoer moet worden omvat.</li></ul> | <p>De profielen waarvoor het publiekslidmaatschap is gewijzigd, samen met de meest recente informatie voor elk XDM-kenmerk dat is geselecteerd voor export.</p><p>Profielen met de verlaten status worden opgenomen in de doelexport als het `segmentMembership.status` XDM-veld is geselecteerd in de toewijzingsstap.</p> |
 
 {style="table-layout:fixed"}
 
