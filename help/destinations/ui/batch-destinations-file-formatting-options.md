@@ -2,9 +2,9 @@
 description: Leer hoe u opties voor bestandsindeling kunt configureren wanneer u gegevens activeert naar bestandsbestemmingen
 title: Opties voor bestandsindeling configureren voor op bestanden gebaseerde doelen
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
+source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
@@ -68,17 +68,21 @@ Bekijk de voorbeelden hieronder van de inhoud in de geëxporteerde CSV-bestanden
 >title="Aanhalingsteken"
 >abstract="Gebruik deze optie als u dubbele aanhalingstekens wilt verwijderen uit geëxporteerde tekenreeksen. Raadpleeg de documentatie voor voorbeelden van elke selectie."
 
-Gebruik deze optie als u dubbele aanhalingstekens wilt verwijderen uit geëxporteerde tekenreeksen. Beschikbare opties zijn:
+Met deze optie kunt u bepalen of dubbele aanhalingstekens moeten worden verwijderd of binnen geëxporteerde tekenreeksen moeten worden bewaard.
+
+De beschikbare opties zijn:
 
 * **[!UICONTROL Null Character (\0000)]**. Gebruik deze optie om dubbele aanhalingstekens te verwijderen uit geëxporteerde CSV-bestanden.
-* **[!UICONTROL Double Quotes (")]**. Gebruik deze optie als u dubbele aanhalingstekens wilt behouden in geëxporteerde CSV-bestanden.
+* **[!UICONTROL Double Quotes (")]**. Gebruik deze optie als de tekenreekswaarden een scheidingsteken of dubbele aanhalingstekens bevatten. Met deze optie kunt u de scheidingstekens of dubbele aanhalingstekens behouden in geëxporteerde CSV-bestanden, zodat u precies kunt zien welke waarde overeenkomt met welk veld.
 
 #### Voorbeelden
 
+Neem bijvoorbeeld de invoerwaarde `Anna,"Doe,John"` .
+
 Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden met elk van de selecties in de gebruikersinterface.
 
-* Voorbeeld van uitvoer met **[!UICONTROL Null Character (\0000)]** geselecteerd: `Test,John,LastName`
-* Voorbeeld van uitvoer met **[!UICONTROL Double Quotes (")]** geselecteerd: `"Test","John","LastName"`
+* Voorbeeld van uitvoer met **[!UICONTROL Null Character (\0000)]** geselecteerd: `Anna,Doe,John`
+* Voorbeeld van uitvoer met **[!UICONTROL Double Quotes (")]** geselecteerd: `Anna,"Doe,John"`
 
 ### Escape-teken {#escape-character}
 
