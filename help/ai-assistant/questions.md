@@ -2,7 +2,7 @@
 title: Vraag voor AI-assistent
 description: Lees dit document om voorbeeldvragen te leren die u kunt gebruiken wanneer het vragen van AI Medewerker.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 196a39edd493dcc8296f4b6d2904393dd6f6cdd4
+source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
 workflow-type: tm+mt
 source-wordcount: '1524'
 ht-degree: 0%
@@ -33,6 +33,8 @@ De volgende voorbeeldvragen worden gegroepeerd op doelstellingen die u kunt verw
 ## Operationele inzichten per entiteit en productkennisvragen{#objects-questions}
 
 De volgende vragen worden gegroepeerd door gegevensvoorwerpen en als of [ operationele inzichten ](./home.md#operational-insights) of [ productkennis ](./home.md#product-knowledge) geclassificeerd.
+
+![](./images/prompt.png)
 
 * **Soorten publiek - Operationele inzichten**
    * Welk publiek gebruikt ander publiek?
