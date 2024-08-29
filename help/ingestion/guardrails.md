@@ -3,9 +3,9 @@ keywords: Experience Platform;problemen oplossen;instructies;richtlijnen;
 title: Guardrails voor gegevensinname
 description: Meer informatie over instructies voor gegevensinvoer in Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: a574e30a12f56618e8bfaff988aa095025b36a28
+source-git-commit: 9c3f7f522ce6451e1d312a0221cc34287d3e8ae3
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ De volgende lijst schetst te overwegen gidsen wanneer het gebruiken van [ partij
 | Inname van gegevenslagen met behulp van batchbronnen | <ul><li>U kunt maximaal 200 GB aan gegevens per uur invoeren aan datumpeer gebruikend batch-ingestigenbronnen zoals [!DNL Azure Blob], [!DNL Amazon S3], en [!DNL SFTP].</li><li>Een batch moet tussen 256 MB en 100 GB groot zijn. Dit geldt zowel voor ongecomprimeerde als gecomprimeerde gegevens. Wanneer gecomprimeerde gegevens niet in het datumpeer worden gecomprimeerd, zijn deze beperkingen van toepassing.</li><li>Het maximumaantal bestanden per batch is 1500.</li><li>Een bestand of map heeft minimaal 1 byte. U kunt geen bestanden of mappen met 0-byte-grootte invoeren.</li></ul> | Lees het [ overzicht van bronnen ](../sources/home.md) voor een catalogus van bronnen u voor gegevensopname kunt gebruiken. |
 | Inname in batch naar profiel | <ul><li>De maximale grootte van een recordklasse is 100 KB (hard).</li><li>De maximale grootte van een klasse ExperienceEvent is 10 KB (hard).</li></ul> | |
 | Aantal per dag ingenomen Profile- of ExperienceEvent-batches | **het maximumaantal per dag ingebedde partijen van het Profiel of van de ExperienceEvent is 90.** Dit betekent dat het gecombineerde totaal van de elke dag ingeslikte profielen Profile en ExperienceEvent niet meer dan 90 mag zijn. Door extra batches in te voeren worden de systeemprestaties beïnvloed. | Dit is een zachte limiet. Het is mogelijk om verder te gaan dan een zachte limiet, maar zachte limieten bieden een aanbevolen richtlijn voor systeemprestaties. |
-| Versleutelde gegevensinvoer | De maximale ondersteunde grootte van één gecodeerd bestand is 1 GB. Terwijl u bijvoorbeeld 2 of meer GB&#39;s aan gegevens kunt invoeren in één dataflow-run, kan geen enkel afzonderlijk bestand in de dataflow-run meer dan 1 GB bedragen. | Lees de [ gecodeerde gids van de gegevensopname API ](../sources/tutorials/api/encrypt-data.md) voor meer informatie. |
+| Versleutelde gegevensinvoer | De maximale ondersteunde grootte van één gecodeerd bestand is 1 GB. Terwijl u bijvoorbeeld 2 of meer GB&#39;s aan gegevens kunt invoeren in één dataflow-run, kan geen enkel afzonderlijk bestand in de dataflow-run meer dan 1 GB bedragen. | Het inslikken van gecodeerde gegevens kan langer duren dan het innemen van gewone gegevens. Lees de [ gecodeerde gids van de gegevensopname API ](../sources/tutorials/api/encrypt-data.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 

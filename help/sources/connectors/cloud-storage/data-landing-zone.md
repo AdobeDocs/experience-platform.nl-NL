@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Data Landing Zone Source
 description: Leer hoe u Data Landing Zone kunt verbinden met Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
+source-git-commit: ecef17ed454c7b1f30543278bba6b0e3b70399da
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '889'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,13 @@ ht-degree: 0%
 >
 >Deze pagina is specifiek voor de [!DNL Data Landing Zone] *bron* schakelaar in Experience Platform. Voor informatie bij het verbinden met de [!DNL Data Landing Zone] *bestemmings* schakelaar, verwijs naar de [[!DNL Data Landing Zone]  pagina van de bestemmingsdocumentatie ](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
-[!DNL Data Landing Zone] is een [!DNL Azure Blob] -opslaginterface die door Adobe Experience Platform is ingericht en waarmee u toegang hebt tot een veilige, op de cloud gebaseerde opslagfaciliteit voor bestanden om bestanden over te brengen naar het platform. U hebt toegang tot één [!DNL Data Landing Zone] container per sandbox en het totale gegevensvolume voor alle containers is beperkt tot de totale gegevens die worden geleverd bij uw Platform Products and Services-licentie. Alle klanten van Platform en de bijbehorende toepassingen, zoals [!DNL Customer Journey Analytics] , [!DNL Journey Orchestration] , [!DNL Intelligent Services] en [!DNL Adobe Real-Time Customer Data Platform] , beschikken over één [!DNL Data Landing Zone] container per sandbox. U kunt bestanden lezen en schrijven naar uw container via [!DNL Azure Storage Explorer] of de opdrachtregelinterface.
+[!DNL Data Landing Zone] is een [!DNL Azure Blob] -opslaginterface die door Adobe Experience Platform is ingericht en waarmee u toegang hebt tot een veilige, op de cloud gebaseerde opslagfaciliteit voor bestanden om bestanden over te brengen naar het platform. U hebt toegang tot één [!DNL Data Landing Zone] container per sandbox en het totale gegevensvolume voor alle containers is beperkt tot de totale gegevens die worden geleverd bij uw Platform Products and Services-licentie. Alle klanten van Experience Platform beschikken over één [!DNL Data Landing Zone] -container per sandbox. U kunt bestanden lezen en schrijven naar uw container via [!DNL Azure Storage Explorer] of de opdrachtregelinterface.
 
-[!DNL Data Landing Zone] biedt ondersteuning voor verificatie op basis van SAS en de bijbehorende gegevens zijn in rust en onderweg beveiligd met standaard [!DNL Azure Blob] -opslagbeveiligingsmechanismen. Met verificatie op basis van SAS hebt u via een openbare internetverbinding veilig toegang tot uw [!DNL Data Landing Zone] -container. Er zijn geen netwerkwijzigingen vereist voor toegang tot uw [!DNL Data Landing Zone] -container. Dit betekent dat u geen lijsten van gewenste personen of instellingen voor meerdere regio&#39;s voor uw netwerk hoeft te configureren. Het platform past een strikte vervaltijd van zeven dagen toe op alle bestanden die naar een [!DNL Data Landing Zone] -container zijn geüpload. Alle bestanden worden na zeven dagen verwijderd.
+[!DNL Data Landing Zone] biedt ondersteuning voor verificatie op basis van SAS en de bijbehorende gegevens zijn in rust en onderweg beveiligd met standaard [!DNL Azure Blob] -opslagbeveiligingsmechanismen. Met verificatie op basis van SAS hebt u via een openbare internetverbinding veilig toegang tot uw [!DNL Data Landing Zone] -container. Er zijn geen netwerkwijzigingen vereist voor toegang tot uw [!DNL Data Landing Zone] -container. Dit betekent dat u geen lijsten van gewenste personen of instellingen voor meerdere regio&#39;s voor uw netwerk hoeft te configureren. Experience Platform past een strikte vervaltijd van zeven dagen toe op alle bestanden en mappen die naar een [!DNL Data Landing Zone] -container zijn geüpload. Alle bestanden en mappen worden na zeven dagen verwijderd.
+
+>[!NOTE]
+>
+>Als u [!DNL Data Landing Zone] van [!DNL Azure Data Factory] wilt toegang hebben, dan moet u de verbonden dienst voor [!DNL Data Landing Zone] tot stand brengen gebruikend de [ SAS geloofsbrieven ](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials) die door Experience Platform worden verstrekt. Nadat u de gekoppelde service hebt gemaakt, kunt u de [!DNL Data Landing Zone] verkennen door het containerpad te selecteren in plaats van het standaardhoofdpad.
 
 ## Naamgevingsbeperkingen voor bestanden en mappen
 
