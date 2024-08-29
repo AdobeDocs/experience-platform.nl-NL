@@ -3,9 +3,9 @@ keywords: aangepaste personalisatie; bestemming; ervaring met aangepaste bestemm
 title: Aangepaste verpersoonlijkingsverbinding
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats lopen een manier om publieksinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het gebruikersprofiellidmaatschap wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 182176aa2e588aa356d5fea23b49f17bc8a50314
+source-git-commit: 0f70e072402bca055b96195ded91816810759fc2
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,11 @@ Stel deze bestemming in om externe personalisatieplatforms, contentbeheersysteme
 
 ## Vereisten {#prerequisites}
 
-Deze integratie wordt aangedreven door [ SDK van het Web van Adobe Experience Platform ](/help/web-sdk/home.md) of [ Mobiele SDK van Adobe Experience Platform ](https://developer.adobe.com/client-sdks/documentation/). U moet één van deze SDKs gebruiken om deze bestemming te gebruiken.
+Deze bestemming vereist het gebruik van één van de volgende methodes van de gegevensinzameling, afhankelijk van uw implementatie:
+
+* Gebruik [ SDK van het Web van Adobe Experience Platform ](/help/web-sdk/home.md) als u gegevens van uw website wilt verzamelen.
+* Gebruik [ Adobe Experience Platform Mobile SDK ](https://developer.adobe.com/client-sdks/documentation/) als u gegevens van uw mobiele toepassing wilt verzamelen.
+* Gebruik de [ Server API van de Edge Network ](../../../server-api/overview.md) als u [ SDK van het Web ](/help/web-sdk/home.md) of [ Mobiele SDK ](https://developer.adobe.com/client-sdks/documentation/) niet gebruikt, of als u de gebruikerservaring wilt personaliseren die op profielattributen wordt gebaseerd.
 
 >[!IMPORTANT]
 >
