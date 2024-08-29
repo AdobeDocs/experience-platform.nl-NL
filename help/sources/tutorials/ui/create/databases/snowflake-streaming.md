@@ -4,9 +4,9 @@ type: Tutorial
 description: Leer hoe u gegevens kunt streamen van de database van SnwofLake naar het Experience Platform
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: f39ee3af176e3d9b8ad04bfad81793db0ebe71a7
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1597'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de n
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Account | De naam van uw [!DNL Snowflake] account. |
+| Account | De naam van uw [!DNL Snowflake] account. Voor overeenkomsten op rekeningsnamen, lees de [[!DNL Snowflake Streaming]  authentificatiegids ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
 | Warehouse | De naam van uw [!DNL Snowflake] magazijn. De opslagplaatsen beheren de uitvoering van vragen in [!DNL Snowflake]. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd om gegevens naar het Experience Platform te brengen. |
 | Database | De naam van de [!DNL Snowflake] -database. Het gegevensbestand bevat de gegevens die u aan Experience Platform wilt brengen. |
 | Schema | (Optioneel) Het databaseschema dat aan uw [!DNL Snowflake] -account is gekoppeld. |
@@ -78,7 +78,9 @@ Selecteer **[!UICONTROL Next]** om door te gaan.
 
 >[!IMPORTANT]
 >
->Er moet een tijdstempelkolom in de brontabel staan om een streaminggegevensstroom te kunnen maken. Het Experience Platform moet weten wanneer gegevens worden ingevoerd en wanneer incrementele gegevens worden gestreamd. Dit is de tijdstempel vereist. U kunt met terugwerkende kracht een tijdstempelkolom toevoegen voor een bestaande verbinding en een nieuwe gegevensstroom creëren.
+>* Er moet een tijdstempelkolom in de brontabel staan om een streaminggegevensstroom te kunnen maken. Het Experience Platform moet weten wanneer gegevens worden ingevoerd en wanneer incrementele gegevens worden gestreamd. Dit is de tijdstempel vereist. U kunt met terugwerkende kracht een tijdstempelkolom toevoegen voor een bestaande verbinding en een nieuwe gegevensstroom creëren.
+>
+>* Zorg ervoor dat het hoofdlettergebruik van de gegevensvelden in het bestand met voorbeeldbrongegevens in overeenstemming is met de [!DNL Snowflake] -richtlijnen voor de oplossing van hoofdletters en kleine letters voor id&#39;s. Lees het [[!DNL Snowflake]  document op herkenningsteken casing ](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) voor meer informatie.
 
 De stap [!UICONTROL Select data] wordt weergegeven. In deze stap, moet u de gegevens selecteren u in Experience Platform wilt invoeren, timestamps en timezones vormen, en een dossier van steekproefbrongegevens voor de opname van ruwe gegevens verstrekken.
 

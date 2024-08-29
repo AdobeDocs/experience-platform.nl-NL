@@ -5,9 +5,9 @@ badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultieme" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
+source-git-commit: e8ab39ce085a95eac898f65667706b71bdadd350
 workflow-type: tm+mt
-source-wordcount: '710'
+source-wordcount: '791'
 ht-degree: 0%
 
 ---
@@ -33,13 +33,19 @@ Met [!DNL Kafka Connect] houdt de [!DNL Snowflake] streamingbron de meest recent
 
 In de volgende sectie worden de vereiste stappen beschreven die moeten worden uitgevoerd voordat u gegevens kunt streamen van uw [!DNL Snowflake] -database naar het Experience Platform:
 
+### Werk uw IP lijst van gewenste personen van het adres bij
+
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
+
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Amazon Redshift] en Platform via API&#39;s of de gebruikersinterface:
+
 ### Vereiste referenties verzamelen
 
 [!DNL Flow Service] kan alleen verbinding maken met [!DNL Snowflake] als u de volgende verbindingseigenschappen opgeeft:
 
 | Credentials | Beschrijving |
 | --- | --- |
-| `account` | De volledige accountnaam die aan uw [!DNL Snowflake] -account is gekoppeld. Een volledig gekwalificeerde [!DNL Snowflake] accountnaam bevat uw accountnaam, regio en cloudplatform. Bijvoorbeeld `cj12345.east-us-2.azure` . Voor meer informatie over rekeningsnamen, verwijs naar dit [[!DNL Snowflake document on account identifiers] ](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
+| `account` | De volledige account-id (naam van account of accountlocator) van uw [!DNL Snowflake] -account is toegevoegd met het achtervoegsel `snowflakecomputing.com` . De account-id kan verschillende indelingen hebben: <ul><li>{ORG_NAME} - {ACCOUNT_NAME} .snowflakecomputing.com (b.v. `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID} .snowflakecomputing.com (bijvoorbeeld `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD} .snowflakecomputing.com (bijvoorbeeld `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> Voor meer informatie, lees [[!DNL Snowflake document on account identifiers] ](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
 | `warehouse` | Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd wanneer u gegevens naar Platform overbrengt. |
 | `database` | De [!DNL Snowflake] -database bevat de gegevens die u voor het platform wilt gebruiken. |
 | `username` | De gebruikersnaam voor de [!DNL Snowflake] -account. |
@@ -47,6 +53,7 @@ In de volgende sectie worden de vereiste stappen beschreven die moeten worden ui
 | `role` | (Optioneel) Een op maat gedefinieerde rol die voor een gebruiker, voor een bepaalde verbinding kan worden opgegeven. Als deze waarde niet is opgegeven, wordt deze standaard ingesteld op `public` . |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Snowflake] is `51ae16c2-bdad-42fd-9fce-8d5dfddaf140` . |
 
+{style="table-layout:auto"}
 
 ### Rolinstellingen configureren {#configure-role-settings}
 
