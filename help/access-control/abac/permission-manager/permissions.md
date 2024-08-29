@@ -1,9 +1,10 @@
 ---
 title: Toegangsbeheer op basis van kenmerken
 description: Leer hoe u in Adobe Experience Platform machtigingenbeheer kunt gebruiken voor het genereren van rapporten en het valideren van toegangsmachtigingen.
-source-git-commit: 3f2a899705d2c05b12300b6d5b0b860ad2c05bfd
+exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
+source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '572'
 ht-degree: 0%
 
 ---
@@ -40,7 +41,7 @@ Voor een meer korrelig rapport kunt u de bron opgeven met handelingen in een bep
 
 >[!INFO]
 >
->[!UICONTROL Resource] , [!UICONTROL Actions] en [!UICONTROL Sandboxes] zijn geen verplichte velden. Voor elk rapport kan slechts één [!UICONTROL Resource] worden geselecteerd. Een actie of een zandbak kan worden verwijderd zodra toegevoegd door **&quot;x&quot;te selecteren** naast de selectie u zou willen verwijderen.
+>[!UICONTROL Resource] , [!UICONTROL Actions] en [!UICONTROL Sandboxes] zijn geen verplichte velden. Een actie of een zandbak kan worden verwijderd zodra toegevoegd door **&quot;x&quot;te selecteren** naast de selectie u zou willen verwijderen.
 
 ![ het Middel, de Acties, de dalingsonderverdelingen van Sandboxen, en tonen Gemarkeerde Resultaten ](../../images/permission-manager/users-additional-attributes-select.png)
 
