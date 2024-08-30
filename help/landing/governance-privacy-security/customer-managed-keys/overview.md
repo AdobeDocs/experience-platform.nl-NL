@@ -2,9 +2,9 @@
 title: Door de klant beheerde toetsen in Adobe Experience Platform
 description: Leer hoe u uw eigen coderingssleutels instelt voor gegevens die in Adobe Experience Platform zijn opgeslagen.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 5a5d35dad5f1b89c0161f4b29722b76c3caf3609
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Gegevens die op Adobe Experience Platform zijn opgeslagen, worden in rust gecode
 
 >[!NOTE]
 >
->Gegevens in Adobe Experience Platform-gegevenshoek en -profielopslag worden gecodeerd met CMK. Deze worden beschouwd als uw primaire gegevensopslag.
+>Klantprofielgegevens die zijn opgeslagen in het profielarchief van Platform [!DNL Azure Data Lake] en [!DNL Azure Cosmos DB] , worden uitsluitend gecodeerd met CMK, nadat ze zijn ingeschakeld. De zeer belangrijke herroeping in uw primaire gegevensopslag kan overal van **een paar notulen aan 24 uren** nemen, en kan langer duren, **tot 7 dagen** voor transient of secundaire gegevensopslag. Voor extra details, verwijs naar de [ implicaties van het intrekken van zeer belangrijke toegangssectie ](#revoke-access).
 
 Dit document biedt een overzicht op hoog niveau van het proces voor het inschakelen van de CMK-functie (Customer-managed keys) in Platform, en de vereiste informatie die nodig is om deze stappen te voltooien.
 
@@ -54,15 +54,22 @@ Het proces is als volgt:
 
 Zodra het installatieproces is voltooid, worden alle gegevens die in het platform worden ingevoerd voor alle sandboxen versleuteld met behulp van de toetsencombinatie [!DNL Azure] . Om CMK te gebruiken, zult u hefboomwerking [!DNL Microsoft Azure] functionaliteit die deel van hun [ openbaar voorproefprogramma ](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) kan uitmaken.
 
-## Toegang intrekken {#revoke-access}
+## Gevolgen van het intrekken van toetstoegang {#revoke-access}
 
-Als u de toegang van het Platform tot uw gegevens wilt intrekken, kunt u de gebruikersrol verbonden aan de toepassing uit de sleutelkluis binnen [!DNL Azure] verwijderen.
+Het intrekken of uitschakelen van de toegang tot de Key Vault-, Key- of CMK-toepassing kan leiden tot aanzienlijke onderbrekingen, zoals het doorbreken van wijzigingen in de activiteiten van uw platform. Zodra deze sleutels worden onbruikbaar gemaakt, kunnen de gegevens in Platform ontoegankelijk worden, en om het even welke stroomafwaartse verrichtingen die op deze gegevens baseren zullen ophouden te functioneren. Het is van cruciaal belang dat u de downstreameffecten volledig begrijpt voordat u wijzigingen aanbrengt in uw sleutelconfiguraties.
 
->[!WARNING]
->
->Als u de sleutelvault-, toets- of CMK-toepassing uitschakelt, kan dit resulteren in een regeleindewijziging. Wanneer de sleutelvault-, sleutel- of CMK-toepassing is uitgeschakeld en de gegevens niet meer toegankelijk zijn in Platform, zijn downstreambewerkingen met betrekking tot die gegevens niet meer mogelijk. Zorg ervoor dat u de downstreameffecten begrijpt van het intrekken van de toegang van het Platform tot uw sleutel voordat u wijzigingen aanbrengt in uw configuratie.
+Als u besluit om de toegang van het Platform tot uw gegevens in te trekken, kunt u dit doen door de gebruikersrol verbonden aan de toepassing uit de Key Vault binnen [!DNL Azure] te verwijderen.
 
-Na het verwijderen van toetstoegang of het onbruikbaar maken/het schrappen van de sleutel van uw [!DNL Azure] zeer belangrijke kluis, kan het van een paar minuten, tot 24 uren voor deze configuratie vergen om aan primaire gegevensopslag te verspreiden. De werkstromen van het platform omvatten ook caching en transient gegevensopslag die voor prestaties en kerntoepassingsfunctionaliteit wordt vereist. Het doorgeven van CMK-intrekking via dergelijke opgeslagen en tijdelijke opslagplaatsen kan maximaal zeven dagen in beslag nemen, zoals wordt bepaald door de gegevensverwerkingsworkflows. Dit betekent bijvoorbeeld dat het dashboard Profiel gegevens uit de opslag van cachegegevens bewaart en weergeeft en dat het zeven dagen duurt voordat de gegevens in de opslagruimten voor cachegegevens verlopen als onderdeel van de vernieuwingscyclus. Dezelfde tijdvertraging geldt voor gegevens die weer beschikbaar komen wanneer de toegang tot de toepassing opnieuw wordt ingeschakeld.
+### Tijdlijnen voor doorgave {#propagation-timelines}
+
+Nadat de toetstoegang is ingetrokken vanuit de [!DNL Azure] Key Vault, worden de wijzigingen als volgt doorgegeven:
+
+| **Type van opslag** | **Beschrijving** | **Tijdlijn** |
+|---|---|---|
+| Primaire gegevensopslag | Deze winkels zijn onder andere Azure Data Lake en Azure Cosmos DB Profile stores. Zodra toetstoegang wordt ingetrokken, worden de gegevens ontoegankelijk. | A **enkele notulen aan 24 uren**. |
+| Gegevensopslag in cache/transient | Omvat gegevensopslag die voor prestaties en kerntoepassingsfunctionaliteit wordt gebruikt. De gevolgen van een belangrijke intrekking worden vertraagd. | **tot 7 dagen**. |
+
+Het dashboard Profiel zal bijvoorbeeld gegevens van zijn geheime voorgeheugen blijven tonen tot zeven dagen alvorens de gegevens verlopen en worden verfrist. Op dezelfde manier duurt het opnieuw inschakelen van toegang tot de toepassing even lang om de beschikbaarheid van gegevens in deze opslagruimten te herstellen.
 
 >[!NOTE]
 >
