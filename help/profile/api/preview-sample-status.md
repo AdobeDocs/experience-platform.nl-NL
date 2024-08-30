@@ -4,7 +4,7 @@ title: Voorbeeld van voorbeeldstatus (profiel voorvertoning) API-eindpunt
 description: Het eindpunt van de voorproefvoorbeeldstatus van het Real-Time Profiel van de Klant API staat u toe om de recentste succesvolle steekproef van uw gegevens van het Profiel, de distributie van het lijstprofiel door dataset en door identiteit, voor te vertonen en rapporten te produceren die datasetoverlapping, identiteitsoverlap, en ongestipte profielen tonen.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 49196473f304585193e87393f8dc5dc37be7e4d9
 workflow-type: tm+mt
 source-wordcount: '2901'
 ht-degree: 0%
@@ -84,7 +84,7 @@ De reactie bevat de details voor de laatste geslaagde voorbeeldtaak die voor de 
     "status": true,
     "submissionTimestamp": "2020-08-01 17:57:57.0"
   },
-  "cosmosDocCount": "\"300803\"",
+  "docCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
   "streamingDriven": "\"false\"",
@@ -101,7 +101,7 @@ De reactie bevat de details voor de laatste geslaagde voorbeeldtaak die voor de 
 |---|---|
 | `numRowsToRead` | Het totale aantal samengevoegde profielen in de steekproef. |
 | `sampleJobRunning` | Een Booleaanse waarde die `true` retourneert wanneer een voorbeeldtaak wordt uitgevoerd. Hiermee krijgt u transparantie in de latentie die optreedt wanneer een batchbestand wordt geüpload naar het moment dat het daadwerkelijk wordt toegevoegd aan de profielopslag. |
-| `cosmosDocCount` | Het totale aantal documenten in Cosmos. |
+| `docCount` | Totaal aantal documenten in database. |
 | `totalFragmentCount` | Het totale aantal profielfragmenten in het archief met profielen. |
 | `lastSuccessfulBatchTimestamp` | Tijdstempel voor laatste succes bij het invoeren van batch. |
 | `streamingDriven` | *Dit gebied is afgekeurd en bevat geen betekenis aan de reactie.* |
