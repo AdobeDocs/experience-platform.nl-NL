@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
+source-git-commit: b18f93078d3cdbd0498b5b282236ac9b7bad153c
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1043'
 ht-degree: 6%
 
 ---
@@ -28,7 +28,6 @@ ht-degree: 6%
       - Veldtoewijzingen {#mapping}
          - [Toewijzingen van analytische velden](connectors/adobe-applications/mapping/analytics.md)
          - [Veldtoewijzingen Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Toewijzingen doelveld](connectors/adobe-applications/mapping/target.md)
          - [Veldtoewijzingen Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
          - [Microsoft Dynamics-veldtoewijzingen](connectors/adobe-applications/mapping/dynamics.md)
          - [Toewijzingen in Salesforce-veld](connectors/adobe-applications/mapping/salesforce.md)
