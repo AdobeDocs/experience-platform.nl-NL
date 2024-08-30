@@ -2,9 +2,9 @@
 title: Amazon S3-verbinding
 description: Creeer een levende uitgaande verbinding aan uw opslag van Amazon Web Services (AWS) S3 om CSV- gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1457'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ Gebruik deze verificatiemethode als u de Amazon S3-toegangstoets en de geheime s
 
 Gebruik dit verificatietype als u accountsleutels en geheime sleutels niet met Adobe wilt delen. In plaats daarvan maakt Experience Platform verbinding met uw Amazon S3-locatie via op rollen gebaseerde toegang.
 
-Om dit te doen, moet u in de console van AWS een veronderstelde gebruiker voor Adobe met het [ recht vereiste toestemmingen ](#required-s3-permission) tot stand brengen om aan uw emmers van Amazon S3 te schrijven. Maak een **[!UICONTROL Trusted entity]** in AWS met het Adobe account **[!UICONTROL 670664943635]** . Voor meer informatie, verwijs naar de [ documentatie van AWS bij het creëren van rollen ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+Om dit te doen, moet u in de console van AWS een veronderstelde gebruiker voor Adobe met het [ recht vereiste toestemmingen ](#minimum-permissions-iam-user) tot stand brengen om aan uw emmers van Amazon S3 te schrijven. Maak een **[!UICONTROL Trusted entity]** in AWS met het Adobe account **[!UICONTROL 670664943635]** . Voor meer informatie, verwijs naar de [ documentatie van AWS bij het creëren van rollen ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
 * **[!DNL Role]**: plak de ARN van de rol die u in AWS voor de Adobe gebruiker hebt gemaakt. Het patroon is vergelijkbaar met `arn:aws:iam::800873819705:role/destinations-role-customer` .
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
@@ -162,6 +162,38 @@ Als u gegevens wilt verbinden en exporteren naar uw [!DNL Amazon S3] -opslagloca
 * `s3:ListBucket`
 * `s3:PutObject`
 * `s3:ListMultipartUploadParts`
+
+#### Minimale vereiste toestemmingen voor IAM veronderstelde rolauthentificatie {#minimum-permissions-iam-user}
+
+Wanneer het vormen van de rol IAM als klant, zorg ervoor dat het toestemmingsbeleid verbonden aan de rol de vereiste acties aan de doelomslag in het emmertje en de `s3:ListBucket` actie voor de wortel van het emmertje omvat. De mening onder een voorbeeld van het minimumtoestemmingenbeleid voor dit authentificatietype:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:GetBucketLocation",
+                "s3:ListMultipartUploadParts"
+            ],
+            "Resource": "arn:aws:s3:::bucket/folder/*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Resource": "arn:aws:s3:::bucket"
+        }
+    ]
+}  
+```
 
 <!--
 
