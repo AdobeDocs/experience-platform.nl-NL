@@ -3,9 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 742801c31a0371feb42df2c98b3a4ddb63ae2f48
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '1942'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Voordat u uw publiek naar [!DNL Facebook] kunt sturen, moet u controleren of aan
   >[!IMPORTANT]
   >
   > Wanneer het vormen van de toestemmingen voor Adobe Experience Cloud, moet u **toelaten leidt campagnes** toestemming. De machtiging is vereist voor de [!DNL Adobe Experience Platform] -integratie.
-* Lees en onderteken de [!DNL Facebook Custom Audiences] Servicevoorwaarden. Ga hiertoe naar `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]` , waar `accountID` uw [!DNL Facebook Ad Account ID] is.
+* Lees en onderteken de [!DNL Facebook Custom Audiences] Servicevoorwaarden. Ga hiertoe naar `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973` , waar `accountID` uw [!DNL Facebook Ad Account ID] is. Zorg ervoor dat de sectie `business_id=206617933627973` aanwezig is in de URL wanneer u de Servicevoorwaarden ondertekent.
   >[!IMPORTANT]
   >
   >Wanneer u de servicevoorwaarden van [!DNL Facebook Custom Audiences] ondertekent, moet u dezelfde gebruikersaccount gebruiken als waarmee u zich in de Facebook API hebt geverifieerd.
@@ -251,4 +251,10 @@ Wanneer het vormen van deze bestemming, kunt u de volgende fout ontvangen:
 
 Deze fout treedt op wanneer klanten nieuwe accounts gebruiken en de machtigingen [!DNL Facebook] nog niet actief zijn.
 
+>[!IMPORTANT]
+>
+>Zorg ervoor u [!DNL Facebook Custom Audience Terms of Service] onder `business ID 206617933627973` goedkeurt, zoals aangetoond in het malplaatje URL in de [ sectie van de rekeningseerste vereisten ](#facebook-account-prerequisites).
+
 Als u het `400 Bad Request` foutenbericht na de stappen in [ de rekeningseerste vereisten van Facebook ](#facebook-account-prerequisites) ontvangt, sta een paar dagen voor de [!DNL Facebook] toestemmingen toe om van kracht te worden.
+
+
