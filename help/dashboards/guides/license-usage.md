@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: f9b7275a9cf066db8192be6a5b5528e19d18c313
+source-git-commit: c512cce90eaee407a3b101cbf819685f21760a91
 workflow-type: tm+mt
-source-wordcount: '2545'
+source-wordcount: '2507'
 ht-degree: 0%
 
 ---
@@ -79,14 +79,14 @@ De lijst wijst op primaire metrisch voor elk product, aangezien elk product talr
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Voorspeld gebruik"
->abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Van gebruik wordt verwacht dat het de voorspelde waarden tussen {startDate} en {endDate} bereikt. De gegevens zijn voor het laatst verzameld op {collectionDate} . Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Verlopen van geautomatiseerde gegevenssets"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="Voorspeld gebruik"
->abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Van gebruik wordt verwacht dat het de voorspelde waarden tussen {startDate} en {endDate} bereikt. De gegevens zijn voor het laatst verzameld op {collectionDate} . Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Verlopen van geautomatiseerde gegevenssets"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
 
