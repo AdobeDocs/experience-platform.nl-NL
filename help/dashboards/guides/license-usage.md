@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3ea67d5bcdaeefd26cd95b89c60d21bef34ecd53
+source-git-commit: f9b7275a9cf066db8192be6a5b5528e19d18c313
 workflow-type: tm+mt
-source-wordcount: '2527'
+source-wordcount: '2545'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Op dit dashboard worden al uw Adobe Experience Platform-producten met licentie, 
 | **[!UICONTROL License Amount]** | De gecontracteerde waarde voor het maximale bedrag van de primaire metrische waarde zoals overeengekomen in uw productlicentieovereenkomst. |
 | **[!UICONTROL Usage]** | De hoeveelheid primaire metrisch die wordt gebruikt. Deze waarde geeft het totale gebruik van die metrische waarde voor alle sandboxen aan, productie of ontwikkeling. |
 | **[!UICONTROL Usage %]** | Het percentage van de primaire metrische waarde dat wordt gebruikt op basis van uw licentiehoeveelheid. |
-| **[!UICONTROL Prediction Usage]** | (**Beta**) het voorspelde gebruikspercentage van uw primaire metrisch volgens uw vergunningsbedrag. |
+| **[!UICONTROL Prediction Usage]** | Het voorspelde gebruikspercentage van uw primaire metrisch volgens uw vergunningshoeveelheid. |
 
 >[!NOTE]
 >
@@ -74,31 +74,27 @@ Op dit dashboard worden al uw Adobe Experience Platform-producten met licentie, 
 
 De lijst wijst op primaire metrisch voor elk product, aangezien elk product talrijke metriek kan volgen.
 
-### [!BADGE  Beta ] {type=Informative} Voorspeld gebruik {#predicted-usage}
+### Voorspeld gebruik {#predicted-usage}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Voorspeld gebruik"
-abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Verlopen van geautomatiseerde gegevenssets"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
+>abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Van gebruik wordt verwacht dat het de voorspelde waarden tussen {startDate} en {endDate} bereikt. De gegevens zijn voor het laatst verzameld op {collectionDate} . Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Verlopen van geautomatiseerde gegevenssets"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
 
-[!CONTEXTUALHELP]
-id="platform_licenseusage_prediction"
-title="Voorspeld gebruik"
-abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Verlopen van geautomatiseerde gegevenssets"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
-
->[!AVAILABILITY]
->
-De functionaliteit om toekomstig vergunningsgebruik te voorspellen is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
+>[!CONTEXTUALHELP]
+>id="platform_licenseusage_prediction"
+>title="Voorspeld gebruik"
+>abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Van gebruik wordt verwacht dat het de voorspelde waarden tussen {startDate} en {endDate} bereikt. De gegevens zijn voor het laatst verzameld op {collectionDate} . Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Verlopen van geautomatiseerde gegevenssets"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
 
 Beheer en optimaliseer proactief uw licentiemiddelen op basis van inzichtelijke gebruiksvoorspellingen. De kolom [!UICONTROL Predicted Usage] voorspelt nauwkeurig toekomstig vergunningsgebruik op het zandbakniveau, over alle productie en ontwikkelingszandbakken, voor al uw gekochte producten. Deze alarmeringscapaciteit verstrekt een prognose van vergunningsgebruik voor zes weken in de toekomst, gebaseerd op uw gebruik tot de 15e van deze kalendermaand. Voorspellingen worden geleverd met een ondergrens &amp; bovengrens.
 
 >[!IMPORTANT]
 >
-De voorspellingen worden maandelijks vernieuwd. De datum van verfrist zich is inbegrepen in een infopictogram (![ Dit infopictogram.](../images/license-usage/info-icon.png) ) boven de kolomtitel.
+>De voorspellingen worden maandelijks vernieuwd. De datum van verfrist zich is inbegrepen in een infopictogram (![ Dit infopictogram.](../images/license-usage/info-icon.png) ) boven de kolomtitel.
 
 Als u een overzicht wilt zien van het gebruik van een productmachtiging, selecteert u een product in de lijst [!UICONTROL Overview] .
 
@@ -108,7 +104,7 @@ Het tabblad Samenvatting wordt weergegeven. U kunt de korrelige voorspellingen g
 
 >[!NOTE]
 >
-Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe.
+>Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe.
 
 ![ de summiere mening van een Product van het Platform met de voorspelde benadrukte gebruikskolom.](../images/license-usage/summary-predicted-usage.png)
 
@@ -120,7 +116,7 @@ Het percentage van het voorspelde gebruik wordt als volgt bepaald:
 
 >[!NOTE]
 >
-&quot;Bijna identiek&quot; betekent in deze context dat de waarden statistisch significant zijn tot twee decimalen (een ondergrens van 0,342 en een bovengrens van 0,344 worden bijvoorbeeld beide afgerond tot 34%).
+>&quot;Bijna identiek&quot; betekent in deze context dat de waarden statistisch significant zijn tot twee decimalen (een ondergrens van 0,342 en een bovengrens van 0,344 worden bijvoorbeeld beide afgerond tot 34%).
 
 De voorspelde gebruiksfunctie ondersteunt de volgende meetgegevens:
 
@@ -136,23 +132,23 @@ Als u meer cijfers en gedetailleerd inzicht in het gebruik van uw productlicenti
 
 ![ de summiere mening van een Product van het Platform dat alle beschikbare metriek voor dat product toont.](../images/license-usage/summary-tab.png)
 
-Op het tabblad Overzicht bevat de tabel de kolom [!UICONTROL Metric] . Deze door mensen leesbare beschrijvingen geven alle metriek aan die voor dat type wordt gebruikt of sandbox.
+Op het tabblad Overzicht bevat de tabel de kolom [!UICONTROL Metric] . Deze beschrijvingen die leesbaar zijn voor mensen, geven alle metriek aan die voor dat type sandbox wordt gebruikt.
 
 ### Een sandbox selecteren {#select-sandbox}
 
-De weergave wijzigen tussen de typen productie- en ontwikkelingssandbox select [!UICONTROL Production sandboxes] of [!UICONTROL Development sandboxes] . Het geselecteerde type sandbox is wordt aangegeven door het keuzerondje naast de naam van de sandbox.
+Selecteer [!UICONTROL Production sandboxes] of [!UICONTROL Development sandboxes] als u de weergave tussen de typen productie- en ontwikkelingssandbox wilt wijzigen. Het geselecteerde type sandbox wordt aangegeven door het keuzerondje naast de naam van de sandbox.
 
-Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetzelfde type. In Met andere woorden: als u [!UICONTROL Production] of [!UICONTROL Development] selecteert, worden verbruiksrapporten weergegeven voor respectievelijk alle productie- of ontwikkelingssandboxen.
+Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetzelfde type. Met andere woorden: als u [!UICONTROL Production] of [!UICONTROL Development] selecteert, worden verbruiksrapporten weergegeven voor respectievelijk alle productie- of ontwikkelingssandboxen.
 
 ![ de summiere mening van een Product van het Platform met benadrukte zandbakken van de Productie en van de Ontwikkeling.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
-Toestemming om het dashboard voor het gebruiksbewijs van licenties weer te geven, moet worden opgegeven op sandboxniveau. Voeg machtigingen toe aan elke afzonderlijke sandbox om deze in het dashboard weer te geven. Deze beperking wordt in een toekomstige release opgelost. Ondertussen is de volgende oplossing beschikbaar:
+>Toestemming om het dashboard voor het gebruiksbewijs van licenties weer te geven, moet worden opgegeven op sandboxniveau. Voeg machtigingen toe aan elke afzonderlijke sandbox om deze in het dashboard weer te geven. Deze beperking wordt in een toekomstige release opgelost. Ondertussen is de volgende oplossing beschikbaar:
 >
-1. Maak een productprofiel in de Adobe Admin Console.
-2. Voeg onder Machtiging in de categorie Sandbox alle sandboxen toe die u wilt weergeven in het dashboard voor licentiegebruik.
-3. Voeg onder de categorie Machtiging voor dashboard van gebruiker de machtiging &#39;Licentiegebruiksdashboard weergeven&#39; toe.
+>1. Maak een productprofiel in de Adobe Admin Console.
+>2. Voeg onder Machtiging in de categorie Sandbox alle sandboxen toe die u wilt weergeven in het dashboard voor licentiegebruik.
+>3. Voeg onder de categorie Machtiging voor dashboard van gebruiker de machtiging &#39;Licentiegebruiksdashboard weergeven&#39; toe.
 
 ## Het tabblad [!UICONTROL Details] {#details-tab}
 
@@ -213,7 +209,7 @@ Het dashboard van het vergunningsgebruik rapporteert over verscheidene unieke me
 
 >[!TIP]
 >
-U kunt uw licentierechten in uw verkooporder controleren om meetgegevens te berekenen, zoals uw &#39;opslagvergoeding&#39;.<br> Bijvoorbeeld,<ul><li>Opslagruimte = het aantal &quot;geoorloofde profielen&quot; in uw contract X Gemiddelde rijkheid van profiel</li></ul>
+>U kunt uw licentierechten in uw verkooporder controleren om meetgegevens te berekenen, zoals uw &#39;opslagvergoeding&#39;.<br> Bijvoorbeeld,<ul><li>Opslagruimte = het aantal &quot;geoorloofde profielen&quot; in uw contract X Gemiddelde rijkheid van profiel</li></ul>
 
 De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze cijfers variëren afhankelijk van de licenties die uw organisatie heeft aangeschaft. Raadpleeg de desbetreffende documentatie bij de productbeschrijving voor gedetailleerde definities van elke metrische waarde:
 
@@ -228,7 +224,7 @@ De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze 
 
 >[!WARNING]
 >
-Het dashboard voor het gebruiksgemak rapporteert alleen over de nieuwste licentie die voor uw organisatie is ingericht. Als de meest recente licentie die voor uw organisatie is ingesteld, niet in de bovenstaande tabel wordt weergegeven, wordt het licentiegebruiksdashboard mogelijk niet correct weergegeven. Ondersteuning voor extra licenties en meerdere licenties in één organisatie is gepland voor een toekomstige release.
+>Het dashboard voor het gebruiksgemak rapporteert alleen over de nieuwste licentie die voor uw organisatie is ingericht. Als de meest recente licentie die voor uw organisatie is ingesteld, niet in de bovenstaande tabel wordt weergegeven, wordt het licentiegebruiksdashboard mogelijk niet correct weergegeven. Ondersteuning voor extra licenties en meerdere licenties in één organisatie is gepland voor een toekomstige release.
 
 ## Volgende stappen
 
