@@ -2,7 +2,7 @@
 title: Identiteitsgegevens in Web SDK
 description: Leer hoe u Adobe Experience Cloud-id's (ECID's) kunt ophalen en beheren met de Adobe Experience Platform Web SDK.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
+source-git-commit: 3b0fa672c4befd8e17632e62b0eeb13b6b17bfb4
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 0%
@@ -146,7 +146,7 @@ Elk identiteitsobject in de array identities bevat de volgende eigenschappen:
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `id` | String | **(Vereist)** identiteitskaart die u voor bepaalde namespace wilt plaatsen. |
-| `authenticationState` | String | **(Vereist)** De authentificatiestatus van identiteitskaart Mogelijke waarden zijn `ambiguous` , `authenticated` en `loggedOut` . |
+| `authenticatedState` | String | **(Vereist)** De authentificatiestatus van identiteitskaart Mogelijke waarden zijn `ambiguous` , `authenticated` en `loggedOut` . |
 | `primary` | Boolean | Hiermee wordt bepaald of deze identiteit moet worden gebruikt als primair fragment in het profiel. Standaard wordt de ECID ingesteld als de primaire id voor de gebruiker. Als deze waarde wordt weggelaten, wordt deze standaard ingesteld op `false` . |
 
 Als u het veld `identityMap` gebruikt om apparaten of gebruikers te identificeren, leidt dit tot hetzelfde resultaat als wanneer u de methode [`setCustomerIDs` ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) van de [!DNL ID Service API] . Zie de [ API documentatie van de Dienst van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) voor meer details.
