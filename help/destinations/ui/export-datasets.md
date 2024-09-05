@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
+source-git-commit: e95c0e509931f141ff72c1defacebe5a29756157
 workflow-type: tm+mt
-source-wordcount: '1762'
+source-wordcount: '1793'
 ht-degree: 0%
 
 ---
@@ -234,7 +234,8 @@ U kunt uw profielexport bekijken en volgen op basis van uw contractuele limieten
 Houd in mening de volgende beperkingen voor de algemene beschikbaarheidsversie van de uitvoer van datasets:
 
 * Momenteel, kunt u stijgende dossiers slechts uitvoeren en een einddatum kan niet voor uw datasetuitvoer worden geselecteerd.
-* Geëxporteerde bestandsnamen kunnen momenteel niet worden aangepast.
+* Experience Platform kan veelvoudige dossiers zelfs voor kleine datasets uitvoeren. Dataset exporteren is ontworpen voor systeemintegratie en geoptimaliseerd voor prestaties. Het aantal geëxporteerde bestanden kan daarom niet worden aangepast.
+* De geëxporteerde bestandsnamen kunnen momenteel niet worden aangepast.
 * Datasets die via API zijn gemaakt, zijn momenteel niet beschikbaar voor export.
 * UI blokkeert momenteel niet u van het schrappen van een dataset die naar een bestemming wordt uitgevoerd. Verwijder geen datasets die naar bestemmingen worden geëxporteerd. [ verwijder de dataset ](#remove-dataset) uit een bestemmingsdataflow alvorens het te schrappen.
 * De metriek van de controle voor de uitvoer van datasets wordt momenteel gemengd met aantallen voor profieluitvoer zodat weerspiegelen zij niet de ware uitvoeraantallen.
