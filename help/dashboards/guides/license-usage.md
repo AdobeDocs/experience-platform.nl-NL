@@ -4,14 +4,19 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: c512cce90eaee407a3b101cbf819685f21760a91
+source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
 workflow-type: tm+mt
-source-wordcount: '2507'
+source-wordcount: '2522'
 ht-degree: 0%
 
 ---
 
 # Het gebruiksdashboard voor licenties {#license-usage-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="testy-mctestface"
+>title="Dialoogvenster testen dat niet zichtbaar moet zijn"
+>abstract="Het object {name} wordt weergegeven op {date} ."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
