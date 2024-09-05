@@ -2,9 +2,9 @@
 title: Een Adobe Analytics Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
+source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
 workflow-type: tm+mt
-source-wordcount: '2631'
+source-wordcount: '2457'
 ht-degree: 0%
 
 ---
@@ -301,7 +301,7 @@ Er wordt een lijst weergegeven met bestaande analytische gegevens in uw organisa
 
 ![ een lijst van bestaande gegevens van Adobe Analytics in uw organisatie.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-De pagina [!UICONTROL Dataset activity] bevat informatie over de voortgang van gegevens die van Analytics naar Experience Platform worden verzonden. De interface toont metriek zoals het aantal ingebedde verslagen, aantal ingegeten partijen, en aantal ontbroken partijen.
+De pagina [!UICONTROL Dataset activity] bevat informatie over de voortgang van gegevens die van Analytics naar Experience Platform worden verzonden. De interface toont metriek zoals het totaal van verslagen in de vorige maand, het totaal van ingegeten verslagen in de laatste zeven dagen, en de grootte van gegevens in de vorige maand.
 
 De bron concretiseert twee datasetstromen. De ene flow vertegenwoordigt de backfill-gegevens en de andere stroom is bedoeld voor live-gegevens. De gegevens van de backfill worden niet gevormd voor opname in het Profiel van de Klant in real time maar wordt verzonden naar het gegevenshoek voor analytische en gegevenswetenschappelijk gebruik-gevallen.
 
@@ -309,35 +309,9 @@ Voor meer informatie over backfill, levende gegevens, en hun respectieve latenti
 
 ![ de pagina van de datasetactiviteit voor een bepaalde doeldataset voor de gegevens van Adobe Analytics.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-+++Afzonderlijke batches weergeven met de bestaande bewakingsinterface
-
-Op de pagina met gegevenssetactiviteiten wordt geen lijst met afzonderlijke batches weergegeven. Om een lijst van individuele partijen te bekijken, selecteer een grafiek in de interface van de datasetactiviteit.
-
-![ de pagina van de datasetactiviteit met een geselecteerde grafiek.](../../../../images/tutorials/create/analytics/select-chart.png)
-
-U wordt meegenomen naar het dashboard van de Controle. Selecteer vervolgens **[!UICONTROL ONLY INGEST FAILURES: YES]** om het filter te wissen en een lijst met afzonderlijke batches weer te geven.
-
-![ het controledashboard met de geselecteerde mislukkingsfilter.](../../../../images/tutorials/create/analytics/clear-filter.png)
-
-De interface werkt aan een lijst van individuele partijen bij, met inbegrip van informatie over hun respectieve metriek.
-
-![ de erfenis controlepagina voor partijgegevens.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
-
-| Metrics | Beschrijving |
-| --- | --- |
-| Batch-id | De id van een bepaalde partij. Deze waarde wordt intern gegenereerd. |
-| Naam gegevensset | De naam van een bepaalde dataset die voor de gegevens van Analytics wordt gebruikt. |
-| Source | De bron van de opgenomen gegevens. |
-| Bijgewerkt | De datum van de meest recente lusrun-iteratie. |
-| Records in gegevensset | The total count of records in the dataset. **Nota**: Deze parameter zal nu en dan een status van `in-progress` tonen. Deze status geeft aan dat het proces voor het opnemen van records nog niet is voltooid. |
-| Nieuwe profielfragmenten | Het totale aantal nieuwe profielfragmenten die zijn opgenomen. |
-| Bestaande profielfragmenten | Het totale aantal bestaande profielfragmenten. |
-| Identiteitsrecords gekoppeld | Het totale aantal identiteitsgegevens dat na inname aan elkaar is gehecht. |
-| Records in profiel | Het totale aantal verslagen die aan het Profiel van de Klant in real time werden opgenomen. |
-
-{style="table-layout:auto"}
-
-+++
+>[!NOTE]
+>
+>De pagina van de gegevenssetactiviteit toont geen informatie over partijen aangezien de de bronschakelaar van de Analyse volledig door Adobe wordt geleid. U kunt controleren dat de gegevens stromen door de metriek rond opgenomen verslagen te bekijken.
 
 ## Volgende stappen en extra bronnen
 

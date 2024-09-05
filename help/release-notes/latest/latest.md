@@ -1,9 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2024
 description: De release van augustus 2024 bevat opmerkingen over Adobe Experience Platform.
-source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: 4fecb47084a522b4eb9808dc317e0d70e7ef42c6
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1553'
 ht-degree: 1%
 
 ---
@@ -131,6 +132,12 @@ Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het [ ove
 Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
 Gebruik bronnen in Experience Platform om gegevens van een Adobe of een gegevensbron van derden in te voeren.
+
+**Bijgewerkte eigenschap**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Updates van de Adobe Analytics-bronaansluiting | De pagina van de datasetactiviteit toont geen informatie over partijen aangezien de Schakelaar van Source van de Analyse volledig door Adobe wordt geleid. U kunt controleren dat de gegevens stromen door de metriek rond opgenomen verslagen te bekijken. Lees de gids bij het creëren van a [ bronverbinding voor de gegevens van Analytics ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie. |
 
 **Bijgewerkte documentatie**
 
