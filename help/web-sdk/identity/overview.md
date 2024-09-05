@@ -2,33 +2,43 @@
 title: Identiteitsgegevens in Web SDK
 description: Leer hoe u Adobe Experience Cloud-id's (ECID's) kunt ophalen en beheren met de Adobe Experience Platform Web SDK.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
+source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1471'
 ht-degree: 0%
 
 ---
 
+
 # Identiteitsgegevens in Web SDK
 
-Het Web SDK van Adobe Experience Platform gebruikt [ Adobe Experience Cloud IDs (ECIDs) ](../../identity-service/features/ecid.md) om bezoekersgedrag te volgen. Met behulp van ECID&#39;s kunt u ervoor zorgen dat elk apparaat een unieke id heeft die tijdens meerdere sessies kan blijven bestaan. Hierdoor worden alle treffers die tijdens en tussen websessies plaatsvinden, aan een specifiek apparaat gekoppeld.
+Het Web SDK van Adobe Experience Platform gebruikt [ Adobe Experience Cloud IDs (ECIDs) ](../../identity-service/features/ecid.md) om bezoekersgedrag te volgen. Met [!DNL ECIDs] kunt u ervoor zorgen dat elk apparaat een unieke id heeft die tijdens meerdere sessies kan blijven bestaan, zodat alle resultaten die tijdens en tussen websessies optreden, worden gekoppeld aan een specifiek apparaat.
 
-Dit document biedt een overzicht van hoe u ECID&#39;s kunt beheren met de Platform Web SDK.
+Dit document biedt een overzicht van hoe u [!DNL ECIDs] kunt beheren met de SDK van Web.
 
-## ECID&#39;s bijhouden met de SDK
+## ECID&#39;s bijhouden met Web SDK {#tracking-ecids-we-sdk}
 
-De SDK van het Web van het Platform wijst ECIDs toe en volgt door koekjes te gebruiken, met veelvoudige beschikbare methodes om te vormen hoe deze koekjes worden geproduceerd.
+De SDK van het Web wijst en volgt [!DNL ECIDs] door koekjes, met veelvoudige beschikbare methodes toe te gebruiken om te vormen hoe deze koekjes worden geproduceerd.
 
-Wanneer een nieuwe gebruiker op uw website arriveert, probeert de Adobe Experience Cloud Identity Service een apparaatidentificatiecookie voor die gebruiker in te stellen. Voor nieuwe bezoekers wordt een ECID gegenereerd en geretourneerd in de eerste reactie van de Adobe Experience Platform-Edge Network. Voor herhaalde bezoekers wordt de ECID opgehaald uit het `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -cookie en door de Edge Network toegevoegd aan de payload.
+Wanneer een nieuwe gebruiker op uw website aankomt, probeert de [ Dienst van de Identiteit van Adobe Experience Cloud ](../../identity-service/home.md) om een koekje van de apparatenidentificatie voor die gebruiker te plaatsen.
 
-Nadat het cookie met de ECID is ingesteld, bevat elke volgende aanvraag die door de Web SDK wordt gegenereerd, een gecodeerde ECID in het `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -cookie.
+* Voor nieuwe bezoekers wordt een [!DNL ECID] gegenereerd en geretourneerd in de eerste reactie van de Edge Network van het Experience Platform.
+* Voor het retourneren van bezoekers wordt [!DNL ECID] opgehaald uit het `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -cookie en door de Edge Network toegevoegd aan de payload van de aanvraag.
 
-Wanneer u cookies gebruikt voor apparaatidentificatie, hebt u twee opties voor interactie met de Edge Network:
+Nadat het cookie met [!DNL ECID] is ingesteld, bevat elke volgende aanvraag die door de Web SDK wordt gegenereerd, een gecodeerde [!DNL ECID] in het `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -cookie.
 
-1. Gegevens rechtstreeks verzenden naar het domein Edge Network `adobedc.net` . Deze methode wordt bedoeld als [ de inzameling van derdegegevens ](#third-party).
+Wanneer u cookies gebruikt voor apparaatidentificatie, hebt u twee manieren om te werken met de Edge Network:
+
 1. Creeer een NAAM op uw eigen domein dat aan `adobedc.net` richt. Deze methode wordt bedoeld als [ de inzameling van eerste partijgegevens ](#first-party).
+1. Gegevens rechtstreeks verzenden naar het domein Edge Network `adobedc.net` . Deze methode wordt bedoeld als [ de inzameling van derdegegevens ](#third-party).
 
 Zoals in de onderstaande secties wordt uitgelegd, heeft de methode voor gegevensverzameling die u kiest, een directe invloed op de levensduur van cookies in verschillende browsers.
+
+### Gegevensverzameling van eerste partijen {#first-party}
+
+Voor het eerst verzamelen van gegevens moet u cookies instellen via een `CNAME` -lus in uw eigen domein dat naar `adobedc.net` wijst.
+
+Hoewel browsers cookies die door `CNAME` eindpunten zijn ingesteld lang op dezelfde manier hebben verwerkt als de cookies die door de eindpunten van de site worden ingesteld, hebben recente wijzigingen die door browsers zijn geïmplementeerd, een verschil gemaakt in de manier waarop `CNAME` -cookies worden verwerkt. Hoewel er momenteel geen browsers zijn die `CNAME` cookies van de eerste partij standaard blokkeren, beperken sommige browsers de levensduur van cookies die met een `CNAME` zijn ingesteld tot slechts zeven dagen.
 
 ### Gegevensverzameling van derden {#third-party}
 
@@ -36,25 +46,19 @@ Bij gegevensverzameling van derden worden gegevens rechtstreeks naar het domein 
 
 De afgelopen jaren zijn webbrowsers steeds restrictiever geworden bij het verwerken van door derden ingestelde cookies. Sommige browsers blokkeren cookies van derden standaard. Als u cookies van derden gebruikt om sitebezoekers te identificeren, is de levensduur van deze cookies vrijwel altijd korter dan wat anders beschikbaar zou zijn in plaats daarvan met cookies van de eerste fabrikant. Soms verloopt een cookie van een andere fabrikant binnen maar liefst zeven dagen.
 
-Ook, wanneer de derdegegevensinzameling wordt gebruikt, beperken sommige en blokkeerders verkeer tot eindpunten van de gegevensinzameling van de Adobe.
-
-### Gegevensverzameling van eerste partijen {#first-party}
-
-De gegevensinzameling van de eerste partij impliceert het plaatsen van koekjes door een CNAME op uw eigen domein dat aan `adobedc.net` richt.
-
-Terwijl browsers lange behandelde koekjes hebben die door eindpunten van CNAME op een gelijkaardige manier aan die worden geplaatst door plaats-eigenlijke eindpunten worden geplaatst, hebben de recente veranderingen die door browsers worden uitgevoerd een onderscheid in gemaakt hoe de koekjes van CNAME worden behandeld. Hoewel er geen browsers zijn die CNAME-cookies van de eerste partij standaard blokkeren, beperken sommige browsers de levensduur van cookies die met een CNAME zijn ingesteld tot slechts zeven dagen.
+Ook, wanneer het gebruiken van derdegegevensinzameling, beperken sommige en blokkeerders verkeer tot eindpunten van de gegevensinzameling van de Adobe.
 
 ### Effecten van de levensduur van cookies op Adobe Experience Cloud-toepassingen {#lifespans}
 
-Ongeacht of u gegevensverzameling van de eerste of van de derde partij kiest, heeft de tijdsduur dat een cookie kan aanhouden een directe invloed op het aantal bezoekers in Adobe Analytics en Customer Journey Analytics. Ook kunnen eindgebruikers inconsistente personalisatieervaringen ervaren wanneer Adobe Target of Offer decisioning op de site wordt gebruikt.
+Ongeacht of u eerste-partij of derdegegevensinzameling kiest, kan de tijdsduur een koekje een directe invloed op bezoekersaantallen in [ Adobe Analytics ](https://experienceleague.adobe.com/en/docs/analytics) en [ Customer Journey Analytics ](https://experienceleague.adobe.com/en/docs/customer-journey-analytics) aanhouden. Ook, kunnen de eindgebruikers inconsistente verpersoonlijkingservaringen ervaren wanneer [ Adobe Target ](https://experienceleague.adobe.com/en/docs/target) of [ Offer decisioning ](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) op de plaats wordt gebruikt.
 
 Neem bijvoorbeeld een situatie waarin u een personaliseringservaring hebt gemaakt waarmee elk item op de homepage wordt bevorderd als een gebruiker dit de afgelopen zeven dagen drie keer heeft bekeken.
 
 Als een eindgebruiker drie keer per week bezoekt en vervolgens zeven dagen niet terugkeert naar de site, kan die gebruiker worden beschouwd als een nieuwe gebruiker wanneer hij of zij terugkeert naar de site omdat de cookies zijn verwijderd door een browserbeleid (afhankelijk van de browser die hij of zij gebruikte toen hij of zij de site bezocht). Als dit gebeurt, behandelt uw Analyse-hulpprogramma de bezoeker als een nieuwe gebruiker, ook al hebben ze de site iets meer dan zeven dagen geleden bezocht. Bovendien begint elke poging om de gebruikerservaring aan te passen opnieuw.
 
-### Apparaat-id&#39;s van eerste partij
+### FPID&#39;s (First-party device ID&#39;s) {#fpid}
 
-Om rekening te houden met de effecten van de bovenstaande cookie levensduur, kunt u ervoor kiezen om uw eigen apparaat-id&#39;s in te stellen en te beheren. Zie de gids op [ eerste-partijapparaat IDs ](./first-party-device-ids.md) voor meer informatie.
+Als u rekening wilt houden met de effecten van de levensduur van cookies zoals hierboven beschreven, kunt u uw eigen apparaat-id&#39;s instellen en beheren. Zie de gids op [ eerste-partijapparaat IDs ](./first-party-device-ids.md) voor meer informatie.
 
 ## De ECID en het gebied voor de huidige gebruiker ophalen {#retrieve-ecid}
 
@@ -147,7 +151,7 @@ Elk identiteitsobject in de array identities bevat de volgende eigenschappen:
 
 Als u het veld `identityMap` gebruikt om apparaten of gebruikers te identificeren, leidt dit tot hetzelfde resultaat als wanneer u de methode [`setCustomerIDs` ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) van de [!DNL ID Service API] . Zie de [ API documentatie van de Dienst van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) voor meer details.
 
-## Migreren van Bezoeker-API naar ECID
+## Migreren van Bezoeker-API naar ECID {#migrating-visitor-api-ecid}
 
 Wanneer u migreert vanuit de Bezoeker-API, kunt u ook bestaande AMCV-cookies migreren. Als u ECID-migratie wilt inschakelen, stelt u de parameter `idMigrationEnabled` in de configuratie in. Bij ID-migratie zijn de volgende gebruiksgevallen mogelijk:
 
