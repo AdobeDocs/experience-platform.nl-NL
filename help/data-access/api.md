@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API-handleiding voor gegevenstoegang
 description: De API van de Toegang van Gegevens steunt Adobe Experience Platform door ontwikkelaars van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen Experience Platform wordt geconcentreerd.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%
@@ -243,4 +243,4 @@ Voor extra steekproeven, verwijs naar het [ leerprogramma van de gegevenstoegang
 
 ## Abonneren op gebeurtenissen voor gegevensinvoer {#subscribe-to-data-ingestion-events}
 
-U kunt aan specifieke high-value gebeurtenissen door [ Adobe Developer Console ](https://developer.adobe.com/console/) intekenen. U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie het leerprogramma op [ intekenend aan gegevens opnemen berichten ](../ingestion/quality/subscribe-events.md) voor meer informatie.
+U kunt aan specifieke high-value gebeurtenissen door [ Adobe Developer Console ](https://developer.adobe.com/console/) intekenen. U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie het leerprogramma op [ intekenend aan de gebeurtenisberichten van de Adobe ](../observability/alerts/subscribe.md) voor meer informatie.

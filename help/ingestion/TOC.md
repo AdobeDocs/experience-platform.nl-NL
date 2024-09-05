@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor gegevensopname
 user-guide-description: Breng uw gegevens naar Experience Platform via batch- of streamingopname.
 feature: Data Ingestion
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '142'
 ht-degree: 17%
 
 ---
@@ -44,7 +44,6 @@ ht-degree: 17%
    - [Foutendiagnostiek ophalen](quality/error-diagnostics.md)
    - [Ontbroken batches ophalen](quality/retrieve-failed-batches.md)
    - [Validatie van gestreamde invoer](quality/streaming-validation.md)
-   - [Meldingen voor gegevensinvoer](quality/subscribe-events.md)
 - [Guardrails voor gegevensinvoer](guardrails.md)
 - [Source-connectors](source-connectors.md)
 - [ Verwijzing van de Opname API van de Partij ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
