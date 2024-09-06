@@ -4,9 +4,9 @@ title: API-eindpunt voor segmentexporttaken
 description: De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. U kunt het /export/job eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform gebruiken, die u toestaat om, uitvoerbanen programmatically terug te winnen tot stand te brengen en te annuleren.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1678'
 ht-degree: 0%
 
 ---
@@ -33,20 +33,26 @@ Het `/export/jobs` eindpunt steunt verscheidene vraagparameters helpen uw result
 
 ```http
 GET /export/jobs
-GET /export/jobs?limit={LIMIT}
-GET /export/jobs?offset={OFFSET}
-GET /export/jobs?status={STATUS}
+GET /export/jobs?{QUERY_PARAMETERS}
 ```
 
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `{LIMIT}` | Hiermee geeft u het aantal geretourneerde exporttaken op. |
-| `{OFFSET}` | Hiermee bepaalt u de verschuiving van de resultatenpagina&#39;s. |
-| `{STATUS}` | Hiermee filtert u de resultaten op basis van de status. De ondersteunde waarden zijn NEW, SUCCEEDED en FAILED. |
+**de parameters van de Vraag**
+
++++ Een lijst met beschikbare queryparameters.
+
+| Parameter | Beschrijving | Voorbeeld |
+| --------- | ----------- | ------- |
+| `limit` | Hiermee geeft u het aantal geretourneerde exporttaken op. | `limit=10` |
+| `offset` | Hiermee bepaalt u de verschuiving van de resultatenpagina&#39;s. | `offset=1540974701302_96` |
+| `status` | Hiermee filtert u de resultaten op basis van de status. De ondersteunde waarden zijn NEW, SUCCEEDED en FAILED. | `status=NEW` |
+
++++
 
 **Verzoek**
 
 Het volgende verzoek zal de laatste twee uitvoerbanen binnen uw organisatie terugwinnen.
+
++++ Een voorbeeldverzoek om exporttaken op te halen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
@@ -56,9 +62,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Reactie**
 
 De volgende reactie keert HTTP status 200 met een lijst van met succes voltooide uitvoerbanen terug, die op de vraagparameter wordt gebaseerd in de verzoekweg wordt verstrekt.
+
++++ Een voorbeeldreactie bij het ophalen van exporttaken.
 
 ```json
 {
@@ -207,6 +217,8 @@ De volgende reactie keert HTTP status 200 met een lijst van met succes voltooide
 | `page` | Informatie over de paginering van de gewenste exporttaken. |
 | `link.next` | Een koppeling naar de volgende pagina met exporttaken. |
 
++++
+
 ## Een nieuwe exporttaak maken {#create}
 
 U kunt een nieuwe exportbaan tot stand brengen door een verzoek van de POST aan het `/export/jobs` eindpunt te doen.
@@ -220,6 +232,8 @@ POST /export/jobs
 **Verzoek**
 
 Het volgende verzoek leidt tot een nieuwe uitvoerbaan, die door de parameters wordt gevormd die in de lading worden verstrekt.
+
++++ Een voorbeeldverzoek om een exporttaak te maken.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
@@ -290,9 +304,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `schema.name` | **(Vereist)** De naam van het schema verbonden aan de dataset waar het gegeven moet worden uitgevoerd. |
 | `evaluationInfo.segmentation` | *(Optioneel)* Een Booleaanse waarde die, indien niet opgegeven, standaard op `false` wordt ingesteld. De waarde `true` geeft aan dat segmentatie moet worden uitgevoerd op de exporttaak. |
 
++++
+
 **Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met details van de nieuwe exporttaak.
+
++++ Een voorbeeldreactie bij het maken van een exporttaak.
 
 ```json
 {
@@ -380,6 +398,8 @@ Als `destination.segmentPerBatch` was ingesteld op `true` , heeft het bovenstaan
     }
 ```
 
++++
+
 ## Een specifieke exporttaak ophalen {#get}
 
 U kunt gedetailleerde informatie over een specifieke uitvoerbaan terugwinnen door een verzoek van de GET aan het `/export/jobs` eindpunt te richten en identiteitskaart van de de uitvoerbaan te verstrekken u in de verzoekweg wenst terug te winnen.
@@ -396,6 +416,8 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 **Verzoek**
 
++++ Een voorbeeldaanvraag om een exporttaak op te halen.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -404,9 +426,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie over de opgegeven exporttaak.
+
++++ Een voorbeeldreactie bij het ophalen van een exporttaak.
 
 ```json
 {
@@ -476,6 +502,8 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 | `metrics.profileExportTime` | Een veld waarin de exporttijd van de profielen wordt aangegeven. |
 | `totalExportedProfileCounter` | Het totale aantal profielen dat is geëxporteerd naar alle batches. |
 
++++
+
 ## Een specifieke exporttaak annuleren of verwijderen {#delete}
 
 U kunt verzoeken om de opgegeven exporttaak te verwijderen door een DELETE-aanvraag in te dienen bij het `/export/jobs` -eindpunt en de id op te geven van de exporttaak die u wilt verwijderen in het aanvraagpad.
@@ -492,6 +520,8 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 **Verzoek**
 
++++ Een voorbeeldaanvraag om een exporttaak te verwijderen.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -499,6 +529,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Reactie**
 

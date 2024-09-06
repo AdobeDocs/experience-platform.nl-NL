@@ -4,9 +4,9 @@ title: Segment Definition API Endpoint
 description: Het eindpunt van segmentdefinities in de Dienst API van de Segmentatie van Adobe Experience Platform staat u toe om segmentdefinities voor uw organisatie programmatically te beheren.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1328'
 ht-degree: 0%
 
 ---
@@ -36,17 +36,23 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 **de parameters van de Vraag**
 
++++ Een lijst met beschikbare queryparameters.
+
 | Parameter | Beschrijving | Voorbeeld |
 | --------- | ----------- | ------- |
 | `start` | Geeft de beginverschuiving aan voor de gesegmenteerde definities die worden geretourneerd. | `start=4` |
 | `limit` | Geeft het aantal segmentdefinities op dat per pagina wordt geretourneerd. | `limit=20` |
 | `page` | Geeft aan vanaf welke pagina de resultaten van segmentdefinities moeten beginnen. | `page=5` |
-| `sort` | Hiermee geeft u aan op welk veld de resultaten moeten worden gesorteerd. Wordt geschreven in de volgende indeling: `[attributeName]:[desc|asc]` . | `sort=updateTime:desc` |
+| `sort` | Hiermee geeft u aan op welk veld de resultaten moeten worden gesorteerd. Wordt geschreven in de volgende indeling: `[attributeName]:[desc/asc]` . | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | Geeft aan of de segmentdefinitie streaming-ingeschakeld is. | `evaluationInfo.continuous.enabled=true` |
+
++++
 
 **Verzoek**
 
 Het volgende verzoek zal de laatste twee segmentdefinities terugwinnen die binnen uw organisatie worden gepost.
+
++++ Een steekproefverzoek om een lijst van segmentdefinities terug te winnen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
@@ -56,9 +62,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met een lijst van segmentdefinities voor de gespecificeerde organisatie als JSON terug.
+
++++ Een voorbeeldreactie bij het ophalen van een lijst met segmentdefinities.
 
 ```json
 {
@@ -148,6 +158,8 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van segmentdefin
 }
 ```
 
++++
+
 ## Een nieuwe segmentdefinitie maken {#create}
 
 U kunt een nieuwe segmentdefinitie tot stand brengen door een verzoek van de POST aan het `/segment/definitions` eindpunt te doen.
@@ -163,6 +175,8 @@ POST /segment/definitions
 ```
 
 **Verzoek**
+
++++ Een voorbeeldverzoek om een segmentdefinitie te maken.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
@@ -209,15 +223,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld `workAddress.stateProvince = homeAddress.stateProvince` .</li></ul> |
 | `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format` . |
 
-<!-- >[!NOTE]
->
->A segment definition expression may also reference a computed attribute. To learn more, please refer to the [computed attribute API endpoint guide](../../profile/computed-attributes/ca-api.md)
->
->Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change. -->
++++
 
 **Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde segmentdefinitie terug.
+
++++ Een voorbeeldreactie bij het maken van een segmentdefinitie.
 
 ```json
 {
@@ -265,6 +277,8 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 | `id` | Een door het systeem gegenereerde id van de zojuist gemaakte segmentdefinitie. |
 | `evaluationInfo` | Een object dat aangeeft welk type evaluatie de segmentdefinitie zal ondergaan. Het kan batch-, streaming- (ook wel doorlopend genoemd) of randsegmentatie (ook wel synchroon genoemd) zijn. |
 
++++
+
 ## Een specifieke segmentdefinitie ophalen {#get}
 
 U kunt gedetailleerde informatie over een specifieke segmentdefinitie terugwinnen door een verzoek van de GET aan het `/segment/definitions` eindpunt te doen en identiteitskaart van de segmentdefinitie te verstrekken u in de verzoekweg wenst terug te winnen.
@@ -281,6 +295,8 @@ GET /segment/definitions/{SEGMENT_ID}
 
 **Verzoek**
 
++++ Een steekproefverzoek om een segmentdefinitie terug te winnen.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -289,9 +305,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over de gespecificeerde segmentdefinitie terug.
+
++++ Een voorbeeldreactie bij het ophalen van een segmentdefinitie.
 
 ```json
 {
@@ -346,6 +366,8 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 | `description` | Een leesbare beschrijving van de definitie. |
 | `evaluationInfo` | Een object dat aangeeft welk type evaluatie, batch, streaming (ook wel doorlopend genoemd) of rand (ook wel synchroon genoemd), de segmentdefinitie wordt uitgevoerd. |
 
++++
+
 ## Bulk haalt segmentdefinities op {#bulk-get}
 
 U kunt gedetailleerde informatie over veelvoudige gespecificeerde segmentdefinities terugwinnen door een verzoek van de POST aan het `/segment/definitions/bulk-get` eindpunt te richten en de `id` waarden van de segmentdefinities in het verzoeklichaam te verstrekken.
@@ -357,6 +379,8 @@ POST /segment/definitions/bulk-get
 ```
 
 **Verzoek**
+
++++ Een steekproefverzoek wanneer het gebruiken van het bulkkrijgt eindpunt.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-get \
@@ -377,9 +401,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
     }'
 ```
 
++++
+
 **Reactie**
 
 Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefinities terug.
+
++++ Een steekproefreactie wanneer het gebruiken van het bulkget eindpunt.
 
 ```json
 {
@@ -477,6 +505,8 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefini
 | `description` | Een leesbare beschrijving van de definitie. |
 | `evaluationInfo` | Een object dat aangeeft welk type evaluatie, batch, streaming (ook wel doorlopend genoemd) of rand (ook wel synchroon genoemd), de segmentdefinitie wordt uitgevoerd. |
 
++++
+
 ## Een specifieke segmentdefinitie verwijderen {#delete}
 
 U kunt verzoeken om een specifieke segmentdefinitie te schrappen door een verzoek van DELETE aan het `/segment/definitions` eindpunt te doen en identiteitskaart van de segmentdefinitie te verstrekken u wenst om in de verzoekweg te schrappen.
@@ -497,6 +527,8 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 **Verzoek**
 
++++ Een voorbeeldverzoek om een segmentdefinitie te verwijderen.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -504,6 +536,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Reactie**
 
@@ -526,6 +560,8 @@ PATCH /segment/definitions/{SEGMENT_ID}
 **Verzoek**
 
 Met het volgende verzoek wordt het land van het werkadres van de VS naar Canada bijgewerkt.
+
++++ Een voorbeeldverzoek om een segmentdefinitie bij te werken.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -555,9 +591,13 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 }'
 ```
 
++++
+
 **Reactie**
 
-Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs bijgewerkte segmentdefinitie terug. U ziet hoe het werkadresland is bijgewerkt van de Verenigde Staten naar Canada (CA).
+Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs bijgewerkte segmentdefinitie terug.
+
++++ Een voorbeeldreactie bij het bijwerken van een segmentdefinitie.
 
 ```json
 {
@@ -600,6 +640,8 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs bij
 }
 ```
 
++++
+
 ## Segmentdefinitie omzetten
 
 U kunt een segmentdefinitie tussen `pql/text` en `pql/json` of `pql/json` omzetten in `pql/text` door een POST aan te vragen bij het `/segment/conversion` -eindpunt.
@@ -613,6 +655,8 @@ POST /segment/conversion
 **Verzoek**
 
 Met de volgende aanvraag wordt de indeling van de segmentdefinitie gewijzigd van `pql/text` in `pql/json` .
+
++++ Een voorbeeldverzoek om de segmentdefinitie om te zetten.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
@@ -637,9 +681,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
     }'
 ```
 
++++
+
 **Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs omgezette segmentdefinitie terug.
+
++++ Een voorbeeldreactie bij het omzetten van de segmentdefinitie.
 
 ```json
 {
@@ -658,6 +706,8 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs omg
     }
 }
 ```
+
++++
 
 ## Volgende stappen
 

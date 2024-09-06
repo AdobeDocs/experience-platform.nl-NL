@@ -4,9 +4,9 @@ title: Voorvertoningen en schattingen van API-eindpunten
 description: Terwijl segmentdefinitie wordt ontwikkeld, kunt u met de rastergereedschappen en voorvertoningsgereedschappen in Adobe Experience Platform informatie op overzichtsniveau weergeven, zodat u zeker weet dat u het verwachte publiek isoleert.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -62,6 +62,8 @@ POST /preview
 
 **Verzoek**
 
++++ Een voorbeeldverzoek om een voorvertoning te maken.
+
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/preview \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -85,9 +87,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateModel` | De naam van de schemaklasse [!DNL Experience Data Model] (XDM) waarop de profielgegevens zijn gebaseerd. |
 | `graphType` | Het grafiektype waarvan u de cluster wilt ophalen. De ondersteunde waarden zijn `none` (voert geen identiteitsstitching uit) en `pdg` (voert identiteitsstitching uit op basis van uw persoonlijke identiteitsgrafiek). |
 
++++
+
 **Reactie**
 
 Een succesvol antwoord retourneert HTTP-status 201 (Gemaakt) met details van de zojuist gemaakte voorvertoning.
+
++++ Een voorbeeldreactie bij het maken van een voorvertoning.
 
 ```json
 {
@@ -103,6 +109,8 @@ Een succesvol antwoord retourneert HTTP-status 201 (Gemaakt) met details van de 
 | -------- | ----------- |
 | `state` | De huidige status van de voorvertoningstaak. Bij het maken wordt de status &quot;NIEUW&quot; gebruikt. Vervolgens wordt de status &quot;RUNNING&quot; gebruikt totdat de verwerking is voltooid, waarna de status &quot;RESULT_READY&quot; of &quot;FAILED&quot; wordt. |
 | `previewId` | De id van de voorvertoningstaak die voor opzoekdoeleinden moet worden gebruikt bij het weergeven van een schatting of voorvertoning, zoals in de volgende sectie wordt beschreven. |
+
++++
 
 ## De resultaten van een specifieke voorvertoning ophalen {#get-preview}
 
@@ -120,6 +128,8 @@ GET /preview/{PREVIEW_ID}
 
 **Verzoek**
 
++++ Een voorbeeldverzoek om een voorvertoning op te halen.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -128,7 +138,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Reactie**
+
++++ Een voorbeeldreactie bij het ophalen van een voorvertoning.
 
 Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie over de opgegeven voorvertoning.
 
@@ -181,6 +195,8 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 | -------- | ----------- |
 | `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. De verstrekte verbindingen kunnen worden gebruikt om de gespecificeerde entiteiten omhoog te kijken, gebruikend het [ API eindpunt van de profieltoegang ](../../profile/api/entities.md). |
 
++++
+
 ## De resultaten van een specifieke geschatte taak ophalen {#get-estimate}
 
 Als u een voorvertoningstaak hebt gemaakt, kunt u de `previewId` ervan gebruiken in het pad van een aanvraag van een GET naar het `/estimate` -eindpunt om statistische informatie weer te geven over de segmentdefinitie, zoals de geprojecteerde publieksgrootte, het betrouwbaarheidsinterval en de standaardafwijking voor fouten.
@@ -199,6 +215,8 @@ GET /estimate/{PREVIEW_ID}
 
 Het volgende verzoek wint de resultaten van een specifieke ramingstaak terug.
 
++++ Een voorbeeldverzoek om een geschatte taak op te halen.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -207,9 +225,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Reactie**
 
 Een succesvolle reactie retourneert HTTP status 200 met details van de geschatte taak.
+
++++ Een voorbeeldreactie bij het ophalen van een geschatte taak.
 
 ```json
 {
@@ -243,9 +265,11 @@ Een succesvolle reactie retourneert HTTP status 200 met details van de geschatte
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `estimatedNamespaceDistribution` | Een array met objecten die het aantal profielen in het segment weergeeft, uitgesplitst naar naamruimte van identiteit. Het totale aantal profielen per naamruimte (door de waarden voor elke naamruimte bij elkaar op te tellen) kan hoger zijn dan de metrische waarde van het aantal profielen, omdat één profiel aan meerdere naamruimten kan worden gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd. |
+| `estimatedNamespaceDistribution` | Een array met objecten die het aantal profielen binnen de segmentdefinitie weergeeft, uitgesplitst naar naamruimte van identiteit. Het totale aantal profielen per naamruimte (door de waarden voor elke naamruimte bij elkaar op te tellen) kan hoger zijn dan de metrische waarde van het aantal profielen, omdat één profiel aan meerdere naamruimten kan worden gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd. |
 | `state` | De huidige status van de voorvertoningstaak. De status wordt ‘UITGEVOERD’ totdat de verwerking is voltooid, waarna de status ‘RESULT_READY’ of ‘FAILED’ wordt. |
 | `_links.preview` | Wanneer `state` &quot;RESULT_READY&quot; is, verstrekt dit gebied een URL om de schatting te bekijken. |
+
++++
 
 ## Volgende stappen
 

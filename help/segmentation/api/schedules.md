@@ -4,9 +4,9 @@ title: API-eindpunt voor planningen
 description: Planningen zijn een hulpmiddel dat kan worden gebruikt om batch-segmentatietaken één keer per dag automatisch uit te voeren.
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2104'
 ht-degree: 0%
 
 ---
@@ -29,18 +29,25 @@ Het `/config/schedules` eindpunt steunt verscheidene vraagparameters helpen uw r
 
 ```http
 GET /config/schedules
-GET /config/schedules?start={START}
-GET /config/schedules?limit={LIMIT}
+GET /config/schedules?{QUERY_PARAMETERS}
 ```
 
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `{START}` | Geeft aan vanaf welke pagina de verschuiving begint. Deze waarde is standaard 0. |
-| `{LIMIT}` | Geeft het aantal geretourneerde schema&#39;s op. Deze waarde is standaard 100. |
+**de parameters van de Vraag**
+
++++ Een lijst met beschikbare queryparameters.
+
+| Parameter | Beschrijving | Voorbeeld |
+| --------- | ----------- | ------- |
+| `start` | Geeft aan vanaf welke pagina de verschuiving begint. Deze waarde is standaard 0. | `start=5` |
+| `limit` | Geeft het aantal geretourneerde schema&#39;s op. Deze waarde is standaard 100. | `limit=20` |
+
++++
 
 **Verzoek**
 
 Het volgende verzoek zal de laatste tien programma&#39;s terugwinnen die binnen uw organisatie worden gepost.
+
++++ Een steekproefverzoek om een lijst van programma&#39;s terug te winnen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
@@ -50,6 +57,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met een lijst van programma&#39;s voor de gespecificeerde organisatie als JSON terug.
@@ -57,6 +66,8 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van programma&#3
 >[!NOTE]
 >
 >De volgende reactie is afgebroken voor ruimte, en toont slechts het eerste teruggekeerde programma.
+
++++ Een voorbeeldreactie bij het ophalen van een lijst met schema&#39;s.
 
 ```json
 {
@@ -102,6 +113,8 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van programma&#3
 | `children.schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix). In dit voorbeeld betekent &quot;0 0 1 * *&quot;dat dit programma om 1AM elke dag zal lopen. |
 | `children.state` | Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn &quot;actief&quot; en &quot;inactief&quot;. De status wordt standaard ingesteld op &quot;inactief&quot;. |
 
++++
+
 ## Een nieuw schema maken {#create}
 
 U kunt een nieuw programma tot stand brengen door een verzoek van de POST aan het `/config/schedules` eindpunt te doen.
@@ -113,6 +126,8 @@ POST /config/schedules
 ```
 
 **Verzoek**
+
++++ Een voorbeeldverzoek om een programma te maken.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -144,9 +159,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `schedule` | *Facultatief.* Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix). In dit voorbeeld betekent &quot;0 0 1 * *&quot;dat dit programma om 1AM elke dag zal lopen. <br><br> als dit koord niet wordt geleverd, zal een systeem-geproduceerd programma automatisch worden geproduceerd. |
 | `state` | *Facultatief.* Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn &quot;actief&quot; en &quot;inactief&quot;. De status wordt standaard ingesteld op &quot;inactief&quot;. |
 
++++
+
 **Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs gecreeerd programma terug.
+
++++ Een voorbeeldreactie bij het maken van een schema.
 
 ```json
 {
@@ -172,6 +191,8 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs gec
 }
 ```
 
++++
+
 ## Een specifiek schema ophalen {#get}
 
 U kunt gedetailleerde informatie over een specifiek programma terugwinnen door een verzoek van de GET tot het `/config/schedules` eindpunt te richten en identiteitskaart van het programma te verstrekken u in de verzoekweg wenst terug te winnen.
@@ -188,6 +209,8 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **Verzoek**
 
++++ Een steekproefverzoek om een programma terug te winnen.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -196,9 +219,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Reactie**
 
 Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over het gespecificeerde programma terug.
+
++++ Een voorbeeldreactie bij het ophalen van een schema.
 
 ```json
 {
@@ -233,15 +260,13 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 | `schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix). In dit voorbeeld betekent &quot;0 0 1 * *&quot;dat dit programma om 1AM elke dag zal lopen. |
 | `state` | Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn `active` en `inactive` . De status wordt standaard ingesteld op `inactive` . |
 
++++
+
 ## Details bijwerken voor een specifiek schema {#update}
 
 U kunt een specifiek programma bijwerken door een verzoek van PATCH tot het `/config/schedules` eindpunt te richten en identiteitskaart van het programma te verstrekken u probeert om in de verzoekweg bij te werken.
 
 Het verzoek van de PATCH staat u toe om of de [ staat ](#update-state) of het [ bouwplan ](#update-schedule) voor een individueel programma bij te werken.
-
-### Status schema bijwerken {#update-state}
-
-U kunt een JSON-patchbewerking gebruiken om de status van de planning bij te werken. Als u de status wilt bijwerken, declareert u de eigenschap `path` als `/state` en stelt u de eigenschap `value` in op `active` of `inactive` . Voor meer informatie over Reparatie JSON, te lezen gelieve de ](https://datatracker.ietf.org/doc/html/rfc6902) documentatie van het Reparatie 0} JSON {.[
 
 **API formaat**
 
@@ -253,7 +278,15 @@ PATCH /config/schedules/{SCHEDULE_ID}
 | --------- | ----------- |
 | `{SCHEDULE_ID}` | De `id` waarde van het schema u wilt bijwerken. |
 
+>[!BEGINTABS]
+
+>[!TAB  de planningsstaat van de Update ]
+
+U kunt een JSON-patchbewerking gebruiken om de status van de planning bij te werken. Als u de status wilt bijwerken, declareert u de eigenschap `path` als `/state` en stelt u de eigenschap `value` in op `active` of `inactive` . Voor meer informatie over Reparatie JSON, te lezen gelieve de ](https://datatracker.ietf.org/doc/html/rfc6902) documentatie van het Reparatie 0} JSON {.[
+
 **Verzoek**
+
++++ Een voorbeeldverzoek om de planningsstatus bij te werken.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -271,6 +304,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 ]'
 ```
 
++++
+
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `path` | Het pad van de waarde die u wilt repareren. In dit geval moet u, aangezien u de status van het programma bijwerkt, de waarde van `path` instellen op &quot;/state&quot;. |
@@ -280,21 +315,15 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud).
 
-### Uitsnijdschema bijwerken {#update-schedule}
+>[!TAB  Update bouwt programma ]
 
 U kunt een JSON-reparatiebewerking gebruiken om het uitsnijdschema bij te werken. Als u het schema wilt bijwerken, declareert u de eigenschap `path` als `/schedule` en stelt u de eigenschap `value` in op een geldig uitsnijdschema. Voor meer informatie over Reparatie JSON, te lezen gelieve de ](https://datatracker.ietf.org/doc/html/rfc6902) documentatie van het Reparatie 0} JSON {. [ Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix).
 
-**API formaat**
-
-```http
-PATCH /config/schedules/{SCHEDULE_ID}
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` waarde van het schema u wilt bijwerken. |
+>[!ENDTABS]
 
 **Verzoek**
+
++++ Een voorbeeldverzoek om het schema bij te werken.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -317,6 +346,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | `path` | Het pad van de waarde die u wilt bijwerken. In dit geval moet u, aangezien u het bijsnijdschema bijwerkt, de waarde van `path` instellen op `/schedule` . |
 | `value` | De bijgewerkte waarde van het uitsnijdschema. Deze waarde moet de vorm hebben van een uitsnijdschema. In dit voorbeeld, zal het programma op de tweede van elke maand lopen. |
 
++++
+
 **Reactie**
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud).
@@ -337,6 +368,8 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 **Verzoek**
 
++++ Een voorbeeldverzoek om een schema te verwijderen.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -344,6 +377,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Reactie**
 
