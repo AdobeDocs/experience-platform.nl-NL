@@ -4,9 +4,9 @@ title: API-eindpunt segmenttaken
 description: Het eindpunt van segmentbanen in de API van de Dienst van de Segmentatie van Adobe Experience Platform staat u toe om segmentbanen voor uw organisatie programmatically te beheren.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: f22246dec74c20459e5ac53bedc16cb6e4fba56e
+source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
 workflow-type: tm+mt
-source-wordcount: '1655'
+source-wordcount: '1648'
 ht-degree: 0%
 
 ---
@@ -922,18 +922,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
 
 **Reactie**
 
-Een succesvolle reactie retourneert HTTP-status 204 met de volgende informatie.
-
-+++ Een voorbeeldreactie bij het verwijderen van een segmenttaak.
-
-```json
-{
-    "status": true,
-    "message": "Segment job with id 'd3b4a50d-dfea-43eb-9fca-557ea53771fd' has been marked for cancelling"
-}
-```
-
-+++
+Een geslaagde reactie retourneert HTTP status 204 met een lege response body.
 
 ## Volgende stappen
 

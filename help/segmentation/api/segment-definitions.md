@@ -4,9 +4,9 @@ title: Segment Definition API Endpoint
 description: Het eindpunt van segmentdefinities in de Dienst API van de Segmentatie van Adobe Experience Platform staat u toe om segmentdefinities voor uw organisatie programmatically te beheren.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
@@ -176,6 +176,61 @@ POST /segment/definitions
 
 **Verzoek**
 
+Wanneer u een nieuwe segmentdefinitie maakt, kunt u deze maken in de `pql/text` - of `pql/json` -indeling.
+
+>[!BEGINTABS]
+
+>[!TAB  Gebruikend pql/tekst ]
+
++++ Een voorbeeldverzoek om een segmentdefinitie te maken.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People who ordered in the last 30 days",
+        "description": "Last 30 days",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "workAddress.country = \"US\""
+        },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        }
+    }'
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `name` | Een unieke naam waarmee naar de segmentdefinitie moet worden verwezen. |
+| `description` | (Optioneel) Een beschrijving van de segmentdefinitie die u maakt. |
+| `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
+| `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
+| `expression.format` | Geeft de structuur van de expressie in waarde aan. Tot de ondersteunde waarden behoren `pql/text` en `pql/json` . |
+| `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format` . |
+| `evaluationInfo` | (Optioneel) Het type segmentdefinitie dat u maakt. Als u een batchsegment wilt maken, stelt u `evaluationInfo.batch.enabled` in op true. Als u een streaming segment wilt maken, stelt u `evaluationInfo.continuous.enabled` in op true. Als u een randsegment wilt maken, stelt u `evaluationInfo.synchronous.enabled` in op true. Als verlaten leeg, zal de segmentdefinitie als a **partij** segment worden gecreeerd. |
+| `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een veld `id` of `name` . |
+
++++
+
+>[!TAB  Gebruikend pql/json ]
+
 +++ Een voorbeeldverzoek om een segmentdefinitie te maken.
 
 ```shell
@@ -191,8 +246,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
         "description": "Last 30 days",
         "expression": {
             "type": "PQL",
-            "format": "pql/text",
-            "value": "workAddress.country = \"US\""
+            "format": "pql/json",
+            "value": "{\"nodeType\":\"fnApply\",\"fnName\":\"=\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"a\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}},{\"nodeType\":\"fieldLookup\",\"fieldName\":\"b\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}}]}"
         },
         "evaluationInfo": {
             "batch": {
@@ -215,15 +270,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `name` | Een unieke naam waarmee naar de segmentdefinitie moet worden verwezen. |
-| `description` | (Optioneel.) Een beschrijving van de segmentdefinitie die u maakt. |
-| `evaluationInfo` | (Optioneel.) Het type segmentdefinitie dat u maakt. Als u een batchsegment wilt maken, stelt u `evaluationInfo.batch.enabled` in op true. Als u een streaming segment wilt maken, stelt u `evaluationInfo.continuous.enabled` in op true. Als u een randsegment wilt maken, stelt u `evaluationInfo.synchronous.enabled` in op true. Als verlaten leeg, zal de segmentdefinitie als a **partij** segment worden gecreeerd. |
+| `description` | (Optioneel) Een beschrijving van de segmentdefinitie die u maakt. |
+| `evaluationInfo` | (Optioneel) Het type segmentdefinitie dat u maakt. Als u een batchsegment wilt maken, stelt u `evaluationInfo.batch.enabled` in op true. Als u een streaming segment wilt maken, stelt u `evaluationInfo.continuous.enabled` in op true. Als u een randsegment wilt maken, stelt u `evaluationInfo.synchronous.enabled` in op true. Als verlaten leeg, zal de segmentdefinitie als a **partij** segment worden gecreeerd. |
 | `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een veld `id` of `name` . |
 | `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
-| `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld `workAddress.stateProvince = homeAddress.stateProvince` .</li></ul> |
+| `expression.format` | Geeft de structuur van de expressie in waarde aan. |
 | `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format` . |
 
 +++
+
+>[!ENDTABS]
 
 **Reactie**
 
