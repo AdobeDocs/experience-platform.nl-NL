@@ -2,9 +2,9 @@
 title: Gegevensstromen maken en configureren
 description: Leer hoe te om uw cliënt-zijintegratie van SDK van het Web met andere producten van de Adobe en derdebestemmingen te verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 43d97ea4d850a36d350894d70a082464a21e449d
+source-git-commit: f99370a9bff156b5cf9ecf286a1f8bc09eccc06a
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2629'
 ht-degree: 0%
 
 ---
@@ -189,7 +189,7 @@ Deze service bepaalt of en hoe gegevens naar Adobe Target worden verzonden.
 | --- | --- |
 | [!UICONTROL Property Token] | [!DNL Target] staat klanten toe om toestemmingen te controleren door eigenschappen te gebruiken. Voor meer informatie over eigenschappen, zie de gids over [ het vormen ondernemingstoestemmingen ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) in de [!DNL Target] documentatie.<br><br> Het bezitstoken kan in Adobe Target UI onder [!UICONTROL Setup] worden gevonden > [!UICONTROL Properties]. |
 | [!UICONTROL Target Environment ID] | [ Milieu&#39;s in Adobe Target ](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) helpen u uw implementatie door alle stadia van ontwikkeling beheren. Deze instelling geeft aan welke omgeving u wilt gebruiken voor deze gegevensstroom.<br><br> beste praktijken moeten dit voor elk van uw `dev`, `stage`, en `prod` gegevensstroommilieu&#39;s verschillend plaatsen om dingen eenvoudig te houden. Als u echter al Adobe Target-omgevingen hebt gedefinieerd, kunt u deze gebruiken. |
-| [!UICONTROL Target Third Party ID namespace] | De naamruimte voor de identiteit van de `mbox3rdPartyId` die u voor deze gegevensstroom wilt gebruiken. Zie de gids bij [ uitvoerend `mbox3rdPartyId` met het Web SDK ](../web-sdk/personalization/adobe-target/using-mbox-3rdpartyid.md) voor meer informatie. |
+| [!UICONTROL Target Third Party ID namespace] | De naamruimte voor de identiteit van de `mbox3rdPartyId` die u voor deze gegevensstroom wilt gebruiken. Als u een [!DNL Customer Attributes] integratie met Adobe Target gebruikt of `thirdPartyId` gebruikt om profielen via [ Profiles API van Adobe Target ](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/profile-apis/profiles-api) bij te werken of tot stand te brengen, moet u een namespacewaarde van uw keus verstrekken. U moet deze naamruimte gebruiken in de `IdentityMap` -sectie van uw XDM-schema om de `customerID` of `thirdPartyId` te verzenden die worden gebruikt in het uploaden van het bestand met klantkenmerken of in de API-aanroepen voor het bijwerken van het profiel.  Zie de gids bij [ uitvoerend `mbox3rdPartyId` met het Web SDK ](../web-sdk/personalization/adobe-target/using-mbox-3rdpartyid.md) voor meer informatie. |
 | [!UICONTROL Property Token Overrides] | In deze sectie kunt u aanvullende eigenschapstokens definiëren die u kunt gebruiken om de standaardtokens te overschrijven. |
 
 ### [!UICONTROL Event Forwarding] instellingen
