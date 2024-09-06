@@ -5,10 +5,10 @@ breadcrumb-title: Gids Platform Identity Service
 user-guide-description: Overbrug klantidentiteiten op verschillende apparaten en systemen om gepersonaliseerde digitale ervaringen te bieden.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: 16d29811715805e2f297836bf266c854db45d4c6
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 20%
+source-wordcount: '143'
+ht-degree: 19%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 20%
       - [Identiteitsinstellingen](./identity-graph-linking-rules/identity-settings-ui.md)
       - [Voorbeeld van klantscenario&#39;s](./identity-graph-linking-rules/example-scenarios.md)
       - [Voorbeelden van grafiekconfiguraties](./identity-graph-linking-rules/example-configurations.md)
+      - [Problemen oplossen met regels voor identiteitsgrafieken](./identity-graph-linking-rules/troubleshooting.md)
    - [ECID-overzicht](./features/ecid.md)
 - [Implementatiehandleiding](implementation.md)
 - [Guardrails voor identiteitsgegevens](guardrails.md)
