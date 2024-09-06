@@ -2,9 +2,9 @@
 title: Gegevensstromen maken en configureren
 description: Leer hoe te om uw cliënt-zijintegratie van SDK van het Web met andere producten van de Adobe en derdebestemmingen te verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f99370a9bff156b5cf9ecf286a1f8bc09eccc06a
+source-git-commit: b87cb25ac791bebbf865f8513f2b4b482a1531bc
 workflow-type: tm+mt
-source-wordcount: '2629'
+source-wordcount: '2633'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Vouw de sectie **[!UICONTROL Geolocation and network lookup]** uit om de hierond
 | Instelling | Beschrijving |
 | --- | --- |
 | [!UICONTROL Geo Lookup] | Hiermee schakelt u geolocatiezoekopdrachten voor de geselecteerde opties in op basis van het IP-adres van de bezoeker. Beschikbare opties zijn: <ul><li>**Land**: Populaten `xdm.placeContext.geo.countryCode`</li><li>**Postcode**: Populates `xdm.placeContext.geo.postalCode`</li><li>**Staat/Provincie**: Populaten `xdm.placeContext.geo.stateProvince`</li><li>**DMA**: Populates `xdm.placeContext.geo.dmaID`</li><li>**Stad**: Populates `xdm.placeContext.geo.city`</li><li>**Breedte**: Bevolkt `xdm.placeContext.geo._schema.latitude`</li><li>**Lengte**: Bevolkt `xdm.placeContext.geo._schema.longitude`</li></ul>Als u **[!UICONTROL City]** , **[!UICONTROL Latitude]** of **[!UICONTROL Longitude]** selecteert, krijgt u coördinaten tot twee decimale punten, ongeacht welke andere opties zijn geselecteerd. Dit wordt beschouwd als stad-vlakke granulariteit.<br> <br> het selecteren van geen optie maakt geolocatieraadplegingen onbruikbaar. Geolocatie vindt plaats vóór [!UICONTROL IP Obfuscation] . Dit houdt in dat dit niet wordt beïnvloed door de instelling [!UICONTROL IP Obfuscation] . |
-| [!UICONTROL Network Lookup] | Laat netwerkraadplegingen voor de geselecteerde opties toe die op het IP van de bezoeker adres worden gebaseerd. Beschikbare opties zijn: <ul><li>**Drager**: Populates `xdm.environment.carrier`</li><li>**Domein**: Populates `xdm.environment.domain`</li><li>**ISP**: Populates `xdm.environment.ISP`</li></ul> |
+| [!UICONTROL Network Lookup] | Laat netwerkraadplegingen voor de geselecteerde opties toe die op het IP van de bezoeker adres worden gebaseerd. Beschikbare opties zijn: <ul><li>**Mobiele Drager**: Bevolkt `xdm.environment.carrier`</li><li>**Domein**: Populates `xdm.environment.domain`</li><li>**ISP**: Populates `xdm.environment.ISP`</li><li>**Type van Verbinding**: Bevolkt `xdm.environment.connectionType`</li></ul> |
 
 Als u om het even welke gebieden hierboven voor gegevensinzameling toelaat, zorg ervoor dat u correct het [`context`](/help/web-sdk/commands/configure/context.md) seriebezit plaatst wanneer het vormen van het Web SDK.
 
