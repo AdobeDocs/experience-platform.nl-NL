@@ -4,9 +4,9 @@ title: Segment Definition API Endpoint
 description: Het eindpunt van segmentdefinities in de Dienst API van de Segmentatie van Adobe Experience Platform staat u toe om segmentdefinities voor uw organisatie programmatically te beheren.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
+source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1519'
 ht-degree: 0%
 
 ---
@@ -458,6 +458,10 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
     }'
 ```
 
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `ids` | Een array die objecten bevat met de id&#39;s van de segmentdefinities die u wilt ophalen. |
+
 +++
 
 **Reactie**
@@ -617,6 +621,10 @@ PATCH /segment/definitions/{SEGMENT_ID}
 **Verzoek**
 
 Met het volgende verzoek wordt het land van het werkadres van de VS naar Canada bijgewerkt.
+
+>[!NOTE]
+>
+>Aangezien deze API vraag **** vervangt de inhoud van de segmentdefinitie, gelieve te verzekeren **alle** gebieden u wilt houden zijn inbegrepen als deel van het verzoeklichaam.
 
 +++ Een voorbeeldverzoek om een segmentdefinitie bij te werken.
 
