@@ -4,10 +4,10 @@ title: Overzicht van waarschuwingen
 description: Meer informatie over waarschuwingen in Adobe Experience Platform, inclusief de structuur van hoe waarschuwingsregels worden gedefinieerd.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 829d7da1dc53486eba1cdceddb7888b578e1c137
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Waarschuwingen worden niet ondersteund in niet-productiesandboxen. Als u zich wilt abonneren op waarschuwingen, moet u ervoor zorgen dat u een productiesandbox gebruikt. Alle waarschuwingen voor abonnementen worden opnieuw ingesteld wanneer de sandbox opnieuw wordt ingesteld. Alle abonnementswaarschuwingen worden eveneens gewist wanneer een sandbox wordt verwijderd.
+>Aangezien waarschuwingen worden ondersteund in zowel productie- als ontwikkelingssandboxen, kunt u zich hierop in elke sandbox abonneren. Wanneer een sandbox opnieuw wordt ingesteld, worden ook alle abonnementswaarschuwingen opnieuw ingesteld. Wanneer een sandbox wordt verwijderd, worden alle abonnementswaarschuwingen verwijderd.
 
 Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Het alarm vermindert of elimineert de behoefte om [[!DNL Observability Insights]  API ](../api/overview.md) te peilen om te controleren als een baan heeft voltooid, als een bepaalde mijlpaal binnen een werkschema is bereikt, of als om het even welke fouten zijn voorgekomen.
 
