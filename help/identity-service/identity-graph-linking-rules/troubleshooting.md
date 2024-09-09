@@ -2,7 +2,8 @@
 title: De Gids van het oplossen van problemen voor de Regels van de Verbinding van de Grafiek van de Identiteit
 description: Leer hoe te om gemeenschappelijke kwesties in identiteitsgrafiek problemen op te lossen die regels verbinden.
 badge: Beta
-source-git-commit: cb0e229ac68f53d33b83d54df4062469252f06a3
+exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
+source-git-commit: 56e2e359812fcbfd011505ad917403d6f5317b4a
 workflow-type: tm+mt
 source-wordcount: '2017'
 ht-degree: 0%
