@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
 workflow-type: tm+mt
-source-wordcount: '3664'
+source-wordcount: '4679'
 ht-degree: 0%
 
 ---
@@ -212,6 +212,90 @@ Nadat u de gebeurtenis in de container Gebeurtenissen hebt geplaatst, selecteert
 De telfunctie wordt nu toegevoegd. U kunt nu de telfunctie en de waarde van de functie selecteren. In het onderstaande voorbeeld ziet u hoe u elke gebeurtenis met ten minste één klik opneemt.
 
 ![ een lijst van de tellingsfuncties wordt getoond en benadrukt.](../images/ui/segment-builder/select-count.png)
+
+### Tijdbeperkingen {#time-constraints}
+
+Met tijdbeperkingen kunt u tijdbeperkingen toepassen op op tijd gebaseerde kenmerken, gebeurtenissen en de volgorde tussen de gebeurtenissen.
+
+>[!IMPORTANT]
+>
+>Als u een segmentdefinitie met &quot;Deze maand&quot;of &quot;Dit jaar&quot;tijdbeperkingen voorafgaand aan Juni 2024 creeerde, zult u uw segmentdefinities moeten opnieuw opslaan. Vóór juni 2024 was &quot;Deze maand&quot; gebaseerd op 30 dagen en &quot;Dit jaar&quot; op 365 dagen.
+
+De lijst van beschikbare tijdbeperkingen is als volgt:
+
++++ Beschikbare tijdbeperkingen
+
+>[!NOTE]
+>
+>Alle tijdbeperkingen zijn gebaseerd op UTC.
+>
+>Bovendien, als [!UICONTROL Ignore year] checkbox wordt toegelaten, zal het jaar **niet** als deel van de evaluatie van de segmentdefinitie worden vergeleken.
+
+| Tijdsbeperking | Beschrijving | Kan negeren jaar inschakelen | Voorbeeld |
+| --------------- | ----------- | ------------------- | ------- |
+| Vandaag | De attributen of de gebeurtenis die **worden vergeleken moeten** vandaag voorkomen. | Ja | ![ een voorbeeld van de &quot;Vandaag&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Gisteren | De attributen of de gebeurtenis die **worden vergeleken moeten** gisteren voorkomen. | Ja | ![ een voorbeeld van de &quot;Gister&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| Deze maand | De attributen of de gebeurtenis die **worden vergeleken moeten** deze kalendermaand voorkomen. | Ja | ![ een voorbeeld van de &quot;Deze maand&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| Dit jaar | De attributen of de gebeurtenis die **worden vergeleken moeten** dit kalenderjaar voorkomen. | Nee | ![ een voorbeeld van de &quot;Dit jaar&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| Aangepaste datum | De attributen of de gebeurtenis die **worden vergeleken moeten** op de gegeven datum voorkomen. | Ja | ![ een voorbeeld van de &quot;datum&quot;tijdbeperking die van de Douane wordt gebruikt.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| Laatste | De attributen of de gebeurtenis die **worden vergeleken moeten** binnen de laatste gekozen periode voorkomen. Deze periode van tijd is **inclusief** tot de evaluatietijd. | Nee | ![ een voorbeeld van de &quot;In laatste&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| Van (tot) | Het attribuut of de gebeurtenis die **worden vergeleken moet** binnen de twee gekozen kalenderdata voorkomen. Deze periode van tijd is **inclusief** van beide data. | Ja, indien aangepaste datum | ![ een voorbeeld van &quot;van aan&quot;wordt gebruikt.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| Tijdens | De attributen of de gebeurtenis die **worden vergeleken moeten** binnen de geselecteerde maand of het jaar voorkomen. Als een maand is geselecteerd, moet u zowel de maand als een jaar kiezen waarin het kenmerk of de gebeurtenis heeft plaatsgevonden.  Als een jaar is geselecteerd, hoeft u alleen het jaar te kiezen waarin het kenmerk of de gebeurtenis heeft plaatsgevonden. Als u een maand selecteert, kunt u ook het selectievakje [!UICONTROL Ignore year] inschakelen. | Ja | ![ een voorbeeld van de &quot;Tijdens&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Binnen (+/-) | De attributen of de gebeurtenis die **worden vergeleken moeten** binnen dagen, weken, maanden, of jaren van de geselecteerde datum voorkomen. Deze periode van tijd is **inclusief** van beide data. De geselecteerde datum kan vandaag, gisteren, of een andere douanedatum van uw keuze zijn. | Ja | ![ een voorbeeld van &quot;binnen&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| Voor | De attributen of de gebeurtenis die **worden vergeleken moeten** vóór de geselecteerde datum voorkomen. De geselecteerde datum kan een aangepaste datum of een selectie van dagen, weken, maanden of jaren geleden zijn. | Ja | ![ een voorbeeld van de &quot;Voor&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| Na | De attributen of de gebeurtenis die **worden vergeleken moeten** na de geselecteerde datum voorkomen. De geselecteerde datum kan een aangepaste datum of een selectie van dagen, weken, maanden of jaren geleden zijn. | Ja | ![ een voorbeeld van de &quot;Na&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| Rolbereik | Het kenmerk of de gebeurtenis die wordt vergeleken, moet tussen de twee relatieve datums plaatsvinden. De datums kunnen worden weergegeven in seconden, minuten, uren, dagen, weken, maanden of jaren. | Nee | ![ een voorbeeld van de &quot;Rolling waaier&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| In volgende | Het kenmerk of de gebeurtenis die wordt vergeleken, moet binnen de volgende geselecteerde periode plaatsvinden. De geselecteerde tijdsperiodes omvatten minuten, uren, dagen, weken, maanden en jaren. | Nee | ![ een voorbeeld van &quot;In volgende&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| Exists | Het kenmerk bestaat. | Nee | ![ een voorbeeld van &quot;bestaat&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| Is niet bestaand | Het kenmerk bestaat niet. | Nee | ![ een voorbeeld van &quot;bestaat niet&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+
++++
+
+Wanneer u een tijdbeperking toepast op een gebeurtenis, kunt u deze toepassen op canvasniveau, op kaartniveau of tussen gebeurtenissen.
+
+#### Beperking op canvasniveau
+
+Als u een tijdbeperking op canvasniveau wilt toepassen, selecteert u het klokpictogram dat boven de tijdlijn van gebeurtenissen wordt weergegeven.
+
+![ de canvas-vlakke tijdbeperkingsselecteur wordt benadrukt.](../images/ui/segment-builder/time-constraints/canvas-level.png)
+
+Wanneer u een tijdbeperking op canvas-niveau toepast, past dit de tijdbeperking op **alle** gebeurtenissen in het publiek toe.
+
+#### Beperking op kaartniveau
+
+Als u een beperking op kaartniveau wilt toepassen, selecteert u de kaart waarop u de tijdbeperking wilt toepassen, gevolgd door het pictogram met de ellips, en **[!UICONTROL Apply time rule]** . Hiermee kunt u een tijdbeperking selecteren in de container van **[!UICONTROL Event Rules]** .
+
+![ de kaart-vlakke tijdbeperkingsselecteur wordt benadrukt.](../images/ui/segment-builder/time-constraints/card-level.png)
+
+Wanneer u een tijdbeperking op kaart-niveau toepast, past dit de tijdbeperking op de **gespecificeerde** gebeurtenis in het publiek toe.
+
+#### Tussen gebeurtenisrestrictie
+
+Als u een tijdbeperking tussen gebeurtenissen wilt toepassen, selecteert u het klokpictogram tussen de twee gebeurtenissen waarop u de tijdbeperking wilt toepassen.
+
+![ de tussen de selecteur van de gebeurtenistijdbeperking wordt benadrukt.](../images/ui/segment-builder/time-constraints/between-event.png)
+
+Wanneer u een tijdbeperking tussen de gebeurtenis toepast, past dit de tijdbeperking op de tijd **tussen** de gebeurtenissen toe.
+
+De lijst van beschikbare tijdbeperkingen voor deze verrichting verschilt van de belangrijkste lijst van tijdbeperkingen, en zijn als volgt:
+
++++ Beschikbare tijdbeperkingen
+
+| Tijdsbeperking | Beschrijving |
+| --------------- | ----------- |
+| Na | De laatstgenoemde gebeurtenis **moet minstens** na de vroegere gebeurtenis plaatsvinden. |
+| Within | De twee gebeurtenissen **moeten** tijdens de tijdperiode plaatsvinden die binnen de tijdbeperking wordt vermeld. |
+
+>[!NOTE]
+>
+>Wanneer u de tijdbeperking &quot;Na&quot; gebruikt, kan de laatste gebeurtenis meer plaatsvinden dan de hoeveelheid tijd die binnen de tijdbeperking wordt vermeld. >
+>Als u bijvoorbeeld een gebeurtenis Paginaweergave en een uitcheckgebeurtenis hebt en u de tijdbeperking Na 1 uur tussen deze twee gebeurtenissen plaatst, komt een segmentdefinitie met een uitcheckgebeurtenis 2 uur na de gebeurtenis Paginaweergave in aanmerking.
+>
+>Bovendien kunnen deze twee tijdsbeperkingen in overleg met elkaar worden gebruikt.
+>
+>Als u bijvoorbeeld een gebeurtenis Paginaweergave en een uitcheckgebeurtenis hebt en u zowel de tijdbeperkingen &quot;Na 1 uur&quot; als &quot;Binnen 24 uur&quot; plaatst, zou een segmentdefinitie met een uitcheckgebeurtenis 12 uur na de gebeurtenis Paginaweergave in aanmerking komen, maar zou een segmentdefinitie met een uitcheckgebeurtenis 36 uur na de gebeurtenis Paginaweergave niet in aanmerking komen.
+
++++
 
 ## Containers
 
