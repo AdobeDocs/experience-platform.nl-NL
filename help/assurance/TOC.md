@@ -5,10 +5,10 @@ breadcrumb-title: Handleiding Assure
 user-guide-description: Met Adobe Experience Platform Assurance kunt u controleren, testen, simuleren en valideren hoe u gegevens verzamelt of ervaringen aanbiedt in uw mobiele toepassingen.
 feature: Assurance
 role: Developer
-source-git-commit: 3c2d7fafb2d4385c8631c6737c5753f3b669e203
+source-git-commit: 0209c873438a3bda1b0df6434f49735c2d3e150b
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 52%
+source-wordcount: '67'
+ht-degree: 55%
 
 ---
 
@@ -27,7 +27,6 @@ ht-degree: 52%
    - [Foutopsporingsweergave duwen](./views/push-debug-view.md)
    - [Validatieoverzicht](./views/validation-summary.md)
    - [Adobe Analytics](./views/adobe-analytics.md)
-   - [Analytics Events 2.0 (Beta)](./views/adobe-analytics-edge.md)
    - [Adobe Analytics Streaming Media](./views/adobe-analytics-streaming-media.md)
 - Tutorials {#tutorials}
    - [Betrouwbaarheid implementeren](./tutorials/implement-assurance.md)
