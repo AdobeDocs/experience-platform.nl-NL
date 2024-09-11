@@ -3,9 +3,9 @@ title: Amazon Adds
 description: Amazon Ads biedt verschillende opties om geregistreerde verkopers, verkopers, verkopers van boeken, Kindle Direct Publishing-auteurs (KDP), ontwikkelaars van apps en/of bureaus te helpen uw reclamedoelstellingen te bereiken. De integratie van Amazon Ads met Adobe Experience Platform biedt kant-en-klare integratie voor Amazon Ads-producten, waaronder de Amazon DSP (ADSP). Met de Amazon Ads-bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor doelwitten en activering op de Amazon-DSP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 8e34e5488ab80cd1f3c8086bf7c16d3f22527540
+source-git-commit: 56971631eb7ab2ef3dd2dcf077ee3b52f131ffe7
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1718'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 >[!NOTE]
 >
->Nadat u de doelconfiguratie hebt opgeslagen, kunt u de [!DNL Amazon Ads] Advertiser-id niet meer wijzigen, zelfs niet als u de verificatie opnieuw uitvoert via uw Amazon-account. Als u een andere [!DNL Amazon Ads] Advertiser-id wilt gebruiken, moet u een nieuwe doelverbinding maken.
+>Nadat u de doelconfiguratie hebt opgeslagen, kunt u de [!DNL Amazon Ads] Advertiser-id niet meer wijzigen, zelfs niet als u de verificatie opnieuw uitvoert via uw Amazon-account. Als u een andere [!DNL Amazon Ads] Advertiser-id wilt gebruiken, moet u een nieuwe doelverbinding maken. Adverteerders die al zijn ingesteld op een integratie met ADSP moeten een nieuwe doelstroom maken als zij willen dat hun publiek wordt geleverd aan AMC of aan een andere ADSP-account.
 
 * **[!UICONTROL Advertiser Region]**: selecteer het juiste gebied waarin uw adverteerder wordt gehost. Voor meer informatie over de markten die door elk gebied worden gesteund, bezoek de [ documentatie van Amazon Ads ](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
@@ -129,6 +129,7 @@ De verbinding van [!DNL Amazon Ads] steunt gehakt e-mailadres en gehashte telefo
 * Als u gehashte e-mailadressen wilt toewijzen, selecteert u de naamruimte `Email_LC_SHA256` identity als bronveld.
 * Als u gehashte telefoonnummers wilt toewijzen, selecteert u de naamruimte `Phone_SHA256` identity als bronveld.
 * Als u ongehashte e-mailadressen of telefoonnummers wilt toewijzen, selecteert u de bijbehorende naamruimten als bronvelden en schakelt u de optie `Apply Transformation` in om Platform de id&#39;s bij activering te laten hashen.
+* *NIEUW die met de versie van September 2024* begint: Amazon Ads vereist u om een gebied in kaart te brengen dat een `countryCode` waarde in het 2 karakterISO formaat bevat om het proces van de identiteitsresolutie (bijvoorbeeld: US, GB, MX, CA, etc.) te vergemakkelijken. Verbindingen zonder `countryCode` toewijzingen hebben een negatief effect op overeenkomende identiteiten.
 
 U selecteert slechts één keer een bepaald doelgebied in een bestemmingsconfiguratie van de [!DNL Amazon Ads] schakelaar.  Als u bijvoorbeeld bedrijfs-e-mail verzendt, kunt u persoonlijke e-mail niet ook toewijzen in dezelfde doelconfiguratie.
 
@@ -148,7 +149,7 @@ Navigeer naar uw **[!UICONTROL Advertiser ID]** > **[!UICONTROL Audiences]** > *
 
 Zoek in de linkerschemabrowser naar uw publiek onder **[!UICONTROL Advertiser Uploaded]** > **[!UICONTROL aep_audiences]** . U kunt dan uw publiek in de SQL redacteur van AMC met de volgende clausule vragen:
 
-`select count(user_id) from aep_audiences where audienceId = '1234567'`
+`select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
 ![ de bevestiging van de de publieksverwezenlijking van de Marketing Cloud van Amazon ](../../assets/catalog/advertising/amazon_ads_image_5.png)
 
@@ -171,6 +172,7 @@ Deze sectie vangt de functionaliteit en de significante documentatieupdates aan 
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
+| Mei 2024 | Bijwerken van functionaliteit en documentatie | De toewijzingsoptie voor het exporteren van de parameter `countryCode` naar Amazon Ads is toegevoegd. Gebruik `countryCode` in de [ kaartstap ](#map) om uw tarieven van de identiteitsgelijke met Amazon te verbeteren. |
 | Maart 2024 | Bijwerken van functionaliteit en documentatie | De optie voor het exporteren van soorten publiek die in [!DNL Amazon Marketing Cloud] (AMC) moeten worden gebruikt, is toegevoegd. |
 | Mei 2023 | Bijwerken van functionaliteit en documentatie | <ul><li>Toegevoegde steun voor de selectie van het Gebied Advertiser in het [ werkschema van de bestemmingsverbinding ](#destination-details).</li><li>Bijgewerkte documentatie waarin de toevoeging van de selectie van het advertentiegebied wordt weergegeven. Voor meer informatie bij het selecteren van het correcte Gebied Advertiser, zie de [ documentatie van Amazon ](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | Maart 2023 | Eerste release | Eerste doelversie en documentatie gepubliceerd. |
