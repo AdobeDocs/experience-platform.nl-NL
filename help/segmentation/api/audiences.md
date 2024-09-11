@@ -3,9 +3,9 @@ title: API-eindpunt voor soorten publiek
 description: Gebruik het publiek eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform om, publiek voor uw organisatie programmatically tot stand te brengen te beheren en bij te werken.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
+source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1438'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,10 @@ Het `/audiences` eindpunt steunt verscheidene vraagparameters helpen uw resultat
 GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
+
+>[!NOTE]
+>
+>Als u dit eindpunt zonder enige vraagparameters gebruikt, zal het inactieve publiek **niet** zijn teruggekeerd. Nochtans, als u dit eindpunt samen met de `property=audienceId` vraagparameter gebruikt, zal het inactieve publiek **** zijn teruggekeerd.
 
 De volgende vraagparameters kunnen worden gebruikt wanneer het terugwinnen van een lijst van publiek:
 
