@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 734a34e9acf80300c28ca14587198fb7eaf83c17
+source-git-commit: 5d5c57dfb9e4abda6b1bca96147a95d063bc17c6
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1597'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,11 @@ De volgende lijst schetst de beschikbare toestemmingen voor Experience Platform 
 | [!DNL Identity Management] | [!UICONTROL Manage Identity Namespaces] | Toegang tot het lezen, maken, bewerken en verwijderen van naamruimten. |
 | [!DNL Identity Management] | [!UICONTROL View Identity Namespaces] | Alleen-lezen toegang voor naamruimten. |
 | [!DNL Identity Management] | [!UICONTROL View Identity Graph] | Alleen-lezen toegang voor identiteitsgrafieken. |
-| [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Toegang tot gelezen, creeer, geef, en schrap datasets uit die voor klantenprofielen worden gebruikt. Alleen-lezen toegang tot beschikbare profielen. |
+| [!DNL Intelligent Services] | [!UICONTROL View Attribution AI] | Alleen-lezen toegang voor Attribution AI-instellingen en inzichten. |
+| [!DNL Intelligent Services] | [!UICONTROL Manage Attribution AI] | Toegang tot het lezen, maken, bewerken en verwijderen van Attribution AI-modellen. |
+| [!DNL Intelligent Services] | [!UICONTROL View Customer AI] | Toegang tot het lezen of bekijken van AI-modellen van de Klant. |
+| [!DNL Intelligent Services] | [!UICONTROL Manage Customer AI] | Toegang tot het maken, bijwerken, verwijderen, inschakelen of uitschakelen van AI-modellen van klanten. |
+| [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Verzamel gegevens uit meerdere bronnen, maak robuuste profielen voor individuele klanten en sla profielgegevens op in het gegevensmeer en de gegevensopslag van het profiel van de klant in real time. |
 | [!DNL Profile Management] | [!UICONTROL View Profiles] | Alleen-lezen toegang tot beschikbare profielen. |
 | [!DNL Profile Management] | [!UICONTROL Manage Segments] | Toegang tot het lezen, maken, bewerken en verwijderen van segmenten. |
 | [!DNL Profile Management] | [!UICONTROL View Segments] | Alleen-lezen toegang tot beschikbare segmenten. |
