@@ -2,9 +2,9 @@
 title: Versleutelde gegevensinsluiting
 description: Leer hoe u gecodeerde bestanden via batchbronnen voor cloudopslag kunt opnemen met de API.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
+source-git-commit: 9a5599473f874d86e2b3c8449d1f4d0cf54b672c
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1806'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ U kunt gecodeerde gegevensbestanden via batchbronnen voor cloudopslag opnemen in
 
 De gecodeerde gegevensinvoer verloopt als volgt:
 
-1. [ creeer een encryptiesleutel gebruikend Experience Platform APIs ](#create-encryption-key-pair). Het sleutelpaar bestaat uit een persoonlijke sleutel en een openbare sleutel. Als u een id hebt gemaakt, kunt u de openbare sleutel samen met de bijbehorende id voor de openbare sleutel en de Vervaltijd kopiëren of downloaden. Tijdens dit proces wordt de persoonlijke sleutel door het Experience Platform in een veilige kluis opgeslagen. **NOTA:** de openbare sleutel in de reactie is Base64-Gecodeerd en moet voorafgaand aan het gebruiken worden gedecrypteerd.
+1. [ creeer een encryptiesleutel gebruikend Experience Platform APIs ](#create-encryption-key-pair). Het sleutelpaar bestaat uit een persoonlijke sleutel en een openbare sleutel. Als u een id hebt gemaakt, kunt u de openbare sleutel samen met de bijbehorende id voor de openbare sleutel en de Vervaltijd kopiëren of downloaden. Tijdens dit proces wordt de persoonlijke sleutel door het Experience Platform in een veilige kluis opgeslagen. **NOTA:** de openbare sleutel in de reactie is Base64-Gecodeerd en moet voorafgaand aan het gebruiken worden gedecodeerd.
 2. Gebruik de openbare sleutel om het gegevensbestand te coderen dat u wilt opnemen.
 3. Plaats het gecodeerde bestand in de cloudopslag.
 4. Zodra het gecodeerde dossier klaar is, [ creeer een bronverbinding en een dataflow voor uw bron van de wolkenopslag ](#create-a-dataflow-for-encrypted-data). Tijdens de stap voor het maken van flow moet u een parameter `encryption` opgeven en uw openbare-sleutelid opnemen.
@@ -64,6 +64,10 @@ De lijst met ondersteunde bestandsextensies voor gecodeerde bestanden is:
 
 ## Versleutelingssleutelpaar maken {#create-encryption-key-pair}
 
+>[!IMPORTANT]
+>
+>Coderingssleutels zijn specifiek voor een bepaalde sandbox. Daarom moet u nieuwe encryptiesleutels tot stand brengen als u gecodeerde gegevens in een verschillende zandbak, binnen uw organisatie wilt opnemen.
+
 De eerste stap bij het invoeren van gecodeerde gegevens in het Experience Platform is het maken van een sleutelpaar voor codering door een verzoek voor een POST in te dienen bij het `/encryption/keys` -eindpunt van de [!DNL Connectors] API.
 
 **API formaat**
@@ -87,6 +91,7 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-encryption",
       "encryptionAlgorithm": "PGP",
       "params": {
           "passPhrase": "{{PASSPHRASE}}"
@@ -96,6 +101,7 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --- | --- |
+| `name` | De naam van het sleutelpaar voor versleuteling. |
 | `encryptionAlgorithm` | Het type van encryptiealgoritme dat u gebruikt. De ondersteunde coderingstypen zijn `PGP` en `GPG` . |
 | `params.passPhrase` | Passphrase verstrekt een extra laag van bescherming voor uw encryptiesleutels. Op verwezenlijking, slaat het Experience Platform passphrase in een verschillend veilige kluis van de openbare sleutel op. U moet een niet-lege tekenreeks opgeven als een wachtwoordzin. |
 
@@ -153,13 +159,15 @@ curl -X GET \
 
 +++Voorbeeldreactie van weergave
 
-Een geslaagde reactie retourneert uw versleutelingsalgoritme, openbare sleutel, id van de openbare sleutel en de bijbehorende vervaltijd van de sleutels.
+Een geslaagde reactie retourneert uw versleutelingsalgoritme, naam, openbare sleutel, id van de openbare sleutel, sleuteltype en de bijbehorende vervaltijd van de sleutels.
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -194,13 +202,15 @@ curl -X GET \
 
 +++Voorbeeldreactie van weergave
 
-Een geslaagde reactie retourneert uw versleutelingsalgoritme, openbare sleutel, id van de openbare sleutel en de bijbehorende vervaltijd van de sleutels.
+Een geslaagde reactie retourneert uw versleutelingsalgoritme, naam, openbare sleutel, id van de openbare sleutel, sleuteltype en de bijbehorende vervaltijd van de sleutels.
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -236,8 +246,12 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-sign-verification-keys"
       "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
-      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}},
+      "params": {
+          "passPhrase": {{PASS_PHRASE}}
+      }
     }'
 ```
 
@@ -261,6 +275,48 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `publicKeyId` | Deze openbare zeer belangrijke identiteitskaart is teruggekeerd in antwoord op het delen van uw klant beheerde sleutel met Experience Platform. U kunt deze openbare sleutel-id opgeven als de sleutel-id voor ondertekeningsverificatie wanneer u een gegevensstroom maakt voor ondertekende en gecodeerde gegevens. |
+
++++
+
+### Ontvang klant geleid zeer belangrijk paar
+
+Om uw klant beheerde sleutels terug te winnen, doe een verzoek van de GET aan het `/customer-keys` eindpunt.
+
+**API formaat**
+
+```http
+GET /data/foundation/connectors/encryption/customer-keys
+```
+
+**Verzoek**
+
++++Voorbeeldverzoek weergeven
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Reactie**
+
++++Voorbeeldreactie van weergave
+
+```json
+[
+    {
+        "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+        "name": "{NAME}",
+        "publicKeyId": "{PUBLIC_KEY_ID}",
+        "publicKey": "{PUBLIC_KEY}",
+        "keyType": "{KEY_TYPE}",
+    }
+]
+```
 
 +++
 
