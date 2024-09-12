@@ -3,9 +3,9 @@ title: De Gids van het oplossen van problemen voor de Regels van de Verbinding v
 description: Leer hoe te om gemeenschappelijke kwesties in identiteitsgrafiek problemen op te lossen die regels verbinden.
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 56e2e359812fcbfd011505ad917403d6f5317b4a
+source-git-commit: edda302a1f24c9991074c16fd9e770f2bf262b7c
 workflow-type: tm+mt
-source-wordcount: '2017'
+source-wordcount: '3174'
 ht-degree: 0%
 
 ---
@@ -132,12 +132,42 @@ Er zijn verschillende redenen die ertoe bijdragen waarom uw ervaringsfragmenten 
 * [ de bevestigingsmislukking van A kan op Profiel ](../../xdm/classes/experienceevent.md) zijn voorgekomen.
    * Een ervaringsgebeurtenis moet bijvoorbeeld zowel een `_id` als een `timestamp` bevatten.
    * Bovendien moet `_id` uniek zijn voor elke gebeurtenis (record).
+* De naamruimte met de hoogste prioriteit is een lege tekenreeks.
 
-In de context van naamruimteprioriteit weigert Profiel elke gebeurtenis die twee of meer identiteiten met de hoogste naamruimteprioriteit bevat. Als GAID bijvoorbeeld niet is gemarkeerd als een unieke naamruimte en als er twee identiteiten zijn binnengekomen met een GAID-naamruimte en er verschillende identiteitswaarden zijn binnengekomen, worden de gebeurtenissen niet opgeslagen in Profiel.
+In de context van namespace prioriteit, zal het Profiel verwerpen:
+
+* Elke gebeurtenis die twee of meer identiteiten met de hoogste naamruimteprioriteit bevat. Als GAID bijvoorbeeld niet is gemarkeerd als een unieke naamruimte en als er twee identiteiten zijn binnengekomen met een GAID-naamruimte en er verschillende identiteitswaarden zijn binnengekomen, worden de gebeurtenissen niet opgeslagen in Profiel.
+* Elke gebeurtenis waarbij de naamruimte met de hoogste prioriteit een lege tekenreeks is.
 
 **de stappen van het Oplossen van problemen**
 
-Om deze fout op te lossen, leest de het oplossen van problemenstappen die in de gids hierboven op [ worden geschetst het oplossen van problemenfouten betreffende gegevens die niet aan de Dienst van de Identiteit worden opgenomen ](#my-identities-are-not-getting-ingested-into-identity-service).
+Als uw gegevens worden verzonden naar gegevens het meer, maar niet het Profiel, en u gelooft dat dit toe te schrijven aan het verzenden van twee of meer identiteiten met de hoogste namespaceprioriteit in één enkele gebeurtenis is, dan kunt u de volgende vraag in werking stellen om te bevestigen dat er twee verschillende identiteitswaarden tegen zelfde namespace worden verzonden:
+
+>[!TIP]
+>
+>Bij de volgende query&#39;s moet u:
+>
+>* Vervang `_testimsorg.identification.core.email` door het pad dat de identiteit verzendt.
+>* Vervang `Email` door de naamruimte met de hoogste prioriteit. Dit is dezelfde naamruimte die niet wordt opgenomen.
+>* Vervang `dataset_name` door de dataset die u wenst om te vragen.
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
+```
+
+U kunt ook de volgende query uitvoeren om te controleren of er geen inname naar profiel plaatsvindt vanwege de hoogste naamruimte met een lege tekenreeks:
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
+```
+
+Deze twee vragen veronderstellen dat één identiteit wordt verzonden van identityMap en een andere identiteit wordt verzonden van een identiteitsbeschrijver. **NOTA**: In de schema&#39;s van het Gegevensmodel van de Ervaring (XDM), is de identiteitsbeschrijver het gebied duidelijk als identiteit.
 
 ### Mijn ervaring met gebeurtenisfragmenten die zijn ingepakt, maar die de &quot;verkeerde&quot; primaire identiteit hebben in Profiel
 
@@ -296,3 +326,79 @@ U kunt de volgende vraag in de de uitvoerdataset van de profielmomentopname gebr
 >[!TIP]
 >
 >De twee hierboven vermelde vragen zullen verwachte resultaten opleveren als de zandbak niet voor de gedeelde interimbenadering van het apparaat wordt toegelaten en zich anders gedraagt dan de identiteitsgrafiek die regels verbindt.
+
+## Veelgestelde vragen {#faq}
+
+Deze sectie schetst een lijst van antwoorden op vaak gestelde vragen over de verbindingsregels van de identiteitsgrafiek.
+
+### Algoritme voor identiteitsoptimalisatie {#identity-optimization-algorithm}
+
+#### Ik heb een CRMID voor elk van mijn zaken verenigt (B2C CRMID, B2B CRMID), maar ik heb geen unieke namespace over al mijn profielen. Wat zal gebeuren als ik B2C CRMID en B2B CRMID als uniek merk, en mijn identiteitsmontages toelaat?
+
+Dit scenario wordt niet ondersteund. Daarom kunt u grafieken zien ineenstorten in gevallen waar een gebruiker hun B2C CRMID aan login gebruikt, en een andere gebruiker hun B2B CRMID aan login gebruikt. Voor meer informatie, lees de sectie over [ enige persoon namespace vereiste ](./configuration.md#single-person-namespace-requirement) in de implementatiepagina.
+
+#### Worden bestaande samengevouwen grafieken door algoritme voor identiteitsoptimalisatie gecorrigeerd?
+
+Bestaande samengevouwen grafieken worden alleen door het grafiekalgoritme beïnvloed (&#39;fixed&#39;) als deze grafieken worden bijgewerkt nadat u de nieuwe instellingen hebt opgeslagen.
+
+#### Als twee personen zich aanmelden en uitloggen met hetzelfde apparaat, wat gebeurt er dan met de gebeurtenissen? Zullen alle gebeurtenissen over naar de laatste voor authentiek verklaarde gebruiker overgaan?
+
+* Anonieme gebeurtenissen (gebeurtenissen met ECID als primaire identiteit in Real-Time klantprofiel) worden overgedragen naar de laatst geverifieerde gebruiker. De reden hiervoor is dat de ECID wordt gekoppeld aan de CRMID van de laatst geverifieerde gebruiker (op Identity Service).
+* Alle geverifieerde gebeurtenissen (gebeurtenissen met CRMID die als primaire identiteit zijn gedefinieerd) blijven bij de persoon.
+
+Voor meer informatie, lees de gids bij [ bepalend de primaire identiteit voor ervaringsgebeurtenissen ](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
+
+#### Hoe zullen de verplaatsingen in Adobe Journey Optimizer worden beïnvloed wanneer de ECID van de ene persoon naar de andere overgaat?
+
+De CRMID van de laatst geverifieerde gebruiker wordt gekoppeld aan de ECID (gedeelde apparaat). ECID&#39;s kunnen op basis van gebruikersgedrag opnieuw van de ene persoon naar de andere worden toegewezen. De impact zal afhangen van hoe de reis wordt gebouwd, zodat is het belangrijk dat de klanten de reis in een omgeving van de ontwikkelingszandbak uittesten om het gedrag te bevestigen.
+
+De belangrijkste punten om te benadrukken zijn als volgt:
+
+* Als een profiel eenmaal een reis binnengaat, leidt het opnieuw toewijzen van een ECID er niet toe dat het profiel halverwege een reis wordt verlaten.
+   * Reisuitgangen worden niet geactiveerd door grafiekwijzigingen.
+* Als een profiel niet meer aan een ECID is gekoppeld, kan dit leiden tot het wijzigen van het reispad als er een voorwaarde is die de kwalificatie van het publiek gebruikt.
+   * Het verwijderen van ECID kan gebeurtenissen wijzigen die aan een profiel zijn gekoppeld. Dit kan resulteren in wijzigingen in de kwalificatie van het publiek.
+* Het opnieuw betreden van een reis is afhankelijk van de reiseigenschappen.
+   * Als u het opnieuw betreden van een reis uitschakelt, zodra er een profiel van die reis afsluit, zal hetzelfde profiel gedurende 91 dagen niet opnieuw binnenkomen (op basis van de wereldwijde time-out van de reis).
+* Als een rit begint met een ECID-naamruimte, het profiel dat wordt ingevoerd en het profiel dat de handeling ontvangt (bijvoorbeeld e-mail, aanbieding) kan verschillend zijn afhankelijk van hoe de reis wordt ontworpen.
+   * Als er bijvoorbeeld een wachttijd is tussen de acties en de ECID-overdrachten tijdens de wachttijd, kan een ander profiel worden aangewezen.
+   * Met deze functie is ECID niet meer altijd gekoppeld aan één profiel.
+   * De aanbeveling is om reizen te beginnen met naamruimten van personen (CRMID).
+
+### Prioriteit naamruimte
+
+#### Ik heb mijn identiteitsinstellingen ingeschakeld. Wat gebeurt er met mijn instellingen als ik een aangepaste naamruimte wil toevoegen nadat de instellingen zijn ingeschakeld?
+
+Er zijn twee &#39;emmers&#39; van naamruimten: naamruimten van personen en naamruimten van apparaat/cookie. De nieuwe aangepaste naamruimte krijgt de laagste prioriteit in elk &#39;emmertje&#39;, zodat deze nieuwe aangepaste naamruimte geen invloed heeft op bestaande gegevensinvoer.
+
+#### Als het Profiel van de Klant in real time niet meer de &quot;primaire&quot;vlag op identityMap gebruikt, moet deze waarde nog worden verzonden?
+
+Ja, de &quot;primaire&quot;vlag op identityMap wordt gebruikt door andere diensten. Voor meer informatie, lees de gids op [ de implicaties van namespaceprioriteit op andere diensten van het Experience Platform ](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
+
+#### Zal naamruimteprioriteit van toepassing zijn op de gegevenssets van het profielrecord in Real-Time Klantprofiel?
+
+Nee. De prioriteit Namespace zal slechts op de datasets van de Gebeurtenis van de Ervaring van toepassing zijn gebruikend de Klasse XDM ExperienceEvent.
+
+#### Hoe werkt deze functie in overeenstemming met de identiteitsgrafiekinstructies van 50 identiteiten per grafiek? Heeft naamruimteprioriteit invloed op deze door het systeem gedefinieerde hulplijn?
+
+Het algoritme voor identiteitsoptimalisatie wordt eerst toegepast om te zorgen dat de persoon die entiteit vertegenwoordigt wordt vertegenwoordigd. Nadien, als de grafiek probeert om de [ graadmeter van de identiteitsgrafiek ](../guardrails.md) (50 identiteiten per grafiek) te overschrijden, dan zal deze logica worden toegepast. De prioriteit Namespace beïnvloedt niet de schrappingslogica van de 50 identiteit/grafiekbegeleiding.
+
+### Testen
+
+#### Wat zijn enkele scenario&#39;s die ik zou moeten testen in een omgeving van de ontwikkelingszandbak?
+
+In het algemeen geldt dat het testen op een ontwikkelingssandbox de gebruiksgevallen moet nabootsen die u wilt uitvoeren in de productiesandbox. Raadpleeg de volgende tabel voor een aantal belangrijke onderdelen die u wilt valideren wanneer u uitgebreide tests uitvoert:
+
+| Testcase | Teststappen | Verwacht resultaat |
+| --- | --- | --- |
+| Accurate representatie van een entiteit | <ul><li>Anonieme navigatie simuleren</li><li>Mimic two people (John, Jane) logging in using the same device</li></ul> | <ul><li>Zowel John als Jane moeten aan hun attributen en voor authentiek verklaarde gebeurtenissen worden geassocieerd.</li><li>De laatst geverifieerde gebruiker moet zijn gekoppeld aan de anonieme browsergebeurtenissen.</li></ul> |
+| Segmentatie | Creeer vier segmentdefinities (**NOTA**: Elk paar segmentdefinitie zou één moeten hebben geëvalueerd gebruikend partij en andere het stromen.) <ul><li>Segmentdefinitie A: segmentkwalificatie gebaseerd op voor authentiek verklaarde gebeurtenissen van John.</li><li>Segmentdefinitie B: segmentkwalificatie op basis van de geverifieerde gebeurtenissen van Jane.</li></ul> | Ongeacht gedeelde apparatenscenario&#39;s, zouden John en Jane altijd voor hun respectieve segmenten moeten kwalificeren. |
+| Bevoegdheden van het publiek/unitaire reizen op Adobe Journey Optimizer | <ul><li>Maak een reis die begint met een kwalificatieactiviteit voor het publiek (zoals de streamingsegmentatie die hierboven is gemaakt).</li><li>Maak een reis die begint met een eenheidsgebeurtenis. Deze eenheidsgebeurtenis moet een geverifieerde gebeurtenis zijn.</li><li>Wanneer u deze reizen maakt, moet u het opnieuw betreden uitschakelen.</li></ul> | <ul><li>Ongeacht gedeelde apparatenscenario&#39;s, zouden John en Jane de respectieve reizen moeten teweegbrengen die zij zouden moeten ingaan.</li><li>John en Jane mogen de reis niet opnieuw betreden wanneer de ECID naar hen wordt overgebracht.</li></ul> |
+
+{style="table-layout:auto"}
+
+#### Hoe kan ik controleren of deze functie naar behoren functioneert?
+
+Gebruik het [ hulpmiddel van de grafieksimulatie ](./graph-simulation.md) om te bevestigen dat de eigenschap op een individueel grafiekniveau werkt.
+
+Als u de functie wilt valideren op sandboxniveau, raadpleegt u de sectie [!UICONTROL Graph count with multiple namespaces] in het identiteitsdashboard.

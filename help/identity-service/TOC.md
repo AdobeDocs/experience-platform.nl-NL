@@ -5,10 +5,10 @@ breadcrumb-title: Gids Platform Identity Service
 user-guide-description: Overbrug klantidentiteiten op verschillende apparaten en systemen om gepersonaliseerde digitale ervaringen te bieden.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 16d29811715805e2f297836bf266c854db45d4c6
+source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 19%
+source-wordcount: '149'
+ht-degree: 18%
 
 ---
 
@@ -24,14 +24,14 @@ ht-degree: 19%
    - [Verwijderen in identiteitsservice](./features/deletion.md)
    - Regels voor identiteitsgrafiek koppelen {#identity-graph-linking-rules}
       - [Overzicht van functies](./identity-graph-linking-rules/overview.md)
-      - [Configuratiegids](./identity-graph-linking-rules/configuration.md)
       - [Algoritme voor identiteitsoptimalisatie](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-      - [Prioriteit naamruimte](./identity-graph-linking-rules/namespace-priority.md)
-      - [UI grafieksimulatie](./identity-graph-linking-rules/graph-simulation.md)
-      - [Identiteitsinstellingen](./identity-graph-linking-rules/identity-settings-ui.md)
-      - [Voorbeeld van klantscenario&#39;s](./identity-graph-linking-rules/example-scenarios.md)
+      - [Implementatiegids voor koppelingsregels voor identiteitsgrafieken](./identity-graph-linking-rules/configuration.md)
       - [Voorbeelden van grafiekconfiguraties](./identity-graph-linking-rules/example-configurations.md)
       - [Problemen oplossen met regels voor identiteitsgrafieken](./identity-graph-linking-rules/troubleshooting.md)
+      - [Prioriteit naamruimte](./identity-graph-linking-rules/namespace-priority.md)
+      - [UI grafieksimulatie](./identity-graph-linking-rules/graph-simulation.md)
+      - [Gebruikersinterface voor identiteitsinstellingen](./identity-graph-linking-rules/identity-settings-ui.md)
+      - [Voorbeeld van klantscenario&#39;s](./identity-graph-linking-rules/example-scenarios.md)
    - [ECID-overzicht](./features/ecid.md)
 - [Implementatiehandleiding](implementation.md)
 - [Guardrails voor identiteitsgegevens](guardrails.md)

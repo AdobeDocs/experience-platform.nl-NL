@@ -1,16 +1,16 @@
 ---
-title: Configuratie-hulplijn voor identiteitsgrafiek met koppelingsregels
+title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 3d96e057123a4dd0b4f6f34a64a93c756b583c9b
+source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1353'
 ht-degree: 0%
 
 ---
 
-# Configuratie-hulplijn voor identiteitsgrafiek met koppelingsregels
+# Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 
 >[!AVAILABILITY]
 >
@@ -102,7 +102,7 @@ Gebruik voor alle feedback de optie **[!UICONTROL Beta feedback]** in de gebruik
 
 Lees deze sectie voor extra informatie die u kunt verwijzen wanneer het uitvoeren van uw identiteitsmontages en unieke namespaces.
 
-### scenario voor gedeeld apparaat {#shared-device-scenario}
+### Naamruimtevereiste voor één persoon {#single-person-namespace-requirement}
 
 U moet ervoor zorgen dat één naamruimte wordt gebruikt voor alle profielen die een persoon vertegenwoordigen. Hiermee kan de identiteitsdienst de juiste persoon-id in een bepaalde grafiek detecteren.
 
