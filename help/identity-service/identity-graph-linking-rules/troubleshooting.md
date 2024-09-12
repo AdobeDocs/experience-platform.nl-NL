@@ -3,9 +3,9 @@ title: De Gids van het oplossen van problemen voor de Regels van de Verbinding v
 description: Leer hoe te om gemeenschappelijke kwesties in identiteitsgrafiek problemen op te lossen die regels verbinden.
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: edda302a1f24c9991074c16fd9e770f2bf262b7c
+source-git-commit: 7104781435c0cf3891f7216797af4e873b9b37f9
 workflow-type: tm+mt
-source-wordcount: '3174'
+source-wordcount: '3219'
 ht-degree: 0%
 
 ---
@@ -333,6 +333,8 @@ Deze sectie schetst een lijst van antwoorden op vaak gestelde vragen over de ver
 
 ### Algoritme voor identiteitsoptimalisatie {#identity-optimization-algorithm}
 
+Lees deze sectie voor antwoorden op vaak gestelde vragen over het [ algoritme van de identiteitsoptimalisering ](./identity-optimization-algorithm.md).
+
 #### Ik heb een CRMID voor elk van mijn zaken verenigt (B2C CRMID, B2B CRMID), maar ik heb geen unieke namespace over al mijn profielen. Wat zal gebeuren als ik B2C CRMID en B2B CRMID als uniek merk, en mijn identiteitsmontages toelaat?
 
 Dit scenario wordt niet ondersteund. Daarom kunt u grafieken zien ineenstorten in gevallen waar een gebruiker hun B2C CRMID aan login gebruikt, en een andere gebruiker hun B2B CRMID aan login gebruikt. Voor meer informatie, lees de sectie over [ enige persoon namespace vereiste ](./configuration.md#single-person-namespace-requirement) in de implementatiepagina.
@@ -367,6 +369,8 @@ De belangrijkste punten om te benadrukken zijn als volgt:
 
 ### Prioriteit naamruimte
 
+Lees deze sectie voor antwoorden op vaak gestelde vragen over [ namespace prioriteit ](./namespace-priority.md).
+
 #### Ik heb mijn identiteitsinstellingen ingeschakeld. Wat gebeurt er met mijn instellingen als ik een aangepaste naamruimte wil toevoegen nadat de instellingen zijn ingeschakeld?
 
 Er zijn twee &#39;emmers&#39; van naamruimten: naamruimten van personen en naamruimten van apparaat/cookie. De nieuwe aangepaste naamruimte krijgt de laagste prioriteit in elk &#39;emmertje&#39;, zodat deze nieuwe aangepaste naamruimte geen invloed heeft op bestaande gegevensinvoer.
@@ -384,6 +388,8 @@ Nee. De prioriteit Namespace zal slechts op de datasets van de Gebeurtenis van d
 Het algoritme voor identiteitsoptimalisatie wordt eerst toegepast om te zorgen dat de persoon die entiteit vertegenwoordigt wordt vertegenwoordigd. Nadien, als de grafiek probeert om de [ graadmeter van de identiteitsgrafiek ](../guardrails.md) (50 identiteiten per grafiek) te overschrijden, dan zal deze logica worden toegepast. De prioriteit Namespace beïnvloedt niet de schrappingslogica van de 50 identiteit/grafiekbegeleiding.
 
 ### Testen
+
+Lees deze sectie voor antwoorden op vaak gestelde vragen over het testen van en het zuiveren eigenschappen in identiteitsgrafiek die regels verbinden.
 
 #### Wat zijn enkele scenario&#39;s die ik zou moeten testen in een omgeving van de ontwikkelingszandbak?
 
