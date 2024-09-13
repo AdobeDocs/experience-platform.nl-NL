@@ -2,9 +2,9 @@
 title: AI Assistant in Adobe Experience Platform
 description: Leer hoe u met AI Assistant door Experience Platform- en Real-time Customer Data Platform-concepten kunt navigeren en deze kunt begrijpen, en hoe u informatie over uw objecten kunt gebruiken.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 94245fe25828025b60ea57ddebede2b3ccf890eb
+source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1464'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # UI-gids voor AI-assistent
 
 Lees deze handleiding voor meer informatie over het gebruik van AI Assistant in de gebruikersinterface van Adobe Experience Platform.
-
-De volgende video is bedoeld als ondersteuning voor uw begrip van AI Assistant.
-
->[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 ## De Hulp van AI van de toegang in de UI van het Experience Platform
 

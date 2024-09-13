@@ -2,14 +2,18 @@
 title: Overzicht van AI Assistant
 description: Leer meer over AI Assistant, de nuances en gebruiksgevallen en hoe u deze kunt gebruiken om uw workflow met Adobe Experience Platform en Real-time Customer Data Platform te versnellen.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
+source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '927'
 ht-degree: 1%
 
 ---
 
 # AI Assistant in Adobe Experience Platform
+
+De volgende video is bedoeld als ondersteuning voor uw begrip van AI Assistant.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 Lees dit document voor meer informatie over AI Assistant in Adobe Experience Platform.
 
