@@ -3,7 +3,7 @@ title: De Gids van het oplossen van problemen voor de Regels van de Verbinding v
 description: Leer hoe te om gemeenschappelijke kwesties in identiteitsgrafiek problemen op te lossen die regels verbinden.
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 7104781435c0cf3891f7216797af4e873b9b37f9
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
 source-wordcount: '3219'
 ht-degree: 0%
@@ -176,7 +176,7 @@ De prioriteit Namespace speelt een belangrijke rol in hoe de gebeurtenisfragment
 * Zodra u hebt gevormd en uw [ identiteitsmontages ](./identity-settings-ui.md) voor een bepaalde zandbak opgeslagen, zal het Profiel dan [ namespace prioriteit ](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) gebruiken om de primaire identiteit te bepalen. In het geval van identityMap gebruikt Profile de markering `primary=true` niet meer.
 * Hoewel Profiel niet langer naar deze markering verwijst, kunnen andere services op Experience Platform de markering `primary=true` blijven gebruiken.
 
-Opdat [ voor authentiek verklaarde gebruikersgebeurtenissen ](configuration.md#ingest-your-data) aan de persoon worden gebonden namespace, moeten alle voor authentiek verklaarde gebeurtenissen de persoon namespace (CRMID) bevatten. Dit betekent dat zelfs nadat een gebruiker zich aanmeldt, de naamruimte van de persoon nog steeds aanwezig moet zijn op elke geverifieerde gebeurtenis.
+Opdat [ voor authentiek verklaarde gebruikersgebeurtenissen ](implementation-guide.md#ingest-your-data) aan de persoon worden gebonden namespace, moeten alle voor authentiek verklaarde gebeurtenissen de persoon namespace (CRMID) bevatten. Dit betekent dat zelfs nadat een gebruiker zich aanmeldt, de naamruimte van de persoon nog steeds aanwezig moet zijn op elke geverifieerde gebeurtenis.
 
 U kunt de markering `primary=true` &#39;events&#39; blijven zien wanneer u een profiel opzoekt in de profielviewer. Dit wordt echter genegeerd en wordt niet gebruikt door Profiel.
 
@@ -272,9 +272,9 @@ ORDER BY timestamp desc
 Verwijs naar de documentatie op [ algoritme van de identiteitsoptimalisering ](./identity-optimization-algorithm.md), evenals de types van grafiekstructuren die worden gesteund.
 
 * Lees de [ gids van de grafiekconfiguratie ](./example-configurations.md) voor voorbeelden van gesteunde grafiekstructuren.
-* U kunt de [ implementatiegids ](./configuration.md#appendix) voor voorbeelden van niet gesteunde grafiekstructuren ook lezen. Er zijn twee scenario&#39;s die zouden kunnen gebeuren:
+* U kunt de [ implementatiegids ](./implementation-guide.md#appendix) voor voorbeelden van niet gesteunde grafiekstructuren ook lezen. Er zijn twee scenario&#39;s die zouden kunnen gebeuren:
    * Geen enkele naamruimte in al uw profielen.
-   * Een [ &quot;gevaarlijk identiteitskaart&quot;](./configuration.md#dangling-loginid-scenario) scenario komt voor. In dit scenario kan de Identiteitsdienst niet bepalen of de gevaarlijke id is gekoppeld aan een van de personen-entiteiten in de grafieken.
+   * Een [ &quot;gevaarlijk identiteitskaart&quot;](./implementation-guide.md#dangling-loginid-scenario) scenario komt voor. In dit scenario kan de Identiteitsdienst niet bepalen of de gevaarlijke id is gekoppeld aan een van de personen-entiteiten in de grafieken.
 
 U kunt het [ hulpmiddel van de grafieksimulatie in UI ](./graph-simulation.md) ook gebruiken om gebeurtenissen te simuleren en uw eigen unieke namespace en namespace prioritaire montages te vormen. Dit kan u helpen een basislijninzicht te geven in hoe het algoritme voor identiteitsoptimalisatie zich zou moeten gedragen.
 
@@ -331,26 +331,26 @@ U kunt de volgende vraag in de de uitvoerdataset van de profielmomentopname gebr
 
 Deze sectie schetst een lijst van antwoorden op vaak gestelde vragen over de verbindingsregels van de identiteitsgrafiek.
 
-### Algoritme voor identiteitsoptimalisatie {#identity-optimization-algorithm}
+## Algoritme voor identiteitsoptimalisatie {#identity-optimization-algorithm}
 
 Lees deze sectie voor antwoorden op vaak gestelde vragen over het [ algoritme van de identiteitsoptimalisering ](./identity-optimization-algorithm.md).
 
-#### Ik heb een CRMID voor elk van mijn zaken verenigt (B2C CRMID, B2B CRMID), maar ik heb geen unieke namespace over al mijn profielen. Wat zal gebeuren als ik B2C CRMID en B2B CRMID als uniek merk, en mijn identiteitsmontages toelaat?
+### Ik heb een CRMID voor elk van mijn zaken verenigt (B2C CRMID, B2B CRMID), maar ik heb geen unieke namespace over al mijn profielen. Wat zal gebeuren als ik B2C CRMID en B2B CRMID als uniek merk, en mijn identiteitsmontages toelaat?
 
-Dit scenario wordt niet ondersteund. Daarom kunt u grafieken zien ineenstorten in gevallen waar een gebruiker hun B2C CRMID aan login gebruikt, en een andere gebruiker hun B2B CRMID aan login gebruikt. Voor meer informatie, lees de sectie over [ enige persoon namespace vereiste ](./configuration.md#single-person-namespace-requirement) in de implementatiepagina.
+Dit scenario wordt niet ondersteund. Daarom kunt u grafieken zien ineenstorten in gevallen waar een gebruiker hun B2C CRMID aan login gebruikt, en een andere gebruiker hun B2B CRMID aan login gebruikt. Voor meer informatie, lees de sectie over [ enige persoon namespace vereiste ](./implementation-guide.md#single-person-namespace-requirement) in de implementatiepagina.
 
-#### Worden bestaande samengevouwen grafieken door algoritme voor identiteitsoptimalisatie gecorrigeerd?
+### Worden bestaande samengevouwen grafieken door algoritme voor identiteitsoptimalisatie gecorrigeerd?
 
 Bestaande samengevouwen grafieken worden alleen door het grafiekalgoritme beïnvloed (&#39;fixed&#39;) als deze grafieken worden bijgewerkt nadat u de nieuwe instellingen hebt opgeslagen.
 
-#### Als twee personen zich aanmelden en uitloggen met hetzelfde apparaat, wat gebeurt er dan met de gebeurtenissen? Zullen alle gebeurtenissen over naar de laatste voor authentiek verklaarde gebruiker overgaan?
+### Als twee personen zich aanmelden en uitloggen met hetzelfde apparaat, wat gebeurt er dan met de gebeurtenissen? Zullen alle gebeurtenissen over naar de laatste voor authentiek verklaarde gebruiker overgaan?
 
 * Anonieme gebeurtenissen (gebeurtenissen met ECID als primaire identiteit in Real-Time klantprofiel) worden overgedragen naar de laatst geverifieerde gebruiker. De reden hiervoor is dat de ECID wordt gekoppeld aan de CRMID van de laatst geverifieerde gebruiker (op Identity Service).
 * Alle geverifieerde gebeurtenissen (gebeurtenissen met CRMID die als primaire identiteit zijn gedefinieerd) blijven bij de persoon.
 
 Voor meer informatie, lees de gids bij [ bepalend de primaire identiteit voor ervaringsgebeurtenissen ](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
 
-#### Hoe zullen de verplaatsingen in Adobe Journey Optimizer worden beïnvloed wanneer de ECID van de ene persoon naar de andere overgaat?
+### Hoe zullen de verplaatsingen in Adobe Journey Optimizer worden beïnvloed wanneer de ECID van de ene persoon naar de andere overgaat?
 
 De CRMID van de laatst geverifieerde gebruiker wordt gekoppeld aan de ECID (gedeelde apparaat). ECID&#39;s kunnen op basis van gebruikersgedrag opnieuw van de ene persoon naar de andere worden toegewezen. De impact zal afhangen van hoe de reis wordt gebouwd, zodat is het belangrijk dat de klanten de reis in een omgeving van de ontwikkelingszandbak uittesten om het gedrag te bevestigen.
 
@@ -367,31 +367,31 @@ De belangrijkste punten om te benadrukken zijn als volgt:
    * Met deze functie is ECID niet meer altijd gekoppeld aan één profiel.
    * De aanbeveling is om reizen te beginnen met naamruimten van personen (CRMID).
 
-### Prioriteit naamruimte
+## Prioriteit naamruimte
 
 Lees deze sectie voor antwoorden op vaak gestelde vragen over [ namespace prioriteit ](./namespace-priority.md).
 
-#### Ik heb mijn identiteitsinstellingen ingeschakeld. Wat gebeurt er met mijn instellingen als ik een aangepaste naamruimte wil toevoegen nadat de instellingen zijn ingeschakeld?
+### Ik heb mijn identiteitsinstellingen ingeschakeld. Wat gebeurt er met mijn instellingen als ik een aangepaste naamruimte wil toevoegen nadat de instellingen zijn ingeschakeld?
 
 Er zijn twee &#39;emmers&#39; van naamruimten: naamruimten van personen en naamruimten van apparaat/cookie. De nieuwe aangepaste naamruimte krijgt de laagste prioriteit in elk &#39;emmertje&#39;, zodat deze nieuwe aangepaste naamruimte geen invloed heeft op bestaande gegevensinvoer.
 
-#### Als het Profiel van de Klant in real time niet meer de &quot;primaire&quot;vlag op identityMap gebruikt, moet deze waarde nog worden verzonden?
+### Als het Profiel van de Klant in real time niet meer de &quot;primaire&quot;vlag op identityMap gebruikt, moet deze waarde nog worden verzonden?
 
 Ja, de &quot;primaire&quot;vlag op identityMap wordt gebruikt door andere diensten. Voor meer informatie, lees de gids op [ de implicaties van namespaceprioriteit op andere diensten van het Experience Platform ](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
 
-#### Zal naamruimteprioriteit van toepassing zijn op de gegevenssets van het profielrecord in Real-Time Klantprofiel?
+### Zal naamruimteprioriteit van toepassing zijn op de gegevenssets van het profielrecord in Real-Time Klantprofiel?
 
 Nee. De prioriteit Namespace zal slechts op de datasets van de Gebeurtenis van de Ervaring van toepassing zijn gebruikend de Klasse XDM ExperienceEvent.
 
-#### Hoe werkt deze functie in overeenstemming met de identiteitsgrafiekinstructies van 50 identiteiten per grafiek? Heeft naamruimteprioriteit invloed op deze door het systeem gedefinieerde hulplijn?
+### Hoe werkt deze functie in overeenstemming met de identiteitsgrafiekinstructies van 50 identiteiten per grafiek? Heeft naamruimteprioriteit invloed op deze door het systeem gedefinieerde hulplijn?
 
 Het algoritme voor identiteitsoptimalisatie wordt eerst toegepast om te zorgen dat de persoon die entiteit vertegenwoordigt wordt vertegenwoordigd. Nadien, als de grafiek probeert om de [ graadmeter van de identiteitsgrafiek ](../guardrails.md) (50 identiteiten per grafiek) te overschrijden, dan zal deze logica worden toegepast. De prioriteit Namespace beïnvloedt niet de schrappingslogica van de 50 identiteit/grafiekbegeleiding.
 
-### Testen
+## Testen
 
 Lees deze sectie voor antwoorden op vaak gestelde vragen over het testen van en het zuiveren eigenschappen in identiteitsgrafiek die regels verbinden.
 
-#### Wat zijn enkele scenario&#39;s die ik zou moeten testen in een omgeving van de ontwikkelingszandbak?
+### Wat zijn enkele scenario&#39;s die ik zou moeten testen in een omgeving van de ontwikkelingszandbak?
 
 In het algemeen geldt dat het testen op een ontwikkelingssandbox de gebruiksgevallen moet nabootsen die u wilt uitvoeren in de productiesandbox. Raadpleeg de volgende tabel voor een aantal belangrijke onderdelen die u wilt valideren wanneer u uitgebreide tests uitvoert:
 
@@ -403,7 +403,7 @@ In het algemeen geldt dat het testen op een ontwikkelingssandbox de gebruiksgeva
 
 {style="table-layout:auto"}
 
-#### Hoe kan ik controleren of deze functie naar behoren functioneert?
+### Hoe kan ik controleren of deze functie naar behoren functioneert?
 
 Gebruik het [ hulpmiddel van de grafieksimulatie ](./graph-simulation.md) om te bevestigen dat de eigenschap op een individueel grafiekniveau werkt.
 

@@ -3,9 +3,9 @@ title: Algoritme voor identiteitsoptimalisatie
 description: Leer over het Algoritme van de Optimalisering van de Identiteit in de Dienst van de Identiteit.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: d3b43c5fa90b67bcba6015d521b78998d50cc3d7
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1531'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,9 @@ Bekijk het onderstaande diagram om beter te begrijpen hoe anonieme gebeurtenisas
 Lees de volgende documentatie voor meer informatie over koppelingsregels voor identiteitsgrafieken:
 
 * [Overzicht van regels voor identiteitsgrafiek](./overview.md)
+* [Implementatiehandleiding](./implementation-guide.md)
+* [Voorbeelden van grafiekconfiguraties](./example-configurations.md)
+* [Problemen oplossen en veelgestelde vragen](./troubleshooting.md)
 * [Prioriteit naamruimte](./namespace-priority.md)
-* [Voorbeeldscenario&#39;s voor het configureren van identiteitsgrafiek-koppelingsregels](./example-scenarios.md)
-* [Logica voor identiteitskoppeling](../features/identity-linking-logic.md)
-* [Identiteitsservice en realtime klantprofiel](../identity-and-profile.md)
+* [UI voor grafieksimulatie](./graph-simulation.md)
+* [Gebruikersinterface voor identiteitsinstellingen](./identity-settings-ui.md)

@@ -3,9 +3,9 @@ title: UI-gids voor grafieksimulatie
 description: Leer hoe te om de Simulatie van de Grafiek in de Dienst UI van de Identiteit te gebruiken.
 badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
@@ -172,8 +172,10 @@ In de onderstaande voorbeeldgrafiek bestaat een stippellijn tussen `{Email: tom@
 
 Door dit document te lezen, weet u nu hoe u het gereedschap [!DNL Graph Simulation] kunt gebruiken om beter te begrijpen hoe uw identiteitsgegevens worden behandeld op basis van een bepaalde set regels en configuraties. Lees de volgende documenten voor meer informatie:
 
-* [Koppelingsregels voor identiteitsgrafiek](./overview.md)
-* [Configuratiegids](./configuration.md)
+* [Overzicht van regels voor identiteitsgrafiek](./overview.md)
 * [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
-* [Prioriteit naamruimte](./namespace-priority.md)
+* [Implementatiehandleiding](./implementation-guide.md)
+* [Problemen oplossen en veelgestelde vragen](./troubleshooting.md)
 * [Voorbeelden van grafiekconfiguraties](./example-configurations.md)
+* [Prioriteit naamruimte](./namespace-priority.md)
+* [Gebruikersinterface voor identiteitsinstellingen](./identity-settings-ui.md)

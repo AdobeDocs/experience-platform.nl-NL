@@ -1,15 +1,16 @@
 ---
-title: Handleiding Grafiekconfiguraties
+title: Voorbeelden van grafiekconfiguraties
 description: Leer over gemeenschappelijke grafiekscenario's die u zou kunnen ontmoeten wanneer het werken met identiteitsgrafiek die regels en identiteitsgegevens verbindt.
 badge: Beta
-source-git-commit: 90faa4079d8a58898774c1fbbae2adae01f7e0a2
+exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '2749'
+source-wordcount: '2786'
 ht-degree: 1%
 
 ---
 
-# Hulplijn voor grafiekconfiguraties
+# Voorbeelden van grafiekconfiguraties
 
 >[!AVAILABILITY]
 >
@@ -19,6 +20,7 @@ ht-degree: 1%
 >
 >* &#39;CRMID&#39; en &#39;loginID&#39; zijn aangepaste naamruimten. In dit document is &#39;CRMID&#39; een persoon-id en is &#39;loginID&#39; een aanmeldings-id die aan een bepaalde persoon is gekoppeld.
 >* Als u de voorbeeldgrafiekscenario&#39;s wilt simuleren die in dit document worden beschreven, moet u eerst twee aangepaste naamruimten maken, een met het identiteitssymbool &quot;CRMID&quot; en een ander met het identiteitssymbool &quot;loginID&quot;. Identiteitssymbolen zijn hoofdlettergevoelig.
+
 
 Dit document schetst de voorbeelden van de grafiekconfiguratie van gemeenschappelijke scenario&#39;s die u zou kunnen ontmoeten wanneer het werken met identiteitsgrafiek die regels en identiteitsgegevens verbindt.
 
@@ -478,7 +480,7 @@ In dit scenario is er één CRMID die een persoonentiteit vertegenwoordigt. Een 
 
 | Gebruikte naamruimten | Webgedragsverzamelingsmethode |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics-bronaansluiting. <br> **Nota:** Door gebrek, wordt AIDs geblokkeerd in de Dienst van de Identiteit, daarom moet u een hogere prioriteit op uw ECIDs plaatsen dan AIDs, wanneer het gebruiken van de bron van Analytics. Lees de [ implementatiegids ](configuration.md#ingest-your-data) voor meer informatie.</br> |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics-bronaansluiting. <br> **Nota:** Door gebrek, wordt AIDs geblokkeerd in de Dienst van de Identiteit, daarom moet u een hogere prioriteit op uw ECIDs plaatsen dan AIDs, wanneer het gebruiken van de bron van Analytics. Lees de [ implementatiegids ](./implementation-guide.md#ingest-your-data) voor meer informatie.</br> |
 
 **Gebeurtenissen:**
 
@@ -756,3 +758,15 @@ CRMID: Tom, ECID: 111
 ```
 
 >[!ENDTABS]
+
+## Volgende stappen
+
+Lees de volgende documentatie voor meer informatie over koppelingsregels voor identiteitsgrafieken:
+
+* [Overzicht van regels voor identiteitsgrafiek](./overview.md)
+* [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
+* [Implementatiehandleiding](./implementation-guide.md)
+* [Problemen oplossen en veelgestelde vragen](./troubleshooting.md)
+* [Prioriteit naamruimte](./namespace-priority.md)
+* [UI voor grafieksimulatie](./graph-simulation.md)
+* [Gebruikersinterface voor identiteitsinstellingen](./identity-settings-ui.md)

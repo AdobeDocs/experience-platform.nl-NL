@@ -3,9 +3,9 @@ title: Gebruikersinterface Identiteitsinstellingen
 description: Leer hoe u de gebruikersinterface voor identiteitsinstellingen gebruikt.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 04b04807196bb5902e398403612429eae0de3988
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -24,8 +24,10 @@ Lees deze gids om te leren hoe te om uw identiteitsmontages in UI te vormen.
 
 Lees de volgende documenten voordat u begint te werken met identiteitsinstellingen:
 
-* [Configuratie-hulplijn voor identiteitsgrafiek met koppelingsregels](./configuration.md)
+* [Koppelingsregels voor identiteitsgrafiek](./overview.md)
 * [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
+* [Implementatiehandleiding](./implementation-guide.md)
+* [Voorbeelden van grafiekconfiguraties](./example-configurations.md)
 * [Prioriteit naamruimte](./namespace-priority.md)
 * [Grafieksimulatie](./graph-simulation.md)
 
@@ -61,4 +63,12 @@ Een waarschuwingsbericht verschijnt, erop wijzend dat de bestaande grafieken sle
 
 ## Volgende stappen
 
-U hebt nu de naamruimteprioriteiten geconfigureerd en uw unieke naamruimten toegewezen met behulp van de gebruikersinterface voor identiteitsinstellingen. Voor meer informatie, lees de [ identiteitsgrafiek die regels verbindt overzicht ](./overview.md).
+Lees de volgende documentatie voor meer informatie over koppelingsregels voor identiteitsgrafieken:
+
+* [Overzicht van regels voor identiteitsgrafiek](./overview.md)
+* [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
+* [Implementatiehandleiding](./implementation-guide.md)
+* [Voorbeelden van grafiekconfiguraties](./example-configurations.md)
+* [Problemen oplossen en veelgestelde vragen](./troubleshooting.md)
+* [Prioriteit naamruimte](./namespace-priority.md)
+* [UI voor grafieksimulatie](./graph-simulation.md)
