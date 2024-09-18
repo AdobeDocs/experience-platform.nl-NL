@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
+source-git-commit: b1de61b2e7d0dedf2da8ef8ffb02fe5c15e82fb2
 workflow-type: tm+mt
-source-wordcount: '2522'
+source-wordcount: '2601'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,16 @@ ht-degree: 0%
 >id="testy-mctestface"
 >title="Dialoogvenster testen dat niet zichtbaar moet zijn"
 >abstract="Het object {name} wordt weergegeven op {date} ."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_core"
+>title="Tabel met kernproducten"
+>abstract="De kernproducten die in de tabel worden vermeld, hebben hun eigen metriek, gebruiksregistratie en doorboor-through-weergaven op sandboxniveau. Deze kernproducten verstrekken de belangrijkste metriek voor het volgen, en om het even welke toe:voegen-ons zijn inbegrepen in deze metriek."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_addons"
+>title="Toevoegingstabel"
+>abstract="De lijst Add-ons maakt een lijst met producten waarvan de licentiebedragen worden gecombineerd met de metriek die door kernproducten wordt ondersteund. Deze toe:voegen-ons hebben geen afzonderlijke metriek maar verbetert het gebruik het volgen van de kernproducten zij met worden geassocieerd."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
