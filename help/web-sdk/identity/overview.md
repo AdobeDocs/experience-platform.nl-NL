@@ -2,9 +2,9 @@
 title: Identiteitsgegevens in Web SDK
 description: Leer hoe u Adobe Experience Cloud-id's (ECID's) kunt ophalen en beheren met de Adobe Experience Platform Web SDK.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 3b0fa672c4befd8e17632e62b0eeb13b6b17bfb4
+source-git-commit: c99831cf2bb1b862d65851701b38c6d3dfe99000
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1553'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 Het Web SDK van Adobe Experience Platform gebruikt [ Adobe Experience Cloud IDs (ECIDs) ](../../identity-service/features/ecid.md) om bezoekersgedrag te volgen. Met [!DNL ECIDs] kunt u ervoor zorgen dat elk apparaat een unieke id heeft die tijdens meerdere sessies kan blijven bestaan, zodat alle resultaten die tijdens en tussen websessies optreden, worden gekoppeld aan een specifiek apparaat.
 
-Dit document biedt een overzicht van hoe u [!DNL ECIDs] kunt beheren met de SDK van Web.
+Dit document biedt een overzicht van het beheren van [!DNL ECIDs] en [!DNL CORE IDs] met de SDK van het Web.
 
-## ECID&#39;s bijhouden met Web SDK {#tracking-ecids-we-sdk}
+## ECID&#39;s bijhouden met Web SDK {#tracking-ecids-web-sdk}
 
 De SDK van het Web wijst en volgt [!DNL ECIDs] door koekjes, met veelvoudige beschikbare methodes toe te gebruiken om te vormen hoe deze koekjes worden geproduceerd.
 
@@ -33,6 +33,12 @@ Wanneer u cookies gebruikt voor apparaatidentificatie, hebt u twee manieren om t
 1. Gegevens rechtstreeks verzenden naar het domein Edge Network `adobedc.net` . Deze methode wordt bedoeld als [ de inzameling van derdegegevens ](#third-party).
 
 Zoals in de onderstaande secties wordt uitgelegd, heeft de methode voor gegevensverzameling die u kiest, een directe invloed op de levensduur van cookies in verschillende browsers.
+
+## CORE-id&#39;s bijhouden met Web SDK {#tracking-coreid-web-sdk}
+
+Als u Google Chrome gebruikt en cookies van derden hebt ingeschakeld en er geen `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -cookie is ingesteld, wordt het eerste verzoek om Edge Network uitgevoerd via een `demdex.net` -domein, dat een demdex-cookie instelt. Deze cookie bevat een [!DNL CORE ID] . Dit is een unieke gebruiker-id die afwijkt van de [!DNL ECID] .
+
+Afhankelijk van uw implementatie, zou u [ tot  [!DNL CORE ID]](#retrieve-coreid) kunnen willen toegang hebben.
 
 ### Gegevensverzameling van eerste partijen {#first-party}
 
@@ -84,7 +90,6 @@ Stel het doelveld vervolgens in op een XDM-pad waar het veld van het type `strin
 
 ### De [!DNL ECID] ophalen via de opdracht `getIdentity()` {#retrieve-ecid-getidentity}
 
-
 >[!IMPORTANT]
 >
 >U moet de ECID alleen via de opdracht `getIdentity()` ophalen als u de instructie [!DNL ECID] aan de clientzijde nodig hebt. Als u slechts ECID aan een XDM gebied wilt in kaart brengen, gebruik [ Prep van Gegevens voor de Inzameling van Gegevens ](#retrieve-ecid-data-prep) in plaats daarvan.
@@ -107,6 +112,17 @@ alloy("getIdentity")
     // "error" will be an error object with additional information.
   });
 ```
+
+## De CORE-id voor de huidige gebruiker ophalen {#retrieve-coreid}
+
+Als u de CORE-id voor een gebruiker wilt ophalen, gebruikt u de opdracht [`getIdentity()`](../commands/getidentity.md) , zoals hieronder wordt weergegeven.
+
+```js
+alloy("getIdentity",{
+  "namespaces": ["CORE"]
+});
+```
+
 
 ## `identityMap` gebruiken {#using-identitymap}
 

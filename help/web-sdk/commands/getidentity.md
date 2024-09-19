@@ -2,9 +2,9 @@
 title: getIdentity
 description: Verkrijg de identiteit van een bezoeker zonder gebeurtenisgegevens te verzenden.
 exl-id: 28b99f62-14c4-4e52-a5c7-9f6fe9852a87
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: a884790aa48fb97eebe2421124fc5d5f76c8a79d
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -23,12 +23,12 @@ De de markeringsuitbreiding van SDK van het Web biedt dit bevel door de markerin
 
 Voer het `getIdentity` bevel in werking wanneer het roepen van uw gevormde instantie van het Web SDK. De volgende opties zijn beschikbaar wanneer het vormen van dit bevel:
 
-* **`namespaces`**: een array van naamruimten. De standaardwaarde is `["ECID"]` . Geldige waarden zijn `["ECID"]` , `null` of `undefined` .
+* **`namespaces`**: een array van naamruimten. De standaardwaarde is `["ECID"]` . Andere ondersteunde waarden zijn: `["CORE"]`, `null`, `undefined` . U kunt [!DNL ECID] en [!DNL CORE ID] tegelijkertijd aanvragen. Voorbeeld: `"namespaces": ["ECID","CORE"]` .
 * **`edgeConfigOverrides`**: Een [ datastream configuratieopheffingsvoorwerp ](datastream-overrides.md).
 
 ```js
 alloy("getIdentity",{
-  "namespaces": ["ECID"]
+  "namespaces": ["ECID","CORE"] //this command retrieves both ECID and CORE IDs.
 });
 ```
 
@@ -37,4 +37,5 @@ alloy("getIdentity",{
 Als u besluit om [ reacties ](command-responses.md) met dit bevel te behandelen, zijn de volgende eigenschappen beschikbaar in het reactievoorwerp:
 
 * **`identity.ECID`**: Een tekenreeks die de ECID van de bezoeker bevat.
+* **`identity.CORE`**: Een tekenreeks met de CORE-id van de bezoeker.
 * **`edge.regionID`**: Een geheel getal dat het gebied van de Edge Network vertegenwoordigt dat de browser detecteert bij het verkrijgen van een identiteit. Dit is hetzelfde als de locatiehint van de verouderde Audience Manager.

@@ -2,9 +2,9 @@
 title: thirdPartyCookiesEnabled
 description: Het gebruik van cookies van derden toestaan om bezoekers te identificeren.
 exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: a884790aa48fb97eebe2421124fc5d5f76c8a79d
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
@@ -12,14 +12,9 @@ ht-degree: 0%
 
 # `thirdPartyCookiesEnabled`
 
->[!IMPORTANT]
->
->Google [ heeft ](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) plannen aangekondigd om de steun van Chrome voor derdekoekjes in de tweede helft van 2024 te beëindigen. Daarom worden cookies van derden niet meer ondersteund in de belangrijkste browsers.
->
->Wanneer deze wijziging is geïmplementeerd, stopt de Adobe de ondersteuning voor het cookie `demdex` dat momenteel wordt ondersteund in de SDK van het web.
-
-
 De eigenschap `thirdPartyCookiesEnabled` is een Booleaanse waarde die bepaalt of de Web SDK cookies instelt in een context van derden. Het inschakelen van deze optie is handig als u bezoekers wilt identificeren tussen subdomeinen of domeinen die eigendom zijn van uw organisatie. Veel moderne browsers beperken echter de instelling en vervaldatum van cookies van derden.
+
+De eigenschap `thirdPartyCookiesEnabled` bepaalt ook of een [`CORE ID`](../../identity/overview.md#tracking-coreid-web-sdk) kan worden opgevraagd voor [`getIdentity`](../getidentity.md) -aanroepen.
 
 Als deze optie is ingeschakeld, gebruikt de Web SDK Adobe Audience Manager om een bezoeker te identificeren. Wanneer deze optie is uitgeschakeld, wordt de aanroep naar de Audience Manager uitgeschakeld. Zie [ Begrip vraag aan het domein van de Index ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html) in de gebruikersgids van de Audience Manager voor meer informatie.
 
