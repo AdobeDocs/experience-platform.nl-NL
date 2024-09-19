@@ -1,17 +1,25 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
-source-git-commit: 73a82825dd6c9ae97db76018df5462ab20c7d15e
+exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
+source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
 workflow-type: tm+mt
-source-wordcount: '2245'
+source-wordcount: '2278'
 ht-degree: 0%
 
 ---
 
-
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de recentste versienota&#39;s op SDK zelf, zie de [ de versienota&#39;s van SDK van het Web van het Platform ](/help/web-sdk/release-notes.md).
+
+## Versie 2.26.1 - 19 september 2024
+
+**Bevestigingen en verbeteringen**
+
+- Probleem verholpen waarbij cookies niet correct werden geschreven tijdens het lokaal uitvoeren van de Web SDK.
+
+Bevat versie 2.23.0 van het Web SDK van Adobe Experience Platform.
 
 ## Versie 2.26.0 - 22 augustus 2024
 

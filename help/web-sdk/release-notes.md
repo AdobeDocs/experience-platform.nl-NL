@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 73a82825dd6c9ae97db76018df5462ab20c7d15e
+source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1920'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,21 @@ ht-degree: 0%
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie de [ nota&#39;s van de de marktextensie van SDK van het Web ](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Versie 2.23.0 - 19 september 2024
+
+**Nieuwe eigenschappen**
+
+- Toegevoegde steun voor het verzoeken van [ identiteitskaart van de KERN ](identity/overview.md#tracking-coreid-web-sdk) in het [ getIdentity ](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library) bevel.
+
+**Bevestigingen en verbeteringen**
+
+- Probleem verholpen waarbij cookies niet correct werden geschreven tijdens het lokaal uitvoeren van de Web SDK.
+
 ## Versie 2.2.2.0 - 22 augustus 2024
 
 **Nieuwe eigenschappen**
 
-- Toegevoegde personalisatiemonitors.
+- Toegevoegde ondersteuning voor knuppels voor personalisatie-controle.
 
 **Bevestigingen en verbeteringen**
 
