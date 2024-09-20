@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;veren
 title: Gebruikersgids voor realtime gebruikersprofiel
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-Time Klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
+source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
 workflow-type: tm+mt
-source-wordcount: '2071'
+source-wordcount: '2128'
 ht-degree: 0%
 
 ---
@@ -127,6 +127,11 @@ Wanneer een waarde is ingevoerd, selecteert u **[!UICONTROL View]** en geeft u �
 ![ het profiel dat de identiteitswaarde aanpast wordt benadrukt.](../images/user-guide/filtered-identity-value.png)
 
 ## Profieldetails weergeven {#profile-detail}
+
+>[!CONTEXTUALHELP]
+>id="platform_errors_uplib_201001_404"
+>title="Entiteit niet gevonden"
+>abstract="Dit betekent dat Platform de gevraagde entiteit niet kon vinden. Probeer een van de volgende oplossingen om deze fout op te lossen:<ul><li>Controleer of de juiste profiel-id wordt vermeld in de URL van de entiteit waartoe u toegang probeert te krijgen.</li><li>Zorg ervoor dat u beschikt over de juiste organisatie- en sandboxcombinatie voor de entiteit waartoe u toegang probeert te krijgen.</li></ul>"
 
 Nadat u een **[!UICONTROL Profile ID]** -tab hebt geselecteerd, wordt het tabblad **[!UICONTROL Detail]** geopend. De profielgegevens die op het tabblad **[!UICONTROL Detail]** worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van de individuele klant. Dit omvat klantgegevens zoals basiskenmerken, gekoppelde identiteiten en kanaalvoorkeuren.
 
