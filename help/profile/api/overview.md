@@ -4,9 +4,9 @@ title: Real-Time API-handleiding voor klantprofiel
 description: Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, waaronder weergaveprofielen, beleid voor samenvoegen maken en bijwerken, profielgegevens exporteren of samplen en profielgegevens verwijderen die niet langer vereist zijn of die door een fout zijn toegevoegd. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: cb276c55c010aa7ccc936947ad87bf74239d6e99
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '860'
 ht-degree: 1%
 
 ---
@@ -21,11 +21,7 @@ Om alle beschikbare eindpunten en verrichtingen van CRUD te bekijken, bezoek de 
 
 Voor een gids aan het werken met [!DNL Real-Time Customer Profile] gegevens in [!DNL Experience Platform] UI, gelieve te verwijzen naar de [ de gebruikersgids van het Profiel ](../ui/user-guide.md).
 
-## [!BADGE  Beta ] {type=Informative} Berekende attributen {#computed-attributes}
-
->[!IMPORTANT]
->
-De functie Berekend kenmerk is in bèta beschikbaar voor niet alle gebruikers. Documentatie en functionaliteit kunnen worden gewijzigd.
+## Berekende kenmerken {#computed-attributes}
 
 Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
 
