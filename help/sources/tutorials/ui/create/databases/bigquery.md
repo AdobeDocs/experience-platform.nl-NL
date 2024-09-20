@@ -3,20 +3,20 @@ title: Een Google Big Query Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Google Big Query-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 55aaaa39659566de81bb161d704b6f8212e29a8b
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Google Big Query] bronverbinding maken in de gebruikersinterface
+# Een [!DNL Google BigQuery] bronverbinding maken in de gebruikersinterface
 
 >[!IMPORTANT]
 >
 >De [!DNL Google BigQuery] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
-Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Google Big Query] bronverbinding met behulp van de gebruikersinterface van Platform.
+Lees deze zelfstudie om te leren hoe u uw [!DNL Google BigQuery] -account kunt verbinden met Adobe Experience Platform via de gebruikersinterface.
 
 ## Aan de slag
 
@@ -31,26 +31,19 @@ Als u reeds een geldige [!DNL Google BigQuery] verbinding hebt, kunt u de rest v
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt krijgen tot uw [!DNL Google BigQuery] -account op Platform, moet u de volgende OAuth 2.0-verificatiewaarden opgeven:
-
-| Credentials | Beschrijving |
-| ---------- | ----------- |
-| `project` | De project-id van het standaard [!DNL Google BigQuery] -project waarnaar moet worden gezocht. |
-| `clientID` | De waarde van identiteitskaart die wordt gebruikt om het vernieuwingstoken te produceren. |
-| `clientSecret` | De geheime waarde die wordt gebruikt om het te produceren vernieuwt teken. |
-| `refreshToken` | Het vernieuwingstoken dat u van [!DNL Google] hebt gekregen om toegang tot [!DNL Google BigQuery] te verlenen. |
-
-Voor meer informatie over deze waarden, verwijs naar [ dit  [!DNL Google BigQuery]  document ](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
+Lees de [[!DNL Google BigQuery]  authentificatiegids ](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) voor gedetailleerde stappen bij het verzamelen van uw vereiste geloofsbrieven.
 
 ## Sluit uw Google BigQuery-account aan
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
-
-U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
+Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken. U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
 
 Selecteer onder de categorie [!UICONTROL Databases] de optie **[!UICONTROL Google BigQuery]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![](../../../../images/tutorials/create/google-big-query/catalog.png)
+>[!TIP]
+>
+>Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account bestaat, verandert deze optie in **[!UICONTROL Add data]** .
+
+![ de broncatalogus met Google BigQuery selecteerde.](../../../../images/tutorials/create/google-big-query/catalog.png)
 
 De pagina **[!UICONTROL Connect to Google Big Query]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -58,13 +51,29 @@ De pagina **[!UICONTROL Connect to Google Big Query]** wordt weergegeven. Op dez
 
 Als u een bestaande account wilt verbinden, selecteert u de [!DNL Google BigQuery] -account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![](../../../../images/tutorials/create/google-big-query/existing.png)
+![ de bestaande rekeningspagina waar een lijst van bestaande rekeningen wordt voorgesteld.](../../../../images/tutorials/create/google-big-query/existing.png)
 
 ### Nieuwe account
 
-Selecteer **[!UICONTROL New account]** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Google BigQuery] -gegevens op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
+Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u een naam en een optionele beschrijving voor uw nieuwe [!DNL Google BigQuery] -account.
 
-![](../../../../images/tutorials/create/google-big-query/new.png)
+![ de nieuwe rekeningsinterface in het bronwerkschema.](../../../../images/tutorials/create/google-big-query/new.png)
+
+>[!BEGINTABS]
+
+>[!TAB  Basisauthentificatie van het Gebruik ]
+
+Om basisauthentificatie te gebruiken, selecteer **[!UICONTROL Basic Authentication]** en verstrek waarden voor uw [ project, cliënt identiteitskaart, cliëntgeheim, verfrist teken, en (facultatieve) identiteitskaart van de resultaatdataset ](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
+
+![ de nieuwe rekeningsinterface waar de basisauthentificatie wordt geselecteerd.](../../../../images/tutorials/create/google-big-query/basic_auth.png)
+
+>[!TAB  de dienstauthentificatie van het Gebruik ]
+
+Om de dienstauthentificatie te gebruiken, selecteer **[!UICONTROL Service Authentication]** en verstrek waarden voor uw [ project identiteitskaart, zeer belangrijke dossierinhoud, en (facultatieve) grote identiteitskaart van de resultaatdataset ](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
+
+![ de nieuwe rekeningsinterface waar de dienstauthentificatie wordt geselecteerd.](../../../../images/tutorials/create/google-big-query/service_auth.png)
+
+>[!ENDTABS]
 
 ## Volgende stappen
 

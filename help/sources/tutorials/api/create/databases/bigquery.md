@@ -3,9 +3,9 @@ title: Een Google BigQuery Base-verbinding maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met Google BigQuery met behulp van de Flow Service API.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 1fa79b31b5a257ebb3cbd60246b757d8a4a63d7c
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Google BigQuery] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe te om een basisverbinding voor [!DNL Google BigQuery] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
@@ -31,18 +31,7 @@ In de volgende secties vindt u aanvullende informatie die u moet weten voordat u
 
 ### Vereiste referenties verzamelen
 
-[!DNL Flow Service] kan alleen verbinding maken met Platform [!DNL Google BigQuery] als u de volgende OAuth 2.0-verificatiewaarden opgeeft:
-
-| Credentials | Beschrijving |
-| ---------- | ----------- |
-| `project` | De project-id van het standaard [!DNL Google BigQuery] -project waarnaar moet worden gezocht. |
-| `clientID` | De waarde van identiteitskaart die wordt gebruikt om het vernieuwingstoken te produceren. |
-| `clientSecret` | De geheime waarde die wordt gebruikt om het te produceren vernieuwt teken. |
-| `refreshToken` | Het vernieuwingstoken dat u van [!DNL Google] hebt gekregen om toegang tot [!DNL Google BigQuery] te verlenen. |
-| `largeResultsDataSetId` | De vooraf gemaakte [!DNL Google BigQuery] dataset-id die is vereist om ondersteuning voor grote resultaatsets mogelijk te maken. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Google BigQuery] is: `3c9b37f8-13a6-43d8-bad3-b863b941fedd` . |
-
-Voor meer informatie over deze waarden, verwijs naar dit [[!DNL Google BigQuery]  document ](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
+Lees de [[!DNL Google BigQuery]  authentificatiegids ](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) voor gedetailleerde stappen bij het verzamelen van uw vereiste geloofsbrieven.
 
 ### Platform-API&#39;s gebruiken
 
@@ -60,9 +49,13 @@ Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connecti
 POST /connections
 ```
 
+>[!BEGINTABS]
+
+>[!TAB  Basisauthentificatie van het Gebruik ]
+
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding voor [!DNL Google BigQuery] gemaakt:
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL Google BigQuery] gemaakt met behulp van basisverificatie:
 
 ```shell
 curl -X POST \
@@ -73,8 +66,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Google BigQuery connection",
-        "description": "Google BigQuery connection",
+        "name": "Google BigQuery connection with basic authentication",
+        "description": "Google BigQuery connection with basic authentication",
         "auth": {
             "specName": "Basic Authentication",
             "type": "OAuth2.0",
@@ -110,6 +103,59 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
     "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
 }
 ```
+
+>[!TAB  de dienstauthentificatie van het Gebruik ]
+
+
+**Verzoek**
+
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL Google BigQuery] gemaakt met behulp van service-verificatie:
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Google BigQuery base connection with service account",
+        "description": "Google BigQuery connection with service account",
+        "auth": {
+            "specName": "Service Authentication",
+            "params": {
+                    "projectId": "{PROJECT_ID}",
+                    "keyFileContent": "{KEY_FILE_CONTENT},
+                    "largeResultsDataSetId": "{LARGE_RESULTS_DATASET_ID}"
+                }
+        },
+        "connectionSpec": {
+            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+            "version": "1.0"
+        }
+    }'
+```
+
+| Eigenschap | Beschrijving |
+| --------- | ----------- |
+| `auth.params.projectId` | De project-id van het standaard [!DNL Google BigQuery] -project waarop moet worden gezocht. tegen. |
+| `auth.params.keyFileContent` | Het sleuteldossier dat wordt gebruikt om de de dienstrekening voor authentiek te verklaren. U moet de inhoud van het sleutelbestand coderen in [!DNL Base64] . |
+| `auth.params.largeResultsDataSetId` | (Optioneel) De vooraf gemaakte [!DNL Google BigQuery] dataset-id die vereist is om ondersteuning voor grote resultaatsets mogelijk te maken. |
+
+**Reactie**
+
+Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+
+```json
+{
+    "id": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
+}
+```
+
+>[!ENDTABS]
+
 
 ## Volgende stappen
 
