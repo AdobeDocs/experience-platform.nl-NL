@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verbinding maken met Power BI-zoekservice
 description: Dit document doorloopt de stappen voor het verbinden van Power BI met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
+source-git-commit: 2b76b99d1e22d75faf8d758edd6cf08acdec7c21
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -24,16 +24,6 @@ Deze handleiding vereist dat u al toegang hebt tot de bureaubladtoepassing van [
 > De [!DNL Power BI] Desktoptoepassing is **slechts** beschikbaar op de apparaten van Vensters.
 
 U hebt toegang tot de werkruimte Query&#39;s in de gebruikersinterface van het platform nodig om de referenties te verkrijgen waarmee [!DNL Power BI] verbinding kan maken met Experience Platform. Neem contact op met uw organisatiebeheerder als u momenteel geen toegang hebt tot de werkruimte met query&#39;s.
-
-Nadat u [!DNL Power BI] hebt geïnstalleerd, moet u `Npgsql` , een .NET-stuurprogrammapakket voor PostSQL, installeren. Meer informatie over Npgsql kan in de [ Npgsql- documentatie ](https://www.npgsql.org/doc/index.html) worden gevonden.
-
->[!IMPORTANT]
->
->U moet versie 4.0.10 of lager downloaden omdat nieuwere versies fouten opleveren.
-
-Selecteer **[!DNL Will be installed on local hard drive]** onder &quot;[!DNL Npgsql GAC Installation]&quot; in het aangepaste instellingsscherm.
-
-Start de computer opnieuw op voordat u verdergaat met de volgende stappen om ervoor te zorgen dat Npgsql correct is geïnstalleerd.
 
 ## Verbinden [!DNL Power BI] met de Dienst van de Vraag {#connect-power-bi}
 
