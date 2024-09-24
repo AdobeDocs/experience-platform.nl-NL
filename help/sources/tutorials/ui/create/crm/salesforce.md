@@ -1,10 +1,10 @@
 ---
-title: Uw Salesforce-account aansluiten via de gebruikersinterface van het Experience Platform
+title: Verbinding maken met uw Salesforce-account via de gebruikersinterface van het Experience Platform
 description: Leer hoe u uw Salesforce-account koppelt en uw CRM-gegevens via de gebruikersinterface naar het Experience Platform brengt.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '903'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Selecteer **[!DNL Salesforce]** onder de categorie *[!UICONTROL CRM]* en selecte
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account bestaat, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ de broncatalogus op het Experience Platform UI met geselecteerde Salesforce bronkaart.](../../../../images/tutorials/create/salesforce/catalog.png)
+![ de broncatalogus op het Experience Platform UI met geselecteerde de bronkaart van Salesforce.](../../../../images/tutorials/create/salesforce/catalog.png)
 
 De pagina **[!UICONTROL Connect to Salesforce]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -79,13 +79,13 @@ De pagina **[!UICONTROL Connect to Salesforce]** wordt weergegeven. Op deze pagi
 
 Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en selecteert u vervolgens de account die u wilt gebruiken in de lijst die wordt weergegeven. Als u klaar bent, selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ een lijst van voor authentiek verklaarde rekeningen Salesforce die reeds in uw organisatie bestaan.](../../../../images/tutorials/create/salesforce/existing.png)
+![ een lijst van voor authentiek verklaarde rekeningen van Salesforce die reeds in uw organisatie bestaan.](../../../../images/tutorials/create/salesforce/existing.png)
 
 ### Een nieuwe account maken
 
 Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam en een beschrijving voor uw nieuwe [!DNL Salesforce] -account.
 
-![ de interface waarin u een nieuwe rekening kunt tot stand brengen Salesforce door de aangewezen authentificatiegeloofsbrieven te verstrekken.](../../../../images/tutorials/create/salesforce/new.png)
+![ de interface waarin u een nieuwe rekening van Salesforce kunt tot stand brengen door de aangewezen authentificatiegeloofsbrieven te verstrekken.](../../../../images/tutorials/create/salesforce/new.png)
 
 Selecteer vervolgens het verificatietype dat u voor uw nieuwe account wilt gebruiken.
 
@@ -102,7 +102,7 @@ Selecteer **[!UICONTROL Basic authentication]** voor basisverificatie en geef wa
 
 Selecteer **[!UICONTROL Connect to source]** als u klaar bent.
 
-![ de basisauthentificatieinterface voor Salesforce rekeningsverwezenlijking.](../../../../images/tutorials/create/salesforce/basic.png)
+![ de basisauthentificatieinterface voor de rekeningsverwezenlijking van Salesforce.](../../../../images/tutorials/create/salesforce/basic.png)
 
 >[!TAB  OAuth2 Client Credential ]
 
@@ -118,6 +118,12 @@ Selecteer **[!UICONTROL Connect to source]** als u klaar bent.
 ![ de interface OAuth voor de rekeningsverwezenlijking van Salesforce.](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
+
+### Voorvertoning van voorbeeldgegevens overslaan {#skip-preview-of-sample-data}
+
+Tijdens de stap voor gegevensselectie kan er een time-out optreden wanneer u grote tabellen of bestanden met gegevens opgeeft. U kunt gegevensvoorvertoning overslaan om de time-out te omzeilen en toch uw schema weer te geven, zij het zonder voorbeeldgegevens. Als u de gegevensvoorvertoning wilt overslaan, schakelt u de schakeloptie **[!UICONTROL Skip previewing sample data]** in.
+
+De rest van de workflow blijft ongewijzigd. Het enige voorbehoud is dat bij het overslaan van de gegevensvoorvertoning berekende en vereiste velden mogelijk niet automatisch worden gevalideerd tijdens de toewijzingsstap. Vervolgens moet u deze velden handmatig valideren tijdens de toewijzing.
 
 ## Volgende stappen
 
