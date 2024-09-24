@@ -5,9 +5,9 @@ title: Een relatie tussen twee schema's definiëren met de Schema-editor
 description: Dit document verstrekt een zelfstudie voor het bepalen van een verband tussen twee schema's gebruikend de Redacteur van het Schema in het gebruikersinterface van het Experience Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1342'
 ht-degree: 0%
 
 ---
@@ -109,19 +109,49 @@ Zodra uw bronschema een specifiek die verwijzingsgebied heeft wordt bepaald, kun
 
 >[!NOTE]
 >
->In de onderstaande stappen wordt beschreven hoe u een relatieveld definieert met behulp van de besturingselementen voor rechterspoor op het canvas. Als u toegang tot de Uitgave van Real-Time CDP B2B hebt, kunt u een één-aan-één verhouding ook bepalen gebruikend de [ zelfde dialoog ](./relationship-b2b.md#relationship-field) zoals wanneer het creëren van vele-aan-één verhoudingen.
+>Relaties kunnen alleen worden ondersteund in tekenreeks- of tekenreeksarrayvelden.
 
-Selecteer het veld `preferredHotel` op het canvas en schuif omlaag onder **[!UICONTROL Field properties]** totdat het selectievakje **[!UICONTROL Relationship]** wordt weergegeven. Schakel het selectievakje in om de vereiste parameters voor het configureren van een relatieveld weer te geven.
+Selecteer het veld `preferredHotel` op het canvas en selecteer vervolgens **[!UICONTROL Add relationship]** in het zijpaneel van **[!UICONTROL Field properties]** .
 
-![](../images/tutorials/relationship/relationship-checkbox.png)
+![ de Redacteur van het Schema met Add verhouding die in de eigenschappen sidebar van het Gebied wordt benadrukt.](../images/tutorials/relationship/add-relationship.png)
 
-Selecteer dropdown voor **[!UICONTROL Reference schema]** en selecteer het verwijzingsschema voor de verhouding (&quot;[!DNL Hotels]&quot;in dit voorbeeld). Selecteer onder **[!UICONTROL Reference identity namespace]** de naamruimte van het identiteitsveld van het referentieschema (in dit geval &quot;[!DNL Hotel ID]&quot;). Selecteer **[!UICONTROL Apply]** wanneer u klaar bent.
+Het dialoogvenster [!UICONTROL Add relationship] wordt weergegeven. In dit dialoogvenster kunt u vereiste parameters instellen voor het configureren van een relatieveld. Voor Real-Time CDP B2C gebruikers, kunt u **slechts** plaatsen een één-aan-één verhouding tussen de bron en verwijzingsschema.
 
-![](../images/tutorials/relationship/reference-schema-id-namespace.png)
+>[!NOTE]
+>
+>Als u toegang tot de Uitgave van Real-Time CDP B2B hebt, kunt u de juiste-spoorcontroles van het canvas gebruiken om een relatieveld te bepalen, evenals een vele-aan-één verhouding te bouwen gebruikend de [ zelfde dialoog ](./relationship-b2b.md#relationship-field).
+
+![ de Add relatiedialoog.](../images/tutorials/relationship/add-relationship-dialog.png)
+
+Gebruik dropdown voor **[!UICONTROL Reference schema]** en selecteer het verwijzingsschema voor de verhouding (&quot;[!DNL Hotels]&quot;in dit voorbeeld).
+
+>[!NOTE]
+>
+>Alleen schema&#39;s met een primaire identiteit worden opgenomen in het vervolgkeuzemenu van het referentieschema. Deze bescherming verhindert u per ongeluk een verhouding met een schema tot stand te brengen dat nog niet behoorlijk wordt gevormd.
+
+De identiteitsnaamruimte van het verwijzingsschema (in dit geval &quot;[!DNL Hotel ID]&quot;) wordt automatisch onder **[!UICONTROL Reference identity namespace]** gevuld. Selecteer **[!UICONTROL Apply]** wanneer u klaar bent.
+
+![ voegt relatiedialoog met de gevormde relatieparameters toe en is benadrukt van toepassing.](../images/tutorials/relationship/apply-relationship.png)
 
 Het veld `preferredHotel` wordt nu gemarkeerd als een relatie op het canvas en geeft de naam van het referentieschema weer. Selecteer **[!UICONTROL Save]** om uw wijzigingen op te slaan en de workflow te voltooien.
 
-![](../images/tutorials/relationship/relationship-save.png)
+![ de Redacteur van het Schema met de relatieverwijzingen en sparen benadrukte.](../images/tutorials/relationship/relationship-save.png)
+
+### Een bestaand relatieveld bewerken {#edit-relationship}
+
+Als u het referentieschema wilt wijzigen, selecteert u een veld met een bestaande relatie en selecteert u vervolgens **[!UICONTROL Edit relationship]** in de zijbalk van **[!UICONTROL Field properties]** .
+
+![ de Redacteur van het Schema met Edit benadrukte verhouding.](../images/tutorials/relationship/edit-relationship.png)
+
+Het dialoogvenster [!UICONTROL Edit relationship] wordt weergegeven. Van hier, kunt u het proces volgen dat in [ wordt geschetst bepalend een relatieveld ](#relationship-field) of de verhouding schrappen. Selecteer **[!UICONTROL Delete relationship]** om de relatie met het referentieschema te verwijderen.
+
+![ de Edit relatiedialoog.](../images/tutorials/relationship/edit-relationship-dialog.png)
+
+## Filter en zoek naar relaties {#filter-and-search}
+
+U kunt filteren en naar specifieke relaties in uw schema&#39;s zoeken op het tabblad [!UICONTROL Relationships] van de [!UICONTROL Schemas] -werkruimte. Met deze weergave kunt u snel uw relaties zoeken en beheren. Lees het document op [ het onderzoeken van schemamiddelen ](../ui/explore.md#lookup) voor gedetailleerde instructies op de het filtreren opties.
+
+![ het lusje van Verhoudingen in de werkruimte van Schema&#39;s.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Volgende stappen
 

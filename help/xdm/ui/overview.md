@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van de interface Schemas
 description: In dit overzicht worden de belangrijkste mogelijkheden van de werkruimte Schemas in Experience Platform besproken.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 16d6090bc71dbdc9ab42db98eafa0ea5afb5967b
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '302'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ In de [!UICONTROL Schemas] -werkruimte in de Adobe Experience Platform-gebruiker
 
 Als u toegang wilt tot de werkruimte in de interface van het platform, selecteert u **[!UICONTROL Schemas]** in de linkertrack.
 
-![](../images/ui/overview/schemas-tab.png)
+![ de werkruimte van Schema&#39;s met Schema&#39;s die in de linkernavigatie van Platform worden benadrukt UI.](../images/ui/overview/schemas-tab.png)
 
 ## Aan de slag
 

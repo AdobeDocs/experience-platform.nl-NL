@@ -2,9 +2,9 @@
 title: Een relatie definiëren tussen twee schema's in Real-time Customer Data Platform B2B Edition
 description: Leer hoe u een vele-op-één relatie tussen twee schema's in Adobe Real-time Customer Data Platform B2B Edition definieert.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
 workflow-type: tm+mt
-source-wordcount: '1332'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
@@ -65,19 +65,19 @@ Om dit te verklaren, bevatten alle standaardB2B klassen &quot;zeer belangrijke&q
 
 Voor verwijzingsdoeleinden, beschrijven de volgende secties de structuur van elk schema dat in dit leerprogramma wordt gebruikt alvorens een verhouding is bepaald. Let op waar de primaire identiteiten zijn gedefinieerd in de schemastructuur en de aangepaste naamruimten die ze gebruiken.
 
-### [!DNL Opportunities] schema
+### Opportuniteitsschema
 
 Het bronschema &quot;[!DNL Opportunities]&quot; is gebaseerd op de [!UICONTROL XDM Business Opportunity] -klasse. Een van de velden die door de klasse, `opportunityKey`, wordt opgegeven, fungeert als id voor het schema. Het veld `sourceKey` onder het object `opportunityKey` wordt specifiek ingesteld als de primaire identiteit van het schema onder een aangepaste naamruimte met de naam [!DNL B2B Opportunity] .
 
-Zoals u onder **[!UICONTROL Schema Properties]** ziet, is dit schema ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile] .
+Zoals u onder **[!UICONTROL Field Properties]** ziet, is dit schema ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile] .
 
-![ Schema van Kansen ](../images/tutorials/relationship-b2b/opportunities.png)
+![ het schema van Kansen in de Redacteur van het Schema met het opportunityKey voorwerp en laat voor benadrukte profielknevel.](../images/tutorials/relationship-b2b/opportunities.png)
 
 ### [!DNL Accounts] schema
 
 Het referentieschema &quot;[!DNL Accounts]&quot; is gebaseerd op de klasse [!UICONTROL XDM Account] . Het veld op hoofdniveau `accountKey` bevat de `sourceKey` die als primaire identiteit fungeert onder een aangepaste naamruimte met de naam [!DNL B2B Account] . Dit schema is ook ingeschakeld voor gebruik in Profiel.
 
-![ het Schema van Rekeningen ](../images/tutorials/relationship-b2b/accounts.png)
+![ het schema van Rekeningen in de Redacteur van het Schema met het accountKey voorwerp en laat voor benadrukt profielknevel toe.](../images/tutorials/relationship-b2b/accounts.png)
 
 ## Een relatieveld definiëren voor het bronschema {#relationship-field}
 
@@ -97,29 +97,64 @@ Om een verhouding tussen twee schema&#39;s te bepalen, moet het bronschema een s
 >
 >Momenteel, slechts kunnen vele-aan-één en één-aan-één verhoudingen van een bronschema aan een verwijzingsschema worden bepaald. Voor één-aan-vele verhoudingen, moet u het relatiegebied in het schema bepalen dat &quot;velen&quot;vertegenwoordigt.
 
-Om een relatiegebied te plaatsen, selecteer het pijlpictogram (![ Pictogram van de Pijl ](/help/images/icons/alias.png)) naast het gebied in kwestie binnen het canvas. In het geval van het [!DNL Opportunities] schema, is dit het `accountKey.sourceKey` gebied aangezien het doel een vele-aan-één verhouding met een rekening is te vestigen.
+Als u een relatieveld wilt instellen, selecteert u het desbetreffende veld binnen het canvas, gevolgd door **[!UICONTROL Add relationship]** in de zijbalk van [!UICONTROL Schema properties] . In het geval van het [!DNL Opportunities] schema, is dit het `accountKey.sourceKey` gebied aangezien het doel een vele-aan-één verhouding met een rekening is te vestigen.
 
-![ Knoop van de Verhouding ](../images/tutorials/relationship-b2b/relationship-button.png)
+![ de Redacteur van het Schema met het sourceKey gebied en voegt benadrukte verhouding toe.](../images/tutorials/relationship-b2b/add-relationship.png)
 
-Er wordt een dialoogvenster weergegeven waarin u de details van de relatie kunt opgeven. Het relatietype wordt automatisch ingesteld op **[!UICONTROL Many-to-one]** .
+Het dialoogvenster [!UICONTROL Add relationship] wordt weergegeven. In dit dialoogvenster kunt u relatiegegevens opgeven. Het relatietype wordt standaard ingesteld op **[!UICONTROL Many-to-one]** .
 
-![ de Dialoog van de Verhouding ](../images/tutorials/relationship-b2b/relationship-dialog.png)
+![ de Add relatiedialoog met vaak-aan-één benadrukte schemaverhouding.](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-Gebruik onder **[!UICONTROL Reference Schema]** de zoekbalk om de naam van het referentieschema te zoeken. Wanneer u de naam van het referentieschema markeert, wordt het veld **[!UICONTROL Reference Identity Namespace]** automatisch bijgewerkt naar de naamruimte van de primaire identiteit van het schema.
+Gebruik onder **[!UICONTROL Reference Schema]** de zoekbalk of het vervolgkeuzemenu om de naam van het referentieschema te zoeken. Wanneer u de naam van het verwijzingsschema markeert, werkt het **[!UICONTROL Reference Identity Namespace]** gebied automatisch aan namespace van de primaire identiteit van het verwijzingsschema bij.
 
-![ Schema van de Verwijzing ](../images/tutorials/relationship-b2b/reference-schema.png)
+>[!NOTE]
+>
+>De lijst met beschikbare referentieschema&#39;s wordt zo gefilterd dat deze alleen geschikte schema&#39;s bevatten. De schema&#39;s **moeten** een toegewezen primaire identiteit hebben en of een klasse B2B of de Individuele klasse van het Profiel zijn. De schema&#39;s van de klasse van het vooruitzicht kunnen geen verhoudingen hebben.
 
-Geef onder **[!UICONTROL Relationship Name From Current Schema]** en **[!UICONTROL Relationship Name From Reference Schema]** vriendschappelijke namen op voor de relatie in de context van respectievelijk de bron- en referentieschema&#39;s. Als u klaar bent, selecteert u **[!UICONTROL Save]** om de wijzigingen toe te passen en het schema op te slaan.
+![ voegt relatiedialoog met het Schema van de Verwijzing en de Gemarkeerde gebieden van de Identiteit van de Verwijzing toe.](../images/tutorials/relationship-b2b/reference-schema.png)
 
-![ Naam van de Verhouding ](../images/tutorials/relationship-b2b/relationship-name.png)
+Geef onder **[!UICONTROL Relationship Name From Current Schema]** en **[!UICONTROL Relationship Name From Reference Schema]** vriendschappelijke namen op voor de relatie in de context van respectievelijk de bron- en referentieschema&#39;s. Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijzigingen te bevestigen en de relatie op te slaan.
 
-Het canvas verschijnt weer, terwijl het relatieveld nu is gemarkeerd met de vriendelijke naam die u eerder hebt opgegeven. De relatienaam wordt ook vermeld onder de linkerspoorstaaf voor gemakkelijke verwijzing.
+>[!NOTE]
+>
+>Relatienamen moeten uit maximaal 35 tekens bestaan.
 
-![ Toegepaste Verhouding ](../images/tutorials/relationship-b2b/relationship-applied.png)
+![ voegt relatiedialoog met de benadrukte gebieden van de Naam van de Verhouding toe.](../images/tutorials/relationship-b2b/relationship-name.png)
+
+Het canvas verschijnt weer, terwijl het relatieveld nu is gemarkeerd met de vriendelijke naam die u eerder hebt opgegeven. De relatienaam wordt ook vermeld op de linkerspoorstaaf voor gemakkelijke verwijzing.
+
+![ de Redacteur van het Schema met de nieuwe toegepaste relatienaam.](../images/tutorials/relationship-b2b/relationship-applied.png)
 
 Als u de structuur van het verwijzingsschema bekijkt, verschijnt de relatiemarkeerteken naast het primaire identiteitsveld van het schema en in de linkerspoorstaaf.
 
-![ de Teller van de Relatie van het Schema van de Bestemming ](../images/tutorials/relationship-b2b/destination-relationship.png)
+![ het bestemmingsschema in de Redacteur van het Schema met de nieuwe benadrukte relatiemarkeerteken.](../images/tutorials/relationship-b2b/destination-relationship.png)
+
+## Een B2B-schemarelatie bewerken {#edit-schema-relationship}
+
+Nadat een schemarelatie is ingesteld, selecteert u het relatieveld in het bronschema gevolgd door **[!UICONTROL Edit relationship]** .
+
+>[!NOTE]
+>
+>Als u alle bijbehorende relaties wilt weergeven, selecteert u het primaire identiteitsveld in het referentieschema gevolgd door [!UICONTROL View relationships] .
+>![De Redacteur van het Schema met een geselecteerd relatieveld en benadrukte verhouding van de Mening.](../images/tutorials/relationship-b2b/view-relationships.png " de Redacteur van het Schema met een geselecteerd relatiegebied en benadrukte verhouding van de Mening."){width="100" zoomable="yes"}
+
+![ de Redacteur van het Schema met een relatieveld en geeft benadrukte verhouding uit.](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
+
+Het dialoogvenster [!UICONTROL Edit relationship] wordt weergegeven. In dit dialoogvenster kunt u het referentieschema en de relatienamen wijzigen of de relatie verwijderen. Het veel-op-één relatietype kan niet worden veranderd.
+
+![ de Edit relatiedialoog.](../images/tutorials/relationship-b2b/edit-b2b-relationship-dialog.png)
+
+Om gegevensintegriteit te handhaven en verstoringen in segmentatie en andere processen te vermijden, overweeg de volgende richtlijnen wanneer het beheren van schemaverhoudingen met verbonden datasets:
+
+* Vermijd direct het schrappen van verhoudingen als een schema met een dataset wordt geassocieerd, aangezien dit segmentatie negatief kan beïnvloeden. Verwijder in plaats daarvan de bijbehorende gegevensset voordat u de relatie verwijdert.
+* U kunt het referentieschema niet wijzigen zonder eerst de bestaande relatie te verwijderen. Nochtans, zou dit met voorzichtigheid moeten worden gedaan, aangezien het schrappen van een verband met een bijbehorende dataset onbedoelde gevolgen kan veroorzaken.
+* Het toevoegen van nieuwe verhoudingen aan een schema met bestaande verbonden datasets werkt mogelijk niet zoals bedoeld en kan tot potentiële conflicten leiden.
+
+## Filter en zoek naar relaties {#filter-and-search}
+
+U kunt filteren en naar specifieke relaties in uw schema&#39;s zoeken op het tabblad [!UICONTROL Relationships] van de [!UICONTROL Schemas] -werkruimte. Met deze weergave kunt u snel uw relaties zoeken en beheren. Lees het document op [ het onderzoeken van schemamiddelen ](../ui/explore.md#lookup) voor gedetailleerde instructies op de het filtreren opties.
+
+![ het lusje van Verhoudingen in de werkruimte van Schema&#39;s.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Volgende stappen
 
