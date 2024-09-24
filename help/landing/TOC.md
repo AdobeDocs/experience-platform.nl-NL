@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Overzicht van Adobe Experience Platform
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Ontdek hoe u met Experience Platform uw klanten in real time persoonlijke ervaringen kunt bieden met handleidingen, documentatie en zelfstudies.
-source-git-commit: a926560f3c5f765090046313ec7a7431b5ce69c6
+source-git-commit: dde5c1367706d015308ebea687d7f2a41947fb20
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '282'
 ht-degree: 18%
 
 ---
@@ -74,6 +74,7 @@ ht-degree: 18%
 * Licentiegebruik en instructies {#license}
    * [ De beste praktijken van de het beheersvergunning van Gegevens best ](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Het gebruiksdashboard voor licenties](./license-usage-and-guardrails/license-usage-dashboard.md)
+   * [Totaal gegevensvolume](./license-usage-and-guardrails/total-data-volume.md)
    * [ de guardrails van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
    * [ Customer Journey Analytics guardrails ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
    * [ de guardrails van Real-Time CDP ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
