@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
+source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
 workflow-type: tm+mt
-source-wordcount: '4679'
+source-wordcount: '4630'
 ht-degree: 0%
 
 ---
@@ -111,8 +111,6 @@ U kunt de muisaanwijzer boven de ⓘ naast een doelgroep houden om informatie ov
 
 ![ een beeld dat aantoont hoe de omslaghiërarchie voor publiek werkt.](../images/ui/segment-builder/audience-folder-structure.png)
 
-U kunt naar publiek ook zoeken gebruikend de onderzoeksbar, die [ het onderzoekssyntaxis van Lucene ](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax) gebruikt. Als u op het tabblad **[!UICONTROL Audiences]** een map op hoofdniveau selecteert, wordt de zoekbalk weergegeven, zodat u in die map kunt zoeken. Zoekresultaten beginnen pas te worden gevuld wanneer hele woorden zijn ingevoerd. Als u bijvoorbeeld een publiek zoekt met de naam `Online Shoppers` , typt u &quot;Online&quot; in de zoekbalk. Nadat het woord &quot;Online&quot; volledig is getypt, worden zoekresultaten met het woord &quot;Online&quot; weergegeven.
-
 ## Rule builder canvas {#rule-builder-canvas}
 
 >[!IMPORTANT]
@@ -158,6 +156,11 @@ Er zijn maximaal 250 waarden toegestaan. Als u deze hoeveelheid overschrijdt, mo
 ![ een waarschuwing die toont dat u het maximumaantal waarden hebt bereikt wordt getoond.](../images/ui/segment-builder/maximum-values.png)
 
 ### Soorten publiek toevoegen
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_addaudiences"
+>title="Zoeken in updates"
+>abstract="Het bestaande zoeksysteem is bijgewerkt om Unified Search te gebruiken. Het verenigde Onderzoek staat u toe om uw publiek gemakkelijker en robuuster naar segmentlidmaatschap te zoeken."
 
 U kunt een publiek van het **[!UICONTROL Audience]** lusje op het canvas van de regelbouwer slepen en laten vallen om publiekslidmaatschap in de nieuwe segmentdefinitie te verwijzen. Dit staat u toe om publiekslidmaatschap als attribuut in de nieuwe regels van de segmentdefinitie te omvatten of uit te sluiten.
 
