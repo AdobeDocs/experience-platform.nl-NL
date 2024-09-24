@@ -2,9 +2,9 @@
 title: Zoekplanningen
 description: Leer hoe te om geplande vraaglooppas te automatiseren, een vraagprogramma te schrappen of onbruikbaar te maken, en de beschikbare het plannen opties door de UI van Adobe Experience Platform te gebruiken.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1957'
 ht-degree: 0%
 
 ---
@@ -141,7 +141,28 @@ U kunt ook een lijst weergeven met de geplande uitvoering van een querysjabloon 
 
 De lijst van vraaglooppas voor die geplande vraag verschijnt.
 
+### Uren berekenen op taakniveau {#compute-hours}
+
+Het spoor verwerkt uren die op het niveau van de vraaguitvoering voor uw CTAS/ITAS partijvragen worden verbruikt. Deze functie biedt inzicht in computergebruik, waardoor u de toewijzing van bronnen kunt optimaliseren en de zoekprestaties kunt verbeteren.
+
+>[!AVAILABILITY]
+>
+>De rekenmachine van Uren is exclusief aan gebruikers die [ Gegevens Distiller SKU ](../data-distiller/overview.md) hebben gekocht. Neem contact op met uw Adobe voor meer informatie.
+
 ![ de detailssectie van de Geplande werkruimte van Vragen met een lijst van vraaglooppas die voor een geplande vraag wordt benadrukt.](../images/ui/query-schedules/list-of-scheduled-runs.png)
+
+De volgende lijst verstrekt beschrijvingen van elke kolom beschikbaar in de detailssectie die van geplande vraaglooppas een lijst maakt.
+
+| Kolomtitel | Beschrijving |
+|---------------------|----------------------------------|
+| [!UICONTROL Query Run ID] | Toont een uniek herkenningsteken voor elke vraaglooppas, toestaand u om individuele uitvoeringen van uw geplande vragen te volgen en van verwijzingen te voorzien. |
+| [!UICONTROL Query Run Start] | Wijst op de begindatum en de tijd van de vraaglooppas, om u te helpen controleren wanneer elke uitvoering begon. |
+| [!UICONTROL Query Run Complete] | Toont de voltooiingsdatum en de tijd van de vraaglooppas, om inzicht in uitvoeringsduur en status te verstrekken. |
+| [!UICONTROL Status] | Geeft de huidige status van de query weer, zoals `Completed,` `Running,` of `Failed,` om het resultaat snel te beoordelen. |
+| [!UICONTROL Datasets] | Maakt een lijst van datasets die in de vraaglooppas worden gebruikt, om te tonen welke gegevensbronnen bij de uitvoering betrokken waren. |
+| [!UICONTROL Compute Hours] | Toont de compute tijd die voor elke vraaglooppas wordt gebruikt, in uren wordt gemeten die. Hierdoor kunt u het gebruik van bronnen bijhouden en de queryprestaties optimaliseren. |
+
+{style="table-layout:auto"}
 
 Zie de [ monitor geplande gevraagde gids ](./monitor-queries.md#inline-actions) voor volledige informatie over hoe te om het statuut van alle vraagbanen door UI te controleren.
 
