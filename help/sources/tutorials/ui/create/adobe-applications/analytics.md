@@ -2,9 +2,9 @@
 title: Een Adobe Analytics Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
+source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
 workflow-type: tm+mt
-source-wordcount: '2457'
+source-wordcount: '2550'
 ht-degree: 0%
 
 ---
@@ -312,6 +312,13 @@ Voor meer informatie over backfill, levende gegevens, en hun respectieve latenti
 >[!NOTE]
 >
 >De pagina van de gegevenssetactiviteit toont geen informatie over partijen aangezien de de bronschakelaar van de Analyse volledig door Adobe wordt geleid. U kunt controleren dat de gegevens stromen door de metriek rond opgenomen verslagen te bekijken.
+
+## Uw gegevensstroom verwijderen {#delete-dataflow}
+
+Als u de gegevensstroom Analytics wilt verwijderen, selecteert u **[!UICONTROL Dataflows]** in de bovenste koptekst van de werkruimte Bronnen. Gebruik de dataflows pagina om van de dataflow van Analytics de plaats te bepalen die u wilt schrappen en dan de ellipsen (`...`) naast het selecteren. Gebruik vervolgens het vervolgkeuzemenu en selecteer **[!UICONTROL Delete]** .
+
+* Het schrappen van de levende Dataflow van Analytics zal ook zijn onderliggende dataset schrappen.
+* Het schrappen van backfillAnalytics dataflow schrapt niet de onderliggende dataset, maar zal het backfill proces voor zijn overeenkomstige rapportreeks tegenhouden. Als u backfill dataflow schrapt, kunnen de ingebedde gegevens nog door de dataset worden bekeken.
 
 ## Volgende stappen en extra bronnen
 
