@@ -3,9 +3,9 @@ title: Identiteitsgrafiekkoppelingsregels
 description: Leer over identiteitsgrafiek die regels in de Dienst van de Identiteit verbindt.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: a4e5ab14904fe17aa8bab2f8555ae6d535c856e8
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1427'
 ht-degree: 0%
 
 ---
@@ -30,13 +30,53 @@ De volgende documenten zijn essentieel voor het begrijpen van identiteitsgrafiek
 * [UI voor grafieksimulatie](./graph-simulation.md)
 * [Gebruikersinterface voor identiteitsinstellingen](./identity-settings-ui.md)
 
-## Voorbeeldscenario&#39;s waarbij een grafiek kan samenvouwen
+## Voorbeeldscenario&#39;s waarbij een grafiek kan samenvouwen {#example-scenarios-where-graph-collapse-could-happen}
 
-* **Gedeeld apparaat**: Het gedeelde apparaat verwijst naar apparaten die door meer dan één individu worden gebruikt. Voorbeelden van een gedeeld apparaat zijn tablets, bibliotheekcomputers en kiosken.
-* **Onjuiste e-mail en telefoonaantallen**: De slechte e-mail en telefoonaantallen verwijzen naar eind - gebruikers die ongeldige contactinformatie registreren, zoals &quot;test <span>@test.com&quot;voor e-mail, en &quot;+1-111-111-111&quot;voor telefoonaantal.
-* **Onjuiste of slechte identiteitswaarden**: De onjuiste of slechte identiteitswaarden verwijzen naar niet-unieke identiteitswaarden die CRMIDs konden samenvoegen. Terwijl IDFA&#39;s bijvoorbeeld 36 tekens moeten hebben (32 alfanumerieke tekens en vier afbreekstreepjes), zijn er scenario&#39;s waarin een IDFA met de identiteitswaarde &quot;user_null&quot; kan worden opgenomen. Op dezelfde manier steunen de telefoonaantallen slechts numerieke karakters, maar een telefoonnamespace met een identiteitswaarde van &quot;niet-gespecificeerd&quot;kan worden opgenomen.
+Deze sectie schetst voorbeeldscenario&#39;s die u kunt overwegen wanneer het vormen van identiteitsgrafiek die regels verbindt.
 
-Voor meer informatie over gebruiksgevalscenario&#39;s voor identiteitsgrafiek die regels verbindt, lees de sectie over [ voorbeeldscenario&#39;s ](#example-scenarios).
+### Gedeeld apparaat
+
+Er zijn gevallen waarin meerdere aanmeldingen op één apparaat kunnen plaatsvinden:
+
+| Gedeeld apparaat | Beschrijving |
+| --- | --- |
+| Familiecomputers en -tablets | Echtgenoot en echtgenote melden zich beide aan bij hun bankrekening. |
+| Openbare kiosk | Reizigers op een luchthaven melden zich aan met hun loyaliteitsidentiteitskaart om zakken in te checken en instapkaarten af te drukken. |
+| Bellen | Het personeel van het centrum van de vraag login op één enkel apparaat namens klanten die klantensteun roepen om kwesties op te lossen. |
+
+![ een diagram van sommige gemeenschappelijke gedeelde apparaten.](../images/identity-settings/shared-devices.png)
+
+In deze gevallen, vanuit grafiekstandpunt, zonder toegelaten grenzen, zal één enkele ECID met veelvoudige CRMIDs worden verbonden.
+
+Met de regels voor identiteitsgrafieken kunt u:
+
+* Vorm identiteitskaart die voor login als uniek herkenningsteken wordt gebruikt. U kunt bijvoorbeeld een grafiek beperken tot het opslaan van slechts één identiteit met een CRMID-naamruimte en zo die CRMID definiëren als de unieke id van een gedeeld apparaat.
+   * Op deze manier kunt u ervoor zorgen dat CRMID&#39;s niet worden samengevoegd met de ECID.
+
+### Ongeldige scenario&#39;s voor e-mail/telefoon
+
+Er zijn ook instanties van gebruikers die valse waarden als telefoonaantallen en/of e-mailadressen verstrekken wanneer het registreren. In deze gevallen, als de grenzen niet worden toegelaten, dan zal telefoon/e-mail verwante identiteiten uiteindelijk worden verbonden met veelvoudige verschillende CRMIDs.
+
+![ een diagram dat ongeldige e-mail of telefoonscenario&#39;s vertegenwoordigt.](../images/identity-settings/invalid-email-phone.png)
+
+Met de regels voor identiteitsgrafieken kunt u:
+
+* Configureer de CRMID, het telefoonnummer of het e-mailadres als de unieke id en beperkt zo één persoon tot slechts één CRMID, telefoonnummer en/of e-mailadres dat aan zijn account is gekoppeld.
+
+### Onjuiste of onjuiste identiteitswaarden
+
+Er zijn gevallen waarin niet-unieke, onjuiste identiteitswaarden in het systeem worden opgenomen, ongeacht de naamruimte. Voorbeelden zijn:
+
+* IDFA-naamruimte met de identiteitswaarde &quot;user_null&quot;.
+   * IDFA-identiteitswaarden moeten uit 36 tekens bestaan: 32 alfanumerieke tekens en vier afbreekstreepjes.
+* Naamruimte voor telefoonnummers met de identiteitswaarde &quot;not-specified&quot;.
+   * Telefoonnummers mogen geen alfabet bevatten.
+
+Deze identiteiten zouden in de volgende grafieken kunnen resulteren, waar veelvoudige CRMIDs samen met de &quot;slechte&quot;identiteit worden samengevoegd:
+
+![ een grafiekvoorbeeld van identiteitsgegevens met onjuiste of slechte identiteitswaarden.](../images/identity-settings/bad-data.png)
+
+Met identiteitsgrafiek die regels verbindt kunt u CRMID als unieke herkenningsteken vormen om ongewenste profiel te verhinderen die als gevolg van dit type gegevens ineenstorten.
 
 ## Koppelingsregels voor identiteitsgrafiek {#identity-graph-linking-rules}
 
@@ -95,55 +135,6 @@ Unieke naamruimten en naamruimteprioriteiten kunnen beide worden geconfigureerd 
 * Als een ervaringsgebeurtenis twee of meer identiteiten van de hoogste namespace prioriteit in identityMap heeft, zal het van opname worden verworpen omdat het als &quot;slechte gegevens&quot;zal worden beschouwd. Als identityMap bijvoorbeeld `{ECID: 111, CRMID: John, CRMID: Jane}` bevat, wordt de gehele gebeurtenis als ongeldige gegevens afgewezen, omdat dit betekent dat de gebeurtenis tegelijkertijd aan zowel `CRMID: John` als `CRMID: Jane` wordt gekoppeld.
 
 Voor meer informatie, lees de gids over [ namespace prioriteit ](./namespace-priority.md).
-
-## Voorbeeld van klantscenario&#39;s die worden opgelost door regels voor identiteitsgrafiek koppelen {#example-scenarios}
-
-Deze sectie schetst voorbeeldscenario&#39;s die u kunt overwegen wanneer het vormen van identiteitsgrafiek die regels verbindt.
-
-### Gedeeld apparaat
-
-Er zijn gevallen waarin meerdere aanmeldingen op één apparaat kunnen plaatsvinden:
-
-| Gedeeld apparaat | Beschrijving |
-| --- | --- |
-| Familiecomputers en -tablets | Echtgenoot en echtgenote melden zich beide aan bij hun bankrekening. |
-| Openbare kiosk | Reizigers op een luchthaven melden zich aan met hun loyaliteitsidentiteitskaart om zakken in te checken en instapkaarten af te drukken. |
-| Bellen | Het personeel van het centrum van de vraag login op één enkel apparaat namens klanten die klantensteun roepen om kwesties op te lossen. |
-
-![ een diagram van sommige gemeenschappelijke gedeelde apparaten.](../images/identity-settings/shared-devices.png)
-
-In deze gevallen, vanuit grafiekstandpunt, zonder toegelaten grenzen, zal één enkele ECID met veelvoudige CRMIDs worden verbonden.
-
-Met de regels voor identiteitsgrafieken kunt u:
-
-* Vorm identiteitskaart die voor login als uniek herkenningsteken wordt gebruikt. U kunt bijvoorbeeld een grafiek beperken tot het opslaan van slechts één identiteit met een CRMID-naamruimte en zo die CRMID definiëren als de unieke id van een gedeeld apparaat.
-   * Op deze manier kunt u ervoor zorgen dat CRMID&#39;s niet worden samengevoegd met de ECID.
-
-### Ongeldige scenario&#39;s voor e-mail/telefoon
-
-Er zijn ook instanties van gebruikers die valse waarden als telefoonaantallen en/of e-mailadressen verstrekken wanneer het registreren. In deze gevallen, als de grenzen niet worden toegelaten, dan zal telefoon/e-mail verwante identiteiten uiteindelijk worden verbonden met veelvoudige verschillende CRMIDs.
-
-![ een diagram dat ongeldige e-mail of telefoonscenario&#39;s vertegenwoordigt.](../images/identity-settings/invalid-email-phone.png)
-
-Met de regels voor identiteitsgrafieken kunt u:
-
-* Configureer de CRMID, het telefoonnummer of het e-mailadres als de unieke id en beperkt zo één persoon tot slechts één CRMID, telefoonnummer en/of e-mailadres dat aan zijn account is gekoppeld.
-
-### Onjuiste of onjuiste identiteitswaarden
-
-Er zijn gevallen waarin niet-unieke, onjuiste identiteitswaarden in het systeem worden opgenomen, ongeacht de naamruimte. Voorbeelden zijn:
-
-* IDFA-naamruimte met de identiteitswaarde &quot;user_null&quot;.
-   * IDFA-identiteitswaarden moeten uit 36 tekens bestaan: 32 alfanumerieke tekens en vier afbreekstreepjes.
-* Naamruimte voor telefoonnummers met de identiteitswaarde &quot;not-specified&quot;.
-   * Telefoonnummers mogen geen alfabet bevatten.
-
-Deze identiteiten zouden in de volgende grafieken kunnen resulteren, waar veelvoudige CRMIDs samen met de &quot;slechte&quot;identiteit worden samengevoegd:
-
-![ een grafiekvoorbeeld van identiteitsgegevens met onjuiste of slechte identiteitswaarden.](../images/identity-settings/bad-data.png)
-
-Met identiteitsgrafiek die regels verbindt kunt u CRMID als unieke herkenningsteken vormen om ongewenste profiel te verhinderen die als gevolg van dit type gegevens ineenstorten.
-
 
 ## Volgende stappen
 

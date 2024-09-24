@@ -3,9 +3,9 @@ title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: 0dadff9e2719c9cd24dcc17b759ff7e732282888
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1462'
 ht-degree: 0%
 
 ---
@@ -20,16 +20,89 @@ Lees dit document voor een stapsgewijze uitleg die u kunt volgen bij het impleme
 
 Stapsgewijze omtrek:
 
-1. [De benodigde naamruimten maken](#namespace)
-2. [Gebruik het grafieksimulatiehulpmiddel om met het algoritme van de identiteitsoptimalisering vertrouwd te maken](#graph-simulation)
-3. [Gebruik het hulpmiddel van identiteitsinstellingen om uw unieke naamruimten aan te wijzen en prioritaire classificaties voor uw naamruimten te vormen](#identity-settings)
-4. [Een XDM-schema (Experience Data Model) maken](#schema)
-5. [Een gegevensset maken](#dataset)
-6. [Gegevens naar Experience Platform verzenden](#ingest)
 
-## Voorwaarden voor de implementatie vooraf
+1. [Volledige voorwaarden voor implementatie](#prerequisites-for-implementation)
+2. [De benodigde naamruimten maken](#namespace)
+3. [Gebruik het grafieksimulatiehulpmiddel om met het algoritme van de identiteitsoptimalisering vertrouwd te maken](#graph-simulation)
+4. [Gebruik het hulpmiddel van identiteitsinstellingen om uw unieke naamruimten aan te wijzen en prioritaire classificaties voor uw naamruimten te vormen](#identity-settings)
+5. [Een XDM-schema (Experience Data Model) maken](#schema)
+6. [Een gegevensset maken](#dataset)
+7. [Gegevens naar Experience Platform verzenden](#ingest)
 
-Voordat u aan de slag kunt, moet u er eerst voor zorgen dat geverifieerde gebeurtenissen in uw systeem altijd een persoon-id bevatten.
+## Vereisten voor de implementatie {#prerequisites-for-implementation}
+
+In deze sectie worden de vereiste stappen beschreven die u moet voltooien voordat u identiteitsgrafiek implementeert die regels aan uw gegevens koppelt.
+
+### Unieke naamruimte
+
+#### Naamruimtevereiste voor één persoon {#single-person-namespace-requirement}
+
+U moet ervoor zorgen dat de unieke naamruimte met de hoogste prioriteit altijd aanwezig is in elk profiel. Hierdoor kan de identiteitsdienst de juiste persoon-id in een bepaalde grafiek detecteren.
+
++++Selecteren om een voorbeeld weer te geven van een grafiek zonder naamruimte voor één persoon
+
+Zonder een unieke naamruimte die uw persoon-id vertegenwoordigt, kunt u eindigen met een grafiek die een koppeling bevat naar verschillende personen-id&#39;s voor dezelfde ECID. In dit voorbeeld zijn zowel B2BCRM als B2CCRM tegelijkertijd gekoppeld aan dezelfde ECID. Deze grafiek suggereert dat Tom, met zijn B2C-aanmeldingsaccount, een apparaat deelde met Summer, met haar B2B-aanmeldingsaccount. Het systeem herkent echter dat dit één profiel is (grafiek samenvouwen).
+
+![ de grafiekscenario van A waar twee persoonherkenningstekens met zelfde ECID verbonden zijn.](../images/graph-examples/multi_namespaces.png)
+
++++
+
++++Selecteren om een voorbeeld weer te geven van een grafiek met naamruimte voor één persoon-id
+
+Op basis van een unieke naamruimte (in dit geval een CRMID in plaats van twee verschillende naamruimten) kan de identiteitsdienst de persoon-id zien die het laatst aan de ECID is gekoppeld. In dit voorbeeld, omdat een unieke CRMID bestaat, kan de Dienst van de Identiteit een &quot;gedeeld apparaat&quot;scenario erkennen, waar twee entiteiten het zelfde apparaat delen.
+
+![ een gedeeld scenario van de apparatengrafiek, waar twee persoonherkenningstekens met zelfde ECID verbonden zijn, maar de oudere verbinding wordt verwijderd.](../images/graph-examples/crmid_only_multi.png)
+
++++
+
+### Prioriteitsconfiguratie naamruimte
+
+Als u [ Adobe Analytics bronschakelaar ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruikt om gegevens in te voeren, dan moet u uw ECIDs een hogere prioriteit geven dan identiteitskaart van Adobe Analytics (HULP) omdat de Dienst van de Identiteit HULP blokkeert. Door ECID een prioriteit te geven, kunt u Real-Time Klantprofiel de opdracht geven om niet-geverifieerde gebeurtenissen op te slaan naar ECID in plaats van naar HULP.
+
+### XDM Experience-gebeurtenissen
+
+* Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek verklaarde gebeurtenissen die uw systeem naar Experience Platform zal verzenden altijd een persoonsidentificatie, zoals CRMID bevatten.
+* Verzend geen lege tekenreeks als identiteitswaarde wanneer u gebeurtenissen verzendt met behulp van XDM-ervaringsgebeurtenissen. Dit leidt tot systeemfouten.
+
++++Selecteren om een voorbeeld weer te geven van een lading met een lege tekenreeks
+
+In het volgende voorbeeld wordt een fout geretourneerd omdat de identiteitswaarde voor `Phone` wordt verzonden als een lege tekenreeks.
+
+```json
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "24165048599243194405404369473457348936",
+                "primary": false
+            }
+        ],
+        "Phone": [
+            {
+                "id": "",
+                "primary": true
+            }
+        ]
+    }
+```
+
++++
+
+U moet ervoor zorgen dat u een volledig gekwalificeerde identiteit hebt wanneer u gebeurtenissen verzendt die XDM ervaringsgebeurtenissen gebruiken.
+
++++Selecteren om een voorbeeld weer te geven van een gebeurtenis met een volledig gekwalificeerde identiteit
+
+```json
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "24165048599243194405404369473457348936",
+                "primary": false
+            }
+        ]
+    }
+```
+
++++
 
 ## Machtigingen instellen {#set-permissions}
 
@@ -72,12 +145,6 @@ Voor instructies op hoe te om een dataset tot stand te brengen, lees de [ gids U
 
 ## Gegevens verzamelen {#ingest}
 
->[!WARNING]
->
->* Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek verklaarde gebeurtenissen die uw systeem naar Experience Platform zal verzenden altijd een persoonsidentificatie, zoals CRMID bevatten.
->* Tijdens de implementatie moet u ervoor zorgen dat de unieke naamruimte met de hoogste prioriteit altijd aanwezig is in elk profiel. Zie [ bijlage ](#appendix) voor voorbeelden van grafiekscenario&#39;s die door ervoor te zorgen worden opgelost dat elk profiel unieke namespace met de hoogste prioriteit bevat.
->* Als u de [ bronVerbinding van Adobe Analytics ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruikt om gegevens in te voeren, dan moet u uw ECIDs een hogere prioriteit geven dan STEUN omdat de Dienst van de Identiteit HULP blokkeert. Door ECID een prioriteit te geven, kunt u Real-Time Klantprofiel de opdracht geven om niet-geverifieerde gebeurtenissen op te slaan naar ECID in plaats van naar HULP.
-
 Op dit punt, zou u het volgende moeten hebben:
 
 * De noodzakelijke toestemmingen om tot de eigenschappen van de Dienst van de Identiteit toegang te hebben.
@@ -101,26 +168,6 @@ Gebruik voor alle feedback de optie **[!UICONTROL Beta feedback]** in de gebruik
 ## Bijlage {#appendix}
 
 Lees deze sectie voor extra informatie die u kunt verwijzen wanneer het uitvoeren van uw identiteitsmontages en unieke namespaces.
-
-### Naamruimtevereiste voor één persoon {#single-person-namespace-requirement}
-
-U moet ervoor zorgen dat één naamruimte wordt gebruikt voor alle profielen die een persoon vertegenwoordigen. Hiermee kan de identiteitsdienst de juiste persoon-id in een bepaalde grafiek detecteren.
-
->[!BEGINTABS]
-
->[!TAB  zonder een enige persoon herkenningsteken namespace ]
-
-Zonder een unieke naamruimte die uw persoon-id vertegenwoordigt, kunt u eindigen met een grafiek die een koppeling bevat naar verschillende personen-id&#39;s voor dezelfde ECID. In dit voorbeeld zijn zowel B2BCRM als B2CCRM tegelijkertijd gekoppeld aan dezelfde ECID. Deze grafiek suggereert dat Tom, met zijn B2C-aanmeldingsaccount, een apparaat deelde met Summer, met haar B2B-aanmeldingsaccount. Het systeem herkent echter dat dit één profiel is (grafiek samenvouwen).
-
-![ de grafiekscenario van A waar twee persoonherkenningstekens met zelfde ECID verbonden zijn.](../images/graph-examples/multi_namespaces.png)
-
->[!TAB  met een enige persoonsherkenningsnamespace ]
-
-Op basis van een unieke naamruimte (in dit geval een CRMID in plaats van twee verschillende naamruimten) kan de identiteitsdienst de persoon-id zien die het laatst aan de ECID is gekoppeld. In dit voorbeeld, omdat een unieke CRMID bestaat, kan de Dienst van de Identiteit een &quot;gedeeld apparaat&quot;scenario erkennen, waar twee entiteiten het zelfde apparaat delen.
-
-![ een gedeeld scenario van de apparatengrafiek, waar twee persoonherkenningstekens met zelfde ECID verbonden zijn, maar de oudere verbinding wordt verwijderd.](../images/graph-examples/crmid_only_multi.png)
-
->[!ENDTABS]
 
 ### LoginID-scenario van Dangling {#dangling-loginid-scenario}
 
