@@ -4,9 +4,9 @@ title: UI-gids voor waarschuwingen
 description: Leer hoe u waarschuwingen beheert in de gebruikersinterface van het Experience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 9004a2203996f0fd64833a03f211232ebf14e3e4
+source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Selecteer **[!UICONTROL Alerts]** in de linkernavigatie om aan de slag te gaan.
 
 ![ Alarm pagina die [!UICONTROL Alerts] in de linkernavigatie benadrukt.](../images/alerts/ui/workspace.png)
 
-## Waarschuwingsregels beheren
+## Waarschuwingsregels beheren {#manage-rules}
 
 Het tabblad **[!UICONTROL Browse]** bevat een lijst met de beschikbare regels die een waarschuwing kunnen activeren.
 
@@ -37,7 +37,7 @@ Selecteer de ellips (**...**) naast de naam van een regel, en een dropdown verto
 
 ![ de geselecteerde ellipsen openbaren het drop-down menu.](../images/alerts/ui/disable-subscribe.png)
 
-## Waarschuwingsabonnees beheren
+## Waarschuwingsabonnees beheren {#manage-subscribers}
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ U hebt gebruikers toegevoegd aan uw lijst met waarschuwingen. De verzonden gebru
 
 ![ een e-mailvoorbeeld van het waakzame bericht dat wordt ontvangen.](../images/alerts/ui/manage-alert-subscribers-email.png)
 
-## E-mailwaarschuwingen inschakelen
+## E-mailwaarschuwingen inschakelen {#enable-email}
 
 Waarschuwingsberichten kunnen rechtstreeks naar uw e-mail worden verzonden.
 
@@ -85,7 +85,35 @@ De rol aan de **sectie van E-mail** bij de bodem van de pagina en selecteert **[
 
 Alle waarschuwingen waarop je bent geabonneerd, worden nu verzonden naar het e-mailadres dat is verbonden met je Adobe ID-account.
 
-## Berichtengeschiedenis weergeven
+## Drempel voor waarschuwingen aanpassen {#alert-threshold}
+
+De drempelwaarden van de alarm kunnen voor de volgende waakzame types worden aangepast:
+
+| Type waarschuwing | Aangepaste parameter |
+|---|---|
+| Vertraging segmenttaak | Vertragingsdrempel |
+| Vertraging bij exporteren segment | Vertragingsdrempel |
+| Vertraging bij uitvoering van bestemming | Vertragingsdrempel |
+| Vertraging bij uitvoering identiteitsservicestroom | Vertragingsdrempel |
+| Vertraging bij uitvoering van profielstroom | Vertragingsdrempel |
+| Bronnen: Vertraging bij uitvoering | Vertragingsdrempel |
+| Vertraging bij uitvoeren query | Vertragingsdrempel |
+| Activeringssnelheid overschreden | Foutdrempel |
+| Bronopinievormingsfoutfrequentie overschreden | Foutdrempel |
+
+Selecteer de ellips (**...**) naast de naam van een regel, een dropdown vertoningencontroles. Selecteer **[!UICONTROL Edit]**.
+
+![ de [!UICONTROL Edit] optie wordt benadrukt voor de geselecteerde regel.](../images/alerts/ui/threshold-edit.png)
+
+De pagina **[!UICONTROL Customize alert]** wordt weergegeven. Werk de drempelwaarde bij tot de gewenste minuten en selecteer vervolgens **[!UICONTROL Confirm]** .
+
+![ de Customize waakzame pagina die [!UICONTROL Threshold] en [!UICONTROL Confirm] opties benadrukt.](../images/alerts/ui/threshold-update.png)
+
+U wordt teruggestuurd naar de pagina **[!UICONTROL Alerts]** . Als u de drempelinstellingen voor de waarschuwing wilt weergeven, selecteert u de regel in de lijst. U kunt de drempelinstellingen voor de waarschuwing zien in de rechterrail, inclusief details zoals de status en ernst.
+
+![ een alarm benadrukte tonend details in het juiste spoor en het benadrukken [!UICONTROL Threshold].](../images/alerts/ui/threshold-view.png)
+
+## Berichtengeschiedenis weergeven {#alert-history}
 
 Het tabblad **[!UICONTROL History]** geeft de geschiedenis weer van ontvangen waarschuwingen voor uw organisatie, inclusief de regel die de waarschuwing heeft geactiveerd, de geactiveerde datum en de opgeloste datum (indien van toepassing).
 
