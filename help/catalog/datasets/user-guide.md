@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
+source-git-commit: 0bb10754e2f5bc289567368c803d4397cec77bf6
 workflow-type: tm+mt
-source-wordcount: '3019'
+source-wordcount: '3581'
 ht-degree: 0%
 
 ---
@@ -96,6 +96,7 @@ De datasets UI biedt nu een inzamelingen van gealigneerde acties voor elke besch
 * [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Enable unified profile]](#enable-profile)
 * [[!UICONTROL Manage tags]](#manage-tags)
+* [(Beta) [!UICONTROL Set data retention policy]](#data-retention-policy)
 * [[!UICONTROL Move to folders]](#move-to-folders)
 * [[!UICONTROL Delete]](#delete).
 
@@ -168,6 +169,53 @@ Het dialoogvenster [!UICONTROL Manage tags] kan ook bestaande tags uit een gegev
 Zodra een markering aan een dataset is toegevoegd, kunnen de datasets worden gefiltreerd gebaseerd op de overeenkomstige markering. Zie de sectie op hoe te [ filterdatasets door markeringen ](#enable-profile) voor meer informatie.
 
 Voor meer informatie over hoe te om bedrijfsvoorwerpen voor gemakkelijkere ontdekking en categorisering te classificeren, zie de gids op [ het leiden meta-gegevenstaxonomieën ](../../administrative-tags/ui/managing-tags.md). In deze handleiding wordt beschreven hoe een gebruiker met de juiste machtigingen vooraf gedefinieerde tags kan maken, categorieën aan tags kan toewijzen en alle gerelateerde CRUD-bewerkingen kan uitvoeren op tags en tagcategorieën in de gebruikersinterface van het platform.
+
+### (Beta) Beleid voor gegevensbewaring instellen {#data-retention-policy}
+
+>[!AVAILABILITY]
+> 
+>De montages van het behoud van gegevens zijn momenteel in bèta en beschikbaar slechts in a **beperkte versie** voor uitgezochte organisaties. De gebruikersinterface weerspiegelt mogelijk niet de hieronder beschreven functie.
+
+Het beleid voor het verlopen en behouden van gegevenssets beheren op gegevenssetniveau op het tabblad [!UICONTROL Browse] van de [!UICONTROL Datasets] -werkruimte. U kunt deze eigenschap gebruiken om bewaarbeleid voor gegevens te vormen die reeds in de diensten van het Gegevens meer en van het Profiel worden opgenomen. De vervaldatum is gebaseerd op wanneer de gegevens in Platform en uw bewaarregels werden opgenomen.
+
+Als u het dialoogvenster [!UICONTROL Set data retention] wilt openen, selecteert u in het vervolgkeuzemenu de ovaal naast de gegevensset gevolgd door **[!UICONTROL Set data retention policy]** .
+
+![ het Browse lusje van de werkruimte van Datasets met de ellips en de Vastgestelde benadrukte optie van het beleid van het gegevensbehoud.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
+
+Het dialoogvenster [!UICONTROL Set data retention] wordt weergegeven. Het dialoogvenster toont de gebruiksmaatstaven voor licenties op sandboxniveau, de gegevens op gegevensniveau en de instellingen voor gegevenslagen. Deze cijfers tonen uw gebruik in vergelijking met uw rechten. De gegevens van de dataset omvatten de naam, het type, de status van de Activering van het Profiel, en het huidige gebruik van de gegevensmeeropslag.
+
+>[!NOTE]
+>
+>De gegevens voor de opslag van gegevens op het niveau van de zandbak zijn nog in ontwikkeling en niet beschikbaar.
+
+![ de Vastgestelde dialoog van het gegevensbehoud.](../images/datasets/user-guide/set-data-retention-dialog.png)
+
+Alvorens u het beleid van het gegevenssetbehoud vormt, toont de dialoog geadviseerde bewaarmontages. Eén maand is de aanbevolen standaardretentieperiode. Als u het standaardretentiebeleid wilt aanpassen, selecteert en werkt u het nummer bij en kiest u de gewenste tijdsperiode (dagen, maanden, jaren). U kunt uw bewaarmontages voor de gegevens vormen het meer en de Dienst van het Profiel onafhankelijk.
+
+>[!NOTE]
+> 
+>De minimale bewaarduur voor gegevens is 30 dagen. De minimale bewaartijd voor gegevens voor profielservice is één dag.
+
+![ de Vastgestelde dialoog van het gegevensbehoud met de duur dropdown en sparen benadrukte.](../images/datasets/user-guide/time-unit-dropdown.png)
+
+Zie de [ vaak gestelde vragen pagina ](../catalog-faq.md) voor meer informatie over de regels die datareeksen en beste praktijken van de gegevenssetvervaldatum voor het vormen van uw beleid van het gegevensbehoud bepalen.
+
+#### (Beta) Verbeterde zichtbaarheid van bewaartermijnen en opslagwaarden {#retention-and-storage-metrics}
+
+Er zijn vier nieuwe kolommen beschikbaar voor bètagebruikers die uw gegevensbeheer beter zichtbaar maken: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]** en **[!UICONTROL Profile Retention]** . Deze gegevens laten zien hoeveel opslagruimte uw gegevens verbruiken en hoe lang deze gegevens behouden blijven in zowel datumpeer- als profielservices. Deze details helpen u bewaarbeleid optimaliseren, gebruik tegen rechten volgen, en naleving van organisatorische en regelgevende normen verzekeren. Deze verhoogde zichtbaarheid stelt u in staat geïnformeerde beslissingen te nemen, kosten te beheren, governance te stroomlijnen en uw gegevenslandschap duidelijk te begrijpen.
+
+![ het Browse lusje van de werkruimte van Datasets met de vier nieuwe benadrukte opslag en bewaarkolommen.](../images/datasets/user-guide/storage-and-retention-columns.png)
+
+In de volgende tabel vindt u een overzicht van de nieuwe waarden voor retentie en opslag die beschikbaar zijn in de bètaversie. Het detailleert het doel van elke kolom en hoe het bij het beheren van gegevensbehoud en opslag binnen Platform UI helpt.
+
+| Kolomtitel | Beschrijving |
+|---|---|
+| [!UICONTROL Data lake retention] | Toont de huidige bewaarduur voor elke dataset. Deze waarde kan in de bewaarmontages van elke dataset worden gewijzigd. Het beleid van het behoud van het gegevensmeerbehoud plaatst regels voor hoe lang gegevens worden opgeslagen en wanneer het in verschillende diensten zou moeten worden geschrapt. |
+| [!UICONTROL Data Lake Storage] | Toont het huidige opslaggebruik voor elke dataset in het gegevensmeer. Deze metrische hulp volgt hoeveel ruimte elke dataset bezet, die in het beheren van opslaggrenzen en optimaliserend gebruik helpt. |
+| [!UICONTROL Profile Storage] | Toont het huidige opslaggebruik voor elke dataset binnen de diensten van het Profiel. Gebruik deze informatie om het opslagverbruik te controleren en ervoor te zorgen dat dit in overeenstemming is met uw gegevensbeheerdoelstellingen. |
+| [!UICONTROL Profile Retention] | Hiermee wordt de retentieduur voor elke profielgegevensset aangegeven. Deze waarde kan in de bewaarmontages van de dataset worden aangepast, die u helpen controleren hoe lang de gegevens van het Profiel vóór schrapping wordt opgeslagen. |
+
+{style="table-layout:auto"}
 
 ### Verplaatsen naar mappen {#move-to-folders}
 
@@ -344,3 +392,4 @@ Deze gebruikershandleiding bevat instructies voor het uitvoeren van veelvoorkome
 * [Een gegevensset maken met behulp van API&#39;s](create.md)
 * [De gegevens van de dataset van de vraag gebruikend de Toegang API van Gegevens](../../data-access/home.md)
 * [Een gegevensset configureren voor realtime profiel en identiteitsservice van klanten met behulp van API&#39;s](../../profile/tutorials/dataset-configuration.md)
+
