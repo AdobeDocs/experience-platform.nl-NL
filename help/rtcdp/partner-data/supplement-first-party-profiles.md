@@ -3,9 +3,9 @@ title: Eigen profielen aanvullen met door partners verstrekte attributen
 description: Leer hoe u eigen profielen kunt aanvullen met kenmerken van vertrouwde gegevenspartners om uw databasis te verbeteren, nieuwe inzichten in uw klantenbestand te verkrijgen en uw doelgroepen beter te optimaliseren.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
+source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1249'
 ht-degree: 3%
 
 ---
@@ -41,7 +41,7 @@ Aangezien u overweegt om uw eigen first-party profielen met attributen van gegev
 
 >[!WARNING]
 >
->De extra partner-verstrekte attributen die in Real-Time CDP worden opgenomen beïnvloeden uw *gemiddelde profielrijkdom*. Lees de [ Beschrijving van het Product van Real-time Customer Data Platform ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) voor meer informatie over profielrijkdom.
+>De extra partner-verstrekte attributen die in Real-Time CDP worden opgenomen beïnvloeden uw *totaal gegevensvolume*. Lees de [ Beschrijving van het Product van Real-time Customer Data Platform ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) voor meer informatie over totaal gegevensvolume.
 
 ## Video doorloopt {#video-walkthrough}
 

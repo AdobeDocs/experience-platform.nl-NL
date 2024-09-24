@@ -2,9 +2,9 @@
 title: Overzicht van AI Assistant
 description: Leer meer over AI Assistant, de nuances en gebruiksgevallen en hoe u deze kunt gebruiken om uw workflow met Adobe Experience Platform en Real-time Customer Data Platform te versnellen.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '926'
 ht-degree: 1%
 
 ---
@@ -53,7 +53,7 @@ De kennis van het product verwijst naar concepten en onderwerpen die in de docum
 
 | Productkennis | Voorbeelden |
 | --- | --- |
-| Aanbevolen lessen | <ul><li>Wat is het verschil tussen een identiteit en een primaire of buitenlandse sleutel?</li><li>Hoe wordt profielrijkheid berekend?</li></ul> |
+| Aanbevolen lessen | <ul><li>Wat is het verschil tussen een identiteit en een primaire of buitenlandse sleutel?</li><li>Wat zijn gewone kijkers?</li></ul> |
 | Openbare detectie | <ul><li>Hoe kan ik deze dataset uitvoeren?</li><li>Zijn er regelingen voor klanten in de gezondheidszorg?</li></ul> |
 | Problemen oplossen | <ul><li>Waarom kan ik geen schema aanzetten dat door Adobe voor profiel wordt bezeten?</li><li>Waarom kan ik een segment niet verwijderen?</li></ul> |
 
@@ -79,7 +79,7 @@ U kunt AI Assistant-vragen stellen over uw operationele inzichten in de volgende
 | Doelgroepen | <ul><li>Aantal deelnemers</li><li>Type publiek (streaming of batch)</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Activeringsstatus</li><li>Aantal profielen</li><li>Soorten publiek dupliceren</li><li>Zoekopdracht naar definitie van publiek</li><li>Publiek - publieksrelatie</li><li>Publiek - kenmerkrelatie</li><li>Publiek - gegevenssetrelatie</li><li>Publiek - bestemmingsverhouding</li><li>Naam zoeken</li><li>Naam en id zoeken | <ul><li>Overlap door publiek</li><li>Activering publiek</li><li>Publiek - campagnerelaties</li><li>Audit</li><li>Maken/wijzigen</li><li>Labels</li><li>Profielkwalificatietendensen</li></ul> |
 | Gegevensstromen | <ul><li>Aantal gegevensstromen</li><li>Status DataFlow</li><li>Dataflow - relatie gegevensset</li><li>Dataflow - bronrelatie</li></ul> | <ul><li>Maken/wijzigen</li><li>Dataflow-batch-relaties</li><li>Aantal hoogste profielen</li></ul> |
 | Gegevenssets | <ul><li>Aantal gegevenssets</li><li>Status profiel inschakelen</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Gegevensset - schema-relatie</li><li>Gegevensset - publieksrelatie</li><li>Gegevensset - kenmerkrelatie</li><li>Dataset - gegevensstroomrelatie</li><li>Naam zoeken </li><li>Naam en id zoeken</li></ul> | <ul><li>Audit</li><li>Gemaakt door</li><li>Gegevensset - batch-relatie</li><li>Maken en wijzigen van gegevensset</li><li>Gegevensgrootte</li><li>Aantal profielen</li><li>Aantal rijen</li><li>Waardezoekopdracht</li></ul> |
-| Doelen | <ul><li>Gevormde doelaantallen</li><li>Doel - publieksrelatie</li><li>Relatie doelkenmerk</li></ul> | <ul><li>Account ingesteld</li><li>Accountreferentie-informatie</li><li>Unieke profielen geactiveerd</li></ul> |
+| Bestemmingen | <ul><li>Gevormde doelaantallen</li><li>Doel - publieksrelatie</li><li>Relatie doelkenmerk</li></ul> | <ul><li>Account ingesteld</li><li>Accountreferentie-informatie</li><li>Unieke profielen geactiveerd</li></ul> |
 | Journeys | <ul><li>Aantal</li><li>Naam zoeken</li><li>Naam en id zoeken</li><li>Reisstatus</li><li>Status activering (publiek versus gebeurtenissen)</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Herhalingsfrequentie</li></ul> | <ul><li>Attributen - reisrelaties</li><li>Audit</li><li>Maken/wijzigen</li><li>Gemaakt door</li><li>Gebeurtenissen</li><li>Reis - dataset</li><li>Reis - schema</li><li>Aanbiedingen</li><li>Profielkwalificatietendensen</li><li>Stapgebeurtenissen</li></ul> |
 | Schema&#39;s | <ul><li>Schema aantallen</li><li>Aanmaakdatum/wijzigingsdatum</li><li>Schema - kenmerkrelatie</li><li>Schema - gegevenssetrelatie</li><li>Schema - publieksrelatie</li><li>Status profiel inschakelen</li><li>Naam zoeken</li><li>Naam en id zoeken</li></ul> | <ul><li>Audit</li><li>Maken/wijzigen</li><li>Gemaakt door</li><li>Veldgroepen</li><li>Identiteiten</li><li>Identiteitsnaamruimten</li><li>Labels</li><li>Aantal profielen</li></ul> |
 | Bronnen | <ul><li>Rekentelling</li><li>Accountstatus</li><li>Actieve/inactieve gegevensstromen voor elke rekening</li><li>Source-connector - gegevensstroomrelatie</li><li>Source-account - gegevensstroomrelatie</li></ul> | <ul><li>Accountverificatiegegevens</li><li>Account ingesteld</li><li>Metrische gegevens over gegevensinvoer</li><li>Aantal profielen</li><li>Source - batch-relaties</li></ul> |

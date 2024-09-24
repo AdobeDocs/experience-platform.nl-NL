@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sandboxoverzicht
 description: Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: 06f1b64d5c4dfa6e0ca1f6da171ece8e9db9e693
+source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Dit document biedt een overzicht op hoog niveau van sandboxen in Experience Plat
 
 Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Er worden twee soorten sandboxen ondersteund op het Experience Platform:
 
-* **zandbak van de Productie**: Een productiestandaard wordt bedoeld om met profielen in uw productiemilieu te worden gebruikt. Met Platform kunt u meerdere productiesandboxen maken om de juiste functionaliteit voor gegevens te bieden terwijl de operationele isolatie behouden blijft. Met deze functie kunt u specifieke productiesandboxen toewijzen aan verschillende bedrijfsonderdelen, merken, projecten of regio&#39;s. Productiesandboxen ondersteunen een volume productieprofielen tot aan uw gelicentieerde [!DNL Profile] toezegging (cumulatief gemeten over al uw geoorloofde productie-sandboxen). U hebt het recht om een gemiddeld profiel met licentie te gebruiken per geautoriseerde [!DNL Profile] (dit profiel wordt cumulatief gemeten in al uw geautoriseerde productiesandboxen).
+* **zandbak van de Productie**: Een productiestandaard wordt bedoeld om met profielen in uw productiemilieu te worden gebruikt. Met Platform kunt u meerdere productiesandboxen maken om de juiste functionaliteit voor gegevens te bieden terwijl de operationele isolatie behouden blijft. Met deze functie kunt u specifieke productiesandboxen toewijzen aan verschillende bedrijfsonderdelen, merken, projecten of regio&#39;s. Productiesandboxen ondersteunen een volume productieprofielen tot aan uw gelicentieerde [!DNL Profile] toezegging (cumulatief gemeten over al uw geoorloofde productie-sandboxen). U hebt het recht om uw volledige gelicentieerde Totale Volume van Gegevens te gebruiken (cumulatief die over al uw geautoriseerde productiesanddozen worden gemeten).
+
 * **zandbak van de Ontwikkeling**: Een ontwikkelingszandbak is een zandbak die exclusief voor ontwikkeling en het testen met niet-productieprofielen kan worden gebruikt. Ontwikkelingssandboxen ondersteunen een volume niet-productieprofielen tot 10% van uw gelicentieerde [!DNL Profile] -betrokkenheid (cumulatief gemeten in alle geautoriseerde ontwikkelingssandboxen). U hebt recht op maximaal:
-   * een gemiddelde rijkheid van het non-production profiel van 75 kilobytes per geautoriseerd niet-productieprofiel (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen);
    * één batchsegmentatietaak per dag, per ontwikkelingssandbox;
    * Gemiddeld 120 [!DNL Profile] API-aanroepen per [!DNL Profile] per jaar (cumulatief gemeten in al uw geautoriseerde ontwikkelingssandboxen).
 

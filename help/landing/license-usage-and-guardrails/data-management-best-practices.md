@@ -2,9 +2,9 @@
 title: Aanbevolen werkwijzen voor gegevensbeheerlicenties
 description: Meer informatie over best practices en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 1b8fd7671146519fa66768aab3fe081adb0bd6c6
 workflow-type: tm+mt
-source-wordcount: '2237'
+source-wordcount: '2145'
 ht-degree: 1%
 
 ---
@@ -42,12 +42,7 @@ Wanneer u Experience Platform vergunning geeft, wordt u voorzien van de toestemm
 
 **[!DNL Addressable Audience]** - het totale aantal klantprofielen dat contractueel in Experience Platform is toegestaan, inclusief zowel bekende als pseudoniem profielen.
 
-**[!DNL Profile Richness]** - de gemiddelde grootte van uw profielgegevens in Experience Platform. U kunt de machtiging voor [!DNL Profile Richness] verhogen door een rijkdom aan te schaffen.
-
-De maatstaf van [!DNL Profile Richness] is afhankelijk van de licenties die u hebt aangeschaft. Er zijn twee berekeningen voor [!DNL Profile Richness] beschikbaar:
-
-* de som van alle productiegegevens die op elk moment in Adobe Real-time Customer Data Platform zijn opgeslagen (d.w.z. het realtime profiel en de identiteitsservice van de klant), gedeeld door de [!DNL Addressable Audience];
-* De som van alle gegevens die op elk gewenst moment in het Platform zijn opgeslagen (inclusief, maar niet beperkt tot, het [!DNL data lake] , realtime-klantprofiel en identiteitsservice) en alle gegevens die u in de afgelopen 12 maanden hebt gestreamd (in plaats van binnen op te slaan) Platform, gedeeld door [!DNL Addressable Audience] .
+**[!DNL Total Data Volume]** - de totale hoeveelheid gegevens die beschikbaar is voor Adobe Experience Platform Profile Service voor gebruik in betrokkenheidsworkflows.
 
 De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze cijfers variëren afhankelijk van de licenties die uw organisatie heeft aangeschaft.
 
@@ -108,7 +103,7 @@ Met insluitingsfilters kunt u alleen de gegevens invoeren die nodig zijn voor uw
 | --- | --- |
 | Adobe Audience Manager-bronfiltering | Wanneer u een Adobe Audience Manager-bronverbinding maakt, kunt u kiezen welke segmenten en kenmerken u in het [!DNL data lake] en Real-Time Klantprofiel wilt opnemen in plaats van de gegevens van de Audience Manager volledig in te voeren. Zie de gids bij [ het creëren van een Audience Manager bronverbinding ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) voor meer informatie. |
 | Adobe Analytics Data Prep | U kunt [!DNL Data Prep] -functies gebruiken wanneer u een verbinding maakt met een bron voor Analytics om gegevens uit te filteren die niet vereist zijn voor uw gebruik. Via [!DNL Data Prep] kunt u definiëren welke kenmerken/kolommen naar Profiel moeten worden gepubliceerd. U kunt ook voorwaardelijke instructies opgeven om Platform te laten weten of gegevens naar verwachting naar Profiel zullen worden gepubliceerd, of alleen naar de [!DNL data lake] . Zie de gids bij [ het creëren van een Analytics bronverbinding ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie. |
-| Ondersteuning voor het in- en uitschakelen van gegevenssets voor profiel | Om gegevens in het Profiel van de Klant in real time in te voeren, moet u een dataset voor gebruik in de opslag van het Profiel toelaten. Hiermee voegt u uw rechten [!DNL Addressable Audience] en [!DNL Profile Richness] toe. Zodra een dataset niet meer voor de gebruiksgevallen van het klantenprofiel wordt vereist, kunt u de integratie van die dataset aan Profiel onbruikbaar maken om ervoor te zorgen dat uw gegevens vergunning volgzaam blijven. Zie de gids op [ toelatend en onbruikbaar makend datasets voor Profiel ](../../catalog/datasets/enable-for-profile.md) voor meer informatie. |
+| Ondersteuning voor het in- en uitschakelen van gegevenssets voor profiel | Om gegevens in het Profiel van de Klant in real time in te voeren, moet u een dataset voor gebruik in de opslag van het Profiel toelaten. Hiermee voegt u uw rechten [!DNL Addressable Audience] en [!DNL Total Data Volume] toe. Zodra een dataset niet meer voor de gebruiksgevallen van het klantenprofiel wordt vereist, kunt u de integratie van die dataset aan Profiel onbruikbaar maken om ervoor te zorgen dat uw gegevens vergunning volgzaam blijven. Zie de gids op [ toelatend en onbruikbaar makend datasets voor Profiel ](../../catalog/datasets/enable-for-profile.md) voor meer informatie. |
 | Web SDK en Mobile SDK-gegevensuitsluiting | Er zijn twee soorten gegevens die door Web en Mobiele SDK worden verzameld: gegevens die automatisch en gegevens worden verzameld die uitdrukkelijk door uw ontwikkelaar worden verzameld. Om de naleving van de licentie beter te beheren, kunt u automatische gegevensverzameling in de configuratie van de SDK uitschakelen via de context-instelling. Aangepaste gegevens kunnen ook worden verwijderd of niet worden ingesteld door de ontwikkelaar. |
 | Server-kant die gegevensuitsluiting door:sturen | Als u gegevens naar Platform verzendt gebruikend server-zij door:sturen, kunt u uitsluiten welke gegevens door of de afbeelding in een regelactie te verwijderen worden verzonden om het over alle gebeurtenissen uit te sluiten, of door voorwaarden aan de regel toe te voegen zodat de gegevens slechts voor bepaalde gebeurtenissen in brand steken. Zie de documentatie over [ gebeurtenissen en voorwaarden ](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if) voor meer informatie. |
 | Gegevens filteren op bronniveau | U kunt logische en vergelijkingsexploitanten gebruiken om rij-vlakke gegevens van uw bronnen te filtreren alvorens een verbinding tot stand te brengen en gegevens aan Experience Platform op te nemen. Voor meer informatie, lees de gids over [ het filtreren rij-vlakke gegevens voor een bron gebruikend  [!DNL Flow Service]  API ](../../sources/tutorials/api/filter.md). |

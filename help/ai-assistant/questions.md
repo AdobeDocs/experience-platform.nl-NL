@@ -2,9 +2,9 @@
 title: Vraag voor AI-assistent
 description: Lees dit document om voorbeeldvragen te leren die u kunt gebruiken wanneer het vragen van AI Medewerker.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1519'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,6 @@ De volgende vragen worden gegroepeerd door gegevensvoorwerpen en als of [ operat
    * Hoe zijn Gebruikersgroepen verwant aan Rollen?
    * Wanneer moet ik een gegevenstype versus een veldgroep gebruiken?
    * Wat is het verschil tussen een identiteit en een primaire of buitenlandse sleutel?
-   * Hoe wordt de rijkerheid van het Profiel berekend?
 * **het Oplossen van problemen - de kennis van het Product (Real-Time CDP en Journey Optimizer)**
    * Waarmee kan AI Assistant helpen?
    * Kan ik een profiel schrappen toegelaten schema nadat de gegevens worden opgenomen?

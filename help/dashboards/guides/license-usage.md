@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b1de61b2e7d0dedf2da8ef8ffb02fe5c15e82fb2
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '2601'
+source-wordcount: '2586'
 ht-degree: 0%
 
 ---
@@ -205,7 +205,6 @@ Het dashboard van het vergunningsgebruik rapporteert over verscheidene unieke me
 | [!UICONTROL Audience Activation Size] | De totale grootte van profielen die in een jaar op een op een bestand gebaseerd doel zijn geactiveerd. Opmerking: hieronder vallen geen profielen die via streamingdoelen worden verzonden. |
 | [!UICONTROL Addressable Audience] | De som van de rechten van uw zakelijke publiek en de rechten van het consumentenpubliek. Een publiek voor de consument wordt gedefinieerd als het aantal personenprofielen dat op de verkooporder als &quot;Consumentenpubliek&quot; wordt aangeduid. Een zakelijk publiek wordt gedefinieerd als het aantal bedrijfspersoonprofielen dat als &quot;BedrijfsPubliek&quot;op de verkooporde wordt geïdentificeerd. |
 | [!UICONTROL Adhoc Query Service Users Packs] | Een add-on om uw geautoriseerde machtiging voor gelijktijdige gebruikers van Query Service te verhogen met vijf extra gelijktijdige gebruikers van Query Service en één extra query tegelijk voor ad-hocquery per pakket. Er kan een licentie worden verleend voor meerdere extra Ad hoc Query User-pakketten. |
-| [!UICONTROL Average profile richness] | De som van alle productiegegevens die binnen de dienst van het Profiel van de Hub op om het even welk ogenblik worden opgeslagen, gedeeld door vijf keer het aantal gemachtigde bedrijfspersoonprofielen. [!UICONTROL Average profile richness] is een gedeelde functie. |
 | [!UICONTROL CJA Rows Available] | De dagelijkse gemiddelde rijen van gegevens beschikbaar voor analyse binnen Customer Journey Analytics. |
 | [!UICONTROL Computed Attributes] | Het totale aantal geaggregeerde gedragsgegevens van het profiel. Geaggregeerde gedragsgegevens voor profielen zijn gebaseerd op ervaringsgebeurtenissen die worden omgezet in een profielkenmerk en kunnen worden opgenomen in een persoonprofiel of bedrijfspersoonprofiel. |
 | [!UICONTROL Consumer Audience] | Het aantal personenprofielen dat op de verkooporder als &quot;Consumer Audience&quot; is geïdentificeerd. |
@@ -216,9 +215,10 @@ Het dashboard van het vergunningsgebruik rapporteert over verscheidene unieke me
 | [!UICONTROL Look-alike Audiences] | Het aantal doelgroepen dat wordt gegenereerd door een bestaand publiek voor consumenten te modelleren om te bepalen welke personenprofielen vergelijkbaar zijn met het bestaande publiek voor consumenten. |
 | [!UICONTROL Number of AMM Models] | Een telling van het machine het leren model (ingebouwde Adobe Mix Modeler) dat wordt gebruikt om een gespecificeerd resultaat te meten en/of te voorspellen die op uw investeringen wordt gebaseerd. |
 | [!UICONTROL Number of Sandboxes] | Het aantal logische scheidingen binnen uw instantie van om het even welke Adobe On-demand Dienst die tot Adobe Experience Platform toegang heeft isolerend gegevens en verrichtingen. |
-| [!UICONTROL Profile Richness No of Packs] | Een verhoging van uw geautoriseerde Gemiddelde rijsheid van het Profiel met 25 KB per profiel voor elk Extra rijvaardigheidspak van het Profiel. |
+| [!UICONTROL Profile Richness No of Packs] | Een toename in uw geautoriseerde totale gegevensvolume met 25 kB per profiel voor elk extra rijvaardigheidspakket van het Profiel. |
 | [!UICONTROL Query Service Compute Hours] | Een maatregel van de hoeveelheid tijd die door de motoren van de Dienst van de Vraag wordt genomen om, gegevens terug in het gegevensmeer te lezen te verwerken en te schrijven wanneer een partijvraag wordt uitgevoerd. |
 | [!UICONTROL Streaming Segmentation No of Packs] | De pakketten werken segmentlidmaatschap voor een persoonprofiel bij aangezien de nieuwe gegevens de Dienst van de Segmentatie door een het stromen stroom ingaan. Het lidmaatschap van een segment wordt beoordeeld op basis van de kenmerken van het huidige personenprofiel en de waarde van de huidige gebeurtenis, zonder rekening te houden met het historische gedrag. Streaming segmentatie is een gedeelde functie. |
+| [!UICONTROL Total Data Volume] | De totale hoeveelheid gegevens die beschikbaar is voor Adobe Experience Platform Profile Service om te gebruiken in betrokkenheidsworkflows. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
