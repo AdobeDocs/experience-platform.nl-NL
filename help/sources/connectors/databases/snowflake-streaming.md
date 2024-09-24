@@ -1,13 +1,12 @@
 ---
 title: Overzicht van Snowflake Streaming Source Connector
 description: Leer hoe u een bronverbinding en gegevensstroom kunt maken om streaminggegevens van uw Snowflake-instantie naar Adobe Experience Platform in te voeren
-badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultieme" type="Positive"
-last-substantial-update: 2023-05-25T00:00:00Z
+last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: e8ab39ce085a95eac898f65667706b71bdadd350
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -16,8 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* De [!DNL Snowflake] -streamingbron bevindt zich in bèta. Gelieve te lezen het [ Bronoverzicht ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
->* De [!DNL Snowflake] -streamingbron is in de API beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+> De [!DNL Snowflake] -streamingbron is in de API beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 

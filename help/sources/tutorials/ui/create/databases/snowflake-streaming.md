@@ -1,12 +1,10 @@
 ---
 title: De gegevens van de stroom van uw gegevensbestand van de Snowflake aan Experience Platform gebruikend UI
-type: Tutorial
 description: Leer hoe u gegevens kunt streamen van de database van SnwofLake naar het Experience Platform
-badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: f39ee3af176e3d9b8ad04bfad81793db0ebe71a7
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1596'
 ht-degree: 0%
 
 ---
