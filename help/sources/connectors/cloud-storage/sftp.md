@@ -4,41 +4,49 @@ solution: Experience Platform
 title: Overzicht SFTP Source-connector
 description: Leer hoe u een SFTP-server verbindt met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 6c22f8243269bb304b12a4e4978ed141ed092c67
+source-git-commit: 52c1c8e6bc332bd6ee579cad52a7343007615efd
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '1228'
 ht-degree: 0%
 
 ---
 
 # SFTP-aansluiting
 
->[!IMPORTANT]
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+
+Lees dit document voor de vereiste stappen die u moet uitvoeren om uw [!DNL SFTP] -account met Experience Platform te kunnen verbinden.
+
+>[!TIP]
 >
->De [!DNL SFTP] -server waarmee Adobe Experience Platform verbinding maakt, moet chunking kunnen ondersteunen. Dit betekent dat er meerdere verbindingen met één bestand zijn. Als uw [!DNL SFTP] -server geen ondersteuning biedt voor afknippen, wordt mogelijk een fout weergegeven die voorkomt dat bestanden worden ingesloten.
+>U moet de Interactieve Authentificatie van het Toetsenbord in de de serverconfiguratie van SFTP onbruikbaar maken alvorens te verbinden. Als u de instelling uitschakelt, kunnen wachtwoorden handmatig worden ingevoerd in plaats van via een service of programma.
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform] en [!DNL Azure] , zodat u gegevens van deze systemen kunt overbrengen.
+## Vereisten {#prerequisites}
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar [!DNL Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met [!DNL Platform] kunt u gegevens van een FTP- of SFTP-server via batches inbrengen.
+Lees deze sectie voor de vereiste stappen die u moet voltooien om de [!DNL SFTP] -bron met Experience Platform te kunnen verbinden.
 
-## IP adres lijst van gewenste personen
+### IP adres lijst van gewenste personen
 
 Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
 
-## Naamgevingsbeperkingen voor bestanden en mappen
+### Naamgevingsbeperkingen voor bestanden en mappen
 
 Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer u een naam geeft aan uw bestand of map voor cloudopslag.
 
-- Namen van mappen en bestandscomponenten mogen niet langer zijn dan 255 tekens.
-- De folder en de dossiernamen kunnen niet met een voorwaartse schuine streep (`/`) beëindigen. Indien beschikbaar wordt deze automatisch verwijderd.
-- De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! ' ( ) ; @ & = + $ , % # [ ]`
-- De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?` .
-- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [ RFC 2616, Sectie 2.2: BasisRegels ](https://www.ietf.org/rfc/rfc2616.txt) en [ RFC 3987 ](https://www.ietf.org/rfc/rfc3987.txt).
-- De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
+* Namen van mappen en bestandscomponenten mogen niet langer zijn dan 255 tekens.
+* De folder en de dossiernamen kunnen niet met een voorwaartse schuine streep (`/`) beëindigen. Indien beschikbaar wordt deze automatisch verwijderd.
+* De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! ' ( ) ; @ & = + $ , % # [ ]`
+* De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?` .
+* Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [ RFC 2616, Sectie 2.2: BasisRegels ](https://www.ietf.org/rfc/rfc2616.txt) en [ RFC 3987 ](https://www.ietf.org/rfc/rfc3987.txt).
+* De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 
-## Een Base64-gecodeerde OpenSSH-privésleutel instellen voor [!DNL SFTP]
+### Een Base64-gecodeerde OpenSSH-privésleutel instellen voor [!DNL SFTP]
 
 De [!DNL SFTP] -bron ondersteunt verificatie met behulp van de [!DNL Base64] -gecodeerde OpenSSH-persoonlijke sleutel. Zie de stappen hieronder voor informatie over hoe te om uw Base64-Gecodeerde OpenSSH privé sleutel te produceren en [!DNL SFTP] met Platform te verbinden.
+
+>[!BEGINTABS]
+
+>[!TAB  Vensters ]
 
 ### [!DNL Windows] gebruikers
 
@@ -92,6 +100,8 @@ C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\
 
 Met de bovenstaande opdracht slaat u de [!DNL Base64] -gecodeerde persoonlijke sleutel op in het bestandspad dat u hebt toegewezen. Vervolgens kunt u die persoonlijke sleutel gebruiken om zich te verifiëren bij [!DNL SFTP] en verbinding te maken met Platform.
 
+>[!TAB  Mac ]
+
 ### [!DNL Mac] gebruikers
 
 Als u a [!DNL Mac] gebruikt, open **Eind** en stel het volgende bevel in werking om de privé sleutel (in dit geval, zal de privé sleutel in `/Documents/id_rsa` worden bewaard) te produceren:
@@ -142,21 +152,59 @@ Om te bevestigen of uw openbare sleutel behoorlijk werd toegevoegd, kunt u het v
 more ~/.ssh/authorized_keys
 ```
 
-## SFTP verbinden met [!DNL Platform]
+>[!ENDTABS]
 
->[!IMPORTANT]
->
->Gebruikers moeten de interactieve verificatie van het toetsenbord uitschakelen in de configuratie van de SFTP-server voordat ze verbinding maken. Als u de instelling uitschakelt, kunnen wachtwoorden handmatig worden ingevoerd in plaats van via een service of programma. Zie het [ Pro document van de Component ](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) voor meer informatie over Interactieve Authentificatie van het Toetsenbord.
+### Vereiste referenties verzamelen {#credentials}
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen een SFTP-server en [!DNL Platform] via API&#39;s of de gebruikersinterface:
+U moet waarden opgeven voor de volgende referenties om de [!DNL SFTP] -server aan te sluiten op het Experience Platform.
+
+>[!BEGINTABS]
+
+>[!TAB  Basisauthentificatie ]
+
+Geef de juiste waarden op voor de volgende referenties om de [!DNL SFTP] -server te verifiëren met behulp van basisverificatie.
+
+| Credentials | Beschrijving |
+| ---------- | ----------- |
+| `host` | De naam of het IP-adres dat aan de [!DNL SFTP] -server is gekoppeld. |
+| `port` | De [!DNL SFTP] serverpoort waarmee u verbinding maakt. Als deze waarde niet wordt opgegeven, wordt deze standaard ingesteld op `22` . |
+| `username` | De gebruikersnaam met toegang tot de [!DNL SFTP] -server. |
+| `password` | Het wachtwoord voor uw [!DNL SFTP] -server. |
+| `maxConcurrentConnections` | Met deze parameter kunt u een maximumlimiet opgeven voor het aantal gelijktijdige verbindingen dat Platform maakt wanneer verbinding wordt gemaakt met uw SFTP-server. U moet deze waarde instellen op een waarde die kleiner is dan de limiet die door SFTP is ingesteld. **Nota**: Wanneer dit het plaatsen voor een bestaande rekening van SFTP wordt toegelaten, zal het slechts toekomstige dataflows en niet bestaande dataflows beïnvloeden. |
+| `folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. [!DNL SFTP] -bron, kunt u het mappad opgeven waarmee u gebruikerstoegang tot de submap van uw keuze kunt opgeven. |
+| `disableChunking` | Tijdens gegevensinvoer kan de bron van [!DNL SFTP] eerst de lengte van het bestand ophalen, het bestand in meerdere delen verdelen en deze vervolgens parallel lezen. U kunt deze waarde in- of uitschakelen om op te geven of de [!DNL SFTP] -server de lengte van bestanden kan ophalen of gegevens kan lezen vanaf een specifieke verschuiving. |
+| `connectionSpec.id` | (Alleen API) De verbindingsspecificatie retourneert de verbindingseigenschappen van een bron, inclusief verificatiespecificaties voor het maken van de basis- en bronverbindingen. De verbindingsspecificatie-id voor [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc` . |
+
+>[!TAB  SSH openbare zeer belangrijke authentificatie ]
+
+Geef de juiste waarden op voor de volgende referenties om uw [!DNL SFTP] -server te verifiëren met behulp van SSH-verificatie met openbare sleutels.
+
+| Credentials | Beschrijving |
+| ---------- | ----------- |
+| `host` | De naam of het IP-adres dat aan de [!DNL SFTP] -server is gekoppeld. |
+| `port` | De [!DNL SFTP] serverpoort waarmee u verbinding maakt. Als deze waarde niet wordt opgegeven, wordt deze standaard ingesteld op `22` . |
+| `username` | De gebruikersnaam met toegang tot de [!DNL SFTP] -server. |
+| `password` | Het wachtwoord voor uw [!DNL SFTP] -server. |
+| `privateKeyContent` | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
+| `passPhrase` | De wachtwoordgroep of het wachtwoord voor het decoderen van de persoonlijke sleutel als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als PrivateKeyContent met een wachtwoord beveiligd is, moet deze parameter worden gebruikt met de wachtwoordzin van PrivateKeyContent als waarde. |
+| `maxConcurrentConnections` | Met deze parameter kunt u een maximumlimiet opgeven voor het aantal gelijktijdige verbindingen dat Platform maakt wanneer verbinding wordt gemaakt met uw SFTP-server. U moet deze waarde instellen op een waarde die kleiner is dan de limiet die door SFTP is ingesteld. **Nota**: Wanneer dit het plaatsen voor een bestaande rekening van SFTP wordt toegelaten, zal het slechts toekomstige dataflows en niet bestaande dataflows beïnvloeden. |
+| `folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. [!DNL SFTP] -bron, kunt u het mappad opgeven waarmee u gebruikerstoegang tot de submap van uw keuze kunt opgeven. |
+| `disableChunking` | Tijdens gegevensinvoer kan de bron van [!DNL SFTP] eerst de lengte van het bestand ophalen, het bestand in meerdere delen verdelen en deze vervolgens parallel lezen. U kunt deze waarde in- of uitschakelen om op te geven of de [!DNL SFTP] -server de lengte van bestanden kan ophalen of gegevens kan lezen vanaf een specifieke verschuiving. |
+| `connectionSpec.id` | (Alleen API) De verbindingsspecificatie retourneert de verbindingseigenschappen van een bron, inclusief verificatiespecificaties voor het maken van de basis- en bronverbindingen. De verbindingsspecificatie-id voor [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc` . |
+
+>[!ENDTABS]
+
+## SFTP verbinden met Experience Platform
+
+De documentatie hieronder verstrekt informatie over hoe te om een server van SFTP aan Experience Platform te verbinden gebruikend APIs of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 
-- [Een SFTP-basisverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/sftp.md)
-- [De gegevensstructuur en inhoud van een cloudopslagbron verkennen met behulp van de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
-- [Een gegevensstroom maken voor een cloudopslagbron met behulp van de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
+* [Een SFTP-basisverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/sftp.md)
+* [De gegevensstructuur en inhoud van een cloudopslagbron verkennen met behulp van de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
+* [Een gegevensstroom maken voor een cloudopslagbron met behulp van de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI gebruiken
 
-- [Een SFTP-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/sftp.md)
-- [Een gegevensstroom maken voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+* [Een SFTP-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/sftp.md)
+* [Een gegevensstroom maken voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)

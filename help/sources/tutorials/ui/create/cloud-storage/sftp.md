@@ -2,9 +2,9 @@
 title: Een SFTP Source-verbinding maken in de gebruikersinterface
 description: Leer hoe u een SFTP-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
+source-git-commit: 9cd1232c9257d27b80ed57c26658b1e4058535e8
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -30,20 +30,7 @@ Als u reeds een geldige [!DNL SFTP] verbinding hebt, kunt u de rest van dit docu
 
 ### Vereiste referenties verzamelen
 
-Als u verbinding wilt maken met [!DNL SFTP] , moet u waarden opgeven voor de volgende verbindingseigenschappen:
-
-| Credentials | Beschrijving |
-| ---------- | ----------- |
-| `host` | De naam of het IP-adres dat aan de [!DNL SFTP] -server is gekoppeld. |
-| `port` | De [!DNL SFTP] serverpoort waarmee u verbinding maakt. Als deze waarde niet wordt opgegeven, wordt deze standaard ingesteld op `22` . |
-| `username` | De gebruikersnaam met toegang tot de [!DNL SFTP] -server. |
-| `password` | Het wachtwoord voor uw [!DNL SFTP] -server. |
-| `privateKeyContent` | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
-| `passPhrase` | De wachtwoordgroep of het wachtwoord voor het decoderen van de persoonlijke sleutel als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als PrivateKeyContent met een wachtwoord beveiligd is, moet deze parameter worden gebruikt met de wachtwoordzin van PrivateKeyContent als waarde. |
-| `maxConcurrentConnections` | Met deze parameter kunt u een maximumlimiet opgeven voor het aantal gelijktijdige verbindingen dat Platform maakt wanneer verbinding wordt gemaakt met uw SFTP-server. U moet deze waarde instellen op een waarde die kleiner is dan de limiet die door SFTP is ingesteld. **Nota**: Wanneer dit het plaatsen voor een bestaande rekening van SFTP wordt toegelaten, zal het slechts toekomstige dataflows en niet bestaande dataflows beïnvloeden. |
-| Mappad | Het pad naar de map waartoe u toegang wilt verlenen. [!DNL SFTP] -bron, kunt u het mappad opgeven waarmee u gebruikerstoegang tot de submap van uw keuze kunt opgeven. |
-
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om een nieuwe [!DNL SFTP] -account te maken voor verbinding met Platform.
+Lees de [[!DNL SFTP]  authentificatiegids ](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) voor gedetailleerde stappen op hoe te om uw authentificatiegeloofsbrieven terug te winnen.
 
 ## Verbinding maken met uw [!DNL SFTP] -server
 
@@ -81,13 +68,32 @@ De [!DNL SFTP] -bron ondersteunt zowel basisverificatie als verificatie via de o
 
 >[!TAB  Basisauthentificatie ]
 
-Als u basisverificatie wilt gebruiken, selecteert u **[!UICONTROL Password]** en geeft u de host- en poortwaarden op waarmee u verbinding wilt maken, naast uw gebruikersnaam en wachtwoord. Tijdens deze stap kunt u ook het pad naar de submap aangeven waartoe u toegang wilt verlenen. Selecteer **[!UICONTROL Connect to source]** als u klaar bent.
+Als u basisverificatie wilt gebruiken, selecteert u **[!UICONTROL Password]** en geeft u de juiste waarden op voor de volgende referenties:
+
+* host
+* poort
+* gebruikersnaam
+* password
+
+Tijdens deze stap kunt u ook uw maximale gelijktijdige verbindingen configureren, het mappad definiëren en het koppelen voor uw [!DNL SFTP] -server in- of uitschakelen. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
+
+Voor meer informatie over authentificatie, lees de gids over [ het verzamelen vereiste geloofsbrieven voor  [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
 
 ![ het nieuwe rekeningsscherm voor de bron SFTP die basisauthentificatie gebruiken ](../../../../images/tutorials/create/sftp/password.png)
 
 >[!TAB  SSH openbare zeer belangrijke authentificatie ]
 
-Als u SSH-gebruikersgegevens op basis van openbare sleutels wilt gebruiken, selecteert u **[!UICONTROL SSH public key]** en geeft u vervolgens uw host- en poortwaarden op, evenals de inhoud en wachtwoordgroep van uw persoonlijke sleutel. Tijdens deze stap kunt u ook het pad naar de submap aangeven waartoe u toegang wilt verlenen. Selecteer **[!UICONTROL Connect to source]** als u klaar bent.
+Als u SSH-gebruikersgegevens op basis van openbare sleutels wilt gebruiken, selecteert u **[!UICONTROL SSH public key]** en geeft u de juiste waarden op voor de volgende referenties:
+
+* host
+* poort
+* gebruikersnaam
+* inhoud van persoonlijke sleutel
+* passphrase
+
+Tijdens deze stap kunt u ook uw maximale gelijktijdige verbindingen configureren, het mappad definiëren en het koppelen voor uw [!DNL SFTP] -server in- of uitschakelen. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
+
+Voor meer informatie over authentificatie, lees de gids over [ het verzamelen vereiste geloofsbrieven voor  [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
 
 ![ het nieuwe rekeningsscherm voor de bron SFTP die SSH openbare sleutel gebruikt.](../../../../images/tutorials/create/sftp/ssh.png)
 
