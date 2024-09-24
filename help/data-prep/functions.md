@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Toewijzingsfuncties voor gegevenspremies
 description: Dit document introduceert de toewijzingsfuncties die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 5a4e0b3c97d315262ded35ca5bfada3612ed6db4
+source-git-commit: 1e06fa2f8a5685cf5debcc3b5279d7efab9af0c8
 workflow-type: tm+mt
-source-wordcount: '5805'
-ht-degree: 1%
+source-wordcount: '6024'
+ht-degree: 0%
 
 ---
 
@@ -178,6 +178,10 @@ Voor informatie over de eigenschap van het objecten exemplaar, zie hieronder de 
 | size_of | Retourneert de grootte van de invoer. | <ul><li>INPUT: **Vereiste** het voorwerp dat u probeert om de grootte van te vinden.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | update_array_append | Deze functie wordt gebruikt om alle elementen in de volledige invoerarray toe te voegen aan het einde van de array in Profile. Deze functie is **slechts** toepasselijk tijdens updates. Indien gebruikt in de context van tussenvoegsels, keert deze functie de input zoals is terug. | <ul><li>ARRAY: **Vereiste** de serie om de serie in het Profiel toe te voegen.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [ 123, 456 ] |
 | upsert_array_replace | Deze functie wordt gebruikt om elementen in een array te vervangen. Deze functie is **slechts** toepasselijk tijdens updates. Indien gebruikt in de context van tussenvoegsels, keert deze functie de input zoals is terug. | <ul><li>ARRAY: **Vereiste** de serie om de serie in het Profiel te vervangen.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [ 123, 456 ] |
+| [!BADGE  Beta ] {type=Informative} serie_to_string | Voegt de tekenreeksrepresentaties van de elementen in een array samen met het opgegeven scheidingsteken. Als de array multidimensionaal is, wordt deze samengevoegd tot één laag. **Nota**: Deze functie wordt gebruikt in bestemmingen. Lees de [ documentatie ](../destinations/ui/export-arrays-calculated-fields.md) voor meer informatie. | <ul><li>SEPARATOR: **Vereiste** de separator die wordt gebruikt om zich bij de elementen in de serie aan te sluiten.</li><li>ARRAY: **Vereiste** de serie die (na afvlakken) worden aangesloten.</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | &quot;Hello;world&quot; |
+| [!BADGE  Beta ]{type=Informative} filterArray* | Filtert de opgegeven array op basis van een predikaat. **Nota**: Deze functie wordt gebruikt in bestemmingen. Lees de [ documentatie ](../destinations/ui/export-arrays-calculated-fields.md) voor meer informatie. | <ul><li>ARRAY: **Vereiste** de serie om worden gefiltreerd</li><li>PREDICATE: **Vereiste** voorspelt dat op elk element van de bepaalde serie moet worden toegepast. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [ 5, 7 ] |
+| [!BADGE  Beta ]{type=Informative} transformArray* | Transformeert de opgegeven array op basis van een predikaat. **Nota**: Deze functie wordt gebruikt in bestemmingen. Lees de [ documentatie ](../destinations/ui/export-arrays-calculated-fields.md) voor meer informatie. | <ul><li>ARRAY: **Vereiste** de serie om worden getransformeerd.</li><li>PREDICATE: **Vereiste** voorspelt dat op elk element van de bepaalde serie moet worden toegepast. | transformArray(ARRAY, PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [ 6, 7, 8 ] |
+| [!BADGE  Beta ]{type=Informative} flattenArray* | Hiermee wordt de gegeven (multidimensionale) array samengevoegd tot een unidimensionale array. **Nota**: Deze functie wordt gebruikt in bestemmingen. Lees de [ documentatie ](../destinations/ui/export-arrays-calculated-fields.md) voor meer informatie. | <ul><li>ARRAY: **Vereiste** de serie om worden afgevlakt.</li></ul> | flattenArray(ARRAY) | flattenArray ([[ &quot;a&quot;, &quot;b&quot;], [ &quot;c&quot;, &quot;d&quot;]], [[ &quot;e&quot;], [ &quot;f&quot;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 
