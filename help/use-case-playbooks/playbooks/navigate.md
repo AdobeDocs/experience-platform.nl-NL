@@ -4,7 +4,7 @@ title: Navigeren naar Hoofdletters gebruiken
 description: Leer hoe u door een galerie met afspeelboeken kunt navigeren en aan de slag kunt gaan met een inspirerende sandbox.
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 0%
@@ -67,7 +67,7 @@ Configureer ook kanalen voor afspeelboeken die transactieberichten bevatten, zoa
 
 ### Push-kanaaloppervlak
 
-Controleer of de toepassingsoppervlakken zijn geconfigureerd via het Experience Platform of de interface Gegevensverzamelingen. Zo zien toepassingsoppervlakken er uit in de gegevensverzamelingsomgeving.
+Bevestig dat de kanaalconfiguraties of van het Experience Platform of de interface van de Inzamelingen van Gegevens worden gevormd. Zo zien kanaalconfiguraties er uit in de omgeving van gegevensverzamelingen.
 
 ## Volgende stappen {#next-steps}
 

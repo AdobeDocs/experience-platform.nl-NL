@@ -4,9 +4,9 @@ title: Ga aan de slag met Hoofdletters gebruiken
 description: Leer hoe u aan de slag gaat met de functie Hoofdletters gebruiken.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '928'
 ht-degree: 0%
 
 ---
@@ -105,11 +105,11 @@ Configureer ook kanalen voor afspeelboeken die transactieberichten bevatten, zoa
 
 ### Push-kanaaloppervlak
 
-Controleer of de toepassingsoppervlakken zijn geconfigureerd via het Experience Platform of de interface Gegevensverzamelingen. Zo zien toepassingsoppervlakken er uit in de gegevensverzamelingsomgeving.
+Bevestig dat de kanaalconfiguraties of van het Experience Platform of de interface van de Inzamelingen van Gegevens worden gevormd. Zo zien kanaalconfiguraties er uit in de omgeving van gegevensverzamelingen.
 
-<!-- ![App surfaces in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
+<!-- ![Channel configurations in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
-Selecteer vervolgens het kanaal, de platforms en de apps die u hebt bekeken in de configuraties van het oppervlak van de app. Selecteer **voorleggen** om de oppervlakte van het drukkanaal tot stand te brengen.
+Selecteer vervolgens het kanaal, de platformen en de apps die u hebt bekeken in de kanaalconfiguraties. Selecteer **voorleggen** om de oppervlakte van het drukkanaal tot stand te brengen.
 
 Lees de documentatie op [ hoe te opstellings de oppervlakken van het drukkanaal ](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
 

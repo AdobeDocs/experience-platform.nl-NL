@@ -2,9 +2,9 @@
 title: Foutopsporingsweergave duwen
 description: Deze handleiding bevat informatie over de weergave Push Debug in Adobe Experience Platform Assurance.
 exl-id: a9558ee2-2e80-4b0d-ab45-2020be85e634
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f9cc088cdda4323c80e35978fcde373cbba9204d
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '892'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Deze weergave is slechts ingeschakeld voor één client. Als u dus een andere cl
 
 ## Setup valideren
 
-Het tabblad **[!UICONTROL Validate Setup]** valideert en biedt aanvullende informatie over de pushinstellingen van de app. Er zijn drie deelvensters die validaties uitvoeren. Ze geven een groen vinkje weer als alle validaties succesvol zijn. Als er drie groene vinkjes zijn, is de app correct geconfigureerd voor pushberichten, schrijft de toepassing pushtokens naar het gebruikersprofiel en is een bijbehorende toepassingsoppervlak geconfigureerd.
+Het tabblad **[!UICONTROL Validate Setup]** valideert en biedt aanvullende informatie over de pushinstellingen van de app. Er zijn drie deelvensters die validaties uitvoeren. Ze geven een groen vinkje weer als alle validaties succesvol zijn. Als er drie groene vinkjes zijn, is app correct gevormd voor duw overseinen, schrijft duptokens aan het gebruikersprofiel, en heeft een bijbehorende kanaalconfiguratie gevormd.
 
 Als iets niet werkt zoals verwacht, zal er een alarm met details over hoe te om dat probleem op te lossen zijn:
 
@@ -49,11 +49,9 @@ Tot slot bevindt zich onder aan het deelvenster een koppeling waarmee dit specif
 
 ### Inloggegevens en configuratie van AppStore
 
-Dit deelvenster controleert of de toepassings-id en het berichtplatform dat in het profiel is opgeslagen, een overeenkomend toepassingsoppervlak hebben gemaakt. In een toepassingsoppervlak worden de pushgegevens voor de toepassing geüpload.
+In dit deelvenster wordt gecontroleerd of voor de toepassings-id en het berichtplatform dat in het profiel is opgeslagen, een overeenkomende kanaalconfiguratie is gemaakt. In een kanaalconfiguratie worden de pushgegevens voor de toepassing geüpload.
 
-Indien geldig, zal het profiel de naam van de toepassingsoppervlakte, toepassings identiteitskaart, en de naam van de overseinendienst tonen.
-
-Tot slot bevindt zich onder aan het deelvenster een koppeling waarmee dit specifieke toepassingsoppervlak op een nieuw tabblad wordt geopend.
+Indien geldig, zal het profiel de naam van de kanaalconfiguratie, toepassings identiteitskaart, en de naam van de overseinendienst tonen.
 
 ## Test push verzenden
 
@@ -71,9 +69,9 @@ In het deelvenster **[!UICONTROL Message]** kunt u een titel en tekst voor het b
 
 ### Push-doel
 
-In het deelvenster **[!UICONTROL Push Target]** kunt u aanpassen welk pushtoken en oppervlak van de app moeten worden gebruikt bij het verzenden van het pushbericht.
+In het deelvenster **[!UICONTROL Push Target]** kunt u aanpassen welke push-token en kanaalconfiguratie moeten worden gebruikt bij het verzenden van het pushbericht.
 
-Deze informatie wordt standaard verschaft als op het tabblad **[!UICONTROL Validate Setup]** drie groene vinkjes worden weergegeven. U kunt echter uw eigen pushtoken en toepassingsoppervlak opgeven, zelfs als uw app niet volledig is geconfigureerd.
+Deze informatie wordt standaard verschaft als op het tabblad **[!UICONTROL Validate Setup]** drie groene vinkjes worden weergegeven. Nochtans, kunt u uw eigen duptoken en kanaalconfiguratie verstrekken, zelfs als uw app niet volledig wordt gevormd.
 
 ![ Pane van het Doel ](./images/push-debug-view/target-pane.png)
 
