@@ -2,9 +2,9 @@
 title: Overzicht controlelogboeken
 description: Leer hoe u met auditlogboeken kunt zien wie welke acties in Adobe Experience Platform heeft uitgevoerd.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7ae5e9dc79b4e1f08d2bf98876b02db1967ccbe1
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1320'
 ht-degree: 1%
 
 ---
@@ -133,6 +133,22 @@ Selecteer **[!UICONTROL Download log]** als u de huidige lijst met auditlogs wil
 Selecteer in het dialoogvenster dat wordt weergegeven de gewenste indeling (**[!UICONTROL CSV]** of **[!UICONTROL JSON]** ) en selecteer vervolgens **[!UICONTROL Download]** . De browser downloadt het gegenereerde bestand en slaat het op uw computer op.
 
 ![ de dialoog van de dossierformaatselectie met [!UICONTROL Download] benadrukt.](../../images/audit-logs/select-download-format.png)
+
+## Waarschuwingen inschakelen {#enable-alerts}
+
+U kunt controlealarm toelaten om berichten voor de volgende regels te ontvangen:
+
+* Auditie maken
+* Publiek bijwerken
+* Publiek verwijderen
+* Gegevensset maken
+* Dataset bijwerken
+* Gegevensset verwijderen
+* Schema maken
+* Schema-update
+* Schema verwijderen
+
+Selecteer in de lijst de gewenste waarschuwing om u te abonneren op de ontvangst van berichten. Voor meer informatie over alarm, zie de gids op [ het intekenen aan alarm gebruikend UI ](../../../observability/alerts/ui.md).
 
 ## Controlelogbestanden beheren in de API
 
