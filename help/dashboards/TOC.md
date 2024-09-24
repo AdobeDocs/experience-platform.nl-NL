@@ -5,9 +5,9 @@ breadcrumb-title: Handleiding voor dashboards
 user-guide-description: Leer hoe u gegevens in Experience Platform kunt visualiseren via aanpasbare dashboards.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: 18d768f296d1f7087d05208fdff317b2fd9770af
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '135'
 ht-degree: 22%
 
 ---
@@ -29,6 +29,7 @@ ht-degree: 22%
       * Filters {#filters}
          * [Datumfilter](data-distiller/query-pro-mode/filters/date-filter.md)
          * [ Globale filter ](data-distiller/query-pro-mode/filters/global-filter.md)
+      * [Doorboor](data-distiller/query-pro-mode/drill-through.md)
       * [Meer weergeven](data-distiller/query-pro-mode/view-more.md)
       * [SQL weergeven](data-distiller/query-pro-mode/view-sql.md)
       * [Downloaden als CSV](data-distiller/query-pro-mode/download-csv.md)
@@ -37,12 +38,12 @@ ht-degree: 22%
    * [Profielen](guides/profiles.md)
    * [Accountprofielen](guides/account-profiles.md)
    * [Doelgroepen](guides/audiences.md)
-   * [Doelen](guides/destinations.md)
+   * [Bestemmingen](guides/destinations.md)
    * [Licentiegebruik](guides/license-usage.md)
 * Beschikbare inzichten {#insights}
    * [Profielen](insights/profiles.md)
    * [Doelgroepen](insights/audiences.md)
-   * [Doelen](insights/destinations.md)
+   * [Bestemmingen](insights/destinations.md)
    * [Accountprofielen](insights/account-profiles.md)
 * Dashboards aanpassen {#customize}
    * [Overzicht van aanpassingen](customize/overview.md)
