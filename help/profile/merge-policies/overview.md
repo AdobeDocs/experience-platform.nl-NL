@@ -4,9 +4,9 @@ title: Overzicht van beleid samenvoegen
 type: Documentation
 description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om de verenigde mening tot stand te brengen.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 5e8bbdf5b7b07c31a36730c86b177fce6041e319
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1270'
 ht-degree: 0%
 
 ---
@@ -71,11 +71,11 @@ Een organisatie kan een standaardsamenvoegbeleid maken dat door haar organisatie
 
 Elke organisatie kan veelvoudige fusiebeleid met betrekking tot één enkele XDM schemaklasse tot stand brengen, nochtans kunnen zij slechts één standaardsamenvoegbeleid hebben dat voor elke klasse wordt gedeclareerd. Uw organisatie zou bijvoorbeeld een standaardsamenvoegbeleid kunnen hebben met betrekking tot de [!DNL XDM Individual Profile] -klasse en een ander standaardsamenvoegbeleid voor een aangepaste productinventarisatie.
 
-Als u een nieuw samenvoegbeleid creeert en het plaatst als gebrek, zal het vorige standaardfusiebeleid automatisch door het systeem worden bijgewerkt om niet meer het gebrek te zijn.
+Als u een nieuw samenvoegbeleid creeert en het plaatst als gebrek, zal het vorige standaardfusiebeleid automatisch door het systeem worden bijgewerkt om niet meer het gebrek te zijn. Om het even welk publiek dat na dit punt in tijd wordt gecreeerd zal dit nieuwe standaardsamenvoegbeleid gebruiken.
 
 >[!WARNING]
 >
->De tellingen en het publiek van het profiel met een bestaand bijbehorend standaard samenvoegbeleid kunnen worden beïnvloed. Om het even welk publiek dat een standaard toegepaste samenvoegbeleid heeft zal aan het nieuwe standaardfusiebeleid worden bijgewerkt.
+>De tellingen en het publiek van het profiel met een bestaand bijbehorend standaard samenvoegbeleid kunnen worden beïnvloed. Bovendien, zal het publiek **niet** automatisch worden bijgewerkt om het nieuwe standaardsamenvoegbeleid te gebruiken, en zal het vorige fusiebeleid blijven gebruiken.
 
 ## Volgende stappen
 
