@@ -3,9 +3,9 @@ title: Samenvatting Gecodeerde Gegevens in Brongebruikersinterface Workspace
 description: Leer hoe u gecodeerde gegevens kunt invoeren in de UI-werkruimte voor bronnen.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 3eba8690dcf9c808495a00b7fd4558478606f628
+source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1442'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Lees voordat u verdergaat met deze zelfstudie de volgende documenten om de volge
 * Creeer een encryptiesleutel gebruikend de bronwerkruimte in Experience Platform UI.
    * Desgewenst kunt u ook uw eigen sleutelpaar voor tekenverificatie maken om een extra beveiligingslaag voor de gecodeerde gegevens te bieden.
 * Gebruik de openbare sleutel van uw encryptiesleutel om uw gegevens te coderen.
-* Plaats uw gecodeerde gegevens in uw provider voor cloudopslag. Tijdens deze stap, moet u ook ervoor zorgen dat u een steekproefdossier hebt dat als verwijzing kan worden gebruikt om uw brongegevens aan een Model van de Gegevens van de Ervaring in kaart te brengen (XDM) schema.
+* Plaats de gecodeerde gegevens in de cloudopslag. Tijdens deze stap moet u er ook voor zorgen dat u een voorbeeldbestand van uw gegevens in uw cloudopslag hebt dat als referentie kan worden gebruikt om uw brongegevens toe te wijzen aan een XDM-schema (Experience Data Model).
 * Gebruik uw bron van de de opslagpartij van de wolk en begin het proces van de gegevensopname in de bronwerkruimte in de UI van het Experience Platform.
 * Geef tijdens het maken van de bronverbinding de sleutel-id op die overeenkomt met de openbare sleutel waarmee u uw gegevens hebt versleuteld.
    * Als u ook het sleutelpaar voor handtekeningverificatie hebt gebruikt, moet u ook de sleutel-id voor tekenverificatie opgeven die overeenkomt met uw gecodeerde gegevens.
