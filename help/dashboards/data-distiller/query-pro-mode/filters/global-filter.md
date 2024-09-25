@@ -2,7 +2,7 @@
 title: Een globaal filter maken
 description: Leer hoe u uw gegevensinzichten kunt filteren met een aangepast, globaal toegepast filter.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5dd821383e1b1a7bd4998a6cf14a941bfdf3f26c
+source-git-commit: 581eb2a33f9bdfddc89c9d8dbf9fca8eb3725b1d
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 0%
@@ -66,4 +66,3 @@ Om de [!UICONTROL Filters] dialoog te openen die van elk van uw douanefilters ee
 Als u al uw aangepaste globale filters wilt wissen, selecteert u **[!UICONTROL Clear all]** in het dialoogvenster [!UICONTROL Filters] .
 
 ![ de dialoog van Filters met Duidelijk alle benadrukt.](../../../images/query-pro-mode/clear-all.png)
-

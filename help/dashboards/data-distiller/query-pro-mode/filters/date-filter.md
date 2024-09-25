@@ -2,9 +2,9 @@
 title: Een datumfilter maken
 description: Leer hoe u uw eigen inzichten op datum kunt filteren.
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: 77cedd351b5628d15c279fceabde735f4f93f392
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '900'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,60 @@ Als u met vraagparameters onbekend bent, zie de documentatie voor [ begeleiding 
 Als u een datumfilter wilt toepassen, selecteert u **[!UICONTROL Add filter]** en vervolgens **[!UICONTROL Date Filter]** in het vervolgkeuzemenu van de dashboardweergave.
 
 ![ A douanedashboard met Add filter en zijn dropdown benadrukt menu.](../../../images/query-pro-mode/add-filter.png)
+
+U krijgt de volgende filteropties voor de datum te zien.
+
+| Filter | Beschrijving |
+| --- | --- |
+| Geen aangepaste datum | Selecteer een of meer aangepaste datums uit meerdere vooraf ingestelde waarden. |
+| Aangepast datumbereik | Selecteer een of meer aangepaste datums met meerdere vooraf ingestelde waarden of geef een aangepast datumbereik op. |
+| Aangepaste datum | Selecteer een van de vooraf ingestelde waarden of geef de begindatum voor het dashboard op. |
+
+![ creeer de dialoog van de datumfilter met de drie benadrukte opties van de plukker van de douanedatum.](../../../images/query-pro-mode/create-date-filter.png)
+
+### Geen aangepast datumfilter maken
+
+Als u een vooraf gedefinieerd datumfilter wilt toepassen, selecteert u **[!UICONTROL No custom date]** en selecteert u vervolgens de vooraf gedefinieerde datumopties die u wilt opnemen. Gebruik ten slotte het vervolgkeuzemenu om het standaarddatumbereik te selecteren en selecteer vervolgens **[!UICONTROL Save]** .
+
+![ creeer de dialoog van de datumfilter met de filter van de no douanedatum en sparen benadrukte.](../../../images/query-pro-mode/no-custom-date-filter.png)
+
+U keert terug naar het dashboard, dat het standaarddatumbereik toont u eerder selecteerde. Gebruik het vervolgkeuzemenu om een ander vooraf ingesteld datumbereik te selecteren.
+
+![ een douanedashboard die van A de standaarddatumwaaier met benadrukt dropdown tonen.](../../../images/query-pro-mode/no-custom-date-filter-results.png)
+
+### Een aangepast datumbereikfilter maken
+
+Als u een filter voor een aangepast datumbereik wilt toepassen, selecteert u **[!UICONTROL Custom date range]** en selecteert u vervolgens de vooraf gedefinieerde datumopties die u wilt opnemen. Selecteer ten slotte **[!UICONTROL Custom]** om het standaarddatumbereik in te stellen. Gebruik de kalender om een datumbereik op te geven en selecteer vervolgens **[!UICONTROL Save]** .
+
+>[!NOTE]
+>
+>U hoeft geen vooraf gedefinieerde datumopties te selecteren.
+
+![ creeer de dialoog van de datumfilter met de filter van de de waaier van de douanedatum, douane, en sparen benadrukte.](../../../images/query-pro-mode/custom-date-range-filter.png)
+
+U keert terug naar het dashboard, dat de waaier van douanegegevens toont u eerder specificeerde. Gebruik het vervolgkeuzemenu om een ander vooraf ingesteld datumbereik te selecteren.
+
+![ een douanedashboard die de standaarddatumwaaier met de benadrukte douanedatum tonen.](../../../images/query-pro-mode/custom-date-range-filter-results.png)
+
+### Een aangepast datumfilter maken
+
+Als u een aangepast datumfilter wilt toepassen, selecteert u **[!UICONTROL Custom date]** en selecteert u de vooraf gedefinieerde datumopties die u wilt opnemen. Selecteer ten slotte **[!UICONTROL Custom]** en gebruik vervolgens de kalender om een begindatum te selecteren. Selecteer ten slotte **[!UICONTROL Save]** .
+
+>[!NOTE]
+>
+>U hoeft geen vooraf gedefinieerde datumopties te selecteren.
+
+![ creeer de dialoog van de datumfilter met de filter van de douanedatum, douane, en sparen benadrukte.](../../../images/query-pro-mode/custom-date-filter.png)
+
+U keert terug naar het dashboard, dat de douanegegevens toont u eerder specificeerde. Gebruik het vervolgkeuzemenu om een andere datum te selecteren.
+
+![ een douanedashboard die de standaarddatumwaaier met de benadrukte douanedatum tonen.](../../../images/query-pro-mode/custom-date-filter-results.png)
+
+## Een datumfilter verwijderen {#delete-date-filter}
+
+Om uw datumfilter te verwijderen selecteer het pictogram van de schrappingsfilter (![ het schrap filterpictogram.](/help/images/icons/filter-delete.png)).
+
+![ A douanedashboard met het benadrukte pictogram van de filterschrapping.](../../../images/query-pro-mode/delete-date-filter.png)
 
 ## SQL bewerken om parameters voor datumquery op te nemen {#include-date-parameters}
 
@@ -75,25 +129,3 @@ Selecteer vervolgens de juiste queryparameters in de vervolgkeuzemenu&#39;s.
 ![ Widget composer met het Web_date dropdown benadrukte menu.](../../../images/sql-insights/widget-composer-date-filter-dropdown.png)
 
 Selecteer ten slotte **[!UICONTROL Save and close]** om terug te keren naar het dashboard. Datumfilters zijn nu ingeschakeld voor alle inzichten met begin- en einddatumparameters.
-
-## Het datumfilter gebruiken
-
-Als u een aangepast datumfilter wilt gebruiken, selecteert u het kalenderpictogram en kiest u een begin- en einddatum in de kalender-weergave.
-
->[!IMPORTANT]
->
->Als u gewoon een datumfilter toevoegt, worden de diagrammen niet gewijzigd. U moet elk van uw inzichten uitgeven om uw gekozen begin en einddatum te omvatten.
-
-![ A douanedashboard met de benadrukte kalender van de datumfilter.](../../../images/query-pro-mode/date-filter.png)
-
-Zodra u een datumbereik van het dashboard hebt geselecteerd, worden de datumfilteropties in de widgetcomposer weergegeven voor inzichten die datumparameters in hun SQL hebben.
-
->[!NOTE]
->
->Als u een datumbereik op het dashboard selecteert, worden de schakelopties voor datumfilters weergegeven als onderdeel van de workflow voor het maken van inzichten.
-
-## Een datumfilter verwijderen {#delete-date-filter}
-
-Om uw datumfilter te verwijderen selecteer het pictogram van de schrappingsfilter (![ het schrap filterpictogram.](/help/images/icons/filter-delete.png)).
-
-![ A douanedashboard met het benadrukte pictogram van de filterschrapping.](../../../images/query-pro-mode/delete-date-filter.png)
