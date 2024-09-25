@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
 workflow-type: tm+mt
-source-wordcount: '2586'
+source-wordcount: '2619'
 ht-degree: 0%
 
 ---
@@ -42,9 +42,9 @@ ht-degree: 0%
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Verlopen van geautomatiseerde gegevenssets"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
 
-U kunt belangrijke informatie over het gebruik van licenties voor uw organisatie bekijken via het Adobe Experience Platform [!UICONTROL License usage] -dashboard. De hier weergegeven informatie wordt vastgelegd tijdens een dagelijkse momentopname van uw platforminstantie.
+U kunt belangrijke informatie over het gebruik van licenties voor uw organisatie bekijken via het Adobe Experience Platform [!UICONTROL License usage] -dashboard. De informatie die hier wordt weergegeven, wordt vastgelegd tijdens een dagelijkse momentopname van uw platforminstantie.
 
-De gebruiksrapporten van de vergunning verstrekken een hoge graad van granulariteit over uw metriek van het vergunningsgebruik. Het dashboard biedt gebruiksmaatstaven voor elk aangeschaft product, het geconsolideerde gebruik van metriek in alle productie- of ontwikkelingssandboxen en de gebruikstemetriek van een specifieke sandbox. De volgende Experience Platforms kunnen met gebruiksmetriek worden gevolgd: Real-time Customer Data Platform, Adobe Journey Optimizer, en Customer Journey Analytics.
+De gebruiksrapporten van de vergunning verstrekken een hoge graad van granulariteit over uw metriek van het vergunningsgebruik. Het dashboard biedt gebruiksmetriek voor elk aangeschaft product (en de bijbehorende invoegtoepassingen), het geconsolideerde gebruik van metriek in alle productie- of ontwikkelingssandboxen en de gebruikstemetriek van een specifieke sandbox. De volgende Experience Platforms kunnen met gebruiksmetriek worden gevolgd: Real-time Customer Data Platform, Adobe Journey Optimizer, en Customer Journey Analytics.
 
 Deze gids schetst hoe te om tot en met het dashboard van het vergunningsgebruik in UI toegang te hebben en te werken en verstrekt meer informatie betreffende de visualisaties die in het dashboard worden getoond.
 
@@ -52,7 +52,7 @@ Voor een algemeen overzicht van Platform UI, verwijs naar de [ gids UI van het E
 
 ## [!UICONTROL License usage] dashboardgegevens
 
-Op het dashboard van [!UICONTROL License usage] wordt een lijst weergegeven met alle Experience Platforms die u hebt aangeschaft. In deze lijst vindt u een momentopname van de licentiegegevens van uw organisatie voor Experience Platform in elke bijbehorende sandbox.
+Het dashboard van [!UICONTROL License usage] toont een lijst van alle producten van het Experience Platform die u en om het even welke toe:voegen-ons voor die producten hebt gekocht. Van dit dashboard, kunt u een momentopname van de vergunning-verwante gegevens van uw organisatie voor Experience Platform over om het even welke bijbehorende zandbak vinden.
 
 De gegevens in dit dashboard worden precies zo weergegeven als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of voorbeeld van de gegevens en het dashboard wordt niet in real-time bijgewerkt.
 
@@ -72,12 +72,16 @@ Als u naar het dashboard voor licentiegebruik in de gebruikersinterface van het 
 
 ## [!UICONTROL Overview] tab {#overview-tab}
 
-Op dit dashboard worden al uw Adobe Experience Platform-producten met licentie, inclusief invoegtoepassingen, weergegeven in een tabelindeling. De tabel bevat belangrijke informatie over het gebruik van uw licentie voor al uw beschikbare profielen.
+Het [!UICONTROL License Usage] dashboard toont twee afzonderlijke lijsten: **de producten van de Kern** en **toe:voegen-ons**.
+
+- **[!UICONTROL Core products]lijst**: Deze lijst maakt een lijst van de belangrijkste producten van Adobe Experience Platform die door uw organisatie worden vergunning gegeven. Elk kernproduct heeft zijn eigen metriek, gebruik het volgen, en boor-door meningen op het zandbakniveau. Deze kernproducten verstrekken de belangrijkste metriek voor het volgen, en om het even welke toe:voegen-ons zijn inbegrepen in deze metriek.
+
+- **[!UICONTROL Add-ons]lijst**: Deze lijst maakt een lijst van extra producten de waarvan vergunningsbedragen met de metriek worden gecombineerd die door de kernproducten wordt gesteund. Invoegtoepassingen hebben geen aparte metriek, maar verbeteren de gebruiksregistratie van de kernproducten waaraan zij zijn gekoppeld.
 
 | Kolomnaam | Beschrijving |
 |---|---|
 | **[!UICONTROL Product]** | De oplossing van de Adobe die door uw organisatie wordt vergunning gegeven. |
-| **[!UICONTROL Primary Metric]** | De primaire metrisch die voor het volgen binnen voor dat product wordt gebruikt. |
+| **[!UICONTROL Primary Metric]** | De primaire metrisch die voor het volgen binnen dat product wordt gebruikt. |
 | **[!UICONTROL License Amount]** | De gecontracteerde waarde voor het maximale bedrag van de primaire metrische waarde zoals overeengekomen in uw productlicentieovereenkomst. |
 | **[!UICONTROL Usage]** | De hoeveelheid primaire metrisch die wordt gebruikt. Deze waarde geeft het totale gebruik van die metrische waarde voor alle sandboxen aan, productie of ontwikkeling. |
 | **[!UICONTROL Usage %]** | Het percentage van de primaire metrische waarde dat wordt gebruikt op basis van uw licentiehoeveelheid. |
@@ -85,9 +89,9 @@ Op dit dashboard worden al uw Adobe Experience Platform-producten met licentie, 
 
 >[!NOTE]
 >
->Als gevolg van invoegtoepassingen worden boven op de [!UICONTROL License Amount] voor basisproducten zoals Real-time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics toevoegingen aan de [!UICONTROL License Amount] toegevoegd. Het gebruik van dat gelicentieerde bedrag (na de toe:voegen-ons) wordt door de basisproducten gevolgd. Als u bijvoorbeeld één verpakking met vijf sandboxen koopt, wordt de hoeveelheid van vijf toegevoegd aan die van het basisproduct. In dit geval wordt in de invoegtoepassing een [!UICONTROL License Amount] van één weergegeven en is het gebruik voor die invoegtoepassing &quot;leeg&quot; wanneer het gebruik door het basisproduct wordt gevolgd.
+>Licentiebedragen voor invoegtoepassingen zijn opgenomen in de [!UICONTROL License Amount] van de kernproducten. Als u bijvoorbeeld een pakket van vijf sandboxen als invoegtoepassing koopt, wordt de hoeveelheid toegevoegd aan die van het basisproduct. De add-ons lijst toont [!UICONTROL License Amount] specifiek voor toe:voegen-op, maar het daadwerkelijke gebruik wordt gevolgd door het basisproduct.
 
-De lijst wijst op primaire metrisch voor elk product, aangezien elk product talrijke metriek kan volgen.
+De lijsten wijzen op primaire metrisch voor elk product, aangezien elk product talrijke metriek kan volgen.
 
 ### Voorspeld gebruik {#predicted-usage}
 
@@ -111,16 +115,18 @@ Beheer en optimaliseer proactief uw licentiemiddelen op basis van inzichtelijke 
 >
 >De voorspellingen worden maandelijks vernieuwd. De datum van verfrist zich is inbegrepen in een infopictogram (![ Dit infopictogram.](../images/license-usage/info-icon.png) ) boven de kolomtitel.
 
-Als u een overzicht wilt zien van het gebruik van een productmachtiging, selecteert u een product in de lijst [!UICONTROL Overview] .
+Als u een overzicht wilt zien van het gebruik van de rechten van een product, selecteert u een product in de tabel [!UICONTROL Core products] .
 
+<!-- update image ... -->
 ![ [!UICONTROL License usage] [!UICONTROL Overview] met een product en de voorspelde benadrukte gebruikskolom.](../images/license-usage/product-predicted-usage.png)
 
-Het tabblad Samenvatting wordt weergegeven. U kunt de korrelige voorspellingen gebruiken die beschikbaar zijn op de tabbladen [!UICONTROL Summary] en [!UICONTROL Details] voor een geïnformeerde besluitvorming voor efficiënt gebruik van de licentie.
+Het tabblad Samenvatting wordt weergegeven. U kunt de korrelige voorspellingen op de tabbladen [!UICONTROL Summary] en [!UICONTROL Details] gebruiken om ervoor te zorgen dat u op de hoogte bent van de besluitvorming en de licentie efficiënt kunt gebruiken.
 
 >[!NOTE]
 >
 >Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe.
 
+<!-- update image ... -->
 ![ de summiere mening van een Product van het Platform met de voorspelde benadrukte gebruikskolom.](../images/license-usage/summary-predicted-usage.png)
 
 Het percentage van het voorspelde gebruik wordt als volgt bepaald:
@@ -163,7 +169,7 @@ Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetze
 >
 >1. Maak een productprofiel in de Adobe Admin Console.
 >2. Voeg onder Machtiging in de categorie Sandbox alle sandboxen toe die u wilt weergeven in het dashboard voor licentiegebruik.
->3. Voeg onder de categorie Machtiging voor dashboard van gebruiker de machtiging &#39;Licentiegebruiksdashboard weergeven&#39; toe.
+>3. Voeg onder de categorie Machtigingen voor het dashboard van de Gebruiker de machtiging &#39;Licentiegebruiksdashboard weergeven&#39; toe.
 
 ## Het tabblad [!UICONTROL Details] {#details-tab}
 
@@ -229,7 +235,7 @@ Het dashboard van het vergunningsgebruik rapporteert over verscheidene unieke me
 De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze cijfers variëren afhankelijk van de licenties die uw organisatie heeft aangeschaft. Raadpleeg de desbetreffende documentatie bij de productbeschrijving voor gedetailleerde definities van elke metrische waarde:
 
 | Licentie | Productbeschrijving |
-|---|---|
+| --- | --- |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [ Adobe Experience Platform ](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [ Experience Platform, de Diensten van de App, en de Intelligente Diensten ](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT-KLANTENGEGEVENSPLATFORM:OD</li><li>RT KLANTENGEGEVENSPLATFORM:OD PRFL NAAR 10M</li><li>RT KLANTENGEGEVENSPLATFORM:OD PRFL NAAR 50M</li></ul> | [ Adobe Real-time Customer Data Platform ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
