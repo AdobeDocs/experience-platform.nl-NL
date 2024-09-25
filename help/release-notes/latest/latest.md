@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2024
 description: In de release van september 2024 staat een opmerking voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 0cb134fe6b0a87571e01ada7946c4bbb7d4c346b
+source-git-commit: e93d27ef67802c5fbdffdacb3a0649d373a41a2d
 workflow-type: tm+mt
-source-wordcount: '1974'
-ht-degree: 25%
+source-wordcount: '2141'
+ht-degree: 23%
 
 ---
 
@@ -50,9 +50,11 @@ Experience Platform biedt meerdere dashboards waardoor u belangrijke inzichten o
 
 | Functie | Beschrijving |
 | --- | --- |
+| Toevoegingstabel voor licentiegebruik | Verbeter granulair zicht in vergunningsgebruik en beheer uw middelen van het Platform met specifieke lijsten voor kernproducten en toe:voegen-ons. De belangrijkste metriek van het spoor en analyseert voor elk kernproduct met boor-door meningen op het zandbakniveau. De metriek van de toe:voegen-op integreren naadloos met kernproductmetriek, die een uitvoerige mening van gebruik aanbieden. Dankzij de verbeterde zichtbaarheid kunt u het licentiebeheer optimaliseren en bronnen afstemmen op de behoeften van de organisatie. Zie de [[!UICONTROL License Usage] dashboardgids ](../../dashboards/guides/license-usage.md#overview-tab) voor meer informatie. |
 | Query Pro-modus - Algemene filterupgrades | Verbeter analyse met de nieuwe datumfilter van de Wijze van de Vraag Pro. Verfijn inzichten met dynamische datumparameters in uw SQL vragen en filtergegevens door specifieke tijdkaders. Kies vooraf ingestelde of aangepaste datumbereiken met een intuïtieve gebruikersinterface, zodat de dashboards voor alle gebruikers relevant blijven. Vereenvoudig workflows, houd precisie in stand en maak tijdig beslissingen. Lees de [ gids bij het creëren van datumfilters ](../../dashboards/data-distiller/query-pro-mode/filters/global-filter.md) voor meer informatie. |
 | Query Pro-modi - Boordoorloop | Ontgrendel diepere inzichten met de Boorfunctie van de Wijze van de Vraag Pro en navigeer naadloos van grafieken op hoog niveau aan gedetailleerde dashboards. Gebruik deze functie om moeiteloos over te stappen van overzichten naar diepgaande analyse en trends, klantgedrag en KPI&#39;s te verkennen. Automatische doorvoeropties voor filters en boor op meerdere niveaus zorgen voor consistente gegevens, zodat de exploratie soepel verloopt. Vereenvoudig workflows, houd context en versnelde beslissingen. Lees de [ geleidelijke gids bij het creëren van boor-door ](../../dashboards/data-distiller/query-pro-mode/drill-through.md) voor meer informatie. |
 | Modus Query Pro - Geavanceerde tabelkenmerken | Gebruik de geavanceerde tabelkenmerken van Query Pro-modus om de gegevensvisualisatie te stroomlijnen, de efficiëntie van de workflow te verbeteren en de gegevens helderder te maken. U kunt automatisch sorteren, vergroten of verkleinen en pagineren rechtstreeks vanuit aangepaste dashboards aan tabellen toevoegen. Sorteer kolommen om aan zeer belangrijke gegevens voorrang te geven, resize voor optimale leesbaarheid, en navigeer naadloos grote datasets zonder SQL vragen te wijzigen. Lees meer ](../../dashboards/data-distiller/query-pro-mode/view-more.md) gids &#39;[ Mening {om te leren hoe te om deze eigenschappen te integreren en uw gegevensinzichten op te heffen. |
+| Totale gegevensvolume | De maatstaf &quot;Gemiddelde rijvaardigheid van profiel&quot; is vervangen door de maatstaf &quot;Totaal gegevensvolume&quot;. Het totale gegevensvolume heeft betrekking op de totale hoeveelheid beschikbare gegevens die kan worden gebruikt met het realtime profiel van de klant voor service- en personalisatieworkflows. Meer details over deze verandering kunnen in de [ Totale gids van het Volume van Gegevens ](../../landing/license-usage-and-guardrails/total-data-volume.md) worden gevonden. |
 
 {style="table-layout:auto"}
 
@@ -153,7 +155,8 @@ Meer over de Dienst van de Vraag leren, lees het [ overzicht van de Dienst van d
 **Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
-| --- | --- |
+| ------- | ----------- |
+| Streaming segmenteringscriteria bijwerken | Vanaf de release van september 2024 zijn de criteria voor uw publiek om in aanmerking te komen voor streamingsegmentatie bijgewerkt. Meer informatie over deze veranderingen kan in [ worden gevonden die de aanpassing van de segmenteringsgeschiktheidscriteria ](../../segmentation/eligibility-criteria-update.md) stromen. |
 | Unified Search-implementatie | Het gedrag van het onderzoek binnen de Bouwer van het Segment zal nu Verenigde Onderzoek gebruiken. Dit maakt een robuustere ervaring mogelijk bij het beheren van en het zoeken naar publiek voor segmentlidmaatschap. Voor meer informatie over deze verandering, raadpleegt u de [handleiding voor Segment Builder](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 
 {style="table-layout:auto"}
