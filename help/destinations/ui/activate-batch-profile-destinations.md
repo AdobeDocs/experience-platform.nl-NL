@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 21fd5957da8914be8b4abfad5c78d1929f76d6f6
+source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '4029'
+source-wordcount: '3922'
 ht-degree: 0%
 
 ---
@@ -30,26 +30,6 @@ In dit artikel wordt uitgelegd welke workflow wordt vereist om het publiek in Ad
 Om publiek aan bestemmingen te activeren, moet u met succes [ verbonden aan een bestemming ](./connect-destination.md) hebben. Als u dit niet reeds hebt gedaan, ga naar de [ bestemmingscatalogus ](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
 
 ## Ondersteunde bestandsindelingen voor export {#supported-file-formats-export}
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_header"
->title="De einddatum voor deze gegevensstroom bijwerken"
->abstract="De einddatum voor deze gegevensstroom bijwerken"
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_body"
->title="De einddatum voor deze gegevensstroominhoud bijwerken"
->abstract="Vanwege recente updates voor deze bestemming is voor de gegevensstroom nu een einddatum vereist. Adobe heeft een standaardeinddatum ingesteld op 1 mei 2025. Werk de gegevens bij naar de gewenste einddatum. Anders worden de gegevens niet meer geëxporteerd op de standaarddatum."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template"
->title="Mappad bewerken"
->abstract="Gebruik verschillende beschikbare macro&#39;s om het mappad aan te passen waarin de gegevensset wordt geëxporteerd."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template_preview"
->title="Padvoorvertoning gegevensmap"
->abstract="Bekijk een voorvertoning van de mapstructuur die op uw opslaglocatie wordt gemaakt op basis van de macro&#39;s die u in dit venster hebt toegevoegd."
 
 De volgende bestandsindelingen worden ondersteund bij het exporteren van soorten publiek:
 
@@ -290,7 +270,7 @@ In deze stap moet u de profielkenmerken selecteren die u wilt toevoegen aan de b
 
    >[!NOTE]
    >
-   >Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen.
+   >Deze functie is in bètaversie beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot deze functie wilt aanvragen.
 
    ![ Opname die de afbeeldingsgebieden toont die door belemmering en daling opnieuw in volgorde worden geplaatst.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 

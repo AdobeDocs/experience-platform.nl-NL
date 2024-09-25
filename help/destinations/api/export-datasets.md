@@ -4,9 +4,9 @@ title: De datasets van de uitvoer door de Dienst API van de Stroom te gebruiken
 description: Leer hoe te om de Dienst API van de Stroom te gebruiken om datasets naar uitgezochte bestemmingen uit te voeren.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
+source-git-commit: 22a752e28fe3cc4cb3337b456e80ef1b273f6a71
 workflow-type: tm+mt
-source-wordcount: '3512'
+source-wordcount: '5095'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,19 @@ ht-degree: 0%
 >[!AVAILABILITY]
 >
 >* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP-pakket Premier en Ultimate, Adobe Journey Optimizer of Customer Journey Analytics hebben aangeschaft. Neem contact op met uw Adobe voor meer informatie.
+
+>[!IMPORTANT]
+>
+>**het punt van de Actie**: De [ versie van 2024 van Experience Platform ](/help/release-notes/latest/latest.md#destinations) introduceert de optie om een `endTime` datum voor de gegevensstroom van de uitvoerdataset te plaatsen. De Adobe introduceert ook een standaardeinddatum van 1 Mei 2025 voor alle gegevens van de datasetuitvoer dataflows die *voorafgaand aan de versie van september* worden gecreeerd. Voor om het even welke dataflows, moet u de einddatum in dataflow manueel vóór de einddatum bijwerken, anders uw uitvoer voor stop op die datum. Gebruik het Experience Platform UI om te bekijken welke dataflows aan einde op 1 Mei zullen worden geplaatst.
+>
+>Op dezelfde manier voor dataflows die u maakt zonder een `endTime` -datum op te geven, worden deze standaard ingesteld op een eindtijd van zes maanden vanaf het tijdstip waarop ze worden gemaakt.
+
+<!--
+
+>You can retrieve a list of such dataflows by performing the following API call: `https://platform.adobe.io/data/foundation/flowservice/flows?property=scheduleParams.endTime==UNIXTIMESTAMPTHATWEWILLUSE`
+>
+
+-->
 
 Dit artikel verklaart het werkschema wordt vereist om [!DNL Flow Service API] te gebruiken om [ datasets ](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw aangewezen plaats van de wolkenopslag, zoals [!DNL Amazon S3], plaatsen SFTP, of [!DNL Google Cloud Storage] uit te voeren die.
 
@@ -49,7 +62,7 @@ Momenteel, kunt u datasets naar de bestemmingen van de wolkenopslag uitvoeren di
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): alle gegevens die met succes in Adobe Experience Platform worden opgenomen, blijven in [!DNL Data Lake] als gegevenssets behouden. Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die een schema (kolommen) en gebieden (rijen) bevat. Datasets bevatten ook metagegevens die verschillende aspecten van de gegevens beschrijven die ze opslaan.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+   * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u moet weten om datasets naar de bestemmingen van de wolkenopslag in Platform uit te voeren.
 
@@ -96,7 +109,7 @@ Voor beschrijvingen van de termijnen die u in dit API leerprogramma zult ontmoet
 Alvorens de werkschema te beginnen om een dataset uit te voeren, identificeer de verbindingsspecificatie en stroom specificiteit IDs van de bestemming waarnaar u datasets wilt uitvoeren. Gebruik de onderstaande tabel ter referentie.
 
 
-| Doel | Verbindingsspecificatie | Stroomspecificatie |
+| Bestemming | Verbindingsspecificatie | Stroomspecificatie |
 ---------|----------|---------|
 | [!DNL Amazon S3] | `4fce964d-3f37-408f-9778-e597338a21ee` | `269ba276-16fc-47db-92b0-c1049a3c131f` |
 | [!DNL Azure Blob Storage] | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `95bd8965-fc8a-4119-b9c3-944c2c2df6d2` |
@@ -1955,13 +1968,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
         "interval": 3, // also supports 6, 9, 12 hour increments
-        "timeUnit": "hour", // also supports "day" for daily increments. Use "interval": 1 when you select "timeUnit": "day"
-        "startTime": 1675901210 // UNIX timestamp start time (in seconds)
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
 
+De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `scheduleParams` . Hiermee kunt u de exporttijden, frequentie, locatie en meer aanpassen voor het exporteren van uw gegevensset.
+
+| Parameter | Beschrijving |
+|---------|----------|
+| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
+| `timeUnit` | Selecteer `day` of `hour` afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
+| `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
+| `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
+| `endTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beëindigen. |
+| `foldernameTemplate` | Geef de verwachte mapnaamstructuur op in de opslaglocatie waar de geëxporteerde bestanden worden gedeponeerd. <ul><li><code> DATASET_ID</code> = <span> een uniek herkenningsteken voor de dataset.</span></li><li><code> BESTEMMING</code> = <span> de naam van de bestemming.</span></li><li><code> DATETIME</code> = <span> de datum en de tijd die als yyyyMMdd_HHmmss wordt geformatteerd.</span></li><li><code> EXPORT_TIME</code> = <span> de geplande tijd voor gegevens die als `exportTime=YYYYMMDDHHMM` worden geformatteerd.</span></li><li><code> DESTINATION_INSTANCE_NAME</code> = <span> de naam van de specifieke instantie van de bestemming.</span></li><li><code> DESTINATION_INSTANCE_ID</code> = <span> een uniek herkenningsteken voor de bestemmingsinstantie.</span></li><li><code> SANDBOX_NAME</code> = <span> de naam van het zandbakmilieu.</span></li><li><code> ORGANIZATION_NAME</code> = <span> de naam van de organisatie.</span></li></ul> |
+
+{style="table-layout:auto"}
 +++
 
 **Reactie**
@@ -2008,12 +2037,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `scheduleParams` . Hiermee kunt u de exporttijden, frequentie, locatie en meer aanpassen voor het exporteren van uw gegevensset.
+
+| Parameter | Beschrijving |
+|---------|----------|
+| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
+| `timeUnit` | Selecteer `day` of `hour` afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
+| `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
+| `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
+| `endTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beëindigen. |
+| `foldernameTemplate` | Geef de verwachte mapnaamstructuur op in de opslaglocatie waar de geëxporteerde bestanden worden gedeponeerd. <ul><li><code> DATASET_ID</code> = <span> een uniek herkenningsteken voor de dataset.</span></li><li><code> BESTEMMING</code> = <span> de naam van de bestemming.</span></li><li><code> DATETIME</code> = <span> de datum en de tijd die als yyyyMMdd_HHmmss wordt geformatteerd.</span></li><li><code> EXPORT_TIME</code> = <span> de geplande tijd voor gegevens die als `exportTime=YYYYMMDDHHMM` worden geformatteerd.</span></li><li><code> DESTINATION_INSTANCE_NAME</code> = <span> de naam van de specifieke instantie van de bestemming.</span></li><li><code> DESTINATION_INSTANCE_ID</code> = <span> een uniek herkenningsteken voor de bestemmingsinstantie.</span></li><li><code> SANDBOX_NAME</code> = <span> de naam van het zandbakmilieu.</span></li><li><code> ORGANIZATION_NAME</code> = <span> de naam van de organisatie.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2061,12 +2107,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `scheduleParams` . Hiermee kunt u de exporttijden, frequentie, locatie en meer aanpassen voor het exporteren van uw gegevensset.
+
+| Parameter | Beschrijving |
+|---------|----------|
+| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
+| `timeUnit` | Selecteer `day` of `hour` afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
+| `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
+| `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
+| `endTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beëindigen. |
+| `foldernameTemplate` | Geef de verwachte mapnaamstructuur op in de opslaglocatie waar de geëxporteerde bestanden worden gedeponeerd. <ul><li><code> DATASET_ID</code> = <span> een uniek herkenningsteken voor de dataset.</span></li><li><code> BESTEMMING</code> = <span> de naam van de bestemming.</span></li><li><code> DATETIME</code> = <span> de datum en de tijd die als yyyyMMdd_HHmmss wordt geformatteerd.</span></li><li><code> EXPORT_TIME</code> = <span> de geplande tijd voor gegevens die als `exportTime=YYYYMMDDHHMM` worden geformatteerd.</span></li><li><code> DESTINATION_INSTANCE_NAME</code> = <span> de naam van de specifieke instantie van de bestemming.</span></li><li><code> DESTINATION_INSTANCE_ID</code> = <span> een uniek herkenningsteken voor de bestemmingsinstantie.</span></li><li><code> SANDBOX_NAME</code> = <span> de naam van het zandbakmilieu.</span></li><li><code> ORGANIZATION_NAME</code> = <span> de naam van de organisatie.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2114,13 +2177,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
 
+De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `scheduleParams` . Hiermee kunt u de exporttijden, frequentie, locatie en meer aanpassen voor het exporteren van uw gegevensset.
+
+| Parameter | Beschrijving |
+|---------|----------|
+| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
+| `timeUnit` | Selecteer `day` of `hour` afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
+| `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
+| `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
+| `endTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beëindigen. |
+| `foldernameTemplate` | Geef de verwachte mapnaamstructuur op in de opslaglocatie waar de geëxporteerde bestanden worden gedeponeerd. <ul><li><code> DATASET_ID</code> = <span> een uniek herkenningsteken voor de dataset.</span></li><li><code> BESTEMMING</code> = <span> de naam van de bestemming.</span></li><li><code> DATETIME</code> = <span> de datum en de tijd die als yyyyMMdd_HHmmss wordt geformatteerd.</span></li><li><code> EXPORT_TIME</code> = <span> de geplande tijd voor gegevens die als `exportTime=YYYYMMDDHHMM` worden geformatteerd.</span></li><li><code> DESTINATION_INSTANCE_NAME</code> = <span> de naam van de specifieke instantie van de bestemming.</span></li><li><code> DESTINATION_INSTANCE_ID</code> = <span> een uniek herkenningsteken voor de bestemmingsinstantie.</span></li><li><code> SANDBOX_NAME</code> = <span> de naam van het zandbakmilieu.</span></li><li><code> ORGANIZATION_NAME</code> = <span> de naam van de organisatie.</span></li></ul> |
+
+{style="table-layout:auto"}
 +++
 
 **Reactie**
@@ -2167,12 +2246,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `scheduleParams` . Hiermee kunt u de exporttijden, frequentie, locatie en meer aanpassen voor het exporteren van uw gegevensset.
+
+| Parameter | Beschrijving |
+|---------|----------|
+| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
+| `timeUnit` | Selecteer `day` of `hour` afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
+| `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
+| `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
+| `endTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beëindigen. |
+| `foldernameTemplate` | Geef de verwachte mapnaamstructuur op in de opslaglocatie waar de geëxporteerde bestanden worden gedeponeerd. <ul><li><code> DATASET_ID</code> = <span> een uniek herkenningsteken voor de dataset.</span></li><li><code> BESTEMMING</code> = <span> de naam van de bestemming.</span></li><li><code> DATETIME</code> = <span> de datum en de tijd die als yyyyMMdd_HHmmss wordt geformatteerd.</span></li><li><code> EXPORT_TIME</code> = <span> de geplande tijd voor gegevens die als `exportTime=YYYYMMDDHHMM` worden geformatteerd.</span></li><li><code> DESTINATION_INSTANCE_NAME</code> = <span> de naam van de specifieke instantie van de bestemming.</span></li><li><code> DESTINATION_INSTANCE_ID</code> = <span> een uniek herkenningsteken voor de bestemmingsinstantie.</span></li><li><code> SANDBOX_NAME</code> = <span> de naam van het zandbakmilieu.</span></li><li><code> ORGANIZATION_NAME</code> = <span> de naam van de organisatie.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2220,12 +2316,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `scheduleParams` . Hiermee kunt u de exporttijden, frequentie, locatie en meer aanpassen voor het exporteren van uw gegevensset.
+
+| Parameter | Beschrijving |
+|---------|----------|
+| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
+| `timeUnit` | Selecteer `day` of `hour` afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
+| `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
+| `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
+| `endTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beëindigen. |
+| `foldernameTemplate` | Geef de verwachte mapnaamstructuur op in de opslaglocatie waar de geëxporteerde bestanden worden gedeponeerd. <ul><li><code> DATASET_ID</code> = <span> een uniek herkenningsteken voor de dataset.</span></li><li><code> BESTEMMING</code> = <span> de naam van de bestemming.</span></li><li><code> DATETIME</code> = <span> de datum en de tijd die als yyyyMMdd_HHmmss wordt geformatteerd.</span></li><li><code> EXPORT_TIME</code> = <span> de geplande tijd voor gegevens die als `exportTime=YYYYMMDDHHMM` worden geformatteerd.</span></li><li><code> DESTINATION_INSTANCE_NAME</code> = <span> de naam van de specifieke instantie van de bestemming.</span></li><li><code> DESTINATION_INSTANCE_ID</code> = <span> een uniek herkenningsteken voor de bestemmingsinstantie.</span></li><li><code> SANDBOX_NAME</code> = <span> de naam van het zandbakmilieu.</span></li><li><code> ORGANIZATION_NAME</code> = <span> de naam van de organisatie.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2345,10 +2458,15 @@ Houd rekening met het verschil in bestandsindeling tussen de twee bestandstypen 
 
 * Bij het exporteren van gecomprimeerde JSON-bestanden is de geëxporteerde bestandsindeling `json.gz`
 * Bij het exporteren van gecomprimeerde parketbestanden is de geëxporteerde bestandsindeling `gz.parquet`
+* JSON-bestanden kunnen alleen in de gecomprimeerde modus worden geëxporteerd.
 
 ## API-foutafhandeling {#api-error-handling}
 
 De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Verwijs naar [ API statuscodes ](/help/landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform voor meer informatie bij het interpreteren van foutenreacties.
+
+## Veelgestelde vragen {#faq}
+
+Bekijk a [ lijst van vaak gestelde vragen ](/help/destinations/ui/export-datasets.md#faq) over datasetuitvoer.
 
 ## Volgende stappen {#next-steps}
 
