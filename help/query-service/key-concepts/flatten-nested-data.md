@@ -3,7 +3,7 @@ keywords: Experience Platform;query-service;Query-service;geneste gegevensstruct
 title: Geneste gegevensstructuren samenvoegen voor gebruik met BI-gereedschappen
 description: In dit document wordt uitgelegd hoe u XDM-schema's voor alle tabellen en weergaven tijdens een sessie afvlakt wanneer u BI-gereedschappen van derden gebruikt met Query Service.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
 source-wordcount: '853'
 ht-degree: 0%
@@ -56,7 +56,7 @@ prod:all?FLATTEN
 
 In het voorbeeldschema dat in deze handleiding wordt gebruikt, wordt de standaardveldgroep [!UICONTROL Commerce Details] gebruikt, die de `commerce` -objectstructuur en de `productListItems` -array gebruikt. Zie de documentatie XDM voor [ meer informatie over de [!UICONTROL Commerce Details] gebiedsgroep ](../../xdm/field-groups/event/commerce-details.md). In de onderstaande afbeelding ziet u een weergave van de schemastructuur.
 
-![ het schemadiagram van A van de het gebiedsgroep van Details van Commerce met inbegrip van `commerce` en `productListItems` structuren.](../images/essential-concepts/commerce-details.png)
+![ het schemadiagram van A van de het gebiedsgroep van Details van Commerce met inbegrip van `commerce` en `productListItems` structuren.](../images/key-concepts/commerce-details.png)
 
 Als uw hulpmiddel van BI geen genestelde gegevensstructuren steunt, kan het moeilijk zijn om van genestelde gebieden van verwijzingen te voorzien als zij geserialiseerde waarden (zoals `commerce` en `productListItems` in het voorbeeldschema) bevatten. Deze waarden kunnen verschijnen als delen van één gecodeerd `commerce` tekenreeksveld en zijn realistisch gezien niet onbruikbaar.
 

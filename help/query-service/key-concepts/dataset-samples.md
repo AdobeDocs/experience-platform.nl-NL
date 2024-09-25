@@ -2,9 +2,9 @@
 title: Gegevenssetvoorbeelden
 description: De de steekproefdatasets van de Dienst van de vraag laten u toe om verkennende vragen over grote gegevens met zeer gereduceerde verwerkingstijd ten koste van vraagnauwkeurigheid te leiden. Deze gids verstrekt informatie over hoe te om uw steekproeven voor benaderende vraagverwerking te beheren
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 28fe8ec5a589b8d181ba2f888d50fa9d2d7d4996
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -17,12 +17,13 @@ Aangezien vele gebruikers geen nauwkeurig antwoord voor een gezamenlijke verrich
 
 Om u te helpen uw steekproeven voor benaderende vraagverwerking beheren, steunt de Dienst van de Vraag de volgende verrichtingen voor datasetsteekproeven:
 
-- [Maak een uniforme steekproef voor willekeurige gegevenssets.](#create-a-sample)
-- [Optioneel filtercriteria opgeven](##optional-filter-criteria)
-- [Bekijk de lijst van steekproeven voor een lijst ADLS.](#view-list-of-samples)
-- [Vraag de steekproefdatasets direct.](#query-sample-datasets)
-- [Verwijder een voorbeeld.](#delete-a-sample)
-- Verwijder gekoppelde samples wanneer de oorspronkelijke ADLS-tabel wordt verwijderd.
+- [Gegevenssetvoorbeelden](#dataset-samples)
+   - [Aan de slag {#get-started}](#getting-started-get-started)
+   - [Een uniforme steekproef voor willekeurige gegevenssets maken {#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [Optioneel filtercriteria opgeven {#optional-filter-criteria}](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [De lijst met voorbeelden weergeven {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
+   - [De voorbeeldgegevensset opvragen {#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
+   - [Gegevenssetvoorbeelden verwijderen {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
 
 ## Aan de slag {#get-started}
 
@@ -32,7 +33,7 @@ Als u de benaderende verwerkingsmogelijkheden voor query&#39;s die in dit docume
 >
 >U moet de zittingsvlag toelaten telkens als u login aan Platform.
 
-![ de Redacteur van de Vraag met &quot;SET qp=true;&quot;benadrukt bevel.](../images/essential-concepts/set-session-flag.png)
+![ de Redacteur van de Vraag met &quot;SET qp=true;&quot;benadrukt bevel.](../images/key-concepts/set-session-flag.png)
 
 ## Een uniforme steekproef voor een willekeurige gegevensset maken {#create-a-sample}
 
