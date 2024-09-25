@@ -5,7 +5,7 @@ description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewen
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '2508'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
