@@ -4,12 +4,12 @@ description: In de release van september 2024 staat een opmerking voor Adobe Exp
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 50b0387dacb3e995d9c88206ef968ddc53edb14c
 workflow-type: tm+mt
-source-wordcount: '1822'
-ht-degree: 17%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Aanvullende informatie voor Adobe Experience Platform.
+# Aanvullende informatie voor Adobe Experience Platform
 
 **Releasedatum: woensdag 24 september 2024**
 
@@ -27,15 +27,15 @@ Updates voor bestaande functies en documentatie in Adobe Experience Platform:
 
 ## Waarschuwingen {#alerts}
 
-Met Experience Platform kunt u zich abonneren op gebeurtenisgebaseerde waarschuwingen voor verschillende platformactiviteiten. U kunt zich abonneren op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de gebruikersinterface van het platform en u kunt ervoor kiezen waarschuwingsberichten te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
+Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarschuwingen voor verschillende platformactiviteiten. U kunt zich aanmelden op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de gebruikersinterface van het platform, en u kunt ervoor kiezen waarschuwingsmeldingen te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
 | Ondersteuning van ontwikkelingssandboxen | U kunt [ nu aan alarm ](../../observability/alerts/ui.md) in zowel productie als ontwikkelingszandbakken intekenen, toelatend naadloze controle over alle milieu&#39;s. |
 | E-mailsjablonen | [ E-mailalarm ](../../observability/alerts/ui.md) omvat nu gedetailleerde activa informatie, die u verzekeren alle zeer belangrijke details bij uw vingertoppen hebt. |
-| Verbeterde aanpassing | U kunt [ waakzame drempels ](../../observability/alerts/ui.md#alert-threshold) nu vormen die grotere flexibiliteit aanbieden om alarm aan uw specifieke behoeften voor de volgende waakzame types aan te passen:<br><ul><li>Vertraging segmenttaak</li><li>Vertraging bij exporteren segment</li><li>Uitvoervertraging bestemming</li><li>Vertraging bij uitvoering identiteitsservicestroom</li><li>Vertraging bij uitvoering van profielstroom</li><li>Bronnen: Vertraging bij uitvoering</li><li>Vertraging bij uitvoeren query</li><li>Activeringssnelheid overschreden</li><li>Bronopinievormingsfoutfrequentie overschreden</ul> |
+| Verbeterde aanpassing | U kunt [ waakzame drempels ](../../observability/alerts/ui.md#alert-threshold) nu vormen die grotere flexibiliteit aanbieden om alarm aan uw specifieke behoeften voor de volgende waakzame types aan te passen:<br><ul><li>Vertraging segmenttaak</li><li>Vertraging bij exporteren segment</li><li>Uitvoervertraging bestemming</li><li>Vertraging bij uitvoering identiteitsservicestroom</li><li>Vertraging bij uitvoering van profielstroom</li><li>Bronnen: Vertraging bij uitvoering</li><li>Vertraging bij het uitvoeren van query&#39;s</li><li>Activeringssnelheid overschreden</li><li>Bronopinievormingsfoutfrequentie overschreden</ul> |
 | Uitgebreide waarschuwingen | Het alarm van de gebeurtenisinformatie van de controle is nu beschikbaar voor abonnement op de volgende [ waakzame regels ](../../observability/alerts/rules.md):<br><ul><li>Auditie maken</li><li>Publiek bijwerken</li><li>Publiek verwijderen</li><li>Gegevensset maken</li><li>Dataset bijwerken</li><li>Gegevensset verwijderen</li><li>Schema maken</li><li>Schema-update</li><li>Schema verwijderen. |
 
 {style="table-layout:auto"}
@@ -46,7 +46,7 @@ Voor meer informatie over alarm, lees het [[!DNL Observability Insights]  overzi
 
 Experience Platform biedt meerdere dashboards waardoor u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -56,25 +56,25 @@ Experience Platform biedt meerdere dashboards waardoor u belangrijke inzichten o
 
 {style="table-layout:auto"}
 
-Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestemmingen te verlenen en douanegidgets tot stand te brengen, begin door het [ overzicht van dashboards ](../../dashboards/home.md) te lezen.
+Voor meer informatie over dashboards, met inbegrip van hoe u toegangsrechten verleent en aangepaste widgets maakt, raadpleegt u eerst het [overzicht van dashboards](../../dashboards/home.md).
 
 ## Gegevensvoorbereiding {#data-prep}
 
-Gegevens gebruiken prep om gegevens toe te wijzen, om te zetten en te bevestigen aan en van het Model van de Gegevens van de Ervaring (XDM).
+Gebruik gegevensvoorbereiding om gegevens toe te wijzen, te transformeren en te valideren van en naar Experience-datamodel (XDM).
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE  Beta ] {type=Informative} Nieuwe functies van Prep van Gegevens voor gebruik in Doelen | U kunt nu de volgende arrayfuncties gebruiken voor het gebruik van Doelen:<ul><li>`array_to_string`</li><li>`filterArray`</li><li>`transformArray`</li><li>`flattenArray`</li></ul> Voor meer informatie, lees de [ gegevens prep functies gids ](../../data-prep/functions.md#arrays). |
+| [!BADGE  Beta ] {type=Informative} Nieuwe functies van Prep van Gegevens voor gebruik in Doelen | U kunt nu de volgende arrayfuncties gebruiken voor het gebruik van Doelen:<ul><li>`array_to_string`</li><li>`filterArray`</li><li>`transformArray`</li><li>`flattenArray`</li></ul> Voor meer informatie, raadpleegt u de [handleiding voor functies voor gegevensvoorbereiding](../../data-prep/functions.md#arrays). |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de Prep van Gegevens, lees het [ Overzicht van de Prep van Gegevens ](../../data-prep/home.md).
+Voor meer informatie over gegevensvoorbereiding, raadpleegt u het [overzicht van gegevensvoorbereiding](../../data-prep/home.md).
 
 ## Bestemmingen {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integraties met bestemmingsplatforms die zorgen voor de naadloze activering van gegevens van Adobe Experience Platform. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s te activeren.
+[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 **Nieuwe of bijgewerkte bestemmingen** {#new-updated-destinations}
 
@@ -92,11 +92,11 @@ Voor meer informatie over de Prep van Gegevens, lees het [ Overzicht van de Prep
 
 {style="table-layout:auto"}
 
-Voor meer informatie leest u het [overzicht van bestemmingen](../../destinations/home.md).
+Voor meer informatie raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
 ## Experience-datamodel (XDM) {#xdm}
 
-XDM is een open-sourcespecificatie die algemene structuren en definities (schema&#39;s) biedt voor gegevens die in Adobe Experience Platform worden geïmporteerd. Door de normen van XDM te volgen kunnen alle gegevens van de klantervaring in een algemene weergave worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
+XDM is een open-bronspecificatie die algemene structuren en definities (schema&#39;s) biedt voor gegevens die in Adobe Experience Platform worden geïmporteerd. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
 
 **Bijgewerkte functies**
 
@@ -110,7 +110,7 @@ Voor meer informatie over XDM, lees het [ XDM overzicht van het Systeem ](../../
 
 ## Identiteitsservice {#identity-service}
 
-Met Adobe Experience Platform Identity Service krijgt u een uitgebreid beeld van uw klanten en hun gedrag door identiteiten op verschillende apparaten en systemen te koppelen, zodat u in real time een impactvolle, persoonlijke digitale ervaring kunt bieden.
+Met Identity Service van Adobe Experience Platform krijgt u een uitgebreid beeld van uw klanten en hun gedrag door identiteiten op verschillende apparaten en systemen te koppelen, zodat u in real-time een impactvolle, persoonlijke digitale ervaring kunt bieden.
 
 **Bijgewerkte documentatie**
 
@@ -121,11 +121,11 @@ Met Adobe Experience Platform Identity Service krijgt u een uitgebreid beeld van
 
 {style="table-layout:auto"}
 
-Voor meer informatie over Identity Service leest u het [Identity Service-overzicht](../../identity-service/home.md).
+Voor meer informatie over Identity Service, raadpleegt u het [overzicht van Identity Service](../../identity-service/home.md).
 
 ## Query-service {#query-service}
 
-Met Query Service kunt u standaard-SQL gebruiken om query&#39;s uit te voeren op gegevens in Adobe Experience Platform [!DNL data lake] . U kunt zich bij om het even welke datasets van gegevens aansluiten meer en de vraagresultaten vangen als nieuwe dataset voor gebruik in rapportering, de Wetenschap van Gegevens Workspace, of voor opname in het Profiel van de Klant in real time.
+Met de Query-service kunt u standaard SQL gebruiken om query&#39;s uit te voeren op gegevens in Adobe Experience Platform [!DNL data lake]. U kunt zich bij om het even welke datasets van gegevens aansluiten meer en de vraagresultaten vangen als nieuwe dataset voor gebruik in rapportering, de Wetenschap van Gegevens Workspace, of voor opname in het Profiel van de Klant in real time.
 
 **Bijgewerkte functies**
 
@@ -142,13 +142,13 @@ Meer over de Dienst van de Vraag leren, lees het [ overzicht van de Dienst van d
 
 ## Segmentatieservice {#segmentation-service}
 
-[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
+[!DNL Segmentation Service] definieert een specifieke subset van profielen door de criteria te beschrijven die een groep personen aan wie marketing kan worden aangeboden binnen uw klantenbestand onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Unified Search-implementatie | Het gedrag van het onderzoek binnen de Bouwer van het Segment zal nu Verenigde Onderzoek gebruiken. Dit maakt een robuustere ervaring mogelijk bij het beheren van en het zoeken naar publiek voor segmentlidmaatschap. Voor meer informatie over deze verandering, lees de [ gids van de Bouwer van het Segment ](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
+| Unified Search-implementatie | Het gedrag van het onderzoek binnen de Bouwer van het Segment zal nu Verenigde Onderzoek gebruiken. Dit maakt een robuustere ervaring mogelijk bij het beheren van en het zoeken naar publiek voor segmentlidmaatschap. Voor meer informatie over deze verandering, raadpleegt u de [handleiding voor Segment Builder](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 
 {style="table-layout:auto"}
 
@@ -158,7 +158,7 @@ Voor meer informatie over [!DNL Segmentation Service], lees het [ overzicht van 
 
 Experience Platform biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
-Gebruik bronnen in Experience Platform om gegevens uit een Adobe-toepassing of een gegevensbron van derden op te nemen.
+Gebruik bronnen in Experience Platform om gegevens vanuit een Adobe-applicatie of een databron van derden toe te voegen.
 
 **Bijgewerkte functie**
 
@@ -168,8 +168,8 @@ Gebruik bronnen in Experience Platform om gegevens uit een Adobe-toepassing of e
 | Algemene beschikbaarheid van [!DNL Snowflake Streaming] source | De [!DNL Snowflake Streaming] -bron bevindt zich nu in GA. Gebruik deze bron om gegevens van uw [!DNL Snowflake] -account naar het Experience Platform te streamen. Lees het [[!DNL Snowflake Streaming]  overzicht ](../../sources/connectors/databases/snowflake-streaming.md) voor meer informatie. |
 | Ondersteuning voor verificatie van serviceaccounts in [!DNL Google BigQuery] | U kunt uw [!DNL Google BigQuery] -account nu met Experience Platform verbinden via verificatie van serviceaccount. Lees het [[!DNL Google BigQuery]  overzicht ](../../sources/connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) voor meer informatie. <br> ![ Beeld van het gebruikersinterface van het Experience Platform die de Edit planning en omslagoptie in de het plannen stap benadrukt.](../2024/assets/september/service_auth.png " de authentificatie van de Dienst voor Google BigQuery."){width="250" align="center" zoomable="yes"} |
 | Ondersteuning voor het overslaan van voorbeeldgegevensvoorvertoning | U kunt nu de optie inschakelen om de voorvertoning van gegevens over te slaan wanneer u een bronverbinding maakt met de volgende bronnen: <ul><li>[[!DNL Google BigQuery]](../../sources/tutorials/ui/create/databases/bigquery.md#skip-preview-of-sample-data)</li><li>[[!DNL Salesforce]](../../sources/tutorials/ui/create/crm/salesforce.md#skip-preview-of-sample-data)</li><li>[[!DNL Snowflake]](../../sources/tutorials/ui/create/databases/snowflake.md#skip-preview-of-sample-data)</li></ul> U kunt gegevensvoorvertoning overslaan om een time-out te omzeilen die kan optreden bij het invoeren van grote batchgegevens. Als u dit doet, voorkomt u mogelijk de automatische validatie van uw berekende en vereiste velden. Als u ervoor kiest om de gegevensvoorvertoning over te slaan, moet u de berekende en vereiste velden mogelijk handmatig valideren tijdens de toewijzing. |
-| Ondersteuning voor het uitschakelen van chunking in [!DNL SFTP] | U kunt nu een instelling configureren waarmee u het afknippen in de [!DNL SFTP] -bron kunt uitschakelen. Lees het [[!DNL SFTP]  overzicht ](../../sources/connectors/cloud-storage/sftp.md) voor meer informatie. |
+| Ondersteuning voor het uitschakelen van chunking in [!DNL SFTP] | U kunt nu een instelling configureren waarmee u het afknippen in de [!DNL SFTP] -bron kunt uitschakelen. Lees het [[!DNL SFTP] overzicht](../../sources/connectors/cloud-storage/sftp.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie raadpleegt u het [ overzicht van bronnen ](../../sources/home.md).
+Voor meer informatie, raadpleegt u het [overzicht van bronnen](../../sources/home.md).
