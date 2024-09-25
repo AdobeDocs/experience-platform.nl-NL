@@ -4,8 +4,8 @@ description: In de release van september 2024 staat een opmerking voor Adobe Exp
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 50b0387dacb3e995d9c88206ef968ddc53edb14c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1822'
+ht-degree: 27%
 
 ---
 
