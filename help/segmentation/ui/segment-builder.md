@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
+source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
-source-wordcount: '4630'
+source-wordcount: '4697'
 ht-degree: 0%
 
 ---
@@ -98,6 +98,11 @@ Zodra de rapportsuites in kaart zijn gebracht, kunt u deze onlangs in kaart gebr
 | Meerdere rapportsuites | Bij generieke variabelen worden geen beschrijvingen van vriendelijke namen opgenomen. <br><br>**Voorbeeld:** eVar2 | <ul><li>Elk veld met meerdere beschrijvingen wordt algemeen weergegeven. Dit betekent dat er geen vriendelijke namen worden weergegeven in de gebruikersinterface.</li><li>De vragen kunnen gegevens van om het even welke datasets gebruiken die de eVar bevatten, die in gemengde of onjuiste resultaten kunnen resulteren.</li></ul> | De vraag gebruikt correct gecombineerde resultaten van veelvoudige datasets. |
 
 ### Doelgroepen
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentBuilder_b2b_decomposition"
+>title="Complexe evaluatie"
+>abstract="De volgende expressie is te gecompliceerd om als één publiek te worden uitgedrukt. Volg onderstaande stappen om zowel B2B-regels als op mensen gebaseerde gebeurtenissen in dezelfde segmentdefinitie te gebruiken.<ol><li>Creeer een segmentdefinitie die slechts naar de op mensen-gebaseerde-gebeurtenissen verwijst, en bewaar het als zijn eigen segmentdefinitie.</li><li>In een nieuwe segmentdefinitie, voer de eerder gecreeerde segmentdefinitie terwijl het verwijzen naar de B2B-regels in.</li></ol>"
 
 >[!NOTE]
 >
