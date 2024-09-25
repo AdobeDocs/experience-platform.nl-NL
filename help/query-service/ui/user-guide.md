@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 7ba9eb6891657e7f3d7ebbd41314b7973e31ea61
 workflow-type: tm+mt
-source-wordcount: '2349'
+source-wordcount: '2720'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,12 @@ De vragen die van de Redacteur van de Vraag worden uitgevoerd stellen interactie
 
 Gebruikend de Redacteur van de Vraag, kunt u schrijven, uitvoeren en sparen vragen voor de gegevens van de klantenervaring. Alle uitgevoerde vragen, of opgeslagen in de Redacteur van de Vraag zijn beschikbaar aan alle gebruikers in uw organisatie met toegang tot de Dienst van de Vraag.
 
+### Databasekiezer {#database-selector}
+
+Selecteer een gegevensbestand aan vraag van het drop-down menu in het hoogste recht van de Redacteur van de Vraag. De geselecteerde database wordt weergegeven in de vervolgkeuzelijst.
+
+![ de Redacteur van de Vraag met het benadrukte gegevensbestanddropdown menu.](../images/ui/query-editor/database-dropdown.png)
+
 ### Instellingen {#settings}
 
 Een instellingenpictogram boven het invoerveld van de Query Editor bevat opties voor het in-/uitschakelen van donker thema of voor het automatisch aanvullen.
@@ -66,9 +72,6 @@ Om donkere of lichte thema&#39;s toe te laten, selecteer het montagespictogram (
 De redacteur van de Vraag stelt automatisch potentiële SQL sleutelwoorden samen met lijst of kolomdetails voor de vraag voor aangezien u het schrijft. De functie voor automatisch aanvullen is standaard ingeschakeld en kan op elk gewenst moment worden uitgeschakeld of ingeschakeld via de instellingen in de Query Editor.
 
 De auto-volledige configuratie het plaatsen is per gebruiker en voor de opeenvolgende logins voor die gebruiker herinnerd. Als u deze functie uitschakelt, worden meerdere metagegevensopdrachten niet verwerkt en worden aanbevelingen gedaan die de snelheid van de auteur bij het bewerken van query&#39;s ten goede komen.
-
-<!-- Currently editing the auto complete setting info. -->
-
 
 
 ### Meerdere opeenvolgende query&#39;s uitvoeren {#execute-multiple-sequential-queries}
@@ -112,17 +115,7 @@ Om uw ontwikkelingstijd te minimaliseren, wordt u geadviseerd om uw vragen met g
 
 ## Schrijfgereedschappen in de Query Editor {#writing-tools}
 
-- **Automatische syntaxis het benadrukken:** maakt het lezen en het organiseren van SQL gemakkelijker.
-
-![ een SQL verklaring in de Redacteur van de Vraag die syntaxiskleur het benadrukken aantoont.](../images/ui/query-editor/syntax-highlight.png)
-
-- **SQL het sleutelwoord auto-complete:** Begin typend uw vraag dan de pijlsleutels te gebruiken om aan de gewenste termijn te navigeren en **te drukken gaat** binnen.
-
-![ een paar karakters van SQL met het auto volledige dropdown menu die opties van de Redacteur van de Vraag verstrekken.](../images/ui/query-editor/syntax-auto.png)
-
-- **lijst en gebied auto-complete:** Begin typend de lijstnaam u `SELECT` van wilt {en dan de pijlsleutels gebruiken om aan de lijst te navigeren u zoekt, en **gaat** binnen. Als een tabel is geselecteerd, worden de velden in die tabel automatisch herkend.
-
-![ de input van de Redacteur van de Vraag die drop-down lijstnaamsuggesties toont.](../images/ui/query-editor/tables-auto.png)
+Gebruik de het schrijven hulpmiddelen van de Redacteur van de Vraag om uw vraag te verbeteren creërend proces. Functies omvatten opties voor het opmaken van tekst, het kopiëren van SQL, het beheren van query-details en het opslaan of plannen van uw werk terwijl u verdergaat.
 
 ### Tekst opmaken {#format-text}
 
@@ -202,6 +195,43 @@ Als een query was gepland, biedt het tabblad [!UICONTROL Scheduled Queries] bete
 >[!NOTE]
 >
 >Vragen die niet worden uitgevoerd, worden niet opgeslagen in het logbestand. De vraag om in de Dienst van de Vraag beschikbaar te zijn, moet het in de Redacteur van de Vraag in werking stellen of worden bewaard.
+
+### Objectbrowser {#object-browser}
+
+>[!AVAILABILITY]
+>
+>De dataset navigation rail is alleen beschikbaar voor Distiller-klanten van Data. Uw platforminterface bevat mogelijk niet de linkergegevenssetnavigatiespoor.  Andere afbeeldingen in dit document weerspiegelen mogelijk niet de dataset navigation rail. Neem contact op met uw Adobe voor meer informatie.
+
+Gebruik objecten browser aan gemakkelijk onderzoek en filterdatasets. De objecten browser vermindert de tijd besteed het zoeken naar lijsten en datasets in grote milieu&#39;s met talrijke datasets. Met gestroomlijnde toegang tot relevante gegevens en meta-gegevens, kunt u zich meer op vraag creatie en minder op navigatie concentreren.
+
+Als u met de objectbrowser door de database wilt navigeren, voert u een tabelnaam in het zoekveld in of selecteert u **[!UICONTROL Tables]** om de lijst met beschikbare datasets en tabellen uit te vouwen. Wanneer u het zoekveld gebruikt, wordt de lijst met beschikbare tabellen dynamisch gefilterd op basis van uw invoer.
+
+>[!NOTE]
+>
+>Elke dataset bevat in [ uw geselecteerde gegevensbestand ](#database-dropdown) is vermeld in een navigatieregel links van de Redacteur van de Vraag.
+
+![ De de gegevenssetnavigatieregel van de Redacteur van de Vraag met de benadrukte onderzoeksinput.](../images/ui/query-editor/search-tables.png)
+
+Het schema dat in de objectbrowser wordt weergegeven, is een waarneembaar schema. Dit betekent dat u het kunt gebruiken om veranderingen en updates in echt te controleren - tijd aangezien de veranderingen onmiddellijk zichtbaar zijn. De waarneembare schema&#39;s helpen gegevenssynchronisatie verzekeren en helpen bij het zuiveren of analytische taken.
+
+#### Huidige beperkingen {#current-limitations}
+
+Hieronder volgt een lijst met huidige beperkingen:
+
+- Opeenvolgende uitvoering van query: Er kan slechts één query tegelijk worden uitgevoerd. Terwijl een vraag lopend is, kunnen geen extra lijsten in de linkernavigatie worden geopend, aangezien de vragen opeenvolgend worden verwerkt.
+- Extra rijen in vraaglogboeken: U kunt extra vragen ontmoeten die als &quot;TOONTABELLEN&quot;worden geëtiketteerd in de logboeken. Deze worden in toekomstige versies verwijderd.
+
+#### Metagegevens van tabellen openen {#table-metadata}
+
+Naast snelle zoekopdrachten hebt u nu gemakkelijk toegang tot metagegevens voor elke tabel door het pictogram &#39;i&#39; naast de tabelnaam te selecteren. Dit verstrekt u van gedetailleerde informatie over de geselecteerde lijst, die u helpt om geïnformeerde besluiten te nemen wanneer het schrijven van vragen.
+
+![ De de gegevenssetnavigatieregel van de Redacteur van de Vraag met de benadrukte onderzoeksinput.](../images/ui/query-editor/table-metadata.png)
+
+#### Onderliggende tabellen verkennen
+
+Als u onderliggende of gekoppelde tabellen wilt verkennen, selecteert u de vervolgkeuzepijl naast de tabelnaam in de lijst. Dit breidt de lijst uit om het even welke bijbehorende kindlijsten te tonen, en geeft een duidelijke mening van de gegevensstructuur en staat voor complexere vraagconstructies toe. Het pictogram naast de veldnaam geeft het gegevenstype van de kolom aan, zodat u deze kunt identificeren tijdens complexe query&#39;s.
+
+![ de Redacteur van de Vraag met de gefiltreerde getoonde lijst.](../images/ui/query-editor/child-table-list.png)
 
 ## Vragen uitvoeren met de Query Editor {#executing-queries}
 
