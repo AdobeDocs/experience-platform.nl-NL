@@ -2,9 +2,9 @@
 title: Overzicht van de modus Query Pro
 description: Leer hoe u SQL-query's gebruikt in de gebruikersinterface van Adobe Experience Platform om grafieken te maken voor uw aangepaste dashboards.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,26 @@ In dit voorbeeld van het donutdiagram zijn de opties grootte en kleur. Kleuren w
 Als u het type grafiek of grafiek van de widget wilt wijzigen, selecteert u een van de beschikbare opties in het vervolgkeuzemenu [!UICONTROL Marks] . De opties zijn [!UICONTROL Line] , [!UICONTROL Donut] , [!UICONTROL Big number] en [!UICONTROL Bar] . Als deze optie is geselecteerd, wordt een voorvertoning van de huidige instellingen van de widget gegenereerd.
 
 ![ Widget composer met de benadrukte widgetvoorproef.](../../images/sql-insights/widget-preview.png)
+
+## Geavanceerde tabelkenmerken {#advanced-attributes}
+
+Als u automatische sorteermogelijkheden wilt toepassen op een of alle kolommen in de tabellen, selecteert u **[!UICONTROL Edit]** om het hele dashboard te bewerken.
+
+![ A douanedashboard met Edit benadrukte.](../../images/query-pro-mode/advanced-edit-dashboard.png)
+
+Selecteer de ellips (`...`) in het lijstdiagram waar u kolomsortering wilt toevoegen, dan uitgezocht **[!UICONTROL Edit]**.
+
+![ een lijst die van A het ellips menu met uitgezocht geeft toont.](../../images/query-pro-mode/advanced-table-edit.png)
+
+Schakel de selectievakjes **[!UICONTROL Sortable]** in om het sorteren voor elke kolom in te schakelen.
+
+![ de lijst geeft pagina met sorteerbare benadrukte controledozen uit.](../../images/query-pro-mode/advanced-table-sortable.png)
+
+Selecteer het eigenschappen pictogram (![ het eigenschappen pictogram.](/help/images/icons/properties.png) ) in de rechterrail om het deelvenster [!UICONTROL Properties] te openen. Selecteer in het deelvenster **[!UICONTROL Properties]** de kolom met de vervolgkeuzelijst **[!UICONTROL Default sort]** en selecteer vervolgens de kolom met de vervolgkeuzelijst **[!UICONTROL Sort direction]** . Selecteer ten slotte **[!UICONTROL Save and close]** .
+
+![ Widget composer met het bezitspictogram, standaardsoort, sorteerrichting, sparen en dicht benadrukte.](../../images/query-pro-mode/advanced-table-properties.png)
+
+Meer leren over het gebruiken van de soort, het resizing van kolommen, en pagineringseigenschappen, verwijs naar [ Mening meer ](./view-more.md).
 
 ## Eigenschappen van Widget {#properties}
 
