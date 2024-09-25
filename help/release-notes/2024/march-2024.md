@@ -1,84 +1,84 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform, maart 2024
+title: Aanvullende informatie van maart 2024 voor Adobe Experience Platform
 description: Aanvullende informatie van maart 2024 voor Adobe Experience Platform.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
 source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1189'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Aanvullende informatie voor Adobe Experience Platform
 
-**Releasedatum: woensdag 19 maart 2024**
+**Releasedatum:19 maart 2024**
 
 >[!TIP]
 >
->Gebruik de [ verklarende woordenlijst van Adobe Experience Platform ](/help/landing/glossary.md) vertrouwd te worden met terminologie die in Real-time Customer Data Platform en Adobe Experience Platform wordt gebruikt. Als u een bepaalde term die u zoekt niet kunt vinden, gebruikt u de feedbackopties op de pagina om te vragen dat nieuwe termen aan de verklarende woordenlijst worden toegevoegd.
+>Gebruik de [verklarende woordenlijst van Adobe Experience Platform](/help/landing/glossary.md) om vertrouwd te raken met terminologie die in Real-time Customer Data Platform en Adobe Experience Platform wordt gebruikt. Als u een specifieke term niet kunt vinden, kunt u via de feedbackopties op de pagina een verzoek indienen om nieuwe termen aan de woordenlijst toe te voegen.
 
-Updates voor bestaande functies in Experience Platform:
+Updates van bestaande functies in Experience Platform:
 
 - [Catalogusservice](#catalog-service)
-- [Gegevensverzameling](#data-collection)
+- [Dataverzameling](#data-collection)
 - [Gegevensvoorbereiding](#data-prep)
-- [Doelen](#destinations)
-- [Experience Data Model (XDM)](#xdm)
-- [Segmenteringsservice](#segmentation)
+- [Bestemmingen](#destinations)
+- [Experience-datamodel (XDM)](#xdm)
+- [Segmentatieservice](#segmentation)
 - [Bronnen](#sources)
 
 ## Catalogusservice {#catalog-service}
 
-Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens en de gegevensverbinding in Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het gegevensmeer als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
+Catalogusservice is het systeem voor het vastleggen van de locatie en herkomst van gegevens binnen Adobe Experience Platform. Alle gegevens die in Experience Platform worden opgenomen, worden in een datalake opgeslagen als bestanden en mappen. De catalogus bevat daarentegen de metagegevens en beschrijvingen van die bestanden en mappen voor opzoek- en controledoeleinden.
 
 | Functie | Beschrijving |
 | --- | --- |
-| Meer handelingen | Om verrichtingen flexibeler te maken en u te helpen uw gegevens beheren, kunt u de &quot;Meer acties&quot;eigenschap van de detailsmening nu gebruiken om extra taken op een dataset uit te voeren. U kunt of de dataset schrappen of het voor gebruik met het Profiel van de Klant in real time van de detailspagina van een gekozen dataset toelaten.<br>**Nota:** als u een dataset voor de opname van het Profiel toelaat, moet het schema van de dataset met het Profiel van de Klant in real time compatibel zijn.<br>![ de werkruimte Datasets met het [!UICONTROL ... More] dropdown benadrukte menu.](../2024/assets/march/more-actions.png " de werkruimte van Datasets met het Meer dropdown benadrukte menu."){width="100" zoomable="yes"}.<br> leest de [ gids van de datasetgebruiker ](../../catalog/datasets/user-guide.md) documentatie voor optelinformatie. |
+| Meer acties | Om bewerkingen flexibeler te maken en u te helpen uw gegevens te beheren, kunt u nu de functie Meer acties vanuit de detailweergave gebruiken om extra taken op een dataset uit te voeren. U kunt de dataset verwijderen of inschakelen voor gebruik met realtime-klantenprofiel via de pagina Meer informatie van een gekozen dataset.<br>**Opmerking:** als u een dataset inschakelt voor profielopname, moet het schema van de dataset compatibel zijn met realtime-klantenprofiel.<br>![De werkruimte Datasets met het vervolgkeuzemenu [!UICONTROL ... More] gemarkeerd.](../2024/assets/march/more-actions.png "De werkruimte Datasets met het vervolgkeuzemenu Meer gemarkeerd."){width="100" zoomable="yes"}.<br>Raadpleeg het [handboek voor datasets](../../catalog/datasets/user-guide.md) voor aanvullende informatie. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de Dienst van de Catalogus, verwijs naar het [ overzicht van de Dienst van de Catalogus ](../../catalog/home.md).
+Voor meer informatie over de catalogusservice, raadpleegt u het [Overzicht van de Catalogusservice](../../catalog/home.md).
 
 ## Gegevensvoorbereiding {#data-prep}
 
-Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience Data Model).
+Met gegevensvoorbereiding kunnen gegevenstechnici gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience-datamodel).
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe mapfuncties voor Adobe Analytics | U kunt nu de volgende functies gebruiken om gebeurtenisgegevens uit Adobe Analytics te extraheren: <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> Voor meer informatie over deze functies, lees de [ Prep functies van Gegevens gids ](../../data-prep/functions.md#analytics-functions) |
+| Nieuwe toewijzingsfuncties voor Adobe Analytics | U kunt nu de volgende functies gebruiken om gebeurtenisgegevens uit Adobe Analytics te extraheren: <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> Voor meer informatie over deze functies, raadpleegt u de [Handleiding voor Gegevensvoorbereidingsfuncties](../../data-prep/functions.md#analytics-functions) |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de Prep van Gegevens, lees het [ Overzicht van de Prep van Gegevens ](../../data-prep/home.md).
+Voor meer informatie over gegevensvoorbereiding, raadpleegt u het [Overzicht van Gegevensvoorbereiding](../../data-prep/home.md).
 
-## Gegevensverzameling {#data-collection}
+## Dataverzameling {#data-collection}
 
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar de Adobe Experience Platform-Edge Network kunt sturen waar deze verrijkt, getransformeerd en gedistribueerd kan worden naar Adobe- of niet-Adobe-bestemmingen.
+Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaringsgegevens aan de klantzijde kunt verzamelen en deze naar het Adobe Experience Platform Edge Network kunt verzenden. Daar kunnen ze worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
-| Extensies | [!DNL Merkury] Tagextensie | De [[!DNL Merkury]  markeringsuitbreiding ](https://exchange.adobe.com/apps/ec/600027/merkury-tag) verstrekt industrie belangrijke gelijke tarieven voor anonieme websitebezoekers aan a [!DNL Merkury] identiteitskaart. Merken kunnen de kracht van de tag [!DNL Merkury] en de Adobe benutten om persoonlijke webbeleving in real-time te bieden. Bovendien zorgt de tag [!DNL Merkury] voor de groei van digitale gegevens van eerste bedrijven en van gekoppelde online en offline klantprofielen. |
+| Extensies | [!DNL Merkury]Tagextensie | De [[!DNL Merkury] tagextensie](https://exchange.adobe.com/apps/ec/600027/merkury-tag) verstrekt toonaangevende gelijke tarieven voor anonieme websitebezoekers met een [!DNL Merkury]-ID. Merken kunnen de kracht van de [!DNL Merkury]-tag en Adobe benutten om in realtime gepersonaliseerde website-ervaringen te bieden. Bovendien maakt de [!DNL Merkury]-tag de groei van digitale first-party-gegevens mogelijk, samen met verbonden online- en offline-klantprofielen. |
 
 {style="table-layout:auto"}
 
-Om meer over gegevensinzameling te leren, te lezen gelieve het [ overzicht van de gegevensinzameling ](../../tags/home.md).
+Voor meer informatie over dataverzameling, raadpleegt u het [overzicht van de dataverzameling](../../tags/home.md).
 
-## Doelen {#destinations}
+## Bestemmingen {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+[!DNL Destinations] zijn vooraf gebouwde integraties met bestemmingsplatforms die een naadloze activering van gegevens uit Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 **Nieuwe en bijgewerkte bestemmingen** {#new-updated-destinations}
 
-| Doel | Type | Beschrijving |
+| Bestemming | Type | Beschrijving |
 | ----------- | --------- | ----------- |
-| [ (Beta) Verbinding Acxiom Data Enhancement ](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Nieuw | Gebruik deze connector om first-party profielen van Real-Time CDP naar Acxiom te activeren voor gegevensverrijking en gebruik via marketingkanalen. Vervolgens kunt u de Acxiom-bron gebruiken om de profielen met verbeterde gegevens te importeren en ermee te werken in Real-Time CDP. |
-| [ (Beta) Verbinding voor Acxiom-perspectiefonderdrukking ](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Nieuw | Exporteer uw eersteklas publiek naar de Acxiom-bestemming, zodat Acxiom bekende of omgezette klanten kan onderdrukken. Dan, gebruik de [ Acxiom het prospecteren van gegevensinvoer ](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) bronschakelaar om perspectieflijsten van Acxiom in te voeren en te activeren, met uw bekende of omgezette verwijderde klanten. |
-| [ verbinding van de Advertentie van Amazon ](../../destinations/catalog/advertising/amazon-ads.md) | Bijwerken | Bij het exporteren van gegevens naar de bestemming Amazon Ads kunt u de gegevens nu doorsturen naar de Amazon-DSP of de Amazon-Marketing Cloud (nieuw). |
-| [ LiveRamp onboarding verbinding ](../../destinations/catalog/advertising/liveramp-onboarding.md) | Bijwerken | Het doel LiveRamp on boarding heeft nu ondersteuning voor leveringen aan instanties van Europa en Australië [!DNL LiveRamp] [!DNL SFTP] . De maximale geëxporteerde bestandsgrootte is ook verhoogd tot 10 miljoen rijen (van 5 miljoen, eerder). |
+| [(Beta) Acxiom Data Enhancement-verbinding](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Nieuw | Met deze connector kunt u first-partyprofielen van Real-Time CDP activeren naar Acxiom voor gegevensverrijking en gebruik in alle marketingkanalen. Vervolgens kunt u de Acxiom-bron gebruiken om de profielen met uitgebreide gegevens te importeren en ermee te werken in Real-Time CDP. |
+| [(Beta) Acxiom Prospect Suppression-verbinding](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Nieuw | Exporteer uw first-party doelgroepen naar de Acxiom-bestemming, zodat Acxiom bekende of geconverteerde klanten kan onderdrukken. Gebruik vervolgens de [Acxiom-bronconnector voor het importeren van prospectiegegevens](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) om prospectlijsten van Acxiom op te nemen en te activeren. Uw bekende of geconverteerde klanten worden hierbij verwijderd. |
+| [Amazon Ads-verbinding](../../destinations/catalog/advertising/amazon-ads.md) | Bijwerken | Wanneer u gegevens naar de Amazon Ads-bestemming exporteert, kunt u de gegevens nu naar de Amazon DSP of de Amazon Marketing Cloud (nieuw) doorsturen. |
+| [LiveRamp Onboarding-verbinding](../../destinations/catalog/advertising/liveramp-onboarding.md) | Bijwerken | De LiveRamp Onboarding-bestemming biedt nu ondersteuning voor leveringen aan [!DNL LiveRamp] [!DNL SFTP]-instanties in Europa en Australië. De maximale grootte van het geëxporteerde bestand is ook verhoogd naar 10 miljoen rijen (voorheen was dit 5 miljoen). |
 
 {style="table-layout:auto"}
 
@@ -88,48 +88,48 @@ Om meer over gegevensinzameling te leren, te lezen gelieve het [ overzicht van d
 
 -->
 
-Voor meer algemene informatie over bestemmingen, verwijs naar het [ overzicht van bestemmingen ](../../destinations/home.md).
+Voor meer algemene informatie over bestemmingen, raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
-## Experience Data Model (XDM) {#xdm}
+## Experience-datamodel (XDM) {#xdm}
 
-XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+XDM is een open-bronspecificatie die algemene structuren en definities (schema&#39;s) biedt voor gegevens die in Adobe Experience Platform worden geïmporteerd. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor datatype Experience Platform UI-map | Pas verder uw gegevensstructuur van het Model van de Gegevens van de Ervaring (XDM) aan door kaartgebieden in Platform UI te bepalen. U kunt nu kaartvelden maken in de Schema-editor om flexibele gegevensstructuren te modelleren of sleutelwaardeparen efficiënt op te slaan. Selecteer &quot;Kaart&quot;van het drop-down Type wanneer het bepalen van een nieuw gebied om subfields te vormen en hen toe te wijzen aan gebiedsgroepen. Ondersteunde typen toewijzingswaarden zijn tekenreeks en geheel getal.<br>![ de Redacteur van Schema met de benadrukte gebieden van het type en van het de waardetype van de Kaart.](../2024/assets/march/maps.png " de Redacteur van Schema met de benadrukte gebieden van het type en van het de waardetype van de Kaart."){width="100" zoomable="yes"}<br> leren hoe te [ kaartgebieden in UI ](../../xdm/ui/fields/map.md) bepalen, de gids UI zien. |
+| Ondersteuning voor het gegevenstype voor toewijzing in de Experience Platform-gebruikersinterface | U kunt de gegevensstructuur van uw Experience-datamodel (XDM) verder aanpassen door ktoewijzingsvelden te definiëren in de Platform-gebruikersinterface. U kunt nu toewijzingsvelden maken in de Schema-editor om flexibele gegevensstructuren te modelleren of sleutelwaardeparen efficiënt op te slaan. Selecteer Toewijzen in de vervolgkeuzelijst Type wanneer u een nieuw veld definieert om subvelden te configureren en deze toe te wijzen aan veldgroepen. De ondersteunde typen toewijzingswaarden zijn tekenreeks en geheel getal.<br>![De schema-editor met de velden Type en Type toewijzingswaarde gemarkeerd.](../2024/assets/march/maps.png "De schema-editor met de velden Type en Type toewijzingswaarde gemarkeerd."){width="100" zoomable="yes"}<br>Raadpleeg de handleiding voor de gebruikersinterface voor meer informatie over het [definiëren van toewijzingsvelden in de gebruikersinterface](../../xdm/ui/fields/map.md). |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
+Voor meer informatie over XDM in Platform, raadpleegt u het [XDM-systeemoverzicht](../../xdm/home.md).
 
-## Segmenteringsservice {#segmentation}
+## Segmentatieservice {#segmentation}
 
-Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, vooruitzichten, gebruikers of organisaties) segmenteren naar het publiek. U kunt een publiek maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile] -gegevens. Deze soorten publiek worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn gemakkelijk toegankelijk voor elke Adobe.
+Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) in doelgroepen segmenteren. U kunt een doelgroep maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn eenvoudig toegankelijk via elke Adobe-oplossing.
 
-**Nieuwe eigenschap**
+**Nieuwe functie**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Bulkacties | De publieksinventarisatie ondersteunt nu acties in grote hoeveelheden. Met bulkacties kunt u snel meerdere soorten publiek selecteren om deze naar een map te verplaatsen, tags toe te passen, toegangslabels toe te passen of te verwijderen. <br> ![ Bulk acties in de werkruimte van het publiek UI.](../2024/assets/march/bulk-actions.png " Bulk acties in de werkruimte van het publiek UI."){width="100" zoomable="yes"} <br> voor meer informatie over deze eigenschap, lees het [ Poortoverzicht van het Poortpubliek van het Poortpubliek ](../../segmentation/ui/audience-portal.md#bulk-actions). |
+| Bulkacties | De doelgroep-inventory ondersteunt nu bulkacties. Met bulkacties kunt u snel meerdere doelgroepen selecteren om ze naar een map te verplaatsen, tags toe te passen, toegangslabels toe te passen of te verwijderen. <br> ![Bulkacties in de werkruimte van de Audience-gebruikersinterface.](../2024/assets/march/bulk-actions.png "Bulkacties in de werkruimte van de Audience-gebruikersinterface."){width="100" zoomable="yes"} <br> Voor meer informatie over deze functie, leest u het [Audience Portal-overzicht](../../segmentation/ui/audience-portal.md#bulk-actions). |
 
 {style="table-layout:auto"}
 
-Meer over de Dienst van de Segmentatie leren, lees het [ overzicht van de Dienst van de Segmentatie ](../../segmentation/home.md).
+Voor meer informatie over de Segmentatieservice, raadpleegt u het [Overzicht van de Segmentatieservice](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+Experience Platform biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
 **Nieuwe en bijgewerkte bronnen**
 
 | Functie | Type | Beschrijving |
 | --- | --- | --- |
-| [!BADGE  Beta ] {type=Informative} [!DNL Acxiom Data Ingestion] | Nieuw | Gebruik de [[!DNL Acxiom Data Ingestion]  bron ](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) om [!DNL Acxiom] gegevens in Real-time Customer Data Platform in te voeren en eerste-partijprofielen te verrijken. Vervolgens kunt u met uw [!DNL Acxiom] verrijkte first-party-profielen het publiek verbeteren en activeren via verschillende marketingkanalen. <br> ![ de Ingestiebron van Gegevens van Acxiom.](../2024/assets/march/acxiom-data-ingestion.png " Nieuwe Ingestiebron van Gegevens van Acxiom."){width="100" zoomable="yes"} <br> leest het [[!DNL Acxiom Data Ingestion]  overzicht ](../../sources/connectors/data-partners/acxiom-data-ingestion.md) voor informatie over hoe te begonnen worden. |
-| [!BADGE  Beta ] {type=Informative} [!DNL Stripe] | Nieuw | Gebruik de [[!DNL Stripe]  bron ](../../sources/connectors/payments/stripe.md) om gegevens in te voeren die tijdens de koopstroom door uw klanten in Experience Platform worden gevangen. Als u deze gegevens eenmaal hebt ingevoerd, kunt u deze gebruiken om persoonlijke aanbiedingen te maken en rijkere zakelijke inzichten te ontgrendelen. <br> ![ de bron van het Stripe.](../2024/assets/march/stripe.png " Nieuwe bron van het Stripe."){width="100" zoomable="yes"} <br> leest het [[!DNL Stripe]  overzicht ](../../sources/connectors/payments/stripe.md) voor informatie over hoe te begonnen worden. |
-| UI-ondersteuning voor [!DNL Snowflake Streaming] | Nieuw | U kunt [[!DNL Snowflake Streaming]  bron ](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) in het Experience Platform nu gebruiken UI, om gegevens van uw [!DNL Snowflake] gegevensbestand te stromen. <br> ![ de Snowflake die bron stroomt.](../2024/assets/march/snowflake-streaming.png " Nieuwe Snowflake die bron stroomt."){width="100" zoomable="yes"} <br> leest het [[!DNL Snowflake Streaming]  overzicht ](../../sources/connectors/databases/snowflake-streaming.md) voor informatie over hoe te begonnen worden. |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | Nieuw | Gebruik de [[!DNL Acxiom Data Ingestion] bron](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) om [!DNL Acxiom]-gegevens aan het Real-Time Customer Data Platform toe te voegen en first-party profielen te verrijken. Vervolgens kunt u uw met [!DNL Acxiom] verrijkte first-party profielen gebruiken om uw doelgroepen te verbeteren en deze te activeren via marketingkanalen. <br> ![De gegevensopnamebron van Acxiom.](../2024/assets/march/acxiom-data-ingestion.png "Nieuwe gegevensopnamebron van Acxiom."){width="100" zoomable="yes"} <br> Raadpleeg het [[!DNL Acxiom Data Ingestion] overzicht](../../sources/connectors/data-partners/acxiom-data-ingestion.md) voor informatie over hoe u aan de slag kunt gaan. |
+| [!BADGE Beta]{type=Informative} [!DNL Stripe] | Nieuw | Gebruik de [[!DNL Stripe] bron](../../sources/connectors/payments/stripe.md) om gegevens die uw klanten tijdens het aankoopproces hebben vastgelegd, op te nemen in het Experience Platform. Zodra u deze gegevens hebt verwerkt, kunt u ze gebruiken om gepersonaliseerde aanbiedingen te maken en meer inzicht in uw bedrijf te krijgen. <br> ![De Stripe-bron.](../2024/assets/march/stripe.png "De nieuwe Stripe-bron."){width="100" zoomable="yes"} <br> Raadpleeg het [[!DNL Stripe] overzicht](../../sources/connectors/payments/stripe.md) voor informatie over hoe u aan de slag kunt gaan. |
+| Ondersteuning voor gebruikersinterface voor [!DNL Snowflake Streaming] | Nieuw | U kunt nu de [[!DNL Snowflake Streaming] bron](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) in de gebruikersinterface van het Experience Platform gebruiken om gegevens te streamen vanuit uw [!DNL Snowflake]-database. <br> ![De bron van Snowflake Streaming.](../2024/assets/march/snowflake-streaming.png "Nieuwe bron van Snowflake Streaking."){width="100" zoomable="yes"} <br> Raadpleeg het [[!DNL Snowflake Streaming] overzicht](../../sources/connectors/databases/snowflake-streaming.md) voor informatie over hoe u aan de slag kunt gaan. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over bronnen, lees het [ overzicht van bronnen ](../../sources/home.md).
+Raadpleeg voor meer informatie over bronnen, het [overzicht van bronnen](../../sources/home.md).

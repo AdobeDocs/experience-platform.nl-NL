@@ -1,54 +1,54 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform, februari 2024
-description: In de release van februari 2024 staat een opmerking voor Adobe Experience Platform.
+title: Aanvullende informatie voor Adobe Experience Platform van februari 2024
+description: Aanvullende informatie voor Adobe Experience Platform van februari 2024.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
 source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1243'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Aanvullende informatie voor Adobe Experience Platform
 
-**Releasedatum: donderdag 21 februari 2024**
+**Releasedatum: 21 februari 2024**
 
-Updates voor bestaande functies in Experience Platform:
+Updates van bestaande functies in Experience Platform:
 
 - [Waarschuwingen](#alerts)
-- [Gegevensverzameling](#data-collection)
-- [Doelen](#destinations)
+- [Dataverzameling](#data-collection)
+- [Bestemmingen](#destinations)
 - [Sandboxes](#sandboxes)
-- [Segmenteringsservice](#segmentation)
+- [Segmentatieservice](#segmentation)
 - [Bronnen](#sources)
 
 ## Waarschuwingen {#alerts}
 
-Met Experience Platform kunt u zich abonneren op gebeurtenisgebaseerde waarschuwingen voor verschillende platformactiviteiten. U kunt zich abonneren op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de gebruikersinterface van het platform en u kunt ervoor kiezen waarschuwingsberichten te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
+Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarschuwingen voor verschillende platformactiviteiten. U kunt zich aanmelden op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de gebruikersinterface van het platform, en u kunt ervoor kiezen waarschuwingsmeldingen te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
 
-**Nieuwe of bijgewerkte eigenschappen**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Tabblad Waarschuwingsgeschiedenis | Als beheerder van een Experience Platform kunt u met de functie Waarschuwingsabonnees beheren een waarschuwing toewijzen aan een gebruikers-id voor een Adobe, een extern e-mailadres of een lijst met e-mailgroepen. Voor meer informatie, zie het [ alarm UI documentatie ](../../observability/alerts/ui.md) voor meer informatie over het geschiedenislusje. |
-
-{style="table-layout:auto"}
-
-Meer over alarm leren, lees het [[!DNL Observability Insights]  overzicht ](../../observability/home.md).
-
-## Gegevensverzameling {#data-collection}
-
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar de Adobe Experience Platform-Edge Network kunt sturen waar deze verrijkt, getransformeerd en gedistribueerd kan worden naar Adobe- of niet-Adobe-bestemmingen.
-
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| [ de steun van het Overseinen van het Web in-App in Web SDK ](../../web-sdk/personalization/web-in-app-messaging.md) | De Adobe Experience Platform Web SDK biedt nu ondersteuning voor Web In-App Messaging-configuratie voor Adobe Journey Optimizer-campagnes. |
+| Tabblad Waarschuwingsgeschiedenis | Als beheerder van een Experience Platform kunt u met de functie voor waarschuwingsabonnees beheren een waarschuwing toewijzen aan een gebruikers-ID, een extern e-mailadres of een lijst met e-mailgroepen van Adobe. Voor meer informatie kunt u de [gebruikersinterfacedocumentatie voor waarschuwingen](../../observability/alerts/ui.md) raadplegen voor meer informatie over het tabblad Geschiedenis. |
 
 {style="table-layout:auto"}
 
-Meer over gegevensinzamelingen leren, lees het [ overzicht van gegevensinzamelingen ](../../tags/home.md).
+Voor meer informatie over waarschuwing leest u het [[!DNL Observability Insights] overzicht ](../../observability/home.md).
+
+## Dataverzameling {#data-collection}
+
+Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaringsgegevens aan de klantzijde kunt verzamelen en deze naar het Adobe Experience Platform Edge Network kunt verzenden. Daar kunnen ze worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| [Ondersteuning voor web-in-app-berichten in Web SDK](../../web-sdk/personalization/web-in-app-messaging.md) | De Adobe Experience Platform Web SDK biedt nu ondersteuning voor Web In-App Messaging-configuratie voor Adobe Journey Optimizer-campagnes. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over dataverzamelingen leest u het [overzicht van dataverzamelingen](../../tags/home.md).
 
 <!-- ## Data Prep {#data-prep}
 
@@ -64,17 +64,17 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md). -->
 
-## Doelen {#destinations}
+## Bestemmingen {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms voor naadloze activering van gegevens van Adobe Experience Platform. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 **Nieuwe bestemmingen** {#new-destinations}
 
-| Doel | Beschrijving |
+| Bestemming | Beschrijving |
 | ----------- | ----------- |
-| [ verzamelen PX verbinding ](../../destinations/catalog/analytics/gainsight-px.md) | Gainsight PX is een product ervaringsplatform dat productteams in staat stelt te begrijpen hoe gebruikers hun producten gebruiken, feedback te verzamelen en in-app contracten zoals productanalyses te maken om gebruikers aan boord te krijgen en producten te adopteren. |
-| [ de verbinding van de Markeringen van Mailchimp ](../../destinations/catalog/email-marketing/mailchimp-tags.md) | Mailchimp is een populair platform voor marketingautomatisering en e-mailmarketingservice. U kunt de schakelaar van de Markeringen van Mailchimp gebruiken aan structuur, etiket, of categoriseer uw contacten. |
-| [ de verbinding van SAP Commerce ](../../destinations/catalog/ecommerce/sap-commerce.md) | SAP Commerce is een op de cloud gebaseerde e-commerceoplossing voor B2B- en B2C-bedrijven en is beschikbaar als onderdeel van de SAP Customer Experience-portfolio. U kunt deze bestemming gebruiken om uw klantendetails binnen SAP Commerce van een bestaand publiek van de Experience Platform bij te werken. |
+| [Gainsight PX-verbinding](../../destinations/catalog/analytics/gainsight-px.md) | Gainsight PX is een productervaringsplatform waarmee productteams inzicht kunnen krijgen de manier waarop gebruikers de producten gebruiken, feedback kunnen verzamelen, en in-app contracten kunnen maken zoals productanalyses om gebruikers aan boord te krijgen en producten te gaan gebruiken. |
+| [Mailchimp Tags-verbinding](../../destinations/catalog/email-marketing/mailchimp-tags.md) | Mailchimp is een populair platform voor marketingautomatisering en e-mailmarketingservice. Met de Mailchimp Tags-connector kunt u contactpersonen structureren, labelen of categoriseren. |
+| [SAP Commerce-verbinding](../../destinations/catalog/ecommerce/sap-commerce.md) | SAP Commerce is een cloudgebaseerde e-commerceoplossing voor B2B- en B2C-bedrijven en is beschikbaar als onderdeel van de SAP Customer Experience-portfolio. U kunt deze bestemming gebruiken om klantgegevens binnen SAP Commerce van een bestaand publiek van de Experience Platform bij te werken. |
 
 {style="table-layout:auto"}
 
@@ -82,53 +82,53 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| Accountsoorten activeren, algemeen beschikbaar | De functionaliteit om rekeningspubliek aan bepaalde bestemmingen te activeren is nu algemeen beschikbaar voor bedrijven die [ zaken-aan-Zaken ](/help/rtcdp/overview.md#rtcdp-b2b) en [ zaken-aan-Persoonlijke ](/help/rtcdp/overview.md#rtcdp-b2p) uitgaven van Real-time Customer Data Platform kopen. Lees het leerprogramma op [ activerend rekeningspubliek ](/help/destinations/ui/activate-account-audiences.md) om volledige informatie, met inbegrip van gesteunde bestemmingen te krijgen. |
-| Digital Markets Act-instrumenten voor toestemmingshandhaving voor Google-bestemmingen | Google geeft veranderingen in de [ Adds API van Google ](https://developers.google.com/google-ads/api/docs/start), [ Overeenkomst van de Klant ](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) vrij, en [ Vertoning &amp; Video 360 API ](https://developers.google.com/display-video/api/guides/getting-started/overview) om de naleving en toestemmings-gerelateerde vereisten te steunen die onder de [ Wet van de Markten ](https://digital-markets-act.ec.europa.eu/index_en) (DMA) worden bepaald in de Europese Unie ([ EU het Beleid van de Toestemming van de Gebruiker ](https://www.google.com/about/company/user-consent-policy/)). Verwacht wordt dat de handhaving van deze wijzigingen in de toestemmingsvereisten met ingang van 6 maart 2024 in werking zal treden. <br/><br/> Om zich aan het EU-beleid inzake instemming van gebruikers te houden en door te gaan met het opstellen van publiekslijsten voor gebruikers in de Europese Economische Ruimte (EER), moeten adverteerders en partners ervoor zorgen dat zij toestemming van de eindgebruiker geven wanneer zij publieksgegevens uploaden. Als Google-partner beschikt Adobe over de benodigde instrumenten om te voldoen aan deze toestemmingsvereisten in het kader van de DMA in de Europese Unie.<br/><br/> Klanten die de Privacy van de Adobe &amp; het Schild van de Veiligheid hebben gekocht en het beleid van de a [ toestemming ](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) hebben gevormd om niet-goedgekeurde profielen uit te filteren hoeven geen actie te ondernemen.<br/><br/> Klanten die geen Adobe Privacy &amp; het Schild van de Veiligheid hebben gekocht moeten de [ segmentdefinitie ](../../segmentation/home.md#segment-definitions) mogelijkheden binnen [ Bouwer van het Segment ](../../segmentation/ui/segment-builder.md) gebruiken om uit niet-goedgekeurde profielen te filtreren, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken. |
-| [!BADGE  Beta ] {type=Informative} de kaartgebieden van de herschikking voor partijbestemmingen | U kunt de orde van de kolommen in uw uitvoer CSV nu veranderen door de kaartgebieden in de [ in kaart brengende ](../../destinations/ui/activate-batch-profile-destinations.md#mapping) stap te slepen en te laten vallen. De volgorde van de toegewezen velden in de gebruikersinterface is afhankelijk van de volgorde van de kolommen in het geëxporteerde CSV-bestand, van boven naar beneden, waarbij de bovenste rij de meest linkse kolom in het CSV-bestand is. <br/><br/> Deze functie is in bèta beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen. |
-| [!BADGE  Beta ] {type=Informative} Vooraf ingestelde standaard uitvoerprogramma&#39;s voor partijbestemmingen | Experience Platform stelt nu automatisch een standaardschema in voor elke bestandsuitvoer. Zie de documentatie bij [ het plannen publieksuitvoer ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) leren hoe te om het standaardprogramma te wijzigen. <br/><br/> Deze functie is in bèta beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen. |
-| [!BADGE  Beta ] {type=Informative} Bulk geeft publieksactiveringsprogramma&#39;s voor partijbestemmingen uit | U kunt het activeringsprogramma voor veelvoudige publiek in bulk, van de [ gegevens van de Activering ](../../destinations/ui/destination-details-page.md#bulk-edit-schedule) pagina nu uitgeven. <br/><br/> Deze functie is in bèta beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen. |
-| [!BADGE  Beta ] {type=Informative} Bulk de uitvoerdossiers op bestelling aan partijbestemmingen | U kunt publiek in bulk aan partijbestemmingen, door de [ uitvoerdossiers op bestelling ](../../destinations/ui/export-file-now.md) functionaliteit nu uitvoeren. <br/><br/> Deze functie is in bèta beschikbaar voor bepaalde klanten. Neem contact op met uw Adobe als u toegang tot deze functie wilt aanvragen. |
+| Accountdoelgroepen die algemeen beschikbaar zijn activeren | De functionaliteit om accountdoelgroepen voor bepaalde bestemmingen te activeren is nu algemeen beschikbaar voor bedrijven die de [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) en [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p)-edities van Real-Time Customer Data Platform aanschaffen. Lees de tutorial over [het activeren van accountdoelgroepen](/help/destinations/ui/activate-account-audiences.md) voor volledige informatie, inclusief ondersteunde bestemmingen. |
+| Tools voor handhaving toestemming van de Digital Markets Act voor Google-bestemmingen | Google brengt wijzigingen door in de [Google Ads-API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) en de [Display &amp; Video 360-API](https://developers.google.com/display-video/api/guides/getting-started/overview) ter ondersteuning van de nalevings- en toestemmingsvereisten die zijn gedefinieerd in de [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_nl) (DMA) in de Europese Unie ([EU-beleid inzake toestemming van gebruikers](https://www.google.com/about/company/user-consent-policy/)). De verwachting is dat deze wijzigingen in de toestemmingsvereisten vanaf 6 maart 2024 van kracht worden. <br/><br/> Om te voldoen aan het EU-beleid inzake toestemming van gebruikers en om doelgroeplijsten te blijven maken voor gebruikers in de Europese Economische Ruimte (EER), moeten adverteerders en partners ervoor zorgen dat ze toestemming van de eindgebruiker doorgeven bij het uploaden van doelgroepgegevens. Als Google-partner beschikt Adobe over de benodigde tools om te voldoen aan deze toestemmingsvereisten in het kader van de DMA in de Europese Unie.<br/><br/>Klanten die Adobe Privacy &amp; Security Shield hebben aangeschaft en een [toestemmingsbeleid](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) hebben geconfigureerd om profielen waarvoor geen toestemming is verleend, te filteren, hoeven geen actie te ondernemen.<br/><br/>Klanten die Adobe Privacy &amp; Security Shield niet hebben aangeschaft, moeten de mogelijkheden voor [segmentdefinitie](../../segmentation/home.md#segment-definitions) in [Segment Builder](../../segmentation/ui/segment-builder.md) gebruiken om niet-toegestane profielen eruit te filteren, zodat ze de bestaande Real-Time CDP Google-bestemmingen zonder onderbreking kunnen blijven gebruiken. |
+| [!BADGE Beta]{type=Informative} Toewijzingsvelden voor batchbestemmingen opnieuw ordenen | U kunt nu de volgorde van de kolommen in uw CSV-exporten wijzigen door de toewijzingsvelden in de stap [toewijzing](../../destinations/ui/activate-batch-profile-destinations.md#mapping) te slepen en neer te zetten. De volgorde van de toegewezen velden in de gebruikersinterface komt overeen met de volgorde van de kolommen in het geëxporteerde CSV-bestand, van boven naar beneden, waarbij de bovenste rij de meest linkse kolom in het CSV-bestand is. <br/><br/> Deze functie bevindt zich in de bètafase en is alleen beschikbaar voor geselecteerde klanten. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot deze functie wilt aanvragen. |
+| [!BADGE Beta]{type=Informative} Voorgeselecteerde standaard exportschema&#39;s voor batchbestemmingen | Experience Platform stelt nu automatisch een standaardschema in voor elke bestandsexport. Zie de documentatie over [het plannen van doelgroepexporten](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) voor meer informatie over het wijzigen van het standaardschema. <br/><br/> Deze functie bevindt zich in de bètafase en is alleen beschikbaar voor geselecteerde klanten. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot deze functie wilt aanvragen. |
+| [!BADGE Beta]{type=Informative} Doelgroepactiveringsschema&#39;s in bulk bewerken voor batchbestemmingen | U kunt het activeringsschema voor meerdere doelgroepen nu in bulk bewerken via de pagina [Activeringsgegevens](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br/><br/> Deze functie bevindt zich in de bètafase en is alleen beschikbaar voor geselecteerde klanten. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot deze functie wilt aanvragen. |
+| [!BADGE Beta]{type=Informative} Bestanden op aanvraag in bulk exporteren naar batchbestemmingen | U kunt doelgroepen nu in bulk naar batchbestemmingen exporteren via de functionaliteit voor [bestanden op aanvraag te exporteren](../../destinations/ui/export-file-now.md). <br/><br/> Deze functie bevindt zich in de bètafase en is alleen beschikbaar voor geselecteerde klanten. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot deze functie wilt aanvragen. |
 
 {style="table-layout:auto"}
 
-Voor meer algemene informatie over bestemmingen, verwijs naar het [ overzicht van bestemmingen ](../../destinations/home.md).
+Voor meer algemene informatie over bestemmingen, raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
 ## Sandboxes {#sandboxes}
 
-Adobe Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen. Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldwijd te verrijken. Bedrijven gebruiken vaak meerdere digitale ervaringstoepassingen parallel en moeten de ontwikkeling, het testen en de implementatie van deze toepassingen verzorgen en tegelijkertijd de operationele naleving waarborgen. Om aan deze behoefte te voldoen, biedt Experience Platform sandboxes die één Platform-instantie opsplitsen in afzonderlijke virtuele omgevingen, zodat digitale ervaringstoepassingen kunnen worden ontwikkeld en verder ontwikkeld.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Gereedschap Sandbox | Naast nu ondersteunende objecttypen voor toestemmings- en governanceregels, gebruikt u sandboxgereedschappen om schema&#39;s te importeren zonder dat verenigde profielen zijn ingeschakeld, controleert u op ontbrekende kenmerken in de doelsandbox tijdens het importeren van een segment en gebruikt u standaard het bestaande samenvoegingsbeleid. Voor meer informatie over deze eigenschappen, zie de [ zandbak tooling UI gids ](../../sandboxes/ui/sandbox-tooling.md). |
+| Sandbox-tools | Naast de ondersteuning van objecttypen voor toestemmings- en governanceregels, kunt u nu ook sandbox-tools gebruiken om schema&#39;s te importeren zonder dat uniforme profielen zijn ingeschakeld, controleren op ontbrekende kenmerken in de doelsandbox bij het importeren van een segment en standaard het bestaande samenvoegingsbeleid gebruiken. Zie de [Handleiding voor de gebruikersinterface voor sandbox-tools](../../sandboxes/ui/sandbox-tooling.md) voor meer informatie over deze functies. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over zandbakken, lees het [ overzicht van zandbakken ](../../sandboxes/home.md).
+Voor meer informatie over sandboxes, raadpleegt u het [Overzicht van sandboxes](../../sandboxes/home.md).
 
-## Segmenteringsservice {#segmentation}
+## Segmentatieservice {#segmentation}
 
-Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, vooruitzichten, gebruikers of organisaties) segmenteren naar het publiek. U kunt een publiek maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile] -gegevens. Deze soorten publiek worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn gemakkelijk toegankelijk voor elke Adobe.
+Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) segmenteren in doelgroepen. U kunt een doelgroep maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn eenvoudig toegankelijk via elke Adobe-oplossing.
 
-**Nieuwe eigenschap**
+**Nieuwe functie**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Accountpubliek | Accountpubliek is nu over het algemeen beschikbaar! U kunt nu de segmentatie van uw account gebruiken om de volledige versnelling en verfijning van de ervaring van de segmentatie van de marketing te brengen van op mensen gebaseerd publiek naar op account gebaseerd publiek in zowel de B2B- als de B2P-edities van het Real-Time Klantplatform. Met deze release kunt u op mensen gebaseerde doelgroepen gebruiken als voorspelling voor op account gebaseerde doelgroepen, zoekmogelijkheden toevoegen, het gebruik van aangepaste entiteiten ondersteunen en zijn compatibel met gegevensbeheer. Voor meer informatie over deze eigenschap, te lezen gelieve het [ overzicht van het rekeningspubliek ](../../segmentation/ui/account-audiences.md). |
+| Accountdoelgroepen | Accountdoelgroepen zijn nu algemeen beschikbaar! U kunt nu accountsegmentatie gebruiken om het volledige gemak en de verfijning van de marketingsegmentatie-ervaring van op mensen gebaseerde doelgroepen naar op accounts gebaseerde doelgroepen te brengen in zowel de B2B- als de B2P-editie van het Real-Time Customer Platform. Met deze release kunt u op personen gebaseerde doelgroepen gebruiken als basis voor op accounts gebaseerde doelgroepen. Ook worden er zoekmogelijkheden toegevoegd, wordt het gebruik van aangepaste entiteiten ondersteund en voldoet de release aan datagovernance. Voor meer informatie over deze functie, raadpleegt u het [overzicht van accountdoelgroepen](../../segmentation/ui/account-audiences.md). |
 
 {style="table-layout:auto"}
 
 ## Bronnen {#sources}
 
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+Experience Platform biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE  Beta ] {type=Informative} [!DNL Acxiom] bron | Gebruik de [[!DNL Acxiom Prospecting Data Import]  bron ](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) om gegevens van [!DNL Acxiom] perspectiefdienst aan Experience Platform terug te winnen en in kaart te brengen. |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom] bron | Gebruik de [[!DNL Acxiom Prospecting Data Import] bron](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) om gegevens van [!DNL Acxiom] prospect service op te halen en toe te wijzen aan Experience Platform. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over bronnen, lees het [ overzicht van bronnen ](../../sources/home.md).
+Voor meer informatie over bronnen, raadpleegt u het [overzicht van bronnen](../../sources/home.md).
