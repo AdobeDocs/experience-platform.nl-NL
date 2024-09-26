@@ -1,13 +1,14 @@
 ---
 title: Merkury Enterprise Identity Destination
 description: Leer hoe u een Merkury Enterprise Identity-doelverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: a5452183-289c-49c3-9574-e09b0153dc00
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1465'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
-
 
 # Merkury Enterprise Identity Destination
 
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 ## Overzicht
 
-Gebruik de bestemming [!DNL Merkury Enterprise Identity] om nauwkeurigere, uitvoerige, en inzichtelijkere consumentenprofielen te bouwen. Met verbeterde profielgegevens kunnen marketers betere inzichten, segmenten en modellen genereren, wat resulteert in een nauwkeurigere gerichtheid en voorspellende modellering.
+Gebruik de bestemming [!DNL Merkury Enterprise Identity] om nauwkeurigere, uitgebreidere en inzichtelijkere consumentenprofielen te maken. Met verbeterde profielgegevens kunnen marketers betere inzichten, segmenten en modellen genereren, wat resulteert in een nauwkeurigere gerichtheid en voorspellende modellering.
 
 ![ een diagram dat van A de interconnectie tussen Merkury en Experience Platform toont, met inbegrip van opname en activering ](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
 
@@ -67,7 +68,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | **Doelgroep** | **Gesteund** | **Beschrijving** | **oorsprong** |
 |---|---|---|---|
-| Segmenteringsservice | ✓ | Soorten publiek door het Experience Platform [ wordt geproduceerd [de Dienst van de Segmentatie] ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Segmentatieservice | ✓ | Soorten publiek door het Experience Platform [ wordt geproduceerd [de Dienst van de Segmentatie] ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
 | Aangepaste uploads | x | Soorten publiek [ [ingevoerde] ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -78,7 +79,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | **Doelgroep** | **Gesteund** | **Oorsprong van de Beschrijving** |
 |---|---|---|      
-| Segmenteringsservice | ✓ | Soorten publiek door het Experience Platform [ wordt geproduceerd [de Dienst van de Segmentatie] ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Segmentatieservice | ✓ | Soorten publiek door het Experience Platform [ wordt geproduceerd [de Dienst van de Segmentatie] ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
 | Aangepaste uploads | X | Soorten publiek [ [ingevoerde] ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
