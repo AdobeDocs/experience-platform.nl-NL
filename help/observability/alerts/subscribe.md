@@ -4,9 +4,9 @@ title: Abonneren op Adobe I/O-gebeurtenismeldingen
 description: Dit document bevat stappen voor het abonneren op Adobe I/O-gebeurtenismeldingen voor Adobe Experience Platform-services. De informatie van de verwijzing betreffende beschikbare gebeurtenistypen wordt ook verstrekt, samen met verbindingen aan verdere documentatie over hoe te om teruggekeerde gebeurtenisgegevens voor elke toepasselijke  [!DNL Platform]  dienst te interpreteren.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
+source-git-commit: 8e6301c5f834465acff99b4cd668017581c1dfa9
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -64,6 +64,10 @@ In het volgende scherm wordt een lijst weergegeven met gebeurtenistypen waarop u
 >
 >* [ de berichten van het Platform ](./rules.md)
 >* [ Privacy Service berichten ](../../privacy-service/privacy-events.md)
+
+>[!IMPORTANT]
+>
+>Waarschuwingen met betrekking tot Edge worden momenteel in bèta weergegeven en zijn alleen beschikbaar voor bepaalde bètaklanten.
 
 ![](../images/notifications/choose-event-subscriptions.png)
 
