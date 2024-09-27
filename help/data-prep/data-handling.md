@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevensindelingen verwerken met Data Prep
 description: Dit document geeft een overzicht van hoe de verschillende gegevenstypen in de Prep van Gegevens worden behandeld.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '626'
 ht-degree: 3%
 
 ---
@@ -75,6 +75,10 @@ Wanneer de koordgebieden van inkomende gegevens aan datumgebieden in schema&#39;
 > Met Data Prep worden tekenreeksen zo goed mogelijk omgezet in datums. Deze omzettingen kunnen echter tot ongewenste resultaten leiden. De tekenreekswaarde &quot;12112020&quot; komt bijvoorbeeld overeen met het patroon &quot;MMddyy&quot;, maar de gebruiker kan de datum hebben willen lezen met het patroon &quot;ddMMyyyy&quot;. Daarom moeten gebruikers expliciet de datumnotatie voor tekenreeksen vermelden.
 
 ### Tekenreeksen voor datum-/tijdnotatie {#format}
+
+>[!TIP]
+>
+>Momenteel verwijdert de datumfunctie in batch-opname milliseconden als de datumwaarden de volgende notatie hebben: `2024-05-05 20:39:00.005` PST. Gebruik de volgende notatie om milliseconden te behouden: `2024-05-05 20:39:00.005-0800`
 
 In de volgende tabel wordt aangegeven welke patroonletters zijn gedefinieerd voor opmaaktekenreeksen. De letters zijn hoofdlettergevoelig.
 

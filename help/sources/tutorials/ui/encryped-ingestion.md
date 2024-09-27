@@ -3,9 +3,9 @@ title: Samenvatting Gecodeerde Gegevens in Brongebruikersinterface Workspace
 description: Leer hoe u gecodeerde gegevens kunt invoeren in de UI-werkruimte voor bronnen.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
+source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Ondersteuning voor gecodeerde gegevensinvoer in de interface van bronnen vindt u in bèta en is mogelijk niet beschikbaar voor uw organisatie. De functie en documentatie kunnen worden gewijzigd.
+>De ondersteuning voor gecodeerde gegevensinvoer in de interface voor bronnen is in bèta. De functie en documentatie kunnen worden gewijzigd.
 
 U kunt gecodeerde gegevensbestanden en -mappen via batchbronnen voor cloudopslag opnemen in Adobe Experience Platform. Met gecodeerde gegevensinvoer kunt u gebruikmaken van asymmetrische coderingsmechanismen om batchgegevens veilig naar het Experience Platform over te brengen. De ondersteunde asymmetrische versleutelingsmechanismen zijn PGP en GPG.
 

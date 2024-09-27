@@ -3,9 +3,9 @@ title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1e9d16c53100c1ee930cf4bf5e9a9a5b6bd9c347
+source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1536'
 ht-degree: 0%
 
 ---
@@ -168,6 +168,8 @@ Gebruik voor alle feedback de optie **[!UICONTROL Beta feedback]** in de gebruik
 ## Grafieken valideren {#validate}
 
 Gebruik het identiteitsdashboard voor inzicht in de staat van uw identiteitsgrafieken, zoals uw algemene identiteitstelling en tendensen van het grafiekaantal, identiteitstelling door namespace, en grafiektelling door grafiekgrootte. U kunt het identiteitsdashboard ook gebruiken om trends weer te geven op grafieken met twee of meer identiteiten, ingedeeld in naamruimte.
+
+Selecteer de ellipsen (`...`) en selecteer vervolgens **[!UICONTROL View more]** voor meer informatie en om te controleren of er geen samengevouwen grafieken zijn.
 
 ## Bijlage {#appendix}
 
