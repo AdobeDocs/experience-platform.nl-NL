@@ -2,9 +2,9 @@
 title: Zoekplanningen
 description: Leer hoe te om geplande vraaglooppas te automatiseren, een vraagprogramma te schrappen of onbruikbaar te maken, en de beschikbare het plannen opties door de UI van Adobe Experience Platform te gebruiken.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
+source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1972'
 ht-degree: 0%
 
 ---
@@ -163,6 +163,11 @@ De volgende lijst verstrekt beschrijvingen van elke kolom beschikbaar in de deta
 | [!UICONTROL Compute Hours] | Toont de compute tijd die voor elke vraaglooppas wordt gebruikt, in uren wordt gemeten die. Hierdoor kunt u het gebruik van bronnen bijhouden en de queryprestaties optimaliseren. |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>De gegevens over rekenuren zijn beschikbaar vanaf 15-08-2024. Gegevens vóór deze datum worden weergegeven als &#39;Niet beschikbaar&#39;.
+
 
 Zie de [ monitor geplande gevraagde gids ](./monitor-queries.md#inline-actions) voor volledige informatie over hoe te om het statuut van alle vraagbanen door UI te controleren.
 

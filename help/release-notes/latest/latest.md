@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2024
 description: In de release van september 2024 staat een opmerking voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e93d27ef67802c5fbdffdacb3a0649d373a41a2d
+source-git-commit: 059ed53ace6d54a0c0fb406c2f0379588fea2c44
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2146'
 ht-degree: 23%
 
 ---
@@ -15,15 +15,16 @@ ht-degree: 23%
 
 Updates voor bestaande functies en documentatie in Adobe Experience Platform:
 
-- [Waarschuwingen](#alerts)
-- [Dashboards](#dashboards)
-- [Gegevensvoorbereiding](#data-prep)
-- [Bestemmingen](#destinations)
-- [Experience-datamodel (XDM)](#xdm)
-- [Identiteitsservice](#identity-service)
-- [Query-service](#query-service)
-- [Segmentatieservice](#segmentation-service)
-- [Bronnen](#sources)
+- [Aanvullende informatie voor Adobe Experience Platform](#adobe-experience-platform-release-notes)
+   - [Waarschuwingen {#alerts}](#alerts-alerts)
+   - [Dashboards {#dashboards}](#dashboards-dashboards)
+   - [Voorinstelling gegevens {#data-prep}](#data-prep-data-prep)
+   - [Doelen {#destinations}](#destinations-destinations)
+   - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
+   - [Identiteitsservice {#identity-service}](#identity-service-identity-service)
+   - [Query-service {#query-service}](#query-service-query-service)
+   - [Segmentatieservice {#segmentation-service}](#segmentation-service-segmentation-service)
+   - [Bronnen {#sources}](#sources-sources)
 
 ## Waarschuwingen {#alerts}
 
@@ -140,7 +141,7 @@ Met de Query-service kunt u standaard SQL gebruiken om query&#39;s uit te voeren
 | Functie | Beschrijving |
 | --- | --- |
 | Distiller-publiek gegevens | Maak, beheer en activeer eenvoudig soorten publiek met de SQL-publieksextensie in Data Distiller van Experience Platform. Bepaal publiekssegmenten met SQL bevelen direct van uw gegevens meer, die de behoefte aan ruwe gegevens in profielen omzeilen. Verfijn het richten strategieën en synchroniseer automatisch publiek aan op dossier-gebaseerde bestemmingen met deze flexibele, gegeven-gedreven benadering. Stroomlijn workflows, optimaliseer het beheer van het publiek en ontgrendel het volledige potentieel van gegevens. Lees de [ gids bij het gebruiken van de SQL publieksuitbreiding ](../../query-service/data-distiller-audiences/overview.md) om uw publieksstrategieën op te heffen. |
-| Distiller-statistieken gegevens - Hyperkubussen | Optimaliseer de analyse van grote gegevens met Hyperkubussen. Verwerk complexe berekeningen, zoals verschillende tellingen en multidimensionale analyse, zonder historische gegevens opnieuw te verwerken. Gegevens stapsgewijs bijwerken, workflows stroomlijnen en verwerkingstijd verkorten terwijl de nauwkeurigheid en efficiëntie behouden blijven. Krijg snellere, scalable, en rendabele inzichten die besluitvorming transformeren. Onderzoek de [ gids bij het gebruiken van Hyperkubussen ](../../query-service/hypercubes.md) om geavanceerde analyse te ontgrendelen. |
+| Distiller-statistieken gegevens - Hyperkubussen | Optimaliseer de analyse van grote gegevens met Hyperkubussen. Verwerk complexe berekeningen, zoals verschillende tellingen en multidimensionale analyse, zonder historische gegevens opnieuw te verwerken. Gegevens stapsgewijs bijwerken, workflows stroomlijnen en verwerkingstijd verkorten terwijl de nauwkeurigheid en efficiëntie behouden blijven. Krijg snellere, scalable, en rendabele inzichten die besluitvorming transformeren. Onderzoek de [ gids bij het gebruiken van Hyperkubussen ](../../query-service/hypercubes/overview.md) om geavanceerde analyse te ontgrendelen. |
 | Query Editor Object-browser | De vraagefficiency van de verhoging met nieuwe Browser van Objecten in de Redacteur van de Vraag. Snel onderzoek, filter, en toegangsdatasets om vragen sneller te schrijven en te raffineren. Met schema-updates in real time en onmiddellijke lijstmeta-gegevens, kunt u werkschema&#39;s stroomlijnen, navigatietijd verminderen, en uw vraagervaring verbeteren. Ontgrendel het potentieel van uw gegevens en optimaliseer de analyse. Lees de [ gids bij het gebruiken van Browser van Objecten ](../../query-service/ui/user-guide.md#object-browser) voor meer informatie. |
 | Rekenuren | De controle van de winst over middelgebruik met onlangs zichtbare Compute metrische Uren voor geplande vragen. De Uren van de Output van de mening op het niveau van de vraaguitvoering om middelgebruik voor CTAS/ITAS partijvragen te controleren en te optimaliseren. De begintijden van het spoor, voltooiingsstatus, en gegevens tijd voor elke vraaglooppas gegevens. Prestaties nauwkeurig afstellen en kosten moeiteloos verlagen. Lees de [ gids op Compute Uren ](../../query-service/ui/query-schedules.md#compute-hours-at-job-level) voor informatie over hoe te om uw vraagefficiency te maximaliseren. |
 

@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: bdd3d37baa05c8da3213f425657a00fef6afecb8
+source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '339'
 ht-degree: 12%
 
 ---
@@ -41,7 +41,6 @@ ht-degree: 12%
       - [Verrijking van end-to-end workflow voor de AI/ML-gegevenspijpleiding](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Distiller-publiek voor gegevens {#data-distiller-audiences}
    - [Extern publiek opbouwen met SQL](data-distiller-audiences/overview.md)
-- [Distiller-HYPERCUBES GEGEVENS](hypercubes.md)
 - Voorbeelden {#use-cases}
    - [Overzicht](use-cases/overview.md)
    - [Verlaten browsers](use-cases/abandoned-browse.md)
@@ -70,6 +69,8 @@ ht-degree: 12%
    - [Gegevensdeduplicatie](key-concepts/deduplication.md)
    - [Gegevenssetvoorbeelden](key-concepts/dataset-samples.md)
    - [Berekening van gegevenssetstatistieken](key-concepts/dataset-statistics.md)
+- Distiller-hyperkubussen voor gegevens {#hypercubes}
+   - [Efficiënte grote gegevensanalyse met hyperkubussen](hypercubes/overview.md)
 - Clients verbinden met Query Service {#clients}
    - [Overzicht van clientverbindingen](clients/overview.md)
    - [SSL-modi](./clients/ssl-modes.md)
