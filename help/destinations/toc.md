@@ -5,15 +5,15 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 029cd5bdf58a143f765b37190428b817825317b0
+source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1251'
 ht-degree: 1%
 
 ---
 
 
-# Doelen {#destinations}
+# Bestemmingen {#destinations}
 
 * [Overzicht van doelen](./home.md)
 * [Doeltypen en -categorieën](./destination-types.md)
@@ -67,6 +67,7 @@ ht-degree: 1%
       * [ Experience Platform publiek het delen ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [ Federated de verbinding van de Samenstelling van het publiek (Beperkte beschikbaarheid) ](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising-bestemmingen {#advertising}
+      * [(Beta) Acxiom Audience Distribution](./catalog/advertising/acxiom-audience-distribution.md)
       * [Overzicht Advertising-bestemmingen](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-verbinding](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud-extensie](./catalog/advertising/adobe-advertising-cloud.md)
@@ -167,7 +168,7 @@ ht-degree: 1%
       * [(Bestanden) Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua.md)
       * [Verbinding oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Verbinding met Salesforce-Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
-      * [(Bestanden) Verbinding met Salesforce-Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [(Bestanden) Salesforce Marketing Cloud verbinding](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [SendGrid-verbinding](./catalog/email-marketing/sendgrid.md)
    * Extensies labelen {#launch-extensions}

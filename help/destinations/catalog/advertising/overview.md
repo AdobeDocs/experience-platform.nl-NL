@@ -3,9 +3,9 @@ keywords: reclamebestemmingen;bestemmingen;platformbestemmingen
 title: Overzicht Advertising-bestemmingen
 description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
+source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,7 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbind
 
 ### Verbindingen
 
+* [(Beta) Acxiom Audience Distribution](acxiom-audience-distribution.md)
 * [Adobe Advertising Cloud-verbinding](adobe-advertising-cloud-connection.md)
 * [(Beta) Amazon Ads-verbinding](amazon-ads.md)
 * [(Beta) Creditverbinding](criteo.md)
