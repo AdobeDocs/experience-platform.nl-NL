@@ -2,9 +2,9 @@
 title: Incrementele belasting in Query-service
 description: De stijgende ladingseigenschap gebruikt zowel anonieme blok als momentopnamefuncties om een dichtbij oplossing in real time te verstrekken voor het bewegen van gegevens van het gegevensholoader aan uw gegevenspakhuis terwijl het negeren van passende gegevens.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -125,10 +125,6 @@ In de onderstaande stappen wordt getoond hoe u gegevens kunt maken en incremente
 Deze logica kan op om het even welke lijst worden toegepast om stijgende lasten uit te voeren.
 
 ## Verlopen momentopnamen
-
->[!IMPORTANT]
->
->De meta-gegevens van de momentopname verlopen na **twee** dagen. Een verlopen momentopname maakt de logica van het hierboven verstrekte manuscript ongeldig.
 
 Om de kwestie van een verlopen momentopname identiteitskaart op te lossen, neem het volgende bevel aan het begin van het anonieme blok op. De volgende coderegel overschrijft de `@from_snapshot_id` met de oudste beschikbare `snapshot_id` op basis van metagegevens.
 

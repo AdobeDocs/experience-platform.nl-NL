@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt de SQL-syntaxis beschreven die wordt ondersteund door de Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: d2cb7c3d1968a33300d480e63c4cb007df3cce7b
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '4305'
+source-wordcount: '4291'
 ht-degree: 1%
 
 ---
@@ -707,11 +707,7 @@ De waarden die uit `source_dataset` zijn opgehaald, worden gebruikt om de doelta
 | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(&quot;(&quot;(BM, pass, NA, NULL)&quot;)&quot;)&quot;) | 3 | 12 |
 
-## [!DNL Spark] SQL-opdrachten
-
-De onderafdeling hieronder behandelt de SQL bevelen van de Vonk die door de Dienst van de Vraag worden gesteund.
-
-### SET
+## SET
 
 De opdracht `SET` stelt een eigenschap in en retourneert de waarde van een bestaande eigenschap of geeft alle bestaande eigenschappen weer. Als een waarde wordt opgegeven voor een bestaande eigenschapsleutel, wordt de oude waarde overschreven.
 

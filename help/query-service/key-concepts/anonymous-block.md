@@ -2,9 +2,9 @@
 title: Anoniem blok in Query-service
 description: Het anonieme blok is een SQL syntaxis die door de Dienst van de Vraag van Adobe Experience Platform wordt gesteund, die u toestaat om een opeenvolging van vragen efficiënt uit te voeren
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 9193ba821409806cd7b4667c5de73a0cf2660c66
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -44,9 +44,7 @@ $$;
 
 In het onderstaande voorbeeld blijft `SET` het resultaat van een `SELECT` -query in de opgegeven lokale variabele behouden. De variabele is scoped aan het anonieme blok.
 
-De momentopname-id wordt opgeslagen als een lokale variabele (`@current_sid`). Het wordt dan gebruikt in de volgende vraag om resultaten terug te keren die op SNAPSHOT van de zelfde dataset/de lijst worden gebaseerd.
-
-Een gegevensbestandmomentopname is een read-only, statische mening van een SQL gegevensbestand van de Server. Voor meer [ informatie over de momentopnameclausule ](../sql/syntax.md#SNAPSHOT-clause) zie de SQL syntaxisdocumentatie.
+De momentopname-id wordt opgeslagen als een lokale variabele (`@current_sid`). Het wordt dan gebruikt in de volgende vraag om resultaten terug te keren die op SNAPSHOT van de zelfde dataset/de lijst worden gebaseerd. Voor meer [ informatie over de momentopnameclausule ](../sql/syntax.md#SNAPSHOT-clause) zie de SQL syntaxisdocumentatie.
 
 ```SQL
 $$ BEGIN                                             
