@@ -2,7 +2,7 @@
 description: Leer hoe te opstelling een samenvoegingsbeleid om te bepalen hoe de verzoeken van HTTP aan uw bestemming zouden moeten worden gegroepeerd en worden gegroepeerd.
 title: Samenvoegingsbeleid
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -109,8 +109,8 @@ De voorbeeldconfiguratie toont hieronder een configureerbare samenvoegingsconfig
 |---------|----------|------|
 | `aggregationType` | String | Wijst op het type van samenvoegingsbeleid dat uw bestemming zou moeten gebruiken. Ondersteunde aggregatietypen: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `configurableAggregation.splitUserById` | Boolean | Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Stel deze markering in op `true` als uw server slechts één identiteit per aanroep accepteert, voor een opgegeven naamruimte voor de identiteit. |
-| `configurableAggregation.maxBatchAgeInSecs` | Geheel | Deze parameter wordt gebruikt in combinatie met `maxNumEventsInBatch` en bepaalt hoe lang Experience Platform moet wachten tot een API-aanroep naar het eindpunt wordt verzonden. <ul><li>Minimumwaarde (in seconden): 1800</li><li>Maximumwaarde (in seconden): 3600</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3600 seconden OF wachten tot er 10000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
-| `configurableAggregation.maxNumEventsInBatch` | Geheel | Deze parameter wordt gebruikt in combinatie met `maxBatchAgeInSecs` en bepaalt hoeveel gekwalificeerde profielen moeten worden samengevoegd in een API-aanroep. <ul><li>Minimumwaarde: 1000</li><li>Maximumwaarde: 10000</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3600 seconden OF wachten tot er 10000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
+| `configurableAggregation.maxBatchAgeInSecs` | Geheel | Deze parameter wordt gebruikt in combinatie met `maxNumEventsInBatch` en bepaalt hoe lang Experience Platform moet wachten tot een API-aanroep naar het eindpunt wordt verzonden. <ul><li>Minimumwaarde (in seconden): 1.800</li><li>Maximumwaarde (in seconden): 3.600</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3.600 seconden OF wachten tot er 10000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
+| `configurableAggregation.maxNumEventsInBatch` | Geheel | Deze parameter wordt gebruikt in combinatie met `maxBatchAgeInSecs` en bepaalt hoeveel gekwalificeerde profielen moeten worden samengevoegd in een API-aanroep. <ul><li>Minimumwaarde: 1.000</li><li>Maximumwaarde: 10.000</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3.600 seconden OF wachten tot er 10.000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
 | `configurableAggregation.aggregationKey` | - | Hiermee kunt u de geëxporteerde profielen samenvoegen die aan de bestemming zijn toegewezen op basis van de hieronder beschreven parameters. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | Boolean | Stel deze parameter in op `true` als u profielen wilt groeperen die naar uw doel zijn geëxporteerd op basis van gebruikers-id. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | Boolean | Stel deze parameter en `includeSegmentId` in op `true` als u profielen wilt groeperen die naar uw doel zijn geëxporteerd op basis van gebruikers-id en de status van het publiek. |

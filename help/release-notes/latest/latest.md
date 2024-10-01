@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2024
 description: In de release van september 2024 staat een opmerking voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 059ed53ace6d54a0c0fb406c2f0379588fea2c44
+source-git-commit: a342f38f09b84ef720d6135bc555844df12ee251
 workflow-type: tm+mt
-source-wordcount: '2146'
-ht-degree: 23%
+source-wordcount: '2196'
+ht-degree: 22%
 
 ---
 
@@ -15,16 +15,15 @@ ht-degree: 23%
 
 Updates voor bestaande functies en documentatie in Adobe Experience Platform:
 
-- [Aanvullende informatie voor Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Waarschuwingen {#alerts}](#alerts-alerts)
-   - [Dashboards {#dashboards}](#dashboards-dashboards)
-   - [Voorinstelling gegevens {#data-prep}](#data-prep-data-prep)
-   - [Doelen {#destinations}](#destinations-destinations)
-   - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-   - [Identiteitsservice {#identity-service}](#identity-service-identity-service)
-   - [Query-service {#query-service}](#query-service-query-service)
-   - [Segmentatieservice {#segmentation-service}](#segmentation-service-segmentation-service)
-   - [Bronnen {#sources}](#sources-sources)
+- [Waarschuwingen {#alerts}](#alerts)
+- [Dashboards {#dashboards}](#dashboards)
+- [Voorinstelling gegevens {#data-prep}](#data-prep)
+- [Doelen {#destinations}](#destinations)
+- [Experience Data Model (XDM) {#xdm}](#xdm)
+- [Identiteitsservice {#identity-service}](#identity-service)
+- [Query-service {#query-service}](#query-service)
+- [Segmentatieservice {#segmentation-service}](#segmentation-service)
+- [Bronnen {#sources}](#sources)
 
 ## Waarschuwingen {#alerts}
 
@@ -77,6 +76,8 @@ Voor meer informatie over gegevensvoorbereiding, raadpleegt u het [overzicht van
 
 ## Bestemmingen {#destinations}
 
+**Bijgewerkt: 30 september, 2024**
+
 [!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 **Nieuwe of bijgewerkte bestemmingen** {#new-updated-destinations}
@@ -84,6 +85,7 @@ Voor meer informatie over gegevensvoorbereiding, raadpleegt u het [overzicht van
 | Bestemming | Beschrijving |
 | --- | --- |
 | [ Advertentie Amazon ](/help/destinations/catalog/advertising/amazon-ads.md) | De release van september 2024 voegt de toewijzingsoptie toe om de parameter `countryCode` te exporteren naar Amazon Ads. Gebruik `countryCode` in de [ kaartstap ](/help/destinations/catalog/advertising/amazon-ads.md#map) om uw tarieven van de identiteitsgelijke met Amazon te verbeteren. |
+| [ [!BADGE  B2B] {type=Informative} Demandbase ](/help/destinations/catalog/advertising/demandbase.md) | Gebruik deze bestemming om gebruikers van je account te activeren voor gebruik van Account-Based Marketing (ABM). Adverteer aan relevante personen en rollen in uw doelrekeningen via het B2B-Demand Side Platform (DSP) van DemandBase. Doelaccounts kunnen ook worden verrijkt met gegevens van derden over demandbase, voor andere downstreamtoepassingen bij marketing en verkoop. |
 
 {style="table-layout:auto"}
 

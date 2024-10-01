@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Meer informatie over het standaardgebruik en de tarieflimieten van gegevensactivering.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1681'
 ht-degree: 1%
 
 ---
@@ -178,7 +178,7 @@ Lees meer over [ het uitvoeren datasets ](/help/destinations/ui/export-datasets.
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
 | Maximum aantal [ privé douanebestemmingen ](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Prestatiegerichting | U kunt maximaal vijf aangepaste streaming privédoelen of batchdoelen maken met behulp van Destination SDK. Neem contact op met een aangepaste zorgvertegenwoordiger als u meer dan vijf van dergelijke doelen moet maken. |
-| Profielexportbeleid voor Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimaal 1,800 en maximaal 3,600)</li><li>`maxNumEventsInBatch` (minimaal 1,000, maximaal 10,000)</li></ul> | Door het systeem afgedwongen geleiding | Wanneer het gebruiken van de [ configureerbare samenvoeging ](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) optie voor uw bestemming, houd rekening met de minimum en maximumwaarden die bepalen hoe vaak de berichten van HTTP naar uw op API-Gebaseerde bestemming worden verzonden en hoeveel profielen de berichten zouden moeten omvatten. |
+| Profielexportbeleid voor Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimaal 1,800 en maximaal 3,600)</li><li>`maxNumEventsInBatch` (minimaal 1.000 en maximaal 10.000)</li></ul> | Door het systeem afgedwongen geleiding | Wanneer het gebruiken van de [ configureerbare samenvoeging ](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) optie voor uw bestemming, houd rekening met de minimum en maximumwaarden die bepalen hoe vaak de berichten van HTTP naar uw op API-Gebaseerde bestemming worden verzonden en hoeveel profielen de berichten zouden moeten omvatten. |
 
 {style="table-layout:auto"}
 
