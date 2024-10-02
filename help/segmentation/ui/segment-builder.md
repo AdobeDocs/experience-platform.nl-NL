@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
+source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
-source-wordcount: '4697'
+source-wordcount: '4868'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,19 @@ ht-degree: 0%
 >abstract="De drie veldtypen waaruit een segmentdefinitie bestaat, zijn kenmerken, gebeurtenissen en doelgroepen. Met kenmerken kunt u Profielkenmerken gebruiken die horen bij de klasse Individueel profiel XDM, gebeurtenissen kunt u een publiek maken op basis van handelingen of gebeurtenissen die plaatsvinden met XDM ExperienceEvent-gegevenselementen en publiek kunt geïmporteerde soorten publiek uit externe bronnen gebruiken."
 
 De basisbouwstenen van segmentdefinities zijn attributen en gebeurtenissen. Daarnaast kunnen de kenmerken en gebeurtenissen in bestaande doelgroepen worden gebruikt als componenten voor nieuwe definities.
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_summarydata"
+>title="Samenvattingsgegevens"
+>abstract="De summiere gegevens verschijnen slechts voor profielattributen en <b> </b> verschijnen niet voor of gebeurtenis of publieksattributen.<br/><br/> Summiere gegevens voor profielattributen kunnen niet onder de volgende omstandigheden verschijnen: <ol><li>Sommige waarden van het kenmerk zijn meer dan 100 tekens lang.</li><li>Er zijn meer dan 3000 unieke waarden voor het kenmerk.</li></ol>"
+
+>[!NOTE]
+>
+>Als u de informatiballon van een attribuut selecteert, kunt u de verdeling van waarden, die ook als summiere gegevens worden bekend, van het gebied bekijken. Deze zijn **slechts** beschikbaar in het attributenlusje, en zijn niet beschikbaar voor gebruik in de gebeurtenissen of het publiek tabel.
+>
+>Samenvattingsgegevens worden weergegeven als het kenmerk aan de volgende criteria voldoet: alle waarden van het kenmerk zijn 100 tekens of minder en er zijn 3000 of minder unieke waarden voor het kenmerk.
+>
+>Nochtans, zal een attribuut **** geen summiere gegevens hebben als het multi-entiteitgegevens verbonden aan het profiel door een verhouding is. Bijvoorbeeld, als u een douaneschema genoemd `Vehicle` hebt, zullen de **eigenschappen** binnen het `Vehicle` schema **** geen summiere gegevens hebben.
 
 U kunt deze bouwstenen zien in de sectie **[!UICONTROL Fields]** aan de linkerkant van de [!DNL Segment Builder] -werkruimte. **[!UICONTROL Fields]** bevat een lusje voor elk van de belangrijkste bouwstenen: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot;, en &quot;[!UICONTROL Audiences]&quot;.
 
