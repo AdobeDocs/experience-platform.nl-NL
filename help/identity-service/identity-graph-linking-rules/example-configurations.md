@@ -1,11 +1,10 @@
 ---
 title: Voorbeelden van grafiekconfiguraties
 description: Leer over gemeenschappelijke grafiekscenario's die u zou kunnen ontmoeten wanneer het werken met identiteitsgrafiek die regels en identiteitsgegevens verbindt.
-badge: Beta
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 6ad4709d8d361c16c22eddeef5f7ccdd1f4b2fb3
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '2786'
+source-wordcount: '2783'
 ht-degree: 1%
 
 ---
@@ -14,13 +13,12 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->De regels voor identiteitsgrafiekkoppelingen staan momenteel in bèta. Neem contact op met het accountteam van de Adobe voor meer informatie over de deelnemingscriteria. De functie en documentatie kunnen worden gewijzigd.
+>Identiteitsgrafiek die regels verbindt is momenteel in Beperkte Beschikbaarheid. Neem contact op met het accountteam van de Adobe voor informatie over de toegang tot de functie in ontwikkelsandboxen.
 
 >[!NOTE]
 >
 >* &#39;CRMID&#39; en &#39;loginID&#39; zijn aangepaste naamruimten. In dit document is &#39;CRMID&#39; een persoon-id en is &#39;loginID&#39; een aanmeldings-id die aan een bepaalde persoon is gekoppeld.
 >* Als u de voorbeeldgrafiekscenario&#39;s wilt simuleren die in dit document worden beschreven, moet u eerst twee aangepaste naamruimten maken, een met het identiteitssymbool &quot;CRMID&quot; en een ander met het identiteitssymbool &quot;loginID&quot;. Identiteitssymbolen zijn hoofdlettergevoelig.
-
 
 Dit document schetst de voorbeelden van de grafiekconfiguratie van gemeenschappelijke scenario&#39;s die u zou kunnen ontmoeten wanneer het werken met identiteitsgrafiek die regels en identiteitsgegevens verbindt.
 

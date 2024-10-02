@@ -3,9 +3,9 @@ title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
+source-git-commit: 0bb99a359e7331f2235cd5385dcf546ab4c2b494
 workflow-type: tm+mt
-source-wordcount: '1536'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De regels voor identiteitsgrafiekkoppelingen staan momenteel in bèta. Neem contact op met het accountteam van de Adobe voor meer informatie over de deelnemingscriteria. De functie en documentatie kunnen worden gewijzigd.
+>Identiteitsgrafiek die regels verbindt is momenteel in Beperkte Beschikbaarheid. Neem contact op met het accountteam van de Adobe voor informatie over de toegang tot de functie in ontwikkelsandboxen.
 
 Lees dit document voor een stapsgewijze uitleg die u kunt volgen bij het implementeren van uw gegevens met Adobe Experience Platform Identity Service.
 
@@ -61,8 +61,67 @@ Als u [ Adobe Analytics bronschakelaar ](../../sources/tutorials/ui/create/adobe
 
 ### XDM Experience-gebeurtenissen
 
-* Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek verklaarde gebeurtenissen die uw systeem naar Experience Platform zal verzenden altijd een persoonsidentificatie, zoals CRMID bevatten.
-* Verzend geen lege tekenreeks als identiteitswaarde wanneer u gebeurtenissen verzendt met behulp van XDM-ervaringsgebeurtenissen. Dit leidt tot systeemfouten.
+Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek verklaarde gebeurtenissen die uw systeem naar Experience Platform zal verzenden altijd een persoonsidentificatie, zoals CRMID bevatten.
+
+>[!BEGINTABS]
+
+>[!TAB  Voor authentiek verklaarde gebeurtenissen met persoonsidentificatie ]
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ]
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+>[!TAB  Voor authentiek verklaarde gebeurtenissen zonder persoonsidentificatie ]
+
+
+```json
+{
+    "_id": "test_id"
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "62486695051193343923965772747993477018",
+                "primary": false
+            }
+        ]
+    },
+    "timestamp": "2024-09-24T15:02:32+00:00",
+    "web": {
+        "webPageDetails": {
+            "URL": "https://business.adobe.com/",
+            "name": "Adobe Business"
+        }
+    }
+}
+```
+
+
+>[!ENDTABS]
+
+Verzend geen lege tekenreeks als identiteitswaarde wanneer u gebeurtenissen verzendt met behulp van XDM-ervaringsgebeurtenissen. Als de identiteitswaarde van namespace met hoogste namespaceprioriteit een leeg koord is, zal het verslag van het Profiel van de Klant in real time worden genegeerd. Dit geldt zowel voor identityMap als voor velden die zijn gemarkeerd als een identiteit.
 
 +++Selecteren om een voorbeeld weer te geven van een lading met een lege tekenreeks
 
@@ -170,6 +229,12 @@ Gebruik voor alle feedback de optie **[!UICONTROL Beta feedback]** in de gebruik
 Gebruik het identiteitsdashboard voor inzicht in de staat van uw identiteitsgrafieken, zoals uw algemene identiteitstelling en tendensen van het grafiekaantal, identiteitstelling door namespace, en grafiektelling door grafiekgrootte. U kunt het identiteitsdashboard ook gebruiken om trends weer te geven op grafieken met twee of meer identiteiten, ingedeeld in naamruimte.
 
 Selecteer de ellipsen (`...`) en selecteer vervolgens **[!UICONTROL View more]** voor meer informatie en om te controleren of er geen samengevouwen grafieken zijn.
+
+![ het identiteitsdashboard in de werkruimte UI van de Dienst van de Identiteit.](../images/implementation/identity_dashboard.png)
+
+Gebruik het venster dat verschijnt om informatie over uw samengevouwen grafieken te bekijken. In dit voorbeeld zijn zowel e-mail als telefoon gemarkeerd als unieke naamruimte. Er zijn daarom geen samengevouwen grafieken in uw sandbox.
+
+![ het pop-up venster voor grafieken met veelvoudige identiteiten.](../images/implementation/graphs.png)
 
 ## Bijlage {#appendix}
 

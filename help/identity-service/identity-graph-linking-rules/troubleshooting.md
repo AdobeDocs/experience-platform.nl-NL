@@ -1,20 +1,19 @@
 ---
 title: De Gids van het oplossen van problemen voor de Regels van de Verbinding van de Grafiek van de Identiteit
 description: Leer hoe te om gemeenschappelijke kwesties in identiteitsgrafiek problemen op te lossen die regels verbinden.
-badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '3219'
+source-wordcount: '3240'
 ht-degree: 0%
 
 ---
 
-# De gids van het oplossen van problemen voor identiteitsgrafiek die regels verbindt
+# Handleiding voor het oplossen van problemen met koppelingsregels voor identiteitsgrafieken
 
 >[!AVAILABILITY]
 >
->De functie voor identiteitsgrafiekkoppelingen voor regels staat momenteel in bèta. Neem contact op met het accountteam van de Adobe voor meer informatie over de deelnemingscriteria. De functie en documentatie kunnen worden gewijzigd.
+>Identiteitsgrafiek die regels verbindt is momenteel in Beperkte Beschikbaarheid. Neem contact op met het accountteam van de Adobe voor informatie over de toegang tot de functie in ontwikkelsandboxen.
 
 Wanneer u regels voor identiteitsgrafieken test en valideert, kan er een aantal problemen optreden die te maken hebben met gegevensinvoer en grafiekgedrag. Lees dit document om te leren hoe te om sommige gemeenschappelijke kwesties problemen op te lossen die u zou kunnen ontmoeten wanneer het werken met identiteitsgrafiek die regels verbindt.
 
@@ -167,7 +166,10 @@ U kunt ook de volgende query uitvoeren om te controleren of er geen inname naar 
   FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
 ```
 
-Deze twee vragen veronderstellen dat één identiteit wordt verzonden van identityMap en een andere identiteit wordt verzonden van een identiteitsbeschrijver. **NOTA**: In de schema&#39;s van het Gegevensmodel van de Ervaring (XDM), is de identiteitsbeschrijver het gebied duidelijk als identiteit.
+Deze twee vragen gaan ervan uit dat:
+
+* Eén identiteit wordt verzonden vanuit de identityMap en een andere identiteit wordt verzonden vanuit een identiteitsbeschrijving. **NOTA**: In de schema&#39;s van het Gegevensmodel van de Ervaring (XDM), is de identiteitsbeschrijver het gebied duidelijk als identiteit.
+* De CRMID wordt verzonden via identityMap. Als de CRMID als gebied wordt verzonden, verwijder `key='Email'` uit WHERE clausule.
 
 ### Mijn ervaring met gebeurtenisfragmenten die zijn ingepakt, maar die de &quot;verkeerde&quot; primaire identiteit hebben in Profiel
 
@@ -398,7 +400,7 @@ In het algemeen geldt dat het testen op een ontwikkelingssandbox de gebruiksgeva
 | Testcase | Teststappen | Verwacht resultaat |
 | --- | --- | --- |
 | Accurate representatie van een entiteit | <ul><li>Anonieme navigatie simuleren</li><li>Mimic two people (John, Jane) logging in using the same device</li></ul> | <ul><li>Zowel John als Jane moeten aan hun attributen en voor authentiek verklaarde gebeurtenissen worden geassocieerd.</li><li>De laatst geverifieerde gebruiker moet zijn gekoppeld aan de anonieme browsergebeurtenissen.</li></ul> |
-| Segmentatie | Creeer vier segmentdefinities (**NOTA**: Elk paar segmentdefinitie zou één moeten hebben geëvalueerd gebruikend partij en andere het stromen.) <ul><li>Segmentdefinitie A: segmentkwalificatie gebaseerd op voor authentiek verklaarde gebeurtenissen van John.</li><li>Segmentdefinitie B: segmentkwalificatie op basis van de geverifieerde gebeurtenissen van Jane.</li></ul> | Ongeacht gedeelde apparatenscenario&#39;s, zouden John en Jane altijd voor hun respectieve segmenten moeten kwalificeren. |
+| Segmentatie | Creeer vier segmentdefinities (**NOTA**: Elk paar segmentdefinitie zou één moeten hebben geëvalueerd gebruikend partij en andere het stromen.) <ul><li>Segmentdefinitie A: segmentkwalificatie gebaseerd op voor authentiek verklaarde gebeurtenissen en/of attributen van John.</li><li>Segmentdefinitie B: segmentkwalificatie gebaseerd op voor authentiek verklaarde gebeurtenissen en/of attributen van Jane.</li></ul> | Ongeacht gedeelde apparatenscenario&#39;s, zouden John en Jane altijd voor hun respectieve segmenten moeten kwalificeren. |
 | Bevoegdheden van het publiek/unitaire reizen op Adobe Journey Optimizer | <ul><li>Maak een reis die begint met een kwalificatieactiviteit voor het publiek (zoals de streamingsegmentatie die hierboven is gemaakt).</li><li>Maak een reis die begint met een eenheidsgebeurtenis. Deze eenheidsgebeurtenis moet een geverifieerde gebeurtenis zijn.</li><li>Wanneer u deze reizen maakt, moet u het opnieuw betreden uitschakelen.</li></ul> | <ul><li>Ongeacht gedeelde apparatenscenario&#39;s, zouden John en Jane de respectieve reizen moeten teweegbrengen die zij zouden moeten ingaan.</li><li>John en Jane mogen de reis niet opnieuw betreden wanneer de ECID naar hen wordt overgebracht.</li></ul> |
 
 {style="table-layout:auto"}

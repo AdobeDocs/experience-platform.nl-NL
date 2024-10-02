@@ -1,12 +1,11 @@
 ---
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
-badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 0%
+source-wordcount: '1601'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De regels voor identiteitsgrafiekkoppelingen staan momenteel in bèta. Neem contact op met het accountteam van de Adobe voor meer informatie over de deelnemingscriteria. De functie en documentatie kunnen worden gewijzigd.
+>Identiteitsgrafiek die regels verbindt is momenteel in Beperkte Beschikbaarheid. Neem contact op met het accountteam van de Adobe voor informatie over de toegang tot de functie in ontwikkelsandboxen.
 
 Elke klantenimplementatie is uniek en gemaakt om de doelstellingen van een bepaalde organisatie te ontmoeten, en als dusdanig, varieert het belang van bepaalde namespace van klant tot klant. Voorbeelden in de praktijk zijn:
 
@@ -90,7 +89,7 @@ Voor relatief complexe grafiekstructuren speelt naamruimteprioriteit een belangr
 >
 >* Primaire identiteit is de identiteit waarin een profielfragment wordt opgeslagen. Een profielfragment is een record met gegevens waarin informatie over een bepaalde gebruiker wordt opgeslagen: kenmerken (gewoonlijk opgenomen via CRM-records) of gebeurtenissen (gewoonlijk opgenomen via ervaringsgebeurtenissen of online gegevens).
 
-### Voorbeeldgrafiekscenario
+### Voorbeeldscenario
 
 Deze sectie verstrekt een voorbeeld van hoe de prioritaire configuratie uw gegevens kan beïnvloeden.
 
@@ -111,10 +110,10 @@ Gezien de bovenstaande configuraties, zullen gebruikersacties en bepaling van de
 | Handeling van de gebruiker (Experience-gebeurtenis) | Verificatiestatus | Gegevensbron | Identiteitskaart | Primaire identiteit (primaire sleutel van profielfragment) |
 | --- | --- | --- | --- | --- |
 | Pagina met creditcardaanbiedingen weergeven | Niet geverifieerd (anoniem) | Web SDK | {ECID} | ECID |
-| Help-pagina weergeven | Niet geverifieerd | Mobiele SDK | {ECID, IDFA} | IDFA |
+| Help-pagina weergeven | Niet geverifieerd | Mobile SDK | {ECID, IDFA} | IDFA |
 | Accountbalans bekijken | Geverifieerd | Web SDK | {CRMID, ECID} | CRMID |
 | Aanmelden voor thuislening | Geverifieerd | Bronconnector voor analyse | {CRMID, ECID, AID} | CRMID |
-| Breng $1.000 van controle aan besparingen over | Geverifieerd | Mobiele SDK | {CRMID, GAID, ECID} | CRMID |
+| Breng $1.000 van controle aan besparingen over | Geverifieerd | Mobile SDK | {CRMID, GAID, ECID} | CRMID |
 
 {style="table-layout:auto"}
 
@@ -137,7 +136,7 @@ Als de segmentkwalificatiecriteria uitsluitend gebaseerd waren op anonieme gebeu
 
 In deze sectie wordt beschreven hoe naamruimteprioriteit van invloed kan zijn op andere services van Experience Platforms.
 
-### Geavanceerd levenscyclusbeheer van gegevens
+### Geavanceerd beheer van de levenscyclus van gegevens
 
 Gegevens-hygiënebestanden verwijderen de aanvraagfuncties voor een bepaalde identiteit op de volgende manier:
 
@@ -184,6 +183,6 @@ Voor meer informatie over, lees de documenten op [ Attribution AI ](../../intell
 
 Voor meer informatie, lees het [ de dienstoverzicht van de Privacy ](../../privacy-service/home.md).
 
-### Adobe Target en randpersonalisatie
+### Adobe Target
 
-[ de verpersoonlijking van Edge ](../../server-api/personalization-target.md) zal blijven verwijzen naar hoe u uw &quot;Primaire&quot;checkbox op het type van gegevenselement in WebSDK vormde (die aan `primary=true` in identityMap vertaalt).
+U kunt alleen batch- en streaming segmentatie activeren op Adobe Target.
