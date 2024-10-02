@@ -2,14 +2,14 @@
 title: Het dashboard Accountprofielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de B2B-accountprofielen van uw organisatie kunt bekijken.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1741'
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL Account Profiles] dashboard
+# Het dashboard Accountprofielen
 
 De gebruikersinterface van Adobe Experience Platform (UI) biedt een dashboard waarmee u belangrijke informatie over uw accountprofielen kunt bekijken, zoals vastgelegd tijdens een dagelijkse momentopname. In deze handleiding wordt beschreven hoe u het dashboard [!UICONTROL Account Profiles] in de gebruikersinterface kunt openen en gebruiken en wordt meer informatie gegeven over de visualisaties die in het dashboard worden weergegeven.
 
@@ -64,6 +64,11 @@ Selecteer in de resultaten op het tabblad [!UICONTROL Browse] de optie [!UICONTR
 De accountprofielgegevens die op het tabblad [!UICONTROL Details] worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten tot één weergave van het individuele account. Zie de documentatie bij [ doorbladerend rekeningsprofielen in Adobe Real-time Customer Data Platform ](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) om meer over de mogelijkheden van het rekeningsprofiel te leren bekijken in Platform UI.
 
 ## Standaardwidgets {#standard-widgets}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_accountprofiles_customersperaccountoverview"
+>title="Overzicht van klanten per account"
+>abstract="Deze boor-door widget verstrekt inzicht in de structuur van uw B2B gegevens. Hiermee kunt u bepalen hoeveel accountprofielen geen gekoppelde profielen van klanten hebben of aan welke profielen van klanten een of meer profielen van klanten zijn gekoppeld.<ul><li>Directe klanten: zijn klantprofielen die via de `personComponents` -route rechtstreeks aan een account zijn gekoppeld.</li><li>Indirecte klanten: zijn klantprofielen die via de `Account-Person` -route zijn gekoppeld aan een account.</li></ul>"
 
 Adobe biedt standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op uw accountprofielen.
 
