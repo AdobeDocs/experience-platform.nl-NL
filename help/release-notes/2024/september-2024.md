@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2024
 description: In de release van september 2024 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: a342f38f09b84ef720d6135bc555844df12ee251
+source-git-commit: 33d1305aef7c763e7b0bd8c6db6a1a9417cc2a9d
 workflow-type: tm+mt
 source-wordcount: '2196'
-ht-degree: 22%
+ht-degree: 23%
 
 ---
 
@@ -14,15 +14,15 @@ ht-degree: 22%
 
 Updates voor bestaande functies en documentatie in Adobe Experience Platform:
 
-- [Waarschuwingen {#alerts}](#alerts)
-- [Dashboards {#dashboards}](#dashboards)
-- [Voorinstelling gegevens {#data-prep}](#data-prep)
-- [Doelen {#destinations}](#destinations)
-- [Experience Data Model (XDM) {#xdm}](#xdm)
-- [Identiteitsservice {#identity-service}](#identity-service)
-- [Query-service {#query-service}](#query-service)
-- [Segmentatieservice {#segmentation-service}](#segmentation-service)
-- [Bronnen {#sources}](#sources)
+- [Waarschuwingen](#alerts)
+- [Dashboards](#dashboards)
+- [Gegevensvoorbereiding](#data-prep)
+- [Bestemmingen](#destinations)
+- [Experience-datamodel (XDM)](#xdm)
+- [Identiteitsservice](#identity-service)
+- [Query-service](#query-service)
+- [Segmentatieservice](#segmentation-service)
+- [Bronnen](#sources)
 
 ## Waarschuwingen {#alerts}
 
