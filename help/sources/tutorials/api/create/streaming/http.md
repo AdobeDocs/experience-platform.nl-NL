@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;streamingverbinding;maa
 title: Een HTTP API voor streaming verbinding maken met de Flow Service API
 description: Deze zelfstudie bevat stappen voor het maken van een streamingverbinding met de HTTP API-bron voor Raw- en XDM-gegevens met de Flow Service API.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 84ffbb86e8973c2795d19122d3866e980949759d
+source-git-commit: 6ea5eaf28f260f974d168db2bed9bc95fcfa52af
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1646'
 ht-degree: 0%
 
 ---
@@ -470,9 +470,9 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB  zonder transformaties ]
+>[!TAB  XDM ]
 
-Met de volgende aanvraag wordt een streaminggegevensstroom voor de HTTP-API zonder gegevenstransformaties gemaakt.
+Met de volgende aanvraag wordt een streaminggegevensstroom voor XDM-gegevens gemaakt.
 
 ```shell
 curl -X POST \
@@ -498,9 +498,9 @@ curl -X POST \
     }'
 ```
 
->[!TAB  met transformaties ]
+>[!TAB  RAW ]
 
-Met de volgende aanvragen wordt een streaming gegevensstroom voor de HTTP-API gemaakt, waarbij transformaties worden toegepast op de gegevens.
+Met de volgende aanvragen wordt een streaming gegevensstroom voor onbewerkte gegevens gemaakt.
 
 Wanneer u een gegevensstroom maakt met transformaties, kan de parameter `name` niet worden gewijzigd. Deze waarde moet altijd worden ingesteld op `Mapping` .
 
@@ -559,7 +559,7 @@ Een succesvolle reactie keert status 201 van HTTP met details van uw onlangs gec
 }
 ```
 
-## Post-gegevens die moeten worden ingevoerd op platform {#ingest-data}
+## Post gegevens die aan Platform moeten worden opgenomen {#ingest-data}
 
 >[!NOTE]
 >
