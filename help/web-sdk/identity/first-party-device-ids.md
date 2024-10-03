@@ -2,9 +2,9 @@
 title: Eerste-partij apparaat IDs in Web SDK
 description: Leer hoe u FPID's (First-party device ID's) configureert in de Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
+source-git-commit: 04ef39cbfc614369cb15f4d947474b491c34ef33
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '2051'
 ht-degree: 0%
 
 ---
@@ -219,6 +219,16 @@ De foutreactie die in dit geval door de Edge Network wordt gegeven, is vergelijk
     }
 }
 ```
+
+## FPID instellen op uw eigen domein {#setting-fpid-domain}
+
+Naast het instellen van de [!DNL FPID] in de identiteitskaart, kunt u het [!DNL FPID] cookie in uw eigen domein instellen als u een gegevensverzameling van de eerste partij hebt geconfigureerd [!DNL CNAME] .
+
+Wanneer de inzameling van de eerste-partijgegevens gebruikend [!DNL CNAME] wordt toegelaten, zullen alle koekjes voor uw domein op verzoeken worden verzonden die aan het eindpunt van de gegevensinzameling worden gemaakt.
+
+Alle cookies die niet relevant zijn voor gegevensverzamelingsdoeleinden van de Adobe, worden verwijderd. Voor [!DNL FPID] kunt u de naam van het [!DNL FPID] -cookie in de configuratie van de gegevensstroom opgeven. Wanneer u dit doet, leest de Edge Network de inhoud van het cookie [!DNL FPID] in plaats van naar de [!DNL FPID] in de identiteitskaart te zoeken.
+
+Als u deze functionaliteit wilt gebruiken, moet u de eigenschap [!DNL FPID] instellen op het hoofdniveau van uw domein in plaats van op een specifiek subdomein. Als u de waarde instelt op een subdomein, wordt de waarde van het cookie niet naar de Edge Network verzonden en werkt de oplossing [!DNL FPID] niet naar behoren.
 
 ## ID-hiërarchie {#id-hierarchy}
 
