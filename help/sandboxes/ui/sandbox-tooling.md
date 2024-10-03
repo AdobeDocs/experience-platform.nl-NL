@@ -2,9 +2,9 @@
 title: Sandbox Tooling
 description: U kunt Sandboxconfiguraties naadloos exporteren en importeren tussen sandboxen.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 50f3976d73c8a34a51179157a7c93e3d9b1c0ff4
+source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
 workflow-type: tm+mt
-source-wordcount: '2237'
+source-wordcount: '2236'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ De onderstaande tabel bevat een lijst met [!DNL Adobe Journey Optimizer] -object
 | [!DNL Adobe Journey Optimizer] | Gebeurtenis | De gebeurtenissen en gebeurtenisdetails die in de reis worden gebruikt worden gekopieerd. Er wordt altijd een nieuwe versie gemaakt in de doelsandbox. |
 | [!DNL Adobe Journey Optimizer] | Actie | E-mail- en pushberichten die tijdens de rit worden gebruikt, kunnen als afhankelijke objecten worden gekopieerd. De activiteiten van de kanaalactie die op de reisgebieden worden gebruikt, die voor verpersoonlijking in het bericht worden gebruikt, worden niet gecontroleerd op volledigheid. Inhoudsblokken worden niet gekopieerd.<br><br> de actie van het updateprofiel die in de reis wordt gebruikt kan worden gekopieerd. De acties en de actiedetails van de douane die in de reis worden gebruikt worden ook gekopieerd. Er wordt altijd een nieuwe versie gemaakt in de doelsandbox. |
 | [!DNL Adobe Journey Optimizer] | Reis | Wanneer u een volledige reis aan een pakket toevoegt, kopieert u het grootste deel van de objecten waarop de reis is gebaseerd, inclusief publiek, schema&#39;s, gebeurtenissen en handelingen. |
-| [!DNL Adobe Journey Optimizer] | Inhoudssjabloon | Een inhoudssjabloon kan worden gekopieerd als een afhankelijk object van het reisobject. Zelfstandige sjablonen waarmee u eenvoudig aangepaste inhoud kunt hergebruiken voor Journey Optimizer-campagnes en -reizen. |
+| [!DNL Adobe Journey Optimizer] | Inhoudssjabloon | Een inhoudssjabloon kan worden gekopieerd als een afhankelijk object van het reisobject. Met standalone sjablonen kunt u eenvoudig aangepaste inhoud hergebruiken voor Journey Optimizer-campagnes en -reizen. |
 | [!DNL Adobe Journey Optimizer] | Fragment | Een fragment kan worden gekopieerd als een afhankelijk object van het reisobject. Fragmenten zijn herbruikbare onderdelen waarnaar in een of meer e-mails van Journey Optimizer-campagnes en -reizen kan worden verwezen. |
 
 Oppervlakken (bijvoorbeeld voorinstellingen) worden niet overschreven. Het systeem selecteert automatisch de dichtstbijzijnde mogelijke overeenkomst op de bestemmingszandbak die op het berichttype en oppervlaknaam wordt gebaseerd. Als er geen oppervlakten op de doelzandbak worden gevonden, dan zal het oppervlakexemplaar ontbreken, veroorzakend het berichtexemplaar om te ontbreken omdat een bericht vereist een oppervlakte om voor opstelling beschikbaar te zijn. In dit geval moet ten minste één oppervlak worden gemaakt voor het rechterkanaal van het bericht, zodat de kopie kan werken.

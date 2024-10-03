@@ -2,9 +2,9 @@
 title: Pakketten delen in de hele organisatie met behulp van sandbox-gereedschappen
 description: Leer hoe u Sandbox Tooling in Adobe Experience Platform gebruikt om pakketten te delen tussen verschillende organisaties.
 badge: Beta
-source-git-commit: 492f1d9dc08965dba3f1c5b6e1d479ef645afd04
+source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---
@@ -15,29 +15,27 @@ ht-degree: 0%
 >
 >Het delen van pakketten tussen organisaties vindt momenteel plaats in bèta en is alleen beschikbaar voor bepaalde bètaklanten.
 
-In dit document wordt beschreven hoe u gereedschappen voor sandboxen in Adobe Experience Platform kunt gebruiken om pakketten te delen tussen verschillende organisaties.
+Verbeter de configuratienauwkeurigheid over zandbakken en voer naadloos zandbakconfiguraties tussen zandbakken over verschillende organisaties uit met de zandbaktoolingeigenschap. In dit document wordt beschreven hoe u gereedschappen voor sandboxen in Adobe Experience Platform kunt gebruiken om pakketten te delen tussen verschillende organisaties. Er zijn twee typen gedeelde pakketten:
 
-Verbeter de configuratienauwkeurigheid over zandbakken en voer naadloos zandbakconfiguraties tussen zandbakken over verschillende organisaties uit met de zandbaktoolingeigenschap. Er zijn twee typen gedeelde pakketten:
+- **Privé pakket**
 
-**Privé pakket**
+[ Privé pakketten ](#private-packages) kunnen slechts met organisaties worden gedeeld die het delen verzoek van de bronorganisatie via een opt-in lijst van gewenste personen hebben goedgekeurd.
 
-Privépakketten kunnen alleen worden gedeeld met organisaties die het verzoek om delen van de bronorganisatie hebben goedgekeurd via een opt-in-lijst van gewenste personen.
+- **Openbaar pakket**
 
-**Openbaar pakket**
+[ Openbare pakketten ](./sandbox-tooling.md/#export-and-import-an-entire-sandbox) zijn beschikbaar om zonder enige extra goedkeuring in te voeren. Deze pakketten kunnen worden gedeeld op de website, de blog of het platform van een partner. Met de pakketlading kunnen pakketten van deze kanalen naar de doelorganisatie worden gekopieerd en geplakt.
 
-Openbare pakketten kunnen zonder aanvullende goedkeuring worden geïmporteerd. Deze pakketten kunnen worden gedeeld op de website, de blog of het platform van een partner. Met de pakketlading kunnen pakketten van deze kanalen naar de doelorganisatie worden gekopieerd en geplakt.
-
-## Privépakketten
+## Privépakketten {#private-packages}
 
 >[!NOTE]
 >
 >Om een het delen verzoek in werking te stellen en goed te keuren en pakketten over organisaties te delen, zult u **pakket-aandeel** op rol-gebaseerde toegangsbeheertoestemming moeten hebben.
 
-De sandbox tooling eigenschap voorziet u van de capaciteit om organisatiepartnerschappen tot stand te brengen, de status van een partnerschapverzoek te volgen, bestaande partnerschappen te beheren, en pakketten met partnerorganisaties te delen.
+Gebruik de functie Sandbox Tooling om partnerschappen te maken, de status van partnerschapsverzoeken bij te houden, bestaande partnerschappen te beheren en pakketten met partnerorganisaties te delen.
 
 ### Een aanvraag voor een partnerschap voor organisaties maken
 
-Navigeer naar het tabblad [!UICONTROL Sandboxes] **[!UICONTROL Partner orgs]** als u een aanvraag voor een partnership voor organisatie wilt maken. Selecteer vervolgens **[!UICONTROL Manage partner orgs]** .
+Navigeer naar het tabblad **[!UICONTROL Sandboxes]** **[!UICONTROL Partner orgs]** als u een aanvraag voor een partnership voor organisatie wilt maken. Selecteer vervolgens **[!UICONTROL Manage partner orgs]** .
 
 ![ de zandbakken UI, met het lusje van de Organisaties van de Partner en leidt benadrukte partnerorganisaties.](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
@@ -53,13 +51,13 @@ De aanvraag voor delen wordt naar de partnerorganisatie verzonden en u gaat teru
 
 ![ het lusje van de Organisaties van de Partner met Uitgaand benadrukt verzoek.](../images/ui/sandbox-tooling/private-outgoing-request.png)
 
-### Een partnerschapsverzoek autoriseren
+### Een partnerschapsverzoek autoriseren {#authorize-request}
 
 Navigeer naar het tabblad [!UICONTROL Sandboxes] **[!UICONTROL Partner orgs]** als u een aanvraag voor een partnership voor organisatie wilt autoriseren. Selecteer vervolgens **[!UICONTROL Incoming request]** .
 
 ![ de zandbakken UI met het lusje van de Organisaties van de Partner en het Binnenkomende benadrukte verzoek.](../images/ui/sandbox-tooling/private-authorise-partner-org.png)
 
-Het huidige **[!UICONTROL Status]** voor het verzoek is **in afwachting**. Als u de aanvraag wilt goedkeuren, selecteert u de ellips (`...`) naast de geselecteerde aanvraag en selecteert u vervolgens **[!UICONTROL Approve]** in de vervolgkeuzelijst.
+Huidige **[!UICONTROL Status]** voor het verzoek, in dit stadium, is **In afwachting**. Als u de aanvraag wilt goedkeuren, selecteert u de ellips (`...`) naast de geselecteerde aanvraag en selecteert u vervolgens **[!UICONTROL Approve]** in de vervolgkeuzelijst.
 
 ![ Lijst van inkomende verzoeken die het dropdown menu tonen met benadrukt goedkeuren.](../images/ui/sandbox-tooling/private-approve-partner-org.png)
 
@@ -71,9 +69,9 @@ U gaat terug naar de pagina [!UICONTROL Incoming request] en de status van de aa
 
 ![ Lijst van inkomende verzoeken met Goedgekeurd benadrukte.](../images/ui/sandbox-tooling/private-approved-partner-org.png)
 
-U kunt nu pakketten delen tussen uw organisatie en de bronorganisatie.
+Gebruik deze workflow/dit proces om pakketten te delen tussen uw organisatie en de bronorganisatie.
 
-### Pakketten delen met partnerorganisaties
+### Pakketten delen met partnerorganisaties {#share-package}
 
 >[!NOTE]
 >
@@ -85,14 +83,14 @@ Als u een pakket wilt delen met een erkende partnerorganisatie, navigeert u naar
 
 Selecteer in het dialoogvenster **[!UICONTROL Share package]** het pakket dat u wilt delen in de vervolgkeuzelijst **[!UICONTROL Share settings]** en selecteer vervolgens **[!UICONTROL Confirm]** .
 
-![ het pakketdialoog van het Aandeel met de montages van het Aandeel en bevestigt benadrukte.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
-
 >[!TIP]
 >
 >U kunt meerdere organisaties selecteren. Geselecteerde organisaties worden weergegeven onder de vervolgkeuzelijst [!UICONTROL Share settings] .
 
-## Volgende stappen
+![ het pakketdialoog van het Aandeel met de montages van het Aandeel en bevestigt benadrukte.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+## Volgende stappen {#next-steps}
 
 In dit document wordt getoond hoe u de functie Sandbox-gereedschappen kunt gebruiken om pakketten te delen tussen verschillende organisaties. Voor extra informatie, verwijs naar de [ zandbak tooling gids ](../ui/sandbox-tooling.md).
 
-Voor stappen bij het uitvoeren van verschillende verrichtingen die Sandbox API gebruiken, zie de [ gids van de zandbakontwikkelaar ](../api/getting-started.md). Voor een overzicht op hoog niveau van zandbakken in Experience Platform, verwijs naar de [ overzichtsdocumentatie ](../home.md).
+Leren hoe te om verschillende verrichtingen uit te voeren gebruikend zandbak API, zie de [ gids van de zandbakontwikkelaar ](../api/getting-started.md). Voor een overzicht op hoog niveau van zandbakken in Experience Platform, verwijs naar de [ overzichtsdocumentatie ](../home.md).
