@@ -1,15 +1,15 @@
 ---
-title: Aanvullende informatie over Adobe Experience Platform
-description: In de release van september 2023 staat Adobe Experience Platform vermeld.
+title: Aanvullende informatie van september 2023 voor Adobe Experience Platform
+description: Aanvullende informatie voor de versie van september 2023 voor Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '2238'
-ht-degree: 2%
+source-wordcount: '2240'
+ht-degree: 28%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Aanvullende informatie voor Adobe Experience Platform
 
 **Releasedatum: vrijdag 28 september 2023**
 
@@ -17,18 +17,18 @@ Nieuwe functies in Adobe Experience Platform:
 
 - [Berekende kenmerken](#computed-attributes)
 
-Updates voor bestaande functies in Experience Platform:
+Updates van bestaande functies in Experience Platform:
 
 - [Waarschuwingen](#alerts)
 - [Dashboards](#dashboards)
-- [Gegevensverzameling](#data-collection)
-- [Gegevensbeheer](#data-governance)
+- [Dataverzameling](#data-collection)
+- [Datagovernance](#data-governance)
 - [ hygiëne van Gegevens ](#hygiene)
-- [Doelen](#destinations)
-- [Experience Data Model (XDM)](#xdm)
+- [Bestemmingen](#destinations)
+- [Experience-datamodel (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
 - [Query-service](#query-service)
-- [Segmenteringsservice](#segmentation)
+- [Segmentatieservice](#segmentation)
 - [ Bronnen ](#sources)
 
 ## Berekende kenmerken {#computed-attributes}
@@ -37,9 +37,9 @@ Met behulp van berekende kenmerken kunt u gebeurtenisgegevens eenvoudig samenvat
 
 ## Waarschuwingen {#alerts}
 
-Met Experience Platform kunt u zich abonneren op gebeurtenisgebaseerde waarschuwingen voor verschillende platformactiviteiten. U kunt zich abonneren op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de gebruikersinterface van het platform en u kunt ervoor kiezen waarschuwingsberichten te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
+Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarschuwingen voor verschillende platformactiviteiten. U kunt zich aanmelden op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de gebruikersinterface van het platform, en u kunt ervoor kiezen waarschuwingsmeldingen te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -61,11 +61,11 @@ Adobe Experience Platform biedt meerdere [!DNL dashboards] waarmee u belangrijke
 
 Meer over het dashboard van het vergunningsgebruik leren, zie het [ overzicht van het het dashboard van het vergunningsgebruik ](../../dashboards/guides/destinations.md).
 
-## Gegevensverzameling {#data-collection}
+## Dataverzameling {#data-collection}
 
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar de Adobe Experience Platform-Edge Network kunt sturen waar deze verrijkt, getransformeerd en gedistribueerd kan worden naar Adobe- of niet-Adobe-bestemmingen.
+Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaringsgegevens aan de klantzijde kunt verzamelen en deze naar het Adobe Experience Platform Edge Network kunt verzenden. Daar kunnen ze worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
@@ -74,13 +74,13 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 {style="table-layout:auto"}
 
-Om meer over gegevensinzameling te leren, te lezen gelieve het [ overzicht van de gegevensinzameling ](../../tags/home.md).
+Voor meer informatie over dataverzameling, raadpleegt u het [overzicht van de dataverzameling](../../tags/home.md).
 
-## Gegevensbeheer {#data-governance}
+## Datagovernance {#data-governance}
 
-Adobe Experience Platform Data Governance is een reeks strategieën en technologieën die worden gebruikt om klantgegevens te beheren en naleving van regelgeving, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik te waarborgen. Het speelt een sleutelrol binnen Experience Platform op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van de gegevenstoegang, en toegangscontrole over gegevens voor marketing acties.
+Adobe Experience Platform-datagovernance is een reeks strategieën en technologieën die worden gebruikt om klantgegevens te beheren en naleving te waarborgen van regelgeving, beperkingen en beleidsregels die op gegevensgebruik van toepassing zijn. Het speelt op verschillende niveaus een sleutelrol binnen Experience Platform, onder andere bij catalogiseren, gegevensherkomst, labelen van gegevensgebruik, beleidsregels voor toegang van gegevens en toegangsbeheer voor gegevens voor marketingacties.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -92,9 +92,9 @@ Meer over gegevensbeheer leren, lees het [ overzicht van het gegevensbeheer ](..
 
 ## Gegevenshygiëne {#hygiene}
 
-Experience Platform biedt een reeks mogelijkheden voor gegevenshygiëne waarmee u uw opgeslagen gegevens kunt beheren via programmatische verwijderingen van consumentengegevens en gegevenssets. Met behulp van de [!UICONTROL Data Lifecycle] -werkruimte in de UI of via aanroepen van de Data Hygiene API kunt u uw gegevensopslagruimten op effectieve wijze beheren. Gebruik deze mogelijkheden om ervoor te zorgen dat de informatie zoals verwacht wordt gebruikt, wordt bijgewerkt wanneer onjuiste gegevens het bevestigen vereisen, en wordt geschrapt wanneer het organisatorische beleid het noodzakelijk acht.
+Experience Platform biedt een reeks mogelijkheden voor gegevenshygiëne waarmee u uw opgeslagen gegevens kunt beheren via programmatische verwijderingen van consumentengegevens en gegevenssets. Met behulp van de [!UICONTROL Data Lifecycle] -werkruimte in de UI of via aanroepen van de Data Hygiene API kunt u uw gegevensopslagruimten op effectieve wijze beheren. Met deze mogelijkheden kunt u ervoor zorgen dat informatie wordt gebruikt zoals verwacht, wordt bijgewerkt wanneer onjuiste gegevens moeten worden gecorrigeerd en wordt verwijderd wanneer het organisatiebeleid dit noodzakelijk acht.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -105,13 +105,13 @@ Experience Platform biedt een reeks mogelijkheden voor gegevenshygiëne waarmee 
 
 Voor meer informatie over de mogelijkheden van de gegevenshygiëne van het Platform, verwijs naar het [ overzicht van de gegevenshygiëne ](../../hygiene/home.md).
 
-## Doelen {#destinations}
+## Bestemmingen {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 **Nieuwe of bijgewerkte bestemmingen** {#new-updated-destinations}
 
-| Doel | Nieuw of Bijgewerkt | Beschrijving |
+| Bestemming | Nieuw of Bijgewerkt | Beschrijving |
 | ----------- |----------------|----------- |
 | [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | Nieuw | Activeer het publiek dat voorheen aan [!DNL LiveRamp] was toegewezen voor topuitgevers op mobiele media, het web, displays en aangesloten tv-media. <br> Na onboarding publiek aan uw [!DNL LiveRamp] rekening door [ LiveRamp - on boarding ](../../destinations/catalog/advertising/liveramp-onboarding.md) verbinding, gebruik de nieuwe [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) verbinding om het publiek aan stroomafwaartse bestemmingen te activeren. |
 | [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Nieuw | [[!DNL HubSpot] ](https://www.hubspot.com) is een platform van CRM met alle software, integratie, en middelen u marketing, verkoop, inhoudsbeheer, en de klantendienst moet verbinden. Het staat u toe om uw gegevens, teams, en klanten op één platform van CRM te verbinden. |
@@ -142,20 +142,20 @@ Add these to release notes as they go out
 - Maak gebruik van [ controletransparantie ](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) nu beschikbaar voor ondernemingsbestemmingen ([ HTTP API ](../../destinations/catalog/streaming/http-destination.md), [ Amazon Kinesis ](../../destinations/catalog/cloud-storage/amazon-kinesis.md) en [ Azure Event Hubs ](../../destinations/catalog/cloud-storage/azure-event-hubs.md)) op het dataflow loopniveau om activeringsmetriek en status in de [ dataflow detailmening ](../../dataflows/ui/monitor-destinations.md#dataflow-run-details-page), met extra informatie via foutencodes en berichten voor het oplossen van problemen te controleren.
 - Wanneer u de naam van publiek bijwerkt dat aan [ wordt in kaart gebracht Google Ad Manager ](../../destinations/catalog/advertising/google-ad-manager.md), [ de Vertoning van Google &amp; Video 360 ](../../destinations/catalog/advertising/google-dv360.md), en andere bestemmingen die [ malplaatjes van de publieksupdate ](../../destinations/destination-sdk/metadata-api/update-audience-template.md) gebruiken, worden deze naamveranderingen nu weerspiegeld stroomafwaarts in de bestemming.
 
-Voor meer algemene informatie over bestemmingen, verwijs naar het [ overzicht van bestemmingen ](../../destinations/home.md).
+Voor meer algemene informatie over bestemmingen, raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
-## Experience Data Model (XDM) {#xdm}
+## Experience-datamodel (XDM) {#xdm}
 
-XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+XDM is een open-bronspecificatie die algemene structuren en definities (schema&#39;s) biedt voor gegevens die in Adobe Experience Platform worden geïmporteerd. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
 | Snelle acties toegevoegd aan de Schema-editor | Er zijn nieuwe snelle acties toegevoegd aan het canvas van de Schema-editor. U kunt nu de JSON-structuur kopiëren of het schema rechtstreeks uit de editor verwijderen.<br>![ de snelle acties in de Redacteur van het Schema.](../2023/assets/schema-editor-copy-json.png " de Redacteur van Schema met Meer en het Exemplaar aan benadrukt JSON."){width="100" zoomable="yes"} |
 | XDM-bronnen filteren op basis van aangepaste of standaardmaker | De lijsten met beschikbare schema&#39;s, veldgroepen, gegevenstypen en klassen worden nu vooraf gefilterd op basis van de methode waarmee ze zijn gemaakt. Op deze manier kunt u bronnen filteren op basis van het feit of ze op maat zijn gemaakt of door Adobe zijn gemaakt.<br>![ de Standaard en filters van de Douane in de werkruimte van Schema&#39;s.](../2023/assets/standard-and-custom-classes.png " de werkruimte van Schema&#39;s met de Standaard en Gemarkeerde filters van de Douane."){width="100" zoomable="yes"} <br> zie [ creeer en geef middelendocumentatie ](../../xdm/ui/resources/classes.md#filter.md) voor meer informatie uit. |
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -184,9 +184,9 @@ Voor meer informatie over XDM in Platform, zie het [ XDM overzicht van het Syste
 
 ## Identiteitsservice {#identity-service}
 
-De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht van uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
+Met Adobe Experience Platform Identity Service krijgt u een compleet beeld van uw klanten en hun gedrag door identiteiten op verschillende apparaten en systemen te koppelen. Zo kunt u in real-time impactvolle, persoonlijke digitale ervaringen bieden.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -195,13 +195,13 @@ De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht v
 
 {style="table-layout:auto"}
 
-Om meer over de Dienst van de Identiteit te leren, te lezen gelieve het [ overzicht van de Dienst van de Identiteit ](../../identity-service/home.md).
+Voor meer informatie over Identity Service, raadpleegt u het [overzicht van Identity Service](../../identity-service/home.md).
 
 ## Query-service {#query-service}
 
-Met Query Service kunt u standaard-SQL gebruiken om query&#39;s uit te voeren op gegevens in Adobe Experience Platform [!DNL Data Lake] . U kunt zich bij om het even welke datasets van [!DNL Data Lake] aansluiten en de vraagresultaten vangen als nieuwe dataset voor gebruik in rapportering, de Wetenschap van Gegevens Workspace, of voor opname in het Profiel van de Klant in real time.
+Met de Query-service kunt u standaard SQL gebruiken om query&#39;s uit te voeren op gegevens in Adobe Experience Platform [!DNL Data Lake]. U kunt willekeurige datasets van [!DNL Data Lake] combineren en de queryresultaten vastleggen als nieuwe dataset voor gebruik in rapportage, de werkruimte voor datawetenschappen, of voor opname in het Real-Time Customer Profile.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -210,13 +210,13 @@ Met Query Service kunt u standaard-SQL gebruiken om query&#39;s uit te voeren op
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de Diensten van de Vraag, verwijs naar het [ overzicht van de Dienst van de Vraag ](../../query-service/home.md).
+Voor meer informatie over Query-services raadpleegt u het [overzicht van Query-services](../../query-service/home.md).
 
-## Segmenteringsservice {#segmentation}
+## Segmentatieservice {#segmentation}
 
-Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, vooruitzichten, gebruikers of organisaties) segmenteren naar het publiek. U kunt een publiek maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile] -gegevens. Deze soorten publiek worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn gemakkelijk toegankelijk voor elke Adobe.
+Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) segmenteren in doelgroepen. U kunt doelgroepen maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform], en zijn gemakkelijk toegankelijk via elke Adobe-toepassing.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
@@ -227,9 +227,9 @@ Om meer over de Dienst van de Segmentatie te leren, te lezen gelieve het [ overz
 
 ## Bronnen {#sources}
 
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+Experience Platform biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |

@@ -1,32 +1,32 @@
 ---
-title: Aanvullende informatie over Adobe Experience Platform
+title: Opmerkingen bij de release van Adobe Experience Platform, oktober 2023
 description: Aanvullende informatie voor de versie van oktober 2023 voor Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: f2d0848952902d94b441566da677ef174518192e
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 4%
+source-wordcount: '1048'
+ht-degree: 38%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Aanvullende informatie voor Adobe Experience Platform
 
 **Releasedatum: donderdag 25 oktober 2023**
 
-Updates voor bestaande functies in Experience Platform:
+Updates van bestaande functies in Experience Platform:
 
 - [Dashboards](#dashboards)
-- [Gegevensverzameling](#data-collection)
-- [Doelen](#destinations)
+- [Dataverzameling](#data-collection)
+- [Bestemmingen](#destinations)
 - [Sandboxes](#sandboxes)
-- [Segmenteringsservice](#segmentation)
+- [Segmentatieservice](#segmentation)
 - [Bronnen](#sources)
 
 ## Dashboards {#dashboards}
 
-Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
+Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten kunt bekijken over de gegevens van uw organisatie, zoals vastgelegd tijdens dagelijkse momentopnamen.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -34,13 +34,13 @@ Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzich
 
 {style="table-layout:auto"}
 
-Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestemmingen te verlenen en douanegidgets tot stand te brengen, begin door het [ overzicht van dashboards ](../../dashboards/home.md) te lezen.
+Voor meer informatie over dashboards, inclusief het verlenen van toegangsrechten en het maken van aangepaste widgets, raadpleegt u eerst het [overzicht van dashboards](../../dashboards/home.md).
 
-## Gegevensverzameling {#data-collection}
+## Dataverzameling {#data-collection}
 
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar de Adobe Experience Platform-Edge Network kunt sturen waar deze verrijkt, getransformeerd en gedistribueerd kan worden naar Adobe- of niet-Adobe-bestemmingen.
+Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaringsgegevens aan de klantzijde kunt verzamelen en deze naar het Adobe Experience Platform Edge Network kunt verzenden. Daar kunnen ze worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
@@ -52,13 +52,13 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 Voor meer informatie over gegevensinzameling, te lezen gelieve het [ overzicht van gegevensinzamelingen ](../../tags/home.md).
 
-## Doelen {#destinations}
+## Bestemmingen {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 **Nieuwe of bijgewerkte bestemmingen** {#new-updated-destinations}
 
-| Doel | Nieuw of Bijgewerkt | Beschrijving |
+| Bestemming | Nieuw of Bijgewerkt | Beschrijving |
 | ----------- |----------------|----------- |
 | [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | Nieuw | Gebruik de bestemming van de Moweer om uw gegevens van de Adobe (gebruikersattributen, segmenten en gebeurtenissen) aan MoEngage in real time te verbinden en in kaart te brengen. Klanten kunnen vervolgens op deze gegevens reageren en persoonlijke, doelgerichte ervaringen bieden. |
 | [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | Nieuw | Gebruik de samenvoeging van meerdere bronnen van operationele gegevens in Adobe Experience Platform als input in de Qualtrics Experience ID om uw klanten beter te begrijpen en gerichte outreach toe te laten om de kloof te dichten wanneer het aankomt op het begrijpen van intent, emotie en ervaringsstuurprogramma&#39;s. |
@@ -76,37 +76,37 @@ Voor meer informatie over gegevensinzameling, te lezen gelieve het [ overzicht v
 
 **Correcties en verhogingen** {#destinations-fixes-and-enhancements}
 
-Voor meer algemene informatie over bestemmingen, verwijs naar het [ overzicht van bestemmingen ](../../destinations/home.md).
+Voor meer algemene informatie over bestemmingen, raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
 ## Sandboxes {#sandboxes}
 
-Adobe Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen. Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldwijd te verrijken. Bedrijven gebruiken vaak meerdere digitale ervaringstoepassingen parallel en moeten de ontwikkeling, het testen en de implementatie van deze toepassingen verzorgen en tegelijkertijd de operationele naleving waarborgen. Om aan deze behoefte te voldoen, biedt Experience Platform sandboxes die één Platform-instantie opsplitsen in afzonderlijke virtuele omgevingen, zodat digitale ervaringstoepassingen kunnen worden ontwikkeld en verder ontwikkeld.
 
-**Nieuwe eigenschap**
+**Nieuwe functie**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Gereedschap Sandbox | Met de functie voor sandboxgereedschappen kunt u de configuratienauwkeurigheid in verschillende sandboxen verbeteren en kunt u naadloos sandboxconfiguraties exporteren en importeren tussen sandboxen. U kunt de functie voor gereedschappen in de sandbox gebruiken om verschillende objecten te selecteren en deze te exporteren naar een pakket. Voor meer informatie, zie de [ zandbak tooling UI gids ](../../sandboxes/ui/sandbox-tooling.md). |
+| Sandbox-tools | Met de functie voor sandboxgereedschappen kunt u de configuratienauwkeurigheid in verschillende sandboxen verbeteren en kunt u naadloos sandboxconfiguraties exporteren en importeren tussen sandboxen. U kunt de functie voor gereedschappen in de sandbox gebruiken om verschillende objecten te selecteren en deze te exporteren naar een pakket. Voor meer informatie, zie de [ zandbak tooling UI gids ](../../sandboxes/ui/sandbox-tooling.md). |
 
 Voor meer informatie over zandbakken, te zien gelieve het [ overzicht van zandbakken ](../../sandboxes/home.md).
 
-## Segmenteringsservice {#segmentation}
+## Segmentatieservice {#segmentation}
 
-Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, vooruitzichten, gebruikers of organisaties) segmenteren naar het publiek. U kunt een publiek maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile] -gegevens. Deze soorten publiek worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn gemakkelijk toegankelijk voor elke Adobe.
+Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) segmenteren in doelgroepen. U kunt doelgroepen maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn eenvoudig toegankelijk via elke Adobe-oplossing.
 
-**Nieuwe eigenschap**
+**Nieuwe functie**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Accountpubliek (beperkt GA) | In Real-time Customer Data Platform B2B Edition kunt u nu de segmentering van accounts gebruiken om het volledige gemak en de verfijning van de segmentatieervaring voor marketing te bieden van publiek-private doelgroepen naar publiek in account. Voor meer informatie over deze eigenschap, te lezen gelieve het [ overzicht van het rekeningspubliek ](../../segmentation/ui/account-audiences.md). |
+| Accountpubliek (beperkt GA) | In Real-time Customer Data Platform B2B edition kunt u nu de segmentatie van uw account gebruiken om het hele gemak en de verfijning van de segmentatieervaring van marketingmedewerkers te vergroten van een publiek dat op mensen is gebaseerd naar een publiek in een account. Voor meer informatie over deze functie, raadpleegt u het [overzicht van accountdoelgroepen](../../segmentation/ui/account-audiences.md). |
 
 Om meer over de Dienst van de Segmentatie te leren, te lezen gelieve het [ overzicht van de Dienst van de Segmentatie ](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+Experience Platform biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |

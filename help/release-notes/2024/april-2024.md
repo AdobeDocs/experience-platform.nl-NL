@@ -1,11 +1,11 @@
 ---
-title: Aanvullende informatie voor Adobe Experience Platform
+title: Adobe Experience Platform Release Notes April 2024
 description: Aanvullende informatie van april 2024 voor Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
-workflow-type: ht
-source-wordcount: '1895'
-ht-degree: 100%
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+workflow-type: tm+mt
+source-wordcount: '1897'
+ht-degree: 99%
 
 ---
 
@@ -67,7 +67,7 @@ Voor meer informatie over dataverzamelingen, raadpleegt u het [overzicht van dat
 
 ## Bestemmingen {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integraties met bestemmingsplatforms die een naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
+[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 **Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
 
@@ -111,7 +111,7 @@ Voor meer informatie, raadpleegt u de handleiding over [het gebruik van het cont
 
 ## Query-service {#query-service}
 
-Met Query Service kunt u standaard-SQL gebruiken om query&#39;s uit te voeren op gegevens in Adobe Experience Platform [!DNL Data Lake]. U kunt alle datasets uit [!DNL Data Lake] samenvoegen en de queryresultaten vastleggen als een nieuwe dataset voor gebruik in rapportage, werkruimte voor datawetenschappen of voor opname in Real-Time Customer Profile.
+Met de Query-service kunt u standaard SQL gebruiken om query&#39;s uit te voeren op gegevens in Adobe Experience Platform [!DNL Data Lake]. U kunt willekeurige datasets van [!DNL Data Lake] combineren en de queryresultaten vastleggen als nieuwe dataset voor gebruik in rapportage, de werkruimte voor datawetenschappen, of voor opname in het Real-Time Customer Profile.
 
 **Bijgewerkte functies**
 
@@ -144,7 +144,7 @@ Voor meer informatie over sandboxes, lees het [ overzicht van sandboxes](../../s
 
 ## Segmentatieservice {#segmentation}
 
-Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] die betrekking hebben op individuen (zoals klanten, prospects, gebruikers of organisaties) in doelgroepen segmenteren. U kunt doelgroepen maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn eenvoudig toegankelijk via elke Adobe-oplossing.
+Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) segmenteren in doelgroepen. U kunt doelgroepen maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn gemakkelijk toegankelijk via elke Adobe-oplossing.
 
 **Bijgewerkte functie**
 

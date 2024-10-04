@@ -1,15 +1,15 @@
 ---
-title: Aanvullende informatie over Adobe Experience Platform
-description: De release van augustus 2023 bevat opmerkingen voor Adobe Experience Platform.
+title: Aanvullende informatie van augustus 2023 voor Adobe Experience Platform
+description: Aanvullende informatie van augustus 2023 voor Adobe Experience Platform.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1713'
-ht-degree: 3%
+source-wordcount: '1715'
+ht-degree: 40%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Aanvullende informatie voor Adobe Experience Platform
 
 **Releasedatum: donderdag 23 augustus 2023**
 
@@ -21,19 +21,19 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Dataverzameling](#data-collection)
 - [Gegevensopname](#data-ingestion)
 - [Gegevensvoorbereiding](#data-prep)
-- [Doelen](#destinations)
-- [Experience Data Model (XDM)](#xdm)
+- [Bestemmingen](#destinations)
+- [Experience-datamodel (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
-- [Segmenteringsservice](#segmentation)
+- [Segmentatieservice](#segmentation)
 - [Bronnen](#sources)
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
 Real-time Customer Data Platform ([!DNL Real-Time CDP]) is gebaseerd op Experience Platform en helpt bedrijven bekende en onbekende gegevens bijeen te brengen om klantprofielen te activeren door middel van intelligente beslissingen tijdens de reis van de klant.
 
-[!DNL Real-Time CDP] combineert meerdere bedrijfsgegevensbronnen om klantprofielen in real-time te maken. De segmenten die van deze profielen worden gebouwd kunnen dan naar stroomafwaartse bestemmingen worden verzonden om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
+[!DNL Real-Time CDP] combineert meerdere bedrijfsgegevensbronnen om klantprofielen in real-time te maken. Segmenten die op basis van deze profielen zijn samengesteld, kunnen vervolgens naar downstreambestemmingen worden verzonden om gepersonaliseerde één-op-één klantervaringen te bieden via alle kanalen en apparaten.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -46,11 +46,11 @@ Voor meer informatie, te lezen gelieve het [ overzicht van Real-Time CDP ](../..
 
 ## Toegangsbeheer op basis van kenmerken {#abac}
 
-Toegangsbeheer op basis van kenmerken is een mogelijkheid van Adobe Experience Platform die privacybewuste merken meer flexibiliteit biedt om gebruikerstoegang te beheren. Afzonderlijke objecten zoals schemavelden en segmenten kunnen worden toegewezen aan gebruikersrollen. Met deze functie kunt u toegang tot afzonderlijke objecten verlenen of intrekken voor specifieke platformgebruikers in uw organisatie.
+Toegangsbeheer op basis van kenmerken is een functionaliteit van Adobe Experience Platform waarmee merken die aandacht hebben voor privacy, meer flexibiliteit krijgen bij toegangsbeheer voor gebruikers. Individuele objecten, zoals schemavelden en segmenten, kunnen aan gebruikersrollen worden toegewezen. Met deze functie kunt u toegang tot individuele objecten verlenen of intrekken voor specifieke platformgebruikers in uw organisatie.
 
-Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisatie gebruikers&#39; toegang tot, gevoelige persoonlijke gegevens (SPD), persoonlijk identificeerbare informatie (PII) en ander aangepast type van gegevens over alle werkschema&#39;s en middelen van het Platform controleren. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.
+Met toegangsbeheer op basis van kenmerken kunnen beheerders van uw organisatie de toegang van gebruikers tot gevoelige persoonlijke gegevens (SPD), persoonlijk identificeerbare informatie (PII) en andere aangepaste typen gegevens in alle platformworkflows en -bronnen beheren. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die bij die velden horen.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -58,13 +58,13 @@ Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisat
 
 {style="table-layout:auto"}
 
-Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, zie het [ op attributen-gebaseerde toegangsbeheeroverzicht ](../../access-control/abac/overview.md). Voor een uitvoerige gids over het op attribuut-gebaseerde toegangsbeheerwerkschema, lees de [ op attribuut-gebaseerde gids van begin tot eind van de toegangscontrole ](../../access-control/abac/end-to-end-guide.md).
+Zie het [overzicht van toegangsbeheer op basis van kenmerken](../../access-control/abac/overview.md) voor meer informatie over toegangsbeheer op basis van kenmerken. Voor een uitgebreide handleiding over de workflow voor toegangsbeheer op basis van kenmerken raadpleegt u de [end-to-end handleiding voor toegangsbeheer op basis van kenmerken](../../access-control/abac/end-to-end-guide.md).
 
 ## Dashboards {#dashboards}
 
-Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
+Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten kunt bekijken over de gegevens van uw organisatie, zoals vastgelegd tijdens dagelijkse momentopnamen.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -72,17 +72,17 @@ Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzich
 
 {style="table-layout:auto"}
 
-Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestemmingen te verlenen en douanegidgets tot stand te brengen, begin door het [ overzicht van dashboards ](../../dashboards/home.md) te lezen.
+Voor meer informatie over dashboards, inclusief het verlenen van toegangsrechten en het maken van aangepaste widgets, raadpleegt u eerst het [overzicht van dashboards](../../dashboards/home.md).
 
-## Gegevensverzameling {#data-collection}
+## Dataverzameling {#data-collection}
 
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar de Adobe Experience Platform-Edge Network kunt sturen waar deze verrijkt, getransformeerd en gedistribueerd kan worden naar Adobe- of niet-Adobe-bestemmingen.
+Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaringsgegevens aan de klantzijde kunt verzamelen en deze naar het Adobe Experience Platform Edge Network kunt verzenden. Daar kunnen ze worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
-| Tags en doorsturen van gebeurtenissen | [ de Markeringen van het Experience Platform (China) ](/help/tags/ui/publishing/premium-cdn.md) | De nieuwe functie Tags voor Experience Platforms (China) verbetert de betrouwbaarheid en latentie van websites, waardoor klanten die tags implementeren op websites in China sneller kunnen reageren. Klanten kunnen nu de JavaScript-code in de tagbibliotheek gebruiken wanneer ze websites in China implementeren. Deze eigenschap is ook toegevoegd aan het Verenigde Protocol van de Levering (UPP), toestaand productplaatsing om na aankoop worden geautomatiseerd. |
+| Tags en gebeurtenis doorsturen | [ de Markeringen van het Experience Platform (China) ](/help/tags/ui/publishing/premium-cdn.md) | De nieuwe functie Tags voor Experience Platforms (China) verbetert de betrouwbaarheid en latentie van websites, waardoor klanten die tags implementeren op websites in China sneller kunnen reageren. Klanten kunnen nu de JavaScript-code in de tagbibliotheek gebruiken wanneer ze websites in China implementeren. Deze eigenschap is ook toegevoegd aan het Verenigde Protocol van de Levering (UPP), toestaand productplaatsing om na aankoop worden geautomatiseerd. |
 
 {style="table-layout:auto"}
 
@@ -90,9 +90,9 @@ Voor meer informatie, te lezen gelieve het [ overzicht van gegevensinzamelingen 
 
 ## Gegevensopname {#data-ingestion}
 
-Adobe Experience Platform biedt een uitgebreide reeks functies voor het invoeren van elk type en elke vertraging van gegevens. U kunt opnemen met de API&#39;s Batch of Streaming via Adobe, partners voor gegevensintegratie of de interface van Adobe Experience Platform.
+Adobe Experience Platform biedt een uitgebreide reeks functies voor het toevoegen van elk type en elke latentie van gegevens. U kunt gegevens toevoegen via batch- of streaming-API&#39;s, via door Adobe gebouwde bronnen, via gegevensintegratiepartners of via de gebruikersinterface van Adobe Experience Platform.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -102,9 +102,9 @@ Voor meer informatie, te lezen gelieve het [ overzicht van de gegevensopname ](.
 
 ## Gegevensvoorbereiding {#data-prep}
 
-Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience Data Model).
+Met gegevensvoorbereiding kunnen gegevenstechnici gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience-datamodel).
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -114,20 +114,20 @@ Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en vali
 
 Voor meer informatie, te lezen gelieve het [ Prep overzicht van Gegevens ](../../data-prep/home.md).
 
-## Doelen {#destinations}
+## Bestemmingen {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 **Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
 
 - U kunt [ perspectiefpubliek ](../../destinations/ui/activate-prospect-audiences.md) aan de bestemmingen van de wolkenopslag nu activeren.
 - De algemene [ activeringsgarantie ](../../destinations/guardrails.md#general-activation-guardrails) van maximum 100 bestemmingen per zandbak is bijgewerkt om a _harde grens_ te zijn.
 
-Voor meer algemene informatie over bestemmingen, verwijs naar het [ overzicht van bestemmingen ](../../destinations/home.md).
+Voor meer algemene informatie over bestemmingen, raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
-## Experience Data Model (XDM) {#xdm}
+## Experience-datamodel (XDM) {#xdm}
 
-XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+XDM is een open-bronspecificatie die algemene structuren en definities (schema&#39;s) biedt voor gegevens die in Adobe Experience Platform worden geïmporteerd. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
 
 **Nieuwe componenten XDM**
 
@@ -150,9 +150,9 @@ Voor meer informatie, te lezen gelieve het [ XDM overzicht van het Systeem ](../
 
 ## Identiteitsservice {#identity-service}
 
-De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht van uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
+Met Adobe Experience Platform Identity Service krijgt u een compleet beeld van uw klanten en hun gedrag door identiteiten op verschillende apparaten en systemen te koppelen. Zo kunt u in real-time impactvolle, persoonlijke digitale ervaringen bieden.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -160,11 +160,11 @@ De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht v
 
 Voor meer informatie, te lezen gelieve het [ overzicht van de Dienst van de Identiteit ](../../identity-service/home.md).
 
-## Segmenteringsservice {#segmentation}
+## Segmentatieservice {#segmentation}
 
-Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, vooruitzichten, gebruikers of organisaties) segmenteren naar het publiek. U kunt een publiek maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile] -gegevens. Deze soorten publiek worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn gemakkelijk toegankelijk voor elke Adobe.
+Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) segmenteren in doelgroepen. U kunt doelgroepen maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform], en zijn gemakkelijk toegankelijk via elke Adobe-toepassing.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -176,9 +176,9 @@ Voor meer informatie, te lezen gelieve het [ overzicht van de Segmentatie ](../.
 
 ## Bronnen {#sources}
 
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+Experience Platform biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
