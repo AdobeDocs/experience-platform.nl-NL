@@ -2,9 +2,9 @@
 title: Pakketten delen in de hele organisatie met behulp van sandbox-gereedschappen
 description: Leer hoe u Sandbox Tooling in Adobe Experience Platform gebruikt om pakketten te delen tussen verschillende organisaties.
 badge: Beta
-source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
+source-git-commit: 0e280972feb990221272d272aa2a9e3852beb5e8
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '602'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Navigeer naar het tabblad **[!UICONTROL Sandboxes]** **[!UICONTROL Partner orgs]
 
 ![ de zandbakken UI, met het lusje van de Organisaties van de Partner en leidt benadrukte partnerorganisaties.](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
-Voer in het dialoogvenster [!UICONTROL Package partner management] de organisatie-id in **[!UICONTROL Enter Org ID]** in en druk op Enter. De organisatie-id wordt weergegeven in de onderstaande sectie **[!UICONTROL Selected Org IDs]** . Selecteer **[!UICONTROL Confirm]** nadat u de id&#39;s hebt toegevoegd.
+Voer in het dialoogvenster [!UICONTROL Package partner management] de organisatie-id in **[!UICONTROL Enter Org ID]** in en druk op Enter (Windows) of Return (Mac). De organisatie-id wordt weergegeven in de onderstaande sectie **[!UICONTROL Selected Org IDs]** . Selecteer **[!UICONTROL Confirm]** nadat u de id&#39;s hebt toegevoegd.
 
 >[!TIP]
 >
