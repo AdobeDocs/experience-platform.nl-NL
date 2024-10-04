@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 7ba9eb6891657e7f3d7ebbd41314b7973e31ea61
+source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '2739'
 ht-degree: 0%
 
 ---
@@ -102,6 +102,10 @@ Er wordt een bevestigingsvenster weergegeven. Selecteer **[!UICONTROL Confirm]**
 ### Resultaattelling {#result-count}
 
 De redacteur van de Vraag heeft een maximum 50.000 rijoutput. U kunt het aantal rijen kiezen die tegelijkertijd in de console van de Redacteur van de Vraag worden getoond. Als u het aantal rijen wilt wijzigen dat in de console wordt weergegeven, selecteert u het vervolgkeuzemenu **[!UICONTROL Result count]** en selecteert u een van de opties 50, 100, 150, 300 en 500.
+
+>[!NOTE]
+>
+>Aangezien de interface van het Platform slechts tot 500 rijen kan steunen, wordt het overgaan van een waarde LIMIT meer dan 500 genegeerd.
 
 ![ de Redacteur van de Vraag met de benadrukte drop-down van de resultaattelling.](../images/ui/query-editor/result-count.png)
 
