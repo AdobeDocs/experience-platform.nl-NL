@@ -5,10 +5,10 @@ breadcrumb-title: Handleiding voor dashboards
 user-guide-description: Leer hoe u gegevens in Experience Platform kunt visualiseren via aanpasbare dashboards.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 18d768f296d1f7087d05208fdff317b2fd9770af
+source-git-commit: 06e319a6f7e2294a9c5daea0f41e89a09d93efd2
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 22%
+source-wordcount: '134'
+ht-degree: 23%
 
 ---
 
@@ -21,7 +21,6 @@ ht-degree: 22%
 * [Dashboards](user-defined-dashboards.md)
 * [Dashboards downloaden naar PDF](download.md)
 * Data Distiller {#data-distiller}
-   * [Overzicht](data-distiller/overview.md)
    * SQl-inzichten voor uitgebreide app-rapportage {#sql-insights}
       * [Overzicht](data-distiller/sql-insights/overview.md)
    * Modus Query Pro {#query-pro-mode}

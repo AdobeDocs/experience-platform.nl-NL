@@ -2,7 +2,7 @@
 title: Meer weergeven
 description: Meer informatie over de verschillende weergaveopties voor de door SQL geanalyseerde gegevens. Vanuit het aangepaste dashboard kunt u de resultaten van uw analyse met tabs bekijken of de verwerkte gegevens in CSV-indeling downloaden.
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
+source-git-commit: 1ef8208ccde2f44b6c5188bd5b9a57ff876da30f
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 0%
@@ -41,7 +41,7 @@ U kunt kolommen sorteren door het keuzemenu naast de kolomnaam te selecteren en 
 
 >[!NOTE]
 >
->De [!UICONTROL Sort Ascending] en [!UICONTROL Sort Descending] opties zullen slechts voor kolommen verschijnen die met [ sorterende functionaliteit ](../overview.md/#advanced-attributes) zijn gevormd.
+>De [!UICONTROL Sort Ascending] en [!UICONTROL Sort Descending] opties zullen slechts voor kolommen verschijnen die met [ sorterende functionaliteit ](./overview.md#advanced-attributes) zijn gevormd.
 
 ![ de dropdown van de lijstkolom van A die de Gesorting Ascending en de Aflopende benadrukte opties van de Soort tonen.](../../images/query-pro-mode/advanced-sort-dropdown.png)
 

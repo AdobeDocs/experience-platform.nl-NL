@@ -2,7 +2,7 @@
 title: SQL Insights
 description: Leer meer over de gebruiksgevallen, essentiële mogelijkheden en vereiste stappen om een SQL-inzichten-dashboard met Data Distiller te ontwikkelen. Ontdek hoe de SQL-mogelijkheden voor inzichten in Data Distiller de transparantie kunnen verbeteren en operationele inzichten kunnen opdoen in verschillende dimensies, zoals profielen, publiek, campagnes, reizen, rechten en toestemming.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 3435ddd4b235c1c66cd29c75b779bcca607a5d4f
+source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Creeer op maat gebaseerde rapporteringsgegevensmodellen om diepere inzichten te halen, strategieën te optimaliseren, en analyses aan te passen aan specifieke bedrijfsbehoeften met Gegevens Distiller SQL Inzichten. Gebruik de SQL-inzichten om de transparantie te vergroten en operationele inzichten te verkrijgen van uw Adobe Experience Platform-gegevens in verschillende dimensies, zoals profielen, publiek, campagnes, reizen, rechten en toestemming. Deze mogelijkheid biedt een veelzijdige, adaptieve oplossing om de rapporteringsgegevensmodellen van uw organisatie aan te passen aan uw specifieke bedrijfsbehoeften.
 
-Om [ visualiseren uw SQL Inzichten ](../../../dashboards/data-distiller/overview.md) kunt u [ vraag pro wijze ](../../../dashboards/data-distiller/query-pro-mode/overview.md) gebruiken om complexe analyse met douaneSQL vragen te leiden en uw gegevens in gemakkelijk te interpreteren grafieken om te zetten. Gebruik query pro-modus om op maat gemaakte inzichten en inzichten op uw dashboards te maken en rekening te houden met zowel technisch als niet-technisch publiek door uw inzichten als CSV-bestanden te downloaden.
+Om [ visualiseren uw SQL Inzichten ](../../../dashboards/data-distiller/sql-insights/overview.md) kunt u [ vraag pro wijze ](../../../dashboards/data-distiller/query-pro-mode/overview.md) gebruiken om complexe analyse met douaneSQL vragen te leiden en uw gegevens in gemakkelijk te interpreteren grafieken om te zetten. Gebruik query pro-modus om op maat gemaakte inzichten en inzichten op uw dashboards te maken en rekening te houden met zowel technisch als niet-technisch publiek door uw inzichten als CSV-bestanden te downloaden.
 
 In dit document worden de gebruiksgevallen, essentiële functies en vereiste stappen beschreven voor het ontwikkelen van een SQL-inzichten-dashboard met Data Distiller.
 
