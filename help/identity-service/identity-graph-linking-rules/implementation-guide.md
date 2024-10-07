@@ -1,11 +1,10 @@
 ---
 title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
-badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 35ccc39fdfef31ca1f59e2e11f0d3d762e423635
+source-git-commit: 5d1bcaa84875e55595996253fb72cf768af16e05
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1624'
 ht-degree: 0%
 
 ---
