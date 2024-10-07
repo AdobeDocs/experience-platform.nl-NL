@@ -2,9 +2,9 @@
 title: Exportgedrag profiel
 description: Leer hoe het gedrag van de profieluitvoer tussen de verschillende integratiepatronen varieert die in de bestemmingen van het Experience Platform worden gesteund.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
+source-git-commit: 6c2d10cffa30d9feb4d342014ea1b712094bb673
 workflow-type: tm+mt
-source-wordcount: '2930'
+source-wordcount: '2939'
 ht-degree: 0%
 
 ---
@@ -192,7 +192,7 @@ In de eerste bestandsuitvoer na het instellen van de activeringsworkflow wordt d
 
 >[!TIP]
 >
->Ter herinnering: wijzigingen in kenmerkwaarden of in identiteitskaarten voor een profiel kwalificeren geen profiel dat moet worden opgenomen in een incrementele bestandsuitvoer.
+>Als herinnering geldt dat wijzigingen in identiteitskaarten voor een profiel het in aanmerking laten komen voor opname in een incrementele bestandsuitvoer. De veranderingen in attributenwaarden *kwalificeren niet* het om in een stijgende dossieruitvoer worden omvat.
 
 ## Volgende stappen {#next-steps}
 
