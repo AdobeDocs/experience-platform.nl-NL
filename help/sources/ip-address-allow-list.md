@@ -1,21 +1,27 @@
 ---
-keywords: Experience Platform;huis;de populaire onderwerpen;ip adres;ip adressen;ip de lijst van gewenste personen van het adresadres; lijst van gewenste personen
-description: IP de adressen moeten aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken.
-solution: Experience Platform
-title: IP de Lijst van gewenste personen van het Adres voor Source Verbindingen
+description: Leer over de IP adressen die u aan uw lijst van gewenste personen moet toevoegen om de bronnen van Adobe Experience Platform met succes te gebruiken.
+title: IP de Lijst van gewenste personen van het Adres voor Bronnen
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: bcd74083169c40966d7de8ba7b79082931a6744d
+source-git-commit: 2c069df7552b5f03f3edbbf0bccd4ba7cbe397d3
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
 # IP adres lijst van gewenste personen
 
-U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewall. Door de aangewezen bronIP waaier te specificeren, kunt u verkeer voor de dienst van de gegevensoverdracht toestaan. De volgende IP adressen moeten aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen.
+U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewall. Door de aangewezen bronIP waaier te specificeren, kunt u verkeersstroom voor de dienst van de gegevensoverdracht laten. De volgende IP adressen moeten aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen.
 
-## VA7: Noord-Amerika
+## IP adres lijst van gewenste personen voor partijbronnen {#batch}
+
+U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om verkeersstroom voor de dienst van de gegevensoverdracht voor partijbronnen te laten.
+
+>[!BEGINTABS]
+
+>[!TAB  VA7: Noord-Amerika ]
+
+### VA7: Noord-Amerika
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -35,7 +41,9 @@ U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewal
 - `20.98.195.172/32`
 - `172.210.218.144/28`
 
-## NLD2: Europa
+>[!TAB  NLD2: Europa ]
+
+### NLD2: Europa
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -45,7 +53,9 @@ U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewal
 - `40.113.176.232/29`
 - `52.236.187.112/28`
 
-## AUS5: Australië
+>[!TAB  AUS5: Australië ]
+
+### AUS5: Australië
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
@@ -56,7 +66,9 @@ U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewal
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
-## CAN2: Canada
+>[!TAB  CAN2: Canada ]
+
+### CAN2: Canada
 
 - `13.71.175.80/28`
 - `20.38.147.224/28`
@@ -67,13 +79,31 @@ U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewal
 - `52.228.86.144/29`
 - `52.246.155.224/28`
 
+>[!TAB  IND2: India ]
+
+### IND2: India
+
+- `20.43.121.48/28`
+- `20.192.42.0/24`
+- `20.192.43.0/26`
+- `20.192.102.80/28`
+- `20.204.193.112/29`
+- `40.80.51.160/28`
+- `52.140.104.128/25`
+- `52.140.105.0/26`
+- `52.140.108.208/29`
+
+>[!ENDTABS]
+
 ## IP adres lijst van gewenste personen voor het stromen bronnen {#streaming}
 
-U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om verkeer voor de gegevensoverdrachtservice voor streamingbronnen zoals [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md) , [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md) , [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) en [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md) toe te staan.
+U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om verkeer voor de gegevensoverdrachtservice voor streamingbronnen zoals [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md) , [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md) , [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) en [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md) mogelijk te maken.
 
 >[!BEGINTABS]
 
->[!TAB  VA7 ]
+>[!TAB  VA7: Noord-Amerika ]
+
+### VA7: Noord-Amerika
 
 - `52.254.106.240/28`
 - `52.254.107.144/28`
@@ -98,7 +128,9 @@ U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om v
 - `52.254.107.80/28`
 - `20.186.185.227`
 
->[!TAB  NLD2 ]
+>[!TAB  NLD2: Europa ]
+
+### NLD2: Europa
 
 - `51.138.17.0/28`
 - `51.138.16.176/28`
@@ -123,7 +155,9 @@ U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om v
 - `51.138.16.192/28`
 - `51.138.12.100`
 
->[!TAB  AUS5 ]
+>[!TAB  AUS5: Australië ]
+
+### AUS5: Australië
 
 - `20.40.188.194`
 - `20.53.206.128`
@@ -151,7 +185,9 @@ U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om v
 - `20.227.35.177`
 - `20.43.104.48/28`
 
->[!TAB  CAN2 ]
+>[!TAB  CAN2: Canada ]
+
+### CAN2: Canada
 
 - `20.200.70.240/28`
 - `20.200.94.116`
@@ -179,7 +215,9 @@ U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om v
 - `20.200.70.192/28`
 - `20.200.71.144/28`
 
->[!TAB  GBR9 ]
+>[!TAB  GBR9: Verenigd Koninkrijk ]
+
+### GBR9: Verenigd Koninkrijk
 
 - `20.254.2.128/28`
 - `20.26.131.71`
@@ -206,5 +244,37 @@ U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om v
 - `20.254.3.32/28`
 - `20.26.128.247`
 - `20.26.64.112/28`
+
+>[!TAB  IND2: India ]
+
+### IND2: India
+
+- `4.224.74.0/28`
+- `20.244.79.80/28`
+- `20.244.79.128/28`
+- `4.188.4.154`
+- `4.213.223.207`
+- `20.244.77.16/28`
+- `4.224.74.80/28`
+- `4.224.74.64/28`
+- `4.224.74.96/28`
+- `4.188.4.99`
+- `20.244.79.0/28`
+- `20.244.79.224/28`
+- `20.244.77.208/28`
+- `4.188.4.11`
+- `20.244.79.208/28`
+- `20.244.78.0/28`
+- `20.244.79.144/28`
+- `20.244.74.112/28`
+- `20.244.79.192/28`
+- `20.244.79.48/28`
+- `20.244.79.16/28`
+- `20.244.78.208/28`
+- `4.213.40.145`
+- `4.188.4.167`
+- `20.244.77.160/28`
+- `20.244.77.0/28`
+- `4.188.4.138`
 
 >[!ENDTABS]
