@@ -2,28 +2,32 @@
 title: B2B-naamruimten en -schema's
 description: Dit document biedt een overzicht van aangepaste naamruimten die zijn vereist voor het maken van een B2B-bronconnector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 5e8bb04ca18159eab98b2f7f0bba8cb1488a1f26
+source-git-commit: ebbed5c6ff7037b138588a79a05e6ef13d1856d7
 workflow-type: tm+mt
-source-wordcount: '1620'
+source-wordcount: '1651'
 ht-degree: 0%
 
 ---
 
 # B2B-naamruimten en -schema&#39;s
 
+>[!AVAILABILITY]
+>
+>U moet toegang tot [ Adobe Real-time Customer Data Platform B2B edition ](../../../../rtcdp/b2b-overview.md) voor uw B2B- schema&#39;s hebben om in [ in real time het Profiel van de Klant ](../../../../profile/home.md) te kwalificeren.
+
 >[!NOTE]
 >
 >U kunt sjablonen in de gebruikersinterface van Adobe Experience Platform gebruiken om het maken van elementen voor B2B- en B2C-gegevens te versnellen. Voor meer informatie, lees de gids op [ gebruikend malplaatjes in Platform UI ](../../../tutorials/ui/templates.md).
 
-Dit document bevat informatie over de onderliggende instelling voor de naamruimten en schema&#39;s die met B2B-bronnen moeten worden gebruikt. Dit document bevat ook informatie over het instellen van het Postman-hulpprogramma voor automatisering dat vereist is voor het genereren van B2B-naamruimten en -schema&#39;s.
-
->[!IMPORTANT]
->
->U moet toegang tot [ Adobe Real-time Customer Data Platform B2B Uitgave ](../../../../rtcdp/b2b-overview.md) hebben opdat B2B- schema&#39;s aan [ in real time het Profiel van de Klant ](../../../../profile/home.md) deelnemen.
+Lees dit document voor informatie over de onderliggende opstelling voor namespaces en schema&#39;s die met B2B bronnen moeten worden gebruikt. Dit document bevat ook informatie over het instellen van het Postman-hulpprogramma voor automatisering dat vereist is voor het genereren van B2B-naamruimten en -schema&#39;s.
 
 ## B2B-naamruimten instellen en hulpprogramma voor automatisch genereren van schema&#39;s
 
-De eerste stap bij het gebruik van de B2B-naamruimte en het schema auto-generation hulpprogramma is het instellen van de console voor ontwikkelaars van het platform en de [!DNL Postman] -omgeving.
+>[!IMPORTANT]
+>
+>De JWT-gegevens (Service Account) zijn afgekeurd. U moet ervoor zorgen dat u uw toepassing of integratie aan de nieuwe server-aan-Server referentie OAuth vóór 27 Januari, 2025 migreert. Lees de volgende documentatie voor gedetailleerde stappen op [ hoe te om uw geloofsbrieven van JWT aan de Server-aan-Server referentie OAuth ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/) te migreren.
+
+Raadpleeg de volgende documentatie voor informatie over de manier waarop u de [!DNL Postman] -omgeving zo kunt instellen dat deze ondersteuning biedt voor de naamruimte B2B en het hulpprogramma voor automatisch genereren van schema&#39;s.
 
 - U kunt namespace en schema auto-generatie nutsinzameling en milieu van deze [ bewaarplaats GitHub ](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility) downloaden.
 - Voor informatie bij het gebruiken van Platform APIs met inbegrip van details over hoe te om waarden voor vereiste kopballen te verzamelen en steekproefAPI vraag te lezen, zie de gids op [ begonnen wordt met Platform APIs ](../../../../landing/api-guide.md).
@@ -37,12 +41,10 @@ De volgende tabel bevat voorbeeldwaarden en aanvullende informatie over het vull
 | Variabele | Beschrijving | Voorbeeld |
 | --- | --- | --- |
 | `CLIENT_SECRET` | Een unieke id die wordt gebruikt om de `{ACCESS_TOKEN}` te genereren. Zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang heeft ](../../../../landing/api-authentication.md) voor informatie over hoe te om uw `{CLIENT_SECRET}` terug te winnen. | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | JSON Web Token (JWT) is een verificatiereferentie die wordt gebruikt om uw {ACCESS_TOKEN} te genereren. Zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang heeft ](../../../../landing/api-authentication.md) voor informatie over hoe te om uw `{JWT_TOKEN}` te produceren. | `{JWT_TOKEN}` |
 | `API_KEY` | Een unieke id die wordt gebruikt om aanroepen van Experience Platform-API&#39;s te verifiëren. Zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang heeft ](../../../../landing/api-authentication.md) voor informatie over hoe te om uw `{API_KEY}` terug te winnen. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `ACCESS_TOKEN` | Het toestemmingstoken dat wordt vereist om vraag aan Experience Platform APIs te voltooien. Zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang heeft ](../../../../landing/api-authentication.md) voor informatie over hoe te om uw `{ACCESS_TOKEN}` terug te winnen. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | Met betrekking tot [!DNL Marketo] is deze waarde vast en altijd ingesteld op: `ent_dataservices_sdk` . | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | De `global` container houdt alle standaard Adobe en partner van het Experience Platform verstrekte klassen, de groepen van het schemagebied, gegevenstypes, en schema&#39;s. Met betrekking tot [!DNL Marketo] is deze waarde vast en altijd ingesteld op `global` . | `global` |
-| `PRIVATE_KEY` | Een referentie die wordt gebruikt om de [!DNL Postman] -instantie te verifiëren voor Experience Platform-API&#39;s. Zie het leerprogramma bij de console van de opstellingsontwikkelaar en [ vestiging de console van de opsteller en  [!DNL Postman]](../../../../landing/postman.md) voor instructies op hoe te om uw {PRIVATE_KEY} terug te winnen. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Een referentie die wordt gebruikt om te integreren in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Het Identity Management System (IMS) biedt het framework voor verificatie van Adobe-services. Met betrekking tot [!DNL Marketo] is deze waarde vast en altijd ingesteld op: `ims-na1.adobelogin.com` . | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | Een onderneming die producten en diensten kan bezitten of in licentie kan geven en toegang kan verlenen tot haar leden. Zie het leerprogramma op [ vestiging de console van de ontwikkelaar en  [!DNL Postman]](../../../../landing/postman.md) voor instructies op hoe te om uw `{ORG_ID}` informatie terug te winnen. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
@@ -58,11 +60,11 @@ Als de verzameling van [!DNL Postman] is ingesteld en de omgeving is ingesteld, 
 
 Selecteer in de interface [!DNL Postman] de hoofdmap van het hulpprogramma voor automatische generator en selecteer vervolgens **[!DNL Run]** in de bovenste koptekst.
 
-![ wortel-omslag ](../images/marketo/root-folder.png)
+![ de wortelomslag van de de generator van Namespaces en van Schema in Postman UI. &quot;Runs&quot; wordt benadrukt in de hoogste menubar.](../images/marketo/root_folder.png)
 
 De interface [!DNL Runner] wordt weergegeven. Controleer van hieruit of alle selectievakjes zijn ingeschakeld en selecteer vervolgens **[!DNL Run Namespaces and Schemas Autogeneration Utility]** .
 
-![ looppas-generator ](../images/marketo/run-generator.png)
+![ De Runner interface van Postman UI met verscheidene verzoeken in de inzameling van Namespaces en van Schema&#39;s gecontroleerd en &quot;de knoop van Namespaces en van de Lopen&quot;op de rechterkant wordt benadrukt.](../images/marketo/run_generator.png)
 
 Een succesvol verzoek leidt tot namespaces en schema&#39;s die voor B2B worden vereist.
 
