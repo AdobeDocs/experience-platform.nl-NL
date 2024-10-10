@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 5e2e8996ee48d7816d78fc9cacf6ba102f7ae66f
+source-git-commit: 8ccdf80885a04280c4a92e1cb3d18e45e2d9d9e5
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1250'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 1%
       * [De dossiers van de uitvoer op bestelling aan partijbestemmingen gebruikend Experience Platform UI](./ui/export-file-now.md)
       * [Gegevenssets exporteren met de interface van het Experience Platform](./ui/export-datasets.md)
       * [(Beta) Gebruik het laatste XDM-attribuut voor kwalificatietijd in de nieuwe bètawolkenopslagdoelen](./ui/activate-last-qualification-time.md)
-      * [(Beta) Berekende velden gebruiken om arrays te exporteren in platte schemabestanden](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [Berekende velden gebruiken om arrays als tekenreeksen te exporteren](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Doelgegevens weergeven](./ui/destination-details-page.md)
    * [Doelaccounts bijwerken](./ui/update-accounts.md)
    * [Doelaccounts verwijderen](./ui/delete-destination-account.md)
