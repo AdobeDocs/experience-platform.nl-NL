@@ -1,9 +1,9 @@
 ---
 title: Stimuleer soorten publiek met SQL
 description: Leer hoe u de SQL-publieksextensie in Adobe Experience Platform Data Distiller kunt gebruiken voor het maken, beheren en publiceren van soorten publiek met SQL-opdrachten. In deze handleiding worden alle aspecten van de levenscyclus van de doelgroep behandeld, zoals het maken, bijwerken en verwijderen van profielen en het gebruik van gegevensgestuurde publieksdefinities voor doelbestemmingen op basis van bestanden.
-source-git-commit: fbfd232c4e101f29ae01328c33763786a0e4a8cb
+source-git-commit: 8b9a46d9dd35a60fc3f3087d5fd3c4dad395b1aa
 workflow-type: tm+mt
-source-wordcount: '1266'
+source-wordcount: '1279'
 ht-degree: 0%
 
 ---
@@ -137,41 +137,103 @@ In deze sectie worden veelgestelde vragen over het maken en beheren van een exte
 
 +++Selecteren om vragen en antwoorden weer te geven
 
+**Vragen**:
+
 - Wordt het creëren van het publiek gesteund slechts voor vlakke datasets?
-- Geneste datasets worden ook ondersteund, maar alleen platte kenmerken zijn beschikbaar in het publiek.
+
++++Antwoord
+
+Geneste datasets worden ook ondersteund, maar alleen platte kenmerken zijn beschikbaar in het publiek.
+
++++
 
 - Resulteert de publieksverwezenlijking in één enkele dataset of veelvoudige datasets, of varieert het afhankelijk van de configuratie?
-- Er is een één-op-één afbeelding tussen een publiek en een dataset.
+
++++Antwoord
+
+Er is een één-op-één afbeelding tussen een publiek en een dataset.
+
++++
 
 - Wordt de dataset gecreeerd tijdens publieksverwezenlijking duidelijk voor Profiel?
-- Nr, wordt de dataset die tijdens publieksverwezenlijking wordt gecreeerd niet duidelijk voor Profiel.
+
++++Antwoord
+
+Nr, wordt de dataset die tijdens publieksverwezenlijking wordt gecreeerd niet duidelijk voor Profiel.
+
++++
 
 - Is de dataset gecreeerd op het gegevensmeer?
-- Ja, de dataset wordt gecreeerd op het gegevens meer.
+
++++Antwoord
+
+Ja, de dataset wordt gecreeerd op het gegevens meer.
+
++++
 
 - Zijn de attributen in het publiek beperkt tot gebruik slechts in onderneming op dossier-gebaseerde bestemmingen? (Ja of Nee)
-- Ja, zijn de attributen in het publiek beperkt tot gebruik slechts in onderneming op dossier-gebaseerde bestemmingen.
+
++++Antwoord
+
+Ja, zijn de attributen in het publiek beperkt tot gebruik slechts in onderneming op dossier-gebaseerde bestemmingen.
+
++++
 
 - Kan ik een publiek van publiek creëren dat een publiek van Gegevens Distiller gebruikt?
-- Ja, u kunt een publiek van publiek tot stand brengen dat een publiek van Gegevens Distiller gebruikt.
+
++++Antwoord
+
+Ja, u kunt een publiek van publiek tot stand brengen dat een publiek van Gegevens Distiller gebruikt.
+
++++
 
 - Worden deze soorten publiek in Adobe Journey Optimizer weergegeven? Als niet, wat gebeurt wanneer ik een nieuw publiek in de regelbouwer creeer die alle leden van dit publiek omvat?
-- Het publiek van de gegevensdistilleerder is momenteel niet beschikbaar in Adobe Journey Optimizer. U moet een nieuw publiek maken in de Adobe Journey Optimizer-ontwikkelaar voor regels die beschikbaar zijn in Adobe Journey Optimizer.
+
++++Antwoord
+
+Het publiek van de gegevensdistilleerder is momenteel niet beschikbaar in Adobe Journey Optimizer. U moet een nieuw publiek maken in de Adobe Journey Optimizer-ontwikkelaar voor regels die beschikbaar zijn in Adobe Journey Optimizer.
+
++++
 
 - Hoe zou ik twee publiek van Gegevens Distiller met verschillende programma&#39;s moeten creëren? Hoeveel datasets worden gecreeerd, en worden zij duidelijk voor Profiel?
-- Twee datasets zullen worden gecreeerd aangezien elk publiek een onderliggende dataset heeft. Deze gegevenssets zijn echter niet gemarkeerd voor Profiel. De twee datasets worden beheerd op hun eigen individuele programma&#39;s.
+
++++Antwoord
+
+Twee datasets zullen worden gecreeerd aangezien elk publiek een onderliggende dataset heeft. Deze gegevenssets zijn echter niet gemarkeerd voor Profiel. De twee datasets worden beheerd op hun eigen individuele programma&#39;s.
+
++++
 
 - Hoe verwijder ik een publiek?
-- Om een publiek te schrappen, kunt u het [`DROP AUDIENCE` bevel ](#delete-audience) in de interface van de bevellijn gebruiken of de [ Snelle acties van de werkruimte van Soorten publiek ](../../segmentation/ui/audience-portal.md#quick-actions) gebruiken. OPMERKING: publiek dat wordt gebruikt in downstreambestemmingen of dat afhankelijk is van een ander publiek, kan niet worden verwijderd.
+
++++Antwoord
+
+Om een publiek te schrappen, kunt u het [`DROP AUDIENCE` bevel ](#delete-audience) in de interface van de bevellijn gebruiken of de [ Snelle acties van de werkruimte van Soorten publiek ](../../segmentation/ui/audience-portal.md#quick-actions) gebruiken. OPMERKING: publiek dat wordt gebruikt in downstreambestemmingen of dat afhankelijk is van een ander publiek, kan niet worden verwijderd.
+
++++
 
 - Wanneer ik een publiek aan Profiel publiceert, hoe spoedig is het beschikbaar in de segment bouwer UI, en wanneer wordt het beschikbaar in Doelen?
-- Wanneer het exporteren van de profielmomentopname is voltooid, kunnen de profielen in het publiek worden weergegeven.
+
++++Antwoord
+
+Wanneer het exporteren van de profielmomentopname is voltooid, kunnen de profielen in het publiek worden weergegeven.
+
++++
 
 - Worden Distiller-doelgroepen om de 30 dagen verwijderd omdat ze een extern publiek zijn?
-- Ja, het publiek van Data Distiller wordt om de 30 dagen verwijderd omdat het een extern publiek is.
+
++++Antwoord
+
+Ja, het publiek van Data Distiller wordt om de 30 dagen verwijderd omdat het een extern publiek is.
+
++++
 
 - Worden data-Distiller-soorten publiek weergegeven in de lijst Soorten publiek?
-- Ja, data-Distiller-soorten publiek worden in de lijst Soorten publiek weergegeven onder de oorspronkelijke naam &#39;Data Distiller&#39;.
+
++++Antwoord
+
+Ja, data-Distiller-soorten publiek worden in de lijst Soorten publiek weergegeven onder de oorspronkelijke naam &#39;Data Distiller&#39;.
+
++++
 
 +++
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt de SQL-syntaxis beschreven die wordt ondersteund door de Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: 654a8b6a3f961514ef96eaec879697cde36f8b1b
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4265'
 ht-degree: 1%
 
 ---
@@ -577,7 +577,7 @@ In de volgende tabel ziet u het verschil in resultaten dat de instelling `auto_t
 
 ### Resolve fallback snapshot on failure {#resolve-fallback-snapshot-on-failure}
 
-De optie `resolve_fallback_snapshot_on_failure` wordt gebruikt om het probleem van een verlopen opname-id op te lossen. Metagegevens voor momentopnamen verlopen na twee dagen en een verlopen momentopname kan de logica van een script ongeldig maken. Dit kan een probleem zijn wanneer anonieme blokken worden gebruikt.
+De optie `resolve_fallback_snapshot_on_failure` wordt gebruikt om het probleem van een verlopen opname-id op te lossen.
 
 Stel de optie `resolve_fallback_snapshot_on_failure` in op true als u een opname wilt overschrijven met een vorige opname-id.
 

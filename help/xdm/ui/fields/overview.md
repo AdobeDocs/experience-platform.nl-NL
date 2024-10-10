@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM-velden definiëren in de UI
 description: Leer hoe u XDM-velden definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 89519918aa830dc09365fa80449099229dc475d5
+source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
 workflow-type: tm+mt
-source-wordcount: '1636'
-ht-degree: 0%
+source-wordcount: '1518'
+ht-degree: 1%
 
 ---
 
@@ -88,8 +88,7 @@ Als u een nieuw veld definieert, kunnen er aanvullende configuratieopties worden
 
 | Field, eigenschap | Compatibele typen | Beschrijving |
 | --- | --- | --- |
-| [!UICONTROL Map value type] | [!UICONTROL Map] | De eigenschap [!UICONTROL Map value type] wordt alleen weergegeven in de gebruikersinterface als u de waarde Kaart in de vervolgkeuzelijst [!UICONTROL Type] selecteert. U kunt kiezen tussen de waarden voor Tekenreeks en Geheel getal voor Kaart.<br>![ de Redacteur van Schema met de benadrukte gebieden van het type en van het de waardetype van de Kaart.](../../images/ui/fields/overview/map-type.png " de Redacteur van Schema met de benadrukte gebieden van het type en van het de waardetype van de Kaart."){width="100" zoomable="yes"}<br> Nota: Om het even welke types van kaartgegevens die door API worden gecreeerd die of geen Koord of een type van Geheel zijn worden getoond als gegevenstype &#39;[!UICONTROL Complex]&#39;. U kunt geen &quot;[!UICONTROL Complex]&quot;gegevenstypes door UI tot stand brengen. |
-| [!UICONTROL Default value] | [!UICONTROL String], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolean] | A default value that is assigned to this field if no other value is provided during ingestion. Deze waarde moet overeenkomen met het geselecteerde veldtype.<br><br> de standaardwaarden worden niet bewaard in de dataset op het tijdstip van opneming, aangezien zij in tijd kunnen veranderen. De standaardwaarden die in het schema worden geplaatst worden afgeleid door de stroomafwaartse diensten en de toepassingen van het Platform wanneer zij de gegevens van de dataset lezen. Bijvoorbeeld, wanneer het vragen van de gegevens die de Dienst van de Vraag gebruiken, als het attribuut een ONGELDIGE waarde heeft, maar het gebrek aan `5` op het schemaniveau wordt geplaatst, wordt verwacht dat de Dienst van de Vraag `5` in plaats van ONGELDIG zal terugkeren. Dit gedrag is momenteel niet uniform voor alle AEP-services. |
+| [!UICONTROL Map value type] | [!UICONTROL Map] | De eigenschap [!UICONTROL Map value type] wordt alleen weergegeven in de gebruikersinterface als u de waarde Kaart in de vervolgkeuzelijst [!UICONTROL Type] selecteert. U kunt kiezen tussen de waarden voor Tekenreeks en Geheel getal voor Kaart.<br>![De schema-editor met de velden Type en Type toewijzingswaarde gemarkeerd.](../../images/ui/fields/overview/map-type.png "De schema-editor met de velden Type en Type toewijzingswaarde gemarkeerd."){width="100" zoomable="yes"}<br> Nota: Om het even welke types van kaartgegevens die door API worden gecreeerd die of geen Koord of een type van Geheel zijn worden getoond als gegevenstype &#39;[!UICONTROL Complex]&#39;. U kunt geen &quot;[!UICONTROL Complex]&quot;gegevenstypes door UI tot stand brengen. |
 | [!UICONTROL Pattern] | [!UICONTROL String] | A [ regelmatige uitdrukking ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) dat de waarde voor dit gebied moet in overeenstemming zijn om tijdens opname te worden goedgekeurd. |
 | [!UICONTROL Format] | [!UICONTROL String] | Selecteer een optie in een lijst met vooraf gedefinieerde indelingen voor tekenreeksen die de waarde moet bevatten. Beschikbare indelingen zijn: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Minimum length] | [!UICONTROL String] | Het minimale aantal tekens dat de tekenreeks moet bevatten voordat de waarde wordt geaccepteerd tijdens de opname. |
