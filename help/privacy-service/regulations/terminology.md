@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologie van de privacyregels
 description: Dit document bevat definities voor belangrijke termen met betrekking tot privacyregels die worden ondersteund door Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: be219530f33209cb4f3fe70425bb293edff4b309
+source-git-commit: c4ca3dc975b13e2dce2e12784480e53bd0c4ee02
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2301'
 ht-degree: 0%
 
 ---
@@ -91,6 +91,8 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 
 **IMS Org identiteitskaart**: Verwijs naar een teken van de de vergunningsvergunning van de Adobe voor dienst-aan-dienst authentificatie, die gebruikerslogin niet vereist. Het wordt uitgegeven aan een cliënt IMS, en heeft geen bijbehorende gebruiker. Een cliënt IMS heeft een de dienstteken nodig om achterkanaalverzoeken tussen de diensten goed te keuren. (De term &quot;systeemtoken&quot; wordt soms gebruikt als een servicetoken.)
 
+**[!DNL Iowa Consumer Data Protection Act]**: Een wet op de privacy van de staat die Iowa-ingezetenen het recht geeft om toegang te krijgen tot, te verwijderen uit en zich te onthouden van de verkoop van hun persoonsgegevens. De ICDPA is van toepassing op bedrijven die gegevens verwerken voor meer dan 100.000 inwoners van Iowa of die meer dan 50% van inkomsten uit gegevensverkoop halen. Tot de meest opvallende uitzonderingen behoren non-profitorganisaties en onderwijsinstellingen. De wet voorziet in een periode van 90 dagen waarbinnen bedrijven overtredingen kunnen verhelpen voordat er sancties worden opgelegd.
+
 ## J
 
 ## K
@@ -105,7 +107,16 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 
 **MHMDAa**: [[!DNL Washington My Health My Data Act] ](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) verbetert privacyrechten voor consumenten betreffende hun gezondheidsgegevens. Het verplicht de informatieverschaffing, de instemming van de consument en het recht om gezondheidsgegevens te verwijderen, en verbiedt de verkoop van gezondheidsgegevens zonder toestemming. Bovendien maakt de wet het onwettig om gebruik te maken van geofencing rond gezondheidszorgfaciliteiten.
 
+**[!DNL Montana Consumer Data Privacy Act]**: Deze wet geeft inwoners van Montana het recht op toegang tot, correctie, verwijdering en het aanvragen van kopieën van hun persoonlijke gegevens. Het MCDPA is van toepassing op bedrijven die gegevens verwerken voor meer dan 50.000 consumenten in Montana en benadrukt de bescherming van gevoelige persoonsgegevens, zoals biometrische en genetische informatie. Het handhaaft transparantie rond gegevensinzameling, het delen, en het verkopen praktijken.
+
 ## N
+
+**[!DNL Nebraska Data Protection Act]**: Een privacywet die Nebraskans het recht geeft om toegang te krijgen tot, te corrigeren, te verwijderen en te weigeren van de verkoop van hun persoonlijke gegevens. Het is van toepassing op ondernemingen die aan specifieke gegevensverwerking en opbrengstdrempels voldoen. De NDPA verplicht bedrijven ook redelijke maatregelen voor gegevensbeveiliging te treffen en biedt een behandelingsperiode van 30 dagen om schendingen op te lossen voordat sancties worden opgelegd.
+
+**[!DNL New Hampshire Data Privacy Act]**: Deze verordening beschermt de persoonsgegevens van inwoners van New Hampshire door hun rechten op toegang, verwijdering en overdracht van hun gegevens te verlenen. Het verplicht bedrijven om hun praktijken voor het verzamelen en delen van gegevens bekend te maken en biedt consumenten de mogelijkheid om zich uit de verkoop van gegevens te onthouden. NHDPA is op bedrijven van toepassing die gespecificeerde drempels van de gegevensverwerking voldoen.
+
+**[!DNL New Jersey Data Protection Act]**: Een uitgebreide nationale privacywet die inwoners van New Jersey het recht geeft om persoonlijke gegevens te openen, te corrigeren en te verwijderen. Het omvat opt-outmechanismen voor de verkoop van gegevens en gerichte reclame. De NJDPA is van toepassing op bedrijven die grote hoeveelheden consumentengegevens verwerken en vereist transparantie in de manier waarop bedrijven persoonlijke informatie verwerken.
+
 
 ## O
 

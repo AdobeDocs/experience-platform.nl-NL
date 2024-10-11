@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy-taken beheren in de gebruikersinterface van de Privacy Service
 description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experiencen Cloud te coördineren en te controleren.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 341cc4cb150717f08b2e59412ef58fbd6f7b3450
+source-git-commit: 25c173e22f2aa4922aed89f7c9721e2303d5d4b9
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
@@ -37,25 +37,35 @@ Het dashboard voor [!DNL Privacy Service] UI verstrekt twee widgets die u toesta
 [!DNL Privacy Service] ondersteunt taakaanvragen voor verschillende privacyregels. In de volgende tabel worden de ondersteunde verordeningen en het bijbehorende label weergegeven, zoals weergegeven in de gebruikersinterface:
 
 | UI-label | Verordening |
-| --- | --- |
-| [!UICONTROL APA_AUS] | De [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL CPA] | De [!DNL Colorado Privacy Act] |
-| [!UICONTROL CCPA] | De [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPRA_USA] | De [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA] | De [!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL FDBR_USA] | De [!DNL Florida Digital Bill of Rights] |
-| [!UICONTROL GDPR] | De Europese Unie [!DNL General Data Protection Regulation] |
-| [!UICONTROL HIPAA_AUS] | De [!DNL Health Insurance Portability and Accountability Act] |
-| [!UICONTROL LGPD_BRA] | Brazilië [!DNL Lei Geral de Proteção de Dados] |
-| [!UICONTROL MHMDA] | De [!DNL Washington My Health My Data Act] |
-| [!UICONTROL NZPA_NZL] | Nieuw-Zeeland [!DNL Privacy Act] |
-| [!UICONTROL OCPA_USA] | De [!DNL Oregon Consumer Privacy Act] |
-| [!UICONTROL PDPA_THA] | Thailand [!DNL Personal Data Protection Act] |
-| [!UICONTROL TDPSA_USA] | De [!DNL Texas Data Privacy and Security Act] |
-| [!UICONTROL UCPA] | De [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA] | De [!DNL Virginia Consumer Data Protection Act] |
+|-------------------------------------|------------------------|
+| [!UICONTROL APA_AUS  (Australia)] | De [!DNL Australia Privacy Act] |
+| [!UICONTROL CCPA (California)] | De [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPA_USA (Colorado)] | De [!DNL Colorado Privacy Act] |
+| [!UICONTROL CPRA_USA (California)] | De [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL CTDPA_USA (Connecticut)] | De [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL FDBR_USA (Florida)] | De [!DNL Florida Digital Bill of Rights] |
+| [!UICONTROL GDPR (European Union)] | De Europese Unie [!DNL General Data Protection Regulation] |
+| [!UICONTROL HIPPA_USA (United States)] | De [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL ICDPA_USA] (Iowa) | De [!DNL Iowa Consumer Data Protection Act] |
+| [!UICONTROL LGPD_BRA (Brazil)] | Brazilië: &quot;[!DNL General Data Protection Law]&quot; [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MHMDA_USA (Washington)] | De [!DNL Washington My Health My Data Act] |
+| [!UICONTROL MCDPA_USA (Montana)] | De [!DNL Montana Consumer Data Privacy Act] |
+| [!UICONTROL NDPA_USA (Nebraska)] | De [!DNL Nebraska Data Protection Act] |
+| [!UICONTROL NZPA_NZL (New Zealand)] | Nieuw-Zeeland [!DNL Privacy Act] |
+| [!UICONTROL NHPA_USA (New Hampshire)] | De [!DNL New Hampshire Data Privacy Act] |
+| [!UICONTROL NJDPA_USA (New Jersey)] | De [!DNL New Jersey Data Protection Act] |
+| [!UICONTROL OCPA USA (Oregon)] | De [!DNL Oregon Consumer Privacy Act] |
+| [!UICONTROL PDPA_THA (Thailand)] | Thailand [!DNL Personal Data Protection Act] |
+| [!UICONTROL TDPSA USA (Texas)] | De [!DNL Texas Data Privacy and Security Act] |
+| [!UICONTROL UCPA_USA (Utah)] | De [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_USA (Virginia)] | De [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
+
+<!-- 
+Waiting:
+| **[!UICONTROL PIPA_KOR]**  ?        | South Korea [!DNL Personal Information Privacy Act] |
+ -->
 
 >[!NOTE]
 >

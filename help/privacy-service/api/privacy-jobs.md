@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen
+keywords: Experience Platform;startpagina;populaire onderwerpen
 solution: Experience Platform
 title: API-eindpunt voor privacytaken
 description: Leer hoe u privacytaken voor Experiencen Cloud-toepassingen beheert met de Privacy Service-API.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 341cc4cb150717f08b2e59412ef58fbd6f7b3450
+source-git-commit: 02a95212ff8a018b2b7f0a06978307d08a6915af
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 0%
@@ -42,7 +42,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`fdbr_usa`</li><li>`gdpr` - Nota: Dit wordt ook gebruikt voor verzoeken met betrekking tot **ccpa** verordeningen.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br> zie het overzicht op [ gesteunde verordeningen ](../regulations/overview.md) voor meer informatie over de privacyverordeningen die de bovengenoemde waarden vertegenwoordigen. |
+| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`fdbr_usa`</li><li>`gdpr` - Nota: Dit wordt ook gebruikt voor verzoeken met betrekking tot **ccpa** verordeningen.</li><li>`hipaa_usa`</li><li>`icdpa_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_usa`</li><li>`mhmda_usa`</li><li>`ndpa_usa`</li><li>`nhpa_usa`</li><li>`njdpa_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br> zie het overzicht op [ gesteunde verordeningen ](../regulations/overview.md) voor meer informatie over de privacyverordeningen die de bovengenoemde waarden vertegenwoordigen. |
 | `{PAGE}` | De pagina met gegevens die moet worden weergegeven met een op 0 gebaseerde nummering. De standaardwaarde is `0` . |
 | `{SIZE}` | Het aantal resultaten dat op elke pagina moet worden weergegeven. De standaardwaarde is `100` en het maximum is `1000` . Als het maximum wordt overschreden, retourneert de API een fout van 400 code. |
 | `{status}` | Standaard worden alle statussen opgenomen. Als u een statustype opgeeft, worden alleen privacytaken geretourneerd die overeenkomen met dat statustype. De toegestane waarden zijn onder meer: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -172,7 +172,7 @@ curl -X POST \
 | `users` **(Required)** | Een array die een verzameling van ten minste één gebruiker bevat waarvan u de gegevens wilt openen of verwijderen. Een maximum van 1000 gebruikers kan in één enkel verzoek worden verstrekt. Elk gebruikersobject bevat de volgende informatie: <ul><li>`key`: Een id voor een gebruiker die wordt gebruikt om de afzonderlijke taak-id&#39;s in de reactiegegevens te kwalificeren. Het is aan te raden een unieke, gemakkelijk identificeerbare tekenreeks voor deze waarde te kiezen, zodat er later gemakkelijk naar kan worden verwezen of deze kan worden opgezocht.</li><li>`action`: Een array met de acties die moeten worden uitgevoerd op basis van de gegevens van de gebruiker. Afhankelijk van de handelingen die u wilt uitvoeren, moet deze array `access` , `delete` of beide bevatten.</li><li>`userIDs`: Een verzameling identiteiten voor de gebruiker. Het aantal identiteiten dat één gebruiker kan hebben, is beperkt tot negen. Elke identiteit bestaat uit een `namespace` , een `value` , en een namespace kwalificfier (`type`). Zie [ bijlage ](appendix.md) voor meer details over deze vereiste eigenschappen.</li></ul> Voor een meer gedetailleerde verklaring van `users` en `userIDs`, zie de [ het oplossen van problemengids ](../troubleshooting-guide.md#user-ids). |
 | `include` **(Required)** | Een array met producten van de Adobe die in de verwerking moeten worden opgenomen. Als deze waarde ontbreekt of anderszins leeg is, wordt het verzoek afgewezen. Omvat slechts producten die uw organisatie een integratie met heeft. Zie de sectie op [ erkende productwaarden ](appendix.md) in het bijlage voor meer informatie. |
 | `expandIDs` | Een optionele eigenschap die, indien ingesteld op `true`, een optimalisatie vertegenwoordigt voor het verwerken van de id&#39;s in de toepassingen (momenteel alleen ondersteund door [!DNL Analytics] ). Als deze waarde wordt weggelaten, wordt deze standaard ingesteld op `false` . |
-| `priority` | Een optionele eigenschap die door Adobe Analytics wordt gebruikt en die de prioriteit voor het verwerken van aanvragen instelt. Accepteerde waarden zijn `normal` en `low` . Wanneer `priority` wordt weggelaten, is het standaardgedrag `normal` . |
+| `priority` | Een optionele eigenschap die door Adobe Analytics wordt gebruikt en die de prioriteit voor het verwerken van aanvragen instelt. Geaccepteerde waarden zijn `normal` en `low`. Wanneer `priority` wordt weggelaten, is het standaardgedrag `normal` . |
 | `mergePolicyId` | Wanneer het maken van privacyverzoeken voor het Profiel van de Klant in real time (`profileService`), kunt u naar keuze identiteitskaart van het specifieke [ fusiebeleid ](../../profile/merge-policies/overview.md) verstrekken dat u voor identiteitskaart het stitching wilt gebruiken. Door een samenvoegbeleid te specificeren, kunnen de privacyverzoeken publieksinformatie omvatten wanneer het terugkeren van gegevens over een klant. Per aanvraag kan slechts één samenvoegbeleid worden opgegeven. Als er geen samenvoegingsbeleid is opgegeven, wordt segmenteringsinformatie niet opgenomen in de reactie. |
 | `regulation` **(Required)** | De verordening voor de privacybaan. De volgende waarden worden geaccepteerd: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br> zie het overzicht op [ gesteunde verordeningen ](../regulations/overview.md) voor meer informatie over de privacyverordeningen die de bovengenoemde waarden vertegenwoordigen. |
 
