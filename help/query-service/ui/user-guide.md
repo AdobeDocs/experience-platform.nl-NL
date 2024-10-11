@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
+source-git-commit: f68dd020b05d1eaf6d873b9cdc2a40007ad60c84
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2763'
 ht-degree: 0%
 
 ---
@@ -200,19 +200,18 @@ Als een query was gepland, biedt het tabblad [!UICONTROL Scheduled Queries] bete
 >
 >Vragen die niet worden uitgevoerd, worden niet opgeslagen in het logbestand. De vraag om in de Dienst van de Vraag beschikbaar te zijn, moet het in de Redacteur van de Vraag in werking stellen of worden bewaard.
 
-### Objectbrowser {#object-browser}
+### [!BADGE  browser van de Objecten van Beta ] {type=Informative} {#object-browser}
 
 >[!AVAILABILITY]
 >
->De dataset navigation rail is alleen beschikbaar voor Distiller-klanten van Data. Uw platforminterface bevat mogelijk niet de linkergegevenssetnavigatiespoor.  Andere afbeeldingen in dit document weerspiegelen mogelijk niet de dataset navigation rail. Neem contact op met uw Adobe voor meer informatie.
+De dataset navigation rail is alleen beschikbaar voor Distiller-klanten van Data. Uw platforminterface bevat mogelijk niet de linkergegevenssetnavigatiespoor. Andere afbeeldingen in dit document weerspiegelen mogelijk niet de dataset navigation rail. Neem contact op met uw Adobe voor meer informatie.<br>
+De browser van objecten is momenteel in bèta en beschikbaar slechts in a **beperkte versie**. Neem contact op met uw Adobe voor vroege toegang tot de site.
 
 Gebruik objecten browser aan gemakkelijk onderzoek en filterdatasets. De objecten browser vermindert de tijd besteed het zoeken naar lijsten en datasets in grote milieu&#39;s met talrijke datasets. Met gestroomlijnde toegang tot relevante gegevens en meta-gegevens, kunt u zich meer op vraag creatie en minder op navigatie concentreren.
 
 Als u met de objectbrowser door de database wilt navigeren, voert u een tabelnaam in het zoekveld in of selecteert u **[!UICONTROL Tables]** om de lijst met beschikbare datasets en tabellen uit te vouwen. Wanneer u het zoekveld gebruikt, wordt de lijst met beschikbare tabellen dynamisch gefilterd op basis van uw invoer.
 
->[!NOTE]
->
->Elke dataset bevat in [ uw geselecteerde gegevensbestand ](#database-dropdown) is vermeld in een navigatieregel links van de Redacteur van de Vraag.
+Elke dataset bevat in [ uw geselecteerde gegevensbestand ](#database-dropdown) is vermeld in een navigatieregel links van de Redacteur van de Vraag.
 
 ![ De de gegevenssetnavigatieregel van de Redacteur van de Vraag met de benadrukte onderzoeksinput.](../images/ui/query-editor/search-tables.png)
 
@@ -233,7 +232,7 @@ Naast snelle zoekopdrachten hebt u nu gemakkelijk toegang tot metagegevens voor 
 
 #### Onderliggende tabellen verkennen
 
-Als u onderliggende of gekoppelde tabellen wilt verkennen, selecteert u de vervolgkeuzepijl naast de tabelnaam in de lijst. Dit breidt de lijst uit om het even welke bijbehorende kindlijsten te tonen, en geeft een duidelijke mening van de gegevensstructuur en staat voor complexere vraagconstructies toe. Het pictogram naast de veldnaam geeft het gegevenstype van de kolom aan, zodat u deze kunt identificeren tijdens complexe query&#39;s.
+Als u onderliggende of gekoppelde tabellen wilt verkennen, selecteert u de vervolgkeuzepijl naast de tabelnaam in de lijst. Dit breidt de lijst uit om het even welke bijbehorende kindlijsten te tonen, en geeft een duidelijke mening van de gegevensstructuur en staat voor complexere vraagconstructies toe. Het pictogram naast de veldnaam geeft het gegevenstype van de kolom aan. to helpen u het tijdens complexe vragen identificeren.
 
 ![ de Redacteur van de Vraag met de gefiltreerde getoonde lijst.](../images/ui/query-editor/child-table-list.png)
 
@@ -249,7 +248,7 @@ De console verstrekt informatie over de status en de verrichting van de Dienst v
 
 >[!NOTE]
 >
->De console toont slechts fouten die uit de uitvoering van een vraag resulteerden. De code geeft niet de fouten van de queryvalidatie weer die optreden voordat een query wordt uitgevoerd.
+De console toont slechts fouten die uit de uitvoering van een vraag resulteerden. De code geeft niet de fouten van de queryvalidatie weer die optreden voordat een query wordt uitgevoerd.
 
 ### Zoekresultaten {#query-results}
 
@@ -269,7 +268,7 @@ In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Pl
 
 >[!NOTE]
 >
->De interface die in de video wordt weergegeven, is verouderd, maar de logica die in de workflow wordt gebruikt, blijft ongewijzigd.
+De interface die in de video wordt weergegeven, is verouderd, maar de logica die in de workflow wordt gebruikt, blijft ongewijzigd.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
