@@ -3,9 +3,9 @@ title: Berekende velden gebruiken om arrays als tekenreeksen te exporteren
 type: Tutorial
 description: Leer hoe u berekende velden kunt gebruiken om arrays van Real-Time CDP naar cloudopslagdoelen als tekenreeksen te exporteren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6fec0432f71e58d0e17ac75121fb1028644016e1
+source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
 workflow-type: tm+mt
-source-wordcount: '1506'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Krijg uitgebreide informatie over berekende gebieden - wat deze zijn en waarom z
 
 ## Arrays en andere objecttypen in Platform {#arrays-strings-other-objects}
 
-In Experience Platform, kunt u [ schema&#39;s XDM ](/help/xdm/home.md) gebruiken om verschillende gebiedstypes te beheren. Eerder, kon u eenvoudige zeer belangrijk-waardepaar typegebieden zoals koorden uit Experience Platform naar uw gewenste bestemmingen uitvoeren. Een voorbeeld van zulk een gebied dat voor de uitvoer eerder werd gesteund is `personalEmail.address`:`johndoe@acme.org`.
+In Experience Platform, kunt u [ schema&#39;s XDM ](/help/xdm/home.md) gebruiken om verschillende gebiedstypes te beheren. Voordat ondersteuning voor arrayexportbewerkingen werd toegevoegd, kon u eenvoudige sleutelwaardepaartypevelden, zoals tekenreeksen, uit Experience Platform exporteren naar de gewenste doelen. Een voorbeeld van zulk een gebied dat voor de uitvoer eerder werd gesteund is `personalEmail.address`:`johndoe@acme.org`.
 
 Andere veldtypen in Experience Platform zijn arrayvelden. Lees meer over [ het beheren van seriegebieden in het Experience Platform UI ](/help/xdm/ui/fields/array.md). Naast de eerder ondersteunde veldtypen kunt u nu arrayobjecten zoals het onderstaande voorbeeld exporteren. Deze objecten worden samengevoegd tot een tekenreeks met de functie `array_to_string` .
 
@@ -146,15 +146,6 @@ First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### `flattenArray` functie voor het exporteren van samengevoegde arrays
-
-Gebruik de functie `flattenArray` om een geëxporteerde multidimensionale array samen te voegen. U kunt deze functie combineren met de functie `array_to_string` die hierboven verder wordt beschreven.
-
-Als u doorgaat met het array-object `organizations` van bovenaf, kunt u een functie zoals `array_to_string('_', flattenArray(organizations))` schrijven. De functie `array_to_string` voegt de invoerarray standaard samen tot een tekenreeks.
-
-De resulterende uitvoer is gelijk aan die voor de hierboven beschreven functie `array_to_string` .
-
-
 ### `filterArray` functie voor het exporteren van gefilterde arrays
 
 Gebruik de functie `filterArray` om de elementen van een geëxporteerde array te filteren. U kunt deze functie combineren met de functie `array_to_string` die hierboven verder wordt beschreven.
@@ -210,6 +201,14 @@ In dit geval ziet het uitvoerbestand er hieronder uit. De drie elementen van de 
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
+
+### `flattenArray` functie voor het exporteren van samengevoegde arrays
+
+Gebruik de functie `flattenArray` om een geëxporteerde multidimensionale array samen te voegen. U kunt deze functie combineren met de functie `array_to_string` die hierboven verder wordt beschreven.
+
+Als u doorgaat met het array-object `organizations` van bovenaf, kunt u een functie zoals `array_to_string('_', flattenArray(organizations))` schrijven. De functie `array_to_string` voegt de invoerarray standaard samen tot een tekenreeks.
+
+De resulterende uitvoer is gelijk aan die voor de functie `array_to_string` die verderop wordt beschreven.
 
 ### `coalesce` functie om arrays te exporteren {#coalesce-function-export-arrays}
 
