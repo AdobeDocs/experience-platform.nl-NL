@@ -3,9 +3,9 @@ title: Berekende velden gebruiken om arrays als tekenreeksen te exporteren
 type: Tutorial
 description: Leer hoe u berekende velden kunt gebruiken om arrays van Real-Time CDP naar cloudopslagdoelen als tekenreeksen te exporteren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
+source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1549'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,16 @@ Let op de volgende bekende beperkingen die momenteel van toepassing zijn op deze
 [ verbindt ](/help/destinations/ui/connect-destination.md) met een gewenste bestemming van de wolkenopslag, vooruitgang door de [ activeringsstappen voor de bestemmingen van de wolkenopslag ](/help/destinations/ui/activate-batch-profile-destinations.md) en krijgt aan de [ in kaart brengende ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) stap.
 
 ## Berekende velden exporteren {#how-to-export-calculated-fields}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_control"
+>title="Hiërarchisch uitvoerschema inschakelen"
+>abstract="Schakel in of u hiërarchische structuren zoals arrays wilt exporteren."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_calculated_field_disabled"
+>title="Berekende velden uitgeschakeld toevoegen"
+>abstract="Dit besturingselement is uitgeschakeld omdat u hebt geselecteerd om platte structuren te exporteren wanneer u verbinding maakt met het doel."
 
 Selecteer **[!UICONTROL Add calculated field]** in de toewijzingsstap van de activeringsworkflow voor bestemmingen voor cloudopslag.
 
