@@ -2,7 +2,7 @@
 title: Gevormde dashboards weergeven
 description: Bekijk een lijst van de gevormde dashboards van uw organisatie binnen het Experience Platform UI.
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
-source-git-commit: bc3db67b5b9e3bfb98571541d6e4dd2ca19b3303
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 0%
@@ -27,4 +27,4 @@ Als deze optie is geselecteerd, wordt het dashboard geopend in de gebruikersinte
 
 ## Aangepaste dashboards maken
 
-Met Adobe Experience Platform-dashboards kunt u aangepaste dashboards maken en beheren waar u widgets met maat kunt maken, toevoegen en bewerken om belangrijke metrische gegevens die relevant zijn voor uw organisatie te visualiseren. Zie de [ gebruiker bepaalde dashboardgids ](./user-defined-dashboards.md) voor volledige instructies bij het creëren van en het vormen van douanedashboards.
+Met Adobe Experience Platform-dashboards kunt u aangepaste dashboards maken en beheren waar u widgets met maat kunt maken, toevoegen en bewerken om belangrijke metrische gegevens die relevant zijn voor uw organisatie te visualiseren. Zie de [ gebruiker bepaalde dashboardgids ](./standard-dashboards.md) voor volledige instructies bij het creëren van en het vormen van douanedashboards.

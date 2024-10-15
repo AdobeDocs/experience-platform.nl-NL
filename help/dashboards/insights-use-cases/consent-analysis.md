@@ -2,7 +2,7 @@
 title: Constante analyse en tracering
 description: Leer hoe u een dashboard voor de toestemmingsanalyse kunt maken om te controleren hoe de toestemming van de gebruiker in de loop der tijd is verlopen.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1804'
 ht-degree: 0%
@@ -112,13 +112,13 @@ Nadat u een publiek met betrekking tot toestemming zoals &quot;Gebruikers met to
 
 U kunt ook uw eigen widgets maken met door de gebruiker gedefinieerde dashboards. Door uw eigen widget te maken hebt u volledige controle over het type widget, samen met de flexibiliteit om filters en nog veel meer rechtstreeks in Adobe Real-Time CDP toe te voegen.
 
-Bijvoorbeeld, als u veelvoudige toestemmingspubliek in de zelfde grafiek wilt trenderen zodat u in tijd kunt zien hoe elk van uw toestemmingsvoorkeur is veranderd. Dit soort visualisatie is mogelijk met door de gebruiker gedefinieerde dashboards in minimale stappen en een eenmalige instelling. Selecteer eerst **[!UICONTROL Dashboards]** in de linkernavigatie. De werkruimte van [!UICONTROL Dashboards] wordt weergegeven. Selecteer vervolgens **[!UICONTROL Create dashboard]** . De volledige instructies op hoe te om [ tot een dashboard en douane widget ](../user-defined-dashboards.md) te leiden kunnen in de user-defined dashboardgids worden gevonden.
+Bijvoorbeeld, als u veelvoudige toestemmingspubliek in de zelfde grafiek wilt trenderen zodat u in tijd kunt zien hoe elk van uw toestemmingsvoorkeur is veranderd. Dit soort visualisatie is mogelijk met door de gebruiker gedefinieerde dashboards in minimale stappen en een eenmalige instelling. Selecteer eerst **[!UICONTROL Dashboards]** in de linkernavigatie. De werkruimte van [!UICONTROL Dashboards] wordt weergegeven. Selecteer vervolgens **[!UICONTROL Create dashboard]** . De volledige instructies op hoe te om [ tot een dashboard en douane widget ](../standard-dashboards.md) te leiden kunnen in de user-defined dashboardgids worden gevonden.
 
-![ de dashboardwerkruimte met benadrukte dashboards en creeer dashboard.](../images/user-defined-dashboards/create-dashboard.png)
+![ de dashboardwerkruimte met benadrukte dashboards en creeer dashboard.](../images/standard-dashboards/create-dashboard.png)
 
-Wanneer u [ uw gegevensmodel ](../user-defined-dashboards.md#select-data-model) in widgetcomposer selecteert, selecteer `CDPInsights` gevolgd door **[!UICONTROL Next]**. Het dialoogvenster [!UICONTROL Select table] wordt weergegeven.
+Wanneer u [ uw gegevensmodel ](../standard-dashboards.md#select-data-model) in widgetcomposer selecteert, selecteer `CDPInsights` gevolgd door **[!UICONTROL Next]**. Het dialoogvenster [!UICONTROL Select table] wordt weergegeven.
 
-![ de Uitgezochte dialoog van het gegevensmodel met het getoonde model CDPInsights.](../images/user-defined-dashboards/select-data-model-dialog.png)
+![ de Uitgezochte dialoog van het gegevensmodel met het getoonde model CDPInsights.](../images/standard-dashboards/select-data-model-dialog.png)
 
 In de volgende weergave wordt een lijst weergegeven met de beschikbare tabellen in de linkertrack. Selecteer `adwh_fact_profile_by_segment_and_namespace_trendlines`.
 
@@ -126,16 +126,16 @@ In de volgende weergave wordt een lijst weergegeven met de beschikbare tabellen 
 
 Voer de onderstaande stappen uit nadat de widgetcomposer is gevuld met gegevens uit uw gekozen tabel:
 
-- [ Onderzoek [!UICONTROL Attributes]](../user-defined-dashboards.md#add-filter-attributes) voor `[!UICONTROL date]`, dan gebruik + pictogram om het `[!UICONTROL date]` attribuut aan de X-as van het dropdown menu toe te voegen.
-  ![ Widget composer met toe:voegen-pictogram en dropdown benadrukt menu.](../images/user-defined-dashboards/attributes-dropdown.png)
+- [ Onderzoek [!UICONTROL Attributes]](../standard-dashboards.md#add-filter-attributes) voor `[!UICONTROL date]`, dan gebruik + pictogram om het `[!UICONTROL date]` attribuut aan de X-as van het dropdown menu toe te voegen.
+  ![ Widget composer met toe:voegen-pictogram en dropdown benadrukt menu.](../images/standard-dashboards/attributes-dropdown.png)
 - Zoek [!UICONTROL Attributes] naar `[!UICONTROL count_of_profiles]` en gebruik vervolgens het pictogram + om het kenmerk `[!UICONTROL count_of_profiles]` toe te voegen aan de Y-as vanuit het vervolgkeuzemenu.
 - Selecteer het pictogram `...` (ellipsen) in het [!UICONTROL Y-axis] veld en selecteer vervolgens de [!UICONTROL SUM] functie voor aggregatie in het vervolgkeuzemenu.
   ![ De widget composer stuurt de tendensen van de Toestemming met het gegevensmodel, de lijst, en de y-as dropdown menu en de benadrukte eigenschap van SUM. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - Selecteer het vervolgkeuzemenu [!UICONTROL Marks] en wijzig het diagramtype in [!UICONTROL Line] .
 - Zoek [!UICONTROL Attributes] naar `[!UICONTROL segment_name]` en gebruik vervolgens het pictogram + om de `segment_name` als een [!UICONTROL Filter] waarde in het vervolgkeuzemenu toe te voegen. Het dialoogvenster [!UICONTROL Filter: Segment_name] wordt weergegeven. Selecteer de eerder gemaakte soorten publiek die betrekking hebben op toestemming. Selecteer in dit voorbeeld **[!UICONTROL Users Consented to Calls]** , **[!UICONTROL Users Consented to SMS]** en **[!UICONTROL Users Consented to Email]** , gevolgd door **[!UICONTROL Apply]** .
 - Zoek [!UICONTROL Attributes] naar `[!UICONTROL segment_name]` en selecteer vervolgens het pictogram + om `segment_name` als een [!UICONTROL Color] toe te voegen in het vervolgkeuzemenu.
-- Open [ het [!UICONTROL Properties] paneel ](../user-defined-dashboards.md#widget-properties) en verstrek aangewezen [!UICONTROL Widget title] en [!UICONTROL Axis label].
-  ![ Widget composer met het eigenschappen pictogram en de benadrukte titel van Widget.](../images/user-defined-dashboards/properties-panel.png)
+- Open [ het [!UICONTROL Properties] paneel ](../standard-dashboards.md#widget-properties) en verstrek aangewezen [!UICONTROL Widget title] en [!UICONTROL Axis label].
+  ![ Widget composer met het eigenschappen pictogram en de benadrukte titel van Widget.](../images/standard-dashboards/properties-panel.png)
 - Selecteer **[!UICONTROL Save and close]** om uw instellingen te bevestigen.
 
 >[!TIP]

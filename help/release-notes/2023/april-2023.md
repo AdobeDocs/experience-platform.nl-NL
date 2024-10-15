@@ -1,15 +1,15 @@
 ---
-title: Adobe Experience Platform Release Notes April 2023
+title: Aanvullende informatie van april 2023 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2023 voor Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '2011'
-ht-degree: 3%
+ht-degree: 28%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Aanvullende informatie voor Adobe Experience Platform
 
 >[!IMPORTANT]
 >
@@ -22,32 +22,32 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Dashboards](#dashboards)
 - [Gegevensvoorbereiding](#data-prep)
 - [Dataverzameling](#data-collection)
-- [Doelen](#destinations)
+- [Bestemmingen](#destinations)
 - [Experience Data Model](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
-- [Klantprofiel in realtime](#profile)
-- [Segmenteringsservice](#segmentation)
+- [Realtime-klantenprofiel](#profile)
+- [Segmentatieservice](#segmentation)
 - [Bronnen](#sources)
 
 ## Dashboards {#dashboards}
 
-Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
+Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten kunt bekijken over de gegevens van uw organisatie, zoals vastgelegd tijdens dagelijkse momentopnamen.
 
 **Nieuwe of bijgewerkte eigenschappen** {#dashboards-new-updated-features}
 
 | Functie | Beschrijving |
 | --- | --- |
-| Door gebruiker gedefinieerde dashboards | U kunt **historische gegevens** van uw widgetinzichten nu filtreren, en of recente gegevens of een periode van de douaneanalyse gebruiken. Zie de [ user-defined dashboards gids ](../../dashboards/user-defined-dashboards.md#filter-historical-data) voor meer informatie.<br> u kunt **uw bestaande widgets** nu ook dupliceren. Door een duplicaat aan te passen en de kenmerken ervan te bewerken, kunt u voorkomen dat u bij het maken van een nieuwe, unieke widget opnieuw begint. Lees de [ gids van de widgetduplicatie ](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) om meer te leren. |
+| Door gebruiker gedefinieerde dashboards | U kunt **historische gegevens** van uw widgetinzichten nu filtreren, en of recente gegevens of een periode van de douaneanalyse gebruiken. Zie de [ user-defined dashboards gids ](../../dashboards/standard-dashboards.md#filter-historical-data) voor meer informatie.<br> u kunt **uw bestaande widgets** nu ook dupliceren. Door een duplicaat aan te passen en de kenmerken ervan te bewerken, kunt u voorkomen dat u bij het maken van een nieuwe, unieke widget opnieuw begint. Lees de [ gids van de widgetduplicatie ](../../dashboards/standard-dashboards.md#duplicate-a-widget) om meer te leren. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestemmingen te verlenen en douanegidgets tot stand te brengen, begin door het [ overzicht van dashboards ](../../dashboards/home.md) te lezen.
+Voor meer informatie over dashboards, met inbegrip van hoe u toegangsrechten verleent en aangepaste widgets maakt, raadpleegt u eerst het [overzicht van dashboards](../../dashboards/home.md).
 
 ## Gegevensvoorbereiding {#data-prep}
 
-Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience Data Model).
+Met gegevensvoorbereiding kunnen gegevenstechnici gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience-datamodel).
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -60,9 +60,9 @@ Voor meer informatie over Prep van Gegevens, gelieve het [ overzicht van de Prep
 
 ## Dataverzameling {#data-collection}
 
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar de Adobe Experience Platform-Edge Network kunt sturen waar deze verrijkt, getransformeerd en gedistribueerd kan worden naar Adobe- of niet-Adobe-bestemmingen.
+Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaringsgegevens aan de klantzijde kunt verzamelen en deze naar het Adobe Experience Platform Edge Network kunt verzenden. Daar kunnen ze worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -73,15 +73,15 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 {style="table-layout:auto"}
 
-## Doelen {#destinations}
+## Bestemmingen {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 **Nieuwe bestemmingen** {#new-destinations}
 
-| Doel | Beschrijving |
+| Bestemming | Beschrijving |
 | ----------- | ----------- |
-| [[!DNL Salesforce Marketing Cloud Account Engagement]  verbinding ](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | Gebruik de Salesforce-bestemming (voorheen Pardot genoemd) voor Marketing Cloud-accounts om leads vast te leggen, bij te houden, te behalen en te behalen. Gebruik deze bestemming voor B2B gebruiksgevallen waarbij meerdere afdelingen en besluitvormers betrokken zijn en die langere verkoop- en beslissingscycli vereisen. |
+| [[!DNL Salesforce Marketing Cloud Account Engagement]  verbinding ](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | Gebruik de bestemming Salesforce Marketing Cloud Account Engagement (voorheen Pardot genoemd) om leads vast te leggen, bij te houden, te scoren, te scoren en te beoordelen. Gebruik deze bestemming voor B2B gebruiksgevallen waarbij meerdere afdelingen en besluitvormers betrokken zijn en die langere verkoop- en beslissingscycli vereisen. |
 
 {style="table-layout:auto"}
 
@@ -105,13 +105,13 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 -->
 
-Voor meer algemene informatie over bestemmingen, verwijs naar het [ overzicht van bestemmingen ](../../destinations/home.md).
+Voor meer algemene informatie over bestemmingen, raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
-## Experience Data Model (XDM) {#xdm}
+## Experience-datamodel (XDM) {#xdm}
 
-XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+XDM is een open-bronspecificatie die algemene structuren en definities (schema&#39;s) biedt voor gegevens die in Adobe Experience Platform worden geïmporteerd. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -143,9 +143,9 @@ Voor meer informatie over XDM in Platform, lees het [ XDM overzicht van het Syst
 
 ## Real-Time Customer Data Platform
 
-Real-time Customer Data Platform ([!DNL Real-Time CDP]) is gebaseerd op Experience Platform en helpt bedrijven bekende en onbekende gegevens bijeen te brengen om klantprofielen te activeren door middel van intelligente beslissingen tijdens de reis van de klant. [!DNL Real-Time CDP] combineert meerdere bedrijfsgegevensbronnen om klantprofielen in real-time te maken. De segmenten die van deze profielen worden gebouwd kunnen dan naar stroomafwaartse bestemmingen worden verzonden om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
+Real-Time Customer Data Platform ([!DNL Real-Time CDP]) is gebaseerd op Experience Platform en helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren met behulp van intelligente besluitvorming gedurende de hele klanttraject. [!DNL Real-Time CDP] combineert meerdere bedrijfsgegevensbronnen om klantprofielen in real-time te maken. Segmenten die op basis van deze profielen zijn samengesteld, kunnen vervolgens naar downstreambestemmingen worden verzonden om gepersonaliseerde één-op-één klantervaringen te bieden via alle kanalen en apparaten.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
@@ -154,11 +154,11 @@ Real-time Customer Data Platform ([!DNL Real-Time CDP]) is gebaseerd op Experien
 
 Voor meer informatie over [!DNL Real-Time CDP], zie het [[!DNL Real-Time CDP]  overzicht ](../../rtcdp/overview.md).
 
-## Klantprofiel in realtime {#profile}
+## Realtime-klantenprofiel {#profile}
 
-Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met het Profiel van de Klant in real time, kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. Het profiel staat u toe om klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
+Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en relevante ervaringen bieden, ongeacht waar of wanneer ze met uw merk in aanraking komen. Met Real-Time Customer Profile krijgt u een holistisch beeld van elke individuele klant, waarbij gegevens uit meerdere kanalen worden gecombineerd, waaronder online, offline, CRM en gegevens van derden. Met Profile kunt u klantgegevens samenvoegen tot één overzichtelijk overzicht, dat een bruikbaar overzicht met tijdstempel biedt van elke klantinteractie.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
@@ -166,11 +166,11 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 
 {style="table-layout:auto"}
 
-## Segmenteringsservice {#segmentation}
+## Segmentatieservice {#segmentation}
 
-[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
+[!DNL Segmentation Service] definieert een specifieke subset van profielen door de criteria te beschrijven die een groep personen aan wie marketing kan worden aangeboden binnen uw klantenbestand onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
@@ -178,23 +178,23 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 
 {style="table-layout:auto"}
 
-Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het [ overzicht van de Segmentatie ](../../segmentation/home.md).
+Voor meer informatie over [!DNL Segmentation Service], raadpleegt u het [overzicht van segmentatie](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 
 Adobe Experience Platform kan gegevens uit externe bronnen invoeren en stelt u in staat die gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens van een verscheidenheid van bronnen zoals de toepassingen van de Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
 
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+Experience Platform biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| API steun voor het filtreren van rij-vlakke gegevens voor bron Salesforce CRM. | Gebruik logische en vergelijkingsoperatoren om gegevens op rijniveau te filteren voor de Salesforce CRM-bron. Lees de gids over [ het filtreren gegevens voor een bron gebruikend API ](../../sources/tutorials/api/filter.md) voor meer informatie. |
+| API-ondersteuning voor het filteren van gegevens op rijniveau voor Salesforce CRM-bron. | Gebruik logische operatoren en vergelijkingsoperatoren om gegevens op rijniveau te filteren voor de Salesforce CRM-bron. Lees de gids over [ het filtreren gegevens voor een bron gebruikend API ](../../sources/tutorials/api/filter.md) voor meer informatie. |
 | Beta-beschikbaarheid van Shopify Streaming | [ Shopify Streaming bron ](../../sources/connectors/ecommerce/shopify-streaming.md) is nu beschikbaar in bèta. Gebruik de Shopify Streaming bron om gegevens van uw Shopify partnerrekening aan Experience Platform te stromen. |
 | Algemene beschikbaarheid van OneTrust Integration | De [ bron van de Integratie OneTrust ](../../sources/connectors/consent-and-preferences/onetrust.md) is nu GA. Gebruik de OneTrust Integration-bron om toestemmings- en voorkeursgegevens van uw OneTrust Integration-account naar Experience Platform te verzenden. |
 | Algemene beschikbaarheid van Oracle Service Cloud | De [ bron van de Wolk van de Dienst van het Oracle ](../../sources/connectors/customer-success/oracle-service-cloud.md) is nu GA. Gebruik de Cloud-bron van de service Oracle om uw Oracle Service Cloud-gegevens naar het Experience Platform te brengen. |
 
 {style="table-layout:auto"}
 
-Meer over bronnen leren, lees het [ overzicht van bronnen ](../../sources/home.md).
+Voor meer informatie over bronnen leest u het [overzicht van bronnen](../../sources/home.md).

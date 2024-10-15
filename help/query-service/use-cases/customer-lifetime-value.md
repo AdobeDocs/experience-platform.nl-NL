@@ -2,7 +2,7 @@
 title: Gegevenssignalen bijhouden om de levenswaarde van uw klant te genereren
 description: Deze gids verstrekt een demonstratie van begin tot eind op hoe te om Gegevens Distiller en user-defined dashboards met Real-time Customer Data Platform te gebruiken om de waarde van het klantenleven te meten en te visualiseren.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Zorg ervoor om een programma te plaatsen om uw model van douanegegevens op een r
 
 ## Een dashboard maken om inzichten vast te leggen {#build-a-custom-dashboard}
 
-Nu u uw model van douanegegevens hebt gecreeerd, bent u bereid om uw gegevens met douanevragen en user-defined dashboards te visualiseren. Zie het user-defined dashboards overzicht voor volledige begeleiding op hoe te [ een douanedashboard ](../../dashboards/user-defined-dashboards.md) bouwen. De UI-handleiding bevat informatie over:
+Nu u uw model van douanegegevens hebt gecreeerd, bent u bereid om uw gegevens met douanevragen en user-defined dashboards te visualiseren. Zie het user-defined dashboards overzicht voor volledige begeleiding op hoe te [ een douanedashboard ](../../dashboards/standard-dashboards.md) bouwen. De UI-handleiding bevat informatie over:
 
 * Een widget maken.
 * De widgetcomposer gebruiken.

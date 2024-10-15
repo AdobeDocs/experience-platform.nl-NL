@@ -2,7 +2,7 @@
 title: Soorten kijkers
 description: Ontdek SQL die uw publiek inzicht en gebruik deze vragen aanstuurt om douaneinzichten te produceren om publieksgegevens van Adobe Experience Platform verder te onderzoeken.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Begrijp uw publieksinzichten door tot SQL toegang te hebben die hen macht, dan u
 
 Zie de [ documentatie van de Mening SQL ](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
 
-De volgende inzichten zijn allen beschikbaar voor u om als deel van het [ dashboard van Soorten Soorten publiek ](../guides/audiences.md) of een douane [ user-defined dashboard ](../user-defined-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../user-defined-dashboards.md#create-widget) uit.
+De volgende inzichten zijn allen beschikbaar voor u om als deel van het [ dashboard van Soorten Soorten publiek ](../guides/audiences.md) of een douane [ user-defined dashboard ](../standard-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../standard-dashboards.md#create-widget) uit.
 
 De volgende inzichten zijn allen beschikbaar voor u om als deel van het [ dashboard van Soorten Soorten publiek ](../guides/audiences.md) of een douanedashboard te gebruiken.
 

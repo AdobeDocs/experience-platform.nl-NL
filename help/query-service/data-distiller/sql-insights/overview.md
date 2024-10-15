@@ -2,7 +2,7 @@
 title: SQL Insights
 description: Leer meer over de gebruiksgevallen, essentiële mogelijkheden en vereiste stappen om een SQL-inzichten-dashboard met Data Distiller te ontwikkelen. Ontdek hoe de SQL-mogelijkheden voor inzichten in Data Distiller de transparantie kunnen verbeteren en operationele inzichten kunnen opdoen in verschillende dimensies, zoals profielen, publiek, campagnes, reizen, rechten en toestemming.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 Creeer op maat gebaseerde rapporteringsgegevensmodellen om diepere inzichten te halen, strategieën te optimaliseren, en analyses aan te passen aan specifieke bedrijfsbehoeften met Gegevens Distiller SQL Inzichten. Gebruik de SQL-inzichten om de transparantie te vergroten en operationele inzichten te verkrijgen van uw Adobe Experience Platform-gegevens in verschillende dimensies, zoals profielen, publiek, campagnes, reizen, rechten en toestemming. Deze mogelijkheid biedt een veelzijdige, adaptieve oplossing om de rapporteringsgegevensmodellen van uw organisatie aan te passen aan uw specifieke bedrijfsbehoeften.
 
-Om [ visualiseren uw SQL Inzichten ](../../../dashboards/data-distiller/sql-insights/overview.md) kunt u [ vraag pro wijze ](../../../dashboards/data-distiller/query-pro-mode/overview.md) gebruiken om complexe analyse met douaneSQL vragen te leiden en uw gegevens in gemakkelijk te interpreteren grafieken om te zetten. Gebruik query pro-modus om op maat gemaakte inzichten en inzichten op uw dashboards te maken en rekening te houden met zowel technisch als niet-technisch publiek door uw inzichten als CSV-bestanden te downloaden.
+Om [ visualiseren uw SQL Inzichten ](../../../dashboards/sql-insights-query-pro-mode/overview.md) kunt u [ vraag pro wijze ](../../../dashboards/sql-insights-query-pro-mode/overview.md) gebruiken om complexe analyse met douaneSQL vragen te leiden en uw gegevens in gemakkelijk te interpreteren grafieken om te zetten. Gebruik query pro-modus om op maat gemaakte inzichten en inzichten op uw dashboards te maken en rekening te houden met zowel technisch als niet-technisch publiek door uw inzichten als CSV-bestanden te downloaden.
 
 In dit document worden de gebruiksgevallen, essentiële functies en vereiste stappen beschreven voor het ontwikkelen van een SQL-inzichten-dashboard met Data Distiller.
 
 ## Vereisten
 
-Deze zelfstudie gebruikt door de gebruiker gedefinieerde dashboards om gegevens van uw aangepaste gegevensmodel in de gebruikersinterface van het platform te visualiseren. Zie [ user-defined dashboards documentatie ](../../../dashboards/user-defined-dashboards.md) om meer over deze eigenschap te leren.
+Deze zelfstudie gebruikt door de gebruiker gedefinieerde dashboards om gegevens van uw aangepaste gegevensmodel in de gebruikersinterface van het platform te visualiseren. Zie [ user-defined dashboards documentatie ](../../../dashboards/standard-dashboards.md) om meer over deze eigenschap te leren.
 
 ## Aan de slag
 
@@ -72,7 +72,7 @@ Volg onderstaande stapsgewijze instructies voor het ontwikkelen van een SQL Insi
 1. **Ad hoc vraagexploratie:** begin door ad hoc `SELECT` vragen uit te voeren om ruwe gegevens over het gegevenshoeveelheid te onderzoeken. Hierdoor kan ter plekke een verkennende gegevensanalyse worden uitgevoerd om gegevens te experimenteren, en worden gegevens gevalideerd wanneer de resultaten van de query&#39;s niet in het datumpeer zijn opgeslagen.
 1. **het vraaggebruik van de Partij van de Partij:** de partijvragen van het Gebruik [ creëren geplande banen ](../../api/scheduled-queries.md#create-a-new-scheduled-query) voor het produceren van inzichten samengevoegde lijsten, die een systematische en geautomatiseerde benadering van gegevensverwerking verzekeren. Batchquery&#39;s worden uitgevoerd `INSERT TABLE AS SELECT` en `CREATE TABLE AS SELECT` -query&#39;s om gegevens op te schonen, vorm te geven, te manipuleren en te verrijken. De resultaten van deze vragen worden opgeslagen op het gegevens meer.
 1. **Geaggregeerde inzichten die laden:** Laad de geproduceerde bijeengevoegde inzichten in de versnelde opslag en gebruik SQL om vragen te testen, en de nauwkeurigheid en de efficiency van gegevensherwinning te verzekeren. Leren hoe te om stateless vragen aan de versnelde opslag ](../../api/accelerated-queries.md) te maken, zie de documentatie.[
-1. **Toegang en integratie:** heb toegang tot de inzichten die in de versnelde opslag foutloos door met Adobe Experience Platform [ te integreren gebruiker-bepaalde Dashboards ](../../../dashboards/user-defined-dashboards.md) of andere aangewezen Business Intelligence (BI) hulpmiddelen worden opgeslagen. Deze integratie met externe clients maakt een consistente en intuïtieve ervaring voor gebruikers mogelijk.
+1. **Toegang en integratie:** heb toegang tot de inzichten die in de versnelde opslag foutloos door met Adobe Experience Platform [ te integreren gebruiker-bepaalde Dashboards ](../../../dashboards/standard-dashboards.md) of andere aangewezen Business Intelligence (BI) hulpmiddelen worden opgeslagen. Deze integratie met externe clients maakt een consistente en intuïtieve ervaring voor gebruikers mogelijk.
 
 ![ een infografisch illustrerend de vier stappen aan SQL Inzichten in Gegevens Distiller.](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
 

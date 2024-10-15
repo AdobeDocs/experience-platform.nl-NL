@@ -2,7 +2,7 @@
 title: Invoer doelen
 description: Ontdek SQL die uw bestemmingsinzichten en gebruik deze vragen aandrijft om douaneinzichten te produceren om de activering van gegevens van Adobe Experience Platform verder te onderzoeken.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Begrijp uw bestemmingsinzicht door tot SQL toegang te hebben die hen macht, dan 
 
 Zie de [ documentatie van de Mening SQL ](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
 
-De volgende inzichten zijn allen beschikbaar voor u als deel van het [ dashboard van Doelen ](../guides/destinations.md) of een douane [ user-defined dashboard ](../user-defined-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../user-defined-dashboards.md#create-widget) uit.
+De volgende inzichten zijn allen beschikbaar voor u als deel van het [ dashboard van Doelen ](../guides/destinations.md) of een douane [ user-defined dashboard ](../standard-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../standard-dashboards.md#create-widget) uit.
 
 ## Geactiveerd publiek {#activated-audiences}
 

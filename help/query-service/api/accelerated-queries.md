@@ -3,7 +3,7 @@ title: Eindpunt van versnelde query's
 description: Leer hoe te om tot vraag versnelde opslag op een stateless manier toegang te hebben om resultaten snel terug te keren die op bijeengevoegde gegevens worden gebaseerd. Dit document verstrekt een verzoek en een antwoord van steekproefHTTP voor het versnelde-vragen van de Dienst van de Vraag eindpunt.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Versnelde vragen eindpunt
 
-Als deel van Gegevens Distiller SKU, staat de [ Dienst API van de Vraag ](https://developer.adobe.com/experience-platform-apis/references/query-service/) u toe om stateless vragen aan de versnelde opslag te maken. De geretourneerde resultaten zijn gebaseerd op geaggregeerde gegevens. Door de afgenomen latentie van de resultaten is een meer interactieve uitwisseling van informatie mogelijk. Versnelde vragen APIs wordt ook gebruikt aan macht [ user-defined dashboards ](../../dashboards/user-defined-dashboards.md).
+Als deel van Gegevens Distiller SKU, staat de [ Dienst API van de Vraag ](https://developer.adobe.com/experience-platform-apis/references/query-service/) u toe om stateless vragen aan de versnelde opslag te maken. De geretourneerde resultaten zijn gebaseerd op geaggregeerde gegevens. Door de afgenomen latentie van de resultaten is een meer interactieve uitwisseling van informatie mogelijk. Versnelde vragen APIs wordt ook gebruikt aan macht [ user-defined dashboards ](../../dashboards/standard-dashboards.md).
 
 Alvorens met deze gids verder te gaan, zorg ervoor dat u de [ gids van de Dienst API van de Vraag ](./getting-started.md) gelezen en begrepen hebt om de Dienst API van de Vraag met succes te gebruiken.
 

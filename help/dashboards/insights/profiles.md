@@ -2,7 +2,7 @@
 title: Profielinzichten
 description: Ontdek SQL dat uw profielinzichten en gebruik deze vragen aandrijft om douaneinzichten te produceren die uw klanten en hun ervaringen van de consument verder onderzoeken.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1655'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Begrijp uw profielinzichten door tot SQL toegang te hebben die hen macht, dan uw
 
 Zie de [ documentatie van de Mening SQL ](../view-sql.md) voor meer informatie over hoe te om uw inzichten&#39; SQL direct door Platform UI aan te passen.
 
-De volgende inzichten zijn allen beschikbaar voor u als deel van het [ dashboard van Profielen ](../guides/profiles.md) of een douane [ user-defined dashboard ](../user-defined-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../user-defined-dashboards.md#create-widget) uit.
+De volgende inzichten zijn allen beschikbaar voor u als deel van het [ dashboard van Profielen ](../guides/profiles.md) of een douane [ user-defined dashboard ](../standard-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../standard-dashboards.md#create-widget) uit.
 
 ## Publiek overlapt door samenvoegbeleid {#audience-overlap-by-merge-policy}
 

@@ -1,10 +1,10 @@
 ---
 title: Real-time Customer Data Platform Insights Data Model B2B Edition
-description: Leer hoe u SQL-query's kunt gebruiken met de Real-time Customer Data Platform Insights Data Models (B2B Edition) om uw eigen Real-Time CDP-rapporten aan te passen voor uw marketing- en KPI-gebruiksgevallen.
+description: Leer hoe u SQL-query's kunt gebruiken met de Real-time Customer Data Platform Insights Data Models (B2B edition) om uw eigen Real-Time CDP-rapporten aan te passen voor uw marketing- en KPI-gebruiksgevallen.
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform Insights-gegevensmodel B2B Edition
 
-Het de gegevensmodel van Inzichten van Real-time Customer Data Platform voor de B2B Uitgave stelt de gegevensmodellen en SQL bloot die de inzichten voor [ rekeningsprofielen ](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) aandrijven. U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw B2B marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw dashboards worden gebruikt.
+Het de gegevensmodel van Inzichten van Real-time Customer Data Platform voor B2B edition stelt de gegevensmodellen en SQL bloot die de inzichten voor [ rekeningsprofielen ](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) aandrijven. U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw B2B marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw dashboards worden gebruikt.
 
 >[!AVAILABILITY]
 >
@@ -25,7 +25,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## Vereisten
 
-Deze handleiding vereist een goed begrip van aangepaste dashboards. Lees de documentatie op [ hoe te om een douanedashboard ](../user-defined-dashboards.md) tot stand te brengen alvorens met deze gids verder te gaan.
+Deze handleiding vereist een goed begrip van aangepaste dashboards. Lees de documentatie op [ hoe te om een douanedashboard ](../standard-dashboards.md) tot stand te brengen alvorens met deze gids verder te gaan.
 
 ## Real-Time CDP B2B-inzichtsrapporten en gebruiksgevallen {#B2B-insight-reports-and-use-cases}
 

@@ -3,7 +3,7 @@ title: Aanvullende informatie van september 2024 voor Adobe Experience Platform
 description: Aanvullende informatie voor de versie van september 2024 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: eac613434f631cab567ab3fa6e30d33acac79d2f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2196'
 ht-degree: 100%
 

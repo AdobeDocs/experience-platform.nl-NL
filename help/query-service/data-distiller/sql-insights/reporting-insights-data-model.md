@@ -2,7 +2,7 @@
 title: Vraag versnelde handleiding voor het rapporteren van inzichten in winkels
 description: Leer hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards te bouwen.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Het Real-Time CDP-gegevensmodel van Adobe Experience Platform biedt inzicht in p
 
 ## Vereisten
 
-Deze zelfstudie gebruikt door de gebruiker gedefinieerde dashboards om gegevens van uw aangepaste gegevensmodel in de gebruikersinterface van het platform te visualiseren. Gelieve te zien de [ user-defined dashboards documentatie ](../../../dashboards/user-defined-dashboards.md) om meer over deze eigenschap te leren.
+Deze zelfstudie gebruikt door de gebruiker gedefinieerde dashboards om gegevens van uw aangepaste gegevensmodel in de gebruikersinterface van het platform te visualiseren. Gelieve te zien de [ user-defined dashboards documentatie ](../../../dashboards/standard-dashboards.md) om meer over deze eigenschap te leren.
 
 ## Aan de slag
 
@@ -228,4 +228,4 @@ De afbeelding hieronder geeft een voorbeeld van de mogelijke aangepaste visualis
 
 ![ A gelijke telling door bestemming en publiek widget die van het nieuwe rapporteringsgegevensmodel van inzichten wordt gecreeerd.](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
 
-Het aangepaste gegevensmodel vindt u in de lijst met beschikbare gegevensmodellen in de door de gebruiker gedefinieerde dashboardwerkruimte. Zie de [ user-defined dashboardgids ](../../../dashboards/user-defined-dashboards.md) voor begeleiding op hoe te om uw model van douanegegevens te gebruiken.
+Het aangepaste gegevensmodel vindt u in de lijst met beschikbare gegevensmodellen in de door de gebruiker gedefinieerde dashboardwerkruimte. Zie de [ user-defined dashboardgids ](../../../dashboards/standard-dashboards.md) voor begeleiding op hoe te om uw model van douanegegevens te gebruiken.

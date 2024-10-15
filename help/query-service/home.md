@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van Query Service
 description: Leer over de rol van de Dienst van de Vraag binnen Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '860'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Dit [ doorbladert de voorbeeldcentra van de verlaten voorgeschiedenis bij het ge
 
 ## Inzichten genereren met aangepaste dashboards {#custom-dashboards}
 
-Met Adobe Experience Platform kunt u alle opgeslagen datasets, waaronder gedragsgegevens, CRM en verkooppuntgegevens, opnemen, opslaan, structureren en ophalen. Gebruikend [!DNL Experience Platform's Query Service], kunt u op deze datasets vragen en specifieke vragen over de zaken beantwoorden en dan beginnen producerend impactful inzicht. Leer hoe te om douanedashboards te bouwen en te beheren waar u, op maat gemaakte widgets kunt creëren toevoegen en uitgeven om zeer belangrijke metriek met [ te visualiseren user-defined dashbaords ](../dashboards/user-defined-dashboards.md). U kunt zelfs [ uw eigen rapporten van Real-Time CDP ](../dashboards/data-models/cdp-insights-data-model-b2c.md) voor uw marketing en het gebruiksgevallen van KPI aanpassen door SQL vragen met de Modellen van Gegevens van de Gegevens van Real-time Customer Data Platform te gebruiken.
+Met Adobe Experience Platform kunt u alle opgeslagen datasets, waaronder gedragsgegevens, CRM en verkooppuntgegevens, opnemen, opslaan, structureren en ophalen. Gebruikend [!DNL Experience Platform's Query Service], kunt u op deze datasets vragen en specifieke vragen over de zaken beantwoorden en dan beginnen producerend impactful inzicht. Leer hoe te om douanedashboards te bouwen en te beheren waar u, op maat gemaakte widgets kunt creëren toevoegen en uitgeven om zeer belangrijke metriek met [ te visualiseren user-defined dashbaords ](../dashboards/standard-dashboards.md). U kunt zelfs [ uw eigen rapporten van Real-Time CDP ](../dashboards/data-models/cdp-insights-data-model-b2c.md) voor uw marketing en het gebruiksgevallen van KPI aanpassen door SQL vragen met de Modellen van Gegevens van de Gegevens van Real-time Customer Data Platform te gebruiken.
 
 ## Volgende stappen en extra bronnen
 

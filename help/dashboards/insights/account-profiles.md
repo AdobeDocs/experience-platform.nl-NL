@@ -4,7 +4,7 @@ description: Ontdek SQL die uw inzicht van het Profiel van de Rekening en gebrui
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Met toegang tot SQL die uw inzichten drijft, kunt u beter uw B2B gegevens begrij
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-De volgende inzichten zijn allen beschikbaar voor u als deel van het [ dashboard van Profielen van de Rekening ](../guides/account-profiles.md) of a [ douanedashboard ](../user-defined-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../user-defined-dashboards.md#create-widget) uit.
+De volgende inzichten zijn allen beschikbaar voor u als deel van het [ dashboard van Profielen van de Rekening ](../guides/account-profiles.md) of a [ douanedashboard ](../standard-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../standard-dashboards.md#create-widget) uit.
 
 ## Accountprofielen toegevoegd {#account-profiles-added}
 
