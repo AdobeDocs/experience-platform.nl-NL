@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aan de slag met de API voor schemaregistratie
 description: Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan de Registratie API van het Schema te maken.
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -254,6 +254,7 @@ In het volgende voorbeeldveld wordt een correct opgemaakt XDM-veld weergegeven m
 * De naam van een veldobject kan alfanumerieke, streepje- of onderstrepingstekens bevatten, maar **kan** niet met een onderstrepingsteken beginnen.
    * **Correct:** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`
    * **Onjuist:** `_fieldName`
+* Veldnamen zijn niet hoofdlettergevoelig en moeten verschillende namen op hetzelfde niveau in het schema hebben.
 * kamelCase heeft de voorkeur voor de naam van het veldobject. Voorbeeld: `fieldName`
 * Het veld moet een `title` bevatten, geschreven in Alles Beginhoofdletter. Voorbeeld: `Field Name`
 * Voor dit veld is een `type` vereist.
