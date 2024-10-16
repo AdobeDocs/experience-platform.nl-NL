@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
+source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
 workflow-type: tm+mt
-source-wordcount: '4046'
+source-wordcount: '4094'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Binnen het Portaal van de Publiek, kunt u de volgende taken verwezenlijken:
    - [Gebruik Segment Builder om een publiek te maken](#segment-builder)
    - [Gebruik Audience Composition om een publiek te maken](#audience-composition)
    - [ De Federatieve Samenstelling van het publiek van het Gebruik om een publiek tot stand te brengen gebruikend gegevens van uw bestaand gegevenspakhuis ](#fac) (Beperkte beschikbaarheid)
-- [Extern gegenereerde soorten publiek importeren](#import-audience)
+- [Extern gegenereerde doelgroepen importeren](#import-audience)
 
 Als u Poort publiek wilt openen, selecteert u het tabblad **[!UICONTROL Browse]** in de sectie Segmentatie.
 
@@ -54,13 +54,13 @@ Naast elk publiek bevindt zich een ellipspictogram. Als u deze optie selecteert,
 
 | Actie | Oorsprong | Beschrijving |
 | ------ | ------- | ----------- |
-| [!UICONTROL Edit] | Segmenteringsservice | Opent de Bouwer van het Segment om uw publiek uit te geven. Gelieve te merken op dat als uw publiek door API werd gecreeerd, u **niet** het zal kunnen uitgeven gebruikend de Bouwer van het Segment. Voor meer informatie bij het gebruiken van de Bouwer van het Segment, te lezen gelieve de [ gids UI van de Bouwer van het Segment ](./segment-builder.md). |
+| [!UICONTROL Edit] | Segmentatieservice | Opent de Bouwer van het Segment om uw publiek uit te geven. Gelieve te merken op dat als uw publiek door API werd gecreeerd, u **niet** het zal kunnen uitgeven gebruikend de Bouwer van het Segment. Voor meer informatie bij het gebruiken van de Bouwer van het Segment, te lezen gelieve de [ gids UI van de Bouwer van het Segment ](./segment-builder.md). |
 | [!UICONTROL Open composition] | Samenstelling publiek | Opent de samenstelling van het Publiek om uw publiek te zien. Voor meer informatie over de samenstelling van het Publiek, te lezen gelieve de [ gids UI van de publiekssamenstelling ](./audience-composition.md). |
-| [!UICONTROL Activate to destination] | Segmenteringsservice | Hiermee activeert u het publiek naar een doel. Voor meer gedetailleerde informatie bij het activeren van een publiek aan een bestemming, gelieve het [ activeringsoverzicht ](../../destinations/ui/activation-overview.md) te lezen. |
+| [!UICONTROL Activate to destination] | Segmentatieservice | Hiermee activeert u het publiek naar een doel. Voor meer gedetailleerde informatie bij het activeren van een publiek aan een bestemming, gelieve het [ activeringsoverzicht ](../../destinations/ui/activation-overview.md) te lezen. |
 | [!UICONTROL Share with partners] | Auditie, Aangepaste upload, Segmentatieservice | Deelt uw publiek met andere gebruikers van het Platform. Voor meer informatie over deze eigenschap, te lezen gelieve het [ overzicht van de Gelijke van het Segment ](./segment-match/overview.md). |
 | [!UICONTROL Manage tags] | Auditie, Aangepaste upload, Segmentatieservice | Beheert de door de gebruiker gedefinieerde tags die bij het publiek horen. Voor meer informatie over deze eigenschap, te lezen gelieve de sectie over [ het filtreren en het etiketteren ](#manage-audiences). |
 | [!UICONTROL Move to folder] | Auditie, Aangepaste upload, Segmentatieservice | Beheert tot welke map het publiek behoort. Voor meer informatie over deze eigenschap, te lezen gelieve de sectie over [ het filtreren en het etiketteren ](#manage-audiences). |
-| [!UICONTROL Copy] | Segmenteringsservice | Hiermee dupliceert u het geselecteerde publiek. Meer informatie over deze functie kan in [ Veelgestelde vragen van de Segmentatie worden gevonden ](../faq.md#copy). |
+| [!UICONTROL Copy] | Segmentatieservice | Hiermee dupliceert u het geselecteerde publiek. Meer informatie over deze functie kan in [ Veelgestelde vragen van de Segmentatie worden gevonden ](../faq.md#copy). |
 | [!UICONTROL Apply access labels] | Auditie, Aangepaste upload, Segmentatieservice | Beheert de toegangslabels die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [ het leiden etiketten ](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Publish] | Aangepaste upload, segmentatieservice | Hiermee publiceert u het geselecteerde publiek. Voor meer informatie over het beheer van de levenscyclusstatus, te lezen gelieve de [ sectie van de levenscyclusstaat van FAQ van de Segmentatie ](../faq.md#lifecycle-states). |
 | [!UICONTROL Deactivate] | Aangepaste upload, segmentatieservice | Hiermee deactiveert u het geselecteerde publiek. Voor meer informatie over het beheer van de levenscyclusstatus, te lezen gelieve de [ sectie van de levenscyclusstaat van FAQ van de Segmentatie ](../faq.md#lifecycle-states). |
@@ -210,6 +210,11 @@ De lijst met beschikbare filters wordt weergegeven.
 
 #### Bulkacties {#bulk-actions}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="Flexibele limieten voor publieksevaluatie"
+>abstract="U kunt maximaal 20 soorten publiek evalueren in één flexibele evaluatieronde voor het publiek.<br/><br/> bovendien, terwijl de looppas van de evaluatietaak zo spoedig mogelijk is, kunnen er systeemvertragingen zijn die kunnen voorkomen aangezien de evaluaties op bestelling <b> niet </b> gelijktijdig met een andere op bestelling of partijevaluatie kunnen lopen."
+
 Bovendien kunt u maximaal 25 verschillende soorten publiek selecteren en verschillende handelingen op deze doelgroepen uitvoeren. Deze acties omvatten [ het bewegen aan een omslag ](#folders), [ het uitgeven of het toepassen van een markering ](#tags), [ het toepassen van toegangslabels ](../../access-control/abac/ui/labels.md), en [ het schrappen ](#browse).
 
 ![ de beschikbare opties voor bulkacties worden benadrukt.](../images/ui/audience-portal/bulk-actions.png)
@@ -278,7 +283,7 @@ Voor publiek en composities die via een platform worden gegenereerd, wordt in de
 
 Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de samplegegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt; voor 1 tot 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5% van de totale entiteiten gebruikt. Meer informatie over het produceren van ramingen kan in de [ sectie van de schatingengeneratie ](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van het leerprogramma van de publieksverwezenlijking worden gevonden.
 
-### Inktdetails {#ingestion-details}
+### Opnamegegevens {#ingestion-details}
 
 Voor soorten publiek met de oorsprong **[!UICONTROL Custom upload]** geeft de sectie **[!UICONTROL Ingestion details]** zowel het totale profiel als de gegevens van de gegevensset weer waarin het extern gegenereerde publiek werd opgenomen.
 
@@ -375,7 +380,7 @@ Als u **[!UICONTROL Build rule]** selecteert, gaat u naar de Segment Builder. De
 
 ![ de werkruimte van de Bouwer van het Segment wordt getoond.](../images/ui/audience-portal/segment-builder.png)
 
-### Federale compositie publiek {#fac}
+### Samenstelling van Federated-doelgroep {#fac}
 
 Naast publiekssamenstellingen en segmentdefinities, kunt u Adobe Federated Audience Composition gebruiken om nieuwe doelgroepen van ondernemingsdatasets te bouwen zonder onderliggende gegevens te kopiëren en die doelgroepen op te slaan in het Portaal van het Publiek van Adobe Experience Platform. U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
 
