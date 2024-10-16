@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
+source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
-source-wordcount: '4094'
+source-wordcount: '4116'
 ht-degree: 0%
 
 ---
@@ -286,6 +286,10 @@ Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte v
 ### Opnamegegevens {#ingestion-details}
 
 Voor soorten publiek met de oorsprong **[!UICONTROL Custom upload]** geeft de sectie **[!UICONTROL Ingestion details]** zowel het totale profiel als de gegevens van de gegevensset weer waarin het extern gegenereerde publiek werd opgenomen.
+
+>[!NOTE]
+>
+>Het kan tot 30 minuten na de exporttaak duren voordat het aantal profielen van het publiek volledig is bijgewerkt.
 
 ![ de sectie van de ingangsdetails voor de pagina van publieksdetails wordt getoond.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
