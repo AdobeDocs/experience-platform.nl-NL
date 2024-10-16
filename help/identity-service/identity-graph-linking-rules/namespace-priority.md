@@ -2,7 +2,7 @@
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: aae82bc84eff7584098ddb35a481d7349ff837c4
 workflow-type: tm+mt
 source-wordcount: '1601'
 ht-degree: 1%
@@ -185,4 +185,4 @@ Voor meer informatie, lees het [ de dienstoverzicht van de Privacy ](../../priva
 
 ### Adobe Target
 
-U kunt alleen batch- en streaming segmentatie activeren op Adobe Target.
+Adobe Target kan leiden tot onverwachte gebruikersgerichtheid voor scenario&#39;s voor gedeelde apparaten.
