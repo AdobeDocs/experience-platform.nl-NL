@@ -3,9 +3,9 @@ keywords: Experience Platform;problemen oplossen;instructies;richtlijnen;
 title: Guardrails voor gegevensinname
 description: Meer informatie over instructies voor gegevensinvoer in Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 9c3f7f522ce6451e1d312a0221cc34287d3e8ae3
+source-git-commit: b8f64793b7f869e50c33ead3a5f02f3a8af51ff4
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,7 @@ De volgende lijst schetst te overwegen gidsen wanneer het gebruiken van [ partij
 | Inname in batch naar profiel | <ul><li>De maximale grootte van een recordklasse is 100 KB (hard).</li><li>De maximale grootte van een klasse ExperienceEvent is 10 KB (hard).</li></ul> | |
 | Aantal per dag ingenomen Profile- of ExperienceEvent-batches | **het maximumaantal per dag ingebedde partijen van het Profiel of van de ExperienceEvent is 90.** Dit betekent dat het gecombineerde totaal van de elke dag ingeslikte profielen Profile en ExperienceEvent niet meer dan 90 mag zijn. Door extra batches in te voeren worden de systeemprestaties beïnvloed. | Dit is een zachte limiet. Het is mogelijk om verder te gaan dan een zachte limiet, maar zachte limieten bieden een aanbevolen richtlijn voor systeemprestaties. |
 | Versleutelde gegevensinvoer | De maximale ondersteunde grootte van één gecodeerd bestand is 1 GB. Terwijl u bijvoorbeeld 2 of meer GB&#39;s aan gegevens kunt invoeren in één dataflow-run, kan geen enkel afzonderlijk bestand in de dataflow-run meer dan 1 GB bedragen. | Het inslikken van gecodeerde gegevens kan langer duren dan het innemen van gewone gegevens. Lees de [ gecodeerde gids van de gegevensopname API ](../sources/tutorials/api/encrypt-data.md) voor meer informatie. |
+| Batchopname bijwerken | De inname van upsert de partijen kan tot 10x langzamer zijn dan regelmatige partijen, daarom zou u uw upsert partijen onder twee miljoen verslagen **moeten houden om efficiënte runtime te verzekeren en het blokkeren van andere partijen te vermijden die in de zandbak worden verwerkt.** | Hoewel u ongetwijfeld batches met meer dan twee miljoen records kunt innemen, is de tijd van inname aanzienlijk langer vanwege de beperkingen van kleine sandboxen. |
 
 {style="table-layout:auto"}
 
