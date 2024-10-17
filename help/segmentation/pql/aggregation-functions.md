@@ -3,9 +3,9 @@ solution: Experience Platform
 title: PQL-aggregatiefuncties
 description: Samenvoegfuncties worden gebruikt om meerdere waarden binnen Profile Query Language (PQL)-arrays te groeperen en één samenvattingswaarde te maken.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Samenvoegfuncties worden gebruikt om meerdere waarden binnen [!DNL Profile Query
 
 ## Aantal
 
-De functie `count` retourneert het aantal elementen binnen de opgegeven array.
+De functie `count` retourneert het aantal elementen binnen de opgegeven array als een getal.
 
 **Formaat**
 
@@ -34,7 +34,7 @@ orders.count()
 
 ## Som
 
-De functie `sum` retourneert de som van alle geselecteerde waarden binnen de array.
+De functie `sum` retourneert de som van alle geselecteerde waarden binnen de array als een getal.
 
 **Formaat**
 
@@ -52,7 +52,7 @@ orders.sum(order.price)
 
 ## Gemiddelde
 
-De functie `average` retourneert het rekenkundig gemiddelde van alle geselecteerde waarden binnen de array.
+De functie `average` retourneert het rekenkundig gemiddelde van alle geselecteerde waarden binnen de array als een getal.
 
 **Formaat**
 
@@ -70,7 +70,7 @@ orders.average(order.price)
 
 ## Minimaal
 
-De functie `min` retourneert het laagste van alle geselecteerde waarden binnen de array.
+De functie `min` retourneert het laagste van alle geselecteerde waarden in de array als een getal.
 
 **Formaat**
 
@@ -88,7 +88,7 @@ orders.min(order.price)
 
 ## Maximum
 
-De functie `max` retourneert de grootste van alle geselecteerde waarden binnen de array.
+De functie `max` retourneert de grootste van alle geselecteerde waarden binnen de array als een getal.
 
 **Formaat**
 

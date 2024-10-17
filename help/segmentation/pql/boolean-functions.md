@@ -3,9 +3,9 @@ solution: Experience Platform
 title: PQL Boolean-functies
 description: Booleaanse functies worden gebruikt om booleaanse logica uit te voeren op verschillende elementen in Profile Query Language (PQL).
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Booleaanse functies worden gebruikt om booleaanse logica uit te voeren op versch
 
 ## en
 
-De functie `and` wordt gebruikt om een logische combinatie te maken.
+De functie `and` wordt gebruikt om een logische combinatie als booleaanse waarde te maken.
 
 **Formaat**
 
@@ -34,7 +34,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## of
 
-De functie `or` wordt gebruikt om een logische scheiding te maken.
+De functie `or` wordt gebruikt om een logische scheiding als booleaanse verbinding te maken.
 
 **Formaat**
 
@@ -71,7 +71,7 @@ not (homeAddress.countryISO = "CA")
 
 ## Indien
 
-De functie `if` wordt gebruikt om een expressie op te lossen, afhankelijk van het feit of een opgegeven voorwaarde waar is.
+De functie `if` wordt gebruikt om een expressie op te lossen, afhankelijk van het feit of een opgegeven voorwaarde true is als een Booleaanse waarde.
 
 **Formaat**
 

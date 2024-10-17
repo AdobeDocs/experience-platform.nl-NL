@@ -3,9 +3,9 @@ solution: Experience Platform
 title: PQL-filterfuncties
 description: Filterfuncties worden gebruikt om gegevens te filteren binnen arrays in Profile Query Language (PQL).
 exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 7c282594e66c8c7700471a94947448fd91596814
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Filterfuncties worden gebruikt om gegevens te filteren binnen arrays in [!DNL Pr
 
 ## Filter
 
-Met de functie `[]` (filter) kunnen filters worden toegepast op een array en wordt een subset van de array geretourneerd die overeenkomt met de opgegeven voorwaarde.
+Met de functie `[]` (filter) kunnen filters worden toegepast op een array en wordt een subset van de array geretourneerd die overeenkomt met de opgegeven voorwaarde. Als gevolg hiervan retourneert deze functie een array.
 
 **Formaat**
 

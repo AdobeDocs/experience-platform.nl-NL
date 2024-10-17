@@ -3,9 +3,9 @@ solution: Experience Platform
 title: PQL Map-functies
 description: Profile Query Language (PQL) biedt functies om interactie met kaarten eenvoudiger te maken.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Get
 
-De functie `get` wordt gebruikt om de waarde van een kaart voor een bepaalde sleutel terug te winnen.
+De functie `get` wordt gebruikt om de waarde van een kaart voor een bepaalde sleutel als voorwerp terug te winnen.
 
 **Formaat**
 
@@ -34,7 +34,7 @@ identityMap.get("example@example.com")
 
 ## Toetsen
 
-De functie `keys` wordt gebruikt om alle sleutels voor een bepaalde kaart terug te winnen.
+De functie `keys` wordt gebruikt om alle sleutels voor een bepaalde kaart als serie of lijst terug te winnen.
 
 **Formaat**
 
@@ -52,7 +52,7 @@ identityMap.keys()
 
 ## Waarden
 
-De functie `values` wordt gebruikt om alle waarden van een bepaalde kaart op te halen.
+De functie `values` wordt gebruikt om alle waarden van een gegeven kaart als serie of lijst terug te winnen.
 
 **Formaat**
 

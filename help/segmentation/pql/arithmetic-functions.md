@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Rekenkundige functies van PAL
 description: Rekenkundige functies worden gebruikt voor het uitvoeren van basisberekeningen voor waarden in Profile Query Language (PQL).
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Rekenkundige functies worden gebruikt voor het uitvoeren van basisberekeningen v
 
 ## Toevoegen
 
-De functie `+` (optellen) wordt gebruikt om de som twee argumentuitdrukkingen te vinden.
+De functie `+` (optellen) wordt gebruikt om de som van twee argumentexpressies als een getal te vinden.
 
 **Formaat**
 
@@ -34,7 +34,7 @@ product1.price + product2.price
 
 ## Vermenigvuldigen
 
-De functie `*` (vermenigvuldigen) wordt gebruikt om het product van twee argumentexpressies te vinden.
+De functie `*` (vermenigvuldigen) wordt gebruikt om het product van twee argumentexpressies als een getal te vinden.
 
 **Formaat**
 
@@ -52,7 +52,7 @@ product.inventory * product.price
 
 ## Aftrekken
 
-De functie `-` (aftrekken) wordt gebruikt om het verschil tussen twee argumentexpressies te zoeken.
+De functie `-` (aftrekken) wordt gebruikt om het verschil tussen twee argumentexpressies als een getal te vinden.
 
 **Formaat**
 
@@ -70,7 +70,7 @@ product1.price - product2.price
 
 ## Splitsen
 
-De functie `/` (delen) wordt gebruikt om het quotiënt van twee argumentuitdrukkingen te vinden.
+De functie `/` (delen) wordt gebruikt om het quotiënt van twee argumentexpressies als een getal te vinden.
 
 **Formaat**
 
@@ -88,7 +88,7 @@ totalProduct.price / totalProduct.sold
 
 ## Herinnering
 
-De functie `%` (restbepaling bij deling/restbepaling) wordt gebruikt om de rest te zoeken na het delen van de twee argumentexpressies.
+De functie `%` (restbepaling bij deling/restbepaling) wordt gebruikt om het restant te zoeken nadat de twee argumentexpressies als een getal zijn gedeeld.
 
 **Formaat**
 

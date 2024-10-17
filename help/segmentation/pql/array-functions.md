@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Array-, List- en PQL-functies instellen
 description: Profile Query Language (PQL) biedt functies om interactie met arrays, lijsten en tekenreeksen eenvoudiger te maken.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## In
 
-De functie `in` wordt gebruikt om te bepalen of een item lid is van een array of lijst.
+De functie `in` wordt gebruikt om te bepalen of een item lid is van een array of lijst als een booleaanse waarde.
 
 **Formaat**
 
@@ -34,7 +34,7 @@ person.birthMonth in [3, 6, 9]
 
 ## Niet in
 
-De functie `notIn` wordt gebruikt om te bepalen of een item geen lid is van een array of lijst.
+De functie `notIn` wordt gebruikt om te bepalen of een item geen lid is van een array of lijst als een booleaanse waarde.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## Doorsnede
 
-De functie `intersects` wordt gebruikt om te bepalen of twee arrays of lijsten ten minste één gemeenschappelijk lid hebben.
+De functie `intersects` wordt gebruikt om te bepalen of twee arrays of lijsten ten minste één gemeenschappelijk lid als een booleaanse waarde hebben.
 
 **Formaat**
 
@@ -74,7 +74,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Doorsnede
 
-De functie `intersection` wordt gebruikt om de algemene leden van twee arrays of lijsten te bepalen.
+De functie `intersection` wordt gebruikt om de algemene leden van twee arrays of lijsten als een lijst te bepalen.
 
 **Formaat**
 
@@ -92,7 +92,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Subset van
 
-De functie `subsetOf` wordt gebruikt om te bepalen of een specifieke array (array A) een subset is van een andere array (array B). Met andere woorden, alle elementen in array A zijn elementen van array B.
+De functie `subsetOf` wordt gebruikt om te bepalen of een specifieke array (array A) een subset is van een andere array (array B). Met andere woorden, alle elementen in array A zijn elementen van array B als een booleaanse waarde.
 
 **Formaat**
 
@@ -110,7 +110,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Superset van
 
-De functie `supersetOf` wordt gebruikt om te bepalen of een specifieke array (array A) een superset is van een andere array (array B). Met andere woorden, die array A bevat alle elementen in array B.
+De functie `supersetOf` wordt gebruikt om te bepalen of een specifieke array (array A) een superset is van een andere array (array B). Met andere woorden, die array A bevat alle elementen in array B als een booleaanse waarde.
 
 **Formaat**
 
@@ -128,7 +128,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Inclusief
 
-De functie `includes` wordt gebruikt om te bepalen of een array of lijst een bepaald item bevat.
+De functie `includes` wordt gebruikt om te bepalen of een array of lijst een bepaald item als een booleaanse waarde bevat.
 
 **Formaat**
 
@@ -146,7 +146,7 @@ person.favoriteColors.includes("red")
 
 ## Afzonderlijk
 
-De functie `distinct` wordt gebruikt om dubbele waarden uit een array of lijst te verwijderen.
+De functie `distinct` wordt gebruikt om dubbele waarden uit een array of lijst als een array te verwijderen.
 
 **Formaat**
 
@@ -164,12 +164,12 @@ person.orders.storeId.distinct().count() > 1
 
 ## Groeperen op
 
-De functie `groupBy` wordt gebruikt om waarden van een array of lijst op te delen in een groep op basis van de waarde van de expressie.
+De functie `groupBy` wordt gebruikt om waarden van een array of lijst te verdelen in een groep op basis van de waarde van de expressie als een kaart van unieke waarden van de groeperingsexpressie naar arrays die partities zijn van de waarde van de arrayexpressie.
 
 **Formaat**
 
 ```sql
-{ARRAY}.groupBy({EXPRESSION)
+{ARRAY}.groupBy({EXPRESSION})
 ```
 
 | Argument | Beschrijving |
@@ -182,12 +182,12 @@ De functie `groupBy` wordt gebruikt om waarden van een array of lijst op te dele
 De volgende PQL-query groepeert alle bestellingen waarmee de bestelling is opgeslagen.
 
 ```sql
-orders.groupBy(storeId)
+xEvent[type="order"].groupBy(storeId)
 ```
 
 ## Filter
 
-De functie `filter` wordt gebruikt om een array of lijst te filteren op basis van een expressie.
+De functie `filter` wordt gebruikt om een array of lijst te filteren op basis van een expressie als een array of lijst, afhankelijk van de invoer.
 
 **Formaat**
 
@@ -210,7 +210,7 @@ person.filter(age >= 21)
 
 ## Kaart
 
-De functie `map` wordt gebruikt om een nieuwe array te maken door een expressie toe te passen op elk item in een bepaalde array.
+De functie `map` wordt gebruikt om een nieuwe array te maken door een expressie toe te passen op elk item in een bepaalde array als een array.
 
 **Formaat**
 
@@ -228,7 +228,7 @@ numbers.map(square)
 
 ## Eerste `n` in array {#first-n}
 
-De functie `topN` wordt gebruikt om de eerste `N` -items in een array te retourneren, wanneer deze in oplopende volgorde worden gesorteerd op basis van de opgegeven numerieke expressie.
+De functie `topN` wordt gebruikt om de eerste `N` -items in een array te retourneren, wanneer deze in oplopende volgorde worden gesorteerd op basis van de opgegeven numerieke expressie als een array.
 
 **Formaat**
 
@@ -252,7 +252,7 @@ orders.topN(price, 5)
 
 ## Laatste `n` in array
 
-De functie `bottomN` wordt gebruikt om de laatste `N` -items in een array te retourneren, wanneer deze in oplopende volgorde worden gesorteerd op basis van de opgegeven numerieke expressie.
+De functie `bottomN` wordt gebruikt om de laatste `N` -items in een array te retourneren, wanneer deze in oplopende volgorde worden gesorteerd op basis van de opgegeven numerieke expressie als een array.
 
 **Formaat**
 
@@ -276,7 +276,7 @@ orders.bottomN(price, 5)
 
 ## Eerste object
 
-De functie `head` wordt gebruikt om het eerste item in de array of lijst te retourneren.
+De functie `head` wordt gebruikt om het eerste item in de array of lijst als een object te retourneren.
 
 **Formaat**
 

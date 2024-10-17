@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Vergelijkingsfuncties van PQL
 description: Vergelijkingsfuncties worden gebruikt om verschillende expressies en waarden met elkaar te vergelijken, waarbij "true" of "false" overeenkomstig wordt geretourneerd.
 exl-id: 15f106c7-b88b-4042-b925-703e2a309573
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: a4385d8872b71ded7e9121d445e10f1ffbd83cfe
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%

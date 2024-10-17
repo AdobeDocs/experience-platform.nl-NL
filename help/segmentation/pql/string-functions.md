@@ -3,9 +3,9 @@ solution: Experience Platform
 title: PQL String-functies
 description: Profile Query Language (PQL) biedt functies om interactie met tekenreeksen eenvoudiger te maken.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '848'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 ## leuk
 
-De functie `like` wordt gebruikt om te bepalen of een tekenreeks overeenkomt met een opgegeven patroon.
+De functie `like` wordt gebruikt om te bepalen of een tekenreeks overeenkomt met een opgegeven patroon als een Booleaanse waarde.
 
 **Formaat**
 
@@ -39,7 +39,7 @@ city like "%es%"
 
 ## Begint met
 
-De functie `startsWith` wordt gebruikt om te bepalen of een tekenreeks begint met een opgegeven subtekenreeks.
+De functie `startsWith` wordt gebruikt om te bepalen of een tekenreeks begint met een opgegeven subtekenreeks als een booleaanse tekenreeks.
 
 **Formaat**
 
@@ -63,7 +63,7 @@ person.name.startsWith("Joe")
 
 ## Begint niet met
 
-De functie `doesNotStartWith` wordt gebruikt om te bepalen of een tekenreeks niet begint met een opgegeven subtekenreeks.
+De functie `doesNotStartWith` wordt gebruikt om te bepalen of een tekenreeks niet begint met een opgegeven subtekenreeks als een booleaanse tekenreeks.
 
 **Formaat**
 
@@ -87,7 +87,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Eindigt met
 
-De functie `endsWith` wordt gebruikt om te bepalen of een tekenreeks eindigt met een opgegeven subtekenreeks.
+De functie `endsWith` wordt gebruikt om te bepalen of een tekenreeks eindigt met een opgegeven subtekenreeks als een booleaanse tekenreeks.
 
 **Formaat**
 
@@ -111,7 +111,7 @@ person.emailAddress.endsWith(".com")
 
 ## Eindigt niet met
 
-De functie `doesNotEndWith` wordt gebruikt om te bepalen of een tekenreeks niet eindigt met een opgegeven subtekenreeks.
+De functie `doesNotEndWith` wordt gebruikt om te bepalen of een tekenreeks niet eindigt met een opgegeven subtekenreeks als een booleaanse tekenreeks.
 
 **Formaat**
 
@@ -135,7 +135,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Bevat
 
-De functie `contains` wordt gebruikt om te bepalen of een tekenreeks een opgegeven subtekenreeks bevat.
+De functie `contains` wordt gebruikt om te bepalen of een tekenreeks een opgegeven subtekenreeks als een booleaanse tekenreeks bevat.
 
 **Formaat**
 
@@ -159,7 +159,7 @@ person.emailAddress.contains("2010@gm")
 
 ## Bevat niet
 
-De functie `doesNotContain` wordt gebruikt om te bepalen of een tekenreeks geen opgegeven subtekenreeks bevat.
+De functie `doesNotContain` wordt gebruikt om te bepalen of een tekenreeks geen opgegeven subtekenreeks als een booleaanse tekenreeks bevat.
 
 **Formaat**
 
@@ -183,7 +183,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Gelijk
 
-De functie `equals` wordt gebruikt om te bepalen of een tekenreeks gelijk is aan de opgegeven tekenreeks.
+De functie `equals` wordt gebruikt om te bepalen of een tekenreeks gelijk is aan de opgegeven tekenreeks als een booleaanse tekenreeks.
 
 **Formaat**
 
@@ -206,7 +206,7 @@ person.name.equals("John")
 
 ## Niet gelijk aan
 
-De functie `notEqualTo` wordt gebruikt om te bepalen of een tekenreeks niet gelijk is aan de opgegeven tekenreeks.
+De functie `notEqualTo` wordt gebruikt om te bepalen of een tekenreeks niet gelijk is aan de opgegeven tekenreeks als een booleaanse tekenreeks.
 
 **Formaat**
 
@@ -229,7 +229,7 @@ person.name.notEqualTo("John")
 
 ## Overeenkomsten
 
-De functie `matches` wordt gebruikt om te bepalen of een tekenreeks overeenkomt met een specifieke reguliere expressie. Gelieve te verwijzen naar [ dit document ](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) voor meer informatie over passende patronen in regelmatige uitdrukkingen.
+De functie `matches` wordt gebruikt om te bepalen of een tekenreeks overeenkomt met een specifieke reguliere expressie. Gelieve te verwijzen naar [ dit document ](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) voor meer informatie over passende patronen in regelmatige uitdrukkingen als boolean.
 
 **Formaat**
 
@@ -251,7 +251,7 @@ person.name.matches("(?i)^John")
 
 ## Groep met reguliere expressies
 
-De functie `regexGroup` wordt gebruikt om specifieke informatie te extraheren, gebaseerd op de reguliere expressie die wordt opgegeven.
+De functie `regexGroup` wordt gebruikt om specifieke informatie te extraheren, op basis van de reguliere expressie die als een tekenreeks wordt opgegeven.
 
 **Formaat**
 
