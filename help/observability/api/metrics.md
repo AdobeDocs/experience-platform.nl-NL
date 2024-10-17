@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen
+keywords: Experience Platform;startpagina;populaire onderwerpen
 solution: Experience Platform
 title: Metrics API Endpoint
 description: Leer hoe u meetgegevens voor waarneembaarheid in Experience Platform ophaalt met behulp van de API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 39eda018611d0244eaff908e924afa93dc46e14d
 workflow-type: tm+mt
-source-wordcount: '1360'
-ht-degree: 0%
+source-wordcount: '1278'
+ht-degree: 1%
 
 ---
 
@@ -56,8 +56,7 @@ curl -X POST \
                 "groupBy": true
               }
             ],
-            "aggregator": "sum",
-            "downsample": "sum"
+            "aggregator": "sum"
           },
           {
             "name": "timeseries.ingestion.dataset.dailysize",
@@ -79,12 +78,11 @@ curl -X POST \
 | --- | --- |
 | `start` | De vroegste datum/tijd waarvan om metrische gegevens terug te winnen. |
 | `end` | De recentste datum/tijd waarvan om metrische gegevens terug te winnen. |
-| `granularity` | Een optioneel veld waarmee het tijdsinterval wordt aangegeven waarbinnen metrische gegevens moeten worden verdeeld. De waarde `DAY` retourneert bijvoorbeeld meetgegevens voor elke dag tussen de datum `start` en `end` , terwijl de waarde `MONTH` de metrische resultaten per maand groepeert. Wanneer u dit veld gebruikt, moet ook een bijbehorende eigenschap `downsample` worden opgegeven die de samenvoegfunctie aangeeft waarmee gegevens moeten worden gegroepeerd. |
+| `granularity` | Een optioneel veld waarmee het tijdsinterval wordt aangegeven waarbinnen metrische gegevens moeten worden verdeeld. De waarde `DAY` retourneert bijvoorbeeld meetgegevens voor elke dag tussen de datum `start` en `end` , terwijl de waarde `MONTH` de metrische resultaten per maand groepeert. |
 | `metrics` | Een array van objecten, één voor elke metrische waarde die u wilt ophalen. |
 | `name` | De naam van een metrische waarde die wordt erkend door Observability Insights. Zie [ bijlage ](#available-metrics) voor een volledige lijst van toegelaten metrische namen. |
 | `filters` | Een facultatief gebied dat u toestaat om metriek door specifieke datasets te filtreren. Het veld is een array van objecten (één voor elk filter), waarbij elk object de volgende eigenschappen bevat: <ul><li>`name`: Het type entiteit waarop maatgegevens moeten worden gefilterd. Momenteel wordt alleen `dataSets` ondersteund.</li><li>`value`: De id van een of meer gegevenssets. De veelvoudige dataset IDs kan als één enkel koord worden verstrekt, met elke identiteitskaart die door verticale barkarakters (`\|`) wordt gescheiden.</li><li>`groupBy`: Wanneer ingesteld op true, geeft dit aan dat de corresponderende `value` meerdere gegevenssets vertegenwoordigt waarvan de metrische resultaten afzonderlijk moeten worden geretourneerd. Indien ingesteld op false, worden de metrische resultaten voor die datasets gegroepeerd.</li></ul> |
-| `aggregator` | Geeft de aggregatiefunctie aan die moet worden gebruikt om records met meerdere tijdreeksen te groeperen in één resultaat. Voor gedetailleerde informatie over beschikbare aggregators, verwijs naar de [ documentatie OpenTSDB ](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
-| `downsample` | Een optioneel veld waarmee u een samenvoegfunctie kunt opgeven om de bemonsteringsfrequentie van metrische gegevens te verminderen door velden in intervallen te sorteren (of &quot;emmers&quot;). Het interval voor downsampling wordt bepaald door de eigenschap `granularity` . Voor gedetailleerde informatie bij downsampling, verwijs naar de [ documentatie OpenTSDB ](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `aggregator` | Geeft de aggregatiefunctie aan die moet worden gebruikt om records met meerdere tijdreeksen te groeperen in één resultaat. De huidige ondersteunde aggregators zijn min, max, sum en avg, afhankelijk van de definitie van de metrische waarde. |
 
 {style="table-layout:auto"}
 
@@ -221,8 +219,7 @@ In de volgende tabel worden de metriek voor Adobe Experience Platform [!DNL Iden
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Het aantal records dat door [!DNL Identity Service] naar de gegevensbron is geschreven, voor één gegevensset of voor alle gegevenssets. | Dataset-id |
 | timeseries.identity.dataset.recordfailed.count | Het aantal records dat door [!DNL Identity Service] is mislukt, voor één gegevensset of voor alle gegevenssets. | Dataset-id |
-| timeseries.identity.dataset.namespacecode.recordfailed.count | Aantal identiteitsverslagen ontbroken door een namespace. | Identiteitskaart van Namespace (**Vereiste**) |
-| timeseries.identity.dataset.namespacecode.recordskipped.count | Aantal identiteitsrecords dat door een naamruimte is overgeslagen. | Identiteitskaart van Namespace (**Vereiste**) |
+| timeseries.identity.dataset.namespacecode.recordskipped.count | Aantal identiteitsrecords overgeslagen. | Organisatie-ID |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | Aantal unieke identiteiten die in de identiteitsgrafiek voor uw organisatie worden opgeslagen. | N.v.t. |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Aantal unieke identiteiten die in de identiteitsgrafiek voor een namespace worden opgeslagen. | Identiteitskaart van Namespace (**Vereiste**) |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Aantal unieke identiteiten dat in de identiteitsgrafiek voor uw organisatie voor een bepaalde grafieksterkte wordt opgeslagen (&quot;onbekend&quot;, &quot;zwak&quot; of &quot;sterk&quot;). | De sterkte van de grafiek (**Vereiste**) |
