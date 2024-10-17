@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
+source-git-commit: 80380fb1287d710460ad2c75d73ea5c2c38f5ebd
 workflow-type: tm+mt
-source-wordcount: '2618'
+source-wordcount: '2720'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,6 @@ Beheer en optimaliseer proactief uw licentiemiddelen op basis van inzichtelijke 
 
 Als u een overzicht wilt zien van het gebruik van de rechten van een product, selecteert u een product in de tabel [!UICONTROL Core products] .
 
-<!-- update image ... -->
 ![ [!UICONTROL License usage] [!UICONTROL Overview] met een product en de voorspelde benadrukte gebruikskolom.](../images/license-usage/product-predicted-usage.png)
 
 Het tabblad Samenvatting wordt weergegeven. U kunt de korrelige voorspellingen op de tabbladen [!UICONTROL Summary] en [!UICONTROL Details] gebruiken om ervoor te zorgen dat u op de hoogte bent van de besluitvorming en de licentie efficiënt kunt gebruiken.
@@ -126,7 +125,6 @@ Het tabblad Samenvatting wordt weergegeven. U kunt de korrelige voorspellingen o
 >
 >Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe.
 
-<!-- update image ... -->
 ![ de summiere mening van een Product van het Platform met de voorspelde benadrukte gebruikskolom.](../images/license-usage/summary-predicted-usage.png)
 
 Het percentage van het voorspelde gebruik wordt als volgt bepaald:
@@ -142,10 +140,9 @@ Het percentage van het voorspelde gebruik wordt als volgt bepaald:
 De voorspelde gebruiksfunctie ondersteunt de volgende meetgegevens:
 
 - [!UICONTROL Addressable audience]
-- [!UICONTROL Average profile richness]
 - [!UICONTROL Compute hours]
 - [!UICONTROL Customer Journey Audience number of rows]
-- [!UICONTROL Total storage]
+- [!UICONTROL Total Data Volume]
 
 ## [!UICONTROL Summary] tab {#summary-tab}
 
@@ -204,6 +201,10 @@ U kunt ook **[!UICONTROL Custom date]** selecteren om de tijdsperiode te kiezen 
 
 ## Beschikbare cijfers {#available-metrics}
 
+>[!IMPORTANT]
+>
+>Beginnend 20th Augustus, zagen de klanten met rechten voor &#39;[!UICONTROL Average Profile Richness]&#39; en &#39;[!UICONTROL Total Storage]&#39; in plaats daarvan &#39;[!UICONTROL Total Data Volume]&#39; in het Dashboard van het Gebruik van de Vergunning. Er was geen wijziging in de rechten van de klant, alleen een vereenvoudiging van de meetwaarden. [!UICONTROL Total Data Volume] geeft de gegevens weer die beschikbaar zijn in de Adobe Experience Platform Profile Service voor workflows voor betrokkenheid en personalisatie. Deze vereenvoudigde maatstaf verbeterde het beheer en de meting van het gebruik van de profielservice. Klanten werden aangespoord contact op te nemen met hun Adobe voor meer informatie over deze wijziging.
+
 Het dashboard van het vergunningsgebruik rapporteert over verscheidene unieke metriek die op veelvoudige producten in de organisatie van toepassing zijn. De beschikbare meetwaarden zijn:
 
 | Metrisch | Beschrijving |
@@ -211,6 +212,7 @@ Het dashboard van het vergunningsgebruik rapporteert over verscheidene unieke me
 | [!UICONTROL Audience Activation Size] | De totale grootte van profielen die in een jaar op een op een bestand gebaseerd doel zijn geactiveerd. Opmerking: hieronder vallen geen profielen die via streamingdoelen worden verzonden. |
 | [!UICONTROL Addressable Audience] | De som van de rechten van uw zakelijke publiek en de rechten van het consumentenpubliek. Een publiek voor de consument wordt gedefinieerd als het aantal personenprofielen dat op de verkooporder als &quot;Consumentenpubliek&quot; wordt aangeduid. Een zakelijk publiek wordt gedefinieerd als het aantal bedrijfspersoonprofielen dat als &quot;BedrijfsPubliek&quot;op de verkooporde wordt geïdentificeerd. |
 | [!UICONTROL Adhoc Query Service Users Packs] | Een add-on om uw geautoriseerde machtiging voor gelijktijdige gebruikers van Query Service te verhogen met vijf extra gelijktijdige gebruikers van Query Service en één extra query tegelijk voor ad-hocquery per pakket. Er kan een licentie worden verleend voor meerdere extra Ad hoc Query User-pakketten. |
+| [!UICONTROL Average profile richness] | **Vervangen** - de som van alle productiegegevens die binnen de Dienst van het Profiel van de Hub op om het even welk punt in tijd worden opgeslagen, die door vijf keer het aantal erkende bedrijfspersoonprofielen wordt verdeeld. [!UICONTROL Average profile richness] is een gedeelde functie. |
 | [!UICONTROL CJA Rows Available] | De dagelijkse gemiddelde rijen van gegevens beschikbaar voor analyse binnen Customer Journey Analytics. |
 | [!UICONTROL Computed Attributes] | Het totale aantal geaggregeerde gedragsgegevens van het profiel. Geaggregeerde gedragsgegevens voor profielen zijn gebaseerd op ervaringsgebeurtenissen die worden omgezet in een profielkenmerk en kunnen worden opgenomen in een persoonprofiel of bedrijfspersoonprofiel. |
 | [!UICONTROL Consumer Audience] | Het aantal personenprofielen dat op de verkooporder als &quot;Consumer Audience&quot; is geïdentificeerd. |

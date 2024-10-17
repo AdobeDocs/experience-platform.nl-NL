@@ -1,9 +1,9 @@
 ---
 title: Stimuleer soorten publiek met SQL
 description: Leer hoe u de SQL-publieksextensie in Adobe Experience Platform Data Distiller kunt gebruiken voor het maken, beheren en publiceren van soorten publiek met SQL-opdrachten. In deze handleiding worden alle aspecten van de levenscyclus van de doelgroep behandeld, zoals het maken, bijwerken en verwijderen van profielen en het gebruik van gegevensgestuurde publieksdefinities voor doelbestemmingen op basis van bestanden.
-source-git-commit: 8b9a46d9dd35a60fc3f3087d5fd3c4dad395b1aa
+source-git-commit: b790dc0a485011022ac637f9d9c55f21c882d5fc
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -135,15 +135,13 @@ Activeer uw doelgroepen door deze naar een bestandsdoel te sturen, zoals [!DNL A
 
 In deze sectie worden veelgestelde vragen over het maken en beheren van een extern publiek met SQL in Data Distiller behandeld.
 
-+++Selecteren om vragen en antwoorden weer te geven
-
 **Vragen**:
 
 - Wordt het creëren van het publiek gesteund slechts voor vlakke datasets?
 
 +++Antwoord
 
-Geneste datasets worden ook ondersteund, maar alleen platte kenmerken zijn beschikbaar in het publiek.
+Het maken van een publiek is momenteel beperkt tot vlakke kenmerken (op hoofdniveau) bij het definiëren van het publiek.
 
 +++
 
@@ -167,15 +165,15 @@ Nr, wordt de dataset die tijdens publieksverwezenlijking wordt gecreeerd niet du
 
 +++Antwoord
 
-Ja, de dataset wordt gecreeerd op het gegevens meer.
+Ja, wordt de dataset verbonden aan het publiek gecreeerd op het gegevens meer. De kenmerken van deze dataset zijn beschikbaar in Audience Composer en bestemmingsstroom als verrijkte attributen.
 
 +++
 
-- Zijn de attributen in het publiek beperkt tot gebruik slechts in onderneming op dossier-gebaseerde bestemmingen? (Ja of Nee)
+- Zijn de attributen in het publiek beperkt tot onderneming op dossier-gebaseerde bestemmingen? (Ja of Nee)
 
 +++Antwoord
 
-Ja, zijn de attributen in het publiek beperkt tot gebruik slechts in onderneming op dossier-gebaseerde bestemmingen.
+Nee. De verrijkte attributen in het publiek zijn beschikbaar voor gebruik in zowel ondernemingspartij als op dossier-gebaseerde bestemmingen. Als u een fout als &quot;volgende segment IDs hebt namespaces die niet voor deze bestemming worden toegestaan: e917f626-a038-42f7-944c-xyxyxyx,&quot;creeer een nieuw segment in Gegevens Distiller en gebruik het met om het even welke beschikbare bestemming.
 
 +++
 
@@ -195,45 +193,11 @@ Het publiek van de gegevensdistilleerder is momenteel niet beschikbaar in Adobe 
 
 +++
 
-- Hoe zou ik twee publiek van Gegevens Distiller met verschillende programma&#39;s moeten creëren? Hoeveel datasets worden gecreeerd, en worden zij duidelijk voor Profiel?
-
-+++Antwoord
-
-Twee datasets zullen worden gecreeerd aangezien elk publiek een onderliggende dataset heeft. Deze gegevenssets zijn echter niet gemarkeerd voor Profiel. De twee datasets worden beheerd op hun eigen individuele programma&#39;s.
-
-+++
-
-- Hoe verwijder ik een publiek?
-
-+++Antwoord
-
-Om een publiek te schrappen, kunt u het [`DROP AUDIENCE` bevel ](#delete-audience) in de interface van de bevellijn gebruiken of de [ Snelle acties van de werkruimte van Soorten publiek ](../../segmentation/ui/audience-portal.md#quick-actions) gebruiken. OPMERKING: publiek dat wordt gebruikt in downstreambestemmingen of dat afhankelijk is van een ander publiek, kan niet worden verwijderd.
-
-+++
-
-- Wanneer ik een publiek aan Profiel publiceert, hoe spoedig is het beschikbaar in de segment bouwer UI, en wanneer wordt het beschikbaar in Doelen?
-
-+++Antwoord
-
-Wanneer het exporteren van de profielmomentopname is voltooid, kunnen de profielen in het publiek worden weergegeven.
-
-+++
-
 - Worden Distiller-doelgroepen om de 30 dagen verwijderd omdat ze een extern publiek zijn?
 
 +++Antwoord
 
 Ja, het publiek van Data Distiller wordt om de 30 dagen verwijderd omdat het een extern publiek is.
-
-+++
-
-- Worden data-Distiller-soorten publiek weergegeven in de lijst Soorten publiek?
-
-+++Antwoord
-
-Ja, data-Distiller-soorten publiek worden in de lijst Soorten publiek weergegeven onder de oorspronkelijke naam &#39;Data Distiller&#39;.
-
-+++
 
 +++
 
