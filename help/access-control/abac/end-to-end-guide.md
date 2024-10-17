@@ -4,16 +4,16 @@ title: Op attributen-Gebaseerde Gids van de Controle van de Toegang van begin to
 description: Dit document verstrekt een gids van begin tot eind op op attribuut-gebaseerde toegangsbeheer in Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: c89ae9befa3befbffab9d6468f3c207ab8e7b74f
+source-git-commit: 9c415b7721eeceff75d46463853f22dd3310cb9a
 workflow-type: tm+mt
 source-wordcount: '1664'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # Op attributen-gebaseerde toegangsbeheergids van begin tot eind
 
-Gebruik op kenmerken gebaseerde toegangscontrole op Adobe Experience Platform om uzelf en andere privacybewuste klanten meer flexibiliteit te bieden om gebruikerstoegang te beheren. De toegang tot individuele voorwerpen, zoals schemagebieden en segmenten, kan met beleid worden verleend dat op de attributen en de rol van de objecten wordt gebaseerd. Met deze functie kunt u toegang tot afzonderlijke objecten verlenen of intrekken voor specifieke platformgebruikers in uw organisatie.
+Gebruik op kenmerken gebaseerde toegangscontrole op Adobe Experience Platform om uzelf en andere privacybewuste klanten meer flexibiliteit te bieden om gebruikerstoegang te beheren. De toegang tot individuele voorwerpen, zoals schemagebieden en segmenten, kan met beleid worden verleend dat op de attributen en de rol van de objecten wordt gebaseerd. Met deze functie kunt u toegang tot individuele objecten verlenen of intrekken voor specifieke platformgebruikers in uw organisatie.
 
 Deze functionaliteit staat u toe om schemagebieden, segmenten, etc. met etiketten te categoriseren die organisatie of gegevensgebruikswerkingsgebied bepalen. U kunt dezelfde labels toepassen op reizen, aanbiedingen en andere objecten in Adobe Journey Optimizer. Tegelijkertijd kunnen beheerders toegangsbeleid definiëren rondom XDM-schemavelden (Experience Data Model) en beter beheren welke gebruikers of groepen (interne, externe of externe gebruikers) toegang hebben tot deze velden.
 
@@ -45,8 +45,7 @@ U zult:
 
 * [ Etiket de rollen voor uw gebruikers ](#label-roles): Gebruik het voorbeeld van een gezondheidszorgleverancier (ACME BedrijfsGroep) de waarvan marketing groep met externe agentschappen werkt.
 * [ Etiket uw middelen (schemagebieden en segmenten) ](#label-resources): wijs het **[!UICONTROL PHI/ Regulated Health Data]** etiket aan schemamiddelen en segmenten toe.
-* 
-   * [ activeer het beleid dat hen samen zal verbinden:](#policy): Laat het standaardbeleid toe om toegang tot schemagebieden en segmenten te verhinderen door de etiketten op uw middelen aan de etiketten in uw rol te verbinden. Gebruikers met overeenkomende labels krijgen dan toegang tot het schemaveld en segmenten in alle sandboxen.
+* [ activeer het beleid dat hen samen ](#policy) zal verbinden: Laat het standaardbeleid toe om toegang tot schemagebieden en segmenten te verhinderen door de etiketten op uw middelen aan de etiketten in uw rol te verbinden. Gebruikers met overeenkomende labels krijgen dan toegang tot het schemaveld en segmenten in alle sandboxen.
 
 ## Machtigingen
 
