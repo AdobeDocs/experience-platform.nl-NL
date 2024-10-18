@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;de stroomdienst;update dataflows
-solution: Experience Platform
 title: Gegevensstromen bijwerken met behulp van de Flow Service API
-type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het bijwerken van een gegevensstroom, met inbegrip van zijn naam, beschrijving, en programma, gebruikend de Dienst API van de Stroom.
+description: Leer hoe te om een gegevensstroom, met inbegrip van zijn naam, beschrijving, en programma, gebruikend de Dienst API van de Stroom.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -15,6 +12,10 @@ ht-degree: 0%
 # Dataflows bijwerken met behulp van de Flow Service API
 
 Dit leerprogramma behandelt de stappen voor het bijwerken van een dataflow, met inbegrip van zijn basisinformatie, programma, en kaartreeksen die [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) gebruiken.
+
+>[!TIP]
+>
+>Uw bronverbinding en uw doelverbinding moeten aan één dataflow worden toegewezen. Werk de bron- en doelverbindingen niet afzonderlijk bij, omdat de wijzigingen niet in de bijbehorende gegevensstroom worden doorgevoerd. Als uw gebruiksgeval een update van uw bron en doelverbindingen vereist, dan moet u een nieuw paar bron en doelverbindingen, evenals een nieuwe dataflow tot stand brengen.
 
 ## Aan de slag
 
@@ -49,11 +50,11 @@ Met het volgende verzoek wordt bijgewerkte informatie over uw flow-id opgehaald.
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Reactie**

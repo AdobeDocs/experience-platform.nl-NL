@@ -1,22 +1,23 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;flowservice;updateaccounts
-solution: Experience Platform
 title: Accounts bijwerken met de Flow Service API
-type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het bijwerken van de gegevens en referenties van een account met behulp van de Flow Service API.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
 
 # Accounts bijwerken met de Flow Service API
 
-In sommige omstandigheden is het mogelijk dat de details van een bestaande bronverbinding moeten worden bijgewerkt. [!DNL Flow Service] biedt u de mogelijkheid om details van een bestaande batch- of streamingverbinding toe te voegen, te bewerken en te verwijderen, inclusief de naam, beschrijving en gegevens.
+In sommige omstandigheden is het mogelijk dat de details van een bestaande basisverbinding moeten worden bijgewerkt. [!DNL Flow Service] biedt u de mogelijkheid om details van een bestaande batch- of streamingverbinding toe te voegen, te bewerken en te verwijderen, inclusief de naam, beschrijving en gegevens.
 
 Dit leerprogramma behandelt de stappen voor het bijwerken van de details en de geloofsbrieven van een verbinding gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!TIP]
+>
+>U hoeft geen nieuwe basisverbinding te maken wanneer een update vereist is. Wijzigingen die u aanbrengt in de basisverbinding, worden weerspiegeld in de bijbehorende gegevensstroom.
 
 ## Aan de slag
 
