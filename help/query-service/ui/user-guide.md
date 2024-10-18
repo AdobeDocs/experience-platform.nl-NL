@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: f68dd020b05d1eaf6d873b9cdc2a40007ad60c84
+source-git-commit: e66f3540d22a441089916183538921ea5654b312
 workflow-type: tm+mt
-source-wordcount: '2763'
+source-wordcount: '2761'
 ht-degree: 0%
 
 ---
@@ -200,12 +200,12 @@ Als een query was gepland, biedt het tabblad [!UICONTROL Scheduled Queries] bete
 >
 >Vragen die niet worden uitgevoerd, worden niet opgeslagen in het logbestand. De vraag om in de Dienst van de Vraag beschikbaar te zijn, moet het in de Redacteur van de Vraag in werking stellen of worden bewaard.
 
-### [!BADGE  browser van de Objecten van Beta ] {type=Informative} {#object-browser}
+### [!BADGE  Beperkte browser van de Objecten van de Beschikbaarheid ] {type=Informative} {#object-browser}
 
 >[!AVAILABILITY]
 >
 De dataset navigation rail is alleen beschikbaar voor Distiller-klanten van Data. Uw platforminterface bevat mogelijk niet de linkergegevenssetnavigatiespoor. Andere afbeeldingen in dit document weerspiegelen mogelijk niet de dataset navigation rail. Neem contact op met uw Adobe voor meer informatie.<br>
-De browser van objecten is momenteel in bèta en beschikbaar slechts in a **beperkte versie**. Neem contact op met uw Adobe voor vroege toegang tot de site.
+De browser van objecten is momenteel beschikbaar slechts in a **beperkte versie**. Neem contact op met uw Adobe voor vroege toegang tot de site.
 
 Gebruik objecten browser aan gemakkelijk onderzoek en filterdatasets. De objecten browser vermindert de tijd besteed het zoeken naar lijsten en datasets in grote milieu&#39;s met talrijke datasets. Met gestroomlijnde toegang tot relevante gegevens en meta-gegevens, kunt u zich meer op vraag creatie en minder op navigatie concentreren.
 
