@@ -4,9 +4,9 @@ description: Leer hoe te om dynamische configuraties tot stand te brengen datast
 hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
-source-git-commit: 86416dc11f92a774cda5d95365d3981a637a5595
+source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Nadat u [ een datastream ](configure.md) hebt gecreeerd en [ de dienst ](configu
 
    ![ Beeld van het gebruikersinterface van gegevensstromen die de dynamische configuratieregel tonen.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Schakel in de sectie **[!UICONTROL Configuration]** de services in of uit die u voor elke regel wilt in- of uitschakelen, afhankelijk van het feit of u de gegevens naar elke service wilt verzenden. Als u de knevel weg zet, wordt de regel onbruikbaar gemaakt en *alle gegevens* zullen naar de stroomopwaartse dienst worden verzonden.
+1. Schakel in de sectie **[!UICONTROL Configuration]** de services in of uit die u voor elke regel wilt in- of uitschakelen, afhankelijk van het feit of u de gegevens naar elke service wilt verzenden. Als u de knevel weg zet, wordt de dienst verpletterend onbruikbaar gemaakt en *geen gegevens* zal naar de stroomopwaartse dienst worden verzonden.
 
    ![ Beeld van het gebruikersinterface van gegevensstromen die de dynamische configuratieregel tonen.](assets/configure-dynamic-datastream/enable-service.png)
 
