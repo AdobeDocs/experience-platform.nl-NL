@@ -2,9 +2,9 @@
 title: De Gids van het oplossen van problemen voor de Regels van de Verbinding van de Grafiek van de Identiteit
 description: Leer hoe te om gemeenschappelijke kwesties in identiteitsgrafiek problemen op te lossen die regels verbinden.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: b50633a8518f32051549158b23dfc503db255a82
 workflow-type: tm+mt
-source-wordcount: '3240'
+source-wordcount: '3328'
 ht-degree: 0%
 
 ---
@@ -59,8 +59,8 @@ Binnen de context van identiteitsgrafiek die regels verbindt, kan een verslag va
 
 Overweeg het volgende evenement met twee veronderstellingen:
 
-* De veldnaam CRMID is gemarkeerd als een identiteit met de naamruimte CRMID.
-* De naamruimte-CRMID wordt gedefinieerd als een unieke naamruimte.
+1. De veldnaam CRMID is gemarkeerd als een identiteit met de naamruimte CRMID.
+2. De naamruimte-CRMID wordt gedefinieerd als een unieke naamruimte.
 
 De volgende gebeurtenis retourneert een foutbericht waarin wordt aangegeven dat inname is mislukt.
 
@@ -123,6 +123,24 @@ Nadat u de query hebt uitgevoerd, zoekt u de gebeurtenisrecord die u had verwach
 >
 >Als de twee identiteiten precies hetzelfde zijn en als de gebeurtenis via streaming wordt opgenomen, wordt de identiteit door zowel Identiteit als Profiel gededupliceerd.
 
+### Ervaring na verificatieGebeurtenissen worden toegeschreven aan het verkeerde geverifieerde profiel
+
+De prioriteit Namespace speelt een belangrijke rol in hoe de gebeurtenisfragmenten primaire identiteit bepalen.
+
+* Zodra u hebt gevormd en uw [ identiteitsmontages ](./identity-settings-ui.md) voor een bepaalde zandbak opgeslagen, zal het Profiel dan [ namespace prioriteit ](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) gebruiken om de primaire identiteit te bepalen. In het geval van identityMap gebruikt Profile de markering `primary=true` niet meer.
+* Hoewel Profiel niet langer naar deze markering verwijst, kunnen andere services op Experience Platform de markering `primary=true` blijven gebruiken.
+
+Opdat [ voor authentiek verklaarde gebruikersgebeurtenissen ](implementation-guide.md#ingest-your-data) aan de persoon worden gebonden namespace, moeten alle voor authentiek verklaarde gebeurtenissen de persoon namespace (CRMID) bevatten. Dit betekent dat zelfs nadat een gebruiker zich aanmeldt, de naamruimte van de persoon nog steeds aanwezig moet zijn op elke geverifieerde gebeurtenis.
+
+U kunt de markering `primary=true` &#39;events&#39; blijven zien wanneer u een profiel opzoekt in de profielviewer. Dit wordt echter genegeerd en wordt niet gebruikt door Profiel.
+
+HULP&#39;s worden standaard geblokkeerd. Daarom als u de [ bronVerbinding van Adobe Analytics ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruikt, moet u ervoor zorgen dat ECID aan hoger dan ECID wordt voorrang gegeven zodat de unauthenticated gebeurtenissen een primaire identiteit van ECID zullen hebben.
+
+**de stappen van het Oplossen van problemen**
+
+1. Om te bevestigen dat de voor authentiek verklaarde gebeurtenissen zowel de persoon als koekjesnamespace bevatten, lees de stappen die in de sectie over [ worden geschetst het oplossen van problemenfouten betreffende gegevens die niet aan de Dienst van de Identiteit worden opgenomen ](#my-identities-are-not-getting-ingested-into-identity-service).
+2. Om te bevestigen dat de voor authentiek verklaarde gebeurtenissen de primaire identiteit van de persoon namespace (b.v. CRMID) hebben, onderzoek persoonnamespace op profielkijker gebruikend het geen-aaneenschakeling fusiebeleid (dit is het fusiebeleid dat geen privé grafiek gebruikt). Deze zoekopdracht retourneert alleen gebeurtenissen die zijn gekoppeld aan de naamruimte van de persoon.
+
 ### Mijn ervaring is dat gebeurtenisfragmenten niet in het profiel worden opgenomen {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
 
 Er zijn verschillende redenen die ertoe bijdragen waarom uw ervaringsfragmenten niet in Profiel worden opgenomen, met inbegrip van maar niet beperkt tot:
@@ -171,29 +189,11 @@ Deze twee vragen gaan ervan uit dat:
 * Eén identiteit wordt verzonden vanuit de identityMap en een andere identiteit wordt verzonden vanuit een identiteitsbeschrijving. **NOTA**: In de schema&#39;s van het Gegevensmodel van de Ervaring (XDM), is de identiteitsbeschrijver het gebied duidelijk als identiteit.
 * De CRMID wordt verzonden via identityMap. Als de CRMID als gebied wordt verzonden, verwijder `key='Email'` uit WHERE clausule.
 
-### Mijn ervaring met gebeurtenisfragmenten die zijn ingepakt, maar die de &quot;verkeerde&quot; primaire identiteit hebben in Profiel
-
-De prioriteit Namespace speelt een belangrijke rol in hoe de gebeurtenisfragmenten primaire identiteit bepalen.
-
-* Zodra u hebt gevormd en uw [ identiteitsmontages ](./identity-settings-ui.md) voor een bepaalde zandbak opgeslagen, zal het Profiel dan [ namespace prioriteit ](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) gebruiken om de primaire identiteit te bepalen. In het geval van identityMap gebruikt Profile de markering `primary=true` niet meer.
-* Hoewel Profiel niet langer naar deze markering verwijst, kunnen andere services op Experience Platform de markering `primary=true` blijven gebruiken.
-
-Opdat [ voor authentiek verklaarde gebruikersgebeurtenissen ](implementation-guide.md#ingest-your-data) aan de persoon worden gebonden namespace, moeten alle voor authentiek verklaarde gebeurtenissen de persoon namespace (CRMID) bevatten. Dit betekent dat zelfs nadat een gebruiker zich aanmeldt, de naamruimte van de persoon nog steeds aanwezig moet zijn op elke geverifieerde gebeurtenis.
-
-U kunt de markering `primary=true` &#39;events&#39; blijven zien wanneer u een profiel opzoekt in de profielviewer. Dit wordt echter genegeerd en wordt niet gebruikt door Profiel.
-
-HULP&#39;s worden standaard geblokkeerd. Daarom als u de [ bronVerbinding van Adobe Analytics ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruikt, moet u ervoor zorgen dat ECID aan hoger dan ECID wordt voorrang gegeven zodat de unauthenticated gebeurtenissen een primaire identiteit van ECID zullen hebben.
-
-**de stappen van het Oplossen van problemen**
-
-* Om te bevestigen dat de voor authentiek verklaarde gebeurtenissen zowel de persoon als koekjesnamespace bevatten, lees de stappen die in de sectie over [ worden geschetst het oplossen van problemenfouten betreffende gegevens die niet aan de Dienst van de Identiteit worden opgenomen ](#my-identities-are-not-getting-ingested-into-identity-service).
-* Om te bevestigen dat de voor authentiek verklaarde gebeurtenissen de primaire identiteit van de persoon namespace (b.v. CRMID) hebben, onderzoek persoonnamespace op profielkijker gebruikend het geen-aaneenschakeling fusiebeleid (dit is het fusiebeleid dat geen privé grafiek gebruikt). Deze zoekopdracht retourneert alleen gebeurtenissen die zijn gekoppeld aan de naamruimte van de persoon.
-
 ## Problemen met grafiekgedrag {#graph-behavior-related-issues}
 
 In deze sectie worden algemene problemen beschreven die u kunt tegenkomen met betrekking tot het gedrag van de identiteitsgrafiek.
 
-### De identiteit wordt gekoppeld aan de &#39;verkeerde&#39; persoon
+### Unauthenticated ExperienceEvents worden gekoppeld aan het verkeerde geverifieerde profiel
 
 Het algoritme van de identiteitsoptimalisering zal [ de onlangs gevestigde verbindingen respecteren en de oudste verbindingen ](./identity-optimization-algorithm.md#identity-optimization-algorithm-details) verwijderen. Daarom is het mogelijk dat, zodra deze functie is ingeschakeld, ECID&#39;s opnieuw van de ene persoon naar de andere worden toegewezen (opnieuw gekoppeld). Volg onderstaande stappen om te begrijpen hoe een identiteit in de loop der tijd gekoppeld wordt:
 
@@ -209,11 +209,11 @@ Het algoritme van de identiteitsoptimalisering zal [ de onlangs gevestigde verbi
 
 Eerst moet u de volgende informatie verzamelen:
 
-* Het identiteitssymbool (namespaceCode) van de cookie-naamruimte (bijvoorbeeld ECID) en de naamruimte voor de persoon (bijvoorbeeld CRMID) die zijn verzonden.
-   * Voor de implementaties van SDK van het Web, zijn dit gewoonlijk namespaces inbegrepen in identityMap.
-   * Voor de implementaties van de bronschakelaar van de Analytics, zijn dit het koekjesherkenningsteken inbegrepen in identityMap. De persoon-id is een eVar-veld dat als een identiteitsbewijs is gemarkeerd.
-* De dataset waarin de gebeurtenis in (dataset_name) werd verzonden.
-* De identiteitswaarde van de cookie-naamruimte die moet worden opgezocht (identity_value).
+1. Het identiteitssymbool (namespaceCode) van de cookie-naamruimte (bijvoorbeeld ECID) en de naamruimte voor de persoon (bijvoorbeeld CRMID) die zijn verzonden.
+1.1. Voor de implementaties van SDK van het Web, zijn dit gewoonlijk namespaces inbegrepen in identityMap.
+1.2. Voor de implementaties van de bron van de Analytics, zijn dit de koekjesherkenningsteken inbegrepen in identityMap. De persoon-id is een eVar-veld dat als een identiteitsbewijs is gemarkeerd.
+2. De dataset waarin de gebeurtenis in (dataset_name) werd verzonden.
+3. De identiteitswaarde van de cookie-naamruimte die moet worden opgezocht (identity_value).
 
 Identiteitssymbolen (namespaceCode) zijn hoofdlettergevoelig. Om alle identiteitssymbolen voor een bepaalde dataset in identityMap terug te winnen, stel de volgende vraag in werking:
 
@@ -241,7 +241,7 @@ Als u de identiteitswaarde van uw cookie-id niet kent en u wilt zoeken naar een 
 
 >[!ENDTABS]
 
-Controleer vervolgens de koppeling van de cookie-naamruimte in volgorde van tijdstempel door de volgende query uit te voeren:
+Nu u de cookiewaarden hebt geïdentificeerd verbonden aan veelvoudige persoon IDs, neem één van de resultaten en gebruik het in de volgende vraag om een chronologische mening van te krijgen wanneer die koekjeswaarde met een verschillende persoon herkenningsteken werd verbonden:
 
 >[!BEGINTABS]
 
@@ -368,6 +368,13 @@ De belangrijkste punten om te benadrukken zijn als volgt:
    * Als er bijvoorbeeld een wachttijd is tussen de acties en de ECID-overdrachten tijdens de wachttijd, kan een ander profiel worden aangewezen.
    * Met deze functie is ECID niet meer altijd gekoppeld aan één profiel.
    * De aanbeveling is om reizen te beginnen met naamruimten van personen (CRMID).
+
+>[!TIP]
+>
+>Reizen moeten een profiel met een unieke naamruimte opzoeken omdat een niet-unieke naamruimte opnieuw aan een andere gebruiker kan worden toegewezen.
+>
+>* ECID&#39;s en niet-unieke e-mail- en telefoonnaamruimten kunnen van de ene persoon naar de andere worden verplaatst.
+>* Als een reis een wachtstand heeft en als deze niet-unieke namespaces worden gebruikt om een profiel op een reis te zoeken, dan kan het reisbericht aan de onjuiste persoon worden verzonden.
 
 ## Prioriteit naamruimte
 

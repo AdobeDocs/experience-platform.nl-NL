@@ -2,9 +2,9 @@
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: aae82bc84eff7584098ddb35a481d7349ff837c4
+source-git-commit: b50633a8518f32051549158b23dfc503db255a82
 workflow-type: tm+mt
-source-wordcount: '1601'
+source-wordcount: '1696'
 ht-degree: 1%
 
 ---
@@ -107,7 +107,7 @@ Stel dat de volgende configuraties zijn ingesteld voor een bepaalde sandbox:
 
 Gezien de bovenstaande configuraties, zullen gebruikersacties en bepaling van de primaire identiteit als volgt worden opgelost:
 
-| Handeling van de gebruiker (Experience-gebeurtenis) | Verificatiestatus | Gegevensbron | Identiteitskaart | Primaire identiteit (primaire sleutel van profielfragment) |
+| Handeling van de gebruiker (Experience-gebeurtenis) | Verificatiestatus | Gegevensbron | Naamruimten in gebeurtenis | Naamruimte van primaire identiteit |
 | --- | --- | --- | --- | --- |
 | Pagina met creditcardaanbiedingen weergeven | Niet geverifieerd (anoniem) | Web SDK | {ECID} | ECID |
 | Help-pagina weergeven | Niet geverifieerd | Mobile SDK | {ECID, IDFA} | IDFA |
@@ -121,14 +121,18 @@ Gezien de bovenstaande configuraties, zullen gebruikersacties en bepaling van de
 
 ![ A diagram van de opslag van het segmentlidmaatschap ](../images/namespace-priority/segment-membership-storage.png)
 
-Voor een bepaald samengevoegd profiel, zullen de segmentlidmaatschappen tegen de identiteit met hoogste prioriteit worden opgeslagen namespace.
+Voor een bepaald samengevoegd profiel, zullen de segmentlidmaatschappen tegen de identiteit met de hoogste namespace prioriteit worden opgeslagen.
 
 Stel dat er twee profielen zijn:
 
-* Het eerste profiel vertegenwoordigt John.
-* Het tweede profiel staat voor Jane.
+* Profiel 1 staat voor John.
+   * Het profiel van John kwalificeert voor S1 (segmentlidmaatschap 1). Bijvoorbeeld, kon S1 naar een segment van klanten verwijzen die zich als mannetje identificeren.
+   * Het profiel van John kwalificeert ook voor S2 (segmentlidmaatschap 2). Dit zou kunnen verwijzen naar een segment klanten waarvan de loyaliteitsstatus goud is.
+* Profiel 2 staat voor Jane.
+   * Het profiel van Jane komt in aanmerking voor S3 (segmentlidmaatschap 3). Dit zou naar een segment van klanten kunnen verwijzen die zich als vrouwelijk identificeren.
+   * Het profiel van Jane komt ook in aanmerking voor S4 (segmentlidmaatschap 4). Dit zou naar een segment van klanten kunnen verwijzen waarvan loyaliteitsstatus platina is.
 
-Als de John en Jane een apparaat delen, dan brengt ECID (Webbrowser) van één persoon aan een andere over. Nochtans, beïnvloedt dit niet de informatie van het segmentlidmaatschap die tegen John en Jane wordt opgeslagen.
+Als John en Jane een apparaat delen, dan brengt ECID (Webbrowser) van één persoon aan een andere over. Nochtans, beïnvloedt dit niet de informatie van het segmentlidmaatschap die tegen John en Jane wordt opgeslagen.
 
 Als de segmentkwalificatiecriteria uitsluitend gebaseerd waren op anonieme gebeurtenissen die tegen de ECID waren opgeslagen, zou Jane in aanmerking komen voor dat segment
 
@@ -141,15 +145,13 @@ In deze sectie wordt beschreven hoe naamruimteprioriteit van invloed kan zijn op
 Gegevens-hygiënebestanden verwijderen de aanvraagfuncties voor een bepaalde identiteit op de volgende manier:
 
 * Klantprofiel in realtime: verwijdert elk profielfragment met de opgegeven identiteit als primaire identiteit. **De primaire identiteit op Profiel zal nu gebaseerd op namespace prioriteit worden bepaald.**
-* Gegevensmeer: hiermee verwijdert u alle records met de opgegeven identiteit als primaire identiteit.
+* Gegevensmeer: hiermee verwijdert u alle records met de opgegeven identiteit als primaire identiteit. In tegenstelling tot het Profiel van de Klant in real time, is de primaire identiteit in gegevensmeer gebaseerd op primaire identiteit die op WebSDK (`primary=true`) wordt gespecificeerd, of een gebied duidelijk als primaire identiteit
 
 Voor meer informatie, lees het [ geavanceerde overzicht van het levenscyclusbeheer ](../../hygiene/home.md).
 
 ### Berekende kenmerken
 
-Berekende kenmerken gebruiken geen naamruimteprioriteit voor het berekenen van waarden. Als u gegevens verwerkte attributen gebruikt, moet u ervoor zorgen dat CRMID als uw primaire identiteit voor WebSDK wordt aangewezen. Deze beperking zal naar verwachting in augustus 2024 worden opgelost.
-
-Voor meer informatie, lees de [ gegevens verwerkte handleiding van attributen UI ](../../profile/computed-attributes/ui.md).
+Berekende kenmerken gebruiken geen naamruimteprioriteit voor het berekenen van waarden. Als u gegevens verwerkte attributen gebruikt, moet u ervoor zorgen dat CRMID als uw primaire identiteit voor WebSDK wordt aangewezen. Voor meer informatie, lees de [ gegevens verwerkte handleiding van attributen UI ](../../profile/computed-attributes/ui.md).
 
 ### Gegevensmeer
 
