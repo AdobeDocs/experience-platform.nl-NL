@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy-taken beheren in de gebruikersinterface van de Privacy Service
 description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experiencen Cloud te coördineren en te controleren.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 25c173e22f2aa4922aed89f7c9721e2303d5d4b9
+source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
 workflow-type: tm+mt
 source-wordcount: '1667'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Het dashboard voor [!DNL Privacy Service] UI verstrekt twee widgets die u toesta
 | [!UICONTROL MCDPA_USA (Montana)] | De [!DNL Montana Consumer Data Privacy Act] |
 | [!UICONTROL NDPA_USA (Nebraska)] | De [!DNL Nebraska Data Protection Act] |
 | [!UICONTROL NZPA_NZL (New Zealand)] | Nieuw-Zeeland [!DNL Privacy Act] |
-| [!UICONTROL NHPA_USA (New Hampshire)] | De [!DNL New Hampshire Data Privacy Act] |
+| [!UICONTROL NHPA_USA (New Hampshire)] | De [!DNL New Hampshire Privacy Act] |
 | [!UICONTROL NJDPA_USA (New Jersey)] | De [!DNL New Jersey Data Protection Act] |
 | [!UICONTROL OCPA USA (Oregon)] | De [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA (Thailand)] | Thailand [!DNL Personal Data Protection Act] |

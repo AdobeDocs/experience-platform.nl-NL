@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Terminologie van de privacyregels
 description: Dit document bevat definities voor belangrijke termen met betrekking tot privacyregels die worden ondersteund door Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: c4ca3dc975b13e2dce2e12784480e53bd0c4ee02
+source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
 workflow-type: tm+mt
 source-wordcount: '2301'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 
 **[!DNL Nebraska Data Protection Act]**: Een privacywet die Nebraskans het recht geeft om toegang te krijgen tot, te corrigeren, te verwijderen en te weigeren van de verkoop van hun persoonlijke gegevens. Het is van toepassing op ondernemingen die aan specifieke gegevensverwerking en opbrengstdrempels voldoen. De NDPA verplicht bedrijven ook redelijke maatregelen voor gegevensbeveiliging te treffen en biedt een behandelingsperiode van 30 dagen om schendingen op te lossen voordat sancties worden opgelegd.
 
-**[!DNL New Hampshire Data Privacy Act]**: Deze verordening beschermt de persoonsgegevens van inwoners van New Hampshire door hun rechten op toegang, verwijdering en overdracht van hun gegevens te verlenen. Het verplicht bedrijven om hun praktijken voor het verzamelen en delen van gegevens bekend te maken en biedt consumenten de mogelijkheid om zich uit de verkoop van gegevens te onthouden. NHDPA is op bedrijven van toepassing die gespecificeerde drempels van de gegevensverwerking voldoen.
+**[!DNL New Hampshire Privacy Act]**: Deze verordening beschermt de persoonsgegevens van inwoners van New Hampshire door hun rechten op toegang, verwijdering en overdracht van hun gegevens te verlenen. Het verplicht bedrijven om hun praktijken voor het verzamelen en delen van gegevens bekend te maken en biedt consumenten de mogelijkheid om zich uit de verkoop van gegevens te onthouden. NHDPA is op bedrijven van toepassing die gespecificeerde drempels van de gegevensverwerking voldoen.
 
 **[!DNL New Jersey Data Protection Act]**: Een uitgebreide nationale privacywet die inwoners van New Jersey het recht geeft om persoonlijke gegevens te openen, te corrigeren en te verwijderen. Het omvat opt-outmechanismen voor de verkoop van gegevens en gerichte reclame. De NJDPA is van toepassing op bedrijven die grote hoeveelheden consumentengegevens verwerken en vereist transparantie in de manier waarop bedrijven persoonlijke informatie verwerken.
 
