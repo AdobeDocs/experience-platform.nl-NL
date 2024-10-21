@@ -2,9 +2,9 @@
 title: Implementatiehandleiding voor identiteitsservice
 description: Leer hoe gegevens die aan Adobe Experience Platform zijn verstrekt worden verwerkt voordat ze door Identity Service worden gebruikt om identiteitsgrafieken samen te stellen.
 exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 4ba25ed684ff126ab1c4f1a33e6503f0342e8720
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,7 @@ Bijvoorbeeld, door de gebieden van het telefoonaantal als identiteitsgebieden te
 >
 >* Array- en toewijzingsvelden worden niet ondersteund en kunnen niet worden gemarkeerd en gelabeld als identiteitsvelden.
 >* De naamruimte van resulterende identiteiten wordt opgegeven op het moment dat het veld wordt gelabeld.
+>* Een veld kan als identiteit worden gemarkeerd, zolang dit veld zich niet onder een matrixobject bevindt.
 
 Voor meer informatie, lees de gids op [ bepalend identiteitsgebieden in UI ](../xdm/ui/fields/identity.md).
 
