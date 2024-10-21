@@ -2,9 +2,9 @@
 description: Deze pagina verstrekt alle informatie u voor overzicht een geproduceerde bestemming moet voorleggen die gebruikend Destination SDK wordt authored.
 title: Ter controle een productiebestemming verzenden die is geschreven in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
+source-git-commit: 756c14c67e349a9ca906c027a07766e952485525
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,7 @@ Deze pagina bevat alle informatie die u moet opgeven wanneer u een bestemming ve
 * Een beschrijving van de gebruiksgevallen die uw bestemming oplost. Dit wordt slechts vereist als u een nieuwe bestemmingsconfiguratie voorlegt.
 * Een beschrijving van de reden voor het verzenden van uw bestemming. Dit wordt slechts vereist als u een bestaande bestemmingsconfiguratie bijwerkt.
 * De resultaten van de test na het gebruiken van het bestemmingsAPI eindpunt om een vraag van HTTP aan uw bestemming uit te voeren. Gelieve te delen met Adobe een API vraag die aan uw bestemmingshindpunt wordt gemaakt en de API reactie die van uw bestemmingshindpunt wordt ontvangen.
+* Een schermopname die de gebruikerservaring toont voor iemand die verbinding maakt met uw bestemming en de activeringsstappen doorloopt.
 * Aanvullende vereisten voor bestandsgebaseerde doelen:
    * Deel een verzoek en een reactiesteekproef na het gebruiken van het testen API aan [ test uw op dossier-gebaseerde bestemming met steekproefprofielen ](../testing-api/batch-destinations/file-based-destination-testing-api.md).
    * Koppel een voorbeeldbestand dat door uw bestemming is gegenereerd en dat naar uw opslaglocatie is geëxporteerd.
@@ -59,7 +60,7 @@ Geef een korte beschrijving van de kwestie die door uw verzending wordt opgelost
 
 ## Testresultaten na gebruik van de API voor testbestemming {#testing-api-response}
 
-Verstrek testresultaten na het gebruiken van het [ doelAPI ](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) eindpunt om een vraag van HTTP aan uw bestemming uit te voeren. Dit omvat:
+Verstrek testresultaten na het gebruiken van het [ doelAPI ](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) eindpunt om een vraag van HTTP aan uw bestemming uit te voeren. Dit omvat het volgende:
 
 * De volledige API-aanvraag (headers en body) die met de API voor testen is ingediend bij het eindpunt van de bestemming.
 * De API reactie die van uw bestemmingshindpunt wordt ontvangen.
