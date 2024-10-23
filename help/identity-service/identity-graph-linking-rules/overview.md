@@ -2,7 +2,7 @@
 title: Identiteitsgrafiekkoppelingsregels
 description: Leer over identiteitsgrafiek die regels in de Dienst van de Identiteit verbindt.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: 5092421ed8d0ff61fb3ed7f0849d2271f1fa144c
 workflow-type: tm+mt
 source-wordcount: '1424'
 ht-degree: 0%
@@ -98,11 +98,11 @@ U kunt een naamruimte zo configureren dat deze uniek is met behulp van de gebrui
 
 Overweeg het volgende scenario:
 
-* Scott gebruikt een tablet en opent zijn browser van Google Chrome om naar nike <span>.com te gaan, waar hij binnen ondertekent en voor nieuwe basketbalschoenen doorbladert.
+* Scott gebruikt een tablet en opent zijn browser van Google Chrome om naar acme <span>.com te gaan, waar hij binnen ondertekent en voor nieuwe basketbalschoenen doorbladert.
    * In dit scenario worden achter de schermen de volgende identiteiten geregistreerd:
       * Een ECID-naamruimte en -waarde die het gebruik van de browser vertegenwoordigen
       * Een CRMID-naamruimte en -waarde die de geverifieerde gebruiker vertegenwoordigen (Scott is aangemeld met zijn combinatie van gebruikersnaam en wachtwoord).
-* Zijn zoon Peter gebruikt dan hetzelfde tablet en gebruikt Google Chrome ook om naar nike <span>.com te gaan, waar hij zich aanmeldt voor zijn eigen rekening om naar voetbalapparatuur te zoeken.
+* Zijn zoon Peter gebruikt dan hetzelfde tablet en gebruikt ook Google Chrome om naar acme <span>.com te gaan, waar hij zich aanmeldt voor zijn eigen rekening om naar voetbalapparatuur te zoeken.
    * In dit scenario worden achter de schermen de volgende identiteiten geregistreerd:
       * Dezelfde ECID-naamruimte en -waarde die de browser vertegenwoordigen.
       * Een nieuwe CRMID-naamruimte en -waarde die de geverifieerde gebruiker vertegenwoordigen.

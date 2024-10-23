@@ -2,9 +2,9 @@
 title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 5d1bcaa84875e55595996253fb72cf768af16e05
+source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1656'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Stapsgewijze omtrek:
 1. [Volledige voorwaarden voor implementatie](#prerequisites-for-implementation)
 2. [De benodigde naamruimten maken](#namespace)
 3. [Gebruik het grafieksimulatiehulpmiddel om met het algoritme van de identiteitsoptimalisering vertrouwd te maken](#graph-simulation)
-4. [Gebruik het hulpmiddel van identiteitsinstellingen om uw unieke naamruimten aan te wijzen en prioritaire classificaties voor uw naamruimten te vormen](#identity-settings)
+4. [Gebruik de interface voor identiteitsinstellingen om uw unieke naamruimten aan te wijzen en prioriteitscijfers voor uw naamruimten te configureren](#identity-settings)
 5. [Een XDM-schema (Experience Data Model) maken](#schema)
 6. [Een gegevensset maken](#dataset)
 7. [Gegevens naar Experience Platform verzenden](#ingest)
@@ -183,9 +183,13 @@ Door verschillende configuraties te maken, kunt u het gereedschap voor grafieksi
 
 ## Identiteitsinstellingen configureren {#identity-settings}
 
-Zodra u een beter idee van hebt hoe u uw grafiek wilt gedragen, navigeer aan het [ hulpmiddel van identiteitsmontages ](./identity-settings-ui.md) in de werkruimte UI van de Dienst van de Identiteit.
+Zodra u een beter idee van hebt hoe u uw grafiek wilt gedragen, navigeer aan de [ montages UI van de Identiteit ](./identity-settings-ui.md) in de werkruimte UI van de Dienst van de Identiteit. Als u de gebruikersinterface voor identiteitsinstellingen wilt openen, selecteert u **[!UICONTROL Identities]** in de navigatie links en selecteert u **[!UICONTROL Settings]** .
 
-Gebruik het hulpmiddel van identiteitsinstellingen om uw unieke naamruimten aan te wijzen en uw naamruimten op volgorde van prioriteit te vormen. Zodra u met het toepassen van uw montages wordt gebeëindigd, moet u minstens zes uren wachten alvorens u te werk gaat om gegevens in te voeren, aangezien het minstens zes uren voor nieuwe montages om in de Dienst van de Identiteit moet worden weerspiegeld.
+![ de identiteiten doorbladeren pagina met de benadrukte montagesknoop.](../images/implementation/settings.png)
+
+Gebruik de interface voor identiteitsinstellingen om uw unieke naamruimten aan te wijzen en uw naamruimten op volgorde van prioriteit te configureren. Zodra u met het toepassen van uw montages wordt gebeëindigd, moet u minstens zes uren wachten alvorens u te werk gaat om gegevens in te voeren, aangezien het minstens zes uren voor nieuwe montages om in de Dienst van de Identiteit moet worden weerspiegeld.
+
+Voor meer informatie, lees de [ gids UI van de identiteitsmontages ](./identity-settings-ui.md).
 
 ## Een XDM-schema maken {#schema}
 
