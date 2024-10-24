@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;de stroomdienst;De Dienst API van de stroom;bronnen;Bronnen
 title: Gegevens op rijniveau voor een Source filteren met behulp van de Flow Service API
 description: Deze zelfstudie behandelt de stappen voor het filteren van gegevens op bronniveau met behulp van de Flow Service API
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
+source-git-commit: 544bb7b5aff437fd49c30ac3d6261f103a609cac
 workflow-type: tm+mt
-source-wordcount: '778'
-ht-degree: 0%
+source-wordcount: '1817'
+ht-degree: 2%
 
 ---
 
 # Gegevens op rijniveau voor een bron filteren met de API [!DNL Flow Service]
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 >De steun voor het filtreren van rij-vlakke gegevens is momenteel slechts beschikbaar aan de volgende bronnen:
 >
->* [ Google BigQuery ](../../connectors/databases/bigquery.md)
->* [ de Dynamica van Microsoft ](../../connectors/crm/ms-dynamics.md)
->* [ Salesforce ](../../connectors/crm/salesforce.md)
->* [ Snowflake ](../../connectors/databases/snowflake.md)
+>* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
+>* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
+>* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
+>* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>* [[!DNL Marketo Engage]  standaardactiviteiten ](../../connectors/adobe-applications/marketo/marketo.md)
 
-Dit leerprogramma verstrekt stappen op hoe te rij-vlakke gegevens voor een bron filtreren gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees deze gids voor stappen op hoe te om rij-vlakke gegevens voor een bron te filtreren gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
@@ -34,15 +34,15 @@ Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van
 
 Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
 
-## Brongegevens filteren
+## Brongegevens filteren {#filter-source-data}
 
 De volgende schetsen stappen om rij-vlakke gegevens voor uw bron te filtreren.
 
-### Verbindingsspecificaties opzoeken
+### Haal uw verbindingsspecificaties op {#retrieve-your-connection-specs}
 
-Voordat u de API kunt gebruiken voor het filteren van gegevens op rijniveau voor een bron, moet u eerst de verbindingsspecificatie van uw bron details ophalen om te bepalen welke operatoren en taal door een specifieke bron worden ondersteund.
+De eerste stap bij het filtreren van rij-vlakke gegevens voor uw bron is de verbindingsspecificaties van uw bron terug te winnen en de exploitanten en de taal te bepalen die uw bron steunt.
 
-Om de verbindingsspecificatie van een bepaalde bron terug te winnen, doe een verzoek van de GET aan het `/connectionSpecs` eindpunt van [!DNL Flow Service] API terwijl het verstrekken van de bezitsnaam van uw bron als deel van uw vraagparameters.
+Als u de verbindingsspecificatie van een bepaalde bron wilt ophalen, vraagt u een GET aan het `/connectionSpecs` -eindpunt van de [!DNL Flow Service] API en geeft u de eigenschapnaam van de bron op als onderdeel van de queryparameters.
 
 **API formaat**
 
@@ -52,11 +52,11 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMS}` | De optionele queryparameters waarmee u resultaten wilt filteren. U kunt de verbindingsspecificatie van [!DNL Google BigQuery] ophalen door de eigenschap `name` toe te passen en `"google-big-query"` op te geven in de zoekopdracht. |
+| `{QUERY_PARAMS}` | De optionele queryparameters waarmee u resultaten wilt filteren. U kunt de verbindingsspecificatie [!DNL Google BigQuery] ophalen door de eigenschap `name` toe te passen en `"google-big-query"` op te geven in de zoekopdracht. |
 
-**Verzoek**
++++verzoek
 
-Met de volgende aanvraag worden verbindingsspecificaties voor [!DNL Google BigQuery] opgehaald.
+Met de volgende aanvraag worden de verbindingsspecificaties voor [!DNL Google BigQuery] opgehaald.
 
 ```shell
 curl -X GET \
@@ -67,13 +67,11 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Reactie**
++++
 
-Een geslaagde reactie retourneert de verbindingsspecificaties voor [!DNL Google BigQuery] , inclusief informatie over de ondersteunde querytaal en logische operatoren.
++++Response
 
->[!NOTE]
->
->De API-respons hieronder is afgebroken voor de beknoptheid.
+Een geslaagde reactie retourneert de statuscode 200 en de verbindingsspecificaties voor [!DNL Google BigQuery] , inclusief informatie over de ondersteunde querytaal en logische operatoren.
 
 ```json
 "attributes": {
@@ -111,7 +109,9 @@ Een geslaagde reactie retourneert de verbindingsspecificaties voor [!DNL Google 
 
 {style="table-layout:auto"}
 
-#### Vergelijkingsoperatoren
++++
+
+#### Vergelijkingsoperatoren {#comparison-operators}
 
 | Operator | Beschrijving |
 | --- | --- |
@@ -126,7 +126,7 @@ Een geslaagde reactie retourneert de verbindingsspecificaties voor [!DNL Google 
 
 {style="table-layout:auto"}
 
-### Filtervoorwaarden voor inname opgeven
+### Filtervoorwaarden voor inname opgeven {#specify-filtering-conditions-for-ingestion}
 
 Nadat u de logische operatoren en de querytaal hebt geïdentificeerd die door uw bron worden ondersteund, kunt u Profile Query Language (PQL) gebruiken om de filtervoorwaarden op te geven die u op de brongegevens wilt toepassen.
 
@@ -153,7 +153,7 @@ In het onderstaande voorbeeld worden voorwaarden alleen toegepast op geselecteer
 }
 ```
 
-### Een voorbeeld van uw gegevens bekijken
+### Een voorbeeld van uw gegevens bekijken {#preview-your-data}
 
 U kunt een voorvertoning van uw gegevens weergeven door een aanvraag voor een GET in te dienen bij het `/explore` -eindpunt van de [!DNL Flow Service] API, terwijl u `filters` opgeeft als onderdeel van de queryparameters en uw PQL-invoervoorwaarden opgeeft in [!DNL Base64] .
 
@@ -169,7 +169,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | `{TABLE_PATH}` | De eigenschap path van de tabel die u wilt inspecteren. |
 | `{FILTERS}` | Uw PQL-filtervoorwaarden zijn gecodeerd in [!DNL Base64] . |
 
-**Verzoek**
++++verzoek
 
 ```shell
 curl -X GET \
@@ -180,9 +180,11 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Reactie**
++++
 
-Een succesvol verzoek retourneert de volgende reactie.
++++Response
+
+Een geslaagde reactie retourneert de inhoud en structuur van de gegevens.
 
 ```json
 {
@@ -328,9 +330,11 @@ Een succesvol verzoek retourneert de volgende reactie.
 }
 ```
 
++++
+
 ### Een bronverbinding maken voor gefilterde gegevens
 
-Om een bronverbinding tot stand te brengen en gefilterde gegevens in te voeren, doe een verzoek van de POST aan het `/sourceConnections` eindpunt terwijl het verstrekken van uw het filtreren voorwaarden als deel van uw lichaamsparameters.
+Om een bronverbinding tot stand te brengen en gefilterde gegevens in te voeren, doe een verzoek van de POST aan het `/sourceConnections` eindpunt en verstrek uw het filtreren voorwaarden in de parameters van het verzoeklichaam.
 
 **API formaat**
 
@@ -338,7 +342,7 @@ Om een bronverbinding tot stand te brengen en gefilterde gegevens in te voeren, 
 POST /sourceConnections
 ```
 
-**Verzoek**
++++verzoek
 
 Met de volgende aanvraag wordt een bronverbinding gemaakt voor het invoeren van gegevens van `test1.fasTestTable` waarbij `city` = `DDN` .
 
@@ -385,7 +389,9 @@ curl -X POST \
     }'
 ```
 
-**Reactie**
++++
+
++++Response
 
 Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde bronverbinding terug.
 
@@ -396,6 +402,493 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 }
 ```
 
++++
+
+## Activiteitenentiteiten filteren voor [!DNL Marketo Engage] {#filter-for-marketo}
+
+U kunt rij-niveau het filtreren gebruiken om voor activiteitenentiteiten te filtreren wanneer het gebruiken van de [[!DNL Marketo Engage]  bronschakelaar ](../../connectors/adobe-applications/marketo/marketo.md). Momenteel kunt u alleen filteren op activiteitentiteiten en standaardtypen. De activiteiten van de douane blijven onder [[!DNL Marketo]  gebiedsafbeeldingen ](../../connectors/adobe-applications/mapping/marketo.md) worden geregeerd.
+
+### [!DNL Marketo] standaardactiviteitstypen {#marketo-standard-activity-types}
+
+In de volgende tabel worden de standaardactiviteitstypen voor [!DNL Marketo] beschreven. Gebruik deze lijst als verwijzing voor uw het filtreren criteria.
+
+| Type activiteit-id | Naam van type activiteit |
+| --- | --- |
+| 1 | Webpagina bezoeken |
+| 2 | Formulier invullen |
+| 3 | Klik op Koppeling |
+| 6 | E-mail verzenden |
+| 7 | E-mail bezorgd |
+| 8 | E-mail verzonden |
+| 9 | E-mailadres opzeggen |
+| 10 | E-mail openen |
+| 11 | Klik op E-mail |
+| 12 | Nieuwe lead |
+| 21 | Regelafstand omzetten |
+| 22 | Score wijzigen |
+| 24 | Toevoegen aan lijst |
+| 25 | Verwijderen uit lijst |
+| 27 | Door e-mail teruggekaatst |
+| 32 | Leads samenvoegen |
+| 34 | Toevoegen aan opportunity |
+| 35 | Verwijderen uit opportunity |
+| 36 | Opportunity bijwerken |
+| 46 | Interessant moment |
+| 101 | Opbrengstfase wijzigen |
+| 104 | Status wijzigen in Progressie |
+| 110 | Bellen Webhaak |
+| 113 | Toevoegen aan cursus |
+| 114 | Cursustrack wijzigen |
+| 115 | Aanwezigheid van loop wijzigen |
+
+{style="table-layout:auto"}
+
+Voer de onderstaande stappen uit om de entiteiten met de standaardactiviteit te filteren wanneer u de [!DNL Marketo] bronconnector gebruikt.
+
+### Concepten van gegevensstroom maken
+
+Eerst, creeer a [[!DNL Marketo]  dataflow ](../ui/create/adobe-applications/marketo.md) en bewaar het als ontwerp. Raadpleeg de volgende documentatie voor gedetailleerde stappen voor het maken van een concept-gegevensstroom:
+
+* [Een gegevensstroom opslaan als concept met de gebruikersinterface](../ui/draft.md)
+* [Een gegevensstroom opslaan als concept met de API](../api/draft.md)
+
+### Uw gegevensstroom-id ophalen
+
+Zodra u een geschreven gegevensstroom hebt, moet u zijn overeenkomstige identiteitskaart dan terugwinnen.
+
+Navigeer in de gebruikersinterface naar de broncatalogus en selecteer vervolgens **[!UICONTROL Dataflows]** in de bovenste koptekst. Gebruik de statuskolom om alle gegevens te identificeren die in ontwerp wijze werden bewaard, en dan de naam van uw gegevensstroom te selecteren. Gebruik vervolgens het deelvenster **[!UICONTROL Properties]** aan de rechterkant om de gegevensstroom-id te zoeken.
+
+### Gegevens over gegevensstroom ophalen
+
+Vervolgens moet u de gegevens over de gegevensstroom ophalen, met name de id van de bronverbinding die aan uw gegevensstroom is gekoppeld. Om uw gegevens terug te winnen dataflow details, doe een verzoek van de GET aan het `/flows` eindpunt en verstrek uw dataflow identiteitskaart als wegparameter.
+
+**API formaat**
+
+```http
+GET /flows/{FLOW_ID}
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `{FLOW_ID}` | De id van de gegevensstroom die u wilt ophalen. |
+
++++verzoek
+
+Met de volgende aanvraag wordt informatie over de gegevensstroom-id opgehaald: `a7e88a01-40f9-4ebf-80b2-0fc838ff82ef` .
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/a7e88a01-40f9-4ebf-80b2-0fc838ff82ef' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
++++Response
+
+Een succesvolle reactie keert uw gegevens van de gegevensstroom, met inbegrip van informatie over zijn overeenkomstige bron en doelverbindingen terug. U moet nota nemen van uw bron en doel verbindings IDs, aangezien deze waarden later worden vereist, om uw gegevensstroom te publiceren.
+
+```json {line-numbers="true" start-line="1" highlight="23, 26"}
+{
+    "items": [
+        {
+            "id": "a7e88a01-40f9-4ebf-80b2-0fc838ff82ef",
+            "createdAt": 1728592929650,
+            "updatedAt": 1728597187444,
+            "createdBy": "acme@AdobeID",
+            "updatedBy": "acme@AdobeID",
+            "createdClient": "exc_app",
+            "updatedClient": "acme",
+            "sandboxId": "7f3419ce-53e2-476b-b419-ce53e2376b02",
+            "sandboxName": "prod",
+            "imsOrgId": "acme@AdobeOrg",
+            "name": "Marketo Engage Standard Activities ACME",
+            "description": "",
+            "flowSpec": {
+                "id": "15f8402c-ba66-4626-b54c-9f8e54244d61",
+                "version": "1.0"
+            },
+            "state": "enabled",
+            "version": "\"600290fc-0000-0200-0000-67084cc30000\"",
+            "etag": "\"600290fc-0000-0200-0000-67084cc30000\"",
+            "sourceConnectionIds": [
+                "56f7eb3a-b544-4eaa-b167-ef1711044c7a"
+            ],
+            "targetConnectionIds": [
+                "7e53e6e8-b432-4134-bb29-21fc6e8532e5"
+            ],
+            "inheritedAttributes": {
+                "properties": {
+                    "isSourceFlow": true
+                },
+                "sourceConnections": [
+                    {
+                        "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
+                        "connectionSpec": {
+                            "id": "bf1f4218-73ce-4ff0-b744-48d78ffae2e4",
+                            "version": "1.0"
+                        },
+                        "baseConnection": {
+                            "id": "0137118b-373a-4c4e-847c-13a0abf73b33",
+                            "connectionSpec": {
+                                "id": "bf1f4218-73ce-4ff0-b744-48d78ffae2e4",
+                                "version": "1.0"
+                            }
+                        }
+                    }
+                ],
+                "targetConnections": [
+                    {
+                        "id": "7e53e6e8-b432-4134-bb29-21fc6e8532e5",
+                        "connectionSpec": {
+                            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+                            "version": "1.0"
+                        }
+                    }
+                ]
+            },
+            "options": {
+                "isSampleDataflow": false,
+                "errorDiagnosticsEnabled": true
+            },
+            "transformations": [
+                {
+                    "name": "Mapping",
+                    "params": {
+                        "mappingVersion": 0,
+                        "mappingId": "f6447514ef95482889fac1818972e285"
+                    }
+                }
+            ],
+            "runs": "/runs?property=flowId==a7e88a01-40f9-4ebf-80b2-0fc838ff82ef",
+            "lastOperation": {
+                "started": 1728592929650,
+                "updated": 0,
+                "operation": "create"
+            },
+            "lastRunDetails": {
+                "id": "2d7863d5-ca4d-4313-ac52-2603eaf2cdbe",
+                "state": "success",
+                "startedAtUTC": 1728594713537,
+                "completedAtUTC": 1728597183080
+            },
+            "labels": [],
+            "recordTypes": [
+                {
+                    "type": "experienceevent",
+                    "extensions": {}
+                }
+            ]
+        }
+    ]
+}
+```
+
++++
+
+### De verbindingsgegevens van de bron ophalen
+
+Vervolgens gebruikt u de id van de bronverbinding en vraagt u een GET aan het eindpunt van `/sourceConnections` om de gegevens van de bronverbinding op te halen.
+
+**API formaat**
+
+```http
+GET /sourceConnections/{SOURCE_CONNECTION_ID}
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `{SOURCE_CONNECTION_ID}` | De id van de bronverbinding die u wilt ophalen. |
+
++++verzoek
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections/56f7eb3a-b544-4eaa-b167-ef1711044c7a' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
++++Response
+
+Een succesvolle reactie keert de details van uw bronverbinding terug. Noteer de versie omdat u deze waarde in de volgende stap nodig hebt om uw bronverbinding bij te werken.
+
+```json {line-numbers="true" start-line="1" highlight="30"}
+{
+    "items": [
+        {
+            "id": "b85b895f-a289-42e9-8fe1-ae448ccc7e53",
+            "createdAt": 1729634331185,
+            "updatedAt": 1729634331185,
+            "createdBy": "acme@AdobeID",
+            "updatedBy": "acme@AdobeID",
+            "createdClient": "exc_app",
+            "updatedClient": "acme",
+            "sandboxId": "7f3419ce-53e2-476b-b419-ce53e2376b02",
+            "sandboxName": "prod",
+            "imsOrgId": "acme@AdobeOrg",
+            "name": "New Source Connection - 2024-10-23T03:28:50+05:30",
+            "description": "Source connection created from the workflow",
+            "baseConnectionId": "fd9f7455-1e23-4831-9283-7717e20bee40",
+            "state": "draft",
+            "data": {
+                "format": "tabular",
+                "schema": null,
+                "properties": null
+            },
+            "connectionSpec": {
+                "id": "2d31dfd1-df1a-456b-948f-226e040ba102",
+                "version": "1.0"
+            },
+            "params": {
+                "columns": [],
+                "tableName": "Activity"
+            },
+            "version": "\"210068a6-0000-0200-0000-6718201b0000\"",
+            "etag": "\"210068a6-0000-0200-0000-6718201b0000\"",
+            "inheritedAttributes": {
+                "baseConnection": {
+                    "id": "fd9f7455-1e23-4831-9283-7717e20bee40",
+                    "connectionSpec": {
+                        "id": "2d31dfd1-df1a-456b-948f-226e040ba102",
+                        "version": "1.0"
+                    }
+                }
+            },
+            "lastOperation": {
+                "started": 1729634331185,
+                "updated": 0,
+                "operation": "draft_create"
+            }
+        }
+    ]
+}
+```
+
++++
+
+### De bronverbinding bijwerken met filtervoorwaarden
+
+Nu u uw bronverbindings-id en de bijbehorende versie hebt, kunt u nu een PATCH-verzoek indienen met de filtervoorwaarden die uw standaardactiviteitstypen opgeven.
+
+Als u de bronverbinding wilt bijwerken, vraagt u een PATCH-aanvraag naar het `/sourceConnections` -eindpunt en geeft u uw bron-verbindings-id op als een queryparameter. Daarnaast moet u een headerparameter `If-Match` opgeven met de bijbehorende versie van uw bronverbinding.
+
+>[!TIP]
+>
+>De header `If-Match` is vereist wanneer een PATCH-aanvraag wordt ingediend. De waarde voor deze header is de unieke versie/tag van de gegevensstroom die u wilt bijwerken. De versie-/tijdlabelwaarde wordt bijgewerkt bij elke geslaagde update van een gegevensstroom.
+
+**API formaat**
+
+```http
+GET /sourceConnections/{SOURCE_CONNECTION_ID}
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `{SOURCE_CONNECTION_ID}` | De id van de bronverbinding die u wilt ophalen. |
+
++++verzoek
+
+```shell
+curl -X PATCH \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections/56f7eb3a-b544-4eaa-b167-ef1711044c7a' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'If-Match: {VERSION_HERE}'
+  -d '
+      {
+        "op": "add",
+        "path": "/params/filters",
+        "value": {
+            "type": "PQL",
+            "format": "pql/json",
+            "value": {
+                "nodeType": "fnApply",
+                "fnName": "in",
+                "params": [
+                    {
+                        "nodeType": "fieldLookup",
+                        "fieldName": "activityType"
+                    },
+                    {
+                        "nodeType": "literal",
+                        "value": [
+                            "Change Status in Progression",
+                            "Fill Out Form"
+                        ]
+                    }
+                ]
+            }
+        }
+    }'
+```
+
++++
+
++++Response
+
+Een geslaagde reactie retourneert uw bron-verbindings-id en -tag (versie).
+
+```json
+{
+    "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
+    "etag": "\"210068a6-0000-0200-0000-6718201b0000\""
+}
+```
+
++++
+
+### Publish uw bronverbinding
+
+Wanneer de bronverbinding is bijgewerkt met de filtervoorwaarden, kunt u nu verder gaan van de conceptstatus en uw bronverbinding publiceren. Hiertoe vraagt u een POST aan bij het `/sourceConnections` -eindpunt en verstrekt u de id van de conceptbronverbinding en een handeling voor publicatie.
+
+**API formaat**
+
+```http
+POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `{SOURCE_CONNECTION_ID}` | De id van de bronverbinding die u wilt publiceren. |
+| `op` | Een handelingsverrichting die de staat van de gevraagde bronverbinding bijwerkt. Als u een conceptbronverbinding wilt publiceren, stelt u `op` in op `publish` . |
+
++++verzoek
+
+Het volgende verzoek publiceert een opgestelde bronverbinding.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections/56f7eb3a-b544-4eaa-b167-ef1711044c7a/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Response
+
+Een geslaagde reactie retourneert uw bron-verbindings-id en -tag (versie).
+
+```json
+{
+    "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
+    "etag": "\"9f007f7b-0000-0200-0000-670ef1150000\""
+}
+```
+
++++
+
+### Publish uw doelverbinding
+
+Net als bij de vorige stap moet u ook de doelverbinding publiceren om door te gaan en uw conceptgegevensstroom te publiceren. Maak een verzoek van de POST aan het `/targetConnections` eindpunt en verstrek identiteitskaart van de ontwerp doelverbinding die u, evenals een actieverrichting voor het publiceren wilt publiceren.
+
+**API formaat**
+
+```http
+POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `{TARGET_CONNECTION_ID}` | De id van de doelverbinding die u wilt publiceren. |
+| `op` | Een handelingsverrichting die de staat van de gevraagde doelverbinding bijwerkt. Als u een conceptdoelverbinding wilt publiceren, stelt u `op` in op `publish` . |
+
++++verzoek
+
+In het volgende verzoek wordt de doelverbinding met de id gepubliceerd: `7e53e6e8-b432-4134-bb29-21fc6e8532e5` .
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/7e53e6e8-b432-4134-bb29-21fc6e8532e5/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Response
+
+Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voor uw gepubliceerde doelverbinding terug.
+
+```json
+{
+    "id": "7e53e6e8-b432-4134-bb29-21fc6e8532e5",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
++++
+
+
+### Publish, uw gegevensstroom
+
+Met uw bron- en doelverbindingen beide gepubliceerd, kunt u nu verdergaan met de laatste stap en uw gegevensstroom publiceren. Als u de gegevensstroom wilt publiceren, vraagt u een POST naar het `/flows` -eindpunt en geeft u uw gegevensstroom-id en een handeling op voor publicatie.
+
+**API formaat**
+
+```http
+POST /flows/{FLOW_ID}/action?op=publish
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `{FLOW_ID}` | De id van de gegevensstroom die u wilt publiceren. |
+| `op` | Een handelingsverrichting die de staat van de gevraagde dataflow bijwerkt. Als u een conceptgegevensstroom wilt publiceren, stelt u `op` in op `publish` . |
+
++++verzoek
+
+Met het volgende verzoek wordt uw conceptgegevensstroom gepubliceerd.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/a7e88a01-40f9-4ebf-80b2-0fc838ff82ef/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Response
+
+Een geslaagde reactie retourneert de id en de bijbehorende `etag` gegevensstroom.
+
+```json
+{
+  "id": "a7e88a01-40f9-4ebf-80b2-0fc838ff82ef",
+  "etag": "\"4b0354b7-0000-0200-0000-6716ce1f0000\""
+}
+```
+
++++
+
+U kunt de interface van het Experience Platform gebruiken om te verifiëren dat uw ontwerp dataflow is gepubliceerd. Navigeer naar de pagina met gegevensstromen in de broncatalogus en verwijs naar **[!UICONTROL Status]** van de gegevensstroom. Als succesvol, zou de status aan **Toegelaten** nu moeten worden geplaatst.
+
+>[!TIP]
+>
+>* Een dataflow met toegelaten filtreren zal slechts eenmaal worden teruggevuld. Wijzigingen in de filtercriteria die u aanbrengt (of het nu een toevoeging of een verwijdering is), kunnen alleen van kracht worden voor incrementele gegevens.
+>* Als u historische gegevens voor om het even welk nieuw type(n) activiteit moet innemen, wordt u geadviseerd om een nieuw dataflow tot stand te brengen en de het filtreren criteria met de aangewezen activiteitstypes in de filtervoorwaarde te bepalen.
+>* U kunt geen aangepaste activiteitstypen filteren.
+>* U kunt gefilterde gegevens niet voorvertonen.
+
 ## Bijlage
 
 Deze sectie verstrekt verdere voorbeelden van verschillende ladingen voor het filtreren.
@@ -403,6 +896,8 @@ Deze sectie verstrekt verdere voorbeelden van verschillende ladingen voor het fi
 ### Enkelvoudige omstandigheden
 
 U kunt het eerste `fnApply` weglaten voor scenario&#39;s die slechts één voorwaarde vereisen.
+
++++Selecteren om voorbeeld weer te geven
 
 ```json
 {
@@ -425,9 +920,13 @@ U kunt het eerste `fnApply` weglaten voor scenario&#39;s die slechts één voorw
 }
 ```
 
++++
+
 ### De operator `in` gebruiken
 
 Zie de voorbeeldlading hieronder voor een voorbeeld van de exploitant `in`.
+
++++Selecteren om voorbeeld weer te geven
 
 ```json
 {
@@ -459,7 +958,11 @@ Zie de voorbeeldlading hieronder voor een voorbeeld van de exploitant `in`.
 }
 ```
 
++++
+
 ### De operator `isNull` gebruiken
+
++++Selecteren om voorbeeld weer te geven
 
 Zie de voorbeeldlading hieronder voor een voorbeeld van de exploitant `isNull`.
 
@@ -480,9 +983,14 @@ Zie de voorbeeldlading hieronder voor een voorbeeld van de exploitant `isNull`.
 }
 ```
 
++++
+
 ### De operator `NOT` gebruiken
 
 Zie de voorbeeldlading hieronder voor een voorbeeld van de exploitant `NOT`.
+
+
++++Selecteren om voorbeeld weer te geven
 
 ```json
 {
@@ -507,9 +1015,13 @@ Zie de voorbeeldlading hieronder voor een voorbeeld van de exploitant `NOT`.
 }
 ```
 
++++
+
 ### Voorbeeld met geneste voorwaarden
 
 Zie de voorbeeldlading hieronder voor een voorbeeld van complexe genestelde voorwaarden.
+
++++Selecteren om voorbeeld weer te geven
 
 ```json
 {
@@ -585,3 +1097,5 @@ Zie de voorbeeldlading hieronder voor een voorbeeld van complexe genestelde voor
   }
 }
 ```
+
++++

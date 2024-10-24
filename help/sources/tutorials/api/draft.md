@@ -2,7 +2,7 @@
 title: Concepten maken van de API voor Flow Service Entities
 description: Leer hoe u concepten van uw basisverbinding, bronverbinding, doelverbinding en gegevensstroom maakt met de Flow Service API
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
-source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
+source-git-commit: 9c40f6254b548027d271e5831bd1b03aec98df77
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 0%
@@ -589,7 +589,7 @@ Met het volgende verzoek wordt een conceptbasisverbinding voor de [!DNL Azure Fi
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  'https://platform.adobe.io/data/foundation/flowservice/connections?mode=draft' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
