@@ -2,7 +2,7 @@
 title: Gegevens op rijniveau voor een Source filteren met behulp van de Flow Service API
 description: Deze zelfstudie behandelt de stappen voor het filteren van gegevens op bronniveau met behulp van de Flow Service API
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 544bb7b5aff437fd49c30ac3d6261f103a609cac
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 2%
@@ -687,12 +687,12 @@ Als u de bronverbinding wilt bijwerken, vraagt u een PATCH-aanvraag naar het `/s
 **API formaat**
 
 ```http
-GET /sourceConnections/{SOURCE_CONNECTION_ID}
+PATCH /sourceConnections/{SOURCE_CONNECTION_ID}
 ```
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SOURCE_CONNECTION_ID}` | De id van de bronverbinding die u wilt ophalen. |
+| `{SOURCE_CONNECTION_ID}` | De id van de bronverbinding die u wilt bijwerken |
 
 +++verzoek
 

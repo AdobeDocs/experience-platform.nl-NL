@@ -2,9 +2,9 @@
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1685'
 ht-degree: 1%
 
 ---
@@ -109,11 +109,11 @@ Gezien de bovenstaande configuraties, zullen gebruikersacties en bepaling van de
 
 | Handeling van de gebruiker (Experience-gebeurtenis) | Verificatiestatus | Gegevensbron | Naamruimten in gebeurtenis | Naamruimte van primaire identiteit |
 | --- | --- | --- | --- | --- |
-| Pagina met creditcardaanbiedingen weergeven | Niet geverifieerd (anoniem) | Web SDK | {ECID} | ECID |
-| Help-pagina weergeven | Niet geverifieerd | Mobile SDK | {ECID, IDFA} | IDFA |
-| Accountbalans bekijken | Geverifieerd | Web SDK | {CRMID, ECID} | CRMID |
-| Aanmelden voor thuislening | Geverifieerd | Bronconnector voor analyse | {CRMID, ECID, AID} | CRMID |
-| Breng $1.000 van controle aan besparingen over | Geverifieerd | Mobile SDK | {CRMID, GAID, ECID} | CRMID |
+| Pagina met creditcardaanbiedingen weergeven | Niet geverifieerd (anoniem) | Web SDK | `{ECID}` | ECID |
+| Help-pagina weergeven | Niet geverifieerd | Mobile SDK | `{ECID, IDFA}` | IDFA |
+| Accountbalans bekijken | Geverifieerd | Web SDK | `{CRMID, ECID}` | CRMID |
+| Aanmelden voor thuislening | Geverifieerd | Bronconnector voor analyse | `{CRMID, ECID, AAID}` | CRMID |
+| Breng $1.000 van controle aan besparingen over | Geverifieerd | Mobile SDK | `{CRMID, GAID, ECID}` | CRMID |
 
 {style="table-layout:auto"}
 
