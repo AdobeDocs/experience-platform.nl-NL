@@ -3,9 +3,9 @@ keywords: cloudopslag;cloudopslag
 title: Overzicht van Cloud Storage-bestemmingen
 description: Adobe Experience Platform kan uw publiek als gegevensbestanden leveren aan uw Amazon S3-, AWS Kinesis-, Azure Event Hubs- of SFTP-cloudopslaglocaties.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
+source-git-commit: 2e21e62de624c5e7e9fac4d36dbf41b46198062a
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Als u een publiek naar de opslaglocatie van de cloud voor uw campagnes wilt stur
 
 >[!NOTE]
 >
-> De functionaliteit die in deze sectie wordt beschreven is momenteel beschikbaar voor [ Amazon S3 ](amazon-s3.md) slechts bestemmingen.
+> De functionaliteit die in dit gedeelte wordt beschreven, is beschikbaar voor alle cloudopslagdoelen. Nochtans, steunt de [ bestemming van Amazon S3 ](amazon-s3.md) momenteel slechts de `%SEGMENT_ID%` en `%SEGMENT_NAME%` macro&#39;s.
 
 Als u een aangepaste map per doelbestand op uw opslaglocatie wilt maken, kunt u macro&#39;s gebruiken in het invoerveld voor het mappad. Voeg de macro&#39;s in aan het einde van het invoerveld, zoals hieronder wordt weergegeven.
 
