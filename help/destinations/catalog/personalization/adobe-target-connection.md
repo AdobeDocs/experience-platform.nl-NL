@@ -3,9 +3,9 @@ keywords: doelpersonalisatie; bestemming; ervaring doelbestemming platform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: dae0cb108c62b078d0c7dd5bec466091d4937c53
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1739'
 ht-degree: 0%
 
 ---
@@ -126,7 +126,8 @@ Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de vol
 
   >[!IMPORTANT]
   >
-  >De gegevensstroom-id is uniek voor elke Adobe Target-doelverbinding. Als u het zelfde publiek aan veelvoudige gegevensstromen in kaart moet brengen, moet u [ een nieuwe bestemmingsverbinding ](../../ui/connect-destination.md) voor elke gegevensstroom identiteitskaart tot stand brengen, en door de [ stroom van de publiekactivering ](#activate) gaan.
+  >De gegevensstroom-id is uniek voor elke Adobe Target-doelverbinding. U kunt niet dezelfde gegevensstroom-id gebruiken voor meerdere Adobe Target-doelverbindingen.
+  >Als u het zelfde publiek aan veelvoudige gegevensstromen in kaart moet brengen, moet u [ een nieuwe bestemmingsverbinding ](../../ui/connect-destination.md) voor elke gegevensstroom identiteitskaart tot stand brengen, en door de [ stroom van de publiekactivering ](#activate) gaan.
 
    * **[!UICONTROL None]**: Selecteer deze optie als u de verpersoonlijking van Adobe Target moet vormen maar u kunt niet [ SDK van het Web van het Experience Platform ](/help/web-sdk/home.md) uitvoeren. Wanneer u deze optie gebruikt, worden soorten publiek die van Experience Platform naar Doel zijn geëxporteerd, alleen ondersteuning voor verpersoonlijking in de volgende sessie en wordt randsegmentatie uitgeschakeld. Verwijzing de lijst in de [ gesteunde gebruikscase ](#supported-use-cases) sectie voor een vergelijking van beschikbare gebruiksgevallen per implementatietype.
 
