@@ -1,7 +1,6 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, oktober 2024
 description: Aanvullende informatie voor de versie van oktober 2024 voor Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: a381bdc45ee9c3c7ffb32bb7a7ec43a1233d1556
 workflow-type: tm+mt
 source-wordcount: '854'
@@ -47,7 +46,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
-| Tags en extensies | Adobe Analytics JSON-weergave | U kunt nu de extensie Adobe Analytics-tags gebruiken om eVars, props en gebeurtenisinstellingen te controleren als JSON. Deze kan nu worden opgenomen in de SDK-extensie van Web en worden geëxporteerd voor bewerking. U kunt deze gegevens ook uploaden of kopiëren en opslaan op uw apparaat. Lees de [ de uitbreidingsdocumentatie van Adobe Analytics ](../../tags/extensions/client/analytics/overview.md) voor meer informatie. |
+| Tags en extensies | Adobe Analytics JSON View | U kunt nu de extensie Adobe Analytics-tags gebruiken om eVars, props en gebeurtenisinstellingen te controleren als JSON. Deze kan nu worden opgenomen in de SDK-extensie van Web en worden geëxporteerd voor bewerking. U kunt deze gegevens ook uploaden of kopiëren en opslaan op uw apparaat. Lees de [ de uitbreidingsdocumentatie van Adobe Analytics ](../../tags/extensions/client/analytics/overview.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
@@ -62,8 +61,8 @@ Raadpleeg voor meer informatie het [overzicht van dataverzameling](../../collect
 | Functie | Beschrijving |
 | ----------- | ----------- |
 | [ de uitvoersteun van de Serie algemeen beschikbaar ](../../destinations/ui/export-arrays-calculated-fields.md) | Alle klanten kunnen de **[!UICONTROL Add calculated field]** optie nu gebruiken wanneer het activeren van publiek *aan op dossier-gebaseerde bestemmingen* om volledige series of elementen van series uit te voeren. U moet de functie `array_to_string` nog steeds gebruiken om de array af te vlakken in een tekenreeks in het doelbestand. <br> ![ voeg berekende gebiedsselectie met functies en gebieden toe.](../2024/assets/october/array-export.gif " voeg berekend gebied met een selectie van de serie_to_string functie en de organisatieserie toe."){width="250" align="center" zoomable="yes"} |
-| [ Meldend nauwkeurigheidsverhogingen voor het stromen bestemmingen ](/help/destinations/ui/export-datasets.md) | Vanaf oktober 2024 wordt door Adobe een update uitgevoerd om de rapportnauwkeurigheid voor streamingdoelen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen het Experience Platform en de doelplatforms die rapporteren. <br> Vóór deze update heeft **[!UICONTROL Identities failed]** alle activeringspogingen opgenomen. Na deze update wordt alleen de laatste activeringstest opgenomen in het totale aantal. <br> Deze verbetering is momenteel op de [ bestemming van de Gelijke van de Klant van Google ](../../destinations/catalog/advertising/google-customer-match.md) van toepassing maar zal geleidelijk aan aan andere Experience Platform het stromen bestemmingen worden uitgerold. Na deze verbetering, kunnen de gebruikers van de [ bestemming van de Gelijke van de Klant van Google ](../../destinations/catalog/advertising/google-customer-match.md) een verwachte daling in hun **[!UICONTROL Identities failed]** telling zien. |
-| Flexibele implicaties van de doelgroepevaluatie op [ doelgroepactivering ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Als u [ flexibele doelgroepevaluatie ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) op doelgroepen in werking stelt die reeds om na segmentevaluatie worden geactiveerd, zullen de doelgroepen worden geactiveerd zodra de flexibele baan van de doelgroepevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken beëindigt. <br> Dit kan ertoe leiden dat een publiek meerdere keren per dag wordt geëxporteerd, op basis van uw handelingen. |
+| [ Meldend nauwkeurigheidsverhogingen voor het stromen bestemmingen ](/help/destinations/ui/export-datasets.md) | Vanaf oktober 2024 wordt door Adobe een update uitgevoerd om de rapportnauwkeurigheid voor streamingdoelen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen het Experience Platform en de doelplatforms die rapporteren. <br> Vóór deze update heeft **[!UICONTROL Identities failed]** alle activeringspogingen opgenomen. Na deze update wordt alleen de laatste activeringspoging opgenomen in het totale aantal. <br> Deze verhoging is momenteel op de [ bestemming van de Gelijke van de Klant van Google ](../../destinations/catalog/advertising/google-customer-match.md) van toepassing maar zal geleidelijk aan andere Experience Platform die bestemmingen stromen worden uitgevoerd. Na deze verhoging, kunnen de gebruikers van de [ bestemming van de Gelijke van de Klant van Google ](../../destinations/catalog/advertising/google-customer-match.md) een verwachte daling in hun **[!UICONTROL Identities failed]** telling zien. |
+| De flexibele implicaties van de publieksevaluatie op [ activering van het partijpubliek ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Als u [ flexibele publieksevaluatie ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) op publiek in werking stelt die reeds om na segmentevaluatie worden geactiveerd, zal het publiek worden geactiveerd zodra de flexibele baan van de publieksevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken eindigt. <br> Dit kan ertoe leiden dat een publiek meerdere keren per dag wordt geëxporteerd, op basis van uw handelingen. |
 
 {style="table-layout:auto"}
 
@@ -77,7 +76,7 @@ Voor meer informatie raadpleegt u het [overzicht van bestemmingen](../../destina
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| [!BADGE  Beperkte Beschikbaarheid ] {type=Informative} Flexibele doelgroepevaluatie | Dankzij een flexibele doelgroepevaluatie kun je snel nieuwe doelgroepen creëren op aanvraag voor tijdgevoelige communicatie. Meer informatie over deze nieuwe eigenschap kan binnen de [ Poortdocumentatie van het Poortpubliek worden gevonden ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation). |
+| [!BADGE  Beperkte Beschikbaarheid ] {type=Informatieve} Flexibele publieksevaluatie | De flexibele publieksevaluatie laat u snel nieuw publiek op bestelling voor tijd-gevoelige mededelingen tot stand brengen. Meer informatie over deze nieuwe eigenschap kan binnen de [ Poortdocumentatie van het Poort van het Publiek ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) worden gevonden. |
 
 {style="table-layout:auto"}
 
@@ -108,7 +107,7 @@ Gebruik bronnen in Experience Platform om gegevens vanuit een Adobe-applicatie o
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor het filteren van entiteiten met standaardactiviteit in [!DNL Marketo Engage] | U kunt de API van [!DNL Flow Service] gebruiken om entiteiten met standaardactiviteit te filteren wanneer u gegevens uit uw [!DNL Marketo Engage] -bron opneemt. Lees de gids op [ het filtreren  [!DNL Marketo]  standaardactiviteitengegevens ](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage) voor meer informatie. |
+| Ondersteuning voor het filteren van entiteiten met standaardactiviteit in [!DNL Marketo Engage] | U kunt de API van [!DNL Flow Service] gebruiken om entiteiten met standaardactiviteit te filteren wanneer u gegevens uit uw [!DNL Marketo Engage] -bron opneemt. Lees de gids over [ het filtreren  [!DNL Marketo]  standaardactiviteitengegevens ](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage) voor meer informatie. |
 
 {style="table-layout:auto"}
 
