@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, oktober 2024
 description: Aanvullende informatie voor de versie van oktober 2024 voor Adobe Experience Platform.
-source-git-commit: 5fc786058a187b161a147a8bd361d19c5f35105d
+source-git-commit: f30a124a40928abf69366d311131e353c2779191
 workflow-type: tm+mt
 source-wordcount: '1138'
-ht-degree: 35%
+ht-degree: 36%
 
 ---
 
@@ -14,12 +14,12 @@ ht-degree: 35%
 
 Updates van bestaande functies en documentatie in Adobe Experience Platform:
 
-- [ Dashboards {#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
-- [Gegevensverzameling {#collection}](#data-collection-collection)
-- [Doelen {#destinations}](#destinations-destinations)
-- [Segmentatieservice {#segmentation-service}](#segmentation-service-segmentation-service)
-- [Sandboxen {#sandboxes}](#sandboxes-sandboxes)
-- [Bronnen {#sources}](#sources-sources)
+- [Dashboards](#dashboards)
+- [Dataverzameling](#data-collection-)
+- [Bestemmingen](#destinations)
+- [Segmentatieservice](#segmentation-service)
+- [Sandboxes](#sandboxes)
+- [Bronnen](#sources)
 
 ## Dashboards {#dashboards}
 
@@ -30,10 +30,10 @@ Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten kr
 | Functie | Beschrijving |
 | --- | --- |
 | Distiller-sjablonen voor gegevens | Verken meerdere sjablonen om gestructureerde inzichten in de gegevens van het publiek te verkrijgen. Gebruik dashboards zoals **Geavanceerd[!UICONTROL Audience Overlaps]**, **[!UICONTROL Audience Comparison]**, **[!UICONTROL Audience Trends]**, en **[!UICONTROL Audience Identity Overlaps]** om gegevensgestuurde besluiten te nemen, segmentatie te optimaliseren en betrokkenheidsstrategieën te verbeteren. Zie de [ gids van de Malplaatjes van Distiller van Gegevens ](../../dashboards/sql-insights-query-pro-mode/templates/overview.md) voor meer details. |
-| Geavanceerde publieksoverlap | Analyseer snel de intersecties van doelgroepen voor specifieke doelgroepen of bekijk alle overlappingen om waardevolle inzichten in je hele doelgroep te ontdekken. Gebruik deze inzichten om segmentatie te verfijnen, redundante berichten te reduceren en meer gerichte campagnes te maken voor een verbeterde marketingefficiëntie. Zie de [ Geavanceerde gids van de Overlappingen van het Publiek ](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md) voor meer details. |
-| Verbeteringen voor Audience Comparison | Bekijk een zij-aan-zij vergelijking van zeer belangrijke metriek tussen verschillende doelgroepgroepen gebruikend het **dashboard van de Vergelijking van het publiek 0} {.** Met dit dashboard kunt u specifieke tijdkaders en KPIs, zoals publieksgrootte en identiteitssamenstelling selecteren, om meer geïnformeerde besluiten over publiekssegmentatie en het richten van strategieën te nemen. Lees de [ gids van de Vergelijking van het Publiek ](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md) voor meer informatie. |
-| Visualisatie van trends bij het publiek | Analyseer doelgroepmetrics in de loop der tijd met het **[!UICONTROL Audience Trends]** -dashboard. Visualiseer trends voor doelgroepgrootte, aantal identiteiten en aantal afzonderlijke identiteitsprofielen om je te helpen de doelgroepevolutie te volgen, de groei te meten en je betrokkenheidsstrategieën te verfijnen. Zie de [ gids van de Trends van de Doelgroep ](../../dashboards/sql-insights-query-pro-mode/templates/trends.md) voor meer details. |
-| Analyse van identiteitsoverlappingen | Analyseer identiteitsoverlap in geselecteerde doelgroepen met het **[!UICONTROL Audience Identity Overlaps]** -dashboard. Bekijk identiteitstendensen en uitsplitsingen om te begrijpen hoe verschillende identiteitstypen zich verhouden tot je doelgroep, en vergroot identiteitsvervlechting en verbeter de nauwkeurigheid van klantsegmentatie. Verwijs naar de [ gids van de Overlappingen van de Identiteit van het publiek ](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md) voor meer details. |
+| Geavanceerde publieksoverlap | Analyseer snel de snijpunten van de doelgroep voor specifieke doelgroepen of bekijk alle overlappingen om waardevolle inzichten in de gehele doelgroep aan het licht te brengen. Gebruik deze inzichten om segmentatie te verfijnen, overtollig overseinen te verminderen, en gerichtere campagnes voor betere marketing efficiency te creëren. Zie de [ Geavanceerde gids van de Overlappingen van de Publiek ](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md) voor meer details. |
+| Verbeteringen in de vergelijkingsmodus Publiek | Bekijk een zij-aan-zij vergelijking van zeer belangrijke metriek tussen verschillende publieksgroepen gebruikend het **dashboard van de Vergelijking van het publiek 0}.** Met dit dashboard kunt u specifieke tijdkaders en KPIs, zoals publieksgrootte en identiteitssamenstelling selecteren, om meer geïnformeerde besluiten over publiekssegmentatie en het richten van strategieën te nemen. Lees de [ gids van de Vergelijking van het Publiek ](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md) voor meer informatie. |
+| Visualisatie van trends bij het publiek | Analyseer in de loop der tijd publieksmetriek met het **[!UICONTROL Audience Trends]** dashboard. Tendensen visualiseren voor de grootte van het publiek, het aantal identiteiten en het aantal afzonderlijke identiteitsprofielen om u te helpen de evolutie van het publiek volgen, de groei meten en uw betrokkenheidsstrategieën verfijnen. Zie de [ gids van de Trends van de Volheid ](../../dashboards/sql-insights-query-pro-mode/templates/trends.md) voor meer details. |
+| Analyse van overlappingen van identiteiten | Analyseer identiteitsoverlap in geselecteerde soorten publiek met het dashboard **[!UICONTROL Audience Identity Overlaps]** . Bekijk identiteitstendensen en onderverdelingen om te begrijpen hoe de verschillende identiteitstypes binnen uw publiek betrekking hebben, verbeterend identiteit het stitching en verbeterend klantensegmenteringsnauwkeurigheid. Verwijs naar de [ gids van de Overlappingen van de Identiteit van het publiek ](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md) voor meer details. |
 
 {style="table-layout:auto"}
 
@@ -61,9 +61,9 @@ Raadpleeg voor meer informatie het [overzicht van dataverzameling](../../collect
 
 | Functie | Beschrijving |
 | ----------- | ----------- |
-| [ de uitvoersteun van de Serie over het algemeen beschikbaar ](../../destinations/ui/export-arrays-calculated-fields.md) | Alle klanten kunnen de **[!UICONTROL Add calculated field]** optie nu gebruiken wanneer het activeren van doelgroepen *aan op dossier-gebaseerde bestemmingen* om volledige series of elementen van series uit te voeren. U moet de functie `array_to_string` nog steeds gebruiken om de array af te vlakken tot een tekenreeks in het doelbestand. <br> ![ voeg berekende gebiedsselectie met functies en gebieden toe.](../2024/assets/october/array-export.gif " voeg berekend gebied met een selectie van de serie_to_string functie en organisatiesserie toe."){width="250" align="center" zoomable="yes"} |
+| [ de uitvoersteun van de Serie algemeen beschikbaar ](../../destinations/ui/export-arrays-calculated-fields.md) | Alle klanten kunnen de **[!UICONTROL Add calculated field]** optie nu gebruiken wanneer het activeren van publiek *aan op dossier-gebaseerde bestemmingen* om volledige series of elementen van series uit te voeren. U moet de functie `array_to_string` nog steeds gebruiken om de array af te vlakken in een tekenreeks in het doelbestand. <br> ![ voeg berekende gebiedsselectie met functies en gebieden toe.](../2024/assets/october/array-export.gif " voeg berekend gebied met een selectie van de serie_to_string functie en de organisatieserie toe."){width="250" align="center" zoomable="yes"} |
 | [ Meldend nauwkeurigheidsverhogingen voor het stromen bestemmingen ](/help/destinations/ui/export-datasets.md) | Vanaf oktober 2024 wordt door Adobe een update uitgevoerd om de rapportnauwkeurigheid voor streamingdoelen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen het Experience Platform en de doelplatforms die rapporteren. <br> Vóór deze update heeft **[!UICONTROL Identities failed]** alle activeringspogingen opgenomen. Na deze update wordt alleen de laatste activeringspoging opgenomen in het totale aantal. <br> Deze verhoging is momenteel op de [ bestemming van de Gelijke van de Klant van Google ](../../destinations/catalog/advertising/google-customer-match.md) van toepassing maar zal geleidelijk aan andere Experience Platform die bestemmingen stromen worden uitgevoerd. Na deze verhoging, kunnen de gebruikers van de [ bestemming van de Gelijke van de Klant van Google ](../../destinations/catalog/advertising/google-customer-match.md) een verwachte daling in hun **[!UICONTROL Identities failed]** telling zien. |
-| De flexibele implicaties van de publieksevaluatie op [ activering van het partijpubliek ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Als u [ flexibele publieksevaluatie ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) op publiek in werking stelt die reeds om na segmentevaluatie worden geactiveerd, zal het publiek worden geactiveerd zodra de flexibele baan van de publieksevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken eindigt. <br> Dit kan ertoe leiden dat doelgroepen meerdere keren per dag worden geëxporteerd, afhankelijk van uw handelingen. |
+| De flexibele implicaties van de publieksevaluatie op [ activering van het partijpubliek ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Als u [ flexibele publieksevaluatie ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) op publiek in werking stelt die reeds om na segmentevaluatie worden geactiveerd, zal het publiek worden geactiveerd zodra de flexibele baan van de publieksevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken eindigt. <br> Dit kan ertoe leiden dat een publiek meerdere keren per dag wordt geëxporteerd, op basis van uw handelingen. |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ Voor meer informatie raadpleegt u het [overzicht van bestemmingen](../../destina
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| [!BADGE  Beperkte Beschikbaarheid ] {type=Informative} Flexibele doelgroepevaluatie | Dankzij een flexibele doelgroepevaluatie kun je snel nieuwe doelgroepen creëren op aanvraag voor tijdgevoelige communicatie. Meer informatie over deze nieuwe eigenschap kan binnen de [ Poortdocumentatie van het Poortpubliek worden gevonden ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation). |
+| [!BADGE  Beperkte Beschikbaarheid ] {type=Informatieve} Flexibele publieksevaluatie | De flexibele publieksevaluatie laat u snel nieuw publiek op bestelling voor tijd-gevoelige mededelingen tot stand brengen. Meer informatie over deze nieuwe eigenschap kan binnen de [ Poortdocumentatie van het Poort van het Publiek ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) worden gevonden. |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldw
 | Functie | Beschrijving |
 | --- | --- |
 | Gereedschapspakket met sandbox delen | U kunt sandboxgereedschappen nu gebruiken om sandboxconfiguraties tussen sandboxen in verschillende organisaties gemakkelijk te exporteren en te importeren. Er zijn nu twee categorieën van gedeelde pakketten beschikbaar:<br><ul><li>**[Privé pakket ](../../sandboxes/ui/sharing-packages-across-orgs.md#private-packages):** Gebruik privé pakket delend met organisaties die het delen verzoek van de bronorganisatie hebben goedgekeurd.</li><li>**[Openbaar pakket ](../../sandboxes/ui/sharing-packages-across-orgs.md#public-packages):** de Openbare pakketten kunnen zonder extra goedkeuringen worden gedeeld en gemakkelijk worden ingevoerd gebruikend de lading van het pakket.</li></ul><br> voor meer informatie over deze eigenschappen, lees de gids over [ delend pakketten over organisaties ](../../sandboxes/ui/sharing-packages-across-orgs.md). |
-| [ Pakket delend ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages#org-linking) in sandbox tooling API | Gebruik de API voor sandboxgereedschappen om aanvragen in te dienen bij twee nieuwe eindpunten, `/handshake` en `/transfer` , voor het delen tussen organisaties, het ophalen en het maken van aanvragen voor het delen van pakketten. Er is een extra aanvraag toegevoegd aan het eindpunt van `/packages` om de lading van een pakket op te halen. |
+| [ Pakket delend ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages#org-linking) in het zandbak tooling API | Met de API voor gereedschappen voor sandboxen kunt u aanvragen indienen bij twee nieuwe eindpunten `/handshake` en `/transfer` voor het delen tussen organisaties, het ophalen en het maken van aanvragen voor het delen van pakketten. Er is een extra aanvraag toegevoegd aan het eindpunt van `/packages` om de lading van een pakket op te halen. |
 
 {style="table-layout:auto"}
 
@@ -108,7 +108,7 @@ Gebruik bronnen in Experience Platform om gegevens vanuit een Adobe-applicatie o
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor het filteren van standaardactiviteitentiteiten in [!DNL Marketo Engage] | U kunt de API van [!DNL Flow Service] gebruiken om entiteiten met standaardactiviteit te filteren wanneer u gegevens uit uw [!DNL Marketo Engage] -bron opneemt. Lees de gids op [ het filtreren  [!DNL Marketo]  standaardactiviteitengegevens ](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage) voor meer informatie. |
+| Ondersteuning voor het filteren van entiteiten met standaardactiviteit in [!DNL Marketo Engage] | U kunt de API van [!DNL Flow Service] gebruiken om entiteiten met standaardactiviteit te filteren wanneer u gegevens uit uw [!DNL Marketo Engage] -bron opneemt. Lees de gids over [ het filtreren  [!DNL Marketo]  standaardactiviteitengegevens ](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage) voor meer informatie. |
 
 {style="table-layout:auto"}
 
