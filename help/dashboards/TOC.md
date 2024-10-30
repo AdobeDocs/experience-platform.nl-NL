@@ -5,10 +5,10 @@ breadcrumb-title: Handleiding voor dashboards
 user-guide-description: Leer hoe u gegevens in Experience Platform kunt visualiseren via aanpasbare dashboards.
 feature: Dashboards
 role: Developer,User
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cb3cc06a31c0390d9b1f152c2186da3847647f64
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 22%
+source-wordcount: '142'
+ht-degree: 21%
 
 ---
 
@@ -16,12 +16,18 @@ ht-degree: 22%
 # Adobe Experience Platform-dashboards {#dashboards}
 
 * [Overzicht van dashboards](home.md)
-* [Toegangsrechten voor dashboard](permissions.md)
-* [Overzicht van dashboards](inventory.md)
+* [Machtigingen voor dashboardtoegang](permissions.md)
+* [Dashboards-overzicht](inventory.md)
 * [Standaarddashboards](standard-dashboards.md)
 * [Dashboards downloaden naar PDF](download.md)
-* SQL-inzichten: modus query pro {#sql-insights-query-pro-mode}
+* SQL-inzichten: modus Query Pro {#sql-insights-query-pro-mode}
    * [Overzicht](sql-insights-query-pro-mode/overview.md)
+   * Data Distiller-sjablonen {#templates}
+      * [Overzicht](sql-insights-query-pro-mode/templates/overview.md)
+      * [Geavanceerd publiek overlapt](sql-insights-query-pro-mode/templates/overlaps.md)
+      * [Poortvergelijking](sql-insights-query-pro-mode/templates/comparison.md)
+      * [Doelgroeptrends](sql-insights-query-pro-mode/templates/trends.md)
+      * [Overlap van doelgroepidentiteit](sql-insights-query-pro-mode/templates/identity-overlaps.md)
    * Filters {#filters}
       * [Datumfilter](sql-insights-query-pro-mode/filters/date-filter.md)
       * [ Globale filter ](sql-insights-query-pro-mode/filters/global-filter.md)
@@ -51,10 +57,10 @@ ht-degree: 22%
 * Gebruik van inzichten {#insights-use-cases}
    * [Conceptanalyse](insights-use-cases/consent-analysis.md)
 * Beschikbare gegevensmodellen {#data-models}
-   * [Real-time Customer Data Platform Insights, gegevensmodel B2B, editie](data-models/cdp-insights-data-model-b2b.md)
+   * [Real-time Customer Data Platform Insights-gegevensmodel B2B edition](data-models/cdp-insights-data-model-b2b.md)
    * [Real-time Customer Data Platform Insights, gegevensmodel B2C, editie](data-models/cdp-insights-data-model-b2c.md)
-* Toepassingsintegratie {#integrations}
+* Toepassingsintegraties {#integrations}
    * [Power BI](integrations/power-bi.md)
-* [Gegevensbestanden van het query-dashboard](query.md)
+* [Datasets van querydashboard](query.md)
 * [SQL met inzicht weergeven](view-sql.md)
 * [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
