@@ -2,10 +2,10 @@
 title: End-to-end testen uploaden en implementeren voor een extensie
 description: Leer hoe u uw extensie kunt valideren, uploaden en testen in Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
+source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
 workflow-type: tm+mt
-source-wordcount: '2359'
-ht-degree: 0%
+source-wordcount: '2342'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Als u tagextensies wilt testen in Adobe Experience Platform, gebruikt u de API-tags en/of opdrachtregelprogramma&#39;s om de extensiepakketten te uploaden. Vervolgens gebruikt u de interface van het platform of de gebruikersinterface voor gegevensverzameling om uw extensiepakket te installeren in een eigenschap en de mogelijkheden ervan uit te oefenen in een tagbibliotheek en te bouwen.
 
@@ -43,9 +43,9 @@ Voor informatie bij het creëren van een technische rekening voor gebruik met ma
 
 >[!IMPORTANT]
 >
->Om tot een Integratie in Adobe I/O te leiden moet u een Beheerder van de Organisatie van het Experience Cloud of een Experience Cloud zijn Org Ontwikkelaar.
+>Om een integratie in Adobe I/O tot stand te brengen moet u een Beheerder van de Organisatie van het Experience Cloud of een Experience Cloud zijn Org Ontwikkelaar.
 
-Als u geen Integratie kunt tot stand brengen, is het waarschijnlijk dat u niet de correcte toestemmingen hebt. Hiervoor is een Org Admin nodig om de stappen voor u te voltooien of om u toe te wijzen als ontwikkelaar.
+Als u geen integratie kunt tot stand brengen, is het waarschijnlijk dat u niet de correcte toestemmingen hebt. Hiervoor is een Org Admin nodig om de stappen voor u te voltooien of om u toe te wijzen als ontwikkelaar.
 
 ## Upload Uw extensiepakket {#upload}
 
@@ -53,22 +53,24 @@ Nu u geloofsbrieven hebt, bent u bereid om uw uitbreidingspakket van begin tot e
 
 Wanneer u het extensiepakket voor het eerst uploadt, wordt de status `development` weergegeven. Dit betekent dat het alleen zichtbaar is voor uw eigen organisatie en alleen met een eigenschap die is gemarkeerd voor extensieontwikkeling.
 
-Gebruik de bevellijn om het volgende bevel binnen de folder in werking te stellen die uw .zip pakket bevat.
+Gebruik de opdrachtregel om de volgende opdracht uit te voeren in de map die uw .zip-pakket bevat.
 
 ```bash
 npx @adobe/reactor-uploader
 ```
 
-Met `npx` kunt u een npm-pakket downloaden en uitvoeren zonder het daadwerkelijk op uw computer te installeren. Dit is de eenvoudigste manier om de Uploader uit te voeren.
+Met `npx` kunt u een npm-pakket downloaden en uitvoeren zonder dat u het op uw computer hoeft te installeren. Dit is de eenvoudigste manier om de Uploader uit te voeren.
 
-Voor Uploader moet u verschillende gegevens invoeren. De technische account-id, de API-sleutel en andere gegevens kunnen worden opgehaald van de Adobe I/O-console. Navigeer aan de [ pagina van Integraties ](https://console.adobe.io/integrations) in de I/O console. Selecteer de juiste organisatie in het vervolgkeuzemenu, zoek de juiste integratie en selecteer **[!UICONTROL View]** .
+>[!NOTE]
+> Standaard verwacht de uploader Adobe I/O-referenties voor een server-naar-server Oauth-flow. De oudere `jwt-auth` gebruikersgegevens
+> kan worden gebruikt door `npx @adobe/reactor-uploader@v5.2.0` tot aan afschrijving uit te voeren op 1 januari 2025. De vereiste parameters
+> om de `jwt-auth` versie in werking te stellen kan [ hier ](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452) worden gevonden.
 
-- Wat is het pad naar uw persoonlijke sleutel? /path/to/private.key. Dit is de plaats u uw privé sleutel in stap 2 hierboven bewaarde.
-- Wat is je Org ID? Kopieer en plak deze vanuit de overzichtspagina van de I/O-console die u eerder hebt geopend.
-- Wat is je technische account-id? Kopieer en plak deze vanuit de I/O-console.
-- Wat is uw API-sleutel? Kopieer en plak deze vanuit de I/O-console.
-- Wat is het clientgeheim? Kopieer en plak deze vanuit de I/O-console.
-- Wat is het pad naar het extension_package dat u wilt uploaden? /path/to/extension_package.zip. Als u de uploader aanroept vanuit de map die het ZIP-pakket bevat, kunt u dit gewoon in de lijst selecteren in plaats van het pad te typen.
+Voor uploader hoeft u slechts enkele gegevens in te voeren. De `clientId` en `clientSecret` kunnen worden opgehaald vanaf de Adobe I/O-console. Navigeer aan de [ pagina van Integraties ](https://console.adobe.io/integrations) in de I/O console. Selecteer de juiste organisatie in het vervolgkeuzemenu, zoek de juiste integratie en selecteer **[!UICONTROL View]** .
+
+- Wat is uw `clientId` ? Kopieer en plak deze vanuit de I/O-console.
+- Wat is uw `clientSecret` ? Kopieer en plak deze vanuit de I/O-console.
+- Als u de uploader aanroept vanuit de map die het ZIP-pakket bevat, kunt u dit gewoon in de lijst selecteren in plaats van het pad te typen.
 
 Uw extensiepakket wordt vervolgens geüpload en de uploader geeft u de id van het extension_package.
 
@@ -80,9 +82,11 @@ Uw extensiepakket wordt vervolgens geüpload en de uploader geeft u de id van he
 >
 >Als u de uploader vaak wilt uitvoeren, kan het lastig zijn al deze informatie telkens in te voeren. U kunt deze ook als argumenten doorgeven vanaf de opdrachtregel. Controle uit de [ sectie van de Argumenten van de Lijn van het Bevel ](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) van de NPM- documenten voor meer info.
 
+Als u het uploaden van uw uitbreiding wilt beheren direct gebruikend API, zie de voorbeeldvraag [ creërend ](../../api/endpoints/extension-packages.md/#create) of [ het bijwerken van ](../../api/endpoints/extension-packages.md#update) een uitbreidingspakket in de API documenten voor meer detail.
+
 ## Een ontwikkeleigenschap maken {#property}
 
-Nadat u zich hebt aangemeld bij de gebruikersinterface en **[!UICONTROL Tags]** hebt geselecteerd in de linkernavigatie, wordt het [!UICONTROL Properties] -scherm weergegeven. Een eigenschap is een container voor de tags die u wilt implementeren en kan op een of meerdere sites worden gebruikt.
+Nadat u zich hebt aangemeld bij de gebruikersinterface en **[!UICONTROL Tags]** hebt geselecteerd in de navigatie links, wordt het [!UICONTROL Properties] -scherm weergegeven. Een eigenschap is een container voor de tags die u wilt implementeren en kan op een of meerdere sites worden gebruikt.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -90,9 +94,9 @@ De eerste keer dat u zich aanmeldt, worden er geen eigenschappen op het scherm w
 
 >[!NOTE]
 >
->`localhost` werkt niet als een URL-waarde. Gebruik in plaats daarvan een willekeurige modelwaarde voor het testen als u een `localhost` URL gebruikt. Bijvoorbeeld example.com.
+>`localhost` werkt niet als een URL-waarde. Gebruik in plaats daarvan een mock-waarde om te testen als u een `localhost` URL gebruikt. Bijvoorbeeld example.com.
 
-Om dit bezit voor het testen van de uitbreidingsontwikkeling te gebruiken, moet u de **GEAVANCEERDE OPTIONS** uitbreiden en ervoor zorgen om de doos voor **te controleren vormt voor uitbreidingsontwikkeling**.
+Om dit bezit voor het testen van de uitbreidingsontwikkeling te gebruiken, moet u **ADVANCED OPTIONS** uitbreiden en ervoor zorgen om de doos voor **te controleren voor uitbreidingsontwikkeling** vormt.
 
 ![](../images/getting-started/launch-create-a-dev-property.png)
 
@@ -160,7 +164,7 @@ Voeg met het Facebook-extensievoorbeeld een gebeurtenis toe telkens wanneer een 
 
 ![](../images/getting-started/load-event.png)
 
-Het `Window Loaded` **Type van Gebeurtenis** zorgt ervoor dat om het even welke tijd een pagina op de testplaats laadt deze regel zal worden teweeggebracht. Selecteer **houden Veranderingen**. Voor dit voorbeeld, negeer **Voorwaarden** aangezien de regel voor om het even welke pagina op de testplaats zou moeten worden teweeggebracht.
+Het `Window Loaded` **Type van Gebeurtenis** zorgt ervoor dat om het even welke tijd een pagina op de testplaats laadt deze regel zal worden teweeggebracht. Selecteer **houd Veranderingen**. Voor dit voorbeeld, negeer **Voorwaarden** aangezien de regel voor om het even welke pagina op de testplaats zou moeten worden teweeggebracht.
 
 Onder **ACTIES** uitgezocht **voeg** toe. Het **scherm van de Configuratie van de Actie** verschijnt.Daarna moet u de uitbreiding kiezen dat de regel moet worden toegepast op, en de actie om voor te komen wanneer de regel wordt teweeggebracht. Selecteer **Pixel van Facebook** van de **3} dropdown lijst van de Uitbreiding {, en** verzend de Mening van de Pagina **van het** Type van Actie **dropdown lijst.** Selecteer **houden Veranderingen**, en dan **sparen** op het volgende **uitgeven het scherm van de Regel**.
 
@@ -192,7 +196,7 @@ Nadat het bouwstijlproces voltooit, een groene **succes** indicatorvertoningen n
 
 ![](../images/getting-started/successful-build.png)
 
-De tagbibliotheek is nu gepubliceerd en beschikbaar voor gebruik. De testpagina moet de nieuwe bibliotheek gebruiken om het paginagedrag voor de eindgebruiker in browser te testen.
+De tagbibliotheek is nu gepubliceerd en beschikbaar voor gebruik. De testpagina moet de nieuwe bibliotheek gebruiken om het paginagedrag voor de eindgebruiker in een browser te testen.
 
 ## Tags op een testsite installeren {#install-data-collection-tags}
 
@@ -210,7 +214,7 @@ Voltooi de installatie door deze enkele `<script>` -tag in de `<head>` -sectie v
 
 Hieronder volgt een lijst met handige consoleopdrachten voor het valideren van uw extensie op uw testpagina of site.
 
-- In `_satellite.setDebug(true);` worden de foutopsporingsmodus ingeschakeld en worden nuttige logboekinstructies naar de console uitgevoerd.
+- Met `_satellite.setDebug(true);` kunt u de foutopsporingsmodus inschakelen en nuttige logboekinstructies uitvoeren naar de console.
 - Het `_satellite._container` -object bevat nuttige informatie over de geïmplementeerde bibliotheek, waaronder informatie over de opgenomen build, gegevenselementen, regels en extensies.
 
 Het doel van deze test is de functionaliteit van de geïmplementeerde bibliotheek te controleren en ervoor te zorgen dat het extensiepakket zich gedraagt zoals u had verwacht nadat het in een bibliotheek is opgenomen.
