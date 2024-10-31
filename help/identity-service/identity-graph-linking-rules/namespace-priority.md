@@ -2,9 +2,9 @@
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
+source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1728'
 ht-degree: 1%
 
 ---
@@ -150,6 +150,8 @@ Gegevens-hygiënebestanden verwijderen de aanvraagfuncties voor een bepaalde ide
 Voor meer informatie, lees het [ geavanceerde overzicht van het levenscyclusbeheer ](../../hygiene/home.md).
 
 ### Berekende kenmerken
+
+Bij berekende kenmerken wordt naamruimteprioriteit gebruikt om de berekende kenmerkwaarde op te slaan. Voor een bepaalde gebeurtenis, zal de identiteit met de hoogste namespace prioriteit de waarde van de gegevens verwerkte attributen hebben die tegen het worden geschreven. Voor meer informatie, lees de [ gegevens verwerkte handleiding van attributen UI ](../../profile/computed-attributes/ui.md).
 
 Berekende kenmerken gebruiken geen naamruimteprioriteit voor het berekenen van waarden. Als u gegevens verwerkte attributen gebruikt, moet u ervoor zorgen dat CRMID als uw primaire identiteit voor WebSDK wordt aangewezen. Voor meer informatie, lees de [ gegevens verwerkte handleiding van attributen UI ](../../profile/computed-attributes/ui.md).
 
