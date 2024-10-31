@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f31d250cfbe42680ee6f4d1334bf04a2ee8643a1
+source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2042'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 - [ DataStream treedt met voeten ](../datastreams/overrides.md) wordt nu gesteund wanneer het beginnen van media zittingen.
 
-- Toegevoegde ondersteuning voor Adobe Target-reactietokens in de rendering slaagde erin om haken te controleren.
+- Toegevoegde steun voor de reactietekenen van Adobe Target in de [`onContentRendering`](monitoring-hooks.md#onContentRendering) controlehaak.
 
 **Bevestigingen en verbeteringen**
 

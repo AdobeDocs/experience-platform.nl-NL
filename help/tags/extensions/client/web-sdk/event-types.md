@@ -3,9 +3,9 @@ title: Gebeurtenistypen in de Adobe Experience Platform Web SDK-extensie
 description: Leer hoe u gebeurtenistypen gebruikt die door de Adobe Experience Platform Web SDK-extensie in Adobe Experience Platform Launch worden geleverd.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
+source-git-commit: b37bf09e3ec16f29d6acee3bca71463fa2c876ce
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1419'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,34 @@ ht-degree: 0%
 # Gebeurtenistypen
 
 Op deze pagina worden de Adobe Experience Platform-gebeurtenistypen beschreven die worden geleverd door de tagextensie Adobe Experience Platform Web SDK. Deze worden gebruikt aan [ bouwt regels ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) en zou niet met het `eventType` gebied in het [`xdm` voorwerp ](/help/web-sdk/commands/sendevent/xdm.md) moeten worden verward.
+
+## Monitoringhaak geactiveerd {#monitoring-hook-triggered}
+
+De SDK van het Web van Adobe Experience Platform omvat controlemaakjes die u kunt gebruiken om diverse systeemgebeurtenissen te controleren. Deze hulpmiddelen zijn nuttig om uw eigen het zuiveren hulpmiddelen te ontwikkelen en de logboeken van SDK van het Web te vangen.
+
+Voor volledige details over welke parameters elke controlehaakgebeurtenis bevat, zie de [ controle van SDK van het Web documentatie van haken ](../../../../web-sdk/monitoring-hooks.md).
+
+![ het gebruikersinterfacebeeld van Markeringen die het type van de controlehaakgebeurtenis tonen ](assets/monitoring-hook-triggered.png)
+
+De de markeringsuitbreiding van SDK van het Web steunt de volgende controlehaken:
+
+* **[!UICONTROL onInstanceCreated]**: Deze gebeurtenis van de controlehaak wordt teweeggebracht wanneer u met succes een nieuwe instantie van SDK van het Web hebt gecreeerd.
+* **[!UICONTROL onInstanceConfigured]**: deze haakgebeurtenis voor controle wordt geactiveerd door de Web SDK wanneer de opdracht [`configure`](../../../../web-sdk/commands/configure/overview.md) correct is omgezet
+* **[!UICONTROL onBeforeCommand]**: Deze gebeurtenis van de controlehaak wordt teweeggebracht door Web SDK alvorens een ander bevel wordt uitgevoerd. U kunt deze controlehaak gebruiken om de configuratieopties van een specifiek bevel terug te winnen.
+* **[!UICONTROL onCommandResolved]**: Deze haakgebeurtenis voor controle wordt geactiveerd voordat de opdrachtpromise wordt opgelost. U kunt deze functie gebruiken om de bevelopties en het resultaat te zien.
+* **[!UICONTROL onCommandRejected]**: Deze gebeurtenis van de controlehaak wordt teweeggebracht wanneer een bevelbelofte wordt verworpen en het bevat informatie over de oorzaak van de fout.
+* **[!UICONTROL onBeforeNetworkRequest]**: Deze haakgebeurtenis voor controle wordt geactiveerd voordat een netwerkaanvraag wordt uitgevoerd.
+* **[!UICONTROL onNetworkResponse]**: Deze haakgebeurtenis voor controle wordt geactiveerd wanneer de browser een reactie ontvangt.
+* **[!UICONTROL onNetworkError]**: Deze haakgebeurtenis voor controle wordt geactiveerd wanneer de netwerkaanvraag is mislukt.
+* **[!UICONTROL onBeforeLog]**: Deze gebeurtenis van de controlehaak wordt teweeggebracht alvorens SDK van het Web om het even wat aan de console registreert.
+* **[!UICONTROL onContentRendering]**: Deze gebeurtenis van de controlehaak wordt teweeggebracht door de `personalization` component en het helpt u het teruggeven van de verpersoonlijkingsinhoud zuiveren. Deze gebeurtenis kan verschillende statussen hebben:
+   * `rendering-started`: Geeft aan dat de Web SDK op het punt staat voorstellingen te renderen. Voordat de SDK van het Web een beslissingsbereik of een weergave begint te renderen, kunt u in het `data` -object de voorstellingen zien die op het punt staan te worden gerenderd door de component `personalization` en de naam van het bereik.
+   * `no-offers`: Geeft aan dat er geen payload is ontvangen voor de aangevraagde parameters.
+   * `rendering-failed`: geeft aan dat de Web SDK er niet in is geslaagd een voorstel te renderen.
+   * `rendering-succeeded`: geeft aan dat rendering is voltooid voor een beslissingsbereik.
+   * `rendering-redirect`: Geeft aan dat Web SDK een omleidingsvoorstel uitvoert.
+* **[!UICONTROL onContentHiding]**: Deze haakgebeurtenis voor controle wordt geactiveerd wanneer een vooraf verborgen stijl wordt toegepast of verwijderd.
+
 
 ## [!UICONTROL Send event complete]
 
