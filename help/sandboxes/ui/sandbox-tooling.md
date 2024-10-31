@@ -2,9 +2,9 @@
 title: Sandbox Tooling
 description: U kunt Sandboxconfiguraties naadloos exporteren en importeren tussen sandboxen.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
+source-git-commit: 85476ea8a667cf3e74cd7a24da07d81c635e1628
 workflow-type: tm+mt
-source-wordcount: '2236'
+source-wordcount: '2264'
 ht-degree: 0%
 
 ---
@@ -151,6 +151,8 @@ De pagina [!UICONTROL Package object and dependencies] bevat een lijst met alle 
 >[!NOTE]
 >
 >Afhankelijke objecten kunnen worden vervangen door bestaande objecten in de doelsandbox, zodat u bestaande objecten opnieuw kunt gebruiken in plaats van een nieuwe versie te maken. Wanneer u bijvoorbeeld een pakket met schema&#39;s importeert, kunt u de bestaande aangepaste veldgroep en naamruimten in de doelsandbox opnieuw gebruiken. U kunt ook bestaande segmenten in de doelsandbox opnieuw gebruiken wanneer u een pakket importeert, inclusief de stappen voor reizen.
+>
+>Sandbox-gereedschappen bieden momenteel geen ondersteuning voor het bijwerken of overschrijven van bestaande objecten. U kunt een nieuw object maken of het bestaande object zonder wijzigingen blijven gebruiken.
 
 Als u een bestaand object wilt gebruiken, selecteert u het potloodpictogram naast het afhankelijke object.
 
