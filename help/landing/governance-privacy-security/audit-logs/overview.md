@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: 7ae5e9dc79b4e1f08d2bf98876b02db1967ccbe1
 workflow-type: tm+mt
 source-wordcount: '1320'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Bovenste handelingen"
->abstract="Deze widget geeft de belangrijkste soorten acties weer die binnen de geselecteerde tijdlijn in het Experience Platform zijn uitgevoerd. Om de volledige lijst van geregistreerde acties in Platform te zien, selecteer **Controles** in de linkernavigatie."
+>abstract="Deze widget toont de belangrijkste soorten acties die in het Experience Platform zijn uitgevoerd binnen het geselecteerde tijdkader. Om de volledige lijst van geregistreerde acties in Platform te zien, selecteer **Controles** in de linkernavigatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
@@ -53,7 +53,7 @@ In de volgende tabel wordt aangegeven op welke acties de middelen in de auditlog
 | [ grafiek van de Identiteit ](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>Weergave</li></ul> |
 | [ Identiteitsnaamruimte ](../../../identity-service/features/namespaces.md) | <ul><li>Maken</li><li>Bijwerken</li></ul> |
 | [ beleid van de Fusie ](../../../profile/merge-policies/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
-| [ profiel van het Product ](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [ Profiel van het Product ](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [Query](../../../query-service/ui/overview.md) | <ul><li>Uitvoeren</li></ul> |
 | [ malplaatje van de Vraag ](../../../query-service/ui/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [ Rol (attribuut gebaseerd toegangsbeheer) ](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Gebruiker toevoegen</li><li>Gebruiker verwijderen</li></ul> |
@@ -104,7 +104,7 @@ De volgende filters zijn beschikbaar voor controlegebeurtenissen in UI:
 | --- | --- |
 | [!UICONTROL Category] | Gebruik dropdown menu aan filter getoonde resultaten door [ categorie ](#category). |
 | [!UICONTROL Action] | Filteren op handeling. De acties beschikbaar voor elke dienst kunnen in de middellijst hierboven worden gezien. |
-| [!UICONTROL User] | Voer de volledige gebruikersnaam in (bijvoorbeeld `johndoe@acme.com` ) om te filteren op gebruiker. |
+| [!UICONTROL User] | Voer de volledige gebruikers-id in (bijvoorbeeld `johndoe@acme.com` ) om te filteren op gebruiker. |
 | [!UICONTROL Status] | Filter door of de actie werd toegestaan (voltooid) of wegens gebrek aan [ toegangsbeheer ](../../../access-control/home.md) toestemmingen ontkend. |
 | [!UICONTROL Date] | Selecteer een begindatum en/of een einddatum om een datumbereik te definiëren waarop de resultaten moeten worden gefilterd. De gegevens kunnen met een raadplegingsperiode van 90 dagen worden uitgevoerd (bijvoorbeeld, 2021-12-15 aan 2022-03-15). Dit kan per gebeurtenistype verschillen. |
 
@@ -119,10 +119,10 @@ De teruggekeerde gegevens van het controlelogboek bevatten de volgende informati
 | [!UICONTROL Timestamp] | De exacte datum en tijd van de actie die in een `month/day/year hour:minute AM/PM` -indeling wordt uitgevoerd. |
 | [!UICONTROL Asset Name] | De waarde voor het veld [!UICONTROL Asset Name] is afhankelijk van de categorie die als filter is gekozen. |
 | [!UICONTROL Category] | Dit veld komt overeen met de categorie die is geselecteerd in de vervolgkeuzelijst met filters. |
-| [!UICONTROL Action] | Welke acties beschikbaar zijn, is afhankelijk van de categorie die u als filter hebt gekozen. |
-| [!UICONTROL User] | Dit veld bevat de gebruikersnaam die de query heeft uitgevoerd. |
+| [!UICONTROL Action] | Welke acties beschikbaar zijn, is afhankelijk van de categorie die als filter is gekozen. |
+| [!UICONTROL User] | Dit veld bevat de gebruikers-id die de query heeft uitgevoerd. |
 
-![ het dashboard van Audits met het gefiltreerde benadrukte activiteitenlogboek.](../../images/audit-logs/filtered.png)
+![ het dashboard van Audits met het gefilterde benadrukte activiteitenlogboek.](../../images/audit-logs/filtered.png)
 
 ### Controleverslagen exporteren
 
@@ -138,14 +138,14 @@ Selecteer in het dialoogvenster dat wordt weergegeven de gewenste indeling (**[!
 
 U kunt controlealarm toelaten om berichten voor de volgende regels te ontvangen:
 
-* Auditie maken
-* Publiek bijwerken
-* Publiek verwijderen
-* Gegevensset maken
+* Doelgroep maken
+* Doelgroep bijwerken
+* Doelgroep verwijderen
+* Dataset maken
 * Dataset bijwerken
-* Gegevensset verwijderen
+* Dataset verwijderen
 * Schema maken
-* Schema-update
+* Schema bijwerken
 * Schema verwijderen
 
 Selecteer in de lijst de gewenste waarschuwing om u te abonneren op de ontvangst van berichten. Voor meer informatie over alarm, zie de gids op [ het intekenen aan alarm gebruikend UI ](../../../observability/alerts/ui.md).

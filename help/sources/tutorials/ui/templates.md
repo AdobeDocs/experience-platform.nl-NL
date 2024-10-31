@@ -53,7 +53,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Exper
 >abstract="Selecteer het juiste bedrijfstype voor uw gebruiksscenario. De toegang hangt af van uw Real-time Customer Data Platform-abonnementaccount."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP-overzicht"
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in het Experience Platform.
+Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie om de werkruimte van [!UICONTROL Sources] te openen en een catalogus met bronnen te bekijken die beschikbaar zijn in het Experience Platform.
 
 Gebruik het menu *[!UICONTROL Categories]* om bronnen op categorie te filteren. U kunt ook een bronnaam invoeren in de zoekbalk om een specifieke bron uit de catalogus te zoeken.
 
@@ -76,15 +76,15 @@ De verificatiestap wordt weergegeven en u wordt gevraagd een nieuw account te ma
 
 >[!BEGINTABS]
 
->[!TAB  Gebruik een bestaande rekening ]
+>[!TAB  gebruik een bestaande rekening ]
 
-Als u een bestaande account wilt gebruiken, selecteert u [!UICONTROL Existing account] en selecteert u vervolgens de account die u wilt gebruiken in de lijst die wordt weergegeven.
+Als u een bestaand account wilt gebruiken, selecteert u [!UICONTROL Existing account] en selecteert u vervolgens het account dat u wilt gebruiken in de lijst die wordt weergegeven.
 
-![ de selectiepagina voor een bestaande rekening met een lijst van bestaande rekeningen u kunt toegang hebben.](../../images/tutorials/templates/existing-account.png)
+![ de selectiepagina voor een bestaand rekening met een lijst van bestaande rekeningen u kunt toegang hebben.](../../images/tutorials/templates/existing-account.png)
 
 >[!TAB  creeer een nieuwe rekening ]
 
-Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u vervolgens de gegevens van de bronverbinding en de verificatiegegevens van de account op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
+Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u vervolgens de gegevens van de bronverbinding en de verificatiegegevens van de account op. Selecteer **[!UICONTROL Connect to source]** als u klaar bent en laat de nieuwe verbinding enige tijd tot stand komen.
 
 ![ de authentificatiepagina voor een nieuwe rekening met bronverbindingsdetails en geloofsbrieven van de rekeningsauthentificatie.](../../images/tutorials/templates/new-account.png)
 
@@ -101,9 +101,9 @@ In de volgende tabel worden de sjablonen weergegeven die beschikbaar zijn voor d
 | --- | --- |
 | Activiteiten | In de sjabloon Activiteiten worden op gebeurtenissen gebaseerde momentopnamen van activiteiten vastgelegd, zoals e-mailinteracties, websiteinteracties en verkoopaanroepen. |
 | Bedrijven | Het malplaatje van Bedrijven vangt bedrijfsrekeningsdetails zoals bedrijf firmographic informatie, plaats, en het factureren informatie. |
-| Benoemde accounts | In de sjabloon Benoemde rekeningen worden details vastgelegd voor rekeningen die zijn vastgesteld als te voeren doelrekeningen. |
-| Kansen | In de sjabloon Opportunity worden zakelijke opportuniteitsgegevens vastgelegd, zoals type, verkoopstadium en verwante accounts. |
-| Functies contactpersoon opportunity | Het malplaatje van de Rollen van het Contact van de Kans vangt details over de rollen voor lood verbonden aan een bepaalde kans. |
+| Benoemde accounts | In de sjabloon Benoemde accounts worden gegevens vastgelegd voor accounts die zijn aangemerkt als te volgen doelaccounts. |
+| Kansen | De sjabloon Opportunity legt zakelijke opportuniteitsgegevens vast, zoals het type, de verkoopfase en verwante accounts. |
+| Functies contactpersoon opportunity | De sjabloon Rollen contactpersoon voor opportunity legt details vast over de rollen voor leads die aan een bepaalde kans zijn gekoppeld. |
 | Personen | In de sjabloon Personen worden kenmerken voor individuele personen vastgelegd, zoals demografische gegevens, contactgegevens en voorkeuren voor machtigingen. |
 | Programmalidmaatschappen | Het malplaatje van de Lidmaatschappen van het Programma vangt details voor contacten verbonden aan een bedrijfscampagne, omvat de kakken van de verpleegkunde en contactreacties. |
 | Programma&#39;s | In de sjabloon Programma&#39;s worden de details van de zakelijke campagne vastgelegd, zoals status, kanalen, tijdlijnen en kosten. |
@@ -167,7 +167,7 @@ In de volgende tabel worden de B2C-sjablonen weergegeven die beschikbaar zijn vo
 
 | [!DNL Microsoft Dynamics] B2C-sjablonen | Beschrijving |
 | --- | --- |
-| Contact | Het malplaatje van het Contact vangt attributen voor contacten zoals demografische details, contactinformatie, en verwante bedrijfsentiteiten. |
+| Contact | De Contactsjabloon legt kenmerken vast voor contactpersonen zoals demografische gegevens, contactgegevens en verwante zakelijke entiteiten. |
 | Lood | In de Lead-sjabloon worden kenmerken voor leads vastgelegd, zoals demografische gegevens, contactgegevens en gerelateerde bedrijfsentiteiten. |
 
 {style="table-layout:auto"}
@@ -206,7 +206,7 @@ Tijdens deze stap, kunt u **backfill** ook toelaten en een kolom voor de stijgen
 
 Selecteer **[!UICONTROL Finish]** nadat u het configureren van het innameschema hebt voltooid.
 
-![ de het plannen interface voor Dynamica en malplaatjes Salesforce met toegelaten backfill.](../../images/tutorials/templates/backfill.png)
+![ de het plannen interface voor Dynamica en de malplaatjes van Salesforce met toegelaten backfill.](../../images/tutorials/templates/backfill.png)
 
 ### Elementen bekijken {#review-assets}
 
@@ -215,7 +215,7 @@ Selecteer **[!UICONTROL Finish]** nadat u het configureren van het innameschema 
 >title="De automatisch gegenereerde elementen bekijken"
 >abstract="Het kan tot vijf minuten duren om alle activa te produceren. Als u ervoor kiest om de pagina te verlaten, ontvangt u een melding om terug te keren zodra de elementen zijn voltooid. U kunt de elementen bekijken zodra ze zijn gegenereerd en op elk gewenst moment aanvullende configuraties aan de gegevensstroom toevoegen."
 
-Op de pagina [!UICONTROL Review template assets] worden de elementen weergegeven die automatisch zijn gegenereerd als onderdeel van de sjabloon. In deze pagina, kunt u de auto-geproduceerde schema&#39;s, datasets, identiteitsnamespaces, en dataflows bekijken verbonden aan uw bronverbinding. Het kan tot vijf minuten duren om alle activa te produceren. Als u ervoor kiest om de pagina te verlaten, ontvangt u een melding om terug te keren zodra de elementen zijn voltooid. U kunt de elementen bekijken zodra ze zijn gegenereerd en op elk gewenst moment aanvullende configuraties aan de gegevensstroom toevoegen.
+Op de pagina [!UICONTROL Review template assets] worden de elementen weergegeven die automatisch zijn gegenereerd als onderdeel van de sjabloon. Op deze pagina kunt u de automatisch gegenereerde schema&#39;s, gegevenssets, naamruimten en gegevensstromen bekijken die aan uw bronverbinding zijn gekoppeld. Het kan tot vijf minuten duren om alle assets te genereren. Als u ervoor kiest om de pagina te verlaten, ontvangt u een melding om terug te keren zodra de elementen zijn voltooid. U kunt de elementen bekijken zodra ze zijn gegenereerd en op elk gewenst moment aanvullende configuraties aan de gegevensstroom toevoegen.
 
 Door gebrek, worden de auto-geproduceerde dataflows geplaatst aan een ontwerpstaat om verdere aanpassing op configuraties, zoals toewijzingsregels of geplande frequenties toe te staan. Selecteer de ovalen (`...`) naast de naam van de gegevensstroom en selecteer vervolgens **[!UICONTROL Preview mappings]** om de toewijzingssets weer te geven die voor uw conceptgegevensstroom zijn gemaakt.
 
@@ -261,13 +261,13 @@ Controleer ten slotte de details van uw gegevensstroom en selecteer **[!UICONTRO
 
 ## Volgende stappen
 
-Door dit leerprogramma te volgen, hebt u nu dataflows, evenals activa zoals schema&#39;s, datasets, en identiteitsnamespaces gebruikend malplaatjes gecreeerd. Voor algemene informatie over bronnen, bezoek het [ overzicht van bronnen ](../../home.md).
+Door deze zelfstudie te volgen, hebt u nu dataflows gemaakt, evenals elementen zoals schema&#39;s, datasets en naamruimten met behulp van sjablonen. Voor algemene informatie over bronnen, bezoek het [ overzicht van bronnen ](../../home.md).
 
 ## Waarschuwingen en meldingen {#alerts-and-notifications}
 
-Sjablonen worden ondersteund door Adobe Experience Platform Alerts en u kunt het deelvenster Meldingen gebruiken om updates over de status van uw middelen te ontvangen en ook om terug te gaan naar de overzichtspagina.
+Sjablonen worden ondersteund door Adobe Experience Platform-waarschuwingen en u kunt het deelvenster Meldingen gebruiken om updates over de status van uw middelen te ontvangen en ook om terug te gaan naar de overzichtspagina.
 
-Selecteer het berichtpictogram de hoogste kopbal van Platform UI en selecteer dan het statusalarm om de activa te zien die u wilt herzien.
+Selecteer het meldingspictogram in de bovenste koptekst van de gebruikersinterface van Platform en selecteer vervolgens de statuswaarschuwing om de elementen te zien die u wilt controleren.
 
 ![ het berichtenpaneel in Platform UI met een bericht alarmerend een ontbroken benadrukt dataflow.](../../images/tutorials/templates/notifications.png)
 

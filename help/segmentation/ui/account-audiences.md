@@ -1,7 +1,7 @@
 ---
 title: Accountsoorten
 description: Leer hoe u accountpubliek kunt maken en gebruiken om accountprofielen in downstreamdoelen te gebruiken.
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
@@ -11,11 +11,11 @@ ht-degree: 0%
 
 ---
 
-# Accountpubliek
+# Accountdoelgroepen
 
 >[!AVAILABILITY]
 >
->Het publiek van de rekening is slechts beschikbaar in de [ B2B Uitgave van Real-time Customer Data Platform ](../../rtcdp/overview.md#rtcdp-b2b) en de [ B2P Uitgave van Real-time Customer Data Platform ](../../rtcdp/overview.md#rtcdp-b2p).
+>Het publiek van de rekening is slechts beschikbaar in [ B2B edition van Real-time Customer Data Platform ](../../rtcdp/overview.md#rtcdp-b2b) en de [ B2P Uitgave van Real-time Customer Data Platform ](../../rtcdp/overview.md#rtcdp-b2p).
 
 Met de segmentatie van uw account kunt u in Adobe Experience Platform de volledige versnelling en verfijning van de segmentatieervaring van marketingmedewerkers van op mensen gebaseerde doelgroepen naar op account gebaseerde doelgroepen brengen.
 
@@ -55,9 +55,9 @@ Selecteer **[!UICONTROL Create audience]** op de [!UICONTROL Browse] -pagina om 
 
 De Segment Builder wordt weergegeven. De accountkenmerken en het publiek worden weergegeven op de linkernavigatiebalk. Onder het tabblad [!UICONTROL Attributes] kunt u zowel door het platform gemaakte als aangepaste kenmerken toevoegen.
 
-![ de Bouwer van het Segment wordt getoond. Merk op dat slechts de attributen en het publiek worden getoond.](../images/ui/account-audiences/segment-builder.png)
+![ de Bouwer van het Segment wordt getoond. Merk op dat slechts de attributen en de doelgroepen worden getoond.](../images/ui/account-audiences/segment-builder.png)
 
-Houd er bij het maken van accountsoorten rekening mee dat gebeurtenissen worden vermeld onder **[!UICONTROL People]** in plaats van hun eigen tabblad, omdat deze kenmerken aan personen zijn gekoppeld.
+Houd er bij het maken van accountdoelgroepen rekening mee dat gebeurtenissen worden vermeld onder **[!UICONTROL People]** in plaats van hun eigen tabblad te zijn, omdat deze kenmerken aan personen zijn gekoppeld.
 
 ![ de plaats om gebeurtenissen te vinden, die binnen de [!UICONTROL People] omslag is, wordt benadrukt.](../images/ui/account-audiences/attributes.png)
 
@@ -67,13 +67,13 @@ Onder het tabblad [!UICONTROL Audiences] kunt u eerder gemaakte, op personen geb
 
 Voor meer informatie bij het gebruiken van de Bouwer van het Segment, te lezen gelieve de [ gids UI van de Bouwer van het Segment ](./segment-builder.md).
 
-## Het publiek activeren {#activate}
+## Doelgroep activeren {#activate}
 
 >[!NOTE]
 >
->Slechts een beperkt aantal bestemmingen steunt rekeningspubliek. Zorg ervoor dat de bestemming die u wilt activeren, het accountpubliek ondersteunt voordat u doorgaat met dit proces.
+>Slechts een beperkt aantal bestemmingen ondersteunt accountdoelgroepen. Zorg ervoor dat de bestemming die u wilt activeren, accountdoelgroepen ondersteunt voordat u doorgaat met dit proces.
 
-Nadat u het publiek van uw account hebt gemaakt, kunt u het publiek activeren voor andere downstreamservices.
+Nadat u het publiek van uw account hebt gemaakt, kunt u het publiek activeren voor andere downstream-services.
 
 Selecteer het publiek dat u wilt activeren, gevolgd door **[!UICONTROL Activate to destination]** .
 
@@ -87,28 +87,28 @@ Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u uw accoun
 
 ## Bijlage {#appendix}
 
-In de volgende sectie vindt u aanvullende informatie over het accountpubliek.
+In de volgende sectie vindt u aanvullende informatie over accountdoelgroepen.
 
 ### Validatie van accountsegmentatie {#validation}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
 >title="Maximale fout in terugzoekvenster"
->abstract="Het maximale terugkijkvenster voor Experience Events is 30 dagen."
+>abstract="Het maximum lookback-venster voor Experience Events is 30 dagen."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
->title="Maximale diepte van geneste container"
+>title="Maximale dieptefout geneste container"
 >abstract="De maximumdiepte van genestelde containers is **5**. Dit betekent dat u **niet** meer dan vijf genestelde containers kunt hebben wanneer het creëren van uw publiek."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxBreadth"
->title="Fout in maximumaantal regels"
->abstract="Het maximumaantal regels binnen één enkele container is **5**. Dit betekent u dat u **niet** meer dan vijf regels binnen één enkele container kan hebben wanneer het creëren van uw publiek."
+>title="Fout in maximumhoeveelheid regels"
+>abstract="Het maximumaantal regels binnen één enkele container is **5**. Dit betekent u dat u **niet** meer dan vijf regels binnen één enkele container kunt hebben wanneer het creëren van uw publiek."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_crossEntityMaxDepth"
->title="Fout in maximumbedrag van entiteit"
+>title="Fout in maximumbedrag tussen entiteiten"
 >abstract="Het maximumaantal dwars entiteiten die binnen één enkel publiek kunnen worden gebruikt is **5**. Een kruisentiteit is wanneer u tussen verschillende entiteiten in uw publiek verandert. Bijvoorbeeld, ga van een Rekening naar een Persoon aan een Lijst van de Marketing."
 
 >[!CONTEXTUALHELP]
@@ -176,9 +176,9 @@ Wanneer het gebruiken van rekeningspubliek, moet het publiek **** aan de volgend
    - Een kruisentiteit is wanneer u tussen verschillende entiteiten in uw publiek verandert. Bijvoorbeeld, ga van een Rekening naar een Persoon aan een Lijst van de Marketing.
 - De entiteiten van de douane **kunnen niet** worden gebruikt.
 - Het maximumaantal waarden dat voor één enkel gebied kan worden gecontroleerd is **50**.
-   - Als u bijvoorbeeld een veld hebt met de naam &quot;City&quot;, kunt u die waarde controleren op 50 namen van steden.
-- Het publiek van de rekening **kan niet** gebruiken `inSegment` gebeurtenissen.
-- Het publiek van de rekening **kan** geen opeenvolgende gebeurtenissen gebruiken.
+   - Als u bijvoorbeeld het veld &#39;Stadsnaam&#39; hebt, kunt u die waarde controleren op 50 stadsnamen.
+- De doelgroepen van de rekening **kunnen** gebruiken `inSegment` geen gebeurtenissen.
+- De doelgroepen van de rekening **kunnen** geen opeenvolgende gebeurtenissen gebruiken.
 - Het publiek van de rekening **kan** geen kaarten gebruiken.
 - De maximumdiepte van genestelde series is **5**.
 - Het maximumaantal genestelde voorwerpen is **10**.

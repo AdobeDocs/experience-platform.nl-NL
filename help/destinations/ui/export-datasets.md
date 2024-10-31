@@ -5,7 +5,7 @@ description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewen
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2508'
 ht-degree: 0%
 
 ---
@@ -90,13 +90,13 @@ Momenteel, kunt u datasets naar de bestemmingen van de wolkenopslag uitvoeren di
 Sommige op dossier-gebaseerde bestemmingen in de catalogus van het Experience Platform steunen zowel publieksactivering als dataset de uitvoer.
 
 * U kunt doelgroepen activeren als u uw gegevens wilt indelen in profielen die zijn gegroepeerd op belangen of kwalificaties van het publiek.
-* U kunt ook gegevenssets exporteren overwegen wanneer u onbewerkte gegevenssets wilt exporteren. Deze zijn niet gegroepeerd of gestructureerd op basis van belangen of kwalificaties van het publiek. U kunt deze gegevens gebruiken voor rapportage, workflows voor gegevenswetenschap en vele andere gebruiksgevallen. Bijvoorbeeld, als beheerder, gegevensingenieur, of analist, kunt u gegevens van Experience Platform uitvoeren om met uw gegevenspakhuis te synchroniseren, gebruik in de analysehulpmiddelen van BI, externe wolkenhulpmiddelen van XML, of opslag in uw systeem voor de opslagbehoeften op lange termijn.
+* U kunt ook overwegen gegevenssets te exporteren wanneer u onbewerkte datasets wilt exporteren, die niet zijn gegroepeerd of gestructureerd op doelgroepinteresses of -kwalificaties. Je zou deze data kunnen gebruiken voor rapportage, datawetenschapsworkflows en vele andere gebruiksscenario’s. Als beheerder, dataengineer of analist kun je bijvoorbeeld data uit Experience Platform exporteren om te synchroniseren met je datawarehouse, gebruik in BI-analysetools, externe cloud ML-tools of opslag in je systeem voor langetermijnopslagbehoeften.
 
-Dit document bevat alle informatie die nodig is om gegevenssets te exporteren. Als u *publiek* aan cloudopslag of e-mail marketing bestemmingen wilt activeren, lees [ publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) activeren.
+Dit document bevat alle informatie die nodig is om gegevenssets te exporteren. Als u *doelgroepen* aan cloudopslag of e-mailmarketingbestemmingen wilt activeren, lees [ doelgroepgegevens activeren om de uitvoerbestemmingen van het batchprofiel te activeren ](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Vereisten {#prerequisites}
 
-Om datasets naar de bestemmingen van de wolkenopslag uit te voeren, moet u met succes [ verbonden aan een bestemming ](./connect-destination.md) hebben. Als u dit niet reeds hebt gedaan, ga naar de [ bestemmingscatalogus ](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
+Om datasets naar de bestemmingen van de cloudopslag uit te voeren, moet u met succes [ verbonden aan een bestemming ](./connect-destination.md) hebben. Als u dit niet reeds hebt gedaan, ga naar de [ catalogus van bestemmingen ](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
 
 ### Vereiste machtigingen {#permissions}
 
@@ -216,7 +216,7 @@ Op de pagina **[!UICONTROL Review]** ziet u een overzicht van uw selectie. Selec
 
 Bij het exporteren van gegevenssets maakt Experience Platform een of meerdere `.json` - of `.parquet` -bestanden op de opslaglocatie die u hebt opgegeven. Nieuwe bestanden worden naar verwachting op uw opslaglocatie gedeponeerd volgens het exportschema dat u hebt opgegeven.
 
-Experience Platform leidt tot een omslagstructuur in de opslagplaats u specificeerde, waar het de uitgevoerde datasetdossiers bewaart. Het standaard patroon van de omslaguitvoer wordt hieronder getoond, maar u kunt [ de omslagstructuur met uw aangewezen macro&#39;s ](#edit-folder-path) aanpassen.
+Experience Platform leidt tot een omslagstructuur in de opslagplaats u specificeerde, waar het de uitgevoerde datasetdossiers bewaart. Het standaardpatroon van de omslaguitvoer wordt getoond hieronder, maar u kunt [ de omslagstructuur met uw aangewezen macro&#39;s ](#edit-folder-path) aanpassen.
 
 >[!TIP]
 > 
@@ -282,16 +282,16 @@ U kunt uw profieluitvoer tegen uw contractuele grenzen in het [ dashboard van he
 Houd in mening de volgende beperkingen voor de algemene beschikbaarheidsversie van de uitvoer van datasets:
 
 * Momenteel, kunt u stijgende dossiers slechts uitvoeren en een einddatum kan niet voor uw datasetuitvoer worden geselecteerd.
-* Experience Platform kan veelvoudige dossiers zelfs voor kleine datasets uitvoeren. Dataset exporteren is ontworpen voor systeemintegratie en geoptimaliseerd voor prestaties. Het aantal geëxporteerde bestanden kan daarom niet worden aangepast.
+* Experience Platform kan meerdere bestanden exporteren, zelfs voor kleine datasets. Dataset exporteren is ontworpen voor systeemintegratie en geoptimaliseerd voor prestaties. Daarom kan het aantal geëxporteerde bestanden niet worden aangepast.
 * De geëxporteerde bestandsnamen kunnen momenteel niet worden aangepast.
-* Datasets die via API zijn gemaakt, zijn momenteel niet beschikbaar voor export.
-* UI blokkeert momenteel niet u van het schrappen van een dataset die naar een bestemming wordt uitgevoerd. Verwijder geen datasets die naar bestemmingen worden geëxporteerd. [ verwijder de dataset ](#remove-dataset) uit een bestemmingsdataflow alvorens het te schrappen.
-* De metriek van de controle voor de uitvoer van datasets wordt momenteel gemengd met aantallen voor profieluitvoer zodat weerspiegelen zij niet de ware uitvoeraantallen.
-* Gegevens met een tijdstempel die ouder is dan 365 dagen, worden niet geëxporteerd voor gegevenssets. Voor meer informatie, bekijk de [ gidsen voor de geplande uitvoer van datasets ](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
+* Datasets die via een API zijn gemaakt, zijn momenteel niet beschikbaar voor export.
+* UI blokkeert momenteel u niet om een dataset te schrappen die naar een bestemming wordt uitgevoerd. Verwijder geen datasets die naar bestemmingen worden geëxporteerd. [ verwijder de dataset ](#remove-dataset) uit een bestemmingsdataflow alvorens het te schrappen.
+* De controlemetrieken voor de uitvoer van datasets worden momenteel gemengd met aantallen voor profielexporten zodat zij niet de ware uitvoeraantallen weerspiegelen.
+* Gegevens met een tijdstempel ouder dan 365 dagen worden niet geëxporteerd naar gegevenssets. Voor meer informatie, bekijk de [ gidsen voor de geplande datasetuitvoer ](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
 
 ## Veelgestelde vragen {#faq}
 
-**kunnen wij een dossier zonder een omslag produceren als wij enkel bij `/` als omslagweg bewaren? Ook, als wij geen omslagweg vereisen, hoe dossiers met dubbele namen in een omslag of een plaats worden geproduceerd?**
+**Kunnen wij een dossier zonder een omslag produceren als wij enkel sparen bij `/` als omslagweg? Ook, als wij geen omslagweg vereisen, hoe dossiers met dubbele namen in een omslag of een plaats worden geproduceerd?**
 
 +++
 Vanaf de release van september 2024 kunt u de mapnaam aanpassen en zelfs `/` gebruiken voor het exporteren van bestanden voor alle gegevenssets in dezelfde map. De Adobe adviseert dit niet voor bestemmingen die veelvoudige datasets uitvoeren, aangezien de systeem-geproduceerde filenames die tot verschillende datasets behoren in de zelfde omslag zullen worden gemengd.
@@ -327,7 +327,7 @@ Er is geen API beschikbaar voor het manifestbestand, maar het bevat wel een lijs
 Er is geen mogelijkheid om aanvullende informatie aan het manifestbestand toe te voegen. Het aantal records is beschikbaar via de entiteit `flowRun` (kan worden opgevraagd via de API). Lees meer in bestemmingen controle.
 +++
 
-**Hoe worden de gegevensdossiers verdeeld? Hoeveel verslagen per dossier?**
+**Hoe worden gegevensbestanden gesplitst? Hoeveel verslagen per dossier?**
 
 +++
 Gegevensbestanden worden gesplitst volgens de standaardpartitionering in het gegevenspeer van het Experience Platform. Grotere datasets hebben een hoger aantal verdelingen. Standaard het verdelen is niet configureerbaar door de gebruiker aangezien het voor lezing wordt geoptimaliseerd.

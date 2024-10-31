@@ -1,6 +1,6 @@
 ---
-title: Een relatie definiëren tussen twee schema's in Real-time Customer Data Platform B2B Edition
-description: Leer hoe u een vele-op-één relatie tussen twee schema's in Adobe Real-time Customer Data Platform B2B Edition definieert.
+title: Een relatie definiëren tussen twee schema's in Real-time Customer Data Platform B2B edition
+description: Leer hoe u een vele-op-één relatie tussen twee schema's in Adobe Real-time Customer Data Platform B2B edition definieert.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
 workflow-type: tm+mt
@@ -9,14 +9,14 @@ ht-degree: 0%
 
 ---
 
-# Een veel-op-een relatie definiëren tussen twee schema&#39;s in Real-time Customer Data Platform B2B Edition {#relationship-b2b}
+# Een veel-op-een relatie definiëren tussen twee schema&#39;s in Real-time Customer Data Platform B2B edition {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="Referentieschema"
 >abstract="Selecteer het schema u een verband met wilt vestigen. Afhankelijk van de klasse van het schema, kan het bestaande verhoudingen met andere entiteiten in de context B2B ook hebben. Zie de documentatie om te leren hoe de B2B schemaklassen op elkaar betrekking hebben."
 
-De Uitgave van Adobe Real-time Customer Data Platform B2B verstrekt verscheidene klassen van de Gegevens van de Ervaring Model (XDM) die fundamentele B2B gegevensentiteiten, met inbegrip van [ rekeningen ](../classes/b2b/business-account.md) vangen, [ kansen ](../classes/b2b/business-opportunity.md), [ campagnes ](../classes/b2b/business-campaign.md), en meer. Door schema&#39;s te bouwen die op deze klassen worden gebaseerd en hen toe te laten voor gebruik in [ Real-Time Profiel van de Klant ](../../profile/home.md), kunt u gegevens van ongelijksoortige bronnen in een verenigde vertegenwoordiging samenvoegen genoemd een unieschema.
+Adobe Real-time Customer Data Platform B2B edition verstrekt verscheidene klassen van de Gegevens van de Ervaring Model (XDM) die fundamentele B2B gegevensentiteiten, met inbegrip van [ rekeningen ](../classes/b2b/business-account.md), [ kansen ](../classes/b2b/business-opportunity.md), [ campagnes ](../classes/b2b/business-campaign.md), en meer vangen. Door schema&#39;s te bouwen die op deze klassen worden gebaseerd en hen toe te laten voor gebruik in [ Real-Time Profiel van de Klant ](../../profile/home.md), kunt u gegevens van ongelijksoortige bronnen in een verenigde vertegenwoordiging samenvoegen genoemd een unieschema.
 
 Unieschema&#39;s kunnen echter alleen velden bevatten die zijn vastgelegd door schema&#39;s die dezelfde klasse delen. Dit is waar schemaverhoudingen binnen komen. Door relaties in uw B2B-schema&#39;s uit te voeren, kunt u beschrijven hoe deze bedrijfsentiteiten met elkaar verband houden en kunt u kenmerken van meerdere klassen in downstreamgevallen van segmentatiegebruik opnemen.
 
@@ -24,11 +24,11 @@ Het volgende diagram verstrekt een voorbeeld van hoe de verschillende klassen B2
 
 ![ B2B klassenverhoudingen ](../images/tutorials/relationship-b2b/classes.png)
 
-Deze zelfstudie behandelt de stappen voor het definiëren van een vele-op-één relatie tussen twee schema&#39;s in Real-Time CDP B2B Edition.
+Deze zelfstudie behandelt de stappen voor het definiëren van een vele-op-één relatie tussen twee schema&#39;s in Real-Time CDP B2B edition.
 
 >[!NOTE]
 >
->Als u geen Real-time Customer Data Platform B2B Uitgave gebruikt of een één-aan-één verhouding wilt tot stand brengen, zie de gids op [ creërend een één-aan-één verhouding ](./relationship-ui.md) in plaats daarvan.
+>Als u geen Real-time Customer Data Platform B2B edition gebruikt of een één-aan-één verhouding wilt tot stand brengen, zie de gids op [ creërend een één-aan-één verhouding ](./relationship-ui.md) in plaats daarvan.
 >
 >Dit leerprogramma concentreert zich op hoe te om relaties tussen B2B- schema&#39;s in het Platform UI manueel te vestigen. Als u gegevens van een B2B bronverbinding brengt, kunt u een auto-generatienut gebruiken om de vereiste schema&#39;s, identiteiten, en verhoudingen in plaats daarvan tot stand te brengen. Zie de brondocumentatie op B2B namespaces en schema&#39;s voor meer informatie over [ gebruikend het auto-generatienut ](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
@@ -51,11 +51,11 @@ De verhoudingen van het schema worden vertegenwoordigd door een specifiek gebied
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
 >title="Naamruimte van verwijzing"
->abstract="De naamruimte (type) voor het primaire identiteitsveld van het referentieschema. Het referentieschema moet een bestaand primair identiteitsveld hebben om aan een relatie te kunnen deelnemen. Raadpleeg de documentatie voor meer informatie over identiteiten in B2B-relaties."
+>abstract="De naamruimte (type) voor het primaire identiteitsveld van het referentieschema. Het referentieschema moet een bestaand primair identiteitsveld hebben om te kunnen deelnemen aan een relatie. Zie de documentatie voor meer informatie over identiteiten in B2B-relaties."
 
-Om een relatie tot stand te brengen, moet het referentieschema een gedefinieerde primaire identiteit hebben. Houd er bij het instellen van een primaire identiteit voor een B2B-entiteit rekening mee dat op tekenreeks gebaseerde entiteit-id&#39;s elkaar kunnen overlappen als u deze verzamelt op verschillende systemen of locaties, wat tot gegevensconflicten in Platform kan leiden.
+Om een relatie tot stand te brengen, moet het referentieschema een gedefinieerde primaire identiteit hebben. Houd er bij het instellen van een primaire identiteit voor een B2B-entiteit rekening mee dat op tekenreeksen gebaseerde entiteit-id&#39;s elkaar kunnen overlappen als u deze verzamelt over verschillende systemen of locaties, wat tot gegevensconflicten in Platform kan leiden.
 
-Om dit te verklaren, bevatten alle standaardB2B klassen &quot;zeer belangrijke&quot;gebieden die met het [[!UICONTROL B2B Source] gegevenstype ](../data-types/b2b-source.md) in overeenstemming zijn. Dit gegevenstype verschaft velden voor een tekenreeks-id voor de B2B-entiteit, samen met andere contextuele informatie over de bron van de id. Een van deze velden, `sourceKey` , voegt de waarden van de andere velden in het gegevenstype samen om een geheel unieke id voor de entiteit te maken. Dit veld moet altijd worden gebruikt als de primaire identiteit voor B2B-entiteitsschema&#39;s.
+Om hiervan rekenschap te geven, bevatten alle standaard B2B-klassen &#39;key&#39;-velden die overeenkomen met het [[!UICONTROL B2B Source] gegevenstype ](../data-types/b2b-source.md) . Dit gegevenstype verschaft velden voor een tekenreeks-id voor de B2B-entiteit, samen met andere contextuele informatie over de bron van de id. Een van deze velden, `sourceKey` , voegt de waarden van de andere velden in het gegevenstype samen om een volledig unieke id voor de entiteit te maken. Dit veld moet altijd worden gebruikt als de primaire identiteit voor B2B-entiteitsschema&#39;s.
 
 ![ sourceKey gebied ](../images/tutorials/relationship-b2b/sourcekey.png)
 
@@ -144,15 +144,15 @@ Het dialoogvenster [!UICONTROL Edit relationship] wordt weergegeven. In dit dial
 
 ![ de Edit relatiedialoog.](../images/tutorials/relationship-b2b/edit-b2b-relationship-dialog.png)
 
-Om gegevensintegriteit te handhaven en verstoringen in segmentatie en andere processen te vermijden, overweeg de volgende richtlijnen wanneer het beheren van schemaverhoudingen met verbonden datasets:
+Houd rekening met de volgende richtlijnen bij het beheren van schemakoppelingen met gekoppelde datasets om de gegevensintegriteit te handhaven en verstoringen in segmentatie en andere processen te voorkomen:
 
 * Vermijd direct het schrappen van verhoudingen als een schema met een dataset wordt geassocieerd, aangezien dit segmentatie negatief kan beïnvloeden. Verwijder in plaats daarvan de bijbehorende gegevensset voordat u de relatie verwijdert.
 * U kunt het referentieschema niet wijzigen zonder eerst de bestaande relatie te verwijderen. Nochtans, zou dit met voorzichtigheid moeten worden gedaan, aangezien het schrappen van een verband met een bijbehorende dataset onbedoelde gevolgen kan veroorzaken.
-* Het toevoegen van nieuwe verhoudingen aan een schema met bestaande verbonden datasets werkt mogelijk niet zoals bedoeld en kan tot potentiële conflicten leiden.
+* Het toevoegen van nieuwe relaties aan een schema met bestaande gekoppelde datasets werkt mogelijk niet naar behoren en kan leiden tot potentiële conflicten.
 
-## Filter en zoek naar relaties {#filter-and-search}
+## Filteren en zoeken naar relaties {#filter-and-search}
 
-U kunt filteren en naar specifieke relaties in uw schema&#39;s zoeken op het tabblad [!UICONTROL Relationships] van de [!UICONTROL Schemas] -werkruimte. Met deze weergave kunt u snel uw relaties zoeken en beheren. Lees het document op [ het onderzoeken van schemamiddelen ](../ui/explore.md#lookup) voor gedetailleerde instructies op de het filtreren opties.
+U kunt filteren op en zoeken naar specifieke relaties binnen uw schema&#39;s via het tabblad [!UICONTROL Relationships] van de [!UICONTROL Schemas] -werkruimte. U kunt deze weergave gebruiken om snel uw relaties te zoeken en te beheren. Lees het document op [ het onderzoeken schemamiddelen ](../ui/explore.md#lookup) voor gedetailleerde instructies op de het filtreren opties.
 
 ![ het lusje van Verhoudingen in de werkruimte van Schema&#39;s.](../images/tutorials/relationship-b2b/relationship-tab.png)
 

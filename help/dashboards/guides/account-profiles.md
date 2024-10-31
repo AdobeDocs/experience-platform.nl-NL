@@ -17,7 +17,7 @@ Dit document biedt een overzicht van de functies in het dashboard van [!UICONTRO
 
 ## Aan de slag
 
-U moet aan [ Adobe Real-time Customer Data Platform B2B Uitgave ](../../rtcdp/b2b-overview.md) gerechtigd zijn om tot het B2B [!UICONTROL Account Profiles] dashboard toegang te hebben.
+U moet aan [ Adobe Real-time Customer Data Platform B2B edition ](../../rtcdp/b2b-overview.md) gerechtigd zijn om tot het B2B [!UICONTROL Account Profiles] dashboard toegang te hebben.
 
 ## Gegevens van accountprofielen {#data}
 
@@ -185,4 +185,4 @@ Om de kwestie op te lossen, moet u B2B entiteitsgegevens, zoals *opportunitypers
 
 ## Volgende stappen
 
-Als u dit document volgt, moet u nu weten hoe u het dashboard van [!UICONTROL Account Profiles] kunt vinden en welke maatstaven in de beschikbare widgets worden weergegeven. Meer over het werken met rekeningsprofielen als deel van uw B2B- gegevens in het Experience Platform UI leren, gelieve te verwijzen naar het [ overzicht van rekeningsprofielen ](../../rtcdp/accounts/account-profile-overview.md) voor Adobe Real-Time CDP, B2B Uitgave.
+Als u dit document volgt, moet u nu weten hoe u het dashboard van [!UICONTROL Account Profiles] kunt vinden en welke maatstaven in de beschikbare widgets worden weergegeven. Meer over het werken met rekeningsprofielen als deel van uw B2B- gegevens in het Experience Platform UI leren, gelieve te verwijzen naar het [ overzicht van rekeningsprofielen ](../../rtcdp/accounts/account-profile-overview.md) voor Adobe Real-Time CDP, B2B edition.

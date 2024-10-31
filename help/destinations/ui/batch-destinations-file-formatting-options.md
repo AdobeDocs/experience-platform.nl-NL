@@ -53,7 +53,7 @@ Met dit besturingselement kunt u een scheidingsteken instellen voor elk veld en 
 
 #### Voorbeelden
 
-Bekijk de voorbeelden hieronder van de inhoud in de geëxporteerde CSV-bestanden met elke selectie in de gebruikersinterface.
+Bekijk de voorbeelden hieronder van de inhoud in de geëxporteerde CSV-bestanden met elk van de selecties in de UI.
 
 * Voorbeeld van uitvoer met **[!UICONTROL Colon `(:)`]** geselecteerd: `male:John:Doe`
 * Voorbeeld van uitvoer met **[!UICONTROL Comma `(,)`]** geselecteerd: `male,John,Doe`
@@ -73,13 +73,13 @@ Met deze optie kunt u bepalen of dubbele aanhalingstekens moeten worden verwijde
 De beschikbare opties zijn:
 
 * **[!UICONTROL Null Character (\0000)]**. Gebruik deze optie om dubbele aanhalingstekens te verwijderen uit geëxporteerde CSV-bestanden.
-* **[!UICONTROL Double Quotes (")]**. Gebruik deze optie als de tekenreekswaarden een scheidingsteken of dubbele aanhalingstekens bevatten. Met deze optie kunt u de scheidingstekens of dubbele aanhalingstekens behouden in geëxporteerde CSV-bestanden, zodat u precies kunt zien welke waarde overeenkomt met welk veld.
+* **[!UICONTROL Double Quotes (")]** . Gebruik deze optie als de tekenreekswaarden een scheidingsteken of dubbele aanhalingstekens bevatten. Met deze optie kunt u de scheidingstekens of dubbele aanhalingstekens in uw geëxporteerde CSV-bestanden behouden, zodat u correct kunt zien welke waarde overeenkomt met welk veld.
 
 #### Voorbeelden
 
-Neem bijvoorbeeld de invoerwaarde `Anna,"Doe,John"` .
+Neem de invoerwaarde `Anna,"Doe,John"` .
 
-Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden met elk van de selecties in de gebruikersinterface.
+Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden met elk van de selecties in de UI.
 
 * Voorbeeld van uitvoer met **[!UICONTROL Null Character (\0000)]** geselecteerd: `Anna,Doe,John`
 * Voorbeeld van uitvoer met **[!UICONTROL Double Quotes (")]** geselecteerd: `Anna,"Doe,John"`
@@ -108,7 +108,7 @@ Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden m
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_emptyValueOutput"
 >title="Uitvoer van lege waarde"
->abstract="Gebruik deze optie om in te stellen hoe lege waarden moeten worden weergegeven in de geëxporteerde CSV-bestanden. Raadpleeg de documentatie voor voorbeelden van elke selectie."
+>abstract="Gebruik deze optie om in te stellen hoe lege waarden in de geëxporteerde CSV-bestanden moeten worden weergegeven. Raadpleeg de documentatie voor voorbeelden van elke selectie."
 
 Gebruik dit besturingselement om de tekenreeksrepresentatie van een lege waarde in te stellen. Met deze optie bepaalt u hoe lege waarden worden weergegeven in uw geëxporteerde CSV-bestanden. Beschikbare opties zijn:
 
@@ -154,7 +154,7 @@ Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden m
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_compressionFormat"
 >title="Compressie-indeling"
->abstract="Hiermee stelt u in welk compressietype u wilt gebruiken bij het opslaan van gegevens naar het bestand. Ondersteunde opties zijn GZIP en NONE. Raadpleeg de documentatie voor voorbeelden van elke selectie."
+>abstract="Hiermee stelt u in welk compressietype u wilt gebruiken bij het opslaan van gegevens naar een bestand. Ondersteunde opties zijn GZIP en NONE. Raadpleeg de documentatie voor voorbeelden van elke selectie."
 
 Hiermee stelt u in welk compressietype u wilt gebruiken bij het opslaan van gegevens naar het bestand. Ondersteunde opties zijn GZIP en NONE. Met deze optie bepaalt u of u gecomprimeerde bestanden wilt exporteren.
 
@@ -174,7 +174,7 @@ Standaard worden alle waarden met een aanhalingsteken verwijderd.
 
 ### Voorloopspatie negeren
 
-*niet getoond in het het schermschot UI*. Een markering die aangeeft of witruimten die de regelafstand bepalen van waarden die worden geëxporteerd, moeten worden overgeslagen.
+*niet getoond in het het schermschot UI*. Een vlag die aangeeft of voorloopspaties van geëxporteerde waarden moeten worden overgeslagen.
 
 Voorbeeld van uitvoer met **[!UICONTROL True]** geselecteerd: `"male","John","TestLastName"`
 Voorbeeld van uitvoer met **[!UICONTROL False]** geselecteerd: `" male","John","TestLastName"`

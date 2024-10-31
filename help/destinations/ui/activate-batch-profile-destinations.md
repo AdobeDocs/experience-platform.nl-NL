@@ -1,7 +1,7 @@
 ---
-title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruiken
+title: Doelgroepen activeren voor batchprofielexportdoelen
 type: Tutorial
-description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
+description: Leer hoe je de doelgroepen in Adobe Experience Platform activeert door ze naar batchprofielbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
 workflow-type: tm+mt
@@ -11,12 +11,12 @@ ht-degree: 0%
 ---
 
 
-# Soorten publiek activeren om exportdoelen voor batchprofielen te gebruiken
+# Doelgroepen activeren voor batchprofielexportdoelen
 
 >[!IMPORTANT]
 > 
-> * Om publiek te activeren en de [ toewijzingsstap ](#mapping) van het werkschema toe te laten, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig.
-> * Om publiek te activeren zonder door de [ toewijzingsstap ](#mapping) van het werkschema te gaan, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig.
+> * Om doelgroepen te activeren en de [ toewijzingsstap ](#mapping) van het werkschema toe te laten, hebt u **[!UICONTROL View Destinations]** nodig, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions).
+> * Om doelgroepen te activeren zonder door de [ toewijzingsstap ](#mapping) van het werkschema te gaan, hebt u **[!UICONTROL View Destinations]** nodig, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions).
 >* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 > 
 > Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
@@ -27,11 +27,11 @@ In dit artikel wordt uitgelegd welke workflow wordt vereist om het publiek in Ad
 
 ## Vereisten {#prerequisites}
 
-Om publiek aan bestemmingen te activeren, moet u met succes [ verbonden aan een bestemming ](./connect-destination.md) hebben. Als u dit niet reeds hebt gedaan, ga naar de [ catalogus van bestemmingen ](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
+Om publiek aan bestemmingen te activeren, moet u met succes [ verbonden aan een bestemming ](./connect-destination.md) hebben. Als u dit niet reeds hebt gedaan, ga naar de [ bestemmingscatalogus ](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
 
 ## Ondersteunde bestandsindelingen voor export {#supported-file-formats-export}
 
-De volgende bestandsindelingen worden ondersteund bij het exporteren van doelgroepen:
+De volgende bestandsindelingen worden ondersteund bij het exporteren van soorten publiek:
 
 * CSV
 * JSON
@@ -120,11 +120,11 @@ Als u meerdere schema&#39;s tegelijk wilt bewerken, selecteert u het publiek met
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
 >title="Geplande activering"
->abstract="De activering wordt uitgevoerd op een vast tijdstip van de dag."
+>abstract="Activering wordt uitgevoerd op een vast tijdstip van de dag."
 
-Selecteer **[!UICONTROL Export full files]** om het exporteren van een bestand met een volledige opname van alle profielkwalificaties voor het geselecteerde publiek te starten.
+Selecteer **[!UICONTROL Export full files]** om het exporteren van een bestand met een volledige momentopname van alle profielkwalificaties voor het geselecteerde publiek te activeren.
 
-![ Uitvoer volledige geselecteerde dossiers van een knevel.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![ Uitvoer volledige geselecteerde dossiers in-/uitschakelen.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. Gebruik de kiezer **[!UICONTROL Frequency]** om de exportfrequentie te selecteren:
 
@@ -137,12 +137,12 @@ Selecteer **[!UICONTROL Export full files]** om het exporteren van een bestand m
 
    >[!IMPORTANT]
    >
-   >Als u [ flexibele publieksevaluatie ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) op publiek in werking stelt die reeds om na segmentevaluatie worden geactiveerd, zal het publiek worden geactiveerd zodra de flexibele baan van de publieksevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken eindigt. Dit kan ertoe leiden dat doelgroepen meerdere keren per dag worden geëxporteerd, afhankelijk van uw handelingen.
+   >Als u [ flexibele publieksevaluatie ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) op publiek in werking stelt die reeds om na segmentevaluatie worden geactiveerd, zal het publiek worden geactiveerd zodra de flexibele baan van de publieksevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken eindigt. Dit kan ertoe leiden dat een publiek meerdere keren per dag wordt geëxporteerd, op basis van uw handelingen.
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
-   ![ Beeld dat de na optie van de segmentevaluatie in de activeringsstroom voor partijbestemmingen benadrukt.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-Gebruik de optie **[!UICONTROL Scheduled]** om de activeringstaak op een vast moment te laten uitvoeren. Met deze optie zorgt u ervoor dat Experience Platform-profielgegevens elke dag op hetzelfde tijdstip worden geëxporteerd. De profielen die u exporteert, zijn mogelijk niet de meest recente, afhankelijk van het feit of de batchsegmentatietaak is voltooid voordat de activeringstaak wordt uitgeschakeld.
+   ![ Beeld die de Latere optie van de segmentevaluatie in de activeringsstroom voor partijbestemmingen benadrukt.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
+Gebruik de optie **[!UICONTROL Scheduled]** om de activeringstaak op een vast tijdstip uit te voeren. Met deze optie zorgt u ervoor dat gegevens in het profiel Experience Platform elke dag op hetzelfde tijdstip worden geëxporteerd. De profielen die u exporteert, zijn echter mogelijk niet de meest actuele, afhankelijk van het feit of de batchsegmentatietaak is voltooid voordat de activeringstaak wordt uitgeschakeld.
 
    ![ Beeld dat de Geplande optie in de activeringsstroom voor partijbestemmingen benadrukt en de tijdselecteur toont.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -191,9 +191,9 @@ Selecteer **[!UICONTROL Export incremental files]** om een exportbewerking te st
 >title="Bestandsnaam configureren"
 >abstract="Voor op een bestand gebaseerde doelen wordt een unieke bestandsnaam per publiek gegenereerd. Met de bestandsnaameditor kunt u een unieke bestandsnaam maken en bewerken of de standaardnaam behouden."
 
-Voor de meeste bestemmingen, bestaan de standaarddossiernamen uit bestemmingsnaam, publiek-identiteitskaart, en een datum en tijdindicator. U kunt bijvoorbeeld uw geëxporteerde bestandsnamen bewerken om onderscheid te maken tussen verschillende campagnes of om de exporttijd van de gegevens aan de bestanden toe te voegen. Houd er rekening mee dat sommige doelontwikkelaars kunnen kiezen voor verschillende standaardopties voor het toevoegen van bestandsnamen voor hun bestemmingen.
+Voor de meeste bestemmingen, bestaan de standaarddossiernamen uit bestemmingsnaam, publiek-identiteitskaart, en een datum en tijdindicator. U kunt bijvoorbeeld uw geëxporteerde bestandsnamen bewerken om onderscheid te maken tussen verschillende campagnes of om de exporttijd van de gegevens aan de bestanden toe te voegen. Merk op dat sommige bestemmingsontwikkelaars zouden kunnen selecteren om verschillende standaard dossier te hebben toevoegt opties voor hun bestemmingen worden getoond.
 
-Als u een modaal venster wilt openen en de bestandsnamen wilt bewerken, selecteert u het potloodpictogram. Bestandsnamen mogen uit maximaal 255 tekens bestaan.
+Als u een modaal venster wilt openen en de bestandsnamen wilt bewerken, selecteert u het potloodpictogram. Bestandsnamen mogen maximaal 255 tekens bevatten.
 
 >[!NOTE]
 >
@@ -227,7 +227,7 @@ Selecteer **[!UICONTROL Apply changes]** om uw selectie te bevestigen.
 
 >[!IMPORTANT]
 > 
->Als u de component **[!UICONTROL Date and Time]** niet selecteert, zijn de bestandsnamen statisch en overschrijft het nieuwe geëxporteerde bestand het vorige bestand op uw opslaglocatie met elke exportbewerking. Als u een terugkerende importtaak uitvoert vanaf een opslaglocatie naar een e-mailmarketingplatform, is dit de aanbevolen optie.
+>Als u de component **[!UICONTROL Date and Time]** niet selecteert, zijn de bestandsnamen statisch en overschrijft het nieuwe geëxporteerde bestand het vorige bestand in uw opslaglocatie met elke exportbewerking. Als u een terugkerende importtaak uitvoert vanaf een opslaglocatie naar een e-mailmarketingplatform, is dit de aanbevolen optie.
 
 Nadat u al uw doelgroepen hebt geconfigureerd, selecteert u **[!UICONTROL Next]** om door te gaan.
 
@@ -249,9 +249,9 @@ In deze stap moet u de profielkenmerken selecteren die u wilt toevoegen aan de b
    > 
    >U kunt het zoekveld gebruiken om de selectie te verkleinen, zoals in de onderstaande afbeelding wordt getoond.
 
-   Gebruik de schakelknop **[!UICONTROL Show only fields with data]** om alleen schemavelden weer te geven die zijn gevuld met waarden. Standaard worden alleen gevulde schemavelden weergegeven.
+   Met de schakeloptie **[!UICONTROL Show only fields with data]** kunt u alleen schemavelden weergeven die zijn gevuld met waarden. Standaard worden alleen gevulde schemavelden weergegeven.
 
-   ![ Modal venster dat profielattributen toont die aan de bestemming kunnen worden uitgevoerd.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
+   ![ Modal venster dat profielattributen toont die naar de bestemming kunnen worden uitgevoerd.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
 
 
 1. Het veld dat u hebt geselecteerd voor export, wordt nu weergegeven in de toewijzingsweergave. Desgewenst kunt u de naam van de koptekst in het geëxporteerde bestand bewerken. Selecteer hiertoe het pictogram in het doelveld.
@@ -284,10 +284,10 @@ In deze stap moet u de profielkenmerken selecteren die u wilt toevoegen aan de b
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
->title="Over verplichte kenmerken"
->abstract="Selecteer de XDM-schemakenmerken die alle geëxporteerde profielen moeten bevatten. Profielen zonder de verplichte sleutel worden niet naar de bestemming geëxporteerd. Als u geen verplichte sleutel selecteert, worden alle gekwalificeerde profielen niet geëxporteerd, ongeacht hun kenmerken."
+>title="Verplichte kenmerken"
+>abstract="Selecteer de XDM-schemakenmerken die alle geëxporteerde profielen moeten bevatten. Profielen zonder de verplichte sleutel worden niet naar de bestemming geëxporteerd. Als u geen verplichte sleutel selecteert, worden alle gekwalificeerde profielen niet geëxporteerd, ongeacht de kenmerken ervan."
 
-Een verplicht kenmerk is een door de gebruiker ingeschakeld selectievakje dat ervoor zorgt dat alle profielrecords het geselecteerde kenmerk bevatten. Alle geëxporteerde profielen bevatten bijvoorbeeld een e-mailadres. &#x200B;
+Een verplicht kenmerk is een selectievakje dat door de gebruiker wordt ingeschakeld en dat ervoor zorgt dat alle profielrecords het geselecteerde kenmerk bevatten. Alle geëxporteerde profielen bevatten bijvoorbeeld een e-mailadres. &#x200B;
 
 U kunt kenmerken als verplicht markeren om ervoor te zorgen dat [!DNL Platform] alleen de profielen exporteert die het specifieke kenmerk bevatten. Het resultaat is dat het kan worden gebruikt als extra filtermethode. Het merken van een attribuut als verplicht is **niet** vereist.
 
@@ -300,13 +300,13 @@ Men adviseert dat één van de attributen a [ uniek herkenningsteken ](../../des
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
 >title="Deduplicatietoetsen"
->abstract="U kunt meerdere records van hetzelfde profiel uit de exportbestanden verwijderen door een deduplicatietoets te selecteren. Selecteer één naamruimte of maximaal twee XDM-schemakenmerken als deduplicatietoets. Als u geen deduplicatietoets selecteert, kan dit leiden tot dubbele profielvermeldingen in de exportbestanden."
+>abstract="U kunt meerdere records van hetzelfde profiel uit de exportbestanden verwijderen door een deduplicatietoets te selecteren. Selecteer één naamruimte of maximaal twee XDM-schemakenmerken als een deduplicatietoets. Als u geen deduplicatietoets selecteert, kan dit leiden tot dubbele profielvermeldingen in de exportbestanden."
 
-Een deduplicatietoets is een door de gebruiker gedefinieerde primaire sleutel waarmee wordt bepaald op welke manier gebruikers de profielen willen dedupliceren. &#x200B;
+Een deduplicatiesleutel is een door de gebruiker gedefinieerde primaire sleutel waarmee de identiteit wordt bepaald waarmee gebruikers hun profielen willen dedupliceren. &#x200B;
 
-Met duplicatietoetsen kunt u niet meerdere records van hetzelfde profiel in één exportbestand hebben.
+Deduplicatietoetsen maken het onmogelijk meerdere records van hetzelfde profiel in één exportbestand te hebben.
 
-Er zijn drie manieren waarop u de deduplicatietoetsen kunt gebruiken in [!DNL Platform] :
+Er zijn drie manieren waarop u deduplicatietoetsen kunt gebruiken in [!DNL Platform] :
 
 * Eén naamruimte voor identiteit gebruiken als een [!UICONTROL deduplication key]
 * Eén profielkenmerk van een [!DNL XDM] -profiel gebruiken als [!UICONTROL deduplication key]
@@ -422,23 +422,23 @@ Als deduplicatie wordt verondersteld door het kenmerk `personal Email` , bevat h
 
 ### Gebruiksscenario deduplicatie 4: deduplicatie op basis van twee profielkenmerken {#deduplication-use-case-4}
 
-Ervan uitgaande dat deduplicatie via de samengestelde sleutel `personalEmail + lastName` plaatsvindt, bevat het exportbestand de volgende items.
+Als deduplicatie wordt verondersteld met de samengestelde sleutel `personalEmail + lastName` , bevat het exportbestand de volgende items.
 
 | PersonalEmail* | lastName* | firstName |
 |---|---|---|
 | johndoe@example.com | D | John |
 | johndoe@example.com | Doe | John |
 
-Adobe raadt aan een naamruimte voor identiteiten, zoals een [!DNL CRM ID] - of e-mailadres, te selecteren als een deduplicatietoets om ervoor te zorgen dat alle profielrecords op unieke wijze worden geïdentificeerd.
+Adobe raadt u aan een naamruimte voor identiteiten, zoals een [!DNL CRM ID] - of e-mailadres, te selecteren als deduplicatietoets om ervoor te zorgen dat alle profielrecords op unieke wijze worden geïdentificeerd.
 
 >[!NOTE]
 > 
->Als er labels voor gegevensgebruik zijn toegepast op bepaalde velden in een gegevensset (in plaats van op de gehele gegevensset), worden die labels op veldniveau voor activering toegepast onder de volgende omstandigheden:
+>Als er labels voor gegevensgebruik zijn toegepast op bepaalde velden in een gegevensset (in plaats van op de gehele gegevensset), wordt de toepassing van die labels op veldniveau bij activering uitgevoerd onder de volgende voorwaarden:
 >
->* De velden worden gebruikt in de doelgroepdefinitie.
+>* De velden worden gebruikt in de definitie van het publiek.
 >* De velden worden geconfigureerd als geprojecteerde kenmerken voor de doelbestemming.
 >
-> Als het veld `person.name.firstName` bijvoorbeeld bepaalde labels voor gegevensgebruik heeft die conflicteren met de marketingactie van de bestemming, wordt in de revisieset een schending van het gegevensgebruiksbeleid weergegeven. Voor meer informatie, zie [ de Governance van Gegevens in Adobe Experience Platform ](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Als het veld `person.name.firstName` bijvoorbeeld bepaalde labels voor gegevensgebruik heeft die conflicteren met de marketingactie van de bestemming, wordt in de revisiestap een schending van het gegevensgebruiksbeleid weergegeven. Voor meer informatie, zie [ de Governance van Gegevens in Adobe Experience Platform ](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ### [!BADGE  Beta ] {type=Informative} de series van de Uitvoer door berekende gebieden {#export-arrays-calculated-fields}
 
@@ -475,9 +475,9 @@ Het selecteren van naamruimten voor exporteren, zoals weergegeven in de ondersta
 
 ![ niet gestaafde afbeelding die identiteitsuitvoer tonen.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
-Als tijdelijke oplossing kunt u:
-* Gebruik de oude opslagdoelen van de cloud voor de dataflows waar u naamruimten wilt opnemen in de exportbewerkingen
-* Upload identiteiten als attributen in Experience Platform, dan voer hen naar uw bestemmingen van de wolkenopslag uit.
+Als tijdelijke oplossing als u tijdens de bètafase naamruimten moet toevoegen aan uw geëxporteerde bestanden, kunt u:
+* Gebruik de verouderde cloudopslagbestemmingen voor de dataflows waarin u naamruimten wilt opnemen in het exporteren
+* Upload identiteiten als kenmerken naar Experience Platform om ze vervolgens te exporteren naar uw cloudopslagbestemmingen.
 
 ## Profielkenmerken selecteren {#select-attributes}
 
@@ -536,7 +536,7 @@ Verrijkingskenmerken komen overeen met het aangepaste geüploade publiek dat in 
 
 Voer de onderstaande stappen uit om verrijkingskenmerken voor elk extern publiek te selecteren:
 
-1. In de **[!UICONTROL Enrichment attributes]** kolom, selecteer ![ uitgeven knoop ](/help/images/icons/edit.png) (geef) knoop uit.
+1. In de **[!UICONTROL Enrichment attributes]** kolom, selecteer ![ uitgeven knoop ](/help/images/icons/edit.png) (geef uit) knoop.
 1. Selecteer **[!UICONTROL Add enrichment attribute]**. Er wordt een nieuw leeg schemaveld weergegeven.
    ![ beeld UI die het verrijkingsattributen modaal scherm tonen.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
 1. Selecteer de knop rechts van het lege veld om het selectiescherm van het veld te openen.
@@ -545,15 +545,15 @@ Voer de onderstaande stappen uit om verrijkingskenmerken voor elk extern publiek
 1. Nadat u alle kenmerken hebt toegevoegd die u wilt exporteren, selecteert u **[!UICONTROL Save and close]** .
 1. Herhaal deze stappen voor elk extern publiek.
 
-Als u externe doelgroepen wilt activeren naar uw bestemmingen zonder een kenmerk te exporteren, schakelt u de schakelknop **[!UICONTROL Exclude enrichment attributes]** in. Met deze optie exporteert u de profielen van het externe publiek, maar de bijbehorende kenmerken worden niet naar uw bestemming verzonden.
+Als u een extern publiek naar uw doelen wilt activeren zonder kenmerken te exporteren, schakelt u de schakeloptie **[!UICONTROL Exclude enrichment attributes]** in. Met deze optie exporteert u de profielen van het externe publiek, maar de bijbehorende kenmerken worden niet naar uw bestemming verzonden.
 
-{het beeld van 0} UI die de schakelaar toont van de uitsluitingsattributen van de verrijking.](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)![
+{het beeld van 0} UI die de knoop toont van de attributen van de exclusief verrijking.](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)![
 
-Selecteer **[!UICONTROL Next]** om naar de [ 2} stap van het Overzicht {te bewegen.](#review)
+Selecteer **[!UICONTROL Next]** om aan de [ 2} stap van het Overzicht {te bewegen.](#review)
 
-## Revisie {#review}
+## Controleren {#review}
 
-Op de pagina van **[!UICONTROL Review]** ziet u een overzicht van uw selectie. Selecteer **[!UICONTROL Cancel]** om de flow te splitsen, **[!UICONTROL Back]** om uw instellingen te wijzigen of **[!UICONTROL Finish]** om uw selectie te bevestigen en gegevens naar de bestemming te verzenden.
+Op de pagina **[!UICONTROL Review]** ziet u een overzicht van uw selectie. Selecteer **[!UICONTROL Cancel]** om de stroom te verbreken, **[!UICONTROL Back]** om uw instellingen te wijzigen of **[!UICONTROL Finish]** om uw selectie te bevestigen en gegevens naar de bestemming te verzenden.
 
 ![ Samenvatting van de Selectie die in de overzichtsstap wordt getoond.](../assets/ui/activate-batch-profile-destinations/review.png)
 
