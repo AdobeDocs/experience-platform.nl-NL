@@ -6,7 +6,7 @@ breadcrumb-title: Handleiding voor Web SDK
 user-guide-description: Interactie met Experience Cloud-services via het Edge-netwerk.
 feature: Web SDK
 role: Developer
-source-git-commit: 02ae1fce01895d83d9c68248397e5288613ffe58
+source-git-commit: 7231d3a5ad9553707392c32004d02e355e3c919f
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 19%
@@ -76,7 +76,6 @@ ht-degree: 19%
    * [Aangepaste inhoud renderen](personalization/rendering-personalization-content.md)
    * [Personalization via hybride implementatie](personalization/hybrid-personalization.md)
    * [flikkering beheren](personalization/manage-flicker.md)
-   * [Haken controleren](monitoring-hooks.md)
    * Adobe Target {#adobe-target}
       * [Overzicht](personalization/adobe-target/target-overview.md)
       * [Implementatie van één pagina](personalization/adobe-target/spa-implementation.md)
@@ -109,6 +108,6 @@ ht-degree: 19%
    * [Foutopsporingsmethoden](use-cases/debugging.md)
    * [Meerdere Web SDK-instanties gebruiken](use-cases/multiple-instances.md)
    * [Gebeurtenissen voor de bovenste en onderste pagina configureren](use-cases/top-bottom-page-events.md)
-
+* [Haken controleren](monitoring-hooks.md)
 * [Veelgestelde vragen](faq.md)
 * [Bronnen](resources.md)
