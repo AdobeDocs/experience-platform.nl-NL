@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Basisbeginselen van de schemacompositie
 description: Leer over de schema's van de Gegevens van de Ervaring van het Model (XDM) en de bouwstenen, principes, en beste praktijken voor het samenstellen van schema's in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
+source-git-commit: 595d9bd6a0aa0c9f1059e485c54e89ce02b7ec68
 workflow-type: tm+mt
-source-wordcount: '4251'
+source-wordcount: '4323'
 ht-degree: 0%
 
 ---
@@ -223,6 +223,10 @@ De volgende schermafbeelding laat zien hoe veldgroepen worden vertegenwoordigd i
 
 Voor de meest bijgewerkte lijst van beschikbare standaard XDM gebiedsgroepen, verwijs naar de [ officiële XDM bewaarplaats ](https://github.com/adobe/xdm/tree/master/components/fieldgroups). Alternatief, kunt u naar de gids verwijzen bij [ het onderzoeken van componenten XDM ](../ui/explore.md) als u verkiest om middelen in UI te bekijken.
 
+>[!NOTE]
+>
+> Standaard XDM gebiedsgroepen evolueren altijd en sommige gebiedsgroepen zijn afgekeurd. Voor de meest bijgewerkte lijst van vervangen gebiedsgroepen, verwijs naar de [ afgekeurde sectie van gebiedsgroepen ](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated) in de officiële XDM folder.
+
 ### Gegevenstype {#data-type}
 
 Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als referentieveldtypen in klassen of schema&#39;s. Het belangrijkste verschil is dat gegevenstypen meerdere subvelden op dezelfde manier kunnen definiëren als veldgroepen. Het belangrijkste verschil tussen hen, is dat de gegevenstypes overal in een schema kunnen worden omvat door het als &quot;gegevenstype&quot;van een gebied toe te voegen. Veldgroepen zijn alleen compatibel met bepaalde klassen, maar gegevenstypen kunnen in elke bovenliggende klasse of veldgroep worden opgenomen.
@@ -238,6 +242,10 @@ De volgende schermafbeelding toont hoe gegevenstypen worden weergegeven in de in
 ![ A diagram in de Redacteur van het Schema voor een individuele persoon met het Volledige benadrukte naamobject en de attributen.](../images/schema-composition/data-type.png)
 
 Voor de meest bijgewerkte lijst van beschikbare standaard XDM gegevenstypes, verwijs naar de [ officiële XDM bewaarplaats ](https://github.com/adobe/xdm/tree/master/components/datatypes). Alternatief, kunt u naar de gids verwijzen bij [ het onderzoeken van componenten XDM ](../ui/explore.md) als u verkiest om middelen in UI te bekijken.
+
+>[!NOTE]
+>
+> De standaard gegevenstypes XDM evolueren altijd en sommige gegevenstypes zijn afgekeurd. Voor de meest update-aan-datum lijst van afgekeurde gegevenstypes, verwijs naar de [ afgekeurde sectie van gegevenstypes ](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) in de officiële folder XDM.
 
 ### Veld {#field}
 
