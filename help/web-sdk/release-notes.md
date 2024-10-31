@@ -3,10 +3,10 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
+source-git-commit: f31d250cfbe42680ee6f4d1334bf04a2ee8643a1
 workflow-type: tm+mt
-source-wordcount: '1920'
-ht-degree: 0%
+source-wordcount: '2044'
+ht-degree: 5%
 
 ---
 
@@ -16,9 +16,29 @@ ht-degree: 0%
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie de [ nota&#39;s van de de marktextensie van SDK van het Web ](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Versie 2.24.0 - vrijdag 31 oktober 2024
+
+**Nieuwe functies**
+
+- [ DataStream treedt met voeten ](../datastreams/overrides.md) wordt nu gesteund wanneer het beginnen van media zittingen.
+
+- Toegevoegde ondersteuning voor Adobe Target-reactietokens in de rendering slaagde erin om haken te controleren.
+
+**Bevestigingen en verbeteringen**
+
+- Wanneer meerdere in-app berichten worden geretourneerd, wordt alleen de berichten met de hoogste prioriteit weergegeven. De andere bestanden worden opgenomen als onderdrukt.
+- Lege gegevensstroomoverschrijvingen worden niet meer verzonden naar de Edge Network, waardoor potentiële conflicten met server-side routeringsconfiguraties worden verminderd.
+- De naam van de volgende logboekberichtcomponentennamen is gewijzigd, zodat deze kunnen worden uitgelijnd met andere Adobe-SDK&#39;s:
+   - `DecisioningEngine` is hernoemd naar `RulesEngine`
+   - `LegacyMediaAnalytics` is hernoemd naar `MediaAnalyticsBridge`
+   - `Privacy` is hernoemd naar `Consent`
+- Oplossing voor een fout die optrad wanneer standaardinhoudsitems werden gerenderd via [`applyPropositions`](../web-sdk/commands/applypropositions.md) .
+- Oplossing voor een CSS-fout in Adobe Target-acties voor verplaatsen en vergroten of verkleinen.
+- De `machineLearning` -toets is verwijderd uit [`sendEvent`](../web-sdk/commands/sendevent/overview.md) -reacties.
+
 ## Versie 2.23.0 - 19 september 2024
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Toegevoegde steun voor het verzoeken van [ identiteitskaart van de KERN ](identity/overview.md#tracking-coreid-web-sdk) in het [ getIdentity ](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library) bevel.
 
@@ -28,7 +48,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 ## Versie 2.2.2.0 - 22 augustus 2024
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Toegevoegde ondersteuning voor knuppels voor personalisatie-controle.
 
@@ -40,23 +60,23 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - Probleem met klant verholpen met aanroep naar has.
 - Vaste een kwestie waar een ongeldige url coderen in de `adobe_mc` parameter [ sendEvent ](commands/sendevent/overview.md) vraag veroorzaakte om te ontbreken.
 
-## Versie 2.21.1 - 18 juli 2024
+## Versie 2.21.1 - vrijdag 18 juli 2024
 
 **Bevestigingen en verbeteringen**
 
 - Oplossing voor een constructiefout bij gebruik van NPM-bibliotheek.
 
-## Versie 2.21.0 - 16 juli 2024
+## Versie 2.21.0 - woensdag 16 juli 2024
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Toegevoegde ondersteuning voor het automatisch bijhouden van propositieinteractie.
 - Een aangepast constructiescript met een bestand alloy.js toegevoegd.
 - Verbeterde klikinzameling met ActivityMap en gebeurtenis groeperende steun.
 
-## Versie 2.20.0 - 21 mei 2024
+## Versie 2.20.0 - woensdag 21 mei 2024
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Toegevoegde steun voor [ Streaming de Inzameling van Media ](../web-sdk/commands/configure/streamingmedia.md).
 
@@ -64,7 +84,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 - Het probleem waarbij de standaardinhoud werd verborgen door het voorverborgen fragment, is opgelost door een fout te voorkomen toen de toestemming werd geweigerd.
 
-## Versie 2.19.2 - 10 januari 2024
+## Versie 2.19.2 - donderdag 10 januari 2024
 
 **Bevestigingen en verbeteringen**
 
@@ -72,15 +92,15 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - Probleem verholpen waarbij de onderzijde van pagina-aanroepen nooit zouden worden verzonden wanneer de bovenkant van de pagina-aanroep was ingesteld op `renderDecisions` `false` .
 - Probleem verholpen waarbij de web SDK geen interdomeinidentiteiten kon lezen als er meerdere `adobe_mc` queryreeksparameters waren.
 
-## Versie 2.19.1 - 10 november 2023
+## Versie 2.19.1 - zaterdag 10 november 2023
 
 **Bevestigingen en verbeteringen**
 
 - Probleem verholpen waarbij de array proposities die door `sendEvent` aanroepen werd geretourneerd, altijd leeg was.
 
-## Versie 2.19.0 - 1 november 2023
+## Versie 2.19.0 - donderdag 1 november 2023
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Extra ondersteuning voor het renderen van berichten in de app van Adobe Journey Optimizer.
 - Toegevoegde steun voor [ bovenkant en bodem van paginagebeurtenissen ](use-cases/top-bottom-page-events.md).
@@ -92,9 +112,9 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - Probleem verholpen waarbij de weergavenamen van toepassingen van één pagina hoofdlettergevoelig waren.
 - Probleem verholpen met gepersonaliseerde aanbod-kiezers voor schaduwDOM.
 
-## Versie 2.18.0 - 31 juli 2023
+## Versie 2.18.0 - dinsdag 31 juli 2023
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Toegevoegde steun voor [ per-bevel treedt van datastream identiteitskaart ](../datastreams/overrides.md) met voeten.
 
@@ -103,7 +123,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - Afsluitkoppelingen kwamen niet in aanmerking omdat het domein deel uitmaakte van een query. Dit probleem is nu opgelost.
 - Vervangen `edgeConfigId` in de Web SDK-configuratie door `datastreamId` .
 
-## Versie 2.17.0 - 17 mei 2023
+## Versie 2.17.0 - donderdag 17 mei 2023
 
 **Bevestigingen en verbeteringen**
 
@@ -111,13 +131,13 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 ## Versie 2.16.0 - 25 april 2023
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Toegevoegde steun voor [ datastream configuratie treedt met voeten ](../datastreams/overrides.md).
 
 ## Versie 2.15.0 - 30 maart 2023
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Toegevoegde ondersteuning voor [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) link click callback.
 - Extra ondersteuning voor Adobe Journey Optimizer klik tracking.
@@ -127,7 +147,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - De koppelingsverzameling bevat nu de naam van de koppeling en het bezoekersgebied.
 - Fout met betrekking tot console verwijderd voor mislukte URL-doelen.
 
-## Versie 2.14.0 - 25 januari 2023
+## Versie 2.14.0 - donderdag 25 januari 2023
 
 - (Beta) Extra ondersteuning voor Adobe Journey Optimizer-oppervlakken en -voorstellingen.
 
@@ -138,14 +158,14 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - Vaste een kwestie waar [ de wenk van de gebruikersagent ](/help/web-sdk/use-cases/client-hints.md) eigenschappen aan een onjuist type konden worden geplaatst.
 - Correctie van een probleem waarbij `placeContext.localTime` niet overeenkwam met het schema.
 
-## Versie 2.13.1 - 13 oktober 2022
+## Versie 2.13.1 - vrijdag 13 oktober 2022
 
 - Probleem verholpen waarbij bezoekersmigratie niet werkt als window.Visitor na het configureren wordt gedefinieerd. Dit is vooral een probleem wanneer u met Adobe-tags werkt.
 - Probleem verholpen waarbij `device.screenWidth` en `device.screenHeight` in sommige omgevingen als tekenreeksen werden gevuld.
 
 ## Versie 2.13.0 - 28 september 2022
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Toegevoegde steun voor [ Pagina door Volledige Migratie van de Pagina ](home.md#migrating-to-web-sdk). Het Adobe Target-profiel blijft nu behouden wanneer een bezoeker zich tussen de pagina&#39;s at.js en Web SDK verplaatst.
 - Toegevoegde configureerbare steun voor [ high entropy gebruiker-Agent de Hints van de Cliënt ](/help/web-sdk/use-cases/client-hints.md).
@@ -160,14 +180,14 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - Toegevoegde gedupliceerde naamruimtevalidatie voor de opdracht `getIdentity` .
 - Toegevoegde gedupliceerde validatie van beslissingsbereik voor de opdracht `sendEvent` .
 
-## Versie 2.12.0 - 29 juni 2022
+## Versie 2.12.0 - donderdag 29 juni 2022
 
 - Wijzig de aanvragen aan de Edge Network om de `cluster` cookie locatiehint te gebruiken als onderdeel van de URL. Dit zorgt ervoor dat gebruikers die hun locatie wijzigen (bijvoorbeeld via een VPN of rijden met mobiele apparaten, enz.), halverwege de sessie dezelfde kant op gaan en hetzelfde personalisatieprofiel hebben.
 - Hiermee worden de geconfigureerde functies in de opdrachtreactie van getLibraryInfo gerenderd.
 
-## Versie 2.11.0 - 13 juni 2022
+## Versie 2.11.0 - dinsdag 13 juni 2022
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - U kunt nu nauwkeuriger persoonlijke ervaringen bieden door gebruikers-id&#39;s te delen tussen mobiele apps en mobiele webinhoud, en tussen domeinen. Zie [ specifieke documentatie ](identity/id-sharing.md) om meer te leren.
 - U kunt nu een array met voorstellingen van [!DNL Adobe Target] renderen of uitvoeren in toepassingen van één pagina, zonder de analytische meetgegevens te verhogen. Dit vermindert rapportagefouten en vergroot de nauwkeurigheid van de analyse. Zie [ specifieke documentatie ](personalization/rendering-personalization-content.md#applypropositions) om meer te leren.
@@ -179,7 +199,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - Correctie van een probleem waarbij gepersonaliseerde inhoud niet correct werd toegepast bij gebruik van de pseudo-kiezer van `eq` .
 - Het probleem waarbij `localTimezoneOffset` de validatie van het Experience Platform kon mislukken, is opgelost.
 
-## Versie 2.10.1 - 3 mei 2022
+## Versie 2.10.1 - woensdag 3 mei 2022
 
 - Probleem verholpen waarbij meerdere permanente iframes werden gemaakt voor id-syncs en segmentdoelen.
 
@@ -198,13 +218,13 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - Probleem verholpen waarbij de interactieve gebeurtenissen niet in Adobe Target werden meegeteld. Dit probleem is opgelost door de weergavenaam toe te voegen aan de XDM op web.webPageDetails.viewName.
 - Los gebroken documentatiekoppelingen in consoleberichten op.
 
-## Versie 2.8.0 - 19 januari 2022
+## Versie 2.8.0 - donderdag 19 januari 2022
 
 - Ondersteuning voor schaduw-DOM-kiezers voor personalisatie.
 - Naam gewijzigd in gebeurtenistypen voor personalisatie. (`display` en `click` worden `decisioning.propositionDisplay` en `decisioning.propositionInteract`)
 - Probleem verholpen waarbij HTML-aanbiedingen met inlinescripttags de scripttags twee keer aan de pagina hebben toegevoegd, ook al werd het script slechts één keer uitgevoerd.
 
-## Versie 2.7.0 - 26 oktober 2021
+## Versie 2.7.0 - woensdag 26 oktober 2021
 
 - Maak aanvullende informatie van de Edge Network beschikbaar in de geretourneerde waarde van `sendEvent` , inclusief `inferences` en `destinations` . Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Beta uitrollen.
 
@@ -220,11 +240,11 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 - Probleem verholpen waarbij een waarschuwing over de afschrijving van `result.decisions` (opgegeven door de opdracht `sendEvent` ) zou worden geregistreerd bij de console, zelfs als de eigenschap `result.decisions` niet werd benaderd. Er wordt geen waarschuwing geregistreerd wanneer de eigenschap `result.decisions` wordt benaderd, maar de eigenschap is nog steeds afgekeurd.
 
-## Versie 2.6.1 - 29 juli 2021
+## Versie 2.6.1 - vrijdag 29 juli 2021
 
 - Probleem verholpen waarbij het renderen van een app-weergave van één pagina zonder inhoud voor personalisatie een fout zou opleveren en de belofte die door de opdracht `sendEvent` is geretourneerd, zou worden afgewezen.
 
-## Versie 2.6.0 - 27 juli 2021
+## Versie 2.6.0 - woensdag 27 juli 2021
 
 - Verstrekt meer verpersoonlijkingsinhoud in de `sendEvent` opgeloste belofte, met inbegrip van de reactietekenen van Adobe Target. Wanneer de opdracht `sendEvent` wordt uitgevoerd, wordt een promise geretourneerd die uiteindelijk wordt opgelost met een `result` -object dat informatie bevat die van de server is ontvangen. Eerder bevatte dit resultaatobject een eigenschap met de naam `decisions` . Deze eigenschap `decisions` is vervangen. Er is een nieuwe eigenschap, `propositions` , toegevoegd. Dit nieuwe bezit voorziet klanten van toegang tot meer verpersoonlijkingsinhoud, met inbegrip van [ reactietokens ](/help/web-sdk/personalization/adobe-target/accessing-response-tokens.md).
 

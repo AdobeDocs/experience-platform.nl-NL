@@ -2,16 +2,25 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
+source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
 workflow-type: tm+mt
-source-wordcount: '2278'
-ht-degree: 0%
+source-wordcount: '2319'
+ht-degree: 5%
 
 ---
 
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de recentste versienota&#39;s op SDK zelf, zie de [ de versienota&#39;s van SDK van het Web van het Platform ](/help/web-sdk/release-notes.md).
+
+## Versie 2.27.0 - vrijdag 31 oktober 2024
+
+**Nieuwe functies**
+
+- [ DataStream treedt ](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) nu montages met voeten om de oplossingen van het Experience Cloud en de diensten van Adobe Experience Platform onbruikbaar te maken.
+- U kunt [ datastream overschrijvingen ](../web-sdk/web-sdk-extension-configuration.md) voor media zittingen nu tot stand brengen.
+
+Bevat versie 2.24.0 van het Web SDK van Adobe Experience Platform.
 
 ## Versie 2.26.1 - 19 september 2024
 
@@ -23,7 +32,7 @@ Bevat versie 2.23.0 van het Web SDK van Adobe Experience Platform.
 
 ## Versie 2.26.0 - 22 augustus 2024
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Toegevoegde controlehaakgebeurtenis `triggered` .
 - [ Geleide gebeurtenissen ](action-types.md#instance), [ verzoek standaardverpersoonlijking ](action-types.md#personalization), [ Abonneren heersersset punten ](event-types.md#subscribe-ruleset-items), en [ evalueert heersers ](action-types.md#evaluate-rulesets) zijn nu algemeen beschikbaar.
@@ -35,16 +44,16 @@ Bevat versie 2.23.0 van het Web SDK van Adobe Experience Platform.
 
 Bevat versie 2.2.2.0 van het Web SDK van Adobe Experience Platform.
 
-## Versie 2.25.0 - 18 juli 2024
+## Versie 2.25.0 - vrijdag 18 juli 2024
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Extra ondersteuning voor automatisch bijhouden van personalisatie in Adobe Journey Optimizer.
 - Introduceerde nieuwe montages om verbeterde klikinzameling te beheren.
 
 Bevat versie 2.21.1 van het Web SDK van Adobe Experience Platform.
 
-## Versie 2.24.0 - 5 juni 2024
+## Versie 2.24.0 - donderdag 5 juni 2024
 
 **Bevestigingen en verbeteringen**
 
@@ -55,9 +64,9 @@ Bevat versie 2.21.1 van het Web SDK van Adobe Experience Platform.
 
 Bevat versie 2.20.0 van het Web SDK van Adobe Experience Platform.
 
-## Versie 2.23.1 - 28 mei 2024
+## Versie 2.23.1 - woensdag 28 mei 2024
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Toegevoegde ondersteuning voor de component [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) in de extensieconfiguratie.
 - De handeling [`Send Media Event`](action-types.md#send-media-event) is toegevoegd voor de functie [!DNL Streaming Media Collection] .
@@ -70,16 +79,16 @@ Bevat versie 2.20.0 van het Web SDK van Adobe Experience Platform.
 - Vaste een fout die voorkwam wanneer het zoeken naar gegevenselementen in de [ veranderlijke ](action-types.md#update-variable) actie van de Update.
 - [!UICONTROL Media] -gebeurtenistypen zijn verwijderd uit de gebeurtenistypen die worden voorgesteld voor gebruik in de `sendEvent` -handeling.
 
-## Versie 2.2.2.0 - 3 mei 2024
+## Versie 2.22.0 - zaterdag 3 mei 2024
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Breid veranderlijk gegevenselement uit om gegevensvoorwerpen te steunen.
 - De actie voor het bijwerken van variabelen ondersteunt nu het wijzigen van doorloopgegevens van Adobe Analytics, Adobe Audience Manager en Adobe Target.
 
 Bevat versie 2.19.2 van het Web SDK van Adobe Experience Platform.
 
-## Versie 2.21.4 - 10 januari 2024
+## Versie 2.21.4 - donderdag 10 januari 2024
 
 **Bevestigingen en verbeteringen**
 
@@ -88,7 +97,7 @@ Bevat versie 2.19.2 van het Web SDK van Adobe Experience Platform.
 
 Bevat versie 2.19.2 van het Web SDK van Adobe Experience Platform.
 
-## Versie 2.21.3 - 10 november 2023
+## Versie 2.21.3 - zaterdag 10 november 2023
 
 Bevat versie 2.19.1 van het Web SDK van Adobe Experience Platform.
 
@@ -96,9 +105,9 @@ Bevat versie 2.19.1 van het Web SDK van Adobe Experience Platform.
 
 - Probleem verholpen waarbij de array proposities die beschikbaar was in `Send event complete` -gebeurtenissen altijd leeg was.
 
-## Versie 2.21.2 - 1 november 2023
+## Versie 2.21.2 - donderdag 1 november 2023
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Optie `Request default personalization` toegevoegd om gebeurtenisactie te verzenden.
 - Toegevoegde ondersteuning voor boven- en onderaan-pagina-gebeurtenissen in de verzendgebeurtenis.
@@ -122,9 +131,9 @@ Bevat versie 2.19.1 van het Web SDK van Adobe Experience Platform.
 
 - Verbeterde validatie van opgeslagen gegevensstroomoverschrijvingsinstellingen.
 
-## Versie 2.20.0 - 31 juli 2023
+## Versie 2.20.0 - dinsdag 31 juli 2023
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Toegevoegde steun voor [ per-bevel treedt van datastream identiteitskaart ](../../../../datastreams/overrides.md) met voeten.
 
@@ -133,17 +142,17 @@ Bevat versie 2.19.1 van het Web SDK van Adobe Experience Platform.
 - Vervangen `edgeConfigId` in de SDK-configuratie door `datastreamId` .
 - De veelvoudige verbeteringen van de gebruikerservaring voor de configuratie van de gegevensstroom treden gebruikersinterface met voeten.
 
-## Versie 2.19.0 - 21 juni 2023
+## Versie 2.19.0 - donderdag 21 juni 2023
 
 - De acties **[!UICONTROL Variable]** data element en **[!UICONTROL Update Variable]** zijn nu over het algemeen beschikbaar.
 
-## Versie 2.18.0 - 18 mei 2023
+## Versie 2.18.0 - vrijdag 18 mei 2023
 
 - Bevat versie 2.17.0 van het Web SDK van Adobe Experience Platform.
 
 ## Versie 2.17.0 - 25 april 2023
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - Bevat versie 2.16.0 van het Web SDK van Adobe Experience Platform.
 - Toegevoegde steun voor [ datastream configuratie treedt met voeten ](/help/datastreams/overrides.md).
@@ -159,7 +168,7 @@ Bevat versie 2.19.1 van het Web SDK van Adobe Experience Platform.
 
 ## Versie 2.16.0 - 30 maart 2023
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 - (Beta) Toegevoegde handeling **[!UICONTROL Update variable]** en gegevenselement **[!UICONTROL Variable]** .
 - Toegevoegde configuratie voor de callback-functie [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) .
@@ -170,14 +179,14 @@ Bevat versie 2.19.1 van het Web SDK van Adobe Experience Platform.
 - Probleem verholpen waarbij gegevenselementen van XDM-objectgegevens niet werkten als er slechts één schema aanwezig was.
 - Bevat versie 2.15.0 van Adobe Experience Platform Web SDK.
 
-## Versie 2.15.1 - 26 januari 2023
+## Versie 2.15.1 - vrijdag 26 januari 2023
 
 - Probleem verholpen waarbij gebruikers zonder toegang tot gegevensstromen de extensieconfiguratie niet konden bewerken.
 - Extra ondersteuning voor oppervlakken in de handeling `sendEvent` .
 
 Bevat versie 2.14.0 van Adobe Experience Platform Web SDK.
 
-## Versie 2.14.1 - 13 oktober 2022
+## Versie 2.14.1 - vrijdag 13 oktober 2022
 
 - Probleem verholpen waarbij de web SDK de id van de Experience Cloud-id-service niet respecteert.
 
@@ -191,13 +200,13 @@ Bevat versie 2.13.1 van de Adobe Experience Platform Web SDK Library.
 
 Bevat versie 2.13.0 van de Adobe Experience Platform Web SDK Library.
 
-## Versie 2.13.0 - 29 juni 2022
+## Versie 2.13.0 - donderdag 29 juni 2022
 
 - Oplossing voor de sorteervolgorde van numerieke eigenschappen in het gegevenselement XDM Object, zoals Vars.
 
 Bevat versie 2.12.0 van de SDK-bibliotheek van Adobe Experience Platform Web.
 
-## Versie 2.12.0 - 13 juni 2022
+## Versie 2.12.0 - dinsdag 13 juni 2022
 
 - Het gegevenselement `identityMap` is bijgewerkt en vult de naamruimteopties op basis van de sandboxen die zijn gedefinieerd door de extensie-instellingen.
 - Actie **[!UICONTROL Redirect with identity]** toegevoegd om delen van domeinidentiteit toe te staan.
@@ -207,7 +216,7 @@ Bevat versie 2.12.0 van de SDK-bibliotheek van Adobe Experience Platform Web.
 
 Bevat versie 2.11.0 van de Adobe Experience Platform Web SDK Library.
 
-## Versie 2.11.2 - 3 mei 2022
+## Versie 2.11.2 - woensdag 3 mei 2022
 
 Bevat versie 2.10.1 van de Adobe Experience Platform Web SDK Library.
 
@@ -230,11 +239,11 @@ Bevat versie 2.10.0 van de Adobe Experience Platform Web SDK Library.
 
 Bevat versie 2.9.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
-## Versie 2.9.0 - 19 januari 2022
+## Versie 2.9.0 - donderdag 19 januari 2022
 
 Bevat versie 2.8.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
-## Versie 2.8.0 - 26 oktober 2021
+## Versie 2.8.0 - woensdag 26 oktober 2021
 
 Bevat versie 2.7.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
@@ -262,7 +271,7 @@ Bevat versie 2.6.2 van de bibliotheek van SDK van het Web van Adobe Experience P
 
 Bevat versie 2.6.1 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
-## Versie 2.6.0 - 27 juli 2021
+## Versie 2.6.0 - woensdag 27 juli 2021
 
 Bevat versie 2.6.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
@@ -273,7 +282,7 @@ Bevat versie 2.6.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 - Het gebeurtenistype Besluiten ontvangen is vervangen. Gebruik in plaats hiervan het gebeurtenistype Send Event Complete.
 - De gebruikersinterface en foutafhandeling zijn over het algemeen verbeterd.
 
-## Versie 2.5.0 - 1 juni 2021
+## Versie 2.5.0 - woensdag 1 juni 2021
 
 Bevat versie 2.5.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
@@ -292,7 +301,7 @@ Bevat versie 2.4.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 - Er wordt nu een betere fout weergegeven in de gebruikersinterface van het XDM Object-gegevenselement als het toegangstoken van de gebruiker ongeldig is of niet correct is ingericht.
 - Probleem verholpen waarbij een kruisoorsprongfout (die geen invloed heeft op de werking van de extensie) is verholpen die tijdens het weergeven van een XDM Object-gegevenselement in de browserontwikkelingsconsole werd weergegeven.
 
-## Versie 2.3.0 - 4 november 2020
+## Versie 2.3.0 - donderdag 4 november 2020
 
 Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
 
@@ -300,7 +309,7 @@ Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 - Toegevoegde mogelijkheid om te zoeken naar XDM-schema&#39;s met het gegevenstype XDM Object.
 - Het toegevoegde klonen van XDM gegevens binnen het Send actietype van de Gebeurtenis om ervoor te zorgen dat om het even welke verdere veranderingen in het XDM gegevensvoorwerp niet in het verzoek zullen worden weerspiegeld.
 
-## Versie 2.2.0 - 1 oktober 2020
+## Versie 2.2.0 - vrijdag 1 oktober 2020
 
 - Wanneer klanten probeerden om een voorwerp XDM van zandbakschema&#39;s tot stand te brengen, kwamen zij in authentificatiekwesties in werking. De API die Platform roept is zich nu bewust van milieu&#39;s zodat worden de gebruikers slechts voorgesteld van die schema&#39;s die zij toegang hebben om uit te geven.
 - Wanneer u het gegevenselement `identityMap` gebruikt, worden de naamruimten nu vooraf ingevuld in een vervolgkeuzelijst, zodat u deze niet handmatig hoeft in te vullen.
@@ -320,11 +329,11 @@ Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 - Ondersteuning voor het doorgeven van een identiteitsoverzicht in de handeling `setConsent` .
 - Ondersteuning voor het kiezen van een platformsandbox in het XDM Object Data Element.
 
-## Versie 1.0.0 - 26 mei 2020
+## Versie 1.0.0 - woensdag 26 mei 2020
 
 - Steun die het milieu van de Dienst van de Configuratie selecteert.
 
-## Versie 0.1.2 - 4 mei 2020
+## Versie 0.1.2 - dinsdag 4 mei 2020
 
 - Naam gewijzigd in `configId` in `edgeConfigId` .
 - Naam gewijzigd `viewStart` in `renderDecisions` , standaard ingesteld op false. Indien ingesteld op true, worden Personalization-aanbiedingen opgehaald en automatisch weergegeven.
@@ -355,17 +364,17 @@ Deze beslissingen worden alleen van de opdracht `sendEvent` geretourneerd als `r
 - Wanneer het uitvoeren van een ongeldig bevel, zal een lijst van geldige bevelnamen in de console worden geregistreerd
 - Selectievakje toegevoegd om cookie-ondersteuning van derden in- en uit te schakelen voor de tagextensie. Hiermee worden oproepen naar demdex.net uitgeschakeld
 
-## Versie 0.0.5 - 20 december 2019
+## Versie 0.0.5 - zaterdag 20 december 2019
 
 - Activiteitenbeheer toevoegen aan tagextensie
 - EventType en EventMergeId beschikbaar maken voor de opdracht event
 - OnBeforeEventSend config toevoegen aan tagextensie
 - EdgeBasePath-config toevoegen aan tagextensie
 
-## Versie 0.0.3 - 25 november 2019
+## Versie 0.0.3 - dinsdag 25 november 2019
 
 - De nieuwe gebieden van de Fusie ID en van het Type op de Send actie van de Gebeurtenis. De kaart van identiteitskaart van de fusie aan `xdm.eventMergeID` in het XDM- schema en het Type wijst aan `xdm.eventType` in het XDM- schema toe.
 
-## Versie 0.0.2 - 18 november 2019
+## Versie 0.0.2 - dinsdag 18 november 2019
 
 - Eerste release
