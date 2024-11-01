@@ -1,17 +1,17 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform, oktober 2024
-description: Aanvullende informatie voor de versie van oktober 2024 voor Adobe Experience Platform.
+title: Aanvullende informatie van oktober 2024 voor Adobe Experience Platform
+description: Aanvullende informatie van oktober 2024 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f30a124a40928abf69366d311131e353c2779191
 workflow-type: tm+mt
 source-wordcount: '1138'
-ht-degree: 36%
+ht-degree: 79%
 
 ---
 
 # Aanvullende informatie voor Adobe Experience Platform
 
-**Releasedatum: woensdag 29 oktober 2024**
+**Releasedatum: 29 oktober 2024**
 
 Updates van bestaande functies en documentatie in Adobe Experience Platform:
 
@@ -48,7 +48,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
-| Tags en extensies | Adobe Analytics JSON View | U kunt nu de extensie Adobe Analytics-tags gebruiken om eVars, props en gebeurtenisinstellingen te controleren als JSON. Deze kan nu worden opgenomen in de SDK-extensie van Web en worden geëxporteerd voor bewerking. U kunt deze gegevens ook uploaden of kopiëren en opslaan op uw apparaat. Lees de [ de uitbreidingsdocumentatie van Adobe Analytics ](../../tags/extensions/client/analytics/overview.md) voor meer informatie. |
+| Tags en extensies | Adobe Analytics JSON-weergave | U kunt nu de Adobe Analytics-tagextensie gebruiken om eVars, props en gebeurtenisinstellingen als JSON te onderzoeken. Deze kunnen nu worden opgenomen in de Web SDK-extensie en worden geëxporteerd voor bewerking. U kunt deze gegevens ook uploaden of kopiëren en op uw apparaat opslaan. Raadpleeg de [documentatie voor Adobe Analytics-extensies](../../tags/extensions/client/analytics/overview.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
@@ -62,9 +62,9 @@ Raadpleeg voor meer informatie het [overzicht van dataverzameling](../../collect
 
 | Functie | Beschrijving |
 | ----------- | ----------- |
-| [ de uitvoersteun van de Serie algemeen beschikbaar ](../../destinations/ui/export-arrays-calculated-fields.md) | Alle klanten kunnen de **[!UICONTROL Add calculated field]** optie nu gebruiken wanneer het activeren van publiek *aan op dossier-gebaseerde bestemmingen* om volledige series of elementen van series uit te voeren. U moet de functie `array_to_string` nog steeds gebruiken om de array af te vlakken in een tekenreeks in het doelbestand. <br> ![ voeg berekende gebiedsselectie met functies en gebieden toe.](../2024/assets/october/array-export.gif " voeg berekend gebied met een selectie van de serie_to_string functie en de organisatieserie toe."){width="250" align="center" zoomable="yes"} |
-| [ Meldend nauwkeurigheidsverhogingen voor het stromen bestemmingen ](/help/destinations/ui/export-datasets.md) | Vanaf oktober 2024 wordt door Adobe een update uitgevoerd om de rapportnauwkeurigheid voor streamingdoelen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen het Experience Platform en de doelplatforms die rapporteren. <br> Vóór deze update heeft **[!UICONTROL Identities failed]** alle activeringspogingen opgenomen. Na deze update wordt alleen de laatste activeringspoging opgenomen in het totale aantal. <br> Deze verhoging is momenteel op de [ bestemming van de Gelijke van de Klant van Google ](../../destinations/catalog/advertising/google-customer-match.md) van toepassing maar zal geleidelijk aan andere Experience Platform die bestemmingen stromen worden uitgevoerd. Na deze verhoging, kunnen de gebruikers van de [ bestemming van de Gelijke van de Klant van Google ](../../destinations/catalog/advertising/google-customer-match.md) een verwachte daling in hun **[!UICONTROL Identities failed]** telling zien. |
-| De flexibele implicaties van de publieksevaluatie op [ activering van het partijpubliek ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Als u [ flexibele publieksevaluatie ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) op publiek in werking stelt die reeds om na segmentevaluatie worden geactiveerd, zal het publiek worden geactiveerd zodra de flexibele baan van de publieksevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken eindigt. <br> Dit kan ertoe leiden dat een publiek meerdere keren per dag wordt geëxporteerd, op basis van uw handelingen. |
+| [Ondersteuning voor het exporteren van arrays is algemeen beschikbaar](../../destinations/ui/export-arrays-calculated-fields.md) | Alle klanten kunnen nu de optie **[!UICONTROL Add calculated field]** gebruiken bij het activeren van doelgroepen *naar op bestanden gebaseerde bestemmingen* om hele arrays of elementen van arrays te exporteren. Houd er rekening mee dat u nog steeds de functie `array_to_string` moet gebruiken om de array in het doelbestand af te vlakken tot een tekenreeks. <br> ![Voeg berekende veldselectie toe met functies en velden.](../2024/assets/october/array-export.gif "Voeg een berekend veld toe met een selectie van de functie array_to_string en de organisatie-array."){width="250" align="center" zoomable="yes"} |
+| [Verbeterde rapportagenauwkeurigheid voor streamingbestemmingen](/help/destinations/ui/export-datasets.md) | Vanaf oktober 2024 brengt Adobe een update uit om de rapportagenauwkeurigheid voor streamingbestemmingen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen het Experience Platform en de rapportage van de bestemmingsplatforms. <br> Vóór deze update werden alle activeringspogingen in **[!UICONTROL Identities failed]** opgenomen. Na deze update wordt alleen de laatste activeringspoging opgenomen in het totale aantal. <br> Deze verbetering is momenteel van toepassing op de [Google Customer Match-bestemming](../../destinations/catalog/advertising/google-customer-match.md), maar wordt geleidelijk uitgerold naar andere Experience Platform-streamingbestemmingen. Na deze verbetering kunnen de gebruikers van de [Google Customer Match-bestemming](../../destinations/catalog/advertising/google-customer-match.md) een verwachte daling in hun totale aantal **[!UICONTROL Identities failed]** zien. |
+| Flexibele implicaties voor doelgroepevaluatie bij [activering van batchdoelgroepen](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Als u [flexibele doelgroepevaluatie](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) uitvoert op doelgroepen die al zijn ingesteld om te worden geactiveerd na segmentevaluatie, worden de doelgroepen geactiveerd zodra de flexibele doelgroepevaluatietaak is voltooid, ongeacht eventuele eerdere dagelijkse activeringstaken. <br> Dit kan ertoe leiden dat een doelgroep meerdere keren per dag wordt geëxporteerd, op basis van uw handelingen. |
 
 {style="table-layout:auto"}
 
@@ -78,7 +78,7 @@ Voor meer informatie raadpleegt u het [overzicht van bestemmingen](../../destina
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| [!BADGE  Beperkte Beschikbaarheid ] {type=Informatieve} Flexibele publieksevaluatie | De flexibele publieksevaluatie laat u snel nieuw publiek op bestelling voor tijd-gevoelige mededelingen tot stand brengen. Meer informatie over deze nieuwe eigenschap kan binnen de [ Poortdocumentatie van het Poort van het Publiek ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) worden gevonden. |
+| [!BADGE Beperkte beschikbaarheid]{type=Informative} Flexibele doelgroepevaluatie | Dankzij flexibele doelgroepevaluatie kunt u snel en op aanvraag nieuwe doelgroepen creëren voor tijdgevoelige communicatie. Meer informatie over deze nieuwe functie vindt u in de [documentatie voor Audience Portal](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation). |
 
 {style="table-layout:auto"}
 
@@ -92,12 +92,12 @@ Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldw
 
 | Functie | Beschrijving |
 | --- | --- |
-| Gereedschapspakket met sandbox delen | U kunt sandboxgereedschappen nu gebruiken om sandboxconfiguraties tussen sandboxen in verschillende organisaties gemakkelijk te exporteren en te importeren. Er zijn nu twee categorieën van gedeelde pakketten beschikbaar:<br><ul><li>**[Privé pakket ](../../sandboxes/ui/sharing-packages-across-orgs.md#private-packages):** Gebruik privé pakket delend met organisaties die het delen verzoek van de bronorganisatie hebben goedgekeurd.</li><li>**[Openbaar pakket ](../../sandboxes/ui/sharing-packages-across-orgs.md#public-packages):** de Openbare pakketten kunnen zonder extra goedkeuringen worden gedeeld en gemakkelijk worden ingevoerd gebruikend de lading van het pakket.</li></ul><br> voor meer informatie over deze eigenschappen, lees de gids over [ delend pakketten over organisaties ](../../sandboxes/ui/sharing-packages-across-orgs.md). |
-| [ Pakket delend ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages#org-linking) in het zandbak tooling API | Met de API voor gereedschappen voor sandboxen kunt u aanvragen indienen bij twee nieuwe eindpunten `/handshake` en `/transfer` voor het delen tussen organisaties, het ophalen en het maken van aanvragen voor het delen van pakketten. Er is een extra aanvraag toegevoegd aan het eindpunt van `/packages` om de lading van een pakket op te halen. |
+| Sandbox-toolpakket delen | U kunt nu sandbox-tools gebruiken om eenvoudig sandbox-configuraties te exporteren en importeren tussen sandboxen in verschillende organisaties. Er zijn nu twee categorieën van gedeelde pakketten beschikbaar:<br><ul><li>**[Privépakket](../../sandboxes/ui/sharing-packages-across-orgs.md#private-packages):** gebruik het delen van privépakketten met organisaties die de aanvraag tot delen van de bronorganisatie hebben goedgekeurd.</li><li>**[Openbaar pakket](../../sandboxes/ui/sharing-packages-across-orgs.md#public-packages):** openbare pakketten kunnen worden gedeeld zonder aanvullende goedkeuringen en kunnen eenvoudig worden geïmporteerd met behulp van de payload van het pakket.</li></ul><br>Raadpleeg de handleiding over [het delen van pakketten tussen organisaties](../../sandboxes/ui/sharing-packages-across-orgs.md) voor meer informatie over deze functies. |
+| [Pakket delen](https://experienceleague.adobe.com/nl/docs/experience-platform/sandbox/sandbox-tooling-api/packages#org-linking) in de sandbox-tool-API | Gebruik de sandbox-tool-API om verzoeken in te dienen bij twee nieuwe eindpunten, `/handshake` en `/transfer`, voor het delen tussen organisaties, ophalen en maken van verzoeken voor het delen van pakketten. Er is een extra aanvraag toegevoegd aan het `/packages`-eindpunt om de payload van een pakket op te halen. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over sandboxes, lees het [ overzicht van sandboxes](../../sandboxes/home.md).
+Voor meer informatie over sandboxes, raadpleegt u het [ overzicht van sandboxes](../../sandboxes/home.md).
 
 ## Bronnen {#sources}
 
@@ -109,7 +109,7 @@ Gebruik bronnen in Experience Platform om gegevens vanuit een Adobe-applicatie o
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor het filteren van entiteiten met standaardactiviteit in [!DNL Marketo Engage] | U kunt de API van [!DNL Flow Service] gebruiken om entiteiten met standaardactiviteit te filteren wanneer u gegevens uit uw [!DNL Marketo Engage] -bron opneemt. Lees de gids over [ het filtreren  [!DNL Marketo]  standaardactiviteitengegevens ](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage) voor meer informatie. |
+| Ondersteuning voor het filteren van entiteiten met standaardactiviteit in [!DNL Marketo Engage] | U kunt de [!DNL Flow Service]-API gebruiken om voor het filteren van entiteiten met standaardactiviteit bij het opnemen van gegevens uit uw [!DNL Marketo Engage]-bron. Raadpleeg de gids over het [filteren [!DNL Marketo]  van standaardactiviteitsgegevens](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage) voor meer informatie. |
 
 {style="table-layout:auto"}
 
