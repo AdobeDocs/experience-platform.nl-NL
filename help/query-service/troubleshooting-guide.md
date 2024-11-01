@@ -1,24 +1,43 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;het oplossen van problemengids;faq;het oplossen van problemen;
 solution: Experience Platform
-title: Veelgestelde vragen
-description: Dit document bevat algemene vragen en antwoorden met betrekking tot de Query-service. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
+title: Query Service en Data Distiller hebben vaak vragen gesteld
+description: Dit document bevat algemene vragen en antwoorden met betrekking tot Query Service en Data Distiller. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 84f30a47102a51b40d6811cd4815c36f6ffd34b5
+source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
 workflow-type: tm+mt
-source-wordcount: '4546'
+source-wordcount: '5037'
 ht-degree: 0%
 
 ---
 
-# Veelgestelde vragen
+# Query Service en Data Distiller hebben vaak vragen gesteld
 
-Dit document verstrekt antwoorden op vaak gestelde vragen over de Dienst van de Vraag en verstrekt een lijst van algemeen gezien foutencodes wanneer het gebruiken van de Dienst van de Vraag. Voor vragen en het oplossen van problemen met betrekking tot andere diensten in Adobe Experience Platform, gelieve te verwijzen naar de [ gids van de het oplossen van problemenoplossing van het Experience Platform ](../landing/troubleshooting.md).
+In dit document worden veelgestelde vragen over Query Service en Data Distiller beantwoord. Het omvat ook algemeen gezien foutencodes terwijl het gebruiken van het product van &quot;Vragen&quot;voor gegevensbevestiging of het schrijven van getransformeerde gegevens terug naar het gegevenspeer. Voor vragen en het oplossen van problemen andere diensten van Adobe Experience Platform, gelieve te verwijzen naar de [ gids van het oplossen van problemenprobleem van het Experience Platform ](../landing/troubleshooting.md).
+
+Om te verduidelijken hoe de Dienst van de Vraag en Gegevens Distiller binnen Adobe Experience Platform samenwerken, zijn hier twee grondvragen.
+
+## Wat is het verband tussen de Dienst van de Vraag en Gegevens Distiller?
+
+De Dienst van de vraag en Gegevens Distiller zijn verschillende, complementaire componenten die specifieke gegevens het vragen mogelijkheden verstrekken. De Dienst van de vraag wordt ontworpen voor ad hoc vragen om, met ingebedde gegevens te onderzoeken te bevestigen en te experimenteren zonder het gegevensmeer te veranderen. In tegenstelling, concentreert Distiller van Gegevens zich op partijvragen die transformeren en gegevens verrijken, met resultaten die terug in het gegevenspeer voor toekomstig gebruik worden opgeslagen. De vragen van de partij in Gegevens Distiller kunnen worden gepland, worden gecontroleerd, en worden beheerd, ondersteunend diepere gegevensverwerking en manipulatie die de Dienst van de Vraag alleen niet vergemakkelijkt.
+
+Samen maakt Query Service snel inzicht mogelijk, terwijl Data Distiller diepgaande, permanente gegevenstransformaties mogelijk maakt.
+
+## Wat is het verschil tussen de Dienst van de Vraag en Gegevens Distiller?
+
+**Dienst van de Vraag**: Gebruikt voor SQL vragen die op gegevensexploratie, bevestiging, en experimenteren worden geconcentreerd. De output wordt niet opgeslagen in het gegevensmeer, en de uitvoertijd is beperkt tot 10 minuten. Ad hoc vragen zijn geschikt voor lichtgewicht, interactieve gegevenscontroles en analyses.
+
+**Gegevens Distiller**: Laat partijvragen toe die, gegevens verwerken, schoonmaken en verrijken, met resultaten die terug in het gegevensmeer worden opgeslagen. Deze vragen steunen langere uitvoering (tot 24 uren) en extra eigenschappen zoals het plannen, controle, en versnelde rapportering. Data Distiller is ideaal voor uitgebreide gegevensmanipulatie en geplande gegevensverwerkingstaken.
+
+Zie het [ het verpakken document van de Dienst van de Vraag ](./packaging.md) voor meer gedetailleerde informatie.
+
+## Categorieën vragen {#categories}
 
 De volgende lijst met antwoorden op veelgestelde vragen is onderverdeeld in de volgende categorieën:
 
 - [Algemeen](#general)
-- [ Vragen UI ](#queries-ui) 
+- [Data Distiller](#data-distiller)
+- [Gebruikersinterface voor query&#39;s](#queries-ui)
 - [Gegevenssetvoorbeelden](#dataset-samples)
 - [Gegevens exporteren](#exporting-data)
 - [ SQL Syntaxis ](#sql-syntax) 
@@ -589,7 +608,7 @@ Ja, op attribuut-gebaseerde toegangsbeheer wordt afgedwongen als gevormd. Zie he
 Nr, de Dienst van de Vraag steunt niet het &quot;TUSSENVOEGSEL OVERSCHRIJVEN IN&quot;bevel.
 +++
 
-### Hoe vaak worden de gebruiksgegevens op het dashboard voor het gebruiksgebruik van licenties bijgewerkt voor Data Distiller?
+### Hoe vaak worden de gebruiksgegevens op het dashboard van het vergunningsgebruik bijgewerkt voor Gegevens Distiller Compute Hours?
 
 +++Antwoord
 Het licentiegebruiksdashboard voor Data Distiller-computeruren wordt vier keer per dag bijgewerkt, elke zes uur.
@@ -605,6 +624,38 @@ Ja, u kunt de opdracht `CREATE VIEW` gebruiken zonder Data Distiller-toegang. Di
 
 +++Antwoord
 Ja. Hoewel, bepaalde derdecliënten, zoals DbVisualizer, een afzonderlijke herkenningsteken voor en na een SQL blok kunnen vereisen om erop te wijzen dat een deel van een manuscript als één enkele verklaring zou moeten worden behandeld. Meer details kunnen in de [ anonieme blokdocumentatie ](./key-concepts/anonymous-block.md) of in [ de officiële documentatie DbVisualizer ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect) worden gevonden.
++++
+
+## Data Distiller {#data-distiller}
+
+### Hoe wordt het gebruik van een Distiller-licentie voor gegevens bijgehouden en waar kan ik deze informatie zien?
+
++++Antwoord\
+Het belangrijkste metrisch wordt gebruikt om partijvraaggebruik te volgen is de Rekte Uur. U hebt toegang tot deze informatie en uw huidige consumptie door het [ dashboard van het gebruiksdashboard van de Vergunning ](../dashboards/guides/license-usage.md).
++++
+
+### Wat is een rekenuur?
+
++++Antwoord\
+Compute hours is de maatregel van tijd die door de motoren van de Dienst van de Vraag wordt genomen om, gegevens terug in het gegevensmeer te lezen te verwerken en te schrijven wanneer een partijvraag wordt uitgevoerd.
++++
+
+### Hoe worden de Compute Uren gemeten?
+
++++Antwoord\
+Rekenuren worden cumulatief gemeten over al uw geoorloofde Sandboxen.
++++
+
+### Waarom zie ik soms een variatie in Compute het verbruik van Uur zelfs wanneer ik de zelfde vraag achtereenvolgens in werking stel?
+
++++Antwoord\
+De rekenuren voor een vraag kunnen als gevolg van veelvoudige factoren fluctueren. Deze omvatten het verwerkte gegevensvolume, de ingewikkeldheid van transformatieverrichtingen binnen de SQL vraag, etc. De Dienst van de vraag schaalt de cluster die op de bovengenoemde parameters voor elke vraag wordt gebaseerd, die tot verschillen in Compute Uren kan leiden.
++++
+
+### Is het normaal om een vermindering in Compute Uren op te merken wanneer ik de zelfde vraag gebruikend de zelfde gegevens over een lange periode in werking stel? Waarom zou dit gebeuren?
+
++++Antwoord\
+De achtergrondinfrastructuur wordt constant verbeterd om het gebruik en de verwerkingstijd van de Rekenuren te optimaliseren. Hierdoor kunnen er na verloop van tijd wijzigingen optreden wanneer prestatieverbeteringen worden geïmplementeerd.
 +++
 
 ## Gebruikersinterface voor query&#39;s
