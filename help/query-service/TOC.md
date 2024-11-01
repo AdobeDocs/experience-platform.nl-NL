@@ -5,10 +5,10 @@ breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 3583f6e0ac72e4f813abd87949cb640d0b20b6e2
+source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 12%
+source-wordcount: '357'
+ht-degree: 11%
 
 ---
 
@@ -39,6 +39,16 @@ ht-degree: 12%
       - [Engineer-functies voor ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Gegevens exporteren naar XML-omgevingen](data-distiller/ml-feature-pipelines/export-data.md)
       - [Verrijking van end-to-end workflow voor de AI/ML-gegevenspijpleiding](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- Gegevens - Distiller-statistieken {#advanced-statistics}
+   - [Overzicht](advanced-statistics/overview.md)
+   - [Functietechniek](advanced-statistics/feature-engineering.md)
+   - [ Modellen ](advanced-statistics/models.md)
+Modellen implementeren {#implement-models}
+      - [Modellen implementeren](advanced-statistics/implement-models/implement-models.md)
+      - [Regressie](advanced-statistics/implement-models/regression.md)
+      - [Classificatie](advanced-statistics/implement-models/classification.md)
+      - [Clustering](advanced-statistics/implement-models/clustering.md)
+   - [Eigenschaptransformatie](advanced-statistics/feature-transformation.md)
 - Distiller-publiek voor gegevens {#data-distiller-audiences}
    - [Extern publiek opbouwen met SQL](data-distiller-audiences/overview.md)
 - Voorbeelden {#use-cases}
