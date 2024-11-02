@@ -2,9 +2,9 @@
 title: Het dashboard Accountprofielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de B2B-accountprofielen van uw organisatie kunt bekijken.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
+source-git-commit: 442fcee17cbe38a9e1608324581ebedee4ba7fe6
 workflow-type: tm+mt
-source-wordcount: '1741'
+source-wordcount: '2226'
 ht-degree: 0%
 
 ---
@@ -79,6 +79,10 @@ Adobe biedt standaardwidgets die u kunt gebruiken voor het visualiseren van vers
 Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
 * [Accountprofielen toegevoegd](#account-profiles-added)
+* [Overzicht van klanten per account](#customers-per-account-overview)
+   * [Overzicht van mogelijkheden per account](#opportunities-per-account-overview)
+   * [Opportuniteiten per rekeningdetail](#opportunities-per-account-detail)
+   * [Klanten per accountdetails](#customers-per-account-detail)
 * [Nieuwe rekeningen van de industrie](#accounts-by-industry)
 * [Nieuwe accounts per type](#accounts-by-type)
 * [Nieuwe mogelijkheden per persoonlijke rol](#opportunities-by-person-role)
@@ -94,6 +98,52 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 De widget [!UICONTROL Account profiles added] gebruikt een lijngrafiek om het aantal accountprofielen weer te geven dat elke dag wordt toegevoegd over een bepaalde tijdsperiode. Gebruik het globale datumfilter dat zich boven aan het dashboard bevindt om de analyseperiode te bepalen. Als er geen datumfilter is opgegeven, worden in het standaardgedrag de accountprofielen weergegeven die zijn toegevoegd voor het jaar vóór vandaag. De resultaten kunnen worden gebruikt om een trend in het aantal toegevoegde accountprofielen af te leiden.
 
 ![ De toegevoegde de profielen van de Rekening widget.](../images/account-profiles/account-profiles-added.png)
+
+### Overzicht van klanten per account {#customers-per-account-overview}
+
+Het [!UICONTROL Customers per account overview] -diagram bevat een overzicht van accounts op basis van de klanttypen. Er wordt een tabel met vier rijen weergegeven waarin accounts worden ingedeeld als direct of indirect klanten of als klanten zonder klanten. Het geeft het totale aantal rekeningen voor elke categorie aan. De grafiekhulp identificeert de distributie van rekeningen die directe of indirecte klanten hebben.
+
+Directe klanten zijn klantprofielen die via de `personComponents` -route rechtstreeks aan een account zijn gekoppeld. Deze relatie is eenvoudiger en omvat een directe, expliciete verbinding tussen de klant en de account.
+
+Indirecte klanten zijn klantprofielen die via de `Account-Person` -route aan een account zijn gekoppeld. Deze relatie is minder eenvoudig en omvat een intermediaire entiteit of een complexere verbinding tussen de klant en de account, doorgaans via andere accounts of relaties.
+
+![ de Klanten per widget van het rekeningsoverzicht.](../images/account-profiles/customers-per-account-overview-widget.png)
+
+Voor toegang tot meer gedetailleerde inzichten, selecteer de ellips (**...**) op de [!UICONTROL Customers per account overview] grafiek en kies **[!UICONTROL Drill through]** van het dropdown menu.
+
+![ de Klanten per van het rekeningsoverzicht widget met het ellipse dropdown menu en Bor door benadrukt.](../images/account-profiles/customers-per-account-overview-dropdown.png)
+
+De boor door mening verschijnt. Verken daarna de beschikbare boor-door grafieken om een dieper inzicht in de structuur van uw B2B gegevens te verkrijgen. U kunt deze doorbodgrafieken gebruiken om te bepalen hoeveel accountprofielen geen klantprofielen hebben of waaraan een of meer klantenprofielen zijn gekoppeld. U kunt ze ook gebruiken om te bepalen hoeveel directe of indirecte klanten aan uw accounts zijn gekoppeld.
+
+* [[!UICONTROL Customers per account detail]](#customers-per-account-detail)
+* [[!UICONTROL Accounts per opportunity overview]](#accounts-per-opportunity-overview)
+* [[!UICONTROL Opportunities per account detail]](#accounts-per-opportunity-detail)
+
+### [!UICONTROL Navigate between dashboard views] {#dashboard-view-navigation}
+
+Om tussen de boor en het dashboard van Profielen van de Rekening te schakelen, selecteer het omslagpictogram (![ A omslagpictogram.](../images/account-profiles/folder-icon.png)) gevolgd door de juiste weergave in het vervolgkeuzemenu.
+
+![ de boor door mening in het dashboard van de Profielen van Rekeningen met het navigatiedruppdown benadrukte menu.](../images/account-profiles/navigation-dropdown.png)
+
+Meer over boorproductie in Platform UI leren, zie de [ Boren door gids ](../sql-insights-query-pro-mode/drill-through.md).
+
+#### [!UICONTROL Customers per account detail] {#customers-per-account-detail}
+
+Het [!UICONTROL Customers per account detail] -diagram bevat gedetailleerdere informatie over het aantal accounts dat aan verschillende klanttypen is gekoppeld. Er wordt een tabel met drie kolommen weergegeven waarin het aantal accounts per type klant (direct of indirect) wordt weergegeven en het bereik van de klanten die aan deze accounts zijn gekoppeld. Dit diagram helpt u te begrijpen hoe de klanten over verschillende klantencategorieën en het totale aantal rekeningen verbonden aan elk worden verdeeld.
+
+![ de Klanten per widget van het rekeningsdetail.](../images/account-profiles/customers-per-account-detail.png)
+
+#### [!UICONTROL Opportunities per account overview] {#opportunities-per-account-overview}
+
+Het [!UICONTROL Opportunities per account overview] -diagram bevat een overzicht van accounts die mogelijkheden hebben of niet. Deze twee-rij lijst helpt om het aantal rekeningen snel te bepalen die met kansen worden geassocieerd, die een momentopname van opportuniteitsbetrokkenheid over rekeningen verstrekken.
+
+![ De Kansen per widget van het rekeningsoverzicht.](../images/account-profiles/opportunities-per-account-overview.png)
+
+#### [!UICONTROL Opportunities per account detail] {#opportunities-per-account-detail}
+
+Het [!UICONTROL Opportunities per account detail] -diagram biedt een gedetailleerdere indeling van accounts op basis van het aantal mogelijkheden dat ze hebben. De lijst toont het aantal rekeningen die door de waaiers van de opportuniteitstelling, zoals 1-10 kansen of 100+ kansen worden gegroepeerd. Deze grafiek helpt u om te identificeren hoe de rekeningen door het aantal kansen worden verdeeld zij leiden.
+
+![ De Kansen per widget van het rekeningsdetail.](../images/account-profiles/opportunities-per-account-detail.png)
 
 ### Nieuwe rekeningen van de industrie {#accounts-by-industry}
 
