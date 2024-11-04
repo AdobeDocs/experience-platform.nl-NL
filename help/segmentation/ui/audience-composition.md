@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e17403f0529c5b94869d3bd4e860c798db620d31
+source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1840'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ Nadat u een aangepaste regel hebt toegevoegd, selecteert u **[!UICONTROL Save]**
 
 ## [!UICONTROL Exclude] {#exclude-block}
 
-Met het bloktype **[!UICONTROL Exclude]** kunt u opgegeven deelsoorten of kenmerken uitsluiten van het nieuwe, grotere publiek.
+Met het bloktype **[!UICONTROL Exclude]** kunt u een opgegeven subpubliek of kenmerken uitsluiten van een nieuw, groter publiek.
 
 Als u een **[!UICONTROL Exclude]** -blok wilt toevoegen, selecteert u het pictogram **+** , gevolgd door **[!UICONTROL Exclude]** .
 
@@ -108,7 +108,7 @@ Als u uitsluiting instelt voor het publiek, kunt u selecteren welk publiek u wil
 >
 >Slechts **gepubliceerde** publiek dat gebruikend de Bouwer van het Segment wordt gecreeerd kan worden gebruikt. Het publiek dat gebruikend de Samenstelling van het Publiek en extern geproduceerde publiek wordt gecreeerd is **niet** beschikbaar.
 
-Er wordt een lijst met doelgroepen weergegeven. Selecteer **[!UICONTROL Add]** om het publiek toe te voegen u aan uw exclusief blok wilt uitsluiten.
+Er wordt een lijst met doelgroepen weergegeven. Selecteer **[!UICONTROL Add]** om het publiek toe te voegen u aan uw uitsluitingsblok wilt uitsluiten.
 
 ![ een lijst van publiek verschijnt. U kunt selecteren welk publiek u van dit dialoogvenster wilt toevoegen.](../images/ui/audience-composition/select-audience.png)
 
