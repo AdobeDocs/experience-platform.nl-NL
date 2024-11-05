@@ -1,17 +1,21 @@
 ---
 solution: Experience Platform
-title: Source-overzicht van de Salesforce-Marketing Cloud
+title: Salesforce Marketing Cloud Source - Overzicht
 description: Leer hoe u Salesforce-Marketing Cloud met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: bc37d41d0f7b0ff0cf4d52242f41467f2891d613
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
 
 # [!DNL Salesforce Marketing Cloud]
+
+>[!IMPORTANT]
+>
+>De bron [!DNL Salesforce Marketing Cloud] wordt eind mei 2025 vervangen. U kunt ook de [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) -bron gebruiken.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
@@ -40,7 +44,7 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 
 In de onderstaande documentatie vindt u informatie over het maken van een verbinding tussen [!DNL Salesforce Marketing Cloud] en Platform met behulp van API&#39;s:
 
-* [Een basisverbinding voor een Salesforce-Marketing Cloud maken met de Flow Service API](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+* [Een basisverbinding voor Salesforce-Marketingen Cloud maken met de Flow Service API](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 * [Een gegevensstroom maken voor een marketingautomatiseringsbron met behulp van de Flow Service API](../../tutorials/api/collect/marketing-automation.md)
 
@@ -48,5 +52,5 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 
 In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Salesforce Marketing Cloud] en Platform via de gebruikersinterface:
 
-* [Een Salesforce-bronverbinding voor Marketingen Cloud maken in de gebruikersinterface](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+* [Een Salesforce Marketing Cloud-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Een gegevensstroom maken voor een bronverbinding voor marketingautomatisering in de gebruikersinterface](../../tutorials/ui/dataflow/marketing-automation.md)

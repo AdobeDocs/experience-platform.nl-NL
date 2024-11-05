@@ -2,14 +2,18 @@
 title: Een Eloqua-bronverbinding voor Oracles maken met behulp van Platform UI
 description: Leer hoe u Adobe Experience Platform kunt verbinden met Oracle Eloqua via de interface van het platform.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Oracle Eloqua] bronverbinding maken met behulp van platforminterface
+
+>[!IMPORTANT]
+>
+>De bron [!DNL Oracle Eloqua] wordt eind mei 2025 vervangen. U kunt ook de [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) -bron gebruiken.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Oracle Eloqua] -bronverbinding met de Adobe Experience Platform-gebruikersinterface.
 

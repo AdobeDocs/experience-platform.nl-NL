@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Couchbase Source Connector - overzicht
 description: Leer hoe u Couchbase via API's of de gebruikersinterface koppelt aan Adobe Experience Platform.
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Couchbase] -connector
+# [!DNL Couchbase] -connector
 
->[!NOTE]
+>[!IMPORTANT]
 >
->De [!DNL Couchbase] -connector bevindt zich in bèta. Zie het [ Bronoverzicht ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De bron [!DNL Couchbase] wordt eind mei 2025 vervangen. U kunt ook de [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) -bron gebruiken.
 
 Adobe Experience Platform biedt native connectiviteit voor databaseproviders zoals [!DNL Microsoft] , MySQL en [!DNL Azure] , zodat u gegevens van deze systemen kunt overbrengen. Verschillende soorten derdegegevensbestanden worden gesteund, met inbegrip van relationele, NoSQL, of gegevenspakhuizen. Ondersteuning voor databaseproviders is inclusief [!DNL Couchbase] .
 

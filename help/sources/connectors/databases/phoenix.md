@@ -3,14 +3,18 @@ title: Overzicht van Phoenix Source
 description: Leer hoe u uw Phoenix-account met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: efffd6ce1ed541ce20ee6500e42165465f2fa6a0
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
 
 # [!DNL Phoenix]
+
+>[!IMPORTANT]
+>
+>De bron [!DNL Phoenix] wordt eind mei 2025 vervangen. U kunt ook de [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) -bron gebruiken.
 
 Adobe Experience Platform Sources supports data ingestion from third-party databases as [[!DNL Phoenix] ](https://phoenix.apache.org/index.html) . Dit document bevat informatie die aan de voorwaarde voldoet voordat u uw [!DNL Phoenix] -account aansluit via de [!DNL Flow Service] API of de gebruikersinterface van het Experience Platform.
 

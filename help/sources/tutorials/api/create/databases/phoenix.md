@@ -2,14 +2,18 @@
 title: Een Phoenix Base-verbinding maken met de Flow Service API
 description: Leer hoe u een Phoenix-database met de Flow Service API met Adobe Experience Platform kunt verbinden.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: efffd6ce1ed541ce20ee6500e42165465f2fa6a0
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '566'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Phoenix] basisverbinding maken met de [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>De bron [!DNL Phoenix] wordt eind mei 2025 vervangen. U kunt ook de [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) -bron gebruiken.
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 

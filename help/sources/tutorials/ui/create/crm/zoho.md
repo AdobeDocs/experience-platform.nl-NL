@@ -5,14 +5,18 @@ title: Creeer een Verbinding van Source van Zoho CRM in UI
 type: Tutorial
 description: Leer hoe u een Zoho CRM-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Zoho CRM] bronverbinding maken in de gebruikersinterface
+
+>[!IMPORTANT]
+>
+>De bron [!DNL Zoho CRM] wordt eind mei 2025 vervangen. U kunt ook de [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) -bron gebruiken.
 
 Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een bepaalde planning extern gesourceerde CRM-gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Zoho CRM] bronaansluiting met behulp van de gebruikersinterface van [!DNL Platform] .
 

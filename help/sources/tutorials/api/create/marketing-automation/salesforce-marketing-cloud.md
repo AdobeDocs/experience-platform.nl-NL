@@ -1,10 +1,10 @@
 ---
-title: Creeer een Verbinding van de Basis van de Marketing Cloud Salesforce gebruikend de Dienst API van de Stroom
-description: Leer hoe u uw Salesforce-Marketing Cloud met behulp van de Flow Service API voor Experience Platform verifieert.
+title: Een Salesforce Marketing Cloud Base Connection maken met de Flow Service API
+description: Leer hoe u uw Salesforce Marketing Cloud-account kunt verifiëren op basis van het Experience Platform met de Flow Service API.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Aangepaste objectinvoer wordt momenteel niet ondersteund door de bronintegratie van [!DNL Salesforce Marketing Cloud] .
+>De bron [!DNL Salesforce Marketing Cloud] wordt eind mei 2025 vervangen. U kunt ook de [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) -bron gebruiken.
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
@@ -46,6 +46,10 @@ In de volgende sectie vindt u aanvullende informatie die u moet weten als u verb
 Voor meer informatie over begonnen worden, verwijs naar dit [[!DNL Salesforce Marketing Cloud]  document ](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
 ## Een basisverbinding maken
+
+>[!IMPORTANT]
+>
+>Aangepaste objectinvoer wordt momenteel niet ondersteund door de bronintegratie van [!DNL Salesforce Marketing Cloud] .
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
