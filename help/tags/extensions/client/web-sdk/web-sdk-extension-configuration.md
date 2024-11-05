@@ -2,9 +2,9 @@
 title: De web SDK-tagextensie configureren
 description: Leer hoe te om de de markeringsuitbreiding van SDK van het Web van het Experience Platform in de UI van Markeringen te vormen.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+source-git-commit: f2f61c8e68fa794317e3b4f845f1950cebc59ec7
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '2357'
 ht-degree: 0%
 
 ---
@@ -171,6 +171,66 @@ Als alternatief voor het overgaan van de met voeten treedt door een bevel van SD
 DataStream-overschrijvingen moeten per omgeving worden geconfigureerd. De ontwikkelings-, staging- en productieomgevingen hebben allemaal verschillende overschrijvingen. U kunt de instellingen tussen de instellingen kopiëren met behulp van de speciale opties die in het onderstaande scherm worden weergegeven.
 
 ![ Beeld dat de configuratie van de gegevensstroom toont treedt met voeten gebruikend de de marktextensiepagina van SDK van het Web.](assets/datastream-overrides.png)
+
+Standaard is de configuratieoverschrijving van de gegevensstroom uitgeschakeld. De optie **[!UICONTROL Match datastream configuration]** is standaard geselecteerd.
+
+![ de de markeringsuitbreidingsgebruikersinterface van SDK van het Web die de configuratie van de gegevensstroom toont treedt gebrek het plaatsen met voeten.](assets/datastream-override-default.png)
+
+Als u gegevensstroomoverschrijvingen wilt inschakelen in de tagextensie, selecteert u **[!UICONTROL Enabled]** in het keuzemenu.
+
+![ Web SDK de gebruikersinterface die van de de markeringsuitbreiding van SDK de configuratie van de gegevensstroom toont treedt Toegelaten het plaatsen met voeten.](assets/datastream-override-enabled.png)
+
+Nadat u de gegevensstroomconfiguratie met voeten treedt, kunt u de overschrijvingen voor elke hieronder beschreven dienst vormen.
+
+De onderstaande gegevensstroomoverschrijvingsinstellingen overschrijven alle configuraties en regels van de gegevensstroom aan de serverzijde voor de geselecteerde omgeving.
+
+### Adobe Analytics {#analytics}
+
+Gebruik de montages in deze sectie om gegevens met voeten te treden die aan de dienst van Adobe Analytics verpletteren.
+
+{het beeld van de de marktextensie UI van SDK van 0} Web die de montages van de de gegevensstroom van Adobe Analytics met voeten treedt.](assets/datastream-override-analytics.png)![
+
+* **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: gebruik dit vervolgkeuzemenu om gegevensroutering naar de Adobe Analytics-service in of uit te schakelen.
+* **[!UICONTROL Report suites]**: De id&#39;s voor de bestemmingsrapportsuites in Adobe Analytics. De waarde moet een vooraf geconfigureerde rapportsuite (of een door komma&#39;s gescheiden lijst met rapportsuites) van uw gegevensstroomconfiguratie zijn. Deze instelling overschrijft de primaire rapportsuites.
+* **[!UICONTROL Add Report Suite]**: selecteer deze optie om extra rapportsuites toe te voegen.
+
+### Adobe Audience Manager {#audience-manager}
+
+Gebruik de montages in deze sectie om gegevens met voeten te treden die aan de dienst van Adobe Audience Manager verpletteren.
+
+{het beeld van de de marktextensie UI van SDK van 0} Web die de montages van de de gegevensstroom van Adobe Audience Manager met voeten treedt.](assets/datastream-override-audience-manager.png)![
+
+* **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: gebruik dit vervolgkeuzemenu om gegevensroutering naar de Adobe Audience Manager-service in of uit te schakelen.
+* **[!UICONTROL Third-party ID sync container]**: De id voor de synchronisatiecontainer van de doel-id van derden in Audience Manager. De waarde moet een preconfigured secundaire container van uw gegevensstroomconfiguratie zijn en treedt de primaire container met voeten.
+
+### Adobe Experience Platform {#experience-platform}
+
+Gebruik de montages in deze sectie om gegevens met voeten te treden die aan de dienst van Adobe Experience Platform verpletteren.
+
+{het beeld van de de marktextensie UI van SDK van 0} Web die de montages van de de gegevensstroom van Adobe Experience Platform met voeten treedt.](assets/datastream-override-experience-platform.png)![
+
+* **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: gebruik dit vervolgkeuzemenu om gegevensroutering naar de Adobe Experience Platform-service in of uit te schakelen.
+* **[!UICONTROL Event dataset]**: De id voor de gegevensset met doelgebeurtenissen in de Adobe Experience Platform. De waarde moet een preconfigured secundaire dataset van uw configuratie van de gegevensstroom zijn.
+* **[!UICONTROL Offer Decisioning]**: gebruik dit vervolgkeuzemenu om gegevensroutering naar de [!DNL Offer Decisioning] -service in of uit te schakelen.
+* **[!UICONTROL Edge Segmentation]**: gebruik dit vervolgkeuzemenu om gegevensroutering naar de [!DNL Edge Segmentation] -service in of uit te schakelen.
+* **[!UICONTROL Personalization Destinations]**: Gebruik dit drop-down menu om gegevens toe te laten of onbruikbaar te maken die aan verpersoonlijkingsbestemmingen verpletteren.
+* **[!UICONTROL Adobe Journey Optimizer]**: gebruik dit vervolgkeuzemenu om gegevensroutering naar de [!DNL Adobe Journey Optimizer] -service in of uit te schakelen.
+
+### Adobe Server-kant gebeurtenis doorsturen {#ssf}
+
+Gebruik de montages in deze sectie om gegevens met voeten te treden die aan de server-zij gebeurtenis door:sturen dienst van de Adobe verpletteren.
+
+{het beeld van de de markeringsuitbreiding UI van SDK van 0} Web die de Adobe Server-zij Gebeurtenis toont die montages van de gegevensstroom met voeten treedt.](assets/datastream-override-ssf.png)![
+
+* **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: gebruik dit vervolgkeuzemenu om het verzenden van gegevens naar de service Adobe Server-Side Event Forwarding in of uit te schakelen.
+
+### Adobe Target {#target}
+
+Gebruik de montages in deze sectie om gegevens met voeten te treden die aan de dienst van Adobe Target verpletteren.
+
+{het beeld van de de marktextensie UI van SDK van 0} Web die de montages van de de gegevensstroom van Adobe Target met voeten treedt.](assets/datastream-override-target.png)![
+
+* **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: gebruik dit vervolgkeuzemenu om gegevensroutering naar de Adobe Target-service in of uit te schakelen.
 
 ## Geavanceerde instellingen configureren
 
