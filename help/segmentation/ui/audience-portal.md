@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 0378cc313445ff22d1d2d003c9ae248d791b3707
+source-git-commit: a48df00b61fd5736cfb6fd29c60cf73a02342451
 workflow-type: tm+mt
-source-wordcount: '4320'
+source-wordcount: '4337'
 ht-degree: 0%
 
 ---
@@ -18,17 +18,17 @@ Binnen het Portaal van de Publiek, kunt u de volgende taken verwezenlijken:
 - [Een lijst met uw publiek weergeven](#audience-list)
    - [Snelle acties gebruiken voor uw publiek](#quick-actions)
    - [De eigenschappen aanpassen die worden weergegeven in de lijst met soorten publiek](#customize)
-   - [Gebruik filters, mappen en tags om je doelgroepen te ordenen](#manage-audiences)
-- [Meer informatie over je doelgroep weergeven](#audience-details)
-   - [Een overzicht van uw doelgroep weergeven](#audience-summary)
-- [Laat je doelgroepen toe voor geplande segmentatie](#scheduled-segmentation)
-- [Een doelgroep maken](#create-audience)
+   - [Filters, mappen en tags gebruiken om uw publiek te ordenen](#manage-audiences)
+- [Details van uw publiek weergeven](#audience-details)
+   - [Een overzicht van uw publiek weergeven](#audience-summary)
+- [Uw publiek toestaan voor geplande segmentatie](#scheduled-segmentation)
+- [Een publiek maken](#create-audience)
    - [Gebruik Segment Builder om een publiek te maken](#segment-builder)
    - [Gebruik Audience Composition om een publiek te maken](#audience-composition)
    - [ De Federatieve Samenstelling van het publiek van het Gebruik om een publiek tot stand te brengen gebruikend gegevens van uw bestaand gegevenspakhuis ](#fac) (Beperkte beschikbaarheid)
 - [Extern gegenereerde doelgroepen importeren](#import-audience)
 
-Als u Audience Portal wilt openen, selecteert u het tabblad **[!UICONTROL Browse]** in de sectie Segmentatie.
+Als u Poort publiek wilt openen, selecteert u het tabblad **[!UICONTROL Browse]** in de sectie Segmentatie.
 
 ## Poortlijst {#list}
 
@@ -77,11 +77,11 @@ Door **[!UICONTROL Schedule all audiences]** in-/uitschakelen wordt geplande seg
 
 Als u **[!UICONTROL Import audience]** selecteert, kunt u een extern gegenereerd publiek importeren. Om meer over het invoeren van publiek te leren, te lezen gelieve de sectie over [ het invoeren van een publiek in de gebruikersgids ](#import-audience).
 
-Als u **[!UICONTROL Create audience]** selecteert, kunt u een publiek maken. Om meer te leren over het creëren van doelgroepen, te lezen gelieve de sectie over [ creërend een publiek in de gebruikersgids ](#create-audience).
+Als u **[!UICONTROL Create audience]** selecteert, kunt u een publiek maken. Om meer over het creëren van publiek te leren, te lezen gelieve de sectie op [ creërend een publiek in de gebruikersgids ](#create-audience).
 
-![ de hoogste navigatiebar op de publiek doorbladert pagina wordt benadrukt. Deze bar bevat een knoop om een publiek en een knoop tot stand te brengen om een publiek in te voeren.](../images/ui/audience-portal/browse-audiences-top.png)
+![ de hoogste navigatiebar op het publiek doorbladert pagina wordt benadrukt. Deze bar bevat een knoop om een publiek en een knoop tot stand te brengen om een publiek in te voeren.](../images/ui/audience-portal/browse-audiences-top.png)
 
-U kunt **[!UICONTROL Evaluation summary]** selecteren om een cirkeldiagram weer te geven met een overzicht van de doelgroepevaluaties.
+U kunt **[!UICONTROL Evaluation summary]** selecteren om een cirkeldiagram te tonen dat een samenvatting van de publieksevaluaties toont.
 
 ![ de summiere knoop van de Evaluatie wordt benadrukt.](../images/ui/audience-portal/browse-audience-evaluation-summary.png)
 
@@ -91,7 +91,7 @@ Het cirkeldiagram wordt weergegeven met een uitsplitsing van het publiek naar pu
 
 ### Aanpassen {#customize}
 
-U kunt extra gebieden aan het Portaal van het Publiek toevoegen door ![ het pictogram van het filterattribuut ](/help/images/icons/column-settings.png) te selecteren. Deze extra velden bevatten de levenscyclusstatus, updatefrequentie, laatst bijgewerkt door, beschrijving, gemaakt door en toegangslabels.
+U kunt extra gebieden aan het Portaal van het Publiek toevoegen door ![ het pictogram van de filterattributen ](/help/images/icons/column-settings.png) te selecteren. Deze extra velden bevatten de levenscyclusstatus, updatefrequentie, laatst bijgewerkt door, beschrijving, gemaakt door en toegangslabels.
 
 | Veld | Beschrijving |
 | ----- | ----------- |
@@ -152,7 +152,7 @@ De pop-up **[!UICONTROL Manage tags]** wordt weergegeven. In deze pop-up kunt u 
 
 ![ popover [!UICONTROL Manage tags] wordt getoond. De opties om gecategoriseerde of uncategorized te kiezen worden benadrukt.](../images/ui/audience-portal/create-tag.png)
 
-Selecteer **[!UICONTROL Save]** nadat u alle tags hebt toegevoegd die u aan de doelgroep wilt koppelen.
+Selecteer **[!UICONTROL Save]** nadat u alle tags hebt toegevoegd die u aan het publiek wilt koppelen.
 
 ![ op [!UICONTROL Manage tags] popover, worden de toegevoegde markeringen benadrukt.](../images/ui/audience-portal/created-tags.png)
 
@@ -170,9 +170,9 @@ Selecteer **[!UICONTROL Create folder]** als u een map wilt maken waarin uw publ
 >
 >U kunt alleen een map maken als u zich in een andere map bevindt. Dit betekent u **niet** een omslag kan tot stand brengen als u **[!UICONTROL All Audiences]** op de linkernavigatiebar hebt geselecteerd.
 
-Er wordt een pop-up weergegeven, waarin u de nieuwe map een naam kunt geven. Selecteer **[!UICONTROL Save]** nadat u de map een naam hebt gegeven om het maken van de map te voltooien. Gelieve te merken op dat de namen **** aan de ouderomslag uniek moeten zijn.
+Er wordt een pop-up weergegeven, waarin u de nieuwe map een naam kunt geven. Selecteer **[!UICONTROL Save]** na de naam van de map om het maken van de map te voltooien. Gelieve te merken op dat de namen **** aan de ouderomslag uniek moeten zijn.
 
-![ sparen knoop op creeer de omslagdialoog wordt benadrukt.](../images/ui/audience-portal/create-folder-dialog.png)
+![ sparen knoop op creeert de omslagdialoog wordt benadrukt.](../images/ui/audience-portal/create-folder-dialog.png)
 
 Als u een publiek naar een map wilt verplaatsen, selecteert u **[!UICONTROL Move to folder]** voor het publiek dat u wilt verplaatsen.
 
@@ -244,17 +244,17 @@ Het pop-upmenu **[!UICONTROL Evaluate audiences on demand]** wordt weergegeven m
 
 ![ het publiek dat kan worden geëvalueerd gebruikend de flexibele publieksevaluatie wordt getoond.](../images/ui/audience-portal/evaluate-audiences-modal.png)
 
-Nadat het juiste publiek is vermeld, gaat u verder met het verzoek en begint de flexibele publieksevaluatie.
+Nadat u hebt bevestigd dat het juiste publiek wordt vermeld, kunt u doorgaan met het verzoek en begint de flexibele publieksevaluatie. U kunt het statuut van deze publieksevaluatie in de [ controle van de evaluatietaak ](../../dataflows/ui/monitor-audiences.md#evaluation-job-details) bekijken.
 
 >[!NOTE]
 >
 Als u flexibele publieksevaluatie op publiek in werking stelt die reeds om [ na segmentevaluatie ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) worden geactiveerd, zullen de doelgroepen worden geactiveerd zodra de flexibele baan van de publieksevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken eindigt.
 
-## Doelgroepdetails {#audience-details}
+## Details publiek {#audience-details}
 
-Als u meer details over een specifieke doelgroep wilt zien, selecteert u de naam van een doelgroep in het tabblad **[!UICONTROL Browse]** .
+Als u meer details over een specifiek publiek wilt zien, selecteert u de naam van een publiek in het tabblad **[!UICONTROL Browse]** .
 
-De pagina met de doelgroepdetails wordt weergegeven. Bovenaan ziet u een overzicht van de doelgroep, informatie over de gekwalificeerde doelgrootte en de bestemmingen waarvoor het segment wordt geactiveerd.
+De pagina met publieksdetails wordt weergegeven. Bovenaan, is er een samenvatting van het publiek, informatie over de gekwalificeerde publieksgrootte, evenals bestemmingen het segment wordt geactiveerd voor.
 
 ![ de pagina van publieksdetails wordt getoond. De publiekssamenvatting, het publiekstotaal, en de geactiveerde bestemmingskaarten worden benadrukt.](../images/ui/audience-portal/audience-details-summary.png)
 
