@@ -2,9 +2,9 @@
 title: Algoritmen groeperen
 description: Leer hoe te om diverse het groeperen algoritmen met zeer belangrijke parameters, beschrijvingen, en voorbeeldcode te vormen en te optimaliseren om u te helpen geavanceerde statistische modellen uitvoeren.
 role: Developer
-source-git-commit: 4d4e9ae527deb149f02edb39716851e995c23d21
+source-git-commit: 4ee7ce2468c1ea5f0960349c288d406f43a8bb91
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '874'
 ht-degree: 2%
 
 ---
@@ -112,7 +112,7 @@ Create MODEL modelname OPTIONS(
 
 **Parameters**
 
-| Parameter | Beschrijving | Standaardwaarde | Mogelijke waarden |                                                                                                                                                                  | Standaardwaarde | Mogelijke waarden |
+| Parameter | Beschrijving | Standaardwaarde | Mogelijke waarden |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------|
 | `MAX_ITER` | Het maximumaantal herhalingen dat het algoritme uitvoert. | 20 | (>= 0) |
 | `OPTIMIZER` | De optimalisator of het afleidingsalgoritme die wordt gebruikt om het LDA-model te schatten. Ondersteunde opties zijn `"online"` (Online Variationele Bayes) en `"em"` (Verwachting-Maximalisatie). | &quot;online&quot; | `online`, `em` |
@@ -127,6 +127,8 @@ Create MODEL modelname OPTIONS(
 | `SUBSAMPLING_RATE` | Voor de `online` optimizer: de fractie van de corpus die wordt gesampled en gebruikt in elke iteratie van een mini-batch-verloop, in het bereik `(0, 1]` . | 0,05 | `(0, 1]` |
 | `TOPIC_CONCENTRATION` | De parameter van de concentratie (&quot;bèta&quot; of &quot;eta&quot;) voor de vroegere geplaatste op de distributie van onderwerpen over termijnen. | Automatisch | (>= 0) |
 | `TOPIC_DISTRIBUTION_COL` | Uitvoerkolom met schattingen van de distributie van de onderwerpmenmengeling voor elk document. | NIET INGESTELD | Willekeurige tekenreeks |
+
+{style="table-layout:auto"}
 
 **Voorbeeld**
 
