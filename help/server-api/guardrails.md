@@ -2,9 +2,9 @@
 title: Prestatieinstructies voor Edge Network Server API
 description: Leer hoe u de server-API kunt gebruiken binnen optimale prestatiegaranties.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 316efe577274b389bd1bf50e896ad6ef53e44b7b
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '569'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,8 @@ Adobe is niet verantwoordelijk voor prestatievermindering die wordt veroorzaakt 
 >[!IMPORTANT]
 >
 >Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [ Beschrijving van het Product ](https://helpx.adobe.com/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
+
+Alle prestatieinstructies die in deze pagina worden beschreven, zijn van toepassing op IMS-organisatieniveau. Voor gebruikers met meerdere IMS-organisaties geconfigureerd, is elke organisatie afzonderlijk onderworpen aan de onderstaande prestatieinstructies. Zie de [ verklarende woordenlijst van het Experience Platform ](../landing/glossary.md) voor meer details over [!DNL IMS Organizations].
 
 ## Definities
 
