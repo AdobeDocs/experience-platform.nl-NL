@@ -5,9 +5,9 @@ title: Een Couchbase Source-verbinding maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een Couchbase-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De bron [!DNL Couchbase] wordt eind mei 2025 vervangen. U kunt de [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) gebruiken in plaats van de [!DNL Couchbase] -bron.
+>De bron [!DNL Couchbase] wordt eind mei 2025 vervangen.
 
 Source-connectors in [!DNL Adobe Experience Platform] bieden de mogelijkheid om volgens schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Couchbase] bronaansluiting met behulp van de gebruikersinterface van [!DNL Platform] .
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zoho CRM Source Connector - Overzicht
 description: Leer hoe u Zoho CRM aan Adobe Experience Platform verbindt gebruikend APIs of het gebruikersinterface.
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '507'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De bron [!DNL Zoho CRM] wordt eind juni 2025 vervangen. U kunt de [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) gebruiken in plaats van de [!DNL Zoho CRM] -bron.
+>De bron [!DNL Zoho CRM] wordt eind juni 2025 vervangen.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met [!DNL Platform] -services. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;Oracle Service Cloud;or
 title: Een Oracle Service Cloud Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Oracle Service Cloud-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De bron [!DNL Oracle Service Cloud] wordt eind mei 2025 vervangen. U kunt de [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) gebruiken in plaats van de [!DNL Oracle Service Cloud] -bron.
+>De bron [!DNL Oracle Service Cloud] wordt eind mei 2025 vervangen.
 
 Deze zelfstudie bevat stappen voor het maken van een Oracle Service Cloud-bronverbinding via de Adobe Experience Platform-gebruikersinterface.
 
