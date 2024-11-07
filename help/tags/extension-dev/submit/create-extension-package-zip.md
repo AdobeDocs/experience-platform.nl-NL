@@ -1,14 +1,14 @@
 ---
-title: ZIP-bestand voor extensiepakket voorbereiden
+title: Een ZIP-bestand voor een extensiepakket maken
 description: Leer hoe u een ZIP-bestand met een extensiepakket voorbereidt.
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 92e519e0662c3c3521bfe5ca814b37464e55c7e1
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '102'
 ht-degree: 44%
 
 ---
 
-# Test van begin tot eind uploaden en implementeren
+# Maak een ZIP-bestand met een extensiepakket.
 
 >[!NOTE]
 >
