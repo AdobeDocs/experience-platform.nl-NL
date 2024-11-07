@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologie van de privacyregels
 description: Dit document bevat definities voor belangrijke termen met betrekking tot privacyregels die worden ondersteund door Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
+source-git-commit: 16a3900e7cb54ae1525c11c9316b3928e5f43096
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2404'
 ht-degree: 0%
 
 ---
@@ -52,6 +52,8 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 **functionaris van de Bescherming van Gegevens**: Een deskundige op gegevensprivacy die onafhankelijk werkt om ervoor te zorgen dat een entiteit het beleid en de procedures volgt die in GDPR worden gedetailleerd.
 
 **onderwerp van Gegevens**: Een natuurlijke persoon van wie persoonsgegevens door een controlemechanisme of een bewerker worden verwerkt.
+
+**[!DNL Delaware Personal Data Privacy Act]**: [!DNL Delaware Personal Data Privacy Act] biedt inwoners van Delaware de rechten op toegang tot, correctie, verwijdering en opt-out bij de verkoop van persoonlijke gegevens en gerichte reclame. De wet is van toepassing op bedrijven die gegevens verwerken voor ten minste 35.000 consumenten of die meer dan 20% van de inkomsten uit de verkoop van gegevens verdienen, wat gevolgen heeft voor meer dan 10.000 consumenten. Het ministerie van Justitie verplicht zich tot het aanpakken van schendingen van de gegevensbescherming en kent een periode van 60 dagen.
 
 **Gedelegeerde handelingen**: Niet-wetgevingshandelingen die worden vastgesteld om de bestaande wetgeving aan te vullen en criteria of duidelijkheid te verstrekken.
 
@@ -141,6 +143,8 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 **Pseudonymization**: De verwerking van persoonlijke gegevens dusdanig dat het niet meer aan één enkele gegevenssubject zonder het gebruik van extra gegevens kan worden toegeschreven, zolang dat extra gegevens afzonderlijk blijven om non-attributie te verzekeren.
 
 ## Q
+
+**[!DNL Quebec Law 25]**: [!DNL Quebec Law 25] verbetert de privacyrechten voor ingezetenen, waarbij expliciete toestemming, gegevensminimalisatie en rechten op toegang, correctie, verwijdering en overdracht van persoonsgegevens worden voorgeschreven. Organisaties moeten een privacyfunctionaris aanwijzen, privacyeffectbeoordelingen uitvoeren en inbreuken melden. Voor overtredingen gelden nalevingstermijnen en aanzienlijke sancties.
 
 ## R
 
