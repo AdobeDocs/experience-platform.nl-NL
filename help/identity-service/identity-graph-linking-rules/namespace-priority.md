@@ -2,9 +2,9 @@
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
+source-git-commit: a2a60f429836e26179f68a40fce91a90d73d8eee
 workflow-type: tm+mt
-source-wordcount: '1728'
+source-wordcount: '1784'
 ht-degree: 1%
 
 ---
@@ -176,7 +176,16 @@ Wanneer u uw gegevens selecteert, moet u een naamruimte opgeven die wordt gebrui
 
 Deze configuratie resulteert in computerscores die alleen gebruikmaken van geverifieerde gebeurtenissen.
 
-Voor meer informatie over, lees de documenten op [ Attribution AI ](../../intelligent-services/attribution-ai/overview.md) en [ Klant AI ](../../intelligent-services/customer-ai/overview.md).
+Voor meer informatie, lees de documenten op [ Attribution AI ](../../intelligent-services/attribution-ai/overview.md) en [ Klant AI ](../../intelligent-services/customer-ai/overview.md).
+
+### Partner-gebouwde bestemmingen
+
+De bijgewerkte resultaten van de publieksuitsluiting voor profielen verbonden aan een gedeeld apparaat kunnen niet naar stroomafwaartse bestemmingen worden verzonden. Dit kan voorkomen in bepaalde zeldzame gevallen waarin:
+
+* De kwalificatie van het publiek is slechts gebaseerd op anonieme activiteit.
+* De logins over veelvoudige profielen komen in een korte periode voor.
+
+Voor meer informatie over partner-gebouwde bestemmingen, lees het [ overzicht van bestemmingen ](../../destinations/home.md#adobe-built-and-partner-built-destinations).
 
 ### Privacyservice
 
