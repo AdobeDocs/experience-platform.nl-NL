@@ -2,7 +2,7 @@
 title: Een Phoenix Base-verbinding maken met de Flow Service API
 description: Leer hoe u een Phoenix-database met de Flow Service API met Adobe Experience Platform kunt verbinden.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Een [!DNL Phoenix] basisverbinding maken met de [!DNL Flow Service] API
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >De bron [!DNL Phoenix] wordt eind mei 2025 vervangen.
 

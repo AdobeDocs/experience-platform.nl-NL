@@ -5,7 +5,7 @@ title: Creeer een Verbinding van de Basis van Zoho CRM gebruikend de Dienst API 
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Zoho CRM met behulp van de Flow Service API.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een [!DNL Zoho CRM] basisverbinding maken met de [!DNL Flow Service] API
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >De bron [!DNL Zoho CRM] wordt eind juni 2025 vervangen.
 

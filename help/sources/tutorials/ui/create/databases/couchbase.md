@@ -5,7 +5,7 @@ title: Een Couchbase Source-verbinding maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een Couchbase-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een [!DNL Couchbase] bronverbinding maken in de gebruikersinterface
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >De bron [!DNL Couchbase] wordt eind mei 2025 vervangen.
 

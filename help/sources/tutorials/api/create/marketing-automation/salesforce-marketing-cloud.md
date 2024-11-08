@@ -2,7 +2,7 @@
 title: Een Salesforce Marketing Cloud Base Connection maken met de Flow Service API
 description: Leer hoe u uw Salesforce Marketing Cloud-account kunt verifiëren op basis van het Experience Platform met de Flow Service API.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Een [!DNL Salesforce Marketing Cloud] basisverbinding maken met de [!DNL Flow Service] API
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >De bron [!DNL Salesforce Marketing Cloud] wordt eind mei 2025 vervangen.
 

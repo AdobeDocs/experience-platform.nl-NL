@@ -5,7 +5,7 @@ title: Creeer een Verbinding van Source van Zoho CRM in UI
 type: Tutorial
 description: Leer hoe u een Zoho CRM-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een [!DNL Zoho CRM] bronverbinding maken in de gebruikersinterface
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >De bron [!DNL Zoho CRM] wordt eind juni 2025 vervangen.
 

@@ -5,7 +5,7 @@ title: Een Couchbase-verbinding maken met de Flow Service API
 type: Tutorial
 description: Leer hoe u Couchbase aan Adobe Experience Platform koppelt met behulp van de Flow Service API.
 exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een [!DNL Couchbase] basisverbinding maken met de [!DNL Flow Service] API
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >De bron [!DNL Couchbase] wordt eind mei 2025 vervangen.
 

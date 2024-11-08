@@ -2,7 +2,7 @@
 title: Een Eloqua-basisverbinding voor Oracles maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform met Oracle Eloqua kunt verbinden met behulp van de Flow Service API.
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Een [!DNL Oracle Eloqua] basisverbinding maken met de [!DNL Flow Service] API
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >De bron [!DNL Oracle Eloqua] wordt eind mei 2025 vervangen.
 

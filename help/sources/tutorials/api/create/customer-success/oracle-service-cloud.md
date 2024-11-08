@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen;Oracle Service Cloud;or
 title: Een Oracle Service Cloud Source Connection maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform met de Flow Service API kunt verbinden met Oracle Service Cloud.
 exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Een Oracle Service Cloud-bronverbinding maken met de [!DNL Flow Service] API
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >De bron [!DNL Oracle Service Cloud] wordt eind mei 2025 vervangen.
 
