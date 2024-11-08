@@ -1,17 +1,17 @@
 ---
-title: API-eindpunt voor sandbox-codering
-description: Het /packages eindpunt in Sandbox het Tooling API staat u toe om pakketten in Adobe Experience Platform programmatically te beheren.
+title: API-eindpunt voor sandbox Tooling Packages
+description: Het /packages eindpunt in Sandbox Tooling API staat u toe om pakketten in Adobe Experience Platform programmatically te beheren.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 1e271a88890f41f66aad93d96dbef23a09d33077
+source-git-commit: e029380dd970195d1254ee3ea1cd68ba2574bbd3
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '2543'
 ht-degree: 1%
 
 ---
 
 # Pakketeindpunt
 
-Met sandboxgereedschappen kunt u verschillende artefacten (ook wel objecten genoemd) selecteren en exporteren naar een pakket. Een pakket kan bestaan uit één artefact of meerdere artefacten (zoals datasets of schema&#39;s). Alle artefacten die zijn opgenomen in een pakket, moeten afkomstig zijn uit dezelfde sandbox.
+Met gereedschappen voor sandboxen kunt u verschillende artefacten selecteren (ook wel objecten genoemd) en deze exporteren naar een pakket. Een pakket kan uit één enkel artefact of veelvoudige artefacten (zoals datasets of schema&#39;s) bestaan. Artefacten die deel uitmaken van een pakket, moeten afkomstig zijn uit dezelfde sandbox.
 
 Met het `/packages` -eindpunt in de API voor gereedheid voor sandboxen kunt u programmatisch pakketten in uw organisatie beheren, waaronder het publiceren van een pakket en het importeren van een pakket naar een sandbox.
 
@@ -55,9 +55,9 @@ curl -X POST \
 
 | Eigenschap | Beschrijving | Type | Vereist |
 | --- | --- | --- | --- |
-| `name` | De naam van het pakket. | Tekenreeks | Ja |
-| `description` | Een beschrijving voor meer informatie over het pakket. | Tekenreeks | Nee |
-| `packageType` | Het pakkettype is **GEDEELTELIJK** om erop te wijzen u specifieke artefacten in een pakket omvat. | Tekenreeks | JA |
+| `name` | De naam van het pakket. | String | Ja |
+| `description` | Een beschrijving voor meer informatie over het pakket. | String | Nee |
+| `packageType` | Het pakkettype is **GEDEELTELIJK** om erop te wijzen u specifieke artefacten in een pakket omvat. | String | JA |
 | `sourceSandbox` | De bronsandbox van het pakket. | Object | Nee |
 | `expiry` | Het tijdstempel dat de vervaldatum voor het pakket definieert. De standaardwaarde is 90 dagen vanaf de aanmaakdatum. Het veld voor het verstrijken van de reactie is een tijdperk in UTC-tijd. | Tekenreeks (UTC-tijdstempelindeling) | Nee |
 | `artifacts` | Een lijst met artefacten die naar het pakket moeten worden geëxporteerd. De `artifacts` waarde zou **ongeldig** of **leeg** moeten zijn, wanneer `packageType` `FULL` is. | Array | Nee |
@@ -136,10 +136,10 @@ curl -X PUT \
 
 | Eigenschap | Beschrijving | Type | Verplicht |
 | --- | --- | --- | --- |
-| `id` | De id van het pakket dat moet worden bijgewerkt. | Tekenreeks | Ja |
-| `action` | Om artefacten in het pakket toe te voegen, zou de actiewaarde **** moeten zijn TOEVOEGEN. Deze actie wordt gesteund voor slechts **GEDEELTELIJKE** pakkettypes. | Tekenreeks | Ja |
+| `id` | De id van het pakket dat moet worden bijgewerkt. | String | Ja |
+| `action` | Om artefacten in het pakket toe te voegen, zou de actiewaarde **moeten zijn ADD**. Deze actie wordt gesteund voor slechts **GEDEELTELIJKE** pakkettypes. | String | Ja |
 | `artifacts` | Een lijst met artefacten die in het pakket moeten worden toegevoegd. Er zou geen verandering in het pakket zijn als de lijst **ongeldig** of **leeg** is. Artefacten worden gedupliceerd voordat ze aan het pakket worden toegevoegd. Zie de onderstaande tabel voor een volledige lijst met ondersteunde artefacten. | Array | Nee |
-| `expiry` | De tijdstempel die de vervaldatum voor het pakket definieert. De standaardwaarde is 90 dagen vanaf het moment dat de PUT-API wordt aangeroepen als de vervaldatum niet is opgegeven in de payload. Het veld voor het verstrijken van de reactie wordt ingesteld op tijdperk UTC-tijd. | Tekenreeks (UTC-tijdstempelindeling) | Nee |
+| `expiry` | Het tijdstempel dat de vervaldatum voor het pakket definieert. De standaardwaarde is 90 dagen vanaf het moment dat de PUT-API wordt aangeroepen als de vervaldatum niet is opgegeven in de payload. Het veld voor het verstrijken van de reactie is een tijdperk in UTC-tijd. | Tekenreeks (UTC-tijdstempelindeling) | Nee |
 
 De volgende artefacttypen worden momenteel ondersteund.
 
@@ -152,13 +152,13 @@ De volgende artefacttypen worden momenteel ondersteund.
 | `REGISTRY_MIXIN` | Klantgegevensplatform | Veldgroep | Ja | Ja |
 | `REGISTRY_SCHEMA` | Klantgegevensplatform | Schema&#39;s | Ja | Ja |
 | `CATALOG_DATASET` | Klantgegevensplatform | Gegevenssets | Ja | Ja |
-| `DULE_CONSENT_POLICY` | Klantgegevensplatform | Toestemmings- en bestuursbeleid | Ja | Ja |
-| `PROFILE_SEGMENT` | Customer Data Platform | Doelgroepen | Ja | Ja |
+| `DULE_CONSENT_POLICY` | Klantgegevensplatform | Beleid inzake instemming en bestuur | Ja | Ja |
+| `PROFILE_SEGMENT` | Klantgegevensplatform | Doelgroepen | Ja | Ja |
 | `FLOW` | Klantgegevensplatform | Bronnen, gegevensstroom | Ja | Ja |
 
 **Reactie**
 
-Als de reactie is gelukt, wordt uw bijgewerkte pakket geretourneerd. De reactie bevat de bijbehorende pakket-id en informatie over de status, de vervaldatum en de lijst met artefacten.
+Een geslaagde reactie retourneert het bijgewerkte pakket. De reactie bevat de overeenkomende pakket-id en informatie over de status, de vervaldatum en de lijst met artefacten.
 
 ```json
 {
@@ -229,13 +229,13 @@ curl -X PUT \
 
 | Eigenschap | Beschrijving | Type | Verplicht |
 | --- | --- | --- | --- |
-| `id` | De id van het pakket dat moet worden bijgewerkt. | Tekenreeks | Ja |
-| `action` | Om artefacten van een pakket te schrappen, zou de actiewaarde **DELETE** moeten zijn. Deze actie wordt gesteund voor slechts **PARTIAL** pakkettypes. | Tekenreeks | Ja |
+| `id` | De id van het pakket dat moet worden bijgewerkt. | String | Ja |
+| `action` | Om artefacten van een pakket te schrappen, zou de actiewaarde **DELETE** moeten zijn. Deze actie wordt gesteund voor slechts **GEDEELTELIJKE** pakkettypes. | String | Ja |
 | `artifacts` | Een lijst met artefacten die uit het pakket moeten worden verwijderd. Er zou geen verandering in het pakket zijn als de lijst **ongeldig** of **leeg** is. | Array | Nee |
 
 **Reactie**
 
-Een geslaagde reactie retourneert het bijgewerkte pakket. De reactie bevat de bijbehorende pakket-id en informatie over de status, de vervaldatum en de lijst met artefacten.
+Een geslaagde reactie retourneert het bijgewerkte pakket. De reactie bevat de overeenkomende pakket-id en informatie over de status, de vervaldatum en de lijst met artefacten.
 
 ```json
 {
@@ -304,8 +304,8 @@ curl -X PUT \
 
 | Eigenschap | Beschrijving | Type | Verplicht |
 | --- | --- | --- | --- |
-| `id` | De id van het pakket dat moet worden bijgewerkt. | Tekenreeks | Ja |
-| `action` | Om de meta-gegevensgebieden in een pakket bij te werken, zou de actiewaarde **UPDATE** moeten zijn. Deze actie wordt gesteund voor slechts **GEDEELTELIJKE** pakkettypes. | Tekenreeks | Ja |
+| `id` | De id van het pakket dat moet worden bijgewerkt. | String | Ja |
+| `action` | Om de meta-gegevensgebieden in een pakket bij te werken, zou de actiewaarde **UPDATE** moeten zijn. Deze actie wordt gesteund voor slechts **GEDEELTELIJKE** pakkettypes. | String | Ja |
 | `name` | De bijgewerkte naam van het pakket. Dubbele pakketnamen zijn niet toegestaan. | Array | Ja |
 | `sourceSandbox` | Source-sandbox moet tot dezelfde organisatie behoren als die is opgegeven in de header van de aanvraag. | Object | Ja |
 
@@ -381,7 +381,7 @@ Een geslaagde reactie retourneert een reden die aangeeft dat de pakket-id is ver
 
 ## Publish een pakket {#publish}
 
-Als u het importeren van een pakket in een sandbox wilt inschakelen, moet u het publiceren. Vraag het `/packages` -eindpunt om een GET-aanvraag terwijl u de id opgeeft van het pakket dat u wilt publiceren.
+Als u het importeren van een pakket in een sandbox wilt inschakelen, moet u het publiceren. Breng een verzoek van de GET tot het `/packages` eindpunt terwijl het specificeren van identiteitskaart van het pakket u wilt publiceren.
 
 **API formaat**
 
@@ -407,11 +407,11 @@ curl -X GET \
 
 | Eigenschap | Beschrijving | Type | Verplicht |
 | --- | --- | --- | --- |
-| `expiryPeriod` | Deze door de gebruiker opgegeven periode definieert de vervaldatum van het pakket (in dagen) vanaf het moment dat het pakket werd gepubliceerd. Deze waarde mag niet negatief zijn.<br> Als er geen waarde is opgegeven, wordt de standaardwaarde berekend als 90 (dagen) vanaf de publicatiedatum. | Geheel | Nee |
+| `expiryPeriod` | Deze door de gebruiker opgegeven tijdsperiode definieert de vervaldatum van het pakket (in dagen) vanaf het moment dat het pakket werd gepubliceerd. Deze waarde mag niet negatief zijn.<br> Als er geen waarde is opgegeven, wordt de standaardwaarde berekend als 90 (dagen) vanaf de publicatiedatum. | Geheel | Nee |
 
 **Reactie**
 
-Als de respons is gelukt, wordt het gepubliceerde pakket geretourneerd.
+Een geslaagde reactie retourneert het gepubliceerde pakket.
 
 ```json
 {
@@ -430,7 +430,7 @@ Als de respons is gelukt, wordt het gepubliceerde pakket geretourneerd.
 
 ## Een pakket opzoeken {#look-up-package}
 
-U kunt een afzonderlijk pakket opzoeken door een GET-aanvraag in te dienen bij het `/packages` -eindpunt dat de bijbehorende id van het pakket bevat in het aanvraagpad.
+U kunt een afzonderlijk pakket opzoeken door een verzoek van de GET te richten aan het `/packages` eindpunt dat overeenkomstige identiteitskaart van het pakket in de verzoekweg omvat.
 
 **API formaat**
 
@@ -456,7 +456,7 @@ curl -X GET \
 
 **Reactie**
 
-Een geslaagde reactie retourneert gegevens voor de id van het aangevraagde pakket. Het antwoord bevat de naam, beschrijving, publicatiedatum en vervaldatum, de bronsandbox van het pakket en een lijst met artefacten.
+Een geslaagde reactie retourneert details voor de id van het gevraagde pakket. Het antwoord bevat de naam, beschrijving, publicatiedatum en vervaldatum, de bronsandbox van het pakket en een lijst met artefacten.
 
 ```json
 {
@@ -507,7 +507,7 @@ GET /packages/?{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie op [ vraagparameters ](./appendix.md) voor meer informatie. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [ vraagparameters ](./appendix.md) voor meer informatie. |
 
 **Verzoek**
 
@@ -524,7 +524,7 @@ curl -X GET \
 
 **Reactie**
 
-Een succesvolle reactie retourneert een lijst met pakketten die bij uw organisatie horen, inclusief details zoals naam, status, vervaldatum en artefactenlijst.
+Een geslaagde reactie retourneert een lijst met pakketten die bij uw organisatie horen, inclusief details zoals naam, status, vervaldatum en lijst met artefacten.
 
 ```json
 {
@@ -602,7 +602,7 @@ Een succesvolle reactie retourneert een lijst met pakketten die bij uw organisat
 
 ## Een pakket importeren {#import}
 
-Dit eindpunt wordt gebruikt om de conflicterende objecten in de opgegeven doelsandbox op te halen. Conflicterende objecten vertegenwoordigen soortgelijke objecten die al aanwezig zijn in de doelsandbox.
+Dit eindpunt wordt gebruikt om de conflicterende objecten in de opgegeven doelsandbox op te halen. Conflicterende objecten vertegenwoordigen vergelijkbare objecten die al aanwezig zijn in de doelsandbox.
 
 **API formaat**
 
@@ -629,7 +629,7 @@ curl -X GET \
 
 **Reactie**
 
-Conflicten worden geretourneerd in de reactie. In het antwoord wordt het oorspronkelijke pakket plus het `alternatives` -fragment weergegeven als een array die op volgorde wordt gerangschikt.
+Conflicten worden geretourneerd in de reactie. In het antwoord wordt het oorspronkelijke pakket plus het fragment `alternatives` weergegeven als een array die op volgorde is geordend.
 
 +++reactie weergeven
 
@@ -743,7 +743,7 @@ Conflicten worden geretourneerd in de reactie. In het antwoord wordt het oorspro
 
 +++
 
-## Een importbewerking verzenden {#submit-import}
+## Importeren verzenden {#submit-import}
 
 >[!NOTE]
 >
@@ -751,7 +751,7 @@ Conflicten worden geretourneerd in de reactie. In het antwoord wordt het oorspro
 
 U kunt een importbewerking voor een pakket verzenden nadat u conflicten hebt gecontroleerd en vervangende items hebt opgegeven door een aanvraag voor POST in te dienen bij het `/packages` -eindpunt. Het resultaat wordt opgegeven als een payload, die de importtaak start voor de doelsandbox zoals opgegeven in de payload.
 
-Bij Payload worden ook de door de gebruiker opgegeven taaknaam en beschrijving voor de importtaak geaccepteerd. Als de door de gebruiker opgegeven naam en beschrijving niet beschikbaar zijn, worden de pakketnaam en de beschrijving gebruikt voor de taaknaam en -beschrijving.
+Payload accepteert ook de door de gebruiker opgegeven taaknaam en beschrijving voor de importtaak. Als de door de gebruiker opgegeven naam en beschrijving niet beschikbaar zijn, worden de pakketnaam en beschrijving gebruikt voor de naam en beschrijving van de taak.
 
 **API formaat**
 
@@ -789,7 +789,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving | Type | Verplicht |
 | --- | --- | --- | --- |
-| `alternatives` | `alternatives` geeft de toewijzing van bronsandboxartefacten aan de bestaande doelsandboxartefacten aan. Omdat deze objecten al aanwezig zijn, voorkomt de importtaak dat deze artefacten in de doelsandbox worden gemaakt. | Tekenreeks | Nee |
+| `alternatives` | `alternatives` geeft de toewijzing van bronsandboxartefacten aan de bestaande doelsandboxartefacten aan. Omdat deze elementen al aanwezig zijn, voorkomt de importtaak dat deze artefacten in de doelsandbox worden gemaakt. | String | Nee |
 
 **Reactie**
 
@@ -855,7 +855,7 @@ curl -X POST \
 
 **Reactie**
 
-Een succesvolle reactie retourneert een lijst met onderliggende objecten voor de objecten.
+Een geslaagde reactie retourneert een lijst met onderliggende objecten voor de objecten.
 
 ```json
 [
@@ -894,7 +894,7 @@ Een succesvolle reactie retourneert een lijst met onderliggende objecten voor de
 
 ## Op rollen gebaseerde machtigingen controleren om alle pakketartefacten te importeren {#role-based-permissions}
 
-U kunt controleren of u machtigingen hebt om pakketartefacten te importeren door een GET-aanvraag in te dienen bij het `/packages` -eindpunt terwijl de id van het pakket en de naam van de doelsandbox worden opgegeven.
+U kunt controleren of u machtigingen hebt om pakketartefacten te importeren door een GET-aanvraag in te dienen bij het eindpunt `/packages` terwijl de id van het pakket en de naam van de doelsandbox wordt opgegeven.
 
 **API formaat**
 
@@ -921,7 +921,7 @@ curl -X GET \
 
 **Reactie**
 
-Een geslaagde reactie retourneert bronmachtigingen voor de doelsandbox, inclusief een lijst met vereiste machtigingen, ontbrekende machtigingen, type artefact en een beslissing of het maken is toegestaan.
+Een succesvol antwoord keert middeltoestemmingen voor de doelzandbak, met inbegrip van een lijst van vereiste toestemmingen, ontbrekende toestemmingen, type van artefact, en een besluit terug over of de verwezenlijking wordt toegestaan.
 
 +++reactie weergeven
 
@@ -1040,9 +1040,9 @@ Een geslaagde reactie retourneert bronmachtigingen voor de doelsandbox, inclusie
 
 +++
 
-## Exporteer-/importtaken weergeven {#list-jobs}
+## Uitvoer-/importtaken weergeven {#list-jobs}
 
-U kunt de huidige export-/importtaken weergeven door een GET-aanvraag in te dienen bij het `/packages` -eindpunt.
+U kunt huidige export-/importtaken weergeven door een GET-aanvraag in te dienen bij het `/packages` -eindpunt.
 
 **API formaat**
 
@@ -1052,11 +1052,11 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie op [ vraagparameters ](./appendix.md) voor meer informatie. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [ vraagparameters ](./appendix.md) voor meer informatie. |
 
 **Verzoek**
 
-In het volgende verzoek worden alle geslaagde importtaken weergegeven.
+In het volgende verzoek worden alle taken weergegeven die met succes zijn geïmporteerd.
 
 ```shell
 curl -X GET \
@@ -1152,13 +1152,13 @@ Met een geslaagde reactie worden alle geslaagde importtaken geretourneerd.
 }
 ```
 
-## Pakketten delen tussen organisaties {#org-linking}
+## Pakketten delen over organisaties {#org-linking}
 
-Met het `/handshake` -eindpunt in de API voor sandboxgereedschappen kunt u samenwerken met andere organisaties om pakketten te delen.
+Met het eindpunt `/handshake` in de API voor het bewerken van sandboxen kunt u met andere organisaties samenwerken om pakketten te delen.
 
-### Een verzoek tot delen verzenden {#send-request}
+### Een aanvraag voor delen verzenden {#send-request}
 
-Verzend een verzoek naar een organisatie van de doelpartner voor het delen van goedkeuring door een verzoek van de POST naar het `/handshake/bulkCreate` eindpunt in te dienen. Dit is nodig voordat u persoonlijke pakketten kunt delen.
+Verzend een verzoek naar een organisatie van de doelpartner voor het delen van goedkeuring door een verzoek van de POST aan het `/handshake/bulkCreate` eindpunt te doen. Dit is vereist voordat u persoonlijke pakketten kunt delen.
 
 **API formaat**
 
@@ -1190,7 +1190,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving | Type | Vereist |
 | --- | --- | --- | --- |
-| `targetIMSOrgIds` | Een lijst met doelorganisaties waarnaar een verzoek tot delen moet worden verzonden. | Array | Ja |
+| `targetIMSOrgIds` | Een lijst met doelorganisaties waarnaar een verzoek om delen moet worden verzonden. | Array | Ja |
 | `sourceIMSDetails` | Details over de bronorganisatie. | Object | Ja |
 
 **Reactie**
@@ -1235,7 +1235,7 @@ POST /handshake/action
 
 **Verzoeken**
 
-In het volgende verzoek wordt een verzoek om delen van een doelpartnerorganisatie goedgekeurd.
+Het volgende verzoek keurt een aandeelverzoek van een organisatie van de doelpartner goed.
 
 ```shell
 curl -X POST  \
@@ -1260,10 +1260,10 @@ curl -X POST  \
 
 | Eigenschap | Beschrijving | Type | Vereist |
 | --- | --- | --- | --- |
-| `linkingID` | De id van het verzoek om delen waarop u reageert. | Tekenreeks | Ja |
-| `status` | De actie die wordt uitgevoerd op het verzoek om delen. | Tekenreeks | Ja |
-| `reason` | De reden waarom de actie wordt ondernomen. | Tekenreeks | Ja |
-| `targetIMSOrgDetails` | Details over de doelorganisatie waar de identiteitskaart waarde identiteitskaart **identiteitskaart van de doelorganisatie** zou moeten zijn, zou de naamwaarde de 2} NAAM van de doelorganisaties **moeten zijn, en de gebiedwaarde zou de doelorganisaties** REGIO **moeten zijn.** | Object | Ja |
+| `linkingID` | De id van het verzoek om delen waarop u reageert. | String | Ja |
+| `status` | De actie die wordt ondernomen naar aanleiding van het verzoek om delen. | String | Ja |
+| `reason` | De reden waarom de actie wordt ondernomen. | String | Ja |
+| `targetIMSOrgDetails` | De details over de doelorganisatie waar de id waarde identiteitskaart van de doelorganisatie **** zou moeten zijn, zou de naamwaarde de 2} NAAM van de doelorganisaties **moeten zijn, en de gebiedwaarde zou de doelorganisaties** REGIO **moeten zijn.** | Object | Ja |
 
 **Reactie**
 
@@ -1293,7 +1293,7 @@ Een succesvolle reactie retourneert details met betrekking tot het goedgekeurde 
 
 ### Uitgaande/binnenkomende verzoeken voor delen weergeven {#outgoing-and-incoming-requests}
 
-Maak een lijst met uitgaande en binnenkomende verzoeken voor delen door een GET-aanvraag in te dienen bij het `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING` -eindpunt.
+Maak een lijst van uitgaande en inkomende aandeelverzoeken door een verzoek van de GET tot het `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING` eindpunt te richten.
 
 **API formaat**
 
@@ -1311,7 +1311,7 @@ POST handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
 
 **Verzoek**
 
-Het volgende verzoek retourneert een lijst met alle uitgaande en binnenkomende verzoeken om delen.
+Het volgende verzoek keert een lijst van alle uitgaande en inkomende aandeelverzoeken terug.
 
 ```shell
 curl -X GET \
@@ -1326,7 +1326,7 @@ curl -X GET \
 
 **Reactie**
 
-Een succesvolle reactie retourneert een lijst met uitgaande en binnenkomende verzoeken om delen en hun gegevens.
+Een succesvolle reactie keert een lijst van uitgaande en inkomende aandeelverzoeken en hun details terug.
 
 ```json
 {
@@ -1361,13 +1361,13 @@ Een succesvolle reactie retourneert een lijst met uitgaande en binnenkomende ver
 }
 ```
 
-## Overdrachtspakketten
+## Transferpakketten
 
-Gebruik het eindpunt `/transfer` in de API voor sandboxgereedschappen om nieuwe aanvragen voor pakketdeling op te halen en te maken.
+Gebruik het eindpunt `/transfer` in de API voor gereedschappen in de sandbox om nieuwe aanvragen voor pakketdeling op te halen en te maken.
 
 ### Nieuwe aanvraag voor delen {#share-request}
 
-Verzamel het pakket van een gepubliceerde bronorganisatie en deel het met een doelorganisatie door een verzoek van de POST aan het `/transfer` eindpunt te doen terwijl het verstrekken van pakketidentiteitskaart en identiteitskaart van de doelorganisatie.
+Zoek het pakket van een gepubliceerde bronorganisatie en deel het met een doelorganisatie door een verzoek van de POST aan het `/transfer` eindpunt te doen terwijl het verstrekken van pakket identiteitskaart en identiteitskaart van de doelorganisatie.
 
 **API formaat**
 
@@ -1377,7 +1377,7 @@ POST /transfer
 
 **Verzoek**
 
-Met het volgende verzoek wordt een pakket met bronorganisaties opgehaald en gedeeld met een doelorganisatie.
+Het volgende verzoek haalt een bronorganisatiepakket op en deelt het met een doelorganisatie.
 
 ```shell
 curl -X POST \
@@ -1399,12 +1399,12 @@ curl -X POST \
 
 | Eigenschap | Beschrijving | Type | Vereist |
 | --- | --- | --- | --- |
-| `packageId` | De id van het pakket dat u wilt delen. | Tekenreeks | Ja |
-| `targets` | Een lijst met organisaties om mee te delen in een pakket. | Array | Ja |
+| `packageId` | De id van het pakket dat u wilt delen. | String | Ja |
+| `targets` | Een lijst met organisaties waarmee een pakket moet worden gemaakt. | Array | Ja |
 
 **Reactie**
 
-Als de reactie is gelukt, worden de details van het gevraagde pakket en de deelstatus ervan geretourneerd.
+Een succesvol antwoord geeft details van het gevraagde pakket en zijn aandeelstatus terug.
 
 ```json
 [
@@ -1432,7 +1432,7 @@ Als de reactie is gelukt, worden de details van het gevraagde pakket en de deels
 ]
 ```
 
-### Een verzoek tot delen ophalen op basis van id {#fetch-transfer-by-id}
+### Aanvraag voor delen ophalen met id {#fetch-transfer-by-id}
 
 Haal de details van een deelverzoek door een verzoek van de GET tot het `/transfer/{TRANSFER_ID}` eindpunt te richten terwijl het verstrekken van identiteitskaart
 
@@ -1448,7 +1448,7 @@ GET /transfer/{TRANSFER_ID}
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een overdracht met de id {TRANSFER_ID} opgehaald.
+Met het volgende verzoek wordt een overdracht opgehaald met de id {TRANSFER_ID} .
 
 ```shell
 curl -X GET \
@@ -1595,7 +1595,13 @@ Een succesvolle reactie keert een lijst van alle overdrachtverzoeken van de vers
 
 ### Pakketbeschikbaarheid bijwerken van privé naar openbaar {#update-availability}
 
-Verander een pakket van privé in openbaar door een verzoek van de GET aan het `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC` eindpunt te doen. Standaard wordt een pakket gemaakt met persoonlijke beschikbaarheid.
+Verander een pakket van privé in openbaar door een verzoek van de GET aan het `/packages/update` eindpunt te doen. Standaard wordt een pakket gemaakt met persoonlijke beschikbaarheid.
+
+**API formaat**
+
+```http
+GET `/packages/update`
+```
 
 **Verzoek**
 
@@ -1603,7 +1609,7 @@ Het volgende verzoek verandert een pakketbeschikbaarheid van privé in openbaar.
 
 ```shell
 curl -X GET \
-  http://platform.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
+  http://platform.adobe.io/data/foundation/exim/packages/update \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -1618,13 +1624,13 @@ curl -X GET \
 
 | Eigenschap | Beschrijving | Type | Vereist |
 | --- | --- | --- | --- |
-| `id` | De id van het pakket dat moet worden bijgewerkt. | Tekenreeks | Ja |
-| `action` | Om het zicht aan openbaar bij te werken, zou de actiewaarde **UPDATE** moeten zijn. | Tekenreeks | Ja |
-| `packageVisbility` | Om het zicht bij te werken, zou de packageVisibility waarde **PUBLIC** moeten zijn. | Tekenreeks | Ja |
+| `id` | The id of the package to update. | String | Ja |
+| `action` | Om het zicht aan openbaar bij te werken, zou de actiewaarde **UPDATE** moeten zijn. | String | Ja |
+| `packageVisbility` | Om het zicht bij te werken, zou de packageVisibility waarde **PUBLIC** moeten zijn. | String | Ja |
 
 **Reactie**
 
-Bij een succesvolle reactie worden gegevens over een pakket en de zichtbaarheid ervan geretourneerd.
+Een geslaagde reactie retourneert details over een pakket en de zichtbaarheid ervan.
 
 ```json
 {
@@ -1689,12 +1695,12 @@ curl -X POST \
 
 | Eigenschap | Beschrijving | Type | Vereist |
 | --- | --- | --- | --- |
-| `imsOrgId` | De id van de bronorganisatie van het pakket. | Tekenreeks | Ja |
-| `packageId` | De id uit het te importeren pakket. | Tekenreeks | Ja |
+| `imsOrgId` | De id van de bronorganisatie van het pakket. | String | Ja |
+| `packageId` | De id uit het te importeren pakket. | String | Ja |
 
 **Reactie**
 
-Als u met succes reageert, worden de gegevens van het geïmporteerde openbare pakket geretourneerd.
+Als u met succes reageert, worden details over het geïmporteerde openbare pakket geretourneerd.
 
 ```json
 {
@@ -1716,7 +1722,7 @@ Als u met succes reageert, worden de gegevens van het geïmporteerde openbare pa
 
 ### Openbare pakketten weergeven {#list-public-packages}
 
-U kunt een lijst met pakketten met een openbare zichtbaarheid ophalen door een GET-aanvraag in te dienen bij het `/transfer/list?{QUERY_PARAMS}` -eindpunt.
+Vestig een lijst van pakketten met openbare zichtbaarheid door een verzoek van de GET aan het `/transfer/list?{QUERY_PARAMS}` eindpunt te richten.
 
 **API formaat**
 
@@ -2000,8 +2006,8 @@ curl -X GET \
 
 | Eigenschap | Beschrijving | Type | Vereist |
 | --- | --- | --- | --- |
-| `imsOrdId` | De id van de organisatie waartoe het pakket behoort. | Tekenreeks | Ja |
-| `packageId` | De id van het pakket die u wilt laden. | Tekenreeks | Ja |
+| `imsOrdId` | De id van de organisatie waartoe het pakket behoort. | String | Ja |
+| `packageId` | De id van het pakket die u wilt laden. | String | Ja |
 
 **Reactie**
 
