@@ -5,10 +5,10 @@ breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
+source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 11%
+source-wordcount: '366'
+ht-degree: 12%
 
 ---
 
@@ -104,7 +104,7 @@ Modellen implementeren {#implement-models}
    - [Geplande query&#39;s controleren](ui/monitor-queries.md)
    - [Referentiegids](ui/credentials.md)
    - [Uitvoerdatasets genereren op basis van queryresultaten](ui/create-datasets.md)
-- API-eindpunten voor query-service {#api}
+- Query Service-API {#api}
    - [Aan de slag](api/getting-started.md)
    - [Zoekopdrachten](api/queries.md)
    - [Verbindingsparameters](api/connection-parameters.md)
@@ -113,6 +113,11 @@ Modellen implementeren {#implement-models}
    - [Zoeksjablonen](api/query-templates.md)
    - [Versnelde query&#39;s](api/accelerated-queries.md)
    - [Waarschuwingsabonnementen](api/alert-subscriptions.md)
+- Query Service Auth API {#auth-api}
+   - [Overzicht](auth-api/overview.md)
+   - [Aan de slag](auth-api/getting-started.md)
+   - [IP-toegang](auth-api/ip-access.md)
+   - [Valideren](auth-api/validate.md)
 - Gegevensbeheer {#data-governance}
    - [Overzicht](data-governance/overview.md)
    - [Handleiding controlelogboek](data-governance/audit-log-guide.md)
