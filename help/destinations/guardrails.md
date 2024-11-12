@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Meer informatie over het standaardgebruik en de tarieflimieten van gegevensactivering.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
+source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1710'
 ht-degree: 1%
 
 ---
@@ -53,7 +53,7 @@ De hieronder gidsen zijn over het algemeen van toepassing op activering door [ a
 | Maximumaantal kenmerken dat aan een doel is toegewezen | 50 | Prestatiegerichting | In het geval van verschillende bestemmingen en bestemmingstypen kunt u profielkenmerken en identiteiten selecteren die u wilt toewijzen voor export. Voor optimale prestaties, zou een maximum van 50 attributen in een dataflow aan een bestemming moeten worden in kaart gebracht. |
 | Maximum aantal bestemmingen | 100 | Door het systeem afgedwongen geleiding | U kunt een maximum van 100 bestemmingen tot stand brengen dat u gegevens kunt verbinden en activeren aan, *per zandbak*. [ de verpersoonlijkingsbestemmingen van Edge (de verpersoonlijking van de Douane) ](#edge-destinations-activation) kan omhoog een maximum van 10 van de 100 geadviseerde bestemmingen maken. |
 | Type gegevens die op bestemmingen worden geactiveerd | Profielgegevens, inclusief identiteiten en identiteitskaarten | Door het systeem afgedwongen geleiding | Momenteel, is het slechts mogelijk om *attributen van het profielverslag* naar bestemmingen uit te voeren. XDM-kenmerken die gebeurtenisgegevens beschrijven, worden momenteel niet ondersteund voor exporteren. |
-| Type gegevens geactiveerd voor doelen - ondersteuning voor array- en kaartkenmerken | Niet beschikbaar | Door het systeem afgedwongen geleiding | Op dit ogenblik, is het niet **mogelijk *serie of kaartattributen* naar bestemmingen uit te voeren.** De uitzondering op deze regel is de [ identiteitskaart ](/help/xdm/field-groups/profile/identitymap.md), die in zowel het stromen als op dossier-gebaseerde actities wordt uitgevoerd. |
+| Type gegevens geactiveerd voor doelen - ondersteuning voor array- en kaartkenmerken | Gedeeltelijk beschikbaar | Door het systeem afgedwongen geleiding | U kunt serieattributen naar [ op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based) uitvoeren. U moet de functie `array_to_string` nog steeds gebruiken om de array af te vlakken in een tekenreeks in het doelbestand. [ las meer ](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality) over de functionaliteit. <br><br> Op dit ogenblik, is het **niet** mogelijk om *kaartattributen* naar bestemmingen uit te voeren. De uitzondering op deze regel is de [ identiteitskaart ](/help/xdm/field-groups/profile/identitymap.md), die in zowel het stromen als op dossier-gebaseerde actities wordt uitgevoerd. |
 
 {style="table-layout:auto"}
 
