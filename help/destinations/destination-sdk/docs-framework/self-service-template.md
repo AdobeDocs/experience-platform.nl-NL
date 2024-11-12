@@ -2,7 +2,7 @@
 title: Zelfbedieningssjabloon voor documentatie // Vervangen door de naam van uw doel
 description: Gebruik deze sjabloon om openbare documentatie voor uw bestemming in de Adobe Experience Platform-catalogus te maken. // Vervang door de alinea in de sectie Overzicht
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 10521602a5871419c0c49d54c8ed250af39a78a4
 workflow-type: tm+mt
 source-wordcount: '1609'
 ht-degree: 0%
