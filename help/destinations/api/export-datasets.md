@@ -4,9 +4,9 @@ title: De datasets van de uitvoer door de Dienst API van de Stroom te gebruiken
 description: Leer hoe te om de Dienst API van de Stroom te gebruiken om datasets naar uitgezochte bestemmingen uit te voeren.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 22a752e28fe3cc4cb3337b456e80ef1b273f6a71
+source-git-commit: c32d2801fe38183225d24f38284b42e3d78e2631
 workflow-type: tm+mt
-source-wordcount: '5095'
+source-wordcount: '5126'
 ht-degree: 0%
 
 ---
@@ -1163,9 +1163,11 @@ Noteer de verbinding-id in het antwoord. Deze id is vereist in de volgende stap 
 
 Daarna, moet u een doelverbinding tot stand brengen die de uitvoerparameters voor uw datasets opslaat. Exportparameters zijn onder andere locatie, bestandsindeling, compressie en andere details. Raadpleeg de `targetSpec` -eigenschappen in de verbindingsspecificatie van het doel voor meer informatie over de ondersteunde eigenschappen voor elk doeltype. Verwijs in de onderstaande tabbladen naar de eigenschappen `targetSpec` van alle ondersteunde doelen.
 
->[!WARNING]
+>[!IMPORTANT]
 >
->Exporteren naar JSON-bestanden worden alleen in de gecomprimeerde modus ondersteund. Exporteren naar [!DNL Parquet] -bestanden worden ondersteund in een gecomprimeerde en niet-gecomprimeerde modus.
+>Exporteren naar JSON-bestanden worden alleen in de gecomprimeerde modus ondersteund. Exporteren naar [!DNL Parquet] -bestanden worden ondersteund in zowel de gecomprimeerde als de niet-gecomprimeerde modus.
+>
+>De indeling van het geëxporteerde JSON-bestand is NDJSON, de standaardindeling voor gegevensuitwisseling in het ecosysteem big data. Adobe raadt u aan een NDJSON-compatibele client te gebruiken om de geëxporteerde bestanden te lezen.
 
 >[!BEGINTABS]
 
