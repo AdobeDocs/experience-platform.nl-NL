@@ -2,10 +2,10 @@
 title: applyProposities
 description: Rendervoorstellingen die al met sendEvent zijn gerenderd.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
 workflow-type: tm+mt
 source-wordcount: '335'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -46,7 +46,7 @@ Voer het `applyPropositions` bevel in werking wanneer het roepen van uw gevormde
 * **`viewName`**: De naam van de weergave die in een toepassing van één pagina moet worden weergegeven. De weergavemeldingen voor deze beslissingen worden in het cachegeheugen opgeslagen en kunnen met `personalization.includePendingDisplayNotifications` worden opgenomen in een volgende `sendEvent` -opdracht.
 
 ```js
-alloy("applyPropositiions",{
+alloy("applyPropositions",{
   "propositions": [],
   "metadata": {},
   "viewName": ""
