@@ -3,14 +3,19 @@ keywords: Experience Platform; de Dienst van de Vraag; IP toegangsbeheer; vergun
 title: API-handleiding voor queryservice
 description: Leer hoe te beginnen voor vergunning en IP waaierbeperkingen voor veilige gegevenstoegang binnen de Dienst van de Vraag van Adobe Experience Platform.
 role: Developer
-source-git-commit: eb6558c2cc3faebb2cb14f49f7517227d57f7162
+exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 0%
+source-wordcount: '476'
+ht-degree: 2%
 
 ---
 
 # Handleiding voor de API voor queryservice
+
+>[!AVAILABILITY]
+>
+>Deze functionaliteit is beschikbaar voor klanten die de Data Distiller-add hebben aangeschaft. Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger.
 
 De API van de Vergunning van de Dienst van de Vraag voorziet organisaties van striktere controle over gegevenstoegang via de SQL interface in Adobe Experience Platform. U kunt deze API gebruiken om IP beperkingen te bepalen, gegevenstoegang tot gespecificeerde netwerken te beperken, en veiligheid controle te verbeteren.
 

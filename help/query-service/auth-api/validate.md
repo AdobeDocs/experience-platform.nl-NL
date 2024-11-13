@@ -3,14 +3,19 @@ keywords: Experience Platform; veiligheid; ip-toegang; bevestiging; API gids; vr
 title: Eindpunt van IP-validatie
 description: Leer hoe te om IP toegang voor zandbakken in de Dienst van de Vraag te bevestigen gebruikend het IP API eindpunt van de Bevestiging.
 role: Developer
-source-git-commit: ad1b6d8449a2a3ca9c8422e70769d12e33d8e255
+exl-id: 4ce9ab1c-e333-4ed5-a430-43ffec36a46d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 0%
+source-wordcount: '229'
+ht-degree: 3%
 
 ---
 
 # IP-eindpunt voor validatie
+
+>[!AVAILABILITY]
+>
+>Deze functionaliteit is beschikbaar voor klanten die de Data Distiller-add hebben aangeschaft. Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger.
 
 Gebruik het IP eindpunt van de Bevestiging API om te verifiëren of een gespecificeerd IP adres wordt toegelaten om tot een aangewezen zandbak in de Dienst van de Vraag toegang te hebben. Deze controle bevestigt of de toegangsbeperkingen van toepassing zijn of of een IP adres wordt toegelaten om tot gegevens binnen een zandbak toegang te hebben.
 

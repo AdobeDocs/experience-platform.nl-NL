@@ -2,14 +2,19 @@
 title: API-handleiding voor queryservice
 description: Leer hoe te om de Vergunning API van de Dienst van de Vraag te gebruiken om op netwerk-gebaseerde IP beperkingen voor veilige verbindingen door SQL af te dwingen. Gebruik deze API om het beheer van gegevenstoegang voor uw Adobe Experience Platform-gegevens te verbeteren.
 role: Developer
-source-git-commit: f673d0d71458fe87491318f06be59719e4c9d76c
+exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 0%
+source-wordcount: '386'
+ht-degree: 1%
 
 ---
 
 # API-handleiding voor queryservice
+
+>[!AVAILABILITY]
+>
+>Deze functionaliteit is beschikbaar voor klanten die de Data Distiller-add hebben aangeschaft. Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger.
 
 Gebruik de Vergunning API van de Dienst van de Vraag om op IP-Gebaseerde beperkingen af te dwingen. Door deze maatregelen toe te passen, krijgen alleen erkende netwerken en clientcomputers toegang tot gegevens via SQL in Adobe Experience Platform. Deze controles helpen u aan strenge veiligheidsnormen voldoen terwijl het verstrekken van toegang in real time controle en alarmering.
 

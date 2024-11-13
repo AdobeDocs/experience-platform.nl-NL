@@ -3,14 +3,19 @@ keywords: Experience Platform; veiligheid; ip-toegang; QS-Auth; API gids; vraagd
 title: IP Eindpunt van de Toegang
 description: Leer hoe te om IP waaiers voor zandbaktoegang in de Dienst van de Vraag te beheren gebruikend het IP API eindpunt van de Toegang.
 role: Developer
-source-git-commit: 23e5260133f0f16ac30d14346c227a21f251b7e1
+exl-id: fc15ab50-c125-4f00-a311-81fd41697c7d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 0%
+source-wordcount: '422'
+ht-degree: 1%
 
 ---
 
 # IP-toegangseindpunt
+
+>[!AVAILABILITY]
+>
+>Deze functionaliteit is beschikbaar voor klanten die de Data Distiller-add hebben aangeschaft. Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger.
 
 Om gegevenstoegang binnen een gespecificeerde zandbak van de Dienst van de Vraag te beveiligen, gebruik het IP eindpunt van de Toegang om toegestane IP waaiers te beheren. U kunt deze API gebruiken om IP waaiers te halen, te vormen of te schrappen verbonden aan identiteitskaart van uw organisatie.
 
@@ -163,4 +168,3 @@ Een succesvolle reactie keert status 200 van HTTP met details van de geschrapte 
   ]
 }
 ```
-
