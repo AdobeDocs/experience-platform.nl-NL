@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM-systeemoverzicht
 description: Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema's voor het beheer van de klantenervaring te bepalen.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 48caa318f0e951979db4fd2c94624a73311422d6
+source-git-commit: 442df54080b08b7fc3888e8bd5c7bd3e8f301240
 workflow-type: tm+mt
-source-wordcount: '2061'
+source-wordcount: '2084'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ Nadat een schema is samengesteld en een dataset is gecreeerd die verwijzingen da
 
 Verwijs naar het [ overzicht van de Dienst van de Vraag ](../query-service/home.md) voor meer informatie over de dienst.
 
-### Klantprofiel in realtime {#real-time-customer-profile}
+### Realtime-klantenprofiel {#real-time-customer-profile}
 
 Het profiel van de Klant in real time verstrekt een gecentraliseerd consumentenprofiel voor gericht en gepersonaliseerd ervaringsbeheer. Elk profiel bevat gegevens die op alle systemen zijn geaggregeerd en actioneerbare tijdstempelaccounts bevatten van gebeurtenissen die het onderwerp van het profiel betreffen. Deze gebeurtenissen kunnen hebben plaatsgevonden in om het even welke systemen u met Experience Platform gebruikt.
 
@@ -128,6 +128,10 @@ Met [!UICONTROL XDM Individual Profile] -gegevens kunt u acties via elk kanaal o
 Zie het [ overzicht van het Profiel van de Klant in real time ](../profile/home.md) voor meer informatie.
 
 ### Data Science-werkruimte {#data-science-workspace}
+
+>[!NOTE]
+>
+>Data Science Workspace kan niet meer worden aangeschaft. Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Adobe Experience Platform Data Science Workspace maakt gebruik van machinaal leren en kunstmatige intelligentie om inzicht te krijgen in gegevens die in Experience Platform zijn opgeslagen. Data Science Workspace stelt wetenschappers in staat recepten te bouwen op basis van [!UICONTROL XDM Individual Profile] - en [!UICONTROL XDM ExperienceEvent] -gegevens over klanten en hun activiteiten. Deze recepten maken voorspellingen mogelijk, zoals het kopen van neiging en aanbevolen aanbiedingen die de betrokkene waarschijnlijk zal waarderen en gebruiken.
 
