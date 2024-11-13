@@ -1,12 +1,12 @@
 ---
 title: Accountprofielgegevens
 description: Ontdek SQL die uw inzicht van het Profiel van de Rekening en gebruik deze vragen aandrijft om douaneinzichten te produceren die uw klanten en hun ervaringen van de consument verder onderzoeken.
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f9ef0e25dac1715bbb6d73db52d6368c543bf7ec
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '757'
 ht-degree: 0%
 
 ---
@@ -281,10 +281,232 @@ ORDER BY  d.date_key limit 5000;
 
 +++
 
+## Overzicht van klanten per account {#customers-per-account-overview}
+
+>[!NOTE]
+>
+>Het [!UICONTROL Customers per Account Overview] -diagram bevat drie doorboor-inzichten: [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunities per Account Overview] en [!UICONTROL Opportunities per Account Detail] . Deze boor-productie verstrekt meer korrelige inzichten, die klanten en opportuniteittellingen door categorieën (zoals directe en indirecte klanten) en waaiers (zoals klant en opportuniteitentellingen) verdelen. Deze grafieken worden niet beïnvloed door globale datumfilters u kunt plaatsen.
+
+Vragen beantwoord door dit inzicht:
+
+- Wat is de verdeling van de rekeningen op basis van de vraag of zij directe of indirecte klanten hebben?
+
++++Selecteer om de SQL te onthullen die dit inzicht produceert
+
+```sql
+WITH LatestDate AS (SELECT MAX(inserted_date) AS max_inserted_date FROM adwh_b2b_account_person_association),
+     CategorizedData AS (
+         SELECT CASE 
+                    WHEN is_direct = 'true' AND person_count = 0 THEN 'Accounts without Direct Customers' 
+                    WHEN is_direct = 'false' AND person_count = 0 THEN 'Accounts without Indirect Customers' 
+                    WHEN is_direct = 'true' AND person_count > 0 THEN 'Accounts with Direct Customers' 
+                    WHEN is_direct = 'false' AND person_count > 0 THEN 'Accounts with Indirect Customers' 
+                END AS Account_Category, 
+                account_count 
+         FROM adwh_b2b_account_person_association 
+         WHERE inserted_date = (SELECT max_inserted_date FROM LatestDate)
+     ),
+     AggregatedData AS (
+         SELECT Account_Category, SUM(account_count) AS Accounts 
+         FROM CategorizedData 
+         GROUP BY Account_Category
+     ),
+     AllCategories AS (
+         SELECT 'Accounts without Direct Customers' AS Account_Category 
+         UNION ALL SELECT 'Accounts without Indirect Customers' 
+         UNION ALL SELECT 'Accounts with Direct Customers' 
+         UNION ALL SELECT 'Accounts with Indirect Customers'
+     )
+SELECT ac.Account_Category AS Account_Category, COALESCE(ad.Accounts, 0) AS Accounts 
+FROM AllCategories ac 
+LEFT JOIN AggregatedData ad ON ac.Account_Category = ad.Account_Category 
+ORDER BY ac.Account_Category;
+```
+
++++
+
+## Klanten per accountgegevens {#customers-per-account-detail}
+
+>[!NOTE]
+>
+>Dit inzicht wordt niet beïnvloed door globale datumfilters.
+
+Vragen beantwoord door dit inzicht:
+
+- Hoeveel rekeningen hebben verschillende waaier van directe of indirecte klanten?
+
++++Selecteer om de SQL te onthullen die dit inzicht produceert
+
+```sql
+WITH customer_ranges AS (
+    SELECT 'Direct Customer' AS customer_type, '1-10 Customers' AS person_range 
+    UNION ALL
+    SELECT 'Direct Customer', '11-100 Customers' 
+    UNION ALL
+    SELECT 'Direct Customer', '101-1000 Customers' 
+    UNION ALL
+    SELECT 'Direct Customer', '1000+ Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '1-10 Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '11-100 Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '101-1000 Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '1000+ Customers'
+)
+SELECT 
+    cr.customer_type, 
+    cr.person_range, 
+    COALESCE(SUM(ap.account_count), 0) AS Accounts
+FROM customer_ranges cr
+LEFT JOIN (
+    SELECT 
+        CASE 
+            WHEN is_direct = 'true' THEN 'Direct Customer' 
+            ELSE 'Indirect Customer' 
+        END AS customer_type,
+        CASE 
+            WHEN person_count BETWEEN 1 AND 10 THEN '1-10 Customers' 
+            WHEN person_count BETWEEN 11 AND 100 THEN '11-100 Customers' 
+            WHEN person_count BETWEEN 101 AND 1000 THEN '101-1000 Customers' 
+            WHEN person_count > 1000 THEN '1000+ Customers' 
+        END AS person_range,
+        SUM(account_count) AS account_count
+    FROM adwh_b2b_account_person_association 
+    WHERE inserted_date = (SELECT MAX(inserted_date) FROM adwh_b2b_account_person_association) 
+    GROUP BY 
+        CASE 
+            WHEN is_direct = 'true' THEN 'Direct Customer' 
+            ELSE 'Indirect Customer' 
+        END,
+        CASE 
+            WHEN person_count BETWEEN 1 AND 10 THEN '1-10 Customers' 
+            WHEN person_count BETWEEN 11 AND 100 THEN '11-100 Customers' 
+            WHEN person_count BETWEEN 101 AND 1000 THEN '101-1000 Customers' 
+            WHEN person_count > 1000 THEN '1000+ Customers' 
+        END
+) ap ON cr.customer_type = ap.customer_type AND cr.person_range = ap.person_range
+GROUP BY cr.customer_type, cr.person_range
+ORDER BY cr.customer_type, 
+    CASE cr.person_range 
+        WHEN '1-10 Customers' THEN 1 
+        WHEN '11-100 Customers' THEN 2 
+        WHEN '101-1000 Customers' THEN 3 
+        WHEN '1000+ Customers' THEN 4 
+    END;
+```
+
++++
+
+## Overzicht van mogelijkheden per account {#opportunities-per-account-overview}
+
+>[!NOTE]
+>
+>Dit inzicht wordt niet beïnvloed door globale datumfilters.
+
+Vragen beantwoord door dit inzicht:
+
+- Wat is de verdeling van de rekeningen op basis van de vraag of zij daaraan mogelijkheden hebben?
+
++++Selecteer om de SQL te onthullen die dit inzicht produceert
+
+```sql
+WITH LatestDate AS (
+    SELECT MAX(inserted_date) AS max_inserted_date 
+    FROM adwh_b2b_account_opportunity_association
+),
+CategorizedData AS (
+    SELECT 
+        CASE 
+            WHEN opportunity_count = 0 THEN 'Accounts without Opportunities'
+            WHEN opportunity_count > 0 THEN 'Accounts with Opportunities'
+        END AS Opportunity_Category, 
+        account_count 
+    FROM adwh_b2b_account_opportunity_association 
+    WHERE inserted_date = (SELECT max_inserted_date FROM LatestDate)
+),
+AggregatedData AS (
+    SELECT 
+        Opportunity_Category,
+        SUM(account_count) AS Accounts 
+    FROM CategorizedData 
+    GROUP BY Opportunity_Category
+),
+AllCategories AS (
+    SELECT 'Accounts without Opportunities' AS Opportunity_Category 
+    UNION ALL 
+    SELECT 'Accounts with Opportunities'
+)
+SELECT 
+    ac.Opportunity_Category AS Opportunity_Category, 
+    COALESCE(ad.Accounts, 0) AS Accounts 
+FROM AllCategories ac 
+LEFT JOIN AggregatedData ad 
+    ON ac.Opportunity_Category = ad.Opportunity_Category 
+ORDER BY ac.Opportunity_Category;
+```
+
++++
+
+## Opportuniteiten per accountdetails {#opportunities-per-account-detail}
+
+>[!NOTE]
+>
+>Dit inzicht wordt niet beïnvloed door globale datumfilters.
+
+Vragen beantwoord door dit inzicht:
+
+- Hoeveel rekeningen hebben verschillende waaier van bijbehorende kansen?
+
++++Selecteer om de SQL te onthullen die dit inzicht produceert
+
+```sql
+WITH opportunity_ranges AS (
+    SELECT '1-10 Opportunities' AS opportunity_range 
+    UNION ALL 
+    SELECT '11-50 Opportunities' 
+    UNION ALL 
+    SELECT '51-100 Opportunities' 
+    UNION ALL 
+    SELECT '100+ Opportunities'
+)
+SELECT opportunity_ranges.opportunity_range AS OPPORTUNITIES, 
+       COALESCE(SUM(accounts.total_accounts), 0) AS ACCOUNTS 
+FROM opportunity_ranges 
+LEFT JOIN (
+    SELECT 
+        CASE 
+            WHEN opportunity_count BETWEEN 1 AND 10 THEN '1-10 Opportunities' 
+            WHEN opportunity_count BETWEEN 11 AND 50 THEN '11-50 Opportunities' 
+            WHEN opportunity_count BETWEEN 51 AND 100 THEN '51-100 Opportunities' 
+            WHEN opportunity_count > 100 THEN '100+ Opportunities' 
+        END AS opportunity_range, 
+        SUM(account_count) AS total_accounts 
+    FROM adwh_b2b_account_opportunity_association 
+    WHERE inserted_date = (SELECT MAX(inserted_date) FROM adwh_b2b_account_opportunity_association) 
+      AND opportunity_count > 0 
+    GROUP BY 
+        CASE 
+            WHEN opportunity_count BETWEEN 1 AND 10 THEN '1-10 Opportunities' 
+            WHEN opportunity_count BETWEEN 11 AND 50 THEN '11-50 Opportunities' 
+            WHEN opportunity_count BETWEEN 51 AND 100 THEN '51-100 Opportunities' 
+            WHEN opportunity_count > 100 THEN '100+ Opportunities' 
+        END
+) AS accounts ON opportunity_ranges.opportunity_range = accounts.opportunity_range 
+GROUP BY opportunity_ranges.opportunity_range 
+ORDER BY CASE opportunity_ranges.opportunity_range 
+            WHEN '1-10 Opportunities' THEN 1 
+            WHEN '11-50 Opportunities' THEN 2 
+            WHEN '51-100 Opportunities' THEN 3 
+            WHEN '100+ Opportunities' THEN 4 
+        END;
+```
+
++++
+
 ## Volgende stappen
 
-Door dit document te lezen, begrijpt u nu de SQL die dashboardinzichten van het accountprofiel produceert en welke gemeenschappelijke vragen deze analyse oplost. U kunt nu de SQL bewerken en doorlopen om uw eigen inzichten te genereren.
-
-<!-- Add link above Learn how to [generate insights with SQL](). after April release -->
+Door dit document te lezen, begrijpt u nu de SQL die dashboardinzichten van het accountprofiel produceert en welke gemeenschappelijke vragen deze analyse oplost. U kunt nu de SQL bewerken en doorlopen om uw eigen inzichten te genereren. Verwijs naar het [ Pro overzicht van de Wijze van de Vraag ](../sql-insights-query-pro-mode/overview.md) om te leren hoe te om douaneinzichten met SQL te produceren.
 
 U kunt SQL ook lezen en begrijpen die inzichten voor de [ Profielen ](./profiles.md), [ Soorten publiek ](./audiences.md), en [ Doelen ](./destinations.md) dashboards van Doelen produceert.
