@@ -6,7 +6,7 @@ user-guide-description: Leer analyses, marketing en advertenties te implementere
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
 workflow-type: tm+mt
 source-wordcount: '778'
 ht-degree: 15%
@@ -70,7 +70,7 @@ ht-degree: 15%
       * [Overzicht](./extensions/client/overview.md)
       * [ Toegankelijke Metriek van de Snelheid van de Plaats ](https://exchange.adobe.com/apps/ec/103053)
       * [ Klanzer van de Activity Map ](https://exchange.adobe.com/apps/ec/101531)
-      * [ pagina van de Actie verfrist zich ](https://exchange.adobe.com/apps/ec/102848)
+      * [ de Pagina van de Actie verfrist zich ](https://exchange.adobe.com/apps/ec/102848)
       * [ het Volgen van de Website van Adform ](https://exchange.adobe.com/apps/ec/103195)
       * [ Adobe Advertising Cloud ](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
@@ -112,7 +112,7 @@ ht-degree: 15%
          * [Overzicht](./extensions/client/asset-insights/overview.md)
          * [Aanvullende informatie](./extensions/client/asset-insights/release-notes.md)
       * [ Adobe Fonts ](https://exchange.adobe.com/apps/ec/101538)
-      * Adobe Media Analytics voor audio en video {#media-analytics}
+      * Adobe Media Analytics for Audio and Video {#media-analytics}
          * [Overzicht](./extensions/client/media-analytics/overview.md)
          * [Aanvullende informatie](./extensions/client/media-analytics/release-notes.md)
       * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
@@ -142,7 +142,7 @@ ht-degree: 15%
          * [Overzicht](./extensions/client/brightcove/overview.md)
          * [Aanvullende informatie](./extensions/client/brightcove/release-notes.md)
       * [ CallTrackingMetrics ](https://exchange.adobe.com/apps/ec/107695)
-      * [ BronIdentifier van het Kanaal ](https://exchange.adobe.com/apps/ec/101412)
+      * [ het Herkenningsteken van Source van het Kanaal ](https://exchange.adobe.com/apps/ec/101412)
       * [ Ervaringen van de Tijger ](https://exchange.adobe.com/apps/ec/102759)
       * [ Clicktale ](https://exchange.adobe.com/apps/ec/100082)
       * Algemene plug-ins voor Analytics {#plugins}
@@ -188,7 +188,7 @@ ht-degree: 15%
       * [ OneTrust Consent Beheer voor Cookies ](https://exchange.adobe.com/apps/ec/100340)
       * [ Pepperjam ](https://exchange.adobe.com/apps/ec/103587)
       * [ Persado verbindt ](https://exchange.adobe.com/apps/ec/103745)
-      * [ het Volgen van de Omzetting van Pinterest ](https://exchange.adobe.com/apps/ec/100523)
+      * [ Conversie het Volgen van Pinterest ](https://exchange.adobe.com/apps/ec/100523)
       * [ de Lader van het Pixel ](https://exchange.adobe.com/apps/ec/100152)
       * [ de Terugkoppeling van de Website van Qualtrics ](https://exchange.adobe.com/apps/ec/101569)
       * [ Metrisch van Quantum ](https://exchange.adobe.com/apps/ec/101535)
@@ -200,7 +200,7 @@ ht-degree: 15%
       * [ Spanner van de Opslag ](https://exchange.adobe.com/apps/ec/102990)
       * [ TAGS door Horizon van de Lijn ](https://exchange.adobe.com/apps/ec/106092)
       * [ Tealium verzamelen ](https://exchange.adobe.com/apps/ec/104217)
-      * [ Verrijking van de Gegevens van het TIalium ](https://exchange.adobe.com/apps/ec/104217)
+      * [ de Verrijking van Gegevens van de Tealium ](https://exchange.adobe.com/apps/ec/104217)
       * [ Platform van de Stichting TMMData ](https://exchange.adobe.com/apps/ec/100148)
       * [ TrustArc de Manager van de Toestemming van het Koekje ](https://exchange.adobe.com/apps/ec/107037)
       * [ de Playback van Vimeo ](https://exchange.adobe.com/apps/ec/108937)
@@ -224,14 +224,14 @@ ht-degree: 15%
       * [ Verbinding van de Wolk voor Googles Analytics ](https://exchange.adobe.com/apps/ec/106542)
       * Kern {#core}
          * [Overzicht](./extensions/server/core/overview.md)
-      * [ Epsilon Gebeurtenis API ](https://exchange.adobe.com/apps/ec/109127)
+      * [ Epsilon Event API ](https://exchange.adobe.com/apps/ec/109127)
       * Verbeterde Google-omzettingen voor advertenties {#google-ads-enhanced-conversions}
          * [Overzicht](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * Google Cloud Platform {#google-cloud-platform}
          * [Overzicht](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
          * [Overzicht](./extensions/server/linkedin/overview.md)
-      * [!DNL Mailchimp] Rand {#mailchimp}
+      * [!DNL Mailchimp] Edge {#mailchimp}
          * [Overzicht](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
          * [Overzicht](./extensions/server/meta/overview.md)
@@ -261,7 +261,7 @@ ht-degree: 15%
    * [Ondersteunde browsers](./extension-dev/browsers.md)
    * Verzendproces {#submit}
       * [Overzicht](./extension-dev/submit/overview.md)
-      * [Bedrijfsinstallatie](./extension-dev/submit/setup.md)
+      * [Organisatie instellen](./extension-dev/submit/setup.md)
       * [Gebruikerstoegang verlenen](./extension-dev/submit/access.md)
       * [Een extensie ontwikkelen](./extension-dev/submit/develop.md)
       * [Een aanbieding maken](./extension-dev/submit/create-listing.md)
@@ -275,7 +275,7 @@ ht-degree: 15%
       * [Indeling van de module Bibliotheek](./extension-dev/web/format.md)
       * [Weergaven](./extension-dev/web/views.md)
       * [Gebeurtenistypen](./extension-dev/web/event-types.md)
-      * [Voorwaardetypen](./extension-dev/web/condition-types.md)
+      * [Type voorwaarde](./extension-dev/web/condition-types.md)
       * [Typen handelingen](./extension-dev/web/action-types.md)
       * [Gegevenstelelementtypen](./extension-dev/web/data-element-types.md)
       * [Kernmodules](./extension-dev/web/core.md)
