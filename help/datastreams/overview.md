@@ -2,16 +2,18 @@
 title: Overzicht gegevensstromen
 description: Leer hoe de gegevensstromen u helpen uw cliënt-zijintegratie van Experience Platform SDK met de producten van de Adobe en derdebestemmingen verbinden.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '709'
 ht-degree: 0%
 
 ---
 
 # Overzicht gegevensstromen
 
-Een gegevensstroom vertegenwoordigt de server-zijconfiguratie wanneer het uitvoeren van het Web van Adobe Experience Platform en Mobiele SDKs. Terwijl de opdracht [`configure`](/help/web-sdk/commands/configure/overview.md) in de SDK de zaken bepaalt die op de client moeten worden afgehandeld (zoals `edgeDomain` ), verwerken gegevensstromen alle andere configuraties voor de SDK. Wanneer een aanvraag naar de Adobe Experience Platform-Edge Network wordt verzonden, wordt `datastreamId` gebruikt om naar de gegevensstroom te verwijzen. Hierdoor kunt u de serverconfiguratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
+Een gegevensstroom vertegenwoordigt de server-zijconfiguratie voor het Web van Adobe Experience Platform en Mobiele SDKs. Terwijl de opdracht [`configure`](/help/web-sdk/commands/configure/overview.md) in de SDK de client-side instellingen (zoals de `edgeDomain` ) verwerkt, beheren gegevensstreams alle andere configuraties.
+
+Wanneer u een aanvraag naar de Edge Network verzendt, verwijst `datastreamId` naar de gegevensstroom waarnaar de gegevens worden verzonden. Zo kunt u de serverconfiguratie bijwerken zonder de code van uw website te wijzigen.
 
 U kunt gegevensstromen tot stand brengen en beheren door **[!UICONTROL Datastreams]** in de linkernavigatie binnen de UI van Adobe Experience Platform of UI van de Inzameling van Gegevens te selecteren.
 
@@ -27,17 +29,17 @@ Voor meer informatie over hoe te om een gegevensstroom in UI te vormen, zie de [
 
 Het beleid en de regelgevende vereisten van het bedrijfsgegevensbeheer verhogen beperkingen op hoe de gevoelige klantengegevens kunnen worden verzameld, worden verwerkt, en worden gebruikt. Dit omvat het verzamelen, verwerken en gebruiken van beschermde gezondheidsgegevens (PHI), die onderworpen zijn aan regelingen zoals de Health Insurance Portability and Accountability Act (HIPAA).
 
-De stromen van gegevensstromen verstrekt drie methodes om u bij de veilige behandeling van uw gevoelige gegevens te helpen:
+De stromen van gegevensstromen verstrekken drie methodes om u bij de veilige behandeling van uw gevoelige gegevens te helpen:
 
 * [Verbeterde codering](#encryption)
-* [Gegevensbeheer](#governance)
+* [Datagovernance](#governance)
 * [Controlelogboeken](#audit-logs)
 
 ### Verbeterde codering {#encryption}
 
 Alle gegevens in doorgang door de Edge Network over veilige, gecodeerde verbindingen wordt geleid gebruikend [ HTTPS TLS 1.2 ](https://datatracker.ietf.org/doc/html/rfc5246). Als de gegevensstroom gegevens in Experience Platform brengt, worden de gegevens dan gecodeerd in rust in het de gegevensmeer van het Experience Platform. Zie het document over [ gegevensencryptie in Experience Platform ](../landing/governance-privacy-security/encryption.md) voor meer informatie.
 
-### Gegevensbeheer {#governance}
+### Datagovernance {#governance}
 
 De stromen van gegevens gebruiken de Experience Platform ingebouwde mogelijkheden van het gegevensbeheer om gevoelige gegevens te verhinderen worden verzonden naar de niet-HIPAA-klaar diensten. Door specifieke gebieden te etiketteren die gevoelige gegevens in uw gegevensstroomschema&#39;s bevatten, kunt u korrelige controle nemen over welke gegevensgebieden voor specifieke doeleinden kunnen worden gebruikt.
 

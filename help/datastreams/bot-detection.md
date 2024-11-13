@@ -2,24 +2,22 @@
 title: Beide detectie configureren voor gegevensstromen
 description: Leer hoe te om botopsporing voor gegevensstromen te vormen, om menselijk en onmenselijk verkeer te onderscheiden.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: ff95e5e105f7b3e1213eab90456b9fa9000918d3
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
 
 # Beide detectie configureren voor gegevensstromen
 
-Verkeer afkomstig van niet-menselijke entiteiten, zoals geautomatiseerde programma&#39;s, webschrapers, spinnen, scanners met scripts, kan het moeilijker maken om gebeurtenissen die plaatsvinden bij bezoekers van het menselijk publiek te identificeren. Dit type van verkeer kan belangrijke bedrijfsmetriek negatief beïnvloeden, die tot onjuist verkeer leiden meldend.
+Het onmenselijke verkeer van geautomatiseerde programma&#39;s, Webschrapers, spinnen, en scripted scanners kan het moeilijk maken om gebeurtenissen van menselijke bezoekers te identificeren. Dit type van verkeer kan belangrijke bedrijfsmetriek negatief beïnvloeden, die tot onjuist verkeer leiden meldend.
 
 Beide opsporing staat u toe om gebeurtenissen te identificeren die door [ Web SDK ](../web-sdk/home.md), [ Mobiele SDK ](https://developer.adobe.com/client-sdks/home/) en [[!DNL Server API]](../server-api/overview.md) worden geproduceerd zoals die door bekende spinnen en bots worden geproduceerd.
 
-Door beide detectie voor uw gegevensstromen te configureren, kunt u specifieke IP-adressen, IP-bereiken en aanvraagheaders identificeren die u als beide gebeurtenissen wilt classificeren.
+Door beide opsporing voor uw gegevensstromen te vormen, kunt u specifieke IP adressen, IP waaiers, en verzoekkopballen identificeren om als beide gebeurtenissen te classificeren. Zo kunt u de gebruikersactiviteit op uw site of mobiele toepassing nauwkeuriger meten.
 
-De identificatie van beide verkeer kan u een nauwkeurigere meting van gebruikersactiviteit op uw plaats of mobiele toepassing verstrekken.
-
-Wanneer een verzoek aan de Edge Network om het even welke beide opsporingsregels aanpast, wordt het schema XDM bijgewerkt met beide het scoren (altijd geplaatst aan 1), zoals hieronder getoond.
+Wanneer een verzoek aan de Edge Network om het even welke beide ontdekkingsregels aanpast, wordt het schema XDM bijgewerkt met een beide score (altijd geplaatst aan 1), zoals hieronder getoond:
 
 ```json
 {
@@ -29,7 +27,7 @@ Wanneer een verzoek aan de Edge Network om het even welke beide opsporingsregels
 }
 ```
 
-Deze beide het scoren helpt de oplossingen die het verzoek ontvangen het beide verkeer correct identificeren.
+Deze beide het scoren helpt de oplossingen die het verzoek ontvangen beide verkeer correct identificeren.
 
 >[!IMPORTANT]
 >
@@ -66,9 +64,12 @@ Op de pagina Bot Detection Rules kunt u beide detectie configureren met de volge
 
 ### De IAB/ABC International Spiders and Bots List gebruiken {#iab-list}
 
-De [ IAB/ABC Internationale Spinnen en Lijst van Bots ](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) is een derde, industrie-standaardlijst van internetspinnen en bots, die u helpt geautomatiseerd verkeer zoals de kruiplers van de onderzoeksmotor, controlehulpmiddelen, en ander niet-menselijk verkeer identificeren dat u niet in uw analytische tellingen kunt willen tonen.
+De [ IAB/ABC Internationale Spinnen en Bots Lijst ](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) is een derde, industrie-standaardlijst van internetspinnen en bots. Deze lijst helpt u geautomatiseerd verkeer zoals onderzoekmachine kruipende, controlehulpmiddelen, en ander onmenselijk verkeer identificeren dat u niet in uw analytische tellingen kunt willen omvatten.
 
-Als u de gegevensstroom wilt configureren voor gebruik van [!DNL IAB/ABC International Spiders and Bots List] , schakelt u de optie **[!UICONTROL Use IAB/ABC International Spiders and Bots List for bot detection on this datastream]** in en selecteert u Opslaan om de instellingen voor beide detectie toe te passen op uw gegevensstroom.
+Om uw gegevensstroom te vormen om IAB/ABC Internationale Spinnen en Lijst van Bots te gebruiken:
+
+1. Schakel de optie **[!UICONTROL Use IAB/ABC International Spiders and Bots List for bot detection on this datastream]** in.
+2. Selecteer **[!UICONTROL Save]** om de instellingen voor beide detectie toe te passen op uw gegevensstroom.
 
 ![ IAB spinnen en allebei toegelaten lijst.](assets/bot-detection/bot-detection-list.png)
 
