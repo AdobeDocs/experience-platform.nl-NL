@@ -4,9 +4,9 @@ title: API's van Experience Platforms verifiëren en benaderen
 type: Tutorial
 description: Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API's.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
+source-git-commit: a6da449725d0274ccacc6f6512c9ad395366b689
 workflow-type: tm+mt
-source-wordcount: '2063'
+source-wordcount: '2282'
 ht-degree: 1%
 
 ---
@@ -67,6 +67,10 @@ Zie de gids op [ het leiden gebruikersgroepen in  [!DNL Admin Console] ](https:/
 >Als u dit document van de [ Privacy Service API gids ](../privacy-service/api/getting-started.md) volgt, kunt u aan die gids nu terugkeren om de toegangsgeloofsbrieven te produceren uniek aan [!DNL Privacy Service].
 
 Nadat u ontwikkelaars en gebruikers via [!DNL Admin Console] toegang hebt verleend tot Platform, bestaat de volgende stap uit het genereren van uw `{ORG_ID}` - en `{API_KEY}` -referenties in Adobe Developer Console. Deze geloofsbrieven moeten slechts eenmaal worden geproduceerd en kunnen in toekomstige vraag van Platform API worden opnieuw gebruikt.
+
+>[!TIP]
+>
+>In plaats van naar Developer Console te gaan, kunt u alle verificatiereferenties die u nodig hebt om met platform-API&#39;s te werken, rechtstreeks ophalen via de API-documentatiepagina&#39;s voor naslagwerken. [ las meer ](#get-credentials-functionality) over de functionaliteit.
 
 ### Experience Platform toevoegen aan een project {#add-platform-to-project}
 
@@ -149,6 +153,26 @@ De volgende stap bestaat uit het genereren van een `{ACCESS_TOKEN}` -referentie 
 >[!TIP]
 >
 U kunt ook een Postman-omgeving en -verzameling gebruiken om toegangstokens te genereren. Voor meer informatie, lees de sectie over [ gebruikend Postman om API vraag ](#use-postman) voor authentiek te verklaren en te testen.
+
+## Verificatiegegevens rechtstreeks in de API-naslagdocumentatie maken en ophalen {#get-credentials-functionality}
+
+Vanaf de release van november 2024 van Experience Platform kunt u referenties ophalen om de Experience Platform-API&#39;s rechtstreeks vanaf de API-referentiepagina&#39;s te gebruiken, zonder dat u naar [!UICONTROL Developer Console] hoeft te gaan. Bekijk het voorbeeld hieronder van de [ Dienst API van de Stroom - de pagina van Doelen ](https://developer.adobe.com/experience-platform-apis/references/destinations/).
+
+![ krijgt geloofsbrieven die bij de bovenkant van een API verwijzingspagina worden benadrukt.](././images/api-authentication/get-credentials-highlighted.png)
+
+Als u referenties wilt ophalen om Platform API&#39;s aan te roepen, navigeert u naar een willekeurige API-referentiepagina voor Experience Platforms en selecteert u **[!UICONTROL Sign in]** boven aan de pagina. Meld u aan met uw **[!UICONTROL Personal Account]** of **[!UICONTROL Company or School Account]** .
+
+Nadat u zich hebt aangemeld, selecteert u **[!UICONTROL Create new credential]** om een nieuwe set referenties te maken voor toegang tot API&#39;s van het platform.
+
+![ creeer nieuwe geloofsbrieven om tot Platform APIs toegang te hebben.](././images/api-authentication/create-credentials.gif)
+
+Gebruik vervolgens de keuzelijst om het venster met referenties te openen, een toegangstoken te genereren en uw API-sleutel en organisatie-id op te halen. Kopieer de referenties naar de blokken [**[!UICONTROL Try it]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) op de API-referentiepagina&#39;s om te gaan werken met platform-API&#39;s.
+
+![ gebruik dropdown selecteur om geloofsbrieven te bekijken en een toegangstoken te produceren.](././images/api-authentication/view-copy-credentials.gif)
+
+>[!TIP]
+>
+Het top-of-page geloofsblok blijft getoond aangezien u tussen verschillende eindpuntpagina&#39;s in de Experience Platform API verwijzingsdocumentatie navigeert.
 
 ## [!BADGE  Vervangen ] {type=negative} produceer een Symbolisch van het Web JSON (JWT) {#jwt}
 
