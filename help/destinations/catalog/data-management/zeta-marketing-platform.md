@@ -3,13 +3,13 @@ title: Zeta Marketing Platform
 description: Het Zeta Marketing Platform (ZMP) is een cloudgebaseerd systeem dat u helpt klanten op efficiëntere wijze aan te schaffen, uit te breiden en te behouden, aangedreven door intelligentie (bedrijfseigen gegevens en AI).
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
+source-git-commit: 0c3c192105146dd949e9b11f8925bf4f9d7c15c0
 workflow-type: tm+mt
 source-wordcount: '1324'
 ht-degree: 0%
 
 ---
-
 
 # Zeta Marketing Platform {#zeta-marketing-platform}
 
@@ -31,17 +31,17 @@ Een markeerder wil unieke publieksprofielen bouwen, hun meest waardevolle segmen
 
 ### Doelgebruikers met advertenties {#use-case-target-users}
 
-Een adverteerder richt zich op gebruikers binnen een specifiek publiek via het Zeta-Demand Side Platform (DSP), aangezien deze gebruikers met hun merken communiceren. Voor meer informatie over de DSP van Zeta, klik [ hier ](https://knowledgebase.zetaglobal.com/programmatic-user-guide/).
+Een adverteerder richt zich op gebruikers binnen een specifiek publiek via het Zeta-Demand Side Platform (DSP), aangezien deze gebruikers met hun merken communiceren. Voor meer informatie over de DSP van Zeta, klik [ hier ](https://knowledgebase.zetaglobal.com/pug/).
 
 ## Vereisten {#prerequisites}
 
 ### Voorwaarden voor het Zeta-marketingplatform
 
-* Voordat u een nieuwe verbinding instelt met de bestemming van het Zeta-marketingplatform, moet u een lege lijst met klanten maken in uw account van het Zeta-marketingplatform. U moet één van deze klantenlijsten als aangewezen doel kiezen om het publiek van Adobe Experience Platform te ontvangen dat u van plan bent te verzenden. U kunt een lege klantenlijst in ZMP tot stand brengen door de instructies [ hier ](https://knowledgebase.zetaglobal.com/zmp/creating-audiences#CreatingAudiences-CreatingaCustomerList) te volgen.
+* Voordat u een nieuwe verbinding instelt met de bestemming van het Zeta-marketingplatform, moet u een lege lijst met klanten maken in uw account van het Zeta-marketingplatform. U moet één van deze klantenlijsten als aangewezen doel kiezen om het publiek van Adobe Experience Platform te ontvangen dat u van plan bent te verzenden. U kunt een lege klantenlijst in ZMP tot stand brengen door de instructies [ hier ](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList) te volgen.
 * Hoewel de Adobe Experience Platform de activering van meerdere soorten publiek naar een bepaalde ZMP-doelinstantie toestaat, is het verplicht dat elke ZMP-doelinstantie slechts één Experience Platform publiek ontvangt. Als u meerdere soorten publiek van het Experience Platform wilt afhandelen, maakt u aanvullende ZMP-doelinstanties voor elk publiek en selecteert u een andere lijst met klanten in het vervolgkeuzemenu. Deze benadering zorgt ervoor dat het doelZMP publiek niet wordt beschreven. Zie [ in bestemmingsdetails ](#destination-details) voor meer details invullen.
 * Gebruik de volgende geloofsbrieven om de bestemming te vormen:
    * Gebruikersnaam: **api**
-   * Wachtwoord: uw ZMP REST API-sleutel. U kunt uw REST API Sleutel vinden door aan uw rekening van ZMP het programma te openen en aan **te navigeren Montages** > **Integraties** > **Sleutels &amp; Apps** sectie. Zie de [ documentatie van ZMP ](https://knowledgebase.zetaglobal.com/zmp/integrations) voor meer details.
+   * Wachtwoord: uw ZMP REST API-sleutel. U kunt uw REST API Sleutel vinden door aan uw rekening van ZMP het programma te openen en aan **te navigeren Montages** > **Integraties** > **Sleutels &amp; Apps** sectie. Zie de [ documentatie van ZMP ](https://knowledgebase.zetaglobal.com/kb/integrations) voor meer details.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -94,7 +94,7 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
 * **[!UICONTROL Username]**: `api`
-* **[!UICONTROL Password]**: Uw ZMP REST API-sleutel. U kunt uw REST API Sleutel vinden door aan uw rekening van ZMP het programma te openen en aan **te navigeren Montages** > **Integraties** > **Sleutels &amp; Apps** sectie. Zie de [ documentatie van ZMP ](https://knowledgebase.zetaglobal.com/zmp/integrations) voor meer details.
+* **[!UICONTROL Password]**: Uw ZMP REST API-sleutel. U kunt uw REST API Sleutel vinden door aan uw rekening van ZMP het programma te openen en aan **te navigeren Montages** > **Integraties** > **Sleutels &amp; Apps** sectie. Zie de [ documentatie van ZMP ](https://knowledgebase.zetaglobal.com/kb/integrations) voor meer details.
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -103,7 +103,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 ![ Beeld dat de configuratie van ZMP toont ](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL ZMP Account Site Id]**: Uw Identiteitskaart van de Plaats van ZMP **** waar u uw publiek naar wilt verzenden. U kunt uw identiteitskaart van de Plaats bekijken door aan **Montages** te navigeren > **Integraties** > **Sleutels &amp; Apps** sectie. Meer informatie kan [ hier ](https://knowledgebase.zetaglobal.com/zmp/integrations) worden gevonden.
+* **[!UICONTROL ZMP Account Site Id]**: Uw Identiteitskaart van de Plaats van ZMP **** waar u uw publiek naar wilt verzenden. U kunt uw identiteitskaart van de Plaats bekijken door aan **Montages** te navigeren > **Integraties** > **Sleutels &amp; Apps** sectie. Meer informatie kan [ hier ](https://knowledgebase.zetaglobal.com/kb/integrations) worden gevonden.
 * **[!UICONTROL ZMP Segment]**: Het segment met de lijst met klanten in uw ZMP-site-id-account dat u wilt bijwerken met het publiek van het platform.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
@@ -152,4 +152,4 @@ Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voo
 
 ## Aanvullende bronnen {#additional-resources}
 
-* [ de Kennisbank van Zeta ](https://knowledgebase.zetaglobal.com/zmp/)
+* [ de Kennisbank van Zeta ](https://knowledgebase.zetaglobal.com/kb/)
