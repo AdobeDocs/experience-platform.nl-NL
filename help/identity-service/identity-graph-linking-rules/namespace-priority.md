@@ -2,9 +2,9 @@
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: a2a60f429836e26179f68a40fce91a90d73d8eee
+source-git-commit: 893d8a089dee01e65436b7ac035233ba556b231b
 workflow-type: tm+mt
-source-wordcount: '1784'
+source-wordcount: '1789'
 ht-degree: 1%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 1%
 
 Elke klantenimplementatie is uniek en gemaakt om de doelstellingen van een bepaalde organisatie te ontmoeten, en als dusdanig, varieert het belang van bepaalde namespace van klant tot klant. Voorbeelden in de praktijk zijn:
 
-* Aan de ene kant zou u de naamruimte E-mail kunnen beschouwen als een persoonentiteit en dus uniek per persoon. Anderzijds, zou een andere klant e-mailnamespace als onbetrouwbare herkenningsteken kunnen beschouwen en daarom kunnen zij één enkele CRMID toestaan om aan veelvoudige identiteiten met e-mailnamespace worden geassocieerd.
+* Uw bedrijf zou elk e-mailadres kunnen overwegen om een enig-persoonentiteit te vertegenwoordigen en daarom [ identiteitsmontages ](./identity-settings-ui.md) gebruiken om e-mailnamespace als uniek te vormen. Een ander bedrijf, echter, zou eenpersoonsentiteiten kunnen willen vertegenwoordigen aangezien het hebben van veelvoudige e-mailadressen, en zo e-mailnamespace vormen niet-uniek. Deze bedrijven zouden een andere naamruimte voor identiteiten als uniek moeten gebruiken, zoals een naamruimte CRMID, zodat er een id voor één persoon kan zijn die is gekoppeld aan de meerdere e-mailadressen.
 * U kunt online gedrag verzamelen met behulp van een naamruimte &quot;Aanmeldings-id&quot;. Deze login identiteitskaart kon een 1:1 verhouding met CRMID hebben, die dan attributen van een systeem van CRM opslaat en als belangrijkste namespace kan worden beschouwd. In dit geval, bepaalt u dan dat CRMID namespace een nauwkeurigere vertegenwoordiging van een persoon is, terwijl Login ID namespace de tweede belangrijkste is.
 
-U moet configuraties maken in Identiteitsservice die het belang van uw naamruimten weerspiegelen, aangezien dit van invloed is op de manier waarop profielen worden gevormd en gesegmenteerd.
+U moet configuraties in de identiteitsservice maken die het belang van uw naamruimten weerspiegelen, aangezien dit van invloed is op de manier waarop profielen en de bijbehorende identiteitsgrafieken worden gevormd en gesplitst.
 
 ## Uw prioriteiten bepalen
 
@@ -28,7 +28,7 @@ De bepaling van naamruimteprioriteit is gebaseerd op de volgende factoren:
 
 ### Identiteitsgrafiekstructuur
 
-Als de gestructureerde grafiek van uw organisatie gelaagd is, dan zou de namespaceprioriteit op dit moeten wijzen zodat de correcte verbindingen in het geval van grafiekinstorting worden verwijderd.
+Als de grafiekstructuur van uw organisatie gelaagd is, dan zou de namespaceprioriteit dit moeten weerspiegelen zodat de correcte verbindingen in het geval van grafiekinstorting worden verwijderd.
 
 >[!TIP]
 >
@@ -52,11 +52,11 @@ Een andere manier om dit onderwerp te benaderen is door kardinaliteit. Hoeveel i
 
 ## Valideer uw instellingen voor naamruimteprioriteit
 
-Zodra u een idee van hebt hoe u aan uw namespaces voorrang zult geven, kunt u het hulpmiddel van de Simulatie van de Grafiek gebruiken om diverse scenario&#39;s van de grafiekondergang uit te testen en ervoor te zorgen dat uw prioritaire configuraties de verwachte grafiekresultaten terugkeren. Voor meer informatie, lees de gids bij het gebruiken van het [ hulpmiddel van de Simulatie van de Grafiek ](./graph-simulation.md).
+Zodra u een idee van hebt hoe u aan uw namespaces voorrang zult geven, kunt u het hulpmiddel van de Simulatie van de Grafiek in UI gebruiken om diverse scenario&#39;s van de grafiekondergang uit te testen en ervoor te zorgen dat uw prioritaire configuraties de verwachte grafiekresultaten terugkeren. Voor meer informatie, lees de gids bij het gebruiken van het [ hulpmiddel van de Simulatie van de Grafiek ](./graph-simulation.md).
 
 ## Naamruimteprioriteit configureren
 
-De prioriteit Namespace kan worden gevormd gebruikend [!UICONTROL Identity Settings]. In de interface [!UICONTROL Identity Settings] kunt u een naamruimte slepen en neerzetten om het relatieve belang ervan te bepalen.
+De prioriteit van Namespace kan worden gevormd gebruikend [ identiteitsmontages UI ](./identity-settings-ui.md). In de interface van identiteitsinstellingen kunt u een naamruimte slepen en neerzetten om het relatieve belang ervan te bepalen.
 
 >[!IMPORTANT]
 >
@@ -74,20 +74,20 @@ Voor relatief complexe grafiekstructuren speelt naamruimteprioriteit een belangr
 
 ### Klantprofiel in realtime: primaire identiteitsbepaling voor ervaringsgebeurtenissen
 
-* Voor ervaringsgebeurtenissen, zodra u Identiteitsinstellingen voor een bepaalde sandbox hebt geconfigureerd, wordt de primaire identiteit bepaald door de hoogste naamruimteprioriteit.
+* Zodra u identiteitsmontages voor een bepaalde zandbak hebt gevormd, zal de primaire identiteit voor ervaringsgebeurtenissen door de hoogste namespace prioriteit in de configuratie worden bepaald.
    * Dit komt omdat ervaringsgebeurtenissen dynamisch van aard zijn. Een identiteitskaart kan drie of meer identiteiten bevatten, en namespace prioriteit zorgt ervoor dat belangrijkste namespace aan de ervaringsgebeurtenis wordt geassocieerd.
 * Dientengevolge, zullen de volgende configuraties **niet meer door Real-Time Profiel van de Klant** worden gebruikt:
-   * Het selectievakje &quot;Primair&quot; op het elementtype data in WebSDK (dat naar `primary=true` in identityMap vertaalt). **Nota**: De naamruimte van de identiteit en de identiteitswaarde zullen in Profiel blijven worden gebruikt. Bovendien moet u nog uw &quot;Primaire&quot;checkbox montages vormen omdat de diensten buiten het Profiel van de Klant in real time naar deze configuratie zullen blijven verwijzen.
+   * De primaire identiteitsconfiguratie (`primary=true`) wanneer het verzenden van identiteiten in identityMap die het Web SDK, Mobiele SDK, of de Server API van de Edge Network gebruiken (identiteit namespace en identiteitswaarde zullen in Profiel blijven worden gebruikt). **Nota**: De diensten buiten het Profiel van de Klant in real time zoals de opslag van het gegevensmeer of Adobe Target zullen de primaire identiteitsconfiguratie blijven gebruiken (`primary=true`).
    * Alle velden die als primaire identiteit zijn gemarkeerd in een schema van de klasse Event van de XDM-ervaring.
    * Standaard primaire identiteitsinstellingen in de Adobe Analytics-bronconnector (ECID of AID).
 * Anderzijds, **namespace de prioriteit bepaalt geen primaire identiteit voor profielverslagen**.
-   * Voor profielverslagen, kunt u de schemawerkruimte in de UI van het Experience Platform gebruiken om uw identiteitsgebieden, met inbegrip van de primaire identiteit te bepalen. Lees de gids op [ bepalend identiteitsgebieden in UI ](../../xdm/ui/fields/identity.md) voor meer informatie.
+   * Voor profielverslagen, zou u uw identiteitsgebieden in het schema, met inbegrip van de primaire identiteit moeten blijven bepalen. Lees de gids op [ bepalend identiteitsgebieden in UI ](../../xdm/ui/fields/identity.md) voor meer informatie.
 
 >[!TIP]
 >
 >* De prioriteit van Namespace is **een bezit van een namespace**. Het is een numerieke waarde die aan een naamruimte wordt toegewezen om het relatieve belang ervan aan te geven.
 >
->* Primaire identiteit is de identiteit waarin een profielfragment wordt opgeslagen. Een profielfragment is een record met gegevens waarin informatie over een bepaalde gebruiker wordt opgeslagen: kenmerken (gewoonlijk opgenomen via CRM-records) of gebeurtenissen (gewoonlijk opgenomen via ervaringsgebeurtenissen of online gegevens).
+>* Primaire identiteit is de identiteit waarin een profielfragment wordt opgeslagen. Een profielfragment is een record met gegevens waarin informatie over een bepaalde gebruiker wordt opgeslagen: kenmerken (bijvoorbeeld CRM-records) of gebeurtenissen (bijvoorbeeld bladeren door websites).
 
 ### Voorbeeldscenario
 
@@ -151,9 +151,7 @@ Voor meer informatie, lees het [ geavanceerde overzicht van het levenscyclusbehe
 
 ### Berekende kenmerken
 
-Bij berekende kenmerken wordt naamruimteprioriteit gebruikt om de berekende kenmerkwaarde op te slaan. Voor een bepaalde gebeurtenis, zal de identiteit met de hoogste namespace prioriteit de waarde van de gegevens verwerkte attributen hebben die tegen het worden geschreven. Voor meer informatie, lees de [ gegevens verwerkte handleiding van attributen UI ](../../profile/computed-attributes/ui.md).
-
-Berekende kenmerken gebruiken geen naamruimteprioriteit voor het berekenen van waarden. Als u gegevens verwerkte attributen gebruikt, moet u ervoor zorgen dat CRMID als uw primaire identiteit voor WebSDK wordt aangewezen. Voor meer informatie, lees de [ gegevens verwerkte handleiding van attributen UI ](../../profile/computed-attributes/ui.md).
+Als identiteitsinstellingen zijn ingeschakeld, gebruiken berekende kenmerken naamruimteprioriteit om de berekende kenmerkwaarde op te slaan. Voor een bepaalde gebeurtenis, zal de identiteit met de hoogste namespace prioriteit de waarde van de gegevens verwerkte attributen hebben die tegen het worden geschreven. Voor meer informatie, lees de [ gegevens verwerkte handleiding van attributen UI ](../../profile/computed-attributes/ui.md).
 
 ### Gegevensmeer
 
@@ -198,4 +196,4 @@ Voor meer informatie, lees het [ de dienstoverzicht van de Privacy ](../../priva
 
 ### Adobe Target
 
-Adobe Target kan leiden tot onverwachte gebruikersgerichtheid voor scenario&#39;s voor gedeelde apparaten.
+Bij gebruik van randsegmentatie kan Adobe Target onverwachte gebruikersgerichtheid voor scenario&#39;s voor gedeelde apparaten opleveren.
