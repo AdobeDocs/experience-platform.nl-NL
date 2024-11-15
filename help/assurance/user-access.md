@@ -1,32 +1,40 @@
 ---
 title: Toegang tot Adobe Experience Platform Assurance-gebruikers
-description: Deze gids verklaart hoe te om gebruikerstoegang tot de Verzekering van Adobe Experience Platform te houden door het door de Admin Console te leiden.
+description: Deze gids verklaart hoe te om gebruikerstoegang tot Adobe Experience Platform Assurance te houden door het door de Admin Console te leiden.
 exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
-source-git-commit: 95e5dad03741d06ee33a10c48b481b792140f7f1
+source-git-commit: 464a39bd64ed4ae97cde52eeeb1755c75b0a86a9
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
 
 # Toegang van gebruikers
 
->[!WARNING]
->
->Let op: de gebruikerstoegang tot Betrouwbaarheid is aan het wijzigen. Aangezien de Verzekering bèta (Project Griffon) aan algemeen beschikbaar (als Verzekering) aan alle klanten van Adobe Experience Cloud verlaat - de toegang tot Verzekering zal door de [ Admin Console ](https://helpx.adobe.com/nl/enterprise/using/admin-console.html) worden beheerd.
->
->Neem contact op met de Adobe Experience Cloud-beheerder van uw bedrijf als u hulp nodig hebt.
+Geef gebruikers toegang tot [!UICONTROL Assurance] door hen aan om het even welk productprofiel in Adobe Experience Platform toe te voegen door de volgende stappen in [ Adobe Admin Console ](https://adminconsole.adobe.com/) te voltooien:
 
-Om ononderbroken toegang tot Verzekering te ontvangen of te handhaven, zorg ervoor dat de volgende stappen in de Admin Console worden voltooid:
+## Gebruikers aan Adobe Experience Platform toevoegen via een productprofiel {#adding-product-profile}
 
-## Gebruikers aan Experience Platform toevoegen via een productprofiel
+Om een gebruiker aan een productprofiel toe te voegen, login in [ Adobe Admin Console ](https://adminconsole.adobe.com/). Selecteer op het tabblad **[!UICONTROL Overview]** van de gebruikersinterface van de Admin Console de optie **[!UICONTROL Add users]** .
 
-Om een gebruiker aan een productprofiel toe te voegen, registreer in de Admin Console en selecteer **gebruikers** toevoegen.
+![ de pagina van de Admin Console met Add benadrukte gebruikers.](./images/user-access/admin-console.png)
 
-![ de Add gebruikerknoop wordt benadrukt.](./images/get-access/product-profile-add-users.png)
+Het dialoogvenster **[!UICONTROL Add users to your team]** wordt weergegeven. Voer het e-mailadres of de gebruikersnaam in van de persoon die u wilt toevoegen en selecteer vervolgens **[!UICONTROL Add as a new user]** .
 
-**voegt gebruikers aan uw team** dialoog toe verschijnt. In dit dialoogvenster kunt u de gegevens invoeren van de gebruiker die u wilt toevoegen. Voer het e-mailadres, de voornaam (optioneel) en de achternaam (optioneel) van de gebruiker in.
+![ e-mail of gebruikersbenaming textbox wordt benadrukt in Add gebruikersdialoog.](./images/user-access/add-users.png)
 
-Selecteer het potloodpictogram om de producten en gebruikersgroepen te kiezen. Van hier, uitgezochte **Adobe Experience Platform**, toen **a.EP-gebrek-allen-Gebruikers**, gevolgd door **sparen**.
+Er worden twee tekstvakken weergegeven waarin een optioneel **[!UICONTROL First name]** en een optioneel **[!UICONTROL Last name]** wordt ingevoerd. De lus **[!UICONTROL SSO username]** wordt automatisch gevuld, samen met de lus **[!UICONTROL Country]** in de vervolgkeuzelijst. Zorg ervoor dat beide opties correct zijn en breng de benodigde aanpassingen aan. Selecteer **[!UICONTROL Products]** als alles juist is.
 
-![ de dialoog die toont hoe te om het productprofiel toe te voegen wordt getoond.](./images/get-access/product-profile-add-profile.png)
+![ de drie naam en landgebieden worden benadrukt in de Add gebruikersdialoog.](./images/user-access/name-and-products.png)
+
+Het dialoogvenster **[!UICONTROL Select product]** wordt weergegeven. Selecteer de Adobe Experience Platform.
+
+![ Uitgezochte producten dialoog met een lijst van drie producten en de benadrukte optie van Adobe Experience Platform.](./images/user-access/select-products.png)
+
+Het dialoogvenster **[!UICONTROL Select product profiles]** wordt weergegeven met een lijst met productprofielen. Selecteer een willekeurig productprofiel en selecteer vervolgens **[!UICONTROL Apply]** . U kunt aanvullende producten en productprofielen toevoegen door deze stappen te herhalen.
+
+![ een optie die in de Uitgezochte dialoog van productprofielen wordt geselecteerd en wordt benadrukt.](./images/user-access/select-product-profiles.png)
+
+Controleer alles correct is voor de gebruiker. Hier kunt u extra gebruikers toevoegen of uw wijzigingen opslaan door **[!UICONTROL Save]** te selecteren.
+
+![ voegt gebruikers aan uw teamdialoog met alle informatie toe die binnen wordt gevuld en geselecteerde sparen.](./images/user-access/save-selections.png)
