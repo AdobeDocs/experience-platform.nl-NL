@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Azure Blob Source Connector - Overzicht
 description: Leer hoe u Azure Blob met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 8877e7dceeebfb1d4f31b63fef4544a69c72b38e
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 
 >[!IMPORTANT]
 >
->De [!DNL Azure Blob] -bron ondersteunt geen connectiviteit tussen dezelfde regio en Experience Platform. Als uw Azure instantie het zelfde netwerkgebied zoals Experience Platform gebruikt, dan kan een verbinding aan de bronnen van het Experience Platform niet worden gevestigd. Gebruik bij het instellen van uw [!DNL Azure Blob] -bron niet de Azure East US 2, Azure West Europe en Azure Australia East regions. Momenteel wordt alleen connectiviteit tussen regio&#39;s ondersteund.
+>De [!DNL Azure Blob] -bron ondersteunt geen connectiviteit tussen dezelfde regio en Experience Platform. Als uw [!DNL Azure] -instantie hetzelfde netwerkgebied gebruikt als Experience Platform, kan geen verbinding met bronnen van Experience Platforms tot stand worden gebracht. Momenteel wordt alleen connectiviteit tussen regio&#39;s ondersteund.
 
 ## Naamgevingsbeperkingen voor bestanden en mappen
 
