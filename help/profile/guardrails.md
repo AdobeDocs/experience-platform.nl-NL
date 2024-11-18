@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Leer over prestaties en door systemen afgedwongen richtlijnen voor profielgegevens en segmentatie. Zo zorgt u voor optimaal gebruik van de functie Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 6962bb0ba4968ed4860e95819ac2e949bf744d79
 workflow-type: tm+mt
-source-wordcount: '2455'
+source-wordcount: '2459'
 ht-degree: 1%
 
 ---
@@ -174,7 +174,7 @@ In dit document zijn er verschillende hulplijnen die naar &quot;profielfragmente
 
 ### Beleid samenvoegen {#merge-policies}
 
-Wanneer het samenbrengen van gegevens uit veelvoudige bronnen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken. Wanneer de gegevens uit meerdere bronnen conflicteren, bepaalt het samenvoegbeleid welke informatie moet worden opgenomen in het profiel voor de persoon. Een maximum van vijf (5) samenvoegbeleid wordt toegestaan per organisatie. Om meer over fusiebeleid te leren, te lezen gelieve het [ overzicht van het samenvoegbeleid ](merge-policies/overview.md).
+Wanneer het samenbrengen van gegevens uit veelvoudige bronnen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken. Wanneer de gegevens uit meerdere bronnen conflicteren, bepaalt het samenvoegbeleid welke informatie moet worden opgenomen in het profiel voor de persoon. Per sandbox zijn maximaal vijf (5) samenvoegbeleidsregels die het `_xdm.context.profile` -schema gebruiken, toegestaan. Om meer over fusiebeleid te leren, te lezen gelieve het [ overzicht van het samenvoegbeleid ](merge-policies/overview.md).
 
 ### Gegevenssets van de Adobe Analytics-rapportsuite in Platform {#aa-datasets}
 
