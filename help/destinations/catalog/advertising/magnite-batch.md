@@ -1,16 +1,14 @@
 ---
 title: Doel van toerietbatch
 description: Gebruik deze bestemming om Adobe CDP publiek aan het platform van de Streaming van de Magnite in partij te leveren.
-badgeBeta: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
+last-substantial-update: 2024-11-18T00:00:00Z
+exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
+source-git-commit: 57e6dc4252c031d993592b963efc089f8427ce25
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1650'
 ht-degree: 0%
 
 ---
-
 
 # Magneet: Batch-verbinding {#magnite-streaming-batch}
 
@@ -31,8 +29,6 @@ Lees verder hieronder voor meer informatie over de Magnite: Batch-bestemming, ho
 Voor meer informatie over de bestemming in real time, zie [ deze documentatiepagina ](magnite-streaming.md) in plaats daarvan.
 
 >[!IMPORTANT]
->
->Deze bestemmingsschakelaar is in bèta en slechts beschikbaar om klanten te selecteren. Neem contact op met uw Adobe als u toegang wilt aanvragen.
 >
 >De doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Magnite] . Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via `adobe-tech@magnite.com` .
 
@@ -116,13 +112,17 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 de toekomst.
 * **[!UICONTROL Description]**: Een beschrijving die u helpt dit te identificeren
 doelverbinding/-instantie in de toekomst.
-* **[!UICONTROL Name of your source partner]**: De naam die u als bron wilt opgeven in het platform van Magnite Streaming
+* **[!UICONTROL Your company name]**: De naam van uw klant/bedrijf. Alleen ondersteunde [!DNL Magnite Streaming] clients zijn beschikbaar voor selectie.
+
+>[!NOTE]
+>
+>De bedrijfsnaam moet een koord zijn dat de naam van het Amazon S3 leveringsemmer aanpast u met Magnite en opstelling in [ voor authentiek verklaart aan bestemmings ](#authenticate) stap hebt gevormd. De ondersteunde tekens zijn &#39;a-z&#39;, &#39;A-Z&#39;, &#39;0-9&#39;, &#39;-&#39;(streepje) of &#39;_&#39;(onderstrepingsteken).
 
 ![ gevulde gebieden van de bestemmingsconfiguratie ](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
 >[!NOTE]
 >
->Als u meerdere id-typen wilt verzenden (GAID, IDFA, enz.) wanneer u de Batch-bestemming gebruikt, is voor elke verbinding een nieuwe doelverbinding/nieuwe doelinstantie vereist. Neem voor meer informatie contact op met uw vertegenwoordiger van uw Magnite-account.
+>Als u van plan bent om veelvoudige types van identiteitskaart (GAID, IDFA, enz.) te verzenden gebruikend de bestemming van de Partij, wordt een nieuwe bestemmingsverbinding/instantie vereist voor elk. Neem voor meer informatie contact op met uw vertegenwoordiger van uw Magnite-account.
 
 U kunt vervolgens doorgaan door **[!UICONTROL Next]** te selecteren
 
@@ -158,7 +158,7 @@ In dit voorbeeld hebben we **[!UICONTROL Target field]**: magnite_deviceId_CUSTO
 
 >[!NOTE]
 >
->Als u meerdere id-typen wilt verzenden/toewijzen (GAID, IDFA, enz.) wanneer u de Batch-bestemming gebruikt, is voor elke verbinding een nieuwe doelverbinding/nieuwe doelinstantie vereist. Neem voor meer informatie contact op met uw vertegenwoordiger van uw Magnite-account.
+>Als u van plan bent om veelvoudige types van identiteitskaart (GAID, IDFA, enz.) te verzenden/in kaart te brengen gebruikend de bestemming van de Partij, wordt een nieuwe bestemmingsverbinding/instantie vereist voor elk. Neem voor meer informatie contact op met uw vertegenwoordiger van uw Magnite-account.
 
 
 Op het scherm &quot;Vorm filename en de uitvoerplanning voor elk publiek&quot;, moet u een Datum van het Begin (verplicht), Einddatum (facultatief), en (verplichte) identiteitskaart van de Afbeelding voor elk publiek nu vormen.
