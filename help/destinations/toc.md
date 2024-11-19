@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 8ccdf80885a04280c4a92e1cb3d18e45e2d9d9e5
+source-git-commit: 07e01847c6e24564682161e88122948d200ab733
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1248'
 ht-degree: 1%
 
 ---
@@ -92,8 +92,8 @@ ht-degree: 1%
       * [LinkedIn Insight Tag-extensie](./catalog/advertising/linkedin.md)
       * [LiveRamp - Verbinding aan boord](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Distribution-verbinding](./catalog/advertising/liveramp-distribution.md)
-      * [(Beta) Magnite Batch](/help/destinations/catalog/advertising/magnite-batch.md)
-      * [(Beta) Magnite Streaming Real-time verbinding](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [Magnite Batch](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [Magnite Streaming Real-time verbinding](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing-verbinding](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking-extensie](./catalog/advertising/pinterest-extension.md)
       * [Verbinding met pinterest Customer List](./catalog/advertising/pinterest.md)
@@ -157,7 +157,7 @@ ht-degree: 1%
    * E-maildoelen {#email}
       * [Bizible extension](./catalog/email/bizible.md)
       * [Marketo-extensie](./catalog/email/marketo.md)
-      * [Marketo Munchkin-extensie](./catalog/email/marketo-munchkin.md)
+      * [Marketo Munchkin Extension](./catalog/email/marketo-munchkin.md)
       * [PebblePost-extensie](./catalog/email/pebblepost.md)
    * E-mailmarketingdoelen {#email-marketing}
       * [Overzicht van e-mailmarketingdoelen](./catalog/email-marketing/overview.md)
@@ -168,7 +168,7 @@ ht-degree: 1%
       * [(API) Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(Bestanden) Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua.md)
       * [Verbinding oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
-      * [(API) Verbinding met Salesforce-Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
+      * [(API) Salesforce-verbinding voor Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
       * [(Bestanden) Salesforce Marketing Cloud verbinding](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [SendGrid-verbinding](./catalog/email-marketing/sendgrid.md)

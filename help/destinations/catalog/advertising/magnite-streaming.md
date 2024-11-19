@@ -1,18 +1,16 @@
 ---
 title: Real-Time doelverbinding Magnite
 description: Gebruik deze bestemming om Adobe CDP publiek aan het platform van de Streaming van de Magnite in real time te leveren.
-badgeBeta: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
+last-substantial-update: 2024-11-18T00:00:00Z
+exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
+source-git-commit: da05db9376893bdbe8f0aa291f19a507e4a73d4f
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1278'
 ht-degree: 0%
 
 ---
 
-
-# (Beta) Magnite: Real-Time bestemmingsverbinding
+# Magniet: Real-Time doelverbinding
 
 ## Overzicht {#overview}
 
@@ -28,8 +26,6 @@ Als u uw publiek wilt activeren naar [!DNL Magnite Streaming] , moet u:
 Opmerking: wanneer u de bestemming Real-Time gebruikt, ontvangt [!DNL Magnite Streaming] een publiek in real-time, maar Magnite kan alleen realtime publiek tijdelijk in het platform opslaan en binnen een paar dagen worden verwijderd uit het systeem. Om deze reden, als u Magnite wilt gebruiken: In real time bestemming, zult u *ook* moeten gebruiken Magnite: de bestemming van de partij - elk publiek dat u aan de bestemming in real time activeert, moet u ook aan de bestemming van de Partij activeren.
 
 >[!IMPORTANT]
->
->Deze bestemmingsschakelaar is in bèta en slechts beschikbaar om klanten te selecteren. Neem contact op met uw Adobe als u toegang wilt aanvragen.
 >
 >De doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Magnite] . Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via `adobe-tech@magnite.com` .
 
@@ -101,7 +97,11 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Name of your source partner]**: De naam van uw klant/bedrijf. Alleen ondersteunde [!DNL Magnite Streaming] clients zijn beschikbaar voor selectie.
+* **[!UICONTROL Your company name]**: De naam van uw klant/bedrijf. Alleen ondersteunde [!DNL Magnite Streaming] clients zijn beschikbaar voor selectie.
+
+>[!NOTE]
+>
+>De bedrijfsnaam moet een koord zijn dat de naam van het Amazon S3 leveringsemmer aanpast u met Magnite en opstelling in [ voor authentiek verklaart aan bestemmings ](#authenticate) stap hebt gevormd. De ondersteunde tekens zijn &#39;a-z&#39;, &#39;A-Z&#39;, &#39;0-9&#39;, &#39;-&#39;(streepje) of &#39;_&#39;(onderstrepingsteken).
 
 ![ gevulde gebieden van de bestemmingsconfiguratie ](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 

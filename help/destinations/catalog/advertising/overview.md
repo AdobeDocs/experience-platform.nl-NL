@@ -3,9 +3,9 @@ keywords: reclamebestemmingen;bestemmingen;platformbestemmingen
 title: Overzicht Advertising-bestemmingen
 description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
+source-git-commit: 4c6e55221e4d327ed6a0225dac1af9eea7a751d4
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,8 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbind
 * [Google Ad Manager-verbinding](google-ad-manager.md)
 * [(Beta) Google Ad Manager 360-verbinding](google-ad-manager-360-connection.md)
 * [Google Customer Match-verbinding](google-customer-match.md)
+* [Magnite Batch-verbinding](magnite-batch.md)
+* [Magnite Streaming Real-time verbinding](magnite-streaming.md)
 * [Microsoft Bing-verbinding](bing.md)
 * [Verbinding met pinterest Customer List](pinterest.md)
 * [PubMatic Connect-doel](pubmatic.md)
