@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen
+keywords: Experience Platform;startpagina;populaire onderwerpen
 solution: Experience Platform
 title: Overzicht van beheer, privacy en beveiliging
 description: Adobe Experience Platform biedt verschillende services en tools waarmee u uw verzamelde ervaringsgegevens op een betrouwbare manier kunt beheren, zodat u aan uw bedrijfspraktijken, wettelijke verplichtingen en ontwikkelingsproces kunt voldoen.
+feature: Data Governance,Privacy
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '857'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -19,11 +20,11 @@ Experience Platform biedt verschillende services en tools waarmee u uw verzameld
 
 De diensten kunnen in drie domeinen worden gecategoriseerd:
 
-* [Gegevensbeheer](#governance)
+* [Datagovernance](#governance)
 * [Privacy](#privacy)
 * [Beveiliging](#security)
 
-## Gegevensbeheer {#governance}
+## Datagovernance {#governance}
 
 Het beheer van gegevens is een essentieel begrip dat met elke mogelijkheid in Experience Platform wordt verweven. Het beheer van gegevens vertegenwoordigt uw vermogen om uw gegevens door zijn reis door Platform te controleren en te begrijpen. Dit omvat het handhaven van gegevenskwaliteit, gegevenslijn, gegevens het catalogiseren, en meer.
 

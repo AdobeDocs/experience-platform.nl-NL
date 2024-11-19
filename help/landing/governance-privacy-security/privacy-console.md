@@ -1,10 +1,11 @@
 ---
 title: Overzicht van de privacyconsole
 description: Leer hoe u uw workflows met betrekking tot privacy kunt controleren in de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
+feature: Privacy
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '400'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -52,6 +53,6 @@ Raadpleeg de volgende documentatie voor meer informatie over de verschillende pl
 
 * [Toegangsbeheer op basis van kenmerken](../../access-control/abac/overview.md)
 * [Controlelogboeken](./audit-logs/overview.md)
-* [Gegevensbeheer](../../data-governance/home.md)
+* [Datagovernance](../../data-governance/home.md)
 * [Gegevenshygiëne](../../hygiene/home.md)
 * [Privacyservice](../../privacy-service/home.md)
