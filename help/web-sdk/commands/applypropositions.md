@@ -2,7 +2,7 @@
 title: applyProposities
 description: Rendervoorstellingen die al met sendEvent zijn gerenderd.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 1%
@@ -16,7 +16,7 @@ Met de opdracht `applyPropositions` kunt u opnieuw voorstellingen renderen die a
 Deze opdracht ondersteunt de volgende velden:
 
 * **Voorstellen**: Een serie van propositievoorwerpen die u wilt re-teruggeven.
-* **naam van de Mening**: De naam van de mening om terug te geven. De weergavemeldingen voor deze beslissingen worden in het cachegeheugen opgeslagen en kunnen via de optie `personalization.includePendingDisplayNotifications` in een volgende opdracht van `sendEvent` worden opgenomen.
+* **naam van de Mening**: De naam van de mening om terug te geven. De weergavemeldingen voor deze beslissingen worden in het cachegeheugen opgeslagen en kunnen via de optie `personalization.includeRenderedPropositions` in een volgende opdracht van `sendEvent` worden opgenomen.
 * **gegevens van Meta**: Een voorwerp dat bepaalt hoe de aanbiedingen van HTML kunnen worden toegepast. Het bevat de volgende eigenschappen:
    * Bereik
    * Kiezer
@@ -43,7 +43,7 @@ Voer het `applyPropositions` bevel in werking wanneer het roepen van uw gevormde
 * **`metadata`** - Hiermee bepaalt u hoe HTML-aanbiedingen worden toegepast. Het is een kaart waar de sleutel een bereik of een oppervlak is en de waarde een object is dat de toetsen `selector` en `actionType` bevat.
    * `selector`: Een tekenreeks die een CSS-kiezer bevat waaruit de HTML moet worden toegepast.
    * `actionType`: De handeling die met de HTML moet worden uitgevoerd. Geldige waarden zijn `setHtml` , `replaceHtml` en `appendHtml` .
-* **`viewName`**: De naam van de weergave die in een toepassing van één pagina moet worden weergegeven. De weergavemeldingen voor deze beslissingen worden in het cachegeheugen opgeslagen en kunnen met `personalization.includePendingDisplayNotifications` worden opgenomen in een volgende `sendEvent` -opdracht.
+* **`viewName`**: De naam van de weergave die in een toepassing van één pagina moet worden weergegeven. De weergavemeldingen voor deze beslissingen worden in het cachegeheugen opgeslagen en kunnen met `personalization.includeRenderedPropositions` worden opgenomen in een volgende `sendEvent` -opdracht.
 
 ```js
 alloy("applyPropositions",{

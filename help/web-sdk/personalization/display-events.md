@@ -2,7 +2,7 @@
 title: Weergavegebeurtenissen beheren in Web SDK
 description: Dit artikel verklaart welke vertoningsgebeurtenissen zijn en hoe u hen in Web SDK kunt gebruiken.
 exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Als u weergavegebeurtenissen verzendt, worden automatisch nauwkeurigere analytis
 Om vertoningsgebeurtenissen automatisch te verzenden nadat de gepersonaliseerde inhoud op pagina wordt teruggegeven, moet u de volgende parameters vormen:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: true` of niet opgegeven
+* `personalization.sendDisplayEvent: true` of niet opgegeven
 
 Web SDK verzendt de vertoningsgebeurtenissen onmiddellijk nadat om het even welke verpersoonlijking als resultaat van een `sendEvent` vraag wordt teruggegeven.
 
@@ -50,9 +50,9 @@ Bovendien minimaliseert het verzenden van weergavegebeurtenissen in `sendEvent` 
 Om vertoningsgebeurtenissen voor automatisch teruggegeven voorstellingen te verzenden, moet u de volgende parameters in de `sendEvent` vraag vormen:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: false` voor de bovenkant van de paginakit
+* `personalization.sendDisplayEvent: false` voor de bovenkant van de paginakit
 
-Roep `sendEvent` met `personalization.includePendingDisplayNotifications: true` aan om de weergavegebeurtenissen te verzenden
+Roep `sendEvent` met `personalization.includeRenderedPropositions: true` aan om de weergavegebeurtenissen te verzenden
 
 ### Weergavegebeurtenissen verzenden voor handmatig gerenderde profielen {#manually-rendered-propositions}
 
