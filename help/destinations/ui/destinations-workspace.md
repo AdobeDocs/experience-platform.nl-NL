@@ -3,9 +3,9 @@ keywords: platform;bestemmingen;bestemmingswerkruimte;werkruimte;ui;bestemmingen
 title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vijf secties, Overzicht, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1117'
 ht-degree: 0%
 
 ---
@@ -77,11 +77,11 @@ Op het tabblad **[!UICONTROL Accounts]** vindt u meer informatie over de verbind
 
 | Element | Beschrijving |
 |---|---|
-| [!UICONTROL Platform] | Het doel waarvoor u de verbinding hebt ingesteld. |
+| [!UICONTROL Destination] | De bestemmingsschakelaar waarvoor u opstelling de verbinding hebt. |
 | [!UICONTROL Connection Type] | Vertegenwoordigt het type van rekeningsverbinding aan uw opslagemmer of bestemming. Afhankelijk van de bestemming, zijn de authentificatieopties: <ul><li>Voor e-mailmarketingbestemmingen: kan S3, FTP of Azure Blob zijn.</li><li>Voor reclame-bestemmingen in real time: Server-aan-server</li><li>Voor Amazon S3-cloudopslagdoelen: Toegangstoets </li><li>Voor SFTP-cloudopslagdoelen: basisverificatie voor SFTP</li><li>OAuth 1- of OAuth 2-verificatie</li><li>Toekennerverificatie</li></ul> |
-| [!UICONTROL Username] | De gebruikersbenaming u in [ selecteerde verbind bestemmingstovenaar ](../catalog/email-marketing/overview.md#connect-destination). |
-| [!UICONTROL Destinations] | Vertegenwoordigt het aantal unieke succesvolle bestemmingsdataflows die met basisinformatie worden verbonden voor een bestemming worden gecreeerd. |
-| [!UICONTROL Authorized] | De datum waarop de verbinding met deze bestemming werd geautoriseerd. |
+| [!UICONTROL Username] | De gebruikersbenaming u in [ selecteerde verbind bestemmingswerkschema ](../catalog/email-marketing/overview.md#connect-destination). |
+| [!UICONTROL Connections] | Vertegenwoordigt het aantal unieke succesvolle bestemmingsdataflows die met basisinformatie worden verbonden voor een bestemming worden gecreeerd. |
+| [!UICONTROL Authorization date] | De datum waarop de verbinding met deze bestemming werd geautoriseerd. |
 
 {style="table-layout:auto"}
 
