@@ -2,18 +2,14 @@
 title: Labels voor gegevensgebruik voor een schema beheren
 description: Leer hoe u labels voor gegevensgebruik toevoegt aan XDM-schemavelden (Experience Data Model) in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 22233d2bda488aa223555f85215be31d007eaa37
+source-git-commit: ac6af3e90c417d1c97860394ce8afb07a0a7917d
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '741'
 ht-degree: 0%
 
 ---
 
 # De labels voor gegevensgebruik voor een schema beheren
-
->[!IMPORTANT]
->
->Het op schema-gebaseerde etiketteren maakt deel uit van [ op attributen-gebaseerd toegangsbeheer ](../../access-control/abac/overview.md), dat momenteel in een beperkte versie voor op VS-Gebaseerde gezondheidszorgklanten beschikbaar is. Deze mogelijkheid is beschikbaar voor alle Adobe Real-time Customer Data Platform-klanten zodra deze volledig is vrijgegeven.
 
 Alle gegevens die in Adobe Experience Platform worden gebracht worden beperkt door schema&#39;s van de Gegevens van de Ervaring van het Model (XDM). Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Om van dit rekenschap te geven, staat het Platform u toe om het gebruik van bepaalde datasets en gebieden door het gebruik van [ etiketten van het gegevensgebruik ](../../data-governance/labels/overview.md) te beperken.
 
