@@ -1,22 +1,22 @@
 ---
-title: API-handleiding voor queryservice
-description: Leer hoe te om de Vergunning API van de Dienst van de Vraag te gebruiken om op netwerk-gebaseerde IP beperkingen voor veilige verbindingen door SQL af te dwingen. Gebruik deze API om het beheer van gegevenstoegang voor uw Adobe Experience Platform-gegevens te verbeteren.
+title: API-handleiding voor Distiller-verificatie
+description: Leer hoe te om de Gegevens Distiller Authorization API te gebruiken om op netwerk-gebaseerde IP beperkingen voor veilige verbindingen door SQL af te dwingen. Gebruik deze API om het beheer van gegevenstoegang voor uw Adobe Experience Platform-gegevens te verbeteren.
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 1%
 
 ---
 
-# API-handleiding voor queryservice
+# API-handleiding voor Distiller-verificatie
 
 >[!AVAILABILITY]
 >
 >Deze functionaliteit is beschikbaar voor klanten die de Data Distiller-add hebben aangeschaft. Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger.
 
-Gebruik de Vergunning API van de Dienst van de Vraag om op IP-Gebaseerde beperkingen af te dwingen. Door deze maatregelen toe te passen, krijgen alleen erkende netwerken en clientcomputers toegang tot gegevens via SQL in Adobe Experience Platform. Deze controles helpen u aan strenge veiligheidsnormen voldoen terwijl het verstrekken van toegang in real time controle en alarmering.
+Gebruik de Distiller-autorisatie-API voor gegevens om op IP gebaseerde beperkingen af te dwingen. Door deze maatregelen toe te passen, krijgen alleen erkende netwerken en clientcomputers toegang tot gegevens via SQL in Adobe Experience Platform. Deze controles helpen u aan strenge veiligheidsnormen voldoen terwijl het verstrekken van toegang in real time controle en alarmering.
 
 Met deze API kunt u IP-beperkingen configureren, afdwingen en controleren voor toegang tot gegevens via de SQL-interface. Dit document biedt een overzicht op hoog niveau van de kernfuncties van de API, eindpuntfuncties en toekomstige mogelijkheden.
 
@@ -39,4 +39,4 @@ Voor meer details op controleregistreren, verwijs naar de [ documentatie van de 
 
 ## Volgende stappen
 
-Krijg begonnen met de Vergunning API van de Dienst van de Vraag door de [ Begonnen gids ](./getting-started.md) voor essentiële opstellingsstappen, met inbegrip van vereiste kopballen en API vraagovereenkomsten te herzien. Dan, onderzoek de eindpunt-specifieke gidsen op [ IP Toegang ](./ip-access.md) en [ IP Bevestiging ](./validate.md) voor het vormen en het beheren van veilige gegevenstoegang.
+Krijg begonnen met de Vergunning API van Distiller van Gegevens door de [ Begonnen gids van het Worden ](./getting-started.md) voor essentiële opstellingsstappen, met inbegrip van vereiste kopballen en API vraagovereenkomsten te herzien. Dan, onderzoek de eindpunt-specifieke gidsen op [ IP Toegang ](./ip-access.md) en [ IP Bevestiging ](./validate.md) voor het vormen en het beheren van veilige gegevenstoegang.

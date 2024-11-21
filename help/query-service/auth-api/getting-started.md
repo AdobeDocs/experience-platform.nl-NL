@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform; de Dienst van de Vraag; IP toegangsbeheer; vergunning; API; begonnen worden
-title: API-handleiding voor queryservice
+title: API-handleiding voor Distiller-verificatie
 description: Leer hoe te beginnen voor vergunning en IP waaierbeperkingen voor veilige gegevenstoegang binnen de Dienst van de Vraag van Adobe Experience Platform.
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '479'
 ht-degree: 2%
 
 ---
 
-# Handleiding voor de API voor queryservice
+# Aan de slag met de API voor Distiller-verificatie voor gegevens
 
 >[!AVAILABILITY]
 >
 >Deze functionaliteit is beschikbaar voor klanten die de Data Distiller-add hebben aangeschaft. Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger.
 
-De API van de Vergunning van de Dienst van de Vraag voorziet organisaties van striktere controle over gegevenstoegang via de SQL interface in Adobe Experience Platform. U kunt deze API gebruiken om IP beperkingen te bepalen, gegevenstoegang tot gespecificeerde netwerken te beperken, en veiligheid controle te verbeteren.
+De API voor Distiller-verificatie voor gegevens biedt organisaties een betere controle over gegevenstoegang via de SQL-interface in Adobe Experience Platform. U kunt deze API gebruiken om IP beperkingen te bepalen, gegevenstoegang tot gespecificeerde netwerken te beperken, en veiligheid controle te verbeteren.
 
-Deze gids schetst hoe te opstelling de toestemmingsgeloofsbrieven en de toestemmingen die worden vereist om vraag aan de Vergunning API van de Dienst van de Vraag te maken.
+In deze handleiding wordt beschreven hoe u de verificatiereferenties en -machtigingen kunt instellen die zijn vereist om aanroepen te kunnen uitvoeren naar de API voor Distiller-gegevensautorisatie.
 
 ## Aan de slag {#getting-started}
 
-De volgende secties verstrekken informatie over het voorbereiden van de vereiste vergunningswaarden en het doen van uw eerste verzoeken aan de Vergunning API van de Dienst van de Vraag.
+In de volgende secties vindt u informatie over het voorbereiden van de vereiste autorisatiewaarden en het indienen van uw eerste aanvragen bij de Data Distiller Authorization API.
 
 ### Vereiste machtigingen {#required-permissions}
 
@@ -41,7 +41,7 @@ De volgende functies zijn beschikbaar met de machtiging **[!UICONTROL Manage All
 
 ### Waarden verzamelen voor vereiste koppen {#gather-values-for-required-headers}
 
-Om vraag aan de Vergunning API van de Dienst van de Vraag te maken, moet u het [ de authentificatieleerprogramma van het Platform API ](../../landing/api-authentication.md) voltooien, dat waarden voor vereiste kopballen in API vraag verstrekt. Neem de volgende kopteksten op in elke aanvraag:
+Om vraag aan de Vergunning API van Distiller van Gegevens te maken, moet u het [ Platform API authentificatieleerprogramma ](../../landing/api-authentication.md) voltooien, dat waarden voor vereiste kopballen in API vraag verstrekt. Neem de volgende kopteksten op in elke aanvraag:
 
 - **Vergunning**: `Bearer {ACCESS_TOKEN}`
 - **x-api-sleutel**: `{API_KEY}`

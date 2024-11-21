@@ -5,7 +5,7 @@ breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 12%
@@ -113,7 +113,7 @@ Modellen implementeren {#implement-models}
    - [Zoeksjablonen](api/query-templates.md)
    - [Versnelde query&#39;s](api/accelerated-queries.md)
    - [Waarschuwingsabonnementen](api/alert-subscriptions.md)
-- Query Service Auth API {#auth-api}
+- API voor Distiller-verificatie van gegevens {#auth-api}
    - [Overzicht](auth-api/overview.md)
    - [Aan de slag](auth-api/getting-started.md)
    - [IP-toegang](auth-api/ip-access.md)
