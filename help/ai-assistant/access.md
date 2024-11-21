@@ -2,9 +2,9 @@
 title: AI-assistent openen in Experience Platform
 description: Leer hoe u tot AI Medewerker in de UI van het Experience Cloud kunt toegang hebben.
 exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
-source-git-commit: 706a20e70aa20adb0f4a554d0ec35518811ea9a1
+source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,12 @@ Gebruik de toestemmingeninterface om toestemmingen te verlenen om AI Medewerker 
 Zodra u de vereiste toestemmingen hebt, kunt u tot AI Medewerker toegang hebben door het AI Hulppictogram op de hoogste kopbal van de toepassing te selecteren die u gebruikt.
 
 ![ AI Medewerker met eerste gebruikerservaring.](./images/ai-assistant.png)
+
+## Toegang tot AI Assistant verkrijgen
+
+Bekijk de volgende video om te leren hoe u toegang tot AI Assistant voor uw organisaties en gebruikers kunt configureren.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 ## Volgende stappen
 
