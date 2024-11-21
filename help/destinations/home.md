@@ -2,10 +2,10 @@
 title: Overzicht van doelen
 description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 6dd6190f1b006ffb3346eea6dc917ce52e0aa1c6
+source-git-commit: 6d97f132788a249e0bf5c293e34d9d529325f099
 workflow-type: tm+mt
-source-wordcount: '1019'
-ht-degree: 0%
+source-wordcount: '1162'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ![ de overzichtsbanner van Doelen.](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+**[!DNL Destinations]** zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -115,3 +115,13 @@ Zie de stap **[!UICONTROL Review]** in de volgende handleidingen voor meer infor
 * [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](./ui/activate-segment-streaming-destinations.md#review)
 * [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](./ui/activate-streaming-profile-destinations.md#review)
 * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](./ui/activate-batch-profile-destinations.md#review)
+
+## Voorwaarden en bepalingen {#terms-and-conditions}
+
+Door om het even welke Doelen te gebruiken die als bèta (&quot;Beta&quot;) worden geëtiketteerd, bevestigt u hierbij dat Beta ***&quot;zoals is&quot;zonder enige garantie van welke aard*** wordt verstrekt.
+
+Adobe is niet verplicht de Beta te onderhouden, te corrigeren, bij te werken, te wijzigen, te wijzigen of anderszins te ondersteunen. U wordt aangeraden informatief te zijn en op geen enkele wijze te vertrouwen op de juiste werking of prestaties van dergelijke Beta en/of begeleidende materialen. De Beta wordt beschouwd als vertrouwelijke informatie over Adobe.
+
+Elke &quot;feedback&quot; (informatie over de Beta, inclusief maar niet beperkt tot problemen of defecten die u tegenkomt bij het gebruik van de Beta, suggesties, verbeteringen en aanbevelingen) die u aan de Adobe verstrekt, wordt toegewezen aan de Adobe, inclusief alle rechten, titel en interesse in en voor dergelijke feedback.
+
+Verzend Open Feedback of maak een Support Ticket om uw suggesties te delen of een bug te melden en een functieverbetering te zoeken.
