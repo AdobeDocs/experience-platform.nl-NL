@@ -4,9 +4,9 @@ title: Op attributen-Gebaseerde Gids van de Controle van de Toegang van begin to
 description: Dit document verstrekt een gids van begin tot eind op op attribuut-gebaseerde toegangsbeheer in Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 9c415b7721eeceff75d46463853f22dd3310cb9a
+source-git-commit: b9ce27b6feb0300464507a21510f40900677c3be
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1689'
 ht-degree: 1%
 
 ---
@@ -156,6 +156,10 @@ Het dialoogvenster **[!UICONTROL Edit labels]** wordt weergegeven, zodat u de la
 ![ Beeld dat de selectie van het etiket toont RHD en sparen wordt geselecteerd ](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
 
 Herhaal bovenstaande stappen met **[!UICONTROL Insulin <50]** .
+
+>[!NOTE]
+>
+> Wijs etiketten toe die in de [!UICONTROL Permissions] werkruimte (zoals de segmentetiketten hierboven) aan diverse voorwerpen in Adobe Journey Optimizer worden gecreeerd gebruikend [ Controle van de Toegang van het Niveau van Objecten ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).&quot;
 
 ## Activeer het beleid van de toegangscontrole {#policy}
 
