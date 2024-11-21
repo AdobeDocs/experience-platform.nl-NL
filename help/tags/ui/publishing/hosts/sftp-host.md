@@ -2,10 +2,10 @@
 title: SFTP-hosts
 description: Leer hoe u tags in Adobe Experience Platform configureert om bibliotheekbuilds te leveren aan een beveiligde, zelfgehoste SFTP-server.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85bd78928b1b503bbb6bbc44075ed0f66e046a4c
 workflow-type: tm+mt
 source-wordcount: '792'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Met Adobe Experience Platform kunt u bouwen van tagbibliotheken leveren aan een beveiligde SFTP-server die u host, zodat u meer controle hebt over de manier waarop uw builds worden opgeslagen en beheerd. Deze gids behandelt hoe te opstelling een gastheer SFTP voor een markeringsbezit in de UI van het Experience Platform of UI van de Inzameling van Gegevens.
 
@@ -70,7 +70,7 @@ Het dialoogvenster wordt uitgebreid en bevat aanvullende configuratieopties voor
 | [!UICONTROL Don't Use Symlinks] | Door gebrek, gebruiken alle gastheren SFTP symbolische verbindingen (symbolische verbindingen) om bibliotheek [ van verwijzingen te voorzien bouwt ](../builds.md) die aan de server worden bewaard. Niet alle servers ondersteunen echter het gebruik van symlinks. Als deze optie is geselecteerd, gebruikt de gastheer een kopieerbewerking om de build-elementen rechtstreeks bij te werken in plaats van gebruik te maken van symlinks. |
 | [!UICONTROL SFTP Server URL] | Het URL-basispad voor uw server. |
 | [!UICONTROL Path] | Het pad dat moet worden toegevoegd aan de URL van de basisserver voor deze host. |
-| [!UICONTROL Port] | De poort moet een van de volgende zijn:<ul><li>`21`</li><li>`22`</li><li>`80`</li><li>`200-299`</li><li>`443`</li><li>`2000-2999`</li><li>`4343`</li><li>`8080`</li><li>`8888`</li></ul>Als veiligheid beste praktijken, beperkt de Adobe het aantal havens die voor uitgaand verkeer kunnen worden gebruikt. De geselecteerde havens worden algemeen toegestaan door collectieve firewalls en omvatten sommige waaiers voor flexibiliteit. |
+| [!UICONTROL Port] | De poort moet een van de volgende zijn:<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>Als veiligheid beste praktijken, beperkt de Adobe het aantal havens die voor uitgaand verkeer kunnen worden gebruikt. De geselecteerde havens worden algemeen toegestaan door collectieve firewalls en omvatten sommige waaiers voor flexibiliteit. |
 | [!UICONTROL Username] | De gebruikersnaam die moet worden gebruikt wanneer de server wordt geopend. |
 | [!UICONTROL Encrypted Private Key] | De gecodeerde privé sleutel die u in a [ vorige stap ](#access-key) creeerde. |
 
