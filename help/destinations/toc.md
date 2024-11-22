@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 07e01847c6e24564682161e88122948d200ab733
+source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1257'
 ht-degree: 1%
 
 ---
@@ -42,6 +42,7 @@ ht-degree: 1%
       * [Stimulansen voor het streamen van exportdoelen voor profielen activeren](./ui/activate-streaming-profile-destinations.md)
       * [Soorten publiek activeren om exportdoelen voor batchprofielen te gebruiken](./ui/activate-batch-profile-destinations.md)
       * [Het publiek activeren voor verpersoonlijkingsdoelen van randen](./ui/activate-edge-personalization-destinations.md)
+      * [Profielkenmerken aan de rand in real-time opzoeken](./ui/activate-edge-profile-lookup.md)
       * [Het publiek activeren op gekrulde doelen op basis van LiveRamp-id&#39;s](./ui/activate-curated-destinations.md)
       * [Activeren het potentiële publiek aan bestemmingen](./ui/activate-prospect-audiences.md)
       * [Accountpubliek naar doelen activeren](./ui/activate-account-audiences.md)
