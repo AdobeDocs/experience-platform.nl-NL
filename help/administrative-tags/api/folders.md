@@ -3,7 +3,7 @@ title: Eindpunt van mappen
 description: Leer hoe u mappen maakt, bijwerkt, beheert en verwijdert met de Adobe Experience Platform API's.
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: 78aa48701abaadea963b25e390aa96d7b31386f4
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 1%
@@ -31,7 +31,7 @@ U kunt een lijst van omslagen terugwinnen die tot uw organisatie behoren door ee
 **API formaat**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
+GET /folders/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 ```
 
 | Parameter | Beschrijving |
@@ -44,7 +44,7 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 +++A steekproefverzoek om van alle top-level datasetomslagen een lijst te maken
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/root/subfolders
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/root/subfolders
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -118,7 +118,7 @@ U kunt een nieuwe omslag tot stand brengen door een verzoek van de POST aan het 
 **API formaat**
 
 ```http
-POST /folder/{FOLDER_TYPE}
+POST /folders/{FOLDER_TYPE}
 ```
 
 | Parameter | Beschrijving |
@@ -130,7 +130,7 @@ POST /folder/{FOLDER_TYPE}
 +++Een voorbeeldverzoek om een nieuwe map te maken.
 
 ```shell
-curl -X POST https://experience.adobe.io/unifiedfolders/folder/dataset
+curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -190,7 +190,7 @@ U kunt een specifieke omslag terugwinnen die tot uw organisatie behoort door een
 **API formaat**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
+GET /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | Parameter | Beschrijving |
@@ -203,7 +203,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++Een voorbeeldverzoek om een specifieke map op te halen
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -261,7 +261,7 @@ U kunt valideren of een map objecten kan bevatten door een GET-aanvraag in te di
 **API formaat**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
+GET /folders/{FOLDER_TYPE}/{FOLDER_ID}/validate
 ```
 
 | Parameter | Beschrijving |
@@ -274,7 +274,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 +++A voorbeeldverzoek om een specifieke map te valideren
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -321,7 +321,7 @@ U kunt de details van een specifieke omslag bijwerken die tot uw organisatie beh
 **API formaat**
 
 ```http
-PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
+PATCH /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | Parameter | Beschrijving |
@@ -334,7 +334,7 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++Een voorbeeldverzoek om een specifieke map bij te werken
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -383,7 +383,7 @@ U kunt een specifieke map die tot uw organisatie behoort, verwijderen door een D
 ***API formaat**
 
 ```http
-DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
+DELETE /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | Parameter | Beschrijving |
@@ -396,7 +396,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++Een voorbeeldverzoek om een specifieke map te verwijderen
 
 ```shell
-curl -X DELETE https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X DELETE https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
