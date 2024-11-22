@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-handleiding voor gegevenstoegang
 description: De API van de Toegang van Gegevens steunt Adobe Experience Platform door ontwikkelaars van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen Experience Platform wordt geconcentreerd.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '566'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ De API voor gegevenstoegang ondersteunt Adobe Experience Platform door gebruiker
 
 ## API-specificatieverwijzing
 
-De OpenAPI verwijzingsdocumentatie kan [ hier ](https://developer.adobe.com/experience-platform-apis/references/data-access/) worden gevonden.
+Verwijs naar de [ de verwijzingsdocumentatie van OpenAPI van de Toegang van Gegevens ](https://developer.adobe.com/experience-platform-apis/references/data-access/) om een gestandaardiseerd, machine-leesbaar formaat voor gemakkelijkere integratie, het testen, en de exploratie te bekijken.
 
 ## Terminologie {#terminology}
 

@@ -4,10 +4,10 @@ title: API-handleiding voor Distiller-verificatie
 description: Leer hoe te beginnen voor vergunning en IP waaierbeperkingen voor veilige gegevenstoegang binnen de Dienst van de Vraag van Adobe Experience Platform.
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 2%
+source-wordcount: '501'
+ht-degree: 1%
 
 ---
 
@@ -66,3 +66,5 @@ Met de vereiste toestemmingen en verzamelde kopbalwaarden, bent u bereid beginne
 Elk API vraagvoorbeeld toont aan hoe te om verzoeken te formatteren en reacties te interpreteren, die u veilige toegang tot uw gegevens in de Dienst van de Vraag helpen afdwingen.
 
 Voor specifieke instructies bij het vormen van en het bevestigen van IP beperkingen, verwijs naar de [ IP documentatie van het eindpunt van de Toegang ](./ip-access.md) en de [ IP documentatie van het eindpunt van de Bevestiging ](./validate.md).
+
+Verwijs naar de [ de verwijzingsdocumentatie van OpenAPI van de Vergunning van Distiller van Gegevens ](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) om een gestandaardiseerd, machine-leesbaar formaat voor gemakkelijkere integratie, het testen, en de exploratie te bekijken.

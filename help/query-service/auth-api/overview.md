@@ -3,9 +3,9 @@ title: API-handleiding voor Distiller-verificatie
 description: Leer hoe te om de Gegevens Distiller Authorization API te gebruiken om op netwerk-gebaseerde IP beperkingen voor veilige verbindingen door SQL af te dwingen. Gebruik deze API om het beheer van gegevenstoegang voor uw Adobe Experience Platform-gegevens te verbeteren.
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '424'
 ht-degree: 1%
 
 ---
@@ -30,13 +30,17 @@ De volgende eigenschappen laten u toe om op IP-Gebaseerde toegangsbeperkingen te
 
 ## Functies voor controle en toezicht
 
-Om veilige praktijken van de gegevenstoegang te steunen, registreert de Dienst van de Vraag alle cliënt IPs die toegang hebben of proberen om tot AEP toegang te hebben. De gebeurtenissen van de controle, met inbegrip van ontkende verbindingen, worden verzonden naar de Logboeken van de Controle van het Platform. Hierdoor wordt het volgende ingeschakeld:
+Om veilige praktijken van de gegevenstoegang te steunen, registreert de Dienst van de Vraag alle cliënt IPs die toegang hebben of proberen om tot Experience Platform toegang te hebben. De gebeurtenissen van de controle, met inbegrip van ontkende verbindingen, worden verzonden naar de Logboeken van de Controle van het Platform. Hierdoor wordt het volgende ingeschakeld:
 
 - **Realtime Controle**: De op IP-Gebaseerde toegangspatronen van het spoor om naleving te verzekeren.
 - **het Alarm op Onbevoegde Toegang**: Identificeer en antwoordt aan toegangspogingen van onbevoegde IPs.
 
-Voor meer details op controleregistreren, verwijs naar de [ documentatie van de Dienst van de Controle ](https://experienceleague.adobe.com/docs/experience-platform/audit/audit-overview.html).
+Verwijs naar het [ overzicht van de Logboeken van de Controle ](../../landing/governance-privacy-security/audit-logs/overview.md) voor meer details.
 
 ## Volgende stappen
 
 Krijg begonnen met de Vergunning API van Distiller van Gegevens door de [ Begonnen gids van het Worden ](./getting-started.md) voor essentiële opstellingsstappen, met inbegrip van vereiste kopballen en API vraagovereenkomsten te herzien. Dan, onderzoek de eindpunt-specifieke gidsen op [ IP Toegang ](./ip-access.md) en [ IP Bevestiging ](./validate.md) voor het vormen en het beheren van veilige gegevenstoegang.
+
+Verwijs naar de [ de verwijzingsdocumentatie van OpenAPI van de Vergunning van Distiller van Gegevens ](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) om een gestandaardiseerd, machine-leesbaar formaat voor gemakkelijkere integratie, het testen, en de exploratie te bekijken.
+
+Voor informatie over de diverse reactieparameters voor elke teruggekeerde dataset, verwijs naar de [ API ontwikkelaarsdocumentatie van Datasets ](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
