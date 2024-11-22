@@ -2,9 +2,10 @@
 title: Regressiealgoritmen
 description: Leer om diverse regressiealgoritmen met zeer belangrijke parameters, beschrijvingen, en voorbeeldcode te vormen en te optimaliseren om u te helpen geavanceerde statistische modellen uitvoeren.
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: d38733bb-0420-40bf-a70b-19e0e0e58730
+source-git-commit: 8b9cfb48a11701f0e4b358416c6b627bedf1db8b
 workflow-type: tm+mt
-source-wordcount: '2150'
+source-wordcount: '2384'
 ht-degree: 2%
 
 ---
@@ -23,18 +24,18 @@ In de onderstaande tabel worden de belangrijkste parameters voor het configurere
 
 | Parameter | Beschrijving | Standaardwaarde | Mogelijke waarden |
 |------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------|
-| `MAX_BINS` | Het maximumaantal bakken bepaalt hoe ononderbroken eigenschappen in discrete intervallen worden verdeeld. Dit beïnvloedt hoe de eigenschappen bij elke knoop van de beslissingsboom worden verdeeld. Meer bins zorgen voor een hogere granulariteit. | 32 | Moet ten minste 2 en ten minste het aantal categorieën in een categorisch kenmerk zijn. |
-| `CACHE_NODE_IDS` | Als `false` , gaat het algoritme bomen tot uitvoerders over om instanties met knopen aan te passen. Indien `true`, plaatst het algoritme knoop IDs voor elke instantie in het voorgeheugen. Caching kan de opleiding van diepere bomen versnellen. | false | `true` of `false` |
-| `CHECKPOINT_INTERVAL` | Hiermee geeft u aan hoe vaak de in de cache opgeslagen knooppunt-id&#39;s moeten worden gecontroleerd. `10` betekent bijvoorbeeld dat de cache elke 10 herhalingen wordt gecontroleerd. | 10 | (>=1) |
-| `IMPURITY` | Het criterium dat wordt gebruikt voor de berekening van de informatieverbreding (hoofdlettergevoelig). | `gini` | `entropy`, `gini` |
-| `MAX_DEPTH` | De maximale diepte van de boom (niet-negatief). De diepte `0` betekent bijvoorbeeld 1 bladknooppunt en de diepte `1` 1 interne node en 2 bladknooppunten. | 5 | [ 0, 30 ] |
-| `MIN_INFO_GAIN` | De minimuminformatietoename die voor een splitsing wordt vereist om bij een boomknoop te worden overwogen. | 0,0 | (>=0,0) |
-| `MIN_WEIGHT_FRACTION_PER_NODE` | De minimale fractie van het gewogen aantal monsters die elk kind na een splitsing moet hebben. Als een splitsing ertoe leidt dat de fractie van het totale gewicht in een van beide kinderen kleiner is dan deze waarde, wordt deze weggegooid. | 0,0 | (>=0,0, 0,5) |
-| `MIN_INSTANCES_PER_NODE` | Het minimum aantal exemplaren dat elk kind na een splitsing moet hebben. Als een splitsing minder instanties oplevert dan deze waarde, wordt de splitsing genegeerd. | 1 | (>=1) |
-| `MAX_MEMORY_IN_MB` | Het maximale geheugen, in MB, dat is toegewezen aan histogramaggregatie. Als het geheugen te klein is, wordt slechts één knooppunt gesplitst per herhaling, wat ertoe kan leiden dat de aggregaten de grootte overschrijden. | 256 |                                                                                                        |
-| `PREDICTION_COL` | De parameter voor de naam van de voorspellingskolom. | &quot;voorspelling&quot; | Willekeurige tekenreeks |
-| `SEED` | De parameter voor het willekeurige zaad. | N.v.t. | Willekeurig 64-bits getal |
-| `WEIGHT_COL` | De parameter voor de naam van de gewichtskolom. Als deze niet is ingesteld of leeg is, worden alle instantiegewichten behandeld als `1.0` . | niet ingesteld |                                                                                                        |
+| `MAX_BINS` | Deze parameter specificeert het maximumaantal banden die worden gebruikt om ononderbroken eigenschappen in diskrediet te brengen en splits bij elke knoop te bepalen. Meer bindingen resulteren in een fijnere korreligheid en gedetailleerdheid. | 32 | Moet ten minste 2 en ten minste het aantal categorieën in een categorisch kenmerk zijn. |
+| `CACHE_NODE_IDS` | Deze parameter bepaalt of om knoop IDs voor elke instantie in het voorgeheugen onder te brengen. Als `false` , gaat het algoritme bomen tot uitvoerders over om instanties met knopen aan te passen. Als `true`, het algoritme knoop IDs voor elke instantie in cache plaatst, die de opleiding van diepere bomen kan versnellen. Gebruikers kunnen bepalen hoe vaak de cache moet worden gecontroleerd of uitschakelen door `CHECKPOINT_INTERVAL` in te stellen. | false | `true` of `false` |
+| `CHECKPOINT_INTERVAL` | Deze parameter specificeert hoe vaak de caching knoop IDs zou moeten worden gecontroleerd. Als u deze bijvoorbeeld instelt op `10` , wordt de cache elke 10 herhalingen gecontroleerd. Dit is alleen van toepassing als `CACHE_NODE_IDS` is ingesteld op `true` en de map checkpoint is geconfigureerd in `org.apache.spark.SparkContext` . | 10 | (>=1) |
+| `IMPURITY` | Deze parameter specificeert het criterium dat wordt gebruikt voor het berekenen van de informatietoename. Ondersteunde waarden zijn `entropy` en `gini` . | `gini` | `entropy`, `gini` |
+| `MAX_DEPTH` | Deze parameter geeft de maximale diepte van de structuur aan. Een diepte van `0` betekent bijvoorbeeld 1 bladknooppunt, terwijl een diepte van `1` 1 intern knooppunt en 2 bladknooppunten betekent. De diepte moet binnen het bereik `[0, 30]` liggen. | 5 | [ 0, 30 ] |
+| `MIN_INFO_GAIN` | Deze parameter plaatst de minimuminformatietoename die voor een spleet wordt vereist om als geldig op een boomknoop te worden beschouwd. | 0,0 | (>=0,0) |
+| `MIN_WEIGHT_FRACTION_PER_NODE` | Deze parameter specificeert de minimumfractie van de gewogen steekproeftelling die elke kindknoop na een spleet moet hebben. Als een van beide onderliggende knooppunten een fractie heeft die kleiner is dan deze waarde, wordt de splitsing genegeerd. | 0,0 | [ 0.0, 0.5 ] |
+| `MIN_INSTANCES_PER_NODE` | Deze parameter plaatst het minimumaantal instanties dat elke kindknoop na een spleet moet hebben. Als een splitsing minder instanties oplevert dan deze waarde, wordt de splitsing genegeerd als ongeldig. | 1 | (>=1) |
+| `MAX_MEMORY_IN_MB` | Deze parameter specificeert het maximumgeheugen, in megabytes (MB), dat voor histogramaggregatie wordt toegewezen. Als het geheugen te klein is, wordt slechts één knooppunt gesplitst per herhaling en kunnen de aggregaten ervan deze grootte overschrijden. | 256 | Een positief geheel getal |
+| `PREDICTION_COL` | Deze parameter specificeert de naam van de kolom die voor het opslaan van voorspellingen wordt gebruikt. | &quot;voorspelling&quot; | Willekeurige tekenreeks |
+| `SEED` | Met deze parameter wordt het willekeurige zaad ingesteld dat in het model wordt gebruikt. | Geen | Willekeurig 64-bits getal |
+| `WEIGHT_COL` | Deze parameter geeft de naam van de gewichtskolom aan. Wanneer deze parameter niet is ingesteld of leeg is, worden alle instantiegewichten behandeld als `1.0` . | Niet ingesteld | Willekeurige tekenreeks |
 
 {style="table-layout:auto"}
 
@@ -53,22 +54,22 @@ CREATE MODEL modelname OPTIONS(
 
 **Parameters**
 
-In de onderstaande tabel staan de belangrijkste parameters voor het configureren en optimaliseren van de prestaties van [!DNL Factorization Machines] Regression.
+In de onderstaande tabel staan de belangrijkste parameters voor het configureren en optimaliseren van de prestaties van [!DNL Factorization Machines] regression.
 
 | Parameter | Beschrijving | Standaardwaarde | Mogelijke waarden |
-|------------------------|--------------------------------------------------------------------------------------|---------------|----------------|
-| `TOL` | De convergentie-tolerantie. | `1E-6` | (>= 0) |
-| `FACTOR_SIZE` | De dimensionaliteit van de factoren. | 8 | (>= 0) |
-| `FIT_INTERCEPT` | Of een onderscheppingsterm moet passen. | `true` | `true`, `false` |
-| `FIT_LINEAR` | Of de lineaire term moet worden gebruikt (ook wel de eenrichtingsterm genoemd). | `true` | `true`, `false` |
-| `INIT_STD` | De standaardafwijking van de oorspronkelijke coëfficiënten. | 0,01 | (>= 0) |
-| `MAX_ITER` | Het aantal herhalingen dat het algoritme moet uitvoeren. | 100 | (>= 0) |
-| `MINI_BATCH_FRACTION` | De mini-batchfractie, die binnen het bereik `(0, 1]` moet liggen. | 1,0 | `(0, 1]` |
-| `REG_PARAM` | De regularisatieparameter. | 0,0 | (>= 0) |
-| `SEED` | Het willekeurige zaadje. | NIET INGESTELD | Willekeurig 64-bits getal |
-| `SOLVER` | Het solveralgoritme dat wordt gebruikt voor optimalisatie. | &quot;adamW&quot; | `gd`, `adamW` |
-| `STEP_SIZE` | De initiële stapgrootte voor de eerste stap (vergelijkbaar met de leersnelheid). | 1,0 |                   |
-| `PREDICTION_COL` | De naam van de voorspellingskolom. | &quot;voorspelling&quot; | Willekeurige tekenreeks |
+|------------------------|-------------------------------------------------------------------------------------------------|---------------|-----------------------|
+| `TOL` | Deze parameter specificeert de convergentie tolerantie voor het algoritme. Hogere waarden kunnen resulteren in snellere convergentie, maar minder nauwkeurigheid. | `1E-6` | (>= 0) |
+| `FACTOR_SIZE` | Deze parameter definieert de dimensionaliteit van de factoren. Hogere waarden verhogen de complexiteit van het model. | 8 | (>= 0) |
+| `FIT_INTERCEPT` | Deze parameter geeft aan of het model een onderscheppingsterm moet bevatten. | `true` | `true`, `false` |
+| `FIT_LINEAR` | Deze parameter specificeert of om een lineaire termijn (ook genoemd de 1 wegtermijn) in het model te omvatten. | `true` | `true`, `false` |
+| `INIT_STD` | Deze parameter definieert de standaardafwijking van de oorspronkelijke coëfficiënten die in het model worden gebruikt. | 0,01 | (>= 0) |
+| `MAX_ITER` | Deze parameter specificeert het maximumaantal herhalingen voor het algoritme om in werking te stellen. | 100 | (>= 0) |
+| `MINI_BATCH_FRACTION` | Deze parameter stelt de mini-batchfractie in, die het gedeelte van gegevens bepaalt dat in elke batch wordt gebruikt. Het moet binnen het bereik `(0, 1]` vallen. | 1,0 | `(0, 1]` |
+| `REG_PARAM` | Deze parameter plaatst de regularisatieparameter om overfitting te verhinderen. | 0,0 | (>= 0) |
+| `SEED` | Deze parameter specificeert het willekeurige zaad dat voor modelinitialisatie wordt gebruikt. | Geen | Willekeurig 64-bits getal |
+| `SOLVER` | Deze parameter specificeert het solveralgoritme dat voor optimalisering wordt gebruikt. | &quot;adamW&quot; | `gd` (verlopende descent), `adamW` |
+| `STEP_SIZE` | Deze parameter geeft de initiële stapgrootte (of leersnelheid) voor de eerste optimaliseringsstap aan. | 1,0 | Elke positieve waarde |
+| `PREDICTION_COL` | Deze parameter geeft de naam op van de kolom waarin de voorspellingen worden opgeslagen. | &quot;voorspelling&quot; | Willekeurige tekenreeks |
 
 {style="table-layout:auto"}
 
@@ -98,12 +99,12 @@ In de onderstaande tabel staan de belangrijkste parameters voor het configureren
 | `FAMILY` | De familieparameter, die de foutendistributie beschrijft die in het model wordt gebruikt. Ondersteunde opties zijn `gaussian` , `binomial` , `poisson` , `gamma` en `tweedie` . | &quot;gaussiaans&quot; | `gaussian`, `binomial`, `poisson`, `gamma`, `tweedie` |
 | `FIT_INTERCEPT` | Of een onderscheppingsterm moet passen. | `true` | `true`, `false` |
 | `LINK` | De koppelingsfunctie, die de relatie tussen de lineaire voorspeller en het gemiddelde van de distributiefunctie bepaalt. Ondersteunde opties zijn `identity` , `log` , `inverse` , `logit` , `probit` , `cloglog` en `sqrt` . | NIET INGESTELD | `identity`, `log`, `inverse`, `logit`, `probit`, `cloglog`, `sqrt` |
-| `LINK_POWER` | De index in de power link functie, van toepassing op de [!DNL Tweedie] familie. Als deze optie niet is ingesteld, wordt deze standaard ingesteld op `1 - variancePower` , na het R `statmod` -pakket. De bevoegdheden van de verbinding van 0, 1, -1, en 0.5 beantwoorden aan Logboek, Identiteit, Omgekeerde, en Sqrt verbinding, respectievelijk. | 1 |
+| `LINK_POWER` | Deze parameter specificeert de index in de macht verbindingsfunctie. De parameter is alleen van toepassing op de [!DNL Tweedie] -familie. Als deze niet is ingesteld, wordt de standaardwaarde ingesteld op `1 - variancePower` , die wordt uitgelijnd met het R `statmod` -pakket. Specifieke verbindingsbevoegdheden 0, 1, -1 en 0,5 komen overeen met respectievelijk de koppelingen Logboek, Identiteit, Omgekeerd en Sqrt. | 1 | Willekeurige numerieke waarde |
 | `SOLVER` | Het solveralgoritme dat wordt gebruikt voor optimalisatie. Ondersteunde optie: `irls` (minst vierkanten herhaaldelijk opnieuw gewogen). | &quot;irls&quot; | `irls` |
-| `VARIANCE_POWER` | De macht in de variantfunctie van de [!DNL Tweedie] distributie, die de verhouding tussen variantie en gemiddelde bepaalt. Ondersteunde waarden zijn 0 en `[1, inf)` . | 0,0 | 0, `[1, inf)` |
+| `VARIANCE_POWER` | Deze parameter specificeert de macht in de variancefunctie van de [!DNL Tweedie] distributie, die de verhouding tussen variantie en gemiddelde bepaalt. Ondersteunde waarden zijn 0 en `[1, inf)` . Variantiebevoegdheden van 0, 1 en 2 komen overeen met respectievelijk de families Gaussiaans, Poisson en Gamma. | 0,0 | 0, `[1, inf)` |
 | `LINK_PREDICTION_COL` | De kolomnaam voor de koppelingsvoorspelling (lineaire voorspelling). | NIET INGESTELD | Willekeurige tekenreeks |
-| `OFFSET_COL` | De naam van de verschuivingskolom. Indien niet ingesteld, worden alle instantieverschuivingen behandeld als 0,0. De verschuivingsfunctie heeft een constante coëfficiënt van 1,0. | NIET INGESTELD |                                                                        |
-| `WEIGHT_COL` | De naam van de gewichtskolom. Als deze niet is ingesteld of leeg is, worden alle instantiegewichten behandeld als `1.0` . In de Binomial-familie komen de gewichten overeen met het aantal onderzoeken en worden niet-gehele gewichten afgerond in de AIC-berekening. | NIET INGESTELD |                                                                        |
+| `OFFSET_COL` | De naam van de verschuivingskolom. Indien niet ingesteld, worden alle instantieverschuivingen behandeld als 0,0. De verschuivingsfunctie heeft een constante coëfficiënt van 1,0. | NIET INGESTELD | Willekeurige tekenreeks |
+| `WEIGHT_COL` | De naam van de gewichtskolom. Als deze niet is ingesteld of leeg is, worden alle instantiegewichten behandeld als `1.0` . In de Binomial-familie komen de gewichten overeen met het aantal onderzoeken en worden niet-gehele gewichten afgerond in de AIC-berekening. | NIET INGESTELD | Willekeurige tekenreeks |
 
 {style="table-layout:auto"}
 
@@ -133,14 +134,14 @@ In de onderstaande tabel staan de belangrijkste parameters voor het configureren
 | `MIN_INFO_GAIN` | De minimuminformatietoename die voor een splitsing wordt vereist om bij een boomknoop te worden overwogen. | 0,0 | (>= 0,0) |
 | `MIN_WEIGHT_FRACTION_PER_NODE` | De minimale fractie van het gewogen aantal monsters die elk kind na een splitsing moet hebben. Als een splitsing ertoe leidt dat de fractie van het totale gewicht in een van beide kinderen kleiner is dan deze waarde, wordt deze weggegooid. | 0,0 | (>= 0,0, &lt;= 0,5) |
 | `MIN_INSTANCES_PER_NODE` | Het minimum aantal exemplaren dat elk kind na een splitsing moet hebben. Als een splitsing minder instanties oplevert dan deze waarde, wordt de splitsing genegeerd. | 1 | (>= 1) |
-| `MAX_MEMORY_IN_MB` | Het maximale geheugen, in MB, dat is toegewezen aan histogramaggregatie. Als deze waarde te klein is, wordt slechts één knooppunt gesplitst per iteratie en kunnen de aggregaten ervan deze grootte overschrijden. | 256 |                                                                                                      |
+| `MAX_MEMORY_IN_MB` | Het maximale geheugen, in MB, dat is toegewezen aan histogramaggregatie. Als deze waarde te klein is, wordt slechts één knooppunt gesplitst per iteratie en kunnen de aggregaten ervan deze grootte overschrijden. | 256 | Een positief geheel getal |
 | `PREDICTION_COL` | De kolomnaam voor voorspellingsuitvoer. | &quot;voorspelling&quot; | Willekeurige tekenreeks |
 | `VALIDATION_INDICATOR_COL` | De kolomnaam die aangeeft of elke rij wordt gebruikt voor training of validatie. `false` voor training en `true` voor validatie. | NIET INGESTELD | Willekeurige tekenreeks |
 | `LEAF_COL` | De kolomnaam voor bladindexen. De voorspelde bladindex van elke instantie in elke boomstructuur, die wordt gegenereerd door het traversal van de voorvolgorde. | &quot;&quot; | Willekeurige tekenreeks |
-| `FEATURE_SUBSET_STRATEGY` | Het aantal eigenschappen overwogen voor het verdelen bij elke boomknoop. | &quot;auto&quot; | `auto`, `all`, `onethird`, `sqrt`, `log2`, `n` (waarbij `n` een fractie tussen 0 en 1,0 is) |
+| `FEATURE_SUBSET_STRATEGY` | Deze parameter specificeert het aantal eigenschappen om voor spleten bij elke boomknoop in overweging te nemen. | &quot;auto&quot; | `auto` , `all` , `onethird` , `sqrt` , `log2` of een fractie tussen 0 en 1,0 |
 | `SEED` | Het willekeurige zaadje. | NIET INGESTELD | Willekeurig 64-bits getal |
-| `WEIGHT_COL` | De kolomnaam, bijvoorbeeld, gewichten. Als deze niet is ingesteld of leeg is, worden alle instantiegewichten behandeld als `1.0` . | NIET INGESTELD |                                                                                                      |
-| `LOSS_TYPE` | De verliesfunctie die het [!DNL Gradient Boosted Tree] -model probeert te minimaliseren. | &quot;kwadraat&quot; | `squared` (L2) en `absolute` (L1). Opmerking: waarden zijn niet hoofdlettergevoelig. |
+| `WEIGHT_COL` | De kolomnaam, bijvoorbeeld, gewichten. Als deze niet is ingesteld of leeg is, worden alle instantiegewichten behandeld als `1.0` . | NIET INGESTELD | Willekeurige tekenreeks |
+| `LOSS_TYPE` | Deze parameter geeft de verliesfunctie aan die het [!DNL Gradient Boosted Tree] model minimaliseert. | &quot;kwadraat&quot; | `squared` (L2) en `absolute` (L1). Opmerking: waarden zijn niet hoofdlettergevoelig. |
 | `STEP_SIZE` | De stapgrootte (ook wel de leersnelheid genoemd) in het bereik `(0, 1]` die wordt gebruikt om de bijdrage van elke schatter te verlagen. | 0,1 | `(0, 1]` |
 | `MAX_ITER` | Het maximumaantal herhalingen voor het algoritme. | 20 | (>= 0) |
 | `SUBSAMPLING_RATE` | Het deel van de trainingsgegevens dat wordt gebruikt om elke beslissingsstructuur te leren, in het bereik `(0, 1]` . | 1,0 | `(0, 1]` |
@@ -169,7 +170,7 @@ In de onderstaande tabel staan de belangrijkste parameters voor het configureren
 | `ISOTONIC` | Geeft aan of de uitvoerreeks isotonisch (toenemend) moet zijn wanneer deze `true` of antitonisch (afnemend) is wanneer `false` . | `true` | `true`, `false` |
 | `WEIGHT_COL` | De kolomnaam, bijvoorbeeld, gewichten. Als deze niet is ingesteld of leeg is, worden alle instantiegewichten behandeld als `1.0` . | NIET INGESTELD | Willekeurige tekenreeks |
 | `PREDICTION_COL` | De kolomnaam voor voorspellingsuitvoer. | &quot;voorspelling&quot; | Willekeurige tekenreeks |
-| `FEATURE_INDEX` | De index van de functie, van toepassing wanneer `featuresCol` een vectorkolom is. Als deze niet is ingesteld, is de standaardwaarde `0` . Anders heeft het geen effect. | 0 |                 |
+| `FEATURE_INDEX` | De index van de functie, van toepassing wanneer `featuresCol` een vectorkolom is. Als deze niet is ingesteld, is de standaardwaarde `0` . Anders heeft het geen effect. | 0 | Een niet-negatief geheel getal |
 
 {style="table-layout:auto"}
 
@@ -221,14 +222,14 @@ In de onderstaande tabel staan de belangrijkste parameters voor het configureren
 | `CACHE_NODE_IDS` | Als `false` , gaat het algoritme bomen tot uitvoerders over om instanties met knopen aan te passen. Als `true`, het algoritme knoop IDs voor elke instantie in cache plaatst, die de opleiding van diepere bomen versnelt. | `false` | `true`, `false` |
 | `CHECKPOINT_INTERVAL` | Hiermee geeft u aan hoe vaak de in de cache opgeslagen knooppunt-id&#39;s moeten worden gecontroleerd. `10` betekent bijvoorbeeld dat de cache om de 10 herhalingen wordt gecontroleerd. | 10 | (>= 1) |
 | `IMPURITY` | Het criterium dat wordt gebruikt voor de berekening van de informatieverbreding (hoofdlettergevoelig). | &quot;entropie&quot; | `entropy`, `gini` |
-| `MAX_DEPTH` | De maximale diepte van de boom (niet-negatief). De diepte `0` betekent bijvoorbeeld 1 bladknooppunt en de diepte `1` 1 interne node en 2 bladknooppunten. | 5 | [ 0, 30 ] |
+| `MAX_DEPTH` | De maximale diepte van de boom (niet-negatief). De diepte `0` betekent bijvoorbeeld 1 bladknooppunt en de diepte `1` 1 interne node en 2 bladknooppunten. | 5 | Een niet-negatief geheel getal |
 | `MIN_INFO_GAIN` | De minimuminformatietoename die voor een splitsing wordt vereist om bij een boomknoop te worden overwogen. | 0,0 | (>= 0,0) |
 | `MIN_WEIGHT_FRACTION_PER_NODE` | De minimale fractie van het gewogen aantal monsters die elk kind na een splitsing moet hebben. Als een splitsing ertoe leidt dat de fractie van het totale gewicht in een van beide kinderen kleiner is dan deze waarde, wordt deze weggegooid. | 0,0 | (>= 0,0, &lt;= 0,5) |
 | `MIN_INSTANCES_PER_NODE` | Het minimum aantal exemplaren dat elk kind na een splitsing moet hebben. Als een splitsing minder instanties oplevert dan deze waarde, wordt de splitsing genegeerd. | 1 | (>= 1) |
-| `MAX_MEMORY_IN_MB` | Het maximale geheugen, in MB, dat is toegewezen aan histogramaggregatie. Als deze waarde te klein is, wordt slechts één knooppunt gesplitst per iteratie en kunnen de aggregaten ervan deze grootte overschrijden. | 256 |                                                                                                      |
+| `MAX_MEMORY_IN_MB` | Het maximale geheugen, in MB, dat is toegewezen aan histogramaggregatie. Als deze waarde te klein is, wordt slechts één knooppunt gesplitst per iteratie en kunnen de aggregaten ervan deze grootte overschrijden. | 256 | (>= 1) |
 | `BOOTSTRAP` | Of laarzentestmonsters moeten worden gebruikt bij het bouwen van bomen. | TRUE | `true`, `false` |
 | `NUM_TREES` | Het aantal bomen dat moet worden opgeleid (ten minste 1). Als `1` , wordt geen bootstrapping gebruikt. Als dit groter is dan `1`, wordt de overvulling bootstrapping toegepast. | 20 | (>= 1) |
-| `SUBSAMPLING_RATE` | Het deel van trainingsgegevens dat wordt gebruikt om elke beslissingsboom te trainen, in het bereik `(0, 1]`. | 1,0 | `(0, 1]` |
+| `SUBSAMPLING_RATE` | Het deel van trainingsgegevens dat wordt gebruikt om elke beslissingsboom te trainen, in het bereik `(0, 1]`. | 1,0 | (>= 0,0, &lt;= 1) |
 | `LEAF_COL` | De kolomnaam voor bladindexen, de voorspelde bladindex van elke instantie in elke boom, die wordt gegenereerd door het vooraf doorlopen van de volgorde. | &quot;&quot; | Willekeurige tekenreeks |
 | `PREDICTION_COL` | De kolomnaam voor voorspellingsuitvoer. | &quot;voorspelling&quot; | Willekeurige tekenreeks |
 | `SEED` | Het willekeurige zaadje. | NIET INGESTELD | Willekeurig 64-bits getal |

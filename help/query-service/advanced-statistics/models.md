@@ -2,9 +2,10 @@
 title: Modellen
 description: Model levenscyclusbeheer met de extensie Data Distiller SQL. Leer hoe u geavanceerde statistische modellen kunt maken, trainen en beheren met SQL, inclusief belangrijke processen zoals modelversioning, evaluatie en voorspelling, om actioneerbare inzichten van uw gegevens af te leiden.
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: c609a55a-dbfd-4632-8405-55e99d1e0bd8
+source-git-commit: 6a61900b19543f110c47e30f4d321d0016b65262
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1229'
 ht-degree: 0%
 
 ---
@@ -76,19 +77,33 @@ Gebruik SQL om naar de dataset te verwijzen die voor opleiding wordt gebruikt.
 
 ## Een model bijwerken {#update}
 
-Leer hoe te om een bestaand machine het leren model bij te werken door nieuwe eigenschappen technische transformaties toe te passen en opties zoals het type van algoritme en etiketkolom te vormen. In de onderstaande SQL ziet u hoe u het versienummer van het model verhoogt bij elke update en hoe u ervoor zorgt dat wijzigingen worden bijgehouden, zodat het model opnieuw kan worden gebruikt in toekomstige evaluatie- of voorspellingsstappen.
+Leer hoe te om een bestaand machine het leren model bij te werken door nieuwe eigenschappen technische transformaties toe te passen en opties zoals het algoritmetype en etiketkolom te vormen. Bij elke update wordt een nieuwe versie van het model gemaakt, die vanaf de laatste versie wordt verhoogd. Dit zorgt ervoor dat de wijzigingen worden bijgehouden en dat het model opnieuw kan worden gebruikt in toekomstige evaluatie- of voorspellingsstappen.
+
+In het volgende voorbeeld ziet u hoe u een model bijwerkt met nieuwe transformaties en opties:
 
 ```sql
-UPDATE model <model_alias> transform( one_hot_encoder(NAME) ohe_name, string_indexer(gender) gendersi) options ( type = 'LogisticRegression', label = <label-COLUMN>, ) ASSELECT col1,
-       col2,
-       col3
-FROM   training-dataset.
+UPDATE MODEL <model_alias> TRANSFORM (vector_assembler(array(current_customers, previous_customers)) features)  OPTIONS(MODEL_TYPE='logistic_reg', LABEL='churn_rate')  AS SELECT * FROM churn_with_rate ORDER BY period;
 ```
 
-Om u te helpen begrijpen hoe te om modelversies te beheren en transformaties effectief toe te passen, verklaren de volgende nota&#39;s de belangrijkste componenten en de opties in het werkschema van de modelupdate.
+**Voorbeeld**
 
-- `UPDATE model <model_alias>`: de opdracht Bijwerken verwerkt het versienummer en verhoogt het versienummer van het model bij elke update.
-- `version`: Een optioneel trefwoord dat alleen tijdens updates wordt gebruikt om een nieuwe versie van het model te maken.
+Om u te helpen het versioning proces begrijpen, overweeg het volgende bevel:
+
+```sql
+UPDATE MODEL model_vdqbrja OPTIONS(MODEL_TYPE='logistic_reg', LABEL='Survived') AS SELECT * FROM titanic_e2e_dnd;
+```
+
+Nadat deze opdracht is uitgevoerd, heeft het model een nieuwe versie, zoals in de onderstaande tabel wordt getoond:
+
+| Bijgewerkte model-id | Bijgewerkt model | Nieuwe versie |
+|--------------------------------------------|---------------|-------------|
+| a8f6a254-8f28-42ec-8b26-94edeb4698e8 | model_vdqbrja | 2 |
+
+In de volgende notities worden de belangrijkste componenten en opties in de workflow voor modelupdates beschreven.
+
+- `UPDATE model <model_alias>`: de opdracht Bijwerken verwerkt het versiebeheer en maakt een nieuwe modelversie die is verhoogd vanaf de laatste versie.
+- `version`: Een optioneel trefwoord dat alleen tijdens updates wordt gebruikt om expliciet op te geven dat een nieuwe versie moet worden gemaakt. Als deze waarde wordt weggelaten, wordt de versie automatisch door het systeem verhoogd.
+
 
 ## Modellen evalueren {#evaluate-model}
 

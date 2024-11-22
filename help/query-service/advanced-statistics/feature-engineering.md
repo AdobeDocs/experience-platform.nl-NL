@@ -2,9 +2,10 @@
 title: SQL-extensie met functies Engineering
 description: Meer informatie over de Distiller-functie voor gegevens vindt u in SQL-extensie voor het vooraf verwerken van gegevens voor geavanceerde statistische modellering. Het behandelt de beschikbare eigenschappen extractie, transformatie, en selectietechnieken.
 role: Developer
-source-git-commit: 1fcfb5c41750e853daaf036ceaae3527b805391c
+exl-id: 622c8ef3-9651-46b3-ad22-021a93190149
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '735'
 ht-degree: 0%
 
 ---
@@ -41,9 +42,10 @@ Naast het extraheren van eigenschappen, gebruik de volgende algemene transformat
 
 Hieronder vindt u een lijst met gereedschappen voor het verwerken van een groot aantal gegevenstypen om de workflow voor het voorbewerken van gegevens te verbeteren.
 
-- **[Numerieke Imputer](./feature-transformation.md#numeric-imputer)**: Vul ontbrekende waarden in numerieke kolommen met a
-- **[Imputer van het Koord](./feature-transformation.md#string-imputer)**: Vervang ontbrekende koordwaarden met gespecificeerd
-- **[VectorAssembler](./feature-transformation.md#vector-assembler)**: Combineer veelvoudige kolommen in één enkele vectorkolom.
+- **[Numerieke Imputer](./feature-transformation.md#numeric-imputer)**: Vul ontbrekende waarden in numerieke kolommen met een gespecificeerde waarde, zoals het gemiddelde of mediaan.
+- **[Imputer van het Koord](./feature-transformation.md#string-imputer)**: Vervang ontbrekende koordwaarden met een gespecificeerde waarde, zoals het meest frequente koord in de kolom.
+- **[VectorAssembler](./feature-transformation.md#vector-assembler)**: Combineer veelvoudige kolommen in één enkele vectorkolom om gegevens voor machine het leren modellen voor te bereiden.
+- **[Imputer Van Boole](./feature-transformation.md#boolean-imputer)**: Vul ontbrekende booleaanse waarden met een gespecificeerde waarde, zoals `true` of `false`.
 
 #### Numerieke transformatoren
 
@@ -88,7 +90,7 @@ Use a clustering algorithm to group data points into distinct clusters based on 
 
 ## De OPTIONS-clausule implementeren {#options-clause}
 
-Wanneer u uw model definieert, gebruikt u de component `OPTIONS` om het algoritme en de bijbehorende parameters op te geven. Stel eerst de parameter `type` in om het algoritme aan te geven dat u gebruikt, zoals `K-Means` . Vervolgens definieert u de relevante parameters in de `OPTIONS` -component als sleutel-waardeparen om uw model te perfectioneren. Begrijp dat sommige parameters positioneel kunnen zijn en alle voorafgaande parameters moeten worden gespecificeerd als de douanewaarden worden verstrekt. Als u ervoor kiest om bepaalde parameters niet aan te passen, past het systeem standaardinstellingen toe. Raadpleeg de relevante documentatie voor een beter begrip van de functie en standaardwaarden van elke parameter.
+Wanneer u uw model definieert, gebruikt u de component `OPTIONS` om het algoritme en de bijbehorende parameters op te geven. Stel eerst de parameter `type` in om het algoritme aan te geven dat u gebruikt, zoals `K-Means` . Vervolgens definieert u de relevante parameters in de `OPTIONS` -component als sleutel-waardeparen om uw model te perfectioneren. Als u ervoor kiest om bepaalde parameters niet aan te passen, past het systeem standaardinstellingen toe. Raadpleeg de relevante documentatie voor een beter begrip van de functie en standaardwaarden van elke parameter.
 
 ### Volgende stappen
 

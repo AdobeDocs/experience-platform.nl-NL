@@ -2,9 +2,10 @@
 title: Technieken voor kenmerktransformatie
 description: Leer essentiële voorbewerkingstechnieken, zoals gegevenstransformatie, codering en schaling met functies, waarmee gegevens worden voorbereid voor training in statistische modellen. Het behandelt het belang van het behandelen van ontbrekende waarden en het omzetten van categoriale gegevens om modelprestaties en nauwkeurigheid te verbeteren.
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: ed7fa9b7-f74e-481b-afba-8690ce50c777
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '3437'
+source-wordcount: '3450'
 ht-degree: 5%
 
 ---
@@ -55,14 +56,14 @@ CREATE model modelname options(model_type='logistic_reg', label='rating') AS SEL
 
 Als u aangepaste gegevensvoorbewerking wilt definiëren in de instructie `CREATE MODEL` , gebruikt u de component `TRANSFORM` in combinatie met een willekeurig aantal van de beschikbare transformatiefuncties. Deze handmatige voorbewerkingsfuncties kunnen ook buiten de component `TRANSFORM` worden gebruikt. Alle transformaties die in de [ transformatorsectie hieronder ](#available-transformations) worden besproken, kunnen worden gebruikt om de gegevens manueel vooraf te verwerken.
 
-### Belangrijkste kenmerken
+### Belangrijkste kenmerken {#key-characteristics}
 
 Hier volgt een overzicht van de belangrijkste kenmerken van functietransformatie waarmee u rekening moet houden wanneer u de voorbewerkingsfuncties definieert:
 
 - **Syntaxis**: `TRANSFORM(functionName(colName, parameters) <aliasNAME>)`
    - De naam van de alias is verplicht in de syntaxis. U moet een aliasnaam opgeven anders mislukt de query.
 
-- **Parameters**: De parameters zijn positionele argumenten. Dit betekent dat elke parameter alleen bepaalde waarden kan aannemen. Raadpleeg de relevante documentatie voor meer informatie over welke functie het argument gebruikt.
+- **Parameters**: De parameters zijn positionele argumenten. Dit betekent dat elke parameter alleen bepaalde waarden kan gebruiken en dat alle voorafgaande parameters moeten worden opgegeven als er aangepaste waarden zijn opgegeven. Raadpleeg de relevante documentatie voor meer informatie over welke functie het argument gebruikt.
 
 - **het Ketsen transformatoren**: De output van één transformator kan de input aan een andere transformator worden.
 
@@ -180,7 +181,7 @@ transform(string_imputer(name, 'unknown_name') as name_imputed)
 | 1 | ml_unknown |
 | 2 | Alice |
 
-#### Booleaanse invoer {#imputer}
+#### Booleaanse invoer {#boolean-imputer}
 
 De **invoertransformator Van Boole** voltooit ontbrekende waarden in een dataset voor een booleaanse kolom. De invoer- en uitvoerkolommen moeten van het `Boolean` type zijn.
 
