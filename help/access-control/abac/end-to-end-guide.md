@@ -4,18 +4,18 @@ title: Op attributen-Gebaseerde Gids van de Controle van de Toegang van begin to
 description: Dit document verstrekt een gids van begin tot eind op op attribuut-gebaseerde toegangsbeheer in Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: b9ce27b6feb0300464507a21510f40900677c3be
+source-git-commit: 5b9200b9e534519ce2f3c1a529a30b032642ab7f
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1713'
 ht-degree: 1%
 
 ---
 
 # Op attributen-gebaseerde toegangsbeheergids van begin tot eind
 
-Gebruik op kenmerken gebaseerde toegangscontrole op Adobe Experience Platform om uzelf en andere privacybewuste klanten meer flexibiliteit te bieden om gebruikerstoegang te beheren. De toegang tot individuele voorwerpen, zoals schemagebieden en segmenten, kan met beleid worden verleend dat op de attributen en de rol van de objecten wordt gebaseerd. Met deze functie kunt u toegang tot individuele objecten verlenen of intrekken voor specifieke platformgebruikers in uw organisatie.
+Gebruik op kenmerken gebaseerde toegangscontrole op Adobe Experience Platform om uzelf en andere privacybewuste klanten meer flexibiliteit te bieden om gebruikerstoegang te beheren. De toegang tot individuele voorwerpen, zoals schemagebieden en publiek, kan met beleid worden verleend dat op de attributen en de rol van de objecten wordt gebaseerd. Met deze functie kunt u toegang tot individuele objecten verlenen of intrekken voor specifieke platformgebruikers in uw organisatie.
 
-Deze functionaliteit staat u toe om schemagebieden, segmenten, etc. met etiketten te categoriseren die organisatie of gegevensgebruikswerkingsgebied bepalen. U kunt dezelfde labels toepassen op reizen, aanbiedingen en andere objecten in Adobe Journey Optimizer. Tegelijkertijd kunnen beheerders toegangsbeleid definiëren rondom XDM-schemavelden (Experience Data Model) en beter beheren welke gebruikers of groepen (interne, externe of externe gebruikers) toegang hebben tot deze velden.
+Met deze functionaliteit kunt u schemavelden, publiek, enzovoort categoriseren met labels die het bereik van organisatie- of gegevensgebruik definiëren. U kunt dezelfde labels toepassen op reizen, aanbiedingen en andere objecten in Adobe Journey Optimizer. Tegelijkertijd kunnen beheerders toegangsbeleid definiëren rondom XDM-schemavelden (Experience Data Model) en beter beheren welke gebruikers of groepen (interne, externe of externe gebruikers) toegang hebben tot deze velden.
 
 >[!NOTE]
 >
@@ -44,8 +44,8 @@ Om dit te doen, moet u rollen, middelen, en beleid vormen.
 U zult:
 
 * [ Etiket de rollen voor uw gebruikers ](#label-roles): Gebruik het voorbeeld van een gezondheidszorgleverancier (ACME BedrijfsGroep) de waarvan marketing groep met externe agentschappen werkt.
-* [ Etiket uw middelen (schemagebieden en segmenten) ](#label-resources): wijs het **[!UICONTROL PHI/ Regulated Health Data]** etiket aan schemamiddelen en segmenten toe.
-* [ activeer het beleid dat hen samen ](#policy) zal verbinden: Laat het standaardbeleid toe om toegang tot schemagebieden en segmenten te verhinderen door de etiketten op uw middelen aan de etiketten in uw rol te verbinden. Gebruikers met overeenkomende labels krijgen dan toegang tot het schemaveld en segmenten in alle sandboxen.
+* [ Etiket uw middelen (schemagebieden en publiek) ](#label-resources): Wijs het **[!UICONTROL PHI/ Regulated Health Data]** etiket aan schemamiddelen en publiek toe.
+* [ activeer het beleid dat hen samen ](#policy) zal verbinden: Laat het standaardbeleid toe om toegang tot schemagebieden en publiek te verhinderen door de etiketten op uw middelen aan de etiketten in uw rol te verbinden. Gebruikers met overeenkomende labels krijgen dan toegang tot het schemaveld en segmenten in alle sandboxen.
 
 ## Machtigingen
 
@@ -59,7 +59,7 @@ Zodra u admin voorrechten hebt, ga naar [ Adobe Experience Cloud ](https://exper
 
 ![ Beeld dat het product toont van Toestemmingen dat in Adobe Experience Cloud wordt geselecteerd ](../images/flac-ui/flac-select-product.png)
 
-De werkruimte voor machtigingen voor de gebruikersinterface van het platform wordt geopend op de pagina **[!UICONTROL Roles]** .
+De werkruimte voor machtigingen voor de gebruikersinterface van het platform wordt geopend op de pagina **[!UICONTROL Overview]** .
 
 ## Labels op een rol toepassen {#label-roles}
 
@@ -94,15 +94,15 @@ De werkruimte voor machtigingen voor de gebruikersinterface van het platform wor
 
 Rollen zijn manieren om de soorten gebruikers te categoriseren die met uw instantie van het Platform in wisselwerking staan en zijn bouwstenen van toegangsbeheerbeleid. Een rol heeft een bepaalde reeks toestemmingen, en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van toegang worden toegewezen zij nodig hebben.
 
-Selecteer **[!UICONTROL ACME Business Group]** in het menu van de **[!UICONTROL Roles]** -pagina om aan de slag te gaan.
+Selecteer **[!UICONTROL Roles]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL ACME Business Group]** om aan de slag te gaan.
 
-![ Beeld dat de ACME BedrijfsRol toont die in Rollen wordt geselecteerd ](../images/abac-end-to-end-user-guide/abac-select-role.png)
+![ Beeld dat de ACME BedrijfsGroep toont die in Rollen wordt geselecteerd ](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
 Selecteer vervolgens **[!UICONTROL Labels]** en selecteer **[!UICONTROL Add Labels]** .
 
 ![ Beeld dat etiketten toont die op het lusje van Etiketten worden geselecteerd ](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-Er wordt een lijst met alle labels in uw organisatie weergegeven. Selecteer **[!UICONTROL RHD]** om het label voor **[!UICONTROL PHI/Regulated Health Data]** toe te voegen. Laat even een blauw vinkje naast het label staan en selecteer vervolgens **[!UICONTROL Save]** .
+Er wordt een lijst met alle labels in uw organisatie weergegeven. Selecteer **[!UICONTROL RHD]** om het label voor **[!UICONTROL PHI/Regulated Health Data]** toe te voegen en selecteer vervolgens **[!UICONTROL Save]** .
 
 ![ Beeld dat het etiket toont RHD dat wordt geselecteerd en wordt bewaard ](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
@@ -113,6 +113,10 @@ Er wordt een lijst met alle labels in uw organisatie weergegeven. Selecteer **[!
 ## Labels toepassen op schemavelden {#label-resources}
 
 Nu u een gebruikersrol met het [!UICONTROL RHD] etiket hebt gevormd, moet de volgende stap dat zelfde etiket aan de middelen toevoegen die u voor die rol wilt controleren.
+
+Van de hoogste navigatie, selecteer **toepassingsschakelaar**, die door het ![ wordt vertegenwoordigd toepassings schakelaar ](/help/images/icons/apps.png) pictogram en selecteer dan **[!UICONTROL Experience Platform]**.
+
+![ Beeld dat Experience Platform toont dat van het drop-down menu van de toepassingsschakelaar wordt geselecteerd ](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
 Selecteer **[!UICONTROL Schemas]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL ACME Healthcare]** in de lijst met schema&#39;s die worden weergegeven.
 
@@ -130,30 +134,30 @@ Het dialoogvenster **[!UICONTROL Edit labels]** wordt weergegeven, waarin u de l
 >
 >Wanneer een label aan een veld wordt toegevoegd, wordt dat label toegepast op de bovenliggende bron van dat veld (een klasse of een veldgroep). Als de ouderklasse of de gebiedsgroep door andere schema&#39;s wordt gebruikt, zullen die schema&#39;s het zelfde etiket erven.
 
-## Labels toepassen op segmenten
+## Labels toepassen op het publiek
 
 >[!NOTE]
 >
->Om het even welk segment dat een geëtiketteerd attribuut gebruikt moet eveneens worden geëtiketteerd als u de zelfde toegangsbeperkingen op het wilt toepassen.
+>Om het even welk publiek dat een geëtiketteerd attribuut gebruikt moet eveneens worden geëtiketteerd als u de zelfde toegangsbeperkingen op het wilt toepassen.
 
-Nadat u de schemavelden hebt gelabeld, kunt u nu beginnen met het labelen van de segmenten.
+Nadat u de schemavelden hebt gelabeld, kunt u nu beginnen met het labelen van uw publiek.
 
-Selecteer **[!UICONTROL Segments]** in de linkernavigatie. Een lijst van segmenten beschikbaar in uw organisatie wordt getoond. In dit voorbeeld moeten de volgende twee segmenten worden gelabeld omdat ze gevoelige gezondheidsgegevens bevatten:
+Selecteer **[!UICONTROL Audiences]** in de linkernavigatie onder de sectie **[!UICONTROL Customers]** . Er wordt een lijst met publiek in uw organisatie weergegeven. In dit voorbeeld moeten de volgende twee soorten publiek worden geëtiketteerd omdat ze gevoelige gezondheidsgegevens bevatten:
 
 * Bloedglucose > 100
 * Insuline &lt;50
 
-Selecteer **[!UICONTROL Blood Glucose >100]** om het segment te labelen.
+Selecteer **[!UICONTROL Blood Glucose >100]** (door de publieksnaam, niet checkbox) om het publiek te etiketteren.
 
-![ Beeld dat de Glucose van het Bloed toont >100 die van het lusje van Segmenten wordt geselecteerd ](../images/abac-end-to-end-user-guide/abac-select-segment.png)
+![ Beeld dat de Glucose van het Bloed toont >100 die van het Publiek tabel wordt geselecteerd ](../images/abac-end-to-end-user-guide/abac-select-audience.png)
 
 Het scherm segment **[!UICONTROL Details]** wordt weergegeven. Selecteer **[!UICONTROL Manage Access]**.
 
-![ Beeld die de selectie van toont beheert toegang ](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
+![ Beeld die de selectie van toont beheert toegang ](../images/abac-end-to-end-user-guide/abac-audience-fields-manage-access.png)
 
-Het dialoogvenster **[!UICONTROL Edit labels]** wordt weergegeven, zodat u de labels kunt kiezen die u op het segment wilt toepassen. Selecteer voor dit gebruik het label **[!UICONTROL PHI/ Regulated Health Data]** en selecteer vervolgens **[!UICONTROL Save]** .
+Het dialoogvenster **[!UICONTROL Apply access and data governance labels]** wordt weergegeven, waarin u de labels kunt kiezen die u op het publiek wilt toepassen. Selecteer voor dit gebruik het label **[!UICONTROL PHI/ Regulated Health Data]** en selecteer vervolgens **[!UICONTROL Save]** .
 
-![ Beeld dat de selectie van het etiket toont RHD en sparen wordt geselecteerd ](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
+![ Beeld dat de selectie van het etiket toont RHD en sparen wordt geselecteerd ](../images/abac-end-to-end-user-guide/abac-select-audience-labels.png)
 
 Herhaal bovenstaande stappen met **[!UICONTROL Insulin <50]** .
 
@@ -163,13 +167,13 @@ Herhaal bovenstaande stappen met **[!UICONTROL Insulin <50]** .
 
 ## Activeer het beleid van de toegangscontrole {#policy}
 
-Het standaardtoegangsbeheerbeleid zal hefboometiketten gebruiken om te bepalen welke gebruikersrollen toegang tot specifieke middelen van het Platform hebben. In dit voorbeeld wordt toegang tot schemavelden en -segmenten in alle sandboxen geweigerd voor gebruikers die zich niet in een rol bevinden die de bijbehorende labels in het schemaveld heeft.
+Het standaardtoegangsbeheerbeleid zal hefboometiketten gebruiken om te bepalen welke gebruikersrollen toegang tot specifieke middelen van het Platform hebben. In dit voorbeeld wordt toegang tot schemavelden en publiek in alle sandboxen geweigerd voor gebruikers die zich niet in een rol bevinden die de bijbehorende labels in het schemaveld heeft.
 
 Als u het toegangsbeheerbeleid wilt activeren, selecteert u [!UICONTROL Permissions] in de linkernavigatie en selecteert u vervolgens **[!UICONTROL Policies]** .
 
 ![ Lijst van getoonde beleid ](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Selecteer vervolgens de ellips (`...`) naast de naam van het beleid en een vervolgkeuzelijst met besturingselementen voor het bewerken, activeren, verwijderen of dupliceren van de rol. Selecteer **[!UICONTROL Activate]** in de vervolgkeuzelijst.
+Selecteer vervolgens de ellips (`...`) naast **[!UICONTROL Default-Field-Level-Access-Control-Policy]** en een vervolgkeuzelijst bevat besturingselementen voor het bewerken, activeren, verwijderen of dupliceren van de rol. Selecteer **[!UICONTROL Activate]** in de vervolgkeuzelijst.
 
 ![ Vervolgkeuzelijst om beleid ](../images/abac-end-to-end-user-guide/abac-policies-activate.png) te activeren
 
@@ -216,7 +220,7 @@ Access control policies leverage labels to define which user roles have access t
 >[!NOTE]
 >
 >A "deny policy" is created to grant access to sensitive resources because the role grants permission to the subjects. The written policy in this example **denies** you access if you are missing the required labels.
-
+a
 To create an access control policy, select **[!UICONTROL Permissions]** from the left navigation and then select **[!UICONTROL Policies]**. Next, select **[!UICONTROL Create policy]**.
 
 ![Image showing Create policy being selected in the Permissions](../images/abac-end-to-end-user-guide/abac-create-policy.png)
@@ -260,7 +264,7 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 ## Volgende stappen
 
-U hebt de toepassing van labels op een rol, schemagebieden, en segmenten voltooid. Het externe agentschap dat aan deze rollen wordt toegewezen wordt beperkt van het bekijken van deze etiketten en hun waarden in het schema, de dataset, en de profielmening. Deze gebieden worden ook beperkt van worden gebruikt in de segmentdefinitie wanneer het gebruiken van de Bouwer van het Segment.
+U hebt de toepassing van labels op een rol, schemagebieden, en publiek voltooid. Het externe agentschap dat aan deze rollen wordt toegewezen wordt beperkt van het bekijken van deze etiketten en hun waarden in het schema, de dataset, en de profielmening. Deze gebieden worden ook beperkt van worden gebruikt in de segmentdefinitie wanneer het gebruiken van de Bouwer van het Segment.
 
 Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, zie het [ op attributen-gebaseerde toegangsbeheeroverzicht ](./overview.md).
 
