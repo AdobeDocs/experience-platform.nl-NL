@@ -1,13 +1,11 @@
 ---
 title: AI Assistant in Adobe Experience Platform-productdocumentatie
-description: Aan de slag met AI Assistant in Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
+source-git-commit: 653c97c8632eeaf4cad02accc63d3e4dbffb54dd
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 4%
+source-wordcount: '547'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +13,7 @@ ht-degree: 4%
 
 AI Assistant in Adobe Experience Platform is een conversatieprogramma dat u kunt gebruiken om uw workflows te versnellen met toepassingen en services voor Experience Platforms. De Medewerker van AI van het gebruik om uw algemene productiviteit te verhogen, uw inzicht in productkennis en operationele inzichten te versterken, evenals aanbevelingen te verzamelen relevant voor uw vragen en zaken van het bedrijfsgebruik.
 
-AI-assistent biedt ondersteuning voor Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics.
+AI Assistant biedt ondersteuning voor Experience Platform, Real-Time CDP, Adobe Journey Optimizer en Customer Journey Analytics.
 
 ## Aan de slag
 
