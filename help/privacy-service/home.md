@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Privacy Service
 description: Ontdek hoe Privacy Service het automatisch naleven van de wettelijke privacyregels in uw gegevensverrichtingen van het Experience Cloud kan vergemakkelijken.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 19b33ddf2fc3f8d889d370eedfc732ac54178dcd
+source-git-commit: 61a5b4fd7af68e7379b456ddd37218d183e76256
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1656'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,14 @@ Lees het document over [ identiteitsgegevens voor privacyverzoeken ](./identity-
 
 Zodra u de privacybehoeften van uw bedrijf hebt bepaald en hebt besloten welke identiteitswaarden naar de Privacy Service moeten worden verzonden, kunt u beginnen met het indienen van privacyverzoeken. Gebruik Privacy Service om privacyverzoeken via de API of de gebruikersinterface te verzenden.
 
+#### Gegevens van aanvraagbestand openen {#access-requests}
+
+In de reactie op een succesvol toegangsverzoek, is er a **download URL** die veelvoudige dossiers bevat. Er wordt één bestand opgegeven voor elke Adobe-toepassing waarin gegevens zijn aangevraagd. De bestandsindeling van elke toepassing kan verschillen afhankelijk van de gegevensstructuur van de toepassing.
+
+#### Verzoeken verwijderen - Geen download-URL {#delete-requests}
+
+Er is **geen download URL** in de reactie voor a **schrapt verzoek**, aangezien geen klantengegevens worden teruggewonnen.
+
 >[!IMPORTANT]
 >
 >In de volgende secties vindt u koppelingen naar documentatie over het maken van algemene privacyverzoeken in de API of UI. Afhankelijk van de [!DNL Experience Cloud] -toepassingen die u gebruikt, kunnen de velden die u in de aanvraag moet verzenden, echter afwijken van de voorbeelden in deze handleidingen.
@@ -97,6 +105,10 @@ Nadat u een privacytaak hebt uitgevoerd, kunt u de status en de resultaten van d
 | UI PRIVACY SERVICE | U kunt een visuele vertegenwoordiging van de status van alle actieve verzoeken met het Privacy Service UI controledashboard bekijken. Zie de [ gebruikersgids van de Privacy Service ](ui/overview.md) voor meer informatie. |
 | Privacy Service-API | U kunt de status van de banen van de Privacy programmatically controleren door de raadplegingseindpunten te gebruiken die door Privacy Service API worden verstrekt. Zie de [ Privacy Service API gids ](./api/overview.md) voor gedetailleerde stappen op hoe te om API te gebruiken. |
 | [!DNL Privacy Events] | [!DNL Privacy Events] gebruik Adobe I/O-gebeurtenissen die naar een geconfigureerde webhaak worden verzonden om een efficiënte automatisering van taakaanvragen te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de Privacy Service-API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een workflow is bereikt. Zie het leerprogramma op [ intekenend aan de Gebeurtenissen van de Privacy ](./privacy-events.md) voor meer informatie. |
+
+#### Reacties voor niet-bestaande gebruikers {#non-existing-users}
+
+Wanneer u een toegangs- of verwijderingsverzoek indient, zelfs als de gebruikersgegevens niet worden gevonden, retourneert de reactie altijd een `success` als de aanroep is voltooid. Dit betekent dat zelfs als de gegevens niet bestaan, een toegang of een schrapping met succes zonder enige gegevens kan voltooien die worden teruggewonnen of worden geschrapt.
 
 ## Volgende stappen
 
