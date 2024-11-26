@@ -1,8 +1,7 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform november 2024
 description: In de release van november 2024 staat een opmerking voor Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4786a1f33c76b6023f6e3edfd4f70c18230fda5f
+source-git-commit: d87747c2181f4ae378e1341c3c190cc6fa57d4b0
 workflow-type: tm+mt
 source-wordcount: '852'
 ht-degree: 29%
