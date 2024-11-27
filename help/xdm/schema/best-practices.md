@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aanbevolen procedures voor gegevensmodellering
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 8e13918abe9a63b186970b24b87bf85d1c73c3a8
+source-git-commit: fed8502afad1dfcb0b4dc91141dd621eacda720c
 workflow-type: tm+mt
-source-wordcount: '3232'
+source-wordcount: '3214'
 ht-degree: 0%
 
 ---
@@ -246,12 +246,12 @@ Als u beperkingen voor een bepaald veld wilt instellen, selecteert u het veld in
 Hieronder volgt een verzameling suggesties voor het behoud van gegevensintegriteit wanneer u een schema maakt.
 
 * **overweeg primaire identiteiten**: Voor de producten van de Adobe zoals Web SDK, mobiele SDK, Adobe Analytics, en Adobe Journey Optimizer, dient het `identityMap` gebied vaak als primaire identiteit. Wijs geen extra velden aan als primaire identiteiten voor dat schema.
-* **vermijd gebruikend `_id` als identiteit**: Gebruik niet het `_id` gebied in de schema&#39;s van de Gebeurtenis van de Ervaring als identiteit. Het is bedoeld voor een unieke registratie, niet voor gebruik als identiteit.
+* **verzeker `_id` niet als identiteit** wordt gebruikt: Het `_id` gebied in de schema&#39;s van de Gebeurtenis van de Ervaring kan niet als identiteit worden gebruikt aangezien het voor verslaguniciteit wordt bedoeld.
 * **vastgestelde lengtebeperkingen**: Het is beste praktijken om minimum en maximumlengten op gebieden te plaatsen duidelijk als identiteiten. Er wordt een waarschuwing weergegeven als u een aangepaste naamruimte wilt toewijzen aan een identiteitsveld zonder te voldoen aan de minimale en maximale lengte. Deze beperkingen helpen consistentie en gegevenskwaliteit te behouden.
 * **pas patronen voor verenigbare waarden** toe: Als uw identiteitswaarden een specifiek patroon volgen, zou u **[!UICONTROL Pattern]** het plaatsen moeten gebruiken om deze beperking af te dwingen. Deze instelling kan regels bevatten zoals alleen cijfers, hoofdletters of kleine letters of specifieke tekencombinaties. Gebruik reguliere expressies die overeenkomen met patronen in de tekenreeksen.
 * **Grenswaarden eVars in de schema&#39;s van Analytics**: Typisch, zou een schema Analytics slechts één eVar moeten hebben die als identiteit wordt aangewezen. Als u meer dan één eVar als identiteit wilt gebruiken, moet u controleren of de gegevensstructuur kan worden geoptimaliseerd.
-* **verzekert uniciteit van een geselecteerd gebied**: Uw gekozen gebied zou uniek moeten zijn in vergelijking met de primaire identiteit in het schema. Als dit niet het geval is, merk het dan niet als een identiteit. Als bijvoorbeeld meerdere klanten hetzelfde e-mailadres kunnen opgeven, is die naamruimte geen geschikte identiteit. Dit beginsel is ook van toepassing op andere naamruimten zoals telefoonnummers.
-* **Beperkingen brengt waarschuwingen teweeg voor de gebieden van douannamespace**: Vastgestelde beperkingen om een waarschuwing teweeg te brengen wanneer een schemagebied met een douane namespace zonder zowel minimum als maximumlengten te specificeren duidelijk is. De waarschuwing dient als een belangrijke waarschuwing voor het handhaven van gegevensintegriteit. Zie de [ type-specifieke gebied eigenschappen ](../ui/fields/overview.md#type-specific-properties) documentatie voor informatie over hoe te om beperkingen op een bepaald gebied te plaatsen.
+* **verzekert uniciteit van een geselecteerd gebied**: Uw gekozen gebied zou uniek moeten zijn in vergelijking met de primaire identiteit in het schema. Als dit niet het geval is, merk het dan niet als een identiteit. Als bijvoorbeeld meerdere klanten hetzelfde e-mailadres kunnen opgeven, is die naamruimte geen geschikte identiteit. Dit beginsel is ook van toepassing op andere naamruimten zoals telefoonnummers. Als u een niet-uniek veld als een identiteit markeert, kan dit leiden tot het samenvouwen van het profiel.
+* **verifieer minimumkoordlengten**: Alle koordgebieden zouden minstens één karakter in lengte moeten zijn, aangezien de koordwaarden nooit leeg zouden moeten zijn. Null-waarden voor niet-vereiste velden zijn echter acceptabel.
 
 ## Volgende stappen
 
