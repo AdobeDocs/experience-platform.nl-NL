@@ -2,7 +2,7 @@
 title: Uw Phoenix-account aansluiten via de gebruikersinterface van het Experience Platform
 description: Leer hoe u uw Phoenix-account koppelt en gegevens uit uw Phoenix-database naar het Experience Platform brengt via de gebruikersinterface.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->De bron [!DNL Phoenix] wordt eind mei 2025 vervangen.
+>De bron [!DNL Phoenix] wordt eind juni 2025 vervangen.
 
 Deze zelfstudie bevat stappen voor het tot stand brengen van een verbinding tussen uw [!DNL Phoenix] -account en het naar Experience Platform brengen van gegevens uit uw [!DNL Phoenix] -database.
 

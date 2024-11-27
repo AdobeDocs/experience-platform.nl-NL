@@ -5,7 +5,7 @@ title: Een PayPal Source Connection maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een PayPal-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->De bron [!DNL PayPal] wordt eind mei 2025 vervangen.
+>De bron [!DNL PayPal] wordt eind juni 2025 vervangen.
 
 Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL PayPal] bronconnector met behulp van de gebruikersinterface van Platform.
 

@@ -4,7 +4,7 @@ title: Salesforce Marketing Cloud Source - Overzicht
 description: Leer hoe u Salesforce-Marketing Cloud met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->De bron [!DNL Salesforce Marketing Cloud] wordt eind mei 2025 vervangen.
+>De bron [!DNL Salesforce Marketing Cloud] wordt eind juni 2025 vervangen.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
