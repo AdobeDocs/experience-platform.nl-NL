@@ -2,9 +2,9 @@
 title: Gegevenstype externe Source System Audit Attributes
 description: Meer informatie over het gegevenstype External Source System Audit Attributes Experience Data Model (XDM).
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 03735e7099ffb2cfd44fc7fffd35e3a4a858e3ba
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 | `lastActivityDate` | DateTime | De laatste activiteitsdatum voor het bronsysteem. |
 | `lastReferencedDate` | DateTime | De laatste datum waarnaar wordt verwezen voor het bronsysteem. |
 | `lastUpdatedBy` | String | De naam van de persoon die deze record het laatst heeft bijgewerkt. |
-| `lastUpdatedDate` | DateTime | De laatste bijgewerkte datum voor het bronsysteem. |
+| `lastUpdatedDate` | DateTime | De laatste bijgewerkte datum voor het bronsysteem. Deze waarde wordt gebruikt door het [ beleid van de attributensamenvoeging ](../../profile/api/merge-policies.md#attribute-merge) om prioriteit in het geval van fusieconflicten te bepalen. |
 | `lastViewedDate` | DateTime | De laatst bekeken datum voor het bronsysteem. |
 
 {style="table-layout:auto"}
