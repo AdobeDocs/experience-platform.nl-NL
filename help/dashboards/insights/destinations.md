@@ -2,16 +2,16 @@
 title: Invoer doelen
 description: Ontdek SQL die uw bestemmingsinzichten en gebruik deze vragen aandrijft om douaneinzichten te produceren om de activering van gegevens van Adobe Experience Platform verder te onderzoeken.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1137'
 ht-degree: 0%
 
 ---
 
 # bestemmingsinzichten
 
-De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adobe Real-time Customer Data Platform-gegevens toegankelijker, begrijpelijker en effectiever voor de besluitvorming.
+De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adobe Real-Time CDP-gegevens toegankelijker, begrijpelijker en effectiever voor de besluitvorming.
 
 Begrijp uw bestemmingsinzicht door tot SQL toegang te hebben die hen macht, dan uw eigen inzichten produceert om de activering van gegevens van Adobe Experience Platform aan uw bestemmingsplatforms verder te onderzoeken. Transformeer uw onbewerkte gegevens in nieuwe inzichten die kunnen worden gebruikt door het bestaande Real-Time CDP-gegevensmodel SQL als inspiratie te gebruiken voor het maken van query&#39;s voor uw unieke bedrijfsbehoeften.
 

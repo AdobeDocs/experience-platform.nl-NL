@@ -2,16 +2,16 @@
 title: Soorten kijkers
 description: Ontdek SQL die uw publiek inzicht en gebruik deze vragen aanstuurt om douaneinzichten te produceren om publieksgegevens van Adobe Experience Platform verder te onderzoeken.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
 
 # Inzichten van soorten publiek
 
-De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adobe Real-time Customer Data Platform-gegevens toegankelijker, begrijpelijker en effectiever voor de besluitvorming.
+De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adobe Real-Time CDP-gegevens toegankelijker, begrijpelijker en effectiever voor de besluitvorming.
 
 Begrijp uw publieksinzichten door tot SQL toegang te hebben die hen macht, dan uw eigen inzichten produceert om de identiteiten en de profielen verder te onderzoeken die uw publiek maken. Transformeer uw onbewerkte gegevens in nieuwe inzichten die kunnen worden gebruikt door het bestaande Real-Time CDP-gegevensmodel SQL als inspiratie te gebruiken voor het maken van query&#39;s voor uw unieke bedrijfsbehoeften.
 
