@@ -2,7 +2,7 @@
 title: API-eindpunt van sandbox-gereedschappen
 description: Met het eindpunt /tools in de sandbox Tooling-API kunt u JSON-taakgegevens ophalen in Adobe Experience Platform.
 exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 955c6946786e9425bdb99d623595420a6d13747e
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 0%
@@ -39,6 +39,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Reactie**

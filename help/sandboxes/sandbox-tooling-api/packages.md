@@ -2,9 +2,9 @@
 title: API-eindpunt voor sandbox Tooling Packages
 description: Het /packages eindpunt in Sandbox Tooling API staat u toe om pakketten in Adobe Experience Platform programmatically te beheren.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: e029380dd970195d1254ee3ea1cd68ba2574bbd3
+source-git-commit: 47e4616e5465ec97512647b9280f461c6971aa42
 workflow-type: tm+mt
-source-wordcount: '2543'
+source-wordcount: '2547'
 ht-degree: 1%
 
 ---
@@ -367,6 +367,7 @@ curl -X DELETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Reactie**
@@ -403,6 +404,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 | Eigenschap | Beschrijving | Type | Verplicht |
@@ -424,7 +426,8 @@ Een geslaagde reactie retourneert het gepubliceerde pakket.
         "imsOrgId": "5C1328435BF324E90A49402A@AdobeOrg"
     },
     "type": "PARTIAL",
-    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285"
+    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285",
+    "jobId": "18abab44e25f40c284a4bd6e8f52fd29"
 }
 ```
 
@@ -452,6 +455,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Reactie**
@@ -809,7 +813,8 @@ curl -X POST \
         "imsOrgId": "5C1328435BF324E90A49402A@AdobeOrg"
     },
     "type": "PARTIAL",
-    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285"
+    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285",
+    "jobId": "18abab44e25f40c284a4bd6e8f52fd29"
 }
 ```
 
@@ -833,10 +838,11 @@ In de volgende aanvraag worden alle afhankelijke objecten voor de {PACKAGE_ID} w
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/children \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d'[
       {
         "id": "4d4c874ec3344d64bf8b3160e60ac78b",
@@ -1064,6 +1070,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Reactie**
@@ -1261,7 +1268,7 @@ curl -X POST  \
 | Eigenschap | Beschrijving | Type | Vereist |
 | --- | --- | --- | --- |
 | `linkingID` | De id van het verzoek om delen waarop u reageert. | String | Ja |
-| `status` | De actie die wordt ondernomen naar aanleiding van het verzoek om delen. | String | Ja |
+| `status` | De actie die wordt ondernomen naar aanleiding van het verzoek om delen. Acceptabele waarden zijn `APPROVED` of `REJECTED` . | String | Ja |
 | `reason` | De reden waarom de actie wordt ondernomen. | String | Ja |
 | `targetIMSOrgDetails` | De details over de doelorganisatie waar de id waarde identiteitskaart van de doelorganisatie **** zou moeten zijn, zou de naamwaarde de 2} NAAM van de doelorganisaties **moeten zijn, en de gebiedwaarde zou de doelorganisaties** REGIO **moeten zijn.** | Object | Ja |
 
@@ -1298,7 +1305,7 @@ Maak een lijst van uitgaande en inkomende aandeelverzoeken door een verzoek van 
 **API formaat**
 
 ```http
-POST handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
+GET handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
 ```
 
 | Parameter | Geaccepteerde/standaardwaarden |
@@ -1420,13 +1427,6 @@ Een succesvol antwoord geeft details van het gevraagde pakket en zijn aandeelsta
         "packageId": "{PACKAGE_ID}",
         "status": "PENDING",
         "initiatedBy": "acme@3ec9197a65a86f34494221.e",
-        "transferDetails": {
-            "messages": [
-                "Fetched Package",
-                "Fetched Manifest"
-            ],
-            "additionalMetadata": null
-        },
         "requestType": "PRIVATE"
     }
 ]
@@ -1475,18 +1475,6 @@ Een succesantwoord retourneert details van een aandelenaanvraag.
     "status": "COMPLETED",
     "initiatedBy": "{INITIATED_BY}",
     "createdDate": 1724442856000,
-    "transferDetails": {
-        "messages": [
-            "Fetched Package",
-            "Fetched Manifest",
-            "Tenant Identified",
-            "Fetched Sandbox Id",
-            "Fetched Blob Files",
-            "Message Published to Kafka",
-            "Completed Transfer"
-        ],
-        "additionalMetadata": null
-    },
     "requestType": "PRIVATE"
 }
 ```
@@ -1545,19 +1533,6 @@ Een succesvolle reactie keert een lijst van alle overdrachtverzoeken van de vers
             "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1726129077000,
             "createdDate": 1726129062000,
-            "transferDetails": {
-                "messages": [
-                    "Fetched Package",
-                    "Fetched Manifest",
-                    "Tenant Identified",
-                    "Fetched Sandbox Id",
-                    "Fetched Blob Files",
-                    "Message Published to Kafka",
-                    "Completed Transfer",
-                    "Finished with status: COMPLETED"
-                ],
-                "additionalMetadata": null
-            },
             "requestType": "PRIVATE"
         },
         {
@@ -1572,19 +1547,6 @@ Een succesvolle reactie keert een lijst van alle overdrachtverzoeken van de vers
             "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1726066046000,
             "createdDate": 1726065936000,
-            "transferDetails": {
-                "messages": [
-                    "Fetched Package",
-                    "Fetched Manifest",
-                    "Tenant Identified",
-                    "Fetched Sandbox Id",
-                    "Fetched Blob Files",
-                    "Message Published to Kafka",
-                    "Completed Transfer",
-                    "Finished with status: COMPLETED"
-                ],
-                "additionalMetadata": null
-            },
             "requestType": "PRIVATE"
         }
     ],
@@ -1600,7 +1562,7 @@ Verander een pakket van privé in openbaar door een verzoek van de GET aan het `
 **API formaat**
 
 ```http
-GET `/packages/update`
+PUT `/packages/update`
 ```
 
 **Verzoek**
@@ -1608,8 +1570,8 @@ GET `/packages/update`
 Het volgende verzoek verandert een pakketbeschikbaarheid van privé in openbaar.
 
 ```shell
-curl -X GET \
-  http://platform.adobe.io/data/foundation/exim/packages/update \
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/exim/packages \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -1998,10 +1960,6 @@ curl -X GET \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
-  -d '{
-      "imsOrgId": "{ORG_ID}",
-      "packageId": "{PACKAGE_ID}"
-  }'
 ```
 
 | Eigenschap | Beschrijving | Type | Vereist |
