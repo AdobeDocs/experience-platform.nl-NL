@@ -1,9 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform november 2024
 description: In de release van november 2024 staat een opmerking voor Adobe Experience Platform.
-source-git-commit: d87747c2181f4ae378e1341c3c190cc6fa57d4b0
+exl-id: e3969f8b-70b2-40f8-bb9b-5be6e3d8f722
+source-git-commit: f71fc1d4ad51af52046caeee289546e05967d5bd
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '850'
 ht-degree: 29%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 29%
 
 >[!TIP]
 >
->De nieuwe [ AI Hulp productdocumentatie die pagina ](../../ai-assistant/landing.md) landt is nu beschikbaar. Gebruik deze pagina als een hub voor alle aan AI Assistant gerelateerde bronnen.
+>De nieuwe [ AI Hulp productdocumentatie ](../../ai-assistant/landing.md) is nu beschikbaar. Gebruik deze pagina als een hub voor alle aan AI Assistant gerelateerde bronnen.
 
 **Releasedatum: woensdag 26 november 2024**
 

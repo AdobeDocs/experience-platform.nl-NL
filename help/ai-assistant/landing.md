@@ -2,9 +2,9 @@
 title: AI Assistant in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 653c97c8632eeaf4cad02accc63d3e4dbffb54dd
+source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '545'
 ht-degree: 1%
 
 ---
@@ -130,7 +130,7 @@ Voor meer informatie over AI Medewerker, lees het [ veiligheidsinformatieblad vo
 Blader naar de onderstaande koppelingen voor meer inzicht in AIR Assistant-gebruiksgevallen, -mogelijkheden en nog veel meer.
 
 <table style="table-layout:fixed"><tr style="border: 0;">
-<td><strong> Real-time Customer Data Platform </strong><br/>
+<td><strong> Real-Time CDP </strong><br/>
 <a href="./home.md" target="_blank"> Documentatie </a> - <a href="./ui-guide.md" target="_blank"> gids UI </a> - <a href="./access.md" target="_blank"> de Medewerker van de Toegang AI </a> - <a href="./privacy.md" target="_blank"> Privacy, veiligheid, en bestuur </a> - <a href="./faq.md" target="_blank"> Veelgestelde vragen </a>
 </td>
 <td><strong> Adobe Journey Optimizer </strong><br/>

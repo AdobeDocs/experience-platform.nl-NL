@@ -2,9 +2,9 @@
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 893d8a089dee01e65436b7ac035233ba556b231b
+source-git-commit: 3efbb9614f08a74ad33eb1fbb4861c34c762b66b
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1788'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Een identiteit vertegenwoordigt een echt object. Er zijn drie objecten die in de
 
 Naamruimten voor personen zijn relatief onveranderlijk in vergelijking met hardwareapparaten (zoals IDFA, GAID), die relatief onveranderlijk zijn in vergelijking met webbrowsers. In principe zult u (persoon) altijd één eenheid zijn, die meerdere hardwareapparaten kan hebben (telefoon, laptop, tablet, enz.) en meerdere browsers (Google Chrome, Safari, FireFox, enz.)
 
-Een andere manier om dit onderwerp te benaderen is door kardinaliteit. Hoeveel identiteiten worden er voor een bepaalde personenentiteit gecreëerd? In de meeste gevallen zal een persoon één CRMID, een handvol herkenningstekens van het hardwareapparaat (het zou niet vaak moeten gebeuren IDFA/GAID), en zelfs meer koekjes hebben (een individu zou op veelvoudige apparaten kunnen aantrekken, incognitomodus gebruiken, of koekjes op elk bepaald ogenblik terugstellen). Over het algemeen, **lagere kardinaliteit wijst op een namespace met een hogere waarde**.
+Een andere manier om dit onderwerp te benaderen is door kardinaliteit. Hoeveel identiteiten worden er voor een bepaalde personenentiteit gecreëerd? In de meeste gevallen zal een persoon één CRMID, een handvol herkenningstekens van het hardwareapparaat (het zou niet vaak moeten gebeuren IDFA/GAID), en zelfs meer koekjes hebben (een individu zou op veelvoudige apparaten kunnen doorbladeren, zou incognitomodus kunnen gebruiken, of zou koekjes op elk bepaald ogenblik terugstellen). Over het algemeen, **lagere kardinaliteit wijst op een namespace met een hogere waarde**.
 
 ## Valideer uw instellingen voor naamruimteprioriteit
 
