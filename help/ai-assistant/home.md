@@ -2,10 +2,10 @@
 title: Overzicht van AI Assistant
 description: Leer meer over AI Assistant, de nuances en gebruiksgevallen en hoe u deze kunt gebruiken om uw workflow met Adobe Experience Platform en Real-time Customer Data Platform te versnellen.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 1910ac68be2c154467d250a614d0d13d62ef6875
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 1%
+source-wordcount: '938'
+ht-degree: 8%
 
 ---
 
@@ -17,7 +17,7 @@ De volgende video is bedoeld als ondersteuning voor uw begrip van AI Assistant.
 
 Lees dit document voor meer informatie over AI Assistant in Adobe Experience Platform.
 
-AI Assistant in Adobe Experience Platform is een conversatie-ervaring die u kunt gebruiken om uw workflows in Adobe-toepassingen te versnellen. U kunt AI Medewerker gebruiken om productkennis beter te begrijpen, problemen problemen op te lossen, of door informatie te zoeken en operationele inzichten te vinden. AI Assistant biedt ondersteuning voor Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics.
+AI-assistent in Adobe Experience Platform is een gesprekservaring waarmee u uw workflows in Adobe-applicaties kunt versnellen. Met AI-assistent krijgt u meer inzicht in productkennis, kunt u problemen oplossen of informatie doorzoeken en operationele inzichten verkrijgen. AI-assistent biedt ondersteuning voor Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics.
 
 ![ de AI Hulp interface met de eerste getriggerde gebruikerservaring.](./images/ai-assistant-full.png)
 
@@ -53,11 +53,15 @@ De kennis van het product verwijst naar concepten en onderwerpen die in de docum
 
 | Productkennis | Voorbeelden |
 | --- | --- |
-| Aanbevolen lessen | <ul><li>Wat is het verschil tussen een identiteit en een primaire of buitenlandse sleutel?</li><li>Wat zijn gewone kijkers?</li></ul> |
+| Aanbevolen lessen | <ul><li>Wat is het verschil tussen een identiteit en een primaire of buitenlandse sleutel?</li><li>Wat zijn lookalike doelgroepen?</li></ul> |
 | Openbare detectie | <ul><li>Hoe kan ik deze dataset uitvoeren?</li><li>Zijn er regelingen voor klanten in de gezondheidszorg?</li></ul> |
 | Problemen oplossen | <ul><li>Waarom kan ik geen schema aanzetten dat door Adobe voor profiel wordt bezeten?</li><li>Waarom kan ik een segment niet verwijderen?</li></ul> |
 
 {style="table-layout:auto"}
+
+Bekijk de volgende video voor aanvullende informatie over productkennis van AI Assistant:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Operationele inzichten {#operational-insights}
 

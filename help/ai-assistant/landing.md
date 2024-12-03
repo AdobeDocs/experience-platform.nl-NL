@@ -2,9 +2,9 @@
 title: AI Assistant in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
+source-git-commit: 830daf12b1ae9718a16308d16774f4357f431f6c
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '581'
 ht-degree: 1%
 
 ---
@@ -29,15 +29,10 @@ Begin met het lezen van het materiaal in de koppelingen hieronder om uzelf vertr
     <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong> verbeter uw het leren </strong><br/> ontdekt, problemen oplost, en versterkt uw begrip van productkennis zonder uw werkschema's te onderbreken.</div>
     </td>
-    <td>
-    <a href="./access.md"><img src="./assets/landing/ai-access.png" style="width:" 100%;max-height: 100%"></a>
-    <div><strong> pas toestemmingen toe die op uw gebruik </strong><br/> worden gebaseerd verlenen en herroepen toegangstoestemmingen afhankelijk van de rollen van uw teamleden.</div>
-    </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -84,11 +79,23 @@ Bekijk de volgende video voor een overzicht van AI Assistant.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
+Voor meer informatie, lees de [ AI Hulp UI gids ](ui-guide.md).
+
 ### Toegang tot AI Assistant verkrijgen
 
 Bekijk de volgende video om te leren hoe u toegang tot AI Assistant voor uw organisaties en gebruikers kunt configureren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
+
+Voor meer informatie, lees de [ AI Hulp toegangsgids ](access.md).
+
+### De AI Hulp productkennis van het gebruik om onboarding tijd te verminderen
+
+Bekijk de volgende video om te leren hoe u de kennis van producten van AI Assistant kunt gebruiken om de instaptijd te verkorten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+
+Voor meer informatie, lees over [ productkennis in AI Medewerker ](home.md#product-knowledge)
 
 ### AI Assistant gebruiken om uw publiek te ontwarren
 
