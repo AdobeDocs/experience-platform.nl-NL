@@ -4,9 +4,9 @@ description: Leer hoe u met auditlogboeken kunt zien wie welke acties in Adobe E
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f6e413d2d8b644775b6714739113174f5d9cb0d9
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1358'
 ht-degree: 4%
 
 ---
@@ -31,6 +31,10 @@ ht-degree: 4%
 Om de transparantie en zichtbaarheid van de in het systeem uitgevoerde activiteiten te vergroten, kunt u in Adobe Experience Platform gebruikersactiviteiten voor verschillende services en mogelijkheden controleren in de vorm van &quot;auditlogs&quot;. Deze logboeken vormen een auditspoor dat met het oplossen van problemenkwesties op Platform kan helpen, en uw zaken helpen effectief aan het beleid van het collectieve gegevensbeheer en regelgevende vereisten voldoen.
 
 In een fundamentele betekenis, vertelt een controlelogboek **wie** **uitvoerde wat** actie, en **wanneer**. Elke actie die in een logboek wordt geregistreerd bevat meta-gegevens die op het actietype, datum en tijd, e-mailidentiteitskaart van de gebruiker die de actie, en extra attributen relevant voor het actietype uitvoerde.
+
+>[!NOTE]
+>
+> De meta-gegevens voor de acties **voegen gebruiker** toe en **verwijderen gebruiker** binnen het **5} middel van de Rol zal niet e-mailidentiteitskaart van de gebruiker bevatten die de actie uitvoerde.** In plaats daarvan worden in de logboeken de door het systeem gegenereerde e-mailadressen-id (system@adobe.com) weergegeven.
 
 Dit document behandelt controlelogboeken in Platform, met inbegrip van hoe te om hen in UI of API te bekijken en te beheren.
 
