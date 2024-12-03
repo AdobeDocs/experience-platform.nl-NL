@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Gegevensmodel detailhandel
 description: Bekijk een gestandaardiseerd gegevensmodel voor de detailhandel, compatibel met het Model van de Gegevens van de Ervaring (XDM) voor gebruik in Adobe Experience Platform.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
@@ -21,12 +21,12 @@ Het volgende entiteitsrelatiediagram (ERD) vertegenwoordigt een gestandaardiseer
 Gebruik de volgende legenda om dit ERD te interpreteren:
 
 * Elke entiteit die binnen wordt getoond is gebaseerd op een onderliggende [ Model van de Gegevens van de Ervaring (XDM) klasse ](../composition.md#class).
-* Voor een bepaalde entiteit, vertegenwoordigt elke rij duidelijk in **gewaagd** een gebiedsgroep of een gegevenstype, met de relevante gebieden het hieronder in unbolded tekst vermeld verstrekt.
+* Velden die onder een bovenliggend veld zijn ingesprongen, vertegenwoordigen een onderliggend veld, of subveld, dat tot de veldgroep van het bovenliggende veld behoort.
 * De belangrijkste velden voor een bepaalde entiteit worden rood gemarkeerd.
 * Alle eigenschappen die zouden kunnen worden gebruikt om individuele klanten te identificeren zijn duidelijk als &quot;identiteit&quot;, met één van deze eigenschappen duidelijk als &quot;primaire identiteit&quot;.
 * Entiteitsrelaties zijn gemarkeerd als niet-afhankelijk, omdat op cookies gebaseerde gebeurtenissen vaak niet kunnen bepalen wie de transactie heeft uitgevoerd.
 
-![](../../images/industries/retail.png)
+![ een voorbeeldERD voor een model van de detailhandelindustrie gegevens ](../../images/industries/retail.png)
 
 >[!NOTE]
 >

@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Reis- en ziekenhuisgegevensmodel ERD
 description: Bekijk een diagram van de entiteitverhouding (ERD) dat een gestandaardiseerd gegevensmodel voor de reis en gastvrijheid industrie beschrijft, compatibel met het Model van de Gegevens van de Ervaring (XDM) voor gebruik in Adobe Experience Platform.
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -21,12 +21,12 @@ Het volgende entiteitsrelatiediagram (ERD) vertegenwoordigt een gestandaardiseer
 Gebruik de volgende legenda om dit ERD te interpreteren:
 
 * Elke entiteit die binnen wordt getoond is gebaseerd op een onderliggende [ Model van de Gegevens van de Ervaring (XDM) klasse ](../composition.md#class).
-* Voor een bepaalde entiteit, vertegenwoordigt elke rij duidelijk in **gewaagd** een gebiedsgroep of een gegevenstype, met de relevante gebieden het hieronder in unbolded tekst vermeld verstrekt.
+* Velden die onder een bovenliggend veld zijn ingesprongen, vertegenwoordigen een onderliggend veld, of subveld, dat tot de veldgroep van het bovenliggende veld behoort.
 * De belangrijkste velden voor een bepaalde entiteit worden rood gemarkeerd.
 * Alle eigenschappen die zouden kunnen worden gebruikt om individuele klanten te identificeren zijn duidelijk als &quot;identiteit&quot;, met één van deze eigenschappen duidelijk als &quot;primaire identiteit&quot;.
 * Entiteitsrelaties zijn gemarkeerd als niet-afhankelijk, omdat op cookies gebaseerde gebeurtenissen vaak niet kunnen bepalen wie de transactie heeft uitgevoerd.
 
-![](../../images/industries/travel-hospitality.png)
+![ een voorbeeldERD voor een model van de gegevens van de reisgastvrijheid ](../../images/industries/travel-hospitality.png)
 
 >[!NOTE]
 >
