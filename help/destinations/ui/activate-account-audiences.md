@@ -2,12 +2,12 @@
 title: Accountpubliek naar doelen activeren
 type: Tutorial
 description: Leer hoe u het publiek van een account activeert voor doelen
-badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Dit artikel verklaart het werkschema wordt vereist om [ rekeningspubliek ](/help
 
 ## Ondersteunde doelen {#supported-destinations}
 
-Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer de tab **[!UICONTROL Catalog]** . Gebruik het filter **[!UICONTROL Data types]** en selecteer **[!UICONTROL Accounts]** om de doelen weer te geven die activering van accountsoorten ondersteunen. Momenteel, is het uitvoeren van rekeningspubliek beschikbaar slechts aan bepaalde bestemmingen van de wolkenopslag ([ Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ ADLS Gen 2 ](/help/destinations/catalog/cloud-storage/adls-gen2.md), [ Azure BlobOpslag ](/help/destinations/catalog/cloud-storage/azure-blob.md), [ Gegevens Landing Zone ](/help/destinations/catalog/cloud-storage/data-landing-zone.md), en [ SFTP ](/help/destinations/catalog/cloud-storage/sftp.md)) en [ (Bedrijven) LinkedIn Gelijke Poorten van publiek ](/help/destinations/catalog/social/linkedin.md).
+Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer de tab **[!UICONTROL Catalog]** . Gebruik het filter **[!UICONTROL Data types]** en selecteer **[!UICONTROL Accounts]** om de doelen weer te geven die activering van accountsoorten ondersteunen. Momenteel, is het uitvoeren van rekeningspubliek beschikbaar slechts aan bepaalde bestemmingen van de wolkenopslag ([ Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ ADLS Gen 2 ](/help/destinations/catalog/cloud-storage/adls-gen2.md), [ Azure BlobOpslag ](/help/destinations/catalog/cloud-storage/azure-blob.md), [ Gegevens Landing Zone ](/help/destinations/catalog/cloud-storage/data-landing-zone.md), en [ SFTP ](/help/destinations/catalog/cloud-storage/sftp.md)) en [ Demandbase ](/help/destinations/catalog/advertising/demandbase.md) en [ (Bedrijven) LinkedIn Gematcheerd publiek ces ](/help/destinations/catalog/social/linkedin-b2b.md) streamingdoel.
 
 ![ Doelen die rekeningspubliek steunen.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -57,7 +57,7 @@ Volg de instructies om een bestemming te selecteren waar u uw datasets kunt uitv
 >
 >De bestemmingen die rekeningspubliek kunnen uitvoeren worden vermeld met een pictogram in de hogere juiste hoek van de kaart, gelijkend op de hieronder benadrukte bestemming, of u kunt de filter van het gegevenstype aan slechts vertoningsbestemmingen gebruiken die rekeningspubliek kunnen uitvoeren, zoals [ getoond hoger op de pagina ](#supported-destinations).
 
-![ de bestemmingspagina van Amazon S3 die benadrukte profielpubliek kan uitvoeren.](/help/destinations/assets/ui/activate-account-audiences/amazon-s3-icon-activate-account-audiences.png)
+![ de bestemmingspagina van de Vereis die benadrukte profielpubliek kan uitvoeren.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
 
 1. Selecteer **[!UICONTROL Data type Accounts]**, gevolgd door de doelverbinding waarnaar u gegevenssets wilt exporteren en selecteer vervolgens **[!UICONTROL Next]** .
 

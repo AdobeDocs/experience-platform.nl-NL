@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1262'
 ht-degree: 1%
 
 ---
@@ -201,6 +201,7 @@ ht-degree: 1%
    * Sociale doelen {#social}
       * [Overzicht van sociale bestemmingen](./catalog/social/overview.md)
       * [Facebook-verbinding](./catalog/social/facebook.md)
+      * [(Bedrijven) LinkedIn-verbinding voor passend publiek](./catalog/social/linkedin-b2b.md)
       * [LinkedIn-verbinding voor passend publiek](./catalog/social/linkedin.md)
       * [TikTok-verbinding](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] verbinding](./catalog/social/twitter.md)
