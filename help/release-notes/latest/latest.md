@@ -3,9 +3,9 @@ title: Aanvullende informatie voor Adobe Experience Platform, november 2024
 description: Aanvullende informatie voor Adobe Experience platform, november 2024.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '850'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!TIP]
 >
->De nieuwe [ AI Hulp productdocumentatie ](../../ai-assistant/landing.md) is nu beschikbaar. Gebruik deze pagina als een hub voor alle aan AI-assistent gerelateerde bronnen.
+>De nieuwe [productdocumentatie voor AI-assistent](../../ai-assistant/landing.md) is nu beschikbaar. Gebruik deze pagina als een hub voor alle aan AI-assistent gerelateerde bronnen.
 
 **Releasedatum: woensdag 26 november 2024**
 
